@@ -504,37 +504,38 @@ class Quest (JQuest) :
     return htmltext
 
  def onFirstTalk (self,npc,player):
-    htmltext = ""
+    htmltext = None
     st = player.getQuestState(self.qn)
     npcId = npc.getNpcId()
-    if st :
+    if st and npcId == self.NPC[4] :
       cond = st.getInt("cond")
-      if npcId == self.NPC[4] :
-          if cond == 17 :
-              st2 = self.findRightState(player,npc)
-              if st2 :
-                  if st == st2 :
-                      if st.getInt("Tab") == 1 :
-                          if st.getInt("Quest0") == 0 :
-                              htmltext = "4-04.htm"
-                          elif st.getInt("Quest0") == 1 :
-                              htmltext = "4-06.htm"
-                      else :
-                          if st.getInt("Quest0") == 0 :
-                              htmltext = "4-01.htm"
-                          elif st.getInt("Quest0") == 1 :
-                              htmltext = "4-03.htm"
-                  else:
-                      if st.getInt("Tab") == 1 :
-                          if st.getInt("Quest0") == 0 :
-                              htmltext = "4-05.htm"
-                          elif st.getInt("Quest0") == 1 :
-                              htmltext = "4-07.htm"
-                      else :
-                          if st.getInt("Quest0") == 0 :
-                              htmltext = "4-02.htm"
-          elif cond == 18 :
-              htmltext = "4-08.htm"
+      if cond == 17 :
+          st2 = self.findRightState(player,npc)
+          if st2 :
+              if st == st2 :
+                  if st.getInt("Tab") == 1 :
+                      if st.getInt("Quest0") == 0 :
+                          htmltext = "4-04.htm"
+                      elif st.getInt("Quest0") == 1 :
+                          htmltext = "4-06.htm"
+                  else :
+                      if st.getInt("Quest0") == 0 :
+                          htmltext = "4-01.htm"
+                      elif st.getInt("Quest0") == 1 :
+                          htmltext = "4-03.htm"
+              else:
+                  if st.getInt("Tab") == 1 :
+                      if st.getInt("Quest0") == 0 :
+                          htmltext = "4-05.htm"
+                      elif st.getInt("Quest0") == 1 :
+                          htmltext = "4-07.htm"
+                  else :
+                      if st.getInt("Quest0") == 0 :
+                          htmltext = "4-02.htm"
+      elif cond == 18 :
+          htmltext = "4-08.htm"
+    if htmltext == None :
+        npc.showChatWindow(player)
     return htmltext
 
  def onAttack (self, npc, player, damage, isPet):
