@@ -657,12 +657,24 @@ description(s) :
   </for>
 </skill>
 <skill id="536" levels="1" name="Over the Body">
-  <!-- Needs Core Support "In order to use the skill, your CP must be above 80%. When the skill is used, all of your CP are consumed." -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
+  <set name="cpConsume" val="99999"/> <!-- When the skill is used, all of your CP are consumed. -->
+  <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="2000"/>
+  <set name="mpConsume" val="143"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="reuseDelay" val="1800000"/> <!-- Guessing -->
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <cond msg="Can be only used when CP is 80% or more">
+    <player cp="80"/>
+  </cond>
   <for>
+    <effect count="1" name="Buff" time="15" val="0" stackOrder="2.0" stackType="pa_up">
+      <mul order="0x30" stat="pAtk" val="2.0"/>
+    </effect>
   </for>
 </skill>
 <skill id="537" levels="1" name="Spoil Bomb">
