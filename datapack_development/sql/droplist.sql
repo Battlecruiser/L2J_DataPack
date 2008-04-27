@@ -27131,10 +27131,17 @@ INSERT INTO `droplist` VALUES
 (22219,8954,1,1,2,958), -- Blue Primeval Crystal
 (22219,6901,1,1,-1,7812), -- Recipe: Shining Arrow (100%)
 -- Ornithomimus
-(22224,57,4589,9014,0,700000), -- Adena
-(22224,8627,1,1,2,6849), -- Elixir of Life (S-Grade)
+(22224,57,4461,12910,0,700000), -- Adena
+(22224,8627,1,1,2,7812), -- Elixir of Life (S-Grade
+(22224,8633,1,1,2,5235), -- Elixir of Mental Strength (S-Grade)
+(22204,8878,1,1,2,5235), -- Spellbook: Summon Feline King
+(22204,8342,1,1,1,2610), -- Flaming Dragon Skull Piece
+(22204,8349,1,1,1,2610), -- Doom Crusher Head
+(22204,5533,1,1,1,2610), -- Elysian Head
 (22224,8955,1,1,2,6849), -- Green Primeval Crystal
 (22224,8897,1,1,2,847), -- Ancient Tactical Manual: Symbol of the Sniper
+(22224,8954,1,1,2,6849), -- Blue Primeval Crystal
+
 -- Deinonychus
 (22203,57,4308,8702,0,700000), -- Adena
 (22203,8633,1,1,2,7092), -- Elixir of Mental Strength (S-Grade)
