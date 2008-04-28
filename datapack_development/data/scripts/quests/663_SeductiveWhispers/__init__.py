@@ -177,7 +177,7 @@ class Quest (JQuest) :
    if npcId in MOBS:
      if st.getRandom(100) < DROP_CHANCE:
        st.giveItems(SPIRIT_BEAD,1)
-       st.playSound("ItemSound.quest_middle")
+       st.playSound("ItemSound.quest_itemget")
    return
 
 QUEST = Quest(663,qn,"Seductive Whispers")
