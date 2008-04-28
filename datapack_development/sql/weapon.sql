@@ -1626,7 +1626,7 @@ INSERT INTO `weapon` VALUES
 (10009, 'Shadow Item: Immortal Edge', 'lrhand', 'false', 660, 2, 2, 'wood', 'c', 151, 0, 'ancient', 6, 2.00000, 0, 0, 0, 350, 0, 76, 120, 0, 0, 'false', 'false', 'true', 'false', 0, 0, 0, 0, 0, 0, 0, 0, 0, '0-0;'),
 (10010, 'Shadow Item: Tathlum', 'lrhand', 'false', 587, 5, 3, 'wood', 'c', 176, 0, 'crossbow', 10, -1.00000, 0, 0, 0, 303, 9, 76, 120, 0, 0, 'false', 'false', 'true', 'false', 0, 0, 0, 0, 0, 0, 0, 0, 0, '0-0;'),
 (10011, 'Shadow Item - War Axe', 'rhand', 'false', 533, 3, 3, 'wood', 'c', 139, 0, 'blunt', 4, 4.00000, 0, 0, 0, 379, 0, 76, 120, 0, 0, 'false', 'false', 'true', 'false', 0, 0, 0, 0, 0, 0, 0, 0, 0, '0-0;'),
-(10125, 'Shadow Item - War Axe', 'rhand', 'false', 533, 3, 3, 'wood', 'c', 139, 0, 'blunt', 4, 4.00000, 0, 0, 0, 379, 0, 76, 120, 0, 0, 'false', 'false', 'true', 'false', 0, 0, 0, 0, 0, 0, 0, 0, 0, '0-0;'),
+(10125, 'Shadow Item - War Axe', 'rhand', 'false', 533, 3, 3, 'wood', 'c', 139, 0, 'blunt', 4, 4.00000, 0, 0, 0, 379, 0, 76, 300, 0, 0, 'false', 'false', 'true', 'false', 0, 0, 0, 0, 0, 0, 0, 0, 0, '0-0;'),
 (10128, 'For Monster only (Crossbow)', 'rhand', 'true', 1530, 2, 2, 'wood', 'none', 31, 0, 'crossbow', 8, 0.00000, 0, 0, 0, 379, 0, 21, -1, 0, 0, 'true', 'true', 'true', 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, '0-0;'),
 (10167, 'Pig Lollipop', 'rhand', 'true', 0, 1, 1, 'steel', 'none', 1, 0, 'sword', 8, 0.00000, 0, 0, 0, 379, 0, 1, -1, 0, 0, 'true', 'true', 'true', 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, '0-0;'),
 (10212, 'npc Only (Bow)', 'rhand', 'true', 0, 0, 0, 'steel', 'none', 0, 15, 'bow', 10, 0.00000, 0, 0, 0, 325, 0, 0, -1, 0, 0, 'true', 'true', 'true', 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, '0-0;'),
