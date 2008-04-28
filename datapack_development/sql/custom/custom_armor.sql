@@ -22,7 +22,6 @@ CREATE TABLE IF NOT EXISTS `custom_armor` (
   `dropable` varchar(5) NOT NULL default 'true',
   `destroyable` varchar(5) NOT NULL default 'true',
   `tradeable` varchar(5) NOT NULL default 'true',
-  `item_skill_id` decimal(11,0) NOT NULL default '0',
-  `item_skill_lvl` decimal(11,0) NOT NULL default '0',
+  `skill` varchar(70) default '0-0;',
   PRIMARY KEY (`item_id`)
 ) DEFAULT CHARSET=utf8;

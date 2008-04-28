@@ -30,8 +30,6 @@ CREATE TABLE `custom_weapon` (
   `dropable` varchar(5) NOT NULL default 'true',
   `destroyable` varchar(5) NOT NULL default 'true',
   `tradeable` varchar(5) NOT NULL default 'true',
-  `item_skill_id` decimal(11,0) NOT NULL default '0',
-  `item_skill_lvl` decimal(11,0) NOT NULL default '0',
   `enchant4_skill_id` decimal(11,0) NOT NULL default '0',
   `enchant4_skill_lvl` decimal(11,0) NOT NULL default '0',
   `onCast_skill_id` decimal(11,0) NOT NULL default '0',
@@ -41,5 +39,6 @@ CREATE TABLE `custom_weapon` (
   `onCrit_skill_lvl` decimal(11,0) NOT NULL default '0',
   `onCrit_skill_chance` decimal(11,0) NOT NULL default '0',
   `change_weaponId` decimal(11,0) NOT NULL default '0',
+  `skill` varchar(70) default '0-0;',
   PRIMARY KEY (`item_id`)
 ) DEFAULT CHARSET=utf8;
