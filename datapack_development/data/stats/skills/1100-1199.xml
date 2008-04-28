@@ -186,7 +186,9 @@
     <effect count="15" name="DamOverTime" time="1" val="#dmg"/>
   </for>
 </skill>
-<skill id="1111" levels="18" name="Summon Kat the Cat">
+<skill id="1111" levels="18" name="Summon Kat the Cat" enchantLevels1="30">
+  <table name="#enchantNpcId">14129 14130 14131 14132 14133 14134 14135 14136 14137 14138 14139 14140 14141 14142 14143 14144 14145 14146 14147 14148 14149 14150 14151 14152 14153 14154 14155 14156 14157 14158</table>
+  <enchant1 name="npcId" val="#enchantNpcId"/>
   <table name="#mpConsume_Init"> 8 9 11 12 14 16 18 19 21 22 22 23 24 25 26 26 27 28 </table>
   <table name="#mpConsume"> 31 35 42 48 56 62 69 75 82 85 88 92 95 98 101 104 106 109 </table>
   <table name="#reuseDelay"> 21600000 21600000 21600000 21600000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 </table>
@@ -294,7 +296,9 @@
   <for>
   </for>
 </skill>
-<skill id="1128" levels="18" name="Summon Shadow">
+<skill id="1128" levels="18" name="Summon Shadow" enchantLevels1="30">
+  <table name="#enchantNpcId">14497 14498 14499 14500 14501 14502 14503 14504 14505 14506 14507 14508 14509 14510 14511 14512 14513 14514 14515 14516 14517 14518 14519 14520 14521 14522 14523 14524 14525 14526</table>
+  <enchant1 name="npcId" val="#enchantNpcId"/>
   <table name="#mpConsume_Init"> 8 9 11 12 14 16 18 19 21 22 22 23 24 25 26 26 27 28 </table>
   <table name="#mpConsume"> 31 35 42 48 56 62 69 75 82 85 88 92 95 98 101 104 106 109 </table>
   <table name="#reuseDelay"> 21600000 21600000 21600000 21600000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 </table>
@@ -328,7 +332,9 @@
   <for>
   </for>
 </skill>
-<skill id="1129" levels="7" name="Summon Reanimated Man">
+<skill id="1129" levels="7" name="Summon Reanimated Man" enchantLevels1="30">
+  <table name="#enchantNpcId">14008 14009 14010 14011 14012 14013 14014 14015 14016 14017 14018 14019 14020 14021 14022 14023 14024 14025 14026 14027 14028 14029 14030 14031 14032 14033 14034 14035 14036 14037</table>
+  <enchant1 name="npcId" val="#enchantNpcId"/>
   <table name="#mpConsume_Init"> 16 19 22 24 26 27 28 </table>
   <table name="#mpConsume"> 62 75 88 95 101 106 109 </table>
   <table name="#itemConsumeCount"> 2 3 3 2 4 2 4 </table>

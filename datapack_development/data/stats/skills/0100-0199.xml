@@ -210,7 +210,14 @@
   <for>
   </for>
 </skill>
-<skill id="107" levels="9" name="Holy Aura">
+<skill id="107" levels="9" name="Holy Aura" enchantLevels1="30" enchantLevels2="30">
+  <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
+  <table name="#enchantmpConsume"> 51 50 50 49 48 48 47 47 46 45 45 44 44 43 42 42 41 41 40 39 39 38 38 37 37 36 35 35 34 34</table>
+  <table name="#enchantPower"> 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 58 59 60 61 62 63 64 65 66 67 68</table>
+  <enchant1 name="magicLvl" val="#enchantPower"/>
+  <enchant1 name="power" val="#enchantMagicLvl"/>
+  <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
+  <enchant2 name="mpConsume" val="#enchantmpConsume"/>
   <table name="#magicLvl"> 58 60 62 64 66 68 70 72 74 </table>
   <table name="#mpConsume"> 40 42 43 45 46 48 49 50 51 </table>
   <set name="mpConsume" val="#mpConsume"/>
