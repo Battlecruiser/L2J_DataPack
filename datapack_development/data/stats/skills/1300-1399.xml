@@ -217,7 +217,13 @@
   <for>
   </for>
 </skill>
-<skill id="1307" levels="3" name="Prayer">
+<skill id="1307" levels="3" name="Prayer" enchantLevels1="30" enchantLevels2="30" >
+  <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
+  <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
+  <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
+  <table name="#ench1time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
+  <table name="#ench2MpConsume"> 212 207 203 199 194 190 185 181 176 172 168 164 159 155 151 147 142 137 133 129 126 121 116 113 108 103 99 94 90 85 </table>
+  <table name="#ench2MpConsume_Init"> 55 55 55 55 54 54 54 54 54 53 53 53 53 53 52 52 52 52 52 51 50 50 50 50 50 50 50 50 50 50 </table>
   <table name="#mpConsume_Init"> 49 52 55 </table>
   <table name="#mpConsume"> 195 207 217 </table>
   <table name="#tab-gainHp"> 1.08 1.10 1.12 </table>
@@ -235,11 +241,18 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="#aggro"/>
+  <enchant2 name="mpConsume" val="#ench2MpConsume"/>
+  <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
     <effect name="Buff" time="1200" count="1" val="0">
       <mul order="0x30" stat="gainHp" val="#tab-gainHp"/>
     </effect>
   </for>
+  <enchant1for>
+    <effect name="Buff" time="#ench1time" count="1" val="0">
+      <mul order="0x30" stat="gainHp" val="1.12"/>
+    </effect>
+  </enchant1for>
 </skill>
 <skill id="1308" levels="3" name="Chant of Predator" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -715,7 +728,9 @@
   <for>
   </for>
 </skill>
-<skill id="1331" levels="10" name="Summon Feline Queen">
+<skill id="1331" levels="10" name="Summon Feline Queen" enchantLevels1="30">
+  <table name="#enchantNpcId">14265 14266 14267 14268 14269 14270 14271 14272 14273 14274 14275 14276 14277 14278 14279 14280 14281 14282 14283 14284 14285 14286 14287 14288 14289 14290 14291 14292 14293 14294</table>
+  <enchant1 name="npcId" val="#enchantNpcId"/>
   <table name="#mpConsume_Init"> 14 16 18 19 21 22 22 23 24 25 </table>
   <table name="#mpConsume"> 56 92 69 75 82 85 88 92 95 98 </table>
   <table name="#itemConsumeCount"> 1 1 2 2 3 2 3 4 3 4 </table>
@@ -749,7 +764,9 @@
   <for>
   </for>
 </skill>
-<skill id="1332" levels="10" name="Summon Unicorn Seraphim">
+<skill id="1332" levels="10" name="Summon Unicorn Seraphim" enchantLevels1="30">
+  <table name="#enchantNpcId">14449 14450 14451 14452 14453 14454 14455 14456 14457 14458 14459 14460 14461 14462 14463 14464 14465 14466 14467 14468 14469 14470 14471 14472 14473 14474 14475 14476 14477 14478</table>
+  <enchant1 name="npcId" val="#enchantNpcId"/>
   <table name="#mpConsume_Init"> 14 16 18 19 21 22 22 23 24 25 </table>
   <table name="#mpConsume"> 56 92 69 75 82 85 88 92 95 98 </table>
   <table name="#itemConsumeCount"> 1 1 2 2 3 2 3 4 3 4 </table>
@@ -783,7 +800,9 @@
   <for>
   </for>
 </skill>
-<skill id="1333" levels="10" name="Summon Nightshade">
+<skill id="1333" levels="10" name="Summon Nightshade" enchantLevels1="30">
+  <table name="#enchantNpcId">14633 14634 14635 14636 14637 14638 14639 14640 14641 14642 14643 14644 14645 14646 14647 14648 14649 14650 14651 14652 14653 14654 14655 14656 14657 14658 14659 14660 14661 14662</table>
+  <enchant1 name="npcId" val="#enchantNpcId"/>
   <table name="#mpConsume_Init"> 14 16 18 19 21 22 22 23 24 25 </table>
   <table name="#mpConsume"> 56 92 69 75 82 85 88 92 95 98 </table>
   <table name="#itemConsumeCount"> 1 1 2 2 3 2 3 4 3 4 </table>
@@ -817,7 +836,9 @@
   <for>
   </for>
 </skill>
-<skill id="1334" levels="7" name="Summon Cursed Man">
+<skill id="1334" levels="7" name="Summon Cursed Man" enchantLevels1="30">
+  <table name="#enchantNpcId">14081 14082 14083 14084 14085 14086 14087 14088 14089 14090 14091 14092 14093 14094 14095 14096 14097 14098 14099 14100 14101 14102 14103 14104 14105 14106 14107 14108 14109 14110</table>
+  <enchant1 name="npcId" val="#enchantNpcId"/>
   <table name="#mpConsume_Init"> 21 22 24 26 26 27 28 </table>
   <table name="#mpConsume"> 82 88 95 101 104 106 109 </table>
   <table name="#itemConsumeCount"> 1 2 2 3 3 3 3 </table>
