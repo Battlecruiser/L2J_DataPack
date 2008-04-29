@@ -231,13 +231,15 @@
   <set name="mpConsume" val="58"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="reuseDelay" val="35000"/>
+  <set name="reuseDelay" val="15000"/> <!-- Guessing -->
   <set name="hitTime" val="4000"/>
-  <set name="skillType" val="CANCEL_DEBUFF"/>
+  <set name="skillType" val="NEGATE"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
+  <set name="negateStats" val="BLEED CONFUSION DEBUFF FEAR MUTE PARALYZE ROOT SLEEP STUN POISON WEAKNESS"/>
+  <set name="negatePower" val="9.0"/> <!-- Guessing -->
   <for>
   </for>
 </skill>
