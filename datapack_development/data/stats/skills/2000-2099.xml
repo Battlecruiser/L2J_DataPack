@@ -97,16 +97,19 @@
   </for>
 </skill>
 <skill id="2010" levels="1" name="Endeavor Potion">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="buffDuration" val="300000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
   <for>
-    <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="hit_up"/>
-  </for>
+    <effect count="1" name="Buff" time="300" val="0" stackOrder="4" stackType="hit_up">
+      <add order="0x40" stat="accCombat" val="4"/>
+   </effect>
 </skill>
 <skill id="2011" levels="1" name="Haste Potion">
   <!-- Done by dc -->
