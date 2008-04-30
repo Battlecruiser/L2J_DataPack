@@ -1072,28 +1072,28 @@
   </for>
 </skill>
 <skill id="342" levels="1" name="Touch of Death">
-  <!-- Temp Working Fix by DJ MELERIX -->
-  <set name="hpConsume" val="1004"/>
-  <set name="power" val="40"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="DEBUFF"/>
-  <set name="magicLvl" val="78"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <!--Done by DJ MELERIX -->
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
-  <set name="isDebuff" val="true"/>
-  <set name="reuseDelay" val="1200000"/>
   <set name="hitTime" val="1800"/>
-  <set name="negateStats" val="BUFF"/> <!-- Need core support to DEBUFF type + negate for cancellation -->
-  <set name="negatePower" val="4.0"/> <!-- Need core support to DEBUFF type + negate for cancellation -->
+  <set name="hpConsume" val="1004"/>
+  <set name="isDebuff" val="true"/>
+  <set name="magicLvl" val="78"/>
+  <set name="negatePower" val="2.5"/>
+  <set name="negateStats" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="40"/>
+  <set name="reuseDelay" val="1200000"/>
+  <set name="skillType" val="CANCEL"/>
+  <set name="target" val="TARGET_ONE"/>
   <cond>
     <player hp="75"/>
   </cond>
   <for>
     <effect count="1" name="Debuff" time="120" val="0">
       <mul order="0x30" stat="maxCp" val="0.1"/>
-      <mul order="0x30" stat="gainHp" val="0.7"/>
       <mul order="0x30" stat="debuffVuln" val="1.3"/>
+      <mul order="0x30" stat="gainHp" val="0.7"/>
     </effect>
   </for>
 </skill>
