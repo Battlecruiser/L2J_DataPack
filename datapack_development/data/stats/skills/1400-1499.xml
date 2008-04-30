@@ -1677,7 +1677,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="#aggro"/>
-  <set name="soulConsumeCount" val="7"/>
+  <set name="soulConsumeCount" val="5"/>
   <for>
     <effect name="Buff" time="1200" count="1" val="0" stackOrder="#Tab-absorbDam" stackType="vampRage">
       <add order="0x40" stat="absorbDam" val="#Tab-absorbDam"/>
