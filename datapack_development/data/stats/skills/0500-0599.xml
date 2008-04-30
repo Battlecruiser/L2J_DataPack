@@ -35,6 +35,7 @@
   <set name="hitTime" val="1800"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isDebuff" val="true"/>
   <set name="castRange" val="600"/>
   <set name="soulConsumeCount" val="1"/>
   <for>
@@ -233,6 +234,7 @@ description(s) :
   <set name="hitTime" val="3000"/>
   <set name="coolTime" val="380"/>
   <set name="skillType" val="PDAM"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
@@ -459,6 +461,7 @@ description(s) :
   <set name="hitTime" val="1500"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="target" val="TARGET_ONE"/>
+  <set name="isDebuff" val="true"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="castRange" val="#castRange"/>
   <set name="effectRange" val="#effectRange"/>
@@ -738,6 +741,7 @@ description(s) :
   <set name="effectRange" val="-1"/>
   <set name="flyType" val="CHARGE"/>
   <set name="flyRadius" val="400"/>
+  <set name="isDebuff" val="true"/>
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="80"/>
   <for>
@@ -1155,6 +1159,7 @@ description(s) :
   <set name="skillRadius" val="250"/>
   <set name="coolTime" val="2500"/>
   <set name="hitTime" val="3000"/>
+  <set name="isDebuff" val="true"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -1241,6 +1246,7 @@ description(s) :
   <set name="hitTime" val="3000"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isDebuff" val="true"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="360"/>
   <for>
@@ -1263,6 +1269,7 @@ description(s) :
   <set name="hitTime" val="1080"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isDebuff" val="true"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="900"/>
   <for>

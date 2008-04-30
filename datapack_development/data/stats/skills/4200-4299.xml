@@ -8,6 +8,7 @@
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
+  <set name="isDebuff" val="true"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2500"/>
   <set name="skillType" val="BUFF"/>
@@ -29,6 +30,7 @@
   <set name="power" val="70"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2500"/>
+  <set name="isDebuff" val="true"/>
   <set name="skillType" val="SLEEP"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="750"/>
@@ -45,6 +47,7 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="70"/>
   <set name="target" val="TARGET_ONE"/>
+  <set name="isDebuff" val="true"/>
   <set name="hitTime" val="2500"/>
   <set name="skillType" val="ROOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -64,6 +67,7 @@
   <set name="power" val="50"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2500"/>
+  <set name="isDebuff" val="true"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="750"/>
@@ -85,6 +89,7 @@
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2500"/>
+  <set name="isDebuff" val="true"/>
   <set name="skillType" val="BLEED"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="750"/>
@@ -102,6 +107,7 @@
   <set name="power" val="30"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2500"/>
+  <set name="isDebuff" val="true"/>
   <set name="skillType" val="PARALYZE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="750"/>
@@ -119,6 +125,7 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
+  <set name="isDebuff" val="true"/>
   <set name="hitTime" val="2500"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -157,6 +164,7 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="4500"/>
+  <set name="isDebuff" val="true"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
@@ -296,6 +304,7 @@
 <skill id="4215" levels="1" name="Raid Curse">
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="MUTE"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="1500"/>
   <set name="effectRange" val="2000"/>
@@ -359,6 +368,7 @@
   <set name="hitTime" val="2000"/>
   <set name="power" val="95"/>
   <set name="skillType" val="ROOT"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="800"/>
   <set name="effectRange" val="1300"/>
@@ -611,6 +621,7 @@
   <set name="skillRadius" val="200"/>
   <set name="reuseDelay" val="75000"/>
   <set name="hitTime" val="4000"/>
+  <set name="isDebuff" val="true"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
@@ -632,6 +643,7 @@
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
   <set name="reuseDelay" val="8000"/>
+  <set name="isDebuff" val="true"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -712,6 +724,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="POISON"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="2000"/>
   <set name="effectRange" val="2500"/>
@@ -819,6 +832,7 @@
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="element" val="3"/> <!-- Water -->
+  <set name="isDebuff" val="true"/>
   <set name="hitTime" val="1500"/>
   <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -983,6 +997,7 @@
   <set name="hitTime" val="500"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isDebuff" val="true"/>
   <set name="power" val="0.0"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1005,6 +1020,7 @@
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
   <set name="reuseDelay" val="8000"/>
+  <set name="isDebuff" val="true"/>
   <set name="hitTime" val="2000"/>
   <set name="skillType" val="POISON"/>
   <set name="isMagic" val="true"/>

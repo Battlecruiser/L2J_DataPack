@@ -15,6 +15,7 @@
   <set name="target" val="TARGET_AREA_UNDEAD"/>
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="FEAR"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="lethal2" val="#lethal2"/>
   <set name="castRange" val="900"/>
@@ -424,6 +425,7 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="#power"/>
+  <set name="isDebuff" val="true"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="MDAM"/>
@@ -893,6 +895,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="700"/>
+  <set name="isDebuff" val="true"/>
   <set name="effectRange" val="1100"/>
   <set name="soulConsumeCount" val="1"/>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
@@ -942,6 +945,7 @@
  <set name="lvlDepend" val="1"/>
  <set name="effectRange" val="56"/>
  <set name="reuseDelay" val="18000"/>
+ <set name="isDebuff" val="true"/>
  <set name="soulConsumeCount" val="3"/>
  <set name="effectType" val="FEAR"/>
  <set name="effectPower" val="#effectPower"/>
@@ -1119,6 +1123,7 @@
   <set name="hitTime" val="1500"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="isMagic" val="true"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="#Tab-castRange"/>
   <set name="effectRange" val="1400"/>
@@ -1170,6 +1175,7 @@
   <set name="skillType" val="PDAM"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="isDebuff" val="true"/>
   <set name="reuseDelay" val="36000"/>
   <set name="soulConsumeCount" val="3"/>
   <set name="effectPower" val="50"/>
@@ -1236,6 +1242,7 @@
   <set name="reuseDelay" val="8000"/>
   <set name="isMagic" val="true"/>
   <set name="skillType" val="MDAM"/>
+  <set name="isDebuff" val="true"/>
   <set name="hitTime" val="4000"/>
   <set name="element" val="2"/> <!-- Fire -->
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1273,6 +1280,7 @@
   <set name="hitTime" val="3000"/>
   <set name="isMagic" val="true"/>
   <set name="mpConsume" val="109"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="0.0"/>
   <set name="skillRadius" val="200"/>
@@ -1295,6 +1303,7 @@
   <set name="reuseDelay" val="8000"/>
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
+  <set name="isDebuff" val="true"/>
   <set name="hitTime" val="4000"/>
   <set name="element" val="3"/> <!-- Water -->
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1354,6 +1363,7 @@
   <set name="reuseDelay" val="8000"/>
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
+  <set name="isDebuff" val="true"/>
   <set name="hitTime" val="4000"/>
   <set name="element" val="1"/> <!-- Wind -->
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1429,6 +1439,7 @@
   <set name="isMagic" val="true"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="magicLvl" val="79"/>
+  <set name="isDebuff" val="true"/>
   <set name="skillType" val="MUTE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>

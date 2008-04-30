@@ -1013,6 +1013,7 @@
   <set name="reuseDelay" val="60000"/>
   <set name="hitTime" val="6000"/>
   <set name="skillType" val="PARALYZE"/>
+  <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
@@ -1431,6 +1432,7 @@
   <set name="skillType" val="MUTE"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isDebuff" val="true"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <enchant1 name="power" val="#ench1Power"/>
@@ -1519,6 +1521,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
+  <set name="isDebuff" val="true"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
@@ -1558,6 +1561,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="#cast-rng"/>
   <set name="effectRange" val="1400"/>
+  <set name="isDebuff" val="true"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
@@ -1599,6 +1603,7 @@
   <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="15000"/>
   <set name="skillType" val="SLEEP"/>
+  <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="500"/>
@@ -1688,6 +1693,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="#cast-rng"/>
   <set name="effectRange" val="1400"/>
+  <set name="isDebuff" val="true"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
@@ -1847,6 +1853,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="#cast-rng"/>
+  <set name="isDebuff" val="true"/>
   <set name="effectRange" val="1400"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
@@ -2036,6 +2043,7 @@
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="FEAR"/>
   <set name="isMagic" val="true"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
@@ -2057,6 +2065,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="12000"/>
   <set name="hitTime" val="4000"/>
+  <set name="isDebuff" val="true"/>
   <set name="skillType" val="POISON"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -2102,6 +2111,7 @@
   <set name="hitTime" val="1500"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -2148,6 +2158,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
+  <set name="isDebuff" val="true"/>
   <set name="effectRange" val="1100"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
@@ -2189,6 +2200,7 @@
   <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="DEBUFF"/>
+  <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>

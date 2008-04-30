@@ -122,6 +122,7 @@
   <set name="element" val="6"/> <!-- Dark -->
   <set name="skillType" val="AGGDEBUFF"/>
   <set name="hitTime" val="2000"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="400"/>
@@ -145,6 +146,7 @@
   <set name="element" val="6"/> <!-- Dark -->
   <set name="skillType" val="AGGDEBUFF"/>
   <set name="hitTime" val="2000"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
@@ -182,6 +184,7 @@
   <set name="skillType" val="PDAM"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="10000"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
@@ -218,6 +221,7 @@
   <set name="skillType" val="PDAM"/>
   <set name="hitTime" val="1100"/>
   <set name="reuseDelay" val="12000"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
@@ -436,6 +440,7 @@
   <set name="skillType" val="PDAM"/>
   <set name="hitTime" val="830"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isDebuff" val="true"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
   <for>
@@ -451,6 +456,7 @@
   <set name="skillType" val="PDAM"/>
   <set name="hitTime" val="830"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isDebuff" val="true"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
   <for>
@@ -466,6 +472,7 @@
   <set name="skillType" val="PDAM"/>
   <set name="hitTime" val="830"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isDebuff" val="true"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
   <set name="effectType" val="STUN"/>
@@ -481,6 +488,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="PDAM"/>
   <set name="hitTime" val="830"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
@@ -500,6 +508,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
+  <set name="isDebuff" val="true"/>
   <set name="effectType" val="STUN"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
@@ -730,6 +739,7 @@
   <set name="hitTime" val="830"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
+  <set name="isDebuff" val="true"/>
   <set name="effectRange" val="200"/>
   <set name="effectType" val="STUN"/>
   <for>
@@ -745,6 +755,7 @@
   <set name="skillType" val="PDAM"/>
   <set name="hitTime" val="830"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isDebuff" val="true"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
   <set name="effectType" val="STUN"/>
@@ -761,6 +772,7 @@
   <set name="skillType" val="PDAM"/>
   <set name="hitTime" val="830"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isDebuff" val="true"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
   <set name="effectType" val="STUN"/>
@@ -778,6 +790,7 @@
   <set name="hitTime" val="830"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
+  <set name="isDebuff" val="true"/>
   <set name="effectRange" val="200"/>
   <set name="effectType" val="STUN"/>
   <for>
@@ -795,6 +808,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
+  <set name="isDebuff" val="true"/>
   <set name="effectType" val="STUN"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
@@ -950,6 +964,7 @@
   <set name="hitTime" val="4500"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
+  <set name="isDebuff" val="true"/>
   <set name="effectRange" val="1400"/>
   <set name="effectType" val="STUN"/>
   <for>
@@ -964,6 +979,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="PDAM"/>
   <set name="hitTime" val="4500"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
@@ -982,6 +998,7 @@
   <set name="hitTime" val="4500"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
+  <set name="isDebuff" val="true"/>
   <set name="effectRange" val="1400"/>
   <set name="effectType" val="STUN"/>
   <for>
@@ -999,6 +1016,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
+  <set name="isDebuff" val="true"/>
   <set name="effectType" val="STUN"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
@@ -1016,6 +1034,7 @@
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <set name="effectType" val="STUN"/>
+  <set name="isDebuff" val="true"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
@@ -1102,6 +1121,7 @@
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <set name="effectType" val="STUN"/>
+  <set name="isDebuff" val="true"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
@@ -1118,6 +1138,7 @@
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <set name="effectType" val="STUN"/>
+  <set name="isDebuff" val="true"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
@@ -1133,6 +1154,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
+  <set name="isDebuff" val="true"/>
   <set name="effectType" val="STUN"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
@@ -1149,6 +1171,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
+  <set name="isDebuff" val="true"/>
   <set name="effectType" val="STUN"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
@@ -1165,6 +1188,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
+  <set name="isDebuff" val="true"/>
   <set name="effectType" val="STUN"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>

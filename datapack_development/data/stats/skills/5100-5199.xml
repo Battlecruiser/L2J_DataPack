@@ -223,6 +223,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="ROOT"/>
   <set name="isMagic" val="true"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -491,6 +492,7 @@
   <set name="skillTime" val="2500"/>
   <set name="skillType" val="ROOT"/>
   <set name="isMagic" val="true"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="500"/>
@@ -507,6 +509,7 @@
   <set name="reuseDelay" val="16000"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isDebuff" val="true"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="effectType" val="STUN"/>
@@ -538,6 +541,7 @@
   <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="12000"/>
   <set name="isMagic" val="true"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="30000"/>
   <set name="castRange" val="400"/>

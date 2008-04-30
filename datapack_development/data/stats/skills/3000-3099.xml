@@ -41,6 +41,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BLEED"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isDebuff" val="true"/>
   <set name="castRange" val="-1"/>
   <for>
     <effect count="7" name="DamOverTime" time="3" val="66"/>
@@ -201,6 +202,7 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isDebuff" val="true"/>
   <set name="castRange" val="-1"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
