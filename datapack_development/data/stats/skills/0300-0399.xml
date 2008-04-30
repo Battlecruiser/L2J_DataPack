@@ -51,6 +51,7 @@
   <set name="hitTime" val="1800"/>
   <set name="skillType" val="SPOIL"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isDebuff" val="true"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <enchant1 name="power" val="#ench12Power"/>
@@ -737,6 +738,7 @@
   <set name="skillType" val="BLOW"/>
   <set name="lethal1" val="5"/>
   <set name="lethal2" val="2"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
@@ -1079,6 +1081,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
+  <set name="isDebuff" val="true"/>
   <set name="reuseDelay" val="1200000"/>
   <set name="hitTime" val="1800"/>
   <set name="negateStats" val="BUFF"/> <!-- Need core support to DEBUFF type + negate for cancellation -->
@@ -1181,6 +1184,7 @@
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="150"/>
   <set name="skillType" val="PDAM"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1278,6 +1282,7 @@
   <set name="mpConsume" val="18"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="STUN"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
@@ -1298,6 +1303,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isDebuff" val="true"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="reuseDelay" val="60000"/>
@@ -1322,6 +1328,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
+  <set name="isDebuff" val="true"/>
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="40"/>
   <set name="lvlDepend" val="1"/>
@@ -1435,6 +1442,7 @@
   <set name="skillType" val="STUN"/> 
   <set name="operateType" val="OP_ACTIVE"/> 
   <set name="castRange" val="40"/> 
+  <set name="isDebuff" val="true"/>
   <set name="effectRange" val="400"/> 
   <set name="reuseDelay" val="30000"/> 
   <set name="hitTime" val="1000"/> 
@@ -1498,6 +1506,7 @@
   <set name="effectRange" val="1000"/>
   <set name="reuseDelay" val="30000"/>
   <set name="hitTime" val="4000"/>
+  <set name="isDebuff" val="true"/>
   <set name="overHit" val="true"/>
   <set name="SSBoost" val="2.0"/>
   <set name="effectType" val="STUN"/>
@@ -1527,6 +1536,7 @@
   <set name="overHit" val="true"/>
   <set name="SSBoost" val="2.0"/>
   <set name="castRange" val="40"/>
+  <set name="isDebuff" val="true"/>
   <set name="effectRange" val="400"/>
   <set name="effectType" val="STUN"/>
   <set name="effectPower" val="40"/>
@@ -1632,6 +1642,7 @@
   <set name="skillRadius" val="150"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillType" val="PARALYZE"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>

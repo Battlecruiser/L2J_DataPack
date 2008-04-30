@@ -16,6 +16,7 @@
   <set name="skillType" val="PDAM"/>
   <set name="overHit" val="true"/>
   <set name="SSBoost" val="2.0"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
@@ -47,6 +48,7 @@
   <set name="SSBoost" val="2.0"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
+  <set name="isDebuff" val="true"/>
   <set name="effectRange" val="400"/>
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="40"/>
@@ -66,6 +68,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="16000"/>
   <set name="hitTime" val="2000"/>
+  <set name="isDebuff" val="true"/>
   <set name="skillType" val="ROOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="150"/>
@@ -82,6 +85,7 @@
   <set name="reuseDelay" val="16000"/>
   <set name="hitTime" val="2000"/>
   <set name="skillType" val="ROOT"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
@@ -99,6 +103,7 @@
   <set name="hitTime" val="3000"/>
   <set name="skillType" val="ROOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isDebuff" val="true"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
@@ -116,6 +121,7 @@
   <set name="reuseDelay" val="10000"/>
   <set name="hitTime" val="2000"/>
   <set name="target" val="TARGET_UNDEAD"/>
+  <set name="isDebuff" val="true"/>
   <set name="skillType" val="FEAR"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="lethal2" val="#lethal2"/>
@@ -177,6 +183,7 @@
   <set name="skillRadius" val="150"/>
   <set name="SSBoost" val="2.0"/>
   <set name="reuseDelay" val="120000"/>
+  <set name="isDebuff" val="true"/>
   <set name="hitTime" val="3000"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -201,6 +208,7 @@
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="150"/>
   <set name="SSBoost" val="2.0"/>
+  <set name="isDebuff" val="true"/>
   <set name="reuseDelay" val="120000"/>
   <set name="hitTime" val="3000"/>
   <set name="skillType" val="DEBUFF"/>
@@ -295,6 +303,7 @@
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="150"/>
   <set name="reuseDelay" val="8000"/>
+  <set name="isDebuff" val="true"/>
   <set name="hitTime" val="2000"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -837,6 +846,7 @@
   <set name="isDance" val="true"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="isDebuff" val="true"/>
   <set name="hitTime" val="2500"/>
   <set name="coolTime" val="167" />
   <set name="reuseDelay" val="480000"/>
@@ -1110,6 +1120,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="FEAR"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isDebuff" val="true"/>
   <set name="lethal2" val="#lethal2"/>
   <set name="castRange" val="150"/>
   <set name="effectRange" val="550"/>
@@ -1170,6 +1181,7 @@
   <set name="hitTime" val="500"/>
   <set name="skillType" val="STUN"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isDebuff" val="true"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
@@ -1904,6 +1916,7 @@
   <set name="skillType" val="DEBUFF"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="800"/>
+  <set name="isDebuff" val="true"/>
   <set name="reuseDelay" val="60000"/>
   <set name="soulConsumeCount" val="1"/>
   <set name="flyType" val="CHARGE"/>
@@ -1927,6 +1940,7 @@
   <set name="hitTime" val="3000"/>
   <set name="reuseDelay" val="60000"/>
   <set name="skillType" val="DISARM"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
@@ -2137,6 +2151,7 @@
   <set name="skillType" val="STUN"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="560"/>
+  <set name="isDebuff" val="true"/>
   <set name="reuseDelay" val="36000"/>
   <set name="soulConsumeCount" val="1"/>
   <set name="flyType" val="CHARGE"/>
@@ -2167,6 +2182,7 @@
   <set name="skillType" val="BLEED"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="800"/>
+  <set name="isDebuff" val="true"/>
   <set name="reuseDelay" val="36000"/>
   <set name="flyType" val="CHARGE"/>
   <set name="soulConsumeCount" val="1"/>
@@ -2252,6 +2268,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
+  <set name="isDebuff" val="true"/>
   <set name="soulConsumeCount" val="1"/>
   <for>
     <effect count="7" name="DamOverTime" time="3" val="74" abnormal="bleeding"/>

@@ -272,6 +272,7 @@
   <set name="coolTime" val="720" />
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isDebuff" val="true"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="effectType" val="BLEED"/>
@@ -856,6 +857,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
+  <enchant1 name="isDebuff" val="true"/>
+  <enchant2 name="isDebuff" val="true"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="power" val="#ench2Power"/>
   <for>
@@ -1034,6 +1037,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
+  <set name="isDebuff" val="true"/>
   <set name="effectType" val="STUN"/>
   <set name="effectPower" val="50"/>
   <enchant1 name="effectPower" val="#ench1effectPower"/>
@@ -1778,6 +1782,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
+  <set name="isDebuff" val="true"/>
   <set name="effectRange" val="900"/>
   <set name="effectType" val="PARALYZE"/>
   <set name="effectPower" val="20"/>
@@ -1849,6 +1854,7 @@
   <set name="coolTime" val="#Tab-coolTime" />
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isDebuff" val="true"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="effectType" val="STUN"/>

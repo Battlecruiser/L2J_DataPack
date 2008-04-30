@@ -898,6 +898,7 @@
   <set name="reuseDelay" val="120000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="MUTE"/>
+  <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
@@ -916,6 +917,7 @@
   <set name="reuseDelay" val="300000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="DEBUFF"/>
+  <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
@@ -941,6 +943,7 @@
   <set name="reuseDelay" val="60000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="DEBUFF"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
@@ -967,6 +970,7 @@
   <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
+  <set name="isDebuff" val="true"/>
   <set name="overHit" val="true"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
@@ -994,6 +998,7 @@
   <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
+  <set name="isDebuff" val="true"/>
   <set name="overHit" val="true"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
@@ -1018,6 +1023,7 @@
   <set name="hitTime" val="6000"/>
   <set name="element" val="1"/> <!-- Wind -->
   <set name="reuseDelay" val="60000"/>
+  <set name="isDebuff" val="true"/>
   <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
@@ -1046,6 +1052,7 @@
   <set name="element" val="5"/> <!-- Holy -->
   <set name="reuseDelay" val="60000"/>
   <set name="skillType" val="MDAM"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="900"/>
@@ -1073,6 +1080,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="900"/>
+  <set name="isDebuff" val="true"/>
   <set name="effectRange" val="1400"/>
   <!-- Dark Vortex: Power is reduced but drain percentage is increased - so I changed 0.7 -> 0.8 -->
   <set name="absorbPart" val="0.8"/>
@@ -1426,6 +1434,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="30000"/>
   <set name="hitTime" val="4000"/>
+  <set name="isDebuff" val="true"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1446,6 +1455,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="30000"/>
   <set name="hitTime" val="4000"/>
+  <set name="isDebuff" val="true"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1469,6 +1479,7 @@
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1488,6 +1499,7 @@
   <set name="skillRadius" val="200"/>
   <set name="reuseDelay" val="120000"/>
   <set name="hitTime" val="4000"/>
+  <set name="isDebuff" val="true"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1605,6 +1617,7 @@
   <set name="reuseDelay" val="300000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="DEBUFF"/>
+  <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -1632,6 +1645,7 @@
   <set name="lvlDepend" val="1"/>
   <set name="reuseDelay" val="60000"/>
   <set name="hitTime" val="4000"/>
+  <set name="isDebuff" val="true"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1750,6 +1764,7 @@
   <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="1200000"/>
   <set name="target" val="TARGET_AURA"/>
+  <set name="isDebuff" val="true"/>
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1781,6 +1796,7 @@
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isDebuff" val="true"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
@@ -1821,6 +1837,7 @@
   <set name="target" val="TARGET_ENEMY_SUMMON"/>
   <set name="skillType" val="BETRAY"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isDebuff" val="true"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="isMagic" val="true"/>
@@ -1840,6 +1857,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="500"/>
   <set name="effectRange" val="1000"/>
+  <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
   <for>
     <effect count="5" name="Fear" time="3" val="0"/>
@@ -1859,6 +1877,7 @@
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="230"/>
   <set name="skillType" val="DEBUFF"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
@@ -1883,6 +1902,7 @@
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="WEAKNESS"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
@@ -1907,6 +1927,7 @@
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="WEAKNESS"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
@@ -1934,6 +1955,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
+  <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Debuff" time="120" val="0" stackOrder="2" stackType="surrender">
@@ -1959,6 +1981,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
+  <set name="isDebuff" val="true"/>
   <for>
     <effect count="1" name="Debuff" time="30" val="0">
       <div order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
@@ -2127,6 +2150,7 @@
   <set name="reuseDelay" val="4000"/>
   <set name="hitTime" val="3000"/>
   <set name="target" val="TARGET_ONE"/>
+  <set name="isDebuff" val="true"/>
   <set name="skillType" val="SLEEP"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
@@ -2163,6 +2187,7 @@
   <set name="reuseDelay" val="27000"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
+  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
