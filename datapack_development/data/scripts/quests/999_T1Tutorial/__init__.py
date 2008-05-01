@@ -131,17 +131,16 @@ class Quest (JQuest) :
     return htmltext
 
  def onFirstTalk (self,npc,player):
+   qs = player.getQuestState(qnTutorial)
+   if not qs : 
+      npc.showChatWindow(player)
+      return None
    st = player.getQuestState(qn)
    if not st :
       st = self.newQuestState(player)
-   qs = st.getPlayer().getQuestState(qnTutorial)
-   if not qs : 
-      npc.showChatWindow(player)
-      return
    htmltext = ""
    Ex = qs.getInt("Ex")
    npcId = npc.getNpcId()
-   id = st.getState()
    step=st.getInt("step")
    onlyone=st.getInt("onlyone")
    level=player.getLevel()
@@ -152,10 +151,9 @@ class Quest (JQuest) :
    if (level >= 10 or onlyone) and npcTyp == 1:
        htmltext = "30575-05.htm"
    elif npcId in [30600, 30601, 30602, 30598, 30599, 32135]:
-     id = st.getState()
      reward=qs.getInt("reward")
      if reward == 0:
-       if player.getClassId().isMage() :
+       if isMage :
          st.playTutorialVoice("tutorial_voice_027")
          st.giveItems(SPIRITSHOT_NOVICE,100)
        else:
@@ -166,7 +164,7 @@ class Quest (JQuest) :
        qs.set("reward","1")
        st.exitQuest(False)
      npc.showChatWindow(player)
-     return
+     return None
    elif onlyone == 0 and level < 10 :
     if player.getRace().ordinal() == raceId :
       htmltext=htmlfiles[0]

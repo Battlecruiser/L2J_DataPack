@@ -8,6 +8,7 @@ from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 from net.sf.l2j.gameserver.serverpackets      import CreatureSay
 from net.sf.l2j.gameserver.serverpackets      import SocialAction
+from net.sf.l2j.gameserver.serverpackets      import ActionFailed
 
 qn = "65_CertifiedSoulBreaker"
 
@@ -96,18 +97,17 @@ class Quest (JQuest) :
 
     def onFirstTalk (self,npc,player):
         st = player.getQuestState(qn)
-        if not st : return htmltext
-        npcId = npc.getNpcId()
-        cond = st.getInt("cond")
-        if npcId == Katenar and cond == 12:
-            st.unset("angel")
-            st.playSound("ItemSound.quest_itemget")
-            st.set("cond","13")
-            self.isAngelSpawned = 0
-            self.isKatenarSpawned = 0
-            st.giveItems(Document,1)
-            return "32242-01.htm"
-        return ""
+        if st :
+            if npc.getNpcId() == Katenar and st.getInt("cond") == 12:
+                st.unset("angel")
+                st.playSound("ItemSound.quest_itemget")
+                st.set("cond","13")
+                self.isAngelSpawned = 0
+                self.isKatenarSpawned = 0
+                st.giveItems(Document,1)
+                return "32242-01.htm"
+        player.sendPacket(ActionFailed.STATIC_PACKET)
+        return None
 
     def onTalk (self,npc,player):
         htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
