@@ -42,6 +42,8 @@ class Quest (JQuest) :
        st.exitQuest(False)
        st.giveItems(57, 15100)
        st.giveItems(BADGE, 1)
+       if player.getLevel() >= 35 and player.getLevel() <= 43:
+          st.addExpAndSp(30000,2000)
     elif event == "31418-02.htm" :
        st.set("cond","3")
        st.playSound("ItemSound.quest_middle")
