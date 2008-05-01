@@ -7414,4 +7414,9 @@ INSERT INTO `etcitem` VALUES
 (10272,'Treasure Sack Piece','false','none',0,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
 (10274,'Rabbit Transformation Scroll','false','none',120,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
 (10275,'Battle Manual - Warp','false','spellbook',120,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
-(10276,'Battle Manual - Soul Shock','false','spellbook',120,'stackable','wood','none',-1,0,NULL,'true','true','true','true','','');
+(10276,'Battle Manual - Soul Shock','false','spellbook',120,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
+(10335,"Giants' Experimental Tool Fragment", "false", "quest", 0, "stackable", "wood", "none", -1, 0, NULL, "true", "true", "true", "true", "", ""),
+(10336,"Giants' Experimental Tool", "false", "quest", 0, "stackable", "wood", "none", -1, 0, NULL, "true", "true", "true", "true", "", ""),
+(10337,"Giants' Technology Report", "false", "quest", 0, "stackable", "wood", "none", -1, 0, NULL, "true", "true", "true", "true", "", ""),
+(10338,"Rouke's Report", "false", "quest", 0, "stackable", "paper", "none", -1, 0, NULL, "true", "true", "true", "true", "", ""),
+(10339,"Badge - Temple Missionary", "quest", "none", 0, "stackable", "wood", "none", -1, 0, NULL, "true", "true", "true", "true", "", "");
