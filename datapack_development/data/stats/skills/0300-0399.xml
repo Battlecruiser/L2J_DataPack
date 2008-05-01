@@ -745,8 +745,8 @@
   <for>
     <effect self="1" count="1" name="Buff" time="15" val="0" stackOrder="40" stackType="speed_up_special">
       <add order="0x40" stat="runSpd" val="40"/>
-    <!-- Needs core support for "causes the enemy to show his/her back" -->
     </effect>
+    <effect count="1" name="Bluff" time="1" val="0" noicon="1"/>
   </for>
 </skill>
 <skill id="322" levels="6" name="Shield Fortress" enchantLevels1="30" enchantLevels2="30" >
@@ -1072,7 +1072,7 @@
   </for>
 </skill>
 <skill id="342" levels="1" name="Touch of Death">
-  <!--Done by DJ MELERIX -->
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="hitTime" val="1800"/>
@@ -1450,7 +1450,7 @@
     <effect count="1" name="Bluff" time="3" val="0" stackOrder="1" stackType="Stun">
       <sub order="0x40" stat="aggression" val="100000"/> 
     </effect> 
-    <effect count="1" name="RemoveTarget" time="1" val="0"/> 
+    <effect count="1" name="RemoveTarget" time="1" val="0" noicon ="1"/>
   </for> 
 </skill> 
 <skill id="359" levels="1" name="Eye of Hunter">
