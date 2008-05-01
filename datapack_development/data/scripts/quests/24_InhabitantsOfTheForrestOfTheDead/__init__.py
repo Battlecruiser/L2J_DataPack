@@ -58,7 +58,6 @@ class Quest (JQuest) :
             st.set("cond","3")
             st.playSound("ItemSound.quest_middle")
             st.giveItems(SilverCross,1)
-            self.startQuestTimer("Night_Time",1000,None, player)
         elif event == "31389-16.htm":
             st.playSound("InterfaceSound.charstat_open_01")
         elif event == "31389-17.htm":
@@ -87,17 +86,6 @@ class Quest (JQuest) :
         elif event == "31532-16.htm":
             st.playSound("ItemSound.quest_middle")
             st.set("cond","9")
-        elif event == "Night_Time":
-          if st.getInt("cond") == 3:
-            if GameTimeController.getInstance().isNowNight() : # add check for player, he must be in cursed village
-               st.takeItems(SilverCross,-1)
-               st.giveItems(BrokenSilverCross,1)
-               st.set("cond","4")
-               npc = FindTemplate(25332)
-               if npc:
-                  AutoChat(npc,"That sign!")
-            else:
-               self.startQuestTimer("Night_Time",1000, None, player)
         return htmltext
 
     def onTalk (self,npc,player):
@@ -167,6 +155,18 @@ class Quest (JQuest) :
                 st.playSound("ItemSound.quest_middle")
         return
 
+    def onSpawn(self, npc) : 
+       if npc.getNpcId() == 25332 : 
+          if GameTimeController.getInstance().getGameTime() < 66 : 
+             for player in npc.getKnownList().getKnownPlayers().values() : 
+                st = player.getQuestState(qn) 
+                if st:
+                   st.takeItems(SilverCross,-1)
+                   st.giveItems(BrokenSilverCross,1)
+                   st.set("cond","4")
+                   AutoChat(npc,"That sign!")
+       return
+
 QUEST     = Quest(24,qn,"Inhabitants Of The Forrest Of The Dead")
 
 QUEST.addStartNpc(Dorian)
@@ -175,6 +175,7 @@ QUEST.addTalkId(Dorian)
 QUEST.addTalkId(Tombstone)
 QUEST.addTalkId(MaidOfLidia)
 QUEST.addTalkId(Wizard)
+QUEST.addSpawnId(25332)
 
 for mob in [21557,21558,21560,21563,21564,21565,21566,21567]:
     QUEST.addKillId(mob)
