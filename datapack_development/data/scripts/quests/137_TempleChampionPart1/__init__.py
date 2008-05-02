@@ -47,7 +47,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_finish")
        st.unset("talk")
        st.exitQuest(False)
-       if player.getLevel() >= 35 and player.getLevel() <= 40:
+       if st.getPlayer().getLevel() >= 35 and st.getPlayer().getLevel() <= 40:
           st.addExpAndSp(219975,13047)
     return htmltext
 

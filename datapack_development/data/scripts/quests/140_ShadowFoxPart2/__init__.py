@@ -41,7 +41,7 @@ class Quest (JQuest) :
        st.unset("talk")
        st.exitQuest(False)
        st.giveItems(57, 18775)
-       if player.getLevel() >= 37 and player.getLevel() <= 42:
+       if st.getPlayer().getLevel() >= 37 and st.getPlayer().getLevel() <= 42:
           st.addExpAndSp(30000,2000)
     elif event == "30912-07.htm" :
        st.set("cond","3")
