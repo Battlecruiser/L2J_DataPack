@@ -7431,5 +7431,6 @@ INSERT INTO `etcitem` VALUES
 (10341,"Temple Manifesto", "false", "quest", 0, "stackable", "wood", "none", -1, 0, NULL, "true", "true", "true", "true", "", ""),
 (10342,"Relics of the Dark Elf Trainee", "false", "quest", 0, "stackable", "wood", "none", -1, 0, NULL, "true", "true", "true", "true", "", ""),
 (10343,"Angus' Recommendation", "false", "quest", 0, "stackable", "wood", "none", -1, 0, NULL, "true", "true", "true", "true", "", ""),
-(10344,"Pupina's Recommendation", "false", "quest", 0, "stackable", "wood", "none", -1, 0, NULL, "true", "true", "true", "true", "", "");
-
+(10344,"Pupina's Recommendation", "false", "quest", 0, "stackable", "wood", "none", -1, 0, NULL, "true", "true", "true", "true", "", ""),
+(10345,"Records Chest Key Fragment", "false", "quest", 0, "stackable", "wood", "none", -1, 0, NULL, "true", "true", "true", "true", "", ""),
+(10346,"Records Chest", "false", "quest", 0, "stackable", "wood", "none", -1, 0, NULL, "true", "true", "true", "true", "", "");
