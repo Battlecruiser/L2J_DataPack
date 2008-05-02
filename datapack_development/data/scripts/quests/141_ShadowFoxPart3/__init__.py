@@ -42,7 +42,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_finish")
        st.exitQuest(False)
        st.giveItems(57, 88888)
-       if player.getLevel() >= 37 and player.getLevel() <= 42:
+       if st.getPlayer().getLevel() >= 37 and st.getPlayer().getLevel() <= 42:
           st.addExpAndSp(219975,13047)
     elif event == "AngelSelect" :
        qs = player.getQuestState("998_FallenAngelSelect")
@@ -109,7 +109,7 @@ class Quest (JQuest) :
       if qs.getState() == State.COMPLETED :
          if st.getState() == State.CREATED :
             st.setState(State.STARTED)
-   if st.getState() == State.COMPLETED :
+   if st.getState() == State.COMPLETED and player.getLevel() >= 38:
       if not qs2 :
          q = QuestManager.getInstance().getQuest("998_FallenAngelSelect")
          if q :
