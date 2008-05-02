@@ -48,7 +48,7 @@ class Quest (JQuest) :
        st.giveItems(BADGE, 1)
        if player.getLevel() >= 35 and player.getLevel() <= 40:
           st.addExpAndSp(30000,2000)
-    elif event == "30067-03.htm" :
+    elif event == "30068-03.htm" :
        st.set("cond","2")
        st.playSound("ItemSound.quest_middle")
     elif event == "30291-06.htm" :
@@ -74,18 +74,18 @@ class Quest (JQuest) :
              htmltext = "30068-00.htm"
              st.exitQuest(1)
        elif cond == 1 :
-          htmltext = "30067-02.htm"
+          htmltext = "30068-02.htm"
        elif cond in [2,3,4] :
-          htmltext = "30067-04.htm"
+          htmltext = "30068-04.htm"
        elif cond == 5 :
           if st.getQuestItemsCount(SONIN_CR) and st.getQuestItemsCount(PANO_CR) and st.getQuestItemsCount(ALEX_CR):
-             htmltext = "30067-05.htm"
+             htmltext = "30068-05.htm"
              st.takeItems(SONIN_CR, -1)
              st.takeItems(PANO_CR, -1)
              st.takeItems(ALEX_CR, -1)
              st.set("talk","1")
           elif st.getInt("talk"):
-             htmltext = "30067-06.htm"
+             htmltext = "30068-06.htm"
     elif npcId == ALEX :
        if cond == 2 :
           htmltext = "30291-01.htm"
