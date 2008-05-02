@@ -7433,4 +7433,7 @@ INSERT INTO `etcitem` VALUES
 (10343,"Angus' Recommendation", "false", "quest", 0, "stackable", "wood", "none", -1, 0, NULL, "true", "true", "true", "true", "", ""),
 (10344,"Pupina's Recommendation", "false", "quest", 0, "stackable", "wood", "none", -1, 0, NULL, "true", "true", "true", "true", "", ""),
 (10345,"Records Chest Key Fragment", "false", "quest", 0, "stackable", "wood", "none", -1, 0, NULL, "true", "true", "true", "true", "", ""),
-(10346,"Records Chest", "false", "quest", 0, "stackable", "wood", "none", -1, 0, NULL, "true", "true", "true", "true", "", "");
+(10346,"Records Chest", "false", "quest", 0, "stackable", "wood", "none", -1, 0, NULL, "true", "true", "true", "true", "", ""),
+(10347,"Dark Crystal", "false", "quest", 0, "stackable", "wood", "none", -1, 0, NULL, "true", "true", "true", "true", "", ""),
+(10348,"Dark Oxide", "false", "quest", 0, "stackable", "wood", "none", -1, 0, NULL, "true", "true", "true", "true", "", ""),
+(10349,"Cryptogram of the Goddess Sword", "false", "quest", 0, "stackable", "wood", "none", -1, 0, NULL, "true", "true", "true", "true", "", "");
