@@ -2,6 +2,7 @@
 # this script is part of the Official L2J Datapack Project.
 # Visit http://forum.l2jdp.com for more details.
 import sys
+from net.sf.l2j.gameserver.instancemanager import QuestManager
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -43,6 +44,11 @@ class Quest (JQuest) :
        st.giveItems(57, 88888)
        if player.getLevel() >= 37 and player.getLevel() <= 42:
           st.addExpAndSp(219975,13047)
+    elif event == "AngelSelect" :
+       qs = player.getQuestState("998_FallenAngelSelect")
+       if qs:
+          qs.getQuest().onEvent(qs.getQuest(), "30894-01.htm", qs)
+          return
     return htmltext
 
  def onTalk (self,npc,player):
@@ -95,11 +101,26 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st :
       st = self.newQuestState(player)
-   qs = st.getPlayer().getQuestState("140_ShadowFoxPart2")
+   qs = player.getQuestState("140_ShadowFoxPart2")
+   qs2 = player.getQuestState("998_FallenAngelSelect")
+   qs3 = player.getQuestState("142_FallenAngelRequestOfDawn")
+   qs4 = player.getQuestState("143_FallenAngelRequestOfDusk")
    if qs :
       if qs.getState() == State.COMPLETED :
          if st.getState() == State.CREATED :
             st.setState(State.STARTED)
+   if st.getState() == State.COMPLETED :
+      if not qs2 :
+         q = QuestManager.getInstance().getQuest("998_FallenAngelSelect")
+         if q :
+            qs2 = q.newQuestState(player)
+            qs2.setState(State.STARTED)
+      if qs2 :
+         if qs2.getState() == State.COMPLETED :
+            qs2.setState(State.CREATED)
+         if qs2.getState() == State.CREATED :
+            if not qs3 and not qs4:
+               qs2.setState(State.STARTED)
    npc.showChatWindow(player)
    return
 
