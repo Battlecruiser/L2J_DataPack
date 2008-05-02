@@ -7426,4 +7426,5 @@ INSERT INTO `etcitem` VALUES
 (10336,"Giants' Experimental Tool", "false", "quest", 0, "stackable", "wood", "none", -1, 0, NULL, "true", "true", "true", "true", "", ""),
 (10337,"Giants' Technology Report", "false", "quest", 0, "stackable", "wood", "none", -1, 0, NULL, "true", "true", "true", "true", "", ""),
 (10338,"Rouke's Report", "false", "quest", 0, "stackable", "paper", "none", -1, 0, NULL, "true", "true", "true", "true", "", ""),
-(10339,"Badge - Temple Missionary", "quest", "none", 0, "stackable", "wood", "none", -1, 0, NULL, "true", "true", "true", "true", "", "");
+(10339,"Badge - Temple Missionary", "false", "quest", 0, "stackable", "wood", "none", -1, 0, NULL, "true", "true", "true", "true", "", ""),
+(10340,"Report Fragment", "false", "quest", 0, "stackable", "wood", "none", -1, 0, NULL, "true", "true", "true", "true", "", "");
