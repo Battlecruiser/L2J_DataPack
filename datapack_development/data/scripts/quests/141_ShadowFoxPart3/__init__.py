@@ -44,11 +44,12 @@ class Quest (JQuest) :
        st.giveItems(57, 88888)
        if st.getPlayer().getLevel() >= 37 and st.getPlayer().getLevel() <= 42:
           st.addExpAndSp(219975,13047)
-    elif event == "AngelSelect" :
        qs = player.getQuestState("998_FallenAngelSelect")
-       if qs:
-          qs.getQuest().onEvent(qs.getQuest(), "30894-01.htm", qs)
-          return
+       if not qs:
+           q = QuestManager.getInstance().getQuest("998_FallenAngelSelect")
+           if q :
+               qs = q.newQuestState(player)
+       qs.setState(State.STARTED)
     return htmltext
 
  def onTalk (self,npc,player):
@@ -59,10 +60,9 @@ class Quest (JQuest) :
     npcId = npc.getNpcId()
     id = st.getState()
     cond = st.getInt("cond")
-    if id == State.CREATED : return htmltext
     if id == State.COMPLETED :
        htmltext = "<html><body>This quest has already been completed.</body></html>"
-    elif npcId == NATOOLS :
+    elif id == State.STARTED :
        if cond == 0 :
           if player.getLevel() >= 37:
              htmltext = "30894-01.htm"
@@ -100,27 +100,18 @@ class Quest (JQuest) :
  def onFirstTalk (self,npc,player):
    st = player.getQuestState(qn)
    if not st :
+      qs = player.getQuestState("140_ShadowFoxPart2")
       st = self.newQuestState(player)
-   qs = player.getQuestState("140_ShadowFoxPart2")
-   qs2 = player.getQuestState("998_FallenAngelSelect")
-   qs3 = player.getQuestState("142_FallenAngelRequestOfDawn")
-   qs4 = player.getQuestState("143_FallenAngelRequestOfDusk")
-   if qs :
-      if qs.getState() == State.COMPLETED :
-         if st.getState() == State.CREATED :
-            st.setState(State.STARTED)
-   if st.getState() == State.COMPLETED and player.getLevel() >= 38:
-      if not qs2 :
-         q = QuestManager.getInstance().getQuest("998_FallenAngelSelect")
-         if q :
-            qs2 = q.newQuestState(player)
-            qs2.setState(State.STARTED)
+      if qs :
+          if qs.getState() == State.COMPLETED and st.getState() == State.CREATED :
+              st.setState(State.STARTED)
+   elif st.getState() == State.COMPLETED and player.getLevel() >= 38 :
+      qs2 = player.getQuestState("998_FallenAngelSelect")
+      qs3 = player.getQuestState("142_FallenAngelRequestOfDawn")
+      qs4 = player.getQuestState("143_FallenAngelRequestOfDusk")
       if qs2 :
-         if qs2.getState() == State.COMPLETED :
-            qs2.setState(State.CREATED)
-         if qs2.getState() == State.CREATED :
-            if not qs3 and not qs4:
-               qs2.setState(State.STARTED)
+         if qs2.getState() == State.COMPLETED and not (qs3 or qs4) :
+             qs2.setState(State.STARTED)
    npc.showChatWindow(player)
    return
 
