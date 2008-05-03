@@ -1161,7 +1161,7 @@ INSERT INTO `armor` VALUES
 (9608,'Agathion Seal Bracelet - Dion','lbracelet','true','none',150,'wood','none',0,-1,0,0,0,0,0,'true','true','true','true','3267-1;3268-1;5415-1;'),
 (9609,'Agathion Seal Bracelet - Giran','lbracelet','true','none',150,'wood','none',0,-1,0,0,0,0,0,'true','true','true','true','3267-1;3268-1;5415-1;'),
 (9610,'Agathion Seal Bracelet - Oren','lbracelet','true','none',150,'wood','none',0,-1,0,0,0,0,0,'true','true','true','true','3267-1;3268-1;5415-1;'),
-(9611,'Agathion Seal Bracelet - Aden','lbracelet','true','none',150,'wood','none',0,0,0,0,0,0,0,'true','true','true','true','3267-1;3268-1;5415-1;'),
+(9611,'Agathion Seal Bracelet - Aden','lbracelet','true','none',150,'wood','none',0,-1,0,0,0,0,0,'true','true','true','true','3267-1;3268-1;5415-1;'),
 (9612,'Agathion Seal Bracelet - Innadril','lbracelet','true','none',150,'wood','none',0,-1,0,0,0,0,0,'true','true','true','true','3267-1;3268-1;5415-1;'),
 (9613,'Agathion Seal Bracelet - Goddard','lbracelet','true','none',150,'wood','none',0,-1,0,0,0,0,0,'true','true','true','true','3267-1;3268-1;5415-1;'),
 (9614,'Agathion Seal Bracelet - Rune','lbracelet','true','none',150,'wood','none',0,-1,0,0,0,0,0,'true','true','true','true','3267-1;3268-1;5415-1;'),
