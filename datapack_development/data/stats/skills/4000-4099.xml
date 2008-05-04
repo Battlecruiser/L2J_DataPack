@@ -1510,7 +1510,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
   <for>
-    <effect count="7" name="DamOverTime" time="3" val="#damage"/>
+    <effect count="7" name="DamOverTime" time="3" val="#damage" abnormal="bleeding"/>
   </for>
 </skill>
 <skill id="4089" levels="1" name="NPC Bear Spirit Totem">
