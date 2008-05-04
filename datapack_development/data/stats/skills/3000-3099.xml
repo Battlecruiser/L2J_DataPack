@@ -44,7 +44,7 @@
   <set name="isDebuff" val="true"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="7" name="DamOverTime" time="3" val="66"/>
+    <effect count="7" name="DamOverTime" time="3" val="66" abnormal="bleeding"/>
   </for>
 </skill>
 <skill id="3006" levels="1" name="Equip Set Items">

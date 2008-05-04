@@ -1564,7 +1564,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="7" name="DamOverTime" time="3" val="#damage"/>
+    <effect count="7" name="DamOverTime" time="3" val="#damage" abnormal="bleeding"/>
   </for>
 </skill>
 <skill id="4189" levels="12" name="Paralysis">
