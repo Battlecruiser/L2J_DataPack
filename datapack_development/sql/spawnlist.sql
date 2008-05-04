@@ -41391,7 +41391,8 @@ INSERT INTO spawnlist VALUES
 (null,'Isle_of_Prayer',1,22264,153105,149950,-3376,0,0,32057,60,0,0),
 (null,'Isle_of_Prayer',1,22265,153037,149796,-3368,0,0,36566,60,0,0),
 (null,'Isle_of_Prayer',1,22264,151763,149992,-3320,0,0,35759,60,0,0),
-(null,'Isle_of_Prayer',1,22263,152325,150566,-3448,0,0,0,60,0,0);
+(null,'Isle_of_Prayer',1,22263,152325,150566,-3448,0,0,0,60,0,0),
+(null,'Wastelands','1',32368,-21982,186630,-4312,0,0,0,60,0,0);
 
 -- Caste Artefacts
 INSERT INTO spawnlist VALUES
