@@ -6690,7 +6690,8 @@ INSERT INTO `npc` VALUES
 (32363, 32363, "Hellios Insurgent", 0, "", 0, "LineageNPC.a_common_peopleC_Mhuman", 8, 17, 1, "male", "L2Npc", 40, 2444, 2444, 0, 0, 10, 10, 10, 10, 10, 10, 0, 0, 500, 500, 500, 500, 253, 0, 253, 0, 0, NULL, 80, 120, "", 0, 0, 0, "LAST_HIT", 0, 0, 0, "balanced"),
 (32364, 32364, "Hellios Traitor", 0, "", 0, "LineageNPC.a_common_peopleC_Mhuman", 8, 17, 1, "male", "L2Npc", 40, 2444, 2444, 0, 0, 10, 10, 10, 10, 10, 10, 0, 0, 500, 500, 500, 500, 253, 0, 253, 0, 0, NULL, 80, 120, "", 0, 0, 0, "LAST_HIT", 0, 0, 0, "balanced"),
 (32365, 32365, "Snow", 0, "Event Manager", 0, "LineageNPC2.TP_game_staff", 5, 12.5, 1, "male", "L2Npc", 40, 2444, 2444, 0, 0, 10, 10, 10, 10, 10, 10, 0, 0, 500, 500, 500, 500, 278, 0, 333, 0, 0, NULL, 75, 120, "", 0, 0, 0, "LAST_HIT", 0, 0, 0, "balanced"),
-(32368, 32365, "Weathered Rock", 0, "", 0, "LineageNpcEV.stone_q0236_p", 60.0, 25.0, 1, "male", "L2Npc", 40, 2444, 2444, 0, 0, 10, 10, 10, 10, 10, 10, 0, 0, 500, 500, 500, 500, 278, 0, 333, 0, 0, NULL, 1, 1, "", 0, 0, 0, "LAST_HIT", 0, 0, 0, "balanced");
+(32368, 32368, "Weathered Rock", 0, "", 0, "LineageNpcEV.stone_q0236_p", 60.0, 25.0, 70, "male", "L2Npc", 40, 2444, 2444, 0, 0, 10, 10, 10, 10, 10, 10, 0, 0, 500, 500, 500, 500, 278, 0, 333, 0, 0, NULL, 1, 1, "", 0, 0, 0, "LAST_HIT", 0, 0, 0, "balanced"),
+(32369, 32369, "Fallen Angel", 0, "", 0, "LineageMonster2.apostle_warrior", 6.0, 21.5, 70, "male", "L2Npc", 40, 2444, 2444, 0, 0, 10, 10, 10, 10, 10, 10, 0, 0, 500, 500, 500, 500, 278, 0, 333, 6717, 0, NULL, 1, 1, "", 0, 0, 0, "LAST_HIT", 0, 0, 0, "balanced");
 
 INSERT INTO `npc` VALUES
 (35010, 35010, "Mercenary", 0, "", 0, "NPC.a_guard_MHuman", 8, 24, 50, "male", "L2SiegeGuard", 40, 2317, 830, 3.32, 2.14, 40, 43, 30, 21, 20, 10, 250, 1, 683, 287, 546, 233, 416, 0, 333, 128, 628, 0, 55, 214, "mercenary_siege_clan", 1200, 1, 0, "LAST_HIT", 0, 0, 0, "balanced"),
