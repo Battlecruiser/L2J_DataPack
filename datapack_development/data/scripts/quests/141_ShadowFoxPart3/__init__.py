@@ -43,7 +43,7 @@ class Quest (JQuest) :
        st.exitQuest(False)
        st.giveItems(57, 88888)
        if st.getPlayer().getLevel() >= 37 and st.getPlayer().getLevel() <= 42:
-          st.addExpAndSp(219975,13047)
+          st.addExpAndSp(278005,17058)
        qs = player.getQuestState("998_FallenAngelSelect")
        if not qs:
            q = QuestManager.getInstance().getQuest("998_FallenAngelSelect")
