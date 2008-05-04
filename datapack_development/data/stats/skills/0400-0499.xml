@@ -545,7 +545,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="#stack" stackType="MagicDefUpAtr">
+    <effect count="1" name="Buff" time="120" val="0" abnormal="flame" stackOrder="#stack" stackType="MagicDefUpAtr">
       <mul order="0x30" stat="fireVuln" val="#vuln"/>
     </effect>
   </for>
