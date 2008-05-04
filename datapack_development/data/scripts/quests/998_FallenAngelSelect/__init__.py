@@ -21,7 +21,7 @@ class Quest (JQuest) :
        if q1 :
           qs1 = q1.newQuestState(player)
           qs1.setState(State.STARTED)
-          q1.onEvent(qs1.getQuest(), "30894-01.htm", qs1)
+          q1.onEvent(q1, "30894-01.htm", qs1)
           st.setState(State.COMPLETED)
        return
     elif event == "dusk" :
@@ -29,7 +29,7 @@ class Quest (JQuest) :
        if q2 :
           qs2 = q2.newQuestState(player)
           qs2.setState(State.STARTED)
-          q2.onEvent(qs2.getQuest(), "30894-01.htm", qs2)
+          q2.onEvent(q2, "30894-01.htm", qs2)
           st.setState(State.COMPLETED)
        return
     return event
