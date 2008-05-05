@@ -208,7 +208,7 @@ class Quest (JQuest) :
                st.takeItems(VOUCHER_OF_FAITH,1)
                st.giveItems(PROOF_OF_ALLIANCE,1)
                st.addExpAndSp(0,120000)
-               st.setState(State.COMPLETED)
+               st.exitQuest(False)
                htmltext = "09"
    elif npcId == WITCH_KALIS :
        if id == State.CREATED : #not a valid leader (has not started the quest yet) or a clan member

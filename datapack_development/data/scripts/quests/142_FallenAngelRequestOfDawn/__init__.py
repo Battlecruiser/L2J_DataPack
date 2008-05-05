@@ -30,7 +30,7 @@ class Quest (JQuest) :
     self.questItemIds = [CRYPT,FRAGMENT,BLOOD]
 
  def onAdvEvent (self,event,npc,player) :
-    st = player.getQuestState(self.qn)
+    st = player.getQuestState(qn)
     if not st: return
     htmltext = event
     if event == "30894-01.htm" :
@@ -115,9 +115,9 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_middle")
        st.giveItems(BLOOD, 1)
        self.isAngelSpawned = 0
-    elif st.getInt("cond")==4 and st.getRandom(100) <= 20 and st.getQuestItemsCount(REPORT)<30:
-       st.giveItems(REPORT,1)
-       if st.getQuestItemsCount(REPORT)>=30:
+    elif st.getInt("cond")==4 and st.getRandom(100) <= 20 and st.getQuestItemsCount(FRAGMENT)<30:
+       st.giveItems(FRAGMENT,1)
+       if st.getQuestItemsCount(FRAGMENT)>=30:
           st.set("cond","5")
           st.playSound("ItemSound.quest_middle")
        else:
