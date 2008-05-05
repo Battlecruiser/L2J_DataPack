@@ -1,16 +1,3 @@
-#####################################################################
-#                                                                   #
-#   "The Clan's Reputation"                                         #
-#   "Raise the Clan's Reputation"                                   #
-#   "Sir Eric Rodemai in Aden Castle Town is looking                #
-#   for a brave adventurer to raise the clan's reputation."         #
-#   "Clan Leader, Clan Level 5 and above"                           #
-#                                                                   #
-#   Start NPC: Sir Eric Rodemai[30868]                              #
-#                                                                   #
-#   fixed and State.COMPLETED by chris_00 @katmai and DrLecter      #
-#                                                                   #
-#####################################################################
 import sys
 from net.sf.l2j.gameserver.model.quest        import State
 from net.sf.l2j.gameserver.model.quest        import QuestState
@@ -19,71 +6,66 @@ from net.sf.l2j.gameserver.serverpackets      import PledgeShowInfoUpdate
 from net.sf.l2j.gameserver.serverpackets      import SystemMessage
 from net.sf.l2j.util import Rnd
 
-qn="508_TheClansReputation"
-qd="The Clans Reputation"
+qn="509_TheClansPrestige"
 
 # Quest NPC
-SIR_ERIC_RODEMAI = 30868
+VALDIS = 31331
 
 # Quest Items
-NUCLEUS_OF_FLAMESTONE_GIANT = 8494 # Nucleus of Flamestone Giant : Nucleus obtained by defeating Flamestone Giant
-THEMIS_SCALE                = 8277 # Themis' Scale : Obtain this scale by defeating Palibati Queen Themis.
-NUCLEUS_OF_HEKATON_PRIME    = 8279 # Nucleus of Hekaton Prime : Nucleus obtained by defeating Hekaton Prime
-TIPHON_SHARD                = 8280 # Tiphon Shard : Debris obtained by defeating Tiphon, Gargoyle Lord.
-GLAKIS_NUCLEUS              = 8281 # Glaki's Necleus : Nucleus obtained by defeating Glaki, the last lesser Giant.
-RAHHAS_FANG                 = 8282 # Rahha's Fang : Fangs obtained by defeating Rahha.
+DAIMONS_EYES                = 8489 # Daimon's Eyes: Eyes obtained by killing Daimon the White-Eyed.
+HESTIAS_FAIRY_STONE         = 8490 # Hestia's Fairy Stone: Fairy Stone obtained by defeating Hestia, the Guardian Deity of the Hot Springs.
+NUCLEUS_OF_LESSER_GOLEM     = 8491 # Nucleus of Lesser Golem: Nucleus obtained by defeating the Lesser Golem.
+FALSTON_FANG                = 8492 # Falston's Fang: Fangs obtained by killing Falston, the Demon's Agent.
+SHAIDS_TALON                = 8493 # Shaid's Talon: Talon obtained by defeating Spike Stakato Queen Shaid.
 
 #Quest Raid Bosses
-FLAMESTONE_GIANT        = 25524
-PALIBATI_QUEEN_THEMIS   = 25252
-HEKATON_PRIME           = 25140
-GARGOYLE_LORD_TIPHON    = 25255
-LAST_LESSER_GIANT_GLAKI = 25245
-RAHHA                   = 25051
+DAIMON_THE_WHITE_EYED  = 25524
+HESTIA_GUARDIAN_DEITY  = 25252
+PLAGUE_GOLEM	       = 25140
+DEMONS_AGENT_FALSTON   = 25255
+QUEEN_SHYEED	       = 25245
 
 # id:[RaidBossNpcId,questItemId,minClanPoints,maxClanPoints]
 REWARDS_LIST={
-    1:[PALIBATI_QUEEN_THEMIS,  THEMIS_SCALE,65,100],
-    2:[HEKATON_PRIME,          NUCLEUS_OF_HEKATON_PRIME,40,75],
-    3:[GARGOYLE_LORD_TIPHON,   TIPHON_SHARD,30,65],
-    4:[LAST_LESSER_GIANT_GLAKI,GLAKIS_NUCLEUS,105,140],
-    5:[RAHHA,                  RAHHAS_FANG,40,75],
-    6:[FLAMESTONE_GIANT,       NUCLEUS_OF_FLAMESTONE_GIANT,60,95]
+    1:[DAIMON_THE_WHITE_EYED,	DAIMONS_EYES,180,215],
+    2:[HESTIA_GUARDIAN_DEITY,	HESTIAS_FAIRY_STONE,430,465],
+    3:[PLAGUE_GOLEM,		NUCLEUS_OF_LESSER_GOLEM,380,415],
+    4:[DEMONS_AGENT_FALSTON,	FALSTON_FANG,220,255],
+    5:[QUEEN_SHYEED,		SHAIDS_TALON,130,165]
     }
 
 RADAR={
-    1:[192346,21528,-3648],
-    2:[191979,54902,-7658],
-    3:[170038,-26236,-3824],
-    4:[171762,55028,-5992],
-    5:[117232,-9476,-3320],
-    6:[144218,-5816,-4722],
+    1:[186320,-43904,-3175],
+    2:[134672,-115600,-1216],
+    3:[0,0,0], # not spawned yet
+    4:[93296,-75104,-1824],
+    5:[79635,-55612,-5980]
     }
 
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr) :
      JQuest.__init__(self,id,name,descr)
-     self.questItemIds = [THEMIS_SCALE, NUCLEUS_OF_HEKATON_PRIME, TIPHON_SHARD, GLAKIS_NUCLEUS, RAHHAS_FANG, NUCLEUS_OF_FLAMESTONE_GIANT]
+     self.questItemIds = [DAIMONS_EYES,HESTIAS_FAIRY_STONE,NUCLEUS_OF_LESSER_GOLEM,FALSTON_FANG,SHAIDS_TALON]
 
  def onAdvEvent (self,event,npc,player) :
   st = player.getQuestState(qn)
   if not st: return
   cond = st.getInt("cond")
   htmltext=event
-  if event == "30868-0.htm" :
+  if event == "31331-0.htm" :
     if cond == 0 :
       st.set("cond","1")
       st.setState(State.STARTED)
   elif event.isdigit() :
     if int(event) in REWARDS_LIST.keys():
       st.set("raid",event)
-      htmltext="30868-"+event+".htm"
+      htmltext="31331-"+event+".htm"
       x,y,z=RADAR[int(event)]
       if x+y+z:
         st.addRadar(x, y, z)
       st.playSound("ItemSound.quest_accept")
-  elif event == "30868-7.htm" :
+  elif event == "31331-6.htm" :
     st.playSound("ItemSound.quest_finish")
     st.exitQuest(1)
   return htmltext
@@ -96,24 +78,24 @@ class Quest (JQuest) :
   npcId = npc.getNpcId()
   if player.getClan() == None or player.isClanLeader() == 0 :
      st.exitQuest(1)
-     htmltext = "30868-0a.htm"
-  elif player.getClan().getLevel() < 5 :
+     htmltext = "31331-0a.htm"
+  elif player.getClan().getLevel() < 6 :
      st.exitQuest(1)
-     htmltext =  "30868-0b.htm"
+     htmltext =  "31331-0b.htm"
   else :
      cond = st.getInt("cond")
      raid = st.getInt("raid")
      id = st.getState()
      if id == State.CREATED and cond == 0 :
-        htmltext =  "30868-0c.htm"
+        htmltext =  "31331-0c.htm"
      elif id == State.STARTED and cond == 1 and raid in REWARDS_LIST.keys() :
         npc,item,min,max=REWARDS_LIST[raid]
         count = st.getQuestItemsCount(item)
         CLAN_POINTS_REWARD = Rnd.get(min, max)
         if not count :
-           htmltext = "30868-"+str(raid)+"a.htm"
+           htmltext = "31331-"+str(raid)+"a.htm"
         elif count == 1 :
-           htmltext = "30868-"+str(raid)+"b.htm"
+           htmltext = "31331-"+str(raid)+"b.htm"
            st.takeItems(item,1)
            clan.setReputationScore(clan.getReputationScore()+CLAN_POINTS_REWARD,True)
            player.sendPacket(SystemMessage(1777).addNumber(CLAN_POINTS_REWARD))
@@ -145,10 +127,10 @@ class Quest (JQuest) :
 
 
 # Quest class and state definition
-QUEST       = Quest(508,qn,qd)
+QUEST       = Quest(509,qn,"The Clan's Prestige")
 
-QUEST.addStartNpc(SIR_ERIC_RODEMAI)
-QUEST.addTalkId(SIR_ERIC_RODEMAI)
+QUEST.addStartNpc(VALDIS)
+QUEST.addTalkId(VALDIS)
 
 for npc,item,min,max in REWARDS_LIST.values():
     QUEST.addKillId(npc)
