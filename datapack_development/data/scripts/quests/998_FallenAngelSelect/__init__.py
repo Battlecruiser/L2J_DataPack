@@ -19,17 +19,17 @@ class Quest (JQuest) :
     if event == "dawn" :
        q1 = QuestManager.getInstance().getQuest("142_FallenAngelRequestOfDawn")
        if q1 :
-          qs1 = q1.newQuestState(player)
+          qs1 = q1.newQuestState(st.getPlayer())
           qs1.setState(State.STARTED)
-          q1.onEvent(q1, "30894-01.htm", qs1)
+          q1.notifyEvent("30894-01.htm",None,st.getPlayer())
           st.setState(State.COMPLETED)
        return
     elif event == "dusk" :
        q2 = QuestManager.getInstance().getQuest("143_FallenAngelRequestOfDusk")
        if q2 :
-          qs2 = q2.newQuestState(player)
+          qs2 = q2.newQuestState(st.getPlayer())
           qs2.setState(State.STARTED)
-          q2.onEvent(q2, "30894-01.htm", qs2)
+          q2.notifyEvent("30894-01.htm",None,st.getPlayer())
           st.setState(State.COMPLETED)
        return
     return event

@@ -117,9 +117,8 @@ class Quest (JQuest) :
       st = self.newQuestState(player)
    qs = st.getPlayer().getQuestState("139_ShadowFoxPart1")
    if qs :
-      if qs.getState() == State.COMPLETED :
-         if st.getState() == State.CREATED :
-            st.setState(State.STARTED)
+      if qs.getState() == State.COMPLETED and st.getState() == State.CREATED :
+          st.setState(State.STARTED)
    npc.showChatWindow(player)
    return
 

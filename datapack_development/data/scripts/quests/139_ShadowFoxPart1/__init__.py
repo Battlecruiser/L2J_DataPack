@@ -68,11 +68,11 @@ class Quest (JQuest) :
           htmltext = "30896-03.htm"
        elif cond == 2 :
           if st.getQuestItemsCount(FRAGMENT) >= 10 and st.getQuestItemsCount(CHEST) >= 1:
-             htmltext = "31418-13.htm"
+             htmltext = "30896-13.htm"
           elif st.getInt("talk"):
-             htmltext = "31418-14.htm"
+             htmltext = "30896-14.htm"
           else:
-             htmltext = "31418-12.htm"
+             htmltext = "30896-12.htm"
     return htmltext
 
  def onKill(self,npc,player,isPet):
@@ -92,9 +92,8 @@ class Quest (JQuest) :
       st = self.newQuestState(player)
    qs = st.getPlayer().getQuestState("138_TempleChampionPart2")
    if qs :
-      if qs.getState() == State.COMPLETED :
-         if st.getState() == State.CREATED :
-            st.setState(State.STARTED)
+      if qs.getState() == State.COMPLETED and st.getState() == State.CREATED :
+          st.setState(State.STARTED)
    npc.showChatWindow(player)
    return
 

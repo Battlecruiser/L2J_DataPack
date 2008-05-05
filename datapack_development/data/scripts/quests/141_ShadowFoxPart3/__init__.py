@@ -42,7 +42,8 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_finish")
        st.exitQuest(False)
        st.giveItems(57, 88888)
-       if st.getPlayer().getLevel() >= 37 and st.getPlayer().getLevel() <= 42:
+       player = st.getPlayer()
+       if player.getLevel() >= 37 and player.getLevel() <= 42:
           st.addExpAndSp(278005,17058)
        qs = player.getQuestState("998_FallenAngelSelect")
        if not qs:
