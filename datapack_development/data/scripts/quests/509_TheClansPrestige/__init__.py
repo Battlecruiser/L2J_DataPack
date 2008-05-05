@@ -19,11 +19,11 @@ FALSTON_FANG                = 8492 # Falston's Fang: Fangs obtained by killing F
 SHAIDS_TALON                = 8493 # Shaid's Talon: Talon obtained by defeating Spike Stakato Queen Shaid.
 
 #Quest Raid Bosses
-DAIMON_THE_WHITE_EYED  = 25524
-HESTIA_GUARDIAN_DEITY  = 25252
-PLAGUE_GOLEM	       = 25140
-DEMONS_AGENT_FALSTON   = 25255
-QUEEN_SHYEED	       = 25245
+DAIMON_THE_WHITE_EYED  = 25290
+HESTIA_GUARDIAN_DEITY  = 25293
+PLAGUE_GOLEM	       = 25523
+DEMONS_AGENT_FALSTON   = 25322
+QUEEN_SHYEED	       = 25514
 
 # id:[RaidBossNpcId,questItemId,minClanPoints,maxClanPoints]
 REWARDS_LIST={
