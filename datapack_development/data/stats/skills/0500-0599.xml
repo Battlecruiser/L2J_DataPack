@@ -268,10 +268,22 @@ description(s) :
   </for>
 </skill>
 <skill id="513" levels="1" name="Create Dark Seed">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+<!-- 
+  Description(s):
+  Transform a soul into a seed of darkness. Consumes 1 Soul. 
+--> 
+  <set name="mpConsume" val="58"/> 
+  <set name="target" val="TARGET_SELF"/> 
+  <set name="skillType" val="CREATE_ITEM"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="reuseDelay" val="80000"/>  <!-- guess --> 
+  <set name="hitTime" val="3000"/> 
+  <set name="castRange" val="-1"/> 
+  <set name="effectRange" val="-1"/> 
+  <set name="create_item_id" val="10112"/> 
+  <set name="create_item_count" val="1"/> 
+  <set name="soulConsumeCount" val="1"/>
   <for>
   </for>
 </skill>
@@ -475,18 +487,42 @@ description(s) :
   </for>
 </skill>
 <skill id="523" levels="7" name="Imbue Dark Seed">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+<!-- 
+Description(s) :
+  Sow a dark seed into the body of an enemy, eating up health 
+  and eventually paralyzing the enemy when it is fully grown. Consumes 1 Dark Seed. 
+--> 
+  <table name="#EffectLvl"> 1 2 3 4 5 6 7</table>
+  <set name="itemConsumeId" val="10112"/> 
+  <set name="itemConsumeCount" val="1"/> 
+  <set name="mpConsume" val="30"/> 
+  <set name="power" val="80"/> 
+  <set name="target" val="TARGET_ONE"/> 
+  <set name="reuseDelay" val="12000"/> 
+  <set name="hitTime" val="1800"/> 
+  <set name="skillType" val="DEBUFF"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="40"/> 
+  <set name="effectRange" val="150"/>
+  <set name="effectId" val="5447"/>
+  <set name="effectLevel" val="#EffectLvl"/>
   <for>
   </for>
 </skill>
 <skill id="524" levels="1" name="Cure Dark Seed">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+<!-- 
+Description(s):
+   Eliminates the affliction caused by a dark seed. Consumes 1 Soul. 
+--> 
+  <set name="mpConsume" val="59"/> 
+  <set name="target" val="TARGET_SELF"/> 
+  <set name="skillType" val="NEGATE"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="reuseDelay" val="15000"/> 
+  <set name="hitTime" val="1500"/> 
+  <set name="castRange" val="-1"/> 
+  <set name="cancelEffect" val="5447"/> 
+  <set name="soulConsumeCount" val="1"/>
   <for>
   </for>
 </skill>

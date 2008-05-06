@@ -646,17 +646,21 @@
 </skill>
 <skill id="5447" levels="7" name="Paralysis">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Dark Seed paralyze effect 
   Description(s):
     A temporary paralysis which prevents movement.
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
+  <table name="#dmg"> 5 10 15 20 25 30 35 </table> <!-- guees --> 
+  <set name="target" val="TARGET_ONE"/>
+  <set name="element" val="6"/> <!-- Dark -->
+  <set name="skillType" val="DOT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isDebuff" val="true"/>
+  <set name="castRange" val="40"/> 
+  <for> 
+    <effect count="1" name="Paralyze" time="15" val="0"/> 
+	<effect count="15" name="DamOverTime" time="1" val="#dmg" abnormal="poison" noicon="1">
+  </for> 
 </skill>
 <skill id="5448" levels="1" name="Obilivion">
 <!--
