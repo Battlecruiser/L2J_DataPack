@@ -1179,6 +1179,7 @@
   <set name="effectPower" val="50"/>
   <set name="effectType" val="STUN"/>
   <set name="flyRadius" val="300"/>
+  <set name="flyCourse" val="180"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
     <effect self="1" count="1" name="Warp" time="1" val="0"/>
