@@ -6772,7 +6772,7 @@ INSERT INTO `etcitem` VALUES
 (8785,'Dinosaur Fang Necklace','false','quest',0,'stackable','steel','none',-1,0,0,'true','true','true','true','InterludeItem','none'),
 (8786,'Primeval Potion','false','none',2,'stackable','liquid','none',-1,5000,0,'true','true','true','true','InterludeItem','none'),
 (8787,'Sprigant\'s Fruit','false','none',2,'stackable','liquid','none',-1,0,0,'true','true','true','true','InterludeItem','none'),
-(8868,'Ziggo\'s Gemstone','false','none',0,'stackable','crystal','none',-1,0,0,'true','true','true','true','InterludeItem','none'),
+(8868,'Ziggo\'s Gemstone','false','none',0,'stackable','crystal','none',-1,100000000,0,'true','true','true','true','InterludeItem','none'),
 (8869,'Shadow Item Exchange Coupon: D Grade','false','none',0,'stackable','paper','none',-1,0,0,'false','false','true','false','InterludeItem','none'),
 (8870,'Shadow Item Exchange Coupon: C Grade','false','none',0,'stackable','paper','none',-1,0,0,'false','false','true','false','InterludeItem','none'),
 (8871,'Strategy Guide','false','none',20,'normal','leather','none',-1,0,0,'true','true','true','true','InterludeItem','none'),
