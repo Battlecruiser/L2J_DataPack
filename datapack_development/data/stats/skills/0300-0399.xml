@@ -1201,7 +1201,7 @@
   <set name="magicLvl" val="76"/>
   <set name="power" val="2.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="SPOIL"/>
+  <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
@@ -1210,6 +1210,7 @@
   <set name="SSBoost" val="2.0"/>
   <set name="baseCritRate" val="15"/>
   <for>
+    <effect count="1" name="Spoil" time="1" val="0"/>
   </for>
 </skill>
 <skill id="349" levels="1" name="Song of Renewal">
