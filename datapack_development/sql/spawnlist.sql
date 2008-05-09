@@ -41394,7 +41394,7 @@ INSERT INTO spawnlist VALUES
 (null,'Isle_of_Prayer',1,22263,152325,150566,-3448,0,0,0,60,0,0),
 (null,'Wastelands','1',32368,-21982,186630,-4312,0,0,0,60,0,0);
 
--- Caste Artefacts
+-- Castle Artefacts
 INSERT INTO spawnlist VALUES
 (null,'GludioArtefact1',1,35063,-18120,107984,-2483,0,0,16384,60,0,0),
 (null,'GiranArtefact1',1,35147,117939,145090,-2550,0,0,32768,60,0,0),
