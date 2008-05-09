@@ -123,7 +123,7 @@ class Quest (JQuest) :
    st.exitQuest(1)
    return htmltext
 
-QUEST   = Quest(99993,qn,"village_master")
+QUEST   = Quest(99991,qn,"village_master")
 
 
 for npc in NPCS:
