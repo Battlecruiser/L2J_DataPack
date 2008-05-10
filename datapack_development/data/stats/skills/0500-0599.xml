@@ -252,10 +252,17 @@ description(s) :
   </for>
 </skill>
 <skill id="511" levels="1" name="Temptation">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
+  <set name="hitTime" val="1500"/>
+  <set name="magicLvl" val="49"/> <!-- Guessing -->
+  <set name="mpConsume" val="44"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="500"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="skillType" val="AGGDAMAGE"/>
+  <set name="soulConsumeCount" val="1"/>
+  <set name="target" val="TARGET_ONE"/>
   <for>
   </for>
 </skill>
