@@ -67,10 +67,10 @@ def suscribe_members(st) :
   offline.setInt(1, clan)
   rs=offline.executeQuery()
   while (rs.next()) :
-    char_id=rs.getInt("obj_Id")
+    charId=rs.getInt("charId")
     try :
       insertion = con.prepareStatement("INSERT INTO character_quests (charId,name,var,value) VALUES (?,?,?,?)")
-      insertion.setInt(1, char_id)
+      insertion.setInt(1, charId)
       insertion.setString(2, qn)
       insertion.setString(3, "<state>")
       insertion.setString(4, "Started")
