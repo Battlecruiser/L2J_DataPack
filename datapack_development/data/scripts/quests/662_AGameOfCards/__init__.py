@@ -55,7 +55,6 @@ class Quest (JQuest) :
    self.games = {}
 
  def onEvent (self,event,st) :
-     print event
      htmltext = event
      name = st.getPlayer().getName()
      if event == "Klump_AcceptQuest.htm": # quest accepted
