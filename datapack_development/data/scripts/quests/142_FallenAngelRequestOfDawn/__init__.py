@@ -48,7 +48,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_middle")
     elif event == "32368-02.htm" :
        if self.isAngelSpawned == 0 :
-          self.addSpawn(27338,-21882,186730,-4320,False,900000)
+          self.addSpawn(27338,-21882,186730,-4320,0,False,900000)
           self.isAngelSpawned = 1
           self.startQuestTimer("angel_cleanup",900000,None,player)
     elif event == "angel_cleanup" :
