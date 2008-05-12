@@ -1133,27 +1133,43 @@
   </for>
 </skill>
 <skill id="1446" levels="11" name="Shadow Bind">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- Needs to be verified -->
+  <table name="#magicLvl"> 52 55 58 60 62 64 66 68 70 72 74 </table> <!-- guessing -->
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
+  <set name="hitTime" val="1500"/>
+  <set name="isDebuff" val="true"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpConsume" val="30"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="skillType" val="ROOT"/>
+  <set name="soulConsumeCount" val="1"/>
+  <set name="target" val="TARGET_ONE"/>
   <for>
+    <effect count="1" name="Root" time="30" val="0" stackOrder="1" stackType="Root"/>
   </for>
 </skill>
-<skill id="1447" levels="11" name="Voice Bind">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+<skill id="1447" levels="9" name="Voice Bind">
+  <!-- Needs to be verified -->
+  <table name="#magicLvl"> 58 60 62 64 66 68 70 72 74 </table> <!-- guessing -->
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
+  <set name="hitTime" val="1500"/>
+  <set name="isMagic" val="true"/>
+  <set name="isDebuff" val="true"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpConsume" val="40"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="skillType" val="MUTE"/>
+  <set name="soulConsumeCount" val="1"/>
+  <set name="target" val="TARGET_ONE"/>
   <for>
+    <effect count="1" name="Mute" time="30" val="0" stackOrder="1" stackType="Silence"/>
   </for>
 </skill>
 <skill id="1448" levels="1" name="Blink">
