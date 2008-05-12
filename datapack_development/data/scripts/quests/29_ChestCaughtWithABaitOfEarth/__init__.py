@@ -59,7 +59,7 @@ class Quest (JQuest) :
                 if PlayerLevel >= 48 :
                     WilliesSpecialBait = player.getQuestState("52_WilliesSpecialBait")
                     if WilliesSpecialBait:
-                        if WilliesSpecialBait.getState() == 'State.COMPLETED':
+                        if WilliesSpecialBait.getState() == State.COMPLETED :
                             htmltext="31574-01.htm"
                         else :
                             htmltext="31574-02.htm"

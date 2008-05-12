@@ -50,9 +50,9 @@ class Quest (JQuest) :
     npcId=npc.getNpcId()
     id = st.getState()
     if id == State.CREATED :
-      req = player.getQuestState("50_LanoscoSpecialBait")
+      req = player.getQuestState("50_LanoscosSpecialBait")
       if req : reqst = req.getState()
-      if player.getLevel() >= 27 and req and reqst == 'State.COMPLETED' :
+      if player.getLevel() >= 27 and req and reqst == State.COMPLETED :
         htmltext = "31570-01.htm"
       else :
         st.exitQuest(1)
