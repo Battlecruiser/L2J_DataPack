@@ -29,12 +29,12 @@ EAD = 956 # Scroll: Enchant Armor D
 
 #Rewards format - level : [[item1, amt1],[item2, amt2],...]
 REWARDS = {
-    6 : [[ZIGGOS_GEMSTONE,43],[EWS,3],[EWA,1]], # each Ziggo's Gemstone must be sellable to shops for 100 million adena
-    5 : [[EWS,2],[EWC,2]],                      # so, total adena reward in this case will be 4.3 billion adena
-    4 : [[EWA,1],[EWB,2],[EWD,1]],
-    3 : [[EWC,2]],
-    2 : [[EWC,1]],
-    1 : [[EAD,2]]
+    1 : [[EAD,2]],
+    2 : [[EWC,2]],
+    3 : [[EWS,2],[EWC,2]],
+    4 : [[ZIGGOS_GEMSTONE,43],[EWS,3],[EWA,1]],
+    5 : [[EWC,1]],
+    6 : [[EWA,1],[EWB,2],[EWD,1]]
 }
 
 REWARDS_TEXT = [
