@@ -60,7 +60,7 @@ class Quest (JQuest) :
                 if PlayerLevel >= 36 :
                     OFullesSpecialBait= player.getQuestState("51_OFullesSpecialBait")
                     if OFullesSpecialBait :
-                        if OFullesSpecialBait.getState() == 'State.COMPLETED':
+                        if OFullesSpecialBait.getState() == State.COMPLETED :
                             htmltext="31572-01.htm"
                         else :
                             htmltext="31572-02.htm"

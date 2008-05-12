@@ -52,7 +52,7 @@ class Quest (JQuest) :
     if id == State.CREATED :
       req = player.getQuestState("53_LinnaeusSpecialBait")
       if req : reqst = req.getState()
-      if player.getLevel() >= 61 and req and reqst == 'State.COMPLETED' :
+      if player.getLevel() >= 61 and req and reqst == State.COMPLETED :
         htmltext = "31577-01.htm"
       else :
         st.exitQuest(1)
