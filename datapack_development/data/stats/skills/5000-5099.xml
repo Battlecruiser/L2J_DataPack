@@ -58,7 +58,7 @@
   <for>
   </for>
 </skill>
-<skill id="5004" levels="1" name="Dimensional Stun">
+<skill id="5004" levels="1" name="Dimensional Shock">
 <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
@@ -389,7 +389,7 @@
   <for>
   </for>
 </skill>
-<skill id="5024" levels="12" name="Decrease Atk. Spd.">
+<skill id="5024" levels="12" name="Decrease Atk.Speed">
 <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
@@ -534,7 +534,7 @@
   <for>
   </for>
 </skill>
-<skill id="5037" levels="3" name="Decrease Casting Spd">
+<skill id="5037" levels="3" name="Decrease Casting Speed">
 <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
@@ -991,7 +991,7 @@
   <for>
   </for>
 </skill>
-<skill id="5069" levels="12" name="Decrease Atk. Spd.">
+<skill id="5069" levels="12" name="Decrease Atk.Spd.">
 <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
@@ -1041,7 +1041,7 @@
   <for>
   </for>
 </skill>
-<skill id="5071" levels="12" name="Decrease P. Atk.">
+<skill id="5071" levels="12" name="Decrease P.Atk">
 <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
@@ -1257,7 +1257,7 @@
   <for>
   </for>
 </skill>
-<skill id="5083" levels="4" name="Stun">
+<skill id="5083" levels="4" name="Shock">
 <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
@@ -1388,7 +1388,6 @@
   <set name="skillRadius" val="900"/>
   <set name="coolTime" val="2700"/>
   <set name="hitTime" val="2300"/>
-  <set name="isDebuff" val="true"/>
   <set name="skillType" val="FEAR"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>

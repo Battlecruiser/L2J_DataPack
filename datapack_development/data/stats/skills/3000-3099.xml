@@ -41,10 +41,9 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BLEED"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isDebuff" val="true"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="7" name="DamOverTime" time="3" val="66" abnormal="bleeding"/>
+    <effect count="7" name="DamOverTime" time="3" val="66"/>
   </for>
 </skill>
 <skill id="3006" levels="1" name="Equip Set Items">
@@ -202,7 +201,6 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isDebuff" val="true"/>
   <set name="castRange" val="-1"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
@@ -660,24 +658,21 @@
   <for>
   </for>
 </skill>
-<skill id="3044" levels="20" name="Special Ability: Focus">
+<skill id="3044" levels="20" name="Focus Duel 4">
 <!--
+  Automatically generated from C3 client files.
+  Need to be checked/fixed.
+  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
   Descriptions:
-  lvl1-16:  Increases critical attack success rate.
-  lvl17-20: Increases critical attack success rate and damage inflicted during PvP.
+  1: Increases critical attack rate.
+  20: Enhances critical attack. Increases damage inflicted during PvP.
   created 2005-05-29 23:34:31
 -->
-  <table name="#rate">61 63 64 66 67 68 71 73 75 77 79 81 82 84 86 90 88 106 111 116</table>
-  <table name="#PvPbonus"> 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <add order="0x40" stat="rCrit" val="#rate"/>
-    <mul order="0x30" stat="pvpPhysDmg" val="#PvPbonus"/>
-    <mul order="0x30" stat="pvpMagicalDmg" val="#PvPbonus"/>
   </for>
 </skill>
 <skill id="3045" levels="20" name="Haste Duel 4">

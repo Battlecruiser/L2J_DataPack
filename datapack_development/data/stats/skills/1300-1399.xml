@@ -217,13 +217,7 @@
   <for>
   </for>
 </skill>
-<skill id="1307" levels="3" name="Prayer" enchantLevels1="30" enchantLevels2="30" >
-  <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
-  <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
-  <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
-  <table name="#ench1time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
-  <table name="#ench2MpConsume"> 212 207 203 199 194 190 185 181 176 172 168 164 159 155 151 147 142 137 133 129 126 121 116 113 108 103 99 94 90 85 </table>
-  <table name="#ench2MpConsume_Init"> 55 55 55 55 54 54 54 54 54 53 53 53 53 53 52 52 52 52 52 51 50 50 50 50 50 50 50 50 50 50 </table>
+<skill id="1307" levels="3" name="Prayer">
   <table name="#mpConsume_Init"> 49 52 55 </table>
   <table name="#mpConsume"> 195 207 217 </table>
   <table name="#tab-gainHp"> 1.08 1.10 1.12 </table>
@@ -241,18 +235,11 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="#aggro"/>
-  <enchant2 name="mpConsume" val="#ench2MpConsume"/>
-  <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
     <effect name="Buff" time="1200" count="1" val="0">
       <mul order="0x30" stat="gainHp" val="#tab-gainHp"/>
     </effect>
   </for>
-  <enchant1for>
-    <effect name="Buff" time="#ench1time" count="1" val="0">
-      <mul order="0x30" stat="gainHp" val="1.12"/>
-    </effect>
-  </enchant1for>
 </skill>
 <skill id="1308" levels="3" name="Chant of Predator" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -628,30 +615,40 @@
   </for> 
 </skill> 
 <skill id="1326" levels="1" name="Harmony of Noblesse">
-<!--
-  Description(s):
-     Battle Song. Marches to the front line of the siege by burning the pride of Noblesse.
-     Increases P. Def., Speed, resistance to buff cancellation, and bow/crossbow attacks by burning CP and HP.
-     Usable when CP is above 50 percent during the siege. Consumes 5 Spirit Ores. Maximum CP and HP are temporarily reduced. Effect 1.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="mpInitialConsume" val="10"/>
+  <set name="mpConsume" val="40"/>
+  <set name="power" val="250"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="100"/>
+  <set name="reuseDelay" val="3600000"/>
+  <set name="hitTime" val="7000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="700"/>
+  <set name="effectRange" val="1200"/>
+  <cond msg="Proper elemental seeds required.">
+    <player seed_any="4"/>
+  </cond>
   <for>
   </for>
 </skill>
 <skill id="1327" levels="1" name="Symphony of Noblesse">
-<!--
-  Description(s):
-     Battle Song. Marches to the front line of the siege by burning the pride of Noblesse.
-     Increases M. Def., Speed, resistance to buff cancellation, and bow/crossbow attacks by burning CP and stamina.
-     Usable when CP is above 50 percent during the siege. Consumes 5 Spirit Ores. Maximum CP and HP are temporarily reduced. Effect 1.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="mpInitialConsume" val="20"/>
+  <set name="mpConsume" val="60"/>
+  <set name="power" val="400"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="200"/>
+  <set name="reuseDelay" val="3600000"/>
+  <set name="hitTime" val="7000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="700"/>
+  <set name="effectRange" val="1200"/>
+  <cond msg="Proper elemental seeds required.">
+    <player seed_any="8"/>
+  </cond>
   <for>
   </for>
 </skill>
@@ -728,9 +725,7 @@
   <for>
   </for>
 </skill>
-<skill id="1331" levels="10" name="Summon Feline Queen" enchantLevels1="30">
-  <table name="#enchantNpcId">14265 14266 14267 14268 14269 14270 14271 14272 14273 14274 14275 14276 14277 14278 14279 14280 14281 14282 14283 14284 14285 14286 14287 14288 14289 14290 14291 14292 14293 14294</table>
-  <enchant1 name="npcId" val="#enchantNpcId"/>
+<skill id="1331" levels="10" name="Summon Feline Queen">
   <table name="#mpConsume_Init"> 14 16 18 19 21 22 22 23 24 25 </table>
   <table name="#mpConsume"> 56 92 69 75 82 85 88 92 95 98 </table>
   <table name="#itemConsumeCount"> 1 1 2 2 3 2 3 4 3 4 </table>
@@ -764,9 +759,7 @@
   <for>
   </for>
 </skill>
-<skill id="1332" levels="10" name="Summon Unicorn Seraphim" enchantLevels1="30">
-  <table name="#enchantNpcId">14449 14450 14451 14452 14453 14454 14455 14456 14457 14458 14459 14460 14461 14462 14463 14464 14465 14466 14467 14468 14469 14470 14471 14472 14473 14474 14475 14476 14477 14478</table>
-  <enchant1 name="npcId" val="#enchantNpcId"/>
+<skill id="1332" levels="10" name="Summon Unicorn Seraphim">
   <table name="#mpConsume_Init"> 14 16 18 19 21 22 22 23 24 25 </table>
   <table name="#mpConsume"> 56 92 69 75 82 85 88 92 95 98 </table>
   <table name="#itemConsumeCount"> 1 1 2 2 3 2 3 4 3 4 </table>
@@ -800,9 +793,7 @@
   <for>
   </for>
 </skill>
-<skill id="1333" levels="10" name="Summon Nightshade" enchantLevels1="30">
-  <table name="#enchantNpcId">14633 14634 14635 14636 14637 14638 14639 14640 14641 14642 14643 14644 14645 14646 14647 14648 14649 14650 14651 14652 14653 14654 14655 14656 14657 14658 14659 14660 14661 14662</table>
-  <enchant1 name="npcId" val="#enchantNpcId"/>
+<skill id="1333" levels="10" name="Summon Nightshade">
   <table name="#mpConsume_Init"> 14 16 18 19 21 22 22 23 24 25 </table>
   <table name="#mpConsume"> 56 92 69 75 82 85 88 92 95 98 </table>
   <table name="#itemConsumeCount"> 1 1 2 2 3 2 3 4 3 4 </table>
@@ -836,9 +827,7 @@
   <for>
   </for>
 </skill>
-<skill id="1334" levels="7" name="Summon Cursed Man" enchantLevels1="30">
-  <table name="#enchantNpcId">14081 14082 14083 14084 14085 14086 14087 14088 14089 14090 14091 14092 14093 14094 14095 14096 14097 14098 14099 14100 14101 14102 14103 14104 14105 14106 14107 14108 14109 14110</table>
-  <enchant1 name="npcId" val="#enchantNpcId"/>
+<skill id="1334" levels="7" name="Summon Cursed Man">
   <table name="#mpConsume_Init"> 21 22 24 26 26 27 28 </table>
   <table name="#mpConsume"> 82 88 95 101 104 106 109 </table>
   <table name="#itemConsumeCount"> 1 2 2 3 3 3 3 </table>
@@ -898,7 +887,6 @@
   <set name="reuseDelay" val="120000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="MUTE"/>
-  <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
@@ -917,7 +905,6 @@
   <set name="reuseDelay" val="300000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="DEBUFF"/>
-  <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
@@ -943,7 +930,6 @@
   <set name="reuseDelay" val="60000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="DEBUFF"/>
-  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
@@ -970,7 +956,6 @@
   <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
-  <set name="isDebuff" val="true"/>
   <set name="overHit" val="true"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
@@ -998,7 +983,6 @@
   <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
-  <set name="isDebuff" val="true"/>
   <set name="overHit" val="true"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
@@ -1023,7 +1007,6 @@
   <set name="hitTime" val="6000"/>
   <set name="element" val="1"/> <!-- Wind -->
   <set name="reuseDelay" val="60000"/>
-  <set name="isDebuff" val="true"/>
   <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
@@ -1052,7 +1035,6 @@
   <set name="element" val="5"/> <!-- Holy -->
   <set name="reuseDelay" val="60000"/>
   <set name="skillType" val="MDAM"/>
-  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="900"/>
@@ -1080,7 +1062,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="900"/>
-  <set name="isDebuff" val="true"/>
   <set name="effectRange" val="1400"/>
   <!-- Dark Vortex: Power is reduced but drain percentage is increased - so I changed 0.7 -> 0.8 -->
   <set name="absorbPart" val="0.8"/>
@@ -1434,7 +1415,6 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="30000"/>
   <set name="hitTime" val="4000"/>
-  <set name="isDebuff" val="true"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1455,7 +1435,6 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="30000"/>
   <set name="hitTime" val="4000"/>
-  <set name="isDebuff" val="true"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1479,7 +1458,6 @@
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
-  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1499,7 +1477,6 @@
   <set name="skillRadius" val="200"/>
   <set name="reuseDelay" val="120000"/>
   <set name="hitTime" val="4000"/>
-  <set name="isDebuff" val="true"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1617,7 +1594,6 @@
   <set name="reuseDelay" val="300000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="DEBUFF"/>
-  <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -1645,7 +1621,6 @@
   <set name="lvlDepend" val="1"/>
   <set name="reuseDelay" val="60000"/>
   <set name="hitTime" val="4000"/>
-  <set name="isDebuff" val="true"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1764,7 +1739,6 @@
   <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="1200000"/>
   <set name="target" val="TARGET_AURA"/>
-  <set name="isDebuff" val="true"/>
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1796,7 +1770,6 @@
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isDebuff" val="true"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
@@ -1837,7 +1810,6 @@
   <set name="target" val="TARGET_ENEMY_SUMMON"/>
   <set name="skillType" val="BETRAY"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isDebuff" val="true"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="isMagic" val="true"/>
@@ -1857,7 +1829,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="500"/>
   <set name="effectRange" val="1000"/>
-  <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
   <for>
     <effect count="5" name="Fear" time="3" val="0"/>
@@ -1877,7 +1848,6 @@
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="230"/>
   <set name="skillType" val="DEBUFF"/>
-  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
@@ -1902,7 +1872,6 @@
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="WEAKNESS"/>
-  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
@@ -1927,7 +1896,6 @@
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="WEAKNESS"/>
-  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
@@ -1955,7 +1923,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
-  <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Debuff" time="120" val="0" stackOrder="2" stackType="surrender">
@@ -1981,7 +1948,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
-  <set name="isDebuff" val="true"/>
   <for>
     <effect count="1" name="Debuff" time="30" val="0">
       <div order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
@@ -2150,7 +2116,6 @@
   <set name="reuseDelay" val="4000"/>
   <set name="hitTime" val="3000"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="isDebuff" val="true"/>
   <set name="skillType" val="SLEEP"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
@@ -2187,7 +2152,6 @@
   <set name="reuseDelay" val="27000"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
-  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>

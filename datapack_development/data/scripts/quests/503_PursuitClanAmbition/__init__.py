@@ -63,14 +63,14 @@ DROPLIST = {
 def suscribe_members(st) :
   clan=st.getPlayer().getClan().getClanId()
   con=L2DatabaseFactory.getInstance().getConnection()
-  offline=con.prepareStatement("SELECT charId FROM characters WHERE clanid=? AND online=0")
+  offline=con.prepareStatement("SELECT obj_Id FROM characters WHERE clanid=? AND online=0")
   offline.setInt(1, clan)
   rs=offline.executeQuery()
   while (rs.next()) :
-    charId=rs.getInt("charId")
+    char_id=rs.getInt("obj_Id")
     try :
-      insertion = con.prepareStatement("INSERT INTO character_quests (charId,name,var,value) VALUES (?,?,?,?)")
-      insertion.setInt(1, charId)
+      insertion = con.prepareStatement("INSERT INTO character_quests (char_id,name,var,value) VALUES (?,?,?,?)")
+      insertion.setInt(1, char_id)
       insertion.setString(2, qn)
       insertion.setString(3, "<state>")
       insertion.setString(4, "Started")
@@ -87,7 +87,7 @@ def suscribe_members(st) :
 def offlineMemberExit(st) :
   clan=st.getPlayer().getClan().getClanId()
   con=L2DatabaseFactory.getInstance().getConnection()
-  offline=con.prepareStatement("DELETE FROM character_quests WHERE name = ? and charId IN (SELECT charId FROM characters WHERE clanId =? AND online=0")
+  offline=con.prepareStatement("DELETE FROM character_quests WHERE name = ? and char_id IN (SELECT obj_id FROM characters WHERE clanId =? AND online=0")
   offline.setString(1, qn)
   offline.setInt(2, clan)
   try :
@@ -111,7 +111,7 @@ def getLeaderVar(st, var) :
     pass
   leaderId=st.getPlayer().getClan().getLeaderId()
   con=L2DatabaseFactory.getInstance().getConnection()
-  offline=con.prepareStatement("SELECT value FROM character_quests WHERE charId=? AND var=? AND name=?")
+  offline=con.prepareStatement("SELECT value FROM character_quests WHERE char_id=? AND var=? AND name=?")
   offline.setInt(1, leaderId)
   offline.setString(2, var)
   offline.setString(3, qn)
@@ -141,7 +141,7 @@ def setLeaderVar(st, var, value) :
   else :
     leaderId=st.getPlayer().getClan().getLeaderId()
     con=L2DatabaseFactory.getInstance().getConnection()
-    offline=con.prepareStatement("UPDATE character_quests SET value=? WHERE charId=? AND var=? AND name=?")
+    offline=con.prepareStatement("UPDATE character_quests SET value=? WHERE char_id=? AND var=? AND name=?")
     offline.setString(1, value)
     offline.setInt(2, leaderId)
     offline.setString(3, var)
@@ -186,7 +186,7 @@ def exit503(completed,st):
       st.exitQuest(1)
     st.takeItems(Scepter_Judgement,-1)
     try:
-      members = st.getPlayer().getClan().getOnlineMembers(0)[0]
+      members = st.getPlayer().getClan().getOnlineMembers("")[0]
       for i in members:
         st.getPlayer().getClan().getClanMember(i).getPlayerInstance().getQuestState(qn).exitQuest(1)
       offlineMemberExit(st)
@@ -227,7 +227,7 @@ class Quest (JQuest) :
       st.set("cond","2")
       suscribe_members(st) 
       try:
-        members = st.getPlayer().getClan().getOnlineMembers(0)[0]
+        members = st.getPlayer().getClan().getOnlineMembers("")[0]
         for i in members:
           pst = QuestManager.getInstance().getQuest(qn).newQuestState(st.getPlayer().getClan().getClanMember(int(i)).getPlayerInstance())
           pst.setState(State.STARTED)

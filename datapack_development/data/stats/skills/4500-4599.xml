@@ -156,7 +156,6 @@ this curse when trying to kill a raid monster whose level is lower than
 one's level by 9 or more. This curse cannot be undone. -->
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="PARALYZE"/>
-  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="1500"/>
@@ -350,7 +349,6 @@ chances and the success rate of dagger skills. -->
   <set name="hitTime" val="1500"/>
   <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isDebuff" val="true"/>
   <set name="power" val="0.0"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="target" val="TARGET_ONE"/>
@@ -369,7 +367,6 @@ chances and the success rate of dagger skills. -->
   <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="0.0"/>
-  <set name="isDebuff" val="true"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
@@ -386,7 +383,6 @@ chances and the success rate of dagger skills. -->
   <set name="hitTime" val="1500"/>
   <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isDebuff" val="true"/>
   <set name="power" val="0.0"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="target" val="TARGET_ONE"/>
@@ -404,7 +400,6 @@ chances and the success rate of dagger skills. -->
   <set name="hitTime" val="1500"/>
   <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isDebuff" val="true"/>
   <set name="power" val="0.0"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="target" val="TARGET_ONE"/>
@@ -424,7 +419,6 @@ chances and the success rate of dagger skills. -->
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="0.0"/>
   <set name="skillType" val="DEBUFF"/>
-  <set name="isDebuff" val="true"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
     <effect count="1" name="Debuff" time="600" val="0" stackOrder="1" stackType="song_of_water">
@@ -440,7 +434,6 @@ chances and the success rate of dagger skills. -->
   <set name="hitTime" val="1500"/>
   <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isDebuff" val="true"/>
   <set name="power" val="0.0"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="target" val="TARGET_ONE"/>
@@ -461,7 +454,6 @@ chances and the success rate of dagger skills. -->
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="0.0"/>
   <set name="skillType" val="DEBUFF"/>
-  <set name="isDebuff" val="true"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
     <effect count="1" name="Debuff" time="600" val="0" stackOrder="1" stackType="hit_up">
@@ -478,7 +470,6 @@ chances and the success rate of dagger skills. -->
   <set name="isMagic" val="true"/>
   <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isDebuff" val="true"/>
   <set name="power" val="0.0"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="target" val="TARGET_ONE"/>
@@ -495,7 +486,6 @@ chances and the success rate of dagger skills. -->
   <set name="effectRange" val="900"/>
   <set name="hitTime" val="4000"/>
   <set name="isMagic" val="true"/>
-  <set name="isDebuff" val="true"/>
   <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="0.0"/>
@@ -509,7 +499,7 @@ chances and the success rate of dagger skills. -->
     </effect>
   </for>
 </skill>
-<skill id="4542" levels="1" name="Quest - Henchman 90% Sleep Stun Weakness">
+<skill id="4542" levels="1" name="Quest - Henchman 90% Sleep Shock Weakness">
 <!-- TODO -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
@@ -518,7 +508,7 @@ chances and the success rate of dagger skills. -->
   <for>
   </for>
 </skill>
-<skill id="4543" levels="1" name="Quest - BOSS Stun Weakness">
+<skill id="4543" levels="1" name="Quest - BOSS Shock Weakness">
 <!-- TODO -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
@@ -602,7 +592,6 @@ chances and the success rate of dagger skills. -->
   <set name="magicLvl" val="75"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="0"/>
-  <set name="isDebuff" val="true"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -625,7 +614,6 @@ chances and the success rate of dagger skills. -->
   <set name="magicLvl" val="75"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="0"/>
-  <set name="isDebuff" val="true"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -649,7 +637,6 @@ chances and the success rate of dagger skills. -->
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="0"/>
   <set name="skillType" val="DEBUFF"/>
-  <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
@@ -671,7 +658,6 @@ chances and the success rate of dagger skills. -->
   <set name="magicLvl" val="75"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="0"/>
-  <set name="isDebuff" val="true"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -741,7 +727,6 @@ chances and the success rate of dagger skills. -->
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isDebuff" val="true"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
@@ -1107,7 +1092,6 @@ chances and the success rate of dagger skills. -->
   <set name="mpInitialConsume" val="15"/>
   <set name="mpConsume" val="58"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isDebuff" val="true"/>
   <set name="power" val="0.0"/>
   <set name="skillType" val="PARALYZE"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1183,7 +1167,6 @@ target cannot move temporarily. Effect 3. -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
-  <set name="isDebuff" val="true"/>
   <set name="hitTime" val="1800"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>

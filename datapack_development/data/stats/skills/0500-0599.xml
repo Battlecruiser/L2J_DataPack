@@ -35,7 +35,6 @@
   <set name="hitTime" val="1800"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isDebuff" val="true"/>
   <set name="castRange" val="600"/>
   <set name="soulConsumeCount" val="1"/>
   <for>
@@ -234,7 +233,6 @@ description(s) :
   <set name="hitTime" val="3000"/>
   <set name="coolTime" val="380"/>
   <set name="skillType" val="PDAM"/>
-  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
@@ -252,17 +250,10 @@ description(s) :
   </for>
 </skill>
 <skill id="511" levels="1" name="Temptation">
-  <set name="castRange" val="400"/>
-  <set name="effectRange" val="900"/>
-  <set name="hitTime" val="1500"/>
-  <set name="magicLvl" val="49"/> <!-- Guessing -->
-  <set name="mpConsume" val="44"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="500"/>
-  <set name="reuseDelay" val="10000"/>
-  <set name="skillType" val="AGGDAMAGE"/>
-  <set name="soulConsumeCount" val="1"/>
-  <set name="target" val="TARGET_ONE"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -275,22 +266,10 @@ description(s) :
   </for>
 </skill>
 <skill id="513" levels="1" name="Create Dark Seed">
-<!-- 
-  Description(s):
-  Transform a soul into a seed of darkness. Consumes 1 Soul. 
---> 
-  <set name="mpConsume" val="58"/> 
-  <set name="target" val="TARGET_SELF"/> 
-  <set name="skillType" val="CREATE_ITEM"/> 
-  <set name="operateType" val="OP_ACTIVE"/> 
-  <set name="isMagic" val="true"/> 
-  <set name="reuseDelay" val="80000"/>  <!-- guess --> 
-  <set name="hitTime" val="3000"/> 
-  <set name="castRange" val="-1"/> 
-  <set name="effectRange" val="-1"/> 
-  <set name="create_item_id" val="10112"/> 
-  <set name="create_item_count" val="1"/> 
-  <set name="soulConsumeCount" val="1"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -480,7 +459,6 @@ description(s) :
   <set name="hitTime" val="1500"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="isDebuff" val="true"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="castRange" val="#castRange"/>
   <set name="effectRange" val="#effectRange"/>
@@ -494,42 +472,18 @@ description(s) :
   </for>
 </skill>
 <skill id="523" levels="7" name="Imbue Dark Seed">
-<!-- 
-Description(s) :
-  Sow a dark seed into the body of an enemy, eating up health 
-  and eventually paralyzing the enemy when it is fully grown. Consumes 1 Dark Seed. 
---> 
-  <table name="#EffectLvl"> 1 2 3 4 5 6 7</table>
-  <set name="itemConsumeId" val="10112"/> 
-  <set name="itemConsumeCount" val="1"/> 
-  <set name="mpConsume" val="30"/> 
-  <set name="power" val="80"/> 
-  <set name="target" val="TARGET_ONE"/> 
-  <set name="reuseDelay" val="12000"/> 
-  <set name="hitTime" val="1800"/> 
-  <set name="skillType" val="DEBUFF"/> 
-  <set name="operateType" val="OP_ACTIVE"/> 
-  <set name="castRange" val="40"/> 
-  <set name="effectRange" val="150"/>
-  <set name="effectId" val="5447"/>
-  <set name="effectLevel" val="#EffectLvl"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="524" levels="1" name="Cure Dark Seed">
-<!-- 
-Description(s):
-   Eliminates the affliction caused by a dark seed. Consumes 1 Soul. 
---> 
-  <set name="mpConsume" val="59"/> 
-  <set name="target" val="TARGET_SELF"/> 
-  <set name="skillType" val="NEGATE"/> 
-  <set name="operateType" val="OP_ACTIVE"/> 
-  <set name="reuseDelay" val="15000"/> 
-  <set name="hitTime" val="1500"/> 
-  <set name="castRange" val="-1"/> 
-  <set name="cancelEffect" val="5447"/> 
-  <set name="soulConsumeCount" val="1"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
@@ -593,13 +547,14 @@ Description(s):
 <skill id="529" levels="1" name="Song of Elemental">
   <!-- Done by theREALizzy, check for retail values. -->
   <set name="mpConsume" val="54"/>
+  <set name="nextDanceCost" val="30"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="hitTime" val="2500"/>
   <set name="skillType" val="BUFF"/>
-  <set name="isDance" val="false"/> <!-- Despite its name it is a standard party buff and not a Song. It is not affected by other song/dances on the stack. -->
+  <set name="isDance" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -617,13 +572,14 @@ Description(s):
   <!-- Check of retail values. -->
   <set name="weaponsAllowed" val="512"/>
   <set name="mpConsume" val="60"/>
+  <set name="nextDanceCost" val="30"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="hitTime" val="2500"/>
   <set name="skillType" val="BUFF"/>
-  <set name="isDance" val="false"/> <!-- Despite its name it is a standard party buff and not a Dance. It is not affected by other song/dances on the stack. -->
+  <set name="isDance" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -636,22 +592,11 @@ Description(s):
   </for>
 </skill>
 <skill id="531" levels="1" name="Critical Wound">
-  <set name="castRange" val="40"/>
-  <set name="effectRange" val="400"/>
-  <set name="magicLvl" val="79"/> <!-- Guessing -->
-  <set name="mpConsume" val="43"/>
-  <set name="hitTime" val="1500"/>
-  <set name="isDebuff" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="0.0"/>
-  <set name="reuseDelay" val="30000"/>
-  <set name="skillType" val="DEBUFF"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="weaponsAllowed" val="16"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
-    <effect name="Debuff" count="1" time="30" val="0">
-      <mul order="0x30" stat="critVuln" val="1.30"/>
-    </effect>
   </for>
 </skill>
 <skill id="532" levels="1" name="Counter Chance">
@@ -712,28 +657,11 @@ Description(s):
   </for>
 </skill>
 <skill id="536" levels="1" name="Over the Body">
-  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="cpConsume" val="99999"/> <!-- When the skill is used, all of your CP are consumed. -->
-  <set name="effectRange" val="-1"/>
-  <set name="hitTime" val="2000"/>
-  <set name="mpConsume" val="143"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="0.0"/>
-  <set name="reuseDelay" val="3600000"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="target" val="TARGET_SELF"/>
-  <cond msg="Can be only used when CP is 80% or more">
-    <player cp="80"/>
-  </cond>
   <for>
-    <effect count="1" name="Buff" time="60" val="0" stackOrder="1" stackType="multi_buff">
-      <mul order="0x30" stat="pAtk" val="1.25"/>
-      <mul order="0x30" stat="pAtkSpd" val="1.15"/>
-      <mul order="0x30" stat="pDef" val="1.25"/>
-      <add order="0x40" stat="runSpd" val="20"/>
-      <mul order="0x30" stat="maxHp" val="1.30"/>
-    </effect>
   </for>
 </skill>
 <skill id="537" levels="1" name="Spoil Bomb">
@@ -797,7 +725,6 @@ Description(s):
   <set name="effectRange" val="-1"/>
   <set name="flyType" val="CHARGE"/>
   <set name="flyRadius" val="400"/>
-  <set name="isDebuff" val="true"/>
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="80"/>
   <for>
@@ -1215,7 +1142,6 @@ Description(s):
   <set name="skillRadius" val="250"/>
   <set name="coolTime" val="2500"/>
   <set name="hitTime" val="3000"/>
-  <set name="isDebuff" val="true"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -1302,7 +1228,6 @@ Description(s):
   <set name="hitTime" val="3000"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isDebuff" val="true"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="360"/>
   <for>
@@ -1325,7 +1250,6 @@ Description(s):
   <set name="hitTime" val="1080"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isDebuff" val="true"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="900"/>
   <for>
@@ -1401,9 +1325,9 @@ Description(s):
   <for>
  </for>
 </skill>
-<skill id="587" levels="2" name="Earth Storm">
+<skill id="587" levels="2" name="Dig Attack">
   <table name="#mpConsume"> 54 58</table>
-  <table name="#power"> 1200 1406</table>
+  <table name="#power"> 1008 1406</table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>

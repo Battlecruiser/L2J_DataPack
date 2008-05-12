@@ -14,7 +14,7 @@
   <for>
   </for>
 </skill>
-<skill id="5201" levels="6" name="Pet Concentration">
+<skill id="5201" levels="2" name="Pet Concentration">
 <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
@@ -28,7 +28,7 @@
   <for>
   </for>
 </skill>
-<skill id="5202" levels="12" name="Stun">
+<skill id="5202" levels="12" name="NPC Ranged Stun">
 <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
@@ -42,7 +42,7 @@
   <for>
   </for>
 </skill>
-<skill id="5203" levels="12" name="Fear">
+<skill id="5203" levels="12" name="NPC Ranged Fear">
 <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
@@ -93,7 +93,6 @@
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="500"/>
-  <set name="isDebuff" val="true"/>
   <set name="effectRange" val="1000"/>
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="70"/>
@@ -113,7 +112,6 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isDebuff" val="true"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
@@ -122,7 +120,7 @@
     </effect>
   </for>
 </skill>
-<skill id="5208" levels="1" name="Event Wind walk">
+<skill id="5208" levels="1" name="Golden Pig Wind Walk">
 <!--
   Description(s):
       Temporarily increases Speed. Effect 2.
@@ -141,7 +139,7 @@
     </effect>
   </for>
 </skill>
-<skill id="5209" levels="1" name="Event Shield">
+<skill id="5209" levels="1" name="Golden Pig Shield">
 <!--
   Description(s):
       Temporarily increases P. Def. Effect 3.
@@ -160,7 +158,7 @@
     </effect>
   </for>
 </skill>
-<skill id="5210" levels="1" name="Event Bless the body">
+<skill id="5210" levels="1" name="Golden Pig Blessed Body">
 <!--
   Description(s):
       Temporarily increases maximum HP. Effect 6.
@@ -179,7 +177,7 @@
     </effect>
   </for>
 </skill>
-<skill id="5211" levels="1" name="Event Vampiric rage">
+<skill id="5211" levels="1" name="Golden Pig Vampiric Rage">
 <!--
   Description(s):
       Uses damage inflicted upon an enemy to temporarily restore HP. Excludes damage inflicted by skill or remote attack. Effect 4.
@@ -197,7 +195,7 @@
     </effect>
   </for>
 </skill>
-<skill id="5212" levels="1" name="Event Regeneration">
+<skill id="5212" levels="1" name="Golden Pig Regeneration">
 <!--
   Description(s):
       Temporarily increases ability to restore HP. Effect 3.
@@ -216,7 +214,7 @@
     </effect>
   </for>
 </skill>
-<skill id="5213" levels="1" name="Event Haste">
+<skill id="5213" levels="1" name="Golden Pig Haste">
 <!--
   Description(s):
       Temporarily increases Atk. Spd. Effect 1.
@@ -235,7 +233,7 @@
     </effect>
   </for>
 </skill>
-<skill id="5214" levels="1" name="Event Bless the soul">
+<skill id="5214" levels="1" name="Golden Pig Blessed Soul">
 <!--
   Description(s):
       Temporarily increases maximum MP. Effect 6.
@@ -254,7 +252,7 @@
     </effect>
   </for>
 </skill>
-<skill id="5215" levels="1" name="Event Acumen">
+<skill id="5215" levels="1" name="Golden Pig Acumen">
 <!--
   Description(s):
       Temporarily increases Casting Spd. Effect 3.
@@ -273,7 +271,7 @@
     </effect>
   </for>
 </skill>
-<skill id="5216" levels="1" name="Event Concentration">
+<skill id="5216" levels="1" name="Golden Pig Concentration">
 <!--
   Description(s):
       Temporarily decreases the probability of magic being canceled due to damage taken. Effect 1.
@@ -292,7 +290,7 @@
     </effect>
   </for>
 </skill>
-<skill id="5217" levels="1" name="Event Empower">
+<skill id="5217" levels="1" name="Golden Pig Empower">
 <!--
   Description(s):
       Temporarily increases M. Atk. Effect 1.
@@ -323,7 +321,7 @@
   <for>
   </for>
 </skill>
-<skill id="5219" levels="1" name="Stun of giant mutated animal">
+<skill id="5219" levels="1" name="Huge Pig Stun">
 <!--
   Description(s):
       Curse of the Huge Pig: Target is temporarily stunned and immoblized.
@@ -336,7 +334,6 @@
   <set name="hitTime" val="4500"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isDebuff" val="true"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <set name="effectType" val="STUN"/>
@@ -345,7 +342,7 @@
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
-<skill id="5220" levels="1" name="Fear of giant mutated animal">
+<skill id="5220" levels="1" name="Huge Pig Fear">
 <!--
   Description(s):
       Curse of the Huge Pig: Target is temporarily overcome with fear, causing it to flee mindlessly.
@@ -356,7 +353,6 @@
   <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="FEAR"/>
-  <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
@@ -437,7 +433,7 @@
   <for>
   </for>
 </skill>
-<skill id="5230" levels="1" name="Stun">
+<skill id="5230" levels="1" name="Shock">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -445,7 +441,7 @@
   <for>
   </for>
 </skill>
-<skill id="5231" levels="1" name="Stun">
+<skill id="5231" levels="1" name="Shock">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -453,7 +449,7 @@
   <for>
   </for>
 </skill>
-<skill id="5232" levels="1" name="Stun">
+<skill id="5232" levels="1" name="Shock">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -517,7 +513,7 @@
   <for>
   </for>
 </skill>
-<skill id="5240" levels="1" name="Stun">
+<skill id="5240" levels="1" name="Shock">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -525,7 +521,7 @@
   <for>
   </for>
 </skill>
-<skill id="5241" levels="1" name="Stun">
+<skill id="5241" levels="1" name="Shock">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -597,7 +593,7 @@
   <for>
   </for>
 </skill>
-<skill id="5250" levels="1" name="Stun">
+<skill id="5250" levels="1" name="Shock">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -719,7 +715,6 @@
   <set name="element" val="6"/> <!-- Dark -->
   <set name="skillType" val="DOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isDebuff" val="true"/>
   <set name="castRange" val="600"/>
   <for>
 	<effect count="20" name="DamOverTime" time="3" val="#dmg">
@@ -772,7 +767,6 @@
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="200"/>
   <set name="hitTime" val="300"/>
-  <set name="isDebuff" val="true"/>
   <set name="skillType" val="POISON"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -791,7 +785,6 @@
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="200"/>
   <set name="reuseDelay" val="7000"/>
-  <set name="isDebuff" val="true"/>
   <set name="hitTime" val="300"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
@@ -817,7 +810,6 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="300"/>
   <set name="skillType" val="STUN"/>
-  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="600"/>
@@ -834,7 +826,6 @@
   <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
-  <set name="isDebuff" val="true"/>
   <set name="hitTime" val="300"/>
   <set name="skillType" val="ROOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -856,7 +847,6 @@
   <set name="reuseDelay" val="1500"/>
   <set name="hitTime" val="1200"/>
   <set name="skillType" val="AGGDAMAGE"/>
-  <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
