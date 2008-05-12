@@ -88,7 +88,7 @@ class Quest (JQuest) :
               suffix = ok_i
               change(st,player,newclass,req_item)
      st.exitQuest(1)
-     htmltext = "30474-"+suffix+".htm"
+     htmltext = "30109-"+suffix+".htm"
    return htmltext
 
  def onTalk (self,npc,player):
