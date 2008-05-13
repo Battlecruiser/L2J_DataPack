@@ -97,6 +97,8 @@ of this directory a little bit.
 317606003.xml -> Adventurers' Guide Miss Queen: Give Traveler Coupon
 317606004.xml -> Adventurers' Guide Miss Queen: Return Traveler Coupon
 
+300900001.xml -> Talismans
+
 350980001.xml -> Manor Products: Gludio
 350980002.xml -> Manor Products: Dion
 350980003.xml -> Manor Products: Giran
