@@ -1604,7 +1604,7 @@ INSERT INTO `weapon` VALUES
 (9875, 'Dynasty Mace - Mana Up', 'lrhand', 'true', 1080, 1, 1, 'wood', 's80', 246, 0, 'bigblunt', 4, 4.00000, 0, 0, 0, 379, 0, 186, -1, 0, 0, 'true', 'true', 'true', 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, '3014-2;'),
 (9876, 'Dynasty Mace - Conversion', 'lrhand', 'true', 1080, 1, 1, 'wood', 's80', 246, 0, 'bigblunt', 4, 4.00000, 0, 0, 0, 379, 0, 186, -1, 0, 0, 'true', 'true', 'true', 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, '3048-2;'),
 (9877, 'Dynasty Mace - Acumen', 'lrhand', 'true', 1080, 1, 1, 'wood', 's80', 246, 0, 'bigblunt', 4, 4.00000, 0, 0, 0, 379, 0, 186, -1, 0, 0, 'true', 'true', 'true', 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, '3047-3;'),
-(9878, 'Dynasty Bagh-Nakh - Rsk. Evasion', 'lrhand', 'true', 1550, 1, 1, 'wood', 's80', 374, 0, 'dualfist', 4, 4.00000, 0, 0, 0, 325, 0, 140, -1, 0, 0, 'true', 'true', 'true', 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, '3060-6;'),
+(9878, 'Dynasty Bagh-Nakh - Rsk. Evasion', 'lrhand', 'true', 1550, 1, 1, 'wood', 's80', 374, 0, 'dualfist', 4, 4.00000, 0, 0, 0, 325, 0, 140, -1, 0, 0, 'true', 'true', 'true', 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, '3031-6;'),
 (9879, 'Dynasty Bagh-Nakh - Focus', 'lrhand', 'true', 1550, 1, 1, 'wood', 's80', 374, 0, 'dualfist', 4, 4.00000, 0, 0, 0, 325, 0, 140, -1, 0, 0, 'true', 'true', 'true', 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, '3044-18;'),
 (9880, 'Dynasty Bagh-Nakh - Haste', 'lrhand', 'true', 1550, 1, 1, 'wood', 's80', 374, 0, 'dualfist', 4, 4.00000, 0, 0, 0, 325, 0, 140, -1, 0, 0, 'true', 'true', 'true', 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, '3037-2;'),
 (9901, 'Improved Falchion', 'rhand', 'true', 1530, 2, 2, 'wood', 'none', 31, 0, 'sword', 8, 0.00000, 0, 0, 0, 379, 0, 21, -1, 0, 0, 'true', 'true', 'true', 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, '0-0;'),
