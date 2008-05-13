@@ -111,7 +111,7 @@ class Quest (JQuest) :
        elif id == 7 :      # rogue
          return htmltext+"-15.htm"
        elif id == 22 :     # elven scout
-         return htmltext+"-19.htm"
+         return htmltext+"-22.htm"
        elif id == 1 :      # human warrior
          return htmltext+"-29.htm"
        elif classId.level() == 0 :            # first occupation change not made yet
