@@ -189,11 +189,11 @@ class Quest (JQuest) :
       st.giveItems(WATCHERS_EYE2,1)
       st.playSound("ItemSound.quest_middle")
       st.set("cond","7")
-      st.addSpawn(30646,npc,0,0)
+      st.addSpawn(30646,npc,0,300000)
    elif npcId == 27114 and cond == 9 :
       st.set("cond","10")
       st.playSound("ItemSound.quest_middle")
-      st.addSpawn(30646,npc,0,0)
+      st.addSpawn(30646,npc,0,300000)
    return
 
 QUEST       = Quest(211,qn,"Trial Of Challenger")

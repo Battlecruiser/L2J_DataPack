@@ -27,7 +27,6 @@ class Quest (JQuest) :
     if htmltext == "32010-03.htm" :
        st.set("cond","1")
        st.setState(State.STARTED)
-       st.takeItems(FADEDMARK,1)
        st.playSound("ItemSound.quest_accept")
     return htmltext
 
@@ -50,6 +49,7 @@ class Quest (JQuest) :
        if cond == 2 and st.getQuestItemsCount(NECROHEART)==10:
           htmltext = "32010-05.htm"
           st.takeItems(NECROHEART,10)
+          st.takeItems(FADEDMARK,1)
           st.giveItems(MARK,1)
           st.giveItems(8273,10)
           st.exitQuest(False)
