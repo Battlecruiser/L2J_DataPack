@@ -82,7 +82,6 @@ class Quest (JQuest) :
          if cond == 0 and st.getQuestItemsCount(CARADINE_LETTER) == 1 :
            if id == State.COMPLETED :
              htmltext = "<html><body>This quest has already been completed.</body></html>"
-
            elif player.getLevel() < 65 : 
              htmltext = "31740-2.htm"
              st.exitQuest(1)
@@ -105,6 +104,8 @@ class Quest (JQuest) :
            htmltext = "31741-11.htm"
      elif npcId == LADD and cond == 6 :
        htmltext = "30721-1.htm"
+   else :
+     htmltext = "<html><body>This quest may only be undertaken by sub-class characters of level 50 or above.</body></html>"
    return htmltext
 
  def onKill(self,npc,player,isPet):

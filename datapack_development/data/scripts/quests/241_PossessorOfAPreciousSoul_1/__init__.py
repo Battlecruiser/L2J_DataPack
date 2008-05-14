@@ -244,8 +244,7 @@ class Quest (JQuest) :
        elif cond == 21 :
          htmltext = "31272-7.htm"
    else :
-     htmltext = "31739-2.htm"
-     st.exitQuest(1)
+     htmltext = "<html><body>This quest may only be undertaken by sub-class characters of level 50 or above.</body></html>"
    return htmltext
 
  def onKill(self,npc,player,isPet):
