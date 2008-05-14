@@ -371,7 +371,7 @@ class Quest(JQuest):
 						st.playSound("ItemSound.quest_itemget")
 						return
 				if not st.getQuestItemsCount(TALINS_PERIDOT_ID) :
-					st.giveItems(ALINS_PERIDOT_ID,1)
+					st.giveItems(TALINS_PERIDOT_ID,1)
 					st.playSound("ItemSound.quest_itemget")
 					st.set("cond","16")
 		return
