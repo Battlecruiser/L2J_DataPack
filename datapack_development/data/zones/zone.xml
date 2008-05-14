@@ -779,17 +779,20 @@
 	</zone>
 
 <!-- Boss Zones -->
+     <zone id='12005' type='BossZone' shape='NPoly' minZ='-5120' maxZ='-2500'>
+	    <stat name='name' val='Lair of Frintezza'/>
+     </zone>
      <zone id='12006' type='BossZone' shape='Cuboid' minZ='-8320' maxZ='-4870'>
 	    <stat name='name' val='Lair of Antharas'/>
-		<stat name='InvadeTime' val='1800000'/>
+	    <stat name='InvadeTime' val='1800000'/>
      </zone>
      <zone id='12007' type='BossZone' shape='NPoly' minZ='9967' maxZ='16301'>
 	    <stat name='name' val='Lair of Baium'/>
-		<stat name='InvadeTime' val='1800000'/>
+	    <stat name='InvadeTime' val='1800000'/>
      </zone>
      <zone id='12008' type='BossZone' shape='Cuboid' minZ='-1735' maxZ='16301'>
 	    <stat name='name' val='Lair of Valakas'/>
-		<stat name='InvadeTime' val='1800000'/>
+	    <stat name='InvadeTime' val='1800000'/>
      </zone>
 <!--
      <zone id='12009' type='BossZone' shape='Cuboid' minZ='-5600' maxZ='-3895'>
