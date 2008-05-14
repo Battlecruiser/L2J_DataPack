@@ -34,4 +34,3 @@ class Quest (JQuest) :
      JQuest.registerNPCs(self)
 
 QUEST       = Quest(qnu,qn,qna)
-

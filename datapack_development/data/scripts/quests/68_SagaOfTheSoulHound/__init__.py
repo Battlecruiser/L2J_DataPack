@@ -45,4 +45,3 @@ class Quest (JQuest) :
      else : return self.prevclass[0]                               #else, it's male
 
 QUEST       = Quest(qnu,qn,qna)
-
