@@ -1866,7 +1866,7 @@
 <skill id="483" levels="2" name="Sword Shield">
  <!-- Needs retail value checks for lvl2-->
   <table name="#runSpd"> 0.7 0.7 </table>
-  <table name="#pDef"> 1600 1800 </table>
+  <table name="#pDef"> 1600 3200 </table>
   <table name="#mpConsume"> 16 24 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
@@ -1880,8 +1880,8 @@
   <set name="soulConsumeCount" val="2"/>
   <for>
     <effect count="1" name="Buff" time="30" val="0" stackOrder="1" stackType="pDefSpec">
-    <add order="0x40" stat="pDef" val="#pDef"/>
-    <mul order="0x30" stat="runSpd" val="#runSpd"/>
+      <add order="0x40" stat="pDef" val="#pDef"/>
+      <mul order="0x30" stat="runSpd" val="#runSpd"/>
     </effect>
   </for>
 </skill>
@@ -2113,18 +2113,10 @@
   Attack with a powerful charge, ramming an enemy with your shoulder. Instantly puts the enemy into 
   shock. Consumes 1 Soul. An equipped ancient sword weapon is required to use this skill.  
 -->
-  <table name="#mpConsume_Init">
-   8 9 9 9 9 10 10 10 11 11
-   11 11 12 12 12 12 13 13 13 14
-   14 14 14 14 15 15 15 15 16 16
-   16 17 17 17 17 17 17
-  </table>
-  <table name="#mpConsume">
-   20 20 21 21 22 22 23 24 24 25
-   26 27 27 27 28 29 29 30 31 31
-   32 33 33 34 34 34 35 36 36 37
-   38 38 38 39 40 41 41
-  </table>
+  <table name="#mpConsume_Init"> 8 9 9 9 9 10 10 10 11 11 11 11 12 12 12 12 13 13 13 14 14 14 14 14 15 15 15 15 16 16 16 17 17 17 17 17 17 </table>
+  <table name="#mpConsume"> 20 20 21 21 22 22 23 24 24 25 26 27 27 27 28 29 29 30 31 31 32 33 33 34 34 34 35 36 36 37 38 38 38 39 40 41 41 </table>
+  <table name="#castRange"> 400 400 400 400 400 400 400 400 400 400 400 400 400 400 400 400 400 400 500 500 500 500 500 500 500 500 500 500 500 600 600 600 600 600 600 600 600 </table>
+  <table name="#effectRange"> 900 900 900 900 900 900 900 900 900 900 900 900 900 900 900 900 900 900 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1100 1100 1100 1100 1100 1100 1100 1100 </table>
   <table name="#magicLvl"> 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 </table>
   <set name="magicLvl" val="#magicLvl"/><!-- 40,76 -->
   <set name="weaponsAllowed" val="32768"/>
@@ -2135,14 +2127,14 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="STUN"/>
-  <set name="castRange" val="400"/>
-  <set name="effectRange" val="560"/>
+  <set name="castRange" val="#castRange"/>
+  <set name="effectRange" val="#effectRange"/>
   <set name="isDebuff" val="true"/>
   <set name="reuseDelay" val="36000"/>
   <set name="soulConsumeCount" val="1"/>
   <set name="flyType" val="CHARGE"/>
   <for>
-     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="495" levels="10" name="Blade Rush">
@@ -2155,7 +2147,9 @@
   <table name="#power"> 3.0 3.0 4.0 4.0 5.0 6.0 6.0 7.0 8.0 8.0 </table>
   <table name="#dmg"> 39 51 66 81 93 102 111 120 129 138 </table>
   <table name="#magicLvl"> 55 57 59 61 63 66 68 70 72 74 </table>
-  <set name="magicLvl" val="#magicLvl"/><!-- 55,76 -->
+  <table name="#castRange"> 500 500 500 500 500 500 600 600 600 600 </table>
+  <table name="#effectRange"> 1000 1000 1000 1000 1000 1000 1100 1100 1100 1100 </table>
+  <set name="magicLvl" val="#magicLvl"/> <!-- 55,76 -->
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="weaponsAllowed" val="32768"/>
@@ -2166,8 +2160,8 @@
   <set name="power" val="#power"/>
   <set name="lvlDepend" val="2"/>
   <set name="skillType" val="BLEED"/>
-  <set name="castRange" val="400"/>
-  <set name="effectRange" val="800"/>
+  <set name="castRange" val="#castRange"/>
+  <set name="effectRange" val="#effectRange"/>
   <set name="isDebuff" val="true"/>
   <set name="reuseDelay" val="36000"/>
   <set name="flyType" val="CHARGE"/>
