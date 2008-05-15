@@ -739,13 +739,8 @@
 -->
   </for>
 </skill>
-<skill id="433" levels="1" name="Arcane Roar"> <!-- perhaps "Arcane Lore" -->
-<!--
-  Needs to be finished.
-
-  Description(s):
-      Increases resistance to elemental attacks and increases magic power.
--->
+<skill id="433" levels="1" name="Arcane Roar">
+  <!-- Needs to be verified -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -753,24 +748,17 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-<!-- need to add resistance increase to elemental attacks
-    <mul order="0x30" stat="fireVuln" val="?"/>
-    <mul order="0x30" stat="windVuln" val="?"/>
-    <mul order="0x30" stat="waterVuln" val="?"/>
-    <mul order="0x30" stat="earthVuln" val="?"/>
-    <mul order="0x30" stat="holyVuln" val="?"/>
-    <mul order="0x30" stat="darkVuln" val="?"/>
--->
+    <mul order="0x30" stat="fireVuln" val="0.97"/>
+    <mul order="0x30" stat="windVuln" val="0.97"/>
+    <mul order="0x30" stat="waterVuln" val="0.97"/>
+    <mul order="0x30" stat="earthVuln" val="0.97"/>
+    <mul order="0x30" stat="holyVuln" val="0.97"/>
+    <mul order="0x30" stat="darkVuln" val="0.97"/>
     <mul order="0x30" stat="mAtk" val="1.03"/>
   </for>
 </skill>
 <skill id="434" levels="1" name="Necromancy">
-<!--
-  Needs to be finished.
-
-  Description(s):
-      Increases resistance to dark attacks and increases magic power.
--->
+  <!-- Needs to be verified -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -778,9 +766,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-<!-- need to add resistance increase to dark attacks
-    <mul order="0x30" stat="darkVuln" val="?"/>
--->
+    <mul order="0x30" stat="darkVuln" val="0.97"/>
     <mul order="0x30" stat="mAtk" val="1.03"/>
   </for>
 </skill>
