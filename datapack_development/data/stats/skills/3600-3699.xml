@@ -525,8 +525,8 @@ Description(s):
   </for>
 </skill>
 <skill id="3630" levels="1" name="Void Burst">
-  <set name="mpConsume" val="200"/>
-  <set name="power" val="0.0"/>
+  <set name="mpConsume" val="140"/>
+  <set name="power" val="1000"/> <!-- Guessing -->
   <set name="target" val="TARGET_AURA"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="60000"/> <!-- Need check -->
@@ -539,8 +539,8 @@ Description(s):
   </for>
 </skill>
 <skill id="3631" levels="1" name="Void Flow">
-  <set name="mpConsume" val="200"/>
-  <set name="power" val="0.0"/>
+  <set name="mpConsume" val="140"/>
+  <set name="power" val="1000"/> <!-- Guessing -->
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1900"/>
   <set name="reuseDelay" val="60000"/> <!-- Need check -->
