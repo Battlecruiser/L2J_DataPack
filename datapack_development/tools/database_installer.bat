@@ -514,7 +514,9 @@ gameservers.sql
 ) do call :dump %%i
 set dest=gs
 for %%i in (
+access_levels.sql
 account_data.sql
+admin_command_access_rights.sql
 armor.sql
 armorsets.sql
 auction.sql
