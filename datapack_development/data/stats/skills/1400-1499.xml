@@ -1149,7 +1149,7 @@
   <set name="soulConsumeCount" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
-    <effect count="1" name="Root" time="30" val="0" stackOrder="1" stackType="Root"/>
+    <effect count="1" name="Root" time="15" val="0" stackOrder="1" stackType="Root"/>
   </for>
 </skill>
 <skill id="1447" levels="9" name="Voice Bind">
@@ -1169,7 +1169,7 @@
   <set name="soulConsumeCount" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
-    <effect count="1" name="Mute" time="30" val="0" stackOrder="1" stackType="Silence"/>
+    <effect count="1" name="Mute" time="15" val="0" stackOrder="1" stackType="Silence"/>
   </for>
 </skill>
 <skill id="1448" levels="1" name="Blink">

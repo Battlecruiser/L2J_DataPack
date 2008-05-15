@@ -13,6 +13,7 @@
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <set name="soulConsumeCount" val="1"/>
   <for>
     <effect count="10" name="ManaDamOverTime" time="3" val="#dmg">
@@ -37,12 +38,13 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
   <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
   <set name="soulConsumeCount" val="1"/>
   <for>
-  	<effect count="10" name="Debuff" time="15" val="0">
-  		<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
-  		<mul order="0x30" stat="pDef" val="#pDef"/>
-  	</effect>
+    <effect count="1" name="Debuff" time="15" val="0">
+      <mul order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
+      <mul order="0x30" stat="pDef" val="#pDef"/>
+    </effect>
   </for>
 </skill>
 <skill id="502" levels="5" name="Life to Soul">
