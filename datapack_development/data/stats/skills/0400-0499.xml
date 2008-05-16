@@ -287,11 +287,11 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="1" name="SilentMove" abnormal="stealth" time="120" val="0">
-      <mul order="0x50" stat="pAtk" val="#pAtk"/>
+      <mul order="0x30" stat="pAtk" val="#pAtk"/>
       <sub order="0x40" stat="accCombat" val="#accCombat"/>
       <sub order="0x40" stat="rEvas" val="#rEvas"/>
-      <mul order="0x50" stat="pDef" val="#pDef"/>
-      <mul order="0x50" stat="mDef" val="#mDef"/>
+      <mul order="0x30" stat="pDef" val="#pDef"/>
+      <mul order="0x30" stat="mDef" val="#mDef"/>
     </effect>
   </for>
 </skill>
@@ -1430,7 +1430,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-      <div order="0x60" stat="gainHp" val="2"/> 
+      <mul order="0x30" stat="gainHp" val="0.95"/> 
   </for>
 </skill>
 <skill id="463" levels="3" name="Weapon Mastery">
