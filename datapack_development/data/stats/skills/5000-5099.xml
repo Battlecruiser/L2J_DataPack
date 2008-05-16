@@ -1161,16 +1161,16 @@
   <set name="operateType" val="OP_PASSIVE"/> 
   <set name="castRange" val="-1"/>
   <for> 
-    <mul order="0x50" stat="pAtk" val="#pAtk"/> 
-    <mul order="0x50" stat="mAtk" val="#mAtk"/> 
-    <mul order="0x50" stat="pDef" val="#pDef"/> 
-    <mul order="0x50" stat="mDef" val="#mDef"/> 
-    <mul order="0x50" stat="pAtkSpd" val="#pAtkSpd"/> 
-    <mul order="0x50" stat="mAtkSpd" val="#mAtkSpd"/> 
-    <mul order="0x50" stat="runSpd" val="#runSpd"/> 
-    <mul order="0x50" stat="rEvas" val="#rEvas"/> 
-    <mul order="0x50" stat="cAtk" val="#cAtk"/> 
-    <mul order="0x50" stat="accCombat" val="#accCombat"/> 
+    <mul order="0x30" stat="pAtk" val="#pAtk"/> 
+    <mul order="0x30" stat="mAtk" val="#mAtk"/> 
+    <mul order="0x30" stat="pDef" val="#pDef"/> 
+    <mul order="0x30" stat="mDef" val="#mDef"/> 
+    <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/> 
+    <mul order="0x30" stat="mAtkSpd" val="#mAtkSpd"/> 
+    <mul order="0x30" stat="runSpd" val="#runSpd"/> 
+    <mul order="0x30" stat="rEvas" val="#rEvas"/> 
+    <mul order="0x30" stat="cAtk" val="#cAtk"/> 
+    <mul order="0x30" stat="accCombat" val="#accCombat"/> 
   </for>  
 </skill>
 <skill id="5077" levels="1" name="NPC Remove Death Penalty">
