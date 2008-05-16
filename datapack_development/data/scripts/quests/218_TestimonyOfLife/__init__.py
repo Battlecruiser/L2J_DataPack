@@ -279,7 +279,8 @@ class Quest(JQuest):
 			if st.getQuestItemsCount(THALIAS_LETTER2_ID):
 				htmltext = "30655-01.htm"
 			elif st.getQuestItemsCount(ISAELS_INSTRUCTIONS_ID):
-				if self.isSpearComplete(st):
+				if st.getQuestItemsCount(TALINS_SPEAR_BLADE_ID) and st.getQuestItemsCount(TALINS_SPEAR_SHAFT_ID) and st.getQuestItemsCount(TALINS_RUBY_ID) \
+				and st.getQuestItemsCount(TALINS_AQUAMARINE_ID) and st.getQuestItemsCount(TALINS_AMETHYST_ID) and st.getQuestItemsCount(TALINS_PERIDOT_ID):
 					htmltext = "30655-04.htm"
 					st.set("cond","17")
 					st.takeItems(TALINS_SPEAR_BLADE_ID,1)
