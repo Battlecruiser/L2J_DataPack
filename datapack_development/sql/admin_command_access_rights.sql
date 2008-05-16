@@ -7,5 +7,5 @@ CREATE TABLE IF NOT EXISTS `admin_command_access_rights` (
   PRIMARY KEY  (`admin_command`)
 ) ;
 
-INSERT INTO `admin_command_access_rights` VALUES 
+INSERT IGNORE INTO `admin_command_access_rights` VALUES 
 ('admin_admin','6');
