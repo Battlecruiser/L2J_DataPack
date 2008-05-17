@@ -190,10 +190,17 @@
   </for>
 </skill>
 <skill id="621" levels="1" name="Create Special Bolt">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Needs to be verified -->
+  <set name="mpConsume" val="38"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="3000"/>
+  <set name="reuseDelay" val="3600000"/> <!-- Guessing -->
+  <set name="skillType" val="CREATE_ITEM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="create_item_id" val="10113"/>
+  <set name="create_item_count" val="1"/>
   <for>
   </for>
 </skill>
@@ -252,11 +259,17 @@
   <set name="num_souls" val="35"/>
 </skill>
 <skill id="626" levels="4" name="Critical Sense">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Needs to be verified -->
+  <table name="#rCrit"> 1.10 1.15 1.20 1.25 </table> 
+  <table name="#cAtk"> 45 90 145 195 </table> <!-- Custom for lvl 1,2,3 --> 
+  <set name="target" val="TARGET_SELF"/> 
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="rCrit" val="#rCrit"/> 
+    <add order="0x40" stat="cAtk" val="#cAtk"/>
   </for>
 </skill>
 <skill id="627" levels="40" name="Soul Shock">
