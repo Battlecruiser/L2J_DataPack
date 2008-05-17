@@ -510,12 +510,12 @@ if %logging% == 0 set output=NUL
 set dest=ls
 for %%i in (
 accounts.sql
+account_data.sql
 gameservers.sql
 ) do call :dump %%i
 set dest=gs
 for %%i in (
 access_levels.sql
-account_data.sql
 admin_command_access_rights.sql
 armor.sql
 armorsets.sql
