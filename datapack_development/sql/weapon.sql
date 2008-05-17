@@ -1568,7 +1568,7 @@ INSERT INTO `weapon` VALUES
 (9659, 'Enchanted Cerberus Fang', 'rhand', 'true', 100, 0, 0, 'wood', 'none', 413, 0, 'dualfist', 8, 0.00000, 0, 0, 0, 277, 0, 5, -1, 0, 0, 'true', 'true', 'true', 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, '0-0;'),
 (9660, 'Orichalcum Fang', 'rhand', 'true', 100, 0, 0, 'wood', 'none', 477, 0, 'dualfist', 8, 0.00000, 0, 0, 0, 277, 0, 5, -1, 0, 0, 'true', 'true', 'true', 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, '0-0;'),
 (9661, 'Enchanted Fenril Fang', 'rhand', 'true', 100, 0, 0, 'wood', 'none', 537, 0, 'dualfist', 8, 0.00000, 0, 0, 0, 277, 0, 5, -1, 0, 0, 'true', 'true', 'true', 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, '0-0;'),
-(9720, 'Warrior''s Sword', 'rhand', 'true', 1300, 1, 1, 'wood', 'none', 12, 0, 'sword', 10, -1.00000, 0, 0, 0, 406, 0, 10, -1, 0, 0, 'true', 'true', 'true', 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, '0-0;'),
+(9720, 'Warrior\'s Sword', 'rhand', 'true', 1300, 1, 1, 'wood', 'none', 12, 0, 'rapier', 10, -1.00000, 0, 0, 0, 406, 0, 10, -1, 0, 0, 'true', 'true', 'true', 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, '0-0;'),
 (9813, 'Orc Officer', 'lrhand', 'true', 2150, 1, 1, 'wood', 'none', 213, 0, 'dual', 8, 0.00000, 0, 0, 0, 325, 0, 91, -1, 0, 0, 'true', 'true', 'true', 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, '0-0;'),
 (9819, 'Combat flag', 'lrhand', 'true', 500, 1, 1, 'wood', 'none', 0, 0, 'none', 0, 0.00000, 0, 0, 0, 325, 0, 0, -1, 0, 0, 'false', 'false', 'false', 'false', 0, 0, 0, 0, 0, 0, 0, 0, 0, '0-0;'),
 (9840, 'Shadow Item: Chevalier Rapier', 'rhand', 'false', 473, 2, 2, 'wood', 'd', 111, 0, 'rapier', 10, -1.00000, 0, 0, 0, 406, 0, 68, 300, 0, 0, 'false', 'false', 'true', 'false', 0, 0, 0, 0, 0, 0, 0, 0, 0, '0-0;'),
