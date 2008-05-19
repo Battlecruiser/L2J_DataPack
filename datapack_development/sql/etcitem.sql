@@ -7103,7 +7103,7 @@ INSERT INTO `etcitem` VALUES
 (9741,'Halisha\'s Mark','false','quest',0,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
 (9742,'Halisha\'s Mark','false','quest',0,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
 (9743,'Shining Medallion','false','quest',0,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
-(9744,'Blood Jewel','false','none',0,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
+(9744,'Blood Jewel','false','quest',0,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
 (9745,'Black Echo Crystal','false','quest',0,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
 (9746,'Commander\'s Feather','false','quest',0,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
 (9747,'Crimson Spider Claw','false','quest',0,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
