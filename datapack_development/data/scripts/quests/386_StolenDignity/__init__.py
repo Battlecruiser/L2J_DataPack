@@ -18,7 +18,7 @@ REQUIRED_ORE=100 #how many items will be paid for a game (affects onkill sounds 
 SI_ORE = 6363
 
 #Rewards
-REWARDS=[5529]+range(5532,5540)+range(5541,5549)+[8331]+range(8341,8343)+[8346]+[8349]
+REWARDS=[5529]+range(5532,5540)+range(5541,5549)+[8331]+range(8341,8343)+[8346]+[8349]+range(8712,8723)
  
 #Messages
 default   = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
