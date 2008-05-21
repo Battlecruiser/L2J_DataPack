@@ -4,7 +4,7 @@
 import sys
 from java.util                                 import Iterator
 from net.sf.l2j.util                           import Rnd
-from net.sf.l2j.gameserver.serverpackets       import CreatureSay
+from net.sf.l2j.gameserver.serverpackets       import NpcSay
 from net.sf.l2j.gameserver.model.quest         import State
 from net.sf.l2j.gameserver.model.quest         import QuestState
 from net.sf.l2j.gameserver.model.quest.jython  import QuestJython as JQuest
@@ -288,11 +288,11 @@ class Quest (JQuest) :
     elif event == "30766-04.htm":
       st.set("cond","9")
       spawnedNpc=st.addSpawn(30766,160622,21230,-3710,90000)
-      spawnedNpc.broadcastPacket(CreatureSay(spawnedNpc.getObjectId(),0,spawnedNpc.getName(),"Blood and Honour."))
+      spawnedNpc.broadcastPacket(NpcSay(spawnedNpc.getObjectId(),0,spawnedNpc.getNpcId(),"Blood and Honour."))
       spawnedNpc=st.addSpawn(30759,160665,21209,-3710,90000)
-      spawnedNpc.broadcastPacket(CreatureSay(spawnedNpc.getObjectId(),0,spawnedNpc.getName(),"Ambition and Power"))
+      spawnedNpc.broadcastPacket(NpcSay(spawnedNpc.getObjectId(),0,spawnedNpc.getNpcId(),"Ambition and Power"))
       spawnedNpc=st.addSpawn(30758,160665,21291,-3710,90000)
-      spawnedNpc.broadcastPacket(CreatureSay(spawnedNpc.getObjectId(),0,spawnedNpc.getName(),"War and Death"))
+      spawnedNpc.broadcastPacket(NpcSay(spawnedNpc.getObjectId(),0,spawnedNpc.getNpcId(),"War and Death"))
     elif event == "30766-08.htm":
       st.takeItems(Scepter_Judgement,-1)
       exit503(0,st)
@@ -534,7 +534,7 @@ class Quest (JQuest) :
         else:
           if npcId == 27181:                # Imperial Gravekeeper
             spawnedNpc=leader_st.addSpawn(30765,120000)
-            npc.broadcastPacket(CreatureSay(spawnedNpc.getObjectId(),0,spawnedNpc.getName(),"Curse of the gods on the one that defiles the property of the empire!"))
+            npc.broadcastPacket(NpcSay(spawnedNpc.getObjectId(),0,spawnedNpc.getNpcId(),"Curse of the gods on the one that defiles the property of the empire!"))
             leader_st.set("ImpGraveKeeper","3")
             self.ImpGraveKepperStat = 1
           else:

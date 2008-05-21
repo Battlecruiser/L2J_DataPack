@@ -7,7 +7,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest        import State
 from net.sf.l2j.gameserver.model.quest        import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-from net.sf.l2j.gameserver.serverpackets      import CreatureSay
+from net.sf.l2j.gameserver.serverpackets      import NpcSay
 from net.sf.l2j.gameserver.datatables         import SpawnTable
 
 qn = "334_TheWishingPotion"
@@ -70,7 +70,7 @@ def check_ingredients(st,required) :
     return 1
 
 def autochat(npc,text) :
-    if npc: npc.broadcastPacket(CreatureSay(npc.getObjectId(),0,npc.getName(),text))
+    if npc: npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getNpcId(),text))
     return
 
 class Quest (JQuest) :

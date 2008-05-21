@@ -7,7 +7,7 @@ from net.sf.l2j.gameserver.idfactory import IdFactory
 from net.sf.l2j.gameserver.datatables import NpcTable
 from net.sf.l2j.gameserver.model.actor.instance import L2TamedBeastInstance
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-from net.sf.l2j.gameserver.serverpackets import CreatureSay
+from net.sf.l2j.gameserver.serverpackets import NpcSay
 from net.sf.l2j.gameserver.serverpackets import SocialAction
 from net.sf.l2j.util import Rnd;
 
@@ -178,11 +178,11 @@ class feedable_beasts(JQuest) :
             # also, perform a rare random chat
             rand = Rnd.get(20)
             if rand > 4 : pass
-            elif rand == 0 : npc.broadcastPacket(CreatureSay(objectId,0,nextNpc.getName(), player.getName()+", will you show me your hideaway?"))
-            elif rand == 1 : npc.broadcastPacket(CreatureSay(objectId,0,nextNpc.getName(), player.getName()+", whenever I look at spice, I think about you."))
-            elif rand == 2 : npc.broadcastPacket(CreatureSay(objectId,0,nextNpc.getName(), player.getName()+", you do not need to return to the village.  I will give you strength"))
-            elif rand == 3 : npc.broadcastPacket(CreatureSay(objectId,0,nextNpc.getName(), "Thanks, "+player.getName()+".  I hope I can help you"))
-            elif rand == 4 : npc.broadcastPacket(CreatureSay(objectId,0,nextNpc.getName(), player.getName()+", what can I do to help you?"))
+            elif rand == 0 : npc.broadcastPacket(NpcSay(objectId,0,nextNpc.getNpcId(), player.getName()+", will you show me your hideaway?"))
+            elif rand == 1 : npc.broadcastPacket(NpcSay(objectId,0,nextNpc.getNpcId(), player.getName()+", whenever I look at spice, I think about you."))
+            elif rand == 2 : npc.broadcastPacket(NpcSay(objectId,0,nextNpc.getNpcId(), player.getName()+", you do not need to return to the village.  I will give you strength"))
+            elif rand == 3 : npc.broadcastPacket(NpcSay(objectId,0,nextNpc.getNpcId(), "Thanks, "+player.getName()+".  I hope I can help you"))
+            elif rand == 4 : npc.broadcastPacket(NpcSay(objectId,0,nextNpc.getNpcId(), player.getName()+", what can I do to help you?"))
 
         # if not trained, the newly spawned mob will automatically be agro against its feeder
         # (what happened to "never bite the hand that feeds you" anyway?!)
@@ -239,7 +239,7 @@ class feedable_beasts(JQuest) :
 
             # rare random talk...
             if Rnd.get(20) == 0 :
-                npc.broadcastPacket(CreatureSay(objectId,0,npc.getName(),self.Text[growthLevel][Rnd.get(len(self.Text[growthLevel]))]))
+                npc.broadcastPacket(NpcSay(objectId,0,npc.getNpcId(),self.Text[growthLevel][Rnd.get(len(self.Text[growthLevel]))]))
 
             if growthLevel > 0 :
                 # check if this is the same player as the one who raised it from growth 0.
@@ -261,7 +261,7 @@ class feedable_beasts(JQuest) :
                           "What can I help you with?",
                           "I am not here only for food!",
                           "Yam, yam, yam, yam, yam!"]
-                npc.broadcastPacket(CreatureSay(objectId,0,npc.getName(),mytext[Rnd.get(len(mytext))]))
+                npc.broadcastPacket(NpcSay(objectId,0,npc.getNpcId(),mytext[Rnd.get(len(mytext))]))
         return
 
     def onKill (self,npc,player,isPet):
