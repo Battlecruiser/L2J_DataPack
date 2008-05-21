@@ -99,7 +99,7 @@ These functions, their triggers, and the parameters passed into the script are d
 9) onSpawn (self, npc)
 	Currently the only function that has no reference to a player.  It is triggered whenever an NPC spawns or
 	respawns and passes a reference to the newly (re)spawned NPC.  It is useful for initializations, starting
-	quest timers, displaying chat (CreatureSay), and more.
+	quest timers, displaying chat (NpcSay), and more.
 	The parameter "npc" contains a reference to the exact instance of the NPC who just (re)spawned.
 10) onFactionCall(self, npc, caller, attacker, isPet)
 	Triggered when an npc is called by another npc in the same faction.

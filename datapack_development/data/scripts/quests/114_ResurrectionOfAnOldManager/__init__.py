@@ -7,7 +7,7 @@ from net.sf.l2j.gameserver.datatables import SpawnTable
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-from net.sf.l2j.gameserver.serverpackets import CreatureSay
+from net.sf.l2j.gameserver.serverpackets import NpcSay
 from net.sf.l2j.gameserver.serverpackets import ExShowScreenMessage
 
 qn = "114_ResurrectionOfAnOldManager"
@@ -147,7 +147,7 @@ class Quest (JQuest) :
     elif event == "32047-15a.htm" :
        if self.isSpawned == 0 :
           golem = st.addSpawn(Guardian,96977,-110625,-3280,0,False,900000)
-          golem.broadcastPacket(CreatureSay(golem.getObjectId(),0,"Wendy'\s Guardian","You, "+player.getName()+", you attacked Wendy. Prepare to die!"))
+          golem.broadcastPacket(NpcSay(golem.getObjectId(),0,golem.getNpcId(),"You, "+player.getName()+", you attacked Wendy. Prepare to die!"))
           golem.setRunning()
           golem.addDamageHate(player,0,999)
           golem.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player)
@@ -353,7 +353,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    if st.getState() == State.STARTED and st.getInt("cond") == 10:
       if npcId == Guardian :
-         npc.broadcastPacket(CreatureSay(npc.getObjectId(),0,"Wendy'\s Guardian","This enemy is far too powerful for me to fight. I must withdraw"))
+         npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npcId,"This enemy is far too powerful for me to fight. I must withdraw"))
          st.set("cond","11")
          st.playSound("ItemSound.quest_middle")
 

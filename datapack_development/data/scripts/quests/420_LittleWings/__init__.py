@@ -5,7 +5,7 @@ from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-from net.sf.l2j.gameserver.serverpackets import CreatureSay
+from net.sf.l2j.gameserver.serverpackets import NpcSay
 
 qn = "420_LittleWings"
 
@@ -545,7 +545,7 @@ class Quest (JQuest):
                else:
                   st.playSound("ItemSound.quest_itemget")   
                st.giveItems(eggs,numItems)
-               npc.broadcastPacket(CreatureSay(npc.getObjectId(),0,npc.getName(),"If the eggs get taken, we're dead!"))
+               npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getNpcId(),"If the eggs get taken, we're dead!"))
   #fairy stone destruction    
     elif id == State.STARTED and cond < 5 and st.getQuestItemsCount(FRY_STN_DLX) == 1 :
       if npcId in range(20589,20600)+[20719]:
