@@ -311,10 +311,14 @@
   </for>
 </skill>
 <skill id="2136" levels="1" name="Rice Cake">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="magicLvl" val="1"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="3"/>
+  <set name="skillType" val="HEAL_PERCENT"/> <!-- Needs Core support: Heal HP 3% & heal MP 1% at the same time -->
+  <set name="target" val="TARGET_SELF"/>
   <for>
   </for>
 </skill>
@@ -601,12 +605,21 @@
   <for>
   </for>
 </skill>
-<skill id="2167" levels="3" name="Scroll of SP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="hitTime" val="200"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+<skill id="2167" levels="4" name="Scroll of SP">
+  <!-- Done by DJ MELERIX -->
+  <table name="#itemConsumeId"> 5593 5594 5595 9898 </table>
+  <table name="#power"> 500 5000 100000 500000 </table>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="200"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="itemConsumeId" val="#itemConsumeId"/>
+  <set name="magicLvl" val="1"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="#power"/>
+  <set name="reuseDelay" val="3000"/
+  <set name="skillType" val="COMBATPOINTHEAL"/>
+  <set name="target" val="TARGET_SELF"/>
   <for>
   </for>
 </skill>
