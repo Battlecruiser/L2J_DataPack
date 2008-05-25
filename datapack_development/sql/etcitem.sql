@@ -1497,7 +1497,8 @@ INSERT INTO `etcitem` VALUES
 (2339,'Recipe: Inferno Staff','false','recipe',30,'stackable','liquid','none',-1,86000,0,'true','true','true','true','rp_inferno_staff','recipe'),
 (2340,'Recipe: Pa''agrian Hammer','false','recipe',30,'stackable','liquid','none',-1,86000,0,'true','true','true','true','rp_paagrio_hammer','recipe'),
 (2341,'Recipe: Sage\'s Staff','false','recipe',30,'stackable','liquid','none',-1,86000,0,'true','true','true','true','rp_sage\'s_staff','recipe'),
-(2342,'Recipe: Club of Nature','false','recipe',30,'stackable','liquid','none',-1,86000,0,'true','true','true','true','rp_club_of_nature','recipe'),
+(2342,'Recipe: Club of Nature','false','recipe',30,'stackable','liquid','none',-1,86000,0,'true','true','true','true','rp_club_of_nature','recipe');
+INSERT INTO `etcitem` VALUES 
 (2343,'Recipe: Mace of the Underworld','false','recipe',30,'stackable','liquid','none',-1,86000,0,'true','true','true','true','rp_mace_of_underworld','recipe'),
 (2344,'Recipe: Grace Dagger','false','recipe',30,'stackable','liquid','none',-1,86000,0,'true','true','true','true','rp_grace_dagger','recipe'),
 (2345,'Recipe: Dark Screamer','false','recipe',30,'stackable','liquid','none',-1,86000,0,'true','true','true','true','rp_dark_screamer','recipe'),
@@ -2996,7 +2997,8 @@ INSERT INTO `etcitem` VALUES
 (4135,'Recipe: Implosion Boots','false','recipe',30,'stackable','liquid','none',-1,16080,0,'true','true','true','true','rp_implosion_boots','recipe'),
 (4136,'Recipe: Boots of Silence','false','recipe',30,'stackable','liquid','none',-1,10380,0,'true','true','true','true','rp_silent_boots','recipe'),
 (4137,'Recipe: Guardian\'s Boots','false','recipe',30,'stackable','liquid','none',-1,10380,0,'true','true','true','true','rp_guardian\'s_boots','recipe'),
-(4138,'Recipe: Paradia Boots','false','recipe',30,'stackable','liquid','none',-1,16080,0,'true','true','true','true','rp_paradia_boots','recipe'),
+(4138,'Recipe: Paradia Boots','false','recipe',30,'stackable','liquid','none',-1,16080,0,'true','true','true','true','rp_paradia_boots','recipe');
+INSERT INTO `etcitem` VALUES 
 (4139,'Recipe: Elemental Boots','false','recipe',30,'stackable','liquid','none',-1,16080,0,'true','true','true','true','rp_elemental_boots','recipe'),
 (4140,'Recipe: Boots of Grace','false','recipe',30,'stackable','liquid','none',-1,16080,0,'true','true','true','true','rp_boots_of_grace','recipe'),
 (4141,'Recipe: Avadon Breastplate','false','recipe',30,'stackable','liquid','none',-1,41600,0,'true','true','true','true','rp_avadon_breastplate','recipe'),
@@ -4503,7 +4505,8 @@ INSERT INTO `etcitem` VALUES
 (6097,'Greater Mercenary Posting Ticket (Bow/Mobile)','false','castle_guard',0,'stackable','paper','none',-1,0,0,'true','true','true','true','adv_mticket_aden_bow_move','castle_guard'),
 (6098,'Greater Mercenary Posting Ticket (Cleric/Mobile)','false','castle_guard',0,'stackable','paper','none',-1,0,0,'true','true','true','true','adv_mticket_aden_cleric_move','castle_guard'),
 (6099,'Greater Mercenary Posting Ticket (Wizard/Mobile)','false','castle_guard',0,'stackable','paper','none',-1,0,0,'true','true','true','true','adv_mticket_aden_wizard_move','castle_guard'),
-(6100,'Trash - Trash','false','castle_guard',0,'stackable','paper','none',-1,0,0,'true','true','true','true','__golden_coda_seed_5','castle_guard'),
+(6100,'Trash - Trash','false','castle_guard',0,'stackable','paper','none',-1,0,0,'true','true','true','true','__golden_coda_seed_5','castle_guard');
+INSERT INTO `etcitem` VALUES 
 (6101,'Trash - Trash','false','castle_guard',0,'stackable','paper','none',-1,0,0,'true','true','true','true','__golden_coda_seed_5','castle_guard'),
 (6102,'Trash - Trash','false','castle_guard',0,'stackable','paper','none',-1,0,0,'true','true','true','true','__golden_coda_seed_5','castle_guard'),
 (6103,'Trash - Trash','false','castle_guard',0,'stackable','paper','none',-1,0,0,'true','true','true','true','__golden_coda_seed_5','castle_guard'),
@@ -5994,7 +5997,8 @@ INSERT INTO `etcitem` VALUES
 (7777,'Large Purple Nimble Fish - For Beginners','false','none',100,'stackable','paper','none',-1,0,0,'true','true','true','true','C4Item','none'),
 (7778,'Large Purple Ugly Fish - For Beginners','false','none',100,'stackable','paper','none',-1,0,0,'true','true','true','true','C4Item','none'),
 (7779,'Large Purple Fat Fish - For Beginners','false','none',100,'stackable','paper','none',-1,0,0,'true','true','true','true','C4Item','none'),
-(7780,'Small Red Nimble Fish - For Beginners','false','none',100,'stackable','paper','none',-1,0,0,'true','true','true','true','C4Item','none'),
+(7780,'Small Red Nimble Fish - For Beginners','false','none',100,'stackable','paper','none',-1,0,0,'true','true','true','true','C4Item','none');
+INSERT INTO `etcitem` VALUES 
 (7781,'Small Red Ugly Fish - For Beginners','false','none',100,'stackable','paper','none',-1,0,0,'true','true','true','true','C4Item','none'),
 (7782,'Small Red Fat Fish - For Beginners','false','none',100,'stackable','paper','none',-1,0,0,'true','true','true','true','C4Item','none'),
 (7783,'Red Nimble Fish - For Beginners','false','none',100,'stackable','paper','none',-1,0,0,'true','true','true','true','C4Item','none'),
@@ -7494,7 +7498,8 @@ INSERT INTO `etcitem` VALUES
 (10369,'Broken Metal Pieces','false','quest',0,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
 (10370,'Metallograph - Decipher Pattern','false','quest',0,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
 (10371,'Repaired Metallograph','false','quest',0,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
-(10372,'Red Stone','false','quest',0,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
+(10372,'Red Stone','false','quest',0,'stackable','wood','none',-1,0,NULL,'true','true','true','true','','');
+INSERT INTO `etcitem` VALUES 
 (10373,'Recipe - Icarus Sawsword (60%)','false','recipe',30,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
 (10374,'Recipe - Icarus Disperser (60%)','false','recipe',30,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
 (10375,'Recipe - Icarus Spirit (60%)','false','recipe',30,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),

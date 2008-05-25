@@ -717,7 +717,6 @@ INSERT INTO `armor` VALUES
 (5326,'Sealed Nightmare Robe','fullarmor','true','magic',2300,'leather','a',0,-1,147,0,718,7730000,618,'true','true','true','true','0-0;'),
 (5327,'Sealed Cerberus Gloves','gloves','true','none',540,'leather','a',0,-1,48,0,0,1630000,140,'true','true','true','true','0-0;'),
 (5328,'Sealed Cerberus Boots','feet','true','none',1120,'damascus','a',0,-1,48,0,0,1630000,140,'true','true','true','true','0-0;'),
-e`,`skill`) VALUES
 (5329,'Sealed Majestic Robe','fullarmor','true','magic',2330,'leather','a',0,-1,147,0,718,7730000,618,'true','true','true','true','0-0;'),
 (5330,'Sealed Dasparion\'s Gloves','gloves','true','none',550,'leather','a',0,-1,48,0,0,1630000,140,'true','true','true','true','0-0;'),
 (5331,'Sealed Dasparion\'s Boots','feet','true','none',1100,'leather','a',0,-1,48,0,0,1630000,140,'true','true','true','true','0-0;'),
