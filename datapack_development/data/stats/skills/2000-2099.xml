@@ -851,10 +851,15 @@
   </for>
 </skill>
 <skill id="2075" levels="1" name="Decrease Hate Scroll">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="600"/>
+  <set name="effectRange" val="800"/>
+  <set name="isPotion" val="true"/>
+  <set name="magicLvl" val="1"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="70"/>
+  <set name="skillType" val="AGGREMOVE"/>
+  <set name="target" val="TARGET_ONE"/>
   <for>
   </for>
 </skill>
