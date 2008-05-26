@@ -707,7 +707,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul order="0x30" stat="gainHp" val="#rate"/>
+    <mul order="0x30" stat="giveHp" val="#rate"/>
   </for>
 </skill>
 <skill id="3247" levels="10" name="Item Skill: Agility">
