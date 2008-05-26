@@ -12,14 +12,13 @@
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="reuseDelay" val="9000"/>
   <set name="hitTime" val="4000"/>
-  <set name="target" val="TARGET_AREA_UNDEAD"/>
-  <set name="skillRadius" val="200"/>
+  <set name="target" val="TARGET_UNDEAD"/>
   <set name="skillType" val="FEAR"/>
   <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="lethal2" val="#lethal2"/>
-  <set name="castRange" val="900"/>
-  <set name="effectRange" val="1400"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
   <set name="isMagic" val="true"/>
   <for>
     <effect count="5" name="Fear" time="3" val="0"/>
