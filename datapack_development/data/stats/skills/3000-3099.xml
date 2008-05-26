@@ -229,7 +229,25 @@
   </for>
 </skill>
 <skill id="3019" levels="6" name="Special Ability: Back Blow">
-s
+  <!-- Done by DJ MELERIX -->
+  <table name="#magicLvl"> 46 49 52 55 58 61 </table>
+  <table name="#rCrit"> 1.50 1.47 1.45 1.42 1.40 1.37 </table>
+  <set name="castRange" val="-1"/>
+  <set name="condition" val="8"/>
+  <set name="effectRange" val="-1"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="skillType" val="WEAPON_SA"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <mul order="0x30" stat="rCrit" val="#rCrit">
+      <and>
+        <player behind="True"/>
+      </and>
+    </mul>
+  </for>
+</skill>
 <skill id="3020" levels="6" name="Special Ability: Critical Bleed">
 <!--
   Automatically generated from C3 client files.
