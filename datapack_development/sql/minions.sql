@@ -481,3 +481,8 @@ INSERT INTO `minions` VALUES
 (20983,20984,1,1),
 (20983,20985,1,1),
 (20983,21074,1,1);
+
+-- VoS - Judge of Splendor group
+INSERT INTO `minions` VALUES
+(21544,21545,1,1),
+(21544,21546,1,1);
