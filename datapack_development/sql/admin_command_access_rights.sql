@@ -140,6 +140,7 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_bighead','1'),
 ('admin_shrinkhead','1'),
 ('admin_gmspeed','1'),
+('admin_gmspeed_menu','1'),
 ('admin_unpara_all','1'),
 ('admin_para_all','1'),
 ('admin_unpara','1'),
