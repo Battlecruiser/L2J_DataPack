@@ -3,7 +3,7 @@
 <skill id="2001" levels="1" name="Red Potion">
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="HOT"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="-1"/>
@@ -16,7 +16,7 @@
 <skill id="2002" levels="1" name="Healing Drug">
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="HOT"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="20000"/>
   <set name="castRange" val="-1"/>
@@ -250,7 +250,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <!-- HOT ??? this a temp hack to make it work? -->
-  <set name="skillType" val="HOT"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -261,7 +261,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <!-- HOT ??? this a temp hack to make it work? -->
-  <set name="skillType" val="HOT"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -272,7 +272,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <!-- HOT ??? this a temp hack to make it work? -->
-  <set name="skillType" val="HOT"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -337,7 +337,7 @@
 <skill id="2031" levels="1" name="Lesser Healing Potion">
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="HOT"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="-1"/>
@@ -352,7 +352,7 @@
 <skill id="2032" levels="1" name="Healing potion">
   <set name="power" val="2.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="HOT"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="-1"/>
@@ -421,7 +421,7 @@
 <skill id="2037" levels="1" name="Greater Healing Potion">
   <set name="power" val="3.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="HOT"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="15000"/>
   <set name="castRange" val="-1"/>
