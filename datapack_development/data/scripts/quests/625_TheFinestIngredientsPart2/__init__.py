@@ -53,7 +53,7 @@ class Quest (JQuest) :
    htmltext = event
    if event == "31521-02.htm" :
       if st.getPlayer().getLevel() < 73 : 
-         htmltext = "31683-00b.htm"
+         htmltext = "31521-00b.htm"
          st.exitQuest(1)
       else:
          st.set("cond","1")
