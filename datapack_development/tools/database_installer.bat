@@ -530,6 +530,7 @@ boxes.sql
 castle.sql
 castle_door.sql
 castle_doorupgrade.sql
+castle_functions.sql
 castle_manor_procure.sql
 castle_manor_production.sql
 castle_siege_guards.sql

@@ -270,6 +270,7 @@ $MYG < ../sql/boxes.sql &> /dev/null
 $MYG < ../sql/castle.sql &> /dev/null
 $MYG < ../sql/castle_door.sql &> /dev/null
 $MYG < ../sql/castle_doorupgrade.sql &> /dev/null
+$MYG < ../sql/castle_functions.sql &> /dev/null
 $MYG < ../sql/castle_manor_procure.sql &> /dev/null
 $MYG < ../sql/castle_manor_production.sql &> /dev/null
 $MYG < ../sql/castle_siege_guards.sql &> /dev/null
