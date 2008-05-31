@@ -114,7 +114,7 @@ class Quest (JQuest) :
     elif npcId == ROCK :
        if cond == 4 :
           htmltext = "32368-01.htm"
-    elif npcId == Angel :
+    elif npcId == ANGEL :
        if cond == 4 :
           if st.getInt("talk"):
              htmltext = "32369-02.htm"
