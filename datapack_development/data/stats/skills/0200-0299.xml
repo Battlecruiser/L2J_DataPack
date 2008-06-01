@@ -1738,11 +1738,11 @@
   <table name="#mpConsume_Init"> 9 10 11 12 13 14 </table>
   <table name="#mpConsume"> 35 40 44 48 51 53 </table>
   <table name="#itemConsumeCount"> 3 4 5 6 6 6 </table>
+  <table name="#mAtk"> 531 773 1026 1264 1530 1822 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="1458"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
-  <set name="power" val="70"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="6000"/>
@@ -1752,7 +1752,10 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
+  <set name="power" val="#mAtk"/>
   <set name="npcId" val="4"/>
+  <set name="activationtime" val="14"/> <!-- guessed -->
+  <set name="activationchance" val="55"/> <!-- guessed -->
   <set name="expPenalty" val="0.0"/>
   <set name="isCubic" val="true"/>
   <for>

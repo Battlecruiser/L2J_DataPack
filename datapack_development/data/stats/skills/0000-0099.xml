@@ -346,11 +346,11 @@
   <table name="#mpConsume_Init"> 7 9 10 11 12 13 13 14 </table>
   <table name="#mpConsume"> 28 33 38 43 46 49 52 55 </table>
   <table name="#itemConsumeCount"> 5 6 8 9 11 12 13 14 </table>
+  <table name="#mAtk"> 282 434 644 919 1141 1394 1673 1975 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="1458" />
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="6000"/>
@@ -360,7 +360,10 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
+  <set name="power" val="#mAtk"/>
   <set name="npcId" val="1" />
+  <set name="activationtime" val="14"/>
+  <set name="activationchance" val="80"/>
   <set name="expPenalty" val="0.0" />
   <set name="isCubic" val="true" />
   <for>
@@ -629,12 +632,12 @@
   <table name="#mpConsume"> 30 35 40 44 48 51 53 </table>
   <table name="#itemConsumeCount"> 6 7 8 9 11 12 13 </table>
   <table name="#magicLvl"> 43 49 55 60 64 68 72 </table>
+  <table name="#mAtk"> 351 531 773 1026 1264 1530 1822 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="itemConsumeId" val="1458"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="6000"/>
@@ -644,7 +647,10 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
+  <set name="power" val="#mAtk"/>
   <set name="npcId" val="2"/>
+  <set name="activationtime" val="14"/> <!-- guessed -->
+  <set name="activationchance" val="67"/> <!-- guessed -->
   <set name="expPenalty" val="0.0"/>
   <set name="isCubic" val="true"/>
   <for>
@@ -893,12 +899,12 @@
   <table name="#mpConsume"> 28 33 38 43 46 49 52 55 </table>
   <table name="#itemConsumeCount"> 2 3 4 4 5 6 6 7 </table>
   <table name="#magicLvl"> 40 46 52 58 62 66 70 74 </table>
+  <table name="#mAtk"> 282 434 644 919 1141 1394 1673 1975 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="itemConsumeId" val="1458"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
-  <set name="power" val="40"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="6000"/>
@@ -908,7 +914,10 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
+  <set name="power" val="#mAtk"/>
   <set name="npcId" val="5"/>
+  <set name="activationtime" val="14"/> <!-- guessed -->
+  <set name="activationchance" val="55"/> <!-- guessed -->
   <set name="expPenalty" val="0.0"/>
   <set name="isCubic" val="true"/>
   <for>
@@ -1481,6 +1490,8 @@
   <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
   <set name="npcId" val="3"/>
+  <set name="activationtime" val="10"/>
+  <set name="activationchance" val="0"/> <!-- this is hard coded in core, because multiple chances -->
   <set name="expPenalty" val="0.0"/>
   <set name="isCubic" val="true"/>
   <for>

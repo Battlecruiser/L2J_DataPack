@@ -852,8 +852,9 @@
   <set name="lvlDepend" val="1"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="element" val="6"/> <!-- Dark -->
-  <set name="skillType" val="DRAIN"/>
+  <set name="element" val="1"/> <!-- Wind -->
+  <set name="skillType" val="MDAM"/>
+  <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -867,12 +868,13 @@
   <set name="lvlDepend" val="1"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="MDAM"/>
+  <set name="element" val="6"/> <!-- Dark -->
+  <set name="skillType" val="DRAIN"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <set name="absorbPart" val="0.4" /><!-- absorbs 40% of damage -->
+  <set name="absorbPart" val="0.4" /> <!-- absorbs 40% of damage -->
   <for>
   </for>
 </skill>
@@ -923,7 +925,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Debuff" time="120" val="0" stackOrder="0.77" stackType="pAtkDown">
+    <effect count="1" name="Debuff" time="30" val="0" stackOrder="0.77" stackType="pAtkDown"> <!-- time is guessed -->
      <mul order="0x30" stat="pAtk" val="0.77"/>
     </effect>
   </for>
@@ -941,7 +943,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Debuff" time="120" val="0" stackOrder="0.77" stackType="pDefDown">
+    <effect count="1" name="Debuff" time="30" val="0" stackOrder="0.77" stackType="pDefDown"> <!-- time is guessed -->
       <mul order="0x30" stat="pDef" val="0.77"/>
     </effect>
   </for>
@@ -959,7 +961,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Debuff" time="120" val="0" stackOrder="0.77" stackType="pAtkSpdDown">
+    <effect count="1" name="Debuff" time="30" val="0" stackOrder="0.77" stackType="pAtkSpdDown"> <!-- time is guessed -->
        <mul order="0x30" stat="pAtkSpd" val="0.77"/>
     </effect>
   </for>
