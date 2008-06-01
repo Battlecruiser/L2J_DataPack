@@ -1070,6 +1070,7 @@
   <table name="#mpConsume"> 58 62 65 69 </table>
   <table name="#itemConsumeCount"> 10 11 12 13 </table>
   <table name="#magicLvl"> 62 66 70 74 </table> <!-- guessed -->
+  <table name="#mAtk"> 1026 1264 1530 1822 </table> <!-- guessed -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="itemConsumeId" val="1458"/>
@@ -1084,7 +1085,10 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
+  <set name="power" val="#mAtk"/>
   <set name="npcId" val="9"/>
+  <set name="activationtime" val="8"/> <!-- guessed -->
+  <set name="activationchance" val="40"/> <!-- guessed -->
   <set name="expPenalty" val="0.0"/>
   <set name="isCubic" val="true"/>
   <for>

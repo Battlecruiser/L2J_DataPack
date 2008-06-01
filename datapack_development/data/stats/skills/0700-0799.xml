@@ -859,42 +859,122 @@
   </for>
 </skill>
 <skill id="779" levels="1" name="Summon Smart Cubic">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Eva Templar's Smart Cubic -->
+  <set name="mpInitialConsume" val="14"/>
+  <set name="mpConsume" val="59"/>
+  <set name="itemConsumeId" val="1461" />
+  <set name="itemConsumeCount" val="2"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="hitTime" val="6000"/>
+  <set name="skillType" val="SUMMON"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <!-- Summon-specific -->
+  <set name="power" val="1975"/> <!-- guessed -->
+  <set name="npcId" val="10" />
+  <set name="activationtime" val="5"/>
+  <set name="activationchance" val="30"/> <!-- guessed -->
+  <set name="expPenalty" val="0.0" />
+  <set name="isCubic" val="true" />
   <for>
   </for>
 </skill>
 <skill id="780" levels="1" name="Summon Smart Cubic">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Shillien Templar's Smart Cubic -->
+  <set name="mpInitialConsume" val="14"/>
+  <set name="mpConsume" val="59"/>
+  <set name="itemConsumeId" val="1461" />
+  <set name="itemConsumeCount" val="2"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="hitTime" val="6000"/>
+  <set name="skillType" val="SUMMON"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <!-- Summon-specific -->
+  <set name="power" val="1975"/> <!-- guessed -->
+  <set name="npcId" val="11" />
+  <set name="activationtime" val="5"/>
+  <set name="activationchance" val="30"/> <!-- guessed -->
+  <set name="expPenalty" val="0.0" />
+  <set name="isCubic" val="true" />
   <for>
   </for>
 </skill>
 <skill id="781" levels="1" name="Summon Smart Cubic">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Arcana Lord's Smart Cubic -->
+  <set name="mpInitialConsume" val="14"/>
+  <set name="mpConsume" val="59"/>
+  <set name="itemConsumeId" val="1461" />
+  <set name="itemConsumeCount" val="2"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="hitTime" val="6000"/>
+  <set name="skillType" val="SUMMON"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <!-- Summon-specific -->
+  <set name="power" val="1975"/> <!-- guessed -->
+  <set name="npcId" val="12" />
+  <set name="activationtime" val="5"/>
+  <set name="activationchance" val="30"/> <!-- guessed -->
+  <set name="expPenalty" val="0.0" />
+  <set name="isCubic" val="true" />
   <for>
   </for>
 </skill>
 <skill id="782" levels="1" name="Summon Smart Cubic">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Elemental Master's Smart Cubic -->
+  <set name="mpInitialConsume" val="14"/>
+  <set name="mpConsume" val="59"/>
+  <set name="itemConsumeId" val="1461" />
+  <set name="itemConsumeCount" val="2"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="hitTime" val="6000"/>
+  <set name="skillType" val="SUMMON"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <!-- Summon-specific -->
+  <set name="power" val="1975"/> <!-- guessed -->
+  <set name="npcId" val="13" />
+  <set name="activationtime" val="5"/>
+  <set name="activationchance" val="30"/> <!-- guessed -->
+  <set name="expPenalty" val="0.0" />
+  <set name="isCubic" val="true" />
   <for>
   </for>
 </skill>
 <skill id="783" levels="1" name="Summon Smart Cubic">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Spectral Master's Smart Cubic -->
+  <set name="mpInitialConsume" val="14"/>
+  <set name="mpConsume" val="59"/>
+  <set name="itemConsumeId" val="1461" />
+  <set name="itemConsumeCount" val="2"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="hitTime" val="6000"/>
+  <set name="skillType" val="SUMMON"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <!-- Summon-specific -->
+  <set name="power" val="1975"/> <!-- guessed -->
+  <set name="npcId" val="14" />
+  <set name="activationtime" val="5"/>
+  <set name="activationchance" val="30"/> <!-- guessed -->
+  <set name="expPenalty" val="0.0" />
+  <set name="isCubic" val="true" />
   <for>
   </for>
 </skill>
