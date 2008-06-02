@@ -338,7 +338,8 @@ class Quest (JQuest) :
           if count >= maxcount : continue
           st.giveItems(item,1)
           if st.getInt(var) < 9:
-            st.set(var,str(isValue+1))
+            isValue = isValue + 1
+            st.set(var,str(isValue))
           if st.getQuestItemsCount(KIRUNAS_SKULL) and st.getInt(var)==9:
             st.set(var,"10")
             st.playSound("ItemdSound.quest_middle")
@@ -355,8 +356,9 @@ class Quest (JQuest) :
               for i in range(5):
                 st.addSpawn(20158)
             if count == maxcount-1:
+              isValue = isValue + 1
               st.playSound("ItemSound.quest_middle")
-              st.set(var,str(isValue+1))
+              st.set(var,str(isValue))
             else:
               st.playSound("ItemSound.quest_itemget")
     return
