@@ -16,7 +16,7 @@
   <set name="effectRange" val="-1"/>
   <set name="soulConsumeCount" val="1"/>
   <for>
-    <effect count="10" name="ManaDamOverTime" time="3" val="#dmg">
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="#dmg">
       <mul order="0x30" stat="pAtk" val="#pAtk"/>
       <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
       <add order="0x40" stat="accCombat" val="#accCombat"/>
