@@ -41426,11 +41426,14 @@ INSERT INTO spawnlist VALUES
 (null,'TEMP Baar Dre Vanul',1,21118,7768,-121598,-1816,0,0,43057,60,0,0),
 (null,'TEMP Baar Dre Vanul',1,21118,8224,-121444,-1757,0,0,3263,60,0,0),
 -- Extra Skeleton Archers (Ky6uk)
-(NULL,'gludio29_2125_10',1,20100,42492,245216,-6462,0,0,54994,60,0,0),
-(NULL,'gludio29_2125_10',1,20100,42445,245582,-6462,0,0,56984,60,0,0),
-(NULL,'gludio29_2125_10',1,20100,43261,245177,-6462,0,0,23491,60,0,0),
-(NULL,'gludio29_2125_10',1,20100,42698,247710,-6456,0,0,13353,60,0,0);
+(null,'gludio29_2125_10',1,20100,42492,245216,-6462,0,0,54994,60,0,0),
+(null,'gludio29_2125_10',1,20100,42445,245582,-6462,0,0,56984,60,0,0),
+(null,'gludio29_2125_10',1,20100,43261,245177,-6462,0,0,23491,60,0,0),
+(null,'gludio29_2125_10',1,20100,42698,247710,-6456,0,0,13353,60,0,0);
 
+-- Random Spawns (previously missing in certain areas)
+INSERT INTO spawnlist VALUES
+(null,'PavelRuins/ArchaicL',1,32045,96352,-110320,-3305,0,0,0,60,0,0);
 
 -- Fortress Suspicious Merchants
 INSERT INTO spawnlist VALUES

@@ -490,8 +490,8 @@ class Quest (JQuest) :
                     htmltext = "05"
                 elif st.getQuestItemsCount(3707) :
                     htmltext = "07"
-                    st.takeItems(3707)
-                    st.giveItems(Cyb_Rewards[3707])
+                    st.takeItems(3707,-1)
+                    st.giveItems(57,Cyb_Rewards[3707])
                 elif st.getQuestItemsCount(3708) :
                     htmltext = "11"
                     st.takeItems(3708,-1)

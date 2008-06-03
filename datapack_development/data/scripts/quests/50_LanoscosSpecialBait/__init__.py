@@ -80,7 +80,7 @@ class Quest (JQuest) :
                st.set("cond","2")
             else:
                st.playSound("ItemSound.quest_itemget")
-            st.giveItems(ESSENCE_OF_WIND,1)
+            st.giveItems(ESSENCE_OF_WIND,numItems)
    return
 
 QUEST       = Quest(50,qn,"Lanosco's Special Bait")

@@ -92,7 +92,7 @@ class Quest (JQuest):
                  st.set("cond","2")
               else:
                  st.playSound("ItemSound.quest_itemget")
-              st.giveItems(CRIMSON_DRAKE_HEART,1)
+              st.giveItems(CRIMSON_DRAKE_HEART,numItems)
      return
 
 QUEST       = Quest(53, qn, "Linnaeus Special Bait")
