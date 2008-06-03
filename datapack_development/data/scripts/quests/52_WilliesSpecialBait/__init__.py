@@ -80,7 +80,7 @@ class Quest (JQuest) :
                st.set("cond","2")
             else:
                st.playSound("ItemSound.quest_itemget")
-            st.giveItems(TARLK_EYE,1)
+            st.giveItems(TARLK_EYE,numItems)
    return
 
 QUEST       = Quest(52,qn,"Willie's Special Bait")
