@@ -606,7 +606,7 @@
   </for>
 </skill>
 <skill id="2167" levels="4" name="Scroll of SP">
-  <!-- Done by DJ MELERIX -->
+  <!-- Needs to be finished -->
   <table name="#itemConsumeId"> 5593 5594 5595 9898 </table>
   <table name="#power"> 500 5000 100000 500000 </table>
   <set name="castRange" val="-1"/>
@@ -618,7 +618,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="#power"/>
   <set name="reuseDelay" val="3000"/>
-  <set name="skillType" val="COMBATPOINTHEAL"/>
+  <set name="skillType" val="NOTDONE"/> <!-- Needs core support for GIVESP -->
   <set name="target" val="TARGET_SELF"/>
   <for>
   </for>
