@@ -43,7 +43,7 @@ public class fleeNpc extends QuestJython
       {
          npc.startFear();
          npc.getAI().setIntention( CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition((npc.getClientX() + Rnd.get(-1000, 1000)), (npc.getClientY()+ Rnd.get(-1000, 1000)), npc.getClientZ(), npc.getHeading()));
-         return null
+         return null;
       }
       
       return super.onAttack(npc, attacker, damage, isPet);
