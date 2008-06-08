@@ -52,6 +52,6 @@ public class fleeNpc extends QuestJython
    // Register the new Script at the Script System
    public static void main(String[] args) 
    {
-      new fleeNpc(-1, "freeNpc", "Ai for Flee Npcs");
+      new fleeNpc(-1, "fleeNpc", "Ai for Flee Npcs");
    }
 }
