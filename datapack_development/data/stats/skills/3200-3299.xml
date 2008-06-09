@@ -903,44 +903,50 @@
   </for>
 </skill>
 <skill id="3260" levels="1" name="Heart Shot">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Gathers up your love and throws a heart at the huge pig.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- Done by SHAKA -->
+  <set name="castRange" val="500"/>
+  <set name="effectRange" val="1000"/>
+  <set name="hitTime" val="2500"/>
+  <set name="magicLvl" val="1"/> <!-- Guessing -->
+  <set name="mpConsume" val="1"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="reuseDelay" val="10000"/> <!-- Guessing -->
+  <set name="skillType" val="PDAM"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="weaponsAllowed" val="32"/>
   <for>
   </for>
 </skill>
 <skill id="3261" levels="1" name="Heart Shot">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Gathers up your love and throws a heart to the target. Warning: If you send love to a monster, you may be attacked from all sides.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- Done by SHAKA -->
+  <set name="castRange" val="500"/>
+  <set name="effectRange" val="1000"/>
+  <set name="hitTime" val="2500"/>
+  <set name="magicLvl" val="1"/> <!-- Guessing -->
+  <set name="mpConsume" val="1"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="reuseDelay" val="10000"/> <!-- Guessing -->
+  <set name="skillType" val="PDAM"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="weaponsAllowed" val="32"/>
   <for>
   </for>
 </skill>
 <skill id="3262" levels="1" name="Double Heart Shot">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Gathers up your love and throws two hearts at the huge pig. There is a low chance that the huge pig will transform into either a golden pig or a super huge pig.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- Done by SHAKA -->
+  <set name="castRange" val="500"/>
+  <set name="effectRange" val="1000"/>
+  <set name="hitTime" val="3200"/>
+  <set name="magicLvl" val="1"/> <!-- Guessing -->
+  <set name="mpConsume" val="1"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="reuseDelay" val="25000"/> <!-- Guessing -->
+  <set name="skillType" val="PDAM"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="weaponsAllowed" val="32"/>
   <for>
   </for>
 </skill>
