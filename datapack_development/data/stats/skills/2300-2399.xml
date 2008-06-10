@@ -56,17 +56,21 @@
 </skill>
 <skill id="2306" levels="3" name="Primeval Crystals">
 <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Lvl 1 Name - Blue Primeval Crystal
       Lvl 2 Name - Green Primeval Crystal
       Lvl 3 Name - Red Primeval Crystal
 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#power"> 50000 100000 200000 </table>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="200"/>
+  <set name="magicLvl" val="1"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="#power"/>
+  <set name="reuseDelay" val="3000"/>
+  <set name="skillType" val="GIVESP"/>
+  <set name="target" val="TARGET_SELF"/>
   <for>
   </for>
 </skill>
