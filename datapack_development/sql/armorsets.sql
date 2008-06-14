@@ -4,17 +4,17 @@
 
 DROP TABLE IF EXISTS armorsets;
 CREATE TABLE armorsets (
- id int(3) NOT NULL auto_increment,
- chest decimal(11,0) NOT NULL default '0',
- legs decimal(11,0) NOT NULL default '0',
- head decimal(11,0) NOT NULL default '0',
- gloves decimal(11,0) NOT NULL default '0',
- feet decimal(11,0) NOT NULL default '0',
- skill_id decimal(11,0) NOT NULL default '0',
- skill_lvl decimal(11,0) NOT NULL default '0',
- shield decimal(11,0) NOT NULL default '0',
- shield_skill_id decimal(11,0) NOT NULL default '0',
- enchant6skill decimal(11,0) NOT NULL default '0',
+ id SMALLINT UNSIGNED NOT NULL auto_increment,
+ chest SMALLINT UNSIGNED NOT NULL default 0,
+ legs SMALLINT UNSIGNED NOT NULL default 0,
+ head SMALLINT UNSIGNED NOT NULL default 0,
+ gloves SMALLINT UNSIGNED NOT NULL default 0,
+ feet SMALLINT UNSIGNED NOT NULL default 0,
+ skill_id SMALLINT UNSIGNED NOT NULL default 0,
+ skill_lvl TINYINT UNSIGNED NOT NULL default 0,
+ shield SMALLINT UNSIGNED NOT NULL default 0,
+ shield_skill_id SMALLINT UNSIGNED NOT NULL default 0,
+ enchant6skill SMALLINT UNSIGNED NOT NULL default 0,
  PRIMARY KEY (id,chest)
 ) ENGINE=MyISAM;
 
@@ -111,20 +111,20 @@ INSERT INTO armorsets VALUES(57, 9837, 0,    9830, 9838, 9839,   3610,   2,   0,
 
 --                Dynasty Sets              -------------
 -- ######################## id chest   legs    head   gloves   feet   skill  skill_lvl shield sh_skill enchant6
-INSERT INTO `armorsets` VALUES ('58', '9432', '9437', '9438', '9439', '9440', '3416', '1', '0', '0', '3625');
-INSERT INTO `armorsets` VALUES ('59', '9433', '9437', '9438', '9439', '9440', '3354', '1', '0', '0', '3625');
-INSERT INTO `armorsets` VALUES ('60', '9434', '9437', '9438', '9439', '9440', '3355', '1', '0', '0', '3625');
-INSERT INTO `armorsets` VALUES ('61', '9435', '9437', '9438', '9439', '9440', '3356', '1', '0', '0', '3625');
-INSERT INTO `armorsets` VALUES ('62', '9436', '9437', '9438', '9439', '9440', '3357', '1', '0', '0', '3625');
-INSERT INTO `armorsets` VALUES ('63', '9416', '9421', '9422', '9423', '9424', '3412', '1', '9441', '3417', '3623');
-INSERT INTO `armorsets` VALUES ('64', '9417', '9421', '9422', '9423', '9424', '3348', '1', '9441', '3417', '3623');
-INSERT INTO `armorsets` VALUES ('65', '9418', '9421', '9422', '9423', '9424', '3349', '1', '9441', '3417', '3623');
-INSERT INTO `armorsets` VALUES ('66', '9419', '9421', '9422', '9423', '9424', '3350', '1', '9441', '3417', '3623');
-INSERT INTO `armorsets` VALUES ('67', '9420', '9421', '9422', '9423', '9424', '3351', '1', '9441', '3417', '3623');
-INSERT INTO `armorsets` VALUES ('68', '9425', '9428', '9429', '9430', '9431', '3420', '1', '0', '0', '3624');
-INSERT INTO `armorsets` VALUES ('69', '9426', '9428', '9429', '9430', '9431', '3353', '1', '0', '0', '3624');
-INSERT INTO `armorsets` VALUES ('70', '9427', '9428', '9429', '9430', '9431', '3352', '1', '0', '0', '3624');
-INSERT INTO `armorsets` VALUES ('71', '10126', '9428', '9429', '9430', '9431', '3413', '1', '0', '0', '3624');
-INSERT INTO `armorsets` VALUES ('72', '10127', '9428', '9429', '9430', '9431', '3414', '1', '0', '0', '3624');
-INSERT INTO `armorsets` VALUES ('73', '10168', '9428', '9429', '9430', '9431', '3415', '1', '0', '0', '3624');
-INSERT INTO `armorsets` VALUES ('74', '10214', '9428', '9429', '9430', '9431', '3420', '1', '0', '0', '3624');
+INSERT INTO `armorsets` VALUES (58,  9432, 9437, 9438, 9439, 9440, 3416, 1,    0,    0, 3625);
+INSERT INTO `armorsets` VALUES (59,  9433, 9437, 9438, 9439, 9440, 3354, 1,    0,    0, 3625);
+INSERT INTO `armorsets` VALUES (60,  9434, 9437, 9438, 9439, 9440, 3355, 1,    0,    0, 3625);
+INSERT INTO `armorsets` VALUES (61,  9435, 9437, 9438, 9439, 9440, 3356, 1,    0,    0, 3625);
+INSERT INTO `armorsets` VALUES (62,  9436, 9437, 9438, 9439, 9440, 3357, 1,    0,    0, 3625);
+INSERT INTO `armorsets` VALUES (63,  9416, 9421, 9422, 9423, 9424, 3412, 1, 9441, 3417, 3623);
+INSERT INTO `armorsets` VALUES (64,  9417, 9421, 9422, 9423, 9424, 3348, 1, 9441, 3417, 3623);
+INSERT INTO `armorsets` VALUES (65,  9418, 9421, 9422, 9423, 9424, 3349, 1, 9441, 3417, 3623);
+INSERT INTO `armorsets` VALUES (66,  9419, 9421, 9422, 9423, 9424, 3350, 1, 9441, 3417, 3623);
+INSERT INTO `armorsets` VALUES (67,  9420, 9421, 9422, 9423, 9424, 3351, 1, 9441, 3417, 3623);
+INSERT INTO `armorsets` VALUES (68,  9425, 9428, 9429, 9430, 9431, 3420, 1,    0,    0, 3624);
+INSERT INTO `armorsets` VALUES (69,  9426, 9428, 9429, 9430, 9431, 3353, 1,    0,    0, 3624);
+INSERT INTO `armorsets` VALUES (70,  9427, 9428, 9429, 9430, 9431, 3352, 1,    0,    0, 3624);
+INSERT INTO `armorsets` VALUES (71, 10126, 9428, 9429, 9430, 9431, 3413, 1,    0,    0, 3624);
+INSERT INTO `armorsets` VALUES (72, 10127, 9428, 9429, 9430, 9431, 3414, 1,    0,    0, 3624);
+INSERT INTO `armorsets` VALUES (73, 10168, 9428, 9429, 9430, 9431, 3415, 1,    0,    0, 3624);
+INSERT INTO `armorsets` VALUES (74, 10214, 9428, 9429, 9430, 9431, 3420, 1,    0,    0, 3624);
