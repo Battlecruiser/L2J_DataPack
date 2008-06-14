@@ -11,6 +11,7 @@ CREATE TABLE custom_armorsets (
  gloves decimal(11,0) NOT NULL default '0',
  feet decimal(11,0) NOT NULL default '0',
  skill_id decimal(11,0) NOT NULL default '0',
+ skill_lvl decimal(11,0) NOT NULL default '0',
  shield decimal(11,0) NOT NULL default '0',
  shield_skill_id decimal(11,0) NOT NULL default '0',
  enchant6skill decimal(11,0) NOT NULL default '0',
