@@ -1,6 +1,5 @@
 #Made by Ethernaly ethernaly@email.it
 import sys
-from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
