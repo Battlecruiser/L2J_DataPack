@@ -246,10 +246,26 @@ description(s) :
   </for>
 </skill>
 <skill id="510" levels="5" name="Deadly Roulette">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- Done by erhiwan -->
+  <table name="#lethal2"> 10 18 26 34 42 50 </table> <!-- Guessing -->
+  <table name="#mpConsume"> 111 115 118 122 125 </table>
+  <set name="castRange" val="900"/>
+  <set name="effectRange" val="1400"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="itemConsumeId" val="10113"/>
+  <set name="hitTime" val="3000"/>
+  <set name="lethal2" val="#lethal2"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="reuseDelay" val="10000"/> <!-- Guessing -->
+  <set name="skillType" val="PDAM"/>
+  <set name="soulConsumeCount" val="2"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="weaponsAllowed" val="65536"/>
+  <cond msg="Can be only used when HP is 10% or lower">
+    <player hp="10"/>
+  </cond>
   <for>
   </for>
 </skill>
