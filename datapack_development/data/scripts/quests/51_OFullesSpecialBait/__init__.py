@@ -79,7 +79,7 @@ class Quest (JQuest) :
                st.set("cond","2")
             else:
                st.playSound("ItemSound.quest_itemget")
-            st.giveItems(LOST_BAIT,numItems)
+            st.giveItems(LOST_BAIT,int(numItems))
    return
 
 QUEST       = Quest(51,qn,"O'Fulle's Special Bait")
