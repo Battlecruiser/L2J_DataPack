@@ -39,6 +39,7 @@
   <set name="isDebuff" val="true"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
+  <set name="reuseDelay" val="6000"/>
   <set name="soulConsumeCount" val="1"/>
   <for>
     <effect count="1" name="Debuff" time="15" val="0">
@@ -517,7 +518,7 @@ Description(s) :
   Sow a dark seed into the body of an enemy, eating up health 
   and eventually paralyzing the enemy when it is fully grown. Consumes 1 Dark Seed. 
 --> 
-  <table name="#EffectLvl"> 1 2 3 4 5 6 7</table>
+  <table name="#EffectLvl"> 1 2 3 4 5 6 7 </table>
   <set name="itemConsumeId" val="10112"/> 
   <set name="itemConsumeCount" val="1"/> 
   <set name="mpConsume" val="30"/> 
@@ -552,7 +553,7 @@ Description(s):
   </for>
 </skill>
 <skill id="525" levels="6" name="Decoy">
-<table name="#npcId">13071 13072 13073 13074 13075 13076</table>
+  <table name="#npcId"> 13071 13072 13073 13074 13075 13076 </table>
   <set name="mpConsume" val="60"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="summonTotalLifeTime" val="20000"/>
