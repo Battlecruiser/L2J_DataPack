@@ -1580,19 +1580,20 @@
   </for>
 </skill>
 <skill id="1471" levels="1" name="Death Beam">
-<!-- Needs retail accuracy check -->
- <set name="mpConsume" val="73"/>
- <set name="power" val="138"/>
- <set name="hitTime" val="1500"/>
- <set name="operateType" val="OP_ACTIVE"/>
- <set name="target" val="TARGET_FRONT_AREA"/>
- <set name="skillRadius" val="310"/>
- <set name="skillType" val="PDAM"/>
- <set name="castRange" val="40"/>
- <set name="effectRange" val="56"/>
- <set name="reuseDelay" val="10000"/>
- <for>
- </for>
+  <!-- Needs retail accuracy check -->
+  <set name="mpConsume" val="73"/>
+  <set name="power" val="138"/>
+  <set name="hitTime" val="1500"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="target" val="TARGET_FRONT_AREA"/>
+  <set name="skillRadius" val="310"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="56"/>
+  <for>
+  </for>
 </skill>
 <skill id="1472" levels="1" name="Soul Sucking">
 <!--
