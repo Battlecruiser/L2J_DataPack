@@ -905,19 +905,29 @@
   </for>
 </skill>
 <skill id="441" levels="1" name="Force Meditation">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Meditate to increase HP/MP regeneration.  Your body is immobilized and your P. Def. decreased while meditating. The effect is cancelled if you are attacked. Level 3 Focused Force charge required.
-  <set name="num_charges" val="3"/>
-  <set name="charge_skill_id" val="50"/>
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by Ritsu -->
+  <!-- Needs to be verified -->
+  <table name="#pDef"> 0.20 </table>
+  <table name="#hhot"> 100 </table> <!-- Guessing -->
+  <table name="#mhot"> 20 </table> <!-- Guessing -->
+  <set name="buffDuration" val="120000"/>
+  <set name="cancelEffect" val="441"/>
   <set name="castRange" val="-1"/>
+  <set name="charge_skill_id" val="50"/>
+  <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="2000"/>
+  <set name="num_charges" val="3"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="reuseDelay" val="1200000"/>
+  <set name="skillType" val="CHARGE_EFFECT"/>
+  <set name="target" val="TARGET_SELF"/>
   <for>
+    <effect count="1" name="ImmobileUntilAttacked" time="120" val="0">
+      <mul order="0x30" stat="pDef" val="#pDef"/>
+    </effect>
+    <effect count="40" name="HealOverTime" time="3" noicon="1" val="#hhot"/>
+    <effect count="40" name="ManaHealOverTime" time="3" noicon="1" val="#mhot"/>
   </for>
 </skill>
 <skill id="442" levels="1" name="Sonic Barrier">
@@ -1038,7 +1048,7 @@
   <set name="itemConsumeCountOT" val="21"/>
   <set name="itemConsumeCount" val="46"/>
   <set name="itemConsumeId" val="1461"/>
-  <set name="itemConsumeSteps" val="20"/>
+  <set name="itemConsumeSteps" val="60"/>
   <set name="summonTotalLifeTime" val="1200000"/>
   <set name="summonTimeLostIdle" val="1000"/>
   <set name="summonTimeLostActive" val="1000"/>
