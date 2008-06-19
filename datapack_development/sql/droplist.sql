@@ -23309,25 +23309,25 @@ INSERT INTO `droplist` VALUES
 (22246,44,1,1,1,316), -- Leather Helmet
 (22246,1865,1,2,-1,253000), -- Varnish
 (22246,734,1,1,-1,43053), -- Haste Potion
-(22261,57,1696,3473,0,700000), -- Adena
 (22257,57,1771,3615,0,700000), -- Adena
 (22257,1868,1,1,1,250000), -- Thread
 (22257,9593,1,1,1,200000), -- Yellow Seed Of Evil - Shard
 (22257,1873,1,1,1,47619), -- Silver Nugget
-(22257,1895,1,1,1,34482), -- Metallic Fiber
-(22257,1876,1,1,1,24390), -- Mithril Ore
-(22257,4042,1,1,1,2057), -- Enria
-(22257,9546,1,1,200,995), -- Fire Stone
-(22257,9573,1,1,200,172), -- Life Stone: level 80
-(22257,9574,1,1,200,33), -- Mid-Grade Life Stone: level 80
-(22257,5509,1,1,2,3846), -- Sealed Tallum Gloves Design
+(22257,1895,1,1,1,33333), -- Metallic Fiber
+(22257,1876,1,1,1,23809), -- Mithril Ore
+(22257,4042,1,1,1,2141), -- Enria
+(22257,9546,1,1,200,964), -- Fire Stone
+(22257,9573,1,1,200,165), -- Life Stone: level 80
+(22257,9574,1,1,200,41), -- Mid-Grade Life Stone: level 80
+(22257,9575,1,1,200,10), -- High-Grade Life Stone: level 80
+(22257,5509,1,1,2,3891), -- Sealed Tallum Gloves Design
 (22257,5497,1,1,2,3846), -- Sealed Tallum Boots Lining
-(22257,5508,1,1,2,3846), -- Sealed Dark Crystal Gloves Design
-(22257,5496,1,1,2,3846), -- Sealed Dark Crystal Boots Lining
-(22257,5295,1,1,2,13), -- Sealed Tallum Gloves
-(22257,5296,1,1,2,13), -- Sealed Tallum Boots
-(22257,5290,1,1,2,13), -- Sealed Dark Crystal Gloves
-(22257,5291,1,1,2,13), -- Sealed Dark Crystal Boots
+(22257,5508,1,1,2,3891), -- Sealed Dark Crystal Gloves Design
+(22257,5496,1,1,2,3891), -- Sealed Dark Crystal Boots Lining
+(22257,5295,1,1,2,20), -- Sealed Tallum Gloves
+(22257,5296,1,1,2,20), -- Sealed Tallum Boots
+(22257,5290,1,1,2,20), -- Sealed Dark Crystal Gloves
+(22257,5291,1,1,2,20), -- Sealed Dark Crystal Boots
 (22257,1808,1,1,2,46), -- Recipe: Soulshot: S Grade
 (22257,1885,1,1,-1,5000), -- Sealed Majestic Leather Armor Fabric
 (22257,5503,1,1,-1,5000), -- Sealed Leather Armor of Nightmare Fabric
@@ -23335,142 +23335,191 @@ INSERT INTO `droplist` VALUES
 (22258,57,1821,3717,0,700000), -- Adena
 (22258,9593,1,1,1,200000), -- Yellow Seed Of Evil - Shard
 (22258,1894,1,1,1,7751), -- Crafted Leather
-(22258,4039,1,1,1,7633), -- Mold Glue
-(22258,4041,1,1,1,1754), -- Mold Hardener
-(22258,4044,1,1,1,7042), -- Thons
-(22258,9546,1,1,200,1773), -- Fire Stone
-(22258,959,1,1,2,23), -- Scroll: Enchant Weapon (Grade S)
-(22258,5545,1,1,2,648), -- Dark Legion's Edge Blade
-(22258,5546,1,1,2,648), -- Sword of Miracles Edge
-(22258,5529,1,1,2,648), -- Dragon Slayer Edge
-(22258,2500,1,1,2,12), -- Dark Legion's Edge
-(22258,151,1,1,2,12), -- Sword of Miracles 
-(22258,81,1,1,2,12), -- Dragon Slayer
+(22258,4039,1,1,1,7518), -- Mold Glue
+(22258,4041,1,1,1,1838), -- Mold Hardener
+(22258,4044,1,1,1,7142), -- Thons
+(22258,9546,1,1,200,1785), -- Fire Stone
+(22258,959,1,1,2,22), -- Scroll: Enchant Weapon (Grade S)
+(22258,5545,1,1,2,700), -- Dark Legion's Edge Blade
+(22258,5546,1,1,2,700), -- Sword of Miracles Edge
+(22258,5529,1,1,2,700), -- Dragon Slayer Edge
+(22258,2500,1,1,2,9), -- Dark Legion's Edge
+(22258,151,1,1,2,9), -- Sword of Miracles 
+(22258,81,1,1,2,9), -- Dragon Slayer
 (22258,1894,1,2,-1,1000000), -- Crafted Leather
 (22258,5487,1,1,-1,15105), -- Sealed Nightmare Robe Fabric
 (22258,3036,1,1,-1,1600), -- Recipe: Spiritshot: S Grade
-(22259,57,1443,4059,0,700000), -- Adena
+(22259,57,1439,4059,0,700000), -- Adena
 (22259,9593,1,1,1,250000), -- Yellow Seed Of Evil - Shard
 (22259,1871,1,1,1,166667), -- Charcoal
-(22259,1866,1,1,1,125000), -- Suede
-(22259,1344,10,60,1,111111), -- Mithril Arrow
-(22259,1877,1,1,1,7462), -- Adamantite Nugget
-(22259,4040,1,1,1,3533), -- Mold Lubricant
-(22259,4041,1,1,1,1821), -- Mold Hardener
-(22259,9546,1,1,200,1414), -- Fire Stone
-(22259,5544,1,1,2,476), -- Branch of The Mother Tree Head
-(22259,5533,1,1,2,476), -- Elysian Head
-(22259,8342,1,1,2,476), -- Flaming Dragon Skull Piece
-(22259,8349,1,1,2,476), -- Doom Crusher Head
+(22259,1866,1,1,1,111111), -- Suede
+(22259,1344,10,60,1,125000), -- Mithril Arrow
+(22259,1877,1,1,1,6711), -- Adamantite Nugget
+(22259,4040,1,1,1,3300), -- Mold Lubricant
+(22259,4041,1,1,1,1607), -- Mold Hardener
+(22259,9546,1,1,200,1126), -- Fire Stone
+(22259,5544,1,1,2,463), -- Branch of The Mother Tree Head
+(22259,5533,1,1,2,463), -- Elysian Head
+(22259,8342,1,1,2,463), -- Flaming Dragon Skull Piece
+(22259,8349,1,1,2,463), -- Doom Crusher Head
 (22259,213,1,1,2,6), -- Branch of The Mother Tree
 (22259,164,1,1,2,6), -- Elysian
 (22259,7895,1,1,2,6), -- Flaming Dragon Skull
 (22259,7902,1,1,2,6), -- Doom Crusher
-(22259,960,1,1,2,57), -- Scroll: Enchant Armor (Grade S)
+(22259,960,1,1,2,46), -- Scroll: Enchant Armor (Grade S)
 (22259,4040,1,1,-1,850000), -- Mold Lubricant
 (22259,5488,1,1,-1,20000), -- Sealed Majestic Robe Fabric
 (22259,3957,1,1,-1,3000), -- Recipe: Blessed Spiritshot S
 (22260,57,1647,3363,0,700000), -- Adena
 (22260,9593,1,1,1,250000), -- Yellow Seed Of Evil - Shard
-(22260,4040,1,1,1,3533), -- Mold Lubricant
-(22260,9628,1,1,1,1342), -- Leonard
-(22260,9630,1,1,1,953), -- Orichalcum
-(22260,10099,1,1,2,1656), -- Spellbook: Count of Fire
-(22260,10100,1,1,2,820), -- Spellbook: Diamond Dust
-(22260,10101,1,1,2,1263), -- Spellbook: Throne of Ice
-(22260,10203,1,1,2,966), -- Spellbook: Empowering Echo
-(22260,10557,1,1,2,738), -- Forgotten Scroll - Song of Windstorm
-(22260,5522,1,1,2,1028), -- Sealed Armor of Nightmare Pattern
-(22260,5523,1,1,2,1028), -- Sealed Majestic Plate Armor Pattern
-(22260,5311,1,1,2,12), -- Sealed Armor of Nightmare
-(22260,5316,1,1,2,12), -- Sealed Majestic Plate Armor
+(22260,4040,1,1,1,2583), -- Mold Lubricant
+(22260,9628,1,1,1,1000), -- Leonard
+(22260,9630,1,1,1,702), -- Orichalcum
+(22260,10099,1,1,2,1081), -- Spellbook: Count of Fire
+(22260,10100,1,1,2,793), -- Spellbook: Diamond Dust
+(22260,10101,1,1,2,1081), -- Spellbook: Throne of Ice
+(22260,10203,1,1,2,1081), -- Spellbook: Empowering Echo
+(22260,10557,1,1,2,1153), -- Forgotten Scroll - Song of Windstorm
+(22260,5522,1,1,2,1153), -- Sealed Armor of Nightmare Pattern
+(22260,5523,1,1,2,1153), -- Sealed Majestic Plate Armor Pattern
+(22260,5311,1,1,2,9), -- Sealed Armor of Nightmare
+(22260,5316,1,1,2,9), -- Sealed Majestic Plate Armor
 (22260,5502,1,1,-1,178000), -- Sealed Boots of Nightmare Lining
 (22260,5495,1,1,-1,178000), -- Sealed Shield of Nightmare Fragment
 (22260,5157,1,1,-1,6000), -- Recipe: Soulshot (S) Compressed Package (100%)
+(22261,57,1274,3473,0,700000), -- Adena
 (22261,9594,1,1,1,125000), -- Green Seed of Evil - Shard
-(22261,1871,1,1,1,125000), -- Charcoal
-(22261,1866,1,1,1,76923), -- Suede
-(22261,1885,1,1,1,10638), -- High Grade Suede
-(22261,5220,1,1,1,5405), -- Metal Hardener
-(22261,5534,1,1,1,1274), -- Soul Bow Stave
-(22261,4041,1,1,1,1035), -- Mold Hardener
-(22261,10558,1,1,2,175), -- Forgotten Scroll - Dance of Blade Storm
-(22261,10104,1,1,2,955), -- Spellbook: Mana Gain
-(22261,10069,1,1,2,876), -- Battle Manual: Leopold
-(22261,10068,1,1,2,796), -- Battle Manual: Enuma Elish
-(22261,10102,1,1,2,796), -- Spellbook: Throne Of Wind
-(22261,10103,1,1,2,716), -- Spellbook: Divine Power
+(22261,1871,1,1,1,100000), -- Charcoal
+(22261,1866,1,1,1,62500), -- Suede
+(22261,1885,1,1,1,8130), -- High Grade Suede
+(22261,5220,1,1,1,3831), -- Metal Hardener
+(22261,5534,1,1,1,1581), -- Soul Bow Stave
+(22261,4041,1,1,1,729), -- Mold Hardener
+(22261,10558,1,1,2,729), -- Forgotten Scroll - Dance of Blade Storm
+(22261,10104,1,1,2,779), -- Spellbook: Mana Gain
+(22261,10069,1,1,2,729), -- Battle Manual: Leopold
+(22261,10068,1,1,2,779), -- Battle Manual: Enuma Elish
+(22261,10102,1,1,2,729), -- Spellbook: Throne Of Wind
+(22261,10103,1,1,2,779), -- Spellbook: Divine Power
 (22261,1885,1,2,-1,741379), -- High Grade Suede
 (22261,5503,1,1,-1,178161), -- Sealed Majestic Boots Lining
 (22261,4041,1,1,-1,80460), -- Mold Hardener
-(22262,57,1717,3516,0,700000), -- Adena
+(22262,57,1276,3516,0,700000), -- Adena
 (22262,9594,1,1,1,111111), -- Green Seed of Evil - Shard
-(22262,1864,1,1,1,333333), -- Stem
-(22262,1869,1,1,1,142857), -- Iron Ore
-(22262,1880,1,1,1,13889), -- Steel
-(22262,4043,1,1,1,5025), -- Asofe
-(22262,5550,1,1,1,1623), -- Durable Metal Plate
-(22262,8349,1,1,1,850), -- Doom Crusher Head
-(22262,5533,1,1,1,541), -- Elysian Head
-(22262,5544,1,1,1,464), -- Branch Of The Mother Tree Head
-(22262,8342,1,1,1,309), -- Flaming Dragon Skull Piece
-(22262,10106,1,1,2,1082), -- Amulet: Seal Of Blockade
-(22262,10090,1,1,2,1082), -- Battle Manual: Prahnah
-(22262,10107,1,1,2,618), -- Spellbook: Fire Vortex Buster
-(22262,10105,1,1,2,541), -- Amulet: Chant Of Protection
+(22262,1864,1,1,1,200000), -- Stem
+(22262,1869,1,1,1,111111), -- Iron Ore
+(22262,1880,1,1,1,10204), -- Steel
+(22262,4043,1,1,1,3717), -- Asofe
+(22262,5550,1,1,1,1466), -- Durable Metal Plate
+(22262,8349,1,1,1,421), -- Doom Crusher Head
+(22262,5533,1,1,1,421), -- Elysian Head
+(22262,5544,1,1,1,421), -- Branch Of The Mother Tree Head
+(22262,8342,1,1,1,421), -- Flaming Dragon Skull Piece
+(22262,10106,1,1,2,842), -- Amulet: Seal Of Blockade
+(22262,10090,1,1,2,842), -- Battle Manual: Prahnah
+(22262,10598,1,1,2,842), -- Battle Manual: Soul Vortex
+(22262,10107,1,1,2,643), -- Spellbook: Fire Vortex Buster
+(22262,10105,1,1,2,842), -- Amulet: Chant Of Protection
+(22262,7902,1,1,1,9), -- Doom Crusher 
+(22262,164,1,1,1,9), -- Elysian 
+(22262,213,1,1,1,9), -- Branch Of The Mother Tree 
+(22262,7895,1,1,1,9), -- Flaming Dragon Skull 
 (22262,5514,1,1,-1,900000), -- Sealed Gauntlets Of Nightmare Design
 (22262,5162,1,1,-1,66667), -- Recipe: Spiritshot (S) Compressed Package (100%)
 (22262,5167,1,1,-1,33333), -- Recipe: Blessed Spiritshot (S) Compressed Package (100%)
-(22263,57,1978,4052,0,700000), -- Adena
-(22263,4040,1,1,1,5208), -- Mold Lubricant
-(22263,1876,1,1,1,2309), -- Dragon Grinder Edge
-(22263,9628,1,1,1,1825), -- Leonard
-(22263,9630,1,1,1,1182), -- Orichalcum
+(22263,57,1526,4052,0,700000), -- Adena
+(22263,4040,1,1,1,2994), -- Mold Lubricant
+(22263,1876,1,1,1,1919), -- Dragon Grinder Edge
+(22263,9628,1,1,1,1248), -- Leonard
+(22263,9630,1,1,1,782), -- Orichalcum
 (22263,9594,1,1,1,142857), -- Green Seed of Evil - Shard
-(22263,10109,1,1,2,1825), -- Spellbook: Wind Vortex Slug
-(22263,10108,1,1,2,1397), -- Spellbook: Ice Vortex Crusher
-(22263,10091,1,1,2,1342), -- Battle Manual: Final Form
+(22263,10109,1,1,2,1065), -- Spellbook: Wind Vortex Slug
+(22263,10108,1,1,2,1065), -- Spellbook: Ice Vortex Crusher
+(22263,10091,1,1,2,1065), -- Battle Manual: Final Form
+(22263,10602,1,1,2,2066), -- Battle Manual: Soul Strike
+(22263,270,1,1,1,9), -- Dragon Grinder
 (22263,1895,1,3,-1,818181), -- Metallic Fiber
 (22263,5515,1,1,-1,66986), -- Sealed Majestic Gauntlets Design
 (22263,4040,1,1,-1,114833), -- Mold Lubricant
 (22264,57,1759,3602,0,700000), -- Adena
 (22264,1868,1,1,1,333333), -- Thread
 (22264,9594,1,1,1,125000), -- Green Seed of Evil - Shard
-(22264,1873,1,1,1,71428), -- Silver Nugget
-(22264,5549,1,1,1,18518), -- Metallic Thread
-(22264,1889,1,1,1,11764), -- Compound Braid
-(22264,4044,1,1,1,5434), -- Thons
-(22264,9546,1,1,200,1464), -- Fire Stone
+(22264,1873,1,1,1,71429), -- Silver Nugget
+(22264,5549,1,1,1,18868), -- Metallic Thread
+(22264,1889,1,1,1,11628), -- Compound Braid
+(22264,4044,1,1,1,5814), -- Thons
+(22264,9546,1,1,200,1479), -- Fire Stone
 (22264,959,1,1,2,10), -- Scroll: Enchant Weapon (Grade S)
-(22264,5534,1,1,2,1754), -- Soul Bow Stave
-(22264,289,1,1,2,10), -- Soul Bow
+(22264,5534,1,1,2,1718), -- Soul Bow Stave
+(22264,289,1,1,2,9), -- Soul Bow
 (22264,5522,1,1,-1,6000), -- Sealed Armor of Nightmare Pattern
 (22264,5523,1,1,-1,9000), -- Sealed Majestic Plate Armor Pattern
 (22265,57,2039,4161,0,700000), -- Adena
-(22265,9596,1,1,1,58823), -- Red Seed of Evil - Shard
-(22265,4040,1,1,1,3344), -- Mold Lubricant
-(22265,9628,1,1,1,1410), -- Leonard
-(22265,9630,1,1,1,1000), -- Orichalcum
-(22265,9546,1,1,200,1550), -- Fire Stone
-(22265,9573,1,1,200,220), -- Life Stone: level 80
-(22265,9574,1,1,200,20), -- Mid-Grade Life Stone: level 80
-(22265,960,1,1,2,80), -- Scroll: Enchant Armor (Grade S)
-(22265,5537,1,1,2,2160), -- Soul Separator Head
-(22265,236,1,1,2,10), -- Soul Separator
+(22265,9596,1,1,1,58824), -- Red Seed of Evil - Shard
+(22265,4040,1,1,1,3195), -- Mold Lubricant
+(22265,9628,1,1,1,1290), -- Leonard
+(22265,9630,1,1,1,1010), -- Orichalcum
+(22265,9546,1,1,200,1572), -- Fire Stone
+(22265,9573,1,1,200,169), -- Life Stone: level 80
+(22265,9574,1,1,200,39), -- Mid-Grade Life Stone: level 80
+(22265,960,1,1,2,85), -- Scroll: Enchant Armor (Grade S)
+(22265,5537,1,1,2,2179), -- Soul Separator Head
+(22265,236,1,1,2,7), -- Soul Separator
 (22265,6901,1,1,-1,6200), -- Recipe: Shining Arrow (100%)
 (22265,6688,1,1,-1,8900), -- Forgotten Blade Edge
 (22266,57,1816,3707,0,700000), -- Adena
 (22266,1344,10,30,1,250000), -- Mithril Arrow
-(22266,9596,1,1,1,47619), -- Red Seed of Evil - Shard
-(22266,4040,1,1,1,4098), -- Mold Lubricant
-(22266,9628,1,1,1,1736), -- Leonard
-(22266,9630,1,1,1,1587), -- Orichalcum
-(22266,9546,1,1,200,1811), -- Fire Stone
-(22266,5537,1,1,2,1887), -- Soul Separator Head
-(22266,6901,1,1,2,192), -- Recipe: Shining Arrow (100%)
+(22266,9596,1,1,1,50000), -- Red Seed of Evil - Shard
+(22266,4040,1,1,1,4201), -- Mold Lubricant
+(22266,9628,1,1,1,1667), -- Leonard
+(22266,9630,1,1,1,1522), -- Orichalcum
+(22266,9546,1,1,200,1904), -- Fire Stone
+(22266,5537,1,1,2,1883), -- Soul Separator Head
+(22266,6901,1,1,2,208), -- Recipe: Shining Arrow (100%)
 (22266,1895,1,3,-1,1000000), -- Metallic Fiber
 (22266,6689,1,1,-1,6000), -- Basalt Battlehammer Head
 (22266,4040,1,1,-1,125000), -- Mold Lubricant
+(22267,57,19270,39270,0,700000), -- Adena
+(22267,9596,1,1,1,800000), -- Red Seed of Evil - Shard
+(22267,4040,1,1,1,66667), -- Mold Lubricant
+(22267,9628,1,1,1,37037), -- Leonard
+(22267,9630,1,1,1,23256), -- Orichalcum
+(22267,5541,1,1,2,23256), -- Tallum Glaive Edge
+(22267,6690,1,1,-1,73946), -- Imperial Staff Head
+(22267,6901,1,1,-1,76411), -- Recipe: Shining Arrow (100%)
+(22268,57,1377,2821,0,700000), -- Adena
+(22268,1344,10,30,1,166667), -- Mithril Arrow
+(22268,1868,1,3,1,125000), -- Thread
+(22268,9595,1,1,1,100000), -- Blue Seed of Evil - Shard
+(22268,1873,1,1,1,50000), -- Silver Nugget
+(22268,1895,1,1,1,37037), -- Metallic Fiber
+(22268,1876,1,1,1,25641), -- Mithril Ore
+(22268,4042,1,1,1,2217), -- Enria
+(22268,9548,1,1,200,1088), -- Earth Stone
+(22268,5480,1,1,2,984), -- Sealed Leather Armor of Nightmare Fabric
+(22268,5481,1,1,2,984), -- Sealed Majestic Leather Armor Fabric
+(22268,960,1,1,2,43), -- Scroll: Enchant Armor (S)
+(22268,5320,1,1,2,12), -- Sealed Leather Armor of Nightmare
+(22268,5323,1,1,2,12), -- Sealed Majestic Leather Armor
+(22268,1895,1,3,-1,1000000), -- Metallic Fiber
+(22268,1876,1,3,-1,690000), -- Mithril Ore
+(22268,5480,1,1,-1,6000), -- Sealed Leather Armor of Nightmare Fabric
+(22269,57,1391,2849,0,700000), -- Adena
+(22269,1872,10,30,1,200000), -- Animal Bone
+(22269,1867,1,3,1,200000), -- Animal Skin
+(22269,9595,1,1,1,100000), -- Blue Seed of Evil - Shard
+(22269,1881,1,1,1,20000), -- Coarse Bone Powder
+(22269,1875,1,1,1,9804), -- Stone of Purity
+(22269,4041,1,1,1,1183), -- Mold Hardener
+(22269,9548,1,1,200,1073), -- Earth Stone
+(22269,5522,1,1,2,878), -- Sealed Armor of Nightmare Pattern
+(22269,5523,1,1,2,878), -- Sealed Majestic Plate Armor Pattern
+(22269,6901,1,1,2,141), -- Recipe: Shining Arrow (100%) (S)
+(22269,5311,1,1,2,31), -- Sealed Armor of Nightmare
+(22269,5316,1,1,2,31), -- Sealed Majestic Plate Armor
+(22269,1808,1,1,-1,5000), -- Recipe: Soulshot: S Grade
+(22269,5481,1,1,-1,6000), -- Sealed Majestic Leather Armor Fabric
+(22269,5487,1,1,-1,6000), -- Sealed Nightmare Robe Fabric
 (22288,57,6113,9156,0,700000), -- Adena
 (22288,1868,9,9,2,133000), -- Thread
 (22288,1873,3,6,2,250000), -- Silver Nugget
