@@ -1286,7 +1286,7 @@ INSERT INTO `armor` VALUES
 (10158,'Grey Talisman of Upper Grade Fishing','talisman','true','none',150,'wood','none',0,60,0,0,0,0,0,'true','true','true','true','3315-1;'),
 (10168,'Dynasty Leather Armor - Enchanter','chest','true','light',4180,'wood','s80',0,-1,166,0,0,0,0,'true','true','true','true','0-0;'),
 (10169,'Enchanter Circlet (Kamael only)','hairall','true','none',10,'wood','none',0,-1,0,0,0,0,0,'true','true','true','true','0-0;'),
-(10170,'Baylor\'s Earring','rear,lear','true','none',150,'wood','none',0,-1,0,71,31,0,0,'true','true','true','true','0-0;'),
+(10170,'Baylor\'s Earring','rear,lear','true','none',150,'gold','s80',0,-1,0,71,31,0,487,'true','true','true','true','0-0;'),
 (10175,'Gobblin Circlet (Event)','hairall','true','none',10,'wood','none',0,-1,0,0,0,0,0,'true','true','true','true','0-0;'),
 (10176,'Half Face Mask (Event)','hairall','true','none',10,'wood','none',0,-1,0,0,0,0,0,'true','true','true','true','0-0;'),
 (10177,'Black Half-Mask (Event)','hairall','true','none',10,'wood','none',0,-1,0,0,0,0,0,'true','true','true','true','0-0;'),
