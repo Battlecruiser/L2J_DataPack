@@ -116,6 +116,7 @@ class Quest (JQuest) :
  def findRightState(self, player,mob) :
      mobObjectId = mob.getObjectId()
      st1 = None
+     if count(self.Spawn_List[mobObjectId]) == 0: return st1
      playerName,mob = self.Spawn_List[mobObjectId]
      st1 = L2World.getInstance().getPlayer(playerName)
      if st1 : st1 = st1.getQuestState(self.qn)
