@@ -344,7 +344,7 @@
     <!-- This skills seems to be exacly same as CoV but it applies on ally -->
       <mul order="0x30" stat="pAtk" val="1.1"/>
       <mul order="0x30" stat="pDef" val="1.2"/>
-      <mul order="0x30" stat="rCrit" val="1.2"/>
+      <basemul order="0x30" stat="rCrit" val="0.2"/>
       <add order="0x40" stat="accCombat" val="4"/>
       <mul order="0x30" stat="pAtkSpd" val="1.2"/>
       <mul order="0x30" stat="mAtkSpd" val="1.2"/>

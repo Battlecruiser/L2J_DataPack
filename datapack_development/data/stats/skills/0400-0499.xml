@@ -5,7 +5,7 @@
   <table name="#ench2MpConsume"> 74 73 72 70 69 68 67 65 64 63 62 60 59 58 57 55 54 53 51 50 49 48 46 45 44 43 41 40 39 38 </table>
   <table name="#mpConsume"> 55 59 62 63 66 68 70 72 74 76 </table>
   <table name="#power"> 642.0 732.0 796.0 861.0 929.0 998.0 1068.0 1139.0 1209.0 1279.0 </table>
-  <table name="#rCrit"> 0.7 0.7 0.7 0.7 0.7 0.7 0.6 0.6 0.6 0.5 </table>
+  <table name="#rCrit"> -0.3 -0.3 -0.3 -0.3 -0.3 -0.3 -0.4 -0.4 -0.4 -0.5 </table>
   <set name="weaponsAllowed" val="18444"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
@@ -26,7 +26,7 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
     <effect count="1" name="Debuff" time="10" val="0">
-      <mul order="0x30" stat="rCrit" val="#rCrit"/>
+      <basemul order="0x30" stat="rCrit" val="#rCrit"/>
     </effect>
   </for>
 </skill>
