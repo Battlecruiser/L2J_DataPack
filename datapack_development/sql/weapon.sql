@@ -698,7 +698,7 @@ INSERT INTO `weapon` VALUES
 (4775,'Crystal Dagger - Critical Poison','rhand','true',1000,3,3,'crystal','c',136,5,'dagger',12,-3.00000,0,0,0,433,0,83,-1,6130000,2452,'true','true','true','true',0,0,0,0,0,3024,5,3,0,'0-0;'),
 (4776,'Crystal Dagger - Mortal Strike','rhand','true',1000,3,3,'crystal','c',136,5,'dagger',12,-3.00000,0,0,0,433,0,83,-1,6130000,2452,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3035-4;'),
 (4777,'Kris - Evasion','rhand','true',980,1,1,'mithril','b',153,5,'dagger',12,-3.00000,0,0,0,433,0,91,-1,8680000,1157,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3009-5;'),
-(4778,'Kris - Focus','rhand','true',980,1,1,'mithril','b',153,5,'dagger',12,-3.00000,0,0,0,433,0,91,-1,8680000,1157,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3044-7;'),
+(4778,'Kris - Focus','rhand','true',980,1,1,'mithril','b',153,5,'dagger',12,-3.00000,0,0,0,433,0,91,-1,8680000,1157,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3044-5;'),
 (4779,'Kris - Back Blow','rhand','true',980,1,1,'mithril','b',153,5,'dagger',12,-3.00000,0,0,0,433,0,91,-1,8680000,1157,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3019-5;'),
 (4780,'Demon Dagger - Critical Bleed','rhand','true',970,1,1,'blood_steel','b',170,5,'dagger',12,-3.00000,0,0,0,433,0,99,-1,13100000,1746,'true','true','true','true',0,0,0,0,0,3021,4,10,0,'0-0;'),
 (4781,'Demon Dagger - Critical Poison','rhand','true',970,1,1,'blood_steel','b',170,5,'dagger',12,-3.00000,0,0,0,433,0,99,-1,13100000,1746,'true','true','true','true',0,0,0,0,0,3024,5,3,0,'0-0;'),
