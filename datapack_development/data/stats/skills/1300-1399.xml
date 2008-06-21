@@ -275,7 +275,7 @@
   </table>
   <table name="#mpConsume_Init"> 35 44 51 </table>
   <table name="#mpConsume"> 137 156 201 </table>
-  <table name="#Tab-rCrit"> 1.20 1.25 1.30 </table>
+  <table name="#Tab-rCrit"> 0.20 0.25 0.30 </table>
   <table name="#aggro"> 457 566 624 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -294,12 +294,12 @@
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-rCrit" stackType="rCrit">
-      <mul order="0x30" stat="rCrit" val="#Tab-rCrit"/>
+      <basemul order="0x30" stat="rCrit" val="#Tab-rCrit"/>
     </effect>
   </for>
   <enchant1for>
     <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="1.30" stackType="rCrit">
-      <mul order="0x30" stat="rCrit" val="1.30"/>
+      <basemul order="0x30" stat="rCrit" val="0.30"/>
     </effect>
   </enchant1for>
 </skill>
@@ -1213,11 +1213,11 @@
           <player behind="True"/>
         </and>
       </mul>
-      <mul order="0x30" stat="rCrit" val="1.2">
+      <basemul order="0x30" stat="rCrit" val="0.2">
         <and>
           <player behind="True"/>
         </and>
-      </mul>
+      </basemul>
       <mul order="0x30" stat="debuffVuln" val="0.9"/>
     </effect>
   </for>
@@ -1425,11 +1425,11 @@
          <player behind="True"/>
        </and>
      </mul>
-     <mul order="0x30" stat="rCrit" val="1.2">
+     <basemul order="0x30" stat="rCrit" val="0.2">
        <and>
          <player behind="True"/>
        </and>
-     </mul>
+     </basemul>
      <mul order="0x30" stat="debuffVuln" val="0.9"/>
   </effect>
 </for>
@@ -1562,7 +1562,7 @@
     <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
       <mul order="0x30" stat="pAtk" val="1.1"/>
       <mul order="0x30" stat="pDef" val="1.2"/>
-      <mul order="0x30" stat="rCrit" val="1.2"/>
+      <basemul order="0x30" stat="rCrit" val="0.2"/>
       <add order="0x40" stat="accCombat" val="4"/>
       <mul order="0x30" stat="pAtkSpd" val="1.2"/>
       <mul order="0x30" stat="mAtkSpd" val="1.2"/>

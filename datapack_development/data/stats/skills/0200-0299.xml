@@ -1382,12 +1382,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <mul order="0x30" stat="rCrit" val="2"/>
+      <basemul order="0x30" stat="rCrit" val="1"/>
     </effect>
   </for>
   <enchant1for>
     <effect name="Buff" time="#ench1time" count="1" val="0">
-      <mul order="0x30" stat="rCrit" val="2"/>
+      <basemul order="0x30" stat="rCrit" val="1"/>
     </effect>
   </enchant1for>
 </skill>

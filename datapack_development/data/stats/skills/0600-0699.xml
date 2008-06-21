@@ -272,7 +272,7 @@
 </skill>
 <skill id="626" levels="4" name="Critical Sense">
   <!-- Needs to be verified -->
-  <table name="#rCrit"> 1.10 1.15 1.20 1.25 </table> 
+  <table name="#rCrit"> 0.10 0.15 0.20 0.25 </table> 
   <table name="#cAtk"> 45 90 145 195 </table> <!-- Custom for lvl 1,2,3 --> 
   <set name="target" val="TARGET_SELF"/> 
   <set name="skillType" val="BUFF"/>
@@ -280,7 +280,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul order="0x30" stat="rCrit" val="#rCrit"/> 
+    <basemul order="0x30" stat="rCrit" val="#rCrit"/> 
     <add order="0x40" stat="cAtk" val="#cAtk"/>
   </for>
 </skill>

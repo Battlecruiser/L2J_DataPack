@@ -515,7 +515,7 @@
     <effect count="1" name="ImmobileBuff" time="120" val="0">
       <add order="0x40" stat="pAtk" val="#pAtk"/>
       <add order="0x40" stat="accCombat" val="#accCombat"/>
-      <mul order="0x30" stat="rCrit" val="1.2"/>
+      <basemul order="0x30" stat="rCrit" val="0.2"/>
       <add order="0x40" stat="pAtkRange" val="300"/>
     </effect>
   </for>
@@ -526,7 +526,7 @@
     <effect count="1" name="ImmobileBuff" time="120" val="0">
       <add order="0x40" stat="pAtk" val="#ench1pAtk"/>
       <add order="0x40" stat="accCombat" val="3"/>
-      <mul order="0x30" stat="rCrit" val="1.2"/>
+      <basemul order="0x30" stat="rCrit" val="0.2"/>
       <add order="0x40" stat="pAtkRange" val="300"/>
     </effect>
   </enchant1for>
@@ -1353,7 +1353,7 @@
   <set name="aggroPoints" val="669"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="focus">
-      <mul order="0x30" stat="rCrit" val="0.7"/> <!-- Critical -30% -->
+      <basemul order="0x30" stat="rCrit" val="-0.3"/> <!-- Critical -30% -->
       <mul order="0x30" stat="blowRate" val="1.6"> <!-- Blow land rate +60% -->
         <using kind="Dagger"/>
       </mul>
@@ -1383,22 +1383,22 @@
   <set name="aggroPoints" val="669"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="focus">
-      <mul order="0x30" stat="rCrit" val="0.7"> <!-- Critical Chance from front -30% -->
+      <basemul order="0x30" stat="rCrit" val="-0.3"> <!-- Critical Chance from front -30% -->
         <and>
           <player front="True"/>
         </and>
-      </mul>
-      <mul order="0x30" stat="rCrit" val="1.3"> <!-- Critical Chance from side +30% -->
+      </basemul>
+      <basemul order="0x30" stat="rCrit" val="0.3"> <!-- Critical Chance from side +30% -->
         <and>
           <player front="False"/>
           <player behind="False"/>
         </and>
-      </mul>
-      <mul order="0x30" stat="rCrit" val="1.6"> <!-- Critical Chance from back +60% -->
+      </basemul>
+      <basemul order="0x30" stat="rCrit" val="0.6"> <!-- Critical Chance from back +60% -->
         <and>
           <player behind="True"/>
         </and>
-       </mul>
+       </basemul>
     </effect>
   </for>
 </skill>
