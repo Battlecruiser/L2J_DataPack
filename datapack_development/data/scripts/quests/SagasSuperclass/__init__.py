@@ -116,9 +116,8 @@ class Quest (JQuest) :
  def findRightState(self, player,mob) :
      mobObjectId = mob.getObjectId()
      st1 = None
-     if count(self.Spawn_List[mobObjectId]) == 0: return st1
-     playerName,mob = self.Spawn_List[mobObjectId]
-     st1 = L2World.getInstance().getPlayer(playerName)
+     playerName,mob = self.Spawn_List[mobObjectId]      #There is a possibility for an NPE here, but only if something else is wrong in the quest
+     st1 = L2World.getInstance().getPlayer(playerName)  #Therefore, placing an NPE catch here will only hide the error, not solve it.
      if st1 : st1 = st1.getQuestState(self.qn)
      return st1
 
@@ -247,6 +246,8 @@ class Quest (JQuest) :
        self.AutoChat(Mob_2,self.Text[13].replace('PLAYERNAME',player.getName()))
        st.set("Quest0","0")
        self.DeleteSpawn(st,Mob_2.getObjectId())
+       if st2.getQuestTimer("Mob_2 has despawned") :
+          st2.getQuestTimer("Mob_2 has despawned").cancel()
        st.playSound("ItemSound.quest_middle")
        return
    elif event == "5-1" :
@@ -328,7 +329,7 @@ class Quest (JQuest) :
        self.DeleteSpawn(st,npc.getObjectId())
        st.set("spawned","0")
        return
-   elif event == "Archon of Hellisha has despawned" :
+   elif event == "Archon Hellisha has despawned" :
        self.AutoChat(npc,self.Text[6].replace('PLAYERNAME',player.getName()))
        self.DeleteSpawn(st,npc.getObjectId())
        st.set("spawned","0")
@@ -347,7 +348,6 @@ class Quest (JQuest) :
    elif event == "Mob_3 has despawned" :
        self.AutoChat(npc,self.Text[15].replace('PLAYERNAME',player.getName()))
        st.set("Quest0","2")
-       npc.reduceCurrentHp(9999999,npc)
        self.DeleteSpawn(st,npc.getObjectId())
        return
    elif event == "Mob_2 Timer 1" :
@@ -376,7 +376,6 @@ class Quest (JQuest) :
                self.AutoChat(npc,self.Text[11].replace('PLAYERNAME',player.getName()))
            else :
                self.AutoChat(npc,self.Text[12].replace('PLAYERNAME',player.getName()))
-           npc.reduceCurrentHp(9999999,npc)
            self.DeleteSpawn(st,npc.getObjectId())
        else :
            st.startQuestTimer("Mob_2 has despawned",1000,npc)
@@ -551,7 +550,6 @@ class Quest (JQuest) :
         if st.getInt("Quest0") > 15 :
             st.set("Quest0","1")
             self.AutoChat(npc,self.Text[17].replace('PLAYERNAME',player.getName()))
-            npc.reduceCurrentHp(9999999,npc)
             self.DeleteSpawn(st,st.getInt("Mob_3"))
             if st.getQuestTimer("Mob_3 has despawned") :
                st.getQuestTimer("Mob_3 has despawned").cancel()
@@ -566,7 +564,7 @@ class Quest (JQuest) :
     return
 
  def onSkillSee (self,npc,player,skill,targets,isPet) :
-     name = self.Spawn_List[npc.getObjectId()][0]
+     name = self.Spawn_List[npc.getObjectId()][0] #This can also result in an NPE, but again, this alerts us to an error.
      if player.getName() != name :
          quest_player = L2World.getInstance().getPlayer(name)
          if (quest_player in targets) or (npc in targets) :
