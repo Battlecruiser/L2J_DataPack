@@ -542,8 +542,8 @@
   <set name="effectRange" val="-1"/> 
   <for> 
        <sub val="2" order="0x10" stat="CON"/>
-        <add val="2" order="0x10" stat="DEX"/>
-       <add val="4.3" order="0x10" stat="accCombat"/>
+       <add val="2" order="0x10" stat="DEX"/>
+       <add val="4.3" order="0x10" stat="rEvas"/>
        <add val="492" order="0x10" stat="maxHp"/>
        <mul val="1.08" order="0x40" stat="pAtkSpd"/>
   </for> 
@@ -558,6 +558,7 @@
   <for> 
         <sub val="2" order="0x10" stat="CON"/>
         <add val="2" order="0x10" stat="DEX"/>
+        <add val="4.3" order="0x10" stat="accCombat"/>
         <add val="321" order="0x10" stat="maxHp"/>
        <mul val="1.08" order="0x40" stat="pAtkSpd"/>
        <mul val="1.08" order="0x40" stat="gainMp"/>
