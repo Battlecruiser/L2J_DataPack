@@ -27913,7 +27913,6 @@ INSERT INTO `droplist` VALUES
 (21790,8742,1,1,200,406), -- Messenger Invader Elite Soldier
 (22139,8742,1,1,200,371), -- Old Aristocrat's Soldier
 (21186,8742,1,1,200,326), -- Lilim Court Knight
-(22140,8742,1,1,200,326), -- Zombie Worker
 (22131,8742,1,1,200,320), -- Pilgrim of Light
 (21333,8742,1,1,200,320), -- Grazing Windsus
 (22130,8742,1,1,200,318), -- Divine Advocate
