@@ -246,8 +246,8 @@ class Quest (JQuest) :
        self.AutoChat(Mob_2,self.Text[13].replace('PLAYERNAME',player.getName()))
        st.set("Quest0","0")
        self.DeleteSpawn(st,Mob_2.getObjectId())
-       if st2.getQuestTimer("Mob_2 has despawned") :
-          st2.getQuestTimer("Mob_2 has despawned").cancel()
+       if st.getQuestTimer("Mob_2 has despawned") :
+          st.getQuestTimer("Mob_2 has despawned").cancel()
        st.playSound("ItemSound.quest_middle")
        return
    elif event == "5-1" :
@@ -504,7 +504,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onFirstTalk (self,npc,player):
-    htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+    htmltext = None
     st = player.getQuestState(self.qn)
     npcId = npc.getNpcId()
     if st :
