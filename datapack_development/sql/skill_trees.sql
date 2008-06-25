@@ -13632,6 +13632,7 @@ INSERT INTO skill_trees VALUES
 (114,441,1,'Force Meditation',21340000,78),
 (114,346,1,'Raging Force',21340000,78),
 (114,443,1,'Force Barrier',80000000,79),
+(114,50,8,'Focused Force',80000000,79),
 (114,458,1,'Symbol of Energy',150000000,80),
 (115,329,1,'Health',8340000,76),
 (115,1367,1,'Seal of Disease',8340000,76),
