@@ -1203,7 +1203,7 @@
 <skill id="453" levels="1" name="Escape Shackle">
   <!-- Needs to be verified -->
   <set name="mpConsume" val="60"/>
-  <set name="target" val="TARGET_ONE"/> <!-- Should be TARGET_SELF ? -->
+  <set name="target" val="TARGET_SELF"/> <!-- Should be TARGET_SELF ? -->
   <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="120000"/> <!-- guessed -->
   <set name="skillType" val="NEGATE"/>

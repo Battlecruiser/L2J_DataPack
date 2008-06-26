@@ -655,13 +655,13 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="9">
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="0">
       <mul order="0x30" stat="sDef" val="0.6"/>
       <set stat="shieldDefAngle" val="360" order="0x10"/>
     </effect>
   </for>
   <enchant1for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="9">
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="0">
       <mul order="0x30" stat="sDef" val="#ench1sDef"/>
       <set stat="shieldDefAngle" val="360" order="0x10"/>
     </effect>
