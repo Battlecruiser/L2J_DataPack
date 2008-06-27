@@ -535,6 +535,8 @@ class Quest (JQuest) :
                               htmltext = "4-02.htm"
           elif cond == 18 :
               htmltext = "4-08.htm"
+    if not htmltext :
+        npc.showChatWindow(player)
     return htmltext
 
  def onAttack (self, npc, player, damage, isPet):
