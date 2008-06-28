@@ -730,4 +730,6 @@ INSERT INTO teleport VALUES
 ('Talking Village -> Kamael Village',12055,-117251,46771,360,20000,0),
 ('Dwarven Village -> Kamael Village',12056,-117251,46771,360,32000,0),
 ('Soul Harbor -> Nornil\'s Garden',12057,-119534,87176,-12593,0,0),
-('Nornil\'s Garden -> Soul Harbor',12058,-73494,53507,-3680,0,0);
+('Nornil\'s Garden -> Soul Harbor',12058,-73494,53507,-3680,0,0),
+('Underground Coliseum -> Fantasy Isle',12059,-59224,-56837,-2032,0,0),
+('Fantasy Isle -> Underground Coliseum',12060,-81490,-49167,-10352,0,0);

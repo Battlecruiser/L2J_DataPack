@@ -40263,7 +40263,12 @@ INSERT INTO spawnlist VALUES
 (null,'Isle_of_Prayer',1,22264,151763,149992,-3320,0,0,35759,60,0,0),
 (null,'Isle_of_Prayer',1,22263,152325,150566,-3448,0,0,0,60,0,0),
 (null,'Wastelands','1',32368,-21982,186630,-4312,0,0,0,60,0,0),
-(null,'Cruma2ndFloor','1',32366,16411,113498,-9064,0,0,0,60,0,0);
+(null,'Cruma2ndFloor','1',32366,16411,113498,-9064,0,0,0,60,0,0),
+(null,'undgrndColiseum','1',32377,-77408,-50656,-10728,0,0,29664,60,0,0),
+(null,'undgrndColiseum','1',32377,-81904,-53904,-10728,0,0,17044,60,0,0),
+(null,'undgrndColiseum','1',32377,-86359,-50593,-10728,0,0,3704,60,0,0),
+(null,'undgrndColiseum','1',32377,-84640,-45360,-10728,0,0,56156,60,0,0),
+(null,'FantasyIsle','1',32378,-59234,-56897,-2032,0,0,0,60,0,0);
 
 -- Castle Artefacts
 INSERT INTO spawnlist VALUES
