@@ -1401,7 +1401,7 @@
   <set name="target" val="TARGET_SELF"/>
   <for>
     <effect count="1" name="Buff" time="10" val="0" stackOrder="1000" stackType="giveHp">
-      <add order="0x30" stat="bonusHp" val="1000"/>
+      <add order="0x40" stat="bonusHp" val="1000"/>
     </effect>
   </for>
 </skill>
