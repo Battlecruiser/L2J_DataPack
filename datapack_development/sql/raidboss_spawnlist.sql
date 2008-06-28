@@ -147,7 +147,7 @@ INSERT INTO `raidboss_spawnlist` VALUES
 (25319,1,184542,-106330,-6304,0,43200,129600,0,1048567,3718), -- Ember (85)
 (25322,1,93296,-75104,-1824,0,43200,129600,0,834231,3718), -- Demon's Agent Falston (66)
 (25325,1,91008,-85904,-2736,0,43200,129600,0,888658,3718), -- Flame Of Splendor Barakiel (70)
--- (25328,1,59331,-42403,-3003,0,7200,10800,0,900867,3718), -- Eilhalder Von Hellmann (71) -- (Only Spawn at Night)
+(25328,1,59331,-42403,-3003,0,7200,10800,0,900867,3718), -- Eilhalder Von Hellmann (71) -- (Only Spawn at Night)
 -- (25333,1,000000,000000,000000,0,43200,129600,0,193763,3718), -- Anakazel (28) -- (Spawn by Dimensional Instance)
 -- (25334,1,000000,000000,000000,0,43200,129600,0,306698,3718), -- Anakazel (38) -- (Spawn by Dimensional Instance)
 -- (25335,1,000000,000000,000000,0,43200,129600,0,494363,3718), -- Anakazel (48) -- (Spawn by Dimensional Instance)
