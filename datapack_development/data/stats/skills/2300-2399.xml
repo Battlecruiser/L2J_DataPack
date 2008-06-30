@@ -990,11 +990,22 @@
   </for>
 </skill>
 <skill id="2396" levels="1" name="Mental Potion">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- by Z0mbie! -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="buffDuration" val="1200000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isPotion" val="true"/>
   <for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="30" stackType="MentalShield">
+      <mul order="0x30" stat="rootVuln" val="0.7"/>
+      <mul order="0x30" stat="sleepVuln" val="0.7"/>
+      <mul order="0x30" stat="confusionVuln" val="0.7"/>
+      <mul order="0x30" stat="derangementVuln" val="0.7"/>
+    </effect>
   </for>
 </skill>
 <skill id="2397" levels="1" name="Medusa Potion">
