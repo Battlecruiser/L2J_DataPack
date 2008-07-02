@@ -75,8 +75,6 @@
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <!-- SA: Critical Stun -->
-    <skill onCrit='1' id='3070' lvl='1' chance='16'/>
     <!-- Enhances damage to target during PvP -->
     <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
     <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
@@ -177,7 +175,6 @@
     <set val='379' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <skill onCrit='1' id='3579' lvl='1' chance='4'/> <!-- on a critical hit the target's P.Def. is dropped by 23% at a 4% chance (MEN resists it) -->
   </for>
 </item>
 <item id='6612' name="infinity_cleaver">
@@ -200,7 +197,6 @@
     <set val='379' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <skill onCrit='1' id='3581' lvl='1' chance='20'/> <!-- chance of Curse Discord effect on a critical hit -->
   </for>
 </item>
 <item id='6614' name="infinity_rod">
@@ -212,7 +208,6 @@
     <set val='379' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <skill onCast='1' id='3598' lvl='1' chance='3'/> <!-- 3% chance to full heal target's HP when "good" magic is cast -->
   </for>
 </item>
 <item id='6615' name="infinity_crusher">
@@ -224,7 +219,6 @@
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <skill onCrit='1' id='3584' lvl='1' chance='25'/> <!-- 25% chance to stun target on a critical hit (CON resists it) -->
   </for>
 </item>
 <item id='6616' name="infinity_scepter">
@@ -236,7 +230,6 @@
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <skill onCast='1' id='3596' lvl='1' chance='3'/> <!-- 3% chance to full heal target's HP when "good" magic is cast -->
   </for>
 </item>
 <item id='6617' name="infinity_stinger">
@@ -248,7 +241,6 @@
     <set val='433' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <skill onCrit='1' id='3590' lvl='1' chance='5'/> <!-- 5% chance to Silence target on a critical hit (MEN resists) -->
   </for>
 </item>
 <item id='6618' name="infinity_fang">
@@ -260,7 +252,6 @@
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <skill onCrit='1' id='3588' lvl='1' chance='25'/> <!-- 25% chance to stun target on a critical hit (CON resists it) -->
   </for>
 </item>
 <item id='6619' name="infinity_bow">
@@ -272,7 +263,6 @@
     <set val='293' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <skill onCrit='1' id='3594' lvl='1' chance='7'/> <!-- 7% chance to inflict slow (-50% speed) on a critical hit (MEN resists it) -->
   </for>
 </item>
 <item id='6620' name="infinity_wing">
@@ -284,7 +274,6 @@
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <skill onCrit='1' id='3586' lvl='1' chance='10'/> <!-- 10% chance to inflict Physical Skill Silence on a critical hit (MEN resists it) -->
   </for>
 </item>
 <item id='6621' name="infinity_spear">
@@ -297,7 +286,6 @@
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <skill onCrit='1' id='3592' lvl='1' chance='10'/> <!-- 10% chance to cancel each buff from target on a critical hit (for comparison, Cancel is 25% but Cancel also relies on M.Atk. vs. M.Def. while this weapon does not) -->
   </for>
 </item>
 <item id='6678' name="sealed_imperial_crusader_shield">
