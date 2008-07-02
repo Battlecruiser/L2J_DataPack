@@ -1018,18 +1018,14 @@
   </for>
 </skill>
 <skill id="3568" levels="1" name="Special Ability: HP Drain">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Partially restores HP using damage inflicted upon the enemy. Excludes damage from skill or range attack.  Enhances damage to target during PvP.
--->
+<!-- Vampiric Rage effect -->
   <set name="element" val="6"/> <!-- Dark -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="WEAPON_SA"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <add val='3' order='0x40' stat='absorbDam'/>
   </for>
 </skill>
 <skill id="3569" levels="1" name="Special Ability: HP Regeneration">
@@ -1146,17 +1142,16 @@
   </for>
 </skill>
 <skill id="3577" levels="1" name="Special Ability: Magic Hold">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Magically Immobilizes target.
--->
   <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="skillType" val="WEAPON_SA"/>
+  <set name="isDebuff" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
+  <set name="effectType" val="ROOT"/>
+  <set name="effectPower" val="80"/>
   <for>
+    <effect count="1" name="Root" time="30" val="0" stackOrder="1" stackType="Root"/>
   </for>
 </skill>
 <skill id="3578" levels="1" name="Special Ability: Infinity Blade">
@@ -1307,7 +1302,7 @@
   <set name="magicLvl" val="80"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="DEBUFF"/>
+  <set name="skillType" val="MUTE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1513,7 +1508,7 @@
 <skill id="3598" levels="1" name="Full Recover">
   <!-- Infinity Rod Skill -->
   <set name="magicLvl" val="80"/>
-  <set name="target" val="TARGET_SELF"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="power" val="100"/>
   <set name="skillType" val="HEAL_PERCENT"/>
   <set name="operateType" val="OP_ACTIVE"/>

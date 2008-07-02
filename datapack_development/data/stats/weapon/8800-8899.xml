@@ -53,8 +53,6 @@
     <set val='66' order='0x08' stat='pAtkRange'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <!-- Critical Stun -->
-    <skill onCrit='1' id='3070' lvl='1' chance='25'/>
     <!-- Enhances damage to target during PvP -->
     <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
     <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
@@ -191,8 +189,6 @@
     <set val='325' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <!-- Critical Drain -->
-    <skill onCrit='1' id='3022' lvl='5'/>
     <!-- Enhances damage to target during PvP -->
     <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
     <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
@@ -232,8 +228,6 @@
     <set val='379' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <!-- Magic Focus -->
-    <skill onCast='1' id='1077' lvl='3' chance='20'/>
     <!-- Enhances damage to target during PvP -->
     <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
     <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
@@ -276,8 +270,6 @@
     <set val='379' order='0x08' stat='pAtkSpd'/>
     <enchant val='0' order='0x0C' stat='pAtk'/>
     <enchant val='0' order='0x0C' stat='mAtk'/>
-    <!-- Magic Silence -->
-    <skill onCast='1' id='1064' lvl='1' chance='10'/>
     <!-- Enhances damage to target during PvP -->
     <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
     <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
