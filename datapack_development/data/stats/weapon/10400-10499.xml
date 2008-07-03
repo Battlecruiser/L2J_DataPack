@@ -93,14 +93,29 @@
    <enchant val='0' order='0x0C' stat='mAtk'/> 
   </for> 
 </item> 
+<item id='10440' name="Icarus Spirit - Acumen"> 
+  <for> 
+   <set val='290' order='0x08' stat='pAtk'/> 
+   <set val='217' order='0x08' stat='mAtk'/> 
+   <set val='8' order='0x08' stat='rCrit'/> 
+   <set val='379' order='0x08' stat='pAtkSpd'/> 
+   <enchant val='0' order='0x0C' stat='pAtk'/> 
+   <enchant val='0' order='0x0C' stat='mAtk'/> 
+   <!-- SA: Acumen --> 
+   <mul val='1.15' order='0x30' stat='mAtkSpd'/> 
+   <!-- Enhances damage to target during PvP --> 
+   <mul val='1.05' order='0x30' stat='pvpPhysDmg'/> 
+   <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/> 
+  </for> 
+</item>
 <item id='10441' name="Icarus Spirit - Mana Up"> 
   <for> 
    <set val='290' order='0x08' stat='pAtk'/> 
    <set val='217' order='0x08' stat='mAtk'/> 
    <set val='8' order='0x08' stat='rCrit'/> 
    <set val='379' order='0x08' stat='pAtkSpd'/> 
-             <!-- SA: Mana Up --> 
-    <mul val='1.3' order='0x30' stat='maxMp'/> 
+   <!-- SA: Mana Up --> 
+   <mul val='1.3' order='0x30' stat='maxMp'/> 
    <!-- Enhances damage to target during PvP --> 
    <enchant val='0' order='0x0C' stat='pAtk'/> 
    <enchant val='0' order='0x0C' stat='mAtk'/> 
@@ -112,27 +127,12 @@
    <set val='217' order='0x08' stat='mAtk'/> 
    <set val='8' order='0x08' stat='rCrit'/> 
    <set val='379' order='0x08' stat='pAtkSpd'/> 
-          <!-- SA: Conversion --> 
-    <mul val='0.6' order='0x30' stat='maxHp'/> 
-    <mul val='1.6' order='0x30' stat='maxMp'/> 
-    <!-- Enhances damage to target during PvP --> 
-   <enchant val='0' order='0x0C' stat='pAtk'/> 
-   <enchant val='0' order='0x0C' stat='mAtk'/> 
-  </for> 
-</item> 
-<item id='10440' name="Icarus Spirit - Acumen"> 
-  <for> 
-   <set val='290' order='0x08' stat='pAtk'/> 
-   <set val='217' order='0x08' stat='mAtk'/> 
-   <set val='8' order='0x08' stat='rCrit'/> 
-   <set val='379' order='0x08' stat='pAtkSpd'/> 
-   <enchant val='0' order='0x0C' stat='pAtk'/> 
-   <enchant val='0' order='0x0C' stat='mAtk'/> 
-             <!-- SA: Conversion --> 
-    <mul val='1.15' order='0x30' stat='mAtkSpd'/> 
+   <!-- SA: Conversion --> 
+   <mul val='0.6' order='0x30' stat='maxHp'/> 
+   <mul val='1.6' order='0x30' stat='maxMp'/> 
    <!-- Enhances damage to target during PvP --> 
-    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/> 
-    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/> 
+   <enchant val='0' order='0x0C' stat='pAtk'/> 
+   <enchant val='0' order='0x0C' stat='mAtk'/> 
   </for> 
 </item> 
 <item id='10443' name="Icarus Spitter - Cheap Shot"> 
