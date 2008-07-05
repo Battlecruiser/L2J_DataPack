@@ -26,10 +26,14 @@
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
-<skill id="101" levels="40" name="Stunning Shot" enchantLevels1="30" enchantLevels2="30" >
+<skill id="101" levels="40" name="Stunning Shot" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30" enchantLevels4="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
+  <table name="#ench3-pDef">0.99 0.98 0.98 0.97 0.97 0.95 0.94 0.93 0.93 0.92 0.91 0.90 0.90 0.88 0.87 0.86 0.86 0.85 0.84 0.81 0.80 0.80 0.79 0.78 0.78 0.77 0.76 0.74 0.73 0.72</table>
+  <table name="#ench4-mDef">0.99 0.98 0.98 0.97 0.97 0.95 0.94 0.93 0.93 0.92 0.91 0.90 0.90 0.88 0.87 0.86 0.86 0.85 0.84 0.81 0.80 0.80 0.79 0.78 0.78 0.77 0.76 0.74 0.73 0.72</table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
+  <enchant3 name="magicLvl" val="#enchantMagicLvl"/>
+  <enchant4 name="magicLvl" val="#enchantMagicLvl"/>
   <table name="#ench2MpConsume"> 116 114 113 111 110 108 107 105 103 102 100 99 97 96 94 93 91 89 88 86 85 83 82 80 79 77 75 74 72 71 </table>
   <table name="#mpConsume"> 49 51 53 56 58 60 60 62 64 66 68 70 71 73 75 77 78 80 82 84 86 87 89 91 93 95 96 98 99 101 103 105 106 108 110 111 113 114 116 117 </table>
   <table name="#magicLvl"> 34 35 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
@@ -61,6 +65,20 @@
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
     <effect count="1" name="RemoveTarget" time="1" val="0"/>
   </for>
+  <enchant3for>
+    <effect count="1" name="Debuff" time="9" val="0">
+      <mul order="0x30" stat="pDef" val="#ench3-pDef" />
+    </effect>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun" noicon="1"/>
+    <effect count="1" name="RemoveTarget" time="1" val="0"/>
+  </enchant3for>
+  <enchant4for>
+    <effect count="1" name="Debuff" time="9" val="0">
+      <mul order="0x30" stat="mDef" val="#ench4-mDef" />
+    </effect>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun" noicon="1"/>
+    <effect count="1" name="RemoveTarget" time="1" val="0"/>
+  </enchant4for>
 </skill>
 <skill id="102" levels="16" name="Entangle" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>

@@ -92,11 +92,14 @@ description(s) :
  <for>
  </for>
 </skill>
-<skill id="504" levels="37" name="Triple Thrust">
+<skill id="504" levels="37" name="Triple Thrust" enchantLevels1="30" enchantLevels2="30" >
 <!--
   Description(s):
       Makes three quick stabs. Consumes 1 Soul. An equipped rapier is required to use this skill.  Power 517-2557.
 -->
+  <table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
+  <table name="#ench1Power">2422 2439 2455 2472 2488 2505 2521 2538 2554 2571 2587 2604 2620 2637 2653 2670 2686 2703 2719 2736 2752 2769 2785 2802 2818 2835 2851 2868 2884 2900</table>
+  <table name="#ench2MpConsume">65 64 63 62 61 60 59 57 56 55 54 53 52 51 50 48 47 46 45 44 43 42 40 39 38 37 36 35 34 33</table>
   <table name="#mpConsume"> 32 33 34 34 35 36 37 38 40 41 42 43 44 44 45 46 48 49 50 51 52 53 54 54 55 56 57 58 59 60 61 62 63 64 65 66 67</table>
   <table name="#power"> 517 549 583 619 656 694 735 777 820 865 912 960 1010 1062 1115 1169 1225 1283 1342 1402 1464 1527 1591 1656 1722 1789 1857 1926 1995 2065 2135 2206 2277 2347 2417 2488 2557</table>
   <table name="#magicLvl"> 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76</table>
@@ -114,14 +117,21 @@ description(s) :
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="soulConsumeCount" val="1"/>
+  <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
+  <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
+  <enchant1 name="power" val="#ench1Power"/>
+  <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
   </for>
 </skill>
-<skill id="505" levels="28" name="Shining Edge">
+<skill id="505" levels="28" name="Shining Edge" enchantLevels1="30" enchantLevels2="30" >
 <!--
   Description(s):
       A flashing attack at your enemy's vital organs. Consumes 2 soul. An equipped rapier is required to use this skill. Power 1853-5479.
 -->
+  <table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
+  <table name="#ench1Power">5813 5852 5892 5932 5971 6011 6050 6090 6129 6169 6209 6248 6288 6327 6367 6406 6446 6486 6525 6565 6604 6644 6683 6723 6763 6802 6842 6881 6921 6960</table>
+  <table name="#ench2MpConsume">65 64 63 62 61 60 59 57 56 55 54 53 52 51 50 48 47 46 45 44 43 42 40 39 38 37 36 35 34 33</table>
   <table name="#mpConsume"> 41 42 43 44 44 45 46 48 48 49 50 51 52 53 54 54 55 56 57 58 59 60 61 62 63 64 65 66 67</table>
   <table name="#power"> 1853 1953 2057 2164 2274 2388 2505 2625 2748 2875 3004 3136 3271 3408 3548 3690 3834 3980 4127 4275 4425 4575 4726 4878 5029 5180 5330 5479</table>
   <table name="#magicLvl"> 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76</table>
@@ -139,10 +149,17 @@ description(s) :
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="soulConsumeCount" val="2"/>
+  <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
+  <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
+  <enchant1 name="power" val="#ench1Power"/>
+  <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
   </for>
 </skill>
-<skill id="506" levels="4" name="Checkmate">
+<skill id="506" levels="4" name="Checkmate" enchantLevels1="30" enchantLevels2="30" >
+  <table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
+  <table name="#ench1Power">5813 5852 5892 5932 5971 6011 6050 6090 6129 6169 6209 6248 6288 6327 6367 6406 6446 6486 6525 6565 6604 6644 6683 6723 6763 6802 6842 6881 6921 6960</table>
+  <table name="#ench2MpConsume">56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 28</table>
   <table name="#mpConsume"> 40 47 52 57 </table>
   <table name="#power"> 2388 3408 4275 5180 </table>
   <set name="weaponsAllowed" val="131072"/>
@@ -161,6 +178,10 @@ description(s) :
   <cond msg="Checkmate cannot be used due to unsuitable terms.">
     <target active_effect_id="5264"/>
   </cond>
+  <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
+  <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
+  <enchant1 name="power" val="#ench1Power"/>
+  <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
   </for>
 </skill>
