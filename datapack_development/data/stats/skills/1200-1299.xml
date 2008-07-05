@@ -3069,18 +3069,18 @@
     </effect>
   </for>
 </skill>
-<skill id="1299" levels="2" name="Servitor Ultimate Defense" enchantLevels1="30" enchantLevels2="30" >
+<skill id="1299" levels="2" name="Servitor Empowerment" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <table name="#pDef"> 1800 3600 </table>
   <table name="#mDef"> 1350 2700 </table>
-  <table name="#ench1pDef">
+  <table name="#ench2pDef">
   3636 3672 3708 3744 3780 3816 3852 3888 3924 3960
   3996 4032 4068 4104 4140 4176 4212 4248 4284 4320
   4356 4392 4428 4464 4500 4536 4572 4608 4644 4680
   </table>
-  <table name="#ench1mDef">
+  <table name="#ench2mDef">
   2727 2754 2781 2808 2835 2862 2889 2916 2943 2970
   2997 3024 3051 3078 3105 3132 3159 3186 3213 3240
   3267 3294 3321 3348 3375 3402 3429 3456 3483 3510
@@ -3118,14 +3118,14 @@
   </for>
   <enchant1for>
     <effect count="1" name="ImmobilePetBuff" time="#ench1time" val="0" stackOrder="1" stackType="pDefSpec">
-      <add order="0x40" stat="pDef" val="#ench1pDef"/>
-      <add order="0x40" stat="mDef" val="#ench1mDef"/>
+      <add order="0x40" stat="pDef" val="3600"/>
+      <add order="0x40" stat="mDef" val="2700"/>
     </effect>
   </enchant1for>
   <enchant2for>
     <effect count="1" name="ImmobilePetBuff" time="30" val="0" stackOrder="1" stackType="pDefSpec">
-      <add order="0x40" stat="pDef" val="#ench1pDef"/>
-      <add order="0x40" stat="mDef" val="#ench1mDef"/>
+      <add order="0x40" stat="pDef" val="#ench2pDef"/>
+      <add order="0x40" stat="mDef" val="#ench2mDef"/>
     </effect>
   </enchant2for>
 </skill>

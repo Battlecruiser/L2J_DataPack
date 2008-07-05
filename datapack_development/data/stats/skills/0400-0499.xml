@@ -2196,11 +2196,14 @@
     <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding"/>
   </for>
 </skill>
-<skill id="496" levels="31" name="Slashing Blade">
+<skill id="496" levels="31" name="Slashing Blade" enchantLevels1="30" enchantLevels2="30" >
 <!--
   Description(s):
      Swing sword to attack nearby enemies. Consumes 2 soul.  An equipped ancient sword weapon is required to use this skill. Over-hit is possible. Power 656-2283.
 -->
+  <table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
+  <table name="#ench1Power">2422 2439 2455 2472 2488 2505 2521 2538 2554 2571 2587 2604 2620 2637 2653 2670 2686 2703 2719 2736 2752 2769 2785 2802 2818 2835 2851 2868 2884 2900</table>
+  <table name="#ench2MpConsume">82 81 80 79 79 78 77 76 75 75 74 73 72 71 71 70 69 68 67 67 66 65 64 63 63 62 61 60 59 59</table>
   <table name="#mpConsume"> 47 48 49 51 52 54 55 55 56 58 59 61 62 63 65 66 68 68 69 70 72 73 74 75 77 78 79 80 81 82 83</table>
   <table name="#power"> 656 693 732 773 814 857 902 948 995 1044 1094 1145 1198 1252 1307 1363 1420 1479 1538 1598 1658 1720 1782 1844 1907 1970 2033 2096 2158 2221 2283</table>
   <table name="#magicLvl">46 47 48 49 50 51 52 53 54 55 56 57 58 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75</table>
@@ -2220,14 +2223,21 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="soulConsumeCount" val="2"/>
+  <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
+  <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
+  <enchant1 name="power" val="#ench1Power"/>
+  <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
   </for>
 </skill>
-<skill id="497" levels="16" name="Crushing Pain">
+<skill id="497" levels="16" name="Crushing Pain" enchantLevels1="30" enchantLevels2="30" >
 <!--
   Description(s):
      Deals a powerful attack to the enemy. Consumes 1 Soul. An equipped ancient sword weapon is required to use this skill. Shield defense is ignored. Over-hit is possible. Power 4558-7635.
 -->
+  <table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
+  <table name="#ench1Power">8100 8155 8210 8266 8321 8376 8431 8486 8541 8596 8652 8707 8762 8817 8872 8927 8982 9038 9093 9148 9203 9258 9313 9368 9424 9479 9534 9589 9644 9699</table>
+  <table name="#ench2MpConsume">82 81 80 79 79 78 77 76 75 75 74 73 72 71 71 70 69 68 67 67 66 65 64 63 63 62 61 60 59 59</table>
   <table name="#mpConsume"> 66 68 68 69 70 72 73 74 75 77 78 79 80 81 82 83</table>
   <table name="#power"> 4558 4750 4944 5142 5342 5545 5751 5958 6166 6376 6586 6797 7008 7218 7427 7635</table>
   <table name="#magicLvl"> 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75</table>
@@ -2247,14 +2257,21 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="soulConsumeCount" val="1"/>
+  <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
+  <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
+  <enchant1 name="power" val="#ench1Power"/>
+  <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
   </for>
 </skill>
-<skill id="498" levels="12" name="Contagion">
+<skill id="498" levels="12" name="Contagion" enchantLevels1="30" enchantLevels2="30" >
 <!--
   Description(s):
      Exacerbates a bleeding wound with additional attacks. Consumes 1 Soul. An equipped ancient sword weapon is required to use this skill. Shield defense is ignored. Over-hit is possible. Power 5342-7635.
 -->
+  <table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
+  <table name="#ench1Power">8100 8155 8210 8266 8321 8376 8431 8486 8541 8596 8652 8707 8762 8817 8872 8927 8982 9038 9093 9148 9203 9258 9313 9368 9424 9479 9534 9589 9644 9699</table>
+  <table name="#ench2MpConsume">82 81 80 79 79 78 77 76 75 75 74 73 72 71 71 70 69 68 67 67 66 65 64 63 63 62 61 60 59 59</table>
   <table name="#power"> 5342 5545 5751 5958 6166 6376 6586 6797 7008 7218 7427 7635 </table>  
   <table name="#magicLvl"> 63 64 65 66 67 68 69 70 71 72 73 74 </table>
   <table name="#mpConsume"> 70 72 73 74 75 77 78 79 80 81 82 83 </table>
@@ -2275,6 +2292,10 @@
   <set name="effectRange" val="400"/>
   <set name="isDebuff" val="true"/>
   <set name="soulConsumeCount" val="1"/>
+  <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
+  <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
+  <enchant1 name="power" val="#ench1Power"/>
+  <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
     <effect count="7" name="DamOverTime" time="3" val="74" abnormal="bleeding"/>
   </for>
