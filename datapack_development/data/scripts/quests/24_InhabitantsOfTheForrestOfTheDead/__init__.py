@@ -157,7 +157,7 @@ class Quest (JQuest) :
 
     def onSpawn(self, npc) : 
        if npc.getNpcId() == 25332 : 
-          if GameTimeController.getInstance().getGameTime() < 66 : 
+          if GameTimeController.getInstance().isNowNight() : 
              for player in npc.getKnownList().getKnownPlayers().values() : 
                 st = player.getQuestState(qn) 
                 if st:
