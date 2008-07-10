@@ -389,11 +389,17 @@
   </for>
 </skill>
 <skill id="5547" levels="1" name="Maximum Ability">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="CONT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <for>
+    <effect name="Buff" time="120" count="1" val="0"> <!-- all these values are guessed -->
+      <mul order="0x30" stat="pAtk" val="1.1"/>
+      <mul order="0x30" stat="mAtk" val="1.1"/>
+      <add order="0x40" stat="MpConsumeRate" val="-10"/>
+      <!-- missing heal power buff -->
+    </effect>
   </for>
 </skill>
 <skill id="5548" levels="4" name="Critical Spiritual Energy Attack">

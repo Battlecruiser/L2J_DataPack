@@ -1322,7 +1322,7 @@ INSERT INTO `armor` VALUES
 (10250,'Explorer Hat','hairall','true','none',10,'wood','none',0,-1,0,0,0,0,0,'true','true','true','true','0-0;'),
 (10251,'Medieval Party Mask','hairall','true','none',10,'wood','none',0,-1,0,0,0,0,0,'true','true','true','true','0-0;'),
 (10273,'Wolf Summoning Bracelet','lbracelet','true','none',150,'wood','none',0,120,0,0,0,0,0,'true','true','true','true','0-0;'),
-(10314,'Beleth\'s Ring','rfinger,lfinger','true','none',150,'wood','s80',0,-1,0,0,48,0,0,'true','true','true','true','0-0;'),
+(10314,'Beleth\'s Ring','rfinger,lfinger','true','none',150,'wood','s',0,-1,0,0,48,0,0,'true','true','true','true','3649-1;'),
 (10315,'Shadow Item - Purple Viking Circlet','hairall','true','none',10,'wood','none',0,500,0,0,0,0,0,'true','true','true','true','0-0;'),
 (10316,'Agathion Seal Bracelet - Little Angel Firecracker','lbracelet','true','none',150,'wood','none',0,-1,0,0,0,0,0,'false','false','true','false','3423-1;3267-1;'),
 (10317,'Agathion Seal Bracelet - Little Angel Big Head','lbracelet','true','none',150,'wood','none',0,-1,0,0,0,0,0,'false','false','true','false','3423-1;3267-1;'),
