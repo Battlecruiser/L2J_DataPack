@@ -224,8 +224,7 @@
 	</zone>
 
 <!-- No landing -->
-	<zone id='11060' type='NoLandingZone' shape='Cuboid' minZ='-5150' maxZ='10100'>
-	</zone>
+	<zone id='11060' type='NoLandingZone' shape='Cuboid' minZ='-5150' maxZ='10100'/>
 
 <!-- Olympiad Stadia -->
 	<zone id='11070' type='OlympiadStadium' shape='Cuboid' minZ='-3100' maxZ='-3000'>
@@ -854,622 +853,244 @@
 	</zone>
 
 <!-- Boss Zones -->
-     <zone id='12005' type='BossZone' shape='NPoly' minZ='-5120' maxZ='-2500'>
-	    <stat name='name' val='Lair of Frintezza'/>
-     </zone>
-     <zone id='12006' type='BossZone' shape='Cuboid' minZ='-8320' maxZ='-4870'>
-	    <stat name='name' val='Lair of Antharas'/>
-	    <stat name='InvadeTime' val='1800000'/>
-     </zone>
-     <zone id='12007' type='BossZone' shape='NPoly' minZ='9967' maxZ='16301'>
-	    <stat name='name' val='Lair of Baium'/>
-	    <stat name='InvadeTime' val='1800000'/>
-     </zone>
-     <zone id='12008' type='BossZone' shape='Cuboid' minZ='-1735' maxZ='16301'>
-	    <stat name='name' val='Lair of Valakas'/>
-	    <stat name='InvadeTime' val='1800000'/>
-     </zone>
-<!--
-     <zone id='12009' type='BossZone' shape='Cuboid' minZ='-5600' maxZ='-3895'>
-	    <stat name='name' val='Lair of Lilith'/>
-		<stat name='InvadeTime' val='60000'/>
-     </zone>
-     <zone id='12010' type='BossZone' shape='Cuboid' minZ='-5600' maxZ='-3895'>
-	    <stat name='name' val='Lair of Anakim'/>
-		<stat name='InvadeTime' val='60000'/>
-     </zone>
-     <zone id='12011' type='BossZone' shape='Cuboid' minZ='-3775' maxZ='-2690'>
-	    <stat name='name' val='Lair of Zaken'/>
+	<zone id='12005' type='BossZone' shape='NPoly' minZ='-5120' maxZ='-2500'>
+		<stat name='name' val='Lair of Frintezza'/>
+	</zone>
+	<zone id='12006' type='BossZone' shape='Cuboid' minZ='-8320' maxZ='-4870'>
+		<stat name='name' val='Lair of Antharas'/>
 		<stat name='InvadeTime' val='1800000'/>
-     </zone>
-     <zone id='12014' type='BossZone' shape='Cuboid' minZ='-10730' maxZ='-10290'>
-	    <stat name='name' val='Altar of Sacrifice'/>
+	</zone>
+	<zone id='12007' type='BossZone' shape='NPoly' minZ='9967' maxZ='16301'>
+		<stat name='name' val='Lair of Baium'/>
+		<stat name='InvadeTime' val='1800000'/>
+	</zone>
+	<zone id='12008' type='BossZone' shape='Cuboid' minZ='-1735' maxZ='16301'>
+		<stat name='name' val='Lair of Valakas'/>
+		<stat name='InvadeTime' val='1800000'/>
+	</zone>
+<!--
+	<zone id='12009' type='BossZone' shape='Cuboid' minZ='-5600' maxZ='-3895'>
+		<stat name='name' val='Lair of Lilith'/>
 		<stat name='InvadeTime' val='60000'/>
-     </zone>
+	</zone>
+	<zone id='12010' type='BossZone' shape='Cuboid' minZ='-5600' maxZ='-3895'>
+		<stat name='name' val='Lair of Anakim'/>
+		<stat name='InvadeTime' val='60000'/>
+	</zone>
+	<zone id='12011' type='BossZone' shape='Cuboid' minZ='-3775' maxZ='-2690'>
+		<stat name='name' val='Lair of Zaken'/>
+		<stat name='InvadeTime' val='1800000'/>
+	</zone>
+	<zone id='12014' type='BossZone' shape='Cuboid' minZ='-10730' maxZ='-10290'>
+		<stat name='name' val='Altar of Sacrifice'/>
+		<stat name='InvadeTime' val='60000'/>
+	</zone>
 -->
 
 <!-- Peace Zones -->
-   <zone id='13001' type='PeaceZone' shape='NPoly' minZ='-3500' maxZ='-2000' /> <!-- Coliseum Entrance -->
-   <zone id='13002' type='PeaceZone' shape='NPoly' minZ='-3500' maxZ='-2000' /> <!-- Coliseum Entrance -->
-   <zone id='13003' type='PeaceZone' shape='Cuboid' minZ='-4350' maxZ='-3700' /> <!-- Ivory Tower Basement -->
-   <zone id='13004' type='PeaceZone' shape='Cuboid' minZ='-2850' maxZ='-1300' /> <!-- Ivory Tower Top Floors -->
-   <zone id='13005' type='PeaceZone' shape='NPoly' minZ='-3700' maxZ='-3500' /> <!-- Gludin Arena Entrance -->
-   <zone id='13006' type='PeaceZone' shape='NPoly' minZ='-3800' maxZ='-3600' /> <!-- Giran Arena Entrance -->
-   <zone id='13007' type='PeaceZone' shape='NPoly' minZ='-3200' maxZ='-2200' /> <!-- Cedric's Training Hall -->
-   <zone id='13008' type='PeaceZone' shape='NPoly' minZ='-3650' maxZ='-2650' /> <!-- Einhovant's School of Magic -->
-   <zone id='13009' type='PeaceZone' shape='NPoly' minZ='-4300' maxZ='-2300' /> <!-- The Shilen Temple -->
-   <zone id='13010' type='PeaceZone' shape='Cuboid' minZ='-1000' maxZ='500' /> <!-- The Pa'agrio Temple -->
-   <zone id='13011' type='PeaceZone' shape='Cuboid' minZ='-1000' maxZ='500' /> <!-- Cave of Souls -->
+	<zone id='13001' type='PeaceZone' shape='NPoly' minZ='-3500' maxZ='-2000' /> <!-- Coliseum Entrance -->
+	<zone id='13002' type='PeaceZone' shape='NPoly' minZ='-3500' maxZ='-2000' /> <!-- Coliseum Entrance -->
+	<zone id='13003' type='PeaceZone' shape='Cuboid' minZ='-4350' maxZ='-3700' /> <!-- Ivory Tower Basement -->
+	<zone id='13004' type='PeaceZone' shape='Cuboid' minZ='-2850' maxZ='-1300' /> <!-- Ivory Tower Top Floors -->
+	<zone id='13005' type='PeaceZone' shape='NPoly' minZ='-3700' maxZ='-3500' /> <!-- Gludin Arena Entrance -->
+	<zone id='13006' type='PeaceZone' shape='NPoly' minZ='-3800' maxZ='-3600' /> <!-- Giran Arena Entrance -->
+	<zone id='13007' type='PeaceZone' shape='NPoly' minZ='-3200' maxZ='-2200' /> <!-- Cedric's Training Hall -->
+	<zone id='13008' type='PeaceZone' shape='NPoly' minZ='-3650' maxZ='-2650' /> <!-- Einhovant's School of Magic -->
+	<zone id='13009' type='PeaceZone' shape='NPoly' minZ='-4300' maxZ='-2300' /> <!-- The Shilen Temple -->
+	<zone id='13010' type='PeaceZone' shape='Cuboid' minZ='-1000' maxZ='500' /> <!-- The Pa'agrio Temple -->
+	<zone id='13011' type='PeaceZone' shape='Cuboid' minZ='-1000' maxZ='500' /> <!-- Cave of Souls -->
 
 <!-- Fishing zones -->
-	<zone id='11400' type='FishingZone' shape='NPoly' minZ='-3991' maxZ='-3759'>
-	</zone>
+	<zone id='11400' type='FishingZone' shape='NPoly' minZ='-3991' maxZ='-3759'/>
 
-<!-- [16_21_1] water zone-->
-	<zone id='15000' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [16_22_1] water zone-->
-	<zone id='15001' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [16_23_1] water zone-->
-	<zone id='15002' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [16_24_1] water zone-->
-	<zone id='15003' type='WaterZone' shape='NPoly' minZ='-7810' maxZ='-3810'>
-	</zone>
-<!-- [16_25_1] water zone-->
-	<zone id='15004' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [17_20_1] water zone-->
-	<zone id='15005' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [17_20_2] water zone-->
-	<zone id='15006' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [17_20_3] water zone-->
-	<zone id='15007' type='WaterZone' shape='NPoly' minZ='-5854' maxZ='-3534'>
-	</zone>
-<!-- [17_20_4] water zone-->
-	<zone id='15008' type='WaterZone' shape='NPoly' minZ='-5854' maxZ='-5278'>
-	</zone>
-<!-- [17_21_1] water zone-->
-	<zone id='15009' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [17_21_2] water zone-->
-	<zone id='15010' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [17_21_3] water zone-->
-	<zone id='15011' type='WaterZone' shape='NPoly' minZ='-4209' maxZ='-3209'>
-	</zone>
-<!-- [17_21_4] water zone-->
-	<zone id='15012' type='WaterZone' shape='NPoly' minZ='-5598' maxZ='-3278'>
-	</zone>
-<!-- [17_21_5] water zone-->
-	<zone id='15013' type='WaterZone' shape='NPoly' minZ='-5598' maxZ='-5022'>
-	</zone>
-<!-- [17_22_1] water zone-->
-	<zone id='15014' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [17_22_2] water zone-->
-	<zone id='15015' type='WaterZone' shape='NPoly' minZ='-4209' maxZ='-3209'>
-	</zone>
-<!-- [17_23_1] water zone-->
-	<zone id='15016' type='WaterZone' shape='NPoly' minZ='-7810' maxZ='-3810'>
-	</zone>
-<!-- [17_24_1] water zone-->
-	<zone id='15017' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [17_25_1] water zone-->
-	<zone id='15018' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [18_14_1] water zone-->
-	<zone id='15019' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [18_19_1] water zone-->
-	<zone id='15020' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [18_19_2] water zone-->
-	<zone id='15021' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [18_20_1] water zone-->
-	<zone id='15022' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [18_20_2] water zone-->
-	<zone id='15023' type='WaterZone' shape='NPoly' minZ='-5438' maxZ='-4862'>
-	</zone>
-<!-- [18_20_3] water zone-->
-	<zone id='15024' type='WaterZone' shape='NPoly' minZ='-5438' maxZ='-3118'>
-	</zone>
-<!-- [18_21_1] water zone-->
-	<zone id='15025' type='WaterZone' shape='NPoly' minZ='-4209' maxZ='-3209'>
-	</zone>
-<!-- [18_21_1] water zone-->
-	<zone id='15026' type='WaterZone' shape='NPoly' minZ='-4689' maxZ='-3689'>
-	</zone>
-<!-- [18_22_1] water zone-->
-	<zone id='15027' type='WaterZone' shape='NPoly' minZ='-4209' maxZ='-3209'>
-	</zone>
-<!-- [18_22_2] water zone-->
-	<zone id='15028' type='WaterZone' shape='NPoly' minZ='-4209' maxZ='-3209'>
-	</zone>
-<!-- [18_23_1] water zone-->
-	<zone id='15029' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [18_23_2] water zone-->
-	<zone id='15030' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [18_23_3] water zone-->
-	<zone id='15031' type='WaterZone' shape='NPoly' minZ='-4990' maxZ='-4732'>
-	</zone>
-<!-- [18_23_4] water zone-->
-	<zone id='15032' type='WaterZone' shape='NPoly' minZ='-4990' maxZ='-4732'>
-	</zone>
-<!-- [18_24_1] water zone-->
-	<zone id='15033' type='WaterZone' shape='NPoly' minZ='-5784' maxZ='-5207'>
-	</zone>
-<!-- [18_24_2] water zone-->
-	<zone id='15034' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [18_24_3] water zone-->
-	<zone id='15035' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [18_24_4] water zone-->
-	<zone id='15036' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [18_24_5] water zone-->
-	<zone id='15037' type='WaterZone' shape='NPoly' minZ='-4312' maxZ='-3810'>
-	</zone>
-<!-- [18_24_6] water zone-->
-	<zone id='15038' type='WaterZone' shape='NPoly' minZ='-4312' maxZ='-3810'>
-	</zone>
-<!-- [18_24_7] water zone-->
-	<zone id='15039' type='WaterZone' shape='NPoly' minZ='-4312' maxZ='-3810'>
-	</zone>
-<!-- [18_24_8] water zone-->
-	<zone id='15040' type='WaterZone' shape='NPoly' minZ='-5784' maxZ='-3464'>
-	</zone>
-<!-- [18_25_1] water zone-->
-	<zone id='15041' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [19_14_1] water zone-->
-	<zone id='15042' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [19_15_1] water zone-->
-	<zone id='15043' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [19_18_1] water zone-->
-	<zone id='15044' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [19_18_2] Catacomb of Dark Omens water zone-->
-	<zone id='15045' type='WaterZone' shape='NPoly' minZ='-5550' maxZ='-3225'>
-	</zone>
-<!-- [19_18_3] Catacomb of Dark Omens water zone-->
-	<zone id='15046' type='WaterZone' shape='NPoly' minZ='-5550' maxZ='-5005'>
-	</zone>
-<!-- [19_18_4] water zone-->
-	<zone id='15047' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [19_19_1] water zone-->
-	<zone id='15048' type='WaterZone' shape='NPoly' minZ='-4814' maxZ='-3814'>
-	</zone>
-<!-- [19_19_2] water zone-->
-	<zone id='15049' type='WaterZone' shape='NPoly' minZ='-4818' maxZ='-3818'>
-	</zone>
-<!-- [19_20_1] water zone-->
-	<zone id='15050' type='WaterZone' shape='NPoly' minZ='-4298' maxZ='-3810'>
-	</zone>
-<!-- [19_20_2] water zone-->
-	<zone id='15051' type='WaterZone' shape='NPoly' minZ='-5870' maxZ='-3550'>
-	</zone>
-<!-- [19_20_3] water zone-->
-	<zone id='15052' type='WaterZone' shape='NPoly' minZ='-5870' maxZ='-5293'>
-	</zone>
-<!-- [19_21_1] water zone-->
-	<zone id='15053' type='WaterZone' shape='NPoly' minZ='-10642' maxZ='-3810'>
-	</zone>
-<!-- [19_24_1] water zone-->
-	<zone id='15054' type='WaterZone' shape='NPoly' minZ='-7810' maxZ='-3810'>
-	</zone>
-<!-- [19_24_2] water zone-->
-	<zone id='15055' type='WaterZone' shape='NPoly' minZ='-7810' maxZ='-3810'>
-	</zone>
-<!-- [19_25_1] water zone-->
-	<zone id='15056' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [20_15_1] water zone-->
-	<zone id='15057' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [20_18_1] water zone-->
-	<zone id='15058' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [20_19_1] water zone-->
-	<zone id='15059' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [20_20_1] water zone-->
-	<zone id='15060' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [20_20_2] water zone-->
-	<zone id='15061' type='WaterZone' shape='NPoly' minZ='-4824' maxZ='-3824'>
-	</zone>
-<!-- [20_20_3] water zone-->
-	<zone id='15062' type='WaterZone' shape='NPoly' minZ='-4824' maxZ='-3824'>
-	</zone>
-<!-- [20_21_1] water zone-->
-	<zone id='15063' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [20_22_1] water zone-->
-	<zone id='15064' type='WaterZone' shape='NPoly' minZ='-4818' maxZ='-3818'>
-	</zone>
-<!-- [20_23_1] water zone-->
-	<zone id='15065' type='WaterZone' shape='NPoly' minZ='-7810' maxZ='-3810'>
-	</zone>
-<!-- [20_24_1] water zone-->
-	<zone id='15066' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [21_18_1] water zone-->
-	<zone id='15067' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [21_19_1] water zone-->
-	<zone id='15068' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [21_20_1] water zone-->
-	<zone id='15069' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [21_20_2] water zone-->
-	<zone id='15070' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [21_21_1] water zone-->
-	<zone id='15071' type='WaterZone' shape='NPoly' minZ='-4010' maxZ='-3810'>
-	</zone>
-<!-- [21_21_2] water zone-->
-	<zone id='15072' type='WaterZone' shape='NPoly' minZ='-2407' maxZ='-2257'>
-	</zone>
-<!-- [21_21_3] water zone-->
-	<zone id='15073' type='WaterZone' shape='NPoly' minZ='-2439' maxZ='-2289'>
-	</zone>
-<!-- [21_21_4] water zone-->
-	<zone id='15074' type='WaterZone' shape='NPoly' minZ='-2439' maxZ='-2289'>
-	</zone>
-<!-- [21_21_5] water zone-->
-	<zone id='15075' type='WaterZone' shape='NPoly' minZ='-2439' maxZ='-2289'>
-	</zone>
-<!-- [21_21_6] water zone-->
-	<zone id='15076' type='WaterZone' shape='NPoly' minZ='-6110' maxZ='-3806'>
-	</zone>
-<!-- [21_21_7] water zone-->
-	<zone id='15077' type='WaterZone' shape='NPoly' minZ='-6110' maxZ='-5534'>
-	</zone>
-<!-- [21_22_1] water zone-->
-	<zone id='15078' type='WaterZone' shape='NPoly' minZ='-3979' maxZ='-3779'>
-	</zone>
-<!-- [21_22_2] water zone-->
-	<zone id='15079' type='WaterZone' shape='NPoly' minZ='-6078' maxZ='-3758'>
-	</zone>
-<!-- [21_22_3] water zone-->
-	<zone id='15080' type='WaterZone' shape='NPoly' minZ='-6078' maxZ='-5501'>
-	</zone>
-<!-- [21_23_1] water zone-->
-	<zone id='15081' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [21_23_2] water zone-->
-	<zone id='15082' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [21_23_3] water zone-->
-	<zone id='15083' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [21_23_4] water zone-->
-	<zone id='15084' type='WaterZone' shape='NPoly' minZ='-5678' maxZ='-3358'>
-	</zone>
-<!-- [21_23_5] water zone-->
-	<zone id='15085' type='WaterZone' shape='NPoly' minZ='-5678' maxZ='-5101'>
-	</zone>
-<!-- [21_24_1] water zone-->
-	<zone id='15086' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [22_18_1] water zone-->
-	<zone id='15087' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [22_18_2] water zone-->
-	<zone id='15088' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [22_19_1] water zone-->
-	<zone id='15089' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [22_20_1] water zone-->
-	<zone id='15090' type='WaterZone' shape='NPoly' minZ='-4802' maxZ='-3802'>
-	</zone>
-<!-- [22_20_2] water zone-->
-	<zone id='15091' type='WaterZone' shape='NPoly' minZ='-4802' maxZ='-3802'>
-	</zone>
-<!-- [22_20_3] water zone-->
-	<zone id='15092' type='WaterZone' shape='NPoly' minZ='-5822' maxZ='-3502'>
-	</zone>
-<!-- [22_20_4] water zone-->
-	<zone id='15093' type='WaterZone' shape='NPoly' minZ='-5822' maxZ='-5245'>
-	</zone>
-<!-- [22_22_1] water zone-->
-	<zone id='15094' type='WaterZone' shape='NPoly' minZ='-8808' maxZ='-3810'>
-	</zone>
-<!-- [22_23_1] water zone-->
-	<zone id='15095' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [22_23_2] water zone-->
-	<zone id='15096' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [22_23_3] water zone-->
-	<zone id='15097' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [22_23_4] water zone-->
-	<zone id='15098' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [22_23_5] water zone-->
-	<zone id='15099' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [22_23_6] water zone-->
-	<zone id='15100' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [22_23_7] water zone-->
-	<zone id='15101' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [22_23_8] water zone-->
-	<zone id='15102' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [22_24_1] water zone-->
-	<zone id='15103' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [22_24_2] water zone-->
-	<zone id='15104' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [22_24_3] water zone-->
-	<zone id='15105' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [22_24_4] water zone-->
-	<zone id='15106' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [22_24_5] water zone-->
-	<zone id='15107' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [22_24_6] water zone-->
-	<zone id='15108' type='WaterZone' shape='NPoly' minZ='-4298' maxZ='-3810'>
-	</zone>
-<!-- [22_24_7] water zone-->
-	<zone id='15109' type='WaterZone' shape='NPoly' minZ='-4298' maxZ='-3810'>
-	</zone>
-<!-- [22_24_8] water zone-->
-	<zone id='15110' type='WaterZone' shape='NPoly' minZ='-4298' maxZ='-3810'>
-	</zone>
-<!-- [22_24_9] water zone-->
-	<zone id='15111' type='WaterZone' shape='NPoly' minZ='-4298' maxZ='-3810'>
-	</zone>
-<!-- [22_24_10] water zone-->
-	<zone id='15112' type='WaterZone' shape='NPoly' minZ='-6136' maxZ='-3816'>
-	</zone>
-<!-- [22_24_11] water zone-->
-	<zone id='15113' type='WaterZone' shape='NPoly' minZ='-6136' maxZ='-5559'>
-	</zone>
-<!-- [22_24_12] water zone-->
-	<zone id='15114' type='WaterZone' shape='NPoly' minZ='-4298' maxZ='-3810'>
-	</zone>
-<!-- [22_24_13] water zone-->
-	<zone id='15115' type='WaterZone' shape='NPoly' minZ='-4298' maxZ='-3810'>
-	</zone>
-<!-- [22_25_1] water zone-->
-	<zone id='15116' type='WaterZone' shape='NPoly' minZ='-10932' maxZ='-10916'>
-	</zone>
-<!-- [22_25_2] water zone-->
-	<zone id='15117' type='WaterZone' shape='NPoly' minZ='-7249' maxZ='-4233'>
-	</zone>
-<!-- [22_25_3] water zone-->
-	<zone id='15118' type='WaterZone' shape='NPoly' minZ='-7249' maxZ='-6793'>
-	</zone>
-<!-- [22_25_4] water zone-->
-	<zone id='15119' type='WaterZone' shape='NPoly' minZ='-9384' maxZ='-8928'>
-	</zone>
-<!-- [22_25_5] water zone-->
-	<zone id='15120' type='WaterZone' shape='NPoly' minZ='-9384' maxZ='-8928'>
-	</zone>
-<!-- [22_25_6] water zone-->
-	<zone id='15121' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [22_25_7] water zone-->
-	<zone id='15122' type='WaterZone' shape='NPoly' minZ='-10932' maxZ='-10916'>
-	</zone>
-<!-- [22_25_8] water zone-->
-	<zone id='15123' type='WaterZone' shape='NPoly' minZ='-10932' maxZ='-10916'>
-	</zone>
-<!-- [22_25_9] water zone-->
-	<zone id='15124' type='WaterZone' shape='NPoly' minZ='-10932' maxZ='-10916'>
-	</zone>
-<!-- [23_11_1] water zone-->
-	<zone id='15125' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [23_12_1] water zone-->
-	<zone id='15126' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [23_18_1] water zone-->
-	<zone id='15127' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [23_19_1] water zone-->
-	<zone id='15128' type='WaterZone' shape='NPoly' minZ='-5686' maxZ='-4686'>
-	</zone>
-<!-- [23_20_1] water zone-->
-	<zone id='15129' type='WaterZone' shape='NPoly' minZ='-7214' maxZ='-4894'>
-	</zone>
-<!-- [23_20_2] water zone-->
-	<zone id='15130' type='WaterZone' shape='NPoly' minZ='-7238' maxZ='-6661'>
-	</zone>
-<!-- [23_22_1] water zone-->
-	<zone id='15131' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [23_22_2] water zone-->
-	<zone id='15132' type='WaterZone' shape='NPoly' minZ='-3206' maxZ='-2922'>
-	</zone>
-<!-- [23_22_3] water zone-->
-	<zone id='15133' type='WaterZone' shape='NPoly' minZ='-4110' maxZ='-3810'>
-	</zone>
-<!-- [23_22_4] water zone-->
-	<zone id='15134' type='WaterZone' shape='NPoly' minZ='-4110' maxZ='-3810'>
-	</zone>
-<!-- [23_22_5] water zone-->
-	<zone id='15135' type='WaterZone' shape='NPoly' minZ='-4110' maxZ='-3810'>
-	</zone>
-<!-- [23_22_6] water zone-->
-	<zone id='15136' type='WaterZone' shape='NPoly' minZ='-5534' maxZ='-3214'>
-	</zone>
-<!-- [23_22_7] water zone-->
-	<zone id='15137' type='WaterZone' shape='NPoly' minZ='-5534' maxZ='-4958'>
-	</zone>
-<!-- [23_23_1] water zone-->
-	<zone id='15138' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [23_23_2] water zone-->
-	<zone id='15139' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [23_23_3] water zone-->
-	<zone id='15140' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [23_23_4] water zone-->
-	<zone id='15141' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [23_23_5] water zone-->
-	<zone id='15142' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [23_23_6] water zone-->
-	<zone id='15143' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [23_23_7] water zone-->
-	<zone id='15144' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [23_23_8] water zone-->
-	<zone id='15145' type='WaterZone' shape='NPoly' minZ='-6126' maxZ='-3806'>
-	</zone>
-<!-- [23_23_9] water zone-->
-	<zone id='15146' type='WaterZone' shape='NPoly' minZ='-6136' maxZ='-5559'>
-	</zone>
-<!-- [23_24_1] water zone-->
-	<zone id='15147' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [23_25_1] water zone-->
-	<zone id='15148' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [24_11_1] water zone-->
-	<zone id='15149' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [24_12_1] water zone-->
-	<zone id='15150' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [24_18_1] water zone-->
-	<zone id='15151' type='WaterZone' shape='NPoly' minZ='-2656' maxZ='-2558'>
-	</zone>
-<!-- [24_19_1] water zone-->
-	<zone id='15152' type='WaterZone' shape='NPoly' minZ='-4806' maxZ='-3806'>
-	</zone>
-<!-- [24_20_1] water zone-->
-	<zone id='15153' type='WaterZone' shape='NPoly' minZ='-6126' maxZ='-3766'>
-	</zone>
-<!-- [24_20_2] water zone-->
-	<zone id='15154' type='WaterZone' shape='NPoly' minZ='-6126' maxZ='-5549'>
-	</zone>
-<!-- [24_20_3] water zone-->
-	<zone id='15155' type='WaterZone' shape='NPoly' minZ='-4510' maxZ='-3810'>
-	</zone>
-<!-- [24_21_1] water zone-->
-	<zone id='15156' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [25_11_1] water zone-->
-	<zone id='15157' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [25_12_1] water zone-->
-	<zone id='15158' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [25_12_2] water zone-->
-	<zone id='15159' type='WaterZone' shape='NPoly' minZ='-5495' maxZ='-4495'>
-	</zone>
-<!-- [25_12_3] water zone-->
-	<zone id='15160' type='WaterZone' shape='NPoly' minZ='-2352' maxZ='-2096'>
-	</zone>
-<!-- [25_14_1] water zone-->
-	<zone id='15161' type='WaterZone' shape='NPoly' minZ='-4673' maxZ='-4063'>
-	</zone>
-<!-- [25_14_2] water zone-->
-	<zone id='15162' type='WaterZone' shape='NPoly' minZ='-6160' maxZ='-5286'>
-	</zone>
-<!-- [25_20_1] water zone-->
-	<zone id='15163' type='WaterZone' shape='NPoly' minZ='-4310' maxZ='-3810'>
-	</zone>
-<!-- [25_17_1] water zone-->
-	<zone id='15164' type='WaterZone' shape='NPoly' minZ='-5598' maxZ='-3278'>
-	</zone>
-<!-- [25_17_2] water zone-->
-	<zone id='15165' type='WaterZone' shape='NPoly' minZ='-5598' maxZ='-5021'>
-	</zone>
-<!-- [20_15_1] water zone-->
-	<zone id='15166' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [20_16_1] water zone-->
-	<zone id='15167' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [21_15_1] water zone-->
-	<zone id='15168' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [21_16_1] water zone-->
-	<zone id='15169' type='WaterZone' shape='NPoly' minZ='-4814' maxZ='-3814'>
-	</zone>
-<!-- [21_17_1] water zone-->
-	<zone id='15170' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [22_16_1] water zone-->
-	<zone id='15171' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [22_16_2] water zone-->
-	<zone id='15172' type='WaterZone' shape='NPoly' minZ='-2919' maxZ='-2663'>
-	</zone>
-<!-- [22_16_3] water zone-->
-	<zone id='15173' type='WaterZone' shape='NPoly' minZ='-2919' maxZ='-2663'>
-	</zone>
-<!-- [22_16_4] water zone-->
-	<zone id='15174' type='WaterZone' shape='NPoly' minZ='-3438' maxZ='-3182'>
-	</zone>
-<!-- [22_16_5] water zone-->
-	<zone id='15175' type='WaterZone' shape='NPoly' minZ='-3534' maxZ='-3278'>
-	</zone>
-<!-- [22_16_6] water zone-->
-	<zone id='15176' type='WaterZone' shape='NPoly' minZ='-3447' maxZ='-3191'>
-	</zone>
-<!-- [22_16_7] water zone-->
-	<zone id='15177' type='WaterZone' shape='NPoly' minZ='-3447' maxZ='-3191'>
-	</zone>
-<!-- [22_16_8] water zone-->
-	<zone id='15178' type='WaterZone' shape='NPoly' minZ='-3447' maxZ='-3191'>
-	</zone>
-<!-- [22_16_9] water zone-->
-	<zone id='15179' type='WaterZone' shape='NPoly' minZ='-2638' maxZ='-2382'>
-	</zone>
-<!-- [22_16_10] water zone-->
-	<zone id='15180' type='WaterZone' shape='NPoly' minZ='-2638' maxZ='-2382'>
-	</zone>
-<!-- [22_16_11] water zone-->
-	<zone id='15181' type='WaterZone' shape='NPoly' minZ='-2638' maxZ='-2382'>
-	</zone>
-<!-- [22_16_12] water zone-->
-	<zone id='15182' type='WaterZone' shape='NPoly' minZ='-2638' maxZ='-2382'>
-	</zone>
-<!-- [22_16_13] water zone-->
-	<zone id='15183' type='WaterZone' shape='NPoly' minZ='-2638' maxZ='-2382'>
-	</zone>
-<!-- [22_16_14] water zone-->
-	<zone id='15184' type='WaterZone' shape='NPoly' minZ='-2638' maxZ='-2382'>
-	</zone>
-<!-- [22_16_15] water zone-->
-	<zone id='15185' type='WaterZone' shape='NPoly' minZ='-3534' maxZ='-3278'>
-	</zone>
-<!-- [22_16_16] water zone-->
-	<zone id='15186' type='WaterZone' shape='NPoly' minZ='-2638' maxZ='-2382'>
-	</zone>
-<!-- [22_17_1] water zone-->
-	<zone id='15187' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
-<!-- [22_17_2] water zone-->
-	<zone id='15188' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'>
-	</zone>
+<!-- Water zones -->
+	<zone id='15000' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [16_21_1] water zone-->
+	<zone id='15001' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [16_22_1] water zone-->
+	<zone id='15002' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [16_23_1] water zone-->
+	<zone id='15003' type='WaterZone' shape='NPoly' minZ='-7810' maxZ='-3810'/> <!-- [16_24_1] water zone-->
+	<zone id='15004' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [16_25_1] water zone-->
+	<zone id='15005' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [17_20_1] water zone-->
+	<zone id='15006' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [17_20_2] water zone-->
+	<zone id='15007' type='WaterZone' shape='NPoly' minZ='-5854' maxZ='-3534'/> <!-- [17_20_3] water zone-->
+	<zone id='15008' type='WaterZone' shape='NPoly' minZ='-5854' maxZ='-5278'/> <!-- [17_20_4] water zone-->
+	<zone id='15009' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [17_21_1] water zone-->
+	<zone id='15010' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [17_21_2] water zone-->
+	<zone id='15011' type='WaterZone' shape='NPoly' minZ='-4209' maxZ='-3209'/> <!-- [17_21_3] water zone-->
+	<zone id='15012' type='WaterZone' shape='NPoly' minZ='-5598' maxZ='-3278'/> <!-- [17_21_4] water zone-->
+	<zone id='15013' type='WaterZone' shape='NPoly' minZ='-5598' maxZ='-5022'/> <!-- [17_21_5] water zone-->
+	<zone id='15014' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [17_22_1] water zone-->
+	<zone id='15015' type='WaterZone' shape='NPoly' minZ='-4209' maxZ='-3209'/> <!-- [17_22_2] water zone-->
+	<zone id='15016' type='WaterZone' shape='NPoly' minZ='-7810' maxZ='-3810'/> <!-- [17_23_1] water zone-->
+	<zone id='15017' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [17_24_1] water zone-->
+	<zone id='15018' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [17_25_1] water zone-->
+	<zone id='15019' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [18_14_1] water zone-->
+	<zone id='15020' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [18_19_1] water zone-->
+	<zone id='15021' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [18_19_2] water zone-->
+	<zone id='15022' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [18_20_1] water zone-->
+	<zone id='15023' type='WaterZone' shape='NPoly' minZ='-5438' maxZ='-4862'/> <!-- [18_20_2] water zone-->
+	<zone id='15024' type='WaterZone' shape='NPoly' minZ='-5438' maxZ='-3118'/> <!-- [18_20_3] water zone-->
+	<zone id='15025' type='WaterZone' shape='NPoly' minZ='-4209' maxZ='-3209'/> <!-- [18_21_1] water zone-->
+	<zone id='15026' type='WaterZone' shape='NPoly' minZ='-4689' maxZ='-3689'/> <!-- [18_21_1] water zone-->
+	<zone id='15027' type='WaterZone' shape='NPoly' minZ='-4209' maxZ='-3209'/> <!-- [18_22_1] water zone-->
+	<zone id='15028' type='WaterZone' shape='NPoly' minZ='-4209' maxZ='-3209'/> <!-- [18_22_2] water zone-->
+	<zone id='15029' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [18_23_1] water zone-->
+	<zone id='15030' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [18_23_2] water zone-->
+	<zone id='15031' type='WaterZone' shape='NPoly' minZ='-4990' maxZ='-4732'/> <!-- [18_23_3] water zone-->
+	<zone id='15032' type='WaterZone' shape='NPoly' minZ='-4990' maxZ='-4732'/> <!-- [18_23_4] water zone-->
+	<zone id='15033' type='WaterZone' shape='NPoly' minZ='-5784' maxZ='-5207'/> <!-- [18_24_1] water zone-->
+	<zone id='15034' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [18_24_2] water zone-->
+	<zone id='15035' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [18_24_3] water zone-->
+	<zone id='15036' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [18_24_4] water zone-->
+	<zone id='15037' type='WaterZone' shape='NPoly' minZ='-4312' maxZ='-3810'/> <!-- [18_24_5] water zone-->
+	<zone id='15038' type='WaterZone' shape='NPoly' minZ='-4312' maxZ='-3810'/> <!-- [18_24_6] water zone-->
+	<zone id='15039' type='WaterZone' shape='NPoly' minZ='-4312' maxZ='-3810'/> <!-- [18_24_7] water zone-->
+	<zone id='15040' type='WaterZone' shape='NPoly' minZ='-5784' maxZ='-3464'/> <!-- [18_24_8] water zone-->
+	<zone id='15041' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [18_25_1] water zone-->
+	<zone id='15042' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [19_14_1] water zone-->
+	<zone id='15043' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [19_15_1] water zone-->
+	<zone id='15044' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [19_18_1] water zone-->
+	<zone id='15045' type='WaterZone' shape='NPoly' minZ='-5550' maxZ='-3225'/> <!-- [19_18_2] Catacomb of Dark Omens water zone-->
+	<zone id='15046' type='WaterZone' shape='NPoly' minZ='-5550' maxZ='-5005'/> <!-- [19_18_3] Catacomb of Dark Omens water zone-->
+	<zone id='15047' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [19_18_4] water zone-->
+	<zone id='15048' type='WaterZone' shape='NPoly' minZ='-4814' maxZ='-3814'/> <!-- [19_19_1] water zone-->
+	<zone id='15049' type='WaterZone' shape='NPoly' minZ='-4818' maxZ='-3818'/> <!-- [19_19_2] water zone-->
+	<zone id='15050' type='WaterZone' shape='NPoly' minZ='-4298' maxZ='-3810'/> <!-- [19_20_1] water zone-->
+	<zone id='15051' type='WaterZone' shape='NPoly' minZ='-5870' maxZ='-3550'/> <!-- [19_20_2] water zone-->
+	<zone id='15052' type='WaterZone' shape='NPoly' minZ='-5870' maxZ='-5293'/> <!-- [19_20_3] water zone-->
+	<zone id='15053' type='WaterZone' shape='NPoly' minZ='-10642' maxZ='-3810'/><!-- [19_21_1] water zone-->
+	<zone id='15054' type='WaterZone' shape='NPoly' minZ='-7810' maxZ='-3810'/> <!-- [19_24_1] water zone-->
+	<zone id='15055' type='WaterZone' shape='NPoly' minZ='-7810' maxZ='-3810'/> <!-- [19_24_2] water zone-->
+	<zone id='15056' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [19_25_1] water zone-->
+	<zone id='15057' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [20_15_1] water zone-->
+	<zone id='15058' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [20_18_1] water zone-->
+	<zone id='15059' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [20_19_1] water zone-->
+	<zone id='15060' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [20_20_1] water zone-->
+	<zone id='15061' type='WaterZone' shape='NPoly' minZ='-4824' maxZ='-3824'/> <!-- [20_20_2] water zone-->
+	<zone id='15062' type='WaterZone' shape='NPoly' minZ='-4824' maxZ='-3824'/> <!-- [20_20_3] water zone-->
+	<zone id='15063' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [20_21_1] water zone-->
+	<zone id='15064' type='WaterZone' shape='NPoly' minZ='-4818' maxZ='-3818'/> <!-- [20_22_1] water zone-->
+	<zone id='15065' type='WaterZone' shape='NPoly' minZ='-7810' maxZ='-3810'/> <!-- [20_23_1] water zone-->
+	<zone id='15066' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [20_24_1] water zone-->
+	<zone id='15067' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [21_18_1] water zone-->
+	<zone id='15068' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [21_19_1] water zone-->
+	<zone id='15069' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [21_20_1] water zone-->
+	<zone id='15070' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [21_20_2] water zone-->
+	<zone id='15071' type='WaterZone' shape='NPoly' minZ='-4010' maxZ='-3810'/> <!-- [21_21_1] water zone-->
+	<zone id='15072' type='WaterZone' shape='NPoly' minZ='-2407' maxZ='-2257'/> <!-- [21_21_2] water zone-->
+	<zone id='15073' type='WaterZone' shape='NPoly' minZ='-2439' maxZ='-2289'/> <!-- [21_21_3] water zone-->
+	<zone id='15074' type='WaterZone' shape='NPoly' minZ='-2439' maxZ='-2289'/> <!-- [21_21_4] water zone-->
+	<zone id='15075' type='WaterZone' shape='NPoly' minZ='-2439' maxZ='-2289'/> <!-- [21_21_5] water zone-->
+	<zone id='15076' type='WaterZone' shape='NPoly' minZ='-6110' maxZ='-3806'/> <!-- [21_21_6] water zone-->
+	<zone id='15077' type='WaterZone' shape='NPoly' minZ='-6110' maxZ='-5534'/> <!-- [21_21_7] water zone-->
+	<zone id='15078' type='WaterZone' shape='NPoly' minZ='-3979' maxZ='-3779'/> <!-- [21_22_1] water zone-->
+	<zone id='15079' type='WaterZone' shape='NPoly' minZ='-6078' maxZ='-3758'/> <!-- [21_22_2] water zone-->
+	<zone id='15080' type='WaterZone' shape='NPoly' minZ='-6078' maxZ='-5501'/> <!-- [21_22_3] water zone-->
+	<zone id='15081' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [21_23_1] water zone-->
+	<zone id='15082' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [21_23_2] water zone-->
+	<zone id='15083' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [21_23_3] water zone-->
+	<zone id='15084' type='WaterZone' shape='NPoly' minZ='-5678' maxZ='-3358'/> <!-- [21_23_4] water zone-->
+	<zone id='15085' type='WaterZone' shape='NPoly' minZ='-5678' maxZ='-5101'/> <!-- [21_23_5] water zone-->
+	<zone id='15086' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [21_24_1] water zone-->
+	<zone id='15087' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [22_18_1] water zone-->
+	<zone id='15088' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [22_18_2] water zone-->
+	<zone id='15089' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [22_19_1] water zone-->
+	<zone id='15090' type='WaterZone' shape='NPoly' minZ='-4802' maxZ='-3802'/> <!-- [22_20_1] water zone-->
+	<zone id='15091' type='WaterZone' shape='NPoly' minZ='-4802' maxZ='-3802'/> <!-- [22_20_2] water zone-->
+	<zone id='15092' type='WaterZone' shape='NPoly' minZ='-5822' maxZ='-3502'/> <!-- [22_20_3] water zone-->
+	<zone id='15093' type='WaterZone' shape='NPoly' minZ='-5822' maxZ='-5245'/> <!-- [22_20_4] water zone-->
+	<zone id='15094' type='WaterZone' shape='NPoly' minZ='-8808' maxZ='-3810'/> <!-- [22_22_1] water zone-->
+	<zone id='15095' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [22_23_1] water zone-->
+	<zone id='15096' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [22_23_2] water zone-->
+	<zone id='15097' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [22_23_3] water zone-->
+	<zone id='15098' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [22_23_4] water zone-->
+	<zone id='15099' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [22_23_5] water zone-->
+	<zone id='15100' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [22_23_6] water zone-->
+	<zone id='15101' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [22_23_7] water zone-->
+	<zone id='15102' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [22_23_8] water zone-->
+	<zone id='15103' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [22_24_1] water zone-->
+	<zone id='15104' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [22_24_2] water zone-->
+	<zone id='15105' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [22_24_3] water zone-->
+	<zone id='15106' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [22_24_4] water zone-->
+	<zone id='15107' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [22_24_5] water zone-->
+	<zone id='15108' type='WaterZone' shape='NPoly' minZ='-4298' maxZ='-3810'/> <!-- [22_24_6] water zone-->
+	<zone id='15109' type='WaterZone' shape='NPoly' minZ='-4298' maxZ='-3810'/> <!-- [22_24_7] water zone-->
+	<zone id='15110' type='WaterZone' shape='NPoly' minZ='-4298' maxZ='-3810'/> <!-- [22_24_8] water zone-->
+	<zone id='15111' type='WaterZone' shape='NPoly' minZ='-4298' maxZ='-3810'/> <!-- [22_24_9] water zone-->
+	<zone id='15112' type='WaterZone' shape='NPoly' minZ='-6136' maxZ='-3816'/> <!-- [22_24_10] water zone-->
+	<zone id='15113' type='WaterZone' shape='NPoly' minZ='-6136' maxZ='-5559'/> <!-- [22_24_11] water zone-->
+	<zone id='15114' type='WaterZone' shape='NPoly' minZ='-4298' maxZ='-3810'/> <!-- [22_24_12] water zone-->
+	<zone id='15115' type='WaterZone' shape='NPoly' minZ='-4298' maxZ='-3810'/> <!-- [22_24_13] water zone-->
+	<zone id='15116' type='WaterZone' shape='NPoly' minZ='-10932' maxZ='-10916'/><!-- [22_25_1] water zone-->
+	<zone id='15117' type='WaterZone' shape='NPoly' minZ='-7249' maxZ='-4233'/> <!-- [22_25_2] water zone-->
+	<zone id='15118' type='WaterZone' shape='NPoly' minZ='-7249' maxZ='-6793'/> <!-- [22_25_3] water zone-->
+	<zone id='15119' type='WaterZone' shape='NPoly' minZ='-9384' maxZ='-8928'/> <!-- [22_25_4] water zone-->
+	<zone id='15120' type='WaterZone' shape='NPoly' minZ='-9384' maxZ='-8928'/> <!-- [22_25_5] water zone-->
+	<zone id='15121' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [22_25_6] water zone-->
+	<zone id='15122' type='WaterZone' shape='NPoly' minZ='-10932' maxZ='-10916'/><!-- [22_25_7] water zone-->
+	<zone id='15123' type='WaterZone' shape='NPoly' minZ='-10932' maxZ='-10916'/><!-- [22_25_8] water zone-->
+	<zone id='15124' type='WaterZone' shape='NPoly' minZ='-10932' maxZ='-10916'/><!-- [22_25_9] water zone-->
+	<zone id='15125' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [23_11_1] water zone-->
+	<zone id='15126' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [23_12_1] water zone-->
+	<zone id='15127' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [23_18_1] water zone-->
+	<zone id='15128' type='WaterZone' shape='NPoly' minZ='-5686' maxZ='-4686'/> <!-- [23_19_1] water zone-->
+	<zone id='15129' type='WaterZone' shape='NPoly' minZ='-7214' maxZ='-4894'/> <!-- [23_20_1] water zone-->
+	<zone id='15130' type='WaterZone' shape='NPoly' minZ='-7238' maxZ='-6661'/> <!-- [23_20_2] water zone-->
+	<zone id='15131' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [23_22_1] water zone-->
+	<zone id='15132' type='WaterZone' shape='NPoly' minZ='-3206' maxZ='-2922'/> <!-- [23_22_2] water zone-->
+	<zone id='15133' type='WaterZone' shape='NPoly' minZ='-4110' maxZ='-3810'/> <!-- [23_22_3] water zone-->
+	<zone id='15134' type='WaterZone' shape='NPoly' minZ='-4110' maxZ='-3810'/> <!-- [23_22_4] water zone-->
+	<zone id='15135' type='WaterZone' shape='NPoly' minZ='-4110' maxZ='-3810'/> <!-- [23_22_5] water zone-->
+	<zone id='15136' type='WaterZone' shape='NPoly' minZ='-5534' maxZ='-3214'/> <!-- [23_22_6] water zone-->
+	<zone id='15137' type='WaterZone' shape='NPoly' minZ='-5534' maxZ='-4958'/> <!-- [23_22_7] water zone-->
+	<zone id='15138' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [23_23_1] water zone-->
+	<zone id='15139' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [23_23_2] water zone-->
+	<zone id='15140' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [23_23_3] water zone-->
+	<zone id='15141' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [23_23_4] water zone-->
+	<zone id='15142' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [23_23_5] water zone-->
+	<zone id='15143' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [23_23_6] water zone-->
+	<zone id='15144' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [23_23_7] water zone-->
+	<zone id='15145' type='WaterZone' shape='NPoly' minZ='-6126' maxZ='-3806'/> <!-- [23_23_8] water zone-->
+	<zone id='15146' type='WaterZone' shape='NPoly' minZ='-6136' maxZ='-5559'/> <!-- [23_23_9] water zone-->
+	<zone id='15147' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [23_24_1] water zone-->
+	<zone id='15148' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [23_25_1] water zone-->
+	<zone id='15149' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [24_11_1] water zone-->
+	<zone id='15150' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [24_12_1] water zone-->
+	<zone id='15151' type='WaterZone' shape='NPoly' minZ='-2656' maxZ='-2558'/> <!-- [24_18_1] water zone-->
+	<zone id='15152' type='WaterZone' shape='NPoly' minZ='-4806' maxZ='-3806'/> <!-- [24_19_1] water zone-->
+	<zone id='15153' type='WaterZone' shape='NPoly' minZ='-6126' maxZ='-3766'/> <!-- [24_20_1] water zone-->
+	<zone id='15154' type='WaterZone' shape='NPoly' minZ='-6126' maxZ='-5549'/> <!-- [24_20_2] water zone-->
+	<zone id='15155' type='WaterZone' shape='NPoly' minZ='-4510' maxZ='-3810'/> <!-- [24_20_3] water zone-->
+	<zone id='15156' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [24_21_1] water zone-->
+	<zone id='15157' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [25_11_1] water zone-->
+	<zone id='15158' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [25_12_1] water zone-->
+	<zone id='15159' type='WaterZone' shape='NPoly' minZ='-5495' maxZ='-4495'/> <!-- [25_12_2] water zone-->
+	<zone id='15160' type='WaterZone' shape='NPoly' minZ='-2352' maxZ='-2096'/> <!-- [25_12_3] water zone-->
+	<zone id='15161' type='WaterZone' shape='NPoly' minZ='-4673' maxZ='-4063'/> <!-- [25_14_1] water zone-->
+	<zone id='15162' type='WaterZone' shape='NPoly' minZ='-6160' maxZ='-5286'/> <!-- [25_14_2] water zone-->
+	<zone id='15163' type='WaterZone' shape='NPoly' minZ='-4310' maxZ='-3810'/> <!-- [25_20_1] water zone-->
+	<zone id='15164' type='WaterZone' shape='NPoly' minZ='-5598' maxZ='-3278'/> <!-- [25_17_1] water zone-->
+	<zone id='15165' type='WaterZone' shape='NPoly' minZ='-5598' maxZ='-5021'/> <!-- [25_17_2] water zone-->
+	<zone id='15166' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [20_15_1] water zone-->
+	<zone id='15167' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [20_16_1] water zone-->
+	<zone id='15168' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [21_15_1] water zone-->
+	<zone id='15169' type='WaterZone' shape='NPoly' minZ='-4814' maxZ='-3814'/> <!-- [21_16_1] water zone-->
+	<zone id='15170' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [21_17_1] water zone-->
+	<zone id='15171' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [22_16_1] water zone-->
+	<zone id='15172' type='WaterZone' shape='NPoly' minZ='-2919' maxZ='-2663'/> <!-- [22_16_2] water zone-->
+	<zone id='15173' type='WaterZone' shape='NPoly' minZ='-2919' maxZ='-2663'/> <!-- [22_16_3] water zone-->
+	<zone id='15174' type='WaterZone' shape='NPoly' minZ='-3438' maxZ='-3182'/> <!-- [22_16_4] water zone-->
+	<zone id='15175' type='WaterZone' shape='NPoly' minZ='-3534' maxZ='-3278'/> <!-- [22_16_5] water zone-->
+	<zone id='15176' type='WaterZone' shape='NPoly' minZ='-3447' maxZ='-3191'/> <!-- [22_16_6] water zone-->
+	<zone id='15177' type='WaterZone' shape='NPoly' minZ='-3447' maxZ='-3191'/> <!-- [22_16_7] water zone-->
+	<zone id='15178' type='WaterZone' shape='NPoly' minZ='-3447' maxZ='-3191'/> <!-- [22_16_8] water zone-->
+	<zone id='15179' type='WaterZone' shape='NPoly' minZ='-2638' maxZ='-2382'/> <!-- [22_16_9] water zone-->
+	<zone id='15180' type='WaterZone' shape='NPoly' minZ='-2638' maxZ='-2382'/> <!-- [22_16_10] water zone-->
+	<zone id='15181' type='WaterZone' shape='NPoly' minZ='-2638' maxZ='-2382'/> <!-- [22_16_11] water zone-->
+	<zone id='15182' type='WaterZone' shape='NPoly' minZ='-2638' maxZ='-2382'/> <!-- [22_16_12] water zone-->
+	<zone id='15183' type='WaterZone' shape='NPoly' minZ='-2638' maxZ='-2382'/> <!-- [22_16_13] water zone-->
+	<zone id='15184' type='WaterZone' shape='NPoly' minZ='-2638' maxZ='-2382'/> <!-- [22_16_14] water zone-->
+	<zone id='15185' type='WaterZone' shape='NPoly' minZ='-3534' maxZ='-3278'/> <!-- [22_16_15] water zone-->
+	<zone id='15186' type='WaterZone' shape='NPoly' minZ='-2638' maxZ='-2382'/> <!-- [22_16_16] water zone-->
+	<zone id='15187' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [22_17_1] water zone-->
+	<zone id='15188' type='WaterZone' shape='NPoly' minZ='-4810' maxZ='-3810'/> <!-- [22_17_2] water zone-->
 </list>
