@@ -109,4 +109,6 @@ of this directory a little bit.
 350980008.xml -> Manor Products: Rune
 350980009.xml -> Manor Products: Schuttgart
 
+350980012.xml -> BlackSmith Lahm
+
 36142001.xml -> Dragonspine fortress buylist
