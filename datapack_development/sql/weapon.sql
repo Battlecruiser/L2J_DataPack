@@ -1048,7 +1048,7 @@ INSERT INTO `weapon` VALUES
 (7811,'Soulfire Dirk - Magic Hold','rhand','true',750,2,2,'fine_steel','c',86,5,'dagger',12,-3.00000,0,0,0,433,0,91,-1,2870000,1148,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (7812,'Soulfire Dirk - Magic Silence','rhand','true',750,2,2,'fine_steel','c',86,5,'dagger',12,-3.00000,0,0,0,433,0,91,-1,2870000,1148,'true','true','true','true',0,0,1064,1,10,0,0,0,0,'0-0;'),
 (7813,'Hell Knife - Magic Regeneration','rhand','true',740,1,1,'blood_steel','b',122,5,'dagger',12,-3.00000,0,0,0,433,0,122,-1,8680000,1157,'true','true','true','true',0,0,1044,3,30,0,0,0,0,'0-0;'),
-(7814,'Hell Knife - Mental Shield','rhand','true',740,1,1,'blood_steel','b',122,5,'dagger',12,-3.00000,0,0,0,433,0,122,-1,8680000,1157,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
+(7814,'Hell Knife - Mental Shield','rhand','true',740,1,1,'blood_steel','b',122,5,'dagger',12,-3.00000,0,0,0,433,0,122,-1,8680000,1157,'true','true','true','true',0,0,1035,4,50,0,0,0,0,'0-0;'),
 (7815,'Hell Knife - Magic Weakness','rhand','true',740,1,1,'blood_steel','b',122,5,'dagger',12,-3.00000,0,0,0,433,0,122,-1,8680000,1157,'true','true','true','true',0,0,1164,3,7,0,0,0,0,'0-0;'),
 (7816,'Apprentice Adventurer''s Staff','lrhand','false',1070,2,2,'wood','none',23,20,'bigblunt',4,4.00000,0,0,0,325,0,22,-1,0,0,'false','false','true','false',0,0,0,0,0,0,0,0,0,'0-0;'),
 (7817,'Apprentice Adventurer''s Bone Club','rhand','false',1850,2,2,'fine_steel','none',24,20,'blunt',4,4.00000,0,0,0,379,0,17,-1,0,0,'false','false','true','false',0,0,0,0,0,0,0,0,0,'0-0;'),
