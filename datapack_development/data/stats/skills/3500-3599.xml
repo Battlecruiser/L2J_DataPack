@@ -1442,11 +1442,11 @@
   <!-- Infinity Bow Skill -->
   <set name="magicLvl" val="80"/>
   <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <set name="castRange" val="900"/>
+  <set name="effectRange" val="1400"/>
   <for>
     <effect count="1" name="Debuff" time="30" val="0" stackOrder="0.5" stackType="RunSpeedDown">
       <mul order="0x30" stat="runSpd" val="0.5"/>
