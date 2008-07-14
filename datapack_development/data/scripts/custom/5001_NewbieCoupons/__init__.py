@@ -49,7 +49,7 @@ class Quest (JQuest) :
           # check the player state against this quest newbie rewarding mark.
           if newbie | NEWBIE_WEAPON != newbie :
              player.setNewbie(newbie|NEWBIE_WEAPON)
-             st.giveItems(COUPON_ONE,1)
+             st.giveItems(COUPON_ONE,5)
              return "30598-2.htm" #here's the coupon you requested
           else :
              return "30598-1.htm" #you got a coupon already!
