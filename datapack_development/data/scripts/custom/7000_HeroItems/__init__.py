@@ -19,6 +19,9 @@ HERO_ITEMS={
 6619:["weapon_the_bow_of_hero_i00","Infinity Bow","Increases MaxMP/MaxCP and decreases re-use delay of a bow. Slows target when a critical attack occurs and has Cheap Shot effect. Also enhances damage to target during PvP.","707/169","Bow"],
 6620:["weapon_the_dualsword_of_hero_i00","Infinity Wing","When a critical attack occurs, increases MaxHP, MaxMP, MaxCP and critical chance. Silences the target and has possibility of reflecting the skill back on the target. Also enhances damage to target during PvP.","461/169","Dual Sword"],
 6621:["weapon_the_pole_of_hero_i00","Infinity Spear","During a critical attack, increases MaxHP, Max CP, Atk. Spd. and Accuracy. Casts dispel on a target and has possibility of reflecting the skill back on the target. Also enhances damage to target during PvP.","379/169","Pole"],
+9388:["weapon_infinity_rapier_i00","Infinity Rapier","Decreases the target's P. Def and increases the de-buff casting ability, the damage shield ability, and the Max HP/Max MP/Max CP on a critical attack. Increases damage inflicted during PvP. A critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members.","344/169","Rapier"],
+9389:["weapon_infinity_sword_i00","Infinity Sword","Increases critical attack success rate/power, MaxHP, MaxCP, and damage inflicted during PvP. Also inflicts extra damage on critical attacks, and reflects debuff attacks back on enemies.","410/169","Ancient Sword"],
+9390:["weapon_infinity_shooter_i00","Infinity Shooter","Produces the following effects when a critical attack occurs: the target is slowed, decrease MP consumption for skill use, and increase Max MP/Max CP. Enhances damage done to the target during PvP.","405/169","Crossbow"],
 6842:["accessory_hero_cap_i00","Wings of Destiny Circlet","Hair accessory exclusively used by heroes.","0","Hair Accessory"]
 }
 
@@ -59,7 +62,7 @@ class Quest (JQuest) :
                st.giveItems(item,1)
                htmltext = "Enjoy your Wings of Destiny Circlet"
           else :
-             for i in range(6611,6622):
+             for i in range(6611,6622)+range(9388,9391):
                 if st.getQuestItemsCount(i):
                    st.exitQuest(1)
                    return "You already have an "+HERO_ITEMS[i][1]

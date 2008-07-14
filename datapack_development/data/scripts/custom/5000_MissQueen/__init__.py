@@ -13,7 +13,7 @@ COUPON_TWO = 7833
 NPCs = range(31760,31767)
 
 #enable/disable coupon give
-QUEEN_ENABLED=1
+QUEEN_ENABLED=0
 #Newbie/one time rewards section
 #Any quest should rely on a unique bit, but
 #it could be shared among quest that were mutually
