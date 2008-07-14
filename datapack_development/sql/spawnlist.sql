@@ -40269,7 +40269,8 @@ INSERT INTO spawnlist VALUES
 (null,'undgrndColiseum','1',32377,-81904,-53904,-10728,0,0,17044,60,0,0),
 (null,'undgrndColiseum','1',32377,-86359,-50593,-10728,0,0,3704,60,0,0),
 (null,'undgrndColiseum','1',32377,-84640,-45360,-10728,0,0,56156,60,0,0),
-(null,'FantasyIsle','1',32378,-59234,-56897,-2032,0,0,0,60,0,0);
+(null,'FantasyIsle','1',32378,-59234,-56897,-2032,0,0,0,60,0,0),
+(null,'rune_mass_gatekeeper',1,35502,11127,-49148,3843,0,0,18512,60,0,0);
 
 -- Castle Artefacts
 INSERT INTO spawnlist VALUES
