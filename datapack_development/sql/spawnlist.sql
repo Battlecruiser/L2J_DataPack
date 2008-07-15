@@ -40314,6 +40314,10 @@ INSERT INTO spawnlist VALUES
 INSERT INTO spawnlist VALUES
 (null,'Dragon_Spine_Fortress',1,36142,12196,93188,-3421,0,0,50504,60,0,0);
 
+-- Blacksmith of Power Lahm (Trader) of S80 Recipes and ingridients
+INSERT INTO spawnlist VALUES
+(null,'Emerald_Square',1,32359,146785,140987,-11885,0,0,24413,60,0,0);
+
 -- Fortresses
 INSERT INTO spawnlist VALUES
 -- shanty Fortress
