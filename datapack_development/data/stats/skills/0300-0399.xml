@@ -1669,6 +1669,7 @@
   <set name="reuseDelay" val="1800000"/>
   <set name="hitTime" val="1000"/>
   <set name="skillType" val="AGGDAMAGE"/>
+  <set name="magicLvl" val="77"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1678,6 +1679,7 @@
       <add order="0x40" stat="mDef" val="4050"/>
       <mul order="0x30" stat="cancelVuln" val="0.9"/> <!-- value to be confirmed -->
     </effect>
+    <effect count="1" name="TargetMe" time="1" val="0"/>
   </for>
 </skill>
 <skill id="369" levels="1" name="Evade Shot">
