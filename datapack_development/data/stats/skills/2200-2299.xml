@@ -812,7 +812,8 @@
   </for>
 </skill>
 <skill id="2287" levels="6" name="Elixir of Life">
-  <set name="power" val="800"/>
+  <table name="#power"> 800 1000 1200 1600 2000 2300 </table>
+  <set name="power" val="#power"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="HEAL_STATIC"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -823,7 +824,8 @@
   <set name="isPotion" val="true"/>
 </skill>
 <skill id="2288" levels="6" name="Elixir of Mental Strength">
-  <set name="power" val="800"/>
+  <table name="#power"> 75 125 175 250 350 420 </table>
+  <set name="power" val="#power"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="MANAHEAL"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -834,7 +836,8 @@
   <set name="isPotion" val="true"/>
 </skill>
 <skill id="2289" levels="6" name="Elixir of CP">
-  <set name="power" val="800"/>
+  <table name="#power"> 250 400 600 800 1000 1200 </table>
+  <set name="power" val="#power"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="COMBATPOINTHEAL"/>
   <set name="operateType" val="OP_ACTIVE"/>
