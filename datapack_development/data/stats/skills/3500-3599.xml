@@ -1211,6 +1211,7 @@
 <skill id="3581" levels="1" name="Discord">
   <!-- Infinity Axe Skill -->
   <set name="magicLvl" val="80"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONFUSION"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1265,7 +1266,6 @@
   <!-- Infinity Crusher Skill -->
   <set name="magicLvl" val="80"/>
   <set name="power" val="0.0"/>
-  <set name="castRange" val="-1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="STUN"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1335,7 +1335,6 @@
   <!-- Infinity Fang Skill -->
   <set name="magicLvl" val="80"/>
   <set name="power" val="0.0"/>
-  <set name="castRange" val="-1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="STUN"/>
   <set name="operateType" val="OP_ACTIVE"/>
