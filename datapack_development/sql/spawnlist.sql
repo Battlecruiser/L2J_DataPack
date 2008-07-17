@@ -40282,7 +40282,7 @@ INSERT INTO spawnlist VALUES
 (null,'InnadrilArtefact1',1,35279,116031,250555,-798,0,0,49200,60,0,0),
 (null,'GoddardArtefact1',1,35322,146601,-50441,-1505,0,0,32768,60,0,0),
 (null,'GoddardArtefact2',1,35323,148353,-50457,-1505,0,0,0,60,0,0),
-(null,'RuneArtefact1',1,35469,9126,-49161,1094,0,0,64270,60,0,0),
+(null,'RuneArtefact1',1,35469,9132,-49153,1094,0,0,6133,60,0,0),
 (null,'SchuttgartArtefact1',1,35515,76668,-154520,226,0,0,0,60,0,0),
 (null,'SchuttgartArtefact2',1,35514,78446,-154524,227,0,0,0,60,0,0);
 
