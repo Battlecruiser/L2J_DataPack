@@ -58,7 +58,7 @@ class antharas(JQuest) :
             antharas.setCurrentHpMp(hp,mp)
             if status == WAITING :
                 # Start timer to lock entry after 30 minutes
-                self.startQuestTimer("waiting",600000, antharas, None)
+                self.startQuestTimer("waiting",1800000, antharas, None)
             elif status == FIGHTING :
                 self.lastAction = System.currentTimeMillis()
                 # Start repeating timer to check for inactivity
@@ -69,7 +69,7 @@ class antharas(JQuest) :
             if event == "waiting" :
                 npc.teleToLocation(185452,114835,-8221,0)
                 npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, L2CharPosition(181911,114835,-7678,0))
-                self.startQuestTimer("antharas_has_arrived",1000, npc, None, True)
+                self.startQuestTimer("antharas_has_arrived",2000, npc, None, True)
                 npc.broadcastPacket(PlaySound(1, "BS02_A", 1, npc.getObjectId(), 185452, 114835, -8221))
                 GrandBossManager.getInstance().setBossStatus(ANTHARAS,FIGHTING)
             elif event == "camera_1" :
