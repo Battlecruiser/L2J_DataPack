@@ -159,10 +159,19 @@
   </for>
 </skill>
 <skill id="1516" levels="1" name="Soul Strike">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="castRange" val="750"/>
+  <set name="effectRange" val="1250"/>
+  <set name="hitTime" val="2000"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="76"/>
+  <set name="mpConsume" val="35"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="166"/>
+  <set name="reuseDelay" val="10000"/> <!-- Guessing -->
+  <set name="skillType" val="MDAM"/>
+  <set name="soulConsumeCount" val="3"/>
+  <set name="target" val="TARGET_ONE"/>
   <for>
   </for>
 </skill>
