@@ -1030,7 +1030,7 @@ INSERT INTO `weapon` VALUES
 (7708,'Nirvana Axe - Magic Poison','rhand','true',1150,3,3,'fine_steel','c',111,20,'blunt',4,4.00000,0,0,0,379,0,101,-1,4300000,1720,'true','true','true','true',0,0,1168,6,7,0,0,0,0,'0-0;'),
 (7709,'Nirvana Axe - Magic Weakness','rhand','true',1150,3,3,'fine_steel','c',111,20,'blunt',4,4.00000,0,0,0,379,0,101,-1,4300000,1720,'true','true','true','true',0,0,1164,6,7,0,0,0,0,'0-0;'),
 (7710,'Club of Nature - Acumen','rhand','true',1100,3,3,'wood','c',111,20,'blunt',4,4.00000,0,0,0,379,0,101,-1,4300000,1720,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3047-1;'),
-(7711,'Club of Nature - Magic Mental Shield','rhand','true',1100,3,3,'wood','c',111,20,'blunt',4,4.00000,0,0,0,379,0,101,-1,4300000,1720,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
+(7711,'Club of Nature - Magic Mental Shield','rhand','true',1100,3,3,'wood','c',111,20,'blunt',4,4.00000,0,0,0,379,0,101,-1,4300000,1720,'true','true','true','true',0,0,1035,3,50,0,0,0,0,'0-0;'),
 (7712,'Club of Nature - Magic Hold','rhand','true',1100,3,3,'wood','c',111,20,'blunt',4,4.00000,0,0,0,379,0,101,-1,4300000,1720,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (7713,'Mace of The Underworld - Mana Up','rhand','true',1090,3,3,'fine_steel','c',111,20,'blunt',4,4.00000,0,0,0,379,0,101,-1,4300000,1720,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3014-1;'),
 (7714,'Mace of The Underworld - Magic Silence','rhand','true',1090,3,3,'fine_steel','c',111,20,'blunt',4,4.00000,0,0,0,379,0,101,-1,4300000,1720,'true','true','true','true',0,0,1064,1,10,0,0,0,0,'0-0;'),
