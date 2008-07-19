@@ -23,7 +23,7 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
      JQuest.__init__(self,id,name,descr) 
-     self.questItemIds = [MARK_OF_TRAVELER, GWAINS_DOCUMENT, MAGIC_SWORD_HILT]
+     self.questItemIds = [GWAINS_DOCUMENT, MAGIC_SWORD_HILT]
 
  def onEvent (self,event,st) :
      htmltext = event

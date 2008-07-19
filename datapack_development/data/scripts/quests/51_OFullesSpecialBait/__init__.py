@@ -35,7 +35,8 @@ class Quest (JQuest) :
      st.giveItems(ICY_AIR_LURE,4)
      st.takeItems(LOST_BAIT,-1)
      st.playSound("ItemSound.quest_finish")
-     st.exitQuest(1)
+     st.exitQuest(False)
+     st.unset("cond")
    return htmltext
 
  def onTalk (Self,npc,player):

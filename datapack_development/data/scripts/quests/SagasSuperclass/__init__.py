@@ -113,10 +113,9 @@ class Quest (JQuest) :
         mob.decayMe()
     return
 
- def findRightState(self, player,mob) :
-     mobObjectId = mob.getObjectId()
+ def findRightState(self, mobObjectId) :
      st1 = None
-     playerName,mob = self.Spawn_List[mobObjectId]      #There is a possibility for an NPE here, but only if something else is wrong in the quest
+     playerName = self.Spawn_List[mobObjectId][0]      #There is a possibility for an NPE here, but only if something else is wrong in the quest
      st1 = L2World.getInstance().getPlayer(playerName)  #Therefore, placing an NPE catch here will only hide the error, not solve it.
      if st1 : st1 = st1.getQuestState(self.qn)
      return st1
@@ -130,7 +129,6 @@ class Quest (JQuest) :
             zz = int(st2.getPlayer().getZ())
             Archon = st2.addSpawn(self.Mob[1],xx,yy,zz)
             ArchonId = Archon.getObjectId()
-            st2.set("Archon",str(ArchonId))
             self.AddSpawn(st2,Archon)
             st2.set("spawned","1")
             st2.startQuestTimer("Archon Hellisha has despawned",600000,Archon)
@@ -511,7 +509,7 @@ class Quest (JQuest) :
       cond = st.getInt("cond")
       if npcId == self.NPC[4] :
           if cond == 17 :
-              st2 = self.findRightState(player,npc)
+              st2 = self.findRightState(npc.getObjectId())
               if st2 :
                   if st == st2 :
                       if st.getInt("Tab") == 1 :
@@ -540,7 +538,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onAttack (self, npc, player, damage, isPet):
-    st2 = self.findRightState(player,npc)
+    st2 = self.findRightState(npc.getObjectId())
     if not st2 : return
     cond = st2.getInt("cond")
     st = player.getQuestState(self.qn)
@@ -561,7 +559,7 @@ class Quest (JQuest) :
             self.AutoChat(npc,self.Text[5].replace('PLAYERNAME',player.getName()))
             if st2.getQuestTimer("Archon Hellisha has despawned") :
                st2.getQuestTimer("Archon Hellisha has despawned").cancel()
-            self.DeleteSpawn(st2,st2.getInt("Archon"))
+            self.DeleteSpawn(st2,npc.getObjectId())
             st2.set("spawned","0")
     return
 
@@ -570,12 +568,12 @@ class Quest (JQuest) :
      if player.getName() != name :
          quest_player = L2World.getInstance().getPlayer(name)
          if (quest_player in targets) or (npc in targets) :
-             st2 = self.findRightState(player,npc)
+             st2 = self.findRightState(npc.getObjectId())
              if not st2 : return
              self.AutoChat(npc,self.Text[5].replace('PLAYERNAME',player.getName()))
              if st2.getQuestTimer("Archon Hellisha has despawned") :
                 st2.getQuestTimer("Archon Hellisha has despawned").cancel()
-             self.DeleteSpawn(st2,st2.getInt("Archon"))
+             self.DeleteSpawn(st2,npc.getObjectId())
              st2.set("spawned","0")
 
  def onKill(self,npc,player,isPet):
@@ -619,7 +617,7 @@ class Quest (JQuest) :
                         st1.giveItems(st1.getQuest().Items[5],1)
                         st1.set("cond","7")
     elif st :
-        st2 = self.findRightState(player,npc)
+        st2 = self.findRightState(npc.getObjectId())
         if not st2 : return
         cond = st.getInt("cond")
         if npcId == self.Mob[0] and cond == 8 :
@@ -645,22 +643,22 @@ class Quest (JQuest) :
                     self.AutoChat(npc,self.Text[5].replace('PLAYERNAME',player.getName()))
             if st2.getQuestTimer("Archon Hellisha has despawned") :
                st2.getQuestTimer("Archon Hellisha has despawned").cancel()
-            self.DeleteSpawn(st2,st2.getInt("Archon"))
+            self.DeleteSpawn(st2,npc.getObjectId())
             st2.set("spawned","0")
     else :
         if npcId == self.Mob[0] :
-            st = self.findRightState(player,npc)
+            st = self.findRightState(npc.getObjectId())
             if st:
                 if st.getQuestTimer("Mob_1 has despawned") :
                    st.getQuestTimer("Mob_1 has despawned").cancel()
                 self.DeleteSpawn(st,st.getInt("Mob_1"))
                 st.set("spawned","0")
         elif npcId == self.Mob[1] :
-            st = self.findRightState(player,npc)
+            st = self.findRightState(npc.getObjectId())
             if st:
                 if st.getQuestTimer("Archon Hellisha has despawned") :
                    st.getQuestTimer("Archon Hellisha has despawned").cancel()
-                self.DeleteSpawn(st,st.getInt("Archon"))
+                self.DeleteSpawn(st,npc.getObjectId())
                 st.set("spawned","0")
     return
 

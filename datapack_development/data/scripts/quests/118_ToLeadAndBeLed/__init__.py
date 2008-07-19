@@ -75,7 +75,11 @@ class Quest (JQuest) :
                  st.playSound("ItemSound.quest_middle")
                  ap_quest.playSound("ItemSound.quest_middle")
                  htmltext = "30517-10.htm"
-     st.exitQuest(1)
+           elif DEBUG: htmltext = "30517-FE.htm"
+         elif DEBUG: htmltext = "30517-FD.htm"
+       elif DEBUG:htmltext = "30517-FC.htm"
+     elif DEBUG:htmltext = "30517-FB.htm"
+     #st.exitQuest(1) #needed?
    return htmltext 
 
  def onTalk (self,npc,player):
@@ -144,24 +148,13 @@ class Quest (JQuest) :
                     htmltext = "30517-09b.htm"
                  elif ap_cond == 5 :
                     htmltext = "30517-09c.htm"
-                 else :
-                    if DEBUG : htmltext = "30517-FF.htm"
-                    st.exitQuest(1)
-              else :
-                if DEBUG: htmltext = "30517-FE.htm"
-                st.exitQuest(1)
-           else :
-             if DEBUG: htmltext = "30517-FD.htm"
-             st.exitQuest(1)
-        else :
-           if DEBUG:htmltext = "30517-FC.htm"
-           st.exitQuest(1)
-     else :
-       if DEBUG:htmltext = "30517-FB.htm"
-       st.exitQuest(1)
-   else :
-     if DEBUG:htmltext = "30517-FA.htm"
-     st.exitQuest(1)
+                 elif DEBUG : htmltext = "30517-FF.htm"
+              elif DEBUG: htmltext = "30517-FE.htm"
+           elif DEBUG: htmltext = "30517-FD.htm"
+        elif DEBUG:htmltext = "30517-FC.htm"
+     elif DEBUG:htmltext = "30517-FB.htm"
+   elif DEBUG:htmltext = "30517-FA.htm"
+   #st.exitQuest(1) #needed?
    return htmltext
 
  def onKill(self,npc,player,isPet):
