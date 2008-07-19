@@ -102,6 +102,7 @@ class Quest (JQuest) :
         return
     elif event == "6" : #now go hunt splendor mobs
         st.set("cond","12")
+        htmltext = "32236_06.htm"
     elif event == "8" : #go back to Kekropus
         st.set("cond","14")
         htmltext = "32236_08.htm"

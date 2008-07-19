@@ -71,13 +71,12 @@ class Quest (JQuest) :
        else: # lose practice :(
          htmltext = "Wilbert_PracticeLost.htm"
    elif event == "Wilbert_LetsPlay.htm": # "Let's play" pressed
-     round=st.getInt("round")
      beads=st.getQuestItemsCount(SPIRIT_BEAD)
      if beads<50:
        htmltext = "Wilbert_Practice_NotEnoughBeads.htm"
      else:
-       if round == 0:
-         htmltext = "Wilbert_PlayRound1.htm"
+       htmltext = "Wilbert_PlayRound1.htm"
+       st.set("round","0")
    elif event == "Wilbert_PullCard.htm": # "Pull first or next card" pressed
      round=st.getInt("round")
      beads=st.getQuestItemsCount(SPIRIT_BEAD)
