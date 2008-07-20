@@ -1237,6 +1237,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="bowWpnVuln" val="0.3"/>
+    <mul order="0x30" stat="crossbowWpnVuln" val="0.3"/>
   </for>
 </skill>
 <skill id="4273" levels="6" name="Resist Dagger">
@@ -1285,6 +1286,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="bowWpnVuln" val="#Tab-bowVuln"/>
+    <mul order="0x30" stat="crossbowWpnVuln" val="#Tab-bowVuln"/>
   </for>
 </skill>
 <skill id="4277" levels="6" name="Resist Poison">

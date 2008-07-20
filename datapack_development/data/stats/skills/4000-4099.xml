@@ -1204,6 +1204,7 @@
   <set name="effectRange" val="-1"/>
   <for>
       <mul order="0x30" stat="bowWpnVuln" val="#vuln"/>
+      <mul order="0x30" stat="crossbowWpnVuln" val="#vuln"/>
   </for>
 </skill>
 <skill id="4072" levels="12" name="Shock">
