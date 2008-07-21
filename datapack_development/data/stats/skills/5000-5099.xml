@@ -1399,8 +1399,9 @@
 </skill>
 <skill id="5093" levels="1" name="Antharas Meteor">
   <!-- Antharas Skills -->
+  <set name="magicLvl" val="70"/>
   <set name="target" val="TARGET_AREA"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="22000"/> <!-- Guessing -->
   <set name="skillType" val="PDAM"/>
   <set name="hitTime" val="8000"/>
   <set name="operateType" val="OP_ACTIVE"/>
