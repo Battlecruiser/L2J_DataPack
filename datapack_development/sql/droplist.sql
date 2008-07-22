@@ -10044,6 +10044,7 @@ INSERT INTO `droplist` VALUES
 (20981,4039,1,1,2,6855), -- Mold Glue
 (20981,4043,1,1,2,6855), -- Asofe
 (20981,5230,1,1,2,275), -- Recipe: Mithril Arrow (100%)
+(20981,10303,1,1,1,159), -- Transform Sealbook - Vale Master
 (20981,8730,1,1,200,177),   -- Life Stone: level 67
 (20982,4084,1,1,-1,78645), -- Blue Wolf Tunic Fabric
 (20982,4085,1,1,-1,78645), -- Tunic of Doom Pattern
@@ -10065,6 +10066,7 @@ INSERT INTO `droplist` VALUES
 (20982,4040,1,1,2,3342), -- Mold Lubricant
 (20982,4041,1,1,2,1454), -- Mold Hardener
 (20982,5276,1,1,2,223), -- Recipe: Greater Spiritshot (A) Compressed Package(100%)
+(20982,10303,1,1,1,313), -- Transform Sealbook - Vale Master
 (20983,4080,1,1,-1,139529), -- Blue Wolf Gaiters Material
 (20983,5478,1,1,-1,57040), -- Sealed Dark Crystal Leather Armor Pattern
 (20983,5549,1,1,-1,678321), -- Metallic Thread
@@ -11444,6 +11446,7 @@ INSERT INTO `droplist` VALUES
 (21088,4403,1,1,2,857), -- Red Dimensional Stone
 (21088,4622,1,1,2,592), -- Greater Dye of Mental Strength <Men+4 Wit-4>
 (21088,5550,1,1,2,5713), -- Durable Metal Plate
+(21088,10306,1,1,2,302), -- Transform Sealbook - Doll Blader
 (21088,8731,1,1,200,151), -- Life Stone: level 70
 (21089,3035,1,1,-1,15741), -- Recipe: Spiritshot A
 (21089,4116,1,1,-1,51588), -- Deadman\'s Glory Stone
@@ -11516,6 +11519,7 @@ INSERT INTO `droplist` VALUES
 (21092,3956,1,1,2,336), -- Recipe: Blessed Spiritshot A
 (21092,4044,1,1,2,8383), -- Thons
 (21092,5549,1,1,2,25149), -- Metallic Thread
+(21092,10306,1,1,2,414), -- Transform Sealbook - Doll Blader
 (21092,8731,1,1,200,207), -- Life Stone: level 70
 (21092,8741,1,1,200,207), -- Mid-Grade Life Stone: level 70
 (21093,1800,1,1,-1,83774), -- Recipe: Piece Bone Breastplate
@@ -14440,6 +14444,7 @@ INSERT INTO `droplist` VALUES
 (21295,4043,1,1,2,8177), -- Asofe
 (21295,5448,1,1,2,91), -- Recipe: Soul Separator(60%)
 (21295,5550,1,1,2,3271), -- Durable Metal Plate
+(21295,10304,1,1,1,136), -- Transform Sealbook - Saber Tooth Tiger
 (21295,8730,1,1,200,11),   -- Life Stone: level 67
 (21295,8740,1,1,200,34),   -- Mid-Grade Life Stone: level 67
 (21296,5440,1,1,-1,2753), -- Recipe: Elysian(60%)
@@ -14454,6 +14459,7 @@ INSERT INTO `droplist` VALUES
 (21296,1881,1,1,2,48786), -- Coarse Bone Powder
 (21296,4041,1,1,2,3182), -- Mold Hardener
 (21296,5456,1,1,2,136), -- Recipe: Tallum Glaive(60%)
+(21296,10304,1,1,1,192), -- Transform Sealbook - Saber Tooth Tiger
 (21296,8730,1,1,200,113),   -- Life Stone: level 67
 (21296,8740,1,1,200,16),   -- Mid-Grade Life Stone: level 67
 (21297,5450,1,1,-1,2771), -- Recipe: Dragon Grinder(60%)
@@ -14468,6 +14474,7 @@ INSERT INTO `droplist` VALUES
 (21297,1895,1,1,2,105234), -- Metallic Fiber
 (21297,4042,1,1,2,6139), -- Enria
 (21297,5162,1,1,2,163), -- Recipe: Spiritshot (S) Compressed Package (100%)
+(21297,10304,1,1,1,170), -- Transform Sealbook - Saber Tooth Tiger
 (21297,8730,1,1,200,137),   -- Life Stone: level 67
 (21297,8740,1,1,200,68),   -- Mid-Grade Life Stone: level 67
 (21298,730,1,1,-1,4013), -- Scroll: Enchant Armor (Grade A)
@@ -18454,6 +18461,7 @@ INSERT INTO `droplist` VALUES
 (21574,4044,1,1,2,6206), -- Thons
 (21574,5466,1,1,2,69), -- Recipe: Sword of Miracles(60%)
 (21574,5549,1,1,2,18619), -- Metallic Thread
+(21574,10305,1,1,1,88), -- Transform Sealbook - Oel Mahum
 (21575,729,1,1,-1,276), -- Scroll: Enchant Weapon (Grade A)
 (21575,5448,1,1,-1,921), -- Recipe: Soul Separator(60%)
 (21575,5494,1,1,-1,52203), -- Sealed Dark Crystal Shield Fragment
@@ -18467,6 +18475,7 @@ INSERT INTO `droplist` VALUES
 (21575,4044,1,1,2,3497), -- Thons
 (21575,5466,1,1,2,39), -- Recipe: Sword of Miracles(60%)
 (21575,5549,1,1,2,10489), -- Metallic Thread
+(21575,10305,1,1,1,102), -- Transform Sealbook - Oel Mahum
 (21575,8730,1,1,200,264),   -- Life Stone: level 67
 (21575,8750,1,1,200,44),   -- High-Grade Life Stone: level 67
 (21576,5450,1,1,-1,1075), -- Recipe: Dragon Grinder(60%)
@@ -18581,6 +18590,7 @@ INSERT INTO `droplist` VALUES
 (21583,1884,1,1,2,99898), -- Cord
 (21583,4039,1,1,2,5412), -- Mold Glue
 (21583,6901,1,1,2,163), -- Recipe: Shining Arrow (100%)
+(21583,10305,1,1,1,37), -- Transform Sealbook - Oel Mahum
 (21583,8730,1,1,200,73),   -- Life Stone: level 67
 (21583,8740,1,1,200,37),   -- Mid-Grade Life Stone: level 67
 (21584,1884,1,5,-1,735982), -- Cord
@@ -22529,8 +22539,119 @@ INSERT INTO `droplist` VALUES
 (22026,6036,1,1,-1,5000); -- Greater Magic Haste Potion
 
 INSERT INTO `droplist` VALUES 
+(22029,57,418,825,0,700000), -- Adena
+(22029,1868,1,1,2,250000), -- Thread
+(22029,5549,1,1,2,14286),   -- Metallic Thread
+(22029,1873,1,1,2,7194), -- Silver Nugget
+(22029,1889,1,1,2,7194), -- Compound Braid
+(22029,2149,1,1,1,7194), -- Recipe: Metallic Fiber
+(22029,2032,1,1,1,3584), -- Goat Head Staff Head
+(22029,5549,1,1,-1,100000),   -- Metallic Thread
+(22029,1944,1,1,-1,100000),   -- Mithril Tunic Fabric
+(22029,6036,1,1,-1,5000), -- Greater Magic Haste Potion
+(22030,57,420,846,0,700000), -- Adena
+(22030,1868,1,1,2,200000), -- Thread
+(22030,1873,1,1,2,47619), -- Silver Nugget
+(22030,1876,1,1,2,11111),   -- Mithril Ore
+(22030,1895,1,1,2,26316),   -- Metalic Fibber
+(22030,1853,1,1,1,8333),   -- Sage's Rag Lining
+(22030,1905,1,1,-1,65000),   -- Omen Beast's Eye Earring Gemstone
+(22030,2160,1,1,-1,40000),   -- Recipe: Moonstone Earring
+(22031,57,384,779,0,700000), -- Adena
+(22031,1868,1,1,2,200000), -- Thread
+(22031,1873,1,1,2,71429), -- Silver Nugget
+(22031,1876,1,1,2,28571),   -- Mithril Ore
+(22031,1895,1,1,2,20408),   -- Metalic Fibber
+(22031,2054,1,1,1,2890), -- Light Crossbow Shaft
+(22031,1868,1,5,-1,570000), -- Thread
+(22031,1873,1,2,-1,390000), -- Silver Nugget
+(22031,1906,1,1,-1,150000), -- Mithril Ring Wire
+(22032,57,478,947,0,700000), -- Adena
+(22032,1868,1,1,2,125000), -- Thread
+(22032,5549,1,1,2,6410),   -- Metallic Thread
+(22032,1873,1,1,2,19231), -- Silver Nugget
+(22032,1889,1,1,2,6410), -- Compound Braid
+(22032,2163,1,1,1,1603),   -- Recipe: Earring of Protection
+(22032,2060,1,1,2,6410),   -- Stormbringer Blade
+(22032,2163,1,1,-1,35000),   -- Recipe: Earring of Protection
+(22032,1908,1,1,-1,70000),   -- Moonstone Earring wire
 (22032,8723,1,1,200,3215),   -- Life Stone: level 46
+(22033,57,568,1144,0,700000),   -- Adena
+(22033,1872,1,1,2,200000),   -- Animal Bone
+(22033,1867,1,1,2,150000),   -- Animal Skin
+(22033,1910,1,1,-1,50000),   -- Aquastone Necklace Chain
+(22034,57,481,871,0,700000),   -- Adena
+(22034,1872,1,1,2,70000),   -- Animal Bone
+(22034,1867,1,1,2,34483),   -- Animal Skin
+(22034,1881,1,1,2,34483),   -- Coarse Bone Powder
+(22034,1909,1,1,-1,50000),   -- Aquastone Ring Wire
+(22035,57,617,1252,0,700000),   -- Adena
+(22035,1872,1,1,2,71429),   -- Animal Bone
+(22035,1867,1,1,2,52632),   -- Animal Skin
+(22035,1954,1,1,1,52632),   -- Karmian Stocking Design
+(22035,1962,1,1,1,11765),   -- Karmian Tunic Pattern
+(22035,1881,1,1,2,5882),   -- Coarse Bone Powder
+(22035,1875,1,1,2,5882),   -- Stone of Purity
+(22035,2166,1,1,1,5882),   -- Recipe: Ring of Protection
+(22035,1910,1,1,-1,50000),   -- Aquastone Necklace Chain
+(22035,2166,1,1,-1,30000),   -- Recipe: Ring of Protection
+(22035,1909,1,1,-1,50000),   -- Aquastone Ring Wire
+(22036,57,689,1193,0,700000),   -- Adena
+(22036,1872,1,1,2,47139),   -- Animal Bone
+(22036,1867,1,1,2,47139),   -- Animal Skin
+(22036,1954,1,1,1,47139),   -- Karmian Stocking Design
+(22036,1962,1,1,1,47139),   -- Karmian Tunic Pattern
+(22036,1881,1,1,2,47139),   -- Coarse Bone Powder
+(22036,1909,1,1,-1,50000),   -- Aquastone Ring Wire
+(22037,57,501,965,0,700000),   -- Adena
+(22037,1872,1,1,1,38462),   -- Animal Bone
+(22037,1867,1,1,1,38462),   -- Animal Skin
+(22037,2215,1,1,1,18868), -- Recipe: Robe of Seal
+(22037,1875,1,1,-1,50000),   -- Stone of Purity
+(22037,1960,1,1,-1,100000),   -- Chain Gaiters Part
+(22038,57,593,1197,0,700000),   -- Adena
+(22038,1871,1,1,1,55556),   -- Charcoal
+(22038,1911,1,1,-1,125000),   -- Earring of Protection Gemstone
+(22039,57,740,1178,0,700000), -- Adena
+(22040,57,667,799,0,700000), -- Adena
+(22040,1342,12,12,2,350000), -- Iron Arrow
+(22041,57,1241,1256,0,700000),   -- Adena
+(22041,1872,1,1,2,350000),   -- Animal Bone
+(22041,1867,1,1,2,350000),   -- Animal Skin
+(22042,57,641,1080,0,700000),   -- Adena
+(22042,1872,1,1,2,350000),   -- Animal Bone
+(22043,57,976,1455,0,700000),   -- Adena
+(22043,1872,1,1,2,350000),   -- Animal Bone
+(22045,57,170,339,0,700000), -- Adena
+(22045,1870,1,1,2,45455), -- Coal
+(22045,1865,1,1,2,47619), -- Varnish
+(22045,1879,1,1,2,4348), -- Cokes
+(22045,1875,1,1,2,3257), -- Stone of Purity
+(22045,1948,1,1,1,3257), -- Boots of Power Pattern
+(22045,2923,1,1,1,2169), -- Manticore Skin Boot Lining
+(22045,2924,1,1,1,2169), -- Brigandine Boots Design
+(22045,2925,1,1,1,4348), -- Elven Mithril Boots Design
+(22045,2926,1,1,1,2169), -- Manticore Skin Gloves Lining
+(22045,2927,1,1,1,4348), -- Brigandine Gauntlets Pattern
+(22045,2928,1,1,1,2169), -- Elven Mithril Gloves Design
+(22045,1879,1,1,-1,30000), -- Cokes
+(22045,1875,1,1,-1,30000), -- Stone of Purity
+(22045,1902,1,1,-1,20000), -- Elven Earring Beads
+(22046,57,170,339,0,700000), -- Adena
+(22046,1871,1,1,1,31250),   -- Charcoal 
+(22046,1866,1,1,1,8065),   -- Suede 
+(22046,5220,1,1,2,2681), -- Metal Hardener
+(22046,2163,1,1,-1,20000),   -- Recipe: Earring of Protection
+(22046,1908,1,1,-1,10000),   -- Moonstone Earring wire
 (22046,8723,1,1,200,1346),   -- Life Stone: level 46
+(22047,57,157,321,0,700000),   -- Adena
+(22047,1895,1,1,2,8333),   -- Metalic Fibber
+(22047,1954,1,1,1,1389),   -- Karmian Stocking Design
+(22047,1962,1,1,1,4167),   -- Karmian Tunic Pattern
+(22047,2166,1,1,1,2778),   -- Recipe: Ring of Protection
+(22047,1910,1,1,-1,40000),   -- Aquastone Necklace Chain
+(22047,2166,1,1,-1,50000),   -- Recipe: Ring of Protection
+(22047,1909,1,1,-1,30000),   -- Aquastone Ring Wire
 (22048,57,153,309,0,700000),   -- Adena 
 (22048,1879,1,1,1,6757),   -- Cokes 
 (22048,1885,1,1,1,5050),   -- High Grade Suede 
@@ -23384,6 +23505,7 @@ INSERT INTO `droplist` VALUES
 (22112,5478,1,1,-1,25000), -- Sealed Dark Crystal Leather Armor Pattern
 (22112,729,1,1,-1,2500), -- Scroll: Enchant Weapon(Grade A)
 (22112,4041,1,1,-1,50000), -- Mold Hardener
+(22112,10302,1,1,2,1035), -- Transform Sealbook - Heretic
 (22113,57,5878,11950,0,700000), -- Adena
 (22113,1344,41,120,2,166666), -- Mithril Arrow
 (22113,1881,1,1,2,100000), -- Coarse Bone Powder
@@ -27522,6 +27644,7 @@ INSERT INTO `droplist` VALUES
 (29022,57,180000,220000,11,1000000), -- Adena
 (29022,57,180000,220000,12,1000000), -- Adena
 (29022,6659,1,1,13,1000000), -- Zaken\'s Earring
+(29022,8922,1,1,14,80000), -- Pirate Hat
 (29022,8747,3,4,200,320000),   -- High-Grade Life Stone: level 58
 (29022,8757,2,2,200,80000),   -- Top-Grade Life Stone: level 58
 (29022,8748,2,3,200,440000),   -- High-Grade Life Stone: level 61
@@ -28634,3 +28757,17 @@ INSERT INTO `droplist` VALUES
 (22217,8903,1,1,2,250000), -- Ancient Spellbook: Gehenna
 (22217,8954,1,1,2,11235), -- Blue Primeval Crystal
 (22217,4042,1,3,-1,300000); -- Enria
+
+INSERT INTO `droplist` VALUES
+-- Dragonspine Fortress Guards
+(36153,9912,28,39,1,1000000), -- Knight's Epaulette
+(36154,9912,1,3,1,1000000), -- Knight's Epaulette
+(36155,9912,1,3,1,1000000), -- Knight's Epaulette
+(36156,9912,1,3,1,1000000), -- Knight's Epaulette
+(36157,9912,1,3,1,1000000), -- Knight's Epaulette
+(36161,9912,1,3,1,1000000), -- Knight's Epaulette
+(36162,9912,1,3,1,1000000), -- Knight's Epaulette
+(36163,9912,40,87,1,1000000), -- Knight's Epaulette
+(36164,9912,1,3,1,1000000), -- Knight's Epaulette
+(36165,9912,1,3,1,1000000), -- Knight's Epaulette
+(36167,9912,1,3,1,1000000); -- Knight's Epaulette
