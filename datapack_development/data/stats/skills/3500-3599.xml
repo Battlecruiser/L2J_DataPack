@@ -1184,6 +1184,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="isDebuff" val="true"/>
   <for>
     <effect count="1" name="Debuff" time="120" val="0" stackOrder="0.77" stackType="pDefDown">
       <mul order="0x30" stat="pDef" val="0.77"/>
@@ -1218,6 +1219,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="isDebuff" val="true"/>
   <for>
     <effect count="5" name="Confusion" time="4" val="0"/>
   </for>
@@ -1309,6 +1311,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="isDebuff" val="true"/>
   <for>
     <effect count="1" name="PhysicalMute" time="60" val="0" stackOrder="1" stackType="silence"/>
   </for>
@@ -1384,6 +1387,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="isDebuff" val="true"/>
   <for>
     <effect count="1" name="Mute" time="120" val="0" stackOrder="1" stackType="silence"/>
   </for>
@@ -1413,14 +1417,15 @@
 <skill id="3592" levels="1" name="Dispell">
   <!-- Infinity Spear Skill -->
   <set name="magicLvl" val="80"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="15.0"/> <!--Power was set at 0, possibly why this is not working, testing this out  -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CANCEL"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <set name="effectRange" val="100"/>
   <set name="negateStats" val="BUFF"/>
   <set name="negatePower" val="8.0"/>
+  <set name="maxNegated" val="3"/> <!-- Making max debuff count 3 -->
   <for>
   </for>
 </skill>
@@ -1452,6 +1457,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
+  <set name="isDebuff" val="true"/>
   <for>
     <effect count="1" name="Debuff" time="30" val="0" stackOrder="0.5" stackType="RunSpeedDown">
       <mul order="0x30" stat="runSpd" val="0.5"/>
