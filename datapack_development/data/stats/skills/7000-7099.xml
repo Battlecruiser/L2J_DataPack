@@ -874,7 +874,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect name="Buff" time="300" count="1" val="0">
+    <effect name="Buff" time="300" count="1" val="0" stackOrder="#mCrit" stackType="mCritRate">
       <mul order="0x30" stat="mCritRate" val="#mCrit"/>
     </effect>
   </for>

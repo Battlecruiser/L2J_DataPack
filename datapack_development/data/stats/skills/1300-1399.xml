@@ -79,12 +79,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect name="Buff" time="1200" count="1" val="0">
+    <effect name="Buff" time="1200" count="1" val="0" stackOrder="#mCrit" stackType="mCritRate">
       <mul order="0x30" stat="mCritRate" val="#mCrit"/>
     </effect>
   </for>
   <enchant1for>
-    <effect name="Buff" time="#ench1time" count="1" val="0">
+    <effect name="Buff" time="#ench1time" count="1" val="0" stackOrder="4" stackType="mCritRate">
       <mul order="0x30" stat="mCritRate" val="4"/>
     </effect>
   </enchant1for>
