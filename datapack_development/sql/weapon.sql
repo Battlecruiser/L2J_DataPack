@@ -965,7 +965,7 @@ INSERT INTO `weapon` VALUES
 (6586,'Basalt Battlehammer - HP Regeneration','rhand','true',1570,1,1,'adamantaite','s',281,20,'blunt',4,4.00000,0,0,0,379,0,132,-1,48800000,2440,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3569-1;'),
 (6587,'Imperial Staff - Empower','lrhand','true',910,1,1,'adamantaite','s',274,20,'bigblunt',4,4.00000,0,0,0,325,0,175,-1,48800000,2440,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3076-1;'),
 (6588,'Imperial Staff - MP Regeneration','lrhand','true',910,1,1,'adamantaite','s',274,20,'bigblunt',4,4.00000,0,0,0,325,0,175,-1,48800000,2440,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3576-1;'),
-(6589,'Imperial Staff - Magic Hold','lrhand','true',910,1,1,'adamantaite','s',274,20,'bigblunt',4,4.00000,0,0,0,325,0,175,-1,48800000,2440,'true','true','true','true',0,0,3577,1,30,0,0,0,0,'0-0;'),
+(6589,'Imperial Staff - Magic Hold','lrhand','true',910,1,1,'adamantaite','s',274,20,'bigblunt',4,4.00000,0,0,0,325,0,175,-1,48800000,2440,'true','true','true','true',0,0,3577,1,20,0,0,0,0,'0-0;'),
 (6590,'Angel Slayer - Crt. Damage','rhand','true',950,1,1,'adamantaite','s',246,5,'dagger',12,-3.00000,0,0,0,433,0,132,-1,48800000,2440,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3572-1;'),
 (6591,'Angel Slayer - HP Drain','rhand','true',950,1,1,'adamantaite','s',246,5,'dagger',12,-3.00000,0,0,0,433,0,132,-1,48800000,2440,'true','true','true','true',0,0,0,0,0,3022,7,20,0,'0-0;'),
 (6592,'Angel Slayer - Haste','rhand','true',950,1,1,'adamantaite','s',246,5,'dagger',12,-3.00000,0,0,0,433,0,132,-1,48800000,2440,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3037-4;'),
