@@ -1549,7 +1549,7 @@ INSERT INTO `weapon` VALUES
 (9445,'Dynasty Bow','lrhand','true',1520,1,1,'wood','s80',634,0,'bow',12,-3.00000,0,0,0,293,9,140,-1,0,6132,'true','true','true','true',0,0,0,0,0,0,0,0,9384,'0-0;'),
 (9446,'Dynasty Knife','rhand','true',1520,1,1,'wood','s80',269,0,'dagger',12,-3.00000,0,0,0,433,0,140,-1,0,6132,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (9447,'Dynasty Halberd','lrhand','true',2010,1,1,'wood','s80',307,0,'pole',8,-3.00000,0,0,0,325,0,140,-1,0,6132,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
-(9448,'Dynasty Cudgel','rhand','true',1740,1,1,'wood','s80',307,0,'blunt',4,4.00000,0,0,0,379,0,140,-1,0,6132,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
+(9448,'Dynasty Cudgel','rhand','true',1740,1,1,'wood','s80',307,0,'blunt',4,4.00000,0,0,0,379,0,151,-1,0,6132,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (9449,'Dynasty Mace','rhand','true',1080,1,1,'wood','s80',246,0,'bigblunt',4,4.00000,0,0,0,379,0,186,-1,0,6132,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (9450,'Dynasty Bagh-Nakh','lrhand','true',1550,1,1,'wood','s80',374,0,'dualfist',4,4.00000,0,0,0,325,0,140,-1,0,6132,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (9529,'Sealed Dynasty Shield','lhand','true',1370,0,0,'wood','s80',0,0,'none',0,0.00000,-8,305,20,0,0,0,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
