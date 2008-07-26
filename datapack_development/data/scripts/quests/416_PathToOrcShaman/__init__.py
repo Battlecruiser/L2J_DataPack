@@ -65,7 +65,7 @@ class Quest (JQuest) :
             else:
               htmltext = "30585-02.htm"
           else:
-            if player.getLevel()<18 :
+            if player.getLevel()<19 :
               htmltext = "30585-03.htm"
             else:
               if st.getQuestItemsCount(MASK_OF_MEDIUM) != 0 :
