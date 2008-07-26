@@ -6,6 +6,7 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 from net.sf.l2j.gameserver.serverpackets import SocialAction
+from net.sf.l2j.gameserver.templates import L2WeaponType
 
 qn = "415_PathToOrcMonk"
 
@@ -51,7 +52,7 @@ class Quest (JQuest) :
               htmltext = "30587-02.htm"
               st.exitQuest(1)
           else:
-            if player.getLevel()<18 :
+            if player.getLevel()<19 :
               htmltext = "30587-03.htm"
             else:
               if st.getQuestItemsCount(KHAVATARI_TOTEM) != 0 :

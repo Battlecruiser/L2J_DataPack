@@ -86,7 +86,7 @@ class Quest (JQuest) :
          htmltext = "30570-02a.htm" 
        else: 
          htmltext = "30570-03.htm" 
-     elif playerLvl < 18 and playerClassID == 0x2c : 
+     elif playerLvl < 19 and playerClassID == 0x2c : 
        htmltext = "30570-02.htm" 
      elif playerLvl >= 18 and playerClassID == 0x2c and st.getQuestItemsCount(MARK_OF_RAIDER) == 1 : 
        htmltext = "30570-04.htm" 
