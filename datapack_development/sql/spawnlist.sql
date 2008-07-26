@@ -40293,7 +40293,9 @@ INSERT INTO spawnlist VALUES
 (null,'TEMP Divine Emissary',1,27323,96199,77001,-3574,0,0,275,60,0,0),
 (null,'TEMP Divine Emissary',1,27323,95999,76801,-3574,0,0,275,60,0,0),
 (null,'TEMP Divine Emissary',1,27323,96399,76801,-3574,0,0,275,60,0,0);
+
 -- Extra Skeleton Archers (Ky6uk)
+INSERT INTO spawnlist VALUES 
 (null,'gludio29_2125_10',1,20100,42492,245216,-6462,0,0,54994,60,0,0),
 (null,'gludio29_2125_10',1,20100,42445,245582,-6462,0,0,56984,60,0,0),
 (null,'gludio29_2125_10',1,20100,43261,245177,-6462,0,0,23491,60,0,0),
