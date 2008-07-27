@@ -23,7 +23,7 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
      htmltext = event
      player = st.getPlayer()
-     pass = st.getInt("pass")
+     passwrd = st.getInt("pass")
      if event == "32138-03.htm" :
        st.set("cond","1")
        st.setState(State.STARTED)
@@ -35,16 +35,16 @@ class Quest (JQuest) :
      elif event == "32255-03.htm" :
        st.set("pass","0")
      elif event == "32255-04a.htm" :
-       st.set("pass",str(pass+1))
+       st.set("pass",str(passwrd+1))
        htmltext = "32255-04.htm"
      elif event == "32255-05a.htm" :
-       st.set("pass",str(pass+1))
+       st.set("pass",str(passwrd+1))
        htmltext = "32255-05.htm"
      elif event == "32255-06a.htm" :
-       st.set("pass",str(pass+1))
+       st.set("pass",str(passwrd+1))
        htmltext = "32255-06.htm"
      elif event == "32255-07a.htm" :
-       st.set("pass",str(pass+1))
+       st.set("pass",str(passwrd+1))
        if st.getInt("pass") != 4:
           return "32255-07.htm"
      elif event == "32255-12.htm" :
@@ -54,16 +54,16 @@ class Quest (JQuest) :
      elif event == "32256-03.htm" :
        st.set("pass","0")
      elif event == "32256-04a.htm" :
-       st.set("pass",str(pass+1))
+       st.set("pass",str(passwrd+1))
        htmltext = "32256-04.htm"
      elif event == "32256-05a.htm" :
-       st.set("pass",str(pass+1))
+       st.set("pass",str(passwrd+1))
        htmltext = "32256-05.htm"
      elif event == "32256-06a.htm" :
-       st.set("pass",str(pass+1))
+       st.set("pass",str(passwrd+1))
        htmltext = "32256-06.htm"
      elif event == "32256-07a.htm" :
-       st.set("pass",str(pass+1))
+       st.set("pass",str(passwrd+1))
        if st.getInt("pass") != 4:
           return "32256-07.htm"
      elif event == "32256-13.htm" :
@@ -73,19 +73,19 @@ class Quest (JQuest) :
      elif event == "32257-03.htm" :
        st.set("pass","0")
      elif event == "32257-04a.htm" :
-       st.set("pass",str(pass+1))
+       st.set("pass",str(passwrd+1))
        htmltext = "32257-04.htm"
      elif event == "32257-05a.htm" :
-       st.set("pass",str(pass+1))
+       st.set("pass",str(passwrd+1))
        htmltext = "32257-05.htm"
      elif event == "32257-06a.htm" :
-       st.set("pass",str(pass+1))
+       st.set("pass",str(passwrd+1))
        htmltext = "32257-06.htm"
      elif event == "32257-07a.htm" :
-       st.set("pass",str(pass+1))
+       st.set("pass",str(passwrd+1))
        htmltext = "32257-07.htm"
      elif event == "32257-08a.htm" :
-       st.set("pass",str(pass+1))
+       st.set("pass",str(passwrd+1))
        if st.getInt("pass") != 5:
           return "32257-08.htm"
      elif event == "32257-11.htm" :
