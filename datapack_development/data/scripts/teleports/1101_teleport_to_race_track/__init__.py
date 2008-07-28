@@ -51,10 +51,14 @@ class Quest (JQuest) :
    ############################
    # Monster Derby Race Track #
    ############################
-   elif st.getState() == State.STARTED and npcId == RACE_MANAGER:
-     # back to start location
-     return_id = st.getInt("id") - 1
-     st.getPlayer().teleToLocation(RETURN_LOCS[return_id][0],RETURN_LOCS[return_id][1],RETURN_LOCS[return_id][2])
+   elif npcId == RACE_MANAGER:
+     if st.getState() == State.STARTED and st.getInt("id") :
+        # back to start location
+        return_id = st.getInt("id") - 1
+        st.getPlayer().teleToLocation(RETURN_LOCS[return_id][0],RETURN_LOCS[return_id][1],RETURN_LOCS[return_id][2])
+     else:
+        # no base location founded, teleport him to nearest race GK
+        st.getPlayer().teleToLocation(12882,181053,-3560)
      st.exitQuest(1)
    return
 
