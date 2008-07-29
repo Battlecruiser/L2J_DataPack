@@ -339,7 +339,7 @@ class Quest (JQuest) :
                     if st.getQuestItemsCount(drop) == MAX :
                       item = 0
                   chance = Chance[npcId]
-                  elif id == 2 and item != 0 :
+                  if id == 2 and item != 0 :
                       giveReward(st,item,chance,MAX,drop)
               elif npcId in Varka_Silenos :
                   decreaseAlliance(st)
