@@ -138,7 +138,7 @@ class Quest (JQuest) :
                 st.addExpAndSp(189831,21526)
         elif npcId == Kekropus :
             if cond == 1 :
-                htmltext = "<html><body>Hierarch Kekropus:<br>"+ player.getName() +" Ah, it's you. What brings you here to me?<br><a action=\"bypass -h Quest 65_CertifiedSoulBreaker 32138-01.htm\">I want to walk the path of a Soul Breaker. </a></body></html>"
+                htmltext = "32138-00.htm"
             elif cond == 2 :
                 htmltext = "32138-04.htm"
             elif cond == 14 :
