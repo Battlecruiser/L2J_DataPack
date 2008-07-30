@@ -45,7 +45,7 @@ class Quest (JQuest) :
    if event == "Icicle Emperor Bumbalump has despawned" :
       npc.reduceCurrentHp(9999999,npc)
       FindTemplate(TABLE).setBusy(False)
-      AutoChat(npc,"May the gods forever condemn you! Your power weakens!")
+      AutoChat(npc,"The good fragrant flavor...")
       return
    st = player.getQuestState(qn)
    if not st: return
@@ -72,7 +72,7 @@ class Quest (JQuest) :
            npc.setBusy(True)
            st.set("cond","2")
            self.startQuestTimer("Icicle Emperor Bumbalump has despawned",1200000,spawnId,None)
-           AutoChat(spawnId,"I will crush you!")
+           AutoChat(spawnId,"not!")
    elif event == "31521-04.htm" :
       if st.getQuestItemsCount(MEAT) >= 1 :
          st.takeItems(MEAT,1)
@@ -113,7 +113,7 @@ class Quest (JQuest) :
                spawnId = st.addSpawn(BUMPALUMP,158240,-121536,-2253)
                npc.setBusy(True)
                self.startQuestTimer("Icicle Emperor Bumbalump has despawned",1200000,spawnId,None)
-               AutoChat(spawnId,"I will crush you!")
+               AutoChat(spawnId,"not!")
      elif cond == 3 :
        if npcId == JEREMY :
          htmltext = "31521-03.htm"

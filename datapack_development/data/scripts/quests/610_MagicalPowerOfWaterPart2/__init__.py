@@ -48,7 +48,7 @@ class Quest (JQuest) :
    if event == "Soul of Water Ashutar has despawned" :
        npc.reduceCurrentHp(9999999,npc)
        FindTemplate(Alter).setBusy(False)
-       AutoChat(npc,"May the gods forever condemn you! Udan Mardui, your power weakens!") #this is only a temp message until we find out what it actually is! string = 61051
+       AutoChat(npc,"The fetter strength is weaken Your consciousness has been defeated!")
        return
    st = player.getQuestState(qn)
    if not st: return
@@ -94,7 +94,7 @@ class Quest (JQuest) :
            npc.setBusy(True)
            st.set("cond","2")
            self.startQuestTimer("Soul of Water Ashutar has despawned",1200000,spawnedNpc,None)
-           AutoChat(spawnedNpc,"Hey! I'll kick your arse!")#this is only a temp message until we find out what it actually is! string = 61050
+           AutoChat(spawnedNpc,"The water charm then is the storm and the tsunami strength! Opposes with it only has the blind alley!")
    return htmltext
 
  def onTalk (self, npc, player):
@@ -127,7 +127,7 @@ class Quest (JQuest) :
                 spawnedNpc = st.addSpawn(Ashutar,104825,-36926,-1136)
                 npc.setBusy(True)
                 self.startQuestTimer("Soul of Water Ashutar has despawned",1200000,spawnedNpc,None)
-                AutoChat(spawnedNpc,"Hey! I'll kick your arse!")#this is only a temp message until we find out what it actually is! string = 61050
+                AutoChat(spawnedNpc,"The water charm then is the storm and the tsunami strength! Opposes with it only has the blind alley!")
         elif id == 3 :
             htmltext = "31560-05.htm"
     return htmltext
