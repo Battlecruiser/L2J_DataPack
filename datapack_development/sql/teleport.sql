@@ -732,4 +732,12 @@ INSERT INTO teleport VALUES
 ('Soul Harbor -> Nornil\'s Garden',12057,-119534,87176,-12593,0,0),
 ('Nornil\'s Garden -> Soul Harbor',12058,-73494,53507,-3680,0,0),
 ('Underground Coliseum -> Fantasy Isle',12059,-59224,-56837,-2032,0,0),
-('Fantasy Isle -> Underground Coliseum',12060,-81490,-49167,-10352,0,0);
+('Fantasy Isle -> Underground Coliseum',12060,-81490,-49167,-10352,0,0),
+('Clan Hall Schuttgart -> Village Square',12061,87379,-142322,-1336,0,0),
+('Clan Hall Schuttgart -> West Gate Entrance',12062,84753,-141051,-1536,0,0),
+('Clan Hall Schuttgart -> South Gate Entrance',12063,87343,-139802,-1536,0,0),
+('Clan Hall Schuttgart -> East Gate Entrance',12064,89959,-141034,-1536,0,0),
+('Clan Hall Schuttgart -> Crypt of Disgrace',12065,47692,-115745,-3744,500,0),
+('Clan Hall Schuttgart -> Plunderous Plains',12066,111965,-154172,-1528,500,0),
+('Clan Hall Schuttgart -> Den of Evil',12067,68693,-110438,-1904,500,0),
+('Clan Hall Schuttgart -> Frozen Labyrinth',12068,113903,-108752,-848,500,0);
