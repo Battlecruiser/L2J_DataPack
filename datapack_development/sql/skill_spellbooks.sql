@@ -385,7 +385,7 @@ INSERT INTO `skill_spellbooks` VALUES
 (1452,10099), -- Spellbook: Count of Fire
 (499,10079), -- Battle Manual: Courage
 (513,10057), -- Battle Manual: Create Dark Seed
-(621,10083), -- Battle Manual: Create Special Bolt
+(621,10183), -- Battle Manual: Create Special Bolt
 (497,10038), -- Battle Manual: Crushing Pain
 (524,10065), -- Battle Manual: Cure Dark Seed
 (1439,10048), -- Battle Manual: Curse of Divinity
