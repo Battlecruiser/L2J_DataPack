@@ -265,7 +265,7 @@ class Quest (JQuest) :
                     st.set("Die","1")
                     st.showQuestionMark(8)
                     st.onTutorialClientEvent(0)
-            elif event_id == 2144337408 : #TODO: retail id isnt matching, test one by one to find proper one X_x
+            elif event_id == 800000 :
                 if playerLevel < 6 and st.getInt("sit") == 0:
                     st.playTutorialVoice("tutorial_voice_018")
                     st.playSound("ItemSound.quest_tutorial")
@@ -322,7 +322,7 @@ class Quest (JQuest) :
                     st.playSound("ItemSound.quest_tutorial")
                     st.set("HP","1")
                     st.showQuestionMark(10)
-                    st.onTutorialClientEvent(2144337408)
+                    st.onTutorialClientEvent(800000)
             elif event_id == 57 :
                 if playerLevel < 6 and st.getInt("Adena") == 0:
                     st.playTutorialVoice("tutorial_voice_012")
