@@ -48,7 +48,7 @@ DEAD = 2    # baium has been killed and has not yet spawned.  Entry is locked
 #       when they die. Not true with Baium. Once he gets attacked, the port to Baium closes. byebye,
 #       see you in 5 days.  If nobody attacks baium for 30 minutes, he auto-despawns and unlocks the 
 #       vortex
-class baium (JQuest):
+class Baium (JQuest):
 
   def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
@@ -172,7 +172,7 @@ class baium (JQuest):
     GrandBossManager.getInstance().setStatsSet(LIVE_BAIUM,info)
 
 # Quest class and state definition
-QUEST       = baium(-1, "baium", "ai")
+QUEST       = Baium(-1, "baium", "ai")
 
 # Quest NPC starter initialization
 QUEST.addStartNpc(STONE_BAIUM)
