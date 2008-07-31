@@ -217,7 +217,7 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != State.STARTED : return 
    # only fists/dual fists or bare hands are allowed
-   if player.getActiveWeaponItem() != null :
+   if player.getActiveWeaponItem() != None :
       if player.getActiveWeaponItem().getItemType() != L2WeaponType.FIST or player.getActiveWeaponItem().getItemType() != L2WeaponType.DUALFIST: return
    npcId = npc.getNpcId()
    if npcId == 20479 :
