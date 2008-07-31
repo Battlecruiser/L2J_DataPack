@@ -23,7 +23,7 @@ WAITING = 1     #Antharas is spawend and someone has entered, triggering a 30 mi
 FIGHTING = 2    #Antharas is engaged in battle, annihilating his foes. Entry is locked
 DEAD = 3        #Antharas has been killed. Entry is locked
 
-class antharas(JQuest) :
+class Antharas(JQuest) :
     def __init__(self,id,name,descr):
         JQuest.__init__(self,id,name,descr)
         self.lastAction = 0
@@ -147,7 +147,7 @@ class antharas(JQuest) :
         return
 
 # now call the constructor (starts up the ai)
-QUEST      = antharas(-1,"antharas","ai")
+QUEST      = Antharas(-1,"antharas","ai")
 
 QUEST.addKillId(ANTHARAS)
 QUEST.addAttackId(ANTHARAS)
