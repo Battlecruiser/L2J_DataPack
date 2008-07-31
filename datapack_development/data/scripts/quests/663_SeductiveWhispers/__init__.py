@@ -43,7 +43,7 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
    JQuest.__init__(self,id,name,descr)
-   self.questItemIds = [SPIRIT_BEAD]
+   self.questItemIds = []
 
  def onEvent (self,event,st) :
    htmltext = event

@@ -51,7 +51,7 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
    JQuest.__init__(self,id,name,descr)
-   self.questItemIds = [RED_GEM]
+   self.questItemIds = []
    self.games = {}
 
  def onEvent (self,event,st) :
