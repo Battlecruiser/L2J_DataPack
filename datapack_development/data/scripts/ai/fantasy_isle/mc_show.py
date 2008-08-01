@@ -274,13 +274,4 @@ class MC_Show(JQuest) :
        npc.deleteMe()
     return 
 
-# remove me
-  def onFirstTalk (self,npc,player):
-    return "htmltext.htm"
-
 QUEST       = MC_Show(-11, "MC_Show", "fantasy_isle")
-
-# remove me
-QUEST.addStartNpc(25542)
-QUEST.addFirstTalkId(25542)
-QUEST.addTalkId(25542)
