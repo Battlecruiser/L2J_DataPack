@@ -159,7 +159,7 @@ class MC_Show(JQuest) :
   def onAdvEvent (self,event,npc,pc) :
     if event == "timer_check" :
        gameTime = GameTimeController.getInstance().getGameTime()
-       h = gameTime/60
+       h = (gameTime/60)%24
        m = gameTime%60
        if h == 20 and m >= 27 and m <= 33:
           self.startQuestTimer("Start",100, None, None)
