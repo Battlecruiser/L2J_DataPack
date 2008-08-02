@@ -391,12 +391,12 @@
   <set name="mpConsume" val="284"/>
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="20"/> 
-  <set name="power" val="800.0"/>
+  <set name="power" val="800"/>
   <set name="target" val="TARGET_CLAN"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="200000"/> <!-- Guessing -->
   <set name="hitTime" val="2500"/>
-  <set name="skillType" val="BUFF"/> <!-- Needs core support for CP Heal & Buff at once, this should be COMBATPOINTHEAL -->
+  <set name="skillType" val="COMBATPOINTHEAL"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
