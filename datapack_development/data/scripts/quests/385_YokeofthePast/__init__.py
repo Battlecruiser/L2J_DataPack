@@ -64,12 +64,13 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
      JQuest.__init__(self,id,name,descr)
-     self.questItemIds = [ANCIENT_SCROLL]
+     self.questItemIds = []
 
  def onEvent (self,event,st) :
     htmltext = event
     if event == "14.htm" :
       st.setState(State.STARTED)
+      st.playSound("ItemSound.quest_accept")
       st.set("cond","1")
     elif event == "17.htm" :
       st.playSound("ItemSound.quest_finish")
@@ -84,18 +85,14 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
    if id == State.CREATED :
-       htmltext = "10.htm"
-       st.playSound("ItemSound.quest_accept")
-       st.set("cond","0")
+     htmltext = "10.htm"
    elif st.getInt("cond") == 1 and st.getQuestItemsCount(ANCIENT_SCROLL) == 0 :
-       htmltext = "16.htm"
-   elif st.getInt("cond") == 1 and st.getQuestItemsCount(ANCIENT_SCROLL):
-       htmltext = "16.htm"
-       numancientscrolls = st.getQuestItemsCount(ANCIENT_SCROLL)
-       st.giveItems(5965,numancientscrolls)
-       st.takeItems(ANCIENT_SCROLL,-1)
-   else:
-     st.exitQuest(1)  # cond is always 1 if he acceptet the quest, but we have no way to check if he hasnt the quest, so we delete it if he didnt accept by first talk
+     htmltext = "16.htm"
+   elif st.getInt("cond") == 1 and st.getQuestItemsCount(ANCIENT_SCROLL) :
+     numancientscrolls = st.getQuestItemsCount(ANCIENT_SCROLL)
+     st.giveItems(5965,numancientscrolls)
+     st.takeItems(ANCIENT_SCROLL,-1)
+     htmltext = "16.htm"
    return htmltext
 
  def onKill(self,npc,player,isPet):
