@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?> 
+<?xml version='1.0' encoding='utf-8'?>
 <list> 
 <item id='10527' name="Dynasty Staff - Mana Up"> 
   <for> 
@@ -46,7 +46,7 @@
    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/> 
   </for> 
 </item> 
-<item id='10530' name="Dynasty Crusher - Anger"> 
+<item id='10530' name="Dynasty Crusher - Anger">
   <for> 
    <set val='307' order='0x08' stat='pAtk'/> 
    <set val='140' order='0x08' stat='mAtk'/> 
@@ -62,7 +62,7 @@
    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/> 
   </for> 
 </item> 
-<item id='10531' name="Dynasty Crusher - Health"> 
+<item id='10531' name="Dynasty Crusher - Health">
   <for> 
    <set val='307' order='0x08' stat='pAtk'/> 
    <set val='140' order='0x08' stat='mAtk'/> 
@@ -86,14 +86,11 @@
    <enchant val='0' order='0x0C' stat='pAtk'/> 
    <enchant val='0' order='0x0C' stat='mAtk'/> 
    <!-- SA: Rsk. Focus --> 
-   <add order='0x40' stat='rEvas' val='164'/> 
-   <mul val='0.60' order='0x30' stat='maxHp'/> 
-   <!--   SA: Rsk. Focus Old one 
-   <add order='0x40' stat='rEvas' val='164'> 
+   <add order='0x40' stat='rCrit' val='164'>
       <and>        
          <player hp='60'/> 
       </and> 
-   </add> --> 
+   </add>
       <!-- Enhances damage to target during PvP --> 
    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/> 
    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/> 

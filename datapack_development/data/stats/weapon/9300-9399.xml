@@ -1098,11 +1098,11 @@
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
       	<!-- SA: Cheap Shot -->
-   <sub val='1' order='0x40' stat='MpConsume'> 
+   <mul val='0.88' order='0x40' stat='MpConsume'>
       <and>
-         <game skill="false" chance="12"/> 
-      </and> 
-   </sub>
+         <game skill="false" chance="12"/>
+      </and>
+   </mul>
     <!-- Enhances damage to target during PvP -->
    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
@@ -1117,7 +1117,7 @@
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
        <!-- SA: Guidance -->
-    <add val='3.4' order='0x40' stat='accCombat'/>
+    <add val='5.32' order='0x40' stat='accCombat'/>
 	       <!-- Enhances damage to target during PvP -->
    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
