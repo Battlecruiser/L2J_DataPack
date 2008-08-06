@@ -392,6 +392,7 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_buy','1'),
 ('admin_create_item','1'),
 ('admin_itemcreate','1'),
+('admin_manualhero','1'),
 ('admin_pledge','1'),
 ('admin_set','1'),
 ('admin_set_menu','1'),
