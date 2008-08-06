@@ -1047,6 +1047,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="0x7fffffff" name="MpConsumePerLevel" time="3" val="0.5">
+      <add order="0x40" stat="reflectDam" val="30"/>
       <add order="0x40" stat="reflectSkillPhysic" val="30"/>
       <add order="0x40" stat="reflectSkillMagic" val="30"/>
       <mul order="0x30" stat="pAtkSpd" val="0.8"/>
