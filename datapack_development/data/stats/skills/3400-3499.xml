@@ -105,8 +105,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <sub order="0x40" stat="CON" val="1"/> <!-- CON -1 -->
-    <add order="0x40" stat="STR" val="1"/> <!-- STR +1 -->
+    <sub order="0x40" stat="CON" val="1"/> <!-- Con -1 -->
+    <add order="0x40" stat="STR" val="1"/> <!-- Str +1 -->
     <mul order="0x30" stat="pDef" val="1.046"/> <!-- P. Def +4.6% -->
     <add order="0x40" stat="maxHp" val="418"/> <!-- MaxHP +418 -->
     <mul order="0x30" stat="darkVuln" val="0.94"/> <!-- Darkness Resistance +6 -->
@@ -121,28 +121,47 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <sub order="0x40" stat="CON" val="1"/> <!-- CON -1 -->
-    <add order="0x40" stat="DEX" val="1"/> <!-- DEX +1 -->
+    <sub order="0x40" stat="CON" val="1"/> <!-- Con -1 -->
+    <add order="0x40" stat="DEX" val="1"/> <!-- Dex +1 -->
     <add order="0x40" stat="accCombat" val="1.72"/> <!-- Accuracy +1.72 -->
     <add order="0x40" stat="rEvas" val="1.72"/> <!-- Evacion +1.72 -->
     <add order="0x40" stat="maxHp" val="418"/> <!-- MaxHP +418 -->
     <mul order="0x30" stat="darkVuln" val="0.94"/> <!-- Darkness Resistance +6 -->
   </for>
 </skill>
-<skill id="3414" levels="1" name="Dynasty Leather Armor">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="3414" levels="1" name="Dynasty Leather Armor - Force Master">
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x40" stat="STR" val="1"/> <!-- Str +1 -->
+    <add order="0x40" stat="DEX" val="1"/> <!-- Dex +1 -->
+    <sub order="0x40" stat="CON" val="2"/> <!-- Con -2 -->
+    <mul order="0x30" stat="pAtk" val="1.054"/> <!-- P. Atk. +5.4% -->
+    <add order="0x40" stat="maxHp" val="492"/> <!-- Maximum HP +492 effect -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Darkness resistance is increased by +8 -->
+    <mul order="0x30" stat="MpConsumeRate" val="0.97"/> <!-- MP consumption of the active skill is decreased +? --> <!-- Guessing -->
   </for>
 </skill>
-<skill id="3415" levels="1" name="Dynasty Leather Armor">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="3415" levels="1" name="Dynasty Leather Armor - Weapon Master">
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x40" stat="CON" val="2"/> <!-- Con -2 -->
+    <add order="0x40" stat="STR" val="2"/> <!-- Str +2 -->
+    <mul order="0x30" stat="pAtk" val="1.054"/> <!-- P. Atk +5.4% -->
+    <add order="0x40" stat="maxHp" val="492"/> <!-- MaxHP +492 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Increase Darkness Resistance +8 -->
+    <basemul order="0x30" stat="rCrit" val="0.03"/> <!-- Critical Damage Chance +? --> <!-- Guessing -->
   </for>
 </skill>
 <skill id="3416" levels="1" name="Dynasty Tunic">
@@ -154,8 +173,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <sub order="0x40" stat="INT" val="1"/> <!-- INT -1 -->
-    <add order="0x40" stat="MEN" val="1"/> <!-- MEN +1 -->
+    <sub order="0x40" stat="INT" val="1"/> <!-- Int -1 -->
+    <add order="0x40" stat="MEN" val="1"/> <!-- Men +1 -->
     <mul order="0x30" stat="mAtkSpd" val="1.12"/> <!-- Casting Spd +12% -->
     <add order="0x40" stat="maxMp" val="257"/> <!-- Maximum MP +257 -->
     <mul order="0x30" stat="darkVuln" val="0.94"/> <!-- Darkness Resistance +6 -->
@@ -189,12 +208,22 @@
   <for>
   </for>
 </skill>
-<skill id="3420" levels="1" name="Dynasty Leather Armor">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="3420" levels="1" name="Dynasty Leather Armor - Summoner">
+  <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x40" stat="STR" val="2"/> <!-- Str -2 -->
+    <add order="0x40" stat="CON" val="2"/> <!-- Con +2 -->
+    <mul order="0x30" stat="pAtkSpd" val="1.03"/> <!-- increase Atk. Spd. +? --> <!-- Guessing -->
+    <add order="0x40" stat="maxHp" val="492"/> <!-- MaxHP +492 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Increase Darkness Resistance +8 -->
+    <mul order="0x30" stat="pAtk" val="1.03"/> <!-- increase P. Atk. +? --> <!-- Guessing -->
+    <mul order="0x30" stat="pDef" val="1.03"/> <!-- P. Def. +? --> <!-- Guessing -->
   </for>
 </skill>
 <skill id="3421" levels="1" name="Wolf Mount">
