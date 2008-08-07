@@ -56,6 +56,7 @@ class Quest (JQuest) :
        htmltext = "30867-10.htm"
        if urn > 0:
            st.giveItems(57,urn*1000)
+           st.takeItems(URN,urn)
        st.exitQuest(1)
      elif event == "APPR" :
        if not porcelain :
@@ -81,10 +82,7 @@ class Quest (JQuest) :
      cond = st.getInt("cond")
      urn = st.getQuestItemsCount(URN)
      porcelain = st.getQuestItemsCount(PORCELAIN)
-     if id == State.COMPLETED :
-       htmltext = "<html><body>This quest has already been completed.</body></html>"
-
-     elif id == State.CREATED and npcId == REVA :
+     if id == State.CREATED and npcId == REVA :
        if player.getLevel() < 59 :
          htmltext = "30867-01.htm"
          st.exitQuest(1)
