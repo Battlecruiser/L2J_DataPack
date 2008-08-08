@@ -4,6 +4,7 @@
 import sys
 from net.sf.l2j.gameserver.ai import CtrlIntention
 from net.sf.l2j.gameserver.datatables import SkillTable
+from net.sf.l2j.gameserver.datatables import SpawnTable
 from net.sf.l2j.gameserver.instancemanager import GrandBossManager
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
