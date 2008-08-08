@@ -1,14 +1,16 @@
-# version 0.1
+# version 0.2
 # by Fulminus
 
 import sys
 from net.sf.l2j.gameserver.ai import CtrlIntention
+from net.sf.l2j.gameserver.datatables import SkillTable
 from net.sf.l2j.gameserver.instancemanager import GrandBossManager
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 from net.sf.l2j.gameserver.serverpackets import SocialAction
 from net.sf.l2j.gameserver.serverpackets import Earthquake
+from net.sf.l2j.gameserver.serverpackets import NpcSay
 from net.sf.l2j.gameserver.serverpackets import PlaySound
 from net.sf.l2j.util import Rnd
 from java.lang import System
@@ -16,6 +18,7 @@ from java.lang import System
 STONE_BAIUM = 29025
 ANGELIC_VORTEX = 31862
 LIVE_BAIUM = 29020
+ARCHANGEL = 29021
 
 #Baium status tracking
 ASLEEP = 0  # baium is in the stone version, waiting to be woken up.  Entry is unlocked
@@ -48,6 +51,16 @@ DEAD = 2    # baium has been killed and has not yet spawned.  Entry is locked
 #       when they die. Not true with Baium. Once he gets attacked, the port to Baium closes. byebye,
 #       see you in 5 days.  If nobody attacks baium for 30 minutes, he auto-despawns and unlocks the 
 #       vortex
+
+def FindTemplate (npcId) :
+    npcinstance = 0
+    for spawn in SpawnTable.getInstance().getSpawnTable().values():
+        if spawn :
+            if spawn.getNpcid() == npcId:
+                npcinstance=spawn.getLastSpawn()
+                break
+    return npcinstance
+
 class Baium (JQuest):
 
   def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
@@ -95,11 +108,35 @@ class Baium (JQuest):
       if npc.getNpcId() == LIVE_BAIUM :
         npc.broadcastPacket(SocialAction(npc.getObjectId(),1))
         npc.broadcastPacket(Earthquake(npc.getX(), npc.getY(), npc.getZ(),40,5))
+        npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getNpcId(),"Dares to awaken by noise me! Dies!"))
         # start monitoring baium's inactivity
         self.lastAttackVsBaiumTime = System.currentTimeMillis()
         self.startQuestTimer("baium_despawn", 60000, npc, None, True)
-        # TODO: the person who woke baium up should be knocked across the room, onto a wall, and
-        # lose massive amounts of HP.
+        if player :
+           skill = SkillTable.getInstance().getInfo(4136,1)
+           if skill != None :
+              skill.getEffects(npc, player)
+              player.teleToLocation(115910,17337,10105)
+        self.startQuestTimer("spawn_angels", 8000, npc, None)
+    elif event == "archangel" and npc:
+       status = GrandBossManager.getInstance().getBossStatus(LIVE_BAIUM)
+       if status == AWAKE :
+          timer = (5000 + (Rnd.get(5) * 1000))
+          self.startQuestTimer("archangel", timer, npc, None)
+          for player in npc.getKnownList().getKnownPlayers().values() :
+              if player:
+                  hate = ((npc.getCurrentHp() / npc.getMaxHp())/0.05)*100
+                  npc.addDamageHate(player,0,int(hate))
+       else :
+          npc.deleteMe()
+    elif event == "spawn_angels":
+          npc1 = self.addSpawn(ARCHANGEL,115792,16608,10136,0,False,0)
+          npc2 = self.addSpawn(ARCHANGEL,115168,17200,10136,0,False,0)
+          npc3 = self.addSpawn(ARCHANGEL,115780,15564,10136,0,False,0)
+          npc4 = self.addSpawn(ARCHANGEL,114880,16236,10136,0,False,0)
+          npc5 = self.addSpawn(ARCHANGEL,114239,17168,10136,0,False,0)
+          for i in [npc1,npc2,npc3,npc4,npc5]:
+             i.setRunning()
     # despawn the live baium after 30 minutes of inactivity
     # also check if the players are cheating, having pulled Baium outside his zone...
     elif event == "baium_despawn" and npc:
@@ -133,7 +170,7 @@ class Baium (JQuest):
         baium = self.addSpawn(LIVE_BAIUM,npc)
         GrandBossManager.getInstance().addBoss(baium)
         baium.broadcastPacket(SocialAction(baium.getObjectId(),2))
-        self.startQuestTimer("baium_wakeup",15000, baium, None)
+        self.startQuestTimer("baium_wakeup",15000, baium, player)
       else:
         htmltext = "Conditions are not right to wake up Baium"
     elif npcId == ANGELIC_VORTEX :
@@ -154,23 +191,42 @@ class Baium (JQuest):
     return htmltext
     
   def onAttack(self, npc, player, damage, isPet) :
-    # update a variable with the last action against baium
-    self.lastAttackVsBaiumTime = System.currentTimeMillis()
+    if npc.getNpcId() == ARCHANGEL:
+       if Rnd.get(100) < 10 :
+          skill = SkillTable.getInstance().getInfo(4132,1)
+          if skill != None :
+             skill.getEffects(npc, player)
+       if Rnd.get(100) < 5 and ((npc.getCurrentHp() / npc.getMaxHp())*100) < 50:
+          skill = SkillTable.getInstance().getInfo(4133,1)
+          if skill != None :
+             skill.getEffects(npc, npc)
+    else:
+      # update a variable with the last action against baium
+      self.lastAttackVsBaiumTime = System.currentTimeMillis()
     
   def onKill(self,npc,player,isPet):
-    self.cancelQuestTimer("baium_despawn", npc, None)    
-    npc.broadcastPacket(PlaySound(1, "BS01_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()))
-    # spawn the "Teleportation Cubic" for 15 minutes (to allow players to exit the lair)
-    self.addSpawn(29055,115203,16620,10078,0,False,900000) ##should we teleport everyone out if the cubic despawns??
-    # "lock" baium for 5 days and 1 to 8 hours [i.e. 432,000,000 +  1*3,600,000 + random-less-than(8*3,600,000) millisecs]
-    respawnTime = long((121 + Rnd.get(8)) * 3600000)
-    GrandBossManager.getInstance().setBossStatus(LIVE_BAIUM,DEAD)
-    self.startQuestTimer("baium_unlock", respawnTime, None, None)
-    # also save the respawn time so that the info is maintained past reboots
-    info = GrandBossManager.getInstance().getStatsSet(LIVE_BAIUM)
-    info.set("respawn_time",(long(System.currentTimeMillis()) + respawnTime))
-    GrandBossManager.getInstance().setStatsSet(LIVE_BAIUM,info)
+   if npc.getNpcId() == ARCHANGEL:
+      status = GrandBossManager.getInstance().getBossStatus(LIVE_BAIUM)
+      if status == AWAKE and FindTemplate(ARCHANGEL) == 0:
+         self.startQuestTimer("spawn_angels", 300000, None, None)
+   else:
+      self.cancelQuestTimer("baium_despawn", npc, None)    
+      npc.broadcastPacket(PlaySound(1, "BS01_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()))
+      # spawn the "Teleportation Cubic" for 15 minutes (to allow players to exit the lair)
+      self.addSpawn(29055,115203,16620,10078,0,False,900000) ##should we teleport everyone out if the cubic despawns??
+      # "lock" baium for 5 days and 1 to 8 hours [i.e. 432,000,000 +  1*3,600,000 + random-less-than(8*3,600,000) millisecs]
+      respawnTime = long((121 + Rnd.get(8)) * 3600000)
+      GrandBossManager.getInstance().setBossStatus(LIVE_BAIUM,DEAD)
+      self.startQuestTimer("baium_unlock", respawnTime, None, None)
+      # also save the respawn time so that the info is maintained past reboots
+      info = GrandBossManager.getInstance().getStatsSet(LIVE_BAIUM)
+      info.set("respawn_time",(long(System.currentTimeMillis()) + respawnTime))
+      GrandBossManager.getInstance().setStatsSet(LIVE_BAIUM,info)
+   return
 
+  def onSpawn(self, npc) : 
+    self.startQuestTimer("archangel",5000, npc, None)
+    return
 # Quest class and state definition
 QUEST       = Baium(-1, "baium", "ai")
 
@@ -180,5 +236,8 @@ QUEST.addStartNpc(ANGELIC_VORTEX)
 QUEST.addTalkId(STONE_BAIUM)
 QUEST.addTalkId(ANGELIC_VORTEX)
 
+QUEST.addSpawnId(ARCHANGEL)
+QUEST.addKillId(ARCHANGEL)
+QUEST.addAttackId(ARCHANGEL)
 QUEST.addKillId(LIVE_BAIUM)
 QUEST.addAttackId(LIVE_BAIUM)
