@@ -151,6 +151,7 @@ class MC_Show(JQuest) :
      self.individuals = [32439,32440,32441]
      self.showstuff = [32424,32425,32426,32427,32428]
      self.startQuestTimer("timer_check",60000, None, None, True)
+     self.isSpawned = 0
 
   def AutoChat(self, npc,text,type) :
      sm = NpcSay(npc.getObjectId(), type, npc.getNpcId(), text)
@@ -172,7 +173,7 @@ class MC_Show(JQuest) :
        text,nextEvent,time=TALKS[event]
        self.AutoChat(npc,text,1)
        self.startQuestTimer(nextEvent,time, npc, None)
-    elif event in WALKS.keys() and npc:
+    elif event in WALKS.keys() and npc and self.isSpawned == 1:
        x,y,z,nextEvent,time=WALKS[event]
        npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, L2CharPosition(x,y,z,0))
        self.startQuestTimer(nextEvent,time, npc, None)
@@ -222,6 +223,7 @@ class MC_Show(JQuest) :
        self.startQuestTimer("npc7_1",4000, npc7, None)
        self.startQuestTimer("npc8_1",3000, npc8, None)
        self.startQuestTimer("npc9_1",3000, npc9, None)
+       self.isSpawned = 1
        for j in [npc,npc1,npc2,npc3,npc4,npc5,npc6,npc7,npc8,npc9]:
           self.startQuestTimer("11",100000, j, None)
     elif event == "11" and npc :
