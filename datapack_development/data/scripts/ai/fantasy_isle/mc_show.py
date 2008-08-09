@@ -271,8 +271,8 @@ class MC_Show(JQuest) :
     elif event in ["social1","social1_1"] and npc :
        npc.broadcastPacket(SocialAction(npc.getObjectId(),1))
     elif event == "clean_npc" and npc :
-       if npc.getNpcId() in [self.singers[0], self.singers[1]] :
-          self.cancelQuestTimer("social1", npc, None)
+       if npc.getNpcId() in [self.circus[0], self.circus[1], self.circus[2],self.circus[3],self.circus[4]] :
+          self.isSpawned = 0
        npc.deleteMe()
     return 
 
