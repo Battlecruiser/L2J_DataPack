@@ -258,7 +258,7 @@ class MC_Show(JQuest) :
        npc5 = self.addSpawn(self.showstuff[4],-56672,-56272,-2000,32768,False,0)
        for j in [npc1,npc2,npc3,npc4,npc5]:
           self.startQuestTimer("social1",5500, j, None)
-          self.startQuestTimer("social1",12500, j, None)
+          self.startQuestTimer("social1_1",12500, j, None)
           self.startQuestTimer("28",19700, j, None)
     elif event == "28" and npc :
        self.AutoChat(npc,"We love you.",0)
@@ -268,9 +268,11 @@ class MC_Show(JQuest) :
        npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, L2CharPosition(-56730,-56340,-2008,32768))
        self.startQuestTimer("clean_npc",4100, npc, None)
        self.startQuestTimer("timer_check",60000, None, None, True)
-    elif event == "social1" and npc :
+    elif event in ["social1","social1_1"] and npc :
        npc.broadcastPacket(SocialAction(npc.getObjectId(),1))
     elif event == "clean_npc" and npc :
+       if npc.getNpcId() in [self.singers[0], self.singers[1]] :
+          self.cancelQuestTimer("social1", npc, None)
        npc.deleteMe()
     return 
 
