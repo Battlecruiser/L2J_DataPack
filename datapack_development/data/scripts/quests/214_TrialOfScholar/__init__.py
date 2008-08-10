@@ -44,13 +44,13 @@ class Quest (JQuest) :
     elif event == "30461_1" :
           if st.getPlayer().getLevel()<36 :
             htmltext = "30461-09.htm"
-            st.takeItems(SYMBOL_OF_JUREK_ID,1)
-            st.takeItems(MIRIENS_SIGIL2_ID,1)
+            st.takeItems(SYMBOL_OF_JUREK_ID,-1)
+            st.takeItems(MIRIENS_SIGIL2_ID,-1)
             st.giveItems(MIRIENS_INSTRUCTION_ID,1)
           else:
             htmltext = "30461-10.htm"
-            st.takeItems(SYMBOL_OF_JUREK_ID,1)
-            st.takeItems(MIRIENS_SIGIL2_ID,1)
+            st.takeItems(SYMBOL_OF_JUREK_ID,-1)
+            st.takeItems(MIRIENS_SIGIL2_ID,-1)
             st.giveItems(MIRIENS_SIGIL3_ID,1)
             st.playSound("ItemSound.quest_middle")
             st.set("cond","19")
@@ -62,7 +62,7 @@ class Quest (JQuest) :
           st.set("cond","2")
     elif event == "30608_1" :
           htmltext = "30608-02.htm"
-          st.takeItems(SYLVAINS_LETTER_ID,1)
+          st.takeItems(SYLVAINS_LETTER_ID,-1)
           st.giveItems(MARIAS_LETTER1_ID,1)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","3")
@@ -70,14 +70,14 @@ class Quest (JQuest) :
           htmltext = "30608-07.htm"
     elif event == "30608_3" :
           htmltext = "30608-08.htm"
-          st.takeItems(CRETAS_LETTER1_ID,1)
+          st.takeItems(CRETAS_LETTER1_ID,-1)
           st.giveItems(LUCILLAS_HANDBAG_ID,1)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","7")
     elif event == "30608_4" :
           htmltext = "30608-14.htm"
           st.takeItems(BROWN_SCROLL_SCRAP_ID,-1)
-          st.takeItems(CRETAS_PAINTING3_ID,1)
+          st.takeItems(CRETAS_PAINTING3_ID,-1)
           st.giveItems(CRYSTAL_OF_PURITY1_ID,1)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","13")
@@ -91,7 +91,7 @@ class Quest (JQuest) :
           st.set("cond","16")
     elif event == "30071_1" :
           htmltext = "30071-04.htm"
-          st.takeItems(CRETAS_PAINTING2_ID,1)
+          st.takeItems(CRETAS_PAINTING2_ID,-1)
           st.giveItems(CRETAS_PAINTING3_ID,1)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","10")
@@ -103,7 +103,7 @@ class Quest (JQuest) :
           htmltext = "30609-04.htm"
     elif event == "30609_4" :
           htmltext = "30609-05.htm"
-          st.takeItems(MARIAS_LETTER2_ID,1)
+          st.takeItems(MARIAS_LETTER2_ID,-1)
           st.giveItems(CRETAS_LETTER1_ID,1)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","6")
@@ -111,7 +111,7 @@ class Quest (JQuest) :
           htmltext = "30609-08.htm"
     elif event == "30609_6" :
           htmltext = "30609-09.htm"
-          st.takeItems(LUCILLAS_HANDBAG_ID,1)
+          st.takeItems(LUCILLAS_HANDBAG_ID,-1)
           st.giveItems(CRETAS_PAINTING1_ID,1)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","8")
@@ -119,7 +119,7 @@ class Quest (JQuest) :
           htmltext = "30609-13.htm"
     elif event == "30609_8" :
           htmltext = "30609-14.htm"
-          st.takeItems(DIETERS_KEY_ID,1)
+          st.takeItems(DIETERS_KEY_ID,-1)
           st.giveItems(CRETAS_LETTER2_ID,1)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","22")
@@ -149,13 +149,13 @@ class Quest (JQuest) :
           htmltext = "30610-13.htm"
     elif event == "30610_11" :
           htmltext = "30610-14.htm"
-          st.takeItems(SCRIPTURE_CHAPTER_1_ID,1)
-          st.takeItems(SCRIPTURE_CHAPTER_2_ID,1)
-          st.takeItems(SCRIPTURE_CHAPTER_3_ID,1)
-          st.takeItems(SCRIPTURE_CHAPTER_4_ID,1)
-          st.takeItems(CRONOS_SIGIL_ID,1)
-          st.takeItems(TRIFFS_RING_ID,1)
-          st.takeItems(DIETERS_DIARY_ID,1)
+          st.takeItems(SCRIPTURE_CHAPTER_1_ID,-1)
+          st.takeItems(SCRIPTURE_CHAPTER_2_ID,-1)
+          st.takeItems(SCRIPTURE_CHAPTER_3_ID,-1)
+          st.takeItems(SCRIPTURE_CHAPTER_4_ID,-1)
+          st.takeItems(CRONOS_SIGIL_ID,-1)
+          st.takeItems(TRIFFS_RING_ID,-1)
+          st.takeItems(DIETERS_DIARY_ID,-1)
           st.giveItems(SYMBOL_OF_CRONOS_ID,1)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","31")
@@ -167,7 +167,7 @@ class Quest (JQuest) :
           htmltext = "30111-04.htm"
     elif event == "30111_4" :
           htmltext = "30111-05.htm"
-          st.takeItems(CRONOS_LETTER_ID,1)
+          st.takeItems(CRONOS_LETTER_ID,-1)
           st.giveItems(DIETERS_KEY_ID,1)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","21")
@@ -175,20 +175,20 @@ class Quest (JQuest) :
           htmltext = "30111-08.htm"
     elif event == "30111_6" :
           htmltext = "30111-09.htm"
-          st.takeItems(CRETAS_LETTER2_ID,1)
+          st.takeItems(CRETAS_LETTER2_ID,-1)
           st.giveItems(DIETERS_LETTER_ID,1)
           st.giveItems(DIETERS_DIARY_ID,1)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","23")
     elif event == "30230_1" :
           htmltext = "30230-02.htm"
-          st.takeItems(DIETERS_LETTER_ID,1)
+          st.takeItems(DIETERS_LETTER_ID,-1)
           st.giveItems(RAUTS_LETTER_ENVELOPE_ID,1)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","24")
     elif event == "30316_1" :
           htmltext = "30316-02.htm"
-          st.takeItems(RAUTS_LETTER_ENVELOPE_ID,1)
+          st.takeItems(RAUTS_LETTER_ENVELOPE_ID,-1)
           st.giveItems(SCRIPTURE_CHAPTER_1_ID,1)
           st.giveItems(STRONG_LIQUOR_ID,1)
           st.playSound("ItemSound.quest_middle")
@@ -199,7 +199,7 @@ class Quest (JQuest) :
           htmltext = "30611-03.htm"
     elif event == "30611_3" :
           htmltext = "30611-04.htm"
-          st.takeItems(STRONG_LIQUOR_ID,1)
+          st.takeItems(STRONG_LIQUOR_ID,-1)
           st.giveItems(TRIFFS_RING_ID,1)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","26")
@@ -221,12 +221,12 @@ class Quest (JQuest) :
     elif event == "30612_3" :
           htmltext = "30612-07.htm"
           st.giveItems(SCRIPTURE_CHAPTER_4_ID,1)
-          st.takeItems(CASIANS_LIST_ID,1)
-          st.takeItems(GHOULS_SKIN_ID,st.getQuestItemsCount(GHOULS_SKIN_ID))
-          st.takeItems(MEDUSAS_BLOOD_ID,st.getQuestItemsCount(MEDUSAS_BLOOD_ID))
-          st.takeItems(FETTEREDSOULS_ICHOR_ID,st.getQuestItemsCount(FETTEREDSOULS_ICHOR_ID))
-          st.takeItems(ENCHT_GARGOYLES_NAIL_ID,st.getQuestItemsCount(ENCHT_GARGOYLES_NAIL_ID))
-          st.takeItems(POITANS_NOTES_ID,1)
+          st.takeItems(CASIANS_LIST_ID,-1)
+          st.takeItems(GHOULS_SKIN_ID,-1)
+          st.takeItems(MEDUSAS_BLOOD_ID,-1)
+          st.takeItems(FETTEREDSOULS_ICHOR_ID,-1)
+          st.takeItems(ENCHT_GARGOYLES_NAIL_ID,-1)
+          st.takeItems(POITANS_NOTES_ID,-11)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","30")
     return htmltext
@@ -258,30 +258,30 @@ class Quest (JQuest) :
         htmltext = "30461-05.htm"
    elif npcId == 30461 and cond == 14 :
         htmltext = "30461-06.htm"
-        st.takeItems(SYMBOL_OF_SYLVAIN_ID,1)
-        st.takeItems(MIRIENS_SIGIL1_ID,1)
+        st.takeItems(SYMBOL_OF_SYLVAIN_ID,-1)
+        st.takeItems(MIRIENS_SIGIL1_ID,-1)
         st.giveItems(MIRIENS_SIGIL2_ID,1)
         st.playSound("ItemSound.quest_middle")
         st.set("cond","15")
    elif npcId == 30461 and (cond > 14 and cond < 18) :
         htmltext = "30461-07.htm"
-   elif npcId == 30461 and cond == 18 and st.getQuestItemsCount(MIRIENS_INSTRUCTION_ID)==1 :
+   elif npcId == 30461 and cond == 18 and st.getQuestItemsCount(MIRIENS_INSTRUCTION_ID)>=1 :
         if player.getLevel()<36 :
           htmltext = "30461-11.htm"
         else:
           htmltext = "30461-12.htm"
           st.giveItems(MIRIENS_SIGIL3_ID,1)
-          st.takeItems(MIRIENS_INSTRUCTION_ID,1)
+          st.takeItems(MIRIENS_INSTRUCTION_ID,-1)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","19")
    elif npcId == 30461 and cond == 18 :
         htmltext = "30461-08.htm"
    elif npcId == 30461 and cond == 19 :
         htmltext = "30461-13.htm"
-   elif npcId == 30461 and cond == 31 and st.getQuestItemsCount(SYMBOL_OF_CRONOS_ID) == 1:
+   elif npcId == 30461 and cond == 31 and st.getQuestItemsCount(SYMBOL_OF_CRONOS_ID) >= 1:
             htmltext = "30461-14.htm"
-            st.takeItems(MIRIENS_SIGIL3_ID,1)
-            st.takeItems(SYMBOL_OF_CRONOS_ID,1)
+            st.takeItems(MIRIENS_SIGIL3_ID,-1)
+            st.takeItems(SYMBOL_OF_CRONOS_ID,-1)
             st.addExpAndSp(80265,30000)
             st.giveItems(7562,8)
             st.giveItems(MARK_OF_SCHOLAR_ID,1)
@@ -296,8 +296,8 @@ class Quest (JQuest) :
    elif npcId == 30070 and cond == 13 :
         htmltext = "30070-04.htm"
         st.giveItems(SYMBOL_OF_SYLVAIN_ID,1)
-        st.takeItems(HIGHPRIESTS_SIGIL_ID,1)
-        st.takeItems(CRYSTAL_OF_PURITY1_ID,1)
+        st.takeItems(HIGHPRIESTS_SIGIL_ID,-1)
+        st.takeItems(CRYSTAL_OF_PURITY1_ID,-1)
         st.playSound("ItemSound.quest_middle")
         st.set("cond","14")
    elif npcId == 30070 and cond == 14 :
@@ -311,7 +311,7 @@ class Quest (JQuest) :
    elif npcId == 30608 and cond == 4:
         htmltext = "30608-04.htm"
         st.giveItems(MARIAS_LETTER2_ID,1)
-        st.takeItems(LUKAS_LETTER_ID,1)
+        st.takeItems(LUKAS_LETTER_ID,-1)
         st.set("cond","5")
         st.playSound("ItemSound.quest_middle")
    elif npcId == 30608 and cond == 5 :
@@ -323,7 +323,7 @@ class Quest (JQuest) :
    elif npcId == 30608 and cond == 8 :
         htmltext = "30608-10.htm"
         st.giveItems(CRETAS_PAINTING2_ID,1)
-        st.takeItems(CRETAS_PAINTING1_ID,1)
+        st.takeItems(CRETAS_PAINTING1_ID,-1)
         st.playSound("ItemSound.quest_middle")
         st.set("cond","9")
    elif npcId == 30608 and cond == 9 :
@@ -338,12 +338,12 @@ class Quest (JQuest) :
         htmltext = "30608-15.htm"
    elif npcId == 30608 and (st.getQuestItemsCount(SYMBOL_OF_SYLVAIN_ID) or st.getQuestItemsCount(MIRIENS_SIGIL2_ID)) :
         htmltext = "30608-16.htm"
-   elif npcId == 30608 and st.getQuestItemsCount(MIRIENS_SIGIL3_ID)==1 and st.getQuestItemsCount(VALKONS_REQUEST_ID)==0 :
+   elif npcId == 30608 and st.getQuestItemsCount(MIRIENS_SIGIL3_ID)>=1 and st.getQuestItemsCount(VALKONS_REQUEST_ID)==0 :
         htmltext = "30608-17.htm"
-   elif npcId == 30608 and cond==26 and st.getQuestItemsCount(VALKONS_REQUEST_ID)==1 :
+   elif npcId == 30608 and cond==26 and st.getQuestItemsCount(VALKONS_REQUEST_ID)>=1 :
         htmltext = "30608-18.htm"
         st.giveItems(CRYSTAL_OF_PURITY2_ID,1)
-        st.takeItems(VALKONS_REQUEST_ID,1)
+        st.takeItems(VALKONS_REQUEST_ID,-1)
         st.playSound("ItemSound.quest_middle")
    elif npcId == 30115 and cond == 15 :
         htmltext = "30115-01.htm"
@@ -351,11 +351,11 @@ class Quest (JQuest) :
         htmltext = "30115-04.htm"
    elif npcId == 30115 and cond == 17 :
         htmltext = "30115-05.htm"
-        st.takeItems(JUREKS_LIST_ID,1)
+        st.takeItems(JUREKS_LIST_ID,-1)
         st.takeItems(MEYEDESTROYERS_SKIN_ID,-1)
         st.takeItems(SHAMANS_NECKLACE_ID,-1)
         st.takeItems(SHACKLES_SCALP_ID,-1)
-        st.takeItems(GMAGISTERS_SIGIL_ID,1)
+        st.takeItems(GMAGISTERS_SIGIL_ID,-1)
         st.giveItems(SYMBOL_OF_JUREK_ID,1)
         st.playSound("ItemSound.quest_middle")
         st.set("cond","18")
@@ -367,7 +367,7 @@ class Quest (JQuest) :
         htmltext = "30071-01.htm"
         st.set("cond","4")
         st.giveItems(LUKAS_LETTER_ID,1)
-        st.takeItems(MARIAS_LETTER1_ID,1)
+        st.takeItems(MARIAS_LETTER1_ID,-1)
         st.playSound("ItemSound.quest_middle")
    elif npcId == 30071 and cond == 4:
         htmltext = "30071-02.htm"
@@ -419,13 +419,13 @@ class Quest (JQuest) :
             htmltext = "30111-13.htm"
           else:
             htmltext = "30111-12.htm"
-   elif npcId == 30111 and st.getQuestItemsCount(SYMBOL_OF_CRONOS_ID)==1 :
+   elif npcId == 30111 and st.getQuestItemsCount(SYMBOL_OF_CRONOS_ID)>=1 :
           htmltext = "30111-15.htm"
    elif npcId == 30230 and cond == 23 :
         htmltext = "30230-01.htm"
    elif npcId == 30230 and cond == 24 :
         htmltext = "30230-03.htm"
-   elif npcId == 30230 and st.getQuestItemsCount(DIETERS_DIARY_ID)==1 and (st.getQuestItemsCount(STRONG_LIQUOR_ID) or st.getQuestItemsCount(TRIFFS_RING_ID)) :
+   elif npcId == 30230 and st.getQuestItemsCount(DIETERS_DIARY_ID)>=1 and (st.getQuestItemsCount(STRONG_LIQUOR_ID) or st.getQuestItemsCount(TRIFFS_RING_ID)) :
         htmltext = "30230-04.htm"
    elif npcId == 30316 and cond == 24 :
         htmltext = "30316-01.htm"
@@ -437,16 +437,16 @@ class Quest (JQuest) :
         htmltext = "30611-01.htm"
    elif npcId == 30611 and cond > 25 :
         htmltext = "30611-05.htm"
-   elif npcId == 30103 and cond == 26 and st.getQuestItemsCount(CRYSTAL_OF_PURITY2_ID)==1 :
+   elif npcId == 30103 and cond == 26 and st.getQuestItemsCount(CRYSTAL_OF_PURITY2_ID)>=1 :
         htmltext = "30103-06.htm"
         st.giveItems(SCRIPTURE_CHAPTER_2_ID,1)
-        st.takeItems(CRYSTAL_OF_PURITY2_ID,1)
+        st.takeItems(CRYSTAL_OF_PURITY2_ID,-1)
         st.playSound("ItemSound.quest_middle")
-   elif npcId == 30103 and cond == 26 and st.getQuestItemsCount(VALKONS_REQUEST_ID)==1 :
+   elif npcId == 30103 and cond == 26 and st.getQuestItemsCount(VALKONS_REQUEST_ID)>=1 :
         htmltext = "30103-05.htm"
    elif npcId == 30103 and cond == 26 and st.getQuestItemsCount(SCRIPTURE_CHAPTER_2_ID) == 0:
         htmltext = "30103-01.htm"
-   elif npcId == 30103 and st.getQuestItemsCount(SCRIPTURE_CHAPTER_2_ID)==1 :
+   elif npcId == 30103 and st.getQuestItemsCount(SCRIPTURE_CHAPTER_2_ID)>=1 :
         htmltext = "30103-07.htm"
    elif npcId == 30458 and cond ==26 and st.getQuestItemsCount(POITANS_NOTES_ID) == 0 :
         htmltext = "30458-01.htm"
