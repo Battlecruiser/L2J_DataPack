@@ -96,7 +96,7 @@ def give_reward(st,reward) :
           l = st.getRandom(len(prize))
           st.giveItems(prize[l],1)
           del prize[l]
-    else :                                # ordinary reward: 1 recipe
+    else :                                # ordinary reward: 1 recipe or mat
        st.giveItems(prize[st.getRandom(len(prize))],1)
 
 

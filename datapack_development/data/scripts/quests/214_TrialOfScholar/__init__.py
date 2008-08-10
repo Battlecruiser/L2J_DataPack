@@ -226,7 +226,7 @@ class Quest (JQuest) :
           st.takeItems(MEDUSAS_BLOOD_ID,-1)
           st.takeItems(FETTEREDSOULS_ICHOR_ID,-1)
           st.takeItems(ENCHT_GARGOYLES_NAIL_ID,-1)
-          st.takeItems(POITANS_NOTES_ID,-11)
+          st.takeItems(POITANS_NOTES_ID,-1)
           st.playSound("ItemSound.quest_middle")
           st.set("cond","30")
     return htmltext
