@@ -1684,7 +1684,7 @@ INSERT INTO `weapon` VALUES
 (10468,'Icarus Shooter - Guidance','lrhand','true',1580,1,1,'steel','s80',400,15,'crossbow',10,0.00000,0,0,0,303,0,163,-1,0,6132,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (10469,'Icarus Shooter - Focus','lrhand','true',1580,1,1,'steel','s80',400,15,'crossbow',10,0.00000,0,0,0,303,0,163,-1,0,6132,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (10474,'Shadow Item - Apprentice''s Staff','lrhand','false',1070,2,2,'wood','none',23,20,'bigblunt',4,4.00000,0,0,0,325,0,22,180,0,0,'false','false','true','false',0,0,0,0,0,0,0,0,0,'0-0;'),
-(10475,'Shadow Item - Bone Club','rhand','false',1730,3,3,'bone','d',79,20,'blunt',4,4.00000,0,0,0,379,0,47,180,0,0,'false','false','true','false',0,0,0,0,0,0,0,0,0,'0-0;'),
+(10475,'Shadow Item - Bone Club','rhand','false',1730,3,3,'bone','none',79,20,'blunt',4,4.00000,0,0,0,379,0,47,180,0,0,'false','false','true','false',0,0,0,0,0,0,0,0,0,'0-0;'),
 (10476,'Shadow Item - Shining Knife','rhand','false',1120,2,2,'mithril','none',21,5,'dagger',12,-3.00000,0,0,0,433,0,17,180,0,0,'false','false','true','false',0,0,0,0,0,0,0,0,0,'0-0;'),
 (10477,'Shadow Item - Cestus','lrhand','false',1570,2,2,'steel','none',29,5,'dualfist',4,4.00000,0,0,0,325,0,17,180,0,0,'false','false','true','false',0,0,0,0,0,0,0,0,0,'0-0;'),
 (10478,'Shadow Item - Forest Bow','lrhand','false',1900,7,2,'wood','none',49,5,'bow',12,-3.00000,0,0,0,293,3,17,180,0,0,'false','false','true','false',0,0,0,0,0,0,0,0,0,'0-0;'),
