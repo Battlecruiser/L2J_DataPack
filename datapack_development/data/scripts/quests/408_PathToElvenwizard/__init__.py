@@ -40,7 +40,7 @@ class Quest (JQuest) :
           else:
             htmltext = "30414-03.htm"
         else:
-          if player.getLevel()<19 :
+          if player.getLevel()<18 :
             htmltext = "30414-04.htm"
           else:
             if st.getQuestItemsCount(ETERNITY_DIAMOND) != 0 :

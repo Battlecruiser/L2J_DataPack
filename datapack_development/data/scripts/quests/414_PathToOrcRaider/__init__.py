@@ -5,7 +5,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-from net.sf.l2j.gameserver.serverpackets import SocialAction
+from net.sf.l2j.gameserver.network.serverpackets import SocialAction
 
 qn = "414_PathToOrcRaider"
 
@@ -86,7 +86,7 @@ class Quest (JQuest) :
          htmltext = "30570-02a.htm" 
        else: 
          htmltext = "30570-03.htm" 
-     elif playerLvl < 19 and playerClassID == 0x2c : 
+     elif playerLvl < 18 and playerClassID == 0x2c : 
        htmltext = "30570-02.htm" 
      elif playerLvl >= 18 and playerClassID == 0x2c and st.getQuestItemsCount(MARK_OF_RAIDER) == 1 : 
        htmltext = "30570-04.htm" 
@@ -111,6 +111,8 @@ class Quest (JQuest) :
      st.takeItems(HEAD_OF_BETRAYER,-1) 
      st.takeItems(BETRAYER_UMBAR_REPORT,-1) 
      st.giveItems(MARK_OF_RAIDER,1)
+     st.giveItems(57,81900)
+     st.addExpAndSp(160267,10656)
      player.sendPacket(SocialAction(player.getObjectId(),3))
      st.unset("cond") 
      st.exitQuest(False) 
@@ -124,6 +126,8 @@ class Quest (JQuest) :
         htmltext = "31978-05.htm"
         st.takeItems(TIMORA_ORC_HEAD,-1) 
         st.giveItems(MARK_OF_RAIDER,1) 
+        st.giveItems(57,81900)
+        st.addExpAndSp(160267,10656)
         player.sendPacket(SocialAction(player.getObjectId(),3))
         st.unset("cond") 
         st.exitQuest(False) 
