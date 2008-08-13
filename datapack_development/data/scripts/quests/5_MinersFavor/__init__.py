@@ -46,8 +46,6 @@ class Quest (JQuest) :
        st.set("cond","2") 
        st.set("id","2") 
        st.playSound("ItemSound.quest_middle") 
-     else: 
-       st.playSound("ItemSound.quest_itemget") 
    return htmltext 
 
  def onTalk (self,npc,player):
@@ -79,7 +77,9 @@ class Quest (JQuest) :
      st.takeItems(BOOMBOOM_POWDER,-1) 
      st.takeItems(REDSTONE_BEER,-1) 
      st.takeItems(BOLTERS_LIST,-1) 
-     st.giveItems(NECKLACE,1) 
+     st.giveItems(57,2466)
+     st.giveItems(NECKLACE,1)
+     st.addExpAndSp(5672,446)
      st.set("cond","0") 
      st.set("onlyone","1") 
      st.exitQuest(False) 
@@ -96,14 +96,12 @@ class Quest (JQuest) :
          if st.getQuestItemsCount(MINING_BOOTS) == 0 : 
            htmltext = "30518-01.htm" 
            st.giveItems(MINING_BOOTS,1) 
-           st.playSound("ItemSound.quest_itemget") 
          else: 
            htmltext = "30518-02.htm" 
        elif npcId == REED and cond == 1 and st.getQuestItemsCount(BOLTERS_LIST) : 
          if st.getQuestItemsCount(REDSTONE_BEER) == 0 : 
            htmltext = "30520-01.htm" 
            st.giveItems(REDSTONE_BEER,1) 
-           st.playSound("ItemSound.quest_itemget") 
          else: 
            htmltext = "30520-02.htm" 
        elif npcId == BRUNON and cond == 1 and st.getQuestItemsCount(BOLTERS_LIST) : 
