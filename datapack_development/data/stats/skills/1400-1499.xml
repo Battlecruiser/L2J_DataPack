@@ -1301,7 +1301,7 @@
   </cond>
 </skill>
 <skill id="1454" levels="1" name="Diamond Dust">
-  <!-- Needs MAJOR retail accuracy check -->
+  <!-- Needs Major retail accuracy check -->
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="hitTime" val="3000"/>
@@ -1310,7 +1310,8 @@
   <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="0.0"/>
-  <set name="skillRadius" val="200"/>
+  <set name="reuseDelay" val="20000"/> <!-- Guessing -->
+  <set name="skillRadius" val="250"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="target" val="TARGET_AURA"/>
   <for>
@@ -1320,13 +1321,12 @@
   </for>
 </skill>
 <skill id="1455" levels="1" name="Throne of Ice">
-<!-- Needs retail accuracy check. -->
+  <!-- Needs retail accuracy check. -->
   <set name="magicLvl" val="79"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="109"/>
-  <set name="power" val="10.0"/>
+  <set name="power" val="10"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillRadius" val="200"/>
   <set name="reuseDelay" val="8000"/>
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
@@ -1335,9 +1335,9 @@
   <set name="element" val="3"/> <!-- Water -->
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
-  <set name="effectRange" val="-1"/>
+  <set name="effectRange" val="1400"/>
   <for>
-    <effect count="7" name="DamOverTime" time="3" val="100"/>
+    <effect count="5" name="DamOverTime" time="3" val="100"/>
   </for>
 </skill>
 <skill id="1456" levels="1" name="Wind Vortex Slug">
