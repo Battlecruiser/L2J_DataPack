@@ -25,6 +25,36 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st):
    htmltext     = event
+   if event == "9000-03.htm" :
+      if st.getPlayer.getClan() == null or not st.getPlayer.isClanLeader():
+         return "9000-03-no.htm"
+   elif event == "9000-04.htm" :
+      if st.getPlayer.getClan() == null or not st.getPlayer.isClanLeader():
+         return "9000-04-no.htm"
+   elif event == "9000-05.htm" :
+      if st.getPlayer.getClan() == null or not st.getPlayer.isClanLeader():
+         return "9000-05-no.htm"
+   elif event == "9000-07.htm" :
+      if st.getPlayer.getClan() == null or not st.getPlayer.isClanLeader():
+         return "9000-07-no.htm"
+   elif event == "9000-06a.htm" :
+      if st.getPlayer.getClan() == null or not st.getPlayer.isClanLeader():
+         return "9000-07-no.htm"
+   elif event == "9000-12a.htm" :
+      if st.getPlayer.getClan() == null or not st.getPlayer.isClanLeader():
+         return "9000-07-no.htm"
+   elif event == "9000-13a.htm" :
+      if st.getPlayer.getClan() == null or not st.getPlayer.isClanLeader():
+         return "9000-07-no.htm"
+   elif event == "9000-13b.htm" :
+      if st.getPlayer.getClan() == null or not st.getPlayer.isClanLeader():
+         return "9000-07-no.htm"
+   elif event == "9000-14a.htm" :
+      if st.getPlayer.getClan() == null or not st.getPlayer.isClanLeader():
+         return "9000-07-no.htm"
+   elif event == "9000-15.htm" :
+      if st.getPlayer.getClan() == null or not st.getPlayer.isClanLeader():
+         return "9000-07-no.htm"
    return htmltext
 
  def onTalk (Self,npc,player):
@@ -36,9 +66,6 @@ class Quest (JQuest) :
      return "9000-01.htm"
 
 QUEST       = Quest(9000,qn,"village_master")
-
-
-
 
 for item in NPC:
 ### Quest NPC starter initialization
