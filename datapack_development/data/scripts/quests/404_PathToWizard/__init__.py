@@ -34,7 +34,7 @@ class Quest (JQuest) :
     if event == "1" :
       st.set("id","0")
       if player.getClassId().getId() == 0x0a :
-        if player.getLevel() >= 19 :
+        if player.getLevel() >= 18 :
           if st.getQuestItemsCount(BEAD_OF_SEASON) :
             htmltext = "30391-03.htm"
           else:

@@ -46,7 +46,7 @@ class Quest (JQuest) :
     church_mark1,church_mark2,church_mark3=st.getQuestItemsCount(EINHASAD_CHURCH_MARK1),st.getQuestItemsCount(EINHASAD_CHURCH_MARK2),st.getQuestItemsCount(EINHASAD_CHURCH_MARK3)
     if event == "30417-02a.htm" :
        if classid == 0x00 :
-          if level >= 19 :
+          if level >= 18 :
              if st.getQuestItemsCount(SWORD_OF_RITUAL)>0 :
                 htmltext = "30417-04.htm"
              else:

@@ -1,12 +1,13 @@
 # Made by Mr. Have fun! Version 0.3
 # Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
+# updated to CT2 by Kerberos
 # Visit http://forum.l2jdp.com for more details
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-from net.sf.l2j.gameserver.serverpackets import NpcSay
-from net.sf.l2j.gameserver.serverpackets import SocialAction
+from net.sf.l2j.gameserver.network.serverpackets import NpcSay
+from net.sf.l2j.gameserver.network.serverpackets import SocialAction
 
 qn = "416_PathToOrcShaman"
 
@@ -65,7 +66,7 @@ class Quest (JQuest) :
             else:
               htmltext = "30585-02.htm"
           else:
-            if player.getLevel()<19 :
+            if player.getLevel()<18 :
               htmltext = "30585-03.htm"
             else:
               if st.getQuestItemsCount(MASK_OF_MEDIUM) != 0 :
@@ -99,8 +100,10 @@ class Quest (JQuest) :
           htmltext = "30502-07.htm"
           st.takeItems(TOTEM_SPIRIT_BLOOD,st.getQuestItemsCount(TOTEM_SPIRIT_BLOOD))
           st.giveItems(MASK_OF_MEDIUM,1)
-          st.addExpAndSp(3200,2600)
+          st.giveItems(57,81900)
+          st.addExpAndSp(295862,18194)
           player.sendPacket(SocialAction(player.getObjectId(),3))
+          player.sendPacket(SocialAction(player.getObjectId(),15))
           st.set("cond","0")
           st.exitQuest(False)
           st.playSound("ItemSound.quest_finish")
@@ -135,8 +138,10 @@ class Quest (JQuest) :
    elif npcId == 31979 and st.getInt("cond") == 21:
         htmltext = "31979-03.htm"
         st.giveItems(MASK_OF_MEDIUM,1)
-        st.addExpAndSp(3200,2600)
+        st.giveItems(57,81900)
+        st.addExpAndSp(295862,18194)
         player.sendPacket(SocialAction(player.getObjectId(),3))
+        player.sendPacket(SocialAction(player.getObjectId(),15))
         st.set("cond","0")
         st.exitQuest(False)
         st.playSound("ItemSound.quest_finish")

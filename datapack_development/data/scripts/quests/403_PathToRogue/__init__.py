@@ -48,7 +48,7 @@ class Quest (JQuest) :
     player = st.getPlayer()
     if event == "30379_2" :
           if player.getClassId().getId() == 0x00 :
-            if player.getLevel() >= 19 :
+            if player.getLevel() >= 18 :
               if st.getQuestItemsCount(BEZIQUES_RECOMMENDATION)>0 :
                 htmltext = "30379-04.htm"
               else:

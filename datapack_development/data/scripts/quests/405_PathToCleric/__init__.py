@@ -32,7 +32,7 @@ class Quest (JQuest) :
     classId = st.getPlayer().getClassId().getId()
     if event == "1" :
         st.set("id","0")
-        if level >= 19 and classId == 0x0a and st.getQuestItemsCount(MARK_OF_FAITH) == 0 :
+        if level >= 18 and classId == 0x0a and st.getQuestItemsCount(MARK_OF_FAITH) == 0 :
           st.set("cond","1")
           st.setState(State.STARTED)
           st.playSound("ItemSound.quest_accept")
@@ -43,9 +43,9 @@ class Quest (JQuest) :
               htmltext = "30022-02a.htm"
             else:
               htmltext = "30022-02.htm"
-        elif level<19 and classId == 0x0a :
+        elif level<18 and classId == 0x0a :
             htmltext = "30022-03.htm"
-        elif level >= 19 and classId == 0x0a and st.getQuestItemsCount(MARK_OF_FAITH) == 1 :
+        elif level >= 18 and classId == 0x0a and st.getQuestItemsCount(MARK_OF_FAITH) == 1 :
             htmltext = "30022-04.htm"
     return htmltext
 

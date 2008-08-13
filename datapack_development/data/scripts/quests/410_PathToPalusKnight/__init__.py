@@ -5,6 +5,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+from net.sf.l2j.gameserver.network.serverpackets import SocialAction
 
 qn = "410_PathToPalusKnight"
 
@@ -35,7 +36,7 @@ class Quest (JQuest) :
         htmltext = "30329-06.htm"
         st.giveItems(PALLUS_TALISMAN,1)
     elif event == "410_1" :
-          if level >= 19 and classId == 0x1f and st.getQuestItemsCount(GAZE_OF_ABYSS) == 0 :
+          if level >= 18 and classId == 0x1f and st.getQuestItemsCount(GAZE_OF_ABYSS) == 0 :
             htmltext = "30329-05.htm"
             return htmltext
           elif classId != 0x1f :
@@ -43,9 +44,9 @@ class Quest (JQuest) :
                 htmltext = "30329-02a.htm"
               else:
                 htmltext = "30329-03.htm"
-          elif level<19 and classId == 0x1f :
+          elif level<18 and classId == 0x1f :
               htmltext = "30329-02.htm"
-          elif level >= 19 and classId == 0x1f and st.getQuestItemsCount(GAZE_OF_ABYSS) == 1 :
+          elif level >= 18 and classId == 0x1f and st.getQuestItemsCount(GAZE_OF_ABYSS) == 1 :
               htmltext = "30329-04.htm"
     elif event == "30329_2" :
             htmltext = "30329-10.htm"
@@ -53,11 +54,13 @@ class Quest (JQuest) :
             st.takeItems(LYCANTHROPE_SKULL,st.getQuestItemsCount(LYCANTHROPE_SKULL))
             st.giveItems(VIRGILS_LETTER,1)
             st.set("cond","3")
+            st.playSound("ItemSound.quest_middle")
     elif event == "30422_1" :
           htmltext = "30422-02.htm"
           st.takeItems(VIRGILS_LETTER,1)
           st.giveItems(MORTE_TALISMAN,1)
           st.set("cond","4")
+          st.playSound("ItemSound.quest_middle")
     elif event == "30422_2" :
             htmltext = "30422-06.htm"
             st.takeItems(MORTE_TALISMAN,1)
@@ -65,6 +68,7 @@ class Quest (JQuest) :
             st.takeItems(PREDATOR_CARAPACE,st.getQuestItemsCount(PREDATOR_CARAPACE))
             st.giveItems(COFFIN_ETERNAL_REST,1)
             st.set("cond","6")
+            st.playSound("ItemSound.quest_middle")
     return htmltext
 
 
@@ -93,6 +97,9 @@ class Quest (JQuest) :
             htmltext = "30329-11.htm"
             st.takeItems(COFFIN_ETERNAL_REST,1)
             st.giveItems(GAZE_OF_ABYSS,1)
+            st.giveItems(57,81900)
+            st.addExpAndSp(295862,19804)
+            player.sendPacket(SocialAction(player.getObjectId(),3))
             st.set("cond","0")
             st.exitQuest(False)
             st.playSound("ItemSound.quest_finish")
@@ -145,7 +152,7 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(410,qn,"Path To Palus Knight")
+QUEST       = Quest(410,qn,"Path of the Palus Knight")
 
 QUEST.addStartNpc(30329)
 

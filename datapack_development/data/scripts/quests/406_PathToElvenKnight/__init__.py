@@ -5,6 +5,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+from net.sf.l2j.gameserver.network.serverpackets import SocialAction
 
 qn = "406_PathToElvenKnight"
 
@@ -34,7 +35,7 @@ class Quest (JQuest) :
              htmltext = "30327-02.htm"
              st.exitQuest(1)
        else:
-          if player.getLevel()<19 :
+          if player.getLevel()<18 :
              htmltext = "30327-03.htm"
              st.exitQuest(1)
           else:
@@ -87,6 +88,9 @@ class Quest (JQuest) :
             htmltext = "30327-11.htm"
         elif cond == 6 :
             st.takeItems(KLUTO_BOX,-1)
+            st.giveItems(57,81900)
+            st.addExpAndSp(160267,11576)
+            player.sendPacket(SocialAction(player.getObjectId(),3))
             st.set("cond","0")
             st.exitQuest(False)
             st.playSound("ItemSound.quest_finish")
@@ -137,7 +141,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(406,qn,"Path To Elven Knight")
+QUEST       = Quest(406,qn,"Path of the Elven Knight")
 
 QUEST.addStartNpc(30327)
 

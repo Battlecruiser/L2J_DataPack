@@ -29,7 +29,7 @@ class Quest (JQuest) :
     player = st.getPlayer()
     if event == "401_1" :
           if player.getClassId().getId() == 0x00 :
-            if player.getLevel() >= 19 :
+            if player.getLevel() >= 18 :
               if st.getQuestItemsCount(MEDALLION_OF_WARRIOR)>0 :
                 htmltext = "30010-04.htm"
               else:

@@ -5,6 +5,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+from net.sf.l2j.gameserver.network.serverpackets import SocialAction
 
 qn = "407_PathToElvenScout"
 
@@ -32,7 +33,7 @@ class Quest (JQuest) :
     if event == "1" :
       st.set("id","0")
       if player.getClassId().getId() == 0x12 :
-        if player.getLevel() >= 19 :
+        if player.getLevel() >= 18 :
           if st.getQuestItemsCount(REORIA_RECOMMENDATION)>0 :
             htmltext = "30328-04.htm"
           else:
@@ -51,6 +52,7 @@ class Quest (JQuest) :
     elif event == "30337_1" :
           st.takeItems(REORIA_LETTER2,1)
           st.set("cond","2")
+          st.playSound("ItemSound.quest_middle")
           htmltext = "30337-03.htm"
     return htmltext
 
@@ -87,12 +89,14 @@ class Quest (JQuest) :
           st.giveItems(MORETTIS_HERB,1)
           st.giveItems(MORETTIS_LETTER,1)
           st.set("cond","4")
+          st.playSound("ItemSound.quest_middle")
    elif npcId == 30334 and st.getInt("cond") :
         htmltext = "30334-01.htm"
    elif npcId == 30426 and st.getInt("cond") and st.getQuestItemsCount(MORETTIS_LETTER) and st.getQuestItemsCount(MORETTIS_HERB) :
         if st.getQuestItemsCount(RUSTED_KEY)<1 :
           htmltext = "30426-01.htm"
           st.set("cond","5")
+          st.playSound("ItemSound.quest_middle")
         else:
           htmltext = "30426-02.htm"
           st.takeItems(RUSTED_KEY,1)
@@ -100,6 +104,7 @@ class Quest (JQuest) :
           st.takeItems(MORETTIS_LETTER,1)
           st.giveItems(PRIGUNS_LETTER,1)
           st.set("cond","7")
+          st.playSound("ItemSound.quest_middle")
    elif npcId == 30426 and st.getInt("cond") and st.getQuestItemsCount(PRIGUNS_LETTER) :
         htmltext = "30426-04.htm"
    elif npcId == 30337 and st.getInt("cond") and st.getQuestItemsCount(PRIGUNS_LETTER)>0 :
@@ -110,12 +115,16 @@ class Quest (JQuest) :
           st.takeItems(PRIGUNS_LETTER,1)
           st.giveItems(HONORARY_GUARD,1)
           st.set("cond","8")
+          st.playSound("ItemSound.quest_middle")
    elif npcId == 30337 and st.getInt("cond") and st.getQuestItemsCount(HONORARY_GUARD)>0 :
         htmltext = "30337-08.htm"
    elif npcId == 30328 and st.getInt("cond") and st.getQuestItemsCount(HONORARY_GUARD)>0 :
         htmltext = "30328-07.htm"
         st.takeItems(HONORARY_GUARD,1)
         st.giveItems(REORIA_RECOMMENDATION,1)
+        st.giveItems(57,81900)
+        st.addExpAndSp(160267,9966)
+        player.sendPacket(SocialAction(player.getObjectId(),3))
         st.set("cond","0")
         st.exitQuest(False)
         st.playSound("ItemSound.quest_finish")
@@ -170,7 +179,7 @@ class Quest (JQuest) :
         st.set("cond","6")
    return
 
-QUEST       = Quest(407,qn,"Path To Elven Scout")
+QUEST       = Quest(407,qn,"Path of the Elven Scout")
 
 QUEST.addStartNpc(30328)
 

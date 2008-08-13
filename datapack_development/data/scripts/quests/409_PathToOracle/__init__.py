@@ -28,7 +28,7 @@ class Quest (JQuest) :
     classId = st.getPlayer().getClassId().getId()
     if event == "1" :
         st.set("id","0")
-        if level >= 19 and classId == 0x19 and st.getQuestItemsCount(LEAF_OF_ORACLE) == 0 :
+        if level >= 18 and classId == 0x19 and st.getQuestItemsCount(LEAF_OF_ORACLE) == 0 :
           st.set("cond","1")
           st.setState(State.STARTED)
           st.playSound("ItemSound.quest_accept")
@@ -39,9 +39,9 @@ class Quest (JQuest) :
               htmltext = "30293-02a.htm"
             else:
               htmltext = "30293-02.htm"
-        elif level<19 and classId == 0x19 :
+        elif level<18 and classId == 0x19 :
             htmltext = "30293-03.htm"
-        elif level >= 19 and classId == 0x19 and st.getQuestItemsCount(LEAF_OF_ORACLE) == 1 :
+        elif level >= 18 and classId == 0x19 and st.getQuestItemsCount(LEAF_OF_ORACLE) == 1 :
             htmltext = "30293-04.htm"
     elif event == "30424-08.htm" :
         if st.getInt("cond") :

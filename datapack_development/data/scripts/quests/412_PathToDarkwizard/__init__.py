@@ -33,7 +33,7 @@ class Quest (JQuest) :
     if event == "1" :
         st.set("id","0")
         if st.getInt("cond") == 0 :
-          if level >= 19 and classId == 0x26 and st.getQuestItemsCount(JEWEL_OF_DARKNESS) == 0 :
+          if level >= 18 and classId == 0x26 and st.getQuestItemsCount(JEWEL_OF_DARKNESS) == 0 :
             st.set("cond","1")
             st.setState(State.STARTED)
             st.playSound("ItemSound.quest_accept")
@@ -44,9 +44,9 @@ class Quest (JQuest) :
                 htmltext = "30421-02a.htm"
               else:
                 htmltext = "30421-03.htm"
-          elif level<19 and classId == 0x26 :
+          elif level<18 and classId == 0x26 :
               htmltext = "30421-02.htm"
-          elif level >= 19 and classId == 0x26 and st.getQuestItemsCount(JEWEL_OF_DARKNESS) == 1 :
+          elif level >= 18 and classId == 0x26 and st.getQuestItemsCount(JEWEL_OF_DARKNESS) == 1 :
               htmltext = "30421-04.htm"
     elif event == "412_1" :
           if st.getQuestItemsCount(SEEDS_OF_ANGER) :

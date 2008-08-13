@@ -5,6 +5,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+from net.sf.l2j.gameserver.network.serverpackets import SocialAction
 
 qn = "411_PathToAssassin"
 
@@ -27,7 +28,7 @@ class Quest (JQuest) :
     level = st.getPlayer().getLevel()
     classId = st.getPlayer().getClassId().getId()
     if event == "1" :
-        if level >= 19 and classId == 0x1f and st.getQuestItemsCount(IRON_HEART) == 0 :
+        if level >= 18 and classId == 0x1f and st.getQuestItemsCount(IRON_HEART) == 0 :
           st.set("cond","1")
           st.setState(State.STARTED)
           st.playSound("ItemSound.quest_accept")
@@ -39,10 +40,10 @@ class Quest (JQuest) :
             else:
               htmltext = "30416-02.htm"
               st.exitQuest(1)
-        elif level<19 and classId == 0x1f :
+        elif level<18 and classId == 0x1f :
             htmltext = "30416-03.htm"
             st.exitQuest(1)
-        elif level >= 19 and classId == 0x1f and st.getQuestItemsCount(IRON_HEART) == 1 :
+        elif level >= 18 and classId == 0x1f and st.getQuestItemsCount(IRON_HEART) == 1 :
             htmltext = "30416-04.htm"
     elif event == "30419_1" :
           htmltext = "30419-05.htm"
@@ -81,6 +82,9 @@ class Quest (JQuest) :
           htmltext = "30416-06.htm"
           st.takeItems(ARKENIA_RECOMMEND,1)
           st.giveItems(IRON_HEART,1)
+          st.giveItems(57,81900)
+          st.addExpAndSp(160267,14566)
+          player.sendPacket(SocialAction(player.getObjectId(),3))
           st.set("cond","0")
           st.exitQuest(False)
           st.playSound("ItemSound.quest_finish")
@@ -151,7 +155,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(411,qn,"Path To Assassin")
+QUEST       = Quest(411,qn,"Path of the Assassin")
 
 QUEST.addStartNpc(30416)
 
