@@ -763,7 +763,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="900"/>
-  <set name="soulConsumeCount" val="1"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <for>
   </for>
 </skill>
@@ -785,7 +785,7 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <set name="soulConsumeCount" val="1"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="pa_up">
       <mul order="0x30" stat="pAtk" val="#rate"/>
@@ -814,7 +814,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="750"/>
   <set name="effectRange" val="900"/>
-  <set name="soulConsumeCount" val="1"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <for>
   </for>
 </skill>
@@ -841,14 +841,13 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="500"/>
   <set name="effectRange" val="900"/>
-  <set name="soulConsumeCount" val="1"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <for>
   </for>
 </skill>
 <skill id="1435" levels="10" name="Death Mark">
   <table name="#mpConsume"> 12 14 18 22 24 28 29 32 33 35 </table>
   <table name="#power"> 35 40 45 50 55 60 65 70 75 80  </table>
-  <table name="#soulConsumeCount"> 1 1 2 2 2 2 2 2 2 2 </table>
   <table name="#EffectLvl"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
@@ -863,7 +862,7 @@
   <set name="effectRange" val="1100"/>
   <set name="effectId" val="5264"/>
   <set name="effectLevel" val="#EffectLvl"/>
-  <set name="soulConsumeCount" val="#soulConsumeCount"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <for>
   </for>
 </skill>
@@ -894,7 +893,7 @@
   <set name="castRange" val="700"/>
   <set name="isDebuff" val="true"/>
   <set name="effectRange" val="1100"/>
-  <set name="soulConsumeCount" val="1"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -946,7 +945,7 @@
  <set name="effectRange" val="56"/>
  <set name="reuseDelay" val="18000"/>
  <set name="isDebuff" val="true"/>
- <set name="soulConsumeCount" val="3"/>
+ <set name="soulMaxConsumeCount" val="5"/>
  <set name="effectType" val="FEAR"/>
  <set name="effectPower" val="#effectPower"/>
  <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
@@ -983,7 +982,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="500"/>
   <set name="effectRange" val="900"/>
-  <set name="soulConsumeCount" val="3"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1035,7 +1034,7 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <set name="soulConsumeCount" val="1"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-mAtk" stackType="ma_up">
       <mul order="0x30" stat="mAtk" val="#Tab-mAtk"/>
@@ -1063,7 +1062,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <set name="aggroPoints" val="#aggro"/>
-  <set name="soulConsumeCount" val="2"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="DarkAtr">
       <mul order="0x30" stat="darkVuln" val="#vuln"/>
@@ -1090,7 +1089,7 @@
   <set name="power" val="0.0"/>
   <set name="mpConsume" val="44"/>
   <set name="magicLvl" val="49"/>
-  <set name="soulConsumeCount" val="3"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="reuseDelay" val="120000"/>
   <set name="hitTime" val="3000"/>
@@ -1138,7 +1137,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="#Tab-castRange"/>
   <set name="effectRange" val="1400"/>
-  <set name="soulConsumeCount" val="2"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <for>
     <effect count="1" name="Debuff" time="15" val="0" stackOrder="2" stackType="surrender">
       <mul order="0x30" stat="darkVuln" val="#Tab-darkVuln"/>
@@ -1159,7 +1158,7 @@
   <set name="power" val="0.0"/>
   <set name="reuseDelay" val="20000"/>
   <set name="skillType" val="ROOT"/>
-  <set name="soulConsumeCount" val="1"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
     <effect count="1" name="Root" time="15" val="0" stackOrder="1" stackType="Root"/>
@@ -1179,7 +1178,7 @@
   <set name="power" val="0.0"/>
   <set name="reuseDelay" val="20000"/>
   <set name="skillType" val="MUTE"/>
-  <set name="soulConsumeCount" val="1"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
     <effect count="1" name="Mute" time="15" val="0" stackOrder="1" stackType="Silence"/>
@@ -1204,7 +1203,7 @@
   <set name="effectRange" val="-1"/>
   <set name="isDebuff" val="true"/>
   <set name="reuseDelay" val="36000"/>
-  <set name="soulConsumeCount" val="3"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <set name="effectPower" val="50"/>
   <set name="effectType" val="STUN"/>
   <set name="flyRadius" val="300"/>
@@ -1302,7 +1301,7 @@
   </cond>
 </skill>
 <skill id="1454" levels="1" name="Diamond Dust">
-  <!-- Needs Major retail accuracy check -->
+  <!-- Needs MAJOR retail accuracy check -->
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="hitTime" val="3000"/>
@@ -1311,8 +1310,7 @@
   <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="0.0"/>
-  <set name="reuseDelay" val="20000"/> <!-- Guessing -->
-  <set name="skillRadius" val="250"/>
+  <set name="skillRadius" val="200"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="target" val="TARGET_AURA"/>
   <for>
@@ -1322,12 +1320,13 @@
   </for>
 </skill>
 <skill id="1455" levels="1" name="Throne of Ice">
-  <!-- Needs Major retail accuracy check. -->
+<!-- Needs retail accuracy check. -->
   <set name="magicLvl" val="79"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="109"/>
-  <set name="power" val="10"/>
+  <set name="power" val="10.0"/>
   <set name="target" val="TARGET_ONE"/>
+  <set name="skillRadius" val="200"/>
   <set name="reuseDelay" val="8000"/>
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
@@ -1336,9 +1335,9 @@
   <set name="element" val="3"/> <!-- Water -->
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
-  <set name="effectRange" val="1400"/>
+  <set name="effectRange" val="-1"/>
   <for>
-    <effect count="5" name="DamOverTime" time="3" val="100"/>
+    <effect count="7" name="DamOverTime" time="3" val="100"/>
   </for>
 </skill>
 <skill id="1456" levels="1" name="Wind Vortex Slug">
@@ -1574,7 +1573,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="900"/>
-  <set name="soulConsumeCount" val="7"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <for>
   </for>
 </skill>
@@ -1592,7 +1591,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="379"/>
-  <set name="soulConsumeCount" val="7"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <for>
   	<effect count="1" name="Buff" time="120" val="0">
   		<mul order="0x30" stat="mDef" val="1.3"/>
@@ -1714,7 +1713,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="#aggro"/>
-  <set name="soulConsumeCount" val="5"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <for>
     <effect name="Buff" time="1200" count="1" val="0" stackOrder="#Tab-absorbDam" stackType="vampRage">
       <add order="0x40" stat="absorbDam" val="#Tab-absorbDam"/>
@@ -1848,7 +1847,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1200"/>
   <set name="reuseDelay" val="36000"/><!-- Need retail -->
-  <set name="soulConsumeCount" val="1"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <for>
    <effect count="40" name="HealOverTime" time="3" val="#Tab-Heal"/>
   </for>
@@ -1867,7 +1866,7 @@
   <set name="skillType" val="HEAL_PERCENT"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1200"/>
-  <set name="soulConsumeCount" val="3"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <set name="reuseDelay" val="360000"/><!-- Need retail -->
   <cond msg="Target does not have an active Restoration skill."><!-- Need retail msg if there is one. -->
     <target active_effect_id="1487"/>

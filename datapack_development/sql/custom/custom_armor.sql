@@ -1,7 +1,7 @@
 -- --------------------------------
 -- Table structure for custom_armor
 -- --------------------------------
-DROP TABLE IF EXISTS `custom_armor`;
+
 CREATE TABLE IF NOT EXISTS `custom_armor` (
   `item_id` int(11) NOT NULL default '0',
   `name` varchar(70) default NULL,

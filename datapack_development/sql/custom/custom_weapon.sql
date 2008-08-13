@@ -1,8 +1,8 @@
--- --------------------------
+-- ---------------------------------
 -- Table structure for custom_weapon
--- --------------------------
-DROP TABLE IF EXISTS `custom_weapon`;
-CREATE TABLE `custom_weapon` (
+-- ---------------------------------
+
+CREATE TABLE IF NOT EXISTS `custom_weapon` (
   `item_id` decimal(11,0) NOT NULL default '0',
   `name` varchar(70) default NULL,
   `bodypart` varchar(15) default NULL,
