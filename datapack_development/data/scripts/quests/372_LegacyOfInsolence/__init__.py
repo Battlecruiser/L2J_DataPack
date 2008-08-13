@@ -1,4 +1,4 @@
-# Legacy of Insolence version 0.1 
+# Legacy of Insolence version 0.1
 # by DrLecter
 import sys
 from net.sf.l2j import Config
@@ -90,13 +90,13 @@ def give_reward(st,reward) :
        for j in prize :
            st.giveItems(j,1)
     elif luck < REWARD_RATE[1] :          # worst reward: 4000a
-       st.giveItems(57,4000) 
+       st.giveItems(57,4000)
     elif luck < REWARD_RATE[2] :          # quite nice : 2 recipes
        for k in range(2) :
           l = st.getRandom(len(prize))
           st.giveItems(prize[l],1)
           del prize[l]
-    else :                                # ordinary reward: 1 recipe
+    else :                                # ordinary reward: 1 recipe or mat
        st.giveItems(prize[st.getRandom(len(prize))],1)
 
 
