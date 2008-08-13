@@ -1,8 +1,8 @@
--- 
+-- -------------------------------------------
 -- Table structure for table `custom_teleport`
--- 
-DROP TABLE IF EXISTS custom_teleport;
-CREATE TABLE custom_teleport (
+-- -------------------------------------------
+
+CREATE TABLE IF NOT EXISTS custom_teleport (
   Description varchar(75) default NULL,
   id decimal(11,0) NOT NULL default '0',
   loc_x decimal(9,0) default NULL,

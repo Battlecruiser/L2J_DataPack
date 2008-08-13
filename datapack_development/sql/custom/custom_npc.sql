@@ -1,8 +1,7 @@
---
+-- --------------------------------------
 -- Table structure for table `custom_npc`
--- 
-DROP TABLE IF EXISTS `custom_npc`;
-CREATE TABLE `custom_npc`(
+-- --------------------------------------
+CREATE TABLE IF NOT EXISTS `custom_npc`(
   `id` decimal(11,0) NOT NULL default '0',
   `idTemplate` int(11) NOT NULL default '0',
   `name` varchar(200) default NULL,
@@ -49,5 +48,6 @@ CREATE TABLE `custom_npc`(
   `bss` int(4) default 0,
   `ss_rate` int(3) default 0,
   `AI` varchar(8) default "fighter",
+  `drop_herbs` int(1) default '0',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM;

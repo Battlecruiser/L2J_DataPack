@@ -138,7 +138,7 @@
   </for>
 </skill>
 <skill id="4207" levels="12" name="BOSS Power Shot">
-  <table name="#mpConsume"> 36 50 69 93 118 143 166 175 182 186 189 192 </table>
+  <table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
   <table name="#power"> 352.0 949.0 2607.0 6828.0 17184.0 33213.0 51007.0 59177.0 67888.0 77001.0 86359.0 95790.0 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
   <set name="magicLvl" val="#magicLvl"/>
@@ -155,7 +155,7 @@
   </for>
 </skill>
 <skill id="4208" levels="12" name="Stun">
-  <table name="#mpConsume"> 36 50 69 93 118 143 166 175 182 186 189 192 </table>
+  <table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
   <table name="#power"> 176.0 475.0 1304.0 3414.0 8592.0 16607.0 25504.0 29589.0 33944.0 38501.0 43180.0 47895.0 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
   <set name="magicLvl" val="#magicLvl"/>
@@ -486,7 +486,7 @@
 </skill>
 <skill id="4228" levels="12" name="Double Dagger Attack">
   <table name="#power"> 122.0 279.0 584.0 1110.0 1923.0 3030.0 4336.0 5002.0 5632.0 6187.0 6632.0 6978.0 </table>
-  <table name="#mpConsume"> 27 44 62 85 109 135 157 168 177 183 187 189 </table>
+  <table name="#mpConsume"> 25 40 56 76 99 121 142 151 159 165 168 170 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
@@ -504,7 +504,7 @@
 </skill>
 <skill id="4229" levels="12" name="NPC Double Wind Fist">
   <table name="#power"> 122.0 279.0 584.0 1110.0 1923.0 3030.0 4336.0 5002.0 5632.0 6187.0 6632.0 6978.0 </table>
-  <table name="#mpConsume"> 27 44 62 85 109 135 157 168 177 183 187 189 </table>
+  <table name="#mpConsume"> 25 40 56 76 99 121 142 151 159 165 168 170 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
@@ -555,7 +555,7 @@
 </skill>
 <skill id="4232" levels="12" name="NPC AE Strike">
   <table name="#power"> 46.0 105.0 219.0 417.0 722.0 1136.0 1626.0 1876.0 2112.0 2320.0 2487.0 2617.0 </table>
-  <table name="#mpConsume"> 14 22 31 43 55 68 79 84 89 92 94 95 </table>
+  <table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
@@ -734,7 +734,7 @@
   </for>
 </skill>
 <skill id="4244" levels="12" name="NPC Wild Sweep">
-  <table name="#mpConsume"> 14 22 31 43 55 68 79 84 89 92 94 95 </table>
+  <table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
   <table name="#power"> 46.0 105.0 219.0 417.0 722.0 1136.0 1626.0 1876.0 2112.0 2320.0 2487.0 2617.0 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
@@ -1220,7 +1220,7 @@
     <mul order="0x30" stat="runSpd" val="#rateSpd"/>
   </for>
 </skill>
-<skill id="4271" levels="7" name="Increase Force">
+<skill id="4271" levels="8" name="Increase Force">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>

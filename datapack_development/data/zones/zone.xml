@@ -199,7 +199,7 @@
 	</zone>
 	<zone id="11039" type="Town" shape="Cuboid" minZ="-4324" maxZ="3097">
 		<stat name="name" val="Fantasy Isle" /> 
-		<stat name="townId" val="22" /> 
+		<stat name="townId" val="21" /> 
 		<stat name="taxById" val="14" /> 
 		<stat name="spawnX" val="-58752" /> 
 		<stat name="spawnY" val="-56898" /> 
@@ -861,6 +861,30 @@
 	</zone>
 
 <!-- Boss Zones -->
+	<zone id='12001' type='BossZone' shape='Cuboid' minZ='-7225' maxZ='-6621'>
+		<stat name='name' val='Four Sepulcher'/>
+		<stat name='oustX' val='169589'/>
+		<stat name='oustY' val='-90493'/>
+		<stat name='oustZ' val='-2914'/>
+	</zone>
+	<zone id='12002' type='BossZone' shape='Cuboid' minZ='-7225' maxZ='-6621'>
+		<stat name='name' val='Four Sepulcher'/>
+		<stat name='oustX' val='169589'/>
+		<stat name='oustY' val='-90493'/>
+		<stat name='oustZ' val='-2914'/>
+	</zone>
+	<zone id='12003' type='BossZone' shape='Cuboid' minZ='-7225' maxZ='-6621'>
+		<stat name='name' val='Four Sepulcher'/>
+		<stat name='oustX' val='169589'/>
+		<stat name='oustY' val='-90493'/>
+		<stat name='oustZ' val='-2914'/>
+	</zone>
+	<zone id='12004' type='BossZone' shape='Cuboid' minZ='-7225' maxZ='-6621'>
+		<stat name='name' val='Four Sepulcher'/>
+		<stat name='oustX' val='169589'/>
+		<stat name='oustY' val='-90493'/>
+		<stat name='oustZ' val='-2914'/>
+	</zone>
 	<zone id='12005' type='BossZone' shape='NPoly' minZ='-5120' maxZ='-2500'>
 		<stat name='name' val='Lair of Frintezza'/>
 	</zone>
@@ -1142,6 +1166,118 @@
 
 <!-- Poison zones -->
 	<zone id='20050' type='PoisonZone' shape='NPoly' minZ='-4468' maxZ='-4118'/>
+	<zone id='20051' type='PoisonZone' shape='NPoly' minZ='-7260' maxZ='-7010'> <!-- [25_15] conquerors_weakness-->
+		<stat name='target' val='pc'/>
+		<stat name='skillId' val='4146'/>
+		<stat name='skillLvl' val='3'/>
+		<stat name='chance' val='70'/>
+		<stat name='reuse' val='6'/>
+	</zone>
+	<zone id='20052' type='PoisonZone' shape='NPoly' minZ='-7260' maxZ='-7010'> <!-- [25_15] conquerors_pddown-->
+		<stat name='target' val='pc'/>
+		<stat name='skillId' val='4145'/>
+		<stat name='skillLvl' val='3'/>
+		<stat name='chance' val='70'/>
+		<stat name='reuse' val='6'/>
+	</zone>
+	<zone id='20053' type='PoisonZone' shape='NPoly' minZ='-7260' maxZ='-7010'> <!-- [25_15] conquerors_poison-->
+		<stat name='target' val='pc'/>
+		<stat name='skillId' val='4148'/>
+		<stat name='skillLvl' val='9'/>
+		<stat name='chance' val='70'/>
+		<stat name='reuse' val='6'/>
+	</zone>
+	<zone id='20054' type='PoisonZone' shape='NPoly' minZ='-7260' maxZ='-7010'> <!-- [25_15] conquerors_nonheal-->
+		<stat name='target' val='pc'/>
+		<stat name='skillId' val='4624'/>
+		<stat name='skillLvl' val='9'/>
+		<stat name='chance' val='70'/>
+		<stat name='reuse' val='6'/>
+	</zone>
+	<zone id='20055' type='PoisonZone' shape='NPoly' minZ='-7265' maxZ='-7015'> <!-- [25_15] lords_weakness-->
+		<stat name='target' val='pc'/>
+		<stat name='skillId' val='4146'/>
+		<stat name='skillLvl' val='3'/>
+		<stat name='chance' val='70'/>
+		<stat name='reuse' val='6'/>
+	</zone>
+	<zone id='20056' type='PoisonZone' shape='NPoly' minZ='-7265' maxZ='-7015'> <!-- [25_15] lords_pddown-->
+		<stat name='target' val='pc'/>
+		<stat name='skillId' val='4145'/>
+		<stat name='skillLvl' val='3'/>
+		<stat name='chance' val='70'/>
+		<stat name='reuse' val='6'/>
+	</zone>
+	<zone id='20057' type='PoisonZone' shape='NPoly' minZ='-7265' maxZ='-7015'> <!-- [25_15] lords_poison-->
+		<stat name='target' val='pc'/>
+		<stat name='skillId' val='4148'/>
+		<stat name='skillLvl' val='9'/>
+		<stat name='chance' val='70'/>
+		<stat name='reuse' val='6'/>
+	</zone>
+	<zone id='20058' type='PoisonZone' shape='NPoly' minZ='-7265' maxZ='-7015'> <!-- [25_15] lords_nonheal-->
+		<stat name='target' val='pc'/>
+		<stat name='skillId' val='4624'/>
+		<stat name='skillLvl' val='9'/>
+		<stat name='chance' val='70'/>
+		<stat name='reuse' val='6'/>
+	</zone>
+	<zone id='20059' type='PoisonZone' shape='NPoly' minZ='-7262' maxZ='-7012'> <!-- [25_15] savants_weakness-->
+		<stat name='target' val='pc'/>
+		<stat name='skillId' val='4146'/>
+		<stat name='skillLvl' val='3'/>
+		<stat name='chance' val='70'/>
+		<stat name='reuse' val='6'/>
+	</zone>
+	<zone id='20060' type='PoisonZone' shape='NPoly' minZ='-7262' maxZ='-7012'> <!-- [25_15] savants_pddown-->
+		<stat name='target' val='pc'/>
+		<stat name='skillId' val='4145'/>
+		<stat name='skillLvl' val='3'/>
+		<stat name='chance' val='70'/>
+		<stat name='reuse' val='6'/>
+	</zone>
+	<zone id='20061' type='PoisonZone' shape='NPoly' minZ='-7262' maxZ='-7012'> <!-- [25_15] savants_poison-->
+		<stat name='target' val='pc'/>
+		<stat name='skillId' val='4148'/>
+		<stat name='skillLvl' val='9'/>
+		<stat name='chance' val='70'/>
+		<stat name='reuse' val='6'/>
+	</zone>
+	<zone id='20062' type='PoisonZone' shape='NPoly' minZ='-7262' maxZ='-7012'> <!-- [25_15] savants_nonheal-->
+		<stat name='target' val='pc'/>
+		<stat name='skillId' val='4624'/>
+		<stat name='skillLvl' val='9'/>
+		<stat name='chance' val='70'/>
+		<stat name='reuse' val='6'/>
+	</zone>
+	<zone id='20063' type='PoisonZone' shape='NPoly' minZ='-7262' maxZ='-7012'> <!-- [25_15] magistrates_weakness-->
+		<stat name='target' val='pc'/>
+		<stat name='skillId' val='4146'/>
+		<stat name='skillLvl' val='3'/>
+		<stat name='chance' val='70'/>
+		<stat name='reuse' val='6'/>
+	</zone>
+	<zone id='20064' type='PoisonZone' shape='NPoly' minZ='-7262' maxZ='-7012'> <!-- [25_15] magistrates_pddown-->
+		<stat name='target' val='pc'/>
+		<stat name='skillId' val='4145'/>
+		<stat name='skillLvl' val='3'/>
+		<stat name='chance' val='70'/>
+		<stat name='reuse' val='6'/>
+	</zone>
+	<zone id='20065' type='PoisonZone' shape='NPoly' minZ='-7262' maxZ='-7012'> <!-- [25_15] magistrates_poison-->
+		<stat name='target' val='pc'/>
+		<stat name='skillId' val='4148'/>
+		<stat name='skillLvl' val='9'/>
+		<stat name='chance' val='70'/>
+		<stat name='reuse' val='6'/>
+	</zone>
+	<zone id='20066' type='PoisonZone' shape='NPoly' minZ='-7262' maxZ='-7012'> <!-- [25_15] magistrates_nonheal-->
+		<stat name='target' val='pc'/>
+		<stat name='skillId' val='4624'/>
+		<stat name='skillLvl' val='9'/>
+		<stat name='chance' val='70'/>
+		<stat name='reuse' val='6'/>
+	</zone>
 
 <!-- Swamp zones -->
 	<zone id='20100' type='SwampZone' shape='NPoly' minZ='-4468' maxZ='-4118'/>

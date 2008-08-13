@@ -14,7 +14,7 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <set name="soulConsumeCount" val="1"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="#dmg">
       <mul order="0x30" stat="pAtk" val="#pAtk"/>
@@ -40,7 +40,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="soulConsumeCount" val="1"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <for>
     <effect count="1" name="Debuff" time="15" val="0">
       <mul order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
@@ -73,10 +73,8 @@ description(s) :
   Description:
   Provokes enemies in front of you. Consumes 1 Soul. Power 1630.  
 -->
- <table name="#mpConsume_Init"> 7 9 11 </table>
- <table name="#mpConsume"> 16 22 25 </table>
+ <table name="#mpConsume"> 21 28 33 </table>
  <table name="#skillRadius"> 80 160 240 </table>
- <set name="mpInitialConsume" val="#mpConsume_Init"/>
  <set name="mpConsume" val="#mpConsume"/>
  <table name="#power"> 1630 2089 2384 </table>
  <set name="power" val="#power"/>
@@ -88,7 +86,7 @@ description(s) :
  <set name="castRange" val="40"/>
  <set name="effectRange" val="56"/>
  <set name="reuseDelay" val="10000"/>
- <set name="soulConsumeCount" val="1"/>
+ <set name="soulMaxConsumeCount" val="5"/>
  <for>
  </for>
 </skill>
@@ -98,10 +96,10 @@ description(s) :
       Makes three quick stabs. Consumes 1 Soul. An equipped rapier is required to use this skill.  Power 517-2557.
 -->
   <table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
-  <table name="#ench1Power">2422 2439 2455 2472 2488 2505 2521 2538 2554 2571 2587 2604 2620 2637 2653 2670 2686 2703 2719 2736 2752 2769 2785 2802 2818 2835 2851 2868 2884 2900</table>
-  <table name="#ench2MpConsume">65 64 63 62 61 60 59 57 56 55 54 53 52 51 50 48 47 46 45 44 43 42 40 39 38 37 36 35 34 33</table>
-  <table name="#mpConsume"> 32 33 34 34 35 36 37 38 40 41 42 43 44 44 45 46 48 49 50 51 52 53 54 54 55 56 57 58 59 60 61 62 63 64 65 66 67</table>
-  <table name="#power"> 517 549 583 619 656 694 735 777 820 865 912 960 1010 1062 1115 1169 1225 1283 1342 1402 1464 1527 1591 1656 1722 1789 1857 1926 1995 2065 2135 2206 2277 2347 2417 2488 2557</table>
+  <table name="#ench1Power">3255 3278 3300 3322 3344 3366 3388 3411 3433 3455 3477 3499 3521 3544 3566 3588 3610 3632 3654 3676 3699 3721 3743 3765 3787 3809 3832 3854 3876 3898</table>
+  <table name="#ench2MpConsume">59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30</table>
+  <table name="#mpConsume"> 29 30 31 31 32 33 34 32 36 37 38 39 40 40 41 42 43 44 45 46 47 48 49 49 50 51 52 53 54 54 55 56 57 58 59 59 60</table>
+  <table name="#power"> 620 659 700 742 787 833 882 932 984 1038 1094 1152 1212 1274 1337 1403 1470 1539 1610 1682 1757 1832 1909 1987 2067 2147 2229 2311 2394 2478 2562 2647 2732 2816 2901 2985 3069</table>
   <table name="#magicLvl"> 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76</table>
   <set name="weaponsAllowed" val="131072"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -116,7 +114,7 @@ description(s) :
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
-  <set name="soulConsumeCount" val="1"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant1 name="power" val="#ench1Power"/>
@@ -131,8 +129,8 @@ description(s) :
 -->
   <table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
   <table name="#ench1Power">5813 5852 5892 5932 5971 6011 6050 6090 6129 6169 6209 6248 6288 6327 6367 6406 6446 6486 6525 6565 6604 6644 6683 6723 6763 6802 6842 6881 6921 6960</table>
-  <table name="#ench2MpConsume">65 64 63 62 61 60 59 57 56 55 54 53 52 51 50 48 47 46 45 44 43 42 40 39 38 37 36 35 34 33</table>
-  <table name="#mpConsume"> 41 42 43 44 44 45 46 48 48 49 50 51 52 53 54 54 55 56 57 58 59 60 61 62 63 64 65 66 67</table>
+  <table name="#ench2MpConsume">59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30</table>
+  <table name="#mpConsume"> 37 38 39 40 40 41 42 43 44 45 46 47 48 49 49 50 51 52 53 54 54 55 56 57 58 59 59 60 </table>
   <table name="#power"> 1853 1953 2057 2164 2274 2388 2505 2625 2748 2875 3004 3136 3271 3408 3548 3690 3834 3980 4127 4275 4425 4575 4726 4878 5029 5180 5330 5479</table>
   <table name="#magicLvl"> 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76</table>
   <set name="weaponsAllowed" val="131072"/>
@@ -148,7 +146,7 @@ description(s) :
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
-  <set name="soulConsumeCount" val="2"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant1 name="power" val="#ench1Power"/>
@@ -159,8 +157,8 @@ description(s) :
 <skill id="506" levels="4" name="Checkmate" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
   <table name="#ench1Power">5813 5852 5892 5932 5971 6011 6050 6090 6129 6169 6209 6248 6288 6327 6367 6406 6446 6486 6525 6565 6604 6644 6683 6723 6763 6802 6842 6881 6921 6960</table>
-  <table name="#ench2MpConsume">56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 28</table>
-  <table name="#mpConsume"> 40 47 52 57 </table>
+  <table name="#ench2MpConsume">50 49 48 47 46 46 45 44 43 42 41 41 40 39 38 37 36 36 35 34 33 32 31 31 30 29 28 27 26 26</table>
+  <table name="#mpConsume"> 36 43 47 51 </table>
   <table name="#power"> 2388 3408 4275 5180 </table>
   <set name="weaponsAllowed" val="131072"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -173,7 +171,7 @@ description(s) :
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
-  <set name="soulConsumeCount" val="2"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <set name="baseCritRate" val="15"/>
   <cond msg="Checkmate cannot be used due to unsuitable terms.">
     <target active_effect_id="5264"/>
@@ -192,8 +190,8 @@ description(s) :
 -->
   <table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
   <table name="#ench1Power">5167 5202 5237 5273 5308 5343 5378 5413 5448 5484 5519 5554 5589 5621 5660 5695 5730 5765 5800 5835 5871 5906 5941 5976 6011 6046 6082 6117 6152 6187</table>
-  <table name="#ench2MpConsume">147 145 143 141 138 136 134 132 129 127 125 123 120 118 116 114 112 109 107 105 103 100 98 96 94 91 89 87 85 83</table>
-  <table name="#mpConsume"> 72 74 76 76 79 81 83 86 88 91 93 96 99 99 101 104 106 109 111 114 116 119 121 122 124 126 129 131 133 135 138 140 142 144 146 148 150</table>
+  <table name="#ench2MpConsume">133 131 129 127 125 123 121 119 117 115 113 111 109 107 105 103 101 99 97 95 93 91 89 87 85 83 81 79 77 75</table>
+  <table name="#mpConsume"> 65 67 69 69 71 73 75 77 80 82 84 86 89 89 91 93 96 98 100 103 105 107 109 109 112 114 116 118 120 122 124 126 128 129 131 133 135</table>
   <table name="#power"> 984 1046 1110 1178 1249 1322 1399 1479 1562 1647 1736 1828 1923 2021 2123 2227 2333 2443 2555 2670 2788 2908 3030 3154 3280 3408 3537 3668 3800 3933 4067 4201 4336 4470 4604 4738 4870</table>
   <table name="#magicLvl"> 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76</table>
   <set name="weaponsAllowed" val="65536"/>
@@ -210,7 +208,7 @@ description(s) :
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
-  <set name="soulConsumeCount" val="1"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <set name="baseCritRate" val="15"/>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -226,8 +224,8 @@ description(s) :
 -->
   <table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
   <table name="#ench1Power">1292 1301 1310 1319 1327 1336 1345 1354 1362 1371 1380 1389 1398 1406 1415 1424 1433 1442 1450 1459 1468 147 1486 1494 1503 1512 1521 1530 1538 1547</table>
-  <table name="#ench2MpConsume">220 217 214 210 207 204 200 197 194 191 187 184 181 177 174 171 167 164 161 158 154 151 148 144 141 138 134 131 128 125</table>
-  <table name="#mpConsume"> 125 129 132 136 140 144 148 148 152 155 159 163 167 171 174 178 182 182 186 189 193 196 200 203 206 209 212 215 218 221 224</table>
+  <table name="#ench2MpConsume">199 196 193 190 187 184 181 178 175 172 169 166 163 160 157 154 151 148 145 142 139 136 133 130 127 124 121 118 115 113</table>
+  <table name="#mpConsume"> 112 116 119 123 126 129 133 133 137 140 143 147 150 154 157 160 164 164 167 170 173 177 180 183 186 188 191 194 197 199 202</table>
   <table name="#power"> 350 370 391 412 434 457 481 506 531 557 584 611 639 668 697 727 758 789 820 852 885 917 950 984 1017 1051 1084 1118 1151 1185 1218</table>
   <table name="#magicLvl"> 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76</table>
   <set name="weaponsAllowed" val="65536"/>
@@ -245,7 +243,7 @@ description(s) :
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="500"/>
   <set name="effectRange" val="900"/>
-  <set name="soulConsumeCount" val="3"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant1 name="power" val="#ench1Power"/>
@@ -260,10 +258,10 @@ description(s) :
 -->
   <table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
   <table name="#ench1Power">2325 2341 2357 2373 2389 2405 2420 2436 2452 2468 2484 2500 2515 2531 2547 2563 2579 2595 2610 2626 2642 2658 2674 2690 2705 2721 2737 2753 2769 2784</table>
-  <table name="#ench2MpConsume">115 113 111 109 107 105 103 101 99 97 95 93 91 89 87 85 83 81 79 77 75 73 71 69 67 65 63 61 59 58</table>
+  <table name="#ench2MpConsume">107 105 103 102 100 98 96 94 92 91 89 87 85 83 82 80 78 76 74 72 71 69 67 65 63 62 60 58 56 54</table>
   <table name="#power"> 530 562 595 630 666 703 742 782 823 866 910 955 1002 1050 1100 1150 1202 1255 1309 1364 1420 1476 1534 1592 1651 1710 1770 1830 1891 1951 2012 2072 2132 2192</table>  
   <table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76</table>
-  <table name="#mpConsume"> 60 62 64 66 68 70 71 73 75 77 78 80 82 84 86 87 89 91 93 95 96 98 99 101 103 105 106 108 110 111 113 114 116 117</table>
+  <table name="#mpConsume"> 56 58 59 61 63 65 66 68 70 72 72 74 76 78 80 81 83 85 87 88 89 91 92 94 96 97 99 100 102 103 105 106 108 109</table>
   <set name="weaponsAllowed" val="65536"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -280,7 +278,7 @@ description(s) :
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
-  <set name="soulConsumeCount" val="2"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant1 name="power" val="#ench1Power"/>
@@ -292,7 +290,7 @@ description(s) :
 <skill id="510" levels="5" name="Deadly Roulette">
   <!-- Done by erhiwan -->
   <table name="#lethal2"> 10 18 26 34 42 50 </table> <!-- Guessing -->
-  <table name="#mpConsume"> 111 115 118 122 125 </table>
+  <table name="#mpConsume"> 100 103 106 109 112 </table>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <set name="itemConsumeCount" val="1"/>
@@ -304,7 +302,7 @@ description(s) :
   <set name="power" val="0.0"/>
   <set name="reuseDelay" val="10000"/> <!-- Guessing -->
   <set name="skillType" val="PDAM"/>
-  <set name="soulConsumeCount" val="2"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="weaponsAllowed" val="65536"/>
   <cond msg="Can be only used when HP is 10% or lower">
@@ -323,7 +321,7 @@ description(s) :
   <set name="power" val="500"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillType" val="AGGDAMAGE"/>
-  <set name="soulConsumeCount" val="1"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
   </for>
@@ -372,7 +370,7 @@ description(s) :
   <set name="triggerSkillId" val="5267"/>
   <set name="triggerSkillLvl" val="#triggerlvl"/>
   <set name="trapNpcId"  val="13037"/>
-  <set name="soulConsumeCount" val="2"/>
+  <set name="soulMaxConsumeCount" val="5"/>
 </skill>
 <skill id="515" levels="6" name="Poison Trap">
   <!-- Needs retail value corrections -->
@@ -390,7 +388,7 @@ description(s) :
   <set name="triggerSkillId" val="5268"/>
   <set name="triggerSkillLvl" val="#triggerlvl"/>
   <set name="trapNpcId"  val="13037"/>
-  <set name="soulConsumeCount" val="2"/>
+  <set name="soulMaxConsumeCount" val="5"/>
 </skill>
 <skill id="516" levels="6" name="Slow Trap">
   <!-- Needs retail value corrections -->
@@ -408,7 +406,7 @@ description(s) :
   <set name="triggerSkillId" val="5269"/>
   <set name="triggerSkillLvl" val="#triggerlvl"/>
   <set name="trapNpcId"  val="13037"/>
-  <set name="soulConsumeCount" val="2"/>
+  <set name="soulMaxConsumeCount" val="5"/>
 </skill>
 <skill id="517" levels="5" name="Flash Trap">
   <!-- Needs retail value corrections -->
@@ -426,7 +424,7 @@ description(s) :
   <set name="triggerSkillId" val="5270"/>
   <set name="triggerSkillLvl" val="#triggerlvl"/>
   <set name="trapNpcId"  val="13037"/>
-  <set name="soulConsumeCount" val="2"/>
+  <set name="soulMaxConsumeCount" val="5"/>
 </skill>
 <skill id="518" levels="8" name="Binding Trap">
   <!-- Needs retail value corrections -->
@@ -507,7 +505,7 @@ description(s) :
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="#aggro"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
-  <set name="soulConsumeCount" val="2"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <for>
     <cond>
       <player state="stand"/>
@@ -534,7 +532,7 @@ description(s) :
 <skill id="522" levels="4" name="Real Target">
   <table name="#mpInitialConsume"> 3 4 6 7 </table>
   <table name="#mpConsume"> 8 10 13 15 </table>
-  <table name="#castRange"> 400 500 600 700 </table>
+  <table name="#castRange"> 600 700 800 900 </table>
   <table name="#effectRange"> 900 1000 1100 1200 </table>
   <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -547,7 +545,7 @@ description(s) :
   <set name="castRange" val="#castRange"/>
   <set name="effectRange" val="#effectRange"/>
   <set name="reuseDelay" val="8000"/>
-  <set name="soulConsumeCount" val="1"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <for>
     <effect count="1" name="Debuff" time="15" val="0">
       <mul order="0x30" stat="bowWpnVuln" val="1.3"/> <!-- Needs to be checked -->
@@ -591,7 +589,7 @@ Description(s):
   <set name="hitTime" val="1500"/> 
   <set name="castRange" val="-1"/> 
   <set name="cancelEffect" val="5447"/> 
-  <set name="soulConsumeCount" val="1"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <for>
   </for>
 </skill>
@@ -605,13 +603,13 @@ Description(s):
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="npcId" val="#npcId" />
-  <set name="soulConsumeCount" val="4"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <for>
   </for>
 </skill>
 <skill id="526" levels="1" name="Enuma Elish">
 <!-- Needs retail accuracy check -->
-  <set name="mpConsume" val="87"/>
+  <set name="mpConsume" val="78"/>
   <set name="power" val="6060"/>
   <set name="hitTime" val="1080"/>
   <set name="SSBoost" val="2.0"/> <!-- Guessing -->
@@ -623,7 +621,7 @@ Description(s):
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="reuseDelay" val="1800000"/>
-  <set name="soulConsumeCount" val="7"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <for>
   </for>
 </skill>
@@ -841,7 +839,7 @@ Description(s):
   </for>
 </skill>
 <skill id="539" levels="1" name="Nail Attack">
-  <set name="mpConsume" val="79"/>
+  <set name="mpConsume" val="71"/>
   <set name="power" val="2583"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="13000"/>
@@ -855,7 +853,7 @@ Description(s):
 </skill>
 <skill id="540" levels="1" name="Wing Assault">
   <set name="magicLvl" val="76"/>
-  <set name="mpConsume" val="79"/>
+  <set name="mpConsume" val="71"/>
   <set name="power" val="2067"/>
   <set name="target" val="TARGET_FRONT_AREA"/>
   <set name="skillRadius" val="600"/>
@@ -1162,7 +1160,7 @@ Description(s):
   </for>
 </skill>
 <skill id="561" levels="4" name="Bless of Angel">
-  <table name="#mpConsume"> 68 70 74 78 </table>
+  <table name="#mpConsume"> 61 63 67 70 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
@@ -1180,7 +1178,7 @@ Description(s):
   </for>
 </skill>
 <skill id="562" levels="4" name="Wind of Angel">
-  <table name="#mpConsume"> 68 70 74 78 </table>
+  <table name="#mpConsume"> 61 63 67 70 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
@@ -1263,7 +1261,7 @@ Description(s):
   </for>
 </skill>
 <skill id="572" levels="4" name="Double Slasher">
-  <table name="#mpConsume"> 68 70 74 78 </table>
+  <table name="#mpConsume"> 61 63 67 70 </table>
   <table name="#power"> 938 1055 1176 1300 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
@@ -1278,7 +1276,7 @@ Description(s):
   </for>
 </skill>
 <skill id="573" levels="4" name="Earthquake">
-  <table name="#mpConsume"> 68 70 74 78 </table>
+  <table name="#mpConsume"> 61 63 67 70 </table>
   <table name="#power"> 625 703 784 867 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
@@ -1305,7 +1303,7 @@ Description(s):
   </for>
 </skill>
 <skill id="575" levels="4" name="Steel Cutter">
-  <table name="#mpConsume"> 68 70 74 78 </table>
+  <table name="#mpConsume"> 61 63 67 70 </table>
   <table name="#power"> 1250  1406 1568 1733 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
@@ -1364,7 +1362,7 @@ Description(s):
 </skill>
 <skill id="581" levels="4" name="Sand Cloud">
 <!-- Needs retail accuracy check -->
-  <table name="#mpConsume"> 68 70 74 78 </table>
+  <table name="#mpConsume"> 61 63 67 70 </table>
   <table name="#accCombat"> 13 15 17 19 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_AREA"/>
@@ -1384,7 +1382,7 @@ Description(s):
 </skill>
 <skill id="582" levels="4" name="Scope Bleed">
 <!-- Needs retail accuracy check -->
-  <table name="#mpConsume"> 68 70 74 78 </table>
+  <table name="#mpConsume"> 61 63 67 70 </table>
   <table name="#power"> 875 984 1098 1213 </table>
   <table name="#effect"> 6 6 7 7 </table>
   <table name="#bleeddmg"> 102 123 155 198 </table>
@@ -1404,7 +1402,7 @@ Description(s):
   </for>
 </skill>
 <skill id="583" levels="4" name="Assimilation">
-  <table name="#mpConsume"> 68 70 74 78 </table>
+  <table name="#mpConsume"> 61 63 67 70 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="hitTime" val="2000"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1419,7 +1417,7 @@ Description(s):
   </for>
 </skill>
 <skill id="584" levels="1" name="Power Claw">
-  <set name="mpConsume" val="61"/>
+  <set name="mpConsume" val="55"/>
   <set name="power" val="1008"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="overHit" val="true"/>
@@ -1435,8 +1433,7 @@ Description(s):
   </for>
 </skill>
 <skill id="585" levels="1" name="Fast Moving">
-  <table name="#spd">66</table>
-  <set name="mpConsume" val="61"/>
+  <set name="mpConsume" val="55"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="90000"/>
@@ -1447,7 +1444,7 @@ Description(s):
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="438"/>
   <for>
-    <effect count="1" name="Buff" time="15" val="0" stackOrder="#spd" stackType="speed_up_special">
+    <effect count="1" name="Buff" time="15" val="0" stackOrder="66" stackType="speed_up_special">
       <add order="0x40" stat="runSpd" val="66"/>
     </effect>
   </for>

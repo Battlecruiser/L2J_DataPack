@@ -331,14 +331,14 @@
   <set name="magicLvl" val="99"/>
   <set name="lvlDepend" val="1"/>
   <set name="power" val="47895.0"/>
-  <set name="mpConsume" val="192"/>
+  <set name="mpConsume" val="43"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4500"/>
+  <set name="hitTime" val="6000"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
-  <set name="castRange" val="900"/>
-  <set name="effectRange" val="1400"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
   <set name="effectType" val="STUN"/>
   <set name="effectPower" val="80"/>
   <for>
@@ -350,11 +350,11 @@
   Description(s):
       Curse of the Huge Pig: Target is temporarily overcome with fear, causing it to flee mindlessly.
 -->
-  <set name="mpConsume" val="150"/>
+  <set name="mpConsume" val="43"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="20000"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="6000"/>
   <set name="skillType" val="FEAR"/>
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
