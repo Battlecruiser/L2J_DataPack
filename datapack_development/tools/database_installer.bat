@@ -525,8 +525,6 @@ auction_watch.sql
 augmentations.sql
 auto_chat.sql
 auto_chat_text.sql
-boxaccess.sql
-boxes.sql
 castle.sql
 castle_door.sql
 castle_doorupgrade.sql
@@ -534,11 +532,13 @@ castle_functions.sql
 castle_manor_procure.sql
 castle_manor_production.sql
 castle_siege_guards.sql
+char_creation_items.sql
 char_templates.sql
 character_friends.sql
 character_hennas.sql
 character_macroses.sql
 character_quests.sql
+character_raid_points.sql
 character_recipebook.sql
 character_recommends.sql
 character_shortcuts.sql
@@ -567,6 +567,7 @@ fort_siege_guards.sql
 fort.sql
 fortsiege_clans.sql
 forums.sql
+four_sepulchers_spawnlist.sql
 games.sql
 global_tasks.sql
 grandboss_data.sql

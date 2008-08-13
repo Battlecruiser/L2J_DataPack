@@ -265,8 +265,6 @@ $MYG < ../sql/auction_watch.sql &> /dev/null
 $MYG < ../sql/augmentations.sql &> /dev/null
 $MYG < ../sql/auto_chat.sql &> /dev/null
 $MYG < ../sql/auto_chat_text.sql &> /dev/null
-$MYG < ../sql/boxaccess.sql &> /dev/null
-$MYG < ../sql/boxes.sql &> /dev/null
 $MYG < ../sql/castle.sql &> /dev/null
 $MYG < ../sql/castle_door.sql &> /dev/null
 $MYG < ../sql/castle_doorupgrade.sql &> /dev/null
@@ -275,10 +273,12 @@ $MYG < ../sql/castle_manor_procure.sql &> /dev/null
 $MYG < ../sql/castle_manor_production.sql &> /dev/null
 $MYG < ../sql/castle_siege_guards.sql &> /dev/null
 $MYG < ../sql/char_templates.sql &> /dev/null
+$MYG < ../sql/char_creation_items.sql &> /dev/null
 $MYG < ../sql/character_friends.sql &> /dev/null
 $MYG < ../sql/character_hennas.sql &> /dev/null
 $MYG < ../sql/character_macroses.sql &> /dev/null
 $MYG < ../sql/character_quests.sql &> /dev/null
+$MYG < ../sql/character_raid_points.sql &> /dev/null
 $MYG < ../sql/character_recipebook.sql &> /dev/null
 $MYG < ../sql/character_recommends.sql &> /dev/null
 $MYG < ../sql/character_shortcuts.sql &> /dev/null
@@ -307,6 +307,7 @@ $MYG < ../sql/fort_doorupgrade.sql &> /dev/null
 $MYG < ../sql/fort_siege_guards.sql &> /dev/null
 $MYG < ../sql/fort.sql &> /dev/null
 $MYG < ../sql/fortsiege_clans.sql &> /dev/null
+$MYG < ../sql/four_sepulchers_spawnlist.sql &> /dev/null
 $MYG < ../sql/games.sql &> /dev/null
 $MYG < ../sql/global_tasks.sql &> /dev/null
 $MYG < ../sql/grandboss_data.sql &> /dev/null

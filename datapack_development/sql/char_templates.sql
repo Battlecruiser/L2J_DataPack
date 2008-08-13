@@ -36,11 +36,11 @@ CREATE TABLE `char_templates` (
   `F_UNK2` decimal(8,6) NOT NULL default '0.000000',
   `F_COL_R` decimal(3,1) NOT NULL default '0.0',
   `F_COL_H` decimal(4,1) NOT NULL default '0.0',
-  `items1` int(4) NOT NULL default '0',
-  `items2` int(4) NOT NULL default '0',
-  `items3` int(4) NOT NULL default '0',
-  `items4` int(4) NOT NULL default '0',
-  `items5` int(10) NOT NULL default '0',
+  `items1` int(4) NOT NULL default '0', -- MARKED FOR DELETION
+  `items2` int(4) NOT NULL default '0', -- MARKED FOR DELETION
+  `items3` int(4) NOT NULL default '0', -- MARKED FOR DELETION
+  `items4` int(4) NOT NULL default '0', -- MARKED FOR DELETION
+  `items5` int(10) NOT NULL default '0', -- MARKED FOR DELETION
   PRIMARY KEY  (`ClassId`)
 ) ENGINE=MyISAM;
 
