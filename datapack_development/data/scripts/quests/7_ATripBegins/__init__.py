@@ -80,7 +80,9 @@ class Quest (JQuest) :
          else : 
            htmltext = "30148-03.htm" 
        elif npcId == ASTERIOS and cond == 2 and st.getQuestItemsCount(ARIELS_RECOMMENDATION) > 0 : 
-         htmltext = "30154-01.htm" 
+         htmltext = "30154-01.htm"
+       elif npcId == ASTERIOS and cond == 3 : 
+         htmltext = "30154-03.htm" 
        elif npcId == MIRABEL and cond == 3 : 
          htmltext = "30146-05.htm" 
    return htmltext 

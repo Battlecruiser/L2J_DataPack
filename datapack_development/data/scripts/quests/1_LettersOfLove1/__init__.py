@@ -100,7 +100,9 @@ class Quest (JQuest) :
          elif ItemsCount_BP > 0 : 
            htmltext = "30048-10.htm" 
            st.takeItems(BAULS_POTION,-1) 
-           st.giveItems(NECKLACE,1) 
+           st.giveItems(57,2466)
+           st.giveItems(NECKLACE,1)
+           st.addExpAndSp(5672,446)
            st.set("cond","0") 
            st.set("onlyone","1") 
            st.exitQuest(False)
