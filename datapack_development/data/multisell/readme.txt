@@ -12,6 +12,7 @@ of this directory a little bit.
 382.xml  -> Quest 382: Head Blacksmith Vergara
 426.xml  -> Quest 426: Fishing Shots
 500.xml  -> Seven Signs - Purchase consumable items
+631.xml  -> Warehouse Freightman - enchants
 648.xml  -> Quest 648: An Ice Merchants Dream
 
 999.xml  -> Upgrade hatchling to strider equipment
@@ -22,6 +23,9 @@ of this directory a little bit.
 1003.xml -> Reseal B-grade gloves or boots
 1004.xml -> Blacksmith crafting service
 1005.xml -> Blacksmith Special Abilities bestowing service
+1006.xml -> Dual Swords B-grade, require Dual Sword Craft Stamp
+1007.xml -> Dual Swords B-grade
+1008.xml -> Blacksmith Life Stones exchange
 
 1235.xml -> Apella shop
 
@@ -48,7 +52,6 @@ of this directory a little bit.
 313750002.xml -> Ketra alliance - Lv2
 313750003.xml -> Ketra alliance - Lv3
 
-306781001.xml -> Dual swords: Helton, require dualsword craft stamp
 308461001.xml -> Dual swords: Wilbert, doesn't require dualsword craft stamp
 
 310922001.xml -> Seven Signs - Black Marketeer of Mammon - SA Removal for AA
@@ -66,6 +69,7 @@ of this directory a little bit.
 311262510.xml -> Seven Signs - Blacksmith of Mammon - SA: A-grade
 311262511.xml -> Seven Signs - Blacksmith of Mammon - Weapon Upgrade
 311262512.xml -> Seven Signs - Blacksmith of Mammon - Weapon Exchange
+311262513.xml -> Seven Signs - Blacksmith of Mammon - Foundation Items
 
 306893001.xml -> Shadow weaponry system. D-grade coupons exchange
 306893002.xml -> Shadow weaponry system. C-grade coupons exchange
