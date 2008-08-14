@@ -41,8 +41,7 @@ public class fleeNpc extends QuestJython
    {
       if (npc.getNpcId() >= 18150 && npc.getNpcId() <= 18157)
       {
-         npc.startFear();
-         npc.getAI().setIntention( CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition((npc.getClientX() + Rnd.get(-100, 100)), (npc.getClientY()+ Rnd.get(-100, 100)), npc.getClientZ(), npc.getHeading()));
+         npc.getAI().setIntention( CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition((npc.X() + Rnd.get(-40, 40)), (npc.getY()+ Rnd.get(-40, 40)), npc.getZ(), npc.getHeading()));
          return null;
       }
 
