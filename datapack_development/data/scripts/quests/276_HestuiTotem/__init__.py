@@ -84,7 +84,7 @@ class Quest (JQuest) :
         st.set("cond","2")
    return
 
-QUEST       = Quest(276,qn,"Hestui Totem")
+QUEST       = Quest(276,qn,"Totem of the Hestui")
 
 QUEST.addStartNpc(30571)
 QUEST.addTalkId(30571)

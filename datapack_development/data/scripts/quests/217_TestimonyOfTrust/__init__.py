@@ -35,7 +35,7 @@ DROPLIST={
 20232 :[ORDER_OF_CLAYTON_ID,STAKATOS_FLUIDS_ID,           10],
 20234 :[ORDER_OF_CLAYTON_ID,STAKATOS_FLUIDS_ID,           10],
 # For condition 19
-20213 :[ORDER_OF_NICHOLA_ID,HEART_OF_PORTA_ID,            10]
+20213 :[ORDER_OF_NICHOLA_ID,HEART_OF_PORTA_ID,            1]
 }
 
 
@@ -219,13 +219,13 @@ class Quest (JQuest) :
            htmltext = "30531-03.htm"
          elif npcId == 30621 and st.getQuestItemsCount(LETTER_TO_NICHOLA_ID) :
            htmltext = "30621-01.htm"
-     elif cond == 19 :                                     # Condition 19 get 10 Heart of Porta
+     elif cond == 19 :                                     # Condition 19 get 1 Heart of Porta
          if npcId == 30621 :
            htmltext = "30621-03.htm"
-     elif cond == 20 :                                     # Condition 20 bring the 10 Heart of Porta to Nichola
-         if npcId == 30621 and st.getQuestItemsCount(ORDER_OF_NICHOLA_ID) and st.getQuestItemsCount(HEART_OF_PORTA_ID)==10 :
+     elif cond == 20 :                                     # Condition 20 bring the 1 Heart of Porta to Nichola
+         if npcId == 30621 and st.getQuestItemsCount(ORDER_OF_NICHOLA_ID) and st.getQuestItemsCount(HEART_OF_PORTA_ID) :
            htmltext = "30621-04.htm"
-           st.takeItems(HEART_OF_PORTA_ID,10)
+           st.takeItems(HEART_OF_PORTA_ID,1)
            st.takeItems(ORDER_OF_NICHOLA_ID,1)
            st.set("cond","21")
      elif cond == 21 :                                     # Condition 21 take the letter to Lockirin

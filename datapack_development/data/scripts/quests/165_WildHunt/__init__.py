@@ -46,7 +46,7 @@ class Quest (JQuest) :
    elif npcId == 30348 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
       htmltext = "<html><body>This quest has already been completed.</body></html>"
 
-   elif npcId == 30348 and st.getInt("cond")==1 :
+   elif npcId == 30348 and st.getInt("cond")>=1 :
       if st.getQuestItemsCount(DARK_BEZOAR_ID)<13 :
         htmltext = "30348-04.htm"
       elif st.getQuestItemsCount(DARK_BEZOAR_ID) >= 13 and st.getInt("onlyone") == 0 :
@@ -68,45 +68,19 @@ class Quest (JQuest) :
    if st.getState() != State.STARTED : return 
 
    npcId = npc.getNpcId()
-   if npcId == 20529 :
+   if npcId in [20529,20532,20536,20456] :
         st.set("id","0")
         if st.getInt("cond") == 1 :
-          if st.getRandom(10)<4 and st.getQuestItemsCount(DARK_BEZOAR_ID)<13 :
+          if st.getRandom(10)<7 and st.getQuestItemsCount(DARK_BEZOAR_ID)<13 :
             st.giveItems(DARK_BEZOAR_ID,1)
             if st.getQuestItemsCount(DARK_BEZOAR_ID) == 13 :
               st.playSound("ItemSound.quest_middle")
-            else:
-              st.playSound("ItemSound.quest_itemget")
-   elif npcId == 20532 :
-        st.set("id","0")
-        if st.getInt("cond") == 1 :
-          if st.getRandom(10)<4 and st.getQuestItemsCount(DARK_BEZOAR_ID)<13 :
-            st.giveItems(DARK_BEZOAR_ID,1)
-            if st.getQuestItemsCount(DARK_BEZOAR_ID) == 13 :
-              st.playSound("ItemSound.quest_middle")
-            else:
-              st.playSound("ItemSound.quest_itemget")
-   elif npcId == 20536 :
-        st.set("id","0")
-        if st.getInt("cond") == 1 :
-          if st.getRandom(10)<4 and st.getQuestItemsCount(DARK_BEZOAR_ID)<13 :
-            st.giveItems(DARK_BEZOAR_ID,1)
-            if st.getQuestItemsCount(DARK_BEZOAR_ID) == 13 :
-              st.playSound("ItemSound.quest_middle")
-            else:
-              st.playSound("ItemSound.quest_itemget")
-   elif npcId == 20456 :
-        st.set("id","0")
-        if st.getInt("cond") == 1 :
-          if st.getRandom(10)<4 and st.getQuestItemsCount(DARK_BEZOAR_ID)<13 :
-            st.giveItems(DARK_BEZOAR_ID,1)
-            if st.getQuestItemsCount(DARK_BEZOAR_ID) == 13 :
-              st.playSound("ItemSound.quest_middle")
+              st.set("cond","2")
             else:
               st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(165,qn,"Wild Hunt")
+QUEST       = Quest(165,qn,"Shilen's Hunt")
 
 QUEST.addStartNpc(30348)
 

@@ -58,6 +58,7 @@ class Quest (JQuest) :
           st.takeItems(RUMIELS_POEM_3_ID,1)
           st.takeItems(RUMIELS_POEM_4_ID,1)
           st.takeItems(RUMIELS_POEM_5_ID,1)
+          st.addExpAndSp(21643,943)
           st.set("cond","0")
           st.exitQuest(False)
           st.playSound("ItemSound.quest_finish")
@@ -128,7 +129,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(163,qn,"Legacy Of Poet")
+QUEST       = Quest(163,qn,"Legacy Of the Poet")
 
 QUEST.addStartNpc(30220)
 

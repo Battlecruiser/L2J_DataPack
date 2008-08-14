@@ -113,7 +113,7 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(293,qn,"Hidden Vein")
+QUEST       = Quest(293,qn,"The Hidden Veins")
 
 QUEST.addStartNpc(30535)
 

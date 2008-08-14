@@ -60,6 +60,7 @@ class Quest (JQuest) :
          st.takeItems(SILVERY_SPIDERSILK,1)
          st.giveItems(UNOS_RECEIPT,1)
          st.set("cond","2")
+         st.playSound("ItemSound.quest_middle")
          htmltext = "30147-01.htm"
      elif cond == 2 :
        if npcId == 30370 :
@@ -90,7 +91,7 @@ class Quest (JQuest) :
           htmltext = "30147-03.htm"
         elif npcId == 30370 and st.getQuestItemsCount(NIGHTSHADE_LEAF) :
           st.takeItems(NIGHTSHADE_LEAF,1)
-          st.giveItems(LESSER_HEALING_POTION,int(Config.RATE_QUESTS_REWARD))
+          st.giveItems(LESSER_HEALING_POTION,int(5*Config.RATE_QUESTS_REWARD))
           st.addExpAndSp(1000,0)
           st.unset("cond")
           st.exitQuest(False)
@@ -98,7 +99,7 @@ class Quest (JQuest) :
           htmltext = "30370-06.htm"
    return htmltext
 
-QUEST       = Quest(160,qn,"Nerupas Favor")
+QUEST       = Quest(160,qn,"Nerupa's Request")
 
 QUEST.addStartNpc(30370)
 

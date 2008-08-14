@@ -46,31 +46,35 @@ class Quest (JQuest) :
         htmltext = "<html><body>This quest has already been completed.</body></html>"
 
    if id == State.STARTED:     
-       if npcId == 30312 and st.getInt("cond")==1 and (st.getQuestItemsCount(FOX_FUR_YARN_ID)==0 and st.getQuestItemsCount(MAIDEN_DOLL_ID)==0) and st.getQuestItemsCount(FOX_FUR_ID)<10 :
+       if npcId == 30312 and st.getInt("cond")>=1 and (st.getQuestItemsCount(FOX_FUR_YARN_ID)==0 and st.getQuestItemsCount(MAIDEN_DOLL_ID)==0) and st.getQuestItemsCount(FOX_FUR_ID)<10 :
             htmltext = "30312-05.htm"
-       elif npcId == 30312 and st.getInt("cond")==1 and st.getQuestItemsCount(FOX_FUR_ID)>=10 :
+       elif npcId == 30312 and st.getInt("cond")>=1 and st.getQuestItemsCount(FOX_FUR_ID)>=10 :
             htmltext = "30312-08.htm"
-       elif npcId == 30051 and st.getInt("cond")==1 and st.getQuestItemsCount(FOX_FUR_ID)<10 and st.getQuestItemsCount(FOX_FUR_ID)>0 :
+       elif npcId == 30051 and st.getInt("cond")>=1 and st.getQuestItemsCount(FOX_FUR_ID)<10 and st.getQuestItemsCount(FOX_FUR_ID)>0 :
             htmltext = "30051-01.htm"
-       elif npcId == 30051 and st.getInt("cond")==1 and st.getQuestItemsCount(FOX_FUR_ID)>=10 and st.getQuestItemsCount(FOX_FUR_YARN_ID)==0 and st.getQuestItemsCount(MAIDEN_DOLL_ID)==0 and st.getQuestItemsCount(MAIDEN_DOLL_ID)<10 :
+       elif npcId == 30051 and st.getInt("cond")>=1 and st.getQuestItemsCount(FOX_FUR_ID)>=10 and st.getQuestItemsCount(FOX_FUR_YARN_ID)==0 and st.getQuestItemsCount(MAIDEN_DOLL_ID)==0 and st.getQuestItemsCount(MAIDEN_DOLL_ID)<10 :
             htmltext = "30051-02.htm"
             st.giveItems(FOX_FUR_YARN_ID,1)
             st.takeItems(FOX_FUR_ID,st.getQuestItemsCount(FOX_FUR_ID))
-       elif npcId == 30051 and st.getInt("cond")==1 and st.getQuestItemsCount(FOX_FUR_YARN_ID)>=1 :
+            st.set("cond","3")
+            st.playSound("ItemSound.quest_middle")
+       elif npcId == 30051 and st.getInt("cond")>=1 and st.getQuestItemsCount(FOX_FUR_YARN_ID)>=1 :
             htmltext = "30051-03.htm"
-       elif npcId == 30051 and st.getInt("cond")==1 and st.getQuestItemsCount(MAIDEN_DOLL_ID)==1 :
+       elif npcId == 30051 and st.getInt("cond")>=1 and st.getQuestItemsCount(MAIDEN_DOLL_ID)==1 :
             htmltext = "30051-04.htm"
-       elif npcId == 30312 and st.getInt("cond")==1 and st.getQuestItemsCount(FOX_FUR_YARN_ID)>=1 :
+       elif npcId == 30312 and st.getInt("cond")>=1 and st.getQuestItemsCount(FOX_FUR_YARN_ID)>=1 :
             htmltext = "30312-06.htm"
-       elif npcId == 30055 and st.getInt("cond")==1 and st.getQuestItemsCount(FOX_FUR_YARN_ID)>=1 :
+       elif npcId == 30055 and st.getInt("cond")>=1 and st.getQuestItemsCount(FOX_FUR_YARN_ID)>=1 :
             htmltext = "30055-01.htm"
             st.giveItems(MAIDEN_DOLL_ID,1)
             st.takeItems(FOX_FUR_YARN_ID,st.getQuestItemsCount(FOX_FUR_YARN_ID))
-       elif npcId == 30055 and st.getInt("cond")==1 and st.getQuestItemsCount(MAIDEN_DOLL_ID)>=1 :
+            st.set("cond","4")
+            st.playSound("ItemSound.quest_middle")
+       elif npcId == 30055 and st.getInt("cond")>=1 and st.getQuestItemsCount(MAIDEN_DOLL_ID)>=1 :
             htmltext = "30055-02.htm"
-       elif npcId == 30055 and st.getInt("cond")==1 and st.getQuestItemsCount(FOX_FUR_YARN_ID)==0 and st.getQuestItemsCount(MAIDEN_DOLL_ID)==0 :
+       elif npcId == 30055 and st.getInt("cond")>=1 and st.getQuestItemsCount(FOX_FUR_YARN_ID)==0 and st.getQuestItemsCount(MAIDEN_DOLL_ID)==0 :
             htmltext = "30055-03.htm"
-       elif npcId == 30312 and st.getInt("cond")==1 and st.getQuestItemsCount(MAIDEN_DOLL_ID)>=1 and st.getInt("onlyone")==0 :
+       elif npcId == 30312 and st.getInt("cond")>=1 and st.getQuestItemsCount(MAIDEN_DOLL_ID)>=1 and st.getInt("onlyone")==0 :
           if st.getInt("id") != 154 :
             st.set("id","154")
             htmltext = "30312-07.htm"
@@ -91,20 +95,22 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    if npcId == 20481 :
         st.set("id","0")
-        if st.getInt("cond") == 1 and st.getQuestItemsCount(FOX_FUR_ID)<10 and st.getQuestItemsCount(FOX_FUR_YARN_ID) == 0 :
+        if st.getInt("cond") >= 1 and st.getQuestItemsCount(FOX_FUR_ID)<10 and st.getQuestItemsCount(FOX_FUR_YARN_ID) == 0 :
           if st.getRandom(10)<4 :
             st.giveItems(FOX_FUR_ID,1)
             if st.getQuestItemsCount(FOX_FUR_ID) == 10 :
               st.playSound("ItemSound.quest_middle")
+              st.set("cond","2")
             else:
               st.playSound("ItemSound.quest_itemget")
    elif npcId == 20545 :
         st.set("id","0")
-        if st.getInt("cond") == 1 and st.getQuestItemsCount(FOX_FUR_ID)<10 and st.getQuestItemsCount(FOX_FUR_YARN_ID) == 0 :
+        if st.getInt("cond") >= 1 and st.getQuestItemsCount(FOX_FUR_ID)<10 and st.getQuestItemsCount(FOX_FUR_YARN_ID) == 0 :
           if st.getRandom(10)<4 :
             st.giveItems(FOX_FUR_ID,1)
             if st.getQuestItemsCount(FOX_FUR_ID) == 10 :
               st.playSound("ItemSound.quest_middle")
+              st.set("cond","2")
             else:
               st.playSound("ItemSound.quest_itemget")
    return

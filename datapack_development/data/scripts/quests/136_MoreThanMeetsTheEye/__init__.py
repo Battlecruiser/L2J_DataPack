@@ -18,7 +18,7 @@ AVANTGARDE=32323
 ECTOPLASM=9787
 STABILIZED_ECTOPLASM=9786
 ORDER=9788
-MORDEO_CRYSTAL=9789
+GLASS_JAGUAR_CRYSTAL=9789
 BOOK_OF_SEAL=9790
 ADENA=57
 TRANSFORM_BOOK=9648
@@ -29,16 +29,16 @@ DROPLIST = {
     20637:[ECTOPLASM,50,5],
     20638:[ECTOPLASM,55,10],
     20639:[ECTOPLASM,60,120],
-    20215:[MORDEO_CRYSTAL,100,0]
+    20250:[GLASS_JAGUAR_CRYSTAL,100,0]
     }
 # itemId:[max,cond]
-DROPCONFIG = {ECTOPLASM:[35,"4"],MORDEO_CRYSTAL:[5,"8"]}
+DROPCONFIG = {ECTOPLASM:[35,"4"],GLASS_JAGUAR_CRYSTAL:[5,"8"]}
 
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
      JQuest.__init__(self,id,name,descr)
-     self.questItemIds = [ECTOPLASM,STABILIZED_ECTOPLASM,ORDER,MORDEO_CRYSTAL,BOOK_OF_SEAL]
+     self.questItemIds = [ECTOPLASM,STABILIZED_ECTOPLASM,ORDER,GLASS_JAGUAR_CRYSTAL,BOOK_OF_SEAL]
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -109,7 +109,7 @@ class Quest (JQuest) :
          htmltext = "30464-01.htm"
       elif cond == 8 :
          htmltext = "30464-03.htm"
-         st.takeItems(MORDEO_CRYSTAL,5)
+         st.takeItems(GLASS_JAGUAR_CRYSTAL,5)
          st.giveItems(BOOK_OF_SEAL,1)
          st.set("cond","9")
          st.playSound("ItemSound.quest_middle")

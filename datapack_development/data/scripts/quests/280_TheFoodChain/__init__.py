@@ -10,7 +10,7 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 qn = "280_TheFoodChain"
 
 #NPC'S
-BIXON = 32175
+VIZON = 32175
 
 #ITEM'S
 KELTIR_TOOTH = 9809
@@ -68,13 +68,13 @@ class Quest (JQuest) :
      keltir_tooth = st.getQuestItemsCount(KELTIR_TOOTH)
      wolf_tooth = st.getQuestItemsCount(WOLF_TOOTH)
      summ = keltir_tooth + wolf_tooth
-     if id == State.CREATED and npcId == BIXON :
+     if id == State.CREATED and npcId == VIZON :
        if player.getLevel() < 3 :
          htmltext = "32175-02.htm"
          st.exitQuest(1)
        else :
          htmltext = "32175-01.htm"
-     elif id == State.STARTED and npcId == BIXON :
+     elif id == State.STARTED and npcId == VIZON :
        if not summ :
          htmltext = "32175-04.htm"
        else :
@@ -97,9 +97,9 @@ class Quest (JQuest) :
 
 QUEST       = Quest(280, qn, "The Food Chain")
 
-QUEST.addStartNpc(BIXON)
+QUEST.addStartNpc(VIZON)
 
-QUEST.addTalkId(BIXON)
+QUEST.addTalkId(VIZON)
 
 for mob in MOBS_KELTIR :
     QUEST.addKillId(mob)

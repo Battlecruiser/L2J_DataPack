@@ -2,14 +2,14 @@
 # by Fulminus
 
 import sys
-from net.sf.l2j.gameserver.ai import CtrlIntention
-from net.sf.l2j.gameserver.instancemanager import GrandBossManager
-from net.sf.l2j.gameserver.model.quest import State
-from net.sf.l2j.gameserver.model.quest import QuestState
-from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-from net.sf.l2j.gameserver.serverpackets import SocialAction
-from net.sf.l2j.gameserver.serverpackets import Earthquake
-from net.sf.l2j.gameserver.serverpackets import PlaySound
+from net.sf.l2j.gameserver.ai 						import CtrlIntention
+from net.sf.l2j.gameserver.instancemanager 			import GrandBossManager
+from net.sf.l2j.gameserver.model.quest 				import State
+from net.sf.l2j.gameserver.model.quest 				import QuestState
+from net.sf.l2j.gameserver.model.quest.jython 		import QuestJython as JQuest
+from net.sf.l2j.gameserver.network.serverpackets 	import SocialAction
+from net.sf.l2j.gameserver.network.serverpackets 	import Earthquake
+from net.sf.l2j.gameserver.network.serverpackets 	import PlaySound
 from net.sf.l2j.util import Rnd
 from java.lang import System
 

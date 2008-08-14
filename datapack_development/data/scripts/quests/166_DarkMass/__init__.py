@@ -60,8 +60,8 @@ class Quest (JQuest) :
             st.takeItems(DREVIANT_WINE_ID,1)
             st.takeItems(GARMIELS_SCRIPTURE_ID,1)
             st.takeItems(UNDRES_LETTER_ID,1)
-            st.giveItems(ADENA_ID,500)
-            st.addExpAndSp(500,0)
+            st.giveItems(ADENA_ID,2966)
+            st.addExpAndSp(5672,446)
             st.set("cond","0")
             st.exitQuest(False)
             st.playSound("ItemSound.quest_finish")
@@ -92,7 +92,7 @@ class Quest (JQuest) :
          st.playSound("ItemSound.quest_middle")
    return htmltext
 
-QUEST       = Quest(166,qn,"Dark Mass")
+QUEST       = Quest(166,qn,"Mass of Darkness")
 
 QUEST.addStartNpc(30130)
 

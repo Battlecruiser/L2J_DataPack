@@ -6,7 +6,6 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
-#Complete - 95%. Need add reward for 20+ items.
 qn = "283_TheFewTheProudTheBrave"
 
 #NPC'S
@@ -31,7 +30,10 @@ class Quest (JQuest) :
        st.setState(State.STARTED)
        st.playSound("ItemSound.quest_accept")
      elif event == "32133-06.htm" :
-       st.giveItems(57,claw*45) #Need add reward for 20+ items
+       reward = 0
+       if claw >= 20:
+          reward = 2187
+       st.giveItems(57,claw*45+reward)
        st.takeItems(CLAW,-1)
      elif event == "32133-08.htm" :
        st.takeItems(CLAW,-1)

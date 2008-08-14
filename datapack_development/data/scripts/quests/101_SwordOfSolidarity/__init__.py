@@ -37,6 +37,7 @@ class Quest (JQuest) :
         st.giveItems(ROIENS_LETTER,1)
     elif event == "30283-02.htm" :
         st.set("cond","2")
+        st.playSound("ItemSound.quest_middle")
         st.takeItems(ROIENS_LETTER,st.getQuestItemsCount(ROIENS_LETTER))
         st.giveItems(HOWTOGO_RUINS,1)
     elif event == "30283-07.htm" :
@@ -92,6 +93,7 @@ class Quest (JQuest) :
        elif npcId == 30008 and st.getInt("cond")==4 and st.getQuestItemsCount(ROIENS_LETTER)==0 and st.getQuestItemsCount(ALLTRANS_NOTE) :
             htmltext = "30008-06.htm"
             st.set("cond","5")
+            st.playSound("ItemSound.quest_middle")
             st.takeItems(ALLTRANS_NOTE,st.getQuestItemsCount(ALLTRANS_NOTE))
             st.giveItems(BROKEN_SWORD_HANDLE,1)
        elif npcId == 30283 and st.getInt("cond")==1 and st.getQuestItemsCount(ROIENS_LETTER)>0 :
@@ -104,6 +106,7 @@ class Quest (JQuest) :
             if st.getQuestItemsCount(BROKEN_BLADE_TOP) and st.getQuestItemsCount(BROKEN_BLADE_BOTTOM) :
               htmltext = "30283-04.htm"
               st.set("cond","4")
+              st.playSound("ItemSound.quest_middle")
               st.takeItems(HOWTOGO_RUINS,st.getQuestItemsCount(HOWTOGO_RUINS))
               st.takeItems(BROKEN_BLADE_TOP,st.getQuestItemsCount(BROKEN_BLADE_TOP))
               st.takeItems(BROKEN_BLADE_BOTTOM,st.getQuestItemsCount(BROKEN_BLADE_BOTTOM))
@@ -131,9 +134,10 @@ class Quest (JQuest) :
                    st.playSound("ItemSound.quest_middle")
           if st.getQuestItemsCount(BROKEN_BLADE_TOP) and st.getQuestItemsCount(BROKEN_BLADE_BOTTOM) :
              st.set("cond","3")
+             st.playSound("ItemSound.quest_middle")
    return
 
-QUEST       = Quest(101,qn,"Sword Of Solidarity Quest")
+QUEST       = Quest(101,qn,"Sword Of Solidarity")
 
 QUEST.addStartNpc(30008)
 
