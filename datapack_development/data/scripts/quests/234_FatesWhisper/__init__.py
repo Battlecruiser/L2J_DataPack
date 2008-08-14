@@ -192,7 +192,7 @@ class Quest (JQuest) :
           st.set("cond","9")
           qs = st.getPlayer().getQuestState("255_Tutorial")
           if qs:
-             st.showQuestionMark(17)
+             st.showQuestionMark(13)
              st.playSound("ItemSound.quest_tutorial")
         # waiting for 984 B Grade Crystals
         elif cond == 9 and (st.getQuestItemsCount(CRYSTAL_B) < 984) :

@@ -7,8 +7,8 @@ from net.sf.l2j.gameserver.idfactory import IdFactory
 from net.sf.l2j.gameserver.datatables import NpcTable
 from net.sf.l2j.gameserver.model.actor.instance import L2TamedBeastInstance
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-from net.sf.l2j.gameserver.serverpackets import NpcSay
-from net.sf.l2j.gameserver.serverpackets import SocialAction
+from net.sf.l2j.gameserver.network.serverpackets import NpcSay
+from net.sf.l2j.gameserver.network.serverpackets import SocialAction
 from net.sf.l2j.util import Rnd;
 
 GOLDEN_SPICE = 6643

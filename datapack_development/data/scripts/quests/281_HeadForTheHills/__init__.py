@@ -6,7 +6,6 @@ from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
 
-#Complete - 95%. Need add other reward's for 50 item's and check newbie player level from retail
 qn = "281_HeadForTheHills"
 
 #NPC'S
@@ -15,7 +14,7 @@ MARCELA = 32173
 #ITEM'S
 HILLS = 9796
 SOULSHOT_FOR_BEGINNERS  = 5789
-REWARD = 736 #Scroll of Escape. Maybe need add other reward.
+REWARDS = [736,876,115]
 
 #MOB'S
 MOBS = range(22234,22240)
@@ -42,6 +41,7 @@ class Quest (JQuest) :
          else :
            st.giveItems(57,hills*23)
          st.giveItems(SOULSHOT_FOR_BEGINNERS,6000)
+         st.playTutorialVoice("tutorial_voice_026")
          st.takeItems(HILLS,-1)
          st.set("onlyone","1")
        else:
@@ -54,8 +54,11 @@ class Quest (JQuest) :
        if hills < 50 :
          htmltext = "32173-07a.htm"
        else:
+         rnd = st.getRandom(len(REWARDS))
+         REWARD = REWARDS[rnd]
          if player.getLevel() < 25 and player.isNewbie() and not onlyone :
            st.giveItems(SOULSHOT_FOR_BEGINNERS,6000)
+           st.playTutorialVoice("tutorial_voice_026")
            st.giveItems(REWARD,1)
            st.takeItems(HILLS,50)
            st.set("onlyone","1")

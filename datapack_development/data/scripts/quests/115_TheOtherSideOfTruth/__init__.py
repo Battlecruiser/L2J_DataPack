@@ -5,7 +5,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-from net.sf.l2j.gameserver.serverpackets import NpcSay
+from net.sf.l2j.gameserver.network.serverpackets import NpcSay
 
 qn = "115_TheOtherSideOfTruth"
 

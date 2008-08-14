@@ -58,10 +58,11 @@ class Quest (JQuest) :
          st.takeItems(ANDELLRIAS_LETTER,1)
          st.giveItems(MOTHERTREE_FRUIT,1)
          st.set("cond", "2")
+         st.playSound("ItemSound.quest_middle")
      elif cond == 2 :
        if npcId == 30362 and st.getQuestItemsCount(MOTHERTREE_FRUIT) :
          htmltext = "30362-06.htm"
-         st.giveItems(ADENA,100)
+         st.giveItems(ADENA,1000)
          st.takeItems(MOTHERTREE_FRUIT,1)
          st.addExpAndSp(1000,0)
          st.unset("cond")
@@ -71,7 +72,7 @@ class Quest (JQuest) :
          htmltext = "30371-02.htm"
    return htmltext
 
-QUEST       = Quest(161,qn,"Fruits Of Mothertree")
+QUEST       = Quest(161,qn,"Fruits Of the Mothertree")
 
 QUEST.addStartNpc(30362)
 

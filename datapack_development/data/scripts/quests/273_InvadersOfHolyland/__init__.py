@@ -104,7 +104,7 @@ class Quest (JQuest) :
    st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(273,qn,"Invaders Of Holyland")
+QUEST       = Quest(273,qn,"Invaders Of the Holyland")
 
 QUEST.addStartNpc(30566)
 

@@ -1,4 +1,4 @@
-# Made by Mr. Have fun! Version 0.2
+# Made by Mr. Have fun! Version 0.3
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
@@ -51,12 +51,14 @@ class Quest (JQuest) :
 
    elif npcId == 30349 and st.getInt("cond")==1 and st.getQuestItemsCount(JENNIES_LETTER_ID) :
         htmltext = "30349-04.htm"
-   elif npcId == 30349 and st.getInt("cond")==1 and st.getQuestItemsCount(SENTRY_BLADE1_ID)==1 and st.getQuestItemsCount(SENTRY_BLADE2_ID)==1 and st.getQuestItemsCount(SENTRY_BLADE3_ID)==1 :
+   elif npcId == 30349 and st.getInt("cond")==2 and st.getQuestItemsCount(SENTRY_BLADE1_ID)==1 and st.getQuestItemsCount(SENTRY_BLADE2_ID)==1 and st.getQuestItemsCount(SENTRY_BLADE3_ID)==1 :
         htmltext = "30349-05.htm"
         st.takeItems(SENTRY_BLADE1_ID,1)
-   elif npcId == 30349 and st.getInt("cond")==1 and st.getQuestItemsCount(SENTRY_BLADE1_ID)==0 and (st.getQuestItemsCount(SENTRY_BLADE2_ID)==1 or st.getQuestItemsCount(SENTRY_BLADE3_ID)==1) :
+        st.set("cond","3")
+        st.playSound("ItemSound.quest_middle")
+   elif npcId == 30349 and st.getInt("cond")==3 and st.getQuestItemsCount(SENTRY_BLADE1_ID)==0 and (st.getQuestItemsCount(SENTRY_BLADE2_ID)==1 or st.getQuestItemsCount(SENTRY_BLADE3_ID)==1) :
         htmltext = "30349-07.htm"
-   elif npcId == 30349 and st.getInt("cond")==1 and st.getQuestItemsCount(OLD_BRONZE_SWORD_ID)==2 and st.getInt("onlyone")==0 :
+   elif npcId == 30349 and st.getInt("cond")==4 and st.getQuestItemsCount(OLD_BRONZE_SWORD_ID)==2 and st.getInt("onlyone")==0 :
         if st.getInt("id") != 168 :
           st.set("id","168")
           htmltext = "30349-06.htm"
@@ -73,22 +75,28 @@ class Quest (JQuest) :
             st.giveItems(SENTRY_BLADE1_ID,1)
             st.giveItems(SENTRY_BLADE2_ID,1)
             st.giveItems(SENTRY_BLADE3_ID,1)
-       elif npcId == 30360 and st.getInt("cond")==1 and (st.getQuestItemsCount(SENTRY_BLADE1_ID)+st.getQuestItemsCount(SENTRY_BLADE2_ID)+st.getQuestItemsCount(SENTRY_BLADE3_ID))>0 :
+            st.set("cond","2")
+            st.playSound("ItemSound.quest_middle")
+       elif npcId == 30360 and st.getInt("cond")==2 and (st.getQuestItemsCount(SENTRY_BLADE1_ID)+st.getQuestItemsCount(SENTRY_BLADE2_ID)+st.getQuestItemsCount(SENTRY_BLADE3_ID))>0 :
             htmltext = "30360-02.htm"
-       elif npcId == 30355 and st.getInt("cond")==1 and st.getQuestItemsCount(SENTRY_BLADE2_ID)==1 and st.getQuestItemsCount(SENTRY_BLADE1_ID)==0 :
+       elif npcId == 30355 and st.getInt("cond")==3 and st.getQuestItemsCount(SENTRY_BLADE2_ID)==1 and st.getQuestItemsCount(SENTRY_BLADE1_ID)==0 :
             htmltext = "30355-01.htm"
             st.takeItems(SENTRY_BLADE2_ID,1)
             st.giveItems(OLD_BRONZE_SWORD_ID,1)
-       elif npcId == 30355 and st.getInt("cond")==1 and st.getQuestItemsCount(SENTRY_BLADE2_ID)==0 :
+            if st.getQuestItemsCount(OLD_BRONZE_SWORD_ID)==2:
+               st.set("cond","4")
+               st.playSound("ItemSound.quest_middle")
+       elif npcId == 30355 and st.getInt("cond") in [3,4] and st.getQuestItemsCount(SENTRY_BLADE2_ID)==0 :
             htmltext = "30355-02.htm"
-            st.takeItems(SENTRY_BLADE2_ID,1)
-       elif npcId == 30357 and st.getInt("cond")==1 and st.getQuestItemsCount(SENTRY_BLADE3_ID)==1 and st.getQuestItemsCount(SENTRY_BLADE1_ID)==0 :
+       elif npcId == 30357 and st.getInt("cond")==3 and st.getQuestItemsCount(SENTRY_BLADE3_ID)==1 and st.getQuestItemsCount(SENTRY_BLADE1_ID)==0 :
             htmltext = "30357-01.htm"
             st.takeItems(SENTRY_BLADE3_ID,1)
             st.giveItems(OLD_BRONZE_SWORD_ID,1)
-       elif npcId == 30357 and st.getInt("cond")==1 and st.getQuestItemsCount(SENTRY_BLADE3_ID)==0 :
+            if st.getQuestItemsCount(OLD_BRONZE_SWORD_ID)==2:
+               st.set("cond","4")
+               st.playSound("ItemSound.quest_middle")
+       elif npcId == 30357 and st.getInt("cond") in [3,4] and st.getQuestItemsCount(SENTRY_BLADE3_ID)==0 :
             htmltext = "30357-02.htm"
-            st.takeItems(SENTRY_BLADE3_ID,1)
    return htmltext
 
 QUEST       = Quest(168,qn,"Deliver Supplies")

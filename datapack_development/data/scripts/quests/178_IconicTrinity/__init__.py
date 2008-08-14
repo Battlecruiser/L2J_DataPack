@@ -32,6 +32,7 @@ class Quest (JQuest) :
        st.giveItems(956,1)
        st.exitQuest(False)
        st.playSound("ItemSound.quest_finish")
+       st.addExpAndSp(20123,976)
      elif event == "32255-03.htm" :
        st.set("pass","0")
      elif event == "32255-04a.htm" :

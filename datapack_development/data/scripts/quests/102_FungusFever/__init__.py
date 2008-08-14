@@ -77,6 +77,7 @@ class Quest (JQuest) :
            st.giveItems(EVERGREEN_AMULET_ID,1)
            st.takeItems(ALBERRYUS_LETTER_ID,1)
            st.set("cond","2")
+           st.playSound("ItemSound.quest_middle")
            htmltext = "30156-03.htm"
       elif npcId == 30156 and st.getInt("cond")==2 and st.getQuestItemsCount(EVERGREEN_AMULET_ID)>0 and st.getQuestItemsCount(DRYAD_TEARS_ID)<10 :
            htmltext = "30156-04.htm"
@@ -91,6 +92,7 @@ class Quest (JQuest) :
            st.giveItems(COBS_MEDICINE4_ID,1)
            st.giveItems(COBS_MEDICINE5_ID,1)
            st.set("cond","4")
+           st.playSound("ItemSound.quest_middle")
            htmltext = "30156-05.htm"
       elif npcId == 30156 and st.getInt("cond")==4 and st.getQuestItemsCount(ALBERRYUS_LIST_ID)==0 and (st.getQuestItemsCount(COBS_MEDICINE1_ID)==1 or st.getQuestItemsCount(COBS_MEDICINE2_ID)==1 or st.getQuestItemsCount(COBS_MEDICINE3_ID)==1 or st.getQuestItemsCount(COBS_MEDICINE4_ID)==1 or st.getQuestItemsCount(COBS_MEDICINE5_ID)==1) :
            htmltext = "30156-06.htm"
@@ -98,6 +100,7 @@ class Quest (JQuest) :
            st.takeItems(COBS_MEDICINE1_ID,1)
            st.giveItems(ALBERRYUS_LIST_ID,1)
            st.set("cond","5")
+           st.playSound("ItemSound.quest_middle")
            htmltext = "30284-04.htm"
       elif npcId == 30284 and st.getInt("cond")==5 and st.getQuestItemsCount(ALBERRYUS_LIST_ID)==1 and (st.getQuestItemsCount(COBS_MEDICINE1_ID)==1 or st.getQuestItemsCount(COBS_MEDICINE2_ID)==1 or st.getQuestItemsCount(COBS_MEDICINE3_ID)==1 or st.getQuestItemsCount(COBS_MEDICINE4_ID)==1 or st.getQuestItemsCount(COBS_MEDICINE5_ID)==1) :
            htmltext = "30284-05.htm"
@@ -124,6 +127,7 @@ class Quest (JQuest) :
            st.playSound("ItemSound.quest_finish")
            htmltext = "30284-06.htm"
            st.set("onlyone","1")
+           st.giveItems(57,6331)
            if player.getClassId().getId() in range(18,25) :
              st.giveItems(SWORD_OF_SENTINEL_ID,1)
              st.giveItems(1835,int(1000*Config.RATE_QUESTS_REWARD))
@@ -133,6 +137,7 @@ class Quest (JQuest) :
            for item in range(4412,4417) :
              st.giveItems(item,int(10*Config.RATE_QUESTS_REWARD))
            st.giveItems(1060,int(100*Config.RATE_QUESTS_REWARD))
+           st.addExpAndSp(30202,1339)
    return htmltext
 
  def onKill(self,npc,player,isPet):
@@ -152,7 +157,7 @@ class Quest (JQuest) :
                  st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(102,"102_FungusFever","Fungus Fever")
+QUEST       = Quest(102,"102_FungusFever","Sea of Spores Fever")
 
 QUEST.addStartNpc(30284)
 QUEST.addTalkId(30284)

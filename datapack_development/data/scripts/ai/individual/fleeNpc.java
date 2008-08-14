@@ -24,7 +24,7 @@ import net.sf.l2j.util.Rnd;
 
 public class fleeNpc extends QuestJython 
 {
-   private int[] _npcId = { 20432, 22228 };
+   private int[] _npcId = { 20432, 22228 ,18150,18151,18152,18153,18154,18155,18156,18157};
 
    public fleeNpc(int questId, String name, String descr) 
    {
@@ -39,7 +39,14 @@ public class fleeNpc extends QuestJython
 
    public String onAttack(L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet) 
    {
-      if ( Rnd.get(3) == 2 ) 
+      if (npc.getNpcId() >= 18150 && npc.getNpcId() <= 18157)
+      {
+         npc.startFear();
+         npc.getAI().setIntention( CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition((npc.getClientX() + Rnd.get(-100, 100)), (npc.getClientY()+ Rnd.get(-100, 100)), npc.getClientZ(), npc.getHeading()));
+         return null;
+      }
+
+      else if ( Rnd.get(3) == 2 ) 
       {
          npc.startFear();
          npc.getAI().setIntention( CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition((npc.getClientX() + Rnd.get(-1000, 1000)), (npc.getClientY()+ Rnd.get(-1000, 1000)), npc.getClientZ(), npc.getHeading()));

@@ -67,7 +67,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(262,qn,"Bring Me Mushrooms1")
+QUEST       = Quest(262,qn,"Trade with the Ivory Tower")
 
 QUEST.addStartNpc(30137)
 

@@ -66,7 +66,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_itemget")
    return
 
-QUEST       = Quest(261,qn,"Dream Of Moneylender1")
+QUEST       = Quest(261,qn,"Collector's Dream")
 
 QUEST.addStartNpc(30222)
 

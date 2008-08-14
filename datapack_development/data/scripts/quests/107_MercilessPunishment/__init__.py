@@ -1,9 +1,10 @@
 # Made by Mr. Have fun! Version 0.3 updated by Censor for www.l2jdp.com 
 import sys 
 from net.sf.l2j import Config 
-from net.sf.l2j.gameserver.model.quest import State 
-from net.sf.l2j.gameserver.model.quest import QuestState 
-from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest 
+from net.sf.l2j.gameserver.model.quest import State
+from net.sf.l2j.gameserver.model.quest import QuestState
+from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+from net.sf.l2j.gameserver.network.serverpackets      import SocialAction
 
 qn = "107_MercilessPunishment" 
 
@@ -89,7 +90,7 @@ class Quest (JQuest) :
       if player.getRace().ordinal() != 3 : 
         htmltext = "30568-00.htm" 
         st.exitQuest(1) 
-      elif player.getLevel() >= 12 : 
+      elif player.getLevel() >= 10 : 
         htmltext = "30568-02.htm" 
         return htmltext 
       else: 
@@ -124,9 +125,13 @@ class Quest (JQuest) :
                player.setNewbie(newbie|NEWBIE_REWARD)
                if player.getClassId().isMage() :
                   st.giveItems(SPIRITSHOT_NO_GRADE_FOR_BEGINNERS,3000)
+                  st.playTutorialVoice("tutorial_voice_027")
                else :
                   st.giveItems(SOULSHOT_NO_GRADE_FOR_BEGINNERS,7000)
+                  st.playTutorialVoice("tutorial_voice_026")
             st.set("cond","0") 
+            st.addExpAndSp(34565,2962)
+            player.sendPacket(SocialAction(player.getObjectId(),3))
             st.exitQuest(False) 
             st.playSound("ItemSound.quest_finish") 
             st.set("onlyone","1") 

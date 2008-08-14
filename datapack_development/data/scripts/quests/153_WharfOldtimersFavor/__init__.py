@@ -14,7 +14,6 @@ CLAY_POT_ID = 1015
 JACKSONS_RECEIPT_ID = 1016
 SILVIAS_RECEIPT_ID = 1017
 RANTS_RECEIPT_ID = 1018
-LESSER_HEALING_POTION_ID = 1060
 RING_ID = 875
 
 class Quest (JQuest) :
@@ -65,6 +64,9 @@ class Quest (JQuest) :
             st.takeItems(HEAVY_WOOD_BOX_ID,st.getQuestItemsCount(HEAVY_WOOD_BOX_ID))
             if st.getQuestItemsCount(JACKSONS_RECEIPT_ID) == 0 :
               st.giveItems(JACKSONS_RECEIPT_ID,1)
+              if st.getQuestItemsCount(JACKSONS_RECEIPT_ID)!=0 and st.getQuestItemsCount(SILVIAS_RECEIPT_ID)!=0 and st.getQuestItemsCount(RANTS_RECEIPT_ID)!=0:
+                 st.set("cond","2")
+                 st.playSound("ItemSound.quest_middle")
             htmltext = "30002-01.htm"
        elif npcId == 30002 and st.getInt("cond")!=0 and st.getQuestItemsCount(JACKSONS_RECEIPT_ID)!=0 :
             htmltext = "30002-02.htm"
@@ -72,7 +74,10 @@ class Quest (JQuest) :
             st.takeItems(CLOTH_BUNDLE_ID,st.getQuestItemsCount(CLOTH_BUNDLE_ID))
             if st.getQuestItemsCount(SILVIAS_RECEIPT_ID) == 0 :
               st.giveItems(SILVIAS_RECEIPT_ID,1)
-              st.giveItems(LESSER_HEALING_POTION_ID,int(Config.RATE_QUESTS_REWARD))
+              st.giveItems(1835,3*int(Config.RATE_QUESTS_REWARD))
+              if st.getQuestItemsCount(JACKSONS_RECEIPT_ID)!=0 and st.getQuestItemsCount(SILVIAS_RECEIPT_ID)!=0 and st.getQuestItemsCount(RANTS_RECEIPT_ID)!=0:
+                 st.set("cond","2")
+                 st.playSound("ItemSound.quest_middle")
             htmltext = "30003-01.htm"
        elif npcId == 30003 and st.getInt("cond")!=0 and st.getQuestItemsCount(SILVIAS_RECEIPT_ID)!=0 :
             htmltext = "30003-02.htm"
@@ -80,6 +85,9 @@ class Quest (JQuest) :
             st.takeItems(CLAY_POT_ID,st.getQuestItemsCount(CLAY_POT_ID))
             if st.getQuestItemsCount(RANTS_RECEIPT_ID) == 0 :
               st.giveItems(RANTS_RECEIPT_ID,1)
+              if st.getQuestItemsCount(JACKSONS_RECEIPT_ID)!=0 and st.getQuestItemsCount(SILVIAS_RECEIPT_ID)!=0 and st.getQuestItemsCount(RANTS_RECEIPT_ID)!=0:
+                 st.set("cond","2")
+                 st.playSound("ItemSound.quest_middle")
             htmltext = "30054-01.htm"
        elif npcId == 30054 and st.getInt("cond")!=0 and st.getQuestItemsCount(RANTS_RECEIPT_ID)!=0 :
             htmltext = "30054-02.htm"
@@ -100,7 +108,7 @@ class Quest (JQuest) :
               htmltext = "30041-06.htm"
    return htmltext
 
-QUEST       = Quest(153,qn,"Wharf Oldtimers Favor")
+QUEST       = Quest(153,qn,"Deliver Goods")
 
 QUEST.addStartNpc(30041)
 

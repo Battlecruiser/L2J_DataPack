@@ -291,12 +291,17 @@ class Quest (JQuest) :
                       st.playSound("ItemSound.quest_tutorial")
                       st.set("lvl","7")
                       st.showQuestionMark(11)
+                elif playerLevel == 10 :
+                   if st.getInt("lvl") < 10:
+                      st.playTutorialVoice("tutorial_voice_030")
+                      st.playSound("ItemSound.quest_tutorial")
+                      st.set("lvl","10")
+                      st.showQuestionMark(27)
                 elif playerLevel == 15 :
                    if st.getInt("lvl") < 15:
-                      #st.playTutorialVoice("tutorial_voice_???")
                       st.playSound("ItemSound.quest_tutorial")
                       st.set("lvl","15")
-                      st.showQuestionMark(33)
+                      st.showQuestionMark(17)
                 elif playerLevel == 19 :
                    if st.getInt("lvl") < 19:
                       race = st.getPlayer().getRace().ordinal()
@@ -373,8 +378,10 @@ class Quest (JQuest) :
             elif MarkId == 12 :
                 htmltext = "tutorial_15.htm"
                 st.set("ucMemo","4")
-            elif MarkId == 17 :
+            elif MarkId == 13 :
                 htmltext = "tutorial_30.htm"
+            elif MarkId == 17 :
+                htmltext = "tutorial_27.htm"
             elif MarkId == 23 :
                 htmltext = "tutorial_24.htm"
             elif MarkId == 24 :
@@ -385,8 +392,8 @@ class Quest (JQuest) :
                     htmltext = "tutorial_newbie004b.htm"
                 else :
                     htmltext = "tutorial_newbie004a.htm"
-            elif MarkId == 33 :
-                htmltext = "tutorial_27.htm"
+            elif MarkId == 27 :
+                htmltext = "tutorial_20.htm"
             elif MarkId == 34 :
                 htmltext = "tutorial_28.htm"
             elif MarkId == 35 :

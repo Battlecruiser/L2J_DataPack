@@ -30,7 +30,7 @@ class Quest (JQuest) :
      if cond == 1 :
        st.set("cond","2")
        st.takeItems(CARADINE_LETTER_LAST,1)
-       st.getPlayer().teleToLocation(143209,43968,-3038)
+     st.getPlayer().teleToLocation(143209,43968,-3038)
    elif event == "31745-5.htm" :
      if cond == 2 :
        st.set("cond","0")

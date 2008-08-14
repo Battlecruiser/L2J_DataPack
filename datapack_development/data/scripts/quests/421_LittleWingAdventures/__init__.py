@@ -28,14 +28,6 @@ qston_1 = "<html><body>Sage Cronos:<br>So, you want to turn your hatchling into 
 qston_2 = "<html><body>Sage Cronos:<br>I've said you need to talk to <font color=\"LEVEL\">Fairy Mimyu</font>!!!. Am i clear???</body></html>"
 qston_3 = "<html><body>Fairy Mimyu:<br>You weren't yet able to find the <font color=\"LEVEL\">Fairy Trees of Wind, Star, Twilight and Abyss</font>? Don't give up! They are all in <font color=\"LEVEL\">Hunter's Valley</font></body></html>"
 order_1 = "<html><body>Fairy Mimyu:<br>Your pet must drink the sap of <font color=\"LEVEL\">Fairy Trees of Wind, Star, Twilight and Abyss</font> to grow up. The trees will probably agree but as we don't want to hurt them, take that leafs to heal any wound your hatchling could cause them</body></html>"
-ftm_11  = "<html><body>Fairy Tree of Wind: <br>I'll let your hatchling drink from my sap, but you will have to cover the wound your pet will do on me with one of these leafs you have, they are hypoallergenic<br><br><a action=\"bypass -h Quest "+str(QUEST_NUMBER)+"_"+QUEST_NAME+" 1\">It's ok</a></body></html>"
-ftm_12  = "The hatchling has drunk the sap of the fairy tree of the wind."
-ftm_21  = "<html><body>Fairy Tree of Star: <br>Oh! One of those nasty ghosts hurted my bark... look! Only a fairy leaf could cure my wound... <br><br><a action=\"bypass -h Quest "+str(QUEST_NUMBER)+"_"+QUEST_NAME+" 2\">Give it a leaf</a></body></html>"
-ftm_22  = "The hatchling has drunk the sap of the fairy tree of the star."
-ftm_31  = "<html><body>Fairy Tree of Twilight: <br>Ok, i do know the way this is supposed to be, but we don't have the time to wait your hacthling to hit me for hours... Let's make it quick<br><br><a action=\"bypass -h Quest "+str(QUEST_NUMBER)+"_"+QUEST_NAME+" 4\">Fine, take the leaf</a></body></html>"
-ftm_32  = "The hatchling has drunk the sap of the fairy tree of the twilight."
-ftm_41  = "<html><body>Fairy Tree of Abyss: <br>That your pet will bite me and you gonna put a leaf in my wound? No way! No! Wait!... argh... if i could run like Black Willows do...<br><br><a action=\"bypass -h Quest "+str(QUEST_NUMBER)+"_"+QUEST_NAME+" 8\">Say sorry</a></body></html>"
-ftm_42  = "The hatchling has drunk the sap of the fairy tree of the abyss."
 end_msg = "<html><body>Fairy Mimyu:<br>Great job, your hatchling"
 end_msg2= "has become an strider, enjoy!</body></html>"
 
@@ -46,11 +38,7 @@ CONTROL_ITEMS = { 3500:4422, 3501:4423, 3502:4424 }
 #NPCs
 SG_CRONOS = 30610
 FY_MYMYU  = 30747
-#NpcId, bitmask, spawnX,spawnY,spawnZ,msg1,msg2
-FAIRY_TREES = [ [27185,1,113356,93848,-2072,ftm_11,ftm_12],
-                [27186,2,117733,94108,-2068,ftm_21,ftm_22],
-                [27187,4,127714,90495,-2095,ftm_31,ftm_32],
-                [27188,8,106671,93905,-2070,ftm_41,ftm_42] ]
+
 #Mobs
 GUARDIAN = 27189
 
@@ -58,6 +46,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+from net.sf.l2j.gameserver.network.serverpackets import NpcSay
 
 def get_control_item(st) :
   item = st.getPlayer().getPet().getControlItemId()
@@ -82,20 +71,10 @@ class Quest (JQuest) :
  def __init__(self,id,name,descr):
    JQuest.__init__(self,id,name,descr)
    self.questItemIds = [FT_LEAF]
+   self.killedTrees = []
 
  def onEvent (self,event,st) :
     htmltext = event
-    leafs = st.getQuestItemsCount(FT_LEAF) 
-    for i in range(4) :
-       if event == str(FAIRY_TREES[i][1]) :
-           st.set("id", str(st.getInt("id") | FAIRY_TREES[i][1]))
-           htmltext = FAIRY_TREES[i][6]
-           st.takeItems(FT_LEAF,1)
-           if 1 < leafs <= 4 :
-              st.playSound("ItemSound.quest_itemget")
-           elif leafs == 1 and st.getInt("id") == 15:
-              st.playSound("ItemSound.quest_middle")
-              st.set("cond","3")
     if event == "16" :
        htmltext = event_1
        st.setState(State.STARTED)
@@ -157,19 +136,26 @@ class Quest (JQuest) :
         st.giveItems(item,1)
         st.exitQuest(1)
         st.playSound("ItemSound.quest_finish")
-   elif id == State.STARTED and cond < 3 :
-     leafs = st.getQuestItemsCount(FT_LEAF)
-     if 0 < leafs :
-        for i in range(4) :
-           if npcId == FAIRY_TREES[i][0] and (st.getInt("id") | FAIRY_TREES[i][1] != st.getInt("id")) :
-              for j in range(2):
-                 for k in range(2): 
-                    st.addSpawn(GUARDIAN,FAIRY_TREES[i][2]+70*pow(-1,j%2),FAIRY_TREES[i][3]+70*pow(-1,k%2),FAIRY_TREES[i][4])
-              htmltext = FAIRY_TREES[i][5]
    return htmltext
 
- def onKill(self,npc,player,isPet) :
-   return  
+ def onAttack(self, npc, player, damage, isPet) :
+   st = player.getQuestState(str(QUEST_NUMBER)+"_"+QUEST_NAME)
+   if not st:
+     return
+   npcId = npc.getNpcId()
+   for pc, mobId, in self.killedTrees:
+      if pc == player and mobId == npcId:
+         return
+   if isPet :
+      pet = player.getPet()
+      if st.getRandom(100) <= 2 and st.getQuestItemsCount(FT_LEAF) >= 0:
+         st.takeItems(FT_LEAF,1)
+         st.playSound("ItemSound.quest_middle")
+         npc.broadcastPacket(NpcSay(npc.getNpcId(),0,npcId,"gives me spirit leaf...!"))
+         self.killedTrees.append([player,npcId])
+         if st.getQuestItemsCount(FT_LEAF) == 0 :
+            st.set("cond","3")
+   return 
 
 # Quest class and state definition
 QUEST       = Quest(QUEST_NUMBER, str(QUEST_NUMBER)+"_"+QUEST_NAME, QUEST_DESCRIPTION)
@@ -181,5 +167,5 @@ QUEST.addTalkId(SG_CRONOS)
 
 QUEST.addTalkId(FY_MYMYU)
 
-for i in range(4) :
-  QUEST.addTalkId(FAIRY_TREES[i][0])
+for i in range(27185,27189):
+   QUEST.addAttackId(i)

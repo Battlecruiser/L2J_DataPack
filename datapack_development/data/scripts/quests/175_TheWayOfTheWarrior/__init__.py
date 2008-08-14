@@ -5,6 +5,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+from net.sf.l2j.gameserver.network.serverpackets import SocialAction
 
 qn = "175_TheWayOfTheWarrior"
 
@@ -45,12 +46,17 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_accept")  
      elif event == "32138-12.htm" :
        st.takeItems(MUERTOS_CLAW,-1)
+       st.giveItems(57,8799)
        st.giveItems(LESSER_HEALING_POTIONS,100)
        for item in ECHO :
          st.giveItems(item,10)
-       if player.getLevel() < 20 and player.isNewbie() :
+       if player.getLevel() < 25 and player.isNewbie() :
          st.giveItems(SOULSHOT_FOR_BEGINNERS,7000)
+         st.playTutorialVoice("tutorial_voice_026")
        st.giveItems(WARRIORS_SWORD,1)
+       st.addExpAndSp(20739,1777)
+       player.sendPacket(SocialAction(player.getObjectId(),3))
+       player.sendPacket(SocialAction(player.getObjectId(),15))
        st.playSound("ItemSound.quest_finish")
        st.exitQuest(False)
      return htmltext
