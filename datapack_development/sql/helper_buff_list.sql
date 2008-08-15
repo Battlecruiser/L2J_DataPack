@@ -32,7 +32,7 @@ insert  into helper_buff_list values
 (11, 4329, 'Acumen', 1, 6, 62, 'true'),
 (12, 4330, 'Concentration', 1, 6, 62, 'true'),
 (13, 4331, 'Empower', 1, 6, 62, 'true'),
-(14, 5632, 'Haste', 2, 40, 62, 'false'),
+(14, 5632, 'Haste', 1, 40, 62, 'false'),
 (15, 5637, 'Magic Barrier', 1, 6, 62, 'false'),
 (16, 5637, 'Magic Barrier', 1, 6, 62, 'true');
 -- (14, 5182, 'Blessing of Protection', 1, 1, 39, 'false'); -- Keeps you safe from an attack by a chaotic character who is more than 10 levels apart from you.
