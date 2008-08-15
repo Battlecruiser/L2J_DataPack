@@ -124,6 +124,8 @@ class Quest (JQuest) :
       if player.getClassId().level() == 1 :
          text = BYPASS[player.getClassId().getId()]
          htmltext = "<html><body>Black Marketeer of Mammon:<br>Forget about the money!<br>I will help you complete the class transfer, which is far more valuable! Which class would you like to be? Choose one.<br>"+text+"</body></html>"
+      else :
+         htmltext = "<html><body>Black Marketeer of Mammon:<br>You have already 2nd occupation completed.</body></html>" #TODO: replace me with proper html
     elif event == "31092-06.htm" :
       text = BYPASS[player.getClassId().getId()]
       htmltext = "<html><body>Black Marketeer of Mammon:<br>If you are finished thinking, select one. Which class would you like to be?<br>"+text+"</body></html>"
