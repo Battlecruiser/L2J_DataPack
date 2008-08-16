@@ -1,4 +1,4 @@
-﻿-- --------------------------
+-- --------------------------
 -- Table structure for weapon
 -- --------------------------
 DROP TABLE IF EXISTS `weapon`;
