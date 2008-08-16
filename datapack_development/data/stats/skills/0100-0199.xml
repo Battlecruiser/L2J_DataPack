@@ -394,7 +394,7 @@
   1640 1680 1720 1760 1800 1840 1880 1920 1960 2000
   2040 2080 2120 2160 2200 2240 2280 2320 2360 2400
   </table>
-  <table name="#Tab-bowVuln"> 0.84 0.76 0.68 0.60 </table>
+  <table name="#Vuln"> 0.84 0.76 0.68 0.60 </table>
   <table name="#mpConsume"> 11 14 19 22 </table>
   <table name="#ench2MpConsume">
   21 21 20 20 19 19 18 18 17 17
@@ -415,12 +415,14 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
-      <mul order="0x30" stat="bowWpnVuln" val="#Tab-bowVuln"/>
+      <mul order="0x30" stat="bowWpnVuln" val="#Vuln"/>
+      <mul order="0x30" stat="crossbowWpnVuln" val="#wVuln"/>
     </effect>
   </for>
   <enchant1for>
     <effect count="1" name="Buff" time="#ench1time" val="0">
       <mul order="0x30" stat="bowWpnVuln" val="0.60"/>
+      <mul order="0x30" stat="crossbowWpnVuln" val="0.60"/>
     </effect>
   </enchant1for>
 </skill>

@@ -1870,7 +1870,6 @@
   <table name="#rCrit"> 65 80 </table>
   <table name="#cAtk"> 457 513 </table>
   <table name="#pDef"> 0.87 0.81 </table>
-  <table name="#rEvas"> 3 4 </table>
   <table name="#mpConsume"> 11 25 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1885,7 +1884,6 @@
       <add order="0x40" stat="rCrit" val="#rCrit"/>
       <add order="0x40" stat="cAtk" val="#cAtk"/>
       <mul order="0x30" stat="pDef" val="#pDef"/>
-      <sub order="0x40" stat="rEvas" val="#rEvas"/>
     </effect>
   </for>
 </skill>
