@@ -29,7 +29,6 @@ SEALED_BOX = 7255
 
 #REWARDS
 ANTIQUE_BROOCH = 7262
-REWARDS = [57,81,151,959,1895,2500,4040,4042,4043,5529,5545,5546]
 RCP_REWARDS = [ 6881,6883,6885,6887,6891,6893,6895,6897,6899,7580 ]
 
 class Quest (JQuest) :
@@ -149,43 +148,172 @@ class Quest (JQuest) :
         htmltext = "31454-13.htm"
         st.takeItems(SEALED_BOX,1)
         reward = 0
-        if st.getRandom(1000000) < 700000 :
-          cnt = 1370 + st.getRandom(1374)
-          st.giveItems(REWARDS[0],cnt)
+        rnd = st.getRandom(5)
+        if rnd == 0:
+          st.giveItems(57,10000)
           reward = 1
-        if st.getRandom(1000000) < 2 :
-          st.giveItems(REWARDS[1],1)
-          reward = 1
-        if st.getRandom(1000000) < 2 :
-          st.giveItems(REWARDS[2],1)
-          reward = 1
-        if st.getRandom(1000000) < 8 :
-          st.giveItems(REWARDS[3],1)
-          reward = 1
-        if st.getRandom(1000000) < 54858 :
-          st.giveItems(REWARDS[4],1)
-          reward = 1
-        if st.getRandom(1000000) < 2 :
-          st.giveItems(REWARDS[5],1)
-          reward = 1
-        if st.getRandom(1000000) < 3841 :
-          st.giveItems(REWARDS[6],1)
-          reward = 1
-        if st.getRandom(1000000) < 3201 :
-          st.giveItems(REWARDS[7],1)
-          reward = 1
-        if st.getRandom(1000000) < 6401 :
-          st.giveItems(REWARDS[8],1)
-          reward = 1
-        if st.getRandom(1000000) < 440 :
-          st.giveItems(REWARDS[9],1)
-          reward = 1
-        if st.getRandom(1000000) < 440 :
-          st.giveItems(REWARDS[10],1)
-          reward = 1
-        if st.getRandom(1000000) < 483 :
-          st.giveItems(REWARDS[11],1)
-          reward = 1
+        elif rnd == 1:
+          if st.getRandom(1000) < 848 :
+            reward = 1
+            i = st.getRandom(1000)
+            if i < 43 :
+              st.giveItems(1884,42)
+            elif i < 66 :
+              st.giveItems(1895,36)
+            elif i < 184 :
+              st.giveItems(1876,4)
+            elif i < 250 :
+              st.giveItems(1881,6)
+            elif i < 287 :
+              st.giveItems(5549,8)
+            elif i < 484 :
+              st.giveItems(1874,1)
+            elif i < 681 :
+              st.giveItems(1889,1)
+            elif i < 799 :
+              st.giveItems(1877,1)
+            elif i < 902 :
+              st.giveItems(1894,1)
+            else:
+              st.giveItems(4043,1)
+          if st.getRandom(1000) < 323 :
+            reward = 1
+            i = st.getRandom(1000)
+            if i < 335 :
+              st.giveItems(1888,1)
+            elif i < 556 :
+              st.giveItems(4040,1)
+            elif i < 725 :
+              st.giveItems(1890,1)
+            elif i < 872 :
+              st.giveItems(5550,1)
+            elif i < 962 :
+              st.giveItems(1893,1)
+            elif i < 986 :
+              st.giveItems(4046,1)
+            else:
+              st.giveItems(4048,1)
+        elif rnd == 2:
+          if st.getRandom(1000) < 847 :
+            reward = 1
+            i = st.getRandom(1000)
+            if i < 148 :
+              st.giveItems(1878,8)
+            elif i < 175 :
+              st.giveItems(1882,24)
+            elif i < 273 :
+              st.giveItems(1879,4)
+            elif i < 322 :
+              st.giveItems(1880,6)
+            elif i < 357 :
+              st.giveItems(1885,6)
+            elif i < 554 :
+              st.giveItems(1875,1)
+            elif i < 685 :
+              st.giveItems(1883,1)
+            elif i < 803 :
+              st.giveItems(5220,1)
+            elif i < 901 :
+              st.giveItems(4039,1)
+            else:
+              st.giveItems(4044,1)
+          if st.getRandom(1000) < 251 :
+            reward = 1
+            i = st.getRandom(1000)
+            if i < 350 :
+              st.giveItems(1887,1)
+            elif i < 587 :
+              st.giveItems(4042,1)
+            elif i < 798 :
+              st.giveItems(1886,1)
+            elif i < 922 :
+              st.giveItems(4041,1)
+            elif i < 966 :
+              st.giveItems(1892,1)
+            elif i < 996 :
+              st.giveItems(1891,1)
+            else:
+              st.giveItems(4047,1)
+        elif rnd == 3:
+          if st.getRandom(1000) < 31 :
+            reward = 1
+            i = st.getRandom(1000)
+            if i < 223 :
+              st.giveItems(730,1)
+            elif i < 893 :
+              st.giveItems(948,1)
+            else:
+              st.giveItems(960,1)
+          if st.getRandom(1000) < 5 :
+            reward = 1
+            i = st.getRandom(1000)
+            if i < 202 :
+              st.giveItems(729,1)
+            elif i < 928 :
+              st.giveItems(947,1)
+            else:
+              st.giveItems(959,1)
+        elif rnd == 4:
+          if st.getRandom(1000) < 329 :
+            reward = 1
+            i = st.getRandom(1000)
+            if i < 88 :
+              st.giveItems(6698,1)
+            elif i < 185 :
+              st.giveItems(6699,1)
+            elif i < 238 :
+              st.giveItems(6700,1)
+            elif i < 262 :
+              st.giveItems(6701,1)
+            elif i < 292 :
+              st.giveItems(6702,1)
+            elif i < 356 :
+              st.giveItems(6703,1)
+            elif i < 420 :
+              st.giveItems(6704,1)
+            elif i < 482 :
+              st.giveItems(6705,1)
+            elif i < 554 :
+              st.giveItems(6706,1)
+            elif i < 576 :
+              st.giveItems(6707,1)
+            elif i < 640 :
+              st.giveItems(6708,1)
+            elif i < 704 :
+              st.giveItems(6709,1)
+            elif i < 777 :
+              st.giveItems(6710,1)
+            elif i < 799 :
+              st.giveItems(6711,1)
+            elif i < 863 :
+              st.giveItems(6712,1)
+            elif i < 927 :
+              st.giveItems(6713,1)
+            else:
+              st.giveItems(6714,1)
+          if st.getRandom(1000) < 54 :
+            reward = 1
+            i = st.getRandom(1000)
+            if i < 100 :
+              st.giveItems(6688,1)
+            elif i < 198 :
+              st.giveItems(6689,1)
+            elif i < 298 :
+              st.giveItems(6690,1)
+            elif i < 398 :
+              st.giveItems(6691,1)
+            elif i < 499 :
+              st.giveItems(7579,1)
+            elif i < 601 :
+              st.giveItems(6693,1)
+            elif i < 703 :
+              st.giveItems(6694,1)
+            elif i < 801 :
+              st.giveItems(6695,1)
+            elif i < 902 :
+              st.giveItems(6696,1)
+            else:
+              st.giveItems(6697,1)
         if reward == 0 :
           if st.getRandom(2) == 0 :
              htmltext = "31454-14.htm"
@@ -253,43 +381,172 @@ class Quest (JQuest) :
         htmltext = "31919-3.htm"
         st.takeItems(SEALED_BOX,1)
         reward = 0
-        if st.getRandom(1000000) < 350000 :
-          cnt = 1370 + st.getRandom(1374)
-          st.giveItems(REWARDS[0],cnt)
+        rnd = st.getRandom(5)
+        if rnd == 0:
+          st.giveItems(57,10000)
           reward = 1
-        if st.getRandom(1000000) < 1 :
-          st.giveItems(REWARDS[1],1)
-          reward = 1
-        if st.getRandom(1000000) < 1 :
-          st.giveItems(REWARDS[2],1)
-          reward = 1
-        if st.getRandom(1000000) < 4 :
-          st.giveItems(REWARDS[3],1)
-          reward = 1
-        if st.getRandom(1000000) < 27429 :
-          st.giveItems(REWARDS[4],1)
-          reward = 1
-        if st.getRandom(1000000) < 1 :
-          st.giveItems(REWARDS[5],1)
-          reward = 1
-        if st.getRandom(1000000) < 1921 :
-          st.giveItems(REWARDS[6],1)
-          reward = 1
-        if st.getRandom(1000000) < 1601 :
-          st.giveItems(REWARDS[7],1)
-          reward = 1
-        if st.getRandom(1000000) < 3201 :
-          st.giveItems(REWARDS[8],1)
-          reward = 1
-        if st.getRandom(1000000) < 220 :
-          st.giveItems(REWARDS[9],1)
-          reward = 1
-        if st.getRandom(1000000) < 220 :
-          st.giveItems(REWARDS[10],1)
-          reward = 1
-        if st.getRandom(1000000) < 241 :
-          st.giveItems(REWARDS[11],1)
-          reward = 1
+        elif rnd == 1:
+          if st.getRandom(1000) < 848 :
+            reward = 1
+            i = st.getRandom(1000)
+            if i < 43 :
+              st.giveItems(1884,42)
+            elif i < 66 :
+              st.giveItems(1895,36)
+            elif i < 184 :
+              st.giveItems(1876,4)
+            elif i < 250 :
+              st.giveItems(1881,6)
+            elif i < 287 :
+              st.giveItems(5549,8)
+            elif i < 484 :
+              st.giveItems(1874,1)
+            elif i < 681 :
+              st.giveItems(1889,1)
+            elif i < 799 :
+              st.giveItems(1877,1)
+            elif i < 902 :
+              st.giveItems(1894,1)
+            else:
+              st.giveItems(4043,1)
+          if st.getRandom(1000) < 323 :
+            reward = 1
+            i = st.getRandom(1000)
+            if i < 335 :
+              st.giveItems(1888,1)
+            elif i < 556 :
+              st.giveItems(4040,1)
+            elif i < 725 :
+              st.giveItems(1890,1)
+            elif i < 872 :
+              st.giveItems(5550,1)
+            elif i < 962 :
+              st.giveItems(1893,1)
+            elif i < 986 :
+              st.giveItems(4046,1)
+            else:
+              st.giveItems(4048,1)
+        elif rnd == 2:
+          if st.getRandom(1000) < 847 :
+            reward = 1
+            i = st.getRandom(1000)
+            if i < 148 :
+              st.giveItems(1878,8)
+            elif i < 175 :
+              st.giveItems(1882,24)
+            elif i < 273 :
+              st.giveItems(1879,4)
+            elif i < 322 :
+              st.giveItems(1880,6)
+            elif i < 357 :
+              st.giveItems(1885,6)
+            elif i < 554 :
+              st.giveItems(1875,1)
+            elif i < 685 :
+              st.giveItems(1883,1)
+            elif i < 803 :
+              st.giveItems(5220,1)
+            elif i < 901 :
+              st.giveItems(4039,1)
+            else:
+              st.giveItems(4044,1)
+          if st.getRandom(1000) < 251 :
+            reward = 1
+            i = st.getRandom(1000)
+            if i < 350 :
+              st.giveItems(1887,1)
+            elif i < 587 :
+              st.giveItems(4042,1)
+            elif i < 798 :
+              st.giveItems(1886,1)
+            elif i < 922 :
+              st.giveItems(4041,1)
+            elif i < 966 :
+              st.giveItems(1892,1)
+            elif i < 996 :
+              st.giveItems(1891,1)
+            else:
+              st.giveItems(4047,1)
+        elif rnd == 3:
+          if st.getRandom(1000) < 31 :
+            reward = 1
+            i = st.getRandom(1000)
+            if i < 223 :
+              st.giveItems(730,1)
+            elif i < 893 :
+              st.giveItems(948,1)
+            else:
+              st.giveItems(960,1)
+          if st.getRandom(1000) < 5 :
+            reward = 1
+            i = st.getRandom(1000)
+            if i < 202 :
+              st.giveItems(729,1)
+            elif i < 928 :
+              st.giveItems(947,1)
+            else:
+              st.giveItems(959,1)
+        elif rnd == 4:
+          if st.getRandom(1000) < 329 :
+            reward = 1
+            i = st.getRandom(1000)
+            if i < 88 :
+              st.giveItems(6698,1)
+            elif i < 185 :
+              st.giveItems(6699,1)
+            elif i < 238 :
+              st.giveItems(6700,1)
+            elif i < 262 :
+              st.giveItems(6701,1)
+            elif i < 292 :
+              st.giveItems(6702,1)
+            elif i < 356 :
+              st.giveItems(6703,1)
+            elif i < 420 :
+              st.giveItems(6704,1)
+            elif i < 482 :
+              st.giveItems(6705,1)
+            elif i < 554 :
+              st.giveItems(6706,1)
+            elif i < 576 :
+              st.giveItems(6707,1)
+            elif i < 640 :
+              st.giveItems(6708,1)
+            elif i < 704 :
+              st.giveItems(6709,1)
+            elif i < 777 :
+              st.giveItems(6710,1)
+            elif i < 799 :
+              st.giveItems(6711,1)
+            elif i < 863 :
+              st.giveItems(6712,1)
+            elif i < 927 :
+              st.giveItems(6713,1)
+            else:
+              st.giveItems(6714,1)
+          if st.getRandom(1000) < 54 :
+            reward = 1
+            i = st.getRandom(1000)
+            if i < 100 :
+              st.giveItems(6688,1)
+            elif i < 198 :
+              st.giveItems(6689,1)
+            elif i < 298 :
+              st.giveItems(6690,1)
+            elif i < 398 :
+              st.giveItems(6691,1)
+            elif i < 499 :
+              st.giveItems(7579,1)
+            elif i < 601 :
+              st.giveItems(6693,1)
+            elif i < 703 :
+              st.giveItems(6694,1)
+            elif i < 801 :
+              st.giveItems(6695,1)
+            elif i < 902 :
+              st.giveItems(6696,1)
+            else:
+              st.giveItems(6697,1)
         if reward == 0 :
           if st.getRandom(2) == 0 :
              htmltext = "31919-4.htm"
