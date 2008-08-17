@@ -48,6 +48,6 @@ CREATE TABLE IF NOT EXISTS `custom_npc`(
   `bss` int(4) default 0,
   `ss_rate` int(3) default 0,
   `AI` varchar(8) default "fighter",
-  `drop_herbs` int(1) default '0',
+  `drop_herbs` enum('true','false') DEFAULT 'false' NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM;
