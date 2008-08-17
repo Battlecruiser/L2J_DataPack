@@ -29,47 +29,41 @@ BYPASS = {
 47:"<a action=\"bypass -h Quest 60_GoodWorkReward TR\">Tyrant.</a>",
 50:"<a action=\"bypass -h Quest 60_GoodWorkReward OL\">Overlord.</a><br><a action=\"bypass -h Quest 60_GoodWorkReward WC\">Warcryer.</a>",
 54:"<a action=\"bypass -h Quest 60_GoodWorkReward BH\">Bounty Hunter.</a>",
-57:"<a action=\"bypass -h Quest 60_GoodWorkReward WS\">Warsmith.</a>",
-125:"<a action=\"bypass -h Quest 60_GoodWorkReward BE\">Berserker.</a><br><a action=\"bypass -h Quest 60_GoodWorkReward MB\">Soul Breaker.</a>",
-126:"<a action=\"bypass -h Quest 60_GoodWorkReward AB\">Arbalester.</a><br><a action=\"bypass -h Quest 60_GoodWorkReward FB\">Soul Breaker.</a>"
+57:"<a action=\"bypass -h Quest 60_GoodWorkReward WS\">Warsmith.</a>"
 }
 
 CLASSES = {
-"AB":130,
-"AW":36,
-"BD":34,
-"BE":127,
-"BH":55,
-"BS":16,
-"DA":6,
-"DT":46,
-"EE":30,
-"ES":28,
-"FB":129,
-"GL":2,
-"HK":9,
-"MB":128,
-"NM":13,
-"OL":51,
-"PA":5,
-"PP":17,
-"PR":37,
-"PS":41,
-"PW":23,
-"SC":12,
-"SE":43,
-"SH":40,
-"SK":33,
-"SP":27,
-"SR":24,
-"SS":21,
-"TH":8,
-"TK":20,
-"TR":48,
-"WA":14,
-"WC":52,
-"WL":3,
-"WS":57
+"AW":[36,[2673,3172,2809]],
+"BD":[34,[2627,3172,2762]],
+"BH":[55,[2809,3119,3238]],
+"BS":[16,[2721,2734,2820]],
+"DA":[6,[2633,2734,3307]],
+"DT":[46,[2627,3203,3276]],
+"EE":[30,[2721,3140,2820]],
+"ES":[28,[2674,3140,3336]],
+"GL":[2,[2627,2734,2762]],
+"HK":[9,[2673,2734,3293]],
+"NM":[13,[2674,2734,3307]],
+"OL":[51,[2721,3203,3390]],
+"PA":[5,[2633,2734,2820]],
+"PP":[17,[2721,2734,2821]],
+"PR":[37,[2673,3172,3293]],
+"PS":[41,[2674,3172,3336]],
+"PW":[23,[2673,3140,2809]],
+"SC":[12,[2674,2734,2840]],
+"SE":[43,[2721,3172,2821]],
+"SH":[40,[2674,3172,2840]],
+"SK":[33,[2633,3172,3307]],
+"SP":[27,[2674,3140,2840]],
+"SR":[24,[2673,3140,3293]],
+"SS":[21,[2627,3140,2762]],
+"TH":[8,[2673,2734,2809]],
+"TK":[20,[2633,3140,2820]],
+"TR":[48,[2627,3203,2762]],
+"WA":[14,[2674,2734,3336]],
+"WC":[52,[2721,3203,2879]],
+"WL":[3,[2627,2734,3276]],
+"WS":[57,[2867,3119,3238]]
 }
 
 class Quest (JQuest) :
@@ -125,17 +119,28 @@ class Quest (JQuest) :
          text = BYPASS[player.getClassId().getId()]
          htmltext = "<html><body>Black Marketeer of Mammon:<br>Forget about the money!<br>I will help you complete the class transfer, which is far more valuable! Which class would you like to be? Choose one.<br>"+text+"</body></html>"
       else :
-         htmltext = "<html><body>Black Marketeer of Mammon:<br>You have already 2nd occupation completed.</body></html>" #TODO: replace me with proper html
+         htmltext = "31092-06.htm"
     elif event == "31092-06.htm" :
       text = BYPASS[player.getClassId().getId()]
       htmltext = "<html><body>Black Marketeer of Mammon:<br>If you are finished thinking, select one. Which class would you like to be?<br>"+text+"</body></html>"
+    elif event == "31092-07.htm" :
+      st.giveItems(57,3000000)
+      st.set("onlyone","1")
     elif event in CLASSES.keys():
       if player.getLevel() >= 40:
-         newclass=CLASSES[event]
-         player.setClassId(newclass)
-         player.setBaseClass(newclass)
-         player.broadcastUserInfo()
-         return
+         newclass,req_item=CLASSES[event]
+         adena = 0
+         for i in req_item :
+            if not st.getQuestItemsCount(i):
+               st.giveItems(i,1)
+            else :
+               adena + 1
+         if adena == 3 :
+            return "31092-06.htm"
+         if adena > 0 :
+            st.giveItems(57,adena*1000000)
+         htmltext = "31092-05.htm"
+         st.set("onlyone","1")
       else:
          htmltext = "<html><body>Black Marketeer of Mammon:<br>To change occupation, your level must be over 40. Come back after you finish thinking about it.</body></html>"
     return htmltext
@@ -152,10 +157,10 @@ class Quest (JQuest) :
      if npcId == 31435 :
         htmltext = "<html><body>This quest has already been completed.</body></html>"
      elif npcId == 31092 :
-        if player.getClassId().level() == 1 :
+        if player.getClassId().level() == 1 and not st.getInt("onlyone"):
            htmltext = "31092-05.htm"
    if id == State.CREATED :
-     if player.getLevel() < 39 :
+     if player.getLevel() < 39 or player.getClassId().level() != 1 or player.getRace().ordinal() == 5:
        htmltext = "31435-00.htm"
        st.exitQuest(1)
      else :
