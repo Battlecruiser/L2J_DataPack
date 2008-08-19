@@ -15,4 +15,3 @@ CREATE TABLE IF NOT EXISTS games (
   finished INT NOT NULL default 0,
   PRIMARY KEY (`id`,`idnr`)
 );
-

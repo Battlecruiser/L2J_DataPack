@@ -17,7 +17,7 @@ CREATE TABLE `four_sepulchers_spawnlist` (
   `key_npc_id` int(9) NOT NULL DEFAULT '0',
   `spawntype` int(9) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) DEFAULT CHARSET=utf8;
+);
 -- -------------------------------------------
 -- Records for table four_sepulchers_spawnlist
 -- -------------------------------------------

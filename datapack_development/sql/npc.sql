@@ -51,7 +51,7 @@ CREATE TABLE `npc`(
   `AI` varchar(8) default "fighter",
   `drop_herbs` enum('true','false') DEFAULT 'false' NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM;
+);
 -- 
 -- Dumping data for table `npc`
 -- 

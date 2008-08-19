@@ -1,4 +1,4 @@
--- ---------------------------- 
+-- ----------------------------
 -- Table structure for character_friends
 -- ---------------------------- 
 CREATE TABLE IF NOT EXISTS `character_friends` ( 

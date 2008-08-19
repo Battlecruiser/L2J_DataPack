@@ -1,4 +1,4 @@
--- 
+--
 -- Table structure for table `mapregion`
 -- 
 DROP TABLE IF EXISTS mapregion;
@@ -16,7 +16,7 @@ CREATE TABLE `mapregion` (
 `sec9` int(2) NOT NULL default '0',
 `sec10` int(2) NOT NULL default '0',
 PRIMARY KEY (`region`)
-) ENGINE=MyISAM;
+);
 
 --
 -- Dumping data for table `mapregion`

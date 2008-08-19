@@ -11,7 +11,7 @@ CREATE TABLE `transform_skill_trees` (
   `sp` int(10) NOT NULL default '0',
   `min_level` int(10) NOT NULL default '0',
   PRIMARY KEY  (`race_id`,`skill_id`,`level`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+);
 
 insert  into transform_skill_trees values 
 # Human

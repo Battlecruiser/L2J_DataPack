@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS `fort` (
   `lastOwnedTime` decimal(20,0) NOT NULL default 0,
   `owner` int(11) NOT NULL default 0,
   PRIMARY KEY  (`id`)
-) ;
+);
 
 -- ----------------------------
 -- Records 

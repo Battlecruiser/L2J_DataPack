@@ -1,4 +1,4 @@
--- 
+--
 -- Table structure for henna_trees
 -- 
 DROP TABLE IF EXISTS henna_trees;
@@ -12,9 +12,8 @@ CREATE TABLE `henna_trees` (
 -- Records for table henna_trees
 -- 
 
-
-insert into henna_trees values 
-(1,1), 
+insert into henna_trees values
+(1,1),
 (1,2), 
 (1,3), 
 (1,4), 

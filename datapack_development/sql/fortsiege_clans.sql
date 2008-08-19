@@ -7,4 +7,4 @@ CREATE TABLE IF NOT EXISTS `fortsiege_clans` (
   `type` int(1) default NULL,
   `fort_owner` int(1) default NULL,
   PRIMARY KEY  (`clan_id`,`fort_id`)
-) ;
+);

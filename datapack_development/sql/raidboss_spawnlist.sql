@@ -18,8 +18,7 @@ CREATE TABLE raidboss_spawnlist (
   PRIMARY KEY  (boss_id,loc_x,loc_y,loc_z)
 );
 
-
-INSERT INTO `raidboss_spawnlist` VALUES 
+INSERT INTO `raidboss_spawnlist` VALUES
 (25001,1,-54464,146572,-2400,0,43200,129600,0,95986,545), -- Greyclaw Kutus (23)
 (25004,1,-94101,100238,-3012,0,43200,129600,0,168366,763), -- Turek Mercenary Captain (30)
 (25007,1,124240,75376,-2800,0,43200,129600,0,331522,1062), -- Retreat Spider Cletu (42)
@@ -236,7 +235,6 @@ INSERT INTO `raidboss_spawnlist` VALUES
 -- (25523,1,170000,-60000,-3500,0,43200,129600,0,1848045,9999), -- Plague Golem (73) -- stats & proper coords to be done
 (25524,1,144143,-5731,-4722,0,43200,129600,0,956490,3247), -- Flamestone Giant (76)
 (25527,1,3776,-6768,-3288,0,43200,129600,0,1532678,3718); -- Uruka (86)
-
 
 --
 -- Following mobs need their type checked, corrected & determined whether they actually belong in here

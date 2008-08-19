@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS `fishing_skill_trees` (
   `cost` int(10) NOT NULL default '0',
   `isfordwarf` int(1) NOT NULL default '0',
   PRIMARY KEY  (`skill_id`,`level`)
-) ENGINE=MyISAM;
+);
 --
 --  Records for table fishing_skill_trees
 --
@@ -133,6 +133,4 @@ INSERT INTO fishing_skill_trees VALUES
 (1372,6,'Expand Inventory',0,60,7609,60000,0),
 (1372,7,'Expand Inventory',0,70,7609,100000,0),
 (1372,8,'Expand Inventory',0,76,7609,100000,0),
-(1312,1,'Fishing',0,10,57,1000,0); 
-
-
+(1312,1,'Fishing',0,10,57,1000,0);

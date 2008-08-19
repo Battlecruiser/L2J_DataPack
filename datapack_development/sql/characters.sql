@@ -60,4 +60,4 @@ CREATE TABLE IF NOT EXISTS characters (
   death_penalty_level SMALLINT UNSIGNED NOT NULL DEFAULT 0,
   PRIMARY KEY  (charId),
   KEY `clanid` (`clanid`)
-) ;
+);
