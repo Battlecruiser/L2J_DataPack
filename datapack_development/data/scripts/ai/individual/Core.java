@@ -38,11 +38,11 @@ public class Core extends L2AttackableAIScript
 	private static final int CORE = 29006;
 	private static final int DEATH_KNIGHT = 29007;
 	private static final int DOOM_WRAITH = 29008;
-	private static final int DICOR = 29009;
-	private static final int VALIDUS = 29010;
+	//private static final int DICOR = 29009;
+	//private static final int VALIDUS = 29010;
 	private static final int SUSCEPTOR = 29011;
-	private static final int PERUM = 29012;
-	private static final int PREMO = 29013;
+	//private static final int PERUM = 29012;
+	//private static final int PREMO = 29013;
 
 	//CORE Status Tracking :
 	private static final byte ALIVE = 0;    //Core is spawned.
