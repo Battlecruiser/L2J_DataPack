@@ -86,34 +86,6 @@ public class L2AttackableAIScript extends QuestJython
 	public L2AttackableAIScript (int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
-		// register all mobs here...
-		for (int level =1; level<100; level++)
-		{
-			L2NpcTemplate[] templates = NpcTable.getInstance().getAllOfLevel(level);
-			if ((templates != null) && (templates.length > 0))
-			{
-				for (L2NpcTemplate t: templates)
-				{
-					try
-					{
-						if ( L2Attackable.class.isAssignableFrom(Class.forName("net.sf.l2j.gameserver.model.actor.instance."+t.type+"Instance")))
-						{
-							this.addEventId(t.npcId, Quest.QuestEventType.ON_ATTACK);
-							this.addEventId(t.npcId, Quest.QuestEventType.ON_KILL);
-							this.addEventId(t.npcId, Quest.QuestEventType.ON_SPAWN);
-							this.addEventId(t.npcId, Quest.QuestEventType.ON_SKILL_SEE);
-							this.addEventId(t.npcId, Quest.QuestEventType.ON_FACTION_CALL);
-							this.addEventId(t.npcId, Quest.QuestEventType.ON_AGGRO_RANGE_ENTER);
-						}
-					}
-					catch(ClassNotFoundException ex)
-					{
-						System.out.println("Class not found "+t.type+"Instance");
-					}
-				}
-			}
-		}
 	}
 	
 	public String onAdvEvent (String event, L2NpcInstance npc, L2PcInstance player)
@@ -206,6 +178,33 @@ public class L2AttackableAIScript extends QuestJython
     
     public static void main(String[] args)
     {
-    	new L2AttackableAIScript(-1,"L2AttackableAIScript","L2AttackableAIScript");
+    	L2AttackableAIScript ai = new L2AttackableAIScript(-1,"L2AttackableAIScript","L2AttackableAIScript");
+		// register all mobs here...
+		for (int level =1; level<100; level++)
+		{
+			L2NpcTemplate[] templates = NpcTable.getInstance().getAllOfLevel(level);
+			if ((templates != null) && (templates.length > 0))
+			{
+				for (L2NpcTemplate t: templates)
+				{
+					try
+					{
+						if ( L2Attackable.class.isAssignableFrom(Class.forName("net.sf.l2j.gameserver.model.actor.instance."+t.type+"Instance")))
+						{
+							ai.addEventId(t.npcId, Quest.QuestEventType.ON_ATTACK);
+							ai.addEventId(t.npcId, Quest.QuestEventType.ON_KILL);
+							ai.addEventId(t.npcId, Quest.QuestEventType.ON_SPAWN);
+							ai.addEventId(t.npcId, Quest.QuestEventType.ON_SKILL_SEE);
+							ai.addEventId(t.npcId, Quest.QuestEventType.ON_FACTION_CALL);
+							ai.addEventId(t.npcId, Quest.QuestEventType.ON_AGGRO_RANGE_ENTER);
+						}
+					}
+					catch(ClassNotFoundException ex)
+					{
+						System.out.println("Class not found "+t.type+"Instance");
+					}
+				}
+			}
+		}
     }
 }
