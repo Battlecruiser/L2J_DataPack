@@ -16,9 +16,9 @@ CREATE TABLE armorsets (
  shield_skill_id SMALLINT UNSIGNED NOT NULL default 0,
  enchant6skill SMALLINT UNSIGNED NOT NULL default 0,
  PRIMARY KEY (id,chest)
-) ENGINE=MyISAM;
+);
 
---                 NO GRADE              -------------
+--                 NO GRADE             -------------
 -- ######################## id chest  legs head gloves feet    skill  skill_lvl shield sh_skill enchant6
 INSERT INTO armorsets VALUES(1,  23,   2386, 43,   0,    0,      3500,   1,   0,    0,    0);        -- Wooden Breastplate set (heavy)
 INSERT INTO armorsets VALUES(2,  1101, 1104, 44,   0,    0,      3501,   1,   0,    0,    0);        -- Devotion robe set (robe)
@@ -65,7 +65,7 @@ INSERT INTO armorsets VALUES(27, 2398, 2403, 2416, 5720, 5736,   3528,   1,   0,
 
 INSERT INTO armorsets VALUES(28, 2381, 0,    2417, 5722, 5738,   3525,   1,   110,  3549,  3617);    -- Doom plate heavy set
 INSERT INTO armorsets VALUES(29, 2392, 0,    2417, 5723, 5739,   3527,   1,   0,    0,     3618);    -- Doom leather set
-INSERT INTO armorsets VALUES(30, 2399, 2404, 2417, 5724, 5740,   3529,   1,   0,    0,     3619);    -- Doom robe set 
+INSERT INTO armorsets VALUES(30, 2399, 2404, 2417, 5724, 5740,   3529,   1,   0,    0,     3619);    -- Doom robe set
 
 --                 A GRADE              -------------
 -- ######################## id chest  legs head gloves feet    skill  skill_lvl shield sh_skill enchant6
@@ -91,7 +91,7 @@ INSERT INTO armorsets VALUES(43, 6373, 6374, 6378, 6375, 6376,   3553,   1,   63
 INSERT INTO armorsets VALUES(44, 6379, 0,    6382, 6380, 6381,   3555,   1,   0,    0,     3624);    -- Draconic leather set
 INSERT INTO armorsets VALUES(45, 6383, 0,    6386, 6384, 6385,   3556,   1,   0,    0,     3625);    -- Major arcana robe set
 
---                Clan Sets              -------------
+--                Clan Sets             -------------
 -- ######################## id chest  legs head gloves feet    skill  skill_lvl shield sh_skill enchant6
 INSERT INTO armorsets VALUES(46, 7851, 0,    7850, 7852, 7853,   3605,   1,   0,    0,     3611);    -- Clan oath Armor set (heavy)
 INSERT INTO armorsets VALUES(47, 7854, 0,    7850, 7855, 7856,   3606,   1,   0,    0,     3612);    -- Clan Oath Brigandine set (light)
@@ -109,29 +109,29 @@ INSERT INTO armorsets VALUES(55, 9831, 0,    9830, 9832, 9833,   3608,   2,   0,
 INSERT INTO armorsets VALUES(56, 9834, 0,    9830, 9835, 9836,   3609,   2,   0,    0,     3621);    -- Improved Apella Brigandine set (light)
 INSERT INTO armorsets VALUES(57, 9837, 0,    9830, 9838, 9839,   3610,   2,   0,    0,     3622);    -- Improved Apella Doublet set (robe)
 
---                Dynasty Sets              -------------
--- ########################     id  chest  legs  head  glov  feet  skill sklvl shld shsk enchant6
-INSERT INTO `armorsets` VALUES (58,  9432, 9437, 9438, 9439, 9440, 3416, 1,    0,    0, 3625);	-- Dynasty Tunic
-INSERT INTO `armorsets` VALUES (59,  9433, 9437, 9438, 9439, 9440, 3354, 1,    0,    0, 3625);	-- Dynasty Tunic - Healer
-INSERT INTO `armorsets` VALUES (60,  9434, 9437, 9438, 9439, 9440, 3355, 1,    0,    0, 3625);	-- Dynasty Tunic - Enchanter
-INSERT INTO `armorsets` VALUES (61,  9435, 9437, 9438, 9439, 9440, 3356, 1,    0,    0, 3625);	-- Dynasty Tunic - Summoner
-INSERT INTO `armorsets` VALUES (62,  9436, 9437, 9438, 9439, 9440, 3357, 1,    0,    0, 3625);	-- Dynasty Tunic - Human Wizard
+--                Dynasty Sets          -------------
+-- ########################   id  chest  legs  head  glov  feet  skill sklvl shld shsk enchant6
+INSERT INTO armorsets VALUES (58,  9432, 9437, 9438, 9439, 9440, 3416, 1,    0,    0, 3625);	-- Dynasty Tunic
+INSERT INTO armorsets VALUES (59,  9433, 9437, 9438, 9439, 9440, 3354, 1,    0,    0, 3625);	-- Dynasty Tunic - Healer
+INSERT INTO armorsets VALUES (60,  9434, 9437, 9438, 9439, 9440, 3355, 1,    0,    0, 3625);	-- Dynasty Tunic - Enchanter
+INSERT INTO armorsets VALUES (61,  9435, 9437, 9438, 9439, 9440, 3356, 1,    0,    0, 3625);	-- Dynasty Tunic - Summoner
+INSERT INTO armorsets VALUES (62,  9436, 9437, 9438, 9439, 9440, 3357, 1,    0,    0, 3625);	-- Dynasty Tunic - Human Wizard
 
-INSERT INTO `armorsets` VALUES (63,  9416, 9421, 9422, 9423, 9424, 3412, 1, 9441, 3417, 3623);	-- Dynasty Breast Plate
-INSERT INTO `armorsets` VALUES (64,  9417, 9421, 9422, 9423, 9424, 3348, 1, 9441, 3417, 3623);	-- Dynasty Breast Plate - Shield Master
-INSERT INTO `armorsets` VALUES (65,  9418, 9421, 9422, 9423, 9424, 3349, 1, 9441, 3417, 3623);	-- Dynasty Breast Plate - Weapon Master
-INSERT INTO `armorsets` VALUES (66,  9419, 9421, 9422, 9423, 9424, 3350, 1, 9441, 3417, 3623);	-- Dynasty Breast Plate - Force Master
-INSERT INTO `armorsets` VALUES (67,  9420, 9421, 9422, 9423, 9424, 3351, 1, 9441, 3417, 3623);	-- Dynasty Breast Plate - Bard
+INSERT INTO armorsets VALUES (63,  9416, 9421, 9422, 9423, 9424, 3412, 1, 9441, 3417, 3623);	-- Dynasty Breast Plate
+INSERT INTO armorsets VALUES (64,  9417, 9421, 9422, 9423, 9424, 3348, 1, 9441, 3417, 3623);	-- Dynasty Breast Plate - Shield Master
+INSERT INTO armorsets VALUES (65,  9418, 9421, 9422, 9423, 9424, 3349, 1, 9441, 3417, 3623);	-- Dynasty Breast Plate - Weapon Master
+INSERT INTO armorsets VALUES (66,  9419, 9421, 9422, 9423, 9424, 3350, 1, 9441, 3417, 3623);	-- Dynasty Breast Plate - Force Master
+INSERT INTO armorsets VALUES (67,  9420, 9421, 9422, 9423, 9424, 3351, 1, 9441, 3417, 3623);	-- Dynasty Breast Plate - Bard
 
-INSERT INTO `armorsets` VALUES (68,  9425, 9428, 9429, 9430, 9431, 3413, 1,    0,    0, 3624);	-- Dynasty Leather Armor
-INSERT INTO `armorsets` VALUES (69,  9426, 9428, 9429, 9430, 9431, 3352, 1,    0,    0, 3624);	-- Dynasty Leather Armor - Dagger Master
-INSERT INTO `armorsets` VALUES (70,  9427, 9428, 9429, 9430, 9431, 3353, 1,    0,    0, 3624);	-- Dynasty Leather Armor - Bow Master
-INSERT INTO `armorsets` VALUES (71, 10126, 9428, 9429, 9430, 9431, 3414, 1,    0,    0, 3624);	-- Dynasty Leather Armor - Force Master
-INSERT INTO `armorsets` VALUES (72, 10127, 9428, 9429, 9430, 9431, 3415, 1,    0,    0, 3624);	-- Dynasty Leather Armor - Weapon Master
-INSERT INTO `armorsets` VALUES (73, 10168, 9428, 9429, 9430, 9431, 3355, 1,    0,    0, 3624);	-- Dynasty Leather Armor - Enchanter
-INSERT INTO `armorsets` VALUES (74, 10214, 9428, 9429, 9430, 9431, 3420, 1,    0,    0, 3624);	-- Dynasty Leather Armor - Summoner
+INSERT INTO armorsets VALUES (68,  9425, 9428, 9429, 9430, 9431, 3413, 1,    0,    0, 3624);	-- Dynasty Leather Armor
+INSERT INTO armorsets VALUES (69,  9426, 9428, 9429, 9430, 9431, 3352, 1,    0,    0, 3624);	-- Dynasty Leather Armor - Dagger Master
+INSERT INTO armorsets VALUES (70,  9427, 9428, 9429, 9430, 9431, 3353, 1,    0,    0, 3624);	-- Dynasty Leather Armor - Bow Master
+INSERT INTO armorsets VALUES (71, 10126, 9428, 9429, 9430, 9431, 3414, 1,    0,    0, 3624);	-- Dynasty Leather Armor - Force Master
+INSERT INTO armorsets VALUES (72, 10127, 9428, 9429, 9430, 9431, 3415, 1,    0,    0, 3624);	-- Dynasty Leather Armor - Weapon Master
+INSERT INTO armorsets VALUES (73, 10168, 9428, 9429, 9430, 9431, 3355, 1,    0,    0, 3624);	-- Dynasty Leather Armor - Enchanter
+INSERT INTO armorsets VALUES (74, 10214, 9428, 9429, 9430, 9431, 3420, 1,    0,    0, 3624);	-- Dynasty Leather Armor - Summoner
 
-INSERT INTO `armorsets` VALUES (75, 10228, 9421, 9422, 9423, 9424, 3636, 1,    0,    0, 3623);	-- Dynasty Platinum Plate - Shield Master
-INSERT INTO `armorsets` VALUES (76, 10229, 9421, 9422, 9423, 9424, 3637, 1,    0,    0, 3623);	-- Dynasty Platinum Plate - Weapon Master
-INSERT INTO `armorsets` VALUES (77, 10230, 9421, 9422, 9423, 9424, 3639, 1,    0,    0, 3623);	-- Dynasty Platinum Plate - Force Master
-INSERT INTO `armorsets` VALUES (78, 10231, 9421, 9422, 9423, 9424, 3638, 1,    0,    0, 3623);	-- Dynasty Platinum Plate - Bard
+INSERT INTO armorsets VALUES (75, 10228, 9421, 9422, 9423, 9424, 3636, 1,    0,    0, 3623);	-- Dynasty Platinum Plate - Shield Master
+INSERT INTO armorsets VALUES (76, 10229, 9421, 9422, 9423, 9424, 3637, 1,    0,    0, 3623);	-- Dynasty Platinum Plate - Weapon Master
+INSERT INTO armorsets VALUES (77, 10230, 9421, 9422, 9423, 9424, 3639, 1,    0,    0, 3623);	-- Dynasty Platinum Plate - Force Master
+INSERT INTO armorsets VALUES (78, 10231, 9421, 9422, 9423, 9424, 3638, 1,    0,    0, 3623);	-- Dynasty Platinum Plate - Bard

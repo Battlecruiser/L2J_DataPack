@@ -13,4 +13,4 @@ CREATE TABLE IF NOT EXISTS character_skills_save (
   `class_index` INT(1) NOT NULL DEFAULT 0,
   buff_index INT(2) NOT NULL default 0,
   PRIMARY KEY  (charId,skill_id,`class_index`)
-) ;
+);

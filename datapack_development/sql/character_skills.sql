@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS character_skills (
   skill_name varchar(40),
   `class_index` INT(1) NOT NULL DEFAULT 0,
   PRIMARY KEY  (charId,skill_id,`class_index`)
-) ;
+);

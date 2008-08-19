@@ -8,7 +8,7 @@ CREATE TABLE `merchant_areas_list` (
   `tax` double(3,2) unsigned NOT NULL default '0.00',
   `Chaotic` int(11) NOT NULL default '0',
   PRIMARY KEY  (`merchant_area_id`)
-) ENGINE=MyISAM;
+);
 
 --
 -- Dumping data for table `merchant_areas_list`
@@ -28,4 +28,3 @@ INSERT INTO `merchant_areas_list` VALUES (11,'Ivory Tower',0.15,0);
 INSERT INTO `merchant_areas_list` VALUES (12,'Harden\'s Ac.',0.20,0);
 INSERT INTO `merchant_areas_list` VALUES (13,'Aden',0.20,0);
 INSERT INTO `merchant_areas_list` VALUES (14,'Castle',0.0,0);
-

@@ -27,13 +27,13 @@ CREATE TABLE `pets_stats` (
   `mpregen` int(11) NOT NULL default '0',
   `owner_exp_taken` DECIMAL(3,2) DEFAULT '0' NOT NULL,
   PRIMARY KEY  (`typeID`,`level`)
-) ENGINE=MyISAM;
+);
+
 #----------------------------
 # Records for table pets_stats
 #----------------------------
 
-
-INSERT INTO `pets_stats` (`type`, `typeID`, `level`, `expMax`, `hpMax`, `mpMax`, `patk`, `pdef`, `matk`, `mdef`, `acc`, `evasion`, `crit`, `speed`, `atk_speed`, `cast_speed`, `feedMax`, `feedbattle`, `feednormal`, `loadMax`, `hpregen`, `mpregen`, `owner_exp_taken`) VALUES 
+INSERT INTO `pets_stats` (`type`, `typeID`, `level`, `expMax`, `hpMax`, `mpMax`, `patk`, `pdef`, `matk`, `mdef`, `acc`, `evasion`, `crit`, `speed`, `atk_speed`, `cast_speed`, `feedMax`, `feedbattle`, `feednormal`, `loadMax`, `hpregen`, `mpregen`, `owner_exp_taken`) VALUES
   ('wolf',12077,1,0,31,25,2,11,1,8,38,33,40,137,278,333,248,2,2,92287,2,1,0.1),
   ('wolf',12077,2,636,37,30,2,11,1,8,39,34,40,137,278,333,244,2,2,92287,2,1,0.1),
   ('wolf',12077,3,798,45,34,2,11,1,8,40,35,40,137,278,333,320,2,2,92287,2,1,0.1),

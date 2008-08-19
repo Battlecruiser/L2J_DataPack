@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS `char_creation_items` (
   `amount` int(10) unsigned NOT NULL default '1',
   `equipped` enum('true','false') NOT NULL default 'false',
   PRIMARY KEY  (`classId`,`itemId`)
-) ;
+);
 
 --
 -- Dumping data for table `char_creation_items`

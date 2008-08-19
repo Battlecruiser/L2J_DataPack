@@ -5,4 +5,3 @@ CREATE TABLE IF NOT EXISTS `character_hennas` (
   `class_index` INT(1) NOT NULL DEFAULT 0,
   PRIMARY KEY (`charId`,`slot`,`class_index`)
 );
-

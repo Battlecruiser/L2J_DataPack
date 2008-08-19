@@ -1,4 +1,4 @@
--- 
+--
 -- Table structure for table `zone_vertices`
 -- 
 DROP TABLE IF EXISTS `zone_vertices`;

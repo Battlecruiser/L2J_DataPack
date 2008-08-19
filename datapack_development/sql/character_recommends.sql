@@ -1,4 +1,4 @@
--- ---------------------------- 
+-- ----------------------------
 -- Table structure for character_recommends 
 -- ---------------------------- 
 CREATE TABLE IF NOT EXISTS character_recommends ( 

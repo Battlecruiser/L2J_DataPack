@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `access_levels` (
   `takeAggro` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
   `gainExp` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
   PRIMARY KEY  (`accessLevel`)
-) ;
+);
 
 INSERT IGNORE INTO `access_levels` VALUES 
 (1,'Admin','0FF000','0FF000','2;3;4;5;6',1,1,1,1,1,1,1,1),
