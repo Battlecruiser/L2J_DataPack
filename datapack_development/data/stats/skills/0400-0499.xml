@@ -110,7 +110,10 @@
     <effect count="1" name="Root" time="10" val="0" stackOrder="1" stackType="Root"/>
   </for>
 </skill>
-<skill id="405" levels="10" name="Banish Undead">
+<skill id="405" levels="10" name="Banish Undead" enchantLevels1="30">
+  <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
+  <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
+  <table name="#ench1MpConsume"> 66 65 64 63 62 61 60 58 57 56 55 54 53 52 51 49 48 47 46 45 44 43 41 40 39 38 37 36 35 34 </table>
   <table name="#mpConsume"> 50 53 55 58 59 61 63 65 67 68</table>
   <table name="#itemConsumeCount"> 5 6 7 7 8 8 9 9 10 10</table>
   <table name="#lethal2"> 5 9 13 17 21 25 29 33 37 41</table>
@@ -127,6 +130,7 @@
   <set name="lethal2" val="#lethal2"/>
   <set name="castRange" val="150"/>
   <set name="effectRange" val="550"/>
+  <enchant1 name="mpConsume" val="#ench1MpConsume"/>
   <for>
     <effect count="5" name="Fear" time="3" val="0"/>
   </for>
@@ -1104,7 +1108,7 @@
   <for>
   </for>
 </skill>
-<skill id="450" levels="10" name="Banish Seraph">
+<skill id="450" levels="10" name="Banish Seraph" enchantLevels1="30">
 <!--
       Lvl 1 - Strikes fear into an angel, causing it to flee. Lethal Strike is possible. Consumes 5 Soul Ores.
       Lvl 2 - Strikes fear into an angel, causing it to flee. Lethal Strike is possible. Consumes 6 Soul Ores.
@@ -1117,6 +1121,9 @@
       Lvl 9 - Strikes fear into an angel, causing it to flee. Lethal Strike is possible. Consumes 10 Soul Ores.
       Lvl 10 - Strikes fear into an angel, causing it to flee. Lethal Strike is possible. Consumes 10 Soul Ores.
 -->
+  <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
+  <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
+  <table name="#ench1MpConsume"> 66 65 64 63 62 61 60 58 57 56 55 54 53 52 51 49 48 47 46 45 44 43 41 40 39 38 37 36 35 34 </table>
   <table name="#mpConsume"> 50 53 55 58 59 61 63 65 67 68</table>
   <table name="#itemConsumeCount"> 5 6 7 7 8 8 9 9 10 10</table>
   <table name="#lethal2"> 5 9 13 17 21 25 29 33 37 41</table>
@@ -1133,6 +1140,7 @@
   <set name="lethal2" val="#lethal2"/>
   <set name="castRange" val="150"/>
   <set name="effectRange" val="550"/>
+  <enchant1 name="mpConsume" val="#ench1MpConsume"/>
   <cond msg="Banish Seraph cannot be used due to unsuitable terms.">
   <target race_id="7"/>
   </cond>
