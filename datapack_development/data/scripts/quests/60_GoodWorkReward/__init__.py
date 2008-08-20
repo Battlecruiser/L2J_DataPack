@@ -29,7 +29,7 @@ BYPASS = {
 47:"<a action=\"bypass -h Quest 60_GoodWorkReward TR\">Tyrant.</a>",
 50:"<a action=\"bypass -h Quest 60_GoodWorkReward OL\">Overlord.</a><br><a action=\"bypass -h Quest 60_GoodWorkReward WC\">Warcryer.</a>",
 54:"<a action=\"bypass -h Quest 60_GoodWorkReward BH\">Bounty Hunter.</a>",
-57:"<a action=\"bypass -h Quest 60_GoodWorkReward WS\">Warsmith.</a>"
+56:"<a action=\"bypass -h Quest 60_GoodWorkReward WS\">Warsmith.</a>"
 }
 
 CLASSES = {
