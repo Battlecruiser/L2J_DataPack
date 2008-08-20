@@ -1178,12 +1178,12 @@
   <!-- Infinity Blade Skill -->
   <set name="magicLvl" val="80"/>
   <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
   <set name="isDebuff" val="true"/>
   <for>
     <effect count="1" name="Debuff" time="120" val="0" stackOrder="0.77" stackType="pDefDown">
@@ -1214,11 +1214,11 @@
   <!-- Infinity Axe Skill -->
   <set name="magicLvl" val="80"/>
   <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="CONFUSION"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
   <set name="isDebuff" val="true"/>
   <for>
     <effect count="5" name="Confusion" time="4" val="0"/>
@@ -1269,12 +1269,12 @@
   <!-- Infinity Crusher Skill -->
   <set name="magicLvl" val="80"/>
   <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="STUN"/>
   <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="2" stackType="Stun">
     </effect>
@@ -1305,12 +1305,12 @@
   <!-- Infinity Wing Skill -->
   <set name="magicLvl" val="80"/>
   <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="MUTE"/>
   <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
   <set name="isDebuff" val="true"/>
   <for>
     <effect count="1" name="PhysicalMute" time="60" val="0" stackOrder="1" stackType="silence"/>
@@ -1341,12 +1341,12 @@
   <!-- Infinity Fang Skill -->
   <set name="magicLvl" val="80"/>
   <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="STUN"/>
   <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="2" stackType="Stun">
     </effect>
@@ -1381,12 +1381,12 @@
   <!-- Infinity Stinger Skill -->
   <set name="magicLvl" val="80"/>
   <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="MUTE"/>
   <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
   <set name="isDebuff" val="true"/>
   <for>
     <effect count="1" name="Mute" time="120" val="0" stackOrder="1" stackType="silence"/>
@@ -1417,12 +1417,12 @@
 <skill id="3592" levels="1" name="Dispell">
   <!-- Infinity Spear Skill -->
   <set name="magicLvl" val="80"/>
-  <set name="power" val="15.0"/> <!--Power was set at 0, possibly why this is not working, testing this out  -->
-  <set name="target" val="TARGET_SELF"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="CANCEL"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="100"/>
+  <set name="castRange" val="900"/>
+  <set name="effectRange" val="1400"/>
   <set name="negateStats" val="BUFF"/>
   <set name="negatePower" val="8.0"/>
   <set name="maxNegated" val="3"/> <!-- Making max debuff count 3 -->
@@ -1520,7 +1520,7 @@
 <skill id="3598" levels="1" name="Full Recover">
   <!-- Infinity Rod Skill -->
   <set name="magicLvl" val="80"/>
-  <set name="target" val="TARGET_ONE"/>
+  <set name="target" val="TARGET_SELF"/>
   <set name="power" val="100"/>
   <set name="skillType" val="HEAL_PERCENT"/>
   <set name="operateType" val="OP_ACTIVE"/>
