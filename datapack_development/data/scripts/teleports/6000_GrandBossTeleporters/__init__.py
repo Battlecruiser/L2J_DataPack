@@ -18,7 +18,7 @@ NPCs = [
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
-     self.antharasAI = QuestManager.getInstance().getQuest("antharas")
+     self.antharasAI = QuestManager.getInstance().getQuest("Antharas")
      JQuest.__init__(self,id,name,descr)
  
  def onTalk (self,npc,player):
