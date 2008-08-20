@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `seven_signs_status` (
   `accumulated_bonus2` int(10) NOT NULL default '0',
   `accumulated_bonus3` int(10) NOT NULL default '0',
   `accumulated_bonus4` int(10) NOT NULL default '0',
-  PRIMARY KEY  (`id`)
+  PRIMARY KEY (`id`)
 );
 
 INSERT IGNORE INTO `seven_signs_status` VALUES

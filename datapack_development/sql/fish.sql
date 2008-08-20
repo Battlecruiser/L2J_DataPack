@@ -14,7 +14,7 @@ CREATE TABLE `fish` (
   `guts_check_time` INT(4) NOT NULL default '0',
   `wait_time` INT(5) NOT NULL default '0',
   `combat_time` INT(5) NOT NULL default '0',
-  PRIMARY KEY  (`id`,`level`)
+  PRIMARY KEY (`id`,`level`)
 );
 -- 
 --  Records for table fish

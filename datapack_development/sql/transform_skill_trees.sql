@@ -1,7 +1,7 @@
 #----------------------------
 # Table structure for transform_skill_trees
 #----------------------------
-DROP TABLE IF EXISTS transform_skill_trees;
+DROP TABLE IF EXISTS `transform_skill_trees`;
 CREATE TABLE `transform_skill_trees` (
   `race_id` int(10) NOT NULL default '0',
   `skill_id` int(10) NOT NULL default '0',
@@ -10,7 +10,7 @@ CREATE TABLE `transform_skill_trees` (
   `name` varchar(40) NOT NULL default '',
   `sp` int(10) NOT NULL default '0',
   `min_level` int(10) NOT NULL default '0',
-  PRIMARY KEY  (`race_id`,`skill_id`,`level`)
+  PRIMARY KEY (`race_id`,`skill_id`,`level`)
 );
 
 insert  into transform_skill_trees values 

@@ -10,7 +10,7 @@ CREATE TABLE `helper_buff_list` (
 `lower_level` int(10) unsigned NOT NULL default '0',
 `upper_level` int(10) unsigned NOT NULL default '0',
 `is_magic_class` varchar(5) default NULL,
-PRIMARY KEY  (`id`)
+PRIMARY KEY (`id`)
 );
 
 #----------------------------

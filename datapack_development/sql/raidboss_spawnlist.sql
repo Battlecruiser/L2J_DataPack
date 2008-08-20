@@ -1,21 +1,21 @@
 -- ---------------------------
 -- Table structure for raidboss_spawnlist
 -- ---------------------------
-DROP TABLE IF EXISTS raidboss_spawnlist;
+DROP TABLE IF EXISTS `raidboss_spawnlist`;
 
-CREATE TABLE raidboss_spawnlist (
-  boss_id INT NOT NULL default 0,
-  amount INT NOT NULL default 0,
-  loc_x INT NOT NULL default 0,
-  loc_y INT NOT NULL default 0,
-  loc_z INT NOT NULL default 0,
-  heading INT NOT NULL default 0,
-  respawn_min_delay INT(11) NOT NULL default '43200',
-  respawn_max_delay INT(11) NOT NULL default '129600',
-  respawn_time BIGINT NOT NULL default 0,
-  currentHp decimal(8,0) default NULL,
-  currentMp decimal(8,0) default NULL,
-  PRIMARY KEY  (boss_id,loc_x,loc_y,loc_z)
+CREATE TABLE `raidboss_spawnlist` (
+  `boss_id` INT NOT NULL default 0,
+  `amount` INT NOT NULL default 0,
+  `loc_x` INT NOT NULL default 0,
+  `loc_y` INT NOT NULL default 0,
+  `loc_z` INT NOT NULL default 0,
+  `heading` INT NOT NULL default 0,
+  `respawn_min_delay` INT(11) NOT NULL default '43200',
+  `respawn_max_delay` INT(11) NOT NULL default '129600',
+  `respawn_time` BIGINT NOT NULL default 0,
+  `currentHp` decimal(8,0) default NULL,
+  `currentMp` decimal(8,0) default NULL,
+  PRIMARY KEY (`boss_id`,`loc_x`,`loc_y`,`loc_z`)
 );
 
 INSERT INTO `raidboss_spawnlist` VALUES

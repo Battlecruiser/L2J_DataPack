@@ -36,7 +36,7 @@ CREATE TABLE `char_templates` (
   `F_UNK2` decimal(8,6) NOT NULL default '0.000000',
   `F_COL_R` decimal(3,1) NOT NULL default '0.0',
   `F_COL_H` decimal(4,1) NOT NULL default '0.0',
-  PRIMARY KEY  (`ClassId`)
+  PRIMARY KEY (`ClassId`)
 );
 
 -- 

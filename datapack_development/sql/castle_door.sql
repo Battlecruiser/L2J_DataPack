@@ -1,25 +1,25 @@
 -- ---------------------------
 -- Table structure for castle_door
 -- ---------------------------
-DROP TABLE IF EXISTS castle_door;
-CREATE TABLE castle_door (
-  castleId INT NOT NULL default 0,
-  id INT NOT NULL default 0,
-  name varchar(30) NOT NULL,
-  x INT NOT NULL default 0,
-  y INT NOT NULL default 0,
-  z INT NOT NULL default 0,
-  range_xmin INT NOT NULL default 0,
-  range_ymin INT NOT NULL default 0,
-  range_zmin INT NOT NULL default 0,
-  range_xmax INT NOT NULL default 0,
-  range_ymax INT NOT NULL default 0,
-  range_zmax INT NOT NULL default 0,
-  hp INT NOT NULL default 0,
-  pDef INT NOT NULL default 0,
-  mDef INT NOT NULL default 0,
-  PRIMARY KEY(id),
-  KEY id (castleId)
+DROP TABLE IF EXISTS `castle_door`;
+CREATE TABLE `castle_door` (
+  `castleId` INT NOT NULL default 0,
+  `id` INT NOT NULL default 0,
+  `name` varchar(30) NOT NULL,
+  `x` INT NOT NULL default 0,
+  `y` INT NOT NULL default 0,
+  `z` INT NOT NULL default 0,
+  `range_xmin` INT NOT NULL default 0,
+  `range_ymin` INT NOT NULL default 0,
+  `range_zmin` INT NOT NULL default 0,
+  `range_xmax` INT NOT NULL default 0,
+  `range_ymax` INT NOT NULL default 0,
+  `range_zmax` INT NOT NULL default 0,
+  `hp` INT NOT NULL default 0,
+  `pDef` INT NOT NULL default 0,
+  `mDef` INT NOT NULL default 0,
+  PRIMARY KEY (`id`),
+  KEY `id` (`castleId`)
 );
 
 INSERT INTO `castle_door` VALUES 

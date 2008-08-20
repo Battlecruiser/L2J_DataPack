@@ -1,16 +1,16 @@
 -- ---------------------------
 -- Table structure for castle
 -- ---------------------------
-CREATE TABLE IF NOT EXISTS castle (
-  id INT NOT NULL default 0,
-  name varchar(25) NOT NULL,
-  taxPercent INT NOT NULL default 15,
-  treasury INT NOT NULL default 0,
-  siegeDate DECIMAL(20,0) NOT NULL default 0,
-  siegeDayOfWeek INT NOT NULL default 7,
-  siegeHourOfDay INT NOT NULL default 20,
-  PRIMARY KEY  (name),
-  KEY id (id)
+CREATE TABLE IF NOT EXISTS `castle` (
+  `id` INT NOT NULL default 0,
+  `name` varchar(25) NOT NULL,
+  `taxPercent` INT NOT NULL default 15,
+  `treasury` INT NOT NULL default 0,
+  `siegeDate` DECIMAL(20,0) NOT NULL default 0,
+  `siegeDayOfWeek` INT NOT NULL default 7,
+  `siegeHourOfDay` INT NOT NULL default 20,
+  PRIMARY KEY (`name`),
+  KEY `id` (`id`)
 );
 
 INSERT IGNORE INTO `castle` VALUES 

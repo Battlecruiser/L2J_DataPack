@@ -26,7 +26,7 @@ CREATE TABLE `pets_stats` (
   `hpregen` int(11) NOT NULL default '0',
   `mpregen` int(11) NOT NULL default '0',
   `owner_exp_taken` DECIMAL(3,2) DEFAULT '0' NOT NULL,
-  PRIMARY KEY  (`typeID`,`level`)
+  PRIMARY KEY (`typeID`,`level`)
 );
 
 #----------------------------
