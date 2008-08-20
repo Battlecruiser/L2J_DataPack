@@ -1,12 +1,12 @@
-DROP TABLE IF EXISTS skill_trees;
-CREATE TABLE skill_trees (
-  class_id int(10) unsigned NOT NULL default '0',
-  skill_id int(10) unsigned NOT NULL default '0',
-  level int(10) unsigned NOT NULL default '0',
-  name varchar(40) NOT NULL default '',
-  sp int(10) unsigned NOT NULL default '0',
-  min_level int(10) unsigned NOT NULL default '0',
-  PRIMARY KEY  (class_id,skill_id,level)
+DROP TABLE IF EXISTS `skill_trees`;
+CREATE TABLE `skill_trees` (
+  `class_id` int(10) unsigned NOT NULL default '0',
+  `skill_id` int(10) unsigned NOT NULL default '0',
+  `level` int(10) unsigned NOT NULL default '0',
+  `name` varchar(40) NOT NULL default '',
+  `sp` int(10) unsigned NOT NULL default '0',
+  `min_level` int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY (`class_id`,`skill_id`,`level`)
 );
 
 -- GLOSSARY FOR CLASS ID'S (Created by Mr_Pleb_Mgoo), Updated by DJ MELERIX

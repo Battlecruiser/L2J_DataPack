@@ -8,5 +8,5 @@ CREATE TABLE IF NOT EXISTS `castle_functions` (
   `lease` int(10) NOT NULL default '0',
   `rate` decimal(20,0) NOT NULL default '0',
   `endTime` decimal(20,0) NOT NULL default '0',
-  PRIMARY KEY  (`castle_id`,`type`)
+  PRIMARY KEY (`castle_id`,`type`)
 );

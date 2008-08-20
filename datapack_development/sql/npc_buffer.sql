@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS `npc_buffer` (
   `skill_fee_id` int(6) NOT NULL default '0',
   `skill_fee_amount` int(6) NOT NULL default '0',
   `buff_group` int(6) NOT NULL default '0',
-  PRIMARY KEY  (`npc_id`,`skill_id`,`buff_group`)
+  PRIMARY KEY (`npc_id`,`skill_id`,`buff_group`)
 );
 
 -- ----------------------------

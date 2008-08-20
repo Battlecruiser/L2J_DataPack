@@ -7,5 +7,5 @@ CREATE TABLE IF NOT EXISTS `character_quests` (
   `var`  VARCHAR(20) NOT NULL DEFAULT '',
   `value` VARCHAR(255) ,
   `class_index` int(1) NOT NULL default '0',
-  PRIMARY KEY  (`charId`,`name`,`var`,`class_index`)
+  PRIMARY KEY (`charId`,`name`,`var`,`class_index`)
 );

@@ -15,7 +15,7 @@ CREATE TABLE `dimensional_rift` (
   `yT` int(11) NOT NULL,
   `zT` int(11) NOT NULL,
   `boss` tinyint(1) NOT NULL default '0',
-  PRIMARY KEY  (`type`,`room_id`)
+  PRIMARY KEY (`type`,`room_id`)
 );
 
 -- ----------------------------

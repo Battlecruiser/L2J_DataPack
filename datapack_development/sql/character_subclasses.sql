@@ -8,5 +8,5 @@ CREATE TABLE IF NOT EXISTS `character_subclasses` (
 	`sp` decimal(11,0) NOT NULL default 0,
 	`level` int(2) NOT NULL default 40,
 	`class_index` int(1) NOT NULL default 0,
-	PRIMARY KEY  (`charId`,`class_id`)
+	PRIMARY KEY (`charId`,`class_id`)
 );

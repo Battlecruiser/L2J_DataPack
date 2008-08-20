@@ -1,7 +1,7 @@
 -- ---------------------------
 -- Table structure for grandboss_data
 -- ---------------------------
-CREATE TABLE IF NOT EXISTS grandboss_data (
+CREATE TABLE IF NOT EXISTS `grandboss_data` (
   `boss_id` INTEGER NOT NULL DEFAULT 0,
   `loc_x` INTEGER NOT NULL DEFAULT 0,
   `loc_y` INTEGER NOT NULL DEFAULT 0,
@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS grandboss_data (
   `currentHP` DECIMAL(8,0) DEFAULT NULL,
   `currentMP` DECIMAL(8,0) DEFAULT NULL,
   `status` TINYINT NOT NULL DEFAULT 0,
-  PRIMARY KEY(`boss_id`)
+  PRIMARY KEY (`boss_id`)
 );
 
 INSERT IGNORE INTO `grandboss_data` VALUES 

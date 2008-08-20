@@ -1,13 +1,13 @@
 --
 -- Table structure for table `merchant_areas_list`
 --
-DROP TABLE IF EXISTS merchant_areas_list;
+DROP TABLE IF EXISTS `merchant_areas_list`;
 CREATE TABLE `merchant_areas_list` (
   `merchant_area_id` int(10) unsigned NOT NULL default '0',
   `merchant_area_name` varchar(25) NOT NULL default '',
   `tax` double(3,2) unsigned NOT NULL default '0.00',
   `Chaotic` int(11) NOT NULL default '0',
-  PRIMARY KEY  (`merchant_area_id`)
+  PRIMARY KEY (`merchant_area_id`)
 );
 
 --

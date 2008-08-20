@@ -3,7 +3,7 @@ CREATE TABLE `auto_chat` (
   `groupId` INT NOT NULL default '0',
   `npcId` INT NOT NULL default '0',
   `chatDelay` BIGINT NOT NULL default '-1',
-  PRIMARY KEY  (`groupId`)
+  PRIMARY KEY (`groupId`)
 );
 
 INSERT INTO `auto_chat` VALUES 

@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS `auto_chat_text`;
 CREATE TABLE `auto_chat_text` (
   `groupId` INT NOT NULL default '0',
   `chatText` VARCHAR(255) NOT NULL default '',
-  PRIMARY KEY  (`groupId`,`chatText`)
+  PRIMARY KEY (`groupId`,`chatText`)
 );
 
 INSERT INTO `auto_chat_text` VALUES 

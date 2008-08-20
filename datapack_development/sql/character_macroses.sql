@@ -9,5 +9,5 @@ CREATE TABLE IF NOT EXISTS `character_macroses` (
   `descr` VARCHAR(80) ,
   `acronym` VARCHAR(4) ,
   `commands` VARCHAR(255) ,
-  PRIMARY KEY  (`charId`,`id`)
+  PRIMARY KEY (`charId`,`id`)
 );

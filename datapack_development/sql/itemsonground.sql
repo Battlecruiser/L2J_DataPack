@@ -11,5 +11,5 @@ CREATE TABLE IF NOT EXISTS `itemsonground` (
   `z` int(11) default NULL,
   `drop_time` decimal(20,0) default NULL,
   `equipable` int(1) default '0',
-  PRIMARY KEY  (`object_id`)
+  PRIMARY KEY (`object_id`)
 );

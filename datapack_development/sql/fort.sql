@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS `fort` (
   `siegeDate` decimal(20,0) NOT NULL default 0,
   `lastOwnedTime` decimal(20,0) NOT NULL default 0,
   `owner` int(11) NOT NULL default 0,
-  PRIMARY KEY  (`id`)
+  PRIMARY KEY (`id`)
 );
 
 -- ----------------------------
