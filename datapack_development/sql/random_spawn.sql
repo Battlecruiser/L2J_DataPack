@@ -15,7 +15,6 @@ CREATE TABLE `random_spawn` (
 );
 
 INSERT INTO `random_spawn` VALUES 
-(1,30556,1,-1,1800000,1800000,'false','true'),
 -- (2,31092,1,-1,60,0,'false','false'),
 -- (3,31092,1,-1,60,0,'false','false'),
 -- (4,31092,1,-1,60,0,'false','false'),
