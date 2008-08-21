@@ -474,6 +474,7 @@
   </for>
 </skill>
 <skill id="4227" levels="1" name="Zaken Regeneration">
+  <!-- Zaken skills -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -482,7 +483,10 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="14400" val="0" stackOrder="1" stackType="hp_regen_up">
-       <add order="0x40" stat="regHp" val="1900"/>
+      <add order="0x40" stat="regHp" val="1900"/> <!-- Retail say: 1900 percent, please check -->
+      <cond>
+        <game time="night"/> <!-- Not checked retail don't have condition, possibly is something with AI -->
+      </cond>
     </effect>
   </for>
 </skill>
