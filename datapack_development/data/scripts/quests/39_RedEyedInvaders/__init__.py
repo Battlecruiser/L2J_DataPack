@@ -83,6 +83,7 @@ class Quest (JQuest) :
        st.giveItems(GREEN_COLORED_LURE_HG,60)
        st.giveItems(BABY_DUCK_RODE,1)
        st.giveItems(FISHING_SHOT_NG,500)
+       st.addExpAndSp(62366,2783)
        st.unset("cond")
        st.playSound("ItemSound.quest_finish")
        st.exitQuest(False)
