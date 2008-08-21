@@ -3837,7 +3837,7 @@ INSERT INTO `etcitem` VALUES
 (5246,'Hair Style Change Potion - E','false','potion',50,'stackable','liquid','none',-1,24000,0,'true','true','true','true','Hair Style Change Potion - E','potion'),
 (5247,'Hair Style Change Potion - F','false','potion',50,'stackable','liquid','none',-1,24000,0,'true','true','true','true','Hair Style Change Potion - F','potion'),
 (5248,'Hair Style Change Potion - G','false','potion',50,'stackable','liquid','none',-1,24000,0,'true','true','true','true','Hair Style Change Potion - G','potion'),
-(5249,'Commemorative Item: First Anniversary of Lineage II Service','false','pet_collar',0,'normal','cloth','none',-1,0,0,'false','false','false','false','event_the_first_anniversary','none'),
+(5249,'Commemorative Item: First Anniversary of Lineage II Service','false','none',0,'normal','cloth','none',-1,0,0,'false','false','false','false','event_the_first_anniversary','none'),
 (5250,'Greater Compressed Package of Soulshots: No-grade','false','shot',600,'normal','steel','none',-1,7700,0,'true','true','true','true','adv_comp_soulshot_none','none'),
 (5251,'Greater Compressed Package of Soulshots: D-grade','false','shot',450,'normal','steel','none',-1,11000,0,'true','true','true','true','adv_comp_soulshot_d','none'),
 (5252,'Greater Compressed Package of Soulshots: C-grade','false','shot',450,'normal','steel','none',-1,16500,0,'true','true','true','true','adv_comp_soulshot_c','none'),

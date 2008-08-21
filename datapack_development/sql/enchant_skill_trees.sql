@@ -4,7 +4,7 @@ CREATE TABLE `enchant_skill_trees` (
   `level` int(10) NOT NULL default '0',
   `name` varchar(25) NOT NULL default '',
   `base_lvl` int(2) NOT NULL default '0',
-  `enchant_type` varchar(25) default NULL,
+  `enchant_type` varchar(26) default NULL,
   `sp` int(10) NOT NULL default '0',
   `exp` int(20) default NULL,
   `min_skill_lvl` int(2) NOT NULL default '0',
