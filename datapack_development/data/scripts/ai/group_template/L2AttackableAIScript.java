@@ -49,6 +49,7 @@ public class L2AttackableAIScript extends QuestJython
 			this.addEventId(id, Quest.QuestEventType.ON_ATTACK);
 			this.addEventId(id, Quest.QuestEventType.ON_KILL);
 			this.addEventId(id, Quest.QuestEventType.ON_SPAWN);
+			this.addEventId(id, Quest.QuestEventType.ON_SPELL_FINISHED);
 			this.addEventId(id, Quest.QuestEventType.ON_SKILL_SEE);
 			this.addEventId(id, Quest.QuestEventType.ON_FACTION_CALL);
 			this.addEventId(id, Quest.QuestEventType.ON_AGGRO_RANGE_ENTER);			
@@ -93,6 +94,11 @@ public class L2AttackableAIScript extends QuestJython
 		return null;
 	}
 	
+	public String onSpellFinished(L2NpcInstance npc, L2PcInstance player, L2Skill skill)
+	{
+		return null;
+	}
+
 	public String onSkillSee (L2NpcInstance npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet) 
     { 
     	if (caster == null) 
