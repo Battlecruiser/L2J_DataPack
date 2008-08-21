@@ -601,17 +601,17 @@
   </for>
 </skill>
 <skill id="5144" levels="1" name="Mirage">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      none
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- Needs to be verified -->
+  <set name="activationChance" val="30"/>
+  <set name="castRange" val="900"/>
+  <set name="chanceType" val="ON_ATTACKED_HIT"/>
+  <set name="effectRange" val="1400"/>
+  <set name="operateType" val="OP_CHANCE"/>
+  <set name="power" val="0.0"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_ONE"/>
   <for>
+    <effect count="1" name="RemoveTarget" time="1" val="0"/>
   </for>
 </skill>
 <skill id="5145" levels="1" name="Day of Doom">

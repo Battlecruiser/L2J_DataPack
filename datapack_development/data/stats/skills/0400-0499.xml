@@ -996,18 +996,21 @@
   </for>
 </skill>
 <skill id="445" levels="1" name="Mirage">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Has a chance to cancel the target of an enemy who attacks you.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Needs to be verified -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="1000"/>
+  <set name="magicLevel" val="79"/>
+  <set name="mpConsume" val="43"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="reuseDelay" val="60000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="triggeredId" val="5144"/>
+  <set name="triggeredLevel" val="1"/>
   <for>
-<!-- needs core support -->
+    <effect count="1" name="BestowSkill" time="60" val="0"/>
   </for>
 </skill>
 <skill id="446" levels="1" name="Dodge">
