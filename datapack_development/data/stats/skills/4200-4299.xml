@@ -484,9 +484,6 @@
   <for>
     <effect count="1" name="Buff" time="14400" val="0" stackOrder="1" stackType="hp_regen_up">
       <add order="0x40" stat="regHp" val="1900"/> <!-- Retail say: 1900 percent, please check -->
-      <cond>
-        <game time="night"/> <!-- Not checked retail don't have condition, possibly is something with AI -->
-      </cond>
     </effect>
   </for>
 </skill>
