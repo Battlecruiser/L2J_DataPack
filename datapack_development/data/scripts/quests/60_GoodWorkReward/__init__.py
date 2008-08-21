@@ -134,7 +134,7 @@ class Quest (JQuest) :
             if not st.getQuestItemsCount(i):
                st.giveItems(i,1)
             else :
-               adena + 1
+               adena = adena + 1
          if adena == 3 :
             return "31092-06.htm"
          if adena > 0 :
