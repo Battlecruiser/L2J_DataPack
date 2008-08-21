@@ -431,7 +431,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="14400" val="0">   <!-- TODO: abnormal change texture O.o -->
+    <effect count="1" name="Buff" time="14400" val="0"/> <!-- TODO: abnormal change texture O.o -->
   </for>
 </skill>
 <skill id="4224" levels="1" name="Face Chance: Day to Night">
@@ -995,7 +995,6 @@
   </for>
 </skill>
 <skill id="4258" levels="1" name="Anti Strider Slow">
-  <!-- Zaken skills -->
   <!-- Done by DJ MELERIX -->
   <!-- Needs Core Support: Only can be used in an user who is riding a strider -->
   <set name="castRange" val="1000"/>
