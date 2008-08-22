@@ -18,7 +18,7 @@ NPCs = [
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
-     self.antharasAI = QuestManager.getInstance().getQuest("Antharas")
+     self.antharasAI = QuestManager.getInstance().getQuest("antharas")
      JQuest.__init__(self,id,name,descr)
  
  def onTalk (self,npc,player):
@@ -32,7 +32,7 @@ class Quest (JQuest) :
                 st = player.getQuestState(qn)
                 if st.getQuestItemsCount(3865) > 0 :
                     st.takeItems(3865,1)
-                    self.antharasAI.zone.allowPlayerEntry(player,30)
+                    GrandBossManager.getInstance().getZone(179700,113800,-7709).allowPlayerEntry(player,30)
                     x = 179700 + Rnd.get(700)
                     y = 113800 + Rnd.get(2100)
                     player.teleToLocation(x,y,-7709)
