@@ -127,7 +127,6 @@ class Quest (JQuest) :
       st.giveItems(57,3000000)
       st.set("onlyone","1")
     elif event in CLASSES.keys():
-      if player.getLevel() >= 40:
          newclass,req_item=CLASSES[event]
          adena = 0
          for i in req_item :
@@ -141,8 +140,6 @@ class Quest (JQuest) :
             st.giveItems(57,adena*1000000)
          htmltext = "31092-05.htm"
          st.set("onlyone","1")
-      else:
-         htmltext = "<html><body>Black Marketeer of Mammon:<br>To change occupation, your level must be over 40. Come back after you finish thinking about it.</body></html>"
     return htmltext
 
  def onTalk (self,npc,player):
