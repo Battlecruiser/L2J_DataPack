@@ -1605,7 +1605,6 @@
   <set name="hitTime" val="2000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <set name="soulMaxConsumeCount" val="5"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.15" stackType="attack_time_down">
       <mul order="0x30" stat="pAtkSpd" val="1.15"/>
@@ -1626,7 +1625,6 @@
   <set name="skillRadius" val="400"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <set name="soulMaxConsumeCount" val="5"/>
   <for>
   </for>
 </skill>
@@ -1643,7 +1641,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
-  <set name="soulMaxConsumeCount" val="5"/>
   <for>
   </for>
 </skill>
@@ -1722,7 +1719,6 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <set name="soulMaxConsumeCount" val="5"/>
   <for>
      <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="18">
         <add order="0x40" stat="reflectSkillPhysic" val="40"/>
@@ -1828,7 +1824,6 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <set name="soulMAxConsumeCount" val="5"/>
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="2">
       <add order="0x40" stat="runSpd" val="20"/>
@@ -1847,7 +1842,6 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <set name="soulMaxConsumeCount" val="5"/>
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="0">
        <!-- require core support
@@ -1869,7 +1863,6 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <set name="soulMaxConsumeCount" val="5"/>
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="0">
        <mul order="0x30" stat="darkVuln" val="#darkVuln"/>
@@ -1889,7 +1882,6 @@
   <set name="reuseDelay" val="300000"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="soulMaxConsumeCount" val="5"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
       <add order="0x40" stat="rCrit" val="#rCrit"/>
@@ -1912,7 +1904,6 @@
   <set name="hitTime" val="1000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <set name="soulMaxConsumeCount" val="5"/>
   <for>
     <effect count="1" name="Buff" time="30" val="0" stackOrder="1" stackType="pDefSpec">
       <add order="0x40" stat="pDef" val="#pDef"/>
@@ -1939,7 +1930,6 @@
   <set name="effectRange" val="800"/>
   <set name="isDebuff" val="true"/>
   <set name="reuseDelay" val="60000"/>
-  <set name="soulMaxConsumeCount" val="5"/>
   <set name="flyType" val="CHARGE"/>
   <set name="flyRadius" val="300"/>
   <for>
@@ -1965,7 +1955,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
-  <set name="soulMaxConsumeCount" val="5"/>
   <for>
    <effect count="1" name="Disarm" time="10" val="0"/>
   </for>
@@ -2028,7 +2017,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
-  <set name="soulMaxConsumeCount" val="5"/>
   <cond>
     <using kind="Crossbow"/>
   </cond>
@@ -2047,7 +2035,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <set name="soulMaxConsumeCount" val="5"/>
   <cond msg="Crossbow required.">
     <using kind="Crossbow"/>
   </cond>
@@ -2097,7 +2084,6 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="reuseDelay" val="36000"/>
-  <set name="soulMaxConsumeCount" val="5"/>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant1 name="power" val="#ench1Power"/>
@@ -2131,7 +2117,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="#castRange"/>
   <set name="effectRange" val="900"/>
-  <set name="soulMaxConsumeCount" val="5"/>
   <set name="flyType" val="CHARGE"/>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -2319,7 +2304,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <set name="soulMaxConsumeCount" val="5"/>
   <for>
     <effect count="1" name="Buff" time="60" val="0">
       <mul stat="rootVuln" val="#vuln" order="0x30"/>

@@ -14,7 +14,6 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <set name="soulMaxConsumeCount" val="5"/>
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="#dmg">
       <mul order="0x30" stat="pAtk" val="#pAtk"/>
@@ -40,7 +39,6 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="reuseDelay" val="6000"/>
-  <set name="soulMaxConsumeCount" val="5"/>
   <for>
     <effect count="1" name="Debuff" time="15" val="0">
       <mul order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
@@ -86,7 +84,6 @@ description(s) :
  <set name="castRange" val="40"/>
  <set name="effectRange" val="56"/>
  <set name="reuseDelay" val="10000"/>
- <set name="soulMaxConsumeCount" val="5"/>
  <for>
  </for>
 </skill>
@@ -321,7 +318,6 @@ description(s) :
   <set name="power" val="500"/>
   <set name="reuseDelay" val="10000"/>
   <set name="skillType" val="AGGDAMAGE"/>
-  <set name="soulMaxConsumeCount" val="5"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
   </for>
@@ -370,7 +366,6 @@ description(s) :
   <set name="triggerSkillId" val="5267"/>
   <set name="triggerSkillLvl" val="#triggerlvl"/>
   <set name="trapNpcId"  val="13037"/>
-  <set name="soulMaxConsumeCount" val="5"/>
 </skill>
 <skill id="515" levels="6" name="Poison Trap">
   <!-- Needs retail value corrections -->
@@ -388,7 +383,6 @@ description(s) :
   <set name="triggerSkillId" val="5268"/>
   <set name="triggerSkillLvl" val="#triggerlvl"/>
   <set name="trapNpcId"  val="13037"/>
-  <set name="soulMaxConsumeCount" val="5"/>
 </skill>
 <skill id="516" levels="6" name="Slow Trap">
   <!-- Needs retail value corrections -->
@@ -406,7 +400,6 @@ description(s) :
   <set name="triggerSkillId" val="5269"/>
   <set name="triggerSkillLvl" val="#triggerlvl"/>
   <set name="trapNpcId"  val="13037"/>
-  <set name="soulMaxConsumeCount" val="5"/>
 </skill>
 <skill id="517" levels="5" name="Flash Trap">
   <!-- Needs retail value corrections -->
@@ -424,7 +417,6 @@ description(s) :
   <set name="triggerSkillId" val="5270"/>
   <set name="triggerSkillLvl" val="#triggerlvl"/>
   <set name="trapNpcId"  val="13037"/>
-  <set name="soulMaxConsumeCount" val="5"/>
 </skill>
 <skill id="518" levels="8" name="Binding Trap">
   <!-- Needs retail value corrections -->
@@ -505,7 +497,6 @@ description(s) :
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="#aggro"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
-  <set name="soulMaxConsumeCount" val="5"/>
   <for>
     <cond>
       <player state="stand"/>
@@ -545,7 +536,6 @@ description(s) :
   <set name="castRange" val="#castRange"/>
   <set name="effectRange" val="#effectRange"/>
   <set name="reuseDelay" val="8000"/>
-  <set name="soulMaxConsumeCount" val="5"/>
   <for>
     <effect count="1" name="Debuff" time="15" val="0">
       <mul order="0x30" stat="bowWpnVuln" val="1.3"/> <!-- Needs to be checked -->
@@ -589,7 +579,6 @@ Description(s):
   <set name="hitTime" val="1500"/> 
   <set name="castRange" val="-1"/> 
   <set name="cancelEffect" val="5447"/> 
-  <set name="soulMaxConsumeCount" val="5"/>
   <for>
   </for>
 </skill>
@@ -603,7 +592,6 @@ Description(s):
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="npcId" val="#npcId" />
-  <set name="soulMaxConsumeCount" val="5"/>
   <for>
   </for>
 </skill>
