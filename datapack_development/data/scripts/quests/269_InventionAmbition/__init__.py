@@ -46,6 +46,7 @@ class Quest (JQuest) :
       if EnergyOres >= 20:
          bonus = 2044
       st.giveItems(57,EnergyOres*50+bonus)
+      st.takeItems(10866,-1)
    else :
       htmltext = "32486-04.htm"
    return htmltext
