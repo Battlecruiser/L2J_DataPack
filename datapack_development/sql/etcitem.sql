@@ -7706,7 +7706,7 @@ INSERT INTO `etcitem` VALUES
 (10863,'Pathfinder Equipment','false','none',100,'normal','paper','none',-1,0,0,'true','true','true','true','CT2Item','none'),
 (10864,'Pathfinder Equipment','false','none',100,'normal','paper','none',-1,0,0,'true','true','true','true','CT2Item','none'),
 (10865,'Pathfinder Equipment','false','none',100,'normal','paper','none',-1,0,0,'true','true','true','true','CT2Item','none'),
-(10866,'Energy Ore','false','none',0,'normal','paper','none',-1,0,0,'true','true','true','true','CT2Item','none'),
+(10866,'Energy Ore','false','quest',0,'stackable','paper','none',-1,0,0,'true','true','true','true','CT2Item','none'),
 (10867,'Bloody Cloth Fragment','false','quest',0,'normal','paper','none',-1,0,0,'true','true','true','true','CT2Item','none'),
 (10868,'Helvetia\'s Antidote','false','quest',0,'normal','paper','none',-1,0,0,'true','true','true','true','CT2Item','none'),
 (10869,'Contaminated Kasha Spider Venom','false','none',0,'normal','paper','none',-1,0,0,'true','true','true','true','CT2Item','none'),
