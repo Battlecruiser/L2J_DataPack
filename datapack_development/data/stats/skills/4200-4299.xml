@@ -319,7 +319,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="coolTime" val="100"/>
   <set name="hitTime" val="2900"/>
-  <set name="skillType" val="NOTDONE"/>    <!-- skill used only to get targets and bradcast animation -->
+  <set name="skillType" val="WEAKNESS"/>    <!-- skill used only to get targets and bradcast animation -->
   <set name="power" val="0.0"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="800"/>
@@ -334,7 +334,7 @@
   <set name="coolTime" val="100"/>
   <set name="hitTime" val="2900"/>
   <set name="skillRadius" val="300"/>
-  <set name="skillType" val="NOTDONE"/>    <!-- skill used only to get targets and bradcast animation -->
+  <set name="skillType" val="WEAKNESS"/>    <!-- skill used only to get targets and bradcast animation -->
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="0.0"/>
   <set name="castRange" val="800"/>
@@ -346,16 +346,17 @@
   <!-- Zaken skills -->
   <set name="magicLvl" val="60"/>
   <set name="lvlDepend" val="1"/>
-  <set name="target" val="TARGET_NONE"/>
+  <set name="target" val="TARGET_AURA"/>
   <set name="element" val="6"/> <!-- Dark -->
   <set name="coolTime" val="2000"/>
   <set name="hitTime" val="2000"/>
   <set name="skillRadius" val="100"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="DRAIN"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="57"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
+  <set name="absorbPart" val="0.8" />
   <for>
   </for>
 </skill>
@@ -412,7 +413,7 @@
   <set name="magicLvl" val="60"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="500"/>
-  <set name="skillType" val="NOTDONE"/>    <!-- skill used only to get targets and bradcast animation -->
+  <set name="skillType" val="WEAKNESS"/>   <!-- skill used only to get targets and bradcast animation -->
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="0.0"/>
   <set name="castRange" val="-1"/>

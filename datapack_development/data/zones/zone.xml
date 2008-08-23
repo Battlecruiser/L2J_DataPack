@@ -900,6 +900,10 @@
 		<stat name='name' val='Lair of Valakas'/>
 		<stat name='InvadeTime' val='1800000'/>
 	</zone>
+	<zone id='12011' type='BossZone' shape='NPoly' minZ='-4815' maxZ='-315'>
+		<stat name='name' val='Lair of Zaken'/>
+		<stat name='EnabledByDefault' val='false'/>
+	</zone>
 	<zone id='12012' type='BossZone' shape='NPoly' minZ='-5947' maxZ='-5547'>
 		<stat name='name' val='Lair of Ant Queen'/>
 		<stat name='EnabledByDefault' val='false'/>
@@ -916,10 +920,6 @@
 	<zone id='12010' type='BossZone' shape='Cuboid' minZ='-5600' maxZ='-3895'>
 		<stat name='name' val='Lair of Anakim'/>
 		<stat name='InvadeTime' val='60000'/>
-	</zone>
-	<zone id='12011' type='BossZone' shape='Cuboid' minZ='-3775' maxZ='-2690'>
-		<stat name='name' val='Lair of Zaken'/>
-		<stat name='InvadeTime' val='1800000'/>
 	</zone>
 	<zone id='12014' type='BossZone' shape='Cuboid' minZ='-10730' maxZ='-10290'>
 		<stat name='name' val='Altar of Sacrifice'/>
