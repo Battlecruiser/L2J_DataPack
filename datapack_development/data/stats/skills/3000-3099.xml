@@ -159,20 +159,27 @@
   </for>
 </skill>
 <skill id="3013" levels="5" name="Special Ability: Health">
-<!--
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Increases MaxHP.
-  2: Increases maximum HP. Inflicts additional damage during PvP.
-  created 2005-05-29 23:34:30
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!--
+  lvl 1: Increases Max HP.
+  lvl 2: Increases Max HP. Allows simultaneous attacks on multiple targets.
+  lvl 3: Increases Max HP. Inflicts additional damage during PvP.
+  lvl 4: Increases Max HP. Allows simultaneous attacks on multiple targets. Inflicts additional damage during PvP.
+  lvl 5: Increases Max HP. Increases damage inflicted during PvP.
+  -->
+  <!-- Done by DJ MELERIX -->
+  <table name="#atkCountMax"> 0 4 0 4 0 </table>
+  <table name="#pvpBonus"> 1.00 1.00 1.05 1.05 1.05 </table>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
   <for>
+    <mul order="0x30" stat="maxHp" val="1.25"/>
+    <add order="0x40" stat="atkCountMax" val="#atkCountMax"/>
+    <mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus"/>
+    <mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus"/>
   </for>
 </skill>
 <skill id="3014" levels="3" name="Special Ability: Mana Up">
