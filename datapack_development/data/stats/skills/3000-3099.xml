@@ -168,9 +168,11 @@
   -->
   <!-- Done by DJ MELERIX -->
   <table name="#atkCountMax"> 0 4 0 4 0 </table>
+  <table name="#magicLvl"> 1 1 64 64 64 </table>
   <table name="#pvpBonus"> 1.00 1.00 1.05 1.05 1.05 </table>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="power" val="0.0"/>
   <set name="skillType" val="BUFF"/>
@@ -713,20 +715,25 @@
   </for>
 </skill>
 <skill id="3048" levels="3" name="Special Ability: Conversion">
-<!--
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Increases the maximum MP by a certain success rate and decreases the maximum HP by a certain success rate.
-  2: Reduces maximum HP and increases maximum MP. Increases damage inflicted during PvP.
-  created 2005-05-29 23:34:31
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!--
+  Lvl 1: Decreases Max HP and increases Max MP.
+  Lvl 2: Decreases Max HP and increases Max MP. Increases damage inflicted during PvP.
+  Lvl 3: Decreases Max HP and increases maximum MP. Increases damage inflicted during PvP.
+  -->
+  <!-- Done by DJ MELERIX -->
+  <table name="#pvpBonus"> 1.0 1.05 1.05 </table>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="magicLvl" val="64"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
   <for>
+    <mul order="0x30" stat="maxMp" val="1.60"/>
+    <mul order="0x30" stat="maxHp" val="0.60"/>
+    <mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus"/>
+    <mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus"/>
   </for>
 </skill>
 <skill id="3049" levels="2" name="Special Ability: Increase Critical">
