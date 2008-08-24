@@ -160,13 +160,14 @@
 </skill>
 <skill id="3013" levels="5" name="Special Ability: Health">
   <!--
-  lvl 1: Increases Max HP.
-  lvl 2: Increases Max HP. Allows simultaneous attacks on multiple targets.
-  lvl 3: Increases Max HP. Inflicts additional damage during PvP.
-  lvl 4: Increases Max HP. Allows simultaneous attacks on multiple targets. Inflicts additional damage during PvP.
-  lvl 5: Increases Max HP. Increases damage inflicted during PvP.
+  Lvl 1: Increases Max HP.
+  Lvl 2: Increases Max HP. Allows simultaneous attacks on multiple targets.
+  Lvl 3: Increases Max HP. Inflicts additional damage during PvP.
+  Lvl 4: Increases Max HP. Allows simultaneous attacks on multiple targets. Inflicts additional damage during PvP.
+  Lvl 5: Increases Max HP. Increases damage inflicted during PvP.
   -->
   <!-- Done by DJ MELERIX -->
+  <!-- Guessing Lvl 5 -->
   <table name="#atkCountMax"> 0 4 0 4 0 </table>
   <table name="#magicLvl"> 1 1 64 64 64 </table>
   <table name="#pvpBonus"> 1.00 1.00 1.05 1.05 1.05 </table>
@@ -721,6 +722,7 @@
   Lvl 3: Decreases Max HP and increases maximum MP. Increases damage inflicted during PvP.
   -->
   <!-- Done by DJ MELERIX -->
+  <!-- Guessing Lvl 3 -->
   <table name="#pvpBonus"> 1.0 1.05 1.05 </table>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
