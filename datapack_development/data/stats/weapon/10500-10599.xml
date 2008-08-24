@@ -23,12 +23,6 @@
    <set val='379' order='0x08' stat='pAtkSpd'/> 
    <enchant val='0' order='0x0C' stat='pAtk'/> 
    <enchant val='0' order='0x0C' stat='mAtk'/> 
-   <!-- SA: Conversion --> 
-   <mul val='0.6' order='0x30' stat='maxHp'/> 
-   <mul val='1.6' order='0x30' stat='maxMp'/> 
-   <!-- Enhances damage to target during PvP --> 
-   <mul val='1.05' order='0x30' stat='pvpPhysDmg'/> 
-   <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/> 
   </for> 
 </item> 
 <item id='10529' name="Dynasty Staff - Acumen"> 
@@ -70,7 +64,7 @@
    <set val='379' order='0x08' stat='pAtkSpd'/> 
    <enchant val='0' order='0x0C' stat='pAtk'/> 
    <enchant val='0' order='0x0C' stat='mAtk'/> 
-      <!-- SA: Health --> 
+      <!-- SA: Health -->
    <mul val='1.25' order='0x30' stat='maxHp'/> 
       <!-- Enhances damage to target during PvP --> 
    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/> 
