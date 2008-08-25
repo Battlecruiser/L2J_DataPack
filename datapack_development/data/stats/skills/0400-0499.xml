@@ -269,7 +269,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
-      <mul stat="lethalRate" val="#lethalRate" order="0x40"/> <!-- mul with order 0x40 WTF ???? -->
+      <mul stat="lethalRate" val="#lethalRate" order="0x30"/>
       <mul order="0x30" stat="blowRate" val="1.20"/>
     </effect>
   </for>
@@ -736,21 +736,21 @@
     <add order="0x40" stat="pAtk" val="70">
       <using kind="Dagger"/>
     </add>
-    <mul order="0x40" stat="blowRate" val="1.1"> <!-- Blow land rate +10% from front -->> 
-      <and> 
-        <player front="True"/> 
-      </and> 
-    </mul> 
-    <mul order="0x40" stat="blowRate" val="1.1"> <!-- Blow land rate +10% from side -->> 
-      <and> 
-        <player front="False"/> 
-        <player behind="False"/> 
-      </and> 
-    </mul> 
-    <mul order="0x40" stat="blowRate" val="1.2"> <!-- Blow land rate +20% from back-->> 
-      <and> 
-        <player behind="True"/> 
-      </and> 
+    <mul order="0x30" stat="blowRate" val="1.1"> <!-- Blow land rate +10% from front -->>
+      <and>
+        <player front="True"/>
+      </and>
+    </mul>
+    <mul order="0x30" stat="blowRate" val="1.1"> <!-- Blow land rate +10% from side -->>
+      <and>
+        <player front="False"/>
+        <player behind="False"/>
+      </and>
+    </mul>
+    <mul order="0x30" stat="blowRate" val="1.2"> <!-- Blow land rate +20% from back-->>
+      <and>
+        <player behind="True"/>
+      </and>
     </mul>
  </for>
 </skill>
