@@ -14,17 +14,34 @@
  */
 package ai.individual;
 
+import static net.sf.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_FOLLOW;
+import static net.sf.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
+
+import java.util.Collection;
+
+import javolution.util.FastList;
+import ai.group_template.L2AttackableAIScript;
+
+import net.sf.l2j.gameserver.ThreadPoolManager;
+import net.sf.l2j.gameserver.datatables.SkillTable;
 import net.sf.l2j.gameserver.instancemanager.GrandBossManager;
+import net.sf.l2j.gameserver.model.L2Character;
+import net.sf.l2j.gameserver.model.L2Effect;
+import net.sf.l2j.gameserver.model.L2Object;
+import net.sf.l2j.gameserver.model.L2Skill;
+import net.sf.l2j.gameserver.model.L2Summon;
+import net.sf.l2j.gameserver.model.actor.instance.L2DecoyInstance;
 import net.sf.l2j.gameserver.model.actor.instance.L2GrandBossInstance;
 import net.sf.l2j.gameserver.model.actor.instance.L2NpcInstance;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
+import net.sf.l2j.gameserver.model.quest.QuestTimer;
 import net.sf.l2j.gameserver.model.zone.type.L2BossZone;
 import net.sf.l2j.gameserver.network.serverpackets.Earthquake;
 import net.sf.l2j.gameserver.network.serverpackets.PlaySound;
 import net.sf.l2j.gameserver.network.serverpackets.SocialAction;
 import net.sf.l2j.gameserver.templates.StatsSet;
+import net.sf.l2j.gameserver.util.Util;
 import net.sf.l2j.util.Rnd;
-import ai.group_template.L2AttackableAIScript;
 
 /**
  * Baium AI
@@ -58,7 +75,8 @@ import ai.group_template.L2AttackableAIScript;
  */
 public class Baium extends L2AttackableAIScript
 {
-
+	private L2Character _target;
+	private L2Skill _skill;
 	private static final int STONE_BAIUM = 29025;
 	private static final int ANGELIC_VORTEX = 31862;
 	private static final int LIVE_BAIUM = 29020;
@@ -111,13 +129,27 @@ public class Baium extends L2AttackableAIScript
             int loc_y = info.getInteger("loc_y");
             int loc_z = info.getInteger("loc_z");
             int heading = info.getInteger("heading");
-            int hp = info.getInteger("currentHP");
-            int mp = info.getInteger("currentMP");
+            final int hp = info.getInteger("currentHP");
+            final int mp = info.getInteger("currentMP");
             L2GrandBossInstance baium = (L2GrandBossInstance) addSpawn(LIVE_BAIUM,loc_x,loc_y,loc_z,heading,false,0);
             GrandBossManager.getInstance().addBoss(baium);
-            baium.setCurrentHpMp(hp,mp);
-            baium.broadcastPacket(new SocialAction(baium.getObjectId(),2));
-            startQuestTimer("baium_wakeup",15000, baium, null);
+            final L2NpcInstance _baium = baium;
+            ThreadPoolManager.getInstance().scheduleGeneral(new Runnable() {
+				public void run()
+				{
+					try
+		            {
+						_baium.setCurrentHpMp(hp,mp);
+						_baium.setIsInvul(true);
+		                _baium.setRunning();
+						_baium.broadcastPacket(new SocialAction(_baium.getObjectId(),2));
+			            startQuestTimer("baium_wakeup",15000, _baium, null);
+		            }
+		            catch (Throwable e)
+		            {
+		            }
+				}
+			},(long)100);
         }
         else
             addSpawn(STONE_BAIUM,115213,16623,10080,41740,false,0);
@@ -130,6 +162,10 @@ public class Baium extends L2AttackableAIScript
             GrandBossManager.getInstance().setBossStatus(LIVE_BAIUM,ASLEEP);
             addSpawn(STONE_BAIUM,115213,16623,10080,41740,false,0);
         }
+        else if (event.equalsIgnoreCase("skill_range") && npc != null)
+        {
+        	callSkillAI(npc);
+        }
         else if (event.equalsIgnoreCase("baium_wakeup") && npc != null)
         {
             if (npc.getNpcId() == LIVE_BAIUM)
@@ -139,6 +175,20 @@ public class Baium extends L2AttackableAIScript
                 // start monitoring baium's inactivity
                 _LastAttackVsBaiumTime = System.currentTimeMillis();
                 startQuestTimer("baium_despawn", 60000, npc, null, true);
+                startQuestTimer("skill_range", 11000, npc, null);
+                final L2NpcInstance baium = npc;
+                ThreadPoolManager.getInstance().scheduleGeneral(new Runnable() {
+    				public void run()
+    				{
+    					try
+    		            {
+    						baium.setIsInvul(false);
+    		            }
+    		            catch (Throwable e)
+    		            {
+    		            }
+    				}
+    			},(long)11000);
                 // TODO: the person who woke baium up should be knocked across the room, onto a wall, and
                 // lose massive amounts of HP.
             }
@@ -170,7 +220,7 @@ public class Baium extends L2AttackableAIScript
     public String onTalk(L2NpcInstance npc,L2PcInstance player)
     {
         int npcId = npc.getNpcId();
-        String htmltext = "none";
+        String htmltext = "";
         if (_Zone == null)
             _Zone = GrandBossManager.getInstance().getZone(113100,14500,10077);
         if (npcId == STONE_BAIUM && GrandBossManager.getInstance().getBossStatus(LIVE_BAIUM) == ASLEEP)
@@ -183,8 +233,22 @@ public class Baium extends L2AttackableAIScript
                 npc.deleteMe();
                 L2GrandBossInstance baium = (L2GrandBossInstance) addSpawn(LIVE_BAIUM,npc);
                 GrandBossManager.getInstance().addBoss(baium);
-                baium.broadcastPacket(new SocialAction(baium.getObjectId(),2));
-                startQuestTimer("baium_wakeup",15000, baium, null);
+                final L2NpcInstance _baium = baium;
+                ThreadPoolManager.getInstance().scheduleGeneral(new Runnable() {
+    				public void run()
+    				{
+    					try
+    		            {
+    						_baium.setIsInvul(true);
+    		                _baium.setRunning();
+    						_baium.broadcastPacket(new SocialAction(_baium.getObjectId(),2));
+    						startQuestTimer("baium_wakeup",15000, _baium, null);
+    		            }
+    		            catch (Throwable e)
+    		            {
+    		            }
+    				}
+    			},(long)100);
             }
             else
                 htmltext = "Conditions are not right to wake up Baium";
@@ -215,11 +279,51 @@ public class Baium extends L2AttackableAIScript
         return htmltext;
     }
     
+    public String onSpellFinished(L2NpcInstance npc, L2PcInstance player, L2Skill skill)
+    {
+		if (npc.isInvul())
+		{
+			npc.getAI().setIntention(AI_INTENTION_IDLE);
+			return null;
+		}
+		else if (npc.getNpcId() == LIVE_BAIUM && !npc.isInvul())
+    	{
+    		callSkillAI(npc);
+    	}
+    	return super.onSpellFinished(npc, player, skill);
+    }
     public String onAttack (L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
-    {	
-        // update a variable with the last action against baium
-        _LastAttackVsBaiumTime = System.currentTimeMillis();
-        return super.onAttack(npc, attacker, damage, isPet);
+    {
+		if (npc.isInvul())
+		{
+			npc.getAI().setIntention(AI_INTENTION_IDLE);
+			return null;
+		}
+		else if (npc.getNpcId() == LIVE_BAIUM && !npc.isInvul())
+    	{
+    		if (attacker.getMountType() == 1)
+        	{
+    			int sk_4258 = 0;
+    			L2Effect[] effects = attacker.getAllEffects();
+    			if (effects.length != 0 || effects != null)
+    			{
+    				for (L2Effect e : effects)
+    				{
+    					if (e.getSkill().getId() == 4258)
+    						sk_4258 = 1;
+    				}
+    	        }
+    			if (sk_4258 == 0)
+    			{
+    				npc.setTarget(attacker);
+    				npc.doCast(SkillTable.getInstance().getInfo(4258,1));
+    			}
+        	}
+    		// update a variable with the last action against baium
+    		_LastAttackVsBaiumTime = System.currentTimeMillis();
+    		callSkillAI(npc);
+    	}
+        return null;
     }
     
     public String onKill (L2NpcInstance npc, L2PcInstance killer, boolean isPet) 
@@ -239,9 +343,184 @@ public class Baium extends L2AttackableAIScript
         return super.onKill(npc,killer,isPet);
     }
 
-    public static void main(String[] args)
-    {
-    	// Quest class and state definition
-    	new Baium(-1, "baium", "ai");
-    }
+	public L2Character getRandomTarget(L2NpcInstance npc)
+	{
+		FastList<L2Character> result = new FastList<L2Character>();
+		Collection<L2Object> objs = npc.getKnownList().getKnownObjects().values();
+		{
+			for (L2Object obj : objs)
+			{
+				if (obj instanceof L2PcInstance)
+				{
+					if (Util.checkIfInRange(9000, npc, obj, true) && !((L2Character) obj).isDead() && !((L2Character) obj).isAlikeDead())
+						result.add((L2PcInstance) obj);
+				}
+				if (obj instanceof L2Summon)
+				{
+					if (Util.checkIfInRange(9000, npc, obj, true) && !((L2Character) obj).isDead() && !((L2Character) obj).isAlikeDead())
+						result.add((L2Summon) obj);
+				}
+				if (obj instanceof L2DecoyInstance)
+				{
+					if (Util.checkIfInRange(9000, npc, obj, true) && !((L2Character) obj).isDead() && !((L2Character) obj).isAlikeDead())
+						result.add((L2DecoyInstance) obj);
+				}
+			}
+		}
+		if (!result.isEmpty() && result.size() != 0)
+		{
+			Object[] characters = result.toArray();
+			return (L2Character) characters[Rnd.get(characters.length)];
+		}
+		return null;
+	}
+
+	public synchronized void callSkillAI(L2NpcInstance npc)
+	{
+		if (npc.isInvul())
+			return;
+		QuestTimer timer = getQuestTimer("skill_range", npc, null);
+
+		if (npc == null)
+		{
+			if (timer != null)
+				timer.cancel();
+			return;
+		}
+
+		if (_target == null || _target.isDead() || _target.isAlikeDead() || timer == null)
+		{
+			_target = getRandomTarget(npc);
+			_skill = getRandomSkill(npc);
+			if (timer == null)
+			{
+				startQuestTimer("skill_range", 500, npc, null, true);
+				return;
+			}
+		}
+
+		L2Character target = _target;
+		L2Skill skill = _skill;
+		if (target == null || target.isDead() || target.isAlikeDead())
+		{
+			if (timer == null)
+				startQuestTimer("skill_range", 500, npc, null, true);
+			return;
+		}
+
+		if (Util.checkIfInRange(skill.getCastRange(), npc, target, true))
+		{
+			if (timer != null)
+				timer.cancel();
+			npc.getAI().setIntention(AI_INTENTION_IDLE);
+			npc.setTarget(target);
+			npc.doCast(skill);
+		}
+		else
+		{
+			if (timer == null)
+				startQuestTimer("skill_range", 500, npc, null, true);
+			npc.getAI().setIntention(AI_INTENTION_FOLLOW, target, null);
+		}
+	}
+
+	public L2Skill getRandomSkill(L2NpcInstance npc)
+	{
+		L2Skill skill;
+		if( npc.getCurrentHp() > ( ( npc.getMaxHp() * 3 ) / 4 ) )
+		{
+			if( Rnd.get(100) < 10 )
+			{
+				skill = SkillTable.getInstance().getInfo(4128,1);
+			}
+			else if( Rnd.get(100) < 10 )
+			{
+				skill = SkillTable.getInstance().getInfo(4129,1);
+			}
+			else
+			{
+				skill = SkillTable.getInstance().getInfo(4127,1);
+			}
+		}
+		else if( npc.getCurrentHp() > ( ( npc.getMaxHp() * 2 ) / 4) )
+		{
+			if( Rnd.get(100) < 10 )
+			{
+				skill = SkillTable.getInstance().getInfo(4131,1);
+			}
+			else if( Rnd.get(100) < 10 )
+			{
+				skill = SkillTable.getInstance().getInfo(4128,1);
+			}
+			else if( Rnd.get(100) < 10 )
+			{
+				skill = SkillTable.getInstance().getInfo(4129,1);
+			}
+			else
+			{
+				skill = SkillTable.getInstance().getInfo(4127,1);
+			}
+		}
+		else if( npc.getCurrentHp() > ( ( npc.getMaxHp() * 1 ) / 4 ) )
+		{
+			if( Rnd.get(100) < 10 )
+			{
+				skill = SkillTable.getInstance().getInfo(4130,1);
+			}
+			else if( Rnd.get(100) < 10 )
+			{
+				skill = SkillTable.getInstance().getInfo(4131,1);
+			}
+			else if( Rnd.get(100) < 10 )
+			{
+				skill = SkillTable.getInstance().getInfo(4128,1);
+			}
+			else if( Rnd.get(100) < 10 )
+			{
+				skill = SkillTable.getInstance().getInfo(4129,1);
+			}
+			else
+			{
+				skill = SkillTable.getInstance().getInfo(4127,1);
+			}
+		}
+		else if( Rnd.get(100) < 10 )
+		{
+			skill = SkillTable.getInstance().getInfo(4130,1);
+		}
+		else if( Rnd.get(100) < 10 )
+		{
+			skill = SkillTable.getInstance().getInfo(4131,1);
+		}
+		else if( Rnd.get(100) < 10 )
+		{
+			skill = SkillTable.getInstance().getInfo(4128,1);
+		}
+		else if( Rnd.get(100) < 10 )
+		{
+			skill = SkillTable.getInstance().getInfo(4129,1);
+		}
+		else
+		{
+			skill = SkillTable.getInstance().getInfo(4127,1);
+		}
+		return skill;
+	}
+
+	public String onSkillSee (L2NpcInstance npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
+	{
+		if (npc.isInvul())
+		{
+			npc.getAI().setIntention(AI_INTENTION_IDLE);
+			return null;
+		}
+		npc.setTarget(caster);
+		return super.onSkillSee(npc, caster, skill, targets, isPet);
+	}
+
+	public static void main(String[] args)
+	{
+		// Quest class and state definition
+		new Baium(-1, "baium", "ai");
+	}
 }
