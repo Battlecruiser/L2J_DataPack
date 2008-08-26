@@ -249,10 +249,6 @@ description(s) :
   </for>
 </skill>
 <skill id="509" levels="34" name="Bleeding Shot" enchantLevels1="30" enchantLevels2="30" >
-<!--
-  Description(s):
-      Shoots a sharp bolt that causes the enemy to bleed. Consumes 2 Souls. An equipped crossbow is required to use this skill. Over-hit is possible. Power 530-2192.
--->
   <table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
   <table name="#ench1Power">2325 2341 2357 2373 2389 2405 2420 2436 2452 2468 2484 2500 2515 2531 2547 2563 2579 2595 2610 2626 2642 2658 2674 2690 2705 2721 2737 2753 2769 2784</table>
   <table name="#ench2MpConsume">107 105 103 102 100 98 96 94 92 91 89 87 85 83 82 80 78 76 74 72 71 69 67 65 63 62 60 58 56 54</table>
@@ -260,6 +256,8 @@ description(s) :
   <table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76</table>
   <table name="#mpConsume"> 56 58 59 61 63 65 66 68 70 72 72 74 76 78 80 81 83 85 87 88 89 91 92 94 96 97 99 100 102 103 105 106 108 109</table>
   <set name="weaponsAllowed" val="65536"/>
+  <set name="itemConsumeId" val="10113"/>
+  <set name="itemConsumeCount" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="SSBoost" val="2.0"/>
