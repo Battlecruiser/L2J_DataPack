@@ -84,6 +84,8 @@
   <set name="castRange" val="-2"/>
   <set name="effectRange" val="-2"/>
   <set name="isMagic" val="true"/>
+  <set name="targetConsumeId" val="8615"/>
+  <set name="targetConsumeCount" val="1"/>
   <for>
   </for>
 </skill>
@@ -716,7 +718,7 @@
   <set name="mpConsume" val="284"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="0.0"/>
-  <set name="skillType" val="SUMMON_FRIEND"/> <!-- Only for pre-implementation, the skill don't consume crystal of the summoned player, needs core support -->
+  <set name="skillType" val="SUMMON_FRIEND"/>
   <set name="target" val="TARGET_PARTY_MEMBER"/>
   <for>
   </for>
