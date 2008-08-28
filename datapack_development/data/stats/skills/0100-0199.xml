@@ -965,6 +965,7 @@
 </skill>
 <skill id="153" levels="4" name="Shield Mastery">
   <table name="#rShld"> 1.5 1.7 1.85 2.0 </table>
+  <table name="#rPdef"> 0.0 0.0 64.0 64.0 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -972,6 +973,14 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x40" stat="pDef" val="#rPdef">
+      <and>
+        <using kind="Heavy"/>
+        <not>
+          <using kind="Light,Magic"/>
+        </not>
+      </and>
+    </add>
     <mul order="0x30" stat="rShld" val="#rShld">
       <using kind="Shield"/>
     </mul>
