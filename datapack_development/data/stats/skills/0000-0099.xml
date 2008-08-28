@@ -375,17 +375,19 @@
   <set name="weaponsAllowed" val="16"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="power" val="70"/>
+  <set name="power" val="50"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="1200"/>
-  <set name="skillType" val="AGGREDUCE_CHAR"/>
-  <set name="isDebuff" val="true"/>
+  <set name="skillType" val="AGGREMOVE"/>
+  <set name="isDebuff" val="true"/> <!-- Really is a debuff ? -->
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="RemoveTarget" time="1" val="0"/>
+    <effect count="1" name="RemoveTarget" time="1" val="0">
+      <sub order="0x40" stat="aggression" val="100000"/>
+    </effect>
   </for>
 </skill>
 <skill id="12" levels="14" name="Switch">
@@ -394,17 +396,18 @@
   <set name="weaponsAllowed" val="16"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="power" val="70"/>
+  <set name="power" val="80"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="12000"/>
   <set name="hitTime" val="1200"/>
-  <set name="skillType" val="CONFUSE_MOB_ONLY"/>
+  <set name="skillType" val="CONFUSION"/> <!-- Only for Temp Fix: Needs Core Support for Randomize Aggro/Target Effect -->
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isDebuff" val="true"/>
+  <set name="isDebuff" val="true"/> <!-- Really is a debuff ? -->
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-   <effect count="1" name="RemoveTarget" time="1" val="0"/>
+    <effect count="1" name="Confusion" time="1" val="0"/> <!-- Only for Temp Fix: Needs Core Support for Randomize Aggro/Target Effect -->
+    <effect count="1" name="RemoveTarget" time="1" val="0"/>
   </for>
 </skill>
 <skill id="13" levels="1" name="Summon Siege Golem" enchantLevels1="30">
