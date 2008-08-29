@@ -28,11 +28,6 @@
    <set val='379' order='0x08' stat='pAtkSpd'/> 
    <enchant val='0' order='0x0C' stat='pAtk'/> 
    <enchant val='0' order='0x0C' stat='mAtk'/> 
-   <!-- SA: Acumen Not shure about this. Uncomment if i'm right --> 
-   <mul val='1.15' order='0x30' stat='mAtkSpd'/> 
-   <!-- Enhances damage to target during PvP --> 
-   <mul val='1.05' order='0x30' stat='pvpPhysDmg'/> 
-   <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/> 
   </for> 
 </item> 
 <item id='10530' name="Dynasty Crusher - Anger">
@@ -44,7 +39,7 @@
    <enchant val='0' order='0x0C' stat='pAtk'/> 
    <enchant val='0' order='0x0C' stat='mAtk'/> 
    <!-- SA: Anger --> 
-   <add val='78' order='0x40' stat='pAtk'/> 
+   <add val='78' order='0x40' stat='pAtk'/>
     <mul val='0.85' order='0x30' stat='maxHp'/>
    <!-- Enhances damage to target during PvP --> 
    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/> 
