@@ -36,7 +36,7 @@
   <set name="castRange" val="750"/>
   <set name="effectRange" val="1250"/>
   <for>
-    <effect count="1" name="Sleep" time="30" val="0"/>
+    <effect count="1" name="Sleep" time="30" val="0" stackOrder="1" stackType="sleep"/>
   </for>
 </skill>
 <skill id="4202" levels="12" name="Hold">

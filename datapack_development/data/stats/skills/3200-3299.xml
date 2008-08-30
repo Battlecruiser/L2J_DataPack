@@ -646,7 +646,7 @@
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
   <for>
-    <effect count="1" name="Sleep" time="5" val="0"/>
+    <effect count="1" name="Sleep" time="5" val="0" stackOrder="1" stackType="sleep"/>
   </for>
 </skill>
 <skill id="3231" levels="10" name="Item Skill: Paralyze">

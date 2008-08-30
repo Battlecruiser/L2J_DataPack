@@ -231,6 +231,7 @@
   <set name="castRange" val="500"/>
   <set name="effectRange" val="900"/>
   <for>
+    <sub order="0x40" stat="aggression" val="100000"/>
   </for>
 </skill>
 <skill id="107" levels="9" name="Holy Aura" enchantLevels1="30" enchantLevels2="30">
