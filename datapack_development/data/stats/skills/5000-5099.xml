@@ -73,230 +73,215 @@
   </for>
 </skill>
 <skill id="5005" levels="1" name="Frintezza's Ghost Summoning">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Frintezza is in temporary state of paralysis.
--->
+  <!--
+  Lvl 1: Frintezza is in temporary state of paralysis.
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="900"/>
+  <set name="effectRange" val="1400"/>
+  <set name="isMagic" val="true"/>
   <for>
   </for>
 </skill>
 <skill id="5006" levels="1" name="Frintezza's Melody">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      A general performance.
--->
+  <!--
+  Lvl 1: A general performance
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="34000"/>
+  <set name="reuseDelay" val="34000"/>
   <for>
   </for>
 </skill>
 <skill id="5007" levels="5" name="Frintezza's Songs">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1 - Frintezza's Healing Rhapsody      Music to soothe the soul.
-      Lvl 2 - Frintezza's Rampaging Opus        A Consecutive Dash + Portrait Replay Performance
-      Lvl 3 - Frintezza's Power Concerto        A powerful tune affecting Attack/Speed.
-      Lvl 4 - Frintezza's Plagued Concerto      A triumphant ballad of Heal Suppressing.
-      Lvl 5 - Frintezza's Psycho Symphony       Two Can Dance + Cancel Performance.
--->
+  <!--
+  Lvl 1: Frintezza's Healing Rhapsody (Music to soothe the soul).
+  Lvl 2: Frintezza's Rampaging Opus (A Consecutive Dash + Portrait Replay Performance).
+  Lvl 3: Frintezza's Power Concerto (A powerful tune affecting Attack/Speed).
+  Lvl 4: Frintezza's Plagued Concerto (A triumphant ballad of Heal Suppressing).
+  Lvl 5: Frintezza's Psycho Symphony (Two Can Dance + Cancel Performance).
+  -->
+  <table name="#hitTime"> 32000 32000 32000 31000 35000 </table>
+  <table name="#reuseDelay"> 32000 32000 32000 31000 35000 </table>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="#hitTime"/>
+  <set name="reuseDelay" val="#reuseDelay"/>
   <for>
   </for>
 </skill>
 <skill id="5008" levels="5" name="Frintezza's Songs">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1 - Frintezza's Concert Hall Melody        Music that makes you feel oh so good inside.
-      Lvl 2 - Frintezza's Rampaging Opus en masse    Consecutive Dash + Portrait Replay Performance
-      Lvl 3 - Frintezza Power Encore                 Attack/Speed Performance
-      Lvl 4 - Mournful Chorale Prelude               Instantly decreases the effect of HP regeneration magic.
-      Lvl 5 - Hypnotic Mazurka                       Instantly Immobilizes the target by making it dance involuntarily.
--->
+  <!--
+  Lvl 1: Frintezza's Concert Hall Melody (Music that makes you feel oh so good inside).
+  Lvl 2: Frintezza's Rampaging Opus en masse (Consecutive Dash + Portrait Replay Performance).
+  Lvl 3: Frintezza Power Encore (Attack/Speed Performance).
+  Lvl 4: Mournful Chorale Prelude (Instantly decreases the effect of HP regeneration magic).
+  Lvl 5: Hypnotic Mazurka (Instantly immobilizes the target by making it dance involuntarily).
+  -->
+  <table name="#isMagic"> true false false true true </table>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="#isMagic"/>
   <for>
   </for>
 </skill>
 <skill id="5009" levels="1" name="Frintezza's Ghostly Fighter">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      A portrait ghost that can make physical attacks.
--->
+  <!--
+  Lvl 1: A portrait ghost that can make physical attacks.
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="150"/>
+  <set name="hitTime" val="2500"/>
   <for>
   </for>
 </skill>
 <skill id="5010" levels="1" name="Frintezza's Ghostly Mage">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      A portrait ghost that can make magical attacks.
--->
+  <!--
+  Lvl 1: A portrait ghost that can make magical attacks.
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="500"/>
+  <set name="effectRange" val="1000"/>
+  <set name="hitTime" val="2500"/>
+  <set name="isMagic" val="true"/>
   <for>
   </for>
 </skill>
 <skill id="5011" levels="1" name="Frintezza's Bomber Ghost">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      A portrait ghost who can create a suicide explosion.
--->
+  <!--
+  Lvl 1: A portrait ghost who can create a suicide explosion.
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="1000"/>
   <for>
   </for>
 </skill>
 <skill id="5012" levels="1" name="Breath of Scarlet">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Instantly Immobilizes.
--->
+  <!--
+  Lvl 1: Instantly immobilizes.
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
+  <set name="hitTime" val="1500"/>
   <for>
   </for>
 </skill>
 <skill id="5013" levels="1" name="Frintezza Ghost Drain">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Portrait ghost drains HP.
--->
+  <!--
+  Lvl 1: Portrait ghost drains HP.
+  -->
   <set name="element" val="6"/> <!-- Dark -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
+  <set name="isMagic" val="true"/>
   <for>
   </for>
 </skill>
 <skill id="5014" levels="3" name="Frintezza's Daemon Attack">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1 - Demon 1 general attack.
-      Lvl 2 - Demon 2 general attack.
-      Lvl 3 - Demon 3 general attack.
--->
+  <!--
+  Lvl 1: Demon 1 general attack.
+  Lvl 2: Demon 2 general attack.
+  Lvl 3: Demon 3 general attack.
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="150"/>
+  <set name="hitTime" val="1300"/>
   <for>
   </for>
 </skill>
 <skill id="5015" levels="6" name="Frintezza's Daemon Charge">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1 - Demon 1 charge.
-      Lvl 2 - Demon 2 charge.
-      Lvl 3 - Demon 3 charge.
-      Lvl 4 - Demon 1 slow charge.
-      Lvl 5 - Demon 2 slow charge.
-      Lvl 6 - Demon 3 slow charge.
--->
+  <!--
+  Lvl 1: Demon 1 charge.
+  Lvl 2: Demon 2 charge.
+  Lvl 3: Demon 3 charge.
+  Lvl 4: Demon 1 slow charge.
+  Lvl 5: Demon 2 slow charge.
+  Lvl 6: Demon 3 slow charge.
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="150"/>
+  <set name="hitTime" val="1500"/>
   <for>
   </for>
 </skill>
 <skill id="5016" levels="1" name="Yoke of Scarlet">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Instantly Immobilizes.
--->
+  <!--
+  Lvl 1: Instantly Immobilizes.
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="500"/>
+  <set name="effectRange" val="1000"/>
+  <set name="hitTime" val="3000"/>
   <for>
   </for>
 </skill>
 <skill id="5017" levels="1" name="Frintezza's Daemon Morph">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Demon 1 metamorphosis.
--->
+  <!--
+  Lvl 1: Demon 1 metamorphosis.
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1000"/>
   <for>
   </for>
 </skill>
 <skill id="5018" levels="2" name="Frintezza's Daemon Field">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1 - Demon 2 magic field.
-      Lvl 2 - Demon 3 magic field.
--->
+  <!--
+  Lvl 1: Demon 2 magic field.
+  Lvl 2: Demon 3 magic field.
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="7000"/>
   <for>
   </for>
 </skill>
 <skill id="5019" levels="1" name="Frintezza's Daemon Drain">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Demon 3 HP drain range.
--->
+  <!--
+  Lvl 1: Demon 3 HP drain range.
+  -->
   <set name="element" val="6"/> <!-- Dark -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="6000"/>
   <for>
   </for>
 </skill>
