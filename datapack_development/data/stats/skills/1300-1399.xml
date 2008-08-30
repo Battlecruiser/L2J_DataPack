@@ -2173,7 +2173,7 @@
   <enchant1 name="mpConsume" val="#ench1MpConsume"/>
   <enchant2 name="power" val="#ench2Power"/>
   <for>
-    <effect count="1" name="Sleep" time="15" val="0"/>
+    <effect count="1" name="Sleep" time="15" val="0" stackOrder="1" stackType="sleep"/>
   </for>
 </skill>
 <skill id="1395" levels="10" name="Erase">

@@ -17,7 +17,7 @@
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
   <for>
-    <effect count="1" name="Sleep" time="5" val="0"/>
+    <effect count="1" name="Sleep" time="5" val="0" stackOrder="1" stackType="sleep"/>
   </for>
 </skill>
 <skill id="3101" levels="10" name="Item Skill: Paralyze">
@@ -378,7 +378,7 @@
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
   <for>
-    <effect count="1" name="Sleep" time="5" val="0"/>
+    <effect count="1" name="Sleep" time="5" val="0" stackOrder="1" stackType="sleep"/>
   </for>
 </skill>
 <skill id="3116" levels="10" name="Item Skill: Paralyze">
@@ -2372,7 +2372,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="2"/>
   <for>
-    <effect count="1" name="Sleep" time="30" val="0"/>
+    <effect count="1" name="Sleep" time="30" val="0" stackOrder="1" stackType="sleep"/>
   </for>
 </skill>
 <skill id="3192" levels="10" name="Item Skill: Paralyze">

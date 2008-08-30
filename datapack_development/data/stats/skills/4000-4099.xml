@@ -803,7 +803,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="1" name="Sleep" time="30" val="0"/>
+    <effect count="1" name="Sleep" time="30" val="0" stackOrder="1" stackType="sleep"/>
   </for>
 </skill>
 <skill id="4047" levels="12" name="Hold">
