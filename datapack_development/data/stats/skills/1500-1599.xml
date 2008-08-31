@@ -158,11 +158,24 @@
   </cond>
 </skill>
 <skill id="1514" levels="1" name="Soul Barrier">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!--  Needs to be verified -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="1500"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="58"/>
+  <set name="mpConsume" val="7"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="reuseDelay" val="60000"/> <!-- Guessing -->
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
   <for>
+    <effect count="1" name="Buff" time="15" val="0">
+      <mul order="0x30" stat="bowWpnVuln" val="0.60"/>
+      <mul order="0x30" stat="crossbowWpnVuln" val="0.60"/>
+      <mul order="0x30" stat="mDef" val="1.30"/>
+    </effect>
   </for>
 </skill>
 <skill id="1515" levels="1" name="Lightning Barrier">
