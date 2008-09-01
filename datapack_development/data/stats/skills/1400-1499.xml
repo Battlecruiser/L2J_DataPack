@@ -264,6 +264,7 @@
   <set name="reuseDelay" val="3600000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
+  <set name="staticReuse" val="true"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
@@ -451,6 +452,7 @@
   <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="2600000"/>
   <set name="skillType" val="BUFF"/>
+  <set name="staticReuse" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/> 
   <set name="isMagic" val="true"/>
@@ -469,6 +471,7 @@
   <set name="reuseDelay" val="300000"/>
   <set name="castRange" val="900"/>
   <set name="skillRadius" val="180"/>
+  <set name="staticReuse" val="true"/>
   <set name="magicLvl" val="80"/>
   <set name="effectNpcId" val="13025"/>
   <set name="offensive" val="True"/>
@@ -498,6 +501,7 @@
   <set name="reuseDelay" val="300000"/>
   <set name="castRange" val="900"/>
   <set name="skillRadius" val="180"/>
+  <set name="staticReuse" val="true"/>
   <set name="magicLvl" val="80"/>
   <set name="offensive" val="True"/>
   <set name="element" val="1"/>
@@ -527,6 +531,7 @@
   <set name="reuseDelay" val="300000"/>
   <set name="castRange" val="900"/>
   <set name="skillRadius" val="180"/>
+  <set name="staticReuse" val="true"/>
   <set name="magicLvl" val="80"/>
   <set name="effectNpcId" val="13025"/>
   <set name="offensive" val="True"/>
@@ -554,6 +559,7 @@
 -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
+  <set name="staticReuse" val="true"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
@@ -570,6 +576,7 @@
   <set name="reuseDelay" val="300000"/>
   <set name="castRange" val="900"/>
   <set name="skillRadius" val="180"/>
+  <set name="staticReuse" val="true"/>
   <set name="magicLvl" val="80"/>
   <set name="effectNpcId" val="13025"/>
   <set name="offensive" val="True"/>
@@ -599,6 +606,7 @@
   <set name="reuseDelay" val="300000"/>
   <set name="castRange" val="900"/>
   <set name="skillRadius" val="180"/>
+  <set name="staticReuse" val="true"/>
   <set name="magicLvl" val="80"/>
   <set name="effectNpcId" val="13020"/>
   <set name="effectId" val="5134"/>
@@ -625,6 +633,7 @@
 -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
+  <set name="staticReuse" val="true"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
@@ -643,6 +652,7 @@
   <set name="target" val="TARGET_CLAN"/>
   <set name="skillRadius" val="900"/>
   <set name="skillType" val="HEAL_PERCENT"/>
+  <set name="staticReuse" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="5000"/>
   <set name="reuseDelay" val="3600000"/>
@@ -668,6 +678,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_CLAN"/>
   <set name="skillRadius" val="1000"/>
+  <set name="staticReuse" val="true"/>
   <set name="reuseDelay" val="2700000"/>
   <set name="hitTime" val="5000"/>
   <set name="skillType" val="BUFF"/>
@@ -694,6 +705,7 @@
   <set name="target" val="TARGET_PARTY"/>
   <set name="power" val="1500"/>
   <set name="skillRadius" val="900"/>
+  <set name="staticReuse" val="true"/>
   <set name="skillType" val="MANARECHARGE"/>
   <set name="hitTime" val="5000"/>
   <set name="reuseDelay" val="3600000"/>
@@ -737,6 +749,7 @@
   <set name="hitTime" val="1000"/>
   <set name="reuseDelay" val="1200000"/>
   <set name="skillType" val="BUFF"/>
+  <set name="staticReuse" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="25000"/>
   <set name="castRange" val="-1"/>
