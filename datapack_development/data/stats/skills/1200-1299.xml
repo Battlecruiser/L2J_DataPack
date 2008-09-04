@@ -182,11 +182,10 @@
   <table name="#mpConsume_Init"> 6 8 11 14 18 20 </table>
   <table name="#mpConsume"> 23 32 42 56 69 78 </table>
   <table name="#magicLvl"> 20 30 40 52 62 70 </table>
-  <table name="#power"> 3.0 4.0 5.0 6.0 7.0 8.0 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="power" val="#power"/>
+  <set name="power" val="35"/> <!-- Base Land Rate -->
   <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="200"/>
