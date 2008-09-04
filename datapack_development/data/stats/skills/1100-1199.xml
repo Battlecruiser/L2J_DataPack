@@ -130,7 +130,7 @@
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="20"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="40000"/>
   <set name="hitTime" val="4000"/>
@@ -141,7 +141,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="5" name="Confusion" time="6" val="0"/>
+    <effect count="5" name="Confusion" time="4" val="0"/>
   </for>
 </skill>
 <skill id="1107" levels="2" name="Frost Flame">
@@ -834,7 +834,7 @@
   <table name="#magicLvl"> 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="50.0"/>
+  <set name="power" val="50"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="20000"/>
@@ -964,7 +964,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="5" name="ConfuseMob" time="6" val="0"/>
+    <effect count="5" name="ConfuseMob" time="4" val="0"/>
   </for>
 </skill>
 <skill id="1164" levels="19" name="Curse: Weakness" enchantLevels1="30" enchantLevels2="30" >

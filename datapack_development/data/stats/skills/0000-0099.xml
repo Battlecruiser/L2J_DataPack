@@ -68,7 +68,7 @@
   <set name="isDebuff" val="true"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="5" name="Confusion" time="6" val="0"/>
+    <effect count="5" name="Confusion" time="4" val="0"/>
   </for>
 </skill>
 <skill id="3" levels="9" name="Power Strike">
@@ -379,15 +379,12 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="1200"/>
-  <set name="skillType" val="AGGREMOVE"/>
-  <set name="isDebuff" val="true"/> <!-- Really is a debuff ? -->
+  <set name="skillType" val="AGGREDUCE_CHAR"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="RemoveTarget" time="1" val="0">
-      <sub order="0x40" stat="aggression" val="100000"/>
-    </effect>
+    <effect count="1" name="RemoveTarget" time="1" val="0"/>
   </for>
 </skill>
 <skill id="12" levels="14" name="Switch">
@@ -402,7 +399,6 @@
   <set name="hitTime" val="1200"/>
   <set name="skillType" val="CONFUSION"/> <!-- Only for Temp Fix: Needs Core Support for Randomize Aggro/Target Effect -->
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isDebuff" val="true"/> <!-- Really is a debuff ? -->
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
@@ -1292,7 +1288,7 @@
   </table>
   <set name="magicLvl" val="52"/>
   <set name="mpConsume" val="44"/>
-  <set name="power" val="500.0"/>
+  <set name="power" val="500"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="10000"/>
   <set name="hitTime" val="1500"/>
