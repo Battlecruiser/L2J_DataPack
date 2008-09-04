@@ -225,13 +225,15 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="1200"/>
-  <set name="skillType" val="AGGREMOVE"/>
+  <set name="skillType" val="AGGREDUCE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="500"/>
   <set name="effectRange" val="900"/>
   <for>
-    <sub order="0x40" stat="aggression" val="100000"/>
+    <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="turn_passive">
+      <sub order="0x40" stat="aggression" val="100000"/>
+    </effect>
   </for>
 </skill>
 <skill id="107" levels="9" name="Holy Aura" enchantLevels1="30" enchantLevels2="30">

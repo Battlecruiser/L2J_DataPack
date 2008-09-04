@@ -1172,15 +1172,15 @@
   </for>
 </skill>
 <skill id="4663" levels="1" name="NPC Hate">
-  <table name="#power"> 2000.0 </table>
-  <set name="power" val="#power"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="AGGDAMAGE"/>
+  <set name="skillType" val="AGGDEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="skillRadius" val="1400"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <for>
+    <effect count="1" name="TargetMe" time="1" val="0"/>
   </for>
 </skill>
 <skill id="4664" levels="12" name="NPC 100% HP Drain">

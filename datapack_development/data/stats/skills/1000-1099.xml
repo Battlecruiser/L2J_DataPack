@@ -1227,7 +1227,6 @@
   <table name="#mpConsume_Init"> 11 12 13 14 16 16 17 18 18 19 19 20 20 21 </table>
   <table name="#mpConsume"> 42 47 52 56 61 64 66 69 71 74 76 78 80 82 </table>
   <table name="#magicLvl"> 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
-  <table name="#aggr"> 1.15 1.23 1.27 1.31 1.39 1.47 1.51 1.55 1.63 1.7 1.77 1.8 1.84 1.9 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -1236,14 +1235,14 @@
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="7000"/>
-  <set name="skillType" val="AGGREMOVE"/>
+  <set name="skillType" val="AGGREDUCE"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect name="Buff" time="120" count="1" val="0">
-      <div order="0x30" stat="aggression" val="#aggr"/>
+    <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="turn_passive">
+      <sub order="0x40" stat="aggression" val="100000"/>
     </effect>
   </for>
 </skill>

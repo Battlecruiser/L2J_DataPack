@@ -1291,10 +1291,11 @@
   <set name="power" val="0.0"/>
   <set name="isDebuff" val="true"/>
   <set name="skillRadius" val="200"/>
-  <set name="skillType" val="PARALYZE"/>
+  <set name="skillType" val="AGGDEBUFF"/>
   <set name="target" val="TARGET_AURA"/>
   <for>
     <effect count="1" name="Petrification" time="10" val="0" stackOrder="10" stackType="turn_stone"/>
+    <effect count="1" name="TargetMe" time="1" val="0"/>
   </for>
 </skill>
 <skill id="4384" levels="1" name="Scapegoat's Grace">
