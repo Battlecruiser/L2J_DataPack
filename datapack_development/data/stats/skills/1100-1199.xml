@@ -1015,11 +1015,10 @@
   <table name="#mpConsume"> 27 36 52 61 71 82 </table>
   <table name="#magicLvl"> 25 35 48 56 64 74 </table>
   <table name="#dmg"> 54 72 93 114 132 144 </table>
-  <table name="#power"> 3.0 4.0 5.0 6.0 7.0 8.0 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="power" val="#power"/>
+  <set name="power" val="35"/> <!-- Base Land Rate -->
   <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
@@ -1041,11 +1040,10 @@
   <table name="#mpConsume"> 8 16 21 31 38 46 53 </table>
   <table name="#magicLvl"> 7 20 30 44 52 62 72 </table>
   <table name="#dmg"> 24 54 72 93 114 132 144 </table>
-  <table name="#power"> 1.0 3.0 4.0 5.0 6.0 7.0 8.0 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="power" val="#power"/>
+  <set name="power" val="70"/> <!-- Base Land Rate -->
   <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="12000"/>

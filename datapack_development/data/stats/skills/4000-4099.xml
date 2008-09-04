@@ -570,12 +570,11 @@
 <skill id="4035" levels="12" name="Poison">
   <table name="#dmg"> 36 54 72 93 114 132 144 144 150 150 153 153 </table>
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 83 77 78 </table>
-  <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 8.0 9.0 9.0 10.0 10.0 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="#power"/>
+  <set name="power" val="70"/> <!-- Base Land Rate -->
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="2000"/>
@@ -592,12 +591,11 @@
 <skill id="4036" levels="12" name="Poison">
   <table name="#dmg"> 36 54 72 93 114 132 144 144 150 150 153 153 </table>
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
-  <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 8.0 9.0 9.0 10.0 10.0 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="#power"/>
+  <set name="power" val="35"/> <!-- Base Land Rate -->
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
   <set name="reuseDelay" val="8000"/>
@@ -899,7 +897,7 @@
   <table name="#magicLvl"> 49 55 60 64 68 72 74 76 78 80 81 82 83 84 85</table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
-  <set name="power" val="70"/>
+  <set name="power" val="70"/> <!-- Base Land Rate -->
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="POISON"/>
   <set name="isDebuff" val="true"/>

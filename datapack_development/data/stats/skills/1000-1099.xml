@@ -2056,11 +2056,10 @@
   <table name="#mpConsume"> 8 12 16 28 38 </table>
   <table name="#magicLvl"> 7 14 20 40 52 </table>
   <table name="#dmg"> 24 36 54 93 114 </table>
-  <table name="#power"> 1.0 2.0 3.0 5.0 6.0 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="power" val="#power"/>
+  <set name="power" val="70"/> <!-- Base Land Rate -->
   <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="12000"/>
