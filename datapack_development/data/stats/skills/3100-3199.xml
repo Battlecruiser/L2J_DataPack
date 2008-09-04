@@ -200,7 +200,7 @@
       Lvl 9 - Chance: Increases a target's urge to attack during a critical attack. Power 635.
       Lvl 10 - Chance: Increases a target's urge to attack during a critical attack. Power 659.
 -->
-  <table name="#aggr"> 438.0 467.0 495.0 523.0 549.0 574.0 597.0 617.0 635.0 659.0 </table>
+  <table name="#power"> 438 467 495 523 549 574 597 617 635 659 </table>
   <table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
@@ -209,6 +209,7 @@
   <set name="skillType" val="AGGDAMAGE"/>
   <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_CHANCE"/>
+  <set name="power" val="#power"/>
   <set name="chanceType" val="ON_CRIT"/>
   <set name="activationChance" val="#chance"/>
   <set name="castRange" val="-1"/>
@@ -230,7 +231,7 @@
       Lvl 9 - Chance: Decreases a target's urge to attack during a critical attack. Power 318.
       Lvl 10 - Chance: Decreases a target's urge to attack during a critical attack. Power 330.
 -->
-  <table name="#aggr"> 219.0 234.0 248.0 262.0 275.0 287.0 299.0 309.0 318.0 330.0 </table>
+  <table name="#power"> 219 234 248 262 275 287 299 309 318 330 </table>
   <table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
@@ -239,13 +240,11 @@
   <set name="hitTime" val="1"/>
   <set name="skillType" val="AGGREDUCE"/>
   <set name="operateType" val="OP_CHANCE"/>
+  <set name="power" val="#power"/>
   <set name="chanceType" val="ON_CRIT"/>
   <set name="activationChance" val="#chance"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect name="Buff" time="5" count="1" val="0">
-      <sub order="0x40" stat="aggression" val="#aggr"/>
-    </effect>
   </for>
 </skill>
 <skill id="3110" levels="10" name="Item Skill: Mana Burn">
@@ -1243,12 +1242,12 @@
 -->
   <table name="#mpConsume_Init"> 2 2 2 2 3 3 3 3 3 3 </table>
   <table name="#mpConsume"> 8 8 8 8 9 9 10 10 10 11 </table>
-  <table name="#aggr"> 219 234 248 262 275 287 299 309 318 330 </table>
+  <table name="#power"> 219 234 248 262 275 287 299 309 318 330 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="60000"/>
   <set name="isDebuff" val="true"/>
@@ -1259,9 +1258,6 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect name="Debuff" time="60" count="1" val="0">
-      <sub order="0x40" stat="aggression" val="#aggr"/>
-    </effect>
   </for>
 </skill>
 <skill id="3151" levels="10" name="Item Skill: Peace">

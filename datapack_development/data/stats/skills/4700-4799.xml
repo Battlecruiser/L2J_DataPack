@@ -115,8 +115,10 @@
   <table name="#mpConsume"> 53 62 69 70 72 73 73 73 74 74 75 75 75 </table>
   <table name="#Tab-pDef"> 0.94 0.92 0.90 0.90 0.90 0.90 0.90 0.90 0.90 0.90 0.90 0.90 0.90 </table>
   <table name="#Tab-mDef"> 0.95 0.92 0.90 0.90 0.90 0.90 0.90 0.90 0.90 0.90 0.90 0.90 0.90 </table>
+  <table name="#power"> 40 40 40 41 42 43 44 45 46 47 48 49 50 </table>
+  <table name="#stackOrder"> 1 2 3 3 3 3 3 3 3 3 3 3 3 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="100.0"/>
+  <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="8000"/>
   <set name="element" val="6"/> <!-- Dark -->
@@ -128,18 +130,21 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-     <effect count="1" name="Debuff" time="30" val="0" stackOrder="100" stackType="CurseShade">
-        <mul order="0x30" stat="mDef" val="#Tab-mDef"/>
-        <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
-     </effect>
+    <effect count="1" name="TargetMe" time="1" val="0"/>
+    <effect count="1" name="Debuff" time="30" val="0" stackOrder="#stackOrder" stackType="debuff_nightshade">
+      <mul order="0x30" stat="mDef" val="#Tab-mDef"/>
+      <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
+    </effect>
   </for>
 </skill>
 <skill id="4706" levels="13" name="Mass Curse of Shade">
   <table name="#mpConsume"> 79 93 104 105 107 108 109 109 110 112 112 113 113 </table>
   <table name="#Tab-pDef"> 0.94 0.92 0.90 0.90 0.90 0.90 0.90 0.90 0.90 0.90 0.90 0.90 0.90 </table>
   <table name="#Tab-mDef"> 0.95 0.92 0.90 0.90 0.90 0.90 0.90 0.90 0.90 0.90 0.90 0.90 0.90 </table>
+  <table name="#power"> 40 40 40 41 42 43 44 45 46 47 48 49 50 </table>
+  <table name="#stackOrder"> 1 2 3 3 3 3 3 3 3 3 3 3 3 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="100.0"/>
+  <set name="power" val="#power"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="200"/>
   <set name="reuseDelay" val="8000"/>
@@ -152,10 +157,11 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-     <effect count="1" name="Debuff" time="30" val="0" stackOrder="100" stackType="CurseShade">
-        <mul order="0x30" stat="mDef" val="#Tab-mDef"/>
-        <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
-     </effect>
+    <effect count="1" name="TargetMe" time="1" val="0"/>
+    <effect count="1" name="Debuff" time="30" val="0" stackOrder="#stackOrder" stackType="debuff_nightshade">
+      <mul order="0x30" stat="mDef" val="#Tab-mDef"/>
+      <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
+    </effect>
   </for>
 </skill>
 <skill id="4707" levels="13" name="Shade Sacrifice">
