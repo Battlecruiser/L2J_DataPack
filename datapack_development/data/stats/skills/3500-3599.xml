@@ -1214,13 +1214,13 @@
   <set name="magicLvl" val="80"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="CONFUSION"/>
+  <set name="skillType" val="CONFUSE_MOB_ONLY"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="isDebuff" val="true"/>
   <for>
-    <effect count="5" name="Confusion" time="4" val="0"/>
+    <effect count="5" name="ConfuseMob" time="4" val="0"/>
   </for>
 </skill>
 <skill id="3582" levels="1" name="Special Ability: Infinity Cleaver">

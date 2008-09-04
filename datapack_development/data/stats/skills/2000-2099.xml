@@ -838,15 +838,17 @@
   </for>
 </skill>
 <skill id="2074" levels="1" name="Potion of Critical Escape">
-  <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="CONFUSE_MOB_ONLY"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="800"/>
+  <set name="isPotion" val="true"/>
+  <set name="magicLvl" val="1"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="100"/>
+  <set name="skillType" val="CONFUSION"/> <!-- Only for Temp Fix: Needs Core Support for Randomize Aggro/Target Effect -->
+  <set name="target" val="TARGET_ONE"/>
   <for>
-    <effect count="5" name="Confusion" time="6" val="100">
-      <mul stat="pAtkSpd" order="0x30" val="0.7"/>
+    <effect count="2" name="Confusion" time="4" val="0"> <!-- Only for Temp Fix: Needs Core Support for Randomize Aggro/Target Effect -->
+      <mul stat="pAtkSpd" order="0x30" val="0.70"/>
     </effect>
   </for>
 </skill>
@@ -858,7 +860,7 @@
   <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="70"/>
-  <set name="skillType" val="AGGREMOVE"/>
+  <set name="skillType" val="AGGREDUCE_CHAR"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
   </for>
