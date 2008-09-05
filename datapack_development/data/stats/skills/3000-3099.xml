@@ -40,6 +40,7 @@
   <set name="power" val="5.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BLEED"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
   <set name="castRange" val="-1"/>
@@ -219,6 +220,7 @@
 -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
   <set name="castRange" val="-1"/>
@@ -273,6 +275,7 @@
   <table name="#dmg"> 66 66 81 81 81 93 </table>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="WEAPON_SA"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -287,6 +290,7 @@
   <table name="#dmg"> 66 66 81 81 81 93 </table>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="WEAPON_SA"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -333,6 +337,7 @@
   <table name="#dmg"> 92 92 114 114 114 144 </table>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="WEAPON_SA"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -600,6 +605,7 @@
   <table name="#dmg"> 92 92 114 114 114 144 </table>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="WEAPON_SA"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -614,6 +620,7 @@
   <table name="#dmg"> 92 92 114 114 114 144 </table>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="WEAPON_SA"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -807,6 +814,7 @@
   <table name="#dmg"> 93 93 </table>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="WEAPON_SA"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -830,6 +838,7 @@
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <for>
@@ -849,6 +858,7 @@
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <for>
@@ -859,6 +869,7 @@
   <table name="#dmg"> 93 93 </table>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="WEAPON_SA"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -965,6 +976,7 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="isMagic" val="true"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <for>
@@ -985,6 +997,7 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="isMagic" val="true"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <for>
@@ -1114,6 +1127,7 @@
 <skill id="3070" levels="3" name="Special Ability: Critical Stun">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="WEAPON_SA"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1187,6 +1201,7 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="isMagic" val="true"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="1000"/>
   <for>
@@ -1205,6 +1220,7 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="isMagic" val="true"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="1000"/>
   <for>
@@ -1257,6 +1273,7 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="isMagic" val="true"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="1000"/>
   <for>
@@ -1276,6 +1293,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="WEAPON_SA"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
