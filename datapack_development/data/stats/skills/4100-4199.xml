@@ -44,7 +44,7 @@
   <table name="#mpConsume"> 35 65 </table>
   <table name="#magicLvl"> 20 70 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
+  <set name="lvlDepend" val="2"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -172,6 +172,7 @@
   <set name="coolTime" val="2700"/>
   <set name="isDebuff" val="true"/>
   <set name="hitTime" val="2300"/>
+  <set name="lvlDepend" val="1"/>
   <set name="skillType" val="FEAR"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
@@ -212,7 +213,6 @@
 <skill id="4110" levels="1" name="Breath Attack">
   <!-- Antharas Skills -->
   <set name="magicLvl" val="70"/>
-  <set name="lvlDepend" val="1"/>
   <set name="power" val="250"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="element" val="2"/> <!-- Fire -->
@@ -785,12 +785,11 @@
 <skill id="4145" levels="3" name="Decrease P. Atk.">
   <table name="#Tab-pAtk"> 0.83 0.80 0.77 </table>
   <set name="magicLvl" val="1"/>
-  <set name="mpConsume" val="0"/>
   <set name="power" val="100"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="isDebuff" val="true"/>
-  <set name="hitTime" val="0"/>
   <set name="skillType" val="DEBUFF"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -804,12 +803,11 @@
 <skill id="4146" levels="3" name="Decrease P.Def">
   <table name="#Tab-pDef"> 0.83 0.80 0.77 </table>
   <set name="magicLvl" val="1"/>
-  <set name="mpConsume" val="0"/>
   <set name="power" val="100"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="isDebuff" val="true"/>
-  <set name="hitTime" val="0"/>
   <set name="skillType" val="DEBUFF"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -839,6 +837,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="isDebuff" val="true"/>
   <set name="skillType" val="POISON"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -852,6 +851,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
@@ -862,6 +862,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
@@ -1083,6 +1084,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
@@ -1092,7 +1094,6 @@
   <table name="#mpConsume"> 12 19 26 35 45 55 65 69 72 75 77 78 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>

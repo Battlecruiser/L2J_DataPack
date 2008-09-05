@@ -10,6 +10,7 @@
   <set name="skillType" val="PDAM"/>
   <set name="hitTime" val="1800"/>
   <set name="isDebuff" val="true"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -49,6 +50,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="MDAM"/>
   <set name="hitTime" val="4000"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
@@ -70,6 +72,7 @@
   <set name="skillType" val="MDAM"/>
   <set name="hitTime" val="4000"/>
   <set name="isDebuff" val="true"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
@@ -90,6 +93,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="MDAM"/>
   <set name="hitTime" val="2000"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
@@ -110,6 +114,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="PDAM"/>
   <set name="hitTime" val="1800"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
@@ -126,6 +131,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="PDAM"/>
   <set name="hitTime" val="1800"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
   <set name="castRange" val="40"/>
@@ -294,6 +300,7 @@
   <set name="skillType" val="MDAM"/>
   <set name="isDebuff" val="true"/>
   <set name="hitTime" val="2000"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="500"/>
@@ -369,6 +376,7 @@
   <set name="skillType" val="PDAM"/>
   <set name="isDebuff" val="true"/>
   <set name="hitTime" val="6000"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="400"/>
@@ -434,13 +442,12 @@
 <skill id="4624" levels="12" name="Decrease HP Regeneration Rate">
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpConsume" val="0"/>
   <set name="power" val="100"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
-  <set name="hitTime" val="0"/>
   <set name="skillType" val="DEBUFF"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -457,6 +464,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
   <set name="isDebuff" val="true"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -799,6 +807,7 @@
   <set name="skillType" val="SLEEP"/>
   <set name="isDebuff" val="true"/>
   <set name="hitTime" val="2500"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="500"/>
@@ -843,6 +852,7 @@
   <set name="skillType" val="PDAM"/>
   <set name="hitTime" val="1800"/>
   <set name="isDebuff" val="true"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
@@ -1063,6 +1073,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DRAIN"/>
   <set name="hitTime" val="4000"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="isDebuff" val="true"/>
@@ -1083,6 +1094,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DRAIN"/>
   <set name="hitTime" val="4000"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
@@ -1103,6 +1115,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DRAIN"/>
   <set name="hitTime" val="2000"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
@@ -1123,6 +1136,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DRAIN"/>
   <set name="hitTime" val="4000"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
@@ -1142,6 +1156,7 @@
   <set name="isDebuff" val="true"/>
   <set name="skillType" val="DRAIN"/>
   <set name="hitTime" val="4000"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
@@ -1161,6 +1176,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DRAIN"/>
   <set name="hitTime" val="2000"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
@@ -1300,6 +1316,7 @@
   <set name="skillType" val="PDAM"/>
   <set name="isDebuff" val="true"/>
   <set name="hitTime" val="1800"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
@@ -1498,6 +1515,7 @@
   <set name="skillRadius" val="1200"/>
   <set name="coolTime" val="2000"/>
   <set name="hitTime" val="3000"/>
+  <set name="lvlDepend" val="2"/>
   <set name="skillType" val="MDAM"/>
   <set name="element" val="2"/> <!-- Fire -->
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1516,6 +1534,7 @@
   <set name="isDebuff" val="true"/>
   <set name="coolTime" val="2000"/>
   <set name="hitTime" val="3000"/>
+  <set name="lvlDepend" val="2"/>
   <set name="skillType" val="MDAM"/>
   <set name="element" val="2"/> <!-- Fire -->
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1583,6 +1602,7 @@
   <set name="hitTime" val="3000"/>
   <set name="isDebuff" val="true"/>
   <set name="skillType" val="PDAM"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1603,6 +1623,7 @@
   <set name="skillType" val="FEAR"/>
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1746,6 +1767,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>

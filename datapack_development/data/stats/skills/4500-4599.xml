@@ -1092,6 +1092,7 @@ chances and the success rate of dagger skills. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="hitTime" val="1500"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="500"/>
@@ -1122,6 +1123,7 @@ chances and the success rate of dagger skills. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="hitTime" val="1800"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
@@ -1134,6 +1136,7 @@ chances and the success rate of dagger skills. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="hitTime" val="1800"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
@@ -1146,6 +1149,7 @@ chances and the success rate of dagger skills. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="hitTime" val="1800"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
@@ -1158,6 +1162,7 @@ chances and the success rate of dagger skills. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="hitTime" val="1800"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
@@ -1170,6 +1175,7 @@ chances and the success rate of dagger skills. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="hitTime" val="4000"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="700"/>
   <for>
@@ -1185,6 +1191,7 @@ target cannot move temporarily. Effect 3. -->
   <set name="skillType" val="NOTDONE"/>
   <set name="isDebuff" val="true"/>
   <set name="hitTime" val="1800"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>
@@ -1235,6 +1242,7 @@ target cannot move temporarily. Effect 3. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="hitTime" val="1500"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
@@ -1249,6 +1257,7 @@ Temporarily decreases Accuracy.  Effect 3. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="hitTime" val="1500"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="500"/>
@@ -1299,6 +1308,7 @@ Temporarily decreases Accuracy.  Effect 3. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="hitTime" val="4000"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="500"/>
@@ -1312,6 +1322,7 @@ Temporarily decreases Accuracy.  Effect 3. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="hitTime" val="4000"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="500"/>
@@ -1325,6 +1336,7 @@ Temporarily decreases Accuracy.  Effect 3. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="hitTime" val="2000"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="1000"/>
@@ -1338,6 +1350,7 @@ Temporarily decreases Accuracy.  Effect 3. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="hitTime" val="4000"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
@@ -1351,6 +1364,7 @@ Temporarily decreases Accuracy.  Effect 3. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="hitTime" val="4000"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
@@ -1364,6 +1378,7 @@ Temporarily decreases Accuracy.  Effect 3. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="hitTime" val="2000"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="1000"/>
@@ -1404,6 +1419,7 @@ Temporarily decreases Accuracy.  Effect 3. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="hitTime" val="4000"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
@@ -1417,6 +1433,7 @@ Temporarily decreases Accuracy.  Effect 3. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="hitTime" val="4000"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
@@ -1430,6 +1447,7 @@ Temporarily decreases Accuracy.  Effect 3. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="hitTime" val="2000"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="1000"/>
@@ -1443,6 +1461,7 @@ Temporarily decreases Accuracy.  Effect 3. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="hitTime" val="1800"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <for>

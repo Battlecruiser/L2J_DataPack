@@ -49,6 +49,7 @@
   <set name="skillRadius" val="200"/>
   <set name="reuseDelay" val="10000"/>
   <set name="hitTime" val="1800"/>
+  <set name="lvlDepend" val="1"/>
   <set name="skillType" val="SPOIL"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
@@ -1085,6 +1086,7 @@
   <set name="hitTime" val="1800"/>
   <set name="hpConsume" val="1004"/>
   <set name="isDebuff" val="true"/>
+  <set name="lvlDepend" val="1"/>
   <set name="magicLvl" val="78"/>
   <set name="negatePower" val="2.5"/>
   <set name="negateStats" val="BUFF"/>
@@ -1448,7 +1450,8 @@
   <set name="power" val="40"/> 
   <set name="target" val="TARGET_ONE"/> 
   <set name="skillType" val="AGGREDUCE_CHAR"/>
-  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="lvlDepend" val="1"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/> 
   <set name="isDebuff" val="true"/>
   <set name="effectRange" val="400"/> 
@@ -1649,6 +1652,7 @@
   <set name="target" val="TARGET_AURA"/>
   <set name="skillType" val="PARALYZE"/>
   <set name="isDebuff" val="true"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>

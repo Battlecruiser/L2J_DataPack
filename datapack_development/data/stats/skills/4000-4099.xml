@@ -263,6 +263,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="coolTime" val="500"/>
   <set name="hitTime" val="2200"/>
+  <set name="lvlDepend" val="3"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="500"/>
@@ -284,6 +285,7 @@
   <set name="skillRadius" val="200"/>
   <set name="coolTime" val="500"/>
   <set name="hitTime" val="1700"/>
+  <set name="lvlDepend" val="3"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1182,6 +1184,7 @@
   <set name="power" val="10"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
   <set name="castRange" val="-1"/>
@@ -1498,7 +1501,7 @@
   <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 8.0 9.0 9.0 10.0 10.0 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
+  <set name="lvlDepend" val="2"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
