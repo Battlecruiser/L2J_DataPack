@@ -81,10 +81,12 @@ class Quest (JQuest) :
     elif event == "30473_2" :
           htmltext = "30473-09.htm"
           if st.getQuestItemsCount(GOLDEN_STATUE):
-            st.addExpAndSp(134839,50000)
+            st.addExpAndSp(738283,50662)
           else:
             st.addExpAndSp(118304,26250)
           st.giveItems(MARK_OF_HEALER,1)
+          st.giveItems(ADENA,233490)
+          st.giveItems(7562,60)
           st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
           st.takeItems(GOLDEN_STATUE,1)
           st.set("cond","0")
