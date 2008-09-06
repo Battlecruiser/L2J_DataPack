@@ -697,7 +697,7 @@ Description(s):
 <skill id="531" levels="1" name="Critical Wound">
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
-  <set name="magicLvl" val="79"/> <!-- Guessing -->
+  <set name="magicLvl" val="79"/>
   <set name="mpConsume" val="43"/>
   <set name="hitTime" val="1500"/>
   <set name="isDebuff" val="true"/>
@@ -714,11 +714,26 @@ Description(s):
   </for>
 </skill>
 <skill id="532" levels="1" name="Counter Chance">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Needs to be verified -->
+  <!-- Done by DJ MELERIX -->
+  <set name="activationChance" val="10"/>
   <set name="castRange" val="-1"/>
+  <set name="chanceType" val="ON_ATTACKED"/>
+  <set name="effectRange" val="-1"/>
+  <set name="magicLevel" val="79"/>
+  <set name="operateType" val="OP_CHANCE"/>
+  <set name="power" val="0.0"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
   <for>
+    <effect count="1" name="Buff" time="60" val="0">
+      <mul order="0x30" stat="pReuse" val="0.90"> <!-- Guessing -->
+        <using kind="Bow"/>
+      </mul>
+      <mul order="0x30" stat="MpConsumeRate" val="0.97"> <!-- Guessing -->
+        <using kind="Bow"/>
+      </mul>
+    </effect>
   </for>
 </skill>
 <skill id="533" levels="1" name="Counter Rapid Shot">
@@ -734,7 +749,7 @@ Description(s):
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_PARTY"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0" stackOrder="1.12" stackType="attack_time_down">
+    <effect count="1" name="Buff" time="60" val="0" stackOrder="1.12" stackType="attack_time_down">
       <mul order="0x30" stat="pAtkSpd" val="1.12">
         <using kind="Bow"/>
       </mul>
@@ -762,10 +777,17 @@ Description(s):
   </for>
 </skill>
 <skill id="535" levels="1" name="Counter Mind">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Needs to be verified -->
+  <!-- Done by DJ MELERIX -->
+  <set name="activationChance" val="5"/>
   <set name="castRange" val="-1"/>
+  <set name="chanceType" val="ON_ATTACKED"/>
+  <set name="effectRange" val="-1"/>
+  <set name="magicLevel" val="79"/>
+  <set name="operateType" val="OP_CHANCE"/>
+  <set name="power" val="42"/>
+  <set name="skillType" val="MANAHEAL"/>
+  <set name="target" val="TARGET_SELF"/>
   <for>
   </for>
 </skill>
