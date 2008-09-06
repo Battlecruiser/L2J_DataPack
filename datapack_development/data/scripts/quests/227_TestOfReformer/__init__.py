@@ -115,8 +115,10 @@ class Quest (JQuest) :
         st.giveItems(GREETINGS,3)
    elif npcId == 30666 and st.getInt("cond")==20 and st.getQuestItemsCount(KATARIS_LETTER)>0 and st.getQuestItemsCount(KAKANS_LETTER)>0 and st.getQuestItemsCount(NYAKURIS_LETTER)>0 and st.getQuestItemsCount(RAMUSS_LETTER)>0 :
           st.giveItems(MARK_OF_REFORMER,1)
+          st.giveItems(7562,60)
+          st.giveItems(ADENA,113246)
           st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
-          st.addExpAndSp(164032,17500)
+          st.addExpAndSp(626422,42986)
           htmltext = "30666-07.htm"
           st.set("cond","0")
           st.set("onlyone","1")
