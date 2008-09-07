@@ -126,9 +126,10 @@
 </skill>
 <skill id="4106" levels="1" name="Antharas Stun">
   <!-- Antharas Skills -->
+  <!-- "Antharas Jump" from Front -->
   <set name="magicLvl" val="70"/>
   <set name="power" val="11000"/>
-  <set name="target" val="TARGET_AURA"/>
+  <set name="target" val="TARGET_FRONT_AURA"/>
   <set name="skillRadius" val="1100"/>
   <set name="overHit" val="true"/>
   <set name="coolTime" val="2000"/>
@@ -144,10 +145,11 @@
 </skill>
 <skill id="4107" levels="1" name="Antharas Stun">
   <!-- Antharas Skills -->
+  <!-- "Antharas Tail" from Behind -->
   <set name="magicLvl" val="70"/>
   <set name="lvlDepend" val="1"/>
   <set name="power" val="11000"/>
-  <set name="target" val="TARGET_AURA"/>
+  <set name="target" val="TARGET_BEHIND_AURA"/>
   <set name="skillRadius" val="1500"/>
   <set name="overHit" val="true"/>
   <set name="coolTime" val="3000"/>
@@ -178,7 +180,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="5" name="Fear" time="3" val="0"/>
+    <effect count="5" name="Fear" time="3" val="0" stackOrder="1" stackType="turn_flee"/>
   </for>
 </skill>
 <skill id="4109" levels="1" name="Curse of Antharas">
@@ -196,7 +198,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect name="Debuff" time="120" count="1" val="0">
+    <effect name="Debuff" time="120" count="1" val="0" stackOrder="1" stackType="antaras_debuff">
       <sub order="0x40" stat="accCombat" val="19"/>
       <sub order="0x40" stat="rEvas" val="19"/>
       <div order="0x30" stat="mAtk" val="1.15"/>
@@ -430,7 +432,7 @@
 </skill>
 <skill id="4122" levels="1" name="Antharas">
   <!-- Antharas Skills -->
-  <set name="magicLvl" val="70"/> <!-- Possibly 79 -->
+  <set name="magicLvl" val="70"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
