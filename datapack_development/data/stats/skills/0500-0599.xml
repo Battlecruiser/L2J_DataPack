@@ -751,7 +751,7 @@ Description(s):
   <for>
     <effect count="1" name="Buff" time="60" val="0" stackOrder="1.12" stackType="attack_time_down">
       <mul order="0x30" stat="pAtkSpd" val="1.12">
-        <using kind="Bow"/>
+        <using kind="Bow,Crossbow"/>
       </mul>
     </effect>
   </for>
