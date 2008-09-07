@@ -79,8 +79,10 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_middle")
         elif event == "angel_cleanup" :
             self.isAngelSpawned = 0
+            return
         elif event == "katenar_cleanup" :
             self.isKatenarSpawned = 0
+            return
         elif event == "32139-08.htm" :
             st.set("cond","14")
             st.takeItems(Document,1)
