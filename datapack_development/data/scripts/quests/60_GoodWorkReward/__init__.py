@@ -93,6 +93,10 @@ class Quest (JQuest) :
       npc.addDamageHate(st.getPlayer(),0,999)
       npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, st.getPlayer())
       self.isNpcSpawned = 1
+      self.startQuestTimer("npc_cleanup",1800000,None, None)
+    elif event == "npc_cleanup" :
+      self.isNpcSpawned = 0
+      return
     elif event == "32487-06.htm" :
       st.set("cond","8")
       st.playSound("ItemSound.quest_middle")
@@ -111,7 +115,7 @@ class Quest (JQuest) :
          st.set("cond","7")
          st.playSound("ItemSound.quest_middle")
       else :
-         htmltext = "32435-07.htm"
+         htmltext = "30081-07.htm"
     elif event == "31092-05.htm" :
       st.exitQuest(False)
       st.playSound("ItemSound.quest_finish")
@@ -215,6 +219,7 @@ class Quest (JQuest) :
      if st.getRandom(1):
        string = "You have good luck. I shall return."
      npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getNpcId(),string))
+     self.cancelQuestTimer("npc_cleanup", None, None)
      st.giveItems(10867,1)
      st.set("cond","2")
      st.playSound("ItemSound.quest_middle")
