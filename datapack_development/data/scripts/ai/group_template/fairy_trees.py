@@ -30,7 +30,7 @@ class trees(JQuest) :
                self.startQuestTimer("despawn",300000, newNpc, None)
                if Rnd.get(2) :
                   skill = SkillTable.getInstance().getInfo(4243,1)
-                  if skill != None :
+                  if skill != None and killer:
                      skill.getEffects(newNpc, killer)
         return 
 
