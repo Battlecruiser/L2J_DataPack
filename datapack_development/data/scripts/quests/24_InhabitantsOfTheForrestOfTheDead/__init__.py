@@ -92,13 +92,13 @@ class Quest (JQuest) :
         htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
         st = player.getQuestState(qn)
         if not st : return htmltext
+        npcId = npc.getNpcId()
         state = st.getState()
         if state == State.COMPLETED :
             if npcId == Wizard :
                 htmltext = "31522-20.htm"
             else:
                 htmltext = "<html><body>This quest has already been completed.</body></html>"
-        npcId = npc.getNpcId()
         cond = st.getInt("cond")
         if npcId == Dorian :
             if state == State.CREATED :
