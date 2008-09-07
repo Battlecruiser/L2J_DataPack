@@ -32,18 +32,18 @@ class Quest (JQuest) :
    id = st.getState()
    if id == State.CREATED :
       if player.getLevel() < 15 :
-         htmltext = "30599-00.htm"
+         htmltext = "30559-00.htm"
          st.exitQuest(1)
       else :
-         htmltext = "30599-01.htm"
+         htmltext = "30559-01.htm"
    elif st.getQuestItemsCount(10869) >= 30:
-      htmltext = "30599-04.htm"
+      htmltext = "30559-04.htm"
       st.giveItems(57,2474)
       st.addExpAndSp(8738,409)
       st.playSound("ItemSound.quest_finish")
       st.exitQuest(1)
    else :
-      htmltext = "30599-03.htm"
+      htmltext = "30559-03.htm"
    return htmltext
 
  def onKill(self,npc,player,isPet):
