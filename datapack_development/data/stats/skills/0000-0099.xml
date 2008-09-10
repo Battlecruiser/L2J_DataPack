@@ -2126,11 +2126,10 @@
   <table name="#magicLvl"> 24 32 49 58 66 70 </table>
   <table name="#dmg"> 39 51 66 81 93 102 </table>
   <table name="#mpConsume"> 28 37 60 73 83 89 </table>
-  <table name="#power"> 3.0 4.0 5.0 6.0 7.0 8.0 </table>
   <set name="weaponsAllowed" val="16"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="power" val="#power"/>
+  <set name="power" val="100"/> <!-- Base Land Rate -->
   <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="13000"/>
