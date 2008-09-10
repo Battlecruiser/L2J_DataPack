@@ -174,7 +174,7 @@
     <effect count="1" name="Buff" time="10" val="0">
       <mul order="0x30" stat="bowWpnVuln" val="0.60"/>
       <mul order="0x30" stat="crossbowWpnVuln" val="0.60"/>
-      <mul order="0x30" stat="mDef" val="1.866"/>
+      <add order="0x40" stat="mDef" val="658"/>
     </effect>
   </for>
 </skill>
