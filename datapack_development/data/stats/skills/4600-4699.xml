@@ -1609,7 +1609,9 @@
   <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectPower" val="80"/>
   <set name="effectRange" val="-1"/>
+  <set name="effectType" val="STUN"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="fly_away"/>
   </for>
