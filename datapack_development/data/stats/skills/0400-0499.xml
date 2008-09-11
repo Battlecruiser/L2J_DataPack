@@ -4,7 +4,7 @@
   <table name="#ench1Power"> 1548 1562 1576 1590 1604 1617 1631 1645 1659 1673 1686 1700 1714 1728 1742 1755 1769 1783 1797 1811 1824 1838 1852 1866 1880 1893 1907 1921 1935 1949 </table>
   <table name="#ench2MpConsume"> 70 69 68 67 66 64 63 62 61 60 58 57 56 55 54 52 51 50 49 48 46 45 44 43 42 40 39 38 37 36 </table>
   <table name="#mpConsume"> 52 56 58 60 62 64 66 68 70 72 </table>
-  <table name="#power"> 770.0 879.0 955.0 1034.0 1115.0 1197.0 1281.0 1366.0 1451.0 1535.0 </table>
+  <table name="#power"> 770 879 955 1034 1115 1197 1281 1366 1451 1535 </table>
   <table name="#rCrit"> -0.3 -0.3 -0.3 -0.3 -0.3 -0.3 -0.4 -0.4 -0.4 -0.5 </table>
   <set name="weaponsAllowed" val="18444"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -34,9 +34,9 @@
   <table name="#ench1Power"> 1769 1785 1801 1817 1833 1848 1864 1880 1896 1912 1927 1943 1959 1975 1991 2006 2022 2038 2054 2070 2085 2101 2117 2133 2149 2164 2180 2196 2212 2228 </table>
   <table name="#ench2MpConsume"> 70 69 68 67 66 64 63 62 61 60 58 57 56 55 54 52 51 50 49 48 46 45 44 43 42 40 39 38 37 36 </table>
   <table name="#mpConsume"> 52 56 58 60 62 64 66 68 70 72 </table>
-  <table name="#power"> 880.0 1004.0 1091.0 1181.0 1274.0 1368.0 1464.0 1561.0 1658.0 1754.0 </table>
+  <table name="#power"> 880 1004 1091 1181 1274 1368 1464 1561 1658 1754 </table>
   <table name="#cAtk"> 0.75 0.75 0.75 0.75 0.75 0.7 0.7 0.7 0.7 0.65 </table>
-  <set name="weaponsAllowed" val="18444"/>
+  <set name="weaponsAllowed" val="18956"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="element" val="6"/> <!-- Dark -->
@@ -2136,7 +2136,7 @@
 <skill id="494" levels="37" name="Shoulder Charge">
 <!--
   Description:
-  Attack with a powerful charge, ramming an enemy with your shoulder. Instantly puts the enemy into 
+  Attack with a powerful charge, ramming an enemy with your shoulder. Instantly puts the enemy into
   shock. Consumes 1 Soul. An equipped ancient sword weapon is required to use this skill.  
 -->
   <table name="#mpConsume"> 25 26 27 27 28 29 30 30 31 32 33 34 35 35 36 37 38 38 39 40 41 42 43 43 44 45 45 46 47 48 48 49 50 51 51 52 53 </table>
