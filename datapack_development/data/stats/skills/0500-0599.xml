@@ -571,7 +571,7 @@ Description(s):
 --> 
   <set name="mpConsume" val="59"/> 
   <set name="target" val="TARGET_SELF"/> 
-  <set name="skillType" val="NEGATE"/> 
+  <set name="skillType" val="NEGATE"/>
   <set name="operateType" val="OP_ACTIVE"/> 
   <set name="reuseDelay" val="15000"/> 
   <set name="hitTime" val="1500"/> 
@@ -1415,7 +1415,7 @@ Description(s):
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="900"/>
   <for>
- 	<effect count="#effect" name="DamOverTime" time="3" val="#bleeddmg" abnormal="bleeding"/>
+    <effect count="#effect" name="DamOverTime" time="3" val="#bleeddmg" abnormal="bleeding"/>
   </for>
 </skill>
 <skill id="583" levels="4" name="Assimilation">
