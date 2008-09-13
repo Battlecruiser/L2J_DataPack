@@ -73,9 +73,13 @@ class Quest (JQuest) :
      self.questItemIds = [10867,10868]
      self.isNpcSpawned = 0
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc,player) :
+    if event == "npc_cleanup" :
+      self.isNpcSpawned = 0
+      return
+    st = player.getQuestState(qn)
+    if not st: return
     htmltext = event
-    player = st.getPlayer()
     if event == "31435-03.htm" :
       st.set("cond","1")
       st.setState(State.STARTED)
@@ -94,9 +98,6 @@ class Quest (JQuest) :
       npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, st.getPlayer())
       self.isNpcSpawned = 1
       self.startQuestTimer("npc_cleanup",1800000,None, None)
-    elif event == "npc_cleanup" :
-      self.isNpcSpawned = 0
-      return
     elif event == "32487-06.htm" :
       st.set("cond","8")
       st.playSound("ItemSound.quest_middle")
@@ -128,7 +129,7 @@ class Quest (JQuest) :
       text = BYPASS[player.getClassId().getId()]
       htmltext = "<html><body>Black Marketeer of Mammon:<br>If you are finished thinking, select one. Which class would you like to be?<br>"+text+"</body></html>"
     elif event == "31092-07.htm" :
-      st.giveAdena(3000000, True)
+      st.giveAdena(3000000, False)
       st.set("onlyone","1")
     elif event in CLASSES.keys():
          newclass,req_item=CLASSES[event]
@@ -141,7 +142,7 @@ class Quest (JQuest) :
          if adena == 3 :
             return "31092-06.htm"
          if adena > 0 :
-            st.giveAdena(adena*1000000,True)
+            st.giveAdena(adena*1000000,False)
          htmltext = "31092-05.htm"
          st.set("onlyone","1")
     return htmltext
@@ -208,18 +209,18 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill(self,npc,player,isPet):
+   self.cancelQuestTimer("npc_cleanup", None, None)
+   self.isNpcSpawned = 0
    st = player.getQuestState(qn)
    if not st : return
    if st.getState() != State.STARTED : return
    npcId = npc.getNpcId()
    cond = st.getInt("cond")
    if npcId == 27340 and cond == 1:
-     self.isNpcSpawned = 0
      string = "You are strong. This was a mistake."
      if st.getRandom(1):
        string = "You have good luck. I shall return."
      npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getNpcId(),string))
-     self.cancelQuestTimer("npc_cleanup", None, None)
      st.giveItems(10867,1)
      st.set("cond","2")
      st.playSound("ItemSound.quest_middle")
