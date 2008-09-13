@@ -1088,12 +1088,17 @@
   </for>
 </skill>
 <skill id="173" levels="2" name="Acrobat">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#magicLvl"> 20 55 </table>
+  <table name="#fallVuln"> 0.4 0.0 </table>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
   <for>
+    <!-- <mul order="0x30" stat="fallVuln" val="#fallVuln"/> Needs Core Support -->
   </for>
 </skill>
 <skill id="176" levels="3" name="Frenzy">

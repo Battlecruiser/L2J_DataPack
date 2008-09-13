@@ -10,12 +10,11 @@
   </for>
 </skill>
 <skill id="7001" levels="1" name="Dispel Buff">
-  <!-- TODO -->
-  <set name="power" val="1.0"/>
+  <set name="magicLevel" val="99"/>
+  <set name="power" val="100"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="POISON"/>
+  <set name="skillType" val="CANCEL"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="60000"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <set name="aggroPoints" val="100"/>
@@ -23,12 +22,11 @@
   </for>
 </skill>
 <skill id="7002" levels="1" name="Dispel Debuff">
-  <!-- TODO -->
-  <set name="power" val="1.0"/>
+  <set name="magicLevel" val="99"/>
+  <set name="power" val="100"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="POISON"/>
+  <set name="skillType" val="CANCEL_DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="60000"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <set name="aggroPoints" val="100"/>
@@ -61,18 +59,24 @@
   </for>
 </skill>
 <skill id="7005" levels="4" name="Greater Chant of Vampire">
-  <!-- TODO -->
-  <set name="mpConsume" val="272"/>
+  <set name="magicLevel" val="74"/>
+  <set name="mpInitialConsume" val="55"/>
+  <set name="mpConsume" val="217"/>
   <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
+  <set name="target" val="TARGET_CLAN"/>
+  <set name="skillRadius" val="200"/>
+  <set name="skillType" val="BUFF"/>
   <set name="hitTime" val="2500"/>
+  <set name="reuseDelay" val="20000"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <set name="aggroPoints" val="655"/>
   <for>
+    <effect name="Buff" time="1200" count="1" val="0" stackOrder="9" stackType="vampRage">
+      <add order="0x40" stat="absorbDam" val="9"/>
+    </effect>
   </for>
 </skill>
 <skill id="7006" levels="13" name="The Love of Pa'agrio">
