@@ -499,18 +499,20 @@
   </for>
 </skill>
 <skill id="4334" levels="1" name="SSQ Cancel">
-<!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="power" val="100"/>
+  <set name="radius" val="2000"/>
+  <set name="skillType" val="CANCEL"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="1000"/>
+  <set name="effectRange" val="1500"/>
   <for>
   </for>
 </skill>
 <skill id="4335" levels="1" name="Sacred Attack">
 <!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="NOTDONE"/> <!-- pAtk attribute: holy - missing core support -->
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
@@ -558,11 +560,11 @@
   </for>
 </skill>
 <skill id="4339" levels="1" name="Mimir's Elixir">
-  <!-- TODO -->
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="WEAKNESS"/>   <!-- just broadcast -->
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="castRange" val="400"/>
+  <set name="castRange" val="900"/>
   <for>
   </for>
 </skill>
@@ -1156,7 +1158,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x30" stat="pDef" val="3"/>
+    <mul order="0x30" stat="pDef" val="2"/>
   </for>
 </skill>
 <skill id="4377" levels="12" name="Wield Temper">
@@ -1212,16 +1214,18 @@
   </for>
 </skill>
 <skill id="4380" levels="1" name="Arena CP Recovery">
-  <!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="power" val="5000"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="COMBATPOINTHEAL"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
   <for>
   </for>
 </skill>
 <skill id="4381" levels="1" name="Magic Skill Block">
-  <!-- TODO -->
+  <!-- dummy skill -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1327,8 +1331,8 @@
 </skill>
 <skill id="4390" levels="1" name="NPC Abnormal Immunity">
   <!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="NOTDONE"/> <!-- npc cannot receive buffs and debuffs from players, core support needed -->
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>

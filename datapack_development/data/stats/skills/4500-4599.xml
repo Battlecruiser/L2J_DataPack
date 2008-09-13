@@ -131,18 +131,18 @@
   </for>
 </skill>
 <skill id="4513" levels="1" name="Pumpkin - Level up">
-<!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- only broadcast -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="4514" levels="1" name="Pumpkin - Poisoning">
-<!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- only broadcast -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <for>
@@ -184,21 +184,25 @@ one's level by 9 or more. This curse cannot be undone. -->
   </for>
 </skill>
 <skill id="4517" levels="1" name="Quest - BOSS Defend">
-<!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
+     <mul order="0x30" stat="runSpd" val="0.5"/>
+     <mul order="0x30" stat="pAtk" val="0.5"/>
+     <mul order="0x30" stat="pDef" val="9"/>
   </for>
 </skill>
 <skill id="4518" levels="1" name="Quest - BOSS Rampage">
-<!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <for>
+     <mul order="0x30" stat="pAtkSpd" val="1.3"/>
+     <mul order="0x30" stat="pAtk" val="1.3"/>
+     <mul order="0x30" stat="pDef" val="0.5"/>
   </for>
 </skill>
 <skill id="4519" levels="1" name="Quest - BOSS Defend">

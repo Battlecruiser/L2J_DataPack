@@ -1306,8 +1306,8 @@
   </for>
 </skill>
 <skill id="4278" levels="1" name="Dark Attack">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="NOTDONE"/> <!-- pAtk attribute: dark - missing core support -->
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
