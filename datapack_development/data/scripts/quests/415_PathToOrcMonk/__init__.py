@@ -102,6 +102,7 @@ class Quest (JQuest) :
    if not st : return htmltext
    npcId = npc.getNpcId()
    id = st.getState()
+   cond = st.getInt("cond")
    if npcId != 30587 and id != State.STARTED : return htmltext
 
    if npcId == 30587 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
