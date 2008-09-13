@@ -128,9 +128,9 @@
   </for>
 </skill>
 <skill id="715" levels="4" name="Zaken Energy Drain">
-  <table name="#mpConsume">60 65 69 72</table>
-  <table name="#magicLvl"> 70 75 80 82</table>
-  <table name="#power">104.0 105.0 107.0 108.0</table>
+  <table name="#mpConsume"> 60 65 69 72 </table>
+  <table name="#magicLvl"> 70 75 80 82 </table>
+  <table name="#power"> 104 105 107 108 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
@@ -147,7 +147,7 @@
   </for>
 </skill>
 <skill id="716" levels="4" name="Zaken Hold">
-  <table name="#mpConsume">60 65 69 72</table>
+  <table name="#mpConsume"> 60 65 69 72 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="80"/>
   <set name="lvlDepend" val="2"/>
@@ -164,8 +164,8 @@
   </for>
 </skill>
 <skill id="717" levels="4" name="Zaken Concentrated Attack">
-  <table name="#power">2751 3252 3752 4224</table>
-  <table name="#mpConsume">60 65 69 72</table>
+  <table name="#power"> 2751 3252 3752 4224 </table>
+  <table name="#mpConsume"> 60 65 69 72 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -179,8 +179,8 @@
   </for>
 </skill>
 <skill id="718" levels="4" name="Zaken Dancing Sword">
-  <table name="#power">1651 1951 2251 2534</table>
-  <table name="#mpConsume">60 65 69 72</table>
+  <table name="#power"> 1651 1951 2251 2534 </table>
+  <table name="#mpConsume"> 60 65 69 72 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AURA"/>
@@ -211,8 +211,8 @@
   </for>
 </skill>
 <skill id="720" levels="2" name="Anakim Holy Light Burst">
-  <table name="#power">3189 3590</table>
-  <table name="#mpConsume">69 72</table>
+  <table name="#power"> 3189 3590 </table>
+  <table name="#mpConsume"> 69 72 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -227,9 +227,9 @@
   </for>
 </skill>
 <skill id="721" levels="2" name="Anakim Energy Attack">
-  <table name="#mpConsume">69 72</table>
-  <table name="#magicLvl"> 80 82</table>
-  <table name="#power">186 197</table>
+  <table name="#mpConsume"> 69 72 </table>
+  <table name="#magicLvl"> 80 82 </table>
+  <table name="#power"> 186 197 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
@@ -246,9 +246,9 @@
   </for>
 </skill>
 <skill id="722" levels="2" name="Anakim Holy Beam">
-  <table name="#mpConsume">69 72</table>
-  <table name="#magicLvl">80 82</table>
-  <table name="#power">186 197</table>
+  <table name="#mpConsume"> 69 72 </table>
+  <table name="#magicLvl"> 80 82 </table>
+  <table name="#power"> 186 197 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
@@ -296,7 +296,7 @@
   </for>
 </skill>
 <skill id="725" levels="2" name="Venom Power Smash">
-  <table name="#power">2626 2957</table>
+  <table name="#power"> 2626 2957 </table>
   <set name="mpConsume" val="88"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -310,7 +310,7 @@
   </for>
 </skill>
 <skill id="726" levels="2" name="Venom Sonic Storm">
-  <table name="#power">2626 2957</table>
+  <table name="#power"> 2626 2957 </table>
   <set name="mpConsume" val="88"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AREA"/>
@@ -342,7 +342,7 @@
   </for>
 </skill>
 <skill id="728" levels="1" name="Gordon Beast Attack">
-  <table name="#power">2957</table>
+  <table name="#power"> 2957 </table>
   <set name="mpConsume" val="88"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -356,7 +356,7 @@
   </for>
 </skill>
 <skill id="729" levels="1" name="Gordon Sword Stab">
-  <table name="#power">2957</table>
+  <table name="#power"> 2957 </table>
   <set name="mpConsume" val="88"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AREA"/>
@@ -500,7 +500,7 @@
   </for>
 </skill>
 <skill id="738" levels="3" name="Heretic Heal">
-  <table name="#power">892 926 956</table>
+  <table name="#power"> 892 926 956 </table>
   <set name="mpConsume" val="60"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -515,8 +515,8 @@
   </for>
 </skill>
 <skill id="739" levels="3" name="Heretic Battle Heal">
-  <table name="#power">743 772 796</table>
-  <table name="#mpConsume">170 178 183</table>
+  <table name="#power"> 743 772 796 </table>
+  <table name="#mpConsume"> 170 178 183 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="isMagic" val="true"/>
@@ -531,8 +531,8 @@
   </for>
 </skill>
 <skill id="740" levels="3" name="Heretic Resurrection">
-  <table name="#power">50 55 60</table>
-  <table name="#mpConsume">228 237 244</table>
+  <table name="#power"> 50 55 60 </table>
+  <table name="#mpConsume"> 228 237 244 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="isMagic" val="true"/>
@@ -579,7 +579,7 @@
   </for>
 </skill>
 <skill id="745" levels="3" name="Vale Master Dark Cure">
-  <table name="#mpConsume">27 28 29</table>
+  <table name="#mpConsume"> 27 28 29 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="100"/>
   <set name="target" val="TARGET_ONE"/>

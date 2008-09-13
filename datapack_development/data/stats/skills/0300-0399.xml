@@ -37,11 +37,7 @@
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <table name="#magicLvl"> 28 36 43 49 55 62 66 70 74 </table>
   <table name="#mpConsume"> 73 93 113 131 150 172 183 194 204 </table>
-  <table name="#ench12Power">
-   0  1  2  2  3  4  4  5  6  6
-   7  8  8  9 10 10 11 12 12 13
-  14 14 15 16 16 17 18 18 19 20
-  </table>
+  <table name="#ench12Power"> 0 1 2 2 3 4 4 5 6 6 7 8 8 9 10 10 11 12 12 13 14 14 15 16 16 17 18 18 19 20 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="0.0"/>
@@ -74,16 +70,8 @@
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <table name="#mp"> 1.1 1.15 1.2 1.25 </table>
   <table name="#hpConsume"> 185 271 316 364 </table>
-  <table name="#ench1hpConsume">
-  358 352 346 340 334 328 322 316 310 304
-  298 292 286 280 274 267 261 255 249 243
-  237 231 225 219 213 207 201 195 189 183
-  </table>
-  <table name="#ench1mp">
-  1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.30
-  1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.35
-  1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 
-  </table>
+  <table name="#ench1hpConsume"> 358 352 346 340 334 328 322 316 310 304 298 292 286 280 274 267 261 255 249 243 237 231 225 219 213 207 201 195 189 183 </table>
+  <table name="#ench1mp"> 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 </table>
   <table name="#aggro"> 438 549 597 635 </table>
   <set name="weaponsAllowed" val="32"/>
   <set name="hpConsume" val="#hpConsume"/>
@@ -117,16 +105,8 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
-  <table name="#ench1time">
-  125 131 136 142 147 153 158 164 169 175
-  180 186 191 197 202 208 213 219 224 230
-  235 241 246 252 257 263 268 274 279 285
-  </table>
-  <table name="#ench2MpConsume">
-  58 57 56 55 53 52 51 50 48 47
-  46 45 43 42 41 40 39 37 36 35
-  34 32 31 30 29 27 26 25 24 22
-  </table>
+  <table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
+  <table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
   <set name="mpConsume" val="60"/>
   <set name="nextDanceCost" val="30"/>
   <set name="power" val="0.0"/>
@@ -158,16 +138,8 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
-  <table name="#ench1time">
-  125 131 136 142 147 153 158 164 169 175
-  180 186 191 197 202 208 213 219 224 230
-  235 241 246 252 257 263 268 274 279 285
-  </table>
-  <table name="#ench2MpConsume">
-  58 57 56 55 53 52 51 50 48 47
-  46 45 43 42 41 40 39 37 36 35
-  34 32 31 30 29 27 26 25 24 22
-  </table>
+  <table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
+  <table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
   <set name="mpConsume" val="60"/>
   <set name="nextDanceCost" val="30"/>
   <set name="power" val="0.0"/>
@@ -197,16 +169,8 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
-  <table name="#ench1time">
-  125 131 136 142 147 153 158 164 169 175
-  180 186 191 197 202 208 213 219 224 230
-  235 241 246 252 257 263 268 274 279 285
-  </table>
-  <table name="#ench2MpConsume">
-  58 57 56 55 53 52 51 50 48 47
-  46 45 43 42 41 40 39 37 36 35
-  34 32 31 30 29 27 26 25 24 22
-  </table>
+  <table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
+  <table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
   <set name="mpConsume" val="60"/>
   <set name="nextDanceCost" val="30"/>
   <set name="power" val="0.0"/>
@@ -238,16 +202,8 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
-  <table name="#ench1time">
-  125 131 136 142 147 153 158 164 169 175
-  180 186 191 197 202 208 213 219 224 230
-  235 241 246 252 257 263 268 274 279 285
-  </table>
-  <table name="#ench2MpConsume">
-  58 57 56 55 53 52 51 50 48 47
-  46 45 43 42 41 40 39 37 36 35
-  34 32 31 30 29 27 26 25 24 22
-  </table>
+  <table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
+  <table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
   <set name="weaponsAllowed" val="512"/>
   <set name="mpConsume" val="60"/>
   <set name="nextDanceCost" val="30"/>
@@ -280,16 +236,8 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
-  <table name="#ench1time">
-  125 131 136 142 147 153 158 164 169 175
-  180 186 191 197 202 208 213 219 224 230
-  235 241 246 252 257 263 268 274 279 285
-  </table>
-  <table name="#ench2MpConsume">
-  58 57 56 55 53 52 51 50 48 47
-  46 45 43 42 41 40 39 37 36 35
-  34 32 31 30 29 27 26 25 24 22
-  </table>
+  <table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
+  <table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
   <set name="mpConsume" val="60"/>
   <set name="nextDanceCost" val="30"/>
   <set name="power" val="0.0"/>
@@ -321,16 +269,8 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
-  <table name="#ench1time">
-  125 131 136 142 147 153 158 164 169 175
-  180 186 191 197 202 208 213 219 224 230
-  235 241 246 252 257 263 268 274 279 285
-  </table>
-  <table name="#ench2MpConsume">
-  58 57 56 55 53 52 51 50 48 47
-  46 45 43 42 41 40 39 37 36 35
-  34 32 31 30 29 27 26 25 24 22
-  </table>
+  <table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
+  <table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
   <set name="weaponsAllowed" val="512"/>
   <set name="mpConsume" val="60"/>
   <set name="nextDanceCost" val="30"/>
@@ -363,16 +303,8 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
-  <table name="#ench1time">
-  125 131 136 142 147 153 158 164 169 175
-  180 186 191 197 202 208 213 219 224 230
-  235 241 246 252 257 263 268 274 279 285
-  </table>
-  <table name="#ench2MpConsume">
-  58 57 56 55 53 52 51 50 48 47
-  46 45 43 42 41 40 39 37 36 35
-  34 32 31 30 29 27 26 25 24 22
-  </table>
+  <table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
+  <table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
   <set name="weaponsAllowed" val="512"/>
   <set name="mpConsume" val="60"/>
   <set name="nextDanceCost" val="30"/>
@@ -403,16 +335,8 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
-  <table name="#ench1time">
-  125 131 136 142 147 153 158 164 169 175
-  180 186 191 197 202 208 213 219 224 230
-  235 241 246 252 257 263 268 274 279 285
-  </table>
-  <table name="#ench2MpConsume">
-  58 57 56 55 53 52 51 50 48 47
-  46 45 43 42 41 40 39 37 36 35
-  34 32 31 30 29 27 26 25 24 22
-  </table>
+  <table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
+  <table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
   <set name="weaponsAllowed" val="512"/>
   <set name="mpConsume" val="60"/>
   <set name="nextDanceCost" val="30"/>
@@ -447,11 +371,7 @@
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <table name="#mpConsume_Init"> 4 5 5 6 7 7 8 9 9 10 10 11 11 12 12 13 13 13 14 14 </table>
   <table name="#crit"> 35 48 64 84 109 139 166 196 229 266 306 349 379 410 443 475 509 542 576 609 </table>
-  <table name="#ench1crit">
-  615 620 626 631 637 642 648 653 659 664
-  670 675 681 686 692 697 702 708 713 719
-  724 730 735 741 746 752 757 763 768 774
-  </table>
+  <table name="#ench1crit"> 615 620 626 631 637 642 648 653 659 664 670 675 681 686 692 697 702 708 713 719 724 730 735 741 746 752 757 763 768 774 </table>
   <table name="#ench2MpConsume_Init"> 13 13 13 12 12 12 11 11 11 10 10 10 9 9 9 8 8 8 7 7 7 6 6 6 5 5 5 4 4 4 </table>
   <table name="#ench2val"> 0.39 0.39 0.39 0.38 0.38 0.38 0.38 0.37 0.37 0.37 0.36 0.36 0.36 0.36 0.35 0.35 0.35 0.34 0.34 0.34 0.34 0.33 0.33 0.33 0.32 0.32 0.32 0.32 0.31 0.31 0.31</table>
   <set name="power" val="0.0"/>
@@ -486,16 +406,8 @@
   <table name="#mpConsume"> 28 29 30 31 32 33 34 34 </table>
   <table name="#pAtk"> 110 119 129 138 148 158 167 177 </table>
   <table name="#accCombat"> 1 3 3 3 3 3 3 3 </table>
-  <table name="#ench1pAtk">
-  179 181 182 184 185 187 188 190 192 193
-  195 196 198 199 201 203 204 206 207 209
-  210 212 214 215 217 218 220 221 223 225
-  </table>
-  <table name="#ench2MpConsume">
-  33 33 32 32 32 31 31 30 30 29
-  29 28 28 28 27 27 26 26 25 25
-  25 24 24 23 23 22 22 21 20 20
-  </table>
+  <table name="#ench1pAtk"> 179 181 182 184 185 187 188 190 192 193 195 196 198 199 201 203 204 206 207 209 210 212 214 215 217 218 220 221 223 225 </table>
+  <table name="#ench2MpConsume"> 33 33 32 32 32 31 31 30 30 29 29 28 28 28 27 27 26 26 25 25 25 24 24 23 23 22 22 21 20 20 </table>
   <table name="#aggro"> 566 582 597 611 624 635 646 655 </table>
   <set name="weaponsAllowed" val="32"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -539,17 +451,9 @@
   <!-- TO DO LINK WITH HP LVL -->
   <table name="#mpConsume"> 116 119 121 122 124 126 129 131 133 135 138 140 142 144 146 148 </table>
   <table name="#magicLvl"> 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
-  <table name="#power"> 2908.0 3030.0 3154.0 3280.0 3408.0 3537.0 3668.0 3800.0 3933.0 4067.0 4201.0 4336.0 4470.0 4604.0 4738.0 4870.0 </table>
-  <table name="#ench1Power">
-  4915 4959 5003 5047 5090 5134 5178 5222 5266 5310
-  5354 5398 5442 5486 5529 5573 5617 5661 5705 5749
-  5793 5837 5881 5925 5968 6012 6056 6100 6144 6188
-  </table>
-  <table name="#ench2mpConsume">
-  149 147 146 144 142 141 139 138 136 135
-  133 132 130 129 127 126 124 123 121 120
-  118 117 115 113 112 110 109 107 106 104
-  </table>
+  <table name="#power"> 2908 3030 3154 3280 3408 3537 3668 3800 3933 4067 4201 4336 4470 4604 4738 4870 </table>
+  <table name="#ench1Power"> 4915 4959 5003 5047 5090 5134 5178 5222 5266 5310 5354 5398 5442 5486 5529 5573 5617 5661 5705 5749 5793 5837 5881 5925 5968 6012 6056 6100 6144 6188 </table>
+  <table name="#ench2mpConsume"> 149 147 146 144 142 141 139 138 136 135 133 132 130 129 127 126 124 123 121 120 118 117 115 113 112 110 109 107 106 104 </table>
   <set name="weaponsAllowed" val="32"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -573,7 +477,7 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
-  <table name="#power"> 4558.0 4750.0 4944.0 5142.0 5342.0 5545.0 5751.0 5958.0 6166.0 6376.0 6586.0 6797.0 7006.0 7218.0 7427.0 7635.0 </table>
+  <table name="#power"> 4558 4750 4944 5142 5342 5545 5751 5958 6166 6376 6586 6797 7006 7218 7427 7635 </table>
   <table name="#magicLvl"> 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
   <table name="#hpConsume"> 208 212 212 217 221 225 229 233 237 240 244 248 251 255 258 261 </table>
   <table name="#ench2HpConsume"> 259 256 252 249 245 242 239 235 232 228 225 222 218 215 211 208 205 201 198 195 191 188 184 181 178 174 171 167 164 161 </table>
@@ -610,7 +514,7 @@
     <cond>
       <using kind="Shield"/>
     </cond>
-	<set stat="shieldDefAngle" val="360" order="0x10"/>
+    <set stat="shieldDefAngle" val="360" order="0x10"/>
   </for>
 </skill>
 <skill id="317" levels="5" name="Focus Attack">
@@ -644,11 +548,7 @@
 </skill>
 
 <skill id="318" levels="1" name="Aegis Stance" enchantLevels1="30" >
-  <table name="#ench1sDef">
-  0.61 0.62 0.62 0.63 0.64 0.64 0.65 0.66 0.66 0.67
-  0.68 0.68 0.69 0.70 0.70 0.71 0.72 0.72 0.73 0.74
-  0.74 0.75 0.76 0.76 0.77 0.78 0.78 0.79 0.80 0.80
-  </table>
+  <table name="#ench1sDef"> 0.61 0.62 0.62 0.63 0.64 0.64 0.65 0.66 0.66 0.67 0.68 0.68 0.69 0.70 0.70 0.71 0.72 0.72 0.73 0.74 0.74 0.75 0.76 0.76 0.77 0.78 0.78 0.79 0.80 0.80 </table>
   <set name="mpInitialConsume" val="9"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
@@ -726,7 +626,7 @@
 <skill id="321" levels="10" name="Blinding Blow">
   <table name="#mpConsume"> 63 64 65 66 67 68 69 70 71 72 </table>
   <table name="#magicLvl"> 65 66 67 68 69 70 71 72 73 74 </table>
-  <table name="#power"> 2751.0 2850.0 2950.0 3050.0 3151.0 3252.0 3353.0 3453.0 3553.0 3653.0 </table>
+  <table name="#power"> 2751 2850 2950 3050 3151 3252 3353 3453 3553 3653 </table>
   <set name="weaponsAllowed" val="16"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -755,18 +655,10 @@
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <table name="#mpConsume_Init"> 12 13 13 13 14 14 </table>
-  <table name="#ench2mpConsume">
-  13 13 13 12 12 12 11 11 11 10
-  10 10  9  9  9  8  8  8  7  7
-   7  6  6  6  5  5  5  4  4  4
-  </table>
+  <table name="#ench2mpConsume"> 13 13 13 12 12 12 11 11 11 10 10 10 9 9 9 8 8 8 7 7 7 6 6 6 5 5 5 4 4 4 </table>
   <table name="#ShieldDef"> 446 468 491 514 537 560 </table>
-  <table name="#ench1sDef">
-  565 569 573 577 582 586 590 594 599 603
-  607 611 616 620 624 628 632 637 641 645
-  649 654 658 662 666 671 675 679 683 688
-  </table>
-  <table name="#ench2val"> 0.39 0.39 0.39 0.38 0.38 0.38 0.37 0.37 0.37 0.36 0.36 0.36 0.35 0.35 0.35 0.34 0.34 0.34 0.33 0.33 0.33 0.32 0.32 0.32 0.31 0.31 0.31 0.3 0.3 0.3 </table> 
+  <table name="#ench1sDef"> 565 569 573 577 582 586 590 594 599 603 607 611 616 620 624 628 632 637 641 645 649 654 658 662 666 671 675 679 683 688 </table>
+  <table name="#ench2val"> 0.39 0.39 0.39 0.38 0.38 0.38 0.37 0.37 0.37 0.36 0.36 0.36 0.35 0.35 0.35 0.34 0.34 0.34 0.33 0.33 0.33 0.32 0.32 0.32 0.31 0.31 0.31 0.3 0.3 0.3 </table>
   <set name="weaponsAllowed" val="2"/>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="target" val="TARGET_SELF"/>
