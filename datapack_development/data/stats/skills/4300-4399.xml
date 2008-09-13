@@ -1158,7 +1158,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <mul order="0x30" stat="pDef" val="2"/>
+    <mul order="0x30" stat="pDef" val="3"/> <!-- pDef +200% -->
   </for>
 </skill>
 <skill id="4377" levels="12" name="Wield Temper">
