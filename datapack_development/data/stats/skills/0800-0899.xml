@@ -113,34 +113,140 @@
   </for>
 </skill>
 <skill id="814" levels="43" name="Full Swing">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume">
+  41 42 43 44 46 47 48 50 50 51 52 53 55 56
+  57 58 60 61 61 62 63 65 66 67 68 69 70 71
+  72 73 74 75 76 77 78 78 79 80 80 81 82 82 83
+  </table>
+  <table name="#magicLvl">
+  43 44 45 46 47 48 49 50 51 52 53 54 55 56
+  57 58 59 60 61 62 63 64 65 66 67 68 69 70
+  71 72 73 74 75 76 77 78 79 80 81 82 83 84 85
+  </table> <!-- Guess - need retail confirmation -->
+  <table name="#power">
+  744.0 787.0 832.0 879.0 927.0 977.0 1029.0 1082.0 1137.0 1194.0 1253.0
+  1313.0 1374.0 1438.0 1502.0 1568.0 1636.0 1704.0 1774.0 1845.0 1917.0 1990.0
+  2064.0 2138.0 2213.0 2288.0 2363.0 2439.0 2515.0 2590.0 2665.0 2740.0 2814.0
+  2887.0 2959.0 3030.0 3100.0 3168.0 3234.0 3299.0 3362.0 3422.0 3480.0
+  </table>
+  <set name="weaponsAllowed" val="18432"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="150"/>
+  <set name="overHit" val="true"/>
+  <set name="SSBoost" val="2.0"/>
+  <set name="reuseDelay" val="20000"/> <!-- Guess - need retail confirmation -->
+  <set name="hitTime" val="1067"/>
+  <set name="coolTime" val="720" />
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="ignoreShld" val="true"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="815" levels="43" name="Blade Hurricane">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume">
+  41 42 43 44 46 47 48 50 50 51 52 53 55 56
+  57 58 60 61 61 62 63 65 66 67 68 69 70 71
+  72 73 74 75 76 77 78 78 79 80 80 81 82 82 83
+  </table>
+  <table name="#magicLvl">
+  43 44 45 46 47 48 49 50 51 52 53 54 55 56
+  57 58 59 60 61 62 63 64 65 66 67 68 69 70
+  71 72 73 74 75 76 77 78 79 80 81 82 83 84 85
+  </table> <!-- Guess - need retail confirmation -->
+  <table name="#power">
+  744.0 787.0 832.0 879.0 927.0 977.0 1029.0 1082.0 1137.0 1194.0 1253.0
+  1313.0 1374.0 1438.0 1502.0 1568.0 1636.0 1704.0 1774.0 1845.0 1917.0 1990.0
+  2064.0 2138.0 2213.0 2288.0 2363.0 2439.0 2515.0 2590.0 2665.0 2740.0 2814.0
+  2887.0 2959.0 3030.0 3100.0 3168.0 3234.0 3299.0 3362.0 3422.0 3480.0
+  </table>
+  <set name="weaponsAllowed" val="512"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="150"/>
+  <set name="overHit" val="true"/>
+  <set name="SSBoost" val="2.0"/>
+  <set name="reuseDelay" val="20000"/> <!-- Guess - need retail confirmation -->
+  <set name="hitTime" val="1067"/>
+  <set name="coolTime" val="720" />
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="ignoreShld" val="true"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
   </for>
 </skill>
 <skill id="816" levels="43" name="Cleave">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume">
+  41 42 43 44 46 47 48 50 50 51 52 53 55 56
+  57 58 60 61 61 62 63 65 66 67 68 69 70 71
+  72 73 74 75 76 77 78 78 79 80 80 81 82 82 83
+  </table>
+  <table name="#magicLvl">
+  43 44 45 46 47 48 49 50 51 52 53 54 55 56
+  57 58 59 60 61 62 63 64 65 66 67 68 69 70
+  71 72 73 74 75 76 77 78 79 80 81 82 83 84 85
+  </table> <!-- Guess - need retail confirmation -->
+  <table name="#power">
+  744.0 787.0 832.0 879.0 927.0 977.0 1029.0 1082.0 1137.0 1194.0 1253.0
+  1313.0 1374.0 1438.0 1502.0 1568.0 1636.0 1704.0 1774.0 1845.0 1917.0 1990.0
+  2064.0 2138.0 2213.0 2288.0 2363.0 2439.0 2515.0 2590.0 2665.0 2740.0 2814.0
+  2887.0 2959.0 3030.0 3100.0 3168.0 3234.0 3299.0 3362.0 3422.0 3480.0
+  </table>
+  <set name="weaponsAllowed" val="18432"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="overHit" val="true"/>
+  <set name="SSBoost" val="2.0"/>
+  <set name="reuseDelay" val="20000"/> <!-- Guess - need retail confirmation -->
+  <set name="hitTime" val="1620"/>
+  <set name="coolTime" val="720" />
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="ignoreShld" val="true"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
   <for>
   </for>
 </skill>
 <skill id="817" levels="43" name="Double Strike">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume">
+  41 42 43 44 46 47 48 50 50 51 52 53 55 56
+  57 58 60 61 61 62 63 65 66 67 68 69 70 71
+  72 73 74 75 76 77 78 78 79 80 80 81 82 82 83
+  </table>
+  <table name="#magicLvl">
+  43 44 45 46 47 48 49 50 51 52 53 54 55 56
+  57 58 59 60 61 62 63 64 65 66 67 68 69 70
+  71 72 73 74 75 76 77 78 79 80 81 82 83 84 85
+  </table> <!-- Guess - need retail confirmation -->
+  <table name="#power">
+  744.0 787.0 832.0 879.0 927.0 977.0 1029.0 1082.0 1137.0 1194.0 1253.0
+  1313.0 1374.0 1438.0 1502.0 1568.0 1636.0 1704.0 1774.0 1845.0 1917.0 1990.0
+  2064.0 2138.0 2213.0 2288.0 2363.0 2439.0 2515.0 2590.0 2665.0 2740.0 2814.0
+  2887.0 2959.0 3030.0 3100.0 3168.0 3234.0 3299.0 3362.0 3422.0 3480.0
+  </table>
+  <set name="weaponsAllowed" val="512"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="overHit" val="true"/>
+  <set name="SSBoost" val="2.0"/>
+  <set name="reuseDelay" val="20000"/> <!-- Guess - need retail confirmation -->
+  <set name="hitTime" val="1620"/>
+  <set name="coolTime" val="720" />
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="ignoreShld" val="true"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
   <for>
   </for>
 </skill>
