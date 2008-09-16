@@ -1057,17 +1057,14 @@
   </for>
 </skill>
 <skill id="3571" levels="1" name="Special Ability: Crt. Stun">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Temporarily stuns and paralyzes target.
--->
   <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="WEAPON_SA"/>
   <set name="lvlDepend" val="1"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="effectType" val="STUN"/>
+  <set name="effectPower" val="80"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
