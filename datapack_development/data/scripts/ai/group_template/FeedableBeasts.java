@@ -492,7 +492,7 @@ public class FeedableBeasts extends L2AttackableAIScript
         int npcId = npc.getNpcId();
         int skillId = skill.getId();
         // check if the npc and skills used are valid for this script.  Exit if invalid.
-        if (!contains(FEEDABLE_BEASTS,npcId) || skillId !=SKILL_GOLDEN_SPICE && skillId != SKILL_CRYSTAL_SPICE)
+        if (!contains(FEEDABLE_BEASTS,npcId) || (skillId !=SKILL_GOLDEN_SPICE && skillId != SKILL_CRYSTAL_SPICE))
         {
         	return super.onSkillSee(npc,caster,skill,targets,isPet);
         }
