@@ -252,10 +252,33 @@
   </for>
 </skill>
 <skill id="1523" levels="42" name="Divine Punishment">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume">
+  35 37 38 38 39 40 42 42 43 44 45 45 47 48
+  49 49 50 52 53 53 54 55 55 57 58 58 59 60
+  60 62 62 63 63 64 64 65 65 67 67 67 68 68
+  </table>
+  <table name="#magicLvl">
+  44 45 46 47 48 49 50 51 52 53 54 55 56 57
+  58 59 60 61 62 63 64 65 66 67 68 69 70 71
+  72 73 74 75 76 77 78 79 80 81 82 83 84 85
+  </table>
+  <table name="#power">
+  51.0 52.0 54.0 55.0 57.0 58.0 60.0 61.0 63.0 64.0 66.0 68.0 69.0 71.0
+  72.0 74.0 75.0 77.0 78.0 80.0 81.0 83.0 85.0 86.0 88.0 89.0 90.0 92.0
+  93.0 95.0 96.0 97.0 99.0 100.0 101.0 102.0 103.0 105.0 106.0 107.0 108.0 109.0
+  </table> <!-- Guess - need retail confirmation -->
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="element" val="5"/> <!-- Holy -->
+  <set name="hitTime" val="1000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="reuseDelay" val="4000"/> <!-- Guess - skill has reuse like Might of Heaven -->
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="750"/>
+  <set name="effectRange" val="1250"/>
   <for>
   </for>
 </skill>
@@ -276,9 +299,16 @@
   </for>
 </skill>
 <skill id="1526" levels="3" name="Steal Mana">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#power"> 41.0 51.0 59.0 </table>
+  <table name="#magicLvl"> 46 56 64 </table>
+  <table name="#chance"> 5 7 9 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="MANARECHARGE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="chanceType" val="ON_HIT"/>
+  <set name="activationChance" val="#chance"/>
   <set name="castRange" val="-1"/>
   <for>
   </for>
