@@ -24,6 +24,7 @@ class Quest (JQuest) :
         st.takeItems(9817,5)
         st.takeItems(9815,3)
         st.takeItems(57,7500000)
+        htmltext = ""
         st.giveItems(Angel_Bracelet,1)
         st.exitQuest(1)
       else :
@@ -38,6 +39,7 @@ class Quest (JQuest) :
         st.takeItems(9817,5)
         st.takeItems(9815,3)
         st.takeItems(57,7500000)
+        htmltext = ""
         st.giveItems(Devil_Bracelet,1)
         st.exitQuest(1)
       else :
