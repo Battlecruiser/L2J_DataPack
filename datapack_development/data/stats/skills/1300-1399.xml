@@ -1807,7 +1807,7 @@
   <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
   <for>
-     <effect count="5" name="Fear" time="3" val="0">
+     <effect count="8" name="Fear" time="2" val="0">
        <mul order="0x30" stat="runSpd" val="1.52"/>
      </effect>
   </for>
@@ -1866,7 +1866,7 @@
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
   <for>
-    <effect count="5" name="Fear" time="3" val="0"/>
+    <effect count="8" name="Fear" time="2" val="0"/>
   </for>
 </skill>
 <skill id="1382" levels="5" name="Mass Gloom">
