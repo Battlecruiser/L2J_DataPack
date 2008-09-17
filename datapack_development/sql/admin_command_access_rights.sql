@@ -285,6 +285,7 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_move_defenders','1'),
 ('admin_spawn_doors','1'),
 ('admin_endsiege','1'),
+('admin_setsiegetime','1'),
 ('admin_startsiege','1'),
 ('admin_setcastle','1'),
 -- ##################
