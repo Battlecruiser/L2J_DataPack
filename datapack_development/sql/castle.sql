@@ -7,19 +7,19 @@ CREATE TABLE IF NOT EXISTS `castle` (
   `taxPercent` INT NOT NULL default 15,
   `treasury` INT NOT NULL default 0,
   `siegeDate` DECIMAL(20,0) NOT NULL default 0,
-  `siegeDayOfWeek` INT NOT NULL default 7,
-  `siegeHourOfDay` INT NOT NULL default 20,
+  `regTimeOver` enum('true','false') DEFAULT 'true' NOT NULL,
+  `regTimeEnd` DECIMAL(20,0) NOT NULL default 0,
   PRIMARY KEY (`name`),
   KEY `id` (`id`)
 );
 
 INSERT IGNORE INTO `castle` VALUES 
-(1,'Gludio',0,0,0,7,20),
-(2,'Dion',0,0,0,7,20),
-(3,'Giran',0,0,0,1,16),
-(4,'Oren',0,0,0,1,16),
-(5,'Aden',0,0,0,7,20),
-(6,'Innadril',0,0,0,1,16),
-(7,'Goddard',0,0,0,1,16),
-(8,'Rune',0,0,0,7,20),
-(9,'Schuttgart',0,0,0,7,20);
+(1,'Gludio',0,0,0,'true',0),
+(2,'Dion',0,0,0,'true',0),
+(3,'Giran',0,0,0,'true',0),
+(4,'Oren',0,0,0,'true',0),
+(5,'Aden',0,0,0,'true',0),
+(6,'Innadril',0,0,0,'true',0),
+(7,'Goddard',0,0,0,'true',0),
+(8,'Rune',0,0,0,'true',0),
+(9,'Schuttgart',0,0,0,'true',0);
