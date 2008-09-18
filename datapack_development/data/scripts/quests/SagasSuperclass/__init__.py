@@ -500,6 +500,7 @@ class Quest (JQuest) :
           if cond == 17 :
               st2 = self.findRightState(npc.getObjectId())
               if st2 :
+                  player.setLastQuestNpcObject(npc.getObjectId())
                   if st == st2 :
                       if st.getInt("Tab") == 1 :
                           if st.getInt("Quest0") == 0 :
