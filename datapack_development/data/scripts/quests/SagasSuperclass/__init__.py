@@ -8,6 +8,9 @@ from net.sf.l2j.gameserver.ai 						import CtrlIntention
 from net.sf.l2j.gameserver.network.serverpackets 	import MagicSkillUse
 from net.sf.l2j.gameserver.model 					import L2World
 from net.sf.l2j.util 								import Rnd
+from java.util.logging import Level
+from java.util.logging import LogRecord
+from java.util.logging import Logger
 
 qn = "SagasSuperclass"
 Archon_Minions = range(21646,21652)
@@ -69,6 +72,7 @@ class Quest (JQuest) :
      self.Z = [0, 1, 2]
      self.Text = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
      self.Spawn_List = {}
+     _log = Logger.getLogger("SagasSuperclass")
 
  # this function is called by subclasses in order to add their own NPCs
  def registerNPCs(self) :
@@ -115,6 +119,11 @@ class Quest (JQuest) :
 
  def findRightState(self, mobObjectId) :
      st1 = None
+     if count(self.Spawn_List[mobObjectId]) == 0:
+        record = LogRecord(Level.WARNING, "Founded NPE at findRightState() - npcObjectId: "+ str(mobObjectId))
+        record.setLoggerName("SagasSuperclass")
+        _log.log(record)
+        return None
      playerName = self.Spawn_List[mobObjectId][0]      #There is a possibility for an NPE here, but only if something else is wrong in the quest
      st1 = L2World.getInstance().getPlayer(playerName)  #Therefore, placing an NPE catch here will only hide the error, not solve it.
      if st1 : st1 = st1.getQuestState(self.qn)
