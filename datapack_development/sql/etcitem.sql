@@ -7329,7 +7329,7 @@ INSERT INTO `etcitem` VALUES
 (10109,'Spellbook - Wind Vortex Slug','false','spellbook',120,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
 (10110,'Spellbook - Meteor','false','spellbook',120,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
 (10111,'Spellbook - Star Fall','false','spellbook',120,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
-(10112,'Dark Seed','false','none',120,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
+(10112,'Dark Seed','false','none',120,'stackable','wood','none',-1,0,NULL,'true','false','true','false','',''),
 (10113,'Special Bolt','false','none',6,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
 (10114,'Medicine1','false','none',5,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
 (10115,'Medicine2','false','none',5,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
