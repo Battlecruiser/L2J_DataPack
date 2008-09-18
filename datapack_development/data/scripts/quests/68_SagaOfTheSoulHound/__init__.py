@@ -16,7 +16,7 @@ class Quest (JQuest) :
      # Next, override necessary variables:
      self.NPC = [32138,31272,31269,31317,32235,31646,31648,31652,31654,31655,31657,32241]
      self.Items = [7080,9802,7081,9741,9723,9726,9729,9732,9735,9738,9719,0]
-     self.Mob = [27328,27329,27330]
+     self.Mob = [27327,27329,27328]
      self.qn = qn
      self.classid = [132,133]
      self.prevclass = [0x80,0x81]
