@@ -4,6 +4,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+from net.sf.l2j.gameserver.network.serverpackets import SocialAction
 
 qn = "220_TestimonyOfGlory"
 
@@ -44,14 +45,14 @@ DROPLIST_COND_4={
 
 # ID : [ REQUIRED, ITEM, MAX_QUANTY, CHANCE]
 DROPLIST_COND_6={
-20583  :[CHIANTAS_ORDER3, TIMAK_ORC_HEAD,   20,  50],   # Timak Orc
-20584  :[CHIANTAS_ORDER3, TIMAK_ORC_HEAD,   20,  60],   # Timak Orc Archer
-20585  :[CHIANTAS_ORDER3, TIMAK_ORC_HEAD,   20,  70],   # Timak Orc Soldier
-20586  :[CHIANTAS_ORDER3, TIMAK_ORC_HEAD,   20,  80],   # Timak Orc Warrior
-20587  :[CHIANTAS_ORDER3, TIMAK_ORC_HEAD,   20,  90],   # Timak Orc Shaman
+20583  :[CHIANTAS_ORDER3, TIMAK_ORC_HEAD,   20, 100],   # Timak Orc
+20584  :[CHIANTAS_ORDER3, TIMAK_ORC_HEAD,   20, 100],   # Timak Orc Archer
+20585  :[CHIANTAS_ORDER3, TIMAK_ORC_HEAD,   20, 100],   # Timak Orc Soldier
+20586  :[CHIANTAS_ORDER3, TIMAK_ORC_HEAD,   20, 100],   # Timak Orc Warrior
+20587  :[CHIANTAS_ORDER3, TIMAK_ORC_HEAD,   20, 100],   # Timak Orc Shaman
 20588  :[CHIANTAS_ORDER3, TIMAK_ORC_HEAD,   20, 100],   # Timak Orc Overlord
-20601  :[CHIANTAS_ORDER3, TAMLIN_ORC_SKULL, 20,  50],   # Tamlin Orc
-20602  :[CHIANTAS_ORDER3, TAMLIN_ORC_SKULL, 20,  60]    # Tamlin Orc Archer
+20601  :[CHIANTAS_ORDER3, TAMLIN_ORC_SKULL, 20, 100],   # Tamlin Orc
+20602  :[CHIANTAS_ORDER3, TAMLIN_ORC_SKULL, 20, 100]    # Tamlin Orc Archer
 }
 
 # For condition 9
@@ -421,8 +422,10 @@ class Quest (JQuest) :
        if npcId == 30571 and st.getQuestItemsCount(RITUAL_BOX) :
          htmltext = "30571-06.htm"
        elif npcId == 30565 and st.getQuestItemsCount(RITUAL_BOX) :
-         st.addExpAndSp(91457,2500)
-         st.giveItems(7562,16)
+         player.sendPacket(SocialAction(player.getObjectId(),3))
+         st.addExpAndSp(724113,48324)
+         st.giveItems(57,131360)
+         st.giveItems(7562,109)
          htmltext = "30565-02.htm"
          st.giveItems(MARK_OF_GLORY,1)
          st.takeItems(RITUAL_BOX,1)
@@ -458,7 +461,6 @@ class Quest (JQuest) :
      count = st.getQuestItemsCount(item)
      if st.getQuestItemsCount(required) and count < maxquanty :
        if npcId == 20234 :
-         if st.getRandom(4) <= 2 :
            st.giveItems(item,1)
            if count+1 == maxquanty :                        # Check if got enough number of items
              st.playSound("Itemsound.quest_middle")
@@ -494,9 +496,9 @@ class Quest (JQuest) :
            st.playSound("Itemsound.quest_itemget")
    elif cond == 9 and st.getQuestItemsCount(TANAPIS_ORDER1) and st.getQuestItemsCount(SCEPTER_OF_TANTOS) == 0 :
      if npcId in [ 20778, 20779 ] :
-       st.playSound("Itemsound.quest_before_battle")
-       #st.addSpawn(27086)
-       st.addSpawn(27086, 11839,-106261,-3550,300000)
+       #                    st.playSound("Itemsound.quest_before_battle")
+       st.addSpawn(27086)
+       #st.addSpawn(27086, 11839,-106261,-3550,300000)
        return "Revenant of Tantos Chief has spawned at X=11839 Y=-106261 Z=-3550"
        # Alternate coord. set:
        #st.addSpawn(27086,11567,-106785,-3520)
