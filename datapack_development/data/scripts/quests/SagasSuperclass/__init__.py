@@ -119,7 +119,7 @@ class Quest (JQuest) :
 
  def findRightState(self, mobObjectId) :
      st1 = None
-     if count(self.Spawn_List[mobObjectId]) == 0:
+     if self.Spawn_List.count(mobObjectId) == 0:
         record = LogRecord(Level.WARNING, "Founded NPE at findRightState() - npcObjectId: "+ str(mobObjectId))
         record.setLoggerName("SagasSuperclass")
         _log.log(record)
