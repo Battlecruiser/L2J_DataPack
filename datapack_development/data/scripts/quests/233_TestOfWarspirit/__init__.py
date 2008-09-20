@@ -6,6 +6,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+from net.sf.l2j.gameserver.network.serverpackets import SocialAction
 
 qn = "233_TestOfWarspirit"
 
@@ -56,12 +57,12 @@ DROPLIST={
 20213:[[2,3,4],"Orim",10,100,[PORTAS_EYE]],
 20214:[[2,3,4],"Orim",10,100,[EXCUROS_SCALE]],
 20215:[[2,3,4],"Orim",10,100,[MORDEOS_TALON]],
-20601:[[1],"step",13,50,[TAMLIN_ORC_HEAD]],
-20602:[[1],"step",13,50,[TAMLIN_ORC_HEAD]],
+20601:[[1],"step",13,100,[TAMLIN_ORC_HEAD]],
+20602:[[1],"step",13,100,[TAMLIN_ORC_HEAD]],
 27108:[[2],"Manakia_Queen",1,100,[HERMODTS_SKULL]],
 20581:[[2,3,4,5,6],"Perkiron",1,50,[TONARS_RIB_BONE,TONARS_SPINE,TONARS_ARM_BONE,TONARS_SKULL,TONARS_THIGH_BONE]],
 20582:[[2,3,4,5,6],"Perkiron",1,50,[TONARS_SKULL,TONARS_ARM_BONE,TONARS_RIB_BONE,TONARS_SPINE,TONARS_THIGH_BONE]],
-20158:[[2,3,4,5],"Manakia",1,50,[HERMODTS_RIB_BONE,HERMODTS_SPINE,HERMODTS_ARM_BONE,HERMODTS_THIGH_BONE]],
+20158:[[2,3,4,5],"Manakia",1,100,[HERMODTS_RIB_BONE,HERMODTS_SPINE,HERMODTS_ARM_BONE,HERMODTS_THIGH_BONE]],
 20089:[[4,5,6,7,8,9],"Racoy",1,100,[[KIRUNAS_THIGH_BONE,KIRUNAS_ARM_BONE],[KIRUNAS_SPINE,KIRUNAS_RIB_BONE],[KIRUNAS_SKULL]]],
 20090:[[4,5,6,7,8,9],"Racoy",1,100,[[KIRUNAS_THIGH_BONE,KIRUNAS_ARM_BONE],[KIRUNAS_SPINE,KIRUNAS_RIB_BONE],[KIRUNAS_SKULL]]]
 }
@@ -127,10 +128,11 @@ class Quest (JQuest) :
       st.takeItems(BRAKIS_REMAINS2,-1)
       st.takeItems(HERMODTS_REMAINS2,-1)
       st.takeItems(KIRUNAS_REMAINS2,-1)
-      st.addExpAndSp(63483,17500)
+      st.addExpAndSp(447444,30704)
       st.takeItems(TONARS_REMAINS2,-1)
       st.giveItems(MARK_OF_WARSPIRIT,1)
-      st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
+      st.getPlayer().sendPacket(SocialAction(st.getPlayer().getObjectId(),3))
+      st.giveItems(7562,92)
       htmltext = "30649-03.htm"
       for var in STATS:
         st.unset(var)
@@ -185,6 +187,7 @@ class Quest (JQuest) :
             st.giveItems(VENDETTA_TOTEM,1)
             st.setState(State.STARTED)
             st.set("progress","PART2")
+            st.set("cond","3")
           else:                                        # shows you again his List
             htmltext = "30510-06.htm"
         # Orim and his Part, he sends you out to hunt Portas, Mordeos and Excuros
@@ -200,6 +203,8 @@ class Quest (JQuest) :
             st.takeItems(EXCUROS_SCALE,-1)
             st.takeItems(MORDEOS_TALON,-1)
             st.giveItems(BRAKIS_REMAINS1,1)
+            if st.getQuestItemsCount(2887) and st.getQuestItemsCount(2901) and st.getQuestItemsCount(2910) and st.getQuestItemsCount(2894) :
+               st.set("cond","2")
             st.set("Orim","6")
           else:
             htmltext = "30630-07.htm"
@@ -223,6 +228,8 @@ class Quest (JQuest) :
             st.takeItems(KIRUNAS_THIGH_BONE,-1)
             st.takeItems(INSECT_DIAGRAM_BOOK,-1)
             st.giveItems(KIRUNAS_REMAINS1,1)
+            if st.getQuestItemsCount(2887) and st.getQuestItemsCount(2901) and st.getQuestItemsCount(2910) and st.getQuestItemsCount(2894) :
+               st.set("cond","2")
             st.set("Racoy","11")
           else:
             htmltext = "30507-07.htm"
@@ -262,6 +269,8 @@ class Quest (JQuest) :
             st.takeItems(TONARS_ARM_BONE,1)
             st.takeItems(TONARS_THIGH_BONE,1)
             st.giveItems(TONARS_REMAINS1,1)
+            if st.getQuestItemsCount(2887) and st.getQuestItemsCount(2901) and st.getQuestItemsCount(2910) and st.getQuestItemsCount(2894) :
+               st.set("cond","2")
             st.set("Perkiron","8")
           else:                    # part is finished for this npc
             htmltext = "30682-05.htm"
@@ -280,6 +289,8 @@ class Quest (JQuest) :
               st.takeItems(HERMODTS_ARM_BONE,1)
               st.takeItems(HERMODTS_THIGH_BONE,1)
               st.giveItems(HERMODTS_REMAINS1,1)
+              if st.getQuestItemsCount(2887) and st.getQuestItemsCount(2901) and st.getQuestItemsCount(2910) and st.getQuestItemsCount(2894) :
+                 st.set("cond","2")
               st.set("Manakia","7")  
             else:                                  # bring me more, because two vars are required , Manakia and Manakia_Queen
               htmltext = "30515-03.htm"
@@ -297,6 +308,7 @@ class Quest (JQuest) :
             st.giveItems(HERMODTS_REMAINS2,1)
             st.giveItems(KIRUNAS_REMAINS2,1)
             st.giveItems(TONARS_REMAINS2,1)
+            st.set("cond","5")
             st.set("step","3")
           else:                              # this part is finished for this npc
             htmltext = "30510-10.htm"
@@ -350,17 +362,23 @@ class Quest (JQuest) :
         for item in itemList:
           count = st.getQuestItemsCount(item)
           if count<maxcount:
-            st.giveItems(item,1)
+            amount = 1
+            if item in [EXCUROS_SCALE,MORDEOS_TALON]: amount = 5
+            if item == [PORTAS_EYE]: amount = 2
+            st.giveItems(item,amount)
             # spawns 5 new medusas around the dead queen *muha*
             if npcId == 27108:
               for i in range(5):
                 st.addSpawn(20158)
-            if count == maxcount-1:
+            if st.getQuestItemsCount(item) >= maxcount:
               isValue = isValue + 1
               st.playSound("ItemSound.quest_middle")
               st.set(var,str(isValue))
             else:
               st.playSound("ItemSound.quest_itemget")
+            if st.getQuestItemsCount(2881) >= 13:
+              st.set("cond","4")
+            
     return
 
 QUEST     = Quest(233,qn,"Test Of Warspirit")
