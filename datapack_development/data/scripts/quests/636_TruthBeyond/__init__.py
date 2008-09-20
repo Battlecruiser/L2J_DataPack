@@ -27,25 +27,27 @@ class Quest (JQuest) :
     elif htmltext == "32010-02.htm" :
        st.playSound("ItemSound.quest_finish")
        st.giveItems(MARK,1)
-       st.unset("cond")
        st.exitQuest(1)
     return htmltext
 
  def onTalk (self,npc,player):
    st = player.getQuestState(qn)
    htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
-   if st :
-     npcId = npc.getNpcId()
-     id = st.getState()
-     cond = st.getInt("cond")
-     if cond == 0 and id == State.CREATED:
-       if npcId == ELIYAH :
-         if player.getLevel()>72 :
-           htmltext = "31329-02.htm"
+   if not st : return htmltext
+
+   npcId = npc.getNpcId()
+   id = st.getState()
+   cond = st.getInt("cond")
+   if st.getQuestItemsCount(MARK) or st.getQuestItemsCount(8065) or st.getQuestItemsCount(8067) :
+       htmltext = "31329-mark.htm"
+       st.exitQuest(1)
+   elif id == State.CREATED:
+       if player.getLevel()>72 :
+         htmltext = "31329-02.htm"
        else:
          htmltext = "31329-01.htm"
          st.exitQuest(1)
-     elif id == State.STARTED :
+   elif id == State.STARTED :
        if npcId == ELIYAH :
          htmltext = "31329-05.htm"
        elif npcId == FLAURON :
@@ -56,9 +58,7 @@ class Quest (JQuest) :
            htmltext = "32010-03.htm"
    return htmltext
 
-
 QUEST       = Quest(636,qn,"The Truth Beyond the Gate")
-
 
 QUEST.addStartNpc(ELIYAH)
 
