@@ -949,7 +949,7 @@ public class Valakas extends L2AttackableAIScript
 				c_quest4 = attacker;
 		}
 		getRandomSkill(npc);
-		return null;
+		return super.onAttack(npc, attacker, damage, isPet);
 	}
 
     public String onKill (L2NpcInstance npc, L2PcInstance killer, boolean isPet) 

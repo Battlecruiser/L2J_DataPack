@@ -323,7 +323,7 @@ public class Baium extends L2AttackableAIScript
     		_LastAttackVsBaiumTime = System.currentTimeMillis();
     		callSkillAI(npc);
     	}
-        return null;
+		return super.onAttack(npc, attacker, damage, isPet);
     }
     
     public String onKill (L2NpcInstance npc, L2PcInstance killer, boolean isPet) 
@@ -350,6 +350,11 @@ public class Baium extends L2AttackableAIScript
 		{
 			for (L2Object obj : objs)
 			{
+				if (obj instanceof L2Character)
+				{
+					if (((L2Character) obj).getZ() < ( npc.getZ() - 100 ) && ((L2Character) obj).getZ() > ( npc.getZ() + 100 ))
+						continue;
+				}
 				if (obj instanceof L2PcInstance)
 				{
 					if (Util.checkIfInRange(9000, npc, obj, true) && !((L2Character) obj).isDead() && !((L2Character) obj).isAlikeDead())
