@@ -13247,7 +13247,7 @@ INSERT INTO skill_trees VALUES
 (57,212,5,'Fast HP Recovery',125000,52),
 (57,248,3,'Crystallize',125000,52),
 (57,148,5,'Vital Force',125000,52),
-(57,190,16,'Fatal Strike',5700,55),
+(57,190,16,'Fatal Strike',57000,55),
 (57,190,17,'Fatal Strike',57000,55),
 (57,190,18,'Fatal Strike',57000,55),
 (57,25,5,'Summon Mechanic Golem',171000,55),
