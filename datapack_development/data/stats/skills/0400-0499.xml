@@ -1936,26 +1936,23 @@
   </for>
 </skill>
 <skill id="485" levels="7" name="Disarm">
-<!--
-  Disarms a target. Weapons cannot be re-equipped while the effect lasts. Consumes 1 Soul.
-  DP side done by Rnn
--->
-  <table name="#mpConsume_Init"> 5 5 6 6 6 7 7 </table>
+  <!-- Done by Rnn -->
   <table name="#mpConsume"> 20 25 29 34 40 44 48 </table>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="40"/>
-  <set name="lvlDepend" val="2"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="3000"/>
-  <set name="reuseDelay" val="60000"/>
-  <set name="skillType" val="DISARM"/>
-  <set name="isDebuff" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <table name="#mpInitialConsume"> 5 5 6 6 6 7 7 </table>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
+  <set name="hitTime" val="1500"/>
+  <set name="isDebuff" val="true"/>
+  <set name="lvlDepend" val="1"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="60"/>
+  <set name="reuseDelay" val="60000"/>
+  <set name="skillType" val="DISARM"/>
+  <set name="target" val="TARGET_ONE"/>
   <for>
-   <effect count="1" name="Disarm" time="10" val="0"/>
+    <effect count="1" name="Disarm" time="10" val="0"/>
   </for>
 </skill>
 <skill id="486" levels="2" name="Increase Range">

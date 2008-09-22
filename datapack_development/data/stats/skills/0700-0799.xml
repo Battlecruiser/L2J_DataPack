@@ -1085,11 +1085,21 @@
   </for>
 </skill>
 <skill id="794" levels="1" name="Mass Disarm">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="1500"/>
+  <set name="isDebuff" val="true"/>
+  <set name="lvlDepend" val="1"/>
+  <set name="mpConsume" val="58"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="40"/>
+  <set name="reuseDelay" val="60000"/>
+  <set name="skillRadius" val="200"/>
+  <set name="skillType" val="DISARM"/>
+  <set name="target" val="TARGET_AURA"/>
   <for>
+    <effect count="1" name="Disarm" time="10" val="0"/>
   </for>
 </skill>
 <skill id="795" levels="1" name="Divine Knight Brandish">
