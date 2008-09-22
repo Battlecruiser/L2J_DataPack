@@ -1701,6 +1701,7 @@
 </skill>
 <skill id="282" levels="1" name="Puma Spirit Totem">
   <!-- Done by dc -->
+  <set name="magicLvl" val="40"/>
   <set name="mpConsume" val="18"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1945,6 +1946,7 @@
   </for>
 </skill>
 <skill id="292" levels="1" name="Bison Spirit Totem">
+  <set name="magicLvl" val="68"/>
   <set name="mpConsume" val="32"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1964,19 +1966,13 @@
         <using kind="Fist, Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
       </add>
       <mul order="0x30" stat="pAtk" val="1.43">
-        <and>
-          <player hp='60'/>
-        </and>
+        <player hp='60'/>
       </mul>
       <add order="0x40" stat="rCrit" val="100">
-        <and>
-          <player hp='60'/>
-        </and>
+        <player hp='60'/>
       </add>
       <add order='0x40' stat='rCrit' val='300'>
-        <and>
-          <player hp='30'/>
-        </and>
+        <player hp='30'/>
       </add>
     </effect>
   </for>
@@ -2071,9 +2067,10 @@
         <using kind="Dual Sword"/>
       </mul>
     </effect>
-  </for> 
+  </for>
 </skill>
 <skill id="298" levels="1" name="Rabbit Spirit Totem">
+  <set name="magicLvl" val="62"/>
   <set name="mpConsume" val="29"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
