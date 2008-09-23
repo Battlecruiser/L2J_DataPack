@@ -301,7 +301,7 @@ description(s) :
   <set name="soulMaxConsumeCount" val="5"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="weaponsAllowed" val="65536"/>
-  <cond msg="Can be only used when HP is 10% or lower">
+  <cond msg="Can be used when HP is below 10 percent.">
     <player hp="10"/>
   </cond>
   <for>
@@ -797,7 +797,7 @@ Description(s):
   <set name="reuseDelay" val="3600000"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
-  <cond msg="Can be only used when CP is 80% or more">
+  <cond msg="Available to use when CP is more than 80 percent.">
     <player cp="80"/>
   </cond>
   <for>

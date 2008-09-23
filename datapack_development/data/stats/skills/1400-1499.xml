@@ -449,10 +449,6 @@
   </for>
 </skill>
 <skill id="1418" levels="1" name="Celestial Shield">
-  <!--
-  Description(s):
-      Protects your target using holy powers, making it temporarily invincible.
-  -->
   <set name="mpConsume" val="60"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -674,10 +670,6 @@
   </for>
 </skill>
 <skill id="1427" levels="1" name="Flames of Invincibility">
-<!--
-  Description(s):
-      Blesses nearby allies with fire and makes them invincible. Level 2 or higher Spell Force required. Consumes 1 Magic Symbol.
--->
   <set name="itemConsumeId" val="8876"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="mpInitialConsume" val="36"/>
@@ -1108,10 +1100,6 @@
   </for>
 </skill>
 <skill id="1444" levels="1" name="Pride of Kamael">
-<!--
-  Description(s):
-  Enhance Kamael abilities. Increases P. Atk, M. Atk, and Mortal Blow chances when a Kamael-only weapon is used. Consumes 3 Souls. Usable only on Kamael party members.
--->
   <set name="power" val="0.0"/>
   <set name="mpConsume" val="44"/>
   <set name="magicLvl" val="49"/>
@@ -1128,12 +1116,14 @@
   </cond>
   <for>
     <effect count="1" name="Buff" time="180" val="0">
-      <mul order="0x30" stat="mAtk" val="1.1"/><!-- Need retail values -->
-      <mul order="0x30" stat="pAtk" val="1.1"><!-- Need retail values -->
-         <using kind="Ancient,Crossbow,Rapier"/>
+      <mul order="0x30" stat="mAtk" val="1.1"> <!-- Need retail values -->
+        <using kind="Ancient,Crossbow,Rapier"/> <!-- when a Kamael-only weapon is used. -->
       </mul>
-      <add order="0x40" stat="blowRate" val="46"><!-- Need retail values -->
-         <using kind="Ancient,Crossbow,Rapier"/>
+      <mul order="0x30" stat="pAtk" val="1.1"> <!-- Need retail values -->
+        <using kind="Ancient,Crossbow,Rapier"/>
+      </mul>
+      <add order="0x40" stat="blowRate" val="46"> <!-- Need retail values -->
+        <using kind="Ancient,Crossbow,Rapier"/> <!-- when a Kamael-only weapon is used. -->
       </add>
     </effect>
   </for>

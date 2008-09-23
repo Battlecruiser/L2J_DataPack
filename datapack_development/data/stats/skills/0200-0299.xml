@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
-<skill id="205" levels="45" name="Blunt Mastery" enchantLevels1="30" enchantLevels2="30" >
+<skill id="205" levels="45" name="Blunt Weapon Mastery" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -177,9 +177,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="pAtk" val="#pAtk">
-      <and>       
-        <using kind="Sword,Big Sword,Blunt,Big Blunt"/>
-      </and>
+      <using kind="Sword,Big Sword,Blunt,Big Blunt"/>
     </add>
   </for> 
 </skill>
@@ -875,7 +873,7 @@
     </effect>  
   </enchant1for>
 </skill>
-<skill id="257" levels="45" name="Sword Blunt Mastery">
+<skill id="257" levels="45" name="Sword Blunt Weapon Mastery">
   <table name="#pAtk"> 4.5 7.3 8.9 10.7 12.8 15.1 17.7 20.5 23.7 25.4 27.1 29.0 30.9 32.9 35.0 37.1 39.4 41.7 44.1 46.6 49.2 51.9 54.6 57.5 60.4 63.3 66.4 69.5 72.7 76.0 79.3 82.7 86.1 89.6 93.1 96.6 100.2 103.8 107.5 111.1 114.8 118.4 122.1 125.7 129.3 </table>
   <set name="weaponsAllowed" val="18444"/>
   <set name="power" val="0.0"/>
@@ -886,9 +884,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="pAtk" val="#pAtk">
-      <and>       
-        <using kind="Sword,Big Sword,Blunt,Big Blunt"/>
-      </and>
+      <using kind="Sword,Big Sword,Blunt,Big Blunt"/>
     </add>
   </for>
 </skill>
@@ -1637,6 +1633,7 @@
   <table name="#magicLvl"> 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
   <table name="#power"> 517 549 583 619 656 694 735 777 820 865 912 960 1010 1062 1115 1169 1225 1283 1342 1402 1464 1527 1591 1656 1722 1789 1857 1926 1995 2065 2135 2206 2277 2347 2417 2488 2557 </table>
   <table name="#ench1Power"> 2581 2604 2627 2650 2673 2696 2719 2743 2766 2789 2812 2835 2858 2881 2904 2927 2950 2973 2996 3019 3042 3065 3088 3111 3134 3157 3180 3204 3227 3250 </table>
+  <set name="weaponsAllowed" val="1280"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
@@ -1653,9 +1650,6 @@
   <set name="effectRange" val="400"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
-  <cond msg="An equipped hand-to-hand combat weapon is required to use this skill.">
-  <using kind="Fist, Dual Fist"/>
-  </cond>
   <for>
   </for>
 </skill>
@@ -1671,6 +1665,7 @@
   <table name="#ench1effectPower"> 51 52 53 54 55 56 57 58 59 60 61 63 64 65 66 67 68 69 70 71 72 73 74 76 77 78 79 80 81 82 </table>
   <table name="#ench2MpConsume"> 70 69 68 67 66 64 63 62 61 60 58 57 56 55 54 53 51 50 49 48 47 45 44 43 42 41 40 38 37 36 </table>
   <table name="#ench2power"> 2432 2454 2476 2497 2519 2541 2563 2584 2606 2628 2650 2671 2693 2715 2737 2758 2780 2802 2823 2845 2867 2889 2910 2932 2954 2976 2997 3019 3041 3063 </table>
+  <set name="weaponsAllowed" val="1280"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
@@ -1692,9 +1687,6 @@
   <enchant1 name="effectPower" val="#ench1effectPower"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="power" val="#ench2power"/>
-  <cond msg="An equipped hand-to-hand combat weapon is required to use this skill.">
-  <using kind="Fist, Dual Fist"/>
-  </cond>
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
@@ -1768,6 +1760,7 @@
   <table name="#magicLvl"> 34 35 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
   <table name="#power"> 501 535 570 607 646 729 773 820 868 918 971 1025 1081 1140 1200 1262 1327 1393 1461 1531 1603 1677 1753 1830 1908 1988 2070 2153 2237 2322 2408 2494 2581 2669 2757 2846 2934 3022 3109 3196 </table>
   <table name="#ench1Power"> 3225 3254 3283 3312 3340 3369 3398 3427 3456 3484 3513 3542 3571 3600 3628 3657 3686 3715 3744 3772 3801 3830 3859 3888 3916 3945 3974 4003 4032 4061 </table>
+  <set name="weaponsAllowed" val="1280"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
@@ -1789,9 +1782,6 @@
   <set name="charge_skill_id" val="50"/> <!-- Force Focus is the charger -->
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
-  <cond msg="An equipped hand-to-hand combat weapon is required to use this skill.">
-  <using kind="Fist, Dual Fist"/>
-  </cond>
   <for>
   </for>
 </skill>
@@ -2052,9 +2042,6 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="#aggro"/>
-  <cond msg="Dual Sword required.">
-    <using kind="Dual Sword"/>
-  </cond>
   <for>
     <effect count="1" name="Buff" time="60" val="0">
       <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd">

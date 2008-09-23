@@ -2332,7 +2332,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="560"/>
-  <cond>
+  <cond msg="Usable when your remaining MP is below 25 percent.">
     <player mp="25"/>
   </cond>
   <for>
