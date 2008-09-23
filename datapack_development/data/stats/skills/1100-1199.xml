@@ -901,7 +901,7 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <player hp="10"/>
+    <player hp="10"/> <!-- This skill Really have condition ? -->
   </for>
 </skill>
 <skill id="1160" levels="15" name="Slow" enchantLevels1="30" enchantLevels2="30" >

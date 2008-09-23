@@ -1445,7 +1445,7 @@
   <set name="reuseDelay" val="6000"/>
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1200"/>
-  <cond msg="You can only use Wyvern Breath when flying">
+  <cond msg="You can only use Wyvern Breath when flying"> <!-- This skill really have condition ? -->
     <player flying="true"/>
   </cond>
   <for>

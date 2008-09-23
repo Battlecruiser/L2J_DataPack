@@ -745,7 +745,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="#aggro"/>
-  <cond msg="Can be only used when HP is 30% or lower">
+  <cond msg="Only works when HP becomes 30 percent or lower.">
     <player hp="30"/>
   </cond>
   <for>
@@ -1024,38 +1024,28 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="#aggro"/>
-  <cond msg="Can be only used when HP is 30% or lower">
+  <cond msg="Usable only when HP are 30 percent or lower.">
     <player hp="30"/>
   </cond>
   <for>
     <effect name="Buff" time="90" count="1" val="0" stackOrder="1" stackType="OrcBuff">
       <add order="0x40" stat="accCombat" val="#Tab-accCombat">
-       <and>
-          <player hp='30'/>
-          <using kind="Big Sword,Big Blunt"/>
-       </and>
+        <player hp='30'/>
+        <using kind="Big Sword,Big Blunt"/>
       </add>
       <mul order="0x30" stat="pAtk" val="#onehanded">
-       <and>
-         <using kind="Sword,Blunt"/>
-       </and>
+        <using kind="Sword,Blunt"/>
       </mul>
       <mul order="0x30" stat="pAtk" val="#under-30">
-       <and>
-         <player hp='30'/>
-         <using kind="Sword,Blunt"/>
-       </and>
+        <player hp='30'/>
+        <using kind="Sword,Blunt"/>
       </mul>
       <mul order="0x30" stat="pAtk" val="#twohanded">
-        <and>
-         <using kind="Big Sword,Big Blunt,Pole"/>
-       </and>
+        <using kind="Big Sword,Big Blunt,Pole"/>
       </mul>
       <mul order="0x30" stat="pAtk" val="#under-30">
-       <and>
-         <player hp='30'/>
-         <using kind="Big Sword,Big Blunt,Pole"/>
-       </and>
+        <player hp='30'/>
+        <using kind="Big Sword,Big Blunt,Pole"/>
       </mul>
     </effect>
   </for>
@@ -1072,7 +1062,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="181"/>
-  <cond>
+  <cond msg="Only usable if HP is 10 percent or lower.">
     <player hp="10"/>
   </cond>
   <for>

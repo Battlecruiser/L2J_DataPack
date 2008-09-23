@@ -348,7 +348,9 @@
   <set name="target" val="TARGET_SELF"/>
   <for>
     <effect count="1" name="Buff" time="60" val="0">
-      <mul order="0x30" stat="sDef" val="1.3"/>
+      <mul order="0x30" stat="sDef" val="1.3">
+        <using kind="Shield"/>
+      </mul>  
     </effect>
   </for>
 </skill>

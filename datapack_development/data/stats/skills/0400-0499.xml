@@ -151,7 +151,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <cond msg="Can be only used when HP is 30% or lower">
+  <cond msg="This skill is only available when your HP is at 30 percent or lower.">
     <player hp="30"/>
   </cond>
   <for>
@@ -163,14 +163,10 @@
       <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
       <mul order="0x30" stat="gainHp" val="0.2"/>
       <add order="0x40" stat="rCrit" val="#rCrit">
-        <and>
-          <using kind="Sword,Big Sword,Pole"/>
-        </and>
+        <using kind="Sword,Big Sword,Pole"/>
       </add>
       <mul order="0x30" stat="cAtk" val="#cAtk">
-        <and>
-          <using kind="Blunt,Big Blunt,Fist,Dual Fist"/>
-        </and>
+        <using kind="Blunt,Big Blunt,Fist,Dual Fist"/>
       </mul>
     </effect>
   </for>
@@ -331,19 +327,19 @@
   <set name="effectRange" val="-1"/>
   <set name="reuseDelay" val="300000"/>
   <set name="hitTime" val="2000"/>
-  <cond msg="Bow required.">
+  <cond msg="Requires a bow.">
     <using kind="Bow"/>
   </cond>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
       <add order="0x40" stat="pAtk" val="#atk">
-        <using kind="Bow"/>
+        <using kind="Bow"/> <!-- when arrows are used. -->
       </add>
       <mul order="0x30" stat="pAtkSpd" val="1.20">
-        <using kind="Bow"/>
+        <using kind="Bow"/> <!-- when arrows are used. -->
       </mul>
       <sub order="0x40" stat="pAtkRange" val="300">
-        <using kind="Bow"/>
+        <using kind="Bow"/> <!-- when arrows are used. -->
       </sub>
     </effect>
   </for>
@@ -353,7 +349,6 @@
   <table name="#pAtk"> 124 134 145 155 166 177 188 199 </table>
   <table name="#Tab-accCombat"> 1 1 2 2 2 3 3 3 </table>
   <table name="#Tab-cAtk"> 1.15 1.15 1.15 1.17 1.17 1.17 1.20 1.20 </table>
-  <set name="weaponsAllowed" val="32"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -363,19 +358,22 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <cond msg="Requires a bow.">
+    <using kind="Bow"/>
+  </cond>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
       <mul order="0x30" stat="pAtkSpd" val="0.8">
-        <using kind="Bow"/>
+        <using kind="Bow"/> <!-- when using a bow. -->
       </mul>
       <add order="0x40" stat="pAtk" val="#pAtk">
-        <using kind="Bow"/>
+        <using kind="Bow"/> <!-- when using a bow. -->
       </add>
       <add order="0x40" stat="accCombat" val="#Tab-accCombat">
-        <using kind="Bow"/>
+        <using kind="Bow"/> <!-- when using a bow. -->
       </add>
       <mul order="0x30" stat="cAtk" val="#Tab-cAtk">
-        <using kind="Bow"/>
+        <using kind="Bow"/> <!-- when using a bow. -->
       </mul>
     </effect>
   </for>
@@ -476,7 +474,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <cond msg="Can be only used when HP is 30% or lower">
+  <cond msg="This skill is only available when your HP is at 30 percent or lower.">
     <player hp="30"/>
   </cond>
   <for>
@@ -486,14 +484,10 @@
       <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
       <mul order="0x30" stat="gainHp" val="0.5"/>
       <add order="0x40" stat="rCrit" val="#rCrit">
-        <and>
-          <using kind="Sword,Big Sword,Pole"/>
-        </and>
+        <using kind="Sword,Big Sword,Pole"/>
       </add>
       <mul order="0x30" stat="cAtk" val="#cAtk">
-        <and>
-          <using kind="Blunt,Big Blunt,Fist,Dual Fist"/>
-        </and>
+        <using kind="Blunt,Big Blunt,Fist,Dual Fist"/>
       </mul>
     </effect>
   </for>
@@ -531,7 +525,9 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="#mpConsume">
-      <add order="0x40" stat="accCombat" val="#Tab-accCombat"/>
+      <add order="0x40" stat="accCombat" val="#Tab-accCombat">
+        <using kind="Pole"/>
+      </add>
     </effect>
   </for>
 </skill>
@@ -695,14 +691,10 @@
   <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="pAtk" val="80">
-      <and>       
-        <using kind="Sword,Big Sword,Blunt,Big Blunt,Pole,Dual Sword,Fist,Dual Fist"/>
-      </and>
+      <using kind="Sword,Big Sword,Blunt,Big Blunt,Pole,Dual Sword,Fist,Dual Fist"/>
     </add>
     <mul order="0x30" stat="maxCp" val="1.05">
-      <and>       
-        <using kind="Sword,Big Sword,Blunt,Big Blunt,Pole,Dual Sword,Fist,Dual Fist"/>
-      </and>
+      <using kind="Sword,Big Sword,Blunt,Big Blunt,Pole,Dual Sword,Fist,Dual Fist"/>
     </mul>
   </for>
 </skill>
@@ -743,23 +735,17 @@
     <add order="0x40" stat="pAtk" val="70">
       <using kind="Dagger"/>
     </add>
-    <mul order="0x30" stat="blowRate" val="1.1"> <!-- Blow land rate +10% from front -->>
-      <and>
-        <player front="True"/>
-      </and>
+    <mul order="0x30" stat="blowRate" val="1.1"> <!-- Blow land rate +10% from front -->
+      <player front="True"/>
     </mul>
-    <mul order="0x30" stat="blowRate" val="1.1"> <!-- Blow land rate +10% from side -->>
-      <and>
-        <player front="False"/>
-        <player behind="False"/>
-      </and>
+    <mul order="0x30" stat="blowRate" val="1.1"> <!-- Blow land rate +10% from side -->
+      <player front="False"/>
+      <player behind="False"/>
     </mul>
-    <mul order="0x30" stat="blowRate" val="1.2"> <!-- Blow land rate +20% from back-->>
-      <and>
-        <player behind="True"/>
-      </and>
+    <mul order="0x30" stat="blowRate" val="1.2"> <!-- Blow land rate +20% from back -->
+      <player behind="True"/>
     </mul>
- </for>
+  </for>
 </skill>
 <skill id="433" levels="1" name="Arcane Roar">
   <!-- Needs to be verified -->
@@ -943,12 +929,7 @@
   </for>
 </skill>
 <skill id="442" levels="1" name="Sonic Barrier">
-  <!--
-  Description(s):
-      Uses sonic force to create a temporary protective barrier that is impervious to normal strikes, skills, buffs/debuffs.
-      An equipped dual-sword weapon is required to use this skill. Level 5 Sonic Focus charge required.
-  -->
-  <set name="num_charges" val="5"/>  
+  <set name="num_charges" val="5"/>
   <set name="charge_skill_id" val="8"/>
   <set name="weaponsAllowed" val="512"/>
   <set name="mpConsume" val="65"/>
@@ -961,15 +942,11 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-     <effect count="1" name="Invincible" time="10" val="0"/>
+    <effect count="1" name="Invincible" time="10" val="0"/>
   </for>
 </skill>
 <skill id="443" levels="1" name="Force Barrier">
-  <!--
-      Description(s):
-      Uses spiritual forces to create a temporary protective barrier that is impervious to normal strikes, skills, buffs/debuffs. 
-      An equipped hand-to-hand combat weapon is required to use this skill. Level 4 Focused Force charge required.
-  -->
+  <set name="weaponsAllowed" val="1280"/>
   <set name="mpConsume" val="72"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -981,9 +958,6 @@
   <set name="effectRange" val="-1"/>
   <set name="num_charges" val="4"/>
   <set name="charge_skill_id" val="50"/>
-  <cond msg="An equipped hand-to-hand combat weapon is required to use this skill.">
-  <using kind="Fist, Dual Fist"/>
-  </cond>
   <for>
     <effect count="1" name="Invincible" time="10" val="0"/>
   </for>
@@ -1120,18 +1094,6 @@
   </for>
 </skill>
 <skill id="450" levels="10" name="Banish Seraph" enchantLevels1="30">
-<!--
-      Lvl 1 - Strikes fear into an angel, causing it to flee. Lethal Strike is possible. Consumes 5 Soul Ores.
-      Lvl 2 - Strikes fear into an angel, causing it to flee. Lethal Strike is possible. Consumes 6 Soul Ores.
-      Lvl 3 - Strikes fear into an angel, causing it to flee. Lethal Strike is possible. Consumes 7 Soul Ores.
-      Lvl 4 - Strikes fear into an angel, causing it to flee. Lethal Strike is possible. Consumes 7 Soul Ores.
-      Lvl 5 - Strikes fear into an angel, causing it to flee. Lethal Strike is possible. Consumes 8 Soul Ores.
-      Lvl 6 - Strikes fear into an angel, causing it to flee. Lethal Strike is possible. Consumes 8 Soul Ores.
-      Lvl 7 - Strikes fear into an angel, causing it to flee. Lethal Strike is possible. Consumes 9 Soul Ores.
-      Lvl 8 - Strikes fear into an angel, causing it to flee. Lethal Strike is possible. Consumes 9 Soul Ores.
-      Lvl 9 - Strikes fear into an angel, causing it to flee. Lethal Strike is possible. Consumes 10 Soul Ores.
-      Lvl 10 - Strikes fear into an angel, causing it to flee. Lethal Strike is possible. Consumes 10 Soul Ores.
--->
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <table name="#ench1MpConsume"> 66 65 64 63 62 61 60 58 57 56 55 54 53 52 51 49 48 47 46 45 44 43 41 40 39 38 37 36 35 34 </table>
@@ -1153,19 +1115,14 @@
   <set name="effectRange" val="550"/>
   <enchant1 name="mpConsume" val="#ench1MpConsume"/>
   <cond msg="Banish Seraph cannot be used due to unsuitable terms.">
-  <target race_id="7"/>
+    <target race_id="7"/>
   </cond>
   <for>
     <effect count="8" name="Fear" time="2" val="0"/>
   </for>
 </skill>
 <skill id="451" levels="2" name="Sonic Move">
-  <!--
-  Values need checking
-  Description(s):
-      Lvl 1 - A Sonic Force detonation significantly increases your speed. Level 2 Sonic Force charge required. An equipped dual-sword weapon is required to use this skill. Effect 1.
-      Lvl 2 - A Sonic Force detonation significantly increases your speed. Level 3 Sonic Force charge required. An equipped dual-sword weapon is required to use this skill. Effect 2.
-  -->
+  <set name="weaponsAllowed" val="512"/>
   <table name="#charges"> 2 3 </table>
   <table name="#spd"> 1.25 1.58 </table>
   <table name="#mpConsume"> 29 32 </table>
@@ -1180,9 +1137,6 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isMagic" val="false"/>
-  <cond msg="An equipped dual-sword weapon is required to use this skill.">
-    <using kind="Dual Sword"/>
-  </cond>
   <for>
     <effect name="Buff" time="15" count="1" val="0" stackOrder="#spd" stackType="speed_up_special"> <!-- changed to 15s duration - retail info -->
       <mul order="0x30" stat="runSpd" val="#spd"/>
@@ -1660,10 +1614,6 @@
   </for>
 </skill>
 <skill id="472" levels="45" name="Ancient Sword Mastery">
-<!--
-  Description(s):
-      Increases P. Atk. when using two-handed ancient sword weapons.
--->
   <table name="#pAtk"> 4.5 7.3 8.9 10.7 12.8 15.1 17.7 20.5 23.7 25.4 27.1 29.0 30.9 32.9 35.0 37.1 39.4 41.7 44.1 46.6 49.2 51.9 54.6 57.5 60.4 63.3 66.4 69.5 72.7 76.0 79.3 82.7 86.1 89.6 93.1 96.6 100.2 103.8 107.5 111.1 114.8 118.4 122.1 125.7 129.3 </table> <!-- custom values from sword/blunt mastery -->
   <set name="weaponsAllowed" val="32768"/>
   <set name="power" val="0.0"/>
@@ -1674,17 +1624,11 @@
   <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="pAtk" val="#pAtk">
-      <and>       
-        <using kind="Ancient"/>
-      </and>
+      <using kind="Ancient"/>
     </add>
   </for> 
 </skill>
 <skill id="473" levels="45" name="Crossbow Mastery">
-<!--
-  Description(s):
-      Increases P. Atk. when using a crossbow.
--->
   <table name="#pAtk"> 10.3 32.8 45.2 48.9 61.1 65.6 80.9 86.5 105.1 111.9 178.8 189.9 201.4 213.5 226.0 239.1 252.7 266.7 281.3 296.4 311.9 328.0 344.5 361.6 379.1 397.0 415.4 434.3 453.5 473.2 493.1 513.5 534.2 555.1 576.3 597.8 619.4 641.2 663.1 685.0 707.1 729.1 751.0 772.9 794.6 </table> <!-- custom values from bow mastery -->
   <set name="weaponsAllowed" val="65536"/>
   <set name="power" val="0.0"/>
@@ -1695,17 +1639,11 @@
   <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="pAtk" val="#pAtk">
-      <and>       
-        <using kind="Crossbow"/>
-      </and>
+      <using kind="Crossbow"/>
     </add>
   </for> 
 </skill>
 <skill id="474" levels="45" name="Rapier Mastery">
-<!--
-  Description(s):
-      Increases P. Atk. when using rapiers.
--->
   <table name="#pAtk"> 3.6 6 7.4 9 10.8 12.8 15.1 17.6 20.3 21.8 23.4 25 26.6 28.4 30.2 32.1 34.1 36.1 38.2 40.4 42.7 45 47.4 49.9 52.4 55 57.7 60.4 63.2 66.1 69.0 71.9 74.9 78.0 81.1 84.2 87.3 90.5 93.7 96.8 100.0 103.2 106.4 109.6 112.8 </table> <!-- custom values from dagger mastery -->
   <set name="weaponsAllowed" val="131072"/>
   <set name="power" val="0.0"/>
@@ -1716,9 +1654,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="pAtk" val="#pAtk">
-      <and>       
-        <using kind="Rapier"/>
-      </and>
+      <using kind="Rapier"/>
     </add>
   </for> 
 </skill>
@@ -2038,17 +1974,12 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <cond msg="Crossbow required.">
-    <using kind="Crossbow"/>
-  </cond>
   <for>
-  <effect count="1" name="Buff" time="1200" val="0">
-    <add order="0x40" stat="pAtkSpd" val="#patkspd">
-      <and>
+    <effect count="1" name="Buff" time="1200" val="0">
+      <add order="0x40" stat="pAtkSpd" val="#patkspd">
         <using kind="Crossbow"/>
-      </and>
-    </add>
-  </effect>
+      </add>
+    </effect>
   </for>
 </skill>
 <skill id="491" levels="1" name="Not In Use">
