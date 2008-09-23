@@ -208,7 +208,9 @@
   <for>
     <!-- retail value: 13HP/sec; stat update every 2 units (1 1/3 sec) -->
     <effect count="0x7fffffff" name="DamOverTime" time="1" val="13">
-      <mul order="0x30" stat="pAtkSpd" val="1.25"/>
+      <mul order="0x30" stat="pAtkSpd" val="1.25">
+        <using kind="Fist, Dual Fist"/>
+      </mul>  
     </effect>
   </for>
 </skill>
