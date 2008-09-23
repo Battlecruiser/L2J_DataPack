@@ -1731,15 +1731,28 @@
   </for>
 </skill>
 <skill id="1478" levels="2" name="Protection Instinct">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by Misanthrope -->
+  <table name="#magicLvl"> 46 60 </table>
+  <table name="#mpConsume"> 82 110 </table>
+  <table name="#mDef"> 800 1350 </table> <!-- Guessing Lvl 1 -->
+  <table name="#pDef"> 1200 1800 </table> <!-- Guessing Lvl 1 -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="2500"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="reuseDelay" val="600000"/> <!-- Needs to be verified 8-10 minutes -->
+  <set name="skillRadius" val="1000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_PARTY"/>
   <for>
+    <effect name="Buff" time="10" count="1" val="0" stackOrder="1" stackType="pDefSpec">
+      <add order="0x40" stat="mDef" val="#mDef"/>
+      <add order="0x40" stat="pDef" val="#pDef"/>
+    </effect>
   </for>
 </skill>
 <skill id="1479" levels="3" name="Magic Impulse">
