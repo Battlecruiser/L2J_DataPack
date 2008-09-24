@@ -1691,26 +1691,37 @@
    </for>
  </skill>
 <skill id="1476" levels="3" name="Appetite for Destruction">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by DJ MELERIX -->
+  <table name="#magicLvl"> 40 49 58 </table>
+  <table name="#mpConsume"> 70 88 107 </table>
+  <table name="#pAtk"> 196 246 296 </table> <!-- Guessing Lvl 1 & 2 -->
+  <table name="#rCrit"> 38 48 58 </table> <!-- Guessing Lvl 1 & 2 -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="2500"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="reuseDelay" val="600000"/> <!-- Needs to be verified 8-10 minutes -->
+  <set name="skillRadius" val="1000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_PARTY"/>
   <for>
+    <effect name="Buff" time="10" count="1" val="0">
+      <add order="0x40" stat="pAtk" val="#pAtk"/>
+      <add order="0x40" stat="rCrit" val="#rCrit"/>
+      <!-- Missing Critical Damage +? -->
+    </effect>
   </for>
 </skill>
 <skill id="1477" levels="3" name="Vampiric Impulse">
-<!--
-  Description(s)
-     Party members absorb some HP from damage inflicted on enemies. Excludes damage from skill or ranged attacks. Consumes 5 soul.
--->
+  <!-- Needs to be verified -->
   <table name="#mpConsume_Init"> 15 18 20 </table>
-  <table name="#mpConsume"> 85 97 107</table>
-  <table name="#Tab-absorbDam"> 6 7 8</table>
-  <table name="#aggro"> 418 549 611</table>
+  <table name="#mpConsume"> 85 97 107 </table>
+  <table name="#Tab-absorbDam"> 6 7 8 </table>
+  <table name="#aggro"> 418 549 611 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
@@ -1756,15 +1767,29 @@
   </for>
 </skill>
 <skill id="1479" levels="3" name="Magic Impulse">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by DJ MELERIX -->
+  <table name="#magicLvl"> 55 62 68 </table>
+  <table name="#mpConsume"> 100 115 127 </table>
+  <table name="#mAtkSpd"> 1.10 1.12 1.15 </table> <!-- Guessing Lvl 1 & 2 -->
+  <table name="#mAtk"> 235 285 335 </table> <!-- Guessing Lvl 1 & 2 -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="2500"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="reuseDelay" val="600000"/> <!-- Needs to be verified 8-10 minutes -->
+  <set name="skillRadius" val="1000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_PARTY"/>
   <for>
+    <effect name="Buff" time="10" count="1" val="0">
+      <mul order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
+      <add order="0x40" stat="mAtk" val="#mAtk"/>
+      <!-- Missing Magic Critical Rate +? -->
+    </effect>
   </for>
 </skill>
 <skill id="1480" levels="1" name="Soul Harmony">
