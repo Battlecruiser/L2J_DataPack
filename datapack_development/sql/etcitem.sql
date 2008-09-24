@@ -7662,7 +7662,7 @@ INSERT INTO `etcitem` VALUES
 (10646,'Fine White Cubic Piece','false','none',0,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
 (10647,'Fine Black Cubic Piece','false','none',0,'stackable','wood','none',-1,0,NULL,'true','true','true','true','',''),
 (10649,'Elixir','false','none',180,'assert','paper','none',-1,0,0,'true','true','true','true','CT2Item','none'),
-(10650,'Adventurer\'s Scroll of Escape','false','scroll',120,'normal','paper','none',-1,0,0,'true','true','true','true','CT2Item','none'),
+(10650,'Adventurer\'s Scroll of Escape','false','scroll',120,'stackable','paper','none',-1,0,0,'true','true','true','true','CT2Item','none'),
 (10651,'Teleporter Transformation Scroll (Event)','false','none',120,'normal','paper','none',-1,0,0,'true','true','true','true','CT2Item','none'),
 (10652,'Teleporter\'s Tear (Event)','false','none',120,'normal','paper','none',-1,0,0,'true','true','true','true','CT2Item','none'),
 (10653,'Guard Transformation Scroll (Event)','false','none',120,'normal','paper','none',-1,0,0,'true','true','true','true','CT2Item','none'),
