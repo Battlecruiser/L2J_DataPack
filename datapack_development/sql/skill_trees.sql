@@ -13674,7 +13674,7 @@ INSERT INTO skill_trees VALUES
 (106,454,1,'Symbol of Defense',150000000,80),
 (106,779,1,'Summon Smart Cubic',150000000,80),
 (107,328,1,'Wisdom',12500000,76),
-(107,765,1,'Dance of Blade Storm',0,75),
+(107,765,1,'Dance of Blade Storm',0,76),
 (107,329,1,'Health',12500000,76),
 (107,366,1,'Dance of Shadows',14670000,77),
 (107,367,1,'Dance of Medusa',14670000,77),
