@@ -561,9 +561,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="pAtk" val="1.08"> <!-- Archery P. Atk. +8% -->
-      <and>
-        <using kind="Bow,Crossbow"/>
-      </and>
+      <using kind="Bow,Crossbow"/>
     </mul>
     <add order="0x40" stat="maxMp" val="240"/> <!-- MP +240 -->
     <add order="0x40" stat="maxLoad" val="5759"/> <!-- Weight increased plus the point at which a weight penalty is applied +5759 -->
@@ -1369,9 +1367,7 @@
     <mul order="0x30" stat="pAtkSpd" val="1.03"/> <!-- Atk. Spd. +3% -->
     <add order="0x40" stat="regMp" val="0.51"/> <!-- MP regen per tick +0.51 -->
     <add order="0x40" stat="rCrit" val="220"> <!-- Critical +220 from behind target -->
-      <and>
-        <player behind="True"/>
-      </and>
+      <player behind="True"/>
     </add>
     <mul order="0x30" stat="pvpPhysDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
     <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->

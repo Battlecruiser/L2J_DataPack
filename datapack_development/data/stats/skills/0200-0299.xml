@@ -659,14 +659,10 @@
     <mul order="0x30" stat="pAtk" val="#mulpAtk"/>
     <mul order="0x30" stat="mAtk" val="#mulmAtk"/>
     <mul order="0x30" stat="mAtkSpd" val="0.7">
-      <and>
-        <using kind="Bow,Pole"/>
-      </and>
+      <using kind="Bow,Pole"/>
     </mul>
     <sub order="0x40" stat="accCombat" val="9">
-      <and>
-        <using kind="Bow,Pole"/>
-      </and>
+      <using kind="Bow,Pole"/>
     </sub>
   </for>
 </skill>
@@ -687,14 +683,10 @@
     <mul order="0x30" stat="pAtk" val="#mulpAtk"/>
     <mul order="0x30" stat="mAtk" val="#mulmAtk"/>
     <mul order="0x30" stat="mAtkSpd" val="0.7">
-      <and>
-        <using kind="Bow,Pole"/>
-      </and>
+      <using kind="Bow,Pole"/>
     </mul>
     <sub order="0x40" stat="accCombat" val="9">
-      <and>
-        <using kind="Bow,Pole"/>
-      </and>
+      <using kind="Bow,Pole"/>
     </sub>
   </for>
 </skill>
@@ -744,7 +736,7 @@
     </mul>
     <mul order="0x30" stat="pAtkSpd" val="1.25">
       <and>
-      <using kind="Light"/>
+        <using kind="Light"/>
         <not>
           <using kind="Heavy,Magic"/>
         </not>
