@@ -13593,7 +13593,7 @@ INSERT INTO skill_trees VALUES
 (99,779,1,'Summon Smart Cubic',150000000,80),
 (100,329,1,'Health',12500000,76),
 (100,328,1,'Wisdom',12500000,76),
-(100,764,1,'Song of Wind Storm',0,75),
+(100,764,1,'Song of Wind Storm',0,76),
 (100,426,1,'Battle Force',14670000,77),
 (100,349,1,'Song of Renewal',14670000,77),
 (100,363,1,'Song of Meditation',14670000,77),
