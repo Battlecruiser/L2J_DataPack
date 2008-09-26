@@ -972,14 +972,10 @@
       <add order="0x40" stat="rEvas" val="4"/>
       <mul order="0x30" stat="pAtkSpd" val="1.20"/>
       <mul order="0x30" stat="cAtk" val="1.2">
-        <and>
-          <player behind="True"/>
-        </and>
+        <player behind="True"/>
       </mul>
       <basemul order="0x30" stat="rCrit" val="0.2">
-        <and>
-          <player behind="True"/>
-        </and>
+        <player behind="True"/>
       </basemul>
       <mul order="0x30" stat="debuffVuln" val="0.9"/>
     </effect>

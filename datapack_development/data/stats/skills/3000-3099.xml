@@ -243,9 +243,7 @@
   <set name="target" val="TARGET_SELF"/>
   <for>
     <mul order="0x30" stat="rCrit" val="#rCrit">
-      <and>
-        <player behind="True"/>
-      </and>
+      <player behind="True"/>
     </mul>
   </for>
 </skill>
@@ -264,9 +262,7 @@
   <set name="target" val="TARGET_SELF"/>
   <for>
     <mul order="0x30" stat="rCrit" val="#rCrit">
-      <and>
-        <player behind="True"/>
-      </and>
+      <player behind="True"/>
     </mul>
   </for>
 </skill>
@@ -1017,9 +1013,7 @@
   <set name="target" val="TARGET_SELF"/>
   <for>
     <mul order="0x30" stat="rCrit" val="#rCrit">
-      <and>
-        <player behind="True"/>
-      </and>
+      <player behind="True"/>
     </mul>
     <mul order="0x30" stat="pvpPhysDmg" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/>

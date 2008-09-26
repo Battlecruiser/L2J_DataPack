@@ -1909,9 +1909,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="pAtkRange" val="#range">
-      <and>       
-        <using kind="Crossbow"/>
-      </and>
+      <using kind="Crossbow"/>
     </add>
   </for>
 </skill>
