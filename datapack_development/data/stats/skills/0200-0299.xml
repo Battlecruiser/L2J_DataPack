@@ -2006,9 +2006,8 @@
   </for>
 </skill>
 <skill id="296" levels="1" name="Chameleon Rest">
-  <table name="#mpConsume"> 9 </table> 
   <set name="power" val="0.0"/>
-  <set name="mpConsume" val="#mpConsume"/>
+  <set name="mpConsume" val="9"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
