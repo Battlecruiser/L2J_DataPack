@@ -613,7 +613,7 @@ class Quest (JQuest) :
                         st1.playSound("ItemSound.quest_middle")
                         st1.giveItems(st1.getQuest().Items[5],1)
                         st1.set("cond","7")
-    elif st :
+    elif st and npcId != self.Mob[2]:
         st2 = self.findRightState(npc.getObjectId())
         if not st2 : return
         cond = st.getInt("cond")
