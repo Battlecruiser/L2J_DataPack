@@ -172,54 +172,59 @@
   </for>
 </skill>
 <skill id="407" levels="10" name="Psycho Symphony">
-  <table name="#mpConsume"> 78 84 87 90 93 96 99 102 105 107</table>
+  <table name="#debuff"> 0.90 0.90 0.90 0.85 0.85 0.80 0.80 0.75 0.75 0.70 </table>
+  <table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74 </table>
+  <table name="#mpConsume"> 78 84 87 90 93 96 99 102 105 107 </table>
   <table name="#power"> 229 262 284 308 332 357 382 407 432 457 </table>
-  <table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74</table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="#power"/>
-  <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
-  <set name="target" val="TARGET_AURA"/>
-  <set name="skillRadius" val="150"/>
-  <set name="SSBoost" val="2.0"/>
-  <set name="reuseDelay" val="120000"/>
-  <set name="isDebuff" val="true"/>
-  <set name="hitTime" val="3000"/>
-  <set name="skillType" val="DEBUFF"/>
-  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectPower" val="60"/> <!-- Base Land Rate --> <!-- Guessing -->
   <set name="effectRange" val="-1"/>
+  <set name="effectType" val="DEBUFF"/>
+  <set name="hitTime" val="3000"/>
+  <set name="isDebuff" val="true"/>
+  <set name="lvlDepend" val="1"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="#power"/>
+  <set name="reuseDelay" val="120000"/>
+  <set name="skillRadius" val="150"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="SSBoost" val="2.0"/>
+  <set name="target" val="TARGET_AURA"/>
   <for>
-    <effect count="1" name="Debuff" time="30" val="0">
-      <mul order="0x30" stat="runSpd" val="0.5"/>
-      <mul order="0x30" stat="pAtkSpd" val="0.8"/>
-      <mul order="0x30" stat="mAtkSpd" val="0.8"/>
+    <effect count="1" name="Debuff" time="30" val="0"> <!-- Guessing Duration -->
+      <mul order="0x30" stat="runSpd" val="0.90"/>
+      <mul order="0x30" stat="pAtkSpd" val="#debuff"/>
+      <mul order="0x30" stat="mAtkSpd" val="#debuff"/>
     </effect>
   </for>
 </skill>
 <skill id="408" levels="10" name="Demonic Blade Dance">
-  <table name="#mpConsume"> 78 84 87 90 93 96 99 102 105 107</table>
+  <table name="#debuff"> 0.90 0.90 0.90 0.85 0.85 0.80 0.80 0.75 0.75 0.70 </table>
+  <table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74 </table>
+  <table name="#mpConsume"> 78 84 87 90 93 96 99 102 105 107 </table>
   <table name="#power"> 275 314 341 369 398 428 458 488 518 548 </table>
-  <table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74</table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="#power"/>
-  <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
-  <set name="target" val="TARGET_AURA"/>
-  <set name="skillRadius" val="150"/>
-  <set name="SSBoost" val="2.0"/>
-  <set name="isDebuff" val="true"/>
-  <set name="reuseDelay" val="120000"/>
-  <set name="hitTime" val="3000"/>
-  <set name="skillType" val="DEBUFF"/>
-  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectPower" val="60"/> <!-- Base Land Rate --> <!-- Guessing -->
   <set name="effectRange" val="-1"/>
-  <set name="weaponsAllowed" val="512"/>
+  <set name="effectType" val="DEBUFF"/>
+  <set name="hitTime" val="3000"/>
+  <set name="isDebuff" val="true"/>
+  <set name="lvlDepend" val="1"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="#power"/>
+  <set name="reuseDelay" val="120000"/>
+  <set name="skillRadius" val="150"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="SSBoost" val="2.0"/>
+  <set name="target" val="TARGET_AURA"/>
   <for>
-    <effect count="1" name="Debuff" time="15" val="0">
-      <mul order="0x30" stat="mAtk" val="0.65"/>
-      <mul order="0x30" stat="pAtk" val="0.65"/>
+    <effect count="1" name="Debuff" time="30" val="0"> <!-- Guessing Duration -->
+      <mul order="0x30" stat="mAtk" val="#debuff"/>
+      <mul order="0x30" stat="pAtk" val="#debuff"/>
     </effect>
   </for>
 </skill>
