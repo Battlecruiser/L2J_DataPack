@@ -81,35 +81,67 @@
   </for>
 </skill>
 <skill id="810" levels="1" name="Vanguard">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="31"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="5000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="transformId" val="312"/>
   <for>
-  </for>
+    <effect count="1" name="Transformation" time="18400" val="0">  
+     <mul order="0x30" stat="pDef" val="0.75"/> 
+     <mul order="0x30" stat="sDef" val="0.80"/>  <!-- Guess - need retail confirmation -->  
+  </effect>
+ </for> 
 </skill>
 <skill id="811" levels="1" name="Vanguard">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="31"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="5000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="transformId" val="313"/>
   <for>
+  <effect count="1" name="Transformation" time="18400" val="0">  
+     <mul order="0x30" stat="pDef" val="0.75"/> 
+     <mul order="0x30" stat="sDef" val="0.80"/>  <!-- Guess - need retail confirmation -->
+  </effect>
   </for>
 </skill>
 <skill id="812" levels="1" name="Vanguard">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="31"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="5000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="transformId" val="314"/>
   <for>
+  <effect count="1" name="Transformation" time="18400" val="0">  
+     <mul order="0x30" stat="pDef" val="0.75"/> 
+     <mul order="0x30" stat="sDef" val="0.80"/>  <!-- Guess - need retail confirmation -->
+  </effect>
   </for>
 </skill>
 <skill id="813" levels="1" name="Vanguard">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="31"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="5000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="transformId" val="315"/>
   <for>
+  <effect count="1" name="Transformation" time="18400" val="0">  
+     <mul order="0x30" stat="pDef" val="0.75"/> 
+     <mul order="0x30" stat="sDef" val="0.80"/>  <!-- Guess - need retail confirmation -->  
+  </effect>
   </for>
 </skill>
 <skill id="814" levels="43" name="Full Swing">
@@ -411,9 +443,10 @@
   </for>
 </skill>
 <skill id="838" levels="1" name="Switch Stance">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="TRANSFORMDISPEL"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="5000"/>
   <set name="castRange" val="-1"/>
   <for>
   </for>
