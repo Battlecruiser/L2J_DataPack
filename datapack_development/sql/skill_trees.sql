@@ -7284,7 +7284,7 @@ INSERT INTO skill_trees VALUES
 (30,146,16,'Anti Magic',13000,44),
 (30,146,17,'Anti Magic',13000,44),
 (30,146,18,'Anti Magic',13000,44),
-(30,1521,1,'Inquisitor',117000,44)
+(30,1521,1,'Inquisitor',117000,44),
 (30,1219,1,'Greater Group Heal',21000,48),
 (30,1219,2,'Greater Group Heal',21000,48),
 (30,1219,3,'Greater Group Heal',21000,48),
