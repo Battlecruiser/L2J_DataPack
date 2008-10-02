@@ -295,6 +295,11 @@ public class Baium extends L2AttackableAIScript
     }
     public String onAttack (L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
     {
+    	if (!_Zone.isInsideZone(attacker))
+    	{
+    		attacker.reduceCurrentHp(attacker.getCurrentHp(),attacker,false);
+    		return null;
+    	}
 		if (npc.isInvul())
 		{
 			npc.getAI().setIntention(AI_INTENTION_IDLE);
