@@ -10,7 +10,7 @@ public class InquisitorShilienElder extends L2Transformation
 	public InquisitorShilienElder()
 	{
 		// id, duration (secs), colRadius, colHeight
-		super(318, Integer.MAX_VALUE, 11.0, 25.0);
+		super(318, Integer.MAX_VALUE, 8.0, 25.0);
 	}
 	
     public void onTransform()

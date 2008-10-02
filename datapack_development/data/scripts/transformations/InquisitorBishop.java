@@ -10,7 +10,7 @@ public class InquisitorBishop extends L2Transformation
 	public InquisitorBishop()
 	{
 		// id, duration (secs), colRadius, colHeight
-		super(316, Integer.MAX_VALUE, 11.0, 25.0);
+		super(316, Integer.MAX_VALUE, 8.0, 22.0);
 	}
 	
     public void onTransform()

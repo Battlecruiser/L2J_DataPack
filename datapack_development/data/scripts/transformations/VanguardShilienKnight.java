@@ -10,7 +10,7 @@ public class VanguardShilienKnight extends L2Transformation
 	public VanguardShilienKnight()
 	{
 		// id, duration (secs), colRadius, colHeight
-		super(315, Integer.MAX_VALUE, 11.0, 25.0);
+		super(315, Integer.MAX_VALUE, 6.0, 23.0);
 	}
 	
     public void onTransform()
