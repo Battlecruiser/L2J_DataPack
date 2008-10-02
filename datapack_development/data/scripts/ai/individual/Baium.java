@@ -400,7 +400,7 @@ public class Baium extends L2AttackableAIScript
 			return;
 		}
 
-		if (_target == null || _target.isDead() || _target.isAlikeDead() || timer == null)
+		if (_target == null || _target.isDead() || _target.isAlikeDead() || timer == null || !(_Zone.isInsideZone(_target)))
 		{
 			_target = getRandomTarget(npc);
 			_skill = getRandomSkill(npc);
@@ -413,7 +413,7 @@ public class Baium extends L2AttackableAIScript
 
 		L2Character target = _target;
 		L2Skill skill = _skill;
-		if (target == null || target.isDead() || target.isAlikeDead())
+		if (target == null || target.isDead() || target.isAlikeDead() || !(_Zone.isInsideZone(target)))
 		{
 			if (timer == null)
 				startQuestTimer("skill_range", 500, npc, null, true);
