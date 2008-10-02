@@ -10,7 +10,7 @@ public class VanguardTempleKnight extends L2Transformation
 	public VanguardTempleKnight()
 	{
 		// id, duration (secs), colRadius, colHeight
-		super(314, Integer.MAX_VALUE, 11.0, 25.0);
+		super(314, Integer.MAX_VALUE, 7.0, 24.0);
 	}
 	
     public void onTransform()
