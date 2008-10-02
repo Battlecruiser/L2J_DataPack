@@ -2545,7 +2545,7 @@ INSERT INTO `weapon` VALUES
 (11833,'Standard Item - Pa\'agrian Axe','lrhand','true',990,3,3,'fine_steel','c',141,20,'blunt',4,4,0,0,0,325,0,104,-1,194400,78,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (11834,'Standard Item - Stormbringer*Raid Sword','lrhand','true',2340,3,3,'fine_steel','c',183,10,'dual',8,0,0,0,0,325,0,81,-1,207915,83,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (11835,'Standard Item - Stormbringer*Shamshir','lrhand','true',2300,3,3,'fine_steel','c',183,10,'dual',8,0,0,0,0,325,0,81,-1,207915,83,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
-(11836,'Standard Item - Stormbringer*Spirit Sword','lrhand','true',2310,3,3,'fine_steel','c',183,10,'dual',8,0,0,0,0,325,0,81,-1,207915,830,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
+(11836,'Standard Item - Stormbringer*Spirit Sword','lrhand','true',2310,3,3,'fine_steel','c',183,10,'dual',8,0,0,0,0,325,0,81,-1,207915,83,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (11837,'Standard Item - Stormbringer*Katana','lrhand','true',2320,3,3,'fine_steel','c',183,10,'dual',8,0,0,0,0,325,0,81,-1,207915,83,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (11838,'Standard Item - Ghoul\'s Staff','lrhand','true',1000,3,3,'fine_steel','c',152,20,'blunt',4,4,0,0,0,325,0,111,-1,279400,112,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (11839,'Standard Item - Great Pata','lrhand','true',1460,3,3,'fine_steel','c',190,5,'dualfist',4,4,0,0,0,325,0,83,-1,279400,112,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
