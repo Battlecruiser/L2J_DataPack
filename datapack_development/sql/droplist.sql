@@ -27758,6 +27758,13 @@ INSERT INTO `droplist` VALUES
 (29040,6654,18,54,2,68620), -- Amulet: Flames of Valakas
 (29040,6655,14,42,2,44113); -- Amulet: Slay Valakas
 
+INSERT INTO `droplist` VALUES
+(29095,6711,15,29,2,700000), -- Sealed Major Arcane Robe Part
+(29095,6684,1,1,2,71428), -- Sealed Major Arcane Robe
+(29095,6695,3,9,3,930000), -- Demon Splinter Blade
+(29095,6371,1,1,3,23810), -- Demon Splinter
+(29095,960,1,1,4,450000), -- Scroll: Enchant Armor (Grade S)
+
 -- 
 -- work in progress drops.. once chance becomes more accurate, can move into known good drops
 -- 
