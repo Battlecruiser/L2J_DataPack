@@ -529,7 +529,7 @@
   <for>
     <mul order="0x30" stat="pAtk" val="1.04"/> <!-- P. Atk. +4% -->
     <add order="0x40" stat="accCombat" val="3"/> <!-- Accuracy +3 -->
-    <mul order="0x30" stat="stunVuln" val="0.5"/> <!-- Stun Resistance +50% -->
+    <mul order="0x30" stat="stunVuln" val="0.50"/> <!-- Stun Resistance +50% -->
     <add order="0x40" stat="STR" val="2"/> <!-- STR +2 -->
     <sub order="0x40" stat="CON" val="2"/> <!-- CON -2 -->
   </for>
@@ -565,7 +565,7 @@
     </mul>
     <add order="0x40" stat="maxMp" val="240"/> <!-- MP +240 -->
     <add order="0x40" stat="maxLoad" val="5759"/> <!-- Weight increased plus the point at which a weight penalty is applied +5759 -->
-    <mul order="0x30" stat="stunVuln" val="0.5"/> <!-- Stun Resistance +50% -->
+    <mul order="0x30" stat="stunVuln" val="0.50"/> <!-- Stun Resistance +50% -->
     <add order="0x40" stat="DEX" val="1"/> <!-- DEX +1 -->
     <sub order="0x40" stat="CON" val="1"/> <!-- CON -1 -->
   </for>
@@ -599,7 +599,7 @@
     <add order="0x40" stat="maxMp" val="240"/> <!-- MP +240 -->
     <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
     <mul order="0x30" stat="regMp" val="1.08"/> <!-- MP Regeneration +8% -->
-    <mul order="0x30" stat="stunVuln" val="0.5"/> <!-- Stun Resistance +50% -->
+    <mul order="0x30" stat="stunVuln" val="0.50"/> <!-- Stun Resistance +50% -->
     <add order="0x40" stat="MEN" val="1"/> <!-- MEN +1 -->
     <sub order="0x40" stat="INT" val="1"/> <!-- INT -1 -->
   </for>
@@ -624,10 +624,7 @@
   </for>
 </skill>
 <skill id="3543" levels="1" name="Equipped with Shield">
-<!--
-  Description(s):
-      Increases maximum HP.
--->
+  <!-- Hoplon Shield Skill -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -635,14 +632,11 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <add val='126' order='0x40' stat='maxHp'/>
+    <add order="0x40" stat="maxHp" val="126"/>
   </for>
 </skill>
 <skill id="3544" levels="1" name="Equipped with Shield">
-<!--
-  Description(s):
-      Increases maximum HP.
--->
+  <!-- Brigandine Shield Skill -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -650,14 +644,11 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <add val='20' order='0x40' stat='maxHp'/>
+    <add order="0x40" stat="maxHp" val="20"/>
   </for>
 </skill>
 <skill id="3545" levels="1" name="Equipped with Shield">
-<!--
-  Description(s):
-      Increases maximum HP.
--->
+  <!-- Chain Shield Skill -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -665,14 +656,11 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <add val='198' order='0x40' stat='maxHp'/>
+    <add order="0x40" stat="maxHp" val="198"/>
   </for>
 </skill>
 <skill id="3546" levels="1" name="Equipped with Shield">
-<!--
-  Description(s):
-      Increases M. Def.
--->
+  <!-- Composite Shield Skill -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -680,14 +668,11 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul val='1.0526' order='0x30' stat='mDef'/>
+    <mul order="0x30" stat="mDef" val="1.0526"/>
   </for>
 </skill>
 <skill id="3547" levels="1" name="Equipped with Shield">
-<!--
-  Description(s):
-      Increases shield defense rate.
--->
+  <!-- Full Plate Shield Skill -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -695,14 +680,11 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul stat='rShld' order='0x30' val='1.0525'/>
+    <mul order="0x30" stat="rShld" val="1.0525"/>
   </for>
 </skill>
 <skill id="3548" levels="1" name="Equipped with Shield">
-<!--
-  Description(s):
-      Increases shield defense rate.
--->
+  <!-- Avadon Shield Skill -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -710,14 +692,11 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul stat='rShld' order='0x30' val='1.24'/>
+    <mul order="0x30" stat="rShld" val="1.24"/>
   </for>
 </skill>
 <skill id="3549" levels="1" name="Equipped with Shield">
-<!--
-  Description(s):
-      Increases shield defense rate.
--->
+  <!-- Doom Shield Skill -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -725,14 +704,11 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul stat='rShld' order='0x30' val='1.24'/>
+    <mul order="0x30" stat="rShld" val="1.24"/>
   </for>
 </skill>
 <skill id="3550" levels="1" name="Equipped with Shield">
-<!--
-  Description(s):
-      Increases shield defense rate.
--->
+  <!-- Dark Crystal Shield Skill -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -740,14 +716,11 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul stat='rShld' order='0x30' val='1.18'/>
+    <mul order="0x30" stat="rShld" val="1.18"/>
   </for>
 </skill>
 <skill id="3551" levels="1" name="Equipped with Shield">
-<!--
-  Description(s):
-      Returns damage inflicted by enemy back upon him. Not applied to damage inflicted by a skill or remote attack.
--->
+  <!-- Shield of Nightmare Skill -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -755,7 +728,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <add val='5' order='0x40' stat='reflectDam'/>
+    <add order="0x40" stat="reflectDam" val="5"/>
   </for>
 </skill>
 <skill id="3552" levels="2" name="Special Ability: PvP Damage">
@@ -791,10 +764,7 @@
   </for>
 </skill>
 <skill id="3554" levels="1" name="Equipped with Shield">
-<!--
-  Description(s):
-      Additional resistance to Poison/Bleed.
--->
+  <!-- Imperial Crusader Shield Skill -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -802,8 +772,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul val='0.2' order='0x30' stat='poisonVuln'/>
-    <mul val='0.2' order='0x30' stat='bleedVuln'/>
+    <mul order="0x30" stat="poisonVuln" val="0.20"/>
+    <mul order="0x30" stat="bleedVuln" val="0.20"/>
   </for>
 </skill>
 <skill id="3555" levels="1" name="Draconic Light Armor Set">
@@ -840,7 +810,7 @@
     <add order="0x40" stat="WIT" val="1"/> <!-- WIT +1 -->
     <add order="0x40" stat="INT" val="1"/> <!-- INT +1 -->
     <sub order="0x40" stat="MEN" val="2"/> <!-- MEN -2 -->
-    <mul order="0x30" stat="stunVuln" val="0.5"/> <!-- Stun resistance +50% -->
+    <mul order="0x30" stat="stunVuln" val="0.50"/> <!-- Stun resistance +50% -->
   </for>
 </skill>
 <skill id="3557" levels="1" name="Necklace of Valakas">
@@ -851,16 +821,16 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <add val='445' order='0x40' stat='maxHp'/>
-    <mul val='1.04' order='0x30' stat='pAtk'/>
-    <mul val='1.08' order='0x30' stat='mAtk'/>
-    <mul val='2.0' order='0x30' stat='mCritRate'/>
-    <mul val='0.85' order='0x30' stat='fireVuln'/>
-    <mul val='0.6' order='0x30' stat='sleepVuln'/>
+    <add order="0x40" stat="maxHp" val="445"/>
+    <mul order="0x30" stat="pAtk" val="1.04"/>
+    <mul order="0x30" stat="mAtk" val="1.08"/>
+    <mul order="0x30" stat="mCritRate" val="2.0"/>
+    <mul order="0x30" stat="fireVuln" val="0.85"/>
+    <mul order="0x30" stat="sleepVuln" val="0.60"/>
     <!-- Missing Sleep Attack Success Rate: +40% -->
-    <mul val='0.90' order='0x30' stat='mReuse'/>
-    <mul val='0.90' order='0x30' stat='pReuse'/>
-    <add val='5' order='0x40' stat="reflectDam"/>
+    <mul order="0x30" stat="mReuse" val="0.90"/>
+    <mul order="0x30" stat="pReuse" val="0.90"/>
+    <add order="0x40" stat="reflectDam" val="5"/>
   </for>
 </skill>
 <skill id="3558" levels="1" name="Earring of Antharas">
@@ -871,15 +841,15 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul val='0.6' order='0x30' stat='bleedVuln'/>
+    <mul order="0x30" stat="bleedVuln" val="0.6"/>
     <!-- Missing Bleed Attack Success Rate: +40% -->
     <!-- Missing Stun/Silence Attack Success Rate: +30% -->
-    <mul val='1.10' order='0x30' stat='gainHp'/>
-    <add val='4' order='0x40' stat='absorbDam'/>
-    <mul val='0.7' order='0x30' stat='stunVuln'/>
-    <mul val='0.7' order='0x30' stat='derangementVuln'/>
-    <mul val='0.95' order='0x30' stat='MpConsumeRate'/>
-    <mul val='0.85' order='0x30' stat='earthVuln'/>
+    <mul order="0x30" stat="gainHp" val="1.10"/>
+    <add order="0x40" stat="absorbDam" val="4"/>
+    <mul order="0x30" stat="stunVuln" val="0.70"/>
+    <mul order="0x30" stat="derangementVuln" val="0.70"/>
+    <mul order="0x30" stat="MpConsumeRate" val="0.95"/>
+    <mul order="0x30" stat="earthVuln" val="0.85"/>
   </for>
 </skill>
 <skill id="3559" levels="1" name="Earring of Zaken">
@@ -890,13 +860,13 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul val='0.7' order='0x30' stat='bleedVuln'/>
+    <mul order="0x30" stat="bleedVuln" val="0.70"/>
     <!-- Missing Bleed Attack Success Rate: +30% -->
-    <mul val='1.10' order='0x30' stat='gainHp'/>
-    <add val='4' order='0x40' stat='absorbDam'/>
-    <mul val='0.8' order='0x30' stat='stunVuln'/>
+    <mul order="0x30" stat="gainHp" val="1.10"/>
+    <add order="0x40" stat="absorbDam" val="4"/>
+    <mul order="0x30" stat="stunVuln" val="0.80"/>
     <!-- Missing Shock/Abnormal Mental State Attack Success Rate: 20% -->
-    <mul val='0.8' order='0x30' stat='derangementVuln'/>
+    <mul order="0x30" stat="derangementVuln" val="0.80"/>
   </for>
 </skill>
 <skill id="3560" levels="1" name="Earring of Orfen">
@@ -907,9 +877,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul val='0.8' order='0x30' stat='bleedVuln'/>
+    <mul order="0x30" stat="bleedVuln" val="0.80"/>
     <!-- Missing Bleed Attack Success Rate: 20% -->
-    <mul val='1.06' order='0x30' stat='gainHp'/>
+    <mul order="0x30" stat="gainHp" val="1.06"/>
   </for>
 </skill>
 <skill id="3561" levels="1" name="Ring of Baium">
@@ -920,14 +890,14 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul val='0.6' order='0x30' stat='poisonVuln'/>
+    <mul order="0x30" stat="poisonVuln" val="0.60"/>
     <!-- Missing Poison Attack Success Rate: 40% -->
-    <add val='2' order='0x40' stat='accCombat'/>
-    <mul val='1.15' order='0x30' stat='cAtk'/>
-    <mul val='0.7' order='0x30' stat='rootVuln'/>
+    <add order="0x40" stat="accCombat" val="2"/>
+    <mul order="0x30" stat="cAtk" val="1.15"/>
+    <mul order="0x30" stat="rootVuln" val="0.70"/>
     <!-- Missing Hold Attack Success Rate: 30% -->
-    <mul val='1.04' order='0x30' stat='pAtkSpd'/>
-    <mul val='1.04' order='0x30' stat='mAtkSpd'/>
+    <mul order="0x30" stat="pAtkSpd" val="1.04"/>
+    <mul order="0x30" stat="mAtkSpd" val="1.04"/>
   </for>
 </skill>
 <skill id="3562" levels="1" name="Ring of Ant Queen">
@@ -938,11 +908,11 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul val='0.7' order='0x30' stat='poisonVuln'/>
+    <mul order="0x30" stat="poisonVuln" val="0.70"/>
     <!-- Missing Poison Attack Success Rate: +30% -->
-    <add val='2' order='0x40' stat='accCombat'/>
-    <mul val='1.15' order='0x30' stat='cAtk'/>
-    <mul val='0.8' order='0x30' stat='rootVuln'/>
+    <add order="0x40" stat="accCombat" val="2"/>
+    <mul order="0x30" stat="cAtk" val="1.15"/>
+    <mul order="0x30" stat="rootVuln" val="0.80"/>
     <!-- Missing Hold Attack Success Rate: 20% -->
   </for>
 </skill>
@@ -954,9 +924,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul val='0.8' order='0x30' stat='poisonVuln'/>
+    <mul order="0x30" stat="poisonVuln" val="0.80"/>
     <!-- Missing Poison Attack Success Rate: 20% -->
-    <add val='1' order='0x40' stat='accCombat'/>
+    <add order="0x40" stat="accCombat" val="1"/>
   </for>
 </skill>
 <skill id="3564" levels="1" name="Special Ability: Haste">
@@ -1275,8 +1245,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect count="1" name="Stun" time="9" val="0" stackOrder="2" stackType="Stun">
-    </effect>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="2" stackType="Stun"/>
   </for>
 </skill>
 <skill id="3585" levels="1" name="Special Ability: Infinity Wing">
@@ -1348,8 +1317,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect count="1" name="Stun" time="9" val="0" stackOrder="2" stackType="Stun">
-    </effect>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="2" stackType="Stun"/>
   </for>
 </skill>
 <skill id="3589" levels="1" name="Special Ability: Infinity Stinger">

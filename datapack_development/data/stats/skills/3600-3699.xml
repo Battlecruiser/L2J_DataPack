@@ -94,10 +94,6 @@
   </for>
 </skill>
 <skill id="3604" levels="1" name="Frintezza's Necklace">
-<!--
-Description(s):
-      Increases resistance to dark/poison/bleed/paralysis/shock/sleep attacks. Reduces skill re-use time. Reflects some of the damage received back to the enemy (does not include damage from skill or range attacks).
--->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -105,17 +101,17 @@ Description(s):
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul val='0.85' order='0x30' stat='sleepVuln'/>
-    <mul val='0.75' order='0x30' stat='poisonVuln'/>
+    <mul order="0x30" stat="sleepVuln" val="0.85"/>
+    <mul order="0x30" stat="poisonVuln" val="0.75"/>
     <!-- Missing Poison Attack Success Rate: 25% -->
-    <mul val='0.5' order='0x30' stat='bleedVuln'/>
-    <mul val='0.85' order='0x30' stat='paralyzeVuln'/>
-    <mul val='0.85' order='0x30' stat='stunVuln'/>
+    <mul order="0x30" stat="bleedVuln" val="0.50"/>
+    <mul order="0x30" stat="paralyzeVuln" val="0.85"/>
+    <mul order="0x30" stat="stunVuln" val="0.85"/>
     <!-- Missing Sleep/Paralysis/Shock Attack Success Rate: 15% -->
-    <mul val='0.85' order='0x30' stat='darkVuln'/>
-    <add val='5' order='0x40' stat='reflectDam'/>
-    <mul val='0.90' order='0x30' stat='mReuse'/>
-    <mul val='0.90' order='0x30' stat='pReuse'/>
+    <mul order="0x30" stat="darkVuln" val="0.85"/>
+    <add order="0x40" stat="reflectDam" val="5"/>
+    <mul order="0x30" stat="mReuse" val="0.90"/>
+    <mul order="0x30" stat="pReuse" val="0.90"/>
   </for>
 </skill>
 <skill id="3605" levels="1" name="Clan Oath Heavy Armor Set">
@@ -749,13 +745,13 @@ Description(s):
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul order='0x30' stat='mDef' val='1.12'/>
-    <add order='0x40' stat='mAtk' val='10' />
-    <mul order="0x30" stat="rootVuln" val="0.9"/>
-    <mul order="0x30" stat="sleepVuln" val="0.9"/>
-    <mul order="0x30" stat="confusionVuln" val="0.9"/>
-    <mul order="0x30" stat="derangementVuln" val="0.9"/>
-    <mul order='0x30' stat='darkVuln' val='0.85'/>
+    <mul order="0x30" stat="mDef" val="1.12"/>
+    <add order="0x40" stat="mAtk" val="10"/>
+    <mul order="0x30" stat="rootVuln" val="0.90"/>
+    <mul order="0x30" stat="sleepVuln" val="0.90"/>
+    <mul order="0x30" stat="confusionVuln" val="0.90"/>
+    <mul order="0x30" stat="derangementVuln" val="0.90"/>
+    <mul order="0x30" stat="darkVuln" val="0.85"/>
   </for>
 </skill>
 <skill id="3650" levels="1" name="PvP Weapon - CP Drain">

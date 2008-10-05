@@ -348,9 +348,9 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-  	<effect count="1" name="Buff" time="8" val="0">
-  	  <mul order="0x30" stat="cancelVuln" val="0.8"/>
-  	  <mul order="0x30" stat="rootVuln" val="0.8"/>
+    <effect count="1" name="Buff" time="8" val="0">
+      <mul order="0x30" stat="cancelVuln" val="0.8"/>
+      <mul order="0x30" stat="rootVuln" val="0.8"/>
       <mul order="0x30" stat="sleepVuln" val="0.8"/>
       <mul order="0x30" stat="poisonVuln" val="0.8"/>
       <mul order="0x30" stat="derangementVuln" val="0.8"/>
