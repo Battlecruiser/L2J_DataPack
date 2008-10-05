@@ -262,6 +262,7 @@ $MYG < ../sql/armorsets.sql &> /dev/null
 $MYG < ../sql/auction.sql &> /dev/null
 $MYG < ../sql/auction_bid.sql &> /dev/null
 $MYG < ../sql/auction_watch.sql &> /dev/null
+$MYG < ../sql/augmentations.sql &> /dev/null
 $MYG < ../sql/auto_chat.sql &> /dev/null
 $MYG < ../sql/auto_chat_text.sql &> /dev/null
 $MYG < ../sql/castle.sql &> /dev/null
@@ -315,7 +316,6 @@ $MYG < ../sql/helper_buff_list.sql &> /dev/null
 $MYG < ../sql/henna.sql &> /dev/null
 $MYG < ../sql/henna_trees.sql &> /dev/null
 $MYG < ../sql/heroes.sql &> /dev/null
-$MYG < ../sql/item_attributes.sql &> /dev/null
 $MYG < ../sql/items.sql &> /dev/null
 $MYG < ../sql/itemsonground.sql &> /dev/null
 $MYG < ../sql/locations.sql &> /dev/null
