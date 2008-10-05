@@ -89,6 +89,8 @@ class Quest (JQuest) :
         st.takeItems(MANDRAGORA_BERRY_ID,1)
         st.giveItems(ALLTRANS_RECOMMEND1_ID,1)
         st.giveItems(ALLTRANS_RECOMMEND2_ID,1)
+        st.playSound("ItemSound.quest_middle")
+        st.set("cond","5")
     elif event == "30210_1" :
         htmltext = "30210-02.htm"
     elif event == "30210_2" :
@@ -147,6 +149,8 @@ class Quest (JQuest) :
 
    elif npcId == 30103 and st.getInt("cond")>=1 and st.getQuestItemsCount(VALKONS_RECOMMEND_ID)==1 :
         htmltext = "30103-07.htm"
+        st.set("cond","3")
+        st.playSound("ItemSound.quest_middle")
    elif npcId == 30103 and st.getInt("cond")>=1 and st.getQuestItemsCount(ALLTRANS_INSTRUCTIONS_ID)==1 :
         if st.getQuestItemsCount(JOURNEYMAN_RING_ID) < 7 :
           htmltext = "30103-08.htm"
@@ -154,6 +158,8 @@ class Quest (JQuest) :
           htmltext = "30103-09.htm"
    elif npcId == 30283 and st.getInt("cond")>=1 and st.getQuestItemsCount(VALKONS_RECOMMEND_ID)==1 and st.getQuestItemsCount(MANDRAGORA_BERRY_ID)==0 :
         htmltext = "30283-01.htm"
+        st.set("cond","2")
+        st.playSound("ItemSound.quest_middle")
    elif npcId == 30283 and st.getInt("cond")>=1 and st.getQuestItemsCount(VALKONS_RECOMMEND_ID)==1 and st.getQuestItemsCount(MANDRAGORA_BERRY_ID)==1 :
         htmltext = "30283-02.htm"
    elif npcId == 30283 and st.getInt("cond")>=1 and st.getQuestItemsCount(ALLTRANS_INSTRUCTIONS_ID)==1 :
@@ -217,14 +223,14 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    if npcId == 20223 :
      if st.getInt("cond") >= 1 and st.getQuestItemsCount(VALKONS_RECOMMEND_ID) == 1 and st.getQuestItemsCount(MANDRAGORA_BERRY_ID) == 0 :
-       if st.getRandom(100) <= 20 :
          st.giveItems(MANDRAGORA_BERRY_ID,1)
          st.playSound("ItemSound.quest_middle")
+         st.set("cond","4")
    elif npcId in range(20154,20157):
      if st.getInt("cond") >= 1 and st.getQuestItemsCount(VALKONS_RECOMMEND_ID) == 1 and st.getQuestItemsCount(MANDRAGORA_BERRY_ID) == 0 :
-       if st.getRandom(100) <= 50 :
         st.giveItems(MANDRAGORA_BERRY_ID,1)
         st.playSound("ItemSound.quest_middle")
+        st.set("cond","4")
    elif npcId in range(20267,20272):
     if st.getInt("cond") >= 1 and st.getQuestItemsCount(ALLTRANS_INSTRUCTIONS_ID) == 1 and st.getQuestItemsCount(NORMANS_INSTRUCTIONS_ID) == 1 and st.getQuestItemsCount(DUNINGS_INSTRUCTIONS_ID) == 1 :
      if st.getRandom(100) <= 30 and st.getQuestItemsCount(DUNINGS_KEY_ID) <= 29 :

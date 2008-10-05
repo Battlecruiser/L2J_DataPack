@@ -522,7 +522,6 @@ armorsets.sql
 auction.sql
 auction_bid.sql
 auction_watch.sql
-augmentations.sql
 auto_chat.sql
 auto_chat_text.sql
 castle.sql
@@ -576,6 +575,7 @@ helper_buff_list.sql
 henna.sql
 henna_trees.sql
 heroes.sql
+item_attributes.sql
 items.sql
 itemsonground.sql
 locations.sql
