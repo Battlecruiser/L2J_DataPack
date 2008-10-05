@@ -194,7 +194,6 @@ class Quest (JQuest) :
            st.playSound("ItemSound.quest_finish")
            st.exitQuest(False)
            st.unset("id")
-           st.addExpAndSp(345966,31578)
            if player.getLevel() < 64 :
                htmltext = "31328-23.htm"
            else :
