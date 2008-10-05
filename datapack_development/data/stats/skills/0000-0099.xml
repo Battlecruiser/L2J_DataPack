@@ -1625,12 +1625,12 @@
 </skill>
 <skill id="94" levels="2" name="Rage">
   <!-- Done by dc -->
-  <table name="#swordblunt"> 1.45 1.55 </table>
+  <table name="#swordbluntpole"> 1.45 1.55 </table>
   <table name="#twohands"> 1.55 1.64 </table>
   <table name="#other"> 1.15 1.20 </table>
-  <table name="#Tab-accCombat"> 2 4 </table>
-  <table name="#Tab-pDef"> 0.8 0.8 </table>
-  <table name="#Tab-rEvas"> 3 3 </table>
+  <table name="#accCombat"> 2 4 </table>
+  <table name="#pDef"> 0.80 0.80 </table>
+  <table name="#rEvas"> 3 3 </table>
   <table name="#mpConsume"> 11 25 </table>
   <table name="#uprate"> 1 2 </table>
   <table name="#aggro"> 235 523  </table>
@@ -1646,19 +1646,19 @@
   <set name="aggroPoints" val="#aggro"/>
   <for>
     <effect count="1" name="Buff" time="90" val="0" stackOrder="#uprate" stackType="pAtks">
-      <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
-      <sub order="0x40" stat="rEvas" val="#Tab-rEvas"/>
-      <add order="0x40" stat="accCombat" val="#Tab-accCombat">
-        <using kind="Big Sword,Big Blunt"/>
+      <mul order="0x30" stat="pDef" val="#pDef"/>
+      <sub order="0x40" stat="rEvas" val="#rEvas"/>
+      <add order="0x40" stat="accCombat" val="#accCombat">
+        <using kind="Big Sword,Big Blunt"/> <!-- when using two-handed sword and blunt weapons -->
       </add>
-      <mul order="0x30" stat="pAtk" val="#swordblunt">
-        <using kind="Sword,Blunt"/>
+      <mul order="0x30" stat="pAtk" val="#swordbluntpole">
+        <using kind="Sword,Blunt,Pole"/> <!-- when using sword, blunt weapons, or polearms. -->
       </mul>
       <mul order="0x30" stat="pAtk" val="#twohands">
         <using kind="Big Sword,Big Blunt"/>
       </mul>
       <mul order="0x30" stat="pAtk" val="#other">
-        <using kind="Dual Fist,Dual Sword,Fist,Etc,Pole,Bow,Dagger"/>
+        <using kind="Dual Fist,Dual Sword,Fist,Etc,Bow,Dagger"/>
       </mul>
     </effect>
   </for>
