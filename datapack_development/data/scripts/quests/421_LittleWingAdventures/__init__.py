@@ -24,6 +24,7 @@ error_3 = "<html><body>Sage Cronos:<br>You need to be level "+str(MIN_PLAYER_LEV
 error_4 = "<html><body>Sage Cronos:<br>Your pet need to be level "+str(MIN_PET_LEVEL)+" to complete this quest.</body></html>"
 error_5 = "Your pet is not a hatchling. Quest Aborted."
 error_6 = "Your pet should be nearby. Quest aborted"
+error_7  =<html><body>Fairy Mymyu:<br>Why would anyone carry more than one dragon flute? You aren't collecting hatchlings, are you? I hope you got this hatchling through the proper channels! I do not deal with those who traffic in pets! Pets are not chattel!</body></html>
 qston_1 = "<html><body>Sage Cronos:<br>So, you want to turn your hatchling into a more powerful creature?<br><br><a action=\"bypass -h Quest "+str(QUEST_NUMBER)+"_"+QUEST_NAME+" 16\">Yes, please tell me how</a><br></body></html>"
 qston_2 = "<html><body>Sage Cronos:<br>I've said you need to talk to <font color=\"LEVEL\">Fairy Mimyu</font>!!!. Am i clear???</body></html>"
 qston_3 = "<html><body>Fairy Mimyu:<br>You weren't yet able to find the <font color=\"LEVEL\">Fairy Trees of Wind, Star, Twilight and Abyss</font>? Don't give up! They are all in <font color=\"LEVEL\">Hunter's Valley</font></body></html>"
@@ -127,6 +128,7 @@ class Quest (JQuest) :
         else :
             htmltext = qston_3
      elif id == State.STARTED and cond >= 3:
+     
         name = player.getPet().getName()
         if name == None : name = " "
         else : name = " "+name+" "
