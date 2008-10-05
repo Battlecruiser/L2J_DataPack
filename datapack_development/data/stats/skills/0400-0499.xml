@@ -1171,12 +1171,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Stun" time="5" val="0"> <!-- guessed -->
-       <using kind="Pole"/>
-    </effect>
-    <effect count="1" name="RemoveTarget" time="1" val="0">
-       <using kind="Pole"/>
-    </effect>
+    <effect count="1" name="Stun" time="9" val="0"/>
+    <effect count="1" name="RemoveTarget" time="1" val="0"/>
   </for>
 </skill>
 <skill id="453" levels="1" name="Escape Shackle">

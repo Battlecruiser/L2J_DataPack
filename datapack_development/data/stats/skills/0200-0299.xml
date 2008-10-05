@@ -1948,13 +1948,13 @@
         <using kind="Fist, Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
       </add>
       <mul order="0x30" stat="pAtk" val="1.43">
-        <player hp='60'/>
+        <player hp="60"/>
       </mul>
       <add order="0x40" stat="rCrit" val="100">
-        <player hp='60'/>
+        <player hp="60"/>
       </add>
       <add order='0x40' stat='rCrit' val='300'>
-        <player hp='30'/>
+        <player hp="30"/>
       </add>
     </effect>
   </for>

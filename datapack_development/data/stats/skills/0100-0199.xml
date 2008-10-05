@@ -1030,21 +1030,21 @@
   <for>
     <effect name="Buff" time="90" count="1" val="0" stackOrder="1" stackType="OrcBuff">
       <add order="0x40" stat="accCombat" val="#Tab-accCombat">
-        <player hp='30'/>
+        <player hp="30"/>
         <using kind="Big Sword,Big Blunt"/>
       </add>
       <mul order="0x30" stat="pAtk" val="#onehanded">
         <using kind="Sword,Blunt"/>
       </mul>
       <mul order="0x30" stat="pAtk" val="#under-30">
-        <player hp='30'/>
+        <player hp="30"/>
         <using kind="Sword,Blunt"/>
       </mul>
       <mul order="0x30" stat="pAtk" val="#twohanded">
         <using kind="Big Sword,Big Blunt,Pole"/>
       </mul>
       <mul order="0x30" stat="pAtk" val="#under-30">
-        <player hp='30'/>
+        <player hp="30"/>
         <using kind="Big Sword,Big Blunt,Pole"/>
       </mul>
     </effect>
