@@ -27740,7 +27740,6 @@ INSERT INTO `droplist` VALUES
 (29028,57,14000000,18000000,32,1000000), -- Adena
 (29028,57,2000000,6000000,33,1000000), -- Adena
 (29028,6657,1,1,34,1000000), -- Necklace of Valakas
-(29028,6657,1,1,34,1000000), -- Necklace of Valakas
 (29047,57,3016667,3620000,0,1000000), -- Adena
 (29047,57,3016667,3620000,19,1000000), -- Adena
 (29047,57,3016667,3620000,20,1000000), -- Adena
@@ -27796,7 +27795,7 @@ INSERT INTO `droplist` VALUES
 (29047,6680,1,1,1,111111), -- Sealed Draconic Leather Armor
 (29047,288,1,1,4,111111), -- Carnage Bow
 (29047,5319,1,1,15,111111), -- Sealed Majestic Boots
-(29047,5329,1,1,15,111111), -- Sealed Majestic Robe 
+(29047,5329,1,1,15,111111), -- Sealed Majestic Robe
 (29047,5312,1,1,7,111111), -- Sealed Helm of Nightmare
 (29047,80,1,1,4,83333), -- Tallum Blade
 (29047,6681,1,1,1,83333), -- Sealed Draconic Leather Glove
