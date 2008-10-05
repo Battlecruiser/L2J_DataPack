@@ -1655,7 +1655,7 @@
         <using kind="Sword,Blunt,Pole"/> <!-- when using sword, blunt weapons, or polearms. -->
       </mul>
       <mul order="0x30" stat="pAtk" val="#twohands">
-        <using kind="Big Sword,Big Blunt"/>
+        <using kind="Big Sword,Big Blunt"/> <!-- when using two-handed sword and blunt weapons -->
       </mul>
       <mul order="0x30" stat="pAtk" val="#other">
         <using kind="Dual Fist,Dual Sword,Fist,Etc,Bow,Dagger"/>
