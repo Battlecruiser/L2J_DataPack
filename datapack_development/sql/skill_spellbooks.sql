@@ -470,4 +470,31 @@ INSERT INTO `skill_spellbooks` VALUES
 (1447,10093), -- Battle Manual: Voice Bind
 (628,10275), -- Battle Manual: Warp
 (1482,10193), -- Battle Manual: Weak Constitution
+(1457,10203), -- Spellbook - Empowering Echo
+(1510,10596), -- Battle Manual - Soul Cleanse
+(1511,10597), -- Battle Manual - Curse of Life Flow
+(1512,10598), -- Battle Manual - Soul Vortex
+(1513,10599), -- Battle Manual - Soul Vortex Extinction
+(1514,10600), -- Battle Manual - Soul Barrier
+(1515,10601), -- Battle Manual - Lightning Barrier
+(1516,10602), -- Battle Manual - Soul Strike
+(792,10603), -- Battle Manual - Betrayal Mark
+(793,10604), -- Battle Manual - Rush Impact
+(794,10605), -- Battle Manual - Mass Disarm
+(1517,10608), -- Amulet - Chant of Combat
+(1518,10609), -- Amulet - Chant of Critical Attack
+(1519,10610), -- Amulet - Chant of Blood Awakening
+(818,12768), -- Spellbook - Evasion Counter
+(819,12769), -- Spellbook - Evasion Chance
+(820,12770), -- Spellbook - Evasion Haste
+(821,12771), -- Spellbook - Shadow Step
+(1520,12772), -- Spellbook - Inquisitor
+(1521,12772), -- Spellbook - Inquisitor
+(1522,12772), -- Spellbook - Inquisitor
+(833,12773), -- Battle Manual - Body Reconstruction
+(834,12774), -- Battle Manual - Blood Construct
+(835,12775), -- Battle Manual - Imbue Seed of Destruction
+(836,12776), -- Battle Manual - Oblivion Trap
+(837,12777), -- Battle Manual - Painkiller
+(838,12778), -- Battle Manual - Soul Web
 (1456,10109); -- Spellbook: Wind Vortex Slug
