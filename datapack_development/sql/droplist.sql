@@ -27763,7 +27763,7 @@ INSERT INTO `droplist` VALUES
 (29095,6684,1,1,2,71428), -- Sealed Major Arcane Robe
 (29095,6695,3,9,3,930000), -- Demon Splinter Blade
 (29095,6371,1,1,3,23810), -- Demon Splinter
-(29095,960,1,1,4,450000), -- Scroll: Enchant Armor (Grade S)
+(29095,960,1,1,4,450000); -- Scroll: Enchant Armor (Grade S)
 
 -- 
 -- work in progress drops.. once chance becomes more accurate, can move into known good drops
