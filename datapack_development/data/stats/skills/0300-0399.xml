@@ -448,7 +448,6 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
-  <!-- TO DO LINK WITH HP LVL -->
   <table name="#mpConsume"> 116 119 121 122 124 126 129 131 133 135 138 140 142 144 146 148 </table>
   <table name="#magicLvl"> 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
   <table name="#power"> 2908 3030 3154 3280 3408 3537 3668 3800 3933 4067 4201 4336 4470 4604 4738 4870 </table>
@@ -463,14 +462,13 @@
   <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="3000"/>
   <set name="coolTime" val="1000" />
-  <set name="skillType" val="PDAM"/>
+  <set name="skillType" val="FATAL"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2mpConsume"/>
   <for>
-    <cond><using kind="Bow"/></cond>
   </for>
 </skill>
 <skill id="315" levels="16" name="Crush of Doom" enchantLevels1="30" enchantLevels2="30" >
