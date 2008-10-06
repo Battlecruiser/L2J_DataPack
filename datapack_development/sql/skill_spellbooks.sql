@@ -491,6 +491,7 @@ INSERT INTO `skill_spellbooks` VALUES
 (1520,12772), -- Spellbook - Inquisitor
 (1521,12772), -- Spellbook - Inquisitor
 (1522,12772), -- Spellbook - Inquisitor
+(831,12820), -- Blueprint - Summon Merchant Golem
 (833,12773), -- Battle Manual - Body Reconstruction
 (834,12774), -- Battle Manual - Blood Construct
 (835,12775), -- Battle Manual - Imbue Seed of Destruction
