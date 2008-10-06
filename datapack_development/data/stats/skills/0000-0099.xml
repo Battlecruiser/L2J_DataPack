@@ -1344,7 +1344,7 @@
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="#aggro"/>
   <for>
-    <effect count="1" name="Buff" time="60" val="0" stackOrder="#uprate" stackType="pAtks">
+    <effect count="1" name="Buff" time="60" val="0" stackOrder="#uprate" stackType="pa_up_special">
       <mul order="0x30" stat="pAtk" val="#pAtk"/>
     </effect>
   </for>
@@ -1642,7 +1642,7 @@
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="#aggro"/>
   <for>
-    <effect count="1" name="Buff" time="90" val="0" stackOrder="#uprate" stackType="pAtks">
+    <effect count="1" name="Buff" time="90" val="0" stackOrder="#uprate" stackType="pa_up_special">
       <mul order="0x30" stat="pDef" val="0.80"/>
       <sub order="0x40" stat="rEvas" val="3"/>
       <add order="0x40" stat="accCombat" val="#accCombat">
