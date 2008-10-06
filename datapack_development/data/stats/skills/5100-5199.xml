@@ -1170,17 +1170,16 @@
   </for>
 </skill>
 <skill id="5182" levels="1" name="Blessing of Protection">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Keeps you safe from an attack by a chaotic character who is more than 10 levels apart from you.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- Newbie Guide Buff -->
+  <set name="magicLvl" val="60"/>
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="ProtectionBlessing" time="3600" val="0"/>
   </for>
 </skill>
 <skill id="5183" levels="1" name="Production: Dimensional Stun">
