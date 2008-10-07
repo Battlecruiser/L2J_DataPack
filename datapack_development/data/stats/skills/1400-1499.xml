@@ -375,10 +375,6 @@
   </for>
 </skill>
 <skill id="1415" levels="1" name="Pa'agrio's Emblem">
-<!--
-  Description(s):
-      Temporarily increases an alliance member's resistance to buff cancelling and de-buff attacks. Effect 3.
--->
   <!-- All the values here are guessed (taken from Chant of Spirit and other clan buffs) -->
   <set name="mpInitialConsume" val="56"/>
   <set name="mpConsume" val="228"/>
@@ -394,8 +390,8 @@
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="666"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="cancelVuln">
-      <mul stat="cancelVuln" val="0.7" order="0x30"/>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="resist_debuff_dispel">
+      <mul order="0x30" stat="cancelVuln" val="0.7"/>
       <mul order="0x30" stat="debuffVuln" val="0.8"/>
     </effect>
   </for>

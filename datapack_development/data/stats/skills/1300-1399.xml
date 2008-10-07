@@ -1331,8 +1331,8 @@
   <set name="effectRange" val="900"/>
   <set name="aggroPoints" val="662"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="cancelVuln">
-      <mul stat="cancelVuln" val="0.7" order="0x30"/>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="resist_debuff_dispel">
+      <mul order="0x30" stat="cancelVuln" val="0.7"/>
       <mul order="0x30" stat="debuffVuln" val="0.8"/>
     </effect>
   </for>
@@ -1524,8 +1524,8 @@
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="666"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="cancelVuln">
-      <mul stat="cancelVuln" val="0.7" order="0x30"/>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="resist_debuff_dispel">
+      <mul order="0x30" stat="cancelVuln" val="0.7"/>
       <mul order="0x30" stat="debuffVuln" val="0.8"/>
     </effect>
   </for>
