@@ -266,11 +266,7 @@
   </for>
 </skill>
 <skill id="5216" levels="1" name="Event Concentration">
-<!--
-  Description(s):
-      Temporarily decreases the probability of magic being canceled due to damage taken. Effect 1.
--->
-  <set name="power" val="1.0"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>

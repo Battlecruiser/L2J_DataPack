@@ -749,7 +749,7 @@
     <player hp="30"/>
   </cond>
   <for>
-    <effect name="Buff" time="90" count="1" val="0" stackOrder="1" stackType="OrcBuff">
+    <effect name="Buff" time="90" count="1" val="0" stackOrder="1" stackType="pinch">
       <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
     </effect>
   </for>
@@ -1007,10 +1007,11 @@
 </skill>
 <skill id="176" levels="3" name="Frenzy">
   <!-- Done by dc, completed by NewAge -->
-  <table name="#swordbluntpole"> 1.3 1.3 1.5 </table> <!-- L2P say: +100% +149.76% +246.38% "Please Check" -->
-  <table name="#twohanded"> 1.5 1.55 1.66 </table> <!-- L2P say: +150.26% +199.55% +301.95% "Please Check" -->
+  <table name="#swordbluntpole"> 1.50 1.75 2.25 </table>
+  <table name="#sbp-under30"> 1.50 1.75 2.25 </table>
+  <table name="#twohand"> 1.75 2.0 2.5 </table>
+  <table name="#twohand-under30"> 1.75 2.0 2.5 </table>
   <table name="#other"> 1.30 1.30 1.50 </table>
-  <table name="#under-30"> 1.55 1.9 2.3 </table>
   <table name="#accCombat"> 4 4 6 </table>
   <table name="#mpConsume"> 14 21 25 </table>
   <table name="#aggro"> 303 438 523 </table>
@@ -1029,22 +1030,21 @@
     <player hp="30"/>
   </cond>
   <for>
-    <effect name="Buff" time="90" count="1" val="0" stackOrder="1" stackType="OrcBuff">
+    <effect name="Buff" time="90" count="1" val="0" stackOrder="1" stackType="pinch">
       <add order="0x40" stat="accCombat" val="#accCombat">
-        <player hp="30"/>
         <using kind="Big Sword,Big Blunt"/> <!-- when using two-handed swords and blunt weapons. -->
       </add>
       <mul order="0x30" stat="pAtk" val="#swordbluntpole">
         <using kind="Sword,Blunt,Pole"/> <!-- when using a polearm or blunt weapon. (and Sword according to L2P) -->
       </mul>
-      <mul order="0x30" stat="pAtk" val="#under-30">
+      <mul order="0x30" stat="pAtk" val="#sbp-under30">
         <player hp="30"/>
         <using kind="Sword,Blunt,Pole"/>
       </mul>
-      <mul order="0x30" stat="pAtk" val="#twohanded">
+      <mul order="0x30" stat="pAtk" val="#twohand">
         <using kind="Big Sword,Big Blunt"/> <!-- when using two-handed swords and blunt weapons. -->
       </mul>
-      <mul order="0x30" stat="pAtk" val="#under-30">
+      <mul order="0x30" stat="pAtk" val="#twohand-under30">
         <player hp="30"/>
         <using kind="Big Sword,Big Blunt"/>
       </mul>
