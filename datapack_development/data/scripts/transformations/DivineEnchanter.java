@@ -29,7 +29,7 @@ public class DivineEnchanter extends L2Transformation
 		for (L2Skill sk : this.getPlayer().getAllSkills())
 		{
 			if (sk != null && !sk.isPassive())
-				this.getPlayer().removeSkill(sk, false);
+				this.getPlayer().removeSkill(sk, false, false);
 		}
 		if (this.getPlayer().transformId() > 0 && !this.getPlayer().isCursedWeaponEquipped())
 		{
