@@ -88,10 +88,6 @@ description(s) :
  </for>
 </skill>
 <skill id="504" levels="37" name="Triple Thrust" enchantLevels1="30" enchantLevels2="30" >
-<!--
-  Description(s):
-      Makes three quick stabs. Consumes 1 Soul. An equipped rapier is required to use this skill.  Power 517-2557.
--->
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <table name="#ench1Power"> 3255 3278 3300 3322 3344 3366 3388 3411 3433 3455 3477 3499 3521 3544 3566 3588 3610 3632 3654 3676 3699 3721 3743 3765 3787 3809 3832 3854 3876 3898 </table>
   <table name="#ench2MpConsume"> 59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 </table>
@@ -120,10 +116,6 @@ description(s) :
   </for>
 </skill>
 <skill id="505" levels="28" name="Shining Edge" enchantLevels1="30" enchantLevels2="30" >
-<!--
-  Description(s):
-      A flashing attack at your enemy's vital organs. Consumes 2 soul. An equipped rapier is required to use this skill. Power 1853-5479.
--->
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <table name="#ench1Power"> 5813 5852 5892 5932 5971 6011 6050 6090 6129 6169 6209 6248 6288 6327 6367 6406 6446 6486 6525 6565 6604 6644 6683 6723 6763 6802 6842 6881 6921 6960 </table>
   <table name="#ench2MpConsume"> 59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 </table>
@@ -182,10 +174,6 @@ description(s) :
   </for>
 </skill>
 <skill id="507" levels="37" name="Twin Shot" enchantLevels1="30" enchantLevels2="30" >
-<!--
-  Description(s):
-      Launches 2 bolts in rapid succession. Consumes 1 Soul. Critical hit is possible. An equipped crossbow is required to use this skill. Overhit is possible. Power 984-4870.
--->
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <table name="#ench1Power"> 5167 5202 5237 5273 5308 5343 5378 5413 5448 5484 5519 5554 5589 5621 5660 5695 5730 5765 5800 5835 5871 5906 5941 5976 6011 6046 6082 6117 6152 6187 </table>
   <table name="#ench2MpConsume"> 133 131 129 127 125 123 121 119 117 115 113 111 109 107 105 103 101 99 97 95 93 91 89 87 85 83 81 79 77 75 </table>
@@ -206,7 +194,6 @@ description(s) :
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
-  <set name="soulMaxConsumeCount" val="5"/>
   <set name="baseCritRate" val="15"/>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -216,10 +203,6 @@ description(s) :
   </for>
 </skill>
 <skill id="508" levels="31" name="Rising Shot" enchantLevels1="30" enchantLevels2="30" >
-<!--
-  Description(s):
-      Shoot a bolt that rises from the ground. Consumes 3 Souls. A  crossbow has to be equipped to use this skill. Over-hit is possible. Power 350-1218.
--->
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <table name="#ench1Power"> 1292 1301 1310 1319 1327 1336 1345 1354 1362 1371 1380 1389 1398 1406 1415 1424 1433 1442 1450 1459 1468 147 1486 1494 1503 1512 1521 1530 1538 1547 </table>
   <table name="#ench2MpConsume"> 199 196 193 190 187 184 181 178 175 172 169 166 163 160 157 154 151 148 145 142 139 136 133 130 127 124 121 118 115 113 </table>
@@ -241,7 +224,6 @@ description(s) :
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="500"/>
   <set name="effectRange" val="900"/>
-  <set name="soulMaxConsumeCount" val="5"/>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant1 name="power" val="#ench1Power"/>
@@ -298,7 +280,6 @@ description(s) :
   <set name="power" val="0.0"/>
   <set name="reuseDelay" val="10000"/> <!-- Guessing -->
   <set name="skillType" val="PDAM"/>
-  <set name="soulMaxConsumeCount" val="5"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="weaponsAllowed" val="65536"/>
   <cond msg="Can be used when HP is below 10 percent.">
@@ -326,14 +307,11 @@ description(s) :
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="soulMaxConsumeCount" val="5"/>
   <for>
   </for>
 </skill>
 <skill id="513" levels="1" name="Create Dark Seed">
-<!-- 
-  Description(s):
-  Transform a soul into a seed of darkness. Consumes 1 Soul. 
---> 
   <set name="mpConsume" val="58"/> 
   <set name="target" val="TARGET_SELF"/> 
   <set name="skillType" val="CREATE_ITEM"/> 
