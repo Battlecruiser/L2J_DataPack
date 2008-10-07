@@ -1755,7 +1755,6 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <set name="soulConsumeCount" val="1"/>
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="2">
       <add order="0x40" stat="runSpd" val="20"/>
