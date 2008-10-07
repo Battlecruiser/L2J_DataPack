@@ -740,4 +740,12 @@ INSERT INTO teleport VALUES
 ('Clan Hall Schuttgart -> Crypt of Disgrace',12065,47692,-115745,-3744,500,0),
 ('Clan Hall Schuttgart -> Plunderous Plains',12066,111965,-154172,-1528,500,0),
 ('Clan Hall Schuttgart -> Den of Evil',12067,68693,-110438,-1904,500,0),
-('Clan Hall Schuttgart -> Frozen Labyrinth',12068,113903,-108752,-848,500,0);
+('Clan Hall Schuttgart -> Frozen Labyrinth',12068,113903,-108752,-848,500,0),
+('Gludio Castle -> Front of the Gludio Castle',13000,-15043,116596,-3208,0,0),
+('Gludio Castle -> Gludio Town Square',13001,-14393,123671,-3112,0,0),
+('Gludio Castle -> Front of the Shanty Fortress',13002,-58761,154663,-2664,0,0),
+('Gludio Castle -> Front of the Southern Fortress',13003,-29856,214275,-3680,0,0),
+('Gludio Castle -> Ruins of Agony',13004,-41248,122848,-2904,500,0),
+('Gludio Castle -> Ruins of Despair',13005,-19120,136816,-3752,500,0),
+('Gludio Castle -> The Ant Nest',13006,-9959,176184,-4160,500,0),
+('Gludio Castle -> Windawood Manor',13007,-28327,155125,-3496,500,0);
