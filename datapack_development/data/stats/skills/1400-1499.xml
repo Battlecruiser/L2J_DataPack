@@ -977,14 +977,23 @@
   </for>
 </skill>
 <skill id="1440" levels="5" name="Steal Divinity">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- Done by ratonofx. -->
+  <table name="#mpConsume"> 50 55 60 64 67 </table>
+  <table name="#power"> 1 2 3 4 5 </table>
+  <table name="#magicLvl"> 55 60 64 68 72 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="#power"/>
+  <set name="lvlDepend" val="2"/> <!-- Guessing -->
+  <set name="target" val="TARGET_ONE"/>
+  <set name="reuseDelay" val="60000"/>
+  <set name="hitTime" val="1200"/>
+  <set name="isDebuff" val="true"/>
+  <set name="skillType" val="STEAL_BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
   <for>
   </for>
 </skill>
