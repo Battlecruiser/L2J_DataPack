@@ -254,15 +254,15 @@
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="438"/>
   <cond msg="Requires a hand-to-hand combat weapon.">
-    <using kind="Fist, Dual Fist"/>
+    <using kind="Fist,Dual Fist"/>
   </cond>
   <for>
     <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
       <mul order="0x30" stat="pDef" val="1.30">
-        <using kind="Fist, Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
+        <using kind="Fist,Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
       </mul>
       <mul order="0x30" stat="mDef" val="1.30">
-        <using kind="Fist, Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
+        <using kind="Fist,Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
       </mul>
       <mul order="0x30" stat="runSpd" val="0.7"/>
       <sub order="0x40" stat="rEvas" val="9"/>
@@ -1038,15 +1038,19 @@
         <using kind="Sword,Blunt,Pole"/> <!-- when using a polearm or blunt weapon. (and Sword according to L2P) -->
       </mul>
       <mul order="0x30" stat="pAtk" val="#sbp-under30">
-        <player hp="30"/>
-        <using kind="Sword,Blunt,Pole"/>
+        <and>
+          <player hp="30"/>
+          <using kind="Sword,Blunt,Pole"/>
+        </and>
       </mul>
       <mul order="0x30" stat="pAtk" val="#twohand">
         <using kind="Big Sword,Big Blunt"/> <!-- when using two-handed swords and blunt weapons. -->
       </mul>
       <mul order="0x30" stat="pAtk" val="#twohand-under30">
-        <player hp="30"/>
-        <using kind="Big Sword,Big Blunt"/>
+        <and>
+          <player hp="30"/>
+          <using kind="Big Sword,Big Blunt"/>
+        </and>
       </mul>
       <mul order="0x30" stat="pAtk" val="#other">
         <using kind="Dual Fist,Dual Sword,Fist,Etc,Bow,Dagger"/>
