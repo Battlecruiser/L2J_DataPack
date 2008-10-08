@@ -968,7 +968,7 @@
   <set name="aggroPoints" val="150"/>
   <for>
     <effect count="1" name="Charge" time="0x7fffffff" val="1"/>
-    <using kind="Fist, Dual Fist"/> <!-- when using hand-to-hand combat weapon -->
+    <using kind="Fist,Dual Fist"/> <!-- when using hand-to-hand combat weapon -->
   </for>
 </skill>
 <skill id="51" levels="1" name="Lure" enchantLevels1="30" >
@@ -1291,16 +1291,16 @@
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="268"/>
   <cond msg="Requires a hand-to-hand combat weapon.">
-    <using kind="Fist, Dual Fist"/>
+    <using kind="Fist,Dual Fist"/>
   </cond>
   <for>
     <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
       <mul order="0x30" stat="runSpd" val="0.7"/>
       <mul order="0x30" stat="pAtk" val="1.2">
-        <using kind="Fist, Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
+        <using kind="Fist,Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
       </mul>
       <mul order="0x30" stat="cAtk" val="1.2">
-        <using kind="Fist, Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
+        <using kind="Fist,Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
       </mul>
     </effect>
   </for>
@@ -1437,15 +1437,15 @@
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="204"/>
   <cond msg="Requires a hand-to-hand combat weapon.">
-    <using kind="Fist, Dual Fist"/>
+    <using kind="Fist,Dual Fist"/>
   </cond>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="possession">
       <mul order="0x30" stat="runSpd" val="1.20">
-        <using kind="Fist, Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
+        <using kind="Fist,Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
       </mul>
       <add order="0x40" stat="accCombat" val="3">
-        <using kind="Fist, Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
+        <using kind="Fist,Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
       </add>
     </effect>
   </for>

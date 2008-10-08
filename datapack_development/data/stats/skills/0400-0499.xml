@@ -583,18 +583,18 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <cond msg="Requires a hand-to-hand combat weapon.">
-    <using kind="Fist, Dual Fist"/>
+    <using kind="Fist,Dual Fist"/>
   </cond>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="possession">
       <add order="0x40" stat="accCombat" val="6">
-        <using kind="Fist, Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
+        <using kind="Fist,Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
       </add>
       <add order="0x40" stat="rCrit" val="100">
-        <using kind="Fist, Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
+        <using kind="Fist,Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
       </add>
       <mul order="0x30" stat="cAtk" val="1.5"> <!-- L2calc says 1.3 -->
-        <using kind="Fist, Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
+        <using kind="Fist,Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
       </mul>
     </effect>
   </for>
@@ -725,10 +725,6 @@
   </for>
 </skill>
 <skill id="432" levels="1" name="Assassination">
-<!--
-  Description(s):
-      Increases attack strength and the rate of deadly attack while using a dagger.
--->
   <set name="weaponsAllowed" val="16"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -744,8 +740,10 @@
       <player front="True"/>
     </mul>
     <mul order="0x30" stat="blowRate" val="1.1"> <!-- Blow land rate +10% from side -->
-      <player front="False"/>
-      <player behind="False"/>
+      <and>
+        <player front="False"/>
+        <player behind="False"/>
+      </and>
     </mul>
     <mul order="0x30" stat="blowRate" val="1.2"> <!-- Blow land rate +20% from back -->
       <player behind="True"/>
@@ -1214,8 +1212,7 @@
     <player battle_force="2"/>
   </cond>
   <for>
-	<effect count="24" name="Signet" time="5" val="0">
-    </effect>
+    <effect count="24" name="Signet" time="5" val="0"/>
   </for>
 </skill>
 <skill id="455" levels="1" name="Symbol of Noise">
@@ -1246,8 +1243,7 @@
     <player battle_force="2"/>
   </cond>
   <for>
-	<effect count="6" name="SignetNoise" time="5" val="0">
-    </effect>
+    <effect count="6" name="SignetNoise" time="5" val="0"/>
   </for>
 </skill>
 
@@ -1277,8 +1273,7 @@
     <player battle_force="2"/>
   </cond>
   <for>
-	<effect count="24" name="Signet" time="5" val="0">
-    </effect>
+    <effect count="24" name="Signet" time="5" val="0"/>
   </for>
 </skill>
 
@@ -1308,8 +1303,7 @@
     <player battle_force="2"/>
   </cond>
   <for>
-	<effect count="24" name="Signet" time="5" val="0">
-    </effect>
+    <effect count="24" name="Signet" time="5" val="0"/>
   </for>
 </skill>
 
@@ -1339,8 +1333,7 @@
     <player battle_force="2"/>
   </cond>
   <for>
-	<effect count="24" name="Signet" time="5" val="0">
-    </effect>
+    <effect count="24" name="Signet" time="5" val="0"/>
   </for>
 </skill>
 
@@ -1370,8 +1363,7 @@
     <player battle_force="2"/>
   </cond>
   <for>
-	<effect count="24" name="Signet" time="5" val="0">
-    </effect>
+    <effect count="24" name="Signet" time="5" val="0"/>
   </for>
 </skill>
 
@@ -1401,8 +1393,7 @@
     <player battle_force="2"/>
   </cond>
   <for>
-	<effect count="24" name="Signet" time="5" val="0">
-    </effect>
+    <effect count="24" name="Signet" time="5" val="0"/>
   </for>
 </skill>
 <skill id="461" levels="2" name="Break Duress">
