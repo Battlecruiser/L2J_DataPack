@@ -481,7 +481,7 @@
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <for>
-    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="fireVuln">
+    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="element_potion">
       <mul order="0x30" stat="fireVuln" val="0.70"/>
     </effect>
   </for>
@@ -496,7 +496,7 @@
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <for>
-    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="waterVuln">
+    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="element_potion">
       <mul order="0x30" stat="waterVuln" val="0.70"/>
     </effect>
 </for>
@@ -511,7 +511,7 @@
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <for>
-    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="windVuln">
+    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="element_potion">
       <mul order="0x30" stat="windVuln" val="0.70"/>
     </effect>
   </for>
@@ -526,7 +526,7 @@
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <for>
-    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="earthVuln">
+    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="element_potion">
       <mul order="0x30" stat="earthVuln" val="0.70"/>
     </effect>
   </for>
@@ -541,7 +541,7 @@
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <for>
-    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="holyVuln">
+    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="element_potion">
       <mul order="0x30" stat="holyVuln" val="0.70"/>
     </effect>
   </for>
@@ -556,7 +556,7 @@
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <for>
-    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="darkVuln">
+    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="element_potion">
       <mul order="0x30" stat="darkVuln" val="0.70"/>
     </effect>
   </for>
