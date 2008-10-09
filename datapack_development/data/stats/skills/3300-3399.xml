@@ -183,9 +183,10 @@
 <skill id="3318" levels="1" name="Flag Display">
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_FLAGPOLE"/>
-  <set name="hitTime" val="180000"/> 
+  <set name="hitTime" val="180000"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="TAKEFORT"/>
-  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="3319" levels="1" name="Divine Protection of Ring"> 
   <set name="power" val="0.0"/> 
@@ -691,6 +692,7 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="AGATHION"/>
   <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="npcId" val="16029" />
   <set name="castRange" val="-1"/>
