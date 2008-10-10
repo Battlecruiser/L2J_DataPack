@@ -279,9 +279,9 @@
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="element" val="5"/> <!-- Holy -->
-  <set name="hitTime" val="1000"/>
+  <set name="hitTime" val="4000"/>
   <set name="skillType" val="MDAM"/>
-  <set name="reuseDelay" val="4000"/> <!-- Guess - skill has reuse like Might of Heaven -->
+  <set name="reuseDelay" val="16000"/> <!-- Guessing -->
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="750"/>
@@ -316,15 +316,33 @@
 </skill>
 <skill id="1525" levels="42" name="Divine Curse">
   <!-- Inquisitor Stance Skill -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- Done by DJ MELERIX -->
+  <!-- Needs to be verified -->
+  <table name="#dmg"> 51 52 54 55 57 58 60 61 63 64 66 68 69 71 72 74 75 77 78 80 81 83 85 86 88 89 90 92 93 95 96 97 99 100 101 102 103 105 106 107 108 109 </table> <!-- Custom -->
+  <table name="#magicLvl"> 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
+  <table name="#mpConsume"> 39 40 42 43 44 44 45 47 48 49 49 50 52 53 54 55 55 57 58 59 60 60 62 63 64 64 65 67 67 68 69 69 70 70 72 73 73 73 74 74 75 75 </table>
+  <set name="castRange" val="750"/>
+  <set name="effectRange" val="1250"/>
+  <set name="element" val="5"/> <!-- Holy -->
+  <set name="hitTime" val="4000"/>
+  <set name="isDebuff" val="true"/>
+  <set name="isMagic" val="true"/>
+  <set name="lvlDepend" val="1"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="70"/> <!-- Guessing -->
+  <set name="reuseDelay" val="6000"/> <!-- Guessing -->
+  <set name="skillType" val="DOT"/>
+  <set name="target" val="TARGET_ONE"/>
   <for>
+    <effect count="15" name="DamOverTime" time="1" val="#dmg">
+      <mul order="0x30" stat="gainHp" val="0.5"/>
+    </effect>
   </for>
 </skill>
 <skill id="1526" levels="3" name="Steal Mana">
-  <table name="#power"> 41.0 51.0 59.0 </table>
+  <table name="#power"> 41 51 59 </table>
   <table name="#magicLvl"> 46 56 64 </table>
   <table name="#chance"> 5 7 9 </table>
   <set name="magicLvl" val="#magicLvl"/>
@@ -357,7 +375,7 @@
   <set name="target" val="TARGET_AREA"/>
   <set name="radius" val="250"/>
   <set name="element" val="5"/> <!-- Holy -->
-  <set name="reuseDelay" val="6000"/>
+  <set name="reuseDelay" val="8000"/> <!-- Guessing -->
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
