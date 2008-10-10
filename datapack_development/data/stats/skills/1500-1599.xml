@@ -233,6 +233,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="5000"/>
+  <set name="reuseDelay" val="10000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="transformId" val="316"/>
@@ -246,6 +247,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="5000"/>
+  <set name="reuseDelay" val="10000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="transformId" val="317"/>
@@ -259,6 +261,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="5000"/>
+  <set name="reuseDelay" val="10000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="transformId" val="318"/>
@@ -267,21 +270,10 @@
   </for>
 </skill>
 <skill id="1523" levels="42" name="Divine Punishment">
-  <table name="#mpConsume">
-  35 37 38 38 39 40 42 42 43 44 45 45 47 48
-  49 49 50 52 53 53 54 55 55 57 58 58 59 60
-  60 62 62 63 63 64 64 65 65 67 67 67 68 68
-  </table>
-  <table name="#magicLvl">
-  44 45 46 47 48 49 50 51 52 53 54 55 56 57
-  58 59 60 61 62 63 64 65 66 67 68 69 70 71
-  72 73 74 75 76 77 78 79 80 81 82 83 84 85
-  </table>
-  <table name="#power">
-  51.0 52.0 54.0 55.0 57.0 58.0 60.0 61.0 63.0 64.0 66.0 68.0 69.0 71.0
-  72.0 74.0 75.0 77.0 78.0 80.0 81.0 83.0 85.0 86.0 88.0 89.0 90.0 92.0
-  93.0 95.0 96.0 97.0 99.0 100.0 101.0 102.0 103.0 105.0 106.0 107.0 108.0 109.0
-  </table> <!-- Guess - need retail confirmation -->
+  <!-- Inquisitor Stance Skill -->
+  <table name="#mpConsume"> 35 37 38 38 39 40 42 42 43 44 45 45 47 48 49 49 50 52 53 53 54 55 55 57 58 58 59 60 60 62 62 63 63 64 64 65 65 67 67 67 68 68 </table>
+  <table name="#magicLvl"> 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
+  <table name="#power"> 51 52 54 55 57 58 60 61 63 64 66 68 69 71 72 74 75 77 78 80 81 83 85 86 88 89 90 92 93 95 96 97 99 100 101 102 103 105 106 107 108 109 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
@@ -298,6 +290,7 @@
   </for>
 </skill>
 <skill id="1524" levels="42" name="Surrender to the Holy">
+  <!-- Inquisitor Stance Skill -->
   <!-- Done by caramon81 -->
   <table name="#mpConsume"> 39 39 41 42 43 44 44 46 47 48 49 49 51 52 53 54 55 56 57 58 59 60 61 62 63 64 64 66 67 67 68 69 69 70 71 72 73 73 73 74 74 75 </table>
   <table name="#magicLvl"> 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table> <!-- Guesssing -->
@@ -322,6 +315,7 @@
   </for>
 </skill>
 <skill id="1525" levels="42" name="Divine Curse">
+  <!-- Inquisitor Stance Skill -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -353,9 +347,10 @@
   </for>
 </skill>
 <skill id="1528" levels="42" name="Divine Flash">
-  <table name="#mpConsume"> 57 59 60 62 63 65 67 68 69 70 73 74 75 77 79 80 82 83 85 87 88 89 90 93 94 95 97 98 99 100 102 103 104 105 105 107 108 109 109 110 112 112</table>
-  <table name="#magicLvl"> 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85</table>
-  <table name="#power"> 29 29 30 31 32 33 33 34 35 36 37 38 39 39 40 41 42 43 44 45 45 46 47 48 49 50 50 51 52 53 54 54 55 56 56 57 58 58 59 60 60 61</table>
+  <!-- Inquisitor Stance Skill -->
+  <table name="#mpConsume"> 57 59 60 62 63 65 67 68 69 70 73 74 75 77 79 80 82 83 85 87 88 89 90 93 94 95 97 98 99 100 102 103 104 105 105 107 108 109 109 110 112 112 </table>
+  <table name="#magicLvl"> 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
+  <table name="#power"> 29 29 30 31 32 33 33 34 35 36 37 38 39 39 40 41 42 43 44 45 45 46 47 48 49 50 50 51 52 53 54 54 55 56 56 57 58 58 59 60 60 61 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
