@@ -1144,7 +1144,7 @@
     <effect name="Buff" time="120" count="1" val="0">
       <mul order="0x30" stat="mReuse" val="0.7"/>
       <mul order="0x30" stat="pReuse" val="0.7"/>
-      <add order="0x40" stat="MpConsumeRate" val="-10"/>
+      <mul order="0x30" stat="MpConsumeRate" val="0.90"/>
     </effect>
   </for>
 </skill>
