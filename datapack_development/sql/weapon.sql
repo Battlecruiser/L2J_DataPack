@@ -82,7 +82,7 @@ INSERT INTO `weapon` VALUES
 (79,'Sword of Damascus','rhand','true',1350,1,1,'damascus','b',194,10,'sword',8,0,0,0,0,379,0,99,-1,13100000,1346,'true','true','true','true',0,0,0,0,0,0,0,0,9316,'0-0;'),
 (80,'Tallum Blade','rhand','true',1330,1,1,'adamantaite','a',213,10,'sword',8,0,0,0,0,379,0,107,-1,18300000,1128,'true','true','true','true',0,0,0,0,0,0,0,0,9328,'0-0;'),
 (81,'Dragon Slayer','lrhand','true',1840,1,1,'bone','a',282,10,'bigsword',8,0,0,0,0,325,0,114,-1,27000000,1659,'true','true','true','true',0,0,0,0,0,0,0,0,9344,'0-0;'),
-(82,'God\'s Blade','rhand','true',1300,1,1,'adamantaite','s',257,10,'sword',8,0,0,0,0,379,0,124,-1,38000000,1900,'false','false','true','false',0,0,0,0,0,0,0,0,0,'0-0;'),
+(82,'God\'s Blade','rhand','true',1300,1,1,'adamantaite','s',257,10,'sword',8,0,0,0,0,379,0,124,-1,38000000,1900,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (83,'Sword of Magic','rhand','true',970,2,2,'bronze','d',43,10,'sword',8,0,0,0,0,379,0,45,-1,550800,1017,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (84,'Homunkulus\'s Sword','rhand','true',950,3,3,'blood_steel','c',111,10,'sword',8,0,0,0,0,379,0,101,-1,3304300,1322,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (85,'Phantom Sword','rhand','true',860,1,1,'oriharukon','a',170,10,'sword',8,0,0,0,0,379,0,143,-1,18300000,1464,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
