@@ -221,7 +221,7 @@ class Quest (JQuest) :
                   if item.getObjectId() == st.getInt("summonOid"):
                      #EvolvePet(player,item,4424)
                      st.takeItems(3502,1)
-                     st.giveItems(44242,1)
+                     st.giveItems(4424,1)
                      htmltext = "30747-16.htm"
                      st.exitQuest(1)
                      st.playSound("ItemSound.quest_finish")
