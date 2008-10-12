@@ -6,6 +6,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+from net.sf.l2j.gameserver.network.serverpackets import SocialAction
 
 qn = "216_TrialOfGuildsman"
 
@@ -64,23 +65,28 @@ class Quest (JQuest) :
         st.set("onlyone","1")
         st.exitQuest(False)
         st.playSound("ItemSound.quest_finish")
-        st.addExpAndSp(32000,3900)
-        st.takeItems(JOURNEYMAN_RING_ID,st.getQuestItemsCount(JOURNEYMAN_RING_ID))
+        st.addExpAndSp(514739,33384)
+        st.giveItems(57,93803)
+        st.giveItems(7562,85)
+        st.takeItems(JOURNEYMAN_RING_ID,-1)
         st.takeItems(ALLTRANS_INSTRUCTIONS_ID,1)
         st.takeItems(RP_JOURNEYMAN_RING_ID,1)
         st.giveItems(MARK_OF_GUILDSMAN_ID,1)
+        st.getPlayer().sendPacket(SocialAction(st.getPlayer().getObjectId(),3))
     elif event == "30103_4" :
-        st.addExpAndSp(80933,12250)
-        st.giveItems(7562,8)
+        st.addExpAndSp(514739,33384)
+        st.giveItems(57,93803)
+        st.giveItems(7562,85)
         htmltext = "30103-09b.htm"
         st.set("cond","0")
         st.set("onlyone","1")
         st.exitQuest(False)
         st.playSound("ItemSound.quest_finish")
-        st.takeItems(JOURNEYMAN_RING_ID,st.getQuestItemsCount(JOURNEYMAN_RING_ID))
+        st.takeItems(JOURNEYMAN_RING_ID,-1)
         st.takeItems(ALLTRANS_INSTRUCTIONS_ID,1)
         st.takeItems(RP_JOURNEYMAN_RING_ID,1)
         st.giveItems(MARK_OF_GUILDSMAN_ID,1)
+        st.getPlayer().sendPacket(SocialAction(st.getPlayer().getObjectId(),3))
     elif event == "30283_1" :
         htmltext = "30283-03.htm"
         st.giveItems(ALLTRANS_INSTRUCTIONS_ID,1)
@@ -89,6 +95,8 @@ class Quest (JQuest) :
         st.takeItems(MANDRAGORA_BERRY_ID,1)
         st.giveItems(ALLTRANS_RECOMMEND1_ID,1)
         st.giveItems(ALLTRANS_RECOMMEND2_ID,1)
+        st.playSound("ItemSound.quest_middle")
+        st.set("cond","5")
     elif event == "30210_1" :
         htmltext = "30210-02.htm"
     elif event == "30210_2" :
@@ -147,6 +155,8 @@ class Quest (JQuest) :
 
    elif npcId == 30103 and st.getInt("cond")>=1 and st.getQuestItemsCount(VALKONS_RECOMMEND_ID)==1 :
         htmltext = "30103-07.htm"
+        st.set("cond","3")
+        st.playSound("ItemSound.quest_middle")
    elif npcId == 30103 and st.getInt("cond")>=1 and st.getQuestItemsCount(ALLTRANS_INSTRUCTIONS_ID)==1 :
         if st.getQuestItemsCount(JOURNEYMAN_RING_ID) < 7 :
           htmltext = "30103-08.htm"
@@ -154,6 +164,8 @@ class Quest (JQuest) :
           htmltext = "30103-09.htm"
    elif npcId == 30283 and st.getInt("cond")>=1 and st.getQuestItemsCount(VALKONS_RECOMMEND_ID)==1 and st.getQuestItemsCount(MANDRAGORA_BERRY_ID)==0 :
         htmltext = "30283-01.htm"
+        st.set("cond","2")
+        st.playSound("ItemSound.quest_middle")
    elif npcId == 30283 and st.getInt("cond")>=1 and st.getQuestItemsCount(VALKONS_RECOMMEND_ID)==1 and st.getQuestItemsCount(MANDRAGORA_BERRY_ID)==1 :
         htmltext = "30283-02.htm"
    elif npcId == 30283 and st.getInt("cond")>=1 and st.getQuestItemsCount(ALLTRANS_INSTRUCTIONS_ID)==1 :
@@ -170,7 +182,7 @@ class Quest (JQuest) :
    elif npcId == 30210 and st.getInt("cond")>=1 and st.getQuestItemsCount(ALLTRANS_INSTRUCTIONS_ID) and st.getQuestItemsCount(NORMANS_INSTRUCTIONS_ID) and st.getQuestItemsCount(DUNINGS_KEY_ID)>=30 :
         htmltext = "30210-07.htm"
    elif npcId == 30210 and st.getInt("cond")>=1 and st.getQuestItemsCount(ALLTRANS_INSTRUCTIONS_ID) and st.getQuestItemsCount(NORMANS_LIST_ID) :
-        if st.getQuestItemsCount(GRAY_BONE_POWDER_ID) >= 70 and st.getQuestItemsCount(GRANITE_WHETSTONE_ID) >= 70  :
+        if st.getQuestItemsCount(GRAY_BONE_POWDER_ID) >= 70 and st.getQuestItemsCount(GRANITE_WHETSTONE_ID) >= 70 and st.getQuestItemsCount(RED_PIGMENT_ID) >= 70 and st.getQuestItemsCount(BRAIDED_YARN_ID) >= 70:
           htmltext = "30210-12.htm"
           st.takeItems(NORMANS_LIST_ID,1)
           st.takeItems(GRAY_BONE_POWDER_ID,st.getQuestItemsCount(GRAY_BONE_POWDER_ID))
@@ -178,6 +190,9 @@ class Quest (JQuest) :
           st.takeItems(RED_PIGMENT_ID,st.getQuestItemsCount(RED_PIGMENT_ID))
           st.takeItems(BRAIDED_YARN_ID,st.getQuestItemsCount(BRAIDED_YARN_ID))
           st.giveItems(JOURNEYMAN_GEM_ID,7)
+          if st.getQuestItemsCount(JOURNEYMAN_DECO_BEADS_ID) >= 7 :
+             st.playSound("ItemSound.quest_middle")
+             st.set("cond","6")
         else:
           htmltext = "30210-11.htm"
    elif npcId == 30210 and st.getInt("cond")>=1 and st.getQuestItemsCount(NORMANS_INSTRUCTIONS_ID) == 0 and st.getQuestItemsCount(NORMANS_LIST_ID) == 0 and st.getQuestItemsCount(ALLTRANS_INSTRUCTIONS_ID)==1 and (st.getQuestItemsCount(JOURNEYMAN_GEM_ID) or st.getQuestItemsCount(JOURNEYMAN_RING_ID)) :
@@ -205,6 +220,9 @@ class Quest (JQuest) :
           st.takeItems(RP_AMBER_BEAD_ID,st.getQuestItemsCount(RP_AMBER_BEAD_ID))
           st.takeItems(AMBER_LUMP_ID,st.getQuestItemsCount(AMBER_LUMP_ID))
           st.giveItems(JOURNEYMAN_DECO_BEADS_ID,7)
+          if st.getQuestItemsCount(JOURNEYMAN_GEM_ID) >= 7 :
+             st.playSound("ItemSound.quest_middle")
+             st.set("cond","6")
    elif npcId == 30298 and st.getInt("cond")>=1 and st.getQuestItemsCount(ALLTRANS_INSTRUCTIONS_ID)==1 and st.getQuestItemsCount(PINTERS_INSTRUCTIONS_ID)==0 and (st.getQuestItemsCount(JOURNEYMAN_DECO_BEADS_ID) or st.getQuestItemsCount(JOURNEYMAN_RING_ID)) :
         htmltext = "30298-08.htm"
    return htmltext
@@ -217,17 +235,17 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    if npcId == 20223 :
      if st.getInt("cond") >= 1 and st.getQuestItemsCount(VALKONS_RECOMMEND_ID) == 1 and st.getQuestItemsCount(MANDRAGORA_BERRY_ID) == 0 :
-       if st.getRandom(100) <= 20 :
          st.giveItems(MANDRAGORA_BERRY_ID,1)
          st.playSound("ItemSound.quest_middle")
+         st.set("cond","4")
    elif npcId in range(20154,20157):
      if st.getInt("cond") >= 1 and st.getQuestItemsCount(VALKONS_RECOMMEND_ID) == 1 and st.getQuestItemsCount(MANDRAGORA_BERRY_ID) == 0 :
-       if st.getRandom(100) <= 50 :
         st.giveItems(MANDRAGORA_BERRY_ID,1)
         st.playSound("ItemSound.quest_middle")
+        st.set("cond","4")
    elif npcId in range(20267,20272):
     if st.getInt("cond") >= 1 and st.getQuestItemsCount(ALLTRANS_INSTRUCTIONS_ID) == 1 and st.getQuestItemsCount(NORMANS_INSTRUCTIONS_ID) == 1 and st.getQuestItemsCount(DUNINGS_INSTRUCTIONS_ID) == 1 :
-     if st.getRandom(100) <= 30 and st.getQuestItemsCount(DUNINGS_KEY_ID) <= 29 :
+     if st.getQuestItemsCount(DUNINGS_KEY_ID) <= 29 :
       if st.getQuestItemsCount(DUNINGS_KEY_ID) == 29 :
         st.giveItems(DUNINGS_KEY_ID,1)
         st.takeItems(DUNINGS_INSTRUCTIONS_ID,1)
@@ -236,54 +254,46 @@ class Quest (JQuest) :
         st.giveItems(DUNINGS_KEY_ID,1)
         st.playSound("ItemSound.quest_itemget")
    elif npcId in [20201,20200]:
-    if st.getInt("cond") >= 1 and st.getQuestItemsCount(ALLTRANS_INSTRUCTIONS_ID) == 1 and st.getQuestItemsCount(NORMANS_LIST_ID) == 1 and st.getQuestItemsCount(GRAY_BONE_POWDER_ID) <= 68 :
-     if st.getQuestItemsCount(GRAY_BONE_POWDER_ID) == 68 :
-      st.giveItems(GRAY_BONE_POWDER_ID,2)
+    if st.getInt("cond") >= 1 and st.getQuestItemsCount(ALLTRANS_INSTRUCTIONS_ID) == 1 and st.getQuestItemsCount(NORMANS_LIST_ID) == 1 and st.getQuestItemsCount(GRAY_BONE_POWDER_ID) < 70 :
+     st.giveItems(GRAY_BONE_POWDER_ID,5)
+     if st.getQuestItemsCount(GRAY_BONE_POWDER_ID) >= 70 :
       st.playSound("ItemSound.quest_middle")
      else:
-      st.giveItems(GRAY_BONE_POWDER_ID,2)
       st.playSound("ItemSound.quest_itemget")
    elif npcId == 20083 :
-    if st.getInt("cond") >= 1 and st.getQuestItemsCount(ALLTRANS_INSTRUCTIONS_ID) == 1 and st.getQuestItemsCount(NORMANS_LIST_ID) == 1 and st.getQuestItemsCount(GRANITE_WHETSTONE_ID) <= 68 :
-     if st.getQuestItemsCount(GRANITE_WHETSTONE_ID) == 68 :
-      st.giveItems(GRANITE_WHETSTONE_ID,2)
+    if st.getInt("cond") >= 1 and st.getQuestItemsCount(ALLTRANS_INSTRUCTIONS_ID) == 1 and st.getQuestItemsCount(NORMANS_LIST_ID) == 1 and st.getQuestItemsCount(GRANITE_WHETSTONE_ID) < 70 :
+     st.giveItems(GRANITE_WHETSTONE_ID,7)
+     if st.getQuestItemsCount(GRANITE_WHETSTONE_ID) >= 70 :
       st.playSound("ItemSound.quest_middle")
      else:
-      st.giveItems(GRANITE_WHETSTONE_ID,2)
       st.playSound("ItemSound.quest_itemget")
    elif npcId == 20202 :
-    if st.getInt("cond") >= 1 and st.getQuestItemsCount(ALLTRANS_INSTRUCTIONS_ID) == 1 and st.getQuestItemsCount(NORMANS_LIST_ID) == 1 and st.getQuestItemsCount(RED_PIGMENT_ID) <= 68 :
-     if st.getQuestItemsCount(RED_PIGMENT_ID) == 68 :
-      st.giveItems(RED_PIGMENT_ID,2)
+    if st.getInt("cond") >= 1 and st.getQuestItemsCount(ALLTRANS_INSTRUCTIONS_ID) == 1 and st.getQuestItemsCount(NORMANS_LIST_ID) == 1 and st.getQuestItemsCount(RED_PIGMENT_ID) < 70 :
+     st.giveItems(RED_PIGMENT_ID,7)
+     if st.getQuestItemsCount(RED_PIGMENT_ID) >= 70 :
       st.playSound("ItemSound.quest_middle")
      else:
-      st.giveItems(RED_PIGMENT_ID,2)
       st.playSound("ItemSound.quest_itemget")
    elif npcId == 20168 :
-    if st.getInt("cond") >= 1 and st.getQuestItemsCount(ALLTRANS_INSTRUCTIONS_ID) == 1 and st.getQuestItemsCount(NORMANS_LIST_ID) == 1 and st.getQuestItemsCount(BRAIDED_YARN_ID) <= 68 :
-     if st.getQuestItemsCount(BRAIDED_YARN_ID) == 68 :
-      st.giveItems(BRAIDED_YARN_ID,2)
+    if st.getInt("cond") >= 1 and st.getQuestItemsCount(ALLTRANS_INSTRUCTIONS_ID) == 1 and st.getQuestItemsCount(NORMANS_LIST_ID) == 1 and st.getQuestItemsCount(BRAIDED_YARN_ID) < 70 :
+     st.giveItems(BRAIDED_YARN_ID,10)
+     if st.getQuestItemsCount(BRAIDED_YARN_ID) >= 70 :
       st.playSound("ItemSound.quest_middle")
      else:
-      st.giveItems(BRAIDED_YARN_ID,2)
       st.playSound("ItemSound.quest_itemget")
    elif npcId in range(20079,20082) :
     if st.getInt("cond") >= 1 and st.getQuestItemsCount(ALLTRANS_INSTRUCTIONS_ID) == 1 and st.getQuestItemsCount(PINTERS_INSTRUCTIONS_ID) == 1 :
      if st.getQuestItemsCount(AMBER_BEAD_ID) < 70 :
-      if st.getRandom(100) < 50 and player.getClassId().getId() == 0x36: #and IsSpoiled() == 1 :
-        st.giveItems(AMBER_BEAD_ID,1)
+        st.giveItems(AMBER_BEAD_ID,5)
         st.playSound("Itemsound.quest_itemget")
-      if st.getRandom(100) < 50 :
-        if st.getQuestItemsCount(AMBER_BEAD_ID) < 69 :
-          st.giveItems(AMBER_BEAD_ID,1)
-          st.playSound("Itemsound.quest_itemget")
-        else:
-          st.giveItems(AMBER_BEAD_ID,1)
+        if st.getQuestItemsCount(AMBER_BEAD_ID) >= 70 :
           st.playSound("ItemSound.quest_middle")
+        else:
+          st.playSound("Itemsound.quest_itemget")
 
    return
 
-QUEST       = Quest(216,qn,"Trial Of Guildsman")
+QUEST       = Quest(216,qn,"Trial of the Guildsman")
 
 QUEST.addStartNpc(30103)
 
