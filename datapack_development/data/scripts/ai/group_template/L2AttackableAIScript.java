@@ -112,7 +112,15 @@ public class L2AttackableAIScript extends QuestJython
     	
     	L2Attackable attackable = (L2Attackable)npc; 
     	
-		if (skill.getAggroPoints() > 0)
+    	int skillAggroPoints = skill.getAggroPoints();
+    	
+    	if (caster.getPet() != null)
+    	{
+    		if (targets.length == 1 && contains(targets, caster.getPet()))
+    			skillAggroPoints = 0;
+    	}
+    	
+		if (skillAggroPoints > 0)
 		{
 			if ( attackable.hasAI() && (attackable.getAI().getIntention() == AI_INTENTION_ATTACK))
 			{
@@ -122,7 +130,7 @@ public class L2AttackableAIScript extends QuestJython
 					if (npcTarget == skillTarget || npc == skillTarget)
 					{
 						L2Character originalCaster = isPet? caster.getPet(): caster;
-						attackable.addDamageHate(originalCaster, 0, (skill.getAggroPoints()*150)/(attackable.getLevel()+7));
+						attackable.addDamageHate(originalCaster, 0, (skillAggroPoints*150)/(attackable.getLevel()+7));
 					}
 				}
 			}
