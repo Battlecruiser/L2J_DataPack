@@ -319,6 +319,7 @@
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <table name="#Tab-rEvas"> 20 25 </table>
+  <table name="#pSkillEvas"> 25 30 </table> <!-- values to be confirmed -->
   <table name="#mpConsume"> 13 25 </table>
   <table name="#ench1time"> 30 31 32 32 33 34 35 35 36 37 38 38 39 40 41 41 42 43 43 44 45 46 46 47 48 49 49 50 51 52 </table>
   <table name="#ench2reuseDelay"> 1780000 1760000 1740000 1720000 1700000 1680000 1660000 1640000 1620000 1600000 1580000 1560000 1540000 1520000 1500000 1480000 1460000 1440000 1420000 1400000 1380000 1360000 1340000 1320000 1300000 1280000 1260000 1240000 1220000 1200000 </table>
@@ -338,12 +339,14 @@
     <effect count="1" name="Buff" time="30" val="0" stackOrder="#Tab-rEvas" stackType="rEvasSpec">
       <add order="0x40" stat="rEvas" val="#Tab-rEvas"/>
       <mul order="0x30" stat="cancelVuln" val="0.9"/> <!-- value to be confirmed -->
+      <add order="0x40" stat="pSkillEvas" val="#pSkillEvas"/>
     </effect>
   </for>
   <enchant1for>
     <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="25" stackType="rEvasSpec">
       <add order="0x40" stat="rEvas" val="25"/>
       <mul order="0x30" stat="cancelVuln" val="0.9"/> <!-- value to be confirmed -->
+      <add order="0x40" stat="pSkillEvas" val="#pSkillEvas"/>
     </effect>
   </enchant1for>
 </skill>
