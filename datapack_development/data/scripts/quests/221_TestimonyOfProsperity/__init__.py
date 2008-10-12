@@ -3,6 +3,7 @@ import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+from net.sf.l2j.gameserver.network.serverpackets import SocialAction
 
 qn = "221_TestimonyOfProsperity"
 
@@ -73,6 +74,8 @@ class Quest (JQuest) :
             st.takeItems(RECIPE_OF_EMILLY_ID,1)
             st.takeItems(LILITH_ELVEN_WAFER_ID,1)
             st.giveItems(PARMANS_INSTRUCTIONS_ID,1)
+            st.set("cond","3")
+            st.playSound("ItemSound.quest_middle")
           else:
             htmltext = "30104-08.htm"
             st.takeItems(RING_OF_TESTIMONY1_ID,1)
@@ -82,6 +85,8 @@ class Quest (JQuest) :
             st.takeItems(LILITH_ELVEN_WAFER_ID,1)
             st.giveItems(RING_OF_TESTIMONY2_ID,1)
             st.giveItems(PARMANS_LETTER_ID,1)
+            st.set("cond","4")
+            st.playSound("ItemSound.quest_middle")
     elif event == "30531_1" and st.getQuestItemsCount(COLLECTION_LICENSE_ID) :
           htmltext = "30531-04.htm"
     elif event == "30531_1" :
@@ -108,6 +113,9 @@ class Quest (JQuest) :
     elif event == "30597_1" :
           htmltext = "30597-02.htm"
           st.giveItems(BLESSED_SEED_ID,1)
+          if st.getQuestItemsCount(OLD_ACCOUNT_BOOK_ID) and st.getQuestItemsCount(BLESSED_SEED_ID) and st.getQuestItemsCount(RECIPE_OF_EMILLY_ID) and st.getQuestItemsCount(LILITH_ELVEN_WAFER_ID) :
+             st.set("cond","2")
+             st.playSound("ItemSound.quest_middle")
     elif event == "30005_1" :
           htmltext = "30005-02.htm"
     elif event == "30005_2" :
@@ -121,6 +129,9 @@ class Quest (JQuest) :
           htmltext = "30368-03.htm"
           st.giveItems(LILITH_ELVEN_WAFER_ID,1)
           st.takeItems(CRYSTAL_BROOCH_ID,1)
+          if st.getQuestItemsCount(OLD_ACCOUNT_BOOK_ID) and st.getQuestItemsCount(BLESSED_SEED_ID) and st.getQuestItemsCount(RECIPE_OF_EMILLY_ID) and st.getQuestItemsCount(LILITH_ELVEN_WAFER_ID) :
+             st.set("cond","2")
+             st.playSound("ItemSound.quest_middle")
     elif event == "30466_1" :
           htmltext = "30466-02.htm"
     elif event == "30466_2" :
@@ -132,6 +143,9 @@ class Quest (JQuest) :
           htmltext = "30620-03.htm"
           st.giveItems(RECIPE_OF_EMILLY_ID,1)
           st.takeItems(MANDRAGORA_BOUQUET_ID,1)
+          if st.getQuestItemsCount(OLD_ACCOUNT_BOOK_ID) and st.getQuestItemsCount(BLESSED_SEED_ID) and st.getQuestItemsCount(RECIPE_OF_EMILLY_ID) and st.getQuestItemsCount(LILITH_ELVEN_WAFER_ID) :
+             st.set("cond","2")
+             st.playSound("ItemSound.quest_middle")
     elif event == "30621_1" :
           htmltext = "30621-02.htm"
     elif event == "30621_2" :
@@ -139,10 +153,14 @@ class Quest (JQuest) :
     elif event == "30621_3" :
           htmltext = "30621-04.htm"
           st.giveItems(CLAY_DOUGH_ID,1)
+          st.set("cond","5")
+          st.playSound("ItemSound.quest_middle")
     elif event == "30622_1" :
           htmltext = "30622-02.htm"
           st.giveItems(PATTERN_OF_KEYHOLE_ID,1)
           st.takeItems(CLAY_DOUGH_ID,1)
+          st.set("cond","6")
+          st.playSound("ItemSound.quest_middle")
     elif event == "30622_2" :
           htmltext = "30622-04.htm"
           st.takeItems(NIKOLAS_LIST_ID,1)
@@ -152,6 +170,8 @@ class Quest (JQuest) :
           st.takeItems(SPIDER_THORN_ID,st.getQuestItemsCount(SPIDER_THORN_ID))
           st.giveItems(MAPHR_TABLET_FRAGMENT_ID,1)
           st.takeItems(KEY_OF_TITAN_ID,1)
+          st.set("cond","9")
+          st.playSound("ItemSound.quest_middle")
     return htmltext
 
 
@@ -195,8 +215,9 @@ class Quest (JQuest) :
    elif npcId == 30104 and st.getInt("cond")>=1 and (st.getQuestItemsCount(CLAY_DOUGH_ID) or st.getQuestItemsCount(PATTERN_OF_KEYHOLE_ID) or st.getQuestItemsCount(NIKOLAS_LIST_ID)) and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID)==1 :
         htmltext = "30104-12.htm"
    elif npcId == 30104 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID) :
-          st.addExpAndSp(12969,1000)
-          st.giveItems(7562,16)
+          st.addExpAndSp(599979,40040)
+          st.giveItems(57,108841)
+          st.giveItems(7562,50)
           st.takeItems(RING_OF_TESTIMONY2_ID,1)
           st.giveItems(MARK_OF_PROSPERITY_ID,1)
           st.takeItems(MAPHR_TABLET_FRAGMENT_ID,1)
@@ -205,6 +226,7 @@ class Quest (JQuest) :
           st.set("onlyone","1")
           st.exitQuest(False)
           st.playSound("ItemSound.quest_finish")
+          player.sendPacket(SocialAction(player.getObjectId(),3))
    elif npcId == 30531 and st.getInt("cond")>=1 and st.getQuestItemsCount(OLD_ACCOUNT_BOOK_ID) == 0 and st.getQuestItemsCount(COLLECTION_LICENSE_ID) == 0 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID)==1 :
         htmltext = "30531-01.htm"
    elif npcId == 30531 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID) :
@@ -217,6 +239,9 @@ class Quest (JQuest) :
           st.takeItems(RECEIPT_OF_CONTRIBUTION3_ID,1)
           st.takeItems(RECEIPT_OF_CONTRIBUTION4_ID,1)
           st.takeItems(RECEIPT_OF_CONTRIBUTION5_ID,1)
+          if st.getQuestItemsCount(OLD_ACCOUNT_BOOK_ID) and st.getQuestItemsCount(BLESSED_SEED_ID) and st.getQuestItemsCount(RECIPE_OF_EMILLY_ID) and st.getQuestItemsCount(LILITH_ELVEN_WAFER_ID) :
+             st.set("cond","2")
+             st.playSound("ItemSound.quest_middle")
         else:
           htmltext = "30531-04.htm"
    elif npcId == 30531 and st.getInt("cond") >= 1 and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) and st.getQuestItemsCount(OLD_ACCOUNT_BOOK_ID) and st.getQuestItemsCount(COLLECTION_LICENSE_ID)==0 :
@@ -367,6 +392,8 @@ class Quest (JQuest) :
         st.takeItems(PATTERN_OF_KEYHOLE_ID,1)
         st.giveItems(RP_TITAN_KEY_ID,1)
         st.takeItems(PARMANS_LETTER_ID,1)
+        st.set("cond","7")
+        st.playSound("ItemSound.quest_middle")
    elif npcId == 30621 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(NIKOLAS_LIST_ID) and st.getQuestItemsCount(CLAY_DOUGH_ID) == 0 and st.getQuestItemsCount(PATTERN_OF_KEYHOLE_ID) == 0 and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID) == 0 and st.getQuestItemsCount(KEY_OF_TITAN_ID) == 0 :
         htmltext = "30621-07.htm"
    elif npcId == 30621 and st.getInt("cond")>=1 and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) and st.getQuestItemsCount(NIKOLAS_LIST_ID) and st.getQuestItemsCount(KEY_OF_TITAN_ID) and st.getQuestItemsCount(CLAY_DOUGH_ID) == 0 and st.getQuestItemsCount(PATTERN_OF_KEYHOLE_ID) == 0 and st.getQuestItemsCount(MAPHR_TABLET_FRAGMENT_ID) == 0 :
@@ -385,75 +412,50 @@ class Quest (JQuest) :
    if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
-   if npcId == 20223 :
+   if npcId in [20223,20154,20155,20156] :
     st.set("id","0")
     if st.getInt("cond") and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) == 1  :
-     if st.getQuestItemsCount(MANDRAGORA_PETAL_ID)<20 and st.getRandom(100)<30 :
+     if st.getQuestItemsCount(MANDRAGORA_PETAL_ID)<20:
       st.giveItems(MANDRAGORA_PETAL_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 20154 :
-    st.set("id","0")
-    if st.getInt("cond") and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) == 1  :
-     if st.getQuestItemsCount(MANDRAGORA_PETAL_ID)<20 and st.getRandom(100)<60 :
-      st.giveItems(MANDRAGORA_PETAL_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 20155 :
-    st.set("id","0")
-    if st.getInt("cond") and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) == 1  :
-     if st.getQuestItemsCount(MANDRAGORA_PETAL_ID)<20 and st.getRandom(100)<80 :
-      st.giveItems(MANDRAGORA_PETAL_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 20156 :
-    st.set("id","0")
-    if st.getInt("cond") and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) == 1  :
-     if st.getQuestItemsCount(MANDRAGORA_PETAL_ID)<20 :
-      st.giveItems(MANDRAGORA_PETAL_ID,1)
-      st.playSound("ItemSound.quest_middle")
+      st.playSound("ItemSound.quest_itemget")
    elif npcId == 20228 :
     st.set("id","0")
     if st.getInt("cond") and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) == 1 and st.getQuestItemsCount(CRIMSON_MOSS_ID)<10 :
-     if st.getQuestItemsCount(CRIMSON_MOSS_ID) == 9 :
       st.giveItems(CRIMSON_MOSS_ID,1)
-      st.playSound("ItemSound.quest_middle")
-     else :
-      st.giveItems(CRIMSON_MOSS_ID,1)
-      st.playSound("ItemSound.quest_itemget")
-   elif npcId == 20157 :
+      if st.getQuestItemsCount(CRIMSON_MOSS_ID)<10:
+         st.playSound("ItemSound.quest_itemget")
+      else :
+         st.playSound("ItemSound.quest_middle")
+   elif npcId in [20157,20230,20232,20234] :
     st.set("id","0")
     if st.getInt("cond") and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1 and st.getQuestItemsCount(STAKATO_SHELL_ID) <20  :
-     if st.getRandom(100)<20 :
       st.giveItems(STAKATO_SHELL_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 20230 :
-    st.set("id","0")
-    if st.getInt("cond") and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1 and st.getQuestItemsCount(STAKATO_SHELL_ID) <20  :
-     if st.getRandom(100)<30 :
-      st.giveItems(STAKATO_SHELL_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 20232 :
-    st.set("id","0")
-    if st.getInt("cond") and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1 and st.getQuestItemsCount(STAKATO_SHELL_ID) <20  :
-     if st.getRandom(100)<50 :
-      st.giveItems(STAKATO_SHELL_ID,1)
-      st.playSound("ItemSound.quest_middle")
-   elif npcId == 20234 :
-    st.set("id","0")
-    if st.getInt("cond") and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1 and st.getQuestItemsCount(STAKATO_SHELL_ID) <20 :
-     if st.getRandom(100)<60 :
-      st.giveItems(STAKATO_SHELL_ID,1)
-      st.playSound("ItemSound.quest_middle")
+      if st.getQuestItemsCount(STAKATO_SHELL_ID)<20:
+         st.playSound("ItemSound.quest_itemget")
+      else :
+         st.playSound("ItemSound.quest_middle")
+         if st.getQuestItemsCount(STAKATO_SHELL_ID) >= 20 and st.getQuestItemsCount(INPICIO_SAC_ID) >= 10 and st.getQuestItemsCount(SPIDER_THORN_ID) >= 10 :
+            st.set("cond","8")
    elif npcId == 20231 :
     st.set("id","0")
     if st.getInt("cond") and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1 and st.getQuestItemsCount(INPICIO_SAC_ID) <10  :
-     if st.getRandom(100)<50 :
       st.giveItems(INPICIO_SAC_ID,1)
-      st.playSound("ItemSound.quest_middle")
+      if st.getQuestItemsCount(INPICIO_SAC_ID)<10:
+         st.playSound("ItemSound.quest_itemget")
+      else :
+         st.playSound("ItemSound.quest_middle")
+         if st.getQuestItemsCount(STAKATO_SHELL_ID) >= 20 and st.getQuestItemsCount(INPICIO_SAC_ID) >= 10 and st.getQuestItemsCount(SPIDER_THORN_ID) >= 10 :
+            st.set("cond","8")
    elif npcId == 20233 :
     st.set("id","0")
     if st.getInt("cond") and st.getQuestItemsCount(RING_OF_TESTIMONY2_ID) == 1 and st.getQuestItemsCount(SPIDER_THORN_ID) <10  :
-     if st.getRandom(100)<50 :
       st.giveItems(SPIDER_THORN_ID,1)
-      st.playSound("ItemSound.quest_middle")
+      if st.getQuestItemsCount(SPIDER_THORN_ID)<10:
+         st.playSound("ItemSound.quest_itemget")
+      else :
+         st.playSound("ItemSound.quest_middle")
+         if st.getQuestItemsCount(STAKATO_SHELL_ID) >= 20 and st.getQuestItemsCount(INPICIO_SAC_ID) >= 10 and st.getQuestItemsCount(SPIDER_THORN_ID) >= 10 :
+            st.set("cond","8")
    return
 
 QUEST       = Quest(221,qn,"Testimony Of Prosperity")
