@@ -119,3 +119,6 @@ of this directory a little bit.
 350980012.xml -> BlackSmith Lahm
 
 36142001.xml -> Dragonspine fortress buylist
+
+32326001.xml -> Yang - Elemental potions
+32326002.xml -> Yang - Elemental stones
