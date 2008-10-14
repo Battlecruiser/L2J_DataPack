@@ -167,6 +167,10 @@ public class Baium extends L2AttackableAIScript
         {
         	callSkillAI(npc);
         }
+        else if (event.equalsIgnoreCase("clean_player"))
+        {
+        	_target = null;
+        }
         else if (event.equalsIgnoreCase("baium_wakeup") && npc != null)
         {
             if (npc.getNpcId() == LIVE_BAIUM)
@@ -382,6 +386,10 @@ public class Baium extends L2AttackableAIScript
 		if (!result.isEmpty() && result.size() != 0)
 		{
 			Object[] characters = result.toArray();
+			QuestTimer timer = getQuestTimer("clean_player", null, null);
+			if (timer != null)
+				timer.cancel();
+			startQuestTimer("clean_player", 20000, null, null);
 			return (L2Character) characters[Rnd.get(characters.length)];
 		}
 		return null;
