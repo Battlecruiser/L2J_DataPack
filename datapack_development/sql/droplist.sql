@@ -22554,7 +22554,7 @@ INSERT INTO `droplist` VALUES
 (22030,1873,1,1,2,47619), -- Silver Nugget
 (22030,1876,1,1,2,11111),   -- Mithril Ore
 (22030,1895,1,1,2,26316),   -- Metalic Fibber
-(22030,1853,1,1,1,8333),   -- Sage's Rag Lining
+(22030,1953,1,1,1,8333),   -- Sage's Rag Lining
 (22030,1905,1,1,-1,65000),   -- Omen Beast's Eye Earring Gemstone
 (22030,2160,1,1,-1,40000),   -- Recipe: Moonstone Earring
 (22031,57,384,779,0,700000), -- Adena
