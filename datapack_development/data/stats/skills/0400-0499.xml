@@ -600,10 +600,6 @@
   </for>
 </skill>
 <skill id="426" levels="1" name="Battle Force">
-<!--
-  Description(s):
-      Transfers your strength to a party member. The effect can be cancelled if you incur damage.
--->
   <set name="mpInitialConsume" val="12"/>
   <set name="magicLvl" val="77"/>
   <set name="triggeredId" val="5104"/>
@@ -621,10 +617,6 @@
   </for>
 </skill>
 <skill id="427" levels="1" name="Spell Force">
-<!--
-  Description(s):
-      Transfers your strength to a party member. The effect can be cancelled if you incur damage.
--->
   <set name="mpInitialConsume" val="12"/>
   <set name="magicLvl" val="77"/>
   <set name="triggeredId" val="5105"/>
@@ -642,18 +634,18 @@
   </for>
 </skill>
 <skill id="428" levels="1" name="Inner Rhythm">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       MP consumption for singing and dancing is decreased.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-<!-- needs core support -->
+  <!-- needs core support -->
   </for>
 </skill>
 <skill id="429" levels="1" name="Knighthood">
@@ -683,10 +675,6 @@
   </for>
 </skill>
 <skill id="430" levels="1" name="Master of Combat">
-<!--
-  Description(s):
-      Increases the attack strength of a sword, blunt weapon, spear, dual-bladed or hand-to-hand combat weapon. Also increases maximum CP.
--->
   <set name="weaponsAllowed" val="20300"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -704,10 +692,6 @@
   </for>
 </skill>
 <skill id="431" levels="1" name="Archery">
-<!--
-  Description(s):
-      Increases attack strength and maximum attack range while using a bow.
--->
   <set name="weaponsAllowed" val="32"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -780,12 +764,6 @@
   </for>
 </skill>
 <skill id="435" levels="1" name="Summon Lore">
-<!--
-  Needs to be finished.
-
-  Description(s):
-      Increases P. Def. when equipped with Robe/Light Armor and increases Casting Speed. Decreases MP consumption for magic skills.
--->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -815,10 +793,6 @@
   </for>
 </skill>
 <skill id="436" levels="1" name="Divine Lore">
-<!--
-  Description(s):
-      MP consumption for magical skills is decreased.
--->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -826,7 +800,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul order="0x30" stat="MpConsumeRate" val="0.95"/>
+    <mul order="0x30" stat="MpConsumeRate" val="0.95"/> <!-- Needs core support "Should be for magical skills only" -->
   </for>
 </skill>
 <skill id="437" levels="1" name="Song of Silence">
@@ -871,27 +845,22 @@
   </for>
 </skill>
 <skill id="439" levels="1" name="Shield of Revenge">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Temporarily reflects damage from melee attack skills back to the enemy.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-<!-- needs core support - not really a reflect -> http://www.l2guru.com/forum/showthread.php?t=74337 -->
+  <!-- needs core support - not really a reflect -> http://www.l2guru.com/forum/showthread.php?t=74337 -->
   </for>
 </skill>
 <skill id="440" levels="1" name="Braveheart">
-<!--
-  Needs to be verified.
-
-  Description(s):
-      Recovers 1000 CP by increasing your will to fight. Power 1000.
--->
+  <!-- Needs to be verified -->
   <set name="mpConsume" val="57"/>
   <set name="power" val="1000"/>
   <set name="target" val="TARGET_SELF"/>
@@ -966,18 +935,18 @@
   </for>
 </skill>
 <skill id="444" levels="1" name="Festive Sweeper">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       When used on nearby corpses that are in a Spoil state, extra items may be obtained.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-<!-- needs core support -->
+  <!-- needs core support -->
   </for>
 </skill>
 <skill id="445" levels="1" name="Mirage">
@@ -1016,27 +985,22 @@
   </for>
 </skill>
 <skill id="447" levels="1" name="Counterattack">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Temporarily allows you to reflect damage caused by a melee attack skill back to the enemy.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-<!-- needs core support - not really a reflect -> http://www.l2guru.com/forum/showthread.php?t=74337 -->
+  <!-- needs core support - not really a reflect -> http://www.l2guru.com/forum/showthread.php?t=74337 -->
   </for>
 </skill>
 <skill id="448" levels="1" name="Summon Swoop Cannon">
-<!--
-  Needs to be verified. Is enchantable but no stats for the +Power versions.
-
-  Description(s):
-      Summons a Swoop Cannon. Requires 46 Crystals: A-Grade. Consumes 21 Gemstones: B-Grade per minute.
--->
+  <!-- Needs to be verified "Is enchantable but no stats for the +Power versions" -->
   <set name="mpInitialConsume" val="530"/>
   <set name="itemConsumeIdOT" val="2132"/>
   <set name="itemConsumeCountOT" val="21"/>
@@ -1062,15 +1026,7 @@
   </for>
 </skill>
 <skill id="449" levels="4" name="Summon Attractive Cubic">
-<!--
-  Needs to be finished. L2CubicInstance.java has to be updated to support cubic id and hate/hold skills.
-
-  Description(s):
-      Lvl 1 - Summons Attract Cubic. Attract Cubic can continuously use hate and hold magic on an enemy. Requires 10 D-Grade Crystals.
-      Lvl 2 - Summons Attract Cubic. Attract Cubic can continuously use hate and hold magic on an enemy. Requires 11 D-Grade Crystals.
-      Lvl 3 - Summons Attract Cubic. Attract Cubic can continuously use hate and hold magic on an enemy. Requires 12 D-Grade Crystals.
-      Lvl 4 - Summons Attract Cubic. Attract Cubic can continuously use hate and hold magic on an enemy. Requires 13 D-Grade Crystals.
--->
+  <!-- Needs to be finished "L2CubicInstance.java has to be updated to support cubic id and hate/hold skills" -->
   <table name="#mpConsume"> 58 62 65 69 </table>
   <table name="#itemConsumeCount"> 10 11 12 13 </table>
   <table name="#magicLvl"> 62 66 70 74 </table> <!-- guessed -->
@@ -1189,10 +1145,6 @@
   <set name="negatePower" val="8.0"/>
 </skill>
 <skill id="454" levels="1" name="Symbol of Defense">
-<!--
-  Description(s):
-      Generates a signet that maximizes the defense abilities of those nearby. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol.
--->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SIGNET"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1218,10 +1170,6 @@
   </for>
 </skill>
 <skill id="455" levels="1" name="Symbol of Noise">
-<!--
-  Description(s):
-      Generates a signet that cancels the singing or dancing abilities of those nearby. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol.
--->
   <set name="target" val="TARGET_GROUND"/>
   <set name="skillType" val="SIGNET"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1248,12 +1196,7 @@
     <effect count="6" name="SignetNoise" time="5" val="0"/>
   </for>
 </skill>
-
 <skill id="456" levels="1" name="Symbol of Resistance">
-<!--
-  Description(s):
-      Generates a signet that maximizes resistance to abnormal states of those nearby. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol.
--->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SIGNET"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1280,10 +1223,6 @@
 </skill>
 
 <skill id="457" levels="1" name="Symbol of Honor">
-<!--
-  Description(s):
-      Generates a signet that maximizes the HP/CP recovery rate of those nearby. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol.
--->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SIGNET"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1310,10 +1249,6 @@
 </skill>
 
 <skill id="458" levels="1" name="Symbol of Energy">
-<!--
-  Description(s):
-      Generates a signet that increases P. Atk. and force for those nearby. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol.
--->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SIGNET"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1338,12 +1273,7 @@
     <effect count="24" name="Signet" time="5" val="0"/>
   </for>
 </skill>
-
 <skill id="459" levels="1" name="Symbol of the Sniper">
-<!--
-  Description(s):
-      Generates a signet that maximizes the archery skill of those nearby. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol.
--->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SIGNET"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1368,12 +1298,7 @@
     <effect count="24" name="Signet" time="5" val="0"/>
   </for>
 </skill>
-
 <skill id="460" levels="1" name="Symbol of the Assassin">
-<!--
-  Description(s):
-      Generates a signet that maximizes your dodging ability and increases the chance of inflicting a deadly attack for those near to you. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol.
--->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SIGNET"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1399,26 +1324,22 @@
   </for>
 </skill>
 <skill id="461" levels="2" name="Break Duress">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Lvl 1 - Uses Focused Force to escape from an immobile state. Level 2 Focused Force charge required.
       Lvl 2 - Uses Focused Force to escape from a slow or immobile state. Level 3 Focused Force charge required.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-<!-- how can I use num_charges when skillType is not CHARGEDAM ? -->
+  <!-- how can I use num_charges when skillType is not CHARGEDAM ? -->
   </for>
 </skill>
 <skill id="462" levels="1" name="Guilted Body">
-<!--
-  Description(s):
-      Body of Original Sin. Only able to equip light armor and effect of recovery magic reduces in half.
--->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1426,14 +1347,10 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-      <mul order="0x30" stat="gainHp" val="0.95"/> 
+    <mul order="0x30" stat="gainHp" val="0.95"/>
   </for>
 </skill>
 <skill id="463" levels="3" name="Weapon Mastery">
-<!--
-  Description(s):
-      Attack power increase.
--->
   <table name="#pAtk"> 2 3 4 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1447,10 +1364,6 @@
   </for>
 </skill>
 <skill id="464" levels="5" name="Armor Mastery">
-<!--
-  Description(s):
-      Increases P. Def. (lvl4 and lvl5 Increases P. Def. and Evasion.)
--->
   <table name="#pDef"> 9 11 12 13 14 </table>
   <table name="#rEvas"> 0 0 0 3 3 </table>
   <set name="power" val="0.0"/>
@@ -1472,10 +1385,6 @@
   </for>
 </skill>
 <skill id="465" levels="50" name="Light Armor Mastery">
-<!--
-  Description(s):
-      Increases P. Def. when wearing light armor.
--->
   <table name="#pDef"> 4.2 5.3 6.5 7.7 9 9.9 10.8 12.7 13.7 14.8 16.9 18 19.1 21.5 22.7 24 25.3 26.6 27.9 29.3 30.7 32.1 33.6 35 36.5 38.1 39.6 41.2 42.8 44.5 46.1 47.8 49.5 51.3 53.0 54.8 56.6 58.4 60.2 62.1 64.0 65.8 67.7 69.7 71.6 73.5 75.5 77.4 79.4 81.3 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1495,10 +1404,6 @@
   </for>
 </skill>
 <skill id="466" levels="55" name="Magic Immunity">
-<!--
-  Description(s):
-      Increases M. Def.
--->
   <table name="#Tab-mDef"> 19 20 22 23 24 26 27 28 30 31 32 35 36 37 40 42 43 44 46 47 49 51 52 54 56 57 59 61 63 64 66 68 70 72 74 76 78 80 82 84 86 88 91 93 95 97 99 102 104 106 108 110 112 115 117</table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1511,10 +1416,6 @@
   </for>
 </skill>
 <skill id="467" levels="23" name="Soul Mastery">
-<!--
-  Description(s):
-      Absorbs a soul. x or more Exp is needed to absorb a soul. Maximum of x souls can be absorbed.
--->
   <table name="#Max-Souls"> 5 8 10 12 14 16 18 20 21 22 23 24 25 26 27 28 29 30 32 34 36 38 40 </table>
   <table name="#Exp"> 73 147 220 294 385 486 614 777 960 1109 1269 1440 1622 1815 2018 2160 2306 2457 2613 2774 2940 3110 3285 </table>
   <table name="#Critic-Chance"> 0 0 0 15 15 15 15 15 20 20 20 20 20 20 25 25 25 25 25 25 30 30 30 </table>
@@ -1529,10 +1430,6 @@
   </for>
 </skill>
 <skill id="468" levels="9" name="Fallen Attack">
-<!--
-  Description(s):
-      Deal a powerful strike to the enemy. An equipped sword, rapier or blunt weapon is required to use this skill. Over-hit is possible. Power 20-56.
--->
   <table name="#mpConsume"> 9 8 10 11 12 13 16 16 17 </table>
   <table name="#power"> 30 32 35 46 51 55 71 78 84 </table>
   <table name="#magicLvl"> 3 4 5 8 9 10 13 14 15 </table>
@@ -1554,10 +1451,6 @@
   </for>
 </skill>
 <skill id="469" levels="1" name="Rapid Attack">
-<!--
-  Description(s):
-      Temporarily increase Atk. Spd. Consumes 1 Soul.
--->
   <set name="mpConsume" val="14"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1653,10 +1546,6 @@
   </for> 
 </skill>
 <skill id="475" levels="1" name="Strike Back">
-<!--
-  Description(s):
-      Reflects damage caused by a melee attack skill back to your enemy. Consumes MP while active. Consumes 1 Soul.
--->
   <set name="mpConsume" val="15"/>
   <set name="power" val="40"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1665,9 +1554,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-     <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="18">
-        <add order="0x40" stat="reflectSkillPhysic" val="40"/>
-     </effect>
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="18">
+      <add order="0x40" stat="reflectSkillPhysic" val="40"/>
+    </effect>
   </for>
 </skill>
 <skill id="476" levels="15" name="Dark Strike">
@@ -1755,11 +1644,7 @@
   </for>
 </skill>
 <skill id="480" levels="1" name="Dark Blade">
-<!--
-  Needs to be finished.
-  Description(s):
-      Grants the ability to do dark damage. Consumes 1 Soul.
--->
+  <!-- Needs to be finished -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
@@ -1768,18 +1653,11 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="0">
-       <!-- require core support
-       <mul order="0x30" stat="darkPower" val="1.1"/>
-       -->
+      <!-- mul order="0x30" stat="darkPower" val="1.1" require core support -->
     </effect>
   </for>
-
 </skill>
 <skill id="481" levels="2" name="Dark Armor">
-<!--
-  Description(s):
-      Increases resistance to dark attacks. Consumes 1 Soul.
--->
   <table name="#darkVuln"> 0.93 0.9 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1794,7 +1672,7 @@
   </for>
 </skill>
 <skill id="482" levels="2" name="Furious Soul">
- <!-- Needs retail value checks -->
+  <!-- Needs to be verified -->
   <table name="#rCrit"> 65 80 </table>
   <table name="#cAtk"> 457 513 </table>
   <table name="#pDef"> 0.87 0.81 </table>
@@ -1836,11 +1714,6 @@
   </for>
 </skill>
 <skill id="484" levels="1" name="Rush">
-<!--
-  Description:
-  Charge an enemy.  An ancient sword or short sword must be equipped to use this skill. Consumes 1 Soul.
- 
--->
   <set name="magicLvl" val="32"/>
   <set name="mpInitialConsume" val="6"/>
   <set name="mpConsume" val="14"/>
@@ -1857,7 +1730,7 @@
   <set name="flyType" val="CHARGE"/>
   <set name="flyRadius" val="300"/>
   <for>
-   <effect count="1" name="EnemyCharge" time="1" val="0"/>
+    <effect count="1" name="EnemyCharge" time="1" val="0"/>
   </for>
 </skill>
 <skill id="485" levels="7" name="Disarm">
@@ -1918,10 +1791,6 @@
   </for>
 </skill>
 <skill id="489" levels="1" name="Shift Target">
-<!--
-  Description(s):
-     Transfers the Aggression of nearby enemies to a selected party member. Consumes 3 soul. An equipped crossbow is required to use this skill. Can be used on party members only.
--->
   <set name="mpConsume" val="53"/>
   <set name="target" val="TARGET_PARTY_MEMBER"/>
   <set name="hitTime" val="3200"/>  
@@ -1959,12 +1828,12 @@
   </for>
 </skill>
 <skill id="491" levels="1" name="Not In Use">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
      none
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1973,11 +1842,6 @@
   </for>
 </skill>
 <skill id="492" levels="25" name="Spread Wing" enchantLevels1="30" enchantLevels2="30" >
-<!--
-  Description:
-  Use your wing to attack hostile enemies behind you. Consumes 1 Soul. Over-hit is possible. Power 
-  722.  
--->
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <table name="#ench1Power"> 2325 2341 2357 2373 2389 2405 2420 2436 2452 2468 2484 2500 2515 2531 2547 2563 2579 2595 2610 2626 2642 2658 2674 2690 2705 2721 2737 2753 2769 2784 </table>
   <table name="#ench2MpConsume"> 74 73 72 72 71 70 69 69 68 67 66 66 65 64 64 63 62 61 61 60 59 58 58 57 56 55 55 54 53 53 </table>
@@ -2002,10 +1866,6 @@
   </for>
 </skill>
 <skill id="493" levels="28" name="Storm Assault" enchantLevels1="30" enchantLevels2="30" >
-<!--
-  Description(s):
-     Charges like a storm to attack nearby enemies. Consumes 3 soul.  An equipped ancient sword weapon is required to use this skill. Power 618-1827.
--->
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <table name="#ench1Power"> 2212 2231 2251 2271 2291 2310 2330 2350 2370 2389 2409 2429 2449 2468 2488 2508 2528 2547 2567 2587 2607 2626 2646 2666 2686 2705 2725 2745 2765 2784 </table>
   <table name="#ench2MpConsume"> 74 73 72 72 71 70 69 69 68 67 66 66 65 64 64 63 62 61 61 60 59 58 58 57 56 55 55 54 53 53 </table>
@@ -2179,10 +2039,6 @@
   </for>
 </skill>
 <skill id="499" levels="3" name="Courage">
-<!--
-  Description(s):
-     Greatly increases resistance to mental attacks. Consumes 2 soul. Effect 1-3.
--->
   <table name="#mpConsume"> 16 22 29 </table>
   <table name="#vuln"> 0.5 0.4 0.3 </table>
   <set name="mpConsume" val="#mpConsume"/>

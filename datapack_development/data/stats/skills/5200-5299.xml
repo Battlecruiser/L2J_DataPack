@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
 <skill id="5200" levels="3" name="Pet Recharge">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Lvl 1-3 - Regenerates MP.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -15,12 +15,12 @@
   </for>
 </skill>
 <skill id="5201" levels="6" name="Pet Concentration">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Lvl 1-2 - Temporarily lowers the probability of magic being canceled due to damage taken taken.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -29,12 +29,12 @@
   </for>
 </skill>
 <skill id="5202" levels="12" name="Stun">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Lvl 1-12 - Temporarily gets thrown into a state of shock and Immobilized.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -43,12 +43,12 @@
   </for>
 </skill>
 <skill id="5203" levels="12" name="Fear">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Lvl 1-12 - Temporarily becomes overcome with fear and flees mindlessly.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -69,12 +69,12 @@
   </for>
 </skill>
 <skill id="5205" levels="1" name="Boss Regeneration">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       none
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -83,10 +83,6 @@
   </for>
 </skill>
 <skill id="5206" levels="1" name="Decrease Speed">
-<!--
-  Description(s):
-      Curse of the Pig: Instantly reduces Speed. Effect 1.
--->
   <set name="power" val="542.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2200"/>
@@ -104,10 +100,6 @@
   </for>
 </skill>
 <skill id="5207" levels="1" name="Decrease Atk. Spd.">
-<!--
-  Description(s):
-      Curse of the Pig: Instantly reduces Atk. Spd. Effect 1.
--->
   <set name="lvlDepend" val="1"/>
   <set name="power" val="10"/>
   <set name="target" val="TARGET_ONE"/>
@@ -123,10 +115,6 @@
   </for>
 </skill>
 <skill id="5208" levels="1" name="Event Wind walk">
-<!--
-  Description(s):
-      Temporarily increases Speed. Effect 2.
--->
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
@@ -141,10 +129,6 @@
   </for>
 </skill>
 <skill id="5209" levels="1" name="Event Shield">
-<!--
-  Description(s):
-      Temporarily increases P. Def. Effect 3.
--->
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
@@ -159,10 +143,6 @@
   </for>
 </skill>
 <skill id="5210" levels="1" name="Event Bless the body">
-<!--
-  Description(s):
-      Temporarily increases maximum HP. Effect 6.
--->
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
@@ -177,10 +157,6 @@
   </for>
 </skill>
 <skill id="5211" levels="1" name="Event Vampiric rage">
-<!--
-  Description(s):
-      Uses damage inflicted upon an enemy to temporarily restore HP. Excludes damage inflicted by skill or remote attack. Effect 4.
--->
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
@@ -194,10 +170,6 @@
   </for>
 </skill>
 <skill id="5212" levels="1" name="Event Regeneration">
-<!--
-  Description(s):
-      Temporarily increases ability to restore HP. Effect 3.
--->
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
@@ -212,10 +184,6 @@
   </for>
 </skill>
 <skill id="5213" levels="1" name="Event Haste">
-<!--
-  Description(s):
-      Temporarily increases Atk. Spd. Effect 1.
--->
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
@@ -230,10 +198,6 @@
   </for>
 </skill>
 <skill id="5214" levels="1" name="Event Bless the soul">
-<!--
-  Description(s):
-      Temporarily increases maximum MP. Effect 6.
--->
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
@@ -248,10 +212,6 @@
   </for>
 </skill>
 <skill id="5215" levels="1" name="Event Acumen">
-<!--
-  Description(s):
-      Temporarily increases Casting Spd. Effect 3.
--->
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
@@ -280,10 +240,6 @@
   </for>
 </skill>
 <skill id="5217" levels="1" name="Event Empower">
-<!--
-  Description(s):
-      Temporarily increases M. Atk. Effect 1.
--->
   <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
@@ -310,10 +266,6 @@
   </for>
 </skill>
 <skill id="5219" levels="1" name="Stun of giant mutated animal">
-<!--
-  Description(s):
-      Curse of the Huge Pig: Target is temporarily stunned and immoblized.
--->
   <set name="magicLvl" val="99"/>
   <set name="lvlDepend" val="1"/>
   <set name="power" val="47895.0"/>
@@ -332,10 +284,6 @@
   </for>
 </skill>
 <skill id="5220" levels="1" name="Fear of giant mutated animal">
-<!--
-  Description(s):
-      Curse of the Huge Pig: Target is temporarily overcome with fear, causing it to flee mindlessly.
--->
   <set name="mpConsume" val="43"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>

@@ -117,12 +117,7 @@
   </for>
 </skill>
 <skill id="1406" levels="1" name="Summon Feline King">
-<!--
-  Needs to be verified.
-
-  Description(s):
-      Summons Feline King. Requires 2 Crystals: A-Grade. Consumes 1 additional crystal at 14 regular intervals.  Takes away 10% of earned Exp.
--->
+  <!-- Needs to be verified -->
   <table name="#mpConsume_Init"> 30 </table> <!-- Guessing -->
   <table name="#mpConsume"> 114 </table> <!-- Guessing -->
   <table name="#itemConsumeCount"> 2 </table>
@@ -155,12 +150,7 @@
   </for>
 </skill>
 <skill id="1407" levels="1" name="Summon Magnus the Unicorn">
-<!--
-  Needs to be verified.
-
-  Description(s):
-      Summons Magnus the Unicorn. Requires 2 Crystals: A-Grade. Consumes 1 additional crystal at 14 regular intervals. Takes away 10% of earned Exp.
--->
+  <!-- Needs to be verified -->
   <table name="#mpConsume_Init"> 30 </table> <!-- Guessing -->
   <table name="#mpConsume"> 114 </table> <!-- Guessing -->
   <table name="#itemConsumeCount"> 2 </table>
@@ -193,12 +183,7 @@
   </for>
 </skill>
 <skill id="1408" levels="1" name="Summon Spectral Lord">
-<!--
-  Needs to be verified.
-
-  Description(s):
-      Summons Spectral Lord. Requires 2 Crystals: A-Grade. Consumes 1 additional crystal at 14 regular intervals. Takes away 10% of earned Exp.
--->
+  <!-- Needs to be verified -->
   <table name="#mpConsume_Init"> 30 </table> <!-- Guessing -->
   <table name="#mpConsume"> 114 </table> <!-- Guessing -->
   <table name="#itemConsumeCount"> 2 </table>
@@ -231,10 +216,6 @@
   </for>
 </skill>
 <skill id="1409" levels="1" name="Cleanse">
-<!--
-  Description(s):
-      Cancels your target's debuffs. Consumes 1 Einhasad Holy Water.
--->
   <set name="itemConsumeId" val="8874"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="mpInitialConsume" val="21"/> <!-- Guessing -->
@@ -252,10 +233,6 @@
   </for>
 </skill>
 <skill id="1410" levels="1" name="Salvation">
-<!--
-  Description(s):
-      Revives target from death and restores them to full health, retaining all buff/debuff effects except for Noblesse Blessing and Lucky Charm.  Consumes 2 Einhasad Holy Water.
--->
   <set name="magicLvl" val="79"/>
   <set name="mpConsume" val="87"/>
   <set name="itemConsumeId" val="8874"/>
@@ -271,7 +248,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-	<effect count="1" name="PhoenixBless" time="3600" val="0"/>
+    <effect count="1" name="PhoenixBless" time="3600" val="0"/>
   </for>
 </skill>
 <skill id="1411" levels="1" name="Mystic Immunity">
@@ -295,12 +272,12 @@
   </for>
 </skill>
 <skill id="1412" levels="1" name="Spell Turning">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Cancels a nearby target's magic casting.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -550,12 +527,12 @@
   </for>
 </skill>
 <skill id="1422" levels="1" name="Day of Doom">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Generates a signet that produces a strong curse that decreases all abilities. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 3 or higher Spell Force required. Consumes 1 Magic Symbol.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="staticReuse" val="true"/>
@@ -624,12 +601,12 @@
   </for>
 </skill>
 <skill id="1425" levels="1" name="Purification Field">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Cancels all debuff of nearby allies. Level 2 or higher Spell Force required. Consumes 1 Magic Symbol.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="staticReuse" val="true"/>
@@ -639,10 +616,6 @@
   </for>
 </skill>
 <skill id="1426" levels="1" name="Miracle">
-<!--
-  Description(s):
-      Heartily regenerates the HP of all alliance members in the applicable area. Level 2 or higher Spell Force required. Consumes 1 Magic Symbol.
--->
   <set name="itemConsumeId" val="8876"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="mpConsume" val="72"/>
@@ -689,10 +662,6 @@
   </for>
 </skill>
 <skill id="1428" levels="1" name="Mass Recharge">
-<!--
-  Description(s):
-      Greatly regenerates MP of party members. Can be used when Spell Force is level 3 or higher. Consumes 1 Magic Symbol.
--->
   <set name="itemConsumeId" val="8876"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="mpConsume" val="73"/>
@@ -732,10 +701,6 @@
   </for>
 </skill>
 <skill id="1430" levels="5" name="Invocation">
-<!--
-  Description(s):
-      Meditate to increase MP regeneration.  Your body is immobilized and your P. Def. decreased while meditating. The effect is cancelled if you are attacked.
--->
   <table name="#pDef"> 0.8 0.8 0.8 0.8 0.8 </table>
   <table name="#mhot"> 90 100 115 125 140 </table>
   <table name="#mpConsume"> 27 28 30 33 34 </table>
@@ -781,10 +746,6 @@
   </for>
 </skill>
 <skill id="1432" levels="2" name="Increase Power">
-<!--
-  Description(s):
-      Temporarily increase your P Atk. Consumes 1 Soul.
--->
   <table name="#rate"> 1.08 1.12</table>
   <table name="#mpConsume"> 13 25</table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -998,10 +959,6 @@
   </for>
 </skill>
 <skill id="1441" levels="2" name="Soul to Empower">
-<!--
-  Description(s):
-     Temporarily increase your magic power. Consumes 1 Soul. Effect 1-2.
--->
   <table name="#mpConsume_Init"> 5 8</table>
   <table name="#mpConsume"> 33 42</table>
   <table name="#Tab-mAtk"> 1.55 1.65</table>
@@ -1024,10 +981,6 @@
   </for>
 </skill>
 <skill id="1442" levels="3" name="Protection from Darkness">
-<!--
-  Description(s):
-  Temporarily increase your target's resistance to dark attacks. Consumes 2 Souls.
--->
   <table name="#mpConsume_Init"> 6 7 8 </table>
   <table name="#mpConsume"> 48 55 61 </table>
   <table name="#vuln"> 0.85 0.77 0.7 </table>
@@ -1092,15 +1045,11 @@
   </for>
 </skill>
 <skill id="1445" levels="18" name="Surrender to the Unholy">
-<!--
-  Description(s):
-      Instantly decrease the enemy's resistance to dark attacks and increase their resistance to holy attacks. Consumes 2 Souls.
--->
-  <table name="#mpConsume_Init"> 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10</table>
-  <table name="#mpConsume"> 23 26 29 32 34 38 39 43 44 48 48 51 52 54 55 56 57 59</table>
-  <table name="#magicLvl"> 28 32 36 40 43 46 49 52 56 58 60 62 64 66 68 70 72 74</table>
-  <table name="#Tab-darkVuln"> 1.25 1.25 1.25 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3</table>
-  <table name="#Tab-castRange"> 750 750 750 900 900 900 900 900 900 900 900 900 900 900 900 900 900 900</table>
+  <table name="#mpConsume_Init"> 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 </table>
+  <table name="#mpConsume"> 23 26 29 32 34 38 39 43 44 48 48 51 52 54 55 56 57 59 </table>
+  <table name="#magicLvl"> 28 32 36 40 43 46 49 52 56 58 60 62 64 66 68 70 72 74 </table>
+  <table name="#Tab-darkVuln"> 1.25 1.25 1.25 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 </table>
+  <table name="#Tab-castRange"> 750 750 750 900 900 900 900 900 900 900 900 900 900 900 900 900 900 900 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -1599,10 +1548,6 @@
   </for>
 </skill>
 <skill id="1473" levels="1" name="Change Weapon">
-<!--
-  Description(s):
-     Changes a general weapon to a Kamael exclusive weapon. The weapon can be reverted back to a general weapon.
--->
   <set name="mpInitialConsume" val="4"/>
   <set name="mpConsume" val="25"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1839,11 +1784,6 @@
   </for>
 </skill>
 <skill id="1487" levels="8" name="Restoration">
-<!--
-  Description:
-  Continually recover HP. Consumes 1 Soul.
- 
--->
   <table name="#mpConsume_Init"> 21 25 14 16 17 19 20 20 </table>
   <table name="#mpConsume"> 49 57 34 38 41 43 45 48 </table>
   <table name="#Tab-Heal"> 105 110 115 120 125 130 135 140 </table><!-- Need retail -->
@@ -1858,7 +1798,7 @@
   <set name="effectRange" val="1200"/>
   <set name="reuseDelay" val="36000"/><!-- Need retail -->
   <for>
-   <effect count="40" name="HealOverTime" time="3" val="#Tab-Heal"/>
+    <effect count="40" name="HealOverTime" time="3" val="#Tab-Heal"/>
   </for>
 </skill>
 <skill id="1488" levels="3" name="Restoration Impact">
