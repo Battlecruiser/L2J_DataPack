@@ -257,10 +257,7 @@
   </for>
 </skill>
 <skill id="625" levels="1" name="Soul Gathering">
-<!--
-  Description(s):
-      Gather nearby souls. The maximum number of souls can be absorbed at once. Consumes 10 Spirit Ores.
--->
+  <!-- Needs to be verified -->
   <set name="hpConsume" val="200"/>
   <set name="hitTime" val="1500"/>
   <set name="itemConsumeId" val="3031"/>
@@ -283,7 +280,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <basemul order="0x30" stat="rCrit" val="#rCrit"/> 
+    <basemul order="0x30" stat="rCrit" val="#rCrit"/>
     <add order="0x40" stat="cAtk" val="#cAtk"/>
   </for>
 </skill>

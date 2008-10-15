@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
 <skill id="3600" levels="9" name="Special Ability: Anger">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
@@ -14,7 +14,7 @@
       Lvl 7 - Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents and inflicts additional damage during PvP.
       Lvl 8 - Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents and inflicts additional damage during PvP.
       Lvl 9 - Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents and inflicts additional damage during PvP.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -23,7 +23,7 @@
   </for>
 </skill>
 <skill id="3601" levels="9" name="Special Ability: Haste">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
@@ -36,7 +36,7 @@
       Lvl 7 - Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
       Lvl 8 - Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
       Lvl 9 - Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -45,7 +45,7 @@
   </for>
 </skill>
 <skill id="3602" levels="9" name="Special Ability: Guidance">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
@@ -58,7 +58,7 @@
       Lvl 7 - Increases Accuracy, and enables the character to attack multiple opponents and inflicts additional damage during PvP.
       Lvl 8 - Increases Accuracy, and enables the character to attack multiple opponents and inflicts additional damage during PvP.
       Lvl 9 - Increases Accuracy, and enables the character to attack multiple opponents and inflicts additional damage during PvP.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -82,15 +82,15 @@
   <set name="castRange" val="-1"/>
   <set name="minPledgeClass" val="2"/>
   <for>
-        <mul stat="maxCp" val="#maxCp" order="0x30"/>
-        <mul stat="pAtk" val="#pAtk" order="0x30"/>
-        <mul stat="mAtk" val="#mAtk" order="0x30"/>
-        <mul stat="pDef" val="#pDef" order="0x30"/>
-        <mul stat="mDef" val="#mDef" order="0x30"/>
-        <add stat="accCombat" val="#accCombat" order="0x40"/>
-        <add stat="runSpd" val="#runSpd" order="0x40"/>
-        <add order="0x40" stat="absorbDam" val="100"/>
-        <mul order="0x30" stat="regCp" val="20"/>
+    <mul stat="maxCp" val="#maxCp" order="0x30"/>
+    <mul stat="pAtk" val="#pAtk" order="0x30"/>
+    <mul stat="mAtk" val="#mAtk" order="0x30"/>
+    <mul stat="pDef" val="#pDef" order="0x30"/>
+    <mul stat="mDef" val="#mDef" order="0x30"/>
+    <add stat="accCombat" val="#accCombat" order="0x40"/>
+    <add stat="runSpd" val="#runSpd" order="0x40"/>
+    <add order="0x40" stat="absorbDam" val="100"/>
+    <mul order="0x30" stat="regCp" val="20"/>
   </for>
 </skill>
 <skill id="3604" levels="1" name="Frintezza's Necklace">
@@ -115,10 +115,6 @@
   </for>
 </skill>
 <skill id="3605" levels="1" name="Clan Oath Heavy Armor Set">
-<!--
-  Description(s):
-      Increases P. Def. and maximum HP.
--->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -131,10 +127,6 @@
   </for>
 </skill>
 <skill id="3606" levels="1" name="Clan Oath Light Armor Set">
-<!--
-  Description(s):
-      Increases P. Def. and Evasion.
--->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -147,10 +139,6 @@
   </for>
 </skill>
 <skill id="3607" levels="1" name="Clan Oath Robe Set">
-<!--
-  Description(s):
-      Increases P. Def. and Casting Spd.
--->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -163,11 +151,7 @@
   </for>
 </skill>
 <skill id="3608" levels="2" name="Apella Heavy Armor Set">
-<!--
-  Description(s):
-      Lvl1: Increases Max. CP/CP Recovery Power, and decreases Experience penalty when killed by a skilled player. When being attacked, magic resistance is increased, and Critical damage hitting rate is decreased.
-      Lvl2: Increases Max. CP/CP Recovery power, and decreases Experience penalty when killed by MP consumption of skills and a player .  When being attacked, magic resistance and Critical rate are increased, and Critical damage hitting rate is decreased.
--->
+  <!-- Needs to be finished -->
   <table name="#maxCP"> 1035 1116 </table>
   <table name="#rCrit"> 1.0 1.02621 </table>
   <table name="#cAtk"> 0 3 </table>
@@ -189,11 +173,7 @@
   </for>
 </skill>
 <skill id="3609" levels="2" name="Apella Light Armor Set">
-<!--
-  Description(s):
-      Lvl1: Increases Max. CP/CP Recovery Power, and decreases Experience penalty when killed by a player. When being attacked, Evasion is increased, and received Critical damage is decreased.
-      Lvl2: Increases Max. CP/CP Recovery power, and decreases Experience penalty when killed by MP consumption of skills and a player .  When being attacked, evasion and attack speed are increased, and received Critical damage is decreased.
--->
+  <!-- Needs to be finished -->
   <table name="#maxCP"> 1035 1116 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -213,11 +193,7 @@
   </for>
 </skill>
 <skill id="3610" levels="2" name="Apella Robe Set">
-<!--
-  Description(s):
-      Lvl1: Increases Max. CP/CP Recovery Power, and decreases Experience penalty when killed by a player. When being attacked, evasion and defense power are increased.
-      Lvl2: Increases Max. CP/CP Recovery power, and decreases Experience penalty when killed by MP consumption of skills and a player . When being attacked, Speed, defense power and magic power are increased.
--->
+  <!-- Needs to be finished -->
   <table name="#maxCP"> 1035 1116 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -237,10 +213,6 @@
   </for>
 </skill>
 <skill id="3611" levels="1" name="Enchant Heavy Armor (Grade D)">
-<!--
-  Description(s):
-      Increases P. Def. and MP regeneration by enchanting set items.
--->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -251,10 +223,6 @@
     <add order="0x40" stat="regMp" val="2"/> 
   </for>
 </skill><skill id="3612" levels="1" name="Enchant Light Armor (Grade D)">
-<!--
-  Description(s):
-      Increases M. Def. and Evasion by enchanting set items.
--->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -266,10 +234,6 @@
   </for>
 </skill>
 <skill id="3613" levels="1" name="Enchant Robe (Grade D)">
-<!--
-  Description(s):
-      Increases P. Def. and weight capacity by enchanting set items.
--->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -281,10 +245,6 @@
   </for>
 </skill>
 <skill id="3614" levels="1" name="Enchant Heavy Armor (Grade C)">
-<!--
-  Description(s):
-      Increases P. Def. and MP regeneration by enchanting set items.
--->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -296,10 +256,6 @@
   </for>
 </skill>
 <skill id="3615" levels="1" name="Enchant Light Armor (Grade C)">
-<!--
-  Description(s):
-      Increases M. Def. and Evasion by enchanting set items.
--->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -311,10 +267,6 @@
   </for>
 </skill>
 <skill id="3616" levels="1" name="Enchant Robe (Grade C)">
-<!--
-  Description(s):
-      Increases P. Def. and weight capacity by enchanting set items.
--->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -326,10 +278,6 @@
   </for>
 </skill>
 <skill id="3617" levels="1" name="Enchant Heavy Armor (Grade B)">
-<!--
-  Description(s):
-      Increases P. Def. and MP regeneration by enchanting set items.
--->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -341,10 +289,6 @@
   </for>
 </skill>
 <skill id="3618" levels="1" name="Enchant Light Armor (Grade B)">
-<!--
-  Description(s):
-      Increases M. Def. and Evasion by enchanting set items.
--->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -356,10 +300,6 @@
   </for>
 </skill>
 <skill id="3619" levels="1" name="Enchant Robe (Grade B)">
-<!--
-  Description(s):
-      Increases P. Def. and weight capacity by enchanting set items.
--->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -371,10 +311,6 @@
   </for>
 </skill>
 <skill id="3620" levels="1" name="Enchant Heavy Armor (Grade A)">
-<!--
-  Description(s):
-      Increases P. Def. and MP regeneration by enchanting set items.
--->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -386,10 +322,6 @@
   </for>
 </skill>
 <skill id="3621" levels="1" name="Enchant Light Armor (Grade A)">
-<!--
-  Description(s):
-      Increases M. Def. and Evasion by enchanting set items.
--->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -401,10 +333,6 @@
   </for>
 </skill>
 <skill id="3622" levels="1" name="Enchant Robe (Grade A)">
-<!--
-  Description(s):
-      Increases P. Def. and weight capacity by enchanting set items.
--->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -416,10 +344,6 @@
   </for>
 </skill>
 <skill id="3623" levels="1" name="Enchant Heavy Armor (Grade S)">
-<!--
-  Description(s):
-      Increases P. Def. and MP regeneration by enchanting set items.
--->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -431,10 +355,6 @@
   </for>
 </skill>
 <skill id="3624" levels="1" name="Enchant Light Armor (Grade S)">
-<!--
-  Description(s):
-      Increases M. Def. and Evasion by enchanting set items.
--->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -446,10 +366,6 @@
   </for>
 </skill>
 <skill id="3625" levels="1" name="Enchant Robe (Grade S)">
-<!--
-  Description(s):
-      Increases P. Def. and weight capacity by enchanting set items.
--->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -461,12 +377,12 @@
   </for>
 </skill>
 <skill id="3626" levels="1" name="Kabokula">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Used when trapping a roaring Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -475,12 +391,12 @@
   </for>
 </skill>
 <skill id="3627" levels="1" name="Tapirawa">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Used on a quivering Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -489,12 +405,12 @@
   </for>
 </skill>
 <skill id="3628" levels="1" name="Shabonoba">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Used on a struggling Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -503,11 +419,7 @@
   </for>
 </skill>
 <skill id="3629" levels="10" name="Blood Sword Akamanah">
-<!--
-  Needs to be finished - below is a copy of 3603 Demon Sword Zariche
-  Description(s):
-      Lvl 1-10 - A demonic twin blade forged in blood by Gran Kain, the god of chaos. The blade dies over and over again when it touches the air, and it craves blood to forge it anew. It becomes stronger every time it is supplied with blood.
--->
+  <!-- Needs to be finished - below is a copy of 3603 Demon Sword Zariche -->
   <table name="#maxCp"> 12 13 14 15 17 19 21 23 25 27 </table>
   <table name="#pAtk"> 3 4.5 6 7.5 9 10.5 11 11.5 12 12.5 </table>
   <table name="#mAtk"> 3 3.25 3.50 3.75 4 4.25 4.50 5 5.50 5.75 </table>
@@ -523,15 +435,15 @@
   <set name="castRange" val="-1"/>
   <set name="minPledgeClass" val="2"/>
   <for>
-        <mul stat="maxCp" val="#maxCp" order="0x30"/>
-        <mul stat="pAtk" val="#pAtk" order="0x30"/>
-        <mul stat="mAtk" val="#mAtk" order="0x30"/>
-        <mul stat="pDef" val="#pDef" order="0x30"/>
-        <mul stat="mDef" val="#mDef" order="0x30"/>
-        <add stat="accCombat" val="#accCombat" order="0x40"/>
-        <add stat="runSpd" val="#runSpd" order="0x40"/>
-        <add order="0x40" stat="absorbDam" val="100"/>
-        <mul order="0x30" stat="regCp" val="20"/>
+    <mul stat="maxCp" val="#maxCp" order="0x30"/>
+    <mul stat="pAtk" val="#pAtk" order="0x30"/>
+    <mul stat="mAtk" val="#mAtk" order="0x30"/>
+    <mul stat="pDef" val="#pDef" order="0x30"/>
+    <mul stat="mDef" val="#mDef" order="0x30"/>
+    <add stat="accCombat" val="#accCombat" order="0x40"/>
+    <add stat="runSpd" val="#runSpd" order="0x40"/>
+    <add order="0x40" stat="absorbDam" val="100"/>
+    <mul order="0x30" stat="regCp" val="20"/>
   </for>
 </skill>
 <skill id="3630" levels="1" name="Void Burst">
@@ -562,12 +474,12 @@
   </for>
 </skill>
 <skill id="3632" levels="1" name="Clan Gate">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       Active: Creates a gate that summons clan members. You cannot move while this skill is active.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>

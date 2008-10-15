@@ -599,12 +599,6 @@
   <set name="create_item_count" val="20"/>
 </skill>
 <skill id="1325" levels="1" name="Fortune of Noblesse"> 
-<!-- 
-  Description(s): 
-     Confers the ability of the Lucky Charm to all party members regardless of level. 
-     Preventing reduced combat capability if killed by a Boss or a Raid Monster. 
-     Consumes 4 Lucky Charm: A Grade 
---> 
   <set name="itemConsumeId" val="5806"/> 
   <set name="itemConsumeCount" val="4"/> 
   <set name="mpInitialConsume" val="75"/> 
@@ -625,12 +619,12 @@
   </for> 
 </skill> 
 <skill id="1326" levels="1" name="Harmony of Noblesse">
-<!--
+  <!--
   Description(s):
      Battle Song. Marches to the front line of the siege by burning the pride of Noblesse.
      Increases P. Def., Speed, resistance to buff cancellation, and bow/crossbow attacks by burning CP and HP.
      Usable when CP is above 50 percent during the siege. Consumes 5 Spirit Ores. Maximum CP and HP are temporarily reduced. Effect 1.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -639,12 +633,12 @@
   </for>
 </skill>
 <skill id="1327" levels="1" name="Symphony of Noblesse">
-<!--
+  <!--
   Description(s):
      Battle Song. Marches to the front line of the siege by burning the pride of Noblesse.
      Increases M. Def., Speed, resistance to buff cancellation, and bow/crossbow attacks by burning CP and stamina.
      Usable when CP is above 50 percent during the siege. Consumes 5 Spirit Ores. Maximum CP and HP are temporarily reduced. Effect 1.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
