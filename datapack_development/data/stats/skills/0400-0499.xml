@@ -999,18 +999,20 @@
   </for>
 </skill>
 <skill id="446" levels="1" name="Dodge">
-<!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Allows you to temporarily evade a melee attack skill.
--->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="500"/>
+  <set name="mpConsume" val="29"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="reuseDelay" val="300000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
   <for>
-<!-- needs core support or a BIG physical only evasion rate -->
+    <effect count="1" name="Buff" time="10" val="0">
+      <add order="0x40" stat="pSkillEvas" val="100"/>
+    </effect>
   </for>
 </skill>
 <skill id="447" levels="1" name="Counterattack">

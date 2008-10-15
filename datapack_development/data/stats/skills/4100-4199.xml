@@ -64,7 +64,7 @@
 </skill>
 <skill id="4103" levels="2" name="NPC Ultimate Evasion">
   <!-- Done by dc -->
-  <table name="#Tab-rEvas"> 20 25 </table>
+  <table name="#rEvas"> 20 25 </table>
   <table name="#mpConsume"> 35 65 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="0.0"/>
@@ -77,8 +77,8 @@
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="100"/>
   <for>
-    <effect name="Buff" time="30" count="1" val="0" stackOrder="#Tab-rEvas" stackType="rEvasSpec">
-      <add order="0x40" stat="rEvas" val="#Tab-rEvas"/>
+    <effect name="Buff" time="30" count="1" val="0" stackOrder="#rEvas" stackType="avoid_up_special">
+      <add order="0x40" stat="rEvas" val="#rEvas"/>
     </effect>
   </for>
 </skill>
