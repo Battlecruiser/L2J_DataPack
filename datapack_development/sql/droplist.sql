@@ -28880,3 +28880,11 @@ INSERT INTO `droplist` VALUES
 (36164,9912,1,3,1,1000000), -- Knight's Epaulette
 (36165,9912,1,3,1,1000000), -- Knight's Epaulette
 (36167,9912,1,3,1,1000000); -- Knight's Epaulette
+
+INSERT INTO `droplist` VALUES
+-- CT1 spellbooks..mobs somewhere on HB dungeons
+(22363,10603,1,1,2,83333), -- Battle Manual - Betrayal Mark
+(22363,10604,1,1,2,52631), -- Battle Manual - Rush Impact
+(22364,10599,1,1,2,17857), -- Battle Manual - Soul Vortex Extinction
+(22364,10599,1,1,2,17857), -- Battle Manual - Lightning Barrier
+(22364,10599,1,1,2,8850); -- Battle Manual - Mass Disarm
