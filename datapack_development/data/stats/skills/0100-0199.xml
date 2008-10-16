@@ -202,7 +202,8 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="1200"/>
-  <set name="skillType" val="AGGREDUCE"/>
+  <set name="isDebuff" val="true"/>
+  <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="buffDuration" val="120000"/>
   <set name="castRange" val="500"/>
@@ -292,21 +293,21 @@
   <set name="aggroPoints" val="#aggro"/>
   <enchant2 name="reuseDelay" val="#ench2reuseDelay"/>
   <for>
-    <effect count="1" name="ImmobileBuff" time="30" val="0" stackOrder="1" stackType="pDefSpec">
+    <effect count="1" name="ImmobileBuff" time="30" val="0" stackOrder="1" stackType="pd_up_special">
       <add order="0x40" stat="pDef" val="#pDef"/>
       <add order="0x40" stat="mDef" val="#mDef"/>
       <mul order="0x30" stat="cancelVuln" val="0.9"/> <!-- value to be confirmed -->
     </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="ImmobileBuff" time="#ench1time" val="0" stackOrder="1" stackType="pDefSpec">
+    <effect count="1" name="ImmobileBuff" time="#ench1time" val="0" stackOrder="1" stackType="pd_up_special">
       <add order="0x40" stat="pDef" val="#ench1pDef"/>
       <add order="0x40" stat="mDef" val="#ench1mDef"/>
       <mul order="0x30" stat="cancelVuln" val="0.9"/> <!-- value to be confirmed -->
     </effect>
   </enchant1for>
   <enchant2for>
-    <effect count="1" name="ImmobileBuff" time="30" val="0" stackOrder="1" stackType="pDefSpec">
+    <effect count="1" name="ImmobileBuff" time="30" val="0" stackOrder="1" stackType="pd_up_special">
       <add order="0x40" stat="pDef" val="#ench1pDef"/>
       <add order="0x40" stat="mDef" val="#ench1mDef"/>
       <mul order="0x30" stat="cancelVuln" val="0.9"/> <!-- value to be confirmed -->
