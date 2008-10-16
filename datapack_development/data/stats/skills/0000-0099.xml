@@ -1273,7 +1273,6 @@
   <for>
    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="detect_weakness">
      <mul order="0x30" stat="pAtk-insects" val="1.5"/>
-       <target kind="insect"/>
    </effect>
   </for>
 </skill>
@@ -1363,8 +1362,7 @@
   <set name="aggroPoints" val="495"/>
   <for>
    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="detect_weakness">
-      <mul order="0x30" stat="pAtk-monsters" val="1.5"/>
-      <target kind="monster"/>
+     <mul order="0x30" stat="pAtk-monsters" val="1.5"/>
    </effect>
   </for>
 </skill>
@@ -1532,7 +1530,6 @@
   <for>
     <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="detect_weakness">
       <mul order="0x30" stat="pAtk-animals" val="1.5"/>
-      <target kind="animal"/>
     </effect>
   </for>
 </skill>
@@ -1550,7 +1547,6 @@
   <for>
     <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="detect_weakness">
       <mul order="0x30" stat="pAtk-dragons" val="1.5"/>
-      <target kind="dragon"/>
     </effect>
   </for>
 </skill>
