@@ -825,10 +825,9 @@
 <skill id="1034" levels="13" name="Repose">
   <table name="#mpConsume_Init"> 12 13 14 16 16 17 18 18 19 19 20 20 21 </table>
   <table name="#mpConsume"> 47 52 56 61 64 66 69 71 74 76 78 80 82 </table>
-  <table name="#power"> 30 40 50 60 70 80 90 100 110 120 130 140 150 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="#power"/>
+  <set name="power" val="40"/>
   <set name="target" val="TARGET_UNDEAD"/>
   <set name="skillRadius" val="200"/>
   <set name="reuseDelay" val="20000"/>
@@ -1235,8 +1234,9 @@
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="7000"/>
+  <set name="isDebuff" val="true"/>
   <set name="lvlDepend" val="1"/>
-  <set name="skillType" val="AGGREDUCE"/>
+  <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -1708,9 +1708,8 @@
   <table name="#mpConsume_Init"> 6 7 8 9 10 11 11 11 12 12 13 13 13 14 14 </table>
   <table name="#mpConsume"> 24 28 31 35 38 41 43 44 46 48 49 51 52 53 55 </table>
   <table name="#magicLvl"> 35 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
-  <table name="#power"> 30 33 37 40 43 47 50 53 57 60 63 67 70 75 80 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="#power"/>
+  <set name="power" val="40"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="4000"/>

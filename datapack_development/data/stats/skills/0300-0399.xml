@@ -766,7 +766,7 @@
     <player flying="true"/>
   </cond>
   <for>
-    <effect count="1" name="Buff" time="9" val="0" stackOrder="3" stackType="pDefSpec">
+    <effect count="1" name="Buff" time="9" val="0" stackOrder="3" stackType="pd_up_special">
       <add order="0x40" stat="pDef" val="7000">
         <player flying="true"/>
       </add>
@@ -1565,7 +1565,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect self="1" count="1" name="ImmobileBuff" time="30" val="0" stackOrder="3" stackType="pDefSpec">
+    <effect self="1" count="1" name="ImmobileBuff" time="30" val="0" stackOrder="3" stackType="pd_up_special">
       <add order="0x40" stat="pDef" val="5400"/>
       <add order="0x40" stat="mDef" val="4050"/>
       <mul order="0x30" stat="cancelVuln" val="0.9"/> <!-- value to be confirmed -->

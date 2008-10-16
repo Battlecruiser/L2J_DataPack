@@ -1707,7 +1707,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0" stackOrder="1" stackType="pDefSpec">
+    <effect count="1" name="Buff" time="30" val="0" stackOrder="1" stackType="pd_up_special">
       <add order="0x40" stat="pDef" val="#pDef"/>
       <mul order="0x30" stat="runSpd" val="#runSpd"/>
     </effect>
