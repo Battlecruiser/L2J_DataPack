@@ -873,6 +873,7 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
+    <player hp="10"/> <!-- Until proper core formula will be ready is this condition needed. Dont remove it !!! -->
   </for>
 </skill>
 <skill id="1160" levels="15" name="Slow" enchantLevels1="30" enchantLevels2="30" >

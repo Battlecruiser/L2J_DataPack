@@ -130,7 +130,7 @@
   <set name="effectType" val="WEAKNESS"/>
   <set name="effectPower" val="80"/>
   <for>
-    <effect count="1" name="debuff" time="#time" val="0" stackOrder="#stackOrder" stackType="md_up_attr">
+    <effect count="1" name="Debuff" time="#time" val="0" stackOrder="#stackOrder" stackType="md_up_attr">
       <mul order="0x30" stat="fireVuln" val="#fireVuln"/>
     </effect>
   </for>
