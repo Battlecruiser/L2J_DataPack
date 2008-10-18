@@ -342,9 +342,8 @@
   </for>
 </skill>
 <skill id="728" levels="1" name="Gordon Beast Attack">
-  <table name="#power"> 2957 </table>
   <set name="mpConsume" val="88"/>
-  <set name="power" val="#power"/>
+  <set name="power" val="2957"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="PDAM"/>
   <set name="hitTime" val="830"/>
@@ -356,9 +355,8 @@
   </for>
 </skill>
 <skill id="729" levels="1" name="Gordon Sword Stab">
-  <table name="#power"> 2957 </table>
   <set name="mpConsume" val="88"/>
-  <set name="power" val="#power"/>
+  <set name="power" val="2957"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="150"/>
   <set name="skillType" val="PDAM"/>

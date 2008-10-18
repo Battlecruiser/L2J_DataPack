@@ -1873,6 +1873,7 @@
   <table name="#power"> 742 782 823 866 910 955 1002 1050 1100 1150 1202 1255 1309 1364 1420 1476 1531 1592 1651 1710 1770 1830 1891 1951 2012 2072 2132 2192 </table>
   <table name="#magicLvl"> 46 47 48 49 50 51 52 53 54 55 56 57 58 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 </table>
   <table name="#castRange"> 400 400 400 400 400 400 400 400 400 400 400 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 </table>
+  <table name="#effectRange"> 900 900 900 900 900 900 900 900 900 900 900 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 </table>
   <set name="weaponsAllowed" val="32768"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
@@ -1886,7 +1887,7 @@
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="#castRange"/>
-  <set name="effectRange" val="900"/>
+  <set name="effectRange" val="#effectRange"/>
   <set name="flyType" val="CHARGE"/>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1920,7 +1921,6 @@
 </skill>
 <skill id="495" levels="10" name="Blade Rush">
   <table name="#mpConsume"> 65 70 73 75 77 80 83 85 88 90 </table>
-  <table name="#power"> 3.0 3.0 4.0 4.0 5.0 6.0 6.0 7.0 8.0 8.0 </table>
   <table name="#dmg"> 39 51 66 81 93 102 111 120 129 138 </table>
   <table name="#magicLvl"> 55 57 59 61 63 66 68 70 72 74 </table>
   <table name="#castRange"> 500 500 500 500 500 500 600 600 600 600 </table>
@@ -1932,7 +1932,7 @@
   <set name="target" val="TARGET_FRONT_AREA"/>
   <set name="skillRadius" val="400"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="#power"/>
+  <set name="power" val="40"/> <!-- Base Land Rate --> <!-- Guessing -->
   <set name="lvlDepend" val="2"/>
   <set name="skillType" val="BLEED"/>
   <set name="castRange" val="#castRange"/>
@@ -2028,6 +2028,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
+  <set name="effectType" val="BLEED"/>
+  <set name="effectPower" val="40"/> <!-- Base Land Rate --> <!-- Guessing -->
   <set name="isDebuff" val="true"/>
   <set name="soulMaxConsumeCount" val="5"/>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>

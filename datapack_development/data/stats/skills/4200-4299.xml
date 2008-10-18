@@ -138,7 +138,7 @@
 </skill>
 <skill id="4207" levels="12" name="BOSS Power Shot">
   <table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
-  <table name="#power"> 352.0 949.0 2607.0 6828.0 17184.0 33213.0 51007.0 59177.0 67888.0 77001.0 86359.0 95790.0 </table>
+  <table name="#power"> 352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
@@ -155,7 +155,7 @@
 </skill>
 <skill id="4208" levels="12" name="Stun">
   <table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
-  <table name="#power"> 176.0 475.0 1304.0 3414.0 8592.0 16607.0 25504.0 29589.0 33944.0 38501.0 43180.0 47895.0 </table>
+  <table name="#power"> 176 475 1304 3414 8592 16607 25504 29589 33944 38501 43180 47895 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
@@ -490,7 +490,7 @@
   </for>
 </skill>
 <skill id="4228" levels="12" name="Double Dagger Attack">
-  <table name="#power"> 122.0 279.0 584.0 1110.0 1923.0 3030.0 4336.0 5002.0 5632.0 6187.0 6632.0 6978.0 </table>
+  <table name="#power"> 122 279 584 1110 1923 3030 4336 5002 5632 6187 6632 6978 </table>
   <table name="#mpConsume"> 25 40 56 76 99 121 142 151 159 165 168 170 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
@@ -508,7 +508,7 @@
   </for>
 </skill>
 <skill id="4229" levels="12" name="NPC Double Wind Fist">
-  <table name="#power"> 122.0 279.0 584.0 1110.0 1923.0 3030.0 4336.0 5002.0 5632.0 6187.0 6632.0 6978.0 </table>
+  <table name="#power"> 122 279 584 1110 1923 3030 4336 5002 5632 6187 6632 6978 </table>
   <table name="#mpConsume"> 25 40 56 76 99 121 142 151 159 165 168 170 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
@@ -540,7 +540,7 @@
   </for>
 </skill>
 <skill id="4231" levels="12" name="NPC Spit Attack">
-  <table name="#power"> 18.0 26.0 38.0 52.0 68.0 85.0 102.0 110.0 116.0 122.0 126.0 129.0 </table>
+  <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
@@ -559,7 +559,7 @@
   </for>
 </skill>
 <skill id="4232" levels="12" name="NPC AE Strike">
-  <table name="#power"> 46.0 105.0 219.0 417.0 722.0 1136.0 1626.0 1876.0 2112.0 2320.0 2487.0 2617.0 </table>
+  <table name="#power"> 46 105 219 417 722 1136 1626 1876 2112 2320 2487 2617 </table>
   <table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
@@ -621,7 +621,7 @@
   <set name="magicLvl" val="70"/>
   <set name="mpConsume" val="65"/>
   <set name="lvlDepend" val="1"/>
-  <set name="power" val="51.0"/>
+  <set name="power" val="51"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
   <set name="reuseDelay" val="75000"/>
@@ -644,7 +644,7 @@
   <set name="magicLvl" val="70"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="65"/>
-  <set name="power" val="72.0"/>
+  <set name="power" val="72"/>
   <set name="target" val="TARGET_MULTIFACE"/>
   <set name="skillRadius" val="200"/>
   <set name="reuseDelay" val="8000"/>
@@ -790,7 +790,7 @@
   </for>
 </skill>
 <skill id="4247" levels="12" name="NPC Windstrike - Slow">
-  <table name="#power"> 5.0 8.0 12.0 17.0 24.0 31.0 39.0 39.0 39.0 39.0 39.0 39.0 </table>
+  <table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
@@ -808,7 +808,7 @@
   </for>
 </skill>
 <skill id="4248" levels="12" name="NPC HP Drain - Slow">
-  <table name="#power"> 5.0 8.0 12.0 17.0 24.0 31.0 39.0 39.0 39.0 39.0 39.0 39.0 </table>
+  <table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="element" val="6"/> <!-- Dark -->
@@ -829,7 +829,7 @@
 </skill>
 <skill id="4249" levels="12" name="Decrease Speed">
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
-  <table name="#power"> 4.0 5.0 8.0 11.0 15.0 19.0 24.0 24.0 24.0 24.0 24.0 24.0 </table>
+  <table name="#power"> 4 5 8 11 15 19 24 24 24 24 24 24 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
@@ -850,7 +850,7 @@
   </for>
 </skill>
 <skill id="4250" levels="12" name="NPC Twister - Slow">
-  <table name="#power"> 5.0 8.0 12.0 17.0 24.0 31.0 39.0 39.0 39.0 39.0 39.0 39.0 </table>
+  <table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
@@ -869,7 +869,7 @@
   </for>
 </skill>
 <skill id="4251" levels="12" name="NPC Curve Beam Cannon - Slow">
-  <table name="#power"> 5.0 8.0 12.0 17.0 24.0 31.0 39.0 39.0 39.0 39.0 39.0 39.0 </table>
+  <table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
@@ -887,7 +887,7 @@
   </for>
 </skill>
 <skill id="4252" levels="12" name="NPC Flame - Slow">
-  <table name="#power"> 3.0 5.0 7.0 9.0 13.0 16.0 20.0 20.0 20.0 20.0 20.0 20.0 </table>
+  <table name="#power"> 3 5 7 9 13 16 20 20 20 20 20 20 </table>
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
@@ -906,7 +906,7 @@
   </for>
 </skill>
 <skill id="4253" levels="12" name="NPC Blaze - Slow">
-  <table name="#power"> 3.0 5.0 7.0 9.0 13.0 16.0 20.0 20.0 20.0 20.0 20.0 20.0 </table>
+  <table name="#power"> 3 5 7 9 13 16 20 20 20 20 20 20 </table>
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="element" val="2"/> <!-- Fire -->
@@ -925,7 +925,7 @@
   </for>
 </skill>
 <skill id="4254" levels="12" name="NPC Prominence - Slow">
-  <table name="#power"> 5.0 8.0 12.0 17.0 24.0 31.0 39.0 39.0 39.0 39.0 39.0 39.0 </table>
+  <table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="element" val="2"/> <!-- Fire -->
@@ -944,7 +944,7 @@
   </for>
 </skill>
 <skill id="4255" levels="12" name="NPC Straight Beam Cannon - Slow">
-  <table name="#power"> 5.0 8.0 12.0 17.0 24.0 31.0 39.0 39.0 39.0 39.0 39.0 39.0 </table>
+  <table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
@@ -976,7 +976,7 @@
 </skill>
 <skill id="4257" levels="12" name="NPC Hydroblast - Magic">
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
-  <table name="#power"> 9.0 13.0 19.0 26.0 34.0 43.0 51.0 55.0 58.0 61.0 63.0 65.0 </table>
+  <table name="#power"> 9 13 19 26 34 43 51 55 58 61 63 65 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
@@ -1061,7 +1061,7 @@
 <skill id="4261" levels="12" name="Mega Storm Strike">
   <table name="#cast"> 600 750 750 900 900 900 900 900 900 900 900 900 </table>
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
-  <table name="#power"> 18.0 26.0 38.0 52.0 68.0 85.0 102.0 110.0 116.0 122.0 126.0 129.0 </table>
+  <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>

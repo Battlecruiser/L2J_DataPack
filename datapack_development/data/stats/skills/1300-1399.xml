@@ -961,7 +961,7 @@
   <set name="mpInitialConsume" val="21"/>
   <set name="mpConsume" val="84"/>
   <set name="magicLvl" val="77"/>
-  <set name="power" val="140.0"/>
+  <set name="power" val="140"/>
   <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="6000"/>
@@ -989,7 +989,7 @@
   <set name="mpInitialConsume" val="21"/>
   <set name="mpConsume" val="84"/>
   <set name="magicLvl" val="77"/>
-  <set name="power" val="140.0"/>
+  <set name="power" val="140"/>
   <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="6000"/>
@@ -1017,7 +1017,7 @@
   <set name="mpInitialConsume" val="21"/>
   <set name="mpConsume" val="84"/>
   <set name="magicLvl" val="77"/>
-  <set name="power" val="140.0"/>
+  <set name="power" val="140"/>
   <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="6000"/>
@@ -1033,7 +1033,7 @@
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="80"/>
   <for>
-     <effect count="5" name="ManaDamOverTime" time="2" val="40" stackOrder="1" stackType="multiple_debuff">
+    <effect count="5" name="ManaDamOverTime" time="2" val="40" stackOrder="1" stackType="multiple_debuff">
       <mul order="0x30" stat="runSpd" val="0.9"/>
       <mul order="0x30" stat="pAtkSpd" val="0.9"/>
       <mul order="0x30" stat="mAtkSpd" val="0.7"/>
@@ -1045,7 +1045,7 @@
   <set name="mpInitialConsume" val="21"/>
   <set name="mpConsume" val="84"/>
   <set name="magicLvl" val="76"/>
-  <set name="power" val="139.0"/>
+  <set name="power" val="139"/>
   <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="6000"/>
