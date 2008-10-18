@@ -404,6 +404,8 @@
   <table name="#power"> 49 53 58 61 65 </table>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="effectType" val="DEBUFF"/>
+  <set name="effectPower" val="40"/> <!-- Guessing -->
   <set name="hitTime" val="1000"/>
   <set name="isMagic" val="true"/>
   <set name="itemConsumeId" val="3031"/>
@@ -766,9 +768,9 @@
   </for>
 </skill>
 <skill id="1433" levels="10" name="Abyssal Blaze">
-  <table name="#mpConsume"> 15 17 17 18 19 20 22 23 24 25</table>
-  <table name="#power"> 24 26 28 31 33 35 38 40 43 46</table>
-  <table name="#magicLvl">20 22 24 26 38 30 32 34 36 38</table>
+  <table name="#mpConsume"> 15 17 17 18 19 20 22 23 24 25 </table>
+  <table name="#power"> 24 26 28 31 33 35 38 40 43 46 </table>
+  <table name="#magicLvl"> 20 22 24 26 38 30 32 34 36 38 </table>
   <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
@@ -788,9 +790,9 @@
   </for>
 </skill>
 <skill id="1434" levels="4" name="Dark Explosion">
-  <table name="#mpConsume"> 28 33 37 42</table>
-  <table name="#power"> 16 18 20 23</table>
-  <table name="#magicLvl"> 24 28 32 36</table>
+  <table name="#mpConsume"> 28 33 37 42 </table>
+  <table name="#power"> 16 18 20 23 </table>
+  <table name="#magicLvl"> 24 28 32 36 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -834,9 +836,9 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <table name="#ench1Power"> 111 112 112 112 113 113 113 114 114 115 115 115 116 116 116 117 117 117 118 118 119 119 119 120 120 120 121 121 121 122 </table>
   <table name="#ench2MpConsume"> 69 68 67 65 64 63 62 60 60 59 58 57 55 54 53 52 50 49 48 48 47 45 44 43 42 40 39 38 37 37 </table>
-  <table name="#mpConsume">28 29 30 30 33 33 35 35 38 38 40 40 43 43 44 45 45 47 48 48 49 49 50 52 52 53 53 54 54 55</table>
-  <table name="#power">50 52 55 57 60 61 65 66 70 72 75 77 80 82 84 85 87 88 90 92 94 96 97 99 100 102 104 105 107 108</table>
-  <table name="#magicLvl">38 40 42 43 45 46 48 49 51 52 54 55 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
+  <table name="#mpConsume"> 28 29 30 30 33 33 35 35 38 38 40 40 43 43 44 45 45 47 48 48 49 49 50 52 52 53 53 54 54 55 </table>
+  <table name="#power"> 50 52 55 57 60 61 65 66 70 72 75 77 80 82 84 85 87 88 90 92 94 96 97 99 100 102 104 105 107 108 </table>
+  <table name="#magicLvl"> 38 40 42 43 45 46 48 49 51 52 54 55 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -883,7 +885,7 @@
   <set name="castRange" val="40"/>
   <set name="element" val="6"/> <!-- Dark -->
   <set name="lvlDepend" val="1"/>
-  <set name="effectRange" val="56"/>
+  <set name="effectRange" val="400"/>
   <set name="reuseDelay" val="18000"/>
   <set name="isDebuff" val="true"/>
   <set name="soulMaxConsumeCount" val="5"/>
@@ -901,9 +903,9 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <table name="#ench1Power"> 111 112 112 112 113 113 113 114 114 115 115 115 116 116 116 117 117 117 118 118 119 119 119 120 120 120 121 121 121 122 </table>
   <table name="#ench2MpConsume"> 89 88 87 85 84 83 82 80 79 78 77 75 74 73 72 70 69 68 67 67 65 64 63 62 60 59 58 57 55 54 </table>
-  <table name="#mpConsume"> 69 73 75 78 80 83 85 87 89</table>
-  <table name="#power"> 82 85 89 92 96 99 102 105 108</table>
-  <table name="#magicLvl"> 58 60 62 64 66 68 70 72 74</table>
+  <table name="#mpConsume"> 69 73 75 78 80 83 85 87 89 </table>
+  <table name="#power"> 82 85 89 92 96 99 102 105 108 </table>
+  <table name="#magicLvl"> 58 60 62 64 66 68 70 72 74 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -1163,7 +1165,7 @@
   <set name="mpInitialConsume" val="28"/>
   <set name="mpConsume" val="80"/>
   <set name="magicLvl" val="79"/>
-  <set name="power" val="162.0"/>
+  <set name="power" val="162"/>
   <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2000"/>
@@ -1185,7 +1187,7 @@
   <set name="magicLvl" val="79"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="109"/>
-  <set name="power" val="10.0"/>
+  <set name="power" val="10"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillRadius" val="200"/>
   <set name="reuseDelay" val="8000"/>
@@ -1197,6 +1199,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="-1"/>
+  <set name="effectType" val="DOT"/>
+  <set name="effectPower" val="40"/> <!-- Guessing -->
   <for>
     <effect count="7" name="DamOverTime" time="3" val="100"/>
   </for>
@@ -1205,7 +1209,7 @@
   <set name="mpInitialConsume" val="28"/>
   <set name="mpConsume" val="80"/>
   <set name="magicLvl" val="79"/>
-  <set name="power" val="162.0"/>
+  <set name="power" val="162"/>
   <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2000"/>
@@ -1258,6 +1262,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
+  <set name="effectType" val="DOT"/>
+  <set name="effectPower" val="40"/> <!-- Guessing -->
   <for>
     <effect count="5" name="DamOverTime" time="3" val="100"/>
   </for>
@@ -1267,7 +1273,7 @@
   <set name="mpInitialConsume" val="28"/>
   <set name="mpConsume" val="80"/>
   <set name="magicLvl" val="79"/>
-  <set name="power" val="162.0"/>
+  <set name="power" val="162"/>
   <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2000"/>
@@ -1306,7 +1312,7 @@
   <set name="magicLvl" val="79"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="109"/>
-  <set name="power" val="10.0"/>
+  <set name="power" val="10"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillRadius" val="200"/>
   <set name="reuseDelay" val="8000"/>
@@ -1317,7 +1323,9 @@
   <set name="element" val="1"/> <!-- Wind -->
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
-  <set name="effectRange" val="-1"/>
+  <set name="effectRange" val="1400"/>
+  <set name="effectType" val="DOT"/>
+  <set name="effectPower" val="40"/> <!-- Guessing -->
   <for>
     <effect count="7" name="DamOverTime" time="3" val="100"/>
   </for>
@@ -1533,7 +1541,7 @@
   <set name="skillRadius" val="310"/>
   <set name="skillType" val="MDAM"/>
   <set name="castRange" val="40"/>
-  <set name="effectRange" val="56"/>
+  <set name="effectRange" val="400"/>
   <for>
   </for>
 </skill>

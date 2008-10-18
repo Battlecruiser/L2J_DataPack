@@ -1064,6 +1064,8 @@
   <set name="effectRange" val="1000"/>
   <set name="num_charges" val="7"/>
   <set name="baseCritRate" val="15"/>
+  <for>
+  </for>
 </skill>
 <skill id="346" levels="1" name="Raging Force">
   <set name="weaponsAllowed" val="1280"/>
@@ -1100,6 +1102,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="effectType" val="DEBUFF"/>
+  <set name="effectPower" val="40"/> <!-- Guessing -->
   <set name="reuseDelay" val="30000"/>
   <set name="hitTime" val="1800"/>
   <set name="baseCritRate" val="15"/>
@@ -1588,6 +1592,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
+  <set name="effectType" val="BUFF"/>
+  <set name="effectPower" val="100"/>
   <for>
     <effect self="1" count="1" name="Buff" time="30" val="0" stackOrder="6" stackType="avoid_up_special">
       <add order="0x40" stat="rEvas" val="6"/>

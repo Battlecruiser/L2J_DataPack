@@ -749,9 +749,8 @@ chances and the success rate of dagger skills. -->
   </for>
 </skill>
 <skill id="4560" levels="12" name="NPC Fire Burn">
-<!-- TODO -->
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
-  <table name="#power"> 13.0 15.0 18.0 20.0 23.0 26.0 29.0 32.0 35.0 38.0 42.0 44.0 </table>
+  <table name="#power"> 13 15 18 20 23 26 29 32 35 38 42 44 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -768,7 +767,7 @@ chances and the success rate of dagger skills. -->
 </skill>
 <skill id="4561" levels="12" name="NPC Fire Burn - Magic">
   <table name="#mpConsume"> 4 5 8 9 12 14 17 18 19 19 20 20 </table>
-  <table name="#power"> 13.0 15.0 18.0 20.0 23.0 26.0 29.0 32.0 35.0 38.0 42.0 44.0 </table>
+  <table name="#power"> 13 15 18 20 23 26 29 32 35 38 42 44 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -849,7 +848,7 @@ chances and the success rate of dagger skills. -->
 </skill>
 <skill id="4565" levels="12" name="NPC Eruption">
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
-  <table name="#power"> 37.0 39.0 41.0 43.0 45.0 46.0 48.0 50.0 51.0 53.0 54.0 56.0 </table>
+  <table name="#power"> 37 39 41 43 45 46 48 50 51 53 54 56 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AREA"/>
@@ -867,7 +866,7 @@ chances and the success rate of dagger skills. -->
 </skill>
 <skill id="4566" levels="12" name="NPC Eruption - Magic">
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
-  <table name="#power"> 37.0 39.0 41.0 43.0 45.0 46.0 48.0 50.0 51.0 53.0 54.0 56.0 </table>
+  <table name="#power"> 37 39 41 43 45 46 48 50 51 53 54 56 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AREA"/>
@@ -885,7 +884,7 @@ chances and the success rate of dagger skills. -->
 </skill>
 <skill id="4567" levels="12" name="NPC Eruption - Slow">
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
-  <table name="#power"> 37.0 39.0 41.0 43.0 45.0 46.0 48.0 50.0 51.0 53.0 54.0 56.0 </table>
+  <table name="#power"> 37 39 41 43 45 46 48 50 51 53 54 56 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AREA"/>
@@ -970,7 +969,7 @@ chances and the success rate of dagger skills. -->
 </skill>
 <skill id="4571" levels="12" name="NPC Blazing Circle">
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
-  <table name="#power"> 42.0 44.0 46.0 48.0 50.0 52.0 55.0 57.0 58.0 60.0 62.0 64.0 </table>
+  <table name="#power"> 42 44 46 48 50 52 55 57 58 60 62 64 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AURA"/>

@@ -188,8 +188,9 @@
   </for>
 </skill>
 <skill id="4708" levels="10" name="Cursed Strike">
+  <table name="#magicLvl"> 58 62 66 70 72 74 76 78 79 80 </table>
   <table name="#mpConsume"> 58 62 67 71 73 75 77 78 79 80 </table>
-  <table name="#power"> 1046.0 1230.0 1425.0 1626.0 1727.0 1827.0 1925.0 2020.0 2067.0 2112.0 </table>
+  <table name="#power"> 1046 1230 1425 1626 1727 1827 1925 2020 2067 2112 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -198,9 +199,12 @@
   <set name="reuseDelay" val="10000"/>
   <set name="isDebuff" val="true"/>
   <set name="lvlDepend" val="1"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
+  <set name="effectType" val="STUN"/>
+  <set name="effectPower" val="50"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
@@ -270,7 +274,7 @@
 </skill>
 <skill id="4712" levels="12" name="Bright Burst">
   <table name="#mpConsume"> 6 6 7 7 8 8 9 9 10 10 11 11 </table>
-  <table name="#power"> 6.0 9.0 13.0 17.0 23.0 28.0 34.0 36.0 39.0 41.0 42.0 43.0 </table>
+  <table name="#power"> 6 9 13 17 23 28 34 36 39 41 42 43 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
@@ -446,83 +450,100 @@
 </skill>
 <skill id="4724" levels="12" name="Stun">
   <table name="#power"> 56 151 417 1089 2816 5504 8522 10060 11622 13182 14784 16398 </table>
-  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87</table>
+  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
+  <table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="PDAM"/>
   <set name="hitTime" val="830"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
+  <set name="effectType" val="STUN"/>
+  <set name="effectPower" val="80"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="4725" levels="12" name="Stun">
   <table name="#power"> 48 128 352 920 2377 4645 7195 8490 9855 11350 12936 14430 </table>
-  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87</table>
+  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
+  <table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="PDAM"/>
   <set name="hitTime" val="830"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
+  <set name="effectType" val="STUN"/>
+  <set name="effectPower" val="80"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="4726" levels="12" name="Stun">
   <table name="#power"> 26 68 188 491 1268 2479 3834 4519 5242 6037 6889 7675 </table>
-  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87</table>
+  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
+  <table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="PDAM"/>
   <set name="hitTime" val="830"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
   <set name="effectType" val="STUN"/>
+  <set name="effectPower" val="80"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="4727" levels="12" name="Stun">
   <table name="#power"> 24 64 176 461 1189 2326 3598 4245 4928 5682 6461 7215 </table>
-  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87</table>
+  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
+  <table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="PDAM"/>
   <set name="hitTime" val="830"/>
   <set name="isDebuff" val="true"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
   <set name="effectType" val="STUN"/>
+  <set name="effectPower" val="80"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="4728" levels="12" name="Stun">
   <table name="#power"> 23 60 165 429 1109 2172 3362 3971 4614 5313 6047 6756 </table>
-  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87</table>
+  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
+  <table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="PDAM"/>
   <set name="hitTime" val="830"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
   <set name="isDebuff" val="true"/>
   <set name="effectType" val="STUN"/>
+  <set name="effectPower" val="80"/>
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
@@ -599,7 +620,7 @@
 </skill>
 <skill id="4734" levels="12" name="BOSS Spinning Slash">
   <table name="#power"> 56 151 417 1089 2816 5504 8522 10060 11622 13182 14784 16398 </table>
-  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87</table>
+  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AURA"/>
@@ -614,7 +635,7 @@
 </skill>
 <skill id="4735" levels="12" name="BOSS Spinning Slasher">
   <table name="#power"> 48 128 352 920 2377 4645 7195 8490 9855 11350 12936 14430 </table>
-  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87</table>
+  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AURA"/>
@@ -629,7 +650,7 @@
 </skill>
 <skill id="4736" levels="12" name="BOSS Spinning Slasher">
   <table name="#power"> 26 68 188 491 1268 2479 3834 4519 5242 6037 6889 7675 </table>
-  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87</table>
+  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AURA"/>
@@ -644,7 +665,7 @@
 </skill>
 <skill id="4737" levels="12" name="BOSS Spinning Slasher">
   <table name="#power"> 24 64 176 461 1189 2326 3598 4245 4928 5682 6461 7215 </table>
-  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87</table>
+  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AURA"/>
@@ -659,7 +680,7 @@
 </skill>
 <skill id="4738" levels="12" name="BOSS Spinning Slasher">
   <table name="#power"> 23 60 165 429 1109 2172 3362 3971 4614 5313 6047 6756 </table>
-  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87</table>
+  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AURA"/>
@@ -674,7 +695,7 @@
 </skill>
 <skill id="4739" levels="12" name="BOSS Strike">
   <table name="#power"> 112 302 834 2177 5631 11008 17044 20119 23243 26363 29567 32796 </table>
-  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87</table>
+  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -688,7 +709,7 @@
 </skill>
 <skill id="4740" levels="12" name="BOSS Strike">
   <table name="#power"> 95 255 705 1840 4754 9291 14390 16978 19710 22699 25871 28860 </table>
-  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87</table>
+  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -702,7 +723,7 @@
 </skill>
 <skill id="4741" levels="12" name="BOSS Strike">
   <table name="#power"> 51 136 375 982 2536 4958 7667 9037 10483 12074 13778 15349 </table>
-  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87</table>
+  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -716,7 +737,7 @@
 </skill>
 <skill id="4742" levels="12" name="BOSS Strike">
   <table name="#power"> 48 128 352 922 2377 4651 7195 8489 9855 11363 12921 14430 </table>
-  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87</table>
+  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -730,7 +751,7 @@
 </skill>
 <skill id="4743" levels="12" name="BOSS Strike">
   <table name="#power"> 45 120 330 858 2218 4344 6724 7942 9228 10625 12093 13512 </table>
-  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87</table>
+  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -744,7 +765,7 @@
 </skill>
 <skill id="4744" levels="12" name="Stun">
   <table name="#power"> 56 151 417 1089 2816 5504 8522 10060 11622 13182 14784 16398 </table>
-  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87</table>
+  <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>

@@ -75,7 +75,7 @@
   <set name="skillRadius" val="#skillRadius"/>
   <set name="skillType" val="AGGDAMAGE"/>
   <set name="castRange" val="40"/>
-  <set name="effectRange" val="56"/>
+  <set name="effectRange" val="400"/>
   <set name="reuseDelay" val="10000"/>
   <for>
   </for>
@@ -249,6 +249,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
+  <set name="effectType" val="BLEED"/>
+  <set name="effectPower" val="40"/> <!-- Base Land Rate --> <!-- Guessing -->
   <set name="soulMaxConsumeCount" val="5"/>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -837,7 +839,7 @@
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
-  <set name="effectRange" val="-1"/>
+  <set name="effectRange" val="1200"/>
   <set name="flyType" val="CHARGE"/>
   <set name="flyRadius" val="400"/>
   <set name="isDebuff" val="true"/>
@@ -1314,7 +1316,7 @@
 </skill>
 <skill id="575" levels="4" name="Steel Cutter">
   <table name="#mpConsume"> 61 63 67 70 </table>
-  <table name="#power"> 1250  1406 1568 1733 </table>
+  <table name="#power"> 1250 1406 1568 1733 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1391,7 +1393,7 @@
   </for>
 </skill>
 <skill id="582" levels="4" name="Scope Bleed">
-<!-- Needs retail accuracy check -->
+  <!-- Needs retail accuracy check -->
   <table name="#mpConsume"> 61 63 67 70 </table>
   <table name="#power"> 875 984 1098 1213 </table>
   <table name="#effect"> 6 6 7 7 </table>
@@ -1402,11 +1404,13 @@
   <set name="skillRadius" val="240"/>
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="1080"/>
-  <set name="skillType" val="DEBUFF"/>
+  <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="900"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
+  <set name="effectType" val="BLEED"/>
+  <set name="effectPower" val="40"/> <!-- Base Land Rate --> <!-- Guessing -->
   <for>
     <effect count="#effect" name="DamOverTime" time="3" val="#bleeddmg" abnormal="bleeding"/>
   </for>
