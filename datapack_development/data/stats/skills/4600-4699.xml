@@ -112,7 +112,8 @@
   <table name="#fireVuln"> 1.2 1.25 1.25 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
-  <set name="target" val="TARGET_ONE"/>
+  <set name="target" val="TARGET_MULTIFACE"/>
+  <set name="skillRadius" val="80"/>
   <set name="skillType" val="PDAM"/>
   <set name="hitTime" val="1800"/>
   <set name="lvlDepend" val="2"/>
@@ -255,7 +256,8 @@
   <table name="#mpConsume"> 19 30 42 57 74 91 106 114 119 124 126 128 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
-  <set name="target" val="TARGET_ONE"/>
+  <set name="target" val="TARGET_MULTIFACE"/>
+  <set name="skillRadius" val="1000"/>
   <set name="skillType" val="PDAM"/>
   <set name="hitTime" val="1800"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1482,7 +1484,7 @@
   <!-- Valakas Trample Left -->
   <set name="magicLvl" val="75"/>
   <set name="power" val="23397"/>
-  <set name="target" val="TARGET_AREA"/>
+  <set name="target" val="TARGET_MULTIFACE"/>
   <set name="skillRadius" val="250"/>
   <set name="coolTime" val="1500"/>
   <set name="hitTime" val="1000"/>
@@ -1499,7 +1501,7 @@
   <!-- Valakas Trample Right -->
   <set name="magicLvl" val="75"/>
   <set name="power" val="23397"/>
-  <set name="target" val="TARGET_AREA"/>
+  <set name="target" val="TARGET_MULTIFACE"/>
   <set name="skillRadius" val="250"/>
   <set name="coolTime" val="1500"/>
   <set name="hitTime" val="1000"/>
@@ -1517,7 +1519,7 @@
   <set name="magicLvl" val="75"/>
   <set name="power" val="499"/>
   <set name="isDebuff" val="true"/>
-  <set name="target" val="TARGET_AREA"/>
+  <set name="target" val="TARGET_MULTIFACE"/>
   <set name="skillRadius" val="1200"/>
   <set name="coolTime" val="2000"/>
   <set name="hitTime" val="3000"/>
@@ -1538,7 +1540,7 @@
   <!-- Valakas Dragon Breath High -->
   <set name="magicLvl" val="75"/>
   <set name="power" val="499"/>
-  <set name="target" val="TARGET_AREA"/>
+  <set name="target" val="TARGET_MULTIFACE"/>
   <set name="skillRadius" val="1700"/>
   <set name="isDebuff" val="true"/>
   <set name="coolTime" val="2000"/>
@@ -1560,7 +1562,7 @@
   <!-- Valakas Tail Stomp A from Behind -->
   <set name="magicLvl" val="75"/>
   <set name="power" val="37224"/>
-  <set name="target" val="TARGET_BEHIND_AURA"/>
+  <set name="target" val="TARGET_MULTIFACE"/>
   <set name="skillRadius" val="1000"/>
   <set name="coolTime" val="1000"/>
   <set name="hitTime" val="3000"/>
@@ -1577,7 +1579,7 @@
   <!-- Valakas Tail Stomp B from Behind -->
   <set name="magicLvl" val="75"/>
   <set name="power" val="121"/>
-  <set name="target" val="TARGET_BEHIND_AURA"/>
+  <set name="target" val="TARGET_MULTIFACE"/>
   <set name="skillRadius" val="500"/>
   <set name="element" val="2"/> <!-- Fire -->
   <set name="skillType" val="MDAM"/>
@@ -1607,7 +1609,7 @@
   <!-- "Valakas Tail Lash" from Behind -->
   <set name="magicLvl" val="75"/>
   <set name="power" val="21423"/>
-  <set name="target" val="TARGET_BEHIND_AURA"/>
+  <set name="target" val="TARGET_MULTIFACE"/>
   <set name="skillRadius" val="250"/>
   <set name="coolTime" val="3000"/>
   <set name="hitTime" val="3000"/>
