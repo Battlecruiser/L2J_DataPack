@@ -1253,16 +1253,8 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
-  <table name="#ench2MpConsume">
-  107 106 104 103 101 99 98 96 95 93
-   92  90  89  87  86 84 83 81 79 78
-   76  75  73  72  70 69 67 66 64 62
-  </table>
-  <table name="#ench2MpConsume_Init">
-  26 26 26 25 25 24 24 24 23 23
-  23 22 22 21 21 21 20 20 19 19
-  19 18 18 18 17 17 16 16 16 15
-  </table>
+  <table name="#ench2MpConsume"> 107 106 104 103 101 99 98 96 95 93 92 90 89 87 86 84 83 81 79 78 76 75 73 72 70 69 67 66 64 62 </table>
+  <table name="#ench2MpConsume_Init"> 26 26 26 25 25 24 24 24 23 23 23 22 22 21 21 21 20 20 19 19 19 18 18 18 17 17 16 16 16 15 </table>
   <table name="#mpConsume_Init"> 18 21 23 25 27 28 29 30 31 32 34 34 35 36 </table>
   <table name="#mpConsume"> 74 79 89 97 106 110 115 119 123 127 130 135 138 141 </table>
   <table name="#magicLvl"> 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
@@ -1273,7 +1265,6 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="element" val="6"/> <!-- Dark -->
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="DRAIN"/>

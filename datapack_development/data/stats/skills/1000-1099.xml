@@ -2004,13 +2004,12 @@
   <table name="#mpConsume_Init"> 5 8 10 12 14 16 </table>
   <table name="#mpConsume"> 22 32 40 46 54 63 </table>
   <table name="#magicLvl"> 7 14 20 25 30 35 </table>
-  <table name="#power"> 15.0 21.0 26.0 32 38 44 </table>
+  <table name="#power"> 15 21 26 32 38 44 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="element" val="6"/> <!-- Dark -->
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="DRAIN"/>
