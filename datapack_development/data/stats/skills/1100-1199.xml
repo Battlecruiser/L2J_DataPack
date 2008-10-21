@@ -656,7 +656,7 @@
   <table name="#mpConsume_Init"> 5 6 7 7 8 8 </table>
   <table name="#mpConsume"> 20 22 25 28 30 32 </table>
   <table name="#magicLvl"> 11 14 17 20 23 25 </table>
-  <table name="#power"> 18.0 21.0 23.0 26.0 29.0 32.0 </table>
+  <table name="#power"> 18 21 23 26 29 32 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -710,27 +710,18 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
-  <table name="#ench2MpConsume">
-  27 27 27 26 26 26 25 25 25 25
-  25 24 24 24 24 23 23 23 23 22
-  22 22 21 21 21 21 20 20 20 20
-  </table>
-  <table name="#ench2MpConsume_Init">
-  6 6 6 6 6 6 6 6 6 6
-  6 6 6 6 6 5 5 5 5 5
-  5 5 5 5 5 5 5 5 5 5
-  </table>
+  <table name="#ench2MpConsume"> 27 27 27 26 26 26 25 25 25 25 25 24 24 24 24 23 23 23 23 22 22 22 21 21 21 21 20 20 20 20 </table>
+  <table name="#ench2MpConsume_Init"> 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 </table>
   <table name="#drain"> 260 299 347 384 426 467 509 541 570 592 625 647 673 701 729 758 </table>
   <table name="#mpConsume_Init"> 3 3 4 4 5 5 6 6 6 6 6 7 7 7 7 7 </table>
   <table name="#mpConsume"> 11 12 14 16 18 19 21 22 22 23 24 25 26 26 27 28 </table>
   <table name="#magicLvl"> 30 35 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
-  <table name="#ench1Power">682 685 688 692 695 699 702 705 709 712 715 719 722 726 729 732 736 739 743 746 749 753 756 760 763 766 770 773 776 780 </table>
+  <table name="#ench1Power"> 682 685 688 692 695 699 702 705 709 712 715 719 722 726 729 732 736 739 743 746 749 753 756 760 763 766 770 773 776 780 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_CORPSE_MOB"/>
-  <set name="element" val="6"/> <!-- Dark -->
   <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="1500"/>
   <set name="skillType" val="DRAIN"/>

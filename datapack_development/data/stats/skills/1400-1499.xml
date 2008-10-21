@@ -544,9 +544,6 @@
   </for>
 </skill>
 <skill id="1423" levels="1" name="Gehenna">
-<!--
-  Consecutive strikes inflict a great amount of dark damage. You cannot move while casting the magic, and additional MP is consumed every time the effect is produced. Level 3 or higher Spell Force required. Consumes 1 Magic Symbol.
--->
   <set name="target" val="TARGET_GROUND"/>
   <set name="skillType" val="SIGNET_CASTTIME"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -559,7 +556,7 @@
   <set name="effectNpcId" val="13025"/>
   <set name="offensive" val="True"/>
   <set name="effectId" val="5133"/>
-  <set name="element" val="6"/>
+  <set name="element" val="6"/> <!-- Dark -->
   <set name="isMagic" val="true"/>
   <set name="power" val="200"/>
   <set name="itemConsumeId" val="8876"/>

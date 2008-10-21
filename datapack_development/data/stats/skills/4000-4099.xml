@@ -858,13 +858,12 @@
   </for>
 </skill>
 <skill id="4050" levels="16" name="Cubic DD">
-  <table name="#power"> 29.0 33.0 39.0 43.0 46.0 50.0 53.0 56.0 59.0 62.0 65.0 68.0 71.0 74.0 77.0 80.0</table>
-  <table name="#magicLvl"> 43 49 55 60 64 68 72 74 76 78 80 81 82 83 84 85</table>
+  <table name="#power"> 29 33 39 43 46 50 53 56 59 62 65 68 71 74 77 80 </table>
+  <table name="#magicLvl"> 43 49 55 60 64 68 72 74 76 78 80 81 82 83 84 85 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="element" val="6"/> <!-- Dark -->
   <set name="skillType" val="DRAIN"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
