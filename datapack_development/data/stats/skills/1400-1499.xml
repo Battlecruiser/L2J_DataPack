@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
 <skill id="1400" levels="10" name="Turn Undead" enchantLevels1="30" enchantLevels2="30">
-<!-- Done by KID -->
+  <!-- Done by KID -->
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
-  <table name="#ench1Power"> 413.0 415.0 417.0 419.0 421.0 423.0 425.0 427.0 429.0 431.0 433.0 435.0 437.0 439.0 441.0 443.0 445.0 447.0 449.0 451.0 453.0 455.0 457.0 461.0 463.0 465.0 467.0 469.0 471.0 473.0 </table>
+  <table name="#ench1Power"> 413 415 417 419 421 423 425 427 429 431 433 435 437 439 441 443 445 447 449 451 453 455 457 461 463 465 467 469 471 473 </table>
   <table name="#ench2MpConsume"> 66 65 65 63 62 62 61 60 58 58 57 56 55 55 53 52 52 51 50 48 48 47 46 45 45 43 42 42 41 40 </table>
   <table name="#mpConsume"> 52 54 55 58 60 62 64 65 67 69 </table>
-  <table name="#power"> 230.0 250.0 270.0 290.0 310.0 330.0 350.0 370.0 390.0 411.0 </table>
+  <table name="#power"> 230 250 270 290 310 330 350 370 390 411 </table>
   <table name="#itemConsumeCount"> 3 3 4 4 4 4 5 5 5 5 </table>
   <table name="#lethal2"> 5 9 13 17 21 25 29 33 37 41</table>
   <set name="power" val="#power"/>
@@ -33,7 +33,7 @@
 </skill>
 <skill id="1401" levels="11" name="Major Heal" enchantLevels1="30" enchantLevels2="30" >
   <table name="#ench1Power"> 947 949 951 954 956 958 960 963 965 967 969 972 974 976 979 981 983 985 988 990 992 994 997 999 1001 1003 1006 1008 1010 1013 </table>
-  <table name="#ench2MpConsume">   78 77 76 75 73 72 72 71 70 68 67 66 65 65 63 62 61 60 58 57 57 56 55 53 52 51 50 50 48 47  </table>
+  <table name="#ench2MpConsume"> 78 77 76 75 73 72 72 71 70 68 67 66 65 65 63 62 61 60 58 57 57 56 55 53 52 51 50 50 48 47 </table>
   <table name="#mpConsume"> 60 64 65 67 69 72 74 77 78 80 80 </table>
   <table name="#power"> 690 722 753 783 812 840 867 892 915 936 946 </table>
   <set name="mpConsume" val="#mpConsume"/>
