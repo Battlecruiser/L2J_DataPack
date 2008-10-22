@@ -1,7 +1,6 @@
 -- --------------------------------------------
 -- Table structure for table `custom_spawnlist`
 -- --------------------------------------------
-
 CREATE TABLE IF NOT EXISTS `custom_spawnlist` (
   `id` int(11) NOT NULL auto_increment,
   `location` varchar(40) NOT NULL default '',
@@ -16,6 +15,6 @@ CREATE TABLE IF NOT EXISTS `custom_spawnlist` (
   `respawn_delay` int(9) NOT NULL default '0',
   `loc_id` int(9) NOT NULL default '0',
   `periodOfDay` decimal(2,0) default '0',
-  PRIMARY KEY  (id),
+  PRIMARY KEY (`id`),
   KEY `key_npc_templateid` (`npc_templateid`)
-) ENGINE=MyISAM;
+);

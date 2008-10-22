@@ -41,13 +41,13 @@ CREATE TABLE IF NOT EXISTS `custom_npc`(
   `runspd` decimal(3,0) default NULL,
   `faction_id` varchar(40) default NULL,
   `faction_range` decimal(4,0) default NULL,
-  `isUndead` int(11) default 0,
-  `absorb_level` decimal(2,0) default 0,
+  `isUndead` int(11) default '0',
+  `absorb_level` decimal(2,0) default '0',
   `absorb_type` enum('FULL_PARTY','LAST_HIT','PARTY_ONE_RANDOM') DEFAULT 'LAST_HIT' NOT NULL,
-  `ss` int(4) default 0,
-  `bss` int(4) default 0,
-  `ss_rate` int(3) default 0,
+  `ss` int(4) default '0',
+  `bss` int(4) default '0',
+  `ss_rate` int(3) default '0',
   `AI` varchar(8) default "fighter",
   `drop_herbs` enum('true','false') DEFAULT 'false' NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM;
+);
