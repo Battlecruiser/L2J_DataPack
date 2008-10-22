@@ -371,6 +371,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
+  <for>
+  </for>
 </skill>
 <skill id="17" levels="34" name="Force Burst" enchantLevels1="30" enchantLevels2="30" >
   <table name="#magicLvl"> 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
@@ -671,6 +673,7 @@
   <set name="skillType" val="BLOW"/>
   <set name="baseCritRate" val="15"/>
   <set name="lethal1" val="5"/>
+  <set name="lethal2" val="2"/>
   <set name="dmgDirectlyToHp" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
