@@ -123,7 +123,7 @@ class Quest (JQuest) :
            skill = SkillTable.getInstance().getInfo(4082,1)
            npc.setTarget(player)
            npc.broadcastPacket(MagicSkillUse(npc,player,skill.getDisplayId(),1,skill.getHitTime(),0))
-           npc.callSkill(skill, [player])
+           npc.doCast(skill)
        elif event == "poison_timer" :
            st.exitQuest(1)
            if DEBUG :
@@ -143,7 +143,7 @@ class Quest (JQuest) :
            skill = SkillTable.getInstance().getInfo(4083,1)
            npc.setTarget(player)
            npc.broadcastPacket(MagicSkillUse(npc,player,skill.getDisplayId(),1,skill.getHitTime(),0))
-           npc.callSkill(skill, [player])
+           npc.docast(skill)
            self.startQuestTimer(player.getName(),4000,npc,player,0)
    elif event == player.getName() :
        if player.isDead() :
