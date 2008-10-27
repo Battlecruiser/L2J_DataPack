@@ -150,17 +150,18 @@ class Quest (JQuest) :
    if npcId != TALIEN and id != State.STARTED : return htmltext
    cond = st.getInt("cond")
    id = st.getState()
-   if player.isSubClassActive() :
-     if npcId == TALIEN :
+
+   if npcId == TALIEN :
        if cond == 0 :
          if id == State.COMPLETED :
            htmltext = "<html><body>This quest has already been completed.</body></html>"
-
-         elif player.getLevel() < 50 : 
+         elif player.getLevel() >= 50 and player.isSubClassActive():
+           htmltext = "31739-1.htm"
+         else : 
            htmltext = "31739-2.htm"
            st.exitQuest(1)
-         elif player.getLevel() >= 50 :
-           htmltext = "31739-1.htm"
+       if not player.isSubClassActive() :
+           htmltext = "<html><body>This quest may only be undertaken by sub-class characters of level 50 or above.</body></html>"
        elif cond == 1 :
          htmltext = "31739-5.htm"
        elif cond == 4 and st.getQuestItemsCount(LEGEND_OF_SEVENTEEN) == 1 :
@@ -175,7 +176,8 @@ class Quest (JQuest) :
          htmltext = "31739-14.htm"
        elif cond == 11 :
          htmltext = "31739-16.htm"
-     elif npcId == GABRIELLE :
+   elif player.isSubClassActive() :
+     if npcId == GABRIELLE :
        if cond == 1 :
          htmltext = "30753-1.htm"
        elif cond == 2 :
