@@ -924,21 +924,20 @@
   </for>
 </skill>
 <skill id="165" levels="5" name="Trade">
+  <!-- Not Done "Needs Core Support" -->
+  <!--
+  Lvl 1: Enables you to purchase high quality weapons with a discount up to 5 percent.
+  Lvl 2: Enables you to purchase high quality weapons with a discount up to 10 percent.
+  Lvl 3: Receives 10 percent on grade Ds, 5 percent on no grades and allows you to sell at an expensive price.
+  Lvl 4: Receives 5 percent discount on grade C items, 10 percent on grade Ds, 5 percent on no grades and allows you to sell at an expensive price.
+  Lvl 5: Receives 10 percent discount on grade C items, 10 percent on grade Ds, 5 percent on no grades and allows you to sell at an expensive price.
+  -->
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="167" levels="4" name="Focus Summon Magic">
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <for>
   </for>
 </skill>
