@@ -37,7 +37,9 @@ class Quest (JQuest) :
      JQuest.__init__(self,id,name,descr)
      self.questItemIds = [GOLDEN_HAIR, ORB_OF_BINDING, SORCERY_INGREDIENT]
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc,player) :
+   st = player.getQuestState(qn)
+   if not st: return
    htmltext = event
    cond = st.getInt("cond")
    if event == "31742-3.htm" :
@@ -75,6 +77,11 @@ class Quest (JQuest) :
        st.takeItems(GOLDEN_HAIR,1)
        st.takeItems(SORCERY_INGREDIENT,1)
        st.playSound("ItemSound.quest_middle")
+   elif event == "1" :
+     npc.reduceCurrentHp(10000,npc)
+     st.addSpawn(PURE_UNICORN,npc,False)
+   elif event == "2" :
+     npc.reduceCurrentHp(10000,npc)
    return htmltext
 
  def onTalk (self,npc,player):
@@ -163,8 +170,7 @@ class Quest (JQuest) :
              htmltext = "31746-1.htm"
          elif cond == 10 :
              htmltext = "31746-2.htm"
-             npc.reduceCurrentHp(10000,npc)
-             st.addSpawn(PURE_UNICORN,npc,False)
+             self.startQuestTimer("1",3000,npc,player)
      elif npcId == CORNERSTONE :
          if cond == 9 and st.getQuestItemsCount(ORB_OF_BINDING) == 0 :
              htmltext = "31748-1.htm"
@@ -182,10 +188,11 @@ class Quest (JQuest) :
              st.set("cond","11")
              st.playSound("ItemSound.quest_middle")
              htmltext = "31747-1.htm"
+             self.startQuestTimer("2",3000,npc,player)
          elif cond == 11 :
              htmltext = "31747-2.htm"
    else :
-     htmltext = "<html><body>This quest may only be undertaken by sub-class characters of level 50 or above.</body></html>"
+     htmltext = "<html><body>Quest may only be undertaken by a character of the proper sub-class.</body></html>"
    return htmltext
 
  def onKill(self,npc,player,isPet):
