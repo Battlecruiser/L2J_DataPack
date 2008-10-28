@@ -187,7 +187,7 @@ public class Core extends L2AttackableAIScript
             this.startQuestTimer("despawn_minions",20000,null,null);
             this.cancelQuestTimers("spawn_minion");
         }
-        else if (GrandBossManager.getInstance().getBossStatus(CORE) == ALIVE && Minions.contains(npc))
+        else if (GrandBossManager.getInstance().getBossStatus(CORE) == ALIVE && Minions != null && Minions.contains(npc))
         {
             Minions.remove(npc);
             startQuestTimer("spawn_minion",60000,npc,null);
