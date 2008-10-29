@@ -20,7 +20,7 @@ public class Ranku extends L2Transformation
 	public Ranku()
 	{
 		// id, duration (secs), colRadius, colHeight
-		super(309, 3600, 13.0, 28.0);
+		super(309, 1800, 13.0, 28.0);
 	}
 
 	public void onTransform()

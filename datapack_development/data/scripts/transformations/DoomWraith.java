@@ -20,7 +20,7 @@ public class DoomWraith extends L2Transformation
 	public DoomWraith()
 	{
 		// id, duration (secs), colRadius, colHeight
-		super(2, 3600, 8.0, 22.0);
+		super(2, 1800, 8.0, 22.0);
 	}
 
 	public void onTransform()

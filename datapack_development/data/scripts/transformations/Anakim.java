@@ -20,7 +20,7 @@ public class Anakim extends L2Transformation
 	public Anakim()
 	{
 		// id, duration (secs), colRadius, colHeight
-		super(306, 3600, 15.5, 29.0);
+		super(306, 1800, 15.5, 29.0);
 	}
 
 	public void onTransform()

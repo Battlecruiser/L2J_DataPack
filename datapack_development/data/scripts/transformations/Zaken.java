@@ -20,7 +20,7 @@ public class Zaken extends L2Transformation
 	public Zaken()
 	{
 		// id, duration (secs), colRadius, colHeight
-		super(305, 3600, 16.0, 32.0);
+		super(305, 1800, 16.0, 32.0);
 	}
 
 	public void onTransform()

@@ -20,7 +20,7 @@ public class UnicornStrong extends L2Transformation
 	public UnicornStrong()
 	{
 		// id, duration (secs), colRadius, colHeight
-		super(204, 3600, 8.0, 25.5);
+		super(204, 1800, 8.0, 25.5);
 	}
 
 	public void onTransform()

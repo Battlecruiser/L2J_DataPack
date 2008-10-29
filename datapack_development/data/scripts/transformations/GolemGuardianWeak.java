@@ -20,7 +20,7 @@ public class GolemGuardianWeak extends L2Transformation
 	public GolemGuardianWeak()
 	{
 		// id, duration (secs), colRadius, colHeight
-		super(212, 3600, 8.0, 23.5);
+		super(212, 1800, 8.0, 23.5);
 	}
 
 	public void onTransform()

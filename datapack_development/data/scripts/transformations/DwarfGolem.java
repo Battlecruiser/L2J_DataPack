@@ -20,7 +20,7 @@ public class DwarfGolem extends L2Transformation
 	public DwarfGolem()
 	{
 		// id, duration (secs), colRadius, colHeight
-		super(259, 3600, 35.0, 46.0);
+		super(259, 1800, 35.0, 46.0);
 	}
 
 	public void onTransform()
