@@ -334,6 +334,7 @@
   <set name="power" val="70"/> <!-- Guessing -->
   <set name="reuseDelay" val="6000"/> <!-- Guessing -->
   <set name="skillType" val="DOT"/>
+  <set name="killByDOT" val="false"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
     <effect count="15" name="DamOverTime" time="1" val="#dmg">

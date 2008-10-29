@@ -577,6 +577,7 @@
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="2000"/>
   <set name="skillType" val="POISON"/>
+  <set name="killByDOT" val="false"/>
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -599,6 +600,7 @@
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="2000"/>
   <set name="skillType" val="POISON"/>
+  <set name="killByDOT" val="false"/>
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -897,6 +899,7 @@
   <set name="power" val="70"/> <!-- Base Land Rate -->
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="POISON"/>
+  <set name="killByDOT" val="false"/>
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1501,6 +1504,7 @@
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="1000"/>
   <set name="skillType" val="BLEED"/>
+  <set name="killByDOT" val="false"/>
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>

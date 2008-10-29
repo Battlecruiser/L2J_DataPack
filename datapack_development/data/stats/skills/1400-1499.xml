@@ -1197,6 +1197,7 @@
   <set name="castRange" val="900"/>
   <set name="effectRange" val="-1"/>
   <set name="effectType" val="DOT"/>
+  <set name="killByDOT" val="false"/>
   <set name="effectPower" val="40"/> <!-- Guessing -->
   <for>
     <effect count="7" name="DamOverTime" time="3" val="100"/>
@@ -1260,6 +1261,7 @@
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <set name="effectType" val="DOT"/>
+  <set name="killByDOT" val="false"/>
   <set name="effectPower" val="40"/> <!-- Guessing -->
   <for>
     <effect count="5" name="DamOverTime" time="3" val="100"/>
@@ -1322,6 +1324,7 @@
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <set name="effectType" val="DOT"/>
+  <set name="killByDOT" val="false"/>
   <set name="effectPower" val="40"/> <!-- Guessing -->
   <for>
     <effect count="7" name="DamOverTime" time="3" val="100"/>

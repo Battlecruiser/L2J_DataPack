@@ -90,6 +90,7 @@
   <set name="hitTime" val="2500"/>
   <set name="isDebuff" val="true"/>
   <set name="skillType" val="BLEED"/>
+  <set name="killByDOT" val="false"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="750"/>
   <set name="effectRange" val="1250"/>
@@ -729,6 +730,7 @@
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="POISON"/>
+  <set name="killByDOT" val="false"/>
   <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="2000"/>
@@ -1027,6 +1029,7 @@
   <set name="isDebuff" val="true"/>
   <set name="hitTime" val="2000"/>
   <set name="skillType" val="POISON"/>
+  <set name="killByDOT" val="false"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="#cast"/>
