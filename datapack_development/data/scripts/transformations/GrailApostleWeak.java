@@ -20,7 +20,7 @@ public class GrailApostleWeak extends L2Transformation
 	public GrailApostleWeak()
 	{
 		// id, duration (secs), colRadius, colHeight
-		super(203, 3600, 8.0, 30.0);
+		super(203, 1800, 8.0, 30.0);
 	}
 
 	public void onTransform()

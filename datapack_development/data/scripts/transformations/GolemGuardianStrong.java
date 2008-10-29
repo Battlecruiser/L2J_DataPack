@@ -20,7 +20,7 @@ public class GolemGuardianStrong extends L2Transformation
 	public GolemGuardianStrong()
 	{
 		// id, duration (secs), colRadius, colHeight
-		super(210, 3600, 8.0, 23.5);
+		super(210, 1800, 8.0, 23.5);
 	}
 
 	public void onTransform()

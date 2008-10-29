@@ -20,7 +20,7 @@ public class OlMahum extends L2Transformation
 	public OlMahum()
 	{
 		// id, duration (secs), colRadius, colHeight
-		super(6, 3600, 32.0, 63.0);
+		super(6, 1800, 32.0, 63.0);
 	}
 
 	public void onTransform()

@@ -20,7 +20,7 @@ public class GolemGuardianNormal extends L2Transformation
 	public GolemGuardianNormal()
 	{
 		// id, duration (secs), colRadius, colHeight
-		super(211, 3600, 8.0, 23.5);
+		super(211, 1800, 8.0, 23.5);
 	}
 
 	public void onTransform()

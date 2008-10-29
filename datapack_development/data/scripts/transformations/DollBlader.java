@@ -20,7 +20,7 @@ public class DollBlader extends L2Transformation
 	public DollBlader()
 	{
 		// id, duration (secs), colRadius, colHeight
-		super(7, 3600, 6.0, 12.0);
+		super(7, 1800, 6.0, 12.0);
 	}
 
 	public void onTransform()

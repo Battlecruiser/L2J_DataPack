@@ -20,7 +20,7 @@ public class DragonBomberWeak extends L2Transformation
 	public DragonBomberWeak()
 	{
 		// id, duration (secs), colRadius, colHeight
-		super(218, 3600, 8.0, 22.0);
+		super(218, 1800, 8.0, 22.0);
 	}
 
 	public void onTransform()
