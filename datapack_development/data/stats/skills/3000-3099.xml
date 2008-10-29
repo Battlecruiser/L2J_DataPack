@@ -40,6 +40,7 @@
   <set name="power" val="50"/> <!-- Base Land Rate -->
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BLEED"/>
+  <set name="killByDOT" val="false"/>
   <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
@@ -276,6 +277,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="effectType" val="BLEED"/>
+  <set name="killByDOT" val="false"/>
   <set name="effectPower" val="100"/>
   <for>
     <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding"/>
@@ -291,6 +293,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="effectType" val="BLEED"/>
+  <set name="killByDOT" val="false"/>
   <set name="effectPower" val="100"/>
   <for>
     <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding"/>
@@ -338,6 +341,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="effectType" val="POISON"/>
+  <set name="killByDOT" val="false"/>
   <set name="effectPower" val="70"/>
   <for>
      <effect count="10" name="DamOverTime" time="3" val="#dmg" abnormal="poison"/>
@@ -598,6 +602,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="effectType" val="POISON"/>
+  <set name="killByDOT" val="false"/>
   <set name="effectPower" val="70"/>
   <for>
      <effect count="10" name="DamOverTime" time="3" val="#dmg" abnormal="poison"/>
@@ -613,6 +618,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="effectType" val="POISON"/>
+  <set name="killByDOT" val="false"/>
   <set name="effectPower" val="70"/>
   <for>
      <effect count="10" name="DamOverTime" time="3" val="#dmg" abnormal="poison"/>
@@ -802,6 +808,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="effectType" val="BLEED"/>
+  <set name="killByDOT" val="false"/>
   <set name="effectPower" val="100"/>
   <for>
     <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding"/>
@@ -857,6 +864,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="effectType" val="BLEED"/>
+  <set name="killByDOT" val="false"/>
   <set name="effectPower" val="100"/>
   <for>
     <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding"/>
@@ -1473,6 +1481,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="POISON"/>
+  <set name="killByDOT" val="false"/>
   <set name="operateType" val="OP_CHANCE"/>
   <set name="chanceType" val="ON_HIT"/>
   <set name="activationChance" val="#chance"/>
@@ -1492,6 +1501,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BLEED"/>
+  <set name="killByDOT" val="false"/>
   <set name="operateType" val="OP_CHANCE"/>
   <set name="chanceType" val="ON_HIT"/>
   <set name="activationChance" val="#chance"/>

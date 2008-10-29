@@ -72,6 +72,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="POISON"/>
+  <set name="killByDOT" val="false"/>
   <set name="operateType" val="OP_CHANCE"/>
   <set name="chanceType" val="ON_MAGIC_OFFENSIVE"/>
   <set name="activationChance" val="#chance"/>
@@ -91,6 +92,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BLEED"/>
+  <set name="killByDOT" val="false"/>
   <set name="operateType" val="OP_CHANCE"/>
   <set name="chanceType" val="ON_MAGIC_OFFENSIVE"/>
   <set name="activationChance" val="#chance"/>
@@ -323,6 +325,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="POISON"/>
+  <set name="killByDOT" val="false"/>
   <set name="operateType" val="OP_CHANCE"/>
   <set name="chanceType" val="ON_CRIT"/>
   <set name="activationChance" val="#chance"/>
@@ -342,6 +345,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BLEED"/>
+  <set name="killByDOT" val="false"/>
   <set name="operateType" val="OP_CHANCE"/>
   <set name="chanceType" val="ON_CRIT"/>
   <set name="activationChance" val="#chance"/>
@@ -1843,6 +1847,7 @@
   <set name="isDebuff" val="true"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="POISON"/>
+  <set name="killByDOT" val="false"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
@@ -1867,6 +1872,7 @@
   <set name="isDebuff" val="true"/>
   <set name="coolTime" val="720" />
   <set name="skillType" val="BLEED"/>
+  <set name="killByDOT" val="false"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>

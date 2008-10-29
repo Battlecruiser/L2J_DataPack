@@ -202,6 +202,7 @@
   <set name="mpConsume" val="8"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
+  <set name="killByDOT" val="false"/>
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -240,6 +241,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="effectType" val="BLEED"/>
+  <set name="killByDOT" val="false"/>
   <set name="effectPower" val="50"/> <!-- Base Land Rate -->
   <enchant1 name="effectPower" val="#ench1Chance"/>
   <enchant1 name="power" val="1218"/>

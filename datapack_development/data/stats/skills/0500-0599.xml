@@ -250,6 +250,7 @@
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <set name="effectType" val="BLEED"/>
+  <set name="killByDOT" val="false"/>
   <set name="effectPower" val="40"/> <!-- Base Land Rate --> <!-- Guessing -->
   <set name="soulMaxConsumeCount" val="5"/>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1410,6 +1411,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="effectType" val="BLEED"/>
+  <set name="killByDOT" val="false"/>
   <set name="effectPower" val="40"/> <!-- Base Land Rate --> <!-- Guessing -->
   <for>
     <effect count="#effect" name="DamOverTime" time="3" val="#bleeddmg" abnormal="bleeding"/>
