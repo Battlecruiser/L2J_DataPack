@@ -4,7 +4,7 @@
 DROP TABLE IF EXISTS `armor`;
 CREATE TABLE IF NOT EXISTS `armor` (
   `item_id` int(11) NOT NULL default '0',
-  `name` varchar(70) default NULL,
+  `name` varchar(80) default NULL,
   `bodypart` varchar(15) NOT NULL default '',
   `crystallizable` varchar(5) NOT NULL default '',
   `armor_type` varchar(5) NOT NULL default '',
