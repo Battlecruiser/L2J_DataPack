@@ -2966,7 +2966,7 @@ INSERT INTO `weapon` VALUES
 (13219,'Limited time - Cabrio\'s Hand - 60 minutes limited period','lrhand','true',1510,1,1,'fine_steel','a',202,20,'blunt',4,4,0,0,0,379,0,161,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (13220,'Limited time - Daimon Crystal - 60 minutes limited period','lrhand','true',880,1,1,'fine_steel','a',245,20,'blunt',4,4,0,0,0,325,0,161,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (13221,'Limited time - Tallum Blade*Damascus - 60 minutes limited period','lrhand','true',1890,1,1,'fine_steel','a',305,10,'dual',8,0,0,0,0,325,0,121,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
-(13222,'Limited time - Éclair Bijou - 60 minutes limited period','rhand','true',1300,1,1,'fine_steel','a',228,40,'rapier',10,-1,0,0,0,406,0,121,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
+(13222,'Limited time - Eclair Bijou - 60 minutes limited period','rhand','true',1300,1,1,'fine_steel','a',228,40,'rapier',10,-1,0,0,0,406,0,121,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (13223,'Limited time - Durendal - 60 minutes limited period','lrhand','true',1820,1,1,'fine_steel','a',272,15,'ancient',8,2,0,0,0,350,0,121,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (13224,'Limited time - Screaming Vengeance - 60 minutes limited period','lrhand','true',1640,1,1,'fine_steel','a',318,10,'crossbow',10,-1,0,0,0,303,0,121,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (13248,'O-type Stick - 7-day Limited Period','rhand','false',0,0,0,'fine_steel','none',1,10,'sword',8,0,0,0,0,379,0,1,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
