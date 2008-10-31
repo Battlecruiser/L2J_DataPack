@@ -2919,7 +2919,7 @@ INSERT INTO `weapon` VALUES
 (13172,'Limited time - Light Crossbow - 60 minutes limited period','lrhand','true',1810,10,3,'fine_steel','d',191,5,'bow',12,-3,0,0,0,293,6,54,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (13173,'Limited time - Glaive - 60 minutes limited period','lrhand','true',2050,3,3,'fine_steel','d',92,10,'pole',8,-3,0,0,0,325,0,54,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (13174,'Limited time - Elven Long Sword - 60 minutes limited period','rhand','true',1440,3,3,'fine_steel','d',92,10,'sword',8,0,0,0,0,379,0,54,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
-(13175,'Limited time - Grand Épée - 60 minutes limited period','rhand','true',1440,3,3,'fine_steel','d',83,40,'rapier',10,-1,0,0,0,406,0,54,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
+(13175,'Limited time - Grand Epee - 60 minutes limited period','rhand','true',1440,3,3,'fine_steel','d',83,40,'rapier',10,-1,0,0,0,406,0,54,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (13176,'Limited time - General\'s Katzbalger - 60 minutes limited period','lrhand','true',2010,3,3,'fine_steel','d',100,15,'ancient',8,2,0,0,0,350,0,54,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (13177,'Limited time - Cranequin - 60 minutes limited period','lrhand','true',1810,6,3,'fine_steel','d',117,10,'crossbow',10,-1,0,0,0,303,0,54,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (13178,'Limited time - Samurai Longsword - 60 minutes limited period','rhand','true',1380,3,3,'fine_steel','c',156,10,'sword',8,0,0,0,0,379,0,83,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
