@@ -23,21 +23,9 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
-  <table name="#ench1time">
-  1240 1280 1320 1360 1400 1440 1480 1520 1560 1600
-  1640 1680 1720 1760 1800 1840 1880 1920 1960 2000
-  2040 2080 2120 2160 2200 2240 2280 2320 2360 2400
-  </table>
-  <table name="#ench2MpConsume">
-  160 157 154 152 149 146 143 141 138 135
-  133 130 127 124 122 119 116 114 111 108
-  105 103 100  97  95  92  89  86  84  81
-  </table>
-  <table name="#ench2MpConsume_Init">
-  40 39 38 38 37 36 36 35 34 34
-  33 32 32 31 30 30 29 28 28 27
-  26 25 25 24 23 23 22 21 21 20
-  </table>
+  <table name="#ench1time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
+  <table name="#ench2MpConsume"> 160 157 154 152 149 146 143 141 138 135 133 130 127 124 122 119 116 114 111 108 105 103 100 97 95 92 89 86 84 81 </table>
+  <table name="#ench2MpConsume_Init"> 40 39 38 38 37 36 36 35 34 34 33 32 32 31 30 30 29 28 28 27 26 25 25 24 23 23 22 21 21 20 </table>
   <table name="#mpConsume_Init"> 21 31 41 </table>
   <table name="#mpConsume"> 84 123 163 </table>
   <table name="#Tab-mAtkSpd"> 1.15 1.23 1.3 </table>
@@ -58,12 +46,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-mAtkSpd" stackType="mAtkSpeedUp">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-mAtkSpd" stackType="casting_time_down">
       <mul order="0x30" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
     </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="1.3" stackType="mAtkSpeedUp">
+    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="1.3" stackType="casting_time_down">
       <mul order="0x30" stat="mAtkSpd" val="1.3"/>
     </effect>
   </enchant1for>
@@ -121,21 +109,9 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
-  <table name="#ench1time">
-  1240 1280 1320 1360 1400 1440 1480 1520 1560 1600
-  1640 1680 1720 1760 1800 1840 1880 1920 1960 2000
-  2040 2080 2120 2160 2200 2240 2280 2320 2360 2400
-  </table>
-  <table name="#ench2MpConsume">
-  160 157 154 152 149 146 143 141 138 135
-  133 130 127 124 122 119 116 114 111 108
-  105 103 100  97  95  92  89  86  84  81
-  </table>
-  <table name="#ench2MpConsume_Init">
-  40 39 38 38 37 36 36 35 34 34
-  33 32 32 31 30 30 29 28 28 27
-  26 25 25 24 23 23 22 21 21 20
-  </table>
+  <table name="#ench1time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
+  <table name="#ench2MpConsume"> 160 157 154 152 149 146 143 141 138 135 133 130 127 124 122 119 116 114 111 108 105 103 100  97 95 92 89 86 84 81 </table>
+  <table name="#ench2MpConsume_Init"> 40 39 38 38 37 36 36 35 34 34 33 32 32 31 30 30 29 28 28 27 26 25 25 24 23 23 22 21 21 20 </table>
   <table name="#mpConsume_Init"> 28 35 41 </table>
   <table name="#mpConsume"> 111 137 163 </table>
   <table name="#Tab-mAtkSpd"> 1.15 1.23 1.3 </table>
@@ -156,12 +132,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-mAtkSpd" stackType="mAtkSpeedUp">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-mAtkSpd" stackType="casting_time_down">
       <mul order="0x30" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
     </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="1.3" stackType="mAtkSpeedUp">
+    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="1.3" stackType="casting_time_down">
       <mul order="0x30" stat="mAtkSpd" val="1.3"/>
     </effect>
   </enchant1for>
@@ -1204,12 +1180,12 @@
   <set name="effectRange" val="900"/>
   <set name="aggroPoints" val="#aggro"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-maxMp" stackType="MPregen">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-maxMp" stackType="max_mp_up">
       <mul order="0x30" stat="maxMp" val="#Tab-maxMp"/>
     </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="1.35" stackType="MPregen">
+    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="1.35" stackType="max_mp_up">
       <mul order="0x30" stat="maxMp" val="1.35"/>
     </effect>
   </enchant1for>
@@ -1717,21 +1693,9 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
-  <table name="#ench1time">
-  1240 1280 1320 1360 1400 1440 1480 1520 1560 1600
-  1640 1680 1720 1760 1800 1840 1880 1920 1960 2000
-  2040 2080 2120 2160 2200 2240 2280 2320 2360 2400
-  </table>
-  <table name="#ench2MpConsume">
-  37 36 36 35 34 34 33 32 32 31
-  31 30 29 29 28 27 27 26 25 25
-  24 24 23 22 22 21 20 20 19 19
-  </table>
-  <table name="#ench2MpConsume_Init">
-   9  9  9  9  9  9  8  8  8  8
-   8  8  7  7  7  7  7  7  6  6
-   6  6  6  6  5  5  5  5  5  5
-  </table>
+  <table name="#ench1time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
+  <table name="#ench2MpConsume"> 37 36 36 35 34 34 33 32 32 31 31 30 29 29 28 27 27 26 25 25 24 24 23 22 22 21 20 20 19 19 </table>
+  <table name="#ench2MpConsume_Init"> 9 9 9 9 9 9 8 8 8 8 8 8 7 7 7 7 7 7 6 6 6 6 6 6 5 5 5 5 5 5 </table>
   <table name="#mpConsume_Init"> 5 8 10 </table>
   <table name="#mpConsume"> 18 31 38 </table>
   <table name="#Tab-rCrit"> 0.2 0.25 0.3 </table>
@@ -1751,12 +1715,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-rCrit" stackType="rCrit">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-rCrit" stackType="critical_prob_up">
       <basemul order="0x30" stat="rCrit" val="#Tab-rCrit"/>
     </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="1.3" stackType="rCrit">
+    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="1.3" stackType="critical_prob_up">
       <basemul order="0x30" stat="rCrit" val="0.3"/>
     </effect>
   </enchant1for>
@@ -1860,21 +1824,9 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
-  <table name="#ench1time">
-  1240 1280 1320 1360 1400 1440 1480 1520 1560 1600
-  1640 1680 1720 1760 1800 1840 1880 1920 1960 2000
-  2040 2080 2120 2160 2200 2240 2280 2320 2360 2400
-  </table>
-  <table name="#ench2MpConsume">
-  34 33 33 32 32 31 30 30 29 29
-  28 28 27 26 26 25 25 24 23 23
-  22 22 21 21 20 19 19 18 18 17
-  </table>
-  <table name="#ench2MpConsume_Init">
-  8 8 8 8 8 8 7 7 7 7
-  7 7 7 6 6 6 6 6 6 6
-  5 5 5 5 5 5 4 4 4 4
-  </table>
+  <table name="#ench1time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
+  <table name="#ench2MpConsume"> 34 33 33 32 32 31 30 30 29 29 28 28 27 26 26 25 25 24 23 23 22 22 21 21 20 19 19 18 18 17 </table>
+  <table name="#ench2MpConsume_Init"> 8 8 8 8 8 8 7 7 7 7 7 7 7 6 6 6 6 6 6 6 5 5 5 5 5 5 4 4 4 4 </table>
   <table name="#mpConsume_Init"> 4 6 9 </table>
   <table name="#mpConsume"> 16 24 35 </table>
   <table name="#Tab-mAtkSpd"> 1.15 1.23 1.3 </table>
@@ -1894,12 +1846,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-mAtkSpd" stackType="mAtkSpeedUp">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-mAtkSpd" stackType="casting_time_down">
       <mul order="0x30" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
     </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="1.3" stackType="mAtkSpeedUp">
+    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="1.3" stackType="casting_time_down">
       <mul order="0x30" stat="mAtkSpd" val="1.3"/>
     </effect>
   </enchant1for>

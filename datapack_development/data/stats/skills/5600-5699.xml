@@ -308,7 +308,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.35" stackType="MPregen">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.35" stackType="max_mp_up">
       <mul order="0x30" stat="maxMp" val="1.35"/>
     </effect>
   </for>
@@ -323,7 +323,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="3600" val="0" stackOrder="4" stackType="mAtkSpeedUp">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="4" stackType="casting_time_down">
       <mul order="0x30" stat="mAtkSpd" val="1.30"/>
     </effect>
   </for>
@@ -412,7 +412,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#maxMp" stackType="MPregen">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#maxMp" stackType="max_mp_up">
       <mul order="0x30" stat="maxMp" val="#maxMp"/>
     </effect>
   </for>
@@ -469,7 +469,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.30" stackType="mAtkSpeedUp">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.30" stackType="casting_time_down">
       <mul order="0x30" stat="mAtkSpd" val="1.30"/>
     </effect>
   </for>
@@ -507,7 +507,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
-    <effect name="Buff" time="1200" count="1" val="0" stackOrder="#mCrit" stackType="mCritRate">
+    <effect name="Buff" time="1200" count="1" val="0" stackOrder="#mCrit" stackType="magic_critical_up">
       <mul order="0x30" stat="mCritRate" val="#mCrit"/>
     </effect>
   </for>
@@ -598,7 +598,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#cAtk" stackType="cAtk">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#cAtk" stackType="critical_dmg_up">
       <mul order="0x30" stat="cAtk" val="#cAtk"/>
     </effect>
   </for>
@@ -620,7 +620,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rCrit" stackType="rCrit">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rCrit" stackType="critical_prob_up">
       <basemul order="0x30" stat="rCrit" val="#rCrit"/>
     </effect>
   </for>

@@ -223,7 +223,7 @@
   <set name="activationChance" val="#chance"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0">
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="#Tab-maxMp" stackType="gainMp">
       <mul order="0x30" stat="gainMp" val="#Tab-maxMp"/>
     </effect>
   </for>

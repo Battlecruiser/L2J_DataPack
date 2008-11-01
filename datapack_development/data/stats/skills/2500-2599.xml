@@ -125,7 +125,7 @@
   <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <for>
-   <effect name="Buff" time="300" val="0" stackOrder="1.5" stackType="cAtk">
+   <effect name="Buff" time="300" val="0" stackOrder="1.5" stackType="critical_dmg_up">
     <mul order="0x30" stat="cAtk" val="1.5"/>
    </effect>
   </for>

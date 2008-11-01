@@ -87,14 +87,14 @@
   <set name="aggroPoints" val="#aggro"/>
   <enchant1 name="hpConsume" val="#ench1hpConsume"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#mp" stackType="MPregen">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#mp" stackType="max_mp_up">
        <mul stat="maxMp" order="0x30" val="#mp">
          <using kind="Bow"/>
        </mul>
     </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#ench1mp" stackType="MPregen">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#ench1mp" stackType="max_mp_up">
        <mul stat="maxMp" order="0x30" val="#ench1mp">
          <using kind="Bow"/>
        </mul>
