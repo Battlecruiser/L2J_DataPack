@@ -674,7 +674,6 @@
   </for>
 </skill>
 <skill id="430" levels="1" name="Master of Combat">
-  <set name="weaponsAllowed" val="20300"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -691,7 +690,6 @@
   </for>
 </skill>
 <skill id="431" levels="1" name="Archery">
-  <set name="weaponsAllowed" val="32"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -708,7 +706,6 @@
   </for>
 </skill>
 <skill id="432" levels="1" name="Assassination">
-  <set name="weaponsAllowed" val="16"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1104,13 +1101,6 @@
   </for>
 </skill>
 <skill id="452" levels="5" name="Shock Stomp">
-<!--
-      Lvl 1 - Temporarily shocks nearby enemies, canceling their targets. Usable when equipped with a spear.
-      Lvl 2 - Temporarily shocks nearby enemies, canceling their targets. Usable when equipped with a spear.
-      Lvl 3 - Temporarily shocks nearby enemies, canceling their targets. Usable when equipped with a spear.
-      Lvl 4 - Temporarily shocks nearby enemies, canceling their targets. Usable when equipped with a spear.
-      Lvl 5 - Temporarily shocks nearby enemies, canceling their targets. Usable when equipped with a spear.
--->
   <table name="#magicLvl"> 55 60 64 68 72 </table>
   <set name="weaponsAllowed" val="64"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -1501,7 +1491,6 @@
 </skill>
 <skill id="472" levels="45" name="Ancient Sword Mastery">
   <table name="#pAtk"> 4.5 7.3 8.9 10.7 12.8 15.1 17.7 20.5 23.7 25.4 27.1 29.0 30.9 32.9 35.0 37.1 39.4 41.7 44.1 46.6 49.2 51.9 54.6 57.5 60.4 63.3 66.4 69.5 72.7 76.0 79.3 82.7 86.1 89.6 93.1 96.6 100.2 103.8 107.5 111.1 114.8 118.4 122.1 125.7 129.3 </table> <!-- custom values from sword/blunt mastery -->
-  <set name="weaponsAllowed" val="32768"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1516,7 +1505,6 @@
 </skill>
 <skill id="473" levels="45" name="Crossbow Mastery">
   <table name="#pAtk"> 10.3 32.8 45.2 48.9 61.1 65.6 80.9 86.5 105.1 111.9 178.8 189.9 201.4 213.5 226.0 239.1 252.7 266.7 281.3 296.4 311.9 328.0 344.5 361.6 379.1 397.0 415.4 434.3 453.5 473.2 493.1 513.5 534.2 555.1 576.3 597.8 619.4 641.2 663.1 685.0 707.1 729.1 751.0 772.9 794.6 </table> <!-- custom values from bow mastery -->
-  <set name="weaponsAllowed" val="65536"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1531,7 +1519,6 @@
 </skill>
 <skill id="474" levels="45" name="Rapier Mastery">
   <table name="#pAtk"> 3.6 6 7.4 9 10.8 12.8 15.1 17.6 20.3 21.8 23.4 25 26.6 28.4 30.2 32.1 34.1 36.1 38.2 40.4 42.7 45 47.4 49.9 52.4 55 57.7 60.4 63.2 66.1 69.0 71.9 74.9 78.0 81.1 84.2 87.3 90.5 93.7 96.8 100.0 103.2 106.4 109.6 112.8 </table> <!-- custom values from dagger mastery -->
-  <set name="weaponsAllowed" val="131072"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1580,7 +1567,7 @@
   </for>
 </skill>
 <skill id="477" levels="37" name="Dark Smash" enchantLevels1="30" enchantLevels2="30" >
-<!-- Done by theREALizzy - Need retail accuracy check. -->
+  <!-- Done by theREALizzy - Need retail accuracy check. -->
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <table name="#ench1Power"> 3875 3902 3928 3955 3981 4007 4034 4060 4086 4113 4139 4166 4192 4218 4245 4271 4298 4324 4350 4377 4403 4429 4456 4482 4509 4535 4561 4588 4614 4640 </table>
   <table name="#ench2MpConsume"> 60 59 58 58 57 56 55 55 54 53 52 52 51 50 49 49 48 47 46 46 45 44 43 43 42 41 41 40 39 38 </table>
