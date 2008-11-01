@@ -487,8 +487,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <sub order="0x40" stat="STR" val="2"/> <!-- Str -2 -->
-    <add order="0x40" stat="CON" val="2"/> <!-- Con +2 -->
+    <sub order="0x10" stat="STR" val="2"/> <!-- Str -2 -->
+    <add order="0x10" stat="CON" val="2"/> <!-- Con +2 -->
     <mul order="0x30" stat="pDef" val="1.054"/> <!-- Physical Defense Power +5.4% -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- Maximum HP +492 effect -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Darkness resistance is increased +8 -->
@@ -505,8 +505,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <sub order="0x40" stat="CON" val="2"/> <!-- Con -2 -->
-    <add order="0x40" stat="STR" val="2"/> <!-- Str +2 -->
+    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
+    <add order="0x10" stat="STR" val="2"/> <!-- Str +2 -->
     <mul order="0x30" stat="pAtk" val="1.054"/> <!-- P. Atk +5.4% -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- MaxHP +492 -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Increase Darkness Resistance +8 -->
@@ -522,9 +522,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <sub order="0x40" stat="CON" val="2"/> <!-- Con -2 -->
-    <add order="0x40" stat="STR" val="1"/> <!-- Str +1 -->
-    <add order="0x40" stat="DEX" val="1"/> <!-- Dex +1 -->
+    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
+    <add order="0x10" stat="STR" val="1"/> <!-- Str +1 -->
+    <add order="0x10" stat="DEX" val="1"/> <!-- Dex +1 -->
     <mul order="0x30" stat="pAtk" val="1.054"/> <!-- P. Atk. +5.4% -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- Maximum HP +492 effect -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Darkness resistance is increased by +8 -->
@@ -540,8 +540,8 @@
   <set name="castRange" val="-1"/> 
   <set name="effectRange" val="-1"/> 
   <for>
-    <sub order="0x40" stat="CON" val="2"/> <!-- Con -2 -->
-    <add order="0x40" stat="STR" val="2"/> <!-- Str +2 -->
+    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
+    <add order="0x10" stat="STR" val="2"/> <!-- Str +2 -->
     <mul order="0x30" stat="pDef" val="1.054"/> <!-- Physical Defense Power +5.4% -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- Maximum HP +492 effect -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Darkness resistance is increased by +8 -->
@@ -557,8 +557,8 @@
   <set name="castRange" val="-1"/> 
   <set name="effectRange" val="-1"/> 
   <for>
-    <sub order="0x40" stat="CON" val="2"/> <!-- Con -2 -->
-    <add order="0x40" stat="DEX" val="2"/> <!-- Dex +2 -->
+    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
+    <add order="0x10" stat="DEX" val="2"/> <!-- Dex +2 -->
     <add order="0x40" stat="rEvas" val="4.3"/> <!-- Evasion +4.3 -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- Maximum HP +492 effect -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Darkness resistance is increased by +8 -->
@@ -575,8 +575,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <sub order="0x40" stat="CON" val="2"/> <!-- Con -2 -->
-    <add order="0x40" stat="DEX" val="2"/> <!-- Dex +2 -->
+    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
+    <add order="0x10" stat="DEX" val="2"/> <!-- Dex +2 -->
     <add order="0x40" stat="accCombat" val="4.3"/> <!-- Accuracy +4.3 -->
     <add order="0x40" stat="maxMp" val="321"/> <!-- Maximum MP +321 effect -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Darkness resistance is increased by +8 -->
@@ -593,8 +593,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <sub order="0x40" stat="INT" val="2"/> <!-- Int -2 -->
-    <add order="0x40" stat="MEN" val="2"/> <!-- Men +2 -->
+    <sub order="0x10" stat="INT" val="2"/> <!-- Int -2 -->
+    <add order="0x10" stat="MEN" val="2"/> <!-- Men +2 -->
     <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
     <add order="0x40" stat="maxMp" val="321"/> <!-- Maximum MP +321 -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Increase Darkness Resistance +8 -->
@@ -611,8 +611,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <sub order="0x40" stat="INT" val="2"/> <!-- Int -2 -->
-    <add order="0x40" stat="MEN" val="2"/> <!-- Men +2 -->
+    <sub order="0x10" stat="INT" val="2"/> <!-- Int -2 -->
+    <add order="0x10" stat="MEN" val="2"/> <!-- Men +2 -->
     <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
     <add order="0x40" stat="maxMp" val="321"/> <!-- Maximum MP +321 -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Increase Darkness Resistance +8 -->
@@ -629,8 +629,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <sub order="0x40" stat="INT" val="2"/> <!-- Int -2 -->
-    <add order="0x40" stat="MEN" val="2"/> <!-- Men +2 -->
+    <sub order="0x10" stat="INT" val="2"/> <!-- Int -2 -->
+    <add order="0x10" stat="MEN" val="2"/> <!-- Men +2 -->
     <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
     <add order="0x40" stat="maxMp" val="321"/> <!-- Maximum MP +321 -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Increase Darkness Resistance +8 -->
@@ -647,9 +647,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <add order="0x40" stat="INT" val="2"/> <!-- Int +2 -->
-    <add order="0x40" stat="WIT" val="1"/> <!-- Wit +1 -->
-    <sub order="0x40" stat="MEN" val="2"/> <!-- Men -2 -->
+    <add order="0x10" stat="INT" val="2"/> <!-- Int +2 -->
+    <add order="0x10" stat="WIT" val="1"/> <!-- Wit +1 -->
+    <sub order="0x10" stat="MEN" val="2"/> <!-- Men -2 -->
     <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
     <add order="0x40" stat="maxMp" val="321"/> <!-- Maximum MP +321 -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Increase Darkness Resistance +8 -->
