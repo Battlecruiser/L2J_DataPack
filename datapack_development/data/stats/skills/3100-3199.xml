@@ -514,7 +514,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-maxMp" stackType="MPregen">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-maxMp" stackType="max_mp_up">
       <mul order="0x30" stat="maxMp" val="#Tab-maxMp"/>
     </effect>
   </for>
@@ -537,7 +537,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-maxMp" stackType="MPregen">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-maxMp" stackType="gainMp">
       <mul order="0x30" stat="gainMp" val="#Tab-maxMp"/>
     </effect>
   </for>
@@ -811,7 +811,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="rCrit">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="critical_prob_up">
       <mul order="0x30" stat="rCrit" val="#rate"/>
     </effect>
   </for>
@@ -834,7 +834,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="mCritRate">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="magic_critical_up">
       <mul order="0x30" stat="mCritRate" val="#rate"/>
     </effect>
   </for>

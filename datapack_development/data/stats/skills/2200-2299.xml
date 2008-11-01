@@ -767,7 +767,7 @@
   <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <for>
-    <effect count="1" name="Buff" time="300" val="0" stackOrder="1.29" stackType="mAtkSpeedUp">
+    <effect count="1" name="Buff" time="300" val="0" stackOrder="1.29" stackType="casting_time_down">
       <mul order="0x30" stat="mAtkSpd" val="1.30"/>
     </effect>
   </for>
@@ -782,7 +782,7 @@
   <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <for>
-    <effect count="1" name="Buff" time="300" val="0" stackOrder="1.29" stackType="rCrit">
+    <effect count="1" name="Buff" time="300" val="0" stackOrder="1.29" stackType="critical_prob_up">
       <basemul order="0x30" stat="rCrit" val="0.30"/>
     </effect>
   </for>

@@ -206,7 +206,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.35" stackType="MPregen">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.35" stackType="max_mp_up">
       <mul order="0x30" stat="maxMp" val="1.35"/>
     </effect>
   </for>
@@ -220,7 +220,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="3600" val="0" stackOrder="4" stackType="mAtkSpeedUp">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="4" stackType="casting_time_down">
       <mul order="0x30" stat="mAtkSpd" val="1.30"/>
     </effect>
   </for>
