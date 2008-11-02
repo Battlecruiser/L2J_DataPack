@@ -1788,9 +1788,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
-  <cond>
-    <using kind="Crossbow"/>
-  </cond>
+  <set name="weaponsAllowed" val="65536"/>
   <for>
   </for>
 </skill>
