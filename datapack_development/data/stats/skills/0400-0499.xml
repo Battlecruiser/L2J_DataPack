@@ -1741,8 +1741,7 @@
   </for>
 </skill>
 <skill id="486" levels="2" name="Increase Range">
-<!-- Requires retail accuracy check -->
-  <table name="#range"> 75 125 </table>
+  <table name="#range"> 100 200 </table>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
