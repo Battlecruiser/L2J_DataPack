@@ -1233,7 +1233,6 @@
   <table name="#mpConsume"> 18 25 35 47 59 72 83 88 91 93 95 96 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="power" val="#power"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="condition" val="16"/>
@@ -1243,8 +1242,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
-  <for>
-  </for>
 </skill>
 <skill id="4171" levels="12" name="BOSS Spinning Slash">
   <table name="#power"> 61 163 447 1169 2942 5686 8732 10131 11622 13182 14784 16398 </table>
@@ -1446,7 +1443,6 @@
   <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87</table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="power" val="#power"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="condition" val="16"/>
@@ -1456,8 +1452,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
-  <for>
-  </for>
 </skill>
 <skill id="4182" levels="12" name="Poison">
   <table name="#dmg"> 36 54 72 93 114 132 144 144 147 147 144 144 </table>

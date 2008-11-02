@@ -1518,7 +1518,6 @@
   <!-- Done by dc -->
   <set name="magicLvl" val="40"/>
   <set name="mpConsume" val="18"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="1500"/>
@@ -1537,7 +1536,6 @@
   <!-- Done by dc -->
   <set name="magicLvl" val="40"/>
   <set name="mpConsume" val="18"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="1500"/>
@@ -1554,11 +1552,10 @@
 <skill id="4091" levels="1" name="NPC Ogre Spirit Totem">
   <set name="magicLvl" val="40"/>
   <set name="mpConsume" val="18"/>
-  <set name="power" val="14"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="1500"/>
-  <set name="skillType" val="HEAL_PERCENT"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1576,7 +1573,6 @@
   <!-- Done by dc -->
   <set name="magicLvl" val="40"/>
   <set name="mpConsume" val="18"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="1500"/>
