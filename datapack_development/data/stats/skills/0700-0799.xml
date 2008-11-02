@@ -758,10 +758,9 @@
   </for>
 </skill>
 <skill id="765" levels="1" name="Dance of the Blade Storm">
-  <set name="weaponsAllowed" val="512"/>
+  <set name="weaponsAllowed" val="512"/> <!-- Dual Sword -->
   <set name="mpConsume" val="60"/>
   <set name="nextDanceCost" val="30"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="300000"/>

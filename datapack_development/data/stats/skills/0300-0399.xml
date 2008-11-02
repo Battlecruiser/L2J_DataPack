@@ -73,7 +73,6 @@
   <table name="#ench1hpConsume"> 358 352 346 340 334 328 322 316 310 304 298 292 286 280 274 267 261 255 249 243 237 231 225 219 213 207 201 195 189 183 </table>
   <table name="#ench1mp"> 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 </table>
   <table name="#aggro"> 438 549 597 635 </table>
-  <set name="weaponsAllowed" val="32"/>
   <set name="hpConsume" val="#hpConsume"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
@@ -88,16 +87,12 @@
   <enchant1 name="hpConsume" val="#ench1hpConsume"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#mp" stackType="max_mp_up">
-       <mul stat="maxMp" order="0x30" val="#mp">
-         <using kind="Bow"/>
-       </mul>
+      <mul stat="maxMp" order="0x30" val="#mp"/>
     </effect>
   </for>
   <enchant1for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#ench1mp" stackType="max_mp_up">
-       <mul stat="maxMp" order="0x30" val="#ench1mp">
-         <using kind="Bow"/>
-       </mul>
+       <mul stat="maxMp" order="0x30" val="#ench1mp"/>
     </effect>
   </enchant1for>
 </skill>
@@ -204,10 +199,9 @@
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
   <table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
-  <set name="weaponsAllowed" val="512"/>
+  <set name="weaponsAllowed" val="512"/> <!-- Dual Sword -->
   <set name="mpConsume" val="60"/>
   <set name="nextDanceCost" val="30"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="10000"/>
@@ -271,10 +265,9 @@
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
   <table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
-  <set name="weaponsAllowed" val="512"/>
+  <set name="weaponsAllowed" val="512"/> <!-- Dual Sword -->
   <set name="mpConsume" val="60"/>
   <set name="nextDanceCost" val="30"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="10000"/>
@@ -305,10 +298,9 @@
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
   <table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
-  <set name="weaponsAllowed" val="512"/>
+  <set name="weaponsAllowed" val="512"/> <!-- Dual Sword -->
   <set name="mpConsume" val="60"/>
   <set name="nextDanceCost" val="30"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="10000"/>
@@ -337,10 +329,9 @@
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
   <table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
-  <set name="weaponsAllowed" val="512"/>
+  <set name="weaponsAllowed" val="512"/> <!-- Dual Sword -->
   <set name="mpConsume" val="60"/>
   <set name="nextDanceCost" val="30"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="10000"/>
@@ -463,7 +454,7 @@
   <table name="#power"> 2908 3030 3154 3280 3408 3537 3668 3800 3933 4067 4201 4336 4470 4604 4738 4870 </table>
   <table name="#ench1Power"> 4915 4959 5003 5047 5090 5134 5178 5222 5266 5310 5354 5398 5442 5486 5529 5573 5617 5661 5705 5749 5793 5837 5881 5925 5968 6012 6056 6100 6144 6188 </table>
   <table name="#ench2mpConsume"> 149 147 146 144 142 141 139 138 136 135 133 132 130 129 127 126 124 123 121 120 118 117 115 113 112 110 109 107 106 104 </table>
-  <set name="weaponsAllowed" val="32"/>
+  <set name="weaponsAllowed" val="32"/> <!-- Bow -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
@@ -478,8 +469,6 @@
   <set name="effectRange" val="1400"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2mpConsume"/>
-  <for>
-  </for>
 </skill>
 <skill id="315" levels="16" name="Crush of Doom" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -490,7 +479,7 @@
   <table name="#hpConsume"> 208 212 212 217 221 225 229 233 237 240 244 248 251 255 258 261 </table>
   <table name="#ench2HpConsume"> 259 256 252 249 245 242 239 235 232 228 225 222 218 215 211 208 205 201 198 195 191 188 184 181 178 174 171 167 164 161 </table>
   <table name="#ench1Power"> 7710 7779 7848 7917 7986 8055 8123 8192 8261 8330 8399 8468 8537 8605 8674 8743 8812 8881 8950 9019 9088 9156 9225 9294 9363 9432 9501 9570 9639 9707 </table>
-  <set name="weaponsAllowed" val="18432"/>
+  <set name="weaponsAllowed" val="18432"/> <!-- Big Sword/Big Blunt -->
   <set name="hpConsume" val="#hpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
@@ -507,8 +496,6 @@
   <set name="effectRange" val="400"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="hpConsume" val="#ench2HpConsume"/>
-  <for>
-  </for>
 </skill>
 <skill id="316" levels="1" name="Aegis">
   <!-- done by roxaz -->
@@ -526,11 +513,11 @@
 </skill>
 <skill id="317" levels="5" name="Focus Attack">
   <!-- has estimations for values based on L2P - needs to be finished -->
-  <set name="weaponsAllowed" val="64"/>
   <table name="#mpConsume"> 18 22 27 31 34 </table>
   <table name="#crit"> 1.1 1.1 1.1 1.1 1.1 </table>
   <table name="#Accuracy"> 3 3 4 5 5 </table>
   <table name="#atkCountMax"> 1 1 1 1 1 </table>
+  <set name="weaponsAllowed" val="64"/> <!-- Pole -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="reuseDelay" val="12000"/>
   <set name="target" val="TARGET_SELF"/>
@@ -553,7 +540,6 @@
     </effect>
   </for>
 </skill>
-
 <skill id="318" levels="1" name="Aegis Stance" enchantLevels1="30" >
   <table name="#ench1sDef"> 0.61 0.62 0.62 0.63 0.64 0.64 0.65 0.66 0.66 0.67 0.68 0.68 0.69 0.70 0.70 0.71 0.72 0.72 0.73 0.74 0.74 0.75 0.76 0.76 0.77 0.78 0.78 0.79 0.80 0.80 </table>
   <set name="mpInitialConsume" val="9"/>
@@ -609,13 +595,13 @@
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <!-- Skill does not work as intended.. probably doesn't do much at all -->
-  <!-- Missing CP decrease by percent & angle based affect -->
+  <!-- Missing CP decrease by percent -->
   <table name="#ench2MpConsume"> 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 59 58 57 56 55 54 53 52 51 49 48 47 46 45 44 </table>
   <table name="#mpConsume"> 66 67 68 69 70 71 72 73 74 75 </table>
   <table name="#magicLvl"> 65 66 67 68 69 70 71 72 73 74 </table>
   <table name="#CP"> 0.93 0.90 0.88 0.85 0.83 0.80 0.78 0.75 0.73 0.7 </table>
   <table name="#ench1Power"> 0.70 0.69 0.68 0.67 0.66 0.65 0.64 0.63 0.62 0.61 0.61 0.60 0.59 0.58 0.57 0.56 0.55 0.54 0.53 0.52 0.52 0.51 0.50 0.49 0.48 0.47 0.46 0.45 0.44 0.43 </table>
-  <set name="weaponsAllowed" val="64"/>
+  <set name="weaponsAllowed" val="64"/> <!-- Pole -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#CP"/>
@@ -631,14 +617,12 @@
   <set name="effectRange" val="400"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
-  <for>
-  </for>
 </skill>
 <skill id="321" levels="10" name="Blinding Blow">
   <table name="#mpConsume"> 63 64 65 66 67 68 69 70 71 72 </table>
   <table name="#magicLvl"> 65 66 67 68 69 70 71 72 73 74 </table>
   <table name="#power"> 2751 2850 2950 3050 3151 3252 3353 3453 3553 3653 </table>
-  <set name="weaponsAllowed" val="16"/>
+  <set name="weaponsAllowed" val="16"/> <!-- Dagger -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
@@ -669,7 +653,7 @@
   <table name="#ShieldDef"> 446 468 491 514 537 560 </table>
   <table name="#ench1sDef"> 565 569 573 577 582 586 590 594 599 603 607 611 616 620 624 628 632 637 641 645 649 654 658 662 666 671 675 679 683 688 </table>
   <table name="#ench2val"> 0.39 0.39 0.39 0.38 0.38 0.38 0.37 0.37 0.37 0.36 0.36 0.36 0.35 0.35 0.35 0.34 0.34 0.34 0.33 0.33 0.33 0.32 0.32 0.32 0.31 0.31 0.31 0.3 0.3 0.3 </table>
-  <set name="weaponsAllowed" val="2"/>
+  <set name="weaponsAllowed" val="2"/> <!-- Shield -->
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
@@ -1023,7 +1007,7 @@
 </skill>
 <skill id="343" levels="1" name="Lethal Shot">
   <set name="mpConsume" val="153"/>
-  <set name="weaponsAllowed" val="32"/>
+  <set name="weaponsAllowed" val="32"/> <!-- Bow -->
   <set name="magicLvl" val="76"/>
   <set name="power" val="5132"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1037,12 +1021,10 @@
   <set name="lethal1" val="5"/>
   <set name="lethal2" val="2"/>
   <set name="hitTime" val="4000"/>
-  <for>
-  </for>
 </skill>
 <skill id="344" levels="1" name="Lethal Blow">
   <set name="mpConsume" val="77"/>
-  <set name="weaponsAllowed" val="16"/>
+  <set name="weaponsAllowed" val="16"/> <!-- Dagger -->
   <set name="magicLvl" val="76"/>
   <set name="power" val="5773"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1057,11 +1039,9 @@
   <set name="lethal2" val="2"/>
   <set name="hitTime" val="1800"/>
   <set name="baseCritRate" val="15"/>
-  <for>
-  </for>
 </skill>
 <skill id="345" levels="1" name="Sonic Rage">
-  <set name="weaponsAllowed" val="512"/>
+  <set name="weaponsAllowed" val="512"/> <!-- Dual Sword -->
   <set name="magicLvl" val="78"/>
   <set name="hpConsume" val="50"/>
   <set name="mpConsume" val="5"/>
@@ -1076,11 +1056,9 @@
   <set name="effectRange" val="1000"/>
   <set name="num_charges" val="7"/>
   <set name="baseCritRate" val="15"/>
-  <for>
-  </for>
 </skill>
 <skill id="346" levels="1" name="Raging Force">
-  <set name="weaponsAllowed" val="1280"/>
+  <set name="weaponsAllowed" val="1280"/> <!-- Fist/Dual Fist -->
   <set name="magicLvl" val="78"/>
   <set name="hpConsume" val="50"/>
   <set name="mpConsume" val="5"/>
@@ -1095,13 +1073,11 @@
   <set name="effectRange" val="1000"/>
   <set name="num_charges" val="7"/>
   <set name="baseCritRate" val="15"/>
-  <for>
-  </for>
 </skill>
 <skill id="347" levels="1" name="Earthquake">
   <set name="hpConsume" val="340"/>
   <set name="mpConsume" val="78"/>
-  <set name="weaponsAllowed" val="64"/>
+  <set name="weaponsAllowed" val="64"/> <!-- Pole -->
   <set name="magicLvl" val="78"/>
   <set name="power" val="4848"/>
   <set name="ignoreShld" val="true"/>
@@ -1139,7 +1115,7 @@
   <set name="SSBoost" val="2.0"/>
   <set name="skillType" val="PDAM"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="weaponsAllowed" val="16392"/>
+  <set name="weaponsAllowed" val="16392"/> <!-- Blunt/Big Blunt -->
   <for>
     <effect count="1" name="Spoil" time="1" val="0"/>
   </for>
@@ -1168,7 +1144,7 @@
 </skill>
 <skill id="350" levels="1" name="Physical Mirror">
   <set name="mpConsume" val="36"/>
-  <set name="weaponsAllowed" val="2"/>
+  <set name="weaponsAllowed" val="2"/> <!-- Shield -->
   <set name="power" val="0.0"/>
   <set name="magicLvl" val="78"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1181,14 +1157,18 @@
   <set name="aggroPoints" val="669"/>
   <for>
     <effect name="Buff" time="300" count="1" val="0">
-      <add order="0x40" stat="reflectSkillPhysic" val="30"/>
-      <add order="0x40" stat="reflectSkillMagic" val="10"/>
+      <add order="0x40" stat="reflectSkillPhysic" val="30">
+        <using kind="Shield"/>
+      </add>
+      <add order="0x40" stat="reflectSkillMagic" val="10">
+        <using kind="Shield"/>
+      </add>
     </effect>
   </for>
 </skill>
 <skill id="351" levels="1" name="Magical Mirror">
   <set name="mpConsume" val="36"/>
-  <set name="weaponsAllowed" val="2"/>
+  <set name="weaponsAllowed" val="2"/> <!-- Shield -->
   <set name="power" val="0.0"/>
   <set name="magicLvl" val="78"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1201,14 +1181,18 @@
   <set name="aggroPoints" val="669"/>
   <for>
     <effect name="Buff" time="300" count="1" val="0">
-      <add order="0x40" stat="reflectSkillPhysic" val="10"/>
-      <add order="0x40" stat="reflectSkillMagic" val="30"/>
+      <add order="0x40" stat="reflectSkillPhysic" val="10">
+        <using kind="Shield"/>
+      </add>
+      <add order="0x40" stat="reflectSkillMagic" val="30">
+        <using kind="Shield"/>
+      </add>
     </effect>
   </for>
 </skill>
 <skill id="352" levels="1" name="Shield Bash">
   <set name="magicLvl" val="77"/>
-  <set name="weaponsAllowed" val="2"/>
+  <set name="weaponsAllowed" val="2"/> <!-- Shield -->
   <set name="lvlDepend" val="2"/>
   <set name="power" val="80"/>
   <set name="mpConsume" val="18"/>
@@ -1227,7 +1211,7 @@
 </skill>
 <skill id="353" levels="1" name="Shield Slam">
   <set name="magicLvl" val="77"/>
-  <set name="weaponsAllowed" val="2"/>
+  <set name="weaponsAllowed" val="2"/> <!-- Shield -->
   <set name="lvlDepend" val="1"/>
   <set name="power" val="40"/>
   <set name="mpConsume" val="35"/>
@@ -1246,7 +1230,7 @@
 </skill>
 <skill id="354" levels="1" name="Hamstring Shot">
   <set name="magicLvl" val="77"/>
-  <set name="weaponsAllowed" val="32"/>
+  <set name="weaponsAllowed" val="32"/> <!-- Bow -->
   <set name="mpConsume" val="78"/>
   <set name="power" val="1973"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1273,7 +1257,7 @@
   <set name="mpConsume" val="36"/>
   <set name="effectPoint" val="669"/>
   <set name="magicLevel" val="78"/>
-  <set name="weaponsAllowed" val="16"/>
+  <set name="weaponsAllowed" val="16"/> <!-- Dagger -->
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="120000"/>
   <set name="hitTime" val="2000"/>
@@ -1299,7 +1283,7 @@
   <set name="mpConsume" val="36"/>
   <set name="effectPoint" val="669"/>
   <set name="magicLevel" val="78"/>
-  <set name="weaponsAllowed" val="16"/>
+  <set name="weaponsAllowed" val="16"/> <!-- Dagger -->
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="120000"/>
   <set name="hitTime" val="2000"/>
@@ -1327,7 +1311,7 @@
   <set name="mpConsume" val="36"/>
   <set name="effectPoint" val="669"/>
   <set name="magicLevel" val="78"/>
-  <set name="weaponsAllowed" val="16"/>
+  <set name="weaponsAllowed" val="16"/> <!-- Dagger -->
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="120000"/>
   <set name="hitTime" val="2000"/>
@@ -1352,7 +1336,7 @@
   </for>
 </skill>
 <skill id="358" levels="1" name="Bluff">
-  <set name="weaponsAllowed" val="16"/>
+  <set name="weaponsAllowed" val="16"/> <!-- Dagger -->
   <set name="mpConsume" val="35"/> 
   <set name="power" val="40"/> 
   <set name="target" val="TARGET_ONE"/> 
@@ -1408,7 +1392,7 @@
   </for>
 </skill>
 <skill id="361" levels="1" name="Shock Blast">
-  <set name="weaponsAllowed" val="64"/>
+  <set name="weaponsAllowed" val="64"/> <!-- Pole -->
   <set name="magicLvl" val="77"/>
   <set name="mpConsume" val="53"/>
   <set name="hpConsume" val="507"/>
@@ -1439,7 +1423,7 @@
 </skill>
 <skill id="362" levels="1" name="Armor Crush">
   <set name="magicLvl" val="77"/>
-  <set name="weaponsAllowed" val="18444"/>
+  <set name="weaponsAllowed" val="18444"/> <!-- Sword/Big Sword/Blunt/Big Blunt -->
   <set name="mpConsume" val="35"/>
   <set name="hpConsume" val="338"/>
   <set name="power" val="3077"/>
@@ -1508,10 +1492,9 @@
   </for>
 </skill>
 <skill id="365" levels="1" name="Siren's Dance">
-  <set name="weaponsAllowed" val="512"/>
+  <set name="weaponsAllowed" val="512"/> <!-- Dual Sword -->
   <set name="mpConsume" val="60"/>
   <set name="nextDanceCost" val="30"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="10000"/>
@@ -1529,10 +1512,9 @@
   </for>
 </skill>
 <skill id="366" levels="1" name="Dance of Shadows">
-  <set name="weaponsAllowed" val="512"/>
+  <set name="weaponsAllowed" val="512"/> <!-- Dual Sword -->
   <set name="mpConsume" val="60"/>
   <set name="nextDanceCost" val="30"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="10000"/>
@@ -1553,7 +1535,7 @@
   <set name="element" val="4"/> <!-- Earth -->
   <set name="magicLvl" val="77"/>
   <set name="mpConsume" val="53"/>
-  <set name="weaponsAllowed" val="512"/>
+  <set name="weaponsAllowed" val="512"/> <!-- Dual Sword -->
   <set name="power" val="40"/>
   <set name="skillRadius" val="150"/>
   <set name="target" val="TARGET_AURA"/>
@@ -1570,7 +1552,7 @@
   </for>
 </skill>
 <skill id="368" levels="1" name="Vengeance">
-  <set name="weaponsAllowed" val="2"/>
+  <set name="weaponsAllowed" val="2"/> <!-- Shield -->
   <set name="mpConsume" val="35"/>
   <set name="power" val="7987"/>
   <set name="target" val="TARGET_AURA"/>
@@ -1584,15 +1566,15 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect self="1" count="1" name="ImmobileBuff" time="30" val="0" stackOrder="3" stackType="pd_up_special">
-      <add order="0x40" stat="pDef" val="5400"/>
-      <add order="0x40" stat="mDef" val="4050"/>
-      <mul order="0x30" stat="cancelVuln" val="0.9"/> <!-- value to be confirmed -->
+      <add order="0x40" stat="pDef" val="5400"/> <!-- Should be only using Shield ? -->
+      <add order="0x40" stat="mDef" val="4050"/> <!-- Should be only using Shield ? -->
+      <mul order="0x30" stat="cancelVuln" val="0.9"/> <!-- value to be confirmed --> <!-- Should be only using Shield ? -->
     </effect>
     <effect count="1" name="TargetMe" time="1" val="0"/>
   </for>
 </skill>
 <skill id="369" levels="1" name="Evade Shot">
-  <set name="weaponsAllowed" val="32"/>
+  <set name="weaponsAllowed" val="32"/> <!-- Bow -->
   <set name="mpConsume" val="114"/>
   <set name="power" val="2020"/>
   <set name="target" val="TARGET_ONE"/>

@@ -87,7 +87,7 @@
   <table name="#mpConsume"> 29 30 31 31 32 33 34 32 36 37 38 39 40 40 41 42 43 44 45 46 47 48 49 49 50 51 52 53 54 54 55 56 57 58 59 59 60 </table>
   <table name="#power"> 620 659 700 742 787 833 882 932 984 1038 1094 1152 1212 1274 1337 1403 1470 1539 1610 1682 1757 1832 1909 1987 2067 2147 2229 2311 2394 2478 2562 2647 2732 2816 2901 2985 3069 </table>
   <table name="#magicLvl"> 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 </table>
-  <set name="weaponsAllowed" val="131072"/>
+  <set name="weaponsAllowed" val="131072"/> <!-- Rapier -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -106,8 +106,6 @@
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
-  <for>
-  </for>
 </skill>
 <skill id="505" levels="28" name="Shining Edge" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -116,7 +114,7 @@
   <table name="#mpConsume"> 37 38 39 40 40 41 42 43 44 45 46 47 48 49 49 50 51 52 53 54 54 55 56 57 58 59 59 60 </table>
   <table name="#power"> 1853 1953 2057 2164 2274 2388 2505 2625 2748 2875 3004 3136 3271 3408 3548 3690 3834 3980 4127 4275 4425 4575 4726 4878 5029 5180 5330 5479 </table>
   <table name="#magicLvl"> 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 </table>
-  <set name="weaponsAllowed" val="131072"/>
+  <set name="weaponsAllowed" val="131072"/> <!-- Rapier -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -135,8 +133,6 @@
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
-  <for>
-  </for>
 </skill>
 <skill id="506" levels="4" name="Checkmate" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -144,7 +140,7 @@
   <table name="#ench2MpConsume"> 50 49 48 47 46 46 45 44 43 42 41 41 40 39 38 37 36 36 35 34 33 32 31 31 30 29 28 27 26 26 </table>
   <table name="#mpConsume"> 36 43 47 51 </table>
   <table name="#power"> 2388 3408 4275 5180 </table>
-  <set name="weaponsAllowed" val="131072"/>
+  <set name="weaponsAllowed" val="131072"/> <!-- Rapier -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -164,8 +160,6 @@
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
-  <for>
-  </for>
 </skill>
 <skill id="507" levels="37" name="Twin Shot" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -174,7 +168,7 @@
   <table name="#mpConsume"> 65 67 69 69 71 73 75 77 80 82 84 86 89 89 91 93 96 98 100 103 105 107 109 109 112 114 116 118 120 122 124 126 128 129 131 133 135 </table>
   <table name="#power"> 984 1046 1110 1178 1249 1322 1399 1479 1562 1647 1736 1828 1923 2021 2123 2227 2333 2443 2555 2670 2788 2908 3030 3154 3280 3408 3537 3668 3800 3933 4067 4201 4336 4470 4604 4738 4870 </table>
   <table name="#magicLvl"> 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 </table>
-  <set name="weaponsAllowed" val="65536"/>
+  <set name="weaponsAllowed" val="65536"/> <!-- Crossbow -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -193,8 +187,6 @@
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
-  <for>
-  </for>
 </skill>
 <skill id="508" levels="31" name="Rising Shot" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -203,7 +195,7 @@
   <table name="#mpConsume"> 112 116 119 123 126 129 133 133 137 140 143 147 150 154 157 160 164 164 167 170 173 177 180 183 186 188 191 194 197 199 202 </table>
   <table name="#power"> 350 370 391 412 434 457 481 506 531 557 584 611 639 668 697 727 758 789 820 852 885 917 950 984 1017 1051 1084 1118 1151 1185 1218 </table>
   <table name="#magicLvl"> 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 </table>
-  <set name="weaponsAllowed" val="65536"/>
+  <set name="weaponsAllowed" val="65536"/> <!-- Crossbow -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -222,8 +214,6 @@
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
-  <for>
-  </for>
 </skill>
 <skill id="509" levels="34" name="Bleeding Shot" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -232,7 +222,7 @@
   <table name="#power"> 530 562 595 630 666 703 742 782 823 866 910 955 1002 1050 1100 1150 1202 1255 1309 1364 1420 1476 1534 1592 1651 1710 1770 1830 1891 1951 2012 2072 2132 2192 </table>
   <table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 </table>
   <table name="#mpConsume"> 56 58 59 61 63 65 66 68 70 72 72 74 76 78 80 81 83 85 87 88 89 91 92 94 96 97 99 100 102 103 105 106 108 109 </table>
-  <set name="weaponsAllowed" val="65536"/>
+  <set name="weaponsAllowed" val="65536"/> <!-- Crossbow -->
   <set name="itemConsumeId" val="10113"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -278,12 +268,10 @@
   <set name="reuseDelay" val="10000"/> <!-- Guessing -->
   <set name="skillType" val="PDAM"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="weaponsAllowed" val="65536"/>
+  <set name="weaponsAllowed" val="65536"/> <!-- Crossbow -->
   <cond msg="Can be used when HP is below 10 percent.">
     <player hp="10"/>
   </cond>
-  <for>
-  </for>
 </skill>
 <skill id="511" levels="1" name="Temptation">
   <set name="castRange" val="400"/>
@@ -453,7 +441,6 @@
   <table name="#aggro"> 566 582 597 611 624 635 646 655 </table>
   <set name="weaponsAllowed" val="65536"/> <!-- Crossbow -->
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="10000"/>
   <set name="hitTime" val="2000"/>
@@ -645,9 +632,8 @@
 </skill>
 <skill id="530" levels="1" name="Dance of Alignment">
   <!-- Check of retail values. -->
-  <set name="weaponsAllowed" val="512"/>
+  <set name="weaponsAllowed" val="512"/> <!-- Dual Sword -->
   <set name="mpConsume" val="60"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="10000"/>
@@ -673,11 +659,11 @@
   <set name="hitTime" val="1500"/>
   <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="80"/> <!-- Guessing -->
   <set name="reuseDelay" val="30000"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="weaponsAllowed" val="16"/>
+  <set name="weaponsAllowed" val="16"/> <!-- Dagger -->
   <for>
     <effect name="Debuff" count="1" time="30" val="0">
       <mul order="0x30" stat="critVuln" val="1.30"/>

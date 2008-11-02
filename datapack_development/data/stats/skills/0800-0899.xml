@@ -153,7 +153,7 @@
   <table name="#mpConsume"> 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83 </table>
   <table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table> <!-- Guess - need retail confirmation -->
   <table name="#power"> 744 787 832 879 927 977 1029 1082 1137 1194 1253 1313 1374 1438 1502 1568 1636 1704 1774 1845 1917 1990 2064 2138 2213 2288 2363 2439 2515 2590 2665 2740 2814 2887 2959 3030 3100 3168 3234 3299 3362 3422 3480 </table>
-  <set name="weaponsAllowed" val="18432"/>
+  <set name="weaponsAllowed" val="18432"/> <!-- Big Sword/Big Blunt -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -169,15 +169,13 @@
   <set name="ignoreShld" val="true"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="815" levels="43" name="Blade Hurricane">
   <!-- Vanguard Stance Skill -->
   <table name="#mpConsume"> 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83 </table>
   <table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table> <!-- Guess - need retail confirmation -->
   <table name="#power"> 744 787 832 879 927 977 1029 1082 1137 1194 1253 1313 1374 1438 1502 1568 1636 1704 1774 1845 1917 1990 2064 2138 2213 2288 2363 2439 2515 2590 2665 2740 2814 2887 2959 3030 3100 3168 3234 3299 3362 3422 3480 </table>
-  <set name="weaponsAllowed" val="512"/>
+  <set name="weaponsAllowed" val="512"/> <!-- Dual Sword -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -193,15 +191,13 @@
   <set name="ignoreShld" val="true"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="816" levels="43" name="Cleave">
   <!-- Vanguard Stance Skill -->
   <table name="#mpConsume"> 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83 </table>
   <table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table> <!-- Guess - need retail confirmation -->
   <table name="#power"> 744 787 832 879 927 977 1029 1082 1137 1194 1253 1313 1374 1438 1502 1568 1636 1704 1774 1845 1917 1990 2064 2138 2213 2288 2363 2439 2515 2590 2665 2740 2814 2887 2959 3030 3100 3168 3234 3299 3362 3422 3480 </table>
-  <set name="weaponsAllowed" val="18432"/>
+  <set name="weaponsAllowed" val="18432"/> <!-- Big Sword/Big Blunt -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -216,15 +212,13 @@
   <set name="ignoreShld" val="true"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
-  <for>
-  </for>
 </skill>
 <skill id="817" levels="43" name="Double Strike">
   <!-- Vanguard Stance Skill -->
   <table name="#mpConsume"> 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83 </table>
   <table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table> <!-- Guess - need retail confirmation -->
   <table name="#power"> 744 787 832 879 927 977 1029 1082 1137 1194 1253 1313 1374 1438 1502 1568 1636 1704 1774 1845 1917 1990 2064 2138 2213 2288 2363 2439 2515 2590 2665 2740 2814 2887 2959 3030 3100 3168 3234 3299 3362 3422 3480 </table>
-  <set name="weaponsAllowed" val="512"/>
+  <set name="weaponsAllowed" val="512"/> <!-- Dual Sword -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -239,8 +233,6 @@
   <set name="ignoreShld" val="true"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
-  <for>
-  </for>
 </skill>
 <skill id="818" levels="1" name="Evasion Counter">
   <set name="target" val="TARGET_NONE"/>
