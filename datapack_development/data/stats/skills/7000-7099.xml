@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
 <skill id="7000" levels="1" name="NPC Default">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -34,8 +33,7 @@
   </for>
 </skill>
 <skill id="7003" levels="1" name="Dispel All">
-  <!-- TODO -->
-  <set name="power" val="0.0"/>
+  <!-- Needs to be done -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -46,8 +44,7 @@
   </for>
 </skill>
 <skill id="7004" levels="2" name="Dispel Petrification">
-  <!-- TODO -->
-  <set name="power" val="0.0"/>
+  <!-- Needs to be done -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -62,7 +59,6 @@
   <set name="magicLevel" val="74"/>
   <set name="mpInitialConsume" val="55"/>
   <set name="mpConsume" val="217"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_CLAN"/>
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="BUFF"/>
@@ -80,9 +76,8 @@
   </for>
 </skill>
 <skill id="7006" levels="13" name="The Love of Pa'agrio">
-  <!-- TODO -->
+  <!-- Needs to be done -->
   <set name="mpConsume" val="272"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="hitTime" val="2500"/>
@@ -95,9 +90,8 @@
   </for>
 </skill>
 <skill id="7007" levels="4" name="Greater Seal of Flame">
-  <!-- TODO -->
+  <!-- Needs to be done -->
   <set name="mpConsume" val="153"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="hitTime" val="4000"/>
@@ -110,7 +104,6 @@
   </for>
 </skill>
 <skill id="7008" levels="1" name="not_used">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -119,7 +112,6 @@
   </for>
 </skill>
 <skill id="7009" levels="1" name="not_used">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -128,7 +120,6 @@
   </for>
 </skill>
 <skill id="7010" levels="1" name="not_used">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -137,7 +128,6 @@
   </for>
 </skill>
 <skill id="7011" levels="1" name="not_used">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -146,7 +136,6 @@
   </for>
 </skill>
 <skill id="7012" levels="1" name="not_used">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -155,7 +144,6 @@
   </for>
 </skill>
 <skill id="7013" levels="1" name="not_used">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -164,7 +152,6 @@
   </for>
 </skill>
 <skill id="7014" levels="1" name="Test - Critical Damage Up">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -173,7 +160,6 @@
   </for>
 </skill>
 <skill id="7015" levels="1" name="Test - Critical Damage Down">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -182,7 +168,6 @@
   </for>
 </skill>
 <skill id="7016" levels="1" name="Test - Critical Damage Up">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -191,7 +176,6 @@
   </for>
 </skill>
 <skill id="7017" levels="1" name="Test - Critical Damage Down">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -200,7 +184,6 @@
   </for>
 </skill>
 <skill id="7018" levels="1" name="Test - Critical Rate Up">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -209,7 +192,6 @@
   </for>
 </skill>
 <skill id="7019" levels="1" name="Test - Critical Rate Down">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -218,7 +200,6 @@
   </for>
 </skill>
 <skill id="7020" levels="1" name="Test - Critical Rate Up">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -227,7 +208,6 @@
   </for>
 </skill>
 <skill id="7021" levels="1" name="Test - Critical Rate Down">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -236,7 +216,6 @@
   </for>
 </skill>
 <skill id="7022" levels="1" name="Test - Find Hidden Door">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -245,7 +224,6 @@
   </for>
 </skill>
 <skill id="7023" levels="1" name="not_used">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -254,7 +232,6 @@
   </for>
 </skill>
 <skill id="7024" levels="1" name="not_used">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -263,7 +240,6 @@
   </for>
 </skill>
 <skill id="7025" levels="1" name="not_used">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -272,7 +248,6 @@
   </for>
 </skill>
 <skill id="7026" levels="1" name="not_used">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -281,7 +256,6 @@
   </for>
 </skill>
 <skill id="7027" levels="1" name="not_used">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -290,7 +264,6 @@
   </for>
 </skill>
 <skill id="7028" levels="1" name="For Stationary NPCs">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -304,7 +277,6 @@
   <table name="#Tab-mReuse"> 1 2 4 30 </table>
   <table name="#Tab-mAtkSpd"> 1.5 1.8 3 4 </table>
   <table name="#Tab-pAtkSpd"> 1.2 1.5 2 3 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
@@ -328,7 +300,6 @@
   <set name="summonTotalLifeTime" val="1200000"/>
   <set name="summonTimeLostIdle" val="500"/>
   <set name="summonTimeLostActive" val="1000"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="reuseDelay" val="18600000"/>
@@ -353,7 +324,6 @@
   <set name="summonTotalLifeTime" val="1200000"/>
   <set name="summonTimeLostIdle" val="500"/>
   <set name="summonTimeLostActive" val="1000"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="reuseDelay" val="18600000"/>
@@ -378,7 +348,6 @@
   <set name="summonTotalLifeTime" val="1200000"/>
   <set name="summonTimeLostIdle" val="500"/>
   <set name="summonTimeLostActive" val="1000"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="reuseDelay" val="18600000"/>
@@ -513,7 +482,6 @@
   <!-- A GM is always by your side. Increases critical attack rate temporarily. Effect 3. -->
   <table name="#Tab-rCrit"> 0.3 </table>
   <set name="mpConsume" val="2"/>
-  <set name="power" val="0.0"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="500"/>
@@ -532,7 +500,6 @@
   <!-- A GM is always by your side. Increases critical attack rate temporarily. Effect 3. -->
   <table name="#Tab-cAtk"> 1.5 </table>
   <set name="mpConsume" val="2"/>
-  <set name="power" val="0.0"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="500"/>
@@ -551,7 +518,6 @@
   <!-- A GM is always by your side. Increases Atk. Spd. temporarily. Effect 2. -->
   <table name="#Tab-pAtkSpd"> 1.33 </table>
   <set name="mpConsume" val="2"/>
-  <set name="power" val="0.0"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="500"/>
@@ -570,7 +536,6 @@
   <!-- A GM is always by your side. Increases Accuracy temporarily. Effect 3. -->
   <table name="#Tab-accCombat"> 4 </table>
   <set name="mpConsume" val="2"/>
-  <set name="power" val="0.0"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="500"/>
@@ -589,7 +554,6 @@
   <!-- A GM is always by your side. Increases maximum HP temporarily. Effect 6. -->
   <table name="#Tab-maxHp"> 1.35 </table>
   <set name="mpConsume" val="2"/>
-  <set name="power" val="0.0"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="500"/>
@@ -608,7 +572,6 @@
   <!-- A GM is always by your side. Increases maximum MP temporarily. Effect 6. -->
   <table name="#Tab-maxMp"> 1.35 </table>
   <set name="mpConsume" val="2"/>
-  <set name="power" val="0.0"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="500"/>
@@ -627,7 +590,6 @@
   <!-- A GM is always by your side. Increases Evasion temporarily. Effect 3. -->
   <table name="#Tab-rEvas"> 4 </table>
   <set name="mpConsume" val="2"/>
-  <set name="power" val="0.0"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="500"/>
@@ -646,7 +608,6 @@
   <!-- A GM is always by your side. Increases Casting Spd. temporarily. Effect 3. -->
   <table name="#Tab-mAtkSpd"> 1.3 </table>
   <set name="mpConsume" val="2"/>
-  <set name="power" val="0.0"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="500"/>
@@ -665,7 +626,6 @@
   <!-- A GM is always by your side. Reduces current weight. Effect 3. -->
   <table name="#Weight"> 9000 </table>
   <set name="mpConsume" val="2"/>
-  <set name="power" val="0.0"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="500"/>
@@ -684,7 +644,6 @@
   <!-- A GM is always by your side. Increases P. Atk. temporarily. Effect 3. -->
   <table name="#rate"> 1.15 </table>
   <set name="mpConsume" val="2"/>
-  <set name="power" val="0.0"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="500"/>
@@ -703,7 +662,6 @@
   <!-- A GM is always by your side. Increases P. Def. temporarily. Effect 3. -->
   <table name="#rate"> 1.15 </table>
   <set name="mpConsume" val="2"/>
-  <set name="power" val="0.0"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="500"/>
@@ -722,7 +680,6 @@
   <!-- A GM is always by your side. Increases M. Def. temporarily. Effect 3. -->
   <table name="#Tab-mDef"> 1.3 </table>
   <set name="mpConsume" val="2"/>
-  <set name="power" val="0.0"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="500"/>
@@ -741,7 +698,6 @@
   <!-- A GM is always by your side. Temporarily increases the amount of HP absorbed from damage done to a target. Excludes damage from skills or ranged attacks. Effect 4. -->
   <table name="#Tab-absorbDam"> 9 </table>
   <set name="mpConsume" val="2"/>
-  <set name="power" val="0.0"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="500"/>
@@ -760,7 +716,6 @@
   <!-- A GM is always by your side. Increases M. Atk. temporarily. Effect 3. -->
   <table name="#Tab-mAtk"> 1.75 </table>
   <set name="mpConsume" val="2"/>
-  <set name="power" val="0.0"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="500"/>
@@ -779,7 +734,6 @@
   <!-- A GM is always by your side. Increases Speed temporarily. Effect 2. -->
   <table name="#Tab-runSpd"> 33 </table>
   <set name="mpConsume" val="2"/>
-  <set name="power" val="0.0"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="500"/>
@@ -805,7 +759,6 @@
   <table name="#Tab-runSpd"> 8 </table>
   <table name="#Tab-rEvas"> 4 </table>
   <set name="mpConsume" val="2"/>
-  <set name="power" val="0.0"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="500"/>
@@ -831,7 +784,6 @@
   <!-- A GM is always by your side. Temporarily increases the target's P. Atk. Effect 3. -->
   <table name="#pAtk"> 1.1 </table>
   <set name="mpConsume" val="2"/>
-  <set name="power" val="0.0"/>
   <set name="magicLvl" val="1"/>
   <set name="hitTime" val="500"/>
   <set name="target" val="TARGET_ONE"/>
@@ -850,7 +802,6 @@
   <!-- A GM is always by your side.  Temporarily increases the target's P. Def. Effect 3. -->
   <table name="#rate"> 1.15 </table>
   <set name="mpConsume" val="2"/>
-  <set name="power" val="0.0"/>
   <set name="magicLvl" val="1"/>
   <set name="hitTime" val="500"/>
   <set name="target" val="TARGET_ONE"/>
@@ -869,7 +820,6 @@
   <!-- A GM is always by your side.  Temporarily increases the critical attack rate for magic attacks. Effect 2. -->
   <table name="#mCrit"> 4 </table>
   <set name="mpConsume" val="2"/>
-  <set name="power" val="0.0"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="500"/>
@@ -889,7 +839,6 @@
   <table name="#MpConsumeRate"> 0.9 </table>
   <table name="#mpConsume"> 2 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="magicLvl" val="1"/>
   <set name="hitTime" val="500"/>
   <set name="target" val="TARGET_ONE"/>
@@ -907,7 +856,6 @@
 <skill id="7061" levels="1" name="Master's Blessing - Prophecy of Water">
   <!-- A GM is always by your side. The spirit of an ancient wizard temporarily possesses the target. -->
   <set name="mpConsume" val="2"/>
-  <set name="power" val="0.0"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="500"/>
@@ -931,7 +879,6 @@
 <skill id="7062" levels="1" name="Master's Blessing - Prophecy of Fire">
   <!-- A GM is always by your side. The spirit of an ancient warrior temporarily possesses the target. -->
   <set name="mpConsume" val="2"/>
-  <set name="power" val="0.0"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="500"/>
@@ -956,7 +903,6 @@
 <skill id="7063" levels="1" name="Master's Blessing - Prophecy of Wind">
   <!-- A GM is always by your side. The spirit of an ancient assassin temporarily possesses the target. -->
   <set name="mpConsume" val="2"/>
-  <set name="power" val="0.0"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="500"/>
@@ -984,7 +930,6 @@
 <skill id="7064" levels="1" name="Master's Blessing - Chant of Victory">
   <!-- A GM is always by your side. The spirit of an ancient hero temporarily possesses the target. -->
   <set name="mpConsume" val="2"/>
-  <set name="power" val="0.0"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2500"/>

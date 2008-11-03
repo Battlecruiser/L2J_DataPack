@@ -45,7 +45,6 @@
 <skill id="4003" levels="1" name="Golem Body">
   <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="1"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -60,7 +59,6 @@
 <skill id="4004" levels="1" name="Fragile Skull">
   <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="1"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -73,7 +71,6 @@
 <skill id="4005" levels="1" name="Floating Target">
   <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="1"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -87,7 +84,6 @@
 <skill id="4006" levels="1" name="Blazing Log">
   <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="1"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -101,7 +97,6 @@
 <skill id="4007" levels="1" name="Immortal Life">
   <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="1"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -115,7 +110,6 @@
 <skill id="4008" levels="1" name="Insect Skin">
   <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="1"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -127,7 +121,6 @@
 </skill>
 <skill id="4009" levels="6" name="Resist Fire">
   <table name="#vuln"> 0.85 0.7 0.5 0.3 0.1 0.0 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="6000"/>
   <set name="skillType" val="BUFF"/>
@@ -141,7 +134,6 @@
 </skill>
 <skill id="4010" levels="6" name="Resist Water">
   <table name="#vuln"> 0.85 0.7 0.5 0.3 0.1 0.0 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="6000"/>
   <set name="skillType" val="BUFF"/>
@@ -155,7 +147,6 @@
 </skill>
 <skill id="4011" levels="6" name="Resist Wind">
   <table name="#vuln"> 0.85 0.7 0.5 0.3 0.1 0.0 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="6000"/>
   <set name="skillType" val="BUFF"/>
@@ -169,7 +160,6 @@
 </skill>
 <skill id="4012" levels="1" name="Resist Earth">
   <table name="#vuln"> 0.85 0.7 0.5 0.3 0.1 0.0 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="6000"/>
   <set name="skillType" val="BUFF"/>
@@ -184,7 +174,6 @@
 <skill id="4013" levels="1" name="Resistance To Fire, Vulnerable To Water">
   <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="1"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -198,7 +187,6 @@
 <skill id="4014" levels="1" name="Resistance To Water, Vulnerable To Fire">
   <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="1"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -212,7 +200,6 @@
 <skill id="4015" levels="1" name="Resistance To Wind, Vulnerable To Earth">
   <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="1"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -226,7 +213,6 @@
 <skill id="4016" levels="1" name="Resistance To Earth, Vulnerable To Wind">
   <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="1"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -310,7 +296,6 @@
 <skill id="4021" levels="1" name="Queen Ant">
   <!-- Queen Ant Skills -->
   <set name="magicLvl" val="40"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -322,8 +307,7 @@
   </for>
 </skill>
 <skill id="4022" levels="1" name="Body Of Nurse Ant">
-  <!-- NOT USED IN C4 -->
-  <set name="power" val="0.0"/>
+  <!-- Needs to be done -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -333,8 +317,7 @@
   </for>
 </skill>
 <skill id="4023" levels="1" name="Body Of Royal Guard Ant">
-  <!-- NOT USED IN C4 -->
-  <set name="power" val="0.0"/>
+  <!-- Needs to be done -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -416,7 +399,6 @@
   <table name="#pAtk"> 1.08 1.12 1.15 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="1800"/>
@@ -437,7 +419,6 @@
   <table name="#pDef"> 1.08 1.12 1.15 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="1800"/>
@@ -461,7 +442,6 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="2500"/>
@@ -486,7 +466,6 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="2500"/>
@@ -831,7 +810,6 @@
   <table name="#runSpd"> 1.50 1.80 2.0 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -965,7 +943,7 @@
   </for>
 </skill>
 <skill id="4056" levels="1" name="Immortal Attack">
-  <set name="power" val="0.0"/>
+  <!-- Needs to be done -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -975,7 +953,6 @@
   </for>
 </skill>
 <skill id="4057" levels="1" name="Insect Weak Point">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="magicLvl" val="1"/>
@@ -987,7 +964,6 @@
   </for>
 </skill>
 <skill id="4058" levels="1" name="Plant Weak Point">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="magicLvl" val="1"/>
@@ -999,7 +975,6 @@
   </for>
 </skill>
 <skill id="4059" levels="1" name="Animal Weak Point">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="magicLvl" val="1"/>
@@ -1011,7 +986,6 @@
   </for>
 </skill>
 <skill id="4060" levels="1" name="Beast Weak Point">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="magicLvl" val="1"/>
@@ -1023,7 +997,6 @@
   </for>
 </skill>
 <skill id="4061" levels="1" name="Dragon Weak Point">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="magicLvl" val="1"/>
@@ -1037,7 +1010,6 @@
 <skill id="4062" levels="1" name="Orfen">
   <!-- Orfen Skills -->
   <set name="magicLvl" val="50"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1195,9 +1167,8 @@
 </skill>
 <skill id="4071" levels="6" name="Resist Archery">
   <table name="#vuln"> 0.85 0.7 0.5 0.3 0.1 0.0 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="WEAKNESS"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1262,7 +1233,6 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="2000"/>
@@ -1394,7 +1364,6 @@
   </for>
 </skill>
 <skill id="4081" levels="1" name="Pretending to steal">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="NOTDONE"/>
@@ -1439,7 +1408,6 @@
 <skill id="4084" levels="10" name="Resist Physical Attack">
   <!-- Done by dc -->
   <table name="#Tab-pDef"> 1.05 1.11 1.17 1.25 1.33 1.43 1.67 2.0 3.33 10.0 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1450,7 +1418,6 @@
   </for>
 </skill>
 <skill id="4085" levels="1" name="Critical Power">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1462,7 +1429,6 @@
 </skill>
 <skill id="4086" levels="1" name="Critical Chance">
   <!-- Done by dc -->
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1590,7 +1556,6 @@
 </skill>
 <skill id="4093" levels="1" name="Evasion">
   <!-- Done by dc -->
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1606,7 +1571,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="100"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="300000"/>
   <set name="hitTime" val="6000"/>
@@ -1638,7 +1603,6 @@
   <table name="#pDef"> 0.90 0.90 0.90 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="1500"/>
@@ -1708,7 +1672,6 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="4000"/>

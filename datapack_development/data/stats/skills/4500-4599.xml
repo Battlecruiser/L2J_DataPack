@@ -355,7 +355,7 @@ chances and the success rate of dagger skills. -->
   <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="100"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
@@ -372,7 +372,7 @@ chances and the success rate of dagger skills. -->
   <set name="hitTime" val="1500"/>
   <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="100"/>
   <set name="isDebuff" val="true"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="target" val="TARGET_ONE"/>
@@ -391,7 +391,7 @@ chances and the success rate of dagger skills. -->
   <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="100"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
@@ -409,7 +409,7 @@ chances and the success rate of dagger skills. -->
   <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="100"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
@@ -426,7 +426,7 @@ chances and the success rate of dagger skills. -->
   <set name="hitTime" val="1500"/>
   <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="100"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isDebuff" val="true"/>
   <set name="target" val="TARGET_ONE"/>
@@ -445,7 +445,7 @@ chances and the success rate of dagger skills. -->
   <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="100"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
@@ -463,7 +463,7 @@ chances and the success rate of dagger skills. -->
   <set name="isMagic" val="true"/>
   <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="100"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isDebuff" val="true"/>
   <set name="target" val="TARGET_ONE"/>
@@ -483,7 +483,7 @@ chances and the success rate of dagger skills. -->
   <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="100"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
@@ -502,7 +502,7 @@ chances and the success rate of dagger skills. -->
   <set name="isDebuff" val="true"/>
   <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="100"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
@@ -602,7 +602,7 @@ chances and the success rate of dagger skills. -->
   <table name="#rCrit"> 3 5 8 10 5 0 0 0 0 0 </table>
   <set name="mpInitialConsume" val="14"/>
   <set name="mpConsume" val="55"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="100"/>
   <set name="magicLvl" val="75"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="isDebuff" val="true"/>
@@ -624,7 +624,7 @@ chances and the success rate of dagger skills. -->
   <table name="#accCombat"> 3 6 8 10 6 0 0 0 0 0 </table>
   <set name="mpInitialConsume" val="14"/>
   <set name="mpConsume" val="55"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="100"/>
   <set name="magicLvl" val="75"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="isDebuff" val="true"/>
@@ -646,7 +646,7 @@ chances and the success rate of dagger skills. -->
   <table name="#pAtk"> 1 0.96 0.96 0.96 0.92 0.92 0.92 0.88 0.88 0.85 </table>
   <set name="mpInitialConsume" val="14"/>
   <set name="mpConsume" val="55"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="100"/>
   <set name="magicLvl" val="75"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
@@ -668,7 +668,7 @@ chances and the success rate of dagger skills. -->
   <table name="#MpConsumeRate"> 1 0.96 0.96 0.96 0.92 0.92 0.92 0.88 0.88 0.84 </table>
   <set name="mpInitialConsume" val="14"/>
   <set name="mpConsume" val="55"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="100"/>
   <set name="magicLvl" val="75"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="isDebuff" val="true"/>
@@ -691,7 +691,6 @@ chances and the success rate of dagger skills. -->
   <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="75"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="power" val="0.0"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
@@ -736,7 +735,6 @@ chances and the success rate of dagger skills. -->
   </for>
 </skill>
 <skill id="4559" levels="1" name="Hot Springs Illusion">
-  <set name="power" val="0.0"/>
   <set name="magicLvl" val="75"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
@@ -1054,7 +1052,6 @@ chances and the success rate of dagger skills. -->
   <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_CLAN"/>
-  <set name="power" val="0.0"/>
   <set name="skillRadius" val="900"/>
   <set name="skillType" val="BUFF"/>
   <set name="hitTime" val="2000"/>
@@ -1108,7 +1105,7 @@ chances and the success rate of dagger skills. -->
   <set name="mpConsume" val="58"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="100"/>
   <set name="skillType" val="PARALYZE"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
