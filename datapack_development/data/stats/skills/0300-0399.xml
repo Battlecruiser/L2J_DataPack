@@ -14,7 +14,6 @@
   <set name="summonTotalLifeTime" val="1200000"/>
   <set name="summonTimeLostIdle" val="500"/>
   <set name="summonTimeLostActive" val="1000"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="6000"/>
@@ -40,7 +39,6 @@
   <table name="#ench12Power"> 0 1 2 2 3 4 4 5 6 6 7 8 8 9 10 10 11 12 12 13 14 14 15 16 16 17 18 18 19 20 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
   <set name="reuseDelay" val="10000"/>
@@ -74,7 +72,6 @@
   <table name="#ench1mp"> 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 </table>
   <table name="#aggro"> 438 549 597 635 </table>
   <set name="hpConsume" val="#hpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="2000"/>
@@ -104,7 +101,6 @@
   <table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
   <set name="mpConsume" val="60"/>
   <set name="nextDanceCost" val="30"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="10000"/>
@@ -137,7 +133,6 @@
   <table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
   <set name="mpConsume" val="60"/>
   <set name="nextDanceCost" val="30"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="10000"/>
@@ -168,7 +163,6 @@
   <table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
   <set name="mpConsume" val="60"/>
   <set name="nextDanceCost" val="30"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="10000"/>
@@ -234,7 +228,6 @@
   <table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
   <set name="mpConsume" val="60"/>
   <set name="nextDanceCost" val="30"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="10000"/>
@@ -365,7 +358,6 @@
   <table name="#ench1crit"> 615 620 626 631 637 642 648 653 659 664 670 675 681 686 692 697 702 708 713 719 724 730 735 741 746 752 757 763 768 774 </table>
   <table name="#ench2MpConsume_Init"> 13 13 13 12 12 12 11 11 11 10 10 10 9 9 9 8 8 8 7 7 7 6 6 6 5 5 5 4 4 4 </table>
   <table name="#ench2val"> 0.39 0.39 0.39 0.38 0.38 0.38 0.38 0.37 0.37 0.37 0.36 0.36 0.36 0.36 0.35 0.35 0.35 0.34 0.34 0.34 0.34 0.33 0.33 0.33 0.32 0.32 0.32 0.32 0.31 0.31 0.31</table>
-  <set name="power" val="0.0"/>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
@@ -402,7 +394,6 @@
   <table name="#aggro"> 566 582 597 611 624 635 646 655 </table>
   <set name="weaponsAllowed" val="32"/> <!-- Bow -->
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="10000"/>
   <set name="hitTime" val="2000"/>
@@ -500,7 +491,6 @@
 <skill id="316" levels="1" name="Aegis">
   <!-- done by roxaz -->
   <set name="target" val="TARGET_SELF"/>
-  <set name="power" val="0.0"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
@@ -772,7 +762,6 @@
   </for>
 </skill>
 <skill id="328" levels="1" name="Wisdom">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -785,7 +774,6 @@
   </for>
 </skill>
 <skill id="329" levels="1" name="Health">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -848,7 +836,6 @@
 </skill>
 <skill id="335" levels="1" name="Fortitude">
   <set name="magicLvl" val="76"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="mpConsume" val="35"/>
   <set name="skillType" val="CONT"/>
@@ -865,7 +852,6 @@
 <skill id="336" levels="1" name="Arcane Wisdom">
   <set name="magicLvl" val="78"/>
   <set name="mpConsume" val="36"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
   <set name="killByDOT" val="false"/>
@@ -883,7 +869,6 @@
 <skill id="337" levels="1" name="Arcane Power">
   <set name="magicLvl" val="78"/>
   <set name="mpConsume" val="36"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
   <set name="killByDOT" val="false"/>
@@ -901,7 +886,6 @@
 <skill id="338" levels="1" name="Arcane Agility">
   <set name="magicLvl" val="78"/>
   <set name="mpConsume" val="36"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
   <set name="killByDOT" val="false"/>
@@ -920,7 +904,6 @@
 <skill id="339" levels="1" name="Parry Stance">
   <set name="magicLvl" val="78"/>
   <set name="mpConsume" val="36"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
@@ -1123,7 +1106,6 @@
 <skill id="349" levels="1" name="Song of Renewal">
   <set name="mpConsume" val="60"/>
   <set name="nextDanceCost" val="30"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="10000"/>
@@ -1145,7 +1127,6 @@
 <skill id="350" levels="1" name="Physical Mirror">
   <set name="mpConsume" val="36"/>
   <set name="weaponsAllowed" val="2"/> <!-- Shield -->
-  <set name="power" val="0.0"/>
   <set name="magicLvl" val="78"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1169,7 +1150,6 @@
 <skill id="351" levels="1" name="Magical Mirror">
   <set name="mpConsume" val="36"/>
   <set name="weaponsAllowed" val="2"/> <!-- Shield -->
-  <set name="power" val="0.0"/>
   <set name="magicLvl" val="78"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1355,7 +1335,6 @@
 </skill> 
 <skill id="359" levels="1" name="Eye of Hunter">
   <set name="mpConsume" val="70"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="10000"/>
   <set name="hitTime" val="2000"/>
@@ -1374,7 +1353,6 @@
 </skill>
 <skill id="360" levels="1" name="Eye of Slayer">
   <set name="mpConsume" val="71"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="10000"/>
   <set name="hitTime" val="2000"/>
@@ -1452,7 +1430,6 @@
 <skill id="363" levels="1" name="Song of Meditation">
   <set name="mpConsume" val="60"/>
   <set name="nextDanceCost" val="30"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="10000"/>
@@ -1473,7 +1450,6 @@
 <skill id="364" levels="1" name="Song of Champion">
   <set name="mpConsume" val="60"/>
   <set name="nextDanceCost" val="30"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="10000"/>
@@ -1598,7 +1574,6 @@
 <skill id="370" levels="3" name="Clan Vitality">
   <!-- Increases clan members' Max HP. It only effects those who are of an Heir class or higher. -->
   <table name="#maxHp"> 1.03 1.05 1.06 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1613,7 +1588,6 @@
 <skill id="371" levels="3" name="Clan Spirituality">
   <!-- Increases clan members' Max CP. It only effects those who are of a Baron class or higher. -->
   <table name="#maxCp"> 1.06 1.10 1.12 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1628,7 +1602,6 @@
 <skill id="372" levels="3" name="Clan Essence">
   <!-- Increases clan members' Max MP. It only effects those who are of a Viscount class or higher. -->
   <table name="#maxMp"> 1.03 1.05 1.06 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1643,7 +1616,6 @@
 <skill id="373" levels="3" name="Clan Lifeblood">
   <!-- Increases the clan members' HP regeneration. Only affects Heir class and above. -->
   <table name="#regHp"> 1.03 1.05 1.06 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1658,7 +1630,6 @@
 <skill id="374" levels="3" name="Clan Morale">
   <!-- Increases the clan members' CP regeneration. Only affects Wise Man class and above. -->
   <table name="#regCp"> 1.03 1.05 1.06 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1673,7 +1644,6 @@
 <skill id="375" levels="3" name="Clan Clarity">
   <!-- Increases the clan members' MP regeneration. Only affects Viscount class and above. -->
   <table name="#regMp"> 1.03 1.05 1.06 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1688,7 +1658,6 @@
 <skill id="376" levels="3" name="Clan Might">
   <!-- Increases the clan members' P. Atk. Only affects Knight class and above. -->
   <table name="#pAtk"> 1.03 1.05 1.06 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1703,7 +1672,6 @@
 <skill id="377" levels="3" name="Clan Aegis">
   <!-- Increases clan members' P. Def. It only effects those who are of a Knight class or higher. -->
   <table name="#pDef"> 1.03 1.05 1.06 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1718,7 +1686,6 @@
 <skill id="378" levels="3" name="Clan Empowerment">
   <!-- Increases clan members' M. Atk. It only effects those who are of a Viscount class or higher. -->
   <table name="#mAtk"> 1.03 1.05 1.06 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1733,7 +1700,6 @@
 <skill id="379" levels="3" name="Clan Magic Protection">
   <!-- Increases clan members' M. Def. It only effects those who are of an Heir class or higher. -->
   <table name="#mDef"> 1.06 1.10 1.12 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1748,7 +1714,6 @@
 <skill id="380" levels="3" name="Clan Guidance">
   <!-- Increases the clan members' Accuracy. Only affects Baron class and above. -->
   <table name="#accCombat"> 1 2 3 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1763,7 +1728,6 @@
 <skill id="381" levels="3" name="Clan Agility">
   <!-- Increases the clan members' Evasion. Only affects Baron class and above. -->
   <table name="#rEvas"> 1 2 3 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1778,7 +1742,6 @@
 <skill id="382" levels="3" name="Clan Withstand-Attack">
   <!-- Increases clan members' Shield defense probability. It only effects those who are of a Viscount class or higher. -->
   <table name="#rShld"> 1.03 1.05 1.06 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1793,7 +1756,6 @@
 <skill id="383" levels="3" name="Clan Shield Boost">
   <!-- Increases clan members' Shield P. Def. It only effects those who are of a Baron class or higher. -->
   <table name="#sDef"> 1.03 1.05 1.06 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1808,7 +1770,6 @@
 <skill id="384" levels="3" name="Clan Cyclonic Resistance">
   <!-- Increases clan members' resistance to water/wind attacks. It only effects those who are of a Viscount class or higher. -->
   <table name="#vuln"> 0.97 0.95 0.94 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1824,7 +1785,6 @@
 <skill id="385" levels="3" name="Clan Magmatic Resistance">
   <!-- Increases clan members' resistance to fire/earth attacks. It only effects those who are of a Viscount class or higher. -->
   <table name="#vuln"> 0.97 0.95 0.94 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1840,7 +1800,6 @@
 <skill id="386" levels="3" name="Clan Fortitude">
   <!-- Increases the clan members' resistance to shock attacks. Only affects Viscount class and above. -->
   <table name="#vuln"> 0.97 0.95 0.94 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1855,7 +1814,6 @@
 <skill id="387" levels="3" name="Clan Freedom">
   <!-- Increases the clan members' resistance to hold attacks. Only affects Viscount class and above. -->
   <table name="#vuln"> 0.97 0.95 0.94 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1870,7 +1828,6 @@
 <skill id="388" levels="3" name="Clan Vigilance">
   <!-- Increases the clan members' resistance to sleep attacks. Only affects Viscount class and above. -->
   <table name="#vuln"> 0.97 0.95 0.94 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1885,7 +1842,6 @@
 <skill id="389" levels="3" name="Clan March">
   <!-- Increases clan members' Speed. It only effects those who are of a Count class or higher. -->
   <table name="#runSpd"> 3 5 6 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1926,7 +1882,6 @@
   <set name="itemConsumeCount" val="40"/>
   <set name="hitTime" val="1000"/>
   <set name="reuseDelay" val="1200000"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="false"/>
@@ -1948,7 +1903,6 @@
   <set name="itemConsumeCount" val="40"/>
   <set name="hitTime" val="1000"/>
   <set name="reuseDelay" val="1200000"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="false"/>

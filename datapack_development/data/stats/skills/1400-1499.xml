@@ -108,7 +108,6 @@
 </skill>
 <skill id="1405" levels="4" name="Divine Inspiration">
 <!-- Increases the number of buffs you can receive. -->
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="COREDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -132,7 +131,6 @@
   <set name="summonTotalLifeTime" val="3600000"/>
   <set name="summonTimeLostIdle" val="500"/>
   <set name="summonTimeLostActive" val="1000"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="20000"/> <!-- Guessing -->
   <set name="hitTime" val="15000"/>
@@ -165,7 +163,6 @@
   <set name="summonTotalLifeTime" val="3600000"/>
   <set name="summonTimeLostIdle" val="500"/>
   <set name="summonTimeLostActive" val="1000"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="20000"/> <!-- Guessing -->
   <set name="hitTime" val="15000"/>
@@ -198,7 +195,6 @@
   <set name="summonTotalLifeTime" val="3600000"/>
   <set name="summonTimeLostIdle" val="500"/>
   <set name="summonTimeLostActive" val="1000"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="20000"/> <!-- Guessing -->
   <set name="hitTime" val="15000"/>
@@ -220,7 +216,7 @@
   <set name="itemConsumeCount" val="1"/>
   <set name="mpInitialConsume" val="21"/> <!-- Guessing -->
   <set name="mpConsume" val="58"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="100"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="35000"/>
   <set name="hitTime" val="4000"/>
@@ -237,7 +233,6 @@
   <set name="mpConsume" val="87"/>
   <set name="itemConsumeId" val="8874"/>
   <set name="itemConsumeCount" val="2"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="3600000"/>
   <set name="hitTime" val="4000"/>
@@ -260,7 +255,6 @@
   <set name="magicLvl" val="79"/>
   <set name="mpConsume" val="73"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="0.0"/>
   <set name="reuseDelay" val="1800000"/> <!-- Guessing -->
   <set name="skillType" val="NOTDONE"/>
   <set name="target" val="TARGET_PARTY_MEMBER"/>
@@ -293,7 +287,6 @@
   <set name="itemConsumeCount" val="40"/>
   <set name="mpInitialConsume" val="59"/> <!-- Guessing -->
   <set name="mpConsume" val="287"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="1200000"/> <!-- Guessing -->
@@ -323,7 +316,6 @@
   <set name="itemConsumeCount" val="40"/>
   <set name="mpInitialConsume" val="57"/>
   <set name="mpConsume" val="284"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_CLAN"/>
   <set name="skillRadius" val="400"/>
   <set name="reuseDelay" val="1200000"/>
@@ -355,7 +347,6 @@
   <!-- All the values here are guessed (taken from Chant of Spirit and other clan buffs) -->
   <set name="mpInitialConsume" val="56"/>
   <set name="mpConsume" val="228"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_CLAN"/>
   <set name="skillRadius" val="400"/>
   <set name="reuseDelay" val="20000"/>
@@ -425,7 +416,6 @@
 </skill>
 <skill id="1418" levels="1" name="Celestial Shield">
   <set name="mpConsume" val="60"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="2600000"/>
@@ -642,7 +632,6 @@
   <set name="itemConsumeCount" val="1"/>
   <set name="mpInitialConsume" val="36"/>
   <set name="mpConsume" val="37"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_CLAN"/>
   <set name="skillRadius" val="400"/>
   <set name="staticReuse" val="true"/>
@@ -692,7 +681,6 @@
   <set name="itemConsumeId" val="8615"/>
   <set name="mpConsume" val="284"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="0.0"/>
   <set name="skillRadius" val="-1"/>
   <set name="skillType" val="SUMMON_FRIEND"/>
   <set name="target" val="TARGET_PARTY"/>
@@ -704,7 +692,6 @@
   <table name="#mhot"> 90 100 115 125 140 </table>
   <table name="#mpConsume"> 27 28 30 33 34 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1000"/>
   <set name="reuseDelay" val="900000"/>
@@ -748,7 +735,6 @@
   <table name="#rate"> 1.08 1.12</table>
   <table name="#mpConsume"> 13 25</table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
@@ -965,7 +951,6 @@
   <table name="#Tab-mAtk"> 1.55 1.65</table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
@@ -988,7 +973,6 @@
   <table name="#aggro"> 285 379 418 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="3000"/>
@@ -1017,7 +1001,6 @@
   </for>
 </skill>
 <skill id="1444" levels="1" name="Pride of Kamael">
-  <set name="power" val="0.0"/>
   <set name="mpConsume" val="44"/>
   <set name="magicLvl" val="49"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1082,7 +1065,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpConsume" val="30"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="80"/>
   <set name="reuseDelay" val="20000"/>
   <set name="skillType" val="ROOT"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1101,7 +1084,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpConsume" val="40"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="80"/>
   <set name="reuseDelay" val="20000"/>
   <set name="skillType" val="MUTE"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1233,7 +1216,7 @@
   <set name="mpConsume" val="109"/>
   <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="80"/> <!-- Guesing -->
   <set name="reuseDelay" val="20000"/> <!-- Guessing -->
   <set name="skillRadius" val="250"/>
   <set name="skillType" val="DEBUFF"/>
@@ -1338,7 +1321,6 @@
   <set name="isMagic" val="true"/>
   <set name="mpConsume" val="109"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="0.0"/>
   <set name="reuseDelay" val="600000"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1351,7 +1333,6 @@
 <skill id="1460" levels="1" name="Mana Gain">
   <set name="mpInitialConsume" val="38"/>
   <set name="mpConsume" val="142"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="60000"/>
   <set name="hitTime" val="3000"/>
@@ -1377,7 +1358,6 @@
 -->
   <set name="mpInitialConsume" val="39"/>
   <set name="mpConsume" val="250"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="20000"/>
@@ -1471,7 +1451,7 @@
   <set name="isMagic" val="true"/>
   <set name="mpConsume" val="109"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="1000"/> <!-- Guessing -->
   <set name="skillType" val="MDAM"/>
   <set name="target" val="TARGET_AREA"/>
   <for>
@@ -1485,7 +1465,7 @@
   <set name="isMagic" val="true"/>
   <set name="mpConsume" val="109"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="1000"/> <!-- Guessing -->
   <set name="skillType" val="MDAM"/>
   <set name="target" val="TARGET_AREA"/>
   <for>
@@ -1503,6 +1483,7 @@
   <set name="isMagic" val="true"/>
   <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="1000"/> <!-- Guessing -->
   <set name="castRange" val="600"/>
   <set name="effectRange" val="900"/>
   <set name="soulMaxConsumeCount" val="5"/>
@@ -1511,7 +1492,6 @@
 </skill>
 <skill id="1470" levels="1" name="Prahnah">
 <!-- Needs retail value checks -->
-  <set name="power" val="0.0"/>
   <set name="mpConsume" val="105"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
@@ -1576,7 +1556,6 @@
 </skill>
 <skill id="1474" levels="1" name="Abyssal Power">
 <!-- Needs retail accuracy check -->
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1619,7 +1598,6 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="0.0"/>
   <set name="reuseDelay" val="600000"/> <!-- Needs to be verified 8-10 minutes -->
   <set name="skillRadius" val="1000"/>
   <set name="skillType" val="BUFF"/>
@@ -1640,7 +1618,6 @@
   <table name="#aggro"> 418 549 611 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="20000"/>
@@ -1670,7 +1647,6 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="0.0"/>
   <set name="reuseDelay" val="600000"/> <!-- Needs to be verified 8-10 minutes -->
   <set name="skillRadius" val="1000"/>
   <set name="skillType" val="BUFF"/>
@@ -1695,7 +1671,6 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="0.0"/>
   <set name="reuseDelay" val="600000"/> <!-- Needs to be verified 8-10 minutes -->
   <set name="skillRadius" val="1000"/>
   <set name="skillType" val="BUFF"/>

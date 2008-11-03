@@ -8,7 +8,6 @@
   <table name="#pDef"> 0.92 0.89 </table>
   <table name="#rEvas"> 3 4 </table>
   <table name="#dmg"> 18 21 </table>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
@@ -29,7 +28,7 @@
   <table name="#mpConsume"> 22 24 25 27 28 29 30 31 32 33 34 34 </table>
   <table name="#mAtkSpd"> 0.98 0.96 0.94 0.92 0.90 0.88 0.86 0.84 0.82 0.80 0.78 0.76 </table>
   <table name="#pDef"> 0.98 0.96 0.94 0.92 0.90 0.88 0.86 0.84 0.82 0.80 0.78 0.76 </table>
-  <set name="power" val="0.0"/>
+  <set name="power" val="80"/> <!-- Guessing -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1800"/>
@@ -490,7 +489,6 @@
   <table name="#effectRange"> 900 1000 1100 1200 </table>
   <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="hitTime" val="1500"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="target" val="TARGET_ONE"/>
@@ -577,7 +575,6 @@
   <set name="magicLevel" val="79"/>
   <set name="mpConsume" val="43"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="0.0"/>
   <set name="reuseDelay" val="300000"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
@@ -594,7 +591,6 @@
   <set name="hitTime" val="1000"/>
   <set name="mpConsume" val="43"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="0.0"/>
   <set name="reuseDelay" val="1800000"/>
   <set name="skillType" val="BUFF"/>
   <set name="skillRadius" val="1000"/>
@@ -610,7 +606,6 @@
 <skill id="529" levels="1" name="Song of Elemental">
   <!-- Done by theREALizzy, check for retail values. -->
   <set name="mpConsume" val="54"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="10000"/>
@@ -679,7 +674,6 @@
   <set name="effectRange" val="-1"/>
   <set name="magicLevel" val="79"/>
   <set name="operateType" val="OP_CHANCE"/>
-  <set name="power" val="0.0"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
@@ -701,7 +695,6 @@
   <set name="effectRange" val="-1"/>
   <set name="magicLevel" val="79"/>
   <set name="operateType" val="OP_CHANCE"/>
-  <set name="power" val="0.0"/>
   <set name="skillRadius" val="1000"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_PARTY"/>
@@ -721,7 +714,6 @@
   <set name="effectRange" val="-1"/>
   <set name="magicLevel" val="79"/>
   <set name="operateType" val="OP_CHANCE"/>
-  <set name="power" val="0.0"/>
   <set name="skillRadius" val="1000"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_PARTY"/>
@@ -754,7 +746,6 @@
   <set name="hitTime" val="2000"/>
   <set name="mpConsume" val="143"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="0.0"/>
   <set name="reuseDelay" val="3600000"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1172,7 +1163,6 @@
 <skill id="561" levels="4" name="Bless of Angel">
   <table name="#mpConsume"> 61 63 67 70 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="10000"/>
@@ -1190,7 +1180,6 @@
 <skill id="562" levels="4" name="Wind of Angel">
   <table name="#mpConsume"> 61 63 67 70 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="10000"/>
@@ -1447,7 +1436,6 @@
 </skill>
 <skill id="585" levels="1" name="Fast Moving">
   <set name="mpConsume" val="55"/>
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="90000"/>
   <set name="hitTime" val="1000"/>
