@@ -643,7 +643,6 @@
   <table name="#ShieldDef"> 446 468 491 514 537 560 </table>
   <table name="#ench1sDef"> 565 569 573 577 582 586 590 594 599 603 607 611 616 620 624 628 632 637 641 645 649 654 658 662 666 671 675 679 683 688 </table>
   <table name="#ench2val"> 0.39 0.39 0.39 0.38 0.38 0.38 0.37 0.37 0.37 0.36 0.36 0.36 0.35 0.35 0.35 0.34 0.34 0.34 0.33 0.33 0.33 0.32 0.32 0.32 0.31 0.31 0.31 0.3 0.3 0.3 </table>
-  <set name="weaponsAllowed" val="2"/> <!-- Shield -->
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
@@ -653,23 +652,17 @@
   <enchant2 name="mpInitialConsume" val="#ench2mpConsume"/>
   <for>
     <effect count="0x7fffffff" name="MpConsumePerLevel" time="3" val="0.4">
-      <add order="0x40" stat="sDef" val="#ShieldDef">
-        <using kind="Shield"/>
-      </add>
+      <add order="0x40" stat="sDef" val="#ShieldDef"/>
     </effect>
   </for>
   <enchant1for>
     <effect count="0x7fffffff" name="MpConsumePerLevel" time="3" val="0.4">
-      <add order="0x40" stat="sDef" val="#ench1sDef">
-        <using kind="Shield"/>
-      </add>
+      <add order="0x40" stat="sDef" val="#ench1sDef"/>
     </effect>
   </enchant1for>
   <enchant2for>
     <effect count="0x7fffffff" name="MpConsumePerLevel" time="3" val="#ench2val">
-      <add order="0x40" stat="sDef" val="560">
-        <using kind="Shield"/>
-      </add>
+      <add order="0x40" stat="sDef" val="560"/>
     </effect>
   </enchant2for>
 </skill>
@@ -1041,7 +1034,7 @@
   <set name="baseCritRate" val="15"/>
 </skill>
 <skill id="346" levels="1" name="Raging Force">
-  <set name="weaponsAllowed" val="1280"/> <!-- Fist/Dual Fist -->
+  <set name="weaponsAllowed" val="1024"/> <!-- Dual Fist -->
   <set name="magicLvl" val="78"/>
   <set name="hpConsume" val="50"/>
   <set name="mpConsume" val="5"/>

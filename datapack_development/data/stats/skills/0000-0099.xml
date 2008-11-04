@@ -366,7 +366,7 @@
   <table name="#ench1Power"> 539 543 548 553 558 563 567 572 577 582 587 591 596 601 606 611 615 620 625 630 635 639 644 649 654 659 664 668 673 678 </table>
   <table name="#ench2MpConsume"> 104 103 102 102 101 101 100 99 99 98 97 97 96 95 95 94 93 93 92 91 91 90 90 89 88 88 87 86 86 85 </table>
   <table name="#power"> 129 137 145 153 162 171 181 190 200 211 222 233 244 256 268 280 293 305 318 332 345 359 373 387 402 416 431 445 460 475 489 504 519 533 </table>
-  <set name="weaponsAllowed" val="1280"/> <!-- Fist/Dual Fist -->
+<set name="weaponsAllowed" val="1024"/> <!-- Dual Fist -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
@@ -615,7 +615,7 @@
   <table name="#mpConsume"> 10 11 11 13 14 15 18 19 20 23 23 23 24 26 27 29 30 31 33 33 34 37 38 39 </table>
   <table name="#magicLvl"> 3 4 5 6 8 9 10 13 14 15 18 19 20 22 23 24 26 27 28 30 31 32 34 35 36  </table>
   <table name="#power"> 34 38 41 54 59 64 83 91 98 125 136 147 171 185 199 231 248 267 307 328 351 401 428 456 </table>
-  <set name="weaponsAllowed" val="1280"/> <!-- Fist/Dual Fist -->
+  <set name="weaponsAllowed" val="1024"/> <!-- Dual Fist -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
@@ -717,7 +717,7 @@
   <table name="#ench2MpConsume"> 104 103 102 102 101 101 100 99 99 98 97 97 96 95 95 94 93 93 92 91 91 90 90 89 88 88 87 86 86 85 </table>
   <table name="#power"> 181 190 200 211 222 233 244 256 268 280 293 305 318 332 345 359 373 387 402 416 431 445 460 475 489 504 519 533 </table>
   <table name="#ench1Power"> 538 542 547 552 557 562 566 571 576 581 586 590 595 600 605 610 614 619 624 629 634 638 643 648 653 658 663 667 672 677 </table>
-  <set name="weaponsAllowed" val="1280"/> <!-- Fist/Dual Fist -->
+  <set name="weaponsAllowed" val="1024"/> <!-- Dual Fist -->
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
@@ -944,9 +944,9 @@
   <set name="effectRange" val="-1"/>
   <set name="num_charges" val="#charges"/>
   <set name="aggroPoints" val="150"/>
+  <set name="weaponsAllowed" val="1024"/> <!-- Dual Fist -->
   <for>
     <effect count="1" name="Charge" time="0x7fffffff" val="1"/>
-    <using kind="Fist,Dual Fist"/> <!-- when using hand-to-hand combat weapon -->
   </for>
 </skill>
 <skill id="51" levels="1" name="Lure" enchantLevels1="30" >
@@ -974,7 +974,7 @@
   <table name="#ench2MpConsume"> 60 59 58 57 56 55 54 53 53 52 51 50 49 48 47 46 45 45 44 43 42 41 40 39 38 37 37 36 35 34 </table>
   <table name="#power"> 143 154 166 193 207 222 256 274 293 334 357 380 431 458 486 516 547 579 612 647 683 721 760 800 842 885 929 974 1021 1069 1118 1169 1220 1272 1326 1380 1435 1491 1548 1605 1663 1721 1780 1838 1897 1956 2015 2073 2131 </table>
   <table name="#ench1Power"> 2151 2170 2189 2209 2228 2247 2266 2285 2305 2324 2343 2362 2381 2401 2420 2439 2458 2477 2497 2516 2535 2554 2573 2593 2612 2631 2650 2670 2689 2708 </table>
-  <set name="weaponsAllowed" val="1280"/> <!-- Fist/Dual Fist -->
+  <set name="weaponsAllowed" val="1024"/> <!-- Dual Fist -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -1258,15 +1258,15 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="268"/>
-  <set name="weaponsAllowed" val="1280"/> <!-- Fist/Dual Fist -->
+  <set name="weaponsAllowed" val="1024"/> <!-- Dual Fist -->
   <for>
     <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
       <mul order="0x30" stat="runSpd" val="0.7"/>
       <mul order="0x30" stat="pAtk" val="1.2">
-        <using kind="Fist,Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
+        <using kind="Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
       </mul>
       <mul order="0x30" stat="cAtk" val="1.2">
-        <using kind="Fist,Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
+        <using kind="Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
       </mul>
     </effect>
   </for>
@@ -1339,7 +1339,7 @@
   <table name="#hpConsume"> 399 455 499 </table>
   <table name="#power"> 4580 6332 9132 </table>
   <table name="#ench1Power"> 9214 9296 9378 9461 9543 9625 9708 9790 9872 9955 10037 10119 10201 10284 10366 10448 10531 10613 10695 10778 10860 10942 11024 11107 11189 11271 11354 11436 11518 11601 </table>
-  <set name="weaponsAllowed" val="1280"/> <!-- Fist/Dual Fist -->
+  <set name="weaponsAllowed" val="1024"/> <!-- Dual Fist -->
   <set name="magicLvl" val="#magicLvl"/>
   <set name="hpConsume" val="#hpConsume"/>
   <set name="power" val="#power"/>
@@ -1396,14 +1396,14 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="204"/>
-  <set name="weaponsAllowed" val="1280"/> <!-- Fist/Dual Fist -->
+  <set name="weaponsAllowed" val="1024"/> <!-- Dual Fist -->
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="possession">
       <mul order="0x30" stat="runSpd" val="1.20">
-        <using kind="Fist,Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
+        <using kind="Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
       </mul>
       <add order="0x40" stat="accCombat" val="3">
-        <using kind="Fist,Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
+        <using kind="Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
       </add>
     </effect>
   </for>
@@ -1606,7 +1606,7 @@
         <using kind="Big Sword,Big Blunt"/> <!-- when using two-handed sword and blunt weapons -->
       </mul>
       <mul order="0x30" stat="pAtk" val="1.20">
-        <using kind="Dual Fist,Dual Sword,Fist,Etc,Bow,Dagger"/>
+        <using kind="Dual Fist,Dual Sword,Etc,Bow,Dagger"/>
       </mul>
     </effect>
   </for>
@@ -1620,7 +1620,7 @@
   <table name="#magicLvl"> 20 24 28 32 36 40 43 46 49 52 55 58 60 62 64 66 68 70 72 74 </table>
   <table name="#mpConsume"> 10 11 13 14 16 18 19 21 22 24 25 27 28 29 30 31 32 33 34 34 </table>
   <table name="#Tab-runSpd"> 0.7 0.7 0.7 0.7 0.7 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 </table>
-  <set name="weaponsAllowed" val="1280"/> <!-- Fist/Dual Fist -->
+  <set name="weaponsAllowed" val="1024"/> <!-- Dual Fist -->
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="lvlDepend" val="2"/>
