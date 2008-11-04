@@ -165,7 +165,7 @@
         <using kind="Sword,Big Sword,Pole"/>
       </add>
       <mul order="0x30" stat="cAtk" val="#cAtk">
-        <using kind="Blunt,Big Blunt,Fist,Dual Fist"/>
+        <using kind="Blunt,Big Blunt,Dual Fist"/>
       </mul>
     </effect>
   </for>
@@ -476,7 +476,7 @@
         <using kind="Sword,Big Sword,Pole"/>
       </add>
       <mul order="0x30" stat="cAtk" val="#cAtk">
-        <using kind="Blunt,Big Blunt,Fist,Dual Fist"/>
+        <using kind="Blunt,Big Blunt,Dual Fist"/>
       </mul>
     </effect>
   </for>
@@ -563,17 +563,17 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <set name="weaponsAllowed" val="1280"/> <!-- Fist/Dual Fist -->
+  <set name="weaponsAllowed" val="1024"/> <!-- Dual Fist -->
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="possession">
       <add order="0x40" stat="accCombat" val="6">
-        <using kind="Fist,Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
+        <using kind="Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
       </add>
       <add order="0x40" stat="rCrit" val="100">
-        <using kind="Fist,Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
+        <using kind="Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
       </add>
       <mul order="0x30" stat="cAtk" val="1.30">
-        <using kind="Fist,Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
+        <using kind="Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
       </mul>
     </effect>
   </for>
@@ -658,10 +658,10 @@
   <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="pAtk" val="80">
-      <using kind="Sword,Big Sword,Blunt,Big Blunt,Pole,Dual Sword,Fist,Dual Fist"/>
+      <using kind="Sword,Big Sword,Blunt,Big Blunt,Pole,Dual Sword,Dual Fist"/>
     </add>
     <mul order="0x30" stat="maxCp" val="1.05">
-      <using kind="Sword,Big Sword,Blunt,Big Blunt,Pole,Dual Sword,Fist,Dual Fist"/>
+      <using kind="Sword,Big Sword,Blunt,Big Blunt,Pole,Dual Sword,Dual Fist"/>
     </mul>
   </for>
 </skill>
@@ -787,8 +787,7 @@
   <set name="reuseDelay" val="480000"/>
   <set name="aggroPoints" val="523"/>
   <for>
-    <effect count="1" name="Mute" time="120" val="0"/>
-    <effect count="1" name="PhysicalMute" time="120" val="0" noicon="1"/>
+    <effect count="1" name="SilenceMagicPhysical" time="120" val="0"/>
   </for>
 </skill>
 <skill id="438" levels="1" name="Soul of the Phoenix">
@@ -881,7 +880,7 @@
   </for>
 </skill>
 <skill id="443" levels="1" name="Force Barrier">
-  <set name="weaponsAllowed" val="1280"/> <!-- Fist/Dual Fist -->
+  <set name="weaponsAllowed" val="1024"/> <!-- Dual Fist -->
   <set name="mpConsume" val="72"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="2000"/>

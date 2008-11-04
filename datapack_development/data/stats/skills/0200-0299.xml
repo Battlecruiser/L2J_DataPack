@@ -69,7 +69,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="pAtk" val="#pAtk">
-      <using kind="Fist, Dual Fist"/>
+      <using kind="Dual Fist"/>
     </add>
   </for>
 </skill>
@@ -1563,7 +1563,7 @@
   <table name="#magicLvl"> 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
   <table name="#power"> 517 549 583 619 656 694 735 777 820 865 912 960 1010 1062 1115 1169 1225 1283 1342 1402 1464 1527 1591 1656 1722 1789 1857 1926 1995 2065 2135 2206 2277 2347 2417 2488 2557 </table>
   <table name="#ench1Power"> 2581 2604 2627 2650 2673 2696 2719 2743 2766 2789 2812 2835 2858 2881 2904 2927 2950 2973 2996 3019 3042 3065 3088 3111 3134 3157 3180 3204 3227 3250 </table>
-  <set name="weaponsAllowed" val="1280"/> <!-- Fist/Dual Fist -->
+  <set name="weaponsAllowed" val="1024"/> <!-- Dual Fist -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
@@ -1593,7 +1593,7 @@
   <table name="#ench1effectPower"> 51 52 53 54 55 56 57 58 59 60 61 63 64 65 66 67 68 69 70 71 72 73 74 76 77 78 79 80 81 82 </table>
   <table name="#ench2MpConsume"> 70 69 68 67 66 64 63 62 61 60 58 57 56 55 54 53 51 50 49 48 47 45 44 43 42 41 40 38 37 36 </table>
   <table name="#ench2power"> 2432 2454 2476 2497 2519 2541 2563 2584 2606 2628 2650 2671 2693 2715 2737 2758 2780 2802 2823 2845 2867 2889 2910 2932 2954 2976 2997 3019 3041 3063 </table>
-  <set name="weaponsAllowed" val="1280"/> <!-- Fist/Dual Fist -->
+  <set name="weaponsAllowed" val="1024"/> <!-- Dual Fist -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
@@ -1630,14 +1630,14 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <set name="weaponsAllowed" val="1280"/> <!-- Fist/Dual Fist -->
+  <set name="weaponsAllowed" val="1024"/> <!-- Dual Fist -->
   <for>
     <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
       <mul order="0x30" stat="pAtkSpd" val="1.20">
-        <using kind="Fist,Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
+        <using kind="Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
       </mul>
       <add order="0x40" stat="accCombat" val="6">
-        <using kind="Fist,Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
+        <using kind="Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
       </add>
     </effect>
   </for>
@@ -1684,7 +1684,7 @@
   <table name="#magicLvl"> 34 35 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
   <table name="#power"> 501 535 570 607 646 729 773 820 868 918 971 1025 1081 1140 1200 1262 1327 1393 1461 1531 1603 1677 1753 1830 1908 1988 2070 2153 2237 2322 2408 2494 2581 2669 2757 2846 2934 3022 3109 3196 </table>
   <table name="#ench1Power"> 3225 3254 3283 3312 3340 3369 3398 3427 3456 3484 3513 3542 3571 3600 3628 3657 3686 3715 3744 3772 3801 3830 3859 3888 3916 3945 3974 4003 4032 4061 </table>
-  <set name="weaponsAllowed" val="1280"/> <!-- Fist/Dual Fist -->
+  <set name="weaponsAllowed" val="1024"/> <!-- Dual Fist -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
@@ -1864,11 +1864,11 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="624"/>
-  <set name="weaponsAllowed" val="1280"/> <!-- Fist/Dual Fist -->
+  <set name="weaponsAllowed" val="1024"/> <!-- Dual Fist -->
   <for>
     <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
       <add order="0x40" stat="accCombat" val="6">
-        <using kind="Fist,Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
+        <using kind="Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
       </add>
       <mul order="0x30" stat="pAtk" val="1.43">
         <player hp="60"/>
@@ -1975,15 +1975,15 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="582"/>
-  <set name="weaponsAllowed" val="1280"/> <!-- Fist/Dual Fist -->
+  <set name="weaponsAllowed" val="1024"/> <!-- Dual Fist -->
   <for>
     <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="possession">
       <mul order="0x30" stat="pAtk" val="0.7"/>
       <add order="0x40" stat="rEvas" val="12">
-        <using kind="Fist,Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
+        <using kind="Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
       </add>
       <mul order="0x30" stat="runSpd" val="1.3">
-        <using kind="Fist,Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
+        <using kind="Dual Fist"/> <!-- when using hand-to-hand combat weapons -->
       </mul>
       <sub order="0x40" stat="accCombat" val="9"/>
     </effect>
