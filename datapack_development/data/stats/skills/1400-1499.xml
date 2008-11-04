@@ -1011,7 +1011,7 @@
   <set name="target" val="TARGET_PARTY_MEMBER"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
-  <cond msg="Pride of Kamael cannot be used due to unsuitable terms.">
+  <cond msg="Usable only on Kamael party members.">
     <target class_id_restriction="123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136"/>
   </cond>
   <for>
@@ -1022,9 +1022,7 @@
       <mul order="0x30" stat="pAtk" val="1.1"> <!-- Need retail values -->
         <using kind="Ancient,Crossbow,Rapier"/> <!-- when a Kamael-only weapon is used. -->
       </mul>
-      <add order="0x40" stat="blowRate" val="46"> <!-- Need retail values -->
-        <using kind="Ancient,Crossbow,Rapier"/> <!-- when a Kamael-only weapon is used. -->
-      </add>
+      <add order="0x40" stat="blowRate" val="46"/> <!-- Need retail values -->
     </effect>
   </for>
 </skill>

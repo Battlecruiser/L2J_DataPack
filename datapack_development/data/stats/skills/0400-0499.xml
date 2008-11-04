@@ -248,9 +248,7 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
     <effect self="1" count="1" name="Buff" time="15" val="0">
-      <mul order="0x30" stat="blowRate" val="1.4"/> <!-- Should be only using Dagger ? -->
-      <!-- Must be confirmed -->
-      <mul order="0x30" stat="lethalRate" val="1.5"/> <!-- Should be only using Dagger ? -->
+      <mul order="0x30" stat="lethalRate" val="1.5"/>
    </effect>
   </for>
 </skill>
@@ -267,8 +265,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
-      <mul order="0x30" stat="lethalRate" val="#lethalRate"/> <!-- Should be only using Dagger ? -->
-      <mul order="0x30" stat="blowRate" val="1.20"/> <!-- Should be only using Dagger ? -->
+      <mul order="0x30" stat="blowRate" val="1.20"/>
     </effect>
   </for>
 </skill>

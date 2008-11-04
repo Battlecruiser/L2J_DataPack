@@ -1246,15 +1246,21 @@
   <set name="aggroPoints" val="669"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="focus">
-      <basemul order="0x30" stat="rCrit" val="-0.30"/> <!-- Critical -30% -->
-      <mul order="0x30" stat="blowRate" val="1.60"> <!-- Blow land rate +60% -->
+      <basemul order="0x30" stat="rCrit" val="-0.30"> <!-- Critical -30% -->
         <using kind="Dagger"/>
-      </mul>
+      </basemul>
+      <mul order="0x30" stat="blowRate" val="1.60"/> <!-- Blow land rate +60% -->
       <mul order="0x30" stat="cAtk" val="0.70"> <!-- Critical Damage from front -30% -->
-        <player front="True"/>
+        <and>
+          <player front="True"/>
+          <using kind="Dagger"/>
+        </and>
       </mul>
       <mul order="0x30" stat="cAtk" val="1.90"> <!-- Critical Damage from back +90% -->
-        <player behind="True"/>
+        <and>
+          <player behind="True"/>
+          <using kind="Dagger"/>
+        </and>
       </mul>
     </effect>
   </for>
@@ -1273,16 +1279,23 @@
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="focus">
       <basemul order="0x30" stat="rCrit" val="-0.30"> <!-- Critical Chance from front -30% -->
-        <player front="True"/>
+        <and>
+          <player front="True"/>
+          <using kind="Dagger"/>
+        </and>
       </basemul>
       <basemul order="0x30" stat="rCrit" val="0.30"> <!-- Critical Chance from side +30% -->
         <and>
           <player front="False"/>
           <player behind="False"/>
+          <using kind="Dagger"/>
         </and>
       </basemul>
       <basemul order="0x30" stat="rCrit" val="0.60"> <!-- Critical Chance from back +60% -->
-        <player behind="True"/>
+        <and>
+          <player behind="True"/>
+          <using kind="Dagger"/>
+        </and>
       </basemul>
     </effect>
   </for>
@@ -1301,16 +1314,23 @@
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="focus">
       <mul order="0x30" stat="cAtk" val="0.70"> <!-- Critical Damage from front -30% -->
-        <player front="True"/>
+        <and>
+          <player front="True"/>
+          <using kind="Dagger"/>
+        </and>
       </mul>
       <mul order="0x30" stat="cAtk" val="1.30"> <!-- Critical Damage from side +30% -->
         <and>
           <player front="False"/>
           <player behind="False"/>
+          <using kind="Dagger"/>
         </and>
       </mul>
       <mul order="0x30" stat="cAtk" val="1.60"> <!-- Critical Damage from back +60% -->
-        <player behind="True"/>
+        <and>
+          <player behind="True"/>
+          <using kind="Dagger"/>
+        </and>
       </mul>
     </effect>
   </for>
@@ -1542,9 +1562,9 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect self="1" count="1" name="ImmobileBuff" time="30" val="0" stackOrder="3" stackType="pd_up_special">
-      <add order="0x40" stat="pDef" val="5400"/> <!-- Should be only using Shield ? -->
-      <add order="0x40" stat="mDef" val="4050"/> <!-- Should be only using Shield ? -->
-      <mul order="0x30" stat="cancelVuln" val="0.9"/> <!-- value to be confirmed --> <!-- Should be only using Shield ? -->
+      <add order="0x40" stat="pDef" val="5400"/>
+      <add order="0x40" stat="mDef" val="4050"/>
+      <mul order="0x30" stat="cancelVuln" val="0.9"/> <!-- value to be confirmed -->
     </effect>
     <effect count="1" name="TargetMe" time="1" val="0"/>
   </for>
@@ -1562,8 +1582,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
-  <set name="effectType" val="BUFF"/>
-  <set name="effectPower" val="100"/>
   <for>
     <effect self="1" count="1" name="Buff" time="30" val="0" stackOrder="6" stackType="avoid_up_special">
       <add order="0x40" stat="rEvas" val="6"/>
