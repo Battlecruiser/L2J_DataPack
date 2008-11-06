@@ -139,9 +139,9 @@
     <add order="0x10" stat="DEX" val="1"/> <!-- Dex +1 -->
     <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
     <mul order="0x30" stat="pAtk" val="1.054"/> <!-- P. Atk. +5.4% -->
-    <add order="0x40" stat="maxHp" val="492"/> <!-- Maximum HP +492 effect -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Darkness resistance is increased by +8 -->
-    <mul order="0x30" stat="MpConsumeRate" val="0.97"/> <!-- MP consumption of the active skill is decreased +? --> <!-- Guessing -->
+    <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 Effect -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark resistance +8 -->
+    <mul order="0x30" stat="MpConsumeRate" val="0.97"/> <!-- Decreased MP consumption for active skill +? --> <!-- Guessing -->
   </for>
 </skill>
 <skill id="3415" levels="1" name="Dynasty Leather Armor - Weapon Master">
@@ -156,7 +156,7 @@
     <add order="0x10" stat="STR" val="2"/> <!-- Str +2 -->
     <mul order="0x30" stat="pAtk" val="1.054"/> <!-- P. Atk +5.4% -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- MaxHP +492 -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Increase Darkness Resistance +8 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
     <basemul order="0x30" stat="rCrit" val="0.03"/> <!-- Critical Damage Chance +? --> <!-- Guessing -->
   </for>
 </skill>
@@ -170,8 +170,8 @@
   <for>
     <sub order="0x10" stat="INT" val="1"/> <!-- Int -1 -->
     <add order="0x10" stat="MEN" val="1"/> <!-- Men +1 -->
-    <mul order="0x30" stat="mAtkSpd" val="1.12"/> <!-- Casting Spd +12% -->
-    <add order="0x40" stat="maxMp" val="257"/> <!-- Maximum MP +257 -->
+    <mul order="0x30" stat="mAtkSpd" val="1.12"/> <!-- Casting Spd. +12% -->
+    <add order="0x40" stat="maxMp" val="257"/> <!-- Max MP +257 -->
     <mul order="0x30" stat="darkVuln" val="0.94"/> <!-- Darkness Resistance +6 -->
   </for>
 </skill>
@@ -214,9 +214,9 @@
     <add order="0x10" stat="CON" val="2"/> <!-- Con +2 -->
     <mul order="0x30" stat="pAtkSpd" val="1.03"/> <!-- increase Atk. Spd. +? --> <!-- Guessing -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- MaxHP +492 -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Increase Darkness Resistance +8 -->
-    <mul order="0x30" stat="pAtk" val="1.03"/> <!-- increase P. Atk. +? --> <!-- Guessing -->
-    <mul order="0x30" stat="pDef" val="1.03"/> <!-- P. Def. +? --> <!-- Guessing -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <mul order="0x30" stat="pAtk" val="1.03"/> <!-- Increase P. Atk. +? --> <!-- Guessing -->
+    <mul order="0x30" stat="pDef" val="1.03"/> <!-- Increase P. Def. +? --> <!-- Guessing -->
   </for>
 </skill>
 <skill id="3421" levels="1" name="Wolf Mount">
