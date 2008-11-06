@@ -556,8 +556,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <sub order="0x40" stat="CON" val="2"/> <!-- Con -2 -->
-    <add order="0x40" stat="STR" val="2"/> <!-- Str +2 -->
+    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
+    <add order="0x10" stat="STR" val="2"/> <!-- Str +2 -->
     <mul order="0x30" stat="pAtk" val="1.066"/> <!-- P. Atk. +6.6% -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Darkness Resistance +8 -->
@@ -573,8 +573,8 @@
   <set name="castRange" val="-1"/> 
   <set name="effectRange" val="-1"/> 
   <for>
-    <sub order="0x40" stat="CON" val="2"/> <!-- Con -2 -->
-    <add order="0x40" stat="STR" val="2"/> <!-- Str +2 -->
+    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
+    <add order="0x10" stat="STR" val="2"/> <!-- Str +2 -->
     <mul order="0x30" stat="pDef" val="1.066"/> <!-- P. Def. +6.6% -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
@@ -589,9 +589,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <sub order="0x40" stat="CON" val="2"/> <!-- Con -2 -->
-    <add order="0x40" stat="STR" val="1"/> <!-- Str +1 -->
-    <add order="0x40" stat="DEX" val="1"/> <!-- Dex +1 -->
+    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
+    <add order="0x10" stat="STR" val="1"/> <!-- Str +1 -->
+    <add order="0x10" stat="DEX" val="1"/> <!-- Dex +1 -->
     <mul order="0x30" stat="pAtk" val="1.066"/> <!-- P. Atk. +6.6% -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- Max. HP +492 -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Resistance to Darkness attacks +8 -->
