@@ -111,7 +111,7 @@
 <skill id="3312" levels="1" name="Yellow Talisman of Healing"> 
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/> 
-  <set name="operateType" val="OP_PASSIVE"/> 
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/> 
   <set name="effectRange" val="-1"/> 
   <for> 
@@ -440,10 +440,10 @@
   <for>
     <sub order="0x10" stat="STR" val="2"/> <!-- Str -2 -->
     <add order="0x10" stat="CON" val="2"/> <!-- Con +2 -->
-    <mul order="0x30" stat="pDef" val="1.054"/> <!-- Physical Defense Power +5.4% -->
-    <add order="0x40" stat="maxHp" val="492"/> <!-- Maximum HP +492 effect -->
+    <mul order="0x30" stat="pDef" val="1.054"/> <!-- P. Def. +5.4% -->
+    <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 effect -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Darkness resistance is increased +8 -->
-    <mul order="0x30" stat="gainHp" val="1.03"/> <!-- received Heal is increased +3% -->
+    <mul order="0x30" stat="gainHp" val="1.03"/> <!-- Received Increased Heal +3% -->
     <mul order="0x30" stat="stunVuln" val="0.97"/> <!-- Shock resistance is increased +? --> <!-- Guessing -->
   </for>
 </skill>
@@ -459,7 +459,7 @@
     <add order="0x10" stat="STR" val="2"/> <!-- Str +2 -->
     <mul order="0x30" stat="pAtk" val="1.054"/> <!-- P. Atk +5.4% -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- MaxHP +492 -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Increase Darkness Resistance +8 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
     <basemul order="0x30" stat="rCrit" val="0.03"/> <!-- Critical Damage Chance +? --> <!-- Guessing -->
   </for>
 </skill>
@@ -473,11 +473,10 @@
   <for>
     <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
     <add order="0x10" stat="STR" val="2"/> <!-- Str +2 -->
-    <add order="0x10" stat="DEX" val="1"/> <!-- Dex +1 -->
     <mul order="0x30" stat="pAtk" val="1.054"/> <!-- P. Atk. +5.4% -->
-    <add order="0x40" stat="maxHp" val="492"/> <!-- Maximum HP +492 effect -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Darkness resistance is increased by +8 -->
-    <mul order="0x30" stat="MpConsumeRate" val="0.97"/> <!-- MP consumption of the active skill is decreased +? --> <!-- Guessing -->
+    <add order="0x40" stat="maxHp" val="492"/> <!-- HP +492 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Resistance to Darkness attacks +8 -->
+    <mul order="0x30" stat="MpConsumeRate" val="0.97"/> <!-- Decreases MP consumption for active skills +? --> <!-- Guessing -->
   </for>
 </skill>
 <skill id="3351" levels="1" name="Dynasty Breast Plate - Bard">
@@ -490,10 +489,10 @@
   <for>
     <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
     <add order="0x10" stat="STR" val="2"/> <!-- Str +2 -->
-    <mul order="0x30" stat="pDef" val="1.054"/> <!-- Physical Defense Power +5.4% -->
-    <add order="0x40" stat="maxHp" val="492"/> <!-- Maximum HP +492 effect -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Darkness resistance is increased by +8 -->
-    <mul order="0x30" stat="MpConsumeRate" val="0.97"/> <!-- MP consumption is decreased when song and dance skills are used +? --> <!-- Guessing -->
+    <mul order="0x30" stat="pDef" val="1.054"/> <!-- P. Def. +5.4% -->
+    <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 effect -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark resistance +8 -->
+    <mul order="0x30" stat="MpConsumeRate" val="0.97"/> <!-- Decreased MP consumption when song and dance skills are used +? --> <!-- Guessing --> <!-- Need Core Support -->
   </for>
 </skill>
 <skill id="3352" levels="1" name="Dynasty Leather Armor - Dagger Master">
@@ -507,9 +506,9 @@
     <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
     <add order="0x10" stat="DEX" val="2"/> <!-- Dex +2 -->
     <add order="0x40" stat="rEvas" val="4.3"/> <!-- Evasion +4.3 -->
-    <add order="0x40" stat="maxHp" val="492"/> <!-- Maximum HP +492 effect -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Darkness resistance is increased by +8 -->
-    <mul order="0x30" stat="rootVuln" val="0.97"/> <!-- Hold resistance +? --> <!-- Guessing -->
+    <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 Effect -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark resistance +8 -->
+    <mul order="0x30" stat="rootVuln" val="0.97"/> <!-- Hold resistance are increased +? --> <!-- Guessing -->
     <mul order="0x30" stat="pAtkSpd" val="1.03"/> <!-- Atk. Spd. are increased +? --> <!-- Guessing -->
   </for>
 </skill>
@@ -524,9 +523,9 @@
     <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
     <add order="0x10" stat="DEX" val="2"/> <!-- Dex +2 -->
     <add order="0x40" stat="accCombat" val="4.3"/> <!-- Accuracy +4.3 -->
-    <add order="0x40" stat="maxMp" val="321"/> <!-- Maximum MP +321 effect -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Darkness resistance is increased by +8 -->
-    <mul order="0x30" stat="pAtkSpd" val="1.03"/> <!-- Atk. Spd. +? --> <!-- Guessing -->
+    <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 Effect -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark resistance +8 -->
+    <mul order="0x30" stat="pAtkSpd" val="1.03"/> <!-- Atk. Spd. are increased +? --> <!-- Guessing -->
     <add order="0x40" stat="regMp" val="3.0"/> <!-- MP recovery are increased +? --> <!-- Guessing -->
   </for>
 </skill>
@@ -541,10 +540,10 @@
     <sub order="0x10" stat="INT" val="2"/> <!-- Int -2 -->
     <add order="0x10" stat="MEN" val="2"/> <!-- Men +2 -->
     <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
-    <add order="0x40" stat="maxMp" val="321"/> <!-- Maximum MP +321 -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Increase Darkness Resistance +8 -->
-    <mul order="0x30" stat="giveHp" val="1.03"/> <!-- increase amount of heal +? --> <!-- Guessing -->
-    <mul order="0x30" stat="cancelVuln" val="1.03"/> <!-- increase magic cancel rate +? --> <!-- Guessing -->
+    <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <mul order="0x30" stat="giveHp" val="1.03"/> <!-- Increase amount of heal +? --> <!-- Guessing -->
+    <mul order="0x30" stat="cancelVuln" val="1.03"/> <!-- Increase magic cancel rate +? --> <!-- Guessing -->
    </for>
 </skill>
 <skill id="3355" levels="1" name="Dynasty Tunic - Enchanter">
@@ -558,10 +557,10 @@
     <sub order="0x10" stat="INT" val="2"/> <!-- Int -2 -->
     <add order="0x10" stat="MEN" val="2"/> <!-- Men +2 -->
     <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
-    <add order="0x40" stat="maxMp" val="321"/> <!-- Maximum MP +321 -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Increase Darkness Resistance +8 -->
-    <mul order="0x30" stat="MpConsumeRate" val="0.97"/> <!-- decrease MP consumption +? --> <!-- Guessing -->
-    <mul order="0x30" stat="cancelVuln" val="0.97"/> <!-- decrease magic cancel rate +? --> <!-- Guessing -->
+    <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <mul order="0x30" stat="MpConsumeRate" val="0.97"/> <!-- Decrease MP consumption +? --> <!-- Guessing -->
+    <mul order="0x30" stat="cancelVuln" val="0.97"/> <!-- Decrease magic cancel rate +? --> <!-- Guessing -->
   </for>
 </skill>
 <skill id="3356" levels="1" name="Dynasty Tunic - Summoner">
@@ -575,9 +574,9 @@
     <sub order="0x10" stat="INT" val="2"/> <!-- Int -2 -->
     <add order="0x10" stat="MEN" val="2"/> <!-- Men +2 -->
     <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
-    <add order="0x40" stat="maxMp" val="321"/> <!-- Maximum MP +321 -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Increase Darkness Resistance +8 -->
-    <mul order="0x30" stat="pAtk" val="1.03"/> <!-- increase P. Atk. +? --> <!-- Guessing -->
+    <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <mul order="0x30" stat="pAtk" val="1.03"/> <!-- Increase P. Atk. +? --> <!-- Guessing -->
     <mul order="0x30" stat="pDef" val="1.03"/> <!-- P. Def. +? --> <!-- Guessing -->
   </for>
 </skill>
@@ -593,10 +592,10 @@
     <add order="0x10" stat="WIT" val="1"/> <!-- Wit +1 -->
     <sub order="0x10" stat="MEN" val="2"/> <!-- Men -2 -->
     <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
-    <add order="0x40" stat="maxMp" val="321"/> <!-- Maximum MP +321 -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Increase Darkness Resistance +8 -->
-    <mul order="0x30" stat="stunVuln" val="0.97"/> <!-- increase stun resistance +? --> <!-- Guessing -->
-    <mul order="0x30" stat="mAtk" val="1.03"/> <!-- increase M. Atk +? --> <!-- Guessing -->
+    <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <mul order="0x30" stat="stunVuln" val="0.97"/> <!-- Increase stun resistance +? --> <!-- Guessing -->
+    <mul order="0x30" stat="mAtk" val="1.03"/> <!-- Increase M. Atk +? --> <!-- Guessing -->
   </for>
 </skill> 
 <skill id="3358" levels="1" name="Flag Equip">
@@ -845,7 +844,7 @@
   <set name="effectRange" val="-1"/> 
   <for> 
   </for> 
-</skill> 
+</skill>
 <skill id="3385" levels="1" name="Dynasty Resistance Earring"> 
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/> 
