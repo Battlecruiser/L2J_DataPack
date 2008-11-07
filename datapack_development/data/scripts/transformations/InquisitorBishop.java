@@ -64,9 +64,9 @@ public class InquisitorBishop extends L2Transformation
         // Divine Flash
         this.getPlayer().addSkill(SkillTable.getInstance().getInfo(1528, this.getPlayer().getLevel()-43), false);
         // Surrender to the Holy
-        this.getPlayer().addSkill (SkillTable.getInstance().getInfo(1524, this.getPlayer().getLevel()-43), false);
+        this.getPlayer().addSkill(SkillTable.getInstance().getInfo(1524, this.getPlayer().getLevel()-43), false);
         // Divine Curse
-        this.getPlayer().addSkill (SkillTable.getInstance().getInfo(1525, this.getPlayer().getLevel()-43), false);
+        this.getPlayer().addSkill(SkillTable.getInstance().getInfo(1525, this.getPlayer().getLevel()-43), false);
         // Switch Stance
 		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(838, 1), false);
 		// Send a Server->Client packet StatusUpdate to the L2PcInstance.

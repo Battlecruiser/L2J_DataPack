@@ -24,8 +24,6 @@ public class InquisitorShilienElder extends L2Transformation
                             {
                                     // Invocation
                             		case 1430:
-                                    // Holy Weapon
-                            		case 1043:
                             		// Wild Magic
                         			case 1303:
                         			// Empower
@@ -61,10 +59,12 @@ public class InquisitorShilienElder extends L2Transformation
         this.getPlayer().addSkill(SkillTable.getInstance().getInfo(1523, this.getPlayer().getLevel()-43), false);
         // Divine Flash
         this.getPlayer().addSkill(SkillTable.getInstance().getInfo(1528, this.getPlayer().getLevel()-43), false);
+        // Holy Weapon
+        this.getPlayer().addSkill(SkillTable.getInstance().getInfo(1043, 1), false);
         // Surrender to the Holy
-        this.getPlayer().addSkill (SkillTable.getInstance().getInfo(1524, this.getPlayer().getLevel()-43), false);
+        this.getPlayer().addSkill(SkillTable.getInstance().getInfo(1524, this.getPlayer().getLevel()-43), false);
         // Divine Curse
-        this.getPlayer().addSkill (SkillTable.getInstance().getInfo(1525, this.getPlayer().getLevel()-43), false);
+        this.getPlayer().addSkill(SkillTable.getInstance().getInfo(1525, this.getPlayer().getLevel()-43), false);
         // Switch Stance
 		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(838, 1), false);
 		// Send a Server->Client packet StatusUpdate to the L2PcInstance.
@@ -84,6 +84,8 @@ public class InquisitorShilienElder extends L2Transformation
         this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(1523, this.getPlayer().getLevel()-43), false);
         // Divine Flash
         this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(1528, this.getPlayer().getLevel()-43), false);
+        // Holy Weapon
+        this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(1043, 1), false);
         // Surrender to the Holy
 		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(1524, this.getPlayer().getLevel()-43), false);
 		// Divine Curse
