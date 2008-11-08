@@ -1931,7 +1931,8 @@
       <add order="0x40" stat="runSpd" val="20"/>
       <mul order="0x30" stat="pDef" val="0.75"/>
       <mul order="0x30" stat="mDef" val="0.75"/>
-      <!-- Missing Cancel/Debuff resistance +??, Heals are ??% more effective  (custom value) -->
+      <mul order="0x30" stat="debuffVuln" val="0.0"/>
+      <!-- Missing Cancel resistance +??, Heals are ??% more effective  (custom value) -->
     </effect>
   </for>
 </skill>
