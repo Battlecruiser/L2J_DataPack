@@ -392,6 +392,14 @@
         </not>
       </and>
     </add>
+    <mul order="0x30" stat="critVuln" val="0.70">
+      <and>
+        <using kind="Heavy"/>
+        <not>
+          <using kind="Light,Magic"/>
+        </not>
+      </and>
+    </mul>
   </for>
 </skill>
 <skill id="233" levels="47" name="Light Armor Mastery">

@@ -125,7 +125,7 @@
   <set name="effectPower" val="80"/>
   <set name="soulMaxConsumeCount" val="5"/>
   <for>
-    <effect count="5" name="ManaDamOverTime" time="2" val="40" stackOrder="1" stackType="multiple_debuff">
+    <effect count="5" name="ManaDamOverTime" time="2" val="40">
       <mul order="0x30" stat="runSpd" val="0.70"/>
       <mul order="0x30" stat="pAtkSpd" val="0.90"/>
       <mul order="0x30" stat="mAtkSpd" val="0.90"/>
