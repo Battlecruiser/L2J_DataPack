@@ -839,15 +839,21 @@
 </skill>
 <skill id="5461" levels="12" name="Castle Gunner Shot">
   <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
     none
   -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume"> 19 22 25 28 31 33 36 38 40 42 42 43 </table>
+  <set name="magicLvl" val="70"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="102"/> <!-- power for lvl7 -->
+  <set name="element" val="2"/> <!-- Fire -->
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="1000"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="900"/>
+  <set name="effectRange" val="1500"/>
   <for>
   </for>
 </skill>
@@ -937,15 +943,22 @@
 </skill>
 <skill id="5468" levels="12" name="Castle Gunner Fire">
   <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
     none
   -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume"> 19 22 25 28 31 33 36 38 40 42 42 43 </table>
+  <set name="magicLvl" val="70"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="87"/> <!-- power for lvl7 -->
+  <set name="element" val="2"/> <!-- Fire -->
+  <set name="target" val="TARGET_AREA"/>
+  <set name="radius" val="150"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="1000"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="300"/>
+  <set name="effectRange" val="600"/>
   <for>
   </for>
 </skill>
