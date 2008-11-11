@@ -857,7 +857,7 @@ INSERT INTO `weapon` VALUES
 (5599,'Meteor Shower - Focus','rhand','true',1600,1,1,'fine_steel','a',213,20,'blunt',4,4,0,0,0,379,0,107,-1,18300000,1128,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3044-1;'),
 (5600,'Meteor Shower - Critical Bleed','rhand','true',1600,1,1,'fine_steel','a',213,20,'blunt',4,4,0,0,0,379,0,107,-1,18300000,1128,'true','true','true','true',0,0,0,0,0,3052,1,42,0,'0-0;'),
 (5601,'Meteor Shower - Rsk. Haste','rhand','true',1600,1,1,'fine_steel','a',213,20,'blunt',4,4,0,0,0,379,0,107,-1,18300000,1128,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3056-1;'),
-(5602,'Elysian - Health','rhand','true',1580,1,1,'oriharukon','a',232,20,'blunt',4,4,0,0,0,379,0,114,-1,27000000,1659,'true','true','true','true',0,0,0,0,0,3021,5,42,0,'3013-3;'),
+(5602,'Elysian - Health','rhand','true',1580,1,1,'oriharukon','a',232,20,'blunt',4,4,0,0,0,379,0,114,-1,27000000,1659,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3013-3;'),
 (5603,'Elysian - Anger','rhand','true',1580,1,1,'oriharukon','a',232,20,'blunt',4,4,0,0,0,379,0,114,-1,27000000,1659,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3057-2;'),
 (5604,'Elysian - Critical Drain','rhand','true',1580,1,1,'oriharukon','a',232,20,'blunt',4,4,0,0,0,379,0,114,-1,27000000,1659,'true','true','true','true',0,0,0,0,0,3022,7,0,0,'0-0;'),
 (5605,'Branch of The Mother Tree - Conversion','lrhand','true',900,1,1,'wood','a',226,20,'bigblunt',4,4,0,0,0,325,0,152,-1,27000000,1659,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3048-2;'),
