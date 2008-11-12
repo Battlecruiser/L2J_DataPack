@@ -74,6 +74,7 @@
   <table name="#mDef"> 3 3.1 3.2 3.3 3.4 3.5 3.75 4 4.25 4.5 </table>
   <table name="#runSpd"> 4 6 8 10 12 14 16 18 19 20 </table>
   <table name="#accCombat"> 15 20 25 30 35 40 45 50 55 60 </table>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -93,6 +94,7 @@
   </for>
 </skill>
 <skill id="3604" levels="1" name="Frintezza's Necklace">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -113,6 +115,7 @@
   </for>
 </skill>
 <skill id="3605" levels="1" name="Clan Oath Heavy Armor Set">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -124,6 +127,7 @@
   </for>
 </skill>
 <skill id="3606" levels="1" name="Clan Oath Light Armor Set">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -135,6 +139,7 @@
   </for>
 </skill>
 <skill id="3607" levels="1" name="Clan Oath Robe Set">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -150,6 +155,7 @@
   <table name="#maxCP"> 1035 1116 </table>
   <table name="#rCrit"> 1.0 1.02621 </table>
   <table name="#cAtk"> 0 3 </table>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -169,6 +175,7 @@
 <skill id="3609" levels="2" name="Apella Light Armor Set">
   <!-- Needs to be finished -->
   <table name="#maxCP"> 1035 1116 </table>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -188,6 +195,7 @@
 <skill id="3610" levels="2" name="Apella Robe Set">
   <!-- Needs to be finished -->
   <table name="#maxCP"> 1035 1116 </table>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -419,6 +427,7 @@
   <table name="#mDef"> 3 3.1 3.2 3.3 3.4 3.5 3.75 4 4.25 4.5 </table>
   <table name="#runSpd"> 4 6 8 10 12 14 16 18 19 20 </table>
   <table name="#accCombat"> 15 20 25 30 35 40 45 50 55 60 </table>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -479,8 +488,13 @@
   </for>
 </skill>
 <skill id="3633" levels="2" name="Residential Shock Immunity">
+<!-- Done by theREALizzy
+      Lvl 1 - Active: Momentarily increases resistance to shock attacks.
+      Lvl 2 - Active: Momentarily gives complete resistance to shock attacks.
+-->
   <table name="#vuln"> 0.5 0.0 </table>
   <table name="#stack"> 50 100 </table>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="1800000"/>
   <set name="skillType" val="BUFF"/>
@@ -496,6 +510,7 @@
 <skill id="3634" levels="1" name="Special Ability Infinity Sword">
   <!-- Guessed. Copied from Infinity Cleaver -->
   <set name="magicLvl" val="80"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAPON_SA"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -516,6 +531,7 @@
 <skill id="3635" levels="1" name="Special Ability Infinity Shooter">
   <!-- Guessed. Copied from Infinity Bow with minor modification -->
   <set name="magicLvl" val="80"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAPON_SA"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -531,70 +547,36 @@
     <mul order="0x30" stat="MpConsumeRate" val="0.88"/> <!-- MP Consumption -12% -->
   </for>
 </skill>
-<skill id="3636" levels="1" name="Dynasty Platinum Plate - Shield Master">
-  <!-- Done by Nitrozik -->
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
+<skill id="3636" levels="1" name="Dynasty Platinum Plate">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
-    <sub order="0x10" stat="STR" val="2"/> <!-- Str -2 -->
-    <add order="0x10" stat="CON" val="2"/> <!-- Con +2 -->
-    <mul order="0x30" stat="pDef" val="1.066"/> <!-- P. Def. +6.6% -->
-    <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 -->
-    <mul order="0x30" stat="gainHp" val="1.04"/> <!-- Heal Capacity +4% -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
-    <mul order="0x30" stat="stunVuln" val="0.85"/> <!-- Stun Resistance +15 -->
   </for>
 </skill>
-<skill id="3637" levels="1" name="Dynasty Platinum Plate - Weapon Master">
-  <!-- Done by Nitrozik -->
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
+<skill id="3637" levels="1" name="Dynasty Platinum Plate">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
-    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
-    <add order="0x10" stat="STR" val="2"/> <!-- Str +2 -->
-    <mul order="0x30" stat="pAtk" val="1.066"/> <!-- P. Atk. +6.6% -->
-    <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Darkness Resistance +8 -->
-    <add order="0x40" stat="cAtk" val="282"/> <!-- Critical Damage +282 -->
-    <basemul order="0x30" stat="rCrit" val="0.0295"/> <!-- Critical Rate +2.95% Increase -->
   </for>
 </skill>
-<skill id="3638" levels="1" name="Dynasty Platinum Plate - Bard">
-  <!-- Done by Nitrozik -->
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/> 
-  <set name="operateType" val="OP_PASSIVE"/> 
-  <set name="castRange" val="-1"/> 
-  <set name="effectRange" val="-1"/> 
-  <for>
-    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
-    <add order="0x10" stat="STR" val="2"/> <!-- Str +2 -->
-    <mul order="0x30" stat="pDef" val="1.066"/> <!-- P. Def. +6.6% -->
-    <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
-    <mul order="0x30" stat="MpConsumeRate" val="0.94"/> <!-- MP Consumption -6% Decrease for Song and Dance Skills  --> <!-- Need core support -->
-  </for>
-</skill>
-<skill id="3639" levels="1" name="Dynasty Platinum Plate - Force Master">
-  <!-- Done by Nitrozik -->
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
+<skill id="3638" levels="1" name="Dynasty Platinum Plate">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
-    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
-    <add order="0x10" stat="STR" val="2"/> <!-- Str +2 -->
-    <mul order="0x30" stat="pAtk" val="1.066"/> <!-- P. Atk. +6.6% -->
-    <add order="0x40" stat="maxHp" val="492"/> <!-- Max. HP +492 -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Resistance to Darkness attacks +8 -->
-    <mul order="0x30" stat="MpConsumeRate" val="0.94"/> <!-- Decreases MP consumption by 6% for active skills -->
+  </for>
+</skill>
+<skill id="3639" levels="1" name="Dynasty Platinum Plate">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <for>
   </for>
 </skill>
 <skill id="3640" levels="1" name="Dynasty Jewel Leather Mail">
@@ -670,6 +652,7 @@
   </for>
 </skill>
 <skill id="3649" levels="1" name="Beleth's Ring">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -813,7 +796,7 @@
   <for>
   </for>
 </skill>
-<skill id="3666" levels="1" name="Yellow Talisman - Increase Force">
+<skill id="3666" levels="1" name="Yellow Talisman - Increase Energy">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>

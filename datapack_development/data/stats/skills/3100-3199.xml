@@ -55,7 +55,6 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="FEAR"/>
   <set name="operateType" val="OP_CHANCE"/>
-  <set name="power" val="20"/> <!-- Guessing -->
   <set name="chanceType" val="ON_MAGIC_OFFENSIVE"/>
   <set name="activationChance" val="#chance"/>
   <set name="castRange" val="-1"/>
@@ -309,7 +308,6 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="FEAR"/>
   <set name="operateType" val="OP_CHANCE"/>
-  <set name="power" val="20"/> <!-- Guessing -->
   <set name="chanceType" val="ON_CRIT"/>
   <set name="activationChance" val="#chance"/>
   <set name="castRange" val="-1"/>
@@ -419,6 +417,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
@@ -462,6 +461,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="4000"/>
@@ -504,6 +504,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
@@ -513,7 +514,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-maxMp" stackType="max_mp_up">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-maxMp" stackType="MPregen">
       <mul order="0x30" stat="maxMp" val="#Tab-maxMp"/>
     </effect>
   </for>
@@ -526,6 +527,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
@@ -535,7 +537,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-maxMp" stackType="gainMp">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-maxMp" stackType="MPregen">
       <mul order="0x30" stat="gainMp" val="#Tab-maxMp"/>
     </effect>
   </for>
@@ -568,6 +570,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
@@ -590,6 +593,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
@@ -612,6 +616,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
@@ -634,6 +639,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="1500"/>
@@ -656,6 +662,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
@@ -678,6 +685,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
@@ -700,6 +708,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
@@ -723,6 +732,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
@@ -745,6 +755,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
@@ -767,6 +778,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
@@ -789,6 +801,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
@@ -798,7 +811,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="critical_prob_up">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="rCrit">
       <mul order="0x30" stat="rCrit" val="#rate"/>
     </effect>
   </for>
@@ -811,6 +824,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
@@ -820,7 +834,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="magic_critical_up">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rate" stackType="mCritRate">
       <mul order="0x30" stat="mCritRate" val="#rate"/>
     </effect>
   </for>
@@ -870,6 +884,7 @@
 <skill id="3146" levels="1" name="Item Skill: Recall">
   <set name="mpInitialConsume" val="32"/>
   <set name="mpConsume" val="78"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="600000"/>
   <set name="hitTime" val="20000"/>
@@ -884,6 +899,7 @@
 <skill id="3147" levels="1" name="Item Skill: Recall">
   <set name="mpInitialConsume" val="48"/>
   <set name="mpConsume" val="101"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="600000"/>
   <set name="hitTime" val="3500"/>
@@ -1072,10 +1088,10 @@
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpConsume" val="82"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1000"/>
   <set name="reuseDelay" val="2600000"/>
-  <set name="staticReuse" val="true"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/> 
@@ -1809,7 +1825,6 @@
   <set name="skillType" val="FEAR"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="20"/> <!-- Guessing -->
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
@@ -1914,6 +1929,7 @@
   <table name="#mpConsume"> 27 31 34 </table>
   <table name="#pReuseRate"> 0.9 0.8 0.7 </table> <!-- Needs check -->
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="300000"/>
   <set name="hitTime" val="4000"/>

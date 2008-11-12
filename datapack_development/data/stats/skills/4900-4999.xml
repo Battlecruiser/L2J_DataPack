@@ -892,6 +892,7 @@
 </skill>
 <skill id="4989" levels="1" name="Npc - Hot Spring Nectar">
 <!-- TODO -->
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -901,6 +902,7 @@
 </skill>
 <skill id="4990" levels="1" name="Npc - Hot Spring Mineral">
 <!-- TODO -->
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -911,6 +913,7 @@
 <skill id="4991" levels="1" name="Hot Spring Sulfur">
 <!-- TODO -->
 <!-- Decreases Atk. Spd. and Casting Spd. Effect 5. -->
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -921,6 +924,7 @@
 <skill id="4992" levels="1" name="Stun">
 <!-- TODO -->
 <!-- Shocks and instantly Immobilizes. -->
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -930,6 +934,7 @@
 </skill>
 <skill id="4993" levels="1" name="Venom - Strike">
   <!-- Benom Skills -->
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="hitTime" val="830"/>
@@ -940,6 +945,7 @@
 </skill>
 <skill id="4994" levels="1" name="Venom - Sonic Storm">
   <!-- Benom Skills -->
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="hitTime" val="1900"/>
@@ -951,6 +957,7 @@
 </skill>
 <skill id="4995" levels="1" name="Venom - Teleport">
   <!-- Benom Skills -->
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="hitTime" val="2900"/>
@@ -961,6 +968,7 @@
 </skill>
 <skill id="4996" levels="1" name="Venom - Range Teleport">
   <!-- Benom Skills -->
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="hitTime" val="2900"/>
@@ -970,7 +978,8 @@
   </for>
 </skill>
 <skill id="4997" levels="1" name="Lidia - Regen">
-  <!-- Needs to be done -->
+<!-- TODO -->
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -979,7 +988,8 @@
   </for>
 </skill>
 <skill id="4998" levels="1" name="Lidia - Twister">
-  <!-- Needs to be done -->
+<!-- TODO -->
+  <set name="power" val="0.0"/>
   <set name="element" val="1"/> <!-- Wind -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
@@ -989,7 +999,8 @@
   </for>
 </skill>
 <skill id="4999" levels="1" name="Lidia - Range Life Drain">
-  <!-- Needs to be done -->
+  <!-- TODO -->
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="operateType" val="OP_PASSIVE"/>

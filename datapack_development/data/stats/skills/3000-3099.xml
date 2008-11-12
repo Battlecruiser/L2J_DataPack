@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
 <skill id="3001" levels="1" name="int_1">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -9,6 +10,7 @@
   </for>
 </skill>
 <skill id="3002" levels="1" name="int_2">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -17,6 +19,7 @@
   </for>
 </skill>
 <skill id="3003" levels="1" name="str_2">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -25,6 +28,7 @@
   </for>
 </skill>
 <skill id="3004" levels="1" name="maxmp_5">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -46,6 +50,7 @@
   </for>
 </skill>
 <skill id="3006" levels="1" name="Equip Set Items">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -172,6 +177,7 @@
   <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="power" val="0.0"/>
   <set name="skillType" val="WEAPON_SA"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
@@ -194,6 +200,7 @@
   <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="power" val="0.0"/>
   <set name="skillType" val="WEAPON_SA"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
@@ -232,6 +239,7 @@
   <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="power" val="0.0"/>
   <set name="skillType" val="WEAPON_SA"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
@@ -250,6 +258,7 @@
   <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="power" val="0.0"/>
   <set name="skillType" val="WEAPON_SA"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
@@ -653,6 +662,7 @@
   <!-- Needs to be verified -->
   <table name="#rate">61 63 64 66 71.9 68 71 73 75 77 79 81 82 84 86 90 88 106 111 116</table>
   <table name="#PvPbonus"> 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -709,6 +719,7 @@
   <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="64"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="power" val="0.0"/>
   <set name="skillType" val="WEAPON_SA"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
@@ -730,6 +741,7 @@
   <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="64"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="power" val="0.0"/>
   <set name="skillType" val="WEAPON_SA"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
@@ -991,6 +1003,7 @@
   <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="power" val="0.0"/>
   <set name="skillType" val="WEAPON_SA"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
@@ -1451,7 +1464,6 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="FEAR"/>
   <set name="operateType" val="OP_CHANCE"/>
-  <set name="power" val="20"/> <!-- Guessing -->
   <set name="chanceType" val="ON_HIT"/>
   <set name="activationChance" val="#chance"/>
   <set name="castRange" val="-1"/>

@@ -125,7 +125,7 @@
   <set name="effectPower" val="80"/>
   <set name="soulMaxConsumeCount" val="5"/>
   <for>
-    <effect count="5" name="ManaDamOverTime" time="2" val="40">
+    <effect count="5" name="ManaDamOverTime" time="2" val="40" stackOrder="1" stackType="multiple_debuff">
       <mul order="0x30" stat="runSpd" val="0.70"/>
       <mul order="0x30" stat="pAtkSpd" val="0.90"/>
       <mul order="0x30" stat="mAtkSpd" val="0.90"/>
@@ -166,6 +166,7 @@
   <set name="magicLvl" val="58"/>
   <set name="mpConsume" val="7"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
   <set name="reuseDelay" val="270000"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>

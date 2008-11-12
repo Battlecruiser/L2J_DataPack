@@ -7,6 +7,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="isDebuff" val="true"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2500"/>
@@ -122,6 +123,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="isDebuff" val="true"/>
   <set name="hitTime" val="2500"/>
@@ -222,6 +224,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1500"/>
   <set name="skillType" val="BUFF"/>
@@ -242,6 +245,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1500"/>
   <set name="skillType" val="BUFF"/>
@@ -262,6 +266,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1500"/>
   <set name="skillType" val="BUFF"/>
@@ -282,6 +287,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1500"/>
   <set name="skillType" val="REFLECT"/>
@@ -314,6 +320,7 @@
   <set name="coolTime" val="100"/>
   <set name="hitTime" val="2900"/>
   <set name="skillType" val="WEAKNESS"/>    <!-- skill used only to get targets and bradcast animation -->
+  <set name="power" val="0.0"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="800"/>
   <set name="effectRange" val="1300"/>
@@ -329,6 +336,7 @@
   <set name="skillRadius" val="300"/>
   <set name="skillType" val="WEAKNESS"/>    <!-- skill used only to get targets and bradcast animation -->
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
   <set name="castRange" val="800"/>
   <set name="effectRange" val="1300"/>
   <for>
@@ -407,6 +415,7 @@
   <set name="hitTime" val="500"/>
   <set name="skillType" val="WEAKNESS"/>   <!-- skill used only to get targets and bradcast animation -->
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
@@ -414,6 +423,7 @@
 </skill>
 <skill id="4223" levels="1" name="Face Chance: Night to Day">
   <!-- Zaken skills - change face -->
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="coolTime" val="1900"/>
   <set name="hitTime" val="1100"/>
@@ -427,6 +437,7 @@
 </skill>
 <skill id="4224" levels="1" name="Face Chance: Day to Night">
   <!-- Zaken skills - change face -->
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="coolTime" val="1900"/>
   <set name="hitTime" val="1100"/>
@@ -445,6 +456,7 @@
   <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="power" val="0.0"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
@@ -457,7 +469,8 @@
   <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="BUFF"/>
+  <set name="power" val="0.0"/>
+  <set name="skillType" val="DEBUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
     <mul order="0x30" stat="gainHp" val="0.0"/>
@@ -465,6 +478,7 @@
 </skill>
 <skill id="4227" levels="1" name="Zaken Regeneration">
   <!-- Zaken skills -->
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -472,7 +486,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="14400" val="0" stackOrder="1" stackType="hp_regen_up">
-      <mul order="0x30" stat="regHp" val="20"/>
+      <mul order="0x30" stat="regHp" val="1900"/>
     </effect>
   </for>
 </skill>
@@ -481,6 +495,7 @@
   <table name="#mpConsume"> 25 40 56 76 99 121 142 151 159 165 168 170 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
+  <set name="lvlDepend" val="1"/>
   <set name="power" val="#power"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_ONE"/>
@@ -490,6 +505,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1200"/>
+  <for>
+  </for>
 </skill>
 <skill id="4229" levels="12" name="NPC Double Wind Fist">
   <table name="#power"> 122 279 584 1110 1923 3030 4336 5002 5632 6187 6632 6978 </table>
@@ -562,6 +579,7 @@
 </skill>
 <skill id="4233" levels="1" name="Vampiric Attack">
   <!-- Summon Shadow Skill -->
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -590,6 +608,7 @@
 </skill>
 <skill id="4235" levels="1" name="none">
   <!-- Dietrich/Mikhail/Gustav Recall Skill -->
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="hitTime" val="15000"/>
@@ -602,6 +621,7 @@
   <!-- Gustav Skill -->
   <set name="magicLvl" val="70"/>
   <set name="mpConsume" val="65"/>
+  <set name="lvlDepend" val="1"/>
   <set name="power" val="51"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
@@ -653,6 +673,7 @@
 </skill>
 <skill id="4239" levels="1" name="Antharas Regeneration">
   <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -666,6 +687,7 @@
 </skill>
 <skill id="4240" levels="1" name="Antharas Regeneration">
   <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -679,6 +701,7 @@
 </skill>
 <skill id="4241" levels="1" name="Antharas Regeneration">
   <!-- Done by DJ MELERIX -->
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -692,6 +715,7 @@
 </skill>
 <skill id="4242" levels="1" name="Zaken Regeneration">
   <!-- Zaken skills -->
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="cancelEffect" val="4227"/>
   <set name="skillType" val="BUFF"/>
@@ -703,7 +727,7 @@
 <skill id="4243" levels="1" name="Venomous Poison">
   <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="70"/>
-  <set name="power" val="100"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="POISON"/>
   <set name="killByDOT" val="false"/>
@@ -741,6 +765,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
@@ -757,6 +782,7 @@
   <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="power" val="0.0"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
@@ -940,6 +966,7 @@
 <skill id="4256" levels="1" name="100% Stun Resistance.">
   <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="1"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -978,7 +1005,7 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
-  <set name="power" val="100"/>
+  <set name="power" val="0.0"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
@@ -1064,6 +1091,7 @@
   <set name="isMagic" val="true"/>
   <set name="magicLvl" val="30"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
@@ -1081,6 +1109,7 @@
   <set name="isMagic" val="true"/>
   <set name="magicLvl" val="44"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
@@ -1098,6 +1127,7 @@
   <set name="isMagic" val="true"/>
   <set name="magicLvl" val="25"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
@@ -1115,6 +1145,7 @@
   <set name="isMagic" val="true"/>
   <set name="magicLvl" val="40"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
@@ -1132,6 +1163,7 @@
   <set name="isMagic" val="true"/>
   <set name="magicLvl" val="44"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
@@ -1204,6 +1236,7 @@
   </for>
 </skill>
 <skill id="4272" levels="1" name="Greater Resist Archery Attack">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1216,6 +1249,7 @@
 </skill>
 <skill id="4273" levels="6" name="Resist Dagger">
   <table name="#Tab-daggerVuln"> 0.85 0.7 0.5 0.3 0.1 0.0 </table>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1227,8 +1261,9 @@
 </skill>
 <skill id="4274" levels="5" name="Blunt Attack Weak Point">
   <table name="#Tab-bluntVuln"> 1.1 1.15 1.2 1.3 1.5 </table>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="WEAKNESS"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1238,6 +1273,7 @@
 </skill>
 <skill id="4275" levels="5" name="Sacred Attack Weak Point">
   <table name="#Tab-holyVuln"> 1.1 1.15 1.2 1.3 1.5 </table>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1249,6 +1285,7 @@
 </skill>
 <skill id="4276" levels="5" name="Archery Attack Weak Point">
   <table name="#Tab-bowVuln"> 1.1 1.15 1.2 1.3 1.5 </table>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1261,6 +1298,7 @@
 </skill>
 <skill id="4277" levels="6" name="Resist Poison">
   <table name="#Tab-poisonVuln"> 0.85 0.7 0.5 0.3 0.1 0.0 </table>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1281,6 +1319,7 @@
 </skill>
 <skill id="4279" levels="5" name="Fire Attack Weak Point">
   <table name="#Tab-fireVuln"> 1.1 1.15 1.2 1.3 1.5 </table>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1292,6 +1331,7 @@
 </skill>
 <skill id="4280" levels="5" name="Water Attack Weak Point">
   <table name="#Tab-waterVuln"> 1.1 1.15 1.2 1.3 1.5 </table>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1303,6 +1343,7 @@
 </skill>
 <skill id="4281" levels="5" name="Wind Attack Weak Point">
   <table name="#Tab-windVuln"> 1.1 1.15 1.2 1.3 1.5 </table>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1314,6 +1355,7 @@
 </skill>
 <skill id="4282" levels="5" name="Earth Attack Weak Point">
   <table name="#Tab-earthVuln"> 1.1 1.15 1.2 1.3 1.5 </table>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1324,7 +1366,8 @@
   </for>
 </skill>
 <skill id="4283" levels="1" name="Greater Resist Magic Attack">
-  <set name="target" val="TARGET_SELF"/>
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_SELF"/> 
   <set name="skillType" val="BUFF"/> 
   <set name="operateType" val="OP_PASSIVE"/> 
   <set name="castRange" val="-1"/>
@@ -1335,6 +1378,7 @@
 </skill> 
 <skill id="4284" levels="6" name="Resist Bleeding">
   <table name="#Tab-bleedVuln"> 0.85 0.7 0.5 0.3 0.1 0.0 </table>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1346,6 +1390,7 @@
 </skill>
 <skill id="4285" levels="6" name="Resist Sleep">
   <table name="#Tab-sleepVuln"> 0.85 0.7 0.5 0.3 0.1 0.0 </table>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1356,6 +1401,7 @@
   </for>
 </skill>
 <skill id="4286" levels="1" name="Greater Resist Sleep">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1367,6 +1413,7 @@
 </skill>
 <skill id="4287" levels="6" name="Resist Hold">
   <table name="#Tab-rootVuln"> 0.85 0.7 0.5 0.3 0.1 0.0 </table>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1377,6 +1424,7 @@
   </for>
 </skill>
 <skill id="4288" levels="1" name="Greater Resist Hold">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="operateType" val="OP_PASSIVE"/>

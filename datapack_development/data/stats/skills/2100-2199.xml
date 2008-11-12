@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
 <skill id="2100" levels="1" name="Escape: 1 second">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1000"/>
   <set name="skillType" val="RECALL"/>
@@ -32,6 +33,7 @@
   <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
@@ -345,6 +347,7 @@
   <set name="effectRange" val="-1"/>
   <set name="skillRadius" val="200"/>
   <set name="isMagic" val="true"/>
+  <set name="power" val="0.0"/>
   <for>
     <effect count="1" name="Buff" time="10" val="0" stackOrder="1" stackType="hp_regen_up">
       <mul order="0x30" stat="regHp" val="1.40"/>
@@ -433,6 +436,7 @@
   </for>
 </skill>
 <skill id="2150" levels="1" name="Soulshot: D Grade">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SOULSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -442,6 +446,7 @@
   </for>
 </skill>
 <skill id="2151" levels="1" name="Soulshot: C Grade">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SOULSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -451,6 +456,7 @@
   </for>
 </skill>
 <skill id="2152" levels="1" name="Soulshot: B Grade">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SOULSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -460,6 +466,7 @@
   </for>
 </skill>
 <skill id="2153" levels="1" name="Soulshot: A Grade">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SOULSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -469,6 +476,7 @@
   </for>
 </skill>
 <skill id="2154" levels="1" name="Soulshot: S Grade">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SOULSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -478,6 +486,7 @@
   </for>
 </skill>
 <skill id="2155" levels="1" name="Spiritshot: D Grade">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SPIRITSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -487,6 +496,7 @@
   </for>
 </skill>
 <skill id="2156" levels="1" name="Spiritshot: C Grade">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SPIRITSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -496,6 +506,7 @@
   </for>
 </skill>
 <skill id="2157" levels="1" name="Spiritshot: B Grade">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SPIRITSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -505,6 +516,7 @@
   </for>
 </skill>
 <skill id="2158" levels="1" name="Spiritshot: A Grade">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SPIRITSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -514,6 +526,7 @@
   </for>
 </skill>
 <skill id="2159" levels="1" name="Spiritshot: S Grade">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SPIRITSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -523,6 +536,7 @@
 </for>
 </skill>
 <skill id="2160" levels="1" name="Blessed Spiritshot: D Grade">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SPIRITSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -532,6 +546,7 @@
   </for>
 </skill>
 <skill id="2161" levels="1" name="Blessed Spiritshot: C Grade">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SPIRITSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -541,6 +556,7 @@
   </for>
 </skill>
 <skill id="2162" levels="1" name="Blessed Spiritshot: B Grade">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SPIRITSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -550,6 +566,7 @@
   </for>
 </skill>
 <skill id="2163" levels="1" name="Blessed Spiritshot: A Grade">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SPIRITSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -559,6 +576,7 @@
   </for>
 </skill>
 <skill id="2164" levels="1" name="Blessed Spiritshot: S Grade">
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SPIRITSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -604,7 +622,8 @@
   </for>
 </skill>
 <skill id="2168" levels="6" name="Raid Blessing"> 
-  <set name="target" val="TARGET_SELF"/>
+  <set name="power" val="0.0"/> 
+  <set name="target" val="TARGET_SELF"/> 
   <set name="hitTime" val="2000"/>
   <set name="skillType" val="BUFF"/> 
   <set name="operateType" val="OP_ACTIVE"/> 
@@ -616,6 +635,7 @@
 </skill> 
 <skill id="2169" levels="2" name="Magic Haste Potion">
   <table name="#Tab-mAtkSpd"> 1.23 1.3 </table>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
@@ -624,13 +644,13 @@
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-mAtkSpd" stackType="casting_time_down">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-mAtkSpd" stackType="mAtkSpeedUp">
       <mul order="0x30" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
     </effect>
   </for>
 </skill>
 <skill id="2170" levels="1" name="Scroll: Cancel Sleep">
-  <set name="power" val="100"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="NEGATE"/>
   <set name="operateType" val="OP_ACTIVE"/>

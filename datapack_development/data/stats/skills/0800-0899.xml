@@ -153,7 +153,7 @@
   <table name="#mpConsume"> 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83 </table>
   <table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table> <!-- Guess - need retail confirmation -->
   <table name="#power"> 744 787 832 879 927 977 1029 1082 1137 1194 1253 1313 1374 1438 1502 1568 1636 1704 1774 1845 1917 1990 2064 2138 2213 2288 2363 2439 2515 2590 2665 2740 2814 2887 2959 3030 3100 3168 3234 3299 3362 3422 3480 </table>
-  <set name="weaponsAllowed" val="18432"/> <!-- Big Sword/Big Blunt -->
+  <set name="weaponsAllowed" val="18432"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -169,13 +169,15 @@
   <set name="ignoreShld" val="true"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <for>
+  </for>
 </skill>
 <skill id="815" levels="43" name="Blade Hurricane">
   <!-- Vanguard Stance Skill -->
   <table name="#mpConsume"> 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83 </table>
   <table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table> <!-- Guess - need retail confirmation -->
   <table name="#power"> 744 787 832 879 927 977 1029 1082 1137 1194 1253 1313 1374 1438 1502 1568 1636 1704 1774 1845 1917 1990 2064 2138 2213 2288 2363 2439 2515 2590 2665 2740 2814 2887 2959 3030 3100 3168 3234 3299 3362 3422 3480 </table>
-  <set name="weaponsAllowed" val="512"/> <!-- Dual Sword -->
+  <set name="weaponsAllowed" val="512"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -191,13 +193,15 @@
   <set name="ignoreShld" val="true"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <for>
+  </for>
 </skill>
 <skill id="816" levels="43" name="Cleave">
   <!-- Vanguard Stance Skill -->
   <table name="#mpConsume"> 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83 </table>
   <table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table> <!-- Guess - need retail confirmation -->
   <table name="#power"> 744 787 832 879 927 977 1029 1082 1137 1194 1253 1313 1374 1438 1502 1568 1636 1704 1774 1845 1917 1990 2064 2138 2213 2288 2363 2439 2515 2590 2665 2740 2814 2887 2959 3030 3100 3168 3234 3299 3362 3422 3480 </table>
-  <set name="weaponsAllowed" val="18432"/> <!-- Big Sword/Big Blunt -->
+  <set name="weaponsAllowed" val="18432"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -212,13 +216,15 @@
   <set name="ignoreShld" val="true"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
+  <for>
+  </for>
 </skill>
 <skill id="817" levels="43" name="Double Strike">
   <!-- Vanguard Stance Skill -->
   <table name="#mpConsume"> 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83 </table>
   <table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table> <!-- Guess - need retail confirmation -->
   <table name="#power"> 744 787 832 879 927 977 1029 1082 1137 1194 1253 1313 1374 1438 1502 1568 1636 1704 1774 1845 1917 1990 2064 2138 2213 2288 2363 2439 2515 2590 2665 2740 2814 2887 2959 3030 3100 3168 3234 3299 3362 3422 3480 </table>
-  <set name="weaponsAllowed" val="512"/> <!-- Dual Sword -->
+  <set name="weaponsAllowed" val="512"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -233,6 +239,8 @@
   <set name="ignoreShld" val="true"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
+  <for>
+  </for>
 </skill>
 <skill id="818" levels="1" name="Evasion Counter">
   <set name="target" val="TARGET_NONE"/>
@@ -291,160 +299,51 @@
   </for>
 </skill>
 <skill id="825" levels="1" name="Sharp Edge">
-  <set name="magicLvl" val="49"/>
-  <set name="mpInitialConsume" val="16"/>
-  <set name="mpConsume" val="28"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="reuseDelay" val="4800"/>
-  <set name="hitTime" val="4000"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="40"/>
-  <set name="effectRange" val="400"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="ws_weapon">
-      <mul order="0x30" stat="pAtk" val="1.05">
-        <using kind="Sword,Big Sword"/>
-      </mul>
-      <basemul order="0x30" stat="rCrit" val="0.2">
-        <using kind="Sword,Big Sword"/>
-      </basemul>
-    </effect>
   </for>
 </skill>
 <skill id="826" levels="1" name="Spike">
-  <set name="magicLvl" val="49"/>
-  <set name="mpInitialConsume" val="16"/>
-  <set name="mpConsume" val="28"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="reuseDelay" val="4800"/>
-  <set name="hitTime" val="4000"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="40"/>
-  <set name="effectRange" val="400"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="ws_weapon">
-      <mul order="0x30" stat="pAtk" val="1.05">
-        <using kind="Blunt,Big Blunt"/>
-      </mul>
-    </effect>
   </for>
 </skill>
 <skill id="827" levels="1" name="Restring">
-  <set name="magicLvl" val="49"/>
-  <set name="mpInitialConsume" val="16"/>
-  <set name="mpConsume" val="28"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="reuseDelay" val="4800"/>
-  <set name="hitTime" val="4000"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="40"/>
-  <set name="effectRange" val="400"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="ws_weapon">
-      <mul order="0x30" stat="pAtk" val="1.05">
-        <using kind="Bow,Crossbow"/>
-      </mul>
-      <add order="0x40" stat="pAtkRange" val="100">
-        <using kind="Bow,Crossbow"/>
-      </add>
-    </effect>
   </for>
 </skill>
 <skill id="828" levels="1" name="Case Harden">
-  <set name="magicLvl" val="46"/>
-  <set name="mpInitialConsume" val="15"/>
-  <set name="mpConsume" val="25"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="reuseDelay" val="4800"/>
-  <set name="hitTime" val="4000"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="40"/>
-  <set name="effectRange" val="400"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="ws_armor">
-      <mul order="0x30" stat="pDef" val="1.10">
-        <and>
-          <using kind="Heavy"/>
-          <not>
-            <using kind="Light,Magic"/>
-          </not>
-        </and>
-      </mul>
-    </effect>
   </for>
 </skill>
 <skill id="829" levels="1" name="Hard Tanning">
-  <set name="magicLvl" val="46"/>
-  <set name="mpInitialConsume" val="15"/>
-  <set name="mpConsume" val="25"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="reuseDelay" val="4800"/>
-  <set name="hitTime" val="4000"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="40"/>
-  <set name="effectRange" val="400"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="ws_armor">
-      <mul order="0x30" stat="pDef" val="1.05">
-        <and>
-          <using kind="Light"/>
-          <not>
-            <using kind="Heavy,Magic"/>
-          </not>
-        </and>
-      </mul>
-      <add order="0x40" stat="rEvas" val="2">
-        <and>
-          <using kind="Light"/>
-          <not>
-            <using kind="Heavy,Magic"/>
-          </not>
-        </and>
-      </add>
-    </effect>
   </for>
 </skill>
 <skill id="830" levels="1" name="Embroider">
-  <set name="magicLvl" val="46"/>
-  <set name="mpInitialConsume" val="15"/>
-  <set name="mpConsume" val="25"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="reuseDelay" val="4800"/>
-  <set name="hitTime" val="4000"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="40"/>
-  <set name="effectRange" val="400"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="ws_armor">
-      <mul order="0x30" stat="pDef" val="1.05">
-        <and>
-          <using kind="Magic"/>
-          <not>
-            <using kind="Heavy,Light"/>
-          </not>
-        </and>
-      </mul>
-      <mul order="0x30" stat="regMp" val="1.3">
-        <and>
-          <using kind="Magic"/>
-          <not>
-            <using kind="Heavy,Light"/>
-          </not>
-        </and>
-      </mul>
-    </effect>
   </for>
 </skill>
 <skill id="831" levels="1" name="Summon Merchant Golem">
@@ -508,14 +407,6 @@
   <set name="skillType" val="TRANSFORMDISPEL"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="5000"/>
-  <set name="castRange" val="-1"/>
-  <for>
-  </for>
-</skill>
-<skill id="839" levels="1" name="Dismount">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
   </for>

@@ -68,6 +68,7 @@
   <table name="#aggro"> 204 285 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
@@ -554,6 +555,7 @@
   <set name="summonTotalLifeTime" val="3600000"/>
   <set name="summonTimeLostIdle" val="500"/>
   <set name="summonTimeLostActive" val="1000"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="#reuseDelay"/>
   <set name="hitTime" val="15000"/>
@@ -589,6 +591,7 @@
   <set name="summonTotalLifeTime" val="3600000"/>
   <set name="summonTimeLostIdle" val="500"/>
   <set name="summonTimeLostActive" val="1000"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="#reuseDelay"/>
   <set name="hitTime" val="15000"/>
@@ -620,6 +623,7 @@
   <set name="summonTotalLifeTime" val="3600000"/>
   <set name="summonTimeLostIdle" val="500"/>
   <set name="summonTimeLostActive" val="1000"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="#reuseDelay"/>
   <set name="hitTime" val="15000"/>
@@ -650,6 +654,7 @@
   <set name="summonTotalLifeTime" val="3600000"/>
   <set name="summonTimeLostIdle" val="500"/>
   <set name="summonTimeLostActive" val="1000"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="reuseDelay" val="#reuseDelay"/>
@@ -694,6 +699,7 @@
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="20000"/>
@@ -1094,6 +1100,7 @@
   <table name="#aggro"> 379 457 532 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
@@ -1120,15 +1127,28 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
-  <table name="#ench1time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
-  <table name="#ench2MpConsume"> 40 39 38 38 37 36 36 35 34 34 33 32 32 31 30 30 29 28 28 27 26 25 25 24 23 23 22 21 21 20 </table>
-  <table name="#ench2MpConsume_Init"> 10 10 10 10 10 9 9 9 9 9 8 8 8 8 8 8 7 7 7 7 7 6 6 6 6 6 6 5 5 5 </table>
+  <table name="#ench1time">
+  1240 1280 1320 1360 1400 1440 1480 1520 1560 1600
+  1640 1680 1720 1760 1800 1840 1880 1920 1960 2000
+  2040 2080 2120 2160 2200 2240 2280 2320 2360 2400
+  </table>
+  <table name="#ench2MpConsume">
+  40 39 38 38 37 36 36 35 34 34
+  33 32 32 31 30 30 29 28 28 27
+  26 25 25 24 23 23 22 21 21 20
+  </table>
+  <table name="#ench2MpConsume_Init">
+  10 10 10 10 10 9 9 9 9 9
+   8  8  8  8  8 8 7 7 7 7
+   7  6  6  6  6 6 6 5 5 5
+  </table>
   <table name="#Tab-cAtk"> 1.3 1.4 1.5 </table>
   <table name="#mpConsume_Init"> 7 9 11 </table>
   <table name="#mpConsume"> 28 35 41 </table>
   <table name="#aggro"> 379 457 532 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
@@ -1141,12 +1161,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-cAtk" stackType="critical_dmg_up">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-cAtk" stackType="cAtk">
       <mul order="0x30" stat="cAtk" val="#Tab-cAtk"/>
     </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="1.5" stackType="critical_dmg_up">
+    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="1.5" stackType="cAtk">
       <mul order="0x30" stat="cAtk" val="1.5"/>
     </effect>
   </enchant1for>
@@ -1176,6 +1196,7 @@
   <table name="#aggro"> 379 457 532 582 611 635 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
@@ -1417,6 +1438,7 @@
   <table name="#aggro"> 418 495 532 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_CLAN"/>
   <set name="skillRadius" val="400"/>
   <set name="reuseDelay" val="20000"/>
@@ -1465,6 +1487,7 @@
   <table name="#aggro"> 379 457 532 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_CLAN"/>
   <set name="skillRadius" val="400"/>
   <set name="reuseDelay" val="20000"/>
@@ -1513,6 +1536,7 @@
   <table name="#aggro"> 457 532 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="20000"/>
@@ -1561,6 +1585,7 @@
   <table name="#aggro"> 379 457 532 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="20000"/>
@@ -1588,15 +1613,28 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
-  <table name="#ench1time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
-  <table name="#ench2MpConsume"> 160 157 154 152 149 146 143 141 138 135 133 130 127 124 122 119 116 114 111 108 105 103 100 97 95 92 89 86 84 81 </table>
-  <table name="#ench2MpConsume_Init"> 40 39 38 38 37 36 36 35 34 34 33 32 32 31 30 30 29 28 28 27 26 25 25 24 23 23 22 21 21 20 </table>
+  <table name="#ench1time">
+  1240 1280 1320 1360 1400 1440 1480 1520 1560 1600
+  1640 1680 1720 1760 1800 1840 1880 1920 1960 2000
+  2040 2080 2120 2160 2200 2240 2280 2320 2360 2400
+  </table>
+  <table name="#ench2MpConsume">
+  160 157 154 152 149 146 143 141 138 135
+  133 130 127 124 122 119 116 114 111 108
+  105 103 100  97  95  92  89  86  84  81
+  </table>
+  <table name="#ench2MpConsume_Init">
+  40 39 38 38 37 36 36 35 34 34
+  33 32 32 31 30 30 29 28 28 27
+  26 25 25 24 23 23 22 21 21 20
+  </table>
   <table name="#Tab-cAtk"> 1.3 1.4 1.5 </table>
   <table name="#mpConsume_Init"> 31 38 41 </table>
   <table name="#mpConsume"> 123 150 163 </table>
   <table name="#aggro"> 418 495 532 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="20000"/>
@@ -1610,12 +1648,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-cAtk" stackType="critical_dmg_up">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-cAtk" stackType="cAtk">
       <mul order="0x30" stat="cAtk" val="#Tab-cAtk"/>
     </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="1.5" stackType="critical_dmg_up">
+    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="1.5" stackType="cAtk">
       <mul order="0x30" stat="cAtk" val="1.5"/>
     </effect>
   </enchant1for>
@@ -1647,6 +1685,7 @@
   <table name="#hitTime"> 20000 3500 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="600000"/>
@@ -1732,6 +1771,7 @@
   <table name="#aggro"> 331 418 495 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
@@ -1797,6 +1837,7 @@
   <table name="#aggro"> 379 495 597 646 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
@@ -1844,6 +1885,7 @@
   <table name="#aggro"> 379 457 532 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_CLAN"/>
   <set name="skillRadius" val="400"/>
   <set name="reuseDelay" val="20000"/>
@@ -1899,6 +1941,7 @@
   <table name="#aggro"> 418 495 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_CLAN"/>
   <set name="skillRadius" val="400"/>
   <set name="reuseDelay" val="20000"/>
@@ -1940,6 +1983,7 @@
   <table name="#mpConsume_Init"> 7 9 11 12 13 </table>
   <table name="#power"> 10 20 30 40 50 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
@@ -2323,6 +2367,7 @@
   <set name="summonTotalLifeTime" val="3600000"/>
   <set name="summonTimeLostIdle" val="500"/>
   <set name="summonTimeLostActive" val="1000"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="15000"/>
@@ -2355,6 +2400,7 @@
   <set name="summonTotalLifeTime" val="3600000"/>
   <set name="summonTimeLostIdle" val="500"/>
   <set name="summonTimeLostActive" val="1000"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="reuseDelay" val="20000"/>
@@ -2390,6 +2436,7 @@
   <set name="summonTotalLifeTime" val="3600000"/>
   <set name="summonTimeLostIdle" val="500"/>
   <set name="summonTimeLostActive" val="1000"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="15000"/>
@@ -2514,6 +2561,7 @@
   <table name="#aggro"> 549 597 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_CLAN"/>
   <set name="skillRadius" val="400"/>
   <set name="reuseDelay" val="20000"/>
@@ -2579,6 +2627,7 @@
   <table name="#aggro"> 582 624 655 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="20000"/>
@@ -2866,6 +2915,7 @@
 <skill id="1297" levels="6" name="Clear Mind">
   <table name="#Tab-regMp-Walk"> 3.2 4.0 4.3 5.1 5.8 6.2 </table>
   <table name="#Tab-regMp-Stand"> 2.6 3.2 3.5 4.1 4.7 4.9 </table>
+  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
