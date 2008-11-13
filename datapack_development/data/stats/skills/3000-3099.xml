@@ -1360,7 +1360,7 @@
   <set name="isMagic" val="true"/>
   <set name="isDebuff" val="true"/>
   <for>
-    <effect count="1" name="Debuff" time="5" val="0" stackOrder="0.77" stackType="pAtkSpdDown">
+    <effect count="1" name="Debuff" time="5" val="0" stackOrder="0.77" stackType="attack_time_up">
       <mul order="0x30" stat="pAtkSpd" val="0.77"/>
     </effect>
   </for>
@@ -1579,7 +1579,7 @@
   <set name="isMagic" val="true"/>
   <set name="isDebuff" val="true"/>
   <for>
-    <effect count="1" name="Debuff" time="5" val="0" stackOrder="0.77" stackType="pAtkSpdDown">
+    <effect count="1" name="Debuff" time="5" val="0" stackOrder="0.77" stackType="attack_time_up">
       <mul order="0x30" stat="pAtkSpd" val="0.77"/>
     </effect>
   </for>

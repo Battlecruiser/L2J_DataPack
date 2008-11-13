@@ -109,7 +109,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect name="Debuff" time="120" count="1" val="0" stackOrder="0.77" stackType="pAtkSpdDown">
+    <effect name="Debuff" time="15" count="1" val="0" stackOrder="0.77" stackType="attack_time_up">
       <mul order="0x30" stat="pAtkSpd" val="0.77"/>
     </effect>
   </for>

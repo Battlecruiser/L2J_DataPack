@@ -780,9 +780,10 @@
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="power" val="#ench2Power"/>
   <for>
+    <effect count="1" name="Spoil" time="1" val="0"/>
   </for>
   <enchant1for>
-    <effect count="1" name="Debuff" time="15" val="0" stackOrder="23" stackType="pAtkSpdDown">
+    <effect count="1" name="Debuff" time="15" val="0" stackOrder="23" stackType="attack_time_up">
       <mul order="0x30" stat="pAtkSpd" val="0.77"/>
     </effect>
   </enchant1for>

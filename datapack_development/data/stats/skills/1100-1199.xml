@@ -82,21 +82,9 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
-  <table name="#ench2MpConsume">
-  81 80 79 78 77 76 75 74 73 72
-  71 70 69 68 67 66 65 65 64 63
-  62 61 60 59 58 57 56 55 54 53
-  </table>
-  <table name="#ench2MpConsume_Init">
-  20 20 19 19 19 19 18 18 18 18
-  17 17 17 17 16 16 16 16 16 15
-  15 15 15 14 14 14 14 13 13 13
-  </table>
-  <table name="#ench1Power">
-  40 40 41 41 41 42 42 42 43 43
-  43 44 44 44 45 45 45 46 46 46
-  47 47 47 48 48 48 49 49 49 50
-  </table>
+  <table name="#ench2MpConsume"> 81 80 79 78 77 76 75 74 73 72 71 70 69 68 67 66 65 65 64 63 62 61 60 59 58 57 56 55 54 53 </table>
+  <table name="#ench2MpConsume_Init"> 20 20 19 19 19 19 18 18 18 18 17 17 17 17 16 16 16 16 16 15 15 15 15 14 14 14 14 13 13 13 </table>
+  <table name="#ench1Power"> 40 40 41 41 41 42 42 42 43 43 43 44 44 44 45 45 45 46 46 46 47 47 47 48 48 48 49 49 49 50 </table>
   <table name="#mpConsume_Init"> 11 12 13 14 16 16 17 18 18 19 19 20 20 21 </table>
   <table name="#mpConsume"> 42 47 52 56 61 64 66 69 71 74 76 78 80 82 </table>
   <table name="#magicLvl"> 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
@@ -119,7 +107,7 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Debuff" time="15" val="0" stackOrder="0.77" stackType="pAtkSpdDown">
+    <effect count="1" name="Debuff" time="15" val="0" stackOrder="0.77" stackType="attack_time_up">
       <mul order="0x30" stat="pAtkSpd" val="0.77"/>
     </effect>
   </for>
