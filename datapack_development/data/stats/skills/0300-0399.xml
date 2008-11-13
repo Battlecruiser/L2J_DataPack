@@ -52,9 +52,10 @@
   <enchant1 name="power" val="#ench12Power"/>
   <enchant2 name="power" val="#ench12Power"/>
   <for>
+    <effect count="1" name="Spoil" time="1" val="0"/>
   </for>
   <enchant1for>
-    <effect count="1" name="Debuff" time="15" val="0" stackOrder="23" stackType="pAtkSpdDown">
+    <effect count="1" name="Debuff" time="15" val="0" stackOrder="23" stackType="attack_time_up">
       <mul order="0x30" stat="pAtkSpd" val="0.77"/>
     </effect>
   </enchant1for>
@@ -1093,7 +1094,9 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="weaponsAllowed" val="16392"/> <!-- Blunt/Big Blunt -->
   <for>
-    <effect count="1" name="Spoil" time="1" val="0"/>
+    <effect count="1" name="Spoil" time="1" val="0">
+      <mul order="0x30" stat="pAtkSpd" val="0.95"/>
+    </effect>
   </for>
 </skill>
 <skill id="349" levels="1" name="Song of Renewal">

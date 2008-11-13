@@ -1223,13 +1223,17 @@
   </for>
 </skill>
 <skill id="4385" levels="1" name="Scapegoat's Grace">
-  <!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="magicLvl" val="80"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="200"/> <!-- guessing -->
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
   <set name="aggroPoints" val="100"/>
   <for>
+   <effect name="Buff" time="120" count="1" val="0" stackOrder="4" stackType="attack_time_up"/>
   </for>
 </skill>
 <skill id="4386" levels="1" name="Scapegoat's Grace">
