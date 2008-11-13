@@ -5290,8 +5290,8 @@ INSERT INTO `droplist` VALUES
 (20572,2950,1,1,-1,114196), -- Gloves of Seal Pattern
 (20572,4125,1,1,-1,60346), -- Recipe: Maestro Mold
 (20572,57,656,1338,0,700000), -- Adena
-(20572,94,1,1,1,463), -- Common Item - Bec de Corbin
-(20572,11782,1,1,1,2068), -- Bec De Corbin Blade
+(20572,11782,1,1,1,463), -- Common Item - Bec de Corbin
+(20572,2079,1,1,1,2068), -- Bec De Corbin Blade
 (20572,1342,10,30,2,111111), -- Fine Steel Arrow
 (20572,1867,1,1,2,76923), -- Animal Skin
 (20572,1872,1,1,2,76923), -- Animal Bone
@@ -10259,8 +10259,8 @@ INSERT INTO `droplist` VALUES
 (20983,5478,1,1,-1,57040), -- Sealed Dark Crystal Leather Armor Pattern
 (20983,5549,1,1,-1,678321), -- Metallic Thread
 (20983,57,3280,6678,0,700000), -- Adena
-(20983,12210,1,1,1,536), -- Common Item - Sealed Dark Crystal Leather Armor
-(20983,12218,1,1,1,804), -- Common Item - Sealed Dark Crystalline Leggings
+(20983,12222,1,1,1,536), -- Common Item - Sealed Dark Crystal Leather Armor
+(20983,12228,1,1,1,804), -- Common Item - Sealed Dark Crystalline Leggings
 (20983,12230,1,1,1,402), -- Common Item - Sealed Tallum Leather Armor
 (20983,5478,1,1,1,2808), -- Sealed Dark Crystal Leather Armor Pattern
 (20983,5479,1,1,1,1976), -- Sealed Tallum Leather Armor Pattern
@@ -11295,7 +11295,7 @@ INSERT INTO `droplist` VALUES
 (21065,4164,1,1,2,3257), -- Recipe: Stockings of Doom
 (21065,4401,1,1,2,1253), -- Green Dimensional Stone
 (21065,8730,1,1,200,4016), -- Life Stone: level 67
-(21065,8740,1,1,200,199501), -- Mid-Grade Life Stone: level 67
+(21065,8740,1,1,200,451), -- Mid-Grade Life Stone: level 67
 (21066,4081,1,1,-1,102859), -- Doom Plate Armor Temper
 (21066,5230,1,1,-1,13915), -- Recipe: Mithril Arrow (100%)
 (21066,5482,1,1,-1,137743), -- Sealed Dark Crystalline Leggings Design
@@ -11999,8 +11999,8 @@ INSERT INTO `droplist` VALUES
 (21110,3035,1,1,-1,3130), -- Recipe: Spiritshot A
 (21110,5479,1,1,-1,13892), -- Sealed Tallum Leather Armor Pattern
 (21110,57,1137,2310,0,700000), -- Adena
-(21110,12210,1,1,1,61), -- Common Item - Sealed Dark Crystal Leather Armor
-(21110,12218,1,1,1,469), -- Common Item - Sealed Dark Crystalline Leggings
+(21110,12222,1,1,1,61), -- Common Item - Sealed Dark Crystal Leather Armor
+(21110,12228,1,1,1,469), -- Common Item - Sealed Dark Crystalline Leggings
 (21110,12230,1,1,1,31), -- Common Item - Sealed Tallum Leather Armor
 (21110,5478,1,1,1,972), -- Sealed Dark Crystal Leather Armor Pattern
 (21110,5479,1,1,1,684), -- Sealed Tallum Leather Armor Pattern
@@ -12019,8 +12019,8 @@ INSERT INTO `droplist` VALUES
 (21111,5479,1,1,-1,14562), -- Sealed Tallum Leather Armor Pattern
 (21111,5482,1,1,-1,32483), -- Sealed Dark Crystalline Leggings Design
 (21111,57,1191,2424,0,700000), -- Adena
-(21111,12210,1,1,1,170), -- Common Item - Sealed Dark Crystal Leather Armor
-(21111,12218,1,1,1,240), -- Common Item - Sealed Dark Crystalline Leggings
+(21111,12222,1,1,1,170), -- Common Item - Sealed Dark Crystal Leather Armor
+(21111,12228,1,1,1,240), -- Common Item - Sealed Dark Crystalline Leggings
 (21111,12230,1,1,1,99), -- Common Item - Sealed Tallum Leather Armor
 (21111,5478,1,1,1,1019), -- Sealed Dark Crystal Leather Armor Pattern
 (21111,5479,1,1,1,717), -- Sealed Tallum Leather Armor Pattern
@@ -12060,8 +12060,8 @@ INSERT INTO `droplist` VALUES
 (21113,5166,1,1,-1,4454), -- Recipe: Blessed Spiritshot (A) Compressed Package (100%)
 (21113,5489,1,1,-1,44093), -- Sealed Tallum Stockings Fabric
 (21113,57,1613,3293,0,700000), -- Adena
-(21113,12210,1,1,1,175), -- Common Item - Sealed Dark Crystal Leather Armor
-(21113,12218,1,1,1,582), -- Common Item - Sealed Dark Crystalline Leggings
+(21113,12222,1,1,1,175), -- Common Item - Sealed Dark Crystal Leather Armor
+(21113,12228,1,1,1,582), -- Common Item - Sealed Dark Crystalline Leggings
 (21113,12230,1,1,1,136), -- Common Item - Sealed Tallum Leather Armor
 (21113,5478,1,1,1,1383), -- Sealed Dark Crystal Leather Armor Pattern
 (21113,5479,1,1,1,973), -- Sealed Tallum Leather Armor Pattern
@@ -14129,8 +14129,8 @@ INSERT INTO `droplist` VALUES
 (21252,5230,1,1,-1,9504), -- Recipe: Mithril Arrow (100%)
 (21252,5478,1,1,-1,59940), -- Sealed Dark Crystal Leather Armor Pattern
 (21252,57,2875,5849,0,700000), -- Adena
-(21252,12210,1,1,1,907), -- Common Item - Sealed Dark Crystal Leather Armor
-(21252,12218,1,1,1,302), -- Common Item - Sealed Dark Crystalline Leggings
+(21252,12222,1,1,1,907), -- Common Item - Sealed Dark Crystal Leather Armor
+(21252,12228,1,1,1,302), -- Common Item - Sealed Dark Crystalline Leggings
 (21252,12230,1,1,1,302), -- Common Item - Sealed Tallum Leather Armor
 (21252,5478,1,1,1,2951), -- Sealed Dark Crystal Leather Armor Pattern
 (21252,5479,1,1,1,2077), -- Sealed Tallum Leather Armor Pattern
@@ -14146,7 +14146,7 @@ INSERT INTO `droplist` VALUES
 (21253,57,3110,6350,0,700000), -- Adena
 (21253,12232,1,1,1,737), -- Common Item - Sealed Tallum Tunic
 (21253,12235,1,1,1,1044), -- Common Item - Sealed Tallum Stockings
-(21253,12211,1,1,1,410), -- Common Item - Sealed Dark Crystal Robe
+(21253,12223,1,1,1,410), -- Common Item - Sealed Dark Crystal Robe
 (21253,5485,1,1,1,3200), -- Sealed Tallum Tunic Texture
 (21253,5486,1,1,1,2252), -- Sealed Dark Crystal Robe Fabric
 (21253,5489,1,1,1,5022), -- Sealed Tallum Stockings Fabric
@@ -17148,8 +17148,8 @@ INSERT INTO `droplist` VALUES
 (21434,5282,1,1,-1,17200), -- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%)
 (21434,6342,1,1,-1,876643), -- Sealed Majestic Earring Gemstone
 (21434,57,15536,31822,0,700000), -- Adena
-(21434,11265,1,1,1,74), -- Common Item - Sealed Leather Armor of Nightmare (no drop info)
-(21434,11258,1,1,1,74), -- Common Item - Sealed Majestic Leather Armor
+(21434,12265,1,1,1,74), -- Common Item - Sealed Leather Armor of Nightmare (no drop info)
+(21434,12258,1,1,1,74), -- Common Item - Sealed Majestic Leather Armor
 (21434,5480,1,1,1,12826), -- Sealed Leather Armor of Nightmare Fabric
 (21434,5481,1,1,1,12826), -- Sealed Majestic Leather Armor Fabric
 (21434,959,1,1,2,77), -- Scroll: Enchant Weapon (Grade S)
@@ -22826,10 +22826,10 @@ INSERT INTO `droplist` VALUES
 (21810,2166,1,1,-1,30590), -- Recipe: Earrings of Binding (100%)
 (21810,57,364,740,0,700000), -- Adena
 (21810,12106,1,1,1,1304), -- Common Item - Great Helmet
-(21810,12107,1,1,1,2604), -- Common Item - Knight\'s Shield
+(21810,12107,1,1,1,1144), -- Common Item - Knight\'s Shield
 (21810,1971,1,1,1,4080), -- Great Helmet Material
 (21810,1972,1,1,1,5332), -- Knight\'s Shield Fragment
-(21810,2496,1,1,1,86), -- Dwarven Chain Shield
+(21810,12102,1,1,1,1144), -- Common Item - Dwarven Chain Shield
 (21810,2947,1,1,1,4760), -- Dwarven Chain Shield Fragment
 (21810,1868,1,1,2,133280), -- Thread
 (21810,1873,1,1,2,26656), -- Silver Nugget
@@ -23559,7 +23559,6 @@ INSERT INTO `droplist` VALUES
 (22048,12324,1,1,1,841), -- Common Item - Necklace of Darkness
 (22048,1906,1,1,1,843),    -- Mithril Ring Wire
 (22048,1875,1,1,2,1261),    -- Stone of Purity
-(22048,851,1,1,1,263),      -- Omen Beast's Eye Earring
 (22048,1875,1,3,-1,15211), -- Stone of Purity
 (22048,1885,1,2,-1,11356), -- High Grade Suede
 (22048,4469,1,1,-1,1452), -- Dye of STR <Str+1 Con-1>
@@ -24524,9 +24523,9 @@ INSERT INTO `droplist` VALUES
 (22116,8742,1,1,200,226), -- Mid-Grade Life Stone: level 76
 (22116,8752,1,1,200,226), -- High-Grade Life Stone: level 76
 (22116,3957,1,1,1,150), -- Recipe: Blessed Spiritshot S
-(22116,5145,1,1,-1,5000), -- Compressed Package of Spiritshots: S-grade
+(22116,5277,1,1,-1,5000), -- Recipe: Compressed Package of Spiritshots: S-grade
 (22116,5495,1,2,-1,250000), -- Sealed Shield of Nightmare Fragment
-(22116,5151,1,1,-1,5000), -- Compressed Package of Blessed Spiritshots: S-grade
+(22116,5167,1,1,-1,5000), -- Recipe: Compressed Package of Blessed Spiritshots: S-grade
 (22117,57,4115,8376,0,700000), -- Adena
 (22117,1344,30,90,2,142857), -- Mithril Arrow
 (22117,1869,2,6,2,76923), -- Iron Ore
@@ -25906,7 +25905,7 @@ INSERT INTO `droplist` VALUES
 (22262,5162,1,1,-1,66667), -- Recipe: Spiritshot (S) Compressed Package (100%)
 (22262,5167,1,1,-1,33333), -- Recipe: Blessed Spiritshot (S) Compressed Package (100%)
 (22263,57,1526,4052,0,700000), -- Adena
-(22263,1876,1,1,1,1919), -- Dragon Grinder Edge
+(22263,5538,1,1,1,1919), -- Dragon Grinder Edge
 (22263,9594,1,1,100,142857), -- Green Seed of Evil - Shard
 (22263,9546,1,1,200,2660), -- Fire Stone
 (22263,10109,1,1,2,1934), -- Spellbook: Wind Vortex Slug
