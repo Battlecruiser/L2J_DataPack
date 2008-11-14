@@ -12038,7 +12038,7 @@ INSERT INTO `droplist` VALUES
 (21112,3956,1,1,-1,3987), -- Recipe: Blessed Spiritshot A
 (21112,5485,1,1,-1,25148), -- Sealed Tallum Tunic Texture
 (21112,5486,1,1,-1,17696), -- Sealed Dark Crystal Robe Fabric
-(21112,57,1445,29465,0,700000), -- Adena
+(21112,57,1445,2465,0,700000), -- Adena
 (21112,12221,1,1,1,562), -- Common Item - Sealed Dark Crystal Gloves
 (21112,12224,1,1,1,745), -- Common Item - Sealed Dark Crystal Boots
 (21112,12229,1,1,1,408), -- Common Item - Sealed Tallum Gloves
