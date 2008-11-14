@@ -51,6 +51,24 @@ Chance = {
   21373:649#Prophet
 }
 
+Chance_mane = {
+  21366:664,#General
+  21365:568,#Great Magus
+  21368:568,#Great Seer
+  21354:522,#Hunter
+  21360:539,#Medium
+  21362:568,#Officer
+  21357:529,#Priest
+  21350:500,#Recruit
+  21353:510,#Scout
+  21364:558,#Seer
+  21355:519,#Shaman
+  21358:529,#Warrior
+  21369:548,#Commander
+  21371:713,#Head magus
+  21373:738#Prophet
+}
+
 #Quest Items
 Varka_Badge_Soldier, Varka_Badge_Officer, Varka_Badge_Captain = [7216, 7217, 7218]
 Ketra_Alliance_One, Ketra_Alliance_Two, Ketra_Alliance_Three, \
@@ -328,6 +346,7 @@ class Quest (JQuest) :
           npcId = npc.getNpcId()
           cond = st.getInt("cond")
           id = st.getInt("id")
+          st2 = partyMember.getQuestState("606_WarWithVarkaSilenos")
           if not partyMember.isAlliedWithVarka() :
               if (npcId in Varka_One) or (npcId in Varka_Two) or (npcId in Varka_Three) :
                   item = 0
@@ -342,7 +361,17 @@ class Quest (JQuest) :
                     if st.getQuestItemsCount(drop) == MAX :
                       item = 0
                   chance = Chance[npcId]
-                  if id == 2 and item != 0 :
+          #This is support for quest 606: War With Varka Silenos. Basically, if the person has both this quest and 606, then they only get one quest item, 50% chance for 606 quest item and 50% chance for this quest's item
+                  if st2 :
+                      if (st.getRandom(2) == 1 or item == 0) and npcId in Chance_mane.keys() :
+                          item = 57
+                          MAX = 100
+                          drop = Mane
+                          chance = Chance_mane[npcId]
+                          giveReward(st,item,chance,MAX,drop)
+                      elif id == 2 and item != 0 :
+                          giveReward(st,item,chance,MAX,drop)
+                  elif id == 2 and item != 0 :
                       giveReward(st,item,chance,MAX,drop)
               elif npcId in Ketra_Orcs :
                   decreaseAlliance(st)

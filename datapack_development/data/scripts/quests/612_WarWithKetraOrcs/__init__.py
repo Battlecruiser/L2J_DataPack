@@ -96,7 +96,10 @@ class Quest (JQuest) :
      st = partyMember.getQuestState(qn)
      npcId = npc.getNpcId()
      count = st.getQuestItemsCount(Molar)
+     st2 = partyMember.getQuestState("611_AllianceWithVarkaSilenos")
      if npcId in Ketra_Orcs and partyMember.getAllianceWithVarkaKetra() <= -1 :
+    #see comments in 611 : Alliance with Varka Silenos for reason for doing st2 check
+       if not st2 :
          numItems,chance = divmod(Chance[npcId]*Config.RATE_DROP_QUEST,1000)
          if st.getRandom(1000) < chance :
            numItems += 1
