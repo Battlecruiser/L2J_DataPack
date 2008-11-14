@@ -49,6 +49,24 @@ Chance = {
   21347:649
 }
 
+Chance_molar = {
+  21339:568,
+  21340:568,
+  21324:500,
+  21336:529,
+  21331:529,
+  21342:578,
+  21327:510,
+  21334:539,
+  21343:548,
+  21329:519,
+  21328:522,
+  21338:558,
+  21345:713,
+  21332:664,
+  21347:638
+}
+
 #Quest Items
 Varka_Badge_Soldier, Varka_Badge_Officer, Varka_Badge_Captain = [7216, 7217, 7218]
 Ketra_Alliance_One, Ketra_Alliance_Two, Ketra_Alliance_Three, \
@@ -325,6 +343,7 @@ class Quest (JQuest) :
           npcId = npc.getNpcId()
           cond = st.getInt("cond")
           id = st.getInt("id")
+          st2 = partyMember.getQuestState("612_WarWithKetraOrcs")
           if not partyMember.isAlliedWithKetra() :
               if (npcId in Ketra_One) or (npcId in Ketra_Two) or (npcId in Ketra_Three):
                   item = 0
@@ -339,7 +358,17 @@ class Quest (JQuest) :
                     if st.getQuestItemsCount(drop) == MAX :
                       item = 0
                   chance = Chance[npcId]
-                  if id == 2 and item != 0 :
+      #This is support for quest 612: War With Ketra Orcs. Basically, if the person has both this quest and 612, then they only get one quest item, 50% chance for 612 quest item and 50% chance for this quest's item
+                  if st2 :
+                      if (st.getRandom(2) == 1 or item == 0) and npcId in Chance_molar.keys() :
+                          item = 57
+                          MAX = 100
+                          drop = Molar
+                          chance = Chance_molar[npcId]
+                          giveReward(st,item,chance,MAX,drop)
+                      elif id == 2 and item != 0 :
+                          giveReward(st,item,chance,MAX,drop)
+                  elif id == 2 and item != 0 :
                       giveReward(st,item,chance,MAX,drop)
               elif npcId in Varka_Silenos :
                   decreaseAlliance(st)
