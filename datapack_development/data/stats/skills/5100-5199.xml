@@ -386,7 +386,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="RecoverForce" time="8" val="0">
+    <effect count="1" name="Buff" time="8" val="0">
       <mul order="0x30" stat="pAtk" val="1.10"/> <!-- Guessed -->
     </effect>
   </for>
