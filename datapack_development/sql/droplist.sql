@@ -2903,7 +2903,7 @@ INSERT INTO `droplist` VALUES
 (20267,1882,1,1,-1,104456), -- Leather
 (20267,2203,1,1,-1,102408), -- Recipe: Mithril Boots
 (20267,57,239,476,0,700000), -- Adena
-(20267,13516,1,1,1,437), -- Common Item - Bastard Sword
+(20267,11635,1,1,1,437), -- Common Item - Bastard Sword
 (20267,11636,1,1,1,1751), -- Common Item - Spinebone Sword
 (20267,11643,1,1,1,1312), -- Common Item - Artisan\'s Sword
 (20267,11628,1,1,1,437), -- Common Item - Knight\'s Sword
@@ -4414,7 +4414,7 @@ INSERT INTO `droplist` VALUES
 (20495,1936,1,1,-1,76940), -- White Tunic Pattern
 (20495,2267,1,1,-1,9723), -- Recipe: Gastraphetes
 (20495,57,476,952,0,700000), -- Adena
-(20495,13516,1,1,1,1044), -- Common Item - Bastard Sword
+(20495,11635,1,1,1,1044), -- Common Item - Bastard Sword
 (20495,11636,1,1,1,696), -- Common Item - Spinebone Sword
 (20495,11643,1,1,1,1044), -- Common Item - Artisan\'s Sword
 (20495,11628,1,1,1,1044), -- Common Item - Knight\'s Sword
@@ -13850,7 +13850,7 @@ INSERT INTO `droplist` VALUES
 (21236,1900,1,1,-1,141604), -- Enchanted Necklace Chain
 (21236,2153,1,2,-1,201284), -- Recipe: Tiger\'s Eye Earring
 (21236,57,546,1092,0,700000), -- Adena
-(21236,13516,1,1,1,460), -- Common Item - Bastard Sword
+(21236,11635,1,1,1,460), -- Common Item - Bastard Sword
 (21236,11636,1,1,1,690), -- Common Item - Spinebone Sword
 (21236,11643,1,1,1,1149), -- Common Item - Artisan\'s Sword
 (21236,11628,1,1,1,1149), -- Common Item - Knight\'s Sword
@@ -20646,7 +20646,7 @@ INSERT INTO `droplist` VALUES
 (21666,1872,1,3,-1,688304), -- Animal Bone
 (21666,1935,1,1,-1,57679), -- Scale Mail Fragment
 (21666,57,436,871,0,700000), -- Adena
-(21666,13516,1,1,1,36), -- Common Item - Bastard Sword (no drop info, low material info)
+(21666,11635,1,1,1,36), -- Common Item - Bastard Sword (no drop info, low material info)
 (21666,11636,1,1,1,36), -- Common Item - Spinebone Sword
 (21666,11643,1,1,1,36), -- Common Item - Artisan\'s Sword
 (21666,11628,1,1,1,36), -- Common Item - Knight\'s Sword
@@ -23244,7 +23244,7 @@ INSERT INTO `droplist` VALUES
 (22017,737,1,1,2,5051), -- Scroll of Resurrection
 (22017,2021,1,1,1,654), -- Spinebone Sword Blade
 (22017,5550,1,1,2,840), -- Durable Metal Plate
-(22017,13516,1,1,1,420), -- Common Item - Bastard Sword
+(22017,11635,1,1,1,420), -- Common Item - Bastard Sword
 (22017,11636,1,1,1,420), -- Common Item - Spinebone Sword
 (22017,11643,1,1,1,420), -- Common Item - Artisan\'s Sword
 (22017,11628,1,1,1,420), -- Common Item - Knight\'s Sword
