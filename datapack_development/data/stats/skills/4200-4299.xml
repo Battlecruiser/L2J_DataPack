@@ -297,14 +297,14 @@
 </skill>
 <skill id="4215" levels="1" name="Raid Curse">
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="DEBUFF"/>
+  <set name="skillType" val="MUTE"/>
   <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="100"/>
   <set name="castRange" val="1500"/>
   <set name="effectRange" val="2000"/>
   <for>
-    <effect count="1" name="Mute" time="3600" val="0" stackOrder="3600" stackType="silence_all"/>
-    <effect count="1" name="PhysicalMute" time="3600" val="0" noicon="1"/>
+    <effect count="1" name="SilenceMagicPhysical" time="3600" val="0" stackOrder="3600" stackType="silence_all"/>
   </for>
 </skill>
 <skill id="4216" levels="1" name="Scatter Enemy">
