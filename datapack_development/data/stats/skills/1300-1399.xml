@@ -1688,20 +1688,19 @@
   <set name="target" val="TARGET_AURA"/>
   <set name="isDebuff" val="true"/>
   <set name="skillRadius" val="200"/>
-  <set name="skillType" val="DEBUFF"/>
+  <set name="skillType" val="MUTE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
   <for>
-    <effect count="1" name="Debuff" time="30" val="0">
+    <effect count="1" name="SilenceMagicPhysical" time="30" val="0">
       <mul order="0x30" stat="mDef" val="0.5"/>
       <mul order="0x30" stat="pDef" val="0.5"/>
       <sub order="0x40" stat="rEvas" val="16"/>
       <mul order="0x30" stat="rShld" val="0.5"/>
       <!-- increases the chance of negating the effects of magical damage -->
     </effect>
-    <effect count="1" name="SilenceMagicPhysical" time="30" val="0"/>
   </for>
 </skill>
 <skill id="1376" levels="1" name="Heroic Dread">
