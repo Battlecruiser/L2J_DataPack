@@ -259,11 +259,21 @@
   </for>
 </skill>
 <skill id="821" levels="1" name="Shadow Step">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="mpConsume" val="50"/>
+  <set name="hitTime" val="0"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="INSTANT_JUMP"/>
+  <set name="effectType" val="DEBUFF"/>
+  <set name="effectPower" val="50"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="900"/>
+  <set name="reuseDelay" val="3600"/>
+  <cond msg="Shadow Step cannot be used due to unsuitable terms.">
+      <target mindistance="300"/>
+  </cond>
   <for>
+      <effect count="1" name="RemoveTarget" time="1" val="0"/>
   </for>
 </skill>
 <skill id="822" levels="3" name="Repair Golem">

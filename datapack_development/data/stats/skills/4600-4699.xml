@@ -1326,12 +1326,16 @@
   </for>
 </skill>
 <skill id="4671" levels="1" name="AV - Teleport">
-<!-- TODO -->
-  <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="PASSIVE"/>
+  <set name="mpConsume" val="0"/>
+  <set name="hitTime" val="0"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="INSTANT_JUMP"/>
+  <set name="castRange" val="1500"/>
+  <set name="effectRange" val="2000"/>
+  <set name="reuseDelay" val="60000"/>
+ <for>
+   <effect count="1" name="TargetMe" time="0" val="0"/>
   </for>
 </skill>
 <skill id="4672" levels="1" name="NPC Corpse Remove">
