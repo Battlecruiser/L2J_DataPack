@@ -819,7 +819,7 @@
 </skill>
 <skill id="7059" levels="1" name="Master's Blessing - Wild Magic">
   <!-- A GM is always by your side.  Temporarily increases the critical attack rate for magic attacks. Effect 2. -->
-  <table name="#mCrit"> 4 </table>
+  <table name="#mCrit"> 1.4 </table>
   <set name="mpConsume" val="2"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
@@ -870,7 +870,7 @@
       <mul order="0x30" stat="mAtk" val="1.20"/>
       <mul order="0x30" stat="mDef" val="1.20"/>
       <mul order="0x30" stat="mAtkSpd" val="1.20"/>
-      <mul order="0x30" stat="mCritRate" val="2.00"/>
+      <mul order="0x30" stat="mCritRate" val="1.20"/>
       <mul order="0x30" stat="regMp" val="1.2"/>
       <mul order="0x30" stat="runSpd" val="0.80"/>
       <mul order="0x30" stat="debuffVuln" val="0.9"/>
