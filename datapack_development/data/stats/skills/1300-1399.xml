@@ -1157,12 +1157,13 @@
 <skill id="1349" levels="1" name="Final Servitor">
   <set name="mpInitialConsume" val="15"/>
   <set name="mpConsume" val="57"/>
+  <set name="power" val="20"/>
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="20"/>
   <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="600000"/>
   <set name="target" val="TARGET_PET"/>
-  <set name="skillType" val="BUFF"/>
+  <set name="skillType" val="HEAL_PERCENT"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
