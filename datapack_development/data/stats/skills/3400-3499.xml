@@ -772,11 +772,15 @@
   </for>
 </skill>
 <skill id="3487" levels="1" name="Blue Talisman of Power">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by Nekys/ Stats by Goz -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x30" stat="pAtk" val="10"/> <!-- increase P. Atk. +10 -->
   </for>
 </skill>
 <skill id="3488" levels="1" name="Blue Talisman of Protection">
@@ -788,35 +792,51 @@
   </for>
 </skill>
 <skill id="3489" levels="1" name="Yellow Talisman of Arcane Power">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by Nekys/ Stats by Goz -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x30" stat="mAtk" val="12"/> <!-- increase M. Atk. +12 -->
   </for>
 </skill>
 <skill id="3490" levels="1" name="Yellow Talisman of Defense">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by Nekys/ Stats by Goz -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x30" stat="pDef" val="18"/> <!-- increase P. Def. +18 -->
   </for>
 </skill>
 <skill id="3491" levels="1" name="Yellow Talisman of Evasion">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by Nekys/ Stats by Goz -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x40" stat="rEvas" val="1"/> <!-- increase Evasion +1 -->
   </for>
 </skill>
 <skill id="3492" levels="1" name="Yellow Talisman of Speed">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by Nekys/ Stats by Goz -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add stat="runSpd" val="3" order="0x40"/> <!-- increase Run Speed +3 -->
   </for>
 </skill>
 <skill id="3493" levels="1" name="Yellow Talisman of Regeneration">
@@ -836,11 +856,15 @@
   </for>
 </skill>
 <skill id="3495" levels="1" name="Yellow Talisman of Healing">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by Nekys/ Stats by Goz -->
+  <set name="power" val="0.0"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x30" stat="gainHp" val="8"/> <!-- increase Healing Power +8 -->
   </for>
 </skill>
 <skill id="3496" levels="1" name="Red Talisman of Recovery">
