@@ -395,7 +395,7 @@
     <effect name="Buff" time="120" count="1" val="0"> <!-- all these values are guessed -->
       <mul order="0x30" stat="pAtk" val="1.1"/>
       <mul order="0x30" stat="mAtk" val="1.1"/>
-      <mul order="0x30" stat="MpConsumeRate" val="0.90"/>
+      <mul order="0x30" stat="MagicalMpConsumeRate" val="0.90"/>
       <!-- missing heal power buff -->
     </effect>
   </for>

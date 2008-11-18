@@ -896,7 +896,8 @@
     <!-- retail value: 24/sec; stat update every 5 units (3 1/3 sec) -->
     <effect count="10" name="ManaDamOverTime" time="3" val="72">
       <mul order="0x30" stat="cancelVuln" val="1.3"/>
-      <mul order="0x30" stat="MpConsumeRate" val="1.30"/>
+      <mul order="0x30" stat="MagicalMpConsumeRate" val="1.30"/>
+      <mul order="0x30" stat="PhysicalMpConsumeRate" val="1.30"/>
       <mul order="0x30" stat="debuffVuln" val="1.3"/>
     </effect>
   </for>
@@ -2125,7 +2126,8 @@
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Debuff" time="30" val="0">
-      <mul order="0x30" stat="MpConsumeRate" val="#mpConsumeRate"/>
+      <mul order="0x30" stat="MagicalMpConsumeRate" val="#mpConsumeRate"/>
+      <mul order="0x30" stat="PhysicalMpConsumeRate" val="#mpConsumeRate"/>
     </effect>
   </for>
 </skill>
@@ -2146,7 +2148,8 @@
   <set name="effectRange" val="900"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#mpConsume" stackType="MPrate">
-      <mul order="0x30" stat="MpConsumeRate" val="#MpConsumeRate"/>
+      <mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRate"/>
+      <mul order="0x30" stat="PhysicalMpConsumeRate" val="#mpConsumeRate"/>
     </effect>
   </for>
 </skill>
