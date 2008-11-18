@@ -393,7 +393,8 @@
   <set name="isPotion" val="true"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="0.8" stackType="MPrate">
-      <mul order="0x30" stat="MpConsumeRate" val="0.8"/>
+      <mul order="0x30" stat="MagicalMpConsumeRate" val="0.8"/>
+	  <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.8"/>
     </effect>
   </for>
 </skill>

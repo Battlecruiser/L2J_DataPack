@@ -304,7 +304,7 @@
       <mul order="0x30" stat="mDef" val="1.30"/>
       <mul order="0x30" stat="mAtk" val="1.30"/>
       <mul order="0x30" stat="maxMp" val="1.20"/>
-      <mul order="0x30" stat="MpConsumeRate" val="0.80"/>
+      <mul order="0x30" stat="MagicalMpConsumeRate" val="0.80"/>
       <mul order="0x30" stat="mCritRate" val="1.02"/> <!-- Guessing -->
     </effect>
   </for>
@@ -1284,7 +1284,7 @@
   <for>
     <effect count="1" name="Buff" time="120" val="0">
       <mul order="0x30" stat="mAtk" val="1.25"/>
-      <mul order="0x30" stat="MpConsumeRate" val="1.20"/>
+      <mul order="0x30" stat="MagicalMpConsumeRate" val="1.20"/>
     </effect>
   </for>
 </skill>

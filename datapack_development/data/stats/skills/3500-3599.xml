@@ -791,7 +791,8 @@
     <add order="0x40" stat="absorbDam" val="4"/>
     <mul order="0x30" stat="stunVuln" val="0.70"/>
     <mul order="0x30" stat="derangementVuln" val="0.70"/>
-    <mul order="0x30" stat="MpConsumeRate" val="0.95"/>
+    <mul order="0x30" stat="MagicalMpConsumeRate" val="0.95"/>
+	<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95"/>
     <mul order="0x30" stat="earthVuln" val="0.85"/>
   </for>
 </skill>
@@ -1373,7 +1374,7 @@
     <mul order="0x30" stat="pvpPhysDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
     <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
     <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
-    <mul order="0x30" stat="MpConsumeRate" val="0.96"/> <!-- Magic MP Cost -4% -->
+    <mul order="0x30" stat="MagicalMpConsumeRate" val="0.96"/> <!-- Magic MP Cost -4% -->
     <sub order="0x40" stat="cancel" val="106"/> <!-- Chance of Magic Cancelation -106 -->
   </for>
 </skill>

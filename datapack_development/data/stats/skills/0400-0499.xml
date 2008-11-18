@@ -388,7 +388,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0">
-      <mul order="0x30" stat="MpConsumeRate" val="#MpConsumeRate"/>
+      <mul order="0x30" stat="PhysicalMpConsumeRate" val="#MpConsumeRate"/>
     </effect>
   </for>
 </skill>
@@ -615,17 +615,15 @@
 </skill>
 <skill id="428" levels="1" name="Inner Rhythm">
   <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
   Description(s):
       MP consumption for singing and dancing is decreased.
   -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-  <!-- needs core support -->
+     <mul order="0x30" stat="DanceMpConsumeRate" val="0.95"/>
   </for>
 </skill>
 <skill id="429" levels="1" name="Knighthood">
@@ -742,24 +740,12 @@
   <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="pDef" val="1.10">
-      <and>
-        <using kind="Magic,Light"/>
-        <not>
-          <using kind="Heavy"/>
-        </not>
-      </and>
+      <using kind="Magic,Light"/>
     </mul>
     <mul order="0x30" stat="mAtkSpd" val="1.07">
-      <and>
-        <using kind="Magic,Light"/>
-        <not>
-          <using kind="Heavy"/>
-        </not>
-      </and>
+      <using kind="Magic,Light"/>
     </mul>
-<!-- need to add MP consumption decrease and check whether armor restriction applies to it as well
-    <mul order="0x30" stat="MpConsumeRate" val="?"/>
--->
+    <mul order="0x30" stat="MagicalMpConsumeRate" val="0.95"/>
   </for>
 </skill>
 <skill id="436" levels="1" name="Divine Lore">
@@ -769,7 +755,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul order="0x30" stat="MpConsumeRate" val="0.95"/> <!-- Needs core support "Should be for magical skills only" -->
+    <mul order="0x30" stat="MagicalMpConsumeRate" val="0.95"/>
   </for>
 </skill>
 <skill id="437" levels="1" name="Song of Silence">
