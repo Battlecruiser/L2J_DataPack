@@ -183,7 +183,6 @@
   <set name="reuseDelay" val="15000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="POISON"/>
-  <set name="killByDOT" val="false"/>
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -835,7 +834,6 @@
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="DOT"/>
-  <set name="killByDOT" val="false"/>
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -973,7 +971,6 @@
   <set name="effectRange" val="1400"/>
   <set name="isDebuff" val="true"/>
   <set name="effectType" val="BLEED"/>
-  <set name="killByDOT" val="false"/>
   <set name="effectPower" val="50"/> <!-- Base Land Rate -->
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
@@ -1206,7 +1203,6 @@
   <set name="isDebuff" val="true"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="DOT"/>
-  <set name="killByDOT" val="false"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
@@ -2689,7 +2685,6 @@
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <set name="effectType" val="DOT"/>
-  <set name="killByDOT" val="false"/>
   <set name="effectPower" val="80"/>
   <for>
     <!-- retail value: 118/sec; stat update every time unit (2/3 sec) -->
