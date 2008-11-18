@@ -348,58 +348,69 @@
   </for>
 </skill>
 <skill id="5426" levels="1" name="Counter Chance">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-    Condition causing target to decrease skill casting speed and MP consumption.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="activationChance" val="10"/>
   <set name="castRange" val="-1"/>
+  <set name="chanceType" val="ON_ATTACKED"/>
+  <set name="effectRange" val="-1"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_CHANCE"/>
+  <set name="bestowed" val="true"/>
   <for>
+    <effect count="1" name="Buff" time="60" val="0">
+      <mul order="0x30" stat="pReuse" val="0.90"> <!-- Guessing -->
+        <using kind="Bow"/>
+      </mul>
+      <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.97"> <!-- Guessing -->
+        <using kind="Bow"/>
+      </mul>
+    </effect>
   </for>
 </skill>
 <skill id="5427" levels="1" name="Counter Rapid Shot">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-    Condition causing target to increase bow attack speed.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="activationChance" val="10"/>
   <set name="castRange" val="-1"/>
+  <set name="chanceType" val="ON_ATTACKED"/>
+  <set name="effectRange" val="-1"/>
+  <set name="target" val="TARGET_PARTY"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_CHANCE"/>
+  <set name="skillRadius" val="1000"/>
+  <set name="bestowed" val="true"/>
   <for>
+    <effect count="1" name="Buff" time="60" val="0">
+      <mul order="0x30" stat="pAtkSpd" val="1.12">
+        <using kind="Bow,Crossbow"/>
+      </mul>
+    </effect>
   </for>
 </skill>
 <skill id="5428" levels="1" name="Counter Dash">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-    Condition causing target to increase speed.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="activationChance" val="10"/>
   <set name="castRange" val="-1"/>
+  <set name="chanceType" val="ON_ATTACKED"/>
+  <set name="effectRange" val="-1"/>
+  <set name="target" val="TARGET_PARTY"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_CHANCE"/>
+  <set name="skillRadius" val="1000"/>
+  <set name="bestowed" val="true"/>
   <for>
+    <effect count="1" name="Buff" time="60" val="0">
+      <add order="0x40" stat="runSpd" val="50"/>
+    </effect>
   </for>
 </skill>
 <skill id="5429" levels="1" name="Counter Mind">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-    none
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="activationChance" val="5"/>
   <set name="castRange" val="-1"/>
+  <set name="chanceType" val="ON_ATTACKED"/>
+  <set name="effectRange" val="-1"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="MANAHEAL"/>
+  <set name="power" val="42"/>
+  <set name="operateType" val="OP_CHANCE"/>
+  <set name="bestowed" val="true"/>
   <for>
   </for>
 </skill>

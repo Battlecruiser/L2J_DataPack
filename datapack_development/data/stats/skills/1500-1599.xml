@@ -342,17 +342,15 @@
   </for>
 </skill>
 <skill id="1526" levels="3" name="Steal Mana">
-  <table name="#power"> 41 51 59 </table>
-  <table name="#magicLvl"> 46 56 64 </table>
-  <table name="#chance"> 5 7 9 </table>
-  <set name="magicLvl" val="#magicLvl"/>
-  <set name="power" val="#power"/>
+  <table name="#triggeredId"> 5676 5677 5678 </table>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="MANARECHARGE"/>
-  <set name="operateType" val="OP_CHANCE"/>
-  <set name="chanceType" val="ON_HIT"/>
-  <set name="activationChance" val="#chance"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="triggeredId" val="#triggeredId"/>
+  <set name="triggeredLevel" val="1"/>
+  <set name="bestowTriggered" val="true"/>
   <for>
   </for>
 </skill>
