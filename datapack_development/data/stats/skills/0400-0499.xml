@@ -116,7 +116,8 @@
   <table name="#ench1MpConsume"> 66 65 64 63 62 61 60 58 57 56 55 54 53 52 51 49 48 47 46 45 44 43 41 40 39 38 37 36 35 34 </table>
   <table name="#mpConsume"> 50 53 55 58 59 61 63 65 67 68 </table>
   <table name="#itemConsumeCount"> 5 6 7 7 8 8 9 9 10 10 </table>
-  <table name="#lethal2"> 5 9 13 17 21 25 29 33 37 41 </table>
+  <table name="#magicLvl"> 56 58 60 62 64 66 68 70 72 74 </table>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="itemConsumeId" val="1785"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -127,7 +128,7 @@
   <set name="isDebuff" val="true"/>
   <set name="skillType" val="FEAR"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="lethal2" val="#lethal2"/>
+  <set name="lethal2" val="40"/>
   <set name="castRange" val="150"/>
   <set name="effectRange" val="550"/>
   <enchant1 name="mpConsume" val="#ench1MpConsume"/>
@@ -232,6 +233,8 @@
   <table name="#ench2MpConsume"> 70 69 68 67 66 64 63 62 61 60 58 57 56 55 54 52 51 50 49 48 46 45 44 43 42 40 39 38 37 36 </table>
   <table name="#mpConsume"> 52 56 58 60 62 64 66 68 70 72 </table>
   <table name="#power"> 1832 2091 2272 2460 2653 2850 3050 3252 3453 3653 </table>
+  <table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74 </table>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="weaponsAllowed" val="16"/> <!-- Dagger -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
@@ -1017,7 +1020,8 @@
   <table name="#ench1MpConsume"> 66 65 64 63 62 61 60 58 57 56 55 54 53 52 51 49 48 47 46 45 44 43 41 40 39 38 37 36 35 34 </table>
   <table name="#mpConsume"> 50 53 55 58 59 61 63 65 67 68 </table>
   <table name="#itemConsumeCount"> 5 6 7 7 8 8 9 9 10 10 </table>
-  <table name="#lethal2"> 5 9 13 17 21 25 29 33 37 41 </table>
+  <table name="#magicLvl"> 56 58 60 62 64 66 68 70 72 74 </table>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="itemConsumeId" val="1785"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1028,7 +1032,7 @@
   <set name="skillType" val="FEAR"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
-  <set name="lethal2" val="#lethal2"/>
+  <set name="lethal2" val="40"/>
   <set name="castRange" val="150"/>
   <set name="effectRange" val="550"/>
   <enchant1 name="mpConsume" val="#ench1MpConsume"/>
