@@ -8742,7 +8742,7 @@ INSERT INTO `droplist` VALUES
 (20824,4078,1,1,-1,102642), -- Blue Wolf Breastplate Part
 (20824,4081,1,1,-1,69258), -- Doom Plate Armor Temper
 (20824,5424,1,1,-1,19448), -- Recipe: Sealed Dark Crystal Gaiters(60%)
-(20824,57,3391,69294,0,700000), -- Adena
+(20824,57,3391,6929,0,700000), -- Adena
 (20824,12341,1,1,1,2558), -- Common Item - Earring of Black Ore
 (20824,12343,1,1,1,2865), -- Common Item - Ring of Black Ore
 (20824,12342,1,1,1,1522), -- Common Item - Necklace of Black Ore
