@@ -7,11 +7,16 @@
   <table name="#pAtk"> 4.5 7.3 8.9 10.7 12.8 15.1 17.7 20.5 23.7 25.4 27.1 29.0 30.9 32.9 35.0 37.1 39.4 41.7 44.1 46.6 49.2 51.9 54.6 57.5 60.4 63.3 66.4 69.5 72.7 76.0 79.3 82.7 86.1 89.6 93.1 96.6 100.2 103.8 107.5 111.1 114.8 118.4 122.1 125.7 129.3 </table> 
   <table name="#ench1runSpd"> 0 1 2 2 3 4 4 5 6 6 7 8 8 9 10 10 11 12 12 13 14 14 15 16 16 17 18 18 19 20 </table>
   <table name="#ench2cAtk"> 113 127 141 155 169 183 196 210 224 238 252 266 279 293 307 321 335 349 362 376 390 404 418 432 445 459 473 487 501 515 </table>
+  <table name="#triggeredId"> 0 0 0 0 0 0 0 0 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="triggeredId" val="#triggeredId"/>
+  <set name="triggeredLevel" val="1"/>
+  <set name="bestowTriggered" val="true"/>
+  <set name="weaponsAllowed" val="16392"/>
   <for>
     <add order="0x40" stat="pAtk" val="#pAtk">
       <using kind="Blunt,Big Blunt"/>
@@ -49,11 +54,16 @@
 </skill>
 <skill id="209" levels="45" name="Dagger Mastery">
   <table name="#pAtk"> 3.6 6 7.4 9 10.8 12.8 15.1 17.6 20.3 21.8 23.4 25 26.6 28.4 30.2 32.1 34.1 36.1 38.2 40.4 42.7 45 47.4 49.9 52.4 55 57.7 60.4 63.2 66.1 69.0 71.9 74.9 78.0 81.1 84.2 87.3 90.5 93.7 96.8 100.0 103.2 106.4 109.6 112.8 </table>
+  <table name="#triggeredId"> 0 0 0 0 0 0 0 0 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 5603 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="triggeredId" val="#triggeredId"/>
+  <set name="triggeredLevel" val="1"/>
+  <set name="bestowTriggered" val="true"/>
+  <set name="weaponsAllowed" val="16"/>
   <for>
     <add order="0x40" stat="pAtk" val="#pAtk">
       <using kind="Dagger"/>

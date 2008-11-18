@@ -25,19 +25,42 @@
   </for>
 </skill>
 <skill id="5603" levels="1" name="Dagger Mastery">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="activationChance" val="25"/>
   <set name="castRange" val="-1"/>
+  <set name="chanceType" val="ON_CRIT"/>
+  <set name="effectRange" val="-1"/>
+  <set name="operateType" val="OP_CHANCE"/>
+  <set name="skillType" val="BUFF"/> 
+  <set name="target" val="TARGET_SELF"/>
+  <set name="bestowed" val="true"/>
+  <set name="weaponsAllowed" val="16"/>
   <for>
+    <effect count="1" name="Buff" time="5" val="0">
+      <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.33">  
+           <using kind="Dagger"/>
+      </mul>
+      <mul order="0x30" stat="blowRate" val="1.10">
+           <using kind="Dagger"/>
+      </mul>
+    </effect>
   </for>
 </skill>
 <skill id="5604" levels="1" name="Blunt Mastery">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="activationChance" val="25"/>
   <set name="castRange" val="-1"/>
+  <set name="chanceType" val="ON_CRIT"/>
+  <set name="effectRange" val="-1"/>
+  <set name="operateType" val="OP_CHANCE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="bestowed" val="true"/>
+  <set name="weaponsAllowed" val="16392"/>
   <for>
+    <effect count="1" name="Buff" time="5" val="0">
+      <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.33">
+          <using kind="Blunt,Big Blunt"/>
+      </mul>
+    </effect>
   </for>
 </skill>
 <skill id="5605" levels="2" name="Power of Apella">
@@ -788,26 +811,41 @@
   </for>
 </skill>
 <skill id="5676" levels="1" name="Steal Mana">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="activationChance" val="5"/>
   <set name="castRange" val="-1"/>
+  <set name="chanceType" val="ON_HIT"/>
+  <set name="effectRange" val="-1"/>
+  <set name="operateType" val="OP_CHANCE"/>
+  <set name="skillType" val="MANARECHARGE"/> 
+  <set name="power" val="41"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="bestowed" val="true"/>
   <for>
   </for>
 </skill>
 <skill id="5677" levels="1" name="Steal Mana">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="activationChance" val="7"/>
   <set name="castRange" val="-1"/>
+  <set name="chanceType" val="ON_HIT"/>
+  <set name="effectRange" val="-1"/>
+  <set name="operateType" val="OP_CHANCE"/>
+  <set name="skillType" val="MANARECHARGE"/> 
+  <set name="power" val="51"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="bestowed" val="true"/>
   <for>
   </for>
 </skill>
 <skill id="5678" levels="1" name="Steal Mana">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="activationChance" val="9"/>
   <set name="castRange" val="-1"/>
+  <set name="chanceType" val="ON_HIT"/>
+  <set name="effectRange" val="-1"/>
+  <set name="operateType" val="OP_CHANCE"/>
+  <set name="skillType" val="MANARECHARGE"/> 
+  <set name="power" val="59"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="bestowed" val="true"/>
   <for>
   </for>
 </skill>
