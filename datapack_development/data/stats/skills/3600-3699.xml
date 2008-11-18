@@ -578,7 +578,7 @@
     <mul order="0x30" stat="pDef" val="1.066"/> <!-- P. Def. +6.6% -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
-    <mul order="0x30" stat="MpConsumeRate" val="0.94"/> <!-- MP Consumption -6% Decrease for Song and Dance Skills  --> <!-- Need core support -->
+    <mul order="0x30" stat="DanceMpConsumeRate" val="0.94"/> <!-- MP Consumption -6% Decrease for Song and Dance Skills  --> <!-- Need core support -->
   </for>
 </skill>
 <skill id="3639" levels="1" name="Dynasty Platinum Plate - Force Master">
@@ -594,7 +594,7 @@
     <mul order="0x30" stat="pAtk" val="1.066"/> <!-- P. Atk. +6.6% -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- Max. HP +492 -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Resistance to Darkness attacks +8 -->
-    <mul order="0x30" stat="MpConsumeRate" val="0.94"/> <!-- Decreases MP consumption by 6% for active skills -->
+    <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.94"/> <!-- Decreases MP consumption by 6% for active skills -->
   </for>
 </skill>
 <skill id="3640" levels="1" name="Dynasty Jewel Leather Mail">
