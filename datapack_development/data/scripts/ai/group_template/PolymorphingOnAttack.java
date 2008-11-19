@@ -42,7 +42,7 @@ public class PolymorphingOnAttack extends L2AttackableAIScript
         MOBSPAWNS.put(21266,new Integer[]{21269,100,100,-1}); //Cave Ant Larva -> Cave Ant (always polymorphs)
         MOBSPAWNS.put(21267,new Integer[]{21270,100,100,-1}); //Cave Ant Larva -> Cave Ant Soldier (always polymorphs)
         MOBSPAWNS.put(21271,new Integer[]{21272,66,10 ,1}); //Cave Ant -> Cave Ant Soldier
-        MOBSPAWNS.put(21272,new Integer[]{21273,33,30 ,5  ,2}); //Cave Ant Soldier -> Cave Noble Ant
+        MOBSPAWNS.put(21272,new Integer[]{21273,33 ,5  ,2}); //Cave Ant Soldier -> Cave Noble Ant
         MOBSPAWNS.put(21521,new Integer[]{21522,100,30 ,-1}); //Claws of Splendor
         MOBSPAWNS.put(21527,new Integer[]{21528,100,30 ,-1}); //Anger of Splendor
         MOBSPAWNS.put(21533,new Integer[]{21534,100,30 ,-1}); //Alliance of Splendor
