@@ -703,22 +703,11 @@
   </for>
 </skill>
 <skill id="760" levels="1" name="Anti Magic Armor">
-  <!-- Done by Caramon81 -->
-  <set name="magicLvl" val="81"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
-  <set name="hitTime" val="1000"/>
-  <set name="mpConsume" val="21"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="reuseDelay" val="1800000"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="target" val="TARGET_SELF"/>
-   <for>
-    <effect count="1" name="Buff" time="30" val="0">
-      <add order="0x40" stat="mDef" val="5000"/>
-    </effect>
-   </for>
- </skill>
+</skill>
 <skill id="761" levels="1" name="Seed of Revenge">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
@@ -800,61 +789,22 @@
   </for>
 </skill>
 <skill id="768" levels="1" name="Exciting Adventure">
-  <!-- Done by Caramon81 -->
-  <set name="mpConsume" val="36"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="reuseDelay" val="100000"/> <!-- Guessing -->
-  <set name="hitTime" val="1000"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
-  <for>
-    <effect count="1" name="Buff" time="30" val="0" stackOrder="1" stackType="dagger_new">
-      <add order="0x40" stat="runSpd" val="20"/>
-      <add order="0x40" stat="rEvas" val="15"/>
-      <add order="0x40" stat="pSkillEvas" val="70"/>
-      <mul order="0x30" stat="blowRate" val="1.1"/>
-    </effect>
-  </for>
 </skill>
 <skill id="769" levels="1" name="Wind Riding">
-  <!-- Done by Caramon81 -->
-  <set name="mpConsume" val="36"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="reuseDelay" val="100000"/> <!-- Guessing -->
-  <set name="hitTime" val="1000"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
-  <for>
-    <effect count="1" name="Buff" time="30" val="0" stackOrder="1" stackType="dagger_new">
-      <add order="0x40" stat="runSpd" val="50"/>
-      <add order="0x40" stat="rEvas" val="20"/>
-      <add order="0x40" stat="pSkillEvas" val="70"/>
-      <mul order="0x30" stat="blowRate" val="1.1"/>
-    </effect>
-  </for>
 </skill>
 <skill id="770" levels="1" name="Ghost Walking">
-  <!-- Done by Caramon81 -->
-  <set name="mpConsume" val="36"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="reuseDelay" val="100000"/> <!-- Guessing -->
-  <set name="hitTime" val="1000"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
-  <for>
-    <effect count="1" name="Buff" time="30" val="0" stackOrder="1" stackType="dagger_new">
-      <add order="0x40" stat="runSpd" val="33"/>
-      <add order="0x40" stat="rEvas" val="15"/>
-      <add order="0x40" stat="pSkillEvas" val="70"/>
-      <mul order="0x30" stat="blowRate" val="1.1"/>
-    </effect>
-  </for>
 </skill>
 <skill id="771" levels="1" name="Flame Hawk">
   <set name="target" val="TARGET_NONE"/>
@@ -897,48 +847,16 @@
   </for>
 </skill>
 <skill id="776" levels="1" name="Force of Destruction">
-  <!-- Done by Caramon81 -->
-  <set name="weaponsAllowed" val="1024"/>
-  <set name="power" val="2516"/>
-  <set name="magicLvl" val="81"/>
-  <set name="mpConsume" val="37"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="reuseDelay" val="20000"/> <!-- Guessing -->
-  <set name="hitTime" val="1200"/>
-  <set name="coolTime" val="440" />
-  <set name="overHit" val="true"/>
-  <set name="skillType" val="CHARGEDAM"/>
-  <set name="SSBoost" val="2.0"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="40"/>
-  <set name="effectRange" val="400"/>
-  <set name="baseCritRate" val="15"/>
-  <set name="num_charges" val="2"/>
-  <set name="charge_skill_id" val="50"/>
-  <set name="effectType" val="BLEED"/>
-  <set name="effectPower" val="10"/>
-  <for>
-    <effect count="7" name="DamOverTime" time="3" val="212" abnormal="bleeding"/>
-  </for>
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
 </skill>
- <skill id="777" levels="1" name="Demolition Impact">
-  <!-- Done by Caramon81 -->
-  <set name="weaponsAllowed" val="18432"/>
-  <set name="mpConsume" val="160"/>
-  <set name="magicLvl" val="81"/>
-  <set name="power" val="5750"/>
-  <set name="target" val="TARGET_FRONT_AREA"/>
-  <set name="skillRadius" val="200"/> <!-- Guessing -->
-  <set name="overHit" val="true"/>
-  <set name="SSBoost" val="2.0"/>
-  <set name="reuseDelay" val="26000"/>
-  <set name="hitTime" val="1200"/>
-  <set name="baseCritRate" val="15"/>
-  <set name="coolTime" val="1080" />
-  <set name="skillType" val="PDAM"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="40"/>
-  <set name="effectRange" val="400"/>
+<skill id="777" levels="1" name="Demolition Impact">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
 </skill>
 <skill id="778" levels="1" name="Golem Armor">
   <set name="target" val="TARGET_NONE"/>
