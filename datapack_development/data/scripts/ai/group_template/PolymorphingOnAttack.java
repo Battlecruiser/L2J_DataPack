@@ -15,7 +15,7 @@
 package ai.group_template;
  
 import java.util.Map;
- 
+
 import net.sf.l2j.gameserver.ai.CtrlIntention;
 import net.sf.l2j.gameserver.model.L2Attackable;
 import net.sf.l2j.gameserver.model.L2Character;
@@ -74,7 +74,7 @@ public class PolymorphingOnAttack extends L2AttackableAIScript
                     String text = MOBTEXTS[tmp[3]][Rnd.get(MOBTEXTS[tmp[3]].length)];
                     npc.broadcastPacket(new CreatureSay(npc.getObjectId(),0,npc.getName(),text));
                 }
-                npc.deleteMe();;
+                npc.deleteMe();
                 L2Attackable newNpc = (L2Attackable) addSpawn(tmp[0], npc.getX(), npc.getY(), npc.getZ()+10, npc.getHeading(), false, 0, true);
                 L2Character originalAttacker = isPet? attacker.getPet(): attacker;
                 newNpc.setRunning();
