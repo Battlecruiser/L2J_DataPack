@@ -280,7 +280,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <basemul order="0x30" stat="rCrit" val="#rCrit"/>
-    <add order="0x40" stat="cAtk" val="#cAtk"/>
+    <add order="0x40" stat="cAtkAdd" val="#cAtk"/>
   </for>
 </skill>
 <skill id="627" levels="40" name="Soul Shock">
