@@ -130,7 +130,7 @@
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
        <!-- SA: Critical Damage -->
-   <add val='247' order='0x40' stat='cAtk'/>
+   <add val='247' order='0x40' stat='cAtkAdd'/>
   </for>
 </item>
 <item id='9311' name="Innominate Victory - Focus">
@@ -223,7 +223,7 @@
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
        <!-- SA: Critical Damage -->
-   <add val='262' order='0x40' stat='cAtk'/>
+   <add val='262' order='0x40' stat='cAtkAdd'/>
   </for>
 </item>
 <item id='9319' name="Colichemarde - Haste">
@@ -420,7 +420,7 @@
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
        <!-- SA: Critical Damage -->
-   <add val='297' order='0x08' stat='cAtk'/>
+   <add val='297' order='0x08' stat='cAtkAdd'/>
   </for>
 </item>
 <item id='9335' name="Divine Pain - Focus">
@@ -498,7 +498,7 @@
    <enchant val='0' order='0x0C' stat='pAtk'/>
    <enchant val='0' order='0x0C' stat='mAtk'/>
        <!-- SA: Critical Damage -->
-   <add val='326' order='0x40' stat='cAtk'/>
+   <add val='326' order='0x40' stat='cAtkAdd'/>
     <!-- Enhances damage to target during PvP -->
    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
