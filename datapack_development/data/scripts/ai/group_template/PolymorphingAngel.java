@@ -54,10 +54,7 @@ public class PolymorphingAngel extends L2AttackableAIScript
         if (ANGELSPAWNS.containsKey(npcId))
         {
             L2Attackable newNpc = (L2Attackable) this.addSpawn(ANGELSPAWNS.get(npcId),npc);
-            L2Character originalKiller = isPet? killer.getPet(): killer;
             newNpc.setRunning();
-            newNpc.addDamageHate(originalKiller,0,999);
-            newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, originalKiller);
         }
         return super.onKill(npc,killer,isPet);
     }
