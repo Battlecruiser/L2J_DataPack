@@ -626,500 +626,516 @@
   </for>
 </skill>
 <skill id="5146" levels="10" name="Heal">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - none
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#power"> 308 337 365 393 421 448 474 498 520 552 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="HEAL"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="bestowed" val="true"/>
   <for>
   </for>
 </skill>
 <skill id="5147" levels="10" name="Blessed Body">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Increases the maximum HP temporarily.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#Tab-maxHp"> 30 60 90 120 150 180 210 240 270 300 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="bestowed" val="true"/>
   <for>
+    <effect count="1" name="Buff" time="15" val="0">
+      <add order="0x40" stat="maxHp" val="#Tab-maxHp"/>
+    </effect>
   </for>
 </skill>
 <skill id="5148" levels="10" name="Prayer">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Increases the effect of HP recovery magic temporarily.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#tab-gainHp"> 1.08 1.10 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="bestowed" val="true"/>
   <for>
+    <effect name="Buff" time="15" count="1" val="0">
+      <mul order="0x30" stat="gainHp" val="#tab-gainHp"/>
+    </effect>
   </for>
 </skill>
 <skill id="5149" levels="10" name="Recharge">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1 - Active: Restores MP. Power 33.
-      Lvl 2 - Active: Restores MP. Power 35.
-      Lvl 3 - Active: Restores MP. Power 38.
-      Lvl 4 - Active: Restores MP. Power 40.
-      Lvl 5 - Active: Restores MP. Power 43.
-      Lvl 6 - Active: Restores MP. Power 45.
-      Lvl 7 - Active: Restores MP. Power 48.
-      Lvl 8 - Active: Restores MP. Power 50.
-      Lvl 9 - Active: Restores MP. Power 52.
-      Lvl 10 - Active: Restores MP. Power 55.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#power"> 33 35 38 40 43 45 48 50 52 55 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="MANARECHARGE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="bestowed" val="true"/>
   <for>
   </for>
 </skill>
 <skill id="5150" levels="10" name="Blessed Soul">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1 - Active: Increases the maximum MP by 16 temporarily.
-      Lvl 2 - Active: Increases the maximum MP by 32 temporarily.
-      Lvl 3 - Active: Increases the maximum MP by 48 temporarily.
-      Lvl 4 - Active: Increases the maximum MP by 68 temporarily.
-      Lvl 5 - Active: Increases the maximum MP by 80 temporarily.
-      Lvl 6 - Active: Increases the maximum MP by 96 temporarily.
-      Lvl 7 - Active: Increases the maximum MP by 112 temporarily.
-      Lvl 8 - Active: Increases the maximum MP by 128 temporarily.
-      Lvl 9 - Active: Increases the maximum MP by 144 temporarily.
-      Lvl 10 - Active: Increases the maximum MP by 160 temporarily.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#Tab-maxMp"> 16 32 48 68 80 96 112 128 144 160 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="bestowed" val="true"/>
   <for>
+    <effect count="1" name="Buff" time="15" val="0">
+      <add order="0x40" stat="maxMp" val="#Tab-maxMp"/>
+    </effect>
   </for>
 </skill>
 <skill id="5151" levels="10" name="Mana Gain">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Increases MP recovery recharge rate.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#Tab-maxMp"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="bestowed" val="true"/>
   <for>
+    <effect count="1" name="Buff" time="15" val="0">
+      <mul order="0x30" stat="gainMp" val="#Tab-maxMp"/>
+    </effect>
   </for>
 </skill>
 <skill id="5152" levels="10" name="Ritual">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1 - Active: Restores CP. Power 264.
-      Lvl 2 - Active: Restores CP. Power 289.
-      Lvl 3 - Active: Restores CP. Power 313.
-      Lvl 4 - Active: Restores CP. Power 337.
-      Lvl 5 - Active: Restores CP. Power 361.
-      Lvl 6 - Active: Restores CP. Power 384.
-      Lvl 7 - Active: Restores CP. Power 406.
-      Lvl 8 - Active: Restores CP. Power 427.
-      Lvl 9 - Active: Restores CP. Power 446.
-      Lvl 10 - Active: Restores CP. Power 473.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#rateCp"> 264 289 313 337 361 384 406 428 446 473 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="#rateCp"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="COMBATPOINTHEAL"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="bestowed" val="true"/>
   <for>
   </for>
 </skill>
 <skill id="5153" levels="10" name="Cheer">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1 - Active: Increases maximum CP by 24 temporarily.
-      Lvl 2 - Active: Increases maximum CP by 48 temporarily.
-      Lvl 3 - Active: Increases maximum CP by 72 temporarily.
-      Lvl 4 - Active: Increases maximum CP by 96 temporarily.
-      Lvl 5 - Active: Increases maximum CP by 120 temporarily.
-      Lvl 6 - Active: Increases maximum CP by 144 temporarily.
-      Lvl 7 - Active: Increases maximum CP by 168 temporarily.
-      Lvl 8 - Active: Increases maximum CP by 192 temporarily.
-      Lvl 9 - Active: Increases maximum CP by 216 temporarily.
-      Lvl 10 - Active: Increases maximum CP by 240 temporarily.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#power"> 24 48 72 96 120 144 168 192 216 240 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="bestowed" val="true"/>
   <for>
+    <effect count="1" name="Buff" time="15" val="0">
+      <add order="0x40" stat="maxCp" val="#power"/>
+    </effect>
   </for>
 </skill>
 <skill id="5154" levels="10" name="Might">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Increases P. Atk. temporarily.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#rate"> 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.1 1.11 1.12 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="bestowed" val="true"/>
   <for>
+    <effect name="Buff" time="15" count="1" val="0">
+      <mul order="0x30" stat="pAtk" val="#rate"/>
+    </effect>
   </for>
 </skill>
 <skill id="5156" levels="10" name="Empower">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Increases M. Atk. temporarily.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#rate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="bestowed" val="true"/>
   <for>
+    <effect name="Buff" time="15" count="1" val="0">
+      <mul order="0x30" stat="mAtk" val="#rate"/>
+    </effect>
   </for>
 </skill>
 <skill id="5157" levels="10" name="Duel Might">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Increases PVP P. Atk. temporarily.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#rate"> 1.06 1.07 1.08 1.09 1.1 1.11 1.12 1.13 1.14 1.15 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="bestowed" val="true"/>
   <for>
+    <effect name="Buff" time="15" count="1" val="0">
+      <mul order="0x30" stat="pvpPhysDmg" val="#rate"/>
+    </effect>
   </for>
 </skill>
 <skill id="5158" levels="10" name="Shield">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Increases P. Def. temporarily.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#rate"> 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.1 1.11 1.12 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="bestowed" val="true"/>
   <for>
+    <effect name="Buff" time="15" count="1" val="0">
+      <mul order="0x30" stat="pDef" val="#rate"/>
+    </effect>
   </for>
 </skill>
 <skill id="5159" levels="10" name="Magic Barrier">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Increases M. Def. temporarily.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#rate"> 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.1 1.11 1.12 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="bestowed" val="true"/>
   <for>
+    <effect name="Buff" time="15" count="1" val="0">
+      <mul order="0x30" stat="mDef" val="#rate"/>
+    </effect>
   </for>
 </skill>
 <skill id="5160" levels="10" name="Duel Weakness">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Decreases your opponent's PVP P. Atk. temporarily.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#rate"> 0.94 0.93 0.92 0.91 0.90 0.89 0.88 0.87 0.86 0.85 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="40"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="bestowed" val="true"/>
+  <set name="isDebuff" val="true"/>
   <for>
+    <effect count="1" name="Debuff" time="15" val="0">
+      <mul order="0x30" stat="pvpPhysDmg" val="#rate"/>
+    </effect>
   </for>
 </skill>
 <skill id="5161" levels="10" name="Agility">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Increases Evasion temporarily.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#rate"> 1 1 1 2 2 2 3 3 4 4 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="bestowed" val="true"/>
   <for>
+    <effect name="Buff" time="15" count="1" val="0">
+      <add order="0x40" stat="rEvas" val="#rate"/>
+    </effect>
   </for>
 </skill>
 <skill id="5162" levels="10" name="Guidance">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Increases Accuracy temporarily.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#rate"> 1 1 1 2 2 2 3 3 4 4 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="bestowed" val="true"/>
   <for>
+   <effect name="Buff" time="15" count="1" val="0">
+      <add order="0x40" stat="accCombat" val="#rate"/>
+    </effect>
   </for>
 </skill>
 <skill id="5163" levels="10" name="Focus">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Increases critical attack rate temporarily.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#rate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="bestowed" val="true"/>
   <for>
+    <effect name="Buff" time="15" count="1" val="0">
+      <mul order="0x30" stat="rCrit" val="#rate"/>
+    </effect>
   </for>
 </skill>
 <skill id="5164" levels="10" name="Wild Magic">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Increases critical attack rate of magic attacks temporarily.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#rate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="bestowed" val="true"/>
   <for>
+    <effect name="Buff" time="15" count="1" val="0">
+      <mul order="0x30" stat="mCritRate" val="#rate"/>
+    </effect>
   </for>
 </skill>
 <skill id="5165" levels="10" name="Charm">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1 - Active: Decreases the target's urge to attack. Power 219.
-      Lvl 2 - Active: Decreases the target's urge to attack. Power 234.
-      Lvl 3 - Active: Decreases the target's urge to attack. Power 248.
-      Lvl 4 - Active: Decreases the target's urge to attack. Power 262.
-      Lvl 5 - Active: Decreases the target's urge to attack. Power 275.
-      Lvl 6 - Active: Decreases the target's urge to attack. Power 287.
-      Lvl 7 - Active: Decreases the target's urge to attack. Power 299.
-      Lvl 8 - Active: Decreases the target's urge to attack. Power 309.
-      Lvl 9 - Active: Decreases the target's urge to attack. Power 318.
-      Lvl 10 - Active: Decreases the target's urge to attack. Power 330.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#power"> 219 234 248 262 275 287 299 309 318 330 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="isDebuff" val="true"/>
+  <set name="skillType" val="AGGREDUCE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="bestowed" val="true"/>
   <for>
   </for>
 </skill>
 <skill id="5166" levels="10" name="Slow">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Temporarily lowers the target's speed. Effect 3.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#Tab-runSpd"> 0.7 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="isDebuff" val="true"/>
+  <set name="bestowed" val="true"/>
   <for>
+    <effect count="1" name="Debuff" time="5" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
+      <mul order="0x30" stat="runSpd" val="#Tab-runSpd"/>
+    </effect>
   </for>
 </skill>
 <skill id="5167" levels="10" name="Winter">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Temporarily lowers the target's Atk. Spd. Effect 3.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <table name="#power"> 10 13 15 18 20 22 24 26 28 30 </table>
+  <set name="power" val="#power"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="isDebuff" val="true"/>
+  <set name="bestowed" val="true"/>
   <for>
+    <effect count="1" name="Debuff" time="5" val="0" stackOrder="0.77" stackType="attack_time_up">
+      <mul order="0x30" stat="pAtkSpd" val="0.77"/>
+    </effect>
   </for>
 </skill>
 <skill id="5168" levels="10" name="Stun">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Momentarily throws the target into a state of shock.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="50"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="STUN"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isDebuff" val="true"/>
+  <set name="bestowed" val="true"/>
   <for>
+    <effect count="1" name="Stun" time="5" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="5169" levels="10" name="Hold">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Temporarily restrains the target. Additional hold attacks cannot be made on the target while the effect lasts.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <table name="#power"> 62 64 66 68 70 72 74 76 78 80 </table>
+  <set name="power" val="#power"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="ROOT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="isDebuff" val="true"/>
+  <set name="bestowed" val="true"/>
   <for>
+    <effect count="1" name="Root" time="5" val="0" stackOrder="1" stackType="Root"/>
   </for>
 </skill>
 <skill id="5170" levels="10" name="Sleep">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Causes the target to fall asleep. Additional sleep attacks cannot be made on the target while the effect lasts.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <table name="#power"> 19 26 34 43 51 55 58 61 63 65 </table>
+  <set name="power" val="#power"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="SLEEP"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="isDebuff" val="true"/>
+  <set name="bestowed" val="true"/>
   <for>
+    <effect count="1" name="Sleep" time="5" val="0" stackOrder="1" stackType="sleep"/>
   </for>
 </skill>
 <skill id="5171" levels="10" name="Paralyze">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Temporarily Immobilizes the target.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <table name="#power"> 1 3 5 8 10 12 14 16 18 20 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="PARALYZE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="isDebuff" val="true"/>
+  <set name="bestowed" val="true"/>
   <for>
+    <effect count="1" name="Paralyze" time="5" val="0"/>
   </for>
 </skill>
 <skill id="5172" levels="10" name="Medusa">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Temporarily renders the target rigid as if turned to stone.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="40"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="PARALYZE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isDebuff" val="true"/>
+  <set name="bestowed" val="true"/>
   <for>
+    <effect count="1" name="Petrification" time="5" val="0" stackOrder="30" stackType="turn_stone"/>
   </for>
 </skill>
 <skill id="5173" levels="10" name="Fear">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Strikes terror into the target, causing it to flee.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="20"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="FEAR"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isDebuff" val="true"/>
+  <set name="bestowed" val="true"/>
   <for>
+    <effect count="3" name="Fear" time="2" val="0"/>
   </for>
 </skill>
 <skill id="5174" levels="10" name="Poison">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1 - Active: Temporarily poisons the target, weakening it. Effect 5.
-      Lvl 2 - Active: Temporarily poisons the target, weakening it. Effect 5.
-      Lvl 3 - Active: Temporarily poisons the target, weakening it. Effect 6.
-      Lvl 4 - Active: Temporarily poisons the target, weakening it. Effect 6.
-      Lvl 5 - Active: Temporarily poisons the target, weakening it. Effect 6.
-      Lvl 6 - Active: Temporarily poisons the target, weakening it. Effect 7.
-      Lvl 7 - Active: Temporarily poisons the target, weakening it. Effect 7.
-      Lvl 8 - Active: Temporarily poisons the target, weakening it. Effect 7.
-      Lvl 9 - Active: Temporarily poisons the target, weakening it. Effect 8.
-      Lvl 10 - Active: Temporarily poisons the target, weakening it. Effect 8.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#dmg"> 24 24 54 54 72 72 93 114 132 144 </table>
+  <table name="#power"> 1.0 1.0 3.0 3.0 4.0 4.0 5.0 6.0 7.0 8.0 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="POISON"/>
+  <set name="killByDOT" val="false"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isDebuff" val="true"/>
+  <set name="bestowed" val="true"/>
+  <set name="isMagic" val="true"/>
   <for>
+    <effect count="10" name="DamOverTime" time="3" val="#dmg" abnormal="poison"/>
   </for>
 </skill>
 <skill id="5175" levels="10" name="Bleed">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1 - Active: Causes the target to bleed. Effect 5.
-      Lvl 2 - Active: Causes the target to bleed. Effect 5.
-      Lvl 3 - Active: Causes the target to bleed. Effect 6.
-      Lvl 4 - Active: Causes the target to bleed. Effect 6.
-      Lvl 5 - Active: Causes the target to bleed. Effect 6.
-      Lvl 6 - Active: Causes the target to bleed. Effect 7.
-      Lvl 7 - Active: Causes the target to bleed. Effect 7.
-      Lvl 8 - Active: Causes the target to bleed. Effect 7.
-      Lvl 9 - Active: Causes the target to bleed. Effect 8.
-      Lvl 10 - Active: Causes the target to bleed. Effect 8.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#dmg"> 39 39 51 51 66 66 81 81 93 102 </table>
+  <table name="#power"> 3.0 3.0 4.0 4.0 5.0 5.0 6.0 6.0 7.0 8.0 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="BLEED"/>
+  <set name="killByDOT" val="false"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isDebuff" val="true"/>
+  <set name="bestowed" val="true"/>
   <for>
+    <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding"/>
   </for>
 </skill>
 <skill id="5176" levels="10" name="Silence">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Temporarily blocks the target's magic skills.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="MUTE"/>
+  <set name="power" val="40"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isDebuff" val="true"/>
+  <set name="bestowed" val="true"/>
+  <set name="isMagic" val="true"/>
   <for>
+    <effect count="1" name="Mute" time="5" val="0" stackOrder="1" stackType="silence"/>
   </for>
 </skill>
 <skill id="5177" levels="10" name="Doom">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Active: Temporarily blocks the target's ability to use all physical or magic skills.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="MUTE"/>
+  <set name="power" val="40"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isDebuff" val="true"/>
+  <set name="bestowed" val="true"/>
+  <set name="isMagic" val="true"/>
   <for>
+    <effect count="1" name="SilenceMagicPhysical" time="5" val="0" stackOrder="30" stackType="silence_all"/>
   </for>
 </skill>
 <skill id="5178" levels="1" name="NPC Burn">
