@@ -144,6 +144,7 @@ public class Antharas extends L2AttackableAIScript
                 _LastAction = System.currentTimeMillis();
             }
             else if (event.equalsIgnoreCase("antharas_despawn"))
+            {
                 temp = (System.currentTimeMillis() - _LastAction);
                 if (temp > 900000)
                 {
@@ -153,6 +154,7 @@ public class Antharas extends L2AttackableAIScript
                     _Zone.oustAllPlayers();
                     this.cancelQuestTimer("antharas_despawn", npc, null);
                 }
+            }
             else if (event.equalsIgnoreCase("antharas_has_arrived"))
             {
                int dx = Math.abs(npc.getX() - 181911);
