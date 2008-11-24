@@ -960,50 +960,53 @@
   </for>
 </skill>
 <skill id="4650" levels="1" name="NPC AE - Dispel Hold">
-<!-- TODO -->
-  <set name="mpConsume" val="53"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="CANCEL"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isMagic" val="true"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="40"/>
+  <set name="mpConsume" val="42"/>
+  <set name="mpInitialConsume" val="11"/>
   <set name="negateStats" val="ROOT"/>
-  <set name="negatePower" val="9.0"/>
-  <for>
-  </for>
+  <set name="negatePower" val="1"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillRadius" val="200"/>
+  <set name="skillType" val="CANCEL"/>
+  <set name="target" val="TARGET_AURA"/>
 </skill>
 <skill id="4651" levels="3" name="NPC AE - Dispel Slow">
-<!-- TODO -->
-  <table name="#mpConsume"> 29 53 83 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="CANCEL"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isMagic" val="true"/>
+  <!-- Done by DJ MELERIX -->
+  <table name="#magicLvl"> 20 40 60 </table>
+  <table name="#mpConsume"> 23 42 66 </table>
+  <table name="#mpInitialConsume"> 6 11 17 </table>
+  <table name="#negatePower"> 1 2 3 </table>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="negateStats" val="DEBUFF"/>
-  <set name="negatePower" val="9.0"/>
-  <for>
-  </for>
+  <set name="negatePower" val="#negatePower"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillRadius" val="200"/>
+  <set name="skillType" val="CANCEL"/>
+  <set name="target" val="TARGET_AURA"/>
 </skill>
 <skill id="4652" levels="1" name="NPC AE Dispel Silence">
-<!-- TODO -->
-  <set name="mpConsume" val="53"/>
-  <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="CANCEL"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isMagic" val="true"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="40"/>
+  <set name="mpConsume" val="42"/>
+  <set name="mpInitialConsume" val="11"/>
   <set name="negateStats" val="MUTE"/>
-  <set name="negatePower" val="9.0"/>
-  <for>
-  </for>
+  <set name="negatePower" val="1"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillRadius" val="200"/>
+  <set name="skillType" val="CANCEL"/>
+  <set name="target" val="TARGET_AURA"/>
 </skill>
 <skill id="4653" levels="12" name="NPC Corpse Life Drain">
   <table name="#drain"> 131 201 271 351 451 551 651 691 731 751 771 781 </table>
