@@ -973,6 +973,7 @@
   <table name="#water"> 1.2 1.3 1.4 </table>
   <table name="#fire"> 0.8 0.7 0.6 </table>
   <table name="#mpConsume"> 20 35 65 </table>
+  <table name="#stackOrder"> 2 3 4 </table>
   <set name="magicLvl" val="80"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -987,7 +988,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="1" name="Debuff" time="120" val="0" stackOrder="2" stackType="surrender">
+    <effect count="1" name="Debuff" time="120" val="0" stackOrder="#stackOrder" stackType="md_up_attr">
       <mul order="0x30" stat="fireVuln" val="#fire"/>
       <mul order="0x30" stat="waterVuln" val="#water"/>
     </effect>
@@ -997,6 +998,7 @@
   <table name="#wind"> 1.2 1.3 1.4 </table>
   <table name="#earth"> 0.8 0.7 0.6 </table>
   <table name="#mpConsume"> 20 35 65 </table>
+  <table name="#stackOrder"> 2 3 4 </table>
   <set name="magicLvl" val="80"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1011,7 +1013,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="1" name="Debuff" time="120" val="0" stackOrder="2" stackType="surrender">
+    <effect count="1" name="Debuff" time="120" val="0" stackOrder="#stackOrder" stackType="md_up_attr">
       <mul order="0x30" stat="windVuln" val="#wind"/>
       <mul order="0x30" stat="earthVuln" val="#earth"/>
     </effect>
@@ -1021,6 +1023,7 @@
   <table name="#earth"> 1.2 1.3 1.4 </table>
   <table name="#wind"> 0.8 0.7 0.6 </table>
   <table name="#mpConsume"> 20 35 65 </table>
+  <table name="#stackOrder"> 2 3 4 </table>
   <set name="magicLvl" val="80"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1035,7 +1038,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="1" name="Debuff" time="120" val="0" stackOrder="2" stackType="surrender">
+    <effect count="1" name="Debuff" time="120" val="0" stackOrder="#stackOrder" stackType="md_up_attr">
       <mul order="0x30" stat="earthVuln" val="#earth"/>
       <mul order="0x30" stat="windVuln" val="#wind"/>
     </effect>
@@ -1045,6 +1048,7 @@
   <table name="#dark"> 1.2 1.3 1.4 </table>
   <table name="#holy"> 0.8 0.7 0.6 </table>
   <table name="#mpConsume"> 20 35 65 </table>
+  <table name="#stackOrder"> 2 3 4 </table>
   <set name="magicLvl" val="80"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1059,7 +1063,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="1" name="Debuff" time="120" val="0" stackOrder="2" stackType="surrender">
+    <effect count="1" name="Debuff" time="120" val="0" stackOrder="#stackOrder" stackType="md_up_attr">
       <mul order="0x30" stat="darkVuln" val="#dark"/>
       <mul order="0x30" stat="holyVuln" val="#holy"/>
     </effect>
@@ -1069,6 +1073,7 @@
   <table name="#holy"> 1.2 1.3 1.4 </table>
   <table name="#dark"> 0.8 0.7 0.6 </table>
   <table name="#mpConsume"> 20 35 65 </table>
+  <table name="#stackOrder"> 2 3 4 </table>
   <set name="magicLvl" val="80"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1083,7 +1088,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="1" name="Debuff" time="120" val="0" stackOrder="2" stackType="surrender">
+    <effect count="1" name="Debuff" time="120" val="0" stackOrder="#stackOrder" stackType="md_up_attr">
       <mul order="0x30" stat="holyVuln" val="#holy"/>
       <mul order="0x30" stat="darkVuln" val="#dark"/>
     </effect>
@@ -1383,7 +1388,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="1" name="Debuff" time="120" val="0" stackOrder="2" stackType="surrender">
+    <effect count="1" name="Debuff" time="120" val="0">
       <mul order="0x30" stat="pDef" val="#pdef"/>
     </effect>
   </for>
@@ -1406,7 +1411,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="1" name="Debuff" time="120" val="0" stackOrder="2" stackType="surrender">
+    <effect count="1" name="Debuff" time="120" val="0">
       <mul order="0x30" stat="mDef" val="#mdef"/>
     </effect>
   </for>

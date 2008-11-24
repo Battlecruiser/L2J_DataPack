@@ -307,7 +307,7 @@
   <set name="effectRange" val="1250"/>
   <set name="isDebuff" val="true"/>
   <for>
-    <effect count="1" name="Debuff" time="15" val="0" stackOrder="2" stackType="surrender">
+    <effect count="1" name="Debuff" time="15" val="0" stackOrder="3" stackType="md_up_attr">
       <mul order="0x30" stat="holyVuln" val="1.30"/>
       <mul order="0x30" stat="darkVuln" val="0.70"/>
     </effect>
