@@ -457,7 +457,6 @@
   <table name="#Tab-earthVuln"> 1.25 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 </table>
   <table name="#Tab-castRange"> 750 900 900 900 900 900 900 900 900 900 900 900 900 900 900 </table>
   <table name="#ench1Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
-  <table name="#stackOrder"> 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -476,7 +475,7 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Debuff" time="15" val="0" stackOrder="#stackOrder" stackType="md_up_attr">
+    <effect count="1" name="Debuff" time="15" val="0" stackOrder="2" stackType="surrender">
       <mul order="0x30" stat="earthVuln" val="#Tab-earthVuln"/>
     </effect>
   </for>
@@ -493,7 +492,6 @@
   <table name="#Tab-poisonVuln"> 1.25 1.25 1.25 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 </table>
   <table name="#Tab-castRange"> 750 750 750 900 900 900 900 900 900 900 900 900 900 900 900 900 900 </table>
   <table name="#ench1Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
-  <table name="#stackOrder"> 2 2 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -512,7 +510,7 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Debuff" time="15" val="0" stackOrder="#stackOrder" stackType="resist_poison">
+    <effect count="1" name="Debuff" time="15" val="0" stackOrder="2" stackType="surrender">
       <mul order="0x30" stat="poisonVuln" val="#Tab-poisonVuln"/>
     </effect>
   </for>

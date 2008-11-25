@@ -1832,7 +1832,7 @@
   <set name="effectRange" val="1400"/>
   <set name="isMagic" val="true"/>
   <for>
-    <effect count="1" name="Debuff" time="120" val="0" stackOrder="4" stackType="md_up_attr">
+    <effect count="1" name="Debuff" time="120" val="0" stackOrder="2" stackType="surrender">
       <mul order="0x30" stat="fireVuln" val="#fireVuln"/>
     </effect>
   </for>
@@ -1857,7 +1857,7 @@
   <set name="effectRange" val="1400"/>
   <set name="isMagic" val="true"/>
   <for>
-    <effect count="1" name="Debuff" time="120" val="0" stackOrder="4" stackType="md_up_attr">
+    <effect count="1" name="Debuff" time="120" val="0" stackOrder="2" stackType="surrender">
       <mul order="0x30" stat="waterVuln" val="#waterVuln"/>
     </effect>
   </for>
@@ -1882,7 +1882,7 @@
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
   <for>
-    <effect count="1" name="Debuff" time="120" val="0" stackOrder="4" stackType="md_up_attr">
+    <effect count="1" name="Debuff" time="120" val="0" stackOrder="2" stackType="surrender">
       <mul order="0x30" stat="windVuln" val="#windVuln"/>
     </effect>
   </for>
@@ -2046,7 +2046,6 @@
   <table name="#mpConsume"> 54 62 69 </table>
   <!-- L2P still need to confirm res values -->
   <table name="#darkVuln"> 0.85 0.77 0.7 </table>
-  <table name="#stackOrder"> 1 2 3 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="reuseDelay" val="7000"/>
   <set name="hitTime" val="4000"/>
@@ -2057,7 +2056,7 @@
   <set name="effectRange" val="900"/>
   <set name="isMagic" val="true"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#stackOrder" stackType="md_up_attr">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="DarkAtr">
       <mul order="0x30" stat="darkVuln" val="#darkVuln"/>
     </effect>
   </for>

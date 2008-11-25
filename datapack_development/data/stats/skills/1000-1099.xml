@@ -741,7 +741,6 @@
   <table name="#mpConsume"> 24 28 31 </table>
   <table name="#vuln"> 0.7 0.6 0.5 </table>
   <table name="#aggro"> 331 379 418 </table>
-  <table name="#stackOrder"> 1 2 3 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_ONE"/>
@@ -756,12 +755,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#stackOrder" stackType="resist_poison">
+    <effect count="1" name="Buff" time="1200" val="0">
       <mul order="0x30" stat="poisonVuln" val="#vuln"/>
     </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="3" stackType="resist_poison">
+    <effect count="1" name="Buff" time="#ench1time" val="0">
       <mul order="0x30" stat="poisonVuln" val="0.5"/>
     </effect>
   </enchant1for>
@@ -1491,7 +1490,7 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Debuff" time="15" val="0" stackOrder="3" stackType="md_up_attr">
+    <effect count="1" name="Debuff" time="15" val="0" stackOrder="2" stackType="AquaAtr">
       <mul order="0x30" stat="waterVuln" val="1.3"/>
     </effect>
   </for>
@@ -1614,7 +1613,7 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Debuff" time="15" val="0" stackOrder="3" stackType="md_up_attr">
+    <effect count="1" name="Debuff" time="15" val="0" stackOrder="2" stackType="WindAtr">
       <mul order="0x30" stat="windVuln" val="1.3"/>
     </effect>
   </for>
@@ -1748,7 +1747,7 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Debuff" time="15" val="0" stackOrder="3" stackType="md_up_attr">
+    <effect count="1" name="Debuff" time="15" val="0" stackOrder="2" stackType="FireAtr">
       <mul order="0x30" stat="fireVuln" val="#Tab-fireVuln"/>
     </effect>
   </for>
