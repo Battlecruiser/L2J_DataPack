@@ -45,7 +45,7 @@
   <set name="isDebuff" val="true"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="5" name="Confuse" time="4" val="0"/> <!-- Only for Temp Fix: Needs Core Support for Randomize Aggro/Target Effect -->
+    <effect count="5" name="ConfuseMob" time="4" val="0"/> <!-- Only for Temp Fix: Needs Core Support for Randomize Aggro/Target Effect -->
   </for>
 </skill>
 <skill id="3" levels="9" name="Power Strike">
