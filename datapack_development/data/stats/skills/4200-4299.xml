@@ -316,8 +316,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="800"/>
   <set name="effectRange" val="1300"/>
-  <for>
-  </for>
 </skill>
 <skill id="4217" levels="1" name="None">
   <!-- Zaken skills teleport pc and zaken -->
@@ -330,8 +328,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="800"/>
   <set name="effectRange" val="1300"/>
-  <for>
-  </for>
 </skill>
 <skill id="4218" levels="1" name="Absorb HP MP">
   <!-- Zaken skills -->
@@ -348,8 +344,6 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="absorbPart" val="0.8" />
-  <for>
-  </for>
 </skill>
 <skill id="4219" levels="1" name="Hold">
   <!-- Zaken skills -->
@@ -380,8 +374,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="50"/>
   <set name="effectRange" val="200"/>
-  <for>
-  </for>
 </skill>
 <skill id="4221" levels="1" name="Deadly Dual-Sword Weapon: Range Attack">
   <!-- Zaken skills -->
@@ -396,8 +388,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4222" levels="1" name="Instant Move">
   <!-- Zaken skills - self teleport -->
@@ -408,8 +398,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4223" levels="1" name="Face Chance: Night to Day">
   <!-- Zaken skills - change face -->
@@ -429,13 +417,11 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="coolTime" val="1900"/>
   <set name="hitTime" val="1100"/>
-  <set name="skillType" val="BUFF"/>
+  <set name="skillType" val="NEGATE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="cancelEffect" val="4223"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4225" levels="6" name="Resist Shock">
   <!-- Done by DJ MELERIX -->
@@ -693,11 +679,10 @@
   <!-- Zaken skills -->
   <set name="target" val="TARGET_SELF"/>
   <set name="cancelEffect" val="4227"/>
-  <set name="skillType" val="BUFF"/>
+  <set name="skillType" val="NEGATE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
+  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="4243" levels="1" name="Venomous Poison">
   <!-- Done by DJ MELERIX -->
