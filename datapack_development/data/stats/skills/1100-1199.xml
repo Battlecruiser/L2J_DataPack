@@ -1272,7 +1272,6 @@
   <table name="#mpConsume"> 18 28 31 </table>
   <table name="#vuln"> 0.85 0.77 0.7 </table>
   <table name="#aggro"> 243 379 418 </table>
-  <table name="#stackOrder"> 1 2 3 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1287,12 +1286,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#stackOrder" stackType="md_up_attr">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="AquaAtr">
       <mul order="0x30" stat="waterVuln" val="#vuln"/>
     </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="3" stackType="md_up_attr">
+    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="1" stackType="AquaAtr">
       <mul order="0x30" stat="waterVuln" val="0.7"/>
     </effect>
   </enchant1for>
@@ -1362,7 +1361,6 @@
   <table name="#mpConsume"> 24 28 31 </table>
   <table name="#vuln"> 0.85 0.77 0.7 </table>
   <table name="#aggro"> 331 379 418 </table>
-  <table name="#stackOrder"> 1 2 3 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1377,12 +1375,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#stackOrder" stackType="md_up_attr">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="WindAtr">
       <mul order="0x30" stat="windVuln" val="#vuln"/>
     </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="3" stackType="md_up_attr">
+    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="1" stackType="WindAtr">
       <mul order="0x30" stat="windVuln" val="0.7"/>
     </effect>
   </enchant1for>
@@ -1395,7 +1393,6 @@
   <table name="#mpConsume"> 21 28 31 </table>
   <table name="#vuln"> 0.85 0.77 0.7 </table>
   <table name="#aggro"> 285 379 418 </table>
-  <table name="#stackOrder"> 1 2 3 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1410,12 +1407,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#stackOrder" stackType="md_up_attr">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="FireAtr">
       <mul order="0x30" stat="fireVuln" val="#vuln"/>
     </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="3" stackType="md_up_attr">
+    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="1" stackType="FireAtr">
       <mul order="0x30" stat="fireVuln" val="0.7"/>
     </effect>
   </enchant1for>
