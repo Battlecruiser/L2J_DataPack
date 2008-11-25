@@ -1232,7 +1232,7 @@
   <set name="effectRange" val="900"/>
   <set name="aggroPoints" val="662"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="3" stackType="md_up_attr">
+    <effect count="1" name="Buff" time="1200" val="0">
       <mul stat="waterVuln" val="0.8" order="0x30"/>
       <mul stat="fireVuln" val="0.7" order="0x30"/>
       <mul stat="windVuln" val="0.8" order="0x30"/>
