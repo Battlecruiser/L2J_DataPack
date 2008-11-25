@@ -305,12 +305,12 @@
   </for>
 </skill>
 <skill id="5538" levels="1" name="Little Angel Agathion Special Skill - Firecrackers">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <!-- HOT ??? this a temp hack to make it work? -->
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
+  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="5539" levels="1" name="Little Angel Agathion Special Skill - Mysterious Power">
   <set name="target" val="TARGET_NONE"/>
@@ -342,12 +342,12 @@
   </for>
 </skill>
 <skill id="5542" levels="1" name="Little Devil Agathion Special Skill - Firecrackers">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <!-- HOT ??? this a temp hack to make it work? -->
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
+  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="5543" levels="1" name="Little Devil Agathion Special Skill - Mysterious Power">
   <set name="target" val="TARGET_NONE"/>
