@@ -38,14 +38,14 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="1500"/>
-  <set name="skillType" val="CONFUSE_MOB_ONLY"/>
+  <set name="skillType" val="CONFUSE_MOB_ONLY"/> <!-- Only for Temp Fix: Needs Core Support for Randomize Aggro/Target Effect -->
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="isDebuff" val="true"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="5" name="Confuse" time="4" val="0"/>
+    <effect count="5" name="Confuse" time="4" val="0"/> <!-- Only for Temp Fix: Needs Core Support for Randomize Aggro/Target Effect -->
   </for>
 </skill>
 <skill id="3" levels="9" name="Power Strike">
