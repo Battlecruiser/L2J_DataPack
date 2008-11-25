@@ -1493,8 +1493,6 @@
   <set name="castRange" val="50"/>
   <set name="effectRange" val="400"/>
   <set name="attribute" val="valakas"/>
-  <for>
-  </for>
 </skill>
 <skill id="4682" levels="1" name="Valakas Trample">
   <!-- Valakas Skills -->
@@ -1510,9 +1508,7 @@
   <set name="castRange" val="50"/>
   <set name="effectRange" val="400"/>
   <set name="attribute" val="valakas"/>
-  <for>
-  </for>
-  </skill>
+</skill>
 <skill id="4683" levels="1" name="Valakas Dragon Breath">
   <!-- Valakas Skills -->
   <!-- Valakas Dragon Breath Low -->
@@ -1571,8 +1567,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4686" levels="1" name="Valakas Tail Stomp">
   <!-- Valakas Skills -->
@@ -1586,23 +1580,18 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4687" levels="1" name="Valakas Tail Stomp">
   <!-- Valakas Skills -->
   <!-- Valakas Tail Stomp Visual -->
   <set name="magicLvl" val="75"/>
   <set name="power" val="0.0"/>
-  <set name="target" val="TARGET_BEHIND_AURA"/>
+  <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="3000"/>
-  <set name="element" val="2"/> <!-- Fire -->
-  <set name="skillType" val="MDAM"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4688" levels="1" name="Valakas Stun">
   <!-- Valakas Skills -->
@@ -1631,6 +1620,7 @@
   <!-- Lvl 2: Valakas Fear Visual -->
   <table name="#coolTime"> 2000 0 </table>
   <table name="#hitTime"> 3000 0 </table>
+  <table name="#lvlDepend"> 1 0 </table>
   <set name="magicLvl" val="75"/>
   <set name="power" val="80"/>
   <set name="target" val="TARGET_FRONT_AURA"/>
@@ -1639,8 +1629,7 @@
   <set name="hitTime" val="#hitTime"/>
   <set name="skillType" val="FEAR"/>
   <set name="isDebuff" val="true"/>
-  <set name="isMagic" val="true"/>
-  <set name="lvlDepend" val="1"/>
+  <set name="lvlDepend" val="#lvlDepend"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1661,8 +1650,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4691" levels="4" name="Valakas Regeneration">
   <!-- Done by DJ MELERIX -->
