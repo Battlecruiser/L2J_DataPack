@@ -12925,7 +12925,7 @@ INSERT INTO skill_trees VALUES
 (55,36,22,'Whirlwind',161000,60),
 (55,36,23,'Whirlwind',161000,60),
 (55,190,24,'Fatal Strike',200000,62),
-(55,190,25,'Fatal Strike',20000,62),
+(55,190,25,'Fatal Strike',200000,62),
 (55,36,24,'Whirlwind',200000,62),
 (55,36,25,'Whirlwind',200000,62),
 (55,205,32,'Blunt Weapon Mastery',200000,62),
