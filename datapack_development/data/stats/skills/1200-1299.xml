@@ -539,9 +539,9 @@
   <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
   <table name="#npcIds"> 14163 14159 14164 14160 14165 14161 14166 14162 14167 14168 14169 14170 14171 14172 14173 14174 14175 14176 </table>
-  <set name="npcId" val="#npcIds" />
-  <set name="expPenalty" val="0.9" />
-  <set name="isCubic" val="false" />
+  <set name="npcId" val="#npcIds"/>
+  <set name="expPenalty" val="0.9"/>
+  <set name="isCubic" val="false"/>
   <for>
   </for>
 </skill>
@@ -575,9 +575,9 @@
   <!-- Summon-specific -->
   <table name="#npcIds"> 14295 14300 14296 14301 14297 14302 14298 14303 14299 14304 14305 14306 14307 14308 14309 14310 14311 14312 </table>
   <table name="#expPenalty"> 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.29 0.28 0.27 0.26 0.25 0.24 0.23 0.22 0.21 0.2 0.18 </table>
-  <set name="npcId" val="#npcIds" />
-  <set name="expPenalty" val="#expPenalty" />
-  <set name="isCubic" val="false" />
+  <set name="npcId" val="#npcIds"/>
+  <set name="expPenalty" val="#expPenalty"/>
+  <set name="isCubic" val="false"/>
   <for>
   </for>
 </skill>
@@ -605,9 +605,9 @@
   <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
   <table name="#npcIds"> 14347 14343 14348 14344 14349 14345 14350 14346 14351 14352 14353 14354 14355 14356 14357 14358 14359 14360 </table>
-  <set name="npcId" val="#npcIds" />
-  <set name="expPenalty" val="0.9" />
-  <set name="isCubic" val="false" />
+  <set name="npcId" val="#npcIds"/>
+  <set name="expPenalty" val="0.9"/>
+  <set name="isCubic" val="false"/>
   <for>
   </for>
 </skill>
@@ -636,9 +636,9 @@
   <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
   <table name="#npcIds"> 14531 14527 14532 14528 14533 14529 14534 14530 14535 14536 14537 14538 14539 14540 14541 14542 14543 14544 </table>
-  <set name="npcId" val="#npcIds" />
-  <set name="expPenalty" val="0.9" />
-  <set name="isCubic" val="false" />
+  <set name="npcId" val="#npcIds"/>
+  <set name="expPenalty" val="0.9"/>
+  <set name="isCubic" val="false"/>
   <for>
   </for>
 </skill>
@@ -852,7 +852,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
-  <set name="absorbPart" val="0.4" /><!-- absorbs 40% of damage -->
+  <set name="absorbPart" val="0.4"/><!-- absorbs 40% of damage -->
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
@@ -909,7 +909,7 @@
   <set name="element" val="3"/> <!-- Water -->
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="3100"/>
-  <set name="coolTime" val="200" />
+  <set name="coolTime" val="200"/>
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1219,7 +1219,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
-  <set name="absorbPart" val="0.8" /><!-- absorbs 80% of damage -->
+  <set name="absorbPart" val="0.8"/><!-- absorbs 80% of damage -->
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
@@ -2288,7 +2288,7 @@
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="1459"/>
-  <set name="itemConsumeCount" val="#itemConsumeCount" />
+  <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="itemConsumeIdOT" val="1459"/>
   <set name="itemConsumeCountOT" val="#itemConsumeCountOT"/>
   <set name="itemConsumeSteps" val="14"/>
@@ -2306,9 +2306,9 @@
   <!-- Summon-specific -->
   <table name="#npcIds"> 14207 14208 14209 14210 14211 14212 14213 14214 14215 14216 14217 14218 14219 14220 </table>
   <table name="#expPenalty"> 0.1 0.1 0.1 0.1 0.1 0.1 0.05 0.05 0.05 0.05 0.0 0.0 0.0 0.0 </table>
-  <set name="npcId" val="#npcIds" />
-  <set name="expPenalty" val="#expPenalty" />
-  <set name="isCubic" val="false" />
+  <set name="npcId" val="#npcIds"/>
+  <set name="expPenalty" val="#expPenalty"/>
+  <set name="isCubic" val="false"/>
 </skill>
 <skill id="1277" levels="14" name="Summon Merrow the Unicorn" enchantLevels1="30">
   <table name="#enchantNpcId">14405 14406 14407 14408 14409 14410 14411 14412 14413 14414 14415 14416 14417 14418 14419 14420 14421 14422 14423 14424 14425 14426 14427 14428 14429 14430 14431 14432 14433 14434</table>
@@ -2339,9 +2339,9 @@
   <!-- Summon-specific -->
   <table name="#npcIds"> 14391 14392 14393 14394 14395 14396 14397 14398 14399 14400 14401 14402 14403 14404 </table>
   <table name="#expPenalty"> 0.1 0.1 0.1 0.1 0.1 0.1 0.05 0.05 0.05 0.05 0.0 0.0 0.0 0.0 </table>
-  <set name="npcId" val="#npcIds" />
-  <set name="expPenalty" val="#expPenalty" />
-  <set name="isCubic" val="false" />
+  <set name="npcId" val="#npcIds"/>
+  <set name="expPenalty" val="#expPenalty"/>
+  <set name="isCubic" val="false"/>
   <for>
   </for>
 </skill>
@@ -2373,8 +2373,8 @@
   <!-- Summon-specific -->
   <table name="#npcIds"> 14575 14576 14577 14578 14579 14580 14581 14582 14583 14584 14585 14586 14587 14588 </table>
   <table name="#expPenalty"> 0.1 0.1 0.1 0.1 0.1 0.1 0.05 0.05 0.05 0.05 0.0 0.0 0.0 0.0 </table> 
-  <set name="npcId" val="#npcIds" /> 
-  <set name="expPenalty" val="#expPenalty" />
+  <set name="npcId" val="#npcIds"/> 
+  <set name="expPenalty" val="#expPenalty"/>
   <set name="isCubic" val="false"/>
   <for>
   </for>
@@ -2386,7 +2386,7 @@
   <table name="#mAtk"> 282 377 497 644 820 1026 1264 1530 1822 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="itemConsumeId" val="1458" />
+  <set name="itemConsumeId" val="1458"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="20000"/>
@@ -2398,11 +2398,11 @@
   <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
   <set name="power" val="#mAtk"/>
-  <set name="npcId" val="6" />
+  <set name="npcId" val="6"/>
   <set name="activationtime" val="14"/>
   <set name="activationchance" val="55"/>
-  <set name="expPenalty" val="0.0" />
-  <set name="isCubic" val="true" />
+  <set name="expPenalty" val="0.0"/>
+  <set name="isCubic" val="true"/>
   <for>
   </for>
 </skill>
@@ -2414,7 +2414,7 @@
   <set name="element" val="3"/> <!-- Water -->
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="itemConsumeId" val="1458" />
+  <set name="itemConsumeId" val="1458"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="20000"/>
@@ -2426,11 +2426,11 @@
   <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
   <set name="power" val="#mAtk"/>
-  <set name="npcId" val="7" />
+  <set name="npcId" val="7"/>
   <set name="activationtime" val="14"/> <!-- guessed -->
   <set name="activationchance" val="67"/> <!-- guessed -->
-  <set name="expPenalty" val="0.0" />
-  <set name="isCubic" val="true" />
+  <set name="expPenalty" val="0.0"/>
+  <set name="isCubic" val="true"/>
   <for>
   </for>
 </skill>
@@ -2441,7 +2441,7 @@
   <table name="#mAtk"> 282 377 497 644 820 1026 1264 1530 1822 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="itemConsumeId" val="1458" />
+  <set name="itemConsumeId" val="1458"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="20000"/>
@@ -2453,11 +2453,11 @@
   <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
   <set name="power" val="#mAtk"/>
-  <set name="npcId" val="8" />
+  <set name="npcId" val="8"/>
   <set name="activationtime" val="14"/> <!-- guessed -->
   <set name="activationchance" val="55"/> <!-- guessed -->
-  <set name="expPenalty" val="0.0" />
-  <set name="isCubic" val="true" />
+  <set name="expPenalty" val="0.0"/>
+  <set name="isCubic" val="true"/>
   <for>
   </for>
 </skill>

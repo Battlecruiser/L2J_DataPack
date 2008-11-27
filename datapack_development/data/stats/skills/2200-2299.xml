@@ -245,7 +245,7 @@
   <set name="reuseDelay" val="8000"/>
   <set name="skillType" val="DELUXE_KEY_UNLOCK"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="itemConsumeId" val="#itemConsume" />
+  <set name="itemConsumeId" val="#itemConsume"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
@@ -529,7 +529,7 @@
   <set name="skillType" val="CREATE_ITEM"/>
   <set name="hitTime" val="500"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="itemConsumeId" val="8058" />
+  <set name="itemConsumeId" val="8058"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="create_item_id" val="8059"/>
   <set name="create_item_count" val="1"/>
@@ -652,7 +652,7 @@
   <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <for>
-    <effect name="Buff" time="3600" count="1" val="0" stackOrder="20" stackType="fishPot" />
+    <effect name="Buff" time="3600" count="1" val="0" stackOrder="20" stackType="fishPot"/>
   </for>
 </skill>
 <skill id="2275" levels="1" name="Fishing Potion">

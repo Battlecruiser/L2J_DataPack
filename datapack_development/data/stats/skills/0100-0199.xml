@@ -14,7 +14,7 @@
   <set name="SSBoost" val="2.0"/>
   <set name="reuseDelay" val="13000"/>
   <set name="hitTime" val="1080"/>
-  <set name="coolTime" val="720" />
+  <set name="coolTime" val="720"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
@@ -50,7 +50,7 @@
   <set name="SSBoost" val="2.0"/>
   <set name="reuseDelay" val="10000"/>
   <set name="hitTime" val="3000"/>
-  <set name="coolTime" val="1000" />
+  <set name="coolTime" val="1000"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
@@ -67,14 +67,14 @@
   </for>
   <enchant3for>
     <effect count="1" name="Debuff" time="9" val="0">
-      <mul order="0x30" stat="pDef" val="#ench3-pDef" />
+      <mul order="0x30" stat="pDef" val="#ench3-pDef"/>
     </effect>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun" noicon="1"/>
     <effect count="1" name="RemoveTarget" time="1" val="0"/>
   </enchant3for>
   <enchant4for>
     <effect count="1" name="Debuff" time="9" val="0">
-      <mul order="0x30" stat="mDef" val="#ench4-mDef" />
+      <mul order="0x30" stat="mDef" val="#ench4-mDef"/>
     </effect>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun" noicon="1"/>
     <effect count="1" name="RemoveTarget" time="1" val="0"/>
@@ -482,7 +482,7 @@
   <set name="SSBoost" val="2.0"/>
   <set name="reuseDelay" val="13000"/>
   <set name="hitTime" val="1604"/>
-  <set name="coolTime" val="296" />
+  <set name="coolTime" val="296"/>
   <set name="isDebuff" val="true"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1064,7 +1064,7 @@
   <set name="SSBoost" val="2.0"/>
   <set name="reuseDelay" val="13000"/>
   <set name="hitTime" val="1080"/>
-  <set name="coolTime" val="720" />
+  <set name="coolTime" val="720"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>

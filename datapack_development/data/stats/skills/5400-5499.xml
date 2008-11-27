@@ -662,9 +662,9 @@
   <set name="power" val="40"/> <!-- Guessing -->
   <set name="isDebuff" val="true"/>
   <set name="castRange" val="40"/>
-  <for> 
+  <for>
     <effect count="1" name="Paralyze" time="15" val="0"/> 
-    <effect count="5" name="DamOverTime" time="3" val="#dmg" abnormal="poison" noicon="1" />
+    <effect count="5" name="DamOverTime" time="3" val="#dmg" abnormal="poison" noicon="1"/>
   </for> 
 </skill>
 <skill id="5448" levels="1" name="Obilivion">
