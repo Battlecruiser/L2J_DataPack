@@ -150,7 +150,7 @@ public class Baium extends L2AttackableAIScript
 		            {
 		            }
 				}
-			},(long)100);
+			},100L);
         }
         else
             addSpawn(STONE_BAIUM,115213,16623,10080,41740,false,0);
@@ -193,7 +193,7 @@ public class Baium extends L2AttackableAIScript
     		            {
     		            }
     				}
-    			},(long)11000);
+    			},11000L);
                 // TODO: the person who woke baium up should be knocked across the room, onto a wall, and
                 // lose massive amounts of HP.
             }
@@ -253,7 +253,7 @@ public class Baium extends L2AttackableAIScript
     		            {
     		            }
     				}
-    			},(long)100);
+    			},100L);
             }
             else
                 htmltext = "Conditions are not right to wake up Baium";

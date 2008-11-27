@@ -16,7 +16,6 @@ package ai.individual;
 
 import java.util.concurrent.Future;
 import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import javolution.util.FastList;
 import net.sf.l2j.Config;
@@ -35,7 +34,7 @@ import net.sf.l2j.gameserver.model.zone.type.L2BossZone;
 import net.sf.l2j.gameserver.network.serverpackets.ActionFailed;
 import net.sf.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import net.sf.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
-import net.sf.l2j.gameserver.templates.L2NpcTemplate;
+import net.sf.l2j.gameserver.templates.chars.L2NpcTemplate;
 import ai.group_template.L2AttackableAIScript;
 
 /**
@@ -45,7 +44,6 @@ import ai.group_template.L2AttackableAIScript;
 
 public class IceFairySirra extends L2AttackableAIScript
 {
-	protected static Logger _log = Logger.getLogger(IceFairySirra.class.getName());
 	private static final int STEWARD = 32029;
 	private static final int SILVER_HEMOCYTE = 8057;
 	private static L2BossZone _freyasZone;

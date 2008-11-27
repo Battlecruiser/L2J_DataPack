@@ -98,7 +98,7 @@ public class Zaken extends L2AttackableAIScript
     				            	log.warning("Cannot close door ID: 21240006 " + e);
     				            }
     						}
-    					},(long)300000);
+    					},300000L);
     				}
                 }
                 catch (Throwable e)
@@ -106,7 +106,7 @@ public class Zaken extends L2AttackableAIScript
                 	log.warning("Cannot open door ID: 21240006 " + e);
                 }
     		}
-        },(long)2000, (long)600000);
+        },2000L, 600000L);
 
         int[] mobs = {ZAKEN, doll_blader_b, vale_master_b, pirates_zombie_captain_b, pirates_zombie_b};
         registerMobs(mobs);
