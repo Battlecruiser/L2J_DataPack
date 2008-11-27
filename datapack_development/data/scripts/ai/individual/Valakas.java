@@ -175,6 +175,9 @@ public class Valakas extends L2AttackableAIScript
 			if (event.equalsIgnoreCase("1001"))
             {
                 npc.teleToLocation(212852,-114842,-1632);
+            	// delete me once animations available
+            	GrandBossManager.getInstance().setBossStatus(VALAKAS,FIGHTING);
+            	//
                 i_quest1 = System.currentTimeMillis();
                 final L2NpcInstance _valakas = npc;
                 ThreadPoolManager.getInstance().scheduleGeneral(new Runnable() {
@@ -308,7 +311,8 @@ public class Valakas extends L2AttackableAIScript
             }
             else if (event.equalsIgnoreCase("1110"))
             {
-            	GrandBossManager.getInstance().setBossStatus(VALAKAS,FIGHTING);
+            	// uncoment me once animations available
+            	//GrandBossManager.getInstance().setBossStatus(VALAKAS,FIGHTING);
             	startQuestTimer("1002",60000, npc, null, true);
             	npc.setIsInvul(false);
             	getRandomSkill(npc);
@@ -356,6 +360,9 @@ public class Valakas extends L2AttackableAIScript
                 }
                 cancelQuestTimer("1002", npc, null);
                 startQuestTimer("remove_players",900000, null, null);
+                // delete me once animations available
+                GrandBossManager.getInstance().setBossStatus(VALAKAS,DEAD);
+                //
             }
         }
         else
@@ -957,7 +964,8 @@ public class Valakas extends L2AttackableAIScript
     	startQuestTimer("1111",500, npc, null);
         npc.broadcastPacket(new SpecialCamera(npc.getObjectId(),2000,130,-1,0,10000));
         npc.broadcastPacket(new PlaySound(1, "B03_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
-        GrandBossManager.getInstance().setBossStatus(VALAKAS,DEAD);
+        // uncoment me once animations available 
+        //GrandBossManager.getInstance().setBossStatus(VALAKAS,DEAD);
         long respawnTime = ((192 + Rnd.get(145) ) * 3600000);
         this.startQuestTimer("valakas_unlock", respawnTime, null, null);
         // also save the respawn time so that the info is maintained past reboots
