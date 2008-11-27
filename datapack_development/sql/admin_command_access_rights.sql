@@ -44,7 +44,11 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_kick','1'),
 ('admin_unban','1'),
 ('admin_unbanchat','1'),
-('admin_unjail','1'), 
+('admin_unjail','1'),
+('admin_getbuffs','1'),
+('admin_stopbuff','1'),
+('admin_stopallbuffs','1'),
+('admin_areacancel','1'),
 -- #################
 -- ### CLAN HALL ###
 -- #################
