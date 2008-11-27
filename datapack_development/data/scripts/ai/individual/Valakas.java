@@ -122,7 +122,7 @@ public class Valakas extends L2AttackableAIScript
     		            {
     		            }
     				}
-    			},(long)100);
+    			},100L);
                 startQuestTimer("1003", 60000, valakas, null, true);
             }
         }
@@ -150,7 +150,7 @@ public class Valakas extends L2AttackableAIScript
 		            {
 		            }
 				}
-			},(long)100);
+			},100L);
 
             startQuestTimer("1003", 60000, valakas, null, true);
             if (status == WAITING)
@@ -191,7 +191,7 @@ public class Valakas extends L2AttackableAIScript
     		            {
     		            }
     				}
-    			},(long)1);
+    			},1L);
                 startQuestTimer("1004",2000, npc, null);
             }
             else if (event.equalsIgnoreCase("1002"))
