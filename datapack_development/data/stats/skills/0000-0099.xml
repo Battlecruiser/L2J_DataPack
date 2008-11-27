@@ -19,7 +19,7 @@
   <set name="SSBoost" val="2.0"/>
   <set name="reuseDelay" val="13000"/>
   <set name="hitTime" val="1733"/>
-  <set name="coolTime" val="167" />
+  <set name="coolTime" val="167"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
@@ -60,7 +60,7 @@
   <set name="SSBoost" val="2.0"/>
   <set name="reuseDelay" val="13000"/>
   <set name="hitTime" val="1080"/>
-  <set name="coolTime" val="720" />
+  <set name="coolTime" val="720"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
@@ -171,7 +171,7 @@
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <!-- charge values -->
-  <set name="itemConsumeId" val="5589" />
+  <set name="itemConsumeId" val="5589"/>
   <set name="itemConsumeCount" val="3"/>
   <set name="num_charges" val="2"/>
   <set name="charge_skill_id" val="8"/> <!-- Sonic Focus is the charger -->
@@ -215,7 +215,7 @@
   <set name="condition" val="128"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="720"/>
-  <set name="coolTime" val="280" />
+  <set name="coolTime" val="280"/>
   <set name="skillType" val="CHARGEDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
@@ -236,7 +236,7 @@
   <table name="#mAtk"> 282 434 644 919 1141 1394 1673 1975 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="itemConsumeId" val="1458" />
+  <set name="itemConsumeId" val="1458"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="20000"/>
@@ -248,11 +248,11 @@
   <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
   <set name="power" val="#mAtk"/>
-  <set name="npcId" val="1" />
+  <set name="npcId" val="1"/>
   <set name="activationtime" val="14"/>
   <set name="activationchance" val="80"/>
-  <set name="expPenalty" val="0.0" />
-  <set name="isCubic" val="true" />
+  <set name="expPenalty" val="0.0"/>
+  <set name="isCubic" val="true"/>
   <for>
   </for>
 </skill>
@@ -297,7 +297,7 @@
   <table name="#enchantNpcId">14738 14739 14740 14741 14742 14743 14744 14745 14746 14747 14748 14749 14750 14751 14752 14753 14754 14755 14756 14757 14758 14759 14760 14761 14762 14763 14764 14765 14766 14767</table>
   <enchant1 name="npcId" val="#enchantNpcId"/>
   <set name="mpInitialConsume" val="530"/>
-  <set name="itemConsumeId" val="1459" />
+  <set name="itemConsumeId" val="1459"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="itemConsumeCount" val="300"/>
   <set name="reuseDelay" val="20000"/>
@@ -352,7 +352,7 @@
   <set name="condition" val="16"/>
   <set name="reuseDelay" val="11000"/>
   <set name="hitTime" val="1080"/>
-  <set name="coolTime" val="720" />
+  <set name="coolTime" val="720"/>
   <set name="overHit" val="true"/>
   <set name="skillType" val="BLOW"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -375,7 +375,7 @@
   <set name="condition" val="128"/>
   <set name="reuseDelay" val="10000"/>
   <set name="hitTime" val="783"/>
-  <set name="coolTime" val="217" />
+  <set name="coolTime" val="217"/>
   <set name="skillType" val="CHARGEDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
@@ -434,7 +434,7 @@
   <set name="SSBoost" val="2.0"/>
   <set name="reuseDelay" val="25000"/>
   <set name="hitTime" val="3000"/>
-  <set name="coolTime" val="1000" />
+  <set name="coolTime" val="1000"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
@@ -513,7 +513,7 @@
   <set name="SSBoost" val="2.0"/>
   <set name="reuseDelay" val="25000"/>
   <set name="hitTime" val="3200"/>
-  <set name="coolTime" val="800" />
+  <set name="coolTime" val="800"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="500"/>
@@ -592,7 +592,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="3000"/>
   <set name="hitTime" val="700"/>
-  <set name="coolTime" val="200" />
+  <set name="coolTime" val="200"/>
   <set name="skillType" val="AGGDAMAGE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
@@ -623,7 +623,7 @@
   <set name="SSBoost" val="2.0"/>
   <set name="reuseDelay" val="15000"/>
   <set name="hitTime" val="1604"/>
-  <set name="coolTime" val="296" />
+  <set name="coolTime" val="296"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
@@ -646,7 +646,7 @@
   <set name="condition" val="24"/>
   <set name="reuseDelay" val="11000"/>
   <set name="hitTime" val="1080"/>
-  <set name="coolTime" val="720" />
+  <set name="coolTime" val="720"/>
   <set name="skillType" val="BLOW"/>
   <set name="baseCritRate" val="15"/>
   <set name="lethal1" val="5"/>
@@ -757,7 +757,7 @@
   <set name="reuseDelay" val="17000"/>
   <set name="ignoreShld" val="true"/>
   <set name="hitTime" val="1067"/>
-  <set name="coolTime" val="733" />
+  <set name="coolTime" val="733"/>
   <set name="skillType" val="PDAM"/>
   <set name="effectRange" val="-1"/>
   <set name="castRange" val="-1"/>
@@ -854,8 +854,8 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <!-- Drain-specific: absorb from a mob's corpse -->
-  <set name="absorbPart" val="0" /> <!-- no damage, it's dead -->
-  <set name="absorbAbs" val="#HPget" /> <!-- absorbs absolute value -->
+  <set name="absorbPart" val="0"/> <!-- no damage, it's dead -->
+  <set name="absorbAbs" val="#HPget"/> <!-- absorbs absolute value -->
   <enchant1 name="absorbAbs" val="#enchHPget"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
@@ -881,7 +881,7 @@
   <set name="SSBoost" val="2.0"/>
   <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="1080"/>
-  <set name="coolTime" val="720" />
+  <set name="coolTime" val="720"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="ignoreShld" val="true"/>
@@ -1006,7 +1006,7 @@
   <set name="SSBoost" val="2.0"/>
   <set name="reuseDelay" val="25000"/>
   <set name="hitTime" val="3200"/>
-  <set name="coolTime" val="800" />
+  <set name="coolTime" val="800"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="700"/>
@@ -1348,7 +1348,7 @@
   <set name="reuseDelay" val="120000"/>
   <set name="hitTime" val="1360"/>
   <set name="lvlDepend" val="2"/>
-  <set name="coolTime" val="440" />
+  <set name="coolTime" val="440"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
@@ -1422,7 +1422,7 @@
   <set name="SSBoost" val="2.0"/>
   <set name="reuseDelay" val="60000"/>
   <set name="hitTime" val="1833"/>
-  <set name="coolTime" val="167" />
+  <set name="coolTime" val="167"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -1545,7 +1545,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="12000"/>
   <set name="hitTime" val="1200"/>
-  <set name="coolTime" val="300" />
+  <set name="coolTime" val="300"/>
   <set name="skillType" val="STUN"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
@@ -1625,7 +1625,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="7000"/>
   <set name="hitTime" val="1604"/>
-  <set name="coolTime" val="296" />
+  <set name="coolTime" val="296"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
@@ -1656,7 +1656,7 @@
   <set name="reuseDelay" val="13000"/>
   <set name="hitTime" val="1080"/>
   <set name="isDebuff" val="true"/>
-  <set name="coolTime" val="720" />
+  <set name="coolTime" val="720"/>
   <set name="skillType" val="BLEED"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>

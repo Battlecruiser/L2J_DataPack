@@ -742,16 +742,16 @@
 <skill id="5590" levels="5" name="Pet Battle Heal">
   <table name="#mpConsume">133 147 158 170 179</table> 
   <table name="#power">618.0 690.0 758.0 817.0 858.0</table>
-  <set name="mpConsume" val="#mpConsume" /> 
-  <set name="power" val="#power" /> 
-  <set name="target" val="TARGET_OWNER_PET" /> 
-  <set name="reuseDelay" val="3000" /> 
-  <set name="hitTime" val="2000" /> 
-  <set name="skillType" val="HEAL" /> 
-  <set name="isMagic" val="true" /> 
-  <set name="operateType" val="OP_ACTIVE" /> 
-  <set name="castRange" val="600" /> 
-  <set name="effectRange" val="1100" /> 
+  <set name="mpConsume" val="#mpConsume"/> 
+  <set name="power" val="#power"/> 
+  <set name="target" val="TARGET_OWNER_PET"/> 
+  <set name="reuseDelay" val="3000"/> 
+  <set name="hitTime" val="2000"/> 
+  <set name="skillType" val="HEAL"/> 
+  <set name="isMagic" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="castRange" val="600"/> 
+  <set name="effectRange" val="1100"/>
   <for>
   </for>
 </skill>
