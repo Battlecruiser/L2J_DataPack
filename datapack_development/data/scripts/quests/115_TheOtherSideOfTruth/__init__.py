@@ -68,7 +68,8 @@ class Quest (JQuest) :
        else:
           st.exitQuest(false)
           st.playSound("ItemSound.quest_finish")
-          st.giveItems(57,60044)
+          st.giveItems(57,115673)
+          st.addExpAndSp(493595,40442)
     elif event == "32020-19.htm" :
        st.playSound("ItemSound.quest_middle")
        st.set("cond","11")
