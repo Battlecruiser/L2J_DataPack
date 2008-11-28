@@ -657,7 +657,7 @@
   <set name="buffDuration" val="25000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <set name="cancelEffect" val="1430"/>
+  <set name="negateId" val="1430"/>
   <for>
     <effect count="10" name="ManaHealOverTime" time="3" noicon="1" val="#mhot"/>
     <effect count="1" name="ImmobileUntilAttacked" time="30" val="0">
@@ -1082,7 +1082,6 @@
   <set name="mpConsume" val="80"/>
   <set name="magicLvl" val="79"/>
   <set name="power" val="162"/>
-  <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2000"/>
   <set name="element" val="2"/> <!-- Fire -->
@@ -1093,7 +1092,7 @@
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <set name="effectType" val="NEGATE"/>
-  <set name="cancelEffect" val="1339"/>
+  <set name="negateId" val="1339"/>
   <cond msg="Invalid target.">
     <target active_effect_id="1339"/>
   </cond>
@@ -1126,7 +1125,6 @@
   <set name="mpConsume" val="80"/>
   <set name="magicLvl" val="79"/>
   <set name="power" val="162"/>
-  <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2000"/>
   <set name="element" val="3"/> <!-- Water -->
@@ -1137,7 +1135,7 @@
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <set name="effectType" val="NEGATE"/>
-  <set name="cancelEffect" val="1340"/>
+  <set name="negateId" val="1340"/>
   <cond msg="Invalid target.">
     <target active_effect_id="1340"/>
   </cond>
@@ -1190,7 +1188,6 @@
   <set name="mpConsume" val="80"/>
   <set name="magicLvl" val="79"/>
   <set name="power" val="162"/>
-  <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2000"/>
   <set name="element" val="1"/> <!-- Wind -->
@@ -1201,7 +1198,7 @@
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <set name="effectType" val="NEGATE"/>
-  <set name="cancelEffect" val="1341"/>
+  <set name="negateId" val="1341"/>
   <cond msg="Invalid target.">
     <target active_effect_id="1341"/>
   </cond>
@@ -1481,17 +1478,17 @@
   <table name="#mpConsume_Init"> 4 7 11 </table>
   <table name="#mpConsume"> 15 29 44 </table>
   <table name="#magicLvl"> 24 46 66 </table> 
-  <table name="#power"> 3 7 10 </table>
+  <table name="#negatePower"> 3 7 10 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="15000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="NEGATE"/>
   <set name="isMagic" val="true"/>
-  <set name="cancelEffect" val="5264"/>
+  <set name="negateId" val="5264"/>
+  <set name="negatePower" val="#negatePower"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
 </skill>

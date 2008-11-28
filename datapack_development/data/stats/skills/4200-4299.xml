@@ -419,7 +419,7 @@
   <set name="hitTime" val="1100"/>
   <set name="skillType" val="NEGATE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="cancelEffect" val="4223"/>
+  <set name="negateId" val="4223"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
 </skill>
@@ -678,7 +678,7 @@
 <skill id="4242" levels="1" name="Zaken Regeneration">
   <!-- Zaken skills -->
   <set name="target" val="TARGET_SELF"/>
-  <set name="cancelEffect" val="4227"/>
+  <set name="negateId" val="4227"/>
   <set name="skillType" val="NEGATE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>

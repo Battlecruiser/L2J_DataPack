@@ -1673,18 +1673,16 @@
 <skill id="4693" levels="1" name="Quest BOSS Dispel Big Body">
   <!-- Done by DJ MELERIX -->
   <set name="aggroPoints" val="100"/>
-  <set name="cancelEffect" val="4692"/>
+  <set name="negateId" val="4692"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="hitTime" val="1000"/>
   <set name="isMagic" val="true"/>
   <set name="magicLvl" val="76"/>
+  <set name="negatePower" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="100"/>
   <set name="skillType" val="NEGATE"/>
   <set name="target" val="TARGET_SELF"/>
-  <for>
-  </for>
 </skill>
 <skill id="4694" levels="1" name="Ultimate Debuff">
   <set name="power" val="100"/>
