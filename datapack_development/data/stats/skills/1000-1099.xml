@@ -448,22 +448,21 @@
 <skill id="1012" levels="3" name="Cure Poison">
   <table name="#mpConsume_Init"> 2 6 11 </table>
   <table name="#mpConsume"> 8 24 44 </table>
-  <table name="#power"> 3.0 7.0 9.0 </table>
+  <table name="#negatePower"> 3 7 9 </table>
   <table name="#aggro"> 121 331 566 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="15000"/>
   <set name="hitTime" val="4000"/>
-  <set name="skillType" val="UNPOISON"/>
+  <set name="skillType" val="NEGATE"/>
+  <set name="negateStats" val="POISON"/>
+  <set name="negatePower" val="#negatePower"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="aggroPoints" val="#aggro"/>
-  <for>
-  </for>
 </skill>
 <skill id="1013" levels="32" name="Recharge" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
