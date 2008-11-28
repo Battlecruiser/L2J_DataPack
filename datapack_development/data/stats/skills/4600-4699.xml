@@ -351,19 +351,17 @@
   </for>
 </skill>
 <skill id="4618" levels="1" name="NPC Cancel PC Target">
-  <!-- Needs to be checked -->
   <set name="mpConsume" val="35"/>
-  <set name="power" val="100"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="CANCEL"/>
+  <set name="skillType" val="BUFF"/>
   <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="8000"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="400"/>
-  <set name="effectRange" val="90"/>
-  <set name="negateStats" val="STUN ROOT SLEEP MUTE FEAR CONFUSION POISON BLEED BUFF DEBUFF WEAKNESS PARALYZE"/>
-  <set name="negatePower" val="9.0"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="RemoveTarget" time="1" val="0"/>
   </for>
 </skill>
 <skill id="4619" levels="1" name="NPC Dispel Sleep">
@@ -376,10 +374,8 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="negateStats" val="SLEEP"/>
-  <set name="negatePower" val="9.0"/>
+  <set name="negatePower" val="1"/>
   <set name="aggroPoints" val="100"/>
-  <for>
-  </for>
 </skill>
 <skill id="4620" levels="12" name="Paralysis">
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
@@ -1351,6 +1347,7 @@
 <skill id="4673" levels="12" name="NPC Dispel Offensive Buff">
   <table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
   <table name="#Power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table>
+  <table name="#negatePower"> 8 17 25 33 42 50 58 67 75 83 92 100 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#Power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1361,13 +1358,12 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="negateStats" val="BUFF"/>
-  <set name="negatePower" val="8.0"/>
-  <for>
-  </for>
+  <set name="negatePower" val="#negatePower"/>
 </skill>
 <skill id="4674" levels="12" name="NPC Dispel Offensive Buff">
   <table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
   <table name="#Power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table>
+  <table name="#negatePower"> 8 17 25 33 42 50 58 67 75 83 92 100 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#Power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1378,13 +1374,12 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="negateStats" val="BUFF"/>
-  <set name="negatePower" val="8.0"/>
-  <for>
-  </for>
+  <set name="negatePower" val="#negatePower"/>
 </skill>
 <skill id="4675" levels="12" name="NPC Dispel Fighter Buff">
   <table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
   <table name="#Power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table>
+  <table name="#negatePower"> 8 17 25 33 42 50 58 67 75 83 92 100 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#Power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1395,13 +1390,12 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="negateStats" val="BUFF"/>
-  <set name="negatePower" val="8.0"/>
-  <for>
-  </for>
+  <set name="negatePower" val="#negatePower"/>
 </skill>
 <skill id="4676" levels="12" name="NPC Dispel Mage Offensive Buff">
   <table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
   <table name="#Power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table>
+  <table name="#negatePower"> 8 17 25 33 42 50 58 67 75 83 92 100 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#Power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1412,13 +1406,12 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="negateStats" val="BUFF"/>
-  <set name="negatePower" val="8.0"/>
-  <for>
-  </for>
+  <set name="negatePower" val="#negatePower"/>
 </skill>
 <skill id="4677" levels="12" name="NPC Dispel Fighter Defensive Buff">
   <table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
   <table name="#Power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table>
+  <table name="#negatePower"> 8 17 25 33 42 50 58 67 75 83 92 100 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#Power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1429,13 +1422,12 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="negateStats" val="BUFF"/>
-  <set name="negatePower" val="8.0"/>
-  <for>
-  </for>
+  <set name="negatePower" val="#negatePower"/>
 </skill>
 <skill id="4678" levels="12" name="NPC Dispel Mage Defensive Buff">
   <table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
   <table name="#Power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table>
+  <table name="#negatePower"> 8 17 25 33 42 50 58 67 75 83 92 100 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#Power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1446,9 +1438,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="negateStats" val="BUFF"/>
-  <set name="negatePower" val="8.0"/>
-  <for>
-  </for>
+  <set name="negatePower" val="#negatePower"/>
 </skill>
 <skill id="4679" levels="1" name="Valakas">
   <!-- Valakas Skills -->

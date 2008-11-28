@@ -88,8 +88,6 @@
   <set name="isMagic" val="true"/>
   <set name="targetConsumeId" val="8615"/>
   <set name="targetConsumeCount" val="1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1404" levels="1" name="Word of Invitation">
   <set name="target" val="TARGET_PARTY"/>
@@ -104,8 +102,6 @@
   <set name="castRange" val="-2"/>
   <set name="effectRange" val="-2"/>
   <set name="isMagic" val="true"/>
-  <for>
-  </for>
 </skill>
 <skill id="1405" levels="4" name="Divine Inspiration">
 <!-- Increases the number of buffs you can receive. -->
@@ -113,8 +109,6 @@
   <set name="skillType" val="COREDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1406" levels="1" name="Summon Feline King">
   <!-- Needs to be verified -->
@@ -145,8 +139,6 @@
   <set name="npcId" val="#npcIds"/>
   <set name="expPenalty" val="0.0"/>
   <set name="isCubic" val="false"/>
-  <for>
-  </for>
 </skill>
 <skill id="1407" levels="1" name="Summon Magnus the Unicorn">
   <!-- Needs to be verified -->
@@ -177,8 +169,6 @@
   <set name="npcId" val="#npcIds"/>
   <set name="expPenalty" val="0.0"/>
   <set name="isCubic" val="false"/>
-  <for>
-  </for>
 </skill>
 <skill id="1408" levels="1" name="Summon Spectral Lord">
   <!-- Needs to be verified -->
@@ -209,8 +199,6 @@
   <set name="npcId" val="#npcIds"/>
   <set name="expPenalty" val="0.0"/>
   <set name="isCubic" val="false"/>
-  <for>
-  </for>
 </skill>
 <skill id="1409" levels="1" name="Cleanse">
   <set name="itemConsumeId" val="8874"/>
@@ -226,8 +214,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
-  <for>
-  </for>
 </skill>
 <skill id="1410" levels="1" name="Salvation">
   <set name="magicLvl" val="79"/>
@@ -277,13 +263,8 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1413" levels="1" name="Magnus' Chant">
-<!--
-  Allows the Ancient Soul of Magnus to temporarily possess a party member. Consumes 40 Spirit Ores.
--->
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="40"/>
   <set name="mpInitialConsume" val="59"/> <!-- Guessing -->
@@ -310,9 +291,6 @@
   </for>
 </skill>
 <skill id="1414" levels="1" name="Victories of Pa'agrio">
-<!--
-  Allows the Ancient Hero's Soul to temporarily possesses an alliance member. Consumes 40 Spirit Ores.
--->
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="40"/>
   <set name="mpInitialConsume" val="57"/>
@@ -328,7 +306,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
-    <!-- This skills seems to be exacly same as CoV but it applies on ally -->
+      <!-- This skills seems to be exacly same as CoV -->
       <mul order="0x30" stat="pAtk" val="1.1"/>
       <mul order="0x30" stat="pDef" val="1.2"/>
       <basemul order="0x30" stat="rCrit" val="0.2"/>
@@ -366,9 +344,6 @@
   </for>
 </skill>
 <skill id="1416" levels="1" name="Pa'agrio's Fist">
-<!--
-  Increases an alliance member's maximum CP and fully restores it. Consumes 20 Spirit Ores.
--->
   <set name="mpInitialConsume" val="57"/> <!-- Guessing -->
   <set name="mpConsume" val="284"/>
   <set name="itemConsumeId" val="3031"/>
@@ -430,9 +405,6 @@
   </for>
 </skill>
 <skill id="1419" levels="1" name="Volcano">
-<!--
-  Consecutive strikes inflict a great amount of fire damage. You cannot move while casting the magic, and additional MP is consumed every time the effect is produced. Level 3 or higher Spell Force required. Consumes 1 Magic Symbol.
--->
   <set name="target" val="TARGET_GROUND"/>
   <set name="skillType" val="SIGNET_CASTTIME"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -460,9 +432,6 @@
   </for>
 </skill>
 <skill id="1420" levels="1" name="Cyclone">
-<!--
-  Consecutive strikes inflict a great amount of wind damage. You cannot move while casting the magic, and additional MP is consumed every time the effect is produced. Level 3 or higher Spell Force required. Consumes 1 Magic Symbol.
--->
   <set name="target" val="TARGET_GROUND"/>
   <set name="skillType" val="SIGNET_CASTTIME"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -490,9 +459,6 @@
   </for>
 </skill>
 <skill id="1421" levels="1" name="Raging Waves">
-<!--
-  Consecutive strikes inflict a great amount of water damage. You cannot move while casting the magic, and additional MP is consumed every time the effect is produced. Level 3 or higher Spell Force required. Consumes 1 Magic Symbol.
--->
   <set name="target" val="TARGET_GROUND"/>
   <set name="skillType" val="SIGNET_CASTTIME"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -562,9 +528,6 @@
   </for>
 </skill>
 <skill id="1424" levels="1" name="Anti-Summoning Field">
-<!--
-  enerates a signet that sends a servitor to another dimension at regular intervals. Applies to all servitors in the affected area. Level 2 or higher Spell Force required. Consumes 1 Magic Symbol.
--->
   <set name="target" val="TARGET_GROUND"/>
   <set name="skillType" val="SIGNET"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -602,8 +565,6 @@
   <set name="staticReuse" val="true"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1426" levels="1" name="Miracle">
   <set name="itemConsumeId" val="8876"/>
@@ -625,8 +586,6 @@
   <cond msg="Proper force required.">
     <player spell_force="2"/>
   </cond>
-  <for> 
-  </for>
 </skill>
 <skill id="1427" levels="1" name="Flames of Invincibility">
   <set name="itemConsumeId" val="8876"/>
@@ -669,8 +628,6 @@
   <cond msg="Proper force required.">
     <player spell_force="3"/>
   </cond>
-  <for>
-  </for>
 </skill>
 <skill id="1429" levels="1" name="Gate Chant">
   <!-- Done by DJ MELERIX -->
@@ -685,8 +642,6 @@
   <set name="skillRadius" val="-1"/>
   <set name="skillType" val="SUMMON_FRIEND"/>
   <set name="target" val="TARGET_PARTY"/>
-  <for>
-  </for>
 </skill>
 <skill id="1430" levels="5" name="Invocation">
   <table name="#pDef"> 0.8 0.8 0.8 0.8 0.8 </table>
@@ -713,8 +668,8 @@
 <skill id="1431" levels="6" name="Fallen Arrow">
   <table name="#mpConsume_Init"> 2 2 3 4 5 5 </table>
   <table name="#mpConsume"> 7 7 7 10 10 10 </table>
-  <table name="#magicLvl"> 17 20 23 25 28 30</table>
-  <table name="#power"> 13 14 16 18 20 22</table>
+  <table name="#magicLvl"> 17 20 23 25 28 30 </table>
+  <table name="#power"> 13 14 16 18 20 22 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -729,12 +684,10 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="900"/>
   <set name="soulMaxConsumeCount" val="5"/>
-  <for>
-  </for>
 </skill>
 <skill id="1432" levels="2" name="Increase Power">
-  <table name="#rate"> 1.08 1.12</table>
-  <table name="#mpConsume"> 13 25</table>
+  <table name="#rate"> 1.08 1.12 </table>
+  <table name="#mpConsume"> 13 25 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -770,8 +723,6 @@
   <set name="castRange" val="750"/>
   <set name="effectRange" val="900"/>
   <set name="soulMaxConsumeCount" val="5"/>
-  <for>
-  </for>
 </skill>
 <skill id="1434" levels="4" name="Dark Explosion">
   <table name="#mpConsume"> 28 33 37 42 </table>
@@ -793,8 +744,6 @@
   <set name="castRange" val="500"/>
   <set name="effectRange" val="900"/>
   <set name="soulMaxConsumeCount" val="5"/>
-  <for>
-  </for>
 </skill>
 <skill id="1435" levels="10" name="Death Mark">
   <table name="#mpConsume"> 12 14 18 22 24 28 29 32 33 35 </table>
@@ -813,8 +762,6 @@
   <set name="effectRange" val="1100"/>
   <set name="effectId" val="5264"/>
   <set name="effectLevel" val="#EffectLvl"/>
-  <for>
-  </for>
 </skill>
 <skill id="1436" levels="30" name="Soul of Pain" enchantLevels1="30" enchantLevels2="30">
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -910,14 +857,12 @@
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
-  <for>
-  </for>
 </skill>
 <skill id="1439" levels="5" name="Curse of Divinity">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -943,13 +888,11 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
-  <for>
-  </for>
 </skill>
 <skill id="1441" levels="2" name="Soul to Empower">
-  <table name="#mpConsume_Init"> 5 8</table>
-  <table name="#mpConsume"> 33 42</table>
-  <table name="#Tab-mAtk"> 1.55 1.65</table>
+  <table name="#mpConsume_Init"> 5 8 </table>
+  <table name="#mpConsume"> 33 42 </table>
+  <table name="#Tab-mAtk"> 1.55 1.65 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
@@ -990,16 +933,14 @@
   </for>
 </skill>
 <skill id="1443" levels="1" name="Dark Weapon">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1444" levels="1" name="Pride of Kamael">
   <set name="mpConsume" val="44"/>
@@ -1116,29 +1057,25 @@
   </for>
 </skill>
 <skill id="1449" levels="1" name="Transfer Soul">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1450" levels="1" name="Chain Lightning">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="soulMaxConsumeCount" val="5"/>
-  <for>
-  </for>
 </skill>
 <skill id="1451" levels="1" name="Fire Vortex Buster">
   <set name="mpInitialConsume" val="28"/>
@@ -1162,7 +1099,7 @@
   </cond>
 </skill>
 <skill id="1452" levels="1" name="Count of Fire">
-<!-- Needs retail accuracy check. -->
+  <!-- Needs retail accuracy check. -->
   <set name="magicLvl" val="79"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="109"/>
@@ -1248,7 +1185,7 @@
   </for>
 </skill>
 <skill id="1456" levels="1" name="Wind Vortex Slug">
-<!-- Needs retail accuracy check. -->
+  <!-- Needs retail accuracy check. -->
   <set name="mpInitialConsume" val="28"/>
   <set name="mpConsume" val="80"/>
   <set name="magicLvl" val="79"/>
@@ -1287,7 +1224,7 @@
   </for>
 </skill>
 <skill id="1458" levels="1" name="Throne of Wind">
-<!-- Needs retail accuracy check. -->
+  <!-- Needs retail accuracy check. -->
   <set name="magicLvl" val="79"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="109"/>
@@ -1349,9 +1286,9 @@
   </for>
 </skill>
 <skill id="1461" levels="1" name="Chant of Protection">
-<!--
+  <!--
   Temporarily decreases the power of critical attack suffered by party members.
--->
+  -->
   <set name="mpInitialConsume" val="39"/>
   <set name="mpConsume" val="250"/>
   <set name="target" val="TARGET_PARTY"/>
@@ -1392,52 +1329,44 @@
   </for>
 </skill>
 <skill id="1463" levels="1" name="Fire Weapon">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1464" levels="1" name="Ice Weapon">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1465" levels="1" name="Wind Weapon">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1466" levels="1" name="Earth Weapon">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1467" levels="1" name="Meteor">
   <!-- Done by DJ MELERIX -->
@@ -1450,8 +1379,6 @@
   <set name="power" val="1000"/> <!-- Guessing -->
   <set name="skillType" val="MDAM"/>
   <set name="target" val="TARGET_AREA"/>
-  <for>
-  </for>
 </skill>
 <skill id="1468" levels="1" name="Star Fall">
   <!-- Done by DJ MELERIX -->
@@ -1464,8 +1391,6 @@
   <set name="power" val="1000"/> <!-- Guessing -->
   <set name="skillType" val="MDAM"/>
   <set name="target" val="TARGET_AREA"/>
-  <for>
-  </for>
 </skill>
 <skill id="1469" levels="1" name="Leopold">
   <!-- Needs retail value checks -->
@@ -1482,11 +1407,9 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="900"/>
   <set name="soulMaxConsumeCount" val="5"/>
-  <for>
-  </for>
 </skill>
 <skill id="1470" levels="1" name="Prahnah">
-<!-- Needs retail value checks -->
+  <!-- Needs retail value checks -->
   <set name="mpConsume" val="105"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
@@ -1499,9 +1422,9 @@
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="379"/>
   <for>
-  	<effect count="1" name="Buff" time="120" val="0">
-  		<mul order="0x30" stat="mDef" val="1.3"/>
-  	</effect>
+    <effect count="1" name="Buff" time="120" val="0">
+      <mul order="0x30" stat="mDef" val="1.3"/>
+    </effect>
   </for>
 </skill>
 <skill id="1471" levels="1" name="Death Beam">
@@ -1517,20 +1440,16 @@
   <set name="skillType" val="MDAM"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
-  <for>
-  </for>
 </skill>
 <skill id="1472" levels="1" name="Soul Sucking">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1473" levels="1" name="Change Weapon">
   <set name="mpInitialConsume" val="4"/>
@@ -1546,11 +1465,9 @@
   <cond msg="Change Weapon cannot be used due to unsuitable terms.">
     <using weaponChange="true"/>
   </cond>
-  <for>
-  </for>
 </skill>
 <skill id="1474" levels="1" name="Abyssal Power">
-<!-- Needs retail accuracy check -->
+  <!-- Needs retail accuracy check -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1564,7 +1481,7 @@
   <table name="#mpConsume_Init"> 4 7 11 </table>
   <table name="#mpConsume"> 15 29 44 </table>
   <table name="#magicLvl"> 24 46 66 </table> 
-  <table name="#power"> 3.0 7.0 10.0 </table>
+  <table name="#power"> 3 7 10 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -1577,9 +1494,7 @@
   <set name="cancelEffect" val="5264"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
-   <for>
-   </for>
- </skill>
+</skill>
 <skill id="1476" levels="3" name="Appetite for Destruction">
   <!-- Done by DJ MELERIX -->
   <table name="#magicLvl"> 40 49 58 </table>
@@ -1679,89 +1594,75 @@
   </for>
 </skill>
 <skill id="1480" levels="1" name="Soul Harmony">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="soulConsumeCount" val="20"/>
-  <for>
-  </for>
 </skill>
 <skill id="1481" levels="7" name="Obilivion">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1482" levels="4" name="Weak Constitution">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1483" levels="7" name="Thin Skin">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1484" levels="4" name="Enervation">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1485" levels="3" name="Spite">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1486" levels="4" name="Mental Impoverish">
-<!--
+  <!--
   Needs to be finished.
   Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
--->
+  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1487" levels="8" name="Restoration">
   <table name="#mpConsume_Init"> 21 25 14 16 17 19 20 20 </table>
@@ -1799,95 +1700,71 @@
   <cond msg="Target does not have an active Restoration skill."><!-- Need retail msg if there is one. -->
     <target active_effect_id="1487"/>
   </cond>
-  <for>
-  </for>
 </skill>
 <skill id="1489" levels="1" name="Summoner Ability - Resist Attribute">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1490" levels="1" name="Healer Ability - Heal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1491" levels="1" name="Summoner Ability - Spirit">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1492" levels="1" name="Flame Armor">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1493" levels="1" name="Frost Armor">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1494" levels="1" name="Hurricane Armor">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1495" levels="1" name="Vampiric Mist">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1496" levels="1" name="Servitor Barrier">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1497" levels="1" name="Excessive Loyalty">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1498" levels="1" name="Mutual Response">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1499" levels="1" name="Improve Combat">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 </list>
