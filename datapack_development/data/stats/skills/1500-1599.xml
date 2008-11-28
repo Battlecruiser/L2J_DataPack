@@ -116,7 +116,6 @@
   <set name="mpConsume" val="80"/>
   <set name="magicLvl" val="79"/>
   <set name="power" val="162"/>
-  <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2000"/>
   <set name="element" val="6"/> <!-- Dark -->
@@ -127,7 +126,7 @@
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <set name="effectType" val="NEGATE"/>
-  <set name="cancelEffect" val="1512"/>
+  <set name="negateId" val="1512"/>
   <set name="soulMaxConsumeCount" val="5"/>
   <cond msg="Invalid target.">
     <target active_effect_id="1512"/>
