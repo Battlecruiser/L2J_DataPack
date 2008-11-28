@@ -1259,7 +1259,7 @@ public class Valakas extends L2AttackableAIScript
 			return;
 		}
 
-		if (c2 == null || c2.isDead() || c2.isAlikeDead() || timer == null)
+		if (c2 == null || c2.isDead() || timer == null)
 		{
 			c2 = getRandomTarget(npc); // just in case if hate AI fail
 			if (timer == null)
@@ -1269,7 +1269,7 @@ public class Valakas extends L2AttackableAIScript
 			}
 		}
 		L2Character target = c2;
-		if (target == null || target.isDead() || target.isAlikeDead())
+		if (target == null || target.isDead())
 		{
 			if (timer == null)
 				startQuestTimer("1003", 500, npc, null, true);
@@ -1319,17 +1319,17 @@ public class Valakas extends L2AttackableAIScript
 			{
 				if (obj instanceof L2PcInstance)
 				{
-					if (Util.checkIfInRange(5000, npc, obj, true) && !((L2Character) obj).isDead() && !((L2Character) obj).isAlikeDead())
+					if (Util.checkIfInRange(5000, npc, obj, true) && !((L2Character) obj).isDead())
 						result.add((L2PcInstance) obj);
 				}
 				if (obj instanceof L2Summon)
 				{
-					if (Util.checkIfInRange(5000, npc, obj, true) && !((L2Character) obj).isDead() && !((L2Character) obj).isAlikeDead())
+					if (Util.checkIfInRange(5000, npc, obj, true) && !((L2Character) obj).isDead())
 						result.add((L2Summon) obj);
 				}
 				if (obj instanceof L2DecoyInstance)
 				{
-					if (Util.checkIfInRange(5000, npc, obj, true) && !((L2Character) obj).isDead() && !((L2Character) obj).isAlikeDead())
+					if (Util.checkIfInRange(5000, npc, obj, true) && !((L2Character) obj).isDead())
 						result.add((L2DecoyInstance) obj);
 				}
 			}

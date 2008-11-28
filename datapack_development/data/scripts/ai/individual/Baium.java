@@ -368,17 +368,17 @@ public class Baium extends L2AttackableAIScript
 				}
 				if (obj instanceof L2PcInstance)
 				{
-					if (Util.checkIfInRange(9000, npc, obj, true) && !((L2Character) obj).isDead() && !((L2Character) obj).isAlikeDead())
+					if (Util.checkIfInRange(9000, npc, obj, true) && !((L2Character) obj).isDead())
 						result.add((L2PcInstance) obj);
 				}
 				if (obj instanceof L2Summon)
 				{
-					if (Util.checkIfInRange(9000, npc, obj, true) && !((L2Character) obj).isDead() && !((L2Character) obj).isAlikeDead())
+					if (Util.checkIfInRange(9000, npc, obj, true) && !((L2Character) obj).isDead())
 						result.add((L2Summon) obj);
 				}
 				if (obj instanceof L2DecoyInstance)
 				{
-					if (Util.checkIfInRange(9000, npc, obj, true) && !((L2Character) obj).isDead() && !((L2Character) obj).isAlikeDead())
+					if (Util.checkIfInRange(9000, npc, obj, true) && !((L2Character) obj).isDead())
 						result.add((L2DecoyInstance) obj);
 				}
 			}
@@ -408,7 +408,7 @@ public class Baium extends L2AttackableAIScript
 			return;
 		}
 
-		if (_target == null || _target.isDead() || _target.isAlikeDead() || timer == null || !(_Zone.isInsideZone(_target)))
+		if (_target == null || _target.isDead() || timer == null || !(_Zone.isInsideZone(_target)))
 		{
 			_target = getRandomTarget(npc);
 			_skill = getRandomSkill(npc);
@@ -421,7 +421,7 @@ public class Baium extends L2AttackableAIScript
 
 		L2Character target = _target;
 		L2Skill skill = _skill;
-		if (target == null || target.isDead() || target.isAlikeDead() || !(_Zone.isInsideZone(target)))
+		if (target == null || target.isDead() || !(_Zone.isInsideZone(target)))
 		{
 			if (timer == null)
 				startQuestTimer("skill_range", 500, npc, null, true);
