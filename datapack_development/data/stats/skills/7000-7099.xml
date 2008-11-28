@@ -13,48 +13,48 @@
   <set name="power" val="100"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="CANCEL"/>
+  <set name="negateStats" val="BUFF"/>
+  <set name="negatePower" val="100"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <set name="aggroPoints" val="100"/>
-  <for>
-  </for>
 </skill>
 <skill id="7002" levels="1" name="Dispel Debuff">
   <set name="magicLevel" val="99"/>
   <set name="power" val="100"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="CANCEL_DEBUFF"/>
+  <set name="negatePower" val="100"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <set name="aggroPoints" val="100"/>
-  <for>
-  </for>
 </skill>
 <skill id="7003" levels="1" name="Dispel All">
-  <!-- Needs to be done -->
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLevel" val="99"/>
   <set name="power" val="100"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="CANCEL"/>
+  <set name="negateStats" val="BUFF DEBUFF"/>
+  <set name="negatePower" val="100"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <set name="aggroPoints" val="100"/>
-  <for>
-  </for>
 </skill>
 <skill id="7004" levels="2" name="Dispel Petrification">
-  <!-- Needs to be done -->
+  <set name="magicLevel" val="60"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="NEGATE"/>
+  <set name="negatePower" val="2"/>
+  <set name="negateStats" val="PARALYZE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="reuseDelay" val="8000"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="566"/>
-  <for>
-  </for>
 </skill>
 <skill id="7005" levels="4" name="Greater Chant of Vampire">
   <set name="magicLevel" val="74"/>

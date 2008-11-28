@@ -1562,9 +1562,7 @@
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="100"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="300000"/>
   <set name="hitTime" val="6000"/>
@@ -1574,9 +1572,6 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="negateStats" val="BUFF HEAL_PERCENT"/>
-  <set name="negatePower" val="8.0"/>
-  <for>
-  </for>
 </skill>
 <skill id="4095" levels="1" name="Damage Shield">
   <set name="power" val="20.0"/>

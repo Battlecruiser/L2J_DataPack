@@ -3,7 +3,7 @@
 <skill id="1300" levels="3" name="Servitor Cure">
   <table name="#mpConsume_Init"> 7 9 11 </table>
   <table name="#mpConsume"> 28 35 44 </table>
-  <table name="#negatePower"> 3.0 7.0 9.0 </table>
+  <table name="#negatePower"> 3 7 9 </table>
   <table name="#aggro"> 379 457 566 </table>
   <table name="#magicLvl"> 40 48 60 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
@@ -20,8 +20,6 @@
   <set name="negatePower" val="#negatePower"/>
   <set name="aggroPoints" val="#aggro"/>
   <set name="magicLvl" val="#magicLvl"/>
-  <for>
-  </for>
 </skill>
 <skill id="1301" levels="1" name="Servitor Blessing">
   <set name="magicLvl" val="62"/>
@@ -36,10 +34,8 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="negateStats" val="ROOT PARALYZE DEBUFF"/>
-  <set name="negatePower" val="3.0"/>
+  <set name="negatePower" val="3"/>
   <set name="aggroPoints" val="582"/>
-  <for>
-  </for>
 </skill>
 <skill id="1303" levels="2" name="Wild Magic" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -80,21 +76,9 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
-  <table name="#ench1time">
-  1240 1280 1320 1360 1400 1440 1480 1520 1560 1600
-  1640 1680 1720 1760 1800 1840 1880 1920 1960 2000
-  2040 2080 2120 2160 2200 2240 2280 2320 2360 2400
-  </table>
-  <table name="#ench2MpConsume">
-  52 51 50 49 48 47 46 45 45 44
-  43 42 41 40 39 38 37 37 36 35
-  34 33 32 31 30 30 29 28 27 26
-  </table>
-  <table name="#ench2MpConsume_Init">
-  13 13 13 13 12 12 12 12 11 11
-  11 11 10 10 10 10 10  9  9  9
-   9  8  8  8  8  7  7  7  7  7
-  </table>
+  <table name="#ench1time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
+  <table name="#ench2MpConsume"> 52 51 50 49 48 47 46 45 45 44 43 42 41 40 39 38 37 37 36 35 34 33 32 31 30 30 29 28 27 26 </table>
+  <table name="#ench2MpConsume_Init"> 13 13 13 13 12 12 12 12 11 11 11 11 10 10 10 10 10 9 9 9 9 8 8 8 8 7 7 7 7 7 </table>
   <table name="#mpConsume_Init"> 11 13 14 </table>
   <table name="#mpConsume"> 43 49 53 </table>
   <table name="#Tab-sDef"> 1.6 1.8 2 </table>
@@ -130,21 +114,9 @@
   <table name="#rateCp"> 616 636 654 671 687 </table>
   <table name="#mpConsume_Init"> 43 45 46 47 48 </table>
   <table name="#mpConsume"> 171 177 182 186 191 </table>
-  <table name="#ench2MpConsume">
-  189 187 185 183 182 180 178 176 174 173
-  171 169 167 165 163 162 160 158 156 154
-  153 151 149 147 145 144 142 140 138 136
-  </table>
-  <table name="#ench2MpConsume_Init">
-  47 46 46 45 45 45 44 44 43 43
-  42 42 41 41 40 40 40 39 39 38
-  38 37 37 36 36 36 35 35 34 34
-  </table>
-  <table name="#ench1Power">
-  690 694 697 700 704 707 711 713 717 721
-  724 727 731 734 738 741 744 748 751 755
-  758 761 765 768 772 775 778 782 785 789
-  </table>
+  <table name="#ench2MpConsume"> 189 187 185 183 182 180 178 176 174 173 171 169 167 165 163 162 160 158 156 154 153 151 149 147 145 144 142 140 138 136 </table>
+  <table name="#ench2MpConsume_Init"> 47 46 46 45 45 45 44 44 43 43 42 42 41 41 40 40 40 39 39 38 38 37 37 36 36 36 35 35 34 34 </table>
+  <table name="#ench1Power"> 690 694 697 700 704 707 711 713 717 721 724 727 731 734 738 741 744 748 751 755 758 761 765 768 772 775 778 782 785 789 </table>
   <table name="#aggro"> 689 722 743 763 780 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -163,23 +135,13 @@
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
-  <for>
-  </for>
 </skill>
 <skill id="1306" levels="6" name="Ritual of Life" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
-  <table name="#ench2MpConsume">
-  95 94 93 92 91 90 89 88 87 86
-  86 85 84 83 82 81 80 79 78 77
-  76 76 75 74 73 72 71 70 69 68
-  </table>
-  <table name="#ench2MpConsume_Init">
-  23 23 23 23 22 22 22 22 21 21
-  21 21 21 20 20 20 20 19 19 19
-  19 19 18 18 18 18 17 17 17 17
-  </table>
+  <table name="#ench2MpConsume"> 95 94 93 92 91 90 89 88 87 86 86 85 84 83 82 81 80 79 78 77 76 76 75 74 73 72 71 70 69 68 </table>
+  <table name="#ench2MpConsume_Init"> 23 23 23 23 22 22 22 22 21 21 21 21 21 20 20 20 20 19 19 19 19 19 18 18 18 18 17 17 17 17 </table>
   <table name="#mpConsume_Init"> 21 22 23 23 24 24 </table>
   <table name="#mpConsume"> 83 86 89 91 93 96 </table>
   <table name="#rateCp"> 745 767 789 811 834 858 </table>
@@ -200,8 +162,6 @@
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
-  <for>
-  </for>
 </skill>
 <skill id="1307" levels="3" name="Prayer" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -279,21 +239,9 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
-  <table name="#ench1time">
-  1240 1280 1320 1360 1400 1440 1480 1520 1560 1600
-  1640 1680 1720 1760 1800 1840 1880 1920 1960 2000
-  2040 2080 2120 2160 2200 2240 2280 2320 2360 2400
-  </table>
-  <table name="#ench2MpConsume">
-  185 182 179 176 173 170 166 163 160 157
-  154 151 148 144 141 138 135 132 129 126
-  122 119 116 113 110 107 103 100  97  94
-  </table>
-  <table name="#ench2MpConsume_Init">
-  47 46 45 44 44 43 42 41 40 40
-  39 38 37 36 36 35 34 33 32 32
-  31 30 29 28 28 27 26 25 24 24
-  </table>
+  <table name="#ench1time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
+  <table name="#ench2MpConsume"> 185 182 179 176 173 170 166 163 160 157 154 151 148 144 141 138 135 132 129 126 122 119 116 113 110 107 103 100 97 94 </table>
+  <table name="#ench2MpConsume_Init"> 47 46 45 44 44 43 42 41 40 40 39 38 37 36 36 35 34 33 32 32 31 30 29 28 28 27 26 25 24 24 </table>
   <table name="#mpConsume_Init"> 35 43 48 </table>
   <table name="#mpConsume"> 137 170 189 </table>
   <table name="#Tab-accCombat"> 2 3 4 </table>
@@ -324,21 +272,9 @@
   </enchant1for>
 </skill>
 <skill id="1310" levels="4" name="Chant of Vampire" enchantLevels1="30" enchantLevels2="30" >
-  <table name="#ench1time">
-  1240 1280 1320 1360 1400 1440 1480 1520 1560 1600
-  1640 1680 1720 1760 1800 1840 1880 1920 1960 2000
-  2040 2080 2120 2160 2200 2240 2280 2320 2360 2400
-  </table>
-  <table name="#ench2MpConsume">
-  213 209 206 202 198 195 191 188 184 180
-  177 173 169 166 162 159 155 151 148 144
-  141 137 133 130 126 122 119 115 112 108
-  </table>
-  <table name="#ench2MpConsume_Init">
-  54 53 52 51 50 49 48 47 46 45
-  44 44 43 42 41 40 39 38 37 36
-  35 34 33 33 32 31 30 29 28 27
-  </table>
+  <table name="#ench1time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
+  <table name="#ench2MpConsume"> 213 209 206 202 198 195 191 188 184 180 177 173 169 166 162 159 155 151 148 144 141 137 133 130 126 122 119 115 112 108 </table>
+  <table name="#ench2MpConsume_Init"> 54 53 52 51 50 49 48 47 46 45 44 44 43 42 41 40 39 38 37 36 35 34 33 33 32 31 30 29 28 27 </table>
   <table name="#mpConsume_Init"> 31 43 49 55 </table>
   <table name="#mpConsume"> 123 170 195 217 </table>
   <table name="#Tab-absorbDam"> 6 7 8 9 </table>
@@ -415,8 +351,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1313" levels="27" name="Pumping">
   <table name="#power"> 24 37 50 62 70 76 82 88 94 100 104 107 110 113 116 119 121 124 127 130 133 136 139 142 145 149 155 </table>
@@ -429,8 +363,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1314" levels="27" name="Reeling">
   <table name="#power"> 24 37 50 62 70 76 82 88 94 100 104 107 110 113 116 119 121 124 127 130 133 136 139 142 145 149 155 </table>
@@ -443,56 +375,42 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1315" levels="27" name="Fishing Expertise">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1316" levels="1" name="Fishing Expertise -C-Grade">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1317" levels="1" name="Fishing Expertise -B-Grade">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1318" levels="1" name="Fishing Expertise -A-Grade">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1319" levels="1" name="Fishing Expertise -S-Grade">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1320" levels="9" name="Create Common Item">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="COREDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1321" levels="1" name="Dwarven Craft">
   <set name="target" val="TARGET_SELF"/>
@@ -502,8 +420,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1322" levels="1" name="Common Craft">
   <set name="target" val="TARGET_SELF"/>
@@ -513,8 +429,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1323" levels="1" name="Noblesse Blessing">
   <set name="mpInitialConsume" val="14"/>
@@ -577,8 +491,6 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1327" levels="1" name="Symphony of Noblesse">
   <!--
@@ -591,8 +503,6 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1328" levels="8" name="Mass Summon Storm Cubic">
   <table name="#mpConsume_Init"> 28 33 38 43 46 49 52 55 </table>
@@ -618,8 +528,6 @@
   <set name="activationchance" val="80"/>
   <set name="expPenalty" val="0.0"/>
   <set name="isCubic" val="true"/>
-  <for>
-  </for>
 </skill>
 <skill id="1329" levels="9" name="Mass Summon Aqua Cubic">
   <table name="#mpConsume_Init"> 28 31 35 38 41 46 49 52 55 </table>
@@ -646,8 +554,6 @@
   <set name="activationchance" val="67"/> <!-- guessed -->
   <set name="expPenalty" val="0.0"/>
   <set name="isCubic" val="true"/>
-  <for>
-  </for>
 </skill>
 <skill id="1330" levels="8" name="Mass Summon Phantom Cubic">
   <table name="#mpConsume_Init"> 28 33 38 43 46 49 52 55 </table>
@@ -673,8 +579,6 @@
   <set name="activationchance" val="55"/> <!-- guessed -->
   <set name="expPenalty" val="0.0"/>
   <set name="isCubic" val="true"/>
-  <for>
-  </for>
 </skill>
 <skill id="1331" levels="10" name="Summon Feline Queen" enchantLevels1="30">
   <table name="#enchantNpcId">14265 14266 14267 14268 14269 14270 14271 14272 14273 14274 14275 14276 14277 14278 14279 14280 14281 14282 14283 14284 14285 14286 14287 14288 14289 14290 14291 14292 14293 14294</table>
@@ -708,8 +612,6 @@
   <set name="npcId" val="#npcIds"/>
   <set name="expPenalty" val="#expPenalty"/>
   <set name="isCubic" val="false"/>
-  <for>
-  </for>
 </skill>
 <skill id="1332" levels="10" name="Summon Unicorn Seraphim" enchantLevels1="30">
   <table name="#enchantNpcId">14449 14450 14451 14452 14453 14454 14455 14456 14457 14458 14459 14460 14461 14462 14463 14464 14465 14466 14467 14468 14469 14470 14471 14472 14473 14474 14475 14476 14477 14478</table>
@@ -743,8 +645,6 @@
   <set name="npcId" val="#npcIds"/>
   <set name="expPenalty" val="#expPenalty"/>
   <set name="isCubic" val="false"/>
-  <for>
-  </for>
 </skill>
 <skill id="1333" levels="10" name="Summon Nightshade" enchantLevels1="30">
   <table name="#enchantNpcId">14633 14634 14635 14636 14637 14638 14639 14640 14641 14642 14643 14644 14645 14646 14647 14648 14649 14650 14651 14652 14653 14654 14655 14656 14657 14658 14659 14660 14661 14662</table>
@@ -778,8 +678,6 @@
   <set name="npcId" val="#npcIds"/>
   <set name="expPenalty" val="#expPenalty"/>
   <set name="isCubic" val="false"/>
-  <for>
-  </for>
 </skill>
 <skill id="1334" levels="7" name="Summon Cursed Man" enchantLevels1="30">
   <table name="#enchantNpcId">14081 14082 14083 14084 14085 14086 14087 14088 14089 14090 14091 14092 14093 14094 14095 14096 14097 14098 14099 14100 14101 14102 14103 14104 14105 14106 14107 14108 14109 14110</table>
@@ -812,8 +710,6 @@
   <set name="npcId" val="#npcIds"/>
   <set name="expPenalty" val="0.15"/>
   <set name="isCubic" val="false"/>
-  <for>
-  </for>
 </skill>
 <skill id="1335" levels="1" name="Balance Life">
   <set name="mpInitialConsume" val="25"/>
@@ -829,8 +725,6 @@
   <set name="effectRange" val="-1"/>
   <set name="castRange" val="-1"/>
   <set name="aggroPoints" val="398"/>
-  <for>
-  </for>
 </skill>
 <skill id="1336" levels="1" name="Curse of Doom">
   <set name="mpInitialConsume" val="14"/>
@@ -848,7 +742,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-   <effect count="1" name="SilenceMagicPhysical" time="30" val="0" stackOrder="30" stackType="silence_all"/>
+    <effect count="1" name="SilenceMagicPhysical" time="30" val="0" stackOrder="30" stackType="silence_all"/>
   </for>
 </skill>
 <skill id="1337" levels="1" name="Curse of Abyss">
@@ -1015,7 +909,7 @@
   <set name="mpInitialConsume" val="21"/>
   <set name="mpConsume" val="84"/>
   <set name="magicLvl" val="76"/>
-  <set name="power" val="111.0"/>
+  <set name="power" val="111"/>
   <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="6000"/>
@@ -1052,8 +946,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1345" levels="1" name="Mass Mage Bane">
   <set name="mpInitialConsume" val="27"/>
@@ -1069,8 +961,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="1346" levels="1" name="Warrior Servitor">
   <set name="mpInitialConsume" val="14"/>
@@ -1200,8 +1090,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
-  <for>
-  </for>
 </skill>
 <skill id="1351" levels="1" name="Mage Bane">
   <set name="mpInitialConsume" val="20"/>
@@ -1216,8 +1104,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
-  <for>
-  </for>
 </skill>
 <skill id="1352" levels="1" name="Elemental Protection">
   <set name="mpInitialConsume" val="14"/>
@@ -1748,8 +1634,8 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="1380" levels="10" name="Betray">
-<!-- Done by KID [C5] -->
-<!-- need to check duration and reuse delay -->
+  <!-- Done by KID [C5] -->
+  <!-- need to check duration and reuse delay -->
   <table name="#mpConsume"> 52 54 55 58 60 62 64 65 67 69 </table>
   <table name="#itemConsumeCount"> 3 3 3 3 4 4 4 5 5 5 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1838,7 +1724,7 @@
   </for>
 </skill>
 <skill id="1384" levels="5" name="Mass Surrender to Water">
-<!-- Done by KID -->
+  <!-- Done by KID -->
   <table name="#mpConsume"> 80 87 93 98 103 </table>
   <!-- suspect these res values are guesses -->
   <table name="#waterVuln"> 1.3 1.36 1.41 1.49 1.58 </table>
@@ -1863,7 +1749,7 @@
   </for>
 </skill>
 <skill id="1385" levels="5" name="Mass Surrender to Wind">
-<!-- Done by KID -->
+  <!-- Done by KID -->
   <table name="#mpConsume"> 80 87 93 98 103 </table>
   <!-- suspect these res values are guesses -->
   <table name="#windVuln"> 1.3 1.36 1.41 1.49 1.58 </table>
@@ -1888,7 +1774,7 @@
   </for>
 </skill>
 <skill id="1386" levels="10" name="Arcane Distruption">
-<!-- Done by KID -->
+  <!-- Done by KID -->
   <table name="#mpConsume"> 52 54 55 58 60 62 64 65 67 69 </table>
   <table name="#magicLvl"> 56 58 60 62 64 66 68 70 72 74 </table>
   <!-- L2P still need to confirm mAtkSpd reduction values - says about -23% -->
@@ -1930,7 +1816,7 @@
   <set name="random_count" val="4"/>
 </skill>
 <skill id="1388" levels="3" name="Greater Might">
-<!-- Done by KID -->
+  <!-- Done by KID -->
   <table name="#pAtk"> 1.04 1.07 1.10 </table>
   <table name="#mpConsume"> 54 62 69 </table>
   <table name="#spiritOre"> 1 2 3 </table>
@@ -1952,7 +1838,7 @@
   </for>
 </skill>
 <skill id="1389" levels="3" name="Greater Shield">
-<!-- Done by KID -->
+  <!-- Done by KID -->
   <!-- L2P still need to confirm pDef values -->
   <table name="#rate"> 1.05 1.10 1.15 </table>
   <table name="#mpConsume"> 54 62 69 </table>
@@ -1975,7 +1861,7 @@
   </for>
 </skill>
 <skill id="1390" levels="3" name="War Chant">
-<!-- Done by KID -->
+  <!-- Done by KID -->
   <table name="#mpConsume"> 213 244 272 </table>
   <table name="#pAtk"> 1.04 1.07 1.10 </table>
   <table name="#spiritOre"> 4 8 12 </table>
@@ -1998,7 +1884,7 @@
   </for>
 </skill>
 <skill id="1391" levels="3" name="Earth Chant">
-<!-- Done by KID -->
+  <!-- Done by KID -->
   <table name="#mpConsume"> 213 244 272 </table>
   <!-- L2P still need to confirm pDef values -->
   <table name="#pDef"> 1.05 1.10 1.15 </table>
@@ -2022,7 +1908,7 @@
   </for>
 </skill>
 <skill id="1392" levels="3" name="Holy Resistance">
-<!-- Done by KID -->
+  <!-- Done by KID -->
   <table name="#mpConsume"> 54 62 69 </table>
   <!-- L2P still need to confirm res values -->
   <table name="#holyVuln"> 0.85 0.77 0.7 </table>
@@ -2042,7 +1928,7 @@
   </for>
 </skill>
 <skill id="1393" levels="3" name="Unholy Resistance">
-<!-- Done by KID -->
+  <!-- Done by KID -->
   <table name="#mpConsume"> 54 62 69 </table>
   <!-- L2P still need to confirm res values -->
   <table name="#darkVuln"> 0.85 0.77 0.7 </table>
@@ -2062,7 +1948,7 @@
   </for>
 </skill>
 <skill id="1394" levels="10" name="Trance" enchantLevels1="30" enchantLevels2="30">
-<!-- Done by KID -->
+  <!-- Done by KID -->
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -2091,7 +1977,7 @@
   </for>
 </skill>
 <skill id="1395" levels="10" name="Erase">
-<!-- Erase Done by Scafu -->
+  <!-- Erase Done by Scafu -->
   <table name="#mpConsume"> 52 54 55 58 60 62 64 65 67 69 </table>
   <table name="#itemConsumeCount"> 3 3 3 3 4 4 4 5 5 5 </table>
   <table name="#magicLvl"> 56 58 60 62 64 66 68 70 72 74 </table>
@@ -2107,8 +1993,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="isMagic" val="true"/>
-  <for>
-  </for>
 </skill>
 <skill id="1396" levels="10" name="Magical Backfire">
   <table name="#mpConsume"> 52 54 55 58 60 62 64 65 67 69 </table>
@@ -2154,7 +2038,7 @@
   </for>
 </skill>
 <skill id="1398" levels="10" name="Mana Burn" enchantLevels1="30" enchantLevels2="30" >
-<!-- Done by KID -->
+  <!-- Done by KID -->
   <table name="#ench1Power"> 162 163 164 164 165 166 166 167 168 168 169 170 170 171 172 172 173 174 174 175 176 176 177 178 178 179 180 180 181 182 </table> 
   <table name="#ench2MpConsume"> 100 98 97 96 95 93 91 90 88 87 86 85 83 82 81 80 78 77 75 73 72 71 70 68 67 66 65 63 62 60 </table>
   <table name="#mpConsume"> 77 80 83 87 89 93 95 98 100 103 </table>
@@ -2173,7 +2057,7 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
 </skill>
 <skill id="1399" levels="5" name="Mana Storm" enchantLevels1="30" enchantLevels2="30" >
-<!-- Done by KID -->
+  <!-- Done by KID -->
   <table name="#ench1Power"> 81 81 82 82 82 83 83 83 84 84 84 85 85 85 86 86 86 87 87 87 88 88 88 89 89 89 89 90 90 90 91 </table> 
   <table name="#ench2MpConsume"> 150 148 146 143 142 140 137 136 133 132 130 127 126 123 121 120 117 116 113 111 110 107 105 103 101 98 97 95 93 91 </table>
   <table name="#mpConsume"> 120 129 138 147 153 </table>

@@ -28,6 +28,7 @@
   <table name="#mpConsume"> 62 79 98 102 104 107 108 110 113 115 117 119 122 </table>
   <table name="#aggroPoints"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
   <table name="#Power"> 40 45 50 55 60 65 70 75 80 85 90 95 100 </table>
+  <table name="#negatePower"> 40 45 50 55 60 65 70 75 80 85 90 95 100 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#Power"/>
   <set name="target" val="TARGET_PARTY"/> 
@@ -40,10 +41,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/> 
   <set name="negateStats" val="DEBUFF"/>
-  <set name="negatePower" val="9.0"/> 
+  <set name="negatePower" val="#negatePower"/>
   <set name="aggroPoints" val="#aggroPoints"/>
-  <for> 
-  </for>
 </skill>
 <skill id="4702" levels="13" name="Blessing of Seraphim">
   <!-- Done by Soulkiller -->
