@@ -1222,20 +1222,16 @@
   <set name="aggroPoints" val="669"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="focus">
-      <basemul order="0x30" stat="rCrit" val="-0.30"> <!-- Critical -30% -->
-        <using kind="Dagger"/>
-      </basemul>
+      <basemul order="0x30" stat="rCrit" val="-0.30"/> <!-- Critical -30% -->
       <mul order="0x30" stat="blowRate" val="1.60"/> <!-- Blow land rate +60% -->
       <mul order="0x30" stat="cAtk" val="0.70"> <!-- Critical Damage from front -30% -->
         <and>
           <player front="True"/>
-          <using kind="Dagger"/>
         </and>
       </mul>
       <mul order="0x30" stat="cAtk" val="1.90"> <!-- Critical Damage from back +90% -->
         <and>
           <player behind="True"/>
-          <using kind="Dagger"/>
         </and>
       </mul>
     </effect>
@@ -1257,20 +1253,17 @@
       <basemul order="0x30" stat="rCrit" val="-0.30"> <!-- Critical Chance from front -30% -->
         <and>
           <player front="True"/>
-          <using kind="Dagger"/>
         </and>
       </basemul>
       <basemul order="0x30" stat="rCrit" val="0.30"> <!-- Critical Chance from side +30% -->
         <and>
           <player front="False"/>
           <player behind="False"/>
-          <using kind="Dagger"/>
         </and>
       </basemul>
       <basemul order="0x30" stat="rCrit" val="0.60"> <!-- Critical Chance from back +60% -->
         <and>
           <player behind="True"/>
-          <using kind="Dagger"/>
         </and>
       </basemul>
     </effect>
