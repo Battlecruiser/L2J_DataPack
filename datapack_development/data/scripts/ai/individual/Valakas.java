@@ -977,7 +977,7 @@ public class Valakas extends L2AttackableAIScript
 
 	public void getRandomSkill(L2NpcInstance npc)
 	{
-		if (npc.isInvul())
+		if (npc.isInvul() || npc.isCastingNow())
 		{
 			return;
 		}
@@ -1281,14 +1281,17 @@ public class Valakas extends L2AttackableAIScript
 			if (timer != null)
 				timer.cancel();
 			npc.getAI().setIntention(AI_INTENTION_IDLE);
+			npc.setIsCastingNow(true);
 			npc.setTarget(target);
 			npc.doCast(skill);
+			
 		}
 		else
 		{
 			if (timer == null)
 				startQuestTimer("1003", 500, npc, null, true);
 			npc.getAI().setIntention(AI_INTENTION_FOLLOW, target, null);
+			npc.setIsCastingNow(false);
 		}
 	}
 	public void broadcastSpawn(L2NpcInstance npc)
