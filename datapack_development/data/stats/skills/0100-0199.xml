@@ -779,8 +779,6 @@
   <set name="skillType" val="COREDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="144" levels="37" name="Dual Weapon Mastery">
   <table name="#pAtk"> 23.7 25.4 27.1 29.0 30.9 32.9 35.0 37.1 39.4 41.7 44.1 46.6 49.2 51.9 54.6 57.5 60.4 63.3 66.4 69.5 72.7 76.0 79.3 82.7 86.1 89.6 93.1 96.6 100.2 103.8 107.5 111.1 114.8 118.4 122.1 125.7 129.3 </table>
@@ -910,8 +908,6 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="168" levels="3" name="Boost Attack Speed">
   <table name="#rate"> 1.05 1.07 1.10 </table>
@@ -958,8 +954,6 @@
   <set name="skillType" val="COREDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="173" levels="2" name="Acrobat">
   <table name="#magicLvl"> 20 55 </table>
@@ -1041,8 +1035,6 @@
   <cond msg="Only usable if HP is 10 percent or lower.">
     <player hp="10"/>
   </cond>
-  <for>
-  </for>
 </skill>
 <skill id="190" levels="37" name="Fatal Strike" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -1101,8 +1093,6 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="195" levels="2" name="Boost Breath">
   <!-- Done by DJ MELERIX -->
