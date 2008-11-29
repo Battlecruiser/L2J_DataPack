@@ -5,80 +5,60 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="801" levels="1" name="Warrior Ability - Boost CP">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="802" levels="1" name="Wizard Ability - Anti-magic">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="803" levels="1" name="Healer Ability - Divine Protection">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="804" levels="1" name="Knight Ability - Resist Critical">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="805" levels="1" name="not used">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="806" levels="1" name="Magic Obstacle">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="807" levels="1" name="Over-hit">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="808" levels="1" name="Golem Punch">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="809" levels="1" name="Golem Tornado Swing">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="810" levels="1" name="Vanguard">
   <set name="mpConsume" val="31"/>
@@ -91,11 +71,11 @@
   <set name="effectRange" val="-1"/>
   <set name="transformId" val="312"/>
   <for>
-    <effect count="1" name="Transformation" time="18400" val="0">  
-     <mul order="0x30" stat="pDef" val="0.75"/> 
-     <mul order="0x30" stat="sDef" val="0.80"/>  <!-- Guess - need retail confirmation -->  
-  </effect>
- </for> 
+    <effect count="1" name="Transformation" time="18400" val="0">
+      <mul order="0x30" stat="pDef" val="0.75"/>
+      <mul order="0x30" stat="sDef" val="0.80"/> <!-- Guess - need retail confirmation -->
+    </effect>
+  </for>
 </skill>
 <skill id="811" levels="1" name="Vanguard">
   <set name="mpConsume" val="31"/>
@@ -108,10 +88,10 @@
   <set name="effectRange" val="-1"/>
   <set name="transformId" val="313"/>
   <for>
-  <effect count="1" name="Transformation" time="18400" val="0">  
-     <mul order="0x30" stat="pDef" val="0.75"/> 
-     <mul order="0x30" stat="sDef" val="0.80"/>  <!-- Guess - need retail confirmation -->
-  </effect>
+    <effect count="1" name="Transformation" time="18400" val="0">
+      <mul order="0x30" stat="pDef" val="0.75"/>
+      <mul order="0x30" stat="sDef" val="0.80"/> <!-- Guess - need retail confirmation -->
+    </effect>
   </for>
 </skill>
 <skill id="812" levels="1" name="Vanguard">
@@ -125,10 +105,10 @@
   <set name="effectRange" val="-1"/>
   <set name="transformId" val="314"/>
   <for>
-  <effect count="1" name="Transformation" time="18400" val="0">  
-     <mul order="0x30" stat="pDef" val="0.75"/> 
-     <mul order="0x30" stat="sDef" val="0.80"/>  <!-- Guess - need retail confirmation -->
-  </effect>
+    <effect count="1" name="Transformation" time="18400" val="0">
+      <mul order="0x30" stat="pDef" val="0.75"/>
+      <mul order="0x30" stat="sDef" val="0.80"/>  <!-- Guess - need retail confirmation -->
+    </effect>
   </for>
 </skill>
 <skill id="813" levels="1" name="Vanguard">
@@ -142,10 +122,10 @@
   <set name="effectRange" val="-1"/>
   <set name="transformId" val="315"/>
   <for>
-  <effect count="1" name="Transformation" time="18400" val="0">  
-     <mul order="0x30" stat="pDef" val="0.75"/> 
-     <mul order="0x30" stat="sDef" val="0.80"/>  <!-- Guess - need retail confirmation -->  
-  </effect>
+    <effect count="1" name="Transformation" time="18400" val="0">
+      <mul order="0x30" stat="pDef" val="0.75"/>
+      <mul order="0x30" stat="sDef" val="0.80"/>  <!-- Guess - need retail confirmation -->
+    </effect>
   </for>
 </skill>
 <skill id="814" levels="43" name="Full Swing">
@@ -239,24 +219,18 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="819" levels="1" name="Evasion Chance">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="820" levels="1" name="Evasion Haste">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="821" levels="1" name="Shadow Step">
   <set name="mpConsume" val="50"/>
@@ -270,10 +244,10 @@
   <set name="effectRange" val="900"/>
   <set name="reuseDelay" val="480000"/>
   <cond msg="Shadow Step cannot be used due to unsuitable terms.">
-      <target mindistance="300"/>
+    <target mindistance="300"/>
   </cond>
   <for>
-      <effect count="1" name="RemoveTarget" time="1" val="0"/>
+    <effect count="1" name="RemoveTarget" time="1" val="0"/>
   </for>
 </skill>
 <skill id="822" levels="3" name="Repair Golem">
@@ -281,24 +255,18 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="823" levels="3" name="Strengthen Golem">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="824" levels="3" name="Armor Golem">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="825" levels="1" name="Sharp Edge">
   <set name="magicLvl" val="49"/>
@@ -462,56 +430,42 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="832" levels="1" name="Fast Recovery">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="833" levels="1" name="Body Reconstruction">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="834" levels="1" name="Blood Pact">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="835" levels="4" name="Imbue Seed of Destruction">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="836" levels="3" name="Oblivion Trap">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="837" levels="1" name="Painkiller">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="838" levels="1" name="Switch Stance">
   <set name="target" val="TARGET_SELF"/>
@@ -519,15 +473,11 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="5000"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="839" levels="1" name="Dismount">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 </list>

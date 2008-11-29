@@ -27,8 +27,6 @@
   <set name="npcId" val="#npcIds"/>
   <set name="expPenalty" val="0.3"/>
   <set name="isCubic" val="false"/>
-  <for>
-  </for>
 </skill>
 <skill id="302" levels="9" name="Spoil Festival" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -680,8 +678,6 @@
   <set name="create_item_id" val="1344"/>
   <set name="create_item_count" val="700"/>
   <set name="random_count" val="4"/>
-  <for>
-  </for>
 </skill>
 <skill id="324" levels="1" name="Quiver of Arrow: Grade S">
   <set name="mpConsume" val="398"/>
@@ -696,8 +692,6 @@
   <set name="create_item_id" val="1345"/>
   <set name="create_item_count" val="900"/>
   <set name="random_count" val="4"/>
-  <for>
-  </for>
 </skill>
 <skill id="325" levels="1" name="Strider Siege Assault">
   <!-- SHOULD WORK ONLY DURING SIEGE -->
@@ -715,8 +709,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="500"/>
-  <for>
-  </for>
 </skill>
 <skill id="326" levels="1" name="Build Advanced Headquarters">
   <!-- <set name="mpConsume" val="30"/> -->
@@ -726,8 +718,6 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="327" levels="1" name="Wyvern Aegis">
   <set name="mpConsume" val="69"/>
@@ -784,8 +774,6 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="331" levels="1" name="Skill Mastery">
   <!-- Masters excellence in skills. Low possibility of being able to re-use skills without delay or doubles the duration. Influenced by INT. -->
@@ -793,8 +781,6 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="332" levels="1" name="Extra Inventory">
   <!-- Increases size of inventory. -->
@@ -802,8 +788,6 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="333" levels="1" name="Extra Sell Inventory">
   <!-- Increases private store sales slots. -->
@@ -811,8 +795,6 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="334" levels="1" name="Focus Skill Mastery">
   <!-- Skill for dagger and archer Need to be chance/corrected -->
@@ -1114,7 +1096,7 @@
       <mul order="0x30" stat="mReuse" val="0.7"/>
       <mul order="0x30" stat="pReuse" val="0.7"/>
       <mul order="0x30" stat="MagicalMpConsumeRate" val="0.90"/>
-	  <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.90"/>
+      <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.90"/>
     </effect>
   </for>
 </skill>
@@ -1875,8 +1857,6 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="minPledgeClass" val="2"/>
-  <for>
-  </for>
 </skill>
 <skill id="391" levels="1" name="Clan Imperium">
   <!-- Gives authority to open up a command channel. Only affects Wise Man class and above. -->
@@ -1886,8 +1866,6 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="minPledgeClass" val="4"/>
-  <for>
-  </for>
 </skill>
 <skill id="395" levels="1" name="Heroic Miracle">
   <set name="mpConsume" val="72"/>

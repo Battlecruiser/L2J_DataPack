@@ -55,9 +55,9 @@
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
-     <effect count="1" name="Debuff" time="10" val="0">
-       <mul order="0x30" stat="cAtk" val="#cAtk"/>
-     </effect>
+    <effect count="1" name="Debuff" time="10" val="0">
+      <mul order="0x30" stat="cAtk" val="#cAtk"/>
+    </effect>
   </for>
 </skill>
 <skill id="402" levels="10" name="Arrest">
@@ -942,9 +942,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
   <!-- needs core support - not really a reflect -> http://www.l2guru.com/forum/showthread.php?t=74337 -->
-  </for>
 </skill>
 <skill id="448" levels="1" name="Summon Swoop Cannon">
   <!-- Needs to be verified "Is enchantable but no stats for the +Power versions" -->
@@ -968,8 +966,6 @@
   <set name="npcId" val="14839"/>
   <set name="expPenalty" val="0.0"/>
   <set name="isCubic" val="false"/>
-  <for>
-  </for>
 </skill>
 <skill id="449" levels="4" name="Summon Attractive Cubic">
   <!-- Needs to be finished "L2CubicInstance.java has to be updated to support cubic id and hate/hold skills" -->
@@ -996,8 +992,6 @@
   <set name="activationchance" val="40"/> <!-- guessed -->
   <set name="expPenalty" val="0.0"/>
   <set name="isCubic" val="true"/>
-  <for>
-  </for>
 </skill>
 <skill id="450" levels="10" name="Banish Seraph" enchantLevels1="30">
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -1272,9 +1266,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
   <!-- how can I use num_charges when skillType is not CHARGEDAM ? -->
-  </for>
 </skill>
 <skill id="462" levels="1" name="Guilted Body">
   <set name="target" val="TARGET_SELF"/>
@@ -1358,8 +1350,6 @@
   <set name="num_souls" val="#Max-Souls"/>
   <set name="expNeeded" val="#Exp"/>
   <set name="critChance" val="#Critic-Chance"/>
-  <for>
-  </for>
 </skill>
 <skill id="468" levels="9" name="Fallen Attack">
   <table name="#mpConsume"> 9 8 10 11 12 13 16 16 17 </table>
@@ -1410,8 +1400,6 @@
   <set name="skillRadius" val="400"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="471" levels="7" name="Defuse Trap">
   <!-- Needs retail value corrections -->
@@ -1426,8 +1414,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
-  <for>
-  </for>
 </skill>
 <skill id="472" levels="45" name="Ancient Sword Mastery">
   <table name="#pAtk"> 4.5 7.3 8.9 10.7 12.8 15.1 17.7 20.5 23.7 25.4 27.1 29.0 30.9 32.9 35.0 37.1 39.4 41.7 44.1 46.6 49.2 51.9 54.6 57.5 60.4 63.3 66.4 69.5 72.7 76.0 79.3 82.7 86.1 89.6 93.1 96.6 100.2 103.8 107.5 111.1 114.8 118.4 122.1 125.7 129.3 </table> <!-- custom values from sword/blunt mastery -->
@@ -1747,8 +1733,6 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="492" levels="25" name="Spread Wing" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -1771,8 +1755,6 @@
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
-  <for>
-  </for>
 </skill>
 <skill id="493" levels="28" name="Storm Assault" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -1799,7 +1781,7 @@
   <set name="effectRange" val="#effectRange"/>
   <set name="flyType" val="CHARGE"/>
   <cond msg="Storm Assault cannot be used due to unsuitable terms.">
-      <target mindistance="200"/>
+    <target mindistance="200"/>
   </cond>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1826,7 +1808,7 @@
   <set name="soulMaxConsumeCount" val="5"/>
   <set name="flyType" val="CHARGE"/>
   <cond msg="Shoulder Charge cannot be used due to unsuitable terms.">
-      <target mindistance="200"/>
+    <target mindistance="200"/>
   </cond>
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
@@ -1855,7 +1837,7 @@
   <set name="flyType" val="CHARGE"/>
   <set name="soulMaxConsumeCount" val="5"/>
   <cond msg="Blade Rush cannot be used due to unsuitable terms.">
-      <target mindistance="200"/>
+    <target mindistance="200"/>
   </cond>
   <for>
     <!-- retail value: 13 17 22 27 31 34/sec; stat update every 5 units (3 1/3 sec) -->

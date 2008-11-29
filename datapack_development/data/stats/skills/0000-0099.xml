@@ -253,8 +253,6 @@
   <set name="activationchance" val="80"/>
   <set name="expPenalty" val="0.0"/>
   <set name="isCubic" val="true"/>
-  <for>
-  </for>
 </skill>
 <skill id="11" levels="12" name="Trick">
   <table name="#mpConsume"> 22 24 25 27 28 29 30 31 32 33 34 34 </table>
@@ -316,8 +314,6 @@
   <set name="npcId" val="14737"/>
   <set name="expPenalty" val="0.0"/>
   <set name="isCubic" val="false"/>
-  <for>
-  </for>
 </skill>
 <skill id="15" levels="52" name="Charm">
   <table name="#mpConsume_Init"> 2 2 2 2 3 3 3 3 3 3 3 3 3 3 4 4 4 4 4 4 4 4 4 5 4 5 5 5 5 5 5 5 5 6 5 6 6 6 6 6 6 6 6 7 6 7 7 7 7 7 7 7 </table>
@@ -337,8 +333,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
-  <for>
-  </for>
 </skill>
 <skill id="16" levels="24" name="Mortal Blow">
   <table name="#mpConsume"> 8 8 9 10 11 11 14 15 15 18 18 18 19 20 21 22 23 24 26 26 26 28 29 30 </table>
@@ -490,8 +484,6 @@
   <set name="activationchance" val="67"/> <!-- guessed -->
   <set name="expPenalty" val="0.0"/>
   <set name="isCubic" val="true"/>
-  <for>
-  </for>
 </skill>
 <skill id="24" levels="31" name="Burst Shot" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -549,8 +541,6 @@
   <set name="npcId" val="#npcIds"/>
   <set name="expPenalty" val="0.15"/>
   <set name="isCubic" val="false"/>
-  <for>
-  </for>
 </skill>
 <skill id="27" levels="14" name="Unlock">
   <table name="#mpConsume"> 19 22 25 28 31 35 39 43 47 51 55 59 63 67 </table>
@@ -569,8 +559,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
-  <for>
-  </for>
 </skill>
 <skill id="28" levels="49" name="Aggression"  enchantLevels1="30" enchantLevels2="30" enchantLevels3="30">
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -683,8 +671,6 @@
   <set name="activationchance" val="55"/> <!-- guessed -->
   <set name="expPenalty" val="0.0"/>
   <set name="isCubic" val="true"/>
-  <for>
-  </for>
 </skill>
 <skill id="34" levels="3" name="Bandage">
   <table name="#mpConsume"> 19 41 55 </table>
@@ -782,8 +768,6 @@
   <set name="effectRange" val="400"/>
   <enchant1 name="absorbPart" val="0"/> <!-- no damage, it's dead -->
   <enchant1 name="absorbAbs"  val="#ench1drain"/> <!-- absorbs absolute value -->
-  <for>
-  </for>
 </skill>
 <skill id="44" levels="3" name="Remedy">
   <table name="#mpConsume_Init"> 7 9 11 </table>
@@ -825,8 +809,6 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="#aggro"/>
-  <for>
-  </for>
 </skill>
 <skill id="46" levels="15" name="Life Scavenge" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -855,8 +837,6 @@
   <set name="absorbAbs" val="#HPget"/> <!-- absorbs absolute value -->
   <enchant1 name="absorbAbs" val="#enchHPget"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
-  <for>
-  </for>
 </skill>
 <skill id="48" levels="37" name="Thunder Storm" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -921,8 +901,6 @@
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
-  <for>
-  </for>
 </skill>
 <skill id="50" levels="8" name="Focused Force">
   <table name="#power"> 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 </table>
@@ -957,8 +935,6 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <enchant1 name="mpConsume" val="#ench1mpConsume"/>
-  <for>
-  </for>
 </skill>
 <skill id="54" levels="49" name="Force Blaster" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -1046,8 +1022,6 @@
   <enchant4 name="negateStats" val="BLEED"/>
   <enchant4 name="negatePower" val="#negatePower"/>
   <enchant4 name="effectType" val="NEGATE"/>
-  <for>
-  </for>
 </skill>
 <skill id="60" levels="1" name="Fake Death">
   <set name="mpConsume" val="200"/>
@@ -1126,8 +1100,6 @@
   <set name="activationchance" val="0"/> <!-- this is hard coded in core, because multiple chances -->
   <set name="expPenalty" val="0.0"/>
   <set name="isCubic" val="true"/>
-  <for>
-  </for>
 </skill>
 <skill id="69" levels="25" name="Sacrifice" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -1153,8 +1125,6 @@
   <set name="aggroPoints" val="#aggro"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="hpConsume" val="#ench2HpConsume"/>
-  <for>
-  </for>
 </skill>
 <skill id="70" levels="53" name="Drain Health" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -1186,8 +1156,6 @@
   <!-- Drain-specific: absorb 20% from target's damage -->
   <set name="absorbPart" val="0.2"/> <!-- absorbs 20% or damage -->
   <set name="absorbAbs" val="0"/> <!-- Drain absorbs absolute values from corpses only -->
-  <for>
-  </for>
 </skill>
 <skill id="72" levels="3" name="Iron Will" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
