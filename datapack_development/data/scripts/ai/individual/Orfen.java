@@ -145,10 +145,19 @@ public class Orfen extends L2AttackableAIScript
         //Spawn minions
         int x = npc.getX();
         int y = npc.getY();
-        _Minions.add((L2Attackable) addSpawn(RAIKEL_LEOS,x+100,y+100,npc.getZ(),0,false,0));
-        _Minions.add((L2Attackable) addSpawn(RAIKEL_LEOS,x+100,y-100,npc.getZ(),0,false,0));
-        _Minions.add((L2Attackable) addSpawn(RAIKEL_LEOS,x-100,y+100,npc.getZ(),0,false,0));
-        _Minions.add((L2Attackable) addSpawn(RAIKEL_LEOS,x-100,y-100,npc.getZ(),0,false,0));
+        L2NpcInstance mob;
+        mob = addSpawn(RAIKEL_LEOS,x+100,y+100,npc.getZ(),0,false,0);
+        mob.setIsRaidMinion(true);
+        _Minions.add((L2Attackable) mob);
+        mob = addSpawn(RAIKEL_LEOS,x+100,y-100,npc.getZ(),0,false,0);
+        mob.setIsRaidMinion(true);
+        _Minions.add((L2Attackable) mob);
+        mob = addSpawn(RAIKEL_LEOS,x-100,y+100,npc.getZ(),0,false,0);
+        mob.setIsRaidMinion(true);
+        _Minions.add((L2Attackable) mob);
+        mob = addSpawn(RAIKEL_LEOS,x-100,y-100,npc.getZ(),0,false,0);
+        mob.setIsRaidMinion(true);
+        _Minions.add((L2Attackable) mob);
         this.startQuestTimer("check_minion_loc",10000,npc,null,true);
     }
 
@@ -216,7 +225,11 @@ public class Orfen extends L2AttackableAIScript
             _Minions.clear();
         }
         else if (event.equalsIgnoreCase("spawn_minion"))
-            _Minions.add((L2Attackable) addSpawn(RAIKEL_LEOS,npc.getX(),npc.getY(),npc.getZ(),0,false,0));
+        {
+        	L2NpcInstance mob = addSpawn(RAIKEL_LEOS,npc.getX(),npc.getY(),npc.getZ(),0,false,0);
+        	mob.setIsRaidMinion(true);
+            _Minions.add((L2Attackable) mob);
+        }
         return super.onAdvEvent(event, npc, player);
 	}
 

@@ -104,21 +104,23 @@ public class QueenAnt extends L2AttackableAIScript
         startQuestTimer("action",10000, npc, null, true);
         npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
         //Spawn minions
-        addSpawn(LARVA,-21600,179482,-5846,Rnd.get(360),false,0);
-        addSpawn(NURSE,-22000,179482,-5846,0,false,0);
-        addSpawn(NURSE,-21200,179482,-5846,0,false,0);
+        addSpawn(LARVA,-21600,179482,-5846,Rnd.get(360),false,0).setIsRaidMinion(true);
+        addSpawn(NURSE,-22000,179482,-5846,0,false,0).setIsRaidMinion(true);
+        addSpawn(NURSE,-21200,179482,-5846,0,false,0).setIsRaidMinion(true);
         int radius = 400;
         for (int i=0;i<6;i++)
         {
             int x = (int) (radius*Math.cos(i*1.407)); //1.407~2pi/6
             int y = (int) (radius*Math.sin(i*1.407));
-            addSpawn(NURSE,npc.getX()+x,npc.getY()+y,npc.getZ(),0,false,0);
+            addSpawn(NURSE,npc.getX()+x,npc.getY()+y,npc.getZ(),0,false,0).setIsRaidMinion(true);
         }
         for (int i=0;i<8;i++)
         {
             int x = (int) (radius*Math.cos(i*.7854)); //.7854~2pi/8
             int y = (int) (radius*Math.sin(i*.7854));
-            _Minions.add((L2Attackable) addSpawn(ROYAL,npc.getX()+x,npc.getY()+y,npc.getZ(),0,false,0));
+            L2NpcInstance mob = addSpawn(ROYAL,npc.getX()+x,npc.getY()+y,npc.getZ(),0,false,0);
+            mob.setIsRaidMinion(true);
+            _Minions.add((L2Attackable)mob);
         }
         startQuestTimer("check_royal__Zone",120000,npc,null,true);
     }
@@ -170,11 +172,13 @@ public class QueenAnt extends L2AttackableAIScript
         }
         else if (event.equalsIgnoreCase("spawn_royal"))
         {
-            _Minions.add((L2Attackable) addSpawn(ROYAL,npc.getX(),npc.getY(),npc.getZ(),0,false,0));
+            L2NpcInstance mob = addSpawn(ROYAL,npc.getX(),npc.getY(),npc.getZ(),0,false,0);
+            mob.setIsRaidMinion(true);
+            _Minions.add((L2Attackable)mob);
         }
         else if (event.equalsIgnoreCase("spawn_nurse"))
         {
-            addSpawn(NURSE,npc.getX(),npc.getY(),npc.getZ(),0,false,0);
+            addSpawn(NURSE,npc.getX(),npc.getY(),npc.getZ(),0,false,0).setIsRaidMinion(true);
         }
         return super.onAdvEvent(event, npc, player);
 	}
