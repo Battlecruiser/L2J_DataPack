@@ -728,11 +728,18 @@
   </for>
 </skill>
 <skill id="2368" levels="1" name="Spirit of the Lake">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="power" val="10000"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="8000"/>
+  <set name="reuseDelay" val="8000"/> <!-- unknown -->
+  <set name="skillType" val="AGGREDUCE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="itemConsumeId" val="9689" />
+  <set name="itemConsumeCount" val="1"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="900"/>
   <for>
+    <effect count="1" name="HealOverTime" time="1" val="3000"/>
   </for>
 </skill>
 <skill id="2369" levels="1" name="Water Dragon Scale">

@@ -332,6 +332,8 @@ INSERT INTO `droplist` VALUES
 (18326,6540,3,9,2,171547), -- Fishing Shot: S-grade
 (18345,8787,1,1,2,250000), -- Sprigant\'s Fruit
 (18346,8787,1,1,2,250000), -- Sprigant\'s Fruit
+(18485,9691,1,1,2,1000000), -- Water Dragon Scale
+(18485,9700,1,1,3,360000), -- Water Dragon Claw
 (20003,116,1,1,-1,343131), -- Magic Ring
 (20003,1786,1,1,-1,45293), -- Recipe: Broad Sword
 (20003,1871,1,1,-1,56617), -- Charcoal
@@ -25967,15 +25969,15 @@ INSERT INTO `droplist` VALUES
 (22267,5541,1,1,1,23256), -- Tallum Glaive Edge
 (22267,6690,1,1,-1,73946), -- Imperial Staff Head
 (22267,6901,1,1,-1,76411), -- Recipe: Shining Arrow (100%)
-(22268,57,1377,2821,0,700000), -- Adena
+(22268,57,1378,2821,0,700000), -- Adena
 (22268,1344,10,30,2,166667), -- Mithril Arrow
 (22268,1868,1,3,2,142857), -- Thread
 (22268,9595,1,1,100,100000), -- Blue Seed of Evil - Shard
 (22268,1873,1,1,2,47619), -- Silver Nugget
 (22268,1895,1,1,2,33333), -- Metallic Fiber
-(22268,1876,1,1,2,27778), -- Mithril Ore
-(22268,4042,1,1,2,2257), -- Enria
-(22268,9548,1,1,200,1088), -- Earth Stone
+(22268,1876,1,1,2,26319), -- Mithril Ore
+(22268,4042,1,1,2,1387), -- Enria
+(22268,9548,1,1,200,1848), -- Earth Stone
 (22268,5480,1,1,1,984), -- Sealed Leather Armor of Nightmare Fabric
 (22268,5481,1,1,1,984), -- Sealed Majestic Leather Armor Fabric
 (22268,960,1,1,2,43), -- Scroll: Enchant Armor (S)
@@ -26000,6 +26002,40 @@ INSERT INTO `droplist` VALUES
 (22269,1808,1,1,-1,5000), -- Recipe: Soulshot: S Grade
 (22269,5481,1,1,-1,6000), -- Sealed Majestic Leather Armor Fabric
 (22269,5487,1,1,-1,6000), -- Sealed Nightmare Robe Fabric
+(22270,9689,1,1,101,1000000), -- Spirit of the Lake
+(22270,57,1537,3146,0,700000), -- Adena
+(22270,9595,1,1,100,100000), -- Blue Seed of Evil - Shard
+(22270,1344,10,30,2,125000), -- Mithril Arrow
+(22270,1868,1,1,2,200000), -- Thread
+(22270,1873,1,1,2,35714), -- Silver Nugget
+(22270,5549,1,1,2,8621), -- Metallic Thread
+(22270,1889,1,1,2,6803), -- Compound Braid
+(22270,4044,1,1,2,2500), -- Thons
+(22270,9549,1,1,200,455), -- Wind Stone
+(22270,5487,1,1,1,1821), -- Sealed Robe of Nightmare Fabric
+(22270,5488,1,1,1,1138), -- Sealed Majestic Robe Fabric
+(22270,12266,1,1,1,455), -- Common Item - Sealed Robe of Nightmare
+(22270,12259,1,1,1,455), -- Common Item - Sealed Majestic Robe
+(22270,9573,1,1,200,227), -- Life Stone: level 80
+(22270,4044,1,1,-1,250000), -- Thons
+(22270,3036,1,1,-1,10000), -- Recipe: Spiritshot: S Grade
+(22270,5488,1,1,-1,50000), -- Sealed Majestic Robe Fabric
+(22271,9689,1,1,101,1000000), -- Spirit of the Lake
+(22271,57,1537,3147,0,700000), -- Adena
+(22271,9595,1,1,100,100000), -- Blue Seed of Evil - Shard
+(22271,1895,1,1,2,52632), -- Metallic Fiber
+(22271,4040,1,1,2,5882), -- Mold Lubricant
+(22271,9628,1,1,2,1117), -- Leonard
+(22271,9630,1,1,2,559), -- Orichalcum
+(22271,9549,1,1,200,2237), -- Wind Stone
+(22271,6346,1,1,1,5882), -- Sealed Majestic Ring Gemstone
+(22271,6342,1,1,1,5882), -- Sealed Majestic Earring Gemstone
+(22271,6344,1,1,1,4184), -- Sealed Majestic Necklace Beads
+(22271,12350,1,1,1,279), -- Common Item - Sealed Majestic Necklace
+(22271,12352,1,1,1,559), -- Common Item - Sealed Majestic Earring
+(22271,12351,1,1,1,838), -- Common Item - Sealed Majestic Ring
+(22271,1895,1,2,-1,600000), -- Metallic Fiber
+(22271,5495,1,1,-1,100000), -- Sealed Shield of Nightmare Fragment
 (22288,57,6113,9156,0,700000), -- Adena
 (22288,1868,9,9,2,133000), -- Thread
 (22288,1873,3,6,2,250000), -- Silver Nugget
