@@ -106,18 +106,27 @@ public class Core extends L2AttackableAIScript
         GrandBossManager.getInstance().addBoss(npc);
         npc.broadcastPacket(new PlaySound(1, "BS01_A", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
         //Spawn minions
+        L2NpcInstance mob;
         for (int i=0;i<5;i++)
         {
             int x = 16800 + i*360;
-            Minions.add((L2Attackable) addSpawn(DEATH_KNIGHT,x,110000,npc.getZ(),280+Rnd.get(40),false,0));
-            Minions.add((L2Attackable) addSpawn(DEATH_KNIGHT,x,109000,npc.getZ(),280+Rnd.get(40),false,0));
+            mob = addSpawn(DEATH_KNIGHT,x,110000,npc.getZ(),280+Rnd.get(40),false,0);
+            mob.setIsRaidMinion(true);
+            Minions.add((L2Attackable)mob);
+            mob = addSpawn(DEATH_KNIGHT,x,109000,npc.getZ(),280+Rnd.get(40),false,0);
+            mob.setIsRaidMinion(true);
+            Minions.add((L2Attackable)mob);
         	int x2 = 16800 + i*600;
-            Minions.add((L2Attackable) addSpawn(DOOM_WRAITH,x2,109300,npc.getZ(),280+Rnd.get(40),false,0));
+        	mob = addSpawn(DOOM_WRAITH,x2,109300,npc.getZ(),280+Rnd.get(40),false,0);
+        	mob.setIsRaidMinion(true);
+            Minions.add((L2Attackable)mob);
         }
         for (int i=0;i<4;i++)
         {
             int x = 16800 + i*450;
-            Minions.add((L2Attackable) addSpawn(SUSCEPTOR,x,110300,npc.getZ(),280+Rnd.get(40),false,0));
+            mob = addSpawn(SUSCEPTOR,x,110300,npc.getZ(),280+Rnd.get(40),false,0);
+            mob.setIsRaidMinion(true);
+            Minions.add((L2Attackable)mob);
         }
     }
 
@@ -130,7 +139,11 @@ public class Core extends L2AttackableAIScript
             spawnBoss(core);
         }
         else if (event.equalsIgnoreCase("spawn_minion"))
-            Minions.add((L2Attackable) addSpawn(npc.getNpcId(),npc.getX(),npc.getY(),npc.getZ(),npc.getHeading(),false,0));
+        {
+        	L2NpcInstance mob = addSpawn(npc.getNpcId(),npc.getX(),npc.getY(),npc.getZ(),npc.getHeading(),false,0);
+        	mob.setIsRaidMinion(true);
+            Minions.add((L2Attackable)mob);
+        }
         else if (event.equalsIgnoreCase("despawn_minions"))
         {
             for (int i = 0;i<Minions.size();i++)
