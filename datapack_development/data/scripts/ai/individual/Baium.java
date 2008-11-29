@@ -142,12 +142,14 @@ public class Baium extends L2AttackableAIScript
 		            {
 						_baium.setCurrentHpMp(hp,mp);
 						_baium.setIsInvul(true);
+						_baium.setIsImmobilized(true);
 		                _baium.setRunning();
 						_baium.broadcastPacket(new SocialAction(_baium.getObjectId(),2));
 			            startQuestTimer("baium_wakeup",15000, _baium, null);
 		            }
-		            catch (Throwable e)
+		            catch (Exception e)
 		            {
+		            	e.printStackTrace();
 		            }
 				}
 			},100L);
@@ -169,7 +171,7 @@ public class Baium extends L2AttackableAIScript
         }
         else if (event.equalsIgnoreCase("clean_player"))
         {
-        	_target = null;
+        	_target = getRandomTarget(npc);
         }
         else if (event.equalsIgnoreCase("baium_wakeup") && npc != null)
         {
@@ -180,7 +182,7 @@ public class Baium extends L2AttackableAIScript
                 // start monitoring baium's inactivity
                 _LastAttackVsBaiumTime = System.currentTimeMillis();
                 startQuestTimer("baium_despawn", 60000, npc, null, true);
-                startQuestTimer("skill_range", 11000, npc, null);
+                startQuestTimer("skill_range", 500, npc, null, true);
                 final L2NpcInstance baium = npc;
                 ThreadPoolManager.getInstance().scheduleGeneral(new Runnable() {
     				public void run()
@@ -188,12 +190,14 @@ public class Baium extends L2AttackableAIScript
     					try
     		            {
     						baium.setIsInvul(false);
+    						baium.setIsImmobilized(false);
     		            }
-    		            catch (Throwable e)
+    		            catch (Exception e)
     		            {
+    		            	e.printStackTrace();
     		            }
     				}
-    			},11000L);
+    			},11100L);
                 // TODO: the person who woke baium up should be knocked across the room, onto a wall, and
                 // lose massive amounts of HP.
             }
@@ -350,6 +354,8 @@ public class Baium extends L2AttackableAIScript
         StatsSet info = GrandBossManager.getInstance().getStatsSet(LIVE_BAIUM);
         info.set("respawn_time",(System.currentTimeMillis()) + respawnTime);
         GrandBossManager.getInstance().setStatsSet(LIVE_BAIUM,info);
+		if (getQuestTimer("skill_range", npc, null) != null)
+			getQuestTimer("skill_range", npc, null).cancel();
         return super.onKill(npc,killer,isPet);
     }
 
@@ -386,10 +392,10 @@ public class Baium extends L2AttackableAIScript
 		if (!result.isEmpty() && result.size() != 0)
 		{
 			Object[] characters = result.toArray();
-			QuestTimer timer = getQuestTimer("clean_player", null, null);
+			QuestTimer timer = getQuestTimer("clean_player", npc, null);
 			if (timer != null)
 				timer.cancel();
-			startQuestTimer("clean_player", 20000, null, null);
+			startQuestTimer("clean_player", 20000, npc, null);
 			return (L2Character) characters[Rnd.get(characters.length)];
 		}
 		return null;
@@ -397,50 +403,37 @@ public class Baium extends L2AttackableAIScript
 
 	public synchronized void callSkillAI(L2NpcInstance npc)
 	{
-		if (npc.isInvul())
-			return;
-		QuestTimer timer = getQuestTimer("skill_range", npc, null);
-
-		if (npc == null)
+		if (npc.isInvul() || npc.isCastingNow())
 		{
-			if (timer != null)
-				timer.cancel();
 			return;
 		}
 
-		if (_target == null || _target.isDead() || timer == null || !(_Zone.isInsideZone(_target)))
+		if (_target == null || _target.isDead() || !(_Zone.isInsideZone(_target)))
 		{
 			_target = getRandomTarget(npc);
 			_skill = getRandomSkill(npc);
-			if (timer == null)
-			{
-				startQuestTimer("skill_range", 500, npc, null, true);
-				return;
-			}
 		}
 
 		L2Character target = _target;
 		L2Skill skill = _skill;
 		if (target == null || target.isDead() || !(_Zone.isInsideZone(target)))
 		{
-			if (timer == null)
-				startQuestTimer("skill_range", 500, npc, null, true);
+			npc.setIsCastingNow(false);
 			return;
 		}
 
 		if (Util.checkIfInRange(skill.getCastRange(), npc, target, true))
 		{
-			if (timer != null)
-				timer.cancel();
 			npc.getAI().setIntention(AI_INTENTION_IDLE);
 			npc.setTarget(target);
+			npc.setIsCastingNow(true);
+			_target = null;
 			npc.doCast(skill);
 		}
 		else
 		{
-			if (timer == null)
-				startQuestTimer("skill_range", 500, npc, null, true);
 			npc.getAI().setIntention(AI_INTENTION_FOLLOW, target, null);
+			npc.setIsCastingNow(false);
 		}
 	}
 
