@@ -561,7 +561,7 @@
     <mul order="0x30" stat="pAtk" val="1.066"/> <!-- P. Atk. +6.6% -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Darkness Resistance +8 -->
-    <add order="0x40" stat="cAtk" val="282"/> <!-- Critical Damage +282 -->
+    <add order="0x40" stat="cAtkAdd" val="282"/> <!-- Critical Damage +282 -->
     <basemul order="0x30" stat="rCrit" val="0.0295"/> <!-- Critical Rate +2.95% Increase -->
   </for>
 </skill>

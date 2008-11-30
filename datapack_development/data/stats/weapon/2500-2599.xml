@@ -535,7 +535,7 @@
     <set val='68' order='0x08' stat='mAtk'/>
     <set val='8' order='0x08' stat='rCrit'/>
     <add val='0' order='0x10' stat='accCombat'/>
-    <add val='61' order='0x10' stat='cAtk'>
+    <add val='61' order='0x10' stat='cAtkAdd'>
       <and>
         <using slotitem="2557;16;4"/>
       </and>
@@ -615,7 +615,7 @@
     <set val='8' order='0x08' stat='rCrit'/>
     <add val='0' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
-    <add val='49' order='0x10' stat='cAtk'>
+    <add val='49' order='0x10' stat='cAtkAdd'>
       <and>
         <using slotitem="2562;16;4"/>
       </and>
@@ -788,7 +788,7 @@
     <set val='8' order='0x08' stat='rCrit'/>
     <add val='0' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
-    <add val='84' order='0x10' stat='cAtk'>
+    <add val='84' order='0x10' stat='cAtkAdd'>
       <and>
         <using slotitem="2573;16;4"/>
       </and>
@@ -961,7 +961,7 @@
     <set val='8' order='0x08' stat='rCrit'/>
     <add val='0' order='0x10' stat='accCombat'/>
     <set val='325' order='0x08' stat='pAtkSpd'/>
-    <add val='84' order='0x10' stat='cAtk'>
+    <add val='84' order='0x10' stat='cAtkAdd'>
       <and>
         <using slotitem="2584;16;4"/>
       </and>
