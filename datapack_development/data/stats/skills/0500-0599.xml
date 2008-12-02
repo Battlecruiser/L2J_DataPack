@@ -1291,8 +1291,9 @@
   <!-- Needs retail accuracy check -->
   <table name="#mpConsume"> 61 63 67 70 </table>
   <table name="#power"> 875 984 1098 1213 </table>
-  <table name="#effect"> 6 6 7 7 </table>
   <table name="#bleeddmg"> 102 123 155 198 </table>
+  <table name="#abnormalLvl"> 6 6 7 7 </table>
+  <set name="abnormalLvl" val="#abnormalLvl"/>
   <set name="power" val="#power"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_FRONT_AREA"/>
@@ -1307,7 +1308,7 @@
   <set name="effectType" val="BLEED"/>
   <set name="effectPower" val="40"/> <!-- Base Land Rate --> <!-- Guessing -->
   <for>
-    <effect count="#effect" name="DamOverTime" time="3" val="#bleeddmg" abnormal="bleeding"/>
+    <effect count="5" name="DamOverTime" time="3" val="#bleeddmg" abnormal="bleeding"/>
   </for>
 </skill>
 <skill id="583" levels="4" name="Assimilation">

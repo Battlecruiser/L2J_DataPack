@@ -402,9 +402,8 @@
 </skill>
 <skill id="736" levels="1" name="Devil Seed">
   <set name="mpConsume" val="82"/>
-  <set name="power" val="8.0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="POISON"/>
+  <set name="skillType" val="DOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="element" val="6"/> <!-- Dark -->
   <set name="isMagic" val="true"/>
@@ -414,7 +413,7 @@
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1800"/>
   <for>
-    <effect count="10" name="DamOverTime" time="3" val="144" abnormal="poison"/>
+    <effect count="10" name="DamOverTime" time="3" val="144"/>
   </for>
 </skill>
 <skill id="737" levels="1" name="Devil Ultimate Defense">

@@ -1820,6 +1820,8 @@
   <table name="#magicLvl"> 55 57 59 61 63 66 68 70 72 74 </table>
   <table name="#castRange"> 500 500 500 500 500 500 600 600 600 600 </table>
   <table name="#effectRange"> 1000 1000 1000 1000 1000 1000 1100 1100 1100 1100 </table>
+  <table name="#abnormalLvl"> 6 6 7 7 7 7 7 8 8 8 </table>
+  <set name="abnormalLvl" val="#abnormalLvl"/>
   <set name="magicLvl" val="#magicLvl"/> <!-- 55,76 -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="weaponsAllowed" val="32768"/> <!-- Ancient -->
