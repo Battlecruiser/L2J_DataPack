@@ -83,12 +83,11 @@
 <skill id="4104" levels="12" name="Flame">
   <table name="#dmg"> 14 21 30 40 51 61 68 68 75 75 81 81 </table>
   <table name="#mpConsume"> 17 31 45 60 75 90 105 112 119 126 132 139 </table>
-  <table name="#power"> 2.0 3.0 4.0 5.0 6.0 7.0 8.0 8.0 9.0 9.0 10.0 10.0 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="#power"/>
+  <set name="power" val="70"/> <!-- Base Land Rate -->
   <set name="target" val="TARGET_ONE"/>
   <set name="element" val="2"/> <!-- Fire -->
   <set name="reuseDelay" val="8000"/>
@@ -1124,11 +1123,11 @@
 </skill>
 <skill id="4165" levels="17" name="Icy Air">
   <!-- Cubic skill -->
-  <table name="#power"> 77 77 77 94 94 108 108 118 118 120 122 128 132 135 140 145 150 </table>
+  <table name="#dmg"> 77 77 77 94 94 108 108 118 118 120 122 128 132 135 140 145 150 </table>
   <table name="#magicLvl"> 40 44 48 52 56 62 66 70 74 75 76 77 78 79 80 81 82 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
-  <set name="power" val="#power"/>
+  <set name="power" val="70"/> <!-- Base Land Rate -->
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DOT"/>
   <set name="isDebuff" val="true"/>
@@ -1138,7 +1137,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <!-- retail value: 77 77 77 94 94 108 108 118 118/sec; stat update every time unit (2/3 sec) -->
-    <effect count="15" name="DamOverTime" time="1" val="#power"/>
+    <effect count="15" name="DamOverTime" time="1" val="#dmg"/>
   </for>
 </skill>
 <skill id="4166" levels="18" name="Stuns">

@@ -401,6 +401,7 @@
   <set name="effectRange" val="-1"/>
 </skill>
 <skill id="736" levels="1" name="Devil Seed">
+  <!-- This skill is wrong, needs core support! -->
   <set name="mpConsume" val="82"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DOT"/>
@@ -413,7 +414,7 @@
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1800"/>
   <for>
-    <effect count="10" name="DamOverTime" time="3" val="144"/>
+    <effect count="15" name="DamOverTime" time="1" val="144"/>
   </for>
 </skill>
 <skill id="737" levels="1" name="Devil Ultimate Defense">
