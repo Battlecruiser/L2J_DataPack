@@ -699,7 +699,7 @@
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="power" val="70"/>
+  <set name="power" val="70"/> <!-- Base Land Rate -->
   <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="element" val="4"/> <!-- Earth -->
@@ -1027,7 +1027,7 @@
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="power" val="70"/>
+  <set name="power" val="70"/> <!-- Base Land Rate -->
   <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="element" val="2"/> <!-- Fire -->
@@ -2262,7 +2262,6 @@
   <set name="mpInitialConsume" val="50"/>
   <set name="mpConsume" val="200"/>
   <set name="magicLvl" val="70"/>
-  <set name="power" val="150"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="element" val="2"/> <!-- Fire -->
   <set name="hitTime" val="7000"/>

@@ -293,12 +293,12 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="70"/> <!-- Guessing -->
+  <set name="power" val="70"/> <!-- Base Land Rate --> <!-- Guessing -->
   <set name="reuseDelay" val="6000"/> <!-- Guessing -->
   <set name="skillType" val="DOT"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
-    <effect count="5" name="DamOverTime" time="3" val="#dmg">
+    <effect count="15" name="DamOverTime" time="1" val="#dmg">
       <mul order="0x30" stat="gainHp" val="0.5"/>
     </effect>
   </for>

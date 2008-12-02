@@ -746,6 +746,7 @@
   <set name="soulMaxConsumeCount" val="5"/>
 </skill>
 <skill id="1435" levels="10" name="Death Mark">
+  <!-- This skill is wrong, needs core support! -->
   <table name="#mpConsume"> 12 14 18 22 24 28 29 32 33 35 </table>
   <table name="#power"> 35 40 45 50 55 60 65 70 75 80  </table>
   <table name="#EffectLvl"> 1 2 3 4 5 6 7 8 9 10 </table>
@@ -1102,22 +1103,20 @@
   <set name="magicLvl" val="79"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="109"/>
-  <set name="power" val="10"/>
+  <set name="power" val="70"/> <!-- Base Land Rate --> <!-- Guessing -->
   <set name="target" val="TARGET_ONE"/>
   <set name="skillRadius" val="200"/>
   <set name="reuseDelay" val="8000"/>
   <set name="isMagic" val="true"/>
-  <set name="skillType" val="MDAM"/>
+  <set name="skillType" val="DOT"/>
   <set name="isDebuff" val="true"/>
   <set name="hitTime" val="4000"/>
   <set name="element" val="2"/> <!-- Fire -->
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="-1"/>
-  <set name="effectType" val="DOT"/>
-  <set name="effectPower" val="40"/> <!-- Guessing -->
   <for>
-    <effect count="7" name="DamOverTime" time="3" val="100"/>
+    <effect count="15" name="DamOverTime" time="1" val="100"/>
   </for>
 </skill>
 <skill id="1453" levels="1" name="Ice Vortex Crusher">
@@ -1165,7 +1164,7 @@
   <set name="magicLvl" val="79"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="109"/>
-  <set name="power" val="10"/>
+  <set name="power" val="70"/> <!-- Base Land Rate --> <!-- Guessing -->
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="8000"/>
   <set name="skillType" val="MDAM"/>
@@ -1179,7 +1178,7 @@
   <set name="effectType" val="DOT"/>
   <set name="effectPower" val="40"/> <!-- Guessing -->
   <for>
-    <effect count="5" name="DamOverTime" time="3" val="100"/>
+    <effect count="15" name="DamOverTime" time="1" val="100"/>
   </for>
 </skill>
 <skill id="1456" levels="1" name="Wind Vortex Slug">
@@ -1225,11 +1224,11 @@
   <set name="magicLvl" val="79"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="109"/>
-  <set name="power" val="10"/>
+  <set name="power" val="70"/> <!-- Base Land Rate --> <!-- Guessing -->
   <set name="target" val="TARGET_ONE"/>
   <set name="skillRadius" val="200"/>
   <set name="reuseDelay" val="8000"/>
-  <set name="skillType" val="MDAM"/>
+  <set name="skillType" val="DOT"/>
   <set name="isMagic" val="true"/>
   <set name="isDebuff" val="true"/>
   <set name="hitTime" val="4000"/>
@@ -1237,10 +1236,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
-  <set name="effectType" val="DOT"/>
-  <set name="effectPower" val="40"/> <!-- Guessing -->
   <for>
-    <effect count="7" name="DamOverTime" time="3" val="100"/>
+    <effect count="15" name="DamOverTime" time="1" val="100"/>
   </for>
 </skill>
 <skill id="1459" levels="1" name="Divine Power">
