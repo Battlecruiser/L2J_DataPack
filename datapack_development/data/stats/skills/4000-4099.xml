@@ -546,6 +546,8 @@
   <table name="#dmg"> 36 54 72 93 114 132 144 144 150 150 153 153 </table>
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 83 77 78 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+  <table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
+  <set name="abnormalLvl" val="#abnormalLvl"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -567,6 +569,8 @@
   <table name="#dmg"> 36 54 72 93 114 132 144 144 150 150 153 153 </table>
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+  <table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
+  <set name="abnormalLvl" val="#abnormalLvl"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -867,7 +871,9 @@
 <skill id="4052" levels="15" name="Poison">
   <!-- Cubic skill -->
   <table name="#dmg"> 93 114 132 132 132 144 144 144 156 156 156 162 162 171 171</table>
-  <table name="#magicLvl"> 49 55 60 64 68 72 74 76 78 80 81 82 83 84 85</table>
+  <table name="#magicLvl"> 49 55 60 64 68 72 74 76 78 80 81 82 83 84 85 </table>
+  <table name="#abnormalLvl"> 5 6 7 7 7 8 8 8 8 8 8 8 8 8 8 </table>
+  <set name="abnormalLvl" val="#abnormalLvl"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
   <set name="power" val="70"/> <!-- Base Land Rate -->
@@ -1456,6 +1462,8 @@
   <table name="#damage">27 39 51 66 81 93 102 102 105 105 108 108 </table>
   <table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+  <table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
+  <set name="abnormalLvl" val="#abnormalLvl"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="2"/>
   <set name="mpConsume" val="#mpConsume"/>
