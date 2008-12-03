@@ -378,7 +378,8 @@ public class FeedableBeasts extends L2AttackableAIScript
         // despawn the old mob
         if (_GrowthCapableMobs.get(npcId).getGrowthLevel() == 0)
         {
-            npc.onDecay();
+        	npc.getSpawn().decreaseCount(npc);
+        	npc.deleteMe();
         }
         else
         {
