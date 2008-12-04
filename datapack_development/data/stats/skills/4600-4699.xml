@@ -370,9 +370,8 @@
 </skill>
 <skill id="4619" levels="1" name="NPC Dispel Sleep">
   <set name="mpConsume" val="35"/>
-  <set name="power" val="100"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="CANCEL"/>
+  <set name="skillType" val="NEGATE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
@@ -973,7 +972,7 @@
   <set name="negatePower" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="skillRadius" val="200"/>
-  <set name="skillType" val="CANCEL"/>
+  <set name="skillType" val="NEGATE"/>
   <set name="target" val="TARGET_AURA"/>
 </skill>
 <skill id="4651" levels="3" name="NPC AE - Dispel Slow">
@@ -992,7 +991,7 @@
   <set name="negatePower" val="#negatePower"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="skillRadius" val="200"/>
-  <set name="skillType" val="CANCEL"/>
+  <set name="skillType" val="NEGATE"/>
   <set name="target" val="TARGET_AURA"/>
 </skill>
 <skill id="4652" levels="1" name="NPC AE Dispel Silence">
@@ -1007,7 +1006,7 @@
   <set name="negatePower" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="skillRadius" val="200"/>
-  <set name="skillType" val="CANCEL"/>
+  <set name="skillType" val="NEGATE"/>
   <set name="target" val="TARGET_AURA"/>
 </skill>
 <skill id="4653" levels="12" name="NPC Corpse Life Drain">
@@ -1352,24 +1351,21 @@
 </skill>
 <skill id="4673" levels="12" name="NPC Dispel Offensive Buff">
   <table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
-  <table name="#Power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table>
-  <table name="#negatePower"> 8 17 25 33 42 50 58 67 75 83 92 100 </table>
+  <table name="#power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table> <!-- Base Land Rate -->
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="#Power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="CANCEL"/>
   <set name="hitTime" val="2000"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="#power"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
-  <set name="negateStats" val="BUFF"/>
-  <set name="negatePower" val="#negatePower"/>
+  <set name="negateStats" val="BUFF HEAL_PERCENT"/>
 </skill>
 <skill id="4674" levels="12" name="NPC Dispel Offensive Buff">
   <table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
-  <table name="#Power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table>
-  <table name="#negatePower"> 8 17 25 33 42 50 58 67 75 83 92 100 </table>
+  <table name="#Power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table> <!-- Base Land Rate -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#Power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1379,13 +1375,11 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
-  <set name="negateStats" val="BUFF"/>
-  <set name="negatePower" val="#negatePower"/>
+  <set name="negateStats" val="BUFF HEAL_PERCENT"/>
 </skill>
 <skill id="4675" levels="12" name="NPC Dispel Fighter Buff">
   <table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
-  <table name="#Power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table>
-  <table name="#negatePower"> 8 17 25 33 42 50 58 67 75 83 92 100 </table>
+  <table name="#Power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table> <!-- Base Land Rate -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#Power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1395,13 +1389,11 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
-  <set name="negateStats" val="BUFF"/>
-  <set name="negatePower" val="#negatePower"/>
+  <set name="negateStats" val="BUFF HEAL_PERCENT"/>
 </skill>
 <skill id="4676" levels="12" name="NPC Dispel Mage Offensive Buff">
   <table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
-  <table name="#Power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table>
-  <table name="#negatePower"> 8 17 25 33 42 50 58 67 75 83 92 100 </table>
+  <table name="#Power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table> <!-- Base Land Rate -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#Power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1411,13 +1403,11 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
-  <set name="negateStats" val="BUFF"/>
-  <set name="negatePower" val="#negatePower"/>
+  <set name="negateStats" val="BUFF HEAL_PERCENT"/>
 </skill>
 <skill id="4677" levels="12" name="NPC Dispel Fighter Defensive Buff">
   <table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
-  <table name="#Power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table>
-  <table name="#negatePower"> 8 17 25 33 42 50 58 67 75 83 92 100 </table>
+  <table name="#Power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table> <!-- Base Land Rate -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#Power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1427,13 +1417,11 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
-  <set name="negateStats" val="BUFF"/>
-  <set name="negatePower" val="#negatePower"/>
+  <set name="negateStats" val="BUFF HEAL_PERCENT"/>
 </skill>
 <skill id="4678" levels="12" name="NPC Dispel Mage Defensive Buff">
   <table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
-  <table name="#Power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table>
-  <table name="#negatePower"> 8 17 25 33 42 50 58 67 75 83 92 100 </table>
+  <table name="#Power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table> <!-- Base Land Rate -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#Power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1443,8 +1431,7 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
-  <set name="negateStats" val="BUFF"/>
-  <set name="negatePower" val="#negatePower"/>
+  <set name="negateStats" val="BUFF HEAL_PERCENT"/>
 </skill>
 <skill id="4679" levels="1" name="Valakas">
   <!-- Valakas Skills -->

@@ -1312,14 +1312,13 @@
 <skill id="3592" levels="1" name="Dispell">
   <!-- Infinity Spear Skill -->
   <set name="magicLvl" val="80"/>
-  <set name="power" val="100"/> <!-- Chance is 10% Managed by SQL Side -->
+  <set name="power" val="100"/> <!-- Base Land Rate 10% Managed by SQL Side -->
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="CANCEL"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="negateStats" val="BUFF HEAL_PERCENT"/>
-  <set name="negatePower" val="10"/>
   <set name="maxNegated" val="3"/> <!-- Making max debuff count 3 -->
 </skill>
 <skill id="3593" levels="1" name="Special Ability: Infinity Bow">
