@@ -1007,7 +1007,7 @@
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="power" val="25"/>
+  <set name="power" val="25"/> <!-- Base Land Rate -->
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="120000"/>
   <set name="hitTime" val="6000"/>
@@ -1017,7 +1017,6 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="negateStats" val="BUFF HEAL_PERCENT"/>
-  <set name="negatePower" val="25"/>
   <set name="maxNegated" val="5"/>
 </skill>
 <skill id="1059" levels="3" name="Empower" enchantLevels1="30" enchantLevels2="30" >
