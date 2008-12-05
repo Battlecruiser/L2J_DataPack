@@ -776,9 +776,9 @@ public class Zaken extends L2AttackableAIScript
         int npcId = npc.getNpcId();
         if (npcId == ZAKEN)
         {
-        	if(skill.getEffectPoints() > 0)
+        	if(skill.getAggroPoints() > 0)
         	{
-        		((L2Attackable)npc).addDamageHate(caster,0,(((skill.getEffectPoints() / npc.getMaxHp())*10)*150));
+        		((L2Attackable)npc).addDamageHate(caster,0,(((skill.getAggroPoints() / npc.getMaxHp())*10)*150));
         	}
         	if (Rnd.get(12) < 1)
         	{
