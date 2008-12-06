@@ -441,7 +441,7 @@
   <table name="#mpConsume_Init"> 4 7 11 </table>
   <table name="#mpConsume"> 16 28 44 </table>
   <table name="#magicLvl"> 20 40 60 </table>
-  <table name="#negatePower"> 3 7 9 </table>
+  <table name="#abnormalLvl"> 3 7 9 </table>
   <table name="#aggro"> 204 379 566 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -451,7 +451,7 @@
   <set name="hitTime" val="1000"/>
   <set name="skillType" val="NEGATE"/>
   <set name="negateStats" val="POISON"/>
-  <set name="negatePower" val="#negatePower"/>
+  <set name="abnormalLvl" val="#abnormalLvl"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -675,7 +675,7 @@
 <skill id="34" levels="3" name="Bandage">
   <table name="#mpConsume"> 19 41 55 </table>
   <table name="#magicLvl"> 20 46 62 </table>
-  <table name="#negatePower"> 3 7 9 </table>
+  <table name="#abnormalLvl"> 3 7 9 </table>
   <table name="#aggro"> 204 438 582 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -684,7 +684,7 @@
   <set name="hitTime" val="1500"/>
   <set name="skillType" val="NEGATE"/>
   <set name="negateStats" val="BLEED"/>
-  <set name="negatePower" val="#negatePower"/>
+  <set name="abnormalLvl" val="#abnormalLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -773,7 +773,7 @@
   <table name="#mpConsume_Init"> 7 9 11 </table>
   <table name="#mpConsume"> 28 35 44 </table>
   <table name="#magicLvl"> 40 49 62 </table>
-  <table name="#negatePower"> 3 7 9 </table>
+  <table name="#abnormalLvl"> 3 7 9 </table>
   <table name="#aggro"> 379 467 582 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -783,7 +783,7 @@
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="NEGATE"/>
   <set name="negateStats" val="BLEED"/>
-  <set name="negatePower" val="#negatePower"/>
+  <set name="abnormalLvl" val="#abnormalLvl"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -987,7 +987,7 @@
 </skill>
 <skill id="58" levels="55" name="Elemental Heal" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30" enchantLevels4="30">
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
-  <table name="#negatePower">1.3 1.6 1.9 2.2 2.5 2.7 2.9 3.2 3.5 3.8 4.3 4.6 4.9 5.1 5.4 5.6 5.9 6.1 6.4 6.8 7.2 7.5 7.8 8.3 8.6 8.9 9.1 9.4 9.7 9.9</table>
+  <table name="#abnormalLvl">1.3 1.6 1.9 2.2 2.5 2.7 2.9 3.2 3.5 3.8 4.3 4.6 4.9 5.1 5.4 5.6 5.9 6.1 6.4 6.8 7.2 7.5 7.8 8.3 8.6 8.9 9.1 9.4 9.7 9.9</table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant3 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1017,10 +1017,10 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <enchant3 name="negateStats" val="POISON"/>
-  <enchant3 name="negatePower" val="#negatePower"/>
+  <enchant3 name="abnormalLvl" val="#abnormalLvl"/>
   <enchant3 name="effectType" val="NEGATE"/>
   <enchant4 name="negateStats" val="BLEED"/>
-  <enchant4 name="negatePower" val="#negatePower"/>
+  <enchant4 name="abnormalLvl" val="#abnormalLvl"/>
   <enchant4 name="effectType" val="NEGATE"/>
 </skill>
 <skill id="60" levels="1" name="Fake Death">
@@ -1038,7 +1038,7 @@
   <table name="#mpConsume_Init"> 5 9 11 </table>
   <table name="#mpConsume"> 17 33 44 </table>
   <table name="#magicLvl"> 24 46 62 </table>
-  <table name="#negatePower"> 3 7 9 </table>
+  <table name="#abnormalLvl"> 3 7 9 </table>
   <table name="#aggro">235 438 582 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1048,7 +1048,7 @@
   <set name="hitTime" val="1000"/>
   <set name="skillType" val="NEGATE"/>
   <set name="negateStats" val="BLEED"/>
-  <set name="negatePower" val="#negatePower"/>
+  <set name="abnormalLvl" val="#abnormalLvl"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
