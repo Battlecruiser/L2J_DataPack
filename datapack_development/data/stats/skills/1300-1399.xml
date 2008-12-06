@@ -3,7 +3,7 @@
 <skill id="1300" levels="3" name="Servitor Cure">
   <table name="#mpConsume_Init"> 7 9 11 </table>
   <table name="#mpConsume"> 28 35 44 </table>
-  <table name="#abnormalLvl"> 3 7 9 </table>
+  <table name="#negateLvl"> 3 7 9 </table>
   <table name="#aggro"> 379 457 566 </table>
   <table name="#magicLvl"> 40 48 60 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
@@ -17,7 +17,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="negateStats" val="POISON BLEED"/>
-  <set name="abnormalLvl" val="#abnormalLvl"/>
+  <set name="negateLvl" val="#negateLvl"/>
   <set name="aggroPoints" val="#aggro"/>
   <set name="magicLvl" val="#magicLvl"/>
 </skill>
@@ -34,7 +34,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="negateStats" val="ROOT PARALYZE DEBUFF"/>
-  <set name="abnormalLvl" val="3"/>
+  <set name="negateLvl" val="3"/>
   <set name="aggroPoints" val="582"/>
 </skill>
 <skill id="1303" levels="2" name="Wild Magic" enchantLevels1="30" enchantLevels2="30" >
