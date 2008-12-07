@@ -46,7 +46,7 @@ class Quest (JQuest) :
  def __init__(self,id,name,descr):
      JQuest.__init__(self,id,name,descr)
      self.questItemIds = [SCAVENGER_WERERAT_SKULL, TUREK_WARHOUND_TAIL, TYRANT_KINGPIN_HEART, TRISALIM_TARANTULAS_VENOM_SAC, MANUAL_OF_MANACLES,
-                PENITENTS_MANACLES, PENITENTS_MANACLES2, PENITENTS_MANACLES1]
+                PENITENTS_MANACLES, PENITENTS_MANACLES1]
 
  def onAdvEvent (self,event,npc,player) :
     htmltext = event
