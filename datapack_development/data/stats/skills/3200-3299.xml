@@ -1001,10 +1001,21 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="3284" levels="1" name="Blue Talisman of Invincibility">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpConsume" val="50"/>
+  <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="900000"/>
+  <set name="staticReuse" val="true"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <for>
+    <effect count="1" name="Buff" time="10" val="0">
+      <!-- need core support invulnerable (no damage recieved, no buffs/debuffs can be received, but if u already have DOT debuff or any other effect, HP will be reducing) -->
+    </effect>
+  </for>
 </skill>
 <skill id="3285" levels="1" name="Blue Talisman of Defense">
   <set name="target" val="TARGET_NONE"/>
