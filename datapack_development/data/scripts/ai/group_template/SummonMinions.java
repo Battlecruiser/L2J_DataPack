@@ -111,15 +111,32 @@ public class SummonMinions extends L2AttackableAIScript
 					case 22266:
 					{
 						if (isPet)
-							attacker = ((L2PcInstance)attacker).getPet().getOwner(); 
-						if (_attackersList.get(npcObjId) == null)
+							attacker = ((L2PcInstance)attacker).getPet().getOwner();
+						if (attacker.getParty() != null)
 						{
-							FastList<L2PcInstance> player = new FastList<L2PcInstance>();
-							player.add(attacker);
-							_attackersList.put(npcObjId,player);
+							for (L2PcInstance member : attacker.getParty().getPartyMembers())
+							{
+								if (_attackersList.get(npcObjId) == null)
+								{
+									FastList<L2PcInstance> player = new FastList<L2PcInstance>();
+									player.add(member);
+									_attackersList.put(npcObjId,player);
+								}
+								else if (!_attackersList.get(npcObjId).contains(member))
+									_attackersList.get(npcObjId).add(member);
+							}
 						}
-						else if (!_attackersList.get(npcObjId).contains(attacker))
-							_attackersList.get(npcObjId).add(attacker);
+						else
+						{
+							if (_attackersList.get(npcObjId) == null)
+							{
+								FastList<L2PcInstance> player = new FastList<L2PcInstance>();
+								player.add(attacker);
+								_attackersList.put(npcObjId,player);
+							}
+							else if (!_attackersList.get(npcObjId).contains(attacker))
+								_attackersList.get(npcObjId).add(attacker);
+						}
 						if (attacker != null && ((attacker.getParty() != null && attacker.getParty().getMemberCount() > 2)||_attackersList.get(npcObjId).size() > 2)) //Just to make sure..
 						{
 							HasSpawned = 0;
