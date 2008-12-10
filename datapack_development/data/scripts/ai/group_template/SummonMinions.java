@@ -14,6 +14,7 @@
  */
 package ai.group_template;
 
+import javolution.util.FastList;
 import javolution.util.FastMap;
 import javolution.util.FastSet;
 import net.sf.l2j.gameserver.ai.CtrlIntention;
@@ -27,6 +28,7 @@ public class SummonMinions extends L2AttackableAIScript
 {
 	private static int HasSpawned;
 	private static FastSet<Integer> myTrackingSet = new FastSet<Integer>(); //Used to track instances of npcs
+	private FastMap<Integer, FastList<L2PcInstance>> _attackersList = new FastMap<Integer, FastList<L2PcInstance>>();
 	private static final FastMap<Integer, Integer[]> MINIONS = new FastMap<Integer, Integer[]>();
 	
 	static
@@ -108,7 +110,17 @@ public class SummonMinions extends L2AttackableAIScript
 					case 22265:
 					case 22266:
 					{
-						if (attacker != null && attacker.getParty() != null && attacker.getParty().getMemberCount() > 2) //Just to make sure..
+						if (isPet)
+							attacker = ((L2PcInstance)attacker).getPet().getOwner(); 
+						if (_attackersList.get(npcObjId) == null)
+						{
+							FastList<L2PcInstance> player = new FastList<L2PcInstance>();
+							player.add(attacker);
+							_attackersList.put(npcObjId,player);
+						}
+						else if (!_attackersList.get(npcObjId).contains(attacker))
+							_attackersList.get(npcObjId).add(attacker);
+						if (attacker != null && (attacker.getParty() != null && attacker.getParty().getMemberCount() > 2)||_attackersList.get(npcObjId).size() > 2) //Just to make sure..
 						{
 							HasSpawned = 0;
 							Integer[] minions = MINIONS.get(npcId);
@@ -164,6 +176,10 @@ public class SummonMinions extends L2AttackableAIScript
 		if (MINIONS.containsKey(npcId))
 		{
 			myTrackingSet.remove(npcObjId);
+		}
+		if (_attackersList.get(npcObjId) != null)
+		{
+			_attackersList.get(npcObjId).clear();
 		}
 		return super.onKill(npc, killer, isPet);
 	}
