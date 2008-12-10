@@ -1012,9 +1012,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="10" val="0">
-      <!-- need core support invulnerable (no damage recieved, no buffs/debuffs can be received, but if u already have DOT debuff or any other effect, HP will be reducing) -->
-    </effect>
+    <effect count="1" name="Invincible" time="10" val="0"/>
   </for>
 </skill>
 <skill id="3285" levels="1" name="Blue Talisman of Defense">
