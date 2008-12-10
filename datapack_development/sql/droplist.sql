@@ -2677,7 +2677,8 @@ INSERT INTO `droplist` VALUES
 (20241,4609,1,1,2,75), -- Greater Dye of Mental Strength <Men+3 Int-3>
 (20241,8725,1,1,200,1899), -- Life Stone: level 52
 (20241,8735,1,1,200,393), -- Mid-Grade Life Stone: level 52
-(20241,8745,1,1,200,9), -- High-Grade Life Stone: level 52
+(20241,8745,1,1,200,13), -- High-Grade Life Stone: level 52
+(20241,8755,1,1,200,13), -- Top-Grade Life Stone: level 52
 (20242,1868,1,9,-1,790517), -- Thread
 (20242,1918,1,1,-1,68473), -- Nassen\'s Earring Gemstone
 (20242,1985,1,1,-1,54518), -- Theca Leather Gaiters Pattern
@@ -2742,8 +2743,9 @@ INSERT INTO `droplist` VALUES
 (20244,4185,1,1,2,89), -- Recipe: Keshanberk
 (20244,5436,1,1,2,125), -- Recipe: Berserker Blade(100%)
 (20244,8322,1,1,2,114), -- Recipe: Ice Storm Hammer (60%)
-(20244,8726,1,1,200,422), -- Life Stone: level 55
-(20244,8746,1,1,200,422), -- High-Grade Life Stone: level 55
+(20244,8726,1,1,200,983), -- Life Stone: level 55
+(20244,8736,1,1,200,328), -- Mid-Grade Life Stone: level 55
+(20244,8746,1,1,200,328), -- High-Grade Life Stone: level 55
 (20245,1895,1,2,-1,430289), -- Metallic Fiber
 (20245,4071,1,1,-1,27278), -- Avadon Robe Fabric
 (20245,4129,1,1,-1,16299), -- Recipe: Earrings of Black Ore
@@ -2834,9 +2836,9 @@ INSERT INTO `droplist` VALUES
 (20251,2017,1,1,-1,5320), -- Saber Blade
 (20251,2152,1,1,-1,70478), -- Recipe: Enchanted Necklace
 (20251,57,206,403,0,700000), -- Adena
-(20251,11614,1,1,1,28), -- Common Item - Saber (no drop info)
+(20251,11614,1,1,1,298), -- Common Item - Saber
 (20251,2017,1,1,1,747), -- Saber Blade
-(20251,11625,1,1,1,28), -- Common Item - Heavy Sword
+(20251,11625,1,1,1,298), -- Common Item - Heavy Sword
 (20251,5531,1,1,1,943), -- Heavy Sword Edge
 (20251,1866,1,1,2,35714), -- Suede
 (20251,1871,1,1,2,55556), -- Charcoal
@@ -2860,8 +2862,8 @@ INSERT INTO `droplist` VALUES
 (20253,2153,1,1,-1,69496), -- Recipe: Tiger\'s Eye Earring
 (20253,2265,1,1,-1,4621), -- Recipe: Spiked Club
 (20253,57,227,452,0,700000), -- Adena
-(20253,12024,1,1,1,92), -- Common Item - Scale Mail (no drop info)
-(20253,12023,1,1,1,147), -- Common Item - Scale Gaiters
+(20253,12024,1,1,1,466), -- Common Item - Scale Mail
+(20253,12023,1,1,1,466), -- Common Item - Scale Gaiters
 (20253,1935,1,1,1,3411), -- Scale Mail Fragment
 (20253,1937,1,1,1,5245), -- Scale Gaiters Fragment
 (20253,1868,1,1,2,125000), -- Thread
@@ -5265,6 +5267,7 @@ INSERT INTO `droplist` VALUES
 (20570,5220,1,1,2,1701), -- Metal Hardener
 (20570,8724,1,1,200,1401), -- Life Stone: level 49
 (20570,8734,1,1,200,358), -- Mid-Grade Life Stone: level 49
+(20570,8744,1,1,200,23), -- High-Grade Life Stone: level 49
 (20571,951,1,1,-1,2251), -- Scroll: Enchant Weapon (Grade C)
 (20571,2335,1,1,-1,2880), -- Recipe: War Axe
 (20571,2968,1,1,-1,8355), -- Dwarven Warhammer Head
@@ -5588,8 +5591,8 @@ INSERT INTO `droplist` VALUES
 (20588,1959,1,1,-1,48799), -- Chain Mail Shirt Material
 (20588,2324,1,1,-1,6312), -- Recipe: Elven Bow of Nobility
 (20588,57,587,1184,0,700000), -- Adena
-(20588,11766,1,1,1,13), -- Common Item - Flamberge (no drop info)
-(20588,11756,1,1,1,13), -- Common Item - Stormbringer
+(20588,11766,1,1,1,479), -- Common Item - Flamberge
+(20588,11756,1,1,1,479), -- Common Item - Stormbringer
 (20588,2059,1,1,1,1060), -- Flamberge Blade
 (20588,2060,1,1,1,1134), -- Stormbringer Blade
 (20588,1868,1,1,2,166667), -- Thread
@@ -5598,6 +5601,7 @@ INSERT INTO `droplist` VALUES
 (20588,4044,1,1,2,1570), -- Thons
 (20588,5549,1,1,2,9434), -- Metallic Thread
 (20588,8723,1,1,200,7874), -- Life Stone: level 46
+(20588,8743,1,1,200,949), -- High-Grade Life Stone: level 46 
 (20589,1908,1,1,-1,170964), -- Moonstone Earring Wire
 (20589,1961,1,1,-1,57772), -- Mithril Shirt Fabric
 (20589,1962,1,1,-1,57772), -- Karmian Tunic Pattern
@@ -5629,7 +5633,8 @@ INSERT INTO `droplist` VALUES
 (20590,1894,1,1,2,1751), -- Crafted Leather
 (20590,2230,1,1,2,876), -- Recipe: Theca Leather Gaiters
 (20590,8723,1,1,200,4386), -- Life Stone: level 46
-(20590,8733,1,1,200,438), -- Mid-Grade Life Stone: level 46
+(20590,8733,1,1,200,312), -- Mid-Grade Life Stone: level 46
+(20590,8743,1,1,200,312), -- High-Grade Life Stone: level 46 
 (20591,951,1,1,-1,3983), -- Scroll: Enchant Weapon (Grade C)
 (20591,1911,1,1,-1,162953), -- Earring of Protection Gemstone
 (20591,2947,1,1,-1,156493), -- Dwarven Chain Shield Fragment
@@ -5707,8 +5712,8 @@ INSERT INTO `droplist` VALUES
 (20595,2096,1,1,-1,12564), -- Sword of Whispering Death Blade
 (20595,2354,1,1,-1,3761), -- Recipe: Deadman\'s Staff
 (20595,57,1117,2270,0,700000), -- Adena
-(20595,11800,1,1,1,12), -- Common Item - Grace Dagger (no drop info)
-(20595,11803,1,1,1,12), -- Common Item - Dark Screamer
+(20595,11800,1,1,1,86), -- Common Item - Grace Dagger
+(20595,11803,1,1,1,86), -- Common Item - Dark Screamer
 (20595,2106,1,1,1,1299), -- Grace Dagger Edge
 (20595,2107,1,1,1,1299), -- Dark Screamer Edge
 (20595,1865,1,1,2,111111), -- Varnish
@@ -5720,6 +5725,7 @@ INSERT INTO `droplist` VALUES
 (20595,4125,1,1,2,4484), -- Recipe: Maestro Mold
 (20595,8725,1,1,200,1681), -- Life Stone: level 52
 (20595,8735,1,1,200,1120), -- Mid-Grade Life Stone: level 52
+(20595,8745,1,1,200,171), -- High-Grade Life Stone: level 52
 (20596,1539,1,3,-1,543597), -- Greater Healing Potion
 (20596,1875,1,2,-1,163079), -- Stone of Purity
 (20596,4609,1,1,-1,5436), -- Greater Dye of Mental Strength <Men+3 Int-3>
@@ -6121,7 +6127,8 @@ INSERT INTO `droplist` VALUES
 (20620,4614,1,1,2,251), -- Greater Dye of Strength <Str+4 Dex-4>
 (20620,4999,1,1,2,1590), -- Recipe: Doom Boots (60%)
 (20620,8728,1,1,200,3003), -- Life Stone: level 61
-(20620,8738,1,1,200,177), -- Mid-Grade Life Stone: level 61
+(20620,8738,1,1,200,383), -- Mid-Grade Life Stone: level 61
+(20620,8748,1,1,200,153), -- High-Grade Life Stone: level 61
 (20621,4052,1,2,-1,164789), -- Earring of Black Ore Piece
 (20621,4199,1,1,-1,3553), -- Recipe: Bow of Peril
 (20621,5230,1,1,-1,6206), -- Recipe: Mithril Arrow (100%)
@@ -6303,6 +6310,8 @@ INSERT INTO `droplist` VALUES
 (20629,5006,1,1,2,1464), -- Recipe: Bellion Cestus (60%)
 (20629,8730,1,1,200,5405), -- Life Stone: level 67
 (20629,8740,1,1,200,1171), -- Mid-Grade Life Stone: level 67
+(20629,8750,1,1,200,185), -- High-Grade Life Stone: level 67
+(20629,8760,1,1,200,62), -- Top-Grade Life Stone: level 67
 (20630,1902,1,1,-1,77024), -- Elven Earring Beads
 (20630,1943,1,1,-1,60383), -- Manticore Skin Gaiters Pattern
 (20630,2291,1,1,-1,4223), -- Recipe: Scallop Jamadhr
@@ -6798,6 +6807,7 @@ INSERT INTO `droplist` VALUES
 (20655,5276,1,1,2,212), -- Recipe: Greater Spiritshot (A) Compressed Package(100%)
 (20655,6670,1,1,2,22727), -- Deluxe Chest Key - Grade 6
 (20655,8729,1,1,200,750), -- Life Stone: level 64
+(20655,8739,1,1,200,159), -- Mid-Grade Life Stone: level 64
 (20656,4040,1,2,-1,93328), -- Mold Lubricant
 (20656,4069,1,1,-1,110018), -- Tunic of Zubei Fabric
 (20656,57,2265,4585,0,700000), -- Adena
@@ -6839,6 +6849,7 @@ INSERT INTO `droplist` VALUES
 (20657,5276,1,1,2,1408), -- Recipe: Greater Spiritshot (A) Compressed Package(100%)
 (20657,8729,1,1,200,1408), -- Life Stone: level 64
 (20657,8739,1,1,200,235), -- Mid-Grade Life Stone: level 64
+(20657,8759,1,1,200,154), -- Top-Grade Life Stone: level 64
 (20658,1960,1,2,-1,182200), -- Chain Gaiters Part
 (20658,2220,1,1,-1,68844), -- Recipe: Rind Leather Armor
 (20658,4054,1,1,-1,65494), -- Necklace of Black Ore Beads
@@ -6940,6 +6951,7 @@ INSERT INTO `droplist` VALUES
 (20662,4041,1,1,2,238), -- Mold Hardener
 (20662,8724,1,1,200,2008), -- Life Stone: level 49
 (20662,8734,1,1,200,409), -- Mid-Grade Life Stone: level 49
+(20662,8754,1,1,200,31), -- Top-Grade Life Stone: level 49
 (20663,951,1,1,-1,2075), -- Scroll: Enchant Weapon (Grade C)
 (20663,1981,1,1,-1,67117), -- Mithril Gauntlets Design
 (20663,4123,1,1,-1,50711), -- Recipe: Maestro Anvil Lock
@@ -7265,7 +7277,8 @@ INSERT INTO `droplist` VALUES
 (20678,4134,1,1,2,341), -- Recipe: Zubei\'s Gaiters
 (20678,5280,1,1,2,142), -- Recipe: Greater Blessed Spiritshot (B) Compressed Package(100%)
 (20678,8726,1,1,200,683), -- Life Stone: level 55
-(20678,8736,1,1,200,57), -- Mid-Grade Life Stone: level 55
+(20678,8736,1,1,200,39), -- Mid-Grade Life Stone: level 55
+(20678,8746,1,1,200,39), -- High-Grade Life Stone: level 55
 (20679,1806,1,1,-1,2764), -- Recipe: Soulshot: B-Grade
 (20679,1920,1,1,-1,47285), -- Necklace of Binding Chain
 (20679,4148,1,1,-1,6061), -- Recipe: Avadon Robe
@@ -7366,6 +7379,7 @@ INSERT INTO `droplist` VALUES
 (20683,5549,1,1,2,5405), -- Metallic Thread
 (20683,8724,1,1,200,2309), -- Life Stone: level 49
 (20683,8734,1,1,200,799), -- Mid-Grade Life Stone: level 49
+(20683,8744,1,1,200,55), -- High-Grade Life Stone: level 49
 (20684,1876,1,1,-1,273432), -- Mithril Ore
 (20684,1966,1,1,-1,49915), -- Plated Leather Fragment
 (20684,2078,1,1,-1,9084), -- Katana Blade
@@ -7405,6 +7419,7 @@ INSERT INTO `droplist` VALUES
 (20685,4041,1,1,2,210), -- Mold Hardener
 (20685,8724,1,1,200,840), -- Life Stone: level 49
 (20685,8734,1,1,200,420), -- Mid-Grade Life Stone: level 49
+(20685,8744,1,1,200,368), -- High-Grade Life Stone: level 49
 (20686,1880,1,1,-1,238035), -- Steel
 (20686,2169,1,1,-1,42130), -- Recipe: Necklace of Binding
 (20686,2231,1,1,-1,10260), -- Recipe: Full Plate Armor
@@ -7539,12 +7554,12 @@ INSERT INTO `droplist` VALUES
 (20753,1875,1,1,-1,186818), -- Stone of Purity
 (20753,4601,1,1,-1,6227), -- Greater Dye of Strength <Str+3 Con-3>
 (20753,57,1500,3018,0,700000), -- Adena
-(20753,11821,1,1,1,5), -- Common Item - Caliburs (no drop info)
-(20753,11807,1,1,1,5), -- Common Item - Sword of Delusion
-(20753,11820,1,1,1,5), -- Common Item - Tsurugi
-(20753,11829,1,1,1,5), -- Common Item - Homunkulus\'s Sword
-(20753,11815,1,1,1,5), -- Common Item - Sword of Nightmare
-(20753,11805,1,1,1,5), -- Common Item - Sword of Whispering Death
+(20753,11821,1,1,1,100), -- Common Item - Caliburs
+(20753,11807,1,1,1,100), -- Common Item - Sword of Delusion
+(20753,11820,1,1,1,100), -- Common Item - Tsurugi
+(20753,11829,1,1,1,100), -- Common Item - Homunkulus\'s Sword
+(20753,11815,1,1,1,100), -- Common Item - Sword of Nightmare
+(20753,11805,1,1,1,100), -- Common Item - Sword of Whispering Death
 (20753,2089,1,1,1,527), -- Caliburs Edge
 (20753,2090,1,1,1,527), -- Delusional Blade
 (20753,2091,1,1,1,527), -- Tsurugi Blade
@@ -7561,6 +7576,7 @@ INSERT INTO `droplist` VALUES
 (20753,4609,1,1,2,1259), -- Greater Dye of Mental Strength <Men+3 Int-3>
 (20753,5549,1,1,2,7576), -- Metallic Thread
 (20753,8725,1,1,200,3774), -- Life Stone: level 52
+(20753,8735,1,1,200,602), -- Mid-Grade Life Stone: level 52
 (20754,1869,1,9,-1,772301), -- Iron Ore
 (20754,1911,1,1,-1,229766), -- Earring of Protection Gemstone
 (20754,1967,1,1,-1,168487), -- Plated Leather Gaiters Material
@@ -8305,6 +8321,7 @@ INSERT INTO `droplist` VALUES
 (20799,4041,1,1,2,657), -- Mold Hardener
 (20799,8723,1,1,200,1969), -- Life Stone: level 46
 (20799,8733,1,1,200,1314), -- Mid-Grade Life Stone: level 46
+(20799,8743,1,1,200,612), -- High-Grade Life Stone: level 46 
 (20800,1911,1,1,-1,119596), -- Earring of Protection Gemstone
 (20800,1966,1,1,-1,58706), -- Plated Leather Fragment
 (20800,2223,1,1,-1,62324), -- Recipe: Tower Shield
@@ -8524,6 +8541,7 @@ INSERT INTO `droplist` VALUES
 (20811,6670,1,1,2,23256), -- Deluxe Chest Key - Grade 6
 (20811,8728,1,1,200,1733), -- Life Stone: level 61
 (20811,8738,1,1,200,933), -- Mid-Grade Life Stone: level 61
+(20811,8748,1,1,200,118), -- High-Grade Life Stone: level 61
 (20812,1875,1,1,-1,314143), -- Stone of Purity
 (20812,4613,1,1,-1,6500), -- Greater Dye of Strength <Str+4 Con-4>
 (20812,4617,1,1,-1,6500), -- Greater Dye of Dexterity <Dex+4 Str-4>
@@ -8630,6 +8648,7 @@ INSERT INTO `droplist` VALUES
 (20817,4402,1,1,2,241), -- Blue Dimensional Stone
 (20817,8729,1,1,200,2653), -- Life Stone: level 64
 (20817,8739,1,1,200,303), -- Mid-Grade Life Stone: level 64
+(20817,8759,1,1,200,212), -- Top-Grade Life Stone: level 64
 (20818,4077,1,1,-1,223455), -- Doom Shield Fragment
 (20818,4105,1,1,-1,28426), -- Heavy War Axe Head
 (20818,4620,1,1,-1,6852), -- Greater Dye of Intelligence <Int+4 Wit-4>
@@ -9073,7 +9092,7 @@ INSERT INTO `droplist` VALUES
 (20844,4041,1,1,-1,9345), -- Mold Hardener
 (20844,4603,1,1,-1,2388), -- Greater Dye of Constitution <Con+3 Str-3>
 (20844,57,540,1036,0,700000), -- Adena
-(20844,12332,1,1,1,51), -- Common Item - Earring of Binding (no drop info, no material info)
+(20844,12332,1,1,1,51), -- Common Item - Earring of Binding (too low drop info, no material info)
 (20844,12333,1,1,1,76), -- Common Item - Ring of Ages
 (20844,12334,1,1,1,38), -- Common Item - Necklace of Mermaid
 (20844,1914,1,1,1,4162), -- Earring of Binding Gemstone
@@ -9091,7 +9110,7 @@ INSERT INTO `droplist` VALUES
 (20845,2354,1,1,-1,2389), -- Recipe: Deadman\'s Staff
 (20845,4042,1,1,-1,24403), -- Enria
 (20845,57,731,1419,0,700000), -- Adena
-(20845,11821,1,1,1,3), -- Common Item - Caliburs (no drop info, no material info)
+(20845,11821,1,1,1,3), -- Common Item - Caliburs (too low drop info, no material info)
 (20845,11807,1,1,1,3), -- Common Item - Sword of Delusion
 (20845,11820,1,1,1,3), -- Common Item - Tsurugi
 (20845,11829,1,1,1,3), -- Common Item - Homunkulus\'s Sword
@@ -9611,6 +9630,7 @@ INSERT INTO `droplist` VALUES
 (20945,4042,1,1,2,1032), -- Enria
 (20945,8725,1,1,200,1147), -- Life Stone: level 52
 (20945,8735,1,1,200,344), -- Mid-Grade Life Stone: level 52
+(20945,8745,1,1,200,72), -- High-Grade Life Stone: level 52
 (20946,1539,1,1,-1,251226), -- Greater Healing Potion
 (20946,1914,1,1,-1,63512), -- Earring of Binding Gemstone
 (20946,2169,1,1,-1,20009), -- Recipe: Necklace of Binding
@@ -9636,7 +9656,7 @@ INSERT INTO `droplist` VALUES
 (20947,4938,1,1,-1,30291), -- Recipe: Adamantite Ring (70%)
 (20947,4967,1,1,-1,1410), -- Recipe: Sword of Valhalla (60%)
 (20947,57,592,1205,0,700000), -- Adena
-(20947,12144,1,1,1,22), -- Common Item - Full Plate Armor (no drop info)
+(20947,12144,1,1,1,138), -- Common Item - Full Plate Armor
 (20947,1986,1,1,1,2388), -- Full Plate Armor Temper
 (20947,1864,1,1,2,100000), -- Stem
 (20947,1869,1,1,2,47619), -- Iron Ore
@@ -9647,13 +9667,14 @@ INSERT INTO `droplist` VALUES
 (20947,4184,1,1,2,66), -- Recipe: Sprite\'s Staff
 (20947,5550,1,1,2,188), -- Durable Metal Plate
 (20947,8726,1,1,200,752), -- Life Stone: level 55
+(20947,8736,1,1,200,134), -- Mid-Grade Life Stone: level 55
 (20948,4049,1,1,-1,63959), -- Adamantite Earring Gemstone
 (20948,4050,1,1,-1,75550), -- Adamantite Ring Wire
 (20948,4129,1,1,-1,13197), -- Recipe: Earrings of Black Ore
 (20948,57,589,1201,0,700000), -- Adena
-(20948,11889,1,1,1,2), -- Common Item - Great Sword (no drop info)
-(20948,11916,1,1,1,2), -- Common Item - Keshanberk
-(20948,11900,1,1,1,2), -- Common Item - Sword of Valhalla
+(20948,11889,1,1,1,54), -- Common Item - Great Sword
+(20948,11916,1,1,1,54), -- Common Item - Keshanberk
+(20948,11900,1,1,1,54), -- Common Item - Sword of Valhalla
 (20948,4104,1,1,1,344), -- Great Sword Blade
 (20948,4107,1,1,1,339), -- Keshanberk Blade
 (20948,4108,1,1,1,339), -- Sword of Valhalla Blade
@@ -9671,8 +9692,8 @@ INSERT INTO `droplist` VALUES
 (20949,1866,1,1,-1,480591), -- Suede
 (20949,4041,1,1,-1,12537), -- Mold Hardener
 (20949,57,697,1420,0,700000), -- Adena
-(20949,11918,1,1,1,3), -- Common Item - Heavy War Axe (no drop info)
-(20949,11908,1,1,1,3), -- Common Item - Sprite\'s Staff
+(20949,11918,1,1,1,40), -- Common Item - Heavy War Axe
+(20949,11908,1,1,1,40), -- Common Item - Sprite\'s Staff
 (20949,4105,1,1,1,610), -- Heavy War Axe Head
 (20949,4106,1,1,1,600), -- Sprite\'s Staff Head
 (20949,1866,1,1,2,29412), -- Suede
@@ -9702,7 +9723,7 @@ INSERT INTO `droplist` VALUES
 (20951,1918,1,1,-1,35828), -- Nassen\'s Earring Gemstone
 (20951,1920,1,1,-1,28307), -- Necklace of Binding Chain
 (20951,57,401,814,0,700000), -- Adena
-(20951,11839,1,1,1,5), -- Common Item - Great Pata (no drop info)
+(20951,11839,1,1,1,119), -- Common Item - Great Pata
 (20951,2120,1,1,1,735), -- Great Pata Blade
 (20951,1806,1,1,2,77), -- Recipe: Soulshot: B-Grade
 (20951,1867,1,1,2,41667), -- Animal Skin
@@ -9713,6 +9734,7 @@ INSERT INTO `droplist` VALUES
 (20951,5270,1,1,2,220), -- Recipe: Greater Soulshot (B) Compressed Package(100%)
 (20951,5436,1,1,2,220), -- Recipe: Berserker Blade(100%)
 (20951,8726,1,1,200,1099), -- Life Stone: level 55
+(20951,8736,1,1,200,119), -- Mid-Grade Life Stone: level 55
 (20952,1984,1,1,-1,32140), -- Theca Leather Armor Pattern
 (20952,3034,1,1,-1,2999), -- Recipe: Spiritshot B
 (20952,4044,1,1,-1,49978), -- Thons
@@ -9728,6 +9750,7 @@ INSERT INTO `droplist` VALUES
 (20952,5275,1,1,2,415), -- Recipe: Greater Spiritshot (B) Compressed Package(100%)
 (20952,5549,1,1,2,13699), -- Metallic Thread
 (20952,8726,1,1,200,2075), -- Life Stone: level 55
+(20952,8736,1,1,200,218), -- Mid-Grade Life Stone: level 55
 (20952,8746,1,1,200,75), -- High-Grade Life Stone: level 55
 (20953,1864,3,5,-1,932365), -- Stem
 (20953,2962,1,1,-1,76153), -- Drake Leather Gloves Design
@@ -9997,6 +10020,7 @@ INSERT INTO `droplist` VALUES
 (20967,5001,1,1,2,105), -- Recipe: Lance (60%)
 (20967,8732,1,1,200,1192), -- Life Stone: level 76
 (20967,8742,1,1,200,132), -- Mid-Grade Life Stone: level 76
+(20967,8752,1,1,200,78), -- High-Grade Life Stone: level 76
 (20968,5480,1,1,-1,12197), -- Sealed Leather Armor of Nightmare Fabric
 (20968,5481,1,1,-1,12197), -- Sealed Majestic Leather Armor Fabric
 (20968,5486,1,1,-1,16084), -- Sealed Dark Crystal Robe Fabric
@@ -10146,6 +10170,7 @@ INSERT INTO `droplist` VALUES
 (20976,5276,1,1,2,147), -- Recipe: Greater Spiritshot (A) Compressed Package(100%)
 (20976,8729,1,1,200,421), -- Life Stone: level 64
 (20976,8739,1,1,200,86), -- Mid-Grade Life Stone: level 64
+(20976,8759,1,1,200,162), -- Top-Grade Life Stone: level 64
 (20977,947,1,1,-1,1877), -- Scroll: Enchant Weapon (Grade B)
 (20977,1876,1,1,-1,938515), -- Mithril Ore
 (20977,4052,1,1,-1,166138), -- Earring of Black Ore Piece
@@ -10318,7 +10343,7 @@ INSERT INTO `droplist` VALUES
 (20986,1984,1,1,-1,77945), -- Theca Leather Armor Pattern
 (20986,4043,1,1,-1,121204), -- Asofe
 (20986,57,1937,3158,0,700000), -- Adena
-(20986,12145,1,1,1,126), -- Common Item - Full Plate Helmet (no drop info, no material info)
+(20986,12145,1,1,1,126), -- Common Item - Full Plate Helmet (too low drop info, no material info)
 (20986,12143,1,1,1,180), -- Common Item - Full Plate Shield
 (20986,2959,1,1,1,11610), -- Full Plate Helmet Design
 (20986,2966,1,1,1,18366), -- Full Plate Shield Fragment
@@ -10529,6 +10554,7 @@ INSERT INTO `droplist` VALUES
 (20997,4042,1,1,2,680), -- Enria
 (20997,8725,1,1,200,1739), -- Life Stone: level 52
 (20997,8735,1,1,200,454), -- Mid-Grade Life Stone: level 52
+(20997,8755,1,1,200,59), -- Top-Grade Life Stone: level 52
 (20998,1916,1,1,-1,58159), -- Necklace of Mermaid Teardrop
 (20998,2169,1,1,-1,24190), -- Recipe: Necklace of Binding
 (20998,2170,1,1,-1,32234), -- Recipe: Nassen\'s Earring
@@ -10659,6 +10685,7 @@ INSERT INTO `droplist` VALUES
 (21003,8727,1,1,200,782), -- Life Stone: level 58
 (21003,8737,1,1,200,121), -- Mid-Grade Life Stone: level 58
 (21003,8747,1,1,200,12), -- High-Grade Life Stone: level 58
+(21003,8757,1,1,200,10), -- Top-Grade Life Stone: level 58
 (21004,1920,1,1,-1,59425), -- Necklace of Binding Chain
 (21004,4129,1,1,-1,18795), -- Recipe: Earrings of Black Ore
 (21004,4951,1,1,-1,7617), -- Recipe: Avadon Robe (60%)
@@ -10804,9 +10831,9 @@ INSERT INTO `droplist` VALUES
 (21011,1832,1,1,-1,491646), -- Greater Antidote
 (21011,1884,1,1,-1,272296), -- Cord
 (21011,1900,1,1,-1,48411), -- Enchanted Necklace Chain
-(21011,57,224,433,0,700000), -- Adena
-(21011,12028,1,1,1,484), -- Common Item - Bronze Helmet (no drop info, no material info)
-(21011,12025,1,1,1,691), -- Common Item - Aspis
+(21011,57,224,444,0,700000), -- Adena
+(21011,12028,1,1,1,6579), -- Common Item - Bronze Helmet
+(21011,12025,1,1,1,6579), -- Common Item - Aspis
 (21011,1061,1,1,2,18319), -- Healing Potion
 (21011,1864,1,1,2,60450), -- Stem
 (21011,1865,1,1,2,30225), -- Varnish
@@ -10819,8 +10846,8 @@ INSERT INTO `droplist` VALUES
 (21012,2153,1,1,-1,84661), -- Recipe: Tiger\'s Eye Earring
 (21012,2185,1,1,-1,107160), -- Recipe: Iron Boots
 (21012,57,277,550,0,700000), -- Adena
-(21012,11632,1,1,1,31), -- Common Item - Long Bow (no drop info, no material info)
-(21012,11640,1,1,1,31), -- Common Item - Elven Bow
+(21012,11632,1,1,1,3401), -- Common Item - Long Bow
+(21012,11640,1,1,1,3401), -- Common Item - Elven Bow
 (21012,2024,1,1,1,1413), -- Elven Bow Shaft
 (21012,1833,1,1,2,113326), -- Bandage
 (21012,1868,1,1,2,84994), -- Thread
@@ -10832,7 +10859,7 @@ INSERT INTO `droplist` VALUES
 (21013,1061,1,1,-1,388921), -- Healing Potion
 (21013,1933,1,1,-1,75496), -- Dark Stocking Fabric
 (21013,2023,1,1,-1,7952), -- Conjuror\'s Staff Head
-(21013,57,324,626,0,700000), -- Adena
+(21013,57,324,649,0,700000), -- Adena
 (21013,12314,1,1,1,412), -- Common Item - Enchanted Earring (no drop info, no material info)
 (21013,12316,1,1,1,618), -- Common Item - Enchanted Ring
 (21013,12315,1,1,1,309), -- Common Item - Enchanted Necklace
@@ -10847,8 +10874,8 @@ INSERT INTO `droplist` VALUES
 (21014,1958,1,1,-1,59544), -- Mithril Boots Design
 (21014,2977,1,1,-1,88678), -- Recipe: Brigandine Boots
 (21014,57,336,671,0,700000), -- Adena
-(21014,11678,1,1,1,25), -- Common Item - Blood of Saints (no drop info)
-(21014,11676,1,1,1,25), -- Common Item - Tome of Blood
+(21014,11678,1,1,1,574), -- Common Item - Blood of Saints
+(21014,11676,1,1,1,574), -- Common Item - Tome of Blood
 (21014,2030,1,1,1,1374), -- Tome of Blood Page
 (21014,1865,1,1,2,58824), -- Varnish
 (21014,1870,1,1,2,62500), -- Coal
@@ -11089,8 +11116,9 @@ INSERT INTO `droplist` VALUES
 (21036,1960,1,1,1,12113), -- Chain Gaiters Part
 (21036,1895,1,1,2,50000), -- Metallic Fiber
 (21036,2318,1,1,2,1541), -- Recipe: Spirit Sword
-(21036,8743,1,1,200,1359), -- High-Grade Life Stone: level 46
-(21036,8723,1,1,200,8130), -- Life Stone: level 46
+(21036,8743,1,1,200,1115), -- High-Grade Life Stone: level 46
+(21036,8733,1,1,200,1115), -- Mid-Grade Life Stone: level 46
+(21036,8723,1,1,200,10000), -- Life Stone: level 46
 (21037,2166,1,1,-1,65513), -- Recipe: Earrings of Binding (100%)
 (21037,4040,1,1,-1,38652), -- Mold Lubricant
 (21037,5231,1,1,-1,138044), -- Recipe: Metal Hardener (100%)
@@ -11165,6 +11193,9 @@ INSERT INTO `droplist` VALUES
 (21040,1881,1,1,2,30303), -- Coarse Bone Powder
 (21040,2224,1,1,2,1805), -- Recipe: Demon\'s Tunic
 (21040,4041,1,1,2,7194), -- Mold Hardener
+(21040,8724,1,1,200,1754), -- Life Stone: level 49
+(21040,8734,1,1,200,2924), -- Mid-Grade Life Stone: level 49
+(21040,8744,1,1,200,585), -- High-Grade Life Stone: level 49
 (21058,4049,1,1,-1,256419), -- Adamantite Earring Gemstone
 (21058,4129,1,1,-1,52907), -- Recipe: Earrings of Black Ore
 (21058,4617,1,1,-1,6743), -- Greater Dye of Dexterity <Dex+4 Str-4>
@@ -11380,6 +11411,7 @@ INSERT INTO `droplist` VALUES
 (21071,4403,1,1,2,1377), -- Red Dimensional Stone
 (21071,8731,1,1,200,9901), -- Life Stone: level 70
 (21071,8741,1,1,200,2294), -- Mid-Grade Life Stone: level 70
+(21071,8761,1,1,200,102), -- Top-Grade Life Stone: level 70
 (21072,4083,1,1,-1,122362), -- Leather Armor of Doom Design
 (21072,5161,1,1,-1,14439), -- Recipe: Spiritshot (A) Compressed Package (100%)
 (21072,5230,1,1,-1,14439), -- Recipe: Mithril Arrow (100%)
@@ -11470,6 +11502,7 @@ INSERT INTO `droplist` VALUES
 (21076,1877,1,1,2,9524), -- Adamantite Nugget
 (21076,4040,1,1,2,3185), -- Mold Lubricant
 (21076,4041,1,1,2,1875), -- Mold Hardener
+(21076,8729,1,1,200,1203), -- Life Stone: level 64
 (21076,8739,1,1,200,1590), -- Mid-Grade Life Stone: level 64
 (21077,4041,1,1,-1,36223), -- Mold Hardener
 (21077,4054,1,1,-1,82050), -- Necklace of Black Ore Beads
@@ -11494,9 +11527,9 @@ INSERT INTO `droplist` VALUES
 (21078,4040,1,1,-1,110398), -- Mold Lubricant
 (21078,5485,1,1,-1,46417), -- Sealed Tallum Tunic Texture
 (21078,57,2685,5428,0,700000), -- Adena
-(21078,12226,1,1,1,32), -- Common Item - Sealed Dark Crystal Helmet (no drop info)
-(21078,12225,1,1,1,45), -- Common Item - Sealed Dark Crystal Shield
-(21078,12234,1,1,1,32), -- Common Item - Sealed Tallum Helmet
+(21078,12226,1,1,1,212), -- Common Item - Sealed Dark Crystal Helmet
+(21078,12225,1,1,1,299), -- Common Item - Sealed Dark Crystal Shield
+(21078,12234,1,1,1,212), -- Common Item - Sealed Tallum Helmet
 (21078,5494,1,1,1,5707), -- Sealed Dark Crystal Shield Fragment
 (21078,5525,1,1,1,4201), -- Sealed Dark Crystal Helmet Design
 (21078,5526,1,1,1,4201), -- Sealed Tallum Helm Design
@@ -11507,13 +11540,14 @@ INSERT INTO `droplist` VALUES
 (21078,4042,1,1,2,3145), -- Enria
 (21078,4175,1,1,2,7874), -- Recipe: Avadon Boots
 (21078,8730,1,1,200,1572), -- Life Stone: level 67
+(21078,8740,1,1,200,895), -- Mid-Grade Life Stone: level 67
 (21079,1895,1,3,-1,750339), -- Metallic Fiber
 (21079,4042,1,1,-1,87540), -- Enria
 (21079,5478,1,1,-1,44167), -- Sealed Dark Crystal Leather Armor Pattern
 (21079,57,2550,5165,0,700000), -- Adena
-(21079,12232,1,1,1,15), -- Common Item - Sealed Tallum Tunic (no drop info)
-(21079,12235,1,1,1,24), -- Common Item - Sealed Tallum Stockings
-(21079,12223,1,1,1,11), -- Common Item - Sealed Dark Crystal Robe
+(21079,12232,1,1,1,590), -- Common Item - Sealed Tallum Tunic
+(21079,12235,1,1,1,944), -- Common Item - Sealed Tallum Stockings
+(21079,12223,1,1,1,432), -- Common Item - Sealed Dark Crystal Robe
 (21079,5485,1,1,1,2175), -- Sealed Tallum Tunic Texture
 (21079,5486,1,1,1,1530), -- Sealed Dark Crystal Robe Fabric
 (21079,5489,1,1,1,3413), -- Sealed Tallum Stockings Fabric
@@ -11543,13 +11577,14 @@ INSERT INTO `droplist` VALUES
 (21080,4039,1,1,2,8065), -- Mold Glue
 (21080,5166,1,1,2,274), -- Recipe: Blessed Spiritshot (A) Compressed Package (100%)
 (21080,6036,1,1,2,6452), -- Greater Magic Haste Potion
+(21080,8730,1,1,200,921), -- Life Stone: level 67
 (21081,4119,1,1,-1,26946), -- Demon\'s Sword Edge
 (21081,5230,1,1,-1,8208), -- Recipe: Mithril Arrow (100%)
 (21081,5478,1,1,-1,51767), -- Sealed Dark Crystal Leather Armor Pattern
 (21081,57,2994,6056,0,700000), -- Adena
-(21081,12222,1,1,1,18), -- Common Item - Sealed Dark Crystal Leather Armor (no drop info)
-(21081,12228,1,1,1,28), -- Common Item - Sealed Dark Crystalline Leggings
-(21081,12230,1,1,1,12), -- Common Item - Sealed Tallum Leather Armor
+(21081,12222,1,1,1,485), -- Common Item - Sealed Dark Crystal Leather Armor
+(21081,12228,1,1,1,755), -- Common Item - Sealed Dark Crystalline Leggings
+(21081,12230,1,1,1,323), -- Common Item - Sealed Tallum Leather Armor
 (21081,5478,1,1,1,2549), -- Sealed Dark Crystal Leather Armor Pattern
 (21081,5479,1,1,1,1794), -- Sealed Tallum Leather Armor Pattern
 (21081,5482,1,1,1,4000), -- Sealed Dark Crystalline Leggings Design
@@ -11714,6 +11749,7 @@ INSERT INTO `droplist` VALUES
 (21089,4986,1,1,2,781), -- Recipe: Blue Wolf Tunic (60%)
 (21089,8731,1,1,200,4425), -- Life Stone: level 70
 (21089,8741,1,1,200,694), -- Mid-Grade Life Stone: level 70
+(21089,8761,1,1,200,52), -- Top-Grade Life Stone: level 70
 (21090,5156,1,1,-1,12101), -- Recipe: Soulshot (A) Compressed Package (100%)
 (21090,5230,1,1,-1,12101), -- Recipe: Mithril Arrow (100%)
 (21090,5486,1,1,-1,53701), -- Sealed Dark Crystal Robe Fabric
@@ -12037,6 +12073,7 @@ INSERT INTO `droplist` VALUES
 (21111,5166,1,1,2,113), -- Recipe: Blessed Spiritshot (A) Compressed Package (100%)
 (21111,8730,1,1,200,778), -- Life Stone: level 67
 (21111,8740,1,1,200,85), -- Mid-Grade Life Stone: level 67
+(21111,8750,1,1,200,12), -- High-Grade Life Stone: level 67
 (21112,3956,1,1,-1,3987), -- Recipe: Blessed Spiritshot A
 (21112,5485,1,1,-1,25148), -- Sealed Tallum Tunic Texture
 (21112,5486,1,1,-1,17696), -- Sealed Dark Crystal Robe Fabric
@@ -12547,6 +12584,7 @@ INSERT INTO `droplist` VALUES
 (21150,4041,1,1,2,784), -- Mold Hardener
 (21150,8724,1,1,200,3584), -- Life Stone: level 49
 (21150,8734,1,1,200,897), -- Mid-Grade Life Stone: level 49
+(21150,8744,1,1,200,44), -- High-Grade Life Stone: level 49
 (21150,8754,1,1,200,43), -- Top-Grade Life Stone: level 49
 (21151,1869,1,9,-1,935306), -- Iron Ore
 (21151,4043,1,1,-1,124707), -- Asofe
@@ -13637,8 +13675,9 @@ INSERT INTO `droplist` VALUES
 (21218,2213,1,1,2,1211), -- Recipe: Dwarven Chain Mail Shirt
 (21218,4043,1,1,2,6061), -- Asofe
 (21218,5550,1,1,2,1211), -- Durable Metal Plate
-(21218,8723,1,1,200,3636), -- Life Stone: level 46
-(21218,8733,1,1,200,3636), -- Mid-Grade Life Stone: level 46
+(21218,8723,1,1,200,3802), -- Life Stone: level 46
+(21218,8733,1,1,200,1267), -- Mid-Grade Life Stone: level 46
+(21218,8743,1,1,200,422), -- High-Grade Life Stone: level 46 
 (21219,1911,1,1,-1,232505), -- Earring of Protection Gemstone
 (21219,1912,1,1,-1,336857), -- Ring of Protection Gemstone
 (21219,2166,1,1,-1,105967), -- Recipe: Earrings of Binding (100%)
@@ -13725,6 +13764,8 @@ INSERT INTO `droplist` VALUES
 (21224,4158,1,1,2,237), -- Recipe: Doom Plate Armor
 (21224,8728,1,1,200,2710), -- Life Stone: level 61
 (21224,8738,1,1,200,575), -- Mid-Grade Life Stone: level 61
+(21224,8748,1,1,200,19), -- High-Grade Life Stone: level 61
+(21224,8758,1,1,200,19), -- Top-Grade Life Stone: level 61
 (21225,4052,1,1,-1,197496), -- Earring of Black Ore Piece
 (21225,4053,1,1,-1,239104), -- Ring of Black Ore Gemstone
 (21225,5230,1,1,-1,7438), -- Recipe: Mithril Arrow (100%)
@@ -13774,6 +13815,7 @@ INSERT INTO `droplist` VALUES
 (21227,5549,1,1,2,20833), -- Metallic Thread
 (21227,8730,1,1,200,2519), -- Life Stone: level 67
 (21227,8740,1,1,200,168), -- Mid-Grade Life Stone: level 67
+(21227,8760,1,1,200,297), -- Top-Grade Life Stone: level 67
 (21228,1807,1,1,-1,9504), -- Recipe: Soulshot: A-Grade
 (21228,3035,1,1,-1,9504), -- Recipe: Spiritshot A
 (21228,5478,1,1,-1,59940), -- Sealed Dark Crystal Leather Armor Pattern
@@ -13807,9 +13849,10 @@ INSERT INTO `droplist` VALUES
 (21229,4041,1,1,2,1537), -- Mold Hardener
 (21229,4044,1,1,2,10870), -- Thons
 (21229,730,1,1,2,89), -- Scroll: Enchant Armor (Grade A)
-(21229,8730,1,1,200,1876), -- Life Stone: level 67
-(21229,8740,1,1,200,863), -- Mid-Grade Life Stone: level 67
-(21229,8750,1,1,200,30), -- High-Grade Life Stone: level 67
+(21229,8731,1,1,200,3106), -- Life Stone: level 70
+(21229,8741,1,1,200,461), -- Mid-Grade Life Stone: level 70
+(21229,8751,1,1,200,38), -- High-Grade Life Stone: level 70
+(21229,8761,1,1,200,22), -- Top-Grade Life Stone: level 70
 (21230,5480,1,1,-1,39987), -- Sealed Leather Armor of Nightmare Fabric
 (21230,5481,1,1,-1,39987), -- Sealed Majestic Leather Armor Fabric
 (21230,5487,1,1,-1,40128), -- Sealed Robe of Nightmare Fabric
@@ -13825,10 +13868,9 @@ INSERT INTO `droplist` VALUES
 (21230,4040,1,1,2,5556), -- Mold Lubricant
 (21230,4042,1,1,2,4762), -- Enria
 (21230,4043,1,1,2,10204), -- Asofe
-(21230,8731,1,1,200,3106), -- Life Stone: level 70
-(21230,8741,1,1,200,461), -- Mid-Grade Life Stone: level 70
-(21230,8751,1,1,200,38), -- High-Grade Life Stone: level 70
-(21230,8761,1,1,200,22), -- Top-Grade Life Stone: level 70
+(21230,8730,1,1,200,1876), -- Life Stone: level 67
+(21230,8740,1,1,200,863), -- Mid-Grade Life Stone: level 67
+(21230,8750,1,1,200,30), -- High-Grade Life Stone: level 67
 (21231,729,1,1,-1,995), -- Scroll: Enchant Weapon (Grade A)
 (21231,1875,1,1,-1,597002), -- Stone of Purity
 (21231,5480,1,1,-1,40183), -- Sealed Leather Armor of Nightmare Fabric
@@ -14084,7 +14126,8 @@ INSERT INTO `droplist` VALUES
 (21249,4040,1,1,2,4016), -- Mold Lubricant
 (21249,4041,1,1,2,473), -- Mold Hardener
 (21249,8729,1,1,200,3311), -- Life Stone: level 64
-(21249,8749,1,1,200,236), -- High-Grade Life Stone: level 64
+(21249,8739,1,1,200,268), -- Mid-Grade Life Stone: level 64
+(21249,8749,1,1,200,134), -- High-Grade Life Stone: level 64
 (21250,4052,1,1,-1,230702), -- Earring of Black Ore Piece
 (21250,4053,1,1,-1,279304), -- Ring of Black Ore Gemstone
 (21250,5230,1,1,-1,8688), -- Recipe: Mithril Arrow (100%)
@@ -15199,7 +15242,8 @@ INSERT INTO `droplist` VALUES
 (21317,4042,1,1,2,3968), -- Enria
 (21317,8731,1,1,200,2481), -- Life Stone: level 70
 (21317,8741,1,1,200,455), -- Mid-Grade Life Stone: level 70
-(21317,8761,1,1,200,41), -- Top-Grade Life Stone: level 70
+(21317,8751,1,1,200,29), -- High-Grade Life Stone: level 70
+(21317,8761,1,1,200,29), -- Top-Grade Life Stone: level 70
 (21318,730,1,1,-1,5323), -- Scroll: Enchant Armor (Grade A)
 (21318,5478,1,1,-1,53713), -- Sealed Dark Crystal Leather Armor Pattern
 (21318,5549,1,3,-1,638760), -- Metallic Thread
@@ -15446,6 +15490,7 @@ INSERT INTO `droplist` VALUES
 (21331,4042,1,1,2,2681), -- Enria
 (21331,8732,1,1,200,1156), -- Life Stone: level 76
 (21331,8742,1,1,200,324), -- Mid-Grade Life Stone: level 76
+(21331,8752,1,1,200,37), -- High-Grade Life Stone: level 76
 (21332,5282,1,1,-1,3247), -- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%)
 (21332,6342,1,1,-1,165490), -- Sealed Majestic Earring Gemstone
 (21332,6344,1,1,-1,107096), -- Sealed Majestic Necklace Beads
@@ -15569,6 +15614,7 @@ INSERT INTO `droplist` VALUES
 (21338,4043,1,1,2,10526), -- Asofe
 (21338,5550,1,1,2,1404), -- Durable Metal Plate
 (21338,8732,1,1,200,2809), -- Life Stone: level 76
+(21338,8752,1,1,200,480), -- High-Grade Life Stone: level 76
 (21339,6691,1,1,-1,15980), -- Angel Slayer Blade
 (21339,6693,1,1,-1,16269), -- Dragon Hunter Axe Blade
 (21339,6694,1,1,-1,16269), -- Saint Spear Blade
@@ -16043,6 +16089,7 @@ INSERT INTO `droplist` VALUES
 (21367,4043,1,1,2,6993), -- Asofe
 (21367,8732,1,1,200,1580), -- Life Stone: level 76
 (21367,8742,1,1,200,395), -- Mid-Grade Life Stone: level 76
+(21367,8752,1,1,200,45), -- High-Grade Life Stone: level 76
 (21368,960,1,1,-1,4337), -- Scroll: Enchant Armor (Grade S)
 (21368,1895,1,7,-1,774442), -- Metallic Fiber
 (21368,4042,1,1,-1,180703), -- Enria
@@ -16395,9 +16442,9 @@ INSERT INTO `droplist` VALUES
 (21389,6690,1,1,-1,38470), -- Imperial Staff Head
 (21389,6691,1,1,-1,38397), -- Angel Slayer Blade
 (21389,57,7149,14591,0,700000), -- Adena
-(21389,11964,1,1,1,7), -- Common Item - Dark Legion's Edge (no drop info)
-(21389,11971,1,1,1,7), -- Common Item - Sword of Miracles 
-(21389,11968,1,1,1,7), -- Common Item - Dragon Slayer
+(21389,11964,1,1,1,371), -- Common Item - Dark Legion's Edge
+(21389,11971,1,1,1,371), -- Common Item - Sword of Miracles 
+(21389,11968,1,1,1,371), -- Common Item - Dragon Slayer
 (21389,5529,1,1,1,2400), -- Dragon Slayer Edge
 (21389,5545,1,1,1,2400), -- Dark Legion\'s Edge Blade
 (21389,5546,1,1,1,2636), -- Sword of Miracles Edge
@@ -16497,7 +16544,8 @@ INSERT INTO `droplist` VALUES
 (21394,4039,1,1,2,21739), -- Mold Glue
 (21394,4041,1,1,2,9091), -- Mold Hardener
 (21394,4044,1,1,2,10870), -- Thons
-(21394,8732,1,1,200,1818), -- Life Stone: level 76
+(21394,8732,1,1,200,1495), -- Life Stone: level 76
+(21394,8742,1,1,200,1495), -- Mid-Grade Life Stone: level 76
 (21395,960,1,1,-1,7328), -- Scroll: Enchant Armor (Grade S)
 (21395,1894,1,1,-1,642786), -- Crafted Leather
 (21395,4039,1,1,-1,610647), -- Mold Glue
@@ -17150,8 +17198,8 @@ INSERT INTO `droplist` VALUES
 (21434,5282,1,1,-1,17200), -- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%)
 (21434,6342,1,1,-1,876643), -- Sealed Majestic Earring Gemstone
 (21434,57,15536,31822,0,700000), -- Adena
-(21434,12265,1,1,1,74), -- Common Item - Sealed Leather Armor of Nightmare (no drop info)
-(21434,12258,1,1,1,74), -- Common Item - Sealed Majestic Leather Armor
+(21434,12265,1,1,1,405), -- Common Item - Sealed Leather Armor of Nightmare
+(21434,12258,1,1,1,405), -- Common Item - Sealed Majestic Leather Armor
 (21434,5480,1,1,1,12826), -- Sealed Leather Armor of Nightmare Fabric
 (21434,5481,1,1,1,12826), -- Sealed Majestic Leather Armor Fabric
 (21434,959,1,1,2,77), -- Scroll: Enchant Weapon (Grade S)
@@ -17992,6 +18040,7 @@ INSERT INTO `droplist` VALUES
 (21510,4040,1,1,2,4255), -- Mold Lubricant
 (21510,5456,1,1,2,53), -- Recipe: Tallum Glaive(60%)
 (21510,8730,1,1,200,2841), -- Life Stone: level 67
+(21510,8760,1,1,200,934), -- Top-Grade Life Stone: level 67
 (21511,1875,1,1,-1,246682), -- Stone of Purity
 (21511,5462,1,1,-1,1370), -- Recipe: Branch of The Mother Tree(60%)
 (21511,5539,1,1,-1,12478), -- Blood Tornado Edge
@@ -18011,12 +18060,13 @@ INSERT INTO `droplist` VALUES
 (21511,1881,1,1,2,23810), -- Coarse Bone Powder
 (21511,4041,1,1,2,1358), -- Mold Hardener
 (21511,6337,1,1,2,801), -- Recipe: Sealed Majestic Earring(70%)
-(21511,8740,1,1,200,1477), -- Mid-Grade Life Stone: level 67
+(21511,8740,1,1,200,1041), -- Mid-Grade Life Stone: level 67
+(21511,8750,1,1,200,1041), -- High-Grade Life Stone: level 67
 (21512,730,1,1,-1,3601), -- Scroll: Enchant Armor (Grade A)
 (21512,1875,1,1,-1,288061), -- Stone of Purity
 (21512,4041,1,1,-1,37573), -- Mold Hardener
 (21512,57,2125,3872,0,700000), -- Adena
-(21512,11951,1,1,1,7), -- Common Item - Bloody Orchid (no drop info, no material info)
+(21512,11951,1,1,1,7), -- Common Item - Bloody Orchid (too low drop info, no material info)
 (21512,5536,1,1,1,2172), -- Bloody Orchid Head
 (21512,1343,20,60,2,130239), -- Silver Arrow
 (21512,1867,1,1,2,243112), -- Animal Skin
@@ -18457,6 +18507,7 @@ INSERT INTO `droplist` VALUES
 (21536,6670,1,1,2,18868), -- Deluxe Chest Key - Grade 6
 (21536,8729,1,1,200,766), -- Life Stone: level 64
 (21536,8739,1,1,200,460), -- Mid-Grade Life Stone: level 64
+(21536,8749,1,1,200,156), -- High-Grade Life Stone: level 64
 (21537,1874,1,1,-1,201181), -- Oriharukon Ore
 (21537,4043,1,1,-1,100591), -- Asofe
 (21537,4099,1,1,-1,135476), -- Doom Boots Part
@@ -19149,7 +19200,7 @@ INSERT INTO `droplist` VALUES
 (21576,5456,1,1,-1,1075), -- Recipe: Tallum Glaive(60%)
 (21576,5497,1,1,-1,68051), -- Sealed Tallum Boots Lining
 (21576,57,1406,2858,0,700000), -- Adena
-(21576,11951,1,1,1,5), -- Common Item - Bloody Orchid (no drop info)
+(21576,11951,1,1,1,196), -- Common Item - Bloody Orchid
 (21576,5536,1,1,1,1459), -- Bloody Orchid Head
 (21576,1343,10,30,2,125000), -- Silver Arrow
 (21576,1868,1,1,2,200000), -- Thread
@@ -19233,7 +19284,8 @@ INSERT INTO `droplist` VALUES
 (21581,4040,1,1,2,2985), -- Mold Lubricant
 (21581,8730,1,1,200,1689), -- Life Stone: level 67
 (21581,8740,1,1,200,507), -- Mid-Grade Life Stone: level 67
-(21581,8760,1,1,200,28), -- Top-Grade Life Stone: level 67
+(21581,8750,1,1,200,22), -- High-Grade Life Stone: level 67
+(21581,8760,1,1,200,22), -- Top-Grade Life Stone: level 67
 (21582,4041,1,1,-1,32801), -- Mold Hardener
 (21582,5220,1,1,-1,150885), -- Metal Hardener
 (21582,5496,1,1,-1,88444), -- Sealed Dark Crystal Boots Lining
@@ -19248,7 +19300,8 @@ INSERT INTO `droplist` VALUES
 (21582,4041,1,1,2,975), -- Mold Hardener
 (21582,5220,1,1,2,6993), -- Metal Hardener
 (21582,8730,1,1,200,1300), -- Life Stone: level 67
-(21582,8740,1,1,200,118), -- Mid-Grade Life Stone: level 67
+(21582,8740,1,1,200,248), -- Mid-Grade Life Stone: level 67
+(21582,8750,1,1,200,124), -- High-Grade Life Stone: level 67
 (21583,1884,1,5,-1,789121), -- Cord
 (21583,4039,1,1,-1,128232), -- Mold Glue
 (21583,5532,1,1,-1,12973), -- Meteor Shower Head
@@ -19668,8 +19721,8 @@ INSERT INTO `droplist` VALUES
 (21608,1879,1,1,-1,183072), -- Cokes
 (21608,1906,1,1,-1,150987), -- Mithril Ring Wire
 (21608,57,549,1079,0,700000), -- Adena
-(21608,12099,1,1,1,69), -- Common Item - Karmian Tunic (no drop info, no material info)
-(21608,12100,1,1,1,110), -- Common Item - Karmian Stockings
+(21608,12099,1,1,1,6333), -- Common Item - Karmian Tunic (no material info)
+(21608,12100,1,1,1,8333), -- Common Item - Karmian Stockings
 (21608,1954,1,1,1,6900), -- Karmian Stocking Design
 (21608,1962,1,1,1,4154), -- Karmian Tunic Pattern
 (21608,1865,1,1,2,51914), -- Varnish
@@ -19706,9 +19759,9 @@ INSERT INTO `droplist` VALUES
 (21610,2163,1,1,-1,144852), -- Recipe: Earring of Protection
 (21610,4043,1,1,-1,94637), -- Asofe
 (21610,57,1392,2790,0,700000), -- Adena
-(21610,12086,1,1,1,8065), -- Common Item - Mithril Shirt (low drop info, no material info)
+(21610,12086,1,1,1,5263), -- Common Item - Mithril Shirt (low drop info, no material info)
 (21610,1961,1,1,1,10735), -- Mithril Shirt Fabric
-(21610,12084,1,1,1,8065), -- Common Item - empered Mithril Gaiters
+(21610,12084,1,1,1,10526), -- Common Item - Tempered Mithril Gaiters
 (21610,2935,1,1,1,17835), -- Tempered Mithril Gaiters Fragment
 (21610,1864,1,3,2,111111), -- Stem
 (21610,1869,1,1,2,200000), -- Iron Ore
@@ -19803,11 +19856,11 @@ INSERT INTO `droplist` VALUES
 (21616,1911,1,1,-1,253020), -- Earring of Protection Gemstone
 (21616,1966,1,1,-1,124201), -- Plated Leather Fragment
 (21616,57,1834,3326,0,700000), -- Adena
-(21616,12106,1,1,1,208), -- Common Item - Great Helmet (low drop info, no material info)
-(21616,12107,1,1,1,298), -- Common Item - Knight\'s Shield
+(21616,12106,1,1,1,6536), -- Common Item - Great Helmet (low drop info, no material info)
+(21616,12107,1,1,1,6536), -- Common Item - Knight\'s Shield
 (21616,1971,1,1,1,15380), -- Great Helmet Material
 (21616,1972,1,1,1,20098), -- Knight\'s Shield Fragment
-(21616,12102,1,1,1,323), -- Common Item - Dwarven Chain Shield
+(21616,12102,1,1,1,6536), -- Common Item - Dwarven Chain Shield
 (21616,2947,1,1,1,17945), -- Dwarven Chain Shield Fragment
 (21616,951,1,1,2,457), -- Scroll: Enchant Weapon (Grade C)
 (21616,1868,1,3,2,251215), -- Thread
@@ -20265,7 +20318,7 @@ INSERT INTO `droplist` VALUES
 (21642,1904,1,1,-1,49887), -- Elven Necklace Beads
 (21642,2145,1,1,-1,38181), -- Recipe: Mithril Alloy
 (21642,57,271,541,0,700000), -- Adena
-(21642,11683,1,1,1,20), -- Common Item - Strengthened Long Bow (no drop info)
+(21642,11683,1,1,1,394), -- Common Item - Strengthened Long Bow
 (21642,2040,1,1,1,1599), -- Strengthened Long Bow Shaft
 (21642,1868,1,1,2,100000), -- Thread
 (21642,1873,1,1,2,22222), -- Silver Nugget
@@ -22031,7 +22084,7 @@ INSERT INTO `droplist` VALUES
 (21759,5524,1,1,-1,60409), -- Sealed Dark Crystal Gaiters Pattern
 (21759,5525,1,1,-1,94746), -- Sealed Dark Crystal Helmet Design
 (21759,57,2470,5029,0,700000), -- Adena
-(21759,11946,1,1,1,5), --  Common Item - Dasparion\'s Staff
+(21759,11946,1,1,1,5), --  Common Item - Dasparion\'s Staff (no drop info)
 (21759,11949,1,1,1,5), --  Common Item - Meteor Shower
 (21759,5532,1,1,1,1526), -- Meteor Shower Head
 (21759,5543,1,1,1,1541), -- Dasparion\'s Staff Edge
@@ -22823,6 +22876,7 @@ INSERT INTO `droplist` VALUES
 (21809,1881,1,1,2,8329), -- Coarse Bone Powder
 (21809,2163,1,1,2,3188), -- Recipe: Earring of Protection
 (21809,4041,1,1,2,544), -- Mold Hardener
+(21809,8723,1,1,200,1742), -- Life Stone: level 46
 (21810,1966,1,1,-1,32947), -- Plated Leather Fragment
 (21810,1967,1,1,-1,49218), -- Plated Leather Gaiters Material
 (21810,2166,1,1,-1,30590), -- Recipe: Earrings of Binding (100%)
@@ -22870,7 +22924,7 @@ INSERT INTO `droplist` VALUES
 (21812,1879,1,1,2,11812), -- Cokes
 (21812,4040,1,1,2,1418), -- Mold Lubricant
 (21812,4126,1,1,2,1170), -- Recipe: Adamantite Earrings
-(21811,8726,1,1,200,4000), -- Life Stone: level 55
+(21812,8726,1,1,200,4000), -- Life Stone: level 55
 (21813,947,1,1,-1,516), -- Scroll: Enchant Weapon (Grade B)
 (21813,4049,1,1,-1,67676), -- Adamantite Earring Gemstone
 (21813,4129,1,1,-1,13964), -- Recipe: Earrings of Black Ore
@@ -22965,14 +23019,15 @@ INSERT INTO `droplist` VALUES
 (21817,4039,1,1,2,2045), -- Mold Glue
 (21817,4043,1,1,2,1024), -- Asofe
 (21817,5440,1,1,2,36), -- Recipe: Elysian(60%)
-(21817,8740,1,1,200,1024), -- Mid-Grade Life Stone: level 67
+(21817,8730,1,1,200,769), -- Life Stone: level 67
+(21817,8740,1,1,200,769), -- Mid-Grade Life Stone: level 67
 (21818,5440,1,1,-1,792), -- Recipe: Elysian(60%)
 (21818,5479,1,1,-1,12647), -- Sealed Tallum Leather Armor Pattern
 (21818,5482,1,1,-1,28211), -- Sealed Dark Crystalline Leggings Design
 (21818,57,860,1756,0,700000), -- Adena
-(21818,12226,1,1,1,13), -- Common Item - Sealed Dark Crystal Helmet (no drop info)
-(21818,12225,1,1,1,18), -- Common Item - Sealed Dark Crystal Shield
-(21818,12234,1,1,1,13), -- Common Item - Sealed Tallum Helmet
+(21818,12226,1,1,1,438), -- Common Item - Sealed Dark Crystal Helmet
+(21818,12225,1,1,1,438), -- Common Item - Sealed Dark Crystal Shield
+(21818,12234,1,1,1,438), -- Common Item - Sealed Tallum Helmet
 (21818,5494,1,1,1,2210), -- Sealed Dark Crystal Shield Fragment
 (21818,5525,1,1,1,1627), -- Sealed Dark Crystal Helmet Design
 (21818,5526,1,1,1,1627), -- Sealed Tallum Helm Design
@@ -22982,6 +23037,7 @@ INSERT INTO `droplist` VALUES
 (21818,4040,1,1,2,848), -- Mold Lubricant
 (21818,4041,1,1,2,424), -- Mold Hardener
 (21818,6901,1,1,2,106), -- Recipe: Shining Arrow (100%)
+(21818,8730,1,1,200,329), -- Life Stone: level 67
 (21819,1875,1,1,-1,155856), -- Stone of Purity
 (21819,4041,1,1,-1,20329), -- Mold Hardener
 (21819,5480,1,1,-1,10490), -- Sealed Leather Armor of Nightmare Fabric
@@ -23005,9 +23061,9 @@ INSERT INTO `droplist` VALUES
 (21820,5481,1,1,-1,11429), -- Sealed Majestic Leather Armor Fabric
 (21820,6901,1,1,-1,2547), -- Recipe: Shining Arrow (100%)
 (21820,57,1025,2092,0,700000), -- Adena
-(21820,12226,1,1,1,15), -- Common Item - Sealed Dark Crystal Helmet (no drop info)
-(21820,12225,1,1,1,21), -- Common Item - Sealed Dark Crystal Shield
-(21820,12234,1,1,1,15), -- Common Item - Sealed Tallum Helmet
+(21820,12226,1,1,1,513), -- Common Item - Sealed Dark Crystal Helmet
+(21820,12225,1,1,1,513), -- Common Item - Sealed Dark Crystal Shield
+(21820,12234,1,1,1,513), -- Common Item - Sealed Tallum Helmet
 (21820,5494,1,1,1,2634), -- Sealed Dark Crystal Shield Fragment
 (21820,5525,1,1,1,1939), -- Sealed Dark Crystal Helmet Design
 (21820,5526,1,1,1,1939), -- Sealed Tallum Helm Design
@@ -23484,7 +23540,8 @@ INSERT INTO `droplist` VALUES
 (22037,1954,1,1,1,11628), -- Karmian Stocking Design
 (22037,1962,1,1,1,8772), -- Karmian Tunic Pattern
 (22037,1875,1,1,2,5848), -- Stone of Purity
-(22037,8733,1,1,200,2915),      -- Mid-Grade Life Stone: level 46 
+(22037,8733,1,1,200,1195), -- Mid-Grade Life Stone: level 46
+(22037,8723,1,1,200,1195), -- Life Stone: level 46
 (22037,2215,1,1,1,18868), -- Recipe: Robe of Seal
 (22037,1875,1,1,-1,50000), -- Stone of Purity
 (22037,1960,1,1,-1,100000), -- Chain Gaiters Part
@@ -23492,13 +23549,14 @@ INSERT INTO `droplist` VALUES
 (22038,1871,1,1,2,90909), -- Charcoal
 (22038,1866,1,1,2,83333), -- Suede
 (22038,12109,1,1,1,11905), -- Common Item - Dwarven Chain Gaiters
-(22038,8723,1,1,200,11905), -- Life Stone: level 46 (check this drop!)
+(22038,8724,1,1,200,5236), -- Life Stone: level 49
 (22038,1911,1,1,-1,125000), -- Earring of Protection Gemstone
 (22039,57,717,1431,0,700000), -- Adena
 (22040,57,603,1016,0,700000), -- Adena
 (22040,1342,10,30,2,300000), -- Iron Arrow
 (22040,1872,1,1,2,100000), -- Animal Bone
 (22040,1867,1,1,2,100000), -- Animal Skin
+(22040,8724,1,1,200,6993), -- Life Stone: level 49
 (22041,57,943,1853,0,700000), -- Adena
 (22041,1872,1,1,2,142857), -- Animal Bone
 (22041,1867,1,1,2,66667), -- Animal Skin
@@ -23545,7 +23603,8 @@ INSERT INTO `droplist` VALUES
 (22047,1954,1,1,1,1389), -- Karmian Stocking Design
 (22047,1962,1,1,1,4167), -- Karmian Tunic Pattern
 (22047,2166,1,1,1,2778), -- Recipe: Ring of Protection
-(22047,8733,1,1,200,2415),      -- Mid-Grade Life Stone: level 46
+(22047,8733,1,1,200,2415), -- Mid-Grade Life Stone: level 46
+(22047,8753,1,1,200,863), -- Top-Grade Life Stone: level 46
 (22047,1910,1,1,-1,40000), -- Aquastone Necklace Chain
 (22047,2166,1,1,-1,50000), -- Recipe: Ring of Protection
 (22047,1909,1,1,-1,30000), -- Aquastone Ring Wire
@@ -23573,6 +23632,7 @@ INSERT INTO `droplist` VALUES
 (22049,1972,1,1,1,2212), -- Knight's Shield Fragment
 (22049,1875,1,1,2,1969), -- Stone of Purity
 (22049,4041,1,1,2,983),    -- Mold Hardener
+(22049,8724,1,1,200,2066), -- Life Stone: level 49
 (22049,1911,1,1,-1,53216), -- Earring of Protection Gemstone
 (22049,2166,1,1,-1,18742), -- Recipe: Earrings of Binding (100%)
 (22049,1912,1,1,-1,35421), -- Ring of Protection Gemstone
@@ -23688,7 +23748,8 @@ INSERT INTO `droplist` VALUES
 (22055,1875,1,1,2,4673), -- Stone of Purity
 (22055,4040,1,1,2,1490), -- Mold Lubricant
 (22055,8724,1,1,200,3067), -- Life Stone: level 49
-(22055,8734,1,1,200,596),      -- Mid-Grade Life Stone: level 49
+(22055,8734,1,1,200,596), -- Mid-Grade Life Stone: level 49
+(22055,8754,1,1,200,24), -- Top-Grade Life Stone: level 49
 (22055,8318,1,1,2,60),      -- Recipe: Dwarven Hammer (100%)
 (22055,12102,1,1,1,5435), -- Common Item - Dwarven Chain Shield
 (22055,12106,1,1,1,3125), -- Common Item - Great Helmet
@@ -23778,8 +23839,8 @@ INSERT INTO `droplist` VALUES
 (22060,1870,1,9,-1,132522),	-- Coal
 (22060,4602,1,1,-1,42852),	-- Greater Dye of STR <Str+3 Dex-3>
 (22060,1539,1,3,-1,131157),	-- Greater Healing Potion
-(22060,8725,1,1,200,12987), -- Life Stone: level 52 (check this drop!)
-(22060,8735,1,1,200,8621),		-- Mid-Grade Life Stone: level 52
+(22060,8725,1,1,200,10638), -- Life Stone: level 52 (check this LS drops!)
+(22060,8735,1,1,200,10638),		-- Mid-Grade Life Stone: level 52
 (22062,57,1816,3664,0,700000),	-- Adena
 (22062,1882,1,1,2,41667), -- Leather
 (22062,1867,1,3,2,111111), -- Animal Skin
@@ -24096,6 +24157,7 @@ INSERT INTO `droplist` VALUES
 (22086,12165,1,1,1,68), -- Common Item - Avadon Leather Armor
 (22086,8726,1,1,200,878), -- Life Stone: level 55
 (22086,8736,1,1,200,338), -- Mid-Grade Life Stone: level 55
+(22086,8756,1,1,200,18), -- Top-Grade Life Stone: level 55
 (22086,4049,1,1,-1,85625), -- Adamantite Earring Gemstone
 (22086,4130,1,1,-1,43219), -- Recipe: Ring of Black Ore
 (22086,4131,1,1,-1,23438), -- Recipe: Necklace of Black Ore
@@ -24109,13 +24171,14 @@ INSERT INTO `droplist` VALUES
 (22087,4109,1,1,1,931), -- Kris Edge
 (22087,948,1,1,2,389), -- Scroll: Enchant Armor (Grade B)
 (22087,8298,1,1,2,44), -- Recipe: Guardian\'s Sword (60%)
-(22087,11915,1,1,1,15), -- Common Item - Kris (no drop info)
-(22087,11919,1,1,1,15), -- Common Item - Hell Knife
+(22087,11915,1,1,1,162), -- Common Item - Kris
+(22087,11919,1,1,1,244), -- Common Item - Hell Knife
 (22087,4050,1,1,-1,233550), -- Adamantite Ring Wire
 (22087,948,1,1,-1,19531), -- Scroll: Enchant Armor (Grade B)
 (22087,1865,1,5,-1,767500), -- Varnish
 (22087,8727,1,1,200,1166), -- Life Stone: level 58
 (22087,8737,1,1,200,389), -- Mid-Grade Life Stone: level 58
+(22087,8747,1,1,200,162), -- High-Grade Life Stone: level 58
 (22088,57,626,1278,0,700000), -- Adena
 (22088,1868,1,1,2,90909), -- Thread
 (22088,1864,1,1,2,83333), -- Stem
@@ -24128,6 +24191,7 @@ INSERT INTO `droplist` VALUES
 (22088,11889,1,1,1,131), -- Common Item - Great Sword
 (22088,11916,1,1,1,131), -- Common Item - Keshanberk
 (22088,11900,1,1,1,131), -- Common Item - Sword of Valhalla
+(22088,8737,1,1,200,343), -- Mid-Grade Life Stone: level 58
 (22088,1867,1,5,-1,865410), -- Animal Skin
 (22088,4613,1,1,-1,6435), -- Greater Dye of Strength <Str+4 Con-4>
 (22088,4051,1,1,-1,4984), -- Adamantite Necklace Chain
@@ -24369,6 +24433,7 @@ INSERT INTO `droplist` VALUES
 (22106,8731,1,1,200,2688), -- Life Stone: level 70
 (22106,8741,1,1,200,435), -- Mid-Grade Life Stone: level 70
 (22106,8751,1,1,200,73), -- High-Grade Life Stone: level 70
+(22106,8761,1,1,200,35), -- Top-Grade Life Stone: level 70
 (22106,5479,1,2,-1,25000), -- Sealed Tallum Leather Armor Pattern
 (22106,5440,1,1,-1,5000), -- Recipe: Elysian(60%)
 (22106,5482,1,2,-1,25000), -- Sealed Dark Crystalline Leggings Design
@@ -25386,25 +25451,26 @@ INSERT INTO `droplist` VALUES
 (22189,57,4456,7385,0,700000), -- Adena
 (22190,57,7411,7610,0,700000), -- Adena
 (22190,1895,1,1,2,350000), -- Metallic Fiber
-(22196,57,11070,19350,0,700000), -- Adena
+(22196,57,13610,27100,0,700000), -- Adena
 (22196,8633,1,1,2,41666), -- Elixir of Mental Strength (S-Grade)
 (22196,8627,1,1,2,25641), -- Elixir of Life (S-Grade)
 (22196,5529,1,1,1,5181), -- Dragon Slayer Edge
 (22196,5545,1,1,1,5181), -- Dark Legion\'s Edge Blade
 (22196,8956,1,1,2,5181), -- Red Primeval Crystal
-(22196,8877,1,1,2,2494), -- Spellbook: Soul of the Phoenix
-(22197,57,4524,13790,0,700000), -- Adena
+(22196,8877,1,1,2,50000), -- Spellbook: Soul of the Phoenix
+(22196,8892,1,1,2,33333), -- Ancient Tactical Manual: Symbol of Defense
+(22197,57,5818,11870,0,700000), -- Adena
 (22197,8633,1,1,2,5714), -- Elixir of Mental Strength (S-Grade)
 (22197,5546,1,1,1,1972), -- Sword of Miracles Edge
 (22197,8627,1,1,2,3367), -- Elixir of Life (S-Grade)
 (22197,5529,1,1,1,1680), -- Dragon Slayer Edge
 (22197,8954,1,1,2,1344), -- Blue Primeval Crystal
-(22197,8885,1,1,2,7874), -- Amulet: Magnus\' Chant
+(22197,8885,1,1,2,16666), -- Amulet: Magnus\' Chant
 (22197,5545,1,1,1,1344), -- Dark Legion\'s Edge Blade
 (22197,11968,1,1,1,633), -- Common Item - Dragon Slayer
 (22197,11971,1,1,1,633), -- Common Item - Sword of Miracles 
 (22197,11964,1,1,1,633), -- Common Item - Dark Legion\'s Edge
-(22197,8907,1,1,1,3937), -- Ancient Spellbook: Flames of Invincibility
+(22197,8907,1,1,1,5102), -- Ancient Spellbook: Flames of Invincibility
 (22197,8955,1,1,2,672), -- Green Primeval Crystal
 (22197,8956,1,1,2,1972), -- Red Primeval Crystal
 (22197,6689,1,1,-1,17241), -- Basalt Battlehammer Head
@@ -25415,8 +25481,8 @@ INSERT INTO `droplist` VALUES
 (22198,8956,1,1,2,2793), -- Red Primeval Crystal
 (22198,5529,1,1,1,2793), -- Dragon Slayer Edge
 (22198,5546,1,1,1,6024), -- Sword of Miracles Edge
-(22198,8902,1,1,2,24390), -- Ancient Spellbook: Day of Doom
-(22198,8893,1,1,2,30303), -- Ancient Tactical Manual: Symbol of Noise
+(22198,8902,1,1,2,22222), -- Ancient Spellbook: Day of Doom
+(22198,8893,1,1,2,29412), -- Ancient Tactical Manual: Symbol of Noise
 (22198,8955,1,1,2,931), -- Green Primeval Crystal
 (22198,5545,1,1,1,931), -- Dark Legion\'s Edge Blade
 (22199,57,18210,54000,0,700000), -- Adena
@@ -25424,124 +25490,113 @@ INSERT INTO `droplist` VALUES
 (22199,6342,1,1,1,111111), -- Sealed Majestic Earring Gemstone
 (22199,6344,1,1,1,28571), -- Sealed Majestic Necklace Beads
 (22199,8627,1,1,2,16666), -- Elixir of Life (S-Grade)
-(22199,8899,1,1,2,43478), -- Ancient Spellbook: Volcano
+(22199,8899,1,1,2,18519), -- Ancient Spellbook: Volcano
 (22199,8633,1,1,2,14286), -- Elixir of Mental Strength (S-Grade)
 (22199,8954,1,1,2,3344), -- Blue Primeval Crystal
 (22199,12350,1,1,1,3876), -- Common Item - Sealed Majestic Necklace
 (22199,12352,1,1,1,3876), -- Common Item - Sealed Majestic Earring
 (22199,12351,1,1,1,3876), -- Common Item - Sealed Majestic Ring
-(22199,8881,1,1,2,58824), -- Spellbook: Cleanse
-(22199,8904,1,1,2,14286), -- Ancient Spellbook: Anti-Summoning Field
-(22200,57,4458,13640,0,700000), -- Adena
-(22200,8633,1,1,2,2119), -- Elixir of Mental Strength (S-Grade)
-(22200,8627,1,1,2,3663), -- Elixir of Life (S-Grade)
-(22200,8888,1,1,2,6369), -- Amulet: Pa\'agrio\'s Fist
-(22200,5544,1,1,1,1348), -- Branch of The Mother Tree Head
-(22200,8342,1,1,1,770), -- Flaming Dragon Skull Piece
-(22200,8954,1,1,2,577), -- Blue Primeval Crystal
-(22200,8955,1,1,2,744), -- Green Primeval Crystal
-(22200,5533,1,1,1,962), -- Elysian Head
-(22200,8886,1,1,2,6757), -- Amulet: Victories of Pa\'agrio
-(22200,8956,1,1,2,192), -- Red Primeval Crystal
-(22200,11966,1,1,2,192), -- Common Item - Doom Crusher (no drop info)
-(22200,8349,1,1,1,1348), -- Doom Crusher Head
-(22200,1895,1,5,-1,500250), -- Metallic Fiber
-(22200,6695,1,1,-1,18181), -- Demon Splinter Blade
-(22200,4040,1,1,-1,333333), -- Mold Lubricant
-(22201,57,4475,13610,0,700000), -- Adena
-(22201,8633,1,1,2,1259), -- Elixir of Mental Strength (S-Grade)
-(22201,8627,1,1,2,3774), -- Elixir of Life (S-Grade)
-(22201,8342,1,1,1,1468), -- Flaming Dragon Skull Piece
-(22201,5533,1,1,1,1259), -- Elysian Head
-(22201,5544,1,1,1,1259), -- Branch of The Mother Tree Head
-(22201,8889,1,1,2,17544), -- Amulet: Gate Chant
-(22201,8954,1,1,2,733), -- Blue Primeval Crystal
-(22201,8882,1,1,2,10101), -- Spellbook: Salvation
-(22201,8349,1,1,1,2519), -- Doom Crusher Head
-(22201,6696,1,1,-1,18867), -- Heavens Divider Edge
-(22202,57,4062,12420,0,700000), -- Adena
-(22202,8627,1,1,2,3759), -- Elixir of Life (S-Grade)
-(22202,8633,1,1,2,1475), -- Elixir of Mental Strength (S-Grade)
-(22202,8342,1,1,1,590), -- Flaming Dragon Skull Piece
-(22202,8954,1,1,2,590), -- Blue Primeval Crystal
-(22202,5544,1,1,1,1770), -- Branch of The Mother Tree Head
-(22202,8349,1,1,1,1475), -- Doom Crusher Head
-(22202,8896,1,1,2,5618), -- Ancient Tactical Manual: Symbol of Energy
-(22202,8955,1,1,2,590), -- Green Primeval Crystal
-(22202,5533,1,1,1,3247), -- Elysian Head
-(22202,11970,1,1,1,542), -- Common Item - Branch of The Mother Tree
-(22202,11974,1,1,1,542), -- Common Item - Elysian
-(22202,11969,1,1,1,542), -- Common Item - Flaming Dragon Skull
-(22202,11966,1,1,1,542), -- Common Item - Doom Crusher
-(22203,57,4171,12760,0,700000), -- Adena
-(22203,8633,1,1,2,3906), -- Elixir of Mental Strength (S-Grade)
-(22203,8627,1,1,2,3205), -- Elixir of Life (S-Grade)
-(22203,5534,1,1,1,4630), -- Soul Bow Stave
-(22203,8954,1,1,2,1067), -- Blue Primeval Crystal
-(22203,8883,1,1,2,13699), -- Spellbook: Mystic Immunity
-(22203,8955,1,1,2,356), -- Green Primeval Crystal
-(22203,8956,1,1,2,178), -- Red Primeval Crystal
-(22203,11975,1,1,1,618), -- Common Item - Soul Bow
-(22203,1885,1,1,-1,352641), -- High Grade Suede
-(22203,6698,1,1,-1,166666), -- Sealed Tateossian Earring Part
-(22203,6901,1,1,-1,7936), -- Recipe: Shining Arrow (100%)
-(22204,57,4286,13040,0,700000), -- Adena
-(22204,8633,1,1,2,1229), -- Elixir of Mental Strength (S-Grade)
-(22204,8627,1,1,2,11111), -- Elixir of Life (S-Grade)
-(22204,8954,1,1,2,1229), -- Blue Primeval Crystal
-(22204,8887,1,1,2,18519), -- Amulet: Pa\'agrio\'s Emblem
-(22204,5534,1,1,1,4902), -- Soul Bow Stave
-(22204,8955,1,1,2,1229), -- Green Primeval Crystal
-(22204,6700,1,1,-1,250000), -- Sealed Tateossian Necklace Chain
-(22204,6699,1,1,-1,250000), -- Sealed Tateossian Ring Gem
-(22205,57,3528,10760,0,700000), -- Adena
-(22205,8627,1,1,2,1314), -- Elixir of Life (S-Grade)
-(22205,5534,1,1,1,5263), -- Soul Bow Stave
-(22205,8633,1,1,2,2188), -- Elixir of Mental Strength (S-Grade)
-(22205,8880,1,1,2,6579), -- Spellbook: Summon Spectral Knight
-(22205,8954,1,1,2,1751), -- Blue Primeval Crystal
-(22205,8955,1,1,2,1314), -- Green Primeval Crystal
-(22205,8956,1,1,2,438), -- Red Primeval Crystal
-(22205,1875,1,3,-1,680000), -- Stone of Purity
-(22208,57,4575,14000,0,700000), -- Adena
-(22208,5537,1,1,1,5025), -- Soul Separator Head
-(22208,960,1,1,2,1464), -- Scroll: Enchant Armor (Grade S)
-(22208,8954,1,1,2,643), -- Blue Primeval Crystal
-(22208,8955,1,1,2,643), -- Green Primeval Crystal
-(22208,8752,1,1,200,457), -- High-Grade Life Stone: level 76
-(22208,6704,1,1,-1,250000), -- Sealed Imperial Crusader Boots Design
-(22208,1894,1,1,-1,640000), -- Crafted Leather
-(22209,57,4978,15210,0,700000), -- Adena
-(22209,5537,1,1,1,5076), -- Soul Separator Head
-(22209,8955,1,1,2,2538), -- Green Primeval Crystal
-(22209,8954,1,1,2,7633), -- Blue Primeval Crystal
-(22210,57,3924,12000,0,700000), -- Adena
-(22210,8633,1,1,2,1828), -- Elixir of Mental Strength (S-Grade)
-(22210,8627,1,1,2,3289), -- Elixir of Life (S-Grade)
-(22210,5537,1,1,1,8065), -- Soul Separator Head
-(22210,11973,1,1,1,929), -- Common Item - Soul Separator
-(22210,8884,1,1,2,10989), -- Spellbook: Spell Turning
-(22210,8955,1,1,2,1464), -- Green Primeval Crystal
-(22210,8954,1,1,2,1464), -- Blue Primeval Crystal
-(22211,57,4499,13740,0,700000), -- Adena
-(22211,5538,1,1,1,5587), -- Dragon Grinder Edge
-(22211,8954,1,1,2,2604), -- Blue Primeval Crystal
-(22211,8956,1,1,2,744), -- Red Primeval Crystal
-(22211,8955,1,1,2,372), -- Green Primeval Crystal
-(22211,960,1,1,2,372), -- Scroll: Enchant Armor (Grade S)
-(22212,57,4687,14330,0,700000), -- Adena
-(22212,8954,1,1,2,3968), -- Blue Primeval Crystal
-(22212,5538,1,1,1,10638), -- Dragon Grinder Edge
-(22212,11967,1,1,1,562), -- Common Item - Dragon Grinder
-(22213,57,3902,11940,0,700000), -- Adena
-(22213,8955,1,1,2,343), -- Green Primeval Crystal
-(22213,8954,1,1,2,2278), -- Blue Primeval Crystal
-(22213,8956,1,1,2,343), -- Red Primeval Crystal
-(22213,960,1,1,2,228), -- Scroll: Enchant Armor (Grade S)
-(22213,8752,1,1,200,211), -- High-Grade Life Stone: level 76
-(22213,5538,1,1,1,5236), -- Dragon Grinder Edge
-(22213,1875,1,1,-1,630000), -- Stone of Purity
-(22214,57,4460,13540,0,700000), -- Adena
+(22199,8881,1,1,2,55555), -- Spellbook: Cleanse
+(22199,8904,1,1,2,37037), -- Ancient Spellbook: Anti-Summoning Field
+(22200,57,6036,12300,0,700000), -- Adena
+(22200,8627,1,1,2,5952), -- Elixir of Life (S-Grade
+(22200,8633,1,1,2,3968), -- Elixir of Mental Strength (S-Grade)
+(22200,8878,1,1,2,20408), -- Spellbook: Summon Feline King
+(22200,8342,1,1,1,3968), -- Flaming Dragon Skull Piece
+(22200,8349,1,1,1,1984), -- Doom Crusher Head
+(22200,5533,1,1,1,1984), -- Elysian Head
+(22200,8955,1,1,2,6849), -- Green Primeval Crystal
+(22200,8897,1,1,2,9091), -- Ancient Tactical Manual: Symbol of the Sniper
+(22200,8954,1,1,2,6849), -- Blue Primeval Crystal
+(22201,57,6034,12320,0,700000), -- Adena
+(22201,8633,1,1,2,2119), -- Elixir of Mental Strength (S-Grade)
+(22201,8627,1,1,2,3663), -- Elixir of Life (S-Grade)
+(22201,8888,1,1,2,13889), -- Amulet: Pa\'agrio\'s Fist
+(22201,5544,1,1,1,1348), -- Branch of The Mother Tree Head
+(22201,8342,1,1,1,770), -- Flaming Dragon Skull Piece
+(22201,8954,1,1,2,577), -- Blue Primeval Crystal
+(22201,8955,1,1,2,744), -- Green Primeval Crystal
+(22201,5533,1,1,1,962), -- Elysian Head
+(22201,8886,1,1,2,17544), -- Amulet: Victories of Pa\'agrio
+(22201,8956,1,1,2,192), -- Red Primeval Crystal
+(22201,11966,1,1,2,192), -- Common Item - Doom Crusher (no drop info)
+(22201,8349,1,1,1,1348), -- Doom Crusher Head
+(22201,1895,1,5,-1,500250), -- Metallic Fiber
+(22201,6695,1,1,-1,18181), -- Demon Splinter Blade
+(22201,4040,1,1,-1,333333), -- Mold Lubricant
+(22202,57,4475,13610,0,700000), -- Adena
+(22202,8633,1,1,2,1259), -- Elixir of Mental Strength (S-Grade)
+(22202,8627,1,1,2,3774), -- Elixir of Life (S-Grade)
+(22202,8342,1,1,1,1468), -- Flaming Dragon Skull Piece
+(22202,5533,1,1,1,1259), -- Elysian Head
+(22202,5544,1,1,1,1259), -- Branch of The Mother Tree Head
+(22202,11970,1,1,1,334), -- Common Item - Branch of The Mother Tree
+(22202,11974,1,1,1,334), -- Common Item - Elysian
+(22202,11969,1,1,1,334), -- Common Item - Flaming Dragon Skull
+(22202,11966,1,1,1,334), -- Common Item - Doom Crusher
+(22202,8889,1,1,2,18868), -- Amulet: Gate Chant
+(22202,8954,1,1,2,733), -- Blue Primeval Crystal
+(22202,8882,1,1,2,17241), -- Spellbook: Salvation
+(22202,8349,1,1,1,2519), -- Doom Crusher Head
+(22202,6696,1,1,-1,18867), -- Heavens Divider Edge
+(22203,57,5953,12100,0,700000), -- Adena
+(22203,8879,1,1,2,40000), -- Spellbook: Summon Magnus the Unicorn
+(22203,8627,1,1,2,34842), -- Elixir of Life (S-Grade)
+(22203,5534,1,1,1,5747), -- Soul Bow Stave
+(22203,8954,1,1,2,2882), -- Blue Primeval Crystal
+(22203,8956,1,1,2,2882), -- Red Primeval Crystal
+(22204,57,5790,11810,0,700000), -- Adena
+(22204,8633,1,1,2,3906), -- Elixir of Mental Strength (S-Grade)
+(22204,8627,1,1,2,3205), -- Elixir of Life (S-Grade)
+(22204,5534,1,1,1,4630), -- Soul Bow Stave
+(22204,8954,1,1,2,1067), -- Blue Primeval Crystal
+(22204,8883,1,1,2,28571), -- Spellbook: Mystic Immunity
+(22204,8955,1,1,2,356), -- Green Primeval Crystal
+(22204,8956,1,1,2,178), -- Red Primeval Crystal
+(22204,11975,1,1,1,553), -- Common Item - Soul Bow
+(22204,1885,1,1,-1,352641), -- High Grade Suede
+(22204,6698,1,1,-1,166666), -- Sealed Tateossian Earring Part
+(22204,6901,1,1,-1,7936), -- Recipe: Shining Arrow (100%)
+(22205,57,5987,12110,0,700000), -- Adena
+(22205,8633,1,1,2,1229), -- Elixir of Mental Strength (S-Grade)
+(22205,8627,1,1,2,11111), -- Elixir of Life (S-Grade)
+(22205,8954,1,1,2,1229), -- Blue Primeval Crystal
+(22205,8887,1,1,2,34483), -- Amulet: Pa\'agrio\'s Emblem
+(22205,5534,1,1,1,4902), -- Soul Bow Stave
+(22205,8955,1,1,2,1229), -- Green Primeval Crystal
+(22205,6700,1,1,-1,250000), -- Sealed Tateossian Necklace Chain
+(22205,6699,1,1,-1,250000), -- Sealed Tateossian Ring Gem
+(22208,57,6613,13420,0,700000), -- Adena
+(22208,5537,1,1,1,6024), -- Soul Separator Head
+(22208,8954,1,1,2,4525), -- Blue Primeval Crystal
+(22209,57,6054,12340,0,700000), -- Adena
+(22209,5537,1,1,1,5814), -- Soul Separator Head
+(22209,11973,1,1,1,300), -- Common Item - Soul Separator
+(22209,8954,1,1,2,2427), -- Blue Primeval Crystal
+(22209,8955,1,1,2,485), -- Green Primeval Crystal
+(22209,8956,1,1,2,485), -- Red Primeval Crystal
+(22209,960,1,1,2,485), -- Scroll: Enchant Armor (Grade S)
+(22209,8752,1,1,200,300), -- High-Grade Life Stone: level 76
+(22210,57,6608,13420,0,700000), -- Adena
+(22210,5537,1,1,1,5076), -- Soul Separator Head
+(22210,8955,1,1,2,2538), -- Green Primeval Crystal
+(22210,8954,1,1,2,7633), -- Blue Primeval Crystal
+(22211,57,6423,12630,0,700000), -- Adena
+(22211,5538,1,1,1,3745), -- Dragon Grinder Edge
+(22211,8954,1,1,2,2500), -- Blue Primeval Crystal
+(22211,8956,1,1,2,625), -- Red Primeval Crystal
+(22211,960,1,1,2,625), -- Scroll: Enchant Armor (Grade S)
+(22212,57,5944,12130,0,700000), -- Adena
+(22212,5538,1,1,1,5587), -- Dragon Grinder Edge
+(22212,11967,1,1,1,371), -- Common Item - Dragon Grinder
+(22212,8954,1,1,2,2604), -- Blue Primeval Crystal
+(22212,8956,1,1,2,744), -- Red Primeval Crystal
+(22212,8955,1,1,2,372), -- Green Primeval Crystal
+(22212,960,1,1,2,372), -- Scroll: Enchant Armor (Grade S)
+(22213,57,6262,12640,0,700000), -- Adena
+(22213,8954,1,1,2,3968), -- Blue Primeval Crystal
+(22213,5538,1,1,1,10638), -- Dragon Grinder Edge
+(22214,57,5873,11940,0,700000), -- Adena
 (22214,5514,1,1,1,2710), -- Sealed Gauntlets of Nightmare Design
 (22214,5502,1,1,1,10870), -- Sealed Boots of Nightmare Lining
 (22214,5515,1,1,1,8130), -- Sealed Majestic Gauntlets Design
@@ -25553,12 +25608,12 @@ INSERT INTO `droplist` VALUES
 (22214,8954,1,1,2,4065), -- Blue Primeval Crystal
 (22214,1889,1,1,-1,510000), -- Compound Braid
 (22214,5549,1,1,-1,750000), -- Metallic Thread
-(22215,57,56400,134180,0,700000), -- Adena
+(22215,57,80380,138860,0,700000), -- Adena
 (22215,5541,1,1,1,20000), -- Tallum Glaive Edge
 (22215,8633,1,1,2,58823), -- Elixir of Mental Strength (S-Grade)
 (22215,8627,1,1,2,45454), -- Elixir of Life (S-Grade)
-(22215,8894,1,1,2,20000), -- Ancient Tactical Manual: Symbol of Resistance
-(22215,8895,1,1,2,20000), -- Ancient Tactical Manual: Symbol of Honor
+(22215,8894,1,1,2,52632), -- Ancient Tactical Manual: Symbol of Resistance
+(22215,8895,1,1,2,333333), -- Ancient Tactical Manual: Symbol of Honor
 (22215,8956,1,1,2,4975), -- Red Primeval Crystal
 (22216,57,54300,110530,0,700000), -- Adena
 (22216,8627,1,1,2,350000), -- Elixir of Life (S-Grade)
@@ -25566,12 +25621,13 @@ INSERT INTO `droplist` VALUES
 (22216,8633,1,1,2,58823), -- Elixir of Mental Strength (S-Grade)
 (22216,5541,1,1,1,58823), -- Tallum Glaive Edge
 (22216,8905,1,1,1,140000), -- Ancient Spellbook: Purification Field
-(22217,57,66330,151930,0,700000), -- Adena
+(22216,8900,1,1,1,140000), -- Ancient Spellbook: Cyclone
+(22217,57,77220,132850,0,700000), -- Adena
 (22217,8633,1,1,2,58824), -- Elixir of Mental Strength (S-Grade)
 (22217,5541,1,1,1,45454), -- Tallum Glaive Edge
 (22217,8627,1,1,2,33333), -- Elixir of Life (S-Grade)
-(22217,8903,1,1,2,250000), -- Ancient Spellbook: Gehenna
-(22217,8908,1,1,2,250000), -- Ancient Spellbook: Mass Recharge
+(22217,8903,1,1,2,52632), -- Ancient Spellbook: Gehenna
+(22217,8908,1,1,2,52632), -- Ancient Spellbook: Mass Recharge
 (22217,8954,1,1,2,11235), -- Blue Primeval Crystal
 (22217,4042,1,3,-1,300000), -- Enria
 (22218,57,4524,12800,0,700000), -- Adena
@@ -25579,66 +25635,81 @@ INSERT INTO `droplist` VALUES
 (22218,5529,1,1,1,6410), -- Dragon Slayer Edge
 (22218,8627,1,1,2,3194), -- Elixir of Life (S-Grade)
 (22218,5546,1,1,1,3194), -- Sword of Miracles Edge
-(22218,11968,1,1,1,2755), -- Common Item - Dragon Slayer
-(22218,11971,1,1,1,2755), -- Common Item - Sword of Miracles 
-(22218,11964,1,1,1,2755), -- Common Item - Dark Legion\'s Edge
+(22218,11968,1,1,1,2045), -- Common Item - Dragon Slayer
+(22218,11971,1,1,1,2045), -- Common Item - Sword of Miracles 
+(22218,11964,1,1,1,2045), -- Common Item - Dark Legion\'s Edge
 (22218,8954,1,1,2,1597), -- Blue Primeval Crystal
-(22218,8906,1,1,2,6944), -- Ancient Spellbook: Miracle
-(22219,57,4168,12750,0,700000), -- Adena
-(22219,5533,1,1,1,704), -- Elysian Head
-(22219,8349,1,1,1,704), -- Doom Crusher Head
-(22219,960,1,1,1,1408), -- Scroll: Enchant Armor (Grade S)
-(22219,5544,1,1,1,2817), -- Branch of The Mother Tree Head
-(22219,8342,1,1,1,2114), -- Flaming Dragon Skull Piece
-(22219,8955,1,1,2,2114), -- Green Primeval Crystal
-(22219,8954,1,1,2,2114), -- Blue Primeval Crystal
-(22219,6901,1,1,-1,7812), -- Recipe: Shining Arrow (100%)
-(22220,57,3863,11780,0,700000), -- Adena
-(22220,8888,1,1,2,8197), -- Amulet: Pa\'agrio\'s Fist
-(22220,8627,1,1,2,5747), -- Elixir of Life (S-Grade)
-(22220,8633,1,1,2,4098), -- Elixir of Mental Strength (S-Grade)
-(22220,5534,1,1,1,3279), -- Soul Bow Stave
-(22220,8954,1,1,2,1637), -- Blue Primeval Crystal
-(22220,1875,1,1,-1,620000), -- Stone of Purity
-(22221,57,4451,13580,0,700000), -- Adena
-(22221,5537,1,1,1,5814), -- Soul Separator Head
-(22221,8954,1,1,2,2427), -- Blue Primeval Crystal
-(22221,8955,1,1,2,485), -- Green Primeval Crystal
-(22221,8956,1,1,2,485), -- Red Primeval Crystal
-(22221,960,1,1,2,485), -- Scroll: Enchant Armor (Grade S)
-(22221,8752,1,1,200,914), -- High-Grade Life Stone: level 76
-(22222,57,4700,14230,0,700000), -- Adena
-(22222,5538,1,1,1,13513), -- Dragon Grinder Edge
-(22222,1875,1,1,-1,620000), -- Stone of Purity
+(22218,8906,1,1,2,6135), -- Ancient Spellbook: Miracle
+(22219,57,5493,11210,0,700000), -- Adena
+(22219,8627,1,1,2,3759), -- Elixir of Life (S-Grade)
+(22219,8633,1,1,2,1475), -- Elixir of Mental Strength (S-Grade)
+(22219,8342,1,1,1,590), -- Flaming Dragon Skull Piece
+(22219,8954,1,1,2,590), -- Blue Primeval Crystal
+(22219,5544,1,1,1,1770), -- Branch of The Mother Tree Head
+(22219,8349,1,1,1,1475), -- Doom Crusher Head
+(22219,8896,1,1,2,18182), -- Ancient Tactical Manual: Symbol of Energy
+(22219,8955,1,1,2,590), -- Green Primeval Crystal
+(22219,5533,1,1,1,3247), -- Elysian Head
+(22220,57,4893,9986,0,700000), -- Adena
+(22220,8627,1,1,2,1314), -- Elixir of Life (S-Grade)
+(22220,5534,1,1,1,5263), -- Soul Bow Stave
+(22220,8633,1,1,2,2188), -- Elixir of Mental Strength (S-Grade)
+(22220,8880,1,1,2,19608), -- Spellbook: Summon Spectral Knight
+(22220,8954,1,1,2,1751), -- Blue Primeval Crystal
+(22220,8955,1,1,2,1314), -- Green Primeval Crystal
+(22220,8956,1,1,2,438), -- Red Primeval Crystal
+(22220,1875,1,3,-1,680000), -- Stone of Purity
+(22221,57,5317,10840,0,700000), -- Adena
+(22221,8633,1,1,2,1828), -- Elixir of Mental Strength (S-Grade)
+(22221,8627,1,1,2,3289), -- Elixir of Life (S-Grade)
+(22221,5537,1,1,1,8065), -- Soul Separator Head
+(22221,11973,1,1,1,582), -- Common Item - Soul Separator
+(22221,8884,1,1,2,23256), -- Spellbook: Spell Turning
+(22221,8955,1,1,2,1464), -- Green Primeval Crystal
+(22221,8954,1,1,2,1464), -- Blue Primeval Crystal
+(22222,57,5157,10520,0,700000), -- Adena
+(22222,8955,1,1,2,343), -- Green Primeval Crystal
+(22222,8954,1,1,2,2278), -- Blue Primeval Crystal
+(22222,8956,1,1,2,343), -- Red Primeval Crystal
+(22222,960,1,1,2,228), -- Scroll: Enchant Armor (Grade S)
+(22222,8752,1,1,200,211), -- High-Grade Life Stone: level 76
+(22222,5538,1,1,1,5236), -- Dragon Grinder Edge
+(22222,1875,1,1,-1,630000), -- Stone of Purity
 (22223,57,4413,13460,0,700000), -- Adena
 (22223,8633,1,1,2,4149), -- Elixir of Mental Strength (S-Grade)
 (22223,8627,1,1,2,2070), -- Elixir of Life (S-Grade)
 (22223,5545,1,1,1,13333), -- Dark Legion\'s Edge Blade
-(22223,8898,1,1,1,20000), -- Ancient Tactical Manual: Symbol of the Assassin
-(22224,57,4461,13510,0,700000), -- Adena
-(22224,8627,1,1,2,5952), -- Elixir of Life (S-Grade
-(22224,8633,1,1,2,3968), -- Elixir of Mental Strength (S-Grade)
-(22224,8878,1,1,2,7937), -- Spellbook: Summon Feline King
-(22224,8342,1,1,1,3968), -- Flaming Dragon Skull Piece
-(22224,8349,1,1,1,1984), -- Doom Crusher Head
-(22224,5533,1,1,1,1984), -- Elysian Head
-(22224,8955,1,1,2,6849), -- Green Primeval Crystal
-(22224,8897,1,1,2,3968), -- Ancient Tactical Manual: Symbol of the Sniper
-(22224,8954,1,1,2,6849), -- Blue Primeval Crystal
-(22225,57,4289,13090,0,700000), -- Adena
-(22225,8879,1,1,2,20000), -- Spellbook: Summon Magnus the Unicorn
-(22225,8627,1,1,2,34842), -- Elixir of Life (S-Grade)
-(22225,5534,1,1,1,5747), -- Soul Bow Stave
-(22225,8954,1,1,2,2882), -- Blue Primeval Crystal
-(22225,8956,1,1,2,2882), -- Red Primeval Crystal
-(22226,57,5026,15220,0,700000), -- Adena
-(22226,5537,1,1,1,6024), -- Soul Separator Head
-(22226,8954,1,1,2,4525), -- Blue Primeval Crystal
-(22227,57,4389,13430,0,700000), -- Adena
-(22227,5538,1,1,1,3745), -- Dragon Grinder Edge
-(22227,8954,1,1,2,2500), -- Blue Primeval Crystal
-(22227,8956,1,1,2,625), -- Red Primeval Crystal
-(22227,960,1,1,2,625), -- Scroll: Enchant Armor (Grade S)
+(22223,8898,1,1,1,47619), -- Ancient Tactical Manual: Symbol of the Assassin
+(22224,57,56398,11510,0,700000), -- Adena
+(22224,5533,1,1,1,704), -- Elysian Head
+(22224,8349,1,1,1,704), -- Doom Crusher Head
+(22224,960,1,1,1,1408), -- Scroll: Enchant Armor (Grade S)
+(22224,5544,1,1,1,2817), -- Branch of The Mother Tree Head
+(22224,8342,1,1,1,2114), -- Flaming Dragon Skull Piece
+(22224,8955,1,1,2,2114), -- Green Primeval Crystal
+(22224,8954,1,1,2,2114), -- Blue Primeval Crystal
+(22224,6901,1,1,-1,7812), -- Recipe: Shining Arrow (100%)
+(22225,57,5361,10920,0,700000), -- Adena
+(22225,8888,1,1,2,25000), -- Amulet: Pa\'agrio\'s Fist
+(22225,8627,1,1,2,5747), -- Elixir of Life (S-Grade)
+(22225,8633,1,1,2,4098), -- Elixir of Mental Strength (S-Grade)
+(22225,5534,1,1,1,3279), -- Soul Bow Stave
+(22225,8954,1,1,2,1637), -- Blue Primeval Crystal
+(22225,1875,1,1,-1,620000), -- Stone of Purity
+(22226,57,6613,13420,0,700000), -- Adena
+(22226,5537,1,1,1,5025), -- Soul Separator Head
+(22226,960,1,1,2,1464), -- Scroll: Enchant Armor (Grade S)
+(22226,8954,1,1,2,643), -- Blue Primeval Crystal
+(22226,8955,1,1,2,643), -- Green Primeval Crystal
+(22226,11973,1,1,1,1185), -- Common Item - Soul Separator
+(22226,8752,1,1,200,457), -- High-Grade Life Stone: level 76
+(22226,6704,1,1,-1,250000), -- Sealed Imperial Crusader Boots Design
+(22226,1894,1,1,-1,640000), -- Crafted Leather
+(22227,57,4700,14230,0,700000), -- Adena
+(22227,5538,1,1,1,13513), -- Dragon Grinder Edge
+(22227,8954,1,1,2,1712), -- Blue Primeval Crystal
+(22227,8955,1,1,2,1712), -- Green Primeval Crystal
+(22227,1875,1,1,-1,620000), -- Stone of Purity
 (22228,57,8,12,0,700000), -- Adena
 (22228,116,1,1,1,27027), -- Magic Ring
 (22228,112,1,1,1,23255), -- Apprentice\'s Earring
@@ -26039,7 +26110,296 @@ INSERT INTO `droplist` VALUES
 (22288,57,6113,9156,0,700000), -- Adena
 (22288,1868,9,9,2,133000), -- Thread
 (22288,1873,3,6,2,250000), -- Silver Nugget
-(22288,1876,1,1,2,133000); -- Mithril Ore
+(22288,1876,1,1,2,133000), -- Mithril Ore
+(22320,57,16450,32990,0,700000), -- Adena
+(22320,9599,1,3,100,720000), -- Ancient Tome of the Demon
+(22320,9674,4,12,101,100000), -- Darion's Badge
+(22320,5522,1,1,1,12500), -- Sealed Armor of Nightmare Pattern
+(22320,5523,1,1,1,12048), -- Sealed Majestic Plate Armor Pattern
+(22320,12261,1,1,1,1852), -- Common Item - Sealed Armor of Nightmare
+(22320,12262,1,1,1,1064), -- Common Item - Sealed Majestic Plate Armor
+(22320,1895,1,3,2,200000), -- Metallic Fiber
+(22320,4040,1,1,2,40000), -- Mold Lubricant
+(22320,9628,1,1,2,15873), -- Leonard
+(22320,9630,1,1,2,9615), -- Orichalcum
+(22320,9551,1,1,200,16129), -- Divine Stone
+(22320,1895,1,17,-1,668500), -- Metallic Fiber
+(22320,4040,1,1,-1,421000), -- Mold Lubricant
+(22320,960,1,1,-1,9500), -- Scroll: Enchant Armor (S)
+(22321,57,15790,31660,0,700000), -- Adena
+(22321,9599,1,3,100,710000), -- Ancient Tome of the Demon
+(22321,9674,3,9,101,100000), -- Darion's Badge
+(22321,5487,1,1,1,14706), -- Sealed Robe of Nightmare Fabric
+(22321,5488,1,1,1,14925), -- Sealed Majestic Robe Fabric
+(22321,12266,1,1,1,2183), -- Common Item - Sealed Robe of Nightmare
+(22321,12259,1,1,1,1572), -- Common Item - Sealed Majestic Robe
+(22321,1344,900,2700,2,20408), -- Mithril Arrow
+(22321,1866,16,48,2,31250), -- Suede
+(22321,1885,1,1,2,125000), -- High Grade Suede
+(22321,1871,10,30,2,71429), -- Charcoal
+(22321,4041,1,1,2,12048), -- Mold Hardener
+(22321,5220,1,1,2,58824), -- Metal Hardener
+(22321,960,1,1,2,558), -- Scroll: Enchant Armor (S)
+(22321,9551,1,1,200,11628), -- Divine Stone
+(22321,6698,1,1,-1,264000), -- Sealed Tateossian Earring Part
+(22321,6901,1,1,-1,7000), -- Recipe: Shining Arrow (100%)
+(22321,6699,1,2,-1,303000), -- Sealed Tateossian Ring Gem
+(22324,57,3250,6517,0,700000), -- Adena
+(22324,9599,1,1,100,250000), -- Ancient Tome of the Demon
+(22324,9674,1,1,101,142857), -- Darion's Badge
+(22324,5495,1,1,1,7353), -- Sealed Shield of Nightmare Fragment
+(22324,5527,1,1,1,6667), -- Sealed Helm of Nightmare Design
+(22324,5528,1,1,1,5556), -- Sealed Majestic Circlet Design
+(22324,960,1,1,2,235), -- Scroll: Enchant Armor (S)
+(22324,12269,1,1,1,564), -- Common Item - Sealed Helm of Nightmare
+(22324,12268,1,1,1,1410), -- Common Item - Sealed Shield of Nightmare
+(22324,12261,1,1,1,846), -- Common Item - Sealed Majestic Circlet
+(22324,1864,4,12,2,83333), -- Stem
+(22324,1865,2,6,2,66667), -- Varnish
+(22324,1866,3,9,2,40000), -- Suede
+(22324,1868,10,30,2,32258), -- Thread
+(22324,1873,4,12,2,18182), -- Silver Nugget
+(22324,9551,1,1,200,1786), -- Divine Stone
+(22324,6901,1,1,-1,10000), -- Recipe: Shining Arrow (100%)
+(22324,6702,1,1,-1,125000), -- Sealed Imperial Crusader Gaiters Pattern
+(22325,57,2914,5843,0,700000), -- Adena
+(22325,9599,1,1,100,250000), -- Ancient Tome of the Demon
+(22325,9674,1,1,101,111111), -- Darion's Badge
+(22325,5495,1,1,1,6711), -- Sealed Shield of Nightmare Fragment
+(22325,5527,1,1,1,5525), -- Sealed Helm of Nightmare Design
+(22325,5528,1,1,1,5587), -- Sealed Majestic Circlet Design
+(22325,6901,1,1,2,437), -- Recipe: Shining Arrow (100%)
+(22325,12269,1,1,1,631), -- Common Item - Sealed Helm of Nightmare
+(22325,12268,1,1,1,631), -- Common Item - Sealed Shield of Nightmare
+(22325,12261,1,1,1,1214), -- Common Item - Sealed Majestic Circlet
+(22325,1344,40,120,2,90909), -- Mithril Arrow
+(22325,1867,1,3,2,125000), -- Animal Skin
+(22325,1869,2,6,2,62500), -- Iron Ore
+(22325,1870,3,9,2,43478), -- Coal
+(22325,1871,3,9,2,38462), -- Charcoal
+(22325,1872,8,24,2,20833), -- Animal Bone
+(22325,9551,1,1,200,1555), -- Divine Stone
+(22325,6703,1,1,-1,125000), -- Sealed Imperial Crusader Gauntlets Design
+(22325,960,1,1,-1,5000), -- Scroll: Enchant Armor (S)
+(22327,57,32180,64520,0,700000), -- Adena
+(22327,9599,2,6,100,690000), -- Ancient Tome of the Demon
+(22327,9674,25,75,101,28571), -- Darion's Badge
+(22327,8349,1,1,1,3623), -- Doom Crusher Head
+(22327,5533,1,1,1,7246), -- Elysian Head
+(22327,5544,1,1,1,5814), -- Branch Of The Mother Tree Head
+(22327,8342,1,1,1,5882), -- Flaming Dragon Skull Piece
+(22327,960,1,1,2,871), -- Scroll: Enchant Armor (S)
+(22327,11970,1,1,1,653), -- Common Item - Branch of The Mother Tree
+(22327,11974,1,1,1,218), -- Common Item - Elysian
+(22327,11969,1,1,1,145), -- Common Item - Flaming Dragon Skull
+(22327,11966,1,1,1,363), -- Common Item - Doom Crusher
+(22327,1868,199,587,2,19231), -- Thread
+(22327,1873,18,54,2,33333), -- Silver Nugget
+(22327,1876,4,12,2,83333), -- Mithril Ore
+(22327,1895,3,9,2,166667), -- Metallic Fiber
+(22327,4042,1,1,2,58824), -- Enria
+(22327,9551,1,1,200,23256), -- Divine Stone
+(22327,6706,1,1,-1,100000), -- Sealed Imperial Crusader Helmet Pattern
+(22327,6705,1,1,-1,100000), -- Sealed Imperial Crusader Shield Part
+(22327,6901,1,1,-1,10000), -- Recipe: Shining Arrow (100%)
+(22328,57,13000,26080,0,700000), -- Adena
+(22328,9599,1,3,100,590000), -- Ancient Tome of the Demon
+(22328,9674,1,3,101,166667), -- Darion's Badge
+(22328,5538,1,1,1,20833), -- Dragon Grinder Edge
+(22328,11967,1,1,1,3401), -- Common Item - Dragon Grinder
+(22328,1879,1,1,2,142857), -- Cokes
+(22328,1885,1,1,2,90909), -- High Grade Suede
+(22328,9628,1,1,2,6250), -- Leonard
+(22328,9630,1,1,2,5618), -- Orichalcum
+(22328,9629,1,1,2,9346), -- Adamantine
+(22328,6901,1,1,1,396), -- Recipe: Shining Arrow (100%)
+(22328,9551,1,1,200,15873), -- Divine Stone
+(22328,9573,1,1,200,4115), -- Life Stone: level 80
+(22328,9574,1,1,200,4673), -- Mid-Grade Life Stone: level 80
+(22328,9575,1,1,200,158), -- High-Grade Life Stone: level 80
+(22328,1885,1,5,-1,700000), -- High Grade Suede
+(22329,57,33230,66640,0,700000), -- Adena
+(22329,9599,2,6,100,680000), -- Ancient Tome of the Demon
+(22329,9674,14,42,101,52632), -- Darion's Badge
+(22229,5534,1,1,1,28571), -- Soul Bow Stave
+(22229,11975,1,1,1,3460), -- Common Item - Soul Bow
+(22329,1344,360,1080,2,125000), -- Mithril Arrow
+(22329,1895,21,60,2,32258), -- Metallic Fiber
+(22329,4040,1,1,2,71429), -- Mold Lubricant
+(22329,9628,1,1,2,25000), -- Leonard
+(22329,9630,1,1,2,15625), -- Orichalcum
+(22329,9551,1,1,200,33333), -- Divine Stone
+(22329,959,1,1,2,216), -- Scroll: Enchant Weapon (Grade S)
+(22329,6707,1,1,-1,55000), -- Sealed Draconic Leather Armor Part
+(22329,6708,1,1,-1,210000), -- Sealed Draconic Leather Gloves Fabric
+(22329,6901,1,1,-1,10000), -- Recipe: Shining Arrow (100%)
+(22330,57,2044,4100,0,700000), -- Adena
+(22330,9599,1,1,100,200000), -- Ancient Tome of the Demon
+(22330,5537,1,1,1,2469), -- Soul Separator Head
+(22330,11973,1,1,1,252), -- Common Item - Soul Separator
+(22330,1879,1,1,2,28571), -- Cokes
+(22330,1885,1,1,2,13158), -- High Grade Suede
+(22330,9628,1,1,2,1362), -- Leonard
+(22330,9630,1,1,2,807), -- Orichalcum
+(22330,9629,1,1,2,555), -- Adamantine
+(22330,960,1,1,2,151), -- Scroll: Enchant Armor (S)
+(22330,9573,1,1,200,908), -- Life Stone: level 80
+(22330,9574,1,1,200,404), -- Mid-Grade Life Stone: level 80
+(22330,9575,1,1,200,50), -- High-Grade Life Stone: level 80
+(22330,9576,1,1,200,50), -- Top-Grade Life Stone: level 80
+(22330,6709,1,1,-1,125000), -- Sealed Draconic Leather Boots Design
+(22330,960,1,1,-1,5000), -- Scroll: Enchant Armor (S)
+(22330,6901,1,1,-1,10000), -- Recipe: Shining Arrow (100%)
+(22335,57,13130,26260,0,700000), -- Adena
+(22335,9599,2,6,100,570000), -- Ancient Tome of the Demon
+(22335,10012,4,12,101,32258), -- Scorpion Poison stinger
+(22335,5487,1,1,1,12195), -- Sealed Robe of Nightmare Fabric
+(22335,5488,1,1,1,14286), -- Sealed Majestic Robe Fabric
+(22335,12266,1,1,1,1319), -- Common Item - Sealed Robe of Nightmare
+(22335,12259,1,1,1,1715), -- Common Item - Sealed Majestic Robe
+(22335,1868,15,45,2,90909), -- Thread
+(22335,1873,2,6,2,142857), -- Silver Nugget
+(22335,1876,3,9,2,40000), -- Mithril Ore
+(22335,1895,3,9,2,66667), -- Metallic Fiber
+(22335,4042,1,1,2,16949), -- Enria
+(22335,9549,1,1,200,11905), -- Wind Stone
+(22335,6714,1,1,-1,240000), -- Sealed Major Arcana Circlet Pattern
+(22335,7579,1,1,-1,30000), -- Draconic Bow Shaft
+(22335,6901,1,1,-1,10000), -- Recipe: Shining Arrow (100%)
+(22337,57,4087,8165,0,700000), -- Adena
+(22337,9599,1,1,100,333333), -- Ancient Tome of the Demon
+(22337,5514,1,1,1,7576), -- Sealed Gloves of Nightmare Design
+(22337,5503,1,1,1,5682), -- Sealed Majestic Boots Lining
+(22337,5515,1,1,1,4926), -- Sealed Majestic Gloves Design
+(22337,5502,1,1,1,6849), -- Sealed Boots of Nightmare Lining
+(22337,12264,1,1,1,1520), -- Common Item - Sealed Gloves of Nightmare
+(22337,12267,1,1,1,760), -- Common Item - Sealed Boots of Nightmare
+(22337,12257,1,1,1,380), -- Common Item - Sealed Majestic Gloves
+(22337,12260,1,1,1,1520), -- Common Item - Sealed Majestic Boots
+(22337,1871,1,3,2,250000), -- Charcoal
+(22337,1866,1,3,2,100000), -- Suede
+(22337,1877,1,1,2,17544), -- Adamantite Nugget
+(22337,4040,1,1,2,12500), -- Mold Lubricant
+(22337,4041,1,1,2,3413), -- Mold Hardener
+(22337,6901,1,1,1,380), -- Recipe: Shining Arrow (100%)
+(22337,9549,1,1,200,1898), -- Wind Stone
+(22339,57,2113,4227,0,700000), -- Adena
+(22339,9599,1,1,100,166667), -- Ancient Tome of the Demon
+(22339,9676,1,1,101,15625), -- Mark of Betrayal
+(22339,5545,1,1,1,741), -- Dark Legion's Edge Blade
+(22339,5546,1,1,1,1335), -- Sword of Miracles Edge
+(22339,5529,1,1,1,1335), -- Dragon Slayer Edge
+(22339,11964,1,1,1,198), -- Common Item - Dark Legion's Edge
+(22339,11971,1,1,1,198), -- Common Item - Sword of Miracles 
+(22339,11968,1,1,1,198), -- Common Item - Dragon Slayer
+(22339,1879,1,1,2,40000), -- Cokes
+(22339,1885,1,1,2,20000), -- High Grade Suede
+(22339,9628,1,1,2,2667), -- Leonard
+(22339,9630,1,1,2,1631), -- Orichalcum
+(22339,9629,1,1,2,1779), -- Adamantine
+(22339,1885,1,1,-1,500000), -- High Grade Suede
+(22339,8715,1,1,-1,50000), -- Behemoth\'s Tuning Fork Piece
+(22340,57,12710,25420,0,700000), -- Adena
+(22340,9599,1,3,100,510000), -- Ancient Tome of the Demon
+(22340,8349,1,1,1,2825), -- Doom Crusher Head
+(22340,5533,1,1,1,2123), -- Elysian Head
+(22340,5544,1,1,1,1414), -- Branch Of The Mother Tree Head
+(22340,8342,1,1,1,4237), -- Flaming Dragon Skull Piece
+(22340,1895,1,3,2,250000), -- Metallic Fiber
+(22340,4040,1,1,2,32258), -- Mold Lubricant
+(22340,9628,1,1,2,16393), -- Leonard
+(22340,9630,1,1,2,7092), -- Orichalcum
+(22340,9549,1,1,200,11364), -- Wind Stone
+(22340,6901,1,1,-1,50000), -- Recipe: Shining Arrow (100%)
+(22340,8716,1,1,-1,125000), -- Naga Storm Piece
+(22349,57,28010,56050,0,700000), -- Adena
+(22349,9599,2,6,100,610000), -- Ancient Tome of the Demon
+(22349,9680,1,1,101,13699), -- Dim Life Force
+(22349,9681,1,1,101,3012), -- Life Force
+(22349,5480,1,1,1,25000), -- Sealed Leather Armor of Nightmare Fabric
+(22349,5481,1,1,1,26316), -- Sealed Majestic Leather Armor Fabric
+(22349,960,1,1,2,1855), -- Scroll: Enchant Armor (S)
+(22349,12265,1,1,1,3704), -- Common Item - Sealed Leather Armor of Nightmare
+(22349,12258,1,1,1,3472), -- Common Item - Sealed Majestic Leather Armor
+(22349,1895,12,36,2,43478), -- Metallic Fiber
+(22349,4040,1,1,2,62500), -- Mold Lubricant
+(22349,1344,300,900,2,142857), -- Mithril Arrow
+(22349,9628,1,1,2,27778), -- Leonard
+(22349,9630,1,1,2,20833), -- Orichalcum
+(22349,9549,1,1,200,27027), -- Wind Stone
+(22349,6901,1,2,-1,155000), -- Recipe: Shining Arrow (100%)
+(22349,6690,1,1,-1,125000), -- Imperial Staff Head
+(22350,57,29130,58280,0,700000), -- Adena
+(22350,9599,2,6,100,630000), -- Ancient Tome of the Demon
+(22350,9680,1,1,101,25641), -- Dim Life Force
+(22350,9681,1,1,101,6803), -- Life Force
+(22350,5480,1,1,1,25000), -- Sealed Leather Armor of Nightmare Fabric
+(22350,5481,1,1,1,28571), -- Sealed Majestic Leather Armor Fabric
+(22350,6901,1,1,2,3401), -- Recipe: Shining Arrow (100%)
+(22350,12265,1,1,1,3155), -- Common Item - Sealed Leather Armor of Nightmare
+(22350,12258,1,1,1,4854), -- Common Item - Sealed Majestic Leather Armor
+(22350,1879,3,9,2,90909), -- Cokes
+(22350,1885,1,1,2,250000), -- High Grade Suede
+(22350,9628,1,1,2,29412), -- Leonard
+(22350,9630,1,1,2,20833), -- Orichalcum
+(22350,9629,1,1,2,14493), -- Adamantine
+(22350,9551,1,1,200,30303), -- Divine Stone
+(22350,6691,1,1,-1,125000), -- Angel Slayer Blade
+(22350,959,1,1,-1,8000), -- Scroll: Enchant Weapon (Grade S)
+(22351,57,29120,58280,0,700000), -- Adena
+(22351,9599,2,6,100,630000), -- Ancient Tome of the Demon
+(22351,9680,1,1,101,55556), -- Dim Life Force
+(22351,9681,1,1,101,9174), -- Life Force
+(22351,5545,1,1,1,13699), -- Dark Legion's Edge Blade
+(22351,5546,1,1,1,12346), -- Sword of Miracles Edge
+(22351,5529,1,1,1,10417), -- Dragon Slayer Edge
+(22351,11964,1,1,1,241), -- Common Item - Dark Legion's Edge
+(22351,11971,1,1,1,241), -- Common Item - Sword of Miracles 
+(22351,11968,1,1,1,241), -- Common Item - Dragon Slayer
+(22351,1868,15,45,2,142857), -- Thread
+(22351,1873,16,48,2,29412), -- Silver Nugget
+(22351,1876,3,9,2,66667), -- Mithril Ore
+(22351,1895,3,9,2,111111), -- Metallic Fiber
+(22351,4042,1,1,2,34483), -- Enria
+(22351,959,1,1,2,241), -- Scroll: Enchant Weapon (Grade S)
+(22351,9548,1,1,200,16129), -- Earth Stone
+(22351,9573,1,1,200,14925), -- Life Stone: level 80
+(22351,9574,1,1,200,3861), -- Mid-Grade Life Stone: level 80
+(22351,9576,1,1,200,241), -- Top-Grade Life Stone: level 80
+(22351,6901,1,1,-1,10000), -- Recipe: Shining Arrow (100%)
+(22351,1895,1,29,-1,900000), -- Metallic Fiber
+(22351,6693,1,1,-1,125000), -- Dragon Hunter Axe Blade
+(22352,57,28140,56290,0,700000), -- Adena
+(22352,9599,2,6,100,600000), -- Ancient Tome of the Demon
+(22352,9680,1,1,101,520000), -- Dim Life Force
+(22352,9681,1,1,101,125000), -- Life Force
+(22352,5545,1,1,1,8000), -- Dark Legion's Edge Blade
+(22352,5546,1,1,1,12048), -- Sword of Miracles Edge
+(22352,5529,1,1,1,10526), -- Dragon Slayer Edge
+(22352,11964,1,1,1,728), -- Common Item - Dark Legion's Edge
+(22352,11971,1,1,1,2183), -- Common Item - Sword of Miracles 
+(22352,11968,1,1,1,1093), -- Common Item - Dragon Slayer
+(22352,1868,140,404,2,27778), -- Thread
+(22352,1873,16,48,2,45455), -- Silver Nugget
+(22352,1876,3,9,2,100000), -- Mithril Ore
+(22352,1895,3,9,2,166667), -- Metallic Fiber
+(22352,4042,1,1,2,58824), -- Enria
+(22352,960,1,1,2,1093), -- Scroll: Enchant Armor (S)
+(22352,9546,1,1,200,26316), -- Fire Stone
+(22352,6901,1,1,-1,10000), -- Recipe: Shining Arrow (100%)
+(22352,6695,1,1,-1,125000), -- Demon Splinter Blade
+(22352,6694,1,1,-1,125000), -- Saint Spear Blade
+(22359,57,4236,8436,0,700000), -- Adena
+(22359,9599,1,1,100,333333), -- Ancient Tome of the Demon
+(22359,5534,1,1,1,6849), -- Soul Bow Stave
+(22359,1895,1,1,2,142857), -- Metallic Fiber
+(22359,4040,1,1,2,15873), -- Mold Lubricant
+(22359,9628,1,1,2,2283), -- Leonard
+(22359,9630,1,1,2,3425), -- Orichalcum
+(22359,960,1,1,2,1142), -- Scroll: Enchant Armor (S)
+(22359,9551,1,1,200,1142), -- Divine Stone
+(22359,1895,1,5,-1,700000), -- Metallic Fiber
+(22359,6701,1,1,-1,55000); -- Sealed Imperial Crusader Breastplate Part
 
 --
 -- Category Explanation (RaidBoss & their minions)
