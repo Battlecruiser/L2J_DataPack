@@ -503,7 +503,7 @@
 <skill id="317" levels="5" name="Focus Attack">
   <!-- has estimations for values based on L2P - needs to be finished -->
   <table name="#mpConsume"> 18 22 27 31 34 </table>
-  <table name="#crit"> 1.1 1.1 1.1 1.1 1.1 </table>
+  <table name="#crit"> 1.05 1.1 1.15 1.2 1.3 </table>
   <table name="#Accuracy"> 3 3 4 5 5 </table>
   <table name="#atkCountMax"> 1 1 1 1 1 </table>
   <set name="weaponsAllowed" val="64"/> <!-- Pole -->
@@ -622,6 +622,7 @@
   <set name="coolTime" val="720"/>
   <set name="skillType" val="BLOW"/>
   <set name="lethal1" val="5"/>
+  <set name="overHit" val="true"/>
   <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
