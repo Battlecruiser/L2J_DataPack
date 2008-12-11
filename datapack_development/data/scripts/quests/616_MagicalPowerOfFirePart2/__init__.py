@@ -128,8 +128,8 @@ class Quest (JQuest) :
                    npc.setBusy(True)
                    self.startQuestTimer("Soul of Fire Nastron has despawned",1200000,spawnedNpc,None)
                    AutoChat(spawnedNpc,"The fire charm then is the flame and the lava strength! Opposes with it only has the blind alley!")
-        elif id == 3 :
-            htmltext = "31558-05.htm"
+            elif id == 3 :
+                htmltext = "31558-05.htm"
     return htmltext
 
  def onKill(self,npc,player,isPet):
