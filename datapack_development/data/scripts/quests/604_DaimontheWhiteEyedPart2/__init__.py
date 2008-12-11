@@ -1,4 +1,4 @@
-#Made by Kerb 
+#Made by Kerb
 import sys 
 from net.sf.l2j.gameserver.model.quest import State 
 from net.sf.l2j.gameserver.model.quest import QuestState 
@@ -75,11 +75,11 @@ class Quest (JQuest) :
       if st.getQuestItemsCount(ESSENCE) >= 1 : 
          st.takeItems(ESSENCE,1) 
          st.giveItems(REWARDS[st.getRandom(len(REWARDS))],5) 
-         st.playSound("ItemSound.quest_finish") 
+         st.playSound("ItemSound.quest_finish")
          st.exitQuest(1) 
-         htmletext = "31683-04.htm" 
-      else: 
-         htmletext = "31683-05.htm" 
+         htmltext = "31683-04.htm"
+      else:
+         htmltext = "31683-05.htm" 
          st.exitQuest(1) 
    return htmltext 
 
@@ -122,7 +122,7 @@ class Quest (JQuest) :
      return htmltext 
 
  def onKill(self,npc,player,isPet):
-     npcId = npc.getNpcId() 
+     npcId = npc.getNpcId()
      if npcId == DAIMON :
         FindTemplate(ALTAR).setBusy(False) 
         self.cancelQuestTimer("Daimon the White-Eyed has despawned",npc,None)
