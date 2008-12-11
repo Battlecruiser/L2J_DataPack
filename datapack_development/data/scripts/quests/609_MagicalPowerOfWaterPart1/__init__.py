@@ -66,7 +66,7 @@ class Quest (JQuest) :
            if aggro == 1 :
                htmltext = "31561-04.htm"
            else :
-               htmletext = "31561-03.htm"
+               htmltext = "31561-03.htm"
                st.giveItems(Totem,1)
                st.set("id","5")
                st.set("cond","3")
