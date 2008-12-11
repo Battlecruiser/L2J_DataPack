@@ -78,9 +78,9 @@ class Quest (JQuest) :
          st.takeItems(MEAT,1)
          st.giveItems(REWARDS[st.getRandom(len(REWARDS))],5)
          st.exitQuest(1)
-         htmletext = "31521-04.htm"
+         htmltext = "31521-04.htm"
       else:
-         htmletext = "31521-05.htm"
+         htmltext = "31521-05.htm"
          st.exitQuest(1)
    return htmltext
 
