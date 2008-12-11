@@ -1479,6 +1479,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="weaponsAllowed" val="51212"/> <!-- Ancient/Sword/Big Sword/Blunt/Big Blunt -->
   <set name="skillType" val="PDAM"/>
+  <set name="overHit" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="reuseDelay" val="13000"/>
   <set name="hitTime" val="1500"/>
@@ -1772,6 +1773,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="target" val="TARGET_FRONT_AREA"/>
   <set name="skillRadius" val="#castRange"/>
+  <set name="overHit" val="true"/>
   <set name="SSBoost" val="2.0"/>
   <set name="reuseDelay" val="13000"/>
   <set name="hitTime" val="800"/>
@@ -1799,6 +1801,7 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="50"/>
   <set name="hitTime" val="800"/>
+  <set name="overHit" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="STUN"/>
@@ -1832,6 +1835,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="40"/> <!-- Base Land Rate --> <!-- Guessing -->
   <set name="lvlDepend" val="2"/>
+  <set name="overHit" val="true"/>
   <set name="skillType" val="BLEED"/>
   <set name="castRange" val="#castRange"/>
   <set name="effectRange" val="#effectRange"/>

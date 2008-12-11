@@ -97,6 +97,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="weaponsAllowed" val="512"/> <!-- Dual Sword -->
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="overHit" val="true"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="SSBoost" val="2.0"/>
@@ -161,6 +162,7 @@
   <set name="skillRadius" val="150"/>
   <set name="SSBoost" val="2.0"/>
   <set name="condition" val="128"/>
+  <set name="overHit" val="true"/>
   <set name="reuseDelay" val="13000"/>
   <set name="hitTime" val="1900"/>
   <set name="skillType" val="CHARGEDAM"/>
@@ -213,6 +215,7 @@
   <set name="SSBoost" val="2.0"/>
   <set name="target" val="TARGET_MULTIFACE"/>
   <set name="skillRadius" val="200"/>
+  <set name="overHit" val="true"/>
   <set name="condition" val="128"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="720"/>
@@ -365,6 +368,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_MULTIFACE"/>
+  <set name="overHit" val="true"/>
   <set name="skillRadius" val="200"/>
   <set name="SSBoost" val="2.0"/>
   <set name="condition" val="128"/>
@@ -713,6 +717,7 @@
   <set name="hitTime" val="2000"/>
   <set name="skillType" val="CHARGEDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="overHit" val="true"/>
   <set name="castRange" val="500"/>
   <set name="effectRange" val="1000"/>
   <set name="baseCritRate" val="15"/>

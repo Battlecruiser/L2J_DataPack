@@ -958,6 +958,7 @@
   <set name="condition" val="128"/>
   <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="1667"/>
+  <set name="overHit" val="true"/>
   <set name="coolTime" val="133"/>
   <set name="skillType" val="CHARGEDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1674,7 +1675,7 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
-  <set name="element" val="1"/> <!-- Wind -->
+  <set name="overHit" val="true"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="ignoreShld" val="true"/>
   <set name="condition" val="128"/>
