@@ -2086,7 +2086,7 @@ INSERT INTO `weapon` VALUES
 (11129,'Tallum Glaive - On Fire - Guidance','lrhand','true',1840,1,1,'fine_steel','a',232,10,'pole',8,-3,0,0,0,325,0,114,-1,27000000,1659,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (11130,'Tallum Glaive - On Fire - Health','lrhand','true',1840,1,1,'fine_steel','a',232,10,'pole',8,-3,0,0,0,325,0,114,-1,27000000,1659,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3013-3;'),
 (11131,'Tallum Glaive - On Fire - Wide Blow','lrhand','true',1840,1,1,'fine_steel','a',232,10,'pole',8,-3,0,0,0,325,0,114,-1,27000000,1659,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
-(11132,'Enchanted Cerberus Fang','rhand','false',100,0,0,'fine_steel','none',413,10,'sword',8,0,0,0,0,277,0,5,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
+(11132,'Enchanted Cerberus Fang','greatwolf','false',100,1,1,'wood','none',413,10,'pet',8,0,0,0,0,277,0,5,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (11133,'Naga Storm - Molar','lrhand','true',930,1,1,'fine_steel','a',220,5,'dagger',12,-3,0,0,0,433,0,121,-1,26970000,2157,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (11134,'Naga Storm - Molar - Focus','lrhand','true',930,1,1,'fine_steel','a',220,5,'dagger',12,-3,0,0,0,433,0,121,-1,26970000,2157,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (11135,'Naga Storm - Molar - Critical Damage','lrhand','true',930,1,1,'fine_steel','a',220,5,'dagger',12,-3,0,0,0,433,0,121,-1,26970000,2157,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
