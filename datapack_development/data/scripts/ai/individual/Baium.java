@@ -371,23 +371,13 @@ public class Baium extends L2AttackableAIScript
 				if (obj instanceof L2Character)
 				{
 					if (((L2Character) obj).getZ() < ( npc.getZ() - 100 ) && ((L2Character) obj).getZ() > ( npc.getZ() + 100 )
-							|| !(GeoData.getInstance().canSeeTarget(((L2Character) obj).getX(), ((L2Character) obj).getY(), ((L2Character) obj).getZ(), npc.getX(), npc.getY(), npc.getZ())))
+							|| !(GeoData.getInstance().canSeeTarget(((L2Character) obj).getX(), ((L2Character) obj).getY(), ((L2Character) obj).getZ(), npc.getX(), npc.getY(), npc.getZ()))||((L2Character) obj).isGM())
 						continue;
 				}
-				if (obj instanceof L2PcInstance)
+				if (obj instanceof L2PcInstance || obj instanceof L2Summon || obj instanceof L2DecoyInstance)
 				{
 					if (Util.checkIfInRange(9000, npc, obj, true) && !((L2Character) obj).isDead())
-						result.add((L2PcInstance) obj);
-				}
-				if (obj instanceof L2Summon)
-				{
-					if (Util.checkIfInRange(9000, npc, obj, true) && !((L2Character) obj).isDead())
-						result.add((L2Summon) obj);
-				}
-				if (obj instanceof L2DecoyInstance)
-				{
-					if (Util.checkIfInRange(9000, npc, obj, true) && !((L2Character) obj).isDead())
-						result.add((L2DecoyInstance) obj);
+						result.add((L2Character) obj);
 				}
 			}
 		}

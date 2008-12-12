@@ -1320,20 +1320,10 @@ public class Valakas extends L2AttackableAIScript
 		{
 			for (L2Object obj : objs)
 			{
-				if (obj instanceof L2PcInstance)
+				if (obj instanceof L2PcInstance || obj instanceof L2Summon || obj instanceof L2DecoyInstance)
 				{
-					if (Util.checkIfInRange(5000, npc, obj, true) && !((L2Character) obj).isDead())
-						result.add((L2PcInstance) obj);
-				}
-				if (obj instanceof L2Summon)
-				{
-					if (Util.checkIfInRange(5000, npc, obj, true) && !((L2Character) obj).isDead())
-						result.add((L2Summon) obj);
-				}
-				if (obj instanceof L2DecoyInstance)
-				{
-					if (Util.checkIfInRange(5000, npc, obj, true) && !((L2Character) obj).isDead())
-						result.add((L2DecoyInstance) obj);
+					if (Util.checkIfInRange(5000, npc, obj, true) && !((L2Character) obj).isDead() && !((L2Character) obj).isGM())
+						result.add((L2Character) obj);
 				}
 			}
 		}
