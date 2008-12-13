@@ -146,7 +146,7 @@ INSERT INTO armorsets VALUES (84,  10239, 9437, 9438, 9439, 9440, 3648, 1,    0,
 
 INSERT INTO armorsets VALUES (85,  10487, 9421, 9422, 9423, 9424, 3642, 1,    0,    0,    3624);   -- Dynasty Jeweled Leather Armor Force Master
 INSERT INTO armorsets VALUES (86,  10488, 9421, 9422, 9423, 9424, 3643, 1,    0,    0,    3624);   -- Dynasty Jeweled Leather Armor Weapon Master
-INSERT INTO armorsets VALUES (87,  10489, 9437, 9438, 9439, 9440, 3805, 1,    0,    0,    3624);   -- Dynasty Jeweled Leather Armor Enchanter
+INSERT INTO armorsets VALUES (87,  10489, 9437, 9438, 9439, 9440, 3646, 1,    0,    0,    3624);   -- Dynasty Jeweled Leather Armor Enchanter
 INSERT INTO armorsets VALUES (88,  10490, 9437, 9438, 9439, 9440, 3644, 1,    0,    0,    3624);   -- Dynasty Jeweled Leather Armor Summoner
 
 -- PVP Armor Sets
