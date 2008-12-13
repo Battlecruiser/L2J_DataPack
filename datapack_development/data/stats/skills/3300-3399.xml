@@ -358,7 +358,7 @@
     <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 effect -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Darkness resistance is increased +8 -->
     <mul order="0x30" stat="gainHp" val="1.03"/> <!-- Received Increased Heal +3% -->
-    <mul order="0x30" stat="stunVuln" val="0.97"/> <!-- Shock resistance is increased +? --> <!-- Guessing -->
+    <mul order="0x30" stat="stunVuln" val="0.50"/> <!-- Shock resistance is increased +50% -->
   </for>
 </skill>
 <skill id="3349" levels="1" name="Dynasty Breast Plate - Weapon Master">
@@ -374,7 +374,8 @@
     <mul order="0x30" stat="pAtk" val="1.054"/> <!-- P. Atk +5.4% -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- MaxHP +492 -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
-    <basemul order="0x30" stat="rCrit" val="0.03"/> <!-- Critical Damage Chance +? --> <!-- Guessing -->
+    <basemul order="0x30" stat="rCrit" val="0.0246"/> <!-- Critical Damage Chance +2.46% -->
+    <add order="0x40" stat="cAtkAdd" val="234"/> <!-- Critical Damage +234 -->
   </for>
 </skill>
 <skill id="3350" levels="1" name="Dynasty Breast Plate - Force Master">
@@ -390,7 +391,7 @@
     <mul order="0x30" stat="pAtk" val="1.054"/> <!-- P. Atk. +5.4% -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- HP +492 -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Resistance to Darkness attacks +8 -->
-    <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.97"/> <!-- MP consumption of the active skill is decreased +? --> <!-- Guessing -->
+    <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95"/> <!-- MP consumption of the active skill is decreased -5% -->
   </for>
 </skill>
 <skill id="3351" levels="1" name="Dynasty Breast Plate - Bard">
@@ -406,7 +407,7 @@
     <mul order="0x30" stat="pDef" val="1.054"/> <!-- P. Def. +5.4% -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 effect -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark resistance +8 -->
-    <mul order="0x30" stat="DanceMpConsumeRate" val="0.97"/> <!-- MP consumption is decreased when song and dance skills are used +? --> <!-- Guessing -->
+    <mul order="0x30" stat="DanceMpConsumeRate" val="0.97"/> <!-- MP consumption is decreased when song and dance skills are used -5% -->
   </for>
 </skill>
 <skill id="3352" levels="1" name="Dynasty Leather Armor - Dagger Master">
@@ -422,8 +423,8 @@
     <add order="0x40" stat="rEvas" val="4.3"/> <!-- Evasion +4.3 -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 Effect -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark resistance +8 -->
-    <mul order="0x30" stat="rootVuln" val="0.97"/> <!-- Hold resistance are increased +? --> <!-- Guessing -->
-    <mul order="0x30" stat="pAtkSpd" val="1.03"/> <!-- Atk. Spd. are increased +? --> <!-- Guessing -->
+    <mul order="0x30" stat="rootVuln" val="0.87"/> <!-- Hold resistance are increased +13 -->
+    <mul order="0x30" stat="pAtkSpd" val="1.0266"/> <!-- Atk. Spd. are increased +2.66% -->
   </for>
 </skill>
 <skill id="3353" levels="1" name="Dynasty Leather Armor - Bow Master">
@@ -439,8 +440,8 @@
     <add order="0x40" stat="accCombat" val="4.3"/> <!-- Accuracy +4.3 -->
     <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 Effect -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark resistance +8 -->
-    <mul order="0x30" stat="pAtkSpd" val="1.03"/> <!-- Atk. Spd. are increased +? --> <!-- Guessing -->
-    <add order="0x40" stat="regMp" val="3.0"/> <!-- MP recovery are increased +? --> <!-- Guessing -->
+    <mul order="0x30" stat="pAtkSpd" val="1.0266"/> <!-- Atk. Spd. are increased +2.66% -->
+    <add order="0x40" stat="regMp" val="1.72"/> <!-- MP recovery are increased +1.72 -->
   </for>
 </skill>
 <skill id="3354" levels="1" name="Dynasty Tunic - Healer">
@@ -456,8 +457,8 @@
     <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
     <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
-    <mul order="0x30" stat="giveHp" val="1.03"/> <!-- Increase amount of heal +? --> <!-- Guessing -->
-    <sub order="0x40" stat="cancel" val="15"/> <!-- Decrease magic cancel rate +? --> <!-- Guessing -->
+    <mul order="0x30" stat="giveHp" val="1.20"/> <!-- Increase amount of heal +20% -->
+    <sub order="0x40" stat="cancel" val="15"/> <!-- Decrease magic cancel rate -15% -->
    </for>
 </skill>
 <skill id="3355" levels="1" name="Dynasty Tunic - Enchanter">
@@ -473,8 +474,8 @@
     <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
     <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
-    <mul order="0x30" stat="MagicalMpConsumeRate" val="0.97"/> <!-- decrease MP consumption +? --> <!-- Guessing -->
-    <sub order="0x40" stat="cancel" val="15"/> <!-- Decrease magic cancel rate +? --> <!-- Guessing -->
+    <mul order="0x30" stat="MagicalMpConsumeRate" val="0.95"/> <!-- Decrease MP consumption -5% -->
+    <sub order="0x40" stat="cancel" val="15"/> <!-- Decrease magic cancel rate -15% -->
   </for>
 </skill>
 <skill id="3356" levels="1" name="Dynasty Tunic - Summoner">
@@ -490,8 +491,8 @@
     <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
     <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
-    <mul order="0x30" stat="pAtk" val="1.03"/> <!-- Increase P. Atk. +? --> <!-- Guessing -->
-    <mul order="0x30" stat="pDef" val="1.03"/> <!-- P. Def. +? --> <!-- Guessing -->
+    <mul order="0x30" stat="pAtk" val="1.026"/> <!-- Increase P. Atk. +2.6% -->
+    <mul order="0x30" stat="pDef" val="1.026"/> <!-- P. Def. +2.6% -->
   </for>
 </skill>
 <skill id="3357" levels="1" name="Dynasty Tunic - Wizard">
@@ -502,14 +503,13 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <add order="0x10" stat="INT" val="2"/> <!-- Int +2 -->
+    <add order="0x10" stat="INT" val="1"/> <!-- Int +1 -->
     <add order="0x10" stat="WIT" val="1"/> <!-- Wit +1 -->
     <sub order="0x10" stat="MEN" val="2"/> <!-- Men -2 -->
     <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
     <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
-    <mul order="0x30" stat="stunVuln" val="0.97"/> <!-- Increase stun resistance +? --> <!-- Guessing -->
-    <mul order="0x30" stat="mAtk" val="1.03"/> <!-- Increase M. Atk +? --> <!-- Guessing -->
+    <mul order="0x30" stat="mAtk" val="1.054"/> <!-- Increase M. Atk +5.4% -->
   </for>
 </skill>
 <skill id="3358" levels="1" name="Flag Equip">

@@ -1,267 +1,593 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
-<skill id="8200" levels="1" name="Light Draconic Leather Armor Set - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8200" levels="1" name="Draconic Leather Armor - PvP">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="pAtkSpd" val="1.04"/> <!-- Attack Speed +4% -->
+    <mul order="0x30" stat="pAtk" val="1.04"/> <!-- P. Atk +4% -->
+    <add order="0x40" stat="maxMp" val="289"/> <!-- Maximum MP +289 -->
+    <add order="0x40" stat="maxLoad" val="5759"/> <!-- Weight Limit +5759 -->
+    <add order="0x10" stat="DEX" val="1"/> <!-- DEX +1 -->
+    <add order="0x10" stat="STR" val="1"/> <!-- STR +1 -->
+    <sub order="0x10" stat="CON" val="2"/> <!-- CON -2 -->
+    <!-- Missing: Decreases damage received during PvP and has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
-<skill id="8201" levels="1" name="Major Arcana Robe Set - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8201" levels="1" name="Major Arcana Robe - PvP">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="mAtk" val="1.17"/> <!-- M. Atk +17% -->
+    <add order="0x40" stat="runSpd" val="7"/> <!-- Movement Speed +7 -->
+    <sub order="0x40" stat="cancel" val="50"/> <!-- Casting Cancel Probability -50% -->
+    <add order="0x40" stat="maxLoad" val="5759"/> <!-- Weight Limit +5759 -->
+    <add order="0x10" stat="WIT" val="1"/> <!-- WIT +1 -->
+    <add order="0x10" stat="INT" val="1"/> <!-- INT +1 -->
+    <sub order="0x10" stat="MEN" val="2"/> <!-- MEN -2 -->
+    <mul order="0x30" stat="stunVuln" val="0.50"/> <!-- Stun resistance +50% -->
+    <!-- Missing: Decreases damage received during PvP and has a chance to decrease critical rate and critical damage when attacked. -->
   </for>
 </skill>
 <skill id="8202" levels="1" name="Dynasty Breastplate - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x10" stat="CON" val="1"/> <!-- Con -1 -->
+    <add order="0x10" stat="STR" val="1"/> <!-- Str +1 -->
+    <mul order="0x30" stat="pDef" val="1.046"/> <!-- P. Def +4.6% -->
+    <add order="0x40" stat="maxHp" val="418"/> <!-- MaxHP +418 -->
+    <mul order="0x30" stat="darkVuln" val="0.94"/> <!-- Darkness Resistance +6 -->
+    <!-- Missing: Decreases damage received during PvP and has a chance to decrease an attacker's speed modifiers. -->
   </for>
 </skill>
-<skill id="8203" levels="1" name="Dynasty Breastplate - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8203" levels="1" name="Dynasty Breastplate - PvP Shield Master">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x10" stat="STR" val="2"/> <!-- Str -2 -->
+    <add order="0x10" stat="CON" val="2"/> <!-- Con +2 -->
+    <mul order="0x30" stat="pDef" val="1.054"/> <!-- P. Def. +5.4% -->
+    <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 effect -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Darkness resistance is increased +8 -->
+    <mul order="0x30" stat="gainHp" val="1.03"/> <!-- Received Increased Heal +3% -->
+    <mul order="0x30" stat="stunVuln" val="0.50"/> <!-- Shock resistance is increased +50% -->
+    <!-- Missing: Decreases damage received during PvP and has a chance to decrease an attacker's speed modifiers. -->
   </for>
 </skill>
-<skill id="8204" levels="1" name="Dynasty Breastplate - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8204" levels="1" name="Dynasty Breastplate - PvP Weapon Master">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
+    <add order="0x10" stat="STR" val="2"/> <!-- Str +2 -->
+    <mul order="0x30" stat="pAtk" val="1.054"/> <!-- P. Atk +5.4% -->
+    <add order="0x40" stat="maxHp" val="492"/> <!-- MaxHP +492 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <basemul order="0x30" stat="rCrit" val="0.0246"/> <!-- Critical Damage Chance +2.46% -->
+    <add order="0x40" stat="cAtkAdd" val="234"/> <!-- Critical Damage +234 -->
+    <!-- Missing: Decreases damage received during PvP and has a chance to decrease an attacker's speed modifiers. -->
   </for>
 </skill>
-<skill id="8205" levels="1" name="Dynasty Breastplate - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8205" levels="1" name="Dynasty Breastplate - PvP Force Master">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
+    <add order="0x10" stat="STR" val="2"/> <!-- Str +2 -->
+    <mul order="0x30" stat="pAtk" val="1.054"/> <!-- P. Atk. +5.4% -->
+    <add order="0x40" stat="maxHp" val="492"/> <!-- HP +492 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Resistance to Darkness attacks +8 -->
+    <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95"/> <!-- MP consumption of the active skill is decreased -5% -->
+    <!-- Missing: Decreases damage received during PvP and has a chance to decrease an attacker's speed modifiers. -->
   </for>
 </skill>
-<skill id="8206" levels="1" name="Dynasty Breastplate - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8206" levels="1" name="Dynasty Breastplate - PvP Bard">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
+    <add order="0x10" stat="STR" val="2"/> <!-- Str +2 -->
+    <mul order="0x30" stat="pDef" val="1.054"/> <!-- P. Def. +5.4% -->
+    <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 effect -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark resistance +8 -->
+    <mul order="0x30" stat="DanceMpConsumeRate" val="0.95"/> <!-- MP consumption is decreased when song and dance skills are used -5% -->
+    <!-- Decreases damage received during PvP and has a chance to decrease an attacker's speed modifiers. -->
   </for>
 </skill>
 <skill id="8207" levels="1" name="Dynasty Leather Armor - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x10" stat="CON" val="1"/> <!-- Con -1 -->
+    <add order="0x10" stat="DEX" val="1"/> <!-- Dex +1 -->
+    <add order="0x40" stat="accCombat" val="1.72"/> <!-- Accuracy +1.72 -->
+    <add order="0x40" stat="rEvas" val="1.72"/> <!-- Evacion +1.72 -->
+    <add order="0x40" stat="maxHp" val="418"/> <!-- MaxHP +418 -->
+    <mul order="0x30" stat="darkVuln" val="0.94"/> <!-- Darkness Resistance +6 -->
+    <!-- Missing: Decreases damage received during PvP and has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
-<skill id="8208" levels="1" name="Dynasty Leather Armor - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8208" levels="1" name="Dynasty Leather Armor - PvP Dagger Master">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
+    <add order="0x10" stat="DEX" val="2"/> <!-- Dex +2 -->
+    <add order="0x40" stat="rEvas" val="4.3"/> <!-- Evasion +4.3 -->
+    <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 Effect -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark resistance +8 -->
+    <mul order="0x30" stat="rootVuln" val="0.87"/> <!-- Hold resistance are increased +13% -->
+    <mul order="0x30" stat="pAtkSpd" val="1.0266"/> <!-- Atk. Spd. are increased +2.66% -->
+    <!-- Decreases damage received during PvP and has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
-<skill id="8209" levels="1" name="Dynasty Leather Armor - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8209" levels="1" name="Dynasty Leather Armor - PvP Bow Master">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
+    <add order="0x10" stat="DEX" val="2"/> <!-- Dex +2 -->
+    <add order="0x40" stat="accCombat" val="4.3"/> <!-- Accuracy +4.3 -->
+    <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 Effect -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark resistance +8 -->
+    <mul order="0x30" stat="pAtkSpd" val="1.0266"/> <!-- Atk. Spd. are increased +2.66% -->
+    <add order="0x40" stat="regMp" val="1.72"/> <!-- MP recovery are increased +1.72 -->
+    <!-- Missing: Decreases damage received during PvP and has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
 <skill id="8210" levels="1" name="Dynasty Tunic - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x10" stat="INT" val="1"/> <!-- Int -1 -->
+    <add order="0x10" stat="MEN" val="1"/> <!-- Men +1 -->
+    <mul order="0x30" stat="mAtkSpd" val="1.12"/> <!-- Casting Spd. +12% -->
+    <add order="0x40" stat="maxMp" val="257"/> <!-- Max MP +257 -->
+    <mul order="0x30" stat="darkVuln" val="0.94"/> <!-- Darkness Resistance +6 -->
+    <!-- Missing: Decreases damage received during PvP and has a chance to decrease critical hit and critical damage when attacked. -->
   </for>
 </skill>
-<skill id="8211" levels="1" name="Dynasty Tunic - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8211" levels="1" name="Dynasty Tunic - PvP Healer">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x10" stat="INT" val="2"/> <!-- Int -2 -->
+    <add order="0x10" stat="MEN" val="2"/> <!-- Men +2 -->
+    <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
+    <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <mul order="0x30" stat="giveHp" val="1.20"/> <!-- Increase amount of heal +20% -->
+    <sub order="0x40" stat="cancel" val="15"/> <!-- Decrease magic cancel rate -15% -->
+    <!-- Missing: Decreases damage received during PvP and has a chance to decrease critical hit and critical damage when attacked. -->
+   </for>
+</skill>
+<skill id="8212" levels="1" name="Dynasty Tunic - PvP Enchanter">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <for>
+    <sub order="0x10" stat="INT" val="2"/> <!-- Int -2 -->
+    <add order="0x10" stat="MEN" val="2"/> <!-- Men +2 -->
+    <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
+    <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <mul order="0x30" stat="MagicalMpConsumeRate" val="0.95"/> <!-- Decrease MP consumption -5% -->
+    <sub order="0x40" stat="cancel" val="15"/> <!-- Decrease magic cancel rate -15% -->
+    <!-- Decreases damage received during PvP and has a chance to decrease critical hit and critical damage when attacked. -->
   </for>
 </skill>
-<skill id="8212" levels="1" name="Dynasty Tunic - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8213" levels="1" name="Dynasty Tunic - PvP Summoner">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x10" stat="INT" val="2"/> <!-- Int -2 -->
+    <add order="0x10" stat="MEN" val="2"/> <!-- Men +2 -->
+    <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
+    <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <mul order="0x30" stat="pAtk" val="1.026"/> <!-- Increase P. Atk. +2.6% -->
+    <mul order="0x30" stat="pDef" val="1.026"/> <!-- P. Def. +2.6% -->
+    <!-- Missing: Decreases damage received during PvP and has a chance to decrease critical hit and critical damage when attacked. -->
   </for>
 </skill>
-<skill id="8213" levels="1" name="Dynasty Tunic - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8214" levels="1" name="Dynasty Tunic - PvP Wizard">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x10" stat="INT" val="1"/> <!-- Int +1 -->
+    <add order="0x10" stat="WIT" val="1"/> <!-- Wit +1 -->
+    <sub order="0x10" stat="MEN" val="2"/> <!-- Men -2 -->
+    <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
+    <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <mul order="0x30" stat="mAtk" val="1.054"/> <!-- Increase M. Atk +5.4% -->
+    <!-- Missing: Decreases damage received during PvP and has a chance to decrease critical hit and critical damage when attacked. -->
   </for>
 </skill>
-<skill id="8214" levels="1" name="Dynasty Tunic - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8215" levels="1" name="Dynasty Leather Armor - PvP Force Master">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x10" stat="STR" val="1"/> <!-- Str +1 -->
+    <add order="0x10" stat="DEX" val="1"/> <!-- Dex +1 -->
+    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
+    <mul order="0x30" stat="pAtk" val="1.054"/> <!-- P. Atk. +5.4% -->
+    <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 Effect -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark resistance +8 -->
+    <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95"/> <!-- MP consumption of the active skill is decreased -5% -->
+    <!-- Missing: Decreases damage received during PvP and has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
-<skill id="8215" levels="1" name="Dynasty Leather Armor - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8216" levels="1" name="Dynasty Leather Armor - PvP Weapon Master">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x10" stat="STR" val="1"/> <!-- Str +1 -->
+    <add order="0x10" stat="DEX" val="1"/> <!-- Dex +1 -->
+    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
+    <mul order="0x30" stat="pAtk" val="1.054"/> <!-- P. Atk +5.4% -->
+    <add order="0x40" stat="maxHp" val="492"/> <!-- MaxHP +492 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <add order="0x40" stat="cAtkAdd" val="234"/> <!-- Critical Damage +234 -->
+    <basemul order="0x30" stat="rCrit" val="0.0246"/> <!-- Critical Damage Chance +2.46% -->
+    <!-- Missing: Decreases damage received during PvP and has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
-<skill id="8216" levels="1" name="Dynasty Leather Armor - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8217" levels="1" name="Dynasty Leather Armor - PvP Enchanter">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x10" stat="INT" val="2"/> <!-- Int -2 -->
+    <add order="0x10" stat="MEN" val="2"/> <!-- Men +2 -->
+    <sub order="0x10" stat="WIT" val="1"/> <!-- Wit -1 -->
+    <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
+    <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <mul order="0x30" stat="MagicalMpConsumeRate" val="0.95"/> <!-- decrease MP consumption -5% -->
+    <sub order="0x40" stat="cancel" val="15"/> <!-- Decrease magic cancel rate -15% -->
+    <!-- Missing: Decreases damage received during PvP and has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
-<skill id="8217" levels="1" name="Dynasty Leather Armor - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8218" levels="1" name="Dynasty Leather Armor - PvP Summoner">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x10" stat="STR" val="2"/> <!-- Str -2 -->
+    <add order="0x10" stat="CON" val="2"/> <!-- Con +2 -->
+    <mul order="0x30" stat="pAtkSpd" val="1.054"/> <!-- increase Atk. Spd. +5.4% -->
+    <add order="0x40" stat="maxHp" val="492"/> <!-- MaxHP +492 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <mul order="0x30" stat="pAtk" val="1.0266"/> <!-- Increase P. Atk. +2.66% -->
+    <mul order="0x30" stat="pDef" val="1.0266"/> <!-- Increase P. Def. +2.66% -->
+    <!-- Decreases damage received during PvP and has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
-<skill id="8218" levels="1" name="Dynasty Leather Armor - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8219" levels="1" name="Dynasty Platinum Breastplate - PvP Shield Master">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x10" stat="STR" val="2"/> <!-- Str -2 -->
+    <add order="0x10" stat="CON" val="2"/> <!-- Con +2 -->
+    <mul order="0x30" stat="pDef" val="1.066"/> <!-- P. Def. +6.6% -->
+    <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 -->
+    <mul order="0x30" stat="gainHp" val="1.04"/> <!-- Heal Capacity +4% -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <mul order="0x30" stat="stunVuln" val="0.85"/> <!-- Stun Resistance +15 -->
+    <!-- Missing: Decreases damage received during PvP and has a chance to decrease an attacker's speed modifiers. -->
   </for>
 </skill>
-<skill id="8219" levels="1" name="Dynasty Platinum Plate - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8220" levels="1" name="Dynasty Platinum Breastplate - PvP Weapon Master">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
+    <add order="0x10" stat="STR" val="2"/> <!-- Str +2 -->
+    <mul order="0x30" stat="pAtk" val="1.066"/> <!-- P. Atk. +6.6% -->
+    <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Darkness Resistance +8 -->
+    <add order="0x40" stat="cAtkAdd" val="282"/> <!-- Critical Damage +282 -->
+    <basemul order="0x30" stat="rCrit" val="0.0295"/> <!-- Critical Rate +2.95% Increase -->
+    <!-- Missing: Decreases damage received during PvP and has a chance to decrease an attacker's speed modifiers. -->
   </for>
 </skill>
-<skill id="8220" levels="1" name="Dynasty Platinum Plate - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8221" levels="1" name="Dynasty Platinum Breastplate - PvP Bard">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
+    <add order="0x10" stat="STR" val="2"/> <!-- Str +2 -->
+    <mul order="0x30" stat="pDef" val="1.066"/> <!-- P. Def. +6.6% -->
+    <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <mul order="0x30" stat="DanceMpConsumeRate" val="0.94"/> <!-- MP Consumption -6% Decrease for Song and Dance Skills  -->
+    <!-- Missing: Decreases damage received during PvP and has a chance to decrease an attacker's speed modifiers. -->
   </for>
 </skill>
-<skill id="8221" levels="1" name="Dynasty Platinum Plate - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8222" levels="1" name="Dynasty Platinum Breastplate - PvP Force Master">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
+    <add order="0x10" stat="STR" val="2"/> <!-- Str +2 -->
+    <mul order="0x30" stat="pAtk" val="1.066"/> <!-- P. Atk. +6.6% -->
+    <add order="0x40" stat="maxHp" val="492"/> <!-- Max. HP +492 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Resistance to Darkness attacks +8 -->
+    <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.94"/> <!-- Decreases MP consumption by 6% for active skills -->
+    <!-- Missing: Decreases damage received during PvP and has a chance to decrease an attacker's speed modifiers. -->
   </for>
 </skill>
-<skill id="8222" levels="1" name="Dynasty Platinum Plate - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8223" levels="1" name="Dynasty Jewel Leather Armor - PvP Dagger Master">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
+    <add order="0x10" stat="DEX" val="2"/> <!-- Dex +2 -->
+    <add order="0x40" stat="rEvas" val="5.3"/> <!-- Evasion +5.3 -->
+    <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <mul order="0x30" stat="rootVuln" val="0.85"/> <!-- Hold Resistance +15% -->
+    <mul order="0x30" stat="pAtkSpd" val="1.0324"/> <!-- Atk. Spd. +3.24% -->
+    <!-- Missing: Decreases damage received during PvP and has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
-<skill id="8223" levels="1" name="Dynasty Jewel Leather Mail - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8224" levels="1" name="Dynasty Jewel Leather Armor - PvP Bow Master">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
+    <add order="0x10" stat="DEX" val="2"/> <!-- Dex +2 -->
+    <add order="0x40" stat="accCombat" val="5.3"/> <!-- Accuracy +5.3 -->
+    <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <mul order="0x30" stat="pAtkSpd" val="1.0324"/> <!-- Atk. Spd. +3.24% -->
+    <add order="0x40" stat="regMp" val="1.066"/> <!-- MP Recovery +6.6% -->
+    <!-- Missing: Decreases damage received during PvP and has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
-<skill id="8224" levels="1" name="Dynasty Jewel Leather Mail - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8225" levels="1" name="Dynasty Jewel Leather Armor - PvP Force Master">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
+    <add order="0x10" stat="STR" val="1"/> <!-- Str +1 -->
+    <add order="0x10" stat="DEX" val="1"/> <!-- Dex +1 -->
+    <mul order="0x30" stat="pAtk" val="1.066"/> <!-- P. Atk. +6.6% -->
+    <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.94"/> <!-- MP Consumption -6% -->
+    <!-- Missing: Decreases damage received during PvP and has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
-<skill id="8225" levels="1" name="Dynasty Jewel Leather Mail - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8226" levels="1" name="Dynasty Jewel Leather Armor - PvP Weapon Master">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
+    <add order="0x10" stat="STR" val="1"/> <!-- Str +1 -->
+    <add order="0x10" stat="DEX" val="1"/> <!-- Dex +1 -->
+    <mul order="0x30" stat="pAtk" val="1.066"/> <!-- Physical Attack Power +6.6% -->
+    <add order="0x40" stat="maxHp" val="492"/> <!-- Maximum HP +492 effect -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Darkness Resistance +8 -->
+    <add order="0x40" stat="cAtkAdd" val="282"/> <!-- Critical Damage +282 -->
+    <basemul order="0x30" stat="rCrit" val="0.0295"/> <!-- Critical Rate +2.95% Increase -->
+    <!-- Decreases damage received during PvP and has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
-<skill id="8226" levels="1" name="Dynasty Jewel Leather Mail - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8227" levels="1" name="Dynasty Jewel Leather Armor - PvP Summoner">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x10" stat="STR" val="2"/> <!-- Str -2 -->
+    <add order="0x10" stat="CON" val="2"/> <!-- Con +2 -->
+    <mul order="0x30" stat="pAtkSpd" val="1.066"/> <!-- Atk. Spd. +6.6% -->
+    <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <mul order="0x30" stat="pAtk" val="1.0266"/> <!-- P. Atk. +2.66% -->
+    <mul order="0x30" stat="pDef" val="1.0266"/> <!-- P. Def. +2.66% -->
+    <!-- Missing: Decreases damage received during PvP and has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
-<skill id="8227" levels="1" name="Dynasty Jewel Leather Mail - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8228" levels="1" name="Dynasty Jewel Leather Armor - PvP Enchanter">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x10" stat="INT" val="2"/> <!-- Int -2 -->
+    <add order="0x10" stat="MEN" val="2"/> <!-- Men +2 -->
+    <sub order="0x10" stat="WIT" val="1"/> <!-- Wit -1 -->
+    <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
+    <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <mul order="0x30" stat="MagicalMpConsumeRate" val="0.94"/> <!-- Decrease MP consumption -6% -->
+    <sub order="0x40" stat="cancel" val="15"/> <!-- Decrease magic cancel rate -15% -->
+    <!-- Missing: Decreases damage received during PvP and has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
-<skill id="8228" levels="1" name="Dynasty Jewel Leather Mail - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8229" levels="1" name="Dynasty Silver Satin Tunic - PvP Healer">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x10" stat="INT" val="2"/> <!-- Int -2 -->
+    <add order="0x10" stat="MEN" val="2"/> <!-- Men +2 -->
+    <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
+    <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <mul order="0x30" stat="giveHp" val="1.22"/> <!-- Heal Capacity +22 -->
+    <sub order="0x40" stat="cancel" val="15"/> <!-- Magic Cancel Rate -15 -->
+    <!-- Missing: Decreases damage received during PvP and has a chance to decrease critical hit and critical damage when attacked. -->
   </for>
 </skill>
-<skill id="8229" levels="1" name="Dynasty Silver Satin Tunic - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8230" levels="1" name="Dynasty Silver Satin Tunic - PvP Enchanter">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x10" stat="INT" val="2"/> <!-- Int -2 -->
+    <add order="0x10" stat="MEN" val="2"/> <!-- Men +2 -->
+    <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
+    <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <mul order="0x30" stat="MagicalMpConsumeRate" val="0.94"/> <!-- MP Consumption -6% -->
+    <sub order="0x40" stat="cancel" val="15"/> <!-- Magic Cancel Rate -15 -->
+    <!-- Missing: Decreases damage received during PvP and has a chance to decrease critical hit and critical damage when attacked. -->
   </for>
 </skill>
-<skill id="8230" levels="1" name="Dynasty Silver Satin Tunic - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8231" levels="1" name="Dynasty Silver Satin Tunic - PvP Summoner">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
+    <sub order="0x10" stat="INT" val="2"/> <!-- Int -2 -->
+    <add order="0x10" stat="MEN" val="2"/> <!-- Men +2 -->
+    <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
+    <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <mul order="0x30" stat="pAtk" val="1.033"/> <!-- P. Atk. +3.3% -->
+    <mul order="0x30" stat="pDef" val="1.033"/> <!-- P. Def. +3.3% -->
+    <!-- Missing: Decreases damage received during PvP and has a chance to decrease critical hit and critical damage when attacked. -->
   </for>
 </skill>
-<skill id="8231" levels="1" name="Dynasty Silver Satin Tunic - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="8232" levels="1" name="Dynasty Silver Satin Tunic - PvP Wizard">
+  <!-- Done by DJ MELERIX -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
   <for>
-  </for>
-</skill>
-<skill id="8232" levels="1" name="Dynasty Silver Satin Tunic - PvP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <for>
+    <add order="0x10" stat="INT" val="1"/> <!-- Int +1 -->
+    <add order="0x10" stat="WIT" val="1"/> <!-- Wit +1 -->
+    <sub order="0x10" stat="MEN" val="2"/> <!-- Men -2 -->
+    <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
+    <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
+    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <mul order="0x30" stat="mAtk" val="1.066"/> <!-- M. Atk. +6.6% -->
+    <!-- Decreases damage received during PvP and has a chance to decrease critical hit and critical damage when attacked. -->
   </for>
 </skill>
 <skill id="8233" levels="1" name="Zubei's Helmet">
