@@ -457,7 +457,7 @@
     <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
     <mul order="0x30" stat="giveHp" val="1.03"/> <!-- Increase amount of heal +? --> <!-- Guessing -->
-    <mul order="0x30" stat="cancelVuln" val="1.03"/> <!-- Increase magic cancel rate +? --> <!-- Guessing -->
+    <sub order="0x40" stat="cancel" val="15"/> <!-- Decrease magic cancel rate +? --> <!-- Guessing -->
    </for>
 </skill>
 <skill id="3355" levels="1" name="Dynasty Tunic - Enchanter">
@@ -473,8 +473,8 @@
     <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
     <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
-    <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.97"/> <!-- decrease MP consumption +? --> <!-- Guessing -->
-    <mul order="0x30" stat="cancelVuln" val="0.97"/> <!-- Decrease magic cancel rate +? --> <!-- Guessing -->
+    <mul order="0x30" stat="MagicalMpConsumeRate" val="0.97"/> <!-- decrease MP consumption +? --> <!-- Guessing -->
+    <sub order="0x40" stat="cancel" val="15"/> <!-- Decrease magic cancel rate +? --> <!-- Guessing -->
   </for>
 </skill>
 <skill id="3356" levels="1" name="Dynasty Tunic - Summoner">
