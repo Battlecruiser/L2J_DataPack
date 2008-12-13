@@ -119,7 +119,7 @@
     <mul order="0x30" stat="pAtk" val="1.054"/> <!-- P. Atk. +5.4% -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 Effect -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark resistance +8 -->
-    <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.97"/> <!-- MP consumption of the active skill is decreased +? --> <!-- Guessing -->
+    <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95"/> <!-- MP consumption of the active skill is decreased -5% -->
   </for>
 </skill>
 <skill id="3415" levels="1" name="Dynasty Leather Armor - Weapon Master">
@@ -130,12 +130,14 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+    <add order="0x10" stat="STR" val="1"/> <!-- Str +1 -->
+    <add order="0x10" stat="DEX" val="1"/> <!-- Dex +1 -->
     <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
-    <add order="0x10" stat="STR" val="2"/> <!-- Str +2 -->
     <mul order="0x30" stat="pAtk" val="1.054"/> <!-- P. Atk +5.4% -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- MaxHP +492 -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
-    <basemul order="0x30" stat="rCrit" val="0.03"/> <!-- Critical Damage Chance +? --> <!-- Guessing -->
+    <add order="0x40" stat="cAtkAdd" val="234"/> <!-- Critical Damage +234 -->
+    <basemul order="0x30" stat="rCrit" val="0.0246"/> <!-- Critical Damage Chance +2.46% -->
   </for>
 </skill>
 <skill id="3416" levels="1" name="Dynasty Tunic">
@@ -186,11 +188,11 @@
   <for>
     <sub order="0x10" stat="STR" val="2"/> <!-- Str -2 -->
     <add order="0x10" stat="CON" val="2"/> <!-- Con +2 -->
-    <mul order="0x30" stat="pAtkSpd" val="1.03"/> <!-- increase Atk. Spd. +? --> <!-- Guessing -->
+    <mul order="0x30" stat="pAtkSpd" val="1.03"/> <!-- increase Atk. Spd. +5.4% -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- MaxHP +492 -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
-    <mul order="0x30" stat="pAtk" val="1.03"/> <!-- Increase P. Atk. +? --> <!-- Guessing -->
-    <mul order="0x30" stat="pDef" val="1.03"/> <!-- Increase P. Def. +? --> <!-- Guessing -->
+    <mul order="0x30" stat="pAtk" val="1.0266"/> <!-- Increase P. Atk. +2.66% -->
+    <mul order="0x30" stat="pDef" val="1.0266"/> <!-- Increase P. Def. +2.66% -->
   </for>
 </skill>
 <skill id="3421" levels="1" name="Wolf Mount">
