@@ -8525,3 +8525,11 @@ INSERT INTO `npc` VALUES
 (50007, 31324, "Andromeda", 1, "Wedding Manager", 1, "NPC.a_casino_FDarkElf", 8, 23, 70, "female", "L2WeddingManager", 40, 3862, 1493, 11.85, 2.78, 40, 43, 30, 21, 20, 10, 0, 0, 1314, 470, 780, 382, 278, 0, 333, 316, 0, 0, 55, 132, "NULL", 0, 1, 0, "LAST_HIT", 0, 0, 0, "fighter", "false"),
 (70010, 31606, "Catrina", 1, "TvT Event Manager", 1, "Monster2.queen_of_cat", 8, 15, 70, "female", "L2TvTEventNpc", 40, 3862, 1493, 11.85, 2.78, 40, 43, 30, 21, 20, 10, 0, 0, 1314, 470, 780, 382, 278, 0, 333, 0, 0, 0, 28, 132, "NULL", 0, 0, 0, "LAST_HIT", 0, 0, 0, "fighter", "false"),
 (1000003, 32226, "Shiela", 1, "NPC Buffer", 1, "Monster2.baby_tiger", 13.00, 22.50, 70, "male", "L2NpcBuffer", 40, 751, 331, 2.37, 1.53, 80, 80, 80, 80, 80, 80, 0, 0, 88, 119, 37, 112, 282, 0, 5000, 0, 0, 0, 30, 132, "NULL", 0, 0, 0, "LAST_HIT", 0, 0, 0, "fighter", "false");
+
+-- Stats Needs To Be Verified in the Future.
+INSERT INTO `npc` VALUES
+(1, 1, "Thomas D. Turkey", 0, "Misguided Holiday Scrooge", 0, "Branch.br_crazy_turkey", 22, 32, 85, "male", "L2Npc", 40, 751, 331, 2.37, 1.53, 80, 80, 80, 80, 80, 80, 0, 0, 88, 119, 37, 112, 282, 0, 5000, 0, 0, 0, 30, 132, "NULL", 0, 0, 0, "LAST_HIT", 0, 0, 0, "fighter", "false"),
+(3, 3, "Santa\'s Helper", 0, "", 0, "LineageNPCs.e_smith_master_MDwarf_m00", 13, 17, 85, "male", "L2Npc", 40, 751, 331, 2.37, 1.53, 80, 80, 80, 80, 80, 80, 0, 0, 88, 119, 37, 112, 282, 0, 5000, 0, 0, 0, 30, 132, "NULL", 0, 0, 0, "LAST_HIT", 0, 0, 0, "fighter", "false"),
+(4, 4, "Holiday Santa", 0, "Happy Holidays!", 0, "Branch.br_xmas08_santa", 13, 21, 85, "male", "L2Npc", 40, 751, 331, 2.37, 1.53, 80, 80, 80, 80, 80, 80, 0, 0, 88, 119, 37, 112, 282, 0, 5000, 0, 0, 0, 30, 132, "NULL", 0, 0, 0, "LAST_HIT", 0, 0, 0, "fighter", "false"),
+(5, 5, "Holiday Santa", 0, "Happy Holidays!", 0, "Branch.br_xmas08_santa", 13, 21, 85, "male", "L2Npc", 40, 751, 331, 2.37, 1.53, 80, 80, 80, 80, 80, 80, 0, 0, 88, 119, 37, 112, 282, 0, 5000, 0, 0, 0, 30, 132, "NULL", 0, 0, 0, "LAST_HIT", 0, 0, 0, "fighter", "false"),
+(6, 6, "Holiday Sled", 0, "Happy Holidays!", 0, "Branch.br_xmas08_sled", 13, 13, 85, "male", "L2Npc", 40, 751, 331, 2.37, 1.53, 80, 80, 80, 80, 80, 80, 0, 0, 88, 119, 37, 112, 282, 0, 5000, 0, 0, 0, 30, 132, "NULL", 0, 0, 0, "LAST_HIT", 0, 0, 0, "fighter", "false");
