@@ -72,26 +72,28 @@ class Quest (JQuest) :
    if id == State.CREATED :
       st2 = player.getQuestState("15_SweetWhisper")
       if st2 :
-         if st2.getState() == 'State.COMPLETED' :
+         if st2.getState() != 'State.COMPLETED' :
             htmltext = "<html><body>Quest Sweet Whisper need to be finished first.</body></html>"
-   elif npcId == HIERARCH :
-     if cond == 0 :
-        htmltext = "31517-00.htm"
-     elif cond < 5 :
+         else :
+            htmltext = "31517-00.htm"
+      else :
+         htmltext = "<html><body>Quest Sweet Whisper need to be finished first.</body></html>"
+   elif id == State.STARTED :
+     if npcId == HIERARCH :
+      if cond < 5 :
         if blood == 5 :
            htmltext = "31517-04.htm"
         else :
            htmltext = "31517-05.htm"
            st.exitQuest(1)
            st.playSound("ItemSound.quest_giveup")
-     else :
+      else :
         st.addExpAndSp(105527,0)
         st.unset("cond")
         st.exitQuest(False)
         st.playSound("ItemSound.quest_finish")
         htmltext = "31517-03.htm"
-   elif id == State.STARTED :    
-     if npcId == SAINT_ALTAR_1 :
+     elif npcId == SAINT_ALTAR_1 :
         if cond == 1 :
           if blood :
              htmltext = "31508-00.htm"
