@@ -485,6 +485,14 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_teleto','1'),
 ('admin_instant_move','1'),
 
+-- INSTANCES
+('admin_setinstance','1'),
+('admin_ghoston','1'),
+('admin_ghostoff','1'),
+('admin_createinstance','1'),
+('admin_destroyinstance','1'),
+('admin_listinstances','1'),
+
 -- TEST
 ('admin_test','1'),
 ('admin_stats','1'),
