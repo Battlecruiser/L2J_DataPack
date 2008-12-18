@@ -748,4 +748,12 @@ INSERT INTO teleport VALUES
 ('Gludio Castle -> Ruins of Agony',13004,-41248,122848,-2904,500,0),
 ('Gludio Castle -> Ruins of Despair',13005,-19120,136816,-3752,500,0),
 ('Gludio Castle -> The Ant Nest',13006,-9959,176184,-4160,500,0),
-('Gludio Castle -> Windawood Manor',13007,-28327,155125,-3496,500,0);
+('Gludio Castle -> Windawood Manor',13007,-28327,155125,-3496,500,0),
+('Dragonspine Fort -> Fort North Gate', 12100, 12497, 93855, -3425, 0, 0),
+('Dragonspine Fort -> Fort South Gate', 12101, 10486, 96307, -3425, 0, 0),
+('Dragonspine Fort -> Dion Town Square', 12102, 18748, 145437, -3127, 0, 0),
+('Dragonspine Fort -> Oren Town Square', 12103, 82321, 55139, -1524, 0, 0),
+('Dragonspine Fort -> The Ant Nest', 12104, -25832, 173118, -4154, 500, 0),
+('Dragonspine Fort -> Windawood Manor', 12105, -25791, 162013, -2528, 500, 0),
+('Dragonspine Fort -> Sea of Spores', 12106, 62425, 30856, -3774, 500, 0),
+('Dragonspine Fort -> Ancient Battleground', 12107, 108264, -2846, -3428, 500, 0);
