@@ -815,8 +815,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="0x7fffffff" name="MpConsumePerLevel" time="3" val="1.5">
-      <mul order="0x30" stat="blowRate" val="1.3"/>
-      <add order="0x40" stat="skillMastery" val="5"/> <!-- Guessing -->
+      <mul order="0x30" stat="skillMastery" val="10"/> <!-- Guessing -->
     </effect>
   </for>
 </skill>
