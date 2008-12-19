@@ -26221,8 +26221,8 @@ INSERT INTO `droplist` VALUES
 (22329,57,33230,66640,0,700000), -- Adena
 (22329,9599,2,6,100,680000), -- Ancient Tome of the Demon
 (22329,9674,14,42,101,52632), -- Darion's Badge
-(22229,5534,1,1,1,28571), -- Soul Bow Stave
-(22229,11975,1,1,1,3460), -- Common Item - Soul Bow
+(22329,5534,1,1,1,28571), -- Soul Bow Stave
+(22329,11975,1,1,1,3460), -- Common Item - Soul Bow
 (22329,1344,360,1080,2,125000), -- Mithril Arrow
 (22329,1895,21,60,2,32258), -- Metallic Fiber
 (22329,4040,1,1,2,71429), -- Mold Lubricant
