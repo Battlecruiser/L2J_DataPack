@@ -936,7 +936,8 @@
   <set name="mpInitialConsume" val="25"/>
   <set name="mpConsume" val="80"/>
   <set name="magicLvl" val="77"/>
-  <set name="power" val="25"/>
+  <set name="power" val="60"/>
+  <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="200"/>
   <set name="reuseDelay" val="30000"/>
@@ -951,7 +952,8 @@
   <set name="mpInitialConsume" val="27"/>
   <set name="mpConsume" val="80"/>
   <set name="magicLvl" val="78"/>
-  <set name="power" val="25"/>
+  <set name="power" val="60"/>
+  <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="200"/>
   <set name="reuseDelay" val="30000"/>
@@ -1081,7 +1083,8 @@
   <set name="mpInitialConsume" val="20"/>
   <set name="mpConsume" val="50"/>
   <set name="magicLvl" val="76"/>
-  <set name="power" val="25"/>
+  <set name="power" val="80"/>
+  <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="10000"/>
   <set name="hitTime" val="4000"/>
@@ -1095,7 +1098,8 @@
   <set name="mpInitialConsume" val="20"/>
   <set name="mpConsume" val="50"/>
   <set name="magicLvl" val="77"/>
-  <set name="power" val="25"/>
+  <set name="power" val="80"/>
+  <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="10000"/>
   <set name="hitTime" val="4000"/>
@@ -1400,7 +1404,7 @@
   <set name="aggroPoints" val="666"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.5" stackType="critical_dmg_up">
-      <mul order="0x30" stat="cAtk" val="1.5"/>
+      <mul order="0x30" stat="cAtk" val="1.35"/>
     </effect>
   </for>
 </skill>
