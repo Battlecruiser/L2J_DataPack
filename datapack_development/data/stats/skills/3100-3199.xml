@@ -1273,7 +1273,7 @@
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="200"/>
+  <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
 </skill>
 <skill id="3173" levels="10" name="Item Skill: Prominence">
@@ -1411,7 +1411,7 @@
   <set name="reuseDelay" val="2500"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="900"/>
+  <set name="castRange" val="500"/>
   <set name="effectRange" val="1000"/>
 </skill>
 <skill id="3180" levels="10" name="Item Skill: Prominence">
@@ -1543,14 +1543,14 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AURA"/>
-  <set name="skillRadius" val="350"/>
+  <set name="skillRadius" val="200"/>
   <set name="hitTime" val="5000"/>
   <set name="skillType" val="MDAM"/>
   <set name="reuseDelay" val="2500"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="effectRange" val="1000"/>
+  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="3187" levels="10" name="Item Skill: Slow">
   <table name="#mpConsume_Init"> 6 7 8 9 10 11 11 11 12 12 </table>
