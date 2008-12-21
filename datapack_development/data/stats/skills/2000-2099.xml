@@ -471,7 +471,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.5" stackType="critical_dmg_up">
-      <mul order="0x30" stat="cAtk" val="1.5"/>
+      <mul order="0x30" stat="cAtk" val="1.35"/>
     </effect>
   </for>
 </skill>

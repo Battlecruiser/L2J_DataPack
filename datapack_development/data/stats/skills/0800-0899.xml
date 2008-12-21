@@ -215,22 +215,37 @@
   <set name="effectRange" val="400"/>
 </skill>
 <skill id="818" levels="1" name="Evasion Counter">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Needs to be verified -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="bestowTriggered" val="true"/>
+  <set name="triggeredId" val="5673"/>
+  <set name="triggeredLevel" val="1"/>
 </skill>
 <skill id="819" levels="1" name="Evasion Chance">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Needs to be verified -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="bestowTriggered" val="true"/>
+  <set name="triggeredId" val="5674"/>
+  <set name="triggeredLevel" val="1"/>
 </skill>
 <skill id="820" levels="1" name="Evasion Haste">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Needs to be verified -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="bestowTriggered" val="true"/>
+  <set name="triggeredId" val="5675"/>
+  <set name="triggeredLevel" val="1"/>
 </skill>
 <skill id="821" levels="1" name="Shadow Step">
   <set name="mpConsume" val="50"/>
