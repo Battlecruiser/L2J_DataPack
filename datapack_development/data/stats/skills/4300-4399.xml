@@ -6,8 +6,6 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4301" levels="1" name="Race">
 <!-- Race Bug -->
@@ -15,8 +13,6 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4302" levels="1" name="Race">
   <!-- Race Fairy -->
@@ -24,8 +20,6 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4303" levels="1" name="Strong Type">
   <set name="target" val="TARGET_SELF"/>
@@ -165,8 +159,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1200"/>
-  <for>
-  </for>
 </skill>
 <skill id="4315" levels="12" name="Hold">
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
@@ -205,8 +197,6 @@
   <set name="castRange" val="750"/>
   <set name="effectRange" val="1250"/>
   <set name="absorbPart" val="0.4"/>
-  <for>
-  </for>
 </skill>
 <skill id="4317" levels="5" name="Increase Rage Might">
   <!-- TODO RAGE -->
@@ -487,8 +477,6 @@
   <set name="skillType" val="NOTDONE"/> <!-- pAtk attribute: holy - missing core support -->
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4336" levels="5" name="Dark Attack Weak Point">
   <table name="#Tab-darkVuln"> 1.1 1.15 1.2 1.3 1.5 </table>
@@ -498,7 +486,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-     <mul order="0x30" stat="darkVuln" val="#Tab-darkVuln"/>
+    <mul order="0x30" stat="darkVuln" val="#Tab-darkVuln"/>
   </for>
 </skill>
 <skill id="4337" levels="6" name="Resist Sacred Attack">
@@ -526,8 +514,6 @@
   <set name="npcId" val="3"/>
   <set name="expPenalty" val="0.0"/>
   <set name="isCubic" val="true"/>
-  <for>
-  </for>
 </skill>
 <skill id="4339" levels="1" name="Mimir's Elixir">
   <set name="target" val="TARGET_ONE"/>
@@ -535,8 +521,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="castRange" val="900"/>
-  <for>
-  </for>
 </skill>
 <skill id="4340" levels="1" name="Ultimate Buff, 2nd">
   <set name="magicLvl" val="60"/>
@@ -1015,8 +999,6 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4368" levels="1" name="Clan Hall Manager Buff">
   <!-- TODO -->
@@ -1025,8 +1007,6 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4369" levels="1" name="Clan Hall Manager Buff">
   <!-- TODO -->
@@ -1035,8 +1015,6 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4370" levels="1" name="Clan Hall Manager Buff">
   <!-- TODO -->
@@ -1045,8 +1023,6 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4371" levels="1" name="Clan Hall Manager Buff">
   <!-- TODO -->
@@ -1055,8 +1031,6 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4372" levels="1" name="Clan Hall Manager Buff">
   <!-- TODO -->
@@ -1065,8 +1039,6 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4373" levels="1" name="Clan Hall Manager Buff">
   <!-- TODO -->
@@ -1075,8 +1047,6 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4374" levels="1" name="Clan Hall Manager Buff">
   <!-- TODO -->
@@ -1085,8 +1055,6 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4375" levels="1" name="Clan Hall Manager Buff">
   <!-- TODO -->
@@ -1095,8 +1063,6 @@
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4376" levels="1" name="Strong Resistance to P.Atk.">
   <set name="target" val="TARGET_NONE"/>
@@ -1123,8 +1089,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
-  <for>
-  </for>
 </skill>
 <skill id="4378" levels="12" name="Self Damage Shield">
   <table name="#mpConsume"> 12 19 26 35 45 55 65 69 72 75 77 78 </table>
@@ -1165,8 +1129,6 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
-  <for>
-  </for>
 </skill>
 <skill id="4381" levels="1" name="Magic Skill Block">
   <!-- dummy skill -->
@@ -1174,8 +1136,6 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4382" levels="12" name="Curse of Lake Ghost">
   <table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
@@ -1215,8 +1175,6 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="aggroPoints" val="100"/>
-  <for>
-  </for>
 </skill>
 <skill id="4385" levels="1" name="Scapegoat's Grace">
   <!-- Done by DJ MELERIX -->
@@ -1229,7 +1187,7 @@
   <set name="effectRange" val="1100"/>
   <set name="aggroPoints" val="100"/>
   <for>
-   <effect name="Buff" time="120" count="1" val="0" stackOrder="4" stackType="attack_time_up"/>
+    <effect name="Buff" time="120" count="1" val="0" stackOrder="4" stackType="attack_time_up"/>
   </for>
 </skill>
 <skill id="4386" levels="1" name="Scapegoat's Grace">
@@ -1239,8 +1197,6 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="aggroPoints" val="100"/>
-  <for>
-  </for>
 </skill>
 <skill id="4387" levels="1" name="Scapegoat's Grace">
   <!-- TODO -->
@@ -1249,8 +1205,6 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="aggroPoints" val="100"/>
-  <for>
-  </for>
 </skill>
 <skill id="4388" levels="6" name="Resist Paralysis">
   <table name="#power"> 0.85 0.7 0.5 0.3 0.1 0.0 </table>
@@ -1280,8 +1234,6 @@
   <set name="skillType" val="NOTDONE"/> <!-- npc cannot receive buffs and debuffs from players, core support needed -->
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4391" levels="2" name="Wind Walk">
   <table name="#Tab-runSpd"> 20 33 </table>

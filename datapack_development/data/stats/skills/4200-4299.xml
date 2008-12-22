@@ -150,8 +150,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
-  <for>
-  </for>
 </skill>
 <skill id="4208" levels="12" name="Stun">
   <table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
@@ -191,8 +189,6 @@
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1200"/>
   <set name="aggroPoints" val="100"/>
-  <for>
-  </for>
 </skill>
 <skill id="4210" levels="12" name="Life Chant">
   <!-- SHOULD BUFF MINIONS -->
@@ -493,8 +489,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1200"/>
-  <for>
-  </for>
 </skill>
 <skill id="4230" levels="1" name="Wild Cannon">
   <set name="magicLvl" val="70"/>
@@ -507,8 +501,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="2500"/>
   <set name="effectRange" val="3000"/>
-  <for>
-  </for>
 </skill>
 <skill id="4231" levels="12" name="NPC Spit Attack">
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
@@ -526,8 +518,6 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
-  <for>
-  </for>
 </skill>
 <skill id="4232" levels="12" name="NPC AE Strike">
   <table name="#power"> 46 105 219 417 722 1136 1626 1876 2112 2320 2487 2617 </table>
@@ -544,8 +534,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
-  <for>
-  </for>
 </skill>
 <skill id="4233" levels="1" name="Vampiric Attack">
   <!-- Summon Shadow Skill -->
@@ -572,8 +560,6 @@
   <set name="power" val="#power"/>
   <set name="skillType" val="PDAM"/>
   <set name="target" val="TARGET_ONE"/>
-  <for>
-  </for>
 </skill>
 <skill id="4235" levels="1" name="none">
   <!-- Dietrich/Mikhail/Gustav Recall Skill -->
@@ -582,8 +568,6 @@
   <set name="hitTime" val="15000"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4236" levels="1" name="Decrease Heal">
   <!-- Gustav Skill -->
@@ -635,8 +619,6 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4239" levels="1" name="Antharas Regeneration">
   <!-- Done by DJ MELERIX -->
@@ -647,7 +629,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="1800" val="0"> 
-       <mul order="0x30" stat="regHp" val="0.40"/>
+      <mul order="0x30" stat="regHp" val="0.40"/>
     </effect>
   </for>
 </skill>
@@ -660,7 +642,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="1800" val="0"> 
-       <mul order="0x30" stat="regHp" val="0.70"/>
+      <mul order="0x30" stat="regHp" val="0.70"/>
     </effect>
   </for>
 </skill>
@@ -673,7 +655,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="1" name="Buff" time="1800" val="0"> 
-       <mul order="0x30" stat="regHp" val="1.0"/>
+      <mul order="0x30" stat="regHp" val="1.0"/>
     </effect>
   </for>
 </skill>
@@ -719,8 +701,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
-  <for>
-  </for>
 </skill>
 <skill id="4245" levels="1" name="Mimic of Wrath">
   <!-- Done by DJ MELERIX -->
@@ -766,8 +746,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="1000"/>
   <set name="effectRange" val="1500"/>
-  <for>
-  </for>
 </skill>
 <skill id="4248" levels="12" name="NPC HP Drain - Slow">
   <table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
@@ -786,8 +764,6 @@
   <set name="castRange" val="1000"/>
   <set name="effectRange" val="1500"/>
   <set name="absorbPart" val="0.2"/>
-  <for>
-  </for>
 </skill>
 <skill id="4249" levels="12" name="Decrease Speed">
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
@@ -827,8 +803,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="1000"/>
   <set name="effectRange" val="1500"/>
-  <for>
-  </for>
 </skill>
 <skill id="4251" levels="12" name="NPC Curve Beam Cannon - Slow">
   <table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
@@ -845,8 +819,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="1000"/>
   <set name="effectRange" val="1500"/>
-  <for>
-  </for>
 </skill>
 <skill id="4252" levels="12" name="NPC Flame - Slow">
   <table name="#power"> 3 5 7 9 13 16 20 20 20 20 20 20 </table>
@@ -864,8 +836,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="1000"/>
   <set name="effectRange" val="1500"/>
-  <for>
-  </for>
 </skill>
 <skill id="4253" levels="12" name="NPC Blaze - Slow">
   <table name="#power"> 3 5 7 9 13 16 20 20 20 20 20 20 </table>
@@ -883,8 +853,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="1000"/>
   <set name="effectRange" val="1500"/>
-  <for>
-  </for>
 </skill>
 <skill id="4254" levels="12" name="NPC Prominence - Slow">
   <table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
@@ -902,8 +870,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="1000"/>
   <set name="effectRange" val="1500"/>
-  <for>
-  </for>
 </skill>
 <skill id="4255" levels="12" name="NPC Straight Beam Cannon - Slow">
   <table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
@@ -920,8 +886,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="1000"/>
   <set name="effectRange" val="1500"/>
-  <for>
-  </for>
 </skill>
 <skill id="4256" levels="1" name="100% Stun Resistance.">
   <!-- Done by DJ MELERIX -->
@@ -952,8 +916,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="500"/>
   <set name="effectRange" val="1000"/>
-  <for>
-  </for>
 </skill>
 <skill id="4258" levels="1" name="Anti Strider Slow">
   <!-- Done by DJ MELERIX -->
@@ -1018,8 +980,6 @@
   <set name="castRange" val="#cast"/>
   <set name="effectRange" val="#effect"/>
   <set name="absorbPart" val="0.2"/><!-- absorbs 20% of damage -->
-  <for>
-  </for>
 </skill>
 <skill id="4261" levels="12" name="Mega Storm Strike">
   <table name="#cast"> 600 750 750 900 900 900 900 900 900 900 900 900 </table>
@@ -1039,8 +999,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="#cast"/>
   <set name="effectRange" val="1100"/>
-  <for>
-  </for>
 </skill>
 <skill id="4262" levels="1" name="Holiday Wind Walk">
   <!-- Done by DJ MELERIX -->
@@ -1154,8 +1112,6 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4269" levels="1" name="Block All Chat">
   <!-- This Skill Is Only For Description In The Client -->
@@ -1164,8 +1120,6 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4270" levels="4" name="Weight Penalty">
   <table name="#rate"> 0.5 0.5 0.5 0.5 </table>
@@ -1187,8 +1141,6 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4272" levels="1" name="Greater Resist Archery Attack">
   <set name="target" val="TARGET_SELF"/>
@@ -1263,8 +1215,6 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4279" levels="5" name="Fire Attack Weak Point">
   <table name="#Tab-fireVuln"> 1.1 1.15 1.2 1.3 1.5 </table>
@@ -1399,8 +1349,6 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4291" levels="1" name="Race">
   <!-- Race Construct -->
@@ -1408,8 +1356,6 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4292" levels="1" name="Race">
   <!-- Race Beast -->
@@ -1417,8 +1363,6 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4293" levels="1" name="Race">
   <!-- Race Animal -->
@@ -1426,8 +1370,6 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4294" levels="1" name="Race">
   <!-- Race Plant -->
@@ -1435,8 +1377,6 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4295" levels="1" name="Race">
   <!-- Race Humanoid -->
@@ -1444,8 +1384,6 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4296" levels="1" name="Race">
   <!-- Race Spirit -->
@@ -1453,8 +1391,6 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4297" levels="1" name="Race">
   <!-- Race Divine -->
@@ -1462,8 +1398,6 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4298" levels="1" name="Race">
   <!-- Race Demonic -->
@@ -1471,8 +1405,6 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="4299" levels="1" name="Race">
   <!-- Race Dragon -->
@@ -1480,7 +1412,5 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 </list>
