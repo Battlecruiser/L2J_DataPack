@@ -395,15 +395,13 @@ public class Baium extends L2AttackableAIScript
 
 	public synchronized void callSkillAI(L2NpcInstance npc)
 	{
-		if (npc.isInvul() || npc.isCastingNow())
-		{
-			return;
-		}
+		if (npc.isInvul() || npc.isCastingNow()) return;
 
 		if (_target == null || _target.isDead() || !(_Zone.isInsideZone(_target)))
 		{
 			_target = getRandomTarget(npc);
-			_skill = getRandomSkill(npc);
+			if (_target != null)
+				_skill = SkillTable.getInstance().getInfo(getRandomSkill(npc),1);
 		}
 
 		L2Character target = _target;
@@ -429,86 +427,52 @@ public class Baium extends L2AttackableAIScript
 		}
 	}
 
-	public L2Skill getRandomSkill(L2NpcInstance npc)
+	public int getRandomSkill(L2NpcInstance npc)
 	{
-		L2Skill skill;
+		int skill;
 		if( npc.getCurrentHp() > ( ( npc.getMaxHp() * 3 ) / 4 ) )
 		{
 			if( Rnd.get(100) < 10 )
-			{
-				skill = SkillTable.getInstance().getInfo(4128,1);
-			}
+				skill = 4128;
 			else if( Rnd.get(100) < 10 )
-			{
-				skill = SkillTable.getInstance().getInfo(4129,1);
-			}
+				skill = 4129;
 			else
-			{
-				skill = SkillTable.getInstance().getInfo(4127,1);
-			}
+				skill = 4127;
 		}
 		else if( npc.getCurrentHp() > ( ( npc.getMaxHp() * 2 ) / 4) )
 		{
 			if( Rnd.get(100) < 10 )
-			{
-				skill = SkillTable.getInstance().getInfo(4131,1);
-			}
+				skill = 4131;
 			else if( Rnd.get(100) < 10 )
-			{
-				skill = SkillTable.getInstance().getInfo(4128,1);
-			}
+				skill = 4128;
 			else if( Rnd.get(100) < 10 )
-			{
-				skill = SkillTable.getInstance().getInfo(4129,1);
-			}
+				skill = 4129;
 			else
-			{
-				skill = SkillTable.getInstance().getInfo(4127,1);
-			}
+				skill = 4127;
 		}
 		else if( npc.getCurrentHp() > ( ( npc.getMaxHp() * 1 ) / 4 ) )
 		{
 			if( Rnd.get(100) < 10 )
-			{
-				skill = SkillTable.getInstance().getInfo(4130,1);
-			}
+				skill = 4130;
 			else if( Rnd.get(100) < 10 )
-			{
-				skill = SkillTable.getInstance().getInfo(4131,1);
-			}
+				skill = 4131;
 			else if( Rnd.get(100) < 10 )
-			{
-				skill = SkillTable.getInstance().getInfo(4128,1);
-			}
+				skill = 4128;
 			else if( Rnd.get(100) < 10 )
-			{
-				skill = SkillTable.getInstance().getInfo(4129,1);
-			}
+				skill = 4129;
 			else
-			{
-				skill = SkillTable.getInstance().getInfo(4127,1);
-			}
+				skill = 4127;
 		}
 		else if( Rnd.get(100) < 10 )
-		{
-			skill = SkillTable.getInstance().getInfo(4130,1);
-		}
+			skill = 4130;
 		else if( Rnd.get(100) < 10 )
-		{
-			skill = SkillTable.getInstance().getInfo(4131,1);
-		}
+			skill = 4131;
 		else if( Rnd.get(100) < 10 )
-		{
-			skill = SkillTable.getInstance().getInfo(4128,1);
-		}
+			skill = 4128;
 		else if( Rnd.get(100) < 10 )
-		{
-			skill = SkillTable.getInstance().getInfo(4129,1);
-		}
+			skill = 4129;
 		else
-		{
-			skill = SkillTable.getInstance().getInfo(4127,1);
-		}
+			skill = 4127;
 		return skill;
 	}
 
