@@ -406,6 +406,8 @@ public class Baium extends L2AttackableAIScript
 
 		L2Character target = _target;
 		L2Skill skill = _skill;
+		if (skill == null)
+			skill = SkillTable.getInstance().getInfo(getRandomSkill(npc),1);
 		if (target == null || target.isDead() || !(_Zone.isInsideZone(target)))
 		{
 			npc.setIsCastingNow(false);
@@ -418,6 +420,7 @@ public class Baium extends L2AttackableAIScript
 			npc.setTarget(target);
 			npc.setIsCastingNow(true);
 			_target = null;
+			_skill = null;
 			npc.doCast(skill);
 		}
 		else
