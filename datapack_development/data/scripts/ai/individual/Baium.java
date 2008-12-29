@@ -219,6 +219,13 @@ public class Baium extends L2AttackableAIScript
                     _Zone.oustAllPlayers();
                     cancelQuestTimer("baium_despawn", npc, null);
                 }
+                else if ((_LastAttackVsBaiumTime + 300000 < System.currentTimeMillis()) && npc.getCurrentHp() < ( ( npc.getMaxHp() * 3 ) / 4 ))
+                {
+                	npc.setIsCastingNow(false); //just in case
+                	npc.setTarget(npc);
+                	npc.doCast(SkillTable.getInstance().getInfo(4135,1));
+                	npc.setIsCastingNow(true);
+                }
                 else if (!_Zone.isInsideZone(npc))
                 	npc.teleToLocation(115213,16623,10080);
             }
