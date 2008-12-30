@@ -15,7 +15,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="effectType" val="STUN"/>
-  <set name="effectPower" val="40"/>
+  <set name="effectPower" val="40"/> <!-- Base Land Rate -->
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun">
       <mul order="0x30" stat="pDef" val="#pDef"/>
@@ -57,6 +57,8 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
+  <set name="effectType" val="DEBUFF"/>
+  <set name="effectPower" val="80"/> <!-- Base Land Rate -->
   <for>
     <effect count="1" name="Debuff" time="#time" val="0" stackOrder="#pAtk" stackType="pDefDown">
       <mul order="0x30" stat="pAtk" val="#pAtk"/>
@@ -79,6 +81,8 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
+  <set name="effectType" val="DEBUFF"/>
+  <set name="effectPower" val="80"/> <!-- Base Land Rate -->
   <for>
     <effect count="1" name="Debuff" time="#time" val="0" stackOrder="#pAtk" stackType="pDefDown">
       <mul order="0x30" stat="pAtk" val="#pAtk"/>
@@ -101,6 +105,8 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="1000"/>
   <set name="effectRange" val="1100"/>
+  <set name="effectType" val="DEBUFF"/>
+  <set name="effectPower" val="80"/> <!-- Base Land Rate -->
   <for>
     <effect count="1" name="Debuff" time="#time" val="0" stackOrder="#pAtk" stackType="pDefDown">
       <mul order="0x30" stat="pAtk" val="#pAtk"/>
@@ -127,7 +133,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
   <set name="effectType" val="WEAKNESS"/>
-  <set name="effectPower" val="80"/>
+  <set name="effectPower" val="80"/> <!-- Base Land Rate -->
   <for>
     <effect count="1" name="Debuff" time="#time" val="0" stackOrder="#stackOrder" stackType="md_up_attr">
       <mul order="0x30" stat="fireVuln" val="#fireVuln"/>
@@ -374,7 +380,7 @@
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 75 90 95 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="50"/>
+  <set name="power" val="50"/> <!-- Base Land Rate -->
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="PARALYZE"/>
   <set name="isDebuff" val="true"/>
@@ -442,7 +448,7 @@
 <skill id="4624" levels="12" name="Decrease HP Regeneration Rate">
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="power" val="100"/>
+  <set name="power" val="10"/> <!-- Base Land Rate -->
   <set name="target" val="TARGET_ONE"/>
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
@@ -461,14 +467,15 @@
 <skill id="4625" levels="12" name="Decrease Speed">
   <table name="#runSpd"> 0.85 0.70 0.70 0.50 0.50 0.50 0.50 0.50 0.50 0.50 0.50 0.50 </table>
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="BUFF"/>
+  <set name="skillType" val="DEBUFF"/>
   <set name="isDebuff" val="true"/>
   <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="10"/> <!-- Base Land Rate -->
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0" stackOrder="#runSpd" stackType="RunSpeedDown">
+    <effect count="1" name="Debuff" time="30" val="0" stackOrder="#runSpd" stackType="RunSpeedDown">
       <mul order="0x30" stat="runSpd" val="#runSpd"/>
     </effect>
   </for>
@@ -784,7 +791,7 @@
 <skill id="4640" levels="12" name="Sleep">
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="80"/>
+  <set name="power" val="40"/> <!-- Base Land Rate -->
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="SLEEP"/>
   <set name="isDebuff" val="true"/>
@@ -839,7 +846,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
   <set name="effectType" val="DEBUFF"/>
-  <set name="effectPower" val="40"/>
+  <set name="effectPower" val="40"/> <!-- Base Land Rate -->
   <for>
     <effect count="1" name="Debuff" time="30" val="0" stackOrder="#runSpd" stackType="RunSpeedDown">
       <mul order="0x30" stat="runSpd" val="#runSpd"/>
@@ -1269,7 +1276,7 @@
   <table name="#mpConsume"> 10 16 23 31 40 49 57 61 64 66 68 68 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 75 90 95 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="80"/>
+  <set name="power" val="80"/> <!-- Base Land Rate -->
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="STUN"/>
   <set name="isDebuff" val="true"/>
@@ -1542,7 +1549,7 @@
   <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="effectPower" val="80"/>
+  <set name="effectPower" val="80"/> <!-- Base Land Rate -->
   <set name="effectRange" val="-1"/>
   <set name="effectType" val="STUN"/>
   <for>
@@ -1557,7 +1564,7 @@
   <table name="#hitTime"> 3000 0 </table>
   <table name="#lvlDepend"> 1 0 </table>
   <set name="magicLvl" val="75"/>
-  <set name="power" val="80"/>
+  <set name="power" val="80"/> <!-- Base Land Rate -->
   <set name="target" val="TARGET_FRONT_AURA"/>
   <set name="skillRadius" val="1000"/>
   <set name="coolTime" val="#coolTime"/>
@@ -1698,13 +1705,14 @@
   <table name="#regHp"> 1.20 1.30 1.40 1.50 1.75 2.0 3.0 4.0 5.0 6.0 8.5 11.0 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="lvlDepend" val="1"/>
+  <set name="power" val="10"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
+  <set name="isDebuff" val="true"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="10" name="Buff" time="5" val="0">
+    <effect count="10" name="Debuff" time="5" val="0">
       <mul order="0x30" stat="regHp" val="#regHp"/>
     </effect>
   </for>

@@ -4,18 +4,19 @@
   <table name="#Tab-pAtkSpd"> 0.83 0.80 0.80 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
   <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
+  <table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="isDebuff" val="true"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2500"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="90"/> <!-- Base Land Rate -->
   <set name="castRange" val="750"/>
   <set name="effectRange" val="1250"/>
   <for>
-    <effect name="Debuff" time="15" count="1" val="0" stackOrder="#Tab-pAtkSpd" stackType="attack_time_up">
+    <effect name="Debuff" time="#time" count="1" val="0" stackOrder="#Tab-pAtkSpd" stackType="attack_time_up">
       <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
     </effect>
   </for>
@@ -24,9 +25,8 @@
   <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="70"/>
+  <set name="power" val="70"/> <!-- Base Land Rate -->
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2500"/>
   <set name="isDebuff" val="true"/>
@@ -42,9 +42,8 @@
   <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="70"/>
+  <set name="power" val="70"/> <!-- Base Land Rate -->
   <set name="target" val="TARGET_ONE"/>
   <set name="isDebuff" val="true"/>
   <set name="hitTime" val="2500"/>
@@ -61,9 +60,8 @@
   <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="50"/>
+  <set name="power" val="50"/> <!-- Base Land Rate -->
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2500"/>
   <set name="isDebuff" val="true"/>
@@ -84,7 +82,6 @@
   <table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
   <set name="abnormalLvl" val="#abnormalLvl"/>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="90"/> <!-- Base Land Rate -->
   <set name="target" val="TARGET_ONE"/>
@@ -102,7 +99,6 @@
   <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="30"/>
   <set name="target" val="TARGET_ONE"/>
@@ -121,7 +117,6 @@
   <table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="isDebuff" val="true"/>
@@ -141,7 +136,6 @@
   <table name="#power"> 352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -156,7 +150,6 @@
   <table name="#power"> 176 475 1304 3414 8592 16607 25504 29589 33944 38501 43180 47895 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="power" val="#power"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_ONE"/>
@@ -167,7 +160,7 @@
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <set name="effectType" val="STUN"/>
-  <set name="effectPower" val="80"/>
+  <set name="effectPower" val="80"/> <!-- Base Land Rate -->
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
@@ -178,7 +171,6 @@
   <table name="#mpConsume"> 21 34 50 67 86 104 119 125 129 131 131 132 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_SELF"/>
@@ -197,7 +189,6 @@
   <table name="#power"> 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_SELF"/>
@@ -217,7 +208,6 @@
   <table name="#mpConsume"> 6 10 13 18 23 28 33 35 36 38 39 39 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1500"/>
@@ -237,7 +227,6 @@
   <table name="#mpConsume"> 6 10 13 18 23 28 33 35 36 38 39 39 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1500"/>
@@ -257,7 +246,6 @@
   <table name="#mpConsume"> 6 10 13 18 23 28 33 35 36 38 39 39 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1500"/>
@@ -277,7 +265,6 @@
   <table name="#mpConsume"> 6 10 13 18 23 28 33 35 36 38 39 39 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1500"/>
@@ -330,7 +317,6 @@
 <skill id="4218" levels="1" name="Absorb HP MP">
   <!-- Zaken skills -->
   <set name="magicLvl" val="60"/>
-  <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="element" val="6"/> <!-- Dark -->
   <set name="coolTime" val="2000"/>
@@ -342,11 +328,11 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="absorbPart" val="0.8"/>
+  <!-- Missing MP -274 -->
 </skill>
 <skill id="4219" levels="1" name="Hold">
   <!-- Zaken skills -->
   <set name="magicLvl" val="60"/>
-  <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="coolTime" val="2000"/>
   <set name="hitTime" val="2000"/>
@@ -363,7 +349,6 @@
 <skill id="4220" levels="1" name="Deadly Dual-Sword Weapon">
   <!-- Zaken skills -->
   <set name="magicLvl" val="60"/>
-  <set name="lvlDepend" val="1"/>
   <set name="power" val="7224"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="coolTime" val="900"/>
@@ -376,7 +361,6 @@
 <skill id="4221" levels="1" name="Deadly Dual-Sword Weapon: Range Attack">
   <!-- Zaken skills -->
   <set name="magicLvl" val="60"/>
-  <set name="lvlDepend" val="1"/>
   <set name="power" val="0.0"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="100"/>
@@ -479,7 +463,6 @@
   <table name="#mpConsume"> 25 40 56 76 99 121 142 151 159 165 168 170 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="power" val="#power"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_ONE"/>
@@ -492,7 +475,6 @@
 </skill>
 <skill id="4230" levels="1" name="Wild Cannon">
   <set name="magicLvl" val="70"/>
-  <set name="lvlDepend" val="1"/>
   <set name="power" val="532048"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="10000"/>
@@ -507,7 +489,6 @@
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="power" val="#power"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_ONE"/>
@@ -524,7 +505,6 @@
   <table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="20"/>
@@ -594,7 +574,6 @@
 <skill id="4237" levels="1" name="Decreases Speed">
   <!-- Mikhail Skill -->
   <set name="magicLvl" val="70"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="65"/>
   <set name="power" val="72"/>
   <set name="target" val="TARGET_MULTIFACE"/>
@@ -606,6 +585,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
+  <set name="effectType" val="DEBUFF"/>
+  <set name="effectPower" val="90"/>
   <for>
     <effect count="1" name="Debuff" time="30" val="0" stackOrder="0.5" stackType="RunSpeedDown">
       <mul order="0x30" stat="runSpd" val="0.5"/>
@@ -689,7 +670,6 @@
   <table name="#power"> 46 105 219 417 722 1136 1626 1876 2112 2320 2487 2617 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_MULTIFACE"/>
@@ -736,7 +716,6 @@
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -753,7 +732,6 @@
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="element" val="6"/> <!-- Dark -->
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -779,6 +757,8 @@
   <set name="hitTime" val="1500"/>
   <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="effectType" val="DEBUFF"/>
+  <set name="effectPower" val="60"/> <!-- Base Land Rate -->
   <set name="castRange" val="1000"/>
   <set name="effectRange" val="1500"/>
   <for>
@@ -792,7 +772,6 @@
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -809,7 +788,6 @@
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -825,7 +803,6 @@
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AREA"/>
@@ -843,7 +820,6 @@
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="element" val="2"/> <!-- Fire -->
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -860,7 +836,6 @@
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="element" val="2"/> <!-- Fire -->
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -876,7 +851,6 @@
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -904,7 +878,6 @@
   <table name="#power"> 9 13 19 26 34 43 51 55 58 61 63 65 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AREA"/>
@@ -967,7 +940,6 @@
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -987,7 +959,6 @@
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1326,7 +1297,6 @@
 <skill id="4289" levels="1" name="Wyvern Breath">
   <set name="element" val="2"/> <!-- Fire -->
   <set name="magicLvl" val="60"/>
-  <set name="lvlDepend" val="1"/>
   <set name="power" val="379"/>
   <set name="mpConsume" val="400"/>
   <set name="target" val="TARGET_AREA"/>
