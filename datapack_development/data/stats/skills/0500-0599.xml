@@ -243,7 +243,9 @@
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
-    <effect count="7" name="DamOverTime" time="3" val="74" abnormal="bleeding"/>
+    <effect count="7" name="DamOverTime" time="3" val="74" abnormal="bleeding">
+      <sub order="0x40" stat="runSpd" val="25"/>
+    </effect>  
   </for>
 </skill>
 <skill id="510" levels="5" name="Deadly Roulette">
@@ -1312,7 +1314,9 @@
   <set name="effectType" val="BLEED"/>
   <set name="effectPower" val="40"/> <!-- Base Land Rate --> <!-- Guessing -->
   <for>
-    <effect count="5" name="DamOverTime" time="3" val="#bleeddmg" abnormal="bleeding"/>
+    <effect count="5" name="DamOverTime" time="3" val="#bleeddmg" abnormal="bleeding">
+      <sub order="0x40" stat="runSpd" val="25"/>
+    </effect>
   </for>
 </skill>
 <skill id="583" levels="4" name="Assimilation">

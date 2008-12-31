@@ -242,7 +242,9 @@
   <for>
     <!-- retail value: 13 17 22 27 31 34/sec (depends on powerlevel); stat update every 5 units (3 1/3 sec) -->
     <!-- Verified by slyce -  Interlude - Aug 2007 -->
-    <effect count="7" name="DamOverTime" time="3" val="#bleedpower" abnormal="bleeding"/>
+    <effect count="7" name="DamOverTime" time="3" val="#bleedpower" abnormal="bleeding">
+      <sub order="0x40" stat="runSpd" val="25"/>
+    </effect>  
   </for>
 </skill>
 <skill id="225" levels="3" name="Acrobatic Move">

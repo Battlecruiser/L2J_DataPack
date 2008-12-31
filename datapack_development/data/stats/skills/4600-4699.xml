@@ -321,7 +321,9 @@
   <set name="castRange" val="500"/>
   <set name="effectRange" val="1000"/>
   <for>
-    <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding"/>
+    <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding">
+      <sub order="0x40" stat="runSpd" val="25"/>
+    </effect>
   </for>
 </skill>
 <skill id="4616" levels="1" name="Fake Petrification">

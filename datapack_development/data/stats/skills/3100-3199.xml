@@ -1772,7 +1772,9 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding"/>
+    <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding">
+      <sub order="0x40" stat="runSpd" val="25"/>
+    </effect>
   </for>
 </skill>
 <skill id="3197" levels="10" name="Item Skill: Silence">

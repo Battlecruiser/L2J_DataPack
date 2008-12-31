@@ -1639,7 +1639,9 @@
   <for>
     <!-- retail value: 13 17 22 27 31 34/sec; stat update every 5 units (3 1/3 sec) -->
     <!-- Verified by slyce -  Interlude - Aug 2007 -->
-    <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding"/>
+    <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding">
+      <sub order="0x40" stat="runSpd" val="25"/>
+    </effect>
   </for>
 </skill>
 <skill id="97" levels="11" name="Sanctuary" enchantLevels1="30" enchantLevels2="30" >

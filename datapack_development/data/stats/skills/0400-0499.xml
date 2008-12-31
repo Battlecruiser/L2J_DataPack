@@ -1848,7 +1848,9 @@
   </cond>
   <for>
     <!-- retail value: 13 17 22 27 31 34/sec; stat update every 5 units (3 1/3 sec) -->
-    <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding"/>
+    <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding">
+      <sub order="0x40" stat="runSpd" val="25"/>
+    </effect>
   </for>
 </skill>
 <skill id="496" levels="31" name="Slashing Blade" enchantLevels1="30" enchantLevels2="30" >
@@ -1938,7 +1940,9 @@
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
-    <effect count="7" name="DamOverTime" time="3" val="74" abnormal="bleeding"/>
+    <effect count="7" name="DamOverTime" time="3" val="74" abnormal="bleeding">
+      <sub order="0x40" stat="runSpd" val="25"/>
+    </effect>
   </for>
 </skill>
 <skill id="499" levels="3" name="Courage">

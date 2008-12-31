@@ -34,7 +34,9 @@
   <set name="isDebuff" val="true"/>
   <set name="castRange" val="-1"/>
   <for>
-    <effect count="7" name="DamOverTime" time="3" val="66" abnormal="bleeding"/>
+    <effect count="7" name="DamOverTime" time="3" val="66" abnormal="bleeding">
+      <sub order="0x40" stat="runSpd" val="25"/>
+    </effect>
   </for>
 </skill>
 <skill id="3006" levels="1" name="Equip Set Items">
@@ -250,7 +252,9 @@
   <set name="effectType" val="BLEED"/>
   <set name="effectPower" val="100"/>
   <for>
-    <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding"/>
+    <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding">
+      <sub order="0x40" stat="runSpd" val="25"/>
+    </effect>
   </for>
 </skill>
 <skill id="3021" levels="6" name="Special Ability: Critical Bleed">
@@ -267,7 +271,9 @@
   <set name="effectType" val="BLEED"/>
   <set name="effectPower" val="100"/>
   <for>
-    <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding"/>
+    <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding">
+      <sub order="0x40" stat="runSpd" val="25"/>
+    </effect>
   </for>
 </skill>
 <skill id="3022" levels="7" name="Special Ability: Critical Drain">
@@ -736,7 +742,9 @@
   <set name="effectType" val="BLEED"/>
   <set name="effectPower" val="100"/>
   <for>
-    <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding"/>
+    <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding">
+      <sub order="0x40" stat="runSpd" val="25"/>
+    </effect>
   </for>
 </skill>
 <skill id="3053" levels="2" name="Special Ability: Critical Bleed">
@@ -786,7 +794,9 @@
   <set name="effectType" val="BLEED"/>
   <set name="effectPower" val="100"/>
   <for>
-    <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding"/>
+    <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding">
+      <sub order="0x40" stat="runSpd" val="25"/>
+    </effect>
   </for>
 </skill>
 <skill id="3056" levels="3" name="Special Ability: Rsk. Haste">
