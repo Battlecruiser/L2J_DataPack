@@ -847,7 +847,9 @@
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
     <!-- retail value: 22 27 31 34/sec (depends on powerlevel); stat update every 5 units (3 1/3 sec) -->
-    <effect count="7" name="DamOverTime" time="3" val="#bleeddmg" abnormal="bleeding"/>
+    <effect count="7" name="DamOverTime" time="3" val="#bleeddmg" abnormal="bleeding">
+      <sub order="0x40" stat="runSpd" val="25"/>
+    </effect>
   </for>
 </skill>
 <skill id="1238" levels="3" name="Freezing Skin" enchantLevels1="30" enchantLevels2="30" >
