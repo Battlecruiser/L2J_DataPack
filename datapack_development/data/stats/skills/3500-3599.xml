@@ -1091,7 +1091,7 @@
 <skill id="3581" levels="1" name="Discord">
   <!-- Infinity Axe Skill -->
   <set name="magicLvl" val="80"/>
-  <set name="power" val="100"/> <!-- Chance is 20% Managed by SQL Side -->
+  <set name="power" val="20"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="CONFUSE_MOB_ONLY"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1144,7 +1144,7 @@
 <skill id="3584" levels="1" name="Shock">
   <!-- Infinity Crusher Skill -->
   <set name="magicLvl" val="80"/>
-  <set name="power" val="100"/> <!-- Chance is 25% Managed by SQL Side -->
+  <set name="power" val="25"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="STUN"/>
   <set name="isDebuff" val="true"/>
@@ -1179,7 +1179,7 @@
 <skill id="3586" levels="1" name="Physical Skill Restraint">
   <!-- Infinity Wing Skill -->
   <set name="magicLvl" val="80"/>
-  <set name="power" val="100"/> <!-- Chance is 10% Managed by SQL Side -->
+  <set name="power" val="10"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="MUTE"/>
   <set name="isDebuff" val="true"/>
@@ -1214,7 +1214,7 @@
 <skill id="3588" levels="1" name="Shock">
   <!-- Infinity Fang Skill -->
   <set name="magicLvl" val="80"/>
-  <set name="power" val="100"/> <!-- Chance is 25% Managed by SQL Side -->
+  <set name="power" val="25"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="STUN"/>
   <set name="isDebuff" val="true"/>
@@ -1251,7 +1251,7 @@
 <skill id="3590" levels="1" name="Silence">
   <!-- Infinity Stinger Skill -->
   <set name="magicLvl" val="80"/>
-  <set name="power" val="100"/> <!-- Chance is 5% Managed by SQL Side -->
+  <set name="power" val="5"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="MUTE"/>
   <set name="lvlDepend" val="1"/>
@@ -1286,7 +1286,7 @@
 <skill id="3592" levels="1" name="Dispell">
   <!-- Infinity Spear Skill -->
   <set name="magicLvl" val="80"/>
-  <set name="power" val="100"/> <!-- Base Land Rate 10% Managed by SQL Side -->
+  <set name="power" val="10"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="CANCEL"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1315,7 +1315,7 @@
 <skill id="3594" levels="1" name="Slow">
   <!-- Infinity Bow Skill -->
   <set name="magicLvl" val="80"/>
-  <set name="power" val="100"/> <!-- Chance is 7% Managed by SQL Side -->
+  <set name="power" val="7"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isDebuff" val="true"/>
@@ -1354,7 +1354,8 @@
   <set name="magicLvl" val="80"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="power" val="100"/>
-  <set name="skillType" val="HEAL_PERCENT"/> <!-- Chance is 3% Managed by SQL Side -->
+  <!-- Chance is 3% Managed by SQL Side -->
+  <set name="skillType" val="HEAL_PERCENT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1383,7 +1384,8 @@
   <set name="magicLvl" val="80"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="power" val="100"/>
-  <set name="skillType" val="HEAL_PERCENT"/> <!-- Chance is 3% Managed by SQL Side -->
+  <!-- Chance is 3% Managed by SQL Side -->
+  <set name="skillType" val="HEAL_PERCENT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
