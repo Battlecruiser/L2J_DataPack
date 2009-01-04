@@ -76,6 +76,7 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 -- CREATE ITEM
 ('admin_itemcreate','1'),
 ('admin_create_item','1'),
+('admin_summon','1'),
 
 -- CURSED WEPONS
 ('admin_cw_info','1'),
