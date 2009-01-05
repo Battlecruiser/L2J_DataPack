@@ -987,7 +987,7 @@ INSERT INTO `weapon` VALUES
 (6608,'Arcana Mace - Acumen','rhand','true',1300,1,1,'adamantaite','s',225,20,'blunt',4,4,0,0,0,379,0,175,-1,48800000,2052,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3047-2;'),
 (6609,'Arcana Mace - MP Regeneration','rhand','true',1300,1,1,'adamantaite','s',225,20,'blunt',4,4,0,0,0,379,0,175,-1,48800000,2052,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3576-1;'),
 (6610,'Arcana Mace - Mana Up','rhand','true',1300,1,1,'adamantaite','s',225,20,'blunt',4,4,0,0,0,379,0,175,-1,48800000,2052,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3014-2;'),
-(6611,'Infinity Blade','rhand','false',1300,1,1,'adamantaite','s',379,10,'sword',8,0,0,0,0,379,0,169,-1,57000000,2850,'false','false','false','false',0,0,0,0,0,3579,1,4,0,'3578-1;'),
+(6611,'Infinity Blade','rhand','false',1300,1,1,'adamantaite','s',379,10,'sword',8,0,0,0,0,379,0,169,-1,57000000,2850,'false','false','false','false',0,0,0,0,0,3579,1,100,0,'3578-1;'),
 (6612,'Infinity Cleaver','lrhand','false',1300,1,1,'adamantaite','s',461,10,'bigsword',8,0,0,0,0,325,0,169,-1,57000000,2850,'false','false','false','false',0,0,0,0,0,0,0,0,0,'3582-1;'),
 (6613,'Infinity Axe','rhand','false',1300,1,1,'adamantaite','s',379,20,'blunt',4,4,0,0,0,379,0,169,-1,57000000,2850,'false','false','false','false',0,0,0,0,0,3581,1,100,0,'3580-1;'),
 (6614,'Infinity Rod','rhand','false',1300,1,1,'adamantaite','s',303,20,'blunt',4,4,0,0,0,379,0,226,-1,57000000,2850,'false','false','false','false',0,0,3598,1,3,0,0,0,0,'3597-1;'),
