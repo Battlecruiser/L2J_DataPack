@@ -1,11 +1,11 @@
 -- DUPLICATED DEATH SPIKE FIX
-update character_skills set skill_id = 1530 where skill_id = 1148 and class_index = 0 and charid in ( select charid from characters where base_class = 41 );
-update character_skills set skill_id = 1530 where skill_id = 1148 and class_index = 1 and charid in ( select charid from character_subclasses where class_id = 41 and class_index = 1 ); 
-update character_skills set skill_id = 1530 where skill_id = 1148 and class_index = 2 and charid in ( select charid from character_subclasses where class_id = 41 and class_index = 2 ); 
-update character_skills set skill_id = 1530 where skill_id = 1148 and class_index = 3 and charid in ( select charid from character_subclasses where class_id = 41 and class_index = 3 ); 
+UPDATE character_skills SET skill_id = 1530 WHERE skill_id = 1148 AND class_index = 0 AND charid IN ( SELECT charid FROM characters WHERE base_class IN (41, 111));
+UPDATE character_skills SET skill_id = 1530 WHERE skill_id = 1148 AND class_index = 1 AND charid IN ( SELECT charid FROM character_subclasses WHERE class_id IN (41, 111) AND class_index = 1);
+UPDATE character_skills SET skill_id = 1530 WHERE skill_id = 1148 AND class_index = 2 AND charid IN ( SELECT charid FROM character_subclasses WHERE class_id IN (41, 111) AND class_index = 2);
+UPDATE character_skills SET skill_id = 1530 WHERE skill_id = 1148 AND class_index = 3 AND charid IN ( SELECT charid FROM character_subclasses WHERE class_id IN (41, 111) AND class_index = 3);
 
 -- UPDATE DEATH SPIKE SHORTCUTS
-update character_shortcuts set shortcut_id = 1530 where shortcut_id = 1148 and class_index = 0 and charid in ( select charid from characters where base_class = 41 );
-update character_shortcuts set shortcut_id = 1530 where shortcut_id = 1148 and class_index = 1 and charid in ( select charid from character_subclasses where class_id = 41 and class_index = 1 ); 
-update character_shortcuts set shortcut_id = 1530 where shortcut_id = 1148 and class_index = 2 and charid in ( select charid from character_subclasses where class_id = 41 and class_index = 2 ); 
-update character_shortcuts set shortcut_id = 1530 where shortcut_id = 1148 and class_index = 3 and charid in ( select charid from character_subclasses where class_id = 41 and class_index = 3 );
+UPDATE character_shortcuts SET shortcut_id = 1530 WHERE shortcut_id = 1148 AND class_index = 0 AND charid IN ( SELECT charid FROM characters WHERE base_class IN (41, 111));
+UPDATE character_shortcuts SET shortcut_id = 1530 WHERE shortcut_id = 1148 AND class_index = 1 AND charid IN ( SELECT charid FROM character_subclasses WHERE class_id IN (41, 111) AND class_index = 1);
+UPDATE character_shortcuts SET shortcut_id = 1530 WHERE shortcut_id = 1148 AND class_index = 2 AND charid IN ( SELECT charid FROM character_subclasses WHERE class_id IN (41, 111) AND class_index = 2);
+UPDATE character_shortcuts SET shortcut_id = 1530 WHERE shortcut_id = 1148 AND class_index = 3 AND charid IN ( SELECT charid FROM character_subclasses WHERE class_id IN (41, 111) AND class_index = 3);
