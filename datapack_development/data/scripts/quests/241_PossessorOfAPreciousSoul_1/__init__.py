@@ -62,7 +62,7 @@ class Quest (JQuest) :
        st.set("cond","3")
        st.playSound("ItemSound.quest_middle")
    elif event == "31739-8.htm" :
-     if cond == 4 :
+     if cond == 4 and st.getQuestItemsCount(LEGEND_OF_SEVENTEEN):
        st.set("cond","5")
        st.takeItems(LEGEND_OF_SEVENTEEN,1)
        st.playSound("ItemSound.quest_middle")
@@ -71,23 +71,23 @@ class Quest (JQuest) :
        st.set("cond","6")
        st.playSound("ItemSound.quest_middle")
    elif event == "31042-5.htm" :
-     if cond == 7 :
+     if cond == 7 and st.getQuestItemsCount(MALRUK_SUCCUBUS_CLAW) >= 10:
        st.set("cond","8")
        st.takeItems(MALRUK_SUCCUBUS_CLAW,10)
        st.giveItems(ECHO_CRYSTAL,1)
        st.playSound("ItemSound.quest_middle")
    elif event == "31739-12.htm" :
-     if cond == 8 :
+     if cond == 8 and st.getQuestItemsCount(ECHO_CRYSTAL):
        st.set("cond","9")
        st.takeItems(ECHO_CRYSTAL,1)
        st.playSound("ItemSound.quest_accept")
    elif event == "30692-2.htm" :
-     if cond == 9 :
+     if cond == 9 and st.getQuestItemsCount(POETRY_BOOK):
        st.set("cond","10")
        st.giveItems(POETRY_BOOK,1)
        st.playSound("ItemSound.quest_accept")
    elif event == "31739-15.htm" :
-     if cond == 10 :
+     if cond == 10 and st.getQuestItemsCount(POETRY_BOOK):
        st.set("cond","11")
        st.takeItems(POETRY_BOOK,1)
        st.playSound("ItemSound.quest_accept")
@@ -104,13 +104,13 @@ class Quest (JQuest) :
        st.set("cond","14")
        st.playSound("ItemSound.quest_accept")
    elif event == "31336-5.htm" :
-     if cond == 15:
+     if cond == 15 and st.getQuestItemsCount(CRIMSON_MOSS):
        st.set("cond","16")
        st.takeItems(CRIMSON_MOSS,5)
        st.giveItems(RAHORAKTIS_MEDICINE,1)
        st.playSound("ItemSound.quest_accept")
    elif event == "31743-2.htm" :
-     if cond == 16 :
+     if cond == 16 and st.getQuestItemsCount(RAHORAKTIS_MEDICINE):
        st.set("cond","17")
        st.takeItems(RAHORAKTIS_MEDICINE,1)
        st.playSound("ItemSound.quest_accept")
@@ -127,11 +127,13 @@ class Quest (JQuest) :
        st.set("cond","20")
        st.playSound("ItemSound.quest_accept")
    elif event == "31272-5.htm" :
-     if cond == 20 :
+     if cond == 20 and st.getQuestItemsCount(LUNARGENT) >= 5 and st.getQuestItemsCount(HELLFIRE_OIL) :
        st.takeItems(LUNARGENT,5)
        st.takeItems(HELLFIRE_OIL,1)
        st.set("cond","21")
        st.playSound("ItemSound.quest_accept")
+     else :
+       htmltext = "31272-4.htm"
    elif event == "31740-5.htm" :
      if cond == 21 :
        st.giveItems(VIRGILS_LETTER,1)
