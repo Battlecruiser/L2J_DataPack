@@ -969,7 +969,6 @@
   <set name="isCubic" val="false"/>
 </skill>
 <skill id="449" levels="4" name="Summon Attractive Cubic">
-  <!-- Needs to be finished "L2CubicInstance.java has to be updated to support cubic id and hate/hold skills" -->
   <table name="#mpConsume"> 58 62 65 69 </table>
   <table name="#itemConsumeCount"> 10 11 12 13 </table>
   <table name="#magicLvl"> 62 66 70 74 </table> <!-- guessed -->
@@ -989,8 +988,9 @@
   <!-- Summon-specific -->
   <set name="power" val="#mAtk"/>
   <set name="npcId" val="9"/>
-  <set name="activationtime" val="8"/> <!-- guessed -->
-  <set name="activationchance" val="40"/> <!-- guessed -->
+  <set name="activationtime" val="11"/>
+  <set name="activationchance" val="85"/> <!-- guessed -->
+  <set name="summonTotalLifeTime" val="900000"/>
   <set name="expPenalty" val="0.0"/>
   <set name="isCubic" val="true"/>
 </skill>

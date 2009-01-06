@@ -506,6 +506,9 @@
   <!-- Summon-specific -->
   <set name="npcId" val="3"/>
   <set name="expPenalty" val="0.0"/>
+  <set name="activationtime" val="15"/>
+  <set name="activationchance" val="0"/> <!-- this is hard coded in core, because of hp check -->
+  <set name="summonTotalLifeTime" val="3600000"/>
   <set name="isCubic" val="true"/>
 </skill>
 <skill id="4339" levels="1" name="Mimir's Elixir">
