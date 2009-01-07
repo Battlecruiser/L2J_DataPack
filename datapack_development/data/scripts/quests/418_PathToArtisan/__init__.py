@@ -137,7 +137,7 @@ class Quest (JQuest) :
         st.set("cond","3")
    elif npcId == 30527 and st.getInt("cond") and st.getQuestItemsCount(PASS_1ST)==1 :
         htmltext = "30527-09.htm"
-   elif npcId == 30317 and st.getInt("cond") and st.getQuestItemsCount(KLUTOS_LETTER)==0 and st.getQuestItemsCount(PASS_1ST) and st.getQuestItemsCount(PASS_2ND)==0 and st.getQuestItemsCount(SECRET_BOX2)==0 :
+   elif npcId == 30317 and st.getInt("cond") and st.getQuestItemsCount(KLUTOS_LETTER)==0 and st.getQuestItemsCount(FOOTPRINT)==0 and st.getQuestItemsCount(PASS_1ST) and st.getQuestItemsCount(PASS_2ND)==0 and st.getQuestItemsCount(SECRET_BOX2)==0 :
         htmltext = "30317-01.htm"
    elif npcId == 30317 and st.getInt("cond") and st.getQuestItemsCount(PASS_1ST) and (st.getQuestItemsCount(KLUTOS_LETTER) or st.getQuestItemsCount(FOOTPRINT)) :
         htmltext = "30317-08.htm"
