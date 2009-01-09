@@ -40,15 +40,15 @@ public class SagasSuperClass extends QuestJython
 {
 	private static L2FastList<Quest> _scripts = new L2FastList<Quest>();
 	public String qn = "SagasSuperClass";
-	public int[] NPC = {0,1,2,3,4,5,6,7,8,9,10};
-	public int[] Items = {0,1,2,3,4,5,6,7,8,9,10};
-	public int[] Mob = {0,1,2};
-	public int[] classid = {0};
-	public int[] prevclass = {0};
-	public int[] X = {0,1,2};
-	public int[] Y = {0,1,2};
-	public int[] Z = {0,1,2};
-	public String[] Text = {"0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17"};
+	public int[] NPC = {};
+	public int[] Items = {};
+	public int[] Mob = {};
+	public int[] classid = {};
+	public int[] prevclass = {};
+	public int[] X = {};
+	public int[] Y = {};
+	public int[] Z = {};
+	public String[] Text = {};
 	L2FastMap<L2NpcInstance, Integer> _SpawnList = new L2FastMap<L2NpcInstance, Integer>();
 	
 	int[] QuestClass[] = {{0x7f},{0x80,0x81},{0x82},{0x05},{0x14},{0x15},{0x02},{0x03},{0x2e},{0x30},{0x33},{0x34},{0x08},{0x17},{0x24},{0x09},{0x18},{0x25},{0x10},{0x11},{0x1e},{0x0c},{0x1b},{0x28},{0x0e},{0x1c},{0x29},{0x0d},{0x06},{0x22},{0x21},{0x2b},{0x37},{0x39}};
@@ -983,6 +983,8 @@ public class SagasSuperClass extends QuestJython
 				continue;
 			QuestManager.getInstance().removeQuest(_scripts.get(index));
 		}
+		_scripts.clear();
+		
 		// now unload superclass
 		return super.unload();
 	}
@@ -993,14 +995,39 @@ public class SagasSuperClass extends QuestJython
 		new SagasSuperClass(-1,"SagasSuperClass","Saga's SuperClass");
 		
 		// initialize subclasses
+		_scripts.add(new SagaOfEvasSaint());
 		_scripts.add(new SagaOfEvasTemplar());
+		_scripts.add(new SagaOfTheAdventurer());
+		_scripts.add(new SagaOfTheArcanaLord());
+		_scripts.add(new SagaOfTheArchmage());
+		_scripts.add(new SagaOfTheCardinal());
+		_scripts.add(new SagaOfTheDominator());
 		_scripts.add(new SagaOfTheDoombringer());
+		_scripts.add(new SagaOfTheDoomcryer());
+		_scripts.add(new SagaOfTheDreadnoughts());
+		_scripts.add(new SagaOfTheDuelist());
+		_scripts.add(new SagaOfTheElementalMaster());
 		_scripts.add(new SagaOfTheFortuneSeeker());
+		_scripts.add(new SagaOfTheGhostHunter());
+		_scripts.add(new SagaOfTheGhostSentinel());
+		_scripts.add(new SagaOfTheGrandKhavatari());
+		_scripts.add(new SagaOfTheHellKnight());
+		_scripts.add(new SagaOfTheHierophant());
 		_scripts.add(new SagaOfTheMaestro());
+		_scripts.add(new SagaOfTheMoonlightSentinel());
+		_scripts.add(new SagaOfTheMysticMuse());
 		_scripts.add(new SagaOfThePhoenixKnight());
+		_scripts.add(new SagaOfTheSagittarius());
 		_scripts.add(new SagaOfTheShillienSaint());
+		_scripts.add(new SagaOfTheShillienTemplar());
 		_scripts.add(new SagaOfTheSoulHound());
+		_scripts.add(new SagaOfTheSoultaker());
+		_scripts.add(new SagaOfTheSpectralDancer());
+		_scripts.add(new SagaOfTheSpectralMaster());
+		_scripts.add(new SagaOfTheStormScreamer());
 		_scripts.add(new SagaOfTheSwordMuse());
+		_scripts.add(new SagaOfTheTitan());
 		_scripts.add(new SagaOfTheTrickster());
+		_scripts.add(new SagaOfTheWindRider());
 	}
 }
