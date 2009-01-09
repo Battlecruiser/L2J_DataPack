@@ -82,7 +82,7 @@ class Quest (JQuest) :
        st.takeItems(ECHO_CRYSTAL,1)
        st.playSound("ItemSound.quest_accept")
    elif event == "30692-2.htm" :
-     if cond == 9 and st.getQuestItemsCount(POETRY_BOOK):
+     if cond == 9 and not st.getQuestItemsCount(POETRY_BOOK):
        st.set("cond","10")
        st.giveItems(POETRY_BOOK,1)
        st.playSound("ItemSound.quest_accept")
