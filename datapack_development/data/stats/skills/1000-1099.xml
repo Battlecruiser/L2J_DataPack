@@ -681,7 +681,7 @@
     </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="Buff" time="#ench1time" val="0">
+    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="50" stackType="MentalShield">
       <mul order="0x30" stat="rootVuln" val="0.5"/>
       <mul order="0x30" stat="sleepVuln" val="0.5"/>
       <mul order="0x30" stat="confusionVuln" val="0.5"/>
