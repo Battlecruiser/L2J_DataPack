@@ -43,6 +43,7 @@ class Quest (JQuest) :
             st.takeItems(7140,-1)
             if st.getQuestItemsCount(7141) == 0 :
                 st.giveItems(7141,1)
+                st.addExpAndSp(131228,11978)
             st.playSound("ItemSound.quest_finish")
             htmltext = "31328-05.htm"
         elif event == "31523-03.htm" :

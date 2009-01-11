@@ -76,7 +76,8 @@ class Quest (JQuest) :
                         htmltext = "<html><body>Mercenary Captain Pierce:<br>Thanks for your help. See Kahman for your reward!</body></html>"#custom
                 elif npcId == Kahman and cond == 3 :
                     htmltext = "31554-01.htm"
-                    st.giveItems(57,5168)
+                    st.giveItems(57,25461)
+                    st.addExpAndSp(146113,13723)
                     st.exitQuest(False)
                     st.playSound("ItemSound.quest_finish")
         return htmltext 

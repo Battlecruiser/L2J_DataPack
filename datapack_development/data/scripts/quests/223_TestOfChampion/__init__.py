@@ -146,7 +146,8 @@ class Quest (JQuest) :
    elif npcId == 30624 and st.getInt("cond") == 9 and st.getQuestItemsCount(ASCALONS_LETTER3) :
       htmltext = "30624-15.htm"
    elif npcId == 30624 and st.getInt("cond") == 14 and st.getQuestItemsCount(MOUENS_LETTER) :
-      st.addExpAndSp(117454,25000)
+      st.addExpAndSp(635371,43600)
+      st.giveItems(57,114882)
       htmltext = "30624-17.htm"
       st.giveItems(MARK_OF_CHAMPION,1)
       st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)

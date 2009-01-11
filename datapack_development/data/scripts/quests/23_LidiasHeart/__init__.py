@@ -149,7 +149,8 @@ class Quest (JQuest) :
                 if st.getQuestItemsCount(SilverSpear) != 0:
                     htmltext = "31386-03.htm"
                     st.takeItems(SilverSpear,-1)
-                    st.giveItems(Adena,100000)
+                    st.giveItems(Adena,350000)
+                    st.addExpAndSp(456893,42112)
                     st.exitQuest(False)
                     st.playSound("ItemSound.quest_finish")
                 else:

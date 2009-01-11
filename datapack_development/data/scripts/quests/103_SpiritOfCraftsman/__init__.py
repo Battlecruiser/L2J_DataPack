@@ -102,8 +102,17 @@ class Quest (JQuest) :
             htmltext = "30132-06.htm"
        elif npcId == 30307 and st.getInt("cond")==8 and st.getQuestItemsCount(STEELBENDERS_HEAD_ID)==1 :
             htmltext = "30307-07.htm"
+            st.giveItems(57,19799)
             st.takeItems(STEELBENDERS_HEAD_ID,1)
             st.giveItems(BLOODSABER_ID,1)
+            st.giveItems(1060,int(100*Config.RATE_QUESTS_REWARD))     # Lesser Healing Potions
+            mage = player.getClassId().isMage()
+            if mage :
+               st.giveItems(SPIRITSHOT_NO_GRADE,500)
+            else : 
+               st.giveItems(SOULSHOT_NO_GRADE,1000)
+            for item in range(4412,4417) : 
+               st.giveItems(item,int(10*Config.RATE_QUESTS_REWARD))   # Echo crystals 
             st.set("cond","0")
             st.exitQuest(False)
             st.playSound("ItemSound.quest_finish")

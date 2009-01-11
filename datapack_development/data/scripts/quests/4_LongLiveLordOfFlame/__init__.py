@@ -49,6 +49,8 @@ class Quest (JQuest) :
        htmltext = "30578-04.htm"
      elif cond == 2 :
        htmltext = "30578-06.htm"
+       st.giveItems(4,1)
+       st.giveItems(57,1850)
        st.addExpAndSp(4254,335)
        for item in NPC_GIFTS.values():
            st.takeItems(item,-1)

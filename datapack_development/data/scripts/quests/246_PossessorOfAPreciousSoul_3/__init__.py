@@ -65,6 +65,7 @@ class Quest (JQuest) :
        st.set("cond","0")
        st.takeItems(RELIC_BOX,1)
        st.giveItems(CARADINE_LETTER_LAST,1)
+       st.addExpAndSp(719843,0)
        st.playSound("ItemSound.quest_finish")
        st.exitQuest(False)
    return htmltext

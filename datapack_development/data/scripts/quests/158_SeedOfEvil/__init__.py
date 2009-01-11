@@ -53,7 +53,9 @@ class Quest (JQuest) :
           st.exitQuest(False)
           st.playSound("ItemSound.quest_finish")
           st.set("onlyone","1")
+          st.giveItems(57,1495)
           st.giveItems(ENCHANT_ARMOR_D,1)
+          st.addExpAndSp(17818,927)
           htmltext = "30031-06.htm"
    return htmltext
 

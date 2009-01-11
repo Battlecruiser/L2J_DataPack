@@ -53,6 +53,7 @@ class Quest (JQuest) :
             st.set("id","164")
             htmltext = "30149-06.htm"
             st.giveItems(ADENA_ID,42000)
+            st.addExpAndSp(35637,1854)
             st.takeItems(KIRUNAK_SKULL_ID,1)
             st.set("cond","0")
             st.exitQuest(False)
