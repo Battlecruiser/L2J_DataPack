@@ -91,6 +91,7 @@ class Quest (JQuest) :
    elif npcId == 30523 and st.getInt("cond")==1 and st.getQuestItemsCount(STAR_DIAMOND) : 
           htmltext = "30523-08.htm"
           # check the player state against this quest newbie rewarding mark.
+          st.giveItems(57,14666)
           newbie = player.getNewbie()
           if newbie | NEWBIE_REWARD != newbie :
              player.setNewbie(newbie|NEWBIE_REWARD)
@@ -105,6 +106,7 @@ class Quest (JQuest) :
           for item in range(4412,4417) :
               st.giveItems(item,int(10*Config.RATE_QUESTS_REWARD))   # Echo crystals
           st.takeItems(STAR_DIAMOND,-1) 
+          st.addExpAndSp(34565,2962)
           st.set("cond","0") 
           st.exitQuest(False) 
           st.playSound("ItemSound.quest_finish") 

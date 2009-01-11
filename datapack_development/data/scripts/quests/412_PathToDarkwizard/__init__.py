@@ -96,6 +96,8 @@ class Quest (JQuest) :
             st.takeItems(SEEDS_OF_LUNACY,1)
             st.takeItems(SEEDS_OF_DESPAIR,1)
             st.giveItems(JEWEL_OF_DARKNESS,1)
+            st.giveItems(57,81900)
+            st.addExpAndSp(295862,17664)
             st.set("cond","0")
             st.exitQuest(False)
             st.playSound("ItemSound.quest_finish")

@@ -92,7 +92,7 @@ class Quest (JQuest) :
        if npcId == EVIL_ALTAR_5 and cond == 5 :
          htmltext = "31516-0.htm"
        if npcId == HIERARCH and cond == 6 :
-         st.addExpAndSp(221958,0)
+         st.addExpAndSp(865187,69172)
          st.set("cond","0")
          st.exitQuest(False)
          st.playSound("ItemSound.quest_finish")

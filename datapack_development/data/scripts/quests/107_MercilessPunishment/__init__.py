@@ -112,6 +112,7 @@ class Quest (JQuest) :
             st.takeItems(LETTER_TO_HUMAN_ID,1) 
             st.takeItems(LETTER_TO_ELF_ID,1) 
             st.takeItems(HATOSS_ORDER3_ID,1)
+            st.giveItems(57,14666)
             st.giveItems(LESSER_HEALING_ID,int(100*Config.RATE_QUESTS_REWARD)) 
             st.giveItems(BUTCHER_ID,1)
             st.giveItems(CRYSTAL_BATTLE,int(10*Config.RATE_QUESTS_REWARD)) 

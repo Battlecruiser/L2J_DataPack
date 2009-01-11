@@ -92,6 +92,8 @@ class Quest (JQuest) :
             st.takeItems(LIZARD_CAPTAIN_ORDER,1)
             st.takeItems(CRYSTAL_MEDALLION,1)
             st.giveItems(LEAF_OF_ORACLE,1)
+            st.giveItems(57,81900)
+            st.addExpAndSp(295862,16894)
             st.set("cond","0")
             st.exitQuest(False)
             st.playSound("ItemSound.quest_finish")

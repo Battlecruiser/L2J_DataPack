@@ -113,6 +113,7 @@ class Quest (JQuest) :
              st.set("cond","0")
              st.set("cornerstones","0")
              st.giveItems(CARADINE_LETTER,1)
+             st.addExpAndSp(455764,0)
              st.playSound("ItemSound.quest_finish")
              st.exitQuest(False)
      elif npcId == KASSANDRA :

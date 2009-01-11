@@ -30,6 +30,7 @@ class Quest (JQuest) :
       htmltext="3.htm"
       st.playSound("ItemSound.quest_finish")
       st.giveItems(ADENA_ID,169380)
+      st.addExpAndSp(251602,25245)
       st.takeItems(ANCIENT_BOOK,-1)
       st.exitQuest(False)
       st.exitQuest(0)

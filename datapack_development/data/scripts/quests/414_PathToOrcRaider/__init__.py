@@ -112,7 +112,7 @@ class Quest (JQuest) :
      st.takeItems(BETRAYER_UMBAR_REPORT,-1) 
      st.giveItems(MARK_OF_RAIDER,1)
      st.giveItems(57,81900)
-     st.addExpAndSp(160267,10656)
+     st.addExpAndSp(295862,17354)
      player.sendPacket(SocialAction(player.getObjectId(),3))
      st.unset("cond") 
      st.exitQuest(False) 
@@ -147,7 +147,7 @@ class Quest (JQuest) :
    if npcId == GOBLIN_TOMB_RAIDER_LEADER : 
      if cond and st.getQuestItemsCount(GOBLIN_DWELLING_MAP) == 1 and st.getQuestItemsCount(KURUKA_RATMAN_TOOTH) < 10 and st.getQuestItemsCount(GREEN_BLOOD) < 40 : 
        if st.getQuestItemsCount(GREEN_BLOOD) > 1 : 
-         if st.getRandom(100) < ((st.getQuestItemsCount(GREEN_BLOOD))*5) : 
+         if st.getRandom(100) < ((st.getQuestItemsCount(GREEN_BLOOD))*10) : 
            st.takeItems(GREEN_BLOOD,-1) 
            st.addSpawn(KURUKA_RATMAN_LEADER,xx,yy,zz) 
          else: 

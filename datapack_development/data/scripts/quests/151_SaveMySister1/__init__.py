@@ -48,6 +48,7 @@ class Quest (JQuest) :
         htmltext = "30050-05.htm"
       elif cond == 3 or med :
         st.giveItems(102,1)
+        st.addExpAndSp(13106,613)
         st.takeItems(FEVER_MEDICINE,1)
         htmltext = "30050-06.htm"
         st.unset("cond")

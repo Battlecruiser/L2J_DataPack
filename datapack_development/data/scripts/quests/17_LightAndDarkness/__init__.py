@@ -88,7 +88,7 @@ class Quest (JQuest) :
            st.exitQuest(1)
            st.playSound("ItemSound.quest_giveup")
       else :
-        st.addExpAndSp(105527,0)
+        st.addExpAndSp(697040,54887)
         st.unset("cond")
         st.exitQuest(False)
         st.playSound("ItemSound.quest_finish")

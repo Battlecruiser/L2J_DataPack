@@ -29,9 +29,10 @@ class Quest (JQuest) :
             st.set("id","169")
             htmltext = "30145-08.htm"
             st.giveItems(BONE_GAITERS_ID,1)
-            st.giveItems(57,17150)
+            st.giveItems(57,17060)
             st.takeItems(CRACKED_SKULL_ID,st.getQuestItemsCount(CRACKED_SKULL_ID))
             st.takeItems(PERFECT_SKULL_ID,st.getQuestItemsCount(PERFECT_SKULL_ID))
+            st.addExpAndSp(17475,818)
             st.set("cond","0")
             st.exitQuest(False)
             st.playSound("ItemSound.quest_finish")

@@ -18,7 +18,7 @@ class Quest (JQuest) :
     htmltext = event
     if event == "32041-2.htm" :
        st.playSound("ItemSound.quest_finish")
-       st.addExpAndSp(10000,0)
+       st.addExpAndSp(76960,5793)
        st.unset("cond")
        st.exitQuest(False)
     elif event == "31961-1.htm" :

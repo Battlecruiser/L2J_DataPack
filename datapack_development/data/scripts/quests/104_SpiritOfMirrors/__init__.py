@@ -95,6 +95,7 @@ class Quest (JQuest) :
         st.giveItems(WAND_OF_ADEPT,1)
         for item in range(4412,4417) :
             st.giveItems(item,int(10*Config.RATE_QUESTS_REWARD))   # Echo crystals
+        st.addExpAndSp(39750,3407)
         htmltext = "30017-05.htm" 
         st.set("cond","0") 
         st.exitQuest(False) 

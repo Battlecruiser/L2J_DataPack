@@ -28,7 +28,8 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_accept")
    if event == "31537-1.htm" :
      st.takeItems(BEAST_MEAT,1)
-     st.giveItems(57,30000)
+     st.giveItems(57,50000)
+     st.addExpAndSp(136766,12688)
      st.unset("cond")
      st.exitQuest(False)
      st.playSound("ItemSound.quest_finish")

@@ -147,7 +147,8 @@ class Quest (JQuest) :
    elif npcId == 30646 and cond == 7 :
       htmltext = "30646-06a.htm"
    elif npcId == 30646 and cond == 10 :
-      st.addExpAndSp(72394,11250)
+      st.addExpAndSp(533803,34621)
+      st.giveItems(57,97278)
       st.giveItems(7562,8)
       htmltext = "30646-07.htm"
       st.takeItems(BROKEN_KEY,1)

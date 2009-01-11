@@ -83,7 +83,7 @@ class Quest (JQuest) :
           st.takeItems(ARKENIA_RECOMMEND,1)
           st.giveItems(IRON_HEART,1)
           st.giveItems(57,81900)
-          st.addExpAndSp(160267,14566)
+          st.addExpAndSp(295862,21264)
           player.sendPacket(SocialAction(player.getObjectId(),3))
           st.set("cond","0")
           st.exitQuest(False)

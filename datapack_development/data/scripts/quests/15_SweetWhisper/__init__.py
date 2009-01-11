@@ -27,7 +27,7 @@ class Quest (JQuest) :
        st.set("cond","2")
    if event == "31517-1.htm" :
      if cond == 2 :
-       st.addExpAndSp(60217,0)
+       st.addExpAndSp(350531,28204)
        st.set("cond","0")
        st.playSound("ItemSound.quest_finish")
        st.exitQuest(False)

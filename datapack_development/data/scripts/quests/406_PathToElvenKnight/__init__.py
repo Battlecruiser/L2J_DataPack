@@ -89,7 +89,7 @@ class Quest (JQuest) :
         elif cond == 6 :
             st.takeItems(KLUTO_BOX,-1)
             st.giveItems(57,81900)
-            st.addExpAndSp(160267,11576)
+            st.addExpAndSp(228064,14925)
             player.sendPacket(SocialAction(player.getObjectId(),3))
             st.set("cond","0")
             st.exitQuest(False)
