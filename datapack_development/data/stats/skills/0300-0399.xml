@@ -712,13 +712,19 @@
   <set name="effectRange" val="500"/>
 </skill>
 <skill id="326" levels="1" name="Build Advanced Headquarters">
-  <!-- <set name="mpConsume" val="30"/> -->
-  <set name="target" val="TARGET_NONE"/>
+  <set name="mpInitialConsume" val="30"/>
+  <set name="itemConsumeId" val="2131"/>
+  <set name="itemConsumeCount" val="300"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="reuseDelay" val="1800000"/>
   <set name="hitTime" val="4000"/>
+  <set name="staticReuse" val="true"/>
   <set name="staticHitTime" val="true"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="SIEGEFLAG"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isAdvanced" val="true"/>
 </skill>
 <skill id="327" levels="1" name="Wyvern Aegis">
   <set name="mpConsume" val="69"/>
