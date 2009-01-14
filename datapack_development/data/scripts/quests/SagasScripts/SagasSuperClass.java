@@ -106,6 +106,13 @@ public class SagasSuperClass extends QuestJython
 	    for (int mobid : Mob)
 	    	addKillId(mobid);
 	    questItemIds = Items;
+	    for (int Archon_Minion = 21646; Archon_Minion < 21652; Archon_Minion++)
+	    	addKillId(Archon_Minion);
+		int[] Archon_Hellisha_Norm = {18212, 18214, 18215, 18216, 18218};
+		for (int i = 0; i < Archon_Hellisha_Norm.length;i++)
+			addKillId(Archon_Hellisha_Norm[i]);
+		for (int Guardian_Angel = 27214; Guardian_Angel < 27216; Guardian_Angel++)
+			addKillId(Guardian_Angel);
 	}
 	
 	public void Cast(L2NpcInstance npc, L2Character target, int skillId, int level)
