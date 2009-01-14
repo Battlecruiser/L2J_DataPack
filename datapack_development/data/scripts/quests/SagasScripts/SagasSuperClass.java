@@ -203,7 +203,7 @@ public class SagasSuperClass extends QuestJython
 				}
 				else
 				{
-					for (int q=0 ; i<2;i++)
+					for (int q=0 ; q<2;q++)
 					{
 						if (player.getClassId().getId() == QuestClass[Integer.valueOf(Quests[i][0])- 67][q])
 							break;
