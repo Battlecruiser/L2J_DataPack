@@ -206,11 +206,10 @@
   <set name="isDebuff" val="true"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="120000"/>
   <set name="castRange" val="500"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="turn_passive">
+    <effect name="Debuff" time="120" count="1" val="0" stackOrder="1" stackType="turn_passive">
       <sub order="0x40" stat="aggression" val="100000"/>
     </effect>
   </for>
