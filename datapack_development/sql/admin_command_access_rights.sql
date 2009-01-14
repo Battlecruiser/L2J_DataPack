@@ -76,7 +76,6 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 -- CREATE ITEM
 ('admin_itemcreate','1'),
 ('admin_create_item','1'),
-('admin_summon','1'),
 
 -- CURSED WEPONS
 ('admin_cw_info','1'),
@@ -464,6 +463,9 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_teleport_reload','1'),
 ('admin_spawnnight','1'),
 ('admin_spawnday','1'),
+
+-- SUMMON
+('admin_summon','1'),
 
 -- TARGET
 ('admin_target','1'),
