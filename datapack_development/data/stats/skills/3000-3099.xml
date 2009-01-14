@@ -481,49 +481,49 @@
   </for>
 </skill>
 <skill id="3036" levels="6" name="Special Ability: Haste">
-  <!--
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Increases ATK Spd.
-  6: Increases ATK Spd.
-  created 2005-05-29 23:34:31
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by DJ MELERIX -->
+  <!-- For Blunts -->
+  <table name="#magicLvl"> 46 49 52 55 58 61 </table>
+  <table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 </table>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="WEAPON_SA"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
+  </for>
 </skill>
 <skill id="3037" levels="6" name="Special Ability: Haste">
-  <!--
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Increases ATK Spd.
-  6: Increases ATK Spd.
-  created 2005-05-29 23:34:31
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by DJ MELERIX -->
+  <!-- For Fists -->
+  <table name="#magicLvl"> 46 49 52 55 58 61 </table>
+  <table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 </table>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="WEAPON_SA"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
+  </for>
 </skill>
 <skill id="3038" levels="6" name="Special Ability: Haste">
-  <!--
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Increases ATK Spd.
-  6: Increases ATK Spd.
-  created 2005-05-29 23:34:31
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by DJ MELERIX -->
+  <!-- For Bows -->
+  <table name="#magicLvl"> 46 49 52 55 58 61 </table>
+  <table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 </table>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="WEAPON_SA"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
+  </for>
 </skill>
 <skill id="3039" levels="7" name="Special Ability: Critical Drain">
 <!--
