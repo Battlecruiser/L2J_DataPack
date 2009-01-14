@@ -794,7 +794,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-     <effect count="1" name="PhoenixBless" time="1800" val="0"/>
+    <effect count="1" name="PhoenixBless" time="1800" val="0"/>
   </for>
 </skill>
 <skill id="439" levels="1" name="Shield of Revenge">
@@ -808,9 +808,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <for>
   <!-- needs core support - not really a reflect -> http://www.l2guru.com/forum/showthread.php?t=74337 -->
-  </for>
 </skill>
 <skill id="440" levels="1" name="Braveheart">
   <!-- Needs to be verified -->
@@ -821,11 +819,8 @@
   <set name="hitTime" val="1500"/>
   <set name="skillType" val="COMBATPOINTHEAL"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="buffDuration" val="20000"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <for>
-  </for>
 </skill>
 <skill id="441" levels="1" name="Force Meditation">
   <!-- Done by Ritsu -->
@@ -833,7 +828,6 @@
   <table name="#pDef"> 0.20 </table>
   <table name="#hhot"> 100 </table> <!-- Guessing -->
   <table name="#mhot"> 20 </table> <!-- Guessing -->
-  <set name="buffDuration" val="120000"/>
   <set name="negateId" val="441"/>
   <set name="castRange" val="-1"/>
   <set name="charge_skill_id" val="50"/>
