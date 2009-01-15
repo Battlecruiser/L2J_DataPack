@@ -29,17 +29,20 @@ import net.sf.l2j.gameserver.model.actor.instance.L2NpcInstance;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.model.quest.Quest;
 import net.sf.l2j.gameserver.model.quest.QuestState;
+import net.sf.l2j.gameserver.model.quest.SagasSuperClass;
 import net.sf.l2j.gameserver.model.quest.State;
 import net.sf.l2j.gameserver.model.quest.jython.QuestJython;
 import net.sf.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import net.sf.l2j.gameserver.network.serverpackets.NpcSay;
 import net.sf.l2j.util.L2FastList;
 import net.sf.l2j.util.L2FastMap;
+import net.sf.l2j.util.Rnd;
 
 public class SagasSuperClass extends QuestJython
 {
 	private static L2FastList<Quest> _scripts = new L2FastList<Quest>();
 	public String qn = "SagasSuperClass";
+	public int qnu;
 	public int[] NPC = {};
 	public int[] Items = {};
 	public int[] Mob = {};
@@ -52,46 +55,11 @@ public class SagasSuperClass extends QuestJython
 	L2FastMap<L2NpcInstance, Integer> _SpawnList = new L2FastMap<L2NpcInstance, Integer>();
 	
 	int[] QuestClass[] = {{0x7f},{0x80,0x81},{0x82},{0x05},{0x14},{0x15},{0x02},{0x03},{0x2e},{0x30},{0x33},{0x34},{0x08},{0x17},{0x24},{0x09},{0x18},{0x25},{0x10},{0x11},{0x1e},{0x0c},{0x1b},{0x28},{0x0e},{0x1c},{0x29},{0x0d},{0x06},{0x22},{0x21},{0x2b},{0x37},{0x39}};
-	String[][] Quests = {
-		{"67","67_SagaOfTheDoombringer"},
-		{"68","68_SagaOfTheSoulHound"},
-		{"69","69_SagaOfTheTrickster"},
-		{"70","70_SagaOfThePhoenixKnight"},
-		{"71","71_SagaOfEvasTemplar"},
-		{"72","72_SagaOfTheSwordMuse"},
-		{"73","73_SagaOfTheDuelist"},
-		{"74","74_SagaOfTheDreadnoughts"},
-		{"75","75_SagaOfTheTitan"},
-		{"76","76_SagaOfTheGrandKhavatari"},
-		{"77","77_SagaOfTheDominator"},
-		{"78","78_SagaOfTheDoomcryer"},
-		{"79","79_SagaOfTheAdventurer"},
-		{"80","80_SagaOfTheWindRider"},
-		{"81","81_SagaOfTheGhostHunter"},
-		{"82","82_SagaOfTheSagittarius"},
-		{"83","83_SagaOfTheMoonlightSentinel"},
-		{"84","84_SagaOfTheGhostSentinel"},
-		{"85","85_SagaOfTheCardinal"},
-		{"86","86_SagaOfTheHierophant"},
-		{"87","87_SagaOfEvasSaint"},
-		{"88","88_SagaOfTheArchmage"},
-		{"89","89_SagaOfTheMysticMuse"},
-		{"90","90_SagaOfTheStormScreamer"},
-		{"91","91_SagaOfTheArcanaLord"},
-		{"92","92_SagaOfTheElementalMaster"},
-		{"93","93_SagaOfTheSpectralMaster"},
-		{"94","94_SagaOfTheSoultaker"},
-		{"95","95_SagaOfTheHellKnight"},
-		{"96","96_SagaOfTheSpectralDancer"},
-		{"97","97_SagaOfTheShillienTemplar"},
-		{"98","98_SagaOfTheShillienSaint"},
-		{"99","99_SagaOfTheFortuneSeeker"},
-		{"100","100_SagaOfTheMaestro"}
-		};
 	
 	public SagasSuperClass(int id, String name, String descr)
 	{
 		super(id,name,descr);
+		qnu = id;
 	}
 	
 	public void registerNPCs()
@@ -106,13 +74,6 @@ public class SagasSuperClass extends QuestJython
 	    for (int mobid : Mob)
 	    	addKillId(mobid);
 	    questItemIds = Items;
-	    for (int Archon_Minion = 21646; Archon_Minion < 21652; Archon_Minion++)
-	    	addKillId(Archon_Minion);
-		int[] Archon_Hellisha_Norm = {18212, 18214, 18215, 18216, 18218};
-		for (int i = 0; i < Archon_Hellisha_Norm.length;i++)
-			addKillId(Archon_Hellisha_Norm[i]);
-		for (int Guardian_Angel = 27214; Guardian_Angel < 27216; Guardian_Angel++)
-			addKillId(Guardian_Angel);
 	}
 	
 	public void Cast(L2NpcInstance npc, L2Character target, int skillId, int level)
@@ -143,6 +104,7 @@ public class SagasSuperClass extends QuestJython
 		if (_SpawnList.containsKey(npc))
 		{
 			_SpawnList.remove(npc);
+			npc.deleteMe();
 		}
 	}
 	
@@ -190,28 +152,24 @@ public class SagasSuperClass extends QuestJython
 
 	public QuestState findQuest(L2PcInstance player)
 	{
-		QuestState st = null;
-		for (int i=0;i<Quests.length;i++)
+		QuestState st = player.getQuestState(qn);
+		if (st != null)
 		{
-			st = player.getQuestState(Quests[i][1]);
-			if (st != null)
+			if (qnu != 68)
 			{
-				if (Quests[i][0] != "68" )
+				if (player.getClassId().getId() == QuestClass[qnu - 67][0])
+					return st;
+			}
+			else
+			{
+				for (int q=0 ; q<2;q++)
 				{
-					if (player.getClassId().getId() == QuestClass[Integer.valueOf(Quests[i][0])- 67][0])
-						break;
-				}
-				else
-				{
-					for (int q=0 ; q<2;q++)
-					{
-						if (player.getClassId().getId() == QuestClass[Integer.valueOf(Quests[i][0])- 67][q])
-							break;
-					}
+					if (player.getClassId().getId() == QuestClass[1][q])
+						return st;
 				}
 			}
 		}
-		return st;
+		return null;
 	}
 	
 	public int getClassId(L2PcInstance player)
@@ -679,7 +637,7 @@ public class SagasSuperClass extends QuestJython
 						if (player.getLevel() >= 76)
 						{
 							htmltext = "0-09.htm";
-							if (getClassId(player) < 131 && getClassId(player) > 135) //in Kamael quests, npc wants to chat for a bit before changing class
+							if (getClassId(player) < 131 || getClassId(player) > 135) //in Kamael quests, npc wants to chat for a bit before changing class
 							{
 								st.exitQuest(false);
 								st.set("cond","0");
@@ -846,7 +804,7 @@ public class SagasSuperClass extends QuestJython
 					}
 					if (PartyQuestMembers.size() > 0)
 					{
-						QuestState st2 = PartyQuestMembers.get(PartyQuestMembers.size());
+						QuestState st2 = PartyQuestMembers.get(Rnd.get(PartyQuestMembers.size()));
 						giveHallishaMark(st2);
 					}
 				}
@@ -886,7 +844,7 @@ public class SagasSuperClass extends QuestJython
 			}
 		}
 		
-		for (int Guardian_Angel = 27214; Guardian_Angel < 27216; Guardian_Angel++)
+		for (int Guardian_Angel = 27214; Guardian_Angel < 27217; Guardian_Angel++)
 		{
 			if (npcId == Guardian_Angel)
 			{
@@ -999,7 +957,14 @@ public class SagasSuperClass extends QuestJython
 	public static void main(String[] args)
 	{
 		// initialize superclass
-		new SagasSuperClass(-1,"SagasSuperClass","Saga's SuperClass");
+		Quest saga = new SagasSuperClass(-1,"SagasSuperClass","Saga's SuperClass");
+	    for (int Archon_Minion = 21646; Archon_Minion < 21652; Archon_Minion++)
+	    	saga.addKillId(Archon_Minion);
+		int[] Archon_Hellisha_Norm = {18212, 18214, 18215, 18216, 18218};
+		for (int i = 0; i < Archon_Hellisha_Norm.length;i++)
+			saga.addKillId(Archon_Hellisha_Norm[i]);
+		for (int Guardian_Angel = 27214; Guardian_Angel < 27217; Guardian_Angel++)
+			saga.addKillId(Guardian_Angel);
 		
 		// initialize subclasses
 		_scripts.add(new SagaOfEvasSaint());
