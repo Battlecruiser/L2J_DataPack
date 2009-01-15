@@ -21,24 +21,34 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="3601" levels="9" name="Special Ability: Haste">
+  <!-- Done by DJ MELERIX -->
+  <!-- For Poles -->
   <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1 - Increases Atk.Spd., and enables the character to attack multiple opponents.
-      Lvl 2 - Increases Atk.Spd., and enables the character to attack multiple opponents.
-      Lvl 3 - Increases Atk.Spd., and enables the character to attack multiple opponents.
-      Lvl 4 - Increases Atk.Spd., and enables the character to attack multiple opponents.
-      Lvl 5 - Increases Atk.Spd., and enables the character to attack multiple opponents.
-      Lvl 6 - Increases Atk.Spd., and enables the character to attack multiple opponents.
-      Lvl 7 - Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
-      Lvl 8 - Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
-      Lvl 9 - Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
+  Lvl 1: Increases Atk.Spd., and enables the character to attack multiple opponents.
+  Lvl 2: Increases Atk.Spd., and enables the character to attack multiple opponents.
+  Lvl 3: Increases Atk.Spd., and enables the character to attack multiple opponents.
+  Lvl 4: Increases Atk.Spd., and enables the character to attack multiple opponents.
+  Lvl 5: Increases Atk.Spd., and enables the character to attack multiple opponents.
+  Lvl 6: Increases Atk.Spd., and enables the character to attack multiple opponents.
+  Lvl 7: Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
+  Lvl 8: Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
+  Lvl 9: Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
   -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 </table>
+  <table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 1.06 1.06 1.07 </table>
+  <table name="#pvp"> 1.0 1.0 1.0 1.0 1.0 1.0 1.05 1.05 1.05 </table>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="WEAPON_SA"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
+    <mul order="0x30" stat="pvpPhysDmg" val="#pvp"/>
+    <mul order="0x30" stat="pvpMagicalDmg" val="#pvp"/>
+    <add order="0x40" stat="atkCountMax" val="4"/>
+  </for>
 </skill>
 <skill id="3602" levels="9" name="Special Ability: Guidance">
   <!--

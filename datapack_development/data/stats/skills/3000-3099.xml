@@ -987,19 +987,24 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="3068" levels="3" name="Special Ability: Haste">
+  <!-- Done by DJ MELERIX -->
   <!--
-  Automatically generated from C3 client files.
-  Need to be checked/fixed.
-  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
-  Descriptions:
-  1: Increases ATK Spd.
-  2: Increases Atk. Spd. Increases damage inflicted during PvP.
-  created 2005-05-29 23:34:31
+  Lvl 1: Increases ATK Spd.
+  Lvl 2: Increases Atk. Spd. Increases damage inflicted during PvP.
+  Lvl 3: Increases Atk. Spd. Increases damage inflicted during PvP.
   -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#pvp"> 1.0 1.05 1.05 </table> <!-- Guessing Lvl 3 -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="magicLvl" val="64"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="WEAPON_SA"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <mul order="0x30" stat="pAtkSpd" val="1.06"/>
+    <mul order="0x30" stat="pvpPhysDmg" val="#pvp"/>
+    <mul order="0x30" stat="pvpMagicalDmg" val="#pvp"/>
+  </for>
 </skill>
 <skill id="3069" levels="1" name="Special Ability: Risky Evasion">
   <!--
