@@ -477,18 +477,13 @@
 
 <item id='9880' name="Dynasty Bagh-Nakh - Haste">
   <for>
-   <set val='405' order='0x08' stat='pAtk'/>
-   <set val='151' order='0x08' stat='mAtk'/>
-   <set val='4' order='0x08' stat='rCrit'/>
-   <add val='4' order='0x10' stat='accCombat'/>
-   <set val='325' order='0x08' stat='pAtkSpd'/>
-   <enchant val='0' order='0x0C' stat='pAtk'/>
-   <enchant val='0' order='0x0C' stat='mAtk'/>
-          <!-- SA: Haste -->
-   <mul val='1.10' order='0x30' stat='pAtkSpd'/>
-    <!-- Enhances damage to target during PvP -->
-   <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
-   <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
+    <set val='405' order='0x08' stat='pAtk'/>
+    <set val='151' order='0x08' stat='mAtk'/>
+    <set val='4' order='0x08' stat='rCrit'/>
+    <add val='4' order='0x10' stat='accCombat'/>
+    <set val='325' order='0x08' stat='pAtkSpd'/>
+    <enchant val='0' order='0x0C' stat='pAtk'/>
+    <enchant val='0' order='0x0C' stat='mAtk'/>
   </for>
 </item>
 </list>
