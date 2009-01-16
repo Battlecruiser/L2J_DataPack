@@ -866,6 +866,7 @@
 </skill>
 <skill id="3564" levels="2" name="Special Ability: Haste">
   <!-- Done by DJ MELERIX -->
+  <table name="#pAtkSpd"> 1.07 1.10 </table> <!-- Guessing Lvl 2 -->
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="75"/>
@@ -873,7 +874,7 @@
   <set name="skillType" val="WEAPON_SA"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
-    <mul order="0x30" stat="pAtkSpd" val="1.07"/>
+    <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
     <mul order="0x30" stat="pvpPhysDmg" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/>
   </for>
