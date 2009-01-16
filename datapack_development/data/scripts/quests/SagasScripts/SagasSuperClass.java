@@ -68,11 +68,18 @@ public class SagasSuperClass extends QuestJython
 		addAttackId(Mob[1]);
 		addSkillSeeId(Mob[1]);
 		addFirstTalkId(NPC[4]);
-	    for (int npc : NPC)
-	    	addTalkId(npc);
-	    for (int mobid : Mob)
-	    	addKillId(mobid);
-	    questItemIds = Items;
+		for (int npc : NPC)
+			addTalkId(npc);
+		for (int mobid : Mob)
+			addKillId(mobid);
+		questItemIds = Items;
+		for (int Archon_Minion = 21646; Archon_Minion < 21652; Archon_Minion++)
+			addKillId(Archon_Minion);
+		int[] Archon_Hellisha_Norm = {18212, 18214, 18215, 18216, 18218};
+		for (int i = 0; i < Archon_Hellisha_Norm.length;i++)
+			addKillId(Archon_Hellisha_Norm[i]);
+		for (int Guardian_Angel = 27214; Guardian_Angel < 27217; Guardian_Angel++)
+			addKillId(Guardian_Angel);
 	}
 	
 	public void Cast(L2NpcInstance npc, L2Character target, int skillId, int level)
@@ -740,15 +747,15 @@ public class SagasSuperClass extends QuestJython
 				st.set("Tab","1");
 				DeleteSpawn(st,npc);
 			}
-			else if (npcId == Mob[1] && cond == 15)
+		}
+		else if (npcId == Mob[1] && cond == 15)
+		{
+			if (st != st2 || (st == st2 && player.isInParty()))
 			{
-				if (st != st2 || (st == st2 && player.isInParty()))
-				{
-					AutoChat(npc,Text[5].replace("PLAYERNAME",player.getName()));
-					cancelQuestTimer("Archon Hellisha has despawned",npc,st2.getPlayer());
-					st2.set("spawned","0");
-					DeleteSpawn(st2,npc);
-				}
+				AutoChat(npc,Text[5].replace("PLAYERNAME",player.getName()));
+				cancelQuestTimer("Archon Hellisha has despawned",npc,st2.getPlayer());
+				st2.set("spawned","0");
+				DeleteSpawn(st2,npc);
 			}
 		}
 		return super.onAttack(npc, player, damage, isPet);
@@ -956,14 +963,7 @@ public class SagasSuperClass extends QuestJython
 	public static void main(String[] args)
 	{
 		// initialize superclass
-		Quest saga = new SagasSuperClass(-1,"SagasSuperClass","Saga's SuperClass");
-	    for (int Archon_Minion = 21646; Archon_Minion < 21652; Archon_Minion++)
-	    	saga.addKillId(Archon_Minion);
-		int[] Archon_Hellisha_Norm = {18212, 18214, 18215, 18216, 18218};
-		for (int i = 0; i < Archon_Hellisha_Norm.length;i++)
-			saga.addKillId(Archon_Hellisha_Norm[i]);
-		for (int Guardian_Angel = 27214; Guardian_Angel < 27217; Guardian_Angel++)
-			saga.addKillId(Guardian_Angel);
+		new SagasSuperClass(-1,"SagasSuperClass","Saga's SuperClass");
 		
 		// initialize subclasses
 		_scripts.add(new SagaOfEvasSaint());
