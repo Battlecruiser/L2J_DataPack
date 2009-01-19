@@ -44,13 +44,15 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 
 -- BAN
 ('admin_ban','1'),
-('admin_unban','1'),
+('admin_ban_acc','1'),
+('admin_ban_char','1'),
+('admin_ban_chat','1'),
 ('admin_jail','1'),
+('admin_unban','1'),
+('admin_unban_acc','1'),
+('admin_unban_char','1'),
+('admin_unban_chat','1'),
 ('admin_unjail','1'),
-
--- BAN CHAT
-('admin_banchat','1'),
-('admin_unbanchat','1'),
 
 -- BBS
 ('admin_bbs','1'),
