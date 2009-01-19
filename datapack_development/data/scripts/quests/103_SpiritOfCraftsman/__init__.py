@@ -24,6 +24,8 @@ BLOODSABER_ID = 975
 #Bit #1 isn't used for backwards compatibility.
 NEWBIE_REWARD = 8
 SOULSHOT_FOR_BEGINNERS = 5789
+SOULSHOT_NO_GRADE = 1835
+SPIRITSHOT_NO_GRADE = 2509
 
 class Quest (JQuest) :
 
