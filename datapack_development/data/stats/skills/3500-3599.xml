@@ -767,7 +767,7 @@
     <mul order="0x30" stat="mCritRate" val="1.2"/> <!-- Guessing -->
     <mul order="0x30" stat="fireVuln" val="0.85"/>
     <mul order="0x30" stat="sleepVuln" val="0.60"/>
-    <!-- Missing Sleep Attack Success Rate: +40% -->
+    <mul order="0x30" stat="sleep" val="1.40"/> <!-- Sleep Attack Success Rate: +40% -->
     <mul order="0x30" stat="mReuse" val="0.90"/>
     <mul order="0x30" stat="pReuse" val="0.90"/>
     <add order="0x40" stat="reflectDam" val="5"/>
@@ -781,8 +781,9 @@
   <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="bleedVuln" val="0.6"/>
-    <!-- Missing Bleed Attack Success Rate: +40% -->
-    <!-- Missing Stun/Silence Attack Success Rate: +30% -->
+    <mul order="0x30" stat="bleed" val="1.40"/> <!-- Bleed Attack Success Rate: +40% -->
+    <mul order="0x30" stat="stun" val="1.30"/> <!-- Stun Attack Success Rate: +30% -->
+    <!-- Missing Silence Attack Success Rate: +30% -->
     <mul order="0x30" stat="gainHp" val="1.10"/>
     <add order="0x40" stat="absorbDam" val="4"/>
     <mul order="0x30" stat="stunVuln" val="0.70"/>
@@ -800,11 +801,12 @@
   <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="bleedVuln" val="0.70"/>
-    <!-- Missing Bleed Attack Success Rate: +30% -->
+    <mul order="0x30" stat="bleed" val="1.30"/> <!-- Bleed Attack Success Rate: +30% -->
     <mul order="0x30" stat="gainHp" val="1.10"/>
     <add order="0x40" stat="absorbDam" val="4"/>
     <mul order="0x30" stat="stunVuln" val="0.80"/>
-    <!-- Missing Shock/Abnormal Mental State Attack Success Rate: 20% -->
+    <mul order="0x30" stat="stun" val="1.20"/> <!-- Shock Attack Success Rate: +20% -->
+    <!-- Missing Abnormal Mental State Attack Success Rate: +20% -->
     <mul order="0x30" stat="derangementVuln" val="0.80"/>
   </for>
 </skill>
@@ -816,7 +818,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="bleedVuln" val="0.80"/>
-    <!-- Missing Bleed Attack Success Rate: 20% -->
+    <mul order="0x30" stat="bleed" val="1.20"/> <!-- Bleed Attack Success Rate: +20% -->
     <mul order="0x30" stat="gainHp" val="1.06"/>
   </for>
 </skill>
@@ -828,11 +830,11 @@
   <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="poisonVuln" val="0.60"/>
-    <!-- Missing Poison Attack Success Rate: 40% -->
+    <mul order="0x30" stat="poison" val="1.40"/> <!-- Poison Attack Success Rate: +40% -->
     <add order="0x40" stat="accCombat" val="2"/>
     <mul order="0x30" stat="cAtk" val="1.15"/>
     <mul order="0x30" stat="rootVuln" val="0.70"/>
-    <!-- Missing Hold Attack Success Rate: 30% -->
+    <mul order="0x30" stat="root" val="1.30"/> <!-- Hold Attack Success Rate: +30% -->
     <mul order="0x30" stat="pAtkSpd" val="1.04"/>
     <mul order="0x30" stat="mAtkSpd" val="1.04"/>
   </for>
@@ -845,11 +847,11 @@
   <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="poisonVuln" val="0.70"/>
-    <!-- Missing Poison Attack Success Rate: +30% -->
+    <mul order="0x30" stat="poison" val="1.30"/> <!-- Poison Attack Success Rate: +30% -->
     <add order="0x40" stat="accCombat" val="2"/>
     <mul order="0x30" stat="cAtk" val="1.15"/>
     <mul order="0x30" stat="rootVuln" val="0.80"/>
-    <!-- Missing Hold Attack Success Rate: 20% -->
+    <mul order="0x30" stat="root" val="1.20"/> <!-- Hold Attack Success Rate: +20% -->
   </for>
 </skill>
 <skill id="3563" levels="1" name="Ring of Core">
@@ -860,7 +862,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="poisonVuln" val="0.80"/>
-    <!-- Missing Poison Attack Success Rate: 20% -->
+    <mul order="0x30" stat="poison" val="1.20"/> <!-- Poison Attack Success Rate: +20% -->
     <add order="0x40" stat="accCombat" val="1"/>
   </for>
 </skill>

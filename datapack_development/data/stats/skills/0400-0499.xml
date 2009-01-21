@@ -1552,7 +1552,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="0">
-      <!-- mul order="0x30" stat="darkPower" val="1.1" require core support -->
+      <mul order="0x30" stat="dark" val="1.1"/>
     </effect>
   </for>
 </skill>
