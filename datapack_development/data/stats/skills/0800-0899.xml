@@ -297,10 +297,10 @@
   <for>
     <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="ws_weapon">
       <mul order="0x30" stat="pAtk" val="1.05">
-        <using kind="Sword,Big Sword"/>
+        <using kind="Sword,Big Sword,Ancient,Rapier"/>
       </mul>
       <basemul order="0x30" stat="rCrit" val="0.2">
-        <using kind="Sword,Big Sword"/>
+        <using kind="Sword,Big Sword,Ancient,Rapier"/>
       </basemul>
     </effect>
   </for>

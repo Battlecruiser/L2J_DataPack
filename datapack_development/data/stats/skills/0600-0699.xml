@@ -217,7 +217,8 @@
   <set name="hitTime" val="1500"/>
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="10"/>
-  <set name="reuseDelay" val="1800000"/> <!-- TODO: must not be affected by casting/attack speed -->
+  <set name="reuseDelay" val="1800000"/>
+  <set name="staticReuse" val="true"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CHARGESOUL"/>
   <set name="operateType" val="OP_ACTIVE"/>
