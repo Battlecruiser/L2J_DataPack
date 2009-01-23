@@ -1450,18 +1450,17 @@
   </for> 
 </skill>
 <skill id="475" levels="1" name="Strike Back">
-  <set name="mpConsume" val="15"/>
-  <set name="power" val="40"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="CONT"/>
-  <set name="operateType" val="OP_TOGGLE"/>
+  <!--
+  Needs to be finished.
+  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
+  Description(s):
+      Temporarily reflects damage from melee attack skills back to the enemy.
+  -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
-  <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="18">
-      <add order="0x40" stat="reflectSkillPhysic" val="40"/>
-    </effect>
-  </for>
+  <!-- needs core support - not really a reflect -> http://www.l2guru.com/forum/showthread.php?t=74337 -->
 </skill>
 <skill id="476" levels="15" name="Dark Strike">
   <table name="#power"> 108 117 126 147 159 171 198 213 229 263 281 301 344 367 391 </table>
