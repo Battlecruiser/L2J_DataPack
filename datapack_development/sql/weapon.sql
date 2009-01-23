@@ -2294,7 +2294,7 @@ INSERT INTO `weapon` VALUES
 (11337,'Icarus Hand - Destruction','lrhand','true',1550,1,1,'fine_steel','s80',442,5,'dualfist',4,4,0,0,0,325,0,163,-1,0,10394,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (11338,'Icarus Hand - Destruction - Rsk. Evasion','lrhand','true',1550,1,1,'fine_steel','s80',442,5,'dualfist',4,4,0,0,0,325,0,163,-1,0,10394,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (11339,'Icarus Hand - Destruction - Focus','lrhand','true',1550,1,1,'fine_steel','s80',442,5,'dualfist',4,4,0,0,0,325,0,163,-1,0,10394,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
-(11340,'Icarus Hand - Destruction - Haste','lrhand','true',1550,1,1,'fine_steel','s80',442,5,'dualfist',4,4,0,0,0,325,0,163,-1,0,10394,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3064-2;'),
+(11340,'Icarus Hand - Destruction - Haste','lrhand','true',1550,1,1,'fine_steel','s80',442,5,'dualfist',4,4,0,0,0,325,0,163,-1,0,10394,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3564-2;'),
 (11341,'Icarus Heavy Arms  - Thunder','lrhand','true',1740,1,1,'fine_steel','s80',442,10,'bigsword',8,0,0,0,0,325,0,163,-1,0,10394,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (11342,'Icarus Heavy Arms  - Thunder - Focus','lrhand','true',1740,1,1,'fine_steel','s80',442,10,'bigsword',8,0,0,0,0,325,0,163,-1,0,10394,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (11343,'Icarus Heavy Arms  - Thunder - Health','lrhand','true',1740,1,1,'fine_steel','s80',442,10,'bigsword',8,0,0,0,0,325,0,163,-1,0,10394,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3013-5;'),
