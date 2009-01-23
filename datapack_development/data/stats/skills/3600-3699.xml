@@ -105,13 +105,13 @@
   <for>
     <mul order="0x30" stat="sleepVuln" val="0.85"/>
     <mul order="0x30" stat="poisonVuln" val="0.75"/>
-    <mul order="0x30" stat="poison" val="1.25"/> <!-- Poison Attack Success Rate: +25% -->
+    <!-- mul order="0x30" stat="poisonPower" val="1.25" Needs Core Support Poison Attack Success Rate: +25% -->
     <mul order="0x30" stat="bleedVuln" val="0.50"/>
     <mul order="0x30" stat="paralyzeVuln" val="0.85"/>
     <mul order="0x30" stat="stunVuln" val="0.85"/>
-    <mul order="0x30" stat="sleep" val="1.15"/> <!-- Sleep Attack Success Rate: +15% -->
-    <!-- Missing Paralysis Attack Success Rate: +15% -->
-    <mul order="0x30" stat="stun" val="1.15"/> <!-- Shock Attack Success Rate: +15% -->
+    <!-- mul order="0x30" stat="sleepPower" val="1.15" Needs Core Support Sleep Attack Success Rate: +15% -->
+    <!-- mul order="0x30" stat="paralyzePower" val="1.15" Needs Core Support Paralysis Attack Success Rate: +15% -->
+    <!-- mul order="0x30" stat="stunPower" val="1.15" Needs Core Support Shock Attack Success Rate: +15% -->
     <mul order="0x30" stat="darkVuln" val="0.85"/>
     <add order="0x40" stat="reflectDam" val="5"/>
     <mul order="0x30" stat="mReuse" val="0.90"/>
