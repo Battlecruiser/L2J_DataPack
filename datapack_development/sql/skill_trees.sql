@@ -16075,17 +16075,17 @@ INSERT INTO skill_trees VALUES
 
 -- Custom Kamaels "Skill Trees" (From the Forums), values needs to be verified in the future.
 
-(127,625,1,'Soul Gathering',50000,46),
+(127,625,1,'Soul Gathering',75000,46),
 (128,625,1,'Soul Gathering',50000,46),
 (129,625,1,'Soul Gathering',50000,46),
 (130,625,1,'Soul Gathering',50000,46),
-(130,510,1,'Deadly Roulette',389000,66),
-(130,510,2,'Deadly Roulette',560000,68),
-(130,510,3,'Deadly Roulette',620000,70),
-(130,510,4,'Deadly Roulette',800000,72),
-(130,510,5,'Deadly Roulette',1530000,74),
-(130,513,1,'Create Dark Seed',310000,62),
-(130,524,1,'Cure Dark Seed',370000,62),
-(130,621,1,'Create Special Bolt',38000,43),
-(130,622,1,'Ultimate Escape',38000,43),
+(130,510,1,'Deadly Roulette',350000,66),
+(130,510,2,'Deadly Roulette',490000,68),
+(130,510,3,'Deadly Roulette',580000,70),
+(130,510,4,'Deadly Roulette',710000,72),
+(130,510,5,'Deadly Roulette',1400000,74),
+(130,513,1,'Create Dark Seed',290000,62),
+(130,524,1,'Cure Dark Seed',320000,64),
+(130,621,1,'Create Special Bolt',33000,43),
+(130,622,1,'Ultimate Escape',33000,43),
 (135,625,1,'Soul Gathering',67000,46);
