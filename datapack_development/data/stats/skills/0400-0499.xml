@@ -1031,7 +1031,6 @@
   <set name="skillType" val="CHARGE_EFFECT"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <set name="isMagic" val="false"/>
   <for>
     <effect name="Buff" time="15" count="1" val="0" stackOrder="#spd" stackType="speed_up_special"> <!-- changed to 15s duration - retail info -->
       <mul order="0x30" stat="runSpd" val="#spd"/>

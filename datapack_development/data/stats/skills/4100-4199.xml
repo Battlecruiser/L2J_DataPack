@@ -654,7 +654,7 @@
   <set name="hitTime" val="6000"/>
   <set name="skillType" val="MDAM"/>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="isMagic" val="false"/>
+  <set name="isMagic" val="false"/> <!-- This skill is MDAM but not magic (casting can't be cancelled) -->
   <set name="isSuicideAttack" val="true"/>
   <set name="element" val="2"/> <!-- Fire -->
   <set name="operateType" val="OP_ACTIVE"/>
@@ -697,7 +697,7 @@
   <set name="hitTime" val="500"/>
   <set name="skillType" val="MDAM"/>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="isMagic" val="false"/>
+  <set name="isMagic" val="true"/>
   <set name="isSuicideAttack" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -1034,7 +1034,6 @@
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="1800"/>
   <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="false"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
