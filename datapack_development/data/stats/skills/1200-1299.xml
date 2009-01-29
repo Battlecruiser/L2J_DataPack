@@ -660,11 +660,10 @@
   <table name="#ench2MpConsume_Init"> 10 10 10 10 10 9 9 9 9 9 8 8 8 8 8 8 7 7 7 7 7 6 6 6 6 6 6 5 5 5 </table>
   <table name="#mpConsume_Init"> 7 9 11 </table>
   <table name="#mpConsume"> 28 35 41 </table>
-  <table name="#power"> 10 15 20 </table>
+  <table name="#reflectDam"> 10 15 20 </table>
   <table name="#aggro"> 379 457 532 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
@@ -677,13 +676,13 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#power" stackType="DmgShield">
-      <add order="0x40" stat="reflectDam" val="#power"/>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#reflectDam" stackType="DmgShield">
+      <add order="0x40" stat="reflectDam" val="#reflectDam"/>
     </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="20.0" stackType="DmgShield">
-      <add order="0x40" stat="reflectDam" val="20.0"/>
+    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="20" stackType="DmgShield">
+      <add order="0x40" stat="reflectDam" val="20"/>
     </effect>
   </enchant1for>
 </skill>
@@ -857,11 +856,10 @@
   <table name="#ench2MpConsume_Init"> 10 10 10 10 10 9 9 9 9 9 8 8 8 8 8 8 7 7 7 7 7 6 6 6 6 6 6 5 5 5 </table>
   <table name="#mpConsume_Init"> 7 9 11 </table>
   <table name="#mpConsume"> 28 35 41 </table>
-  <table name="#power"> 10 15 20 </table>
+  <table name="#reflectDam"> 10 15 20 </table>
   <table name="#aggro"> 379 457 532 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
@@ -874,13 +872,13 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#power" stackType="DmgShield">
-      <add order="0x40" stat="reflectDam" val="#power"/>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#reflectDam" stackType="DmgShield">
+      <add order="0x40" stat="reflectDam" val="#reflectDam"/>
     </effect>
   </for>
   <enchant1for>
     <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="20.0" stackType="DmgShield">
-      <add order="0x40" stat="reflectDam" val="20.0"/>
+      <add order="0x40" stat="reflectDam" val="20"/>
     </effect>
   </enchant1for>
 </skill>

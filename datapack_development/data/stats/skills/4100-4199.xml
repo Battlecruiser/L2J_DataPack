@@ -662,30 +662,49 @@
   <set name="effectRange" val="-1"/>
 </skill>
 <skill id="4140" levels="12" name="Contract Payment">
-  <table name="#power"> 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 </table>
-  <set name="power" val="#power"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <!-- Done by DJ MELERIX -->
+  <table name="#damage"> 3 3.3 3.6 3.9 4.2 4.5 4.8 4.8 5.1 5.1 5.4 5.4 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+  <table name="#stack"> 1 2 3 4 5 6 7 7 8 8 9 9 </table>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
+  <set name="isDebuff" val="true"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="100"/> <!-- Base Land Rate -->
+  <set name="reuseDelay" val="8000"/>
+  <set name="skillType" val="MDOT"/>
+  <set name="target" val="TARGET_ONE"/>
+  <for>
+    <effect count="20" name="ManaDamOverTime" time="3" val="#damage" stackOrder="#stack" stackType="dot_mp"/>
+  </for>
 </skill>
 <skill id="4141" levels="12" name="NPC Wind Fist">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="hitTime" val="1500"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <!-- Done by DJ MELERIX -->
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="castRange" val="500"/>
   <set name="effectRange" val="1000"/>
+  <set name="element" val="2"/> <!-- Fire -->
+  <set name="hitTime" val="1500"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="target" val="TARGET_ONE"/>
 </skill>
 <skill id="4142" levels="12" name="NPC Fast Wind Fist">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="hitTime" val="1100"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <!-- Done by DJ MELERIX -->
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="castRange" val="500"/>
   <set name="effectRange" val="1000"/>
+  <set name="element" val="2"/> <!-- Fire -->
+  <set name="hitTime" val="1100"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.0"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="target" val="TARGET_ONE"/>
 </skill>
 <skill id="4143" levels="10" name="Treasure Bomb">
   <!-- levels 9 & 10 need to be confirmed -->
@@ -754,12 +773,16 @@
   </for>
 </skill>
 <skill id="4147" levels="7" name="Area Dispel">
-  <!-- Needs to be finished -->
-  <set name="target" val="TARGET_AURA"/>
-  <set name="skillType" val="CANCEL"/> <!-- Needs core support for CANCEL_ALL -->
-  <set name="operateType" val="OP_ACTIVE"/>
+  <!-- Done by DJ MELERIX -->
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 </table>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="negateStats" val="BUFF DEBUFF HEAL_PERCENT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillRadius" val="200"/> <!-- Guessing -->
+  <set name="skillType" val="CANCEL"/> <!-- Needs core support for CANCEL_ALL -->
+  <set name="target" val="TARGET_AURA"/>
 </skill>
 <skill id="4148" levels="12" name="Poison">
   <table name="#dmg"> 12 18 24 31 38 44 48 48 49 49 48 48 </table>
@@ -884,7 +907,7 @@
 </skill>
 <skill id="4154" levels="12" name="NPC MP Drain - Magic">
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
-  <table name="#power"> 34.0 57.0 78.0 105.0 134.0 165.0 194.0 206.0 216.0 224.0 229.0 232.0 </table>
+  <table name="#power"> 34 57 78 105 134 165 194 206 216 224 229 232 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1081,7 +1104,7 @@
 </skill>
 <skill id="4166" levels="18" name="Stuns">
   <!-- Cubic skill -->
-  <table name="#magicLvl"> 40 44 48 52 56 60 64 68 72 74 75 76 77 78 79 80 81 82</table>
+  <table name="#magicLvl"> 40 44 48 52 56 60 64 68 72 74 75 76 77 78 79 80 81 82 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
   <set name="power" val="80"/> <!-- Base Land Rate -->

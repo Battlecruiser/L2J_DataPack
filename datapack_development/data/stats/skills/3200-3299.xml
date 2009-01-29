@@ -69,7 +69,7 @@
 <skill id="3204" levels="3" name="Item Skill: Reflect Damage">
   <table name="#mpConsume_Init"> 4 5 5 </table>
   <table name="#mpConsume"> 14 17 19 </table>
-  <table name="#power"> 1.05 1.06 1.07 </table>
+  <table name="#reflectDam"> 1.05 1.06 1.07 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
@@ -83,7 +83,7 @@
   <set name="staticReuse" val="true"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
-      <add order="0x40" stat="reflectDam" val="#power"/>
+      <add order="0x40" stat="reflectDam" val="#reflectDam"/>
     </effect>
   </for>
 </skill>

@@ -1502,12 +1502,16 @@
   <set name="negateStats" val="BUFF DEBUFF HEAL_PERCENT"/>
 </skill>
 <skill id="4095" levels="1" name="Damage Shield">
-  <set name="power" val="20.0"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="REFLECT"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="magicLvl" val="1"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="REFLECT"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <add order="0x40" stat="reflectDam" val="20"/>
+  </for>
 </skill>
 <skill id="4096" levels="3" name="NPC Hawkeye">
   <!-- Done by dc -->
