@@ -456,13 +456,15 @@
   </for>
 </skill>
 <skill id="4334" levels="1" name="SSQ Cancel">
-  <!-- Needs to be finished -->
-  <set name="target" val="TARGET_AREA"/>
-  <set name="radius" val="2000"/>
-  <set name="skillType" val="CANCEL"/> <!-- Needs core support for CANCEL_ALL -->
-  <set name="operateType" val="OP_ACTIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="1000"/>
   <set name="effectRange" val="1500"/>
+  <set name="magicLvl" val="99"/>
+  <set name="negateStats" val="BUFF DEBUFF HEAL_PERCENT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillRadius" val="2000"/>
+  <set name="skillType" val="CANCEL"/> <!-- Needs core support for CANCEL_ALL -->
+  <set name="target" val="TARGET_AREA"/>
 </skill>
 <skill id="4335" levels="1" name="Sacred Attack">
 <!-- TODO -->
@@ -513,7 +515,7 @@
 </skill>
 <skill id="4339" levels="1" name="Mimir's Elixir">
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="BUFF"/> <!-- just broadcast -->
+  <set name="skillType" val="BUFF"/> <!-- Just Broadcast -->
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="castRange" val="900"/>
@@ -874,8 +876,8 @@
   </for>
 </skill>
 <skill id="4361" levels="2" name="Curse of Destruction">
-  <table name="#power"> 1.0 2.0 </table>
-  <set name="power" val="#power"/>
+  <!-- Fighter -->
+  <set name="power" val="100"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
   <set name="skillType" val="DEBUFF"/>
@@ -894,8 +896,8 @@
   </for>
 </skill>
 <skill id="4362" levels="2" name="Curse of Destruction">
-  <table name="#power"> 1.0 2.0 </table>
-  <set name="power" val="#power"/>
+  <!-- Mage -->
+  <set name="power" val="100"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
   <set name="skillType" val="DEBUFF"/>
@@ -914,7 +916,7 @@
   </for>
 </skill>
 <skill id="4363" levels="1" name="Curse of Destruction">
-  <set name="power" val="1.0"/>
+  <set name="power" val="100"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
   <set name="skillType" val="DEBUFF"/>
@@ -930,8 +932,7 @@
   </for>
 </skill>
 <skill id="4364" levels="2" name="Blessing of Prophecy">
-  <table name="#power"> 1.0 2.0 </table>
-  <set name="power" val="#power"/>
+  <!-- Fighter -->
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
   <set name="skillType" val="BUFF"/>
@@ -951,6 +952,7 @@
   </for>
 </skill>
 <skill id="4365" levels="2" name="Blessing of Prophecy">
+  <!-- Mage -->
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
   <set name="skillType" val="BUFF"/>

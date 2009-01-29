@@ -1422,11 +1422,10 @@
   <table name="#ench2MpConsume_Init"> 5 5 5 5 5 5 5 5 5 5 4 4 4 4 4 4 4 4 4 4 3 3 3 3 3 3 3 3 3 3 </table>
   <table name="#mpConsume_Init"> 4 5 5 </table>
   <table name="#mpConsume"> 14 17 19 </table>
-  <table name="#power"> 10 15 20 </table>
+  <table name="#reflectDam"> 10 15 20 </table>
   <table name="#aggro"> 379 438 495 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="#power"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
@@ -1439,8 +1438,8 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#power" stackType="DmgShield">
-      <add order="0x40" stat="reflectDam" val="#power"/>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#reflectDam" stackType="DmgShield">
+      <add order="0x40" stat="reflectDam" val="#reflectDam"/>
     </effect>
   </for>
   <enchant1for>
