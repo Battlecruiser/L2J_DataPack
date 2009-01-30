@@ -97,18 +97,20 @@
   </for>
 </skill>
 <skill id="4406" levels="3" name="Agility">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1 - Temporarily increases evasion. Effect 1.
-      Lvl 2 - Temporarily increases evasion. Effect 2.
-      Lvl 3 - Temporarily increases evasion. Effect 3.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
+  <table name="#accCombat"> 2 3 4 </table> 
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_ONE"/>
+  <for>
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="#accCombat" stackType="avoid_up">
+      <add order="0x40" stat="accCombat" val="#accCombat"/>
+    </effect>
+  </for>
 </skill>
 <skill id="4407" levels="2" name="Monster Type">
   <!--
@@ -795,16 +797,17 @@
   </for>
 </skill>
 <skill id="4449" levels="5" name="Greater Resist Two-handed Weapons">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Very resistant to Two-Handed Weapon attacks.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by DJ MELERIX -->
+  <table name="#vuln"> 0.5 0.4 0.3 0.2 0.1 </table>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <mul order="0x30" stat="bigSwordWpnVuln" val="#vuln"/>
+    <!-- mul order="0x30" stat="bigBluntWpnVuln" val="#vuln" Needs Core Support -->
+  </for>
 </skill>
 <skill id="4450" levels="5" name="Stun Attack Weak Point">
   <table name="#vuln"> 1.1 1.15 1.2 1.3 1.5 </table>

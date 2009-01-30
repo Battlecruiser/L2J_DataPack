@@ -949,16 +949,29 @@
   </for>
 </skill>
 <skill id="4576" levels="3" name="NPC Clan Buff - Damage Shield">
-  <!-- TODO -->
-  <table name="#mpConsume"> 15 27 49 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="hitTime" val="2000"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isMagic" val="true"/>
-  <set name="castRange" val="-1"/>
+  <!-- Done by DJ MELERIX -->
+  <table name="#magicLvl"> 20 40 70 </table>
+  <table name="#mpInitialConsume"> 3 6 10 </table>
+  <table name="#mpConsume"> 12 21 39 </table>
+  <table name="#reflectDam"> 10 15 20 </table>
   <set name="aggroPoints" val="100"/>
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="2000"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="reuseDelay" val="8000"/>
+  <set name="skillRadius" val="900"/>
+  <set name="skillType" val="REFLECT"/>
+  <set name="target" val="TARGET_CLAN"/>
+  <for>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="#reflectDam" stackType="DmgShield">
+      <add order="0x40" stat="reflectDam" val="#reflectDam"/>
+    </effect>
+  </for>
 </skill>
 <skill id="4577" levels="12" name="Decrease Accuracy">
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>

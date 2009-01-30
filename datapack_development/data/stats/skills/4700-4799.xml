@@ -295,25 +295,31 @@
   <set name="aggroPoints" val="#aggro"/>
 </skill>
 <skill id="4714" levels="1" name="Twilight Dragon">
-<!-- TODO -->
-  <set name="target" val="TARGET_ONE"/>
+  <!-- This Skill Is Only For Description In The Client -->
+  <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="magicLvl" val="35"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="4715" levels="1" name="Wind Dragon">
-<!-- TODO -->
-  <set name="target" val="TARGET_ONE"/>
+  <!-- This Skill Is Only For Description In The Client -->
+  <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="magicLvl" val="35"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="4716" levels="1" name="Star Dragon">
-<!-- TODO -->
-  <set name="target" val="TARGET_ONE"/>
+  <!-- This Skill Is Only For Description In The Client -->
+  <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="magicLvl" val="35"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="4717" levels="12" name="Heal Trick">
   <table name="#mpConsume"> 5 8 12 17 20 25 29 32 33 33 34 34 </table>
