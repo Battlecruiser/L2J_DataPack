@@ -414,7 +414,6 @@
   </for>
 </skill>
 <skill id="4030" levels="3" name="NPC Clan Might">
-  <!-- SHOULD BUFF FACTION MOBS -->
   <table name="#magicLvl"> 20 40 70 </table>
   <table name="#mpInitialConsume"> 2 4 7 </table>
   <table name="#mpConsume"> 8 14 26 </table>
@@ -422,7 +421,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_SELF"/>
+  <set name="target" val="TARGET_CLAN"/>
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="2500"/>
   <set name="skillType" val="BUFF"/>
@@ -438,7 +437,6 @@
   </for>
 </skill>
 <skill id="4031" levels="3" name="NPC Clan Aegis">
-  <!-- SHOULD BUFF FACTION MOBS -->
   <table name="#magicLvl"> 20 40 70 </table>
   <table name="#mpInitialConsume"> 2 4 7 </table>
   <table name="#mpConsume"> 8 14 26 </table>
@@ -446,7 +444,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="target" val="TARGET_SELF"/>
+  <set name="target" val="TARGET_CLAN"/>
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="2500"/>
   <set name="skillType" val="BUFF"/>
@@ -1289,10 +1287,12 @@
   <set name="aggroPoints" val="100"/>
 </skill>
 <skill id="4081" levels="1" name="Pretending to steal">
+  <!-- Done by DJ MELERIX -->
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="4000"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="skillType" val="BUFF"/> <!-- Just Broadcast -->
   <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="70"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>

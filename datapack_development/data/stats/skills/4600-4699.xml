@@ -519,11 +519,12 @@
   </for>
 </skill>
 <skill id="4628" levels="1" name="Mysterious Aura">
-  <!-- Needs to be done -->
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="magicLvl" val="1"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillType" val="BUFF"/> <!-- Just Boadcast -->
+  <set name="target" val="TARGET_SELF"/>
 </skill>
 <skill id="4629" levels="12" name="NPC MR - HP Drain">
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
@@ -1705,17 +1706,20 @@
   <set name="effectRange" val="-1"/>
 </skill>
 <skill id="4698" levels="12" name="HP Regeneration">
-  <table name="#regHp"> 1.20 1.30 1.40 1.50 1.75 2.0 3.0 4.0 5.0 6.0 8.5 11.0 </table>
-  <set name="target" val="TARGET_SELF"/>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+  <table name="#regHp"> 1.20 1.30 1.40 1.50 1.75 2.0 3.0 4.0 5.0 6.0 8.5 11 </table>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="200"/> <!-- Guessing -->
   <set name="skillType" val="DEBUFF"/>
   <set name="power" val="10"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="isDebuff" val="true"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="10" name="Debuff" time="5" val="0">
+    <effect count="1" name="Debuff" time="5" val="0" stackOrder="#regHp" stackType="heal_effect_down">
       <mul order="0x30" stat="regHp" val="#regHp"/>
     </effect>
   </for>
