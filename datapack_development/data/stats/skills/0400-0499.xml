@@ -163,10 +163,10 @@
       <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
       <mul order="0x30" stat="gainHp" val="0.2"/>
       <add order="0x40" stat="rCrit" val="#rCrit">
-        <using kind="Sword,Big Sword,Pole"/>
+        <using kind="Sword,Big Sword"/>
       </add>
       <mul order="0x30" stat="cAtk" val="#cAtk">
-        <using kind="Blunt,Big Blunt,Dual Fist"/>
+        <using kind="Blunt,Big Blunt"/>
       </mul>
     </effect>
   </for>
