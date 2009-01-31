@@ -560,10 +560,11 @@ enchant_skill_trees.sql
 etcitem.sql
 fish.sql
 fishing_skill_trees.sql
-fort_door.sql
 fort_doorupgrade.sql
 fort_functions.sql
 fort_siege_guards.sql
+fort_spawnlist.sql
+fort_staticobjects.sql
 fort.sql
 fortsiege_clans.sql
 forums.sql
