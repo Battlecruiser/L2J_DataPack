@@ -147,140 +147,233 @@
   <set name="target" val="TARGET_ONE"/>
 </skill>
 <skill id="4517" levels="1" name="Quest - BOSS Defend">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="magicLvl" val="76"/>
+  <set name="operateType" val="OP_TOGGLE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
   <for>
-    <mul order="0x30" stat="runSpd" val="0.5"/>
-    <mul order="0x30" stat="pAtk" val="0.5"/>
-    <mul order="0x30" stat="pDef" val="9"/>
+    <mul order="0x30" stat="runSpd" val="0.50"/>
+    <mul order="0x30" stat="pAtk" val="0.50"/>
+    <mul order="0x30" stat="pDef" val="10"/>
   </for>
 </skill>
 <skill id="4518" levels="1" name="Quest - BOSS Rampage">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="magicLvl" val="76"/>
+  <set name="operateType" val="OP_TOGGLE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
   <for>
-    <mul order="0x30" stat="pAtkSpd" val="1.3"/>
-    <mul order="0x30" stat="pAtk" val="1.3"/>
-    <mul order="0x30" stat="pDef" val="0.5"/>
+    <mul order="0x30" stat="pAtkSpd" val="1.30"/>
+    <mul order="0x30" stat="pAtk" val="1.30"/>
+    <mul order="0x30" stat="pDef" val="0.50"/>
   </for>
 </skill>
 <skill id="4519" levels="1" name="Quest - BOSS Defend">
-<!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="magicLvl" val="76"/>
+  <set name="operateType" val="OP_TOGGLE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <mul order="0x30" stat="runSpd" val="0.50"/>
+    <mul order="0x30" stat="bowWpnVuln" val="0.10"/>
+  </for>
 </skill>
 <skill id="4520" levels="1" name="Quest - BOSS Rampage">
-<!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="magicLvl" val="76"/>
+  <set name="operateType" val="OP_TOGGLE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <mul order="0x30" stat="runSpd" val="0.70"/>
+    <mul order="0x30" stat="bowWpnVuln" val="1.10"/>
+  </for>
 </skill>
 <skill id="4521" levels="1" name="Quest - BOSS Resist non Bow Weapon">
-<!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="magicLvl" val="76"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <mul order="0x30" stat="swordWpnVuln" val="0.0"/>
+    <mul order="0x30" stat="bluntWpnVuln" val="0.0"/>
+    <mul order="0x30" stat="daggerWpnVuln" val="0.0"/>
+    <mul order="0x30" stat="poleWpnVuln" val="0.0"/>
+    <mul order="0x30" stat="dualFistWpnVuln" val="0.0"/>
+    <mul order="0x30" stat="dualWpnVuln" val="0.0"/>
+  </for>
 </skill>
 <skill id="4522" levels="1" name="Eye of Assassin">
-  <!-- TODO
-  Extreme assassin sensation. Greatly increases critical
-  chances and the success rate of dagger skills. -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isMagic" val="true"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="400"/>
-  <set name="aggroPoints" val="100"/>
+  <set name="effectRange" val="900"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="76"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_ONE"/>
+  <for>
+    <effect name="Buff" time="600" count="1" val="0">
+      <basemul order="0x30" stat="rCrit" val="1.0">
+        <player behind="True"/>
+      </basemul>
+      <!-- Missing bonus for Rapier -->
+    </effect>
+  </for>
 </skill>
 <skill id="4523" levels="1" name="Quest - BOSS Evasion">
-  <!-- TODO -->
-  <set name="hitTime" val="10000"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isMagic" val="true"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="10000"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="76"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <effect count="1" name="Buff" time="120" val="0">
+      <add order="0x40" stat="accCombat" val="30"/>
+    </effect>
+  </for>
 </skill>
 <skill id="4524" levels="1" name="Quest - BOSS Bluff">
-  <!-- TODO -->
-  <set name="hitTime" val="10000"/>
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isMagic" val="true"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="10000"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="76"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="skillType" val="BUFF"/> <!-- Just Broadcast -->
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <effect count="1" name="Buff" time="5" val="0"/>
+  </for>
 </skill>
 <skill id="4525" levels="1" name="Quest - BOSS Defend">
-  <!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="magicLvl" val="76"/>
+  <set name="operateType" val="OP_TOGGLE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <mul order="0x30" stat="pDef" val="10"/>
+    <mul order="0x30" stat="mDef" val="10"/>
+    <mul order="0x30" stat="sleepVuln" val="0.30"/>
+  </for>
 </skill>
 <skill id="4526" levels="1" name="Quest - BOSS Summon">
-  <!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isMagic" val="true"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="76"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="0.10"/>
+  <set name="skillType" val="HEAL_PERCENT"/>
+  <set name="target" val="TARGET_SELF"/>
 </skill>
 <skill id="4527" levels="1" name="Quest - BOSS Inc HP to Summoned">
-  <!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isMagic" val="true"/>
-  <set name="castRange" val="600"/>
+  <!-- Done by DJ MELERIX -->
   <set name="aggroPoints" val="100"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="76"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="30"/>
+  <set name="skillType" val="HEAL_PERCENT"/>
+  <set name="target" val="TARGET_ONE"/>
+  <for>
+    <effect count="1" name="Buff" time="120" val="0">
+      <mul order="0x30" stat="maxHp" val="1.30"/>
+    </effect>
+  </for>
 </skill>
 <skill id="4528" levels="1" name="Quest - BOSS Movement to Summoned">
-  <!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isMagic" val="true"/>
-  <set name="castRange" val="400"/>
+  <!-- Done by DJ MELERIX -->
   <set name="aggroPoints" val="100"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="76"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_ONE"/>
+  <for>
+    <effect count="1" name="Buff" time="120" val="0">
+      <add order="0x40" stat="runSpd" val="33"/>
+    </effect>
+  </for>
 </skill>
 <skill id="4529" levels="1" name="Quest - Summoned Explosion">
-  <!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isMagic" val="true"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="76"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="56"/>
+  <set name="reuseDelay" val="8000"/>
+  <set name="skillRadius" val="200"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="target" val="TARGET_AURA"/>
 </skill>
 <skill id="4530" levels="1" name="Quest - Summoned HP Heal">
-  <!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isMagic" val="true"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="76"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="5"/>
+  <set name="reuseDelay" val="8000"/>
+  <set name="skillRadius" val="200"/>
+  <set name="skillType" val="HEAL_PERCENT"/>
+  <set name="target" val="TARGET_AURA"/>
 </skill>
 <skill id="4531" levels="1" name="Quest - Summoned MP Heal">
-  <!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isMagic" val="true"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="76"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="5"/>
+  <set name="reuseDelay" val="8000"/>
+  <set name="skillRadius" val="200"/>
+  <set name="skillType" val="MANAHEAL_PERCENT"/>
+  <set name="target" val="TARGET_AURA"/>
 </skill>
 <skill id="4532" levels="1" name="Quest - BOSS Reflect">
-  <!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="magicLvl" val="76"/>
+  <set name="operateType" val="OP_TOGGLE"/>
+  <set name="skillType" val="REFLECT"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <add order="0x40" stat="reflectDam" val="100"/>
+    <mul order="0x30" stat="mDef" val="10"/>
+  </for>
 </skill>
 <skill id="4533" levels="1" name="Dance of Resistance">
   <!-- Done by DJ MELERIX -->
@@ -449,70 +542,116 @@
   </for>
 </skill>
 <skill id="4542" levels="1" name="Quest - Henchman 90% Sleep Stun Weakness">
-  <!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="magicLvl" val="76"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <mul order="0x30" stat="sleepVuln" val="1.90"/>
+    <mul order="0x30" stat="stunVuln" val="1.90"/>
+  </for>
 </skill>
 <skill id="4543" levels="1" name="Quest - BOSS Stun Weakness">
-  <!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="magicLvl" val="76"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <mul order="0x30" stat="stunVuln" val="1.10"/>
+  </for>
 </skill>
 <skill id="4544" levels="3" name="Quest - BOSS Weakness">
-  <!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isMagic" val="true"/>
+  <!-- Done by DJ MELERIX -->
+  <table name="#pDef"> 0.80 0.60 0.70 </table>
+  <table name="#pAtkSpd"> 0.90 0.80 0.60 </table>
+  <table name="#pAtk"> 0.70 0.60 0.50 </table>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="76"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <effect count="1" name="Buff" time="600" val="0">
+      <mul order="0x30" stat="pDef" val="#pDef"/>
+      <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
+      <mul order="0x30" stat="pAtk" val="#pAtk"/>
+    </effect>
+  </for>
 </skill>
 <skill id="4545" levels="1" name="Quest - BOSS Reflect">
-  <!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="magicLvl" val="76"/>
+  <set name="operateType" val="OP_TOGGLE"/>
+  <set name="skillType" val="REFLECT"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <add order="0x40" stat="reflectDam" val="100"/>
+    <mul order="0x30" stat="pDef" val="10"/>
+    <mul order="0x30" stat="runSpd" val="0.70"/>
+  </for>
 </skill>
 <skill id="4546" levels="1" name="Quest - Commune to Slate">
-  <!-- TODO -->
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="castRange" val="1000"/>
+  <set name="effectRange" val="1500"/>
+  <set name="magicLvl" val="99"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="skillType" val="BUFF"/> <!-- Just Broadcast -->
+  <set name="target" val="TARGET_ONE"/>
 </skill>
 <skill id="4547" levels="1" name="Gaze of Watcher">
-  <!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="1000"/>
+  <set name="effectRange" val="1500"/>
+  <set name="isDebuff" val="true"/>
+  <set name="magicLvl" val="99"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="100"/> <!-- Base Land Rate -->
+  <set name="skillType" val="DEBUFF"/>
+  <set name="target" val="TARGET_ONE"/>
+  <for>
+    <effect count="1" name="Debuff" time="3600" val="0"/>
+  </for>
 </skill>
 <skill id="4548" levels="1" name="Quest - Dispel Watcher Gaze">
-  <!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="1000"/>
+  <set name="effectRange" val="1500"/>
+  <set name="magicLvl" val="99"/>
+  <set name="negateId" val="4547"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillType" val="NEGATE"/>
+  <set name="target" val="TARGET_ONE"/>
 </skill>
 <skill id="4549" levels="1" name="Quest - Unsealed Altar">
-  <!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="hitTime" val="3000"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="3000"/>
+  <set name="magicLvl" val="99"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillType" val="BUFF"/> <!-- Just Broadcast -->
+  <set name="target" val="TARGET_SELF"/>
 </skill>
 <skill id="4550" levels="1" name="Quest - Cursed Altar">
-  <!-- TODO -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="hitTime" val="3000"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="3000"/>
+  <set name="magicLvl" val="99"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillType" val="BUFF"/> <!-- Just Broadcast -->
+  <set name="target" val="TARGET_SELF"/>
 </skill>
 <skill id="4551" levels="10" name="Hot Springs Rheumatism">
   <table name="#pDef"> 1 0.96 0.96 0.96 0.92 0.92 0.92 0.88 0.88 0.85 </table>
