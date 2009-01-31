@@ -38,7 +38,7 @@ class Quest (JQuest) :
  	   if remain <= 0 :
  	      self.addSpawn(31542,157136,-121456,-2363,40000, False, 0, True)
  	   else :
- 	      self.startQuestTimer("spawn_npc", remain, null, null)
+ 	      self.startQuestTimer("spawn_npc", remain, None, None)
  	else:
  	   self.addSpawn(31542,157136,-121456,-2363,40000, False, 0, True)
 
@@ -123,7 +123,7 @@ class Quest (JQuest) :
         respawnMaxDelay = 129600000 * int(Config.RAID_MAX_RESPAWN_MULTIPLIER)
         respawn_delay = Rnd.get(respawnMinDelay,respawnMaxDelay)
         self.saveGlobalQuestVar("625_respawn", str(System.currentTimeMillis()+respawn_delay))
-        self.startQuestTimer("spawn_npc", respawn_delay, null, null)
+        self.startQuestTimer("spawn_npc", respawn_delay, None, None)
         self.cancelQuestTimer("Icicle Emperor Bumbalump has despawned",npc,None)
         party = player.getParty()
         if party :
