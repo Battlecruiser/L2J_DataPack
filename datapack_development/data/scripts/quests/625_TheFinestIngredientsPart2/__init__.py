@@ -1,9 +1,10 @@
 #Made by Kerb
 import sys
+from java.lang import System
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-from net.sf.l2j.gameserver.datatables import SpawnTable
 from net.sf.l2j.gameserver.network.serverpackets import NpcSay
 from net.sf.l2j.util import Rnd
 
@@ -20,15 +21,6 @@ MEAT = 7210
 #Rewards dye +2str-2con/+2str-2dex/+2con-2str/+2con-2dex/+2dex-2str/+2dex-2con
 REWARDS = range (4589,4595)
 
-def FindTemplate (npcId) :
-    npcinstance = 0
-    for spawn in SpawnTable.getInstance().getSpawnTable().values():
-        if spawn :
-            if spawn.getNpcid() == npcId:
-                npcinstance=spawn.getLastSpawn()
-                break
-    return npcinstance
-
 def AutoChat(npc,text) :
     chars = npc.getKnownList().getKnownPlayers().values().toArray()
     if chars != None:
@@ -40,12 +32,24 @@ class Quest (JQuest) :
  def __init__(self,id,name,descr):
  	JQuest.__init__(self,id,name,descr)
  	self.questItemIds = [FOOD, MEAT]
+ 	test = self.loadGlobalQuestVar("625_respawn")
+ 	if test.isdigit() :
+ 	   remain = long(test) - System.currentTimeMillis()
+ 	   if remain <= 0 :
+ 	      self.addSpawn(31542,157136,-121456,-2363,40000, False, 0, True)
+ 	   else :
+ 	      self.startQuestTimer("spawn_npc", remain, null, null)
+ 	else:
+ 	   self.addSpawn(31542,157136,-121456,-2363,40000, False, 0, True)
 
  def onAdvEvent (self, event, npc, player) :
    if event == "Icicle Emperor Bumbalump has despawned" :
       npc.reduceCurrentHp(9999999,npc)
-      FindTemplate(TABLE).setBusy(False)
+      self.addSpawn(31542,157136,-121456,-2363,40000, False, 0, True)
       AutoChat(npc,"The good fragrant flavor...")
+      return
+   elif event == "spawn_npc" :
+      self.addSpawn(31542,157136,-121456,-2363,40000, False, 0, True)
       return
    st = player.getQuestState(qn)
    if not st: return
@@ -64,12 +68,10 @@ class Quest (JQuest) :
    elif event == "31542-02.htm" :
        if st.getQuestItemsCount(FOOD) == 0 :
            htmltext = "31542-04.htm"
-       elif npc.isBusy() :
-           htmltext = "31542-03.htm"
        else:
            spawnId = st.addSpawn(BUMPALUMP,158240,-121536,-2253)
            st.takeItems(FOOD,1)
-           npc.setBusy(True)
+           npc.deleteMe()
            st.set("cond","2")
            self.startQuestTimer("Icicle Emperor Bumbalump has despawned",1200000,spawnId,None)
            AutoChat(spawnId,"not!")
@@ -106,14 +108,7 @@ class Quest (JQuest) :
        if npcId == JEREMY :
          htmltext = "31521-03a.htm"
        if npcId == TABLE :
-           if npc.isBusy() :
-               htmltext = "31542-03.htm"
-           else :
-               htmltext = "31542-02.htm"
-               spawnId = st.addSpawn(BUMPALUMP,158240,-121536,-2253)
-               npc.setBusy(True)
-               self.startQuestTimer("Icicle Emperor Bumbalump has despawned",1200000,spawnId,None)
-               AutoChat(spawnId,"not!")
+         htmltext = "31542-01.htm"
      elif cond == 3 :
        if npcId == JEREMY :
          htmltext = "31521-03.htm"
@@ -124,7 +119,11 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
     npcId = npc.getNpcId()
     if npcId == BUMPALUMP :
-        FindTemplate(TABLE).setBusy(False)
+        respawnMinDelay = 43200000  * int(Config.RAID_MIN_RESPAWN_MULTIPLIER)
+        respawnMaxDelay = 129600000 * int(Config.RAID_MAX_RESPAWN_MULTIPLIER)
+        respawn_delay = Rnd.get(respawnMinDelay,respawnMaxDelay)
+        self.saveGlobalQuestVar("625_respawn", str(System.currentTimeMillis()+respawn_delay))
+        self.startQuestTimer("spawn_npc", respawn_delay, null, null)
         self.cancelQuestTimer("Icicle Emperor Bumbalump has despawned",npc,None)
         party = player.getParty()
         if party :

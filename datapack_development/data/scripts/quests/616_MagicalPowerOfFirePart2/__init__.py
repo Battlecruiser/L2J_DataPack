@@ -1,9 +1,10 @@
 #Made by Emperorc
 import sys
+from java.lang import System
+from net.sf.l2j import Config 
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-from net.sf.l2j.gameserver.datatables import SpawnTable
 from net.sf.l2j.gameserver.network.serverpackets import NpcSay
 from net.sf.l2j.util import Rnd
 
@@ -22,15 +23,6 @@ Nastron = 25306
 Totem2 = 7243
 Fire_Heart = 7244
 
-def FindTemplate (npcId) :
-    npcinstance = 0
-    for spawn in SpawnTable.getInstance().getSpawnTable().values():
-        if spawn :
-            if spawn.getNpcid() == npcId:
-                npcinstance=spawn.getLastSpawn()
-                break
-    return npcinstance
-
 def AutoChat(npc,text) :
     chars = npc.getKnownList().getKnownPlayers().values().toArray()
     if chars != None:
@@ -43,12 +35,24 @@ class Quest (JQuest) :
  def __init__(self,id,name,descr):
      JQuest.__init__(self,id,name,descr)
      self.questItemIds = [Fire_Heart]
+     test = self.loadGlobalQuestVar("616_respawn")
+     if test.isdigit() :
+        remain = long(test) - System.currentTimeMillis()
+        if remain <= 0 :
+           self.addSpawn(31558,142368,-82512,-6487,58000, False, 0, True)
+        else :
+           self.startQuestTimer("spawn_npc", remain, null, null)
+     else:
+        self.addSpawn(31558,142368,-82512,-6487,58000, False, 0, True)
 
  def onAdvEvent (self, event, npc, player) :
    if event == "Soul of Fire Nastron has despawned" :
        npc.reduceCurrentHp(9999999,npc)
-       FindTemplate(Alter).setBusy(False)
+       self.addSpawn(31558,142368,-82512,-6487,58000, False, 0, True)
        AutoChat(npc,"The fetter strength is weaken Your consciousness has been defeated!")
+       return
+   elif event == "spawn_npc" :
+       self.addSpawn(31558,142368,-82512,-6487,58000, False, 0, True)
        return
    st = player.getQuestState(qn)
    if not st: return
@@ -85,13 +89,11 @@ class Quest (JQuest) :
    elif event == "31558-02.htm" :
        if Green_Totem == 0 :
            htmltext = "31558-04.htm"
-       elif npc.isBusy() :
-           htmltext = "31558-03.htm"
        else:
            spawnedNpc = st.addSpawn(Nastron,142528,-82528,-6496)
            st.takeItems(Totem2,1)
            st.set("id","2")
-           npc.setBusy(True)
+           npc.deleteMe()
            st.set("cond","2")
            self.startQuestTimer("Soul of Fire Nastron has despawned",1200000,spawnedNpc,None)
            AutoChat(spawnedNpc,"The fire charm then is the flame and the lava strength! Opposes with it only has the blind alley!")
@@ -117,25 +119,17 @@ class Quest (JQuest) :
                 else :
                     htmltext = "31379-07.htm"
         elif npcId == Alter :
-            if id == 1 :
-                htmltext = "31558-01.htm"
-            elif id == 2 :
-                if npc.isBusy() :
-                    htmltext = "31558-03.htm"
-                else :
-                   htmltext = "31558-02.htm"
-                   spawnedNpc = st.addSpawn(Nastron,142528,-82528,-6496)
-                   npc.setBusy(True)
-                   self.startQuestTimer("Soul of Fire Nastron has despawned",1200000,spawnedNpc,None)
-                   AutoChat(spawnedNpc,"The fire charm then is the flame and the lava strength! Opposes with it only has the blind alley!")
-            elif id == 3 :
-                htmltext = "31558-05.htm"
+            htmltext = "31558-01.htm"
     return htmltext
 
  def onKill(self,npc,player,isPet):
     npcId = npc.getNpcId()
     if npcId == Nastron :
-        FindTemplate(Alter).setBusy(False)
+        respawnMinDelay = 43200000  * int(Config.RAID_MIN_RESPAWN_MULTIPLIER)
+        respawnMaxDelay = 129600000 * int(Config.RAID_MAX_RESPAWN_MULTIPLIER)
+        respawn_delay = Rnd.get(respawnMinDelay,respawnMaxDelay)
+        self.saveGlobalQuestVar("616_respawn", str(System.currentTimeMillis()+respawn_delay))
+        self.startQuestTimer("spawn_npc", respawn_delay, null, null)
         self.cancelQuestTimer("Soul of Fire Nastron has despawned",npc,None)
         party = player.getParty()
         if party :
