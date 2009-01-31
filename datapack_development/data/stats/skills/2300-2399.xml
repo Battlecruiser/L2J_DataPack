@@ -474,10 +474,14 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="2342" levels="1" name="Ballista Bomb">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="itemConsumeId" val="9688"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="BALLISTA"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="5000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="castRange" val="150"/>
 </skill>
 <skill id="2343" levels="1" name="Gate Key of Kamael">
   <set name="target" val="TARGET_NONE"/>
