@@ -42,7 +42,7 @@ class Quest (JQuest) :
         if remain <= 0 :
            self.addSpawn(31560,105452,-36775,-1050,34000, False, 0, True)
         else :
-           self.startQuestTimer("spawn_npc", remain, null, null)
+           self.startQuestTimer("spawn_npc", remain, None, None)
      else :
         self.addSpawn(31560,105452,-36775,-1050,34000, False, 0, True)
 
@@ -130,7 +130,7 @@ class Quest (JQuest) :
         respawnMaxDelay = 129600000 * int(Config.RAID_MAX_RESPAWN_MULTIPLIER)
         respawn_delay = Rnd.get(respawnMinDelay,respawnMaxDelay)
         self.saveGlobalQuestVar("610_respawn", str(System.currentTimeMillis()+respawn_delay))
-        self.startQuestTimer("spawn_npc", respawn_delay, null, null)
+        self.startQuestTimer("spawn_npc", respawn_delay, None, None)
         self.cancelQuestTimer("Soul of Water Ashutar has despawned",npc,None)
         party = player.getParty()
         if party :
