@@ -98,7 +98,7 @@
 </skill>
 <skill id="4406" levels="3" name="Agility">
   <!-- Done by DJ MELERIX -->
-  <table name="#accCombat"> 2 3 4 </table> 
+  <table name="#rEvas"> 2 3 4 </table> 
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <set name="isMagic" val="true"/>
@@ -107,8 +107,8 @@
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
-    <effect count="1" name="Buff" time="3600" val="0" stackOrder="#accCombat" stackType="avoid_up">
-      <add order="0x40" stat="accCombat" val="#accCombat"/>
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="#rEvas" stackType="avoid_up">
+      <add order="0x40" stat="rEvas" val="#rEvas"/>
     </effect>
   </for>
 </skill>
