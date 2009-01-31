@@ -1,10 +1,12 @@
 #Made by Kerb
 import sys 
-from net.sf.l2j.gameserver.model.quest import State 
-from net.sf.l2j.gameserver.model.quest import QuestState 
-from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest 
-from net.sf.l2j.gameserver.datatables import SpawnTable 
-from net.sf.l2j.gameserver.network.serverpackets import NpcSay 
+
+from java.lang import System
+from net.sf.l2j import Config 
+from net.sf.l2j.gameserver.model.quest import QuestState
+from net.sf.l2j.gameserver.model.quest import State
+from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+from net.sf.l2j.gameserver.network.serverpackets import NpcSay
 from net.sf.l2j.util import Rnd
 
 qn = "604_DaimontheWhiteEyedPart2" 
@@ -18,14 +20,6 @@ U_SUMMON,S_SUMMON,ESSENCE = range(7192,7195)
 #Rewards dye +2int-2men/+2int-2wit/+2men-2int/+2men-2wit/+2wit-2int/+2wit-2men 
 REWARDS = range(4595,4601) 
 
-def FindTemplate (npcId) :
-    npcinstance = 0
-    for spawn in SpawnTable.getInstance().getSpawnTable().values():
-        if spawn :
-            if spawn.getNpcid() == npcId:
-                npcinstance=spawn.getLastSpawn()
-                break
-    return npcinstance
 
 def AutoChat(npc,text) : 
     chars = npc.getKnownList().getKnownPlayers().values().toArray() 
@@ -38,12 +32,25 @@ class Quest (JQuest) :
  def __init__(self,id,name,descr):
      JQuest.__init__(self,id,name,descr)
      self.questItemIds = range(7193,7195)
+     test = self.loadGlobalQuestVar("604_respawn")
+     if test.isdigit() :
+        remain = long(test) - System.currentTimeMillis()
+        if remain <= 0 :
+           self.addSpawn(31541,186304,-43744,-3193,57000, False, 0, True)
+        else :
+           self.startQuestTimer("spawn_npc", remain, null, null)
+     else :
+        self.addSpawn(31541,186304,-43744,-3193,57000, False, 0, True)
+     
 
  def onAdvEvent (self, event, npc, player) :
    if event == "Daimon the White-Eyed has despawned" : 
       npc.reduceCurrentHp(9999999,npc) 
-      FindTemplate(ALTAR).setBusy(False) 
       AutoChat(npc,"Darkness could not have ray?")
+      self.addSpawn(31541,186304,-43744,-3193,57000, False, 0, True)
+      return
+   elif event == "spawn_npc" :
+      self.addSpawn(31541,186304,-43744,-3193,57000, False, 0, True)
       return
    st = player.getQuestState(qn)
    if not st: return
@@ -62,12 +69,10 @@ class Quest (JQuest) :
    elif event == "31541-02.htm" :
        if st.getQuestItemsCount(S_SUMMON) == 0 :
            htmltext = "31541-04.htm"
-       elif npc.isBusy() :
-           htmltext = "31541-03.htm"
        else:
          spawnId = st.addSpawn(DAIMON,186320,-43904,-3175) 
+         npc.deleteMe()
          st.takeItems(S_SUMMON,1) 
-         npc.setBusy(True) 
          st.set("cond","2") 
          self.startQuestTimer("Daimon the White-Eyed has despawned",1200000,spawnId,None) 
          AutoChat(spawnId,"Who called me?") 
@@ -103,14 +108,7 @@ class Quest (JQuest) :
          htmltext = "31541-01.htm" 
      elif cond == 2 : 
        if npcId == ALTAR :
-           if npc.isBusy() :
-               htmltext = "31541-03.htm"
-           else :
-               htmltext = "31541-02.htm"
-               spawnId = st.addSpawn(DAIMON,186320,-43904,-3175) 
-               npc.setBusy(True) 
-               self.startQuestTimer("Daimon the White-Eyed has despawned",1200000,spawnId,None) 
-               AutoChat(spawnId,"Who called me?") 
+         htmltext = "31541-01.htm" 
      elif cond == 3 : 
        if npcId == EYE :
             if st.getQuestItemsCount(ESSENCE) >= 1 :
@@ -124,7 +122,11 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
      npcId = npc.getNpcId()
      if npcId == DAIMON :
-        FindTemplate(ALTAR).setBusy(False) 
+        respawnMinDelay = 43200000  * int(Config.RAID_MIN_RESPAWN_MULTIPLIER)
+        respawnMaxDelay = 129600000 * int(Config.RAID_MAX_RESPAWN_MULTIPLIER)
+        respawn_delay = Rnd.get(respawnMinDelay,respawnMaxDelay)
+        self.saveGlobalQuestVar("604_respawn", str(System.currentTimeMillis()+respawn_delay))
+        self.startQuestTimer("spawn_npc", respawn_delay, null, null)
         self.cancelQuestTimer("Daimon the White-Eyed has despawned",npc,None)
         party = player.getParty()
         if party :
