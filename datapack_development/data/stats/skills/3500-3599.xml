@@ -767,7 +767,7 @@
     <mul order="0x30" stat="mCritRate" val="1.2"/> <!-- Guessing -->
     <mul order="0x30" stat="fireVuln" val="0.85"/>
     <mul order="0x30" stat="sleepVuln" val="0.60"/>
-    <!-- mul order="0x30" stat="sleepPower" val="1.40" Needs Core Support Sleep Attack Success Rate: +40% -->
+    <mul order="0x30" stat="sleepProf" val="1.4"/>
     <mul order="0x30" stat="mReuse" val="0.90"/>
     <mul order="0x30" stat="pReuse" val="0.90"/>
     <add order="0x40" stat="reflectDam" val="5"/>
@@ -781,16 +781,17 @@
   <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="bleedVuln" val="0.6"/>
-    <!-- mul order="0x30" stat="bleedPower" val="1.40" Needs Core Support Bleed Attack Success Rate: +40% -->
-    <!-- mul order="0x30" stat="stunPower" val="1.30" Needs Core Support Stun Attack Success Rate: +30% -->
-    <!-- mul order="0x30" stat="mutePower" val="1.30" Needs Core Support Silence Attack Success Rate: +30% -->
-    <mul order="0x30" stat="gainHp" val="1.10"/>
-    <add order="0x40" stat="absorbDam" val="4"/>
+    <mul order="0x30" stat="earthVuln" val="0.85"/>
     <mul order="0x30" stat="stunVuln" val="0.70"/>
     <mul order="0x30" stat="derangementVuln" val="0.70"/>
+    <mul order="0x30" stat="bleedProf" val="1.4"/>
+    <mul order="0x30" stat="stunProf" val="1.3"/>
+    <mul order="0x30" stat="derangementProf" val="1.3"/>
+    <mul order="0x30" stat="gainHp" val="1.10"/>
+    <add order="0x40" stat="absorbDam" val="4"/>
     <mul order="0x30" stat="MagicalMpConsumeRate" val="0.95"/>
 	<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95"/>
-    <mul order="0x30" stat="earthVuln" val="0.85"/>
+
   </for>
 </skill>
 <skill id="3559" levels="1" name="Earring of Zaken">
@@ -800,14 +801,14 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="stunVuln" val="0.80"/>
+    <mul order="0x30" stat="derangementVuln" val="0.80"/>
     <mul order="0x30" stat="bleedVuln" val="0.70"/>
-    <!-- mul order="0x30" stat="bleedPower" val="1.30" Needs Core Support Bleed Attack Success Rate: +30% -->
+    <mul order="0x30" stat="bleedProf" val="1.3"/>
+    <mul order="0x30" stat="stunProf" val="1.2"/>
+    <mul order="0x30" stat="derangementProf" val="1.2"/>
     <mul order="0x30" stat="gainHp" val="1.10"/>
     <add order="0x40" stat="absorbDam" val="4"/>
-    <mul order="0x30" stat="stunVuln" val="0.80"/>
-    <!-- mul order="0x30" stat="stunPower" val="1.20" Needs Core Support Shock Attack Success Rate: +20% -->
-    <!-- mul order="0x30" stat="derangementPower" val="1.20" Needs Core Support Abnormal Mental State Attack Success Rate: +20% -->
-    <mul order="0x30" stat="derangementVuln" val="0.80"/>
   </for>
 </skill>
 <skill id="3560" levels="1" name="Earring of Orfen">
@@ -818,7 +819,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="bleedVuln" val="0.80"/>
-    <!-- mul order="0x30" stat="bleedPower" val="1.20" Needs Core Support Bleed Attack Success Rate: +20% -->
+    <mul order="0x30" stat="bleedProf" val="1.2"/>
     <mul order="0x30" stat="gainHp" val="1.06"/>
   </for>
 </skill>
@@ -829,12 +830,12 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+    <mul order="0x30" stat="rootVuln" val="0.70"/>
     <mul order="0x30" stat="poisonVuln" val="0.60"/>
-    <!-- mul order="0x30" stat="poisonPower" val="1.40" Needs Core Support Poison Attack Success Rate: +40% -->
+    <mul order="0x30" stat="poisonProf" val="1.4"/>
+    <mul order="0x30" stat="rootProf" val="1.3"/>
     <add order="0x40" stat="accCombat" val="2"/>
     <mul order="0x30" stat="cAtk" val="1.15"/>
-    <mul order="0x30" stat="rootVuln" val="0.70"/>
-    <!-- mul order="0x30" stat="rootPower" val="1.30" Needs Core Support Hold Attack Success Rate: +30% -->
     <mul order="0x30" stat="pAtkSpd" val="1.04"/>
     <mul order="0x30" stat="mAtkSpd" val="1.04"/>
   </for>
@@ -847,11 +848,11 @@
   <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="poisonVuln" val="0.70"/>
-    <!-- mul order="0x30" stat="poisonPower" val="1.30" Needs Core Support Poison Attack Success Rate: +30% -->
+    <mul order="0x30" stat="rootVuln" val="0.80"/>
+    <mul order="0x30" stat="poisonProf" val="1.3"/>
+    <mul order="0x30" stat="rootProf" val="1.2"/>
     <add order="0x40" stat="accCombat" val="2"/>
     <mul order="0x30" stat="cAtk" val="1.15"/>
-    <mul order="0x30" stat="rootVuln" val="0.80"/>
-    <!-- mul order="0x30" stat="rootPower" val="1.20" Needs Core Support Hold Attack Success Rate: +20% -->
   </for>
 </skill>
 <skill id="3563" levels="1" name="Ring of Core">
@@ -862,7 +863,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="poisonVuln" val="0.80"/>
-    <!-- mul order="0x30" stat="poisonPower" val="1.20" Needs Core Support Poison Attack Success Rate: +20% -->
+    <mul order="0x30" stat="poisonProf" val="1.2"/>
     <add order="0x40" stat="accCombat" val="1"/>
   </for>
 </skill>
