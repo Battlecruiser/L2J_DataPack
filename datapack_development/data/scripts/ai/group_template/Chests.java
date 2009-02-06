@@ -99,7 +99,7 @@ public class Chests extends L2AttackableAIScript
 	                    {
 	                        chest.setMustRewardExpSp(false);
 	                        chest.setSpecialDrop();
-	                        chest.reduceCurrentHp(99999999, caster);
+	                        chest.reduceCurrentHp(99999999, caster, null);
 	                        return null;
 	                    }
 	                }
