@@ -45,7 +45,7 @@ class Quest (JQuest) :
 
  def onAdvEvent (self, event, npc, player) :
    if event == "Daimon the White-Eyed has despawned" : 
-      npc.reduceCurrentHp(9999999,npc) 
+      npc.reduceCurrentHp(9999999,npc,None)
       AutoChat(npc,"Darkness could not have ray?")
       self.addSpawn(31541,186304,-43744,-3193,57000, False, 0, True)
       return
