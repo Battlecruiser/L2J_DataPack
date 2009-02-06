@@ -482,7 +482,7 @@ class Quest (JQuest) :
             htmltext = "30766-24t.htm"
         return htmltext
 
-  def onAttack(self, npc, player, damage, isPet):
+  def onAttack(self, npc, player, damage, isPet, skill):
     npdId = npc.getNpcId()
     if (npc.getMaxHp()/2) > npc.getCurrentHp():
       if Rnd.get(100) < 4:

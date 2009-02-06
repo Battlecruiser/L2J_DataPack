@@ -349,7 +349,7 @@ class Quest (JQuest) :
                 htmltext = BLOODY_OWNERS[npcId][4]
     return htmltext
  
- def onAttack (self, npc, player, damage, isPet):
+ def onAttack (self, npc, player, damage, isPet, skill):
      st = player.getQuestState(qn)
      if not st : return
      if st.getState() != State.STARTED : return
