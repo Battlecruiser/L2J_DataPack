@@ -44,7 +44,7 @@ class Quest (JQuest) :
 
  def onAdvEvent (self, event, npc, player) :
    if event == "Icicle Emperor Bumbalump has despawned" :
-      npc.reduceCurrentHp(9999999,npc)
+      npc.reduceCurrentHp(9999999,npc,None)
       self.addSpawn(31542,157136,-121456,-2363,40000, False, 0, True)
       AutoChat(npc,"The good fragrant flavor...")
       return

@@ -78,10 +78,10 @@ class Quest (JQuest) :
        st.takeItems(SORCERY_INGREDIENT,1)
        st.playSound("ItemSound.quest_middle")
    elif event == "1" :
-     npc.reduceCurrentHp(10000,npc)
+     npc.reduceCurrentHp(10000,npc,None)
      st.addSpawn(PURE_UNICORN,npc,False)
    elif event == "2" :
-     npc.reduceCurrentHp(10000,npc)
+     npc.reduceCurrentHp(10000,npc,None)
    return htmltext
 
  def onTalk (self,npc,player):
@@ -141,7 +141,7 @@ class Quest (JQuest) :
              htmltext = "31751-5.htm"
      elif npcId == ANGEL_CORPSE :
          if cond == 4 :
-           npc.reduceCurrentHp(10000,npc)
+           npc.reduceCurrentHp(10000,npc,None)
            chance = st.getRandom(100)
            if CHANCE_FOR_HAIR < chance :
              htmltext = "31752-2.htm"
@@ -178,7 +178,7 @@ class Quest (JQuest) :
          elif cond == 9 and st.getQuestItemsCount(ORB_OF_BINDING) >= 1 :
              htmltext = "31748-2.htm"
              st.takeItems(ORB_OF_BINDING,1)
-             npc.reduceCurrentHp(10000,npc)
+             npc.reduceCurrentHp(10000,npc,None)
              st.set("cornerstones",str(cornerstones+1))
              st.playSound("ItemSound.quest_middle")
              if cornerstones == 3 :

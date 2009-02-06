@@ -47,7 +47,7 @@ class Quest (JQuest) :
 
  def onAdvEvent (self, event, npc, player) :
    if event == "Soul of Fire Nastron has despawned" :
-       npc.reduceCurrentHp(9999999,npc)
+       npc.reduceCurrentHp(9999999,npc,None)
        self.addSpawn(31558,142368,-82512,-6487,58000, False, 0, True)
        AutoChat(npc,"The fetter strength is weaken Your consciousness has been defeated!")
        return

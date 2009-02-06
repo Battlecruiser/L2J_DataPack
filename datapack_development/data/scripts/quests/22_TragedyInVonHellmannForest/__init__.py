@@ -133,13 +133,13 @@ class Quest (JQuest) :
        st.set("cond","16")
    elif event == "Despawn Ghost Priest" :
        AutoChat(npc,"I'm confused! Maybe it's time to go back.")
-       npc.reduceCurrentHp(9999999,npc)
+       npc.reduceCurrentHp(9999999,npc,None)
        self.tifaren = 0
        if st.getQuestTimer("Despawn Ghost Priest 2") :
            st.getQuestTimer("Despawn Ghost Priest 2").cancel()
        return
    elif event == "Despawn Ghost Priest 2" :
-       npc.reduceCurrentHp(9999999,npc)
+       npc.reduceCurrentHp(9999999,npc,None)
        self.tifaren = 0
        AutoChat(npc,"My train of thought is chaotic. It goes back to the beginning of time...")
        if st.getQuestTimer("Despawn Ghost Priest") :
@@ -149,7 +149,7 @@ class Quest (JQuest) :
        self.soul = 1
        return
    elif event == "Soul of Well Despawn" :
-       npc.reduceCurrentHp(9999999,npc)
+       npc.reduceCurrentHp(9999999,npc,None)
        self.well = 0
        return
    return htmltext 

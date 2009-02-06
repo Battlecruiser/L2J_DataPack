@@ -58,7 +58,7 @@ class Quest (JQuest) :
        st.giveItems(TOTEM,1)
        st.set("cond","6")
        st.playSound("ItemSound.quest_middle")
-       npc.reduceCurrentHp(9999999,npc)
+       npc.reduceCurrentHp(9999999,npc,None)
      return htmltext
 
  def onTalk (self,npc,player):
