@@ -298,7 +298,7 @@ class Quest (JQuest) :
       return
 
    # on the first attack, the stat is in battle... anytime gives crystal and set stat
-   def onAttack (self, npc, player,damage,isPet):
+   def onAttack (self, npc, player,damage,isPet,skill):
       npcId = npc.getNpcId()
       st = player.getQuestState(qn)
       if npcId in DROPLIST_SUMMON.keys() :
