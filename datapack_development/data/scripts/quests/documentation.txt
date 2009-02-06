@@ -48,14 +48,19 @@ These functions, their triggers, and the parameters passed into the script are d
 	The	parameter "st" contains a reference to the QuestState of the player who used the link or 
 		started the timer.
 	The parameters "event" and "self" are same as in onAdvEvent.
-3) onAttack(self, npc, player, damage, isPet)
+3) onAttack(self, npc, player, damage, isPet, skill)
 	This function is called whenever a player attacks an NPC that is registered for the quest
 	The parameter "npc" contains a reference to the exact instance of the NPC that got attacked
 	The parameter "player" contains a reference to the exact instance of the player who attacked.
 	The parameter "damage" is a number, representing the total damage that this attack has inflicted to the NPC.
 	The parameter "isPet" is a boolean.  When false it denotes that the attacker was indeed the player.  
 		If true it specifies that the damage was actually dealt by the player's pet.
+	The parameter "skill" is a skill that player used to attack NPC.
 	The parameter "self" works the same as in onEvent.
+4) onAttack(self, npc, player, damage, isPet)
+	This function is called in place of onAttack(with skill) if the former is not implemented.  If a script
+		contains BOTH onAttacks, then this one (without skill) will never be called unless the script's
+		onAttack(with skill) explicitely calls onAttack(without skill) within.
 4) onKill(self, npc, player, isPet)
 	This function is called whenever a player kills an NPC that is registered for the quest
 	All parameters are the same as in onAttack, lacking the damage parameter, of course.
