@@ -117,7 +117,7 @@ public class DarkWaterDragon extends L2AttackableAIScript
                     this.cancelQuestTimer("fourth_spawn", npc, null);
                     myTrackingSet.remove(npc.getObjectId());
                 }
-            	npc.reduceCurrentHp(500, npc); //poison kills Fafurion if he is not healed
+            	npc.reduceCurrentHp(500, npc, null); //poison kills Fafurion if he is not healed
             }
         }
         return super.onAdvEvent(event,npc,player);

@@ -314,7 +314,7 @@ public class Baium extends L2AttackableAIScript
     {
     	if (!_Zone.isInsideZone(attacker))
     	{
-    		attacker.reduceCurrentHp(attacker.getCurrentHp(),attacker,false,false);
+    		attacker.reduceCurrentHp(attacker.getCurrentHp(),attacker,false,false, null);
     		return null;
     	}
 		if (npc.isInvul())
