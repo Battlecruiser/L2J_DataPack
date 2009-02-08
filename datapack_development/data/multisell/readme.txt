@@ -52,8 +52,6 @@ of this directory a little bit.
 313750002.xml -> Ketra alliance - Lv2
 313750003.xml -> Ketra alliance - Lv3
 
-308461001.xml -> Dual swords: Wilbert, doesn't require dualsword craft stamp
-
 310922001.xml -> Seven Signs - Black Marketeer of Mammon - SA Removal for AA
 310922002.xml -> Seven Signs - Black Marketeer of Mammon - Black Market Items
 311132501.xml -> Seven Signs - Merchant of Mammon - Buy Etc Items
