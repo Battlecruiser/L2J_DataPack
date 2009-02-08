@@ -14,9 +14,6 @@
  */
 package quests.SagasScripts;
 
-import java.util.logging.Level;
-import java.util.logging.LogRecord;
-
 import net.sf.l2j.gameserver.ai.CtrlIntention;
 import net.sf.l2j.gameserver.instancemanager.QuestManager;
 import net.sf.l2j.gameserver.model.L2Attackable;
@@ -118,18 +115,12 @@ public class SagasSuperClass extends QuestJython
 	{
 		L2PcInstance player = null;
 		QuestState st = null;
-		LogRecord record;
-		if (!_SpawnList.containsKey(npc))
+		if (_SpawnList.containsKey(npc))
 		{
-			record = new LogRecord(Level.WARNING, "Founded NPE at findRightState() - npcId: "+ String.valueOf(npc.getNpcId()));
-			record.setLoggerName("SagasSuperClass");
-			_log.log(record);
-			return null;
+			player = (L2PcInstance) L2World.getInstance().findObject(_SpawnList.get(npc));
+			if (player != null) 
+				st = player.getQuestState(qn);
 		}
-		
-		player = (L2PcInstance) L2World.getInstance().findObject(_SpawnList.get(npc));
-		if (player != null) 
-			st = player.getQuestState(qn);
 		return st;
 	}
 	
