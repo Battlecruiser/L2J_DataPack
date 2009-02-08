@@ -2741,7 +2741,7 @@ INSERT INTO `etcitem` VALUES
 (3834,'Herb of Oel Mahum','false','none',0,'normal','steel','none',-1,0,0,'true','false','true','true','q_herb_of_oel_mahum','none'),
 (3835,'Blood of Eva','false','none',0,'normal','steel','none',-1,0,0,'true','false','true','true','q_blood_of_eva','none'),
 (3836,'Athrea\'s Coin','false','none',0,'normal','steel','none',-1,0,0,'true','false','true','true','q_athreas_coin','none'),
-(3837,'Symbol of Loyalty','false','none',0,'stackable','steel','none',-1,0,0,'true','false','true','true','q_symbol_of_loyalty','none'),
+(3837,'Symbol of Loyalty','false','none',0,'normal','steel','none',-1,0,0,'true','false','true','true','q_symbol_of_loyalty','none'),
 (3838,'Recipe: Titan\'s Powerstone','false','recipe',30,'stackable','liquid','none',-1,0,0,'true','false','true','true','q_rp_titans_powerstone','recipe'),
 (3839,'Mist Drake Egg','false','none',0,'stackable','steel','none',-1,0,0,'true','false','true','true','q_mist_drake_egg','none'),
 (3840,'Blitz Wyrm Egg','false','none',0,'stackable','steel','none',-1,0,0,'true','false','true','true','q_blitz_wyrm_egg','none'),
