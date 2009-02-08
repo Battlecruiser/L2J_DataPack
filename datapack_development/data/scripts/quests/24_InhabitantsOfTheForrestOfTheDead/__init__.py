@@ -158,6 +158,8 @@ class Quest (JQuest) :
 
     def onAggroRangeEnter(self, npc, player, isPet) : 
        if npc.getNpcId() == 25332:
+         if isPet: npc.getAggroListRP().remove(player.getPet())
+         else :
           npc.getAggroListRP().remove(player)
           st = player.getQuestState(qn) 
           if st and st.getQuestItemsCount(SilverCross):
