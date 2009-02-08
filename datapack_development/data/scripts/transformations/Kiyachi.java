@@ -47,6 +47,8 @@ public class Kiyachi extends L2Transformation
 		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
 		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(733, 1), false);
+		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(734, 1), false);
 		// Send a Server->Client packet StatusUpdate to the L2PcInstance.
 		this.getPlayer().sendSkillList();
 	}
@@ -63,6 +65,8 @@ public class Kiyachi extends L2Transformation
 		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
 		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(733, 1), false);
+		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(734, 1), false);
 		// Send a Server->Client packet StatusUpdate to the L2PcInstance.
 		this.getPlayer().sendSkillList();
 	}
