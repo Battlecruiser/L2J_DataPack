@@ -47,6 +47,9 @@ public class DemonPrince extends L2Transformation
 		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
 		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(735, 1), false);
+		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(736, 1), false);
+		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(737, 1), false);
 		// Send a Server->Client packet StatusUpdate to the L2PcInstance.
 		this.getPlayer().sendSkillList();
 	}
@@ -63,6 +66,9 @@ public class DemonPrince extends L2Transformation
 		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
 		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(735, 1), false);
+		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(736, 1), false);
+		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(737, 1), false);
 		// Send a Server->Client packet StatusUpdate to the L2PcInstance.
 		this.getPlayer().sendSkillList();
 	}
