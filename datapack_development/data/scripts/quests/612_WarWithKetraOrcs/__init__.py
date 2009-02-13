@@ -96,7 +96,7 @@ class Quest (JQuest) :
      st = partyMember.getQuestState(qn)
      npcId = npc.getNpcId()
      count = st.getQuestItemsCount(Molar)
-     st2 = partyMember.getQuestState("611_AllianceWithVarkaSilenos")
+     st2 = partyMember.getQuestState("605_AllianceWithKetraOrcs")
      if npcId in Ketra_Orcs and partyMember.getAllianceWithVarkaKetra() <= -1 :
     #see comments in 611 : Alliance with Varka Silenos for reason for doing st2 check
        if not st2 :
