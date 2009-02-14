@@ -60,6 +60,8 @@ public class VanguardPaladin extends L2Transformation
 			// Full Swing
 			this.getPlayer().addSkill(SkillTable.getInstance().getInfo(814, this.getPlayer().getLevel() - 43), false);
 		}
+		// Decrease Bow/Crossbow Attack Speed
+		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false); 
 		// Switch Stance
 		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(838, 1), false);
 		// Send a Server->Client packet StatusUpdate to the L2PcInstance.
@@ -78,6 +80,8 @@ public class VanguardPaladin extends L2Transformation
 		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(816, this.getPlayer().getLevel() - 43), false);
 		// Full Swing
 		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(814, this.getPlayer().getLevel() - 43), false);
+		// Decrease Bow/Crossbow Attack Speed
+		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false); 
 		// Switch Stance
 		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(838, 1), false);
 		// Send a Server->Client packet StatusUpdate to the L2PcInstance.
