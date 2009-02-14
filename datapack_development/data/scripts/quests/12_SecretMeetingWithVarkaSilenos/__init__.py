@@ -21,14 +21,10 @@ class Quest (JQuest) :
  def onEvent (self,event,st) :
      htmltext = event
      if event == "31296-03.htm" :
-       if st.getPlayer().getLevel() >= 74 :
-            st.set("cond","1")
-            st.setState(State.STARTED)
-            st.playSound("ItemSound.quest_accept")
-            htmltext = "31296-03.htm"
-       else :
-            htmltext = "31296-02.htm"
-            st.exitQuest(1)
+         st.set("cond","1")
+         st.setState(State.STARTED)
+         st.playSound("ItemSound.quest_accept")
+         htmltext = "31296-03.htm"
      elif event == "31258-02.htm" :
          st.set("cond","2")
          htmltext = "31258-02.htm"
@@ -38,7 +34,6 @@ class Quest (JQuest) :
          st.takeItems(Box,-1)
          st.addExpAndSp(79761,0)
          st.set("cond","0")
-         st.set("onlyone","1")
          st.exitQuest(False)
          st.playSound("ItemSound.quest_finish")
      return htmltext
@@ -50,24 +45,26 @@ class Quest (JQuest) :
      if not st : return htmltext
 
      cond = st.getInt("cond")
-     onlyone = st.getInt("onlyone")
-     if st.getState() == State.CREATED :
-        st.set("cond","0")
-        st.set("onlyone","0")
-     if onlyone == 0 :
+     id = st.getState()
+     if id == State.COMPLETED :
+        htmltext = "<html><body>This quest has already been completed.</body></html>"
+     elif id == State.CREATED :
+         if st.getPlayer().getLevel() >= 74 :
+             htmltext = "31296-01.htm"
+         else :
+             htmltext = "31296-02.htm"
+             st.exitQuest(1)
+     elif id == State.STARTED :
          if npcId == Cadmon :
-             if cond == 0 :
-                 htmltext = "31296-01.htm"
-             elif cond == 1 :
+             if cond == 1 :
                  htmltext = "31296-04.htm"
-         elif st.getState() == State.STARTED :   
-             if npcId == Helmut :
-                 if cond == 1 :
-                     htmltext = "31258-01.htm"
-                 elif cond == 2 :
-                     htmltext = "31258-03.htm"
-             elif npcId == Naran and cond == 2 :
-                 htmltext = "31378-01.htm"
+         elif npcId == Helmut :
+             if cond == 1 :
+                 htmltext = "31258-01.htm"
+             elif cond == 2 :
+                 htmltext = "31258-03.htm"
+         elif npcId == Naran and cond == 2 :
+             htmltext = "31378-01.htm"
      return htmltext
      
 QUEST       = Quest(12, qn, "Secret Meeting With Varka Silenos")

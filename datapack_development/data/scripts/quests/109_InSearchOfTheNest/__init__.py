@@ -45,7 +45,6 @@ class Quest (JQuest) :
         if st :
             npcId = npc.getNpcId()
             cond = st.getInt("cond")
-            onlyone = st.getInt("onlyone")
             state = st.getState()
             if state == State.COMPLETED :
                 htmltext = "<html><body>This quest has already been completed.</body></html>"

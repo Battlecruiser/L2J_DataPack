@@ -86,7 +86,9 @@ class Quest (JQuest) :
    if not st : return htmltext 
 
    id = st.getState() 
-   if npcId == 30568 and st.getInt("cond")==0 and st.getInt("onlyone")==0 : 
+   if npcId == 30568 and id == State.COMPLETED : 
+      htmltext = "<html><body>This quest has already been completed.</body></html>" 
+   elif npcId == 30568 and id == State.CREATED : 
       if player.getRace().ordinal() != 3 : 
         htmltext = "30568-00.htm" 
         st.exitQuest(1) 
@@ -96,15 +98,13 @@ class Quest (JQuest) :
       else: 
         htmltext = "30568-01.htm" 
         st.exitQuest(1) 
-   elif npcId == 30568 and st.getInt("cond")==0 and st.getInt("onlyone")==1 : 
-      htmltext = "<html><body>This quest has already been completed.</body></html>" 
    elif npcId == 30568 and st.getInt("cond")==1 and (st.getQuestItemsCount(HATOSS_ORDER1_ID) or st.getQuestItemsCount(HATOSS_ORDER2_ID) or st.getQuestItemsCount(HATOSS_ORDER3_ID)) and ((st.getQuestItemsCount(LETTER_TO_ELF_ID)+st.getQuestItemsCount(LETTER_TO_HUMAN_ID)+st.getQuestItemsCount(LETTER_TO_DARKELF_ID))==0) : 
           htmltext = "30568-04.htm" 
    elif npcId == 30568 and st.getInt("cond")==1 and (st.getQuestItemsCount(HATOSS_ORDER1_ID) or st.getQuestItemsCount(HATOSS_ORDER2_ID) or st.getQuestItemsCount(HATOSS_ORDER3_ID)) and ((st.getQuestItemsCount(LETTER_TO_ELF_ID)+st.getQuestItemsCount(LETTER_TO_HUMAN_ID)+st.getQuestItemsCount(LETTER_TO_DARKELF_ID))==1) : 
           htmltext = "30568-05.htm" 
    elif npcId == 30568 and st.getInt("cond")==1 and (st.getQuestItemsCount(HATOSS_ORDER1_ID) or st.getQuestItemsCount(HATOSS_ORDER2_ID) or st.getQuestItemsCount(HATOSS_ORDER3_ID)) and ((st.getQuestItemsCount(LETTER_TO_ELF_ID)+st.getQuestItemsCount(LETTER_TO_HUMAN_ID)+st.getQuestItemsCount(LETTER_TO_DARKELF_ID))==2) : 
           htmltext = "30568-08.htm" 
-   elif npcId == 30568 and st.getInt("cond")==1 and (st.getQuestItemsCount(HATOSS_ORDER1_ID) or st.getQuestItemsCount(HATOSS_ORDER2_ID) or st.getQuestItemsCount(HATOSS_ORDER3_ID)) and ((st.getQuestItemsCount(LETTER_TO_ELF_ID)+st.getQuestItemsCount(LETTER_TO_HUMAN_ID)+st.getQuestItemsCount(LETTER_TO_DARKELF_ID))==3) and st.getInt("onlyone")==0 : 
+   elif npcId == 30568 and st.getInt("cond")==1 and (st.getQuestItemsCount(HATOSS_ORDER1_ID) or st.getQuestItemsCount(HATOSS_ORDER2_ID) or st.getQuestItemsCount(HATOSS_ORDER3_ID)) and ((st.getQuestItemsCount(LETTER_TO_ELF_ID)+st.getQuestItemsCount(LETTER_TO_HUMAN_ID)+st.getQuestItemsCount(LETTER_TO_DARKELF_ID))==3) : 
           if st.getInt("id") != 107 : 
             st.set("id","107") 
             htmltext = "30568-10.htm" 
@@ -135,7 +135,6 @@ class Quest (JQuest) :
             player.sendPacket(SocialAction(player.getObjectId(),3))
             st.exitQuest(False) 
             st.playSound("ItemSound.quest_finish") 
-            st.set("onlyone","1") 
    elif npcId == 30580 and st.getInt("cond")==1 and id == State.STARTED and (st.getQuestItemsCount(HATOSS_ORDER1_ID) or st.getQuestItemsCount(HATOSS_ORDER2_ID) or st.getQuestItemsCount(HATOSS_ORDER3_ID)) : 
           htmltext = "30580-01.htm" 
    return htmltext 

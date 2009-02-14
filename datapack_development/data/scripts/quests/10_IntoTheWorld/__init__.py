@@ -43,15 +43,14 @@ class Quest (JQuest) :
         st = player.getQuestState(qn)
         if not st: return htmltext
         id = st.getState()
-        if id == State.CREATED :
-            st.set("cond","0")
+        if npcId == 30533 and id == State.COMPLETED :
+            htmltext = "<html><body>I can't supply you with another Giran Scroll of Escape. Sorry traveller.</body></html>"
+        elif id == State.CREATED :
             if player.getRace().ordinal() == 4 :
                 htmltext = "30533-02.htm"
             else :
                 htmltext = "30533-01.htm"
                 st.exitQuest(1)
-        elif npcId == 30533 and id == State.COMPLETED :
-            htmltext = "<html><body>I can't supply you with another Giran Scroll of Escape. Sorry traveller.</body></html>"
         elif id == State.STARTED: 
             if npcId == 30533 and st.getInt("cond")==1 :
                 htmltext = "30533-04.htm"

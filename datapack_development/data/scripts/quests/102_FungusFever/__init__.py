@@ -53,10 +53,9 @@ class Quest (JQuest) :
    if not st: return htmltext
 
    id = st.getState()
-   if id == State.CREATED :
-     st.set("cond","0")
-     st.set("onlyone","0")
-   if npcId == 30284 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
+   if id == State.COMPLETED :
+        htmltext = "<html><body>This quest has already been completed.</body></html>"
+   elif npcId == 30284 and id == State.CREATED :
       if player.getRace().ordinal() != 1 :
          htmltext = "30284-00.htm"
          st.exitQuest(1)
@@ -66,8 +65,6 @@ class Quest (JQuest) :
       else:
          htmltext = "30284-08.htm"
          st.exitQuest(1)
-   elif npcId == 30284 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-        htmltext = "<html><body>This quest has already been completed.</body></html>"
    elif id == State.STARTED :
       if npcId == 30284 and st.getInt("cond")==1 and st.getQuestItemsCount(ALBERRYUS_LETTER_ID)==1 :
            htmltext = "30284-03.htm"
@@ -126,7 +123,6 @@ class Quest (JQuest) :
            st.exitQuest(False)
            st.playSound("ItemSound.quest_finish")
            htmltext = "30284-06.htm"
-           st.set("onlyone","1")
            st.giveItems(57,6331)
            if player.getClassId().getId() in range(18,25) :
              st.giveItems(SWORD_OF_SENTINEL_ID,1)

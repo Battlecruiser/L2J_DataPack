@@ -65,12 +65,10 @@ class Quest (JQuest) :
      id = st.getState()
      cond = st.getInt("cond")
 
-     if id == State.CREATED :
-         st.set("cond","0")
-     elif id == State.COMPLETED :
+     if id == State.COMPLETED :
          htmltext = "<html><body>This quest has already been completed.</body></html>"
      elif npcId == MARQUEZ:
-         if cond == 0 :
+         if id == State.CREATED :
              if player.getLevel() < 75 :
                  htmltext = "32113-01a.htm"
                  st.exitQuest(1)

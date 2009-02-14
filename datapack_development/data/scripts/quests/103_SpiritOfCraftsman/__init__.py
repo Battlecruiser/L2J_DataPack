@@ -49,10 +49,9 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st: return htmltext
    id = st.getState()
-   if id == State.CREATED :
-     st.set("cond","0")
-     st.set("onlyone","0")
-   if npcId == 30307 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
+   if id == State.COMPLETED :
+        htmltext = "<html><body>This quest has already been completed.</body></html>"
+   elif npcId == 30307 and id == State.CREATED :
      if player.getRace().ordinal() != 2 :
         htmltext = "30307-00.htm"
      elif player.getLevel() >= 10 :
@@ -61,8 +60,6 @@ class Quest (JQuest) :
      else:
         htmltext = "30307-02.htm"
         st.exitQuest(1)
-   elif npcId == 30307 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-        htmltext = "<html><body>This quest has already been completed.</body></html>"
    elif id == State.STARTED : 
        if npcId == 30307 and st.getInt("cond")>=1 and (st.getQuestItemsCount(KAROYDS_LETTER_ID)>=1 or st.getQuestItemsCount(CECKTINONS_VOUCHER1_ID)>=1 or st.getQuestItemsCount(CECKTINONS_VOUCHER2_ID)>=1) :
             htmltext = "30307-06.htm"
@@ -118,7 +115,6 @@ class Quest (JQuest) :
             st.set("cond","0")
             st.exitQuest(False)
             st.playSound("ItemSound.quest_finish")
-            st.set("onlyone","1")
             # check the player state against this quest newbie rewarding mark.
             newbie = player.getNewbie()
             if newbie | NEWBIE_REWARD != newbie :

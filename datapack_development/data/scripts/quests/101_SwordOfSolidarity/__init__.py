@@ -52,7 +52,6 @@ class Quest (JQuest) :
         st.set("cond","0")
         st.exitQuest(False)
         st.playSound("ItemSound.quest_finish")
-        st.set("onlyone","1")
         # check the player state against this quest newbie rewarding mark.
         player = st.getPlayer()
         newbie = player.getNewbie()
@@ -70,10 +69,9 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st: return htmltext
    id = st.getState()
-   if id == State.CREATED :
-     st.set("cond","0")
-     st.set("onlyone","0")
-   if npcId == 30008 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
+   if id == State.COMPLETED : :
+        htmltext = "<html><body>This quest has already been completed.</body></html>"
+   elif npcId == 30008 and id == State.CREATED :
       if player.getRace().ordinal() != 0 :
         htmltext = "30008-00.htm"
       elif player.getLevel() >= 9 :
@@ -82,9 +80,7 @@ class Quest (JQuest) :
       else:
         htmltext = "30008-08.htm"
         st.exitQuest(1)
-   elif npcId == 30008 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-        htmltext = "<html><body>This quest has already been completed.</body></html>"
-   if id == State.STARTED: 
+   elif id == State.STARTED: 
        if npcId == 30008 and st.getInt("cond")==1 and (st.getQuestItemsCount(ROIENS_LETTER)==1) :
             htmltext = "30008-05.htm"
        elif npcId == 30008 and st.getInt("cond")>=2 and st.getQuestItemsCount(ROIENS_LETTER)==0 and st.getQuestItemsCount(ALLTRANS_NOTE)==0 :

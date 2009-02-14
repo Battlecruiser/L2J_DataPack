@@ -33,7 +33,6 @@ class Quest (JQuest) :
       st.addExpAndSp(251602,25245)
       st.takeItems(ANCIENT_BOOK,-1)
       st.exitQuest(False)
-      st.exitQuest(0)
     return htmltext
 
   def onTalk(self, npc, player):
@@ -43,7 +42,9 @@ class Quest (JQuest) :
     npcId=npc.getNpcId()
     htmltext="<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>" 
     id = st.getState()
-    if id == State.CREATED :
+    if id == State.COMPLETED:
+      htmltext = "<html><body>This quest have already been completed.</body></html>"
+    elif id == State.CREATED :
       if st.getPlayer().getLevel() >= 75 :
         htmltext = "0.htm"
       else:
@@ -57,9 +58,6 @@ class Quest (JQuest) :
             htmltext = "1a.htm"
           else :
             htmltext = "2.htm"
-    elif id == State.COMPLETED:
-      st.exitQuest(0)
-      htmltext = "<html><body>This quest have already been completed.</body></html>"
     return htmltext    
 
 QUEST=Quest(110,qn,"To The Primeval Isle")
