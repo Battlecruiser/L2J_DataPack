@@ -51,7 +51,7 @@ class Quest (JQuest) :
      elif id == State.CREATED :
        if st.getPlayer().getLevel() >= 74 :
           htmltext = "31296-01.htm"
-       else
+       else :
           htmltext = "31296-02.htm"
           st.exitQuest(1)
      elif id == State.STARTED :
