@@ -64,6 +64,8 @@ public class InquisitorShilienElder extends L2Transformation
 			// Divine Curse
 			this.getPlayer().addSkill(SkillTable.getInstance().getInfo(1525, this.getPlayer().getLevel() - 43), false);
 		}
+		// Decrease Bow/Crossbow Attack Speed
+		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false); 
 		// Switch Stance
 		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(838, 1), false);
 		// Send a Server->Client packet StatusUpdate to the L2PcInstance.
@@ -88,6 +90,8 @@ public class InquisitorShilienElder extends L2Transformation
 		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(1524, this.getPlayer().getLevel() - 43), false);
 		// Divine Curse
 		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(1525, this.getPlayer().getLevel() - 43), false);
+		// Decrease Bow/Crossbow Attack Speed
+		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false); 
 		// Switch Stance
 		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(838, 1), false);
 		// Send a Server->Client packet StatusUpdate to the L2PcInstance.
