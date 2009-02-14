@@ -59,10 +59,9 @@ class Quest (JQuest) :
    st = player.getQuestState(qn) 
    if not st: return htmltext 
    id = st.getState() 
-   if id == State.CREATED : 
-     st.set("cond","0") 
-     st.set("onlyone","0") 
-   if npcId == 30017 and st.getInt("cond")==0 and st.getInt("onlyone")==0 : 
+   if id == State.COMPLETED : 
+      htmltext = "<html><body>This quest has already been completed</body></html>" 
+   elif npcId == 30017 and id == State.CREATED :
      if player.getRace().ordinal() != 0 : 
         htmltext = "30017-00.htm"
         st.exitQuest(1)
@@ -72,8 +71,6 @@ class Quest (JQuest) :
      else: 
         htmltext = "30017-06.htm" 
         st.exitQuest(1) 
-   elif npcId == 30017 and st.getInt("cond")==0 and st.getInt("onlyone")==1 : 
-      htmltext = "<html><body>This quest has already been completed</body></html>" 
    elif id == State.STARTED : 
      if npcId == 30017 and st.getInt("cond") and st.getQuestItemsCount(GALLINS_OAK_WAND)>=1 and not HaveAllQuestItems(st) : 
         htmltext = "30017-04.htm" 
@@ -100,7 +97,6 @@ class Quest (JQuest) :
         st.set("cond","0") 
         st.exitQuest(False) 
         st.playSound("ItemSound.quest_finish") 
-        st.set("onlyone","1")       
      elif npcId == 30045 and st.getInt("cond") : 
         htmltext = "30045-01.htm" 
         st.set("cond","2") 

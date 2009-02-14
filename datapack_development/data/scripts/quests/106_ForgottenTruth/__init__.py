@@ -44,8 +44,9 @@ class Quest (JQuest) :
    if not st : return htmltext
 
    id = st.getState()
-   if id == State.CREATED :                                      # Check if is starting the quest
-     st.set("cond","0")
+   if id == State.COMPLETED :                                  # Check if the quest is already made
+     htmltext = "<html><body>This quest has already been completed.</body></html>"
+   elif id == State.CREATED :                                      # Check if is starting the quest
      if player.getRace().ordinal() == 2 :
        if player.getLevel() >= 10 :
          htmltext = "30358-03.htm"
@@ -55,17 +56,12 @@ class Quest (JQuest) :
      else :
        htmltext = "30358-00.htm"
        st.exitQuest(1)
-   elif id == State.COMPLETED :                                  # Check if the quest is already made
-     htmltext = "<html><body>This quest has already been completed.</body></html>"
    else :                                                  # The quest itself
-     try :
-       cond = st.getInt("cond")
-     except :
-       cond = None
+     cond = st.getInt("cond")
      if cond == 1 :
        if npcId == 30358 :
          htmltext = "30358-06.htm"
-       elif npcId == 30133 and st.getQuestItemsCount(ONYX_TALISMAN1) and id == State.STARTED : 
+       elif npcId == 30133 and st.getQuestItemsCount(ONYX_TALISMAN1) : 
          htmltext = "30133-01.htm"
          st.takeItems(ONYX_TALISMAN1,1)
          st.giveItems(ONYX_TALISMAN2,1)
@@ -78,7 +74,7 @@ class Quest (JQuest) :
      elif cond == 3 :
        if npcId == 30358 :
          htmltext = "30358-06.htm"
-       elif npcId == 30133 and st.getQuestItemsCount(ANCIENT_SCROLL) and st.getQuestItemsCount(ANCIENT_CLAY_TABLET) and id == State.STARTED :
+       elif npcId == 30133 and st.getQuestItemsCount(ANCIENT_SCROLL) and st.getQuestItemsCount(ANCIENT_CLAY_TABLET):
          htmltext = "30133-03.htm"
          st.takeItems(ONYX_TALISMAN2,1)
          st.takeItems(ANCIENT_SCROLL,1)
@@ -107,7 +103,7 @@ class Quest (JQuest) :
          st.unset("cond")
          st.exitQuest(False)
          st.playSound("ItemSound.quest_finish")
-       elif npcId == 30133 and id == State.STARTED :
+       elif npcId == 30133 :
          htmltext = "30133-04.htm"
    return htmltext
 

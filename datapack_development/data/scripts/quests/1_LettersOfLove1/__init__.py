@@ -46,13 +46,13 @@ class Quest (JQuest) :
    id = st.getState()
 
    cond = st.getInt("cond") 
-   onlyone = st.getInt("onlyone") 
    ItemsCount_DL = st.getQuestItemsCount(DARINGS_LETTER) 
    ItemsCount_RK = st.getQuestItemsCount(RAPUNZELS_KERCHIEF) 
    ItemsCount_DR = st.getQuestItemsCount(DARINGS_RECEIPT) 
    ItemsCount_BP = st.getQuestItemsCount(BAULS_POTION) 
- 
-   if npcId == DARIN and cond == 0 and onlyone == 0 : 
+   if id == State.COMPLETED :
+     htmltext = "<html><body>This quest has already been completed.</body></html>" 
+   elif npcId == DARIN and id == State.CREATED: 
      if player.getLevel() >= 2 : 
        if cond < 15 : 
          htmltext = "30048-02.htm" 
@@ -62,10 +62,8 @@ class Quest (JQuest) :
      else: 
        htmltext = "<html><body>Quest for characters level 2 and above.</body></html>" 
        st.exitQuest(1) 
-   elif npcId == DARIN and cond == 0 and onlyone == 1 : 
-     htmltext = "<html><body>This quest has already been completed.</body></html>"
    elif id == State.STARTED :
-       if npcId == ROXXY and cond and onlyone == 0: 
+       if npcId == ROXXY and cond: 
          if ItemsCount_RK == 0 and ItemsCount_DL : 
            htmltext = "30006-01.htm" 
            st.takeItems(DARINGS_LETTER,-1) 
@@ -77,14 +75,14 @@ class Quest (JQuest) :
            htmltext = "30006-03.htm" 
          elif ItemsCount_RK : 
            htmltext = "30006-02.htm" 
-       elif npcId == DARIN and cond and ItemsCount_RK > 0 and onlyone == 0 : 
+       elif npcId == DARIN and cond and ItemsCount_RK > 0: 
          htmltext = "30048-08.htm" 
          st.takeItems(RAPUNZELS_KERCHIEF,-1) 
          st.giveItems(DARINGS_RECEIPT,1) 
          st.set("cond","3") 
          st.set("id","3") 
          st.playSound("ItemSound.quest_middle") 
-       elif npcId == BAULRO and cond and onlyone == 0 : 
+       elif npcId == BAULRO and cond: 
          if ItemsCount_DR > 0 : 
            htmltext = "30033-01.htm" 
            st.takeItems(DARINGS_RECEIPT,-1) 
@@ -94,7 +92,7 @@ class Quest (JQuest) :
            st.playSound("ItemSound.quest_middle") 
          elif ItemsCount_BP > 0 : 
            htmltext = "30033-02.htm" 
-       elif npcId == DARIN and cond and ItemsCount_RK == 0 and onlyone == 0 : 
+       elif npcId == DARIN and cond and ItemsCount_RK == 0: 
          if ItemsCount_DR > 0 : 
            htmltext = "30048-09.htm" 
          elif ItemsCount_BP > 0 : 
@@ -105,7 +103,6 @@ class Quest (JQuest) :
            st.addExpAndSp(5672,446)
            st.set("cond","0") 
            st.exitQuest(False)
-           st.set("onlyone","1") 
            st.playSound("ItemSound.quest_finish") 
          else: 
            htmltext = "30048-07.htm" 

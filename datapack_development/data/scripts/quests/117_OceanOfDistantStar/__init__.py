@@ -71,7 +71,9 @@ class Quest (JQuest) :
     npcId=npc.getNpcId()
     htmltext="<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
     id = st.getState()
-    if id == State.CREATED and npcId == ABEY :
+    if id == State.COMPLETED:
+      htmltext = "<html><body>This quest has already been completed.</body></html>"
+    elif id == State.CREATED and npcId == ABEY :
       if st.getPlayer().getLevel() >= 39 :
         htmltext = "0.htm" #event 1
       else:
@@ -104,8 +106,6 @@ class Quest (JQuest) :
             htmltext = "4.htm" #to event 5
       if npcId == GHOST_F and cond == 10 :
             htmltext = "9.htm" #link to 9a.htm so link to event 10
-    elif id == State.COMPLETED:
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
     return htmltext
 
   def onKill(self,npc,player,isPet):

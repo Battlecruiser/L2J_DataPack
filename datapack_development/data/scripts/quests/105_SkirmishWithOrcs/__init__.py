@@ -69,7 +69,9 @@ class Quest (JQuest) :
    if not st : return htmltext 
     
    id = st.getState() 
-   if npcId == 30218 and st.getInt("cond")==0 and st.getInt("onlyone")==0 : 
+   if id == State.COMPLETED :
+      htmltext = "<html><body>This quest has already been completed.</body></html>"
+   elif npcId == 30218 and id == State.CREATED : 
       if player.getLevel() >= 10 and player.getRace().ordinal() == 1 : 
         htmltext = "30218-02.htm" 
         return htmltext 
@@ -79,8 +81,6 @@ class Quest (JQuest) :
       else: 
         htmltext = "30218-10.htm" 
         st.exitQuest(1) 
-   elif npcId == 30218 and st.getInt("cond")==0 and st.getInt("onlyone")==1 : 
-      htmltext = "<html><body>This quest has already been completed.</body></html>" 
    elif npcId == 30218 and st.getInt("cond") : 
       if st.getQuestItemsCount(KABOO_CHIEF_TORC1) : 
         htmltext = "30218-06.htm" 
@@ -143,7 +143,6 @@ class Quest (JQuest) :
             player.sendPacket(SocialAction(player.getObjectId(),3))
             st.exitQuest(False) 
             st.playSound("ItemSound.quest_finish") 
-            st.set("onlyone","1") 
             st.set("cond","0") 
       elif st.getQuestItemsCount(KENDNELLS_ORDER5) or st.getQuestItemsCount(KENDNELLS_ORDER6) or st.getQuestItemsCount(KENDNELLS_ORDER7) or st.getQuestItemsCount(KENDNELLS_ORDER8) : 
         htmltext = "30218-07.htm" 
