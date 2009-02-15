@@ -675,9 +675,11 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="8247" levels="1" name="Mount Light Purple Maned Horse">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="MOUNT"/>
+  <set name="npcId" val="13130"/>
+  <set name="itemId" val="20029"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="8248" levels="1" name="Cancel Gatekeeper Transformation">

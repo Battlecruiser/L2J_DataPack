@@ -2177,7 +2177,7 @@ INSERT INTO armor VALUES
 (20022,'Ruthless Tribe Mask','face','false','none',10, 'wood','none',0,-1,0,0,0,0,0,'true','true','true','true','0-0;'),
 (20023,'Ribbon Hairband','face','false','none',10, 'wood','none',0,-1,0,0,0,0,0,'true','true','true','true','0-0;'),
 (20024,'Visor','dhair','false','none',10, 'wood','none',0,-1,0,0,0,0,0,'true','true','true','true','0-0;'),
-(20029,'Light Purple-Maned Horse Mounting Bracelet','underwear','false','none',30, 'wood','none',0,-1,0,0,0,0,0,'true','true','true','true','0-0;'),
+(20029,'Light Purple-Maned Horse Mounting Bracelet','lbracelet','false','none',30, 'wood','none',0,-1,0,0,0,0,0,'true','true','true','true','8247-1;839-1;'),
 (20030,'Light Purple-Maned Horse Mounting Bracelet - 30 day limited period','underwear','false','none',30, 'wood','none',0,-1,0,0,0,0,0,'true','true','true','true','0-0;'),
 (20031,'Kat the Cat Hat','dhair','false','none',10, 'wood','none',0,-1,0,0,0,0,0,'true','true','true','true','0-0;'),
 (20032,'Skull Hat','dhair','false','none',10, 'wood','none',0,-1,0,0,0,0,0,'true','true','true','true','0-0;');
