@@ -196,7 +196,8 @@ INSERT INTO `npc` VALUES
 (13126, 13126, "Trap", 0, "", 0, "LineageMonster4.little_mouse_120p", 8, 24, 70, "male", "L2Npc", 40, 2444, 2444, 0, 0, 10, 10, 10, 10, 10, 10, 0, 0, 500, 500, 500, 500, 278, 0, 333, 0, 0, NULL, 60, 60, "", 0, 0, 0, "LAST_HIT", 0, 0, 0, "balanced", "false"),
 (13127, 13127, "Trap", 0, "", 0, "LineageMonster4.little_mouse_120p", 8, 24, 70, "male", "L2Npc", 40, 2444, 2444, 0, 0, 10, 10, 10, 10, 10, 10, 0, 0, 500, 500, 500, 500, 278, 0, 333, 0, 0, NULL, 60, 60, "", 0, 0, 0, "LAST_HIT", 0, 0, 0, "balanced", "false"),
 (13128, 13128, "Golem Trader", 0, "", 0, "LineageMonster4.little_mouse_120p", 8, 24, 70, "male", "L2Npc", 40, 2444, 2444, 0, 0, 10, 10, 10, 10, 10, 10, 0, 0, 500, 500, 500, 500, 278, 0, 333, 0, 0, NULL, 60, 60, "", 0, 0, 0, "LAST_HIT", 0, 0, 0, "balanced", "false"),
-(13129, 13129, "Teleporter", 0, "", 0, "LineageMonster4.little_mouse_120p", 8, 24, 70, "male", "L2Npc", 40, 2444, 2444, 0, 0, 10, 10, 10, 10, 10, 10, 0, 0, 500, 500, 500, 500, 278, 0, 333, 0, 0, NULL, 60, 60, "", 0, 0, 0, "LAST_HIT", 0, 0, 0, "balanced", "false");
+(13129, 13129, "Teleporter", 0, "", 0, "LineageMonster4.little_mouse_120p", 8, 24, 70, "male", "L2Npc", 40, 2444, 2444, 0, 0, 10, 10, 10, 10, 10, 10, 0, 0, 500, 500, 500, 500, 278, 0, 333, 0, 0, NULL, 60, 60, "", 0, 0, 0, "LAST_HIT", 0, 0, 0, "balanced", "false"),
+(13130, 13130, "Light Purple Maned Horse", 0, "", 0, "Monster.horse", 12, 32, 70, "male", "L2Npc", 40, 2444, 2444, 0, 0, 10, 10, 10, 10, 10, 10, 0, 0, 500, 500, 500, 500, 278, 0, 333, 0, 0, NULL, 60, 60, "", 0, 0, 0, "LAST_HIT", 0, 0, 0, "balanced", "false");
 
 INSERT INTO `npc` VALUES
 (14001, 14001, "Reanimated Man", 0, "", 0, "Monster.skeleton", 11, 25, 46, "male", "L2Pet", 40, 2914, 816, 8.69, 2.14, 40, 43, 30, 21, 20, 25, 0, 0, 482, 245, 202, 230, 278, 0, 333, 0, 0, 0, 66, 154, "NULL", 0, 1, 0, "LAST_HIT", 0, 0, 0, "fighter", "false"),

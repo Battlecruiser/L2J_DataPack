@@ -489,9 +489,10 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="839" levels="1" name="Dismount">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="MOUNT"/>
+  <set name="npcId" val="0"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 </list>
