@@ -3,7 +3,7 @@
 # Version 0.4 by DrLecter
 # Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
 # Version 0.6  - updated by Kerberos on 2007.11.15
-# Visit http://forum.l2jdp.com for more details
+# Visit http://www.l2jdp.com/forum/ for more details
 import sys
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState

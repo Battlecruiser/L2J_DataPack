@@ -1,6 +1,6 @@
 # Made by disKret, as a part of the
 # Official L2J Datapack Project, please visit
-# http://forum.l2jdp.com to meet the community behind it, or
+# http://www.l2jdp.com/forum/ to meet the community behind it, or
 # http://l2jdp.com/trac if you need to report a bug.
 import sys
 from net.sf.l2j import Config 

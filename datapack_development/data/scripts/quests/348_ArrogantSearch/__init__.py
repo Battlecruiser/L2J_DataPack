@@ -390,7 +390,7 @@ class Quest (JQuest) :
              st.playSound("ItemSound.quest_itemget")
              if DROPS[npcId][4] != 0:
                  st.takeItems(DROPS[npcId][4],1)
-             # in accordance to http://forum.l2jdp.com/viewtopic.php?t=2974
+             # in accordance to http://www.l2jdp.com/forum//viewtopic.php?t=2974
              # quest ends when you get the blooded fabric
              if cond == 24:
                  st.playSound("ItemSound.quest_finish")
