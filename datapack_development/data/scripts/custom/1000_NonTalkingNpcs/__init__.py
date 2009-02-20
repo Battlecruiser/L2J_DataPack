@@ -1,5 +1,5 @@
 # Script is used for preventing displaying html for npcs that dont have html on retail
-# Visit http://forum.l2jdp.com for more details.
+# Visit http://www.l2jdp.com/forum/ for more details.
 import sys
 from net.sf.l2j.gameserver.model.quest import Quest as JQuest
 from net.sf.l2j.gameserver.network.serverpackets      import ActionFailed
