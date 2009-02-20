@@ -1,6 +1,6 @@
 # Supplier of Reagents version 0.2
 # by DrLecter for the Official L2J Datapack Project.
-# Visit http://forum.l2jdp.com for more details.
+# Visit http://www.l2jdp.com/forum/ for more details.
 
 import sys
 from net.sf.l2j import Config

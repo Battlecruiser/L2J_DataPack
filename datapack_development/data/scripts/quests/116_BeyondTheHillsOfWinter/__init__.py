@@ -1,6 +1,6 @@
 # Made by Ky6uk <xmpp:ky6uk@jabber.ru>
 # this script is part of the Official L2J Datapack Project.
-# Visit http://forum.l2jdp.com for more details.
+# Visit http://www.l2jdp.com/forum/ for more details.
 
 #----------------------------------------------------------------------------
 # This quest starts in the Dwarven Village in the Elder Council with
