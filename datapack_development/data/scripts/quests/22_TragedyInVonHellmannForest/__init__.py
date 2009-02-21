@@ -289,7 +289,7 @@ class Quest (JQuest) :
    if st :
        if npcId == SOUL_OF_WELL :
            self.well = 0
-       elif npcId in MOBS and state == State.STARTED:
+       elif npcId in MOBS and st.getState() == State.STARTED:
            if st.getRandom(10) < 1 and st.getQuestItemsCount(SKULL) < 1:
                st.giveItems(SKULL,1)
                st.playSound("ItemSound.quest_itemget")
