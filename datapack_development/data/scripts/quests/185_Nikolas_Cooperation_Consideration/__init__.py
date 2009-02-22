@@ -54,7 +54,7 @@ class Quest (JQuest) :
             elif st.getQuestItemsCount(Metal) :
                 st.giveItems(Certificate,1)
             if player.getLevel() < 50 :
-               st.addExpSP(203717,14032)
+               st.addExpAndSp(203717,14032)
             st.giveItems(57,72527)
             st.exitQuest(False)
             st.playSound("ItemSound.quest_finish")
