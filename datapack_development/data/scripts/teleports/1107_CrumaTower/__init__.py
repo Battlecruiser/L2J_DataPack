@@ -6,7 +6,7 @@ class Quest (QuestJython) :
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
  def onTalk (self,npc,player):
-   st = player.getQuestState(qn)
+   st = player.getQuestState("1107_CrumaTower")
    htmltext = ""
    if player.getLevel() > 55 :
       htmltext = "30483.htm"
