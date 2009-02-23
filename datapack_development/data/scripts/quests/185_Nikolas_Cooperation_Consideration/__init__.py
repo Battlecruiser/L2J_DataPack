@@ -117,7 +117,9 @@ class Quest (JQuest) :
         npcId = npc.getNpcId()
         id = st.getState()
         cond = st.getInt("cond")
-        if id == State.STARTED:
+        if id == State.COMPLETED:
+            htmltext = "<html><body>This quest has already been completed.</body></html>"
+        elif id == State.STARTED:
             if npcId == Nikola :
                 if not cond :
                     if player.getLevel() < 40 :
@@ -164,5 +166,6 @@ QUEST       = Quest(185,qn,"Nikola's Cooperation - Consideration")
 QUEST.addTalkId(Nikola)
 QUEST.addTalkId(Lorain)
 QUEST.addTalkId(Device)
+QUEST.addTalkId(Alarm)
 QUEST.addFirstTalkId(Alarm)
 QUEST.addStartNpc(Alarm)
