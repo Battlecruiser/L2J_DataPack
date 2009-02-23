@@ -3,7 +3,7 @@ from net.sf.l2j.gameserver.model.quest.jython import QuestJython
 
 class Quest (QuestJython) :
 
- def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
+ def __init__(self,id,name,descr): QuestJython.__init__(self,id,name,descr)
 
  def onTalk (self,npc,player):
    st = player.getQuestState("1107_CrumaTower")

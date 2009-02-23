@@ -68,6 +68,8 @@ class Quest (JQuest) :
                 qs2 = player.getQuestState("185_Nikolas_Cooperation_Consideration")
                 if not qs1 and not qs2 :
                     htmltext = "30621-03.htm"
+                else :
+                    htmltext = "<html><body>This quest has already been completed.</body></html>"
         elif npcId == Kusto :
             if id == State.CREATED :
                 if player.getLevel() < 40 :

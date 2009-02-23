@@ -17,6 +17,7 @@ qn = "184_Nikolas_Cooperation_Contract"
 Nikola = 30621
 Lorain = 30673
 Device = 32366
+Alarm = 32367
 
 #Items
 Certificate = 10362
@@ -116,7 +117,9 @@ class Quest (JQuest) :
         npcId = npc.getNpcId()
         id = st.getState()
         cond = st.getInt("cond")
-        if id == State.STARTED:
+        if id == State.COMPLETED:
+            htmltext = "<html><body>This quest has already been completed.</body></html>"
+        elif id == State.STARTED:
             if npcId == Nikola :
                 if not cond :
                     if player.getLevel() < 40 :
@@ -152,3 +155,4 @@ QUEST       = Quest(184,qn,"Nikola's Cooperation - Contract")
 QUEST.addTalkId(Nikola)
 QUEST.addTalkId(Lorain)
 QUEST.addTalkId(Device)
+QUEST.addTalkId(Alarm)
