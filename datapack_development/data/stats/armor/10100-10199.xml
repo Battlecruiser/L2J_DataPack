@@ -19,12 +19,18 @@
   </for>
 </item>
 <item id='10126' name="Dynasty Leather Armor Force Master">
+  <cond msgId="1518">
+    <target class_id_restriction="88, 114"/>
+  </cond>
   <for>
    <add val='170' order='0x10' stat='pDef'/>
    <enchant val='0' order='0x0C' stat='pDef'/>
   </for>
 </item>
 <item id='10127' name="Dynasty Leather Armor Weapon Master">
+  <cond msgId="1518">
+    <target class_id_restriction="89, 113, 117, 118, 131, 132, 133"/>
+  </cond>
   <for>
    <add val='170' order='0x10' stat='pDef'/>
    <enchant val='0' order='0x0C' stat='pDef'/>
@@ -53,12 +59,18 @@
   </for>
 </item>
 <item id='10168' name="Dynasty Leather Armor Enchanter">
+  <cond msgId="1518">
+    <target class_id_restriction="98, 115, 116, 136"/>
+  </cond>
   <for>
    <add val='170' order='0x10' stat='pDef'/>
    <enchant val='0' order='0x0C' stat='pDef'/>
   </for>
 </item>
 <item id='10169' name="Enchanter Circlet (Kamael only)">
+  <cond msgId="1518">
+    <target class_id_restriction="136"/>
+  </cond>
   <for>
   </for>
 </item>
