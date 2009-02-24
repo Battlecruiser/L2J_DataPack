@@ -1,6 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
 <item id='6902' name="Pledge Shield">
+  <cond msgId="1518">
+    <player clanHall="-1" />
+  </cond>
   <for>
     <sub val='8' order='0x10' stat='rEvas'/>
     <set val='90' order='0x08' stat='sDef'/>

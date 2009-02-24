@@ -11,11 +11,17 @@
   </for>
 </item>
 <item id='8912' name="Single Stem Flower">
+  <cond msgId="1518">
+    <player sex="1"/>
+  </cond>
   <for>
     <add val='0' order='0x10' stat='pDef'/>
   </for>
 </item>
 <item id='8913' name="Butterfly Hairpin">
+  <cond msgId="1518">
+    <player sex="1"/>
+  </cond>
   <for>
     <add val='0' order='0x10' stat='pDef'/>
   </for>
@@ -36,6 +42,9 @@
   </for>
 </item>
 <item id='8917' name="Goddess Circlet">
+  <cond msgId="1518">
+    <player sex="1"/>
+  </cond>
   <for>
     <add val='0' order='0x10' stat='pDef'/>
   </for>
@@ -66,6 +75,9 @@
   </for>
 </item>
 <item id='8923' name="Scar">
+  <cond msgId="1518">
+    <player sex="0"/>
+  </cond>
   <for>
     <add val='0' order='0x10' stat='pDef'/>
   </for>

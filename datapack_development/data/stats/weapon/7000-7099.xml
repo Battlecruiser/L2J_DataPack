@@ -9,6 +9,9 @@
   </for>
 </item>
 <item id='7015' name="Shield of Castle Pledge">
+  <cond msgId="1518">
+    <player castle="-1" />
+  </cond>
   <for>
     <sub val='8' order='0x10' stat='rEvas'/>
     <set val='90' order='0x08' stat='sDef'/>
