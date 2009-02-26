@@ -16062,7 +16062,7 @@ INSERT INTO skill_trees VALUES
 
 -- Dwarven Craft 1321 (Done by DJ MELERIX)
 
-(53,1321,1,'Common Craft',0,1),
+(53,1321,1,'Dwarven Craft',0,1),
 
 -- Common Craft 1322 (Done by DJ MELERIX)
 
