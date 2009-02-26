@@ -1358,13 +1358,13 @@
 <skill id="3596" levels="1" name="Full Recover">
   <!-- Infinity Scepter Skill -->
   <set name="magicLvl" val="80"/>
-  <set name="target" val="TARGET_SELF"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="power" val="100"/>
   <!-- Chance is 3% Managed by SQL Side -->
   <set name="skillType" val="HEAL_PERCENT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <set name="aggroPoints" val="100"/>
 </skill>
 <skill id="3597" levels="1" name="Special Ability: Infinity Rod">
@@ -1388,13 +1388,13 @@
 <skill id="3598" levels="1" name="Full Recover">
   <!-- Infinity Rod Skill -->
   <set name="magicLvl" val="80"/>
-  <set name="target" val="TARGET_SELF"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="power" val="100"/>
   <!-- Chance is 3% Managed by SQL Side -->
   <set name="skillType" val="HEAL_PERCENT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
   <set name="aggroPoints" val="100"/>
 </skill>
 <skill id="3599" levels="1" name="Polearm Multi-attack">
