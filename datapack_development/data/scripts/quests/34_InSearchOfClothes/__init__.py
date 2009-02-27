@@ -46,7 +46,8 @@ class Quest (JQuest) :
        st.takeItems(SPIDERSILK,1)
        st.giveItems(MYSTERIOUS_CLOTH,1)
        st.playSound("ItemSound.quest_finish")
-       st.exitQuest(1)
+       st.exitQuest(False)
+       st.unset("cond")
      else :
        htmltext = "You don't have enough materials"
    return htmltext
@@ -58,7 +59,9 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
    cond = st.getInt("cond")
-   if npcId == 30088 and cond == 0 and st.getQuestItemsCount(MYSTERIOUS_CLOTH) == 0 :
+   if id == State.COMPLETED:
+     htmltext = "<html><body>This quest has already been completed.</body></html>"
+   elif npcId == 30088 and cond == 0 and st.getQuestItemsCount(MYSTERIOUS_CLOTH) == 0 :
      fwear=player.getQuestState("37_PleaseMakeMeFormalWear")
      if fwear :
        if fwear.get("cond") == "6" :

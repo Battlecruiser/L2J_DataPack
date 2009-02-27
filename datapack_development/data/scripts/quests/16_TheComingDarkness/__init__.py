@@ -66,21 +66,20 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    cond = st.getInt("cond")
    id = st.getState()
-   if id == State.CREATED :
-     st.set("cond","0")
-   if npcId == HIERARCH and st.getInt("cond") == 0 :
+   if id == State.COMPLETED :
+      htmltext = "<html><body>This quest has already been completed.</body></html>"
+   elif id == State.CREATED and npcId == HIERARCH:
      st2 = player.getQuestState("17_LightAndDarkness")
-     if st2 :
-       if st2.getState() == 'State.COMPLETED' :
-         htmltext = "<html><body>Quest Light and Darkness need to be finished first.</body></html>"
-     elif player.getLevel() >= 62 :
-       htmltext = "31517-0.htm"
-     elif id == State.COMPLETED :
-       htmltext = "<html><body>This quest has already been completed.</body></html>"
+     if st2 and st2.getState() == State.COMPLETED :
+       if player.getLevel() >= 62 :
+         htmltext = "31517-0.htm"
+       else:
+         htmltext = "<html><body>(Only characters level 62 and above are permitted to undertake this quest.) </body></html>"
+         st.exitQuest(1)
      else:
-       return htmltext
+       htmltext = "<html><body>Quest Light and Darkness need to be finished first.</body></html>"
        st.exitQuest(1)
-   if id == State.STARTED :    
+   elif id == State.STARTED :    
        if npcId == EVIL_ALTAR_1 and cond == 1 :
          htmltext = "31512-0.htm"
        if npcId == EVIL_ALTAR_2 and cond == 2 :
