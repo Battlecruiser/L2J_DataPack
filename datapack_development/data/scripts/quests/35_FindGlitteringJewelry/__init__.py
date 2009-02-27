@@ -38,7 +38,8 @@ class Quest (JQuest) :
        st.takeItems(THONS,150)
        st.giveItems(JEWEL_BOX,1)
        st.playSound("ItemSound.quest_finish")
-       st.exitQuest(1)
+       st.unset("cond")
+       st.exitQuest(False)
      else :
        htmltext = "You don't have enough materials"
    return htmltext
@@ -50,17 +51,17 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    cond = st.getInt("cond")
    id = st.getState()
-   if npcId == 30091 and cond == 0 and st.getQuestItemsCount(JEWEL_BOX) == 0 :
+   if id == State.COMPLETED:
+     htmltext = "<html><body>This quest has already been completed.</body></html>"
+   elif npcId == 30091 and cond == 0 and st.getQuestItemsCount(JEWEL_BOX) == 0 :
      fwear=player.getQuestState("37_PleaseMakeMeFormalWear")
-     if not fwear is None :
+     if fwear :
        if fwear.get("cond") == "6" :
          htmltext = "30091-0.htm"
          return htmltext
        else:
-         htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>" 
          st.exitQuest(1)
      else:
-       htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>" 
        st.exitQuest(1)
    elif npcId == 30879 and cond == 1 :
      htmltext = "30879-0.htm"

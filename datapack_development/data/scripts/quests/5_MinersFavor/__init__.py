@@ -35,16 +35,14 @@ class Quest (JQuest) :
    if event == "30554-03.htm" : 
      st.giveItems(BOLTERS_LIST,1) 
      st.giveItems(BOLTERS_SMELLY_SOCKS,1) 
-     st.set("cond","1") 
-     st.set("id","1") 
-     st.setState(State.STARTED) 
+     st.set("cond","1")
+     st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept") 
    elif event == "30526-02.htm" : 
      st.takeItems(BOLTERS_SMELLY_SOCKS,-1) 
      st.giveItems(MINERS_PICK,1) 
      if st.getQuestItemsCount(BOLTERS_LIST) and (st.getQuestItemsCount(MINING_BOOTS) + st.getQuestItemsCount(MINERS_PICK) + st.getQuestItemsCount(BOOMBOOM_POWDER) + st.getQuestItemsCount(REDSTONE_BEER) >= 4) : 
        st.set("cond","2") 
-       st.set("id","2") 
        st.playSound("ItemSound.quest_middle") 
    return htmltext 
 
@@ -55,15 +53,11 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
- 
-   cond    = st.getInt("cond") 
-   onlyone = st.getInt("onlyone") 
- 
-   if npcId == BOLTER and cond == 0 : 
-     if onlyone == 1 : 
-       htmltext = "<html><body>This quest has already been completed.</body></html>"
- 
-     elif player.getLevel() >= 2 : 
+   cond    = st.getInt("cond")
+   if id == State.COMPLETED:
+     htmltext = "<html><body>This quest has already been completed.</body></html>"
+   elif id == State.CREATED:
+     if player.getLevel() >= 2 : 
        htmltext = "30554-02.htm" 
      else: 
        htmltext = "30554-01.htm" 
@@ -72,16 +66,10 @@ class Quest (JQuest) :
      htmltext = "30554-04.htm" 
    elif npcId == BOLTER and cond == 2 : 
      htmltext = "30554-06.htm" 
-     st.takeItems(MINING_BOOTS,-1) 
-     st.takeItems(MINERS_PICK,-1) 
-     st.takeItems(BOOMBOOM_POWDER,-1) 
-     st.takeItems(REDSTONE_BEER,-1) 
-     st.takeItems(BOLTERS_LIST,-1) 
      st.giveItems(57,2466)
      st.giveItems(NECKLACE,1)
      st.addExpAndSp(5672,446)
-     st.set("cond","0") 
-     st.set("onlyone","1") 
+     st.unset("cond") 
      st.exitQuest(False) 
      st.playSound("ItemSound.quest_finish")
    elif id == State.STARTED :  
@@ -111,7 +99,6 @@ class Quest (JQuest) :
            htmltext = "30526-03.htm" 
        if st.getQuestItemsCount(BOLTERS_LIST) and (st.getQuestItemsCount(MINING_BOOTS) + st.getQuestItemsCount(MINERS_PICK) + st.getQuestItemsCount(BOOMBOOM_POWDER) + st.getQuestItemsCount(REDSTONE_BEER) >= 4) : 
          st.set("cond","2") 
-         st.set("id","2") 
          st.playSound("ItemSound.quest_middle") 
    return htmltext
 

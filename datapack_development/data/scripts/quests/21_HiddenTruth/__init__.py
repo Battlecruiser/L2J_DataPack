@@ -49,7 +49,7 @@ class Quest (JQuest) :
         elif event == "31523-03.htm" :
             st.playSound("SkillSound5.horror_02")
             st.set("cond","2")
-            ghost = st.addSpawn(31524,51432,-54570,-3136,1800000)
+            ghost = st.addSpawn(31524,51432,-54570,-3136,180000)
             ghost.broadcastPacket(NpcSay(ghost.getObjectId(),0,ghost.getNpcId(),"Who awoke me?"))
         elif event == "31524-06.htm" :
             st.set("cond","3")
@@ -57,7 +57,7 @@ class Quest (JQuest) :
             ghost = self.addSpawn(31525,npc)
             ghost.broadcastPacket(NpcSay(ghost.getObjectId(),0,ghost.getNpcId(),"My master has instructed me to be your guide, "+ player.getName()))
             self.startQuestTimer("1",1,ghost,player)
-            self.startQuestTimer("despawn",1800000,ghost,player)
+            self.startQuestTimer("despawn",180000,ghost,player)
         elif event == "31526-03.htm" :
             st.playSound("ItemSound.item_drop_equip_armor_cloth")
         elif event == "31526-08.htm" :
@@ -99,19 +99,15 @@ class Quest (JQuest) :
    cond = st.getInt("cond")
    onlyone = st.getInt("onlyone")
    state = st.getState()
-   if state == State.CREATED :
-     st.setState(State.STARTED)
-     st.set("cond","0")
-   if npcId == 31522:
-     if cond == 0:
-       if onlyone == 0:
-         if st.getPlayer().getLevel() >= 63 :
+   if state == State.COMPLETED :
+      htmltext = "<html><body>This quest has already been completed.</body></html>"
+   elif npcId == 31522:
+     if state == State.CREATED :
+        if st.getPlayer().getLevel() >= 63 :
            htmltext = "31522-01.htm"
-         else:
+        else:
            htmltext = "31522-03.htm"
            st.exitQuest(1)
-       else:
-         htmltext = "This quest has already been completed."
      elif cond == 1:
        htmltext = "31522-05.htm"       
    elif npcId == 31523 :

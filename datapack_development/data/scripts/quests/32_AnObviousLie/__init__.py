@@ -95,19 +95,18 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    id = st.getState()
    cond=st.getInt("cond")
-   if npcId == MAXIMILIAN :
-     if cond == 0 :
+   if id == State.COMPLETED :
+       htmltext = "<html><body>This quest has already been completed.</body></html>"
+   elif npcId == MAXIMILIAN :
+     if id == State.CREATED :
        if player.getLevel() >= 45 :
          htmltext = "30120-0.htm"
-       elif id == State.COMPLETED :
-         htmltext = "<html><body>This quest has already been completed.</body></html>"
-
        else:
          htmltext = "30120-0a.htm"
          st.exitQuest(1)
      elif cond == 1 :
        htmltext = "30120-2.htm"
-   if id == State.STARTED :    
+   elif id == State.STARTED :    
        if npcId == GENTLER :
          if cond == 1 :
            htmltext = "30094-0.htm"

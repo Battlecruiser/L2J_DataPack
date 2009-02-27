@@ -42,7 +42,8 @@ class Quest (JQuest) :
    if event == "30838-7.htm" :
      st.giveItems(DRESS_SHOES_BOX,1)
      st.playSound("ItemSound.quest_finish")
-     st.exitQuest(1)
+     st.unset("cond")
+     st.exitQuest(False)
    return htmltext
 
  def onTalk (self,npc,player):
@@ -52,10 +53,10 @@ class Quest (JQuest) :
 
    npcId = npc.getNpcId()
    id = st.getState()
-   if id == State.CREATED :
-     st.set("cond","0")
    cond = st.getInt("cond")
-   if npcId == 30838 and cond == 0 and st.getQuestItemsCount(DRESS_SHOES_BOX) == 0 :
+   if id == State.COMPLETED:
+     htmltext = "<html><body>This quest has already been completed.</body></html>"
+   elif npcId == 30838 and cond == 0 and st.getQuestItemsCount(DRESS_SHOES_BOX) == 0 :
      fwear=player.getQuestState("37_PleaseMakeMeFormalWear")
      if fwear :
        if fwear.get("cond") == "7" :
