@@ -411,10 +411,16 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="5242" levels="1" name="Sickness">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="power" val="100"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isDebuff" val="true"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <for>
+    <effect name="Debuff" time="10" count="1" val="0" abnormal="earthquake"/>
+  </for>
 </skill>
 <skill id="5243" levels="1" name="Blind">
   <set name="target" val="TARGET_NONE"/>
