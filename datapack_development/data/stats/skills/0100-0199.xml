@@ -1079,8 +1079,8 @@
     <add order="0x40" stat="regMp" val="#Tab-regMp"/>
   </for>
 </skill>
-<skill id="193" levels="6" name="Critical Power">
-  <table name="#crit"> 32 56 93 177 295 384 </table>
+<skill id="193" levels="7" name="Critical Power">
+  <table name="#crit"> 32 56 93 177 295 384 673 </table> <!-- Guessing Lvl 7 -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
