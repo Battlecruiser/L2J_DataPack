@@ -913,6 +913,7 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <!-- TODO: while in effect, cannot recveive any other invul type skills, such as celestial shield-->
   <for>
     <effect count="1" name="Buff" time="10" val="0">
       <mul order="0x30" stat="runSpd" val="0.8"/>

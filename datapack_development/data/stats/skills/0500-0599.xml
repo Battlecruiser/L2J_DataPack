@@ -47,12 +47,11 @@
 </skill>
 <skill id="502" levels="5" name="Life to Soul">
   <!-- Done by akira35. Tweaked by Xantusq -->
-  <!-- Need to verified --> 
   <table name="#hpConsume"> 193 237 279 311 328 </table>
   <table name="#charges"> 1 2 3 4 5 </table>
   <set name="hpConsume" val="#hpConsume"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="reuseDelay" val="20000"/>
+  <set name="reuseDelay" val="45000"/>
   <set name="hitTime" val="900"/>
   <set name="skillType" val="CHARGESOUL"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -88,7 +87,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="SSBoost" val="2.0"/>
-  <set name="reuseDelay" val="13000"/>
+  <set name="reuseDelay" val="11000"/>
   <set name="hitTime" val="1500"/>
   <set name="coolTime" val="720"/>
   <set name="skillType" val="PDAM"/>
@@ -115,7 +114,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="condition" val="16"/>
-  <set name="reuseDelay" val="13000"/>
+  <set name="reuseDelay" val="11000"/>
   <set name="hitTime" val="1500"/>
   <set name="coolTime" val="720"/>
   <set name="skillType" val="BLOW"/>
@@ -308,7 +307,8 @@
   <set name="mpConsume" val="50"/>
   <set name="hitTime" val="3000"/>
   <set name="summonTotalLifeTime" val="30000"/>
-  <set name="reuseDelay" val="120000"/>
+  <set name="reuseDelay" val="45000"/>
+  <set name="staticReuse" val="true"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SUMMON_TRAP"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -325,7 +325,8 @@
   <set name="mpConsume" val="50"/>
   <set name="hitTime" val="3000"/>
   <set name="summonTotalLifeTime" val="30000"/>
-  <set name="reuseDelay" val="120000"/>
+  <set name="reuseDelay" val="45000"/>
+  <set name="staticReuse" val="true"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SUMMON_TRAP"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -342,7 +343,8 @@
   <set name="mpConsume" val="50"/>
   <set name="hitTime" val="3000"/>
   <set name="summonTotalLifeTime" val="30000"/>
-  <set name="reuseDelay" val="120000"/>
+  <set name="reuseDelay" val="45000"/>
+  <set name="staticReuse" val="true"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SUMMON_TRAP"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -359,7 +361,8 @@
   <set name="mpConsume" val="50"/>
   <set name="hitTime" val="3000"/>
   <set name="summonTotalLifeTime" val="30000"/>
-  <set name="reuseDelay" val="120000"/>
+  <set name="reuseDelay" val="45000"/>
+  <set name="staticReuse" val="true"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SUMMON_TRAP"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -376,7 +379,8 @@
   <set name="mpConsume" val="50"/>
   <set name="hitTime" val="3000"/>
   <set name="summonTotalLifeTime" val="30000"/>
-  <set name="reuseDelay" val="120000"/>
+  <set name="reuseDelay" val="45000"/>
+  <set name="staticReuse" val="true"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SUMMON_TRAP"/>
   <set name="operateType" val="OP_ACTIVE"/>
