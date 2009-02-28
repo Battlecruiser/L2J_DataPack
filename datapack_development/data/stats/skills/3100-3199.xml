@@ -1042,7 +1042,7 @@
   <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
   <for>
-    <effect count="1" name="Invincible" time="7" val="0"/>
+    <effect count="1" name="Invincible" time="10" val="0" stackOrder="1" stackType="Instant_Shield"/>
   </for>
 </skill>
 <skill id="3159" levels="3" name="Item Skill: Stealth">

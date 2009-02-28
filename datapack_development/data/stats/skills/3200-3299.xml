@@ -1020,7 +1020,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Invincible" time="10" val="0"/>
+    <effect count="1" name="Invincible" time="10" val="0" stackOrder="1" stackType="Instant_Shield"/>
   </for>
 </skill>
 <skill id="3285" levels="1" name="Blue Talisman of Defense">
