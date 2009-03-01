@@ -265,22 +265,61 @@
   </for>
 </skill>
 <skill id="822" levels="3" name="Repair Golem">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- Done by _DS_ -->
+  <table name="#mpConsume"> 61 78 88 </table>
+  <table name="#power"> 220 440 880 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_SUMMON"/>
+  <set name="reuseDelay" val="9000"/>
+  <set name="hitTime" val="3500"/>
+  <set name="skillType" val="HEAL"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="80"/>
 </skill>
 <skill id="823" levels="3" name="Strengthen Golem">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- Done by _DS_ -->
+  <table name="#Tab-pAtkSpd"> 1.15 1.24 1.32 </table>
+  <table name="#Tab-pAtk"> 1.08 1.12 1.14 </table>
+  <table name="#mpConsume"> 24 36 42 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="target" val="TARGET_SUMMON"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="hitTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
+  <for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pAtk" stackType="pa_up">
+      <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
+      <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
+    </effect>
+  </for>
 </skill>
 <skill id="824" levels="3" name="Armor Golem">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- Done by _DS_ -->
+  <table name="#Tab-pDef"> 1.08 1.12 1.15 </table>
+  <table name="#Tab-maxHp"> 1.1 1.25 1.35 </table>
+  <table name="#mpConsume"> 35 44 41 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="target" val="TARGET_SUMMON"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="hitTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="40"/>
+  <for>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-maxHp" stackType="max_hp_up">
+      <mul order="0x30" stat="maxHp" val="#Tab-maxHp"/>
+      <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
+    </effect>
+  </for>
 </skill>
 <skill id="825" levels="1" name="Sharp Edge">
   <set name="magicLvl" val="49"/>
