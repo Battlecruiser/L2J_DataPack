@@ -15234,6 +15234,8 @@ INSERT INTO skill_trees VALUES
 (130,502,1,'Life to Soul',35000,40),
 (130,518,1,'Binding Trap',35000,40),
 (130,522,1,'Real Target',35000,40),
+(130,621,1,'Create Special Bolt',33000,43),
+(130,622,1,'Ultimate Escape',33000,43),
 (130,627,7,'Soul Shock',12000,43),
 (130,627,8,'Soul Shock',12000,43),
 (130,627,9,'Soul Shock',12000,43),
@@ -16125,9 +16127,4 @@ INSERT INTO skill_trees VALUES
 (124,1405,1,'Divine Inspiration',0,52),
 (124,1405,2,'Divine Inspiration',0,61),
 (124,1405,3,'Divine Inspiration',0,76),
-(124,1405,4,'Divine Inspiration',0,76),
-
--- Custom Kamaels "Skill Trees", values needs to be verified.
-
-(130,621,1,'Create Special Bolt',33000,43),
-(130,622,1,'Ultimate Escape',33000,43);
+(124,1405,4,'Divine Inspiration',0,76);
