@@ -357,6 +357,7 @@ INSERT INTO merchant_shopids VALUES
 (3001,'gm'),
 (3002,'gm'),
 (3003,'gm'),
+(3004,'gm'),
 (9001,'gm'),
 (9002,'gm'),
 (9003,'gm'),
