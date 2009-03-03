@@ -737,9 +737,6 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="soulConsumeCount" val="20"/>
-  <cond msgId="1509">
-    <player olympiad="false"/>
-  </cond>
   <for>
     <effect count="1" name="Transformation" time="300" val="0"> <!-- Transformation lasts 5 minutes -->
       <mul order="0x30" stat="maxHp" val="1.10"/> <!-- Max Hp +10% -->
