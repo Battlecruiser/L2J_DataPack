@@ -694,7 +694,6 @@
   <set name="random_count" val="4"/>
 </skill>
 <skill id="325" levels="1" name="Strider Siege Assault">
-  <!-- SHOULD WORK ONLY DURING SIEGE -->
   <table name="#itemConsumeCount"> 5 </table>
   <set name="mpConsume" val="151"/>
   <set name="itemConsumeId" val="3031"/>
@@ -709,6 +708,9 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="500"/>
+  <cond msgId="1518">
+    <player SiegeZone="126"/>
+  </cond>
 </skill>
 <skill id="326" levels="1" name="Build Advanced Headquarters">
   <set name="mpInitialConsume" val="30"/>
