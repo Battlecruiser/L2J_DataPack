@@ -1,13 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
 <item id='10155' name="Mental Strengthening Potion">
-  <!-- <skill id="2396" lvl="1"/> --> 
+  <!-- <skill id="2396" lvl="1"/> -->
   <cond msgId="1508">
     <player olympiad="false"/>
   </cond>
   <cond msgId="1518">
     <player SiegeZone="126"/>
   </cond>
+  <for>
+  </for>
 </item>
 <item id='10157' name="Instant Haste Potion">
   <!-- <skill id="2398" lvl="1"/> -->
@@ -17,5 +19,7 @@
   <cond msgId="1518">
     <player SiegeZone="126"/>
   </cond>
+  <for>
+  </for>
 </item>
 </list>
