@@ -148,7 +148,7 @@ class Quest (JQuest) :
     elif event == "32047-15a.htm" :
        if self.isSpawned == 0 :
           golem = st.addSpawn(Guardian,96977,-110625,-3280,0,False,900000)
-          golem.broadcastPacket(NpcSay(golem.getObjectId(),0,golem.getNpcId(),"You, "+player.getName()+", you attacked Wendy. Prepare to die!"))
+          golem.broadcastPacket(NpcSay(golem.getObjectId(),0,golem.getNpcId(),"You, "+st.getPlayer().getName()+", you attacked Wendy. Prepare to die!"))
           golem.setRunning()
           golem.addDamageHate(player,0,999)
           golem.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player)
