@@ -595,7 +595,7 @@
   <set name="reuseDelay" val="10000"/>
   <set name="hitTime" val="2500"/>
   <set name="skillType" val="BUFF"/>
-  <set name="isDance" val="false"/> <!-- Despite its name it is a standard party buff and not a Song. It is not affected by other song/dances on the stack. -->
+  <set name="isDance" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -618,7 +618,7 @@
   <set name="reuseDelay" val="10000"/>
   <set name="hitTime" val="2500"/>
   <set name="skillType" val="BUFF"/>
-  <set name="isDance" val="false"/> <!-- Despite its name it is a standard party buff and not a Dance. It is not affected by other song/dances on the stack. -->
+  <set name="isDance" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
