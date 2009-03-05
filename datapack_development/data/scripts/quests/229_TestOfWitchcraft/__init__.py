@@ -100,6 +100,7 @@ class Quest (JQuest) :
       st.takeItems(AKLANTOS_GEM5,1)
       st.takeItems(AKLANTOS_GEM6,1)
       st.set("step","3")
+      st.set("cond", "4")
       st.addSpawn(27101,70381, 109638, -3726)
     elif event == "30630_7" :
       htmltext = "30630-16.htm"
@@ -108,6 +109,7 @@ class Quest (JQuest) :
       st.giveItems(ORIMS_LETTER1,1)
       st.giveItems(ORIMS_LETTER2,1)
       st.set("step","5")
+      st.set("cond","6")
     elif event == "30630_8" :
       htmltext = "30630-20.htm"
       st.takeItems(ZERUEL_BIND_CRYSTAL,1)
@@ -134,6 +136,7 @@ class Quest (JQuest) :
       st.giveItems(ALEXANDRIAS_BOOK,1)
       st.takeItems(ORIMS_DIAGRAM,1)
       st.set("step","2")
+      st.set("cond","2")
     # Ikers Events
     elif event == "30110_1" :
       htmltext = "30110-02.htm"
@@ -181,6 +184,7 @@ class Quest (JQuest) :
       htmltext = "30633-02.htm"
       st.giveItems(BRIMSTONE2,1)
       st.addSpawn(27101,14027, 169896, -3646)
+      st.set("cond","9")
     return htmltext
 
 
@@ -239,6 +243,7 @@ class Quest (JQuest) :
           htmltext = "30630-17.htm"
         elif step == 13 :
           htmltext = "30630-18.htm"
+          st.set("cond", "8")
         elif step == 15 :
           htmltext = "30630-19.htm"
         
@@ -330,8 +335,10 @@ class Quest (JQuest) :
           st.takeItems(VADINS_SANCTIONS,1)
           if st.getQuestItemsCount(SOULTRAP_CRYSTAL) :
             st.set("step","13")
+            st.set("cond","7")
           else:
             st.set("step","12")
+            st.set("cond","6")
         elif step in [12,13]:
           htmltext = "30417-06.htm"
         
@@ -384,9 +391,11 @@ class Quest (JQuest) :
               st.takeItems(take,1)
               st.set(var,str(isValue+1))
             st.playSound("ItemSound.quest_middle")
+            st.set("cond", "10")
             return "You trapped the Seal of Drevanul Prince Zeruel"
           else:
             st.set(var,str(isValue+1))
+            st.set("cond","5")
         else:
           for give in giveList:
             count = st.getQuestItemsCount(give)
