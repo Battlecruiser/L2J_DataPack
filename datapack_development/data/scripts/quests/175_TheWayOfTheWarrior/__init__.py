@@ -25,7 +25,7 @@ MUERTOS_CLAW = 9808
 MOUNTAIN_WEREWOLF = 22235
 MUERTOS = [22236]+range(22239,22241)+range(22242,22244)+range(22245,22247)
 
-
+NEWBIE_REWARD = 16
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
@@ -50,7 +50,9 @@ class Quest (JQuest) :
        st.giveItems(LESSER_HEALING_POTIONS,100)
        for item in ECHO :
          st.giveItems(item,10)
-       if player.getLevel() < 25 and player.isNewbie() :
+       newbie = player.getNewbie()
+       if newbie | NEWBIE_REWARD != newbie :
+         player.setNewbie(newbie|NEWBIE_REWARD)
          st.giveItems(SOULSHOT_FOR_BEGINNERS,7000)
          st.playTutorialVoice("tutorial_voice_026")
        st.giveItems(WARRIORS_SWORD,1)

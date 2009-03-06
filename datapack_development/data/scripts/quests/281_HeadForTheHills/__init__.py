@@ -15,6 +15,7 @@ MARCELA = 32173
 HILLS = 9796
 SOULSHOT_FOR_BEGINNERS  = 5789
 REWARDS = [736,876,115]
+NEWBIE_REWARD = 32
 
 #MOB'S
 MOBS = range(22234,22240)
@@ -35,21 +36,16 @@ class Quest (JQuest) :
        st.setState(State.STARTED)
        st.playSound("ItemSound.quest_accept")
      elif event == "32173-06.htm" :
-       if player.getLevel() < 25 and player.isNewbie() and not onlyone :
-         if hills > 20 : 
+        newbie = player.getNewbie()
+        if newbie | NEWBIE_REWARD != newbie :
+           player.setNewbie(newbie|NEWBIE_REWARD)
+           st.giveItems(SOULSHOT_FOR_BEGINNERS,6000)
+           st.playTutorialVoice("tutorial_voice_026")
+        if hills > 20 : 
            st.giveItems(57,hills*23+400)
-         else :
+        else :
            st.giveItems(57,hills*23)
-         st.giveItems(SOULSHOT_FOR_BEGINNERS,6000)
-         st.playTutorialVoice("tutorial_voice_026")
-         st.takeItems(HILLS,-1)
-         st.set("onlyone","1")
-       else:
-         if hills > 20 : 
-           st.giveItems(57,hills*23+400)
-         else :
-           st.giveItems(57,hills*23)
-         st.takeItems(HILLS,-1)
+        st.takeItems(HILLS,-1)
      elif event == "32173-07.htm" :
        if hills < 50 :
          htmltext = "32173-07a.htm"
