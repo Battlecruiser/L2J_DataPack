@@ -768,26 +768,23 @@
   <set name="effectRange" val="400"/>
 </skill>
 <skill id="540" levels="1" name="Wing Assault">
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
+  <set name="flyType" val="CHARGE"/>
+  <set name="hitTime" val="800"/>
   <set name="magicLvl" val="76"/>
   <set name="mpConsume" val="71"/>
-  <set name="power" val="2067"/>
-  <set name="target" val="TARGET_FRONT_AREA"/>
-  <set name="skillRadius" val="600"/>
-  <set name="overHit" val="true"/>
-  <set name="reuseDelay" val="13000"/>
-  <set name="hitTime" val="800"/>
-  <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="600"/>
-  <set name="effectRange" val="1200"/>
-  <set name="flyType" val="CHARGE"/>
-  <set name="flyRadius" val="400"/>
-  <set name="isDebuff" val="true"/>
-  <set name="effectType" val="DEBUFF"/>
-  <set name="effectPower" val="80"/>
-  <for>
-    <effect count="1" name="EnemyCharge" time="1" val="0"/>
-  </for>
+  <set name="overHit" val="true"/>
+  <set name="power" val="2067"/>
+  <set name="reuseDelay" val="13000"/>
+  <set name="skillRadius" val="600"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="SSBoost" val="2.0"/>
+  <set name="target" val="TARGET_FRONT_AREA"/>
+  <cond msg="Wing Assault cannot be used due to unsuitable terms.">
+    <target mindistance="200"/>
+  </cond>
 </skill>
 <skill id="541" levels="1" name="Transform Grail Apostle">
   <set name="mpConsume" val="31"/>

@@ -919,11 +919,31 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="793" levels="1" name="Rush Impact">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="castRange" val="600"/>
+  <set name="effectPower" val="50"/> <!-- Base Land Rate -->
+  <set name="effectRange" val="1100"/>
+  <set name="effectType" val="STUN"/>
+  <set name="flyType" val="CHARGE"/>
+  <set name="hitTime" val="800"/>
+  <set name="isDebuff" val="true"/>
+  <set name="lvlDepend" val="1"/>
+  <set name="magicLvl" val="78"/>
+  <set name="mpConsume" val="83"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="4040"/>
+  <set name="skillRadius" val="600"/>
+  <set name="skillType" val="PDAM"/>
   <set name="soulMaxConsumeCount" val="5"/>
+  <set name="SSBoost" val="2.0"/>
+  <set name="target" val="TARGET_FRONT_AREA"/>
+  <set name="weaponsAllowed" val="32768"/> <!-- Ancient -->
+  <cond msg="Rush Impact cannot be used due to unsuitable terms.">
+    <target mindistance="200"/>
+  </cond>
+  <for>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
+  </for>
 </skill>
 <skill id="794" levels="1" name="Mass Disarm">
   <!-- Done by DJ MELERIX -->
@@ -940,7 +960,7 @@
   <set name="skillType" val="DISARM"/>
   <set name="target" val="TARGET_AURA"/>
   <for>
-    <effect count="1" name="Disarm" time="10" val="0"/>
+    <effect count="1" name="Disarm" time="5" val="0"/>
   </for>
 </skill>
 <skill id="795" levels="1" name="Divine Knight Brandish">

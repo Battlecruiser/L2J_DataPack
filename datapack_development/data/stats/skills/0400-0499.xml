@@ -86,6 +86,7 @@
   <set name="hitTime" val="2000"/>
   <set name="skillType" val="ROOT"/>
   <set name="isDebuff" val="true"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
@@ -102,6 +103,7 @@
   <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="3000"/>
   <set name="skillType" val="ROOT"/>
+  <set name="lvlDepend" val="2"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
   <set name="castRange" val="-1"/>
@@ -1606,23 +1608,21 @@
   </for>
 </skill>
 <skill id="484" levels="1" name="Rush">
-  <set name="magicLvl" val="32"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
+  <set name="flyType" val="CHARGE"/>
+  <set name="hitTime" val="800"/>
+  <set name="isDebuff" val="true"/>
   <set name="mpInitialConsume" val="6"/>
   <set name="mpConsume" val="14"/>
-  <set name="power" val="80"/>
-  <set name="weaponsAllowed" val="163840"/> <!-- Ancient/Rapier -->
-  <set name="hitTime" val="800"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="DEBUFF"/>
-  <set name="castRange" val="400"/>
-  <set name="effectRange" val="800"/>
-  <set name="isDebuff" val="true"/>
+  <set name="power" val="80"/> <!-- Base Land Rate -->
   <set name="reuseDelay" val="60000"/>
-  <set name="flyType" val="CHARGE"/>
-  <set name="flyRadius" val="300"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="weaponsAllowed" val="163840"/> <!-- Ancient/Rapier -->
   <cond msg="Rush cannot be used due to unsuitable terms.">
-      <target mindistance="200"/>
+    <target mindistance="200"/>
   </cond>
   <for>
     <effect count="1" name="EnemyCharge" time="1" val="0"/>
@@ -1757,22 +1757,22 @@
   <table name="#magicLvl"> 46 47 48 49 50 51 52 53 54 55 56 57 58 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 </table>
   <table name="#castRange"> 400 400 400 400 400 400 400 400 400 400 400 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 </table>
   <table name="#effectRange"> 900 900 900 900 900 900 900 900 900 900 900 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 </table>
-  <set name="weaponsAllowed" val="32768"/> <!-- Ancient -->
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="#power"/>
-  <set name="magicLvl" val="#magicLvl"/>
-  <set name="target" val="TARGET_FRONT_AREA"/>
-  <set name="skillRadius" val="#castRange"/>
-  <set name="overHit" val="true"/>
-  <set name="SSBoost" val="2.0"/>
-  <set name="reuseDelay" val="13000"/>
-  <set name="hitTime" val="800"/>
-  <set name="coolTime" val="320"/>
-  <set name="skillType" val="PDAM"/>
-  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="#castRange"/>
+  <set name="coolTime" val="320"/>
   <set name="effectRange" val="#effectRange"/>
   <set name="flyType" val="CHARGE"/>
+  <set name="hitTime" val="800"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="overHit" val="true"/>
+  <set name="power" val="#power"/>
+  <set name="reuseDelay" val="13000"/>
+  <set name="skillRadius" val="#castRange"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="SSBoost" val="2.0"/>
+  <set name="target" val="TARGET_FRONT_AREA"/>
+  <set name="weaponsAllowed" val="32768"/> <!-- Ancient -->
   <cond msg="Storm Assault cannot be used due to unsuitable terms.">
     <target mindistance="200"/>
   </cond>
@@ -1786,57 +1786,60 @@
   <table name="#castRange"> 400 400 400 400 400 400 400 400 400 400 400 400 400 400 400 400 400 400 500 500 500 500 500 500 500 500 500 500 500 600 600 600 600 600 600 600 600 </table>
   <table name="#effectRange"> 900 900 900 900 900 900 900 900 900 900 900 900 900 900 900 900 900 900 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1100 1100 1100 1100 1100 1100 1100 1100 </table>
   <table name="#magicLvl"> 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 </table>
-  <set name="magicLvl" val="#magicLvl"/><!-- 40,76 -->
-  <set name="weaponsAllowed" val="32768"/> <!-- Ancient -->
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="50"/>
-  <set name="hitTime" val="800"/>
-  <set name="overHit" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="STUN"/>
   <set name="castRange" val="#castRange"/>
   <set name="effectRange" val="#effectRange"/>
-  <set name="isDebuff" val="true"/>
-  <set name="reuseDelay" val="36000"/>
-  <set name="soulMaxConsumeCount" val="5"/>
   <set name="flyType" val="CHARGE"/>
+  <set name="hitTime" val="800"/>
+  <set name="isDebuff" val="true"/>
+  <set name="lvlDepend" val="2"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="overHit" val="true"/>
+  <set name="power" val="80"/> <!-- Base Land Rate -->
+  <set name="reuseDelay" val="36000"/>
+  <set name="skillType" val="STUN"/>
+  <set name="soulMaxConsumeCount" val="5"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="weaponsAllowed" val="32768"/> <!-- Ancient -->
   <cond msg="Shoulder Charge cannot be used due to unsuitable terms.">
     <target mindistance="200"/>
   </cond>
   <for>
+    <effect count="1" name="EnemyCharge" time="1" val="0"/>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="495" levels="10" name="Blade Rush">
-  <table name="#mpConsume"> 65 70 73 75 77 80 83 85 88 90 </table>
-  <table name="#dmg"> 39 51 66 81 93 102 111 120 129 138 </table>
-  <table name="#magicLvl"> 55 57 59 61 63 66 68 70 72 74 </table>
-  <table name="#castRange"> 500 500 500 500 500 500 600 600 600 600 </table>
-  <table name="#effectRange"> 1000 1000 1000 1000 1000 1000 1100 1100 1100 1100 </table>
   <table name="#abnormalLvl"> 6 6 7 7 7 7 7 8 8 8 </table>
+  <table name="#castRange"> 500 500 500 500 500 500 600 600 600 600 </table>
+  <table name="#dmg"> 39 51 66 81 93 102 111 120 129 138 </table>
+  <table name="#effectRange"> 1000 1000 1000 1000 1000 1000 1100 1100 1100 1100 </table>
+  <table name="#magicLvl"> 55 57 59 61 63 66 68 70 72 74 </table>
+  <table name="#mpConsume"> 65 70 73 75 77 80 83 85 88 90 </table>
   <set name="abnormalLvl" val="#abnormalLvl"/>
-  <set name="magicLvl" val="#magicLvl"/> <!-- 55,76 -->
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="weaponsAllowed" val="32768"/> <!-- Ancient -->
-  <set name="hitTime" val="800"/>
-  <set name="target" val="TARGET_FRONT_AREA"/>
-  <set name="skillRadius" val="400"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="40"/> <!-- Base Land Rate --> <!-- Guessing -->
-  <set name="lvlDepend" val="2"/>
-  <set name="overHit" val="true"/>
-  <set name="skillType" val="BLEED"/>
   <set name="castRange" val="#castRange"/>
   <set name="effectRange" val="#effectRange"/>
-  <set name="isDebuff" val="true"/>
-  <set name="reuseDelay" val="36000"/>
   <set name="flyType" val="CHARGE"/>
+  <set name="hitTime" val="800"/>
+  <set name="isDebuff" val="true"/>
+  <set name="lvlDepend" val="2"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="overHit" val="true"/>
+  <set name="power" val="80"/> <!-- Base Land Rate -->
+  <set name="reuseDelay" val="36000"/>
+  <set name="skillRadius" val="#castRange"/>
+  <set name="skillType" val="BLEED"/>
   <set name="soulMaxConsumeCount" val="5"/>
+  <set name="target" val="TARGET_FRONT_AREA"/>
+  <set name="weaponsAllowed" val="32768"/> <!-- Ancient -->
   <cond msg="Blade Rush cannot be used due to unsuitable terms.">
     <target mindistance="200"/>
   </cond>
   <for>
+    <effect count="1" name="EnemyCharge" time="1" val="0"/>
     <!-- retail value: 13 17 22 27 31 34/sec; stat update every 5 units (3 1/3 sec) -->
     <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding">
       <sub order="0x40" stat="runSpd" val="25"/>
