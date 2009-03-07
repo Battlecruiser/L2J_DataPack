@@ -271,20 +271,21 @@
   </for>
 </skill>
 <skill id="628" levels="1" name="Warp">
-  <set name="mpConsume" val="30"/>
-  <set name="hitTime" val="100"/>
-  <set name="coolTime" val="200"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isMagic" val="true"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
   <set name="castRange" val="-1"/>
+  <set name="coolTime" val="200"/>
   <set name="effectRange" val="-1"/>
+  <set name="flyCourse" val="180"/> <!-- Teleport to Front -->
+  <set name="flyRadius" val="300"/>
+  <set name="hitTime" val="100"/>
+  <set name="isMagic" val="true"/>
+  <set name="mpConsume" val="30"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="reuseDelay" val="90000"/>
-  <set name="flyRadius" val="500"/>
-  <set name="flyCourse" val="0"/>
+  <set name="skillRadius" val="150"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_AURA"/>
   <for>
-    <effect self="1" count="1" name="Warp" time="0" val="0"/>
+    <effect self="1" count="1" name="Warp" time="1" val="0"/>
   </for>
 </skill>
 <skill id="629" levels="1" name="Rabbit Magic Eye">

@@ -491,10 +491,16 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="833" levels="1" name="Body Reconstruction">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by Light -->
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="1500"/>
+  <set name="mpConsume" val="94"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="100"/>
+  <set name="reuseDelay" val="2100000"/>
+  <set name="skillType" val="HEAL_PERCENT"/>
+  <set name="target" val="TARGET_SELF"/>
 </skill>
 <skill id="834" levels="1" name="Blood Pact">
   <set name="target" val="TARGET_NONE"/>
