@@ -14215,6 +14215,7 @@ INSERT INTO skill_trees VALUES
 (127,465,23,'Light Armor Mastery',27000,49),
 (127,465,24,'Light Armor Mastery',27000,49),
 (127,465,25,'Light Armor Mastery',27000,49),
+(127,833,1,'Body Reconstruction',107000,52),
 (127,465,26,'Light Armor Mastery',36000,52),
 (127,465,27,'Light Armor Mastery',36000,52),
 (127,465,28,'Light Armor Mastery',36000,52),
