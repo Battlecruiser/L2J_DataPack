@@ -693,16 +693,16 @@
     <add order="0x40" stat="pAtk" val="70">
       <using kind="Dagger"/>
     </add>
-    <mul order="0x30" stat="blowRate" val="1.1"> <!-- Blow land rate +10% from front -->
+    <mul order="0x30" stat="blowRate" val="1.20"> <!-- Blow land rate +20% from front -->
       <player front="True"/>
     </mul>
-    <mul order="0x30" stat="blowRate" val="1.1"> <!-- Blow land rate +10% from side -->
+    <mul order="0x30" stat="blowRate" val="1.20"> <!-- Blow land rate +20% from side -->
       <and>
         <player front="False"/>
         <player behind="False"/>
       </and>
     </mul>
-    <mul order="0x30" stat="blowRate" val="1.2"> <!-- Blow land rate +20% from back -->
+    <mul order="0x30" stat="blowRate" val="1.30"> <!-- Blow land rate +30% from back -->
       <player behind="True"/>
     </mul>
   </for>
