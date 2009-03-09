@@ -1276,7 +1276,9 @@
         </and>
       </basemul>
       <mul order="0x30" stat="blowRate" val="0.70"> <!-- Blow land rate from front -30% -->
-        <player front="True"/>
+        <and>
+          <player front="True"/>
+        </and>
       </mul>
       <basemul order="0x30" stat="rCrit" val="0.30"> <!-- Critical Chance from side +30% -->
         <and>
@@ -1298,7 +1300,9 @@
         </and>
       </basemul>
       <mul order="0x30" stat="blowRate" val="1.60"> <!-- Blow land rate from back +60% -->
-        <player behind="True"/>
+        <and>
+          <player behind="True"/>
+        </and>
       </mul>
     </effect>
   </for>
