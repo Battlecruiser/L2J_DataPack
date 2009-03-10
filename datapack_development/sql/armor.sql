@@ -2180,4 +2180,8 @@ INSERT INTO armor VALUES
 (20029,'Light Purple-Maned Horse Mounting Bracelet','lbracelet','false','none',30, 'wood','none',0,-1,0,0,0,0,0,'true','true','true','true','8247-1;839-1;'),
 (20030,'Light Purple-Maned Horse Mounting Bracelet - 30 day limited period','underwear','false','none',30, 'wood','none',0,-1,0,0,0,0,0,'true','true','true','true','0-0;'),
 (20031,'Kat the Cat Hat','dhair','false','none',10, 'wood','none',0,-1,0,0,0,0,0,'true','true','true','true','0-0;'),
-(20032,'Skull Hat','dhair','false','none',10, 'wood','none',0,-1,0,0,0,0,0,'true','true','true','true','0-0;');
+(20032,'Skull Hat','dhair','false','none',10, 'wood','none',0,-1,0,0,0,0,0,'true','true','true','true','0-0;'),
+(20095,'Santa Horn Hat','dhair','false','none',10, 'wood','none',0,-1,0,0,0,0,0,'true','false','true','true','0-0;'),
+(20098,'Formal Dress - Event - 1 hour Shadow time','fullarmor','false','none',1000, 'cloth','none',0,-1,0,0,0,5000000,0,'true','true','true','true','0-0;'),
+(20099,'Formal Dress - Event - 7 day limited period','fullarmor','false','none',1000, 'cloth','none',0,-1,0,0,0,5000000,0,'true','true','true','true','0-0;'),
+(20100,'Saving Santa Hat','dhair','false','none',10, 'wood','none',0,-1,0,0,0,0,0,'true','false','true','true','0-0;');
