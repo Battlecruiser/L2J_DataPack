@@ -59,7 +59,6 @@ class Quest (JQuest) :
             if st.getQuestItemsCount(ROGELLIAS_LETTER) == 0 :
               st.giveItems(ROGELLIAS_LETTER,1)
             htmltext = "30414-07.htm"
-            st.set("cond","2")
     elif event == "408_4" :
           if st.getInt("cond") != 0 and st.getQuestItemsCount(ROGELLIAS_LETTER) != 0 :
             st.takeItems(ROGELLIAS_LETTER,st.getQuestItemsCount(ROGELLIAS_LETTER))
