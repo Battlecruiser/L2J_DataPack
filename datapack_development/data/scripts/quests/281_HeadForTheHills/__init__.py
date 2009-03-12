@@ -52,7 +52,8 @@ class Quest (JQuest) :
        else:
          rnd = st.getRandom(len(REWARDS))
          REWARD = REWARDS[rnd]
-         if player.getLevel() < 25 and player.isNewbie() and not onlyone :
+         newbie = player.getNewbie()
+         if newbie | NEWBIE_REWARD != newbie :
            st.giveItems(SOULSHOT_FOR_BEGINNERS,6000)
            st.playTutorialVoice("tutorial_voice_026")
            st.giveItems(REWARD,1)
