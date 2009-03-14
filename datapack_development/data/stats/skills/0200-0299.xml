@@ -1658,7 +1658,7 @@
   <!-- Summon-specific -->
   <table name="#npcIds"> 14799 14800 14801 14802 14803 14804 14805 </table>
   <set name="npcId" val="#npcIds"/>
-  <set name="expPenalty" val="0.15"/>
+  <set name="expPenalty" val="0.15"/> <!-- 15 percent of acquired Exp will also be consumed. -->
 </skill>
 <skill id="284" levels="40" name="Hurricane Assault" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -1799,7 +1799,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
-  <set name="absorbPart" val="0.8"/>
+  <set name="absorbPart" val="0.8"/> <!-- absorbs 80% of damage -->
   <enchant1 name="power" val="#ench1power"/>
   <enchant2 name="mpConsume" val="#ench2mpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2mpConsume_Init"/>

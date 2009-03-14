@@ -287,12 +287,11 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="12000"/>
   <set name="hitTime" val="1200"/>
-  <set name="skillType" val="CONFUSE_MOB_ONLY"/> <!-- Only for Temp Fix: Needs Core Support for Randomize Aggro/Target Effect -->
+  <set name="skillType" val="DEBUFF"/> <!-- Only for Temp Fix: Needs Core Support for Randomize Aggro/Target Effect -->
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect count="4" name="Confusion" time="1" val="0"/> <!-- Only for Temp Fix: Needs Core Support for Randomize Aggro/Target Effect -->
     <effect count="1" name="RemoveTarget" time="1" val="0"/>
   </for>
 </skill>
@@ -545,7 +544,7 @@
   <!-- Summon-specific -->
   <table name="#npcIds"> 14663 14664 14665 14666 14667 14668 14669 14670 14671 </table>
   <set name="npcId" val="#npcIds"/>
-  <set name="expPenalty" val="0.15"/>
+  <set name="expPenalty" val="0.15"/> <!-- 15 percent of earned Exp will be consumed -->
 </skill>
 <skill id="27" levels="14" name="Unlock">
   <table name="#mpConsume"> 19 22 25 28 31 35 39 43 47 51 55 59 63 67 </table>
@@ -774,6 +773,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="20"/>
   <set name="effectRange" val="400"/>
+  <!-- Drain-specific: absorb from a mob's corpse -->
   <enchant1 name="absorbPart" val="0"/> <!-- no damage, it's dead -->
   <enchant1 name="absorbAbs"  val="#ench1drain"/> <!-- absorbs absolute value -->
 </skill>
@@ -1164,7 +1164,6 @@
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <!-- Drain-specific: absorb 20% from target's damage -->
   <set name="absorbPart" val="0.2"/> <!-- absorbs 20% or damage -->
-  <set name="absorbAbs" val="0"/> <!-- Drain absorbs absolute values from corpses only -->
 </skill>
 <skill id="72" levels="3" name="Iron Will" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
