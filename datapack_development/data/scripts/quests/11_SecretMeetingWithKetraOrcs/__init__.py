@@ -29,11 +29,12 @@ class Quest (JQuest) :
          st.set("cond","2")
          htmltext = "31256-02.htm"
          st.giveItems(Box,1)
+         st.playSound("ItemSound.quest_middle") 
      elif event == "31371-02.htm" :
          htmltext = "31371-02.htm"
          st.takeItems(Box,-1)
          st.addExpAndSp(22787,0) #Despite what stratics may say, this is the correct reward for this quest.
-         st.set("cond","0")
+         st.unset("cond")
          st.exitQuest(False)
          st.playSound("ItemSound.quest_finish")
      return htmltext
@@ -73,6 +74,5 @@ QUEST       = Quest(11, qn, "Secret Meeting With Ketra Orcs")
 QUEST.addStartNpc(Cadmon)
 
 QUEST.addTalkId(Cadmon)
-
 QUEST.addTalkId(Leon)
 QUEST.addTalkId(Wahkan)

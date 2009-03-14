@@ -41,42 +41,55 @@ class Quest (JQuest) :
             st.set("cond","1")
             st.setState(State.STARTED)
             #st.giveItems(Diamond,64)
+            st.playSound("ItemSound.quest_accept") 
         elif event == "32201-03.htm" :
             st.set("cond","2")
+            st.playSound("ItemSound.quest_middle") 
         elif event == "30464-05.htm" :
             st.set("cond","3")
+            st.playSound("ItemSound.quest_middle") 
         elif event == "30464-08.htm" :
             st.takeItems(En_Crys,-1)
         elif event == "30464-09.htm" :
             st.giveItems(En_Crys_Core,1)
             st.set("cond","5")
+            st.playSound("ItemSound.quest_middle") 
         elif event == "30458-03.htm" :
             st.takeItems(En_Crys_Core,-1)
         elif event == "30458-07.htm" :
             st.set("cond","6")
+            st.playSound("ItemSound.quest_middle") 
         elif event == "30058-04.htm" :
             st.set("cond","7")
+            st.playSound("ItemSound.quest_middle") 
         elif event == "30058-07.htm" :
             st.set("cond","9")
+            st.playSound("ItemSound.quest_middle") 
             st.giveItems(Page_Comp,1)
         elif event == "32214-03.htm" :
             st.set("cond","10")
+            st.playSound("ItemSound.quest_middle") 
             st.takeItems(Page_Comp,-1)
             st.giveItems(Mark_Train,1)
         elif event == "32220-11.htm" :
             st.set("cond","11")
+            st.playSound("ItemSound.quest_middle") 
         elif event == "30171-02.htm" :
             st.takeItems(Order_Comp,-1)
         elif event == "30171-05.htm" :
             st.set("cond","14")
+            st.playSound("ItemSound.quest_middle") 
         elif event == "30717-02.htm" :
             st.takeItems(Talisman,-1)
         elif event == "30717-07.htm" :
             st.set("cond","17")
+            st.playSound("ItemSound.quest_middle") 
         elif event == "30720-03.htm" :
             st.set("cond","18")
+            st.playSound("ItemSound.quest_middle") 
         elif event == "32220-19.htm" :
             st.set("cond","19")
+            st.playSound("ItemSound.quest_middle") 
         elif event == "Despawn Crimson Lady" :
             st.set("spawned","0")
         return htmltext

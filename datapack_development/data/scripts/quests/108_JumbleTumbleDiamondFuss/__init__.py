@@ -188,14 +188,17 @@ class Quest (JQuest) :
    if npcId == 20323 : 
         if st.getInt("cond") == 1 and st.getQuestItemsCount(BRONPS_CONTRACT) : 
           if st.getRandom(10) < 8 : 
+            st.giveItems(AQUAMARINE,1) 
             if st.getQuestItemsCount(AQUAMARINE)+st.getQuestItemsCount(CHRYSOBERYL) == 19 : 
               if st.getQuestItemsCount(AQUAMARINE) < 10 : 
-                st.giveItems(AQUAMARINE,1) 
+                st.playSound("ItemSound.quest_itemget") 
+              else :
                 st.playSound("ItemSound.quest_middle") 
             else: 
               if st.getQuestItemsCount(AQUAMARINE) < 10 : 
-                st.giveItems(AQUAMARINE,1) 
                 st.playSound("ItemSound.quest_itemget") 
+              else :
+                st.playSound("ItemSound.quest_middle") 
           if st.getRandom(10) < 8 : 
             if st.getQuestItemsCount(AQUAMARINE)+st.getQuestItemsCount(CHRYSOBERYL) == 19 : 
               if st.getQuestItemsCount(CHRYSOBERYL) < 10 : 

@@ -46,7 +46,7 @@ class Quest (JQuest) :
        else:
            htmltext = "32013-01.htm"
            st.exitQuest(1)
-   elif npcId == GALIBREDO and st.getInt("cond")==1 :
+   elif npcId == GALIBREDO and st.getInt("cond"):
        htmltext = "30181-01.htm"
        st.giveItems(57,2883)
        st.playSound("ItemSound.quest_finish")

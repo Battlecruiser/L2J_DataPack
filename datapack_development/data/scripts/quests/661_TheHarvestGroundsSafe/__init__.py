@@ -65,13 +65,13 @@ class Quest (JQuest) :
    if not st : return htmltext
    npcid = npc.getNpcId()
    cond = st.getInt("cond")
-   if cond == 0 :
+   if not cond :
       if st.getPlayer().getLevel() >= 21 :
          htmltext = "30210-02.htm"
       else :
          htmltext = "30210-01.htm"
          st.exitQuest(1)
-   if cond == 1 :
+   if cond :
       S = st.getQuestItemsCount(STING_OF_GIANT_POISON)  
       T = st.getQuestItemsCount(TALON_OF_YOUNG_ARANEID)
       C = st.getQuestItemsCount(CLOUDY_GEM)     
@@ -85,7 +85,6 @@ class Quest (JQuest) :
     st = player.getQuestState(qn)
     if not st : return
     if st.getState() != State.STARTED : return
-    if st.getInt("cond") == 1 :
         npcId = npc.getNpcId()
         rand = st.getRandom(100)
         if npcId in DROPLIST.keys() :

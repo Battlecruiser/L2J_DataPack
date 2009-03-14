@@ -35,17 +35,15 @@ class Quest (JQuest) :
    elif event == "30355-02.htm" : 
      st.giveItems(ROSELYNS_NOTE,1) 
      st.set("cond","2") 
-     st.set("id","2") 
      st.playSound("ItemSound.quest_middle") 
    elif event == "30144-02.htm" : 
      st.takeItems(ROSELYNS_NOTE,-1) 
      st.set("cond","3") 
-     st.set("id","3") 
      st.playSound("ItemSound.quest_middle") 
    elif event == "30134-06.htm" : 
      st.giveItems(SCROLL_OF_ESCAPE_GIRAN,1) 
      st.giveItems(MARK_OF_TRAVELER, 1) 
-     st.set("cond","0") 
+     st.unset("cond") 
      st.exitQuest(False) 
      st.playSound("ItemSound.quest_finish") 
    return htmltext 
@@ -57,9 +55,9 @@ class Quest (JQuest) :
    npcId = npc.getNpcId() 
    cond  = st.getInt("cond") 
    id    = st.getState() 
-
-   if id == State.CREATED : 
-     st.set("cond","0") 
+   if id == State.COMPLETED : 
+     htmltext = "<html><body>This quest has already been completed.</body></html>" 
+   elif id == State.CREATED : 
      if player.getRace().ordinal() == 2 : 
        if player.getLevel() >= 3 : 
          htmltext = "30134-02.htm" 
@@ -69,21 +67,18 @@ class Quest (JQuest) :
      else : 
        htmltext = "30134-01.htm" 
        st.exitQuest(1) 
-   elif npcId == JASMINE and id == State.COMPLETED : 
-     htmltext = "<html><body>I can't supply you with another Giran Scroll of Escape. Sorry traveller.</body></html>" 
-   elif npcId == JASMINE and cond == 1 : 
-     htmltext = "30134-04.htm"
    elif id == State.STARTED :  
        if npcId == ROSELYN and cond : 
          if st.getQuestItemsCount(ROSELYNS_NOTE) == 0 : 
            htmltext = "30355-01.htm" 
          else : 
            htmltext = "30355-03.htm" 
+       elif npcId == JASMINE and cond == 1 : 
+         htmltext = "30134-04.htm"
        elif npcId == HARNE and cond == 2 and st.getQuestItemsCount(ROSELYNS_NOTE) > 0 : 
          htmltext = "30144-01.htm" 
        elif npcId == JASMINE and cond == 3 : 
          htmltext = "30134-05.htm" 
-
    return htmltext 
 
 QUEST     = Quest(8,qn,"An Adventure Begins") 
@@ -91,6 +86,5 @@ QUEST     = Quest(8,qn,"An Adventure Begins")
 QUEST.addStartNpc(JASMINE) 
 
 QUEST.addTalkId(JASMINE) 
-
 QUEST.addTalkId(ROSELYN) 
 QUEST.addTalkId(HARNE) 

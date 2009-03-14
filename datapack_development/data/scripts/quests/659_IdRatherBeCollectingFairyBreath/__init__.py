@@ -47,14 +47,12 @@ class Quest (JQuest) :
    if not st: return
    id = st.getState()
    if id == State.CREATED :
-      st.set("cond","0")
-   cond = st.getInt("cond") 
-   if st.getPlayer().getLevel() < 26 :
-      htmltext = "30634-01.htm"
-      st.exitQuest(1)
-   elif cond == 0 :
-      htmltext = "30634-02.htm"
-   elif cond == 1 :
+      if st.getPlayer().getLevel() < 26 :
+         htmltext = "30634-01.htm"
+         st.exitQuest(1)
+      else :
+         htmltext = "30634-02.htm"
+   else :
       if st.getQuestItemsCount(FAIRY_BREATH) == 0 :
         htmltext = "30634-04.htm"
       else :

@@ -49,7 +49,7 @@ class Quest (JQuest) :
         for item in range(4412,4417) :
            st.giveItems(item,int(10*Config.RATE_QUESTS_REWARD))   # Echo crystals
         st.addExpAndSp(25747,2171)
-        st.set("cond","0")
+        st.unset("cond")
         st.exitQuest(False)
         st.playSound("ItemSound.quest_finish")
         # check the player state against this quest newbie rewarding mark.
@@ -129,14 +129,14 @@ class Quest (JQuest) :
              if st.getQuestItemsCount(BROKEN_BLADE_TOP) == 0 :
                 if st.getRandom(5) == 0 :
                    st.giveItems(BROKEN_BLADE_TOP,1)
-                   st.playSound("ItemSound.quest_middle")
              elif st.getQuestItemsCount(BROKEN_BLADE_BOTTOM) == 0 :
                 if st.getRandom(5) == 0 :
                    st.giveItems(BROKEN_BLADE_BOTTOM,1)
-                   st.playSound("ItemSound.quest_middle")
           if st.getQuestItemsCount(BROKEN_BLADE_TOP) and st.getQuestItemsCount(BROKEN_BLADE_BOTTOM) :
              st.set("cond","3")
              st.playSound("ItemSound.quest_middle")
+          else :
+             st.playSound("ItemSound.quest_itemget")
    return
 
 QUEST       = Quest(101,qn,"Sword Of Solidarity")
