@@ -66,6 +66,7 @@ class Quest (JQuest) :
          st.takeItems(ONYX_TALISMAN1,1)
          st.giveItems(ONYX_TALISMAN2,1)
          st.set("cond","2")
+         st.playSound("ItemSound.quest_middle") 
      elif cond == 2 :
        if npcId == 30358 :
          htmltext = "30358-06.htm"
@@ -81,6 +82,7 @@ class Quest (JQuest) :
          st.takeItems(ANCIENT_CLAY_TABLET,1)
          st.giveItems(KARTAS_TRANSLATION,1)
          st.set("cond","4")
+         st.playSound("ItemSound.quest_middle") 
      elif cond == 4 :
        if npcId == 30358 and st.getQuestItemsCount(KARTAS_TRANSLATION) :
          htmltext = "30358-07.htm"

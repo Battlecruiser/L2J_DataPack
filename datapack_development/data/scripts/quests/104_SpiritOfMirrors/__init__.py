@@ -94,18 +94,21 @@ class Quest (JQuest) :
             st.giveItems(item,int(10*Config.RATE_QUESTS_REWARD))   # Echo crystals
         st.addExpAndSp(39750,3407)
         htmltext = "30017-05.htm" 
-        st.set("cond","0") 
+        st.unset("cond") 
         st.exitQuest(False) 
         st.playSound("ItemSound.quest_finish") 
      elif npcId == 30045 and st.getInt("cond") : 
         htmltext = "30045-01.htm" 
         st.set("cond","2") 
+        st.playSound("ItemSound.quest_middle") 
      elif npcId == 30043 and st.getInt("cond") : 
         htmltext = "30043-01.htm" 
         st.set("cond","2") 
+        st.playSound("ItemSound.quest_middle") 
      elif npcId == 30041 and st.getInt("cond") : 
         htmltext = "30041-01.htm" 
         st.set("cond","2") 
+        st.playSound("ItemSound.quest_middle") 
    return htmltext 
 
  def onKill(self,npc,player,isPet): 
@@ -118,7 +121,9 @@ class Quest (JQuest) :
      st.giveItems(DROPLIST[npcId],1) 
      if HaveAllQuestItems(st) : 
        st.set("cond","3") 
-     st.playSound("ItemSound.quest_middle")
+       st.playSound("ItemSound.quest_middle")
+     else:
+       st.playSound("ItemSound.quest_itemget") 
    return 
 
 QUEST       = Quest(104,qn,"Spirit Of Mirrors") 

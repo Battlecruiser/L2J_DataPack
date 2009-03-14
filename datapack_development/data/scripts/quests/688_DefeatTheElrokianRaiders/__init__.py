@@ -14,8 +14,8 @@ DINOSAUR_FANG_NECKLACE = 8785
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
- 	JQuest.__init__(self,id,name,descr)
- 	self.questItemIds = [DINOSAUR_FANG_NECKLACE]
+    JQuest.__init__(self,id,name,descr)
+    self.questItemIds = [DINOSAUR_FANG_NECKLACE]
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -89,5 +89,4 @@ QUEST = Quest(688,qn,"Defeat the Elrokian Raiders")
 QUEST.addStartNpc(32105)
 
 QUEST.addTalkId(32105)
-
 QUEST.addKillId(22214)

@@ -125,8 +125,8 @@ class Quest (JQuest) :
       else :
         htmltext="30291-14.htm"
     elif event == "30291-06.htm" :
-       st.set("cond","0")
-       st.exitQuest(False)
+       st.unset("cond")
+       st.exitQuest(True)
        st.playSound("ItemSound.quest_finish")
     return htmltext
 
@@ -140,21 +140,19 @@ class Quest (JQuest) :
    EYES=st.getQuestItemsCount(WATCHING_EYES)
    id = st.getState()
    cond = st.getInt("cond")
-   if st.getState() == State.COMPLETED :
-     st.setState(State.CREATED)
    if npcId == MARIA and cond == 0 :
      if st.getPlayer().getLevel() >= 30 :
        htmltext = "30608-02.htm"
      else :
        htmltext = "30608-01.htm"
        st.exitQuest(1)
-   if npcId == MARIA and cond == 1 :
+   elif npcId == MARIA and cond == 1 :
      htmltext = "30608-06.htm"
-   if npcId == ALEX and cond == 1 :
+   elif npcId == ALEX and cond == 1 :
      htmltext = "30291-01.htm"
      st.playSound("ItemSound.quest_middle")
      st.set("cond","2")
-   if npcId == ALEX and cond == 2 :
+   elif npcId == ALEX and cond == 2 :
      if EYES+SCALE+SHARD == 0 :
        htmltext = "30291-02.htm"
      else :
@@ -184,7 +182,6 @@ QUEST.addStartNpc(MARIA)
 
 QUEST.addTalkId(MARIA)
 QUEST.addTalkId(ALEX)
-
 QUEST.addKillId(CARSED_SEER)
 QUEST.addKillId(PLAIN_WATCMAN)
 QUEST.addKillId(ROUGH_HEWN_ROCK_GOLEM)

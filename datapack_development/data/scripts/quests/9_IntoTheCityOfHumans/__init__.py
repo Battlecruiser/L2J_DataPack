@@ -25,20 +25,18 @@ class Quest (JQuest) :
    htmltext = event 
    if event == "30583-03.htm" : 
      st.set("cond","1") 
-     st.set("id","1") 
      st.setState(State.STARTED) 
      st.playSound("ItemSound.quest_accept") 
    elif event == "30571-02.htm" : 
      st.set("cond","2") 
-     st.set("id","2") 
      st.playSound("ItemSound.quest_middle") 
    elif event == "30576-02.htm" :
      st.giveItems(MARK_OF_TRAVELER, 1)
      st.giveItems(SCROLL_OF_ESCAPE_GIRAN,1) 
-     st.set("cond","0") 
-     st.exitQuest(False) 
-     st.playSound("ItemSound.quest_finish") 
-   return htmltext 
+     st.unset("cond") 
+     st.exitQuest(False)
+     st.playSound("ItemSound.quest_finish")
+   return htmltext
 
  def onTalk (self,npc,player): 
    htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>" 
@@ -47,9 +45,9 @@ class Quest (JQuest) :
    npcId = npc.getNpcId() 
    cond  = st.getInt("cond") 
    id    = st.getState() 
-
-   if id == State.CREATED : 
-     st.set("cond","0") 
+   if id == State.COMPLETED : 
+     htmltext = "<html><body>This quest has already been completed.</body></html>" 
+   elif id == State.CREATED : 
      if player.getRace().ordinal() == 3 : 
        if player.getLevel() >= 3 : 
          htmltext = "30583-02.htm" 
@@ -59,13 +57,11 @@ class Quest (JQuest) :
      else : 
        htmltext = "30583-01.htm" 
        st.exitQuest(1) 
-   elif npc == PETUKAI and id == State.COMPLETED : 
-     htmltext = "<html><body>I can't supply you with another Giran Scroll of Escape. Sorry traveller.</body></html>" 
-   elif npc == PETUKAI and cond == 1 : 
-     htmltext = "30583-04.htm"
-   if id == State.STARTED :  
+   elif id == State.STARTED :  
        if npcId == TANAPI and cond : 
          htmltext = "30571-01.htm" 
+       elif npc == PETUKAI and cond == 1 : 
+         htmltext = "30583-04.htm"
        elif npcId == TAMIL and cond == 2 : 
          htmltext = "30576-01.htm" 
    return htmltext 

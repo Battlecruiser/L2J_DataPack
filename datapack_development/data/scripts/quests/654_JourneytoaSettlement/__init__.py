@@ -39,6 +39,7 @@ class Quest (JQuest) :
        st.takeItems(ITEM,1)
        st.playSound("ItemSound.quest_finish")
        st.exitQuest(1)
+       st.unset("cond")
     return htmltext
 
   def onTalk (Self,npc,player):
@@ -48,7 +49,7 @@ class Quest (JQuest) :
     cond = st.getInt("cond")
     npcId = npc.getNpcId()
     id = st.getState()
-    if id == State.CREATED or id == State.COMPLETED:
+    if id == State.CREATED:
        preSt = player.getQuestState("119_LastImperialPrince")
        if preSt: preId = preSt.getState()
        if player.getLevel() < 74 :
@@ -82,8 +83,6 @@ class Quest (JQuest) :
 QUEST = Quest(654,qn,"Journey to a Settlement")
 
 QUEST.addStartNpc(SPIRIT)
-
 QUEST.addTalkId(SPIRIT)
-
 QUEST.addKillId(TARGET_1)
 QUEST.addKillId(TARGET_2)

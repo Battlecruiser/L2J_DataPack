@@ -47,7 +47,7 @@ class Quest (JQuest) :
        else:
            htmltext = "32012-00.htm"
            st.exitQuest(1)
-   elif npcId == SARA and st.getInt("cond")==1 :
+   elif npcId == SARA and st.getInt("cond") :
        htmltext = "30180-01.htm"
        EAD_CHANCE = st.getRandom(100)
        st.giveItems(57,5026)

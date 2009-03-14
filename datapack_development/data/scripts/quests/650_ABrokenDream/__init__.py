@@ -69,7 +69,7 @@ class Quest (JQuest) :
    if not partyMember : return
    st = partyMember.getQuestState(qn)
    if st :
-        if st.getState() == State.STARTED and st.getInt("cond") == 1 :
+        if st.getState() == State.STARTED :
             if st.getRandom(100)<CHANCE :
                 st.giveItems(DREAM_FRAGMENT_ID,1)
                 st.playSound("ItemSound.quest_itemget")

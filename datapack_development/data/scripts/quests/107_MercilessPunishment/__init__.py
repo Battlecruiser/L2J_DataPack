@@ -47,13 +47,7 @@ class Quest (JQuest) :
           st.playSound("ItemSound.quest_accept") 
     elif event == "30568_1" : 
             htmltext = "30568-06.htm" 
-            st.takeItems(HATOSS_ORDER2_ID,1) 
-            st.takeItems(LETTER_TO_DARKELF_ID,1) 
-            st.takeItems(LETTER_TO_HUMAN_ID,1) 
-            st.takeItems(LETTER_TO_ELF_ID,1) 
-            st.takeItems(HATOSS_ORDER1_ID,1) 
-            st.takeItems(HATOSS_ORDER3_ID,1) 
-            st.set("cond","0") 
+            st.exitQuest(1)
             st.playSound("ItemSound.quest_giveup") 
     elif event == "30568_2" : 
             htmltext = "30568-07.htm" 
@@ -62,13 +56,7 @@ class Quest (JQuest) :
               st.giveItems(HATOSS_ORDER2_ID,1) 
     elif event == "30568_3" : 
             htmltext = "30568-06.htm" 
-            st.takeItems(HATOSS_ORDER1_ID,1) 
-            st.takeItems(LETTER_TO_DARKELF_ID,1) 
-            st.takeItems(LETTER_TO_HUMAN_ID,1) 
-            st.takeItems(LETTER_TO_ELF_ID,1) 
-            st.takeItems(HATOSS_ORDER2_ID,1) 
-            st.takeItems(HATOSS_ORDER3_ID,1) 
-            st.set("cond","0") 
+            st.exitQuest(1)
             st.playSound("ItemSound.quest_giveup") 
     elif event == "30568_4" : 
             htmltext = "30568-09.htm" 
@@ -130,7 +118,7 @@ class Quest (JQuest) :
                else :
                   st.giveItems(SOULSHOT_NO_GRADE_FOR_BEGINNERS,7000)
                   st.playTutorialVoice("tutorial_voice_026")
-            st.set("cond","0") 
+            st.unset("cond") 
             st.addExpAndSp(34565,2962)
             player.sendPacket(SocialAction(player.getObjectId(),3))
             st.exitQuest(False) 

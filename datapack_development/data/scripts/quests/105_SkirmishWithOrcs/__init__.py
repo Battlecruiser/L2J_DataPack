@@ -143,7 +143,7 @@ class Quest (JQuest) :
             player.sendPacket(SocialAction(player.getObjectId(),3))
             st.exitQuest(False) 
             st.playSound("ItemSound.quest_finish") 
-            st.set("cond","0") 
+            st.unset("cond") 
       elif st.getQuestItemsCount(KENDNELLS_ORDER5) or st.getQuestItemsCount(KENDNELLS_ORDER6) or st.getQuestItemsCount(KENDNELLS_ORDER7) or st.getQuestItemsCount(KENDNELLS_ORDER8) : 
         htmltext = "30218-07.htm" 
    return htmltext 
