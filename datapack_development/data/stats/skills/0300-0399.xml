@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
 <skill id="301" levels="5" name="Summon Big Boom" enchantLevels1="30">
-  <table name="#enchantNpcIds"> 14707 14708 14709 14710 14711 14712 14713 14714 14715 14716 14717 14718 14719 14720 14721 14722 14723 14724 14725 14726 14727 14728 14729 14730 14731 14732 14733 14734 14735 14736</table>
+  <table name="#enchantNpcIds"> 14707 14708 14709 14710 14711 14712 14713 14714 14715 14716 14717 14718 14719 14720 14721 14722 14723 14724 14725 14726 14727 14728 14729 14730 14731 14732 14733 14734 14735 14736 </table>
   <enchant1 name="npcId" val="#enchantNpcIds"/>
   <table name="#mpConsume"> 74 82 88 94 100 </table>
   <table name="#itemConsumeCount"> 3 3 4 4 5 </table>
@@ -67,7 +67,7 @@
   <table name="#mp"> 1.1 1.15 1.2 1.25 </table>
   <table name="#hpConsume"> 185 271 316 364 </table>
   <table name="#ench1hpConsume"> 358 352 346 340 334 328 322 316 310 304 298 292 286 280 274 267 261 255 249 243 237 231 225 219 213 207 201 195 189 183 </table>
-  <table name="#ench1mp"> 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 </table>
+  <table name="#ench1mp"> 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 </table>
   <table name="#aggro"> 438 549 597 635 </table>
   <set name="hpConsume" val="#hpConsume"/>
   <set name="target" val="TARGET_SELF"/>
@@ -114,12 +114,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <mul order="0x30" stat="maxHp" val="1.30"/>
+      <mul order="0x30" stat="maxHp" val="1.3"/>
     </effect>
   </for>
   <enchant1for>
     <effect name="Buff" time="#ench1time" count="1" val="0">
-      <mul order="0x30" stat="maxHp" val="1.30"/>
+      <mul order="0x30" stat="maxHp" val="1.3"/>
     </effect>
   </enchant1for>
 </skill>
@@ -355,7 +355,7 @@
   <table name="#crit"> 35 48 64 84 109 139 166 196 229 266 306 349 379 410 443 475 509 542 576 609 </table>
   <table name="#ench1crit"> 615 620 626 631 637 642 648 653 659 664 670 675 681 686 692 697 702 708 713 719 724 730 735 741 746 752 757 763 768 774 </table>
   <table name="#ench2MpConsume_Init"> 13 13 13 12 12 12 11 11 11 10 10 10 9 9 9 8 8 8 7 7 7 6 6 6 5 5 5 4 4 4 </table>
-  <table name="#ench2val"> 0.39 0.39 0.39 0.38 0.38 0.38 0.38 0.37 0.37 0.37 0.36 0.36 0.36 0.36 0.35 0.35 0.35 0.34 0.34 0.34 0.34 0.33 0.33 0.33 0.32 0.32 0.32 0.32 0.31 0.31 0.31</table>
+  <table name="#ench2val"> 0.39 0.39 0.39 0.38 0.38 0.38 0.38 0.37 0.37 0.37 0.36 0.36 0.36 0.36 0.35 0.35 0.35 0.34 0.34 0.34 0.34 0.33 0.33 0.33 0.32 0.32 0.32 0.32 0.31 0.31 0.31 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
@@ -529,7 +529,7 @@
   </for>
 </skill>
 <skill id="318" levels="1" name="Aegis Stance" enchantLevels1="30" >
-  <table name="#ench1sDef"> 0.61 0.62 0.62 0.63 0.64 0.64 0.65 0.66 0.66 0.67 0.68 0.68 0.69 0.70 0.70 0.71 0.72 0.72 0.73 0.74 0.74 0.75 0.76 0.76 0.77 0.78 0.78 0.79 0.80 0.80 </table>
+  <table name="#ench1sDef"> 0.61 0.62 0.62 0.63 0.64 0.64 0.65 0.66 0.66 0.67 0.68 0.68 0.69 0.7 0.7 0.71 0.72 0.72 0.73 0.74 0.74 0.75 0.76 0.76 0.77 0.78 0.78 0.79 0.8 0.8 </table>
   <set name="mpInitialConsume" val="9"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
@@ -587,8 +587,8 @@
   <table name="#ench2MpConsume"> 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 59 58 57 56 55 54 53 52 51 49 48 47 46 45 44 </table>
   <table name="#mpConsume"> 66 67 68 69 70 71 72 73 74 75 </table>
   <table name="#magicLvl"> 65 66 67 68 69 70 71 72 73 74 </table>
-  <table name="#CP"> 0.93 0.90 0.88 0.85 0.83 0.80 0.78 0.75 0.73 0.7 </table>
-  <table name="#ench1Power"> 0.70 0.69 0.68 0.67 0.66 0.65 0.64 0.63 0.62 0.61 0.61 0.60 0.59 0.58 0.57 0.56 0.55 0.54 0.53 0.52 0.52 0.51 0.50 0.49 0.48 0.47 0.46 0.45 0.44 0.43 </table>
+  <table name="#CP"> 0.93 0.9 0.88 0.85 0.83 0.8 0.78 0.75 0.73 0.7 </table>
+  <table name="#ench1Power"> 0.7 0.69 0.68 0.67 0.66 0.65 0.64 0.63 0.62 0.61 0.61 0.6 0.59 0.58 0.57 0.56 0.55 0.54 0.53 0.52 0.52 0.51 0.5 0.49 0.48 0.47 0.46 0.45 0.44 0.43 </table>
   <set name="weaponsAllowed" val="64"/> <!-- Pole -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -694,11 +694,10 @@
   <set name="random_count" val="4"/>
 </skill>
 <skill id="325" levels="1" name="Strider Siege Assault">
-  <table name="#itemConsumeCount"> 5 </table>
   <set name="mpConsume" val="151"/>
   <set name="itemConsumeId" val="3031"/>
-  <set name="itemConsumeCount" val="#itemConsumeCount"/>
-  <set name="power" val="15005.0"/>
+  <set name="itemConsumeCount" val="5"/>
+  <set name="power" val="15005"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1080"/>
   <set name="coolTime" val="720"/>
@@ -942,9 +941,9 @@
   <set name="aggroPoints" val="811"/>
   <for>
     <effect count="40" name="HealOverTime" time="3" val="150">
-      <mul order="0x30" stat="cancelVuln" val="0.40"/>
-      <mul order="0x30" stat="debuffVuln" val="0.70"/>
-      <mul order="0x30" stat="gainHp" val="1.30"/>
+      <mul order="0x30" stat="cancelVuln" val="0.4"/>
+      <mul order="0x30" stat="debuffVuln" val="0.7"/>
+      <mul order="0x30" stat="gainHp" val="1.3"/>
     </effect>
   </for>
 </skill>
@@ -969,9 +968,9 @@
   </cond>
   <for>
     <effect count="1" name="Debuff" time="120" val="0">
-      <mul order="0x30" stat="maxCp" val="0.10"/>
-      <mul order="0x30" stat="debuffVuln" val="1.30"/>
-      <mul order="0x30" stat="gainHp" val="0.70"/>
+      <mul order="0x30" stat="maxCp" val="0.1"/>
+      <mul order="0x30" stat="debuffVuln" val="1.3"/>
+      <mul order="0x30" stat="gainHp" val="0.7"/>
     </effect>
   </for>
 </skill>
@@ -1015,7 +1014,7 @@
   <set name="magicLvl" val="78"/>
   <set name="hpConsume" val="50"/>
   <set name="mpConsume" val="5"/>
-  <set name="power" val="7.0"/>
+  <set name="power" val="7"/>
   <set name="SSBoost" val="2.0"/>
   <set name="overHit" val="true"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1033,7 +1032,7 @@
   <set name="magicLvl" val="78"/>
   <set name="hpConsume" val="50"/>
   <set name="mpConsume" val="5"/>
-  <set name="power" val="7.0"/>
+  <set name="power" val="7"/>
   <set name="overHit" val="true"/>
   <set name="SSBoost" val="2.0"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1111,8 +1110,8 @@
     <effect name="Buff" time="120" count="1" val="0">
       <mul order="0x30" stat="mReuse" val="0.7"/>
       <mul order="0x30" stat="pReuse" val="0.7"/>
-      <mul order="0x30" stat="MagicalMpConsumeRate" val="0.90"/>
-      <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.90"/>
+      <mul order="0x30" stat="MagicalMpConsumeRate" val="0.9"/>
+      <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.9"/>
     </effect>
   </for>
 </skill>
@@ -1228,7 +1227,7 @@
 <skill id="355" levels="1" name="Focus Death">
   <set name="mpConsume" val="36"/>
   <set name="effectPoint" val="669"/>
-  <set name="magicLevel" val="78"/>
+  <set name="magicLvl" val="78"/>
   <set name="weaponsAllowed" val="16"/> <!-- Dagger -->
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="120000"/>
@@ -1238,15 +1237,15 @@
   <set name="aggroPoints" val="669"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="focus">
-      <basemul order="0x30" stat="rCrit" val="-0.30"/> <!-- Critical -30% -->
-      <mul order="0x30" stat="blowRate" val="1.60"/> <!-- Blow land rate +60% -->
-      <mul order="0x30" stat="cAtk" val="0.70"> <!-- Critical Damage from front -30% -->
+      <basemul order="0x30" stat="rCrit" val="-0.3"/> <!-- Critical -30% -->
+      <mul order="0x30" stat="blowRate" val="1.6"/> <!-- Blow land rate +60% -->
+      <mul order="0x30" stat="cAtk" val="0.7"> <!-- Critical Damage from front -30% -->
         <and>
           <player front="True"/>
           <using kind="Dagger"/>
         </and>
       </mul>
-      <mul order="0x30" stat="cAtk" val="1.90"> <!-- Critical Damage from back +90% -->
+      <mul order="0x30" stat="cAtk" val="1.9"> <!-- Critical Damage from back +90% -->
         <and>
           <player behind="True"/>
           <using kind="Dagger"/>
@@ -1258,7 +1257,7 @@
 <skill id="356" levels="1" name="Focus Chance">
   <set name="mpConsume" val="36"/>
   <set name="effectPoint" val="669"/>
-  <set name="magicLevel" val="78"/>
+  <set name="magicLvl" val="78"/>
   <set name="weaponsAllowed" val="16"/> <!-- Dagger -->
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="120000"/>
@@ -1268,40 +1267,36 @@
   <set name="aggroPoints" val="669"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="focus">
-      <basemul order="0x30" stat="rCrit" val="-0.30"> <!-- Critical Chance from front -30% -->
+      <basemul order="0x30" stat="rCrit" val="-0.3"> <!-- Critical Chance from front -30% -->
         <and>
           <player front="True"/>
           <using kind="Dagger"/>
         </and>
       </basemul>
-      <mul order="0x30" stat="blowRate" val="0.70"> <!-- Blow land rate from front -30% -->
-        <and>
-          <player front="True"/>
-        </and>
+      <mul order="0x30" stat="blowRate" val="0.7"> <!-- Blow land rate from front -30% -->
+        <player front="True"/>
       </mul>
-      <basemul order="0x30" stat="rCrit" val="0.30"> <!-- Critical Chance from side +30% -->
+      <basemul order="0x30" stat="rCrit" val="0.3"> <!-- Critical Chance from side +30% -->
         <and>
           <player front="False"/>
           <player behind="False"/>
           <using kind="Dagger"/>
         </and>
       </basemul>
-      <mul order="0x30" stat="blowRate" val="1.30"> <!-- Blow land rate from side +30% -->
+      <mul order="0x30" stat="blowRate" val="1.3"> <!-- Blow land rate from side +30% -->
         <and>
           <player front="False"/>
           <player behind="False"/>
         </and>
       </mul>
-      <basemul order="0x30" stat="rCrit" val="0.60"> <!-- Critical Chance from back +60% -->
+      <basemul order="0x30" stat="rCrit" val="0.6"> <!-- Critical Chance from back +60% -->
         <and>
           <player behind="True"/>
           <using kind="Dagger"/>
         </and>
       </basemul>
-      <mul order="0x30" stat="blowRate" val="1.60"> <!-- Blow land rate from back +60% -->
-        <and>
-          <player behind="True"/>
-        </and>
+      <mul order="0x30" stat="blowRate" val="1.6"> <!-- Blow land rate from back +60% -->
+        <player behind="True"/>
       </mul>
     </effect>
   </for>
@@ -1309,7 +1304,7 @@
 <skill id="357" levels="1" name="Focus Power">
   <set name="mpConsume" val="36"/>
   <set name="effectPoint" val="669"/>
-  <set name="magicLevel" val="78"/>
+  <set name="magicLvl" val="78"/>
   <set name="weaponsAllowed" val="16"/> <!-- Dagger -->
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="120000"/>
@@ -1319,20 +1314,20 @@
   <set name="aggroPoints" val="669"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0" stackOrder="1" stackType="focus">
-      <mul order="0x30" stat="cAtk" val="0.70"> <!-- Critical Damage from front -30% -->
+      <mul order="0x30" stat="cAtk" val="0.7"> <!-- Critical Damage from front -30% -->
         <and>
           <player front="True"/>
           <using kind="Dagger"/>
         </and>
       </mul>
-      <mul order="0x30" stat="cAtk" val="1.30"> <!-- Critical Damage from side +30% -->
+      <mul order="0x30" stat="cAtk" val="1.3"> <!-- Critical Damage from side +30% -->
         <and>
           <player front="False"/>
           <player behind="False"/>
           <using kind="Dagger"/>
         </and>
       </mul>
-      <mul order="0x30" stat="cAtk" val="1.60"> <!-- Critical Damage from back +60% -->
+      <mul order="0x30" stat="cAtk" val="1.6"> <!-- Critical Damage from back +60% -->
         <and>
           <player behind="True"/>
           <using kind="Dagger"/>
@@ -1343,7 +1338,7 @@
 </skill>
 <skill id="358" levels="1" name="Bluff">
   <set name="weaponsAllowed" val="16"/> <!-- Dagger -->
-  <set name="magicLevel" val="77"/>
+  <set name="magicLvl" val="77"/>
   <set name="mpConsume" val="35"/>
   <set name="power" val="40"/> 
   <set name="target" val="TARGET_ONE"/> 
@@ -1470,7 +1465,7 @@
   <for>
     <effect name="Buff" time="120" count="1" val="0">
       <mul order="0x30" stat="regMp" val="1.2"/>
-      <mul order="0x30" stat="MagicalMpConsumeRate" val="0.90"/>
+      <mul order="0x30" stat="MagicalMpConsumeRate" val="0.9"/>
     </effect>
   </for>
 </skill>
@@ -1612,7 +1607,7 @@
 </skill>
 <skill id="371" levels="3" name="Clan Spirituality">
   <!-- Increases clan members' Max CP. It only effects those who are of a Baron class or higher. -->
-  <table name="#maxCp"> 1.06 1.10 1.12 </table>
+  <table name="#maxCp"> 1.06 1.1 1.12 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1724,7 +1719,7 @@
 </skill>
 <skill id="379" levels="3" name="Clan Magic Protection">
   <!-- Increases clan members' M. Def. It only effects those who are of an Heir class or higher. -->
-  <table name="#mDef"> 1.06 1.10 1.12 </table>
+  <table name="#mDef"> 1.06 1.1 1.12 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1939,7 +1934,7 @@
       <add order="0x40" stat="runSpd" val="20"/>
       <mul order="0x30" stat="pDef" val="0.75"/>
       <mul order="0x30" stat="mDef" val="0.75"/>
-      <mul order="0x30" stat="debuffVuln" val="0.0"/>
+      <mul order="0x30" stat="debuffVuln" val="0"/>
       <!-- Missing Cancel resistance +??, Heals are ??% more effective  (custom value) -->
     </effect>
   </for>

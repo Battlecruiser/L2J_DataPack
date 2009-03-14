@@ -2,9 +2,6 @@
 <list>
 <skill id="3600" levels="9" name="Special Ability: Anger">
   <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Decreases the character's Maximum HP but increases P. Atk. Allows the character to attack multiple opponents.
       Lvl 2 - Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents.
       Lvl 3 - Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents.
@@ -24,19 +21,19 @@
   <!-- Done by DJ MELERIX -->
   <!-- For Poles -->
   <!--
-  Lvl 1: Increases Atk.Spd., and enables the character to attack multiple opponents.
-  Lvl 2: Increases Atk.Spd., and enables the character to attack multiple opponents.
-  Lvl 3: Increases Atk.Spd., and enables the character to attack multiple opponents.
-  Lvl 4: Increases Atk.Spd., and enables the character to attack multiple opponents.
-  Lvl 5: Increases Atk.Spd., and enables the character to attack multiple opponents.
-  Lvl 6: Increases Atk.Spd., and enables the character to attack multiple opponents.
-  Lvl 7: Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
-  Lvl 8: Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
-  Lvl 9: Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
+      Lvl 1: Increases Atk.Spd., and enables the character to attack multiple opponents.
+      Lvl 2: Increases Atk.Spd., and enables the character to attack multiple opponents.
+      Lvl 3: Increases Atk.Spd., and enables the character to attack multiple opponents.
+      Lvl 4: Increases Atk.Spd., and enables the character to attack multiple opponents.
+      Lvl 5: Increases Atk.Spd., and enables the character to attack multiple opponents.
+      Lvl 6: Increases Atk.Spd., and enables the character to attack multiple opponents.
+      Lvl 7: Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
+      Lvl 8: Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
+      Lvl 9: Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
   -->
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 </table>
   <table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 1.06 1.06 1.07 </table>
-  <table name="#pvp"> 1.0 1.0 1.0 1.0 1.0 1.0 1.05 1.05 1.05 </table>
+  <table name="#pvp"> 1 1 1 1 1 1 1.05 1.05 1.05 </table>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="#magicLvl"/>
@@ -52,9 +49,6 @@
 </skill>
 <skill id="3602" levels="9" name="Special Ability: Guidance">
   <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
       Lvl 1 - Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
       Lvl 2 - Increases Accuracy, and enables the character to attack multiple opponents.
       Lvl 3 - Increases Accuracy, and enables the character to attack multiple opponents.
@@ -73,8 +67,8 @@
 <skill id="3603" levels="10" name="Demonic Sword Zariche">
   <table name="#maxCp"> 12 13 14 15 17 19 21 23 25 27 </table>
   <table name="#pAtk"> 3 4.5 6 7.5 9 10.5 11 11.5 12 12.5 </table>
-  <table name="#mAtk"> 3 3.25 3.50 3.75 4 4.25 4.50 5 5.50 5.75 </table>
-  <table name="#pDef"> 2.5 2.6 2.7 2.8 2.9 3 3.25 3.50 3.75 4 </table>
+  <table name="#mAtk"> 3 3.25 3.5 3.75 4 4.25 4.5 5 5.5 5.75 </table>
+  <table name="#pDef"> 2.5 2.6 2.7 2.8 2.9 3 3.25 3.5 3.75 4 </table>
   <table name="#mDef"> 3 3.1 3.2 3.3 3.4 3.5 3.75 4 4.25 4.5 </table>
   <table name="#runSpd"> 4 6 8 10 12 14 16 18 19 20 </table>
   <table name="#accCombat"> 15 20 25 30 35 40 45 50 55 60 </table>
@@ -115,8 +109,8 @@
     <mul order="0x30" stat="paralyzeProf" val="1.15"/>
     <mul order="0x30" stat="stunProf" val="1.15"/>
     <add order="0x40" stat="reflectDam" val="5"/>
-    <mul order="0x30" stat="mReuse" val="0.90"/>
-    <mul order="0x30" stat="pReuse" val="0.90"/>
+    <mul order="0x30" stat="mReuse" val="0.9"/>
+    <mul order="0x30" stat="pReuse" val="0.9"/>
   </for>
 </skill>
 <skill id="3605" levels="1" name="Clan Oath Heavy Armor Set">
@@ -155,7 +149,7 @@
 <skill id="3608" levels="2" name="Apella Heavy Armor Set">
   <!-- Needs to be finished -->
   <table name="#maxCP"> 1035 1116 </table>
-  <table name="#rCrit"> 1.0 1.02621 </table>
+  <table name="#rCrit"> 1 1.02621 </table>
   <table name="#cAtk"> 0 3 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -164,7 +158,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <add order='0x40' stat='maxCp' val='#maxCP'/>
-    <mul order='0x30' stat='regCp' val='1.40'/>
+    <mul order='0x30' stat='regCp' val='1.4'/>
     <!-- TODO lvl1:
         There is a 10% probability that magic defense power is increased by 5% and critical damage is decreased by 3 if the damage inflicted by PC is more than 50.
      -->
@@ -183,7 +177,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <add val='#maxCP' order='0x40' stat='maxCp'/>
-    <mul val='1.40' order='0x30' stat='regCp'/>
+    <mul val='1.4' order='0x30' stat='regCp'/>
     <!-- TODO lvl1:
         There is a 10% probability that evasion is increased by 2 and critical damage is decreased by 86 if the damage inflicted by PC is more than 50.
      -->
@@ -202,7 +196,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <add val='#maxCP' order='0x40' stat='maxCp'/>
-    <mul val='1.40' order='0x30' stat='regCp'/>
+    <mul val='1.4' order='0x30' stat='regCp'/>
     <!-- TODO lvl1:
         There is a 10% probability that moving speed is increased by 10 and defense power is increased by 5% if the damage inflicted by PC is more than 50.
      -->
@@ -376,36 +370,21 @@
   </for>
 </skill>
 <skill id="3626" levels="1" name="Kabokula">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Used when trapping a roaring Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone.
-  -->
+  <!-- Used when trapping a roaring Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="3627" levels="1" name="Tapirawa">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Used on a quivering Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone.
-  -->
+  <!-- Used on a quivering Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="3628" levels="1" name="Shabonoba">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Used on a struggling Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone.
-  -->
+  <!-- Used on a struggling Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -415,8 +394,8 @@
   <!-- Needs to be finished - below is a copy of 3603 Demon Sword Zariche -->
   <table name="#maxCp"> 12 13 14 15 17 19 21 23 25 27 </table>
   <table name="#pAtk"> 3 4.5 6 7.5 9 10.5 11 11.5 12 12.5 </table>
-  <table name="#mAtk"> 3 3.25 3.50 3.75 4 4.25 4.50 5 5.50 5.75 </table>
-  <table name="#pDef"> 2.5 2.6 2.7 2.8 2.9 3 3.25 3.50 3.75 4 </table>
+  <table name="#mAtk"> 3 3.25 3.5 3.75 4 4.25 4.5 5 5.5 5.75 </table>
+  <table name="#pDef"> 2.5 2.6 2.7 2.8 2.9 3 3.25 3.5 3.75 4 </table>
   <table name="#mDef"> 3 3.1 3.2 3.3 3.4 3.5 3.75 4 4.25 4.5 </table>
   <table name="#runSpd"> 4 6 8 10 12 14 16 18 19 20 </table>
   <table name="#accCombat"> 15 20 25 30 35 40 45 50 55 60 </table>
@@ -462,19 +441,14 @@
   <set name="effectRange" val="1100"/>
 </skill>
 <skill id="3632" levels="1" name="Clan Gate">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Active: Creates a gate that summons clan members. You cannot move while this skill is active.
-  -->
+  <!-- Active: Creates a gate that summons clan members. You cannot move while this skill is active. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="3633" levels="2" name="Residential Shock Immunity">
-  <table name="#vuln"> 0.5 0.0 </table>
+  <table name="#vuln"> 0.5 0 </table>
   <table name="#stack"> 50 100 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="1800000"/>
@@ -489,17 +463,17 @@
   </for>
 </skill>
 <skill id="3634" levels="1" name="Special Ability Infinity Sword">
-  <!-- Guessed. Copied from Infinity Cleaver -->
-  <set name="magicLvl" val="80"/>
+  <!-- Increases critical attack success rate/power, MaxHP, MaxCP, and damage inflicted during PvP. Also inflicts extra damage on critical attacks, and reflects debuff attacks back on enemies. -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAPON_SA"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="80"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="cAtkAdd" val="504"/> <!-- P.Atk. +504 on a critical hit -->
     <mul order="0x30" stat="maxHp" val="1.25"/> <!-- HP +25% -->
-    <mul order="0x30" stat="maxCp" val="1.50"/> <!-- CP +50% -->
+    <mul order="0x30" stat="maxCp" val="1.5"/> <!-- CP +50% -->
     <add order="0x40" stat="rCrit" val="78.7"/> <!-- Critical +78.7 -->
     <mul order="0x30" stat="pvpPhysDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
     <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
@@ -509,16 +483,16 @@
   </for>
 </skill>
 <skill id="3635" levels="1" name="Special Ability Infinity Shooter">
-  <!-- Guessed. Copied from Infinity Bow with minor modification -->
-  <set name="magicLvl" val="80"/>
+  <!-- Produces the following effects when a critical attack occurs: the target is slowed, decrease MP consumption for skill use, and increase Max MP/Max CP. Enhances damage done to the target during PvP. -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAPON_SA"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="80"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul order="0x30" stat="maxMp" val="1.30"/> <!-- MP +30% -->
-    <mul order="0x30" stat="maxCp" val="1.50"/> <!-- CP +50% -->
+    <mul order="0x30" stat="maxMp" val="1.3"/> <!-- MP +30% -->
+    <mul order="0x30" stat="maxCp" val="1.5"/> <!-- CP +50% -->
     <mul order="0x30" stat="pvpPhysDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
     <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
     <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
@@ -755,10 +729,10 @@
   <for>
     <mul order="0x30" stat="mDef" val="1.12"/>
     <add order="0x40" stat="mAtk" val="10"/>
-    <mul order="0x30" stat="rootVuln" val="0.90"/>
-    <mul order="0x30" stat="sleepVuln" val="0.90"/>
-    <mul order="0x30" stat="confusionVuln" val="0.90"/>
-    <mul order="0x30" stat="derangementVuln" val="0.90"/>
+    <mul order="0x30" stat="rootVuln" val="0.9"/>
+    <mul order="0x30" stat="sleepVuln" val="0.9"/>
+    <mul order="0x30" stat="confusionVuln" val="0.9"/>
+    <mul order="0x30" stat="derangementVuln" val="0.9"/>
     <mul order="0x30" stat="darkVuln" val="0.85"/>
     <mul order="0x30" stat="rootProf" val="1.1"/>
     <mul order="0x30" stat="sleepProf" val="1.1"/>

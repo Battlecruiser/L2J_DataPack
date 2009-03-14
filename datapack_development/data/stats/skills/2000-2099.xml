@@ -435,7 +435,7 @@
   <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2049" levels="1" name="Blessed Scroll of Resurrection">
-  <set name="power" val="100.0"/>
+  <set name="power" val="100"/>
   <set name="target" val="TARGET_CORPSE_PLAYER"/>
   <set name="hitTime" val="3000"/>
   <set name="skillType" val="RESURRECT"/>
@@ -584,7 +584,7 @@
 </skill>
 <skill id="2060" levels="1" name="Healing Medicine">
   <!-- Needs to be Checked -->
-  <set name="power" val="1.0"/>
+  <set name="power" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NEGATE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -599,7 +599,7 @@
   <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2062" levels="1" name="Blessed Scroll of Resurrection">
-  <set name="power" val="100.0"/>
+  <set name="power" val="100"/>
   <set name="target" val="TARGET_CORPSE_PLAYER"/>
   <set name="hitTime" val="3000"/>
   <set name="skillType" val="RESURRECT"/>
@@ -694,7 +694,7 @@
   <set name="target" val="TARGET_ONE"/>
   <for>
     <effect count="2" name="Confusion" time="4" val="0"> <!-- Only for Temp Fix: Needs Core Support for Randomize Aggro/Target Effect -->
-      <mul stat="pAtkSpd" order="0x30" val="0.70"/>
+      <mul stat="pAtkSpd" order="0x30" val="0.7"/>
     </effect>
   </for>
 </skill>
@@ -718,13 +718,12 @@
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
-    <effect count="1" name="Buff" time="400" val="0" stackOrder="5.0" stackType="max_breath_up">
-      <mul order="0x30" stat="breath" val="5.0"/>
+    <effect count="1" name="Buff" time="400" val="0" stackOrder="5" stackType="max_breath_up">
+      <mul order="0x30" stat="breath" val="5"/>
     </effect>
   </for>
 </skill>
 <skill id="2077" levels="1" name="Potion of Revenge">
-  <set name="power" val="3.0"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>

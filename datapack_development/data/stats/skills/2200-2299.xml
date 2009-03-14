@@ -180,8 +180,7 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="2229" levels="8" name="Treasure Chest Key">
-  <table name="#itemConsume">6665 6666 6667 6668 6669 6670 6671 6672</table>
-  <set name="power" val="0"/>
+  <table name="#itemConsume"> 6665 6666 6667 6668 6669 6670 6671 6672 </table>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="500"/>
   <set name="reuseDelay" val="8000"/>
@@ -605,7 +604,7 @@
   <set name="buffDuration" val="300000"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="1.29" stackType="casting_time_down">
-      <mul order="0x30" stat="mAtkSpd" val="1.30"/>
+      <mul order="0x30" stat="mAtkSpd" val="1.3"/>
     </effect>
   </for>
 </skill>
@@ -619,7 +618,7 @@
   <set name="buffDuration" val="300000"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="1.29" stackType="critical_prob_up">
-      <basemul order="0x30" stat="rCrit" val="0.30"/>
+      <basemul order="0x30" stat="rCrit" val="0.3"/>
     </effect>
   </for>
 </skill>

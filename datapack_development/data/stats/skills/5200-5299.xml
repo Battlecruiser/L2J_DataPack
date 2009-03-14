@@ -1,48 +1,28 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
 <skill id="5200" levels="3" name="Pet Recharge">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-3 - Regenerates MP.
-  -->
+  <!-- Lvl 1-3 - Regenerates MP. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="5201" levels="6" name="Pet Concentration">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-2 - Temporarily lowers the probability of magic being canceled due to damage taken taken.
-  -->
+  <!-- Lvl 1-2 - Temporarily lowers the probability of magic being canceled due to damage taken taken. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="5202" levels="12" name="Stun">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-12 - Temporarily gets thrown into a state of shock and Immobilized.
-  -->
+  <!-- Lvl 1-12 - Temporarily gets thrown into a state of shock and Immobilized. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="5203" levels="12" name="Fear">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-12 - Temporarily becomes overcome with fear and flees mindlessly.
-  -->
+  <!-- Lvl 1-12 - Temporarily becomes overcome with fear and flees mindlessly. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -59,19 +39,13 @@
   <set name="effectRange" val="-1"/>
 </skill>
 <skill id="5205" levels="1" name="Boss Regeneration">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      none
-  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="5206" levels="1" name="Decrease Speed">
-  <set name="power" val="542.0"/>
+  <set name="power" val="542"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2200"/>
   <set name="skillType" val="PDAM"/>
@@ -103,7 +77,6 @@
   </for>
 </skill>
 <skill id="5208" levels="1" name="Event Wind walk">
-  <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
@@ -117,7 +90,6 @@
   </for>
 </skill>
 <skill id="5209" levels="1" name="Event Shield">
-  <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
@@ -131,7 +103,6 @@
   </for>
 </skill>
 <skill id="5210" levels="1" name="Event Bless the body">
-  <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
@@ -145,7 +116,6 @@
   </for>
 </skill>
 <skill id="5211" levels="1" name="Event Vampiric rage">
-  <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -158,7 +128,6 @@
   </for>
 </skill>
 <skill id="5212" levels="1" name="Event Regeneration">
-  <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
@@ -166,13 +135,12 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.20" stackType="hp_regen_up">
-      <mul order="0x30" stat="regHp" val="1.20"/>
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.2" stackType="hp_regen_up">
+      <mul order="0x30" stat="regHp" val="1.2"/>
     </effect>
   </for>
 </skill>
 <skill id="5213" levels="1" name="Event Haste">
-  <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
@@ -186,7 +154,6 @@
   </for>
 </skill>
 <skill id="5214" levels="1" name="Event Bless the soul">
-  <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
@@ -200,7 +167,6 @@
   </for>
 </skill>
 <skill id="5215" levels="1" name="Event Acumen">
-  <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
@@ -209,7 +175,7 @@
   <set name="effectRange" val="900"/>
   <for>
     <effect count="1" name="Buff" time="3600" val="0" stackOrder="4" stackType="casting_time_down">
-      <mul order="0x30" stat="mAtkSpd" val="1.30"/>
+      <mul order="0x30" stat="mAtkSpd" val="1.3"/>
     </effect>
   </for>
 </skill>
@@ -227,7 +193,6 @@
   </for>
 </skill>
 <skill id="5217" levels="1" name="Event Empower">
-  <set name="power" val="1.0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
@@ -253,7 +218,7 @@
 <skill id="5219" levels="1" name="Stun of giant mutated animal">
   <set name="magicLvl" val="99"/>
   <set name="lvlDepend" val="1"/>
-  <set name="power" val="47895.0"/>
+  <set name="power" val="47895"/>
   <set name="mpConsume" val="43"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="6000"/>
@@ -562,7 +527,7 @@
   <for>
     <effect count="20" name="DamOverTime" time="3" val="#dmg">
       <mul order="0x30" stat="pDef" val="0.77"/>
-      <mul order="0x30" stat="mDef" val="0.90"/>
+      <mul order="0x30" stat="mDef" val="0.9"/>
       <mul order="0x30" stat="darkVuln" val="1.3"/>
     </effect>
   </for>
@@ -670,9 +635,9 @@
   </for>
 </skill>
 <skill id="5272" levels="6" name="Decoy Provocation">
-  <table name="#mpConsume"> 50 51 53 54 55 57</table>
-  <table name="#magicLvl"> 38 39 40 41 42 43</table>
-  <table name="#power"> 2000.0 2800.0 3600.0 4400.0 5200.0 6000.0</table>
+  <table name="#mpConsume"> 50 51 53 54 55 57 </table>
+  <table name="#magicLvl"> 38 39 40 41 42 43 </table>
+  <table name="#power"> 2000 2800 3600 4400 5200 6000 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>

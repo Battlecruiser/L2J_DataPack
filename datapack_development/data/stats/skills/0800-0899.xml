@@ -73,7 +73,7 @@
   <for>
     <effect count="1" name="Transformation" time="18400" val="0">
       <mul order="0x30" stat="pDef" val="0.75"/>
-      <mul order="0x30" stat="sDef" val="0.80"/> <!-- Guess - need retail confirmation -->
+      <mul order="0x30" stat="sDef" val="0.8"/> <!-- Guess - need retail confirmation -->
     </effect>
   </for>
 </skill>
@@ -90,7 +90,7 @@
   <for>
     <effect count="1" name="Transformation" time="18400" val="0">
       <mul order="0x30" stat="pDef" val="0.75"/>
-      <mul order="0x30" stat="sDef" val="0.80"/> <!-- Guess - need retail confirmation -->
+      <mul order="0x30" stat="sDef" val="0.8"/> <!-- Guess - need retail confirmation -->
     </effect>
   </for>
 </skill>
@@ -107,7 +107,7 @@
   <for>
     <effect count="1" name="Transformation" time="18400" val="0">
       <mul order="0x30" stat="pDef" val="0.75"/>
-      <mul order="0x30" stat="sDef" val="0.80"/>  <!-- Guess - need retail confirmation -->
+      <mul order="0x30" stat="sDef" val="0.8"/>  <!-- Guess - need retail confirmation -->
     </effect>
   </for>
 </skill>
@@ -124,7 +124,7 @@
   <for>
     <effect count="1" name="Transformation" time="18400" val="0">
       <mul order="0x30" stat="pDef" val="0.75"/>
-      <mul order="0x30" stat="sDef" val="0.80"/>  <!-- Guess - need retail confirmation -->
+      <mul order="0x30" stat="sDef" val="0.8"/>  <!-- Guess - need retail confirmation -->
     </effect>
   </for>
 </skill>
@@ -401,7 +401,7 @@
   <set name="effectRange" val="400"/>
   <for>
     <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="ws_armor">
-      <mul order="0x30" stat="pDef" val="1.10">
+      <mul order="0x30" stat="pDef" val="1.1">
         <and>
           <using kind="Heavy"/>
           <not>

@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
 <skill id="3300" levels="1" name="Yellow Talisman of Speed">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -89,7 +88,6 @@
   <set name="effectRange" val="-1"/>
 </skill>
 <skill id="3312" levels="1" name="Yellow Talisman of Healing">
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -358,7 +356,7 @@
     <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 effect -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Darkness resistance is increased +8 -->
     <mul order="0x30" stat="gainHp" val="1.03"/> <!-- Received Increased Heal +3% -->
-    <mul order="0x30" stat="stunVuln" val="0.50"/> <!-- Shock resistance is increased +50% -->
+    <mul order="0x30" stat="stunVuln" val="0.5"/> <!-- Shock resistance is increased +50% -->
   </for>
 </skill>
 <skill id="3349" levels="1" name="Dynasty Breast Plate - Weapon Master">
@@ -457,9 +455,9 @@
     <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
     <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
-    <mul order="0x30" stat="giveHp" val="1.20"/> <!-- Increase amount of heal +20% -->
+    <mul order="0x30" stat="giveHp" val="1.2"/> <!-- Increase amount of heal +20% -->
     <sub order="0x40" stat="cancel" val="15"/> <!-- Decrease magic cancel rate -15% -->
-   </for>
+  </for>
 </skill>
 <skill id="3355" levels="1" name="Dynasty Tunic - Enchanter">
   <!-- Done by DJ MELERIX -->

@@ -31,12 +31,7 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="2305" levels="1" name="Primeval Potion">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Improves resistance to various poisons and anesthetics that originate on the Primeval Isle.
-  -->
+  <!-- Improves resistance to various poisons and anesthetics that originate on the Primeval Isle. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -60,36 +55,19 @@
   <set name="target" val="TARGET_SELF"/>
 </skill>
 <skill id="2307" levels="1" name="Remove Petrification Scroll">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      none
-  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="2308" levels="36" name="Event Item">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-36 Name - Event Item
-  -->
+  <!-- Lvl 1-36 Name - Event Item -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="2309" levels="1" name="Pig Chest">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1 - none
-  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -236,12 +214,6 @@
   </for>
 </skill>
 <skill id="2320" levels="1" name="Blessed Scroll of Escape - Event Use">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1 - none
-  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -249,7 +221,7 @@
 </skill>
 <skill id="2321" levels="1" name="Blessed Scroll of Resurrection - Event Use">
   <!-- Needs to be verified -->
-  <set name="power" val="100.0"/>
+  <set name="power" val="100"/>
   <set name="target" val="TARGET_CORPSE_PLAYER"/>
   <set name="hitTime" val="3000"/>
   <set name="skillType" val="RESURRECT"/>
@@ -258,84 +230,42 @@
   <set name="effectRange" val="600"/>
 </skill>
 <skill id="2322" levels="1" name="Chest Key - For Events Only">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1 - none
-  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="2323" levels="1" name="Red Sage's Stone">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1 - none
-  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="2324" levels="1" name="Blue Sage's Stone">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1 - none
-  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="2325" levels="1" name="Orange Sage's Stone">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1 - none
-  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="2326" levels="1" name="Black Sage's Stone">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1 - none
-  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="2327" levels="1" name="White Sage's Stone">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1 - none
-  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="2328" levels="1" name="Green Sage's Stone">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1 - none
-  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -388,7 +318,7 @@
   <set name="buffDuration" val="600000"/>
   <for>
     <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="element_potion">
-      <mul order="0x30" stat="fireVuln" val="0.70"/>
+      <mul order="0x30" stat="fireVuln" val="0.7"/>
     </effect>
   </for>
 </skill>
@@ -403,7 +333,7 @@
   <set name="buffDuration" val="600000"/>
   <for>
     <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="element_potion">
-      <mul order="0x30" stat="waterVuln" val="0.70"/>
+      <mul order="0x30" stat="waterVuln" val="0.7"/>
     </effect>
   </for>
 </skill>
@@ -418,7 +348,7 @@
   <set name="buffDuration" val="600000"/>
   <for>
     <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="element_potion">
-      <mul order="0x30" stat="windVuln" val="0.70"/>
+      <mul order="0x30" stat="windVuln" val="0.7"/>
     </effect>
   </for>
 </skill>
@@ -433,7 +363,7 @@
   <set name="buffDuration" val="600000"/>
   <for>
     <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="element_potion">
-      <mul order="0x30" stat="earthVuln" val="0.70"/>
+      <mul order="0x30" stat="earthVuln" val="0.7"/>
     </effect>
   </for>
 </skill>
@@ -448,7 +378,7 @@
   <set name="buffDuration" val="600000"/>
   <for>
     <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="element_potion">
-      <mul order="0x30" stat="holyVuln" val="0.70"/>
+      <mul order="0x30" stat="holyVuln" val="0.7"/>
     </effect>
   </for>
 </skill>
@@ -463,7 +393,7 @@
   <set name="buffDuration" val="600000"/>
   <for>
     <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="element_potion">
-      <mul order="0x30" stat="darkVuln" val="0.70"/>
+      <mul order="0x30" stat="darkVuln" val="0.7"/>
     </effect>
   </for>
 </skill>
@@ -640,7 +570,7 @@
   <set name="reuseDelay" val="8000"/> <!-- unknown -->
   <set name="skillType" val="AGGREDUCE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="itemConsumeId" val="9689" />
+  <set name="itemConsumeId" val="9689"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="900"/>

@@ -709,24 +709,14 @@
   </for>
 </skill>
 <skill id="3253" levels="10" name="Item Skill: Acrobatics">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Passive: Increases the height from which you can jump without sustaining damage when equipped.
-  -->
+  <!-- Lvl 1-10 - Passive: Increases the height from which you can jump without sustaining damage when equipped. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="3254" levels="10" name="Item Skill: Iron Body">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Lvl 1-10 - Passive: Raises resistance to damage from falling when equipped.
-  -->
+  <!-- Lvl 1-10 - Passive: Raises resistance to damage from falling when equipped. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -796,7 +786,7 @@
   <set name="magicLvl" val="1"/> <!-- Guessing -->
   <set name="mpConsume" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="0"/>
   <set name="reuseDelay" val="10000"/> <!-- Guessing -->
   <set name="skillType" val="PDAM"/>
   <set name="target" val="TARGET_ONE"/>
@@ -810,7 +800,7 @@
   <set name="magicLvl" val="1"/> <!-- Guessing -->
   <set name="mpConsume" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="0"/>
   <set name="reuseDelay" val="10000"/> <!-- Guessing -->
   <set name="skillType" val="PDAM"/>
   <set name="target" val="TARGET_ONE"/>
@@ -824,31 +814,21 @@
   <set name="magicLvl" val="1"/> <!-- Guessing -->
   <set name="mpConsume" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="0.0"/>
+  <set name="power" val="0"/>
   <set name="reuseDelay" val="25000"/> <!-- Guessing -->
   <set name="skillType" val="PDAM"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="weaponsAllowed" val="32"/> <!-- Bow -->
 </skill>
 <skill id="3263" levels="1" name="Blessed Resurrection">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Allows the use of Blessed Resurrection.
-  -->
+  <!-- Allows the use of Blessed Resurrection. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="3264" levels="1" name="Blessed Escape">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Allows the use of Blessed Escape.
-  -->
+  <!-- Allows the use of Blessed Escape. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -867,12 +847,7 @@
   </for>
 </skill>
 <skill id="3266" levels="1" name="Large Fireworks Ability">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      Allows the use of Large Fireworks.
-  -->
+  <!-- Allows the use of Large Fireworks. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -920,7 +895,6 @@
 </skill>
 <skill id="3271" levels="1" name="Blue Talisman of Power">
   <!-- Done by Nekys/ Stats by Goz -->
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -932,7 +906,6 @@
 </skill>
 <skill id="3272" levels="1" name="Blue Talisman of Defense">
   <!-- Done by Nekys/ Stats by Goz -->
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1079,7 +1052,6 @@
 </skill>
 <skill id="3294" levels="1" name="Yellow Talisman of Arcane Power">
   <!-- Done by Nekys/ Stats by Goz -->
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1091,7 +1063,6 @@
 </skill>
 <skill id="3295" levels="1" name="Yellow Talisman of Defense">
   <!-- Done by Nekys/ Stats by Goz -->
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1115,7 +1086,6 @@
 </skill>
 <skill id="3298" levels="1" name="Yellow Talisman of Evasion">
   <!-- Done by Nekys/ Stats by Goz -->
-  <set name="power" val="0.0"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>

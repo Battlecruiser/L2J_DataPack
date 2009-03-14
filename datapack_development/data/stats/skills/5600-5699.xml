@@ -33,7 +33,7 @@
       <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.33">
         <using kind="Dagger"/>
       </mul>
-      <mul order="0x30" stat="blowRate" val="1.10">
+      <mul order="0x30" stat="blowRate" val="1.1">
         <using kind="Dagger"/>
       </mul>
     </effect>
@@ -248,8 +248,8 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.20" stackType="hp_regen_up">
-      <mul order="0x30" stat="regHp" val="1.20"/>
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.2" stackType="hp_regen_up">
+      <mul order="0x30" stat="regHp" val="1.2"/>
     </effect>
   </for>
 </skill>
@@ -291,7 +291,7 @@
   <set name="effectRange" val="900"/>
   <for>
     <effect count="1" name="Buff" time="3600" val="0" stackOrder="4" stackType="casting_time_down">
-      <mul order="0x30" stat="mAtkSpd" val="1.30"/>
+      <mul order="0x30" stat="mAtkSpd" val="1.3"/>
     </effect>
   </for>
 </skill>
@@ -340,7 +340,7 @@
 <skill id="5638" levels="4" name="Feline Queen - Bless the Body">
   <!-- Done by DJ MELERIX -->
   <table name="#aggro"> 495 532 597 646 </table>
-  <table name="#maxHp"> 1.20 1.25 1.30 1.35 </table>
+  <table name="#maxHp"> 1.2 1.25 1.3 1.35 </table>
   <table name="#mpConsume"> 48 52 60 67 </table>
   <set name="aggroPoints" val="#aggro"/>
   <set name="castRange" val="400"/>
@@ -361,7 +361,7 @@
 <skill id="5639" levels="4" name="Feline Queen - Bless the Soul">
   <!-- Done by DJ MELERIX -->
   <table name="#aggro"> 495 532 582 635 </table>
-  <table name="#maxMp"> 1.20 1.25 1.30 1.35 </table>
+  <table name="#maxMp"> 1.2 1.25 1.3 1.35 </table>
   <table name="#mpConsume"> 48 52 58 65 </table>
   <set name="aggroPoints" val="#aggro"/>
   <set name="castRange" val="400"/>
@@ -425,8 +425,8 @@
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.30" stackType="casting_time_down">
-      <mul order="0x30" stat="mAtkSpd" val="1.30"/>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.3" stackType="casting_time_down">
+      <mul order="0x30" stat="mAtkSpd" val="1.3"/>
     </effect>
   </for>
 </skill>
@@ -465,7 +465,7 @@
 </skill>
 <skill id="5647" levels="3" name="Unicorn Seraphim - Clarity">
   <!-- Done by DJ MELERIX -->
-  <table name="#MpConsumeRate"> 0.96 0.92 0.90 </table>
+  <table name="#MpConsumeRate"> 0.96 0.92 0.9 </table>
   <table name="#mpConsume"> 54 62 69 </table>
   <table name="#SpiritOre"> 1 2 3 </table>
   <set name="castRange" val="400"/>
@@ -528,7 +528,7 @@
 <skill id="5652" levels="3" name="Nightshade - Death Whisper">
   <!-- Done by DJ MELERIX -->
   <table name="#aggro"> 379 457 532 </table>
-  <table name="#cAtk"> 1.30 1.32 1.35 </table>
+  <table name="#cAtk"> 1.3 1.32 1.35 </table>
   <table name="#mpConsume"> 35 44 52 </table>
   <set name="aggroPoints" val="#aggro"/>
   <set name="castRange" val="400"/>
@@ -550,7 +550,7 @@
   <!-- Done by DJ MELERIX -->
   <table name="#aggro"> 418 495 </table>
   <table name="#mpConsume"> 39 48 </table>
-  <table name="#rCrit"> 0.25 0.30 </table>
+  <table name="#rCrit"> 0.25 0.3 </table>
   <set name="aggroPoints" val="#aggro"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
