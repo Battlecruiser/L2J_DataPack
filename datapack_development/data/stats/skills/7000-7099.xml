@@ -7,7 +7,7 @@
   <set name="castRange" val="0"/>
 </skill>
 <skill id="7001" levels="1" name="Dispel Buff">
-  <set name="magicLevel" val="99"/>
+  <set name="magicLvl" val="99"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="NEGATE"/>
   <set name="negateStats" val="BUFF"/>
@@ -17,7 +17,7 @@
   <set name="aggroPoints" val="100"/>
 </skill>
 <skill id="7002" levels="1" name="Dispel Debuff">
-  <set name="magicLevel" val="99"/>
+  <set name="magicLvl" val="99"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="NEGATE"/>
   <set name="negateStats" val="DEBUFF"/>
@@ -27,7 +27,7 @@
   <set name="aggroPoints" val="100"/>
 </skill>
 <skill id="7003" levels="1" name="Dispel All">
-  <set name="magicLevel" val="99"/>
+  <set name="magicLvl" val="99"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="NEGATE"/>
   <set name="negateStats" val="BUFF DEBUFF"/>
@@ -37,7 +37,7 @@
   <set name="aggroPoints" val="100"/>
 </skill>
 <skill id="7004" levels="2" name="Dispel Petrification">
-  <set name="magicLevel" val="60"/>
+  <set name="magicLvl" val="60"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NEGATE"/>
   <set name="negateLvl" val="2"/>
@@ -50,7 +50,7 @@
   <set name="aggroPoints" val="566"/>
 </skill>
 <skill id="7005" levels="4" name="Greater Chant of Vampire">
-  <set name="magicLevel" val="74"/>
+  <set name="magicLvl" val="74"/>
   <set name="mpInitialConsume" val="55"/>
   <set name="mpConsume" val="217"/>
   <set name="target" val="TARGET_CLAN"/>
@@ -241,7 +241,6 @@
   </for>
 </skill>
 <skill id="7030" levels="1" name="Summon King Bugbear">
-  <table name="#itemConsumeCount"> 8 </table>
   <set name="itemConsumeId" val="1458"/>
   <set name="mpConsume" val="3"/>
   <set name="itemConsumeSteps" val="0"/>
@@ -249,7 +248,7 @@
   <set name="summonTimeLostIdle" val="500"/>
   <set name="summonTimeLostActive" val="1000"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="itemConsumeCount" val="#itemConsumeCount"/>
+  <set name="itemConsumeCount" val="8"/>
   <set name="reuseDelay" val="18600000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="SUMMON"/>
@@ -262,7 +261,6 @@
   <set name="expPenalty" val="0.3"/>
 </skill>
 <skill id="7031" levels="1" name="Summon Skeleton Royal Guard">
-  <table name="#itemConsumeCount"> 8 </table>
   <set name="itemConsumeId" val="1458"/>
   <set name="mpConsume" val="3"/>
   <set name="itemConsumeSteps" val="0"/>
@@ -270,7 +268,7 @@
   <set name="summonTimeLostIdle" val="500"/>
   <set name="summonTimeLostActive" val="1000"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="itemConsumeCount" val="#itemConsumeCount"/>
+  <set name="itemConsumeCount" val="8"/>
   <set name="reuseDelay" val="18600000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="SUMMON"/>
@@ -283,7 +281,6 @@
   <set name="expPenalty" val="0.3"/>
 </skill>
 <skill id="7032" levels="1" name="Summon Hunter Gargoyle">
-  <table name="#itemConsumeCount"> 8 </table>
   <set name="itemConsumeId" val="1458"/>
   <set name="mpConsume" val="3"/>
   <set name="itemConsumeSteps" val="0"/>
@@ -291,7 +288,7 @@
   <set name="summonTimeLostIdle" val="500"/>
   <set name="summonTimeLostActive" val="1000"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="itemConsumeCount" val="#itemConsumeCount"/>
+  <set name="itemConsumeCount" val="8"/>
   <set name="reuseDelay" val="18600000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="SUMMON"/>
@@ -304,96 +301,48 @@
   <set name="expPenalty" val="0.3"/>
 </skill>
 <skill id="7033" levels="1" name="not_used">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      none
-  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="7034" levels="1" name="not_used">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      none
-  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="7035" levels="1" name="not_used">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      none
-  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="7036" levels="1" name="not_used">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      none
-  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="7037" levels="1" name="not_used">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      none
-  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="7038" levels="1" name="not_used">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      none
-  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="7039" levels="1" name="not_used">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      none
-  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="7040" levels="1" name="not_used">
-  <!--
-  Needs to be finished.
-  Target is set to TARGET_NONE, skillType to NOTDONE for server compatability.
-  Description(s):
-      none
-  -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -403,7 +352,6 @@
 <!-- Edit by Shaka for L2J Project - 01/28/2008 -->
 <skill id="7041" levels="1" name="Master's Blessing - Focus">
   <!-- A GM is always by your side. Increases critical attack rate temporarily. Effect 3. -->
-  <table name="#Tab-rCrit"> 0.3 </table>
   <set name="mpConsume" val="2"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
@@ -414,14 +362,13 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="300" val="0" stackOrder="#Tab-rCrit" stackType="critical_prob_up">
-      <basemul order="0x30" stat="rCrit" val="#Tab-rCrit"/>
+    <effect count="1" name="Buff" time="300" val="0" stackOrder="0.3" stackType="critical_prob_up">
+      <basemul order="0x30" stat="rCrit" val="0.3"/>
     </effect>
   </for>
 </skill>
 <skill id="7042" levels="1" name="Master's Blessing - Death Whisper">
   <!-- A GM is always by your side. Increases critical attack rate temporarily. Effect 3. -->
-  <table name="#Tab-cAtk"> 1.35 </table>
   <set name="mpConsume" val="2"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
@@ -432,14 +379,13 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="300" val="0" stackOrder="#Tab-cAtk" stackType="critical_dmg_up">
-      <mul order="0x30" stat="cAtk" val="#Tab-cAtk"/>
+    <effect count="1" name="Buff" time="300" val="0" stackOrder="1.35" stackType="critical_dmg_up">
+      <mul order="0x30" stat="cAtk" val="1.35"/>
     </effect>
   </for>
 </skill>
 <skill id="7043" levels="1" name="Master's Blessing - Haste">
   <!-- A GM is always by your side. Increases Atk. Spd. temporarily. Effect 2. -->
-  <table name="#Tab-pAtkSpd"> 1.33 </table>
   <set name="mpConsume" val="2"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
@@ -450,14 +396,13 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="300" val="0" stackOrder="#Tab-pAtkSpd" stackType="attack_time_down">
-      <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
+    <effect count="1" name="Buff" time="300" val="0" stackOrder="1.33" stackType="attack_time_down">
+      <mul order="0x30" stat="pAtkSpd" val="1.33"/>
     </effect>
   </for>
 </skill>
 <skill id="7044" levels="1" name="Master's Blessing - Guidance">
   <!-- A GM is always by your side. Increases Accuracy temporarily. Effect 3. -->
-  <table name="#Tab-accCombat"> 4 </table>
   <set name="mpConsume" val="2"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
@@ -468,14 +413,13 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect name="Buff" time="300" count="1" val="0" stackOrder="#Tab-accCombat" stackType="hit_up">
-      <add order="0x40" stat="accCombat" val="#Tab-accCombat"/>
+    <effect name="Buff" time="300" count="1" val="0" stackOrder="4" stackType="hit_up">
+      <add order="0x40" stat="accCombat" val="4"/>
     </effect>
   </for>
 </skill>
 <skill id="7045" levels="1" name="Master's Blessing - Blessed Body">
   <!-- A GM is always by your side. Increases maximum HP temporarily. Effect 6. -->
-  <table name="#Tab-maxHp"> 1.35 </table>
   <set name="mpConsume" val="2"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
@@ -486,14 +430,13 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="300" val="0" stackOrder="#Tab-maxHp" stackType="max_hp_up">
-      <mul order="0x30" stat="maxHp" val="#Tab-maxHp"/>
+    <effect count="1" name="Buff" time="300" val="0" stackOrder="1.35" stackType="max_hp_up">
+      <mul order="0x30" stat="maxHp" val="1.35"/>
     </effect>
   </for>
 </skill>
 <skill id="7046" levels="1" name="Master's Blessing - Blessed Soul">
   <!-- A GM is always by your side. Increases maximum MP temporarily. Effect 6. -->
-  <table name="#Tab-maxMp"> 1.35 </table>
   <set name="mpConsume" val="2"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
@@ -504,14 +447,13 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="300" val="0" stackOrder="#Tab-maxMp" stackType="max_mp_up">
-      <mul order="0x30" stat="maxMp" val="#Tab-maxMp"/>
+    <effect count="1" name="Buff" time="300" val="0" stackOrder="1.35" stackType="max_mp_up">
+      <mul order="0x30" stat="maxMp" val="1.35"/>
     </effect>
   </for>
 </skill>
 <skill id="7047" levels="1" name="Master's Blessing - Agility">
   <!-- A GM is always by your side. Increases Evasion temporarily. Effect 3. -->
-  <table name="#Tab-rEvas"> 4 </table>
   <set name="mpConsume" val="2"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
@@ -522,14 +464,13 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="300" val="0" stackOrder="#Tab-rEvas" stackType="rEvas">
-      <add order="0x40" stat="rEvas" val="#Tab-rEvas"/>
+    <effect count="1" name="Buff" time="300" val="0" stackOrder="4" stackType="rEvas">
+      <add order="0x40" stat="rEvas" val="4"/>
     </effect>
   </for>
 </skill>
 <skill id="7048" levels="1" name="Master's Blessing - Acumen">
   <!-- A GM is always by your side. Increases Casting Spd. temporarily. Effect 3. -->
-  <table name="#Tab-mAtkSpd"> 1.3 </table>
   <set name="mpConsume" val="2"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
@@ -540,14 +481,13 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="300" val="0" stackOrder="#Tab-mAtkSpd" stackType="casting_time_down">
-      <mul order="0x30" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
+    <effect count="1" name="Buff" time="300" val="0" stackOrder="1.3" stackType="casting_time_down">
+      <mul order="0x30" stat="mAtkSpd" val="1.3"/>
     </effect>
   </for>
 </skill>
 <skill id="7049" levels="1" name="Master's Blessing - Decrease Weight">
   <!-- A GM is always by your side. Reduces current weight. Effect 3. -->
-  <table name="#Weight"> 9000 </table>
   <set name="mpConsume" val="2"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
@@ -558,14 +498,13 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="300" val="0" stackOrder="#Weight" stackType="Weight">
-      <add order="0x40" stat="maxLoad" val="#Weight"/>
+    <effect count="1" name="Buff" time="300" val="0" stackOrder="9000" stackType="Weight">
+      <add order="0x40" stat="maxLoad" val="9000"/>
     </effect>
   </for>
 </skill>
 <skill id="7050" levels="1" name="Master's Blessing - Might">
   <!-- A GM is always by your side. Increases P. Atk. temporarily. Effect 3. -->
-  <table name="#rate"> 1.15 </table>
   <set name="mpConsume" val="2"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
@@ -576,14 +515,13 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="300" val="0" stackOrder="#rate" stackType="pa_up">
-      <mul order="0x30" stat="pAtk" val="#rate"/>
+    <effect count="1" name="Buff" time="300" val="0" stackOrder="1.15" stackType="pa_up">
+      <mul order="0x30" stat="pAtk" val="1.15"/>
     </effect>
   </for>
 </skill>
 <skill id="7051" levels="1" name="Master's Blessing - Shield">
   <!-- A GM is always by your side. Increases P. Def. temporarily. Effect 3. -->
-  <table name="#rate"> 1.15 </table>
   <set name="mpConsume" val="2"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
@@ -594,14 +532,13 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="300" val="0" stackOrder="#rate" stackType="pd_up">
-      <mul order="0x30" stat="pDef" val="#rate"/>
+    <effect count="1" name="Buff" time="300" val="0" stackOrder="1.15" stackType="pd_up">
+      <mul order="0x30" stat="pDef" val="1.15"/>
     </effect>
   </for>
 </skill>
 <skill id="7052" levels="1" name="Master's Blessing - Magic Barrier">
   <!-- A GM is always by your side. Increases M. Def. temporarily. Effect 3. -->
-  <table name="#Tab-mDef"> 1.3 </table>
   <set name="mpConsume" val="2"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
@@ -612,14 +549,13 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="300" val="0" stackOrder="#Tab-mDef" stackType="MagicDefUp">
-      <mul order="0x30" stat="mDef" val="#Tab-mDef"/>
+    <effect count="1" name="Buff" time="300" val="0" stackOrder="1.3" stackType="MagicDefUp">
+      <mul order="0x30" stat="mDef" val="1.3"/>
     </effect>
   </for>
 </skill>
 <skill id="7053" levels="1" name="Master's Blessing - Vampiric Rage">
   <!-- A GM is always by your side. Temporarily increases the amount of HP absorbed from damage done to a target. Excludes damage from skills or ranged attacks. Effect 4. -->
-  <table name="#Tab-absorbDam"> 9 </table>
   <set name="mpConsume" val="2"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
@@ -630,14 +566,13 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect name="Buff" time="300" count="1" val="0" stackOrder="#Tab-absorbDam" stackType="vampRage">
-      <add order="0x40" stat="absorbDam" val="#Tab-absorbDam"/>
+    <effect name="Buff" time="300" count="1" val="0" stackOrder="9" stackType="vampRage">
+      <add order="0x40" stat="absorbDam" val="9"/>
     </effect>
   </for>
 </skill>
 <skill id="7054" levels="1" name="Master's Blessing - Empower">
   <!-- A GM is always by your side. Increases M. Atk. temporarily. Effect 3. -->
-  <table name="#Tab-mAtk"> 1.75 </table>
   <set name="mpConsume" val="2"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
@@ -648,14 +583,13 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="300" val="0" stackOrder="#Tab-mAtk" stackType="ma_up">
-      <mul order="0x30" stat="mAtk" val="#Tab-mAtk"/>
+    <effect count="1" name="Buff" time="300" val="0" stackOrder="1.75" stackType="ma_up">
+      <mul order="0x30" stat="mAtk" val="1.75"/>
     </effect>
   </for>
 </skill>
 <skill id="7055" levels="1" name="Master's Blessing - Wind Walk">
   <!-- A GM is always by your side. Increases Speed temporarily. Effect 2. -->
-  <table name="#Tab-runSpd"> 33 </table>
   <set name="mpConsume" val="2"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
@@ -666,21 +600,13 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="300" val="0" stackOrder="#Tab-runSpd" stackType="speed_up">
-      <add order="0x40" stat="runSpd" val="#Tab-runSpd"/>
+    <effect count="1" name="Buff" time="300" val="0" stackOrder="33" stackType="speed_up">
+      <add order="0x40" stat="runSpd" val="33"/>
     </effect>
   </for>
 </skill>
 <skill id="7056" levels="1" name="Master's Blessing - Berserker Spirit">
   <!-- A GM is always by your side. Temporarily reduces P. Def., M. Def. and Evasion, and increases P. Atk., M. Atk., Atk. Spd., Casting Spd. and Speed. Effect 2. -->
-  <table name="#Tab-mAtk"> 1.16 </table>
-  <table name="#Tab-pAtk"> 1.08 </table>
-  <table name="#Tab-mDef"> 0.84 </table>
-  <table name="#Tab-pDef"> 0.92 </table>
-  <table name="#Tab-mAtkSpd"> 1.08 </table>
-  <table name="#Tab-pAtkSpd"> 1.08 </table>
-  <table name="#Tab-runSpd"> 8 </table>
-  <table name="#Tab-rEvas"> 4 </table>
   <set name="mpConsume" val="2"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
@@ -692,20 +618,19 @@
   <set name="effectRange" val="400"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="berserk">
-      <mul order="0x30" stat="mAtk" val="#Tab-mAtk"/>
-      <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
-      <mul order="0x30" stat="mDef" val="#Tab-mDef"/>
-      <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
-      <mul order="0x30" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
-      <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
-      <add order="0x40" stat="runSpd" val="#Tab-runSpd"/>
-      <sub order="0x40" stat="rEvas" val="#Tab-rEvas"/>
+      <mul order="0x30" stat="mAtk" val="1.16"/>
+      <mul order="0x30" stat="pAtk" val="1.08"/>
+      <mul order="0x30" stat="mDef" val="0.84"/>
+      <mul order="0x30" stat="pDef" val="0.92"/>
+      <mul order="0x30" stat="mAtkSpd" val="1.08"/>
+      <mul order="0x30" stat="pAtkSpd" val="1.08"/>
+      <add order="0x40" stat="runSpd" val="8"/>
+      <sub order="0x40" stat="rEvas" val="4"/>
     </effect>
   </for>
 </skill>
 <skill id="7057" levels="1" name="Master's Blessing - Greater Might">
   <!-- A GM is always by your side. Temporarily increases the target's P. Atk. Effect 3. -->
-  <table name="#pAtk"> 1.1 </table>
   <set name="mpConsume" val="2"/>
   <set name="magicLvl" val="1"/>
   <set name="hitTime" val="500"/>
@@ -717,13 +642,12 @@
   <set name="effectRange" val="400"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="0" stackType="Great">
-      <mul order="0x30" stat="pAtk" val="#pAtk"/>
+      <mul order="0x30" stat="pAtk" val="1.1"/>
     </effect>
   </for>
 </skill>
 <skill id="7058" levels="1" name="Master's Blessing - Greater Shield">
   <!-- A GM is always by your side.  Temporarily increases the target's P. Def. Effect 3. -->
-  <table name="#rate"> 1.15 </table>
   <set name="mpConsume" val="2"/>
   <set name="magicLvl" val="1"/>
   <set name="hitTime" val="500"/>
@@ -735,13 +659,12 @@
   <set name="effectRange" val="400"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="0" stackType="Great">
-      <mul order="0x30" stat="pDef" val="#rate"/>
+      <mul order="0x30" stat="pDef" val="1.15"/>
     </effect>
   </for>
 </skill>
 <skill id="7059" levels="1" name="Master's Blessing - Wild Magic">
   <!-- A GM is always by your side.  Temporarily increases the critical attack rate for magic attacks. Effect 2. -->
-  <table name="#mCrit"> 1.4 </table>
   <set name="mpConsume" val="2"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
@@ -752,15 +675,13 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect name="Buff" time="300" count="1" val="0" stackOrder="#mCrit" stackType="magic_critical_up">
-      <mul order="0x30" stat="mCritRate" val="#mCrit"/>
+    <effect name="Buff" time="300" count="1" val="0" stackOrder="1.4" stackType="magic_critical_up">
+      <mul order="0x30" stat="mCritRate" val="1.4"/>
     </effect>
   </for>
 </skill>
 <skill id="7060" levels="1" name="Master's Blessing - Clarity">
   <!-- A GM is always by your side. Temporarily decreases the target's MP consumption for skills. Effect 3. -->
-  <table name="#MpConsumeRate"> 0.9 </table>
-  <table name="#mpConsume"> 2 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="1"/>
   <set name="hitTime" val="500"/>
@@ -771,9 +692,9 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="300" val="0" stackOrder="#mpConsume" stackType="MPrate">
-      <mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRate"/>
-      <mul order="0x30" stat="PhysicalMpConsumeRate" val="#MpConsumeRate"/>
+    <effect count="1" name="Buff" time="300" val="0" stackOrder="0.9" stackType="MPrate">
+      <mul order="0x30" stat="MagicalMpConsumeRate" val="0.9"/>
+      <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.9"/>
     </effect>
   </for>
 </skill>
@@ -790,12 +711,12 @@
   <set name="effectRange" val="400"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
-      <mul order="0x30" stat="mAtk" val="1.20"/>
-      <mul order="0x30" stat="mDef" val="1.20"/>
-      <mul order="0x30" stat="mAtkSpd" val="1.20"/>
-      <mul order="0x30" stat="mCritRate" val="1.20"/>
+      <mul order="0x30" stat="mAtk" val="1.2"/>
+      <mul order="0x30" stat="mDef" val="1.2"/>
+      <mul order="0x30" stat="mAtkSpd" val="1.2"/>
+      <mul order="0x30" stat="mCritRate" val="1.2"/>
       <mul order="0x30" stat="regMp" val="1.2"/>
-      <mul order="0x30" stat="runSpd" val="0.80"/>
+      <mul order="0x30" stat="runSpd" val="0.8"/>
       <mul order="0x30" stat="debuffVuln" val="0.9"/>
     </effect>
   </for>
@@ -813,13 +734,13 @@
   <set name="effectRange" val="400"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
-      <mul order="0x30" stat="pAtk" val="1.10"/>
-      <mul order="0x30" stat="pDef" val="1.20"/>
+      <mul order="0x30" stat="pAtk" val="1.1"/>
+      <mul order="0x30" stat="pDef" val="1.2"/>
       <add order="0x40" stat="accCombat" val="4"/>
-      <mul order="0x30" stat="pAtkSpd" val="1.20"/>
-      <mul order="0x30" stat="runSpd" val="0.90"/>
-      <mul order="0x30" stat="maxHp" val="1.20"/>
-      <mul order="0x30" stat="regHp" val="1.20"/>
+      <mul order="0x30" stat="pAtkSpd" val="1.2"/>
+      <mul order="0x30" stat="runSpd" val="0.9"/>
+      <mul order="0x30" stat="maxHp" val="1.2"/>
+      <mul order="0x30" stat="regHp" val="1.2"/>
       <mul order="0x30" stat="debuffVuln" val="0.9"/>
     </effect>
   </for>
@@ -840,7 +761,7 @@
       <add order="0x40" stat="absorbDam" val="5"/>
       <add order="0x40" stat="accCombat" val="4"/>
       <add order="0x40" stat="rEvas" val="4"/>
-      <mul order="0x30" stat="pAtkSpd" val="1.20"/>
+      <mul order="0x30" stat="pAtkSpd" val="1.2"/>
       <mul order="0x30" stat="cAtk" val="1.2">
         <player behind="True"/>
       </mul>
@@ -871,10 +792,10 @@
       <mul order="0x30" stat="pAtkSpd" val="1.2"/>
       <mul order="0x30" stat="mAtkSpd" val="1.2"/>
       <mul order="0x30" stat="cAtk" val="1.2"/>
-      <mul order="0x30" stat="mAtk" val="1.20"/>
-      <mul order="0x30" stat="mDef" val="1.20"/>
+      <mul order="0x30" stat="mAtk" val="1.2"/>
+      <mul order="0x30" stat="mDef" val="1.2"/>
       <mul order="0x30" stat="runSpd" val="0.8"/>
-      <mul order="0x30" stat="maxHp" val="1.20"/>
+      <mul order="0x30" stat="maxHp" val="1.2"/>
       <mul order="0x30" stat="debuffVuln" val="0.8"/>
     </effect>
   </for>

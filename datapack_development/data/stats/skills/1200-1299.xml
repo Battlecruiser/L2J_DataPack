@@ -221,8 +221,6 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="10"/>
-  <for>
-  </for>
 </skill>
 <skill id="1217" levels="33" name="Greater Heal" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -438,7 +436,7 @@
   </for>
 </skill>
 <skill id="1225" levels="18" name="Summon Mew the Cat" enchantLevels1="30">
-  <table name="#enchantNpcId">14177 14178 14179 14180 14181 14182 14183 14184 14185 14186 14187 14188 14189 14190 14191 14192 14193 14194 14195 14196 14197 14198 14199 14200 14201 14202 14203 14204 14205 14206</table>
+  <table name="#enchantNpcId"> 14177 14178 14179 14180 14181 14182 14183 14184 14185 14186 14187 14188 14189 14190 14191 14192 14193 14194 14195 14196 14197 14198 14199 14200 14201 14202 14203 14204 14205 14206 </table>
   <enchant1 name="npcId" val="#enchantNpcId"/>
   <table name="#mpConsume_Init"> 8 9 11 12 14 16 18 19 21 22 22 23 24 25 26 26 27 28 </table>
   <table name="#mpConsume"> 31 35 42 48 56 62 69 75 82 85 88 92 95 98 101 104 106 109 </table>
@@ -465,7 +463,7 @@
   <set name="expPenalty" val="0.9"/>
 </skill>
 <skill id="1226" levels="18" name="Summon Boxer the Unicorn" enchantLevels1="30">
-  <table name="#enchantNpcId">14313 14314 14315 14316 14317 14318 14319 14320 14321 14322 14323 14324 14325 14326 14327 14328 14329 14330 14331 14332 14333 14334 14335 14336 14337 14338 14339 14340 14341 14342</table>
+  <table name="#enchantNpcId"> 14313 14314 14315 14316 14317 14318 14319 14320 14321 14322 14323 14324 14325 14326 14327 14328 14329 14330 14331 14332 14333 14334 14335 14336 14337 14338 14339 14340 14341 14342 </table>
   <enchant1 name="npcId" val="#enchantNpcId"/>
   <table name="#mpConsume_Init"> 8 9 11 12 14 16 18 19 21 22 22 23 24 25 26 26 27 28 </table>
   <table name="#mpConsume"> 31 35 42 48 56 62 69 75 82 85 88 92 95 98 101 104 106 109 </table>
@@ -498,7 +496,7 @@
   <set name="expPenalty" val="#expPenalty"/>
 </skill>
 <skill id="1227" levels="18" name="Summon Mirage the Unicorn" enchantLevels1="30">
-  <table name="#enchantNpcId">14361 14362 14363 14364 14365 14366 14367 14368 14369 14370 14371 14372 14373 14374 14375 14376 14377 14378 14379 14380 14381 14382 14383 14384 14385 14386 14387 14388 14389 14390</table>
+  <table name="#enchantNpcId"> 14361 14362 14363 14364 14365 14366 14367 14368 14369 14370 14371 14372 14373 14374 14375 14376 14377 14378 14379 14380 14381 14382 14383 14384 14385 14386 14387 14388 14389 14390 </table>
   <enchant1 name="npcId" val="#enchantNpcId"/>
   <table name="#mpConsume_Init"> 8 9 11 12 14 16 18 19 21 22 22 23 24 25 26 26 27 28 </table>
   <table name="#mpConsume"> 31 35 42 48 56 62 69 75 82 85 88 92 95 98 101 104 106 109 </table>
@@ -525,7 +523,7 @@
   <set name="expPenalty" val="0.9"/>
 </skill>
 <skill id="1228" levels="18" name="Summon Silhouette" enchantLevels1="30">
-  <table name="#enchantNpcId">14545 14546 14547 14548 14549 14550 14551 14552 14553 14554 14555 14556 14557 14558 14559 14560 14561 14562 14563 14564 14565 14566 14567 14568 14569 14570 14571 14572 14573 14574</table>
+  <table name="#enchantNpcId"> 14545 14546 14547 14548 14549 14550 14551 14552 14553 14554 14555 14556 14557 14558 14559 14560 14561 14562 14563 14564 14565 14566 14567 14568 14569 14570 14571 14572 14573 14574 </table>
   <enchant1 name="npcId" val="#enchantNpcId"/>
   <table name="#mpConsume_Init"> 8 9 11 12 14 16 18 19 21 22 22 23 24 25 26 26 27 28 </table>
   <table name="#mpConsume"> 31 35 42 48 56 62 69 75 82 85 88 92 95 98 101 104 106 109 </table>
@@ -877,7 +875,7 @@
     </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="20.0" stackType="DmgShield">
+    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="20" stackType="DmgShield">
       <add order="0x40" stat="reflectDam" val="20"/>
     </effect>
   </enchant1for>
@@ -1165,8 +1163,8 @@
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
     <effect count="1" name="Debuff" time="120" val="0">
-      <mul stat="mReuse" order="0x30" val="3.0"/>
-      <mul stat="pReuse" order="0x30" val="3.0"/>
+      <mul stat="mReuse" order="0x30" val="3"/>
+      <mul stat="pReuse" order="0x30" val="3"/>
     </effect>
   </for>
 </skill>
@@ -1549,7 +1547,7 @@
   <table name="#ench2MpConsume_Init"> 37 36 36 35 34 34 33 32 32 31 31 30 29 29 28 27 27 26 25 25 24 24 23 22 22 21 20 20 19 19 </table>
   <table name="#Tab-mAtk"> 1.1 1.16 </table>
   <table name="#Tab-pAtk"> 1.05 1.08 </table>
-  <table name="#Tab-mDef"> 0.90 0.84 </table>
+  <table name="#Tab-mDef"> 0.9 0.84 </table>
   <table name="#Tab-pDef"> 0.95 0.92 </table>
   <table name="#Tab-mAtkSpd"> 1.05 1.08 </table>
   <table name="#Tab-pAtkSpd"> 1.05 1.08 </table>
@@ -1756,7 +1754,6 @@
   <table name="#aggro"> 285 418 549 646 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
@@ -1916,7 +1913,7 @@
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
 </skill>
 <skill id="1276" levels="14" name="Summon Kai the Cat" enchantLevels1="30">
-  <table name="#enchantNpcId">14221 14222 14223 14224 14225 14226 14227 14228 14229 14230 14231 14232 14233 14234 14235 14236 14237 14238 14239 14240 14241 14242 14243 14244 14245 14246 14247 14248 14249 14250</table>
+  <table name="#enchantNpcId"> 14221 14222 14223 14224 14225 14226 14227 14228 14229 14230 14231 14232 14233 14234 14235 14236 14237 14238 14239 14240 14241 14242 14243 14244 14245 14246 14247 14248 14249 14250 </table>
   <enchant1 name="npcId" val="#enchantNpcId"/>
   <table name="#mpConsume_Init"> 14 16 18 19 21 22 22 23 24 25 26 26 27 28 </table>
   <table name="#mpConsume"> 56 62 69 75 82 85 88 92 95 98 101 104 106 109 </table>
@@ -1942,12 +1939,12 @@
   <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
   <table name="#npcIds"> 14207 14208 14209 14210 14211 14212 14213 14214 14215 14216 14217 14218 14219 14220 </table>
-  <table name="#expPenalty"> 0.1 0.1 0.1 0.1 0.1 0.1 0.05 0.05 0.05 0.05 0.0 0.0 0.0 0.0 </table>
+  <table name="#expPenalty"> 0.1 0.1 0.1 0.1 0.1 0.1 0.05 0.05 0.05 0.05 0 0 0 0 </table>
   <set name="npcId" val="#npcIds"/>
   <set name="expPenalty" val="#expPenalty"/>
 </skill>
 <skill id="1277" levels="14" name="Summon Merrow the Unicorn" enchantLevels1="30">
-  <table name="#enchantNpcId">14405 14406 14407 14408 14409 14410 14411 14412 14413 14414 14415 14416 14417 14418 14419 14420 14421 14422 14423 14424 14425 14426 14427 14428 14429 14430 14431 14432 14433 14434</table>
+  <table name="#enchantNpcId"> 14405 14406 14407 14408 14409 14410 14411 14412 14413 14414 14415 14416 14417 14418 14419 14420 14421 14422 14423 14424 14425 14426 14427 14428 14429 14430 14431 14432 14433 14434 </table>
   <enchant1 name="npcId" val="#enchantNpcId"/>
   <table name="#mpConsume_Init"> 14 16 18 19 21 22 22 23 24 25 26 26 27 28 </table>
   <table name="#mpConsume"> 56 62 69 75 82 85 88 92 95 98 101 104 106 109 </table>
@@ -1974,12 +1971,12 @@
   <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
   <table name="#npcIds"> 14391 14392 14393 14394 14395 14396 14397 14398 14399 14400 14401 14402 14403 14404 </table>
-  <table name="#expPenalty"> 0.1 0.1 0.1 0.1 0.1 0.1 0.05 0.05 0.05 0.05 0.0 0.0 0.0 0.0 </table>
+  <table name="#expPenalty"> 0.1 0.1 0.1 0.1 0.1 0.1 0.05 0.05 0.05 0.05 0 0 0 0 </table>
   <set name="npcId" val="#npcIds"/>
   <set name="expPenalty" val="#expPenalty"/>
 </skill>
 <skill id="1278" levels="14" name="Summon Soulless" enchantLevels1="30">
-  <table name="#enchantNpcId">14589 14590 14591 14592 14593 14594 14595 14596 14597 14598 14599 14600 14601 14602 14603 14604 14605 14606 14607 14608 14609 14610 14611 14612 14613 14614 14615 14616 14617 14618</table>
+  <table name="#enchantNpcId"> 14589 14590 14591 14592 14593 14594 14595 14596 14597 14598 14599 14600 14601 14602 14603 14604 14605 14606 14607 14608 14609 14610 14611 14612 14613 14614 14615 14616 14617 14618 </table>
   <enchant1 name="npcId" val="#enchantNpcId"/>
   <table name="#mpConsume_Init"> 14 16 18 19 21 22 22 23 24 25 26 26 27 28 </table>
   <table name="#mpConsume"> 56 62 69 75 82 85 88 92 95 98 101 104 106 109 </table>
@@ -2005,7 +2002,7 @@
   <set name="effectRange" val="-1"/>
   <!-- Summon-specific -->
   <table name="#npcIds"> 14575 14576 14577 14578 14579 14580 14581 14582 14583 14584 14585 14586 14587 14588 </table>
-  <table name="#expPenalty"> 0.1 0.1 0.1 0.1 0.1 0.1 0.05 0.05 0.05 0.05 0.0 0.0 0.0 0.0 </table> 
+  <table name="#expPenalty"> 0.1 0.1 0.1 0.1 0.1 0.1 0.05 0.05 0.05 0.05 0 0 0 0 </table> 
   <set name="npcId" val="#npcIds"/> 
   <set name="expPenalty" val="#expPenalty"/>
 </skill>
@@ -2032,7 +2029,7 @@
   <set name="activationtime" val="14"/>
   <set name="activationchance" val="55"/>
   <set name="summonTotalLifeTime" val="900000"/>
-  <set name="expPenalty" val="0.0"/>
+  <set name="expPenalty" val="0"/>
   <set name="isCubic" val="true"/>
 </skill>
 <skill id="1280" levels="9" name="Summon Aqua Cubic">
@@ -2059,7 +2056,7 @@
   <set name="activationtime" val="14"/> <!-- guessed -->
   <set name="activationchance" val="67"/> <!-- guessed -->
   <set name="summonTotalLifeTime" val="900000"/>
-  <set name="expPenalty" val="0.0"/>
+  <set name="expPenalty" val="0"/>
   <set name="isCubic" val="true"/>
 </skill>
 <skill id="1281" levels="9" name="Summon Spark Cubic">
@@ -2085,7 +2082,7 @@
   <set name="activationtime" val="14"/> <!-- guessed -->
   <set name="activationchance" val="55"/> <!-- guessed -->
   <set name="summonTotalLifeTime" val="900000"/>
-  <set name="expPenalty" val="0.0"/>
+  <set name="expPenalty" val="0"/>
   <set name="isCubic" val="true"/>
 </skill>
 <skill id="1282" levels="2" name="Pa'agrian Haste" enchantLevels1="30" enchantLevels2="30" >
@@ -2125,7 +2122,7 @@
   </enchant1for>
 </skill>
 <skill id="1283" levels="13" name="Soul Guard">
-  <table name="#def"> 293.3 333.2 375.9 421.4 445.2 469.7 494.9 520.1 546.0 571.9 598.5 625.8 653.1 </table>
+  <table name="#def"> 293.3 333.2 375.9 421.4 445.2 469.7 494.9 520.1 546 571.9 598.5 625.8 653.1 </table>
   <table name="#mpRegen-sub"> 15 18 18 21 24 24 24 24 27 27 27 30 30 </table>
   <table name="#mpConsume_Init"> 8 9 10 11 11 11 12 12 13 13 13 14 14 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
@@ -2172,7 +2169,7 @@
     </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="20.0" stackType="DmgShield">
+    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="20" stackType="DmgShield">
       <add order="0x40" stat="reflectDam" val="20"/>
     </effect>
   </enchant1for>
@@ -2420,7 +2417,7 @@
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
 </skill>
 <skill id="1297" levels="6" name="Clear Mind">
-  <table name="#Tab-regMp-Walk"> 3.2 4.0 4.3 5.1 5.8 6.2 </table>
+  <table name="#Tab-regMp-Walk"> 3.2 4 4.3 5.1 5.8 6.2 </table>
   <table name="#Tab-regMp-Stand"> 2.6 3.2 3.5 4.1 4.7 4.9 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>

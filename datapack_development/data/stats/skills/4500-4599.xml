@@ -154,8 +154,8 @@
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
-    <mul order="0x30" stat="runSpd" val="0.50"/>
-    <mul order="0x30" stat="pAtk" val="0.50"/>
+    <mul order="0x30" stat="runSpd" val="0.5"/>
+    <mul order="0x30" stat="pAtk" val="0.5"/>
     <mul order="0x30" stat="pDef" val="10"/>
   </for>
 </skill>
@@ -167,9 +167,9 @@
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
-    <mul order="0x30" stat="pAtkSpd" val="1.30"/>
-    <mul order="0x30" stat="pAtk" val="1.30"/>
-    <mul order="0x30" stat="pDef" val="0.50"/>
+    <mul order="0x30" stat="pAtkSpd" val="1.3"/>
+    <mul order="0x30" stat="pAtk" val="1.3"/>
+    <mul order="0x30" stat="pDef" val="0.5"/>
   </for>
 </skill>
 <skill id="4519" levels="1" name="Quest - BOSS Defend">
@@ -181,8 +181,8 @@
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
-    <mul order="0x30" stat="runSpd" val="0.50"/>
-    <mul order="0x30" stat="bowWpnVuln" val="0.10"/>
+    <mul order="0x30" stat="runSpd" val="0.5"/>
+    <mul order="0x30" stat="bowWpnVuln" val="0.1"/>
   </for>
 </skill>
 <skill id="4520" levels="1" name="Quest - BOSS Rampage">
@@ -194,8 +194,8 @@
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
-    <mul order="0x30" stat="runSpd" val="0.70"/>
-    <mul order="0x30" stat="bowWpnVuln" val="1.10"/>
+    <mul order="0x30" stat="runSpd" val="0.7"/>
+    <mul order="0x30" stat="bowWpnVuln" val="1.1"/>
   </for>
 </skill>
 <skill id="4521" levels="1" name="Quest - BOSS Resist non Bow Weapon">
@@ -207,12 +207,12 @@
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
-    <mul order="0x30" stat="swordWpnVuln" val="0.0"/>
-    <mul order="0x30" stat="bluntWpnVuln" val="0.0"/>
-    <mul order="0x30" stat="daggerWpnVuln" val="0.0"/>
-    <mul order="0x30" stat="poleWpnVuln" val="0.0"/>
-    <mul order="0x30" stat="dualFistWpnVuln" val="0.0"/>
-    <mul order="0x30" stat="dualWpnVuln" val="0.0"/>
+    <mul order="0x30" stat="swordWpnVuln" val="0"/>
+    <mul order="0x30" stat="bluntWpnVuln" val="0"/>
+    <mul order="0x30" stat="daggerWpnVuln" val="0"/>
+    <mul order="0x30" stat="poleWpnVuln" val="0"/>
+    <mul order="0x30" stat="dualFistWpnVuln" val="0"/>
+    <mul order="0x30" stat="dualWpnVuln" val="0"/>
   </for>
 </skill>
 <skill id="4522" levels="1" name="Eye of Assassin">
@@ -226,7 +226,7 @@
   <set name="target" val="TARGET_ONE"/>
   <for>
     <effect name="Buff" time="600" count="1" val="0">
-      <basemul order="0x30" stat="rCrit" val="1.0">
+      <basemul order="0x30" stat="rCrit" val="1">
         <player behind="True"/>
       </basemul>
       <!-- Missing bonus for Rapier -->
@@ -276,7 +276,7 @@
   <for>
     <mul order="0x30" stat="pDef" val="10"/>
     <mul order="0x30" stat="mDef" val="10"/>
-    <mul order="0x30" stat="sleepVuln" val="0.30"/>
+    <mul order="0x30" stat="sleepVuln" val="0.3"/>
   </for>
 </skill>
 <skill id="4526" levels="1" name="Quest - BOSS Summon">
@@ -286,7 +286,7 @@
   <set name="isMagic" val="true"/>
   <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="0.10"/>
+  <set name="power" val="0.1"/>
   <set name="skillType" val="HEAL_PERCENT"/>
   <set name="target" val="TARGET_SELF"/>
 </skill>
@@ -303,7 +303,7 @@
   <set name="target" val="TARGET_ONE"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
-      <mul order="0x30" stat="maxHp" val="1.30"/>
+      <mul order="0x30" stat="maxHp" val="1.3"/>
     </effect>
   </for>
 </skill>
@@ -388,7 +388,7 @@
   <set name="target" val="TARGET_ONE"/>
   <for>
     <effect count="1" name="Debuff" time="600" val="0" stackOrder="1" stackType="dance_of_inspiration">
-      <mul order="0x30" stat="runSpd" val="0.50"/>
+      <mul order="0x30" stat="runSpd" val="0.5"/>
       <sub order="0x40" stat="accCombat" val="40"/>
     </effect>
   </for>
@@ -406,7 +406,7 @@
   <set name="target" val="TARGET_ONE"/>
   <for>
     <effect count="1" name="Debuff" time="600" val="0" stackOrder="1" stackType="dance_of_fury">
-      <mul order="0x30" stat="pAtkSpd" val="0.70"/>
+      <mul order="0x30" stat="pAtkSpd" val="0.7"/>
       <sub order="0x40" stat="rEvas" val="40"/>
     </effect>
   </for>
@@ -442,7 +442,7 @@
   <set name="target" val="TARGET_ONE"/>
   <for>
     <effect count="1" name="Debuff" time="600" val="0" stackOrder="1" stackType="song_of_wind">
-      <mul order="0x30" stat="runSpd" val="0.50"/>
+      <mul order="0x30" stat="runSpd" val="0.5"/>
       <sub order="0x40" stat="accCombat" val="40"/>
     </effect>
   </for>
@@ -460,7 +460,7 @@
   <set name="target" val="TARGET_ONE"/>
   <for>
     <effect count="1" name="Debuff" time="600" val="0" stackOrder="1" stackType="song_of_water">
-      <mul order="0x30" stat="pAtkSpd" val="0.70"/>
+      <mul order="0x30" stat="pAtkSpd" val="0.7"/>
       <sub order="0x40" stat="rEvas" val="40"/>
     </effect>
   </for>
@@ -497,7 +497,7 @@
   <set name="target" val="TARGET_ONE"/>
   <for>
     <effect count="1" name="Debuff" time="600" val="0" stackOrder="1" stackType="hit_up">
-      <mul order="0x30" stat="runSpd" val="0.50"/>
+      <mul order="0x30" stat="runSpd" val="0.5"/>
       <sub order="0x40" stat="accCombat" val="40"/>
     </effect>
   </for>
@@ -516,8 +516,8 @@
   <set name="target" val="TARGET_ONE"/>
   <for>
     <effect count="1" name="Debuff" time="600" val="0" stackOrder="1" stackType="pd_up">
-      <mul order="0x30" stat="pDef" val="0.50"/>
-      <mul order="0x30" stat="runSpd" val="0.50"/>
+      <mul order="0x30" stat="pDef" val="0.5"/>
+      <mul order="0x30" stat="runSpd" val="0.5"/>
     </effect>
   </for>
 </skill>
@@ -536,7 +536,7 @@
   <for>
     <effect count="1" name="Debuff" time="600" val="0" stackOrder="1" stackType="pa_up">
       <mul order="0x30" stat="pAtk" val="0.5"/>
-      <mul order="0x30" stat="pAtkSpd" val="0.50"/>
+      <mul order="0x30" stat="pAtkSpd" val="0.5"/>
       <mul order="0x30" stat="mAtk" val="0.5"/>
     </effect>
   </for>
@@ -550,8 +550,8 @@
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
-    <mul order="0x30" stat="sleepVuln" val="1.90"/>
-    <mul order="0x30" stat="stunVuln" val="1.90"/>
+    <mul order="0x30" stat="sleepVuln" val="1.9"/>
+    <mul order="0x30" stat="stunVuln" val="1.9"/>
   </for>
 </skill>
 <skill id="4543" levels="1" name="Quest - BOSS Stun Weakness">
@@ -563,14 +563,14 @@
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
-    <mul order="0x30" stat="stunVuln" val="1.10"/>
+    <mul order="0x30" stat="stunVuln" val="1.1"/>
   </for>
 </skill>
 <skill id="4544" levels="3" name="Quest - BOSS Weakness">
   <!-- Done by DJ MELERIX -->
-  <table name="#pDef"> 0.80 0.60 0.70 </table>
-  <table name="#pAtkSpd"> 0.90 0.80 0.60 </table>
-  <table name="#pAtk"> 0.70 0.60 0.50 </table>
+  <table name="#pDef"> 0.8 0.6 0.7 </table>
+  <table name="#pAtkSpd"> 0.9 0.8 0.6 </table>
+  <table name="#pAtk"> 0.7 0.6 0.5 </table>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
@@ -597,7 +597,7 @@
   <for>
     <add order="0x40" stat="reflectDam" val="100"/>
     <mul order="0x30" stat="pDef" val="10"/>
-    <mul order="0x30" stat="runSpd" val="0.70"/>
+    <mul order="0x30" stat="runSpd" val="0.7"/>
   </for>
 </skill>
 <skill id="4546" levels="1" name="Quest - Commune to Slate">
@@ -669,10 +669,10 @@
   <set name="effectRange" val="1100"/>
   <set name="aggroPoints" val="-100"/>
   <for>
-   <effect count="1" name="Debuff" time="3600" val="0" abnormal="poison"> <!-- needs core support for abnormal = spa_disease_a -->
-     <mul order="0x30" stat="pDef" val="#pDef"/>
-     <add order="0x40" stat="rCrit" val="#rCrit"/>
-   </effect>
+    <effect count="1" name="Debuff" time="3600" val="0" abnormal="poison"> <!-- needs core support for abnormal = spa_disease_a -->
+      <mul order="0x30" stat="pDef" val="#pDef"/>
+      <add order="0x40" stat="rCrit" val="#rCrit"/>
+    </effect>
   </for>
 </skill>
 <skill id="4552" levels="10" name="Hot Springs Cholera">
@@ -691,10 +691,10 @@
   <set name="effectRange" val="1100"/>
   <set name="aggroPoints" val="-100"/>
   <for>
-   <effect count="1" name="Debuff" time="3600" val="0" abnormal="poison"> <!-- needs core support for abnormal = spa_disease_b -->
-     <sub order="0x40" stat="rEvas" val="#rEvas"/>
-     <add order="0x40" stat="accCombat" val="#accCombat"/>
-   </effect>
+    <effect count="1" name="Debuff" time="3600" val="0" abnormal="poison"> <!-- needs core support for abnormal = spa_disease_b -->
+      <sub order="0x40" stat="rEvas" val="#rEvas"/>
+      <add order="0x40" stat="accCombat" val="#accCombat"/>
+    </effect>
   </for>
 </skill>
 <skill id="4553" levels="10" name="Hot Springs Flu">
@@ -750,11 +750,11 @@
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
-    <mul order="0x30" stat="poisonVuln" val="0.80"/>
-    <mul order="0x30" stat="bleedVuln" val="0.80"/>
-    <mul order="0x30" stat="rootVuln" val="0.80"/>
-    <mul order="0x30" stat="stunVuln" val="0.80"/>
-    <mul order="0x30" stat="paralyzeVuln" val="0.80"/>
+    <mul order="0x30" stat="poisonVuln" val="0.8"/>
+    <mul order="0x30" stat="bleedVuln" val="0.8"/>
+    <mul order="0x30" stat="rootVuln" val="0.8"/>
+    <mul order="0x30" stat="stunVuln" val="0.8"/>
+    <mul order="0x30" stat="paralyzeVuln" val="0.8"/>
   </for>
 </skill>
 <skill id="4556" levels="1" name="Dispel Hot Spring Disease A_D">
@@ -1178,7 +1178,7 @@
   </for>
 </skill>
 <skill id="4580" levels="12" name="Decrease P.Atk">
-  <table name="#Tab-pAtk"> 0.83 0.80 0.80 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+  <table name="#Tab-pAtk"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
   <table name="#mpConsume"> 24 39 54 73 94 116 136 144 152 158 161 163 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
@@ -1246,7 +1246,7 @@
 </skill>
 <skill id="4583" levels="12" name="Decrease Speed">
   <table name="#mpConsume"> 36 59 82 111 143 176 206 220 231 239 244 247 </table>
-  <table name="#Tab-runSpd"> 0.83 0.80 0.80 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+  <table name="#Tab-runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="2"/>
@@ -1269,7 +1269,7 @@
 </skill>
 <skill id="4584" levels="12" name="Reducing P. Def Shock">
   <table name="#mpConsume"> 24 39 54 73 94 116 136 144 152 158 161 163 </table>
-  <table name="#pDef"> 0.83 0.80 0.80 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+  <table name="#pDef"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1296,11 +1296,11 @@
   <table name="#mpConsume"> 23 42 78 </table>
   <table name="#pAtk"> 1.13 1.18 1.24 </table>
   <table name="#pAtkSpd"> 1.05 1.05 1.08 </table>
-  <table name="#mAtk"> 1.10 1.10 1.16 </table>
+  <table name="#mAtk"> 1.1 1.1 1.16 </table>
   <table name="#mAtkSpd"> 1.05 1.05 1.08 </table>
   <table name="#runSpd"> 5 5 8 </table>
   <table name="#pDef"> 0.95 0.95 0.92 </table>
-  <table name="#mDef"> 0.90 0.90 0.84 </table>
+  <table name="#mDef"> 0.9 0.9 0.84 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1352,7 +1352,7 @@
 <skill id="4587" levels="12" name="Decrease P.Atk">
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-  <table name="#Tab-pAtk"> 0.83 0.80 0.80 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+  <table name="#Tab-pAtk"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
   <table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
@@ -1379,12 +1379,12 @@
   <table name="#mpInitialConsume"> 8 20 </table>
   <table name="#mpConsume"> 32 78 </table>
   <table name="#pAtk"> 1.05 1.08 </table>
-  <table name="#pAtkSpd"> 1.20 1.44 </table>
-  <table name="#mAtk"> 1.10 1.16 </table>
+  <table name="#pAtkSpd"> 1.2 1.44 </table>
+  <table name="#mAtk"> 1.1 1.16 </table>
   <table name="#mAtkSpd"> 1.05 1.08 </table>
   <table name="#runSpd"> 5 8 </table>
   <table name="#pDef"> 0.95 0.92 </table>
-  <table name="#mDef"> 0.90 0.84 </table>
+  <table name="#mDef"> 0.9 0.84 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1412,7 +1412,7 @@
 </skill>
 <skill id="4589" levels="12" name="Decrease Speed">
   <table name="#mpConsume"> 35 58 79 105 135 165 194 207 217 224 229 233 </table>
-  <table name="#Tab-runSpd"> 0.83 0.80 0.80 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+  <table name="#Tab-runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
@@ -1435,7 +1435,7 @@
 </skill>
 <skill id="4590" levels="12" name="Decrease Speed">
   <table name="#mpConsume"> 35 58 79 105 135 165 194 207 217 224 229 233 </table>
-  <table name="#Tab-runSpd"> 0.83 0.80 0.80 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+  <table name="#Tab-runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
@@ -1458,7 +1458,7 @@
 </skill>
 <skill id="4591" levels="12" name="Decrease Speed">
   <table name="#mpConsume"> 35 58 79 105 135 165 194 207 217 224 229 233 </table>
-  <table name="#Tab-runSpd"> 0.83 0.80 0.80 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+  <table name="#Tab-runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
@@ -1481,7 +1481,7 @@
 </skill>
 <skill id="4592" levels="12" name="Decrease P. Def">
   <table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
-  <table name="#Tab-pDef"> 0.83 0.80 0.80 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+  <table name="#Tab-pDef"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
   <set name="magicLvl" val="#magicLvl"/>
@@ -1505,7 +1505,7 @@
 </skill>
 <skill id="4593" levels="12" name="Decrease P. Def">
   <table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
-  <table name="#Tab-pDef"> 0.83 0.80 0.80 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+  <table name="#Tab-pDef"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
   <set name="magicLvl" val="#magicLvl"/>
@@ -1529,7 +1529,7 @@
 </skill>
 <skill id="4594" levels="12" name="Decrease P. Def">
   <table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
-  <table name="#Tab-pDef"> 0.83 0.80 0.80 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+  <table name="#Tab-pDef"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
   <set name="magicLvl" val="#magicLvl"/>
@@ -1556,7 +1556,7 @@
   <table name="#magicLvl"> 20 40 70 </table>
   <table name="#mpInitialConsume"> 6 11 20 </table>
   <table name="#mpConsume"> 23 42 78 </table>
-  <table name="#mAtkSpd"> 1.15 1.23 1.30 </table>
+  <table name="#mAtkSpd"> 1.15 1.23 1.3 </table>
   <table name="#pDef"> 1.08 1.12 1.15 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpInitialConsume" val="#mpInitialConsume"/>
@@ -1655,7 +1655,7 @@
 </skill>
 <skill id="4599" levels="12" name="Decrease Speed">
   <table name="#mpConsume"> 35 58 81 109 141 174 203 216 227 235 241 244 </table>
-  <table name="#Tab-runSpd"> 0.83 0.80 0.80 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+  <table name="#Tab-runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>

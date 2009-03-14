@@ -33,7 +33,7 @@
     <add order="0x10" stat="WIT" val="1"/> <!-- WIT +1 -->
     <add order="0x10" stat="INT" val="1"/> <!-- INT +1 -->
     <sub order="0x10" stat="MEN" val="2"/> <!-- MEN -2 -->
-    <mul order="0x30" stat="stunVuln" val="0.50"/> <!-- Stun resistance +50% -->
+    <mul order="0x30" stat="stunVuln" val="0.5"/> <!-- Stun resistance +50% -->
     <!-- Missing: Decreases damage received during PvP and has a chance to decrease critical rate and critical damage when attacked. -->
   </for>
 </skill>
@@ -67,7 +67,7 @@
     <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 effect -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Darkness resistance is increased +8 -->
     <mul order="0x30" stat="gainHp" val="1.03"/> <!-- Received Increased Heal +3% -->
-    <mul order="0x30" stat="stunVuln" val="0.50"/> <!-- Shock resistance is increased +50% -->
+    <mul order="0x30" stat="stunVuln" val="0.5"/> <!-- Shock resistance is increased +50% -->
     <!-- Missing: Decreases damage received during PvP and has a chance to decrease an attacker's speed modifiers. -->
   </for>
 </skill>
@@ -205,10 +205,10 @@
     <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
     <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
     <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
-    <mul order="0x30" stat="giveHp" val="1.20"/> <!-- Increase amount of heal +20% -->
+    <mul order="0x30" stat="giveHp" val="1.2"/> <!-- Increase amount of heal +20% -->
     <sub order="0x40" stat="cancel" val="15"/> <!-- Decrease magic cancel rate -15% -->
     <!-- Missing: Decreases damage received during PvP and has a chance to decrease critical hit and critical damage when attacked. -->
-   </for>
+  </for>
 </skill>
 <skill id="8212" levels="1" name="Dynasty Tunic - PvP Enchanter">
   <!-- Done by DJ MELERIX -->

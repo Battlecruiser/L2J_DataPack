@@ -251,7 +251,7 @@
   <set name="effectRange" val="-1"/>
 </skill>
 <skill id="5541" levels="1" name="Little Angel Agathion Special Skill - Power of Blessed Resurrection">
-  <set name="power" val="100.0"/>
+  <set name="power" val="100"/>
   <set name="target" val="TARGET_CORPSE_PLAYER"/>
   <set name="hitTime" val="3000"/>
   <set name="skillType" val="RESURRECT"/>
@@ -282,7 +282,7 @@
   <set name="effectRange" val="-1"/>
 </skill>
 <skill id="5545" levels="1" name="Little Devil Agathion Special Skill - Power of Blessed Resurrection">
-  <set name="power" val="100.0"/>
+  <set name="power" val="100"/>
   <set name="target" val="TARGET_CORPSE_PLAYER"/>
   <set name="hitTime" val="3000"/>
   <set name="skillType" val="RESURRECT"/>
@@ -305,7 +305,7 @@
     <effect name="Buff" time="120" count="1" val="0"> <!-- all these values are guessed -->
       <mul order="0x30" stat="pAtk" val="1.1"/>
       <mul order="0x30" stat="mAtk" val="1.1"/>
-      <mul order="0x30" stat="MagicalMpConsumeRate" val="0.90"/>
+      <mul order="0x30" stat="MagicalMpConsumeRate" val="0.9"/>
       <!-- missing heal power buff -->
     </effect>
   </for>
@@ -565,8 +565,8 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="5590" levels="5" name="Pet Battle Heal">
-  <table name="#mpConsume">133 147 158 170 179</table>
-  <table name="#power">618.0 690.0 758.0 817.0 858.0</table>
+  <table name="#mpConsume"> 133 147 158 170 179 </table>
+  <table name="#power"> 618 690 758 817 858 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_OWNER_PET"/>
