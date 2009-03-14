@@ -327,7 +327,7 @@
   <set name="power" val="57"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
-  <set name="absorbPart" val="0.8"/>
+  <set name="absorbPart" val="0.8"/> <!-- absorbs 80% of damage -->
   <!-- Missing MP -274 -->
 </skill>
 <skill id="4219" levels="1" name="Hold">
@@ -757,7 +757,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="1000"/>
   <set name="effectRange" val="1500"/>
-  <set name="absorbPart" val="0.2"/>
+  <set name="absorbPart" val="0.2"/> <!-- absorbs 20% of damage -->
 </skill>
 <skill id="4249" levels="12" name="Decrease Speed">
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
@@ -967,7 +967,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="#cast"/>
   <set name="effectRange" val="#effect"/>
-  <set name="absorbPart" val="0.2"/><!-- absorbs 20% of damage -->
+  <set name="absorbPart" val="0.2"/> <!-- absorbs 20% of damage -->
 </skill>
 <skill id="4261" levels="12" name="Mega Storm Strike">
   <table name="#cast"> 600 750 750 900 900 900 900 900 900 900 900 900 </table>
