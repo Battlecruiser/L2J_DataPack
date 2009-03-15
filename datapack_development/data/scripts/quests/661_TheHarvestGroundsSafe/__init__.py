@@ -85,13 +85,13 @@ class Quest (JQuest) :
     st = player.getQuestState(qn)
     if not st : return
     if st.getState() != State.STARTED : return
-        npcId = npc.getNpcId()
-        rand = st.getRandom(100)
-        if npcId in DROPLIST.keys() :
-            item,chance = DROPLIST[npcId]
-            if rand < chance :
-                st.giveItems(item,1)
-                st.playSound("ItemSound.quest_itemget")
+    npcId = npc.getNpcId()
+    rand = st.getRandom(100)
+    if npcId in DROPLIST.keys() :
+        item,chance = DROPLIST[npcId]
+        if rand < chance :
+            st.giveItems(item,1)
+            st.playSound("ItemSound.quest_itemget")
     return
 
 QUEST = Quest(661,qn,"Making the Harvest Grounds Safe")
