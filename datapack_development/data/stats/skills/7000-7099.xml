@@ -682,7 +682,7 @@
 </skill>
 <skill id="7060" levels="1" name="Master's Blessing - Clarity">
   <!-- A GM is always by your side. Temporarily decreases the target's MP consumption for skills. Effect 3. -->
-  <set name="mpConsume" val="#mpConsume"/>
+  <set name="mpConsume" val="2"/>
   <set name="magicLvl" val="1"/>
   <set name="hitTime" val="500"/>
   <set name="target" val="TARGET_ONE"/>
