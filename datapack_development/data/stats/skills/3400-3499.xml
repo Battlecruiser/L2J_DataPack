@@ -238,15 +238,14 @@
   <set name="effectRange" val="-1"/>
 </skill>
 <skill id="3426" levels="1" name="Maximum Ability">
-  <!-- Infinity Rapier Skill -->
-  <!-- A critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members. -->
-  <set name="bestowTriggered" val="true"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
-  <set name="magicLvl" val="80"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="WEAPON_SA"/>
-  <set name="target" val="TARGET_SELF"/>
+  <!-- Rapier Skill -->
+  <!-- A critical attack will have a chance to increase P. Atk., M. Atk. and decrease MP consumption during skill use, for you and your party members. -->
+  <set name="target" val="TARGET_PARTY"/>
+  <set name="skillRadius" val="300"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_CHANCE"/>
+  <set name="chanceType" val="ON_CRIT"/>
+  <set name="activationChance" val="25"/>
   <set name="triggeredId" val="5547"/>
   <set name="triggeredLevel" val="1"/>
 </skill>
