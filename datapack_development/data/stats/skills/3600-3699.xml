@@ -463,14 +463,15 @@
   </for>
 </skill>
 <skill id="3634" levels="1" name="Special Ability Infinity Sword">
-  <!-- Increases critical attack success rate/power, MaxHP, MaxCP, and damage inflicted during PvP. Also inflicts extra damage on critical attacks, and reflects debuff attacks back on enemies. -->
+  <!-- Done by DJ MELERIX -->
+  <set name="magicLvl" val="80"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAPON_SA"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="magicLvl" val="80"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
+    <!-- The following values are copied from Infinity Cleaver SA -->
     <add order="0x40" stat="cAtkAdd" val="504"/> <!-- P.Atk. +504 on a critical hit -->
     <mul order="0x30" stat="maxHp" val="1.25"/> <!-- HP +25% -->
     <mul order="0x30" stat="maxCp" val="1.5"/> <!-- CP +50% -->
@@ -483,21 +484,24 @@
   </for>
 </skill>
 <skill id="3635" levels="1" name="Special Ability Infinity Shooter">
-  <!-- Produces the following effects when a critical attack occurs: the target is slowed, decrease MP consumption for skill use, and increase Max MP/Max CP. Enhances damage done to the target during PvP. -->
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="WEAPON_SA"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="magicLvl" val="80"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="bestowTriggered" val="true"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="magicLvl" val="80"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="WEAPON_SA"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="triggeredId" val="3594"/>
+  <set name="triggeredLevel" val="1"/>
   <for>
+    <!-- The following values are copied from Infinity Bow SA -->
     <mul order="0x30" stat="maxMp" val="1.3"/> <!-- MP +30% -->
     <mul order="0x30" stat="maxCp" val="1.5"/> <!-- CP +50% -->
     <mul order="0x30" stat="pvpPhysDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
     <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
     <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
     <mul order="0x30" stat="atkReuse" val="0.81"/> <!-- 19% Quick Recovery -->
-    <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.88"/> <!-- MP Consumption -12% -->
   </for>
 </skill>
 <skill id="3636" levels="1" name="Dynasty Platinum Plate - Shield Master">
