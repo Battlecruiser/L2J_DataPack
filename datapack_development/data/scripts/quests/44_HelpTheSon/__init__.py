@@ -61,7 +61,7 @@ class Quest (JQuest) :
         htmltext="30827-00.htm"
       else:
         st.exitQuest(1)
-        htmltext="<html><body>This quest can only be taken by characters that have a minimum level of 24. Return when you are more experienced.</body></html>" % MIN_LEVEL
+        htmltext="<html><body>This quest can only be taken by characters that have a minimum level of 24. Return when you are more experienced.</body></html>"
     elif id==State.STARTED:
       cond=st.getInt("cond")
       if npcId==LUNDY:
