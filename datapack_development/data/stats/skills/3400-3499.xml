@@ -240,8 +240,7 @@
 <skill id="3426" levels="1" name="Maximum Ability">
   <!-- Rapier Skill -->
   <!-- A critical attack will have a chance to increase P. Atk., M. Atk. and decrease MP consumption during skill use, for you and your party members. -->
-  <set name="target" val="TARGET_PARTY"/>
-  <set name="skillRadius" val="300"/>
+  <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_CHANCE"/>
   <set name="chanceType" val="ON_CRIT"/>
