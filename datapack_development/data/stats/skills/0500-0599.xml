@@ -244,7 +244,7 @@
   <for>
     <effect count="7" name="DamOverTime" time="3" val="74" abnormal="bleeding">
       <sub order="0x40" stat="runSpd" val="25"/>
-    </effect>  
+    </effect>
   </for>
 </skill>
 <skill id="510" levels="5" name="Deadly Roulette">
@@ -288,17 +288,17 @@
   <set name="soulMaxConsumeCount" val="5"/>
 </skill>
 <skill id="513" levels="1" name="Create Dark Seed">
-  <set name="mpConsume" val="58"/> 
-  <set name="target" val="TARGET_SELF"/> 
-  <set name="skillType" val="CREATE_ITEM"/> 
-  <set name="operateType" val="OP_ACTIVE"/> 
-  <set name="isMagic" val="true"/> 
+  <set name="mpConsume" val="58"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="CREATE_ITEM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="isMagic" val="true"/>
   <set name="reuseDelay" val="80000"/> <!-- guess -->
-  <set name="hitTime" val="3000"/> 
-  <set name="castRange" val="-1"/> 
-  <set name="effectRange" val="-1"/> 
-  <set name="create_item_id" val="10112"/> 
-  <set name="create_item_count" val="1"/> 
+  <set name="hitTime" val="3000"/>
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="create_item_id" val="10112"/>
+  <set name="create_item_count" val="1"/>
   <set name="soulConsumeCount" val="1"/>
 </skill>
 <skill id="514" levels="9" name="Fire Trap">
@@ -391,33 +391,33 @@
   <set name="triggerSkillLvl" val="#triggerlvl"/>
   <set name="trapNpcId"  val="13037"/>
 </skill>
-<skill id="519" levels="1" name="Quiver of Bolts: A-Grade"> 
-  <set name="mpConsume" val="366"/> 
-  <set name="target" val="TARGET_SELF"/> 
-  <set name="hitTime" val="3000"/> 
-  <set name="skillType" val="CREATE_ITEM"/> 
-  <set name="operateType" val="OP_ACTIVE"/> 
-  <set name="castRange" val="-1"/> 
-  <set name="effectRange" val="-1"/> 
-  <set name="itemConsumeId" val="1461"/> 
-  <set name="itemConsumeCount" val="1"/> 
-  <set name="create_item_id" val="9636"/> 
-  <set name="create_item_count" val="700"/> 
-  <set name="random_count" val="4"/> 
+<skill id="519" levels="1" name="Quiver of Bolts: A-Grade">
+  <set name="mpConsume" val="366"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="3000"/>
+  <set name="skillType" val="CREATE_ITEM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="itemConsumeId" val="1461"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="create_item_id" val="9636"/>
+  <set name="create_item_count" val="700"/>
+  <set name="random_count" val="4"/>
 </skill>
-<skill id="520" levels="1" name="Quiver of Bolts: S-Grade"> 
-  <set name="mpConsume" val="366"/> 
-  <set name="target" val="TARGET_SELF"/> 
-  <set name="hitTime" val="3000"/> 
-  <set name="skillType" val="CREATE_ITEM"/> 
-  <set name="operateType" val="OP_ACTIVE"/> 
-  <set name="castRange" val="-1"/> 
-  <set name="effectRange" val="-1"/> 
-  <set name="itemConsumeId" val="1462"/> 
-  <set name="itemConsumeCount" val="1"/> 
-  <set name="create_item_id" val="9637"/> 
-  <set name="create_item_count" val="700"/> 
-  <set name="random_count" val="4"/> 
+<skill id="520" levels="1" name="Quiver of Bolts: S-Grade">
+  <set name="mpConsume" val="366"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="3000"/>
+  <set name="skillType" val="CREATE_ITEM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="itemConsumeId" val="1462"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="create_item_id" val="9637"/>
+  <set name="create_item_count" val="700"/>
+  <set name="random_count" val="4"/>
 </skill>
 <skill id="521" levels="8" name="Sharpshooting">
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
@@ -499,29 +499,29 @@
 <skill id="523" levels="7" name="Imbue Dark Seed">
   <!-- Needs to be finished with a correct abnormal effect -->
   <table name="#EffectLvl"> 1 2 3 4 5 6 7 </table>
-  <set name="itemConsumeId" val="10112"/> 
-  <set name="itemConsumeCount" val="1"/> 
-  <set name="mpConsume" val="30"/> 
+  <set name="itemConsumeId" val="10112"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="mpConsume" val="30"/>
   <set name="power" val="80"/>
-  <set name="target" val="TARGET_ONE"/> 
-  <set name="reuseDelay" val="12000"/> 
-  <set name="hitTime" val="1800"/> 
-  <set name="skillType" val="DEBUFF"/> 
-  <set name="operateType" val="OP_ACTIVE"/> 
-  <set name="castRange" val="40"/> 
+  <set name="target" val="TARGET_ONE"/>
+  <set name="reuseDelay" val="12000"/>
+  <set name="hitTime" val="1800"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="40"/>
   <set name="effectRange" val="150"/>
   <set name="effectId" val="5447"/>
   <set name="effectLevel" val="#EffectLvl"/>
 </skill>
 <skill id="524" levels="1" name="Cure Dark Seed">
-  <set name="mpConsume" val="59"/> 
-  <set name="target" val="TARGET_SELF"/> 
+  <set name="mpConsume" val="59"/>
+  <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NEGATE"/>
-  <set name="operateType" val="OP_ACTIVE"/> 
-  <set name="reuseDelay" val="15000"/> 
-  <set name="hitTime" val="1500"/> 
-  <set name="castRange" val="-1"/> 
-  <set name="negateId" val="5447"/> 
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="reuseDelay" val="15000"/>
+  <set name="hitTime" val="1500"/>
+  <set name="castRange" val="-1"/>
+  <set name="negateId" val="5447"/>
 </skill>
 <skill id="525" levels="6" name="Decoy">
   <table name="#npcId"> 13071 13072 13073 13074 13075 13076 </table>

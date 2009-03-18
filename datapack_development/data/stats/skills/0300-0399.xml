@@ -1340,21 +1340,21 @@
   <set name="weaponsAllowed" val="16"/> <!-- Dagger -->
   <set name="magicLvl" val="77"/>
   <set name="mpConsume" val="35"/>
-  <set name="power" val="40"/> 
-  <set name="target" val="TARGET_ONE"/> 
+  <set name="power" val="40"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="AGGREDUCE_CHAR"/>
   <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="40"/> 
+  <set name="castRange" val="40"/>
   <set name="isDebuff" val="true"/>
-  <set name="effectRange" val="400"/> 
-  <set name="reuseDelay" val="30000"/> 
-  <set name="hitTime" val="1000"/> 
-  <for> 
+  <set name="effectRange" val="400"/>
+  <set name="reuseDelay" val="30000"/>
+  <set name="hitTime" val="1000"/>
+  <for>
     <effect count="1" name="Bluff" time="3" val="0" stackOrder="1" stackType="Stun"/>
     <effect count="1" name="RemoveTarget" time="1" val="0"/>
-  </for> 
-</skill> 
+  </for>
+</skill>
 <skill id="359" levels="1" name="Eye of Hunter">
   <set name="mpConsume" val="70"/>
   <set name="target" val="TARGET_SELF"/>

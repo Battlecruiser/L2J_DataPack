@@ -257,7 +257,7 @@
       <mul order="0x30" stat="confusionVuln" val="0.8"/>
       <mul order="0x30" stat="stunVuln" val="0.8"/>
     </effect>
-  </for>  
+  </for>
 </skill>
 <skill id="5126" levels="1" name="Maximum Recovery">
   <set name="target" val="TARGET_ONE"/>
@@ -1140,16 +1140,16 @@
 </skill>
 <skill id="5195" levels="5" name="Pet Greater Heal">
   <table name="#mpConsume"> 105 109 115 115 115 </table>
-  <table name="#power"> 340 380 417 450 475 </table> 
-  <set name="mpConsume" val="#mpConsume"/> 
-  <set name="power" val="#power"/> 
-  <set name="target" val="TARGET_OWNER_PET"/> 
-  <set name="reuseDelay" val="3000"/> 
-  <set name="hitTime" val="2000"/> 
-  <set name="skillType" val="HEAL"/> 
-  <set name="isMagic" val="true"/> 
-  <set name="operateType" val="OP_ACTIVE"/> 
-  <set name="castRange" val="600"/> 
+  <table name="#power"> 340 380 417 450 475 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_OWNER_PET"/>
+  <set name="reuseDelay" val="3000"/>
+  <set name="hitTime" val="2000"/>
+  <set name="skillType" val="HEAL"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
 </skill>
 <skill id="5196" levels="3" name="Pet Wind Shackle">

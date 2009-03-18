@@ -310,8 +310,8 @@
     <effect name="Buff" time="8" count="1" val="0">
       <mul order="0x30" stat="pAtk" val="1.1"/>
       <mul order="0x30" stat="mAtk" val="1.1"/>
-      <mul order="0x30" stat="MagicalMpConsumeRate" val="0.0"/>
-      <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.0"/>
+      <mul order="0x30" stat="MagicalMpConsumeRate" val="0"/>
+      <mul order="0x30" stat="PhysicalMpConsumeRate" val="0"/>
     </effect>
   </for>
 </skill>

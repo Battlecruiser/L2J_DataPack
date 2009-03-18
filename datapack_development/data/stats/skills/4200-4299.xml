@@ -625,7 +625,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="1800" val="0"> 
+    <effect count="1" name="Buff" time="1800" val="0">
       <mul order="0x30" stat="regHp" val="0.4"/>
     </effect>
   </for>
@@ -638,7 +638,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="1800" val="0"> 
+    <effect count="1" name="Buff" time="1800" val="0">
       <mul order="0x30" stat="regHp" val="0.7"/>
     </effect>
   </for>
@@ -651,7 +651,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="1800" val="0"> 
+    <effect count="1" name="Buff" time="1800" val="0">
       <mul order="0x30" stat="regHp" val="1"/>
     </effect>
   </for>
@@ -1250,14 +1250,14 @@
 </skill>
 <skill id="4283" levels="1" name="Greater Resist Magic Attack">
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/> 
-  <set name="operateType" val="OP_PASSIVE"/> 
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/> 
-  <for> 
-    <mul order="0x30" stat="mDef" val="2"/> 
-  </for> 
-</skill> 
+  <set name="effectRange" val="-1"/>
+  <for>
+    <mul order="0x30" stat="mDef" val="2"/>
+  </for>
+</skill>
 <skill id="4284" levels="6" name="Resist Bleeding">
   <table name="#Tab-bleedVuln"> 0.85 0.7 0.5 0.3 0.1 0 </table>
   <set name="target" val="TARGET_SELF"/>

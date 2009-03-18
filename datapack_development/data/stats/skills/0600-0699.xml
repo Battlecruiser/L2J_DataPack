@@ -148,18 +148,18 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="620" levels="1" name="Quiver of Bolts - Grade B">
-  <set name="mpConsume" val="366"/> 
-  <set name="target" val="TARGET_SELF"/> 
-  <set name="hitTime" val="3000"/> 
-  <set name="skillType" val="CREATE_ITEM"/> 
-  <set name="operateType" val="OP_ACTIVE"/> 
-  <set name="castRange" val="-1"/> 
-  <set name="effectRange" val="-1"/> 
-  <set name="itemConsumeId" val="1460"/> 
-  <set name="itemConsumeCount" val="1"/> 
-  <set name="create_item_id" val="9635"/> 
-  <set name="create_item_count" val="700"/> 
-  <set name="random_count" val="4"/> 
+  <set name="mpConsume" val="366"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="3000"/>
+  <set name="skillType" val="CREATE_ITEM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="itemConsumeId" val="1460"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="create_item_id" val="9635"/>
+  <set name="create_item_count" val="700"/>
+  <set name="random_count" val="4"/>
 </skill>
 <skill id="621" levels="1" name="Create Special Bolt">
   <!-- Needs to be verified -->
@@ -193,28 +193,28 @@
   </for>
 </skill>
 <skill id="623" levels="1" name="Find Trap">
-  <!-- Needs retail value corrections --> 
-  <set name="mpConsume" val="67"/> 
-  <set name="power" val="78"/> 
-  <set name="reuseDelay" val="120000"/> 
-  <set name="target" val="TARGET_AURA"/> 
+  <!-- Needs retail value corrections -->
+  <set name="mpConsume" val="67"/>
+  <set name="power" val="78"/>
+  <set name="reuseDelay" val="120000"/>
+  <set name="target" val="TARGET_AURA"/>
   <set name="hitTime" val="2500"/>
-  <set name="skillType" val="DETECT_TRAP"/> 
-  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="skillType" val="DETECT_TRAP"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="skillRadius" val="400"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
 </skill>
 <skill id="624" levels="1" name="Remove Trap">
-  <!-- Needs retail value corrections --> 
-  <set name="mpConsume" val="17"/> 
-  <set name="power" val="78"/> 
-  <set name="reuseDelay" val="120000"/> 
-  <set name="target" val="TARGET_ONE"/> 
-  <set name="hitTime" val="4000"/> 
-  <set name="skillType" val="REMOVE_TRAP"/> 
-  <set name="operateType" val="OP_ACTIVE"/> 
-  <set name="castRange" val="400"/> 
+  <!-- Needs retail value corrections -->
+  <set name="mpConsume" val="17"/>
+  <set name="power" val="78"/>
+  <set name="reuseDelay" val="120000"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="4000"/>
+  <set name="skillType" val="REMOVE_TRAP"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
 </skill>
 <skill id="625" levels="1" name="Soul Gathering">
@@ -234,9 +234,9 @@
 </skill>
 <skill id="626" levels="4" name="Critical Sense">
   <!-- Needs to be verified -->
-  <table name="#rCrit"> 0.1 0.15 0.2 0.25 </table> 
-  <table name="#cAtk"> 45 90 145 195 </table> <!-- Custom for lvl 1,2,3 --> 
-  <set name="target" val="TARGET_SELF"/> 
+  <table name="#rCrit"> 0.1 0.15 0.2 0.25 </table>
+  <table name="#cAtk"> 45 90 145 195 </table> <!-- Custom for lvl 1,2,3 -->
+  <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
