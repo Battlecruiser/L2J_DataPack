@@ -429,7 +429,8 @@ public class Baium extends L2AttackableAIScript
 			npc.setIsCastingNow(true);
 			_target = null;
 			_skill = null;
-	                npc.broadcastPacket(new MoveToPawn(npc,target,getDist(skill.getCastRange())));
+			if (getDist(skill.getCastRange()) > 0)
+				npc.broadcastPacket(new MoveToPawn(npc,target,getDist(skill.getCastRange())));
 			try
 			{
 				Thread.sleep(1000);
@@ -511,6 +512,8 @@ public class Baium extends L2AttackableAIScript
 		int dist = 0;
 		switch(range)
 		{
+			case -1:
+				break;
 			case 100:
 				dist = 85;
 				break;
