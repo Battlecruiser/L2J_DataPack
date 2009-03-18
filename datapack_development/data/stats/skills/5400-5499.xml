@@ -334,10 +334,15 @@
 </skill>
 <skill id="5442" levels="4" name="Bite Attack">
   <!-- Bite ferociously with sharp teeth. -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <table name="#mpConsume"> 55 61 66 71 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="1080"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="160"/>
 </skill>
 <skill id="5443" levels="4" name="Cry of the Wolf">
   <!--  Dominate nearby enemies with a mighty roar. -->
