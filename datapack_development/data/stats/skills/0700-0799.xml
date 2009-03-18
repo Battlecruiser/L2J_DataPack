@@ -880,10 +880,28 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="787" levels="1" name="Touch of Eva">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="aggroPoints" val="811"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
+  <set name="hitTime" val="1800"/>
+  <set name="hpConsume" val="1253"/>
+  <set name="magicLvl" val="81"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="50"/>
+  <set name="reuseDelay" val="300000"/>
+  <set name="skillType" val="HEAL_PERCENT"/>
+  <set name="target" val="TARGET_PARTY"/>
+  <cond msg="Touch of Eva cannot be used due to unsuitable terms.">
+    <target active_effect_id="5563"/> <!-- Needs Core-Side improvement "Require 5563 in Lvl 3" -->
+  </cond>
+  <for>
+    <effect count="20" name="HealOverTime" time="3" val="150">
+      <mul order="0x30" stat="cancelVuln" val="0.40"/>
+      <mul order="0x30" stat="debuffVuln" val="0.70"/>
+      <mul order="0x30" stat="gainHp" val="1.30"/>
+    </effect>
+  </for>
 </skill>
 <skill id="788" levels="1" name="Pain of Shilen">
   <set name="target" val="TARGET_NONE"/>
@@ -892,10 +910,31 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="789" levels="1" name="Touch of Shilen">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="-1"/>
+  <set name="effectPower" val="25"/> <!-- Base Land Rate for CANCEL -->
+  <set name="effectRange" val="-1"/>
+  <set name="effectType" val="CANCEL"/> <!-- Needs Core support to allow CANCEL in secondary effect -->
+  <set name="hitTime" val="1800"/>
+  <set name="hpConsume" val="1018"/>
+  <set name="isDebuff" val="true"/>
+  <set name="lvlDepend" val="1"/>
+  <set name="magicLvl" val="81"/>
+  <set name="negateStats" val="BUFF HEAL_PERCENT"/>
+  <set name="maxNegated" val="5"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="40"/> <!-- Base Land Rate for DEBUFF -->
+  <set name="reuseDelay" val="1200000"/>
+  <set name="skillRadius" val="250"/> <!-- Guessing -->
+  <set name="skillType" val="DEBUFF"/>
+  <set name="target" val="TARGET_AURA"/>
+  <for>
+    <effect count="1" name="Debuff" time="120" val="0">
+      <mul order="0x30" stat="maxCp" val="0.25"/>
+      <mul order="0x30" stat="debuffVuln" val="1.30"/>
+      <mul order="0x30" stat="gainHp" val="0.70"/>
+    </effect>
+  </for>
 </skill>
 <skill id="790" levels="1" name="Wild Shot">
   <set name="target" val="TARGET_NONE"/>
