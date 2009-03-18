@@ -643,7 +643,7 @@
   <set name="aggroPoints" val="666"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <mul order="0x30" stat="bowWpnVuln" val="0.5"/> 
+      <mul order="0x30" stat="bowWpnVuln" val="0.5"/>
     </effect>
   </for>
 </skill>
@@ -950,10 +950,11 @@
   <set name="effectRange" val="-1"/>
   <set name="hitTime" val="1500"/>
   <set name="isDebuff" val="true"/>
-  <set name="lvlDepend" val="1"/>
+  <set name="lvlDepend" val="2"/>
+  <set name="magicLvl" val="79"/>
   <set name="mpConsume" val="58"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="40"/>
+  <set name="power" val="40"/> <!-- Base Land Rate -->
   <set name="reuseDelay" val="60000"/>
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="DISARM"/>

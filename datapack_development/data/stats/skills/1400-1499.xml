@@ -39,7 +39,7 @@
   <table name="#power"> 690 722 753 783 812 840 867 892 915 936 946 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="3031"/>
-  <set name="itemConsumeCount" val="1"/>   
+  <set name="itemConsumeCount" val="1"/>
   <set name="power" val="#power"/>
   <!-- reuse is meant to be "almost instant" -->
   <set name="reuseDelay" val="6000"/>
@@ -60,7 +60,7 @@
   <table name="#power"> 902 979 1050 1115 1170 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="3031"/>
-  <set name="itemConsumeCount" val="4"/>     
+  <set name="itemConsumeCount" val="4"/>
   <set name="power" val="#power"/>
   <!-- reuse time needs verifying... left this high to be safe -->
   <set name="reuseDelay" val="19000"/>
@@ -217,7 +217,7 @@
 </skill>
 <skill id="1411" levels="1" name="Mystic Immunity">
   <!-- Done by DJ MELERIX -->
-  <set name="castRange" val="400"/> 
+  <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <set name="hitTime" val="4000"/>
   <set name="isMagic" val="true"/>
@@ -285,7 +285,7 @@
   <set name="aggroPoints" val="669"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
-      <!-- The following values are copies from Chant of Victory Skill -->
+      <!-- The following values are copied from Chant of Victory Skill -->
       <mul order="0x30" stat="pAtk" val="1.1"/>
       <mul order="0x30" stat="pDef" val="1.2"/>
       <basemul order="0x30" stat="rCrit" val="0.2"/>
@@ -326,7 +326,7 @@
   <set name="mpInitialConsume" val="57"/> <!-- Guessing -->
   <set name="mpConsume" val="227"/>
   <set name="itemConsumeId" val="3031"/>
-  <set name="itemConsumeCount" val="20"/> 
+  <set name="itemConsumeCount" val="20"/>
   <set name="power" val="800"/>
   <set name="target" val="TARGET_CLAN"/>
   <set name="skillRadius" val="900"/>
@@ -377,7 +377,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="staticReuse" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="400"/> 
+  <set name="castRange" val="400"/>
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Invincible" time="10" val="0" stackOrder="1" stackType="Instant_Shield"/>
@@ -566,7 +566,7 @@
   <set name="hitTime" val="5000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/> 
+  <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
   <cond msg="Proper SpellForces required.">
@@ -1401,7 +1401,7 @@
 <skill id="1475" levels="3" name="Erase Mark">
   <table name="#mpConsume_Init"> 4 7 11 </table>
   <table name="#mpConsume"> 15 29 44 </table>
-  <table name="#magicLvl"> 24 46 66 </table> 
+  <table name="#magicLvl"> 24 46 66 </table>
   <table name="#negateLvl"> 3 7 10 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>

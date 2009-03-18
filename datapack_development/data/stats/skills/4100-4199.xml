@@ -459,7 +459,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="1800" val="0"> 
+    <effect count="1" name="Buff" time="1800" val="0">
       <mul order="0x30" stat="regHp" val="0.05"/>
     </effect>
   </for>
@@ -1170,7 +1170,7 @@
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
-</skill>  
+</skill>
 <skill id="4170" levels="12" name="BOSS Mortal Blow">
   <table name="#power"> 181 487 1339 3507 8825 17057 26195 30391 34864 39544 44350 49193 </table>
   <table name="#mpConsume"> 18 25 35 47 59 72 83 88 91 93 95 96 </table>
@@ -1708,6 +1708,6 @@
     <effect name="Buff" time="#time" count="1" val="0" stackOrder="#Tab-pAtk" stackType="pAtkDown">
       <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
     </effect>
-  </for> 
+  </for>
 </skill>
 </list>

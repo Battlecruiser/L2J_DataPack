@@ -1591,7 +1591,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="1800" val="0"> 
+    <effect count="1" name="Buff" time="1800" val="0">
       <mul order="0x30" stat="regHp" val="#regHp"/>
     </effect>
   </for>
@@ -1635,7 +1635,7 @@
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="100"/>
   <for>
-    <effect count="5" name="Debuff" time="15" val="0"> 
+    <effect count="5" name="Debuff" time="15" val="0">
       <mul order="0x30" stat="pAtk" val="0.55"/>
       <sub order="0x40" stat="accCombat" val="4"/>
       <sub order="0x40" stat="rEvas" val="4"/>
@@ -1656,7 +1656,7 @@
   <set name="aggroPoints" val="100"/>
   <set name="isDebuff" val="true"/>
   <for>
-    <effect count="5" name="Debuff" time="15" val="0"> 
+    <effect count="5" name="Debuff" time="15" val="0">
       <mul order="0x30" stat="pAtk" val="0.2"/>
     </effect>
   </for>
@@ -1671,7 +1671,7 @@
   <set name="aggroPoints" val="100"/>
   <set name="isDebuff" val="true"/>
   <for>
-    <effect count="5" name="Debuff" time="15" val="0"> 
+    <effect count="5" name="Debuff" time="15" val="0">
       <mul order="0x30" stat="pDef" val="0.2"/>
       <mul order="0x30" stat="mDef" val="0.2"/>
     </effect>

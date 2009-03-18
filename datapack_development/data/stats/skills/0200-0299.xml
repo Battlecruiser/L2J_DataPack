@@ -4,7 +4,7 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
-  <table name="#pAtk"> 4.5 7.3 8.9 10.7 12.8 15.1 17.7 20.5 23.7 25.4 27.1 29 30.9 32.9 35 37.1 39.4 41.7 44.1 46.6 49.2 51.9 54.6 57.5 60.4 63.3 66.4 69.5 72.7 76 79.3 82.7 86.1 89.6 93.1 96.6 100.2 103.8 107.5 111.1 114.8 118.4 122.1 125.7 129.3 </table> 
+  <table name="#pAtk"> 4.5 7.3 8.9 10.7 12.8 15.1 17.7 20.5 23.7 25.4 27.1 29 30.9 32.9 35 37.1 39.4 41.7 44.1 46.6 49.2 51.9 54.6 57.5 60.4 63.3 66.4 69.5 72.7 76 79.3 82.7 86.1 89.6 93.1 96.6 100.2 103.8 107.5 111.1 114.8 118.4 122.1 125.7 129.3 </table>
   <table name="#ench1runSpd"> 0 1 2 2 3 4 4 5 6 6 7 8 8 9 10 10 11 12 12 13 14 14 15 16 16 17 18 18 19 20 </table>
   <table name="#ench2cAtk"> 113 127 141 155 169 183 196 210 224 238 252 266 279 293 307 321 335 349 362 376 390 404 418 432 445 459 473 487 501 515 </table>
   <table name="#triggeredId"> 0 0 0 0 0 0 0 0 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 </table>
@@ -142,7 +142,7 @@
           <using kind="Light,Heavy"/>
         </not>
       </and>
-    </mul>    
+    </mul>
   </for>
 </skill>
 <skill id="216" levels="45" name="Polearm Mastery">
@@ -173,7 +173,7 @@
     <add order="0x40" stat="pAtk" val="#pAtk">
       <using kind="Sword,Big Sword,Blunt,Big Blunt"/>
     </add>
-  </for> 
+  </for>
 </skill>
 <skill id="221" levels="1" name="Silent Move">
   <set name="mpConsume" val="7"/>
@@ -244,7 +244,7 @@
     <!-- Verified by slyce -  Interlude - Aug 2007 -->
     <effect count="7" name="DamOverTime" time="3" val="#bleedpower" abnormal="bleeding">
       <sub order="0x40" stat="runSpd" val="25"/>
-    </effect>  
+    </effect>
   </for>
 </skill>
 <skill id="225" levels="3" name="Acrobatic Move">
@@ -813,7 +813,7 @@
   <enchant1for>
     <effect count="0x7fffffff" name="MpConsumePerLevel" time="3" val="#ench1val">
       <add order="0x40" stat="accCombat" val="3"/>
-    </effect>  
+    </effect>
   </enchant1for>
 </skill>
 <skill id="257" levels="45" name="Sword Blunt Weapon Mastery">
@@ -971,7 +971,7 @@
   <set name="num_charges" val="4"/>
   <set name="charge_skill_id" val="8"/> <!-- Focus Sonic is the charger -->
   <enchant1 name="power" val="#ench1Power"/>
-  <enchant2 name="mpConsume" val="#ench2MpConsume"/> 
+  <enchant2 name="mpConsume" val="#ench2MpConsume"/>
 </skill>
 <skill id="262" levels="37" name="Holy Blessing" enchantLevels1="30" enchantLevels2="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -1749,7 +1749,7 @@
   <table name="#ench2mpConsume"> 12 12 12 11 11 10 10 10 9 9 9 9 8 8 8 7 7 7 6 6 6 5 5 5 4 4 4 3 3 3 </table>
   <table name="#pDef"> 121.8 161.1 212.1 256.5 </table>
   <table name="#ench1pDef"> 259.4 262.3 265.2 268.1 271 274 276.9 279.8 282.7 285.6 288.5 291.5 294.4 297.3 300.2 303.1 306 309 311.9 314.8 317.7 320.6 323.5 326.5 329.4 332.3 335.2 338.1 341 344 </table>
-  <table name="#ench2val"> 0.99 0.98 0.98 0.97 0.97 0.96 0.96 0.95 0.95 0.94 0.94 0.93 0.93 0.92 0.92 0.91 0.91 0.9 0.9 0.89 0.89 0.88 0.88 0.87 0.87 0.86 0.86 0.85 0.85 0.84 </table> 
+  <table name="#ench2val"> 0.99 0.98 0.98 0.97 0.97 0.96 0.96 0.95 0.95 0.94 0.94 0.93 0.93 0.92 0.92 0.91 0.91 0.9 0.9 0.89 0.89 0.88 0.88 0.87 0.87 0.86 0.86 0.85 0.85 0.84 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
@@ -1874,7 +1874,7 @@
     <add order="0x40" stat="accCombat" val="#Accuracy">
       <using kind="Big Sword,Big Blunt"/>
     </add>
-  </for> 
+  </for>
 </skill>
 <skill id="294" levels="1" name="Shadow Sense">
   <set name="target" val="TARGET_SELF"/>
@@ -1935,7 +1935,7 @@
       <mul order="0x30" stat="pvpPhysDmg" val="1.1">
         <using kind="Dual Sword"/>
       </mul>
-      <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1"> 
+      <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1">
         <using kind="Dual Sword"/>
       </mul>
     </effect>
