@@ -267,23 +267,25 @@
     </effect>
   </for>
 </skill>
-<skill id="1414" levels="1" name="Victories of Pa'agrio">
+<skill id="1414" levels="1" name="Victory of Pa'agrio">
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="40"/>
   <set name="mpInitialConsume" val="57"/>
   <set name="mpConsume" val="227"/>
+  <set name="power" val="20"/>
   <set name="target" val="TARGET_CLAN"/>
   <set name="skillRadius" val="900"/>
   <set name="reuseDelay" val="1200000"/>
   <set name="hitTime" val="2500"/>
-  <set name="skillType" val="BUFF"/>
+  <set name="skillType" val="HEAL_PERCENT"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="aggroPoints" val="669"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
-      <!-- This skills seems to be exacly same as CoV -->
+      <!-- The following values are copies from Chant of Victory Skill -->
       <mul order="0x30" stat="pAtk" val="1.1"/>
       <mul order="0x30" stat="pDef" val="1.2"/>
       <basemul order="0x30" stat="rCrit" val="0.2"/>
