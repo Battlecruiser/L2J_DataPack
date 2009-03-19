@@ -746,7 +746,7 @@
   <set name="bestowed" val="true"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
-      <basemul order="0x30" stat="rCrit" val="0.15"/>
+      <mul order="0x30" stat="lethalRate" val="1.15"/>
     </effect>
   </for>
 </skill>
