@@ -33,12 +33,15 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
 </skill>
-<skill id="4102" levels="2" name="Become weak against line of fire">
-  <table name="#Tab-fireVuln"> 1.15 1.2 </table>
-  <table name="#mpConsume"> 35 65 </table>
-  <table name="#magicLvl"> 20 70 </table>
+<skill id="4102" levels="2" name="Surrender To Fire">
+  <table name="#fireVuln"> 1.15 1.2 </table>
+  <table name="#waterVuln"> 0.85 0.8 </table>
+  <table name="#mpConsume_Init"> 7 13 </table>
+  <table name="#mpConsume"> 28 52 </table>
+  <table name="#magicLvl"> 40 70 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="2"/>
+  <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="isDebuff" val="true"/>
@@ -52,7 +55,8 @@
   <set name="effectRange" val="1100"/>
   <for>
     <effect count="1" name="Debuff" time="120" val="0" stackOrder="2" stackType="surrender">
-      <mul order="0x30" stat="fireVuln" val="#Tab-fireVuln"/>
+      <mul order="0x30" stat="fireVuln" val="#fireVuln"/>
+      <mul order="0x30" stat="waterVuln" val="#waterVuln"/>
     </effect>
   </for>
 </skill>
