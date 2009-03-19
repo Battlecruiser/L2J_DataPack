@@ -113,10 +113,11 @@
     </effect>
   </for>
 </skill>
-<skill id="4605" levels="12" name="Fire Weakness">
+<skill id="4605" levels="12" name="Surrender To Fire">
   <table name="#mpConsume"> 24 39 54 73 94 116 136 144 152 158 161 163 </table>
   <table name="#power"> 46 106 219 417 722 1136 1626 1876 2112 2320 2487 2617 </table>
   <table name="#fireVuln"> 1.2 1.25 1.25 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 </table>
+  <table name="#waterVuln"> 0.8 0.75 0.75 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 </table>
   <table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 75 90 95 </table>
   <table name="#stackOrder"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
@@ -137,6 +138,7 @@
   <for>
     <effect count="1" name="Debuff" time="#time" val="0" stackOrder="#stackOrder" stackType="md_up_attr">
       <mul order="0x30" stat="fireVuln" val="#fireVuln"/>
+      <mul order="0x30" stat="waterVuln" val="#waterVuln"/>
     </effect>
   </for>
 </skill>
