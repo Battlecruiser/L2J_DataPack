@@ -775,7 +775,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul order="0x30" stat="reflectDam" val="#reflectDam"/>
+    <add order="0x40" stat="reflectDam" val="#reflectDam"/>
   </for>
 </skill>
 <skill id="3260" levels="1" name="Forgiveness">
