@@ -297,21 +297,25 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="5547" levels="1" name="Maximum Ability">
-  <!-- Rapier Skill -->
-  <!-- Attack ability, magic power, and mp consume decrease. -->
+  <!-- Rapier +4 Skill -->
+  <!-- Attack ability, magic power, and heal value increase. -->
+  <set name="activationChance" val="25"/> <!-- Guessing -->
+  <set name="bestowed" val="true"/>
   <set name="castRange" val="-1"/>
+  <set name="chanceType" val="ON_CRIT"/>
   <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="80"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="operateType" val="OP_CHANCE"/>
+  <set name="skillRadius" val="1000"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_PARTY"/>
-  <set name="skillRadius" val="1000"/>
   <for>
-    <effect name="Buff" time="8" count="1" val="0">
+    <!-- All the following values are guessed -->
+    <effect name="Buff" time="10" count="1" val="0">
       <mul order="0x30" stat="pAtk" val="1.1"/>
       <mul order="0x30" stat="mAtk" val="1.1"/>
-      <mul order="0x30" stat="MagicalMpConsumeRate" val="0"/>
-      <mul order="0x30" stat="PhysicalMpConsumeRate" val="0"/>
+      <mul order="0x30" stat="MagicalMpConsumeRate" val="0.9"/>
+      <mul order="0x30" stat="gainHp" val="1.1"/>
     </effect>
   </for>
 </skill>
