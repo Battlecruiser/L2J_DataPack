@@ -480,7 +480,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#mpConsume" stackType="MPrate">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#SpiritOre" stackType="MPrate">
       <mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRate"/>
       <mul order="0x30" stat="PhysicalMpConsumeRate" val="#MpConsumeRate"/>
     </effect>
