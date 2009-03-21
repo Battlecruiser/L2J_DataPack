@@ -20,15 +20,15 @@ public class Akamanah extends L2Transformation
     public void onTransform()
     {
         // Set charachter name to transformed name
-    	this.getPlayer().getAppearance().setVisibleName("Akamanah");
-    	this.getPlayer().getAppearance().setVisibleTitle("");
+    	getPlayer().getAppearance().setVisibleName("Akamanah");
+    	getPlayer().getAppearance().setVisibleTitle("");
     }
     
     public void onUntransform()
     {
     	// set character back to true name.
-    	this.getPlayer().getAppearance().setVisibleName(null);
-    	this.getPlayer().getAppearance().setVisibleTitle(null);
+    	getPlayer().getAppearance().setVisibleName(null);
+    	getPlayer().getAppearance().setVisibleTitle(null);
     }
     
     public static void main(String[] args)

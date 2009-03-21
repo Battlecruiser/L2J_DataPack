@@ -289,16 +289,32 @@
   </for>
 </skill>
 <skill id="629" levels="1" name="Rabbit Magic Eye">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="100"/>
+  <set name="skillType" val="DUMMY"/>
+  <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="5000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="staticReuse" val="true"/>
+  <set name="neutral" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="630" levels="1" name="Rabbit Tornado">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="DUMMY"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="2500"/>
+  <set name="reuseDelay" val="60000"/>
+  <set name="staticReuse" val="true"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="neutral" val="true"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
+  <cond msg="Invalid target.">
+    <target npcId="13098"/>
+  </cond>
 </skill>
 <skill id="631" levels="6" name="Emergent Ability - Attack">
   <set name="target" val="TARGET_NONE"/>
