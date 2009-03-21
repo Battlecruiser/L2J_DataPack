@@ -2,7 +2,6 @@ package transformations;
 
 import net.sf.l2j.gameserver.datatables.SkillTable;
 import net.sf.l2j.gameserver.instancemanager.TransformationManager;
-import net.sf.l2j.gameserver.model.L2Skill;
 import net.sf.l2j.gameserver.model.L2Transformation;
 
 public class InquisitorElvenElder extends L2Transformation
@@ -15,59 +14,33 @@ public class InquisitorElvenElder extends L2Transformation
 	
 	public void onTransform()
 	{
-		// Disable all character skills.
-		for (L2Skill sk : this.getPlayer().getAllSkills())
-		{
-			if (sk != null && !sk.isPassive())
-			{
-				switch (sk.getId())
-				{
-					case 1430: // Invocation
-					case 1043: // Holy Weapon
-					case 1303: // Wild Magic
-					case 1400: // Turn Undead
-					{
-						// Those Skills wont be removed.
-						break;
-					}
-					default:
-					{
-						this.getPlayer().removeSkill(sk, false, false);
-						break;
-					}
-				}
-			}
-			
-		}
-		if (this.getPlayer().transformId() > 0 && !this.getPlayer().isCursedWeaponEquipped())
-		{
-			// give transformation skills
-			transformedSkills();
+		if (getPlayer().getTransformationId() != 317 || getPlayer().isCursedWeaponEquipped())
 			return;
-		}
+
 		// give transformation skills
 		transformedSkills();
 	}
 	
 	public void transformedSkills()
 	{
-		if (this.getPlayer().getLevel() > 43)
+		if (getPlayer().getLevel() > 43)
 		{
 			// Divine Punishment
-			this.getPlayer().addSkill(SkillTable.getInstance().getInfo(1523, this.getPlayer().getLevel() - 43), false);
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(1523, getPlayer().getLevel() - 43), false);
 			// Divine Flash
-			this.getPlayer().addSkill(SkillTable.getInstance().getInfo(1528, this.getPlayer().getLevel() - 43), false);
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(1528, getPlayer().getLevel() - 43), false);
 			// Surrender to the Holy
-			this.getPlayer().addSkill(SkillTable.getInstance().getInfo(1524, this.getPlayer().getLevel() - 43), false);
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(1524, getPlayer().getLevel() - 43), false);
 			// Divine Curse
-			this.getPlayer().addSkill(SkillTable.getInstance().getInfo(1525, this.getPlayer().getLevel() - 43), false);
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(1525, getPlayer().getLevel() - 43), false);
+			getPlayer().setTransformAllowedSkills(new int[]{838,5491,1523,1528,1524,1525,1430,1043,1400,1303});
 		}
+		else
+			getPlayer().setTransformAllowedSkills(new int[]{838,5491,1430,1043,1400,1303});
 		// Decrease Bow/Crossbow Attack Speed
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false); 
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false); 
 		// Switch Stance
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(838, 1), false);
-		// Send a Server->Client packet StatusUpdate to the L2PcInstance.
-		this.getPlayer().sendSkillList();
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(838, 1), false);
 	}
 	
 	public void onUntransform()
@@ -79,19 +52,19 @@ public class InquisitorElvenElder extends L2Transformation
 	public void removeSkills()
 	{
 		// Divine Punishment
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(1523, this.getPlayer().getLevel() - 43), false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1523, getPlayer().getLevel() - 43), false, false);
 		// Divine Flash
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(1528, this.getPlayer().getLevel() - 43), false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1528, getPlayer().getLevel() - 43), false, false);
 		// Surrender to the Holy
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(1524, this.getPlayer().getLevel() - 43), false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1524, getPlayer().getLevel() - 43), false, false);
 		// Divine Curse
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(1525, this.getPlayer().getLevel() - 43), false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1525, getPlayer().getLevel() - 43), false, false);
 		// Decrease Bow/Crossbow Attack Speed
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false); 
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false, false); 
 		// Switch Stance
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(838, 1), false);
-		// Send a Server->Client packet StatusUpdate to the L2PcInstance.
-		this.getPlayer().sendSkillList();
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(838, 1), false, false);
+
+		getPlayer().setTransformAllowedSkills(new int[]{});
 	}
 	
 	public static void main(String[] args)

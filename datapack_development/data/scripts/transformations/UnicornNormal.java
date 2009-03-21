@@ -2,7 +2,6 @@ package transformations;
 
 import net.sf.l2j.gameserver.datatables.SkillTable;
 import net.sf.l2j.gameserver.instancemanager.TransformationManager;
-import net.sf.l2j.gameserver.model.L2Skill;
 import net.sf.l2j.gameserver.model.L2Transformation;
 
 /**
@@ -25,18 +24,9 @@ public class UnicornNormal extends L2Transformation
 
 	public void onTransform()
 	{
-		// Disable all character skills.
-		for (L2Skill sk : this.getPlayer().getAllSkills())
-		{
-			if (sk != null && !sk.isPassive())
-				this.getPlayer().removeSkill(sk, false, false);
-		}
-		if (this.getPlayer().transformId() > 0 && !this.getPlayer().isCursedWeaponEquipped())
-		{
-			// give transformation skills
-			transformedSkills();
+		if (getPlayer().getTransformationId() != 205 || getPlayer().isCursedWeaponEquipped())
 			return;
-		}
+
 		// give transformation skills
 		transformedSkills();
 	}
@@ -44,19 +34,19 @@ public class UnicornNormal extends L2Transformation
 	public void transformedSkills()
 	{
 		// Horn of Doom
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(563, 3), false);
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(563, 3), false);
 		// Gravity Control
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(564, 3), false);
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(564, 3), false);
 		// Horn Assault
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(565, 3), false);
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(565, 3), false);
 		// Light of Heal
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(567, 3), false);
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(567, 3), false);
 		// Transfrom Dispel
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
-		this.getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
-		// Send a Server->Client packet StatusUpdate to the L2PcInstance.
-		this.getPlayer().sendSkillList();
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+
+		getPlayer().setTransformAllowedSkills(new int[]{619,5491,563,564,565,567});
 	}
 
 	public void onUntransform()
@@ -68,19 +58,19 @@ public class UnicornNormal extends L2Transformation
 	public void removeSkills()
 	{
 		// Horn of Doom
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(563, 3), false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(563, 3), false, false);
 		// Gravity Control
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(564, 3), false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(564, 3), false, false);
 		// Horn Assault
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(565, 3), false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(565, 3), false, false);
 		// Light of Heal
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(567, 3), false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(567, 3), false, false);
 		// Transfrom Dispel
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false, false);
 		// Decrease Bow/Crossbow Attack Speed
-		this.getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false);
-		// Send a Server->Client packet StatusUpdate to the L2PcInstance.
-		this.getPlayer().sendSkillList();
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false, false);
+
+		getPlayer().setTransformAllowedSkills(new int[]{});
 	}
 
 	public static void main(String[] args)
