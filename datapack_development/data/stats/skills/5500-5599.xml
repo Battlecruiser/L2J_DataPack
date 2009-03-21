@@ -211,30 +211,40 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="5535" levels="1" name="Little Angel Agathion Cuteness Attack">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-</skill>
-<skill id="5536" levels="1" name="Little Devil Agathion Cuteness Attack">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-</skill>
-<skill id="5537" levels="1" name="Rudolph Agathion Cuteness Attack">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-</skill>
-<skill id="5538" levels="1" name="Little Angel Agathion Special Skill - Firecrackers">
   <set name="target" val="TARGET_SELF"/>
-  <!-- HOT ??? this a temp hack to make it work? -->
-  <set name="skillType" val="BUFF"/>
+  <set name="skillType" val="DUMMY"/>
+  <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+</skill>
+<skill id="5536" levels="1" name="Little Devil Agathion Cuteness Attack">
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="DUMMY"/>
+  <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+</skill>
+<skill id="5537" levels="1" name="Rudolph Agathion Cuteness Attack">
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="DUMMY"/>
+  <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+</skill>
+<skill id="5538" levels="1" name="Little Angel Agathion Special Skill - Firecrackers">
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="DUMMY"/>
+  <set name="hitTime" val="500"/>
+  <set name="reuseDelay" val="300000"/>
+  <set name="staticReuse" val="true"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="5539" levels="1" name="Little Angel Agathion Special Skill - Mysterious Power">
   <set name="target" val="TARGET_NONE"/>
@@ -245,6 +255,7 @@
 <skill id="5540" levels="1" name="Little Angel Agathion Special Skill - Power of Blessed Return">
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="200"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="RECALL"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -254,6 +265,7 @@
   <set name="power" val="100"/>
   <set name="target" val="TARGET_CORPSE_PLAYER"/>
   <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="RESURRECT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
@@ -261,11 +273,12 @@
 </skill>
 <skill id="5542" levels="1" name="Little Devil Agathion Special Skill - Firecrackers">
   <set name="target" val="TARGET_SELF"/>
-  <!-- HOT ??? this a temp hack to make it work? -->
-  <set name="skillType" val="BUFF"/>
+  <set name="skillType" val="DUMMY"/>
+  <set name="hitTime" val="500"/>
+  <set name="reuseDelay" val="300000"/>
+  <set name="staticReuse" val="true"/>
+  <set name="staticHitTime" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="5543" levels="1" name="Little Devil Agathion Special Skill - Mysterious Power">
   <set name="target" val="TARGET_NONE"/>
@@ -276,6 +289,7 @@
 <skill id="5544" levels="1" name="Little Devil Agathion Special Skill - Power of Blessed Return">
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="200"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="RECALL"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -285,6 +299,7 @@
   <set name="power" val="100"/>
   <set name="target" val="TARGET_CORPSE_PLAYER"/>
   <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="RESURRECT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
@@ -307,8 +322,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_PARTY"/>
   <for>
-    <!-- All the following values are guessed -->
-    <effect name="Buff" time="10" count="1" val="0">
+    <effect name="Buff" time="8" count="1" val="0">
       <mul order="0x30" stat="pAtk" val="1.1"/>
       <mul order="0x30" stat="mAtk" val="1.1"/>
       <mul order="0x30" stat="MagicalMpConsumeRate" val="0"/>

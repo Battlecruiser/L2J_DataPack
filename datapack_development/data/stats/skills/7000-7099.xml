@@ -692,7 +692,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="300" val="0" stackOrder="0.9" stackType="MPrate">
+    <effect count="1" name="Buff" time="300" val="0" stackOrder="3" stackType="MPrate">
       <mul order="0x30" stat="MagicalMpConsumeRate" val="0.9"/>
       <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.9"/>
     </effect>

@@ -657,16 +657,25 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="8244" levels="1" name="Transform Gatekeeper">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="transformId" val="107"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <for>
+    <effect count="1" name="Transformation" time="1800" val="0" /> <!-- duration guessed -->
+  </for>
 </skill>
 <skill id="8245" levels="1" name="Summon Agathion - Love">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="AGATHION"/>
+  <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="npcId" val="16049"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="8246" levels="1" name="Transform Pumpkin Ghost">
   <set name="target" val="TARGET_SELF"/>
