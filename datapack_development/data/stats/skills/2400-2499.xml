@@ -35,9 +35,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="3600000"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.13" stackType="pa_up">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.13" stackType="pa_up">
       <mul order="0x30" stat="pAtk" val="1.12"/>
     </effect>
   </for>
@@ -49,9 +49,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="3600000"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.13" stackType="pd_up">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.13" stackType="pd_up">
       <mul order="0x30" stat="pDef" val="1.12"/>
     </effect>
   </for>
@@ -63,9 +63,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="3600000"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="34" stackType="speed_up">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="34" stackType="speed_up">
       <add order="0x40" stat="runSpd" val="33"/>
     </effect>
   </for>
@@ -77,9 +77,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="3600000"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="0.26" stackType="critical_prob_up">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="0.26" stackType="critical_prob_up">
       <basemul order="0x30" stat="rCrit" val="0.25"/>
     </effect>
   </for>
@@ -91,9 +91,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="3600000"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.33" stackType="critical_dmg_up">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.33" stackType="critical_dmg_up">
       <mul order="0x30" stat="cAtk" val="1.32"/>
     </effect>
   </for>
@@ -105,9 +105,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="3600000"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="4" stackType="hit_up">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="4" stackType="hit_up">
       <add order="0x40" stat="accCombat" val="3"/>
     </effect>
   </for>
@@ -119,9 +119,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="3600000"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.5" stackType="shieldProbUp">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.5" stackType="shieldProbUp">
       <mul order="0x30" stat="rShld" val="1.4"/>
     </effect>
   </for>
@@ -133,9 +133,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="3600000"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.3" stackType="max_hp_up">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.3" stackType="max_hp_up">
       <mul order="0x30" stat="maxHp" val="1.2"/>
     </effect>
   </for>
@@ -147,9 +147,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="3600000"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.16" stackType="attack_time_down">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.16" stackType="attack_time_down">
       <mul order="0x30" stat="pAtkSpd" val="1.15"/>
     </effect>
   </for>
@@ -161,9 +161,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="3600000"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="8" stackType="vampRage">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="8" stackType="vampRage">
       <add order="0x40" stat="absorbDam" val="7"/>
     </effect>
   </for>
@@ -175,9 +175,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="3600000"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="berserk">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1" stackType="berserk">
       <mul order="0x30" stat="mAtk" val="1.1"/>
       <mul order="0x30" stat="pAtk" val="1.05"/>
       <mul order="0x30" stat="mDef" val="0.9"/>
@@ -196,9 +196,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="3600000"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.24" stackType="MagicDefUp">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.24" stackType="MagicDefUp">
       <mul order="0x30" stat="mDef" val="1.23"/>
     </effect>
   </for>
@@ -210,9 +210,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="3600000"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.25" stackType="max_mp_up">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.25" stackType="max_mp_up">
       <mul order="0x30" stat="maxMp" val="1.2"/>
     </effect>
   </for>
@@ -224,9 +224,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="3600000"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.75" stackType="ma_up">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.75" stackType="ma_up">
       <mul order="0x30" stat="mAtk" val="1.65"/>
     </effect>
   </for>
@@ -238,9 +238,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="3600000"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.3" stackType="casting_time_down">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.3" stackType="casting_time_down">
       <mul order="0x30" stat="mAtkSpd" val="1.23"/>
     </effect>
   </for>
@@ -252,9 +252,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="3600000"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="MPrate">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="2" stackType="MPrate">
       <mul order="0x30" stat="MagicalMpConsumeRate" val="0.96"/>
       <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.96"/>
     </effect>
@@ -327,9 +327,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="3600000"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.33" stackType="attack_time_down">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.34" stackType="attack_time_down">
       <mul order="0x30" stat="pAtkSpd" val="1.33"/>
     </effect>
   </for>
@@ -342,9 +342,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="3600000"/>
   <for>
-    <effect name="Buff" time="1200" count="1" val="0" stackOrder="4" stackType="hit_up">
+    <effect name="Buff" time="3600" count="1" val="0" stackOrder="5" stackType="hit_up">
       <add order="0x40" stat="accCombat" val="4"/>
     </effect>
   </for>
@@ -357,9 +357,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="3600000"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.5" stackType="critical_dmg_up">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.6" stackType="critical_dmg_up">
       <mul order="0x30" stat="cAtk" val="1.5"/>
     </effect>
   </for>
@@ -372,9 +372,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="3600000"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.3" stackType="critical_prob_up">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.4" stackType="critical_prob_up">
       <mul order="0x30" stat="rCrit" val="1.3"/>
     </effect>
   </for>
@@ -387,9 +387,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="3600000"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.3" stackType="casting_time_down">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.3" stackType="casting_time_down">
       <mul order="0x30" stat="mAtkSpd" val="1.3"/>
     </effect>
   </for>
@@ -404,7 +404,7 @@
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="1200000"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="4" stackType="rEvas">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="5" stackType="rEvas">
       <add order="0x40" stat="rEvas" val="4"/>
     </effect>
   </for>
@@ -417,9 +417,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="3600000"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.75" stackType="ma_up">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.76" stackType="ma_up">
       <mul order="0x30" stat="mAtk" val="1.75"/>
     </effect>
   </for>
@@ -432,9 +432,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="3600000"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.15" stackType="pa_up">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.15" stackType="pa_up">
       <mul order="0x30" stat="pAtk" val="1.15"/>
     </effect>
   </for>
@@ -447,9 +447,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="3600000"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="33" stackType="speed_up">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="34" stackType="speed_up">
       <add order="0x40" stat="runSpd" val="33"/>
     </effect>
   </for>
@@ -462,9 +462,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="3600000"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.15" stackType="pd_up">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.16" stackType="pd_up">
       <mul order="0x30" stat="pDef" val="1.15"/>
     </effect>
   </for>
@@ -477,11 +477,11 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="1200000"/>
+  <set name="buffDuration" val="3600000"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="0.8" stackType="MPrate">
-      <mul order="0x30" stat="MagicalMpConsumeRate" val="0.8"/>
-      <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.8"/>
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="3" stackType="MPrate">
+      <mul order="0x30" stat="MagicalMpConsumeRate" val="0.92"/>
+      <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.92"/>
     </effect>
   </for>
 </skill>
