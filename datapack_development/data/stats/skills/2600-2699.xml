@@ -1,39 +1,39 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
 <skill id="2600" levels="1" name="Gran Kain's Echo Crystal - Theme of Solitude">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="DUMMY"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="2601" levels="1" name="Gran Kain's Echo Crystal - Theme of the Feast">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="DUMMY"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="2602" levels="1" name="Gran Kain's Echo Crystal - Theme of Celebration">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="DUMMY"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="2603" levels="1" name="Gran Kain's Echo Crystal - Theme of Comedy">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="DUMMY"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="2604" levels="1" name="Gran Kain's Firework">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="DUMMY"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="2605" levels="1" name="Gran Kain's Large Firework">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="DUMMY"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="2606" levels="1" name="Gran Kain's Gift Box">
@@ -54,10 +54,17 @@
   Lvl 2: Green Crystal of Fantasy
   Lvl 3: Red Crystal of Fantasy
   -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#power"> 50000 100000 200000 </table>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="200"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="magicLvl" val="1"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="#power"/>
+  <set name="reuseDelay" val="3000"/>
+  <set name="skillType" val="GIVE_SP"/>
+  <set name="target" val="TARGET_SELF"/>
 </skill>
 <skill id="2609" levels="20" name="Escape">
   <!--
@@ -82,10 +89,13 @@
   Lvl 19: Escape - Town of Schuttgart
   Lvl 20: Escape - Kamael Village
   -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="RECALL"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="20000"/>
+  <set name="staticHitTime" val="true"/>
   <set name="castRange" val="-1"/>
+  <!-- missing town id where to ported -->
 </skill>
 <skill id="2610" levels="1" name="Register Bookmark (Event)">
   <set name="target" val="TARGET_NONE"/>

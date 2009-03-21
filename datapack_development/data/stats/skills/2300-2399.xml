@@ -68,10 +68,14 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="2309" levels="1" name="Pig Chest">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="transformId" val="104"/>
+  <set name="effectRange" val="-1"/>
+  <for>
+  	<effect count="1" name="Transformation" time="1800" val="0" /> <!-- duration guessed -->
+  </for>
 </skill>
 <skill id="2310" levels="1" name="Scroll of Guidance - Event Use">
   <!-- Needs to be verified -->
