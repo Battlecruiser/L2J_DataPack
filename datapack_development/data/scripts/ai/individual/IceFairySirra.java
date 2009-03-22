@@ -71,7 +71,9 @@ public class IceFairySirra extends L2AttackableAIScript
 			return;
 		}
 		_freyasZone.setZoneEnabled(false);
-		findTemplate(STEWARD).setBusy(false);
+		L2NpcInstance steward = findTemplate(STEWARD);
+		if (steward != null)
+			steward.setBusy(false);
 		openGates();
 	}
 
