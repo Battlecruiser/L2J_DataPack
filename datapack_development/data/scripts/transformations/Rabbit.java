@@ -40,7 +40,7 @@ public class Rabbit extends L2Transformation
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(629, 1), false);
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(630, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{619,5491});
+		getPlayer().setTransformAllowedSkills(new int[]{619,5491,629,630});
 	}
 
 	public void onUntransform()
