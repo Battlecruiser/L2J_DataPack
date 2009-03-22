@@ -78,6 +78,7 @@ DROP TABLE IF EXISTS npcskills;
 DROP TABLE IF EXISTS olympiad_nobles;
 DROP TABLE IF EXISTS olympiad_nobles_eom;
 DROP TABLE IF EXISTS pets;
+DROP TABLE IF EXISTS pets_skills;
 DROP TABLE IF EXISTS pets_stats;
 DROP TABLE IF EXISTS pledge_skill_trees;
 DROP TABLE IF EXISTS posts;

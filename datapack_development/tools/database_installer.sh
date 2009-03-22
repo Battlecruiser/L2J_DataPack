@@ -335,6 +335,7 @@ $MYG < ../sql/npcskills.sql &> /dev/null
 $MYG < ../sql/olympiad_nobles.sql&> /dev/null
 $MYG < ../sql/olympiad_nobles_eom.sql&> /dev/null
 $MYG < ../sql/pets.sql &> /dev/null
+$MYG < ../sql/pets_skills.sql &> /dev/null
 $MYG < ../sql/pets_stats.sql &> /dev/null
 $MYG < ../sql/pledge_skill_trees.sql &> /dev/null
 $MYG < ../sql/posts.sql &> /dev/null

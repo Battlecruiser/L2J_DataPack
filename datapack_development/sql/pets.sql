@@ -9,8 +9,9 @@ CREATE TABLE IF NOT EXISTS `pets` (
   `curMp` decimal(18,0) ,
   `exp` decimal(20, 0) ,
   `sp` decimal(11) ,
-  `karma` decimal(11) ,
-  `pkkills` decimal(11) ,
   `fed` decimal(11) ,
+  `weapon` int(5) ,
+  `armor` int(5) ,
+  `jewel` int(5) ,
   PRIMARY KEY (`item_obj_id`)
 );
