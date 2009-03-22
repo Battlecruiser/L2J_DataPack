@@ -411,10 +411,10 @@
   <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2046" levels="1" name="Wolf's Necklace">
-  <!-- Need to be checked -->
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="5000"/>
-  <set name="skillType" val="SUMMON"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="skillType" val="COREDONE"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -431,6 +431,7 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="FEED_PET"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="feed" val="100"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
 </skill>
@@ -611,6 +612,7 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="FEED_PET"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="feed" val="150"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
 </skill>

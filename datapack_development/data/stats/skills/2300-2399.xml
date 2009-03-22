@@ -522,10 +522,12 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="2361" levels="1" name="Evolving Wolf's Food">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="FEED_PET"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="feed" val="1000"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2362" levels="1" name="Prison Gate Key">
   <set name="target" val="TARGET_NONE"/>

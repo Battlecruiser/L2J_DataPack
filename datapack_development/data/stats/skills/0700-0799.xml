@@ -68,10 +68,27 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="710" levels="1" name="Divine Summoner Summon Divine Beast">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="mpInitialConsume" val="28"/>
+  <set name="mpConsume" val="117"/>
+  <set name="itemConsumeId" val="1461"/>
+  <set name="itemConsumeCount" val="2"/>
+  <set name="itemConsumeIdOT" val="1461"/>
+  <set name="itemConsumeCountOT" val="1"/>
+  <set name="itemConsumeSteps" val="4"/>
+  <set name="summonTotalLifeTime" val="1200000"/>
+  <set name="summonTimeLostIdle" val="500"/>
+  <set name="summonTimeLostActive" val="1000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="hitTime" val="15000"/>
+  <set name="skillType" val="SUMMON"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <!-- Summon-specific -->
+  <set name="npcId" val="14870"/>
+  <set name="expPenalty" val="0.15"/>
 </skill>
 <skill id="711" levels="1" name="Divine Summoner Transfer Pain">
   <set name="target" val="TARGET_NONE"/>

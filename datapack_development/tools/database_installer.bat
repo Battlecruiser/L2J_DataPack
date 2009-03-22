@@ -595,6 +595,7 @@ npcskills.sql
 olympiad_nobles.sql
 olympiad_nobles_eom.sql
 pets.sql
+pets_skills.sql
 pets_stats.sql
 pledge_skill_trees.sql
 posts.sql
