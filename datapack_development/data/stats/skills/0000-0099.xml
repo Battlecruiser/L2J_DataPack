@@ -401,7 +401,9 @@
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="200"/>
-  <set name="reuseDelay" val="3000"/>
+  <set name="staticReuse" val="true"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="1200"/>
   <set name="skillType" val="AGGDAMAGE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -581,10 +583,12 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="reuseDelay" val="3000"/>
+  <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="700"/>
   <set name="coolTime" val="200"/>
   <set name="skillType" val="AGGDAMAGE"/>
+  <set name="staticReuse" val="true"/>
+  <set name="staticHitTime" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
   <set name="castRange" val="#castRange"/>
