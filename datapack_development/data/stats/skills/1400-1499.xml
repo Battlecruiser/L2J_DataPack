@@ -1252,19 +1252,20 @@
 </skill>
 <skill id="1462" levels="1" name="Seal of Blockade">
   <set name="castRange" val="-1"/>
-  <set name="effectPower" val="90"/> <!-- Base Land Rate --> <!-- Should be 100% ? -->
+  <set name="effectPower" val="80"/> <!-- Base Land Rate -->
   <set name="effectRange" val="-1"/>
   <set name="effectType" val="MUTE"/>
   <set name="hitTime" val="6000"/>
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
+  <set name="lvlDepend" val="1"/>
   <set name="magicLvl" val="79"/>
   <set name="mpConsume" val="100"/>
   <set name="mpInitialConsume" val="9"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="80"/>
   <set name="reuseDelay" val="120000"/>
-  <set name="skillRadius" val="250"/> <!-- Should be 300 ? -->
+  <set name="skillRadius" val="300"/>
   <set name="skillType" val="MDAM"/>
   <set name="target" val="TARGET_AURA"/>
   <for>
