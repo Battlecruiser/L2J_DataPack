@@ -90,10 +90,10 @@
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="power" val="40"/>
+  <set name="power" val="80"/> <!-- Base Land Rate -->
   <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_AURA"/>
-  <set name="skillRadius" val="200"/>
+  <set name="skillRadius" val="300"/> <!-- Guessing, based on videos -->
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="1500"/>
   <set name="skillType" val="DEBUFF"/>
@@ -163,10 +163,10 @@
   <table name="#mpConsume"> 77 92 113 122 </table>
   <table name="#magicLvl"> 48 56 68 74 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="35"/> <!-- Base Land Rate -->
+  <set name="power" val="70"/> <!-- Base Land Rate -->
   <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_AURA"/>
-  <set name="skillRadius" val="200"/>
+  <set name="skillRadius" val="300"/> <!-- Guessing, based on videos -->
   <set name="element" val="2"/> <!-- Fire -->
   <set name="reuseDelay" val="20000"/>
   <set name="isDebuff" val="true"/>

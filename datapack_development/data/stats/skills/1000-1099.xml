@@ -1646,10 +1646,10 @@
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="power" val="40"/>
+  <set name="power" val="80"/> <!-- Base Land Rate -->
   <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_AURA"/>
-  <set name="skillRadius" val="200"/>
+  <set name="skillRadius" val="300"/> <!-- Guessing, based on videos -->
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="1500"/>
   <set name="skillType" val="DEBUFF"/>
