@@ -26107,10 +26107,209 @@ INSERT INTO `droplist` VALUES
 (22271,12351,1,1,1,838), -- Common Item - Sealed Majestic Ring
 (22271,1895,1,2,-1,600000), -- Metallic Fiber
 (22271,5495,1,1,-1,100000), -- Sealed Shield of Nightmare Fragment
-(22288,57,6113,9156,0,700000), -- Adena
-(22288,1868,9,9,2,133000), -- Thread
-(22288,1873,3,6,2,250000), -- Silver Nugget
-(22288,1876,1,1,2,133000), -- Mithril Ore
+(22272,57,2190,4484,0,700000), -- Adena
+(22272,1344,30,90,2,90909), -- Mithril Arrow
+(22272,1868,4,12,2,66667), -- Thread
+(22272,1873,1,1,2,100000), -- Silver Nugget
+(22272,1876,1,1,2,40000), -- Mithril Ore
+(22272,1895,1,1,2,62500), -- Metallic Fiber
+(22272,4042,1,1,2,3731), -- Enria
+(22272,6346,1,1,1,7463), -- Sealed Majestic Ring Gemstone
+(22272,6342,1,1,1,7194), -- Sealed Majestic Earring Gemstone
+(22272,6344,1,1,1,3448), -- Sealed Majestic Necklace Beads
+(22272,12351,1,1,1,287), -- Common Item - Sealed Majestic Ring
+(22272,6901,1,1,2,287), -- Recipe: Shining Arrow (100%) (S)
+(22272,5157,1,1,-1,10000), -- Recipe: Soulshot (S) Compressed Package (100%)
+(22272,5503,1,1,-1,130000), -- Sealed Majestic Boots Lining
+(22272,5502,1,1,-1,90000), -- Sealed Boots of Nightmare Lining
+(22273,57,2117,4336,0,700000), -- Adena
+(22273,4040,1,1,2,3774), -- Mold Lubricant
+(22273,9628,1,1,2,1350), -- Leonard
+(22273,9630,1,1,2,1079), -- Orichalcum
+(22273,9573,1,1,200,539), -- Life Stone: level 80
+(22273,5495,1,1,1,4049), -- Sealed Shield of Nightmare Fragment
+(22273,5527,1,1,1,3774), -- Sealed Helm of Nightmare Design
+(22273,5528,1,1,1,1618), -- Sealed Majestic Circlet Design
+(22273,12268,1,1,1,270), -- Common Item - Sealed Shield of Nightmare
+(22273,1895,1,3,-1,390000), -- Metallic Fiber
+(22273,4040,1,1,-1,40000), -- Mold Lubricant
+(22273,5514,1,1,-1,60000), -- Sealed Gloves of Nightmare Design
+(22274,57,2161,4425,0,700000), -- Adena
+(22274,1344,20,60,2,142857), -- Mithril Arrow
+(22274,1866,1,1,2,166667), -- Suede
+(22274,1871,1,3,2,76923), -- Charcoal
+(22274,4041,1,1,2,1631), -- Mold Hardener
+(22274,1877,1,1,2,7092), -- Adamantite Nugget
+(22274,4040,1,1,2,4082), -- Mold Lubricant
+(22274,5495,1,1,1,4630), -- Sealed Shield of Nightmare Fragment
+(22274,5527,1,1,1,2174), -- Sealed Helm of Nightmare Design
+(22274,5528,1,1,1,2717), -- Sealed Majestic Circlet Design
+(22274,960,1,1,2,272), -- Scroll: Enchant Armor (S)
+(22274,5167,1,1,-1,10000), -- Recipe: Blessed Spiritshot (S) Compressed Package (100%)
+(22274,5515,1,1,-1,110000), -- Sealed Majestic Gloves Design
+(22275,57,10810,24070,0,700000), -- Adena
+(22275,9698,1,1,100,860000), -- Blue Coral Key
+(22275,1895,1,3,2,250000), -- Metallic Fiber
+(22275,4042,1,1,2,15625), -- Enria
+(22275,4043,1,1,2,15625), -- Asofe
+(22275,1895,2,12,-1,800000), -- Metallic Fiber
+(22275,5522,1,1,-1,33333), -- Sealed Armor of Nightmare Pattern
+(22275,4040,1,1,-1,33333), -- Mold Lubricant
+(22276,57,3912,7643,0,700000), -- Adena
+(22276,1344,10,30,2,250000), -- Mithril Arrow
+(22276,1895,1,1,2,10989), -- Metallic Fiber
+(22276,9630,1,1,2,10989), -- Orichalcum
+(22276,4040,1,1,2,10989), -- Mold Lubricant
+(22276,5527,1,1,-1,150000), -- Sealed Helm of Nightmare Design
+(22281,57,1347,2538,0,700000), -- Adena
+(22281,1895,1,1,2,166667), -- Metallic Fiber
+(22281,9630,1,1,2,10000), -- Orichalcum
+(22285,57,3835,7785,0,700000), -- Adena
+(22285,1873,1,1,2,210000), -- Silver Nugget
+(22285,1866,3,8,2,34483), -- Suede
+(22285,1864,5,10,2,80000), -- Stem
+(22285,1865,3,5,2,76923), -- Varnish
+(22285,6346,1,1,1,5000), -- Sealed Majestic Ring Gemstone
+(22285,6342,1,1,1,14925), -- Sealed Majestic Earring Gemstone
+(22285,6344,1,1,1,5000), -- Sealed Majestic Necklace Beads
+(22285,6342,1,2,-1,200000), -- Sealed Majestic Earring Gemstone
+(22287,57,4439,8988,0,700000), -- Adena
+(22287,1894,1,1,2,9346), -- Crafted Leather
+(22287,4039,1,1,2,23256), -- Mold Glue
+(22287,4041,1,1,2,4673), -- Mold Hardener
+(22287,4044,1,1,2,16393), -- Thons
+(22287,5495,1,1,1,4673), -- Sealed Shield of Nightmare Fragment
+(22287,5527,1,1,1,4673), -- Sealed Helm of Nightmare Design
+(22287,5528,1,1,1,4673), -- Sealed Majestic Circlet Design
+(22287,12269,1,1,1,2336), -- Common Item - Sealed Helm of Nightmare
+(22287,1894,1,1,-1,900000), -- Crafted Leather
+(22287,4039,1,1,-1,500000), -- Mold Glue
+(22288,57,4859,9885,0,700000), -- Adena
+(22288,1868,3,9,2,142857), -- Thread
+(22288,1873,3,6,2,55556), -- Silver Nugget
+(22288,1876,1,1,2,90909), -- Mithril Ore
+(22288,1895,1,1,2,166667), -- Metallic Fiber
+(22288,4042,1,1,2,2364), -- Enria
+(22288,5495,1,1,1,21277), -- Sealed Shield of Nightmare Fragment
+(22288,5527,1,1,1,4739), -- Sealed Helm of Nightmare Design
+(22288,5528,1,1,1,4739), -- Sealed Majestic Circlet Design
+(22288,9546,1,1,200,9434), -- Fire Stone
+(22288,8349,1,1,-1,50000), -- Doom Crusher Head
+(22289,57,4716,9635,0,700000), -- Adena
+(22289,1868,3,9,2,111111), -- Thread
+(22289,1873,1,1,2,125000), -- Silver Nugget
+(22289,1876,1,1,2,47619), -- Mithril Ore
+(22289,1895,1,1,2,90909), -- Metallic Fiber
+(22289,8349,1,1,1,2268), -- Doom Crusher Head
+(22289,5544,1,1,1,2268), -- Branch Of The Mother Tree Head
+(22289,9546,1,1,200,2268), -- Fire Stone
+(22289,9574,1,1,200,2268), -- Mid-Grade Life Stone: level 80
+(22289,1876,1,3,-1,250000), -- Mithril Ore
+(22289,1895,1,5,-1,190000), -- Metallic Fiber
+(22291,57,2410,24540,0,700000), -- Adena
+(22291,1868,1,45,2,250000), -- Thread
+(22291,1873,1,4,2,76923), -- Silver Nugget
+(22291,1889,1,1,2,66667), -- Compound Braid
+(22291,4044,1,1,2,19608), -- Thons
+(22291,5549,1,1,2,47619), -- Metallic Thread
+(22291,5534,1,1,1,9709), -- Soul Bow Stave
+(22291,1889,1,3,-1,333333), -- Compound Braid
+(22291,5488,1,1,-1,100000), -- Sealed Majestic Robe Fabric
+(22293,57,4048,8129,0,700000), -- Adena
+(22293,1866,1,3,2,90909), -- Suede
+(22293,1871,1,3,2,250000), -- Charcoal
+(22293,4041,1,1,2,2825), -- Mold Hardener
+(22293,1877,1,1,2,16949), -- Adamantite Nugget
+(22293,9546,1,1,200,11236), -- Fire Stone
+(22293,5541,1,1,1,2825), -- Tallum Glaive Edge
+(22293,5503,1,1,-1,200000), -- Sealed Majestic Boots Lining
+(22293,5502,1,1,-1,200000), -- Sealed Boots of Nightmare Lining
+(22294,57,3170,7068,0,700000), -- Adena
+(22294,1895,1,1,2,35714), -- Metallic Fiber
+(22294,9628,1,1,2,8130), -- Leonard
+(22294,4040,1,1,2,6494), -- Mold Lubricant
+(22294,9546,1,1,200,1621), -- Fire Stone
+(22294,1895,1,4,-1,600000), -- Metallic Fiber
+(22294,5515,1,1,-1,100000), -- Sealed Majestic Gloves Design
+(22294,4040,1,1,-1,33333), -- Mold Lubricant
+(22298,57,10520,48270,0,700000), -- Adena
+(22298,1344,150,450,2,111111), -- Mithril Arrow
+(22298,1868,4,10,2,83333), -- Thread
+(22298,1873,4,4,2,66667), -- Silver Nugget
+(22298,1876,1,1,2,16393), -- Mithril Ore
+(22298,1895,5,5,2,16393), -- Metallic Fiber
+(22298,6346,1,1,1,50000), -- Sealed Majestic Ring Gemstone
+(22298,6342,1,1,1,16393), -- Sealed Majestic Earring Gemstone
+(22298,5528,1,1,-1,200000), -- Sealed Majestic Circlet Design
+(22298,4042,1,1,-1,100000), -- Enria
+(22299,57,26870,70160,0,700000), -- Adena
+(22299,1894,1,1,2,111111), -- Crafted Leather
+(22299,4039,1,1,2,166667), -- Mold Glue
+(22299,4041,1,1,2,58824), -- Mold Hardener
+(22299,4044,1,1,2,142857), -- Thons
+(22299,5514,1,1,1,76923), -- Sealed Gloves of Nightmare Design
+(22299,5503,1,1,1,19608), -- Sealed Majestic Boots Lining
+(22299,5502,1,1,1,19608), -- Sealed Boots of Nightmare Lining
+(22299,4041,1,1,-1,400000), -- Mold Hardener
+(22302,57,18220,37460,0,700000), -- Adena
+(22302,1344,255,662,2,111111), -- Mithril Arrow
+(22302,1895,2,3,2,142857), -- Metallic Fiber
+(22302,4040,1,1,2,62500), -- Mold Lubricant
+(22303,57,19790,39240,0,700000), -- Adena
+(22303,1864,45,69,2,111111), -- Stem
+(22303,1869,8,16,2,166667), -- Iron Ore
+(22303,1880,4,6,2,37037), -- Steel
+(22303,4043,1,1,2,71429), -- Asofe
+(22303,5550,1,1,2,55556), -- Durable Metal Plate
+(22303,5538,1,1,1,18519), -- Dragon Grinder Edge
+(22303,4043,1,1,-1,400000), -- Asofe
+(22303,5541,1,1,-1,100000), -- Tallum Glaive Edge
+(22304,57,19790,38220,0,700000), -- Adena
+(22304,1867,4,12,2,250000), -- Animal Skin
+(22304,1872,8,26,2,166667), -- Animal Bone
+(22304,1882,5,8,2,52632), -- Leather
+(22304,1894,1,1,2,52632), -- Crafted Leather
+(22304,4042,1,1,2,17544), -- Enria
+(22304,9574,1,1,200,17544), -- Mid-Grade Life Stone: level 80
+(22304,5534,1,1,1,17544), -- Soul Bow Stave
+(22304,5545,1,1,-1,150000), -- Dark Legion's Edge Blade
+(22305,57,4357,9882,0,700000), -- Adena
+(22305,1895,1,1,2,50000), -- Metallic Fiber
+(22305,4040,1,1,2,20833), -- Mold Lubricant
+(22305,9630,1,1,2,6993), -- Orichalcum
+(22305,9547,1,1,200,6993), -- Water Stone
+(22306,57,10050,20290,0,700000), -- Adena
+(22306,1873,4,11,2,62500), -- Silver Nugget
+(22306,1868,10,26,2,100000), -- Thread
+(22306,1866,5,8,2,83333), -- Suede
+(22306,1864,67,84,2,31250), -- Stem
+(22306,1865,40,68,2,41667), -- Varnish
+(22307,57,21640,49110,0,700000), -- Adena
+(22307,1867,13,32,2,71429), -- Animal Skin
+(22307,1869,20,54,2,27027), -- Iron Ore
+(22307,1870,38,38,2,9091), -- Coal
+(22307,1871,43,58,2,35714), -- Charcoal
+(22307,1872,9,20,2,125000), -- Animal Bone
+(22307,5537,1,1,1,27027), -- Soul Separator Head
+(22307,9547,1,1,200,18182), -- Water Stone
+(22308,57,7914,7914,0,700000), -- Adena
+(22308,1867,2,2,2,700000), -- Animal Skin
+(22308,1869,4,4,2,700000), -- Iron Ore
+(22308,1870,3,3,2,700000), -- Coal
+(22309,57,5519,11150,0,700000), -- Adena
+(22309,1868,18,41,2,55556), -- Thread
+(22309,1873,2,5,2,58824), -- Silver Nugget
+(22309,1876,1,1,2,100000), -- Mithril Ore
+(22309,1895,1,1,2,166667), -- Metallic Fiber
+(22309,4042,1,1,2,3861), -- Enria
+(22309,5481,1,1,1,7752), -- Sealed Majestic Leather Armor Fabric
+(22310,57,5165,10200,0,700000), -- Adena
+(22310,1344,309,309,2,9091), -- Mithril Arrow
+(22310,1868,4,12,2,142857), -- Thread
+(22310,1873,6,6,2,9091), -- Silver Nugget
+(22310,1876,1,1,2,62500), -- Mithril Ore
+(22310,1895,1,1,2,166667), -- Metallic Fiber
+(22310,5488,1,1,1,18182), -- Sealed Majestic Robe Fabric
 (22320,57,16450,32990,0,700000), -- Adena
 (22320,9599,1,3,100,720000), -- Ancient Tome of the Demon
 (22320,9674,4,12,101,100000), -- Darion's Badge
@@ -28987,7 +29186,37 @@ INSERT INTO `droplist` VALUES
 (25524,8751,1,1,3,152713), -- High-Grade Life Stone: level 70 
 (25524,8761,1,1,3,86125), -- Top-Grade Life Stone: level 70 
 (25525,1344,60,180,2,359667), -- Mithril Arrow 
-(25526,1344,60,180,2,359667); -- Mithril Arrow
+(25526,1344,60,180,2,359667), -- Mithril Arrow
+(25531,7575,1,1,1,9363), -- Draconic Bow
+(25531,7579,12,36,1,208130), -- Draconic Bow Shaft
+(25531,6578,1,1,2,29438), -- Blessed Scroll: Enchant Armor (Grade S)
+(25531,6678,1,1,0,8620), -- Sealed Imperial Crusader Shield
+(25531,6679,1,1,0,6036), -- Sealed Imperial Crusader Helmet
+(25531,6683,1,1,0,6036), -- Sealed Draconic Leather Helmet
+(25531,6687,1,1,0,6036), -- Sealed Major Arcana Circlet
+(25531,6705,23,67,0,50219), -- Sealed Imperial Crusader Shield Part
+(25531,6706,6,18,0,219051), -- Sealed Imperial Crusader Helmet Pattern
+(25531,6710,11,31,0,125172), -- Sealed Draconic Leather Helmet Pattern
+(25531,6714,16,48,0,82144), -- Sealed Major Arcana Circlet Pattern
+(25531,9474,1,1,1,9363), -- Dynasty Necklace [Hold resistance]
+(25532,6676,1,1,0,17943), -- Sealed Imperial Crusader Gauntlet
+(25532,6677,1,1,0,17943), -- Sealed Imperial Crusader Boots
+(25532,6681,1,1,0,17943), -- Sealed Draconic Leather Glove
+(25532,6682,1,1,0,17943), -- Sealed Draconic Leather Boots
+(25532,6685,1,1,0,17943), -- Sealed Major Arcana Glove
+(25532,6686,1,1,0,17943), -- Sealed Major Arcana Boots
+(25532,6703,112,336,0,20414), -- Sealed Imperial Crusader Gauntlets Design
+(25532,6704,14,40,0,169360), -- Sealed Imperial Crusader Boots Design
+(25532,6708,20,60,0,114318), -- Sealed Draconic Leather Gloves Fabric
+(25532,6709,28,82,0,83141), -- Sealed Draconic Leather Boots Design
+(25532,6712,36,108,0,63511), -- Sealed Major Arcana Gloves fabric
+(25532,6713,46,136,0,50249), -- Sealed Major Arcana Boots Design
+(25532,6577,1,1,2,8327), -- Blessed Scroll: Enchant Weapon (Grade S)
+(25532,10300,1,1,1,50000), -- Transform Sealbook - Kechi
+(25534,6680,1,1,0,17506), -- Sealed Draconic Leather Armor
+(25534,6707,12,36,0,314424), -- Sealed Draconic Leather Armor Part
+(25534,7575,1,1,1,9363), -- Draconic Bow
+(25534,7579,12,36,1,208130); -- Draconic Bow Shaft
 
 INSERT INTO `droplist` VALUES 
 (18342,57,7,13,0,1000000); -- Adena
@@ -29513,7 +29742,8 @@ INSERT INTO `droplist` VALUES
 (29095,6695,3,9,3,930000), -- Demon Splinter Blade
 (29095,6371,1,1,3,23810), -- Demon Splinter
 (29095,10298,1,1,5,50000), -- Transform Sealbook - Gordon
-(29095,960,1,1,4,450000); -- Scroll: Enchant Armor (Grade S)
+(29095,960,1,1,4,450000), -- Scroll: Enchant Armor (Grade S)
+(29104,10015,1,1,1,1000000); -- Prison Gate Key - unknown chance
 
 
 INSERT INTO `droplist` VALUES 
