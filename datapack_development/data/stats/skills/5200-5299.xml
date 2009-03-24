@@ -516,19 +516,19 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="5264" levels="12" name="Death Mark">
-  <!-- This skill is wrong, needs core support! -->
-  <table name="#dmg"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
+  <!-- CT2.2 retail confirmed -->
+  <table name="#dmg"> 54 65 72 87 103 121 142 163 187 209 232 257 </table>
   <set name="target" val="TARGET_ONE"/>
   <set name="element" val="6"/> <!-- Dark -->
-  <set name="skillType" val="DOT"/>
+  <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
   <set name="castRange" val="600"/>
+  <set name="effectRange" val="1200"/>
   <for>
-    <effect count="20" name="DamOverTime" time="3" val="#dmg">
-      <mul order="0x30" stat="pDef" val="0.77"/>
-      <mul order="0x30" stat="mDef" val="0.9"/>
-      <mul order="0x30" stat="darkVuln" val="1.3"/>
+    <effect count="10" name="DamOverTime" time="3" val="#dmg" abnormal="poison">
+      <mul order="0x30" stat="pDef" val="0.8"/>
+      <mul order="0x30" stat="mDef" val="0.8"/>
     </effect>
   </for>
 </skill>

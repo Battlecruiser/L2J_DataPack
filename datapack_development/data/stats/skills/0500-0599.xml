@@ -1390,12 +1390,13 @@
   </for>
 </skill>
 <skill id="584" levels="1" name="Power Claw">
+  <!-- CT2.2 retail confirmed -->
   <set name="mpConsume" val="55"/>
   <set name="power" val="1008"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="overHit" val="true"/>
   <set name="SSBoost" val="2.0"/>
-  <set name="reuseDelay" val="13000"/>
+  <set name="reuseDelay" val="10000"/>
   <set name="hitTime" val="1080"/>
   <set name="coolTime" val="720"/>
   <set name="skillType" val="PDAM"/>
@@ -1404,9 +1405,10 @@
   <set name="effectRange" val="400"/>
 </skill>
 <skill id="585" levels="1" name="Fast Moving">
+  <!-- CT2.2 retail confirmed -->
   <set name="mpConsume" val="55"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="reuseDelay" val="90000"/>
+  <set name="reuseDelay" val="120000"/>
   <set name="hitTime" val="1000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1414,12 +1416,13 @@
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="438"/>
   <for>
-    <effect count="1" name="Buff" time="15" val="0" stackOrder="66" stackType="speed_up_special">
-      <add order="0x40" stat="runSpd" val="66"/>
+    <effect count="1" name="Buff" time="15" val="0">
+      <mul order="0x30" stat="runSpd" val="1.45"/>
     </effect>
   </for>
 </skill>
 <skill id="586" levels="2" name="Rolling Attack">
+  <!-- CT2.2 retail confirmed -->
   <table name="#mpConsume"> 54 58 </table>
   <table name="#power"> 864 984 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1427,17 +1430,17 @@
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="150"/>
   <set name="overHit" val="true"/>
-  <set name="reuseDelay" val="17000"/>
+  <set name="reuseDelay" val="15000"/>
   <set name="ignoreShld" val="true"/>
   <set name="hitTime" val="2500"/>
   <set name="coolTime" val="733"/>
   <set name="skillType" val="PDAM"/>
   <set name="effectRange" val="-1"/>
   <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="587" levels="2" name="Earth Storm">
+  <!-- CT2.2 retail confirmed -->
   <table name="#mpConsume"> 54 58 </table>
   <table name="#power"> 1200 1406 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1445,7 +1448,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="overHit" val="true"/>
   <set name="SSBoost" val="2.0"/>
-  <set name="reuseDelay" val="13000"/>
+  <set name="reuseDelay" val="10000"/>
   <set name="hitTime" val="1000"/>
   <set name="coolTime" val="720"/>
   <set name="skillType" val="PDAM"/>
@@ -1454,17 +1457,37 @@
   <set name="effectRange" val="400"/>
 </skill>
 <skill id="588" levels="2" name="Curse of Darkness">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- CT2.2 retail confirmed -->
+  <table name="#mpConsume"> 54 58 </table>
+  <table name="#dmg"> 215 336 </table>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="80"/>
+  <set name="reuseDelay" val="45000"/>
+  <set name="hitTime" val="1200"/>
+  <set name="coolTime" val="350"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
+  <for>
+    <effect count="5" name="DamOverTime" time="3" val="#dmg" />
+  </for>
 </skill>
 <skill id="589" levels="2" name="Darkness Energy Drain">
-  <set name="element" val="6"/> <!-- Dark -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- unconfirmed drain power -->
+  <table name="#mpConsume"> 54 58 </table>
+  <table name="#power"> 260 467 </table>
+  <set name="target" val="TARGET_CORPSE_MOB"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="100"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="hitTime" val="1500"/>
+  <set name="coolTime" val="350"/>
+  <set name="skillType" val="DRAIN"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="20"/>
+  <set name="effectRange" val="200"/>
 </skill>
 <skill id="590" levels="1" name="Residence Body">
   <set name="target" val="TARGET_NONE"/>

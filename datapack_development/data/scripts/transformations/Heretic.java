@@ -37,11 +37,28 @@ public class Heretic extends L2Transformation
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(738, 1), false);
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(739, 1), false);
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(740, 1), false);
-
-		getPlayer().setTransformAllowedSkills(new int[]{619,5491,738,739,740});
+		if (getPlayer().getLevel() >= 76)
+		{
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(738, 3), false);
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(739, 3), false);
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(740, 3), false);
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(741, 3), false);
+		}
+		else if (getPlayer().getLevel() >= 73)
+		{
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(738, 2), false);
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(739, 2), false);
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(740, 2), false);
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(741, 2), false);
+		}
+		else if (getPlayer().getLevel() >= 70)
+		{
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(738, 1), false);
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(739, 1), false);
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(740, 1), false);
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(741, 1), false);
+		}
+		getPlayer().setTransformAllowedSkills(new int[]{619,5491,738,739,740,741});
 	}
 
 	public void onUntransform()
@@ -56,9 +73,28 @@ public class Heretic extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false, false);
 		// Decrease Bow/Crossbow Attack Speed
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false, false);
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(738, 1), false, false);
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(739, 1), false, false);
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(740, 1), false, false);
+
+		if (getPlayer().getLevel() >= 76)
+		{
+			getPlayer().removeSkill(SkillTable.getInstance().getInfo(738, 3), false, false);
+			getPlayer().removeSkill(SkillTable.getInstance().getInfo(739, 3), false, false);
+			getPlayer().removeSkill(SkillTable.getInstance().getInfo(740, 3), false, false);
+			getPlayer().removeSkill(SkillTable.getInstance().getInfo(741, 3), false, false);
+		}
+		else if (getPlayer().getLevel() >= 73)
+		{
+			getPlayer().removeSkill(SkillTable.getInstance().getInfo(738, 2), false, false);
+			getPlayer().removeSkill(SkillTable.getInstance().getInfo(739, 2), false, false);
+			getPlayer().removeSkill(SkillTable.getInstance().getInfo(740, 2), false, false);
+			getPlayer().removeSkill(SkillTable.getInstance().getInfo(741, 2), false, false);
+		}
+		else
+		{
+			getPlayer().removeSkill(SkillTable.getInstance().getInfo(738, 1), false, false);
+			getPlayer().removeSkill(SkillTable.getInstance().getInfo(739, 1), false, false);
+			getPlayer().removeSkill(SkillTable.getInstance().getInfo(740, 1), false, false);
+			getPlayer().removeSkill(SkillTable.getInstance().getInfo(741, 1), false, false);
+		}
 
 		getPlayer().setTransformAllowedSkills(new int[]{});
 	}
