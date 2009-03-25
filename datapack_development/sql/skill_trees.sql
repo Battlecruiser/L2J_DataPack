@@ -12604,8 +12604,6 @@ INSERT INTO skill_trees VALUES
 (52,146,40,'Anti Magic',360000,70),
 (52,146,41,'Anti Magic',360000,70),
 (52,1517,1,'Chant of Combat',720000,70), -- SP cost guessed
-(52,1518,1,'Chant of Critical',720000,70), -- SP cost guessed
-(52,1519,1,'Chant of Blood Awakening',720000,70), -- SP cost guessed
 (52,146,42,'Anti Magic',540000,72),
 (52,146,43,'Anti Magic',540000,72),
 (52,250,39,'Weapon Mastery',540000,72),
@@ -12626,6 +12624,7 @@ INSERT INTO skill_trees VALUES
 (52,1229,17,'Chant of Life',1070000,72),
 (52,1245,13,'Steal Essence',1070000,72),
 (52,1001,10,'Soul Cry',1070000,72),
+(52,1518,1,'Chant of Critical',1070000,72), -- SP cost guessed
 (52,1390,3,'War Chant',1350000,74),
 (52,1391,3,'Earth Chant',1350000,74),
 (52,1310,4,'Chant of Vampire',1350000,74),
@@ -12649,6 +12648,7 @@ INSERT INTO skill_trees VALUES
 (52,250,42,'Weapon Mastery',680000,74),
 (52,146,44,'Anti Magic',680000,74),
 (52,146,45,'Anti Magic',680000,74),
+(52,1519,1,'Chant of Blood Awakening',1350000,74), -- SP cost guessed
 (53,142,1,'Armor Mastery',310,5),
 (53,141,1,'Weapon Mastery',310,5),
 (53,141,2,'Weapon Mastery',1100,10),
