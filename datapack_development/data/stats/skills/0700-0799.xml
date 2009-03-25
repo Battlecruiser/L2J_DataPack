@@ -809,15 +809,17 @@
   <!-- Done by DJ MELERIX -->
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
+  <set name="element" val="3"/> <!-- Water -->
   <set name="hitTime" val="4000"/>
   <set name="mpConsume" val="160"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="overHit" val="true"/>
   <set name="power" val="4312"/>
-  <set name="reuseDelay" val="6000"/> <!-- Guessing -->
+  <set name="reuseDelay" val="60000"/> <!-- Guessing -->
   <set name="skillType" val="PDAM"/>
+  <set name="skillRadius" val="200"/> <!-- Guessing -->
   <set name="SSBoost" val="2.0"/>
-  <set name="target" val="TARGET_ONE"/>
+  <set name="target" val="TARGET_AREA"/>
   <set name="weaponsAllowed" val="32"/> <!-- Bow -->
 </skill>
 <skill id="773" levels="1" name="Ghost Piercing">
