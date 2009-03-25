@@ -142,10 +142,14 @@ def enterInstance(self,player,template,teleto):
 	instanceId = 0
 	party = player.getParty()
 	#check for exising instances of party members
-	for partyMember in party.getPartyMembers().toArray():
-		if partyMember.getInstanceId()!=0:
-			instanceId = partyMember.getInstanceId()
-			if debug: print "DarkCloudMansion: found party member in instance:"+str(instanceId)
+	if party :
+		for partyMember in party.getPartyMembers().toArray():
+			if partyMember.getInstanceId()!=0:
+				instanceId = partyMember.getInstanceId()
+				if debug: print "DarkCloudMansion: found party member in instance:"+str(instanceId)
+	else :
+		if player.getInstanceId()!=0:
+			instanceId = player.getInstanceId()
 	#exising instance
 	if instanceId != 0:
 		if not checkConditions(player,False):
