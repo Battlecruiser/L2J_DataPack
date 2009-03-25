@@ -178,7 +178,7 @@ public class Zaken extends L2AttackableAIScript
 	public String onAdvEvent (String event, L2NpcInstance npc, L2PcInstance player)
 	{
 		int status = GrandBossManager.getInstance().getBossStatus(ZAKEN);
-		if (status == DEAD)
+		if (status == DEAD && !event.equalsIgnoreCase("zaken_unlock")))
 			return super.onAdvEvent(event, npc, player);
 
 		if (event.equalsIgnoreCase("1001"))
