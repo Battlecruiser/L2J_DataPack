@@ -232,7 +232,7 @@
   <set name="effectRange" val="900"/>
 </skill>
 <skill id="625" levels="1" name="Soul Gathering">
-  <!-- Needs to be verified -->
+  <!-- CT2.2 retail confirmed -->
   <set name="hpConsume" val="200"/>
   <set name="hitTime" val="1500"/>
   <set name="itemConsumeId" val="3031"/>
@@ -244,7 +244,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="1"/>
   <set name="effectRange" val="1"/>
-  <set name="num_souls" val="35"/>
+  <set name="num_souls" val="50"/>
 </skill>
 <skill id="626" levels="4" name="Critical Sense">
   <!-- Needs to be verified -->
@@ -261,6 +261,7 @@
   </for>
 </skill>
 <skill id="627" levels="40" name="Soul Shock">
+  <!-- CT2.2 retail confirmed -->
   <table name="#mpConsume"> 48 49 51 52 54 56 56 58 59 61 63 65 66 68 70 72 72 74 76 78 80 81 83 85 87 88 89 91 92 94 96 97 99 100 102 103 105 106 108 109 </table>
   <table name="#power"> 344 367 391 443 471 500 530 562 595 630 666 703 742 782 823 866 910 955 1002 1050 1100 1150 1202 1255 1309 1364 1420 1476 1534 1592 1651 1710 1770 1830 1891 1951 2012 2072 2132 2192 </table>
   <table name="#magicLvl"> 40 41 42 43 44 44 45 46 47 48 49 50 51 51 52 53 54 55 56 57 58 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 </table>
@@ -274,17 +275,21 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="200"/>
   <set name="lvlDepend" val="1"/>
+  <set name="overHit" val="true"/>
+  <set name="SSBoost" val="2.0"/>
   <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="60000"/>
   <set name="isDebuff" val="true"/>
   <set name="soulMaxConsumeCount" val="5"/>
   <set name="effectRange" val="200"/>
   <set name="effectType" val="FEAR"/>
   <set name="effectPower" val="15"/>
   <for>
-    <effect count="8" name="Fear" time="2" val="0"/>
+    <effect count="3" name="Fear" time="2" val="0"/>
   </for>
 </skill>
 <skill id="628" levels="1" name="Warp">
+  <!-- CT2.2 retail confirmed -->
   <set name="castRange" val="-1"/>
   <set name="coolTime" val="200"/>
   <set name="effectRange" val="-1"/>
@@ -303,6 +308,7 @@
   </for>
 </skill>
 <skill id="629" levels="1" name="Rabbit Magic Eye">
+  <!-- CT2.2 retail confirmed -->
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="100"/>
   <set name="skillType" val="DUMMY"/>
@@ -316,6 +322,7 @@
   <set name="effectRange" val="-1"/>
 </skill>
 <skill id="630" levels="1" name="Rabbit Tornado">
+  <!-- CT2.2 retail confirmed -->
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DUMMY"/>
   <set name="operateType" val="OP_ACTIVE"/>

@@ -46,7 +46,7 @@
   </for>
 </skill>
 <skill id="502" levels="5" name="Life to Soul">
-  <!-- Done by akira35. Tweaked by Xantusq -->
+  <!-- CT2.2 retail confirmed -->
   <table name="#hpConsume"> 193 237 279 311 328 </table>
   <table name="#charges"> 1 2 3 4 5 </table>
   <set name="hpConsume" val="#hpConsume"/>
@@ -75,6 +75,7 @@
   <set name="reuseDelay" val="10000"/>
 </skill>
 <skill id="504" levels="37" name="Triple Thrust" enchantLevels1="30" enchantLevels2="30" >
+  <!-- CT2.2 retail confirmed -->
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <table name="#ench1Power"> 3255 3278 3300 3322 3344 3366 3388 3411 3433 3455 3477 3499 3521 3544 3566 3588 3610 3632 3654 3676 3699 3721 3743 3765 3787 3809 3832 3854 3876 3898 </table>
   <table name="#ench2MpConsume"> 59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 </table>
@@ -95,6 +96,7 @@
   <set name="overHit" val="true"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
+  <set name="critChance" val="15"/>
   <set name="soulMaxConsumeCount" val="5"/>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -102,6 +104,7 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
 </skill>
 <skill id="505" levels="28" name="Shining Edge" enchantLevels1="30" enchantLevels2="30" >
+  <!-- CT2.2 retail confirmed -->
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <table name="#ench1Power"> 5813 5852 5892 5932 5971 6011 6050 6090 6129 6169 6209 6248 6288 6327 6367 6406 6446 6486 6525 6565 6604 6644 6683 6723 6763 6802 6842 6881 6921 6960 </table>
   <table name="#ench2MpConsume"> 59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 </table>
@@ -129,6 +132,7 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
 </skill>
 <skill id="506" levels="4" name="Checkmate" enchantLevels1="30" enchantLevels2="30" >
+  <!-- CT2.2 retail confirmed -->
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <table name="#ench1Power"> 5813 5852 5892 5932 5971 6011 6050 6090 6129 6169 6209 6248 6288 6327 6367 6406 6446 6486 6525 6565 6604 6644 6683 6723 6763 6802 6842 6881 6921 6960 </table>
   <table name="#ench2MpConsume"> 50 49 48 47 46 46 45 44 43 42 41 41 40 39 38 37 36 36 35 34 33 32 31 31 30 29 28 27 26 26 </table>
@@ -139,13 +143,17 @@
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1500"/>
-  <set name="reuseDelay" val="10000"/>
+  <set name="coolTime" val="720"/>
+  <set name="reuseDelay" val="11000"/>
   <set name="ignoreShld" val="true"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
   <set name="soulMaxConsumeCount" val="5"/>
+  <set name="critChance" val="15"/>
+  <set name="overHit" val="true"/>
+  <set name="SSBoost" val="2.0"/>
   <set name="baseCritRate" val="15"/>
   <cond msg="Checkmate cannot be used due to unsuitable terms.">
     <target active_effect_id="5264"/>
@@ -302,7 +310,7 @@
   <set name="soulConsumeCount" val="1"/>
 </skill>
 <skill id="514" levels="9" name="Fire Trap">
-  <!-- Needs retail value corrections -->
+  <!-- CT2.2 retail confirmed -->
   <table name="#triggerlvl"> 1 2 3 4 5 6 7 8 9 </table>
   <set name="mpConsume" val="50"/>
   <set name="hitTime" val="3000"/>
