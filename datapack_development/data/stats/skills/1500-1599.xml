@@ -61,6 +61,7 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="1510" levels="1" name="Soul Cleanse">
+  <!-- CT2.2 retail confirmed -->
   <set name="mpInitialConsume" val="10"/>
   <set name="mpConsume" val="22"/>
   <set name="hitTime" val="2000"/>
@@ -74,10 +75,24 @@
   <set name="reuseDelay" val="35000"/>
 </skill>
 <skill id="1511" levels="8" name="Curse of Life Flow">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- CT2.2 retail partially confirmed -->
+  <table name="#mpConsume"> 34 35 37 38 39 39 40 42 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="3000"/>
+  <set name="coolTime" val="200"/>
+  <set name="reuseDelay" val="60000"/>
+  <set name="power" val="80"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1200"/>
+  <set name="isMagic" val="true"/>
+  <for>
+    <effect count="25" name="Debuff" time="1" val="0" abnormal="poison" stackOrder="8" stackType="poison">
+       <!-- effect values yet unknown -->
+    </effect>
+  </for>
 </skill>
   <skill id="1512" levels="1" name="Soul Vortex">
   <!-- Done By Akira35 -->
@@ -347,10 +362,24 @@
   <set name="effectRange" val="1000"/>
 </skill>
 <skill id="1529" levels="7" name="Soul Web">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- CT2.2 retail confirmed -->
+  <table name="#mpConsume"> 52 60 62 64 65 67 69 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="hitTime" val="2500"/>
+  <set name="coolTime" val="200"/>
+  <set name="reuseDelay" val="60000"/>
+  <set name="power" val="80"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1200"/>
+  <set name="isMagic" val="true"/>
+  <for>
+    <effect name="Debuff" time="55" count="1" val="0" stackOrder="0.7" stackType="RunSpeedDown">
+      <mul order="0x30" stat="runSpd" val="0.7"/>
+    </effect>
+  </for>
 </skill>
 <skill id="1530" levels="13" name="Death Spike">
   <table name="#mpConsume_Init"> 4 5 6 7 7 7 8 8 8 9 9 9 10 </table>
