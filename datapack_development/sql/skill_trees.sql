@@ -4648,6 +4648,8 @@ INSERT INTO skill_trees VALUES
 (17,236,37,'Light Armor Mastery',430000,70),
 (17,235,36,'Robe Mastery',430000,70),
 (17,235,37,'Robe Mastery',430000,70),
+(17,1499,1,'Improved Combat',850000,70), -- SP cost guessed
+(17,1501,1,'Improved Condition',850000,70), -- SP cost guessed
 (17,146,40,'Anti Magic',430000,70),
 (17,146,41,'Anti Magic',430000,70),
 (17,146,42,'Anti Magic',680000,72),
@@ -7615,6 +7617,8 @@ INSERT INTO skill_trees VALUES
 (30,235,37,'Robe Mastery',250000,70),
 (30,146,40,'Anti Magic',250000,70),
 (30,146,41,'Anti Magic',250000,70),
+(30,1503,1,'Improved Shield Defence',490000,70), -- SP cost guessed
+(30,1504,1,'Improved Movement',490000,70), -- SP cost guessed
 (30,1219,26,'Greater Group Heal',360000,72),
 (30,1219,27,'Greater Group Heal',360000,72),
 (30,146,42,'Anti Magic',360000,72),
@@ -10747,6 +10751,8 @@ INSERT INTO skill_trees VALUES
 (43,235,37,'Robe Mastery',390000,70),
 (43,146,40,'Anti Magic',390000,70),
 (43,146,41,'Anti Magic',390000,70),
+(43,1500,1,'Improve Magic',780000,70), -- SP cost guessed
+(43,1502,1,'Improve Critical',780000,70), -- SP cost guessed
 (43,146,42,'Anti Magic',500000,72),
 (43,146,43,'Anti Magic',500000,72),
 (43,235,38,'Robe Mastery',500000,72),
@@ -12597,6 +12603,9 @@ INSERT INTO skill_trees VALUES
 (52,250,38,'Weapon Mastery',360000,70),
 (52,146,40,'Anti Magic',360000,70),
 (52,146,41,'Anti Magic',360000,70),
+(52,1517,1,'Chant of Combat',720000,70), -- SP cost guessed
+(52,1518,1,'Chant of Critical',720000,70), -- SP cost guessed
+(52,1519,1,'Chant of Blood Awakening',720000,70), -- SP cost guessed
 (52,146,42,'Anti Magic',540000,72),
 (52,146,43,'Anti Magic',540000,72),
 (52,250,39,'Weapon Mastery',540000,72),
