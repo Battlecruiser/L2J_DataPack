@@ -97,12 +97,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0">
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-sDef" stackType="sdef_up">
       <mul order="0x30" stat="sDef" val="#Tab-sDef"/>
     </effect>
   </for>
   <enchant1for>
-    <effect count="1" name="Buff" time="#ench1time" val="0">
+    <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="2" stackType="sdef_up">
       <mul order="0x30" stat="sDef" val="2"/>
     </effect>
   </enchant1for>

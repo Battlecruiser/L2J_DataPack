@@ -1696,9 +1696,23 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="1499" levels="1" name="Improve Combat">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="mpConsume" val="27"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="hitTime" val="1500"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
+  <set name="aggroPoints" val="655"/>
+  <for>
+    <effect count="1" name="Buff" time="2400" val="0" stackOrder="99" stackType="pa_up">
+      <mul order="0x30" stat="pAtk" val="1.15"/>
+    </effect>
+    <effect count="1" name="Debuff" time="2400" val="0" stackOrder="99" stackType="pd_up" noicon="1"> <!-- temp fix (debuff type) to have working stack -->
+      <mul order="0x30" stat="pDef" val="1.15"/>
+    </effect>
+  </for>
 </skill>
 </list>
