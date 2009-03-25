@@ -806,10 +806,19 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="772" levels="1" name="Arrow Rain">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
+  <set name="hitTime" val="4000"/>
+  <set name="mpConsume" val="160"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="overHit" val="true"/>
+  <set name="power" val="4312"/>
+  <set name="reuseDelay" val="6000"/> <!-- Guessing -->
+  <set name="skillType" val="PDAM"/>
+  <set name="SSBoost" val="2.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="weaponsAllowed" val="32"/> <!-- Bow -->
 </skill>
 <skill id="773" levels="1" name="Ghost Piercing">
   <set name="target" val="TARGET_NONE"/>
