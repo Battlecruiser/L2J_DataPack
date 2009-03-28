@@ -782,10 +782,10 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="negateStats" val="BUFF DEBUFF HEAL_PERCENT"/>
+  <set name="negateStats" val="BUFF DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="skillRadius" val="200"/> <!-- Guessing -->
-  <set name="skillType" val="CANCEL"/> <!-- Needs core support for CANCEL_ALL -->
+  <set name="skillType" val="NEGATE"/> <!-- Needs core support for "CANCEL_ALL" without exceptions -->
   <set name="target" val="TARGET_AURA"/>
 </skill>
 <skill id="4148" levels="12" name="Poison">
@@ -1303,12 +1303,12 @@
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="200"/>
   <set name="hitTime" val="1500"/>
-  <set name="skillType" val="CANCEL"/> <!-- Needs core support for CANCEL_ALL -->
+  <set name="skillType" val="NEGATE"/> <!-- Needs core support for "CANCEL_ALL" without exceptions -->
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
-  <set name="negateStats" val="BUFF DEBUFF HEAL_PERCENT"/>
+  <set name="negateStats" val="BUFF DEBUFF"/>
 </skill>
 <skill id="4178" levels="12" name="BOSS Flame Strike">
   <table name="#mpConsume"> 23 32 44 58 74 79 102 107 112 114 116 118 </table>
