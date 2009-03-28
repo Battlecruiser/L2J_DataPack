@@ -25,16 +25,16 @@ DROPLIST={
 27120:[ORDER_OF_OZZY_ID,BREATH_OF_WINDS_ID,               1],
 27121:[ORDER_OF_OZZY_ID,SEED_OF_VERDURE_ID,               1],
 # For condition 6
-20550 :[ORDER_OF_CLAYTON_ID,BLOOD_OF_GUARDIAN_BASILISK_ID,10],
-20082 :[ORDER_OF_CLAYTON_ID,GIANT_APHID_ID,               10],
-20084 :[ORDER_OF_CLAYTON_ID,GIANT_APHID_ID,               10],
-20086 :[ORDER_OF_CLAYTON_ID,GIANT_APHID_ID,               10],
-20087 :[ORDER_OF_CLAYTON_ID,GIANT_APHID_ID,               10],
-20088 :[ORDER_OF_CLAYTON_ID,GIANT_APHID_ID,               10],
-20157 :[ORDER_OF_CLAYTON_ID,STAKATOS_FLUIDS_ID,           10],
-20230 :[ORDER_OF_CLAYTON_ID,STAKATOS_FLUIDS_ID,           10],
-20232 :[ORDER_OF_CLAYTON_ID,STAKATOS_FLUIDS_ID,           10],
-20234 :[ORDER_OF_CLAYTON_ID,STAKATOS_FLUIDS_ID,           10],
+20550 :[ORDER_OF_CLAYTON_ID,BLOOD_OF_GUARDIAN_BASILISK_ID,5],
+20082 :[ORDER_OF_CLAYTON_ID,GIANT_APHID_ID,               5],
+20084 :[ORDER_OF_CLAYTON_ID,GIANT_APHID_ID,               5],
+20086 :[ORDER_OF_CLAYTON_ID,GIANT_APHID_ID,               5],
+20087 :[ORDER_OF_CLAYTON_ID,GIANT_APHID_ID,               5],
+20088 :[ORDER_OF_CLAYTON_ID,GIANT_APHID_ID,               5],
+20157 :[ORDER_OF_CLAYTON_ID,STAKATOS_FLUIDS_ID,           5],
+20230 :[ORDER_OF_CLAYTON_ID,STAKATOS_FLUIDS_ID,           5],
+20232 :[ORDER_OF_CLAYTON_ID,STAKATOS_FLUIDS_ID,           5],
+20234 :[ORDER_OF_CLAYTON_ID,STAKATOS_FLUIDS_ID,           5],
 # For condition 19
 20213 :[ORDER_OF_NICHOLA_ID,HEART_OF_PORTA_ID,            1]
 }
@@ -276,18 +276,12 @@ class Quest (JQuest) :
        st.set("id",str(st.getInt("id")+1))
        if st.getRandom(100)<(st.getInt("id")*33) :
          st.playSound("Itemsound.quest_before_battle")
-         st.addSpawn(27120,9410,50301,-3713,600000)   ### FIXME ### Temp fix for spawn
-         st.addRadar(9410,50301,-3713)
-         return "Luell Of Zephyr Winds has spawned at X=9410 Y=50301 Z=-3713"
-#         st.addSpawn(27120)                   # The original spawn code
+         st.addSpawn(27120,npc.getX(),npc.getY(),npc.getZ(),600000)
      elif npcId in [ 20013,20019 ] and st.getQuestItemsCount(SEED_OF_VERDURE_ID) == 0 :
        st.set("id",str(st.getInt("id")+1))
        if st.getRandom(100)<(st.getInt("id")*33) :
          st.playSound("Itemsound.quest_before_battle")
-         st.addSpawn(27121,16895,47210,-3673,600000)  ### FIXME ### Temp fix for spawn
-         st.addRadar(16895,47210,-3673)
-         return "Actea Of Verdant Wilds has spawned at X=16895 Y=47210 Z=-3673"
-#         st.addSpawn(27121)                   # The original spawn code
+         st.addSpawn(27121,npc.getX(),npc.getY(),npc.getZ(),600000)
    elif cond == 14 :                                       # Condition 14 get 10 Parasite of lota
      parasite = st.getQuestItemsCount(PARASITE_OF_LOTA_ID)
      if npcId == 20553 and parasite < 10 :
