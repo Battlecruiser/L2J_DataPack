@@ -135,13 +135,15 @@ class Quest (JQuest) :
    id = st.getState()
    if npcId == 30981 : #Black Judge
        if id == State.CREATED :
-           if player.getPkKills() >= 1 and player.getLevel() < 80:
+           if player.getPkKills() >= 1:
                htmltext = "30981-02.htm"
            else:
                htmltext = "30981-01.htm"
                st.exitQuest(1)
        elif condition <= 9 :
            htmltext = "30981-07.htm"
+       elif condition == 13 and st.getQuestItemsCount(PENITENTS_MANACLES2) :
+           htmltext = "30981-10.htm"
        elif condition <= 13 and condition > 9 and st.getQuestItemsCount(MANUAL_OF_MANACLES) == 0 :
            htmltext = "30981-08.htm"
            st.set("cond","14")
@@ -254,7 +256,7 @@ class Quest (JQuest) :
        if condition == 6 :
            if skulls < 10 :
                st.giveItems(SCAVENGER_WERERAT_SKULL,1)
-               if skulls == 10 :
+               if st.getQuestItemsCount(SCAVENGER_WERERAT_SKULL) == 10 :
                    st.playSound("ItemSound.quest_middle")
                else :
                    st.playSound("ItemSound.quest_itemget")
@@ -262,7 +264,7 @@ class Quest (JQuest) :
        if condition == 7 :
            if tails < 10 :
                st.giveItems(TUREK_WARHOUND_TAIL,1)
-               if tails == 10 :
+               if st.getQuestItemsCount(TUREK_WARHOUND_TAIL) == 10 :
                    st.playSound("ItemSound.quest_middle")
                else :
                    st.playSound("ItemSound.quest_itemget")
@@ -275,7 +277,7 @@ class Quest (JQuest) :
        if condition == 9 :
            if sacs < 3 :
                st.giveItems(TRISALIM_TARANTULAS_VENOM_SAC,1)
-               if skulls == 3 :
+               if st.getQuestItemsCount(TRISALIM_TARANTULAS_VENOM_SAC) == 3 :
                    st.playSound("ItemSound.quest_middle")
                else :
                    st.playSound("ItemSound.quest_itemget")
