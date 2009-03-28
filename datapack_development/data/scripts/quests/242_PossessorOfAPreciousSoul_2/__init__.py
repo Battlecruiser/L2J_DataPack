@@ -1,5 +1,6 @@
 # Made by disKret
 import sys
+import time
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -78,11 +79,14 @@ class Quest (JQuest) :
        st.takeItems(SORCERY_INGREDIENT,1)
        st.playSound("ItemSound.quest_middle")
    elif event == "1" :
-     npc.reduceCurrentHp(10000,npc,None)
+     npc.getSpawn().stopRespawn();
+     npc.deleteMe();
      st.addSpawn(PURE_UNICORN,npc,False)
    elif event == "2" :
      npc.reduceCurrentHp(10000,npc,None)
-     st.addSpawn(FALLEN_UNICORN,npc,False)
+     npc2 = st.addSpawn(FALLEN_UNICORN,npc,False)
+     time.sleep(1000)
+     npc2.getSpawn().startRespawn();
    return htmltext
 
  def onTalk (self,npc,player):
