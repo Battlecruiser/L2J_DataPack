@@ -82,6 +82,7 @@ class Quest (JQuest) :
      st.addSpawn(PURE_UNICORN,npc,False)
    elif event == "2" :
      npc.reduceCurrentHp(10000,npc,None)
+     st.addSpawn(FALLEN_UNICORN,npc,False)
    return htmltext
 
  def onTalk (self,npc,player):
