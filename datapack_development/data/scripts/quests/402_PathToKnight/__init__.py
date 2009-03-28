@@ -58,7 +58,7 @@ class Quest (JQuest) :
           htmltext = "30417-03.htm"
           st.exitQuest(1)
     elif event == "30417-08.htm" :
-        if st.getInt("cond")== 0 and classid == 0x00 and level >= 19 :
+        if st.getInt("cond")== 0 and classid == 0x00 and level >= 18 :
            st.set("id","0")
            st.set("cond","1")
            st.setState(State.STARTED)
