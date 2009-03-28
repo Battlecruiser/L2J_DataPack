@@ -980,9 +980,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <mul val='1.2' order='0x30' stat='maxLoad'/>
-    <mul val='1.05' order='0x30' stat='pvpPhysDmg'/>
-    <mul val='1.05' order='0x30' stat='pvpMagicalDmg'/>
+    <mul val="1.2" order="0x30" stat="maxLoad"/>
+    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </skill>
 <skill id="3499" levels="1" name="Transform Dispel">
