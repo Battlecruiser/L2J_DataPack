@@ -316,12 +316,12 @@ public class Baium extends L2AttackableAIScript
     	if (!_Zone.isInsideZone(attacker))
     	{
     		attacker.reduceCurrentHp(attacker.getCurrentHp(),attacker,false,false, null);
-    		return null;
+    		return super.onAttack(npc, attacker, damage, isPet);
     	}
 		if (npc.isInvul())
 		{
 			npc.getAI().setIntention(AI_INTENTION_IDLE);
-			return null;
+			return super.onAttack(npc, attacker, damage, isPet);
 		}
 		else if (npc.getNpcId() == LIVE_BAIUM && !npc.isInvul())
     	{
