@@ -143,6 +143,9 @@
   <set name="effectRange" val="1200"/>
   <set name="isMagic" val="true"/>
   <set name="reuseDelay" val="35000"/>
+  <cond msg="Usable only within the same race.">
+    <target class_id_restriction="123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136"/>
+  </cond>  
 </skill>
 <skill id="1511" levels="8" name="Curse of Life Flow">
   <!-- CT2.2 retail partially confirmed -->

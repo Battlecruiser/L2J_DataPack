@@ -5,14 +5,13 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
-  <table name="#ench1Power"> 413 415 417 419 421 423 425 427 429 431 433 435 437 439 441 443 445 447 449 451 453 455 457 461 463 465 467 469 471 473 </table>
+  <table name="#ench1Power"> 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 </table>
   <table name="#ench2MpConsume"> 66 65 65 63 62 62 61 60 58 58 57 56 55 55 53 52 52 51 50 48 48 47 46 45 45 43 42 42 41 40 </table>
   <table name="#mpConsume"> 52 54 55 58 60 62 64 65 67 69 </table>
-  <table name="#power"> 230 250 270 290 310 330 350 370 390 411 </table>
   <table name="#itemConsumeCount"> 3 3 4 4 4 4 5 5 5 5 </table>
   <table name="#magicLvl"> 56 58 60 62 64 66 68 70 72 74 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="power" val="#power"/>
+  <set name="power" val="50"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
@@ -373,7 +372,7 @@
   <set name="mpConsume" val="60"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="4000"/>
-  <set name="reuseDelay" val="2600000"/>
+  <set name="reuseDelay" val="600000"/>
   <set name="skillType" val="BUFF"/>
   <set name="staticReuse" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
