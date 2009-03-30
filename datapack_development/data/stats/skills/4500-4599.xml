@@ -4,6 +4,7 @@
   <!-- This Skill Is Only For Description In The Client -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -12,6 +13,7 @@
   <!-- This Skill Is Only For Description In The Client -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -20,6 +22,7 @@
   <!-- This Skill Is Only For Description In The Client -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -28,6 +31,7 @@
   <!-- This Skill Is Only For Description In The Client -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -36,6 +40,7 @@
   <!-- This Skill Is Only For Description In The Client -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -44,6 +49,7 @@
   <!-- This Skill Is Only For Description In The Client -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -52,6 +58,7 @@
   <!-- This Skill Is Only For Description In The Client -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -60,6 +67,7 @@
   <!-- This Skill Is Only For Description In The Client -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -68,6 +76,7 @@
   <!-- This Skill Is Only For Description In The Client -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -76,6 +85,7 @@
   <!-- This Skill Is Only For Description In The Client -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -84,6 +94,7 @@
   <!-- This Skill Is Only For Description In The Client -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -92,6 +103,7 @@
   <!-- This Skill Is Only For Description In The Client -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -100,6 +112,7 @@
   <!-- This Skill Is Only For Description In The Client -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -107,6 +120,7 @@
 <skill id="4513" levels="1" name="Pumpkin - Level up">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/> <!-- Just Broadcast -->
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -114,6 +128,7 @@
 <skill id="4514" levels="1" name="Pumpkin - Poisoning">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/> <!-- Just Broadcast -->
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -123,6 +138,7 @@
   <set name="skillType" val="PARALYZE"/>
   <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="100"/> <!-- Base Land Rate -->
   <set name="isMagic" val="true"/>
   <set name="castRange" val="1500"/>
   <set name="effectRange" val="2000"/>
@@ -758,19 +774,21 @@
   </for>
 </skill>
 <skill id="4556" levels="1" name="Dispel Hot Spring Disease A_D">
-<!-- TODO -->
+  <!-- TODO -->
   <set name="mpConsume" val="69"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
+  <set name="magicLvl" val="75"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
 </skill>
 <skill id="4557" levels="1" name="Dispel Hot Spring Disease B_D">
-<!-- TODO -->
+  <!-- TODO -->
   <set name="mpConsume" val="69"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
+  <set name="magicLvl" val="75"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
@@ -780,6 +798,7 @@
   <set name="mpConsume" val="69"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
+  <set name="magicLvl" val="75"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
@@ -797,6 +816,7 @@
   </for>
 </skill>
 <skill id="4560" levels="12" name="NPC Fire Burn">
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <table name="#power"> 13 15 18 20 23 26 29 32 35 38 42 44 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -807,11 +827,13 @@
   <set name="hitTime" val="1500"/>
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="150"/>
   <set name="effectRange" val="650"/>
 </skill>
 <skill id="4561" levels="12" name="NPC Fire Burn - Magic">
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 4 5 8 9 12 14 17 18 19 19 20 20 </table>
   <table name="#power"> 13 15 18 20 23 26 29 32 35 38 42 44 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -822,6 +844,7 @@
   <set name="hitTime" val="1500"/>
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="150"/>
   <set name="effectRange" val="650"/>
@@ -885,6 +908,7 @@
   <set name="target" val="TARGET_ONE"/>
 </skill>
 <skill id="4565" levels="12" name="NPC Eruption">
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <table name="#power"> 37 39 41 43 45 46 48 50 51 53 54 56 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -895,12 +919,14 @@
   <set name="skillType" val="MDAM"/>
   <set name="hitTime" val="5000"/>
   <set name="reuseDelay" val="6000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="500"/>
   <set name="effectRange" val="1000"/>
 </skill>
 <skill id="4566" levels="12" name="NPC Eruption - Magic">
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <table name="#power"> 37 39 41 43 45 46 48 50 51 53 54 56 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -911,12 +937,14 @@
   <set name="skillType" val="MDAM"/>
   <set name="hitTime" val="5000"/>
   <set name="reuseDelay" val="6000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="500"/>
   <set name="effectRange" val="1000"/>
 </skill>
 <skill id="4567" levels="12" name="NPC Eruption - Slow">
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <table name="#power"> 37 39 41 43 45 46 48 50 51 53 54 56 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -927,6 +955,7 @@
   <set name="skillType" val="MDAM"/>
   <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="6000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="1000"/>
@@ -994,6 +1023,7 @@
   <set name="target" val="TARGET_AREA"/>
 </skill>
 <skill id="4571" levels="12" name="NPC Blazing Circle">
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
   <table name="#power"> 42 44 46 48 50 52 55 57 58 60 62 64 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1005,6 +1035,7 @@
   <set name="hitTime" val="5000"/>
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
