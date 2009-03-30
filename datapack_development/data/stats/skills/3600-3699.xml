@@ -375,6 +375,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="25000"/>
 </skill>
 <skill id="3627" levels="1" name="Tapirawa">
   <!-- Used on a quivering Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone. -->
@@ -382,6 +383,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="25000"/>
 </skill>
 <skill id="3628" levels="1" name="Shabonoba">
   <!-- Used on a struggling Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone. -->
@@ -389,6 +391,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="25000"/>
 </skill>
 <skill id="3629" levels="10" name="Blood Sword Akamanah">
   <!-- Needs to be finished - below is a copy of 3603 Demon Sword Zariche -->
@@ -446,6 +449,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="10000"/>
 </skill>
 <skill id="3633" levels="2" name="Residential Shock Immunity">
   <table name="#vuln"> 0.5 0 </table>
@@ -834,12 +838,14 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3665" levels="2" name="Red Talisman - CP Regeneration">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3666" levels="1" name="Yellow Talisman - Increase Force">
   <set name="target" val="TARGET_NONE"/>

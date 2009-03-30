@@ -30,6 +30,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1500"/>
 </skill>
 <skill id="2004" levels="1" name="Large Squash Seed">
   <!-- Summer Squash Event Skill (http://www.lineage2.com/archive/2006/11/fall_harvest.html) -->
@@ -37,6 +38,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1500"/>
 </skill>
 <skill id="2005" levels="1" name="Nectar">
   <!-- Summer Squash Event Skill (http://www.lineage2.com/archive/2006/11/fall_harvest.html) -->
@@ -849,8 +851,8 @@
   <set name="castRange" val="300"/>
   <set name="effectRange" val="500"/>
 </skill>
-<!-- Done by l3x-->
 <skill id="2097" levels="3" name="Sowing">
+  <!-- Done by l3x-->
   <table name="#mpConsume"> 4 6 8 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_ONE"/>
@@ -861,8 +863,8 @@
   <set name="effectRange" val="400"/>
   <set name="castRange" val="40"/>
 </skill>
-<!-- Done by l3x-->
 <skill id="2098" levels="1" name="Harvesting">
+  <!-- Done by l3x-->
   <set name="mpConsume" val="3"/>
   <set name="target" val="TARGET_CORPSE_MOB"/>
   <set name="hitTime" val="500"/>

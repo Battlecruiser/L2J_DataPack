@@ -294,6 +294,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="soulMaxConsumeCount" val="5"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="513" levels="1" name="Create Dark Seed">
   <set name="mpConsume" val="58"/>
@@ -536,7 +537,7 @@
   <set name="mpConsume" val="60"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="summonTotalLifeTime" val="20000"/>
-  <set name="hitTime" val="2500"/>
+  <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="60000"/> <!-- Guessing -->
   <set name="skillType" val="DECOY"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -730,6 +731,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1800"/>
 </skill>
 <skill id="538" levels="1" name="Final Form">
   <set name="mpConsume" val="70"/>
@@ -800,7 +802,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="1500"/>
+  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="3600000"/>
   <set name="staticReuse" val="true"/>
   <set name="staticHitTime" val="true"/>
@@ -820,7 +822,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="1500"/>
+  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="3600000"/>
   <set name="staticReuse" val="true"/>
   <set name="staticHitTime" val="true"/>
@@ -840,7 +842,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="1500"/>
+  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="3600000"/>
   <set name="staticReuse" val="true"/>
   <set name="staticHitTime" val="true"/>
@@ -860,7 +862,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="1500"/>
+  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="3600000"/>
   <set name="staticReuse" val="true"/>
   <set name="staticHitTime" val="true"/>
@@ -880,7 +882,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="1500"/>
+  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="3600000"/>
   <set name="staticReuse" val="true"/>
   <set name="staticHitTime" val="true"/>
@@ -900,7 +902,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="1500"/>
+  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="3600000"/>
   <set name="staticReuse" val="true"/>
   <set name="staticHitTime" val="true"/>
@@ -920,7 +922,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="1500"/>
+  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="3600000"/>
   <set name="staticReuse" val="true"/>
   <set name="staticHitTime" val="true"/>
@@ -940,7 +942,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="1500"/>
+  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="3600000"/>
   <set name="staticReuse" val="true"/>
   <set name="staticHitTime" val="true"/>
@@ -960,7 +962,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="1500"/>
+  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="3600000"/>
   <set name="staticReuse" val="true"/>
   <set name="staticHitTime" val="true"/>
@@ -980,7 +982,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="1500"/>
+  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="3600000"/>
   <set name="staticReuse" val="true"/>
   <set name="staticHitTime" val="true"/>
@@ -1000,7 +1002,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="1500"/>
+  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="3600000"/>
   <set name="staticReuse" val="true"/>
   <set name="staticHitTime" val="true"/>
@@ -1020,7 +1022,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="1500"/>
+  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="3600000"/>
   <set name="staticReuse" val="true"/>
   <set name="staticHitTime" val="true"/>
@@ -1040,7 +1042,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="1500"/>
+  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="3600000"/>
   <set name="staticReuse" val="true"/>
   <set name="staticHitTime" val="true"/>
@@ -1060,7 +1062,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="1500"/>
+  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="3600000"/>
   <set name="staticReuse" val="true"/>
   <set name="staticHitTime" val="true"/>
@@ -1080,7 +1082,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="1500"/>
+  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="3600000"/>
   <set name="staticReuse" val="true"/>
   <set name="staticHitTime" val="true"/>
@@ -1100,7 +1102,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="1500"/>
+  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="3600000"/>
   <set name="staticReuse" val="true"/>
   <set name="staticHitTime" val="true"/>
@@ -1120,7 +1122,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="1500"/>
+  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="3600000"/>
   <set name="staticReuse" val="true"/>
   <set name="staticHitTime" val="true"/>
@@ -1140,7 +1142,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="1500"/>
+  <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="3600000"/>
   <set name="staticReuse" val="true"/>
   <set name="staticHitTime" val="true"/>
@@ -1159,12 +1161,14 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1080"/>
 </skill>
 <skill id="560" levels="4" name="Power Slash">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="2500"/>
 </skill>
 <skill id="561" levels="4" name="Bless of Angel">
   <table name="#mpConsume"> 61 63 67 70 </table>
@@ -1205,36 +1209,42 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1080"/>
 </skill>
 <skill id="564" levels="4" name="Gravity Control">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="2500"/>
 </skill>
 <skill id="565" levels="4" name="Horn Assault">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="2500"/>
 </skill>
 <skill id="567" levels="4" name="Light of Heal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="2500"/>
 </skill>
 <skill id="568" levels="4" name="Attack Buster">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1080"/>
 </skill>
 <skill id="569" levels="4" name="Attack Storm">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="2500"/>
 </skill>
 <skill id="570" levels="4" name="Attack Rage">
   <set name="target" val="TARGET_NONE"/>
@@ -1242,12 +1252,14 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="baseCritRate" val="15"/>
+  <set name="hitTime" val="1500"/>
 </skill>
 <skill id="571" levels="4" name="Poison Dust">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="572" levels="4" name="Double Slasher">
   <table name="#mpConsume"> 61 63 67 70 </table>
@@ -1288,6 +1300,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="575" levels="4" name="Steel Cutter">
   <table name="#mpConsume"> 61 63 67 70 </table>
@@ -1310,12 +1323,14 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1080"/>
 </skill>
 <skill id="577" levels="4" name="Fire Breath">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1080"/>
 </skill>
 <skill id="578" levels="4" name="Blaze Quake">
   <set name="element" val="2"/> <!-- Fire -->
@@ -1323,18 +1338,21 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1080"/>
 </skill>
 <skill id="579" levels="4" name="Fire Armor">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1000"/>
 </skill>
 <skill id="580" levels="4" name="Death Blow">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1080"/>
 </skill>
 <skill id="581" levels="4" name="Sand Cloud">
   <!-- Needs retail accuracy check -->

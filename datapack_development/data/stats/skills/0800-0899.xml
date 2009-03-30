@@ -41,24 +41,28 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1500"/>
 </skill>
 <skill id="807" levels="1" name="Over-hit">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1500"/>
 </skill>
 <skill id="808" levels="1" name="Golem Punch">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="830"/>
 </skill>
 <skill id="809" levels="1" name="Golem Tornado Swing">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="830"/>
 </skill>
 <skill id="810" levels="1" name="Vanguard">
   <set name="mpConsume" val="31"/>
@@ -142,7 +146,7 @@
   <set name="overHit" val="true"/>
   <set name="SSBoost" val="2.0"/>
   <set name="reuseDelay" val="17000"/> <!-- Guess - need retail confirmation -->
-  <set name="hitTime" val="1067"/>
+  <set name="hitTime" val="1070"/>
   <set name="coolTime" val="720"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -164,7 +168,7 @@
   <set name="overHit" val="true"/>
   <set name="SSBoost" val="2.0"/>
   <set name="reuseDelay" val="17000"/> <!-- Guess - need retail confirmation -->
-  <set name="hitTime" val="1067"/>
+  <set name="hitTime" val="1070"/>
   <set name="coolTime" val="720"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -206,7 +210,7 @@
   <set name="overHit" val="true"/>
   <set name="SSBoost" val="2.0"/>
   <set name="reuseDelay" val="17000"/> <!-- Guess - need retail confirmation -->
-  <set name="hitTime" val="1733"/>
+  <set name="hitTime" val="1730"/>
   <set name="coolTime" val="720"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -257,6 +261,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="900"/>
   <set name="reuseDelay" val="480000"/>
+  <set name="hitTime" val="100"/>
   <cond msg="Shadow Step cannot be used due to unsuitable terms.">
     <target mindistance="300"/>
   </cond>
@@ -272,7 +277,7 @@
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_SUMMON"/>
   <set name="reuseDelay" val="9000"/>
-  <set name="hitTime" val="3500"/>
+  <set name="hitTime" val="2500"/>
   <set name="skillType" val="HEAL"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -483,6 +488,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="15000"/>
 </skill>
 <skill id="832" levels="1" name="Fast Recovery">
   <!-- Done by DJ MELERIX -->
@@ -514,24 +520,27 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1500"/>
 </skill>
 <skill id="835" levels="4" name="Imbue Seed of Destruction">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1800"/>
 </skill>
 <skill id="836" levels="3" name="Oblivion Trap">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="837" levels="1" name="Painkiller">
   <!-- CT2.2 retail confirmed -->
   <set name="mpConsume" val="53"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="1000"/>
   <set name="reuseDelay" val="2600000"/>
   <set name="skillType" val="BUFF"/>
   <set name="staticReuse" val="true"/>
@@ -555,5 +564,6 @@
   <set name="npcId" val="0"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="2500"/>
 </skill>
 </list>
