@@ -182,6 +182,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="0"/>
+  <set name="hitTime" val="1000"/>
 </skill>
 <skill id="7023" levels="1" name="not_used">
   <set name="target" val="TARGET_SELF"/>
@@ -777,7 +778,7 @@
   <set name="mpConsume" val="2"/>
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="2500"/>
+  <set name="hitTime" val="500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>

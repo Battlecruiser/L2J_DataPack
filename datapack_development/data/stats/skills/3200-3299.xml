@@ -795,6 +795,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="3264" levels="1" name="Blessed Escape">
   <!-- Allows the use of Blessed Escape. -->
@@ -802,6 +803,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="200"/>
 </skill>
 <skill id="3265" levels="1" name="Mysterious Ability">
   <!-- Done by lastsin -->
@@ -869,6 +871,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
   <for>
     <add order="0x30" stat="pAtk" val="10"/> <!-- increase P. Atk. +10 -->
   </for>
@@ -880,6 +883,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
   <for>
     <add order="0x30" stat="pDef" val="18"/> <!-- increase P. Def. +18 -->
   </for>
@@ -889,66 +893,77 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3274" levels="1" name="Blue Talisman of Protection">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3275" levels="1" name="Blue Talisman of Protection">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3276" levels="1" name="Blue Talisman of Magic Defense">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3277" levels="1" name="Blue Talisman of Wild Magic">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3278" levels="1" name="Red Talisman of Mental Regeneration">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3279" levels="1" name="Red Talisman of Meditation">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3280" levels="1" name="Blue Talisman of Invisibility">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3281" levels="1" name="Red Talisman of Minimum Clarity">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3282" levels="1" name="Red Talisman of Maximum Clarity">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3283" levels="1" name="Blue Talisman of Healing">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3284" levels="1" name="Blue Talisman of Invincibility">
   <set name="mpConsume" val="50"/>
@@ -970,48 +985,56 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3286" levels="1" name="Black Talisman - Mending">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="3287" levels="1" name="Black Talisman of Physical Freedom">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="3288" levels="1" name="Black Talisman of Arcane Freedom">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="3289" levels="1" name="Black Talisman - Escape">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="3290" levels="1" name="Black Talisman of Rescue">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="3291" levels="1" name="Black Talisman of Vocalization">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="3292" levels="1" name="Black Talisman of Free Speech">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="3293" levels="1" name="Yellow Talisman of Power">
   <set name="target" val="TARGET_NONE"/>

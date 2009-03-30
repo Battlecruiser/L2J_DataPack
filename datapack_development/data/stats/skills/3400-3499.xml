@@ -55,18 +55,21 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="200"/>
 </skill>
 <skill id="3409" levels="1" name="Blessed Ring of Resurrection">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="3410" levels="1" name="Blue Talisman of Reflection">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3411" levels="1" name="Special Ability: Focus">
   <set name="target" val="TARGET_NONE"/>
@@ -280,66 +283,77 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3429" levels="1" name="Blue Talisman - Vital power">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="3430" levels="1" name="White Talisman - Darkness">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3431" levels="1" name="White Talisman - Storm">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3432" levels="1" name="White Talisman - Water">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3433" levels="1" name="White Talisman - Fire">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3434" levels="1" name="White Talisman - Earth">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3435" levels="1" name="White Talisman - Light">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3436" levels="1" name="Blue Talisman - Self destruction">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="3437" levels="1" name="Red Talisman - Magic Explosive power">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3438" levels="1" name="Blue Talisman - Great Healing">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3439" levels="1" name="Silk Shirt">
   <set name="target" val="TARGET_SELF"/>
@@ -958,6 +972,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
   <for>
     <mul order="0x30" stat="regCp" val="1.01"/>
     <mul order="0x30" stat="regHp" val="1.01"/>
@@ -990,5 +1005,6 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="2500"/>
 </skill>
 </list>
