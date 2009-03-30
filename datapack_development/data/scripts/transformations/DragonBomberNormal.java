@@ -58,17 +58,17 @@ public class DragonBomberNormal extends L2Transformation
 	public void removeSkills()
 	{
 		// Death Blow
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(580, 3), false, false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(580, 3), false);
 		// Sand Cloud
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(581, 3), false, false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(581, 3), false);
 		// Scope Bleed
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(582, 3), false, false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(582, 3), false);
 		// Assimilation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(583, 3), false, false);
 		// Transfrom Dispel
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false, false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false, false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false);
 
 		getPlayer().setTransformAllowedSkills(new int[]{});
 	}

@@ -52,17 +52,17 @@ public class InquisitorBishop extends L2Transformation
 	public void removeSkills()
 	{
 		// Divine Punishment
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1523, getPlayer().getLevel() - 43), false, false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1523, getPlayer().getLevel() - 43), false);
 		// Divine Flash
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1528, getPlayer().getLevel() - 43), false, false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1528, getPlayer().getLevel() - 43), false);
 		// Surrender to the Holy
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1524, getPlayer().getLevel() - 43), false, false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1524, getPlayer().getLevel() - 43), false);
 		// Divine Curse
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1525, getPlayer().getLevel() - 43), false, false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1525, getPlayer().getLevel() - 43), false);
 		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false, false); 
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false); 
 		// Switch Stance
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(838, 1), false, false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(838, 1), false);
 
 		getPlayer().setTransformAllowedSkills(new int[]{});
 	}

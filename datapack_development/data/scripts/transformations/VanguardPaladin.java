@@ -48,13 +48,13 @@ public class VanguardPaladin extends L2Transformation
 	public void removeSkills()
 	{
 		// Power Divide
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(816, getPlayer().getLevel() - 43), false, false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(816, getPlayer().getLevel() - 43), false);
 		// Full Swing
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(814, getPlayer().getLevel() - 43), false, false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(814, getPlayer().getLevel() - 43), false);
 		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false, false); 
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false); 
 		// Switch Stance
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(838, 1), false, false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(838, 1), false);
 
 		getPlayer().setTransformAllowedSkills(new int[]{});
 	}
