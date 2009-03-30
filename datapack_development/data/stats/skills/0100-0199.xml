@@ -978,10 +978,10 @@
 </skill>
 <skill id="176" levels="3" name="Frenzy">
   <!-- Done by dc, completed by NewAge -->
-  <table name="#swordbluntpole"> 1.5 1.75 2.25 </table>
-  <table name="#sbp-under30"> 1.33 1.43 1.55 </table>
-  <table name="#twohand"> 1.75 2 2.5 </table>
-  <table name="#twohand-under30"> 1.43 1.5 1.6 </table>
+  <table name="#swordbluntpole"> 1.33 1.43 1.55 </table>
+  <table name="#sbp-under30"> 1.5 1.75 2.25 </table>
+  <table name="#twohand"> 1.43 1.5 1.7 </table>
+  <table name="#twohand-under30"> 1.75 2.0 2.35 </table>
   <table name="#other"> 1.3 1.3 1.5 </table>
   <table name="#accCombat"> 4 4 6 </table>
   <table name="#mpConsume"> 14 21 25 </table>
@@ -1023,7 +1023,12 @@
         </and>
       </mul>
       <mul order="0x30" stat="pAtk" val="#other">
-        <using kind="Dual Fist,Dual Sword,Etc,Bow,Dagger,Ancient,Crossbow,Rapier"/>
+         <and>   
+         <using kind="Dual Fist,Dual Sword,Etc,Bow,Dagger,Ancient,Crossbow,Rapier"/>
+            <not>
+                  <using kind="Sword,Blunt,Pole,Big Sword,Big Blunt"/>
+            </not> 
+        </and>
       </mul>
     </effect>
   </for>

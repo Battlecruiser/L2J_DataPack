@@ -1580,7 +1580,12 @@
         <using kind="Big Sword,Big Blunt"/> <!-- when using two-handed sword and blunt weapons -->
       </mul>
       <mul order="0x30" stat="pAtk" val="1.2">
+      <and>
         <using kind="Dual Fist,Dual Sword,Etc,Bow,Dagger"/>
+             <not>
+              <using kind="Sword,Blunt,Pole,Big Sword,Big Blunt"/>
+             </not> 
+      </and>
       </mul>
     </effect>
   </for>
