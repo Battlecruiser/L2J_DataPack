@@ -1975,6 +1975,7 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <table name="#ench1MpConsume"> 66 65 65 63 62 62 61 60 58 58 57 56 55 55 53 52 52 51 50 48 48 47 46 45 45 43 42 42 41 40 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
+  <enchant1 name="mpConsume" val="#ench1MpConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="3031"/>
   <set name="power" val="50"/>
@@ -2003,7 +2004,6 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="isMagic" val="true"/>
-  <enchant1 name="mpConsume" val="#ench1MpConsume"/>
   <for>
     <effect count="1" name="Debuff" time="30" val="0">
       <mul order="0x30" stat="MagicalMpConsumeRate" val="#mpConsumeRate"/>
