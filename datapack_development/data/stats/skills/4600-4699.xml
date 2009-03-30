@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
 <skill id="4600" levels="12" name="Reducing P. Def Stun">
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 24 39 54 73 94 116 136 144 152 158 161 163 </table>
   <table name="#pDef"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -10,6 +11,7 @@
   <set name="skillType" val="PDAM"/>
   <set name="hitTime" val="1800"/>
   <set name="isDebuff" val="true"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -23,6 +25,7 @@
   </for>
 </skill>
 <skill id="4601" levels="3" name="NPC Clan Buff - Acumen Focus">
+  <table name="#magicLvl"> 20 40 70 </table>
   <table name="#mpConsume"> 29 53 98 </table>
   <table name="#rCrit"> 0.2 0.25 0.3 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -30,6 +33,7 @@
   <set name="skillRadius" val="900"/>
   <set name="skillType" val="BUFF"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
@@ -42,6 +46,7 @@
   </for>
 </skill>
 <skill id="4602" levels="12" name="Decrease P.Atk">
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
   <table name="#pAtk"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
@@ -53,6 +58,7 @@
   <set name="skillType" val="MDAM"/>
   <set name="hitTime" val="4000"/>
   <set name="lvlDepend" val="2"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
@@ -66,6 +72,7 @@
   </for>
 </skill>
 <skill id="4603" levels="12" name="Decrease P.Atk">
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
   <table name="#pAtk"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
@@ -77,6 +84,7 @@
   <set name="hitTime" val="4000"/>
   <set name="isDebuff" val="true"/>
   <set name="lvlDepend" val="2"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
@@ -90,6 +98,7 @@
   </for>
 </skill>
 <skill id="4604" levels="12" name="Decrease P.Atk">
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
   <table name="#pAtk"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
   <table name="#power"> 9 13 19 26 34 43 51 55 58 61 63 65 </table>
@@ -100,6 +109,7 @@
   <set name="skillType" val="MDAM"/>
   <set name="hitTime" val="2000"/>
   <set name="lvlDepend" val="2"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
@@ -144,6 +154,7 @@
 </skill>
 <skill id="4606" levels="12" name="Poison">
   <table name="#dot"> 36 54 72 93 114 132 144 144 150 150 153 153 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 75 90 95 </table>
   <table name="#mpConsume"> 35 58 81 109 141 174 203 216 227 235 241 244 </table>
   <table name="#power"> 46 106 219 417 722 1136 1626 1876 2112 2320 2487 2617 </table>
   <table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
@@ -154,6 +165,7 @@
   <set name="skillType" val="PDAM"/>
   <set name="hitTime" val="1800"/>
   <set name="lvlDepend" val="1"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
   <set name="castRange" val="40"/>
@@ -173,6 +185,7 @@
   <set name="hitTime" val="1500"/>
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="80"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
@@ -180,6 +193,7 @@
 <skill id="4608" levels="2" name="NPC Clan Buff - Berserk">
   <table name="#pAtk"> 1.05 1.08 </table>
   <table name="#pAtkSpd"> 1.05 1.08 </table>
+  <table name="#magicLvl"> 30 70 </table>
   <table name="#mAtk"> 1.1 1.16 </table>
   <table name="#mAtkSpd"> 1.05 1.08 </table>
   <table name="#runSpd"> 5 8 </table>
@@ -191,6 +205,7 @@
   <set name="skillRadius" val="900"/>
   <set name="skillType" val="BUFF"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
@@ -209,6 +224,7 @@
   </for>
 </skill>
 <skill id="4609" levels="4" name="NPC Clan Buff - Vampiric Rage">
+  <table name="#magicLvl"> 20 40 60 70 </table>
   <table name="#mpConsume"> 15 27 42 49 </table>
   <table name="#Tab-absorbDam"> 6 7 8 9 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -216,6 +232,7 @@
   <set name="skillRadius" val="900"/>
   <set name="skillType" val="BUFF"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
@@ -228,6 +245,7 @@
   </for>
 </skill>
 <skill id="4610" levels="3" name="NPC Clan Buff - Focus">
+  <table name="#magicLvl"> 20 40 70 </table>
   <table name="#rCrit"> 0.2 0.25 0.3 </table>
   <table name="#mpConsume"> 15 27 49 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -235,6 +253,7 @@
   <set name="skillRadius" val="900"/>
   <set name="skillType" val="BUFF"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
@@ -248,12 +267,14 @@
 </skill>
 <skill id="4611" levels="3" name="NPC Clan Buff - Death Whisper">
   <table name="#cAtk"> 1.3 1.32 1.35 </table>
+  <table name="#magicLvl"> 20 40 70 </table>
   <table name="#mpConsume"> 15 27 49 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_CLAN"/>
   <set name="skillRadius" val="900"/>
   <set name="skillType" val="BUFF"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
@@ -267,6 +288,7 @@
 </skill>
 <skill id="4612" levels="12" name="NPC Wide Wild Sweep">
   <table name="#power"> 46 105 216 417 722 1136 1626 1876 2112 2320 2487 2617 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 19 30 42 57 74 91 106 114 119 124 126 128 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
@@ -274,11 +296,13 @@
   <set name="skillRadius" val="1000"/>
   <set name="skillType" val="PDAM"/>
   <set name="hitTime" val="1800"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
 </skill>
 <skill id="4613" levels="12" name="NPC Clan Heal">
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 25 44 67 92 120 147 170 182 189 194 197 197 </table>
   <table name="#power"> 83 151 245 362 494 627 743 789 823 845 853 853 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -287,6 +311,7 @@
   <set name="skillRadius" val="900"/>
   <set name="skillType" val="HEAL"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
@@ -294,6 +319,7 @@
   <set name="aggroPoints" val="100"/>
 </skill>
 <skill id="4614" levels="12" name="NPC Death Bomb">
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 19 30 42 57 74 91 106 114 119 124 126 128 </table>
   <table name="#power"> 18 26 38 52 68 85 102 119 136 153 170 187 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -302,12 +328,14 @@
   <set name="reuseDelay" val="10000"/>
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
 </skill>
 <skill id="4615" levels="12" name="Bleed">
   <table name="#dmg"> 27 39 51 66 81 93 102 102 105 105 108 108 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 19 30 42 57 74 91 106 114 119 124 126 128 </table>
   <table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
   <set name="abnormalLvl" val="#abnormalLvl"/>
@@ -318,6 +346,7 @@
   <set name="isDebuff" val="true"/>
   <set name="hitTime" val="2000"/>
   <set name="lvlDepend" val="1"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="500"/>
@@ -350,6 +379,7 @@
   <set name="mpConsume" val="73"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
+  <set name="magicLvl" val="80"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="aggroPoints" val="100"/>
@@ -360,6 +390,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="hitTime" val="1500"/>
   <set name="reuseDelay" val="8000"/>
+  <set name="magicLvl" val="40"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="400"/>
@@ -372,6 +403,7 @@
   <set name="mpConsume" val="35"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="NEGATE"/>
+  <set name="magicLvl" val="40"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
@@ -402,6 +434,7 @@
 </skill>
 <skill id="4621" levels="12" name="NPC AE - 80% HP Drain">
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 75 90 95 </table>
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
   <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
@@ -409,6 +442,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DRAIN"/>
   <set name="hitTime" val="4000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="500"/>
@@ -417,6 +451,7 @@
 </skill>
 <skill id="4622" levels="12" name="NPC AE - 80% HP Drain - Magic">
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 75 90 95 </table>
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
   <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
@@ -425,6 +460,7 @@
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="DRAIN"/>
   <set name="hitTime" val="4000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="500"/>
@@ -433,6 +469,7 @@
 </skill>
 <skill id="4623" levels="12" name="NPC AE - 80% HP Drain - Slow">
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 75 90 95 </table>
   <table name="#mpConsume"> 22 34 48 64 83 102 119 127 133 138 140 143 </table>
   <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
@@ -440,6 +477,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DRAIN"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="1000"/>
@@ -466,11 +504,13 @@
   </for>
 </skill>
 <skill id="4625" levels="12" name="Decrease Speed">
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#runSpd"> 0.85 0.7 0.7 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 </table>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isDebuff" val="true"/>
   <set name="lvlDepend" val="1"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="10"/> <!-- Base Land Rate -->
   <set name="castRange" val="-1"/>
@@ -483,11 +523,13 @@
 </skill>
 <skill id="4626" levels="12" name="NPC Buff - Physical Barrier">
   <table name="#Tab-pDef"> 1.05 1.11 1.17 1.25 1.33 1.43 1.67 2 2.33 2.67 3 3.33 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 7 10 14 18 23 28 33 35 37 38 39 39 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
@@ -501,11 +543,13 @@
 </skill>
 <skill id="4627" levels="12" name="NPC Buff - Magical Barrier">
   <table name="#mDef"> 1.05 1.11 1.17 1.25 1.33 1.43 1.67 2 2.33 2.67 3 3.33 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 7 10 14 18 23 28 33 35 37 38 39 39 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
@@ -527,6 +571,7 @@
 </skill>
 <skill id="4629" levels="12" name="NPC MR - HP Drain">
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
   <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
@@ -534,6 +579,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DRAIN"/>
   <set name="hitTime" val="4000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="400"/>
@@ -542,6 +588,7 @@
 </skill>
 <skill id="4630" levels="12" name="NPC MR - Twister">
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <set name="element" val="1"/> <!-- Wind -->
   <set name="mpConsume" val="#mpConsume"/>
@@ -549,6 +596,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="MDAM"/>
   <set name="hitTime" val="4000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="400"/>
@@ -556,6 +604,7 @@
 </skill>
 <skill id="4631" levels="3" name="NPC Buff - Acumen Shield WildMagic">
   <table name="#mAtkSpd"> 1.15 1.23 1.3 </table>
+  <table name="#magicLvl"> 20 40 60 </table>
   <table name="#pDef"> 1.8 1.12 1.15 </table>
   <table name="#mCritRate"> 1.3 1.4 1.4 </table>
   <table name="#mpConsume"> 29 53 83 </table>
@@ -563,6 +612,7 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
@@ -579,12 +629,14 @@
 <skill id="4632" levels="3" name="NPC Buff - Acumen Empower WildMagic">
   <table name="#mAtkSpd"> 1.15 1.23 1.3 </table>
   <table name="#mAtk"> 1.55 1.65 1.75 </table>
+  <table name="#magicLvl"> 20 40 60 </table>
   <table name="#mCritRate"> 1.3 1.4 1.4 </table>
   <table name="#mpConsume"> 29 53 83 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
@@ -603,6 +655,7 @@
   <table name="#pAtkSpd"> 1.05 1.05 1.08 </table>
   <table name="#mAtk"> 1.71 1.82 2.03 </table>
   <table name="#mAtkSpd"> 1.21 1.29 1.4 </table>
+  <table name="#magicLvl"> 20 40 60 </table>
   <table name="#runSpd"> 5 5 8 </table>
   <table name="#pDef"> 0.95 0.95 0.92 </table>
   <table name="#mDef"> 0.9 0.9 0.84 </table>
@@ -611,6 +664,7 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
@@ -631,12 +685,14 @@
 <skill id="4634" levels="3" name="NPC Buff - Acumen Empower DamageShield">
   <table name="#mAtk"> 1.55 1.65 1.75 </table>
   <table name="#mAtkSpd"> 1.15 1.23 1.3 </table>
+  <table name="#magicLvl"> 20 40 60 </table>
   <table name="#reflect"> 10 15 20 </table>
   <table name="#mpConsume"> 29 53 83 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
@@ -655,6 +711,7 @@
   <table name="#pAtkSpd"> 1.05 1.05 1.08 </table>
   <table name="#mAtk"> 1.1 1.1 1.16 </table>
   <table name="#mAtkSpd"> 1.21 1.29 1.4 </table>
+  <table name="#magicLvl"> 20 40 60 </table>
   <table name="#runSpd"> 5 5 8 </table>
   <table name="#pDef"> 0.95 0.95 0.92 </table>
   <table name="#mDef"> 0.9 0.9 0.84 </table>
@@ -664,6 +721,7 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
@@ -687,6 +745,7 @@
   <table name="#pAtkSpd"> 1.05 1.05 1.08 </table>
   <table name="#mAtk"> 1.1 1.1 1.16 </table>
   <table name="#mAtkSpd"> 1.21 1.29 1.4 </table>
+  <table name="#magicLvl"> 20 40 60 </table>
   <table name="#runSpd"> 5 5 8 </table>
   <table name="#pDef"> 0.95 0.95 0.92 </table>
   <table name="#mDef"> 0.9 0.9 0.84 </table>
@@ -696,6 +755,7 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
@@ -717,12 +777,14 @@
 <skill id="4637" levels="3" name="NPC Buff - Acumen WildMagic DamageShield">
   <table name="#mAtkSpd"> 1.15 1.23 1.3 </table>
   <table name="#mCritRate"> 1.3 1.4 1.4 </table>
+  <table name="#magicLvl"> 20 40 60 </table>
   <table name="#reflect"> 10 15 20 </table>
   <table name="#mpConsume"> 29 53 83 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
@@ -739,6 +801,7 @@
 <skill id="4638" levels="3" name="NPC Clan Buff - Acumen Empower WildMagic">
   <table name="#mAtk"> 1.55 1.65 1.75 </table>
   <table name="#mAtkSpd"> 1.15 1.23 1.3 </table>
+  <table name="#magicLvl"> 20 40 60 </table>
   <table name="#mCritRate"> 1.3 1.4 1.4 </table>
   <table name="#mpConsume"> 43 79 124 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -746,6 +809,7 @@
   <set name="skillRadius" val="900"/>
   <set name="skillType" val="BUFF"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
@@ -764,6 +828,7 @@
   <table name="#pAtkSpd"> 1.05 1.05 1.08 </table>
   <table name="#mAtk"> 1.71 1.82 2.03 </table>
   <table name="#mAtkSpd"> 1.21 1.29 1.4 </table>
+  <table name="#magicLvl"> 20 40 60 </table>
   <table name="#runSpd"> 5 5 8 </table>
   <table name="#pDef"> 0.95 0.95 0.92 </table>
   <table name="#mDef"> 0.9 0.9 0.84 </table>
@@ -773,6 +838,7 @@
   <set name="skillRadius" val="900"/>
   <set name="skillType" val="BUFF"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="-1"/>
@@ -791,6 +857,7 @@
   </for>
 </skill>
 <skill id="4640" levels="12" name="Sleep">
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="40"/> <!-- Base Land Rate -->
@@ -799,6 +866,7 @@
   <set name="isDebuff" val="true"/>
   <set name="hitTime" val="2500"/>
   <set name="lvlDepend" val="1"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="500"/>
@@ -809,20 +877,24 @@
 </skill>
 <skill id="4641" levels="12" name="NPC Super Strike">
   <table name="#power"> 137 314 656 1249 2164 3408 4878 5627 6335 6960 7461 7850 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 37 60 84 114 148 182 212 227 238 247 252 255 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="PDAM"/>
   <set name="hitTime" val="1800"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
 </skill>
 <skill id="4642" levels="9" name="NPC Fast Spell Casting">
-  <table name="#mAtkSpd"> 1.05 1.07 1.09 1.11 1.13 1.15 1.17 1.19 1.21 </table>
+  <table name="#magicLvl"> 20 40 60 65 70 75 80 85 90 </table> <!-- Guessing Lvl 4 to 9 -->
+  <table name="#mAtkSpd"> 1.05 1.07 1.10 1.11 1.13 1.15 1.17 1.19 1.21 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -856,9 +928,12 @@
   </for>
 </skill>
 <skill id="4644" levels="2" name="Area Buff - Haste">
+  <table name="#magicLvl"> 30 70 </table>
   <table name="#pAtkSpd"> 1.15 1.33 </table>
   <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="200"/> <!-- Guessing -->
   <set name="skillType" val="BUFF"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -870,9 +945,11 @@
   </for>
 </skill>
 <skill id="4645" levels="3" name="Area Buff - Focus">
+  <table name="#magicLvl"> 20 40 60 </table>
   <table name="#rCrit"> 0.15 0.25 0.3 </table>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillType" val="BUFF"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -885,8 +962,10 @@
 </skill>
 <skill id="4646" levels="3" name="Area Buff - Death Whisper">
   <table name="#cAtk"> 1.3 1.32 1.35 </table>
+  <table name="#magicLvl"> 20 40 60 </table>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillType" val="BUFF"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -898,9 +977,11 @@
   </for>
 </skill>
 <skill id="4647" levels="3" name="Area Buff - Might">
+  <table name="#magicLvl"> 20 40 60 </table>
   <table name="#pAtk"> 1.08 1.12 1.15 </table>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillType" val="BUFF"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -912,9 +993,11 @@
   </for>
 </skill>
 <skill id="4648" levels="3" name="Area Buff - Shield">
+  <table name="#magicLvl"> 20 40 60 </table>
   <table name="#pDef"> 1.08 1.12 1.15 </table>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillType" val="BUFF"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -927,6 +1010,7 @@
 </skill>
 <skill id="4649" levels="12" name="Poison">
   <table name="#dot"> 36 54 72 93 114 132 144 144 150 150 153 153 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
   <table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
   <set name="abnormalLvl" val="#abnormalLvl"/>
@@ -938,6 +1022,7 @@
   <set name="skillType" val="POISON"/>
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -996,12 +1081,14 @@
 </skill>
 <skill id="4653" levels="12" name="NPC Corpse Life Drain">
   <table name="#drain"> 131 201 271 351 451 551 651 691 731 751 771 781 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="100"/>
   <set name="target" val="TARGET_CORPSE"/>
   <set name="skillType" val="DRAIN"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="400"/>
@@ -1010,6 +1097,7 @@
   <set name="absorbAbs"  val="#drain"/>
 </skill>
 <skill id="4654" levels="12" name="NPC Death Link">
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1017,6 +1105,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEATHLINK"/>
   <set name="hitTime" val="4000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="900"/>
@@ -1024,12 +1113,14 @@
 </skill>
 <skill id="4655" levels="12" name="NPC Death Link - Magic">
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEATHLINK"/>
   <set name="hitTime" val="4000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="900"/>
@@ -1037,12 +1128,14 @@
 </skill>
 <skill id="4656" levels="12" name="NPC Death Link - Slow">
   <table name="#power"> 9 13 19 26 34 43 51 55 58 61 63 65 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEATHLINK"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="1000"/>
@@ -1050,6 +1143,7 @@
 </skill>
 <skill id="4657" levels="12" name="Hold">
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 24 39 57 70 90 110 130 138 145 150 153 155 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
@@ -1057,6 +1151,7 @@
   <set name="skillType" val="DRAIN"/>
   <set name="hitTime" val="4000"/>
   <set name="lvlDepend" val="2"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="isDebuff" val="true"/>
@@ -1069,6 +1164,7 @@
 </skill>
 <skill id="4658" levels="12" name="Hold">
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 24 39 57 70 90 110 130 138 145 150 153 155 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
@@ -1076,6 +1172,7 @@
   <set name="skillType" val="DRAIN"/>
   <set name="hitTime" val="4000"/>
   <set name="lvlDepend" val="2"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
@@ -1088,6 +1185,7 @@
 </skill>
 <skill id="4659" levels="12" name="Hold">
   <table name="#power"> 9 13 19 26 34 43 51 55 58 61 63 65 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 24 39 57 70 90 110 130 138 145 150 153 155 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
@@ -1095,6 +1193,7 @@
   <set name="skillType" val="DRAIN"/>
   <set name="hitTime" val="2000"/>
   <set name="lvlDepend" val="2"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
@@ -1107,6 +1206,7 @@
 </skill>
 <skill id="4660" levels="12" name="Sleep">
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 24 39 57 70 90 110 130 138 145 150 153 155 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
@@ -1114,6 +1214,7 @@
   <set name="skillType" val="DRAIN"/>
   <set name="hitTime" val="4000"/>
   <set name="lvlDepend" val="2"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
@@ -1126,6 +1227,7 @@
 </skill>
 <skill id="4661" levels="12" name="Sleep">
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 24 39 57 70 90 110 130 138 145 150 153 155 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
@@ -1134,6 +1236,7 @@
   <set name="skillType" val="DRAIN"/>
   <set name="hitTime" val="4000"/>
   <set name="lvlDepend" val="2"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
@@ -1145,6 +1248,7 @@
 </skill>
 <skill id="4662" levels="12" name="Sleep">
   <table name="#power"> 9 13 19 26 34 43 51 55 58 61 63 65 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 24 39 57 70 90 110 130 138 145 150 153 155 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
@@ -1152,6 +1256,7 @@
   <set name="skillType" val="DRAIN"/>
   <set name="hitTime" val="2000"/>
   <set name="lvlDepend" val="2"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
@@ -1176,6 +1281,7 @@
 </skill>
 <skill id="4664" levels="12" name="NPC 100% HP Drain">
   <table name="#power"> 12 18 25 35 46 57 68 73 78 81 84 86 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 17 29 40 53 68 83 100 104 109 113 115 117 </table>
   <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
@@ -1183,6 +1289,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DRAIN"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
@@ -1191,6 +1298,7 @@
 </skill>
 <skill id="4665" levels="12" name="NPC 100% HP Drain - Magic">
   <table name="#power"> 12 18 25 35 46 57 68 73 78 81 84 86 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 17 29 40 53 68 83 100 104 109 113 115 117 </table>
   <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
@@ -1198,6 +1306,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DRAIN"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
@@ -1206,6 +1315,7 @@
 </skill>
 <skill id="4666" levels="12" name="NPC 100% HP Drain - Slow">
   <table name="#power"> 6 9 13 18 23 29 34 37 39 41 42 43 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 17 29 40 53 68 83 100 104 109 113 115 117 </table>
   <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
@@ -1213,6 +1323,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DRAIN"/>
   <set name="hitTime" val="1000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="1000"/>
@@ -1221,6 +1332,7 @@
 </skill>
 <skill id="4667" levels="12" name="NPC Strong 100% HP Drain">
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 17 29 40 53 68 83 100 104 109 113 115 117 </table>
   <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
@@ -1228,6 +1340,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DRAIN"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
@@ -1236,6 +1349,7 @@
 </skill>
 <skill id="4668" levels="12" name="NPC Strong 100% HP Drain - Magic">
   <table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 17 29 40 53 68 83 100 104 109 113 115 117 </table>
   <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
@@ -1243,6 +1357,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DRAIN"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
@@ -1251,6 +1366,7 @@
 </skill>
 <skill id="4669" levels="12" name="NPC Strong 100% HP Drain - Slow">
   <table name="#power"> 9 13 19 26 34 43 51 55 58 61 63 65 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 17 29 40 53 68 83 100 104 109 113 115 117 </table>
   <set name="element" val="6"/> <!-- Dark -->
   <set name="mpConsume" val="#mpConsume"/>
@@ -1258,6 +1374,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DRAIN"/>
   <set name="hitTime" val="1000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="1000"/>
@@ -1283,6 +1400,7 @@
   </for>
 </skill>
 <skill id="4671" levels="1" name="AV - Teleport">
+  <set name="magicLvl" val="40"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="INSTANT_JUMP"/>
@@ -1297,16 +1415,19 @@
   <!-- Needs to be done -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
+  <set name="magicLvl" val="40"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
 </skill>
 <skill id="4673" levels="12" name="NPC Dispel Offensive Buff">
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 75 90 95 </table>
   <table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
   <table name="#power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table> <!-- Base Land Rate -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="CANCEL"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="#power"/>
   <set name="isMagic" val="true"/>
@@ -1315,6 +1436,7 @@
   <set name="negateStats" val="BUFF"/>
 </skill>
 <skill id="4674" levels="12" name="NPC Dispel Offensive Buff">
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 75 90 95 </table>
   <table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
   <table name="#Power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table> <!-- Base Land Rate -->
   <set name="mpConsume" val="#mpConsume"/>
@@ -1322,6 +1444,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="CANCEL"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
@@ -1329,6 +1452,7 @@
   <set name="negateStats" val="BUFF"/>
 </skill>
 <skill id="4675" levels="12" name="NPC Dispel Fighter Buff">
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 75 90 95 </table>
   <table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
   <table name="#Power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table> <!-- Base Land Rate -->
   <set name="mpConsume" val="#mpConsume"/>
@@ -1336,6 +1460,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="CANCEL"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
@@ -1343,6 +1468,7 @@
   <set name="negateStats" val="BUFF"/>
 </skill>
 <skill id="4676" levels="12" name="NPC Dispel Mage Offensive Buff">
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 75 90 95 </table>
   <table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
   <table name="#Power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table> <!-- Base Land Rate -->
   <set name="mpConsume" val="#mpConsume"/>
@@ -1350,6 +1476,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="CANCEL"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
@@ -1357,6 +1484,7 @@
   <set name="negateStats" val="BUFF"/>
 </skill>
 <skill id="4677" levels="12" name="NPC Dispel Fighter Defensive Buff">
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 75 90 95 </table>
   <table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
   <table name="#Power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table> <!-- Base Land Rate -->
   <set name="mpConsume" val="#mpConsume"/>
@@ -1364,6 +1492,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="CANCEL"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
@@ -1371,6 +1500,7 @@
   <set name="negateStats" val="BUFF"/>
 </skill>
 <skill id="4678" levels="12" name="NPC Dispel Mage Defensive Buff">
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 75 90 95 </table>
   <table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
   <table name="#Power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table> <!-- Base Land Rate -->
   <set name="mpConsume" val="#mpConsume"/>
@@ -1378,6 +1508,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="CANCEL"/>
   <set name="hitTime" val="2000"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
@@ -1632,6 +1763,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isDebuff" val="true"/>
+  <set name="magicLvl" val="60"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1652,6 +1784,7 @@
   <set name="power" val="100"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
+  <set name="magicLvl" val="60"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1667,6 +1800,7 @@
   <set name="power" val="100"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
+  <set name="magicLvl" val="60"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1715,6 +1849,7 @@
   <table name="#rCrit"> 0.25 0.27 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3 </table>
   <table name="#crit"> 1.2 1.22 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 </table>
   <table name="#time"> 120 120 120 150 165 180 195 210 225 240 255 270 285 </table>
+  <table name="#magicLvl"> 57 66 75 77 78 79 80 81 82 83 84 85 86 </table>
   <table name="#mpConsume"> 122 157 194 202 207 212 215 220 224 229 233 237 242 </table>
   <table name="#power"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
   <set name="target" val="TARGET_PARTY"/>
@@ -1723,6 +1858,7 @@
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>

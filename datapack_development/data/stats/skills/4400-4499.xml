@@ -7,6 +7,7 @@
   <set name="reuseDelay" val="100"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
@@ -17,12 +18,13 @@
   </for>
 </skill>
 <skill id="4401" levels="3" name="Empower">
-<!-- by DrLecter -->
+  <!-- by DrLecter -->
   <table name="#Tab-mAtk"> 1.55 1.65 1.75 </table>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="100"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
@@ -39,6 +41,7 @@
   <set name="reuseDelay" val="100"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
@@ -54,6 +57,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="1"/>
   <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="skillType" val="BUFF"/>
@@ -71,6 +75,7 @@
   <set name="reuseDelay" val="100"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
@@ -87,6 +92,7 @@
   <set name="reuseDelay" val="100"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
@@ -1106,7 +1112,7 @@
 <skill id="4473" levels="12" name="Stun">
   <table name="#mpConsume"> 27 44 62 85 109 135 157 168 177 183 187 189 </table>
   <table name="#power"> 16 35 73 139 241 379 542 626 704 774 829 873 </table>
-  <set name="magicLvl" val="48"/>
+  <set name="magicLvl" val="48"/> <!-- Guessing -->
   <set name="lvlDepend" val="1"/> <!-- Guessing -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
@@ -1343,6 +1349,7 @@
   <!-- This Skill Is Only For Description In The Client -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
+  <set name="mpConsume" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1387,6 +1394,7 @@
   <!-- This Skill Is Only For Description In The Client -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
+  <set name="mpConsume" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1395,6 +1403,7 @@
   <!-- This Skill Is Only For Description In The Client -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
+  <set name="mpConsume" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1403,6 +1412,7 @@
   <!-- This Skill Is Only For Description In The Client -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>

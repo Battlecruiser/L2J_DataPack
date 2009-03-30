@@ -63,12 +63,14 @@
 <skill id="4103" levels="2" name="NPC Ultimate Evasion">
   <!-- Done by dc -->
   <table name="#rEvas"> 20 25 </table>
+  <table name="#magicLvl"> 40 70 </table>
   <table name="#mpConsume"> 35 65 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="1000"/>
   <set name="skillType" val="BUFF"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -305,6 +307,7 @@
   <table name="#Tab-mDef"> 1.05 1.11 1.17 1.25 1.33 1.43 1.67 2 3.33 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -585,6 +588,7 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="20000"/>
   <set name="skillType" val="NOTDONE"/>
+  <set name="magicLvl" val="75"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="700"/>
 </skill>
@@ -1029,6 +1033,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="2000"/>
   <set name="skillType" val="GET_PLAYER"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>

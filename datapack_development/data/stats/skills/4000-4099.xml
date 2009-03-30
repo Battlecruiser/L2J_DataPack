@@ -119,6 +119,7 @@
   <set name="reuseDelay" val="6000"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -132,6 +133,7 @@
   <set name="reuseDelay" val="6000"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -145,6 +147,7 @@
   <set name="reuseDelay" val="6000"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -158,6 +161,7 @@
   <set name="reuseDelay" val="6000"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -320,12 +324,14 @@
   <set name="hitTime" val="3000"/>
   <set name="skillType" val="HEAL"/>
   <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="35"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="aggroPoints" val="100"/>
 </skill>
 <skill id="4025" levels="12" name="Master Recharge">
+  <table name="#magicLvl"> 17 27 37 47 57 67 77 82 87 92 97 102 </table>
   <table name="#mpConsume"> 24 39 53 70 90 110 130 128 145 150 153 155 </table>
   <table name="#power"> 23 38 52 70 90 110 129 138 144 149 153 155 </table>
   <table name="#aggro"> 138 204 285 379 477 566 635 659 676 689 700 709 </table>
@@ -336,6 +342,7 @@
   <set name="hitTime" val="2500"/>
   <set name="skillType" val="MANARECHARGE"/>
   <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
@@ -767,11 +774,9 @@
 </skill>
 <skill id="4048" levels="3" name="NPC Dash">
   <!-- Done by dc -->
-  <table name="#magicLvl"> 10 10 10 </table>
-  <table name="#mpConsume"> 12 12 12 </table>
   <table name="#runSpd"> 1.5 1.8 2 </table>
-  <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="10"/>
+  <set name="mpConsume" val="12"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -900,6 +905,7 @@
   <!-- Needs to be done -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1006,6 +1012,7 @@
   </for>
 </skill>
 <skill id="4065" levels="12" name="NPC Heal">
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 17 30 44 62 80 98 114 122 127 130 132 132 </table>
   <table name="#power"> 83 151 245 362 494 627 743 789 823 845 853 853 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1015,6 +1022,7 @@
   <set name="hitTime" val="2000"/>
   <set name="skillType" val="HEAL"/>
   <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
@@ -1090,6 +1098,7 @@
   <set name="power" val="10"/> <!-- Base Land Rate -->
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
   <set name="castRange" val="-1"/>
@@ -1104,6 +1113,7 @@
   <table name="#vuln"> 0.85 0.7 0.5 0.3 0.1 0 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1311,16 +1321,16 @@
   <for>
     <effect count="1" name="ImmobileBuff" time="4200" val="0"/>
     <effect count="1" name="Root" time="4200" val="0"/>
-    <effect count="4200" name="DamOverTime" time="3" val="60" abnormal="poison"/>
+    <effect count="1400" name="DamOverTime" time="3" val="60" abnormal="poison"/>
   </for>
 </skill>
 <skill id="4083" levels="1" name="Die! You fool!">
   <set name="power" val="90000"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="overHit" val="true"/>
   <set name="hitTime" val="1000"/>
   <set name="skillType" val="PDAM"/>
   <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="70"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
@@ -1330,6 +1340,7 @@
   <table name="#Tab-pDef"> 1.05 1.11 1.17 1.25 1.33 1.43 1.67 2 3.33 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1340,6 +1351,7 @@
 <skill id="4085" levels="1" name="Critical Power">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1351,6 +1363,7 @@
   <!-- Done by dc -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1478,6 +1491,7 @@
   <!-- Done by dc -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
+  <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -1537,6 +1551,7 @@
 </skill>
 <skill id="4097" levels="12" name="NPC Chant of Life">
   <table name="#hot"> 7 12 18 27 37 46 55 23 32 42 51 58 </table>
+  <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#mpConsume"> 33 59 88 122 159 195 228 242 252 259 262 262 </table>
   <table name="#power"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1546,6 +1561,7 @@
   <set name="hitTime" val="2000"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
