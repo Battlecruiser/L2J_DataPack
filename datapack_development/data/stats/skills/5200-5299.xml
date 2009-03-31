@@ -6,6 +6,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="6000"/>
 </skill>
 <skill id="5201" levels="6" name="Pet Concentration">
   <!-- Lvl 1-2 - Temporarily lowers the probability of magic being canceled due to damage taken taken. -->
@@ -13,6 +14,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="5202" levels="12" name="Stun">
   <!-- Lvl 1-12 - Temporarily gets thrown into a state of shock and Immobilized. -->
@@ -20,6 +22,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="5203" levels="12" name="Fear">
   <!-- Lvl 1-12 - Temporarily becomes overcome with fear and flees mindlessly. -->
@@ -27,6 +30,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="5204" levels="1" name="Production-First Gigantic Pig Combination">
   <!-- Needs more work -->
@@ -47,7 +51,7 @@
 <skill id="5206" levels="1" name="Decrease Speed">
   <set name="power" val="542"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="2200"/>
+  <set name="hitTime" val="2000"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="500"/>
@@ -70,6 +74,7 @@
   <set name="isDebuff" val="true"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="1500"/>
   <for>
     <effect name="Debuff" time="15" count="1" val="0" stackOrder="0.77" stackType="attack_time_up">
       <mul order="0x30" stat="pAtkSpd" val="0.77"/>
@@ -272,108 +277,126 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="5225" levels="1" name="Invincible">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3500"/>
 </skill>
 <skill id="5226" levels="1" name="Imprison">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="5227" levels="1" name="Ground Strike">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="2500"/>
 </skill>
 <skill id="5228" levels="1" name="Jump Attack">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="2500"/>
 </skill>
 <skill id="5229" levels="1" name="Strong Punch">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="2800"/>
 </skill>
 <skill id="5230" levels="1" name="Stun">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="5000"/>
 </skill>
 <skill id="5231" levels="1" name="Stun">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="5232" levels="1" name="Stun">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="2000"/>
 </skill>
 <skill id="5233" levels="1" name="Weight Spin Attack - Weak">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="5000"/>
 </skill>
 <skill id="5234" levels="1" name="Weight Spin Attack - Mid">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="5235" levels="1" name="Weight Spin Attack - Strong">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="2000"/>
 </skill>
 <skill id="5236" levels="1" name="Speed Up">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1000"/>
 </skill>
 <skill id="5237" levels="1" name="Speed Down">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1000"/>
 </skill>
 <skill id="5238" levels="1" name="Freezing">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="5239" levels="5" name="Event Timer">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1200"/>
 </skill>
 <skill id="5240" levels="1" name="Stun">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="2500"/>
 </skill>
 <skill id="5241" levels="1" name="Stun">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="2500"/>
 </skill>
 <skill id="5242" levels="1" name="Sickness">
   <set name="mpConsume" val="1"/>
@@ -394,6 +417,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1200"/>
 </skill>
 <skill id="5244" levels="1" name="Physical Up">
   <set name="target" val="TARGET_NONE"/>
@@ -412,36 +436,42 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3300"/>
 </skill>
 <skill id="5247" levels="12" name="Seed of Darkness">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3300"/>
 </skill>
 <skill id="5248" levels="12" name="Seed Explosion">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="500"/>
 </skill>
 <skill id="5249" levels="12" name="Boss Dark Circle">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3300"/>
 </skill>
 <skill id="5250" levels="1" name="Stun">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1200"/>
 </skill>
 <skill id="5251" levels="12" name="Poison">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1800"/>
 </skill>
 <skill id="5252" levels="12" name="Paralysis">
   <set name="target" val="TARGET_NONE"/>
@@ -454,12 +484,14 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1000"/>
 </skill>
 <skill id="5254" levels="12" name="Invasion of Spirit">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="2500"/>
 </skill>
 <skill id="5255" levels="12" name="Mana Burn">
   <set name="target" val="TARGET_NONE"/>
@@ -472,6 +504,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1000"/>
 </skill>
 <skill id="5257" levels="1" name="Death">
   <set name="target" val="TARGET_NONE"/>
@@ -484,36 +517,42 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="5259" levels="12" name="Fear">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="5260" levels="12" name="Disarm">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1500"/>
 </skill>
 <skill id="5261" levels="1" name="Zombie">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1500"/>
 </skill>
 <skill id="5262" levels="12" name="NPC - Rise Shot">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3200"/>
 </skill>
 <skill id="5263" levels="12" name="NPC _ Chain Lightning">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="5000"/>
 </skill>
 <skill id="5264" levels="12" name="Death Mark">
   <!-- CT2.2 retail confirmed -->
@@ -525,6 +564,7 @@
   <set name="isDebuff" val="true"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1200"/>
+  <set name="hitTime" val="3000"/>
   <for>
     <effect count="10" name="DamOverTime" time="3" val="#dmg" abnormal="poison">
       <mul order="0x30" stat="pDef" val="0.8"/>
@@ -537,12 +577,14 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="2500"/>
 </skill>
 <skill id="5266" levels="12" name="Magical Backfire">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="5267" levels="9" name="Trap Explosion">
   <!-- Needs retail value corrections, By Darki699 -->
@@ -643,7 +685,7 @@
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="200"/>
-  <set name="reuseDelay" val="1500"/>
+  <set name="reuseDelay" val="1200"/>
   <set name="hitTime" val="1200"/>
   <set name="skillType" val="AGGDAMAGE"/>
   <set name="isDebuff" val="true"/>
@@ -659,161 +701,188 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="830"/>
 </skill>
 <skill id="5274" levels="9" name="NPC(party) - Physical Single Long Range Attack">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4500"/>
 </skill>
 <skill id="5275" levels="9" name="NPC(party) - Physical Range Close Range Attack">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1000"/>
 </skill>
 <skill id="5276" levels="9" name="NPC(party) - Physical Range Long Range Attack">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3200"/>
 </skill>
 <skill id="5277" levels="9" name="NPC(party) - Physical Single Close Range Attack - Fire">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="830"/>
 </skill>
 <skill id="5278" levels="9" name="NPC(party) - Physical Single Long Range Attack - Fire">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4500"/>
 </skill>
 <skill id="5279" levels="9" name="NPC(party) - Physical Range Close Range Attack - Fire">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1000"/>
 </skill>
 <skill id="5280" levels="9" name="NPC(party) - Physical Range Long Range Attack - Fire">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3200"/>
 </skill>
 <skill id="5281" levels="9" name="NPC(party) - Physical Single Close Range Attack - Water">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="830"/>
 </skill>
 <skill id="5282" levels="9" name="NPC(party) - Physical Single Long Range Attack - Water">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4500"/>
 </skill>
 <skill id="5283" levels="9" name="NPC(party) - Physical Range Close Range Attack - Water">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1000"/>
 </skill>
 <skill id="5284" levels="9" name="NPC(party) - Physical Range Long Range Attack - Water">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3200"/>
 </skill>
 <skill id="5285" levels="9" name="NPC(party) - Physical Single Close Range Attack - Wind">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="830"/>
 </skill>
 <skill id="5286" levels="9" name="NPC(party) - Physical Single Long Range Attack - Wind">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4500"/>
 </skill>
 <skill id="5287" levels="9" name="NPC(party) - Physical Range Close Range Attack - Wind">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1000"/>
 </skill>
 <skill id="5288" levels="9" name="NPC(party) - Physical Range Long Range Attack - Wind">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3200"/>
 </skill>
 <skill id="5289" levels="9" name="NPC(party) - Physical Single Close Range Attack - Earth">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="830"/>
 </skill>
 <skill id="5290" levels="9" name="NPC(party) - Physical Single Long Range Attack - Earth">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4500"/>
 </skill>
 <skill id="5291" levels="9" name="NPC(party) - Physical Range Close Range Attack - Earth">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1000"/>
 </skill>
 <skill id="5292" levels="9" name="NPC(party) - Physical Range Long Range Attack - Earth">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3200"/>
 </skill>
 <skill id="5293" levels="9" name="NPC(party) - Physical Single Close Range Attack - Holy">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="830"/>
 </skill>
 <skill id="5294" levels="9" name="NPC(party) - Physical Single Long Range Attack - Holy">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4500"/>
 </skill>
 <skill id="5295" levels="9" name="NPC(party) - Physical Range Close Range Attack - Holy">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1000"/>
 </skill>
 <skill id="5296" levels="9" name="NPC(party) - Physical Range Long Range Attack - Holy">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="3200"/>
 </skill>
 <skill id="5297" levels="9" name="NPC(party) - Physical Single Close Range Attack - Dark">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="830"/>
 </skill>
 <skill id="5298" levels="9" name="NPC(party) - Physical Single Long Range Attack - Dark">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="4500"/>
 </skill>
 <skill id="5299" levels="9" name="NPC(party) - Physical Range Close Range Attack - Dark">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
+  <set name="hitTime" val="1000"/>
 </skill>
 </list>
