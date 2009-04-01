@@ -1,28 +1,60 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
 <skill id="2500" levels="1" name="Beast Soulshot Compressed Pack">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="itemConsumeId" val="10515"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="EXTRACTABLE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <cond msgId="129">
+    <and>
+       <player invSize="10"/>
+       <player weight="80"/>
+    </and>
+  </cond>
 </skill>
 <skill id="2501" levels="1" name="Beast Spiritshot Compressed Pack">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="itemConsumeId" val="10516"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="EXTRACTABLE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <cond msgId="129">
+    <and>
+       <player invSize="10"/>
+       <player weight="80"/>
+    </and>
+  </cond>
 </skill>
 <skill id="2502" levels="1" name="Blessed Beast Spiritshot Compressed Pack">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="itemConsumeId" val="10517"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="EXTRACTABLE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <cond msgId="129">
+    <and>
+       <player invSize="10"/>
+       <player weight="80"/>
+    </and>
+  </cond>
 </skill>
 <skill id="2504" levels="1" name="Old Agathion">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="itemConsumeId" val="10408"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="EXTRACTABLE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
+  <cond msgId="129">
+    <and>
+       <player invSize="10"/>
+       <player weight="80"/>
+    </and>
+  </cond>
 </skill>
 <skill id="2505" levels="1" name="Chant of Combat">
   <set name="target" val="TARGET_NONE"/>
@@ -60,15 +92,21 @@
   <set name="hitTime" val="1500"/>
 </skill>
 <skill id="2510" levels="1" name="Mysterious Cube">
+  <set name="referenceId" val="10632"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="MYSTERIOUS_CUBE"/>
+  <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1000"/>
   <set name="staticHitTime" val="true"/>
   <set name="reuseDelay" val="86400000"/>
   <set name="staticReuse" val="true"/>
   <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <cond msgId="129">
+    <and>
+       <player invSize="10"/>
+       <player weight="80"/>
+    </and>
+  </cond>
 </skill>
 <skill id="2511" levels="1" name="Scroll of Transformation - Gatekeeper">
   <set name="target" val="TARGET_SELF"/>
