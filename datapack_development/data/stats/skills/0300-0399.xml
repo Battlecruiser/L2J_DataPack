@@ -1179,7 +1179,7 @@
   <set name="hitTime" val="1000"/>
   <for>
     <effect count="1" name="Stun" time="2" val="0" stackOrder="1" stackType="Stun"/>
-    <effect count="1" name="RemoveTarget" time="1" val="0"/>
+    <effect count="1" name="RemoveTarget" time="1" noicon="1" val="0"/>
   </for>
 </skill>
 <skill id="353" levels="1" name="Shield Slam">
@@ -1198,7 +1198,7 @@
   <set name="hitTime" val="2000"/>
   <for>
     <effect count="1" name="PhysicalMute" time="120" val="0"/>
-    <effect count="1" name="RemoveTarget" time="1" val="0"/>
+    <effect count="1" name="RemoveTarget" time="1" noicon="1" val="0"/>
   </for>
 </skill>
 <skill id="354" levels="1" name="Hamstring Shot">
@@ -1354,7 +1354,7 @@
   <set name="hitTime" val="1000"/>
   <for>
     <effect count="1" name="Bluff" time="3" val="0" stackOrder="1" stackType="Stun"/>
-    <effect count="1" name="RemoveTarget" time="1" val="0"/>
+    <effect count="1" name="RemoveTarget" time="1" noicon="1" val="0"/>
   </for>
 </skill>
 <skill id="359" levels="1" name="Eye of Hunter">
@@ -1420,7 +1420,7 @@
       <mul order="0x30" stat="pDef" val="0.7"/>
       <mul order="0x30" stat="mDef" val="0.7"/>
     </effect>
-    <effect count="1" name="RemoveTarget" time="1" val="0"/>
+    <effect count="1" name="RemoveTarget" time="1" noicon="1" val="0"/>
   </for>
 </skill>
 <skill id="362" levels="1" name="Armor Crush">

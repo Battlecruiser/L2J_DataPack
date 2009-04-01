@@ -63,21 +63,21 @@
   <enchant2 name="power" val="#ench2Power"/>
    <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
-    <effect count="1" name="RemoveTarget" time="1" val="0"/>
+    <effect count="1" name="RemoveTarget" time="1" noicon="1" val="0"/>
   </for>
   <enchant3for>
     <effect count="1" name="Debuff" time="9" val="0">
       <mul order="0x30" stat="pDef" val="#ench3-pDef"/>
     </effect>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun" noicon="1"/>
-    <effect count="1" name="RemoveTarget" time="1" val="0"/>
+    <effect count="1" name="RemoveTarget" time="1" noicon="1" val="0"/>
   </enchant3for>
   <enchant4for>
     <effect count="1" name="Debuff" time="9" val="0">
       <mul order="0x30" stat="mDef" val="#ench4-mDef"/>
     </effect>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun" noicon="1"/>
-    <effect count="1" name="RemoveTarget" time="1" val="0"/>
+    <effect count="1" name="RemoveTarget" time="1" noicon="1" val="0"/>
   </enchant4for>
 </skill>
 <skill id="102" levels="16" name="Entangle" enchantLevels1="30" enchantLevels2="30" >
