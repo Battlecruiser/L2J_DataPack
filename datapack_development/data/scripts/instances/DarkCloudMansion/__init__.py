@@ -144,6 +144,8 @@ def enterInstance(self,player,template,teleto):
 	#check for exising instances of party members
 	if party :
 		for partyMember in party.getPartyMembers().toArray():
+			st = partyMember.getQuestState(qn)
+			if not st : st = self.newQuestState(partyMember)
 			if partyMember.getInstanceId()!=0:
 				instanceId = partyMember.getInstanceId()
 				if debug: print "DarkCloudMansion: found party member in instance:"+str(instanceId)
