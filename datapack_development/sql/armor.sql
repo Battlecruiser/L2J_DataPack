@@ -2184,4 +2184,16 @@ INSERT INTO armor VALUES
 (20095,'Santa Horn Hat','dhair','false','none',10, 'wood','none',0,-1,0,0,0,0,0,'true','false','true','true','0-0;'),
 (20098,'Formal Dress - Event - 1 hour Shadow time','fullarmor','false','none',1000, 'cloth','none',0,60,0,0,0,5000000,0,'true','true','true','true','0-0;'),
 (20099,'Formal Dress - Event - 7 day limited period','fullarmor','false','none',1000, 'cloth','none',0,-1,0,0,0,5000000,0,'true','true','true','true','0-0;'),
-(20100,'Saving Santa Hat','dhair','false','none',10, 'wood','none',0,-1,0,0,0,0,0,'true','false','true','true','0-0;');
+(20100,'Saving Santa Hat','dhair','false','none',10, 'wood','none',0,-1,0,0,0,0,0,'true','false','true','true','0-0;'),
+(20212,'Agathion Seal Bracelet - Charming Cupid','lbracelet','false','none',150,'wood', 'none',0,-1,0,0,0,0,0,'false','false','true','false','21031-1;3267-1;23017-1;23025-1'),
+(20213,'Agathion Seal Bracelet - Naughty Cupid','lbracelet','false','none',150,'wood', 'none',0,-1,0,0,0,0,0,'false','false','true','false','21032-1;3267-1;23017-1;23026-1'),
+(20221,'Agathion Seal Bracelet - White Maneki Neko','lbracelet','false','none',150,'wood','none',0,-1,0,0,0,0,0,'false','false','true','false','21033-1;3267-1;23017-1;23027-1;23030-1'),
+(20222,'Agathion Seal Bracelet - Black Maneki Neko','lbracelet','false','none',150,'wood','none',0,-1,0,0,0,0,0,'false','false','true','false','21034-1;3267-1;23017-1;23028-1;23031-1'),
+(20223,'Agathion Seal Bracelet - Brown Maneki Neko','lbracelet','false','none',150,'wood','none',0,-1,0,0,0,0,0,'false','false','true','false','21035-1;3267-1;23017-1;23029-1;23032-1'),
+(20230,'Agathion Seal Bracelet - One-eyed Bat Drove','lbracelet','false','none',150,'wood','none',0,-1,0,0,0,0,0,'false','false','true','false','21036-1;3267-1;23017-1;23033-1;23034-1;23035-1'),
+(20236,'Agathion Seal Bracelet - Pegasus','lbracelet','false','none', 150,'wood','none',0,-1,0,0,0,0,0,'false','false','true','false','21037-1;3267-1;23017-1;23036-1;23037-1;23038-1'),
+(20245,'Agathion Seal Bracelet - Yellow-robed Tojigong','lbracelet','false','none',150,'wood','none',0,-1,0,0,0,0,0,'false','false','true','false','21038-1;3267-1;23017-1;23039-1;'),
+(20246,'Agathion Seal Bracelet - Blue-robed Tojigong','lbracelet','false','none',150,'wood','none',0,-1,0,0,0,0,0,'false','false','true','false','21039-1;3267-1;23017-1;23040-1;'),
+(20247,'Agathion Seal Bracelet - Green-robed Tojigong','lbracelet','false','none',150,'wood','none',0,-1,0,0,0,0,0,'false','false','true','false','21040-1;3267-1;23017-1;23041-1;'),
+(20252,'Agathion Seal Bracelet - Bugbear','lbracelet','false','none', 150,'wood','none',0,-1,0,0,0,0,0,'false','false','true','false','21041-1;3267-1;23017-1;23041-1;');
+
