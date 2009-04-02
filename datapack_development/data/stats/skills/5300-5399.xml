@@ -226,11 +226,18 @@
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="5331" levels="9" name="NPC HP Drain">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="hitTime" val="4000"/>
+  <table name="#mpConsume"> 69 72 73 75 77 77 78 78 79 </table>
+  <table name="#magicLvl"> 78 80 81 82 83 84 85 86 87 </table>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="power" val="250"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="element" val="6"/> <!-- Dark -->
+  <set name="hitTime" val="3000"/>
+  <set name="reuseDelay" val="3000"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="600"/>
 </skill>
 <skill id="5332" levels="9" name="NPC MP Burn">
   <set name="target" val="TARGET_NONE"/>
