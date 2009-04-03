@@ -17,7 +17,11 @@ CHANCE2     = 75
 #QUEST ITEM
 FRAGMENT    = 8768
 ADENA       = 57
- 
+
+MOBS1 = [22196,22197,22198,22218]
+MOBS2 = [22200,22201,22202,22219]
+MOBS3 = [22208,22209,22210,22221]
+MOBS4 = [22203,22204,22205,22220]
 class Quest (JQuest) :
  
  def __init__(self,id,name,descr):
@@ -107,7 +111,7 @@ class Quest (JQuest) :
      cond = st.getInt("cond")
      npcId = npc.getNpcId()
  
-     if npcId in range(22196,22199)+22218 and cond == 4 :
+     if npcId in MOBS1 and cond == 4 :
          if st.getRandom(100) < CHANCE:
              st.giveItems(FRAGMENT,1)
              if st.getQuestItemsCount(FRAGMENT) <= 49:
@@ -116,17 +120,17 @@ class Quest (JQuest) :
                  st.set("cond","5")  
                  st.playSound("ItemSound.quest_middle")
      elif cond == 10 :
-         if npcId in range(22200,22203)+22219:
+         if npcId in MOBS2 :
              if st.getRandom(100) < CHANCE2:
                  st.giveItems(8770,1)
                  if st.getQuestItemsCount(8770) <= 9:
                      st.playSound("ItemSound.quest_itemget")
-         elif npcId in range(22208,22211)+22221:
+         elif npcId in MOBS3:
              if st.getRandom(100) < CHANCE2:
                  st.giveItems(8772,1)
                  if st.getQuestItemsCount(8772) <= 9:
                      st.playSound("ItemSound.quest_itemget")
-         elif npcId in range(22203,22206)+22220:
+         elif npcId in MOBS4:
              if st.getRandom(100) < CHANCE2:
                  st.giveItems(8771,1)
                  if st.getQuestItemsCount(8771) <= 9:
@@ -143,5 +147,5 @@ QUEST.addStartNpc(32113)
 for i in xrange(32113,32117) :
     QUEST.addTalkId(i)
  
-for i in range(22196,22199)+range(22200,22206)+range(22208,22211)+range(22218,22222) :
+for i in MOBS1+MOBS2+MOBS3+MOBS4:
     QUEST.addKillId(i)
