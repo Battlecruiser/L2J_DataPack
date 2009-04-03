@@ -18,11 +18,11 @@ import static net.sf.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
 import net.sf.l2j.gameserver.ai.CtrlEvent;
 import net.sf.l2j.gameserver.datatables.NpcTable;
 import net.sf.l2j.gameserver.instancemanager.DimensionalRiftManager;
-import net.sf.l2j.gameserver.model.L2Attackable;
-import net.sf.l2j.gameserver.model.L2Character;
 import net.sf.l2j.gameserver.model.L2Object;
 import net.sf.l2j.gameserver.model.L2Skill;
-import net.sf.l2j.gameserver.model.actor.instance.L2NpcInstance;
+import net.sf.l2j.gameserver.model.actor.L2Attackable;
+import net.sf.l2j.gameserver.model.actor.L2Character;
+import net.sf.l2j.gameserver.model.actor.L2Npc;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.model.actor.instance.L2RiftInvaderInstance;
 import net.sf.l2j.gameserver.model.quest.Quest;
@@ -89,17 +89,17 @@ public class L2AttackableAIScript extends QuestJython
 		super(questId, name, descr);
 	}
 	
-	public String onAdvEvent (String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
 	{
 		return null;
 	}
 	
-	public String onSpellFinished(L2NpcInstance npc, L2PcInstance player, L2Skill skill)
+	public String onSpellFinished(L2Npc npc, L2PcInstance player, L2Skill skill)
 	{
 		return null;
 	}
 
-	public String onSkillSee (L2NpcInstance npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet) 
+	public String onSkillSee (L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet) 
     { 
     	if (caster == null) 
     	{
@@ -139,7 +139,7 @@ public class L2AttackableAIScript extends QuestJython
     	return null;
     }
     
-    public String onFactionCall (L2NpcInstance npc, L2NpcInstance caller, L2PcInstance attacker, boolean isPet) 
+    public String onFactionCall (L2Npc npc, L2Npc caller, L2PcInstance attacker, boolean isPet) 
     { 
     	L2Character originalAttackTarget = (isPet? attacker.getPet(): attacker);
 		if ( attacker.isInParty()
@@ -162,17 +162,17 @@ public class L2AttackableAIScript extends QuestJython
     	return null;
     }
     
-    public String onAggroRangeEnter (L2NpcInstance npc, L2PcInstance player, boolean isPet) 
+    public String onAggroRangeEnter (L2Npc npc, L2PcInstance player, boolean isPet) 
     { 
     	return null; 
     }
 
-    public String onSpawn (L2NpcInstance npc) 
+    public String onSpawn (L2Npc npc) 
     { 
     	return null; 
     }
     
-    public String onAttack (L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
+    public String onAttack (L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
     {	
     	if ((attacker != null) && (npc instanceof L2Attackable))
     	{
@@ -185,7 +185,7 @@ public class L2AttackableAIScript extends QuestJython
     	return null;
     }
 
-    public String onKill (L2NpcInstance npc, L2PcInstance killer, boolean isPet) 
+    public String onKill (L2Npc npc, L2PcInstance killer, boolean isPet) 
     { 
     	return null; 
     }

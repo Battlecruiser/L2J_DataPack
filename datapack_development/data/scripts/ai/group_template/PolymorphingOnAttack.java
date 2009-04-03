@@ -17,9 +17,9 @@ package ai.group_template;
 import java.util.Map;
 
 import net.sf.l2j.gameserver.ai.CtrlIntention;
-import net.sf.l2j.gameserver.model.L2Attackable;
-import net.sf.l2j.gameserver.model.L2Character;
-import net.sf.l2j.gameserver.model.actor.instance.L2NpcInstance;
+import net.sf.l2j.gameserver.model.actor.L2Attackable;
+import net.sf.l2j.gameserver.model.actor.L2Character;
+import net.sf.l2j.gameserver.model.actor.L2Npc;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.network.serverpackets.CreatureSay;
 import net.sf.l2j.util.Rnd;
@@ -62,7 +62,7 @@ public class PolymorphingOnAttack extends L2AttackableAIScript
             super.addAttackId(id);
     }
  
-    public String onAttack (L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
+    public String onAttack (L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
     {
         if (MOBSPAWNS.containsKey(npc.getNpcId()))
         {

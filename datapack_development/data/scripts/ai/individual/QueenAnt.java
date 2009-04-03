@@ -20,9 +20,9 @@ import javolution.util.FastList;
 import net.sf.l2j.gameserver.ai.CtrlIntention;
 import net.sf.l2j.gameserver.datatables.SkillTable;
 import net.sf.l2j.gameserver.instancemanager.GrandBossManager;
-import net.sf.l2j.gameserver.model.L2Attackable;
+import net.sf.l2j.gameserver.model.actor.L2Attackable;
+import net.sf.l2j.gameserver.model.actor.L2Npc;
 import net.sf.l2j.gameserver.model.actor.instance.L2GrandBossInstance;
-import net.sf.l2j.gameserver.model.actor.instance.L2NpcInstance;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.model.zone.type.L2BossZone;
 import net.sf.l2j.gameserver.network.serverpackets.PlaySound;
@@ -118,14 +118,14 @@ public class QueenAnt extends L2AttackableAIScript
         {
             int x = (int) (radius*Math.cos(i*.7854)); //.7854~2pi/8
             int y = (int) (radius*Math.sin(i*.7854));
-            L2NpcInstance mob = addSpawn(ROYAL,npc.getX()+x,npc.getY()+y,npc.getZ(),0,false,0);
+            L2Npc mob = addSpawn(ROYAL,npc.getX()+x,npc.getY()+y,npc.getZ(),0,false,0);
             mob.setIsRaidMinion(true);
             _Minions.add((L2Attackable)mob);
         }
         startQuestTimer("check_royal__Zone",120000,npc,null,true);
     }
 
-	public String onAdvEvent (String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
 	{
         if (event.equalsIgnoreCase("action") && npc != null)
         {
@@ -172,7 +172,7 @@ public class QueenAnt extends L2AttackableAIScript
         }
         else if (event.equalsIgnoreCase("spawn_royal"))
         {
-            L2NpcInstance mob = addSpawn(ROYAL,npc.getX(),npc.getY(),npc.getZ(),0,false,0);
+            L2Npc mob = addSpawn(ROYAL,npc.getX(),npc.getY(),npc.getZ(),0,false,0);
             mob.setIsRaidMinion(true);
             _Minions.add((L2Attackable)mob);
         }
@@ -183,7 +183,7 @@ public class QueenAnt extends L2AttackableAIScript
         return super.onAdvEvent(event, npc, player);
 	}
 
-    public String onFactionCall (L2NpcInstance npc, L2NpcInstance caller, L2PcInstance attacker, boolean isPet) 
+    public String onFactionCall (L2Npc npc, L2Npc caller, L2PcInstance attacker, boolean isPet) 
     { 
         if (caller == null || npc == null)
         	return super.onFactionCall(npc, caller, attacker, isPet);
@@ -200,9 +200,9 @@ public class QueenAnt extends L2AttackableAIScript
             }
             else if (callerId == QUEEN)
             {
-                if (npc.getTarget() != null && npc.getTarget() instanceof L2NpcInstance)
+                if (npc.getTarget() != null && npc.getTarget() instanceof L2Npc)
                 {
-                	if (((L2NpcInstance) npc.getTarget()).getNpcId() == LARVA)
+                	if (((L2Npc) npc.getTarget()).getNpcId() == LARVA)
                 	{
                     	return null;
                 	}
@@ -215,7 +215,7 @@ public class QueenAnt extends L2AttackableAIScript
         return super.onFactionCall(npc, caller, attacker, isPet);
     }
 
-    public String onAttack (L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
+    public String onAttack (L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
     {	
         int npcId = npc.getNpcId();
         if (npcId == NURSE)
@@ -226,7 +226,7 @@ public class QueenAnt extends L2AttackableAIScript
         return super.onAttack(npc, attacker, damage, isPet);
     }
         
-    public String onKill (L2NpcInstance npc, L2PcInstance killer, boolean isPet) 
+    public String onKill (L2Npc npc, L2PcInstance killer, boolean isPet) 
     { 
         int npcId = npc.getNpcId();
         if (npcId == QUEEN)

@@ -20,7 +20,7 @@ import net.sf.l2j.gameserver.ai.CtrlIntention;
 import net.sf.l2j.gameserver.datatables.SpawnTable;
 import net.sf.l2j.gameserver.model.L2CharPosition;
 import net.sf.l2j.gameserver.model.L2Spawn;
-import net.sf.l2j.gameserver.model.actor.instance.L2NpcInstance;
+import net.sf.l2j.gameserver.model.actor.L2Npc;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.model.quest.Quest;
 import net.sf.l2j.gameserver.network.serverpackets.PlaySound;
@@ -48,9 +48,9 @@ public class DrChaos extends Quest
 		_IsGolemSpawned = false;
 	}
 	
-  	public L2NpcInstance FindTemplate(int npcId)
+  	public L2Npc FindTemplate(int npcId)
   	{
-	    L2NpcInstance npcInstance = null;
+	    L2Npc npcInstance = null;
 	    L2Spawn spawn;
 	    Map<Integer,L2Spawn> values = SpawnTable.getInstance().getSpawnTable();
 	    for(int i = 0;i<values.size();i++)
@@ -65,11 +65,11 @@ public class DrChaos extends Quest
 	    return npcInstance;
   	}
 
-	public String onAdvEvent (String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
 	{
 	    if (event.equalsIgnoreCase("1"))
 	    {
-	       L2NpcInstance machine_instance = FindTemplate(STRANGE_MACHINE);
+	       L2Npc machine_instance = FindTemplate(STRANGE_MACHINE);
 	       if (machine_instance != null)
 	       {
 	         npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, machine_instance);
@@ -98,7 +98,7 @@ public class DrChaos extends Quest
 	       npc.teleToLocation(-113091,-243942,-15536);
 	       if (!_IsGolemSpawned)
 	       {
-	          L2NpcInstance golem = addSpawn(CHAOS_GOLEM,94640,-112496,-3336,0,false,0);
+	          L2Npc golem = addSpawn(CHAOS_GOLEM,94640,-112496,-3336,0,false,0);
 	          _IsGolemSpawned = true;
 	          startQuestTimer("6",1000,golem,player);
 	          player.sendPacket(new PlaySound(1,"Rm03_A",0,0,0,0,0));
@@ -109,7 +109,7 @@ public class DrChaos extends Quest
 	    return super.onAdvEvent(event, npc, player);
 	}
 
-	public String onFirstTalk (L2NpcInstance npc, L2PcInstance player)
+	public String onFirstTalk (L2Npc npc, L2PcInstance player)
 	{
 		if (npc.getNpcId() == DOCTER_CHAOS)
 		{

@@ -25,14 +25,14 @@ import ai.group_template.L2AttackableAIScript;
 import net.sf.l2j.gameserver.ThreadPoolManager;
 import net.sf.l2j.gameserver.datatables.SkillTable;
 import net.sf.l2j.gameserver.instancemanager.GrandBossManager;
-import net.sf.l2j.gameserver.model.L2Character;
 import net.sf.l2j.gameserver.model.L2Effect;
 import net.sf.l2j.gameserver.model.L2Object;
 import net.sf.l2j.gameserver.model.L2Skill;
-import net.sf.l2j.gameserver.model.L2Summon;
+import net.sf.l2j.gameserver.model.actor.L2Character;
+import net.sf.l2j.gameserver.model.actor.L2Npc;
+import net.sf.l2j.gameserver.model.actor.L2Summon;
 import net.sf.l2j.gameserver.model.actor.instance.L2DecoyInstance;
 import net.sf.l2j.gameserver.model.actor.instance.L2GrandBossInstance;
-import net.sf.l2j.gameserver.model.actor.instance.L2NpcInstance;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.model.quest.QuestTimer;
 import net.sf.l2j.gameserver.model.zone.type.L2BossZone;
@@ -109,7 +109,7 @@ public class Valakas extends L2AttackableAIScript
                 L2GrandBossInstance valakas = (L2GrandBossInstance) addSpawn(VALAKAS,-105200,-253104,-15264,0,false,0);
                 GrandBossManager.getInstance().setBossStatus(VALAKAS,DORMANT);
                 GrandBossManager.getInstance().addBoss(valakas);
-                final L2NpcInstance _valakas = valakas;
+                final L2Npc _valakas = valakas;
                 ThreadPoolManager.getInstance().scheduleGeneral(new Runnable() {
     				public void run()
     				{
@@ -136,7 +136,7 @@ public class Valakas extends L2AttackableAIScript
             final int mp = info.getInteger("currentMP");
             L2GrandBossInstance valakas = (L2GrandBossInstance) addSpawn(VALAKAS,loc_x,loc_y,loc_z,heading,false,0);
             GrandBossManager.getInstance().addBoss(valakas);
-            final L2NpcInstance _valakas = valakas;
+            final L2Npc _valakas = valakas;
             ThreadPoolManager.getInstance().scheduleGeneral(new Runnable() {
 				public void run()
 				{
@@ -167,7 +167,7 @@ public class Valakas extends L2AttackableAIScript
         }
 	}
 
-	public String onAdvEvent (String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
 	{
         if (npc != null)
         {
@@ -179,7 +179,7 @@ public class Valakas extends L2AttackableAIScript
             	GrandBossManager.getInstance().setBossStatus(VALAKAS,FIGHTING);
             	//
                 i_quest1 = System.currentTimeMillis();
-                final L2NpcInstance _valakas = npc;
+                final L2Npc _valakas = npc;
                 ThreadPoolManager.getInstance().scheduleGeneral(new Runnable() {
     				public void run()
     				{
@@ -381,7 +381,7 @@ public class Valakas extends L2AttackableAIScript
         return super.onAdvEvent(event, npc, player);
 	}
 
-	public String onAttack (L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet, L2Skill skill)
+	public String onAttack (L2Npc npc, L2PcInstance attacker, int damage, boolean isPet, L2Skill skill)
 	{
 		if (npc.isInvul())
 		{
@@ -958,7 +958,7 @@ public class Valakas extends L2AttackableAIScript
 		return super.onAttack(npc, attacker, damage, isPet);
 	}
 
-    public String onKill (L2NpcInstance npc, L2PcInstance killer, boolean isPet) 
+    public String onKill (L2Npc npc, L2PcInstance killer, boolean isPet) 
     { 
     	startQuestTimer("1111",500, npc, null);
         npc.broadcastPacket(new SpecialCamera(npc.getObjectId(),2000,130,-1,0,10000));
@@ -974,7 +974,7 @@ public class Valakas extends L2AttackableAIScript
         return super.onKill(npc,killer,isPet);
     }
 
-	public void getRandomSkill(L2NpcInstance npc)
+	public void getRandomSkill(L2Npc npc)
 	{
 		if (npc.isInvul() || npc.isCastingNow())
 		{
@@ -1245,7 +1245,7 @@ public class Valakas extends L2AttackableAIScript
 			callSkillAI(npc,c2,skill);
 	}
 
-	public void callSkillAI(L2NpcInstance npc, L2Character c2, L2Skill skill)
+	public void callSkillAI(L2Npc npc, L2Character c2, L2Skill skill)
 	{
 		if (npc.isInvul())
 			return;
@@ -1293,7 +1293,7 @@ public class Valakas extends L2AttackableAIScript
 			npc.setIsCastingNow(false);
 		}
 	}
-	public void broadcastSpawn(L2NpcInstance npc)
+	public void broadcastSpawn(L2Npc npc)
 	{
 		Collection<L2Object> objs = npc.getKnownList().getKnownObjects().values();
 		{
@@ -1312,7 +1312,7 @@ public class Valakas extends L2AttackableAIScript
 		return;
 	}
 	
-	public L2Character getRandomTarget(L2NpcInstance npc)
+	public L2Character getRandomTarget(L2Npc npc)
 	{
 		FastList<L2Character> result = new FastList<L2Character>();
 		Collection<L2Object> objs = npc.getKnownList().getKnownObjects().values();
@@ -1334,7 +1334,7 @@ public class Valakas extends L2AttackableAIScript
 		return null;
 	}
 
-    public String onSpellFinished(L2NpcInstance npc, L2PcInstance player, L2Skill skill)
+    public String onSpellFinished(L2Npc npc, L2PcInstance player, L2Skill skill)
     {
 		if (npc.isInvul())
 		{
@@ -1347,7 +1347,7 @@ public class Valakas extends L2AttackableAIScript
     	return super.onSpellFinished(npc, player, skill);
     }
 
-    public String onAggroRangeEnter (L2NpcInstance npc, L2PcInstance player, boolean isPet) 
+    public String onAggroRangeEnter (L2Npc npc, L2PcInstance player, boolean isPet) 
     {
     	int i1 = 0;
         if (GrandBossManager.getInstance().getBossStatus(VALAKAS) == FIGHTING)
@@ -1866,7 +1866,7 @@ public class Valakas extends L2AttackableAIScript
     	return super.onAggroRangeEnter(npc, player, isPet);
     }
 
-	public String onSkillSee (L2NpcInstance npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
+	public String onSkillSee (L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
 	{
 		if (npc.isInvul())
 		{

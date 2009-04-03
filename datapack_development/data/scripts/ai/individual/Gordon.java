@@ -17,10 +17,10 @@ package ai.individual;
 import java.util.Collection;
 import net.sf.l2j.gameserver.ai.CtrlIntention;
 import net.sf.l2j.gameserver.datatables.SpawnTable;
-import net.sf.l2j.gameserver.model.L2Attackable;
 import net.sf.l2j.gameserver.model.L2CharPosition;
 import net.sf.l2j.gameserver.model.L2Spawn;
-import net.sf.l2j.gameserver.model.actor.instance.L2NpcInstance;
+import net.sf.l2j.gameserver.model.actor.L2Attackable;
+import net.sf.l2j.gameserver.model.actor.L2Npc;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import ai.group_template.L2AttackableAIScript;
 
@@ -79,9 +79,9 @@ public class Gordon extends L2AttackableAIScript
         _npcBlock = 0;
     }
 
-    public L2NpcInstance findTemplate(int npcId)
+    public L2Npc findTemplate(int npcId)
     {
-    	L2NpcInstance npc = null;
+    	L2Npc npc = null;
     	for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable().values())
     	{
     		if (spawn != null && spawn.getNpcid() == npcId)
@@ -93,7 +93,7 @@ public class Gordon extends L2AttackableAIScript
     	return npc;
     }
 
-	public String onAdvEvent (String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
 	{
 		X = WALKS[_isWalkTo-1][0];
 		Y = WALKS[_isWalkTo-1][1];
@@ -112,7 +112,7 @@ public class Gordon extends L2AttackableAIScript
 			cancelQuestTimer("check_ai", null, null);
 			if (_isSpawned == false)
 			{
-				L2NpcInstance gordon_ai = findTemplate(GORDON);
+				L2Npc gordon_ai = findTemplate(GORDON);
 				if (gordon_ai != null)
 				{
 					_isSpawned = true;
@@ -185,7 +185,7 @@ public class Gordon extends L2AttackableAIScript
 		return super.onAdvEvent(event, npc, player);
 	}
 
-    public String onSpawn (L2NpcInstance npc) 
+    public String onSpawn (L2Npc npc) 
     { 
         if (npc.getNpcId() == GORDON && _npcBlock == 0)
         {
@@ -196,7 +196,7 @@ public class Gordon extends L2AttackableAIScript
     	return super.onSpawn(npc); 
     }
 
-    public String onAttack (L2NpcInstance npc, L2PcInstance player, int damage, boolean isPet)
+    public String onAttack (L2Npc npc, L2PcInstance player, int damage, boolean isPet)
     {	
         if (npc.getNpcId() == GORDON)
         {
@@ -213,7 +213,7 @@ public class Gordon extends L2AttackableAIScript
     	return super.onAttack(npc, player, damage, isPet);
     }
 
-    public String onKill (L2NpcInstance npc, L2PcInstance killer, boolean isPet) 
+    public String onKill (L2Npc npc, L2PcInstance killer, boolean isPet) 
     {
         if (npc.getNpcId() == GORDON)
         {

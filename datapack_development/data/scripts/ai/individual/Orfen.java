@@ -20,13 +20,13 @@ import javolution.util.FastList;
 import net.sf.l2j.gameserver.ai.CtrlIntention;
 import net.sf.l2j.gameserver.datatables.SkillTable;
 import net.sf.l2j.gameserver.instancemanager.GrandBossManager;
-import net.sf.l2j.gameserver.model.L2Attackable;
-import net.sf.l2j.gameserver.model.L2Character;
 import net.sf.l2j.gameserver.model.L2Object;
 import net.sf.l2j.gameserver.model.L2Skill;
 import net.sf.l2j.gameserver.model.L2Spawn;
+import net.sf.l2j.gameserver.model.actor.L2Attackable;
+import net.sf.l2j.gameserver.model.actor.L2Character;
+import net.sf.l2j.gameserver.model.actor.L2Npc;
 import net.sf.l2j.gameserver.model.actor.instance.L2GrandBossInstance;
-import net.sf.l2j.gameserver.model.actor.instance.L2NpcInstance;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.model.zone.type.L2BossZone;
 import net.sf.l2j.gameserver.network.serverpackets.NpcSay;
@@ -125,7 +125,7 @@ public class Orfen extends L2AttackableAIScript
         }
 	}
         
-    public void setSpawnPoint(L2NpcInstance npc,int index)
+    public void setSpawnPoint(L2Npc npc,int index)
     {
     	((L2Attackable) npc).clearAggroList();
         npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null, null);
@@ -145,7 +145,7 @@ public class Orfen extends L2AttackableAIScript
         //Spawn minions
         int x = npc.getX();
         int y = npc.getY();
-        L2NpcInstance mob;
+        L2Npc mob;
         mob = addSpawn(RAIKEL_LEOS,x+100,y+100,npc.getZ(),0,false,0);
         mob.setIsRaidMinion(true);
         _Minions.add((L2Attackable) mob);
@@ -161,7 +161,7 @@ public class Orfen extends L2AttackableAIScript
         this.startQuestTimer("check_minion_loc",10000,npc,null,true);
     }
 
-	public String onAdvEvent (String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
 	{
         if (event.equalsIgnoreCase("orfen_unlock"))
         {                
@@ -226,14 +226,14 @@ public class Orfen extends L2AttackableAIScript
         }
         else if (event.equalsIgnoreCase("spawn_minion"))
         {
-        	L2NpcInstance mob = addSpawn(RAIKEL_LEOS,npc.getX(),npc.getY(),npc.getZ(),0,false,0);
+        	L2Npc mob = addSpawn(RAIKEL_LEOS,npc.getX(),npc.getY(),npc.getZ(),0,false,0);
         	mob.setIsRaidMinion(true);
             _Minions.add((L2Attackable) mob);
         }
         return super.onAdvEvent(event, npc, player);
 	}
 
-	public String onSkillSee (L2NpcInstance npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet) 
+	public String onSkillSee (L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet) 
     { 
         if (npc.getNpcId() == ORFEN)
         {
@@ -249,7 +249,7 @@ public class Orfen extends L2AttackableAIScript
         return super.onSkillSee(npc,caster,skill,targets,isPet);
     }
 
-    public String onFactionCall (L2NpcInstance npc, L2NpcInstance caller, L2PcInstance attacker, boolean isPet) 
+    public String onFactionCall (L2Npc npc, L2Npc caller, L2PcInstance attacker, boolean isPet) 
     { 
         if (caller == null || npc == null)
         	return super.onFactionCall(npc, caller, attacker, isPet);
@@ -275,7 +275,7 @@ public class Orfen extends L2AttackableAIScript
         return super.onFactionCall(npc, caller, attacker, isPet);
     }
         
-    public String onAttack (L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
+    public String onAttack (L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
     {	
         int npcId = npc.getNpcId();
         if (npcId == ORFEN)
@@ -304,7 +304,7 @@ public class Orfen extends L2AttackableAIScript
         return super.onAttack(npc, attacker, damage, isPet);
     }
 
-    public String onKill (L2NpcInstance npc, L2PcInstance killer, boolean isPet) 
+    public String onKill (L2Npc npc, L2PcInstance killer, boolean isPet) 
     { 
         if (npc.getNpcId() == ORFEN)
         {

@@ -21,9 +21,9 @@ import javolution.util.FastSet;
 import ai.group_template.L2AttackableAIScript;
 import net.sf.l2j.gameserver.ai.CtrlIntention;
 import net.sf.l2j.gameserver.datatables.NpcTable;
-import net.sf.l2j.gameserver.model.L2Attackable;
-import net.sf.l2j.gameserver.model.L2Character;
-import net.sf.l2j.gameserver.model.actor.instance.L2NpcInstance;
+import net.sf.l2j.gameserver.model.actor.L2Attackable;
+import net.sf.l2j.gameserver.model.actor.L2Character;
+import net.sf.l2j.gameserver.model.actor.L2Npc;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 
 public class DarkWaterDragon extends L2AttackableAIScript
@@ -48,7 +48,7 @@ public class DarkWaterDragon extends L2AttackableAIScript
         myTrackingSet.clear();
         secondSpawn.clear();
     }
-    public String onAdvEvent (String event, L2NpcInstance npc, L2PcInstance player)
+    public String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
     {
         if (npc != null)
         {
@@ -123,7 +123,7 @@ public class DarkWaterDragon extends L2AttackableAIScript
         return super.onAdvEvent(event,npc,player);
     }
     
-    public String onAttack (L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
+    public String onAttack (L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
     {    
         int npcId = npc.getNpcId();
         int npcObjId = npc.getObjectId();
@@ -181,7 +181,7 @@ public class DarkWaterDragon extends L2AttackableAIScript
             }
         return super.onAttack(npc, attacker, damage, isPet);
     }
-    public String onKill (L2NpcInstance npc, L2PcInstance killer, boolean isPet) 
+    public String onKill (L2Npc npc, L2PcInstance killer, boolean isPet) 
     { 
         int npcId = npc.getNpcId();
         int npcObjId = npc.getObjectId();
@@ -210,7 +210,7 @@ public class DarkWaterDragon extends L2AttackableAIScript
         return super.onKill(npc,killer,isPet);
     }
     
-    public String onSpawn (L2NpcInstance npc) 
+    public String onSpawn (L2Npc npc) 
     {
         int npcId = npc.getNpcId();
         int npcObjId = npc.getObjectId();
