@@ -637,7 +637,9 @@ INSERT INTO `etcitem` VALUES
 (1470,'Artemeter','false','quest',0,'stackable','paper','s',-1,0,0,'true','true','true','true','0-0;','false'),
 (1473,'Kasha Wolf Fang','false','quest',0,'stackable','steel','none',-1,0,0,'false','false','true','false','0-0;','false'),
 (1474,'Grave Robber\'s Head','false','quest',0,'stackable','steel','none',-1,0,0,'false','false','true','false','0-0;','false'),
-(1475,'Black Soulstone','false','quest',0,'stackable','steel','none',-1,0,0,'false','false','true','false','0-0;','false'),
+(1475,'Black Soulstone','false','quest',0,'stackable','steel','none',-1,0,0,'false','false','true','false','0-0;','false');
+
+INSERT INTO `etcitem` VALUES
 (1476,'Red Soulstone','false','quest',0,'stackable','steel','none',-1,0,0,'false','false','true','false','0-0;','false'),
 (1477,'Maraku Werewolf Head','false','quest',0,'stackable','steel','none',-1,0,0,'false','false','true','false','0-0;','false'),
 (1478,'Darkwing Bat Fang','false','quest',0,'stackable','steel','none',-1,0,0,'false','false','true','false','0-0;','false'),
@@ -1603,7 +1605,9 @@ INSERT INTO `etcitem` VALUES
 (2695,'Monster Eye Destroyer Skin','false','quest',0,'stackable','steel','none',-1,0,0,'false','false','true','false','0-0;','false'),
 (2696,'Shaman\'s Necklace','false','quest',0,'stackable','steel','none',-1,0,0,'false','false','true','false','0-0;','false'),
 (2697,'Shackle\'s Scalp','false','quest',0,'stackable','steel','none',-1,0,0,'false','false','true','false','0-0;','false'),
-(2698,'Symbol of Jurek','false','quest',0,'stackable','steel','none',-1,0,0,'false','false','true','false','0-0;','false'),
+(2698,'Symbol of Jurek','false','quest',0,'stackable','steel','none',-1,0,0,'false','false','true','false','0-0;','false');
+
+INSERT INTO `etcitem` VALUES
 (2699,'Cronos Letter','false','quest',0,'stackable','steel','none',-1,0,0,'false','false','true','false','0-0;','false'),
 (2700,'Dieter\'s Key','false','quest',0,'stackable','steel','none',-1,0,0,'false','false','true','false','0-0;','false'),
 (2701,'Creta\'s 2nd Letter','false','quest',0,'stackable','steel','none',-1,0,0,'false','false','true','false','0-0;','false'),
@@ -2640,7 +2644,9 @@ INSERT INTO `etcitem` VALUES
 (3739,'1st Circle Request: 1B','false','quest',0,'stackable','steel','none',-1,0,0,'false','false','true','false','0-0;','false'),
 (3740,'1st Circle Request: 2B','false','quest',0,'stackable','steel','none',-1,0,0,'false','false','true','false','0-0;','false'),
 (3741,'1st Circle Request: 3B','false','quest',0,'stackable','steel','none',-1,0,0,'false','false','true','false','0-0;','false'),
-(3742,'1st Circle Request: 4B','false','quest',0,'stackable','steel','none',-1,0,0,'false','false','true','false','0-0;','false'),
+(3742,'1st Circle Request: 4B','false','quest',0,'stackable','steel','none',-1,0,0,'false','false','true','false','0-0;','false');
+
+INSERT INTO `etcitem` VALUES
 (3743,'1st Circle Request: 5B','false','quest',0,'stackable','steel','none',-1,0,0,'false','false','true','false','0-0;','false'),
 (3744,'1st Circle Request: 6B','false','quest',0,'stackable','steel','none',-1,0,0,'false','false','true','false','0-0;','false'),
 (3745,'1st Circle Request: 1A','false','quest',0,'stackable','steel','none',-1,0,0,'false','false','true','false','0-0;','false'),
@@ -3677,7 +3683,9 @@ INSERT INTO `etcitem` VALUES
 (5062,'Trash','false','none',20,'stackable','paper','none',-1,0,0,'true','true','true','true','0-0;','false'),
 (5063,'Trash','false','none',20,'stackable','paper','none',-1,0,0,'true','true','true','true','0-0;','false'),
 (5064,'Trash','false','none',20,'stackable','paper','none',-1,0,0,'true','true','true','true','0-0;','false'),
-(5065,'Chilly Coda','false','none',2,'stackable','paper','none',-1,50,0,'true','true','true','true','0-0;','false'),
+(5065,'Chilly Coda','false','none',2,'stackable','paper','none',-1,50,0,'true','true','true','true','0-0;','false');
+
+INSERT INTO `etcitem` VALUES
 (5066,'Burning Coda','false','none',2,'stackable','paper','none',-1,0,0,'true','true','true','true','0-0;','false'),
 (5067,'Blue Coda','false','none',2,'stackable','paper','none',-1,100,0,'true','true','true','true','0-0;','false'),
 (5068,'Red Coda','false','none',2,'stackable','paper','none',-1,50,0,'true','true','true','true','0-0;','false'),
@@ -4698,7 +4706,9 @@ INSERT INTO `etcitem` VALUES
 (6292,'Recruit Posting Ticket (Bow/Mobile)','false','castle_guard',0,'stackable','paper','none',-1,0,0,'true','true','true','true','0-0;','false'),
 (6293,'Recruit Posting Ticket (Cleric/Mobile)','false','castle_guard',0,'stackable','paper','none',-1,0,0,'true','true','true','true','0-0;','false'),
 (6294,'Recruit Posting Ticket (Wizard/Mobile)','false','castle_guard',0,'stackable','paper','none',-1,0,0,'true','true','true','true','0-0;','false'),
-(6295,'Nephilim Warrior Posting Ticket','false','castle_guard',0,'stackable','paper','none',-1,0,0,'true','true','true','true','0-0;','false'),
+(6295,'Nephilim Warrior Posting Ticket','false','castle_guard',0,'stackable','paper','none',-1,0,0,'true','true','true','true','0-0;','false');
+
+INSERT INTO `etcitem` VALUES
 (6296,'Nephilim Shaman Posting Ticket','false','castle_guard',0,'stackable','paper','none',-1,0,0,'true','true','true','true','0-0;','false'),
 (6297,'Nephilim Warrior Posting Ticket','false','castle_guard',0,'stackable','paper','none',-1,0,0,'true','true','true','true','0-0;','false'),
 (6298,'Nephilim Shaman Posting Ticket','false','castle_guard',0,'stackable','paper','none',-1,0,0,'true','true','true','true','0-0;','false'),
@@ -5734,7 +5744,9 @@ INSERT INTO `etcitem` VALUES
 (7481,'Resonance Amulet - 7','false','quest',0,'stackable','paper','none',-1,0,0,'false','false','true','false','0-0;','false'),
 (7482,'Resonance Amulet - 7','false','quest',0,'stackable','paper','none',-1,0,0,'false','false','true','false','0-0;','false'),
 (7483,'Resonance Amulet - 7','false','quest',0,'stackable','paper','none',-1,0,0,'false','false','true','false','0-0;','false'),
-(7484,'Resonance Amulet - 7','false','quest',0,'stackable','paper','none',-1,0,0,'false','false','true','false','0-0;','false'),
+(7484,'Resonance Amulet - 7','false','quest',0,'stackable','paper','none',-1,0,0,'false','false','true','false','0-0;','false');
+
+INSERT INTO `etcitem` VALUES
 (7485,'Halisha\'s Mark','false','quest',0,'stackable','paper','none',-1,0,0,'false','false','true','false','0-0;','false'),
 (7486,'Halisha\'s Mark','false','quest',0,'stackable','paper','none',-1,0,0,'false','false','true','false','0-0;','false'),
 (7487,'Halisha\'s Mark','false','quest',0,'stackable','paper','none',-1,0,0,'false','false','true','false','0-0;','false'),
@@ -6716,7 +6728,9 @@ INSERT INTO `etcitem` VALUES
 (8729,'Life Stone: level 64','false','none',2,'stackable','liquid','none',-1,15000,0,'true','true','true','true','0-0;','false'),
 (8730,'Life Stone: level 67','false','none',2,'stackable','liquid','none',-1,18000,0,'true','true','true','true','0-0;','false'),
 (8731,'Life Stone: level 70','false','none',2,'stackable','liquid','none',-1,21600,0,'true','true','true','true','0-0;','false'),
-(8732,'Life Stone: level 76','false','none',2,'stackable','liquid','none',-1,24000,0,'true','true','true','true','0-0;','false'),
+(8732,'Life Stone: level 76','false','none',2,'stackable','liquid','none',-1,24000,0,'true','true','true','true','0-0;','false');
+
+INSERT INTO `etcitem` VALUES
 (8733,'Mid-Grade Life Stone: level 46','false','none',2,'stackable','liquid','none',-1,20000,0,'true','true','true','true','0-0;','false'),
 (8734,'Mid-Grade Life Stone: level 49','false','none',2,'stackable','liquid','none',-1,24000,0,'true','true','true','true','0-0;','false'),
 (8735,'Mid-Grade Life Stone: level 52','false','none',2,'stackable','liquid','none',-1,28800,0,'true','true','true','true','0-0;','false'),
@@ -7765,7 +7779,9 @@ INSERT INTO `etcitem` VALUES
 (12429,'Foundation Soul Separator','false','none',950,'normal','paper','none',-1,0,0,'true','true','true','true','0-0;','false'),
 (12430,'Foundation Elysian','false','none',1580,'normal','paper','none',-1,0,0,'true','true','true','true','0-0;','false'),
 (12431,'Foundation Soul Bow','false','none',1660,'normal','paper','none',-1,0,0,'true','true','true','true','0-0;','false'),
-(12432,'Foundation Tallum Glaive','false','none',1840,'normal','paper','none',-1,0,0,'true','true','true','true','0-0;','false'),
+(12432,'Foundation Tallum Glaive','false','none',1840,'normal','paper','none',-1,0,0,'true','true','true','true','0-0;','false');
+
+INSERT INTO `etcitem` VALUES
 (12433,'Foundation Naga Storm','false','none',930,'normal','paper','none',-1,0,0,'true','true','true','true','0-0;','false'),
 (12434,'Foundation Daimon Crystal','false','none',880,'normal','paper','none',-1,0,0,'true','true','true','true','0-0;','false'),
 (12435,'Foundation Barakiel\'s Axe','false','none',1550,'normal','paper','none',-1,0,0,'true','true','true','true','0-0;','false'),
