@@ -1,6 +1,6 @@
 from net.sf.l2j.gameserver.instancemanager        import InstanceManager
 from net.sf.l2j.gameserver.model                  import L2ItemInstance
-from net.sf.l2j.gameserver.model                  import L2Summon
+from net.sf.l2j.gameserver.model.actor            import L2Summon
 from net.sf.l2j.gameserver.model.entity           import Instance
 from net.sf.l2j.gameserver.model.itemcontainer    import PcInventory
 from net.sf.l2j.gameserver.model.quest            import State

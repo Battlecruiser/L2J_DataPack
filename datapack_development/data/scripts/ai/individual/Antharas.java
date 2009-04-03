@@ -17,8 +17,8 @@ package ai.individual;
 import net.sf.l2j.gameserver.ai.CtrlIntention;
 import net.sf.l2j.gameserver.instancemanager.GrandBossManager;
 import net.sf.l2j.gameserver.model.L2CharPosition;
+import net.sf.l2j.gameserver.model.actor.L2Npc;
 import net.sf.l2j.gameserver.model.actor.instance.L2GrandBossInstance;
-import net.sf.l2j.gameserver.model.actor.instance.L2NpcInstance;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.model.zone.type.L2BossZone;
 import net.sf.l2j.gameserver.network.serverpackets.Earthquake;
@@ -104,7 +104,7 @@ public class Antharas extends L2AttackableAIScript
         }
 	}
 
-	public String onAdvEvent (String event, L2NpcInstance npc, L2PcInstance player)
+	public String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
 	{
         if (npc != null)
         {
@@ -204,7 +204,7 @@ public class Antharas extends L2AttackableAIScript
         return super.onAdvEvent(event, npc, player);
 	}
 
-	public String onAttack (L2NpcInstance npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack (L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
 	{	
         _LastAction = System.currentTimeMillis();
         if (GrandBossManager.getInstance().getBossStatus(ANTHARAS) != FIGHTING)
@@ -214,7 +214,7 @@ public class Antharas extends L2AttackableAIScript
         return super.onAttack(npc, attacker, damage, isPet);
 	}
 
-    public String onKill (L2NpcInstance npc, L2PcInstance killer, boolean isPet) 
+    public String onKill (L2Npc npc, L2PcInstance killer, boolean isPet) 
     { 
         npc.broadcastPacket(new PlaySound(1, "BS01_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
         this.startQuestTimer("spawn_cubes", 10000, npc, null);

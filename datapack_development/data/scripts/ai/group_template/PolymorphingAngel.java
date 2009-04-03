@@ -17,8 +17,8 @@ package ai.group_template;
 import java.util.Map;
 
 import javolution.util.FastMap;
-import net.sf.l2j.gameserver.model.L2Attackable;
-import net.sf.l2j.gameserver.model.actor.instance.L2NpcInstance;
+import net.sf.l2j.gameserver.model.actor.L2Attackable;
+import net.sf.l2j.gameserver.model.actor.L2Npc;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 
 /**
@@ -46,7 +46,7 @@ public class PolymorphingAngel extends L2AttackableAIScript
         this.registerMobs(temp);
 	}
 
-    public String onKill (L2NpcInstance npc, L2PcInstance killer, boolean isPet)
+    public String onKill (L2Npc npc, L2PcInstance killer, boolean isPet)
     {
         int npcId = npc.getNpcId();
         if (ANGELSPAWNS.containsKey(npcId))
