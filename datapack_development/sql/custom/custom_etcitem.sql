@@ -18,5 +18,7 @@ CREATE TABLE IF NOT EXISTS `custom_etcitem` (
   `dropable` varchar(5) default NULL,
   `destroyable` varchar(5) default NULL,
   `tradeable` varchar(5) default NULL,
+  `skill` varchar(70) default '0-0;',
+  `html` varchar(5) default 'false',
   PRIMARY KEY (`item_id`)
 ) DEFAULT CHARSET=utf8;
