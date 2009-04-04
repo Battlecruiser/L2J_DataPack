@@ -1,21 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-<skill id="3600" levels="9" name="Special Ability: Anger">
+<skill id="3600" levels="10" name="Special Ability: Anger">
+  <!-- Done by DJ MELERIX -->
+  <!-- For Poles -->
   <!--
-      Lvl 1 - Decreases the character's Maximum HP but increases P. Atk. Allows the character to attack multiple opponents.
-      Lvl 2 - Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents.
-      Lvl 3 - Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents.
-      Lvl 4 - Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents.
-      Lvl 5 - Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents.
-      Lvl 6 - Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents.
-      Lvl 7 - Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents and inflicts additional damage during PvP.
-      Lvl 8 - Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents and inflicts additional damage during PvP.
-      Lvl 9 - Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents and inflicts additional damage during PvP.
+      Lvl 1:  Decreases the character's Maximum HP but increases P. Atk. Allows the character to attack multiple opponents.
+      Lvl 2:  Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents.
+      Lvl 3:  Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents.
+      Lvl 4:  Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents.
+      Lvl 5:  Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents.
+      Lvl 6:  Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents.
+      Lvl 7:  Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents and inflicts additional damage during PvP.
+      Lvl 8:  Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents and inflicts additional damage during PvP.
+      Lvl 9:  Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents and inflicts additional damage during PvP.
+      Lvl 10: Decreases MaxHP and increases P. Atk. Enables the character to attack multiple opponents. Increases damage inflicted during PvP.
   -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Guess Lvl 10 -->
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 80 </table> 
+  <table name="#pAtk"> 20.44 22.64 24.77 26.78 28.59 30.12 31.30 39 45 78 </table>
+  <table name="#pvp"> 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
   <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="WEAPON_SA"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <add order="0x40" stat="pAtk" val="#pAtk"/>
+    <mul order="0x30" stat="maxHp" val="0.85"/>
+    <mul order="0x30" stat="pvpPhysDmg" val="#pvp"/>
+    <mul order="0x30" stat="pvpMagicalDmg" val="#pvp"/>
+    <add order="0x40" stat="atkCountMax" val="4"/>
+  </for>
 </skill>
 <skill id="3601" levels="9" name="Special Ability: Haste">
   <!-- Done by DJ MELERIX -->
@@ -422,7 +438,7 @@
 </skill>
 <skill id="3630" levels="1" name="Void Burst">
   <set name="mpConsume" val="140"/>
-  <set name="power" val="1000"/> <!-- Guessing -->
+  <set name="power" val="1000"/> <!-- Guess -->
   <set name="target" val="TARGET_AURA"/>
   <set name="hitTime" val="2000"/>
   <set name="reuseDelay" val="60000"/> <!-- Need check -->
@@ -434,7 +450,7 @@
 </skill>
 <skill id="3631" levels="1" name="Void Flow">
   <set name="mpConsume" val="140"/>
-  <set name="power" val="1000"/> <!-- Guessing -->
+  <set name="power" val="1000"/> <!-- Guess -->
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1900"/>
   <set name="reuseDelay" val="60000"/> <!-- Need check -->
