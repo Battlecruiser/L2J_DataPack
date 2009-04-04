@@ -851,7 +851,7 @@
 <skill id="153" levels="4" name="Shield Mastery">
   <table name="#rShld"> 1.5 1.7 1.85 2 </table>
   <table name="#sDef"> 30 40 50 60 </table>
-  <table name="#Pdef"> 0 0 64 64 </table> <!-- Guessing Lvl 1 2 & 4 -->
+  <table name="#Pdef"> 0 0 64 64 </table> <!-- Guess Lvl 1 2 & 4 -->
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1090,7 +1090,7 @@
   </for>
 </skill>
 <skill id="193" levels="7" name="Critical Power">
-  <table name="#crit"> 32 56 93 177 295 384 673 </table> <!-- Guessing Lvl 7 -->
+  <table name="#crit"> 32 56 93 177 295 384 673 </table> <!-- Guess Lvl 7 -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>

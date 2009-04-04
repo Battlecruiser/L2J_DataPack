@@ -179,7 +179,7 @@
   <table name="#mpConsume"> 78 84 87 90 93 96 99 102 105 107 </table>
   <table name="#power"> 229 262 284 308 332 357 382 407 432 457 </table>
   <set name="castRange" val="-1"/>
-  <set name="effectPower" val="60"/> <!-- Base Land Rate --> <!-- Guessing -->
+  <set name="effectPower" val="60"/> <!-- Base Land Rate --> <!-- Guess -->
   <set name="effectRange" val="-1"/>
   <set name="effectType" val="DEBUFF"/>
   <set name="hitTime" val="3000"/>
@@ -195,7 +195,7 @@
   <set name="SSBoost" val="2.0"/>
   <set name="target" val="TARGET_AURA"/>
   <for>
-    <effect count="1" name="Debuff" time="30" val="0"> <!-- Guessing Duration -->
+    <effect count="1" name="Debuff" time="30" val="0"> <!-- Guess Duration -->
       <mul order="0x30" stat="runSpd" val="0.9"/>
       <mul order="0x30" stat="pAtkSpd" val="#debuff"/>
       <mul order="0x30" stat="mAtkSpd" val="#debuff"/>
@@ -208,7 +208,7 @@
   <table name="#mpConsume"> 78 84 87 90 93 96 99 102 105 107 </table>
   <table name="#power"> 275 314 341 369 398 428 458 488 518 548 </table>
   <set name="castRange" val="-1"/>
-  <set name="effectPower" val="60"/> <!-- Base Land Rate --> <!-- Guessing -->
+  <set name="effectPower" val="60"/> <!-- Base Land Rate --> <!-- Guess -->
   <set name="effectRange" val="-1"/>
   <set name="effectType" val="DEBUFF"/>
   <set name="hitTime" val="3000"/>
@@ -224,7 +224,7 @@
   <set name="SSBoost" val="2.0"/>
   <set name="target" val="TARGET_AURA"/>
   <for>
-    <effect count="1" name="Debuff" time="30" val="0"> <!-- Guessing Duration -->
+    <effect count="1" name="Debuff" time="30" val="0"> <!-- Guess Duration -->
       <mul order="0x30" stat="mAtk" val="#debuff"/>
       <mul order="0x30" stat="pAtk" val="#debuff"/>
     </effect>
@@ -760,7 +760,7 @@
   <set name="target" val="TARGET_AURA"/>
   <set name="skillType" val="MUTE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="40"/> <!-- Guessing -->
+  <set name="power" val="40"/> <!-- Guess -->
   <set name="isDance" val="true"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -816,8 +816,8 @@
   <!-- Done by Ritsu -->
   <!-- Needs to be verified -->
   <table name="#pDef"> 0.2 </table>
-  <table name="#hhot"> 100 </table> <!-- Guessing -->
-  <table name="#mhot"> 20 </table> <!-- Guessing -->
+  <table name="#hhot"> 100 </table> <!-- Guess -->
+  <table name="#mhot"> 20 </table> <!-- Guess -->
   <set name="negateId" val="441"/>
   <set name="castRange" val="-1"/>
   <set name="charge_skill_id" val="50"/>
@@ -944,8 +944,8 @@
 <skill id="449" levels="4" name="Summon Attractive Cubic">
   <table name="#mpConsume"> 58 62 65 69 </table>
   <table name="#itemConsumeCount"> 10 11 12 13 </table>
-  <table name="#magicLvl"> 62 66 70 74 </table> <!-- guessed -->
-  <table name="#mAtk"> 1026 1264 1530 1822 </table> <!-- guessed -->
+  <table name="#magicLvl"> 62 66 70 74 </table> <!-- Guess -->
+  <table name="#mAtk"> 1026 1264 1530 1822 </table> <!-- Guess -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="itemConsumeId" val="1458"/>
@@ -962,7 +962,7 @@
   <set name="power" val="#mAtk"/>
   <set name="npcId" val="9"/>
   <set name="activationtime" val="11"/>
-  <set name="activationchance" val="85"/> <!-- guessed -->
+  <set name="activationchance" val="85"/> <!-- Guess -->
   <set name="summonTotalLifeTime" val="900000"/>
   <set name="expPenalty" val="0"/>
   <set name="isCubic" val="true"/>
@@ -1022,10 +1022,10 @@
   <set name="weaponsAllowed" val="64"/> <!-- Pole -->
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpConsume" val="52"/>
-  <set name="power" val="80"/> <!-- guessed -->
-  <set name="lvlDepend" val="2"/> <!-- guessed -->
+  <set name="power" val="80"/> <!-- Guess -->
+  <set name="lvlDepend" val="2"/> <!-- Guess -->
   <set name="target" val="TARGET_AURA"/>
-  <set name="reuseDelay" val="12000"/> <!-- guessed -->
+  <set name="reuseDelay" val="12000"/> <!-- Guess -->
   <set name="hitTime" val="500"/>
   <set name="skillType" val="STUN"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1042,13 +1042,13 @@
   <set name="mpConsume" val="60"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1000"/>
-  <set name="reuseDelay" val="120000"/> <!-- guessed -->
+  <set name="reuseDelay" val="120000"/> <!-- Guess -->
   <set name="skillType" val="NEGATE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="negateStats" val="ROOT"/>
-  <set name="negateLvl" val="9"/> <!-- guessed -->
+  <set name="negateLvl" val="9"/> <!-- Guess -->
 </skill>
 <skill id="454" levels="1" name="Symbol of Defense">
   <set name="target" val="TARGET_SELF"/>
@@ -1906,7 +1906,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="effectType" val="BLEED"/>
-  <set name="effectPower" val="40"/> <!-- Base Land Rate --> <!-- Guessing -->
+  <set name="effectPower" val="40"/> <!-- Base Land Rate --> <!-- Guess -->
   <set name="isDebuff" val="true"/>
   <set name="soulMaxConsumeCount" val="5"/>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>

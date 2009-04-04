@@ -546,8 +546,8 @@
   <!-- Summon-specific -->
   <set name="power" val="#mAtk"/>
   <set name="npcId" val="7"/>
-  <set name="activationtime" val="14"/> <!-- guessed -->
-  <set name="activationchance" val="67"/> <!-- guessed -->
+  <set name="activationtime" val="14"/> <!-- Guess -->
+  <set name="activationchance" val="67"/> <!-- Guess -->
   <set name="summonTotalLifeTime" val="900000"/>
   <set name="expPenalty" val="0"/>
   <set name="isCubic" val="true"/>
@@ -572,8 +572,8 @@
   <!-- Summon-specific -->
   <set name="power" val="#mAtk"/>
   <set name="npcId" val="5"/>
-  <set name="activationtime" val="14"/> <!-- guessed -->
-  <set name="activationchance" val="55"/> <!-- guessed -->
+  <set name="activationtime" val="14"/> <!-- Guess -->
+  <set name="activationchance" val="55"/> <!-- Guess -->
   <set name="summonTotalLifeTime" val="900000"/>
   <set name="expPenalty" val="0"/>
   <set name="isCubic" val="true"/>
@@ -1000,7 +1000,7 @@
     <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
       <mul stat="regMp" val="1.2" order="0x30"/>
       <mul stat="mDef" val="1.2" order="0x30"/>
-      <mul stat="mCritRate" val="1.2" order="0x30"/> <!-- Guessing -->
+      <mul stat="mCritRate" val="1.2" order="0x30"/> <!-- Guess -->
       <mul stat="mAtk" val="1.2" order="0x30"/>
       <mul stat="mAtkSpd" val="1.2" order="0x30"/>
       <mul stat="runSpd" val="0.8" order="0x30"/>
@@ -1174,7 +1174,7 @@
       <mul order="0x30" stat="mAtk" val="1.2"/>
       <mul order="0x30" stat="mDef" val="1.2"/>
       <mul order="0x30" stat="mAtkSpd" val="1.2"/>
-      <mul order="0x30" stat="mCritRate" val="1.2"/> <!-- Guessing -->
+      <mul order="0x30" stat="mCritRate" val="1.2"/> <!-- Guess -->
       <mul order="0x30" stat="regMp" val="1.2"/>
       <mul order="0x30" stat="runSpd" val="0.8"/>
       <mul order="0x30" stat="debuffVuln" val="0.9"/>
@@ -1657,7 +1657,7 @@
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="FEAR"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="15"/> <!-- Guessing -->
+  <set name="power" val="15"/> <!-- Guess -->
   <set name="castRange" val="500"/>
   <set name="effectRange" val="1000"/>
   <set name="isDebuff" val="true"/>

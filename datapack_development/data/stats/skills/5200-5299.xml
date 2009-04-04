@@ -240,7 +240,7 @@
 </skill>
 <skill id="5220" levels="1" name="Fear of giant mutated animal">
   <set name="mpConsume" val="43"/>
-  <set name="power" val="40"/> <!-- Guessing -->
+  <set name="power" val="40"/> <!-- Guess -->
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="20000"/>
   <set name="hitTime" val="6000"/>
@@ -588,8 +588,8 @@
 </skill>
 <skill id="5267" levels="9" name="Trap Explosion">
   <!-- Needs retail value corrections, By Darki699 -->
-  <table name="#magicLvl"> 28 36 44 48 52 56 60 68 74 </table> <!-- Guessing levels 3-9 -->
-  <table name="#power"> 50 54 60 78 84 92 120 130 140 </table> <!-- Guessing -->
+  <table name="#magicLvl"> 28 36 44 48 52 56 60 68 74 </table> <!-- Guess levels 3-9 -->
+  <table name="#power"> 50 54 60 78 84 92 120 130 140 </table> <!-- Guess -->
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>

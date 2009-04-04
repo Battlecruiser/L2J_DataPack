@@ -263,7 +263,7 @@
   <set name="mpConsume" val="35"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="166"/>
-  <set name="reuseDelay" val="10000"/> <!-- Guessing -->
+  <set name="reuseDelay" val="10000"/> <!-- Guess -->
   <set name="skillType" val="MDAM"/>
   <set name="soulMaxConsumeCount" val="5"/>
   <set name="target" val="TARGET_ONE"/>
@@ -385,7 +385,7 @@
   <set name="element" val="5"/> <!-- Holy -->
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="MDAM"/>
-  <set name="reuseDelay" val="2000"/> <!-- Guessing, appears to be much less (like 1 second or 0.7 seconds) if influenced by Skill Mastery -->
+  <set name="reuseDelay" val="2000"/> <!-- Guess, appears to be much less (like 1 second or 0.7 seconds) if influenced by Skill Mastery -->
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="750"/>
@@ -433,8 +433,8 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="70"/> <!-- Base Land Rate --> <!-- Guessing -->
-  <set name="reuseDelay" val="6000"/> <!-- Guessing -->
+  <set name="power" val="70"/> <!-- Base Land Rate --> <!-- Guess -->
+  <set name="reuseDelay" val="6000"/> <!-- Guess -->
   <set name="skillType" val="DOT"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
@@ -463,7 +463,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="mAtkSpd" val="1.1"/>
-    <mul order="0x30" stat="mReuse" val="0.9"/> <!-- Guessing -->
+    <mul order="0x30" stat="mReuse" val="0.9"/> <!-- Guess -->
   </for>
 </skill>
 <skill id="1528" levels="42" name="Divine Flash">
@@ -477,7 +477,7 @@
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="250"/>
   <set name="element" val="5"/> <!-- Holy -->
-  <set name="reuseDelay" val="6000"/> <!-- Guessing -->
+  <set name="reuseDelay" val="6000"/> <!-- Guess -->
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>

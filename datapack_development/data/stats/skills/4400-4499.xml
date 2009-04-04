@@ -951,9 +951,9 @@
   <table name="#fire"> 0.8 0.7 0.6 </table>
   <table name="#mpConsume"> 20 35 65 </table>
   <set name="magicLvl" val="80"/>
-  <set name="lvlDepend" val="1"/> <!-- Guessing -->
+  <set name="lvlDepend" val="1"/> <!-- Guess -->
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="40"/> <!-- Guessing -->
+  <set name="power" val="40"/> <!-- Guess -->
   <set name="target" val="TARGET_ONE"/>
   <set name="isDebuff" val="true"/>
   <set name="reuseDelay" val="8000"/>
@@ -975,9 +975,9 @@
   <table name="#earth"> 0.8 0.7 0.6 </table>
   <table name="#mpConsume"> 20 35 65 </table>
   <set name="magicLvl" val="80"/>
-  <set name="lvlDepend" val="1"/> <!-- Guessing -->
+  <set name="lvlDepend" val="1"/> <!-- Guess -->
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="40"/> <!-- Guessing -->
+  <set name="power" val="40"/> <!-- Guess -->
   <set name="target" val="TARGET_ONE"/>
   <set name="isDebuff" val="true"/>
   <set name="reuseDelay" val="8000"/>
@@ -999,9 +999,9 @@
   <table name="#wind"> 0.8 0.7 0.6 </table>
   <table name="#mpConsume"> 20 35 65 </table>
   <set name="magicLvl" val="80"/>
-  <set name="lvlDepend" val="1"/> <!-- Guessing -->
+  <set name="lvlDepend" val="1"/> <!-- Guess -->
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="40"/> <!-- Guessing -->
+  <set name="power" val="40"/> <!-- Guess -->
   <set name="target" val="TARGET_ONE"/>
   <set name="isDebuff" val="true"/>
   <set name="reuseDelay" val="8000"/>
@@ -1023,9 +1023,9 @@
   <table name="#holy"> 0.8 0.7 0.6 </table>
   <table name="#mpConsume"> 20 35 65 </table>
   <set name="magicLvl" val="80"/>
-  <set name="lvlDepend" val="1"/> <!-- Guessing -->
+  <set name="lvlDepend" val="1"/> <!-- Guess -->
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="40"/> <!-- Guessing -->
+  <set name="power" val="40"/> <!-- Guess -->
   <set name="target" val="TARGET_ONE"/>
   <set name="isDebuff" val="true"/>
   <set name="reuseDelay" val="8000"/>
@@ -1047,9 +1047,9 @@
   <table name="#dark"> 0.8 0.7 0.6 </table>
   <table name="#mpConsume"> 20 35 65 </table>
   <set name="magicLvl" val="80"/>
-  <set name="lvlDepend" val="1"/> <!-- Guessing -->
+  <set name="lvlDepend" val="1"/> <!-- Guess -->
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="40"/> <!-- Guessing -->
+  <set name="power" val="40"/> <!-- Guess -->
   <set name="target" val="TARGET_ONE"/>
   <set name="isDebuff" val="true"/>
   <set name="reuseDelay" val="8000"/>
@@ -1114,8 +1114,8 @@
 <skill id="4473" levels="12" name="Stun">
   <table name="#mpConsume"> 27 44 62 85 109 135 157 168 177 183 187 189 </table>
   <table name="#power"> 16 35 73 139 241 379 542 626 704 774 829 873 </table>
-  <set name="magicLvl" val="48"/> <!-- Guessing -->
-  <set name="lvlDepend" val="1"/> <!-- Guessing -->
+  <set name="magicLvl" val="48"/> <!-- Guess -->
+  <set name="lvlDepend" val="1"/> <!-- Guess -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AURA"/>
@@ -1129,7 +1129,7 @@
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1000"/>
   <set name="effectType" val="STUN"/>
-  <set name="effectPower" val="30"/> <!-- Guessing -->
+  <set name="effectPower" val="30"/> <!-- Guess -->
   <for>
     <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
@@ -1219,9 +1219,9 @@
   <table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="2"/> <!-- Guessing -->
+  <set name="lvlDepend" val="2"/> <!-- Guess -->
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="80"/> <!-- Guessing -->
+  <set name="power" val="80"/> <!-- Guess -->
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="3300"/>
@@ -1254,9 +1254,9 @@
   <table name="#pdef"> 0.85 0.8 0.8 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 </table>
   <table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
   <set name="magicLvl" val="80"/>
-  <set name="lvlDepend" val="1"/> <!-- Guessing -->
+  <set name="lvlDepend" val="1"/> <!-- Guess -->
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="40"/> <!-- Guessing -->
+  <set name="power" val="40"/> <!-- Guess -->
   <set name="target" val="TARGET_ONE"/>
   <set name="isDebuff" val="true"/>
   <set name="reuseDelay" val="8000"/>
@@ -1277,9 +1277,9 @@
   <table name="#mdef"> 0.85 0.8 0.8 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 </table>
   <table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
   <set name="magicLvl" val="80"/>
-  <set name="lvlDepend" val="1"/> <!-- Guessing -->
+  <set name="lvlDepend" val="1"/> <!-- Guess -->
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="40"/> <!-- Guessing -->
+  <set name="power" val="40"/> <!-- Guess -->
   <set name="target" val="TARGET_ONE"/>
   <set name="isDebuff" val="true"/>
   <set name="reuseDelay" val="8000"/>
@@ -1299,9 +1299,9 @@
   <table name="#mpConsume"> 21 33 47 64 82 101 118 126 133 137 140 142 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="lvlDepend" val="2"/> <!-- Guessing -->
+  <set name="lvlDepend" val="2"/> <!-- Guess -->
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="80"/> <!-- Guessing -->
+  <set name="power" val="80"/> <!-- Guess -->
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="8000"/>
   <set name="skillType" val="ROOT"/>

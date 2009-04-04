@@ -788,7 +788,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="negateStats" val="BUFF DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="skillRadius" val="200"/> <!-- Guessing -->
+  <set name="skillRadius" val="200"/> <!-- Guess -->
   <set name="skillType" val="NEGATE"/> <!-- Needs core support for "CANCEL_ALL" without exceptions -->
   <set name="target" val="TARGET_AURA"/>
 </skill>
@@ -825,7 +825,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="10"/> <!-- Base Land Rate -->
-  <set name="skillRadius" val="200"/> <!-- Guessing -->
+  <set name="skillRadius" val="200"/> <!-- Guess -->
   <set name="skillType" val="BLEED"/>
   <set name="target" val="TARGET_AURA"/>
   <for>
@@ -846,7 +846,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="10"/> <!-- Base Land Rate -->
-  <set name="skillRadius" val="200"/> <!-- Guessing -->
+  <set name="skillRadius" val="200"/> <!-- Guess -->
   <set name="skillType" val="DOT"/>
   <set name="target" val="TARGET_AURA"/>
   <for>
@@ -1045,7 +1045,7 @@
   <set name="lvlDepend" val="1"/>
   <set name="power" val="10"/> <!-- Base Land Rate -->
   <set name="target" val="TARGET_AURA"/>
-  <set name="skillRadius" val="200"/> <!-- Guessing -->
+  <set name="skillRadius" val="200"/> <!-- Guess -->
   <set name="isDebuff" val="true"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>

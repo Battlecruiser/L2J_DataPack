@@ -28,7 +28,7 @@
   <table name="#mpConsume"> 22 24 25 27 28 29 30 31 32 33 34 34 </table>
   <table name="#mAtkSpd"> 0.98 0.96 0.94 0.92 0.9 0.88 0.86 0.84 0.82 0.8 0.78 0.76 </table>
   <table name="#pDef"> 0.98 0.96 0.94 0.92 0.9 0.88 0.86 0.84 0.82 0.8 0.78 0.76 </table>
-  <set name="power" val="80"/> <!-- Guessing -->
+  <set name="power" val="80"/> <!-- Guess -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1800"/>
@@ -243,7 +243,7 @@
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <set name="effectType" val="BLEED"/>
-  <set name="effectPower" val="40"/> <!-- Base Land Rate --> <!-- Guessing -->
+  <set name="effectPower" val="40"/> <!-- Base Land Rate --> <!-- Guess -->
   <set name="soulMaxConsumeCount" val="5"/>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -257,7 +257,7 @@
 </skill>
 <skill id="510" levels="5" name="Deadly Roulette">
   <!-- Done by erhiwan -->
-  <table name="#lethal2"> 10 18 26 34 42 50 </table> <!-- Guessing -->
+  <table name="#lethal2"> 10 18 26 34 42 50 </table> <!-- Guess -->
   <table name="#mpConsume"> 100 103 106 109 112 </table>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
@@ -268,7 +268,7 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="0"/>
-  <set name="reuseDelay" val="10000"/> <!-- Guessing -->
+  <set name="reuseDelay" val="10000"/> <!-- Guess -->
   <set name="skillType" val="PDAM"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="weaponsAllowed" val="65536"/> <!-- Crossbow -->
@@ -280,7 +280,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <set name="hitTime" val="1500"/>
-  <set name="magicLvl" val="49"/> <!-- Guessing -->
+  <set name="magicLvl" val="49"/> <!-- Guess -->
   <set name="mpConsume" val="44"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="500"/>
@@ -538,7 +538,7 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="summonTotalLifeTime" val="20000"/>
   <set name="hitTime" val="2000"/>
-  <set name="reuseDelay" val="60000"/> <!-- Guessing -->
+  <set name="reuseDelay" val="60000"/> <!-- Guess -->
   <set name="skillType" val="DECOY"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
@@ -549,7 +549,7 @@
   <set name="mpConsume" val="78"/>
   <set name="power" val="6060"/>
   <set name="hitTime" val="1080"/>
-  <set name="SSBoost" val="2.0"/> <!-- Guessing -->
+  <set name="SSBoost" val="2.0"/> <!-- Guess -->
   <set name="overHit" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="target" val="TARGET_FRONT_AREA"/>
@@ -647,7 +647,7 @@
   <set name="hitTime" val="1500"/>
   <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="80"/> <!-- Guessing -->
+  <set name="power" val="80"/> <!-- Guess -->
   <set name="reuseDelay" val="30000"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1394,7 +1394,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="effectType" val="BLEED"/>
-  <set name="effectPower" val="40"/> <!-- Base Land Rate --> <!-- Guessing -->
+  <set name="effectPower" val="40"/> <!-- Base Land Rate --> <!-- Guess -->
   <for>
     <effect count="5" name="DamOverTime" time="3" val="#bleeddmg" abnormal="bleeding">
       <sub order="0x40" stat="runSpd" val="25"/>

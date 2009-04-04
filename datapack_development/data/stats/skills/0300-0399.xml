@@ -783,7 +783,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <add order="0x40" stat="skillMastery" val="2"/> <!-- Guessing -->
+    <add order="0x40" stat="skillMastery" val="2"/> <!-- Guess -->
   </for>
 </skill>
 <skill id="331" levels="1" name="Skill Mastery">
@@ -794,7 +794,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <add order="0x40" stat="skillMastery" val="2"/> <!-- Guessing -->
+    <add order="0x40" stat="skillMastery" val="2"/> <!-- Guess -->
   </for>
 </skill>
 <skill id="332" levels="1" name="Extra Inventory">
@@ -821,7 +821,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="0x7fffffff" name="MpConsumePerLevel" time="3" val="1.5">
-      <mul order="0x30" stat="skillMastery" val="10"/> <!-- Guessing -->
+      <mul order="0x30" stat="skillMastery" val="10"/> <!-- Guess -->
     </effect>
   </for>
 </skill>
@@ -1064,7 +1064,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="effectType" val="DEBUFF"/>
-  <set name="effectPower" val="40"/> <!-- Guessing -->
+  <set name="effectPower" val="40"/> <!-- Guess -->
   <set name="reuseDelay" val="30000"/>
   <set name="hitTime" val="1800"/>
   <set name="baseCritRate" val="15"/>
