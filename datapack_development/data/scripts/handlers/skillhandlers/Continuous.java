@@ -62,7 +62,7 @@ public class Continuous implements ISkillHandler
 		L2SkillType.REFLECT,
 		L2SkillType.UNDEAD_DEFENSE,
 		L2SkillType.AGGDEBUFF,
-		L2SkillType.FORCE_BUFF
+		L2SkillType.FUSION
 	};
 	private L2Skill _skill;
 	
@@ -128,7 +128,7 @@ public class Continuous implements ISkillHandler
 				}
 			}
 			
-			if (skill.isOffensive())
+			if (skill.isOffensive() || skill.isDebuff())
 			{
 				boolean ss = false;
 				boolean sps = false;
