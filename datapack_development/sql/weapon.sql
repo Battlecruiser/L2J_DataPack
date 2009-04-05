@@ -1199,7 +1199,7 @@ INSERT INTO `weapon` VALUES
 (8687,'Cabrio\'s Hand','rhand','true',1510,1,1,'fine_steel','a',202,20,'blunt',4,4,0,0,0,379,0,161,-1,26970000,2157,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (8688,'Daimon Crystal','lrhand','true',880,1,1,'wood','a',245,20,'bigblunt',4,4,0,0,0,325,0,161,-1,26970000,2157,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (8689,'Blood Sword Akamanah','lrhand','true',1840,0,0,'bone','none',361,10,'dual',8,0,0,0,0,325,0,137,-1,26970000,2157,'false','false','false','false',0,0,0,0,0,0,0,0,0,'0-0;'),
-(8763,'Elrokian Trap','rhand','false',500,0,0,'oriharukon','a',0,0,'blunt',0,0,0,0,0,379,0,0,-1,26970000,2157,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
+(8763,'Elrokian Trap','rhand','false',500,0,0,'oriharukon','a',0,0,'blunt',0,0,0,0,0,379,0,0,-1,26970000,2157,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3626-1;3627-1;3628-1;'),
 (8788,'Sirra\'s Blade - Haste','rhand','true',1300,1,1,'fine_steel','a',251,10,'sword',8,0,0,0,0,379,0,121,-1,26970000,2157,'true','true','true','true',0,0,0,0,0,0,0,0,9353,'3068-2;'),
 (8789,'Sirra\'s Blade - Health','rhand','true',1300,1,1,'fine_steel','a',251,10,'sword',8,0,0,0,0,379,0,121,-1,26970000,2157,'true','true','true','true',0,0,0,0,0,0,0,0,9354,'3013-3;'),
 (8790,'Sirra\'s Blade - Critical Poison','rhand','true',1300,1,1,'fine_steel','a',251,10,'sword',8,0,0,0,0,379,0,121,-1,26970000,2157,'true','true','true','true',0,0,0,0,0,3024,6,15,9355,'0-0;'),

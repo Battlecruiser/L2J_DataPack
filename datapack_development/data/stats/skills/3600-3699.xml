@@ -386,28 +386,79 @@
   </for>
 </skill>
 <skill id="3626" levels="1" name="Kabokula">
-  <!-- Used when trapping a roaring Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone. -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!--
+  Description(s):
+      Used when trapping a roaring Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone.
+  -->
+  <set name="itemConsumeId" val="8764"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="magicLvl" val="77"/>
+  <set name="triggeredId" val="5106"/>
+  <set name="triggeredLevel" val="1"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="25000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="staticReuse" val="true"/>
+  <set name="skillType" val="FUSION"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="300"/>
+  <set name="effectRange" val="900"/>
+  <set name="reuseDelay" val="30000"/>
+  <set name="isMagic" val="true"/>
+  <set name="isDebuff" val="true"/>
+  <cond msgId="109">
+    <target npcId="22215 22216 22217"/>
+  </cond>
 </skill>
 <skill id="3627" levels="1" name="Tapirawa">
-  <!-- Used on a quivering Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone. -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!--
+  Description(s):
+      Used on a quivering Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone.
+  -->
+  <set name="itemConsumeId" val="8764"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="magicLvl" val="77"/>
+  <set name="triggeredId" val="5107"/>
+  <set name="triggeredLevel" val="1"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="25000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="staticReuse" val="true"/>
+  <set name="skillType" val="FUSION"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="300"/>
+  <set name="effectRange" val="900"/>
+  <set name="reuseDelay" val="30000"/>
+  <set name="isMagic" val="true"/>
+  <set name="isDebuff" val="true"/>
+  <cond msgId="109">
+    <target npcId="22215 22216 22217"/>
+  </cond>
 </skill>
 <skill id="3628" levels="1" name="Shabonoba">
-  <!-- Used on a struggling Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone. -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <!--
+  Description(s):
+      Used on a struggling Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone.
+  -->
+  <set name="itemConsumeId" val="8764"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="magicLvl" val="77"/>
+  <set name="triggeredId" val="5108"/>
+  <set name="triggeredLevel" val="1"/>
+  <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="25000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="staticReuse" val="true"/>
+  <set name="skillType" val="FUSION"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="300"/>
+  <set name="effectRange" val="900"/>
+  <set name="reuseDelay" val="30000"/>
+  <set name="isMagic" val="true"/>
+  <set name="isDebuff" val="true"/>
+  <cond msgId="109">
+    <target npcId="22215 22216 22217"/>
+  </cond>
 </skill>
 <skill id="3629" levels="10" name="Blood Sword Akamanah">
   <!-- Needs to be finished - below is a copy of 3603 Demon Sword Zariche -->

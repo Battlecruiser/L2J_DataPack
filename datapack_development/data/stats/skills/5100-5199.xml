@@ -37,7 +37,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="1000"/> <!-- Must be validated -->
   <for>
-    <effect count="0x7fffffff" name="Force" time="600" val="15" stackOrder="0" stackType="BattleForce">
+    <effect count="0x7fffffff" name="Fusion" time="600" val="15" stackOrder="0" stackType="BattleForce">
        <mul order="0x30" stat="pAtk" val="1.1"/> <!-- Guess -->
     </effect>
   </for>
@@ -48,28 +48,49 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="1000"/> <!-- Must be validated -->
   <for>
-    <effect count="0x7fffffff" name="Force" time="600" val="15" stackOrder="0" stackType="SpellForce">
+    <effect count="0x7fffffff" name="Fusion" time="600" val="15" stackOrder="0" stackType="SpellForce">
       <mul order="0x30" stat="mAtk" val="1.1"/><!-- Guess -->
     </effect>
   </for>
 </skill>
 <skill id="5106" levels="4" name="Capture A State">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="CONT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="300"/>
+  <set name="effectRange" val="900"/>
+  <for>
+    <effect count="0x7fffffff" name="Fusion" time="600" val="15" stackOrder="0" stackType="Capture">
+        <mul order="0x30" stat="runSpd" val="0.7"/>
+        <mul order="0x30" stat="pAtkSpd" val="0.7"/>
+    </effect>
+  </for>
 </skill>
 <skill id="5107" levels="4" name="Capture B State">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="CONT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="300"/>
+  <set name="effectRange" val="900"/>
+  <for>
+    <effect count="0x7fffffff" name="Fusion" time="600" val="15" stackOrder="0" stackType="Capture">
+        <mul order="0x30" stat="runSpd" val="0.7"/>
+        <mul order="0x30" stat="pAtkSpd" val="0.7"/>
+    </effect>
+  </for>
 </skill>
 <skill id="5108" levels="4" name="Capture C State">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="CONT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="300"/>
+  <set name="effectRange" val="900"/>
+  <for>
+    <effect count="0x7fffffff" name="Fusion" time="600" val="15" stackOrder="0" stackType="Capture">
+        <mul order="0x30" stat="runSpd" val="0.7"/>
+        <mul order="0x30" stat="pAtkSpd" val="0.7"/>
+    </effect>
+  </for>
 </skill>
 <skill id="5109" levels="1" name="Production - Clan Gate">
   <!-- Needs more work -->
