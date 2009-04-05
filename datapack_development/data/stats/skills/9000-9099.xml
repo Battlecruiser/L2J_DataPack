@@ -66,4 +66,29 @@
     <add val="#lvl" order="0x10" stat="STR"/>
   </for>
 </skill>
+<skill id="9007" levels="1" name="Custom Mana Drug">
+  <!-- Done by DJ MELERIX -->
+  <set name="buffDuration" val="15000"/>
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isPotion" val="true"/>
+  <set name="magicLvl" val="1"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillType" val="MPHOT"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <effect count="3" name="ManaHealOverTime" time="5" val="1.5" stackOrder="1.5" stackType="mp_recover"/>
+  </for>
+</skill>
+<skill id="9008" levels="1" name="Custom Mana Potion">
+  <!-- Done by DJ MELERIX -->
+  <set name="castRange" val="-1"/>
+  <set name="effectRange" val="-1"/>
+  <set name="isPotion" val="true"/>
+  <set name="magicLvl" val="1"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="100"/>
+  <set name="skillType" val="MANAHEAL"/>
+  <set name="target" val="TARGET_SELF"/>
+</skill>
 </list>
