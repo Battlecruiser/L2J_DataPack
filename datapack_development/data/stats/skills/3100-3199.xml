@@ -412,6 +412,11 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
+  <cond msg="Item Skill: Recharge cannot be used due to unsuitable terms.">
+    <not>
+      <target class_id_restriction="29, 30, 105, 42, 43, 112"/>
+    </not>
+  </cond>
 </skill>
 <skill id="3128" levels="10" name="Item Skill: Blessed Soul">
   <table name="#mpConsume_Init"> 10 11 11 12 13 14 14 15 16 17 </table>
