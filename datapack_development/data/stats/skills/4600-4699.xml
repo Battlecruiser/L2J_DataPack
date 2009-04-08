@@ -409,7 +409,6 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="negateStats" val="SLEEP"/>
-  <set name="negateLvl" val="1"/>
   <set name="aggroPoints" val="100"/>
 </skill>
 <skill id="4620" levels="12" name="Paralysis">
@@ -1039,7 +1038,6 @@
   <set name="mpConsume" val="42"/>
   <set name="mpInitialConsume" val="11"/>
   <set name="negateStats" val="ROOT"/>
-  <set name="negateLvl" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="NEGATE"/>
@@ -1050,7 +1048,6 @@
   <table name="#magicLvl"> 20 40 60 </table>
   <table name="#mpConsume"> 23 42 66 </table>
   <table name="#mpInitialConsume"> 6 11 17 </table>
-  <table name="#negateLvl"> 1 2 3 </table>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
@@ -1058,7 +1055,6 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="negateStats" val="DEBUFF"/>
-  <set name="negateLvl" val="#negateLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="NEGATE"/>
@@ -1073,7 +1069,6 @@
   <set name="mpConsume" val="42"/>
   <set name="mpInitialConsume" val="11"/>
   <set name="negateStats" val="MUTE"/>
-  <set name="negateLvl" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="NEGATE"/>
@@ -1751,7 +1746,6 @@
   <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
   <set name="magicLvl" val="76"/>
-  <set name="negateLvl" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="skillType" val="NEGATE"/>
   <set name="target" val="TARGET_SELF"/>
