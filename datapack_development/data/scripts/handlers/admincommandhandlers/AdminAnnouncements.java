@@ -17,7 +17,7 @@ package handlers.admincommandhandlers;
 import java.util.Collection;
 
 import net.sf.l2j.gameserver.Announcements;
-import net.sf.l2j.gameserver.AutoAnnouncements;
+import net.sf.l2j.gameserver.taskmanager.tasks.AutoAnnounceTaskManager; 
 import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
 import net.sf.l2j.gameserver.model.L2World;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
@@ -115,8 +115,8 @@ public class AdminAnnouncements implements IAdminCommandHandler
 		
 		else if (command.startsWith("admin_reload_autoannounce"))
 		{
+			AutoAnnounceTaskManager.getInstance().restore();
 			activeChar.sendMessage("AutoAnnouncement Reloaded.");
-			AutoAnnouncements.getInstance().reload();
 		}
 
 		return true;
