@@ -68,6 +68,8 @@ of this directory a little bit.
 311262511.xml -> Seven Signs - Blacksmith of Mammon - Weapon Upgrade
 311262512.xml -> Seven Signs - Blacksmith of Mammon - Weapon Exchange
 311262513.xml -> Seven Signs - Blacksmith of Mammon - Foundation Items
+311262514.xml -> Seven Signs - Blacksmith of Mammon - Unseal S80-Grade Armor
+311262515.xml -> Seven Signs - Blacksmith of Mammon - Unseal S80-grade Accesories
 
 306893001.xml -> Shadow weaponry system. D-grade coupons exchange
 306893002.xml -> Shadow weaponry system. C-grade coupons exchange
