@@ -55,7 +55,9 @@ class Quest (JQuest) :
                 st = player.getQuestState(qn)
                 if st.getQuestItemsCount(3865) > 0 :
                     st.takeItems(3865,1)
-                    GrandBossManager.getInstance().getZone(179700,113800,-7709).allowPlayerEntry(player,30)
+                    zone = GrandBossManager.getInstance().getZone(179700,113800,-7709)
+                    if zone : 
+                       zone.allowPlayerEntry(player,30)
                     x = 179700 + Rnd.get(700)
                     y = 113800 + Rnd.get(2100)
                     player.teleToLocation(x,y,-7709)
@@ -81,7 +83,9 @@ class Quest (JQuest) :
                 if self.count >= 200 :
                    htmltext = "31385-03.htm"
                 else :
-                   GrandBossManager.getInstance().getZone(212852,-114842,-1632).allowPlayerEntry(player,30)
+                   zone = GrandBossManager.getInstance().getZone(212852,-114842,-1632)
+                   if zone :
+                      zone.allowPlayerEntry(player,30)
                    x = 204328 + Rnd.get(600)
                    y = -111874 + Rnd.get(600)
                    player.teleToLocation(x,y,70)
