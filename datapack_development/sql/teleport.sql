@@ -51,7 +51,6 @@ INSERT INTO teleport VALUES
 ('Dion Town -> Town of Gludio',18,-12672,122776,-3116,3400,0),
 ('Dion Town -> Town of Giran',19,83400,147943,-3404,6800,0),
 ('Dion Town -> Giran Harbor',20,47942,186764,-3485,6500,0),
-('Cruma Tower Entrance -> Cruma Tower 1st floor',21,17724,114004,-11672,0,0),
 ('Cruma Tower 1st floor -> Cruma Tower Entrance',22,17192,114178,-3439,0,0),
 ('Cruma Tower 1st floor -> Cruma Tower 2nd floor',23,17730,108301,-9057,0,0),
 ('Cruma Tower 2nd floor -> Cruma Tower 1st floor',24,17714,107923,-11850,0,0),
@@ -756,4 +755,6 @@ INSERT INTO teleport VALUES
 ('Dragonspine Fort -> The Ant Nest', 12104, -25832, 173118, -4154, 500, 0),
 ('Dragonspine Fort -> Windawood Manor', 12105, -25791, 162013, -2528, 500, 0),
 ('Dragonspine Fort -> Sea of Spores', 12106, 62425, 30856, -3774, 500, 0),
-('Dragonspine Fort -> Ancient Battleground', 12107, 108264, -2846, -3428, 500, 0);
+('Dragonspine Fort -> Ancient Battleground', 12107, 108264, -2846, -3428, 500, 0),
+('Fantasy Isle -> Krateis Cube', 12108, -70293, -71029, -1416, 0, 0),
+('Krateis Cube -> Fantasy Isle', 12109, -59224, -56837, -2032, 0, 0);
