@@ -1883,10 +1883,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <cond>
+    <add order="0x40" stat="accCombat" val="3">
       <game time="night"/>
-    </cond>
-    <add order="0x40" stat="accCombat" val="3"/>
+    </add>
   </for>
 </skill>
 <skill id="295" levels="1" name="Iron Body">

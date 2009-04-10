@@ -1084,6 +1084,9 @@
   <set name="skillRadius" val="250"/> <!-- Guess -->
   <set name="skillType" val="DEBUFF"/>
   <set name="target" val="TARGET_AURA"/>
+  <cond msg="Touch of Shilen cannot be used due to unsuitable terms.">
+    <target active_effect_id="5564"/> <!-- Needs Core-Side improvement "Require 5564 in Lvl 3" -->
+  </cond>
   <for>
     <effect count="1" name="Debuff" time="120" val="0">
       <mul order="0x30" stat="maxCp" val="0.25"/>
