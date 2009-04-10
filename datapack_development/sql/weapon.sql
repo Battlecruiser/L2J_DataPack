@@ -1763,7 +1763,7 @@ INSERT INTO `weapon` VALUES
 (10729,'Demon Splinter - PvP - Health','lrhand','true',1350,1,1,'fine_steel','s',342,5,'dualfist',4,4,0,0,0,325,0,132,-1,48800000,2052,'false','false','true','false',0,0,0,0,0,0,0,0,0,'3013-3;'),
 (10730,'Demon Splinter - PvP - Critical Stun','lrhand','true',1350,1,1,'fine_steel','s',342,5,'dualfist',4,4,0,0,0,325,0,132,-1,48800000,2052,'false','false','true','false',0,0,0,0,0,3070,1,16,0,'0-0;'),
 (10731,'Arcana Mace - PvP - Acumen','rhand','true',1300,1,1,'fine_steel','s',225,20,'blunt',4,4,0,0,0,379,0,175,-1,48800000,2052,'false','false','true','false',0,0,0,0,0,0,0,0,0,'3047-2;'),
-(10732,'Arcana Mace - PvP - MP Regeneration','rhand','true',1300,1,1,'fine_steel','s',225,20,'blunt',4,4,0,0,0,379,0,175,-1,48800000,2052,'false','false','true','false',0,0,0,0,0,0,0,0,0,''3576-1;'),
+(10732,'Arcana Mace - PvP - MP Regeneration','rhand','true',1300,1,1,'fine_steel','s',225,20,'blunt',4,4,0,0,0,379,0,175,-1,48800000,2052,'false','false','true','false',0,0,0,0,0,0,0,0,0,'3576-1;'),
 (10733,'Arcana Mace - PvP - Mana Up','rhand','true',1300,1,1,'fine_steel','s',225,20,'blunt',4,4,0,0,0,379,0,175,-1,48800000,2052,'false','false','true','false',0,0,0,0,0,0,0,0,0,'3014-2;'),
 (10734,'Imperial Staff - PvP - Empower','lrhand','true',910,1,1,'fine_steel','s',274,20,'bigblunt',4,4,0,0,0,325,0,175,-1,48800000,2052,'false','false','true','false',0,0,0,0,0,0,0,0,0,'3076-1;'),
 (10735,'Imperial Staff - PvP - MP Regeneration','lrhand','true',910,1,1,'fine_steel','s',274,20,'bigblunt',4,4,0,0,0,325,0,175,-1,48800000,2052,'false','false','true','false',0,0,0,0,0,0,0,0,0,'3576-1;'),
