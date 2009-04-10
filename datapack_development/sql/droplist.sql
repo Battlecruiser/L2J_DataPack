@@ -25640,6 +25640,7 @@ INSERT INTO `droplist` VALUES
 (22218,11964,1,1,1,2045), -- Common Item - Dark Legion\'s Edge
 (22218,8954,1,1,2,1597), -- Blue Primeval Crystal
 (22218,8906,1,1,2,6135), -- Ancient Spellbook: Miracle
+(22218,8901,1,1,2,2242), -- Ancient Spellbook: Raging Waves
 (22219,57,5493,11210,0,700000), -- Adena
 (22219,8627,1,1,2,3759), -- Elixir of Life (S-Grade)
 (22219,8633,1,1,2,1475), -- Elixir of Mental Strength (S-Grade)
