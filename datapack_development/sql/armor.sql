@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS `armor` (
   `crystal_type` varchar(4) NOT NULL default 'none',
   `avoid_modify` int(1) NOT NULL default '0',
   `duration` int(3) NOT NULL default '-1', -- duration for shadown items
-  `time` decimal(4,00) NOT NULL default '-1',     -- duration for time limited items
+  `time` int(4) NOT NULL default '-1',     -- duration for time limited items
   `p_def` int(3) NOT NULL default '0',
   `m_def` int(2) NOT NULL default '0',
   `mp_bonus` int(3) NOT NULL default '0',

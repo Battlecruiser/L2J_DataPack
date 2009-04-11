@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS `custom_etcitem` (
   `material` varchar(11) default NULL,
   `crystal_type` varchar(4) NOT NULL default 'none',
   `duration` decimal(3,0) default NULL,
-  `time` decimal(4,00) NOT NULL default '-1',
+  `time` int(4) NOT NULL default '-1',
   `price` decimal(11,0) default NULL,
   `crystal_count` int(4) default NULL,
   `sellable` varchar(5) default NULL,
