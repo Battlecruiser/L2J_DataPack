@@ -560,8 +560,7 @@
 </skill>
 <skill id="839" levels="1" name="Dismount">
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="MOUNT"/>
-  <set name="npcId" val="0"/>
+  <set name="skillType" val="TRANSFORMDISPEL"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="-1"/>
   <set name="hitTime" val="2500"/>
