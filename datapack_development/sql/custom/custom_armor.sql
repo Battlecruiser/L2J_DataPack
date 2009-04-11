@@ -12,6 +12,7 @@ CREATE TABLE IF NOT EXISTS `custom_armor` (
   `crystal_type` varchar(4) NOT NULL default '',
   `avoid_modify` int(1) NOT NULL default '0',
   `duration` int(3) NOT NULL default '0',
+  `time` decimal(4,00) NOT NULL default '-1',
   `p_def` int(3) NOT NULL default '0',
   `m_def` int(2) NOT NULL default '0',
   `mp_bonus` int(3) NOT NULL default '0',
