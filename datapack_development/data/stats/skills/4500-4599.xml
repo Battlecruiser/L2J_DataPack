@@ -167,12 +167,14 @@
   <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_TOGGLE"/>
-  <set name="skillType" val="BUFF"/>
+  <set name="skillType" val="CONT"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
-    <mul order="0x30" stat="runSpd" val="0.5"/>
-    <mul order="0x30" stat="pAtk" val="0.5"/>
-    <mul order="0x30" stat="pDef" val="10"/>
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="0">
+      <mul order="0x30" stat="runSpd" val="0.5"/>
+      <mul order="0x30" stat="pAtk" val="0.5"/>
+      <mul order="0x30" stat="pDef" val="10"/>
+    </effect>
   </for>
 </skill>
 <skill id="4518" levels="1" name="Quest - BOSS Rampage">
@@ -180,12 +182,14 @@
   <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_TOGGLE"/>
-  <set name="skillType" val="BUFF"/>
+  <set name="skillType" val="CONT"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
-    <mul order="0x30" stat="pAtkSpd" val="1.3"/>
-    <mul order="0x30" stat="pAtk" val="1.3"/>
-    <mul order="0x30" stat="pDef" val="0.5"/>
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="0">
+      <mul order="0x30" stat="pAtkSpd" val="1.3"/>
+      <mul order="0x30" stat="pAtk" val="1.3"/>
+      <mul order="0x30" stat="pDef" val="0.5"/>
+    </effect>
   </for>
 </skill>
 <skill id="4519" levels="1" name="Quest - BOSS Defend">
@@ -194,11 +198,13 @@
   <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_TOGGLE"/>
-  <set name="skillType" val="BUFF"/>
+  <set name="skillType" val="CONT"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
-    <mul order="0x30" stat="runSpd" val="0.5"/>
-    <mul order="0x30" stat="bowWpnVuln" val="0.1"/>
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="0">
+      <mul order="0x30" stat="runSpd" val="0.5"/>
+      <mul order="0x30" stat="bowWpnVuln" val="0.1"/>
+    </effect>
   </for>
 </skill>
 <skill id="4520" levels="1" name="Quest - BOSS Rampage">
@@ -207,11 +213,13 @@
   <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_TOGGLE"/>
-  <set name="skillType" val="BUFF"/>
+  <set name="skillType" val="CONT"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
-    <mul order="0x30" stat="runSpd" val="0.7"/>
-    <mul order="0x30" stat="bowWpnVuln" val="1.1"/>
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="0">
+      <mul order="0x30" stat="runSpd" val="0.7"/>
+      <mul order="0x30" stat="bowWpnVuln" val="1.1"/>
+    </effect>
   </for>
 </skill>
 <skill id="4521" levels="1" name="Quest - BOSS Resist non Bow Weapon">
@@ -287,12 +295,14 @@
   <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_TOGGLE"/>
-  <set name="skillType" val="BUFF"/>
+  <set name="skillType" val="CONT"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
-    <mul order="0x30" stat="pDef" val="10"/>
-    <mul order="0x30" stat="mDef" val="10"/>
-    <mul order="0x30" stat="sleepVuln" val="0.3"/>
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="0">
+      <mul order="0x30" stat="pDef" val="10"/>
+      <mul order="0x30" stat="mDef" val="10"/>
+      <mul order="0x30" stat="sleepVuln" val="0.3"/>
+    </effect>
   </for>
 </skill>
 <skill id="4526" levels="1" name="Quest - BOSS Summon">
@@ -384,11 +394,13 @@
   <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_TOGGLE"/>
-  <set name="skillType" val="REFLECT"/>
+  <set name="skillType" val="CONT"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
-    <add order="0x40" stat="reflectDam" val="100"/>
-    <mul order="0x30" stat="mDef" val="10"/>
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="0">
+      <add order="0x40" stat="reflectDam" val="100"/>
+      <mul order="0x30" stat="mDef" val="10"/>
+    </effect>
   </for>
 </skill>
 <skill id="4533" levels="1" name="Dance of Resistance">
@@ -608,12 +620,14 @@
   <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="76"/>
   <set name="operateType" val="OP_TOGGLE"/>
-  <set name="skillType" val="REFLECT"/>
+  <set name="skillType" val="CONT"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
-    <add order="0x40" stat="reflectDam" val="100"/>
-    <mul order="0x30" stat="pDef" val="10"/>
-    <mul order="0x30" stat="runSpd" val="0.7"/>
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="0">
+      <add order="0x40" stat="reflectDam" val="100"/>
+      <mul order="0x30" stat="pDef" val="10"/>
+      <mul order="0x30" stat="runSpd" val="0.7"/>
+    </effect>
   </for>
 </skill>
 <skill id="4546" levels="1" name="Quest - Commune to Slate">

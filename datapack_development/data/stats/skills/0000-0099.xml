@@ -1043,7 +1043,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="FakeDeath" time="5" val="35"/>
+    <!-- retail value: 10MP/sec; stat update every 3 sec -->
+    <effect count="0x7fffffff" name="FakeDeath" time="3" val="30"/>
   </for>
 </skill>
 <skill id="61" levels="3" name="Cure Bleeding">

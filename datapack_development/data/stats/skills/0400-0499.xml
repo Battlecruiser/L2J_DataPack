@@ -517,7 +517,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="#mpConsume">
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="#mpConsume">
       <add order="0x40" stat="accCombat" val="#Tab-accCombat">
         <using kind="Pole"/>
       </add>
@@ -1527,7 +1527,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="Buff" time="1" val="0">
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="0">
       <!-- add order="0x40" stat="darkPower" val="10" Needs Core Support -->
     </effect>
   </for>
@@ -1542,7 +1542,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="Buff" time="1" val="0">
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="0">
        <mul order="0x30" stat="darkVuln" val="#darkVuln"/>
     </effect>
   </for>

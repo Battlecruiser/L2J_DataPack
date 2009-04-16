@@ -1129,7 +1129,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="0">
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="0">
       <mul order="0x30" stat="pAtk-undead" val="1.3"/>
       <!-- mul order="0x30" stat="holyPower" val="1.2" Needs Core Support -->
     </effect>
@@ -1145,7 +1145,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="0">
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="0">
       <mul order="0x30" stat="darkVuln" val="#darkVuln"/>
     </effect>
   </for>
