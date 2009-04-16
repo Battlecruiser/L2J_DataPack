@@ -135,7 +135,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <!-- retail value: 31 38 44 48/sec; stat update every 5 units (3 1/3 sec) -->
+    <!-- retail value: 31 38 44 48/sec; stat update every 3 sec -->
     <!-- Verified by slyce -  Interlude - Aug 2007 -->
     <effect count="10" name="DamOverTime" time="3" val="#dmg" abnormal="poison"/>
   </for>
@@ -638,7 +638,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <!-- retail value: 18 31 38 44 48/sec; stat update every 5 units (3 1/3 sec) -->
+    <!-- retail value: 18 31 38 44 48/sec; stat update every 3 sec -->
     <!-- Verified by slyce -  Interlude - Aug 2007 -->
     <effect count="10" name="DamOverTime" time="3" val="#dmg" abnormal="poison"/>
   </for>

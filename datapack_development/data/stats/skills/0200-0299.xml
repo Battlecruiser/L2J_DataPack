@@ -240,7 +240,7 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="power" val="#ench2Power"/>
   <for>
-    <!-- retail value: 13 17 22 27 31 34/sec (depends on powerlevel); stat update every 5 units (3 1/3 sec) -->
+    <!-- retail value: 13 17 22 27 31 34/sec stat update every 3 sec -->
     <!-- Verified by slyce -  Interlude - Aug 2007 -->
     <effect count="7" name="DamOverTime" time="3" val="#bleedpower" abnormal="bleeding">
       <sub order="0x40" stat="runSpd" val="25"/>
@@ -773,7 +773,7 @@
     </effect>
   </enchant1for>
   <enchant2for>
-    <!-- retail value: 118HP/sec; stat update every 5 units (3 1/3 sec) -->
+    <!-- retail value: 118HP/sec; stat update every 5 units 3 sec -->
     <effect count="5" name="DamOverTime" time="3" val="354"/>
   </enchant2for>
 </skill>

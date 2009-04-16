@@ -773,14 +773,14 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="60000"/>
   <set name="hitTime" val="4000"/>
-  <set name="skillType" val="DEBUFF"/>
+  <set name="skillType" val="MDOT"/>
   <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <!-- retail value: 24/sec; stat update every 5 units (3 1/3 sec) -->
+    <!-- retail value: 24/sec; stat update every 3 sec -->
     <effect count="10" name="ManaDamOverTime" time="3" val="72">
       <mul order="0x30" stat="cancelVuln" val="1.3"/>
       <mul order="0x30" stat="MagicalMpConsumeRate" val="1.3"/>
@@ -806,7 +806,7 @@
   <set name="overHit" val="true"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
-  <set name="effectType" val="DEBUFF"/>
+  <set name="effectType" val="MDOT"/>
   <set name="effectPower" val="80"/>
   <for>
    <effect count="5" name="ManaDamOverTime" time="2" val="40">
@@ -834,7 +834,7 @@
   <set name="overHit" val="true"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
-  <set name="effectType" val="DEBUFF"/>
+  <set name="effectType" val="MDOT"/>
   <set name="effectPower" val="80"/>
   <for>
      <effect count="5" name="ManaDamOverTime" time="2" val="40">
@@ -862,7 +862,7 @@
   <set name="overHit" val="true"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
-  <set name="effectType" val="DEBUFF"/>
+  <set name="effectType" val="MDOT"/>
   <set name="effectPower" val="80"/>
   <for>
     <effect count="5" name="ManaDamOverTime" time="2" val="40">
@@ -889,7 +889,7 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
-  <set name="effectType" val="DEBUFF"/>
+  <set name="effectType" val="MDOT"/>
   <set name="effectPower" val="80"/>
   <for>
      <effect count="5" name="ManaDamOverTime" time="2" val="40">
@@ -915,10 +915,9 @@
   <set name="isDebuff" val="true"/>
   <set name="effectRange" val="1400"/>
   <set name="absorbPart" val="0.8"/> <!-- Dark Vortex: Power is reduced but drain percentage is increased - so I changed 0.7 -> 0.8 -->
-  <set name="effectType" val="DEBUFF"/>
+  <set name="effectType" val="DEBUFF"/> <!-- TEMP FIX: MDOT effect needs fixing - DRAIN appears to not allow MDOT to land [28/12/2006] -->
   <set name="effectPower" val="80"/>
   <for>
-  <!-- MDOT effect needs fixing - DRAIN appears to not allow MDOT to land [28/12/2006] -->
     <effect count="5" name="ManaDamOverTime" time="2" val="40">
       <mul order="0x30" stat="darkVuln" val="1.3"/>
     </effect>

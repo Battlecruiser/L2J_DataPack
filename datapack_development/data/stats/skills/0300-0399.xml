@@ -57,7 +57,7 @@
     </effect>
   </enchant1for>
   <enchant2for>
-    <!-- retail value: 118HP/sec; stat update every 5 units (3 1/3 sec) -->
+    <!-- retail value: 118HP/sec; stat update every 3 sec -->
     <effect count="5" name="DamOverTime" time="3" val="354"/>
   </enchant2for>
 </skill>
@@ -863,7 +863,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <!-- retail value: 50HP/sec; stat update every 3 1/3 sec -->
+    <!-- retail value: 50HP/sec; stat update every 3 sec -->
     <effect count="0x7fffffff" name="DamOverTime" time="3" val="150">
       <mul order="0x30" stat="MagicalMpConsumeRate" val="1.1"/>
       <mul order="0x30" stat="mAtk" val="1.3"/>
@@ -879,7 +879,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <!-- retail value: 50HP/sec; stat update every 3 1/3 sec -->
+    <!-- retail value: 50HP/sec; stat update every 3 sec -->
     <effect count="0x7fffffff" name="DamOverTime" time="3" val="150">
       <mul order="0x30" stat="mAtkSpd" val="1.2"/>
       <mul order="0x30" stat="mReuse" val="0.9"/>
