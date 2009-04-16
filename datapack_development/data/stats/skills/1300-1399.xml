@@ -2014,7 +2014,8 @@
 <skill id="1397" levels="3" name="Clarity">
   <table name="#mpConsume"> 54 62 69 </table>
   <table name="#SpiritOre"> 1 2 3 </table>
-  <table name="#MpConsumeRate"> 0.96 0.92 0.9 </table>
+  <table name="#MpConsumeRateMagic"> 0.96 0.93 0.9 </table>
+  <table name="#MpConsumeRate"> 0.90 0.85 0.8 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="#SpiritOre"/>
@@ -2028,8 +2029,9 @@
   <set name="effectRange" val="900"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#SpiritOre" stackType="MPrate">
-      <mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRate"/>
+      <mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRateMagic"/>
       <mul order="0x30" stat="PhysicalMpConsumeRate" val="#MpConsumeRate"/>
+      <mul order="0x30" stat="DanceMpConsumeRate" val="MpConsumeRate"/>
     </effect>
   </for>
 </skill>
