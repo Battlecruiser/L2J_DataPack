@@ -757,4 +757,12 @@ INSERT INTO teleport VALUES
 ('Dragonspine Fort -> Sea of Spores', 12106, 62425, 30856, -3774, 500, 0),
 ('Dragonspine Fort -> Ancient Battleground', 12107, 108264, -2846, -3428, 500, 0),
 ('Fantasy Isle -> Krateis Cube', 12108, -70293, -71029, -1416, 0, 0),
-('Krateis Cube -> Fantasy Isle', 12109, -59224, -56837, -2032, 0, 0);
+('Krateis Cube -> Fantasy Isle', 12109, -59224, -56837, -2032, 0, 0),
+('Demon Fort -> Fortress West Gate', 12110, 98920, -56423, -624, 0, 0),
+('Demon Fort -> Fortress East Gate', 12111, 102390, -54320, -632, 0, 0),
+('Demon Fort -> Rune Town Square', 12112, 43889, -49101, -792, 0, 0),
+('Demon Fort -> Goddard Town Square', 12113, 147728, -56331, -2776, 0, 0),
+('Demon Fort -> Swamp of Screams', 12114, 69340, -50203, -3288, 500, 0),
+('Demon Fort -> Valley of Saints', 12115, 65307, -71445, -3688, 500, 0),
+('Demon Fort -> Entrance to the Forge of the Gods', 12116, 169018, -116303, -2432, 500, 0),
+('Demon Fort -> Wall of Argos', 12117, 165054, -47861, -3560, 500, 0);
