@@ -766,7 +766,7 @@
   <set name="aggroPoints" val="666"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0">
-      <mul order="0x30" stat="bowWpnVuln" val="0.5"/>
+      <mul order="0x30" stat="bowWpnVuln" val="0.7"/>
     </effect>
   </for>
 </skill>
@@ -786,8 +786,8 @@
   <set name="aggroPoints" val="666"/>
   <for>
     <effect name="Buff" time="15" count="1" val="0">
-      <mul order="0x30" stat="bowWpnVuln" val="0.1"/>
-      <mul order="0x30" stat="mAtk" val="0.1"/>
+      <mul order="0x30" stat="bowWpnVuln" val="0.01"/>
+      <mul order="0x30" stat="mAtk" val="0.01"/>
     </effect>
   </for>
 </skill>
