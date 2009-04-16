@@ -24,6 +24,7 @@ import net.sf.l2j.gameserver.model.L2Skill;
 import net.sf.l2j.gameserver.model.actor.L2Character;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.model.itemcontainer.Inventory;
+import net.sf.l2j.gameserver.model.zone.L2ZoneType;
 import net.sf.l2j.gameserver.model.zone.type.L2FishingZone;
 import net.sf.l2j.gameserver.model.zone.type.L2WaterZone;
 import net.sf.l2j.gameserver.network.SystemMessageId;
@@ -108,57 +109,93 @@ public class Fishing implements ISkillHandler
 			if (!player.isGM())
 				return;
 		}
+		if (player.isInsideZone(L2Character.ZONE_WATER))
+		{
+			// You can't fish in water
+			player.sendPacket(new SystemMessage(SystemMessageId.CANNOT_FISH_UNDER_WATER));
+			if (!player.isGM())
+				return;
+		}
 		/*
 		 * If fishing is enabled, here is the code that was striped from
 		 * startFishing() in L2PcInstance. Decide now where will the hook be
 		 * cast...
 		 */
-		int rnd = Rnd.get(200) + 200;
+		int rnd = Rnd.get(150) + 50;
 		double angle = Util.convertHeadingToDegree(player.getHeading());
 		double radian = Math.toRadians(angle);
 		double sin = Math.sin(radian);
 		double cos = Math.cos(radian);
-		int x1 = (int) (cos * rnd);
-		int y1 = (int) (sin * rnd);
-		int x = player.getX() + x1;
-		int y = player.getY() + y1;
-		int z = player.getZ() - 30;
+		int x = player.getX() + (int) (cos * rnd);
+		int y = player.getY() + (int) (sin * rnd);
+		int z = player.getZ() + 50;
 		/*
 		 * ...and if the spot is in a fishing zone. If it is, it will then
 		 * position the hook on the water surface. If not, you have to be GM to
 		 * proceed past here... in that case, the hook will be positioned using
 		 * the old Z lookup method.
 		 */
-		L2FishingZone aimingTo = ZoneManager.getInstance().getFishingZone(x, y, z);
-		L2WaterZone water = ZoneManager.getInstance().getWaterZone(x, y, z);
-		if (aimingTo != null && water != null && (GeoData.getInstance().canSeeTarget(player.getX(), player.getY(), player.getZ() + 50, x, y, water.getWaterZ() - 50)))
+		L2FishingZone aimingTo = null;
+		L2WaterZone water = null;
+		boolean canFish = false;
+		for (L2ZoneType zone : ZoneManager.getInstance().getZones(x, y))
 		{
-			z = water.getWaterZ() + 10;
-			// player.sendMessage("Hook x,y: " + x + "," + y + " - Water Z,
-			// Player Z:" + z + ", " + player.getZ()); //debug line, shows hook
-			// landing related coordinates. Uncoment if needed.
+			if (zone instanceof L2FishingZone)
+			{
+				aimingTo = (L2FishingZone)zone;
+				continue;
+			}
+			if (zone instanceof L2WaterZone)
+			{
+				water = (L2WaterZone)zone;
+			}
 		}
-		else if (aimingTo != null && GeoData.getInstance().canSeeTarget(player.getX(), player.getY(), player.getZ() + 50, x, y, aimingTo.getWaterZ() - 50))
-			z = aimingTo.getWaterZ() + 10;
-		else
+		if (aimingTo != null)
+		{
+			// fishing zone found, we can fish here
+			if (Config.GEODATA > 0)
+			{
+				// geodata enabled, checking if we can see end of the pole
+				if (GeoData.getInstance().canSeeTarget(player.getX(), player.getY(), z, x, y, z))
+				{
+					// finding z level for hook
+					if (water != null)
+					{
+						// water zone exist
+						if (GeoData.getInstance().getHeight(x, y, z) < water.getWaterZ())
+						{
+							// water Z is higher than geo Z
+							z = water.getWaterZ() + 10;
+							canFish = true;
+						}
+					}
+					else
+					{
+						// no water zone, using fishing zone
+						if (GeoData.getInstance().getHeight(x, y, z) < aimingTo.getWaterZ())
+						{
+							// fishing Z is higher than geo Z
+							z = aimingTo.getWaterZ() + 10;
+							canFish = true;
+						}
+					}
+				}
+			}
+			else
+			{
+				// geodata disabled
+				// if water zone exist using it, if not - using fishing zone
+				if (water != null)
+					z = water.getWaterZ() + 10;
+				else
+					z = aimingTo.getWaterZ() + 10;
+				canFish = true;
+			}
+		}
+		if (!canFish)
 		{
 			// You can't fish here
 			player.sendPacket(new SystemMessage(SystemMessageId.CANNOT_FISH_HERE));
-			if (!player.isGM())
-			{
-				return;
-			}
-		}
-		/*
-		 * Of course since you can define fishing water volumes of any height,
-		 * the function needs to be changed to cope with that. Still, this is
-		 * assuming that fishing zones water surfaces, are always above "sea
-		 * level".
-		 */
-		if (player.getZ() <= -3800 || player.getZ() < (z - 32))
-		{
-			// You can't fish in water
-			player.sendPacket(new SystemMessage(SystemMessageId.CANNOT_FISH_UNDER_WATER));
 			if (!player.isGM())
 				return;
 		}
