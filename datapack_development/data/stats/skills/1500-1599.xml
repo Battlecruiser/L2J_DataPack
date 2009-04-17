@@ -73,10 +73,10 @@
   <set name="aggroPoints" val="655"/>
   <for>
     <effect count="1" name="Buff" time="2400" val="0" stackOrder="99" stackType="shieldProbUp">
-      <mul order="0x30" stat="rShld" val="1.8"/>
+      <mul order="0x30" stat="rShld" val="1.3"/>
     </effect>
     <effect count="1" name="Debuff" time="2400" val="0" stackOrder="99" stackType="sdef_up" noicon="1"> <!-- temp fix (debuff type) to have working stack -->
-      <mul order="0x30" stat="sDef" val="2"/>
+      <mul order="0x30" stat="sDef" val="1.5"/>
     </effect>
   </for>
 </skill>
@@ -93,7 +93,7 @@
   <set name="aggroPoints" val="655"/>
   <for>
     <effect count="1" name="Buff" time="2400" val="0" stackOrder="99" stackType="speed_up">
-       <add order="0x40" stat="runSpd" val="33"/>
+      <mul order="0x30" stat="runSpd" val="1.33"/>
     </effect>
     <effect count="1" name="Debuff" time="2400" val="0" stackOrder="99" stackType="rEvas" noicon="1"> <!-- temp fix (debuff type) to have working stack -->
       <add order="0x40" stat="rEvas" val="4"/>

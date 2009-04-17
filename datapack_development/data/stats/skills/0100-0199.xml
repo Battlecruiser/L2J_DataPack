@@ -850,7 +850,7 @@
 </skill>
 <skill id="153" levels="4" name="Shield Mastery">
   <table name="#rShld"> 1.5 1.7 1.85 2 </table>
-  <table name="#sDef"> 30 40 50 60 </table>
+  <table name="#sDef"> 1.30 1.40 1.50 1.60 </table>
   <table name="#Pdef"> 1 1 1.10 1.10 </table>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
@@ -859,7 +859,7 @@
   <set name="target" val="TARGET_SELF"/>
   <for>
     <mul order="0x30" stat="rShld" val="#rShld"/>
-    <add order="0x40" stat="sDef" val="#sDef"/>
+    <mul order="0x30" stat="sDef" val="#sDef"/>
     <mul order="0x30" stat="pDef" val="#Pdef">
       <and>
         <using kind="Shield"/>
