@@ -93,7 +93,7 @@
   <set name="effectRange" val="1250"/>
   <for>
     <effect count="7" name="DamOverTime" time="3" val="#damage" abnormal="bleeding">
-      <sub order="0x40" stat="runSpd" val="25"/>
+      <mul order="0x30" stat="runSpd" val="0.8"/>
     </effect>
   </for>
 </skill>
@@ -678,7 +678,7 @@
   <set name="castRange" val="2000"/>
   <set name="effectRange" val="2500"/>
   <for>
-    <!-- Retail 49 * 3 units, update is every 3 seconds -->
+    <!-- Retail Values: 49 * 3 Sec -->
     <effect count="1200" name="DamOverTime" time="3" val="147" abnormal="poison" stackOrder="1" stackType="poison"/>
   </for>
 </skill>

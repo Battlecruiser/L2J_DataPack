@@ -832,7 +832,7 @@
   <table name="#mpConsume_Init"> 7 9 13 16 18 21 </table>
   <table name="#mpConsume"> 27 36 52 61 71 82 </table>
   <table name="#magicLvl"> 25 35 48 56 64 74 </table>
-  <table name="#dmg"> 54 72 93 114 132 144 </table>
+  <table name="#dmg"> 72 96 123 150 174 189 </table>
   <table name="#abnormalLvl"> 3 4 5 6 7 8 </table>
   <set name="abnormalLvl" val="#abnormalLvl"/>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
@@ -851,7 +851,7 @@
   <set name="castRange" val="500"/>
   <set name="effectRange" val="1000"/>
   <for>
-    <!-- retail value: 18 24 31 38 44 48/sec; stat update every 3 sec -->
+    <!-- Retail Values CT2.1: 24 32 41 50 58 63 * 3 Sec -->
     <effect count="10" name="DamOverTime" time="3" val="#dmg" abnormal="poison"/>
   </for>
 </skill>
@@ -859,7 +859,7 @@
   <table name="#mpConsume_Init"> 2 4 6 8 10 12 14  </table>
   <table name="#mpConsume"> 8 16 21 31 38 46 53 </table>
   <table name="#magicLvl"> 7 20 30 44 52 62 72 </table>
-  <table name="#dmg"> 24 54 72 93 114 132 144 </table>
+  <table name="#dmg"> 63 72 93 123 150 174 189 </table>
   <table name="#abnormalLvl"> 1 3 4 5 6 7 8 </table>
   <set name="abnormalLvl" val="#abnormalLvl"/>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
@@ -877,7 +877,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <!-- retail value: 8 18 24 31 38 44 48/sec; stat update every 3 sec -->
+    <!-- Retail Values CT2.1: 21 24 32 41 50 58 63 * 3 Sec -->
     <effect count="10" name="DamOverTime" time="3" val="#dmg" abnormal="poison"/>
   </for>
 </skill>
