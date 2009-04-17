@@ -36,7 +36,7 @@
   <set name="staticReuse" val="true"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
-      <mul order="0x30" stat="pReuse" val="#pReuseRate"/> <!-- Needs core support -->
+      <mul order="0x30" stat="pReuse" val="#pReuseRate"/>
     </effect>
   </for>
 </skill>

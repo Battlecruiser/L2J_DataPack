@@ -836,7 +836,7 @@
 <skill id="1439" levels="5" name="Curse of Divinity">
   <!-- CT2.2 retail partially confirmed -->
   <table name="#mpConsume"> 62 64 65 67 69 </table>
-  <table name="#power"> 96 99 102 105 108</table>
+  <table name="#power"> 96 99 102 105 108 </table>
   <table name="#magicLvl"> 66 68 70 72 74 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
@@ -846,7 +846,7 @@
   <set name="reuseDelay" val="15000"/>
   <set name="element" val="6"/> <!-- Dark -->
   <set name="coolTime" val="320"/>
-  <set name="skillType" val="MDAM"/>   <!-- missing core support for additional damage based on target buffs count -->
+  <set name="skillType" val="MDAM"/> <!-- missing core support for additional damage based on target buffs count -->
   <set name="lvlDepend" val="2"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1090,7 +1090,6 @@
   </cond>
 </skill>
 <skill id="1452" levels="1" name="Count of Fire">
-  <!-- Needs retail accuracy check. -->
   <set name="magicLvl" val="79"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="109"/>
@@ -1107,7 +1106,7 @@
   <set name="castRange" val="900"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="15" name="DamOverTime" time="1" val="100"/>
+    <effect count="15" name="DamOverTime" time="1" val="173"/>
   </for>
 </skill>
 <skill id="1453" levels="1" name="Ice Vortex Crusher">
@@ -1131,7 +1130,6 @@
   </cond>
 </skill>
 <skill id="1454" levels="1" name="Diamond Dust">
-  <!-- Needs Major retail accuracy check -->
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="hitTime" val="3000"/>
@@ -1139,19 +1137,20 @@
   <set name="mpConsume" val="109"/>
   <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="80"/> <!-- Guesing -->
+  <set name="power" val="70"/>
+  <set name="effectPower" val="80"/> <!-- Guesing -->
   <set name="reuseDelay" val="20000"/> <!-- Guess -->
   <set name="skillRadius" val="250"/>
-  <set name="skillType" val="DEBUFF"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="effectType" val="DEBUFF"/>
   <set name="target" val="TARGET_AURA"/>
   <for>
     <effect count="1" name="Debuff" time="30" val="0" stackOrder="0.7" stackType="RunSpeedDown">
-      <mul order="0x30" stat="runSpd" val="0.7"/>
+      <mul order="0x30" stat="runSpd" val="0.6"/>
     </effect>
   </for>
 </skill>
 <skill id="1455" levels="1" name="Throne of Ice">
-  <!-- Needs retail accuracy check. -->
   <set name="magicLvl" val="79"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="109"/>
@@ -1169,7 +1168,7 @@
   <set name="effectType" val="DOT"/>
   <set name="effectPower" val="40"/> <!-- Guess -->
   <for>
-    <effect count="15" name="DamOverTime" time="1" val="100"/>
+    <effect count="15" name="DamOverTime" time="1" val="173"/>
   </for>
 </skill>
 <skill id="1456" levels="1" name="Wind Vortex Slug">
@@ -1211,7 +1210,6 @@
   </for>
 </skill>
 <skill id="1458" levels="1" name="Throne of Wind">
-  <!-- Needs retail accuracy check. -->
   <set name="magicLvl" val="79"/>
   <set name="lvlDepend" val="1"/>
   <set name="mpConsume" val="109"/>
@@ -1228,7 +1226,7 @@
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <for>
-    <effect count="15" name="DamOverTime" time="1" val="100"/>
+    <effect count="15" name="DamOverTime" time="1" val="173"/>
   </for>
 </skill>
 <skill id="1459" levels="1" name="Divine Power">
@@ -1395,7 +1393,7 @@
   <set name="aggroPoints" val="379"/>
   <for>
     <effect count="1" name="Buff" time="120" val="0">
-      <mul order="0x30" stat="mDef" val="1.3"/>
+      <add order="0x40" stat="mDef" val="3000"/>
     </effect>
   </for>
 </skill>
@@ -1437,7 +1435,6 @@
   </cond>
 </skill>
 <skill id="1474" levels="1" name="Abyssal Power">
-  <!-- Needs retail accuracy check -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
