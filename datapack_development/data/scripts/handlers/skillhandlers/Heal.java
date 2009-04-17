@@ -174,7 +174,7 @@ public class Heal implements ISkillHandler
 				{
 					if (activeChar instanceof L2PcInstance && activeChar != target)
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.S2_HP_RESTORED_BY_S1);
+						SystemMessage sm = new SystemMessage(SystemMessageId.S2_HP_RESTORED_BY_C1);
 						sm.addString(activeChar.getName());
 						sm.addNumber((int) hp);
 						target.sendPacket(sm);
