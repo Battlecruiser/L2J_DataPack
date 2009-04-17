@@ -1414,7 +1414,7 @@
   <set name="effectRange" val="200"/>
   <for>
     <effect count="7" name="DamOverTime" time="3" val="#damage" abnormal="bleeding">
-      <sub order="0x40" stat="runSpd" val="25"/>
+      <mul order="0x30" stat="runSpd" val="0.8"/>
     </effect>
   </for>
 </skill>

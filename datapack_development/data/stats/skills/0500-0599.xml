@@ -212,6 +212,7 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
 </skill>
 <skill id="509" levels="34" name="Bleeding Shot" enchantLevels1="30" enchantLevels2="30" >
+  <table name="#dmg"> 132 132 132 132 132 132 132 132 132 162 162 162 162 162 162 162 162 162 162 186 186 186 186 186 186 186 186 186 186 201 201 201 201 201 </table>
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <table name="#ench1Power"> 2325 2341 2357 2373 2389 2405 2420 2436 2452 2468 2484 2500 2515 2531 2547 2563 2579 2595 2610 2626 2642 2658 2674 2690 2705 2721 2737 2753 2769 2784 </table>
   <table name="#ench2MpConsume"> 107 105 103 102 100 98 96 94 92 91 89 87 85 83 82 80 78 76 74 72 71 69 67 65 63 62 60 58 56 54 </table>
@@ -244,8 +245,9 @@
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
-    <effect count="7" name="DamOverTime" time="3" val="74" abnormal="bleeding">
-      <sub order="0x40" stat="runSpd" val="25"/>
+    <!-- Retail Values CT2.1: 44 44 44 44 44 44 44 44 44 54 54 54 54 54 54 54 54 54 54 62 62 62 62 62 62 62 62 62 62 67 67 67 67 67 * 3 Sec -->
+    <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding">
+      <mul order="0x30" stat="runSpd" val="0.8"/>
     </effect>
   </for>
 </skill>
@@ -1392,7 +1394,7 @@
   <set name="effectPower" val="40"/> <!-- Base Land Rate --> <!-- Guess -->
   <for>
     <effect count="5" name="DamOverTime" time="3" val="#bleeddmg" abnormal="bleeding">
-      <sub order="0x40" stat="runSpd" val="25"/>
+      <mul order="0x30" stat="runSpd" val="0.8"/>
     </effect>
   </for>
 </skill>

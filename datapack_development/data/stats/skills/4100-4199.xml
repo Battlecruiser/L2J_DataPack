@@ -830,7 +830,7 @@
   <set name="target" val="TARGET_AURA"/>
   <for>
     <effect count="2" name="DamOverTime" time="3" val="#damage" abnormal="bleeding">
-      <sub order="0x40" stat="runSpd" val="25"/>
+      <mul order="0x30" stat="runSpd" val="0.8"/>
     </effect>
   </for>
 </skill>
@@ -1521,7 +1521,7 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="7" name="DamOverTime" time="3" val="#damage" abnormal="bleeding">
-      <sub order="0x40" stat="runSpd" val="25"/>
+      <mul order="0x30" stat="runSpd" val="0.8"/>
     </effect>
   </for>
 </skill>

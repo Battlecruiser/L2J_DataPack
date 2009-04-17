@@ -1412,8 +1412,7 @@
   <enchant1 name="effectPower" val="#ench1effectPower"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
-    <!-- retail value: 38 44 48/sec; stat update every 3 sec -->
-    <!-- Verified by slyce -  Interlude - Aug 2007 -->
+    <!-- Retail Values IL: 38 44 48 * 3 sec -->
     <effect count="10" name="DamOverTime" time="3" val="#dmg" abnormal="poison"/>
   </for>
 </skill>
@@ -1628,7 +1627,7 @@
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <table name="#ench1MpConsume"> 88 86 85 83 82 80 79 77 76 74 73 71 70 68 67 65 64 62 61 59 58 56 55 53 52 50 49 47 46 44 </table>
   <table name="#magicLvl"> 24 32 49 58 66 70 </table>
-  <table name="#dmg"> 39 51 66 81 93 102 </table>
+  <table name="#dmg"> 75 102 132 156 186 201 </table>
   <table name="#mpConsume"> 28 37 60 73 83 89 </table>
   <table name="#abnormalLvl"> 3 4 5 6 7 8 </table>
   <set name="abnormalLvl" val="#abnormalLvl"/>
@@ -1648,10 +1647,9 @@
   <set name="effectRange" val="400"/>
   <enchant1 name="mpConsume" val="#ench1MpConsume"/>
   <for>
-    <!-- retail value: 13 17 22 27 31 34/sec; stat update every 3 sec -->
-    <!-- Verified by slyce -  Interlude - Aug 2007 -->
+    <!-- Retail Values CT2.1: 25 34 44 52 62 67 * 3 Sec -->
     <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding">
-      <sub order="0x40" stat="runSpd" val="25"/>
+      <mul order="0x30" stat="runSpd" val="0.8"/>
     </effect>
   </for>
 </skill>

@@ -35,7 +35,7 @@
   <set name="castRange" val="-1"/>
   <for>
     <effect count="7" name="DamOverTime" time="3" val="66" abnormal="bleeding">
-      <sub order="0x40" stat="runSpd" val="25"/>
+      <mul order="0x30" stat="runSpd" val="0.8"/>
     </effect>
   </for>
 </skill>
@@ -200,7 +200,7 @@
   <set name="effectPower" val="100"/>
   <for>
     <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding">
-      <sub order="0x40" stat="runSpd" val="25"/>
+      <mul order="0x30" stat="runSpd" val="0.8"/>
     </effect>
   </for>
 </skill>
@@ -219,7 +219,7 @@
   <set name="effectPower" val="100"/>
   <for>
     <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding">
-      <sub order="0x40" stat="runSpd" val="25"/>
+      <mul order="0x30" stat="runSpd" val="0.8"/>
     </effect>
   </for>
 </skill>
@@ -388,7 +388,7 @@
   <set name="castRange" val="600"/>
 </skill>
 <skill id="3040" levels="6" name="Special Ability: Critical Poison">
-<!-- Fists only -->
+  <!-- Fists only -->
   <table name="#dmg"> 92 92 114 114 114 144 </table>
   <table name="#abnormalLvl"> 5 5 6 6 6 7 </table>
   <set name="abnormalLvl" val="#abnormalLvl"/>
@@ -405,7 +405,7 @@
   </for>
 </skill>
 <skill id="3041" levels="6" name="Special Ability: Critical Poison">
-<!-- Daggers only -->
+  <!-- Daggers only -->
   <table name="#dmg"> 92 92 114 114 114 144 </table>
   <table name="#abnormalLvl"> 5 5 6 6 6 7 </table>
   <set name="abnormalLvl" val="#abnormalLvl"/>
@@ -552,7 +552,7 @@
   <set name="effectPower" val="100"/>
   <for>
     <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding">
-      <sub order="0x40" stat="runSpd" val="25"/>
+      <mul order="0x30" stat="runSpd" val="0.8"/>
     </effect>
   </for>
 </skill>
@@ -588,7 +588,7 @@
   <set name="effectPower" val="100"/>
   <for>
     <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding">
-      <sub order="0x40" stat="runSpd" val="25"/>
+      <mul order="0x30" stat="runSpd" val="0.8"/>
     </effect>
   </for>
 </skill>

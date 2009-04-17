@@ -1784,7 +1784,7 @@
 <skill id="495" levels="10" name="Blade Rush">
   <table name="#abnormalLvl"> 6 6 7 7 7 7 7 8 8 8 </table>
   <table name="#castRange"> 500 500 500 500 500 500 600 600 600 600 </table>
-  <table name="#dmg"> 39 51 66 81 93 102 111 120 129 138 </table>
+  <table name="#dmg"> 321 321 369 369 369 369 369 402 402 402 </table>
   <table name="#effectRange"> 1000 1000 1000 1000 1000 1000 1100 1100 1100 1100 </table>
   <table name="#magicLvl"> 55 57 59 61 63 66 68 70 72 74 </table>
   <table name="#mpConsume"> 65 70 73 75 77 80 83 85 88 90 </table>
@@ -1810,11 +1810,11 @@
     <target mindistance="200"/>
   </cond>
   <for>
-    <effect count="1" name="EnemyCharge" time="1" val="0"/>
-    <!-- retail value: 13 17 22 27 31 34/sec; stat update every 3 sec -->
+    <!-- Retail Values CT2.1: 107 107 123 123 123 123 123 134 134 134 * 3 Sec --> <!-- Guess if *1 or *3 Sec -->
     <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding">
-      <sub order="0x40" stat="runSpd" val="25"/>
+      <mul order="0x30" stat="runSpd" val="0.8"/>
     </effect>
+    <effect count="1" name="EnemyCharge" time="1" val="0"/>
   </for>
 </skill>
 <skill id="496" levels="31" name="Slashing Blade" enchantLevels1="30" enchantLevels2="30" >
@@ -1905,7 +1905,7 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
     <effect count="7" name="DamOverTime" time="3" val="74" abnormal="bleeding">
-      <sub order="0x40" stat="runSpd" val="25"/>
+      <mul order="0x30" stat="runSpd" val="0.8"/>
     </effect>
   </for>
 </skill>
