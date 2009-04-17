@@ -655,8 +655,6 @@
   <table name="#ench2MpConsume_Init"> 10 10 10 10 10 9 9 9 9 9 8 8 8 8 8 8 7 7 7 7 7 6 6 6 6 6 6 5 5 5 </table>
   <table name="#mpConsume_Init"> 5 7 9 11 </table>
   <table name="#mpConsume"> 18 28 35 41 </table>
-  <!-- C5 decreased resistance values by unknown amount -->
-  <table name="#vuln"> 0.8 0.7 0.6 0.5 </table>
   <table name="#stack"> 20 30 40 50 </table>
   <table name="#aggro"> 243 379 457 532 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
@@ -674,18 +672,18 @@
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#stack" stackType="MentalShield">
-      <mul order="0x30" stat="rootVuln" val="#vuln"/>
-      <mul order="0x30" stat="sleepVuln" val="#vuln"/>
-      <mul order="0x30" stat="confusionVuln" val="#vuln"/>
-      <mul order="0x30" stat="derangementVuln" val="#vuln"/>
+      <mul order="0x30" stat="rootVuln" val="0.8"/>
+      <mul order="0x30" stat="sleepVuln" val="0.8"/>
+      <mul order="0x30" stat="confusionVuln" val="0.8"/>
+      <mul order="0x30" stat="derangementVuln" val="0.8"/>
     </effect>
   </for>
   <enchant1for>
     <effect count="1" name="Buff" time="#ench1time" val="0" stackOrder="50" stackType="MentalShield">
-      <mul order="0x30" stat="rootVuln" val="0.5"/>
-      <mul order="0x30" stat="sleepVuln" val="0.5"/>
-      <mul order="0x30" stat="confusionVuln" val="0.5"/>
-      <mul order="0x30" stat="derangementVuln" val="0.5"/>
+      <mul order="0x30" stat="rootVuln" val="0.8"/>
+      <mul order="0x30" stat="sleepVuln" val="0.8"/>
+      <mul order="0x30" stat="confusionVuln" val="0.8"/>
+      <mul order="0x30" stat="derangementVuln" val="0.8"/>
     </effect>
   </enchant1for>
 </skill>

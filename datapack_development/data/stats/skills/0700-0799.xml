@@ -466,7 +466,7 @@
     <effect count="1" name="ImmobileBuff" time="30" val="0" stackOrder="1" stackType="pd_up_special">
       <add order="0x40" stat="pDef" val="3600"/>
       <add order="0x40" stat="mDef" val="2700"/>
-      <mul order="0x30" stat="cancelVuln" val="0.9"/> <!-- value to be confirmed -->
+      <mul order="0x30" stat="cancelVuln" val="0.2"/>
     </effect>
   </for>
 </skill>
@@ -651,7 +651,7 @@
     <effect count="1" name="ImmobileBuff" time="30" val="0" stackOrder="1" stackType="pd_up_special">
       <add order="0x40" stat="pDef" val="3600"/>
       <add order="0x40" stat="mDef" val="2700"/>
-      <mul order="0x30" stat="cancelVuln" val="0.9"/> <!-- value to be confirmed -->
+      <mul order="0x30" stat="cancelVuln" val="0.2"/>
     </effect>
   </for>
 </skill>
@@ -724,7 +724,7 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="760" levels="1" name="Anti Magic Armor">
-  <!-- caramon81 -->
+  <!-- Done by caramon81 -->
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="hitTime" val="1000"/>
@@ -735,7 +735,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
-    <effect count="1" name="Buff" time="30" val="0">
+    <effect count="1" name="Buff" time="30" val="0" stackOrder="1" stackType="pd_up_special">
       <add order="0x40" stat="mDef" val="5000"/>
     </effect>
   </for>
