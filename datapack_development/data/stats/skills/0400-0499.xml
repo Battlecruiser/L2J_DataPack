@@ -1557,7 +1557,7 @@
     <effect count="1" name="Buff" time="120" val="0">
       <mul order="0x30" stat="rCrit" val="#amount"/>
       <mul order="0x30" stat="cAtkAdd" val="#amount"/>
-      <mul order="0x30" stat="pDef" val="1.20"/>
+      <mul order="0x30" stat="pDef" val="0.80"/>
     </effect>
   </for>
 </skill>

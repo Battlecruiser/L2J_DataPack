@@ -65,11 +65,11 @@ public class RollingDice implements IItemHandler
 				activeChar.sendPacket(new SystemMessage(SystemMessageId.YOU_MAY_NOT_THROW_THE_DICE_AT_THIS_TIME_TRY_AGAIN_LATER));
 				return;
 			}
-			
+
 			Dice d = new Dice(activeChar.getObjectId(), item.getItemId(), number, activeChar.getX() - 30, activeChar.getY() - 30, activeChar.getZ());
 			Broadcast.toSelfAndKnownPlayers(activeChar, d);
 			
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_ROLLED_S2);
+			SystemMessage sm = new SystemMessage(SystemMessageId.C1_ROLLED_S2);
 			sm.addString(activeChar.getName());
 			sm.addNumber(number);
 			

@@ -76,7 +76,7 @@ public class Harvest implements ISkillHandler
 		{
 			if (!(tgt instanceof L2MonsterInstance))
 				continue;
-			
+
 			_target = (L2MonsterInstance) tgt;
 			
 			if (_activeChar != _target.getSeeder())
@@ -120,7 +120,7 @@ public class Harvest implements ISkillHandler
 							_activeChar.sendPacket(smsg);
 							if (_activeChar.getParty() != null)
 							{
-								smsg = new SystemMessage(SystemMessageId.S1_HARVESTED_S3_S2S);
+								smsg = new SystemMessage(SystemMessageId.C1_HARVESTED_S3_S2S);
 								smsg.addString(_activeChar.getName());
 								smsg.addNumber(total);
 								smsg.addItemName(cropId);
