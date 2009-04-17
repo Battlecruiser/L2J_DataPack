@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 <skill id="500" levels="2" name="True Berserker">
- <!-- Needs retail value checks -->
-  <table name="#pAtk"> 1.08 1.12 </table>
-  <table name="#pAtkSpd"> 1.08 1.12 </table>
-  <table name="#accCombat"> 1 3 </table>
-  <table name="#pDef"> 0.92 0.89 </table>
-  <table name="#rEvas"> 3 4 </table>
+  <table name="#amount"> 1.05 1.08 </table>
+  <table name="#accCombat"> 2 4 </table>
+  <table name="#rEvas"> 2 4 </table>
   <table name="#dmg"> 18 21 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
@@ -14,20 +11,17 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="#dmg">
-      <mul order="0x30" stat="pAtk" val="#pAtk"/>
-      <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="#dmg"> <!-- TODO: MP is continuously consumed proportionate to user's level -->
+      <mul order="0x30" stat="pAtk" val="#amount"/>
+      <mul order="0x30" stat="pAtkSpd" val="#amount"/>
       <add order="0x40" stat="accCombat" val="#accCombat"/>
-      <mul order="0x30" stat="pDef" val="#pDef"/>
+      <mul order="0x30" stat="pDef" val="0.90"/>
       <sub order="0x40" stat="rEvas" val="#rEvas"/>
     </effect>
   </for>
 </skill>
 <skill id="501" levels="12" name="Violent Temper">
- <!-- Needs retail value checks -->
   <table name="#mpConsume"> 22 24 25 27 28 29 30 31 32 33 34 34 </table>
-  <table name="#mAtkSpd"> 0.98 0.96 0.94 0.92 0.9 0.88 0.86 0.84 0.82 0.8 0.78 0.76 </table>
-  <table name="#pDef"> 0.98 0.96 0.94 0.92 0.9 0.88 0.86 0.84 0.82 0.8 0.78 0.76 </table>
   <set name="power" val="80"/> <!-- Guess -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_ONE"/>
@@ -40,8 +34,8 @@
   <set name="reuseDelay" val="6000"/>
   <for>
     <effect count="1" name="Debuff" time="15" val="0">
-      <mul order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
-      <mul order="0x30" stat="pDef" val="#pDef"/>
+      <mul order="0x30" stat="mAtkSpd" val="0.85"/>
+      <mul order="0x30" stat="pDef" val="0.77"/>
     </effect>
   </for>
 </skill>
@@ -487,6 +481,8 @@
   <table name="#mpConsume"> 8 10 13 15 </table>
   <table name="#castRange"> 600 700 800 900 </table>
   <table name="#effectRange"> 900 1000 1100 1200 </table>
+  <table name="#bowWpnVuln"> 1.12 1.16 1.20 1.24 </table>
+  <table name="#crossbowWpnVuln"> 1.16 1.24 1.32 1.40 </table>
   <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="hitTime" val="1500"/>
@@ -500,8 +496,8 @@
   <set name="reuseDelay" val="8000"/>
   <for>
     <effect count="1" name="Debuff" time="15" val="0">
-      <mul order="0x30" stat="bowWpnVuln" val="1.3"/> <!-- Needs to be checked -->
-      <mul order="0x30" stat="crossbowWpnVuln" val="1.3"/> <!-- Needs to be checked -->
+      <mul order="0x30" stat="bowWpnVuln" val="#bowWpnVuln"/>
+      <mul order="0x30" stat="crossbowWpnVuln" val="#crossbowWpnVuln"/>
     </effect>
   </for>
 </skill>
@@ -545,7 +541,7 @@
   <set name="npcId" val="#npcId"/>
 </skill>
 <skill id="526" levels="1" name="Enuma Elish">
-<!-- Needs retail accuracy check -->
+  <!-- Needs retail accuracy check -->
   <set name="mpConsume" val="78"/>
   <set name="power" val="6060"/>
   <set name="hitTime" val="1080"/>

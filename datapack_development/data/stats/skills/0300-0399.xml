@@ -1933,7 +1933,8 @@
       <mul order="0x30" stat="pDef" val="0.75"/>
       <mul order="0x30" stat="mDef" val="0.75"/>
       <mul order="0x30" stat="debuffVuln" val="0"/>
-      <!-- Missing Cancel resistance +??, Heals are ??% more effective  (custom value) -->
+      <mul order="0x30" stat="cancelVuln" val="0.2"/>
+      <mul order="0x30" stat="gainHp" val="2"/>
     </effect>
   </for>
 </skill>

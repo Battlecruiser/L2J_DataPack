@@ -236,7 +236,7 @@
   <set name="bestowed" val="true"/>
   <for>
     <effect count="1" name="Buff" time="60" val="0">
-      <mul order="0x30" stat="pAtkSpd" val="1.12">
+      <mul order="0x30" stat="pAtkSpd" val="1.15">
         <using kind="Bow,Crossbow"/>
       </mul>
     </effect>
@@ -254,7 +254,7 @@
   <set name="bestowed" val="true"/>
   <for>
     <effect count="1" name="Buff" time="60" val="0">
-      <add order="0x40" stat="runSpd" val="50"/>
+      <add order="0x40" stat="runSpd" val="40"/>
     </effect>
   </for>
 </skill>
