@@ -215,10 +215,10 @@
   <set name="bestowed" val="true"/>
   <for>
     <effect count="1" name="Buff" time="60" val="0">
-      <mul order="0x30" stat="pReuse" val="0.9"> <!-- Guess -->
+      <mul order="0x30" stat="pReuse" val="0.85">
         <using kind="Bow"/>
       </mul>
-      <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.97"> <!-- Guess -->
+      <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95">
         <using kind="Bow"/>
       </mul>
     </effect>
@@ -406,8 +406,7 @@
   <set name="castRange" val="-1"/>
 </skill>
 <skill id="5447" levels="7" name="Paralysis">
-  <!-- Needs to be verified -->
-  <table name="#dmg"> 5 10 15 20 25 30 35 </table> <!-- guess -->
+  <table name="#dmg"> 76 76 76 76 83 83 83 </table>
   <set name="target" val="TARGET_ONE"/>
   <set name="element" val="6"/> <!-- Dark -->
   <set name="skillType" val="PARALYZE"/>

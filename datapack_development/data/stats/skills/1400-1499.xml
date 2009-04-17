@@ -1469,8 +1469,7 @@
   <!-- Done by DJ MELERIX -->
   <table name="#magicLvl"> 40 49 58 </table>
   <table name="#mpConsume"> 70 88 107 </table>
-  <table name="#pAtk"> 196 246 296 </table> <!-- Guess Lvl 1 & 2 -->
-  <table name="#rCrit"> 38 48 58 </table> <!-- Guess Lvl 1 & 2 -->
+  <table name="#amount"> 1.30 1.40 1.50 </table>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="hitTime" val="2500"/>
@@ -1484,9 +1483,9 @@
   <set name="target" val="TARGET_PARTY"/>
   <for>
     <effect name="Buff" time="10" count="1" val="0">
-      <add order="0x40" stat="pAtk" val="#pAtk"/>
-      <add order="0x40" stat="rCrit" val="#rCrit"/>
-      <!-- Missing Critical Damage +? -->
+      <add order="0x40" stat="pAtk" val="#amount"/>
+      <add order="0x40" stat="rCrit" val="#amount"/>
+      <add order="0x40" stat="cAtk" val="#amount"/>
     </effect>
   </for>
 </skill>
@@ -1518,8 +1517,8 @@
   <!-- Done by Misanthrope -->
   <table name="#magicLvl"> 46 60 </table>
   <table name="#mpConsume"> 82 110 </table>
-  <table name="#mDef"> 800 1350 </table> <!-- Guess Lvl 1 -->
-  <table name="#pDef"> 1200 1800 </table> <!-- Guess Lvl 1 -->
+  <table name="#mAtk"> 1200 1800 </table>
+  <table name="#mDef"> 900 1350 </table>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="hitTime" val="2500"/>
@@ -1533,8 +1532,8 @@
   <set name="target" val="TARGET_PARTY"/>
   <for>
     <effect name="Buff" time="10" count="1" val="0" stackOrder="1" stackType="pd_up_special">
+      <add order="0x40" stat="mAtk" val="#mAtk"/>
       <add order="0x40" stat="mDef" val="#mDef"/>
-      <add order="0x40" stat="pDef" val="#pDef"/>
     </effect>
   </for>
 </skill>
@@ -1542,8 +1541,7 @@
   <!-- Done by DJ MELERIX -->
   <table name="#magicLvl"> 55 62 68 </table>
   <table name="#mpConsume"> 100 115 127 </table>
-  <table name="#mAtkSpd"> 1.1 1.12 1.15 </table> <!-- Guess Lvl 1 & 2 -->
-  <table name="#mAtk"> 235 285 335 </table> <!-- Guess Lvl 1 & 2 -->
+  <table name="#mAtk"> 1.75 1.85 1.95 </table>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <set name="hitTime" val="2500"/>
@@ -1557,8 +1555,8 @@
   <set name="target" val="TARGET_PARTY"/>
   <for>
     <effect name="Buff" time="10" count="1" val="0">
-      <mul order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
-      <add order="0x40" stat="mAtk" val="#mAtk"/>
+      <mul order="0x30" stat="mAtkSpd" val="1.15"/>
+      <mul order="0x30" stat="mAtk" val="#mAtk"/>
       <!-- Missing Magic Critical Rate +? -->
     </effect>
   </for>
