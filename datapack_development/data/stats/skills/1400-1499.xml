@@ -1483,9 +1483,9 @@
   <set name="target" val="TARGET_PARTY"/>
   <for>
     <effect name="Buff" time="10" count="1" val="0">
-      <add order="0x40" stat="pAtk" val="#amount"/>
-      <add order="0x40" stat="rCrit" val="#amount"/>
-      <add order="0x40" stat="cAtk" val="#amount"/>
+      <mul order="0x30" stat="pAtk" val="#amount"/>
+      <mul order="0x30" stat="rCrit" val="#amount"/>
+      <mul order="0x30" stat="cAtk" val="#amount"/>
     </effect>
   </for>
 </skill>
