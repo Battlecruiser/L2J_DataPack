@@ -1683,7 +1683,7 @@
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Debuff" time="15" val="0" stackOrder="1" stackType="matkdebuff">
-      <div order="0x30" stat="mDef" val="0.77"/>
+      <mul order="0x30" stat="mDef" val="0.77"/>
     </effect>
   </for>
 </skill>
@@ -1759,12 +1759,10 @@
     </effect>
   </for>
 </skill>
-<skill id="1386" levels="10" name="Arcane Distruption">
+<skill id="1386" levels="10" name="Arcane Disruption">
   <!-- Done by KID -->
   <table name="#mpConsume"> 52 54 55 58 60 62 64 65 67 69 </table>
   <table name="#magicLvl"> 56 58 60 62 64 66 68 70 72 74 </table>
-  <!-- L2P still need to confirm mAtkSpd reduction values - says about -23% -->
-  <table name="#mAtkSpd"> 1.11 1.13 1.15 1.16 1.18 1.21 1.24 1.26 1.29 1.32 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="80"/>
@@ -1780,7 +1778,7 @@
   <set name="isDebuff" val="true"/>
   <for>
     <effect count="1" name="Debuff" time="30" val="0">
-      <div order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
+      <mul order="0x30" stat="mAtkSpd" val="0.77"/>
     </effect>
   </for>
 </skill>
@@ -1825,8 +1823,7 @@
 </skill>
 <skill id="1389" levels="3" name="Greater Shield">
   <!-- Done by KID -->
-  <!-- L2P still need to confirm pDef values -->
-  <table name="#rate"> 1.05 1.1 1.15 </table>
+  <table name="#pDef"> 1.05 1.1 1.15 </table>
   <table name="#mpConsume"> 54 62 69 </table>
   <table name="#spiritOre"> 1 2 3 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1842,7 +1839,7 @@
   <set name="effectRange" val="900"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="0" stackType="Great">
-      <mul order="0x30" stat="pDef" val="#rate"/>
+      <mul order="0x30" stat="pDef" val="#pDef"/>
     </effect>
   </for>
 </skill>
@@ -1872,7 +1869,6 @@
 <skill id="1391" levels="3" name="Earth Chant">
   <!-- Done by KID -->
   <table name="#mpConsume"> 213 244 272 </table>
-  <!-- L2P still need to confirm pDef values -->
   <table name="#pDef"> 1.05 1.1 1.15 </table>
   <table name="#spiritOre"> 4 8 12 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1896,7 +1892,6 @@
 <skill id="1392" levels="3" name="Holy Resistance">
   <!-- Done by KID -->
   <table name="#mpConsume"> 54 62 69 </table>
-  <!-- L2P still need to confirm res values -->
   <table name="#holyVuln"> 0.85 0.77 0.7 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="reuseDelay" val="7000"/>
@@ -1916,7 +1911,6 @@
 <skill id="1393" levels="3" name="Unholy Resistance">
   <!-- Done by KID -->
   <table name="#mpConsume"> 54 62 69 </table>
-  <!-- L2P still need to confirm res values -->
   <table name="#darkVuln"> 0.85 0.77 0.7 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="reuseDelay" val="7000"/>

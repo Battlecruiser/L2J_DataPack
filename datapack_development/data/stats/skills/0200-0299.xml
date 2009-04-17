@@ -1734,7 +1734,7 @@
   <set name="aggroPoints" val="#aggro"/>
   <for>
     <effect count="1" name="Buff" time="60" val="0">
-      <mul order="0x30" stat="cancelVuln" val="0.9"/> <!-- value to be confirmed -->
+      <mul order="0x30" stat="cancelVuln" val="0.6"/>
       <mul stat="stunVuln" val="#vuln" order="0x30"/>
       <mul stat="rootVuln" val="#vuln" order="0x30"/>
       <mul stat="sleepVuln" val="#vuln" order="0x30"/>
