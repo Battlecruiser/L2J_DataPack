@@ -188,7 +188,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(15);
+				String val = command.substring(14);
 				int fame = Integer.parseInt(val);
 				L2Object target = activeChar.getTarget();
 				if (target instanceof L2PcInstance)
