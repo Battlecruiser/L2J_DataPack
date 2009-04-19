@@ -1706,7 +1706,7 @@
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Debuff" time="120" val="0" stackOrder="2" stackType="surrender">
-      <mul order="0x30" stat="fireVuln" val="1.30"/>
+      <mul order="0x30" stat="fireVuln" val="1.3"/>
       <mul order="0x30" stat="waterVuln" val="0.85"/>
     </effect>
   </for>
@@ -1730,7 +1730,7 @@
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Debuff" time="120" val="0" stackOrder="2" stackType="surrender">
-      <mul order="0x30" stat="waterVuln" val="1.30"/>
+      <mul order="0x30" stat="waterVuln" val="1.3"/>
       <mul order="0x30" stat="fireVuln" val="0.85"/>
     </effect>
   </for>
@@ -1754,7 +1754,7 @@
   <set name="isMagic" val="true"/>
   <for>
     <effect count="1" name="Debuff" time="120" val="0" stackOrder="2" stackType="surrender">
-      <mul order="0x30" stat="windVuln" val="1.30"/>
+      <mul order="0x30" stat="windVuln" val="1.3"/>
       <mul order="0x30" stat="earthVuln" val="0.85"/>
     </effect>
   </for>
@@ -2004,7 +2004,7 @@
   <table name="#mpConsume"> 54 62 69 </table>
   <table name="#SpiritOre"> 1 2 3 </table>
   <table name="#MpConsumeRateMagic"> 0.96 0.93 0.9 </table>
-  <table name="#MpConsumeRate"> 0.90 0.85 0.8 </table>
+  <table name="#MpConsumeRate"> 0.9 0.85 0.8 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="#SpiritOre"/>
