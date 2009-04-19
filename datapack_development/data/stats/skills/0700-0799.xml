@@ -1053,7 +1053,7 @@
       <add order="0x40" stat="runSpd" val="10">
         <using kind="Sword,Big Sword,Blunt,Big Blunt"/>
       </add>
-      <mul order="0x30" stat="pAtkSpd" val="1.10">
+      <mul order="0x30" stat="pAtkSpd" val="1.1">
         <using kind="Sword,Big Sword,Blunt,Big Blunt"/>
       </mul>
       <add order="0x40" stat="rCrit" val="33">
@@ -1093,9 +1093,9 @@
   </cond>
   <for>
     <effect count="20" name="HealOverTime" time="3" val="150">
-      <mul order="0x30" stat="cancelVuln" val="0.40"/>
-      <mul order="0x30" stat="debuffVuln" val="0.70"/>
-      <mul order="0x30" stat="gainHp" val="1.30"/>
+      <mul order="0x30" stat="cancelVuln" val="0.4"/>
+      <mul order="0x30" stat="debuffVuln" val="0.7"/>
+      <mul order="0x30" stat="gainHp" val="1.3"/>
     </effect>
   </for>
 </skill>
@@ -1131,8 +1131,8 @@
   <for>
     <effect count="1" name="Debuff" time="120" val="0">
       <mul order="0x30" stat="maxCp" val="0.25"/>
-      <mul order="0x30" stat="debuffVuln" val="1.30"/>
-      <mul order="0x30" stat="gainHp" val="0.70"/>
+      <mul order="0x30" stat="debuffVuln" val="1.3"/>
+      <mul order="0x30" stat="gainHp" val="0.7"/>
     </effect>
   </for>
 </skill>

@@ -890,7 +890,7 @@
 </skill>
 <skill id="4642" levels="9" name="NPC Fast Spell Casting">
   <table name="#magicLvl"> 20 40 60 65 70 75 80 85 90 </table> <!-- Guess Lvl 4 to 9 -->
-  <table name="#mAtkSpd"> 1.05 1.07 1.10 1.11 1.13 1.15 1.17 1.19 1.21 </table>
+  <table name="#mAtkSpd"> 1.05 1.07 1.1 1.11 1.13 1.15 1.17 1.19 1.21 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="magicLvl" val="#magicLvl"/>
