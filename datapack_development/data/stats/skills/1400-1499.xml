@@ -1346,7 +1346,7 @@
   <set name="isMagic" val="true"/>
   <set name="mpConsume" val="109"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="100"/> <!-- Guess -->
+  <set name="power" val="117"/>
   <set name="skillType" val="MDAM"/>
   <set name="target" val="TARGET_AREA"/>
 </skill>
@@ -1358,7 +1358,7 @@
   <set name="isMagic" val="true"/>
   <set name="mpConsume" val="109"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="100"/> <!-- Guess -->
+  <set name="power" val="117"/>
   <set name="skillType" val="MDAM"/>
   <set name="target" val="TARGET_AREA"/>
 </skill>
@@ -1383,7 +1383,7 @@
   <set name="mpConsume" val="105"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
-  <set name="reuseDelay" val="10000"/>
+  <set name="reuseDelay" val="1800000"/>
   <set name="hitTime" val="2500"/>
   <set name="isDance" val="true"/>
   <set name="skillType" val="BUFF"/>
@@ -1392,7 +1392,7 @@
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="379"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0">
+    <effect count="1" name="Buff" time="30" val="0" stackOrder="1" stackType="pd_up_special">
       <add order="0x40" stat="mDef" val="3000"/>
     </effect>
   </for>
