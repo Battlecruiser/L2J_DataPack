@@ -150,7 +150,7 @@ public class Pdam implements ISkillHandler
 							}
 							else
 							{
-								SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
+								SystemMessage sm = new SystemMessage(SystemMessageId.C1_RESISTED_YOUR_S2);
 								sm.addCharName(target);
 								sm.addSkillName(skill);
 								activeChar.sendPacket(sm);
@@ -207,7 +207,7 @@ public class Pdam implements ISkillHandler
 									player.setCurrentHp(player.getCurrentHp() - damage);
 							}
 						
-							SystemMessage smsg = new SystemMessage(SystemMessageId.S1_RECEIVED_DAMAGE_OF_S3_FROM_S2);
+							SystemMessage smsg = new SystemMessage(SystemMessageId.C1_RECEIVED_DAMAGE_OF_S3_FROM_C2);
 							smsg.addPcName(player);
 							smsg.addCharName(activeChar);
 							smsg.addNumber(damage);
@@ -233,13 +233,13 @@ public class Pdam implements ISkillHandler
 			{
 				if (activeChar instanceof L2PcInstance)
 				{
-					SystemMessage sm = new SystemMessage(SystemMessageId.S1_DODGES_ATTACK);
+					SystemMessage sm = new SystemMessage(SystemMessageId.C1_DODGES_ATTACK);
 					sm.addString(target.getName());
 					((L2PcInstance) activeChar).sendPacket(sm);
 				}
 				if (target instanceof L2PcInstance)
 				{
-					SystemMessage sm = new SystemMessage(SystemMessageId.AVOIDED_S1_ATTACK);
+					SystemMessage sm = new SystemMessage(SystemMessageId.AVOIDED_C1_ATTACK);
 					sm.addString(activeChar.getName());
 					((L2PcInstance) target).sendPacket(sm);
 				}

@@ -72,7 +72,7 @@ public class PartyInfo implements IUserCommandHandler
 				break;
 		}
 		
-		SystemMessage sm = new SystemMessage(SystemMessageId.PARTY_LEADER_S1);
+		SystemMessage sm = new SystemMessage(SystemMessageId.PARTY_LEADER_C1);
 		sm.addString(partyLeader);
 		activeChar.sendPacket(sm);
 		
