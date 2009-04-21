@@ -775,7 +775,7 @@
     <mul order="0x30" stat="stunProf" val="1.3"/>
     <mul order="0x30" stat="derangementProf" val="1.3"/>
     <mul order="0x30" stat="gainHp" val="1.1"/>
-    <add order="0x40" stat="absorbDam" val="4"/>
+    <add order="0x40" stat="absorbDam" val="4"/> <!-- absorb 4% HP from damage inflicted on enemies -->
     <mul order="0x30" stat="MagicalMpConsumeRate" val="0.95"/>
     <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95"/>
   </for>
@@ -794,7 +794,7 @@
     <mul order="0x30" stat="stunProf" val="1.2"/>
     <mul order="0x30" stat="derangementProf" val="1.2"/>
     <mul order="0x30" stat="gainHp" val="1.1"/>
-    <add order="0x40" stat="absorbDam" val="4"/>
+    <add order="0x40" stat="absorbDam" val="4"/> <!-- absorb 4% HP from damage inflicted on enemies -->
   </for>
 </skill>
 <skill id="3560" levels="1" name="Earring of Orfen">
@@ -897,7 +897,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <add val="3" order="0x40" stat="absorbDam"/>
+    <add val="3" order="0x40" stat="absorbDam"/> <!-- absorb 3% HP from damage inflicted on enemies -->
   </for>
 </skill>
 <skill id="3569" levels="1" name="Special Ability: HP Regeneration">
@@ -1221,7 +1221,7 @@
     <mul order="0x30" stat="pvpPhysDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
     <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
     <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
-    <mul order="0x30" stat="absorbDam" val="1.02"/> <!-- Vampiric Rage effect 2% -->
+    <add order="0x40" stat="absorbDam" val="2"/> <!-- absorb 2% HP from damage inflicted on enemies -->
   </for>
 </skill>
 <skill id="3590" levels="1" name="Silence">

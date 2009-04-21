@@ -524,7 +524,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <add order="0x40" stat="absorbDam" val="15"/>
+    <add order="0x40" stat="absorbDam" val="15"/> <!-- absorb 15% HP from damage inflicted on enemies -->
   </for>
 </skill>
 <skill id="4234" levels="12" name="BOSS Power Throw">

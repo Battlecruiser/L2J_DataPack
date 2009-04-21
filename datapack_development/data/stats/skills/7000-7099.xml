@@ -64,7 +64,7 @@
   <set name="aggroPoints" val="655"/>
   <for>
     <effect name="Buff" time="1200" count="1" val="0" stackOrder="9" stackType="vampRage">
-      <add order="0x40" stat="absorbDam" val="9"/>
+      <add order="0x40" stat="absorbDam" val="9"/> <!-- absorb 9% HP from damage inflicted on enemies -->
     </effect>
   </for>
 </skill>
@@ -567,7 +567,7 @@
   <set name="effectRange" val="400"/>
   <for>
     <effect name="Buff" time="300" count="1" val="0" stackOrder="9" stackType="vampRage">
-      <add order="0x40" stat="absorbDam" val="9"/>
+      <add order="0x40" stat="absorbDam" val="9"/> <!-- absorb 9% HP from damage inflicted on enemies -->
     </effect>
   </for>
 </skill>
@@ -758,7 +758,7 @@
   <set name="effectRange" val="400"/>
   <for>
     <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
-      <add order="0x40" stat="absorbDam" val="5"/>
+      <add order="0x40" stat="absorbDam" val="5"/> <!-- absorb 5% HP from damage inflicted on enemies -->
       <add order="0x40" stat="accCombat" val="4"/>
       <add order="0x40" stat="rEvas" val="4"/>
       <mul order="0x30" stat="pAtkSpd" val="1.2"/>

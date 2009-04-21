@@ -102,7 +102,7 @@
     <mul stat="mDef" val="#mDef" order="0x30"/>
     <add stat="accCombat" val="#accCombat" order="0x40"/>
     <add stat="runSpd" val="#runSpd" order="0x40"/>
-    <add order="0x40" stat="absorbDam" val="100"/>
+    <add order="0x40" stat="absorbDam" val="100"/> <!-- absorb 100% HP from damage inflicted on enemies -->
     <mul order="0x30" stat="regCp" val="20"/>
   </for>
 </skill>
@@ -484,7 +484,7 @@
     <mul stat="mDef" val="#mDef" order="0x30"/>
     <add stat="accCombat" val="#accCombat" order="0x40"/>
     <add stat="runSpd" val="#runSpd" order="0x40"/>
-    <add order="0x40" stat="absorbDam" val="100"/>
+    <add order="0x40" stat="absorbDam" val="100"/> <!-- absorb 100% HP from damage inflicted on enemies -->
     <mul order="0x30" stat="regCp" val="20"/>
   </for>
 </skill>
