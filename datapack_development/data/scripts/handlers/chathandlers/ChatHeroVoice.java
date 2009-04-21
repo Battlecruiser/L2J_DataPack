@@ -20,7 +20,6 @@ import net.sf.l2j.gameserver.handler.IChatHandler;
 import net.sf.l2j.gameserver.model.L2World;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.network.serverpackets.CreatureSay;
-import net.sf.l2j.gameserver.util.FloodProtector;
 
 /**
  * A chat handler
@@ -42,7 +41,7 @@ public class ChatHeroVoice implements IChatHandler
 	{
 		if (activeChar.isHero())
 		{
-			if (!FloodProtector.tryPerformAction(activeChar.getObjectId(), FloodProtector.PROTECTED_HEROVOICE))
+			if (!activeChar.getFloodProtectors().getHeroVoice().tryPerformAction("hero voice"))
 			{
 				activeChar.sendMessage("Action failed. Heroes are only able to speak in the global channel once every 10 seconds.");
 				return;

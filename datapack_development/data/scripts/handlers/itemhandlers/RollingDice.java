@@ -23,7 +23,6 @@ import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.Dice;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 import net.sf.l2j.gameserver.util.Broadcast;
-import net.sf.l2j.gameserver.util.FloodProtector;
 import net.sf.l2j.util.Rnd;
 
 /**
@@ -89,8 +88,11 @@ public class RollingDice implements IItemHandler
 	private int rollDice(L2PcInstance player)
 	{
 		// Check if the dice is ready
-		if (!FloodProtector.tryPerformAction(player.getObjectId(), FloodProtector.PROTECTED_ROLLDICE))
-			return 0;
+		if (!player.getFloodProtectors().getRollDice().
+                        tryPerformAction("roll dice"))
+                {
+                    return 0;
+                }
 		return Rnd.get(1, 6);
 	}
 	
