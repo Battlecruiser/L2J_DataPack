@@ -842,7 +842,7 @@
   <set name="effectRange" val="-1"/>
   <set name="staticReuse" val="true"/>
   <for>
-    <effect name="Buff" time="120" count="1" val="0">
+    <effect name="Buff" time="120" count="1" val="0" stackOrder="#absorbDam" stackType="vampRage">
       <add order="0x40" stat="absorbDam" val="#absorbDam"/> <!-- absorb HP from damage inflicted on enemies -->
     </effect>
   </for>

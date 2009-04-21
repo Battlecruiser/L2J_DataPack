@@ -897,7 +897,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-    <add val="3" order="0x40" stat="absorbDam"/> <!-- absorb 3% HP from damage inflicted on enemies -->
+    <add order="0x40" stat="absorbDam" val="3"/> <!-- absorb 3% HP from damage inflicted on enemies -->
   </for>
 </skill>
 <skill id="3569" levels="1" name="Special Ability: HP Regeneration">
