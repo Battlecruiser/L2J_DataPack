@@ -238,7 +238,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="3600" val="0" stackOrder="7" stackType="vampRage">
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="9" stackType="vampRage">
       <add order="0x40" stat="absorbDam" val="9"/> <!-- absorb 9% HP from damage inflicted on enemies -->
     </effect>
   </for>

@@ -305,12 +305,12 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
     <effect name="Buff" time="120" count="1" val="0" stackOrder="1" stackType="dance_of_vampire">
-      <add stat="absorbDam" val="8" order="0x40"/> <!-- absorb 8% HP from damage inflicted on enemies -->
+      <add order="0x40" stat="absorbDam" val="8"/> <!-- absorb 8% HP from damage inflicted on enemies -->
     </effect>
   </for>
   <enchant1for>
     <effect name="Buff" time="#ench1time" count="1" val="0" stackOrder="1" stackType="dance_of_vampire">
-      <add stat="absorbDam" val="8" order="0x40"/> <!-- absorb 8% HP from damage inflicted on enemies -->
+      <add order="0x40" stat="absorbDam" val="8"/> <!-- absorb 8% HP from damage inflicted on enemies -->
     </effect>
   </enchant1for>
 </skill>
