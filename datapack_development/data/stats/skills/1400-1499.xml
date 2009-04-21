@@ -1487,10 +1487,9 @@
   </for>
 </skill>
 <skill id="1477" levels="3" name="Vampiric Impulse">
-  <!-- Needs to be verified -->
   <table name="#mpConsume_Init"> 15 18 20 </table>
   <table name="#mpConsume"> 85 97 107 </table>
-  <table name="#Tab-absorbDam"> 6 7 8 </table>
+  <table name="#absorbDam"> 60 70 80 </table>
   <table name="#aggro"> 418 549 611 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1505,8 +1504,8 @@
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="#aggro"/>
   <for>
-    <effect name="Buff" time="10" count="1" val="0" stackOrder="#Tab-absorbDam" stackType="vampRage">
-      <add order="0x40" stat="absorbDam" val="#Tab-absorbDam"/>
+    <effect name="Buff" time="10" count="1" val="0" stackOrder="#absorbDam" stackType="vampRage">
+      <add order="0x40" stat="absorbDam" val="#absorbDam"/> <!-- absorb HP from damage inflicted on enemies -->
     </effect>
   </for>
 </skill>

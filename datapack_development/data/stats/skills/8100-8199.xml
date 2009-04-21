@@ -601,7 +601,7 @@
     <mul order="0x30" stat="mDef" val="1.04"/> <!-- M. Def. +4% -->
     <mul order="0x30" stat="sleepVuln" val="0.3"/> <!-- Sleep Resistance +70% -->
     <mul order="0x30" stat="rootVuln" val="0.3"/> <!-- Hold Resistance +70% -->
-    <add order="0x40" stat="absorbDam" val="3"/> <!-- Restores 3% of melee damage inflicted on the enemy to oneself -->
+    <add order="0x40" stat="absorbDam" val="3"/> <!-- absorb 3% HP from damage inflicted oneself -->
     <add order="0x10" stat="DEX" val="1"/> <!-- DEX +1 -->
     <sub order="0x10" stat="CON" val="1"/> <!-- CON -1 -->
     <!-- Missing: Decreases damage received during PvP and has a chance to cancel an attacker's target when attacked. -->

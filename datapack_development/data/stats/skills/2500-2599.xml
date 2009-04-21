@@ -130,7 +130,7 @@
   <set name="buffDuration" val="300000"/>
   <for>
     <effect name="Buff" time="300" val="0" stackOrder="9" stackType="vampRage">
-      <add order="0x40" stat="absorbDam" val="9"/>
+      <add order="0x40" stat="absorbDam" val="9"/> <!-- absorb 9% HP from damage inflicted on enemies -->
     </effect>
   </for>
 </skill>
