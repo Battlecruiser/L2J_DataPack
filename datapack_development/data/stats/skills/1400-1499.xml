@@ -265,7 +265,7 @@
             <using kind="Magic"/>
           </not>
         </and>
-      </mul>
+      </add>
       <add order="0x40" stat="regMp" val="4">
         <and>
           <using kind="Magic"/>
@@ -273,7 +273,7 @@
             <using kind="Heavy,Light"/>
           </not>
         </and>
-      </mul>
+      </add>
       <mul order="0x30" stat="mDef" val="1.3"/>
       <mul order="0x30" stat="mAtk" val="1.3"/>
       <mul order="0x30" stat="mAtkSpd" val="1.2"/>
