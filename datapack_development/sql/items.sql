@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS `items` (
   `custom_type1` INT DEFAULT 0,
   `custom_type2` INT DEFAULT 0,
   `mana_left` decimal(3,0) NOT NULL default -1,
-  `time_left` decimal(4,00) NOT NULL default -1,
+  `time` decimal NOT NULL default 0,
   PRIMARY KEY (`object_id`),
   KEY `key_owner_id` (`owner_id`),
   KEY `key_loc` (`loc`),
