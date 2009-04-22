@@ -301,8 +301,8 @@
   <for>
     <effect count="1" name="SilentMove" abnormal="stealth" time="120" val="0">
       <mul order="0x30" stat="pAtk" val="0.55"/>
-      <sub order="0x40" stat="accCombat" val="#accCombat"/>
-      <sub order="0x40" stat="rEvas" val="12"/>
+      <sub order="0x40" stat="accCombat" val="12"/>
+      <sub order="0x40" stat="rEvas" val="#rEvas"/>
       <mul order="0x30" stat="pDef" val="#amount"/>
       <mul order="0x30" stat="mDef" val="#amount"/>
     </effect>
