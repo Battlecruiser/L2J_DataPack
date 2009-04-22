@@ -796,6 +796,7 @@
   </for>
 </skill>
 <skill id="146" levels="45" name="Anti Magic">
+  <!-- Missing: resistance to damage magic increases in % from Lvl 3 upto 45 -->
   <table name="#mDef"> 10 12 14 16 18 20 23 25 28 30 34 36 40 42 43 46 47 49 52 54 56 59 61 63 66 68 70 72 74 76 78 80 82 84 86 88 91 93 95 97 99 102 104 106 108 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -808,6 +809,7 @@
 </skill>
 <skill id="147" levels="51" name="Magic Resistance">
   <!-- Done by dc -->
+  <!-- Missing: resistance to damage magic increases in % from Lvl 15 upto 51 -->
   <table name="#Tab-mDef"> 19 20 22 23 24 26 27 28 30 31 32 35 36 37 40 42 43 44 46 47 49 51 52 54 56 57 59 61 63 64 66 68 70 72 74 76 78 80 82 84 86 88 91 93 95 97 99 102 104 106 108 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>

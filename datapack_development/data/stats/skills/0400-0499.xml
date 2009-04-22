@@ -205,8 +205,8 @@
   <set name="SSBoost" val="2.0"/>
   <set name="target" val="TARGET_AURA"/>
   <for>
-    <effect count="1" name="Debuff" time="30" val="0"> <!-- Guess Duration -->
-      <mul order="0x30" stat="runSpd" val="0.9"/>
+    <effect count="1" name="Debuff" time="15" val="0">
+      <mul order="0x30" stat="runSpd" val="#debuff"/>
       <mul order="0x30" stat="pAtkSpd" val="#debuff"/>
       <mul order="0x30" stat="mAtkSpd" val="#debuff"/>
     </effect>
@@ -234,7 +234,7 @@
   <set name="SSBoost" val="2.0"/>
   <set name="target" val="TARGET_AURA"/>
   <for>
-    <effect count="1" name="Debuff" time="30" val="0"> <!-- Guess Duration -->
+    <effect count="1" name="Debuff" time="15" val="0">
       <mul order="0x30" stat="mAtk" val="#debuff"/>
       <mul order="0x30" stat="pAtk" val="#debuff"/>
     </effect>
@@ -288,11 +288,8 @@
 </skill>
 <skill id="411" levels="3" name="Stealth">
   <table name="#mpConsume"> 27 31 34 </table>
-  <table name="#pAtk"> 0.55 0.55 0.55 </table>
-  <table name="#accCombat"> 12 12 12 </table>
   <table name="#rEvas"> 12 8 4 </table>
-  <table name="#pDef"> 0.55 0.7 0.85 </table>
-  <table name="#mDef"> 0.55 0.7 0.85 </table>
+  <table name="#amount"> 0.55 0.7 0.85 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="hitTime" val="2000"/>
   <set name="target" val="TARGET_SELF"/>
@@ -303,11 +300,11 @@
   <set name="effectRange" val="-1"/>
   <for>
     <effect count="1" name="SilentMove" abnormal="stealth" time="120" val="0">
-      <mul order="0x30" stat="pAtk" val="#pAtk"/>
+      <mul order="0x30" stat="pAtk" val="0.55"/>
       <sub order="0x40" stat="accCombat" val="#accCombat"/>
-      <sub order="0x40" stat="rEvas" val="#rEvas"/>
-      <mul order="0x30" stat="pDef" val="#pDef"/>
-      <mul order="0x30" stat="mDef" val="#mDef"/>
+      <sub order="0x40" stat="rEvas" val="12"/>
+      <mul order="0x30" stat="pDef" val="#amount"/>
+      <mul order="0x30" stat="mDef" val="#amount"/>
     </effect>
   </for>
 </skill>
@@ -332,7 +329,7 @@
 </skill>
 <skill id="413" levels="8" name="Rapid Fire">
   <table name="#mpConsume"> 28 29 30 31 32 33 34 34 </table>
-  <table name="#atk"> 62 67 73 78 83 88 94 100 </table>
+  <table name="#atk"> 62 67 73 78 83 89 94 100 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -358,9 +355,8 @@
 </skill>
 <skill id="414" levels="8" name="Dead Eye">
   <table name="#mpConsume"> 28 29 30 31 32 33 34 35 </table>
-  <table name="#pAtk"> 124 134 145 155 166 177 188 199 </table>
-  <table name="#Tab-accCombat"> 1 1 2 2 2 3 3 3 </table>
-  <table name="#Tab-cAtk"> 1.15 1.15 1.15 1.17 1.17 1.17 1.2 1.2 </table>
+  <table name="#pAtk"> 124 134 155 155 166 177 188 199 </table>
+  <table name="#accCombat"> 1 1 2 2 2 3 3 3 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="240000"/>
@@ -378,17 +374,16 @@
       <add order="0x40" stat="pAtk" val="#pAtk">
         <using kind="Bow"/> <!-- when using a bow. -->
       </add>
-      <add order="0x40" stat="accCombat" val="#Tab-accCombat">
+      <add order="0x40" stat="accCombat" val="#accCombat">
         <using kind="Bow"/> <!-- when using a bow. -->
       </add>
-      <mul order="0x30" stat="cAtk" val="#Tab-cAtk">
+      <mul order="0x30" stat="cAtk" val="1.2">
         <using kind="Bow"/> <!-- when using a bow. -->
       </mul>
     </effect>
   </for>
 </skill>
 <skill id="415" levels="3" name="Spirit of Sagittarius">
-  <!-- Hawkeye, Silver Ranger, Phantom Ranger -->
   <table name="#mpConsume"> 27 31 34 </table>
   <table name="#MpConsumeRate"> 0.9 0.8 0.7 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -424,7 +419,7 @@
 </skill>
 <skill id="417" levels="5" name="Pain of Sagittarius">
   <table name="#hpConsume"> 318 343 366 387 407 </table>
-  <table name="#power"> 35 38 41 43 45 </table>
+  <table name="#power"> 36 39 41 43 46 </table>
   <set name="hpConsume" val="#hpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_SELF"/>
@@ -508,7 +503,7 @@
   <set name="reuseDelay" val="300000"/>
   <set name="hitTime" val="2000"/>
   <for>
-    <effect count="1" name="Buff" time="60" val="0">
+    <effect count="1" name="Buff" time="120" val="0">
       <add order="0x40" stat="atkCountMax" val="#atkCountMax">
         <using kind="Pole"/>
       </add>
@@ -517,7 +512,7 @@
 </skill>
 <skill id="422" levels="3" name="Polearm Accuracy">
   <table name="#mpConsume"> 11 13 14 </table>
-  <table name="#Tab-accCombat"> 2 3 4 </table>
+  <table name="#accCombat"> 2 3 4 </table>
   <set name="weaponsAllowed" val="64"/> <!-- Pole -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
@@ -526,8 +521,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="#mpConsume">
-      <add order="0x40" stat="accCombat" val="#Tab-accCombat">
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="#mpConsume"> <!-- Should be by Lvl -->
+      <add order="0x40" stat="accCombat" val="#accCombat">
         <using kind="Pole"/>
       </add>
     </effect>
@@ -535,8 +530,8 @@
 </skill>
 <skill id="423" levels="3" name="Infernal Form">
   <table name="#mpConsume"> 27 31 34 </table>
-  <table name="#vuln"> 0.85 0.77 0.7 </table>
-  <table name="#stack"> 15 23 30 </table>
+  <table name="#vuln"> 0.97 0.95 0.90 </table>
+  <!-- table name="#firePower"> 10 15 20 </table -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="6000"/>
@@ -546,23 +541,25 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" abnormal="flame" stackOrder="#stack" stackType="MagicDefUpAtr">
+    <effect count="1" name="Buff" time="300" val="0" abnormal="flame">
+      <!-- mul order="0x30" stat="firePower" val="#firePower" Needs Core Support -->
       <mul order="0x30" stat="fireVuln" val="#vuln"/>
     </effect>
   </for>
 </skill>
 <skill id="424" levels="3" name="War Frenzy">
   <table name="#mpConsume"> 13 14 15 </table>
-  <table name="#vuln"> 0.6 0.4 0.2 </table>
+  <table name="#stunVuln"> 0.95 0.9 0.85 </table>
+  <table name="#sleepVuln"> 0.9 0.8 0.7 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="#mpConsume">
-      <mul order="0x30" stat="stunVuln" val="#vuln"/>
-      <mul order="0x30" stat="sleepVuln" val="#vuln"/>
+    <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="#mpConsume"> <!-- Should be by Lvl -->
+      <mul order="0x30" stat="stunVuln" val="#stunVuln"/>
+      <mul order="0x30" stat="sleepVuln" val="#sleepVuln"/>
     </effect>
   </for>
 </skill>
@@ -620,13 +617,12 @@
   <set name="isMagic" val="true"/>
 </skill>
 <skill id="428" levels="1" name="Inner Rhythm">
-  <!-- MP consumption for singing and dancing is decreased. -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="castRange" val="-1"/>
   <for>
-     <mul order="0x30" stat="DanceMpConsumeRate" val="0.9"/>
+    <mul order="0x30" stat="DanceMpConsumeRate" val="0.9"/>
   </for>
 </skill>
 <skill id="429" levels="1" name="Knighthood">
@@ -679,7 +675,7 @@
     <add order="0x40" stat="pAtk" val="200">
       <using kind="Bow"/>
     </add>
-    <add order="0x40" stat="pAtkRange" val="100">
+    <add order="0x40" stat="pAtkRange" val="50">
       <using kind="Bow"/>
     </add>
   </for>
@@ -799,7 +795,7 @@
   </for>
 </skill>
 <skill id="439" levels="1" name="Shield of Revenge">
-  <!-- Temporarily reflects damage from melee attack skills back to the enemy. -->
+  <!-- For 5 minutes, transfers damage from close range physical attacks and skills back to opponent. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -820,9 +816,6 @@
 </skill>
 <skill id="441" levels="1" name="Force Meditation">
   <!-- Done by Ritsu -->
-  <table name="#pDef"> 0.2 </table>
-  <table name="#hhot"> 60 </table>
-  <table name="#mhot"> 10 </table>
   <set name="negateId" val="441"/>
   <set name="castRange" val="-1"/>
   <set name="charge_skill_id" val="50"/>
@@ -834,11 +827,11 @@
   <set name="skillType" val="CHARGE_EFFECT"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
-    <effect count="1" name="ImmobileUntilAttacked" time="120" val="0">
-      <mul order="0x30" stat="pDef" val="#pDef"/>
+    <effect count="1" name="ImmobileUntilAttacked" time="60" val="0">
+      <mul order="0x30" stat="pDef" val="0.2"/>
     </effect>
-    <effect count="40" name="HealOverTime" time="3" noicon="1" val="#hhot"/>
-    <effect count="40" name="ManaHealOverTime" time="3" noicon="1" val="#mhot"/>
+    <effect count="40" name="HealOverTime" time="3" noicon="1" val="60"/>
+    <effect count="40" name="ManaHealOverTime" time="3" noicon="1" val="10"/>
   </for>
 </skill>
 <skill id="442" levels="1" name="Sonic Barrier">
@@ -916,7 +909,7 @@
   </for>
 </skill>
 <skill id="447" levels="1" name="Counterattack">
-  <!-- Temporarily allows you to reflect damage caused by a melee attack skill back to the enemy. -->
+  <!-- For 10 seconds, transfers damage from close range physical attacks and skills back to the opponent. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1004,7 +997,7 @@
 <skill id="451" levels="2" name="Sonic Move">
   <set name="weaponsAllowed" val="512"/> <!-- Dual Sword -->
   <table name="#charges"> 2 3 </table>
-  <table name="#spd"> 1.25 1.58 </table>
+  <table name="#runSpd"> 44 66 </table>
   <table name="#mpConsume"> 29 32 </table>
   <set name="hitTime" val="1000"/>
   <set name="reuseDelay" val="75000"/>
@@ -1017,8 +1010,8 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect name="Buff" time="15" count="1" val="0" stackOrder="#spd" stackType="speed_up_special"> <!-- changed to 15s duration - retail info -->
-      <mul order="0x30" stat="runSpd" val="#spd"/>
+    <effect name="Buff" time="15" count="1" val="0" stackOrder="#runSpd" stackType="speed_up_special">
+      <add order="0x40" stat="runSpd" val="#runSpd"/>
     </effect>
   </for>
 </skill>
@@ -1305,6 +1298,7 @@
   </for>
 </skill>
 <skill id="466" levels="55" name="Magic Immunity">
+  <!-- Missing: resistance to damage magic increases in % from Lvl 10 upto 55 -->
   <table name="#Tab-mDef"> 19 20 22 23 24 26 27 28 30 31 32 35 36 37 40 42 43 44 46 47 49 51 52 54 56 57 59 61 63 64 66 68 70 72 74 76 78 80 82 84 86 88 91 93 95 97 99 102 104 106 108 110 112 115 117 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>

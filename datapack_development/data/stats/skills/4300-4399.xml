@@ -779,7 +779,7 @@
   </for>
 </skill>
 <skill id="4353" levels="6" name="Clan Hall: Bless Shield">
-  <table name="#Tab-rShld"> 1.3 1.4 1.5 1.6 1.7 1.8 </table>
+  <table name="#rShld"> 1.05 1.1 1.15 1.2 1.25 1.3 </table>
   <table name="#mpConsume"> 0 200 0 0 0 400 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_ONE"/>
@@ -790,8 +790,8 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-rShld" stackType="shieldProbUp">
-      <mul order="0x30" stat="rShld" val="#Tab-rShld"/>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#rShld" stackType="shieldProbUp">
+      <mul order="0x30" stat="rShld" val="#rShld"/>
     </effect>
   </for>
 </skill>
@@ -1479,7 +1479,7 @@
   </for>
 </skill>
 <skill id="4398" levels="6" name="Bless Shield">
-  <table name="#Tab-rShld"> 1.3 1.4 1.5 1.6 1.7 1.8 </table>
+  <table name="#rShld"> 1.05 1.1 1.15 1.2 1.25 1.3 </table>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="100"/>
   <set name="skillType" val="BUFF"/>
@@ -1489,8 +1489,8 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="3600" val="0" stackOrder="#Tab-rShld" stackType="shieldProbUp">
-      <mul order="0x30" stat="rShld" val="#Tab-rShld"/>
+    <effect count="1" name="Buff" time="3600" val="0" stackOrder="#rShld" stackType="shieldProbUp">
+      <mul order="0x30" stat="rShld" val="#rShld"/>
     </effect>
   </for>
 </skill>

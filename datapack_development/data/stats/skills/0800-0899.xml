@@ -272,13 +272,13 @@
 <skill id="822" levels="3" name="Repair Golem">
   <!-- Done by _DS_ -->
   <table name="#mpConsume"> 61 78 88 </table>
-  <table name="#power"> 220 440 880 </table>
+  <table name="#power"> 8 12 15 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_SUMMON"/>
   <set name="reuseDelay" val="9000"/>
   <set name="hitTime" val="2500"/>
-  <set name="skillType" val="HEAL"/>
+  <set name="skillType" val="HEAL_PERCENT"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
@@ -286,8 +286,8 @@
 </skill>
 <skill id="823" levels="3" name="Strengthen Golem">
   <!-- Done by _DS_ -->
-  <table name="#Tab-pAtkSpd"> 1.03 1.06 1.09 </table>
-  <table name="#Tab-pAtk"> 1.08 1.12 1.15 </table>
+  <table name="#pAtk"> 1.08 1.12 1.15 </table>
+  <table name="#pAtkSpd"> 1.03 1.06 1.09 </table>
   <table name="#mpConsume"> 24 36 42 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SUMMON"/>
@@ -299,16 +299,16 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-pAtk" stackType="pa_up">
-      <mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
-      <mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#pAtk" stackType="pa_up">
+      <mul order="0x30" stat="pAtk" val="#pAtk"/>
+      <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
     </effect>
   </for>
 </skill>
 <skill id="824" levels="3" name="Armor Golem">
   <!-- Done by _DS_ -->
-  <table name="#Tab-pDef"> 1.08 1.12 1.15 </table>
-  <table name="#Tab-maxHp"> 1.05 1.08 1.1 </table>
+  <table name="#pDef"> 1.08 1.12 1.15 </table>
+  <table name="#maxHp"> 1.05 1.08 1.1 </table>
   <table name="#mpConsume"> 35 44 41 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SUMMON"/>
@@ -320,9 +320,9 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="40"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-maxHp" stackType="max_hp_up">
-      <mul order="0x30" stat="maxHp" val="#Tab-maxHp"/>
-      <mul order="0x30" stat="pDef" val="#Tab-pDef"/>
+    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#maxHp" stackType="max_hp_up">
+      <mul order="0x30" stat="pDef" val="#pDef"/>
+      <mul order="0x30" stat="maxHp" val="#maxHp"/>
     </effect>
   </for>
 </skill>
@@ -362,6 +362,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <for>
+    <!-- Missing: weight for shock attack by 8 -->
     <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="ws_weapon">
       <mul order="0x30" stat="pAtk" val="1.05">
         <using kind="Blunt,Big Blunt"/>

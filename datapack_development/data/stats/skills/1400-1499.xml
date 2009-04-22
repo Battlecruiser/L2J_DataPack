@@ -256,14 +256,33 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff"> <!-- Does it stacks with CoV ? -->
-      <mul order="0x30" stat="regMp" val="1.5"/>
-      <mul order="0x30" stat="mAtkSpd" val="1.2"/>
+    <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+      <mul order="0x30" stat="maxMp" val="1.15"/>
+      <add order="0x40" stat="regMp" val="1.5">
+        <and>
+          <using kind="Heavy,Light"/>
+          <not>
+            <using kind="Magic"/>
+          </not>
+        </and>
+      </mul>
+      <add order="0x40" stat="regMp" val="4">
+        <and>
+          <using kind="Magic"/>
+          <not>
+            <using kind="Heavy,Light"/>
+          </not>
+        </and>
+      </mul>
       <mul order="0x30" stat="mDef" val="1.3"/>
       <mul order="0x30" stat="mAtk" val="1.3"/>
-      <mul order="0x30" stat="maxMp" val="1.2"/>
-      <mul order="0x30" stat="MagicalMpConsumeRate" val="0.8"/>
-      <mul order="0x30" stat="mCritRate" val="1.02"/> <!-- Guess -->
+      <mul order="0x30" stat="mAtkSpd" val="1.2"/>
+      <mul order="0x30" stat="fireVuln" val="0.9"/>
+      <mul order="0x30" stat="waterVuln" val="0.9"/>
+      <mul order="0x30" stat="windVuln" val="0.9"/>
+      <mul order="0x30" stat="earthVuln" val="0.9"/>
+      <mul order="0x30" stat="debuffVuln" val="0.75"/>
+      <mul order="0x30" stat="cancelVuln" val="0.60"/>
     </effect>
   </for>
 </skill>
@@ -302,7 +321,6 @@
   </for>
 </skill>
 <skill id="1415" levels="1" name="Pa'agrio's Emblem">
-  <!-- All the values here are Guess (taken from Chant of Spirit and other clan buffs) -->
   <set name="mpInitialConsume" val="56"/>
   <set name="mpConsume" val="172"/>
   <set name="target" val="TARGET_CLAN"/>
@@ -316,7 +334,7 @@
   <set name="effectRange" val="-1"/>
   <set name="aggroPoints" val="666"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="resist_debuff_dispel">
+    <effect count="1" name="Buff" time="300" val="0" stackOrder="1" stackType="resist_debuff_dispel">
       <mul order="0x30" stat="cancelVuln" val="0.7"/>
       <mul order="0x30" stat="debuffVuln" val="0.8"/>
     </effect>
@@ -338,7 +356,7 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0">
+    <effect count="1" name="Buff" time="300" val="0">
       <add order="0x40" stat="maxCp" val="800"/>
     </effect>
   </for>
@@ -613,8 +631,7 @@
   <set name="target" val="TARGET_PARTY"/>
 </skill>
 <skill id="1430" levels="5" name="Invocation">
-  <table name="#pDef"> 0.8 0.8 0.8 0.8 0.8 </table>
-  <table name="#mhot"> 90 100 115 125 140 </table>
+  <table name="#mhot"> 81 90 102 111 126 </table>
   <table name="#mpConsume"> 27 28 30 33 34 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
@@ -629,7 +646,7 @@
   <for>
     <effect count="10" name="ManaHealOverTime" time="3" noicon="1" val="#mhot"/>
     <effect count="1" name="ImmobileUntilAttacked" time="30" val="0">
-      <mul order="0x30" stat="pDef" val="#pDef"/>
+      <mul order="0x30" stat="pDef" val="0.1"/>
     </effect>
   </for>
 </skill>
@@ -1203,9 +1220,9 @@
   <set name="castRange" val="-1"/>
   <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0">
+    <effect count="1" name="Buff" time="1200" val="0">
       <mul order="0x30" stat="mAtk" val="1.25"/>
-      <mul order="0x30" stat="MagicalMpConsumeRate" val="1.2"/>
+      <mul order="0x30" stat="MagicalMpConsumeRate" val="1.35"/>
     </effect>
   </for>
 </skill>
@@ -1241,7 +1258,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
-    <effect count="1" name="Buff" time="10" val="0" stackOrder="1000" stackType="giveHp">
+    <effect count="1" name="Buff" time="15" val="0" stackOrder="1000" stackType="giveHp">
       <add order="0x40" stat="bonusHp" val="1000"/>
     </effect>
   </for>
@@ -1264,12 +1281,11 @@
   </cond>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="1.6" stackType="gainMp">
-      <mul order="0x30" stat="gainMp" val="1.6"/>
+      <mul order="0x30" stat="gainMp" val="1.85"/>
     </effect>
   </for>
 </skill>
 <skill id="1461" levels="1" name="Chant of Protection">
-  <!-- Temporarily decreases the power of critical attack suffered by party members. -->
   <set name="mpInitialConsume" val="39"/>
   <set name="mpConsume" val="250"/>
   <set name="target" val="TARGET_PARTY"/>
@@ -1284,7 +1300,7 @@
   <set name="aggroPoints" val="624"/>
   <for>
     <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="critVuln">
-      <mul order="0x30" stat="critVuln" val="0.8"/>
+      <mul order="0x30" stat="critVuln" val="0.7"/>
     </effect>
   </for>
 </skill>

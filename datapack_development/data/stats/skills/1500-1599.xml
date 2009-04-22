@@ -195,7 +195,7 @@
   <set name="effectPower" val="80"/>
   <set name="soulMaxConsumeCount" val="5"/>
   <for>
-    <effect count="5" name="ManaDamOverTime" time="2" val="40">
+    <effect count="10" name="ManaDamOverTime" time="3" val="36">
       <mul order="0x30" stat="runSpd" val="0.8"/>
       <mul order="0x30" stat="pAtkSpd" val="0.7"/>
       <mul order="0x30" stat="mAtkSpd" val="0.7"/>
