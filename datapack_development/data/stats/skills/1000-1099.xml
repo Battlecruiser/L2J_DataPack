@@ -657,6 +657,7 @@
   <table name="#mpConsume"> 18 28 35 41 </table>
   <table name="#stack"> 20 30 40 50 </table>
   <table name="#aggro"> 243 379 457 532 </table>
+  <table name="#vuln"> 0.8 0.7 0.6 0.5 </table>
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_ONE"/>
@@ -672,10 +673,10 @@
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
   <for>
     <effect count="1" name="Buff" time="1200" val="0" stackOrder="#stack" stackType="MentalShield">
-      <mul order="0x30" stat="rootVuln" val="0.8"/>
-      <mul order="0x30" stat="sleepVuln" val="0.8"/>
-      <mul order="0x30" stat="confusionVuln" val="0.8"/>
-      <mul order="0x30" stat="derangementVuln" val="0.8"/>
+      <mul order="0x30" stat="rootVuln" val="#vuln"/>
+      <mul order="0x30" stat="sleepVuln" val="#vuln"/>
+      <mul order="0x30" stat="confusionVuln" val="#vuln"/>
+      <mul order="0x30" stat="derangementVuln" val="#vuln"/>
     </effect>
   </for>
   <enchant1for>
