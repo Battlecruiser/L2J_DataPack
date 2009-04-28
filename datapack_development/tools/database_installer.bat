@@ -517,7 +517,6 @@ set dest=gs
 for %%i in (
 armor.sql
 armorsets.sql
-auction.sql
 auction_bid.sql
 auction_watch.sql
 auto_announcements.sql
