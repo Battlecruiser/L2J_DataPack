@@ -255,17 +255,26 @@ echo "Installling new gameserver content."
 else
 echo "Upgrading gameserver content"
 fi
+if [ "$1" == "I" ]; then
 $MYG < ../sql/access_levels.sql &> /dev/null
 $MYG < ../sql/admin_command_access_rights.sql &> /dev/null
+$MYG < ../sql/auction.sql &> /dev/null
+$MYG < ../sql/castle.sql &> /dev/null
+$MYG < ../sql/clanhall.sql &> /dev/null
+$MYG < ../sql/fort.sql &> /dev/null
+$MYG < ../sql/forums.sql &> /dev/null
+$MYG < ../sql/grandboss_data.sql &> /dev/null
+$MYG < ../sql/npc_buffer.sql &> /dev/null
+$MYG < ../sql/seven_signs_festival.sql &> /dev/null
+$MYG < ../sql/seven_signs_status.sql &> /dev/null
+fi 
 $MYG < ../sql/armor.sql &> /dev/null
 $MYG < ../sql/armorsets.sql &> /dev/null
-$MYG < ../sql/auction.sql &> /dev/null
 $MYG < ../sql/auction_bid.sql &> /dev/null
 $MYG < ../sql/auction_watch.sql &> /dev/null
 $MYG < ../sql/auto_announcements.sql &> /dev/null
 $MYG < ../sql/auto_chat.sql &> /dev/null
 $MYG < ../sql/auto_chat_text.sql &> /dev/null
-$MYG < ../sql/castle.sql &> /dev/null
 $MYG < ../sql/castle_door.sql &> /dev/null
 $MYG < ../sql/castle_doorupgrade.sql &> /dev/null
 $MYG < ../sql/castle_functions.sql &> /dev/null
@@ -291,7 +300,6 @@ $MYG < ../sql/clan_privs.sql &> /dev/null
 $MYG < ../sql/clan_skills.sql &> /dev/null
 $MYG < ../sql/clan_subpledges.sql &> /dev/null
 $MYG < ../sql/clan_wars.sql &> /dev/null
-$MYG < ../sql/clanhall.sql &> /dev/null
 $MYG < ../sql/clanhall_functions.sql &> /dev/null
 $MYG < ../sql/class_list.sql &> /dev/null
 $MYG < ../sql/cursed_weapons.sql &> /dev/null
@@ -301,18 +309,15 @@ $MYG < ../sql/enchant_skill_trees.sql &> /dev/null
 $MYG < ../sql/etcitem.sql &> /dev/null
 $MYG < ../sql/fish.sql &> /dev/null
 $MYG < ../sql/fishing_skill_trees.sql &> /dev/null
-$MYG < ../sql/forums.sql &> /dev/null
 $MYG < ../sql/fort_doorupgrade.sql &> /dev/null
 $MYG < ../sql/fort_functions.sql &> /dev/null
 $MYG < ../sql/fort_siege_guards.sql &> /dev/null
 $MYG < ../sql/fort_spawnlist.sql &> /dev/null
 $MYG < ../sql/fort_staticobjects.sql &> /dev/null
-$MYG < ../sql/fort.sql &> /dev/null
 $MYG < ../sql/fortsiege_clans.sql &> /dev/null
 $MYG < ../sql/four_sepulchers_spawnlist.sql &> /dev/null
 $MYG < ../sql/games.sql &> /dev/null
 $MYG < ../sql/global_tasks.sql &> /dev/null
-$MYG < ../sql/grandboss_data.sql &> /dev/null
 $MYG < ../sql/grandboss_list.sql &> /dev/null
 $MYG < ../sql/helper_buff_list.sql &> /dev/null
 $MYG < ../sql/henna.sql &> /dev/null
@@ -331,7 +336,6 @@ $MYG < ../sql/merchant_shopids.sql &> /dev/null
 $MYG < ../sql/merchants.sql &> /dev/null
 $MYG < ../sql/minions.sql &> /dev/null
 $MYG < ../sql/npc.sql &> /dev/null
-$MYG < ../sql/npc_buffer.sql &> /dev/null
 $MYG < ../sql/npcskills.sql &> /dev/null
 $MYG < ../sql/olympiad_nobles.sql&> /dev/null
 $MYG < ../sql/olympiad_nobles_eom.sql&> /dev/null
@@ -345,8 +349,6 @@ $MYG < ../sql/raidboss_spawnlist.sql &> /dev/null
 $MYG < ../sql/random_spawn.sql &> /dev/null
 $MYG < ../sql/random_spawn_loc.sql &> /dev/null
 $MYG < ../sql/seven_signs.sql &> /dev/null
-$MYG < ../sql/seven_signs_festival.sql &> /dev/null
-$MYG < ../sql/seven_signs_status.sql &> /dev/null
 $MYG < ../sql/siege_clans.sql &> /dev/null
 $MYG < ../sql/skill_learn.sql &> /dev/null
 $MYG < ../sql/skill_spellbooks.sql &> /dev/null

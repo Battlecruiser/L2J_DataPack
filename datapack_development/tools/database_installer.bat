@@ -515,8 +515,6 @@ gameservers.sql
 ) do call :dump %%i
 set dest=gs
 for %%i in (
-access_levels.sql
-admin_command_access_rights.sql
 armor.sql
 armorsets.sql
 auction.sql
@@ -525,7 +523,6 @@ auction_watch.sql
 auto_announcements.sql
 auto_chat.sql
 auto_chat_text.sql
-castle.sql
 castle_door.sql
 castle_doorupgrade.sql
 castle_functions.sql
@@ -551,7 +548,6 @@ clan_privs.sql
 clan_skills.sql
 clan_subpledges.sql
 clan_wars.sql
-clanhall.sql
 clanhall_functions.sql
 class_list.sql
 cursed_weapons.sql
@@ -566,13 +562,10 @@ fort_functions.sql
 fort_siege_guards.sql
 fort_spawnlist.sql
 fort_staticobjects.sql
-fort.sql
 fortsiege_clans.sql
-forums.sql
 four_sepulchers_spawnlist.sql
 games.sql
 global_tasks.sql
-grandboss_data.sql
 grandboss_list.sql
 helper_buff_list.sql
 henna.sql
@@ -591,7 +584,6 @@ merchant_shopids.sql
 merchants.sql
 minions.sql
 npc.sql
-npc_buffer.sql
 npcskills.sql
 olympiad_nobles.sql
 olympiad_nobles_eom.sql
@@ -605,8 +597,6 @@ raidboss_spawnlist.sql
 random_spawn.sql
 random_spawn_loc.sql
 seven_signs.sql
-seven_signs_festival.sql
-seven_signs_status.sql
 siege_clans.sql
 skill_learn.sql
 skill_spellbooks.sql
@@ -619,6 +609,22 @@ walker_routes.sql
 weapon.sql
 zone_vertices.sql
 ) do call :dump %%i
+
+if %full% == 1 (
+for %%i in (
+access_levels.sql
+admin_command_access_rights.sql
+auction.sql
+castle.sql
+clanhall.sql
+fort.sql
+forums.sql
+grandboss_data.sql
+npc_buffer.sql
+seven_signs_festival.sql
+seven_signs_status.sql
+) do call :dump %%i 
+)
 echo done...
 echo.
 goto custom
