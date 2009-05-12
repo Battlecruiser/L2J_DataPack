@@ -42,7 +42,7 @@ public class SoulShots implements IItemHandler
 	};
 	private static final int[] SKILL_IDS =
 	{
-		2039, 2150, 2151, 2152, 2153, 2154, 2154
+		2039, 2150, 2151, 2152, 2153, 2154, 2154, 2154
 	};
 	
 	/**
@@ -67,13 +67,45 @@ public class SoulShots implements IItemHandler
 			return;
 		}
 		
-		// Check for correct grade
-		int weaponGrade = weaponItem.getCrystalType();
-		if ((weaponGrade == L2Item.CRYSTAL_NONE && itemId != 5789 && itemId != 1835) || (weaponGrade == L2Item.CRYSTAL_D && itemId != 1463) || (weaponGrade == L2Item.CRYSTAL_C && itemId != 1464)
-				|| (weaponGrade == L2Item.CRYSTAL_B && itemId != 1465) || (weaponGrade == L2Item.CRYSTAL_A && itemId != 1466) || (weaponGrade == L2Item.CRYSTAL_S && itemId != 1467) || (weaponGrade == L2Item.CRYSTAL_S80 && itemId != 1467))
+		final int weaponGrade = weaponItem.getCrystalType();
+		
+		boolean gradeCheck = true;
+		
+		switch (weaponGrade)
+		{
+			case L2Item.CRYSTAL_NONE:
+				if (itemId != 5789 && itemId != 1835)
+					gradeCheck = false;
+				break;
+			case L2Item.CRYSTAL_D:
+				if (itemId != 1463)
+					gradeCheck = false;
+				break;
+			case L2Item.CRYSTAL_C:
+				if (itemId != 1464)
+					gradeCheck = false;
+				break;
+			case L2Item.CRYSTAL_B:
+				if (itemId != 1465)
+					gradeCheck = false;
+				break;
+			case L2Item.CRYSTAL_A:
+				if (itemId != 1466)
+					gradeCheck = false;
+				break;
+			case L2Item.CRYSTAL_S:
+			case L2Item.CRYSTAL_S80:
+			case L2Item.CRYSTAL_S84:
+				if (itemId != 1467)
+					gradeCheck = false;
+				break;
+		}
+		
+		if (!gradeCheck)
 		{
 			if (!activeChar.getAutoSoulShot().containsKey(itemId))
 				activeChar.sendPacket(new SystemMessage(SystemMessageId.SOULSHOTS_GRADE_MISMATCH));
+			
 			return;
 		}
 		

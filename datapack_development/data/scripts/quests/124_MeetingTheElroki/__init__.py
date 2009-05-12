@@ -33,7 +33,7 @@ class Quest (JQuest) :
      if event == "32113-04.htm" :
        if cond == 1 :
          st.set("cond","2")
-         st.playSound("ItemSound.quest_itemget")
+         st.playSound("ItemSound.quest_middle")
      if event == "32114-02.htm" :
        if cond == 2 :
          st.set("cond","3")

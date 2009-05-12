@@ -25,7 +25,7 @@ class Quest (JQuest) :
        npc.showChatWindow(player)
     return htmltext
 
-QUEST       = Quest(1105, qn, "Teleports")
+QUEST       = Quest(-1, qn, "Teleports")
 
 for i in [32163,32181,32184,32186]:
    QUEST.addFirstTalkId(i)

@@ -81,7 +81,7 @@ class Quest (JQuest) :
         st.exitQuest(1)
      return htmltext
 
-QUEST       = Quest(7000,qn,"Hero Items")
+QUEST       = Quest(-1,qn,"Hero Items")
 
 
 

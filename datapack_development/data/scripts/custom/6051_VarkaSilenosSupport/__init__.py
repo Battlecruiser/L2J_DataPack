@@ -132,7 +132,7 @@ class Quest (JQuest) :
             htmltext = "31383-3.htm"
     return htmltext
 
-QUEST       = Quest(6051, qn, "custom")
+QUEST       = Quest(-1, qn, "custom")
 
 for i in NPCS:
    QUEST.addFirstTalkId(i)

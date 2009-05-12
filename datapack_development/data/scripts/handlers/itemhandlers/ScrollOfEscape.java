@@ -200,108 +200,136 @@ public class ScrollOfEscape implements IItemHandler
 				{
 					case 1830:
 					case 5859:
-						if (_activeChar.getClan() != null && CastleManager.getInstance().getCastleByOwner(_activeChar.getClan()) != null)
+						if (_activeChar.getClan() != null && CastleManager.getInstance().getCastleByOwner(_activeChar.getClan()) != null && !_activeChar.isFlyingMounted())
 							_activeChar.teleToLocation(MapRegionTable.TeleportWhereType.Castle);
 						else 
 							_activeChar.teleToLocation(MapRegionTable.TeleportWhereType.Town);
 						break;
 					case 10129:
 					case 10130:
-						if (_activeChar.getClan() != null && FortManager.getInstance().getFortByOwner(_activeChar.getClan()) != null)
+						if (_activeChar.getClan() != null && FortManager.getInstance().getFortByOwner(_activeChar.getClan()) != null && !_activeChar.isFlyingMounted())
 							_activeChar.teleToLocation(MapRegionTable.TeleportWhereType.Fortress);
 						else 
 							_activeChar.teleToLocation(MapRegionTable.TeleportWhereType.Town);
 						break;
 					case 1829:
 					case 5858:
-						if (_activeChar.getClan() != null && ClanHallManager.getInstance().getClanHallByOwner(_activeChar.getClan()) != null)
+						if (_activeChar.getClan() != null && ClanHallManager.getInstance().getClanHallByOwner(_activeChar.getClan()) != null && !_activeChar.isFlyingMounted())
 							_activeChar.teleToLocation(MapRegionTable.TeleportWhereType.ClanHall);
 						else 
 							_activeChar.teleToLocation(MapRegionTable.TeleportWhereType.Town);
 						break;
-					case 7117:
-						_activeChar.teleToLocation(-84318, 244579, -3730, true); // Talking Island
+					case 7117 :
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(-84318, 244579, -3730, true); // Talking Island
 						break;
 					case 7554:
-						_activeChar.teleToLocation(-84318, 244579, -3730, true); // Talking Island quest scroll
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(-84318, 244579, -3730, true); // Talking Island quest scroll
 						break;
 					case 7118:
-						_activeChar.teleToLocation(46934, 51467, -2977, true); // Elven Village
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(46934, 51467, -2977, true); // Elven Village
 						break;
 					case 7555:
-						_activeChar.teleToLocation(46934, 51467, -2977, true); // Elven Village quest scroll
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(46934, 51467, -2977, true); // Elven Village quest scroll
 						break;
 					case 7119:
-						_activeChar.teleToLocation(9745, 15606, -4574, true); // Dark Elven Village
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(9745, 15606, -4574, true); // Dark Elven Village
 						break;
 					case 7556:
-						_activeChar.teleToLocation(9745, 15606, -4574, true); // Dark Elven Village quest scroll
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(9745, 15606, -4574, true); // Dark Elven Village quest scroll
 						break;
 					case 7120:
-						_activeChar.teleToLocation(-44836, -112524, -235, true); // Orc Village
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(-44836, -112524, -235, true); // Orc Village
 						break;
 					case 7557:
-						_activeChar.teleToLocation(-44836, -112524, -235, true); // Orc Village quest scroll
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(-44836, -112524, -235, true); // Orc Village quest scroll
 						break;
 					case 7121:
-						_activeChar.teleToLocation(115113, -178212, -901, true); // Dwarven Village
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(115113, -178212, -901, true); // Dwarven Village
 						break;
 					case 7558:
-						_activeChar.teleToLocation(115113, -178212, -901, true); // Dwarven Village quest scroll
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(115113, -178212, -901, true); // Dwarven Village quest scroll
 						break;
 					case 7122:
-						_activeChar.teleToLocation(-80826, 149775, -3043, true); // Gludin Village
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(-80826, 149775, -3043, true); // Gludin Village
 						break;
 					case 7123:
-						_activeChar.teleToLocation(-12678, 122776, -3116, true); // Gludio Castle Town
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(-12678, 122776, -3116, true); // Gludio Castle Town
 						break;
 					case 7124:
-						_activeChar.teleToLocation(15670, 142983, -2705, true); // Dion Castle Town
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(15670, 142983, -2705, true); // Dion Castle Town
 						break;
 					case 7125:
-						_activeChar.teleToLocation(17836, 170178, -3507, true); // Floran
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(17836, 170178, -3507, true); // Floran
 						break;
 					case 7126:
-						_activeChar.teleToLocation(83400, 147943, -3404, true); // Giran Castle Town
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(83400, 147943, -3404, true); // Giran Castle Town
 						break;
 					case 7559:
-						_activeChar.teleToLocation(83400, 147943, -3404, true); // Giran Castle Town quest scroll
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(83400, 147943, -3404, true); // Giran Castle Town quest scroll
 						break;
 					case 7127:
-						_activeChar.teleToLocation(105918, 109759, -3207, true); // Hardin's Private Academy
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(105918, 109759, -3207, true); // Hardin's Private Academy
 						break;
 					case 7128:
-						_activeChar.teleToLocation(111409, 219364, -3545, true); // Heine
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(111409, 219364, -3545, true); // Heine
 						break;
 					case 7129:
-						_activeChar.teleToLocation(82956, 53162, -1495, true); // Oren Castle Town
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(82956, 53162, -1495, true); // Oren Castle Town
 						break;
 					case 7130:
-						_activeChar.teleToLocation(85348, 16142, -3699, true); // Ivory Tower
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(85348, 16142, -3699, true); // Ivory Tower
 						break;
 					case 7131:
-						_activeChar.teleToLocation(116819, 76994, -2714, true); // Hunters Village
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(116819, 76994, -2714, true); // Hunters Village
 						break;
 					case 7132:
-						_activeChar.teleToLocation(146331, 25762, -2018, true); // Aden Castle Town
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(146331, 25762, -2018, true); // Aden Castle Town
 						break;
 					case 7133:
-						_activeChar.teleToLocation(147928, -55273, -2734, true); // Goddard Castle Town
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(147928, -55273, -2734, true); // Goddard Castle Town
 						break;
 					case 7134:
-						_activeChar.teleToLocation(43799, -47727, -798, true); // Rune Castle Town
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(43799, -47727, -798, true); // Rune Castle Town
 						break;
 					case 7135:
-						_activeChar.teleToLocation(87331, -142842, -1317, true); // Schuttgart Castle Town
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(87331, -142842, -1317, true); // Schuttgart Castle Town
 						break;
 					case 7618:
-						_activeChar.teleToLocation(149864, -81062, -5618, true); // Ketra Orc Village
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(149864, -81062, -5618, true); // Ketra Orc Village
 						break;
 					case 7619:
-						_activeChar.teleToLocation(108275, -53785, -2524, true); // Varka Silenos Village
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(108275, -53785, -2524, true); // Varka Silenos Village
 						break;
 					case 9716:
-						_activeChar.teleToLocation(-117251, 46771, 360, true); // Kamael Village
+						if (!_activeChar.isFlyingMounted())
+							_activeChar.teleToLocation(-117251, 46771, 360, true); // Kamael Village
 						break;
 					default:
 						_activeChar.teleToLocation(MapRegionTable.TeleportWhereType.Town);

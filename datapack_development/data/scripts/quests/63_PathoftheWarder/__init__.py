@@ -136,10 +136,13 @@ class Quest (JQuest) :
                 htmltext = "32198-15.htm"
                 st.takeItems(Soul_C,-1)
                 st.giveItems(Eval,1)
-                st.giveItems(57,81900)
-                st.addExpAndSp(160267,11023)
+                isFinished = st.getGlobalQuestVar("1ClassQuestFinished")
+                if isFinished == "" : 
+                  st.giveItems(57,81900)
+                  st.addExpAndSp(160267,11023)
                 st.playSound("ItemSound.quest_finish")
                 st.exitQuest(False)
+                st.saveGlobalQuestVar("1ClassQuestFinished","1")
                 st.unset("cond")
         elif npcId == Bathis :
             if cond == 5 :

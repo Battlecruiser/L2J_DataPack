@@ -19,6 +19,8 @@ import net.sf.l2j.gameserver.model.L2Object;
 import net.sf.l2j.gameserver.model.L2Skill;
 import net.sf.l2j.gameserver.model.actor.L2Character;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
+import net.sf.l2j.gameserver.network.SystemMessageId;
+import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 import net.sf.l2j.gameserver.templates.skills.L2SkillType;
 
 /**
@@ -40,20 +42,20 @@ public class TransformDispel implements ISkillHandler
 		if (activeChar.isAlikeDead())
 			return;
 		
-		for (L2Object target : targets)
+		if (!(activeChar instanceof L2PcInstance))
+			return;
+		
+		L2PcInstance pc = (L2PcInstance) activeChar;
+		
+		if (pc.isAlikeDead() || pc.isCursedWeaponEquipped())
+			return;
+		
+		if (pc.isTransformed())
 		{
-			if (!(target instanceof L2PcInstance))
-				continue;
-			
-			L2PcInstance trg = (L2PcInstance) target;
-			
-			if (trg.isAlikeDead() || trg.isCursedWeaponEquipped())
-				continue;
-			
-			if (trg.isTransformed())
-			{
-				activeChar.stopTransformation(null);
-			}
+			if (pc.isFlyingMounted() && !pc.isInsideZone(L2Character.ZONE_LANDING))
+				pc.sendPacket(new SystemMessage(SystemMessageId.BOARD_OR_CANCEL_NOT_POSSIBLE_HERE));
+			else
+				pc.stopTransformation(null);
 		}
 	}
 	

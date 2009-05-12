@@ -14,12 +14,15 @@
  */
 package handlers.admincommandhandlers;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.Collection;
 import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import net.sf.l2j.Config;
+import net.sf.l2j.L2DatabaseFactory;
 import net.sf.l2j.gameserver.ai.CtrlIntention;
 import net.sf.l2j.gameserver.communitybbs.Manager.RegionBBSManager;
 import net.sf.l2j.gameserver.datatables.ClanTable;
@@ -86,7 +89,8 @@ public class AdminEditChar implements IAdminCommandHandler
 		"admin_setsex", // changes characters' sex
 		"admin_setcolor", // change charnames' color display
 		"admin_setclass", // changes chars' classId
-		"admin_fullfood" // fulfills a pet's food bar
+		"admin_fullfood", // fulfills a pet's food bar
+		"admin_remove_clan_penalty" // removes clan penalties
 	};
 	
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
@@ -407,6 +411,53 @@ public class AdminEditChar implements IAdminCommandHandler
 			else
 				activeChar.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
 		}
+		else if(command.startsWith("admin_unpenalty"))
+		{
+			try 
+			{
+				StringTokenizer st = new StringTokenizer(command, " ");
+				if (st.countTokens() != 3)
+				{
+					activeChar.sendMessage("Usage: //unpenalty join|create charname");
+					return false;
+				}
+
+				st.nextToken();
+
+				boolean changeCreateExpiryTime = st.nextToken().equalsIgnoreCase("create");
+
+				String playerName = st.nextToken();
+				L2PcInstance player = null;
+				player = L2World.getInstance().getPlayer(playerName);
+				
+				if (player == null)
+				{
+					Connection con = L2DatabaseFactory.getInstance().getConnection();
+					PreparedStatement ps = con.prepareStatement("UPDATE characters SET "
+							+ (changeCreateExpiryTime ? "clan_create_expiry_time" : "clan_join_expiry_time") 
+							+ " WHERE char_name=? LIMIT 1");
+					
+					ps.setString(1, playerName);
+					ps.execute();
+				}
+				else
+				{
+					// removing penalty
+					if (changeCreateExpiryTime)
+						player.setClanCreateExpiryTime(0);
+					else
+						player.setClanJoinExpiryTime(0);
+				}
+
+				
+				activeChar.sendMessage("Clan penalty successfully removed to character: "+ playerName);
+			}
+			catch (Exception e) 
+			{
+				e.printStackTrace();
+			}
+		}		
+
 		
 		return true;
 	}

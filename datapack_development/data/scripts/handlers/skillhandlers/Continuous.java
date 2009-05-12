@@ -32,6 +32,7 @@ import net.sf.l2j.gameserver.model.actor.instance.L2ClanHallManagerInstance;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
+import net.sf.l2j.gameserver.skills.Env;
 import net.sf.l2j.gameserver.skills.Formulas;
 import net.sf.l2j.gameserver.templates.skills.L2SkillType;
 
@@ -96,6 +97,11 @@ public class Continuous implements ISkillHandler
 		
 		for (L2Character target: (L2Character[]) targets)
 		{
+			boolean ss = false;
+			boolean sps = false;
+			boolean bss = false;
+			byte shld = 0;
+			
 			switch (skill.getSkillType())
 			{
 				case BUFF:
@@ -130,13 +136,10 @@ public class Continuous implements ISkillHandler
 			
 			if (skill.isOffensive() || skill.isDebuff())
 			{
-				boolean ss = false;
-				boolean sps = false;
-				boolean bss = false;
 				if (player != null)
 				{
 					L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
-					if (weaponInst != null)
+					if (weaponInst != null  && !skill.useShield())
 					{
 						if (skill.isMagic())
 						{
@@ -189,7 +192,7 @@ public class Continuous implements ISkillHandler
 					ss = ((L2Npc) activeChar).isUsingShot(true);
 				}
 				
-				byte shld = Formulas.calcShldUse(activeChar, target);
+				shld = Formulas.calcShldUse(activeChar, target);
 				acted = Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss);
 			}
 			
@@ -221,12 +224,12 @@ public class Continuous implements ISkillHandler
 						&& player.getDuelId() == ((L2PcInstance) target).getDuelId())
 				{
 					DuelManager dm = DuelManager.getInstance();
-					for (L2Effect buff : skill.getEffects(activeChar, target))
+					for (L2Effect buff : skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss)))
 						if (buff != null)
 							dm.onBuff(((L2PcInstance) target), buff);
 				}
 				else
-					skill.getEffects(activeChar, target);
+					skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss));
 				
 				if (skill.getSkillType() == L2SkillType.AGGDEBUFF)
 				{

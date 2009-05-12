@@ -109,13 +109,16 @@ class Quest (JQuest) :
    elif npcId == KASMAN and cond and st.getQuestItemsCount(HEAD_OF_BETRAYER) == 2 : 
      htmltext = "30501-03.htm" 
      st.takeItems(HEAD_OF_BETRAYER,-1) 
-     st.takeItems(BETRAYER_UMBAR_REPORT,-1) 
+     st.takeItems(BETRAYER_UMBAR_REPORT,-1)
      st.giveItems(MARK_OF_RAIDER,1)
-     st.giveItems(57,81900)
-     st.addExpAndSp(295862,17354)
+     isFinished = st.getGlobalQuestVar("1ClassQuestFinished")
+     if isFinished == "" : 
+       st.giveItems(57,81900)
+       st.addExpAndSp(295862,17354)
      player.sendPacket(SocialAction(player.getObjectId(),3))
-     st.unset("cond") 
-     st.exitQuest(False) 
+     st.unset("cond")
+     st.exitQuest(False)
+     st.saveGlobalQuestVar("1ClassQuestFinished","1")
      st.playSound("ItemSound.quest_finish")
    elif npcId == TAZEER:
      if cond == 5:

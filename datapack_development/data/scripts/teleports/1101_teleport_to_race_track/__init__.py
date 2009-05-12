@@ -62,7 +62,7 @@ class Quest (JQuest) :
      st.exitQuest(1)
    return
 
-QUEST       = Quest(1101,qn,"Teleports")
+QUEST       = Quest(-1,qn,"Teleports")
 
 for npcId in TELEPORTERS.keys() :
     QUEST.addStartNpc(npcId)

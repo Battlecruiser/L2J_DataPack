@@ -143,13 +143,16 @@ class Quest (JQuest) :
      if partyMember :
          st = partyMember.getQuestState(qn)
          count = st.getQuestItemsCount(item)
-         if count < 65 and st.getRandom(DROP_MAX) < DROP_RATE :
-            st.giveItems(item,1)
-            if count + 1 >= 65 :
-               st.playSound("ItemSound.quest_middle")
-               st.unset(partyCond)
-            else :
-               st.playSound("ItemSound.quest_itemget")
+         numItems, chance = divmod(DROP_RATE,DROP_MAX)
+         if st.getRandom(DROP_MAX) < chance : 
+            numItems += 1
+         if count + numItems >= 65 :
+            numItems = 65 - count
+            st.playSound("ItemSound.quest_middle")
+            st.unset(partyCond)
+         else:
+            st.playSound("ItemSound.quest_itemget")   
+         st.giveItems(item,int(numItems))
      return  
  
 # Quest class and state definition

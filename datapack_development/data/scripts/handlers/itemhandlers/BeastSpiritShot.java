@@ -103,7 +103,7 @@ public class BeastSpiritShot implements IItemHandler
 				return;
 			}
 			
-			int shotCount = item.getCount();
+			long shotCount = item.getCount();
 			shotConsumption = weaponItem.getSpiritShotCount();
 			
 			if (shotConsumption == 0)

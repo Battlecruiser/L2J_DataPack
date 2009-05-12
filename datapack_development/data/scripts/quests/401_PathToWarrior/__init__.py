@@ -109,6 +109,7 @@ class Quest (JQuest) :
           htmltext = "30010-13.htm"
           st.set("cond","0")
           st.exitQuest(False)
+          st.saveGlobalQuestVar("1ClassQuestFinished","1")
           st.playSound("ItemSound.quest_finish")
    return htmltext
 

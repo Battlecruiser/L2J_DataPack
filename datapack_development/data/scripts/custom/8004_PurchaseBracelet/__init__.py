@@ -55,7 +55,7 @@ class Quest (JQuest) :
     htmltext = "30098.htm"
     return htmltext
 
-QUEST = Quest(8004,qn,"custom")
+QUEST = Quest(-1,qn,"custom")
 
 QUEST.addStartNpc(30098)
 

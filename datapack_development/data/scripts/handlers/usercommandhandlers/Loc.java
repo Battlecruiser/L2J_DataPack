@@ -107,6 +107,48 @@ public class Loc implements IUserCommandHandler
 			case 21:
 				msg = SystemMessageId.LOC_FANTASY_ISLAND_S1_S2_S3;
 				break;
+			case 22:
+				msg = SystemMessageId.LOC_NETRAL_ZONE_S1_S2_S3;
+				break;
+			case 23:
+				msg = SystemMessageId.LOC_COLISEUM_S1_S2_S3;
+				break;
+			case 24:
+				msg = SystemMessageId.LOC_GM_CONSULATION_SERVICE_S1_S2_S3;
+				break;
+			case 25:
+				msg = SystemMessageId.LOC_DIMENSIONAL_GAP_S1_S2_S3;
+				break;
+			case 26:
+				msg = SystemMessageId.LOC_CEMETARY_OF_THE_EMPIRE_S1_S2_S3;
+				break;
+			case 27:
+				msg = SystemMessageId.LOC_STEEL_CITADEL_S1_S2_S3;
+				break;
+			case 28:
+				msg = SystemMessageId.LOC_STEEL_CITADEL_RESISTANCE;
+				break;
+			case 29:
+				msg = SystemMessageId.LOC_KAMALOKA;
+				break;
+			case 30:
+				msg = SystemMessageId.LOC_NIA_KAMALOKA;
+				break;
+			case 31:
+				msg = SystemMessageId.LOC_RIM_KAMALOKA;
+				break;
+			case 32:
+				msg = SystemMessageId.LOC_KEUCEREUS_S1_S2_S3;
+				break;
+			case 33:
+				msg = SystemMessageId.LOC_IN_SEED_INFINITY_S1_S2_S3;
+				break;
+			case 34:
+				msg = SystemMessageId.LOC_OUT_SEED_INFINITY_S1_S2_S3;
+				break;
+			case 35:
+				msg = SystemMessageId.LOC_CLEFT_S1_S2_S3;
+				break;
 			default:
 				msg = SystemMessageId.LOC_ADEN_S1_S2_S3;
 		}

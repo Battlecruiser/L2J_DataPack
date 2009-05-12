@@ -90,7 +90,7 @@ class Quest (JQuest) :
     st.exitQuest(1)
     return htmltext
 
-QUEST    = Quest(2211, qn, "Teleports")
+QUEST    = Quest(-1, qn, "Teleports")
 
 for i in range(31078,31092)+range(31168,31170)+range(31692,31696)+range(31997,31999) :
    QUEST.addStartNpc(i)

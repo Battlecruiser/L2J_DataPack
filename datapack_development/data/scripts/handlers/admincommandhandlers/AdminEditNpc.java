@@ -577,7 +577,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private void storeTradeList(int itemID, int price, int tradeListID, int order)
+	private void storeTradeList(int itemID, long price, int tradeListID, int order)
 	{
 		java.sql.Connection con = null;
 		try
@@ -604,7 +604,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		}
 	}
 	
-	private void updateTradeList(int itemID, int price, int tradeListID, int order)
+	private void updateTradeList(int itemID, long price, int tradeListID, int order)
 	{
 		java.sql.Connection con = null;
 		try
@@ -658,7 +658,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		}
 	}
 	
-	private int findOrderTradeList(int itemID, int price, int tradeListID)
+	private int findOrderTradeList(int itemID, long price, int tradeListID)
 	{
 		java.sql.Connection con = null;
 		int order = 0;

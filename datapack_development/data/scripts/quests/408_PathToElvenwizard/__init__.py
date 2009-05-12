@@ -157,12 +157,15 @@ class Quest (JQuest) :
         st.takeItems(PURE_AQUAMARINE,st.getQuestItemsCount(PURE_AQUAMARINE))
         st.takeItems(NOBILITY_AMETHYST,st.getQuestItemsCount(NOBILITY_AMETHYST))
         st.takeItems(FERTILITY_PERIDOT,st.getQuestItemsCount(FERTILITY_PERIDOT))
+        isFinished = st.getGlobalQuestVar("1ClassQuestFinished")
+        if isFinished == "" : 
+          st.addExpAndSp(228064,14615)
         st.set("cond","0")
         st.exitQuest(False)
+        st.saveGlobalQuestVar("1ClassQuestFinished","1")
         st.playSound("ItemSound.quest_finish")
         if st.getQuestItemsCount(ETERNITY_DIAMOND) == 0 :
           st.giveItems(ETERNITY_DIAMOND,1)
-        st.addExpAndSp(228064,14615)
         htmltext = "30414-24.htm"
    return htmltext
 

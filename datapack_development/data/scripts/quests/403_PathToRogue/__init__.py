@@ -93,8 +93,10 @@ class Quest (JQuest) :
    elif npcId == 30379 and st.getInt("cond") :
         if st.getQuestItemsCount(HORSESHOE_OF_LIGHT) == 0 and HaveAllStolenItems(st) :
           htmltext = "30379-09.htm"
-          st.giveItems(57,81900)
-          st.addExpAndSp(295862,16814)
+          isFinished = st.getGlobalQuestVar("1ClassQuestFinished")
+          if isFinished == "" : 
+            st.giveItems(57,81900)
+            st.addExpAndSp(295862,16814)
           st.giveItems(BEZIQUES_RECOMMENDATION,1)
           st.takeItems(NETIS_BOW,1)
           st.takeItems(NETIS_DAGGER,1)
@@ -103,6 +105,7 @@ class Quest (JQuest) :
             st.takeItems(STOLEN_ITEM[i],-1)
           st.set("cond","0")
           st.exitQuest(False)
+          st.saveGlobalQuestVar("1ClassQuestFinished","1")
           st.playSound("ItemSound.quest_finish")
         elif st.getQuestItemsCount(HORSESHOE_OF_LIGHT) == 0 and st.getQuestItemsCount(BEZIQUES_LETTER)>0 :
           htmltext = "30379-07.htm"

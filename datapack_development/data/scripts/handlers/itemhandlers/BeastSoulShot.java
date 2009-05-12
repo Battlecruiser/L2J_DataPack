@@ -100,7 +100,7 @@ public class BeastSoulShot implements IItemHandler
 				return;
 			}
 			
-			int shotCount = item.getCount();
+			long shotCount = item.getCount();
 			shotConsumption = weaponItem.getSoulShotCount();
 			
 			if (shotConsumption == 0)
