@@ -19,8 +19,6 @@
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 80 </table> 
   <table name="#pAtk"> 20.44 22.64 24.77 26.78 28.59 30.12 31.30 39 45 78 </table>
   <table name="#pvp"> 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="skillType" val="WEAPON_SA"/>
@@ -50,8 +48,6 @@
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 </table>
   <table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 1.06 1.06 1.07 </table>
   <table name="#pvp"> 1 1 1 1 1 1 1.05 1.05 1.05 </table>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="skillType" val="WEAPON_SA"/>
@@ -78,7 +74,6 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3603" levels="10" name="Demonic Sword Zariche">
   <table name="#maxCp"> 12 13 14 15 17 19 21 23 25 27 </table>
@@ -92,7 +87,6 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
-  <set name="castRange" val="-1"/>
   <set name="minPledgeClass" val="2"/>
   <for>
     <mul stat="maxCp" val="#maxCp" order="0x30"/>
@@ -110,15 +104,13 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="sleepVuln" val="0.85"/>
     <mul order="0x30" stat="poisonVuln" val="0.75"/>
     <mul order="0x30" stat="bleedVuln" val="0.75"/>
     <mul order="0x30" stat="paralyzeVuln" val="0.85"/>
     <mul order="0x30" stat="stunVuln" val="0.85"/>
-    <mul order="0x30" stat="darkVuln" val="0.85"/>
+    <add order="0x40" stat="darkRes" val="15"/>
     <mul order="0x30" stat="bleedProf" val="1.25"/>
     <mul order="0x30" stat="poisonProf" val="1.25"/>
     <mul order="0x30" stat="sleepProf" val="1.15"/>
@@ -133,8 +125,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <mul val="1.05" order="0x30" stat="pDef"/>
     <add val="85" order="0x40" stat="maxHp"/>
@@ -144,8 +134,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <mul val="1.05" order="0x30" stat="pDef"/>
     <add val="3" order="0x40" stat="rEvas"/>
@@ -155,8 +143,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <mul val="1.05" order="0x30" stat="pDef"/>
     <mul val="1.05" order="0x30" stat="mAtkSpd"/>
@@ -170,8 +156,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="maxCp" val="#maxCP"/>
     <mul order="0x30" stat="regCp" val="1.4"/>
@@ -189,8 +173,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <add val="#maxCP" order="0x40" stat="maxCp"/>
     <mul val="1.4" order="0x30" stat="regCp"/>
@@ -208,8 +190,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <add val="#maxCP" order="0x40" stat="maxCp"/>
     <mul val="1.4" order="0x30" stat="regCp"/>
@@ -225,8 +205,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="pDef" val="25"/>
     <add order="0x40" stat="regMp" val="2"/>
@@ -236,8 +214,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="rEvas" val="2"/>
     <add order="0x40" stat="mDef" val="12"/>
@@ -247,8 +223,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="pDef" val="16"/>
     <mul order="0x30" stat="maxLoad" val="1.3"/>
@@ -258,8 +232,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="pDef" val="38"/>
     <add order="0x40" stat="regMp" val="2"/>
@@ -269,8 +241,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="rEvas" val="2"/>
     <add order="0x40" stat="mDef" val="20"/>
@@ -280,8 +250,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="pDef" val="24"/>
     <mul order="0x30" stat="maxLoad" val="1.3"/>
@@ -291,8 +259,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="pDef" val="44"/>
     <add order="0x40" stat="regMp" val="2"/>
@@ -302,8 +268,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="rEvas" val="2"/>
     <add order="0x40" stat="mDef" val="24"/>
@@ -313,8 +277,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="pDef" val="28"/>
     <mul order="0x30" stat="maxLoad" val="1.3"/>
@@ -324,8 +286,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="pDef" val="50"/>
     <add order="0x40" stat="regMp" val="2"/>
@@ -335,8 +295,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="rEvas" val="2"/>
     <add order="0x40" stat="mDef" val="28"/>
@@ -346,8 +304,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="pDef" val="32"/>
     <mul order="0x30" stat="maxLoad" val="1.3"/>
@@ -357,8 +313,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="pDef" val="56"/>
     <add order="0x40" stat="regMp" val="2"/>
@@ -368,8 +322,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="rEvas" val="2"/>
     <add order="0x40" stat="mDef" val="32"/>
@@ -379,8 +331,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="pDef" val="36"/>
     <mul order="0x30" stat="maxLoad" val="1.3"/>
@@ -474,7 +424,6 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
-  <set name="castRange" val="-1"/>
   <set name="minPledgeClass" val="2"/>
   <for>
     <mul stat="maxCp" val="#maxCp" order="0x30"/>
@@ -496,8 +445,6 @@
   <set name="reuseDelay" val="60000"/> <!-- Need check -->
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="skillRadius" val="200"/>
 </skill>
 <skill id="3631" levels="1" name="Void Flow">
@@ -516,7 +463,6 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="10000"/>
 </skill>
 <skill id="3633" levels="2" name="Residential Shock Immunity">
@@ -526,10 +472,8 @@
   <set name="reuseDelay" val="1800000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="10" val="0" stackOrder="#stack" stackType="ShockVuln">
+    <effect name="Buff" time="10" val="0" stackOrder="#stack" stackType="ShockVuln">
       <mul order="0x30" stat="stunVuln" val="#vuln"/>
     </effect>
   </for>
@@ -540,8 +484,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="WEAPON_SA"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <!-- The following values are copied from Infinity Cleaver SA -->
     <add order="0x40" stat="cAtkAdd" val="504"/> <!-- P.Atk. +504 on a critical hit -->
@@ -557,9 +499,6 @@
 </skill>
 <skill id="3635" levels="1" name="Special Ability Infinity Shooter">
   <!-- Done by DJ MELERIX -->
-  <set name="bestowTriggered" val="true"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="80"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="skillType" val="WEAPON_SA"/>
@@ -582,15 +521,13 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <sub order="0x10" stat="STR" val="2"/> <!-- Str -2 -->
     <add order="0x10" stat="CON" val="2"/> <!-- Con +2 -->
     <mul order="0x30" stat="pDef" val="1.066"/> <!-- P. Def. +6.6% -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 -->
     <mul order="0x30" stat="gainHp" val="1.04"/> <!-- Heal Capacity +4% -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <add order="0x40" stat="darkRes" val="8"/> <!-- Dark Resistance +8 -->
     <mul order="0x30" stat="stunVuln" val="0.85"/> <!-- Stun Resistance +15 -->
   </for>
 </skill>
@@ -599,14 +536,12 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
     <add order="0x10" stat="STR" val="2"/> <!-- Str +2 -->
     <mul order="0x30" stat="pAtk" val="1.066"/> <!-- P. Atk. +6.6% -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Darkness Resistance +8 -->
+    <add order="0x40" stat="darkRes" val="8"/> <!-- Darkness Resistance +8 -->
     <add order="0x40" stat="cAtkAdd" val="282"/> <!-- Critical Damage +282 -->
     <basemul order="0x30" stat="rCrit" val="0.0295"/> <!-- Critical Rate +2.95% Increase -->
   </for>
@@ -616,14 +551,12 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
     <add order="0x10" stat="STR" val="2"/> <!-- Str +2 -->
     <mul order="0x30" stat="pDef" val="1.066"/> <!-- P. Def. +6.6% -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <add order="0x40" stat="darkRes" val="8"/> <!-- Dark Resistance +8 -->
     <mul order="0x30" stat="DanceMpConsumeRate" val="0.94"/> <!-- MP Consumption -6% Decrease for Song and Dance Skills  -->
   </for>
 </skill>
@@ -632,14 +565,12 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
     <add order="0x10" stat="STR" val="2"/> <!-- Str +2 -->
     <mul order="0x30" stat="pAtk" val="1.066"/> <!-- P. Atk. +6.6% -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- Max. HP +492 -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Resistance to Darkness attacks +8 -->
+    <add order="0x40" stat="darkRes" val="8"/> <!-- Resistance to Darkness attacks +8 -->
     <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.94"/> <!-- Decreases MP consumption by 6% for active skills -->
   </for>
 </skill>
@@ -648,14 +579,12 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
     <add order="0x10" stat="DEX" val="2"/> <!-- Dex +2 -->
     <add order="0x40" stat="rEvas" val="5.3"/> <!-- Evasion +5.3 -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <add order="0x40" stat="darkRes" val="8"/> <!-- Dark Resistance +8 -->
     <mul order="0x30" stat="rootVuln" val="0.85"/> <!-- Hold Resistance +15% -->
     <mul order="0x30" stat="pAtkSpd" val="1.0324"/> <!-- Atk. Spd. +3.24% -->
   </for>
@@ -665,14 +594,12 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
     <add order="0x10" stat="DEX" val="2"/> <!-- Dex +2 -->
     <add order="0x40" stat="accCombat" val="5.3"/> <!-- Accuracy +5.3 -->
     <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <add order="0x40" stat="darkRes" val="8"/> <!-- Dark Resistance +8 -->
     <mul order="0x30" stat="pAtkSpd" val="1.0324"/> <!-- Atk. Spd. +3.24% -->
     <add order="0x40" stat="regMp" val="1.066"/> <!-- MP Recovery +6.6% -->
   </for>
@@ -682,15 +609,13 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
     <add order="0x10" stat="STR" val="1"/> <!-- Str +1 -->
     <add order="0x10" stat="DEX" val="1"/> <!-- Dex +1 -->
     <mul order="0x30" stat="pAtk" val="1.066"/> <!-- P. Atk. +6.6% -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <add order="0x40" stat="darkRes" val="8"/> <!-- Dark Resistance +8 -->
     <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.94"/> <!-- MP Consumption -6% -->
   </for>
 </skill>
@@ -699,15 +624,13 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
     <add order="0x10" stat="STR" val="1"/> <!-- Str +1 -->
     <add order="0x10" stat="DEX" val="1"/> <!-- Dex +1 -->
     <mul order="0x30" stat="pAtk" val="1.066"/> <!-- Physical Attack Power +6.6% -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- Maximum HP +492 effect -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Darkness Resistance +8 -->
+    <add order="0x40" stat="darkRes" val="8"/> <!-- Darkness Resistance +8 -->
     <add order="0x40" stat="cAtkAdd" val="282"/> <!-- Critical Damage +282 -->
     <basemul order="0x30" stat="rCrit" val="0.0295"/> <!-- Critical Rate +2.95% Increase -->
   </for>
@@ -717,14 +640,12 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <sub order="0x10" stat="STR" val="2"/> <!-- Str -2 -->
     <add order="0x10" stat="CON" val="2"/> <!-- Con +2 -->
     <mul order="0x30" stat="pAtkSpd" val="1.066"/> <!-- Atk. Spd. +6.6% -->
     <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <add order="0x40" stat="darkRes" val="8"/> <!-- Dark Resistance +8 -->
     <mul order="0x30" stat="pAtk" val="1.0266"/> <!-- P. Atk. +2.66% -->
     <mul order="0x30" stat="pDef" val="1.0266"/> <!-- P. Def. +2.66% -->
   </for>
@@ -734,14 +655,12 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <sub order="0x10" stat="INT" val="2"/> <!-- Int -2 -->
     <add order="0x10" stat="MEN" val="2"/> <!-- Men +2 -->
     <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
     <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <add order="0x40" stat="darkRes" val="8"/> <!-- Dark Resistance +8 -->
     <mul order="0x30" stat="giveHp" val="1.22"/> <!-- Heal Capacity +22 -->
     <sub order="0x40" stat="cancel" val="15"/> <!-- Magic Cancel Rate -15 -->
   </for>
@@ -751,14 +670,12 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <sub order="0x10" stat="INT" val="2"/> <!-- Int -2 -->
     <add order="0x10" stat="MEN" val="2"/> <!-- Men +2 -->
     <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
     <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <add order="0x40" stat="darkRes" val="8"/> <!-- Dark Resistance +8 -->
     <mul order="0x30" stat="MagicalMpConsumeRate" val="0.94"/> <!-- MP Consumption -6% -->
     <sub order="0x40" stat="cancel" val="15"/> <!-- Magic Cancel Rate -15 -->
   </for>
@@ -768,14 +685,12 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <sub order="0x10" stat="INT" val="2"/> <!-- Int -2 -->
     <add order="0x10" stat="MEN" val="2"/> <!-- Men +2 -->
     <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
     <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <add order="0x40" stat="darkRes" val="8"/> <!-- Dark Resistance +8 -->
     <mul order="0x30" stat="pAtk" val="1.033"/> <!-- P. Atk. +3.3% -->
     <mul order="0x30" stat="pDef" val="1.033"/> <!-- P. Def. +3.3% -->
   </for>
@@ -785,15 +700,13 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x10" stat="INT" val="1"/> <!-- Int +1 -->
     <add order="0x10" stat="WIT" val="1"/> <!-- Wit +1 -->
     <sub order="0x10" stat="MEN" val="2"/> <!-- Men -2 -->
     <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
     <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
-    <mul order="0x30" stat="darkVuln" val="0.92"/> <!-- Dark Resistance +8 -->
+    <add order="0x40" stat="darkRes" val="8"/> <!-- Dark Resistance +8 -->
     <mul order="0x30" stat="mAtk" val="1.066"/> <!-- M. Atk. +6.6% -->
   </for>
 </skill>
@@ -801,8 +714,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="mDef" val="1.12"/>
     <add order="0x40" stat="mAtk" val="10"/>
@@ -810,7 +721,7 @@
     <mul order="0x30" stat="sleepVuln" val="0.9"/>
     <mul order="0x30" stat="confusionVuln" val="0.9"/>
     <mul order="0x30" stat="derangementVuln" val="0.9"/>
-    <mul order="0x30" stat="darkVuln" val="0.85"/>
+    <add order="0x40" stat="darkRes" val="15"/>
     <mul order="0x30" stat="rootProf" val="1.1"/>
     <mul order="0x30" stat="sleepProf" val="1.1"/>
     <mul order="0x30" stat="confusionProf" val="1.1"/>
@@ -821,302 +732,252 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3651" levels="1" name="PvP Weapon - Cancel">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3652" levels="1" name="PvP Weapon - Ignore Shield">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3653" levels="1" name="PvP Weapon - Attack Chance">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3654" levels="1" name="PvP Weapon - Casting">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3655" levels="1" name="PvP Weapon - Rapid Fire">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3656" levels="1" name="PvP Weapon - Decrease Range">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3657" levels="1" name="PvP Weapon - Decrease Resist">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3658" levels="1" name="PvP Weapon - Reflect Damage">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3659" levels="1" name="PvP Armor - Damage Down">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3660" levels="1" name="PvP Armor - Critical Down">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3661" levels="1" name="PvP Armor - Heal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3662" levels="1" name="PvP Armor - Speed Down">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3663" levels="1" name="PvP Armor - Mirage">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3664" levels="1" name="Red Talisman - Max. CP">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3665" levels="2" name="Red Talisman - CP Regeneration">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3666" levels="1" name="Yellow Talisman - Increase Force">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3667" levels="1" name="Yellow Talisman - Damage Transition">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3668" levels="1" name="Zubei's Leather Gaiters">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3669" levels="1" name="Zubei's Leather Shirt">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3670" levels="1" name="Zubei's Gauntlet">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3671" levels="1" name="Zubei's Boots">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3672" levels="1" name="Zubei's Gaiters">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3673" levels="1" name="Zubei's Gauntlet">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3674" levels="1" name="Zubei's Boots">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3675" levels="1" name="Zubei's Helmet">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3676" levels="1" name="Zubei's Breastplate">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3677" levels="1" name="Tunic of Zubei">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3678" levels="1" name="Stockings of Zubei">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3679" levels="1" name="Zubei's Gauntlet">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3680" levels="1" name="Zubei's Boots">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3681" levels="1" name="Zubei's Shield">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3682" levels="1" name="Avadon Gloves">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3683" levels="1" name="Avadon Boots">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3684" levels="1" name="Avadon Circlet">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3685" levels="1" name="Avadon Gaiters">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3686" levels="1" name="Avadon Breastplate">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3687" levels="1" name="Avadon Shield">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3688" levels="1" name="Avadon Circlet">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3689" levels="1" name="Avadon Gloves">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3690" levels="1" name="Avadon Leather Armor">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3691" levels="1" name="Avadon Boots">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3692" levels="1" name="Avadon Circlet">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3693" levels="1" name="Avadon Gloves">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3694" levels="1" name="Avadon Robe">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3695" levels="1" name="Avadon Boots">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3696" levels="1" name="Doom Gloves">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3697" levels="1" name="Doom Boots">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3698" levels="1" name="Doom Plate Armor">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3699" levels="1" name="Doom Helmet">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 </list>

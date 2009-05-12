@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+<skill id="5900" levels="1" name="Burst of Oblivion">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="5901" levels="2" name="Mist of Oblivion">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="5902" levels="1" name="NPC Trigger Target Cancel">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="5903" levels="1" name="Burst of Misplace">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="5904" levels="3" name="Mist of Souliter">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="5905" levels="1" name="Confusing Nuph">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="5906" levels="1" name="Ritual of Revive">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="5907" levels="2" name="Ritual of Entombment">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="5908" levels="2" name="Ritual of Entombment">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="5909" levels="1" name="Stronghold Attack">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="5910" levels="1" name="Stronghold Attack">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="5982" levels="1" name="Aura Bird - Falcon">
+  <set name="mpConsume" val="75"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="CONT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="2500"/>
+  <set name="reuseDelay" val="0"/>
+  <set name="staticReuse" val="true"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="transformId" val="8"/>
+  <set name="castRange" val="1500"/>
+  <set name="effectRange" val="2100"/>
+  <for>
+    <effect name="Transformation" time="-1" val="0"> <!-- Transformation have unlimited time -->
+    </effect>
+  </for>
+</skill>
+<skill id="5983" levels="1" name="Aura Bird - Owl">
+  <set name="mpConsume" val="75"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="CONT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="2500"/>
+  <set name="reuseDelay" val="0"/>
+  <set name="staticReuse" val="true"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="transformId" val="9"/>
+  <set name="castRange" val="1500"/>
+  <set name="effectRange" val="2100"/>
+  <for>
+    <effect name="Transformation" time="-1" val="0"> <!-- Transformation have unlimited time -->
+    </effect>
+  </for>
+</skill>
+</list>

@@ -4,64 +4,54 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="801" levels="1" name="Warrior Ability - Boost CP">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="802" levels="1" name="Wizard Ability - Anti-magic">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="803" levels="1" name="Healer Ability - Divine Protection">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="804" levels="1" name="Knight Ability - Resist Critical">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="805" levels="1" name="not used">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="806" levels="1" name="Magic Obstacle">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="1500"/>
 </skill>
 <skill id="807" levels="1" name="Over-hit">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="1500"/>
 </skill>
 <skill id="808" levels="1" name="Golem Punch">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="830"/>
 </skill>
 <skill id="809" levels="1" name="Golem Tornado Swing">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="830"/>
 </skill>
 <skill id="810" levels="1" name="Vanguard">
@@ -71,11 +61,9 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="5000"/>
   <set name="reuseDelay" val="10000"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="transformId" val="312"/>
   <for>
-    <effect count="1" name="Transformation" time="18400" val="0">
+    <effect name="Transformation" time="18400" val="0">
       <mul order="0x30" stat="pDef" val="0.83"/>
       <mul order="0x30" stat="sDef" val="0.5"/>
     </effect>
@@ -88,11 +76,9 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="5000"/>
   <set name="reuseDelay" val="10000"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="transformId" val="313"/>
   <for>
-    <effect count="1" name="Transformation" time="18400" val="0">
+    <effect name="Transformation" time="18400" val="0">
       <mul order="0x30" stat="pDef" val="0.83"/>
       <mul order="0x30" stat="sDef" val="0.5"/>
     </effect>
@@ -105,11 +91,9 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="5000"/>
   <set name="reuseDelay" val="10000"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="transformId" val="314"/>
   <for>
-    <effect count="1" name="Transformation" time="18400" val="0">
+    <effect name="Transformation" time="18400" val="0">
       <mul order="0x30" stat="pDef" val="0.83"/>
       <mul order="0x30" stat="sDef" val="0.5"/>
     </effect>
@@ -121,12 +105,10 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="5000"/>
-  <set name="reuseDelay" val="10000"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <set name="reuseDelay" val="30000"/>
   <set name="transformId" val="315"/>
   <for>
-    <effect count="1" name="Transformation" time="18400" val="0">
+    <effect name="Transformation" time="18400" val="0">
       <mul order="0x30" stat="pDef" val="0.83"/>
       <mul order="0x30" stat="sDef" val="0.5"/>
     </effect>
@@ -151,8 +133,6 @@
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="ignoreShld" val="true"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="815" levels="43" name="Blade Hurricane">
   <!-- Vanguard Stance Skill -->
@@ -173,8 +153,6 @@
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="ignoreShld" val="true"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="816" levels="43" name="Cleave">
   <!-- Vanguard Stance Skill -->
@@ -220,53 +198,49 @@
 </skill>
 <skill id="818" levels="1" name="Evasion Counter">
   <!-- Needs to be verified -->
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="bestowTriggered" val="true"/>
   <set name="triggeredId" val="5673"/>
   <set name="triggeredLevel" val="1"/>
+  <set name="activationChance" val="15"/>
+  <set name="chanceType" val="ON_EVADED_HIT"/>
 </skill>
 <skill id="819" levels="1" name="Evasion Chance">
   <!-- Needs to be verified -->
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="bestowTriggered" val="true"/>
   <set name="triggeredId" val="5674"/>
   <set name="triggeredLevel" val="1"/>
+  <set name="activationChance" val="15"/>
+  <set name="chanceType" val="ON_EVADED_HIT"/>
 </skill>
 <skill id="820" levels="1" name="Evasion Haste">
   <!-- Needs to be verified -->
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="bestowTriggered" val="true"/>
   <set name="triggeredId" val="5675"/>
   <set name="triggeredLevel" val="1"/>
+  <set name="activationChance" val="15"/>
+  <set name="chanceType" val="ON_EVADED_HIT"/>
 </skill>
 <skill id="821" levels="1" name="Shadow Step">
+  <set name="magicLvl" val="72"/>
   <set name="mpConsume" val="50"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="INSTANT_JUMP"/>
-  <set name="effectType" val="DEBUFF"/>
-  <set name="effectPower" val="50"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="900"/>
-  <set name="reuseDelay" val="480000"/>
+  <set name="reuseDelay" val="75000"/>
   <set name="hitTime" val="100"/>
   <cond msg="Shadow Step cannot be used due to unsuitable terms.">
     <target mindistance="300"/>
   </cond>
   <for>
-    <effect count="1" name="RemoveTarget" time="1" val="0"/>
+    <effect name="RemoveTarget" val="0" effectPower="50" effectType="DEBUFF"/>
   </for>
 </skill>
 <skill id="822" levels="3" name="Repair Golem">
@@ -276,7 +250,7 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_SUMMON"/>
-  <set name="reuseDelay" val="9000"/>
+  <set name="reuseDelay" val="2000"/>
   <set name="hitTime" val="2500"/>
   <set name="skillType" val="HEAL_PERCENT"/>
   <set name="isMagic" val="true"/>
@@ -291,7 +265,7 @@
   <table name="#mpConsume"> 24 36 42 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SUMMON"/>
-  <set name="reuseDelay" val="6000"/>
+  <set name="reuseDelay" val="2000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
@@ -299,7 +273,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#pAtk" stackType="pa_up">
+    <effect name="Buff" time="1200" val="0" stackOrder="#pAtk" stackType="pa_up">
       <mul order="0x30" stat="pAtk" val="#pAtk"/>
       <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
     </effect>
@@ -312,7 +286,7 @@
   <table name="#mpConsume"> 35 44 41 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SUMMON"/>
-  <set name="reuseDelay" val="6000"/>
+  <set name="reuseDelay" val="2000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
@@ -320,7 +294,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="40"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#maxHp" stackType="max_hp_up">
+    <effect name="Buff" time="1200" val="0" stackOrder="#maxHp" stackType="max_hp_up">
       <mul order="0x30" stat="pDef" val="#pDef"/>
       <mul order="0x30" stat="maxHp" val="#maxHp"/>
     </effect>
@@ -331,7 +305,7 @@
   <set name="mpInitialConsume" val="16"/>
   <set name="mpConsume" val="28"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="reuseDelay" val="4800"/>
+  <set name="reuseDelay" val="2000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
@@ -339,7 +313,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="ws_weapon">
+    <effect name="Buff" time="600" val="0" stackOrder="1" stackType="ws_weapon">
       <mul order="0x30" stat="pAtk" val="1.05">
         <using kind="Sword,Big Sword,Ancient,Rapier"/>
       </mul>
@@ -354,7 +328,7 @@
   <set name="mpInitialConsume" val="16"/>
   <set name="mpConsume" val="28"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="reuseDelay" val="4800"/>
+  <set name="reuseDelay" val="2000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
@@ -363,7 +337,7 @@
   <set name="effectRange" val="400"/>
   <for>
     <!-- Missing: weight for shock attack by 8 -->
-    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="ws_weapon">
+    <effect name="Buff" time="600" val="0" stackOrder="1" stackType="ws_weapon">
       <mul order="0x30" stat="pAtk" val="1.05">
         <using kind="Blunt,Big Blunt"/>
       </mul>
@@ -375,7 +349,7 @@
   <set name="mpInitialConsume" val="16"/>
   <set name="mpConsume" val="28"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="reuseDelay" val="4800"/>
+  <set name="reuseDelay" val="2000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
@@ -383,7 +357,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="ws_weapon">
+    <effect name="Buff" time="600" val="0" stackOrder="1" stackType="ws_weapon">
       <mul order="0x30" stat="pAtk" val="1.05">
         <using kind="Bow,Crossbow"/>
       </mul>
@@ -398,7 +372,7 @@
   <set name="mpInitialConsume" val="15"/>
   <set name="mpConsume" val="25"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="reuseDelay" val="4800"/>
+  <set name="reuseDelay" val="2000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
@@ -406,7 +380,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="ws_armor">
+    <effect name="Buff" time="600" val="0" stackOrder="1" stackType="ws_armor">
       <mul order="0x30" stat="pDef" val="1.1">
         <and>
           <using kind="Heavy"/>
@@ -423,7 +397,7 @@
   <set name="mpInitialConsume" val="15"/>
   <set name="mpConsume" val="25"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="reuseDelay" val="4800"/>
+  <set name="reuseDelay" val="2000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
@@ -431,7 +405,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="ws_armor">
+    <effect name="Buff" time="600" val="0" stackOrder="1" stackType="ws_armor">
       <mul order="0x30" stat="pDef" val="1.05">
         <and>
           <using kind="Light"/>
@@ -456,7 +430,7 @@
   <set name="mpInitialConsume" val="15"/>
   <set name="mpConsume" val="25"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="reuseDelay" val="4800"/>
+  <set name="reuseDelay" val="2000"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
@@ -464,7 +438,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect count="1" name="Buff" time="600" val="0" stackOrder="1" stackType="ws_armor">
+    <effect name="Buff" time="600" val="0" stackOrder="1" stackType="ws_armor">
       <mul order="0x30" stat="pDef" val="1.05">
         <and>
           <using kind="Magic"/>
@@ -485,16 +459,22 @@
   </for>
 </skill>
 <skill id="831" levels="1" name="Summon Merchant Golem">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="itemConsumeId" val="1458"/>
+  <set name="itemConsumeCount" val="5"/>
+  <set name="mpConsume" val="122"/>
+  <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="15000"/>
+  <set name="reuseDelay" val="75000"/>
+  <set name="skillType" val="SUMMON"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <!-- Summon-specific -->
+  <set name="summonTotalLifeTime" val="180000"/>
+  <set name="summonTimeLostIdle" val="1000"/>
+  <set name="summonTimeLostActive" val="1000"/>
+  <set name="npcId" val="13128"/>
 </skill>
 <skill id="832" levels="1" name="Fast Recovery">
   <!-- Done by DJ MELERIX -->
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
@@ -506,35 +486,38 @@
 </skill>
 <skill id="833" levels="1" name="Body Reconstruction">
   <!-- Done by Light -->
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="hitTime" val="1500"/>
   <set name="mpConsume" val="94"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="100"/>
-  <set name="reuseDelay" val="2100000"/>
+  <set name="reuseDelay" val="900000"/>
   <set name="skillType" val="HEAL_PERCENT"/>
   <set name="target" val="TARGET_SELF"/>
 </skill>
 <skill id="834" levels="1" name="Blood Pact">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
+  <set name="mpConsume" val="50"/>
+  <set name="target" val="TARGET_PARTY"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="75000"/>
+  <for>
+    <effect name="Buff" time="120" val="0">
+      <mul order="0x30" stat="maxHp" val="1.1"/>
+      <mul order="0x30" stat="regHp" val="1.1"/>
+    </effect>
+  </for>
 </skill>
 <skill id="835" levels="4" name="Imbue Seed of Destruction">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="1800"/>
 </skill>
 <skill id="836" levels="3" name="Oblivion Trap">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="3000"/>
 </skill>
 <skill id="837" levels="1" name="Painkiller">
@@ -542,14 +525,13 @@
   <set name="mpConsume" val="53"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1000"/>
-  <set name="reuseDelay" val="2600000"/>
+  <set name="reuseDelay" val="300000"/>
   <set name="skillType" val="BUFF"/>
   <set name="staticReuse" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
-  <!-- TODO: after effect id: 5696-->
   <for>
-    <effect count="1" name="Invincible" time="8" val="0" stackOrder="1" stackType="Instant_Shield"/>
+    <effect name="Invincible" time="8" val="0" stackOrder="1" stackType="Instant_Shield"/>
   </for>
 </skill>
 <skill id="838" levels="1" name="Switch Stance">
@@ -557,13 +539,389 @@
   <set name="skillType" val="TRANSFORMDISPEL"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="5000"/>
-  <set name="castRange" val="-1"/>
+  <set name="reuseDelay" val="15000"/>
 </skill>
 <skill id="839" levels="1" name="Dismount">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="TRANSFORMDISPEL"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="2500"/>
+</skill>
+<skill id="840" levels="1" name="Final Flying Form">
+  <set name="mpConsume" val="72"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="CONT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="2500"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="staticReuse" val="true"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="transformId" val="260"/>
+  <set name="soulConsumeCount" val="20"/>
+  <cond msgId="2721">
+    <player landingZone="True"/>
+  </cond>
+  <for>
+    <effect name="Transformation" time="-1" val="0"> <!-- Transformation have unlimited time -->
+    </effect>
+  </for>
+</skill>
+<skill id="841" levels="1" name="Aura Bird - Falcon">
+  <set name="mpConsume" val="72"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="CONT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="2500"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="staticReuse" val="true"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="transformId" val="8"/>
+  <cond msgId="2721">
+    <player landingZone="True"/>
+  </cond>
+  <for>
+    <effect name="Transformation" time="-1" val="0"> <!-- Transformation have unlimited time -->
+    </effect>
+  </for>
+</skill>
+<skill id="842" levels="1" name="Aura Bird - Owl">
+  <set name="mpConsume" val="72"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="CONT"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="2500"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="staticReuse" val="true"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="transformId" val="9"/>
+  <cond msgId="2721">
+    <player landingZone="True"/>
+  </cond>
+  <for>
+    <effect name="Transformation" time="-1" val="0"> <!-- Transformation have unlimited time -->
+    </effect>
+  </for>
+</skill>
+<skill id="843" levels="1" name="Shooting Star">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="844" levels="1" name="Outpost Construction">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="845" levels="1" name="Outpost Demolition">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="846" levels="1" name="Possess Ward">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="847" levels="1" name="Ward Transport">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="848" levels="1" name="Gludio Territory Benefaction">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="849" levels="1" name="Dion Territory Benefaction">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="850" levels="1" name="Giran Territory Benefaction">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="851" levels="1" name="Oren Territory Benefaction">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="852" levels="1" name="Aden Territory Benefaction">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="853" levels="1" name="Innadril Territory Benefaction">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="854" levels="1" name="Goddard Territory Benefaction">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="855" levels="1" name="Rune Territory Benefaction">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="856" levels="1" name="Schuttgart Territory Benefaction">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="857" levels="1" name="Human Mercenary">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="858" levels="1" name="Elf Mercenary">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="859" levels="1" name="Dark Elf Mercenary">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="860" levels="1" name="Orc Mercenary">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="861" levels="1" name="Dwarf Mercenary">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="862" levels="1" name="Kamael Mercenary">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="863" levels="1" name="Royal Guard Captain">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="864" levels="1" name="Archer Captain">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="865" levels="1" name="Magic Leader">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="866" levels="1" name="Kamael Guard Captain">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="867" levels="1" name="Knight of Dawn">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="868" levels="1" name="Fortress Captain">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="869" levels="1" name="Mercenary Power Strike">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="870" levels="1" name="Royal Guard Captain Power Strike">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="871" levels="1" name="Royal Guard Captain Might">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="872" levels="1" name="Archer Captain Power Shot">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="873" levels="1" name="Archer Captain Rapid Shot">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="874" levels="1" name="Magic Leader Flame Strike">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="875" levels="1" name="Magic Leader Empower">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="876" levels="1" name="Kamael Guard Captain Enuma Elish">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="877" levels="1" name="Kamael Guard Captain Disarm">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="878" levels="1" name="Knight of Dawn Power Strike">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="879" levels="1" name="Knight of Dawn Curse Fear">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="880" levels="1" name="Knight of Dawn Ultimate Defense">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="881" levels="1" name="Fortress Captain Twister">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="882" levels="1" name="Fortress Captain Blaze">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="883" levels="1" name="Fortress Captain Seal of Binding">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="884" levels="11" name="Air Assault">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="reuseDelay" val="23000"/>
+</skill>
+<skill id="885" levels="1" name="Air Blink">
+  <set name="coolTime" val="200"/>
+  <set name="flyCourse" val="0"/> <!-- Teleport to Back -->
+  <set name="flyRadius" val="500"/>
+  <set name="hitTime" val="100"/>
+  <set name="isDebuff" val="true"/>
+  <set name="mpConsume" val="100"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="100"/>
+  <set name="reuseDelay" val="23000"/>
+  <set name="skillRadius" val="150"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="target" val="TARGET_AURA"/>
+  <for>
+    <effect name="Stun" time="2" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="Stun"/>
+    <effect self="1" name="Warp" val="0" noicon="1"/>
+  </for>
+</skill>
+<skill id="886" levels="11" name="Air Shock Bomb">
+  <table name="#power"> 2251 2310 2367 2424 2480 2534 2588 2639 2690 2738 2784 </table>
+  <table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
+  <set name="hitTime" val="1500"/>
+  <set name="isDebuff" val="true"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="#power"/>
+  <set name="reuseDelay" val="3000"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1500"/>
+  <for>
+    <effect name="Stun" time="9" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="Stun"/>
+  </for>
+</skill>
+<skill id="887" levels="11" name="Sky Clutch">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="reuseDelay" val="3000"/>
+</skill>
+<skill id="888" levels="11" name="Energy Storm">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="reuseDelay" val="1000"/>
+</skill>
+<skill id="889" levels="11" name="Energy Storm">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="reuseDelay" val="1000"/>
+</skill>
+<skill id="890" levels="11" name="Prodigious Flare">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="reuseDelay" val="2000"/>
+</skill>
+<skill id="891" levels="11" name="Energy Shot">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="reuseDelay" val="3000"/>
+</skill>
+<skill id="892" levels="11" name="Energy Shot">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="reuseDelay" val="3000"/>
+</skill>
+<skill id="893" levels="11" name="Concentrated Energy Shot">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="reuseDelay" val="4000"/>
+</skill>
+<skill id="894" levels="1" name="Exhilarate">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="reuseDelay" val="8000"/>
+</skill>
+<skill id="895" levels="1" name="Exhilarate">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="reuseDelay" val="8000"/>
+</skill>
+<skill id="896" levels="6" name="Rolling Step">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="reuseDelay" val="1000"/>
+</skill>
+<skill id="897" levels="6" name="Double Blast">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="reuseDelay" val="2000"/>
+</skill>
+<skill id="898" levels="6" name="Tornado Slash">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="899" levels="6" name="Cat Roar">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 </list>

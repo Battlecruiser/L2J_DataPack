@@ -4,21 +4,18 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="5101" levels="1" name="Cancel Capture C">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="5102" levels="1" name="Cancel All Capture">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="5103" levels="1" name="Production - Clan / Transfer">
@@ -107,7 +104,6 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="10000"/>
 </skill>
 <skill id="5111" levels="1" name="Big Bang">
@@ -115,7 +111,6 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="10000"/>
 </skill>
 <skill id="5112" levels="12" name="Stun">
@@ -131,18 +126,15 @@
   <set name="hitTime" val="1000"/>
   <set name="skillType" val="STUN"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="isDebuff" val="true"/>
-  <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
+    <effect name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="5113" levels="12" name="Castle Self AE Dispell Buff">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="6000"/>
 </skill>
 <skill id="5114" levels="12" name="Hold">
@@ -161,10 +153,8 @@
   <set name="isMagic" val="true"/>
   <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Root" time="30" val="0" stackOrder="1" stackType="Root"/>
+    <effect name="Root" time="30" val="0" stackOrder="1" stackType="Root"/>
   </for>
 </skill>
 <skill id="5115" levels="12" name="Cubic Hate">
@@ -176,8 +166,6 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="AGGDAMAGE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="5116" levels="12" name="Hold">
   <!-- Cubic skill -->
@@ -190,10 +178,8 @@
   <set name="isMagic" val="true"/>
   <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Root" time="30" val="0" stackOrder="1" stackType="Root"/>
+    <effect name="Root" time="30" val="0" stackOrder="1" stackType="Root"/>
   </for>
 </skill>
 <skill id="5117" levels="1" name="Stun">
@@ -201,21 +187,18 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="2500"/>
 </skill>
 <skill id="5118" levels="1" name="Cancel Sailren Use">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="2500"/>
 </skill>
 <skill id="5119" levels="1" name="Bleed">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="1080"/>
 </skill>
 <skill id="5120" levels="1" name="Stun">
@@ -232,10 +215,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="900"/>
-  <set name="effectType" val="STUN"/>
-  <set name="effectPower" val="40"/>
   <for>
-    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
+    <effect name="Stun" time="9" val="0" effectPower="40" effectType="STUN" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="5121" levels="1" name="Production - Corpse Revival">
@@ -244,23 +225,20 @@
   <set name="target" val="TARGET_SELF"/> <!-- Needs to be checked -->
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="5122" levels="1" name="Sailren Use Might">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="2500"/>
 </skill>
 <skill id="5123" levels="1" name="Maximum Defense">
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="CONT"/>
+  <set name="hitTime" val="500"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="8" val="0">
+    <effect name="Buff" time="8" val="0">
       <add order="0x40" stat="pDef" val="500"/>
       <add order="0x40" stat="mDef" val="300"/>
     </effect>
@@ -268,17 +246,17 @@
 </skill>
 <skill id="5124" levels="1" name="Anti-Music">
   <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="500"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="5125" levels="1" name="Maximum Resist Status">
   <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="500"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="8" val="0">
+    <effect name="Buff" time="8" val="0">
       <mul order="0x30" stat="cancelVuln" val="0.8"/>
       <mul order="0x30" stat="rootVuln" val="0.8"/>
       <mul order="0x30" stat="sleepVuln" val="0.8"/>
@@ -293,10 +271,10 @@
 <skill id="5126" levels="1" name="Maximum Recovery">
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="CONT"/>
+  <set name="hitTime" val="500"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="8" val="0">
+    <effect name="Buff" time="8" val="0">
       <mul stat="regHp" val="1.2" order="0x30"/>
       <mul stat="regCp" val="1.2" order="0x30"/>
     </effect>
@@ -305,21 +283,21 @@
 <skill id="5127" levels="1" name="Recover Force">
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="CONT"/>
+  <set name="hitTime" val="500"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="8" val="0">
+    <effect name="Buff" time="8" val="0">
       <mul order="0x30" stat="pAtk" val="1.1"/> <!-- Guess -->
     </effect>
   </for>
 </skill>
 <skill id="5128" levels="1" name="Maximum Archery">
   <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="500"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="8" val="0">
+    <effect name="Buff" time="8" val="0">
       <add order="0x40" stat="accCombat" val="40"/>
     </effect>
   </for>
@@ -327,11 +305,11 @@
 <skill id="5129" levels="1" name="Smokescreen">
   <!-- Needs to be finished  -->
   <set name="target" val="TARGET_ONE"/>
+  <set name="hitTime" val="500"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <for>
-    <effect count="1" name="Buff" time="8" val="0">
+    <effect name="Buff" time="8" val="0">
     <!-- NOT DONE -->
     </effect>
   </for>
@@ -339,26 +317,31 @@
 <skill id="5130" levels="1" name="Volcano">
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="CONT"/>
+  <set name="hitTime" val="500"/>
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="5131" levels="1" name="Tsunami">
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="CONT"/>
+  <set name="hitTime" val="500"/>
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="5132" levels="1" name="Cyclone">
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="CONT"/>
+  <set name="hitTime" val="500"/>
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="5133" levels="1" name="Gehenna">
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="CONT"/>
+  <set name="hitTime" val="500"/>
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="5134" levels="1" name="Anti-Summoning Field">
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="CONT"/>
+  <set name="hitTime" val="500"/>
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="5135" levels="1" name="Slash">
@@ -367,7 +350,7 @@
   <set name="power" val="5000"/> <!-- Guess -->
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1080"/>
-  <set name="reuseDelay" val="16000"/>
+  <set name="reuseDelay" val="8000"/>
   <set name="coolTime" val="167"/>
   <set name="skillType" val="PDAM"/>
   <set name="overHit" val="true"/>
@@ -382,12 +365,11 @@
   <set name="target" val="TARGET_AURA"/>
   <set name="hitTime" val="1070"/>
   <set name="skillRadius" val="230"/>
-  <set name="reuseDelay" val="30000"/>
+  <set name="reuseDelay" val="8000"/>
   <set name="coolTime" val="230"/>
   <set name="skillType" val="PDAM"/>
   <set name="overHit" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="effectRange" val="500"/>
 </skill>
 <skill id="5137" levels="1" name="Hold of King">
@@ -398,16 +380,15 @@
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="230"/>
   <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="24000"/>
+  <set name="reuseDelay" val="8000"/>
   <set name="skillTime" val="4000"/>
   <set name="skillType" val="ROOT"/>
   <set name="isMagic" val="true"/>
   <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="effectRange" val="500"/>
   <for>
-    <effect count="1" name="Root" time="30" val="0" stackOrder="1" stackType="Root"/>
+    <effect name="Root" time="30" val="0" stackOrder="1" stackType="Root"/>
   </for>
 </skill>
 <skill id="5138" levels="1" name="Whiplash">
@@ -416,27 +397,25 @@
   <set name="power" val="4000"/> <!-- Guess -->
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1080"/>
-  <set name="reuseDelay" val="16000"/>
+  <set name="reuseDelay" val="8000"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
-  <set name="effectType" val="STUN"/>
-  <set name="effectPower" val="60"/>
   <for>
-    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
+    <effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" stackOrder="1" stackType="Stun"/>
   </for>
  </skill>
 <skill id="5139" levels="1" name="Tidal Wave">
   <set name="magicLvl" val="80"/>
   <set name="mpConsume" val="322"/>
-  <set name="element" val="3"/> <!-- Water -->
+  <set name="element" val="2"/> <!-- Water -->
   <set name="power" val="250"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="hitTime" val="4000"/>
   <set name="isMagic" val="true"/>
-  <set name="reuseDelay" val="20000"/>
+  <set name="reuseDelay" val="8000"/>
   <set name="skillType" val="MDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="500"/>
@@ -448,7 +427,7 @@
   <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="hitTime" val="1500"/>
-  <set name="reuseDelay" val="12000"/>
+  <set name="reuseDelay" val="8000"/>
   <set name="isMagic" val="true"/>
   <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -457,7 +436,7 @@
   <set name="skillType" val="POISON"/>
   <set name="effectPower" val="35"/>
   <for>
-    <effect count="10" name="DamOverTime" time="3" val="96" abnormal="poison">
+    <effect count="10" name="DamOverTime" time="3" val="96" abnormal="poison" effectPower="35" effectType="POISON">
       <mul order="0x30" stat="pAtkSpd" val="0.7"/>
     </effect>
   </for>
@@ -468,7 +447,7 @@
   <set name="power" val="4000"/> <!-- Guess -->
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1080"/>
-  <set name="reuseDelay" val="16000"/>
+  <set name="reuseDelay" val="8000"/>
   <set name="coolTime" val="180"/>
   <set name="skillType" val="PDAM"/>
   <set name="overHit" val="true"/>
@@ -492,22 +471,17 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="2500"/>
 </skill>
 <skill id="5144" levels="1" name="Mirage">
   <!-- Needs to be verified -->
-  <set name="activationChance" val="30"/>
   <set name="castRange" val="900"/>
-  <set name="chanceType" val="ON_ATTACKED"/>
   <set name="effectRange" val="1400"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="skillType" val="AGGDAMAGE"/>
-  <set name="power" val="0"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="bestowed" val="true"/>
   <for>
-    <effect count="1" name="RemoveTarget" time="1" val="0"/>
+    <effect name="RemoveTarget" val="0"/>
   </for>
 </skill>
 <skill id="5145" levels="1" name="Day of Doom">
@@ -515,7 +489,6 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="5146" levels="10" name="Heal">
   <table name="#power"> 308 337 365 393 421 448 474 498 520 552 </table>
@@ -525,9 +498,7 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="HEAL"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="isMagic" val="true"/>
-  <set name="bestowed" val="true"/>
   <set name="hitTime" val="5000"/>
 </skill>
 <skill id="5147" levels="10" name="Blessed Body">
@@ -537,13 +508,10 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
-  <set name="bestowed" val="true"/>
   <set name="hitTime" val="4000"/>
   <for>
-    <effect count="1" name="Buff" time="15" val="0">
+    <effect name="Buff" time="15" val="0">
       <add order="0x40" stat="maxHp" val="#Tab-maxHp"/>
     </effect>
   </for>
@@ -555,13 +523,10 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
-  <set name="bestowed" val="true"/>
   <set name="hitTime" val="4000"/>
   <for>
-    <effect name="Buff" time="15" count="1" val="0">
+    <effect name="Buff" time="15" val="0">
       <mul order="0x30" stat="gainHp" val="#tab-gainHp"/>
     </effect>
   </for>
@@ -574,10 +539,7 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="MANARECHARGE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
-  <set name="bestowed" val="true"/>
   <set name="hitTime" val="6000"/>
 </skill>
 <skill id="5150" levels="10" name="Blessed Soul">
@@ -587,13 +549,10 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
-  <set name="bestowed" val="true"/>
   <set name="hitTime" val="4000"/>
   <for>
-    <effect count="1" name="Buff" time="15" val="0">
+    <effect name="Buff" time="15" val="0">
       <add order="0x40" stat="maxMp" val="#Tab-maxMp"/>
     </effect>
   </for>
@@ -605,13 +564,10 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
-  <set name="bestowed" val="true"/>
   <set name="hitTime" val="4000"/>
   <for>
-    <effect count="1" name="Buff" time="15" val="0">
+    <effect name="Buff" time="15" val="0">
       <mul order="0x30" stat="gainMp" val="#Tab-maxMp"/>
     </effect>
   </for>
@@ -624,10 +580,7 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="COMBATPOINTHEAL"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
-  <set name="bestowed" val="true"/>
   <set name="hitTime" val="5000"/>
 </skill>
 <skill id="5153" levels="10" name="Cheer">
@@ -637,13 +590,10 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
-  <set name="bestowed" val="true"/>
   <set name="hitTime" val="4000"/>
   <for>
-    <effect count="1" name="Buff" time="15" val="0">
+    <effect name="Buff" time="15" val="0">
       <add order="0x40" stat="maxCp" val="#power"/>
     </effect>
   </for>
@@ -655,13 +605,10 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
-  <set name="bestowed" val="true"/>
   <set name="hitTime" val="4000"/>
   <for>
-    <effect name="Buff" time="15" count="1" val="0">
+    <effect name="Buff" time="15" val="0">
       <mul order="0x30" stat="pAtk" val="#rate"/>
     </effect>
   </for>
@@ -673,13 +620,10 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
-  <set name="bestowed" val="true"/>
   <set name="hitTime" val="4000"/>
   <for>
-    <effect name="Buff" time="15" count="1" val="0">
+    <effect name="Buff" time="15" val="0">
       <mul order="0x30" stat="mAtk" val="#rate"/>
     </effect>
   </for>
@@ -691,13 +635,10 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
-  <set name="bestowed" val="true"/>
   <set name="hitTime" val="1500"/>
   <for>
-    <effect name="Buff" time="15" count="1" val="0">
+    <effect name="Buff" time="15" val="0">
       <mul order="0x30" stat="pvpPhysDmg" val="#rate"/>
     </effect>
   </for>
@@ -709,13 +650,10 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
-  <set name="bestowed" val="true"/>
   <set name="hitTime" val="4000"/>
   <for>
-    <effect name="Buff" time="15" count="1" val="0">
+    <effect name="Buff" time="15" val="0">
       <mul order="0x30" stat="pDef" val="#rate"/>
     </effect>
   </for>
@@ -727,13 +665,10 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
-  <set name="bestowed" val="true"/>
   <set name="hitTime" val="4000"/>
   <for>
-    <effect name="Buff" time="15" count="1" val="0">
+    <effect name="Buff" time="15" val="0">
       <mul order="0x30" stat="mDef" val="#rate"/>
     </effect>
   </for>
@@ -746,11 +681,10 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="bestowed" val="true"/>
   <set name="isDebuff" val="true"/>
   <set name="hitTime" val="1500"/>
   <for>
-    <effect count="1" name="Debuff" time="15" val="0">
+    <effect name="Debuff" time="15" val="0">
       <mul order="0x30" stat="pvpPhysDmg" val="#rate"/>
     </effect>
   </for>
@@ -762,13 +696,10 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
-  <set name="bestowed" val="true"/>
   <set name="hitTime" val="4000"/>
   <for>
-    <effect name="Buff" time="15" count="1" val="0">
+    <effect name="Buff" time="15" val="0">
       <add order="0x40" stat="rEvas" val="#rate"/>
     </effect>
   </for>
@@ -779,13 +710,10 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
-  <set name="bestowed" val="true"/>
   <set name="hitTime" val="4000"/>
   <for>
-    <effect name="Buff" time="15" count="1" val="0">
+    <effect name="Buff" time="15" val="0">
       <add order="0x40" stat="accCombat" val="#rate"/>
     </effect>
   </for>
@@ -797,13 +725,10 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
-  <set name="bestowed" val="true"/>
   <set name="hitTime" val="4000"/>
   <for>
-    <effect name="Buff" time="15" count="1" val="0">
+    <effect name="Buff" time="15" val="0">
       <mul order="0x30" stat="rCrit" val="#rate"/>
     </effect>
   </for>
@@ -815,13 +740,10 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
-  <set name="bestowed" val="true"/>
   <set name="hitTime" val="4000"/>
   <for>
-    <effect name="Buff" time="15" count="1" val="0">
+    <effect name="Buff" time="15" val="0">
       <mul order="0x30" stat="mCritRate" val="#rate"/>
     </effect>
   </for>
@@ -835,10 +757,7 @@
   <set name="isDebuff" val="true"/>
   <set name="skillType" val="AGGREDUCE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
-  <set name="bestowed" val="true"/>
   <set name="hitTime" val="1500"/>
 </skill>
 <skill id="5166" levels="10" name="Slow">
@@ -848,13 +767,10 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
   <set name="isDebuff" val="true"/>
-  <set name="bestowed" val="true"/>
   <for>
-    <effect count="1" name="Debuff" time="5" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
+    <effect name="Debuff" time="5" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
       <mul order="0x30" stat="runSpd" val="#Tab-runSpd"/>
     </effect>
   </for>
@@ -867,13 +783,10 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
   <set name="isDebuff" val="true"/>
-  <set name="bestowed" val="true"/>
   <for>
-    <effect count="1" name="Debuff" time="5" val="0" stackOrder="0.77" stackType="attack_time_up">
+    <effect name="Debuff" time="5" val="0" stackOrder="0.77" stackType="attack_time_up">
       <mul order="0x30" stat="pAtkSpd" val="0.77"/>
     </effect>
   </for>
@@ -885,12 +798,9 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="STUN"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isDebuff" val="true"/>
-  <set name="bestowed" val="true"/>
   <for>
-    <effect count="1" name="Stun" time="5" val="0" stackOrder="1" stackType="Stun"/>
+    <effect name="Stun" time="5" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="5169" levels="10" name="Hold">
@@ -901,13 +811,10 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="ROOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
   <set name="isDebuff" val="true"/>
-  <set name="bestowed" val="true"/>
   <for>
-    <effect count="1" name="Root" time="5" val="0" stackOrder="1" stackType="Root"/>
+    <effect name="Root" time="5" val="0" stackOrder="1" stackType="Root"/>
   </for>
 </skill>
 <skill id="5170" levels="10" name="Sleep">
@@ -918,13 +825,10 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="SLEEP"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
   <set name="isDebuff" val="true"/>
-  <set name="bestowed" val="true"/>
   <for>
-    <effect count="1" name="Sleep" time="5" val="0" stackOrder="1" stackType="sleep"/>
+    <effect name="Sleep" time="5" val="0" stackOrder="1" stackType="sleep"/>
   </for>
 </skill>
 <skill id="5171" levels="10" name="Paralyze">
@@ -935,13 +839,10 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="PARALYZE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isMagic" val="true"/>
   <set name="isDebuff" val="true"/>
-  <set name="bestowed" val="true"/>
   <for>
-    <effect count="1" name="Paralyze" time="5" val="0"/>
+    <effect name="Paralyze" time="5" val="0"/>
   </for>
 </skill>
 <skill id="5172" levels="10" name="Medusa">
@@ -951,12 +852,9 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="PARALYZE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isDebuff" val="true"/>
-  <set name="bestowed" val="true"/>
   <for>
-    <effect count="1" name="Petrification" time="5" val="0" stackOrder="30" stackType="turn_stone"/>
+    <effect name="Petrification" time="5" val="0" stackOrder="30" stackType="turn_stone"/>
   </for>
 </skill>
 <skill id="5173" levels="10" name="Fear">
@@ -966,12 +864,9 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="FEAR"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isDebuff" val="true"/>
-  <set name="bestowed" val="true"/>
   <for>
-    <effect count="3" name="Fear" time="2" val="0"/>
+    <effect count="5" name="Fear" time="2" val="0"/>
   </for>
 </skill>
 <skill id="5174" levels="10" name="Poison">
@@ -983,10 +878,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="POISON"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isDebuff" val="true"/>
-  <set name="bestowed" val="true"/>
   <set name="isMagic" val="true"/>
   <for>
     <effect count="10" name="DamOverTime" time="3" val="#dmg" abnormal="poison"/>
@@ -1001,12 +893,9 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="BLEED"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isDebuff" val="true"/>
-  <set name="bestowed" val="true"/>
   <for>
-    <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleeding">
+    <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleed">
       <mul order="0x30" stat="runSpd" val="0.8"/>
     </effect>
   </for>
@@ -1018,13 +907,10 @@
   <set name="skillType" val="MUTE"/>
   <set name="power" val="40"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isDebuff" val="true"/>
-  <set name="bestowed" val="true"/>
   <set name="isMagic" val="true"/>
   <for>
-    <effect count="1" name="Mute" time="5" val="0" stackOrder="1" stackType="silence"/>
+    <effect name="Mute" time="5" val="0" stackOrder="1" stackType="silence"/>
   </for>
 </skill>
 <skill id="5177" levels="10" name="Doom">
@@ -1034,13 +920,10 @@
   <set name="skillType" val="MUTE"/>
   <set name="power" val="40"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isDebuff" val="true"/>
-  <set name="bestowed" val="true"/>
   <set name="isMagic" val="true"/>
   <for>
-    <effect count="1" name="SilenceMagicPhysical" time="5" val="0" stackOrder="30" stackType="silence_all"/>
+    <effect name="SilenceMagicPhysical" time="5" val="0" stackOrder="30" stackType="silence_all"/>
   </for>
 </skill>
 <skill id="5178" levels="1" name="NPC Burn">
@@ -1055,32 +938,24 @@
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="5179" levels="1" name="Raid Boss - Level 86">
   <!-- This Skill Is Only For Description In The Client -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="5180" levels="1" name="Raid Boss - Level 87">
   <!-- This Skill Is Only For Description In The Client -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="5181" levels="1" name="Raid Boss - Level 87">
   <!-- This Skill Is Only For Description In The Client -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="PASSIVE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="5182" levels="1" name="Blessing of Protection">
   <!-- Newbie Guide Buff -->
@@ -1091,7 +966,7 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect count="1" name="ProtectionBlessing" time="3600" val="0"/>
+    <effect name="ProtectionBlessing" time="3600" val="0"/>
   </for>
 </skill>
 <skill id="5183" levels="1" name="Production: Dimensional Stun">
@@ -1100,10 +975,8 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="StunSelf" time="9" val="0" stackOrder="1" stackType="Stun"/>
+    <effect name="StunSelf" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="5184" levels="1" name="Production: Valakas Dragon Breath">
@@ -1131,7 +1004,6 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="5187" levels="4" name="Pet Vampiric Rage">
@@ -1139,7 +1011,6 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="5188" levels="3" name="Pet Regeneration">
@@ -1147,7 +1018,6 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="5189" levels="6" name="Pet Blessed Body">
@@ -1155,7 +1025,6 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="5190" levels="6" name="Pet Blessed Soul">
@@ -1163,7 +1032,6 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="5191" levels="3" name="Pet Guidance">
@@ -1171,7 +1039,6 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="5192" levels="2" name="Pet Wind Walk">
@@ -1179,7 +1046,6 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="5193" levels="3" name="Pet Acumen">
@@ -1187,7 +1053,6 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="5194" levels="3" name="Pet Empower">
@@ -1195,8 +1060,8 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="6000"/>
 </skill>
 <skill id="5195" levels="12" name="Pet Greater Heal">
   <table name="#mpConsume"> 9 15 23 32 40 49 58 62 64 65 67 67 </table>
@@ -1217,7 +1082,6 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="1500"/>
 </skill>
 <skill id="5197" levels="3" name="Pet Hex">
@@ -1225,7 +1089,6 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="1200"/>
 </skill>
 <skill id="5198" levels="3" name="Pet Slow">
@@ -1233,7 +1096,6 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="5199" levels="3" name="Pet Curse Gloom">
@@ -1241,7 +1103,6 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="1500"/>
 </skill>
 </list>

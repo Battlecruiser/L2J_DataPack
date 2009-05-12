@@ -5,35 +5,30 @@
   <set name="hitTime" val="1000"/>
   <set name="skillType" val="RECALL"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2101" levels="1" name="Feed: General Strider">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="FEED_PET"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="feed" val="200"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2102" levels="1" name="Feed: Clan Hall Strider">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="FEED_PET"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="feed" val="450"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2103" levels="1" name="Mystery Potion">
   <!-- Done by DJ MELERIX -->
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
-    <effect count="1" name="BigHead" time="300" val="0" abnormal="bighead" stackOrder="300" stackType="big_head"/>
+    <effect name="BigHead" time="300" val="0" abnormal="bighead" stackOrder="300" stackType="big_head"/>
   </for>
 </skill>
 <skill id="2104" levels="1" name="Greater Compressed Package of Soulshots: No-grade">
@@ -42,7 +37,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -56,7 +50,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -70,7 +63,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -84,7 +76,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -98,7 +89,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -112,7 +102,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -126,7 +115,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -140,7 +128,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -154,7 +141,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -168,7 +154,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -182,7 +167,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -196,7 +180,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -210,7 +193,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -224,7 +206,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -238,7 +219,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -252,7 +232,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -266,7 +245,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -280,7 +258,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -293,132 +270,166 @@
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2123" levels="1" name="Facelifting Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2124" levels="1" name="Facelifting Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2125" levels="1" name="Dye Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2126" levels="1" name="Dye Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2127" levels="1" name="Dye Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2128" levels="1" name="Dye Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2129" levels="1" name="Hair Style Change Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2130" levels="1" name="Hair Style Change Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2131" levels="1" name="Hair Style Change Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2132" levels="1" name="Hair Style Change Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2133" levels="1" name="Hair Style Change Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2134" levels="1" name="Hair Style Change Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2135" levels="1" name="Hair Style Change Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2136" levels="1" name="Rice Cake">
   <!-- Done by DJ MELERIX -->
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="3"/>
   <set name="skillType" val="HEAL_PERCENT"/> <!-- Needs Core support: Heal HP 3% & heal MP 1% at the same time -->
   <set name="target" val="TARGET_SELF"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2137" levels="1" name="Summon Regular Tree">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2138" levels="1" name="Summon Special Tree">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2139" levels="1" name="Special Tree Recovery Bonus">
   <!-- Done by DJ MELERIX -->
   <set name="target" val="TARGET_AURA"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="skillRadius" val="200"/>
   <set name="isMagic" val="true"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
-    <effect count="1" name="Buff" time="10" val="0" stackOrder="1" stackType="hp_regen_up">
+    <effect name="Buff" time="10" val="0" stackOrder="1" stackType="hp_regen_up">
       <mul order="0x30" stat="regHp" val="1.4"/>
       <mul order="0x30" stat="regMp" val="1.2"/>
     </effect>
@@ -428,172 +439,137 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2141" levels="1" name="Item - Carol Sound Crystal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2142" levels="1" name="Item - Carol Sound Crystal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2143" levels="1" name="Item - Carol Sound Crystal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2144" levels="1" name="Item - Carol Sound Crystal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2145" levels="1" name="Item - Carol Sound Crystal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2146" levels="1" name="Item - Carol Sound Crystal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2147" levels="1" name="Item - Carol Sound Crystal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2148" levels="1" name="Item - Carol Sound Crystal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2149" levels="1" name="Item - Carol Sound Crystal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2150" levels="1" name="Soulshot: D Grade">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SOULSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2151" levels="1" name="Soulshot: C Grade">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SOULSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2152" levels="1" name="Soulshot: B Grade">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SOULSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2153" levels="1" name="Soulshot: A Grade">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SOULSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2154" levels="1" name="Soulshot: S Grade">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SOULSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2155" levels="1" name="Spiritshot: D Grade">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SPIRITSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2156" levels="1" name="Spiritshot: C Grade">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SPIRITSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2157" levels="1" name="Spiritshot: B Grade">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SPIRITSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2158" levels="1" name="Spiritshot: A Grade">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SPIRITSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2159" levels="1" name="Spiritshot: S Grade">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SPIRITSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2160" levels="1" name="Blessed Spiritshot: D Grade">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SPIRITSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2161" levels="1" name="Blessed Spiritshot: C Grade">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SPIRITSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2162" levels="1" name="Blessed Spiritshot: B Grade">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SPIRITSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2163" levels="1" name="Blessed Spiritshot: A Grade">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SPIRITSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2164" levels="1" name="Blessed Spiritshot: S Grade">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SPIRITSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2165" levels="1" name="Energy Stone">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- Can be recharged up to 2 stages -->
+  <set name="numCharges" val="1"/>
+  <set name="maxCharges" val="2"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2166" levels="2" name="CP Gauge Potion">
   <table name="#power"> 50 200 </table>
@@ -603,14 +579,13 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="reuseDelay" val="1000"/>
   <set name="staticReuse" val="true"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2167" levels="4" name="Scroll of SP">
   <table name="#power"> 500 5000 100000 500000 </table>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="hitTime" val="200"/>
   <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -618,16 +593,20 @@
   <set name="reuseDelay" val="3000"/>
   <set name="skillType" val="GIVE_SP"/>
   <set name="target" val="TARGET_SELF"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2168" levels="6" name="Raid Blessing">
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="2000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
-    <effect name="CharmOfLuck" time="3600" count="1" val="0" stackOrder="1" stackType="LuckyCharm"/>
+    <effect name="CharmOfLuck" time="3600" val="0" stackOrder="1" stackType="LuckyCharm"/>
   </for>
 </skill>
 <skill id="2169" levels="2" name="Magic Haste Potion">
@@ -636,12 +615,13 @@
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="1200000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="#Tab-mAtkSpd" stackType="casting_time_down">
+    <effect name="Buff" time="1200" val="0" stackOrder="#Tab-mAtkSpd" stackType="casting_time_down">
       <mul order="0x30" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
     </effect>
   </for>
@@ -651,9 +631,12 @@
   <set name="skillType" val="NEGATE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
-  <set name="coolTime" val="1000"/>
+  <set name="hitTime" val="500"/>
   <set name="effectRange" val="600"/>
   <set name="negateStats" val="SLEEP"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2171" levels="1" name="Spellbook Paper">
   <set name="itemConsumeId" val="5916"/>
@@ -661,7 +644,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -675,7 +657,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -689,7 +670,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -704,7 +684,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -718,7 +697,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -733,7 +711,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -746,14 +723,12 @@
   <set name="hitTime" val="200"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2178" levels="1" name="Blessed Scroll of Escape: Castle">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="200"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2179" levels="1" name="Blessed Scroll of Resurrection: Pet">
   <set name="power" val="100"/>
@@ -769,50 +744,41 @@
   <set name="skillType" val="FEED_PET"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="feed" val="450"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2181" levels="1" name="Item - Fishing Shot">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2182" levels="1" name="Item - Fishing Shot">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2183" levels="1" name="Item - Fishing Shot">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2184" levels="1" name="Item - Fishing Shot">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2185" levels="1" name="Item - Fishing Shot">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2186" levels="1" name="Item - Fishing Shot">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2187" levels="1" name="Item - Special Sound Crystal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2188" levels="1" name="Golden Spice">
   <set name="power" val="0"/>
@@ -843,7 +809,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -858,7 +823,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -873,7 +837,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -888,7 +851,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -903,7 +865,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -918,7 +879,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -933,7 +893,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -948,7 +907,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -963,7 +921,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -978,7 +935,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
