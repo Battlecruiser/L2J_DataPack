@@ -26,7 +26,7 @@ class Quest (JQuest) :
        st.exitQuest(1)
        return "1.htm"
 
-QUEST       = Quest(1102,qn,"Teleports")
+QUEST       = Quest(-1,qn,"Teleports")
 
 for i in [DIMENSION_VORTEX_1,DIMENSION_VORTEX_2] :
    QUEST.addStartNpc(i)

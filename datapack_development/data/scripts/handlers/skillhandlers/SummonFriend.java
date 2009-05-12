@@ -67,7 +67,7 @@ public class SummonFriend implements ISkillHandler
 			return false;			
 		}
 		
-		if (summonerChar.isInsideZone(L2Character.ZONE_NOSUMMONFRIEND))
+		if (summonerChar.isInsideZone(L2Character.ZONE_NOSUMMONFRIEND) || summonerChar.isFlyingMounted())
 		{
 			summonerChar.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
 			return false;
@@ -110,7 +110,7 @@ public class SummonFriend implements ISkillHandler
 			return false;
 		}
 
-		if (targetChar.isFestivalParticipant())
+		if (targetChar.isFestivalParticipant() || targetChar.isFlyingMounted())
 		{
 			summonerChar.sendPacket(new SystemMessage(SystemMessageId.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
 			return false;

@@ -104,6 +104,7 @@ class Quest (JQuest) :
           st.giveItems(SWORD_OF_RITUAL,1)
           st.set("cond","0")
           st.exitQuest(False)
+          st.saveGlobalQuestVar("1ClassQuestFinished","1")
           st.playSound("ItemSound.quest_finish")
         else:
           htmltext=default

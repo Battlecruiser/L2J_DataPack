@@ -20,7 +20,7 @@ class Quest (JQuest) :
         player.teleToLocation(7557,-5513,-3221)
     return
 
-QUEST       = Quest(6111, qn, "Teleports")
+QUEST       = Quest(-1, qn, "Teleports")
 
 QUEST.addStartNpc(32111)
 QUEST.addTalkId(32111)

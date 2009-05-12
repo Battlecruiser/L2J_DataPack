@@ -129,7 +129,7 @@ class Quest (JQuest) :
         return
     return htmltext
 
-QUEST       = Quest(6000, qn, "Teleports")
+QUEST       = Quest(-1, qn, "Teleports")
 
 for npcid in NPCs :
     QUEST.addStartNpc(npcid)

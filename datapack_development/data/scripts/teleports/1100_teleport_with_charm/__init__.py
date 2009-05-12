@@ -41,7 +41,7 @@ class Quest (JQuest) :
        st.exitQuest(1)
        return "30540-01.htm"
 
-QUEST       = Quest(1100,qn,"Teleports")
+QUEST       = Quest(-1,qn,"Teleports")
 
 for i in [ WHIRPY, TAMIL ] :
     QUEST.addStartNpc(i)

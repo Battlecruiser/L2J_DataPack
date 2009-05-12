@@ -65,9 +65,12 @@ class Quest (JQuest) :
                 else :
                     st.takeItems(Heart,-1)
                     st.giveItems(Gwain_Rec,1)
-                    st.giveItems(57,81900)
-                    st.addExpAndSp(228064,13773)
+                    isFinished = st.getGlobalQuestVar("1ClassQuestFinished")
+                    if isFinished == "" :
+                      st.giveItems(57,81900)
+                      st.addExpAndSp(228064,13773)
                     st.exitQuest(False)
+                    st.saveGlobalQuestVar("1ClassQuestFinished","1")
                     st.playSound("ItemSound.quest_finish")
                     player.sendPacket(SocialAction(player.getObjectId(),3))
                     htmltext = "32197-06.htm"

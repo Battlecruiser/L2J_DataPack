@@ -253,7 +253,7 @@ class Quest (JQuest) :
          htmltext = str(npcId) + ".htm"
      return htmltext
 
-QUEST = Quest(8001,qn,"custom")
+QUEST = Quest(-1,qn,"custom")
 
 for i in NPC:
     QUEST.addStartNpc(i)

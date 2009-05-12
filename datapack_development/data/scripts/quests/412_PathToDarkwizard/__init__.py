@@ -96,10 +96,13 @@ class Quest (JQuest) :
             st.takeItems(SEEDS_OF_LUNACY,1)
             st.takeItems(SEEDS_OF_DESPAIR,1)
             st.giveItems(JEWEL_OF_DARKNESS,1)
-            st.giveItems(57,81900)
-            st.addExpAndSp(295862,17664)
+            isFinished = st.getGlobalQuestVar("1ClassQuestFinished")
+            if isFinished == "" : 
+              st.giveItems(57,81900)
+              st.addExpAndSp(295862,17664)
             st.set("cond","0")
             st.exitQuest(False)
+            st.saveGlobalQuestVar("1ClassQuestFinished","1")
             st.playSound("ItemSound.quest_finish")
         elif st.getQuestItemsCount(SEEDS_OF_DESPAIR) == 1 and st.getQuestItemsCount(FAMILYS_ASHES) == 0 and st.getQuestItemsCount(LUCKY_KEY) == 0 and st.getQuestItemsCount(CANDLE) == 0 and st.getQuestItemsCount(HUB_SCENT) == 0 and st.getQuestItemsCount(KNEE_BONE) == 0 and st.getQuestItemsCount(HEART_OF_LUNACY) == 0 :
           htmltext = "30421-17.htm"

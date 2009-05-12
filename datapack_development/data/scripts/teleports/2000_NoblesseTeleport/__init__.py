@@ -29,7 +29,7 @@ class Quest (JQuest) :
       htmltext="nobleteleporter-no.htm"
     return htmltext
 
-QUEST       = Quest(2000,qn,"Teleports")
+QUEST       = Quest(-1,qn,"Teleports")
 
 for item in NPC:
    QUEST.addStartNpc(item)

@@ -1,6 +1,7 @@
 # Whisper of Dreams, part 2 version 0.1 
 # by DrLecter
 import sys
+from net.sf.l2j import Config
 from net.sf.l2j.gameserver.model.quest import State
 from net.sf.l2j.gameserver.model.quest import QuestState
 from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
@@ -89,17 +90,24 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet) :
     npcId = npc.getNpcId()
     item, partyCond  = DROPLIST[npcId]
-    partyMember = self.getRandomPartyMember(player, partyCond, "1")
-    if not partyMember : return
+    partyMember = self.getRandomPartyMember(player,"1")
+    if not partyMember: return
     st = partyMember.getQuestState(qn)
-    count = st.getQuestItemsCount(item)
-    if count < 100 :
-       st.giveItems(item,1)
-       if count + 1 >= 100 :
-          st.playSound("ItemSound.quest_middle")
-          st.unset(partyCond)
-       else :
-          st.playSound("ItemSound.quest_itemget")
+    if st :
+      count = st.getQuestItemsCount(item)
+      if st.getInt("cond") == 1 and count < 100 :
+        chance = 75 * Config.RATE_DROP_QUEST
+        numItems, chance = divmod(chance,100)
+        if st.getRandom(100) < chance : 
+           numItems += 1
+        if numItems :
+           if count + numItems >= 100 :
+              numItems = 100 - count
+              st.playSound("ItemSound.quest_middle")
+              st.unset(partyCond)
+           else:
+              st.playSound("ItemSound.quest_itemget")   
+           st.giveItems(item,int(numItems))
     return  
  
 # Quest class and state definition

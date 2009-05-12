@@ -42,7 +42,7 @@ public class BlessedSpiritShot implements IItemHandler
 	
 	private static final int[] SKILL_IDS =
 	{
-		2061, 2160, 2161, 2162, 2163, 2164, 2164
+		2061, 2160, 2161, 2162, 2163, 2164, 2164, 2164
 	};
 	
 	/**
@@ -81,14 +81,48 @@ public class BlessedSpiritShot implements IItemHandler
 			return;
 		
 		// Check for correct grade
-		int weaponGrade = weaponItem.getCrystalType();
-		if ((weaponGrade == L2Item.CRYSTAL_NONE && itemId != 3947) || (weaponGrade == L2Item.CRYSTAL_D && itemId != 3948) || (weaponGrade == L2Item.CRYSTAL_C && itemId != 3949) || (weaponGrade == L2Item.CRYSTAL_B && itemId != 3950)
-				|| (weaponGrade == L2Item.CRYSTAL_A && itemId != 3951) || (weaponGrade == L2Item.CRYSTAL_S && itemId != 3952) || (weaponGrade == L2Item.CRYSTAL_S80 && itemId != 3952))
+		final int weaponGrade = weaponItem.getCrystalType();
+		
+		boolean gradeCheck = true;
+		
+		switch (weaponGrade)
+		{
+			case L2Item.CRYSTAL_NONE:
+				if (itemId != 3947)
+					gradeCheck = false;
+				break;
+			case L2Item.CRYSTAL_D:
+				if (itemId != 3948)
+					gradeCheck = false;
+				break;
+			case L2Item.CRYSTAL_C:
+				if (itemId != 3949)
+					gradeCheck = false;
+				break;
+			case L2Item.CRYSTAL_B:
+				if (itemId != 3950)
+					gradeCheck = false;
+				break;
+			case L2Item.CRYSTAL_A:
+				if (itemId != 3951)
+					gradeCheck = false;
+				break;
+			case L2Item.CRYSTAL_S:
+			case L2Item.CRYSTAL_S80:
+			case L2Item.CRYSTAL_S84:
+				if (itemId != 3952)
+					gradeCheck = false;
+				break;
+		}
+		
+		if (!gradeCheck)
 		{
 			if (!activeChar.getAutoSoulShot().containsKey(itemId))
 				activeChar.sendPacket(new SystemMessage(SystemMessageId.SPIRITSHOTS_GRADE_MISMATCH));
+			
 			return;
 		}
+		
 		
 		// Consume Blessed SpiritShot if player has enough of them
 		if (!activeChar.destroyItemWithoutTrace("Consume", item.getObjectId(), weaponItem.getSpiritShotCount(), null, false))

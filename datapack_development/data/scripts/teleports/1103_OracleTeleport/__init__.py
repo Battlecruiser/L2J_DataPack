@@ -166,7 +166,7 @@ class Quest (JQuest) :
           htmltext="ziggurat.htm"
     return htmltext
 
-QUEST      = Quest(1103, qn, "Teleports")
+QUEST      = Quest(-1, qn, "Teleports")
 
 for i in TELEPORTERS.keys() + TEMPLE_PRIEST + range(31494,31508)+range(31095,31111)+range(31114,31126):
     QUEST.addStartNpc(i)

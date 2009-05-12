@@ -88,12 +88,15 @@ class Quest (JQuest) :
             htmltext = "30327-11.htm"
         elif cond == 6 :
             st.takeItems(KLUTO_BOX,-1)
-            st.giveItems(57,81900)
-            st.addExpAndSp(228064,14925)
+            isFinished = st.getGlobalQuestVar("1ClassQuestFinished")
+            if isFinished == "" : 
+              st.giveItems(57,81900)
+              st.addExpAndSp(228064,14925)
             player.sendPacket(SocialAction(player.getObjectId(),3))
             st.set("cond","0")
             st.exitQuest(False)
             st.playSound("ItemSound.quest_finish")
+            st.saveGlobalQuestVar("1ClassQuestFinished","1")
             if st.getQuestItemsCount(ELVEN_KNIGHT_BROOCH) == 0 :
               st.giveItems(ELVEN_KNIGHT_BROOCH,1)
             htmltext = "30327-10.htm"

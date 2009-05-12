@@ -46,7 +46,7 @@ public class Scrolls implements IItemHandler
 		9146, 9147, 9148, 9149, 9150, 9151,
 		9152, 9153, 9154, 9155, 9897, 10131,
 		10132, 10133, 10134, 10135, 10136,
-		10137, 10138, 10151, 10274
+		10137, 10138, 10151, 10274, 13844
 	};
 	
 	/**
@@ -83,6 +83,11 @@ public class Scrolls implements IItemHandler
 		
 		int itemId = item.getItemId();
 		
+		if (itemId == 13844)
+		{
+			useScroll(activeChar,2630,1);
+			return;
+		}
 		if (itemId >= 8594 && itemId <= 8599) //Scrolls of recovery XML: 2286
 		{
 			if (!playable.destroyItem("Consume", item.getObjectId(), 1, null, false))

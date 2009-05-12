@@ -79,10 +79,13 @@ class Quest (JQuest) :
           st.takeItems(PASS_2ND,1)
           st.takeItems(SECRET_BOX2,1)
           st.giveItems(PASS_FINAL,1)
-          st.giveItems(57,81900)
-          st.addExpAndSp(160267,11726)
+          isFinished = st.getGlobalQuestVar("1ClassQuestFinished")
+          if isFinished == "" : 
+            st.giveItems(57,81900)
+            st.addExpAndSp(160267,11726)
           st.set("cond","0")
           st.exitQuest(False)
+          st.saveGlobalQuestVar("1ClassQuestFinished","1")
           st.playSound("ItemSound.quest_finish")
         else :
           htmltext = "30317-08.htm"

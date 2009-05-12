@@ -26,6 +26,7 @@ import net.sf.l2j.gameserver.network.serverpackets.FlyToLocation;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 import net.sf.l2j.gameserver.network.serverpackets.ValidateLocation;
 import net.sf.l2j.gameserver.network.serverpackets.FlyToLocation.FlyType;
+import net.sf.l2j.gameserver.skills.Env;
 import net.sf.l2j.gameserver.skills.Formulas;
 import net.sf.l2j.gameserver.templates.skills.L2SkillType;
 
@@ -109,7 +110,7 @@ public class InstantJump implements ISkillHandler
 				byte shld = Formulas.calcShldUse(activeChar, target);
 				if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, false, false, false))
 				{
-					skill.getEffects(activeChar, target);
+					skill.getEffects(activeChar, target, new Env(shld, false, false, false));
 				
 					//SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
 					//sm.addSkillName(skill);

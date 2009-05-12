@@ -15,7 +15,7 @@ class Quest (QuestJython) :
    st.exitQuest(1)
    return htmltext
 
-QUEST       = Quest(1107,"1107_CrumaTower","Teleports")
+QUEST       = Quest(-1,"1107_CrumaTower","Teleports")
 
 QUEST.addStartNpc(30483)
 QUEST.addTalkId(30483)

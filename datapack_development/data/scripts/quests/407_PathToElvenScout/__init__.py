@@ -122,11 +122,14 @@ class Quest (JQuest) :
         htmltext = "30328-07.htm"
         st.takeItems(HONORARY_GUARD,1)
         st.giveItems(REORIA_RECOMMENDATION,1)
-        st.giveItems(57,81900)
-        st.addExpAndSp(160267,9966)
+        isFinished = st.getGlobalQuestVar("1ClassQuestFinished")
+        if isFinished == "" : 
+          st.giveItems(57,81900)
+          st.addExpAndSp(160267,9966)
         player.sendPacket(SocialAction(player.getObjectId(),3))
         st.set("cond","0")
         st.exitQuest(False)
+        st.saveGlobalQuestVar("1ClassQuestFinished","1")
         st.playSound("ItemSound.quest_finish")
    return htmltext
 

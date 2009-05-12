@@ -31,7 +31,7 @@ class Quest (JQuest) :
     st.exitQuest(1)
     return
 
-QUEST       = Quest(2400,qn,"Teleports")
+QUEST       = Quest(-1,qn,"Teleports")
 
 for item in NPC:
    QUEST.addStartNpc(item)

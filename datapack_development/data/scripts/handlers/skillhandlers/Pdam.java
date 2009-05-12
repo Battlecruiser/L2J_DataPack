@@ -18,7 +18,6 @@ import java.util.logging.Logger;
 
 import net.sf.l2j.Config;
 import net.sf.l2j.gameserver.ai.CtrlIntention;
-import net.sf.l2j.gameserver.datatables.SkillTable;
 import net.sf.l2j.gameserver.handler.ISkillHandler;
 import net.sf.l2j.gameserver.lib.Log;
 import net.sf.l2j.gameserver.model.L2Effect;
@@ -29,12 +28,10 @@ import net.sf.l2j.gameserver.model.actor.L2Character;
 import net.sf.l2j.gameserver.model.actor.L2Npc;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.network.SystemMessageId;
-import net.sf.l2j.gameserver.network.serverpackets.EtcStatusUpdate;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
+import net.sf.l2j.gameserver.skills.Env;
 import net.sf.l2j.gameserver.skills.Formulas;
-import net.sf.l2j.gameserver.skills.effects.EffectCharge;
 import net.sf.l2j.gameserver.templates.item.L2WeaponType;
-import net.sf.l2j.gameserver.templates.skills.L2EffectType;
 import net.sf.l2j.gameserver.templates.skills.L2SkillType;
 
 /**
@@ -83,7 +80,7 @@ public class Pdam implements ISkillHandler
 			// PDAM critical chance not affected by buffs, only by STR. Only some skills are meant to crit.
 			boolean crit = false;
 			if (skill.getBaseCritRate() > 0)
-				crit = Formulas.calcCrit(skill.getBaseCritRate() * 10 * Formulas.getSTRBonus(activeChar));
+				crit = Formulas.calcCrit(skill.getBaseCritRate() * 10 * Formulas.getSTRBonus(activeChar), target);
 			
 			boolean soul = (weapon != null && weapon.getChargedSoulshot() == L2ItemInstance.CHARGED_SOULSHOT && weapon.getItemType() != L2WeaponType.DAGGER);
 			
@@ -142,7 +139,7 @@ public class Pdam implements ISkillHandler
 							target.stopSkillEffects(skill.getId());
 							if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, false, false, false))
 							{
-								skill.getEffects(activeChar, target);
+								skill.getEffects(activeChar, target, new Env(shld, false, false, false));
 							
 								SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
 								sm.addSkillName(skill);
@@ -248,43 +245,6 @@ public class Pdam implements ISkillHandler
 				Formulas.calcLethalHit(activeChar, target, skill);
 			}
 			
-			if (skill.getId() == 345 || skill.getId() == 346) // Sonic Rage or Raging Force
-			{
-				EffectCharge effect = (EffectCharge) activeChar.getFirstEffect(L2EffectType.CHARGE);
-				if (effect != null)
-				{
-					int effectcharge = effect.getLevel();
-					if (effectcharge++ < 8)
-					{
-						effect.addNumCharges(1);
-						if (activeChar instanceof L2PcInstance)
-						{
-							activeChar.sendPacket(new EtcStatusUpdate((L2PcInstance) activeChar));
-							SystemMessage sm = new SystemMessage(SystemMessageId.FORCE_INCREASED_TO_S1);
-							sm.addNumber(effectcharge);
-							activeChar.sendPacket(sm);
-						}
-					}
-					else
-					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.FORCE_MAXLEVEL_REACHED);
-						activeChar.sendPacket(sm);
-					}
-				}
-				else
-				{
-					if (skill.getId() == 345) // Sonic Rage
-					{
-						L2Skill dummy = SkillTable.getInstance().getInfo(8, 8); // Lv7 Sonic Focus
-						dummy.getEffects(activeChar, activeChar);
-					}
-					else if (skill.getId() == 346) // Raging Force
-					{
-						L2Skill dummy = SkillTable.getInstance().getInfo(50, 8); // Lv7 Focused Force
-						dummy.getEffects(activeChar, activeChar);
-					}
-				}
-			}
 			//self Effect :]
 			L2Effect effect = activeChar.getFirstEffect(skill.getId());
 			if (effect != null && effect.isSelfEffect())

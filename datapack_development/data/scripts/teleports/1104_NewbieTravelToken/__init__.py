@@ -47,7 +47,7 @@ class Quest (JQuest) :
      htmltext=str(npcId)+".htm"
    return htmltext
 
-QUEST       = Quest(1104,qn,"Teleports")
+QUEST       = Quest(-1,qn,"Teleports")
 
 for i in DATA.keys() :
     QUEST.addStartNpc(i)

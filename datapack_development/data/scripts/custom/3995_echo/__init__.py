@@ -57,7 +57,7 @@ class Quest (JQuest) :
    return "1.htm"
 
 
-QUEST       = Quest(QuestId,qn,QuestDesc)
+QUEST       = Quest(-1,qn,QuestDesc)
 
 for npc in NPCS:
    QUEST.addStartNpc(npc)
