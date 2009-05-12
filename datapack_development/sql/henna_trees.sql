@@ -1,6 +1,3 @@
---
--- Table structure for henna_trees
--- 
 DROP TABLE IF EXISTS `henna_trees`;
 CREATE TABLE `henna_trees` (
   `class_id` decimal(10,0) NOT NULL default 0,
@@ -8,11 +5,7 @@ CREATE TABLE `henna_trees` (
   PRIMARY KEY (`class_id`,`symbol_id`)
 );
 
--- 
--- Records for table henna_trees
--- 
-
-insert into henna_trees values
+INSERT INTO `henna_trees` VALUES
 (1,1),
 (1,2),
 (1,3),
@@ -1014,7 +1007,7 @@ insert into henna_trees values
 (13,171),
 (13,172);
 
-insert into henna_trees values 
+INSERT INTO `henna_trees` VALUES 
 (13,173),
 (13,174),
 (13,175),
@@ -2016,7 +2009,7 @@ insert into henna_trees values
 (28,55),
 (28,56);
 
-insert into henna_trees values 
+INSERT INTO `henna_trees` VALUES 
 (28,57),
 (28,58),
 (28,59),
@@ -3018,7 +3011,7 @@ insert into henna_trees values
 (41,179),
 (41,180);
 
-insert into henna_trees values 
+INSERT INTO `henna_trees` VALUES
 (42,1),
 (42,2),
 (42,3),

@@ -1,6 +1,3 @@
---
--- Table structure for table `locations`
--- 
 DROP TABLE IF EXISTS `locations`;
 CREATE TABLE `locations` (
   `loc_id` int(9) NOT NULL default '0',
@@ -13,11 +10,7 @@ CREATE TABLE `locations` (
   KEY `proc` (`proc`)
 );
 
--- 
--- Dumping data for table `locations`
--- 
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES
   (1,42988,109652,-2032,-1032,0),
   (1,43004,108928,-2032,-1032,0),
   (1,44400,110644,-2032,-1032,0),
@@ -519,9 +512,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (125,-93323,147700,-2777,-2577,0),
   (125,-93396,147525,-2777,-2577,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES
   (125,-93091,147473,-2777,-2577,0),
   (126,-12693,121812,-3013,-2813,0),
   (126,-12893,121812,-3013,-2813,0),
@@ -1023,9 +1014,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (249,44656,52063,-2851,-2651,0),
   (249,45924,52066,-2851,-2651,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (250,18032,86287,-3695,-3495,0),
   (250,17832,86287,-3695,-3495,0),
   (250,17832,86087,-3695,-3495,0),
@@ -1527,9 +1516,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (374,17196,114076,-3503,-3303,0),
   (374,17396,114076,-3503,-3303,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (375,17828,114004,-11732,-11532,0),
   (375,17628,114004,-11732,-11532,0),
   (375,17628,113804,-11732,-11532,0),
@@ -2031,9 +2018,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (499,114473,77870,-2687,-2487,0),
   (499,114620,77882,-2687,-2487,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (500,115312,74428,-2735,-2535,0),
   (500,114985,74481,-2735,-2535,0),
   (500,114971,74226,-2735,-2535,0),
@@ -2535,9 +2520,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (605,-105076,218364,-3280,-2730,0),
   (605,-102432,217728,-3280,-2730,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (606,-103020,216676,-3464,-3114,0),
   (606,-105568,216804,-3464,-3114,0),
   (606,-105760,215932,-3464,-3114,0),
@@ -3039,9 +3022,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (711,-25360,74908,-3640,-3240,0),
   (711,-28348,71704,-3640,-3240,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (711,-26400,71548,-3640,-3240,0),
   (712,-23648,86148,-3776,-3376,0),
   (712,-24580,87236,-3776,-3376,0),
@@ -3543,9 +3524,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (815,39308,56388,-3736,-3236,0),
   (815,37256,56824,-3736,-3236,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (815,42828,54292,-3736,-3236,0),
   (815,36876,54816,-3736,-3236,0),
   (815,40636,53256,-3736,-3236,0),
@@ -4047,9 +4026,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (921,19340,89072,-3844,-3444,0),
   (921,25728,88332,-3844,-3444,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (922,17700,93148,-3892,-3492,0),
   (922,14284,92804,-3892,-3492,0),
   (922,12488,91372,-3892,-3492,0),
@@ -4551,9 +4528,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (1020,39304,37752,-3684,-3284,0),
   (1020,42356,41284,-3684,-3284,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (1020,41988,36360,-3684,-3284,0),
   (1020,42460,39220,-3684,-3284,0),
   (1021,43724,45284,-3788,-3388,0),
@@ -5055,9 +5030,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (1119,117312,-204752,-3784,-3484,0),
   (1119,117840,-203348,-3784,-3484,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (1119,118920,-206624,-3784,-3484,0),
   (1119,120784,-206204,-3784,-3484,0),
   (1120,116624,-202956,-3828,-3228,0),
@@ -5559,9 +5532,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (1224,177996,-210840,-3720,-3420,0),
   (1224,177164,-212428,-3720,-3420,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (1224,178420,-213452,-3720,-3420,0),
   (1225,182124,-208644,-3772,-3372,0),
   (1225,179588,-210588,-3772,-3372,0),
@@ -6063,9 +6034,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (1325,-25932,-123680,-2592,-1842,0),
   (1325,-29420,-125668,-2592,-1842,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (1325,-27504,-126336,-2592,-1842,0),
   (1326,-24896,-117084,-2248,-1448,0),
   (1326,-28208,-116392,-2248,-1448,0),
@@ -6567,9 +6536,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (1423,1716,-95584,-3208,-2808,0),
   (1423,3340,-95232,-3208,-2808,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (1423,3896,-93496,-3208,-2808,0),
   (1424,3292,-97196,-2136,-1736,0),
   (1424,176,-96260,-2136,-1736,0),
@@ -7071,9 +7038,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (1533,13688,76064,-4168,-3968,0),
   (1533,14124,76080,-4168,-3968,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (1534,13564,77308,-4312,-4012,0),
   (1534,12572,77308,-4312,-4012,0),
   (1534,12572,76044,-4312,-4012,0),
@@ -7575,9 +7540,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (1618,16149,-117444,-3244,-3044,0),
   (1618,16105,-116890,-3244,-3044,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (1619,16517,-118900,-3208,-3008,0),
   (1619,15740,-118633,-3208,-3008,0),
   (1619,16095,-119942,-3208,-3008,0),
@@ -8079,9 +8042,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (1726,-69240,177940,-3808,-3408,0),
   (1727,-74444,170000,-3772,-3372,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (1727,-76720,167152,-3772,-3372,0),
   (1727,-71348,168780,-3772,-3372,0),
   (1727,-78048,163944,-3772,-3372,0),
@@ -8583,9 +8544,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (1837,-52392,200920,-3800,-3400,0),
   (1838,-46844,201136,-3772,-3172,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (1838,-52944,200864,-3772,-3172,0),
   (1838,-52564,199032,-3772,-3172,0),
   (1838,-49124,198988,-3772,-3172,0),
@@ -9087,9 +9046,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (1943,-28484,147388,-3564,-2964,0),
   (1943,-27092,146876,-3564,-2964,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (1944,-31660,141296,-4076,-3676,0),
   (1944,-32664,141352,-4076,-3676,0),
   (1944,-32620,139268,-4076,-3676,0),
@@ -9591,9 +9548,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (2044,-33000,187816,-4192,-3792,0),
   (2044,-34508,184940,-4192,-3792,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (2044,-33868,184632,-4192,-3792,0),
   (2045,-34780,184788,-4148,-3748,0),
   (2045,-38152,184516,-4148,-3748,0),
@@ -10095,9 +10050,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (2146,-29216,183024,-5356,-5156,0),
   (2146,-28960,182880,-5356,-5156,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (2146,-29072,182896,-5356,-5156,0),
   (2146,-28748,183054,-5356,-5156,0),
   (2146,-28828,182946,-5356,-5156,0),
@@ -10599,9 +10552,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (2240,-54661,186496,-4852,-4652,0),
   (2241,-55003,186718,-4852,-4652,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (2241,-55398,186718,-4852,-4652,0),
   (2241,-55398,186232,-4852,-4652,0),
   (2241,-55003,186232,-4852,-4652,0),
@@ -11103,9 +11054,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (2347,4412,182724,-3868,-2868,0),
   (2348,6096,189484,-3780,-3380,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (2348,216,192808,-3780,-3380,0),
   (2348,284,187028,-3780,-3380,0),
   (2348,3504,186872,-3780,-3380,0),
@@ -11607,9 +11556,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (2452,22666,107513,-12128,-11928,0),
   (2453,21684,109284,-12120,-11920,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (2453,20022,109284,-12120,-11920,0),
   (2453,20022,107445,-12120,-11920,0),
   (2453,21684,107445,-12120,-11920,0),
@@ -12111,9 +12058,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (2563,65633,103109,-3801,-3351,0),
   (2563,65705,98441,-3801,-3351,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (2563,67297,98461,-3801,-3351,0),
   (2564,69052,101912,-3769,-3319,0),
   (2564,68044,99840,-3769,-3319,0),
@@ -12615,9 +12560,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (2663,100908,115904,-3792,-3492,0),
   (2663,101704,115932,-3792,-3492,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (2664,104236,119796,-3780,-3480,0),
   (2664,101696,123380,-3780,-3480,0),
   (2664,100732,122248,-3780,-3480,0),
@@ -13119,9 +13062,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (2766,68088,84307,-3767,-3167,0),
   (2766,68016,80095,-3767,-3167,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (2766,72104,79507,-3767,-3167,0),
   (2766,72032,84495,-3767,-3167,0),
   (2767,77138,84255,-3708,-3108,0),
@@ -13623,9 +13564,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (2877,76466,15925,-4029,-3329,0),
   (2877,73605,14509,-4029,-3329,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (2878,77154,10111,-3722,-2822,0),
   (2878,80217,6035,-3722,-2822,0),
   (2878,82848,8200,-3722,-2822,0),
@@ -14127,9 +14066,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (2986,111312,67528,-2972,-2172,0),
   (2986,104364,65900,-2972,-2172,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (2986,108576,65856,-2972,-2172,0),
   (2987,114692,67140,-3236,-2436,0),
   (2987,111152,67560,-3236,-2436,0),
@@ -14631,9 +14568,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (3091,109529,28976,-3554,-2754,0),
   (3091,113501,28642,-3554,-2754,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (3091,110635,24312,-3554,-2754,0),
   (3091,115708,25147,-3554,-2754,0),
   (3092,108276,29479,-3698,-2898,0),
@@ -15135,9 +15070,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (3199,144148,-9456,-4608,-4108,0),
   (3199,141692,-11556,-4608,-4108,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (3199,147316,-12616,-4608,-4108,0),
   (3200,154876,-4512,-4644,-3744,0),
   (3200,153176,-7020,-4644,-3744,0),
@@ -15639,9 +15572,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (3306,156672,91268,-3780,-3080,0),
   (3307,160688,90256,-3716,-3216,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (3307,158620,91604,-3716,-3216,0),
   (3307,158356,88160,-3716,-3216,0),
   (3307,156112,88676,-3716,-3216,0),
@@ -16143,9 +16074,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (3405,166916,16884,-3604,-3204,0),
   (3406,167240,29040,-3812,-3412,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (3406,164104,27936,-3812,-3412,0),
   (3406,170504,28928,-3812,-3412,0),
   (3406,164060,26576,-3812,-3412,0),
@@ -16647,9 +16576,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (3502,146744,116176,-3780,-3580,0),
   (3503,147168,120891,-4756,-4306,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (3503,146890,120356,-4756,-4306,0),
   (3503,147406,120778,-4756,-4306,0),
   (3503,146808,119896,-4756,-4306,0),
@@ -17151,9 +17078,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (3614,168664,19096,-3488,-3188,0),
   (3614,168652,18140,-3488,-3188,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (3614,170548,16352,-3488,-3188,0),
   (3614,171220,16408,-3488,-3188,0),
   (3615,170284,24176,-3504,-3304,0),
@@ -17655,9 +17580,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (3720,37902,130740,-3602,-2302,0),
   (3721,43604,130856,-3602,-2302,0);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES 
   (3721,38299,130815,-3602,-2302,0),
   (3721,36810,129126,-3602,-2302,0),
   (3721,42662,129279,-3602,-2302,0),
@@ -18159,9 +18082,7 @@ INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `pr
   (3853,150960,115712,-5488,-5488,33),
   (3853,150089,114852,-5488,-5488,33);
 
-COMMIT;
-
-INSERT INTO `locations` (`loc_id`, `loc_x`, `loc_y`, `loc_zmin`, `loc_zmax`, `proc`) VALUES 
+INSERT INTO `locations` (`loc_id`,`loc_x`,`loc_y`,`loc_zmin`,`loc_zmax`,`proc`) VALUES
   (3853,150257,115657,-5488,-5488,34),
   (3854,148832,115200,-5488,-5488,50),
   (3854,149088,114784,-5488,-5488,50),

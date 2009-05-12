@@ -1,6 +1,3 @@
--- ---------------------------
--- Table structure for fort_staticobjects
--- ---------------------------
 DROP TABLE IF EXISTS `fort_staticobjects`;
 CREATE TABLE `fort_staticobjects` (
   `fortId` INT NOT NULL default 0,
@@ -25,7 +22,7 @@ CREATE TABLE `fort_staticobjects` (
   KEY `id` (`fortId`)
 );
 
-INSERT INTO `fort_staticobjects` VALUES 
+INSERT INTO `fort_staticobjects` VALUES
 (101,18220001,'Gate_of_fort',-50796,155913,-2102,0,0,0,0,0,0,67884,644,518,'false','false',0),
 (101,18220002,'Gate_of_fort',-53359,156592,-2081,0,0,0,0,0,0,67884,644,518,'true','true',0),
 (101,18220003,'Gate_of_fort',-53313,156743,-2081,0,0,0,0,0,0,67884,644,518,'true','true',0),

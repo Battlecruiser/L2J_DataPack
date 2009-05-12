@@ -1,6 +1,3 @@
--- ---------------------------
--- Table structure for fort_siege_guards
--- ---------------------------
 DROP TABLE IF EXISTS `fort_siege_guards`;
 CREATE TABLE IF NOT EXISTS `fort_siege_guards` (
   `fortId` INT NOT NULL default 0,

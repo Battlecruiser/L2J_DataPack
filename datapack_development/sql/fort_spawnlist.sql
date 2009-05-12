@@ -1,6 +1,3 @@
--- ---------------------------
--- Table structure for fort_spawnlist
--- ---------------------------
 DROP TABLE IF EXISTS `fort_spawnlist`;
 CREATE TABLE `fort_spawnlist` (
   `fortId` INT NOT NULL default 0,
@@ -11,11 +8,12 @@ CREATE TABLE `fort_spawnlist` (
   `z` INT NOT NULL default 0,
   `heading` INT NOT NULL default 0,
   `spawnType` INT NOT NULL default 0, -- 0-always spawned, 1-despawned during siege, 2-despawned 10min before siege, 3-spawned after fort taken
-  `castleId` INT NOT NULL default 0, -- Castle ID for Special Envoys
+  `castleId` INT NOT NULL default 0,  -- Castle ID for Special Envoys
   PRIMARY KEY (`id`),
   KEY `id` (`fortId`)
 );
-INSERT INTO fort_spawnlist VALUES
+
+INSERT INTO `fort_spawnlist` VALUES
 (101,null,35658,-53273,156650,-1896,62000,0,0),
 (101,null,35659,-55097,157042,-2055,0,2,0),
 (101,null,35660,-52128,157752,-2024,29864,1,0),

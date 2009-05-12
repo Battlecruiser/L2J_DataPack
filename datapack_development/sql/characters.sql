@@ -1,6 +1,3 @@
--- ---------------------------
--- Table structure for characters
--- ---------------------------
 CREATE TABLE IF NOT EXISTS `characters` (
   `account_name` VARCHAR(45) DEFAULT NULL,
   `charId` INT UNSIGNED NOT NULL DEFAULT 0,
@@ -59,6 +56,7 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `clan_join_expiry_time` BIGINT UNSIGNED NOT NULL DEFAULT 0,
   `clan_create_expiry_time` BIGINT UNSIGNED NOT NULL DEFAULT 0,
   `death_penalty_level` SMALLINT UNSIGNED NOT NULL DEFAULT 0,
+  `bookmarkslot` SMALLINT UNSIGNED NOT NULL DEFAULT 0,
   PRIMARY KEY (`charId`),
   KEY `clanid` (`clanid`)
 );

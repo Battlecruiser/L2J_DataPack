@@ -1,6 +1,3 @@
---
--- Table structure for table `henna`
---
 DROP TABLE IF EXISTS `henna`;
 CREATE TABLE `henna` (
   `symbol_id` int(11) NOT NULL default '0',
@@ -17,11 +14,7 @@ CREATE TABLE `henna` (
   PRIMARY KEY (`symbol_id`)
 );
 
---
--- Dumping data for table `henna`
---
-
-INSERT INTO `henna` VALUES 
+INSERT INTO `henna` VALUES
 (1,'symbol_s+1c-3_d',4445,10,5100,0,1,-3,0,0,0),
 (2,'symbol_s+1d-3_d',4446,10,5100,0,1,0,0,-3,0),
 (3,'symbol_c+1s-3_d',4447,10,5100,0,-3,1,0,0,0),

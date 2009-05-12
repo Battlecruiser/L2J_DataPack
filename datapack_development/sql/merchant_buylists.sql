@@ -1,6 +1,3 @@
---
--- Table structure for table `merchant_buylists`
---
 DROP TABLE IF EXISTS `merchant_buylists`;
 CREATE TABLE `merchant_buylists` (
   `item_id` decimal(9,0) NOT NULL default '0',
@@ -14,11 +11,35 @@ CREATE TABLE `merchant_buylists` (
   PRIMARY KEY (`shop_id`,`order`)
 );
 
---
--- Dumping data for table `merchant_buylists`
---
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+-- golem shop
+(1835,-1,13128001,0),
+(2509,-1,13128001,1),
+(3947,-1,13128001,2),
+(5146,-1,13128001,3),
+(5140,-1,13128001,4),
+(5134,-1,13128001,5),
+(5262,-1,13128001,6),
+(5256,-1,13128001,7),
+(5250,-1,13128001,8),
+(17,-1,13128001,9),
+(1341,-1,13128001,10),
+(1060,-1,13128001,11),
+(1831,-1,13128001,12),
+(1833,-1,13128001,13),
+(734,-1,13128001,14),
+(735,-1,13128001,15),
+(6035,-1,13128001,16),
+(736,-1,13128001,17),
+(737,-1,13128001,18),
+(5589,-1,13128001,19),
+(1661,-1,13128001,20),
+(9633,-1,13128001,21),
+(4625,-1,13128001,22),
+(4626,-1,13128001,23),
+(4627,-1,13128001,24),
+(4628,-1,13128001,25),
 
 -- General Shops
 
@@ -7821,7 +7842,6 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (10516,-1,3126500,66),
 (10517,-1,3126500,67),
 (10425,-1,3126500,68),
-(3038,-1,3127300,0),
 (3031,-1,3127400,0),
 (1785,-1,3127400,1),
 (5192,-1,3127400,2),
@@ -7930,27 +7950,6 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (10075,-1,3128400,96),
 (10079,-1,3128400,97),
 (10076,-1,3128400,98),
-(1529,-1,3129100,0),
-(1525,-1,3129100,1),
-(1527,-1,3129100,2),
-(1524,-1,3129100,3),
-(1531,-1,3129100,4),
-(1522,-1,3129100,5),
-(1526,-1,3129100,6),
-(1534,-1,3129100,7),
-(1537,-1,3129100,8),
-(1856,-1,3129100,9),
-(1523,-1,3129100,10),
-(1521,-1,3129100,11),
-(1535,-1,3129100,12),
-(1532,-1,3129100,13),
-(1536,-1,3129100,14),
-(1533,-1,3129100,15),
-(1528,-1,3129100,16),
-(1518,-1,3129100,17),
-(1519,-1,3129100,18),
-(1520,-1,3129100,19),
-(1530,-1,3129100,20),
 (2,-1,3130000,0),
 (218,-1,3130000,1),
 (272,-1,3130000,2),
@@ -15621,156 +15620,6 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (853,0,9110,13),
 (884,0,9110,14),
 (916,0,9110,15),
-(365,0,9111,1),
-(388,0,9111,2),
-(512,0,9111,3),
-(641,0,9111,4),
-(2385,0,9111,5),
-(2389,0,9111,6),
-(2407,0,9111,7),
-(5287,0,9111,8),
-(5288,0,9111,9),
-(5289,0,9111,10),
-(5290,0,9111,11),
-(5291,0,9111,12),
-(5292,0,9111,13),
-(5297,0,9111,14),
-(5298,0,9111,15),
-(5308,0,9111,16),
-(5765,0,9111,17),
-(5766,0,9111,18),
-(5767,0,9111,19),
-(5777,0,9111,20),
-(5778,0,9111,21),
-(5779,0,9111,22),
-(374,0,9112,1),
-(2394,0,9112,2),
-(2408,0,9112,3),
-(2418,0,9112,4),
-(2498,0,9112,5),
-(5311,0,9112,6),
-(5312,0,9112,7),
-(5313,0,9112,8),
-(5314,0,9112,9),
-(5315,0,9112,10),
-(5320,0,9112,11),
-(5326,0,9112,12),
-(5771,0,9112,13),
-(5772,0,9112,14),
-(5773,0,9112,15),
-(5783,0,9112,16),
-(5784,0,9112,17),
-(5785,0,9112,18),
-(547,0,9113,1),
-(2382,0,9113,2),
-(2393,0,9113,3),
-(2400,0,9113,4),
-(2405,0,9113,5),
-(5293,0,9113,6),
-(5294,0,9113,7),
-(5295,0,9113,8),
-(5296,0,9113,9),
-(5301,0,9113,10),
-(5304,0,9113,11),
-(5305,0,9113,12),
-(5768,0,9113,13),
-(5769,0,9113,14),
-(5770,0,9113,15),
-(5780,0,9113,16),
-(5781,0,9113,17),
-(5782,0,9113,18),
-(2383,0,9114,1),
-(2395,0,9114,2),
-(2409,0,9114,3),
-(2419,0,9114,4),
-(5316,0,9114,5),
-(5317,0,9114,6),
-(5318,0,9114,7),
-(5319,0,9114,8),
-(5323,0,9114,9),
-(5329,0,9114,10),
-(5774,0,9114,11),
-(5775,0,9114,12),
-(5776,0,9114,13),
-(5786,0,9114,14),
-(5787,0,9114,15),
-(5788,0,9114,16),
-(6373,0,9115,1),
-(6374,0,9115,2),
-(6375,0,9115,3),
-(6376,0,9115,4),
-(6377,0,9115,5),
-(6378,0,9115,6),
-(6674,0,9115,7),
-(6675,0,9115,8),
-(6676,0,9115,9),
-(6677,0,9115,10),
-(6678,0,9115,11),
-(6679,0,9115,12),
-(6383,0,9116,1),
-(6384,0,9116,2),
-(6385,0,9116,3),
-(6386,0,9116,4),
-(6684,0,9116,5),
-(6685,0,9116,6),
-(6686,0,9116,7),
-(6687,0,9116,8),
-(6379,0,9117,1),
-(6380,0,9117,2),
-(6381,0,9117,3),
-(6382,0,9117,4),
-(6680,0,9117,5),
-(6681,0,9117,6),
-(6682,0,9117,7),
-(6683,0,9117,8),
-(110,0,9118,1),
-(601,0,9118,2),
-(2381,0,9118,3),
-(2392,0,9118,4),
-(2399,0,9118,5),
-(2404,0,9118,6),
-(2417,0,9118,7),
-(2475,0,9118,8),
-(5721,0,9118,9),
-(5722,0,9118,10),
-(5723,0,9118,11),
-(5724,0,9118,12),
-(5737,0,9118,13),
-(5738,0,9118,14),
-(5739,0,9118,15),
-(5740,0,9118,16),
-(600,0,9119,1),
-(673,0,9119,2),
-(2376,0,9119,3),
-(2379,0,9119,4),
-(2390,0,9119,5),
-(2406,0,9119,6),
-(2415,0,9119,7),
-(2464,0,9119,8),
-(5713,0,9119,9),
-(5714,0,9119,10),
-(5715,0,9119,11),
-(5716,0,9119,12),
-(5729,0,9119,13),
-(5730,0,9119,14),
-(5731,0,9119,15),
-(5732,0,9119,16),
-(358,0,9120,1),
-(2380,0,9120,2),
-(2391,0,9120,3),
-(2398,0,9120,4),
-(2403,0,9120,5),
-(2416,0,9120,6),
-(2439,0,9120,7),
-(2487,0,9120,8),
-(5717,0,9120,9),
-(5718,0,9120,10),
-(5719,0,9120,11),
-(5720,0,9120,12),
-(5733,0,9120,13),
-(5734,0,9120,14),
-(5735,0,9120,15),
-(5736,0,9120,16),
 (5808,0,9121,1),
 (6394,0,9121,2),
 (6834,0,9121,3),
@@ -15797,24 +15646,6 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (7696,0,9121,24),
 (7836,0,9121,25),
 (7837,0,9121,26),
-(357,0,9122,1),
-(383,0,9122,2),
-(503,0,9122,3),
-(554,0,9122,4),
-(612,0,9122,5),
-(633,0,9122,6),
-(2384,0,9122,7),
-(2388,0,9122,8),
-(2397,0,9122,9),
-(2402,0,9122,10),
-(5709,0,9122,11),
-(5710,0,9122,12),
-(5711,0,9122,13),
-(5712,0,9122,14),
-(5725,0,9122,15),
-(5726,0,9122,16),
-(5727,0,9122,17),
-(5728,0,9122,18),
 (7638,0,9123,1),
 (7639,0,9123,2),
 (7640,0,9123,3),
@@ -19148,84 +18979,448 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (8599,120000,423,10),
 (8615,52500,423,11);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,`currentCount`,`time`,`savetimer`) VALUES 
-(43,0,9159,1,-1,-1,0,0),
-(23,0,9159,2,-1,-1,0,0),
-(2386,0,9159,3,-1,-1,0,0),
-(44,0,9159,4,-1,-1,0,0),
-(1101,0,9159,5,-1,-1,0,0),
-(1104,0,9159,6,-1,-1,0,0),
-(47,0,9160,1,-1,-1,0,0),
-(58,0,9160,2,-1,-1,0,0),
-(59,0,9160,3,-1,-1,0,0),
-(628,0,9160,4,-1,-1,0,0),
-(2411,0,9160,5,-1,-1,0,0),
-(352,0,9160,6,-1,-1,0,0),
-(2449,0,9160,7,-1,-1,0,0),
-(2425,0,9160,8,-1,-1,0,0),
-(2493,0,9160,9,-1,-1,0,0),
-(394,0,9160,10,-1,-1,0,0),
-(416,0,9160,11,-1,-1,0,0),
-(2446,0,9160,12,-1,-1,0,0),
-(2422,0,9160,13,-1,-1,0,0),
-(395,0,9160,14,-1,-1,0,0),
-(417,0,9160,15,-1,-1,0,0),
-(2448,0,9160,16,-1,-1,0,0),
-(2424,0,9160,17,-1,-1,0,0),
-(436,0,9160,18,-1,-1,0,0),
-(469,0,9160,19,-1,-1,0,0),
-(2447,0,9160,20,-1,-1,0,0),
-(2423,0,9160,21,-1,-1,0,0),
-(2396,0,9160,22,-1,-1,0,0),
-(2401,0,9160,23,-1,-1,0,0),
-(2450,0,9160,24,-1,-1,0,0),
-(2426,0,9160,25,-1,-1,0,0),
-(2413,0,9161,1,-1,-1,0,0),
-(354,0,9161,2,-1,-1,0,0),
-(381,0,9161,3,-1,-1,0,0),
-(2453,0,9161,4,-1,-1,0,0),
-(2429,0,9161,5,-1,-1,0,0),
-(2495,0,9161,6,-1,-1,0,0),
-(517,0,9161,7,-1,-1,0,0),
-(60,0,9161,8,-1,-1,0,0),
-(64,0,9161,9,-1,-1,0,0),
-(107,0,9161,10,-1,-1,0,0),
-(2414,0,9161,11,-1,-1,0,0),
-(356,0,9161,12,-1,-1,0,0),
-(2462,0,9161,13,-1,-1,0,0),
-(2438,0,9161,14,-1,-1,0,0),
-(2497,0,9161,15,-1,-1,0,0),
-(397,0,9161,16,-1,-1,0,0),
-(2387,0,9161,17,-1,-1,0,0),
-(608,0,9161,18,-1,-1,0,0),
-(62,0,9161,19,-1,-1,0,0),
-(398,0,9161,20,-1,-1,0,0),
-(418,0,9161,21,-1,-1,0,0),
-(2455,0,9161,22,-1,-1,0,0),
-(2431,0,9161,23,-1,-1,0,0),
-(400,0,9161,24,-1,-1,0,0),
-(420,0,9161,25,-1,-1,0,0),
-(2460,0,9161,26,-1,-1,0,0),
-(2436,0,9161,27,-1,-1,0,0),
-(401,0,9161,28,-1,-1,0,0),
-(2461,0,9161,29,-1,-1,0,0),
-(2437,0,9161,30,-1,-1,0,0),
-(439,0,9161,31,-1,-1,0,0),
-(471,0,9161,32,-1,-1,0,0),
-(2454,0,9161,33,-1,-1,0,0),
-(2430,0,9161,34,-1,-1,0,0),
-(441,0,9161,35,-1,-1,0,0),
-(472,0,9161,36,-1,-1,0,0),
-(2459,0,9161,37,-1,-1,0,0),
-(2435,0,9161,38,-1,-1,0,0),
-(442,0,9161,39,-1,-1,0,0),
-(473,0,9161,40,-1,-1,0,0),
-(2463,0,9161,41,-1,-1,0,0),
-(603,0,9161,42,-1,-1,0,0);
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) NO GRADE Armor Sets
+-- Wooden Breastplate set (heavy)
+(23,0,9111,1),     -- Wooden Breastplate
+(2386,0,9111,2),   -- Wooden Gaiters
+(43,0,9111,3),     -- Wooden Helmet
+-- Devotion robe set (robe)
+(1101,0,9111,4),   -- Tunic of Devotion
+(1104,0,9111,5),   -- Stockings of Devotion
+(44,0,9111,6),     -- Leather Helmet
 
+-- (GM-Shop) D GRADE Armor Sets
+-- Mithril Breastplate set(heavy)
+(58,0,9112,1),     -- Mithril Breastplate
+(59,0,9112,2),     -- Mithril Gaiters
+(47,0,9112,3),     -- Helmet
+(628,0,9112,4),    -- Hoplon
+-- Brigandine Armor set
+(352,0,9112,5),    -- Brigandine Tunic
+(2378,0,9112,6),   -- Brigandine Gaiters
+(2411,0,9112,7),   -- Brigandine Helmet
+(2493,0,9112,8),   -- Brigandine Shield
+-- Reinforced leather set
+(394,0,9112,9),    -- Reinforced Leather Shirt
+(416,0,9112,10),   -- Reinforced Leather Gaiters
+(2422,0,9112,11),  -- Reinforced Leather Boots
+-- Manticore skin set
+(395,0,9112,12),   -- Manticore Skin Shirt
+(417,0,9112,13),   -- Manticore Skin Gaiters
+(2424,0,9112,14),  -- Manticore Skin Boots
+-- Tunic of knowledge set
+(436,0,9112,15),   -- Tunic of Knowledge
+(469,0,9112,16),   -- Stockings of Knowledge
+(2447,0,9112,17),  -- Gloves of Knowledge
+-- Mithril Tunic
+(437,0,9112,18),   -- Mithril Tunic
+(470,0,9112,19),   -- Mithril Stockings
+(2450,0,9112,20),  -- Mithril Gloves
+
+-- (GM-Shop) C GRADE Armor Sets
+-- Composite Armor set
+(60,0,9113,1),     -- Composite Armor
+(517,0,9113,2),    -- Composite Helmet
+(64,0,9113,3),     -- Composite Boots
+(107,0,9113,4),    -- Composite Shield
+-- Chain Mail Shirt set
+(354,0,9113,5),    -- Chain Mail Shirt
+(381,0,9113,6),    -- Chain Gaiters
+(2413,0,9113,7),   -- Chain Hood
+(2453,0,9113,8),   -- Chain Gloves
+(2429,0,9113,9),   -- Chain Boots
+(2495,0,9113,10),  -- Chain Shield
+-- Full Plate Armor set
+(356,0,9113,11),   -- Full Plate Armor
+(2414,0,9113,12),  -- Full Plate Helmet
+(2462,0,9113,13),  -- Full Plate Gauntlets
+(2438,0,9113,14),  -- Full Plate Boots
+(2497,0,9113,15),  -- Full Plate Shield
+-- Mithrill shirt set
+(397,0,9113,16),   -- Mithril Shirt
+(2387,0,9113,17),  -- Tempered Mithril Gaiters
+(608,0,9113,18),   -- Mithril Gauntlets
+(62,0,9113,19),    -- Mithril Boots
+-- Plated leather set
+(398,0,9113,20),   -- Plated Leather
+(418,0,9113,21),   -- Plated Leather Gaiters
+(2455,0,9113,22),  -- Plated Leather Gloves
+(2431,0,9113,23),  -- Plated Leather Boots
+-- Theca leather set
+(400,0,9113,24),   -- Theca Leather Armor
+(420,0,9113,25),   -- Theca Leather Gaiters
+(2460,0,9113,26),  -- Theca Leather Gloves
+(2436,0,9113,27),  -- Theca Leather Boots
+-- Drake leather set
+(401,0,9113,28),   -- Drake Leather Armor
+(2461,0,9113,29),  -- Drake Leather Gloves
+(2437,0,9113,30),  -- Drake Leather Boots
+-- Karmian robe set
+(439,0,9113,31),   -- Karmian Tunic
+(471,0,9113,32),   -- Karmian Stockings
+(2454,0,9113,33),  -- Karmian Gloves
+(2430,0,9113,34),  -- Karmian Boots
+-- Demon robe set
+(441,0,9113,35),   -- Demon's Tunic
+(472,0,9113,36),   -- Demon's Stockings
+(2459,0,9113,37),  -- Demon's Gloves
+(2435,0,9113,38),  -- Demon's Boots
+-- Divine robe set
+(442,0,9113,39),   -- Divine Tunic
+(473,0,9113,40),   -- Divine Stockings
+(2463,0,9113,41),  -- Divine Gloves
+(603,0,9113,42),   -- Divine Boots
+
+-- (GM-Shop) B GRADE Armor Sets
+-- Zubei's Breastplate set
+(357,0,9114,1),    -- Zubei's Breastplate
+(383,0,9114,2),    -- Zubei's Gaiters
+(503,0,9114,3),    -- Zubei's Helmet
+(5710,0,9114,4),   -- Zubei's Gauntlets Heavy Armor
+(5726,0,9114,5),   -- Zubei's Boots Heavy Armor
+(633,0,9114,6),    -- Zubei's Shield
+-- Blue Wolf's Breastplate set
+(358,0,9114,7),    -- Blue Wolf Breastplate
+(2380,0,9114,8),   -- Blue Wolf Gaiters
+(2416,0,9114,9),   -- Blue Wolf Helmet
+(5718,0,9114,10),  -- Blue Wolf Gloves Heavy Armor
+(5734,0,9114,11),  -- Blue Wolf Boots Heavy Armor
+-- Avadon heavy set
+(2376,0,9114,12),  -- Avadon Breastplate
+(2379,0,9114,13),  -- Avadon Gaiters
+(2415,0,9114,14),  -- Avadon Circlet
+(5714,0,9114,15),  -- Avadon Gloves Heavy Armor
+(5730,0,9114,16),  -- Avadon Boots Heavy Armor
+(673,0,9114,17),   -- Avadon Shield
+-- Doom plate heavy set
+(2381,0,9114,18),  -- Doom Plate Armor
+(2417,0,9114,19),  -- Doom Helmet
+(5722,0,9114,20),  -- Doom Gloves Heavy Armor
+(5738,0,9114,21),  -- Doom Boots Heavy Armor
+(110,0,9114,22),   -- Doom Shield
+-- Zubei's leather set
+(2384,0,9114,23),  -- Zubei's Leather Shirt
+(2388,0,9114,24),  -- Zubei's Leather Gaiters
+(5711,0,9114,25),  -- Zubei's Gauntlets Light Armor
+(5727,0,9114,26),  -- Zubei's Boots Light Armor
+-- Avadon leather set
+(2390,0,9114,27),  -- Avadon Leather Armor
+(5715,0,9114,28),  -- Avadon Gloves Light Armor
+(5731,0,9114,29),  -- Avadon Boots Light Armor
+-- Blue wolf leather set
+(2391,0,9114,30),  -- Blue Wolf Leather Armor
+(5719,0,9114,31),  -- Blue Wolf Gloves Light Armor
+(5735,0,9114,32),  -- Blue Wolf Boots Light Armor
+-- Doom leather set
+(2392,0,9114,33),  -- Leather Armor of Doom
+(5723,0,9114,34),  -- Doom Gloves Light Armor
+(5739,0,9114,35),  -- Doom Boots Light Armor
+-- Zubei robe set
+(2397,0,9114,36),  -- Tunic of Zubei
+(2402,0,9114,37),  -- Stockings of Zubei
+(5712,0,9114,38),  -- Zubei's Gauntlets Robe
+(5728,0,9114,39),  -- Zubei's Boots Robe
+-- Blue Wolf robe set
+(2398,0,9114,40),  -- Blue Wolf Tunic
+(2403,0,9114,41),  -- Blue Wolf Stockings
+(5720,0,9114,42),  -- Blue Wolf Gloves Robe
+(5736,0,9114,43),  -- Blue Wolf Boots Robe
+-- Doom robe set
+(2399,0,9114,44),  -- Tunic of Doom
+(2404,0,9114,45),  -- Stockings of Doom
+(5724,0,9114,46),  -- Doom Gloves Robe
+(5740,0,9114,47),  -- Doom Boots Robe
+-- Avadon robe set
+(2406,0,9114,48),  -- Avadon Robe
+(5716,0,9114,49),  -- Avadon Gloves Robe
+(5732,0,9114,50),  -- Avadon Boots Robe
+-- Others
+(554,0,9114,51),   -- Zubei's Boots
+(612,0,9114,52),   -- Zubei's Gauntlets
+(5709,0,9114,53),  -- Sealed Zubei's Gauntlets
+(5725,0,9114,54),  -- Sealed Zubei's Boots
+-- Others
+(2439,0,9114,55),  -- Blue Wolf Boots
+(2487,0,9114,56),  -- Blue Wolf Gloves
+(5717,0,9114,57),  -- Sealed Blue Wolf Gloves
+(5733,0,9114,58),  -- Sealed Blue Wolf Boots
+-- Others
+(600,0,9114,59),   -- Avadon Boots
+(2464,0,9114,60),  -- Avadon Gloves
+(5713,0,9114,61),  -- Sealed Avadon Gloves
+(5729,0,9114,62),  -- Sealed Avadon Boots
+-- Others
+(601,0,9114,63),   -- Boots of Doom
+(2475,0,9114,64),  -- Doom Gloves
+(5721,0,9114,65),  -- Sealed Doom Gloves
+(5737,0,9114,66),  -- Sealed Boots of Doom
+
+-- (GM-Shop) A GRADE Armor Sets
+-- Dark Crystal Breastplate set
+(365,0,9115,1),    -- Dark Crystal Breastplate
+(388,0,9115,2),    -- Dark Crystal Gaiters
+(512,0,9115,3),    -- Dark Crystal Helmet
+(5765,0,9115,4),   -- Dark Crystal Gloves Heavy Armor
+(5777,0,9115,5),   -- Dark Crystal Boots Heavy Armor
+(641,0,9115,6),    -- Dark Crystal Shield
+-- Tallum plate heavy set
+(2382,0,9115,7),   -- Tallum Plate Armor
+(547,0,9115,8),    -- Tallum Helm
+(5768,0,9115,9),   -- Tallum Gloves Heavy Armor
+(5780,0,9115,10),  -- Tallum Boots Heavy Armor
+-- Dark Crystal leather set
+(2385,0,9115,11),  -- Dark Crystal Leather Armor
+(2389,0,9115,12),  -- Dark Crystal Leggings
+(5766,0,9115,13),  -- Dark Crystal Gloves Light Armor
+(5778,0,9115,14),  -- Dark Crystal Boots	Light Armor
+-- Tallum leather set
+(2393,0,9115,15),  -- Tallum Leather Armor
+(5769,0,9115,16),  -- Tallum Gloves Light Armor
+(5781,0,9115,17),  -- Tallum Boots Light Armor
+-- Tallum robe set
+(2400,0,9115,18),  -- Tallum Tunic
+(2405,0,9115,19),  -- Tallum Stockings
+(5770,0,9115,20),  -- Tallum Gloves Robe
+(5782,0,9115,21),  -- Tallum Boots Robe
+-- Dark Crystal robe set
+(2407,0,9115,22),  -- Dark Crystal Robe
+(5767,0,9115,23),  -- Dark Crystal Gloves Robe
+(5779,0,9115,24),  -- Dark Crystal Boots	Robe
+-- Nightmare heavy set
+(374,0,9115,25),   -- Armor of Nightmare
+(2418,0,9115,26),  -- Helm of Nightmare
+(5771,0,9115,27),  -- Gauntlets of Nightmare Heavy Armor
+(5783,0,9115,28),  -- Boots of Nightmare Heavy Armor
+(2498,0,9115,29),  -- Shield of Nightmare
+(10793,0,9115,30), -- Armor of Nightmare {PvP}
+-- Majestic plate heavy set
+(2383,0,9115,31),  -- Majestic Plate Armor
+(2419,0,9115,32),  -- Majestic Circlet
+(5774,0,9115,33),  -- Majestic Gauntlets Heavy Armor
+(5786,0,9115,34),  -- Majestic Boots Heavy Armor
+(10794,0,9115,35), -- Majestic Plate Armor {PvP}
+-- Nightmare leather set
+(2394,0,9115,36),  -- Nightmarish Leather Armor
+(5772,0,9115,37),  -- Gauntlets of Nightmare Light Armor
+(5784,0,9115,38),  -- Boots of Nightmare Light Armor
+(10795,0,9115,39), -- Nightmarish Leather Armor {PvP}
+-- Majestic leather set
+(2395,0,9115,40),  -- Majestic Leather Armor
+(5775,0,9115,41),  -- Majestic Gauntlets Light Armor
+(5787,0,9115,42),  -- Majestic Boots Light Armor
+(10796,0,9115,43), -- Majestic Leather Armor {PvP}
+-- Robe of nightmare set
+(2408,0,9115,44),  -- Nightmare Robe
+(5773,0,9115,45),  -- Gauntlets of Nightmare Robe
+(5785,0,9115,46),  -- Boots of Nightmare Robe
+(10797,0,9115,47), -- Robe of Nightmare {PvP}
+-- Majestic robe set
+(2409,0,9115,48),  -- Majestic Robe
+(5776,0,9115,49),  -- Majestic Gauntlets Robe
+(5788,0,9115,50),  -- Majestic Boots Robe
+(10798,0,9115,51), -- Majestic Robe {PvP}
+-- Others
+(5287,0,9115,52),  -- Sealed Dark Crystal breastplate
+(5288,0,9115,53),  -- Sealed Dark Crystal Gaiters
+(5289,0,9115,54),  -- Sealed Dark Crystal Helmet
+(5290,0,9115,55),  -- Sealed Dark Crystal Gloves
+(5291,0,9115,56),  -- Sealed Dark Crystal Boots
+(5292,0,9115,57),  -- Sealed Dark Crystal Shield
+(5297,0,9115,58),  -- Sealed Dark Crystal Leather Armor
+(5298,0,9115,59),  -- Sealed Dark Crystal Leggings
+(5308,0,9115,60),  -- Sealed Dark Crystal Robe
+-- Others
+(5293,0,9115,61),  -- Sealed Tallum Plate Armor
+(5294,0,9115,62),  -- Sealed Tallum Helmet
+(5295,0,9115,63),  -- Sealed Tallum Gloves
+(5296,0,9115,64),  -- Sealed Tallum Boots
+(5301,0,9115,65),  -- Sealed Tallum Leather Armor
+(5304,0,9115,66),  -- Sealed Tallum Tunic
+(5305,0,9115,67),  -- Sealed Tallum Stockings
+-- Others
+(5311,0,9115,68),  -- Sealed Armor of Nightmare
+(5312,0,9115,69),  -- Sealed Helm of Nightmare
+(5313,0,9115,70),  -- Sealed Gauntlets of Nightmare
+(5314,0,9115,71),  -- Sealed Boots of Nightmare
+(5315,0,9115,72),  -- Sealed Shield of Nightmare
+(5320,0,9115,73),  -- Sealed Leather Armor of Nightmare
+(5326,0,9115,74),  -- Sealed Nightmare Robe
+-- Others
+(5316,0,9115,75),  -- Sealed Majestic Plate Armor
+(5317,0,9115,76),  -- Sealed Majestic Circlet
+(5318,0,9115,77),  -- Sealed Majestic Gauntlets
+(5319,0,9115,78),  -- Sealed Majestic Boots
+(5323,0,9115,79),  -- Sealed Majestic Leather Armor
+(5329,0,9115,80),  -- Sealed Majestic Robe
+
+-- (GM-Shop) S GRADE Armor Sets
+-- Imperial crusader set
+(6373,0,9116,1),   -- Imperial Crusader Breastplate
+(6374,0,9116,2),   -- Imperial Crusader Gaiters
+(6378,0,9116,3),   -- Imperial Crusader Helmet
+(6375,0,9116,4),   -- Imperial Crusader Gauntlets
+(6376,0,9116,5),   -- Imperial Crusader Boots
+(6377,0,9116,6),   -- Imperial Crusader Shield
+(10799,0,9116,7),  -- Imperial Crusader Breastplate {PvP}
+-- Draconic leather set
+(6379,0,9116,8),   -- Draconic Leather Armor
+(6382,0,9116,9),   -- Draconic Leather Helmet
+(6380,0,9116,10),  -- Draconic Leather Gloves
+(6381,0,9116,11),  -- Draconic Leather Boots
+(10800,0,9116,12), -- Draconic Leather Armor {PvP}
+-- Major arcana robe set
+(6383,0,9116,13),  -- Major Arcana Robe
+(6386,0,9116,14),  -- Major Arcana Circlet
+(6384,0,9116,15),  -- Major Arcana Gloves
+(6385,0,9116,16),  -- Major Arcana Boots
+(10801,0,9116,17), -- Major Arcana Robe {PvP}
+-- Others
+(6679,0,9116,18),  -- Sealed Imperial Crusader Helmet
+(6674,0,9116,19),  -- Sealed Imperial Crusader Breastplate
+(6675,0,9116,20),  -- Sealed Imperial Crusader Gaiters
+(6676,0,9116,21),  -- Sealed Imperial Crusader Gauntlet
+(6677,0,9116,22),  -- Sealed Imperial Crusader Boots
+(6678,0,9116,23),  -- Sealed Imperial Crusader Shield
+-- Others
+(6680,0,9116,24),  -- Sealed Draconic Leather Armor
+(6681,0,9116,25),  -- Sealed Draconic Leather Glove
+(6682,0,9116,26),  -- Sealed Draconic Leather Boots
+(6683,0,9116,27),  -- Sealed Draconic Leather Helmet
+-- Others
+(6684,0,9116,28),  -- Sealed Major Arcana Robe
+(6685,0,9116,29),  -- Sealed Major Arcana Glove
+(6686,0,9116,30),  -- Sealed Major Arcana Boots
+(6687,0,9116,31),  -- Sealed Major Arcana Circlet
+
+-- (GM-Shop) S80 Dynasty Armor Sets
+-- Dynasty Breast Plate
+(9416,0,9117,1),   -- Dynasty Breast Plate
+(9421,0,9117,2),   -- Dynasty Gaiter
+(9422,0,9117,3),   -- Dynasty Helmet
+(9423,0,9117,4),   -- Dynasty Gauntlet Heavy Armor
+(9424,0,9117,5),   -- Dynasty Boots Heavy Armor
+(9441,0,9117,6),   -- Dynasty Shield
+(9417,0,9117,7),   -- Dynasty Breast Plate Shield Master
+(9418,0,9117,8),   -- Dynasty Breast Plate Weapon Master
+(9419,0,9117,9),   -- Dynasty Breast Plate Force Master
+(9420,0,9117,10),  -- Dynasty Breast Plate Bard
+(10228,0,9117,11), -- Dynasty Platinum Plate Shield Master
+(10229,0,9117,12), -- Dynasty Platinum Plate Weapon Master
+(10230,0,9117,13), -- Dynasty Platinum Plate Force Master
+(10231,0,9117,14), -- Dynasty Platinum Plate Bard
+(10802,0,9117,15),  -- Dynasty Breastplate {PvP}
+(10803,0,9117,16),  -- Dynasty Breastplate {PvP}	Shield Master
+(10804,0,9117,17),  -- Dynasty Breastplate {PvP}	Weapon Master
+(10805,0,9117,18),  -- Dynasty Breastplate {PvP}	Force Master
+(10806,0,9117,19),  -- Dynasty Breastplate {PvP}	Bard
+(10820,0,9117,20),  -- Dynasty Platinum Breastplate {PvP} Shield Master
+(10821,0,9117,21),  -- Dynasty Platinum Breastplate {PvP} Weapon Master
+(10822,0,9117,22),  -- Dynasty Platinum Breastplate {PvP} Force Master
+(10823,0,9117,23),  -- Dynasty Platinum Breastplate {PvP} Bard
+-- Dynasty Tunic
+(9432,0,9117,24),  -- Dynasty Tunic
+(9437,0,9117,25),  -- Dynasty Stockings
+(9438,0,9117,26),  -- Dynasty Circlet
+(9439,0,9117,27),  -- Dynasty Gloves Robe
+(9440,0,9117,28),  -- Dynasty Shoes Robe
+(9433,0,9117,29),  -- Dynasty Tunic Healer
+(9434,0,9117,30),  -- Dynasty Tunic Enchanter
+(9435,0,9117,31),  -- Dynasty Tunic Summoner
+(9436,0,9117,32),  -- Dynasty Tunic Wizard
+(10236,0,9117,33), -- Dynasty Silver Satin Tunic Healer
+(10237,0,9117,34), -- Dynasty Silver Satin Tunic Enchanter
+(10238,0,9117,35), -- Dynasty Silver Satin Tunic Summoner
+(10239,0,9117,36), -- Dynasty Silver Satin Tunic Human Wizard
+(10810,0,9117,37), -- Dynasty Tunic {PvP}
+(10811,0,9117,38), -- Dynasty Tunic {PvP} Healer
+(10812,0,9117,39), -- Dynasty Tunic {PvP} Enchanter
+(10813,0,9117,40), -- Dynasty Tunic {PvP} Summoner
+(10814,0,9117,41), -- Dynasty Tunic {PvP} Wizard
+(10828,0,9117,42), -- Dynasty Silver Satin Tunic {PvP} Healer
+(10829,0,9117,43), -- Dynasty Silver Satin Tunic {PvP} Enchanter
+(10830,0,9117,44), -- Dynasty Silver Satin Tunic {PvP} Summoner
+(10831,0,9117,45), -- Dynasty Silver Satin Tunic {PvP} Wizard
+-- Dynasty Leather Armor
+(9425,0,9117,46),  -- Dynasty Leather Armor
+(9428,0,9117,47),  -- Dynasty Leather Leggings
+(9429,0,9117,48),  -- Dynasty Leather Helmet
+(9430,0,9117,49),  -- Dynasty Leather Gloves Light Armor
+(9431,0,9117,50),  -- Dynasty Leather Boots Light Armor
+(9426,0,9117,51),  -- Dynasty Leather Armor Dagger Master
+(9427,0,9117,52),  -- Dynasty Leather Armor Bow Master
+(10126,0,9117,53), -- Dynasty Leather Armor Force Master
+(10127,0,9117,54), -- Dynasty Leather Armor Weapon Master
+(10168,0,9117,55), -- Dynasty Leather Armor Enchanter
+(10214,0,9117,56), -- Dynasty Leather Armor Summoner
+(10233,0,9117,57), -- Dynasty Jewel Leather Mail Dagger Master
+(10234,0,9117,58), -- Dynasty Jewel Leather Mail Bow Master
+(10487,0,9117,59), -- Dynasty Jeweled Leather Armor Force Master
+(10488,0,9117,60), -- Dynasty Jeweled Leather Armor Weapon Master
+(10489,0,9117,61), -- Dynasty Jeweled Leather Armor Enchanter
+(10490,0,9117,62), -- Dynasty Jeweled Leather Armor Summoner
+(10807,0,9117,63), -- Dynasty Leather Armor {PvP}
+(10808,0,9117,64), -- Dynasty Leather Armor {PvP} Dagger Master
+(10809,0,9117,65), -- Dynasty Leather Armor {PvP} Bow Master
+(10815,0,9117,66), -- Dynasty Leather Armor {PvP} Force Master
+(10816,0,9117,67), -- Dynasty Leather Armor {PvP} Weapon Master
+(10817,0,9117,68), -- Dynasty Leather Armor {PvP} Enchanter
+(10818,0,9117,69), -- Dynasty Leather Armor {PvP} Summoner
+(10825,0,9117,70), -- Dynasty Jewel Leather Armor {PvP}	Dagger Master
+(10826,0,9117,71), -- Dynasty Jewel Leather Armor {PvP}	Bow Master
+(10832,0,9117,72), -- Dynasty Jewel Leather Armor {PvP}	Force Master
+(10833,0,9117,73), -- Dynasty Jewel Leather Armor {PvP}	Weapon Master
+(10834,0,9117,74), -- Dynasty Jewel Leather Armor {PvP}	Enchanter
+(10835,0,9117,75), -- Dynasty Jewel Leather Armor {PvP}	Summoner
+
+-- (GM-Shop) S84 Vesper Armor Sets
+-- Vesper Breastplate
+(13432,0,9118,1),  -- Vesper Breastplate
+(13438,0,9118,2),  -- Vesper Gaiters
+(13137,0,9118,3),  -- Vesper Helmet
+(13439,0,9118,4),  -- Vesper Gauntlet
+(13440,0,9118,5),  -- Vesper Boots
+(13471,0,9118,6),  -- Vesper Shield
+(14520,0,9118,7),  -- Vesper Breastplate {PvP}
+-- Vesper Leather Breastplate
+(13433,0,9118,8),  -- Vesper Leather Breastplate
+(13441,0,9118,9),  -- Vesper Leather Leggings
+(13138,0,9118,10), -- Vesper Leather Helmet
+(13442,0,9118,11), -- Vesper Leather Gloves
+(13443,0,9118,12), -- Vesper Leather Boots
+(14521,0,9118,13), -- Vesper Leather Breastplate {PvP}
+-- Vesper Tunic
+(13434,0,9118,14), -- Vesper Tunic
+(13444,0,9118,15), -- Vesper Stockings
+(13139,0,9118,16), -- Vesper Circlet
+(13445,0,9118,17), -- Vesper Gloves
+(13446,0,9118,18), -- Vesper Shoes
+(14522,0,9118,19), -- Vesper Tunic {PvP}
+-- Vesper Noble Breastplate
+(13435,0,9118,20), -- Vesper Noble Breastplate
+(13448,0,9118,21), -- Vesper Noble Gaiters
+(13140,0,9118,22), -- Vesper Noble Helmet
+(13449,0,9118,23), -- Vesper Noble Gauntlet
+(13450,0,9118,24), -- Vesper Noble Boots
+(14523,0,9118,25), -- Vesper Noble Breastplate {PvP}
+-- Vesper Noble Leather Breastplate
+(13436,0,9118,26), -- Vesper Noble Leather Breastplate
+(13451,0,9118,27), -- Vesper Noble Leather Leggings
+(13141,0,9118,28), -- Vesper Noble Leather Helmet
+(13452,0,9118,29), -- Vesper Noble Leather Gloves
+(13453,0,9118,30), -- Vesper Noble Leather Boots
+(14524,0,9118,31), -- Vesper Noble Leather Breastplate {PvP}
+-- Vesper Noble Tunic
+(13437,0,9118,32), -- Vesper Noble Tunic
+(13454,0,9118,33), -- Vesper Noble Stockings
+(13142,0,9118,34), -- Vesper Noble Circlet
+(13455,0,9118,35), -- Vesper Noble Gloves
+(13456,0,9118,36), -- Vesper Noble Shoes
+(14525,0,9118,37); -- Vesper Noble Tunic {PvP}
+
+INSERT INTO `merchant_buylists`(`item_id`,`price`,`shop_id`,`order`) VALUES
 -- INTERLUDE GM SHOP START
 -- Accessory
-INSERT INTO `merchant_buylists`(`item_id`,`price`,`shop_id`,`order`) VALUES 
 (8910,0,71032,1),
 (8911,0,71032,2),
 (8912,0,71032,3),
@@ -19308,9 +19503,7 @@ INSERT INTO `merchant_buylists`(`item_id`,`price`,`shop_id`,`order`) VALUES
 (8935,0,71031,50);
 -- INTERLUDE GMSHOP END
 
---
 -- Clan Hall Item Creation
---
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,time) VALUES 
 (6902,12900,135445,1,-1,0),
 (6316,300,135445,2,-1,0),
@@ -20990,9 +21183,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (7011,29000,335586,31,1,1),
 (7012,29000,335586,32,1,1),
 (7013,29000,335586,33,1,1);
---
+
 -- Castles Item Creation
---
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
 (6316,-1,351001,1),
 (6838,-1,351001,2),
@@ -21030,9 +21222,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (8183,-1,355551,2),
 (7015,-1,355551,3),
 (9615,-1,355551,4);
---
+
 -- Harvester
---
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,`currentCount`, time, savetimer) VALUES
 (5125,575,335103,1,-1,-1,0,0),
 (5125,575,335145,1,-1,-1,0,0),
@@ -21047,6 +21238,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,`cu
 (5125,575,335558,1,-1,-1,0,0),
 (5125,575,335644,1,-1,-1,0,0),
 (5125,575,335645,1,-1,-1,0,0);
+
 -- CT1 GM Shop
 -- Armor S-80
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
@@ -21076,6 +21268,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (9431,0,9155,1),
 (9440,0,9155,2),
 (9441,0,9156,0);
+
 -- Weapon S-80
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (9376,0,9157,0),
@@ -21127,6 +21320,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (9878,0,9157,49),
 (9879,0,9157,50),
 (9880,0,9157,51);
+
 -- Jewels S-80
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (9455,0,9158,26),
@@ -21159,5 +21353,5 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- CT1 GM Shop End
 
 -- Quest 381: Sandra's Album
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,time) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,time) VALUES
 (5900,10000,7,18,1,3);

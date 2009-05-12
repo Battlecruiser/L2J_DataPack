@@ -1,7 +1,3 @@
---
--- Table structure for table `lvlupgain`
--- 
-
 DROP TABLE IF EXISTS `lvlupgain`;
 CREATE TABLE `lvlupgain` (
   `classid` int(3) NOT NULL default '0',
@@ -18,11 +14,7 @@ CREATE TABLE `lvlupgain` (
   PRIMARY KEY (`classid`)
 );
 
--- 
--- Dumping data for table `lvlupgain`
--- 
-
-INSERT INTO `lvlupgain` VALUES 
+INSERT INTO `lvlupgain` VALUES
 (0, 80.0, 11.83, 0.37, 32.0, 4.73, 0.22, 30.0, 5.46, 0.14, 1),
 (1, 327.0, 33.00, 0.37, 261.6, 26.40, 0.22, 144.0, 9.90, 0.14, 20),
 (2, 1044.0, 49.40, 0.37, 939.6, 44.46, 0.22, 359.1, 19.50, 0.14, 40),
@@ -112,6 +104,7 @@ INSERT INTO `lvlupgain` VALUES
 (116, 3359.9, 67.96, 0.37, 1679.9, 33.93, 0.22, 1540.8, 33.10, 0.14, 76),
 (117, 3447.2, 72.94, 0.37, 2413.0, 51.03, 0.22, 1155.6, 24.80, 0.14, 76),
 (118, 3293.2, 69.62, 0.37, 2634.5, 55.68, 0.22, 1155.6, 24.80, 0.14, 76),
+
 -- This is only temporarly for Kamael race!
 (123, 80.0, 11.83, 0.37, 32.0, 4.73, 0.22, 30.0, 5.46, 0.14, 1),
 (124, 80.0, 11.83, 0.37, 32.0, 4.73, 0.22, 30.0, 5.46, 0.14, 1),

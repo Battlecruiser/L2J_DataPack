@@ -1,6 +1,3 @@
--- ----------------------------
--- Table structure for auto_announcements
--- ----------------------------
 CREATE TABLE IF NOT EXISTS `auto_announcements` (
   `id` INT(11) NOT NULL,
   `initial` BIGINT(20) NOT NULL,

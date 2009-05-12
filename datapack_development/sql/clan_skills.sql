@@ -1,6 +1,3 @@
--- ----------------------------
--- Table structure for clan_skills
--- ----------------------------
 CREATE TABLE IF NOT EXISTS `clan_skills` (
   `clan_id` int(11) NOT NULL default 0,
   `skill_id` int(11) NOT NULL default 0,

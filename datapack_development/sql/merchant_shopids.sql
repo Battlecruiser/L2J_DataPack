@@ -1,6 +1,3 @@
---
--- Table structure for table `merchant_shopids`
---
 DROP TABLE IF EXISTS `merchant_shopids`;
 CREATE TABLE `merchant_shopids` (
   `shop_id` decimal(9,0) NOT NULL default '0',
@@ -8,12 +5,12 @@ CREATE TABLE `merchant_shopids` (
   PRIMARY KEY (`shop_id`)
 );
 
---
--- Dumping data for table `merchant_shopids`
---
+INSERT INTO `merchant_shopids` VALUES
+
+-- Golem shop
+(13128001,'13128'),
 
 -- General Shops
-INSERT INTO merchant_shopids VALUES
 (3000100,'30001'),
 (3000101,'30001'),
 (3000200,'30002'),
@@ -192,10 +189,8 @@ INSERT INTO merchant_shopids VALUES
 (3126300,'31263'),
 (3126301,'31263'),
 (3126500,'31265'),
-(3127300,'31273'),
 (3127400,'31274'),
 (3128400,'31284'),
-(3129100,'31291'),
 (3130000,'31300'),
 (3130001,'31300'),
 (3130100,'31301'),
@@ -297,7 +292,6 @@ INSERT INTO merchant_shopids VALUES
 (383,'31373'),
 
 -- Mercenary Managers
-
 (351021,'35102'),
 (351441,'35144'),
 (351861,'35186'),
@@ -307,7 +301,6 @@ INSERT INTO merchant_shopids VALUES
 (353651,'35365'),
 
 -- Fishermens
-
 (3156200,'31562'),
 (3156300,'31563'),
 (3156400,'31564'),
@@ -332,7 +325,6 @@ INSERT INTO merchant_shopids VALUES
 (3234800,'32348'),
 
 -- GM Shops
-
 (1001,'gm'),
 (1002,'gm'),
 (1003,'gm'),
@@ -476,10 +468,7 @@ INSERT INTO merchant_shopids VALUES
 (9116,'gm'),
 (9117,'gm'),
 (9118,'gm'),
-(9119,'gm'),
-(9120,'gm'),
 (9121,'gm'),
-(9122,'gm'),
 (9123,'gm'),
 (9124,'gm'),
 (9125,'gm'),
@@ -553,12 +542,8 @@ INSERT INTO merchant_shopids VALUES
 (9156,'gm'),
 (9157,'gm'),
 (9158,'gm'),
-(9159,'gm'),
-(9160,'gm'),
-(9161,'gm'),
---
+
 -- Castle 
---
 (335103, '35103'),
 (335145, '35145'),
 (335187, '35187'),
@@ -572,9 +557,8 @@ INSERT INTO merchant_shopids VALUES
 (335558, '35558'),
 (335644, '35644'),
 (335645, '35645'),
---
+
 -- Castles Item creation
---
 (351001,'35100'),
 (351421,'35142'),
 (351841,'35184'),
@@ -584,9 +568,8 @@ INSERT INTO merchant_shopids VALUES
 (353631,'35363'),
 (355091,'35509'),
 (355551,'35555'),
---
+
 -- Clan Halls Item creation
---
 (135445, '35445'),
 (235445, '35445'),
 (335445, '35445'),

@@ -1,7 +1,3 @@
---
--- Table structure for table `char_templates`
--- 
-
 DROP TABLE IF EXISTS `char_templates`;
 CREATE TABLE `char_templates` (
   `ClassId` int(11) NOT NULL default '0',
@@ -39,10 +35,7 @@ CREATE TABLE `char_templates` (
   PRIMARY KEY (`ClassId`)
 );
 
--- 
--- Dumping data for table `char_templates`
--- 
-INSERT INTO `char_templates` VALUES 
+INSERT INTO `char_templates` VALUES
 (0, 'Human Fighter', 0, 40, 43, 30, 21, 11, 25, 4, 80, 6, 41, 300, 333, 33, 44, 33, 115, 81900, -71338, 258271, -3104, 0, 1.10, 1.188000, 9.0, 23.0, 1.10, 1.188000, 8.0, 23.5),
 (1, 'Warrior', 0, 40, 43, 30, 21, 11, 25, 4, 80, 6, 41, 300, 333, 33, 44, 33, 115, 81900, -71338, 258271, -3104, 0, 1.10, 1.188000, 9.0, 23.0, 1.10, 1.188000, 8.0, 23.5),
 (2, 'Gladiator', 0, 40, 43, 30, 21, 11, 25, 4, 80, 6, 41, 300, 333, 33, 44, 33, 115, 81900, -71338, 258271, -3104, 0, 1.10, 1.188000, 9.0, 23.0, 1.10, 1.188000, 8.0, 23.5),

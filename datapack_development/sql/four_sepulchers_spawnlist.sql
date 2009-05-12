@@ -1,6 +1,3 @@
--- ---------------------------------------------
--- Table structure for four_sepulchers_spawnlist
--- ---------------------------------------------
 DROP TABLE IF EXISTS `four_sepulchers_spawnlist`;
 CREATE TABLE `four_sepulchers_spawnlist` (
   `id` int(11) NOT NULL auto_increment,
@@ -18,11 +15,8 @@ CREATE TABLE `four_sepulchers_spawnlist` (
   `spawntype` int(9) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 );
--- -------------------------------------------
--- Records for table four_sepulchers_spawnlist
--- -------------------------------------------
 
-INSERT INTO `four_sepulchers_spawnlist` VALUES 
+INSERT INTO `four_sepulchers_spawnlist` VALUES
 ('1', '', '1', '31468', '182074', '-85579', '-7216', '0', '0', '-32600', '3600', '31921', '0'),
 ('2', '', '1', '31469', '183868', '-85577', '-7216', '0', '0', '-32600', '3600', '31925', '0'),
 ('3', '', '1', '31470', '185681', '-85573', '-7216', '0', '0', '-32600', '3600', '31926', '0'),
@@ -1635,5 +1629,4 @@ INSERT INTO `four_sepulchers_spawnlist` VALUES
 ('1610', '', '1', '18256', '175440', '-72488', '-7243', '0', '0', '25061', '3600', '31944', '6'),
 ('1611', '', '1', '18256', '175204', '-72262', '-7219', '0', '0', '74489', '3600', '31944', '6'),
 ('1612', '', '1', '18256', '175286', '-72170', '-7219', '0', '0', '29793', '3600', '31944', '6');
-
 -- L2Emu Project

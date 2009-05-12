@@ -1,6 +1,3 @@
--- ---------------------------
--- Table structure for `castle_functions`
--- ---------------------------
 CREATE TABLE IF NOT EXISTS `castle_functions` (
   `castle_id` int(2) NOT NULL default '0',
   `type` int(1) NOT NULL default '0',

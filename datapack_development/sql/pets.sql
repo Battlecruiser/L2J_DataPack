@@ -1,6 +1,3 @@
--- ---------------------------
--- Table structure for pets
--- ---------------------------
 CREATE TABLE IF NOT EXISTS `pets` (
   `item_obj_id` decimal(11) NOT NULL default 0,
   `name` varchar(16) ,

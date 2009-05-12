@@ -1,6 +1,3 @@
-#----------------------------
-# Table structure for class_list
-#----------------------------
 DROP TABLE IF EXISTS `class_list`;
 CREATE TABLE `class_list` (
   `class_name` varchar(20) NOT NULL default '',
@@ -8,9 +5,7 @@ CREATE TABLE `class_list` (
   `parent_id` int(11) NOT NULL default '0',
   PRIMARY KEY (`id`)
 );
-#----------------------------
-# Records for table class_list
-#----------------------------
+
 INSERT INTO `class_list` VALUES
 ('H_Fighter', 0, -1),
 ('H_Warrior', 1, 0), 

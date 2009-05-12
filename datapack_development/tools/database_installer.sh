@@ -286,6 +286,7 @@ $MYG < ../sql/char_creation_items.sql &> /dev/null
 $MYG < ../sql/character_friends.sql &> /dev/null
 $MYG < ../sql/character_hennas.sql &> /dev/null
 $MYG < ../sql/character_macroses.sql &> /dev/null
+$MYG < ../sql/character_quest_global_data.sql &> /dev/null 
 $MYG < ../sql/character_quests.sql &> /dev/null
 $MYG < ../sql/character_raid_points.sql &> /dev/null
 $MYG < ../sql/character_recipebook.sql &> /dev/null
@@ -294,12 +295,14 @@ $MYG < ../sql/character_shortcuts.sql &> /dev/null
 $MYG < ../sql/character_skills.sql &> /dev/null
 $MYG < ../sql/character_skills_save.sql &> /dev/null
 $MYG < ../sql/character_subclasses.sql &> /dev/null
+$MYG < ../sql/character_tpbookmark.sql &> /dev/null
 $MYG < ../sql/characters.sql &> /dev/null
 $MYG < ../sql/clan_data.sql &> /dev/null
 $MYG < ../sql/clan_privs.sql &> /dev/null
 $MYG < ../sql/clan_skills.sql &> /dev/null
 $MYG < ../sql/clan_subpledges.sql &> /dev/null
 $MYG < ../sql/clan_wars.sql &> /dev/null
+$MYG < ../sql/clan_notices.sql &> /dev/null
 $MYG < ../sql/clanhall_functions.sql &> /dev/null
 $MYG < ../sql/class_list.sql &> /dev/null
 $MYG < ../sql/cursed_weapons.sql &> /dev/null
@@ -353,7 +356,9 @@ $MYG < ../sql/siege_clans.sql &> /dev/null
 $MYG < ../sql/skill_learn.sql &> /dev/null
 $MYG < ../sql/skill_spellbooks.sql &> /dev/null
 $MYG < ../sql/skill_trees.sql &> /dev/null
+$MYG < ../sql/skill_residential.sql &> /dev/null
 $MYG < ../sql/spawnlist.sql &> /dev/null
+$MYG < ../sql/special_skill_trees.sql &> /dev/null
 $MYG < ../sql/teleport.sql &> /dev/null
 $MYG < ../sql/topic.sql &> /dev/null
 $MYG < ../sql/transform_skill_trees.sql &> /dev/null
