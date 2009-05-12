@@ -7,15 +7,15 @@
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="reuseDelay" val="300000"/>
+  <set name="reuseDelay" val="600000"/>
+  <set name="staticReuse" val="true"/>
+  <set name="statichitTime" val="true"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="staticReuse" val="true"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0">
+    <effect name="Buff" time="120" val="0">
       <mul order="0x30" stat="mReuse" val="#mReuseRate"/>
     </effect>
   </for>
@@ -27,15 +27,15 @@
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="reuseDelay" val="300000"/>
+  <set name="reuseDelay" val="600000"/>
+  <set name="staticReuse" val="true"/>
+  <set name="statichitTime" val="true"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="staticReuse" val="true"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0">
+    <effect name="Buff" time="120" val="0">
       <mul order="0x30" stat="pReuse" val="#pReuseRate"/>
     </effect>
   </for>
@@ -47,15 +47,15 @@
   <set name="mpInitialConsume" val="#mpConsume_Init"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="reuseDelay" val="300000"/>
+  <set name="reuseDelay" val="600000"/>
+  <set name="staticReuse" val="true"/>
+  <set name="statichitTime" val="true"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="staticReuse" val="true"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0">
+    <effect name="Buff" time="120" val="0">
       <mul order="0x30" stat="mReuse" val="#reuseRate"/>
       <mul order="0x30" stat="pReuse" val="#reuseRate"/>
     </effect>
@@ -64,14 +64,12 @@
 <skill id="3203" levels="1" name="Item Skill: Problem Skill">
   <set name="mpInitialConsume" val="2"/>
   <set name="mpConsume" val="8"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
-    <effect count="1" name="BigHead" time="120" val="0" abnormal="bighead" stackOrder="300" stackType="big_head"/>
+    <effect name="BigHead" time="120" val="0" abnormal="bighead" stackOrder="300" stackType="big_head"/>
   </for>
 </skill>
 <skill id="3204" levels="3" name="Item Skill: Reflect Damage">
@@ -86,11 +84,9 @@
   <set name="skillType" val="REFLECT"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="staticReuse" val="true"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0">
+    <effect name="Buff" time="120" val="0">
       <add order="0x40" stat="reflectDam" val="#reflectDam"/>
     </effect>
   </for>
@@ -108,26 +104,21 @@
   <set name="skillType" val="RECALL"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="staticReuse" val="true"/>
 </skill>
 <skill id="3206" levels="10" name="Item Skill: Music">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3207" levels="10" name="Item Skill: Heal">
   <table name="#chance"> 1 1 2 2 3 3 4 4 5 5 </table>
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_HIT"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5146"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -136,11 +127,9 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_HIT"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5147"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -149,11 +138,9 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_HIT"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5148"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -162,11 +149,9 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_HIT"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5149"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -175,11 +160,9 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_ATTACKED"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5150"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -188,11 +171,9 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_ATTACKED"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5151"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -201,11 +182,9 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_ATTACKED"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5152"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -214,11 +193,9 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_ATTACKED"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5153"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -227,24 +204,20 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_ATTACKED"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5154"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
 <skill id="3216" levels="10" name="Item Skill: Empower">
   <table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_ATTACKED"/>
   <set name="activationChance" val="#chance"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5156"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -253,11 +226,9 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_ATTACKED"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5157"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -266,11 +237,9 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_ATTACKED"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5158"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -279,11 +248,9 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_ATTACKED"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5159"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -293,12 +260,10 @@
   <set name="power" val="40"/> <!-- Guess -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_ATTACKED"/>
   <set name="activationChance" val="#chance"/>
   <set name="isDebuff" val="true"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5160"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -307,11 +272,9 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_ATTACKED"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5161"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -320,11 +283,9 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_ATTACKED"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5162"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -333,11 +294,9 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_ATTACKED"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5163"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -346,11 +305,9 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_ATTACKED"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5164"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -359,11 +316,9 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_ATTACKED"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5165"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -372,11 +327,9 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_ATTACKED"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5166"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -385,11 +338,9 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_ATTACKED"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5167"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -398,11 +349,9 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_ATTACKED"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5168"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -411,11 +360,9 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_ATTACKED"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5169"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -424,11 +371,9 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_ATTACKED"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5170"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -437,11 +382,9 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_ATTACKED"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5171"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -450,11 +393,9 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_ATTACKED"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5172"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -463,11 +404,9 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_ATTACKED"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5173"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -476,11 +415,9 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_ATTACKED"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5174"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -489,11 +426,9 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_ATTACKED"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5175"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -502,11 +437,9 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_ATTACKED"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5176"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -515,11 +448,9 @@
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_CHANCE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_ATTACKED"/>
   <set name="activationChance" val="#chance"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="triggeredId" val="5177"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
@@ -528,8 +459,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="gainHp" val="#rate"/>
   </for>
@@ -539,8 +468,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="gainMp" val="#rate"/>
   </for>
@@ -550,8 +477,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="pAtk" val="#rate"/>
   </for>
@@ -561,8 +486,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="mAtk" val="#rate"/>
   </for>
@@ -572,8 +495,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="pvpPhysDmg" val="#rate"/>
   </for>
@@ -583,8 +504,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="pDef" val="#rate"/>
   </for>
@@ -594,8 +513,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="mDef" val="#rate"/>
   </for>
@@ -605,8 +522,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="giveHp" val="#rate"/>
   </for>
@@ -616,8 +531,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="rEvas" val="#rate"/>
   </for>
@@ -627,8 +540,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="accCombat" val="#rate"/>
   </for>
@@ -638,8 +549,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="rCrit" val="#rate"/>
   </for>
@@ -649,8 +558,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="mCritRate" val="#rate"/>
   </for>
@@ -660,8 +567,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="maxLoad" val="#rate"/>
   </for>
@@ -671,8 +576,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="breath" val="#breath"/>
   </for>
@@ -682,22 +585,18 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3254" levels="10" name="Item Skill: Iron Body">
   <!-- Lvl 1-10 - Passive: Raises resistance to damage from falling when equipped. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3255" levels="3" name="Item Skill: Skill Clarity">
   <table name="#Tab-Atk"> 0.95 0.92 0.9 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="PhysicalMpConsumeRate" val="#Tab-Atk"/>
   </for>
@@ -707,8 +606,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="MagicalMpConsumeRate" val="#Tab-Atk"/>
   </for>
@@ -718,8 +615,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="DanceMpConsumeRate" val="#Tab-Atk"/>
   </for>
@@ -729,8 +624,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <mul order="0x30" stat="MagicalMpConsumeRate" val="#Tab-Atk"/>
     <mul order="0x30" stat="PhysicalMpConsumeRate" val="#Tab-Atk"/>
@@ -741,8 +634,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="reflectDam" val="#reflectDam"/>
   </for>
@@ -794,7 +685,6 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="3000"/>
 </skill>
 <skill id="3264" levels="1" name="Blessed Escape">
@@ -802,19 +692,16 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="200"/>
 </skill>
 <skill id="3265" levels="1" name="Mysterious Ability">
   <!-- Done by lastsin -->
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
-    <effect count="1" name="BigHead" time="300" val="0" abnormal="bighead" stackOrder="300" stackType="big_head"/>
+    <effect name="BigHead" time="300" val="0" abnormal="bighead" stackOrder="300" stackType="big_head"/>
   </for>
 </skill>
 <skill id="3266" levels="1" name="Large Fireworks Ability">
@@ -822,7 +709,6 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3267" levels="1" name="Dismiss Agathion">
   <set name="target" val="TARGET_SELF"/>
@@ -831,8 +717,6 @@
   <set name="staticHitTime" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="npcId" val="0"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="3268" levels="1" name="Summon Agathion - Castle">
   <set name="target" val="TARGET_SELF"/>
@@ -841,8 +725,6 @@
   <set name="staticHitTime" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="npcId" val="16028"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="3269" levels="1" name="Summon Agathion - Rainbow Clan Hall">
   <set name="target" val="TARGET_SELF"/>
@@ -851,8 +733,6 @@
   <set name="staticHitTime" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="npcId" val="16027"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="3270" levels="1" name="Summon Agathion - Beast Farm">
   <set name="target" val="TARGET_SELF"/>
@@ -861,16 +741,12 @@
   <set name="staticHitTime" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="npcId" val="16026"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="3271" levels="1" name="Blue Talisman of Power">
   <!-- Done by Nekys/ Stats by Goz -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="hitTime" val="4000"/>
   <for>
     <add order="0x30" stat="pAtk" val="10"/> <!-- increase P. Atk. +10 -->
@@ -881,8 +757,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="hitTime" val="4000"/>
   <for>
     <add order="0x30" stat="pDef" val="18"/> <!-- increase P. Def. +18 -->
@@ -892,77 +766,68 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3274" levels="1" name="Blue Talisman of Protection">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3275" levels="1" name="Blue Talisman of Protection">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="4000"/>
+  <set name="reuseDelay" val="360000"/>
+  <set name="staticReuse" val="true"/>
 </skill>
 <skill id="3276" levels="1" name="Blue Talisman of Magic Defense">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3277" levels="1" name="Blue Talisman of Wild Magic">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3278" levels="1" name="Red Talisman of Mental Regeneration">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3279" levels="1" name="Red Talisman of Meditation">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3280" levels="1" name="Blue Talisman of Invisibility">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3281" levels="1" name="Red Talisman of Minimum Clarity">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3282" levels="1" name="Red Talisman of Maximum Clarity">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3283" levels="1" name="Blue Talisman of Healing">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3284" levels="1" name="Blue Talisman of Invincibility">
@@ -974,81 +839,68 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
-    <effect count="1" name="Invincible" time="10" val="0" stackOrder="1" stackType="Instant_Shield"/>
+    <effect name="Invincible" time="10" val="0" stackOrder="1" stackType="Instant_Shield"/>
   </for>
 </skill>
 <skill id="3285" levels="1" name="Blue Talisman of Defense">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3286" levels="1" name="Black Talisman - Mending">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="3000"/>
 </skill>
 <skill id="3287" levels="1" name="Black Talisman of Physical Freedom">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="3000"/>
 </skill>
 <skill id="3288" levels="1" name="Black Talisman of Arcane Freedom">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="3000"/>
 </skill>
 <skill id="3289" levels="1" name="Black Talisman - Escape">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="3000"/>
 </skill>
 <skill id="3290" levels="1" name="Black Talisman of Rescue">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="3000"/>
 </skill>
 <skill id="3291" levels="1" name="Black Talisman of Vocalization">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="3000"/>
 </skill>
 <skill id="3292" levels="1" name="Black Talisman of Free Speech">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="3000"/>
 </skill>
 <skill id="3293" levels="1" name="Yellow Talisman of Power">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3294" levels="1" name="Yellow Talisman of Arcane Power">
   <!-- Done by Nekys/ Stats by Goz -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x30" stat="mAtk" val="12"/> <!-- increase M. Atk. +12 -->
   </for>
@@ -1058,8 +910,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x30" stat="pDef" val="18"/> <!-- increase P. Def. +18 -->
   </for>
@@ -1068,21 +918,17 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3297" levels="1" name="Yellow Talisman of Accuracy">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="3298" levels="1" name="Yellow Talisman of Evasion">
   <!-- Done by Nekys/ Stats by Goz -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <add order="0x40" stat="rEvas" val="1"/> <!-- increase Evasion +1 -->
   </for>
@@ -1091,6 +937,5 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 </list>

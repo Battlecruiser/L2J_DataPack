@@ -4,10 +4,11 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="HOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="15000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
     <effect count="3" name="HealOverTime" time="5" val="2" stackOrder="2" stackType="HpRecover"/>
   </for>
@@ -16,10 +17,11 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="HOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="20000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
     <effect count="4" name="HealOverTime" time="5" val="1.5" stackOrder="1.5" stackType="HpRecover"/>
   </for>
@@ -29,7 +31,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="1500"/>
 </skill>
 <skill id="2004" levels="1" name="Large Squash Seed">
@@ -37,7 +38,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="1500"/>
 </skill>
 <skill id="2005" levels="1" name="Nectar">
@@ -45,47 +45,39 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2006" levels="1" name="Scroll: Enchant Weapon (Grade A)">
   <set name="target" val="TARGET_ITEM"/>
   <set name="skillType" val="ENCHANT_WEAPON"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2007" levels="1" name="Scroll: Enchant Armor (Grade A)">
   <set name="target" val="TARGET_ITEM"/>
   <set name="skillType" val="ENCHANT_ARMOR"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2008" levels="1" name="Item - Beast Spirit Shot">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SPIRITSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2009" levels="1" name="Item - Beast Blessed Spirit Shot">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SPIRITSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2010" levels="1" name="Endeavor Potion">
   <!-- Done by DJ MELERIX -->
   <set name="buffDuration" val="300000"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
-    <effect count="1" name="Buff" time="300" val="0" stackOrder="4" stackType="hit_up">
+    <effect name="Buff" time="300" val="0" stackOrder="4" stackType="hit_up">
       <add order="0x40" stat="accCombat" val="4"/>
     </effect>
   </for>
@@ -95,12 +87,13 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="1200000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
-    <effect name="Buff" time="1200" count="1" val="0" stackOrder="20" stackType="speed_up">
+    <effect name="Buff" time="1200" val="0" stackOrder="20" stackType="speed_up">
       <add order="0x40" stat="runSpd" val="20"/>
     </effect>
   </for>
@@ -110,12 +103,13 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="1200000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
-    <effect name="Buff" time="1200" count="1" val="0" stackOrder="1.15" stackType="attack_time_down">
+    <effect name="Buff" time="1200" val="0" stackOrder="1.15" stackType="attack_time_down">
       <mul order="0x30" stat="pAtkSpd" val="1.15"/>
     </effect>
   </for>
@@ -125,8 +119,6 @@
   <set name="hitTime" val="20000"/>
   <set name="skillType" val="RECALL"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2014" levels="1" name="Scroll Of Resurrection">
   <set name="target" val="TARGET_CORPSE_PLAYER"/>
@@ -140,130 +132,99 @@
   <set name="target" val="TARGET_ITEM"/>
   <set name="skillType" val="ENCHANT_WEAPON"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2016" levels="1" name="Scroll: Enchant Armor (Grade B)">
   <set name="target" val="TARGET_ITEM"/>
   <set name="skillType" val="ENCHANT_ARMOR"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2017" levels="1" name="Scroll: Enchant Weapon (Grade C)">
   <set name="target" val="TARGET_ITEM"/>
   <set name="skillType" val="ENCHANT_WEAPON"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2018" levels="1" name="Scroll: Enchant Armor (Grade C)">
   <set name="target" val="TARGET_ITEM"/>
   <set name="skillType" val="ENCHANT_ARMOR"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2019" levels="1" name="Scroll: Enchant Weapon (Grade D)">
   <set name="target" val="TARGET_ITEM"/>
   <set name="skillType" val="ENCHANT_WEAPON"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2020" levels="1" name="Scroll: Enchant Armor (Grade D)">
   <set name="target" val="TARGET_ITEM"/>
   <set name="skillType" val="ENCHANT_ARMOR"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2021" levels="1" name="Scroll: Enchant Weapon (Grade S)">
   <set name="target" val="TARGET_ITEM"/>
   <set name="skillType" val="ENCHANT_WEAPON"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2022" levels="1" name="Scroll: Enchant Armor (Grade S)">
   <set name="target" val="TARGET_ITEM"/>
   <set name="skillType" val="ENCHANT_ARMOR"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2023" levels="1" name="Fairy Firecracker">
   <set name="target" val="TARGET_SELF"/>
   <!-- HOT ??? this a temp hack to make it work? -->
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2024" levels="1" name="Firecracker">
   <set name="target" val="TARGET_SELF"/>
   <!-- HOT ??? this a temp hack to make it work? -->
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2025" levels="1" name="Large Firecracker">
   <set name="target" val="TARGET_SELF"/>
   <!-- HOT ??? this a temp hack to make it work? -->
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2026" levels="1" name="Scroll: Enchant Weapon (Grade S)">
   <!-- Blessed Enchant -->
   <set name="target" val="TARGET_ITEM"/>
   <set name="skillType" val="ENCHANT_WEAPON"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2027" levels="1" name="Scroll: Enchant Weapon (Grade A)">
   <!-- Blessed Enchant -->
   <set name="target" val="TARGET_ITEM"/>
   <set name="skillType" val="ENCHANT_WEAPON"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2028" levels="1" name="Scroll: Enchant Weapon (Grade B)">
   <!-- Blessed Enchant -->
   <set name="target" val="TARGET_ITEM"/>
   <set name="skillType" val="ENCHANT_WEAPON"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2029" levels="1" name="Scroll: Enchant Weapon (Grade C)">
   <!-- Blessed Enchant -->
   <set name="target" val="TARGET_ITEM"/>
   <set name="skillType" val="ENCHANT_WEAPON"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2030" levels="1" name="Scroll: Enchant Weapon (Grade D)">
   <!-- Blessed Enchant -->
   <set name="target" val="TARGET_ITEM"/>
   <set name="skillType" val="ENCHANT_WEAPON"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2031" levels="1" name="Lesser Healing Potion">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="HOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="15000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
     <!-- retail value: 8HP/sec; stat update every 2 sec -->
     <!-- Verified by slyce -  Interlude - 8th Aug 2007 -->
@@ -274,10 +235,11 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="HOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="15000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
     <!-- retail value: 24HP/sec; stat update every 2 sec -->
     <!-- Verified by slyce -  Interlude - 8th Aug 2007 -->
@@ -288,20 +250,19 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SOULSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2034" levels="1" name="Greater Haste Potion">
   <!-- Done by dc -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="1200000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
-    <effect name="Buff" time="1200" count="1" val="0" stackOrder="33" stackType="speed_up">
+    <effect name="Buff" time="1200" val="0" stackOrder="33" stackType="speed_up">
       <add order="0x40" stat="runSpd" val="33"/>
     </effect>
   </for>
@@ -311,12 +272,13 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="1200000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
-    <effect name="Buff" time="1200" count="1" val="0" stackOrder="1.33" stackType="attack_time_down">
+    <effect name="Buff" time="1200" val="0" stackOrder="1.33" stackType="attack_time_down">
       <mul order="0x30" stat="pAtkSpd" val="1.33"/>
     </effect>
   </for>
@@ -327,17 +289,16 @@
   <set name="hitTime" val="200"/>
   <set name="skillType" val="RECALL"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2037" levels="1" name="Greater Healing Potion">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="HOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="15000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
     <!-- retail value: 50HP/sec; stat update every 2 sec -->
     <!-- Verified by slyce -  Interlude - 8th Aug 2007 -->
@@ -349,32 +310,27 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="HEAL"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="isPotion" val="true"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2039" levels="1" name="Soulshot: No Grade">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SOULSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2040" levels="1" name="Scroll of Escape: Clan Hall">
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="20000"/>
   <set name="skillType" val="RECALL"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2041" levels="1" name="Scroll of Escape: Castle">
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="20000"/>
   <set name="skillType" val="RECALL"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2042" levels="1" name="Antidote">
   <set name="target" val="TARGET_SELF"/>
@@ -382,8 +338,9 @@
   <set name="negateStats" val="POISON"/>
   <set name="negateLvl" val="3"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2043" levels="1" name="Greater Antidote">
   <set name="target" val="TARGET_SELF"/>
@@ -391,8 +348,9 @@
   <set name="negateStats" val="POISON"/>
   <set name="negateLvl" val="7"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2044" levels="1" name="Bandage">
   <set name="target" val="TARGET_SELF"/>
@@ -400,8 +358,9 @@
   <set name="negateStats" val="BLEED"/>
   <set name="negateLvl" val="3"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2045" levels="1" name="Emergency Dressing">
   <set name="target" val="TARGET_SELF"/>
@@ -409,8 +368,9 @@
   <set name="negateStats" val="BLEED"/>
   <set name="negateLvl" val="7"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2046" levels="1" name="Wolf's Necklace">
   <set name="target" val="TARGET_SELF"/>
@@ -419,23 +379,17 @@
   <set name="skillType" val="COREDONE"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2047" levels="1" name="Spiritshot: No Grade">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SPIRITSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2048" levels="1" name="Wolves' Food">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="FEED_PET"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="feed" val="100"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2049" levels="1" name="Blessed Scroll of Resurrection">
   <set name="power" val="100"/>
@@ -451,10 +405,11 @@
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
-    <effect count="1" name="Buff" time="3600" val="0" stackOrder="5" stackType="hit_up">
+    <effect name="Buff" time="3600" val="0" stackOrder="5" stackType="hit_up">
       <add order="0x40" stat="accCombat" val="4"/>
     </effect>
   </for>
@@ -465,10 +420,11 @@
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
-    <effect count="1" name="Buff" time="3600" val="0" stackOrder="1.5" stackType="critical_dmg_up">
+    <effect name="Buff" time="3600" val="0" stackOrder="1.5" stackType="critical_dmg_up">
       <mul order="0x30" stat="cAtk" val="1.35"/>
     </effect>
   </for>
@@ -479,10 +435,11 @@
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
-    <effect name="Buff" time="3600" count="1" val="0" stackOrder="1.3" stackType="critical_prob_up">
+    <effect name="Buff" time="3600" val="0" stackOrder="1.3" stackType="critical_prob_up">
       <basemul order="0x30" stat="rCrit" val="0.3"/>
     </effect>
   </for>
@@ -493,10 +450,11 @@
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
-    <effect name="Buff" time="3600" count="1" val="0" stackOrder="1.3" stackType="casting_time_down">
+    <effect name="Buff" time="3600" val="0" stackOrder="1.3" stackType="casting_time_down">
       <mul order="0x30" stat="mAtkSpd" val="1.3"/>
     </effect>
   </for>
@@ -507,10 +465,8 @@
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
-    <effect name="Buff" time="3600" count="1" val="0" stackOrder="1.33" stackType="attack_time_down">
+    <effect name="Buff" time="3600" val="0" stackOrder="1.33" stackType="attack_time_down">
       <mul order="0x30" stat="pAtkSpd" val="1.33"/>
     </effect>
   </for>
@@ -521,10 +477,11 @@
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
-    <effect name="Buff" time="3600" count="1" val="0" stackOrder="8" stackType="rEvas">
+    <effect name="Buff" time="3600" val="0" stackOrder="8" stackType="rEvas">
       <add order="0x40" stat="rEvas" val="4"/>
     </effect>
   </for>
@@ -535,10 +492,11 @@
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
-    <effect name="Buff" time="3600" count="1" val="0" stackOrder="1.75" stackType="ma_up">
+    <effect name="Buff" time="3600" val="0" stackOrder="1.75" stackType="ma_up">
       <mul order="0x30" stat="mAtk" val="1.75"/>
     </effect>
   </for>
@@ -549,10 +507,11 @@
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
-    <effect name="Buff" time="3600" count="1" val="0" stackOrder="1.15" stackType="pa_up">
+    <effect name="Buff" time="3600" val="0" stackOrder="1.15" stackType="pa_up">
       <mul order="0x30" stat="pAtk" val="1.15"/>
     </effect>
   </for>
@@ -563,10 +522,11 @@
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
-    <effect name="Buff" time="3600" count="1" val="0" stackOrder="33" stackType="speed_up">
+    <effect name="Buff" time="3600" val="0" stackOrder="33" stackType="speed_up">
       <add order="0x40" stat="runSpd" val="33"/>
     </effect>
   </for>
@@ -577,10 +537,11 @@
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
-    <effect name="Buff" time="3600" count="1" val="0" stackOrder="1.15" stackType="pd_up">
+    <effect name="Buff" time="3600" val="0" stackOrder="1.15" stackType="pd_up">
       <mul order="0x30" stat="pDef" val="1.15"/>
     </effect>
   </for>
@@ -591,15 +552,14 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NEGATE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2061" levels="1" name="Blessed Spiritshot: No Grade">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="SPIRITSHOT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2062" levels="1" name="Blessed Scroll of Resurrection">
   <set name="power" val="100"/>
@@ -615,8 +575,6 @@
   <set name="skillType" val="FEED_PET"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="feed" val="150"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2064" levels="1" name="Scroll of Mana Regeneration">
   <!-- Done by dc -->
@@ -624,10 +582,11 @@
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
-    <effect name="Buff" time="3600" count="1" val="0">
+    <effect name="Buff" time="3600" val="0">
       <add order="0x40" stat="regMp" val="1.82"/>
     </effect>
   </for>
@@ -643,49 +602,41 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2067" levels="1" name="Item - Theme Sound Crystal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2068" levels="1" name="Item - Race Sound Crystal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2069" levels="1" name="Item - Race Sound Crystal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2070" levels="1" name="Item - Race Sound Crystal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2071" levels="1" name="Item - Race Sound Crystal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2072" levels="1" name="Item - Race Sound Crystal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2073" levels="1" name="Item - Theme Sound Crystal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2074" levels="1" name="Potion of Critical Escape">
   <set name="castRange" val="600"/>
@@ -696,6 +647,9 @@
   <set name="power" val="100"/>
   <set name="skillType" val="CONFUSION"/> <!-- Only for Temp Fix: Needs Core Support for Randomize Aggro/Target Effect -->
   <set name="target" val="TARGET_ONE"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
     <effect count="2" name="Confusion" time="4" val="0"> <!-- Only for Temp Fix: Needs Core Support for Randomize Aggro/Target Effect -->
       <mul stat="pAtkSpd" order="0x30" val="0.7"/>
@@ -712,17 +666,21 @@
   <set name="power" val="70"/>
   <set name="skillType" val="AGGREDUCE_CHAR"/>
   <set name="target" val="TARGET_ONE"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2076" levels="1" name="Bless of Eva">
   <!-- Done by DJ MELERIX -->
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
-    <effect count="1" name="Buff" time="400" val="0" stackOrder="5" stackType="max_breath_up">
+    <effect name="Buff" time="400" val="0" stackOrder="5" stackType="max_breath_up">
       <mul order="0x30" stat="breath" val="5"/>
     </effect>
   </for>
@@ -731,7 +689,9 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2078" levels="1" name="Compressed Package of Soulshots: No Grade">
   <set name="itemConsumeId" val="5134"/>
@@ -739,7 +699,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -753,7 +712,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -767,7 +725,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -781,7 +738,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -795,7 +751,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -809,7 +764,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -823,7 +777,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -837,7 +790,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -851,7 +803,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -865,7 +816,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -879,7 +829,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -893,7 +842,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -907,7 +855,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -921,7 +868,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -935,7 +881,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -949,7 +894,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -963,7 +907,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -977,7 +920,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -1023,7 +965,5 @@
   <set name="hitTime" val="300000"/>
   <set name="skillType" val="RECALL"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 </list>

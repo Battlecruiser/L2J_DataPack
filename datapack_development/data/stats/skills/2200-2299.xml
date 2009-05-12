@@ -7,7 +7,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -22,7 +21,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -37,7 +35,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -52,7 +49,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -67,7 +63,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -82,7 +77,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -97,7 +91,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -112,7 +105,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -124,39 +116,32 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2209" levels="1" name="Item - Blessed Scroll of Enchant Armor">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2210" levels="1" name="Item - Blessed Scroll of Enchant Armor">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2211" levels="1" name="Item - Blessed Scroll of Enchant Armor">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2212" levels="1" name="Item - Blessed Scroll of Enchant Armor">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2213" levels="21" name="Escape - to X Town">
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="20000"/>
   <set name="skillType" val="RECALL"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2214" levels="6" name="Scroll of Escape to Talking Island">
   <!-- skill levels are 1-5 & 10 ... names correspond with 2213 levels -->
@@ -164,20 +149,16 @@
   <set name="hitTime" val="20000"/>
   <set name="skillType" val="RECALL"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2215" levels="4" name="Item - Quest Special Box">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2216" levels="4" name="Item - Quest Special Fish">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2217" levels="5" name="Item - Quest Treasure Box">
   <table name="#itemConsumeId"> 7629 7630 7631 7632 7633 </table>
@@ -186,7 +167,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -201,7 +181,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -216,7 +195,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -231,7 +209,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -246,7 +223,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -261,7 +237,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -276,7 +251,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -291,7 +265,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -306,7 +279,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -321,7 +293,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -336,7 +307,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -351,7 +321,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -375,14 +344,10 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2231" levels="1" name="Amulet: Protection of Valakas">
   <!-- Done by DJ MELERIX -->
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <set name="hitTime" val="1000"/>
-  <set name="isMagic" val="true"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="itemConsumeId" val="6652"/>
   <set name="magicLvl" val="75"/>
@@ -390,90 +355,118 @@
   <set name="reuseDelay" val="1000"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
-    <effect name="Buff" time="1200" count="1" val="0" stackOrder="1" stackType="valakas_item">
-      <!-- <mul order="0x30" stat="valakasVuln" val="0.89"/> REQUIRE CORE SUPPORT -->
+    <effect name="Buff" time="1200" val="0" stackOrder="1" stackType="valakas_item">
+      <add order="0x40" stat="valakasRes" val="11"/>
     </effect>
   </for>
 </skill>
 <skill id="2232" levels="1" name="Amulet: Slay Valakas">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- Done by DJ MELERIX -->
   <set name="hitTime" val="1000"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="itemConsumeId" val="6653"/>
+  <set name="magicLvl" val="75"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="reuseDelay" val="1000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
+  <for>
+    <effect name="Buff" time="1200" val="0" stackOrder="1" stackType="valakas_item">
+      <add order="0x40" stat="valakas" val="11"/>
+    </effect>
+  </for>
 </skill>
 <skill id="2233" levels="1" name="Amulet: Flames of Valakas">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <!-- Done by DJ MELERIX -->
   <set name="hitTime" val="1000"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="itemConsumeId" val="6654"/>
+  <set name="magicLvl" val="75"/>
+  <set name="negateId" val="4683,4684"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="skillType" val="NEGATE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2234" levels="1" name="Soul Breaking Arrow">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="2000"/>
 </skill>
 <skill id="2235" levels="1" name="Anteroom Door Key">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="500"/>
 </skill>
 <skill id="2236" levels="1" name="Chapel Door Key">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="500"/>
 </skill>
 <skill id="2237" levels="1" name="Altar Door Key">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="500"/>
 </skill>
 <skill id="2238" levels="1" name="Room of Splendor Key">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="500"/>
 </skill>
 <skill id="2239" levels="1" name="Petrifaction Scroll">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2240" levels="1" name="Hot Spring Nectar">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2241" levels="1" name="Hot Spring Mineral Water">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2242" levels="1" name="Hot Spring Fountain Water">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2243" levels="1" name="Hot Spring Sulfur">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2244" levels="1" name="Herb of Life">
   <!-- Orignally done by ettore85a -->
@@ -482,8 +475,10 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="HEAL_PERCENT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2245" levels="1" name="Herb of Mana">
   <!-- Orignally done by ettore85a -->
@@ -492,8 +487,10 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="MANAHEAL_PERCENT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2246" levels="1" name="Herb of Power">
   <!-- Orignally done by ettore85a -->
@@ -501,9 +498,11 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="300000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
     <effect name="Buff" time="300" val="0" stackOrder="1.14" stackType="pa_up">
       <mul order="0x30" stat="pAtk" val="1.15"/>
@@ -516,9 +515,11 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="300000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
     <effect name="Buff" time="300" val="0" stackOrder="1.74" stackType="ma_up">
       <mul order="0x30" stat="mAtk" val="1.75"/>
@@ -529,85 +530,109 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="1000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2249" levels="1" name="Bless of Water">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="1000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2250" levels="1" name="Bless of Wind">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="1000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2251" levels="1" name="Bless of Earth">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="1000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2252" levels="1" name="Bless of Darkness">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="1000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2253" levels="1" name="Bless of Sacredness">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="1000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2254" levels="3" name="Crystal of Fire">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="1000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2255" levels="3" name="Crystal of Water">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="1000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2256" levels="3" name="Crystal of Wind">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="1000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2257" levels="3" name="Crystal of Earth">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="1000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2258" levels="3" name="Crystal of Darkness">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="1000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2259" levels="3" name="Crystal of Sacredness">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="1000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2260" levels="1" name="Key of Riddles">
   <set name="target" val="TARGET_SELF"/>
@@ -617,8 +642,6 @@
   <set name="itemConsumeCount" val="1"/>
   <set name="create_item_id" val="8059"/>
   <set name="create_item_count" val="1"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
 </skill>
 <skill id="2261" levels="9" name="Item - Hard Green Fish">
   <table name="#itemConsumeId"> 8403 8404 8405 8406 8407 8408 8409 8410 8411 </table>
@@ -627,7 +650,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -642,7 +664,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -657,7 +678,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -672,7 +692,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -687,7 +706,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -702,7 +720,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -717,7 +734,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -732,7 +748,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -747,7 +762,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -762,7 +776,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="EXTRACTABLE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <cond msgId="129">
     <and>
        <player invSize="10"/>
@@ -774,19 +787,16 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2272" levels="1" name="Item - Fight Song Crystal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2273" levels="1" name="Item - Red Devil Support Box">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2274" levels="9" name="Fisherman's Potion">
   <table name="#power"> 2 5 8 11 14 17 20 23 26 </table>
@@ -794,11 +804,13 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="3600000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
-    <effect name="Buff" time="3600" count="1" val="0" stackOrder="20" stackType="fishPot"/>
+    <effect name="Buff" time="3600" val="0" stackOrder="20" stackType="fishPot"/>
   </for>
 </skill>
 <skill id="2275" levels="1" name="Fishing Potion">
@@ -806,21 +818,21 @@
   <set name="skillType" val="NEGATE"/>
   <set name="isPotion" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="negateId" val="2274"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2276" levels="1" name="Dewdrop of Destruction">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="2000"/>
 </skill>
 <skill id="2277" levels="6" name="Event Gift Box">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2278" levels="3" name="Herb of Life">
   <table name="#power"> 15 25 100 </table>
@@ -829,8 +841,10 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="HEAL_PERCENT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2279" levels="3" name="Herb of Mana">
   <table name="#power"> 12 18 100 </table>
@@ -839,17 +853,21 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="MANAHEAL_PERCENT"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2280" levels="1" name="Herb of Power">
   <set name="hitTime" val="100"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="300000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
     <effect name="Buff" time="300" val="0" stackOrder="1.14" stackType="pa_up">
       <mul order="0x30" stat="pAtk" val="1.15"/>
@@ -861,9 +879,11 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="300000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
     <effect name="Buff" time="300" val="0" stackOrder="1.74" stackType="ma_up">
       <mul order="0x30" stat="mAtk" val="1.75"/>
@@ -875,11 +895,13 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="300000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
-    <effect count="1" name="Buff" time="300" val="0" stackOrder="1.32" stackType="attack_time_down">
+    <effect name="Buff" time="300" val="0" stackOrder="1.32" stackType="attack_time_down">
       <mul order="0x30" stat="pAtkSpd" val="1.33"/>
     </effect>
   </for>
@@ -889,11 +911,13 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="300000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
-    <effect count="1" name="Buff" time="300" val="0" stackOrder="1.29" stackType="casting_time_down">
+    <effect name="Buff" time="300" val="0" stackOrder="1.29" stackType="casting_time_down">
       <mul order="0x30" stat="mAtkSpd" val="1.3"/>
     </effect>
   </for>
@@ -903,11 +927,13 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="300000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
-    <effect count="1" name="Buff" time="300" val="0" stackOrder="1.29" stackType="critical_prob_up">
+    <effect name="Buff" time="300" val="0" stackOrder="1.29" stackType="critical_prob_up">
       <basemul order="0x30" stat="rCrit" val="0.3"/>
     </effect>
   </for>
@@ -917,11 +943,13 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="300000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
   <for>
-    <effect count="1" name="Buff" time="300" val="0" stackOrder="32" stackType="speed_up">
+    <effect name="Buff" time="300" val="0" stackOrder="32" stackType="speed_up">
       <add order="0x40" stat="runSpd" val="33"/>
     </effect>
   </for>
@@ -930,8 +958,10 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
+  <set name="hitTime" val="500"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2287" levels="6" name="Elixir of Life">
   <table name="#power"> 800 1000 1200 1600 2000 2300 </table>
@@ -941,9 +971,11 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="reuseDelay" val="300000"/>
   <set name="staticReuse" val="true"/>
-  <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="300000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2288" levels="6" name="Elixir of Mental Strength">
   <table name="#power"> 75 125 175 250 350 420 </table>
@@ -953,9 +985,11 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="reuseDelay" val="300000"/>
   <set name="staticReuse" val="true"/>
-  <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="300000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2289" levels="6" name="Elixir of CP">
   <table name="#power"> 250 400 600 800 1000 1200 </table>
@@ -965,77 +999,96 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="reuseDelay" val="300000"/>
   <set name="staticReuse" val="true"/>
-  <set name="castRange" val="-1"/>
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="300000"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2290" levels="1" name="Halloween Box">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
 </skill>
 <skill id="2291" levels="1" name="Facelifting Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="500"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2292" levels="1" name="Facelifting Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="500"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2293" levels="1" name="Facelifting Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="500"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2294" levels="1" name="Dye Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="500"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2295" levels="1" name="Dye Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="500"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2296" levels="1" name="Dye Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="500"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2297" levels="1" name="Dye Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="500"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2298" levels="1" name="Hair Style Change Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="500"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="2299" levels="1" name="Hair Style Change Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
   <set name="hitTime" val="500"/>
+  <cond msgId="113">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 </list>
