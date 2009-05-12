@@ -11,7 +11,7 @@ CREATE TABLE `weapon` (
   `crystal_type` varchar(4) NOT NULL default '0',
   `p_dam` decimal(5,0) NOT NULL default '0',
   `rnd_dam` decimal(2,0) NOT NULL default '0',
-  `weaponType` varchar(8) NOT NULL default '',
+  `weaponType` varchar(10) NOT NULL default '',
   `critical` decimal(2,0) NOT NULL default '0',
   `hit_modify` decimal(6,5) NOT NULL default '0',
   `avoid_modify` decimal(2,0) NOT NULL default '0',
