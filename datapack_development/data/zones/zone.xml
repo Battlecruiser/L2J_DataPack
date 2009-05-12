@@ -205,6 +205,13 @@
 		<stat name="spawnY" val="-56898" /> 
 		<stat name="spawnZ" val="-2032" /> 
 	</zone>
+	<zone id="11040" type="Town" shape="Cuboid" minZ="1080" maxZ="3210">
+		<stat name="name" val="Keucereus" /> 
+		<stat name="townId" val="33" /> 
+		<stat name="spawnX" val="-184284" /> 
+		<stat name="spawnY" val="242723" /> 
+		<stat name="spawnZ" val="1577" /> 
+	</zone>
 
 <!-- Mother trees -->
 	<zone id='11050' type='MotherTree' shape='Cuboid' minZ='-3500' maxZ='-3400'>
@@ -947,6 +954,18 @@
 	<zone id='13012' type='PeaceZone' shape='Cuboid' minZ='-6900' maxZ='-5500' /> <!-- Dimensional Rift -->
 	<zone id='13013' type='PeaceZone' shape='NPoly' minZ='-5000' maxZ='-4500' /> <!-- Oracle of Dawn -->
 	<zone id='13014' type='PeaceZone' shape='NPoly' minZ='-5300' maxZ='-4800' /> <!-- Oracle of Dusk -->
+
+<!-- Landing Zones -->
+	<zone id='14000' type='LandingZone' shape='NPoly' minZ='2668' maxZ='2750' />
+	<zone id='14001' type='LandingZone' shape='NPoly' minZ='2612' maxZ='2700' />
+	<zone id='14002' type='LandingZone' shape='NPoly' minZ='2548' maxZ='2650' />
+	<zone id='14003' type='LandingZone' shape='NPoly' minZ='2612' maxZ='2700' />
+	<zone id='14004' type='LandingZone' shape='NPoly' minZ='2818' maxZ='2900' />
+	<zone id='14005' type='LandingZone' shape='NPoly' minZ='1532' maxZ='1671' />
+	<zone id='14006' type='LandingZone' shape='NPoly' minZ='1676' maxZ='1771' />
+	<zone id='14007' type='LandingZone' shape='NPoly' minZ='1564' maxZ='1771' />
+	<zone id='14008' type='LandingZone' shape='NPoly' minZ='1532' maxZ='1671' />
+	<zone id='14009' type='LandingZone' shape='NPoly' minZ='1735' maxZ='1892' />
 
 <!-- Fishing zones -->
 	<zone id='11400' type='FishingZone' shape='NPoly' minZ='-3991' maxZ='-3759'/>
