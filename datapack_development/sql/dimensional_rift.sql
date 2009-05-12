@@ -1,6 +1,3 @@
--- ----------------------------
--- Table structure for dimensional_rift
--- ----------------------------
 DROP TABLE IF EXISTS `dimensional_rift`;
 CREATE TABLE `dimensional_rift` (
   `type` tinyint(1) NOT NULL,
@@ -18,13 +15,9 @@ CREATE TABLE `dimensional_rift` (
   PRIMARY KEY (`type`,`room_id`)
 );
 
--- ----------------------------
--- Records for table dimensional_rift
--- ----------------------------
-
 INSERT INTO `dimensional_rift` VALUES
 (0, 0, -115440, -114160, -182160, -178048, -6816, -6240, -114790, -180576, -6752, 0),	-- peace zone (waiting room)
-(0, 1, -120576, -109024, -187328, -172880, -6816, -6240, 0, 0, 0, 0),				-- dimensional rift zone
+(0, 1, -120576, -109024, -187328, -172880, -6816, -6240, 0,       0,       0,     0),	-- dimensional rift zone
 
 -- Recruit Area
 (1, 1, -112368, -111584, -182832, -182064, -6816, -6240, -111976, -182448, -6752, 0),	-- room 1 (small / 8 mobs)

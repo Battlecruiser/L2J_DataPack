@@ -1,6 +1,3 @@
-#----------------------------
-# Table structure for pets_stats
-#----------------------------
 DROP TABLE IF EXISTS `pets_stats`;
 CREATE TABLE `pets_stats` (
   `type` varchar(25) NOT NULL default '',
@@ -29,11 +26,7 @@ CREATE TABLE `pets_stats` (
   PRIMARY KEY (`typeID`,`level`)
 );
 
-#----------------------------
-# Records for table pets_stats
-#----------------------------
-
-INSERT INTO `pets_stats` (`type`, `typeID`, `level`, `expMax`, `hpMax`, `mpMax`, `patk`, `pdef`, `matk`, `mdef`, `acc`, `evasion`, `crit`, `speed`, `atk_speed`, `cast_speed`, `feedMax`, `feedbattle`, `feednormal`, `loadMax`, `hpregen`, `mpregen`, `owner_exp_taken`) VALUES
+INSERT INTO `pets_stats` (`type`,`typeID`,`level`,`expMax`,`hpMax`,`mpMax`,`patk`,`pdef`,`matk`,`mdef`,`acc`,`evasion`,`crit`,`speed`,`atk_speed`,`cast_speed`,`feedMax`,`feedbattle`,`feednormal`,`loadMax`,`hpregen`,`mpregen`,`owner_exp_taken`) VALUES
   ('wolf',12077,1,0,31,25,2,11,1,8,38,33,40,137,278,333,248,2,2,54510,2,1,0.1),
   ('wolf',12077,2,636,37,30,2,11,1,8,39,34,40,137,278,333,244,2,2,54510,2,1,0.1),
   ('wolf',12077,3,798,45,34,2,11,1,8,40,35,40,137,278,333,320,2,2,54510,2,1,0.1),
@@ -740,7 +733,7 @@ INSERT INTO `pets_stats` (`type`, `typeID`, `level`, `expMax`, `hpMax`, `mpMax`,
   ('wyvern',12621,85,605734658,2049,1073,190,121,187,945,118,113,40,220,278,333,6748,56,11,54510,10,4,0.1),
   ('wyvern',12621,86,656701989,2049,1073,190,121,187,945,118,113,40,220,278,333,6748,56,11,54510,10,4,0.1);
   
-  INSERT INTO `pets_stats` (`type`, `typeID`, `level`, `expMax`, `hpMax`, `mpMax`, `patk`, `pdef`, `matk`, `mdef`, `acc`, `evasion`, `crit`, `speed`, `atk_speed`, `cast_speed`, `feedMax`, `feedbattle`, `feednormal`, `loadMax`, `hpregen`, `mpregen`, `owner_exp_taken`) VALUES 
+INSERT INTO `pets_stats` (`type`,`typeID`,`level`,`expMax`,`hpMax`,`mpMax`,`patk`,`pdef`,`matk`,`mdef`,`acc`,`evasion`,`crit`,`speed`,`atk_speed`,`cast_speed`,`feedMax`,`feedbattle`,`feednormal`,`loadMax`,`hpregen`,`mpregen`,`owner_exp_taken`) VALUES
   ('baby_buffalo',12780,1,1,21,17,1,1,1,9,38,33,40,132,282,333,12,1,1,54510,6,3,0.3),
   ('baby_buffalo',12780,2,125001,25,20,1,1,1,9,39,34,40,132,282,333,8,1,1,54510,6,3,0.3),
   ('baby_buffalo',12780,3,250001,30,23,1,1,1,9,40,35,40,132,282,333,12,1,1,54510,6,3,0.3),
@@ -1000,7 +993,7 @@ INSERT INTO `pets_stats` (`type`, `typeID`, `level`, `expMax`, `hpMax`, `mpMax`,
   ('baby_cougar',12782,85,10500001,1605,778,66,64,104,146,122,117,40,132,282,333,642,2,1,54510,29,10,0.1),
   ('baby_cougar',12782,86,10625001,1625,792,68,65,107,148,123,118,40,132,282,333,655,2,1,54510,29,10,0.1);
   
-  INSERT INTO pets_stats(type,typeID,level,expMax,hpMax,mpMax,patk,pdef,matk,mdef,acc,evasion,crit,speed,atk_speed,cast_speed,feedMax,feedbattle,feednormal,loadMax,hpregen,mpregen,owner_exp_taken) VALUES 
+INSERT INTO `pets_stats` (`type`,`typeID`,`level`,`expMax`,`hpMax`,`mpMax`,`patk`,`pdef`,`matk`,`mdef`,`acc`,`evasion`,`crit`,`speed`,`atk_speed`,`cast_speed`,`feedMax`,`feedbattle`,`feednormal`,`loadMax`,`hpregen`,`mpregen`,`owner_exp_taken`) VALUES
 ('sin_eater',12564,1,55101,31,26,1,11,1,8,38,33,40,137,282,333,124,2,2,54510,2,1,1.0),
 ('sin_eater',12564,2,112582,38,30,1,11,1,8,39,34,40,137,282,333,122,2,2,54510,2,1,1.0),
 ('sin_eater',12564,3,172475,45,35,1,11,1,8,40,35,40,137,282,333,160,2,2,54510,2,1,1.0),
@@ -1088,7 +1081,7 @@ INSERT INTO `pets_stats` (`type`, `typeID`, `level`, `expMax`, `hpMax`, `mpMax`,
 ('sin_eater',12564,85,50431678,2430,1157,66,100,104,66,122,117,40,137,282,333,5190,86,16,54510,9,4,1.0),
 ('sin_eater',12564,86,51900307,2461,1176,68,101,107,67,123,118,40,137,282,333,5281,87,16,54510,9,4,1.0);
 
-INSERT INTO pets_stats(type,typeID,level,expMax,hpMax,mpMax,patk,pdef,matk,mdef,acc,evasion,crit,speed,atk_speed,cast_speed,feedMax,feedbattle,feednormal,loadMax,hpregen,mpregen,owner_exp_taken) VALUES 
+INSERT INTO `pets_stats` (`type`,`typeID`,`level`,`expMax`,`hpMax`,`mpMax`,`patk`,`pdef`,`matk`,`mdef`,`acc`,`evasion`,`crit`,`speed`,`atk_speed`,`cast_speed`,`feedMax`,`feedbattle`,`feednormal`,`loadMax`,`hpregen`,`mpregen`,`owner_exp_taken`) VALUES
 ('great_wolf',16025,55,26502939,1321,569,101,64,66,40,92,87,40,187,278,333,4532,37,7,54510,2,1,0.1),
 ('great_wolf',16025,56,33396358,3596,529,351,165,228,309,93,88,44,187,278,333,12253,101,20,54510,2,1,0.1),
 ('great_wolf',16025,57,40719633,1448,626,114,68,74,44,98,92,40,187,278,333,4949,42,8,54510,2,1,0.1),
@@ -1284,7 +1277,7 @@ INSERT INTO pets_stats(type,typeID,level,expMax,hpMax,mpMax,patk,pdef,matk,mdef,
 ('improved_baby_cougar',16036,85,15522704,2722,1491,212,141,339,271,148,143,40,137,278,333,1261,2,1,54510,2,1,0.1),
 ('improved_baby_cougar',16036,86,15724499,2752,1521,219,146,350,277,149,144,40,137,278,333,1293,2,1,54510,2,1,0.1);
 
-INSERT INTO pets_stats(type,typeID,level,expMax,hpMax,mpMax,patk,pdef,matk,mdef,acc,evasion,crit,speed,atk_speed,cast_speed,feedMax,feedbattle,feednormal,loadMax,hpregen,mpregen,owner_exp_taken) VALUES 
+INSERT INTO `pets_stats` (`type`,`typeID`,`level`,`expMax`,`hpMax`,`mpMax`,`patk`,`pdef`,`matk`,`mdef`,`acc`,`evasion`,`crit`,`speed`,`atk_speed`,`cast_speed`,`feedMax`,`feedbattle`,`feednormal`,`loadMax`,`hpregen`,`mpregen`,`owner_exp_taken`) VALUES
 ('red_strider_of_wind',16038,1,0,31,51,2,44,0,32,38,33,40,187,278,333,696,5,2,54510,2,1,0.1),
 ('red_strider_of_wind',16038,2,7,37,60,2,46,0,33,39,34,40,187,278,333,676,5,2,54510,2,1,0.1),
 ('red_strider_of_wind',16038,3,42,45,69,2,47,0,35,40,35,40,187,278,333,892,7,2,54510,2,1,0.1),

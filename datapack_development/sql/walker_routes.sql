@@ -1,6 +1,3 @@
--- ---------------------------------
--- Table structure for walker_routes
--- ---------------------------------
 DROP TABLE IF EXISTS `walker_routes`;
 CREATE TABLE `walker_routes` (
   `route_id` int(11) NOT NULL default '0',
@@ -12,14 +9,10 @@ CREATE TABLE `walker_routes` (
   `move_z` int(9) NOT NULL default '0',
   `delay`  int(9) NOT NULL default '0',
   `running`  tinyint(1) NOT NULL default '0',
-   PRIMARY KEY (`route_id`,`npc_id`,`move_point`)
-) DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`route_id`,`npc_id`,`move_point`)
+);
 
---
--- Dumping data for table `walker_routes`
---
-
-INSERT INTO `walker_routes` VALUES 
+INSERT INTO `walker_routes` VALUES
 (1,31361,1,NULL,22418,10249,-3648,61,1),
 (1,31361,2,NULL,23423,11165,-3720,0,1),
 (1,31361,3,NULL,20182,11101,-3720,0,1),

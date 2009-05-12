@@ -1,6 +1,3 @@
--- ---------------------------
--- Table structure for clanhall
--- ---------------------------
 CREATE TABLE IF NOT EXISTS `clanhall` (
   `id` int(11) NOT NULL default '0',
   `name` varchar(40) NOT NULL default '',
@@ -14,9 +11,6 @@ CREATE TABLE IF NOT EXISTS `clanhall` (
   PRIMARY KEY `id` (`id`)
 );
 
--- ----------------------------
--- Records 
--- ----------------------------
 INSERT IGNORE INTO `clanhall` VALUES ('21','Fortress of Resistance','0','0','Ol Mahum Fortress of Resistance','Dion','0','0','0');
 INSERT IGNORE INTO `clanhall` VALUES ('22','Moonstone Hall','0','500000','Clan hall located in the Town of Gludio','Gludio','0','2','0');
 INSERT IGNORE INTO `clanhall` VALUES ('23','Onyx Hall','0','500000','Clan hall located in the Town of Gludio','Gludio','0','2','0');

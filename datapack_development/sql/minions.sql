@@ -1,7 +1,3 @@
---
--- Table structure for table `minions`
---
-
 DROP TABLE IF EXISTS `minions`;
 CREATE TABLE `minions` (
   `boss_id` int(11) NOT NULL default '0',
@@ -10,10 +6,6 @@ CREATE TABLE `minions` (
   `amount_max` int(4) NOT NULL default '0',
   PRIMARY KEY (`boss_id`,`minion_id`)
 );
-
---
--- Dumping data for table `minions`
---
 
 INSERT INTO `minions` VALUES
 (20117,20118,1,3),
@@ -430,6 +422,9 @@ INSERT INTO `minions` VALUES
 (25509,25511,3,3),
 (25514,25515,4,6),
 (25514,25516,2,3),
+(25623,25633,4,6),
+(25625,25629,3,3),
+(25625,25630,3,3),
 (27108,27109,1,1),
 (29096,29097,2,2),
 (29096,29098,3,4),
@@ -437,7 +432,6 @@ INSERT INTO `minions` VALUES
 (25524,25526,2,2),
 (29056,29057,2,2),
 (29056,29058,2,2);
-
 
 -- Primeval Isle temp mob groups.
 INSERT INTO `minions` VALUES

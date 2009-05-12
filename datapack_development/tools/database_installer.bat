@@ -533,6 +533,7 @@ char_templates.sql
 character_friends.sql
 character_hennas.sql
 character_macroses.sql
+character_quest_global_data.sql
 character_quests.sql
 character_raid_points.sql
 character_recipebook.sql
@@ -541,12 +542,14 @@ character_shortcuts.sql
 character_skills.sql
 character_skills_save.sql
 character_subclasses.sql
+character_tpbookmark.sql
 characters.sql
 clan_data.sql
 clan_privs.sql
 clan_skills.sql
 clan_subpledges.sql
 clan_wars.sql
+clan_notices.sql
 clanhall_functions.sql
 class_list.sql
 cursed_weapons.sql
@@ -598,9 +601,11 @@ random_spawn_loc.sql
 seven_signs.sql
 siege_clans.sql
 skill_learn.sql
+skill_residential.sql
 skill_spellbooks.sql
 skill_trees.sql
 spawnlist.sql
+special_skill_trees.sql
 teleport.sql
 topic.sql
 transform_skill_trees.sql;

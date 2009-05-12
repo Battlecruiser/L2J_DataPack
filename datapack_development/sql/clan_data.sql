@@ -1,6 +1,3 @@
--- ---------------------------
--- Table structure for clan_data
--- ---------------------------
 CREATE TABLE IF NOT EXISTS `clan_data` (
   `clan_id` INT NOT NULL default 0,
   `clan_name` varchar(45) ,

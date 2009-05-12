@@ -1,16 +1,9 @@
---
--- Table structure for table `merchants`
---
 DROP TABLE IF EXISTS `merchants`;
 CREATE TABLE `merchants` (
   `npc_id` int(11) NOT NULL default '0',
   `merchant_area_id` tinyint(4) default NULL,
   PRIMARY KEY (`npc_id`)
 );
-
---
--- Dumping data for table `merchants`
---
 
 INSERT INTO `merchants` VALUES (1030001,1);
 INSERT INTO `merchants` VALUES (1030002,1);

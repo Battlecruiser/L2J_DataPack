@@ -1,17 +1,14 @@
---
--- For further information on the usage of this table, please refer to the 
+-- For further information on the usage of this table, please refer to the
 -- documentation comments in the access_levels.sql file
--- 
--- -----------------------------------------------
--- Table structure for admin_command_access_rights
--- -----------------------------------------------
+
 CREATE TABLE IF NOT EXISTS `admin_command_access_rights` (
   `adminCommand` varchar(255) NOT NULL default 'admin_',
   `accessLevels` varchar(255) NOT NULL,
   PRIMARY KEY (`adminCommand`)
 );
 
-INSERT IGNORE INTO `admin_command_access_rights` VALUES 
+INSERT IGNORE INTO `admin_command_access_rights` VALUES
+
 -- ADMIN
 ('admin_admin','1'),
 ('admin_admin1','1'),
@@ -118,6 +115,7 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_setcolor','1'),
 ('admin_setclass','1'),
 ('admin_fullfood','1'),
+('admin_remove_clan_penalty','1'),
 
 -- EDIT NPC
 ('admin_edit_npc','1'),

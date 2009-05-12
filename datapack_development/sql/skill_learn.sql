@@ -1,6 +1,3 @@
---
--- Table structure for table `skill_learn`
---
 DROP TABLE IF EXISTS `skill_learn`;
 CREATE TABLE `skill_learn` (
   `npc_id` int(11) NOT NULL default '0',
@@ -8,11 +5,7 @@ CREATE TABLE `skill_learn` (
   PRIMARY KEY (`npc_id`,`class_id`)
 );
 
---
--- Dumping data for table `skill_learn`
---
-
-INSERT INTO skill_learn VALUES 
+INSERT INTO `skill_learn` VALUES
 (30010,0),
 (30010,1),
 (30010,2),
@@ -1251,7 +1244,7 @@ INSERT INTO skill_learn VALUES
 (31316,57),
 (31316,117),
 (31316,118);
-INSERT INTO skill_learn VALUES 
+INSERT INTO `skill_learn` VALUES
 (31956,53),
 (31956,54),
 (31956,55),
@@ -1583,8 +1576,8 @@ INSERT INTO skill_learn VALUES
 (32232,135),
 (32232,136);
 
-INSERT INTO `skill_learn` (`npc_id`, `class_id`) VALUES 
-(32156, 0),                                             
+INSERT INTO `skill_learn` VALUES
+(32156, 0),
 (32156, 1),                                             
 (32156, 2),                                             
 (32156, 3),                                             

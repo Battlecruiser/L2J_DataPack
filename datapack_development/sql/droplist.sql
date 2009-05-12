@@ -18,10 +18,6 @@
 -- for drops (i.e. its chance is successful), then exactly 1 item from that category will be selected, with 
 -- such a chance that the overall probability is maintained unchanged. 
 
-
---
--- Table structure for table `droplist`
---
 DROP TABLE IF EXISTS `droplist`;
 CREATE TABLE `droplist` (
   `mobId` INT NOT NULL DEFAULT '0',
@@ -34,16 +30,13 @@ CREATE TABLE `droplist` (
   KEY `key_mobId` (`mobId`)
 );
 
--- 
--- Dumping data for table `droplist`
--- 
 -- Category Explanation (non-RaidBoss & non-GrandBoss)
 --   -1 is sweep
 --    0 is adena and one of the seal stones (your choice)
 --    1 is any item that is in weapon.sql, any item in armor.sql, and some of the items from etcitem. Before dropping the column, I had those marked in etcitem.sql. However, you can recognize them easily. If they are parts unique for crafting equipable items, it's category 1.
 --    2 is almost all of the other items except:
 --    3 and 4 are used for the other two seal stones (1 category each).
--- 
+ 
 INSERT INTO `droplist` VALUES 
 (18001,1806,1,1,-1,10868), -- Recipe: Soulshot: B-Grade
 (18001,57,765,1528,0,700000), -- Adena
@@ -14480,24 +14473,6 @@ INSERT INTO `droplist` VALUES
 (21276,8730,1,1,200,1295), -- Life Stone: level 67
 (21276,8740,1,1,200,349), -- Mid-Grade Life Stone: level 67
 (21276,8750,1,1,200,100), -- High-Grade Life Stone: level 67
-(21277,4087,1,1,-1,23362), -- Stockings of Doom Pattern
-(21277,4088,1,1,-1,37626), -- Blue Wolf Helmet Design
-(21277,6333,1,1,-1,11430), -- Recipe: Sealed Phoenix Ring(70%)
-(21277,57,400,818,0,700000), -- Adena (this mob has no spawn in Gracia!)
-(21277,12341,1,1,1,11), -- Common Item - Earring of Black Ore
-(21277,12343,1,1,1,16), -- Common Item - Ring of Black Ore
-(21277,12342,1,1,1,8), -- Common Item - Necklace of Black Ore
-(21277,4052,1,1,1,1735), -- Earring of Black Ore Piece
-(21277,4053,1,1,1,2101), -- Ring of Black Ore Gemstone
-(21277,4054,1,1,1,966), -- Necklace of Black Ore Beads
-(21277,1343,10,30,2,60017), -- Silver Arrow
-(21277,1864,1,1,2,84023), -- Stem
-(21277,1869,1,1,2,42012), -- Iron Ore
-(21277,1878,1,1,2,16805), -- Braided Hemp
-(21277,1884,1,1,2,25854), -- Cord
-(21277,4039,1,1,2,1401), -- Mold Glue
-(21277,5456,1,1,2,16), -- Recipe: Tallum Glaive(60%)
-(21277,8730,1,1,200,200), -- Life Stone: level 67
 (21278,729,1,1,-1,163), -- Scroll: Enchant Weapon (Grade A)
 (21278,4040,1,1,-1,29260), -- Mold Lubricant
 (21278,5478,1,1,-1,12302), -- Sealed Dark Crystal Leather Armor Pattern
@@ -14554,23 +14529,6 @@ INSERT INTO `droplist` VALUES
 (21280,8730,1,1,200,1000), -- Life Stone: level 67
 (21280,8740,1,1,200,250), -- Mid-Grade Life Stone: level 67
 (21280,8750,1,1,200,36), -- High-Grade Life Stone: level 67
-(21281,729,1,1,-1,114), -- Scroll: Enchant Weapon (Grade A)
-(21281,4040,1,1,-1,20573), -- Mold Lubricant
-(21281,5478,1,1,-1,8650), -- Sealed Dark Crystal Leather Armor Pattern
-(21281,57,415,844,0,700000), -- Adena (this mob has no spawn on Gracia!)
-(21281,11957,1,1,1,1), -- Common Item - Tallum Blade
-(21281,11952,1,1,1,1), -- Common Item - Elemental Sword
-(21281,11954,1,1,1,2), -- Common Item - Infernal Master
-(21281,8331,1,1,1,109), -- Infernal Master Blade
-(21281,5547,1,1,1,259), -- Elemental Sword Edge
-(21281,5548,1,1,1,259), -- Tallum Blade Edge
-(21281,1865,1,1,2,50643), -- Varnish
-(21281,1870,1,1,2,50643), -- Coal
-(21281,1875,1,1,2,3377), -- Stone of Purity
-(21281,1879,1,1,2,8441), -- Cokes
-(21281,4040,1,1,2,1013), -- Mold Lubricant
-(21281,6339,1,1,2,390), -- Recipe: Sealed Majestic Ring(70%)
-(21281,8730,1,1,200,23), -- Life Stone: level 67
 (21282,729,1,1,-1,171), -- Scroll: Enchant Weapon (Grade A)
 (21282,4040,1,1,-1,30805), -- Mold Lubricant
 (21282,5536,1,1,-1,5240), -- Bloody Orchid Head
@@ -14631,23 +14589,6 @@ INSERT INTO `droplist` VALUES
 (21284,8730,1,1,200,922), -- Life Stone: level 67
 (21284,8740,1,1,200,289), -- Mid-Grade Life Stone: level 67
 (21284,8750,1,1,200,14), -- High-Grade Life Stone: level 67
-(21285,729,1,1,-1,120), -- Scroll: Enchant Weapon (Grade A)
-(21285,4040,1,1,-1,21660), -- Mold Lubricant
-(21285,5536,1,1,-1,3685), -- Bloody Orchid Head
-(21285,57,437,888,0,700000), -- Adena (this mob has no spawn on Gracia!)
-(21285,11957,1,1,1,1), -- Common Item - Tallum Blade
-(21285,11952,1,1,1,1), -- Common Item - Elemental Sword
-(21285,11954,1,1,1,2), -- Common Item - Infernal Master
-(21285,8331,1,1,1,78), -- Infernal Master Blade
-(21285,5547,1,1,1,273), -- Elemental Sword Edge
-(21285,5548,1,1,1,273), -- Tallum Blade Edge
-(21285,730,1,1,2,45), -- Scroll: Enchant Armor (Grade A)
-(21285,1865,1,1,2,53317), -- Varnish
-(21285,1870,1,1,2,53317), -- Coal
-(21285,1875,1,1,2,3555), -- Stone of Purity
-(21285,1879,1,1,2,8887), -- Cokes
-(21285,4040,1,1,2,1067), -- Mold Lubricant
-(21285,8730,1,1,200,64), -- Life Stone: level 67
 (21286,1889,1,1,-1,103976), -- Compound Braid
 (21286,5549,1,1,-1,155963), -- Metallic Thread
 (21286,6343,1,1,-1,33347), -- Sealed Phoenix Necklace Beads
@@ -14714,26 +14655,6 @@ INSERT INTO `droplist` VALUES
 (21288,8740,1,1,200,240), -- Mid-Grade Life Stone: level 67
 (21288,8750,1,1,200,9), -- High-Grade Life Stone: level 67
 (21288,8760,1,1,200,18), -- Top-Grade Life Stone: level 67
-(21289,1889,1,1,-1,73108), -- Compound Braid
-(21289,5549,1,1,-1,109662), -- Metallic Thread
-(21289,6343,1,1,-1,23447), -- Sealed Phoenix Necklace Beads
-(21289,57,442,900,0,700000), -- Adena (this mob has no spawn on Gracia!)
-(21289,12221,1,1,1,609), -- Common Item - Sealed Dark Crystal Gloves
-(21289,12224,1,1,1,591), -- Common Item - Sealed Dark Crystal Boots
-(21289,12229,1,1,1,711), -- Common Item - Sealed Tallum Gloves
-(21289,12231,1,1,1,369), -- Common Item - Sealed Tallum Boots
-(21289,5496,1,1,1,950), -- Sealed Dark Crystal Boots Lining
-(21289,5497,1,1,1,950), -- Sealed Tallum Boots Lining
-(21289,5508,1,1,1,950), -- Sealed Dark Crystal Gloves Design
-(21289,5509,1,1,1,950), -- Sealed Tallum Gloves Design
-(21289,1868,1,1,2,107975), -- Thread
-(21289,1873,1,1,2,21595), -- Silver Nugget
-(21289,1889,1,1,2,3600), -- Compound Braid
-(21289,4044,1,1,2,1800), -- Thons
-(21289,5440,1,1,2,21), -- Recipe: Elysian(60%)
-(21289,5549,1,1,2,5399), -- Metallic Thread
-(21289,8730,1,1,200,147), -- Life Stone: level 67
-(21289,8740,1,1,200,25), -- Mid-Grade Life Stone: level 67
 (21290,730,1,1,-1,1367), -- Scroll: Enchant Armor (Grade A)
 (21290,1875,1,1,-1,109369), -- Stone of Purity
 (21290,4041,1,1,-1,14266), -- Mold Hardener
@@ -14792,24 +14713,6 @@ INSERT INTO `droplist` VALUES
 (21292,8740,1,1,200,485), -- Mid-Grade Life Stone: level 67
 (21292,8750,1,1,200,77), -- High-Grade Life Stone: level 67
 (21292,8760,1,1,200,26), -- Top-Grade Life Stone: level 67
-(21293,730,1,1,-1,961), -- Scroll: Enchant Armor (Grade A)
-(21293,1875,1,1,-1,76900), -- Stone of Purity
-(21293,4041,1,1,-1,10030), -- Mold Hardener
-(21293,57,465,947,0,700000), -- Adena (this mob has no spawn on Gracia!)
-(21293,11957,1,1,1,1), -- Common Item - Tallum Blade
-(21293,11952,1,1,1,1), -- Common Item - Elemental Sword
-(21293,11954,1,1,1,2), -- Common Item - Infernal Master
-(21293,8331,1,1,1,143), -- Infernal Master Blade
-(21293,5547,1,1,1,290), -- Elemental Sword Edge
-(21293,5548,1,1,1,290), -- Tallum Blade Edge
-(21293,1808,1,1,2,26), -- Recipe: Soulshot: S Grade
-(21293,1867,1,1,2,75718), -- Animal Skin
-(21293,1872,1,1,2,75718), -- Animal Bone
-(21293,1875,1,1,2,3786), -- Stone of Purity
-(21293,1881,1,1,2,7572), -- Coarse Bone Powder
-(21293,4041,1,1,2,494), -- Mold Hardener
-(21293,8730,1,1,200,90), -- Life Stone: level 67
-(21293,8750,1,1,200,75), -- High-Grade Life Stone: level 67
 (21294,5442,1,1,-1,1736), -- Recipe: Soul Bow(60%)
 (21294,5486,1,1,-1,27729), -- Sealed Dark Crystal Robe Fabric
 (21294,5489,1,1,-1,61851), -- Sealed Tallum Stockings Fabric
@@ -23122,9 +23025,8 @@ INSERT INTO `droplist` VALUES
 (21823,8752,1,1,200,603), -- High-Grade Life Stone: level 76
 (21823,4044,1,1,2,38462); -- Thons
 
--- 
+
 -- work in progress C5 mob drops - 22xxx mobs
--- 
 INSERT INTO `droplist` VALUES 
 (22001,57,163,306,0,700000), -- Adena
 (22001,1872,1,1,2,50000), -- Animal Bone
@@ -26737,13 +26639,11 @@ INSERT INTO `droplist` VALUES
 (22359,1895,1,5,-1,700000), -- Metallic Fiber
 (22359,6701,1,1,-1,55000); -- Sealed Imperial Crusader Breastplate Part
 
---
 -- Category Explanation (RaidBoss & their minions)
 --   0 is full armor and armor mats
 --   1 is full weapon and weapon mats
 --   2 is anything else (scrolls, arrows, etc)
--- 
-INSERT INTO `droplist` VALUES 
+INSERT INTO `droplist` VALUES
 (25001,348,1,1,0,166231), -- Scale Mail
 (25001,377,1,1,0,265410), -- Scale Gaiters
 (25001,1935,53,157,0,58816), -- Scale Mail Fragment
@@ -29358,13 +29258,10 @@ INSERT INTO `droplist` VALUES
 INSERT INTO `droplist` VALUES 
 (18342,57,7,13,0,1000000); -- Adena
 
--- 
 -- Category Explanation (GrandBoss)
---   0+ is defined catagories
--- 
+-- 0+ is defined catagories
 -- Any other mobs within this range (minions, etc) use the default drop categories (most often 2)
--- 
-INSERT INTO `droplist` VALUES 
+INSERT INTO `droplist` VALUES
 (29001,70,1,1,0,60000), -- Claymore
 (29001,159,1,1,0,55000), -- Bonebreaker
 (29001,188,1,1,0,55000), -- Ghost Staff
@@ -29546,22 +29443,22 @@ INSERT INTO `droplist` VALUES
 (29019,57,9000000,13000000,30,1000000), -- Adena
 (29019,6656,1,1,31,1000000), -- Earring of Antharas
 (29019,10578,1,1,32,58823), -- Forgotten Scroll - Mutual Response
-(29019,10562,1,1,32,58824), -- Forgotten Scroll - Wind Riding
-(29019,10566,1,1,32,58823), -- Forgotten Scroll - Ghost Piercing
-(29019,10568,1,1,32,58824), -- Forgotten Scroll - Weapon Blockade
-(29019,10569,1,1,32,58823), -- Forgotten Scroll - Force of Destruction
+(29019,14176,1,1,32,58824), -- Forgotten Scroll - Wind Riding
+(29019,14180,1,1,32,58823), -- Forgotten Scroll - Ghost Piercing
+(29019,14203,1,1,32,58824), -- Forgotten Scroll - Weapon Blockade
+(29019,14182,1,1,32,58823), -- Forgotten Scroll - Force of Destruction
 (29019,10560,1,1,32,58824), -- Forgotten Scroll - Expose Weak Point
-(29019,10573,1,1,32,58823), -- Forgotten Scroll - Frost Armor
-(29019,10575,1,1,32,58824), -- Forgotten Scroll - Vampiric Mist
+(29019,14188,1,1,32,58823), -- Forgotten Scroll - Frost Armor
+(29019,14190,1,1,32,58824), -- Forgotten Scroll - Vampiric Mist
 (29019,10559,1,1,32,58823), -- Forgotten Scroll - Sixth Sense
-(29019,10595,1,1,32,58824), -- Forgotten Scroll - Lighting Shock
-(29019,10592,1,1,32,58823), -- Forgotten Scroll - Eva\'s Will
+(29019,14186,1,1,32,58824), -- Forgotten Scroll - Lighting Shock
+(29019,14173,1,1,32,58823), -- Forgotten Scroll - Eva\'s Will
 (29019,10554,1,1,32,58824), -- Forgotten Scroll - Anti-Magic Armor
-(29019,10565,1,1,32,58823), -- Forgotten Scroll - Arrow Rain
-(29019,10564,1,1,32,58824), -- Forgotten Scroll - Flame Hawk
-(29019,10570,1,1,32,58823), -- Forgotten Scroll - Demolition Impact
-(29019,10586,1,1,32,58824), -- Forgotten Scroll - Blessing of Eva
-(29019,10556,1,1,32,58823), -- Forgotten Scroll - Hell Scream
+(29019,14179,1,1,32,58823), -- Forgotten Scroll - Arrow Rain
+(29019,14178,1,1,32,58824), -- Forgotten Scroll - Flame Hawk
+(29019,14183,1,1,32,58823), -- Forgotten Scroll - Demolition Impact
+(29019,14194,1,1,32,58824), -- Forgotten Scroll - Blessing of Eva
+(29019,14171,1,1,32,58823), -- Forgotten Scroll - Hell Scream
 (29019,8751,2,4,200,500000), -- High-Grade Life Stone: level 70
 (29019,8761,1,1,200,52632), -- Top-Grade Life Stone: level 70
 (29019,8752,2,4,200,333333), -- High-Grade Life Stone: level 76
@@ -29589,8 +29486,6 @@ INSERT INTO `droplist` VALUES
 (29020,10549,1,1,3,200000), -- Forgotten Scroll - Protection of Rune
 (29020,10550,1,1,3,200000), -- Forgotten Scroll - Protection of Elemental
 (29020,10551,1,1,3,200000), -- Forgotten Scroll - Protection of Alignment
-(29020,10552,1,1,3,200000), -- Forgotten Scroll - Fighter\'s Will
-(29020,10553,1,1,3,200000), -- Forgotten Scroll - Archer\'s Will
 (29020,8751,1,2,200,400000), -- High-Grade Life Stone: level 70
 (29020,8761,1,1,200,48387), -- Top-Grade Life Stone: level 70
 (29020,8752,1,2,200,355000), -- High-Grade Life Stone: level 76
@@ -29746,11 +29641,11 @@ INSERT INTO `droplist` VALUES
 (29028,57,14000000,18000000,32,1000000), -- Adena
 (29028,57,2000000,6000000,33,1000000), -- Adena
 (29028,6657,1,1,34,1000000), -- Necklace of Valakas
-(29028,10562,1,1,35,200000), -- Forgotten Scroll - Wind Riding
-(29028,10585,1,1,35,200000), -- Forgotten Scroll - Sublime Self Sacrifice
-(29028,10591,1,1,35,200000), -- Forgotten Scroll - Sripit of Phoenix
-(29028,10593,1,1,35,200000), -- Forgotten Scroll - Pain of Shilen
-(29028,10567,1,1,35,200000), -- Forgotten Scroll - Dread Pool
+(29028,14176,1,1,35,200000), -- Forgotten Scroll - Wind Riding
+(29028,14193,1,1,35,200000), -- Forgotten Scroll - Sublime Self Sacrifice
+(29028,14172,1,1,35,200000), -- Forgotten Scroll - Sripit of Phoenix
+(29028,14174,1,1,35,200000), -- Forgotten Scroll - Pain of Shilen
+(29028,14181,1,1,35,200000), -- Forgotten Scroll - Dread Pool
 (29047,57,3016667,3620000,0,1000000), -- Adena
 (29047,57,3016667,3620000,19,1000000), -- Adena
 (29047,57,3016667,3620000,20,1000000), -- Adena
@@ -29825,7 +29720,7 @@ INSERT INTO `droplist` VALUES
 (29047,212,1,1,4,62500), -- Dasparion's Staff
 (29047,5301,1,1,9,62500), -- Sealed Tallum Leather Armor
 (29047,213,1,1,5,62500), -- Branch of the Mother Tree
-(29047,10587,1,1,3,62500), -- Forgotten Scroll - Lord Vampire
+(29047,14195,1,1,3,62500), -- Forgotten Scroll - Lord Vampire
 (29047,5318,1,1,15,43478), -- Sealed Majestic Gauntlets
 (29047,5316,1,1,15,43478), -- Sealed Majestic Plate Armor
 (29047,270,1,1,5,43478), -- Dragon Grinder
@@ -29838,24 +29733,24 @@ INSERT INTO `droplist` VALUES
 (29047,81,1,1,5,43478), -- Dragon Slayer
 (29047,6580,1,1,6,43478), -- Tallum Blade*Dark Legion's Edge
 (29047,10578,1,1,3,43478), -- Forgotten Scroll - Mutual Response
-(29047,10562,1,1,3,43478), -- Forgotten Scroll - Wind Riding
-(29047,10566,1,1,3,43478), -- Forgotten Scroll - Ghost Piercing
-(29047,10585,1,1,3,43478), -- Forgotten Scroll - Sublime Self Sacrifice
+(29047,14176,1,1,3,43478), -- Forgotten Scroll - Wind Riding
+(29047,14180,1,1,3,43478), -- Forgotten Scroll - Ghost Piercing
+(29047,14193,1,1,3,43478), -- Forgotten Scroll - Sublime Self Sacrifice
 (29047,6678,1,1,8,21276), -- Sealed Imperial Crusader Shield
 (29047,6366,1,1,6,21276), -- Imperial staff
 (29047,305,1,1,5,21276), -- Tallum Glaive
 (29047,6371,1,1,6,21276), -- Demon Splinter
-(29047,10563,1,1,3,21276), -- Forgotten Scroll - Ghost Walking
+(29047,14177,1,1,3,21276), -- Forgotten Scroll - Ghost Walking
 (29047,10560,1,1,3,21276), -- Forgotten Scroll - Expose Weak Point
-(29047,10561,1,1,3,21276), -- Forgotten Scroll - Exciting Adventure
-(29047,10575,1,1,3,21276), -- Forgotten Scroll - Vampiric Mist
-(29047,10572,1,1,3,21276), -- Forgotten Scroll - Flame Armor
-(29047,10595,1,1,3,21276), -- Forgotten Scroll - Lighting Shock
-(29047,10594,1,1,3,21276), -- Forgotten Scroll - Wild Shot
-(29047,10591,1,1,3,21276), -- Forgotten Scroll - Sripit of Phoenix
-(29047,10565,1,1,3,21276), -- Forgotten Scroll - Arrow Rain
-(29047,10589,1,1,3,21276), -- Forgotten Scroll - Seal of Limit
-(29047,10593,1,1,3,21276), -- Forgotten Scroll - Pain of Shilen
+(29047,14175,1,1,3,21276), -- Forgotten Scroll - Exciting Adventure
+(29047,14190,1,1,3,21276), -- Forgotten Scroll - Vampiric Mist
+(29047,14187,1,1,3,21276), -- Forgotten Scroll - Flame Armor
+(29047,14186,1,1,3,21276), -- Forgotten Scroll - Lighting Shock
+(29047,14185,1,1,3,21276), -- Forgotten Scroll - Wild Shot
+(29047,14172,1,1,3,21276), -- Forgotten Scroll - Sripit of Phoenix
+(29047,14179,1,1,3,21276), -- Forgotten Scroll - Arrow Rain
+(29047,14197,1,1,3,21276), -- Forgotten Scroll - Seal of Limit
+(29047,14174,1,1,3,21276), -- Forgotten Scroll - Pain of Shilen
 (29047,6579,1,1,6,21276), -- Arcana Mace
 (29047,236,1,1,5,21276), -- Soul Separator
 (29047,6367,1,1,6,21276), -- Angel Slayer
@@ -29886,7 +29781,6 @@ INSERT INTO `droplist` VALUES
 (29095,10298,1,1,5,50000), -- Transform Sealbook - Gordon
 (29095,960,1,1,4,450000), -- Scroll: Enchant Armor (Grade S)
 (29104,10015,1,1,1,1000000); -- Prison Gate Key - unknown chance
-
 
 INSERT INTO `droplist` VALUES 
 -- RB drops for clan skill items (25% chance drop until chances are confirmed)

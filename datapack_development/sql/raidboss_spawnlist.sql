@@ -1,6 +1,3 @@
--- ---------------------------
--- Table structure for raidboss_spawnlist
--- ---------------------------
 DROP TABLE IF EXISTS `raidboss_spawnlist`;
 
 CREATE TABLE `raidboss_spawnlist` (
@@ -257,3 +254,5 @@ INSERT INTO `raidboss_spawnlist` VALUES
 -- (29141,1,0,0,0,0,43200,129600,0,9999,9999), -- Lost Captain (?) -- stats to be done
 -- (29144,1,0,0,0,0,43200,129600,0,9999,9999), -- Lost Captain (?) -- stats to be done
 -- (29147,1,0,0,0,0,43200,129600,0,9999,9999); -- Lost Captain (?) -- stats to be done
+-- (25623,1,-192361,254528,1598,0,43200,129600,0,99999,99999), -- Valdstone -- stats to be done
+-- (25625,1,-181989,208968,4424,0,43200,129600,0,99999,99999); -- Enira -- stats to be done

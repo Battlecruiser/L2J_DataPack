@@ -1,6 +1,3 @@
--- ---------------------------
--- Table structure for grandboss_data
--- ---------------------------
 CREATE TABLE IF NOT EXISTS `grandboss_data` (
   `boss_id` INTEGER NOT NULL DEFAULT 0,
   `loc_x` INTEGER NOT NULL DEFAULT 0,
@@ -27,8 +24,3 @@ INSERT IGNORE INTO `grandboss_data` VALUES
 -- (29047, 0, 0, 0, 0, 0, 2748900, 85, 0), -- Scarlet Van Halisha (85)
 -- (29099, 0, 0, 0, 0, 0, 2566624, 9999, 0), -- Baylor (83) -- stats to be done
 -- (29118, 0, 0, 0, 0, 0, 9999, 9999, 0), -- Beleth (?) -- stats to be done
--- (22215, 24767, -12441, -2532, 15314, 0, 340753, 2339, 0), -- Tyrannosaurus (80)
--- (22215, 28263, -17486, -2539, 50052, 0, 340753, 2339, 0), -- Tyrannosaurus (80)
--- (22215, 18229, -17975, -3219, 65140, 0, 340753, 2339, 0), -- Tyrannosaurus (80)
--- (22216, 19897, -9087, -2781, 2686, 0, 340753, 2339, 0), -- Tyrannosaurus (80)
--- (22217, 22827, -14698, -3080, 53946, 0, 340753, 2339, 0), -- Tyrannosaurus (80)

@@ -1,6 +1,3 @@
---
--- Table structure for table `merchant_areas_list`
---
 DROP TABLE IF EXISTS `merchant_areas_list`;
 CREATE TABLE `merchant_areas_list` (
   `merchant_area_id` int(10) unsigned NOT NULL default '0',
@@ -9,10 +6,6 @@ CREATE TABLE `merchant_areas_list` (
   `Chaotic` int(11) NOT NULL default '0',
   PRIMARY KEY (`merchant_area_id`)
 );
-
---
--- Dumping data for table `merchant_areas_list`
---
 
 INSERT INTO `merchant_areas_list` VALUES (1,'Starter Town',0.15,0);
 INSERT INTO `merchant_areas_list` VALUES (2,'West of Alter of Rights',0.50,1);

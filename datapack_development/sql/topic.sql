@@ -1,6 +1,3 @@
--- ---------------------------
--- Table structure for topic
--- ---------------------------
 CREATE TABLE IF NOT EXISTS `topic` (
   `topic_id` int(8) NOT NULL default '0',
   `topic_forum_id` int(8) NOT NULL default '0',

@@ -1,6 +1,3 @@
--- ---------------------------
--- Table structure for character_shortcuts
--- ---------------------------
 CREATE TABLE IF NOT EXISTS `character_shortcuts` (
   `charId` INT UNSIGNED NOT NULL default 0,
   `slot` decimal(3) NOT NULL default 0,

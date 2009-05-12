@@ -1,6 +1,3 @@
--- ----------------------------
--- Table structure for npc_buffer
--- ----------------------------
 CREATE TABLE IF NOT EXISTS `npc_buffer` (
   `npc_id` int(6) NOT NULL,
   `skill_id` int(6) NOT NULL,
@@ -11,9 +8,6 @@ CREATE TABLE IF NOT EXISTS `npc_buffer` (
   PRIMARY KEY (`npc_id`,`skill_id`,`buff_group`)
 );
 
--- ----------------------------
--- Records 
--- ----------------------------
 INSERT IGNORE INTO `npc_buffer` VALUES 
 (36402,1059,3,0,0,1059),
 (36402,1062,2,0,0,1062),

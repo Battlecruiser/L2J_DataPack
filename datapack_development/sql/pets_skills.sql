@@ -1,6 +1,3 @@
---
--- Table structure for table `pets_skills`
--- 
 DROP TABLE IF EXISTS `pets_skills`;
 CREATE TABLE `pets_skills` (
   `templateId` int(6) NOT NULL default '0',

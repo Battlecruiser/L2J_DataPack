@@ -1,6 +1,3 @@
--- ---------------------------
--- Table structure for `fort_functions`
--- ---------------------------
 CREATE TABLE IF NOT EXISTS `fort_functions` (
   `fort_id` int(2) NOT NULL default '0',
   `type` int(1) NOT NULL default '0',

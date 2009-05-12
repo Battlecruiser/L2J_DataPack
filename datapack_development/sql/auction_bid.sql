@@ -1,6 +1,3 @@
--- ---------------------------
--- Table structure for auction_bid
--- ---------------------------
 CREATE TABLE IF NOT EXISTS `auction_bid` (
   `id` INT NOT NULL default 0,
   `auctionId` INT NOT NULL default 0,

@@ -1,6 +1,3 @@
--- ---------------------------
--- Table structure for auction
--- ---------------------------
 CREATE TABLE IF NOT EXISTS `auction` (
   `id` int(11) NOT NULL default '0',
   `sellerId` int(11) NOT NULL default '0',
@@ -17,10 +14,6 @@ CREATE TABLE IF NOT EXISTS `auction` (
   PRIMARY KEY (`itemType`,`itemId`,`itemObjectId`),
   KEY `id` (`id`)
 );
-
---
--- Dumping data for table `auction`
--- 
 
 INSERT IGNORE INTO `auction` VALUES 
 (22, 0, 'NPC', 'NPC Clan', 'ClanHall', 22, 0, 'Moonstone Hall', 1, 20000000, 0, 1164841200000),

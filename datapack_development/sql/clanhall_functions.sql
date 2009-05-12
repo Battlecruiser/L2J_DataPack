@@ -1,6 +1,3 @@
--- ---------------------------
--- Table structure for `clanhall_functions`
--- ---------------------------
 CREATE TABLE IF NOT EXISTS `clanhall_functions` (
   `hall_id` int(2) NOT NULL default '0',
   `type` int(1) NOT NULL default '0',

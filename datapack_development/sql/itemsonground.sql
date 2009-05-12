@@ -1,6 +1,3 @@
--- ---------------------------
--- Table structure for `itemsonground`
--- ---------------------------
 CREATE TABLE IF NOT EXISTS `itemsonground` (
   `object_id` int(11) NOT NULL default '0',
   `item_id` int(11) default NULL,
