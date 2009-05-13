@@ -1,16 +1,10 @@
--- -------------------------------------
--- Table structure for skill_residential
--- -------------------------------------
 DROP TABLE IF EXISTS `skill_residential`;
 CREATE TABLE `skill_residential` (
   `entityId` int(11) NOT NULL,
   `skillId` int(11) NOT NULL DEFAULT '0',
   `skillLevel` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`entityId`,`skillId`)
-) DEFAULT CHARSET=utf8;
--- -----------------------------------
--- Records for table skill_residential
--- -----------------------------------
+);
 
 INSERT INTO `skill_residential` VALUES
 (1, 593, 1),

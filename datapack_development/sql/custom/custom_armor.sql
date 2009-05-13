@@ -1,6 +1,3 @@
--- --------------------------------
--- Table structure for custom_armor
--- --------------------------------
 CREATE TABLE IF NOT EXISTS `custom_armor` (
   `item_id` int(11) NOT NULL default '0',
   `name` varchar(70) default NULL,
@@ -24,4 +21,4 @@ CREATE TABLE IF NOT EXISTS `custom_armor` (
   `tradeable` varchar(5) NOT NULL default 'true',
   `skill` varchar(70) default '0-0;',
   PRIMARY KEY (`item_id`)
-) DEFAULT CHARSET=utf8;
+);

@@ -1,6 +1,3 @@
--- -------------------------------------------
--- Table structure for table `custom_droplist`
--- -------------------------------------------
 CREATE TABLE IF NOT EXISTS `custom_droplist` (
   `mobId` INT NOT NULL DEFAULT '0',
   `itemId` INT NOT NULL DEFAULT '0',

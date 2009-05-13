@@ -1,6 +1,3 @@
--- ---------------------------------
--- Table structure for custom_weapon
--- ---------------------------------
 CREATE TABLE IF NOT EXISTS `custom_weapon` (
   `item_id` decimal(11,0) NOT NULL default '0',
   `name` varchar(70) default NULL,
@@ -41,4 +38,4 @@ CREATE TABLE IF NOT EXISTS `custom_weapon` (
   `change_weaponId` decimal(11,0) NOT NULL default '0',
   `skill` varchar(70) default '0-0;',
   PRIMARY KEY (`item_id`)
-) DEFAULT CHARSET=utf8;
+);
