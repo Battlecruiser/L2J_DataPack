@@ -264,8 +264,8 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="927" levels="14" name="Burning Chop">
-  <table name="#power">167 210 261 319 384 419 455 492 531 570 610 651 691 731</table>
-  <table name="#dmg">43 43 43 53 53 53 61 61 61 61 61 66 66 66</table>
+  <table name="#power"> 167 210 261 319 384 419 455 492 531 570 610 651 691 731 </table>
+  <table name="#dmg"> 43 43 43 53 53 53 61 61 61 61 61 66 66 66 </table>
   <set name="power" val="#power"/>
   <set name="weaponsAllowed" val="16392"/> <!-- Blunt/Big Blunt -->
   <set name="mpConsume" val="19"/>
@@ -279,7 +279,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect name="ManaDamOverTime" time="10" val="2" abnormal="bleed"/> <!-- abnormal guessed -->
+    <effect count="10" name="DamOverTime" val="2" abnormal="flame" effectType="DOT" effectPower="40"/> <!-- Guess effectPower -->
   </for>
 </skill>
 <skill id="928" levels="1" name="Duel Blow">
