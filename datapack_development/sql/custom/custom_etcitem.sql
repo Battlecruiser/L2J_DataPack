@@ -1,7 +1,3 @@
--- ----------------------------------
--- Table structure for custom_etcitem
--- ----------------------------------
-
 CREATE TABLE IF NOT EXISTS `custom_etcitem` (
   `item_id` decimal(11,0) NOT NULL default '0',
   `name` varchar(100) default NULL,
@@ -22,4 +18,4 @@ CREATE TABLE IF NOT EXISTS `custom_etcitem` (
   `skill` varchar(70) default '0-0;',
   `html` varchar(5) default 'false',
   PRIMARY KEY (`item_id`)
-) DEFAULT CHARSET=utf8;
+);

@@ -1,6 +1,3 @@
--- --------------------------------------
--- Table structure for table `custom_npc`
--- --------------------------------------
 CREATE TABLE IF NOT EXISTS `custom_npc`(
   `id` decimal(11,0) NOT NULL default '0',
   `idTemplate` int(11) NOT NULL default '0',

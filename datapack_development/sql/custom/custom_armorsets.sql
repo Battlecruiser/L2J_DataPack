@@ -1,6 +1,3 @@
--- -------------------------------------------
--- Table structure for table `custom_armorsets`
--- -------------------------------------------
 CREATE TABLE IF NOT EXISTS `custom_armorsets` (
   `id` SMALLINT UNSIGNED NOT NULL auto_increment,
   `chest` SMALLINT UNSIGNED NOT NULL default '0',

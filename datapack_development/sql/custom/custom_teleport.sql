@@ -1,6 +1,3 @@
--- -------------------------------------------
--- Table structure for table `custom_teleport`
--- -------------------------------------------
 CREATE TABLE IF NOT EXISTS `custom_teleport` (
   `Description` varchar(75) default NULL,
   `id` decimal(11,0) NOT NULL default '0',
