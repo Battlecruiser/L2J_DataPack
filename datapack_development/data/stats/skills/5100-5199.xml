@@ -303,14 +303,15 @@
   </for>
 </skill>
 <skill id="5129" levels="1" name="Smokescreen">
-  <!-- Needs to be finished  -->
+  <!-- Done by Bloodshed -->
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="500"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <for>
     <effect name="Buff" time="8" val="0">
-    <!-- NOT DONE -->
+      <add order="0x40" stat="rEvas" val="15"/>
+      <mul order="0x30" stat="blowRate" val="1.05"/> <!-- Guess -->
     </effect>
   </for>
 </skill>
