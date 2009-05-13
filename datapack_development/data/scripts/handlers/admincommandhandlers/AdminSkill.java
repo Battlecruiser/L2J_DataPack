@@ -187,7 +187,7 @@ public class AdminSkill implements IAdminCommandHandler
 			for (L2SkillLearn s : skills)
 			{
 				L2Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
-				if (sk == null || !sk.getCanLearn(player.getClassId()))
+				if (sk == null )
 				{
 					if (countUnlearnable)
 						unLearnable++;
