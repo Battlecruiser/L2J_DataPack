@@ -997,11 +997,10 @@
   </for>
 </skill>
 <skill id="453" levels="1" name="Escape Shackle">
-  <!-- Needs to be verified -->
   <set name="mpConsume" val="60"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1000"/>
-  <set name="reuseDelay" val="120000"/> <!-- Guess -->
+  <set name="reuseDelay" val="15000"/>
   <set name="skillType" val="NEGATE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="negateStats" val="ROOT"/>
