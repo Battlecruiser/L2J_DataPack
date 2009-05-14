@@ -1,28 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 <skill id="21000" levels="1" name="Release Seal on Agathion - Majo">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="AGATHION"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="npcId" val="1501"/>
 </skill>
 <skill id="21001" levels="1" name="Release Seal on Agathion - Gold Majo">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="AGATHION"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="npcId" val="1502"/>
 </skill>
 <skill id="21002" levels="1" name="Release Seal on Agathion - Black Majo">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="AGATHION"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="npcId" val="1503"/>
 </skill>
 <skill id="21003" levels="1" name="Release Seal on Agathion - Plaipitak">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="AGATHION"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="npcId" val="1504"/>
 </skill>
 <skill id="21004" levels="1" name="Wind Walk">
   <set name="target" val="TARGET_NONE"/>
@@ -47,22 +55,28 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="21008" levels="1" name="Release Seal on Agathion - Baby Panda">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="AGATHION"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="npcId" val="1505"/>
 </skill>
 <skill id="21009" levels="1" name="Release Seal on Agathion - Bamboo Panda">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="AGATHION"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="npcId" val="1506"/>
 </skill>
 <skill id="21010" levels="1" name="Release Seal on Agathion - Sexy Panda">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="AGATHION"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="npcId" val="1507"/>
 </skill>
 <skill id="21011" levels="1" name="Energy Recovery">
   <set name="target" val="TARGET_NONE"/>
@@ -262,5 +276,77 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="21043" levels="1" name="Agathion Seal Cancel - Red Sumo Wrestler">
+  <!-- Update by rocknow -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="AGATHION"/>
+  <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="npcId" val="1519"/>
+</skill>
+<skill id="21044" levels="1" name="Agathion Seal Cancel - Blue Sumo Wrestler">
+  <!-- Update by rocknow -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="AGATHION"/>
+  <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="npcId" val="1520"/>
+</skill>
+<skill id="21045" levels="1" name="Agathion Seal Cancel - Great Sumo Match">
+  <!-- Update by rocknow -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="AGATHION"/>
+  <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="npcId" val="1521"/>
+</skill>
+<skill id="21046" levels="1" name="Agathion Seal Cancel - Button-Eyed Bear Doll">
+  <!-- Update by rocknow -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="AGATHION"/>
+  <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="npcId" val="1522"/>
+</skill>
+<skill id="21047" levels="1" name="Agathion Seal Cancel - God of Fortune">
+  <!-- Update by rocknow -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="AGATHION"/>
+  <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="npcId" val="1523"/>
+</skill>
+<skill id="21048" levels="1" name="Agathion Seal Cancel - Dryad">
+  <!-- Update by rocknow -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="AGATHION"/>
+  <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="npcId" val="1524"/>
+</skill>
+<skill id="21049" levels="1" name="Agathion Seal Cancel - Wonboso">
+  <!-- Update by rocknow -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="AGATHION"/>
+  <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="npcId" val="1525"/>
+</skill>
+<skill id="21050" levels="1" name="Agathion Seal Cancel - Daewoonso">
+  <!-- Update by rocknow -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="AGATHION"/>
+  <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="npcId" val="1526"/>
 </skill>
 </list>
