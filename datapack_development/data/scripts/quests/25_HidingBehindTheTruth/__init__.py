@@ -45,6 +45,7 @@ class Quest (JQuest) :
         if event == "31349-02.htm" :
             st.playSound("ItemSound.quest_accept")
             st.set("cond","1")
+            st.setState(State.STARTED)
         elif event == "31349-03.htm" :
             if st.getQuestItemsCount(SuspiciousTotem) :
                 htmltext = "31349-05.htm"
