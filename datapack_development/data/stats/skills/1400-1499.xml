@@ -1691,7 +1691,7 @@
   <set name="reuseDelay" val="2000"/>
   <for>
     <effect name="ChanceSkillTrigger" time="120" val="0" triggeredId="5567" chanceType="ON_ATTACKED" activationChance="30">
-      <add stat="fireRes" val="10" order="0x40"/>
+      <add order="0x40" stat="fireRes" val="10"/>
     </effect>
   </for>
 </skill>
@@ -1705,7 +1705,7 @@
   <set name="reuseDelay" val="2000"/>
   <for>
     <effect name="ChanceSkillTrigger" time="120" val="0" triggeredId="5568" chanceType="ON_ATTACKED" activationChance="30">
-      <add stat="waterRes" val="10" order="0x40"/>
+      <add order="0x40" stat="waterRes" val="10"/>
     </effect>
   </for>
 </skill>
@@ -1719,7 +1719,7 @@
   <set name="reuseDelay" val="2000"/>
   <for>
     <effect name="ChanceSkillTrigger" time="120" val="0" triggeredId="5569" chanceType="ON_ATTACKED" activationChance="30">
-      <add stat="windRes" val="10" order="0x40"/>
+      <add order="0x40" stat="windRes" val="10"/>
     </effect>
   </for>
 </skill>

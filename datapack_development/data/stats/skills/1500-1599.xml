@@ -164,8 +164,6 @@
   <set name="isMagic" val="true"/>
   <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="-1"/>
-  <set name="effectRange" val="-1"/>
   <for>
     <effect name="Debuff" time="300" val="0">
       <mul order="0x30" stat="regHp" val="0.3"/>
