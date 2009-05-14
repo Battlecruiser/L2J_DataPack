@@ -416,7 +416,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="500"/>
 </skill>
-<skill id="2237" levels="1" name="Altar Door Key">
+<skill id="2237" levels="1" name="Key of Darkness">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -813,7 +813,7 @@
     <effect name="Buff" time="3600" val="0" stackOrder="20" stackType="fishPot"/>
   </for>
 </skill>
-<skill id="2275" levels="1" name="Fishing Potion">
+<skill id="2275" levels="1" name="Fisherman's Recovery Potion">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NEGATE"/>
   <set name="isPotion" val="true"/>
@@ -847,6 +847,10 @@
   </cond>
 </skill>
 <skill id="2279" levels="3" name="Herb of Mana">
+  <!--
+  Lvl 2 is Greater Herb of Mana
+  Lvl 3 is Superior Herb of Mana
+  -->
   <table name="#power"> 12 18 100 </table>
   <set name="power" val="#power"/>
   <set name="hitTime" val="100"/>
@@ -1005,7 +1009,7 @@
     <player flyMounted="False"/>
   </cond>
 </skill>
-<skill id="2290" levels="1" name="Halloween Box">
+<skill id="2290" levels="1" name="Coffer of Shadows">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>

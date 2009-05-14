@@ -99,7 +99,7 @@
   <set name="isMagic" val="true"/>
 </skill>
 <skill id="1405" levels="4" name="Divine Inspiration">
-<!-- Increases the number of buffs you can receive. -->
+  <!-- Increases the number of buffs you can receive. -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="COREDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -1314,6 +1314,7 @@
 <skill id="1467" levels="1" name="Meteor">
   <!-- Done by DJ MELERIX -->
   <set name="castRange" val="600"/>
+  <set name="element" val="1"/> <!-- Fire -->
   <set name="effectRange" val="1100"/>
   <set name="reuseDelay" val="720000"/>
   <set name="hitTime" val="8000"/>
@@ -1321,6 +1322,7 @@
   <set name="mpConsume" val="109"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="117"/>
+  <set name="skillRadius" val="200"/> <!-- Guess -->
   <set name="skillType" val="MDAM"/>
   <set name="target" val="TARGET_AREA"/>
 </skill>
@@ -1334,6 +1336,7 @@
   <set name="mpConsume" val="109"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="117"/>
+  <set name="skillRadius" val="200"/> <!-- Guess -->
   <set name="skillType" val="MDAM"/>
   <set name="target" val="TARGET_AREA"/>
 </skill>
@@ -1528,7 +1531,7 @@
   <set name="isMagic" val="true"/>
   <set name="soulConsumeCount" val="20"/>
   <for>
-    <effect count="15" name="ManaHealOverTime" time="1" noicon="1" val="200"/>
+    <effect count="15" name="ManaHealOverTime" noicon="1" val="200"/>
     <effect name="ImmobileUntilAttacked" time="15" val="0">
       <mul order="0x30" stat="pDef" val="0.1"/>
     </effect>

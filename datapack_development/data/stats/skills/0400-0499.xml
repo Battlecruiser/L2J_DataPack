@@ -701,14 +701,14 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <mul order="0x30" stat="pDef" val="1.8">
+    <add order="0x40" stat="pDef" val="80">
       <and>
         <using kind="Light"/>
         <not>
           <using kind="Heavy,Magic"/>
         </not>
       </and>
-    </mul>
+    </add>
     <mul order="0x30" stat="mAtkSpd" val="1.05">
       <and>
         <using kind="Light"/>
@@ -717,14 +717,14 @@
         </not>
       </and>
     </mul>
-    <mul order="0x30" stat="pDef" val="1.6">
+    <add order="0x40" stat="pDef" val="60">
       <and>
         <using kind="Magic"/>
         <not>
           <using kind="Heavy,Light"/>
         </not>
       </and>
-    </mul>
+    </add>
     <mul order="0x30" stat="mAtkSpd" val="1.07">
       <and>
         <using kind="Magic"/>
