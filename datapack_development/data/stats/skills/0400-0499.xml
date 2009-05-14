@@ -953,7 +953,7 @@
   <set name="castRange" val="150"/>
   <set name="effectRange" val="650"/>
   <enchant1 name="mpConsume" val="#ench1MpConsume"/>
-  <cond msg="Banish Seraph cannot be used due to unsuitable terms.">
+  <cond msgId="113" addName="1">
     <target race_id="7"/>
   </cond>
   <for>
@@ -1516,7 +1516,7 @@
   <set name="skillType" val="DEBUFF"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="weaponsAllowed" val="163840"/> <!-- Ancient/Rapier -->
-  <cond msg="Rush cannot be used due to unsuitable terms.">
+  <cond msgId="113" addName="1">
     <target mindistance="200"/>
   </cond>
   <for>
@@ -1660,7 +1660,7 @@
   <set name="SSBoost" val="2.0"/>
   <set name="target" val="TARGET_FRONT_AREA"/>
   <set name="weaponsAllowed" val="32768"/> <!-- Ancient -->
-  <cond msg="Storm Assault cannot be used due to unsuitable terms.">
+  <cond msgId="113" addName="1">
     <target mindistance="200"/>
   </cond>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1689,7 +1689,7 @@
   <set name="soulMaxConsumeCount" val="5"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="weaponsAllowed" val="32768"/> <!-- Ancient -->
-  <cond msg="Shoulder Charge cannot be used due to unsuitable terms.">
+  <cond msgId="113" addName="1">
     <target mindistance="200"/>
   </cond>
   <for>
@@ -1722,7 +1722,7 @@
   <set name="soulMaxConsumeCount" val="5"/>
   <set name="target" val="TARGET_FRONT_AREA"/>
   <set name="weaponsAllowed" val="32768"/> <!-- Ancient -->
-  <cond msg="Blade Rush cannot be used due to unsuitable terms.">
+  <cond msgId="113" addName="1">
     <target mindistance="200"/>
   </cond>
   <for>

@@ -147,7 +147,7 @@
   <set name="overHit" val="true"/>
   <set name="SSBoost" val="2.0"/>
   <set name="baseCritRate" val="15"/>
-  <cond msg="Checkmate cannot be used due to unsuitable terms.">
+  <cond msgId="113" addName="1">
     <target active_effect_id="5264"/>
   </cond>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
@@ -733,7 +733,7 @@
   <set name="skillType" val="PDAM"/>
   <set name="SSBoost" val="2.0"/>
   <set name="target" val="TARGET_FRONT_AREA"/>
-  <cond msg="Wing Assault cannot be used due to unsuitable terms.">
+  <cond msgId="113" addName="1">
     <target mindistance="200"/>
   </cond>
 </skill>

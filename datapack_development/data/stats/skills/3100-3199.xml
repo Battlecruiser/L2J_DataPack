@@ -363,7 +363,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
-  <cond msg="Item Skill: Recharge cannot be used due to unsuitable terms.">
+  <cond msgId="113" addName="1">
     <not>
       <target class_id_restriction="29, 30, 105, 42, 43, 112"/>
     </not>

@@ -24,7 +24,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
   <for>
@@ -270,7 +270,7 @@
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
@@ -279,7 +279,7 @@
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
@@ -288,7 +288,7 @@
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
@@ -297,7 +297,7 @@
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
@@ -306,7 +306,7 @@
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
@@ -315,7 +315,7 @@
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
@@ -324,7 +324,7 @@
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
@@ -333,7 +333,7 @@
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
@@ -342,7 +342,7 @@
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
@@ -351,7 +351,7 @@
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
@@ -360,7 +360,7 @@
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
@@ -369,7 +369,7 @@
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
@@ -378,7 +378,7 @@
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
@@ -387,7 +387,7 @@
   <set name="hitTime" val="500"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
@@ -398,7 +398,7 @@
   <set name="power" val="3"/>
   <set name="skillType" val="HEAL_PERCENT"/> <!-- Needs Core support: Heal HP 3% & heal MP 1% at the same time -->
   <set name="target" val="TARGET_SELF"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
@@ -406,7 +406,7 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
@@ -414,7 +414,7 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
@@ -425,7 +425,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="skillRadius" val="200"/>
   <set name="isMagic" val="true"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
   <for>
@@ -567,7 +567,7 @@
   <!-- Can be recharged up to 2 stages -->
   <set name="numCharges" val="1"/>
   <set name="maxCharges" val="2"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
@@ -580,7 +580,7 @@
   <set name="reuseDelay" val="1000"/>
   <set name="staticReuse" val="true"/>
   <set name="isPotion" val="true"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
@@ -593,7 +593,7 @@
   <set name="reuseDelay" val="3000"/>
   <set name="skillType" val="GIVE_SP"/>
   <set name="target" val="TARGET_SELF"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
@@ -602,7 +602,7 @@
   <set name="hitTime" val="2000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
   <for>
@@ -618,7 +618,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="1200000"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
   <for>
@@ -635,7 +635,7 @@
   <set name="hitTime" val="500"/>
   <set name="effectRange" val="600"/>
   <set name="negateStats" val="SLEEP"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>

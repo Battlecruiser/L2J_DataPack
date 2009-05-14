@@ -1029,7 +1029,7 @@
   <set name="effectRange" val="1400"/>
   <set name="effectType" val="NEGATE"/>
   <set name="negateId" val="1339"/>
-  <cond msg="Invalid target.">
+  <cond msgId="109">
     <target active_effect_id="1339"/>
   </cond>
 </skill>
@@ -1069,7 +1069,7 @@
   <set name="effectRange" val="1400"/>
   <set name="effectType" val="NEGATE"/>
   <set name="negateId" val="1340"/>
-  <cond msg="Invalid target.">
+  <cond msgId="109">
     <target active_effect_id="1340"/>
   </cond>
 </skill>
@@ -1127,7 +1127,7 @@
   <set name="effectRange" val="1400"/>
   <set name="effectType" val="NEGATE"/>
   <set name="negateId" val="1341"/>
-  <cond msg="Invalid target.">
+  <cond msgId="109">
     <target active_effect_id="1341"/>
   </cond>
 </skill>
@@ -1193,7 +1193,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
-  <cond msg="Mana Gain cannot be used due to unsuitable terms.">
+  <cond msgId="113" addName="1">
     <not>
       <target class_id_restriction="29, 30, 105, 42, 43, 112"/>
     </not>
@@ -1401,7 +1401,7 @@
   <set name="hitTime" val="5000"/>
   <set name="reuseDelay" val="15000"/>
   <set name="isMagic" val="true"/>
-  <cond msg="Change Weapon cannot be used due to unsuitable terms.">
+  <cond msgId="113" addName="1">
     <using weaponChange="true"/>
   </cond>
 </skill>
