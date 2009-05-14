@@ -236,7 +236,7 @@
   <set name="effectRange" val="900"/>
   <set name="reuseDelay" val="75000"/>
   <set name="hitTime" val="100"/>
-  <cond msg="Shadow Step cannot be used due to unsuitable terms.">
+  <cond msgId="113" addName="1">
     <target mindistance="300"/>
   </cond>
   <for>

@@ -56,7 +56,7 @@
   <set name="reuseDelay" val="3000"/>
   <set name="skillType" val="GIVE_SP"/>
   <set name="target" val="TARGET_SELF"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
@@ -202,7 +202,7 @@
   <set name="itemConsumeCount" val="1"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1200"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="True"/>
   </cond>
   <and>
@@ -327,7 +327,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
   <set name="staticHitTime" val="true"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <and>
       <target class_id_restriction="90"/>
       <player level="83"/>
@@ -343,7 +343,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
   <set name="staticHitTime" val="true"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <and>
       <target class_id_restriction="90, 91, 99, 100, 106, 107"/>
       <player level="81"/>
@@ -359,7 +359,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
   <set name="staticHitTime" val="true"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <and>
       <target class_id_restriction="100"/>
       <player level="83"/>
@@ -375,7 +375,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
   <set name="staticHitTime" val="true"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <and>
       <target class_id_restriction="107"/>
       <player level="83"/>
@@ -397,7 +397,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
   <set name="staticHitTime" val="true"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <and>
       <target class_id_restriction="114"/>
       <player level="83"/>
@@ -413,7 +413,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
   <set name="staticHitTime" val="true"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <and>
       <target class_id_restriction="88"/>
       <player level="83"/>
@@ -429,7 +429,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
   <set name="staticHitTime" val="true"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <and>
       <target class_id_restriction="93, 101, 108"/>
       <player level="81"/>
@@ -445,7 +445,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
   <set name="staticHitTime" val="true"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <and>
       <target class_id_restriction="93, 101, 108"/>
       <player level="81"/>
@@ -461,7 +461,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
   <set name="staticHitTime" val="true"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <and>
       <target class_id_restriction="92, 102, 109"/>
       <player level="81"/>
@@ -477,7 +477,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
   <set name="staticHitTime" val="true"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <and>
       <target class_id_restriction="94, 95, 103, 110, 132, 133"/>
       <player level="81"/>
@@ -493,7 +493,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
   <set name="staticHitTime" val="true"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <and>
       <target class_id_restriction="97, 98, 105, 112, 115, 116"/>
       <player level="81"/>
@@ -509,7 +509,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
   <set name="staticHitTime" val="true"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <and>
       <target class_id_restriction="52, 116"/>
       <player level="72"/>
@@ -525,7 +525,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
   <set name="staticHitTime" val="true"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <and>
       <target class_id_restriction="51, 115"/>
       <player level="70"/>
@@ -541,7 +541,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
   <set name="staticHitTime" val="true"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <and>
       <target class_id_restriction="51, 115"/>
       <player level="74"/>
@@ -557,7 +557,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
   <set name="staticHitTime" val="true"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <and>
       <target class_id_restriction="51, 115"/>
       <player level="72"/>
@@ -573,7 +573,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
   <set name="staticHitTime" val="true"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <and>
       <target class_id_restriction="93, 101, 108"/>
       <player level="81"/>
@@ -589,7 +589,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
   <set name="staticHitTime" val="true"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <and>
       <target class_id_restriction="96"/>
       <player level="83"/>
@@ -605,7 +605,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
   <set name="staticHitTime" val="true"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <and>
       <target class_id_restriction="111"/>
       <player level="83"/>
@@ -621,7 +621,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
   <set name="staticHitTime" val="true"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <and>
       <target class_id_restriction="104"/>
       <player level="83"/>

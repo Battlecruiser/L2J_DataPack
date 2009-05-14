@@ -391,7 +391,7 @@
   <enchant1 name="power" val="#ench1power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
-  <cond msg="Recharge cannot be used due to unsuitable terms.">
+  <cond msgId="113" addName="1">
     <not>
       <target class_id_restriction="29, 30, 105, 42, 43, 112"/>
     </not>

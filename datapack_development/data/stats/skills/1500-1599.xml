@@ -185,7 +185,7 @@
   <set name="effectRange" val="1200"/>
   <set name="isMagic" val="true"/>
   <set name="reuseDelay" val="15000"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player race="Kamael"/>
   </cond>  
 </skill>
@@ -257,7 +257,7 @@
   <set name="effectType" val="NEGATE"/>
   <set name="negateId" val="1512"/>
   <set name="soulMaxConsumeCount" val="5"/>
-  <cond msg="Invalid target.">
+  <cond msgId="109">
     <target active_effect_id="1512"/>
   </cond>
 </skill>

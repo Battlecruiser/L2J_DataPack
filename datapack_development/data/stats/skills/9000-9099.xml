@@ -8,7 +8,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="skillType" val="MPHOT"/>
   <set name="target" val="TARGET_SELF"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
   <for>
@@ -23,7 +23,7 @@
   <set name="power" val="100"/>
   <set name="skillType" val="MANAHEAL"/>
   <set name="target" val="TARGET_SELF"/>
-  <cond msgId="113">
+  <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
