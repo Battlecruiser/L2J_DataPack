@@ -10080,8 +10080,6 @@ INSERT INTO `droplist` VALUES
 (20971,5494,1,1,1,2794), -- Sealed Dark Crystal Shield Fragment
 (20971,5525,1,1,1,2057), -- Sealed Dark Crystal Helmet Design
 (20971,5526,1,1,1,2057), -- Sealed Tallum Helm Design
-(20971,12768,1,1,1,8621), -- Spellbook - Evasion Counter
-(20971,12769,1,1,1,6849), -- Spellbook - Evasion Chance
 (20972,4077,1,1,-1,85462), -- Doom Shield Fragment
 (20972,4087,1,1,-1,44581), -- Stockings of Doom Pattern
 (20972,5494,1,1,-1,39900), -- Sealed Dark Crystal Shield Fragment
@@ -10094,8 +10092,6 @@ INSERT INTO `droplist` VALUES
 (20972,5497,1,1,1,1645), -- Sealed Tallum Boots Lining
 (20972,5508,1,1,1,1645), -- Sealed Dark Crystal Gloves Design
 (20972,5509,1,1,1,1645), -- Sealed Tallum Gloves Design
-(20972,12771,1,1,1,8621), -- Spellbook - Shadow Step
-(20972,12770,1,1,1,6849), -- Spellbook - Evasion Haste
 (20973,4078,1,1,-1,43112), -- Blue Wolf Breastplate Part
 (20973,5166,1,1,-1,3935), -- Recipe: Blessed Spiritshot (A) Compressed Package (100%)
 (20973,5496,1,1,-1,69201), -- Sealed Dark Crystal Boots Lining
@@ -10106,10 +10102,6 @@ INSERT INTO `droplist` VALUES
 (20973,6341,1,1,1,4019), -- Sealed Phoenix Earring Gemstone
 (20973,6343,1,1,1,3107), -- Sealed Phoenix Necklace Beads
 (20973,6345,1,1,1,5559), -- Sealed Phoenix Ring Gemstone
-(20973,7656,1,1,2,32158), -- Spellbook - Warrior Servitor
-(20973,7657,1,1,2,3378), -- Spellbook - Wizard Servitor
-(20973,7658,1,1,2,4566), -- Spellbook - Assassin Servitor
-(20973,7659,1,1,2,3378), -- Spellbook - Final Servitor
 (20974,4052,1,1,-1,142857), -- Earring of Black Ore Piece
 (20974,5230,1,1,-1,5291), -- Recipe: Mithril Arrow (100%)
 (20974,57,1926,3902,0,700000), -- Adena
@@ -12831,10 +12823,6 @@ INSERT INTO `droplist` VALUES
 (21163,5497,1,1,1,7532), -- Sealed Tallum Boots Lining
 (21163,5508,1,1,1,7532), -- Sealed Dark Crystal Gloves Design
 (21163,5509,1,1,1,7532), -- Sealed Tallum Gloves Design
-(21163,7654,1,1,2,10417), -- Spellbook - Mass Warrior Bane
-(21163,7655,1,1,2,10417), -- Spellbook - Mass Mage Bane
-(21163,7660,1,1,2,10753), -- Spellbook - Warrior Bane
-(21163,7661,1,1,2,11111), -- Spellbook - Mage Bane
 (21164,5480,1,1,-1,44804), -- Sealed Leather Armor of Nightmare Fabric
 (21164,5481,1,1,-1,44804), -- Sealed Majestic Leather Armor Fabric
 (21164,5487,1,1,-1,44963), -- Sealed Robe of Nightmare Fabric
@@ -13182,9 +13170,6 @@ INSERT INTO `droplist` VALUES
 (21184,5485,1,1,1,4370), -- Sealed Tallum Tunic Texture
 (21184,5486,1,1,1,3075), -- Sealed Dark Crystal Robe Fabric
 (21184,5489,1,1,1,6858), -- Sealed Tallum Stockings Fabric
-(21184,7645,1,1,2,17241), -- Spellbook - Balance Life
-(21184,7672,1,1,2,19608), -- Amulet - Chant of Spirit
-(21184,7673,1,1,2,18519), -- Amulet - Chant of Victory
 (21184,6361,700,1400,3,700000), -- Green Seal Stone
 (21184,6362,14,27,4,700000), -- Red Seal Stone
 (21185,1875,1,2,-1,629418), -- Stone of Purity
@@ -13196,9 +13181,6 @@ INSERT INTO `droplist` VALUES
 (21185,5485,1,1,1,3909), -- Sealed Tallum Tunic Texture
 (21185,5486,1,1,1,2750), -- Sealed Dark Crystal Robe Fabric
 (21185,5489,1,1,1,6135), -- Sealed Tallum Stockings Fabric
-(21185,7665,1,1,2,16393), -- Spellbook - Prophecy of Water
-(21185,7666,1,1,2,16129), -- Spellbook - Prophecy of Fire
-(21185,7667,1,1,2,15385), -- Spellbook - Prophecy of Wind
 (21185,6361,612,1227,3,700000), -- Green Seal Stone
 (21185,6362,11,22,4,700000), -- Red Seal Stone
 (21186,730,1,1,-1,10564), -- Scroll: Enchant Armor (Grade A)
@@ -13539,10 +13521,6 @@ INSERT INTO `droplist` VALUES
 (21206,5520,1,1,1,3264), -- Sealed Dark Crystal Breastplate Pattern
 (21206,5521,1,1,1,2304), -- Sealed Tallum Plate Armor Pattern
 (21206,5524,1,1,1,4989), -- Sealed Dark Crystal Gaiters Pattern
-(21206,7674,1,1,2,13158), -- Amulet - Pa\'agrio\'s Eye
-(21206,7675,1,1,2,13158), -- Amulet - Pa\'agrio\'s Soul
-(21206,7676,1,1,2,13158), -- Amulet - Seal of Despair
-(21206,7835,1,1,2,12821), -- Amulet: Seal of Disease
 (21206,6361,666,1336,3,700000), -- Green Seal Stone
 (21206,6362,12,24,4,700000), -- Red Seal Stone
 (21207,730,1,1,-1,10564), -- Scroll: Enchant Armor (Grade A)
@@ -14201,9 +14179,6 @@ INSERT INTO `droplist` VALUES
 (21254,6341,1,1,1,12134), -- Sealed Phoenix Earring Gemstone
 (21254,6343,1,1,1,9381), -- Sealed Phoenix Necklace Beads
 (21254,6345,1,1,1,16783), -- Sealed Phoenix Ring Gemstone
-(21254,7646,1,1,2,14925), -- Spellbook - Curse of Doom
-(21254,7647,1,1,2,16393), -- Spellbook - Curse of Abyss
-(21254,7648,1,1,2,15384), -- Spellbook - Arcane Chaos
 (21255,4041,1,1,-1,82464), -- Mold Hardener
 (21255,5481,1,1,-1,42554), -- Sealed Majestic Leather Armor Fabric
 (21255,5487,1,1,-1,42704), -- Sealed Robe of Nightmare Fabric
@@ -14214,9 +14189,6 @@ INSERT INTO `droplist` VALUES
 (21255,5478,1,1,1,3926), -- Sealed Dark Crystal Leather Armor Pattern
 (21255,5479,1,1,1,2763), -- Sealed Tallum Leather Armor Pattern
 (21255,5482,1,1,1,6162), -- Sealed Dark Crystalline Leggings Design
-(21255,7662,1,1,2,15873), -- Spellbook - Elemental Protection
-(21255,7663,1,1,2,15625), -- Spellbook - Divine Protection
-(21255,7664,1,1,2,16667), -- Spellbook - Arcane Protection
 (21256,1804,1,1,-1,10820), -- Recipe: Soulshot: D-Grade
 (21256,1872,1,1,-1,360672), -- Animal Bone
 (21256,1898,1,1,-1,27787), -- Blue Diamond Necklace Gem
@@ -15176,11 +15148,6 @@ INSERT INTO `droplist` VALUES
 (21319,11955,1,1,1,416), -- Common Item - Carnage Bow
 (21319,5535,1,1,1,3633), -- Carnage Bow Stave
 (21319,1344,20,60,2,250000), -- Mithril Arrow
-(21319,7649,1,1,2,7519), -- Spellbook - Fire Vortex
-(21319,7650,1,1,2,7299), -- Spellbook - Ice Vortex
-(21319,7651,1,1,2,7576), -- Spellbook - Wind Vortex
-(21319,7652,1,1,2,6849), -- Spellbook - Light Vortex
-(21319,7653,1,1,2,7937), -- Spellbook - Dark Vortex
 (21320,1894,1,1,-1,230170), -- Crafted Leather
 (21320,4042,1,1,-1,109331), -- Enria
 (21320,5503,1,1,-1,110790), -- Sealed Majestic Boots Lining
@@ -15348,10 +15315,6 @@ INSERT INTO `droplist` VALUES
 (21329,5529,1,1,1,941), -- Dragon Slayer Edge
 (21329,5545,1,1,1,941), -- Dark Legion\'s Edge Blade
 (21329,5546,1,1,1,1034), -- Sword of Miracles Edge
-(21329,7668,1,1,2,9901), -- Spellbook - Block Shield
-(21329,7669,1,1,2,8475), -- Spellbook - Block Wind Walk
-(21329,7670,1,1,2,8621), -- Spellbook - Mass Block Shield
-(21329,7671,1,1,2,9091), -- Spellbook - Mass Block Wind Walk
 (21330,1885,1,2,-1,553215), -- High Grade Suede
 (21330,4041,1,1,-1,57727), -- Mold Hardener
 (21330,5488,1,1,-1,29894), -- Sealed Majestic Robe Fabric
@@ -25386,20 +25349,16 @@ INSERT INTO `droplist` VALUES
 (22196,11968,1,1,1,2564), -- Common Item - Dragon Slayer (10x lower drop now!)
 (22196,11971,1,1,1,2564), -- Common Item - Sword of Miracles 
 (22196,11964,1,1,1,2564), -- Common Item - Dark Legion\'s Edge
-(22196,8877,1,1,2,50000), -- Spellbook: Soul of the Phoenix
-(22196,8892,1,1,2,33333), -- Ancient Tactical Manual: Symbol of Defense
 (22197,57,5818,11870,0,700000), -- Adena
 (22197,8633,1,1,2,5714), -- Elixir of Mental Strength (S-Grade)
 (22197,5546,1,1,1,1972), -- Sword of Miracles Edge
 (22197,8627,1,1,2,3367), -- Elixir of Life (S-Grade)
 (22197,5529,1,1,1,1680), -- Dragon Slayer Edge
 (22197,8954,1,1,2,1344), -- Blue Primeval Crystal
-(22197,8885,1,1,2,16666), -- Amulet: Magnus\' Chant
 (22197,5545,1,1,1,1344), -- Dark Legion\'s Edge Blade
 (22197,11968,1,1,1,633), -- Common Item - Dragon Slayer
 (22197,11971,1,1,1,633), -- Common Item - Sword of Miracles 
 (22197,11964,1,1,1,633), -- Common Item - Dark Legion\'s Edge
-(22197,8907,1,1,1,5102), -- Ancient Spellbook: Flames of Invincibility
 (22197,8955,1,1,2,672), -- Green Primeval Crystal
 (22197,8956,1,1,2,1972), -- Red Primeval Crystal
 (22197,6689,1,1,-1,17241), -- Basalt Battlehammer Head
@@ -25410,8 +25369,6 @@ INSERT INTO `droplist` VALUES
 (22198,8956,1,1,2,2793), -- Red Primeval Crystal
 (22198,5529,1,1,1,2793), -- Dragon Slayer Edge
 (22198,5546,1,1,1,6024), -- Sword of Miracles Edge
-(22198,8902,1,1,2,22222), -- Ancient Spellbook: Day of Doom
-(22198,8893,1,1,2,29412), -- Ancient Tactical Manual: Symbol of Noise
 (22198,8955,1,1,2,931), -- Green Primeval Crystal
 (22198,5545,1,1,1,931), -- Dark Legion\'s Edge Blade
 (22199,57,18210,54000,0,700000), -- Adena
@@ -25419,34 +25376,27 @@ INSERT INTO `droplist` VALUES
 (22199,6342,1,1,1,111111), -- Sealed Majestic Earring Gemstone
 (22199,6344,1,1,1,28571), -- Sealed Majestic Necklace Beads
 (22199,8627,1,1,2,16666), -- Elixir of Life (S-Grade)
-(22199,8899,1,1,2,18519), -- Ancient Spellbook: Volcano
 (22199,8633,1,1,2,14286), -- Elixir of Mental Strength (S-Grade)
 (22199,8954,1,1,2,3344), -- Blue Primeval Crystal
 (22199,12350,1,1,1,3876), -- Common Item - Sealed Majestic Necklace
 (22199,12352,1,1,1,3876), -- Common Item - Sealed Majestic Earring
 (22199,12351,1,1,1,3876), -- Common Item - Sealed Majestic Ring
-(22199,8881,1,1,2,55555), -- Spellbook: Cleanse
-(22199,8904,1,1,2,37037), -- Ancient Spellbook: Anti-Summoning Field
 (22200,57,6036,12300,0,700000), -- Adena
 (22200,8627,1,1,2,5952), -- Elixir of Life (S-Grade
 (22200,8633,1,1,2,3968), -- Elixir of Mental Strength (S-Grade)
-(22200,8878,1,1,2,20408), -- Spellbook: Summon Feline King
 (22200,8342,1,1,1,3968), -- Flaming Dragon Skull Piece
 (22200,8349,1,1,1,1984), -- Doom Crusher Head
 (22200,5533,1,1,1,1984), -- Elysian Head
 (22200,8955,1,1,2,6849), -- Green Primeval Crystal
-(22200,8897,1,1,2,9091), -- Ancient Tactical Manual: Symbol of the Sniper
 (22200,8954,1,1,2,6849), -- Blue Primeval Crystal
 (22201,57,6034,12320,0,700000), -- Adena
 (22201,8633,1,1,2,2119), -- Elixir of Mental Strength (S-Grade)
 (22201,8627,1,1,2,3663), -- Elixir of Life (S-Grade)
-(22201,8888,1,1,2,13889), -- Amulet: Pa\'agrio\'s Fist
 (22201,5544,1,1,1,1348), -- Branch of The Mother Tree Head
 (22201,8342,1,1,1,770), -- Flaming Dragon Skull Piece
 (22201,8954,1,1,2,577), -- Blue Primeval Crystal
 (22201,8955,1,1,2,744), -- Green Primeval Crystal
 (22201,5533,1,1,1,962), -- Elysian Head
-(22201,8886,1,1,2,17544), -- Amulet: Victories of Pa\'agrio
 (22201,8956,1,1,2,192), -- Red Primeval Crystal
 (22201,11966,1,1,2,192), -- Common Item - Doom Crusher (no drop info)
 (22201,8349,1,1,1,1348), -- Doom Crusher Head
@@ -25463,13 +25413,10 @@ INSERT INTO `droplist` VALUES
 (22202,11974,1,1,1,334), -- Common Item - Elysian
 (22202,11969,1,1,1,334), -- Common Item - Flaming Dragon Skull
 (22202,11966,1,1,1,334), -- Common Item - Doom Crusher
-(22202,8889,1,1,2,18868), -- Amulet: Gate Chant
 (22202,8954,1,1,2,733), -- Blue Primeval Crystal
-(22202,8882,1,1,2,17241), -- Spellbook: Salvation
 (22202,8349,1,1,1,2519), -- Doom Crusher Head
 (22202,6696,1,1,-1,18867), -- Heavens Divider Edge
 (22203,57,5953,12100,0,700000), -- Adena
-(22203,8879,1,1,2,40000), -- Spellbook: Summon Magnus the Unicorn
 (22203,8627,1,1,2,34842), -- Elixir of Life (S-Grade)
 (22203,5534,1,1,1,5747), -- Soul Bow Stave
 (22203,8954,1,1,2,2882), -- Blue Primeval Crystal
@@ -25479,7 +25426,6 @@ INSERT INTO `droplist` VALUES
 (22204,8627,1,1,2,3205), -- Elixir of Life (S-Grade)
 (22204,5534,1,1,1,4630), -- Soul Bow Stave
 (22204,8954,1,1,2,1067), -- Blue Primeval Crystal
-(22204,8883,1,1,2,28571), -- Spellbook: Mystic Immunity
 (22204,8955,1,1,2,356), -- Green Primeval Crystal
 (22204,8956,1,1,2,178), -- Red Primeval Crystal
 (22204,11975,1,1,1,553), -- Common Item - Soul Bow
@@ -25490,7 +25436,6 @@ INSERT INTO `droplist` VALUES
 (22205,8633,1,1,2,1229), -- Elixir of Mental Strength (S-Grade)
 (22205,8627,1,1,2,11111), -- Elixir of Life (S-Grade)
 (22205,8954,1,1,2,1229), -- Blue Primeval Crystal
-(22205,8887,1,1,2,34483), -- Amulet: Pa\'agrio\'s Emblem
 (22205,5534,1,1,1,4902), -- Soul Bow Stave
 (22205,8955,1,1,2,1229), -- Green Primeval Crystal
 (22205,11975,1,1,1,539), -- Common Item - Soul Bow
@@ -25543,22 +25488,16 @@ INSERT INTO `droplist` VALUES
 (22215,5541,1,1,1,20000), -- Tallum Glaive Edge
 (22215,8633,1,1,2,58823), -- Elixir of Mental Strength (S-Grade)
 (22215,8627,1,1,2,45454), -- Elixir of Life (S-Grade)
-(22215,8894,1,1,2,52632), -- Ancient Tactical Manual: Symbol of Resistance
-(22215,8895,1,1,2,333333), -- Ancient Tactical Manual: Symbol of Honor
 (22215,8956,1,1,2,4975), -- Red Primeval Crystal
 (22216,57,54300,110530,0,700000), -- Adena
 (22216,8627,1,1,2,350000), -- Elixir of Life (S-Grade)
 (22216,8762,1,1,3,58823), -- Top-Grade Life Stone: level 76
 (22216,8633,1,1,2,58823), -- Elixir of Mental Strength (S-Grade)
 (22216,5541,1,1,1,58823), -- Tallum Glaive Edge
-(22216,8905,1,1,1,140000), -- Ancient Spellbook: Purification Field
-(22216,8900,1,1,1,140000), -- Ancient Spellbook: Cyclone
 (22217,57,77220,132850,0,700000), -- Adena
 (22217,8633,1,1,2,58824), -- Elixir of Mental Strength (S-Grade)
 (22217,5541,1,1,1,45454), -- Tallum Glaive Edge
 (22217,8627,1,1,2,33333), -- Elixir of Life (S-Grade)
-(22217,8903,1,1,2,52632), -- Ancient Spellbook: Gehenna
-(22217,8908,1,1,2,52632), -- Ancient Spellbook: Mass Recharge
 (22217,8954,1,1,2,11235), -- Blue Primeval Crystal
 (22217,4042,1,3,-1,300000), -- Enria
 (22218,57,4524,12800,0,700000), -- Adena
@@ -25570,8 +25509,6 @@ INSERT INTO `droplist` VALUES
 (22218,11971,1,1,1,2045), -- Common Item - Sword of Miracles 
 (22218,11964,1,1,1,2045), -- Common Item - Dark Legion\'s Edge
 (22218,8954,1,1,2,1597), -- Blue Primeval Crystal
-(22218,8906,1,1,2,6135), -- Ancient Spellbook: Miracle
-(22218,8901,1,1,2,2252), -- Ancient Spellbook: Raging Waves
 (22219,57,5493,11210,0,700000), -- Adena
 (22219,8627,1,1,2,3759), -- Elixir of Life (S-Grade)
 (22219,8633,1,1,2,1475), -- Elixir of Mental Strength (S-Grade)
@@ -25579,7 +25516,6 @@ INSERT INTO `droplist` VALUES
 (22219,8954,1,1,2,590), -- Blue Primeval Crystal
 (22219,5544,1,1,1,1770), -- Branch of The Mother Tree Head
 (22219,8349,1,1,1,1475), -- Doom Crusher Head
-(22219,8896,1,1,2,18182), -- Ancient Tactical Manual: Symbol of Energy
 (22219,11970,1,1,1,60), -- Common Item - Branch of The Mother Tree
 (22219,11974,1,1,1,60), -- Common Item - Elysian
 (22219,11969,1,1,1,60), -- Common Item - Flaming Dragon Skull
@@ -25590,7 +25526,6 @@ INSERT INTO `droplist` VALUES
 (22220,8627,1,1,2,1314), -- Elixir of Life (S-Grade)
 (22220,5534,1,1,1,5263), -- Soul Bow Stave
 (22220,8633,1,1,2,2188), -- Elixir of Mental Strength (S-Grade)
-(22220,8880,1,1,2,19608), -- Spellbook: Summon Spectral Knight
 (22220,8954,1,1,2,1751), -- Blue Primeval Crystal
 (22220,8955,1,1,2,1314), -- Green Primeval Crystal
 (22220,8956,1,1,2,438), -- Red Primeval Crystal
@@ -25600,7 +25535,6 @@ INSERT INTO `droplist` VALUES
 (22221,8627,1,1,2,3289), -- Elixir of Life (S-Grade)
 (22221,5537,1,1,1,8065), -- Soul Separator Head
 (22221,11973,1,1,1,582), -- Common Item - Soul Separator
-(22221,8884,1,1,2,23256), -- Spellbook: Spell Turning
 (22221,8955,1,1,2,1464), -- Green Primeval Crystal
 (22221,8954,1,1,2,1464), -- Blue Primeval Crystal
 (22222,57,5157,10520,0,700000), -- Adena
@@ -25616,7 +25550,6 @@ INSERT INTO `droplist` VALUES
 (22223,8633,1,1,2,4149), -- Elixir of Mental Strength (S-Grade)
 (22223,8627,1,1,2,2070), -- Elixir of Life (S-Grade)
 (22223,5545,1,1,1,13333), -- Dark Legion\'s Edge Blade
-(22223,8898,1,1,1,47619), -- Ancient Tactical Manual: Symbol of the Assassin
 (22224,57,56398,11510,0,700000), -- Adena
 (22224,5533,1,1,1,704), -- Elysian Head
 (22224,8349,1,1,1,704), -- Doom Crusher Head
@@ -25631,7 +25564,6 @@ INSERT INTO `droplist` VALUES
 (22224,11966,1,1,1,259), -- Common Item - Doom Crusher
 (22224,6901,1,1,-1,7812), -- Recipe: Shining Arrow (100%)
 (22225,57,5361,10920,0,700000), -- Adena
-(22225,8888,1,1,2,25000), -- Amulet: Pa\'agrio\'s Fist
 (22225,8627,1,1,2,5747), -- Elixir of Life (S-Grade)
 (22225,8633,1,1,2,4098), -- Elixir of Mental Strength (S-Grade)
 (22225,5534,1,1,1,3279), -- Soul Bow Stave
@@ -25876,10 +25808,6 @@ INSERT INTO `droplist` VALUES
 (22260,57,1647,3363,0,700000), -- Adena
 (22260,9593,1,1,100,250000), -- Yellow Seed Of Evil - Shard
 (22260,9546,1,1,200,1575), -- Fire Stone
-(22260,10099,1,1,2,1965), -- Spellbook: Count of Fire
-(22260,10100,1,1,2,1389), -- Spellbook: Diamond Dust
-(22260,10101,1,1,2,981), -- Spellbook: Throne of Ice
-(22260,10203,1,1,2,847), -- Spellbook: Empowering Echo
 (22260,10557,1,1,2,3448), -- Forgotten Scroll - Song of Windstorm
 (22260,5522,1,1,1,1153), -- Sealed Armor of Nightmare Pattern
 (22260,5523,1,1,1,1153), -- Sealed Majestic Plate Armor Pattern
@@ -25894,11 +25822,6 @@ INSERT INTO `droplist` VALUES
 (22261,11975,1,1,1,31), -- Common Item - Soul Bow
 (22261,9546,1,1,200,1672), -- Fire Stone
 (22261,10558,1,1,2,2907), -- Forgotten Scroll - Dance of Blade Storm
-(22261,10104,1,1,2,990), -- Spellbook: Mana Gain
-(22261,10069,1,1,2,1145), -- Battle Manual: Leopold
-(22261,10068,1,1,2,1362), -- Battle Manual: Enuma Elish
-(22261,10102,1,1,2,1672), -- Spellbook: Throne Of Wind
-(22261,10103,1,1,2,1486), -- Spellbook: Divine Power
 (22261,1885,1,1,-1,741379), -- High Grade Suede
 (22261,5503,1,1,-1,178161), -- Sealed Majestic Boots Lining
 (22261,4041,1,1,-1,80460), -- Mold Hardener
@@ -25909,11 +25832,6 @@ INSERT INTO `droplist` VALUES
 (22262,5533,1,1,1,421), -- Elysian Head
 (22262,5544,1,1,1,421), -- Branch Of The Mother Tree Head
 (22262,8342,1,1,1,421), -- Flaming Dragon Skull Piece
-(22262,10106,1,1,2,1460), -- Amulet: Seal Of Blockade
-(22262,10090,1,1,2,1010), -- Battle Manual: Prahnah
-(22262,10598,1,1,2,3401), -- Battle Manual: Soul Vortex
-(22262,10107,1,1,2,1795), -- Spellbook: Fire Vortex Buster
-(22262,10105,1,1,2,1645), -- Amulet: Chant Of Protection
 (22262,11970,1,1,1,37), -- Common Item - Branch of The Mother Tree
 (22262,11974,1,1,1,37), -- Common Item - Elysian
 (22262,11969,1,1,1,37), -- Common Item - Flaming Dragon Skull
@@ -25925,10 +25843,6 @@ INSERT INTO `droplist` VALUES
 (22263,5538,1,1,1,1919), -- Dragon Grinder Edge
 (22263,9594,1,1,100,142857), -- Green Seed of Evil - Shard
 (22263,9546,1,1,200,2660), -- Fire Stone
-(22263,10109,1,1,2,1934), -- Spellbook: Wind Vortex Slug
-(22263,10108,1,1,2,2008), -- Spellbook: Ice Vortex Crusher
-(22263,10091,1,1,2,1592), -- Battle Manual: Final Form
-(22263,10602,1,1,2,5128), -- Battle Manual: Soul Strike
 (22263,11967,1,1,1,72), -- Common Item - Dragon Grinder
 (22263,1895,1,3,-1,818181), -- Metallic Fiber
 (22263,5515,1,1,-1,66986), -- Sealed Majestic Gauntlets Design
@@ -30040,12 +29954,3 @@ INSERT INTO `droplist` VALUES
 (36164,9912,1,3,1,1000000), -- Knight's Epaulette
 (36165,9912,1,3,1,1000000), -- Knight's Epaulette
 (36167,9912,1,3,1,1000000); -- Knight's Epaulette
-
-INSERT INTO `droplist` VALUES
--- CT1 spellbooks..mobs somewhere on HB dungeons
-(22363,10603,1,1,2,83333), -- Battle Manual - Betrayal Mark
-(22363,10604,1,1,2,52631), -- Battle Manual - Rush Impact
-(22363,10590,1,1,2,25000), -- Spellbook - Summon Smart Cubic
-(22364,10599,1,1,2,17857), -- Battle Manual - Soul Vortex Extinction
-(22364,10601,1,1,2,17857), -- Battle Manual - Lightning Barrier
-(22364,10605,1,1,2,8850); -- Battle Manual - Mass Disarm
