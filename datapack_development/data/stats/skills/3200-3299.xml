@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 <skill id="3200" levels="3" name="Item Skill: Spell Refresh">
-  <table name="#mpConsume_Init"> 11 13 14 </table>
+  <table name="#mpInitialConsume"> 11 13 14 </table>
   <table name="#mpConsume"> 43 49 55 </table>
-  <table name="#mReuseRate"> 0.95 0.93 0.9 </table>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <table name="#mReuse"> 0.95 0.93 0.9 </table>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="600000"/>
@@ -16,15 +16,15 @@
   <set name="staticReuse" val="true"/>
   <for>
     <effect name="Buff" time="120" val="0">
-      <mul order="0x30" stat="mReuse" val="#mReuseRate"/>
+      <mul order="0x30" stat="mReuse" val="#mReuse"/>
     </effect>
   </for>
 </skill>
 <skill id="3201" levels="3" name="Item Skill: Music Refresh">
-  <table name="#mpConsume_Init"> 11 13 14 </table>
+  <table name="#mpInitialConsume"> 11 13 14 </table>
   <table name="#mpConsume"> 43 49 55 </table>
-  <table name="#pReuseRate"> 0.95 0.93 0.9 </table> <!-- Needs check -->
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <table name="#pReuse"> 0.95 0.93 0.9 </table> <!-- Needs check -->
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="600000"/>
@@ -36,15 +36,15 @@
   <set name="staticReuse" val="true"/>
   <for>
     <effect name="Buff" time="120" val="0">
-      <mul order="0x30" stat="pReuse" val="#pReuseRate"/>
+      <mul order="0x30" stat="pReuse" val="#pReuse"/>
     </effect>
   </for>
 </skill>
 <skill id="3202" levels="3" name="Item Skill: Refresh">
-  <table name="#mpConsume_Init"> 11 13 14 </table>
+  <table name="#mpInitialConsume"> 11 13 14 </table>
   <table name="#mpConsume"> 43 49 55 </table>
   <table name="#reuseRate"> 0.95 0.93 0.9 </table> <!-- Needs check -->
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="600000"/>
@@ -73,10 +73,10 @@
   </for>
 </skill>
 <skill id="3204" levels="3" name="Item Skill: Reflect Damage">
-  <table name="#mpConsume_Init"> 5 6 7 </table>
+  <table name="#mpInitialConsume"> 5 6 7 </table>
   <table name="#mpConsume"> 20 24 28 </table>
   <table name="#reflectDam"> 5 6 7 </table>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="300000"/>
@@ -92,10 +92,10 @@
   </for>
 </skill>
 <skill id="3205" levels="2" name="Item Skill: Party Recall">
-  <table name="#mpConsume_Init"> 45 64 </table>
+  <table name="#mpInitialConsume"> 45 64 </table>
   <table name="#mpConsume"> 169 241 </table>
   <table name="#hitTime"> 20000 3500 </table>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
@@ -455,120 +455,120 @@
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
 <skill id="3238" levels="10" name="Item Skill: Prayer">
-  <table name="#rate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <table name="#gainHp"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <mul order="0x30" stat="gainHp" val="#rate"/>
+    <mul order="0x30" stat="gainHp" val="#gainHp"/>
   </for>
 </skill>
 <skill id="3239" levels="10" name="Item Skill: Mana Gain">
-  <table name="#rate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <table name="#gainMp"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <mul order="0x30" stat="gainMp" val="#rate"/>
+    <mul order="0x30" stat="gainMp" val="#gainMp"/>
   </for>
 </skill>
 <skill id="3240" levels="10" name="Item Skill: Might">
-  <table name="#rate"> 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.1 1.11 1.12 </table>
+  <table name="#pAtk"> 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.1 1.11 1.12 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <mul order="0x30" stat="pAtk" val="#rate"/>
+    <mul order="0x30" stat="pAtk" val="#pAtk"/>
   </for>
 </skill>
 <skill id="3241" levels="10" name="Item Skill: Empower">
-  <table name="#rate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <table name="#mAtk"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <mul order="0x30" stat="mAtk" val="#rate"/>
+    <mul order="0x30" stat="mAtk" val="#mAtk"/>
   </for>
 </skill>
 <skill id="3243" levels="10" name="Item Skill: Duel Might">
-  <table name="#rate"> 1.06 1.07 1.08 1.09 1.1 1.11 1.12 1.13 1.14 1.15 </table>
+  <table name="#pvpPhysDmg"> 1.06 1.07 1.08 1.09 1.1 1.11 1.12 1.13 1.14 1.15 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <mul order="0x30" stat="pvpPhysDmg" val="#rate"/>
+    <mul order="0x30" stat="pvpPhysDmg" val="#pvpPhysDmg"/>
   </for>
 </skill>
 <skill id="3244" levels="10" name="Item Skill: Shield">
-  <table name="#rate"> 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.1 1.11 1.12 </table>
+  <table name="#pDef"> 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.1 1.11 1.12 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <mul order="0x30" stat="pDef" val="#rate"/>
+    <mul order="0x30" stat="pDef" val="#pDef"/>
   </for>
 </skill>
 <skill id="3245" levels="10" name="Item Skill: Magic Barrier">
-  <table name="#rate"> 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.1 1.11 1.12 </table>
+  <table name="#mDef"> 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.1 1.11 1.12 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <mul order="0x30" stat="mDef" val="#rate"/>
+    <mul order="0x30" stat="mDef" val="#mDef"/>
   </for>
 </skill>
 <skill id="3246" levels="10" name="Item Skill: Heal Empower">
-  <table name="#rate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <table name="#giveHp"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <mul order="0x30" stat="giveHp" val="#rate"/>
+    <mul order="0x30" stat="giveHp" val="#giveHp"/>
   </for>
 </skill>
 <skill id="3247" levels="10" name="Item Skill: Agility">
-  <table name="#rate"> 1 1 1 2 2 2 3 3 4 4 </table>
+  <table name="#rEvas"> 1 1 1 2 2 2 3 3 4 4 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <add order="0x40" stat="rEvas" val="#rate"/>
+    <add order="0x40" stat="rEvas" val="#rEvas"/>
   </for>
 </skill>
 <skill id="3248" levels="10" name="Item Skill: Guidance">
-  <table name="#rate"> 1 1 1 2 2 2 3 3 4 4 </table>
+  <table name="#accCombat"> 1 1 1 2 2 2 3 3 4 4 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <add order="0x40" stat="accCombat" val="#rate"/>
+    <add order="0x40" stat="accCombat" val="#accCombat"/>
   </for>
 </skill>
 <skill id="3249" levels="10" name="Item Skill: Focus">
-  <table name="#rate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <table name="#rCrit"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <mul order="0x30" stat="rCrit" val="#rate"/>
+    <mul order="0x30" stat="rCrit" val="#rCrit"/>
   </for>
 </skill>
 <skill id="3250" levels="10" name="Item Skill: Wild Magic">
-  <table name="#rate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <table name="#mCritRate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <mul order="0x30" stat="mCritRate" val="#rate"/>
+    <mul order="0x30" stat="mCritRate" val="#mCritRate"/>
   </for>
 </skill>
 <skill id="3251" levels="10" name="Item Skill: Weight Limit">
-  <table name="#rate"> 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2 </table>
+  <table name="#maxLoad"> 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <mul order="0x30" stat="maxLoad" val="#rate"/>
+    <mul order="0x30" stat="maxLoad" val="#maxLoad"/>
   </for>
 </skill>
 <skill id="3252" levels="10" name="Item Skill: Kiss of Eva">
@@ -593,40 +593,41 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="3255" levels="3" name="Item Skill: Skill Clarity">
-  <table name="#Tab-Atk"> 0.95 0.92 0.9 </table>
+  <table name="#PhysicalMpConsumeRate"> 0.95 0.92 0.9 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <mul order="0x30" stat="PhysicalMpConsumeRate" val="#Tab-Atk"/>
+    <mul order="0x30" stat="PhysicalMpConsumeRate" val="#PhysicalMpConsumeRate"/>
   </for>
 </skill>
 <skill id="3256" levels="3" name="Item Skill: Spell Clarity">
-  <table name="#Tab-Atk"> 0.95 0.92 0.9 </table>
+  <table name="#MagicalMpConsumeRate"> 0.95 0.92 0.9 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <mul order="0x30" stat="MagicalMpConsumeRate" val="#Tab-Atk"/>
+    <mul order="0x30" stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate"/>
   </for>
 </skill>
 <skill id="3257" levels="3" name="Item Skill: Music Clarity">
-  <table name="#Tab-Atk"> 0.95 0.92 0.9 </table>
+  <table name="#DanceMpConsumeRate"> 0.95 0.92 0.9 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <mul order="0x30" stat="DanceMpConsumeRate" val="#Tab-Atk"/>
+    <mul order="0x30" stat="DanceMpConsumeRate" val="#DanceMpConsumeRate"/>
   </for>
 </skill>
 <skill id="3258" levels="3" name="Item Skill: Clarity">
-  <table name="#Tab-Atk"> 0.95 0.92 0.9 </table>
+  <table name="#MpConsumeRate"> 0.95 0.92 0.9 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <mul order="0x30" stat="MagicalMpConsumeRate" val="#Tab-Atk"/>
-    <mul order="0x30" stat="PhysicalMpConsumeRate" val="#Tab-Atk"/>
+    <mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRate"/>
+    <mul order="0x30" stat="PhysicalMpConsumeRate" val="#MpConsumeRate"/>
+    <mul order="0x30" stat="DanceMpConsumeRate" val="#MpConsumeRate"/>
   </for>
 </skill>
 <skill id="3259" levels="3" name="Item Skill: Reflect Damage">

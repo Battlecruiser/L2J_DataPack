@@ -1,96 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 <skill id="3100" levels="10" name="Item Skill: Sleep">
-  <table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+  <table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_MAGIC_OFFENSIVE"/>
-  <set name="activationChance" val="#chance"/>
+  <set name="activationChance" val="#activationChance"/>
   <set name="triggeredId" val="5170"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
 <skill id="3101" levels="10" name="Item Skill: Paralyze">
-  <table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+  <table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_MAGIC_OFFENSIVE"/>
-  <set name="activationChance" val="#chance"/>
+  <set name="activationChance" val="#activationChance"/>
   <set name="triggeredId" val="5171"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
 <skill id="3102" levels="10" name="Item Skill: Medusa">
-  <table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+  <table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_MAGIC_OFFENSIVE"/>
-  <set name="activationChance" val="#chance"/>
+  <set name="activationChance" val="#activationChance"/>
   <set name="triggeredId" val="5172"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
 <skill id="3103" levels="10" name="Item Skill: Fear">
-  <table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+  <table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_MAGIC_OFFENSIVE"/>
-  <set name="activationChance" val="#chance"/>
+  <set name="activationChance" val="#activationChance"/>
   <set name="triggeredId" val="5173"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
 <skill id="3104" levels="10" name="Item Skill: Poison">
-  <table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+  <table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_MAGIC_OFFENSIVE"/>
-  <set name="activationChance" val="#chance"/>
+  <set name="activationChance" val="#activationChance"/>
   <set name="triggeredId" val="5174"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
 <skill id="3105" levels="10" name="Item Skill: Bleed">
-  <table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+  <table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_MAGIC_OFFENSIVE"/>
-  <set name="activationChance" val="#chance"/>
+  <set name="activationChance" val="#activationChance"/>
   <set name="triggeredId" val="5175"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
 <skill id="3106" levels="10" name="Item Skill: Silence">
-  <table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+  <table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_MAGIC_OFFENSIVE"/>
-  <set name="activationChance" val="#chance"/>
+  <set name="activationChance" val="#activationChance"/>
   <set name="triggeredId" val="5176"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
 <skill id="3107" levels="10" name="Item Skill: Doom">
-  <table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+  <table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_MAGIC_OFFENSIVE"/>
-  <set name="activationChance" val="#chance"/>
+  <set name="activationChance" val="#activationChance"/>
   <set name="triggeredId" val="5177"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
 <skill id="3108" levels="10" name="Item Skill: Aggression Up">
   <table name="#power"> 438 467 495 523 549 574 597 617 635 659 </table>
-  <table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+  <table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="target" val="TARGET_ONE"/>
@@ -100,14 +100,14 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="power" val="#power"/>
   <set name="chanceType" val="ON_CRIT"/>
-  <set name="activationChance" val="#chance"/>
+  <set name="activationChance" val="#activationChance"/>
   <for>
     <effect name="TargetMe" time="3" val="0"/>
   </for>
 </skill>
 <skill id="3109" levels="10" name="Item Skill: Aggression Down">
   <table name="#power"> 219 234 248 262 275 287 299 309 318 330 </table>
-  <table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+  <table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="target" val="TARGET_ONE"/>
@@ -117,11 +117,11 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="power" val="#power"/>
   <set name="chanceType" val="ON_CRIT"/>
-  <set name="activationChance" val="#chance"/>
+  <set name="activationChance" val="#activationChance"/>
 </skill>
 <skill id="3110" levels="10" name="Item Skill: Mana Burn">
   <table name="#power"> 49 53 57 61 66 70 74 78 82 88 </table>
-  <table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+  <table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
@@ -129,148 +129,148 @@
   <set name="skillType" val="MANADAM"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_CRIT"/>
-  <set name="activationChance" val="#chance"/>
+  <set name="activationChance" val="#activationChance"/>
   <set name="isMagic" val="true"/>
 </skill>
 <skill id="3111" levels="10" name="Item Skill: Slow">
-  <table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+  <table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_CRIT"/>
-  <set name="activationChance" val="#chance"/>
+  <set name="activationChance" val="#activationChance"/>
   <set name="triggeredId" val="5166"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
 <skill id="3112" levels="10" name="Item Skill: Winter">
-  <table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+  <table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_CRIT"/>
-  <set name="activationChance" val="#chance"/>
+  <set name="activationChance" val="#activationChance"/>
   <set name="triggeredId" val="5167"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
 <skill id="3113" levels="10" name="Item Skill: Stun">
-  <table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+  <table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_CRIT"/>
-  <set name="activationChance" val="#chance"/>
+  <set name="activationChance" val="#activationChance"/>
   <set name="triggeredId" val="5168"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
 <skill id="3114" levels="10" name="Item Skill: Hold">
-  <table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+  <table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_CRIT"/>
-  <set name="activationChance" val="#chance"/>
+  <set name="activationChance" val="#activationChance"/>
   <set name="triggeredId" val="5169"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
 <skill id="3115" levels="10" name="Item Skill: Sleep">
-  <table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+  <table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_CRIT"/>
-  <set name="activationChance" val="#chance"/>
+  <set name="activationChance" val="#activationChance"/>
   <set name="triggeredId" val="5170"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
 <skill id="3116" levels="10" name="Item Skill: Paralyze">
-  <table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+  <table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_CRIT"/>
-  <set name="activationChance" val="#chance"/>
+  <set name="activationChance" val="#activationChance"/>
   <set name="triggeredId" val="5171"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
 <skill id="3117" levels="10" name="Item Skill: Medusa">
-  <table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+  <table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_CRIT"/>
-  <set name="activationChance" val="#chance"/>
+  <set name="activationChance" val="#activationChance"/>
   <set name="triggeredId" val="5172"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
 <skill id="3118" levels="10" name="Item Skill: Fear">
-  <table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+  <table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_CRIT"/>
-  <set name="activationChance" val="#chance"/>
+  <set name="activationChance" val="#activationChance"/>
   <set name="triggeredId" val="5173"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
 <skill id="3119" levels="10" name="Item Skill: Poison">
-  <table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+  <table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_CRIT"/>
-  <set name="activationChance" val="#chance"/>
+  <set name="activationChance" val="#activationChance"/>
   <set name="triggeredId" val="5174"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
 <skill id="3120" levels="10" name="Item Skill: Bleed">
-  <table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+  <table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_CRIT"/>
-  <set name="activationChance" val="#chance"/>
+  <set name="activationChance" val="#activationChance"/>
   <set name="triggeredId" val="5175"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
 <skill id="3121" levels="10" name="Item Skill: Silence">
-  <table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+  <table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_CRIT"/>
-  <set name="activationChance" val="#chance"/>
+  <set name="activationChance" val="#activationChance"/>
   <set name="triggeredId" val="5176"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
 <skill id="3122" levels="10" name="Item Skill: Doom">
-  <table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+  <table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
   <table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="chanceType" val="ON_CRIT"/>
-  <set name="activationChance" val="#chance"/>
+  <set name="activationChance" val="#activationChance"/>
   <set name="triggeredId" val="5177"/>
   <set name="triggeredLevel" val="#triggeredLevel"/>
 </skill>
 <skill id="3123" levels="10" name="Item Skill: Heal">
-  <table name="#mpConsume_Init"> 10 11 11 12 13 14 14 15 16 17 </table>
+  <table name="#mpInitialConsume"> 10 11 11 12 13 14 14 15 16 17 </table>
   <table name="#mpConsume"> 38 42 44 47 51 51 55 58 61 65 </table>
   <table name="#power"> 308 337 365 393 421 448 474 498 520 552 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_SELF"/>
@@ -281,12 +281,12 @@
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="3124" levels="10" name="Item Skill: Blessed Body">
-  <table name="#mpConsume_Init"> 10 11 11 12 13 14 14 15 16 17 </table>
+  <table name="#mpInitialConsume"> 10 11 11 12 13 14 14 15 16 17 </table>
   <table name="#mpConsume"> 38 42 44 47 51 51 55 58 61 65 </table>
-  <table name="#Tab-maxHp"> 30 60 90 120 150 180 210 240 270 300 </table>
+  <table name="#maxHp"> 30 60 90 120 150 180 210 240 270 300 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="300000"/>
@@ -299,18 +299,18 @@
   <set name="staticReuse" val="true"/>
   <for>
     <effect name="Buff" time="120" val="0">
-      <add order="0x40" stat="maxHp" val="#Tab-maxHp"/>
+      <add order="0x40" stat="maxHp" val="#maxHp"/>
     </effect>
   </for>
 </skill>
 <skill id="3125" levels="10" name="Item Skill: Battle Roar">
-  <table name="#mpConsume_Init"> 10 11 11 12 13 14 14 15 16 17 </table>
+  <table name="#mpInitialConsume"> 10 11 11 12 13 14 14 15 16 17 </table>
   <table name="#mpConsume"> 38 42 44 47 51 51 55 58 61 65 </table>
-  <table name="#Tab-maxHp"> 30 60 90 120 150 180 210 240 270 300 </table>
+  <table name="#maxHp"> 30 60 90 120 150 180 210 240 270 300 </table>
   <table name="#reg-HP"> 30 60 90 120 150 180 210 240 270 300 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#reg-HP"/>
   <set name="target" val="TARGET_SELF"/>
@@ -321,17 +321,17 @@
   <set name="staticReuse" val="true"/>
   <for>
     <effect name="Buff" time="120" val="0">
-      <add order="0x40" stat="maxHp" val="#Tab-maxHp"/>
+      <add order="0x40" stat="maxHp" val="#maxHp"/>
     </effect>
   </for>
 </skill>
 <skill id="3126" levels="10" name="Item Skill: Prayer">
-  <table name="#mpConsume_Init"> 10 11 11 12 13 14 14 15 16 17 </table>
+  <table name="#mpInitialConsume"> 10 11 11 12 13 14 14 15 16 17 </table>
   <table name="#mpConsume"> 38 42 44 47 51 51 55 58 61 65 </table>
-  <table name="#tab-gainHp"> 1.08 1.1 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <table name="#gainHp"> 1.08 1.1 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="300000"/>
@@ -342,17 +342,17 @@
   <set name="staticReuse" val="true"/>
   <for>
     <effect name="Buff" time="120" val="0">
-      <mul order="0x30" stat="gainHp" val="#tab-gainHp"/>
+      <mul order="0x30" stat="gainHp" val="#gainHp"/>
     </effect>
   </for>
 </skill>
 <skill id="3127" levels="10" name="Item Skill: Recharge">
-  <table name="#mpConsume_Init"> 10 11 11 12 13 14 14 15 16 17 </table>
+  <table name="#mpInitialConsume"> 10 11 11 12 13 14 14 15 16 17 </table>
   <table name="#mpConsume"> 38 42 44 47 51 51 55 58 61 65 </table>
   <table name="#power"> 41 44 47 50 53 57 59 62 65 69 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -370,12 +370,12 @@
   </cond>
 </skill>
 <skill id="3128" levels="10" name="Item Skill: Blessed Soul">
-  <table name="#mpConsume_Init"> 10 11 11 12 13 14 14 15 16 17 </table>
+  <table name="#mpInitialConsume"> 10 11 11 12 13 14 14 15 16 17 </table>
   <table name="#mpConsume"> 38 42 44 47 51 51 55 58 61 65 </table>
-  <table name="#Tab-maxMp"> 20 40 60 80 100 120 140 160 180 200 </table>
+  <table name="#maxMp"> 20 40 60 80 100 120 140 160 180 200 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="300000"/>
@@ -386,17 +386,17 @@
   <set name="staticReuse" val="true"/>
   <for>
     <effect name="Buff" time="120" val="0">
-      <add order="0x40" stat="maxMp" val="#Tab-maxMp"/>
+      <add order="0x40" stat="maxMp" val="#maxMp"/>
     </effect>
   </for>
 </skill>
 <skill id="3129" levels="10" name="Item Skill: Mana Gain">
-  <table name="#mpConsume_Init"> 10 11 11 12 13 14 14 15 16 17 </table>
+  <table name="#mpInitialConsume"> 10 11 11 12 13 14 14 15 16 17 </table>
   <table name="#mpConsume"> 38 42 44 47 51 51 55 58 61 65 </table>
-  <table name="#Tab-maxMp"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <table name="#maxMp"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="300000"/>
@@ -407,19 +407,19 @@
   <set name="staticReuse" val="true"/>
   <for>
     <effect name="Buff" time="120" val="0">
-      <mul order="0x30" stat="gainMp" val="#Tab-maxMp"/>
+      <mul order="0x30" stat="gainMp" val="#maxMp"/>
     </effect>
   </for>
 </skill>
 <skill id="3130" levels="10" name="Item Skill: Ritual">
-  <table name="#mpConsume_Init"> 10 11 11 12 13 14 14 15 16 17 </table>
+  <table name="#mpInitialConsume"> 10 11 11 12 13 14 14 15 16 17 </table>
   <table name="#mpConsume"> 38 42 44 47 51 51 55 58 61 65 </table>
-  <table name="#rateCp"> 264 289 313 337 361 384 406 428 446 473 </table>
+  <table name="#power"> 264 289 313 337 361 384 406 428 446 473 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="#rateCp"/>
+  <set name="power" val="#power"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="5000"/>
   <set name="reuseDelay" val="20000"/>
@@ -428,12 +428,12 @@
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="3131" levels="10" name="Item Skill: Cheer">
-  <table name="#mpConsume_Init"> 10 11 11 12 13 14 14 15 16 17 </table>
+  <table name="#mpInitialConsume"> 10 11 11 12 13 14 14 15 16 17 </table>
   <table name="#mpConsume"> 38 42 44 47 51 51 55 58 61 65 </table>
-  <table name="#Tab-maxCp"> 30 60 90 120 150 180 210 240 270 300 </table>
+  <table name="#maxCp"> 30 60 90 120 150 180 210 240 270 300 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="300000"/>
@@ -444,17 +444,17 @@
   <set name="staticReuse" val="true"/>
   <for>
     <effect name="Buff" time="120" val="0">
-      <add order="0x40" stat="maxCp" val="#Tab-maxCp"/>
+      <add order="0x40" stat="maxCp" val="#maxCp"/>
     </effect>
   </for>
 </skill>
 <skill id="3132" levels="10" name="Item Skill: Might">
-  <table name="#mpConsume_Init"> 10 11 11 12 13 14 14 15 16 17 </table>
+  <table name="#mpInitialConsume"> 10 11 11 12 13 14 14 15 16 17 </table>
   <table name="#mpConsume"> 38 42 44 47 51 51 55 58 61 65 </table>
-  <table name="#rate"> 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.1 1.11 1.12 </table>
+  <table name="#pAtk"> 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.1 1.11 1.12 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="300000"/>
@@ -465,17 +465,17 @@
   <set name="staticReuse" val="true"/>
   <for>
     <effect name="Buff" time="120" val="0">
-      <mul order="0x30" stat="pAtk" val="#rate"/>
+      <mul order="0x30" stat="pAtk" val="#pAtk"/>
     </effect>
   </for>
 </skill>
 <skill id="3133" levels="10" name="Item Skill: Empower">
-  <table name="#mpConsume_Init"> 10 11 11 12 13 14 14 15 16 17 </table>
+  <table name="#mpInitialConsume"> 10 11 11 12 13 14 14 15 16 17 </table>
   <table name="#mpConsume"> 38 42 44 47 51 51 55 58 61 65 </table>
-  <table name="#rate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <table name="#mAtk"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="300000"/>
@@ -486,17 +486,17 @@
   <set name="staticReuse" val="true"/>
   <for>
     <effect name="Buff" time="120" val="0">
-      <mul order="0x30" stat="mAtk" val="#rate"/>
+      <mul order="0x30" stat="mAtk" val="#mAtk"/>
     </effect>
   </for>
 </skill>
 <skill id="3134" levels="10" name="Item Skill: Duel Might">
-  <table name="#mpConsume_Init"> 10 11 11 12 13 14 14 15 16 17 </table>
+  <table name="#mpInitialConsume"> 10 11 11 12 13 14 14 15 16 17 </table>
   <table name="#mpConsume"> 38 42 44 47 51 51 55 58 61 65 </table>
-  <table name="#rate"> 1.06 1.07 1.08 1.09 1.1 1.11 1.12 1.13 1.14 1.15 </table>
+  <table name="#pvpPhysDmg"> 1.06 1.07 1.08 1.09 1.1 1.11 1.12 1.13 1.14 1.15 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="300000"/>
@@ -508,17 +508,17 @@
   <set name="staticReuse" val="true"/>
   <for>
     <effect name="Buff" time="120" val="0">
-      <mul order="0x30" stat="pvpPhysDmg" val="#rate"/>
+      <mul order="0x30" stat="pvpPhysDmg" val="#pvpPhysDmg"/>
     </effect>
   </for>
 </skill>
 <skill id="3135" levels="10" name="Item Skill: Shield">
-  <table name="#mpConsume_Init"> 10 11 11 12 13 14 14 15 16 17 </table>
+  <table name="#mpInitialConsume"> 10 11 11 12 13 14 14 15 16 17 </table>
   <table name="#mpConsume"> 38 42 44 47 51 51 55 58 61 65 </table>
-  <table name="#rate"> 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.1 1.11 1.12 </table>
+  <table name="#pDef"> 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.1 1.11 1.12 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="300000"/>
@@ -530,17 +530,17 @@
   <set name="staticReuse" val="true"/>
   <for>
     <effect name="Buff" time="120" val="0">
-      <mul order="0x30" stat="pDef" val="#rate"/>
+      <mul order="0x30" stat="pDef" val="#pDef"/>
     </effect>
   </for>
 </skill>
 <skill id="3136" levels="10" name="Item Skill: Magic Barrier">
-  <table name="#mpConsume_Init"> 10 11 11 12 13 14 14 15 16 17 </table>
+  <table name="#mpInitialConsume"> 10 11 11 12 13 14 14 15 16 17 </table>
   <table name="#mpConsume"> 38 42 44 47 51 51 55 58 61 65 </table>
-  <table name="#rate"> 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.1 1.11 1.12 </table>
+  <table name="#mDef"> 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.1 1.11 1.12 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="300000"/>
@@ -552,18 +552,18 @@
   <set name="staticReuse" val="true"/>
   <for>
     <effect name="Buff" time="120" val="0">
-      <mul order="0x30" stat="mDef" val="#rate"/>
+      <mul order="0x30" stat="mDef" val="#mDef"/>
     </effect>
   </for>
 </skill>
 <skill id="3137" levels="10" name="Item Skill: Duel Weakness">
-  <table name="#mpConsume_Init"> 10 11 11 12 13 14 14 15 16 17 </table>
+  <table name="#mpInitialConsume"> 10 11 11 12 13 14 14 15 16 17 </table>
   <table name="#mpConsume"> 38 42 44 47 51 51 55 58 61 65 </table>
-  <table name="#rate"> 0.94 0.93 0.92 0.91 0.9 0.89 0.88 0.87 0.86 0.85 </table>
+  <table name="#pvpPhysDmg"> 0.94 0.93 0.92 0.91 0.9 0.89 0.88 0.87 0.86 0.85 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="40"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="120000"/>
@@ -577,17 +577,17 @@
   <set name="staticReuse" val="true"/>
   <for>
     <effect name="Debuff" time="30" val="0">
-      <mul order="0x30" stat="pvpPhysDmg" val="#rate"/>
+      <mul order="0x30" stat="pvpPhysDmg" val="#pvpPhysDmg"/>
     </effect>
   </for>
 </skill>
 <skill id="3138" levels="10" name="Item Skill: Heal Empower">
-  <table name="#mpConsume_Init"> 10 11 11 12 13 14 14 15 16 17 </table>
+  <table name="#mpInitialConsume"> 10 11 11 12 13 14 14 15 16 17 </table>
   <table name="#mpConsume"> 38 42 44 47 51 51 55 58 61 65 </table>
-  <table name="#rate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <table name="#giveHp"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="300000"/>
@@ -599,17 +599,17 @@
   <set name="staticReuse" val="true"/>
   <for>
     <effect name="Buff" time="120" val="0">
-      <mul order="0x30" stat="giveHp" val="#rate"/>
+      <mul order="0x30" stat="giveHp" val="#giveHp"/>
     </effect>
   </for>
 </skill>
 <skill id="3139" levels="10" name="Item Skill: Agility">
-  <table name="#mpConsume_Init"> 10 11 11 12 13 14 14 15 16 17 </table>
+  <table name="#mpInitialConsume"> 10 11 11 12 13 14 14 15 16 17 </table>
   <table name="#mpConsume"> 38 42 44 47 51 51 55 58 61 65 </table>
-  <table name="#rate"> 1 1 1 2 2 2 3 3 4 4 </table>
+  <table name="#rEvas"> 1 1 1 2 2 2 3 3 4 4 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="300000"/>
@@ -621,17 +621,17 @@
   <set name="staticReuse" val="true"/>
   <for>
     <effect name="Buff" time="120" val="0">
-      <add order="0x40" stat="rEvas" val="#rate"/>
+      <add order="0x40" stat="rEvas" val="#rEvas"/>
     </effect>
   </for>
 </skill>
 <skill id="3140" levels="10" name="Item Skill: Guidance">
-  <table name="#mpConsume_Init"> 10 11 11 12 13 14 14 15 16 17 </table>
+  <table name="#mpInitialConsume"> 10 11 11 12 13 14 14 15 16 17 </table>
   <table name="#mpConsume"> 38 42 44 47 51 51 55 58 61 65 </table>
-  <table name="#rate"> 1 1 1 2 2 2 3 3 4 4 </table>
+  <table name="#accCombat"> 1 1 1 2 2 2 3 3 4 4 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="300000"/>
@@ -643,17 +643,17 @@
   <set name="staticReuse" val="true"/>
   <for>
     <effect name="Buff" time="120" val="0">
-      <add order="0x40" stat="accCombat" val="#rate"/>
+      <add order="0x40" stat="accCombat" val="#accCombat"/>
     </effect>
   </for>
 </skill>
 <skill id="3141" levels="10" name="Item Skill: Focus">
-  <table name="#mpConsume_Init"> 10 11 11 12 13 14 14 15 16 17 </table>
+  <table name="#mpInitialConsume"> 10 11 11 12 13 14 14 15 16 17 </table>
   <table name="#mpConsume"> 38 42 44 47 51 51 55 58 61 65 </table>
-  <table name="#rate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <table name="#rCrit"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="300000"/>
@@ -665,17 +665,17 @@
   <set name="staticReuse" val="true"/>
   <for>
     <effect name="Buff" time="120" val="0">
-      <mul order="0x30" stat="rCrit" val="#rate"/>
+      <mul order="0x30" stat="rCrit" val="#rCrit"/>
     </effect>
   </for>
 </skill>
 <skill id="3142" levels="10" name="Item Skill: Wild Magic">
-  <table name="#mpConsume_Init"> 10 11 11 12 13 14 14 15 16 17 </table>
+  <table name="#mpInitialConsume"> 10 11 11 12 13 14 14 15 16 17 </table>
   <table name="#mpConsume"> 38 42 44 47 51 51 55 58 61 65 </table>
-  <table name="#rate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <table name="#mCritRate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="300000"/>
@@ -687,17 +687,17 @@
   <set name="staticReuse" val="true"/>
   <for>
     <effect name="Buff" time="120" val="0">
-      <mul order="0x30" stat="mCritRate" val="#rate"/>
+      <mul order="0x30" stat="mCritRate" val="#mCritRate"/>
     </effect>
   </for>
 </skill>
 <skill id="3143" levels="10" name="Item Skill: Kiss of Eva">
-  <table name="#mpConsume_Init"> 10 11 11 12 13 14 14 15 16 17 </table>
+  <table name="#mpInitialConsume"> 10 11 11 12 13 14 14 15 16 17 </table>
   <table name="#mpConsume"> 38 42 44 47 51 51 55 58 61 65 </table>
   <table name="#breath"> 2.2 2.4 2.6 2.8 3 3.2 3.4 3.6 3.8 4 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="300000"/>
@@ -752,12 +752,12 @@
   <set name="staticReuse" val="true"/>
 </skill>
 <skill id="3148" levels="10" name="Item Skill: Vampiric Rage">
-  <table name="#mpConsume_Init"> 10 11 11 12 13 14 14 15 16 17 </table>
+  <table name="#mpInitialConsume"> 10 11 11 12 13 14 14 15 16 17 </table>
   <table name="#mpConsume"> 38 42 44 47 51 51 55 58 61 65 </table>
   <table name="#absorbDam"> 2 2.5 3 3.5 4 4.5 5 5.5 6 6.5 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="300000"/>
@@ -774,14 +774,14 @@
   </for>
 </skill>
 <skill id="3149" levels="10" name="Item Skill: Aggression">
-  <table name="#mpConsume_Init"> 4 5 5 5 6 6 6 6 7 7 </table>
+  <table name="#mpInitialConsume"> 4 5 5 5 6 6 6 6 7 7 </table>
   <table name="#mpConsume"> 17 17 19 20 21 23 24 25 26 28 </table>
   <table name="#power"> 438 467 495 523 549 574 597 617 635 659 </table>
   <table name="#castRange"> 400 400 400 400 400 400 400 400 400 400 </table>
   <table name="#effectRange"> 900  900  900  900  900  900  900  900  900  900 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -797,12 +797,12 @@
   </for>
 </skill>
 <skill id="3150" levels="10" name="Item Skill: Charm">
-  <table name="#mpConsume_Init"> 10 11 11 12 13 14 14 15 16 17 </table>
+  <table name="#mpInitialConsume"> 10 11 11 12 13 14 14 15 16 17 </table>
   <table name="#mpConsume"> 38 42 44 47 51 51 55 58 61 65 </table>
   <table name="#power"> 219 234 248 262 275 287 299 309 318 330 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -816,10 +816,10 @@
   <set name="effectRange" val="1100"/>
 </skill>
 <skill id="3151" levels="10" name="Item Skill: Peace">
-  <table name="#mpConsume_Init"> 10 11 11 12 13 14 14 15 16 17 </table>
+  <table name="#mpInitialConsume"> 10 11 11 12 13 14 14 15 16 17 </table>
   <table name="#mpConsume"> 38 42 44 47 51 51 55 58 61 65 </table>>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="40"/>
   <set name="target" val="TARGET_ONE"/>
@@ -832,10 +832,10 @@
   <set name="effectRange" val="1100"/>
 </skill>
 <skill id="3152" levels="10" name="Item Skill: Trick">
-  <table name="#mpConsume_Init"> 4 5 5 5 6 6 6 6 7 7 </table>
+  <table name="#mpInitialConsume"> 4 5 5 5 6 6 6 6 7 7 </table>
   <table name="#mpConsume"> 17 17 19 20 21 23 24 25 26 28 </table>
   <table name="#magicLvl"> 49 52 55 58 60 62 64 66 68 70 72 74 </table>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="50"/>
@@ -851,12 +851,12 @@
   </for>
 </skill>
 <skill id="3153" levels="10" name="Item Skill: Vampiric Touch">
-  <table name="#mpConsume_Init"> 15 16 18 19 20 21 22 23 24 26 </table>
+  <table name="#mpInitialConsume"> 15 16 18 19 20 21 22 23 24 26 </table>
   <table name="#mpConsume"> 59 63 67 71 77 81 85 89 93 98 </table>
   <table name="#power"> 48 53 57 61 66 70 74 78 82 88 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -871,12 +871,12 @@
   <set name="absorbPart" val="0.4"/> <!-- absorbs 40% of damage -->
 </skill>
 <skill id="3154" levels="10" name="Item Skill: Mana Burn">
-  <table name="#mpConsume_Init"> 13 14 15 16 17 18 19 20 20 22 </table>
+  <table name="#mpInitialConsume"> 13 14 15 16 17 18 19 20 20 22 </table>
   <table name="#mpConsume"> 49 53 55 59 63 67 70 74 78 82 </table>
   <table name="#power"> 68 73 79 84 90 96 101 107 112 120 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="reuseDelay" val="13000"/>
@@ -889,17 +889,17 @@
   <set name="isMagic" val="true"/>
 </skill>
 <skill id="3155" levels="10" name="Item Skill: Unlock">
-  <table name="#mpConsume_Init"> 4 5 5 5 6 6 6 6 7 7 </table>
+  <table name="#mpInitialConsume"> 4 5 5 5 6 6 6 6 7 7 </table>
   <table name="#mpConsume"> 17 17 19 20 21 23 24 25 26 28 </table>
   <table name="#itemConsumeCount"> 2 2 3 3 4 5 6 7 8 10 11 13 15 17 </table>
   <table name="#magicLvl"> 20 24 28 32 36 40 44 48 52 56 60 64 68 72 </table>
-  <table name="#chance"> 30 50 75 100 100 100 100 100 100 100 100 100 100 100 </table>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <table name="#activationChance"> 30 50 75 100 100 100 100 100 100 100 100 100 100 100 </table>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="itemConsumeId" val="1661"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
-  <set name="power" val="#chance"/>
+  <set name="power" val="#activationChance"/>
   <set name="target" val="TARGET_UNLOCKABLE"/>
   <set name="reuseDelay" val="120000"/>
   <set name="hitTime" val="2500"/>
@@ -946,14 +946,14 @@
   </for>
 </skill>
 <skill id="3159" levels="3" name="Item Skill: Stealth">
-  <table name="#mpConsume_Init"> 6 6 7 </table>
+  <table name="#mpInitialConsume"> 6 6 7 </table>
   <table name="#mpConsume"> 21 25 27 </table>
   <table name="#pAtk"> 1.2 1.3 1.4 </table>
   <table name="#accCombat"> 1.1 1.15 1.2 </table>
   <table name="#rCrit"> 1.1 1.2 1.3 </table>
   <table name="#pDef"> 1.1 1.2 1.3 </table>
   <table name="#mDef"> 1.15 1.25 1.35 </table>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="hitTime" val="2000"/>
   <set name="target" val="TARGET_SELF"/>
@@ -973,12 +973,12 @@
   </for>
 </skill>
 <skill id="3160" levels="9" name="Item Skill: Resurrection">
-  <table name="#mpConsume_Init"> 11 11 12 13 14 14 15 16 17 </table>
+  <table name="#mpInitialConsume"> 11 11 12 13 14 14 15 16 17 </table>
   <table name="#mpConsume"> 42 44 47 51 51 55 58 61 65 </table>
   <table name="#power"> 0 20 30 40 50 55 60 65 70 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_CORPSE_PLAYER"/>
@@ -993,10 +993,10 @@
   <set name="staticReuse" val="true"/>
 </skill>
 <skill id="3161" levels="3" name="Item Skill: Skill Clarity">
-  <table name="#Tab-Atk"> 0.95 0.92 0.9 </table>
-  <table name="#mpConsume_Init"> 11 13 14 </table>
+  <table name="#PhysicalMpConsumeRate"> 0.95 0.92 0.9 </table>
+  <table name="#mpInitialConsume"> 11 13 14 </table>
   <table name="#mpConsume"> 43 49 55 </table>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="hitTime" val="4000"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1007,14 +1007,14 @@
   <set name="staticHitTime" val="true"/>
   <set name="staticReuse" val="true"/>
   <for>
-    <mul order="0x30" stat="PhysicalMpConsumeRate" val="#Tab-Atk"/>
+    <mul order="0x30" stat="PhysicalMpConsumeRate" val="#PhysicalMpConsumeRate"/>
   </for>
 </skill>
 <skill id="3162" levels="3" name="Item Skill: Spell Clarity">
-  <table name="#Tab-Atk"> 0.95 0.92 0.9 </table>
-  <table name="#mpConsume_Init"> 11 13 14 </table>
+  <table name="#MagicalMpConsumeRate"> 0.95 0.92 0.9 </table>
+  <table name="#mpInitialConsume"> 11 13 14 </table>
   <table name="#mpConsume"> 43 49 55 </table>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="hitTime" val="4000"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1025,14 +1025,14 @@
   <set name="staticHitTime" val="true"/>
   <set name="staticReuse" val="true"/>
   <for>
-    <mul order="0x30" stat="MagicalMpConsumeRate" val="#Tab-Atk"/>
+    <mul order="0x30" stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate"/>
   </for>
 </skill>
 <skill id="3163" levels="3" name="Item Skill: Music Clarity">
-  <table name="#Tab-Atk"> 0.95 0.92 0.9 </table>
-  <table name="#mpConsume_Init"> 11 13 14 </table>
+  <table name="#DanceMpConsumeRate"> 0.95 0.92 0.9 </table>
+  <table name="#mpInitialConsume"> 11 13 14 </table>
   <table name="#mpConsume"> 43 49 55 </table>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="hitTime" val="4000"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1043,14 +1043,14 @@
   <set name="staticHitTime" val="true"/>
   <set name="staticReuse" val="true"/>
   <for>
-    <mul order="0x30" stat="DanceMpConsumeRate" val="#Tab-Atk"/>
+    <mul order="0x30" stat="DanceMpConsumeRate" val="#DanceMpConsumeRate"/>
   </for>
 </skill>
 <skill id="3164" levels="3" name="Item Skill: Clarity">
-  <table name="#Tab-Atk"> 0.95 0.92 0.9 </table>
-  <table name="#mpConsume_Init"> 11 13 14 </table>
+  <table name="#MpConsumeRate"> 0.95 0.92 0.9 </table>
+  <table name="#mpInitialConsume"> 11 13 14 </table>
   <table name="#mpConsume"> 43 49 55 </table>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="hitTime" val="4000"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1061,18 +1061,18 @@
   <set name="staticHitTime" val="true"/>
   <set name="staticReuse" val="true"/>
   <for>
-    <mul order="0x30" stat="PhysicalMpConsumeRate" val="#Tab-Atk"/>
-    <mul order="0x30" stat="MagicalMpConsumeRate" val="#Tab-Atk"/>
-    <mul order="0x30" stat="DanceMpConsumeRate" val="#Tab-Atk"/>
+    <mul order="0x30" stat="PhysicalMpConsumeRate" val="#MpConsumeRate"/>
+    <mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRate"/>
+    <mul order="0x30" stat="DanceMpConsumeRate" val="#MpConsumeRate"/>
   </for>
 </skill>
 <skill id="3165" levels="10" name="Item Skill: Prominence">
-  <table name="#mpConsume_Init"> 9 9 10 10 11 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#power"> 61 66 72 77 82 87 92 97 102 110 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1086,12 +1086,12 @@
   <set name="effectRange" val="1400"/>
 </skill>
 <skill id="3167" levels="10" name="Item Skill: Hydro Blast">
-  <table name="#mpConsume_Init"> 9 9 10 10 11 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#power"> 61 66 72 77 82 78 92 78 102 110 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1105,12 +1105,12 @@
   <set name="effectRange" val="1400"/>
 </skill>
 <skill id="3168" levels="10" name="Item Skill: Hurricane">
-  <table name="#mpConsume_Init"> 9 9 10 10 11 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#power"> 61 66 72 77 82 87 92 97 102 110 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1124,12 +1124,12 @@
   <set name="effectRange" val="1400"/>
 </skill>
 <skill id="3169" levels="10" name="Item Skill: Stone">
-  <table name="#mpConsume_Init"> 9 9 10 10 11 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#power"> 61 66 72 77 82 87 92 97 102 110 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="element" val="4"/> <!-- Earth -->
   <set name="power" val="#power"/>
@@ -1143,12 +1143,12 @@
   <set name="effectRange" val="1400"/>
 </skill>
 <skill id="3170" levels="10" name="Item Skill: Solar Flare">
-  <table name="#mpConsume_Init"> 9 9 10 10 11 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#power"> 61 66 72 77 82 87 92 97 102 110 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1162,12 +1162,12 @@
   <set name="effectRange" val="1400"/>
 </skill>
 <skill id="3171" levels="10" name="Item Skill: Shadow Flare">
-  <table name="#mpConsume_Init"> 9 9 10 10 11 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#power"> 61 66 72 77 82 87 92 97 102 110 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1181,12 +1181,12 @@
   <set name="effectRange" val="1400"/>
 </skill>
 <skill id="3172" levels="10" name="Item Skill: Aura Flare">
-  <table name="#mpConsume_Init"> 9 9 10 10 11 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#power"> 61 66 72 77 82 87 92 97 102 110 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1199,13 +1199,13 @@
   <set name="effectRange" val="1400"/>
 </skill>
 <skill id="3173" levels="10" name="Item Skill: Prominence">
-  <table name="#mpConsume_Init"> 9 9 10 10 11 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="element" val="1"/> <!-- Fire -->
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AREA"/>
@@ -1219,13 +1219,13 @@
   <set name="effectRange" val="1000"/>
 </skill>
 <skill id="3174" levels="10" name="Item Skill: Hydro Blast">
-  <table name="#mpConsume_Init"> 9 9 10 10 11 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="element" val="2"/> <!-- Water -->
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AREA"/>
@@ -1239,13 +1239,13 @@
   <set name="effectRange" val="1000"/>
 </skill>
 <skill id="3175" levels="10" name="Item Skill: Hurricane">
-  <table name="#mpConsume_Init"> 9 9 10 10 11 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="element" val="3"/> <!-- Wind -->
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AREA"/>
@@ -1259,12 +1259,12 @@
   <set name="effectRange" val="1000"/>
 </skill>
 <skill id="3176" levels="10" name="Item Skill: Stone">
-  <table name="#mpConsume_Init"> 9 9 10 10 11 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AREA"/>
@@ -1278,13 +1278,13 @@
   <set name="effectRange" val="1000"/>
 </skill>
 <skill id="3177" levels="10" name="Item Skill: Solar Flare">
-  <table name="#mpConsume_Init"> 9 9 10 10 11 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="element" val="5"/> <!-- Holy -->
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AREA"/>
@@ -1298,13 +1298,13 @@
   <set name="effectRange" val="1000"/>
 </skill>
 <skill id="3178" levels="10" name="Item Skill: Shadow Flare">
-  <table name="#mpConsume_Init"> 9 9 10 10 11 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="element" val="6"/> <!-- Dark -->
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AREA"/>
@@ -1318,12 +1318,12 @@
   <set name="effectRange" val="1000"/>
 </skill>
 <skill id="3179" levels="10" name="Item Skill: Aura Flare">
-  <table name="#mpConsume_Init"> 9 9 10 10 11 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AREA"/>
@@ -1337,13 +1337,13 @@
   <set name="effectRange" val="1000"/>
 </skill>
 <skill id="3180" levels="10" name="Item Skill: Prominence">
-  <table name="#mpConsume_Init"> 9 9 10 10 11 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="element" val="1"/> <!-- Fire -->
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AURA"/>
@@ -1356,13 +1356,13 @@
   <set name="effectRange" val="1000"/>
 </skill>
 <skill id="3181" levels="10" name="Item Skill: Hydro Blast">
-  <table name="#mpConsume_Init"> 9 9 10 10 11 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="element" val="2"/> <!-- Water -->
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AURA"/>
@@ -1375,13 +1375,13 @@
   <set name="effectRange" val="1000"/>
 </skill>
 <skill id="3182" levels="10" name="Item Skill: Hurricane">
-  <table name="#mpConsume_Init"> 9 9 10 10 11 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="element" val="3"/> <!-- Wind -->
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AURA"/>
@@ -1394,12 +1394,12 @@
   <set name="effectRange" val="1000"/>
 </skill>
 <skill id="3183" levels="10" name="Item Skill: Stone">
-  <table name="#mpConsume_Init"> 9 9 10 10 11 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AURA"/>
@@ -1412,12 +1412,12 @@
   <set name="effectRange" val="1000"/>
 </skill>
 <skill id="3184" levels="10" name="Item Skill: Solar Flare">
-  <table name="#mpConsume_Init"> 9 9 10 10 11 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AURA"/>
@@ -1431,12 +1431,12 @@
   <set name="effectRange" val="1000"/>
 </skill>
 <skill id="3185" levels="10" name="Item Skill: Shadow Flare">
-  <table name="#mpConsume_Init"> 9 9 10 10 11 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AURA"/>
@@ -1450,12 +1450,12 @@
   <set name="effectRange" val="1000"/>
 </skill>
 <skill id="3186" levels="10" name="Item Skill: Aura Flare">
-  <table name="#mpConsume_Init"> 9 9 10 10 11 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_AURA"/>
@@ -1467,12 +1467,12 @@
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="3187" levels="10" name="Item Skill: Slow">
-  <table name="#mpConsume_Init"> 9 9 10 10 11 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
-  <table name="#Tab-runSpd"> 0.7 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 </table>
+  <table name="#runSpd"> 0.7 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="80"/>
   <set name="lvlDepend" val="2"/>
@@ -1487,20 +1487,20 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <for>
-    <effect name="Debuff" time="30" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
-      <mul order="0x30" stat="runSpd" val="#Tab-runSpd"/>
+    <effect name="Debuff" time="30" val="0" stackOrder="#runSpd" stackType="RunSpeedDown">
+      <mul order="0x30" stat="runSpd" val="#runSpd"/>
     </effect>
   </for>
 </skill>
 <skill id="3188" levels="10" name="Item Skill: Winter">
-  <table name="#mpConsume_Init"> 9 9 10 10 11 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#power"> 10 13 15 18 20 22 24 26 28 30 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="reuseDelay" val="30000"/>
@@ -1518,10 +1518,10 @@
   </for>
 </skill>
 <skill id="3189" levels="10" name="Item Skill: Stun">
-  <table name="#mpConsume_Init"> 9 9 10 10 1 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 1 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="50"/>
@@ -1543,9 +1543,9 @@
 <skill id="3190" levels="10" name="Item Skill: Hold">
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <table name="#power"> 62 64 66 68 70 72 74 76 78 80 </table>
-  <table name="#mpConsume_Init"> 9 9 10 10 1 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 1 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
@@ -1566,10 +1566,10 @@
 </skill>
 <skill id="3191" levels="10" name="Item Skill: Sleep">
   <table name="#power"> 19 26 34 43 51 55 58 61 63 65 </table>
-  <table name="#mpConsume_Init"> 9 9 10 10 1 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 1 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1589,16 +1589,16 @@
   </for>
 </skill>
 <skill id="3192" levels="10" name="Item Skill: Paralyze">
-  <table name="#mpConsume_Init"> 9 9 10 10 1 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 1 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#power"> 1 3 5 8 10 12 14 16 18 20 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="skillType" val="PARALYZE"/>
   <set name="reuseDelay" val="30000"/>
@@ -1614,10 +1614,10 @@
   </for>
 </skill>
 <skill id="3193" levels="10" name="Item Skill: Medusa">
-  <table name="#mpConsume_Init"> 9 9 10 10 1 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 1 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="element" val="4"/> <!-- Earth -->
@@ -1637,11 +1637,11 @@
   </for>
 </skill>
 <skill id="3194" levels="10" name="Item Skill: Fear">
-  <table name="#mpConsume_Init"> 9 9 10 10 1 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 1 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <table name="#power"> 1 3 5 8 10 12 14 16 18 20 </table>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
@@ -1661,13 +1661,13 @@
   </for>
 </skill>
 <skill id="3195" levels="10" name="Item Skill: Poison">
-  <table name="#mpConsume_Init"> 9 9 10 10 1 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 1 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <table name="#dmg"> 24 24 54 54 72 72 93 114 132 144 </table>
   <table name="#abnormalLvl"> 5 5 6 6 6 7 7 7 8 8 </table>
   <set name="abnormalLvl" val="#abnormalLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="1"/>
@@ -1688,11 +1688,11 @@
 <skill id="3196" levels="10" name="Item Skill: Bleed">
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <table name="#dmg"> 39 39 51 51 66 66 81 81 93 102 </table>
-  <table name="#mpConsume_Init"> 9 9 10 10 1 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 1 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#abnormalLvl"> 5 5 6 6 6 7 7 7 8 8 </table>
   <set name="abnormalLvl" val="#abnormalLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="2"/>
@@ -1713,10 +1713,10 @@
   </for>
 </skill>
 <skill id="3197" levels="10" name="Item Skill: Silence">
-  <table name="#mpConsume_Init"> 9 9 10 10 1 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 1 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="40"/>
@@ -1736,11 +1736,11 @@
   </for>
 </skill>
 <skill id="3198" levels="10" name="Item Skill: Doom">
-  <table name="#mpConsume_Init"> 9 9 10 10 1 12 12 13 14 14 </table>
+  <table name="#mpInitialConsume"> 9 9 10 10 1 12 12 13 14 14 </table>
   <table name="#mpConsume"> 33 35 38 40 43 45 48 50 51 55 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="40"/>
   <set name="lvlDepend" val="2"/>
@@ -1756,10 +1756,10 @@
   <set name="effectRange" val="1100"/>
 </skill>
 <skill id="3199" levels="3" name="Item Skill: Skill Refresh">
-  <table name="#mpConsume_Init"> 11 13 14 </table>
+  <table name="#mpInitialConsume"> 11 13 14 </table>
   <table name="#mpConsume"> 43 49 55 </table>
   <table name="#pReuseRate"> 0.95 0.93 0.9 </table> <!-- Needs check -->
-  <set name="mpInitialConsume" val="#mpConsume_Init"/>
+  <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="300000"/>
