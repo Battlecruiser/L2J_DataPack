@@ -106,7 +106,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <!-- Summon-specific -->
   <set name="npcId" val="14918"/>
-  <set name="expPenalty" val="0.3"/> <!-- guessed -->
 </skill>
 <skill id="913" levels="1" name="Deflect Magic">
   <!-- Done by DJ MELERIX -->
@@ -442,7 +441,7 @@
   <set name="isDebuff" val="true"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect name="DamOverTime" count="15" time="1" val="92" abnormal="flame"/>
+    <effect count="15" name="DamOverTime" val="92" abnormal="flame"/>
   </for>
 </skill>
 <skill id="950" levels="7" name="Nail Attack">

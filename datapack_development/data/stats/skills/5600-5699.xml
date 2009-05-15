@@ -571,7 +571,7 @@
   <set name="staticHitTime" val="true"/>
   <set name="transformId" val="319"/>
   <for>
-    <effect count="1" name="Transformation" time="3600" val="0"/>
+    <effect name="Transformation" time="3600" val="0"/>
   </for>
 </skill>
 <skill id="5656" levels="85" name="Gatekeeper Aura Flare">
@@ -591,7 +591,7 @@
   <set name="effectType" val="DEBUFF"/>
   <set name="effectPower" val="1000"/>
   <for>
-    <effect self="1" count="1" name="Debuff" time="3" val="0">
+    <effect self="1" name="Debuff" time="3" val="0">
       <mul order="0x30" stat="pvpMagicalDmg" val="0.5"/>
     </effect>
   </for>
@@ -638,7 +638,7 @@
   <set name="effectRange" val="900"/>
   <set name="aggroPoints" val="495"/>
   <for>
-    <effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="berserk">
+    <effect name="Buff" time="1200" val="0" stackOrder="1" stackType="berserk">
       <mul order="0x30" stat="mAtk" val="1.16"/>
       <mul order="0x30" stat="pAtk" val="1.08"/>
       <mul order="0x30" stat="mDef" val="0.84"/>
