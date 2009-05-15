@@ -31,7 +31,7 @@ public class SpellbookScrolls implements IItemHandler
 		14196,14197,14198,14199,14200,14201,14202,14203,14204,14205,
 		14206,14207,14208,14209,14210,14211,14212,14213,14214,14215,
 		14216,14217,14218,14219,14220,14221,14222,14223,14224,14225,
-		14226,14227
+		14226,14227,10608,10609,10610
 	};
 	/**
 	 * 
@@ -199,6 +199,15 @@ public class SpellbookScrolls implements IItemHandler
 				break;
 			case 10595:
 				useScroll(player,2489,1);
+				break;
+			case 10608:
+				useScroll(player,2505,1);
+				break;
+			case 10609:
+				useScroll(player,2506,1);
+				break;
+			case 10610:
+				useScroll(player,2507,1);
 				break;
 			case 12768:
 				useScroll(player,2526,1);
