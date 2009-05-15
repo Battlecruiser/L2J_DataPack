@@ -4,7 +4,7 @@ REM ## L2JDP Database Installer - (by DrLecter) ##
 REM ##############################################
 REM ## Interactive script setup -  (by TanelTM) ##
 REM ##############################################
-REM Copyright (C) 2008 L2J DataPack
+REM Copyright (C) 2009 L2J DataPack
 REM This program is free software; you can redistribute it and/or modify 
 REM it under the terms of the GNU General Public License as published by 
 REM the Free Software Foundation; either version 2 of the License, or (at
@@ -887,7 +887,7 @@ title L2JDP installer - Script execution finished
 cls
 echo.
 echo L2JDP database_installer version 0.2.2
-echo (C) 2007-2008 L2J Datapack Team
+echo (C) 2007-2009 L2J Datapack Team
 echo database_installer comes with ABSOLUTELY NO WARRANTY;
 echo This is free software, and you are welcome to redistribute it
 echo under certain conditions; See the file gpl.txt for further
