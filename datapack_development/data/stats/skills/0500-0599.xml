@@ -42,14 +42,14 @@
 <skill id="502" levels="5" name="Life to Soul">
   <!-- CT2.2 retail confirmed -->
   <table name="#hpConsume"> 193 237 279 311 328 </table>
-  <table name="#charges"> 1 2 3 4 5 </table>
+  <table name="#num_souls"> 1 2 3 4 5 </table>
   <set name="hpConsume" val="#hpConsume"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="reuseDelay" val="11000"/>
   <set name="hitTime" val="900"/>
   <set name="skillType" val="CHARGESOUL"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="num_souls" val="#charges"/>
+  <set name="num_souls" val="#num_souls"/>
 </skill>
 <skill id="503" levels="3" name="Scorn">
   <table name="#mpConsume"> 21 28 33 </table>
@@ -66,7 +66,7 @@
   <set name="effectRange" val="400"/>
   <set name="reuseDelay" val="3000"/>
 </skill>
-<skill id="504" levels="37" name="Triple Thrust" enchantLevels1="30" enchantLevels2="30" >
+<skill id="504" levels="37" name="Triple Thrust" enchantLevels1="30" enchantLevels2="30">
   <!-- CT2.2 retail confirmed -->
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <table name="#ench1Power"> 3255 3278 3300 3322 3344 3366 3388 3411 3433 3455 3477 3499 3521 3544 3566 3588 3610 3632 3654 3676 3699 3721 3743 3765 3787 3809 3832 3854 3876 3898 </table>
@@ -95,7 +95,7 @@
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
 </skill>
-<skill id="505" levels="28" name="Shining Edge" enchantLevels1="30" enchantLevels2="30" >
+<skill id="505" levels="28" name="Shining Edge" enchantLevels1="30" enchantLevels2="30">
   <!-- CT2.2 retail confirmed -->
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <table name="#ench1Power"> 5813 5852 5892 5932 5971 6011 6050 6090 6129 6169 6209 6248 6288 6327 6367 6406 6446 6486 6525 6565 6604 6644 6683 6723 6763 6802 6842 6881 6921 6960 </table>
@@ -123,7 +123,7 @@
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
 </skill>
-<skill id="506" levels="4" name="Checkmate" enchantLevels1="30" enchantLevels2="30" >
+<skill id="506" levels="4" name="Checkmate" enchantLevels1="30" enchantLevels2="30">
   <!-- CT2.2 retail confirmed -->
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <table name="#ench1Power"> 5813 5852 5892 5932 5971 6011 6050 6090 6129 6169 6209 6248 6288 6327 6367 6406 6446 6486 6525 6565 6604 6644 6683 6723 6763 6802 6842 6881 6921 6960 </table>
@@ -155,7 +155,7 @@
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
 </skill>
-<skill id="507" levels="37" name="Twin Shot" enchantLevels1="30" enchantLevels2="30" >
+<skill id="507" levels="37" name="Twin Shot" enchantLevels1="30" enchantLevels2="30">
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <table name="#ench1Power"> 5167 5202 5237 5273 5308 5343 5378 5413 5448 5484 5519 5554 5589 5621 5660 5695 5730 5765 5800 5835 5871 5906 5941 5976 6011 6046 6082 6117 6152 6187 </table>
   <table name="#ench2MpConsume"> 133 131 129 127 125 123 121 119 117 115 113 111 109 107 105 103 101 99 97 95 93 91 89 87 85 83 81 79 77 75 </table>
@@ -182,7 +182,7 @@
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
 </skill>
-<skill id="508" levels="31" name="Rising Shot" enchantLevels1="30" enchantLevels2="30" >
+<skill id="508" levels="31" name="Rising Shot" enchantLevels1="30" enchantLevels2="30">
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <table name="#ench1Power"> 1292 1301 1310 1319 1327 1336 1345 1354 1362 1371 1380 1389 1398 1406 1415 1424 1433 1442 1450 1459 1468 147 1486 1494 1503 1512 1521 1530 1538 1547 </table>
   <table name="#ench2MpConsume"> 199 196 193 190 187 184 181 178 175 172 169 166 163 160 157 154 151 148 145 142 139 136 133 130 127 124 121 118 115 113 </table>
@@ -209,7 +209,7 @@
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
 </skill>
-<skill id="509" levels="34" name="Bleeding Shot" enchantLevels1="30" enchantLevels2="30" >
+<skill id="509" levels="34" name="Bleeding Shot" enchantLevels1="30" enchantLevels2="30">
   <table name="#dot"> 44 44 44 44 44 44 44 44 44 54 54 54 54 54 54 54 54 54 54 62 62 62 62 62 62 62 62 62 62 67 67 67 67 67 </table>
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <table name="#ench1Power"> 2325 2341 2357 2373 2389 2405 2420 2436 2452 2468 2484 2500 2515 2531 2547 2563 2579 2595 2610 2626 2642 2658 2674 2690 2705 2721 2737 2753 2769 2784 </table>
@@ -301,7 +301,7 @@
 </skill>
 <skill id="514" levels="9" name="Fire Trap">
   <!-- CT2.2 retail confirmed -->
-  <table name="#triggerlvl"> 1 2 3 4 5 6 7 8 9 </table>
+  <table name="#triggerSkillLvl"> 1 2 3 4 5 6 7 8 9 </table>
   <set name="mpConsume" val="50"/>
   <set name="hitTime" val="3000"/>
   <set name="summonTotalLifeTime" val="30000"/>
@@ -312,12 +312,12 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="skillRadius" val="350"/>
   <set name="triggerSkillId" val="5267"/>
-  <set name="triggerSkillLvl" val="#triggerlvl"/>
-  <set name="trapNpcId"  val="13037"/>
+  <set name="triggerSkillLvl" val="#triggerSkillLvl"/>
+  <set name="trapNpcId" val="13037"/>
 </skill>
 <skill id="515" levels="6" name="Poison Trap">
   <!-- Needs retail value corrections -->
-  <table name="#triggerlvl"> 1 2 3 4 5 6 </table>
+  <table name="#triggerSkillLvl"> 1 2 3 4 5 6 </table>
   <set name="mpConsume" val="50"/>
   <set name="hitTime" val="3000"/>
   <set name="summonTotalLifeTime" val="30000"/>
@@ -328,12 +328,12 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="skillRadius" val="350"/>
   <set name="triggerSkillId" val="5268"/>
-  <set name="triggerSkillLvl" val="#triggerlvl"/>
-  <set name="trapNpcId"  val="13037"/>
+  <set name="triggerSkillLvl" val="#triggerSkillLvl"/>
+  <set name="trapNpcId" val="13037"/>
 </skill>
 <skill id="516" levels="6" name="Slow Trap">
   <!-- Needs retail value corrections -->
-  <table name="#triggerlvl"> 1 2 3 4 5 6 </table>
+  <table name="#triggerSkillLvl"> 1 2 3 4 5 6 </table>
   <set name="mpConsume" val="50"/>
   <set name="hitTime" val="3000"/>
   <set name="summonTotalLifeTime" val="30000"/>
@@ -344,12 +344,12 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="skillRadius" val="350"/>
   <set name="triggerSkillId" val="5269"/>
-  <set name="triggerSkillLvl" val="#triggerlvl"/>
-  <set name="trapNpcId"  val="13037"/>
+  <set name="triggerSkillLvl" val="#triggerSkillLvl"/>
+  <set name="trapNpcId" val="13037"/>
 </skill>
 <skill id="517" levels="5" name="Flash Trap">
   <!-- Needs retail value corrections -->
-  <table name="#triggerlvl"> 1 2 3 4 5 </table>
+  <table name="#triggerSkillLvl"> 1 2 3 4 5 </table>
   <set name="mpConsume" val="50"/>
   <set name="hitTime" val="3000"/>
   <set name="summonTotalLifeTime" val="30000"/>
@@ -360,12 +360,12 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="skillRadius" val="350"/>
   <set name="triggerSkillId" val="5270"/>
-  <set name="triggerSkillLvl" val="#triggerlvl"/>
-  <set name="trapNpcId"  val="13037"/>
+  <set name="triggerSkillLvl" val="#triggerSkillLvl"/>
+  <set name="trapNpcId" val="13037"/>
 </skill>
 <skill id="518" levels="8" name="Binding Trap">
   <!-- Needs retail value corrections -->
-  <table name="#triggerlvl"> 1 2 3 4 5 6 7 8 </table>
+  <table name="#triggerSkillLvl"> 1 2 3 4 5 6 7 8 </table>
   <set name="mpConsume" val="50"/>
   <set name="hitTime" val="3000"/>
   <set name="summonTotalLifeTime" val="30000"/>
@@ -376,8 +376,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="skillRadius" val="350"/>
   <set name="triggerSkillId" val="5271"/>
-  <set name="triggerSkillLvl" val="#triggerlvl"/>
-  <set name="trapNpcId"  val="13037"/>
+  <set name="triggerSkillLvl" val="#triggerSkillLvl"/>
+  <set name="trapNpcId" val="13037"/>
 </skill>
 <skill id="519" levels="1" name="Quiver of Bolts: A-Grade">
   <set name="mpConsume" val="366"/>
@@ -411,7 +411,7 @@
   <table name="#pAtk"> 124 134 145 155 166 177 188 199 </table>
   <table name="#accCombat"> 3 3 4 4 5 5 6 6 </table>
   <table name="#range"> 50 50 100 100 150 150 200 200 </table>
-  <table name="#aggro"> 566 582 597 611 624 635 646 655 </table>
+  <table name="#aggroPoints"> 566 582 597 611 624 635 646 655 </table>
   <set name="weaponsAllowed" val="65536"/> <!-- Crossbow -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_SELF"/>
@@ -419,7 +419,7 @@
   <set name="hitTime" val="2000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="aggroPoints" val="#aggro"/>
+  <set name="aggroPoints" val="#aggroPoints"/>
   <for>
     <effect name="ImmobileBuff" time="120" val="0">
       <add order="0x40" stat="pAtk" val="#pAtk">
@@ -467,7 +467,7 @@
 <skill id="523" levels="7" name="Imbue Dark Seed">
   <!-- Needs to be finished with a correct abnormal effect -->
   <table name="#magicLvl"> 62 64 66 68 70 72 74 </table>
-  <table name="#EffectLvl"> 1 2 3 4 5 6 7 </table>
+  <table name="#effectLevel"> 1 2 3 4 5 6 7 </table>
   <set name="itemConsumeId" val="10112"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="mpConsume" val="30"/>
@@ -481,7 +481,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="150"/>
   <set name="effectId" val="5447"/>
-  <set name="effectLevel" val="#EffectLvl"/>
+  <set name="effectLevel" val="#effectLevel"/>
 </skill>
 <skill id="524" levels="1" name="Cure Dark Seed">
   <set name="mpConsume" val="59"/>
@@ -582,8 +582,8 @@
   <set name="aggroPoints" val="523"/>
   <for>
     <effect name="Buff" time="120" val="0">
-      <add stat="darkRes" val="30" order="0x40"/>
-      <add stat="holyRes" val="30" order="0x40"/>
+      <add order="0x40" stat="darkRes" val="30"/>
+      <add order="0x40" stat="holyRes" val="30"/>
     </effect>
   </for>
 </skill>
@@ -1260,7 +1260,7 @@
   <!-- Needs retail accuracy check -->
   <table name="#mpConsume"> 61 63 67 70 </table>
   <table name="#power"> 875 984 1098 1213 </table>
-  <table name="#bleeddmg"> 102 123 155 198 </table>
+  <table name="#dot"> 102 123 155 198 </table>
   <table name="#abnormalLvl"> 6 6 7 7 </table>
   <set name="abnormalLvl" val="#abnormalLvl"/>
   <set name="power" val="#power"/>
@@ -1276,7 +1276,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect count="5" name="DamOverTime" time="3" val="#bleeddmg" abnormal="bleed" effectPower="40" effectType="BLEED"> <!-- Guess effectPower -->
+    <effect count="5" name="DamOverTime" time="3" val="#dot" abnormal="bleed" effectPower="40" effectType="BLEED"> <!-- Guess effectPower -->
       <mul order="0x30" stat="runSpd" val="0.8"/>
     </effect>
   </for>
@@ -1394,7 +1394,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <add stat="maxHp" val="222" order="0x40"/>
+    <add order="0x40" stat="maxHp" val="222"/>
   </for>
 </skill>
 <skill id="591" levels="1" name="Residence Spirit">
@@ -1403,7 +1403,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
   <for>
-    <add stat="maxCp" val="444" order="0x40"/>
+    <add order="0x40" stat="maxCp" val="444"/>
   </for>
 </skill>
 <skill id="592" levels="1" name="Residence Soul">
@@ -1412,7 +1412,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
   <for>
-    <add stat="maxMp" val="168" order="0x40"/>
+    <add order="0x40" stat="maxMp" val="168"/>
   </for>
 </skill>
 <skill id="593" levels="1" name="Residence Health">
@@ -1421,7 +1421,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
   <for>
-    <add stat="regHp" val="1.09" order="0x40"/>
+    <add order="0x40" stat="regHp" val="1.09"/>
   </for>
 </skill>
 <skill id="594" levels="1" name="Residence Moral">
@@ -1430,7 +1430,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
   <for>
-    <add stat="regCp" val="1.09" order="0x40"/>
+    <add order="0x40" stat="regCp" val="1.09"/>
   </for>
 </skill>
 <skill id="595" levels="1" name="Residence Clarity">
@@ -1439,7 +1439,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
   <for>
-    <add stat="regMp" val="0.47" order="0x40"/>
+    <add order="0x40" stat="regMp" val="0.47"/>
   </for>
 </skill>
 <skill id="596" levels="1" name="Residence Might">
@@ -1448,7 +1448,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
   <for>
-    <add stat="pAtk" val="34.6" order="0x40"/>
+    <add order="0x40" stat="pAtk" val="34.6"/>
   </for>
 </skill>
 <skill id="597" levels="1" name="Residence Shield">
@@ -1457,7 +1457,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
   <for>
-    <add stat="pDef" val="54.7" order="0x40"/>
+    <add order="0x40" stat="pDef" val="54.7"/>
   </for>
 </skill>
 <skill id="598" levels="1" name="Residence Empower">
@@ -1466,7 +1466,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
   <for>
-    <add stat="mAtk" val="40.4" order="0x40"/>
+    <add order="0x40" stat="mAtk" val="40.4"/>
   </for>
 </skill>
 <skill id="599" levels="1" name="Residence Magic Barrier">
@@ -1475,7 +1475,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
   <for>
-    <add stat="mDef" val="44" order="0x40"/>
+    <add order="0x40" stat="mDef" val="44"/>
   </for>
 </skill>
 </list>
