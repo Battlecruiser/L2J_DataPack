@@ -15,6 +15,7 @@ class Quest (JQuest) :
     if not st: return
     if event:
        if st.getQuestItemsCount(57) >= 150000 :
+          st.takeItems(57,150000)
           player.teleToLocation(-149406, 255247, -80)
           return
     return event
