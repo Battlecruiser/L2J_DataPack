@@ -6,7 +6,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
   <for>
-    <add stat="accCombat" val="4" order="0x40"/>
+    <add order="0x40" stat="accCombat" val="4"/>
   </for>
 </skill>
 <skill id="601" levels="1" name="Residence Agility">
@@ -15,7 +15,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
   <for>
-    <add stat="rEvas" val="4" order="0x40"/>
+    <add order="0x40" stat="rEvas" val="4"/>
   </for>
 </skill>
 <skill id="602" levels="1" name="Residence Shield Block">
@@ -24,7 +24,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
   <for>
-    <add stat="rShld" val="54.7" order="0x40"/>
+    <add order="0x40" stat="rShld" val="54.7"/>
   </for>
 </skill>
 <skill id="603" levels="1" name="Residence Shield Defense">
@@ -33,7 +33,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
   <for>
-    <add stat="sDef" val="225" order="0x40"/>
+    <add order="0x40" stat="sDef" val="225"/>
   </for>
 </skill>
 <skill id="604" levels="1" name="Residence Resist Typhoon">
@@ -42,8 +42,8 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
   <for>
-    <add stat="windRes" val="10" order="0x40"/>
-    <add stat="waterRes" val="10" order="0x40"/>
+    <add order="0x40" stat="windRes" val="10"/>
+    <add order="0x40" stat="waterRes" val="10"/>
   </for>
 </skill>
 <skill id="605" levels="1" name="Residence Resist Lava">
@@ -52,8 +52,8 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
   <for>
-    <add stat="fireRes" val="10" order="0x40"/>
-    <add stat="earthRes" val="10" order="0x40"/>
+    <add order="0x40" stat="fireRes" val="10"/>
+    <add order="0x40" stat="earthRes" val="10"/>
   </for>
 </skill>
 <skill id="606" levels="1" name="Residence Fortitude">
@@ -62,7 +62,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
   <for>
-    <mul stat="stunVuln" val="0.9" order="0x30"/>
+    <mul order="0x30" stat="stunVuln" val="0.9"/>
   </for>
 </skill>
 <skill id="607" levels="1" name="Residence Freedom">
@@ -71,7 +71,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
   <for>
-    <mul stat="rootVuln" val="0.9" order="0x30"/>
+    <mul order="0x30" stat="rootVuln" val="0.9"/>
   </for>
 </skill>
 <skill id="608" levels="1" name="Residence Vigilance">
@@ -80,7 +80,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
   <for>
-    <mul stat="sleepVuln" val="0.9" order="0x30"/>
+    <mul order="0x30" stat="sleepVuln" val="0.9"/>
   </for>
 </skill>
 <skill id="609" levels="1" name="Residence Movement">
@@ -89,7 +89,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
   <for>
-    <add stat="runSpd" val="6" order="0x40"/>
+    <add order="0x40" stat="runSpd" val="6"/>
   </for>
 </skill>
 <skill id="610" levels="1" name="Residence Death Fortune">
@@ -105,9 +105,9 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
   <for>
-    <add stat="pAtk" val="17.3" order="0x40"/>
-    <add stat="rCrit" val="#rCrit" order="0x40"/>
-    <add stat="cAtk" val="#cAtk" order="0x40"/>
+    <add order="0x40" stat="pAtk" val="17.3"/>
+    <add order="0x40" stat="rCrit" val="#rCrit"/>
+    <add order="0x40" stat="cAtk" val="#cAtk"/>
   </for>
 </skill>
 <skill id="612" levels="3" name="Water Squad">
@@ -118,9 +118,9 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
   <for>
-    <add stat="pDef" val="27.3" order="0x40"/>
-    <add stat="mDef" val="#mDef" order="0x40"/>
-    <mul stat="sDef" val="#sDef" order="0x30"/>
+    <add order="0x40" stat="pDef" val="27.3"/>
+    <add order="0x40" stat="mDef" val="#mDef"/>
+    <mul order="0x30" stat="sDef" val="#sDef"/>
   </for>
 </skill>
 <skill id="613" levels="3" name="Wind Squad">
@@ -131,9 +131,9 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
   <for>
-    <add stat="accCombat" val="2" order="0x40"/>
-    <add stat="rEvas" val="#rEvas" order="0x40"/>
-    <add stat="runSpd" val="#runSpd" order="0x40"/>
+    <add order="0x40" stat="accCombat" val="2"/>
+    <add order="0x40" stat="rEvas" val="#rEvas"/>
+    <add order="0x40" stat="runSpd" val="#runSpd"/>
   </for>
 </skill>
 <skill id="614" levels="3" name="Earth Squad">
@@ -143,21 +143,21 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
   <for>
-    <add stat="mDef" val="#mDef" order="0x40"/>
+    <add order="0x40" stat="mDef" val="#mDef"/>
   </for>
 </skill>
 <skill id="615" levels="3" name="Holy Squad">
   <table name="#maxMp"> 1 1.3 1.3 </table>
-  <table name="#consume"> 1 1 0.95 </table>
+  <table name="#MpConsumeRate"> 1 1 0.95 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
   <for>
-    <add stat="regHp" val="20" order="0x40"/>
-    <mul stat="maxMp" val="#maxMp" order="0x30"/>
-    <mul order="0x30" stat="MagicalMpConsumeRate" val="#consume"/>
-    <mul order="0x30" stat="PhysicalMpConsumeRate" val="#consume"/>
+    <add order="0x40" stat="regHp" val="20"/>
+    <mul order="0x30" stat="maxMp" val="#maxMp"/>
+    <mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRate"/>
+    <mul order="0x30" stat="PhysicalMpConsumeRate" val="#MpConsumeRate"/>
   </for>
 </skill>
 <skill id="616" levels="3" name="Dark Squad">
@@ -168,8 +168,8 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="isMagic" val="true"/>
   <for>
-    <add stat="mAtk" val="#mAtk" order="0x40"/>
-    <mul stat="cAtk" val="#cAtk" order="0x30"/>
+    <add order="0x40" stat="mAtk" val="#mAtk"/>
+    <mul order="0x30" stat="cAtk" val="#cAtk"/>
   </for>
 </skill>
 <skill id="617" levels="1" name="Transform Onyx Beast">
