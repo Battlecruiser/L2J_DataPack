@@ -10067,9 +10067,10 @@ INSERT INTO `droplist` VALUES
 (20970,5497,1,1,1,1628), -- Sealed Tallum Boots Lining
 (20970,5508,1,1,1,1628), -- Sealed Dark Crystal Gloves Design
 (20970,5509,1,1,1,1628), -- Sealed Tallum Gloves Design
-(20970,10609,1,1,3,4717), -- Amulet - Chant of Critical Attack
+(20970,10609,1,1,3,4717), -- Forgotten Scroll - Chant of Critical Attack
 (20970,10581,1,1,3,5587), -- Forgotten Scroll - Improve Condition
 (20970,10584,1,1,3,4444), -- Forgotten Scroll - Improve Movement
+(20970,14217,1,1,3,4444), -- Forgotten Scroll - Condition of Paagrio
 (20971,1876,1,1,-1,540396), -- Mithril Ore
 (20971,1877,1,1,-1,108079), -- Adamantite Nugget
 (20971,1895,1,1,-1,771995), -- Metallic Fiber
@@ -14151,9 +14152,10 @@ INSERT INTO `droplist` VALUES
 (21252,5478,1,1,1,2951), -- Sealed Dark Crystal Leather Armor Pattern
 (21252,5479,1,1,1,2077), -- Sealed Tallum Leather Armor Pattern
 (21252,5482,1,1,1,4631), -- Sealed Dark Crystalline Leggings Design
-(21252,10608,1,1,3,10638), -- Amulet - Chant of Combat
+(21252,10608,1,1,3,10638), -- Forgotten Scroll - Chant of Combat
 (21252,10579,1,1,3,15152), -- Forgotten Scroll - Improve Combat
 (21252,10583,1,1,3,15152), -- Forgotten Scroll - Improve Shield Defense
+(21252,14214,1,1,3,15152), -- Forgotten Scroll - Chant of Movement
 (21252,5276,1,1,2,402), -- Recipe: Greater Spiritshot (A) Compressed Package(100%)
 (21252,8730,1,1,200,70), -- Life Stone: level 67
 (21253,1807,1,1,-1,10305), -- Recipe: Soulshot: A-Grade
@@ -14166,7 +14168,8 @@ INSERT INTO `droplist` VALUES
 (21253,5485,1,1,1,3200), -- Sealed Tallum Tunic Texture
 (21253,5486,1,1,1,2252), -- Sealed Dark Crystal Robe Fabric
 (21253,5489,1,1,1,5022), -- Sealed Tallum Stockings Fabric
-(21253,10610,1,1,3,16129), -- Amulet - Chant of Blood Awakening
+(21253,10610,1,1,3,16129), -- Forgotten Scroll - Chant of Blood Awakening
+(21253,14215,1,1,3,16129), -- Forgotten Scroll - Combat of Paagrio
 (21253,10582,1,1,3,15152), -- Forgotten Scroll - Improve Critical Attack
 (21253,10580,1,1,3,16129), -- Forgotten Scroll - Improve Magic
 (21254,729,1,1,-1,990), -- Scroll: Enchant Weapon (Grade A)
@@ -14179,6 +14182,7 @@ INSERT INTO `droplist` VALUES
 (21254,6341,1,1,1,12134), -- Sealed Phoenix Earring Gemstone
 (21254,6343,1,1,1,9381), -- Sealed Phoenix Necklace Beads
 (21254,6345,1,1,1,16783), -- Sealed Phoenix Ring Gemstone
+(21254,14216,1,1,3,16129), -- Forgotten Scroll - Critical of Paagrio
 (21255,4041,1,1,-1,82464), -- Mold Hardener
 (21255,5481,1,1,-1,42554), -- Sealed Majestic Leather Armor Fabric
 (21255,5487,1,1,-1,42704), -- Sealed Robe of Nightmare Fabric
@@ -29372,7 +29376,7 @@ INSERT INTO `droplist` VALUES
 (29019,14178,1,1,32,58824), -- Forgotten Scroll - Flame Hawk
 (29019,14183,1,1,32,58823), -- Forgotten Scroll - Demolition Impact
 (29019,14194,1,1,32,58824), -- Forgotten Scroll - Blessing of Eva
-(29019,14171,1,1,32,58823), -- Forgotten Scroll - Hell Scream
+(29019,14170,1,1,32,58823), -- Forgotten Scroll - Seed of Revenge
 (29019,8751,2,4,200,500000), -- High-Grade Life Stone: level 70
 (29019,8761,1,1,200,52632), -- Top-Grade Life Stone: level 70
 (29019,8752,2,4,200,333333), -- High-Grade Life Stone: level 76
@@ -29665,6 +29669,7 @@ INSERT INTO `droplist` VALUES
 (29047,14179,1,1,3,21276), -- Forgotten Scroll - Arrow Rain
 (29047,14197,1,1,3,21276), -- Forgotten Scroll - Seal of Limit
 (29047,14174,1,1,3,21276), -- Forgotten Scroll - Pain of Shilen
+(29047,14171,1,1,3,21276), -- Forgotten Scroll - Hell Scream
 (29047,6579,1,1,6,21276), -- Arcana Mace
 (29047,236,1,1,5,21276), -- Soul Separator
 (29047,6367,1,1,6,21276), -- Angel Slayer
@@ -29954,3 +29959,11 @@ INSERT INTO `droplist` VALUES
 (36164,9912,1,3,1,1000000), -- Knight's Epaulette
 (36165,9912,1,3,1,1000000), -- Knight's Epaulette
 (36167,9912,1,3,1,1000000); -- Knight's Epaulette
+
+
+-- temp ct2.3 forgotten scrolls
+INSERT INTO `droplist` VALUES
+(29163,10550,1,3,1,1000000), -- Forgotten Scroll - Protection of Elemental
+(29163,10552,1,3,1,1000000), -- Forgotten Scroll - Fighter's Will
+(29163,10553,1,3,1,1000000), -- Forgotten Scroll - Archer's Will
+(29163,14219,1,3,1,1000000); -- Forgotten Scroll - Magician's Will
