@@ -130,7 +130,7 @@ of this directory a little bit.
 32326001.xml -> Yang - Elemental potions
 32326002.xml -> Yang - Elemental stones
 
-323780001.xml -> Fantasi Isle Paddies: Exchange Fantasy Isle coins for goodies
+323780001.xml -> Fantasy Isle Paddies: Exchange Fantasy Isle coins for goodies
 364790001.xml -> Reputation Manager: PvP weapons, armors enhancement
 364790002.xml -> Reputation Manager: Removal of PvP enhancement
 364790003.xml -> Reputation Manager: Consumables
