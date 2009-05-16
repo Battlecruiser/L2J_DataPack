@@ -32,48 +32,47 @@
   </for>
 </skill>
 <skill id="3601" levels="9" name="Special Ability: Haste">
-  <!-- Done by DJ MELERIX -->
-  <!-- For Poles -->
-  <!--
-      Lvl 1: Increases Atk.Spd., and enables the character to attack multiple opponents.
-      Lvl 2: Increases Atk.Spd., and enables the character to attack multiple opponents.
-      Lvl 3: Increases Atk.Spd., and enables the character to attack multiple opponents.
-      Lvl 4: Increases Atk.Spd., and enables the character to attack multiple opponents.
-      Lvl 5: Increases Atk.Spd., and enables the character to attack multiple opponents.
-      Lvl 6: Increases Atk.Spd., and enables the character to attack multiple opponents.
-      Lvl 7: Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
-      Lvl 8: Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
-      Lvl 9: Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
-  -->
-  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 </table>
+<!-- s_opt_haste_polearm -->
+<!--
+5626	Halberd - Haste	pole	3601-7;	Increases Atk. Spd. by about 6%. Enhances damage to a target during PvP.
+6601	Saint Spear - Haste	pole	3601-9;	Increases Atk. Spd. by about 7%. Increases damage inflicted during PvP.
+-->
   <table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 1.06 1.06 1.07 </table>
-  <table name="#pvp"> 1 1 1 1 1 1 1.05 1.05 1.05 </table>
-  <set name="magicLvl" val="#magicLvl"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <table name="#pvpBonus"> 1 1 1 1 1 1 1.05 1.05 1.05 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 </table>
   <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="75"/>
   <for>
     <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
-    <mul order="0x30" stat="pvpPhysDmg" val="#pvp"/>
-    <mul order="0x30" stat="pvpMagicalDmg" val="#pvp"/>
     <add order="0x40" stat="atkCountMax" val="4"/>
+    <mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus"/>
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus"/>
+    <mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus"/>
   </for>
 </skill>
 <skill id="3602" levels="9" name="Special Ability: Guidance">
-  <!--
-      Lvl 1 - Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
-      Lvl 2 - Increases Accuracy, and enables the character to attack multiple opponents.
-      Lvl 3 - Increases Accuracy, and enables the character to attack multiple opponents.
-      Lvl 4 - Increases Accuracy, and enables the character to attack multiple opponents.
-      Lvl 5 - Increases Accuracy, and enables the character to attack multiple opponents.
-      Lvl 6 - Increases Accuracy, and enables the character to attack multiple opponents.
-      Lvl 7 - Increases Accuracy, and enables the character to attack multiple opponents and inflicts additional damage during PvP.
-      Lvl 8 - Increases Accuracy, and enables the character to attack multiple opponents and inflicts additional damage during PvP.
-      Lvl 9 - Increases Accuracy, and enables the character to attack multiple opponents and inflicts additional damage during PvP.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- s_opt_guidence_polearm -->
+<!--
+5632	Tallum Glaive - Guidance	3602-8;	Increases Accuracy by 4. Increases damage inflicted during PvP.
+11129	Tallum Glaive - On Fire - Guidance	3602-8;	A Masterwork Item that increases HP regeneration.\n\nIncreases Accuracy by 4. Increases damage inflicted during PvP.
+6600	Saint Spear - Guidance	3602-9;	Increases Accuracy by 5. Increases damage inflicted during PvP.
+-->
+  <table name="#accCombat"> 6.88 6.07 5.72 5.37 5.02 4.68 4.34 3.95 5.27 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 </table>
+  <table name="#pvpBonus"> 1 1 1 1 1 1 1.05 1.05 1.05 </table>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <for>
+    <add order="0x40" stat="accCombat" val="#accCombat"/>
+    <add order="0x40" stat="atkCountMax" val="4"/>
+    <mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus"/>
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus"/>
+    <mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus"/>
+  </for>
 </skill>
 <skill id="3603" levels="10" name="Demonic Sword Zariche">
   <table name="#maxCp"> 12 13 14 15 17 19 21 23 25 27 </table>

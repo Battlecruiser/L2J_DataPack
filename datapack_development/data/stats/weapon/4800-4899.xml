@@ -143,8 +143,6 @@
     <set val="293" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Guidance -->
-    <add val="5" order="0x40" stat="accCombat"/>
   </for>
 </item>
 <item id="4811" name="Crystallized Ice Bow - Evasion">
@@ -182,8 +180,6 @@
     <set val="227" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Guidance -->
-    <add val="5" order="0x40" stat="accCombat"/>
   </for>
 </item>
 <item id="4814" name="Elemental Bow - Miser">
@@ -272,8 +268,6 @@
     <set val="227" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Guidance -->
-    <add val="4" order="0x40" stat="accCombat"/>
   </for>
 </item>
 <item id="4820" name="Akat Long Bow - Evasion">
@@ -315,8 +309,6 @@
     <set val="293" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Guidance -->
-    <add val="4" order="0x40" stat="accCombat"/>
   </for>
 </item>
 <item id="4823" name="Eminence Bow - Miser">
@@ -403,8 +395,6 @@
     <set val="293" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Guidance -->
-    <add val="3" order="0x40" stat="accCombat"/>
   </for>
 </item>
 <item id="4829" name="Bow of Peril - Quick Recovery">
@@ -482,6 +472,9 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Anger -->
+    <add val="20" order="0x40" stat="pAtk"/>
+    <mul val="0.85" order="0x30" stat="maxHp"/>
   </for>
 </item>
 <item id="4835" name="Scythe - Critical Stun">
@@ -518,6 +511,9 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Anger -->
+    <add val="20" order="0x40" stat="pAtk"/>
+    <mul val="0.85" order="0x30" stat="maxHp"/>
   </for>
 </item>
 <item id="4838" name="Orcish Glaive - Critical Stun">
@@ -631,6 +627,9 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Anger -->
+    <add val="24" order="0x40" stat="pAtk"/>
+    <mul val="0.85" order="0x30" stat="maxHp"/>
   </for>
 </item>
 <item id="4847" name="Scorpion - Critical Stun">
@@ -746,6 +745,9 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Anger -->
+    <add val="28" order="0x40" stat="pAtk"/>
+    <mul val="0.85" order="0x30" stat="maxHp"/>
   </for>
 </item>
 <item id="4856" name="Great Axe - Critical Stun">
@@ -782,6 +784,9 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Anger -->
+    <add val="30" order="0x40" stat="pAtk"/>
+    <mul val="0.85" order="0x30" stat="maxHp"/>
   </for>
 </item>
 <item id="4859" name="Lance - Critical Stun">

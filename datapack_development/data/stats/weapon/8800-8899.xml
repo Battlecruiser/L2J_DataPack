@@ -9,10 +9,9 @@
     <set val="433" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Focus -->
-    <add val="61" order="0x40" stat="rCrit"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -25,11 +24,6 @@
     <set val="433" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Critical Damage -->
-    <add val="200" order="0x40" stat="cAtkAdd"/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="8802" name="Naga Storm - Back Blow">
@@ -55,6 +49,7 @@
     <enchant val="0" order="0x0C" stat="mAtk"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -72,6 +67,7 @@
     <set val="80" order="0x08" stat="pAtkRange"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -89,6 +85,7 @@
     <set val="180" order="0x08" stat="pAtkAngle"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -101,7 +98,7 @@
     <set val="227" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-	<!-- SA: Cheap Shot --> <!-- reduces MPconsume by only 1 MP... bad description  ??? -->
+    <!-- SA: Cheap Shot --> <!-- reduces MPconsume by only 1 MP... bad description  ??? -->
     <sub val="1" order="0x40" stat="MpConsume"> 
        <and>
           <game skill="false" chance="30"/> 
@@ -109,6 +106,7 @@
     </sub>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -121,11 +119,6 @@
     <set val="227" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Focus -->
-    <add val="61" order="0x40" stat="rCrit"/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="8808" name="Shyeed's Bow - Quick Recovery">
@@ -141,6 +134,7 @@
     <mul val="0.87" order="0x30" stat="atkReuse"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -161,6 +155,7 @@
     </mul>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -186,6 +181,7 @@
     <enchant val="0" order="0x0C" stat="mAtk"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -211,6 +207,7 @@
     <enchant val="0" order="0x0C" stat="mAtk"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -225,6 +222,7 @@
     <enchant val="0" order="0x0C" stat="mAtk"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -261,6 +259,7 @@
     <enchant val="0" order="0x0C" stat="mAtk"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -297,6 +296,7 @@
     <enchant val="0" order="0x0C" stat="mAtk"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -314,7 +314,6 @@
     <set val="64" order="0x08" stat="pAtk"/>
     <set val="39" order="0x08" stat="mAtk"/>
     <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
     <set val="379" order="0x08" stat="pAtkSpd"/>
   </for>
 </item>
@@ -451,7 +450,6 @@
     <set val="148" order="0x08" stat="pAtk"/>
     <set val="68" order="0x08" stat="mAtk"/>
     <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
     <set val="325" order="0x08" stat="pAtkSpd"/>
   </for>
 </item>
@@ -469,7 +467,6 @@
     <set val="139" order="0x08" stat="pAtk"/>
     <set val="76" order="0x08" stat="mAtk"/>
     <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
     <set val="379" order="0x08" stat="pAtkSpd"/>
   </for>
 </item>
@@ -533,7 +530,6 @@
     <set val="169" order="0x08" stat="pAtk"/>
     <set val="76" order="0x08" stat="mAtk"/>
     <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
     <set val="325" order="0x08" stat="pAtkSpd"/>
   </for>
 </item>
@@ -560,7 +556,6 @@
     <set val="213" order="0x08" stat="pAtk"/>
     <set val="91" order="0x08" stat="mAtk"/>
     <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
     <set val="325" order="0x08" stat="pAtkSpd"/>
   </for>
 </item>

@@ -60,9 +60,35 @@
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3411" levels="1" name="Special Ability: Focus">
+<!-- ???? Where the hell does this come from? O_oa ???? -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="3565" levels="2" name="Special Ability: Focus">
+<!-- s_opt_focus_low_cri75 -->
+<!--
+6602	Demon Splinter - Focus	3565-1;	Increases critical chance by 80. Increases damage inflicted during PvP.
+-->
+<!--
+TGS' Notes: In C4 official files, 3565, 3566, and 3567 have 1 skill level. In our current datapack/client, they go up to 2. I believe this was done by NCSoft as a way of adding in support the next generation of weapons that have critical increases in three levels, 106, 111, and 116.
+
+9879	Dynasty Bagh-Nakh - Focus	3565-2;	Increases critical attack by 106. Increases damage inflicted during PvP.
+10459	Icarus Hand - Focus	3565-2;	Increases critical attack by 106. Increases damage inflicted during PvP.
+-->
+  <table name="#rCrit"> 80.6 106 </table> <!-- Guessing Level 2, see notes. -->
+  <table name="#pvpBonus"> 1.05 1.05 </table> <!-- Guessing Level 2, see notes. -->
+  <table name="#magicLvl"> 75 80 </table> <!-- Guessing Level 2, see notes. -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <for>
+    <add order="0x40" stat="rCrit" val="#rCrit"/>
+    <mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus"/>
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus"/>
+    <mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus"/>
+  </for>
 </skill>
 <skill id="3412" levels="1" name="Dynasty Breast Plate">
   <!-- Done by DJ MELERIX -->

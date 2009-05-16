@@ -101,9 +101,22 @@
 			<using slotitem="6580;16;4"/>
 		</and>
 	</mul>
-	<!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+    <!-- Enhances damage to target during PvP -->
+    <mul val="1.05" order="0x30" stat="pvpPhysDmg">
+      <and>
+        <using slotitem="6580;16;4"/>
+      </and>
+    </mul>
+    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg">
+      <and>
+        <using slotitem="6580;16;4"/>
+      </and>
+    </mul>
+    <mul val="1.05" order="0x30" stat="pvpMagicalDmg">
+      <and>
+        <using slotitem="6580;16;4"/>
+      </and>
+    </mul>
   </for>
 </item>
 <item id="6581" name="Forgotten Blade - Haste">
@@ -137,11 +150,6 @@
     <set val="379" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Focus -->
-    <add val="84" order="0x40" stat="rCrit"/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="6584" name="Basalt Battlehammer - HP Drain">
@@ -155,6 +163,7 @@
     <enchant val="0" order="0x0C" stat="mAtk"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -182,6 +191,7 @@
     <add val="2.04" order="0x40" stat="regHp"/> 
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -198,6 +208,7 @@
     <add val="60" order="0x40" stat="mAtk"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -214,7 +225,8 @@
     <add val="0.54" order="0x40" stat="regMp"/> 
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/> 
+    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="6589" name="Imperial Staff - Magic Hold">
@@ -228,6 +240,7 @@
     <enchant val="0" order="0x0C" stat="mAtk"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -240,10 +253,9 @@
     <set val="433" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Critical Damage -->
-    <add val="265" order="0x40" stat="cAtkAdd"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -260,6 +272,7 @@
     <add val="3" order="0x40" stat="absorbDam"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -294,8 +307,6 @@
     <set val="293" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Focus -->
-    <add val="87" order="0x40" stat="rCrit"/>
   </for>
 </item>
 <item id="6595" name="Shining Bow - Critical Slow">
@@ -322,7 +333,8 @@
     <add val="2.04" order="0x40" stat="regHp"/> 
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/> 
+    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="6597" name="Dragon Hunter Axe - Health">
@@ -349,7 +361,8 @@
     <add val="3" order="0x40" stat="absorbDam"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/> 
+    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="6599" name="Saint Spear - Health">

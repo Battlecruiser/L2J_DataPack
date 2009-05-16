@@ -224,8 +224,6 @@
    <set val="406" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
-   <!-- SA: Focus -->
-   <add val="86" order="0x40" stat="rCrit"/>
   </for>
 </item>
 <item id="9231" name="Soldat Estoc - Light">
@@ -258,8 +256,6 @@
    <set val="350" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
-        <!-- SA: Critical Damage -->
-   <add val="174" order="0x40" stat="cAtkAdd"/>
   </for>
 </item>
 <item id="9234" name="Schlager - Focus">
@@ -302,8 +298,6 @@
    <set val="303" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
-       <!-- SA: Guidance -->
-   <add val="5" order="0x40" stat="accCombat"/>
   </for>
 </item>
 <item id="9238" name="Arbalest - Evasion">
@@ -348,8 +342,6 @@
    <set val="406" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
-       <!-- SA: Guidance -->
-   <add val="6" order="0x40" stat="accCombat"/>
   </for>
 </item>
 <item id="9242" name="Chevalier Rapier - Back Blow">
@@ -396,8 +388,6 @@
    <set val="406" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
-       <!-- SA: Focus -->
-   <add val="82" order="0x40" stat="rCrit"/>
   </for>
 </item>
 <item id="9246" name="Chevalier Rapier - Critical Damage">
@@ -408,8 +398,6 @@
    <set val="406" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
-       <!-- SA: Critical Damage -->
-   <add val="194" order="0x40" stat="cAtkAdd"/>
   </for>
 </item>
 <item id="9247" name="Chevalier Rapier - Haste">
@@ -440,8 +428,6 @@
    <set val="406" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
-       <!-- SA: Critical Damage -->
-   <add val="194" order="0x40" stat="cAtkAdd"/>
   </for>
 </item>
 <item id="9250" name="Chevalier Rapier - Critical Poison">
@@ -482,8 +468,6 @@
    <set val="406" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
-       <!-- SA: Focus -->
-   <add val="82" order="0x40" stat="rCrit"/>
   </for>
 </item>
 <item id="9254" name="Chevalier Rapier - Critical Drain">
@@ -524,8 +508,6 @@
    <set val="303" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
-       <!-- SA: Guidance -->
-   <add val="5" order="0x40" stat="accCombat"/>
   </for>
 </item>
 <item id="9258" name="Ballista - Miser">
@@ -537,7 +519,7 @@
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
        <!--SA: Miser--> 
-   <set val="7" order="0x08" stat="soulShotCount"> 
+   <set val="7" order="0x08" stat="soulShotCount">
       <and>
          <game chance="30"/> 
       </and> 
@@ -587,7 +569,7 @@
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
        <!--SA: Miser--> 
-   <set val="7" order="0x08" stat="soulShotCount"> 
+   <set val="7" order="0x08" stat="soulShotCount">
       <and>
          <game chance="30"/> 
       </and> 
@@ -628,8 +610,6 @@
    <set val="406" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
-       <!-- SA: Guidance -->
-   <add val="5" order="0x40" stat="accCombat"/>
   </for>
 </item>
 <item id="9266" name="Blinzlasher - Focus">
@@ -640,8 +620,6 @@
    <set val="406" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
-       <!-- SA: Focus -->
-   <add val="77" order="0x40" stat="rCrit"/>
   </for>
 </item>
 <item id="9267" name="Blinzlasher - Critical Damage">
@@ -652,8 +630,6 @@
    <set val="406" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
-       <!-- SA: Critical Damage -->
-   <add val="213" order="0x40" stat="cAtkAdd"/>
   </for>
 </item>
 <item id="9268" name="Blinzlasher">
@@ -674,8 +650,6 @@
    <set val="406" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
-       <!-- SA: Focus -->
-   <add val="77" order="0x40" stat="rCrit"/>
   </for>
 </item>
 <item id="9270" name="Blinzlasher - Health">
@@ -722,8 +696,6 @@
    <set val="406" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
-       <!-- SA: Focus -->
-   <add val="77" order="0x40" stat="rCrit"/>
   </for>
 </item>
 <item id="9274" name="Blinzlasher - Critical Damage">
@@ -734,8 +706,6 @@
    <set val="406" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
-       <!-- SA: Critical Damage -->
-   <add val="213" order="0x40" stat="cAtkAdd"/>
   </for>
 </item>
 <item id="9275" name="Blinzlasher - Haste">
@@ -776,8 +746,6 @@
    <set val="406" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
-       <!-- SA: Focus -->
-   <add val="77" order="0x40" stat="rCrit"/>
   </for>
 </item>
 <item id="9279" name="Blinzlasher - Light">
@@ -808,8 +776,6 @@
    <set val="406" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
-       <!-- SA: Guidance -->
-   <add val="5" order="0x40" stat="accCombat"/>
   </for>
 </item>
 <item id="9282" name="Blinzlasher - Critical Drain">
@@ -894,8 +860,6 @@
    <set val="303" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
-       <!-- SA: Guidance -->
-   <add val="4" order="0x40" stat="accCombat"/>
   </for>
 </item>
 <item id="9290" name="Tathlum - Evasion">
@@ -944,8 +908,6 @@
    <set val="406" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
-       <!-- SA: Focus -->
-   <add val="73" order="0x40" stat="rCrit"/>
   </for>
 </item>
 <item id="9294" name="Admiral's Estoc - Critical Damage">
@@ -956,8 +918,6 @@
    <set val="406" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
-       <!-- SA: Critical Damage -->
-    <add val="231" order="0x40" stat="cAtkAdd"/>
   </for>
 </item>
 <item id="9295" name="Admiral's Estoc - Haste">
@@ -1001,8 +961,6 @@
    <set val="350" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
-       <!-- SA: Critical Damage -->
-   <add val="270" order="0x40" stat="cAtkAdd"/>
   </for>
 </item>
 <item id="9299" name="Saber Tooth - Haste">
