@@ -18,6 +18,8 @@
    <set val="303" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
+       <!-- SA: Guidance -->
+   <add val="4" order="0x40" stat="accCombat"/>
   </for>
 </item>
 <item id="9302" name="Sharpshooter - Miser">
@@ -70,6 +72,8 @@
    <set val="406" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
+       <!-- SA: Guidance -->
+   <add val="5" order="0x40" stat="accCombat"/>
   </for>
 </item>
 <item id="9306" name="Military Fleuret - Focus">
@@ -80,6 +84,8 @@
    <set val="406" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
+       <!-- SA: Focus -->
+   <add val="68" order="0x40" stat="rCrit"/>
   </for>
 </item>
 <item id="9307" name="Military Fleuret - Back Blow">
@@ -123,6 +129,8 @@
    <set val="350" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
+       <!-- SA: Critical Damage -->
+   <add val="247" order="0x40" stat="cAtkAdd"/>
   </for>
 </item>
 <item id="9311" name="Innominate Victory - Focus">
@@ -202,6 +210,8 @@
    <set val="406" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
+       <!-- SA: Focus -->
+   <add val="64" order="0x40" stat="rCrit"/>
   </for>
 </item>
 <item id="9318" name="Colichemarde - Critical Damage">
@@ -212,6 +222,8 @@
    <set val="406" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
+       <!-- SA: Critical Damage -->
+   <add val="262" order="0x40" stat="cAtkAdd"/>
   </for>
 </item>
 <item id="9319" name="Colichemarde - Haste">
@@ -286,6 +298,8 @@
    <set val="303" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
+       <!-- SA: Guidance -->
+   <add val="3" order="0x40" stat="accCombat"/>
   </for>
 </item>
 <item id="9326" name="Hell Hound - Quick Recovery">
@@ -336,7 +350,6 @@
    <enchant val="0" order="0x0C" stat="mAtk"/>
    <!-- Enhances damage to target during PvP -->
    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-   <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -361,9 +374,8 @@
        <!-- SA: Anger -->
    <add val="31" order="0x40" stat="pAtk"/>
    <mul val="0.85" order="0x30" stat="maxHp"/>
-   <!-- Enhances damage to target during PvP -->
+    <!-- Enhances damage to target during PvP -->
    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-   <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -391,13 +403,15 @@
 </item>
 <item id="9334" name="Divine Pain - Critical Damage">
   <for>
-    <set val="231" order="0x08" stat="pAtk"/>
-    <set val="107" order="0x08" stat="mAtk"/>
-    <set val="6" order="0x08" stat="rCrit"/>
-    <add val="2" order="0x10" stat="accCombat"/>
-    <set val="350" order="0x08" stat="pAtkSpd"/>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
+   <set val="231" order="0x08" stat="pAtk"/>
+   <set val="107" order="0x08" stat="mAtk"/>
+   <set val="6" order="0x08" stat="rCrit"/>
+   <add val="2" order="0x10" stat="accCombat"/>
+   <set val="350" order="0x08" stat="pAtkSpd"/>
+   <enchant val="0" order="0x0C" stat="pAtk"/>
+   <enchant val="0" order="0x0C" stat="mAtk"/>
+       <!-- SA: Critical Damage -->
+   <add val="297" order="0x08" stat="cAtkAdd"/>
   </for>
 </item>
 <item id="9335" name="Divine Pain - Focus">
@@ -409,9 +423,7 @@
    <set val="350" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
-   <!-- Enhances damage to target during PvP -->
    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-   <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -445,7 +457,6 @@
    <enchant val="0" order="0x0C" stat="mAtk"/>
    <!-- Enhances damage to target during PvP -->
    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-   <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -471,12 +482,17 @@
 </item>
 <item id="9341" name="Lacerator - Critical Damage">
   <for>
-    <set val="210" order="0x08" stat="pAtk"/>
-    <set val="114" order="0x08" stat="mAtk"/>
-    <set val="10" order="0x08" stat="rCrit"/>
-    <set val="406" order="0x08" stat="pAtkSpd"/>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
+   <set val="210" order="0x08" stat="pAtk"/>
+   <set val="114" order="0x08" stat="mAtk"/>
+   <set val="10" order="0x08" stat="rCrit"/>
+   <set val="406" order="0x08" stat="pAtkSpd"/>
+   <enchant val="0" order="0x0C" stat="pAtk"/>
+   <enchant val="0" order="0x0C" stat="mAtk"/>
+       <!-- SA: Critical Damage -->
+   <add val="326" order="0x40" stat="cAtkAdd"/>
+    <!-- Enhances damage to target during PvP -->
+   <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+   <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="9342" name="Lacerator - Health">
@@ -503,9 +519,8 @@
 			<player hp="60"/>
 		</and>
    </add>
-   <!-- Enhances damage to target during PvP -->
+	<!-- Enhances damage to target during PvP -->
    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-   <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -551,9 +566,8 @@
    <set val="350" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
-   <!-- Enhances damage to target during PvP -->
+    <!-- Enhances damage to target during PvP -->
    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-   <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -581,9 +595,8 @@
          <game skill="false" chance="12"/> 
       </and> 
    </set>
-   <!-- Enhances damage to target during PvP -->
+    <!-- Enhances damage to target during PvP -->
    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-   <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -597,9 +610,8 @@
    <enchant val="0" order="0x0C" stat="mAtk"/>
        <!-- SA: Quick Recovery -->
    <mul val="0.85" order="0x30" stat="atkReuse"/>
-   <!-- Enhances damage to target during PvP -->
+    <!-- Enhances damage to target during PvP -->
    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-   <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -613,7 +625,6 @@
    <enchant val="0" order="0x0C" stat="mAtk"/>
    <!-- Enhances damage to target during PvP -->
    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-   <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -670,13 +681,16 @@
 </item>
 <item id="9357" name="Durendal - Focus">
   <for>
-    <set val="272" order="0x08" stat="pAtk"/>
-    <set val="121" order="0x08" stat="mAtk"/>
-    <set val="6" order="0x08" stat="rCrit"/>
-    <add val="2" order="0x10" stat="accCombat"/>
-    <set val="350" order="0x08" stat="pAtkSpd"/>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
+   <set val="272" order="0x08" stat="pAtk"/>
+   <set val="121" order="0x08" stat="mAtk"/>
+   <set val="6" order="0x08" stat="rCrit"/>
+   <add val="2" order="0x10" stat="accCombat"/>
+   <set val="350" order="0x08" stat="pAtkSpd"/>
+   <enchant val="0" order="0x0C" stat="pAtk"/>
+   <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- Enhances damage to target during PvP -->
+   <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+   <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="9358" name="Durendal - Haste">
@@ -725,20 +739,22 @@
          <game skill="false" chance="12"/> 
       </and> 
    </sub>
-   <!-- Enhances damage to target during PvP -->
+    <!-- Enhances damage to target during PvP -->
    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-   <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="9362" name="Screaming Vengeance - Focus">
   <for>
-    <set val="318" order="0x08" stat="pAtk"/>
-    <set val="121" order="0x08" stat="mAtk"/>
-    <set val="10" order="0x08" stat="rCrit"/>
-    <set val="303" order="0x08" stat="pAtkSpd"/>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
+   <set val="318" order="0x08" stat="pAtk"/>
+   <set val="121" order="0x08" stat="mAtk"/>
+   <set val="10" order="0x08" stat="rCrit"/>
+   <set val="303" order="0x08" stat="pAtkSpd"/>
+   <enchant val="0" order="0x0C" stat="pAtk"/>
+   <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- Enhances damage to target during PvP -->
+   <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+   <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="9363" name="Screaming Vengeance - Quick Recovery">
@@ -751,9 +767,8 @@
    <enchant val="0" order="0x0C" stat="mAtk"/>
        <!-- SA: Quick Recovery -->
    <mul val="0.87" order="0x30" stat="atkReuse"/>
-   <!-- Enhances damage to target during PvP -->
+    <!-- Enhances damage to target during PvP -->
    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-   <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -789,12 +804,17 @@
 </item>
 <item id="9367" name="Laevateinn - Focus">
   <for>
-    <set val="255" order="0x08" stat="pAtk"/>
-    <set val="132" order="0x08" stat="mAtk"/>
-    <set val="10" order="0x08" stat="rCrit"/>
-    <set val="406" order="0x08" stat="pAtkSpd"/>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
+   <set val="255" order="0x08" stat="pAtk"/>
+   <set val="132" order="0x08" stat="mAtk"/>
+   <set val="10" order="0x08" stat="rCrit"/>
+   <set val="406" order="0x08" stat="pAtkSpd"/>
+   <enchant val="0" order="0x0C" stat="pAtk"/>
+   <enchant val="0" order="0x0C" stat="mAtk"/>
+       <!-- SA: Focus -->
+   <add val="84" order="0x40" stat="rCrit"/>
+    <!-- Enhances damage to target during PvP -->
+   <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+   <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="9368" name="Gram">
@@ -839,9 +859,8 @@
    <set val="350" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
-   <!-- Enhances damage to target during PvP -->
+    <!-- Enhances damage to target during PvP -->
    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-   <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -869,20 +888,19 @@
          <game skill="false" chance="12"/> 
       </and> 
    </set>
-   <!-- Enhances damage to target during PvP -->
+    <!-- Enhances damage to target during PvP -->
    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-   <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="9374" name="Sarnga - Focus">
   <for>
-    <set val="356" order="0x08" stat="pAtk"/>
-    <set val="132" order="0x08" stat="mAtk"/>
-    <set val="10" order="0x08" stat="rCrit"/>
-    <set val="303" order="0x08" stat="pAtkSpd"/>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
+   <set val="356" order="0x08" stat="pAtk"/>
+   <set val="132" order="0x08" stat="mAtk"/>
+   <set val="10" order="0x08" stat="rCrit"/>
+   <set val="303" order="0x08" stat="pAtkSpd"/>
+   <enchant val="0" order="0x0C" stat="pAtk"/>
+   <enchant val="0" order="0x0C" stat="mAtk"/>
   </for>
 </item>
 <item id="9375" name="Sarnga - Critical Slow">
@@ -893,9 +911,8 @@
    <set val="303" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
-   <!-- Enhances damage to target during PvP -->
+    <!-- Enhances damage to target during PvP -->
    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-   <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -917,10 +934,6 @@
    <set val="406" order="0x08" stat="pAtkSpd"/>
    <enchant val="0" order="0x0C" stat="pAtk"/>
    <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="9378" name="Dynasty Rapier - Health">
@@ -956,13 +969,13 @@
 </item>
 <item id="9381" name="Dynasty Ancient Sword - Focus">
   <for>
-    <set val="361" order="0x08" stat="pAtk"/>
-    <set val="151" order="0x08" stat="mAtk"/>
-    <set val="6" order="0x08" stat="rCrit"/>
-    <add val="2" order="0x10" stat="accCombat"/>
-    <set val="350" order="0x08" stat="pAtkSpd"/>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
+   <set val="361" order="0x08" stat="pAtk"/>
+   <set val="151" order="0x08" stat="mAtk"/>
+   <set val="6" order="0x08" stat="rCrit"/>
+   <add val="2" order="0x10" stat="accCombat"/>
+   <set val="350" order="0x08" stat="pAtkSpd"/>
+   <enchant val="0" order="0x0C" stat="pAtk"/>
+   <enchant val="0" order="0x0C" stat="mAtk"/>
   </for>
 </item>
 <item id="9382" name="Dynasty Ancient Sword - Health">
@@ -1011,30 +1024,34 @@
          <game skill="false" chance="12"/>
       </and>
    </mul>
-   <!-- Enhances damage to target during PvP -->
+    <!-- Enhances damage to target during PvP -->
    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-   <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="9386" name="Dynasty Crossbow - Guidance">
   <for>
-    <set val="401" order="0x08" stat="pAtk"/>
-    <set val="151" order="0x08" stat="mAtk"/>
-    <set val="10" order="0x08" stat="rCrit"/>
-    <set val="303" order="0x08" stat="pAtkSpd"/>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
+   <set val="401" order="0x08" stat="pAtk"/>
+   <set val="151" order="0x08" stat="mAtk"/>
+   <set val="10" order="0x08" stat="rCrit"/>
+   <set val="303" order="0x08" stat="pAtkSpd"/>
+   <enchant val="0" order="0x0C" stat="pAtk"/>
+   <enchant val="0" order="0x0C" stat="mAtk"/>
+       <!-- SA: Guidance -->
+    <add val="5.32" order="0x40" stat="accCombat"/>
+	       <!-- Enhances damage to target during PvP -->
+   <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+   <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="9387" name="Dynasty Crossbow - Focus">
   <for>
-    <set val="401" order="0x08" stat="pAtk"/>
-    <set val="151" order="0x08" stat="mAtk"/>
-    <set val="10" order="0x08" stat="rCrit"/>
-    <set val="303" order="0x08" stat="pAtkSpd"/>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
+   <set val="401" order="0x08" stat="pAtk"/>
+   <set val="151" order="0x08" stat="mAtk"/>
+   <set val="10" order="0x08" stat="rCrit"/>
+   <set val="303" order="0x08" stat="pAtkSpd"/>
+   <enchant val="0" order="0x0C" stat="pAtk"/>
+   <enchant val="0" order="0x0C" stat="mAtk"/>
   </for>
 </item>
 <item id="9388" name="Infinity Rapier">

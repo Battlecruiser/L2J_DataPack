@@ -11,7 +11,6 @@
     <enchant val="0" order="0x0C" stat="mAtk"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -32,7 +31,6 @@
     </mul>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -61,7 +59,6 @@
     <mul val="0.85" order="0x30" stat="maxHp"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -76,7 +73,6 @@
     <enchant val="0" order="0x0C" stat="mAtk"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -102,7 +98,6 @@
     <enchant val="0" order="0x0C" stat="mAtk"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -139,7 +134,6 @@
     <enchant val="0" order="0x0C" stat="mAtk"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -171,7 +165,6 @@
     </set>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -188,7 +181,6 @@
     <mul val="0.85" order="0x30" stat="atkReuse"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -203,7 +195,6 @@
     <enchant val="0" order="0x0C" stat="mAtk"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -216,6 +207,9 @@
     <set val="433" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- Enhances damage to target during PvP -->
+    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="5615" name="Bloody Orchid - Back Blow">
@@ -240,7 +234,6 @@
     <enchant val="0" order="0x0C" stat="mAtk"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -253,6 +246,11 @@
     <set val="433" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Guidance -->
+    <add val="4" order="0x40" stat="accCombat"/>
+    <!-- Enhances damage to target during PvP -->
+    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="5618" name="Soul Separator - Critical Damage">
@@ -264,6 +262,11 @@
     <set val="433" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Critical Damage -->
+    <add val="200" order="0x40" stat="cAtkAdd"/>
+    <!-- Enhances damage to target during PvP -->
+    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="5619" name="Soul Separator - Rsk. Haste">
@@ -283,7 +286,6 @@
     </mul>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -307,6 +309,9 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- Enhances damage to target during PvP -->
+    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="5622" name="Blood Tornado - Anger">
@@ -323,7 +328,6 @@
     <mul val="0.85" order="0x30" stat="maxHp"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -344,7 +348,6 @@
     </add>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -357,6 +360,11 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Guidance -->
+    <add val="5" order="0x40" stat="accCombat"/>
+    <!-- Enhances damage to target during PvP -->
+    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="5625" name="Dragon Grinder - Health">
@@ -394,7 +402,6 @@
     <enchant val="0" order="0x0C" stat="mAtk"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -412,7 +419,6 @@
     <enchant val="0" order="0x0C" stat="mAtk"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -462,6 +468,11 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Guidance -->
+    <add val="4" order="0x40" stat="accCombat"/>
+    <!-- Enhances damage to target during PvP -->
+    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="5633" name="Tallum Glaive - Health">
@@ -490,7 +501,6 @@
     <enchant val="0" order="0x0C" stat="mAtk"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -505,7 +515,6 @@
     <enchant val="0" order="0x0C" stat="mAtk"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -534,7 +543,6 @@
     <mul val="0.85" order="0x30" stat="maxHp"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -552,8 +560,7 @@
     <mul val="1.15" order="0x30" stat="MpConsume"/> 
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/> 
   </for>
 </item>
 <item id="5639" name="Elemental Sword - Magic Paralyze">
@@ -567,7 +574,6 @@
     <enchant val="0" order="0x0C" stat="mAtk"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -584,7 +590,6 @@
     <add val="30" order="0x40" stat="mAtk"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -602,7 +607,6 @@
     <mul val="1.15" order="0x30" stat="MpConsume"/> 
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -615,6 +619,9 @@
     <set val="379" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- Enhances damage to target during PvP -->
+    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="5643" name="Sword of Miracles - Acumen">
@@ -650,7 +657,6 @@
     <enchant val="0" order="0x0C" stat="mAtk"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -665,7 +671,6 @@
     <enchant val="0" order="0x0C" stat="mAtk"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -678,6 +683,11 @@
     <set val="379" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Critical Damage -->
+    <add val="326" order="0x40" stat="cAtkAdd"/>
+    <!-- Enhances damage to target during PvP -->
+    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="5648" name="Dark Legion's Edge - Health">
@@ -706,9 +716,8 @@
             <player hp="60"/>
 		</and>
 	</add>
-    <!-- Enhances damage to target during PvP -->
+	<!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
