@@ -107,16 +107,8 @@
     <set val="8" order="0x08" stat="rCrit"/>
     <add val="0" order="0x10" stat="accCombat"/>
     <set val="325" order="0x08" stat="pAtkSpd"/>
-    <mul val="1.08" order="0x30" stat="pAtkSpd">
-      <and>
-        <using slotitem="8938;16;4"/>
-      </and>
-    </mul>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- Enhances damage to target during PvP --> 
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/> 
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/> 
   </for>
 </item>
 <item id="8972" name="Shadow Item: Great Spear">

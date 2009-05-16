@@ -5,13 +5,7 @@
     <set val="259" order="0x08" stat="pAtk"/>
     <set val="107" order="0x08" stat="mAtk"/>
     <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
     <set val="325" order="0x08" stat="pAtkSpd"/>
-    <mul val="1.08" order="0x30" stat="pAtkSpd">
-      <and>
-        <using slotitem="5704;16;4"/>
-      </and>
-    </mul>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
   </for>
@@ -31,8 +25,21 @@
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
     <!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpPhysDmg">
+      <and>
+        <using slotitem="5705;16;4"/>
+      </and>
+    </mul>
+    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg">
+      <and>
+        <using slotitem="5705;16;4"/>
+      </and>
+    </mul>
+    <mul val="1.05" order="0x30" stat="pvpMagicalDmg">
+      <and>
+        <using slotitem="5705;16;4"/>
+      </and>
+    </mul>
   </for>
 </item>
 <item id="5706" name="Damascus*Damascus">
@@ -41,16 +48,8 @@
     <set val="114" order="0x08" stat="mAtk"/>
     <set val="8" order="0x08" stat="rCrit"/>
     <set val="325" order="0x08" stat="pAtkSpd"/>
-    <add val="6" order="0x10" stat="accCombat">
-      <and>
-        <using slotitem="5706;16;4"/>
-      </and>
-    </add>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="5791" name="Tomb Guard A">

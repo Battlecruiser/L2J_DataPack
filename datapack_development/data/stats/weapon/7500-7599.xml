@@ -39,6 +39,7 @@
     </set>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
@@ -64,6 +65,7 @@
     <enchant val="0" order="0x0C" stat="mAtk"/>
     <!-- Enhances damage to target during PvP -->
     <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
     <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>

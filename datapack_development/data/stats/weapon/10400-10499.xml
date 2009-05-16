@@ -2,35 +2,27 @@
 <list>
 <item id="10415" name="Icarus Dual Sword">
   <for>
-   <set val="442" order="0x08" stat="pAtk"/>
-   <set val="163" order="0x08" stat="mAtk"/>
-   <set val="8" order="0x08" stat="rCrit"/>
-   <set val="325" order="0x08" stat="pAtkSpd"/>
-   <enchant val="0" order="0x0C" stat="pAtk"/>
-   <enchant val="0" order="0x0C" stat="mAtk"/>
-   <add val="109" order="0x40" stat="rCrit">
-       <and>
-           <using slotitem="10415;16;4"/>
-         </and>
-       </add>
-       <mul val="1.10" order="0x30" stat="maxHp">
+    <set val="442" order="0x08" stat="pAtk"/>
+    <set val="163" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+    <mul val="1.10" order="0x30" stat="maxHp">
       <and>
-           <using slotitem="10415;16;4"/>
-         </and>
-       </mul>
-       <!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+        <using slotitem="10004;16;4"/>
+      </and>
+    </mul>
   </for>
 </item>
 <item id="10434" name="Icarus Sawsword - Focus">
   <for> 
-   <set val="363" order="0x08" stat="pAtk"/> 
-   <set val="163" order="0x08" stat="mAtk"/> 
-   <set val="8" order="0x08" stat="rCrit"/> 
-   <set val="379" order="0x08" stat="pAtkSpd"/> 
-   <enchant val="0" order="0x0C" stat="pAtk"/> 
-   <enchant val="0" order="0x0C" stat="mAtk"/> 
+    <set val="363" order="0x08" stat="pAtk"/> 
+    <set val="163" order="0x08" stat="mAtk"/> 
+    <set val="8" order="0x08" stat="rCrit"/> 
+    <set val="379" order="0x08" stat="pAtkSpd"/> 
+    <enchant val="0" order="0x0C" stat="pAtk"/> 
+    <enchant val="0" order="0x0C" stat="mAtk"/> 
   </for> 
 </item> 
 <item id="10435" name="Icarus Sawsword - Health">
@@ -55,13 +47,13 @@
 </item> 
 <item id="10437" name="Icarus Heavy Arms - Focus">
   <for> 
-   <set val="442" order="0x08" stat="pAtk"/> 
-   <set val="163" order="0x08" stat="mAtk"/> 
-   <set val="8" order="0x08" stat="rCrit"/> 
-   <set val="325" order="0x08" stat="pAtkSpd"/> 
-   <enchant val="0" order="0x0C" stat="pAtk"/> 
-   <enchant val="0" order="0x0C" stat="mAtk"/> 
-  </for> 
+    <set val="442" order="0x08" stat="pAtk"/> 
+    <set val="163" order="0x08" stat="mAtk"/> 
+    <set val="8" order="0x08" stat="rCrit"/> 
+    <set val="325" order="0x08" stat="pAtkSpd"/> 
+    <enchant val="0" order="0x0C" stat="pAtk"/> 
+    <enchant val="0" order="0x0C" stat="mAtk"/> 
+  </for>
 </item> 
 <item id="10438" name="Icarus Heavy Arms - Health">
   <for> 
@@ -85,12 +77,12 @@
 </item> 
 <item id="10440" name="Icarus Spirit - Acumen">
   <for> 
-   <set val="290" order="0x08" stat="pAtk"/> 
-   <set val="217" order="0x08" stat="mAtk"/> 
-   <set val="8" order="0x08" stat="rCrit"/> 
-   <set val="379" order="0x08" stat="pAtkSpd"/> 
-   <enchant val="0" order="0x0C" stat="pAtk"/> 
-   <enchant val="0" order="0x0C" stat="mAtk"/> 
+    <set val="290" order="0x08" stat="pAtk"/> 
+    <set val="217" order="0x08" stat="mAtk"/> 
+    <set val="8" order="0x08" stat="rCrit"/> 
+    <set val="379" order="0x08" stat="pAtkSpd"/> 
+    <enchant val="0" order="0x0C" stat="pAtk"/> 
+    <enchant val="0" order="0x0C" stat="mAtk"/> 
   </for>
 </item>
 <item id="10441" name="Icarus Spirit - Mana Up">
@@ -105,12 +97,12 @@
 </item> 
 <item id="10442" name="Icarus Spirit - Conversion">
   <for> 
-   <set val="290" order="0x08" stat="pAtk"/> 
-   <set val="217" order="0x08" stat="mAtk"/> 
-   <set val="8" order="0x08" stat="rCrit"/> 
-   <set val="379" order="0x08" stat="pAtkSpd"/> 
-   <enchant val="0" order="0x0C" stat="pAtk"/> 
-   <enchant val="0" order="0x0C" stat="mAtk"/> 
+    <set val="290" order="0x08" stat="pAtk"/> 
+    <set val="217" order="0x08" stat="mAtk"/> 
+    <set val="8" order="0x08" stat="rCrit"/> 
+    <set val="379" order="0x08" stat="pAtkSpd"/> 
+    <enchant val="0" order="0x0C" stat="pAtk"/> 
+    <enchant val="0" order="0x0C" stat="mAtk"/> 
   </for> 
 </item> 
 <item id="10443" name="Icarus Spitter - Cheap Shot">
@@ -127,44 +119,40 @@
          <game skill="false" chance="26"/> 
       </and> 
    </set> 
-       <!-- Enhances damage to target during PvP --> 
-   <mul val="1.05" order="0x30" stat="pvpPhysDmg"/> 
-   <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/> 
+   <!-- Enhances damage to target during PvP -->
+   <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+   <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
+   <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for> 
 </item> 
 <item id="10444" name="Icarus Spitter - Guidance"> 
   <for> 
-  <set val="689" order="0x08" stat="pAtk"/> 
-   <set val="163" order="0x08" stat="mAtk"/> 
-   <set val="12" order="0x08" stat="rCrit"/> 
-   <set val="293" order="0x08" stat="pAtkSpd"/> 
-   <enchant val="0" order="0x0C" stat="pAtk"/> 
-   <enchant val="0" order="0x0C" stat="mAtk"/> 
-          <!-- SA: Guidance --> 
-   <add val="5.32" order="0x40" stat="accCombat"/>
-          <!-- Enhances damage to target during PvP --> 
-   <mul val="1.05" order="0x30" stat="pvpPhysDmg"/> 
-   <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/> 
+    <set val="689" order="0x08" stat="pAtk"/> 
+    <set val="163" order="0x08" stat="mAtk"/> 
+    <set val="12" order="0x08" stat="rCrit"/> 
+    <set val="293" order="0x08" stat="pAtkSpd"/> 
+    <enchant val="0" order="0x0C" stat="pAtk"/> 
+    <enchant val="0" order="0x0C" stat="mAtk"/> 
   </for> 
 </item> 
 <item id="10445" name="Icarus Spitter - Focus">
   <for> 
-   <set val="689" order="0x08" stat="pAtk"/> 
-   <set val="163" order="0x08" stat="mAtk"/> 
-   <set val="12" order="0x08" stat="rCrit"/> 
-   <set val="293" order="0x08" stat="pAtkSpd"/> 
-   <enchant val="0" order="0x0C" stat="pAtk"/> 
-   <enchant val="0" order="0x0C" stat="mAtk"/> 
+    <set val="689" order="0x08" stat="pAtk"/> 
+    <set val="163" order="0x08" stat="mAtk"/> 
+    <set val="12" order="0x08" stat="rCrit"/> 
+    <set val="293" order="0x08" stat="pAtkSpd"/> 
+    <enchant val="0" order="0x0C" stat="pAtk"/> 
+    <enchant val="0" order="0x0C" stat="mAtk"/> 
   </for> 
 </item> 
 <item id="10446" name="Icarus Disperser - Focus">
   <for> 
-   <set val="318" order="0x08" stat="pAtk"/> 
-   <set val="163" order="0x08" stat="mAtk"/> 
-   <set val="12" order="0x08" stat="rCrit"/>
-   <set val="433" order="0x08" stat="pAtkSpd"/> 
-   <enchant val="0" order="0x0C" stat="pAtk"/> 
-   <enchant val="0" order="0x0C" stat="mAtk"/> 
+    <set val="318" order="0x08" stat="pAtk"/> 
+    <set val="163" order="0x08" stat="mAtk"/> 
+    <set val="12" order="0x08" stat="rCrit"/>
+    <set val="433" order="0x08" stat="pAtkSpd"/> 
+    <enchant val="0" order="0x0C" stat="pAtk"/> 
+    <enchant val="0" order="0x0C" stat="mAtk"/> 
   </for> 
 </item> 
 <item id="10447" name="Icarus Disperser - Evasion">
@@ -177,35 +165,38 @@
    <enchant val="0" order="0x0C" stat="mAtk"/> 
              <!-- SA: Evasion -->
    <add val="5" order="0x40" stat="rEvas"/>
-          <!-- Enhances damage to target during PvP --> 
-   <mul val="1.05" order="0x30" stat="pvpPhysDmg"/> 
-   <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/> 
+   <!-- Enhances damage to target during PvP -->
+   <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+   <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
+   <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for> 
 </item> 
 <item id="10448" name="Icarus Disperser - Critical Damage">
   <for> 
-   <set val="318" order="0x08" stat="pAtk"/> 
-   <set val="163" order="0x08" stat="mAtk"/> 
-   <set val="12" order="0x08" stat="rCrit"/> 
-   <set val="433" order="0x08" stat="pAtkSpd"/> 
-   <enchant val="0" order="0x0C" stat="pAtk"/> 
-   <enchant val="0" order="0x0C" stat="mAtk"/> 
-          <!-- SA: Critical Damage --> 
-   <add val="559" order="0x40" stat="cAtkAdd"/>
-    <!-- Enhances damage to target during PvP --> 
-   <mul val="1.05" order="0x30" stat="pvpPhysDmg"/> 
-   <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/> 
+    <set val="318" order="0x08" stat="pAtk"/> 
+    <set val="163" order="0x08" stat="mAtk"/> 
+    <set val="12" order="0x08" stat="rCrit"/> 
+    <set val="433" order="0x08" stat="pAtkSpd"/> 
+    <enchant val="0" order="0x0C" stat="pAtk"/> 
+    <enchant val="0" order="0x0C" stat="mAtk"/> 
   </for> 
 </item> 
 <item id="10449" name="Icarus Trident - Anger"> 
   <for> 
-    <set val="363" order="0x08" stat="pAtk"/>
-    <set val="163" order="0x08" stat="mAtk"/>
-    <set val="4" order="0x08" stat="rCrit"/>
-    <set val="325" order="0x08" stat="pAtkSpd"/>
-    <enchant val="0" order="0x0C" stat="pAtk"/>
-    <enchant val="0" order="0x0C" stat="mAtk"/>
-  </for>
+   <set val="363" order="0x08" stat="pAtk"/> 
+   <set val="163" order="0x08" stat="mAtk"/> 
+   <set val="4" order="0x08" stat="rCrit"/> 
+   <set val="325" order="0x08" stat="pAtkSpd"/> 
+   <enchant val="0" order="0x0C" stat="pAtk"/> 
+   <enchant val="0" order="0x0C" stat="mAtk"/> 
+          <!-- SA: Anger --> 
+   <add val="78" order="0x40" stat="pAtk"/>
+   <mul val="0.85" order="0x30" stat="maxHp"/>
+   <!-- Enhances damage to target during PvP -->
+   <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+   <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
+   <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+  </for> 
 </item> 
 <item id="10450" name="Icarus Trident - Critical Stun">
   <for> 
@@ -215,9 +206,10 @@
    <set val="325" order="0x08" stat="pAtkSpd"/> 
    <enchant val="0" order="0x0C" stat="pAtk"/> 
    <enchant val="0" order="0x0C" stat="mAtk"/> 
-   <!-- Enhances damage to target during PvP --> 
-   <mul val="1.05" order="0x30" stat="pvpPhysDmg"/> 
-   <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/> 
+   <!-- Enhances damage to target during PvP -->
+   <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+   <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
+   <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for> 
 </item> 
 <item id="10451" name="Icarus Trident - Light"> 
@@ -241,9 +233,10 @@
       <!-- SA: Anger --> 
    <add val="78" order="0x40" stat="pAtk"/>
    <mul val="0.85" order="0x30" stat="maxHp"/>
-      <!-- Enhances damage to target during PvP --> 
-   <mul val="1.05" order="0x30" stat="pvpPhysDmg"/> 
-   <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/> 
+   <!-- Enhances damage to target during PvP -->
+   <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+   <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
+   <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for> 
 </item> 
 <item id="10453" name="Icarus Hammer - Health">
@@ -270,9 +263,10 @@
          <player hp="60"/> 
       </and> 
    </add> 
-   <!-- Enhances damage to target during PvP --> 
-   <mul val="1.05" order="0x30" stat="pvpPhysDmg"/> 
-   <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/> 
+   <!-- Enhances damage to target during PvP -->
+   <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+   <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
+   <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for> 
 </item> 
 <item id="10455" name="Icarus Hall - Mana Up">
@@ -288,24 +282,24 @@
 </item> 
 <item id="10456" name="Icarus Hall - Conversion">
   <for> 
-   <set val="290" order="0x08" stat="pAtk"/> 
-   <set val="217" order="0x08" stat="mAtk"/>  
-   <set val="4" order="0x08" stat="rCrit"/> 
-   <add val="4" order="0x10" stat="accCombat"/> 
-   <set val="379" order="0x08" stat="pAtkSpd"/> 
-   <enchant val="0" order="0x0C" stat="pAtk"/> 
-   <enchant val="0" order="0x0C" stat="mAtk"/> 
+    <set val="290" order="0x08" stat="pAtk"/> 
+    <set val="217" order="0x08" stat="mAtk"/>  
+    <set val="4" order="0x08" stat="rCrit"/> 
+    <add val="4" order="0x10" stat="accCombat"/> 
+    <set val="379" order="0x08" stat="pAtkSpd"/> 
+    <enchant val="0" order="0x0C" stat="pAtk"/> 
+    <enchant val="0" order="0x0C" stat="mAtk"/> 
   </for> 
 </item> 
 <item id="10457" name="Icarus Hall - Acumen">
   <for> 
-   <set val="290" order="0x08" stat="pAtk"/> 
-   <set val="217" order="0x08" stat="mAtk"/> 
-   <set val="4" order="0x08" stat="rCrit"/> 
-   <add val="4" order="0x10" stat="accCombat"/>
-   <set val="379" order="0x08" stat="pAtkSpd"/> 
-   <enchant val="0" order="0x0C" stat="pAtk"/> 
-   <enchant val="0" order="0x0C" stat="mAtk"/> 
+    <set val="290" order="0x08" stat="pAtk"/> 
+    <set val="217" order="0x08" stat="mAtk"/> 
+    <set val="4" order="0x08" stat="rCrit"/> 
+    <add val="4" order="0x10" stat="accCombat"/>
+    <set val="379" order="0x08" stat="pAtkSpd"/> 
+    <enchant val="0" order="0x0C" stat="pAtk"/> 
+    <enchant val="0" order="0x0C" stat="mAtk"/> 
   </for> 
 </item> 
 <item id="10458" name="Icarus Hand - Rsk. Evasion">
@@ -320,23 +314,24 @@
        <!-- SA: Rsk. Evasion --> 
     <add order="0x40" stat="rEvas" val="6.8">
       <and> 
-        <player hp="60"/>
+        <player hp="60"/> 
       </and> 
     </add> 
-    <!-- Enhances damage to target during PvP --> 
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/> 
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/> 
+   <!-- Enhances damage to target during PvP -->
+   <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+   <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
+   <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for> 
 </item> 
 <item id="10459" name="Icarus Hand - Focus">
   <for> 
-   <set val="442" order="0x08" stat="pAtk"/> 
-   <set val="163" order="0x08" stat="mAtk"/> 
-   <set val="4" order="0x08" stat="rCrit"/> 
-   <add val="4" order="0x10" stat="accCombat"/> 
-   <set val="325" order="0x08" stat="pAtkSpd"/> 
-   <enchant val="0" order="0x0C" stat="pAtk"/> 
-   <enchant val="0" order="0x0C" stat="mAtk"/> 
+    <set val="442" order="0x08" stat="pAtk"/> 
+    <set val="163" order="0x08" stat="mAtk"/> 
+    <set val="4" order="0x08" stat="rCrit"/> 
+    <add val="4" order="0x10" stat="accCombat"/> 
+    <set val="325" order="0x08" stat="pAtkSpd"/> 
+    <enchant val="0" order="0x0C" stat="pAtk"/> 
+    <enchant val="0" order="0x0C" stat="mAtk"/> 
   </for> 
 </item> 
 <item id="10460" name="Icarus Hand - Haste"> 
@@ -352,17 +347,12 @@
 </item> 
 <item id="10461" name="Icarus Stinger - Focus"> 
   <for> 
-   <set val="329" order="0x08" stat="pAtk"/> 
-   <set val="163" order="0x08" stat="mAtk"/> 
-   <set val="10" order="0x08" stat="rCrit"/> 
-   <set val="406" order="0x08" stat="pAtkSpd"/> 
-   <enchant val="0" order="0x0C" stat="pAtk"/> 
-   <enchant val="0" order="0x0C" stat="mAtk"/> 
-          <!-- SA: Focus --> 
-   <add val="111" order="0x40" stat="rCrit"/>
-       <!-- Enhances damage to target during PvP --> 
-   <mul val="1.05" order="0x30" stat="pvpPhysDmg"/> 
-   <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/> 
+    <set val="329" order="0x08" stat="pAtk"/> 
+    <set val="163" order="0x08" stat="mAtk"/> 
+    <set val="10" order="0x08" stat="rCrit"/> 
+    <set val="406" order="0x08" stat="pAtkSpd"/> 
+    <enchant val="0" order="0x0C" stat="pAtk"/> 
+    <enchant val="0" order="0x0C" stat="mAtk"/> 
   </for> 
 </item> 
 <item id="10462" name="Icarus Stinger  - Health">
@@ -387,18 +377,13 @@
 </item> 
 <item id="10464" name="Icarus Wingblade - Focus"> 
   <for> 
-   <set val="393" order="0x08" stat="pAtk"/> 
-   <set val="163" order="0x08" stat="mAtk"/> 
-   <set val="6" order="0x08" stat="rCrit"/> 
-   <add val="2" order="0x10" stat="accCombat"/> 
-   <set val="350" order="0x08" stat="pAtkSpd"/> 
-   <enchant val="0" order="0x0C" stat="pAtk"/> 
-   <enchant val="0" order="0x0C" stat="mAtk"/> 
-             <!-- SA: Focus --> 
-   <add val="111" order="0x40" stat="rCrit"/> 
-       <!-- Enhances damage to target during PvP --> 
-   <mul val="1.05" order="0x30" stat="pvpPhysDmg"/> 
-   <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/> 
+    <set val="393" order="0x08" stat="pAtk"/> 
+    <set val="163" order="0x08" stat="mAtk"/> 
+    <set val="6" order="0x08" stat="rCrit"/> 
+    <add val="2" order="0x10" stat="accCombat"/> 
+    <set val="350" order="0x08" stat="pAtkSpd"/> 
+    <enchant val="0" order="0x0C" stat="pAtk"/> 
+    <enchant val="0" order="0x0C" stat="mAtk"/> 
   </for> 
 </item> 
 <item id="10465" name="Icarus Wingblade - Health"> 
@@ -437,39 +422,30 @@
          <game skill="false" chance="12"/>
       </and>
    </mul>
-    <!-- Enhances damage to target during PvP --> 
-   <mul val="1.05" order="0x30" stat="pvpPhysDmg"/> 
-   <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/> 
+   <!-- Enhances damage to target during PvP -->
+   <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+   <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
+   <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for> 
 </item> 
 <item id="10468" name="Icarus Shooter - Guidance"> 
   <for> 
-   <set val="400" order="0x08" stat="pAtk"/> 
-   <set val="163" order="0x08" stat="mAtk"/>  
-   <set val="10" order="0x08" stat="rCrit"/> 
-   <set val="303" order="0x08" stat="pAtkSpd"/> 
-   <enchant val="0" order="0x0C" stat="pAtk"/> 
-   <enchant val="0" order="0x0C" stat="mAtk"/> 
-       <!-- SA: Guidance --> 
-    <add val="5.32" order="0x40" stat="accCombat"/>
-          <!-- Enhances damage to target during PvP --> 
-   <mul val="1.05" order="0x30" stat="pvpPhysDmg"/> 
-   <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/> 
+    <set val="400" order="0x08" stat="pAtk"/> 
+    <set val="163" order="0x08" stat="mAtk"/>  
+    <set val="10" order="0x08" stat="rCrit"/> 
+    <set val="303" order="0x08" stat="pAtkSpd"/> 
+    <enchant val="0" order="0x0C" stat="pAtk"/> 
+    <enchant val="0" order="0x0C" stat="mAtk"/> 
   </for> 
 </item> 
 <item id="10469" name="Icarus Shooter - Focus">
   <for> 
-   <set val="400" order="0x08" stat="pAtk"/> 
-   <set val="163" order="0x08" stat="mAtk"/>  
-   <set val="10" order="0x08" stat="rCrit"/> 
-   <set val="303" order="0x08" stat="pAtkSpd"/> 
-   <enchant val="0" order="0x0C" stat="pAtk"/> 
-   <enchant val="0" order="0x0C" stat="mAtk"/> 
-       <!-- SA: Focus --> 
-   <add val="116" order="0x40" stat="rCrit"/>
-          <!-- Enhances damage to target during PvP --> 
-   <mul val="1.05" order="0x30" stat="pvpPhysDmg"/> 
-   <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/> 
+    <set val="400" order="0x08" stat="pAtk"/> 
+    <set val="163" order="0x08" stat="mAtk"/>  
+    <set val="10" order="0x08" stat="rCrit"/> 
+    <set val="303" order="0x08" stat="pAtkSpd"/> 
+    <enchant val="0" order="0x0C" stat="pAtk"/> 
+    <enchant val="0" order="0x0C" stat="mAtk"/> 
   </for> 
 </item>
 <item id="10474" name="Shadow Item - Apprentice's Staff">

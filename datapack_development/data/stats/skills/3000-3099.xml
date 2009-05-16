@@ -40,16 +40,60 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="3007" levels="6" name="Special Ability: Guidance">
-  <!-- Increases Accuracy. -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- s_hit_up_sword -->
+<!--
+4684	Shamshir - Guidance	3007-2;	Increases Accuracy by 6.
+4696	Caliburs - Guidance	3007-3;	Increases Accuracy by 5.
+4714	Keshanberk - Guidance	3007-5;	Increases Accuracy by 5.
+6307	Sword of Limit - Guidance	3007-3;	Increases Accuracy by 5.
+-->
+<!--
+Guessing...
+9241	Chevalier Rapier - Guidance	3007-2;	Increases Accuracy by 6. Kamael exclusive weapon: Shamshir
+9265	Blinzlasher - Guidance	3007-3;	Increases Accuracy by 5. Kamael exclusive weapon: Caliburs
+10931	Keshanberk - Destruction - Guidance	3007-5;	A Masterwork Item that increases P. Atk.\n\nIncreases Accuracy by 5.
+9305	Military Fleuret - Guidance	3007-5;	Increases Accuracy by 5. Kamael exclusive weapon: Keshanberk
+10913	Military Fleuret - Destruction - Guidance	3007-5;	A Masterwork Item that increases P. Atk.\nKamael exclusive weapon: Keshanberk \n\nIncreases Accuracy by 5. 
+9281	Blinzlasher - Guidance	3007-3;	Increases Accuracy by 5. Kamael exclusive weapon: Sword of Limit
+-->
+  <table name="#accCombat"> 6.88 6.07 5.72 5.37 5.02 4.68 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 </table>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <for>
+    <add order="0x40" stat="accCombat" val="#accCombat"/>
+  </for>
 </skill>
 <skill id="3008" levels="6" name="Special Ability: Guidance">
-  <!-- Increases Accuracy. -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- s_hit_up_bow -->
+<!--
+4810	Crystallized Ice Bow - Guidance	3008-1;	Increases Accuracy by 5.
+4813	Elemental Bow - Guidance	3008-2;	Increases Accuracy by 5.
+4819	Akat Long Bow - Guidance	3008-3;	Increases Accuracy by 4.
+4822	Eminence Bow - Guidance	3008-4;	Increases Accuracy by 4.
+4828	Bow of Peril - Guidance	3008-6;	Increases Accuracy by 3.
+-->
+<!--
+Guessing...
+9237	Arbalest - Guidance	3008-1;	Increases Accuracy by 5. Kamael Exclusive Weapon: Crystallized Ice Bow
+9257	Ballista - Guidance	3008-2;	Increases Accuracy by 5. Kamael Exclusive Weapon: Elemental Bow
+9289	Tathlum - Guidance	3008-3;	Increases Accuracy by 4. Kamael Exclusive Weapon: Akat Long Bow
+9301	Sharpshooter - Guidance	3008-4;	Increases Accuracy by 4. Kamael Exclusive Weapon: Eminence Bow
+11010	Bow of Peril - Earth - Guidance	3008-6;	A Masterwork Item that increases Max HP.\n\nIncreases Accuracy by 3. 
+9325	Hell Hound - Guidance	3008-6;	Increases Accuracy by 3. Kamael Exclusive Weapon: Bow of Peril
+11014	Hell Hound - Great Gale - Guidance	3008-6;	This rare item increases Max. HP.\nKamael-exclusive weapon: Bow of Peril Conversion\n\nAccuracy +3.
+-->
+  <table name="#accCombat"> 5.42 5.12 4.82 4.53 4.24 3.95 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 </table>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <for>
+    <add order="0x40" stat="accCombat" val="#accCombat"/>
+  </for>
 </skill>
 <skill id="3009" levels="6" name="Special Ability: Evasion">
   <!-- Increases Evasion. -->
@@ -57,17 +101,76 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
-<skill id="3010" levels="7" name="Special Ability: Focus">
-  <!-- Increases critical attack rate. -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="3010" levels="6" name="Special Ability: Focus">
+<!-- s_critical_rate_up_sword -->
+<!--
+4682	Stormbringer - Focus	3010-1;	Increases Critical Attack by 86.
+9230	Soldat Estoc - Focus	3010-1;	Kamael exclusive weapon: Stormbringer Conversion Increases Critical Attack by 86. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members.
+4687	Katana - Focus	3010-2;	Increases Critical Attack by 82.
+9245	Chevalier Rapier - Focus	3010-2;	Kamael exclusive weapon: Katana - Increases Critical Attack by 82. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members.
+4693	Raid Sword - Focus	3010-2;	Increases Critical Attack by 82.
+9253	Chevalier Rapier - Focus	3010-2;	Kamael exclusive weapon: Raid Sword - Increases Critical Attack by 82. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members.
+4697	Caliburs - Focus	3010-3;	Increases Critical Attack by 77.
+9266	Blinzlasher - Focus	3010-3;	Kamael exclusive weapon: Caliburs - Increases Critical Attack by 77. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members.
+4699	Sword of Delusion - Focus	3010-3;	Increases Critical Attack by 77.
+9269	Blinzlasher - Focus	3010-3;	Kamael exclusive weapon: Sword of Delusion - Increases Critical Attack by 77. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members.
+4702	Tsurugi - Focus	3010-3;	Increases Critical Attack by 77.
+9273	Blinzlasher - Focus	3010-3;	Kamael exclusive weapon: Tsurugi - Increases Critical Attack by 77. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members.
+4706	Sword of Nightmare - Focus	3010-3;	Increases Critical Attack by 77.
+9278	Blinzlasher - Focus	3010-3;	Kamael exclusive weapon: Sword of Nightmare - Increases Critical Attack by 77. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members.
+4708	Samurai Longsword - Focus	3010-4;	Increases Critical Attack by 73.
+9293	Admiral's Estoc - Focus	3010-4;	Kamael exclusive weapon: Samurai Long Sword - Increases Critical Attack by 73. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members.
+4712	Flamberge - Focus	3010-1;	Increases Critical Attack by 86.
+9234	Schlager - Focus	3010-1;	Kamael Exclusive Weapon: Flamberge Conversion - Increases Critical Attack by 86.
+4715	Keshanberk - Focus	3010-5;	Increases Critical Attack by 68.
+9306	Military Fleuret - Focus	3010-5;	Kamael exclusive weapon: Keshanberk  Increases Critical Attack by 68. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members.
+4717	Sword of Damascus - Focus	3010-6;	Increases Critical Attack by 64.
+9317	Colichemarde - Focus	3010-6;	Kamael exclusive weapon: Sword of Damascus Conversion  Increases Critical Attack by 64. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members.
+4725	Great Sword - Focus	3010-5;	Increases Critical Attack by 68.
+9311	Innominate Victory - Focus	3010-5;	Kamael Exclusive Weapon: Great Sword  Increases Critical Attack by 68.
+6347	Berserker Blade - Focus	3010-4;	Increases Critical Attack by 73.
+9297	Saber Tooth - Focus	3010-4;	Kamael Exclusive Weapon: Berserker Blade - Increases Critical Attack by 73.
+-->
+<!--
+Guessing...
+8102	Pa'agrian Sword - Focus	3010-3;	Increases critical attack rate by 77.
+9285	Immortal Edge - Focus	3010-3;	Kamael Exclusive Weapon: Pa'agrian Sword - Increases Critical Attack by 77.
+8123	Karik Horn - Focus	3010-3;	Increases critical attack rate by 77.
+8129	Ice Storm Hammer - Focus	3010-5;	Increases critical attack rate by 68.
+8800	Naga Storm - Focus	3051-1;	Increases critical attack rate by 67. Increases damage inflicted during PvP.
+-->
+  <table name="#rCrit"> 86.7 82.2 77.8 73.3 68.9 64.5 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 </table>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <for>
+    <add order="0x40" stat="rCrit" val="#rCrit"/>
+  </for>
 </skill>
 <skill id="3011" levels="6" name="Special Ability: Focus">
-  <!-- Increases critical attack rate. -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- s_critical_rate_up_dagger -->
+<!--
+4762	Dark Elven Dagger - Focus	3011-1;	Increases Critical Attack by 90.
+4769	Grace Dagger - Focus	3011-3;	Increases Critical Attack by 81.
+4772	Dark Screamer - Focus	3011-3;	Increases Critical Attack by 81.
+4778	Kris - Focus	3011-5;	Increases Critical Attack by 71.
+4786	Hell Knife - Focus	3011-5;	Increases Critical Attack by 71.
+-->
+<!--
+Guessing...
+4784	Bloody Orchid - Focus	3011-2;	Increases Critical Attack.
+-->
+  <table name="#rCrit"> 90.5 85.9 81.2 76.6 71.9 67.3 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 </table>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <for>
+    <add order="0x40" stat="rCrit" val="#rCrit"/>
+  </for>
 </skill>
 <skill id="3012" levels="6" name="Special Ability: Anger">
   <!-- Decreases MaxHP and increases P. Atk. -->
@@ -119,17 +222,35 @@
   </for>
 </skill>
 <skill id="3016" levels="6" name="Special Ability: Critical Stun">
-  <!--
-  1: Temporarily stuns target into paralysis.
-  6: Temporarily stuns target into paralysis.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="lvlDepend" val="1"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+<!--
+4859	Lance - Critical Stun	3016-6;	13% chance of stun effect on a critical attack.
+4856	Great Axe - Critical Stun	3016-5;	14% chance of stun effect on a critical attack.
+4852	Orcish Poleaxe - Critical Stun	3016-4;	15% chance of stun effect on a critical attack. 
+4849	Widow Maker - Critical Stun	3016-3;	16% chance of stun effect on a critical attack.
+4847	Scorpion - Critical Stun	3016-3;	16% chance of stun effect on a critical attack.
+4843	Bec de Corbin - Critical Stun	3016-2;	17% chance of stun effect on a critical attack.
+4840	Body Slasher - Critical Stun	3016-1;	18% chance of stun effect on a critical attack.
+4838	Orcish Glaive - Critical Stun	3016-1;	18% chance of stun effect on a critical attack.
+4835	Scythe - Critical Stun	3016-1;	18% chance of stun effect on a critical attack.
+-->
+<!--
+Guessing...
+4861	Halberd - Critical Stun	3016-4;	15% chance of stun effect on a critical attack.
+-->
+  <table name="#activationChance"> 18 17 16 15 14 13 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 </table>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="STUN"/>
+  <set name="operateType" val="OP_CHANCE"/>
+  <set name="chanceType" val="ON_CRIT"/>
+  <set name="activationChance" val="#activationChance"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="100"/>
   <set name="isDebuff" val="true"/>
+  <set name="lvlDepend" val="1"/>
+  <set name="bestowed" val="true"/>
   <for>
-    <effect name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="3018" levels="6" name="Special Ability: Back Blow">
@@ -203,10 +324,37 @@
   <set name="castRange" val="600"/>
 </skill>
 <skill id="3023" levels="6" name="Special Ability: Critical Damage">
-  <!-- Causes additional damage when launching a critical attack. -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- s_critical_dmg_up_sword -->
+<!--
+4688	Katana - Critical Damage	0	0	3023-2;	Increases P. Atk. by 194 on a critical attack.
+4690	Spirit Sword - Critical Damage	0	0	3023-2;	Increases P. Atk. by 194 on a critical attack.
+4698	Caliburs - Critical Damage	0	0	3023-3;	Increases P. Atk. by 213 on a critical attack.
+4703	Tsurugi - Critical Damage	0	0	3023-3;	Increases P. Atk. by 213 on a critical attack.
+4709	Samurai Longsword - Critical Damage	0	0	3023-4;	Increases P. Atk. by 231 on a critical attack.
+4711	Flamberge - Critical Damage	bigsword	0	0	3023-1;	Increases P. Atk. by 174 on a critical attack.
+4718	Sword of Damascus - Critical Damage	0	0	3023-6;	Increases P. Atk. by 262 on a critical attack.
+4724	Great Sword - Critical Damage	bigsword	0	0	3023-5;	Increases P. Atk. by 247 on a critical attack.
+-->
+<!--
+Guessing...
+9233	Schlager - Critical Damage	ancient	0	0	3023-1;	Kamael Exclusive Weapon: Flamberge Conversion\n\nIncreases P. Atk. by 174 on a critical attack.
+9246	Chevalier Rapier - Critical Damage	rapier	3426	1	3023-2;	Kamael exclusive weapon: Katana\n\nIncreases P. Atk. by 194 on a critical attack.\nWhen enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members.
+9249	Chevalier Rapier - Critical Damage	rapier	3426	1	3023-2;	Kamael exclusive weapon: Spirit Sword\n\nIncreases P. Atk. by 194 on a critical attack.\nWhen enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members.
+9267	Blinzlasher - Critical Damage	rapier	3426	1	3023-3;	Kamael exclusive weapon: Caliburs\n\nIncreases P. Atk. by 213 on a critical attack.\nWhen enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members.
+9274	Blinzlasher - Critical Damage	rapier	3426	1	3023-3;	Kamael exclusive weapon: Tsurugi\n\nIncreases P. Atk. by 213 on a critical attack.\nWhen enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members.
+9294	Admiral's Estoc - Critical Damage	rapier	3426	1	3023-4;	Kamael exclusive weapon: Samurai Long Sword\n\nIncreases P. Atk. by 231 on a critical attack.\nWhen enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members.
+9310	Innominate Victory - Critical Damage	ancient	0	0	3023-5;	Kamael Exclusive Weapon: Great Sword\n\nIncreases P. Atk. by 247 on a critical attack.
+9318	Colichemarde - Critical Damage	rapier	3426	1	3023-6;	Kamael exclusive weapon: Sword of Damascus Conversion\n\nIncreases P. Atk. by 262 on a critical attack.\nWhen enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members.
+-->
+  <table name="#cAtkAdd"> 174.78 194.1 213.12 231.29 247.98 262.57 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 </table>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <for>
+    <add order="0x40" stat="cAtkAdd" val="#cAtkAdd"/>
+  </for>
 </skill>
 <skill id="3024" levels="6" name="Special Ability: Critical Poison">
   <table name="#dmg"> 92 92 114 114 114 144 </table>
@@ -292,40 +440,70 @@
   </for>
 </skill>
 <skill id="3036" levels="6" name="Special Ability: Haste">
-  <!-- Done by DJ MELERIX -->
-  <!-- For Swords & Blunts -->
-  <table name="#magicLvl"> 46 49 52 55 58 61 </table>
+<!-- s_attack_speed_sword_blunt -->
+<!--
+4689	Katana - Haste	3036-2;	Increases Atk. Spd. by about 7%.
+4692	Spirit Sword - Haste	3036-2;	Increases Atk. Spd. by about 7%.
+4704	Tsurugi - Haste	3036-3;	Increases Atk. Spd. by about 7%.
+4710	Samurai Longsword - Haste	3036-4;	Increases Atk. Spd. by about 7%.
+4719	Sword of Damascus - Haste	3036-6;	Increases Atk. Spd. by about 6%.
+4728	Big Hammer - Haste	3036-1;	Increases Atk. Spd. by about 8%.
+4731	Battle Axe - Haste	3036-1;	Increases Atk. Spd. by about 8%.
+4734	Silver Axe - Haste	3036-1;	Increases Atk. Spd. by about 8%.
+4740	Dwarven War Hammer - Haste	3037-2;	Increases Atk. Spd. by about 7%.
+4743	War Axe - Haste	3036-3;	Increases Atk. Spd. by about 7%.
+4752	Deadman's Glory - Haste	3036-6;	Increases Atk. Spd. by about 6%.
+4755	Art of Battle Axe - Haste	3036-6;	Increases Atk. Spd. by about 6%.
+-->
+<!--
+Guessing...
+8124	Karik Horn - Haste	3036-2;	Increases Atk. Spd. by 7%.
+8133	Star Buster - Haste	3036-5;	Increases Atk. Spd. by 6%.
+9247	Chevalier Rapier - Haste	rapier	3036-2;	Kamael Exclusive Weapon: Katana  Increases Atk. Spd. by about 7%. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members.
+9251	Chevalier Rapier - Haste	rapier	3036-2;	Kamael Exclusive Weapon: Spirit Sword  Increases Atk. Spd. by about 7%. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members.
+9275	Blinzlasher - Haste	rapier	3036-3;	Kamael Exclusive Weapon: Tsurugi  Increases Atk. Spd. by about 7%. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members.
+9295	Admiral's Estoc - Haste	rapier	3036-4;	Kamael Exclusive Weapon: Samurai Long Sword  Increases Atk. Spd. by about 7%. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members.
+9319	Colichemarde - Haste	rapier	3036-6;	Kamael Exclusive Weapon: Sword of Damascus Conversion  Increases Atk. Spd. by about 6%. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members.
+-->
   <table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 </table>
-  <set name="magicLvl" val="#magicLvl"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <table name="#magicLvl"> 46 49 52 55 58 61 </table>
   <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <for>
     <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
   </for>
 </skill>
 <skill id="3037" levels="6" name="Special Ability: Haste">
-  <!-- Done by DJ MELERIX -->
-  <!-- For Fists -->
-  <table name="#magicLvl"> 46 49 52 55 58 61 </table>
+<!-- s_attack_speed_fist -->
+<!--
+4794	Fisted Blade - Haste	dualfist	3037-3;	Increases Atk. Spd. by about 7%.
+4800	Knuckle Duster - Haste	dualfist	3037-2;	Increases Atk. Spd. by about 7%.
+6349	Berserker Blade - Haste	bigsword	3037-4;	Increases Atk. Spd. by about 7%.
+-->
+<!--
+Guessing...
+9299	Saber Tooth - Haste	ancient	3037-4;	Kamael Exclusive Weapon: Berserker Blade  Increases Atk. Spd. by about 7%.
+-->
   <table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 </table>
-  <set name="magicLvl" val="#magicLvl"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <table name="#magicLvl"> 46 49 52 55 58 61 </table>
   <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <for>
     <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
   </for>
 </skill>
 <skill id="3038" levels="6" name="Special Ability: Haste">
-  <!-- Done by DJ MELERIX -->
-  <!-- For Bows -->
-  <table name="#magicLvl"> 46 49 52 55 58 61 </table>
+<!-- s_attack_speed_bow -->
   <table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 </table>
-  <set name="magicLvl" val="#magicLvl"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <table name="#magicLvl"> 46 49 52 55 58 61 </table>
   <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <for>
     <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
   </for>
@@ -363,101 +541,235 @@
     <effect count="10" name="DamOverTime" time="3" val="#dmg" abnormal="poison" effectPower="70" effectType="POISON"/>
   </for>
 </skill>
-<skill id="3042" levels="20" name="Special Ability: Critical Damage">
-  <!--
-  Lvl 1-16:  Inflicts additional damage during a critical attack.
-  Lvl 17-20: Increases critical attack damage inflicted during PvP.
-  -->
-  <!-- Done by DJ MELERIX -->
-  <!-- For Duals +4 -->
-  <table name="#cAtk"> 81.6 61.4 84.14 75.49 66.77 58.01 49.42 84.11 166.26 146.88 127 107.01 133.97 124.79 275.26 267.13 257.98 297.21 331.38 361.06 </table>
-  <table name="#magicLvl"> 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 </table>
+<skill id="3042" levels="20" name="Critical Damage Duel 4">
+<!-- s_crt_damage_dual4 -->
+<!--
+2557	Elven Sword*Elven Long Sword	dual	3042	2	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its P. Atk will increase by 61 on a critical attack.
+2562	Stormbringer*Shamshir	dual	3042	7	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its P. Atk. will increase by 49 on a critical attack.
+2567	Stormbringer*Sword of Limit	dual	3042	9	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its P. Atk will increase by 166 on a critical attack.
+2573	Shamshir*Katana	dual	3042	8	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its P. Atk. will increase by 84 on a critical attack.
+2577	Shamshir*Sword of Limit	dual	3042	10	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 146 on a critical attack.
+2584	Katana*Raid Sword	dual	3042	8	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 84 on a critical attack.
+2586	Katana*Sword of Limit	dual	3042	10	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 146 on a critical attack.
+2590	Katana*Samurai Long Sword	dual	3042	12	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 106 on a critical attack.
+2594	Spirit Sword*Sword of Limit	dual	3042	10	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 106 on a critical attack.
+2601	Raid Sword*Sword of Limit	dual	3042	10	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 146 on a critical attack.
+2606	Caliburs*Caliburs	dual	3042	11	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 127 on a critical attack.
+2612	Sword of Limit*Sword of Limit	dual	3042	11	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 127 on a critical attack.
+2618	Sword of Delusion*Sword of Nightmare	dual	3042	11	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 127 on a critical attack.
+2620	Sword of Delusion*Samurai Long Sword	dual	3042	13	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, P. Atk. will increase by 133 on a critical attack.
+-->
+  <table name="#cAtkAdd"> 81.6 61.4 84.14 75.49 66.77 58.01 49.42 84.11 166.26 146.88 127 107.01 133.97 124.79 275.26 267.13 257.98 297.21 331.38 361.06 </table>
   <table name="#pvpBonus"> 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
-  <set name="magicLvl" val="#magicLvl"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="BUFF"/>
+  <table name="#magicLvl"> 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 </table>
   <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <for>
-    <add order="0x40" stat="cAtk" val="#cAtk"/>
-    <mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus"/>
+    <add order="0x40" stat="cAtkAdd" val="#cAtkAdd"/>
     <mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus"/>
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus"/>
+    <mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus"/>
   </for>
 </skill>
 <skill id="3043" levels="6" name="Special Ability: Critical Damage">
-  <!--
-  1: Causes additional damage when launching a critical attack.
-  6: Causes additional damage when launching a critical attack.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3044" levels="20" name="Special Ability: Focus">
-  <!-- Needs to be verified -->
-  <table name="#rate"> 61 63 64 66 67 68 71 73 75 77 79 81 82 84 86 90 88 106 111 116 </table>
-  <table name="#PvPbonus"> 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
+<!-- s_critical_dmg_up_dagger -->
+<!--
+6358	Crystal Dagger - Critical Damage	dagger	0	0	3043-4;	Increases P. Atk. to 140 on a critical attack.
+6359	Demon Dagger - Critical Damage	dagger	0	0	3043-6;	Increases P. Atk. to 160 on a critical attack.
+-->
+  <table name="#cAtkAdd"> 106.45 118.22 129.81 140.87 151.04 159.93 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <for>
-    <add order="0x40" stat="rCrit" val="#rate"/>
-    <mul order="0x30" stat="pvpPhysDmg" val="#PvPbonus"/>
-    <mul order="0x30" stat="pvpMagicalDmg" val="#PvPbonus"/>
+    <add order="0x40" stat="cAtkAdd" val="#cAtkAdd"/>
   </for>
 </skill>
-<skill id="3045" levels="20" name="Special Ability: Haste">
-  <!--
-  1: Increases ATK Spd.
-  20: Increases Atk. Spd. Increases damage inflicted during PvP.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="3044" levels="20" name="Special Ability: Focus">
+<!-- s_focus_dual4 -->
+<!--
+2559	Sword of Revolution*Elven Long Sword	3044	3	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its Critical Attack will increase by 50.
+2564	Stormbringer*Spirit Sword	3044	7	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its critical attack will increase by 24.
+2569	Stormbringer*Sword of Nightmare	3044	9	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its critical will increase by 76.
+2575	Shamshir*Raid Sword	3044	8	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its critical will increase by 40.
+2579	Shamshir*Sword of Nightmare	3044	10	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, its critical will increase by 65.
+2588	Katana*Sword of Nightmare	3044	10	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, critical will increase by 65.
+2592	Spirit Sword*Raid Sword	3044	8	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, critical will increase by 40.
+2596	Spirit Sword*Sword of Nightmare	3044	10	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, critical will increase by 65.
+2603	Raid Sword*Sword of Nightmare	3044	10	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, critical will increase by 65.
+2605	Raid Sword*Samurai Long Sword	3044	12	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, critical will increase by 43.
+2608	Caliburs*Sword of Delusion	3044	11	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, critical will increase by 54.
+2614	Sword of Limit*Sword of Nightmare	3044	11	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, critical will increase by 54.
+2621	Sword of Nightmare*Sword of Nightmare	3044	11	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, critical will increase by 54.
+2624	Tsurugi*Tsurugi	3044	11	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, critical will increase by 54.
+2625	Tsurugi*Samurai Long Sword	3044	13	0-0;	When enchanted, the P.Atk of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, critical will increase by 52.
+10004	Dynasty Dual Sword	3044	20	0-0;	When enchanted, the P.Atk of a dualsword will increase more than that of a two-handed sword, blunt or fist weapon. When enchanted by 4 or more charges, the critical rate will increase by 109, and the MaxHP will increase by 10%. Enhances damage done to the target during PvP.
+10415	Icarus Dual Sword	3044	20	0-0;	When enchanted, the P. Atk. of dual-swords, two-handed swords, two-handed blunt weapons and fist weapons will increase more than that of one-handed swords. When enchanted by 4 or more, Increases Critical Attack by 109, and Max HP increases by 10%. Increases the damage inflicted during PvP.
+-->
+  <table name="#rCrit"> 53.6 38.5 50.4 43.2 36.5 30.4 24.8 40.4 76.6 65 54 43.7 52.6 47.2 98.7 92.4 86.2 96 103.5 109.2 </table>
+  <table name="#pvpBonus"> 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
+  <table name="#magicLvl"> 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 </table>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <for>
+    <add order="0x40" stat="rCrit" val="#rCrit"/>
+    <mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus"/>
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus"/>
+    <mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus"/>
+  </for>
 </skill>
-<skill id="3046" levels="20" name="Special Ability: Guidance">
-  <!--
-  1: Increases Accuracy.
-  20: Increases Accuracy. Increases damage inflicted during PvP.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="3045" levels="20" name="Haste Duel 4">
+<!--
+2560	Elven Long Sword*Elven Long Sword	3045	4	0-0;	
+2565	Stormbringer*Raid Sword	3045	7	0-0;	
+2570	Stormbringer*Tsurugi	3045	9	0-0;	
+2580	Shamshir*Tsurugi	3045	10	0-0;	
+2582	Katana*Katana	3045	8	0-0;	
+2589	Katana*Tsurugi	3045	10	0-0;	
+2597	Spirit Sword*Tsurugi	3045	10	0-0;	
+2599	Raid Sword*Raid Sword	3045	8	0-0;	
+2604	Raid Sword*Tsurugi	3045	10	0-0;	
+2609	Caliburs*Sword of Nightmare	3045	11	0-0;	
+2611	Caliburs*Samurai Long Sword	3045	13	0-0;	
+2615	Sword of Limit*Tsurugi	3045	11	0-0;	
+2622	Sword of Nightmare*Tsurugi	3045	11	0-0;	
+2626	Samurai Long Sword*Samurai Long Sword	3045	14	0-0;	
+5233	Keshanberk*Keshanberk	3045	17	0-0;	
+6722	Monster Only(Ahrimanes)	3045	14	0-0;	
+-->
+<!--
+Guessing...
+5704	Keshanberk*Keshanberk	3045	17	0-0;	
+8938	Damascus * Tallum Blade	3045	17	0-0;	
+-->
+  <table name="#pAtkSpd"> 1.05 1.04 1.05 1.04 1.03 1.03 1.02 1.04 1.07 1.06 1.05 1.04 1.05 1.04 1.09 1.08 1.08 1.09 1.09 1.1 </table>
+  <table name="#pvpBonus"> 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
+  <table name="#magicLvl"> 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 </table>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <for>
+    <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
+    <mul order="0x30" stat="pvpPhysDmg" val="1.05"/>
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/>
+    <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/>
+  </for>
+</skill>
+<skill id="3046" levels="20" name="Guidance Dual 4">
+<!-- s_guidence_dual4 -->
+<!--
+2554	Crimson Sword*Elven Long Sword	3046	2	0-0;
+2561	Stormbringer*Stormbringer	3046	6	0-0;
+2566	Stormbringer*Caliburs	3046	9	0-0;
+2571	Stormbringer*Samurai Long sword	3046	11	0-0;
+2572	Shamshir*Shamshir	3046	8	0-0;
+2576	Shamshir*Caliburs	3046	10	0-0;
+2581	Shamshir*Samurai Long Sword	3046	12	0-0;
+2583	Katana*Spirit Sword	3046	8	0-0;
+2585	Katana*Caliburs	3046	10	0-0;
+2593	Spirit Sword*Caliburs	3046	10	0-0;
+2600	Raid Sword*Caliburs	3046	10	0-0;
+2610	Caliburs*Tsurugi	3046	11	0-0;
+2616	Sword of Limit*Samurai Long Sword	3046	13	0-0;
+2617	Sword of Delusion*Sword of Delusion	3046	11	0-0;
+5706	Damascus*Damascus	3046	20	0-0;
+-->
+  <table name="#accCombat"> 3.9 2.8 3.7 3.1 2.6 2.2 1.8 2.9 5.7 4.8 3.9 3.2 3.8 3.4 6.5 6.5 6.5 6.5 6.5 6.5 </table>
+  <table name="#magicLvl"> 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 </table>
+  <table name="#pvpBonus"> 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <for>
+    <add order="0x40" stat="accCombat" val="#accCombat"/>
+    <mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus"/>
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus"/>
+    <mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus"/>
+  </for>
 </skill>
 <skill id="3047" levels="3" name="Special Ability: Acumen">
-  <!--
-  Lvl 1: Increases Casting Spd.
-  Lvl 2: Increases Casting Spd. and damage inflicted during PvP.
-  Lvl 3: Increases Casting Spd. Increases damage inflicted during PvP.
-  -->
-  <table name="#pvpBonus"> 1 1.05 1.05 </table>
-  <!-- Guess Lvl 3 -->
-  <set name="magicLvl" val="64"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+<!-- s_opt_acumen/s_opt_acumen_a -->
+<!--
+5598	Dasparion's Staff - Acumen	0	0	3047-2;	
+5607	Branch of The Mother Tree - Acumen	0	0	3047-2;	
+5643	Sword of Miracles - Acumen	0	0	3047-2;	
+6313	Homunkulus's Sword - Acumen	0	0	3047-1;	
+6608	Arcana Mace - Acumen	0	0	3047-2;	
+7710	Club of Nature - Acumen	0	0	3047-1;	
+7716	Inferno Staff - Acumen	0	0	3047-1;	
+7722	Sword of Valhalla - Acumen	0	0	3047-1;	
+-->
+<!--
+Guessing...
+8111	Mysterious Sword - Acumen	0	0	3047-1;	Increases Casting Spd. by 15%.
+8117	Wizard's Tear - Acumen	0	0	3047-1;	Increases Casting Spd. by 15%.
+8141	Spell Breaker - Acumen	0	0	3047-1;	Increases Casting Spd. by 15%.
+8149	Spiritual Eye - Acumen	0	0	3047-3;	Increases Casting Spd. by 15%. Increases damage inflicted during PvP.
+8150	Flaming Dragon Skull - Acumen	0	0	3047-3;	Increases Casting Spd. by 15%. Increases damage inflicted during PvP.
+8819	Daimon Crystal - Acumen	0	0	3047-3;	Increases Casting Spd. by 15%. Increases damage inflicted during PvP.
+9860	Dynasty Phantom - Acumen	0	0	3047-3;	Increases Casting Spd. by 15%. Increases damage inflicted during PvP.
+9877	Dynasty Mace - Acumen	0	0	3047-3;	Increases Casting Spd. by 15%. Increases damage inflicted during PvP.
+10440	Icarus Spirit - Acumen	0	0	3047-3;	Increases Casting Spd. by 15%. Increases damage inflicted during PvP.
+10457	Icarus Hall - Acumen	0	0	3047-3;	Increases Casting Spd. by 15%. Increases damage inflicted during PvP.
+10529	Dynasty Staff - Acumen	0	0	3047-3;	Increases Casting Spd. by 15%. Increases damage inflicted during PvP.
+10698	Daimon Crystal - PvP - Acumen	0	0	3047-3;	Increases Casting Spd. by 15%. Increases damage inflicted during PvP.
+10731	Arcana Mace - PvP - Acumen	0	0	3047-3;	Increases Casting Spd. by 15%. Increases damage inflicted during PvP.
+10771	Dynasty phantom - PvP - Acumen	0	0	3047-3;	Increases Casting Spd. by 15%. Increases damage inflicted during PvP.
+10776	Dynasty Mace - PvP - Acumen	0	0	3047-3;	Increases Casting Spd. by 15%. Increases damage inflicted during PvP.
+10779	Dynasty Staff - PvP - Acumen	0	0	3047-3;	Increases Casting Spd. by 15%. Increases damage inflicted during PvP.
+-->
+  <table name="#pvpBonus"> 1 1.05 1.05 </table> <!-- Guessing Level 3 -->
+  <table name="#magicLvl"> 64 64 80 </table> <!-- Guessing Level 3 -->
   <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <for>
     <mul order="0x30" stat="mAtkSpd" val="1.15"/>
     <mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus"/>
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus"/>
     <mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus"/>
   </for>
 </skill>
 <skill id="3048" levels="3" name="Special Ability: Conversion">
-  <!--
-  Lvl 1: Decreases Max HP and increases Max MP.
-  Lvl 2: Decreases Max HP and increases Max MP. Increases damage inflicted during PvP.
-  Lvl 3: Decreases Max HP and increases maximum MP. Increases damage inflicted during PvP.
-  -->
-  <!-- Done by DJ MELERIX -->
-  <!-- Guess Lvl 3 -->
-  <table name="#pvpBonus"> 1 1.05 1.05 </table>
-  <set name="magicLvl" val="64"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+<!-- s_opt_updown/s_opt_updown_a -->
+<!--
+5597	Dasparion's Staff - Conversion	0	0	3048-2;
+5605	Branch of The Mother Tree - Conversion	0	0	3048-2;
+6314	Homunkulus's Sword - Conversion	0	0	3048-1;
+7715	Mace of The Underworld - Conversion	0	0	3048-1;
+-->
+<!--
+Guessing...
+8119	Wizard's Tear - Conversion	0	0	3048-1;	Increases Max MP by 60% and decreases Max HP by 40%.
+8138	Ecliptic Axe - Conversion	0	0	3048-1;	Increases Max MP by 60% and decreases Max HP by 40%.
+8146	Kaim Vanul's Bones - Conversion	0	0	3048-1;	Increases Max MP by 60% and decreases Max HP by 40%.
+8815	Cabrio's Hand - Conversion	0	0	3048-3;	Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP.
+9862	Dynasty Phantom - Conversion	0	0	3048-3;	Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP.
+9876	Dynasty Mace - Conversion	0	0	3048-3;	Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP.
+10442	Icarus Spirit - Conversion	0	0	3048-3;	Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP.
+10456	Icarus Hall - Conversion	0	0	3048-3;	Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP.
+10528	Dynasty Staff - Conversion	0	0	3048-3;	Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP.
+-->
+  <table name="#pvpBonus"> 1 1.05 1.05 </table> <!-- Guessing Level 3 -->
+  <table name="#magicLvl"> 64 64 80 </table> <!-- Guessing Level 3 -->
   <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <for>
     <mul order="0x30" stat="maxMp" val="1.6"/>
     <mul order="0x30" stat="maxHp" val="0.6"/>
     <mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus"/>
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus"/>
     <mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus"/>
   </for>
 </skill>
@@ -469,27 +781,59 @@
   <set name="castRange" val="1000"/>
 </skill>
 <skill id="3050" levels="2" name="Special Ability: Focus">
-  <!-- Enhances critical attack. Increases damage inflicted during PvP. -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- s_opt_focus_low_cri -->
+<!--
+5599	Meteor Shower - Focus	3050-1;	Increases Critical Attack by 61. Enhances damage to a target during PvP.
+5621	Blood Tornado - Focus	3050-1;	Increases Critical Attack by 61. Enhances damage to a target during PvP.
+-->
+<!--
+Guessing...
+4757	Meteor Shower - Focus	3050-2;	Increases Critical Attack by 61. (no skill???)
+8110	Infernal Master - Focus	3050-2;	Increases critical attack rate by 61. Increases damage inflicted during PvP.
+9335	Divine Pain - Focus	3050-2;	Kamael Exclusive Weapon: Internal Master Conversion  Increases Critical Attack by 61. Enhances damage to a target during PvP.
+8791	Sword of Ipos - Focus	3050-2;	Increases Critical Attack by 61. Increases damage inflicted during PvP.
+9357	Durendal - Focus	3050-2;	Kamael Exclusive Weapon: Sword of Ipos Conversion  Increases Critical Attack by 61. Enhances damage to a target during PvP.
+8796	Barakiel's Axe - Focus	3050-2;	Increases Critical Attack by 61. Increases damage inflicted during PvP.
+8797	Behemoth's Tuning Fork - Focus	3050-2;	Increases Critical Attack by 61. Increases damage inflicted during PvP.
+8807	Shyeed's Bow - Focus	3050-2;	Increases Critical Attack by 61. Increases damage inflicted during PvP.
+9362	Screaming Vengeance - Focus	3050-2;	Kamael Exclusive Weapon: Shyeed's Bow Conversion  Increases Critical Attack by 61. Enhances damage to a target during PvP.
+-->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="64"/>
+  <for>
+    <add order="0x40" stat="rCrit" val="61.6"/>
+    <mul order="0x30" stat="pvpPhysDmg" val="1.05"/>
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/>
+    <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/>
+  </for>
 </skill>
 <skill id="3051" levels="2" name="Special Ability: Focus">
-  <!-- Enhances critical attack. Increases damage inflicted during PvP. -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- s_opt_focus_high_cri -->
+<!--
+5614	Bloody Orchid - Focus	3051-1;	Increases Critical Attack by 67. Enhances damage to a target during PvP.
+-->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="67"/>
+  <for>
+    <add order="0x40" stat="rCrit" val="67.3"/>
+    <mul order="0x30" stat="pvpPhysDmg" val="1.05"/>
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/>
+    <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/>
+  </for>
 </skill>
 <skill id="3052" levels="2" name="Special Ability: Critical Bleed">
   <!-- Blunts only -->
-  <table name="#dmg"> 93 93 </table>
   <set name="abnormalLvl" val="7"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="WEAPON_SA"/>
-  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="lvlDepend" val="1"/>
   <for>
-    <effect count="7" name="DamOverTime" time="3" val="#dmg" abnormal="bleed" effectPower="100" effectType="BLEED">
+    <effect count="7" name="DamOverTime" time="3" val="93" abnormal="bleed" effectPower="100" effectType="BLEED">
       <mul order="0x30" stat="runSpd" val="0.8"/>
     </effect>
   </for>
@@ -599,45 +943,114 @@
   </for>
 </skill>
 <skill id="3064" levels="1" name="Special Ability: Guidance">
-  <!--  Increases Accuracy. Increases damage inflicted during PvP. -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- s_opt_guidence_low_hit -->
+<!--
+5617	Soul Separator - Guidance	3064-1;	Increases Accuracy by 4.
+11117	Soul Separator - On Fire - Guidance	3064-1;	A Masterwork Item that increases HP regeneration.\n\nIncreases Accuracy by 4. Increases damage inflicted during PvP.
+-->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="64"/>
+  <for>
+    <add order="0x40" stat="accCombat" val="3.95"/>
+    <mul order="0x30" stat="pvpPhysDmg" val="1.05"/>
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/>
+    <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/>
+  </for>
 </skill>
 <skill id="3065" levels="1" name="Special Ability: Guidance">
-  <!-- Increases Accuracy. Increases damage inflicted during PvP. -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- s_opt_guidence_high_hit -->
+<!--
+5624	Dragon Grinder - Guidance	3065-1;	Increases Accuracy by 5. Increases damage inflicted during PvP.
+11094	Dragon Grinder - Earth - Guidance	3065-1;	A Masterwork Item that increases Max HP.\n\nIncreases Accuracy by 5. Increases damage inflicted during PvP. 
+-->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="67"/>
+  <for>
+    <add order="0x40" stat="accCombat" val="5.41"/>
+    <mul order="0x30" stat="pvpPhysDmg" val="1.05"/>
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/>
+    <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/>
+  </for>
 </skill>
-<skill id="3066" levels="3" name="Special Ability: Critical Damage">
-  <!-- Increases damage during a critical attack. Increases damage inflicted during PvP. -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="3066" levels="4" name="Special Ability: Critical Damage">
+<!-- s_opt_crt_damage_dagger -->
+<!--
+5618	Soul Separator - Critical Damage	dagger	0	0	3066-2;	On a critical attack, increases P. Atk. by 200. Enhances damage to a target during PvP.
+-->
+<!--
+Guessing...
+8801	Naga Storm - Critical Damage	dagger	0	0	3066-2;	Increases P. Atk. by 200 on a critical attack. Increases damage inflicted during PvP.
+9868	Dynasty Knife - Critical Damage	dagger	0	0	3066-4;	Increases P. Atk. by 559 on a critical attack. Increases damage inflicted during PvP.
+10448	Icarus Disperser - Critical Damage	dagger	0	0	3066-4;	Increases P. Atk. by 559 on a critical attack. Increases damage inflicted during PvP.
+10680	Naga Storm - PvP - Critical Damage	dagger	0	0	3066-2;	Increases P. Atk. by 200 on a critical attack. Increases damage inflicted during PvP.
+10764	Dynasty Knife - PvP - Critical Damage	dagger	0	0	3066-4;	Increases P.Atk. by 559 on a critical attack. Increases damage inflicted during PvP.
+-->
+  <table name="#cAtkAdd"> 180.94 200.79 200.79 559 </table> <!-- Guessing Level 3/4 -->
+  <table name="#magicLvl"> 64 67 75 80 </table> <!-- Guessing Level 3/4 -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <for>
+    <add order="0x40" stat="cAtkAdd" val="#cAtkAdd"/>
+    <mul order="0x30" stat="pvpPhysDmg" val="1.05"/>
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/>
+    <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/>
+  </for>
 </skill>
 <skill id="3067" levels="2" name="Special Ability: Critical Damage">
-  <!-- Increases damage during a critical attack. Increases damage inflicted during PvP. -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- s_opt_crt_damage_sword -->
+<!--
+5647	Dark Legion's Edge - Critical Damage	0	0	3067-2;	On a critical attack, increases P. Atk. by 326. Enhances damage to a target during PvP.
+-->
+<!--
+Guessing...
+8109	Infernal Master - Critical Damage	bigsword	0	0	3067-1;	Inflicts additional damage on a critical attack by 297. Increases damage inflicted on one's opponent during PvP.
+9334	Divine Pain - Critical Damage	ancient	0	0	3067-1;	Kamael Exclusive Weapon: Internal Master Conversion\n\nIncreases P. Atk. by 297 on a critical attack. Enhances damage to a target during PvP.
+9341	Lacerator - Critical Damage	rapier	3426	1	3067-2;	Kamael exclusive weapon: Dark Legion Conversion\n\nIncreases P. Atk. by 326 on a critical attack. Increases damage inflicted during PvP.\nWhen enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members.
+-->
+  <table name="#cAtkAdd"> 297.68 326.28 </table>
+  <table name="#magicLvl"> 64 67 </table>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <for>
+    <add order="0x40" stat="cAtkAdd" val="#cAtkAdd"/>
+    <mul order="0x30" stat="pvpPhysDmg" val="1.05"/>
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/>
+    <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/>
+  </for>
 </skill>
 <skill id="3068" levels="3" name="Special Ability: Haste">
-  <!-- Done by DJ MELERIX -->
-  <!--
-  Lvl 1: Increases ATK Spd.
-  Lvl 2: Increases Atk. Spd. Increases damage inflicted during PvP.
-  Lvl 3: Increases Atk. Spd. Increases damage inflicted during PvP.
-  -->
-  <table name="#pvp"> 1 1.05 1.05 </table> <!-- Guess Lvl 3 -->
-  <set name="magicLvl" val="64"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+<!-- s_opt_haste/s_opt_haste_a -->
+<!--
+5620	Blood Tornado - Haste	dualfist	3068-2;	Increases Atk. Spd. by about 6%. Enhances damage to a target during PvP.
+5636	Tallum Blade - Haste	3068-2;	Increases Atk. Spd. by about 6%. Enhances damage to a target during PvP.
+-->
+<!--
+Guessing...
+4809	Blood Tornado - Haste	dualfist	3068-2;	Increases Atk. Spd.
+9330	White Lightning - Haste	rapier	3068-2;	Kamael Exclusive Weapon: Tallum Blade Conversion  Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members.
+9880	Dynasty Bagh-Nakh - Haste	dualfist	3068-3;	Increases Atk. Spd. by 10%. Increases damage inflicted during PvP.
+10460	Icarus Hand - Haste	dualfist	3068-3;	Increases Atk. Spd. by 10%. Increases damage inflicted during PvP.
+-->
+  <table name="#pAtkSpd"> 1.06 1.06 1.1 </table> <!-- Guessing Level 3 -->
+  <table name="#pvpBonus"> 1 1.05 1.05 </table> <!-- Guessing Level 3 -->
+  <table name="#magicLvl"> 64 64 80 </table> <!-- Guessing Level 3 -->
   <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <for>
-    <mul order="0x30" stat="pAtkSpd" val="1.06"/>
-    <mul order="0x30" stat="pvpPhysDmg" val="#pvp"/>
-    <mul order="0x30" stat="pvpMagicalDmg" val="#pvp"/>
+    <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
+    <mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus"/>
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus"/>
+    <mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus"/>
   </for>
 </skill>
 <skill id="3069" levels="1" name="Special Ability: Risky Evasion">
@@ -646,23 +1059,72 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
-<skill id="3070" levels="3" name="Special Ability: Critical Stun">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+<skill id="3070" levels="5" name="Special Ability: Critical Stun">
+<!--
+5627	Halberd - Critical Stun	3070-1;	Has a 25% chance to stun on a critical attack. Enhances damage to target during PvP.
+8803	Tiphon's Spear - Critical Stun	3070-2;	Has a 25% chance to stun on a critical attack. Increases damage inflicted during PvP.
+-->
+<!--
+Guessing...
+7719	Poleaxe - Critical Stun	3070-1;	On a critical attack, produces a stun effect at the rate of about 25%.
+9870	Dynasty Halberd - Critical Stun	3070-3;	There is a 48% probability that Stun effect is applied on a critical attack. Increases damage inflicted during PvP.
+10450	Icarus Trident - Critical Stun	3070-3;	There is a 48% probability that Stun effect is applied on a critical attack. Increases damage inflicted during PvP.
+10682	Tiphon's Spear - PvP - Critical Stun	3070-2;	Has a 25% chance to stun on a critical attack. Increases damage inflicted during PvP.
+10766	Dynasty Halberd - PvP - Critical Stun	3070-3;	Has a 48% chance of casting Stun on a critical attack. Increases damage inflicted during PvP.
+10969	Lance - Earth - Critical Stun	3070-1;	A Masterwork Item that increases Max HP.\n\n Has a 25% chance to stun on a critical attack.
+11072	Halberd - Thunder - Critical Stun	3070-1;	A Masterwork Item that increases the critical rate.\n\n Has a 25% chance to stun on a critical attack. Increases damage inflicted during PvP.
+11178	Tiphon's Spear - Landslide - Critical Stun	3070-2;	A Masterwork Item that has a chance to stun when attacking.\n\nHas a 25% chance to stun on a critical attack. Increases damage inflicted during PvP.
+11298	Dynasty Halberd - Earth - Critical Stun	3070-3;	A Masterwork Item that increases Max HP.\n\n Has a 48% chance to stun on a critical attack. Increases damage inflicted during PvP.
+11331	Icarus Trident - Lightning - Critical Stun	3070-3;	A Masterwork Item that increases critical attack impact.\n\n Has a 48% chance to stun on a critical attack. Increases damage inflicted during PvP.
+12885	Tiphon's Spear - Landslide - Critical Stun	3070-2;	A Masterwork Item that has a chance to stun when attacking.\n\nHas a 25% chance to stun on a critical attack. Increases damage inflicted during PvP.
+12976	Dynasty Halberd - Earth - Critical Stun	3070-3;	A Masterwork Item that increases Max HP.\n\nHas a 48% chance to stun on a critical attack. Increases damage inflicted during PvP.
+-->
+  <table name="#activationChance"> 25 25 48 48 48 </table>
+  <table name="#magicLvl"> 64 67 80 80 80 </table>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="STUN"/>
+  <set name="operateType" val="OP_CHANCE"/>
+  <set name="chanceType" val="ON_CRIT"/>
+  <set name="activationChance" val="#activationChance"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="100"/>
+  <set name="isDebuff" val="true"/>
   <set name="lvlDepend" val="1"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="bestowed" val="true"/>
   <for>
-    <effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" stackOrder="1" stackType="Stun"/>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
+  <!-- May 14, 2009 - Todo: Need to find a way to assign pvp bonus damage to the weapon holder through the skill while still being able to stun the target on chance. -->
+  <!-- WARNING: UNTIL THE ABOVE IS DONE, PVP BONUS DAMAGE IS BEING HANDLED IN THE WEAPON XMLS FOR THIS SKILL! -->
+  <!-- May 14, 2009 - Note: Melerix/Kerberos, we can do a temporary workaround by using the skill 3552 and assigning it to these weapons in the database. So instead of just 3073-1; we would have 3073-1;3552-1;. It would allow us to move the pvp damage bonus out of the weapon XMLs until proper support can be added to contain it here. -->
 </skill>
-<skill id="3071" levels="2" name="Special Ability: Rsk. Focus">
-  <!--
-  1: Critical attack rate increases when HP falls.
-  2: Critical attack rate increases when HP falls. Increases damage inflicted during PvP.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+<skill id="3571" levels="1" name="Special Ability: Critical Stun">
+<!--
+6604	Demon Splinter - Critical Stun	3571-1;	Has a 27% chance of casting Stun on a critical attack. Increases damage inflicted during PvP.
+-->
+<!--
+Guessing...
+10730	Demon Splinter - PvP - Critical Stun	3571-1;	Has a 27% chance of casting Stun on a critical attack. Increases damage inflicted during PvP.
+10876	Great Axe - Lightning - Critical Stun	3571-1;	A Masterwork Item that increases the critical effect.\n\n Has a 27% chance of casting Stun on a critical attack.
+11197	Demon Splinter - Lightning - Critical Stun	3571-1;	A Masterwork Item that increases the critical impact.\n\n Has a 27% chance of casting Stun on a critical attack. Increases damage inflicted during PvP.
+12900	Demon Splinter - Lightning - Critical Stun	3571-1;	A Masterwork Item that increases critical rate.\n\nHas a 27% chance to stun on a critical attack. Increases damage inflicted during PvP. 
+-->
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="STUN"/>
+  <set name="operateType" val="OP_CHANCE"/>
+  <set name="chanceType" val="ON_CRIT"/>
+  <set name="activationChance" val="27"/>
+  <set name="magicLvl" val="74"/>
+  <set name="power" val="100"/>
+  <set name="isDebuff" val="true"/>
+  <set name="lvlDepend" val="1"/>
+  <set name="bestowed" val="true"/>
+  <for>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
+  </for>
+  <!-- May 14, 2009 - Todo: Need to find a way to assign pvp bonus damage to the weapon holder through the skill while still being able to stun the target on chance. -->
+  <!-- WARNING: UNTIL THE ABOVE IS DONE, PVP BONUS DAMAGE IS BEING HANDLED IN THE WEAPON XMLS FOR THIS SKILL! -->
+  <!-- May 14, 2009 - Note: Melerix/Kerberos, we can do a temporary workaround by using the skill 3552 and assigning it to these weapons in the database. So instead of just 3073-1; we would have 3073-1;3552-1;. It would allow us to move the pvp damage bonus out of the weapon XMLs until proper support can be added to contain it here. -->
 </skill>
 <skill id="3072" levels="2" name="Special Ability: Empower">
   <!-- Increases M. Atk. Increases damage inflicted during PvP. -->
@@ -677,13 +1139,41 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="3074" levels="2" name="Special Ability: Magic Silence">
-  <!-- Disables the ability to use one's magic skills. -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- s_opt_magicsilence67 -->
+<!-- Weapon 5642 is special in that it gets it's pvp bonus damage from skill 3552 and not through this skill NOR through weapon xmls. -->
+<!--
+5642	Sword of Miracles - Magic Silence	3074-2;	Has a 10% chance of casting Silence when using a magic skill on the target. Effect 1.Increases damage inflicted during PvP.
+7812	Soulfire Dirk - Magic Silence	3074-2;	Has a 10% chance of casting Silence when using a magic skill on the target. Effect 1.Increases damage inflicted during PvP.
+-->
+<!--
+Guessing...
+8152	Flaming Dragon Skull - Magic Silence	3074-2;	Has a 10% chance of casting Silence when using a magic skill on the target. Effect 1. Increases damage inflicted during PvP.
+8817	Cabrio's Hand - Magic Silence	3074-2;	Has a 10% chance of casting Silence when using a magic skill on the target. Increases damage inflicted during PvP.
+10696	Cabrio's Hand - PvP - Magic Silence	3074-2;	Has a 10% chance of casting Silence when using a magic skill on the target. Increases damage inflicted during PvP.
+11103	Flaming Dragon Skull - Wisdom - Magic Silence	3074-2;	A rare item that decreases MP consumption upon skill use. Has a 10% chance of casting Silence when using a magic skill on the target. Effect 1. Increases damage inflicted during PvP.
+11110	Sword of Miracles - Holy Spirit - Magic Silence	3074-2;	A rare item that increases the heal amount. Has a 10% chance of casting Silence when using a magic skill on the target. Effect 1. Increases damage inflicted during PvP.
+11189	Cabrio's Hand - Cleverness - Magic Silence	3074-2;	A rare item that increases MP Regeneration. Has a 10% chance of casting Silence when using a magic skill on the target. Increases damage inflicted during PvP.
+12894	Cabrio's Hand - Cleverness - Magic Silence	3074-2;	A rare item that increases HP Regeneration. Has a 10% chance of casting Silence when using a magic skill on the target. Increases damage inflicted during PvP.
+-->
+  <table name="#magicLvl"> 64 67 </table>
+  <table name="#activationChance"> 1 10 </table> <!-- Only level 2 is confirmed -->
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="operateType" val="OP_CHANCE"/>
+  <set name="chanceType" val="ON_MAGIC_OFFENSIVE"/>
+  <set name="activationChance" val="#activationChance"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="80"/>
   <set name="isMagic" val="true"/>
+  <set name="isDebuff" val="true"/>
   <set name="lvlDepend" val="2"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="1000"/>
+  <set name="bestowed" val="true"/>
+  <for>
+    <effect count="1" name="Mute" time="120" val="0" stackOrder="1" stackType="silence"/>
+  </for>
+  <!-- May 14, 2009 - Todo: Need to find a way to assign pvp bonus damage to the weapon holder through the skill while still being able to stun the target on chance. -->
+  <!-- WARNING: UNTIL THE ABOVE IS DONE, PVP BONUS DAMAGE IS BEING HANDLED IN THE WEAPON XMLS FOR THIS SKILL! -->
+  <!-- May 14, 2009 - Note: Melerix/Kerberos, we can do a temporary workaround by using the skill 3552 and assigning it to these weapons in the database. So instead of just 3073-1; we would have 3073-1;3552-1;. It would allow us to move the pvp damage bonus out of the weapon XMLs until proper support can be added to contain it here. -->
 </skill>
 <skill id="3075" levels="2" name="Special Ability: Magic Paralyze">
   <!-- Paralyzes target. -->
@@ -707,13 +1197,34 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="3078" levels="6" name="Special Ability: Magic Silence">
-  <!-- Disables the ability to use one's magic skills. -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- s_opt_magicsilence52 -->
+<!--
+6312	Sword of Whispering Death - Magic Silence	3078-3;	Has a 10% chance of casting Silence when using a magic skill on the target. Effect 1.
+7714	Mace of The Underworld - Magic Silence	3078-3;	Has a 10% chance of casting Silence when using a magic skill on the target. Effect 1.
+7717	Inferno Staff - Magic Silence	3078-3;	Has a 10% chance of casting Silence when using a magic skill on the target. Effect 1.
+-->
+<!--
+Guessing...
+8116	Ecliptic Sword - Magic Silence	3078-3	Has a 10% chance of casting Silence when using a magic skill on the target. Effect 1.
+8145	Kaim Vanul's Bones - Magic Silence	3078-3	Has a 10% chance of casting Silence when using a magic skill on the target. Effect 1.
+10999	Kaim Vanul's Bones - Earth - Magic Silence	3078-3	A rare item that increases maximum HP. Has a 10% chance of casting Silence when using a magic skill on the target. Effect 1.
+-->
+  <table name="#magicLvl"> 46 49 52 55 28 61 </table>
+  <table name="#activationChance"> 1 1 10 1 1 1 </table> <!-- Only level 3 is confirmed -->
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="DEBUFF"/>
+  <set name="operateType" val="OP_CHANCE"/>
+  <set name="chanceType" val="ON_MAGIC_OFFENSIVE"/>
+  <set name="activationChance" val="#activationChance"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="power" val="80"/>
   <set name="isMagic" val="true"/>
+  <set name="isDebuff" val="true"/>
   <set name="lvlDepend" val="2"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="1000"/>
+  <set name="bestowed" val="true"/>
+  <for>
+    <effect count="1" name="Mute" time="120" val="0" stackOrder="1" stackType="silence"/>
+  </for>
 </skill>
 <skill id="3079" levels="6" name="Special Ability: Magic Paralyze">
   <!-- Paralyzes target. -->
