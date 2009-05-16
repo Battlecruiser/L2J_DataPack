@@ -15,6 +15,8 @@ class Quest (JQuest) :
  def onTalk (self,npc,player):
     npcId = npc.getNpcId()
     if npcId == 32111 :
+        if player.isInCombat() :
+           return "32111-no.htm"
         player.teleToLocation(4990,-1879,-3178)
     if npcId == 32112 :
         player.teleToLocation(7557,-5513,-3221)
