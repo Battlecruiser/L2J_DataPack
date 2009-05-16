@@ -9,6 +9,8 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Focus -->
+    <add val="77" order="0x40" stat="rCrit"/>
   </for>
 </item>
 <item id="8103" name="Pa'agrian Sword - Health">
@@ -86,6 +88,8 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Critical Damage -->
+    <add val="297" order="0x08" stat="cAtkAdd"/>
   </for>
 </item>
 <item id="8110" name="Infernal Master - Focus">
@@ -97,6 +101,8 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Focus -->
+    <add val="61" order="0x40" stat="rCrit"/>
   </for>
 </item>
 <item id="8111" name="Mysterious Sword - Acumen">
@@ -254,6 +260,8 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Focus -->
+    <add val="77" order="0x40" stat="rCrit"/>
   </for>
 </item>
 <item id="8124" name="Karik Horn - Haste">
@@ -320,6 +328,8 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Focus -->
+    <add val="68" order="0x40" stat="rCrit"/>
   </for>
 </item>
 <item id="8130" name="Ice Storm Hammer - Anger">
@@ -597,10 +607,6 @@
     <set val="379" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpPhysSkillsDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="8190" name="Demonic Sword Zariche">
