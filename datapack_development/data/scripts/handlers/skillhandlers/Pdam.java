@@ -244,7 +244,28 @@ public class Pdam implements ISkillHandler
 				// Possibility of a lethal strike despite skill is evaded
 				Formulas.calcLethalHit(activeChar, target, skill);
 			}
+			L2Skill soulmastery = SkillTable.getInstance().getInfo(467, player.getSkillLevel(467));
 			
+			if (activeChar instanceof L2PcInstance && soulmastery != null)
+			{
+				if (((L2PcInstance) activeChar).getSouls() < soulmastery.getNumSouls())
+				{
+					int count = 0;
+					
+					if (((L2PcInstance) activeChar).getSouls() + skill.getNumSouls() <= soulmastery.getNumSouls())
+						count = skill.getNumSouls();
+					else
+						count = soulmastery.getNumSouls() - ((L2PcInstance) activeChar).getSouls();
+					
+					((L2PcInstance) activeChar).increaseSouls(count);
+				}
+				else
+				{
+					SystemMessage sm = new SystemMessage(SystemMessageId.SOUL_CANNOT_BE_INCREASED_ANYMORE);
+					((L2PcInstance) activeChar).sendPacket(sm);
+					return;
+				}
+			}
 			//self Effect :]
 			L2Effect effect = activeChar.getFirstEffect(skill.getId());
 			if (effect != null && effect.isSelfEffect())
