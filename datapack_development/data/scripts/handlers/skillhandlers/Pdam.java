@@ -244,26 +244,27 @@ public class Pdam implements ISkillHandler
 				// Possibility of a lethal strike despite skill is evaded
 				Formulas.calcLethalHit(activeChar, target, skill);
 			}
-			L2Skill soulmastery = SkillTable.getInstance().getInfo(467, player.getSkillLevel(467));
 			
-			if (activeChar instanceof L2PcInstance && soulmastery != null)
+			if (activeChar instanceof L2PcInstance)
 			{
-				if (((L2PcInstance) activeChar).getSouls() < soulmastery.getNumSouls())
+				L2Skill soulmastery = SkillTable.getInstance().getInfo(467, ((L2PcInstance) activeChar).getSkillLevel(467));
+				if (soulmastery != null)
 				{
-					int count = 0;
+					if (((L2PcInstance) activeChar).getSouls() < soulmastery.getNumSouls())
+					{
+						int count = 0;
 					
-					if (((L2PcInstance) activeChar).getSouls() + skill.getNumSouls() <= soulmastery.getNumSouls())
-						count = skill.getNumSouls();
+						if (((L2PcInstance) activeChar).getSouls() + skill.getNumSouls() <= soulmastery.getNumSouls())
+							count = skill.getNumSouls();
+						else
+							count = soulmastery.getNumSouls() - ((L2PcInstance) activeChar).getSouls();
+						((L2PcInstance) activeChar).increaseSouls(count);
+					}
 					else
-						count = soulmastery.getNumSouls() - ((L2PcInstance) activeChar).getSouls();
-					
-					((L2PcInstance) activeChar).increaseSouls(count);
-				}
-				else
-				{
-					SystemMessage sm = new SystemMessage(SystemMessageId.SOUL_CANNOT_BE_INCREASED_ANYMORE);
-					((L2PcInstance) activeChar).sendPacket(sm);
-					return;
+					{
+						SystemMessage sm = new SystemMessage(SystemMessageId.SOUL_CANNOT_BE_INCREASED_ANYMORE);
+						((L2PcInstance) activeChar).sendPacket(sm);
+					}
 				}
 			}
 			//self Effect :]
