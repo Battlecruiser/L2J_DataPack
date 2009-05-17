@@ -47,65 +47,23 @@ public class Firework implements IItemHandler
 		if (!(playable instanceof L2PcInstance))
 			return; // prevent Class cast exception
 		L2PcInstance activeChar = (L2PcInstance) playable;
-		int itemId = item.getItemId();
-		
-		if (!activeChar.getFloodProtectors().getFirework().
-                        tryPerformAction("firework"))
+		int skillId = 0;
+		switch (item.getItemId();)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
-			sm.addItemName(item);
-			activeChar.sendPacket(sm);
-			return;
+			case 6403:
+				skillId = 2023;
+				break;
+			case 6406:
+				skillId = 2024;
+				break;
+			case 6407:
+				skillId = 2025;
+				break;
 		}
-		
-		/*
-		 * Elven Fire Cracker
-		 */
-		if (itemId == 6403) // elven_firecracker, xml: 2023
-		{
-			MagicSkillUse MSU = new MagicSkillUse(playable, activeChar, 2023, 1, 1, 0);
-			activeChar.sendPacket(MSU);
-			activeChar.broadcastPacket(MSU);
-			useFw(activeChar, 2023, 1);
-			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
-		}
-		/*
-		 * Firework
-		 */
-		else if (itemId == 6406) // firework, xml: 2024
-		{
-			MagicSkillUse MSU = new MagicSkillUse(playable, activeChar, 2024, 1, 1, 0);
-			activeChar.sendPacket(MSU);
-			activeChar.broadcastPacket(MSU);
-			useFw(activeChar, 2024, 1);
-			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
-		}
-		/*
-		 * Large Firework
-		 */
-		else if (itemId == 6407) // large_firework, xml: 2025
-		{
-			MagicSkillUse MSU = new MagicSkillUse(playable, activeChar, 2025, 1, 1, 0);
-			activeChar.sendPacket(MSU);
-			activeChar.broadcastPacket(MSU);
-			useFw(activeChar, 2025, 1);
-			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
-		}
-	}
-	
-	/**
-	 * 
-	 * @param activeChar
-	 * @param magicId
-	 * @param level
-	 */
-	public void useFw(L2PcInstance activeChar, int magicId, int level)
-	{
-		L2Skill skill = SkillTable.getInstance().getInfo(magicId, level);
+		L2Skill skill = SkillTable.getInstance().getInfo(skillId, 1);
 		if (skill != null)
-		{
 			activeChar.useMagic(skill, false, false);
-		}
+
 	}
 	
 	/**
