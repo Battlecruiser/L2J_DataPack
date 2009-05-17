@@ -268,7 +268,7 @@ public class Potions implements IItemHandler
 					return;
 				}
 				byte expIndex = (byte) activeChar.getExpertiseIndex();
-				res = usePotion(activeChar, 2287, (expIndex > 5 ? expIndex : expIndex + 1));
+				res = usePotion(activeChar, 2287, (expIndex > 5 ? 6 : expIndex + 1));
 				break;
 			}
 			case 8628:
@@ -285,7 +285,7 @@ public class Potions implements IItemHandler
 				}
 				byte expIndex = (byte) activeChar.getExpertiseIndex();
 				// elixir of Strength
-				res = usePotion(activeChar, 2288, (expIndex > 5 ? expIndex : expIndex + 1));
+				res = usePotion(activeChar, 2288, (expIndex > 5 ? 6 : expIndex + 1));
 				break;
 			}
 			case 8634:
@@ -302,7 +302,7 @@ public class Potions implements IItemHandler
 				}
 				byte expIndex = (byte) activeChar.getExpertiseIndex();
 				// elixir of cp
-				res = usePotion(activeChar, 2289, (expIndex > 5 ? expIndex : expIndex + 1));
+				res = usePotion(activeChar, 2289, (expIndex > 5 ? 6 : expIndex + 1));
 				break;
 			}
 				// VALAKAS AMULETS
