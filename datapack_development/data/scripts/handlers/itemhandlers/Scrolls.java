@@ -102,8 +102,8 @@ public class Scrolls implements IItemHandler
 			byte expIndex = (byte) activeChar.getExpertiseIndex();
 			if (!playable.destroyItem("Consume", item.getObjectId(), 1, null, false))
 				return;
-			activeChar.broadcastPacket(new MagicSkillUse(playable, playable, 2168, (expIndex > 5 ? expIndex : expIndex + 1), 1, 0));
-			useScroll(activeChar, 2168, (expIndex > 5 ? expIndex : expIndex + 1));
+			activeChar.broadcastPacket(new MagicSkillUse(playable, playable, 2168, (expIndex > 5 ? 6 : expIndex + 1), 1, 0));
+			useScroll(activeChar, 2168, (expIndex > 5 ? 6 : expIndex + 1));
 			activeChar.setCharmOfLuck(true);
 			return;
 		}
