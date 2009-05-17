@@ -597,7 +597,7 @@
     <effect self="1" name="Buff" time="15" val="0" stackOrder="40" stackType="speed_up_special">
       <add order="0x40" stat="runSpd" val="40"/>
     </effect>
-    <effect name="Bluff" time="9" val="0" effectPower="40" effectType="STUN"/>
+    <effect name="Bluff" val="0" effectPower="40" effectType="STUN"/>
   </for>
 </skill>
 <skill id="322" levels="6" name="Shield Fortress" enchantLevels1="30" enchantLevels2="30">
@@ -1272,8 +1272,8 @@
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="1000"/>
   <for>
-    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
-    <effect count="1" name="Bluff" time="1" noicon="1" val="0"/>
+    <effect name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
+    <effect name="Bluff" noicon="1" val="0"/>
     <effect name="RemoveTarget" noicon="1" val="0"/>
   </for>
 </skill>
