@@ -1263,7 +1263,7 @@
   <set name="mpConsume" val="35"/>
   <set name="power" val="40"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="AGGREDUCE_CHAR"/>
+  <set name="skillType" val="STUN"/>
   <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
@@ -1272,7 +1272,8 @@
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="1000"/>
   <for>
-    <effect name="Bluff" time="9" val="0" stackOrder="1" stackType="Stun"/>
+    <effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
+    <effect count="1" name="Bluff" time="1" noicon="1" val="0"/>
     <effect name="RemoveTarget" noicon="1" val="0"/>
   </for>
 </skill>
