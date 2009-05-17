@@ -48,7 +48,7 @@ public class Firework implements IItemHandler
 			return; // prevent Class cast exception
 		L2PcInstance activeChar = (L2PcInstance) playable;
 		int skillId = 0;
-		switch (item.getItemId();)
+		switch (item.getItemId())
 		{
 			case 6403:
 				skillId = 2023;
