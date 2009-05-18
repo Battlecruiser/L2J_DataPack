@@ -1,19 +1,47 @@
-<html><title>Teleport</title><body><table width=260><tr><td width=40><button value="Main" action="bypass -h admin_admin" width=40 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td><td width=180><center>Teleport Menu</center></td><td width=40><button value="Back" action="bypass -h admin_admin" width=40 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td></tr></table><br>
-<br>
-<table width=276><tr><td width="161">Move to common locations:</td></tr>
-<tr><td><a action="bypass -h admin_help tele/towns.htm"><font color="LEVEL">Towns</font></a></td><td width="103"><a action="bypass -h admin_help tele/others/arenas.htm"><font color="LEVEL">Arenas</font></a></td></tr>
-<tr><td><a action="bypass -h admin_help tele/castles.htm"><font color="LEVEL">Castles</font></a></td><td><a action="bypass -h admin_help tele/others/necat.htm"><font color="LEVEL">Seven Signs</font></a></td></tr>
-<tr><td><a action="bypass -h admin_help tele/other.htm"><font color="LEVEL">Other Locations</font></a></td><td><a action="bypass -h admin_help tele/others/dimrift.htm"><font color="LEVEL">Dimensional Rift</font></a></td></tr>
-<tr><td><a action="bypass -h admin_help tele/locations/c2.htm"><font color="LEVEL">C2 Locations</font></a></td><td><a action="bypass -h admin_help tele/others/fortress.htm"><font color="LEVEL">Fortresses</font></a></td></tr>
-<tr><td><a action="bypass -h admin_help tele/locations/c4.htm"><font color="LEVEL">C4 Locations</font></a></td></tr>
-<tr><td><a action="bypass -h admin_help tele/locations/c5.htm"><font color="LEVEL">C5 Locations</font></a></td></tr>
-<tr><td><a action="bypass -h admin_help tele/locations/interlude.htm"><font color="LEVEL">Interlude</font></a></td></tr>
-<tr><td><a action="bypass -h admin_help tele/locations/kamael.htm"><font color="LEVEL">Kamael</font></a></td></tr>
-<tr><td><a action="bypass -h admin_help tele/locations/hellbound.htm"><font color="LEVEL">Hellbound</font></a></td></tr>
-<tr><td><a action="bypass -h admin_help tele/locations/gracia.htm"><font color="LEVEL">Gracia</font></a></td></tr>
-</table><br>
+<html><title>Admin Teleports</title>
+<body>
+<center>
+<table width=260>
+<tr><td width=40><button value="Main" action="bypass -h admin_admin" width=40 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td width=180><center>Admin Teleport Menu</center></td>
+<td width=40><button value="Back" action="bypass -h admin_admin" width=40 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr></table>
+</center>
 <br>
 <br>
-<center><button value="More" action="bypass -h admin_tele" width=50 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"><br>
+<center>
+<table width=276>
+<tr>
+<td align=center><button action="bypass -h admin_help teleports/town.htm" value="Towns" width=110 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td align=center><button action="bypass -h admin_help teleports/townarea.htm" value="Town Area's" width=110 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+<tr>
+<td align=center><button action="bypass -h admin_help teleports/castle.htm" value="Castle" width=110 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td align=center><button action="bypass -h admin_help teleports/fort.htm" value="Fortress" width=110 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+<tr>
+<td align=center><button action="bypass -h admin_help teleports/sevensigns.htm" value="Seven Signs" width=110 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td align=center><button action="bypass -h admin_help teleports/instance.htm" value="Instances" width=110 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+<tr>
+<td align=center><button action="bypass -h admin_help teleports/raid.htm" value="Raidboss" width=110 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td align=center><button action="bypass -h admin_help teleports/arena.htm" value="Arenas" width=110 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+<tr>
+<td align=center><button action="bypass -h admin_help teleports/location/primeval.htm" value="Primeval Area" width=110 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+<tr>
+<td align=center><button action="bypass -h admin_help teleports/location/hellbound.htm" value="Hellbound Area" width=110 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td align=center><button action="bypass -h admin_help teleports/location/gracia.htm" value="Gracia Area" width=110 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+<tr>
+<td align=center><button action="bypass -h admin_help teleports/others.htm" value="Other Ports" width=110 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+</table>
+</center>
 <br>
-Move to given Coords:<table width=260><tr><td width=15>X:</td><td><edit var="char_cord_x" width=55></td><td width=15>Y:</td><td><edit var="char_cord_y" width=55></td><td width=15>Z:</td><td><edit var="char_cord_z" width=55></td><td><button value="Go" action="bypass -h admin_move_to $char_cord_x $char_cord_y $char_cord_z" width=55 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td></tr></table></center></body></html>
+<br>
+<br>
+<center><button value="Additional Movement Options" action="bypass -h admin_tele" width=200 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"><br>
+<br1>
+Move to the given coordinates<table width=260><tr><td width=15>X:</td><td><edit var="char_cord_x" width=55></td><td width=15>Y:</td><td><edit var="char_cord_y" width=55></td><td width=15>Z:</td><td><edit var="char_cord_z" width=55></td><td><button value="Go" action="bypass -h admin_move_to $char_cord_x $char_cord_y $char_cord_z" width=55 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td></tr></table><br></center></body></html>
