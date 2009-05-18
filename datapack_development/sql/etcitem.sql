@@ -8190,7 +8190,7 @@ INSERT INTO `etcitem` VALUES
 (13064,'Unfair Naval Cannon Joystick','false','none',120,'normal','paper','none',-1,-1,0,0,'true','true','true','true','0-0;','false'),
 (13065,'Lucky 7 Treasure','false','none',120,'normal','paper','none',-1,-1,0,0,'true','true','true','true','0-0;','false'),
 (13066,'Treasure of the Seven Fortunes','false','none',120,'normal','paper','none',-1,-1,0,0,'true','true','true','true','0-0;','false'),
-(13067,'Fantasy Isle Coin','false','none',0,'normal','paper','none',-1,-1,0,0,'true','true','true','true','0-0;','false'),
+(13067,'Fantasy Isle Coin','false','none',0,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','0-0;','false'),
 (13068,'Fantasy Isle Coin (PC Cafe)','false','none',0,'normal','paper','none',-1,-1,0,0,'true','true','true','true','0-0;','false'),
 (13069,'Long Prolonging Dream','false','none',120,'normal','paper','none',-1,-1,0,0,'true','true','true','true','0-0;','false'),
 (13070,'Premium Parcel Box Test','false','none',120,'normal','paper','none',-1,-1,0,0,'true','true','true','true','0-0;','false'),
