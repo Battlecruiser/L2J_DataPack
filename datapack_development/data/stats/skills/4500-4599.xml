@@ -631,7 +631,7 @@
   <set name="effectRange" val="1100"/>
   <set name="aggroPoints" val="-100"/>
   <for>
-    <effect name="Debuff" time="3600" val="0" abnormal="poison"> <!-- needs core support for abnormal = spa_disease_a -->
+    <effect name="Debuff" time="600" val="0" abnormal="poison"> <!-- needs core support for abnormal = spa_disease_a -->
       <mul order="0x30" stat="pDef" val="#pDef"/>
       <add order="0x40" stat="rCrit" val="#rCrit"/>
     </effect>
@@ -653,7 +653,7 @@
   <set name="effectRange" val="1100"/>
   <set name="aggroPoints" val="-100"/>
   <for>
-    <effect name="Debuff" time="3600" val="0" abnormal="poison"> <!-- needs core support for abnormal = spa_disease_b -->
+    <effect name="Debuff" time="600" val="0" abnormal="poison"> <!-- needs core support for abnormal = spa_disease_b -->
       <sub order="0x40" stat="rEvas" val="#rEvas"/>
       <add order="0x40" stat="accCombat" val="#accCombat"/>
     </effect>
@@ -675,7 +675,7 @@
   <set name="effectRange" val="1100"/>
   <set name="aggroPoints" val="-100"/>
   <for>
-    <effect name="Debuff" time="3600" val="0" abnormal="poison"> <!-- needs core support for abnormal = spa_disease_c -->
+    <effect name="Debuff" time="600" val="0" abnormal="poison"> <!-- needs core support for abnormal = spa_disease_c -->
       <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
       <mul order="0x30" stat="pAtk" val="#pAtk"/>
     </effect>
@@ -697,7 +697,7 @@
   <set name="effectRange" val="1100"/>
   <set name="aggroPoints" val="-100"/>
   <for>
-    <effect name="Debuff" time="3600" val="0" abnormal="poison"> <!-- needs core support for abnormal = spa_disease_d -->
+    <effect name="Debuff" time="600" val="0" abnormal="poison"> <!-- needs core support for abnormal = spa_disease_d -->
       <mul order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
       <mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRate"/>
     </effect>
