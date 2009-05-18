@@ -732,7 +732,7 @@
   <table name="#pAtkSpd"> 1.07 1.1 </table> <!-- Guess Lvl 2 -->
   <set name="magicLvl" val="75"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
     <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
@@ -762,7 +762,7 @@
   <!-- Vampiric Rage effect -->
   <set name="element" val="6"/> <!-- Dark -->
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
     <add order="0x40" stat="absorbDam" val="3"/> <!-- absorb 3% HP from damage inflicted on enemies -->
@@ -781,12 +781,13 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="3571" levels="1" name="Special Ability: Crt. Stun">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="skillType" val="STUN"/>
+  <set name="power" val="80"/>
   <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <for>
-    <effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" stackOrder="1" stackType="Stun"/>
+    <effect name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
 <skill id="3572" levels="1" name="Special Ability: Crt. Damage">
@@ -838,7 +839,7 @@
   <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="80"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="triggeredId" val="3579"/>
   <set name="triggeredLevel" val="1"/>
@@ -874,7 +875,7 @@
   <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="80"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="triggeredId" val="3581"/>
   <set name="triggeredLevel" val="1"/>
@@ -906,7 +907,7 @@
   <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="80"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
     <add order="0x40" stat="cAtkAdd" val="504"/> <!-- P.Atk. +504 on a critical hit -->
@@ -924,7 +925,7 @@
   <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="80"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="triggeredId" val="3584"/>
   <set name="triggeredLevel" val="1"/>
@@ -958,7 +959,7 @@
   <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="80"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="triggeredId" val="3586"/>
   <set name="triggeredLevel" val="1"/>
@@ -993,7 +994,7 @@
   <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="80"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="triggeredId" val="3588"/>
   <set name="triggeredLevel" val="1"/>
@@ -1028,7 +1029,7 @@
   <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="80"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="triggeredId" val="3590"/>
   <set name="triggeredLevel" val="1"/>
@@ -1065,7 +1066,7 @@
   <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="80"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="triggeredId" val="3592"/>
   <set name="triggeredLevel" val="1"/>
@@ -1096,7 +1097,7 @@
   <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="80"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="triggeredId" val="3594"/>
   <set name="triggeredLevel" val="1"/>
@@ -1130,7 +1131,7 @@
   <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="80"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="triggeredId" val="3596"/>
   <set name="triggeredLevel" val="1"/>
@@ -1161,7 +1162,7 @@
   <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="80"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="triggeredId" val="3598"/>
   <set name="triggeredLevel" val="1"/>
