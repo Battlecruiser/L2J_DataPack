@@ -21,7 +21,7 @@
   <table name="#pvp"> 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
     <add order="0x40" stat="pAtk" val="#pAtk"/>
@@ -50,7 +50,7 @@
   <table name="#pvp"> 1 1 1 1 1 1 1.05 1.05 1.05 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
     <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
@@ -482,7 +482,7 @@
   <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="80"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
     <!-- The following values are copied from Infinity Cleaver SA -->
@@ -501,7 +501,7 @@
   <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="80"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="WEAPON_SA"/>
+  <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="triggeredId" val="3594"/>
   <set name="triggeredLevel" val="1"/>
