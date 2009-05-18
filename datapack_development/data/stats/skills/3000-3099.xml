@@ -375,7 +375,7 @@
   -->
   <!-- Done by DJ MELERIX -->
   <!-- For Duals +4 -->
-  <table name="#cAtk"> 81.6 61.4 84.14 75.49 66.77 58.01 49.42 84.11 166.26 146.88 127 107.01 133.97 124.79 275.26 267.13 257.98 297.21 331.38 361.06 </table>
+  <table name="#cAtkAdd"> 81.6 61.4 84.14 75.49 66.77 58.01 49.42 84.11 166.26 146.88 127 107.01 133.97 124.79 275.26 267.13 257.98 297.21 331.38 361.06 </table>
   <table name="#magicLvl"> 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 </table>
   <table name="#pvpBonus"> 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
   <set name="magicLvl" val="#magicLvl"/>
@@ -383,7 +383,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
-    <add order="0x40" stat="cAtk" val="#cAtk"/>
+    <add order="0x40" stat="cAtkAdd" val="#cAtkAdd"/>
     <mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus"/>
     <mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus"/>
   </for>
