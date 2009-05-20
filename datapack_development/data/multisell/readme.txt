@@ -134,3 +134,7 @@ of this directory a little bit.
 364790001.xml -> Reputation Manager: PvP weapons, armors enhancement
 364790002.xml -> Reputation Manager: Removal of PvP enhancement
 364790003.xml -> Reputation Manager: Consumables
+
+326100001.xml -> Weaver Olf Kanore: Belts
+326100002.xml -> Weaver Olf Kanore: S80 & S84 Clock Unseal
+326100002.xml -> Weaver Olf Kanore: S80 & S84 Cloak Reseal
