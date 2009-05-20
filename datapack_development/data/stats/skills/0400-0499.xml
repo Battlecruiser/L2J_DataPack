@@ -168,9 +168,7 @@
       <add order="0x40" stat="accCombat" val="6">
         <using kind="Sword,Big Sword,Blunt,Big Blunt"/>
       </add>
-      <add order="0x40" stat="runSpd" val="#runSpd">
-        <using kind="Sword,Big Sword,Blunt,Big Blunt"/>
-      </add>
+      <add order="0x40" stat="runSpd" val="#runSpd"/>
       <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd">
         <using kind="Sword,Big Sword,Blunt,Big Blunt"/>
       </mul>
