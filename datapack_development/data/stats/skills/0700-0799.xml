@@ -1171,6 +1171,9 @@
   <set name="skillRadius" val="1000"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_PARTY"/>
+  <cond msgId="113" addName="1">
+    <target active_effect_id_lvl="5564,3"/>
+  </cond>
   <for>
     <effect name="Buff" time="60" val="0">
       <mul order="0x30" stat="pAtk" val="1.3"/>
