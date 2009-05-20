@@ -761,6 +761,9 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="hitTime" val="1300"/>
+  <cond msgId="113" addName="1">
+    <target active_effect_id_lvl="5561,3"/>
+  </cond>
 </skill>
 <skill id="763" levels="1" name="Hell Scream">
   <set name="power" val="40"/> <!-- Guess -->
@@ -1090,7 +1093,7 @@
   <set name="skillRadius" val="1000"/>
   <set name="target" val="TARGET_PARTY"/>
   <cond msgId="113" addName="1">
-    <target active_effect_id="5562"/> <!-- Needs Core-Side improvement "Require 5562 in Lvl 3" -->
+    <target active_effect_id_lvl="5562,3"/>
   </cond>
   <for>
     <effect name="Buff" time="60" val="0" stackOrder="1" stackType="icon_buff">
@@ -1142,7 +1145,7 @@
   <set name="skillType" val="HEAL_PERCENT"/>
   <set name="target" val="TARGET_PARTY"/>
   <cond msgId="113" addName="1">
-    <target active_effect_id="5563"/> <!-- Needs Core-Side improvement "Require 5563 in Lvl 3" -->
+    <target active_effect_id_lvl="5563,3"/>
   </cond>
   <for>
     <effect count="20" name="HealOverTime" time="3" val="150">
