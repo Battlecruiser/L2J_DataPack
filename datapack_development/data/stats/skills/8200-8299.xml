@@ -545,10 +545,14 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="8237" levels="1" name="Shalin Heal">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="5000"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="HEAL"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="10000"/>
+  <set name="mpConsume" val="77"/>
+  <set name="isMagic" val="true"/>
+  <set name="reuseDelay" val="40000"/>
+  <set name="power" val="549"/>
 </skill>
 <skill id="8238" levels="1" name="Shalin Strike">
   <set name="target" val="TARGET_NONE"/>

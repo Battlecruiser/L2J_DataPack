@@ -50,7 +50,7 @@ public class Potions implements IItemHandler
 		6652, 6653, 6654, 6655, 8193, 8194, 8195, 8196,
 		8197, 8198, 8199, 8200, 8201, 8202, 8600, 8601,
 		8602, 8603, 8604, 8605, 8606, 8607,
-		8608, 8609, 8610, 8611, 8612, 8613, 8614, 10155, 10157,
+		8608, 8609, 8610, 8611, 8612, 8613, 8614, 10155, 13032, 10157,
 		//Attribute Potion
 		9997, 9998, 9999, 10000, 10001, 10002,
 		//elixir of life
@@ -184,6 +184,9 @@ public class Potions implements IItemHandler
 				break;
 			case 10155: //Mental Potion XML:2396
 				res = usePotion(playable, 2396, 1);
+				break;
+			case 13032: //Pailaka Instant Shield XML:2577
+				res = usePotion(playable, 2577, 1);
 				break;
 			
 			case 10409: // Empty Bottle of Souls
