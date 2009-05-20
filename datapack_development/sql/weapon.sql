@@ -2876,7 +2876,7 @@ INSERT INTO `weapon` VALUES
 (12976,'Dynasty Halberd - Earth - Critical Stun','lrhand','true',2010,1,1,'fine_steel','s80',333,10,'pole',8,-3.00000,0,0,0,325,0,151,-1,-1,0,7050,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (12977,'Dynasty Halberd - Earth - Light','lrhand','true',2010,1,1,'fine_steel','s80',333,10,'pole',8,-3.00000,0,0,0,325,0,151,-1,-1,0,7050,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (13034,'Sprite\'s Sword','lrhand','false',817,3,3,'fine_steel','d',107,10,'dual',8,0.00000,0,0,0,325,0,72,-1,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
-(13035,'Enhanced Sprite\'s Sword','lrhand','false',817,3,3,'fine_steel','d',127,10,'dual',8,0.00000,0,0,0,325,0,82,-1,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
+(13035,'Enhanced Sprite\'s Sword','lrhand','false',817,3,3,'fine_steel','d',127,10,'dual',8,0.00000,0,0,0,325,0,82,-1,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'8237-1;'),
 (13036,'Sword of Ice and Fire','lrhand','false',817,3,3,'fine_steel','d',147,10,'dual',8,0.00000,0,0,0,325,0,92,-1,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (13042,'Ancient Legacy Sword','lrhand','false',643,1,1,'fine_steel','a',259,10,'sword',8,0.00000,0,0,0,325,0,143,-1,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (13043,'Enhanced Ancient Legacy Sword','lrhand','false',643,1,1,'fine_steel','a',279,10,'sword',8,0.00000,0,0,0,325,0,153,-1,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),

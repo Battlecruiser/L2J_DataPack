@@ -8168,7 +8168,7 @@ INSERT INTO `etcitem` VALUES
 (13029,'Vitality Replenishing Transformation Herb - Timitran','false','none',0,'normal','paper','none',-1,-1,0,0,'true','true','true','true','0-0;','false'),
 (13030,'Vitality Replenishing Transformation Herb - Lava Golem','false','none',0,'normal','paper','none',-1,-1,0,0,'true','true','true','true','0-0;','false'),
 (13031,'Vitality Replenishing Transformation Herb - Yeti','false','none',0,'normal','paper','none',-1,-1,0,0,'true','true','true','true','0-0;','false'),
-(13032,'Pailaka Instant Shield','false','none',5,'assert','paper','none',-1,-1,0,0,'true','true','true','true','0-0;','false'),
+(13032,'Pailaka Instant Shield','false','none',5,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','0-0;','false'),
 (13033,'Quick Healing Potion','false','none',5,'assert','paper','none',-1,-1,0,0,'true','true','true','true','0-0;','false'),
 (13037,'Pailaka Soulshot - Grade D','false','none',3,'normal','paper','none',-1,-1,0,0,'true','true','true','true','0-0;','false'),
 (13038,'Essence of Water','false','none',120,'normal','paper','none',-1,-1,0,0,'true','true','true','true','0-0;','false'),
