@@ -271,7 +271,10 @@ public class MC_Show extends Quest
 	public String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
 	{
 		if (event.equalsIgnoreCase("Start"))
+		{
+			isStarted = true;
 			addSpawn(mc,-56698,-56430,-2008,32768,false,0);
+		}
 		else if (npc != null && isStarted)
 		{
 			if (event.equalsIgnoreCase("6"))
