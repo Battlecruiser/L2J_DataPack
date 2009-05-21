@@ -61,7 +61,7 @@ INSERT INTO `weapon` VALUES
 (18,'Leather Shield','lhand','false',1430,0,0,'leather','none',0,0,'none',0,0.00000,-8,47,20,0,0,0,-1,-1,39,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (19,'Small Shield','lhand','false',1420,0,0,'steel','none',0,0,'none',0,0.00000,-8,56,20,0,0,0,-1,-1,638,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (20,'Buckler','lhand','false',1410,0,0,'wood','none',0,0,'none',0,0.00000,-8,67,20,0,0,0,-1,-1,2780,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
-(52,'Vesper Dual Sword','rhand','true',1520,1,1,'fine_steel','s84',482,10,'dual',8,0,0,0,0,325,0,176,-1,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
+(52,'Vesper Dual Sword','lrhand','true',1520,1,1,'fine_steel','s84',482,10,'dual',8,0,0,0,0,325,0,176,-1,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (66,'Gladius','rhand','false',1570,2,2,'steel','none',17,10,'sword',8,0.00000,0,0,0,379,0,12,-1,-1,54100,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (67,'Orcish Sword','rhand','false',1570,2,2,'steel','none',17,10,'sword',8,0.00000,0,0,0,379,0,12,-1,-1,54100,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (68,'Falchion','rhand','false',1530,2,2,'bronze','none',31,10,'sword',8,0.00000,0,0,0,379,0,21,-1,-1,188000,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
