@@ -114,14 +114,24 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="8310" levels="1" name="Arcana Sickle">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <mul order="0x30" stat="magicDamVul" val="0.98"/>
+    <sub order="0x40" stat="cancel" val="13"/>
+  </for>
 </skill>
 <skill id="8311" levels="1" name="Dynasty Sickle">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <mul order="0x30" stat="magicDamVul" val="0.98"/>
+    <add order="0x40" stat="darkRes" val="2"/>
+  </for>
 </skill>
 <skill id="8312" levels="2" name="Special Ability Cheap Shot">
   <set name="target" val="TARGET_NONE"/>
