@@ -2251,9 +2251,9 @@
       <mul order="0x30" stat="runSpd" val="1.3">
         <using kind="Dual Fist"/>
       </mul>
-      <sub order="0x40" stat="accCombat" val="12">
+      <add order="0x40" stat="accCombat" val="12">
         <using kind="Dual Fist"/>
-      </sub>
+      </add>
     </effect>
   </for>
 </skill>
