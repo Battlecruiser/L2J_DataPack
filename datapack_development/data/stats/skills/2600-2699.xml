@@ -57,7 +57,10 @@
   <set name="skillType" val="GIVE_SP"/>
   <set name="target" val="TARGET_SELF"/>
   <cond msgId="113" addName="1">
-    <player flyMounted="False"/>
+    <and>
+      <player flyMounted="False"/>
+      <player level="76"/>
+    </and>
   </cond>
 </skill>
 <skill id="2609" levels="20" name="Escape">
