@@ -125,6 +125,8 @@
   </for>
 </skill>
 <skill id="2013" levels="1" name="Scroll Of Escape">
+  <set name="itemConsumeId" val="736"/>
+  <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="20000"/>
   <set name="skillType" val="RECALL"/>
@@ -307,7 +309,9 @@
   </for>
 </skill>
 <skill id="2036" levels="2" name="Blessed Scroll of Escape">
-  <!-- lvl 2 version is "L2day Blessed Scroll of Escape" -->
+  <table name="#itemConsumeId"> 1538 3958 </table>
+  <set name="itemConsumeId" val="#itemConsumeId"/>
+  <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="200"/>
   <set name="skillType" val="RECALL"/>
@@ -348,15 +352,21 @@
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="2040" levels="1" name="Scroll of Escape: Clan Hall">
+  <set name="itemConsumeId" val="1829"/>
+  <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="20000"/>
   <set name="skillType" val="RECALL"/>
+  <set name="recallType" val="ClanHall"/>
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="2041" levels="1" name="Scroll of Escape: Castle">
+  <set name="itemConsumeId" val="1830"/>
+  <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="20000"/>
   <set name="skillType" val="RECALL"/>
+  <set name="recallType" val="Castle"/>
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="2042" levels="1" name="Antidote">

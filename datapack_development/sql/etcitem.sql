@@ -8390,7 +8390,7 @@ INSERT INTO `etcitem` VALUES
 (13419,'Lineage II Commemorative Mark','false','none',20,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','0-0;','false'),
 (13420,'Multi-colored Honey Rice Cake','false','none',5,'assert','paper','none',-1,-1,0,0,'true','true','true','true','0-0;','false'),
 (13421,'Honey Wheat Cake','false','none',5,'assert','paper','none',-1,-1,0,0,'true','true','true','true','0-0;','false'),
-(13422,'SMedium Parchment Box','false','none',100,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','0-0;','false'),
+(13422,'Medium Parchment Box','false','none',100,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','0-0;','false'),
 (13423,'Medium Mineral Box','false','none',100,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','0-0;','false'),
 (13424,'Large Libation Box','false','none',100,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','0-0;','false'),
 (13425,'Small Parchment Box','false','none',100,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','0-0;','false'),

@@ -248,10 +248,12 @@
   </for>
 </skill>
 <skill id="2320" levels="1" name="Blessed Scroll of Escape - Event Use">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="itemConsumeId" val="9156"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="200"/>
+  <set name="skillType" val="RECALL"/>
+  <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="2321" levels="1" name="Blessed Scroll of Resurrection - Event Use">
   <!-- Needs to be verified -->
@@ -582,16 +584,22 @@
   <set name="hitTime" val="500"/>
 </skill>
 <skill id="2364" levels="1" name="Blessed Scroll of Fortress">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="500"/>
+  <set name="itemConsumeId" val="10130"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="hitTime" val="200"/>
+  <set name="skillType" val="RECALL"/>
+  <set name="recallType" val="Fortress"/>
+  <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="2365" levels="1" name="Scroll of Fortress">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="itemConsumeId" val="10129"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="20000"/>
+  <set name="skillType" val="RECALL"/>
+  <set name="recallType" val="Fortress"/>
+  <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="2366" levels="1" name="Blue Coral Key">
   <set name="target" val="TARGET_NONE"/>
@@ -744,10 +752,15 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="2392" levels="1" name="Blessed Scroll of Battlefield Escape">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="itemConsumeId" val="10149"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="200"/>
+  <set name="skillType" val="RECALL"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <cond msgId="113" addName="1">
+    <player SiegeZone="126"/>
+  </cond>
 </skill>
 <skill id="2393" levels="1" name="Blessed Scroll of Battlefield Resurrection">
   <set name="target" val="TARGET_NONE"/>

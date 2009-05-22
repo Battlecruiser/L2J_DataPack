@@ -32,7 +32,8 @@ public class Recall implements ISkillHandler
 {
 	private static final L2SkillType[] SKILL_IDS =
 	{
-		L2SkillType.RECALL
+		L2SkillType.RECALL,
+		L2SkillType.TELEPORT
 	};
 	
 	/**
@@ -87,8 +88,24 @@ public class Recall implements ISkillHandler
 					}
 				}
 				target.setInstanceId(0);
-				
-				target.teleToLocation(MapRegionTable.TeleportWhereType.Town);
+				if (skill.getSkillType() == L2SkillType.TELEPORT)
+				{
+					int[] coords = skill.getTeleportCoords();
+					if (coords != null)
+						target.teleToLocation(coords[0], coords[1], coords[2]);
+				}
+				else
+				{
+					String recall = skill.getRecallType();
+					if (recall.equalsIgnoreCase("Castle"))
+						target.teleToLocation(MapRegionTable.TeleportWhereType.Castle);
+					else if (recall.equalsIgnoreCase("ClanHall"))
+						target.teleToLocation(MapRegionTable.TeleportWhereType.ClanHall);
+					else if (recall.equalsIgnoreCase("Fortress"))
+						target.teleToLocation(MapRegionTable.TeleportWhereType.Fortress);
+					else
+						target.teleToLocation(MapRegionTable.TeleportWhereType.Town);
+				}
 			}
 		}
 		catch (Exception e)
