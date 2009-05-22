@@ -261,14 +261,32 @@
   <set name="weaponsAllowed" val="32"/> <!-- Bow -->
 </skill>
 <skill id="925" levels="1" name="Sigil Mastery">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <!-- <for>
+    <mul order="0x30" stat="mAtk" val="1.04">
+      <using kind="Sigil"/>
+    </mul>
+    <mul order="0x30" stat="regMp" val="1.17">
+      <using kind="Sigil"/>
+    </mul>
+  </for> -->
 </skill>
 <skill id="926" levels="1" name="Sigil Mastery">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <!-- <for>
+    <mul order="0x30" stat="giveHp" val="1.3">
+      <using kind="Sigil"/>
+    </mul>
+    <mul order="0x30" stat="regMp" val="1.17">
+      <using kind="Sigil"/>
+    </mul>
+  </for> -->
 </skill>
 <skill id="927" levels="14" name="Burning Chop">
   <table name="#power"> 167 210 261 319 384 419 455 492 531 570 610 651 691 731 </table>
@@ -325,14 +343,32 @@
   <set name="reuseDelay" val="8000"/>
 </skill>
 <skill id="934" levels="1" name="Sigil Mastery">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <!-- <for>
+    <mul order="0x30" stat="maxMp" val="1.05">
+      <using kind="Sigil"/>
+    </mul>
+    <mul order="0x30" stat="regMp" val="1.17">
+      <using kind="Sigil"/>
+    </mul>
+  </for> -->
 </skill>
 <skill id="935" levels="1" name="Sigil Mastery">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <!-- <for>
+    <mul order="0x30" stat="maxMp" val="1.05">
+      <using kind="Sigil"/>
+    </mul>
+    <mul order="0x30" stat="regMp" val="1.17">
+      <using kind="Sigil"/>
+    </mul>
+  </for> -->
 </skill>
 <skill id="936" levels="21" name="Ordinary Mercenary">
   <set name="target" val="TARGET_NONE"/>
