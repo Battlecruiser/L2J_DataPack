@@ -93,7 +93,7 @@
   <set name="aggroPoints" val="655"/>
   <for>
     <effect name="Buff" time="2400" val="0" stackOrder="99" stackType="speed_up">
-      <mul order="0x30" stat="runSpd" val="1.33"/>
+      <add order="0x40" stat="runSpd" val="33"/>
     </effect>
     <effect name="Debuff" time="2400" val="0" stackOrder="99" stackType="rEvas" noicon="1"> <!-- temp fix (debuff type) to have working stack -->
       <add order="0x40" stat="rEvas" val="4"/>
