@@ -61,6 +61,9 @@
   Lvl 3 Name - Red Primeval Crystal
   -->
   <table name="#power"> 50000 100000 200000 </table>
+  <table name="#itemConsumeId"> 8594 8595 8596 </table>
+  <set name="itemConsumeId" val="#itemConsumeId"/>
+  <set name="itemConsumeCount" val="1"/>
   <set name="hitTime" val="200"/>
   <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -327,6 +330,8 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="2335" levels="1" name="Fire Resist Potion">
+  <set name="itemConsumeId" val="9997"/>
+  <set name="itemConsumeCount" val="1"/>
   <set name="hitTime" val="100"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -343,6 +348,8 @@
   </for>
 </skill>
 <skill id="2336" levels="1" name="Water Resist Potion">
+  <set name="itemConsumeId" val="9998"/>
+  <set name="itemConsumeCount" val="1"/>
   <set name="hitTime" val="100"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -359,6 +366,8 @@
   </for>
 </skill>
 <skill id="2337" levels="1" name="Wind Resist Potion">
+  <set name="itemConsumeId" val="10000"/>
+  <set name="itemConsumeCount" val="1"/>
   <set name="hitTime" val="100"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -375,6 +384,8 @@
   </for>
 </skill>
 <skill id="2338" levels="1" name="Earth Resist Potion">
+  <set name="itemConsumeId" val="9999"/>
+  <set name="itemConsumeCount" val="1"/>
   <set name="hitTime" val="100"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -391,6 +402,8 @@
   </for>
 </skill>
 <skill id="2339" levels="1" name="Holy Resist Potion">
+  <set name="itemConsumeId" val="10002"/>
+  <set name="itemConsumeCount" val="1"/>
   <set name="hitTime" val="100"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -407,6 +420,8 @@
   </for>
 </skill>
 <skill id="2340" levels="1" name="Unholy Resist Potion">
+  <set name="itemConsumeId" val="10001"/>
+  <set name="itemConsumeCount" val="1"/>
   <set name="hitTime" val="100"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -752,6 +767,8 @@
 </skill>
 <skill id="2396" levels="1" name="Mental Potion">
   <!-- by Z0mbie! -->
+  <set name="itemConsumeId" val="10155"/>
+  <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -776,6 +793,8 @@
 </skill>
 <skill id="2398" levels="1" name="Instant Haste Potion">
   <!-- Done by DJ MELERIX -->
+  <set name="itemConsumeId" val="10157"/>
+  <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>

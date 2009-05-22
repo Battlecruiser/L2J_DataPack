@@ -2,6 +2,8 @@
 <list>
 <skill id="9007" levels="1" name="Custom Mana Drug">
   <!-- Done by DJ MELERIX -->
+  <set name="itemConsumeId" val="726"/>
+  <set name="itemConsumeCount" val="1"/>
   <set name="buffDuration" val="15000"/>
   <set name="isPotion" val="true"/>
   <set name="magicLvl" val="1"/>
@@ -17,6 +19,8 @@
 </skill>
 <skill id="9008" levels="1" name="Custom Mana Potion">
   <!-- Done by DJ MELERIX -->
+  <set name="itemConsumeId" val="728"/>
+  <set name="itemConsumeCount" val="1"/>
   <set name="isPotion" val="true"/>
   <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
