@@ -17,6 +17,9 @@
   </for>
 </item>
 <item id='13528' name="Test Dual Daggers">
+  <cond msgId="1518">
+    <player active_skill_id="923"/>
+  </cond>
   <for>
     <set val='200' order='0x08' stat='pAtk'/>
     <set val='6' order='0x08' stat='mAtk'/>
