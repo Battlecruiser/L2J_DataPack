@@ -46,7 +46,8 @@ public class Scrolls implements IItemHandler
 		9146, 9147, 9148, 9149, 9150, 9151,
 		9152, 9153, 9154, 9155, 9897, 10131,
 		10132, 10133, 10134, 10135, 10136,
-		10137, 10138, 10151, 10274, 13844
+		10137, 10138, 10151, 10274, 13844,
+		13386, 13387, 13388
 	};
 	
 	/**
@@ -125,8 +126,6 @@ public class Scrolls implements IItemHandler
 		}
 		else if (itemId >= 8954 && itemId <= 8956)
 		{
-			if (!playable.destroyItem("Consume", item.getObjectId(), 1, null, false))
-				return;
 			switch (itemId)
 			{
 				case 8954: // Blue Primeval Crystal XML: 2306
@@ -141,13 +140,28 @@ public class Scrolls implements IItemHandler
 					activeChar.broadcastPacket(new MagicSkillUse(playable, playable, 2306, 3, 1, 0));
 					useScroll(activeChar, 2306, 3);
 					break;
-				
-				default:
+			}
+			return;
+		}
+		else if (itemId >= 13386 && itemId <= 13388)
+		{
+			switch (itemId)
+			{
+				case 13386: // Blue Crystal of Fantasy XML: 2608
+					activeChar.broadcastPacket(new MagicSkillUse(playable, playable, 2608, 1, 1, 0));
+					useScroll(activeChar, 2608, 1);
+					break;
+				case 13387: // Green Crystal of Fantasy XML: 2608
+					activeChar.broadcastPacket(new MagicSkillUse(playable, playable, 2608, 2, 1, 0));
+					useScroll(activeChar, 2608, 2);
+					break;
+				case 13388: // Red Crystal of Fantasy XML: 2608
+					activeChar.broadcastPacket(new MagicSkillUse(playable, playable, 2608, 3, 1, 0));
+					useScroll(activeChar, 2608, 3);
 					break;
 			}
 			return;
 		}
-		
 		// for the rest, there are no extra conditions
 		if (!playable.destroyItem("Consume", item.getObjectId(), 1, null, false))
 			return;
