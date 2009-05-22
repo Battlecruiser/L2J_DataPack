@@ -38,7 +38,7 @@ public class ScrollOfResurrection implements IItemHandler
 	// all the items ids that this handler knows
 	private static final int[] ITEM_IDS =
 	{
-		737, 3936, 3959, 6387
+		737, 3936, 3959, 6387, 9157, 10150, 13259
 	};
 	
 	/**
@@ -160,6 +160,15 @@ public class ScrollOfResurrection implements IItemHandler
 						case 6387:
 							skillId = 2179;
 							break; // Blessed Scroll of Resurrection: For Pets
+						case 9157:
+							skillId = 2321;
+							break; // Blessed Scroll of Resurrection Event
+						case 10150:
+							skillId = 2393;
+							break; // Blessed Scroll of Battlefield Resurrection
+						case 13259:
+							skillId = 2596;
+							break; // Gran Kain's Blessed Scroll of Resurrection
 					}
 					
 					if (skillId != 0)
