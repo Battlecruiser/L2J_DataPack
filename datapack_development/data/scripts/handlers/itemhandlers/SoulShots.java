@@ -38,11 +38,8 @@ public class SoulShots implements IItemHandler
 	// All the item IDs that this handler knows.
 	private static final int[] ITEM_IDS =
 	{
-		5789, 1835, 1463, 1464, 1465, 1466, 1467
-	};
-	private static final int[] SKILL_IDS =
-	{
-		2039, 2150, 2151, 2152, 2153, 2154, 2154, 2154
+		5789, 1835, 1463, 1464, 1465, 1466, 1467,
+		22082,22083,22084,22085,22086
 	};
 	
 	/**
@@ -78,25 +75,25 @@ public class SoulShots implements IItemHandler
 					gradeCheck = false;
 				break;
 			case L2Item.CRYSTAL_D:
-				if (itemId != 1463)
+				if (itemId != 1463 && itemId != 22082)
 					gradeCheck = false;
 				break;
 			case L2Item.CRYSTAL_C:
-				if (itemId != 1464)
+				if (itemId != 1464 && itemId != 22083)
 					gradeCheck = false;
 				break;
 			case L2Item.CRYSTAL_B:
-				if (itemId != 1465)
+				if (itemId != 1465 && itemId != 22084)
 					gradeCheck = false;
 				break;
 			case L2Item.CRYSTAL_A:
-				if (itemId != 1466)
+				if (itemId != 1466 && itemId != 22085)
 					gradeCheck = false;
 				break;
 			case L2Item.CRYSTAL_S:
 			case L2Item.CRYSTAL_S80:
 			case L2Item.CRYSTAL_S84:
-				if (itemId != 1467)
+				if (itemId != 1467 && itemId != 22086)
 					gradeCheck = false;
 				break;
 		}
@@ -143,10 +140,48 @@ public class SoulShots implements IItemHandler
 		{
 			activeChar.soulShotLock.unlock();
 		}
-		
+		int skillId = 0;
+		switch (itemId)
+		{
+			case 1835:
+			case 5789:
+				skillId=2039;
+				break;
+			case 1463:
+				skillId=2150;
+				break;
+			case 1464:
+				skillId=2151;
+				break;
+			case 1465:
+				skillId=2152;
+				break;
+			case 1466:
+				skillId=2153;
+				break;
+			case 1467:
+				skillId=2154;
+				break;
+			case 22082:
+				skillId=26060;
+				break;
+			case 22083:
+				skillId=26061;
+				break;
+			case 22084:
+				skillId=26062;
+				break;
+			case 22085:
+				skillId=26063;
+				break;
+			case 22086:
+				skillId=26064;
+				break;
+				
+		}
 		// Send message to client
 		activeChar.sendPacket(new SystemMessage(SystemMessageId.ENABLED_SOULSHOT));
-		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, SKILL_IDS[weaponGrade], 1, 0, 0), 360000);
+		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, skillId, 1, 0, 0), 360000);
 	}
 	
 	/**

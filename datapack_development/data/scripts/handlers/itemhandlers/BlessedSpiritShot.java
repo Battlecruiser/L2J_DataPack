@@ -37,12 +37,8 @@ public class BlessedSpiritShot implements IItemHandler
 	// all the items ids that this handler knows
 	private static final int[] ITEM_IDS =
 	{
-		3947, 3948, 3949, 3950, 3951, 3952
-	};
-	
-	private static final int[] SKILL_IDS =
-	{
-		2061, 2160, 2161, 2162, 2163, 2164, 2164, 2164
+		3947, 3948, 3949, 3950, 3951, 3952,
+		22072, 22073, 22074, 22075, 22076
 	};
 	
 	/**
@@ -92,25 +88,25 @@ public class BlessedSpiritShot implements IItemHandler
 					gradeCheck = false;
 				break;
 			case L2Item.CRYSTAL_D:
-				if (itemId != 3948)
+				if (itemId != 3948 && itemId != 22072)
 					gradeCheck = false;
 				break;
 			case L2Item.CRYSTAL_C:
-				if (itemId != 3949)
+				if (itemId != 3949 && itemId != 22073)
 					gradeCheck = false;
 				break;
 			case L2Item.CRYSTAL_B:
-				if (itemId != 3950)
+				if (itemId != 3950 && itemId != 22074)
 					gradeCheck = false;
 				break;
 			case L2Item.CRYSTAL_A:
-				if (itemId != 3951)
+				if (itemId != 3951 && itemId != 22075)
 					gradeCheck = false;
 				break;
 			case L2Item.CRYSTAL_S:
 			case L2Item.CRYSTAL_S80:
 			case L2Item.CRYSTAL_S84:
-				if (itemId != 3952)
+				if (itemId != 3952 && itemId != 22076)
 					gradeCheck = false;
 				break;
 		}
@@ -146,7 +142,45 @@ public class BlessedSpiritShot implements IItemHandler
 		
 		// Send message to client
 		activeChar.sendPacket(new SystemMessage(SystemMessageId.ENABLED_SPIRITSHOT));
-		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, SKILL_IDS[weaponGrade], 1, 0, 0), 360000);
+		int skillId = 0;
+		switch (itemId)
+		{
+			case 3947:
+				skillId=2061;
+				break;
+			case 3948:
+				skillId=2160;
+				break;
+			case 3949:
+				skillId=2161;
+				break;
+			case 3950:
+				skillId=2162;
+				break;
+			case 3951:
+				skillId=2163;
+				break;
+			case 3952:
+				skillId=2164;
+				break;
+			case 22072:
+				skillId=26050;
+				break;
+			case 22073:
+				skillId=26051;
+				break;
+			case 22074:
+				skillId=26052;
+				break;
+			case 22075:
+				skillId=26053;
+				break;
+			case 22076:
+				skillId=26054;
+				break;
+				
+		}
+		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, skillId, 1, 0, 0), 360000);
 	}
 	
 	/**
