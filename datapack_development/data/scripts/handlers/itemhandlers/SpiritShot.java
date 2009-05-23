@@ -37,11 +37,8 @@ public class SpiritShot implements IItemHandler
 	// All the item IDs that this handler knows.
 	private static final int[] ITEM_IDS =
 	{
-		5790, 2509, 2510, 2511, 2512, 2513, 2514
-	};
-	private static final int[] SKILL_IDS =
-	{
-		2061, 2155, 2156, 2157, 2158, 2159, 2159, 2159
+		5790, 2509, 2510, 2511, 2512, 2513, 2514,
+		22077,22078,22079,22080,22081
 	};
 	
 	/**
@@ -81,25 +78,25 @@ public class SpiritShot implements IItemHandler
 					gradeCheck = false;
 				break;
 			case L2Item.CRYSTAL_D:
-				if (itemId != 2510)
+				if (itemId != 2510 && itemId != 22077)
 					gradeCheck = false;
 				break;
 			case L2Item.CRYSTAL_C:
-				if (itemId != 2511)
+				if (itemId != 2511 && itemId != 22078)
 					gradeCheck = false;
 				break;
 			case L2Item.CRYSTAL_B:
-				if (itemId != 2512)
+				if (itemId != 2512 && itemId != 22079)
 					gradeCheck = false;
 				break;
 			case L2Item.CRYSTAL_A:
-				if (itemId != 2513)
+				if (itemId != 2513 && itemId != 22080)
 					gradeCheck = false;
 				break;
 			case L2Item.CRYSTAL_S:
 			case L2Item.CRYSTAL_S80:
 			case L2Item.CRYSTAL_S84:
-				if (itemId != 2514)
+				if (itemId != 2514 && itemId != 22081)
 					gradeCheck = false;
 				break;
 		}
@@ -131,10 +128,48 @@ public class SpiritShot implements IItemHandler
 		
 		// Charge Spirit shot
 		weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_SPIRITSHOT);
-		
+		int skillId = 0;
+		switch (itemId)
+		{
+			case 2509:
+			case 5790:
+				skillId=2061;
+				break;
+			case 2510:
+				skillId=2155;
+				break;
+			case 2511:
+				skillId=2156;
+				break;
+			case 2512:
+				skillId=2157;
+				break;
+			case 2513:
+				skillId=2158;
+				break;
+			case 2514:
+				skillId=2159;
+				break;
+			case 22077:
+				skillId=26055;
+				break;
+			case 22078:
+				skillId=26056;
+				break;
+			case 22079:
+				skillId=26057;
+				break;
+			case 22080:
+				skillId=26058;
+				break;
+			case 22081:
+				skillId=26059;
+				break;
+				
+		}
 		// Send message to client
 		activeChar.sendPacket(new SystemMessage(SystemMessageId.ENABLED_SPIRITSHOT));
-		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, SKILL_IDS[weaponGrade], 1, 0, 0), 360000);
+		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, skillId, 1, 0, 0), 360000);
 	}
 	
 	/**
