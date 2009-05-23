@@ -91,13 +91,13 @@
   <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
-<skill id="4513" levels="1" name="Pumpkin - Level up">
+<skill id="4513" levels="1" name="Squash - Level up">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/> <!-- Just Broadcast -->
   <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
-<skill id="4514" levels="1" name="Pumpkin - Poisoning">
+<skill id="4514" levels="1" name="Squash - Poisoned">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/> <!-- Just Broadcast -->
   <set name="magicLvl" val="1"/>
@@ -681,7 +681,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4554" levels="10" name="Hot Springs Malaria">
+<skill id="4554" levels="10" name="Hot Spring Malaria">
   <table name="#mAtkSpd"> 1.04 1.08 1.12 1.16 1.08 1 1 1 1 1 </table>
   <table name="#MpConsumeRate"> 1 0.96 0.96 0.96 0.92 0.92 0.92 0.88 0.88 0.84 </table>
   <set name="mpInitialConsume" val="14"/>
@@ -747,7 +747,7 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="600"/>
 </skill>
-<skill id="4559" levels="1" name="Hot Springs Illusion">
+<skill id="4559" levels="1" name="Hot Spring Illusion">
   <set name="magicLvl" val="75"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
@@ -1145,7 +1145,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4580" levels="12" name="Decrease P.Atk">
+<skill id="4580" levels="12" name="Decrease P. Atk.">
   <table name="#Tab-pAtk"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
   <table name="#mpConsume"> 24 39 54 73 94 116 136 144 152 158 161 163 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -1235,7 +1235,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4584" levels="12" name="Reducing P. Def Shock">
+<skill id="4584" levels="12" name="Reducing P. Def Stun">
   <table name="#mpConsume"> 24 39 54 73 94 116 136 144 152 158 161 163 </table>
   <table name="#pDef"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -1314,7 +1314,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4587" levels="12" name="Decrease P.Atk">
+<skill id="4587" levels="12" name="Decrease P. Atk.">
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <table name="#Tab-pAtk"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
@@ -1442,7 +1442,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4592" levels="12" name="Decrease P. Def">
+<skill id="4592" levels="12" name="Decrease P. Def.">
   <table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
   <table name="#Tab-pDef"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -1466,7 +1466,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4593" levels="12" name="Decrease P. Def">
+<skill id="4593" levels="12" name="Decrease P. Def.">
   <table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
   <table name="#Tab-pDef"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -1490,7 +1490,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4594" levels="12" name="Decrease P. Def">
+<skill id="4594" levels="12" name="Decrease P. Def.">
   <table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
   <table name="#Tab-pDef"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>

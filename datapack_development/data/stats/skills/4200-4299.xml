@@ -182,7 +182,7 @@
   <set name="effectRange" val="1200"/>
   <set name="aggroPoints" val="100"/>
 </skill>
-<skill id="4210" levels="12" name="Life Chant">
+<skill id="4210" levels="12" name="BOSS Chant of Life">
   <!-- SHOULD BUFF MINIONS -->
   <table name="#hot"> 127 217 345 508 697 860 942 965 974 968 951 940 </table>
   <table name="#mpConsume"> 43 49 99 134 173 207 139 250 258 262 262 263 </table>
@@ -387,7 +387,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="negateId" val="4223"/>
 </skill>
-<skill id="4225" levels="6" name="Resist Shock">
+<skill id="4225" levels="6" name="Resist Stun Attacks">
   <!-- Done by DJ MELERIX -->
   <table name="#stunVuln"> 0.85 0.7 0.5 0.3 0.1 0 </table>
   <set name="magicLvl" val="1"/>
@@ -419,7 +419,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4228" levels="12" name="Double Dagger Attack">
+<skill id="4228" levels="12" name="NPC Double Dagger Attack">
   <table name="#power"> 122 279 584 1110 1923 3030 4336 5002 5632 6187 6632 6978 </table>
   <table name="#mpConsume"> 25 40 56 76 99 121 142 151 159 165 168 170 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -501,7 +501,7 @@
     <add order="0x40" stat="absorbDam" val="15"/> <!-- absorb 15% HP from damage inflicted on enemies -->
   </for>
 </skill>
-<skill id="4234" levels="12" name="BOSS Power Throw">
+<skill id="4234" levels="12" name="BOSS Spear Attack">
   <!-- Done by DJ MELERIX -->
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
   <table name="#mpConsume"> 36 50 69 93 118 143 166 175 182 186 189 192 </table>
@@ -545,7 +545,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4237" levels="1" name="Decreases Speed">
+<skill id="4237" levels="1" name="Decrease Speed">
   <!-- Mikhail Skill -->
   <set name="magicLvl" val="70"/>
   <set name="mpConsume" val="65"/>
@@ -767,7 +767,7 @@
   <set name="castRange" val="1000"/>
   <set name="effectRange" val="1500"/>
 </skill>
-<skill id="4252" levels="12" name="NPC Flame - Slow">
+<skill id="4252" levels="12" name="NPC Flamestrike - Slow">
   <table name="#power"> 3 5 7 9 13 16 20 20 20 20 20 20 </table>
   <table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -857,7 +857,7 @@
   <set name="castRange" val="500"/>
   <set name="effectRange" val="1000"/>
 </skill>
-<skill id="4258" levels="1" name="Anti Strider Slow">
+<skill id="4258" levels="1" name="Hinder Strider">
   <!-- Done by DJ MELERIX -->
   <!-- AI driven skill in GrandBosses -->
   <set name="castRange" val="1000"/>
@@ -1070,7 +1070,7 @@
   <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
-<skill id="4272" levels="1" name="Greater Resist Archery Attack">
+<skill id="4272" levels="1" name="Higher Resist Bow/Crossbow Weapons">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="magicLvl" val="1"/>
@@ -1080,7 +1080,7 @@
     <mul order="0x30" stat="crossbowWpnVuln" val="0.3"/>
   </for>
 </skill>
-<skill id="4273" levels="6" name="Resist Dagger">
+<skill id="4273" levels="6" name="Resist Daggers/Rapier Weapon">
   <table name="#Tab-daggerVuln"> 0.85 0.7 0.5 0.3 0.1 0 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1090,7 +1090,7 @@
     <mul order="0x30" stat="daggerWpnVuln" val="#Tab-daggerVuln"/>
   </for>
 </skill>
-<skill id="4274" levels="5" name="Blunt Attack Weak Point">
+<skill id="4274" levels="5" name="Blunt Weapon Weak Point">
   <table name="#Tab-bluntVuln"> 1.1 1.15 1.2 1.3 1.5 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1110,7 +1110,7 @@
     <sub order="0x40" stat="holyRes" val="#Tab-holyRes"/>
   </for>
 </skill>
-<skill id="4276" levels="5" name="Archery Attack Weak Point">
+<skill id="4276" levels="5" name="Weak Point against Bow/Crossbow Weapons">
   <table name="#Tab-bowVuln"> 1.1 1.15 1.2 1.3 1.5 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1121,7 +1121,7 @@
     <mul order="0x30" stat="crossbowWpnVuln" val="#Tab-bowVuln"/>
   </for>
 </skill>
-<skill id="4277" levels="6" name="Resist Poison">
+<skill id="4277" levels="6" name="Resist Poison Attacks">
   <table name="#Tab-poisonVuln"> 0.85 0.7 0.5 0.3 0.1 0 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1190,7 +1190,7 @@
     <mul order="0x30" stat="mDef" val="2"/>
   </for>
 </skill>
-<skill id="4284" levels="6" name="Resist Bleeding">
+<skill id="4284" levels="6" name="Resist Bleed Attacks">
   <table name="#Tab-bleedVuln"> 0.85 0.7 0.5 0.3 0.1 0 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1200,7 +1200,7 @@
     <mul order="0x30" stat="bleedVuln" val="#Tab-bleedVuln"/>
   </for>
 </skill>
-<skill id="4285" levels="6" name="Resist Sleep">
+<skill id="4285" levels="6" name="Resist Sleep Attacks">
   <table name="#Tab-sleepVuln"> 0.85 0.7 0.5 0.3 0.1 0 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1219,7 +1219,7 @@
     <mul order="0x30" stat="sleepVuln" val="0.5"/>
   </for>
 </skill>
-<skill id="4287" levels="6" name="Resist Hold">
+<skill id="4287" levels="6" name="Resist Hold Attacks">
   <table name="#Tab-rootVuln"> 0.85 0.7 0.5 0.3 0.1 0 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
