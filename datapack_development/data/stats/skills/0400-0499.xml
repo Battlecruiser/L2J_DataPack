@@ -460,9 +460,7 @@
       <add order="0x40" stat="accCombat" val="6">
         <using kind="Sword,Big Sword,Blunt,Big Blunt,Pole,Dual Fist"/>
       </add>
-      <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd">
-        <using kind="Sword,Big Sword,Pole"/>
-      </mul>
+      <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
       <add order="0x40" stat="rCrit" val="#rCrit">
         <using kind="Sword,Big Sword,Pole"/>
       </add>
