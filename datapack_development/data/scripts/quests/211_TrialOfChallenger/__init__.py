@@ -157,7 +157,7 @@ class Quest (JQuest) :
       st.playSound("ItemSound.quest_finish")
       st.set("cond","0")
    elif npcId == 30535 and cond == 7 :
-      if player.getLevel() >= 36 :
+      if player.getLevel() >= 35 :
         htmltext = "30535-01.htm"
         st.addRadar(176560,-184969,-3729);
         st.set("cond","8")

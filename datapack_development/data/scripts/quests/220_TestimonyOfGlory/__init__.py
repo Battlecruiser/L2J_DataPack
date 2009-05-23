@@ -95,7 +95,7 @@ class Quest (JQuest) :
           st.takeItems(MANAKIAS_LETTER1,1)
           st.takeItems(MANAKIAS_LETTER2,1)
           st.takeItems(KASMANS_LETTER1,1)
-          if st.getPlayer().getLevel() >= 38 :
+          if st.getPlayer().getLevel() >= 37 :
             st.giveItems(CHIANTAS_ORDER3,1)
             st.set("cond","6")
           else :                                            # lack experience
@@ -382,7 +382,7 @@ class Quest (JQuest) :
            if st.getQuestItemsCount(CHIANTAS_ORDER1) and st.getQuestItemsCount(SCEPTER_OF_BREKA) and st.getQuestItemsCount(SCEPTER_OF_VUKU) and st.getQuestItemsCount(SCEPTER_OF_TUREK) and st.getQuestItemsCount(SCEPTER_OF_TUNATH) and st.getQuestItemsCount(SCEPTER_OF_ENKU) :
              htmltext = "30642-05.htm"
            elif st.getQuestItemsCount(CHIANTAS_ORDER2) :
-             if player.getLevel() >= 38 :
+             if player.getLevel() >= 37 :
                htmltext = "30642-09.htm"
                st.giveItems(CHIANTAS_ORDER3,1)
                st.set("cond","6")

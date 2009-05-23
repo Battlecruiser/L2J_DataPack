@@ -84,7 +84,7 @@ class Quest(JQuest):
 			st.takeItems(HIERARCHS_LETTER_ID,1)
 			st.giveItems(GRAIL_DIAGRAM_ID,1)
 		elif event == "30371_3" :
-			if st.getPlayer().getLevel() < 38 :
+			if st.getPlayer().getLevel() < 37 :
 				htmltext = "30371-10.htm"
 				st.set("cond","13")
 				st.takeItems(STARDUST_ID,1)
@@ -206,7 +206,7 @@ class Quest(JQuest):
 			elif st.getQuestItemsCount(STARDUST_ID):
 				htmltext = "30371-09.htm"
 			elif st.getQuestItemsCount(THALIAS_INSTRUCTIONS_ID):
-				if player.getLevel() < 38:
+				if player.getLevel() < 37:
 					htmltext = "30371-12.htm"
 					st.set("cond","13")
 				else:

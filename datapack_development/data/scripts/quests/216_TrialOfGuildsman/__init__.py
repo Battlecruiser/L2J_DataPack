@@ -206,7 +206,7 @@ class Quest (JQuest) :
    elif npcId == 30688 and st.getInt("cond")>=1 and st.getQuestItemsCount(NORMANS_RECEIPT_ID) == 0 and st.getQuestItemsCount(DUNINGS_INSTRUCTIONS_ID) == 0 and st.getQuestItemsCount(DUNINGS_KEY_ID) == 0 and st.getQuestItemsCount(ALLTRANS_INSTRUCTIONS_ID)==1 :
         htmltext = "30688-01.htm"
    elif npcId == 30298 and st.getInt("cond")>=1 and st.getQuestItemsCount(ALLTRANS_INSTRUCTIONS_ID) and st.getQuestItemsCount(ALLTRANS_RECOMMEND2_ID) :
-        if player.getLevel() < 36 :
+        if player.getLevel() < 35 :
           htmltext = "30298-01.htm"
         else:
           htmltext = "30298-02.htm"

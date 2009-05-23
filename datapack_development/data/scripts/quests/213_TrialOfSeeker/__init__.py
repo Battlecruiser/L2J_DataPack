@@ -65,7 +65,7 @@ class Quest (JQuest) :
       st.set("cond","6")
       st.playSound("Itemsound.quest_middle")
     elif event == "30064-18.htm" :
-      if st.getPlayer().getLevel()<36 :
+      if st.getPlayer().getLevel()<35 :
         htmltext = "30064-17.htm"
         st.giveItems(TERYS_ORDER3_ID,1)
         st.takeItems(ANALYSIS_RESULT_ID,1)
@@ -150,7 +150,7 @@ class Quest (JQuest) :
               st.takeItems(TERYS_REPORT_ID,1)
               st.giveItems(MARK_OF_SEEKER_ID,1)
    elif npcId == 30064 and st.getQuestItemsCount(TERYS_ORDER3_ID)==1 :
-      if player.getLevel()<36 :
+      if player.getLevel()<35 :
         htmltext = "30064-20.htm"
       else:
         htmltext = "30064-21.htm"
