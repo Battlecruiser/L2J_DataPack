@@ -66,7 +66,7 @@ class Quest (JQuest) :
         st.playSound("ItemSound.quest_accept")
         st.giveItems(RING_OF_TESTIMONY1_ID,1)
     elif event == "30104_1" :
-          if st.getPlayer().getLevel() < 38 :
+          if st.getPlayer().getLevel() < 37 :
             htmltext = "30104-07.htm"
             st.takeItems(RING_OF_TESTIMONY1_ID,1)
             st.takeItems(OLD_ACCOUNT_BOOK_ID,1)
@@ -203,7 +203,7 @@ class Quest (JQuest) :
         else:
           htmltext = "30104-05.htm"
    elif npcId == 30104 and st.getInt("cond")>=1 and st.getQuestItemsCount(PARMANS_INSTRUCTIONS_ID)==1 :
-        if player.getLevel() < 38 :
+        if player.getLevel() < 37 :
           htmltext = "30104-09.htm"
         else:
           htmltext = "30104-10.htm"

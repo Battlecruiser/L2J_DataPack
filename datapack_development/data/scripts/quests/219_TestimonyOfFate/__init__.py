@@ -62,7 +62,7 @@ class Quest (JQuest) :
     elif event == "30476_1" :
           htmltext = "30476-04.htm"
     elif event == "30476_2" :
-          if st.getPlayer().getLevel() >= 38 :
+          if st.getPlayer().getLevel() >= 37 :
             st.set("cond","15")
             htmltext = "30476-12.htm"
             st.giveItems(KAIRAS_RECOMMEND_ID,1)
@@ -139,9 +139,9 @@ class Quest (JQuest) :
       htmltext = "30476-10.htm"
    elif npcId == 30476 and st.getInt("cond")>=1 and st.getQuestItemsCount(REVELATIONS_MANUSCRIPT_ID) :
       htmltext = "30476-11.htm"
-   elif npcId == 30476 and st.getInt("cond")>=1 and st.getQuestItemsCount(KAIRAS_INSTRUCTIONS_ID) and player.getLevel()<38 :
+   elif npcId == 30476 and st.getInt("cond")>=1 and st.getQuestItemsCount(KAIRAS_INSTRUCTIONS_ID) and player.getLevel()<37 :
       htmltext = "30476-14.htm"
-   elif npcId == 30476 and st.getInt("cond")>=1 and st.getQuestItemsCount(KAIRAS_INSTRUCTIONS_ID) and player.getLevel()>=38 :
+   elif npcId == 30476 and st.getInt("cond")>=1 and st.getQuestItemsCount(KAIRAS_INSTRUCTIONS_ID) and player.getLevel()>=37 :
       htmltext = "30476-15.htm"
       st.giveItems(KAIRAS_RECOMMEND_ID,1)
       st.takeItems(KAIRAS_INSTRUCTIONS_ID,1)
@@ -222,6 +222,7 @@ class Quest (JQuest) :
       st.giveItems(7562,16)
       htmltext = "30358-04.htm"
       st.giveItems(MARK_OF_FATE_ID,1)
+      st.addExpAndSp(682735,45562)
       st.takeItems(ARKENIAS_LETTER_ID,1)
       st.takeItems(PALUS_CHARM_ID,1)
       st.set("cond","0")

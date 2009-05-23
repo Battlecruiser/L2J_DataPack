@@ -67,7 +67,7 @@ class Quest (JQuest) :
       st.giveItems(LETTER_OF_THIFIELL_ID,1)
       st.set("cond","5")
     elif event == "30657-03.htm" :
-      if st.getPlayer().getLevel() >= 38 :                 # Condition 12 meet the Lord Kakai (Orc Master)
+      if st.getPlayer().getLevel() >= 37 :                 # Condition 12 meet the Lord Kakai (Orc Master)
         st.takeItems(LETTER_TO_SERESIN_ID,1)
         st.giveItems(LETTER_TO_ORC_ID,1)
         st.giveItems(LETTER_TO_DWARF_ID,1)
