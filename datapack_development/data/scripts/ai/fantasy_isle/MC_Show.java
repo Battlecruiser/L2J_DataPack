@@ -401,7 +401,7 @@ public class MC_Show extends Quest
 				}
 			}
 		}
-		return super.onAdvEvent(event, npc, player);
+		return null;
 	}
 	
     public static void main(String[] args)
