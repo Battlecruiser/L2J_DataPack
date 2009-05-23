@@ -288,7 +288,7 @@
   <set name="skillType" val="HEAL"/>
   <set name="target" val="TARGET_ONE"/>
 </skill>
-<skill id="4116" levels="10" name="Resist M.Atk">
+<skill id="4116" levels="10" name="Resist M. Atk.">
   <!-- Done by dc -->
   <table name="#Tab-mDef"> 1.05 1.11 1.17 1.25 1.33 1.43 1.67 2 3.33 10 </table>
   <set name="target" val="TARGET_SELF"/>
@@ -340,7 +340,7 @@
     <effect name="Paralyze" time="120" val="0"/>
   </for>
 </skill>
-<skill id="4119" levels="3" name="Fall in accuracy">
+<skill id="4119" levels="3" name="Decrease Accuracy">
   <table name="#mpConsume"> 20 35 65 </table>
   <table name="#Tab-accCombat"> 11 12 13 </table>
   <table name="#magicLvl"> 20 40 70 </table>
@@ -364,7 +364,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4120" levels="12" name="Shock">
+<skill id="4120" levels="12" name="Stun">
   <table name="#mpConsume"> 25 40 56 76 99 121 142 151 159 165 168 170 </table>
   <table name="#power"> 46 105 219 417 722 1136 1626 1876 2112 2320 2487 2617 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -724,7 +724,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4146" levels="3" name="Decrease P.Def">
+<skill id="4146" levels="3" name="Decrease P. Def.">
   <table name="#Tab-pDef"> 0.83 0.8 0.77 </table>
   <set name="magicLvl" val="1"/>
   <set name="power" val="10"/> <!-- Base Land Rate -->
@@ -985,7 +985,7 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
 </skill>
-<skill id="4162" levels="3" name="Decrease P. Atk.">
+<skill id="4162" levels="3" name="Decrease Atk. Spd.">
   <!-- Done by DJ MELERIX -->
   <table name="#pAtkSpd"> 0.83 0.8 0.77 </table>
   <set name="magicLvl" val="1"/>
@@ -1002,7 +1002,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4163" levels="12" name="NPC Self Damage Shield">
+<skill id="4163" levels="12" name="NPC Self-Damage Shield">
   <table name="#mpConsume"> 12 19 26 35 45 55 65 69 72 75 77 78 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
@@ -1050,7 +1050,7 @@
     <effect count="15" name="DamOverTime" val="#dot"/>
   </for>
 </skill>
-<skill id="4166" levels="18" name="Stuns">
+<skill id="4166" levels="18" name="Stun">
   <!-- Cubic skill -->
   <table name="#magicLvl"> 40 44 48 52 56 60 64 68 72 74 75 76 77 78 79 80 81 82 </table>
   <set name="magicLvl" val="#magicLvl"/>
@@ -1065,7 +1065,7 @@
     <effect name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
-<skill id="4167" levels="1" name="Curse of Fairy Mymyu">
+<skill id="4167" levels="1" name="Curse of Fairy Mimyu">
   <!-- Done by DJ MELERIX -->
   <set name="power" val="100"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1082,7 +1082,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4168" levels="12" name="BOSS Power Strike">
+<skill id="4168" levels="12" name="BOSS Strike">
   <table name="#power"> 121 325 893 2338 5884 11371 17463 20261 23243 26363 29567 32796 </table>
   <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
@@ -1244,7 +1244,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="negateStats" val="BUFF DEBUFF"/>
 </skill>
-<skill id="4178" levels="12" name="BOSS Flame Strike">
+<skill id="4178" levels="12" name="BOSS Flamestrike">
   <table name="#mpConsume"> 23 32 44 58 74 79 102 107 112 114 116 118 </table>
   <table name="#power"> 21 31 43 58 75 92 108 115 121 125 129 132 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
@@ -1260,7 +1260,7 @@
   <set name="castRange" val="700"/>
   <set name="effectRange" val="1200"/>
 </skill>
-<skill id="4179" levels="12" name="BOSS Power Strike">
+<skill id="4179" levels="12" name="BOSS Strike">
   <table name="#power"> 121 325 893 2338 5884 11371 17463 20261 23243 26363 29567 32796 </table>
   <table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
@@ -1473,7 +1473,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4191" levels="12" name="BOSS Wind Strike">
+<skill id="4191" levels="12" name="BOSS Windstrike">
   <table name="#mpConsume"> 12 19 26 35 45 55 65 69 72 75 77 78 </table>
   <table name="#power"> 21 31 43 58 75 92 108 115 121 125 129 132 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
@@ -1548,7 +1548,7 @@
   <set name="castRange" val="750"/>
   <set name="effectRange" val="1250"/>
 </skill>
-<skill id="4196" levels="12" name="Decreases Speed">
+<skill id="4196" levels="12" name="Decrease Speed">
   <table name="#mpConsume"> 12 19 26 35 45 55 65 69 72 75 77 78 </table>
   <table name="#power"> 13 19 26 35 45 56 65 69 73 75 77 79 </table>
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>

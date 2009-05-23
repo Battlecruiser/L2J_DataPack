@@ -252,7 +252,7 @@
     <effect count="10" name="DamOverTime" time="3" val="#dot" abnormal="poison"/>
   </for>
 </skill>
-<skill id="4321" levels="1" name="Decrease P. Def">
+<skill id="4321" levels="1" name="Decrease P. Def.">
   <set name="magicLvl" val="60"/>
   <set name="mpConsume" val="50"/>
   <set name="target" val="TARGET_ONE"/>
@@ -268,7 +268,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4322" levels="1" name="Wind Walk for Beginners">
+<skill id="4322" levels="1" name="Adventurer's Wind Walk">
   <!-- Newbie Guide Buff -->
   <set name="magicLvl" val="60"/>
   <set name="target" val="TARGET_ONE"/>
@@ -283,7 +283,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4323" levels="1" name="Shield for Beginners">
+<skill id="4323" levels="1" name="Adventurer's Shield">
   <!-- Newbie Guide Buff -->
   <set name="magicLvl" val="60"/>
   <set name="target" val="TARGET_ONE"/>
@@ -298,7 +298,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4324" levels="1" name="Bless the Body for Beginners">
+<skill id="4324" levels="1" name="Adventurer's Bless the Body">
   <!-- Newbie Guide Buff -->
   <set name="magicLvl" val="60"/>
   <set name="target" val="TARGET_ONE"/>
@@ -313,7 +313,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4325" levels="1" name="Vampiric Rage for Beginners">
+<skill id="4325" levels="1" name="Adventurer's Vampiric Rage">
   <!-- Newbie Guide Buff -->
   <set name="magicLvl" val="60"/>
   <set name="target" val="TARGET_ONE"/>
@@ -328,7 +328,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4326" levels="1" name="Regeneration for Beginners">
+<skill id="4326" levels="1" name="Adventurer's Regeneration">
   <!-- Newbie Guide Buff -->
   <set name="magicLvl" val="60"/>
   <set name="target" val="TARGET_ONE"/>
@@ -343,7 +343,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4327" levels="1" name="Haste for Beginners">
+<skill id="4327" levels="1" name="Adventurer's Haste">
   <!-- Newbie Guide Buff -->
   <set name="magicLvl" val="60"/>
   <set name="target" val="TARGET_ONE"/>
@@ -358,7 +358,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4328" levels="1" name="Bless the Soul for Beginners">
+<skill id="4328" levels="1" name="Adventurer's Bless the Soul">
   <!-- Newbie Guide Buff -->
   <set name="magicLvl" val="60"/>
   <set name="target" val="TARGET_ONE"/>
@@ -373,7 +373,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4329" levels="1" name="Acumen for Beginners">
+<skill id="4329" levels="1" name="Adventurer's Acumen">
   <!-- Newbie Guide Buff -->
   <set name="magicLvl" val="60"/>
   <set name="target" val="TARGET_ONE"/>
@@ -388,7 +388,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4330" levels="1" name="Concentration for Beginners">
+<skill id="4330" levels="1" name="Adventurer's Concentration">
   <!-- Newbie Guide Buff -->
   <set name="magicLvl" val="60"/>
   <set name="target" val="TARGET_ONE"/>
@@ -403,7 +403,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4331" levels="1" name="Empower for Beginners">
+<skill id="4331" levels="1" name="Adventurer's Empower">
   <!-- Newbie Guide Buff -->
   <set name="magicLvl" val="60"/>
   <set name="target" val="TARGET_ONE"/>
@@ -480,7 +480,7 @@
     <add order="0x40" stat="holyRes" val="#Tab-holyRes"/>
   </for>
 </skill>
-<skill id="4338" levels="1" name="Life Cubic for Beginners">
+<skill id="4338" levels="1" name="Adventurer's Life Cubic">
   <!-- Newbie Guide Buff -->
   <set name="magicLvl" val="18"/>
   <set name="power" val="20"/> <!-- Needs to be checked -->
@@ -929,7 +929,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4364" levels="2" name="Blessing of Prophecy">
+<skill id="4364" levels="2" name="Blessing of Revelations">
   <!-- Fighter -->
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="500"/>
@@ -949,7 +949,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4365" levels="2" name="Blessing of Prophecy">
+<skill id="4365" levels="2" name="Blessing of Revelations">
   <!-- Mage -->
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="500"/>
@@ -1101,7 +1101,7 @@
   </for>
 </skill>
 
-<skill id="4376" levels="1" name="Strong Resistance to P.Atk.">
+<skill id="4376" levels="1" name="Strong Resistance to P. Atk.">
   <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="skillType" val="BUFF"/>
@@ -1125,7 +1125,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
 </skill>
-<skill id="4378" levels="12" name="Self Damage Shield">
+<skill id="4378" levels="12" name="NPC Self-Damage Shield">
   <table name="#mpConsume"> 12 19 26 35 45 55 65 69 72 75 77 78 </table>
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
@@ -1141,7 +1141,7 @@
     </effect>
   </for>
 </skill>
-<skill id="4379" levels="6" name="Resist Pole Arm">
+<skill id="4379" levels="6" name="Resist Spear Weapons">
   <table name="#Tab-poleVuln"> 0.85 0.7 0.5 0.3 0.1 0 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1151,7 +1151,7 @@
     <mul order="0x30" stat="poleWpnVuln" val="#Tab-poleVuln"/>
   </for>
 </skill>
-<skill id="4380" levels="1" name="Arena CP Recovery">
+<skill id="4380" levels="1" name="Arena: CP Recovery">
   <set name="power" val="5000"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="COMBATPOINTHEAL"/>
@@ -1252,7 +1252,7 @@
     <effect name="Buff" time="120" val="0" stackOrder="2" stackType="heal_effect_down"/>
   </for>
 </skill>
-<skill id="4388" levels="6" name="Resist Paralysis">
+<skill id="4388" levels="6" name="Resist Paralysis Attacks">
   <table name="#power"> 0.85 0.7 0.5 0.3 0.1 0 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1262,7 +1262,7 @@
     <mul order="0x30" stat="paralyzeVuln" val="#power"/>
   </for>
 </skill>
-<skill id="4389" levels="6" name="Resist Mental Derangement">
+<skill id="4389" levels="6" name="Resist Mental Attacks">
   <table name="#power"> 0.85 0.7 0.5 0.3 0.1 0 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
