@@ -146,7 +146,7 @@ public class MasterHandler
 		ItemHandler.getInstance().registerItemHandler(new SevenSignsRecord());
 		ItemHandler.getInstance().registerItemHandler(new SpellbookScrolls());
 		ItemHandler.getInstance().registerItemHandler(new CharChangePotions());
-		ItemHandler.getInstance().registerItemHandler(new Firework());
+		ItemHandler.getInstance().registerItemHandler(new ItemSkills());
 		ItemHandler.getInstance().registerItemHandler(new Seed());
 		ItemHandler.getInstance().registerItemHandler(new Harvester());
 		ItemHandler.getInstance().registerItemHandler(new MercTicket());
