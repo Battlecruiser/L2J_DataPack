@@ -3,6 +3,7 @@
 <skill id="2100" levels="1" name="Escape: 1 second">
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="1000"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="RECALL"/>
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
@@ -268,6 +269,7 @@
 <skill id="2122" levels="1" name="Facelifting Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <cond msgId="113" addName="1">
@@ -277,6 +279,7 @@
 <skill id="2123" levels="1" name="Facelifting Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <cond msgId="113" addName="1">
@@ -286,6 +289,7 @@
 <skill id="2124" levels="1" name="Facelifting Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <cond msgId="113" addName="1">
@@ -295,6 +299,7 @@
 <skill id="2125" levels="1" name="Dye Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <cond msgId="113" addName="1">
@@ -304,6 +309,7 @@
 <skill id="2126" levels="1" name="Dye Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <cond msgId="113" addName="1">
@@ -313,6 +319,7 @@
 <skill id="2127" levels="1" name="Dye Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <cond msgId="113" addName="1">
@@ -322,6 +329,7 @@
 <skill id="2128" levels="1" name="Dye Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <cond msgId="113" addName="1">
@@ -331,6 +339,7 @@
 <skill id="2129" levels="1" name="Hair Style Change Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <cond msgId="113" addName="1">
@@ -340,6 +349,7 @@
 <skill id="2130" levels="1" name="Hair Style Change Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <cond msgId="113" addName="1">
@@ -349,6 +359,7 @@
 <skill id="2131" levels="1" name="Hair Style Change Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <cond msgId="113" addName="1">
@@ -358,6 +369,7 @@
 <skill id="2132" levels="1" name="Hair Style Change Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <cond msgId="113" addName="1">
@@ -367,6 +379,7 @@
 <skill id="2133" levels="1" name="Hair Style Change Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <cond msgId="113" addName="1">
@@ -376,6 +389,7 @@
 <skill id="2134" levels="1" name="Hair Style Change Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <cond msgId="113" addName="1">
@@ -385,6 +399,7 @@
 <skill id="2135" levels="1" name="Hair Style Change Potion">
   <set name="target" val="TARGET_NONE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <cond msgId="113" addName="1">
@@ -592,10 +607,12 @@
 <skill id="2167" levels="4" name="Scroll of SP">
   <table name="#power"> 500 5000 100000 500000 </table>
   <set name="hitTime" val="200"/>
+  <set name="staticHitTime" val="true"/>
   <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="#power"/>
   <set name="reuseDelay" val="3000"/>
+  <set name="staticReuse" val="true"/>
   <set name="skillType" val="GIVE_SP"/>
   <set name="target" val="TARGET_SELF"/>
   <cond msgId="113" addName="1">
@@ -605,6 +622,7 @@
 <skill id="2168" levels="6" name="Raid Blessing">
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="2000"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <cond msgId="113" addName="1">
@@ -732,6 +750,7 @@
   <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="200"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="RECALL"/>
   <set name="recallType" val="ClanHall"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -741,6 +760,7 @@
   <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="200"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="RECALL"/>
   <set name="recallType" val="Castle"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -749,6 +769,7 @@
   <set name="power" val="100"/>
   <set name="target" val="TARGET_CORPSE_PET"/>
   <set name="hitTime" val="15000"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="RESURRECT"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="400"/>
@@ -799,6 +820,7 @@
   <set name="power" val="0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1000"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="BEAST_FEED"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="itemConsumeId" val="6643"/>
@@ -810,6 +832,7 @@
   <set name="power" val="0"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1000"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="BEAST_FEED"/>
   <set name="itemConsumeId" val="6644"/>
   <set name="itemConsumeCount" val="1"/>

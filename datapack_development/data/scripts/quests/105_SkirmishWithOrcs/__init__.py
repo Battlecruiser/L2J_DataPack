@@ -40,8 +40,10 @@ class Quest (JQuest) :
      JQuest.__init__(self,id,name,descr)
      self.questItemIds = [KENDNELLS_ORDER1, KENDNELLS_ORDER2, KENDNELLS_ORDER3, KENDNELLS_ORDER4, KENDNELLS_ORDER5, KENDNELLS_ORDER6, KENDNELLS_ORDER7, KENDNELLS_ORDER8]
 
- def onEvent (self,event,st) : 
-    htmltext = event 
+ def onAdvEvent (self,event,npc, player) :
+    htmltext = event
+    st = player.getQuestState(qn)
+    if not st : return
     if event == "1" : 
       st.set("id","0") 
       st.set("cond","1") 

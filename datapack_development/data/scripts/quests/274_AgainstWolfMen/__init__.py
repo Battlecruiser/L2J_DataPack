@@ -18,8 +18,10 @@ class Quest (JQuest) :
      JQuest.__init__(self,id,name,descr)
      self.questItemIds = [MARAKU_WEREWOLF_HEAD]
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc, player) :
     htmltext = event
+    st = player.getQuestState(qn)
+    if not st : return
     if event == "30569-03.htm" :
       st.set("cond","1")
       st.setState(State.STARTED)

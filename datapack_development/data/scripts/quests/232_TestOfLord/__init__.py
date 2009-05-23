@@ -69,8 +69,10 @@ class Quest (JQuest) :
     JQuest.__init__(self,id,name,descr)
     self.questItemIds = range(3391,3417)
   
-  def onEvent (self,event,st):
-    htmltext=event
+  def onAdvEvent (self,event,npc, player) :
+    htmltext = event
+    st = player.getQuestState(qn)
+    if not st : return
     if st.getInt("phase")==0:
       if event=="1":
         st.setState(State.STARTED)

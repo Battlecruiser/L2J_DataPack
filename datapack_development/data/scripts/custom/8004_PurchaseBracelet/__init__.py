@@ -13,8 +13,10 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
- def onEvent(self,event,st):
+ def onAdvEvent (self,event,npc, player) :
     htmltext = event
+    st = player.getQuestState(qn)
+    if not st : return
     if st.getQuestItemsCount(6471) >= 20 and st.getQuestItemsCount(5094) >= 50 and st.getQuestItemsCount(9814) >= 4 and st.getQuestItemsCount(9816) >= 5 and st.getQuestItemsCount(9817) >= 5 and st.getQuestItemsCount(9815) >= 3 and st.getQuestItemsCount(57) >= 7500000 :
         st.takeItems(6471,25)
         st.takeItems(5094,50)

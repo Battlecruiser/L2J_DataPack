@@ -26,8 +26,10 @@ class Quest (JQuest) :
      JQuest.__init__(self,id,name,descr)
      self.questItemIds = [HILLS]
   
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc, player) :
      htmltext = event
+     st = player.getQuestState(qn)
+     if not st : return
      player = st.getPlayer()
      hills = st.getQuestItemsCount(HILLS)
      onlyone = st.getInt("onlyone")

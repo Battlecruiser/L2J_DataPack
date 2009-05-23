@@ -26,8 +26,10 @@ class Quest (JQuest) :
      JQuest.__init__(self,id,name,descr)
      self.questItemIds = [DARINGS_LETTER, RAPUNZELS_KERCHIEF, DARINGS_RECEIPT, BAULS_POTION]
 
- def onEvent (self,event,st) :
-   htmltext = event 
+ def onAdvEvent (self,event,npc, player) :
+   htmltext = event
+   st = player.getQuestState(qn)
+   if not st : return
    if event == "30048-06.htm" : 
      st.set("cond","1") 
      st.setState(State.STARTED) 

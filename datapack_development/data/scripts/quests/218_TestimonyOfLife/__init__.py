@@ -52,8 +52,10 @@ class Quest(JQuest):
 			THALIAS_LETTER2_ID, TALINS_SPEAR_BLADE_ID, TALINS_SPEAR_SHAFT_ID, TALINS_RUBY_ID, TALINS_AQUAMARINE_ID, TALINS_AMETHYST_ID,
 			TALINS_PERIDOT_ID, ISAELS_INSTRUCTIONS_ID, GRAIL_OF_PURITY_ID]
 
-	def onEvent (self,event,st):
+	def onAdvEvent (self,event,npc, player) :
 		htmltext = event
+		st = player.getQuestState(qn)
+		if not st : return
 		if event == "1":
 			htmltext = "30460-04.htm"
 			st.set("cond","1")

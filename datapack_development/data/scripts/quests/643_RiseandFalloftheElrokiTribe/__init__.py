@@ -20,8 +20,10 @@ class Quest (JQuest) :
  	JQuest.__init__(self,id,name,descr)
  	self.questItemIds = [BONES_OF_A_PLAINS_DINOSAUR]
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc, player) :
     htmltext = event
+    st = player.getQuestState(qn)
+    if not st : return
     count = st.getQuestItemsCount(BONES_OF_A_PLAINS_DINOSAUR)
     if event == "None" :
         return

@@ -17,8 +17,10 @@ class Quest (JQuest) :
      JQuest.__init__(self,id,name,descr)
      self.questItemIds = [KASHA_CRYSTAL_ID, KASHA_PARASITE_ID]
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc, player) :
     htmltext = event
+    st = player.getQuestState(qn)
+    if not st : return
     if event == "1" :
       st.set("cond","1")
       st.setState(State.STARTED)

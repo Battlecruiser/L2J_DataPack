@@ -18,7 +18,9 @@ class Quest (JQuest) :
      JQuest.__init__(self,id,name,descr)
      self.questItemIds = [COLLETTE_LETTER, NORMANS_LETTER]
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc, player) :
+    st = player.getQuestState(qn)
+    if not st : return
     if st.getState() != State.COMPLETED :
      htmltext = event
      cond = st.getInt("cond")

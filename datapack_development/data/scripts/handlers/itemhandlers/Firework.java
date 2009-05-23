@@ -33,7 +33,7 @@ public class Firework implements IItemHandler
 	//Modified by Baghak (Prograsso): Added Firework support
 	private static final int[] ITEM_IDS =
 	{
-		6403, 6406, 6407
+		6403, 6406, 6407, 13268, 13269
 	};
 	
 	/**
@@ -56,6 +56,12 @@ public class Firework implements IItemHandler
 				break;
 			case 6407:
 				skillId = 2025;
+				break;
+			case 13268:
+				skillId = 2604;
+				break;
+			case 13269:
+				skillId = 2605;
 				break;
 		}
 		L2Skill skill = SkillTable.getInstance().getInfo(skillId, 1);

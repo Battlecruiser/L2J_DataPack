@@ -44,8 +44,10 @@ class Quest (JQuest) :
      JQuest.__init__(self,id,name,descr)
      self.questItemIds = [LEGEND_OF_SEVENTEEN, MALRUK_SUCCUBUS_CLAW, ECHO_CRYSTAL, POETRY_BOOK, CRIMSON_MOSS, RAHORAKTIS_MEDICINE]
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc, player) :
    htmltext = event
+   st = player.getQuestState(qn)
+   if not st : return
    cond = st.getInt("cond")
    if not st.getPlayer().isSubClassActive() : return
    if event == "31739-4.htm" :

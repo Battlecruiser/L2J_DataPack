@@ -31,9 +31,11 @@ class Quest (JQuest) :
     JQuest.__init__(self,id,name,descr)
     self.questItemIds = [ORC_GOODS]
 
- def onEvent (self,event,st) :
-   cond = st.getInt("cond")
+ def onAdvEvent (self,event,npc, player) :
    htmltext = event
+   st = player.getQuestState(qn)
+   if not st : return
+   cond = st.getInt("cond")
    if event == "32017-03.htm" :
       if st.getPlayer().getLevel() < 20 : 
          htmltext = "32017-02.htm"

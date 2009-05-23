@@ -48,8 +48,10 @@ class Quest (JQuest) :
              break
     return
 
- def onEvent(self, event, st):
+ def onAdvEvent (self,event,npc, player) :
     htmltext = event
+    st = player.getQuestState(qn)
+    if not st : return
     if event == "31961-02.htm" :
        st.set("cond","22")
        st.takeItems(Letter,1)

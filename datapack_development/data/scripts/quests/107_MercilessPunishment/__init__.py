@@ -36,8 +36,10 @@ class Quest (JQuest) :
      JQuest.__init__(self,id,name,descr)
      self.questItemIds = [HATOSS_ORDER2_ID, LETTER_TO_DARKELF_ID, LETTER_TO_HUMAN_ID, LETTER_TO_ELF_ID, HATOSS_ORDER1_ID, HATOSS_ORDER3_ID]
 
- def onEvent (self,event,st) : 
-    htmltext = event 
+ def onAdvEvent (self,event,npc, player) :
+    htmltext = event
+    st = player.getQuestState(qn)
+    if not st : return
     if event == "1" : 
           st.set("id","0") 
           htmltext = "30568-03.htm" 

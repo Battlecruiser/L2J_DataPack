@@ -19,8 +19,10 @@ class Quest (JQuest) :
      JQuest.__init__(self,id,name,descr)
      self.questItemIds = [BEAST_MEAT]
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc, player) :
    htmltext = event
+   st = player.getQuestState(qn)
+   if not st : return
    if event == "31302-1.htm" :
      st.giveItems(BEAST_MEAT,1)
      st.set("cond","1")

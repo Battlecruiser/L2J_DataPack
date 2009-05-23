@@ -14,8 +14,10 @@ class Quest (JQuest) :
      JQuest.__init__(self,id,name,descr)
      self.questItemIds = [DIMENSION_FRAGMENT_ID]
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc, player) :
     htmltext = event
+    st = player.getQuestState(qn)
+    if not st : return
     if event == "2a.htm" :
       st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")

@@ -43,8 +43,10 @@ class Quest (JQuest) :
                 ALLTRANS_RECOMMEND1_ID, DUNINGS_KEY_ID, NORMANS_INSTRUCTIONS_ID, NORMANS_LIST_ID, NORMANS_RECEIPT_ID, ALLTRANS_RECOMMEND2_ID,
                 PINTERS_INSTRUCTIONS_ID, RP_AMBER_BEAD_ID, AMBER_BEAD_ID, DUNINGS_INSTRUCTIONS_ID]
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc, player) :
     htmltext = event
+    st = player.getQuestState(qn)
+    if not st : return
     if event == "1" :
         htmltext = "30103-06.htm"
         st.set("cond","1")

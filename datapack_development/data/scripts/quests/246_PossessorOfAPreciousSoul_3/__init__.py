@@ -33,8 +33,10 @@ class Quest (JQuest) :
      JQuest.__init__(self,id,name,descr)
      self.questItemIds = [WATERBINDER, EVERGREEN, RAIN_SONG, RELIC_BOX]
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc, player) :
    htmltext = event
+   st = player.getQuestState(qn)
+   if not st : return
    cond = st.getInt("cond")
    if event == "31740-4.htm" :
      if cond == 0 :

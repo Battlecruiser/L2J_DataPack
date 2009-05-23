@@ -21,8 +21,10 @@ class Quest (JQuest) :
      JQuest.__init__(self,id,name,descr)
      self.questItemIds = [BRACELET]
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc, player) :
    htmltext = event
+   st = player.getQuestState(qn)
+   if not st : return
    cond = st.getInt("cond")
    count = st.getQuestItemsCount(BRACELET)
    if event == "30126-03.htm" and cond == 0 :

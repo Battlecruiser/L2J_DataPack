@@ -17,8 +17,10 @@ class Quest (JQuest) :
      JQuest.__init__(self,id,name,descr)
      self.questItemIds = [FOX_FUR_ID, FOX_FUR_YARN_ID, MAIDEN_DOLL_ID]
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc, player) :
     htmltext = event
+    st = player.getQuestState(qn)
+    if not st : return
     if event == "1" :
         st.set("id","0")
         htmltext = "30312-04.htm"

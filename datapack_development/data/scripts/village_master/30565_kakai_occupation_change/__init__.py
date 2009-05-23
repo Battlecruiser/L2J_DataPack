@@ -14,7 +14,10 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
- def onEvent (self,event,st):
+ def onAdvEvent (self,event,npc, player) :
+   htmltext = event
+   st = player.getQuestState(qn)
+   if not st : return
 
    htmltext = "No Quest"
 
@@ -46,7 +49,6 @@ class Quest (JQuest) :
    if event == "30565-08.htm":
      return "30565-08.htm"
 
-   st.exitQuest(False)
    st.exitQuest(1)
    return htmltext
 

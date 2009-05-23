@@ -167,6 +167,7 @@
   <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="20000"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="TELEPORT"/>
   <set name="teleCoords" val="#teleCoords"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -189,6 +190,7 @@
   <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="20000"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="TELEPORT"/>
   <set name="teleCoords" val="#teleCoords"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -375,7 +377,9 @@
   <table name="#itemConsume"> 6665 6666 6667 6668 6669 6670 6671 6672 </table>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
   <set name="reuseDelay" val="8000"/>
+  <set name="staticReuse" val="true"/>
   <set name="skillType" val="DELUXE_KEY_UNLOCK"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="itemConsumeId" val="#itemConsume"/>
@@ -391,11 +395,13 @@
 <skill id="2231" levels="1" name="Amulet: Protection of Valakas">
   <!-- Done by DJ MELERIX -->
   <set name="hitTime" val="1000"/>
+  <set name="staticHitTime" val="true"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="itemConsumeId" val="6652"/>
   <set name="magicLvl" val="75"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="reuseDelay" val="1000"/>
+  <set name="staticReuse" val="true"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <cond msgId="113" addName="1">
@@ -415,6 +421,8 @@
   <set name="magicLvl" val="75"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="reuseDelay" val="1000"/>
+  <set name="staticReuse" val="true"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <cond msgId="113" addName="1">
@@ -435,6 +443,8 @@
   <set name="negateId" val="4683,4684"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="reuseDelay" val="10000"/>
+  <set name="staticReuse" val="true"/>
+  <set name="staticHitTime" val="true"/>
   <set name="skillType" val="NEGATE"/>
   <set name="target" val="TARGET_SELF"/>
   <cond msgId="113" addName="1">
@@ -446,30 +456,35 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="2000"/>
+  <set name="staticHitTime" val="true"/>
 </skill>
 <skill id="2235" levels="1" name="Anteroom Door Key">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
 </skill>
 <skill id="2236" levels="1" name="Chapel Door Key">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
 </skill>
 <skill id="2237" levels="1" name="Key of Darkness">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
 </skill>
 <skill id="2238" levels="1" name="Room of Splendor Key">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
 </skill>
 <skill id="2239" levels="1" name="Petrification Scroll">
   <set name="target" val="TARGET_NONE"/>
@@ -515,6 +530,7 @@
   <!-- Orignally done by ettore85a -->
   <set name="power" val="15"/>
   <set name="hitTime" val="100"/>
+  <set name="staticHitTime" val="true"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="HEAL_PERCENT"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -527,6 +543,7 @@
   <!-- Orignally done by ettore85a -->
   <set name="power" val="12"/>
   <set name="hitTime" val="100"/>
+  <set name="staticHitTime" val="true"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="MANAHEAL_PERCENT"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -538,6 +555,7 @@
 <skill id="2246" levels="1" name="Herb of Power">
   <!-- Orignally done by ettore85a -->
   <set name="hitTime" val="100"/>
+  <set name="staticHitTime" val="true"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -555,6 +573,7 @@
 <skill id="2247" levels="1" name="Herb of Magic">
   <!-- Orignally done by ettore85a -->
   <set name="hitTime" val="100"/>
+  <set name="staticHitTime" val="true"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -574,6 +593,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1000"/>
+  <set name="staticHitTime" val="true"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
@@ -583,6 +603,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1000"/>
+  <set name="staticHitTime" val="true"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
@@ -592,6 +613,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1000"/>
+  <set name="staticHitTime" val="true"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
@@ -601,6 +623,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1000"/>
+  <set name="staticHitTime" val="true"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
@@ -610,6 +633,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1000"/>
+  <set name="staticHitTime" val="true"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
@@ -619,6 +643,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1000"/>
+  <set name="staticHitTime" val="true"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
@@ -628,6 +653,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1000"/>
+  <set name="staticHitTime" val="true"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
@@ -637,6 +663,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1000"/>
+  <set name="staticHitTime" val="true"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
@@ -646,6 +673,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1000"/>
+  <set name="staticHitTime" val="true"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
@@ -655,6 +683,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1000"/>
+  <set name="staticHitTime" val="true"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
@@ -664,6 +693,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1000"/>
+  <set name="staticHitTime" val="true"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
@@ -673,6 +703,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1000"/>
+  <set name="staticHitTime" val="true"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
@@ -876,6 +907,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="2000"/>
+  <set name="staticHitTime" val="true"/>
 </skill>
 <skill id="2277" levels="6" name="Event Gift Box">
   <set name="target" val="TARGET_NONE"/>
@@ -886,6 +918,7 @@
   <table name="#power"> 15 25 100 </table>
   <set name="power" val="#power"/>
   <set name="hitTime" val="100"/>
+  <set name="staticHitTime" val="true"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="HEAL_PERCENT"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -902,6 +935,7 @@
   <table name="#power"> 12 18 100 </table>
   <set name="power" val="#power"/>
   <set name="hitTime" val="100"/>
+  <set name="staticHitTime" val="true"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="MANAHEAL_PERCENT"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -912,6 +946,7 @@
 </skill>
 <skill id="2280" levels="1" name="Herb of Power">
   <set name="hitTime" val="100"/>
+  <set name="staticHitTime" val="true"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -928,6 +963,7 @@
 </skill>
 <skill id="2281" levels="1" name="Herb of Magic">
   <set name="hitTime" val="100"/>
+  <set name="staticHitTime" val="true"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -944,6 +980,7 @@
 </skill>
 <skill id="2282" levels="1" name="Herb of Atk. Spd.">
   <set name="hitTime" val="100"/>
+  <set name="staticHitTime" val="true"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -960,6 +997,7 @@
 </skill>
 <skill id="2283" levels="1" name="Herb of Casting Spd.">
   <set name="hitTime" val="100"/>
+  <set name="staticHitTime" val="true"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -976,6 +1014,7 @@
 </skill>
 <skill id="2284" levels="1" name="Herb of Critical Attack">
   <set name="hitTime" val="100"/>
+  <set name="staticHitTime" val="true"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -992,6 +1031,7 @@
 </skill>
 <skill id="2285" levels="1" name="Herb of Speed">
   <set name="hitTime" val="100"/>
+  <set name="staticHitTime" val="true"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -1076,6 +1116,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
@@ -1085,6 +1126,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
@@ -1094,6 +1136,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
@@ -1103,6 +1146,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
@@ -1112,6 +1156,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
@@ -1121,6 +1166,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
@@ -1130,6 +1176,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
@@ -1139,6 +1186,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
@@ -1148,6 +1196,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>

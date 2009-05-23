@@ -16,8 +16,10 @@ class Quest (JQuest) :
      JQuest.__init__(self,id,name,descr)
      self.questItemIds = [SHINING_RED_GEM, SHINING_GEM]
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc, player) :
    htmltext = event
+   st = player.getQuestState(qn)
+   if not st : return
    if event == "30333-1a.htm" :
      st.set("cond","1")
      st.giveItems(PATROLS_REPORT,1)

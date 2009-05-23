@@ -51,8 +51,10 @@ class Quest (JQuest) :
                 PIXY_GARNET_ID, GRANDIS_SKULL_ID, KARUL_BUGBEAR_SKULL_ID, BREKA_OVERLORD_SKULL_ID, LETO_OVERLORD_SKULL_ID,
                 BLACK_WILLOW_LEAF_ID, TIMIRIRAN_SEED_ID, METHEUS_FUNERAL_JAR_ID]
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc, player) :
     htmltext = event
+    st = player.getQuestState(qn)
+    if not st : return
     if event == "1" :
       htmltext = "30476-05.htm"
       st.set("cond","1")

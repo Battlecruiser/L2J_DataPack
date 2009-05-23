@@ -16,7 +16,10 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
- def onEvent (self,event,st):
+ def onAdvEvent (self,event,npc, player) :
+   htmltext = event
+   st = player.getQuestState(qn)
+   if not st : return
    if event in ["30026-01.htm","30026-02.htm","30026-03.htm","30026-04.htm","30026-05.htm","30026-06.htm","30026-07.htm"]:
      htmltext = event
    else :

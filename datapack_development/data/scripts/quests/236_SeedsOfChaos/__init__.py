@@ -68,7 +68,9 @@ class Quest (JQuest) :
     self.katenar = self.harkil = 0
     self.questItemId = [BLACK_ECHO_CRYSTAL, SHINING_MEDALLION]
  
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc, player) :
+    st = player.getQuestState(qn)
+    if not st : return
     if event == "1" : #Go talk to the wizard!
         st.setState(State.STARTED)
         st.set("cond","1")
