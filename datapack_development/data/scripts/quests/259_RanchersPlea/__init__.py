@@ -17,8 +17,10 @@ class Quest (JQuest) :
      JQuest.__init__(self,id,name,descr)
      self.questItemIds = [GIANT_SPIDER_SKIN]
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc, player) :
     htmltext = event
+    st = player.getQuestState(qn)
+    if not st : return
     count=st.getQuestItemsCount(GIANT_SPIDER_SKIN)
     if event == "30497-03.htm" :
       st.set("cond","1")

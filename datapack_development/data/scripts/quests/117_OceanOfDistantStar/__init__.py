@@ -23,8 +23,10 @@ class Quest (JQuest) :
     JQuest.__init__(self,id,name,descr)
     self.questItemIds = [GREY_STAR]
   
-  def onEvent(self, event, st):
+ def onAdvEvent (self,event,npc, player) :
     htmltext = event
+    st = player.getQuestState(qn)
+    if not st : return
     if event == "1" :
       htmltext = "0a.htm"
       st.set("cond","1")

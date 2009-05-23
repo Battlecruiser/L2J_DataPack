@@ -47,8 +47,10 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
- def onEvent (self,event,st) :
-     if st.getPlayer().isHero():
+ def onAdvEvent (self,event,npc, player) :
+     st = player.getQuestState(qn)
+     if not st : return
+     if player.isHero():
        if event == "buy" :
           htmltext=render_list("list",0)
        elif event.isdigit() and int(event) in HERO_ITEMS.keys():

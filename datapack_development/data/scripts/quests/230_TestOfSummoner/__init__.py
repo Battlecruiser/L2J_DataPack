@@ -113,8 +113,10 @@ class Quest (JQuest) :
       # list to hold the player and pet instance of the player in the duel and an "isFoul" flag, indexed by npcId 
       self.inProgressDuelMobs = {} # [player, player.getPet(), True/False]
 
-   def onEvent (self,event,st) :
+   def onAdvEvent (self,event,npc, player) :
       htmltext = event
+      st = player.getQuestState(qn)
+      if not st : return
       if event == "30634-08.htm" :                    # start part for Galatea
          for var in STATS:
             if var in ["Arcanas","Beginner_Arcanas","Lara_Part"]:

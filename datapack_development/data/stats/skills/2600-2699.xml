@@ -21,14 +21,22 @@
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="2604" levels="1" name="Gran Kain's Firework">
+  <set name="itemConsumeId" val="13268"/>
+  <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="DUMMY"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="reuseDelay" val="1500"/>
+  <set name="staticReuse" val="true"/>
 </skill>
 <skill id="2605" levels="1" name="Gran Kain's Large Firework">
+  <set name="itemConsumeId" val="13269"/>
+  <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="DUMMY"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="reuseDelay" val="3000"/>
+  <set name="staticReuse" val="true"/>
 </skill>
 <skill id="2606" levels="1" name="Gran Kain's Gift Box">
   <set name="target" val="TARGET_NONE"/>

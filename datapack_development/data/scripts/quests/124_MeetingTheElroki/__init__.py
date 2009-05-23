@@ -20,7 +20,9 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc, player) :
+     st = player.getQuestState(qn)
+     if not st : return
      cond = st.getInt("cond")
      htmltext = event
 

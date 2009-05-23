@@ -50,8 +50,10 @@ class Quest (JQuest) :
                 PARASITE_OF_LOTA_ID, LETTER_TO_DWARF_ID, LETTER_TO_NICHOLA_ID, HEART_OF_PORTA_ID, ORDER_OF_NICHOLA_ID, RECOMMENDATION_OF_HOLLIN_ID,
                 BLOOD_OF_GUARDIAN_BASILISK_ID, STAKATOS_FLUIDS_ID, GIANT_APHID_ID]
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc, player) :
     htmltext = event
+    st = player.getQuestState(qn)
+    if not st : return
     if event == "30191-04.htm" :
       st.set("cond","1")
       st.setState(State.STARTED)

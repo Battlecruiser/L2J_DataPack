@@ -43,8 +43,10 @@ class Quest (JQuest) :
  	JQuest.__init__(self,id,name,descr)
  	self.questItemIds = range(2763,2784)
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc, player) :
     htmltext = event
+    st = player.getQuestState(qn)
+    if not st : return
     if event == "30623-07.htm" :
         if st.getInt("step")==0 :
            st.set("cond","1")

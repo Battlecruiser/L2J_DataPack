@@ -35,8 +35,10 @@ class Quest (JQuest) :
     JQuest.__init__(self,id,name,descr)
     self.questItemIds = [ALBERRYUS_LETTER_ID, EVERGREEN_AMULET_ID, DRYAD_TEARS_ID, COBS_MEDICINE1_ID, COBS_MEDICINE2_ID, COBS_MEDICINE3_ID, COBS_MEDICINE4_ID, COBS_MEDICINE5_ID, ALBERRYUS_LIST_ID]
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc, player) :
     htmltext = event
+    st = player.getQuestState(qn)
+    if not st : return
     if event == "1" :
         htmltext = "30284-02.htm"
         st.giveItems(ALBERRYUS_LETTER_ID,1)

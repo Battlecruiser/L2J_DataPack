@@ -23,8 +23,10 @@ class Quest (JQuest) :
      JQuest.__init__(self,id,name,descr)
      self.questItemIds = [BLACK_SOULSTONE, RED_SOULSTONE]
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc, player) :
     htmltext = event
+    st = player.getQuestState(qn)
+    if not st : return
     if event in ["30566-03.htm","30566-08.htm"] : # -i'll continue- event kept here for backwards compatibility only.. should be removed some day
       st.set("cond","1")
       st.setState(State.STARTED)

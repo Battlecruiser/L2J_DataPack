@@ -37,8 +37,10 @@ class Quest (JQuest) :
      JQuest.__init__(self,id,name,descr)
      self.questItemIds = [GEM_BOX1, STAR_DIAMOND, GOUPHS_CONTRACT, REEPS_CONTRACT, ELVEN_WINE, BRONPS_CONTRACT, AQUAMARINE, CHRYSOBERYL, COAL_PIECE, BRONPS_DICE, BRONPS_LETTER, BERRY_TART, BAT_DIAGRAM]
 
- def onEvent (self,event,st) : 
-    htmltext = event 
+ def onAdvEvent (self,event,npc, player) :
+    htmltext = event
+    st = player.getQuestState(qn)
+    if not st : return
     if event == "1" : 
           htmltext = "30523-03.htm" 
           st.giveItems(GOUPHS_CONTRACT,1) 

@@ -29,8 +29,10 @@ class Quest (JQuest) :
      JQuest.__init__(self,id,name,descr)
      self.questItemIds = [RANGERS_REPORT1, RANGERS_REPORT2, RANGERS_REPORT3, RANGERS_REPORT4, OL_MAHUM_HEAD, CARGOBOX, TYRAS_BILL, CERTIFICATE, BLADE_MOLD, WEAPON_TRADE_CONTRACT]
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc, player) :
      htmltext = event
+     st = player.getQuestState(qn)
+     if not st : return
      cond = st.getInt("cond")
      if st.getState() != State.COMPLETED :
        if event == "30381-02.htm" and cond == 0 :

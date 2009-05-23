@@ -26,8 +26,10 @@ class Quest (JQuest) :
  	JQuest.__init__(self,id,name,descr)
  	self.questItemIds = [DINOSAUR_TISSUE, DINOSAUR_EGG]
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc, player) :
     htmltext = event
+    st = player.getQuestState(qn)
+    if not st : return
     count_tissue = st.getQuestItemsCount(DINOSAUR_TISSUE)
     count_egg = st.getQuestItemsCount(DINOSAUR_EGG)
     if event == "None":

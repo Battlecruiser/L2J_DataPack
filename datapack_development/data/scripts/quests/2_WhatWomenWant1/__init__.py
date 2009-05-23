@@ -29,8 +29,10 @@ class Quest (JQuest) :
      JQuest.__init__(self,id,name,descr)
      self.questItemIds = [GREENIS_LETTER, ARUJIENS_LETTER3, ARUJIENS_LETTER1, ARUJIENS_LETTER2, POETRY_BOOK]
 
- def onEvent (self,event,st) :
-   htmltext = event 
+ def onAdvEvent (self,event,npc, player) :
+   htmltext = event
+   st = player.getQuestState(qn)
+   if not st : return
    if event == "30223-04.htm" : 
      if st.getQuestItemsCount(ARUJIENS_LETTER1) == 0 and st.getQuestItemsCount(ARUJIENS_LETTER2) == 0 and st.getQuestItemsCount(ARUJIENS_LETTER3) == 0 : 
        st.giveItems(ARUJIENS_LETTER1,1) 

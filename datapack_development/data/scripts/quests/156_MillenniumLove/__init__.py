@@ -16,8 +16,10 @@ class Quest (JQuest) :
      JQuest.__init__(self,id,name,descr)
      self.questItemIds = [RYLITHS_LETTER_ID, THEONS_DIARY_ID]
 
- def onEvent (self,event,st) :
+ def onAdvEvent (self,event,npc, player) :
     htmltext = event
+    st = player.getQuestState(qn)
+    if not st : return
     if event == "1" :
        if st.getPlayer().getLevel() >= 15 :
           htmltext = "30368-06.htm"
