@@ -136,19 +136,70 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="26027" levels="6" name="Secret medicine of Will">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#power"> 250 400 600 800 1000 1200 </table>
+  <table name="#itemConsumeId"> 0 22027 22028 22029 22030 22031 </table>
+  <table name="#minLvl">0 20 40 52 61 76 </table>
+  <table name="#maxLvl">20 40 52 61 76 86 </table>
+  <set name="itemConsumeId" val="#itemConsumeId"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="COMBATPOINTHEAL"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="reuseDelay" val="300000"/>
+  <set name="staticReuse" val="true"/>
+  <set name="isPotion" val="true"/>
+  <cond msgId="113" addName="1">
+    <and>
+      <player flyMounted="False"/>
+      <player level="#minLvl"/>
+      <and>
+        <not>
+          <player level="#maxLvl"/>
+        </not>
+      </and>
+    </and>
+  </cond>
 </skill>
 <skill id="26028" levels="6" name="Secret medicine of Life">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#power"> 800 1000 1200 1600 2000 2300 </table>
+  <table name="#itemConsumeId"> 0 22032 22033 22034 22035 22036 </table>
+  <table name="#minLvl">0 20 40 52 61 76 </table>
+  <table name="#maxLvl">20 40 52 61 76 86 </table>
+  <set name="itemConsumeId" val="#itemConsumeId"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="power" val="#power"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="HEAL_STATIC"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="reuseDelay" val="300000"/>
+  <set name="staticReuse" val="true"/>
+  <set name="isPotion" val="true"/>
+  <cond msgId="113" addName="1">
+    <and>
+      <player flyMounted="False"/>
+      <player level="#minLvl"/>
+      <and>
+        <not>
+          <player level="#maxLvl"/>
+        </not>
+      </and>
+    </and>
+  </cond>
 </skill>
 <skill id="26029" levels="1" name="Potion of Will">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="itemConsumeId" val="22037"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="power" val="50"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="COMBATPOINTHEAL"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="reuseDelay" val="1000"/>
+  <set name="staticReuse" val="true"/>
+  <set name="isPotion" val="true"/>
+  <cond msgId="113" addName="1">
+    <player flyMounted="False"/>
+  </cond>
 </skill>
 <skill id="26030" levels="1" name="Healing medicine for Mana">
   <set name="target" val="TARGET_NONE"/>

@@ -1058,6 +1058,8 @@
 <skill id="2287" levels="6" name="Elixir of Life">
   <table name="#power"> 800 1000 1200 1600 2000 2300 </table>
   <table name="#itemConsumeId"> 8622 8623 8624 8625 8626 8627 </table>
+  <table name="#minLvl">0 20 40 52 61 76 </table>
+  <table name="#maxLvl">20 40 52 61 76 86 </table>
   <set name="itemConsumeId" val="#itemConsumeId"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="power" val="#power"/>
@@ -1067,14 +1069,21 @@
   <set name="reuseDelay" val="300000"/>
   <set name="staticReuse" val="true"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="300000"/>
   <cond msgId="113" addName="1">
-    <player flyMounted="False"/>
+    <and>
+      <player flyMounted="False"/>
+      <player level="#minLvl"/>
+      <not>
+        <player level="#maxLvl"/>
+      </not>
+    </and>
   </cond>
 </skill>
 <skill id="2288" levels="6" name="Elixir of Mental Strength">
   <table name="#power"> 75 125 175 250 350 420 </table>
   <table name="#itemConsumeId"> 8628 8629 8630 8631 8632 8633 </table>
+  <table name="#minLvl">0 20 40 52 61 76 </table>
+  <table name="#maxLvl">20 40 52 61 76 86 </table>
   <set name="itemConsumeId" val="#itemConsumeId"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="power" val="#power"/>
@@ -1084,14 +1093,21 @@
   <set name="reuseDelay" val="300000"/>
   <set name="staticReuse" val="true"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="300000"/>
   <cond msgId="113" addName="1">
-    <player flyMounted="False"/>
+    <and>
+      <player flyMounted="False"/>
+      <player level="#minLvl"/>
+      <not>
+        <player level="#maxLvl"/>
+      </not>
+    </and>
   </cond>
 </skill>
 <skill id="2289" levels="6" name="Elixir of CP">
   <table name="#power"> 250 400 600 800 1000 1200 </table>
   <table name="#itemConsumeId"> 8634 8635 8636 8637 8638 8639 </table>
+  <table name="#minLvl">0 20 40 52 61 76 </table>
+  <table name="#maxLvl">20 40 52 61 76 86 </table>
   <set name="itemConsumeId" val="#itemConsumeId"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="power" val="#power"/>
@@ -1101,9 +1117,14 @@
   <set name="reuseDelay" val="300000"/>
   <set name="staticReuse" val="true"/>
   <set name="isPotion" val="true"/>
-  <set name="buffDuration" val="300000"/>
   <cond msgId="113" addName="1">
-    <player flyMounted="False"/>
+    <and>
+      <player flyMounted="False"/>
+      <player level="#minLvl"/>
+      <not>
+        <player level="#maxLvl"/>
+      </not>
+    </and>
   </cond>
 </skill>
 <skill id="2290" levels="1" name="Coffer of Shadows">
