@@ -52,7 +52,10 @@ public class ScrollOfEscape implements IItemHandler
 		13404, 13405, 13406, 13407, 13408, 13409,
 		13410, 13411, 13412, 13413, 13414, 13731,
 		13732, 13733, 13734, 13735, 13736, 13737,
-		13738, 13739
+		13738, 13739, 20372, 20373, 20374, 20375,
+		20376, 20377, 20378, 20379, 20380, 20381,
+		20382, 20383, 20384, 20385, 20386, 20387,
+		20388, 20389, 20390
 	};
 	
 	/**
@@ -270,7 +273,7 @@ public class ScrollOfEscape implements IItemHandler
 			case 20388: // Escape - Town of Goddard
 			case 20389: // Escape - Rune Township
 			case 20390: // Escape - Town of Schuttgart
-				//useSkill(activeChar,??,itemId-20371);
+				useSkill(activeChar,22053,itemId-20371);
 				break;
 		}
 	}

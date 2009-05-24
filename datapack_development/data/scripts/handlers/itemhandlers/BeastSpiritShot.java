@@ -38,7 +38,7 @@ public class BeastSpiritShot implements IItemHandler
 	// All the item IDs that this handler knows.
 	private static final int[] ITEM_IDS =
 	{
-		6646, 6647
+		6646, 6647, 20333, 20334
 	};
 	
 	/**
@@ -59,7 +59,7 @@ public class BeastSpiritShot implements IItemHandler
 		}
 		
 		// Blessed Beast Spirit Shot cannot be used in olympiad.
-        if (item.getItemId() == 6647 && activeOwner.isInOlympiadMode())
+        if ((item.getItemId() == 6647 || item.getItemId() == 20334) && activeOwner.isInOlympiadMode())
         {
         	activeOwner.sendPacket(new SystemMessage(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT));
 			return;
@@ -80,7 +80,7 @@ public class BeastSpiritShot implements IItemHandler
 		}
 		
 		int itemId = item.getItemId();
-		boolean isBlessed = (itemId == 6647);
+		boolean isBlessed = (itemId == 6647 || itemId == 20334);
 		int shotConsumption = 1;
 		
 		L2ItemInstance weaponInst = null;
@@ -154,8 +154,23 @@ public class BeastSpiritShot implements IItemHandler
 		
 		// Pet uses the power of spirit.
 		activeOwner.sendPacket(new SystemMessage(SystemMessageId.PET_USE_THE_POWER_OF_SPIRIT));
-		
-		Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(activePet, activePet, isBlessed ? 2009 : 2008, 1, 0, 0), 360000/*600*/);
+		int skillId = 0;
+		switch (itemId)
+		{
+			case 6646:
+				skillId = 2008;
+				break;
+			case 6647:
+				skillId = 2009;
+				break;
+			case 20333:
+				skillId = 22037;
+				break;
+			case 20334:
+				skillId = 22038;
+				break;
+		}
+		Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(activePet, activePet, skillId, 1, 0, 0), 360000/*600*/);
 	}
 	
 	/**

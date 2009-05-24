@@ -44,6 +44,10 @@ public class Elixir implements IItemHandler
 		//elixir of cp
 		8634, 8635, 8636, 8637, 8638, 8639,
 		//Secret medicine of Will
+		20354, 20355, 20356, 20357, 20358,
+		//Secret medicine of Life
+		20359, 20360, 20361, 20362, 20363,
+		//Secret medicine of Will
 		22027, 22028, 22029, 22030, 22031,
 		//Secret medicine of Life
 		22032, 22033, 22034, 22035, 22036
@@ -128,6 +132,22 @@ public class Elixir implements IItemHandler
 			case 22035:
 			case 22036:
 				if (usePotion(activeChar, 26028, 0, itemId-22030))
+					activeChar.sendPacket(new ExUseSharedGroupItem(itemId, 1, 300000, 300000));
+				break;
+			case 20354:
+			case 20355:
+			case 20356:
+			case 20357:
+			case 20358:
+				if (usePotion(activeChar, 22043, 0, itemId-20352))
+					activeChar.sendPacket(new ExUseSharedGroupItem(itemId, 2, 300000, 300000));
+				break;
+			case 20359:
+			case 20360:
+			case 20361:
+			case 20362:
+			case 20363:
+				if (usePotion(activeChar, 22044, 0, itemId-20357))
 					activeChar.sendPacket(new ExUseSharedGroupItem(itemId, 1, 300000, 300000));
 				break;
 				
