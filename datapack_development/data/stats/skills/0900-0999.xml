@@ -468,6 +468,8 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="reuseDelay" val="75000"/>
+  <!-- needs core support - not really a reflect -->
 </skill>
 <skill id="949" levels="1" name="Onslaught of Pa'agrio">
   <set name="weaponsAllowed" val="16392"/> <!-- Blunt/Big Blunt -->
