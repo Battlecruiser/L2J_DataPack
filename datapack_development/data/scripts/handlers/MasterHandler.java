@@ -157,7 +157,8 @@ public class MasterHandler
 		ItemHandler.getInstance().registerItemHandler(new SummonItems());
 		ItemHandler.getInstance().registerItemHandler(new BeastSpice());
 		ItemHandler.getInstance().registerItemHandler(new SpiritLake());
-		ItemHandler.getInstance().registerItemHandler(new TeleportBookmark());		
+		ItemHandler.getInstance().registerItemHandler(new TeleportBookmark());
+		ItemHandler.getInstance().registerItemHandler(new Elixir());
 		_log.config("Loaded " + ItemHandler.getInstance().size() + " ItemHandlers");
 	}
 	
