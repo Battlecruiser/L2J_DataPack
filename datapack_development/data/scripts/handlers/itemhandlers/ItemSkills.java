@@ -14,6 +14,7 @@
  */
 package handlers.itemhandlers;
 
+import javolution.util.FastMap;
 import net.sf.l2j.gameserver.datatables.SkillTable;
 import net.sf.l2j.gameserver.handler.IItemHandler;
 import net.sf.l2j.gameserver.model.L2ItemInstance;
@@ -21,6 +22,7 @@ import net.sf.l2j.gameserver.model.L2Skill;
 import net.sf.l2j.gameserver.model.actor.L2Playable;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.model.actor.instance.L2PetInstance;
+import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance.TimeStamp;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 
@@ -78,6 +80,11 @@ public class ItemSkills implements IItemHandler
 						{
 							if (!itemSkill.checkCondition(playable, playable, false))
 					        	return;
+							if ( playable.isSkillDisabled(skillId))
+							{
+								reuse(activeChar,itemSkill);
+								return ;
+							}
 							// pets can use items only when they are tradeable
 							if (playable instanceof L2PetInstance && !item.isTradeable())
 								activeChar.sendPacket(new SystemMessage(SystemMessageId.ITEM_NOT_FOR_PETS));
@@ -90,7 +97,38 @@ public class ItemSkills implements IItemHandler
 									sm.addString(itemSkill.getName());
 									activeChar.sendPacket(sm);
 								}
-								playable.doSimultaneousCast(itemSkill);
+								else
+								{
+									switch (skillId)
+									{
+										// short buff icon for healing potions
+										case 2031:
+										case 2032:
+										case 2037:
+										case 26025:
+										case 26026:
+											int buffId = activeChar._shortBuffTaskSkillId;
+											// greater healing potions
+											if (skillId == 2037 || skillId == 26025)
+												activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration()/1000);
+											// healing potions
+											else if ((skillId == 2032 || skillId == 26026) && buffId !=2037 && buffId != 26025)
+												activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration()/1000);
+											// lesser healing potions
+											else
+											{
+												if (buffId != 2037 && buffId != 26025 && buffId != 2032 && buffId != 26026)
+													activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration()/1000);
+											}
+											break;
+									}
+								}
+								if (itemSkill.isPotion())
+									playable.doSimultaneousCast(itemSkill);
+								else
+									playable.doCast(itemSkill);
+								if (itemSkill.getReuseDelay() > 0)
+									activeChar.addTimeStamp(skillId, itemSkill.getReuseDelay());
 							}
 						}
 					}
@@ -99,6 +137,36 @@ public class ItemSkills implements IItemHandler
 		}
 	}
 	
+	private void reuse(L2PcInstance player,L2Skill skill)
+	{
+		SystemMessage sm = null;
+    	FastMap<Integer, TimeStamp> timeStamp = player.getReuseTimeStamp();
+			
+    	if (timeStamp != null && timeStamp.containsKey(skill.getId()))
+    	{
+    		int remainingTime = (int)(player.getReuseTimeStamp().get(skill.getId()).getRemaining()/1000);
+    		int minutes = (remainingTime%3600)/60;
+    		int seconds = (remainingTime%60);
+    		if (minutes > 0)
+    		{
+    			sm = new SystemMessage(SystemMessageId.S2_MINUTES_S3_SECONDS_REMAINING_FOR_REUSE_S1);
+    			sm.addSkillName(skill);
+    			sm.addNumber(minutes);
+    		}
+    		else
+    		{
+    			sm = new SystemMessage(SystemMessageId.S2_SECONDS_REMAINING_FOR_REUSE_S1);
+    			sm.addSkillName(skill);
+    		}
+    		sm.addNumber(seconds);
+    	}
+    	else
+    	{
+    		sm = new SystemMessage(SystemMessageId.S1_PREPARED_FOR_REUSE);
+    		sm.addSkillName(skill);
+    	}
+    	player.sendPacket(sm);
+	}
 	/**
 	 * 
 	 * @see net.sf.l2j.gameserver.handler.IItemHandler#getItemIds()

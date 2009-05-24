@@ -164,6 +164,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="15000"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="staticReuse" val="true"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
@@ -179,6 +181,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="15000"/>
+  <set name="reuseDelay" val="10000"/>
+  <set name="staticReuse" val="true"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
