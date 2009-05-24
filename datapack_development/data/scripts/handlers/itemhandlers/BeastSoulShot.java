@@ -38,7 +38,7 @@ public class BeastSoulShot implements IItemHandler
 	// All the item IDs that this handler knows.
 	private static final int[] ITEM_IDS =
 	{
-		6645
+		6645, 20332
 	};
 	
 	/**
@@ -78,7 +78,7 @@ public class BeastSoulShot implements IItemHandler
 			return;
 		}
 		
-		int itemId = 6645;
+		int itemId = item.getItemId();
 		int shotConsumption = 1;
 		L2ItemInstance weaponInst = null;
 		L2Weapon weaponItem = null;
@@ -147,7 +147,7 @@ public class BeastSoulShot implements IItemHandler
 		// Pet uses the power of spirit.
 		activeOwner.sendPacket(new SystemMessage(SystemMessageId.PET_USE_THE_POWER_OF_SPIRIT));
 		
-		Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(activePet, activePet, 2033, 1, 0, 0), 360000/*600*/);
+		Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(activePet, activePet, itemId == 6645 ? 2033 : 22036, 1, 0, 0), 360000/*600*/);
 	}
 	
 	/**

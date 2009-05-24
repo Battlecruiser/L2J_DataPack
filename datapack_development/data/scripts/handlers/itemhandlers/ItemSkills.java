@@ -27,6 +27,8 @@ public class ItemSkills implements IItemHandler
 	private static final int[] ITEM_IDS =
 	{
 		6403,6406,6407,13268,13269,
+		20353,20364,20365,20366,20367,20368,20369,20370,20371,
+		22022,22023,22024,22025,22026,
 		22039,22040,22041,22042,22043,22044,22045,22046,22047,
 		22048,22049,22050,22051,22052,22053,
 		22089,22090,22091,22092,22093,
@@ -67,6 +69,48 @@ public class ItemSkills implements IItemHandler
 				break;
 			case 13269:
 				skillId = 2605;
+				break;
+			case 20353:
+				skillId = 22042;
+				break;
+			case 20364:
+				skillId = 22045;
+				break;
+			case 20365:
+				skillId = 22046;
+				break;
+			case 20366:
+				skillId = 22047;
+				break;
+			case 20367:
+				skillId = 22048;
+				break;
+			case 20368:
+				skillId = 22049;
+				break;
+			case 20369:
+				skillId = 22050;
+				break;
+			case 20370:
+				skillId = 22051;
+				break;
+			case 20371:
+				skillId = 22052;
+				break;
+			case 22022:
+				skillId = 26022;
+				break;
+			case 22023:
+				skillId = 26023;
+				break;
+			case 22024:
+				skillId = 26024;
+				break;
+			case 22025:
+				skillId = 26025;
+				break;
+			case 22026:
+				skillId = 26026;
 				break;
 			case 22039:
 				skillId = 26031;

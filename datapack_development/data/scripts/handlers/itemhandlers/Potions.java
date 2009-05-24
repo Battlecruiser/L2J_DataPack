@@ -64,7 +64,7 @@ public class Potions implements IItemHandler
 		10409,10410,10411,10412,
 		// energy stone
 		5589,
-		22037
+		20393,20394,22037
 	};
 	
 	/**
@@ -463,6 +463,26 @@ public class Potions implements IItemHandler
 				break;
 			case 5589: // Energy Stone,xml: 2165
 				usePotion(playable, 2165, 1);
+				break;
+			case 20393: // Sweet Fruit Cocktail
+				res = usePotion(playable, 22056, 1);
+				usePotion(playable, 22057, 1);
+				usePotion(playable, 22058, 1);
+				usePotion(playable, 22059, 1);
+				usePotion(playable, 22060, 1);
+				usePotion(playable, 22061, 1);
+				usePotion(playable, 22064, 1);
+				usePotion(playable, 22065, 1);
+				break;
+			case 20394: // Fresh Fruit Cocktail
+				res = usePotion(playable, 22062, 1);
+				usePotion(playable, 22063, 1);
+				usePotion(playable, 22065, 1);
+				usePotion(playable, 22066, 1);
+				usePotion(playable, 22067, 1);
+				usePotion(playable, 22068, 1);
+				usePotion(playable, 22069, 1);
+				usePotion(playable, 22070, 1);
 				break;
 			case 22037: // Potion of Will
 				usePotion(playable, 26029, 1);
