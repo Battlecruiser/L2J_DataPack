@@ -629,4 +629,8 @@ INSERT INTO `merchant_shopids` VALUES
 ('9964', 'gm'), -- A Jewel
 ('9965', 'gm'), -- S Jewel
 ('9966', 'gm'), -- S80 Jewel
-('9967', 'gm'); -- Fishes
+('9967', 'gm'), -- Fishes
+('9968', 'gm'), -- Designs (Gracia Items)
+('9969', 'gm'), -- Materials for Designs (Gracia Items)
+('9970', 'gm'), -- Mercenary Transformation Scrolls
+('9971', 'gm'); -- Disguise Scroll
