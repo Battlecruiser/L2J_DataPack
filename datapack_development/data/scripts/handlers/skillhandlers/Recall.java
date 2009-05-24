@@ -92,17 +92,29 @@ public class Recall implements ISkillHandler
 				{
 					int[] coords = skill.getTeleportCoords();
 					if (coords != null)
-						target.teleToLocation(coords[0], coords[1], coords[2]);
+					{
+						if (activeChar instanceof L2PcInstance && !((L2PcInstance) activeChar).isFlyingMounted())
+							target.teleToLocation(coords[0], coords[1], coords[2]);
+					}
 				}
 				else
 				{
 					String recall = skill.getRecallType();
 					if (recall.equalsIgnoreCase("Castle"))
-						target.teleToLocation(MapRegionTable.TeleportWhereType.Castle);
+					{
+						if (activeChar instanceof L2PcInstance && !((L2PcInstance) activeChar).isFlyingMounted())
+							target.teleToLocation(MapRegionTable.TeleportWhereType.Castle);
+					}
 					else if (recall.equalsIgnoreCase("ClanHall"))
-						target.teleToLocation(MapRegionTable.TeleportWhereType.ClanHall);
+					{
+						if (activeChar instanceof L2PcInstance && !((L2PcInstance) activeChar).isFlyingMounted())
+							target.teleToLocation(MapRegionTable.TeleportWhereType.ClanHall);
+					}
 					else if (recall.equalsIgnoreCase("Fortress"))
-						target.teleToLocation(MapRegionTable.TeleportWhereType.Fortress);
+					{
+						if (activeChar instanceof L2PcInstance && !((L2PcInstance) activeChar).isFlyingMounted())
+							target.teleToLocation(MapRegionTable.TeleportWhereType.Fortress);
+					}
 					else
 						target.teleToLocation(MapRegionTable.TeleportWhereType.Town);
 				}

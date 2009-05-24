@@ -54,12 +54,6 @@ public class Potions implements IItemHandler
 		8608, 8609, 8610, 8611, 8612, 8613, 8614, 10155, 13032, 10157,
 		//Attribute Potion
 		9997, 9998, 9999, 10000, 10001, 10002,
-		//elixir of life
-		8622, 8623, 8624, 8625, 8626, 8627,
-		//elixir of Strength
-		8628, 8629, 8630, 8631, 8632, 8633,
-		//elixir of cp
-		8634, 8635, 8636, 8637, 8638, 8639,
 		// Endeavor Potion
 		733,
 		// Juices
@@ -69,7 +63,8 @@ public class Potions implements IItemHandler
 		//bottls of souls
 		10409,10410,10411,10412,
 		// energy stone
-		5589
+		5589,
+		22037
 	};
 	
 	/**
@@ -227,58 +222,6 @@ public class Potions implements IItemHandler
 			case 10002: // Divine Resist Potion, xml: 2339
 				usePotion(playable, 2339, 1);
 				break;
-			
-			// ELIXIR
-			case 8622:
-			case 8623:
-			case 8624:
-			case 8625:
-			case 8626:
-			case 8627:
-			{
-				if (!(playable instanceof L2PcInstance))
-				{
-					itemNotForPets(activeChar);
-					return;
-				}
-				byte expIndex = (byte) activeChar.getExpertiseIndex();
-				usePotion(activeChar, 2287, (expIndex > 5 ? 6 : expIndex + 1));
-				break;
-			}
-			case 8628:
-			case 8629:
-			case 8630:
-			case 8631:
-			case 8632:
-			case 8633:
-			{
-				if (!(playable instanceof L2PcInstance))
-				{
-					itemNotForPets(activeChar);
-					return;
-				}
-				byte expIndex = (byte) activeChar.getExpertiseIndex();
-				// elixir of Strength
-				usePotion(activeChar, 2288, (expIndex > 5 ? 6 : expIndex + 1));
-				break;
-			}
-			case 8634:
-			case 8635:
-			case 8636:
-			case 8637:
-			case 8638:
-			case 8639:
-			{
-				if (!(playable instanceof L2PcInstance))
-				{
-					itemNotForPets(activeChar);
-					return;
-				}
-				byte expIndex = (byte) activeChar.getExpertiseIndex();
-				// elixir of cp
-				usePotion(activeChar, 2289, (expIndex > 5 ? 6 : expIndex + 1));
-				break;
-			}
 				// VALAKAS AMULETS
 			case 6652: // Amulet Protection of Valakas
 				usePotion(playable, 2231, 1);
@@ -521,6 +464,9 @@ public class Potions implements IItemHandler
 			case 5589: // Energy Stone,xml: 2165
 				usePotion(playable, 2165, 1);
 				break;
+			case 22037: // Potion of Will
+				usePotion(playable, 26029, 1);
+				break;
 			default:
 		}
 		
@@ -573,6 +519,8 @@ public class Potions implements IItemHandler
 			
 		if (skill != null)
 		{
+			if (!skill.checkCondition(activeChar, activeChar, false))
+	        	return false;
 			// Return false if potion is in reuse
 			// so is not destroyed from inventory
 			if (activeChar.isSkillDisabled(skill.getId()))
