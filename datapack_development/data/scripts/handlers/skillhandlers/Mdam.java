@@ -110,7 +110,7 @@ public class Mdam implements ISkillHandler
 			}
 			
 			final boolean mcrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, skill));
-			final byte shld = Formulas.calcShldUse(activeChar, target);
+			final byte shld = Formulas.calcShldUse(activeChar, target, skill);
 			final byte reflect = Formulas.calcSkillReflect(target, skill);
 			
 			int damage = (int) Formulas.calcMagicDam(activeChar, target, skill, shld, ss, bss, mcrit);
