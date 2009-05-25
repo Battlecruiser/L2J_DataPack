@@ -224,7 +224,7 @@ public class Pdam implements ISkillHandler
 							else
 								target.reduceCurrentHp(damage, activeChar, skill);
 							
-							if ((reflect & Formulas.SKILL_REFLECT_VENGEANCE) != 0) // stop if no vengeance, so only target will be effected
+							if ((reflect & Formulas.SKILL_REFLECT_VENGEANCE) == 0) // stop if no vengeance, so only target will be effected
 								break;
 						}
 					}
