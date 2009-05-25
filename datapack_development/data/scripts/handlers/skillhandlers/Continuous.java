@@ -175,7 +175,7 @@ public class Continuous implements ISkillHandler
 					ss = ((L2Npc) activeChar).isUsingShot(true);
 				}
 				
-				shld = Formulas.calcShldUse(activeChar, target);
+				shld = Formulas.calcShldUse(activeChar, target, skill);
 				acted = Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss);
 			}
 			

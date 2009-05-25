@@ -90,7 +90,7 @@ public class StrSiegeAssault implements ISkillHandler
 					continue;
 				
 				boolean dual = activeChar.isUsingDualWeapon();
-				byte shld = Formulas.calcShldUse(activeChar, target);
+				byte shld = Formulas.calcShldUse(activeChar, target, skill);
 				boolean crit = Formulas.calcCrit(activeChar.getCriticalHit(target, skill), target);
 				boolean soul = (weapon != null && weapon.getChargedSoulshot() == L2ItemInstance.CHARGED_SOULSHOT && weapon.getItemType() != L2WeaponType.DAGGER);
 				

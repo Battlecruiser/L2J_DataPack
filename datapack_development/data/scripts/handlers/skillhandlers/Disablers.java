@@ -172,7 +172,7 @@ public class Disablers implements ISkillHandler
 			if (target == null || target.isDead() || target.isInvul()) //bypass if target is null, invul or dead
 				continue;
 			
-			shld = Formulas.calcShldUse(activeChar, target);
+			shld = Formulas.calcShldUse(activeChar, target, skill);
 			
 			switch (type)
 			{
