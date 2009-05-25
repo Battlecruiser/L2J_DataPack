@@ -102,25 +102,8 @@ public class Continuous implements ISkillHandler
 			boolean bss = false;
 			byte shld = 0;
 			
-			switch (skill.getSkillType())
-			{
-				case BUFF:
-				case HOT:
-				case CPHOT:
-				case MPHOT:
-				case UNDEAD_DEFENSE:
-				case AGGDEBUFF:
-				case CONT:
-				{
-					break;
-				}
-				default:
-				{
-					if (target.reflectSkill(skill))
-						target = activeChar;
-					break;
-				}
-			}
+			if (Formulas.calcSkillReflect(target, skill) == Formulas.SKILL_REFLECT_SUCCEED)
+				target = activeChar;
 			
 			// Player holding a cursed weapon can't be buffed and can't buff
 			if (skill.getSkillType() == L2SkillType.BUFF && !(activeChar instanceof L2ClanHallManagerInstance))

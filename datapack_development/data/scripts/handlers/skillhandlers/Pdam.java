@@ -116,7 +116,8 @@ public class Pdam implements ISkillHandler
 			if (soul && weapon != null)
 				weapon.setChargedSoulshot(L2ItemInstance.CHARGED_NONE);
 			
-			boolean skillIsEvaded = Formulas.calcPhysicalSkillEvasion(target, skill);
+			final boolean skillIsEvaded = Formulas.calcPhysicalSkillEvasion(target, skill);
+			final byte reflect = Formulas.calcSkillReflect(target, skill);
 			
 			if (!skillIsEvaded)
 			{
@@ -126,7 +127,7 @@ public class Pdam implements ISkillHandler
 				
 					if (skill.hasEffects())
 					{
-						if (target.reflectSkill(skill))
+						if ((reflect & Formulas.SKILL_REFLECT_SUCCEED) != 0)
 						{
 							activeChar.stopSkillEffects(skill.getId());
 							skill.getEffects(target, activeChar);
@@ -175,54 +176,69 @@ public class Pdam implements ISkillHandler
 					// Make damage directly to HP
 					if (!lethal && skill.getDmgDirectlyToHP())
 					{
-						if (target instanceof L2PcInstance)
+						final L2Character[] ts = {target, activeChar};
+						
+						/*
+						 * This loop iterates over previous array but, if skill damage is not reflected
+						 * it stops on first iteration (target) and misses activeChar
+						 */
+						for (L2Character targ : ts)
 						{
-							L2PcInstance player = (L2PcInstance) target;
-							if (!player.isInvul())
+							if (targ instanceof L2PcInstance)
 							{
-								if (damage >= player.getCurrentHp())
+								L2PcInstance player = (L2PcInstance) targ;
+								if (!player.isInvul())
 								{
-									if (player.isInDuel())
-										player.setCurrentHp(1);
-									else
+									if (damage >= player.getCurrentHp())
 									{
-										player.setCurrentHp(0);
-										if (player.isInOlympiadMode())
-										{
-											player.abortAttack();
-											player.abortCast();
-											player.getStatus().stopHpMpRegeneration();
-											player.setIsDead(true);
-											player.setIsPendingRevive(true);
-											if (player.getPet() != null)
-												player.getPet().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null);
-										}
+										if (player.isInDuel())
+											player.setCurrentHp(1);
 										else
-											player.doDie(activeChar);
+										{
+											player.setCurrentHp(0);
+											if (player.isInOlympiadMode())
+											{
+												player.abortAttack();
+												player.abortCast();
+												player.getStatus().stopHpMpRegeneration();
+												player.setIsDead(true);
+												player.setIsPendingRevive(true);
+												if (player.getPet() != null)
+													player.getPet().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE,null);
+											}
+											else
+												player.doDie(activeChar);
+										}
 									}
+									else
+										player.setCurrentHp(player.getCurrentHp()- damage);
 								}
-								else
-									player.setCurrentHp(player.getCurrentHp() - damage);
+
+								SystemMessage smsg = new SystemMessage(SystemMessageId.C1_RECEIVED_DAMAGE_OF_S3_FROM_C2);
+								smsg.addPcName(player);
+								smsg.addCharName(activeChar);
+								smsg.addNumber(damage);
+								player.sendPacket(smsg);
+
 							}
-						
-							SystemMessage smsg = new SystemMessage(SystemMessageId.C1_RECEIVED_DAMAGE_OF_S3_FROM_C2);
-							smsg.addPcName(player);
-							smsg.addCharName(activeChar);
-							smsg.addNumber(damage);
-							player.sendPacket(smsg);
-						
+							else
+								target.reduceCurrentHp(damage, activeChar, skill);
+							
+							if ((reflect & Formulas.SKILL_REFLECT_VENGEANCE) != 0) // stop if no vengeance, so only target will be effected
+								break;
 						}
-						else
-							target.reduceCurrentHp(damage, activeChar, skill);
 					}
 					else
 					{
 						target.reduceCurrentHp(damage, activeChar, skill);
+						
+						// vengeance reflected damage
+						if ((reflect & Formulas.SKILL_REFLECT_VENGEANCE) != 0)
+							activeChar.reduceCurrentHp(damage, target, skill);
 					}
 				
 				}
-				else
-				// No - damage
+				else // No - damage
 				{
 					activeChar.sendPacket(new SystemMessage(SystemMessageId.ATTACK_FAILED));
 				}

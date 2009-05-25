@@ -109,8 +109,9 @@ public class Mdam implements ISkillHandler
 				continue;
 			}
 			
-			boolean mcrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, skill));
-			byte shld = Formulas.calcShldUse(activeChar, target);
+			final boolean mcrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, skill));
+			final byte shld = Formulas.calcShldUse(activeChar, target);
+			final byte reflect = Formulas.calcSkillReflect(target, skill);
 			
 			int damage = (int) Formulas.calcMagicDam(activeChar, target, skill, shld, ss, bss, mcrit);
 			if (skill.getMaxSoulConsumeCount() > 0 && activeChar instanceof L2PcInstance && ((L2PcInstance) activeChar).getSouls() > 0)
@@ -148,7 +149,7 @@ public class Mdam implements ISkillHandler
 				
 				if (skill.hasEffects())
 				{
-					if (target.reflectSkill(skill))
+					if ((reflect & Formulas.SKILL_REFLECT_SUCCEED) != 0) // reflect skill effects
 					{
 						activeChar.stopSkillEffects(skill.getId());
 						skill.getEffects(target, activeChar);
@@ -172,7 +173,11 @@ public class Mdam implements ISkillHandler
 					}
 				}
 				
-				target.reduceCurrentHp(damage, activeChar, skill);
+				target.reduceCurrentHp(damage, activeChar, skill);				
+				
+				// vengeance reflected damage
+				if ((reflect & Formulas.SKILL_REFLECT_VENGEANCE) != 0)
+					activeChar.reduceCurrentHp(damage, target, skill);
 				
 				// Logging damage
 				if (Config.LOG_GAME_DAMAGE && damage > 5000 && activeChar instanceof L2PcInstance)

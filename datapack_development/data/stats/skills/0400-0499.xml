@@ -781,13 +781,18 @@
   </for>
 </skill>
 <skill id="439" levels="1" name="Shield of Revenge">
-  <!-- For 5 minutes, transfers damage from close range physical attacks and skills back to opponent. -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="hitTime" val="4000"/>
+  <set name="mpConsume" val="78"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="reuseDelay" val="150000"/>
-  <!-- needs core support - not really a reflect -> http://www.l2guru.com/forum/showthread.php?t=74337 -->
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <effect name="Buff" time="300" val="0">
+      <add order="0x40" stat="vengeancePdam" val="40"/>
+    </effect>
+  </for>
 </skill>
 <skill id="440" levels="1" name="Braveheart">
   <set name="mpConsume" val="57"/>
@@ -876,13 +881,18 @@
   </for>
 </skill>
 <skill id="447" levels="1" name="Counterattack">
-  <!-- For 10 seconds, transfers damage from close range physical attacks and skills back to the opponent. -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="hitTime" val="500"/>
+  <set name="mpConsume" val="29"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="reuseDelay" val="75000"/>
-  <!-- needs core support - not really a reflect -> http://www.l2guru.com/forum/showthread.php?t=74337 -->
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <effect name="Buff" time="10" val="0">
+      <add order="0x40" stat="vengeancePdam" val="100"/>
+    </effect>
+  </for>
 </skill>
 <skill id="448" levels="1" name="Summon Swoop Cannon">
   <!-- Needs to be verified "Is enchantable but no stats for the +Power versions" -->
