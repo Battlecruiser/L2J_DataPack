@@ -185,7 +185,7 @@ public class Blow implements ISkillHandler
 	        				player.sendPacket(smsg);
 						} // end instanceof L2PcInstance check
 						
-						if ((reflect & Formulas.SKILL_REFLECT_VENGEANCE) != 0) // stop if no vengeance, so only target will be effected
+						if ((reflect & Formulas.SKILL_REFLECT_VENGEANCE) == 0) // stop if no vengeance, so only target will be effected
 							break;
 					} // end for
 	        	} // end skill directlyToHp check
