@@ -107,7 +107,7 @@ public class InstantJump implements ISkillHandler
 				// activate attacked effects, if any
 				target.stopSkillEffects(skill.getId());
 				
-				byte shld = Formulas.calcShldUse(activeChar, target);
+				byte shld = Formulas.calcShldUse(activeChar, target, skill);
 				if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, false, false, false))
 				{
 					skill.getEffects(activeChar, target, new Env(shld, false, false, false));
