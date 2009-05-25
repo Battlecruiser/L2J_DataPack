@@ -199,7 +199,7 @@ public class Disablers implements ISkillHandler
 				case DISARM:
 				case STUN:
 				{
-					if (target.reflectSkill(skill))
+					if (Formulas.calcSkillReflect(target, skill) == Formulas.SKILL_REFLECT_SUCCEED)
 						target = activeChar;
 					
 					if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
@@ -219,7 +219,7 @@ public class Disablers implements ISkillHandler
 				case SLEEP:
 				case PARALYZE: //use same as root for now
 				{
-					if (target.reflectSkill(skill))
+					if (Formulas.calcSkillReflect(target, skill) == Formulas.SKILL_REFLECT_SUCCEED)
 						target = activeChar;
 					
 					if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
@@ -239,7 +239,7 @@ public class Disablers implements ISkillHandler
 				case CONFUSION:
 				case MUTE:
 				{
-					if (target.reflectSkill(skill))
+					if (Formulas.calcSkillReflect(target, skill) == Formulas.SKILL_REFLECT_SUCCEED)
 						target = activeChar;
 					
 					if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
@@ -414,7 +414,7 @@ public class Disablers implements ISkillHandler
 				}
 				case MAGE_BANE:
 				{
-					if (target.reflectSkill(skill))
+					if (Formulas.calcSkillReflect(target, skill) == Formulas.SKILL_REFLECT_SUCCEED)
 						target = activeChar;
 					
 					if (!Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
@@ -442,7 +442,7 @@ public class Disablers implements ISkillHandler
 				}
 				case WARRIOR_BANE:
 				{
-					if (target.reflectSkill(skill))
+					if (Formulas.calcSkillReflect(target, skill) == Formulas.SKILL_REFLECT_SUCCEED)
 						target = activeChar;
 					
 					if (!Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
@@ -553,7 +553,7 @@ public class Disablers implements ISkillHandler
 					
 					//if (Rnd.get(100) < landrate)
 					
-					if (target.reflectSkill(skill))
+					if (Formulas.calcSkillReflect(target, skill) == Formulas.SKILL_REFLECT_SUCCEED)
 						target = activeChar;
 					
 					if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
@@ -633,7 +633,7 @@ public class Disablers implements ISkillHandler
 				}
 				case CANCEL_STATS: // same than CANCEL but 
 				{
-					if (target.reflectSkill(skill))
+					if (Formulas.calcSkillReflect(target, skill) == Formulas.SKILL_REFLECT_SUCCEED)
 						target = activeChar;
 					
 					if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
@@ -729,7 +729,7 @@ public class Disablers implements ISkillHandler
 				}
 				case NEGATE:
 				{
-					if (target.reflectSkill(skill))
+					if (Formulas.calcSkillReflect(target, skill) == Formulas.SKILL_REFLECT_SUCCEED)
 						target = activeChar;
 					
 					if (skill.getNegateId().length != 0)

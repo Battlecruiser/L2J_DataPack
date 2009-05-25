@@ -90,7 +90,7 @@ public class Manadam implements ISkillHandler
 		}
 		for (L2Character target: (L2Character[]) targets)
 		{
-			if (target.reflectSkill(skill))
+			if (Formulas.calcSkillReflect(target, skill) == Formulas.SKILL_REFLECT_SUCCEED)
 				target = activeChar;
 			
 			boolean acted = Formulas.calcMagicAffected(activeChar, target, skill);
