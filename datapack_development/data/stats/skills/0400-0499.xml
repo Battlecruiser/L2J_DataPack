@@ -1360,11 +1360,16 @@
   </for>
 </skill>
 <skill id="475" levels="1" name="Strike Back">
-  <!-- Transfers damage received from close range physical attacks and skills back to the opponent. MP is continuously consumed proportionate to user's level. -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <!-- needs core support - not really a reflect -> http://www.l2guru.com/forum/showthread.php?t=74337 -->
+  <!-- Needs to be verified -->
+  <!-- Done by DJ MELERIX -->
+  <set name="operateType" val="OP_TOGGLE"/>
+  <set name="skillType" val="CONT"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <effect count="0x7fffffff" name="MpConsumePerLevel" time="3" val="0.5"> <!-- TODO: MpConsumePerLevel amount is guessed -->
+      <add order="0x40" stat="vengeancePdam" val="100"/>
+    </effect>
+  </for>
 </skill>
 <skill id="476" levels="15" name="Dark Strike">
   <table name="#power"> 108 117 126 147 159 171 198 213 229 263 281 301 344 367 391 </table>
