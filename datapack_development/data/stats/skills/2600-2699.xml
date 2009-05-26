@@ -415,10 +415,20 @@
   </cond>
 </skill>
 <skill id="2654" levels="1" name="Final Circlet">
-  <!-- can't find skill for it -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="itemConsumeId" val="14208"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="LEARN_SKILL"/>
+  <set name="learnSkillId" val="917"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="hitTime" val="1500"/>
+  <set name="staticHitTime" val="true"/>
+  <cond msgId="113" addName="1">
+    <and>
+      <target class_id_restriction="88, 89, 113, 114, 117, 118, 131"/>
+      <player level="81"/>
+    </and>
+  </cond>
 </skill>
 <skill id="2655" levels="1" name="Maximum Force Focus">
   <set name="itemConsumeId" val="14201"/>

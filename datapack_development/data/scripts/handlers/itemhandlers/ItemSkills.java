@@ -23,7 +23,9 @@ import net.sf.l2j.gameserver.model.actor.L2Playable;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.model.actor.instance.L2PetInstance;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance.TimeStamp;
+import net.sf.l2j.gameserver.model.entity.TvTEvent;
 import net.sf.l2j.gameserver.network.SystemMessageId;
+import net.sf.l2j.gameserver.network.serverpackets.ActionFailed;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 
 
@@ -31,19 +33,27 @@ public class ItemSkills implements IItemHandler
 {
 	private static final int[] ITEM_IDS =
 	{
-		6403,6406,6407,13268,13269,
-		20353,20364,20365,20366,20367,20368,20369,20370,20371,
-		22022,22023,22024,22025,22026,
-		22039,22040,22041,22042,22043,22044,22045,22046,22047,
-		22048,22049,22050,22051,22052,22053,
-		22089,22090,22091,22092,22093,
-		22094,22095,22096,22097,22098,22099,22100,22101,22102,
-		22103,22104,22105,22106,22107,22108,22109,22110,22111,
-		22112,22113,22114,22115,22116,22117,22118,22119,22120,
-		22121,22122,22123,
-		22124,22125,22126,22127,22128,22129,22130,22131,
-		22132,22133,22134,22135,22136,22137,22138,22139,22140,
-		22141,22142,22143,22149,22150,22151,22152,22153
+		6403,6406,6407,13268,13269,10549,10550,10551,10552,10553,
+		10554,10555,10556,10557,10558,10559,10560,10561,10562,10563,
+		10564,10565,10566,10567,10568,10569,10570,10571,10572,10573,
+		10574,10575,10576,10577,10578,10579,10580,10581,10582,10583,
+		10584,10585,10586,10587,10588,10589,10591,10592,10593,10594,
+		10595,10608,10609,10610,12768,12769,12770,12771,13552,13553,
+		13554,13728,14170,14171,14172,14173,14174,14175,14176,14177,
+		14178,14179,14180,14181,14182,14183,14184,14185,14186,14187,
+		14188,14189,14190,14191,14192,14193,14194,14195,14196,14197,
+		14198,14199,14200,14201,14202,14203,14204,14205,14206,14207,
+		14208,14209,14210,14211,14212,14213,14214,14215,14216,14217,
+		14218,14219,14220,14221,14222,14223,14224,14225,14226,14227,
+		20353,20364,20365,20366,20367,20368,20369,20370,20371,22022,
+		22023,22024,22025,22026,22039,22040,22041,22042,22043,22044,
+		22045,22046,22047,22048,22049,22050,22051,22052,22053,22089,
+		22090,22091,22092,22093,22094,22095,22096,22097,22098,22099,
+		22100,22101,22102,22103,22104,22105,22106,22107,22108,22109,
+		22110,22111,22112,22113,22114,22115,22116,22117,22118,22119,
+		22120,22121,22122,22123,22124,22125,22126,22127,22128,22129,
+		22130,22131,22132,22133,22134,22135,22136,22137,22138,22139,
+		22140,22141,22142,22143,22149,22150,22151,22152,22153,
 	};
 	
 	/**
@@ -60,6 +70,16 @@ public class ItemSkills implements IItemHandler
 			activeChar = ((L2PetInstance) playable).getOwner();
 		else
 			return;
+		if (activeChar.isInOlympiadMode())
+		{
+			activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT));
+			return;
+		}
+		if (!TvTEvent.onScrollUse(playable.getObjectId()))
+		{
+			playable.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
 		int skillId;
 		int skillLvl;
 
@@ -126,7 +146,10 @@ public class ItemSkills implements IItemHandler
 								if (itemSkill.isPotion())
 									playable.doSimultaneousCast(itemSkill);
 								else
+								{
+									playable.stopMove(null);
 									playable.doCast(itemSkill);
+								}
 								if (itemSkill.getReuseDelay() > 0)
 									activeChar.addTimeStamp(skillId, itemSkill.getReuseDelay());
 							}
