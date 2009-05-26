@@ -144,7 +144,6 @@ public class MasterHandler
 		ItemHandler.getInstance().registerItemHandler(new CrystalCarol());
 		ItemHandler.getInstance().registerItemHandler(new SoulCrystals());
 		ItemHandler.getInstance().registerItemHandler(new SevenSignsRecord());
-		ItemHandler.getInstance().registerItemHandler(new SpellbookScrolls());
 		ItemHandler.getInstance().registerItemHandler(new CharChangePotions());
 		ItemHandler.getInstance().registerItemHandler(new ItemSkills());
 		ItemHandler.getInstance().registerItemHandler(new Seed());
