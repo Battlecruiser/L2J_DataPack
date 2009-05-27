@@ -667,6 +667,7 @@
   <set name="skillType" val="DEBUFF"/>
   <set name="isDebuff" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="stayAfterDeath" val="true"/>
   <for>
     <effect name="Debuff" time="300" val="0" stackOrder="#power" stackType="DeathPenalty">
       <mul order="0x30" stat="pAtk" val="#pAtk"/>
