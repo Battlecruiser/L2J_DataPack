@@ -5,6 +5,6 @@ CREATE TABLE IF NOT EXISTS `custom_droplist` (
   `max` INT NOT NULL DEFAULT '0',
   `category` INT NOT NULL DEFAULT '0',
   `chance` INT NOT NULL DEFAULT '0',
-  PRIMARY KEY  (`mobId`,`itemId`,`category`),
+  PRIMARY KEY (`mobId`,`itemId`,`category`),
   KEY `key_mobId` (`mobId`)
 );

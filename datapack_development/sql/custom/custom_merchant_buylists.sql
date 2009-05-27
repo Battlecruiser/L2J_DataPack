@@ -7,5 +7,5 @@ CREATE TABLE IF NOT EXISTS `custom_merchant_buylists` (
   `currentCount` INT( 11 ) NOT NULL DEFAULT '-1',
   `time` INT NOT NULL DEFAULT '0',
   `savetimer` DECIMAL(20,0) NOT NULL DEFAULT '0',
-  PRIMARY KEY  (`shop_id`,`order`)
+  PRIMARY KEY (`shop_id`,`order`)
 );
