@@ -333,10 +333,6 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				activeChar.sendMessage("Use //gmspeed value (0=off...4=max).");
 			}
-			finally
-			{
-				activeChar.updateEffectIcons();
-			}
 		}
 		else if (command.startsWith("admin_polyself"))
 		{
