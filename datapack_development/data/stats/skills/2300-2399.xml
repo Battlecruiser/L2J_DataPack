@@ -481,6 +481,9 @@
   <set name="hitTime" val="5000"/>
   <set name="staticHitTime" val="true"/>
   <set name="castRange" val="150"/>
+  <cond msgId="113" addName="1">
+    <target npcType="L2FortBallista"/>
+  </cond>
 </skill>
 <skill id="2343" levels="1" name="Gate Key of Kamael">
   <set name="target" val="TARGET_NONE"/>
@@ -676,7 +679,10 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="900"/>
   <cond msgId="113" addName="1">
-    <player flyMounted="False"/>
+    <and>
+      <player flyMounted="False"/>
+      <target npcId="18482"/>
+    </and>
   </cond>
   <for>
     <effect name="HealOverTime" val="3000"/>

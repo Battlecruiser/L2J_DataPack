@@ -126,7 +126,6 @@ public class MasterHandler
 		ItemHandler.getInstance().registerItemHandler(new SoulShots());
 		ItemHandler.getInstance().registerItemHandler(new SpiritShot());
 		ItemHandler.getInstance().registerItemHandler(new BlessedSpiritShot());
-		ItemHandler.getInstance().registerItemHandler(new BallistaBombItem());
 		ItemHandler.getInstance().registerItemHandler(new BeastSoulShot());
 		ItemHandler.getInstance().registerItemHandler(new BeastSpiritShot());
 		ItemHandler.getInstance().registerItemHandler(new Key());
@@ -155,7 +154,6 @@ public class MasterHandler
 		ItemHandler.getInstance().registerItemHandler(new SpecialXMas());
 		ItemHandler.getInstance().registerItemHandler(new SummonItems());
 		ItemHandler.getInstance().registerItemHandler(new BeastSpice());
-		ItemHandler.getInstance().registerItemHandler(new SpiritLake());
 		ItemHandler.getInstance().registerItemHandler(new TeleportBookmark());
 		ItemHandler.getInstance().registerItemHandler(new Elixir());
 		_log.config("Loaded " + ItemHandler.getInstance().size() + " ItemHandlers");

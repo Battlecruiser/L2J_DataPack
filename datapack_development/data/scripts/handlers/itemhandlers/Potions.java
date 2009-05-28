@@ -49,22 +49,15 @@ public class Potions implements IItemHandler
 		65, 725, 726, 727, 728, 734, 735, 1060, 1061, 1073,
 		1374, 1375, 1539, 1540, 5591, 5592, 6035, 6036,
 		6652, 6653, 6654, 6655, 8193, 8194, 8195, 8196,
-		8197, 8198, 8199, 8200, 8201, 8202, 8600, 8601,
-		8602, 8603, 8604, 8605, 8606, 8607,
-		8608, 8609, 8610, 8611, 8612, 8613, 8614, 10155, 13032, 10157,
+		8197, 8198, 8199, 8200, 8201, 8202,
+		10155, 13032, 10157,
 		//Attribute Potion
 		9997, 9998, 9999, 10000, 10001, 10002,
 		// Endeavor Potion
 		733,
-		// Juices
-		10260, 10261, 10262, 10263, 10264, 10265, 10266, 10267, 10268, 10269, 10270,
-		// CT2 herbs
-		10655, 10656, 10657,
 		//bottls of souls
 		10409,10410,10411,10412,
-		// energy stone
-		5589,
-		20393,20394,22037
+		20393,20394
 	};
 	
 	/**
@@ -236,66 +229,6 @@ public class Potions implements IItemHandler
 				usePotion(playable, 2232, 1);
 				break;
 			
-			// HERBS
-			case 8600: // Herb of Life
-				res = usePotion(playable, 2278, 1);
-				break;
-			case 8601: // Greater Herb of Life
-				res = usePotion(playable, 2278, 2);
-				break;
-			case 8602: // Superior Herb of Life
-				res = usePotion(playable, 2278, 3);
-				break;
-			case 8603: // Herb of Mana
-				res = usePotion(playable, 2279, 1);
-				break;
-			case 8604: // Greater Herb of Mane
-				res = usePotion(playable, 2279, 2);
-				break;
-			case 8605: // Superior Herb of Mane
-				res = usePotion(playable, 2279, 3);
-				break;
-			case 8606: // Herb of Strength
-				res = usePotion(playable, 2280, 1);
-				break;
-			case 8607: // Herb of Magic
-				res = usePotion(playable, 2281, 1);
-				break;
-			case 8608: // Herb of Atk. Spd.
-				res = usePotion(playable, 2282, 1);
-				break;
-			case 8609: // Herb of Casting Spd.
-				res = usePotion(playable, 2283, 1);
-				break;
-			case 8610: // Herb of Critical Attack
-				res = usePotion(playable, 2284, 1);
-				break;
-			case 8611: // Herb of Speed
-				res = usePotion(playable, 2285, 1);
-				break;
-			case 8612: // Herb of Warrior
-				res = usePotion(playable, 2280, 1);// Herb of Strength
-				usePotion(playable, 2282, 1);// Herb of Atk. Spd
-				usePotion(playable, 2284, 1);// Herb of Critical Attack
-				break;
-			case 8613: // Herb of Mystic
-				res = usePotion(playable, 2281, 1);// Herb of Magic
-				usePotion(playable, 2283, 1);// Herb of Casting Spd.
-				break;
-			case 8614: // Herb of Warrior
-				res = usePotion(playable, 2278, 3);// Superior Herb of Life
-				usePotion(playable, 2279, 3);// Superior Herb of Mana
-				break;
-			case 10655:
-				usePotion(playable, 2512, 1);
-				break;
-			case 10656:
-				usePotion(playable, 2514, 1);
-				break;
-			case 10657:
-				usePotion(playable, 2513, 1);
-				break;
-			
 			// FISHERMAN POTIONS
 			case 8193: // Fisherman's Potion - Green
 				if (!(playable instanceof L2PcInstance))
@@ -425,45 +358,6 @@ public class Potions implements IItemHandler
 				}
 				usePotion(playable, 2275, 1);
 				break;
-			
-			// Juices
-			// added by Z0mbie!
-			case 10260: // Haste Juice,xml:2429
-				usePotion(playable, 2429, 1);
-				break;
-			case 10261: // Accuracy Juice,xml:2430
-				usePotion(playable, 2430, 1);
-				break;
-			case 10262: // Critical Power Juice,xml:2431
-				usePotion(playable, 2431, 1);
-				break;
-			case 10263: // Critical Attack Juice,xml:2432
-				usePotion(playable, 2432, 1);
-				break;
-			case 10264: // Casting Speed Juice,xml:2433
-				usePotion(playable, 2433, 1);
-				break;
-			case 10265: // Evasion Juice,xml:2434
-				usePotion(playable, 2434, 1);
-				break;
-			case 10266: // Magic Power Juice,xml:2435
-				usePotion(playable, 2435, 1);
-				break;
-			case 10267: // Power Juice,xml:2436
-				usePotion(playable, 2436, 1);
-				break;
-			case 10268: // Speed Juice,xml:2437
-				usePotion(playable, 2437, 1);
-				break;
-			case 10269: // Defense Juice,xml:2438
-				usePotion(playable, 2438, 1);
-				break;
-			case 10270: // MP Consumption Juice,xml: 2439
-				usePotion(playable, 2439, 1);
-				break;
-			case 5589: // Energy Stone,xml: 2165
-				usePotion(playable, 2165, 1);
-				break;
 			case 20393: // Sweet Fruit Cocktail
 				res = usePotion(playable, 22056, 1);
 				usePotion(playable, 22057, 1);
@@ -483,9 +377,6 @@ public class Potions implements IItemHandler
 				usePotion(playable, 22068, 1);
 				usePotion(playable, 22069, 1);
 				usePotion(playable, 22070, 1);
-				break;
-			case 22037: // Potion of Will
-				usePotion(playable, 26029, 1);
 				break;
 			default:
 		}
