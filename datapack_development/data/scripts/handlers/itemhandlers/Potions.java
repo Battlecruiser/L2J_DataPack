@@ -46,17 +46,12 @@ public class Potions implements IItemHandler
 	
 	private static final int[] ITEM_IDS =
 	{
-		65, 725, 726, 727, 728, 734, 735, 1060, 1061, 1073,
-		1374, 1375, 1539, 1540, 5591, 5592, 6035, 6036,
-		6652, 6653, 6654, 6655, 8193, 8194, 8195, 8196,
+		725, 726, 727, 1060, 1061, 1073,
+		8193, 8194, 8195, 8196,
 		8197, 8198, 8199, 8200, 8201, 8202,
-		10155, 13032, 10157,
-		//Attribute Potion
-		9997, 9998, 9999, 10000, 10001, 10002,
-		// Endeavor Potion
-		733,
+		4416,7061,
 		//bottls of souls
-		10409,10410,10411,10412,
+		10410,10411,10412,
 		20393,20394
 	};
 	
@@ -99,83 +94,17 @@ public class Potions implements IItemHandler
 		switch (itemId)
 		{
 			// HEALING AND SPEED POTIONS
-			case 65: // red_potion, xml: 2001
-				usePotion(playable, 2001, 1);
-				break;
-			case 725: // healing_drug, xml: 2002
-				if (!isEffectReplaceable(playable, L2EffectType.HEAL_OVER_TIME, itemId))
-					return;
-				usePotion(playable, 2002, 1);
-				break;
-			case 726: // custom mana drug, xml: 9007
-				if (Config.L2JMOD_ENABLE_MANA_POTIONS_SUPPORT)
-					usePotion(activeChar, 9007, 1);
-				break;
 			case 727: // _healing_potion, xml: 2032
 			case 1061:
 				if (!isEffectReplaceable(playable, L2EffectType.HEAL_OVER_TIME, itemId))
 					return;
 				res = usePotion(playable, 2032, 1);
 				break;
-			case 728: // custom mana potion, xml: 9008
-				if (Config.L2JMOD_ENABLE_MANA_POTIONS_SUPPORT)
-					usePotion(activeChar, 9008, 1);
-				break;
-			case 733: // Endeavor Potion, xml: 2010
-				usePotion(playable, 2010, 1);
-				break;
-			case 734: // quick_step_potion, xml: 2011
-				usePotion(playable, 2011, 1);
-				break;
-			case 735: // swift_attack_potion, xml: 2012
-				usePotion(playable, 2012, 1);
-				break;
 			case 1060: // lesser_healing_potion,
 			case 1073: // beginner's potion, xml: 2031
 				if (!isEffectReplaceable(activeChar, L2EffectType.HEAL_OVER_TIME, itemId))
 					return;
 				res = usePotion(playable, 2031, 1);
-				break;
-			case 10157: // instant haste_potion, xml: 2398
-				usePotion(playable, 2398, 1);
-				break;
-			case 1374: // adv_quick_step_potion, xml: 2034
-				usePotion(playable, 2034, 1);
-				break;
-			case 1375: // adv_swift_attack_potion, xml: 2035
-				usePotion(playable, 2035, 1);
-				break;
-			case 1539: // greater_healing_potion, xml: 2037
-				if (!isEffectReplaceable(playable, L2EffectType.HEAL_OVER_TIME, itemId))
-					return;
-				usePotion(playable, 2037, 1);
-				break;
-			case 1540: // quick_healing_potion, xml: 2038
-				if (!isEffectReplaceable(playable, L2EffectType.HEAL_OVER_TIME, itemId))
-					return;
-				usePotion(playable, 2038, 1);
-				break;
-			case 5591:
-			case 5592: // CP and Greater CP
-				if (!isEffectReplaceable(playable, L2EffectType.COMBAT_POINT_HEAL_OVER_TIME, itemId))
-					return;
-				usePotion(playable, 2166, (itemId == 5591) ? 1 : 2);
-				break;
-			case 6035: // Magic Haste Potion, xml: 2169
-				usePotion(playable, 2169, 1);
-				break;
-			case 6036: // Greater Magic Haste Potion, xml: 2169
-				usePotion(playable, 2169, 2);
-				break;
-			case 10155: //Mental Potion XML:2396
-				usePotion(playable, 2396, 1);
-				break;
-			case 13032: //Pailaka Instant Shield XML:2577
-				usePotion(playable, 2577, 1);
-				break;
-			
-			case 10409: // Empty Bottle of Souls
-				usePotion(activeChar, 2498, 1);
 				break;
 			case 10410: // 5 Souls Bottle
 				if (activeChar.getActiveClass() >= 123 && activeChar.getActiveClass() <= 136) //Kamael classes only
@@ -194,39 +123,6 @@ public class Potions implements IItemHandler
 					res = usePotion(activeChar, 2499, 2);
 				else
 					playable.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
-				break;
-				
-			// ATTRIBUTE POTION
-			case 9997: // Fire Resist Potion, xml: 2335
-				usePotion(playable, 2335, 1);
-				break;
-			case 9998: // Water Resist Potion, xml: 2336
-				usePotion(playable, 2336, 1);
-				break;
-			case 9999: // Earth Resist Potion, xml: 2338
-				usePotion(playable, 2338, 1);
-				break;
-			case 10000: // Wind Resist Potion, xml: 2337
-				usePotion(playable, 2337, 1);
-				break;
-			case 10001: // Dark Resist Potion, xml: 2340
-				usePotion(playable, 2340, 1);
-				break;
-			case 10002: // Divine Resist Potion, xml: 2339
-				usePotion(playable, 2339, 1);
-				break;
-				// VALAKAS AMULETS
-			case 6652: // Amulet Protection of Valakas
-				usePotion(playable, 2231, 1);
-				break;
-			case 6653: // Amulet Flames of Valakas
-				usePotion(playable, 2233, 1);
-				break;
-			case 6654: // Amulet Flames of Valakas
-				usePotion(playable, 2233, 1);
-				break;
-			case 6655: // Amulet Slay Valakas
-				usePotion(playable, 2232, 1);
 				break;
 			
 			// FISHERMAN POTIONS
@@ -377,6 +273,10 @@ public class Potions implements IItemHandler
 				usePotion(playable, 22068, 1);
 				usePotion(playable, 22069, 1);
 				usePotion(playable, 22070, 1);
+				break;
+			case 4416:
+			case 7061:
+				res = usePotion(playable, 2073, 1);
 				break;
 			default:
 		}
