@@ -388,8 +388,11 @@
   <set name="effectRange" val="400"/>
 </skill>
 <skill id="2230" levels="1" name="Item - Theme Sound Crystal">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="itemConsumeId" val="7062"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="isPotion" val="true"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="DUMMY"/>
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="2231" levels="1" name="Amulet: Protection of Valakas">
@@ -863,8 +866,11 @@
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="2272" levels="1" name="Item - Fight Song Crystal">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="itemConsumeId" val="8555"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="isPotion" val="true"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="DUMMY"/>
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="2273" levels="1" name="Item - Red Devil Support Box">
