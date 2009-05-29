@@ -87,7 +87,7 @@ public class OlMahum extends L2Transformation
 			getPlayer().removeSkill(SkillTable.getInstance().getInfo(749, 1), false);
 			getPlayer().removeSkill(SkillTable.getInstance().getInfo(751, 1), false, false);
 		}
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(750, 1), false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(750, 1), false, false);
 
 		getPlayer().setTransformAllowedSkills(new int[]{});
 	}
