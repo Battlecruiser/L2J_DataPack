@@ -14,7 +14,6 @@
  */
 package handlers.skillhandlers;
 
-import net.sf.l2j.gameserver.model.olympiad.Olympiad;
 import net.sf.l2j.gameserver.ai.CtrlIntention;
 import net.sf.l2j.gameserver.handler.ISkillHandler;
 import net.sf.l2j.gameserver.model.L2Effect;
@@ -200,17 +199,8 @@ public class Blow implements ISkillHandler
 				if(activeChar instanceof L2PcInstance)
 				{
 					L2PcInstance activePlayer = (L2PcInstance) activeChar; 
-					activePlayer.sendPacket(new SystemMessage(SystemMessageId.C1_HAD_CRITICAL_HIT).addPcName(activePlayer));
-					SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DID_S1_DMG);
-					sm.addNumber((int) damage);
-					activePlayer.sendPacket(sm);
-					if (activePlayer.isInOlympiadMode() &&
-			        		target instanceof L2PcInstance &&
-			        		((L2PcInstance)target).isInOlympiadMode() &&
-			        		((L2PcInstance)target).getOlympiadGameId() == activePlayer.getOlympiadGameId())
-			        {
-			        	Olympiad.getInstance().notifyCompetitorDamage(activePlayer, (int) damage, activePlayer.getOlympiadGameId());
-			        }
+					
+					activePlayer.sendDamageMessage(target, (int)damage, false, true, false);
 				}
 			}
 			
