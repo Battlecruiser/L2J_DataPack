@@ -55,15 +55,6 @@ public class BlessedSpiritShot implements IItemHandler
 		L2Weapon weaponItem = activeChar.getActiveWeaponItem();
 		int itemId = item.getItemId();
 		
-		if (activeChar.isInOlympiadMode())
-		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
-			sm.addString(item.getItemName());
-			activeChar.sendPacket(sm);
-			sm = null;
-			return;
-		}
-		
 		// Check if Blessed SpiritShot can be used
 		if (weaponInst == null || weaponItem.getSpiritShotCount() == 0)
 		{
