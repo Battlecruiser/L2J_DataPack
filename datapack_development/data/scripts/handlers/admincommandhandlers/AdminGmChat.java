@@ -19,6 +19,7 @@ import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
 import net.sf.l2j.gameserver.model.L2Object;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.network.SystemMessageId;
+import net.sf.l2j.gameserver.network.clientpackets.Say2;
 import net.sf.l2j.gameserver.network.serverpackets.CreatureSay;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 
@@ -87,12 +88,12 @@ public class AdminGmChat implements IAdminCommandHandler
 		{
 			int offset = 0;
 			String text;
-			if (command.contains("menu"))
-				offset = 17;
+			if (command.startsWith("admin_gmchat_menu"))
+				offset = 18;
 			else
 				offset = 13;
 			text = command.substring(offset);
-			CreatureSay cs = new CreatureSay(0, 9, activeChar.getName(), text);
+			CreatureSay cs = new CreatureSay(0, Say2.ALLIANCE, activeChar.getName(), text);
 			GmListTable.broadcastToGMs(cs);
 		}
 		catch (StringIndexOutOfBoundsException e)
