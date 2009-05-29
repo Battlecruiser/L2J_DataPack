@@ -118,8 +118,6 @@ class Quest (JQuest) :
       else :
          htmltext = "30081-07.htm"
     elif event == "31092-05.htm" :
-      st.exitQuest(False)
-      st.playSound("ItemSound.quest_finish")
       if player.getClassId().level() == 1 :
          text = BYPASS[player.getClassId().getId()]
          htmltext = "<html><body>Black Marketeer of Mammon:<br>Forget about the money!<br>I will help you complete the class transfer, which is far more valuable! Which class would you like to be? Choose one.<br>"+text+"</body></html>"
@@ -128,9 +126,6 @@ class Quest (JQuest) :
     elif event == "31092-06.htm" :
       text = BYPASS[player.getClassId().getId()]
       htmltext = "<html><body>Black Marketeer of Mammon:<br>If you are finished thinking, select one. Which class would you like to be?<br>"+text+"</body></html>"
-    elif event == "31092-07.htm" :
-      st.giveAdena(3000000, False)
-      st.set("onlyone","1")
     elif event in CLASSES.keys():
          newclass,req_item=CLASSES[event]
          adena = 0
@@ -144,7 +139,12 @@ class Quest (JQuest) :
          if adena > 0 :
             st.giveAdena(adena*1000000,False)
          htmltext = "31092-05.htm"
-         st.set("onlyone","1")
+    elif event == "31092-07.htm" :
+      st.giveAdena(3000000, False)
+    if event == "31092-07.htm" or event in CLASSES.keys():
+      st.set("onlyone","1")
+      st.playSound("ItemSound.quest_finish")
+      st.exitQuest(False)
     return htmltext
 
  def onTalk (self,npc,player):
