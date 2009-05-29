@@ -236,9 +236,6 @@
   <set name="effectRange" val="900"/>
   <set name="reuseDelay" val="75000"/>
   <set name="hitTime" val="100"/>
-  <cond msgId="113" addName="1">
-    <target mindistance="300"/>
-  </cond>
   <for>
     <effect name="RemoveTarget" val="0" effectPower="50" effectType="DEBUFF"/>
   </for>
