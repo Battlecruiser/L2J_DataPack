@@ -16,7 +16,6 @@ package handlers.itemhandlers;
 
 import java.util.logging.Logger;
 
-import net.sf.l2j.Config;
 import net.sf.l2j.gameserver.datatables.SkillTable;
 import net.sf.l2j.gameserver.handler.IItemHandler;
 import net.sf.l2j.gameserver.model.L2Effect;
