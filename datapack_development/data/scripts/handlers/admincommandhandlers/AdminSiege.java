@@ -73,19 +73,26 @@ public class AdminSiege implements IAdminCommandHandler
 		// Get castle
 		Castle castle = null;
 		ClanHall clanhall = null;
-		if (command.startsWith("admin_clanhall"))
-			clanhall = ClanHallManager.getInstance().getClanHallById(Integer.parseInt(st.nextToken()));
-		else if (st.hasMoreTokens())
-			castle = CastleManager.getInstance().getCastle(st.nextToken());
-		// Get castle
-		String val = "";
-		if (st.hasMoreTokens())
-			val = st.nextToken();
+		if (st.hasMoreTokens()) {
+			if (command.startsWith("admin_clanhall")) {
+				try
+				{
+					clanhall = ClanHallManager.getInstance().getClanHallById(Integer.parseInt(st.nextToken()));
+				}
+				catch (Exception e) {}
+			}
+			else
+				castle = CastleManager.getInstance().getCastle(st.nextToken());
+		}
 		if ((castle == null || castle.getCastleId() < 0) && clanhall == null)
 			// No castle specified
 			showCastleSelectPage(activeChar);
 		else
 		{
+			String val = "";
+			if (st.hasMoreTokens())
+				val = st.nextToken();
+			
 			L2Object target = activeChar.getTarget();
 			L2PcInstance player = null;
 			if (target instanceof L2PcInstance)
@@ -114,7 +121,7 @@ public class AdminSiege implements IAdminCommandHandler
 				}
 				catch (Exception e)
 				{
-					activeChar.sendMessage("Usage: //add_guard npcId");
+					activeChar.sendMessage("Usage: //add_guard castle npcId");
 				}
 			}
 			else if (command.equalsIgnoreCase("admin_clear_siege_list"))
