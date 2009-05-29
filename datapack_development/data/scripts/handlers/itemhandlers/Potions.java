@@ -16,6 +16,7 @@ package handlers.itemhandlers;
 
 import java.util.logging.Logger;
 
+import net.sf.l2j.Config;
 import net.sf.l2j.gameserver.datatables.SkillTable;
 import net.sf.l2j.gameserver.handler.IItemHandler;
 import net.sf.l2j.gameserver.model.L2Effect;
@@ -33,98 +34,110 @@ import net.sf.l2j.gameserver.network.serverpackets.ActionFailed;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 import net.sf.l2j.gameserver.templates.skills.L2EffectType;
 
-/**
- * This class ...
- *
- * @version $Revision: 1.2.4.4 $ $Date: 2005/03/27 15:30:07 $
- */
-
 public class Potions implements IItemHandler
 {
 	protected static final Logger _log = Logger.getLogger(Potions.class.getName());
-	
+
 	private static final int[] ITEM_IDS =
 	{
-		725, 726, 727, 1060, 1061, 1073,
-		8193, 8194, 8195, 8196,
-		8197, 8198, 8199, 8200, 8201,
+		// General Potions
+		725, 726, 727, 728, 1060, 1061, 1073,
+		// Fisherman Potions
+		8193, 8194, 8195, 8196, 8197, 8198, 8199, 8200, 8201,
+		// Echo Crystals (why?)
 		4416,7061,
-		//bottls of souls
+		// Kamael Soul Bottles
 		10410,10411,10412,
+		// Fruit Potions
 		20393,20394
 	};
-	
+
 	/**
-	 * 
 	 * @see net.sf.l2j.gameserver.handler.IItemHandler#useItem(net.sf.l2j.gameserver.model.actor.L2Playable, net.sf.l2j.gameserver.model.L2ItemInstance)
 	 */
 	public synchronized void useItem(L2Playable playable, L2ItemInstance item)
 	{
 		L2PcInstance activeChar; // use activeChar only for L2PcInstance checks where cannot be used PetInstance
+
 		boolean res = false;
+
 		if (playable instanceof L2PcInstance)
 			activeChar = (L2PcInstance) playable;
 		else if (playable instanceof L2PetInstance)
 			activeChar = ((L2PetInstance) playable).getOwner();
 		else
 			return;
-		
-		if (!TvTEvent.onPotionUse(playable.getObjectId()))
+
+		if (!TvTEvent.onPotionUse(playable.getObjectId()) || playable.isAllSkillsDisabled())
 		{
 			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		
+
 		if (activeChar.isInOlympiadMode())
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT));
 			return;
 		}
-		
-		if (playable.isAllSkillsDisabled())
-		{
-			ActionFailed af = ActionFailed.STATIC_PACKET;
-			activeChar.sendPacket(af);
-			return;
-		}
-		
+
 		int itemId = item.getItemId();
-		
+
 		switch (itemId)
 		{
-			// HEALING AND SPEED POTIONS
-			case 727: // _healing_potion, xml: 2032
+			case 727: // Healing_potion, xml: 2032
+				if (!isEffectReplaceable(playable, L2EffectType.HEAL_OVER_TIME, itemId))
+					return;
+				res = usePotion(playable, 2032, 1);
+				break;
+			case 728: // Custom mana potion, xml: 9008
+				if (Config.L2JMOD_ENABLE_MANA_POTIONS_SUPPORT)
+					res = usePotion(activeChar, 9008, 1);
+				else
+					playable.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
+				break;
 			case 1061:
 				if (!isEffectReplaceable(playable, L2EffectType.HEAL_OVER_TIME, itemId))
 					return;
 				res = usePotion(playable, 2032, 1);
 				break;
-			case 1060: // lesser_healing_potion,
-			case 1073: // beginner's potion, xml: 2031
+			case 1060: // Lesser Healing Potion
+			case 1073: // Beginner's Potion, xml: 2031
 				if (!isEffectReplaceable(activeChar, L2EffectType.HEAL_OVER_TIME, itemId))
 					return;
 				res = usePotion(playable, 2031, 1);
 				break;
-			case 10410: // 5 Souls Bottle
+/*
+Control of this needs to be moved back into potions.java so proper message support can be handled for specific events.
+			case 10409: // Empty Bottle of Souls
 				if (activeChar.getActiveClass() >= 123 && activeChar.getActiveClass() <= 136) //Kamael classes only
+				{
+					if (activeChar.getSouls() >= 6)
+						res = usePotion(activeChar, 2498, 1);
+					else
+						playable.sendPacket(new SystemMessage(SystemMessageId.THERE_IS_NOT_ENOUGH_SOUL));
+				}
+				else
+					playable.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
+				break;
+*/
+			case 10410: // 5 Souls Bottle
+				if (activeChar.getActiveClass() >= 123 && activeChar.getActiveClass() <= 136) // Kamael classes only
 					res = usePotion(activeChar, 2499, 1);
 				else
 					playable.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
 				break;
 			case 10411: // 5 Souls Bottle Combat
-				if (activeChar.getActiveClass() >= 123 && activeChar.getActiveClass() <= 136 && activeChar.isInsideZone(L2Character.ZONE_SIEGE)) //Kamael classes only  				{
+				if (activeChar.getActiveClass() >= 123 && activeChar.getActiveClass() <= 136 && activeChar.isInsideZone(L2Character.ZONE_SIEGE)) //Kamael classes only
 					res = usePotion(activeChar, 2499, 1);
 				else
 					playable.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
 				break;
 			case 10412: // 10 Souls Bottle
-				if (activeChar.getActiveClass() >= 123 && activeChar.getActiveClass() <= 136) //Kamael classes only  				{
+				if (activeChar.getActiveClass() >= 123 && activeChar.getActiveClass() <= 136) //Kamael classes only
 					res = usePotion(activeChar, 2499, 2);
 				else
 					playable.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
 				break;
-			
-			// FISHERMAN POTIONS
 			case 8193: // Fisherman's Potion - Green
 				if (!(playable instanceof L2PcInstance))
 				{
@@ -271,13 +284,12 @@ public class Potions implements IItemHandler
 				break;
 			default:
 		}
-		
+
 		if (res)
 			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 	}
-	
+
 	/**
-	 * 
 	 * @param activeChar
 	 * @param effectType
 	 * @param itemId
@@ -289,7 +301,7 @@ public class Potions implements IItemHandler
 		L2PcInstance activeChar = (L2PcInstance) ((playable instanceof L2PcInstance) ? playable : ((L2Summon) playable).getOwner());
 		if (effects == null)
 			return true;
-		
+
 		for (L2Effect e : effects)
 		{
 			if (e.getEffectType() == effectType)
@@ -316,41 +328,38 @@ public class Potions implements IItemHandler
 	 */
 	public boolean usePotion(L2Playable activeChar, int magicId, int level)
 	{
-		
+
 		L2Skill skill = SkillTable.getInstance().getInfo(magicId, level);
-			
+
 		if (skill != null)
 		{
 			if (!skill.checkCondition(activeChar, activeChar, false))
-	        	return false;
-			// Return false if potion is in reuse
-			// so is not destroyed from inventory
+				return false;
+			// Return false if potion is in reuse so it is not destroyed from inventory
 			if (activeChar.isSkillDisabled(skill.getId()))
 			{
 				SystemMessage sm = new SystemMessage(SystemMessageId.S1_PREPARED_FOR_REUSE);
 				sm.addSkillName(skill);
 				activeChar.sendPacket(sm);
-				
 				return false;
 			}
-			
+
 			activeChar.doSimultaneousCast(skill);
-				
+
 			if (activeChar instanceof L2PcInstance)
 			{
 				L2PcInstance player = (L2PcInstance)activeChar;
-				//only for Heal potions
+				// Only for Heal potions
 				if (magicId == 2031 || magicId == 2032 || magicId == 2037)
-				{
 					player.shortBuffStatusUpdate(magicId, level, 15);
-				}
-				// Summons should be affected by herbs too, self time effect is handled at L2Effect constructor 
-				else if (((magicId > 2277 && magicId < 2286) || (magicId >= 2512 && magicId <= 2514))
-					&& (player.getPet() != null && player.getPet() instanceof L2SummonInstance))
-				{
+				// Summons should be affected by herbs too, self time effect is handled at L2Effect constructor
+				else if
+				(
+					(player.getPet() != null && player.getPet() instanceof L2SummonInstance) &&
+					((magicId > 2277 && magicId < 2286) || (magicId >= 2512 && magicId <= 2514))
+				)
 					player.getPet().doSimultaneousCast(skill);
-				}
-				
+
 				if (!(player.isSitting() && !skill.isPotion()))
 					return true;
 			}
@@ -364,14 +373,13 @@ public class Potions implements IItemHandler
 		}
 		return false;
 	}
-	
+
 	private void itemNotForPets(L2PcInstance activeChar)
 	{
 		activeChar.sendPacket(new SystemMessage(SystemMessageId.ITEM_NOT_FOR_PETS));
 	}
-	
+
 	/**
-	 * 
 	 * @see net.sf.l2j.gameserver.handler.IItemHandler#getItemIds()
 	 */
 	public int[] getItemIds()

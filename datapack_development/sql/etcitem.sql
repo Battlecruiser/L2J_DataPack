@@ -79,7 +79,7 @@ INSERT INTO `etcitem` VALUES
 (725,'Healing Drug','false','potion',180,'stackable','liquid','none',-1,-1,50,0,'true','true','true','true','2002-1;','false'),
 (726,'Mana Drug','false','potion',180,'stackable','liquid','none',-1,-1,80,0,'true','true','true','true','9007-1;','false'),
 (727,'Healing Potion','false','potion',180,'stackable','liquid','none',-1,-1,80,0,'true','true','true','true','0-0;','false'),
-(728,'Mana Potion','false','potion',180,'stackable','liquid','none',-1,-1,2000,0,'true','true','true','true','9008-1;','false'),
+(728,'Mana Potion','false','potion',180,'stackable','liquid','none',-1,-1,2000,0,'true','true','true','true','0-0;','false'),
 (729,'Scroll: Enchant Weapon (A)','false','scroll',120,'stackable','paper','none',-1,-1,1800000,0,'true','true','true','true','2006-1;','false'),
 (730,'Scroll: Enchant Armor (A)','false','scroll',120,'stackable','paper','none',-1,-1,240000,0,'true','true','true','true','2007-1;','false'),
 (731,'Crystal Scroll: Enchant Weapon (A)','false','scroll',120,'stackable','paper','none',-1,-1,240000,0,'true','true','true','true','0-0;','false'),
