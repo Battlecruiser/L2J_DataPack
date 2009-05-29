@@ -134,7 +134,6 @@ public class MasterHandler
 		ItemHandler.getInstance().registerItemHandler(new Potions());
 		ItemHandler.getInstance().registerItemHandler(new Recipes());
 		ItemHandler.getInstance().registerItemHandler(new RollingDice());
-		ItemHandler.getInstance().registerItemHandler(new MysteryPotion());
 		ItemHandler.getInstance().registerItemHandler(new EnchantAttribute());
 		ItemHandler.getInstance().registerItemHandler(new EnchantScrolls());
 		ItemHandler.getInstance().registerItemHandler(new Book());
