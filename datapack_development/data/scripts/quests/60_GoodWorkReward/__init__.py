@@ -118,6 +118,8 @@ class Quest (JQuest) :
       else :
          htmltext = "30081-07.htm"
     elif event == "31092-05.htm" :
+      st.exitQuest(False)
+      st.playSound("ItemSound.quest_finish")
       if player.getClassId().level() == 1 :
          text = BYPASS[player.getClassId().getId()]
          htmltext = "<html><body>Black Marketeer of Mammon:<br>Forget about the money!<br>I will help you complete the class transfer, which is far more valuable! Which class would you like to be? Choose one.<br>"+text+"</body></html>"
@@ -126,6 +128,9 @@ class Quest (JQuest) :
     elif event == "31092-06.htm" :
       text = BYPASS[player.getClassId().getId()]
       htmltext = "<html><body>Black Marketeer of Mammon:<br>If you are finished thinking, select one. Which class would you like to be?<br>"+text+"</body></html>"
+    elif event == "31092-07.htm" :
+      st.giveAdena(3000000, False)
+      st.set("onlyone","1")
     elif event in CLASSES.keys():
          newclass,req_item=CLASSES[event]
          adena = 0
@@ -139,12 +144,7 @@ class Quest (JQuest) :
          if adena > 0 :
             st.giveAdena(adena*1000000,False)
          htmltext = "31092-05.htm"
-    elif event == "31092-07.htm" :
-      st.giveAdena(3000000, False)
-    if event == "31092-07.htm" or event in CLASSES.keys():
-      st.set("onlyone","1")
-      st.playSound("ItemSound.quest_finish")
-      st.exitQuest(False)
+         st.set("onlyone","1")
     return htmltext
 
  def onTalk (self,npc,player):
@@ -161,7 +161,7 @@ class Quest (JQuest) :
      elif npcId == 31092 :
         if player.getClassId().level() == 1 and not st.getInt("onlyone"):
            htmltext = "31092-05.htm"
-   if id == State.CREATED :
+   if id == State.CREATED and npcId == 31435 :
      if player.getLevel() < 39 or player.getClassId().level() != 1 or player.getRace().ordinal() == 5:
        htmltext = "31435-00.htm"
        st.exitQuest(1)
@@ -228,6 +228,7 @@ class Quest (JQuest) :
 
 QUEST       = Quest(60,qn,"Good Work's Reward")
 
+QUEST.addStartNpc(31092)
 QUEST.addStartNpc(31435)
 QUEST.addTalkId(30081)
 QUEST.addTalkId(31092)
