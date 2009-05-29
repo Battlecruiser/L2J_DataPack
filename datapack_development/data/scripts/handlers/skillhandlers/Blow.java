@@ -124,7 +124,7 @@ public class Blow implements ISkillHandler
 				if (soul)
 					weapon.setChargedSoulshot(L2ItemInstance.CHARGED_NONE);
 				
-				if (skill.getDmgDirectlyToHP())
+				if (skill.getDmgDirectlyToHP() && target instanceof L2PcInstance)
 				{
 					final L2Character[] ts = {target, activeChar};
 					
@@ -134,62 +134,68 @@ public class Blow implements ISkillHandler
 					 */
 					for (L2Character targ : ts)
 					{
-						if (target instanceof L2PcInstance)
-						{
-							L2PcInstance player = (L2PcInstance) targ;
-							if (!player.isInvul())
-							{   
-								// Check and calculate transfered damage
-			            		L2Summon summon = player.getPet();
-			           			if (summon instanceof L2SummonInstance && Util.checkIfInRange(900, player, summon, true))
-			           			{
-			           				int tDmg = (int)damage * (int)player.getStat().calcStat(Stats.TRANSFER_DAMAGE_PERCENT, 0, null, null) /100;
+						L2PcInstance player = (L2PcInstance) targ;
+						if (!player.isInvul()) {
+							// Check and calculate transfered damage
+							L2Summon summon = player.getPet();
+							if (summon instanceof L2SummonInstance && Util.checkIfInRange(900, player, summon, true))
+							{
+								int tDmg = (int) damage * (int) player.getStat().calcStat(Stats.TRANSFER_DAMAGE_PERCENT, 0, null, null) / 100;
 
-			                		// Only transfer dmg up to current HP, it should not be killed
-			                		if (summon.getCurrentHp() < tDmg) tDmg = (int)summon.getCurrentHp() - 1;
-			                		if (tDmg > 0)
-			                		{
-			                    		summon.reduceCurrentHp(tDmg, activeChar ,skill);
-			                    		damage -= tDmg;
-			                		}
-			            		}
-			           			if (damage >= player.getCurrentHp())
+								// Only transfer dmg up to current HP, it should
+								// not be killed
+								if (summon.getCurrentHp() < tDmg)
+									tDmg = (int) summon.getCurrentHp() - 1;
+								if (tDmg > 0)
 								{
-									if (player.isInDuel())
-										player.setCurrentHp(1);
-									else
-									{
-										player.setCurrentHp(0);
-										if (player.isInOlympiadMode())
-										{
-											player.abortAttack();
-											player.abortCast();
-											player.getStatus().stopHpMpRegeneration();
-											player.setIsDead(true);
-											player.setIsPendingRevive(true);
-											if (player.getPet() != null)
-												player.getPet().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null);
-				                		}
-										else
-											player.doDie(activeChar);
-									}
+									summon.reduceCurrentHp(tDmg, activeChar, skill);
+									damage -= tDmg;
 								}
-								else
-									player.setCurrentHp(player.getCurrentHp() - damage);
 							}
-	        				SystemMessage smsg = new SystemMessage(SystemMessageId.C1_RECEIVED_DAMAGE_OF_S3_FROM_C2);
-	        				smsg.addPcName(player);
-	        				smsg.addCharName(activeChar);
-	        				smsg.addNumber((int)damage);
-	        				player.sendPacket(smsg);
-						} // end instanceof L2PcInstance check
-						
-						if ((reflect & Formulas.SKILL_REFLECT_VENGEANCE) == 0) // stop if no vengeance, so only target will be effected
+							if (damage >= player.getCurrentHp())
+							{
+								if (player.isInDuel())
+									player.setCurrentHp(1);
+								else
+								{
+									player.setCurrentHp(0);
+									if (player.isInOlympiadMode())
+									{
+										player.abortAttack();
+										player.abortCast();
+										player.getStatus().stopHpMpRegeneration();
+										player.setIsDead(true);
+										player.setIsPendingRevive(true);
+										if (player.getPet() != null)
+											player.getPet().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE,null);
+									}
+									else
+										player.doDie(activeChar);
+								}
+							}
+							else
+								player.setCurrentHp(player.getCurrentHp() - damage);
+						}
+						SystemMessage smsg = new SystemMessage(SystemMessageId.C1_RECEIVED_DAMAGE_OF_S3_FROM_C2);
+						smsg.addPcName(player);
+						smsg.addCharName(activeChar);
+						smsg.addNumber((int) damage);
+						player.sendPacket(smsg);
+
+						// stop if no vengeance, so only target will be effected
+						if ((reflect & Formulas.SKILL_REFLECT_VENGEANCE) == 0) 
 							break;
 					} // end for
 	        	} // end skill directlyToHp check
 	        	else
+	        	{
 	        		target.reduceCurrentHp(damage, activeChar, skill);
+	        		
+	        		// vengeance reflected damage
+					if ((reflect & Formulas.SKILL_REFLECT_VENGEANCE) != 0)
+						activeChar.reduceCurrentHp(damage, target, skill);
+	        	}
+				
 				// Manage attack or cast break of the target (calculating rate, sending message...)
                 if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
                 {
