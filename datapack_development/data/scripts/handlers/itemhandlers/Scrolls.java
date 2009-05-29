@@ -41,13 +41,11 @@ public class Scrolls implements IItemHandler
 		3932, 3933, 3934, 3935, 4218, 5593,
 		5594, 5595, 6037, 5703, 5803, 5804,
 		5805, 5806, 5807, 8515, 8516, 8517,
-		8518, 8519, 8520, 8594, 8595, 8596,
-		8597, 8598, 8599, 8954, 8955, 8956,
+		8518, 8519, 8520,
 		9146, 9147, 9148, 9149, 9150, 9151,
 		9152, 9153, 9154, 9155, 9897, 10131,
 		10132, 10133, 10134, 10135, 10136,
-		10137, 10138, 10151, 10274, 13844,
-		13386, 13387, 13388
+		10137, 10138, 10151, 10274
 	};
 	
 	/**
@@ -84,21 +82,8 @@ public class Scrolls implements IItemHandler
 		
 		int itemId = item.getItemId();
 		
-		if (itemId == 13844)
-		{
-			useScroll(activeChar,2630,1);
-			return;
-		}
-		if (itemId >= 8594 && itemId <= 8599) //Scrolls of recovery XML: 2286
-		{
-			if (!playable.destroyItem("Consume", item.getObjectId(), 1, null, false))
-				return;
-			activeChar.broadcastPacket(new MagicSkillUse(playable, playable, 2286, 1, 1, 0));
-			activeChar.reduceDeathPenaltyBuffLevel();
-			useScroll(activeChar, 2286, itemId - 8593);
-			return;
-		}
-		else if (itemId == 5703 || itemId >= 5803 && itemId <= 5807)
+
+		if (itemId == 5703 || itemId >= 5803 && itemId <= 5807)
 		{
 			byte expIndex = (byte) activeChar.getExpertiseIndex();
 			if (!playable.destroyItem("Consume", item.getObjectId(), 1, null, false))
@@ -123,44 +108,6 @@ public class Scrolls implements IItemHandler
 				activeChar.sendPacket(new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED).addItemName(item));
 				return;
 			}
-		}
-		else if (itemId >= 8954 && itemId <= 8956)
-		{
-			switch (itemId)
-			{
-				case 8954: // Blue Primeval Crystal XML: 2306
-					activeChar.broadcastPacket(new MagicSkillUse(playable, playable, 2306, 1, 1, 0));
-					useScroll(activeChar, 2306, 1);
-					break;
-				case 8955: // Green Primeval Crystal XML: 2306
-					activeChar.broadcastPacket(new MagicSkillUse(playable, playable, 2306, 2, 1, 0));
-					useScroll(activeChar, 2306, 2);
-					break;
-				case 8956: // Red Primeval Crystal XML: 2306
-					activeChar.broadcastPacket(new MagicSkillUse(playable, playable, 2306, 3, 1, 0));
-					useScroll(activeChar, 2306, 3);
-					break;
-			}
-			return;
-		}
-		else if (itemId >= 13386 && itemId <= 13388)
-		{
-			switch (itemId)
-			{
-				case 13386: // Blue Crystal of Fantasy XML: 2608
-					activeChar.broadcastPacket(new MagicSkillUse(playable, playable, 2608, 1, 1, 0));
-					useScroll(activeChar, 2608, 1);
-					break;
-				case 13387: // Green Crystal of Fantasy XML: 2608
-					activeChar.broadcastPacket(new MagicSkillUse(playable, playable, 2608, 2, 1, 0));
-					useScroll(activeChar, 2608, 2);
-					break;
-				case 13388: // Red Crystal of Fantasy XML: 2608
-					activeChar.broadcastPacket(new MagicSkillUse(playable, playable, 2608, 3, 1, 0));
-					useScroll(activeChar, 2608, 3);
-					break;
-			}
-			return;
 		}
 		// for the rest, there are no extra conditions
 		if (!playable.destroyItem("Consume", item.getObjectId(), 1, null, false))

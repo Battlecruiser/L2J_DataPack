@@ -47,7 +47,7 @@ public class Potions implements IItemHandler
 	{
 		725, 726, 727, 1060, 1061, 1073,
 		8193, 8194, 8195, 8196,
-		8197, 8198, 8199, 8200, 8201, 8202,
+		8197, 8198, 8199, 8200, 8201,
 		4416,7061,
 		//bottls of souls
 		10410,10411,10412,
@@ -244,14 +244,6 @@ public class Potions implements IItemHandler
 					return;
 				}
 				usePotion(playable, 2274, 9);
-				break;
-			case 8202: // Fishing Potion
-				if (!(playable instanceof L2PcInstance))
-				{
-					itemNotForPets(activeChar);
-					return;
-				}
-				usePotion(playable, 2275, 1);
 				break;
 			case 20393: // Sweet Fruit Cocktail
 				res = usePotion(playable, 22056, 1);

@@ -1053,10 +1053,14 @@
   </for>
 </skill>
 <skill id="2286" levels="6" name="Scroll: Recovery">
+  <table name="#itemConsumeId"> 8594 8595 8596 8597 8598 8599 </table>
+  <set name="itemConsumeId" val="#itemConsumeId"/>
+  <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="500"/>
+  <set name="staticHitTime" val="true"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
