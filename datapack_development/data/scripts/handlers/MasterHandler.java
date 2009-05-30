@@ -146,7 +146,6 @@ public class MasterHandler
 		ItemHandler.getInstance().registerItemHandler(new Harvester());
 		ItemHandler.getInstance().registerItemHandler(new MercTicket());
 		ItemHandler.getInstance().registerItemHandler(new FishShots());
-		ItemHandler.getInstance().registerItemHandler(new ExtractableItems());
 		ItemHandler.getInstance().registerItemHandler(new PetFood());
 		ItemHandler.getInstance().registerItemHandler(new SpecialXMas());
 		ItemHandler.getInstance().registerItemHandler(new SummonItems());
