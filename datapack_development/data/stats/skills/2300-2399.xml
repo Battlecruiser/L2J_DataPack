@@ -650,6 +650,9 @@
   <set name="skillType" val="RECALL"/>
   <set name="recallType" val="Fortress"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <cond msgId="113" addName="1">
+    <player fort="-1"/>
+  </cond>
 </skill>
 <skill id="2365" levels="1" name="Scroll of Fortress Return">
   <set name="itemConsumeId" val="10129"/>

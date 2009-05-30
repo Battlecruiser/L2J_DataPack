@@ -121,14 +121,12 @@ public class MasterHandler
 	
 	private static void loadItemHandlers()
 	{
-		ItemHandler.getInstance().registerItemHandler(new ScrollOfEscape());
 		ItemHandler.getInstance().registerItemHandler(new ScrollOfResurrection());
 		ItemHandler.getInstance().registerItemHandler(new SoulShots());
 		ItemHandler.getInstance().registerItemHandler(new SpiritShot());
 		ItemHandler.getInstance().registerItemHandler(new BlessedSpiritShot());
 		ItemHandler.getInstance().registerItemHandler(new BeastSoulShot());
 		ItemHandler.getInstance().registerItemHandler(new BeastSpiritShot());
-		ItemHandler.getInstance().registerItemHandler(new Key());
 		ItemHandler.getInstance().registerItemHandler(new PaganKeys());
 		ItemHandler.getInstance().registerItemHandler(new Maps());
 		ItemHandler.getInstance().registerItemHandler(new Potions());

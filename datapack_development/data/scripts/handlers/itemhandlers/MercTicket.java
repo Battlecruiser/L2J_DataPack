@@ -27,13 +27,6 @@ import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 
 public class MercTicket implements IItemHandler
 {
-	private static final String[] MESSAGES =
-	{
-		"To arms!.",
-		"I am ready to serve you my lord when the time comes.",
-		"You summon me."
-	};
-	
 	/**
 	 * handler for using mercenary tickets.  Things to do:
 	 * 1) Check constraints:
@@ -58,43 +51,8 @@ public class MercTicket implements IItemHandler
 		//add check that certain tickets can only be placed in certain castles
 		if (MercTicketManager.getInstance().getTicketCastleId(itemId) != castleId)
 		{
-			if (castleId == -1)
-			{
-				// player is not in a castle
-				activeChar.sendMessage("Mercenary Tickets can only be used in a castle.");
-				return;  			
-			}
-
-			switch (MercTicketManager.getInstance().getTicketCastleId(itemId))
-			{
-				case 1:
-					activeChar.sendMessage("This Mercenary Ticket can only be used in Gludio.");
-		     		return;
-				case 2:
-					activeChar.sendMessage("This Mercenary Ticket can only be used in Dion.");
-					return;
-				case 3:
-					activeChar.sendMessage("This Mercenary Ticket can only be used in Giran.");
-					return;
-				case 4:
-					activeChar.sendMessage("This Mercenary Ticket can only be used in Oren.");
-					return;
-				case 5:
-					activeChar.sendMessage("This Mercenary Ticket can only be used in Aden.");
-					return;
-				case 6:
-					activeChar.sendMessage("This Mercenary Ticket can only be used in Heine.");
-					return;
-				case 7:
-					activeChar.sendMessage("This Mercenary Ticket can only be used in Goddard.");
-					return;
-				case 8:
-					activeChar.sendMessage("This Mercenary Ticket can only be used in Rune.");
-					return;
-				case 9:
-					activeChar.sendMessage("This Mercenary Ticket can only be used in Schuttgart.");
-					return;
-			}
+			activeChar.sendPacket(new SystemMessage(SystemMessageId.MERCENARIES_CANNOT_BE_POSITIONED_HERE));
+			return;
 		}
 		
 		if (!activeChar.isCastleLord(castleId))
@@ -105,7 +63,7 @@ public class MercTicket implements IItemHandler
 		
 		if (castle.getSiege().getIsInProgress())
 		{
-			activeChar.sendMessage("You cannot hire mercenary while siege is in progress!");
+			activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE));
 			return;
          }
  
@@ -113,7 +71,7 @@ public class MercTicket implements IItemHandler
         if (SevenSigns.getInstance().getCurrentPeriod() != SevenSigns.PERIOD_SEAL_VALIDATION) 
         {
         	//_log.warning("Someone has tried to spawn a guardian during Quest Event Period of The Seven Signs.");       	
-        	activeChar.sendMessage("You cannot position any Mercenaries during Quest Period.");
+        	activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE));
         	return;
         }
         //Checking the Seal of Strife status
@@ -123,7 +81,7 @@ public class MercTicket implements IItemHandler
         		if (SevenSigns.getInstance().CheckIsDawnPostingTicket(itemId))
         		{
                 	//_log.warning("Someone has tried to spawn a Dawn Mercenary though the Seal of Strife is not controlled by anyone.");       	
-                	activeChar.sendMessage("You cannot position any Dawn Mercenaries at this time.");        		
+        			activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE));        		
         			return;
         		}        			
         		break;
@@ -131,7 +89,7 @@ public class MercTicket implements IItemHandler
         		if (!SevenSigns.getInstance().CheckIsRookiePostingTicket(itemId))
         		{
                 	//_log.warning("Someone has tried to spawn a non-Rookie Mercenary though the Seal of Strife is controlled by Revolutionaries of Dusk.");       	
-                	activeChar.sendMessage("You can position only Rookie Mercenaries at this time.");        		
+        			activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE));
         			return;
         		}          		
         		break;
@@ -141,13 +99,13 @@ public class MercTicket implements IItemHandler
         
         if(MercTicketManager.getInstance().isAtCasleLimit(item.getItemId()))
         {
-        	activeChar.sendMessage("You cannot hire any more mercenaries");
+        	activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE));
 			return;
 		}
 		
 		if (MercTicketManager.getInstance().isAtTypeLimit(item.getItemId()))
 		{
-			activeChar.sendMessage("You cannot hire any more mercenaries of this type.  You may still hire other types of mercenaries");
+			activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE));
 			return;
 		}
 		if (MercTicketManager.getInstance().isTooCloseToAnotherTicket(activeChar.getX(), activeChar.getY(), activeChar.getZ()))
@@ -156,9 +114,8 @@ public class MercTicket implements IItemHandler
 			return;
 		}
 		
-		int npcId = MercTicketManager.getInstance().addTicket(item.getItemId(), activeChar, MESSAGES);
 		activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false); // Remove item from char's inventory
-		activeChar.sendMessage("Hired mercenary (" + itemId + "," + npcId + ") at coords:" + activeChar.getX() + "," + activeChar.getY() + "," + activeChar.getZ() + " heading:" + activeChar.getHeading());
+		activeChar.sendPacket(new SystemMessage(SystemMessageId.PLACE_CURRENT_LOCATION_DIRECTION).addItemName(item));
 	}
 	
 	/**

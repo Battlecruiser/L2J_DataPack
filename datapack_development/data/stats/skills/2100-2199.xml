@@ -795,6 +795,9 @@
   <set name="skillType" val="RECALL"/>
   <set name="recallType" val="ClanHall"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <cond msgId="113" addName="1">
+    <player clanHall="-1"/>
+  </cond>
 </skill>
 <skill id="2178" levels="1" name="Blessed Scroll of Escape: Castle">
   <set name="itemConsumeId" val="5859"/>
@@ -805,6 +808,9 @@
   <set name="skillType" val="RECALL"/>
   <set name="recallType" val="Castle"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <cond msgId="113" addName="1">
+    <player castle="-1"/>
+  </cond>
 </skill>
 <skill id="2179" levels="1" name="Blessed Scroll of Resurrection: Pet">
   <set name="power" val="100"/>
