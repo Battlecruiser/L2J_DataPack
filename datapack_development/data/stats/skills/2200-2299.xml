@@ -386,6 +386,9 @@
   <set name="itemConsumeCount" val="1"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
+  <cond msgId="109" >
+    <target npcType="L2Chest"/>
+  </cond>
 </skill>
 <skill id="2230" levels="1" name="Item - Theme Sound Crystal">
   <set name="itemConsumeId" val="7062"/>

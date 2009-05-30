@@ -106,8 +106,7 @@ public class CharChangePotions implements IItemHandler
 		}
 		
 		// Create a summon effect!
-		MagicSkillUse MSU = new MagicSkillUse(playable, activeChar, 2003, 1, 1, 0);
-		activeChar.broadcastPacket(MSU);
+		activeChar.broadcastPacket(new MagicSkillUse(playable, activeChar, 2003, 1, 1, 0));
 		
 		// Update the changed stat for the character in the DB.
 		activeChar.store();
@@ -116,8 +115,7 @@ public class CharChangePotions implements IItemHandler
 		activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		
 		// Broadcast the changes to the char and all those nearby.
-		UserInfo ui = new UserInfo(activeChar);
-		activeChar.broadcastPacket(ui);
+		activeChar.broadcastPacket(new UserInfo(activeChar));
 		activeChar.broadcastPacket(new ExBrExtraUserInfo(activeChar));
 	}
 	

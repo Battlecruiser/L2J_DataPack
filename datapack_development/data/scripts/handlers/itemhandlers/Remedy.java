@@ -74,7 +74,6 @@ public class Remedy implements IItemHandler
 					}
 				}
 				MagicSkillUse MSU = new MagicSkillUse(playable, playable, 2042, 1, 0, 0);
-				activeChar.sendPacket(MSU);
 				activeChar.broadcastPacket(MSU);
 				playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 				break;
@@ -91,7 +90,6 @@ public class Remedy implements IItemHandler
 					}
 				}
 				MagicSkillUse MSU = new MagicSkillUse(playable, playable, 2043, 1, 0, 0);
-				activeChar.sendPacket(MSU);
 				activeChar.broadcastPacket(MSU);
 				playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 				break;
@@ -108,7 +106,6 @@ public class Remedy implements IItemHandler
 					}
 				}
 				MagicSkillUse MSU = new MagicSkillUse(playable, playable, 34, 1, 0, 0);
-				activeChar.sendPacket(MSU);
 				activeChar.broadcastPacket(MSU);
 				playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 				break;
@@ -125,7 +122,6 @@ public class Remedy implements IItemHandler
 					}
 				}
 				MagicSkillUse MSU = new MagicSkillUse(playable, playable, 2045, 1, 0, 0);
-				activeChar.sendPacket(MSU);
 				activeChar.broadcastPacket(MSU);
 				playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 				break;
@@ -142,7 +138,6 @@ public class Remedy implements IItemHandler
 				if (activeChar.getFirstEffect(L2EffectType.ROOT) == null)
 					activeChar.stopRooting(null);
 				MagicSkillUse MSU = new MagicSkillUse(playable, playable, 2042, 1, 0, 0);
-				activeChar.sendPacket(MSU);
 				activeChar.broadcastPacket(MSU);
 				playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 				break;

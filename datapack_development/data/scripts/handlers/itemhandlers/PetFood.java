@@ -86,10 +86,7 @@ public class PetFood implements IItemHandler
 					((L2PetInstance)activeChar).setCurrentFed(((L2PetInstance)activeChar).getCurrentFed() + skill.getFeed());
 					((L2PetInstance)activeChar).broadcastStatusUpdate();
 					if (((L2PetInstance)activeChar).getCurrentFed() < (0.55 * ((L2PetInstance)activeChar).getPetData().getPetMaxFeed()))
-					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_PET_ATE_A_LITTLE_BUT_IS_STILL_HUNGRY);
-						((L2PetInstance)activeChar).getOwner().sendPacket(sm);
-					}
+						((L2PetInstance)activeChar).getOwner().sendPacket(new SystemMessage(SystemMessageId.YOUR_PET_ATE_A_LITTLE_BUT_IS_STILL_HUNGRY));
 					return true;
 				}
 			}

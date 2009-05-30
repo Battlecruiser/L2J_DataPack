@@ -65,8 +65,7 @@ public class RollingDice implements IItemHandler
 				return;
 			}
 
-			Dice d = new Dice(activeChar.getObjectId(), item.getItemId(), number, activeChar.getX() - 30, activeChar.getY() - 30, activeChar.getZ());
-			Broadcast.toSelfAndKnownPlayers(activeChar, d);
+			Broadcast.toSelfAndKnownPlayers(activeChar, new Dice(activeChar.getObjectId(), item.getItemId(), number, activeChar.getX() - 30, activeChar.getY() - 30, activeChar.getZ()));
 			
 			SystemMessage sm = new SystemMessage(SystemMessageId.C1_ROLLED_S2);
 			sm.addString(activeChar.getName());

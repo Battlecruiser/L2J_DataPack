@@ -18,7 +18,6 @@ import net.sf.l2j.gameserver.handler.IItemHandler;
 import net.sf.l2j.gameserver.model.L2ItemInstance;
 import net.sf.l2j.gameserver.model.actor.L2Playable;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.model.actor.instance.L2PetInstance;
 import net.sf.l2j.gameserver.network.serverpackets.SSQStatus;
 
 /**
@@ -39,17 +38,10 @@ public class SevenSignsRecord implements IItemHandler
 	 */
 	public void useItem(L2Playable playable, L2ItemInstance item)
 	{
-		L2PcInstance activeChar;
-		
-		if (playable instanceof L2PcInstance)
-			activeChar = (L2PcInstance) playable;
-		else if (playable instanceof L2PetInstance)
-			activeChar = ((L2PetInstance) playable).getOwner();
-		else
+		if (!(playable instanceof L2PcInstance))
 			return;
 		
-		SSQStatus ssqs = new SSQStatus(activeChar, 1);
-		activeChar.sendPacket(ssqs);
+		playable.sendPacket(new SSQStatus((L2PcInstance) playable, 1));
 	}
 	
 	/**

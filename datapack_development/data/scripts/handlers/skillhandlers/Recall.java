@@ -18,6 +18,7 @@ import java.util.logging.Level;
 
 import net.sf.l2j.gameserver.datatables.MapRegionTable;
 import net.sf.l2j.gameserver.handler.ISkillHandler;
+import net.sf.l2j.gameserver.instancemanager.GrandBossManager;
 import net.sf.l2j.gameserver.model.L2Object;
 import net.sf.l2j.gameserver.model.L2Skill;
 import net.sf.l2j.gameserver.model.actor.L2Character;
@@ -54,6 +55,12 @@ public class Recall implements ISkillHandler
 			if (((L2PcInstance) activeChar).isInOlympiadMode())
 			{
 				((L2PcInstance) activeChar).sendPacket(new SystemMessage(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT));
+				return;
+			}
+			
+			if (GrandBossManager.getInstance().getZone(activeChar) != null && !activeChar.isGM())
+			{
+				activeChar.sendPacket(new SystemMessage(SystemMessageId.YOU_MAY_NOT_SUMMON_FROM_YOUR_CURRENT_LOCATION));
 				return;
 			}
 		}

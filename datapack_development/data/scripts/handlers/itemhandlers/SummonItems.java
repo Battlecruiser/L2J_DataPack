@@ -187,6 +187,7 @@ public class SummonItems implements IItemHandler
 		}
 	}
 	
+	// TODO: this should be inside skill handler
 	static class PetSummonFinalizer implements Runnable
 	{
 		private L2PcInstance _activeChar;
