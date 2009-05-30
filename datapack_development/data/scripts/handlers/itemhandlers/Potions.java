@@ -27,13 +27,18 @@ import net.sf.l2j.gameserver.model.actor.L2Playable;
 import net.sf.l2j.gameserver.model.actor.L2Summon;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.model.actor.instance.L2PetInstance;
-import net.sf.l2j.gameserver.model.actor.instance.L2SummonInstance;
 import net.sf.l2j.gameserver.model.entity.TvTEvent;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.ActionFailed;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 import net.sf.l2j.gameserver.templates.skills.L2EffectType;
 
+/**
+ * 
+ * temp handler
+ * here u can found items that yet cannot be unhardcoded due to missing better core support
+ *
+ */
 public class Potions implements IItemHandler
 {
 	protected static final Logger _log = Logger.getLogger(Potions.class.getName());
@@ -41,15 +46,19 @@ public class Potions implements IItemHandler
 	private static final int[] ITEM_IDS =
 	{
 		// General Potions
-		725, 726, 727, 728, 1060, 1061, 1073,
+		727, 728, 1060, 1061, 1073,
 		// Fisherman Potions
 		8193, 8194, 8195, 8196, 8197, 8198, 8199, 8200, 8201,
-		// Echo Crystals (why?)
+		// Echo Crystals (why? - using same skill id, not supported yet from core to destroy used item from skill use)
 		4416,7061,
 		// Kamael Soul Bottles
 		10410,10411,10412,
 		// Fruit Potions
-		20393,20394
+		20393,20394,
+		// chatm of courage
+		8515,8516,8517,8518,8519,8520,
+		// battleground buffs
+		10143,10144,10145,10146,10147,10148
 	};
 
 	/**
@@ -84,17 +93,14 @@ public class Potions implements IItemHandler
 
 		switch (itemId)
 		{
-			case 727: // Healing_potion, xml: 2032
-				if (!isEffectReplaceable(playable, L2EffectType.HEAL_OVER_TIME, itemId))
-					return;
-				res = usePotion(playable, 2032, 1);
-				break;
+			
 			case 728: // Custom mana potion, xml: 9008
 				if (Config.L2JMOD_ENABLE_MANA_POTIONS_SUPPORT)
 					res = usePotion(activeChar, 9008, 1);
 				else
 					playable.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
 				break;
+			case 727: // Healing_potion, xml: 2032
 			case 1061:
 				if (!isEffectReplaceable(playable, L2EffectType.HEAL_OVER_TIME, itemId))
 					return;
@@ -282,6 +288,53 @@ Control of this needs to be moved back into potions.java so proper message suppo
 			case 7061:
 				res = usePotion(playable, 2073, 1);
 				break;
+			case 8515:
+			case 8516:
+			case 8517:
+			case 8518:
+			case 8519:
+			case 8520:
+				res = usePotion(playable, 5041, 1);
+				break;
+			case 10143:
+				res = usePotion(playable, 2379, 1);
+				usePotion(playable, 2380, 1);
+				usePotion(playable, 2381, 1);
+				usePotion(playable, 2382, 1);
+				usePotion(playable, 2383, 1);
+				break;
+			case 10144:
+				res = usePotion(playable, 2379, 1);
+				usePotion(playable, 2380, 1);
+				usePotion(playable, 2381, 1);
+				usePotion(playable, 2384, 1);
+				usePotion(playable, 2385, 1);
+				break;
+			case 10145:
+				res = usePotion(playable, 2379, 1);
+				usePotion(playable, 2380, 1);
+				usePotion(playable, 2381, 1);
+				usePotion(playable, 2384, 1);
+				usePotion(playable, 2386, 1);
+				break;
+			case 10146:
+				res = usePotion(playable, 2379, 1);
+				usePotion(playable, 2387, 1);
+				usePotion(playable, 2381, 1);
+				usePotion(playable, 2388, 1);
+				usePotion(playable, 2383, 1);
+				break;
+			case 10147:
+				res = usePotion(playable, 2379, 1);
+				usePotion(playable, 2387, 1);
+				usePotion(playable, 2381, 1);
+				usePotion(playable, 2383, 1);
+				usePotion(playable, 2389, 1);
+				break;
+			case 10148:
+				res = usePotion(playable, 2390, 1);
+				usePotion(playable, 2391, 1);
+				break;
 			default:
 		}
 
@@ -343,8 +396,10 @@ Control of this needs to be moved back into potions.java so proper message suppo
 				activeChar.sendPacket(sm);
 				return false;
 			}
-
-			activeChar.doSimultaneousCast(skill);
+			if (skill.isPotion())
+				activeChar.doSimultaneousCast(skill);
+			else
+				activeChar.doCast(skill);
 
 			if (activeChar instanceof L2PcInstance)
 			{
@@ -352,13 +407,6 @@ Control of this needs to be moved back into potions.java so proper message suppo
 				// Only for Heal potions
 				if (magicId == 2031 || magicId == 2032 || magicId == 2037)
 					player.shortBuffStatusUpdate(magicId, level, 15);
-				// Summons should be affected by herbs too, self time effect is handled at L2Effect constructor
-				else if
-				(
-					(player.getPet() != null && player.getPet() instanceof L2SummonInstance) &&
-					((magicId > 2277 && magicId < 2286) || (magicId >= 2512 && magicId <= 2514))
-				)
-					player.getPet().doSimultaneousCast(skill);
 
 				if (!(player.isSitting() && !skill.isPotion()))
 					return true;
