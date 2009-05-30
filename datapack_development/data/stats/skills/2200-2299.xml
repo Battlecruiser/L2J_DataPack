@@ -1057,6 +1057,8 @@
 </skill>
 <skill id="2286" levels="6" name="Scroll: Recovery">
   <table name="#itemConsumeId"> 8594 8595 8596 8597 8598 8599 </table>
+  <table name="#minLvl">0 20 40 52 61 76 </table>
+  <table name="#maxLvl">20 40 52 61 76 86 </table>
   <set name="itemConsumeId" val="#itemConsumeId"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1065,8 +1067,16 @@
   <set name="hitTime" val="500"/>
   <set name="staticHitTime" val="true"/>
   <cond msgId="113" addName="1">
-    <player flyMounted="False"/>
+    <and>
+      <player level="#minLvl"/>
+      <not>
+        <player level="#maxLvl"/>
+      </not>
+    </and>
   </cond>
+  <for>
+    <effect name="Recovery" time="1" val="0" noicon="1"/>
+  </for>
 </skill>
 <skill id="2287" levels="6" name="Elixir of Life">
   <table name="#itemConsumeId"> 8622 8623 8624 8625 8626 8627 </table>
