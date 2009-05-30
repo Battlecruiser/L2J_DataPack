@@ -83,7 +83,7 @@ class Quest (JQuest) :
      npc.deleteMe();
      st.addSpawn(PURE_UNICORN,npc,False)
    elif event == "2" :
-     npc.reduceCurrentHp(10000,npc,None)
+     npc.doDie(npc)
      npc2 = st.addSpawn(FALLEN_UNICORN,npc,False)
      time.sleep(1000)
      npc2.getSpawn().startRespawn();
@@ -146,7 +146,7 @@ class Quest (JQuest) :
              htmltext = "31751-5.htm"
      elif npcId == ANGEL_CORPSE :
          if cond == 4 :
-           npc.reduceCurrentHp(10000,npc,None)
+           npc.doDie(npc)
            chance = st.getRandom(100)
            if CHANCE_FOR_HAIR < chance :
              htmltext = "31752-2.htm"
@@ -183,7 +183,7 @@ class Quest (JQuest) :
          elif cond == 9 and st.getQuestItemsCount(ORB_OF_BINDING) >= 1 :
              htmltext = "31748-2.htm"
              st.takeItems(ORB_OF_BINDING,1)
-             npc.reduceCurrentHp(10000,npc,None)
+             npc.doDie(npc)
              st.set("cornerstones",str(cornerstones+1))
              st.playSound("ItemSound.quest_middle")
              if cornerstones == 3 :
