@@ -115,6 +115,9 @@ public class Continuous implements ISkillHandler
 					else if (player != null && player.isCursedWeaponEquipped())
 						continue;
 				}
+				// TODO: boolean isn't good idea, could cause bugs
+				else if (skill.getId() == 2168 && activeChar instanceof L2PcInstance)
+					((L2PcInstance) activeChar).setCharmOfLuck(true);
 			}
 			
 			if (skill.isOffensive() || skill.isDebuff())

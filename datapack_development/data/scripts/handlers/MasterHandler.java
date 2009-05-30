@@ -138,7 +138,6 @@ public class MasterHandler
 		ItemHandler.getInstance().registerItemHandler(new EnchantScrolls());
 		ItemHandler.getInstance().registerItemHandler(new Book());
 		ItemHandler.getInstance().registerItemHandler(new Remedy());
-		ItemHandler.getInstance().registerItemHandler(new Scrolls());
 		ItemHandler.getInstance().registerItemHandler(new SoulCrystals());
 		ItemHandler.getInstance().registerItemHandler(new SevenSignsRecord());
 		ItemHandler.getInstance().registerItemHandler(new CharChangePotions());

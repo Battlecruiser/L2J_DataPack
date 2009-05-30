@@ -22,27 +22,33 @@ import net.sf.l2j.gameserver.model.L2Skill;
 import net.sf.l2j.gameserver.model.actor.L2Playable;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.model.actor.instance.L2PetInstance;
+import net.sf.l2j.gameserver.model.actor.instance.L2SummonInstance;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance.TimeStamp;
 import net.sf.l2j.gameserver.model.entity.TvTEvent;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.ActionFailed;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
+import net.sf.l2j.gameserver.templates.item.L2EtcItemType;
 
 
 public class ItemSkills implements IItemHandler
 {
+	// TODO: unhardcode item ids
 	private static final int[] ITEM_IDS =
 	{
-		65,725,726,728,733,734,735,1374,1375,1539,1540,4411,4412,
+		65,725,726,733,734,735,1374,1375,1539,1540,3926,3927,3928,3929,
+		3930,3931,3932,3933,3934,3935,4218,4411,4412,
 		4413,4414,4415,4417,5010,5234,5562,5563,5564,5565,5566,5583,
-		5584,5585,5586,5587,5589,5591,5592,6035,6036,6403,6406,6407,
-		6652,6654,6655,6903,
+		5584,5585,5586,5587,5589,5591,5592,5593,5594,5595,5703,5803,
+		5804,5805,5806,5807,6035,6036,6037,6403,6406,6407,6652,6654,6655,6903,
 		7061,7062,8154,8155,8156,8157,8202,8555,8594,8595,8596,8597,
 		8598,8599,8600,8601,8602,8603,8604,8605,8606,8607,8608,8609,
-		8610,8611,8612,8613,8614,8952,8953,8954,8955,8956,
-		9688,9689,9997,9998,9999,10000,10001,10002,10155,10157,10260,
+		8610,8611,8612,8613,8614,8952,8953,8954,8955,8956,9146,9147,
+		9148,9149,9150,9151,9152,9153,9154,9155,9688,9689,9897,9997,
+		9998,9999,10000,10001,10002,10131,10132,10133,10134,10135,
+		10136,10137,10138,10151,10155,10157,10260,
 		10261,10262,10263,10264,10265,10266,10267,10268,10269,10270,
-		10409,10432,10433,10549,10550,10551,10552,10553,
+		10274,10409,10432,10433,10549,10550,10551,10552,10553,
 		10554,10555,10556,10557,10558,10559,10560,10561,10562,10563,
 		10564,10565,10566,10567,10568,10569,10570,10571,10572,10573,
 		10574,10575,10576,10577,10578,10579,10580,10581,10582,10583,
@@ -74,10 +80,10 @@ public class ItemSkills implements IItemHandler
 	public void useItem(L2Playable playable, L2ItemInstance item)
 	{
 		L2PcInstance activeChar; // use activeChar only for L2PcInstance checks where cannot be used PetInstance
-		
+		boolean isPet = playable instanceof L2PetInstance;
 		if (playable instanceof L2PcInstance)
 			activeChar = (L2PcInstance) playable;
-		else if (playable instanceof L2PetInstance)
+		else if (isPet)
 			activeChar = ((L2PetInstance) playable).getOwner();
 		else
 			return;
@@ -117,12 +123,12 @@ public class ItemSkills implements IItemHandler
 								return ;
 							}
 							// pets can use items only when they are tradeable
-							if (playable instanceof L2PetInstance && !item.isTradeable())
+							if (isPet && !item.isTradeable())
 								activeChar.sendPacket(new SystemMessage(SystemMessageId.ITEM_NOT_FOR_PETS));
 							else
 							{
 								// send message to owner
-								if (playable instanceof L2PetInstance)
+								if (isPet)
 								{
 									SystemMessage sm = new SystemMessage(SystemMessageId.PET_USES_S1);
 									sm.addString(itemSkill.getName());
@@ -155,7 +161,12 @@ public class ItemSkills implements IItemHandler
 									}
 								}
 								if (itemSkill.isPotion())
+								{
 									playable.doSimultaneousCast(itemSkill);
+									// Summons should be affected by herbs too, self time effect is handled at L2Effect constructor
+									if (!isPet && item.getItemType() == L2EtcItemType.HERB && activeChar.getPet() != null && activeChar.getPet() instanceof L2SummonInstance)
+										activeChar.getPet().doSimultaneousCast(itemSkill);
+								}
 								else
 								{
 									playable.stopMove(null);

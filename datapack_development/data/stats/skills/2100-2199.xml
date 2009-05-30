@@ -639,6 +639,9 @@
 </skill>
 <skill id="2167" levels="4" name="Scroll of SP">
   <table name="#power"> 500 5000 100000 500000 </table>
+  <table name="#itemConsumeId"> 5593 5594 5595 0 </table>
+  <set name="itemConsumeId" val="#itemConsumeId"/>
+  <set name="itemConsumeCount" val="1"/>
   <set name="hitTime" val="200"/>
   <set name="staticHitTime" val="true"/>
   <set name="magicLvl" val="1"/>
@@ -653,6 +656,9 @@
   </cond>
 </skill>
 <skill id="2168" levels="6" name="Raid Blessing">
+  <table name="#itemConsumeId"> 5703 5803 5804 5805 5806 5087 </table>
+  <set name="itemConsumeId" val="#itemConsumeId"/>
+  <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="2000"/>
   <set name="staticHitTime" val="true"/>
@@ -687,6 +693,8 @@
   </for>
 </skill>
 <skill id="2170" levels="1" name="Scroll: Cancel Sleep">
+  <set name="itemConsumeId" val="6037"/>
+  <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="NEGATE"/>
   <set name="operateType" val="OP_ACTIVE"/>
