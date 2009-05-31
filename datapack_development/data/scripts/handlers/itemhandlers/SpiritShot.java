@@ -34,13 +34,6 @@ import net.sf.l2j.gameserver.util.Broadcast;
 
 public class SpiritShot implements IItemHandler
 {
-	// All the item IDs that this handler knows.
-	private static final int[] ITEM_IDS =
-	{
-		5790, 2509, 2510, 2511, 2512, 2513, 2514,
-		22077,22078,22079,22080,22081
-	};
-	
 	/**
 	 * 
 	 * @see net.sf.l2j.gameserver.handler.IItemHandler#useItem(net.sf.l2j.gameserver.model.actor.L2Playable, net.sf.l2j.gameserver.model.L2ItemInstance)
@@ -170,14 +163,5 @@ public class SpiritShot implements IItemHandler
 		// Send message to client
 		activeChar.sendPacket(new SystemMessage(SystemMessageId.ENABLED_SPIRITSHOT));
 		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, skillId, 1, 0, 0), 360000);
-	}
-	
-	/**
-	 * 
-	 * @see net.sf.l2j.gameserver.handler.IItemHandler#getItemIds()
-	 */
-	public int[] getItemIds()
-	{
-		return ITEM_IDS;
 	}
 }

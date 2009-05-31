@@ -31,11 +31,6 @@ import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
  */
 public class PetFood implements IItemHandler
 {
-	private static final int[] ITEM_IDS =
-	{
-		2515, 4038, 5168, 5169, 6316, 7582, 9668, 10425
-	};
-	
 	/**
 	 * 
 	 * @see net.sf.l2j.gameserver.handler.IItemHandler#useItem(net.sf.l2j.gameserver.model.actor.L2Playable, net.sf.l2j.gameserver.model.L2ItemInstance)
@@ -151,14 +146,5 @@ public class PetFood implements IItemHandler
 			}
 		}
 		return false;
-	}
-	
-	/**
-	 * 
-	 * @see net.sf.l2j.gameserver.handler.IItemHandler#getItemIds()
-	 */
-	public int[] getItemIds()
-	{
-		return ITEM_IDS;
 	}
 }

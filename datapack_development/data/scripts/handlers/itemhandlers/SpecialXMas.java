@@ -26,11 +26,6 @@ import net.sf.l2j.gameserver.network.serverpackets.ShowXMasSeal;
  */
 public class SpecialXMas implements IItemHandler
 {
-	private static int[] _itemIds =
-	{
-		5555
-	};
-	
 	/**
 	 * 
 	 * @see net.sf.l2j.gameserver.handler.IItemHandler#useItem(net.sf.l2j.gameserver.model.actor.L2Playable, net.sf.l2j.gameserver.model.L2ItemInstance)
@@ -41,13 +36,5 @@ public class SpecialXMas implements IItemHandler
 			return;
 		
 		playable.broadcastPacket(new ShowXMasSeal(item.getItemId()));
-	}
-	
-	/**
-	 * @see net.sf.l2j.gameserver.handler.IItemHandler#getItemIds()
-	 */
-	public int[] getItemIds()
-	{
-		return _itemIds;
 	}
 }

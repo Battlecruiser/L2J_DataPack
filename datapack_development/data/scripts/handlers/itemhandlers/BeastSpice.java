@@ -25,12 +25,6 @@ import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 
 public class BeastSpice implements IItemHandler
 {
-	// Golden Spice, Crystal Spice
-	private static final int[] ITEM_IDS =
-	{
-		6643, 6644
-	};
-	
 	/**
 	 * 
 	 * @see net.sf.l2j.gameserver.handler.IItemHandler#useItem(net.sf.l2j.gameserver.model.actor.L2Playable, net.sf.l2j.gameserver.model.L2ItemInstance)
@@ -57,14 +51,5 @@ public class BeastSpice implements IItemHandler
 		{ // Crystal Spice
 			activeChar.useMagic(SkillTable.getInstance().getInfo(2189, 1), false, false);
 		}
-	}
-	
-	/**
-	 * 
-	 * @see net.sf.l2j.gameserver.handler.IItemHandler#getItemIds()
-	 */
-	public int[] getItemIds()
-	{
-		return ITEM_IDS;
 	}
 }

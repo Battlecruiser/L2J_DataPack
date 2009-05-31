@@ -35,12 +35,6 @@ import net.sf.l2j.gameserver.util.Broadcast;
  */
 public class BeastSpiritShot implements IItemHandler
 {
-	// All the item IDs that this handler knows.
-	private static final int[] ITEM_IDS =
-	{
-		6646, 6647, 20333, 20334
-	};
-	
 	/**
 	 * 
 	 * @see net.sf.l2j.gameserver.handler.IItemHandler#useItem(net.sf.l2j.gameserver.model.actor.L2Playable, net.sf.l2j.gameserver.model.L2ItemInstance)
@@ -164,14 +158,5 @@ public class BeastSpiritShot implements IItemHandler
 				break;
 		}
 		Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(activePet, activePet, skillId, 1, 0, 0), 360000/*600*/);
-	}
-	
-	/**
-	 * 
-	 * @see net.sf.l2j.gameserver.handler.IItemHandler#getItemIds()
-	 */
-	public int[] getItemIds()
-	{
-		return ITEM_IDS;
 	}
 }

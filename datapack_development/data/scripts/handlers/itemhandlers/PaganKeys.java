@@ -32,10 +32,6 @@ import net.sf.l2j.util.Rnd;
  */
 public class PaganKeys implements IItemHandler
 {
-	private static final int[] ITEM_IDS =
-	{
-		8273, 8274, 8275
-	};
 	public static final int INTERACTION_DISTANCE = 100;
 	
 	/**
@@ -149,14 +145,5 @@ public class PaganKeys implements IItemHandler
 				}
 				break;
 		}
-	}
-	
-	/**
-	 * 
-	 * @see net.sf.l2j.gameserver.handler.IItemHandler#getItemIds()
-	 */
-	public int[] getItemIds()
-	{
-		return ITEM_IDS;
 	}
 }

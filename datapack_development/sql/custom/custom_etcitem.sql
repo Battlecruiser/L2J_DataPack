@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS `custom_etcitem` (
   `dropable` varchar(5) NOT NULL default 'false',
   `destroyable` varchar(5) NOT NULL default 'false',
   `tradeable` varchar(5) NOT NULL default 'false',
+  `handler` varchar(70) NOT NULL DEFAULT 'none',
   `skill` varchar(70) NOT NULL default '0-0;',
-  `html` varchar(5) NOT NULL default 'false',
   PRIMARY KEY (`item_id`)
 );

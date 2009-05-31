@@ -35,13 +35,6 @@ import net.sf.l2j.gameserver.util.Broadcast;
 
 public class SoulShots implements IItemHandler
 {
-	// All the item IDs that this handler knows.
-	private static final int[] ITEM_IDS =
-	{
-		5789, 1835, 1463, 1464, 1465, 1466, 1467,
-		22082,22083,22084,22085,22086
-	};
-	
 	/**
 	 * 
 	 * @see net.sf.l2j.gameserver.handler.IItemHandler#useItem(net.sf.l2j.gameserver.model.actor.L2Playable, net.sf.l2j.gameserver.model.L2ItemInstance)
@@ -182,14 +175,5 @@ public class SoulShots implements IItemHandler
 		// Send message to client
 		activeChar.sendPacket(new SystemMessage(SystemMessageId.ENABLED_SOULSHOT));
 		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, skillId, 1, 0, 0), 360000);
-	}
-	
-	/**
-	 * 
-	 * @see net.sf.l2j.gameserver.handler.IItemHandler#getItemIds()
-	 */
-	public int[] getItemIds()
-	{
-		return ITEM_IDS;
 	}
 }

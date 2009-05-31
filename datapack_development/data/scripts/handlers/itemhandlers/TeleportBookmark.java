@@ -28,12 +28,6 @@ import net.sf.l2j.gameserver.network.SystemMessageId;
  */
 public class TeleportBookmark implements IItemHandler
 {
-	// All the item IDs that this handler knows.
-	private static final int[] ITEM_IDS =
-	{
-		13015
-	};
-	
 	
 	public void useItem(L2Playable playable, L2ItemInstance item)
 	{
@@ -56,10 +50,5 @@ public class TeleportBookmark implements IItemHandler
 		SystemMessage sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
 		sm.addItemName(item.getItemId());
 		player.sendPacket(sm);
-	}
-
-	public int[] getItemIds()
-	{
-		return ITEM_IDS;
 	}
 }

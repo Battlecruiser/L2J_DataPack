@@ -29,12 +29,6 @@ import net.sf.l2j.gameserver.network.serverpackets.ShowMiniMap;
 
 public class Maps implements IItemHandler
 {
-	// all the items id's that this handler knows
-	private static final int[] ITEM_IDS =
-	{
-		1665, 1863
-	};
-	
 	/**
 	 * 
 	 * @see net.sf.l2j.gameserver.handler.IItemHandler#useItem(net.sf.l2j.gameserver.model.actor.L2Playable, net.sf.l2j.gameserver.model.L2ItemInstance)
@@ -45,14 +39,5 @@ public class Maps implements IItemHandler
 			return;
 		
 		playable.sendPacket(new ShowMiniMap(item.getItemId()));
-	}
-	
-	/**
-	 * 
-	 * @see net.sf.l2j.gameserver.handler.IItemHandler#getItemIds()
-	 */
-	public int[] getItemIds()
-	{
-		return ITEM_IDS;
 	}
 }

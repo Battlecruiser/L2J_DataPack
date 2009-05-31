@@ -35,12 +35,6 @@ import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 
 public class ScrollOfResurrection implements IItemHandler
 {
-	// all the items ids that this handler knows
-	private static final int[] ITEM_IDS =
-	{
-		737, 3936, 3959, 6387, 9157, 10150, 13259
-	};
-	
 	/**
 	 * 
 	 * @see net.sf.l2j.gameserver.handler.IItemHandler#useItem(net.sf.l2j.gameserver.model.actor.L2Playable, net.sf.l2j.gameserver.model.L2ItemInstance)
@@ -187,14 +181,5 @@ public class ScrollOfResurrection implements IItemHandler
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
 		}
-	}
-	
-	/**
-	 * 
-	 * @see net.sf.l2j.gameserver.handler.IItemHandler#getItemIds()
-	 */
-	public int[] getItemIds()
-	{
-		return ITEM_IDS;
 	}
 }

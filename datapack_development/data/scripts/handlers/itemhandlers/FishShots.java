@@ -33,11 +33,6 @@ import net.sf.l2j.gameserver.util.Broadcast;
  */
 public class FishShots implements IItemHandler
 {
-	// All the item IDs that this handler knows.
-	private static final int[] ITEM_IDS =
-	{
-		6535, 6536, 6537, 6538, 6539, 6540
-	};
 	private static final int[] SKILL_IDS =
 	{
 		2181, 2182, 2183, 2184, 2185, 2186
@@ -92,14 +87,5 @@ public class FishShots implements IItemHandler
 		MagicSkillUse MSU = new MagicSkillUse(activeChar, SKILL_IDS[grade], 1, 0, 0);
 		Broadcast.toSelfAndKnownPlayers(activeChar, MSU);
 		activeChar.setTarget(oldTarget);
-	}
-	
-	/**
-	 * 
-	 * @see net.sf.l2j.gameserver.handler.IItemHandler#getItemIds()
-	 */
-	public int[] getItemIds()
-	{
-		return ITEM_IDS;
 	}
 }

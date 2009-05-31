@@ -27,11 +27,6 @@ import net.sf.l2j.gameserver.network.serverpackets.SSQStatus;
  */
 public class SevenSignsRecord implements IItemHandler
 {
-	private static final int[] ITEM_IDS =
-	{
-		5707
-	};
-	
 	/**
 	 * 
 	 * @see net.sf.l2j.gameserver.handler.IItemHandler#useItem(net.sf.l2j.gameserver.model.actor.L2Playable, net.sf.l2j.gameserver.model.L2ItemInstance)
@@ -42,14 +37,5 @@ public class SevenSignsRecord implements IItemHandler
 			return;
 		
 		playable.sendPacket(new SSQStatus((L2PcInstance) playable, 1));
-	}
-	
-	/**
-	 * 
-	 * @see net.sf.l2j.gameserver.handler.IItemHandler#getItemIds()
-	 */
-	public int[] getItemIds()
-	{
-		return ITEM_IDS;
 	}
 }
