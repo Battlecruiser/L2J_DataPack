@@ -128,6 +128,7 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <table name="#ench1Power"> 5813 5852 5892 5932 5971 6011 6050 6090 6129 6169 6209 6248 6288 6327 6367 6406 6446 6486 6525 6565 6604 6644 6683 6723 6763 6802 6842 6881 6921 6960 </table>
   <table name="#ench2MpConsume"> 50 49 48 47 46 46 45 44 43 42 41 41 40 39 38 37 36 36 35 34 33 32 31 31 30 29 28 27 26 26 </table>
+  <table name="#magicLvl"> 52 60 66 72 </table>
   <table name="#mpConsume"> 36 43 47 51 </table>
   <table name="#power"> 2388 3408 4275 5180 </table>
   <set name="weaponsAllowed" val="131072"/> <!-- Rapier -->
@@ -139,6 +140,7 @@
   <set name="reuseDelay" val="3000"/>
   <set name="ignoreShld" val="true"/>
   <set name="skillType" val="PDAM"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
   <set name="effectRange" val="200"/>
@@ -250,6 +252,7 @@
 <skill id="510" levels="5" name="Deadly Roulette">
   <!-- Done by erhiwan -->
   <table name="#lethal2"> 10 18 26 34 42 50 </table> <!-- Guess -->
+  <table name="#magicLvl"> 66 68 70 72 </table>
   <table name="#mpConsume"> 100 103 106 109 112 </table>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
@@ -258,6 +261,7 @@
   <set name="hitTime" val="3000"/>
   <set name="lethal2" val="#lethal2"/>
   <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="0"/>
   <set name="reuseDelay" val="10000"/> <!-- Guess -->
@@ -510,6 +514,7 @@
   <set name="hitTime" val="1080"/>
   <set name="SSBoost" val="2.0"/> <!-- Guess -->
   <set name="overHit" val="true"/>
+  <set name="magicLvl" val="78"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="target" val="TARGET_FRONT_AREA"/>
   <set name="skillRadius" val="310"/>

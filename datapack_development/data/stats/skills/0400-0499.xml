@@ -1629,11 +1629,13 @@
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <table name="#ench1Power"> 2325 2341 2357 2373 2389 2405 2420 2436 2452 2468 2484 2500 2515 2531 2547 2563 2579 2595 2610 2626 2642 2658 2674 2690 2705 2721 2737 2753 2769 2784 </table>
   <table name="#ench2MpConsume"> 74 73 72 72 71 70 69 69 68 67 66 66 65 64 64 63 62 61 61 60 59 58 58 57 56 55 55 54 53 53 </table>
+  <table name="#magicLvl"> 52 52 52 55 55 55 58 58 58 60 60 62 62 64 64 66 66 68 68 70 70 72 72 74 74 </table>
   <table name="#mpConsume"> 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 </table>
   <table name="#power"> 866 910 955 1002 1050 1100 1150 1202 1255 1309 1364 1420 1476 1534 1592 1651 1710 1770 1830 1891 1951 2012 2072 2132 2192 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
   <set name="hitTime" val="1080"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="overHit" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="target" val="TARGET_AURA"/>
