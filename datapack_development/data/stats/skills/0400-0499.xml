@@ -533,7 +533,7 @@
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
   <for>
-    <effect count="0x7fffffff" name="MpConsumePerLevel" time="3" val="0.2"> <!-- Should be by Lvl -->
+    <effect count="0x7fffffff" name="MpConsumePerLevel" time="3" val="0.2">
       <mul order="0x30" stat="stunVuln" val="#stunVuln"/>
       <mul order="0x30" stat="sleepVuln" val="#sleepVuln"/>
     </effect>
