@@ -768,7 +768,7 @@
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
   <for>
-    <effect count="0x7fffffff" name="MpConsumePerLevel" time="3" val="1.5">
+    <effect count="0x7fffffff" name="MpConsumePerLevel" time="3" val="1">
       <mul order="0x30" stat="skillMastery" val="2"/>
     </effect>
   </for>
