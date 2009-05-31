@@ -382,6 +382,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="2042" levels="1" name="Antidote">
+  <set name="itemConsumeId" val="1831"/>
+  <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NEGATE"/>
   <set name="negateStats" val="POISON"/>
@@ -392,6 +394,8 @@
   </cond>
 </skill>
 <skill id="2043" levels="1" name="Greater Antidote">
+  <set name="itemConsumeId" val="1832"/>
+  <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NEGATE"/>
   <set name="negateStats" val="POISON"/>
@@ -402,6 +406,8 @@
   </cond>
 </skill>
 <skill id="2044" levels="1" name="Bandage">
+  <set name="itemConsumeId" val="1833"/>
+  <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NEGATE"/>
   <set name="negateStats" val="BLEED"/>
@@ -412,6 +418,8 @@
   </cond>
 </skill>
 <skill id="2045" levels="1" name="Emergency Dressing">
+  <set name="itemConsumeId" val="1834"/>
+  <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NEGATE"/>
   <set name="negateStats" val="BLEED"/>
@@ -627,8 +635,9 @@
   </for>
 </skill>
 <skill id="2060" levels="1" name="Healing Medicine">
-  <!-- Needs to be Done -->
-  <set name="power" val="1"/>
+  <set name="itemConsumeId" val="3889"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="negateId" val="4082"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="NEGATE"/>
   <set name="operateType" val="OP_ACTIVE"/>

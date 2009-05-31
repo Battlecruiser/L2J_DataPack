@@ -33,11 +33,6 @@ import net.sf.l2j.util.Rnd;
 
 public class RollingDice implements IItemHandler
 {
-	private static final int[] ITEM_IDS =
-	{
-		4625, 4626, 4627, 4628
-	};
-	
 	/**
 	 * 
 	 * @see net.sf.l2j.gameserver.handler.IItemHandler#useItem(net.sf.l2j.gameserver.model.actor.L2Playable, net.sf.l2j.gameserver.model.L2ItemInstance)
@@ -93,14 +88,5 @@ public class RollingDice implements IItemHandler
                     return 0;
                 }
 		return Rnd.get(1, 6);
-	}
-	
-	/**
-	 * 
-	 * @see net.sf.l2j.gameserver.handler.IItemHandler#getItemIds()
-	 */
-	public int[] getItemIds()
-	{
-		return ITEM_IDS;
 	}
 }

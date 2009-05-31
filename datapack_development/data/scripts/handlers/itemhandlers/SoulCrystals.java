@@ -38,19 +38,6 @@ import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 
 public class SoulCrystals implements IItemHandler
 {
-	// First line is for Red Soul Crystals, second is Green and third is Blue Soul Crystals,
-	// ordered by ascending level, from 0 to 13...
-	private static final int[] ITEM_IDS =
-	{
-		4629, 4630, 4631, 4632, 4633, 4634, 4635,
-		4636, 4637, 4638, 4639, 5577, 5580, 5908,
-		9570, 4640, 4641, 4642, 4643, 4644, 4645,
-		4646, 4647, 4648, 4649, 4650, 5578, 5581,
-		5911, 9572, 4651, 4652, 4653, 4654, 4655,
-		4656, 4657, 4658, 4659, 4660, 4661, 5579,
-		5582, 5914, 9571
-	};
-	
 	/**
 	 * 
 	 * @see net.sf.l2j.gameserver.handler.IItemHandler#useItem(net.sf.l2j.gameserver.model.actor.L2Playable, net.sf.l2j.gameserver.model.L2ItemInstance)
@@ -127,14 +114,5 @@ public class SoulCrystals implements IItemHandler
 				_log.log(Level.SEVERE, "", e);
 			}
 		}
-	}
-	
-	/**
-	 * 
-	 * @see net.sf.l2j.gameserver.handler.IItemHandler#getItemIds()
-	 */
-	public int[] getItemIds()
-	{
-		return ITEM_IDS;
 	}
 }

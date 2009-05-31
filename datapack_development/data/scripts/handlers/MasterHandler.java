@@ -135,10 +135,8 @@ public class MasterHandler
 		ItemHandler.getInstance().registerItemHandler(new EnchantAttribute());
 		ItemHandler.getInstance().registerItemHandler(new EnchantScrolls());
 		ItemHandler.getInstance().registerItemHandler(new Book());
-		ItemHandler.getInstance().registerItemHandler(new Remedy());
 		ItemHandler.getInstance().registerItemHandler(new SoulCrystals());
 		ItemHandler.getInstance().registerItemHandler(new SevenSignsRecord());
-		ItemHandler.getInstance().registerItemHandler(new CharChangePotions());
 		ItemHandler.getInstance().registerItemHandler(new ItemSkills());
 		ItemHandler.getInstance().registerItemHandler(new Seed());
 		ItemHandler.getInstance().registerItemHandler(new Harvester());
@@ -166,6 +164,7 @@ public class MasterHandler
 		SkillHandler.getInstance().registerSkillHandler(new BalanceLife());
 		SkillHandler.getInstance().registerSkillHandler(new Charge());
 		SkillHandler.getInstance().registerSkillHandler(new Continuous());
+		SkillHandler.getInstance().registerSkillHandler(new ChangeFace());
 		SkillHandler.getInstance().registerSkillHandler(new Resurrect());
 		SkillHandler.getInstance().registerSkillHandler(new ShiftTarget());
 		SkillHandler.getInstance().registerSkillHandler(new Spoil());

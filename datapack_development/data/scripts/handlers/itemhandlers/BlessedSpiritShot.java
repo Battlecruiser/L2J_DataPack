@@ -34,13 +34,6 @@ import net.sf.l2j.gameserver.util.Broadcast;
 
 public class BlessedSpiritShot implements IItemHandler
 {
-	// all the items ids that this handler knows
-	private static final int[] ITEM_IDS =
-	{
-		3947, 3948, 3949, 3950, 3951, 3952,
-		22072, 22073, 22074, 22075, 22076
-	};
-	
 	/**
 	 * 
 	 * @see net.sf.l2j.gameserver.handler.IItemHandler#useItem(net.sf.l2j.gameserver.model.actor.L2Playable, net.sf.l2j.gameserver.model.L2ItemInstance)
@@ -172,14 +165,5 @@ public class BlessedSpiritShot implements IItemHandler
 				
 		}
 		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, skillId, 1, 0, 0), 360000);
-	}
-	
-	/**
-	 * 
-	 * @see net.sf.l2j.gameserver.handler.IItemHandler#getItemIds()
-	 */
-	public int[] getItemIds()
-	{
-		return ITEM_IDS;
 	}
 }

@@ -884,6 +884,7 @@
 <skill id="2274" levels="9" name="Fisherman's Potion">
   <table name="#power"> 2 5 8 11 14 17 20 23 26 </table>
   <table name="#itemConsumeId"> 8193 8194 8195 8196 8197 8198 8199 8200 8201 </table>
+  <table name="#active_skill_id_lvl"> 1315,4 1315,7 1315,10 1315,13 1315,16 1315,19 1315,22 1315,25 1315,28 </table>
   <set name="itemConsumeId" val="#itemConsumeId"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="power" val="#power"/>
@@ -893,7 +894,10 @@
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="3600000"/>
   <cond msgId="113" addName="1">
-    <player flyMounted="False"/>
+    <and>
+      <player flyMounted="False"/>
+      <player active_skill_id_lvl="#active_skill_id_lvl"/>
+    </and>
   </cond>
   <for>
     <effect name="Buff" time="3600" val="0" stackOrder="20" stackType="fishPot"/>

@@ -24,33 +24,6 @@ import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 
 public class EnchantAttribute implements IItemHandler
 {
-	private static final int	ITEM_IDS[]	=
-											{
-			9546,
-			9547,
-			9548,
-			9549,
-			9550,
-			9551,
-			9552,
-			9553,
-			9554,
-			9555,
-			9556,
-			9557,
-			9558,
-			9559,
-			9560,
-			9561,
-			9562,
-			9563,
-			9564,
-			9565,
-			9566,
-			9567,
-			9568,
-			9569							};
-
 	public void useItem(L2Playable playable, L2ItemInstance item)
 	{
 		if (!(playable instanceof L2PcInstance))
@@ -65,10 +38,5 @@ public class EnchantAttribute implements IItemHandler
 		activeChar.sendPacket(new SystemMessage(SystemMessageId.SELECT_ITEM_TO_ADD_ELEMENTAL_POWER));
 		activeChar.setActiveEnchantAttrItem(item);
 		activeChar.sendPacket(new ExChooseInventoryAttributeItem(item.getItemId()));
-	}
-
-	public int[] getItemIds()
-	{
-		return ITEM_IDS;
 	}
 }

@@ -14,15 +14,12 @@
  */
 package handlers.itemhandlers;
 
-import java.util.logging.Logger;
-
 import net.sf.l2j.Config;
 import net.sf.l2j.gameserver.datatables.SkillTable;
 import net.sf.l2j.gameserver.handler.IItemHandler;
 import net.sf.l2j.gameserver.model.L2Effect;
 import net.sf.l2j.gameserver.model.L2ItemInstance;
 import net.sf.l2j.gameserver.model.L2Skill;
-import net.sf.l2j.gameserver.model.actor.L2Character;
 import net.sf.l2j.gameserver.model.actor.L2Playable;
 import net.sf.l2j.gameserver.model.actor.L2Summon;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
@@ -41,26 +38,6 @@ import net.sf.l2j.gameserver.templates.skills.L2EffectType;
  */
 public class Potions implements IItemHandler
 {
-	protected static final Logger _log = Logger.getLogger(Potions.class.getName());
-
-	private static final int[] ITEM_IDS =
-	{
-		// General Potions
-		727, 728, 1060, 1061, 1073,
-		// Fisherman Potions
-		8193, 8194, 8195, 8196, 8197, 8198, 8199, 8200, 8201,
-		// Echo Crystals (why? - using same skill id, not supported yet from core to destroy used item from skill use)
-		4416,7061,
-		// Kamael Soul Bottles
-		10410,10411,10412,
-		// Fruit Potions
-		20393,20394,
-		// chatm of courage
-		8515,8516,8517,8518,8519,8520,
-		// battleground buffs
-		10143,10144,10145,10146,10147,10148
-	};
-
 	/**
 	 * @see net.sf.l2j.gameserver.handler.IItemHandler#useItem(net.sf.l2j.gameserver.model.actor.L2Playable, net.sf.l2j.gameserver.model.L2ItemInstance)
 	 */
@@ -96,7 +73,7 @@ public class Potions implements IItemHandler
 			
 			case 728: // Custom mana potion, xml: 9008
 				if (Config.L2JMOD_ENABLE_MANA_POTIONS_SUPPORT)
-					res = usePotion(activeChar, 9008, 1);
+					usePotion(activeChar, 9008, 1);
 				else
 					playable.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
 				break;
@@ -127,142 +104,11 @@ Control of this needs to be moved back into potions.java so proper message suppo
 				break;
 */
 			case 10410: // 5 Souls Bottle
+			case 10411:
 				if (activeChar.getActiveClass() >= 123 && activeChar.getActiveClass() <= 136) // Kamael classes only
 					res = usePotion(activeChar, 2499, 1);
 				else
 					playable.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
-				break;
-			case 10411: // 5 Souls Bottle Combat
-				if (activeChar.getActiveClass() >= 123 && activeChar.getActiveClass() <= 136 && activeChar.isInsideZone(L2Character.ZONE_SIEGE)) //Kamael classes only
-					res = usePotion(activeChar, 2499, 1);
-				else
-					playable.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
-				break;
-			case 10412: // 10 Souls Bottle
-				if (activeChar.getActiveClass() >= 123 && activeChar.getActiveClass() <= 136) //Kamael classes only
-					res = usePotion(activeChar, 2499, 2);
-				else
-					playable.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
-				break;
-			case 8193: // Fisherman's Potion - Green
-				if (!(playable instanceof L2PcInstance))
-				{
-					itemNotForPets(activeChar);
-					return;
-				}
-				if (activeChar.getSkillLevel(1315) <= 3)
-				{
-					playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
-					playable.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
-					return;
-				}
-				usePotion(playable, 2274, 1);
-				break;
-			case 8194: // Fisherman's Potion - Jade
-				if (!(playable instanceof L2PcInstance))
-				{
-					itemNotForPets(activeChar);
-					return;
-				}
-				if (activeChar.getSkillLevel(1315) <= 6)
-				{
-					playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
-					playable.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
-					return;
-				}
-				usePotion(playable, 2274, 2);
-				break;
-			case 8195: // Fisherman's Potion - Blue
-				if (!(playable instanceof L2PcInstance))
-				{
-					itemNotForPets(activeChar);
-					return;
-				}
-				if (activeChar.getSkillLevel(1315) <= 9)
-				{
-					playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
-					playable.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
-					return;
-				}
-				usePotion(playable, 2274, 3);
-				break;
-			case 8196: // Fisherman's Potion - Yellow
-				if (!(playable instanceof L2PcInstance))
-				{
-					itemNotForPets(activeChar);
-					return;
-				}
-				if (activeChar.getSkillLevel(1315) <= 12)
-				{
-					playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
-					playable.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
-					return;
-				}
-				usePotion(playable, 2274, 4);
-				break;
-			case 8197: // Fisherman's Potion - Orange
-				if (!(playable instanceof L2PcInstance))
-				{
-					itemNotForPets(activeChar);
-					return;
-				}
-				if (activeChar.getSkillLevel(1315) <= 15)
-				{
-					playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
-					playable.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
-					return;
-				}
-				usePotion(playable, 2274, 5);
-				break;
-			case 8198: // Fisherman's Potion - Purple
-				if (!(playable instanceof L2PcInstance))
-				{
-					itemNotForPets(activeChar);
-					return;
-				}
-				if (activeChar.getSkillLevel(1315) <= 18)
-				{
-					playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
-					playable.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
-					return;
-				}
-				usePotion(playable, 2274, 6);
-				break;
-			case 8199: // Fisherman's Potion - Red
-				if (!(playable instanceof L2PcInstance))
-				{
-					itemNotForPets(activeChar);
-					return;
-				}
-				if (activeChar.getSkillLevel(1315) <= 21)
-				{
-					playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
-					playable.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
-					return;
-				}
-				usePotion(playable, 2274, 7);
-				break;
-			case 8200: // Fisherman's Potion - White
-				if (!(playable instanceof L2PcInstance))
-				{
-					itemNotForPets(activeChar);
-					return;
-				}
-				if (activeChar.getSkillLevel(1315) <= 24)
-				{
-					playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
-					playable.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
-					return;
-				}
-				usePotion(playable, 2274, 8);
-				break;
-			case 8201: // Fisherman's Potion - Black
-				if (!(playable instanceof L2PcInstance))
-				{
-					itemNotForPets(activeChar);
-					return;
-				}
-				usePotion(playable, 2274, 9);
 				break;
 			case 20393: // Sweet Fruit Cocktail
 				res = usePotion(playable, 22056, 1);
@@ -420,18 +266,5 @@ Control of this needs to be moved back into potions.java so proper message suppo
 			}
 		}
 		return false;
-	}
-
-	private void itemNotForPets(L2PcInstance activeChar)
-	{
-		activeChar.sendPacket(new SystemMessage(SystemMessageId.ITEM_NOT_FOR_PETS));
-	}
-
-	/**
-	 * @see net.sf.l2j.gameserver.handler.IItemHandler#getItemIds()
-	 */
-	public int[] getItemIds()
-	{
-		return ITEM_IDS;
 	}
 }

@@ -14,10 +14,7 @@
  */
 package handlers.itemhandlers;
 
-import java.util.logging.Logger;
-
 import javolution.util.FastMap;
-
 import net.sf.l2j.gameserver.datatables.SkillTable;
 import net.sf.l2j.gameserver.handler.IItemHandler;
 import net.sf.l2j.gameserver.model.L2ItemInstance;
@@ -33,26 +30,6 @@ import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 
 public class Elixir implements IItemHandler
 {
-	protected static final Logger _log = Logger.getLogger(Elixir.class.getName());
-	
-	private static final int[] ITEM_IDS =
-	{
-		//elixir of life
-		8622, 8623, 8624, 8625, 8626, 8627,
-		//elixir of Strength
-		8628, 8629, 8630, 8631, 8632, 8633,
-		//elixir of cp
-		8634, 8635, 8636, 8637, 8638, 8639,
-		//Secret medicine of Will
-		20354, 20355, 20356, 20357, 20358,
-		//Secret medicine of Life
-		20359, 20360, 20361, 20362, 20363,
-		//Secret medicine of Will
-		22027, 22028, 22029, 22030, 22031,
-		//Secret medicine of Life
-		22032, 22033, 22034, 22035, 22036
-	};
-	
 	/**
 	 * 
 	 * @see net.sf.l2j.gameserver.handler.IItemHandler#useItem(net.sf.l2j.gameserver.model.actor.L2Playable, net.sf.l2j.gameserver.model.L2ItemInstance)
@@ -222,13 +199,5 @@ public class Elixir implements IItemHandler
     		sm.addSkillName(skill);
     	}
     	player.sendPacket(sm);
-	}
-	/**
-	 * 
-	 * @see net.sf.l2j.gameserver.handler.IItemHandler#getItemIds()
-	 */
-	public int[] getItemIds()
-	{
-		return ITEM_IDS;
 	}
 }

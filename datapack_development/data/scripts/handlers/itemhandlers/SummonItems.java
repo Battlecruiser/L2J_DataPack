@@ -295,13 +295,4 @@ public class SummonItems implements IItemHandler
 			}
 		}
 	}
-	
-	/**
-	 * 
-	 * @see net.sf.l2j.gameserver.handler.IItemHandler#getItemIds()
-	 */
-	public int[] getItemIds()
-	{
-		return SummonItemsData.getInstance().itemIDs();
-	}
 }

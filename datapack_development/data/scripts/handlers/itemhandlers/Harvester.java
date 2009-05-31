@@ -32,11 +32,6 @@ import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 public class Harvester implements IItemHandler
 {
 	
-	private static final int[] ITEM_IDS =
-	{
-		/* Harvester */
-		5125
-	};
 	L2PcInstance _activeChar;
 	L2MonsterInstance _target;
 	
@@ -71,14 +66,5 @@ public class Harvester implements IItemHandler
 		
 		L2Skill skill = SkillTable.getInstance().getInfo(2098, 1); //harvesting skill
 		_activeChar.useMagic(skill, false, false);
-	}
-	
-	/**
-	 * 
-	 * @see net.sf.l2j.gameserver.handler.IItemHandler#getItemIds()
-	 */
-	public int[] getItemIds()
-	{
-		return ITEM_IDS;
 	}
 }

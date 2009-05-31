@@ -25,15 +25,6 @@ import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 public class EnchantScrolls implements IItemHandler
 {
 	
-	private static final int[] ITEM_IDS =
-	{
-		729, 730, 731, 732, 6569, 6570, 22009, 22013, 22015, 22017, 22019, 22021, // a grade
-		947, 948, 949, 950, 6571, 6572, 22008, 22012, 22014, 22016, 22018, 22020,// b grade
-		951, 952, 953, 954, 6573, 6574, 22007, 22011,// c grade
-		955, 956, 957, 958, 6575, 6576, 22006, 22010,// d grade
-		959, 960, 961, 962, 6577, 6578 // s grade
-	};
-	
 	/**
 	 * 
 	 * @see net.sf.l2j.gameserver.handler.IItemHandler#useItem(net.sf.l2j.gameserver.model.actor.L2Playable, net.sf.l2j.gameserver.model.L2ItemInstance)
@@ -49,14 +40,5 @@ public class EnchantScrolls implements IItemHandler
 		activeChar.setActiveEnchantItem(item);
 		activeChar.sendPacket(new SystemMessage(SystemMessageId.SELECT_ITEM_TO_ENCHANT));
 		activeChar.sendPacket(new ChooseInventoryItem(item.getItemId()));
-	}
-	
-	/**
-	 * 
-	 * @see net.sf.l2j.gameserver.handler.IItemHandler#getItemIds()
-	 */
-	public int[] getItemIds()
-	{
-		return ITEM_IDS;
 	}
 }
