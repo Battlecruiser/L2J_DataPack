@@ -2537,3 +2537,5 @@ INSERT INTO `armor` VALUES
 (22170,'Fairy\'s Antennae','hair','false','none',10, 'wood','none',0,-1,-1,0,0,0,0,0,'true','true','true','true','0-0;'),
 (22171,'Dandy\'s Chapeau','hairall','false','none',10, 'wood','none',0,-1,-1,0,0,0,0,0,'true','true','true','true','0-0;'),
 (22172,'Artisan\'s Goggles','hairall','false','none',10, 'wood','none',0,-1,-1,0,0,0,0,0,'true','true','true','true','0-0;');
+
+alter table armor add `enchant4_skill` varchar(8) NOT NULL default '0-0' after tradeable;
