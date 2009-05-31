@@ -19,6 +19,7 @@ CREATE TABLE IF NOT EXISTS `custom_armor` (
   `dropable` varchar(5) NOT NULL default 'false',
   `destroyable` varchar(5) NOT NULL default 'false',
   `tradeable` varchar(5) NOT NULL default 'false',
+  `enchant4_skill` varchar(8) NOT NULL default '0-0',
   `skill` varchar(70) default '0-0;',
   PRIMARY KEY (`item_id`)
 );
