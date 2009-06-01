@@ -75,7 +75,7 @@ public class ItemSkills implements IItemHandler
 						L2Skill itemSkill = SkillTable.getInstance().getInfo(skillId, skillLvl);
 						if (itemSkill != null)
 						{
-							if (!itemSkill.checkCondition(playable, playable, false))
+							if (!itemSkill.checkCondition(playable, playable.getTarget(), false))
 					        	return;
 							if ( playable.isSkillDisabled(skillId))
 							{
