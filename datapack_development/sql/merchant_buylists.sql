@@ -18577,23 +18577,52 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (6723,0,9925,40),
 (9644,0,9925,41),
 (9645,0,9925,42),
-(9646,0,9925,43);
+(9646,0,9925,43),
+(14606,0,9925,44),
+(5791,0,9925,45), -- Tomb Guard A
+(5792,0,9925,46), -- Tomb Guard B
+(5793,0,9925,47), -- Tomb Savant A
+(5794,0,9925,48), -- Tomb Savant B
+(5795,0,9925,49), -- Tomb Guard A
+(5796,0,9925,50), -- Tomb Guard B
+(5797,0,9925,51), -- Tomb Savant A
+(5798,0,9925,52), -- Tomb Savant B
+(5799,0,9925,53), -- Nephilim Lord
+(5800,0,9925,54), -- Nephilim Lord
+(5801,0,9925,55), -- Dusk
+(5802,0,9925,56), -- Dawn
+(5817,0,9925,57), -- Chrono Campana
+(13978,0,9925,58), -- Exclusive to Monsters (Mounted Troops High Level Leader)
+(13979,0,9925,59), -- Exclusive to Monsters (Dragon Steed Troop Battle Infantry Sword)
+(13980,0,9925,60), -- Exclusive to Monsters (Dragon Steed Troop Battle Infantry Shield)
+(13981,0,9925,61), -- Exclusive to Monsters (Mounted Troops Tactics)
+(13982,0,9925,62), -- Exclusive to Monsters (Death Knight_pole)
+(13983,0,9925,63), -- Exclusive to Monsters (Death Knight_2hs)
+(13984,0,9925,64), -- Exclusive to Monsters (Death Slayer_1hs)
+(13985,0,9925,65), -- Exclusive to Monsters (Death Slayer_r)
+(13986,0,9925,66), -- Exclusive to Monsters (Death Slayer_l)
+(13987,0,9925,67), -- Exclusive to Monsters (Savage Warrior)
+(13539,0,9925,68), -- Staff of Master Yogi
+(13524,0,9925,69), -- Gracia Soldier One-handed Sword
+(13525,0,9925,70), -- Gracia Soldier Shield
+(13061,0,9925,71), -- Exclusive to Monsters (Baroness\' Employee)
+(13062,0,9925,72); -- Exclusive to Monsters (Employee\'s Friend)
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
 -- (GM-Shop) Sigils
 (13885,0,9926,1),
-(13886,0,9926,2),
-(13887,0,9926,3),
-(12811,0,9926,4),
-(12812,0,9926,5),
-(12813,0,9926,6),
-(10118,0,9926,7),
-(10119,0,9926,8),
-(10121,0,9926,9),
-(10120,0,9926,10),
-(10117,0,9926,11),
-(13077,0,9926,12),
-(13078,0,9926,13);
+(10121,0,9926,2),
+(13886,0,9926,3),
+(10120,0,9926,4),
+(10117,0,9926,5),
+(13887,0,9926,6),
+(12811,0,9926,7),
+(13077,0,9926,8),
+(13078,0,9926,9),
+(12812,0,9926,10),
+(10118,0,9926,11),
+(10119,0,9926,12),
+(12813,0,9926,13);
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
 -- (GM-Shop) Red SA Crystals
@@ -18803,7 +18832,13 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (5593,0,9930,45),
 (5594,0,9930,46),
 (5595,0,9930,47),
-(9898,0,9930,48);
+(9898,0,9930,48),
+(8515,0,9930,49),
+(8516,0,9930,50),
+(8517,0,9930,51),
+(8518,0,9930,52),
+(8519,0,9930,53),
+(8520,0,9930,54);
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
 -- (GM-Shop) D Enchant Scrolls
@@ -20886,4 +20921,1278 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (13683,0,9971,7),
 (13684,0,9971,8),
 (13685,0,9971,9);
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) Santa Weapons
+(14621,0,9972,1), -- Santa Claus\' Sirra Blade
+(14622,0,9972,2), -- Santa Claus\' Sword of Ipos
+(14623,0,9972,3), -- Santa Claus\' Barakiel Axe
+(14624,0,9972,4), -- Santa Claus\' Behemoth Tuning Fork
+(14625,0,9972,5), -- Santa Claus\' Naga Storm
+(14626,0,9972,6), -- Santa Claus\' Tiphon Spear
+(14627,0,9972,7), -- Santa Claus\' Shyeed Bow
+(14628,0,9972,8), -- Santa Claus\' Sobekk Hurricane
+(14629,0,9972,9), -- Santa Claus\' Themis Tongue
+(14630,0,9972,10), -- Santa Claus\' Hand of Cabrio
+(14631,0,9972,11), -- Santa Claus\' Daimon Crystal
+(14632,0,9972,12), -- Santa Claus\' Eclair Bijou
+(14633,0,9972,13), -- Santa Claus\' Screaming Vengeance
+(14634,0,9972,14), -- Santa Claus\' Durendal
+(14674,0,9972,15); -- Santa Claus\' Tallum Blade*Damascus
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) Baguette Weapons
+(20255,0,9973,1), -- Baguette Sword - 7 Day Expiration Period
+(20256,0,9973,2), -- Baguette Dagger - 7 Day Expiration Period
+(20257,0,9973,3), -- Baguette Dual Sword - 7 Day Expiration Period
+(20258,0,9973,4), -- Baguette Mace - 7 Day Expiration Period
+(20259,0,9973,5), -- Baguette Heavy Hammer - 7 Day Expiration Period
+(20260,0,9973,6), -- Baguette Spear - 7 Day Expiration Period
+(20261,0,9973,7), -- Baguette Bow - 7 Day Expiration Period
+(20262,0,9973,8), -- Baguette Fist - 7 Day Expiration Period
+(20263,0,9973,9), -- Baguette Magic Sword - 7 Day Expiration Period
+(20264,0,9973,10), -- Baguette Staff - 7 Day Expiration Period
+(20265,0,9973,11), -- Baguette Great Staff - 7 Day Expiration Period
+(20267,0,9973,12), -- Baguette Rapier - 7 Day Expiration Period
+(20268,0,9973,13), -- Baguette Ancient Sword - 7 Day Expiration Period
+(20269,0,9973,14), -- Baguette Crossbow - 7 Day Expiration Period
+(20270,0,9973,15); -- Baguette\'s Dualsword - 7 Day Expiration Period
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) Limited Time Weapons - 60 minutes
+(13153,0,9974,1), -- Limited time - Great Spear - 60 minutes limited period
+(13154,0,9974,2), -- Limited time - Falchion - 60 minutes limited period
+(13155,0,9974,3), -- Limited time - Iron Hammer - 60 minutes limited period
+(13156,0,9974,4), -- Limited time - Voodoo Doll - 60 minutes limited period
+(13157,0,9974,5), -- Limited time - Flanged Mace - 60 minutes limited period
+(13158,0,9974,6), -- Limited time - Mage Staff - 60 minutes limited period
+(13159,0,9974,7), -- Limited time - Sword Breaker - 60 minutes limited period
+(13160,0,9974,8), -- Limited time - Viper Fang - 60 minutes limited period
+(13161,0,9974,9), -- Limited time - Composite Bow - 60 minutes limited period
+(13162,0,9974,10), -- Limited time - Crucifix of Blessing - 60 minutes limited period
+(13163,0,9974,11), -- Limited time - Bastard Sword*Crimson Sword - 60 minutes limited period
+(13164,0,9974,12), -- Limited time - Claymore - 60 minutes limited period
+(13165,0,9974,13), -- Limited time - Bonebreaker - 60 minutes limited period
+(13166,0,9974,14), -- Limited time - Atuba Hammer - 60 minutes limited period
+(13167,0,9974,15), -- Limited time - Ghost Staff - 60 minutes limited period
+(13168,0,9974,16), -- Limited time - Staff of Life - 60 minutes limited period
+(13169,0,9974,17), -- Limited time - Atuba Mace - 60 minutes limited period
+(13170,0,9974,18), -- Limited time - Mithril Dagger - 60 minutes limited period
+(13171,0,9974,19), -- Limited time - Scallop Jamadhr - 60 minutes limited period
+(13172,0,9974,20), -- Limited time - Light Crossbow - 60 minutes limited period
+(13173,0,9974,21), -- Limited time - Glaive - 60 minutes limited period
+(13174,0,9974,22), -- Limited time - Elven Long Sword - 60 minutes limited period
+(13175,0,9974,23), -- Limited time - Grand Epee - 60 minutes limited period
+(13176,0,9974,24), -- Limited time - General\'s Katzbalger - 60 minutes limited period
+(13177,0,9974,25), -- Limited time - Cranequin - 60 minutes limited period
+(13178,0,9974,26), -- Limited time - Samurai Longsword - 60 minutes limited period
+(13179,0,9974,27), -- Limited time - Deadman\'s Staff - 60 minutes limited period
+(13180,0,9974,28), -- Limited time - Ghoul\'s Staff - 60 minutes limited period
+(13181,0,9974,29), -- Limited time - Demon\'s Staff - 60 minutes limited period
+(13182,0,9974,30), -- Limited time - Crystal Dagger - 60 minutes limited period
+(13183,0,9974,31), -- Limited time - Great Pata - 60 minutes limited period
+(13184,0,9974,32), -- Limited time - Eminence Bow - 60 minutes limited period
+(13185,0,9974,33), -- Limited time - Orcish Poleaxe - 60 minutes limited period
+(13186,0,9974,34), -- Limited time - Yaksa Mace - 60 minutes limited period
+(13187,0,9974,35), -- Limited time - Shamshir*Shamshir - 60 minutes limited period
+(13188,0,9974,36), -- Limited time - Admiral\'s Estoc - 60 minutes limited period
+(13189,0,9974,37), -- Limited time - Saber Tooth - 60 minutes limited period
+(13190,0,9974,38), -- Limited time - Sharpshooter - 60 minutes limited period
+(13191,0,9974,39), -- Limited time - Ecliptic Sword - 60 minutes limited period
+(13192,0,9974,40), -- Limited time - Ecliptic Axe - 60 minutes limited period
+(13193,0,9974,41), -- Limited time - Dwarven Hammer - 60 minutes limited period
+(13194,0,9974,42), -- Limited time - Sword of Damascus - 60 minutes limited period
+(13195,0,9974,43), -- Limited time - Lance - 60 minutes limited period
+(13196,0,9974,44), -- Limited time - Deadman\'s Glory - 60 minutes limited period
+(13197,0,9974,45), -- Limited time - Art of Battle Axe - 60 minutes limited period
+(13198,0,9974,46), -- Limited time - Staff of Evil Spirits - 60 minutes limited period
+(13199,0,9974,47), -- Limited time - Demon Dagger - 60 minutes limited period
+(13200,0,9974,48), -- Limited time - Bellion Cestus - 60 minutes limited period
+(13201,0,9974,49), -- Limited time - Bow of Peril - 60 minutes limited period
+(13202,0,9974,50), -- Limited time - Samurai Long Sword*Samurai Long Sword - 60 minutes limited period
+(13203,0,9974,51), -- Limited time - Guardian Sword - 60 minutes limited period
+(13204,0,9974,52), -- Limited time - Wizard\'s Tear - 60 minutes limited period
+(13205,0,9974,53), -- Limited time - Kaim Vanul\'s Bones - 60 minutes limited period
+(13206,0,9974,54), -- Limited time - Star Buster - 60 minutes limited period
+(13207,0,9974,55), -- Limited time - Colichemarde - 60 minutes limited period
+(13208,0,9974,56), -- Limited time - Dismantler - 60 minutes limited period
+(13209,0,9974,57), -- Limited time - Hell Hound - 60 minutes limited period
+(13210,0,9974,58), -- Limited time - Sirra\'s Blade - 60 minutes limited period
+(13211,0,9974,59), -- Limited time - Sword of Ipos - 60 minutes limited period
+(13212,0,9974,60), -- Limited time - Barakiel\'s Axe - 60 minutes limited period
+(13213,0,9974,61), -- Limited time - Behemoth\'s Tuning Fork - 60 minutes limited period
+(13214,0,9974,62), -- Limited time - Naga Storm - 60 minutes limited period
+(13215,0,9974,63), -- Limited time - Tiphon\'s Spear - 60 minutes limited period
+(13216,0,9974,64), -- Limited time - Shyeed\'s Bow - 60 minutes limited period
+(13217,0,9974,65), -- Limited time - Sobekk\'s Hurricane - 60 minutes limited period
+(13218,0,9974,66), -- Limited time - Themis\' Tongue - 60 minutes limited period
+(13219,0,9974,67), -- Limited time - Cabrio\'s Hand - 60 minutes limited period
+(13220,0,9974,68), -- Limited time - Daimon Crystal - 60 minutes limited period
+(13221,0,9974,69), -- Limited time - Tallum Blade*Damascus - 60 minutes limited period
+(13222,0,9974,70), -- Limited time - Eclair Bijou - 60 minutes limited period
+(13223,0,9974,71), -- Limited time - Durendal - 60 minutes limited period
+(13224,0,9974,72); -- Limited time - Screaming Vengeance - 60 minutes limited period
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) 4 Hour Expiration Event Weapons
+(20109,0,9975,1), -- Sword of Revolution - Event - 4 Hour Expiration Period
+(20110,0,9975,2), -- Titan Sword - Event - 4 Hour Expiration Period
+(20111,0,9975,3), -- Maingauche - Event - 4 Hour Expiration Period
+(20112,0,9975,4), -- Tarbar - Event - 4 Hour Expiration Period
+(20113,0,9975,5), -- Titan Hammer - Event - 4 Hour Expiration Period
+(20114,0,9975,6), -- Priest Mace - Event - 4 Hour Expiration Period
+(20115,0,9975,7), -- Goat Head Staff - Event - 4 Hour Expiration Period
+(20116,0,9975,8), -- Bich\'Hwa - Event - 4 Hour Expiration Period
+(20117,0,9975,9), -- Strengthened Long Bow - Event - 4 Hour Expiration Period
+(20118,0,9975,10), -- Winged Spear - Event - 4 Hour Expiration Period
+(20119,0,9975,11), -- Artisan\'s Sword*Artisan\'s Sword - Event - 4 Hour Expiration Period
+(20120,0,9975,12), -- Epee - Event - 4 Hour Expiration Period
+(20121,0,9975,13), -- Katzbalger - Event - 4 Hour Expiration Period
+(20122,0,9975,14), -- Arm Breaker - Event - 4 Hour Expiration Period
+(20123,0,9975,15), -- Samurai Longsword - Event - 4 Hour Expiration Period
+(20124,0,9975,16), -- Berserker Blade - Event - 4 Hour Expiration Period
+(20125,0,9975,17), -- Crystal Dagger - Event - 4 Hour Expiration Period
+(20126,0,9975,18), -- Yaksa Mace - Event - 4 Hour Expiration Period
+(20127,0,9975,19), -- Dwarven Hammer - Event - 4 Hour Expiration Period
+(20128,0,9975,20), -- Ecliptic Axe - Event - 4 Hour Expiration Period
+(20129,0,9975,21), -- Demon\'s Staff - Event - 4 Hour Expiration Period
+(20130,0,9975,22), -- Great Pata - Event - 4 Hour Expiration Period
+(20131,0,9975,23), -- Eminence Bow - Event - 4 Hour Expiration Period
+(20132,0,9975,24), -- Orcish Poleaxe - Event - 4 Hour Expiration Period
+(20133,0,9975,25), -- Katana*Katana - Event - 4 Hour Expiration Period
+(20134,0,9975,26), -- Admiral\'s Estoc - Event - 4 Hour Expiration Period
+(20135,0,9975,27), -- Saber Tooth - Event - 4 Hour Expiration Period
+(20136,0,9975,28), -- Sharpshooter - Event - 4 Hour Expiration Period
+(20137,0,9975,29), -- Sword of Damascus - Event - 4 Hour Expiration Period
+(20138,0,9975,30), -- Guardian Sword - Event - 4 Hour Expiration Period
+(20139,0,9975,31), -- Demon\'s Dagger - Event - 4 Hour Expiration Period
+(20140,0,9975,32), -- Art of Battle Axe - Event - 4 Hour Expiration Period
+(20141,0,9975,33), -- Star Buster - Event - 4 Hour Expiration Period
+(20142,0,9975,34), -- Kaim Vanul\'s Bones - Event - 4 Hour Expiration Period
+(20143,0,9975,35), -- Staff of Evil Spirits - Event - 4 Hour Expiration Period
+(20144,0,9975,36), -- Bellion Cestus - Event - 4 Hour Expiration Period
+(20145,0,9975,37), -- Bow of Peril - Event - 4 Hour Expiration Period
+(20146,0,9975,38), -- Lance - Event - 4 Hour Expiration Period
+(20147,0,9975,39), -- Samurai Long Sword*Samurai Long Sword - Event - 4 Hour Expiration Period
+(20148,0,9975,40), -- Colichemarde - Event - 4 Hour Expiration Period
+(20149,0,9975,41), -- Dismantler - Event - 4 Hour Expiration Period
+(20150,0,9975,42), -- Hell Hound - Event - 4 Hour Expiration Period
+(20151,0,9975,43), -- Dark Legion - Event - 4 Hour Expiration Period
+(20152,0,9975,44), -- Dragon Slayer - Event - 4 Hour Expiration Period
+(20153,0,9975,45), -- Soul Separator - Event - 4 Hour Expiration Period
+(20154,0,9975,46), -- Elysian - Event - 4 Hour Expiration Period
+(20155,0,9975,47), -- Doom Crusher - Event - 4 Hour Expiration Period
+(20156,0,9975,48), -- Flaming Dragon Skull - Event - 4 Hour Expiration Period
+(20157,0,9975,49), -- Branch of the Mother Tree - Event - 4 Hour Expiration Period
+(20158,0,9975,50), -- Dragon Grinder - Event - 4 Hour Expiration Period
+(20159,0,9975,51), -- Soul Bow - Event - 4 Hour Expiration Period
+(20160,0,9975,52), -- Tallum Glaive - Event - 4 Hour Expiration Period
+(20161,0,9975,53), -- Damascus*Damascus - Event - 4 Hour Expiration Period
+(20162,0,9975,54), -- Lacerator - Event - 4 Hour Expiration Period
+(20163,0,9975,55), -- Undertaker - Event - 4 Hour Expiration Period
+(20164,0,9975,56), -- Reaper - Event - 4 Hour Expiration Period
+(20165,0,9975,57), -- Forgotten Blade - Event - 4 Hour Expiration Period
+(20166,0,9975,58), -- Heaven\'s Divider - Event - 4 Hour Expiration Period
+(20167,0,9975,59), -- Angel Slayer - Event - 4 Hour Expiration Period
+(20168,0,9975,60), -- Basalt Battlehammer - Event - 4 Hour Expiration Period
+(20169,0,9975,61), -- Dragon Hunter Axe - Event - 4 Hour Expiration Period
+(20170,0,9975,62), -- Arcana Mace - Event - 4 Hour Expiration Period
+(20171,0,9975,63), -- Imperial Staff - Event - 4 Hour Expiration Period
+(20172,0,9975,64), -- Demon Splinter - Event - 4 Hour Expiration Period
+(20173,0,9975,65), -- Draconic Bow - Event - 4 Hour Expiration Period
+(20174,0,9975,66), -- Saint Spear - Event - 4 Hour Expiration Period
+(20175,0,9975,67), -- Tallum Blade*Dark Legion - Event - 4 Hour Expiration Period
+(20176,0,9975,68), -- Laevateinn - Event - 4 Hour Expiration Period
+(20177,0,9975,69), -- Gram - Event - 4 Hour Expiration Period
+(20178,0,9975,70); -- Sarnga - Event - 4 Hour Expiration Period
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) Transformation Sticks
+(14056,0,9976,1), -- Snow Kung Transformation Stick - 30-day limited period
+(14057,0,9976,2), -- Scarecrow Jack Transformation Stick - 30-day limited period
+(14058,0,9976,3), -- Tin Golem Transformation Stick - 30-day limited period
+(14069,0,9976,4), -- Snow Kung Transformation Stick (event) - 30-day limited period
+(14070,0,9976,5), -- Scarecrow Jack Transformation Stick (Event) - 30-day limited period
+(14071,0,9976,6), -- Tin Golem Transformation Stick (event) - 30-day limited period
+(14088,0,9976,7), -- Snow Kung Transformation Stick - 7-day Limited Period
+(14089,0,9976,8), -- Scarecrow Jack Transformation Stick - 7-day Limited Period
+(14090,0,9976,9), -- Tin Golem Transformation Stick - 7-day Limited Period
+(14096,0,9976,10), -- Snow Kung Transformation Stick (event) - 7-day Limited Period
+(14097,0,9976,11), -- Scarecrow Jack Transformation Stick (Event) - 7-day Limited Period
+(14098,0,9976,12), -- Tin Golem Transformation Stick (event) - 7-day Limited Period
+(13253,0,9976,13), -- Pumpkin Transformation Stick - 7-day Limited Period
+(13324,0,9976,14), -- Pumpkin Transformation Stick (Event) - 30-day limited period
+(13339,0,9976,15), -- Pumpkin Transformation Stick (Event) - 7-day Limited Period
+(12814,0,9976,16); -- Shadow Item - Gatekeeper Transformation Stick
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) Misc Event Items
+(13971,0,9977,1), -- Red Boing Fantasy Hammer
+(13972,0,9977,2), -- Blue Boing Fantasy Hammer
+(13973,0,9977,3), -- Small Red Boing Fantasy Hammer
+(13974,0,9977,4); -- Small Blue Boing Fantasy Hammer
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) Misc Consumables
+(8873,0,9978,1),
+(8874,0,9978,2),
+(8875,0,9978,3),
+(8876,0,9978,4),
+(3031,0,9978,5),
+(1785,0,9978,6);
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) Arrows
+(17,0,9979,1),
+(1341,0,9979,2),
+(1342,0,9979,3),
+(1343,0,9979,4),
+(1344,0,9979,5),
+(1345,0,9979,6),
+(9632,0,9979,7),
+(9633,0,9979,8),
+(9634,0,9979,9),
+(9635,0,9979,10),
+(9636,0,9979,11),
+(9637,0,9979,12),
+(10113,0,9979,13),
+(22067,0,9979,14),
+(22068,0,9979,15),
+(22069,0,9979,16),
+(22070,0,9979,17),
+(22071,0,9979,18),
+(22144,0,9979,19),
+(22145,0,9979,20),
+(22146,0,9979,21),
+(22147,0,9979,22),
+(22148,0,9979,23),
+(8192,0,9979,24),
+(22149,0,9979,25),
+(22150,0,9979,26),
+(22151,0,9979,27),
+(22152,0,9979,28),
+(22153,0,9979,29),
+(22089,0,9979,30),
+(22090,0,9979,31),
+(22091,0,9979,32),
+(22092,0,9979,33),
+(22093,0,9979,34);
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) Infinity Weapons
+(6611,0,9980,1), -- Infinity Blade
+(6612,0,9980,2), -- Infinity Cleaver
+(6613,0,9980,3), -- Infinity Axe
+(6614,0,9980,4), -- Infinity Rod
+(6615,0,9980,5), -- Infinity Crusher
+(6616,0,9980,6), -- Infinity Scepter
+(6617,0,9980,7), -- Infinity Stinger
+(6618,0,9980,8), -- Infinity Fang
+(6619,0,9980,9), -- Infinity Bow
+(6620,0,9980,10), -- Infinity Wing
+(6621,0,9980,111); -- Infinity Spear
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) Vesper PVP Weapons
+(14462,0,9981,1), -- Vesper Dual Sword {PvP}
+(14463,0,9981,2), -- Vesper Cutter {PvP}
+(14464,0,9981,3), -- Vesper Slasher {PvP}
+(14465,0,9981,4), -- Vesper Buster {PvP}
+(14466,0,9981,5), -- Vesper Shaper {PvP}
+(14467,0,9981,6), -- Vesper Fighter {PvP}
+(14468,0,9981,7), -- Vesper Stormer {PvP}
+(14469,0,9981,8), -- Vesper Avenger {PvP}
+(14470,0,9981,9), -- Vesper Retributer {PvP}
+(14471,0,9981,10), -- Vesper Caster {PvP}
+(14472,0,9981,11), -- Vesper Singer {PvP}
+(14473,0,9981,12), -- Vesper Thrower {PvP}
+(14474,0,9981,13), -- Vesper Pincer {PvP}
+(14475,0,9981,14), -- Vesper Sheutjeh {PvP}
+(14476,0,9981,15), -- Vesper Nagan {PvP}
+(14477,0,9981,16), -- Vesper Dual Daggers {PvP}
+(14478,0,9981,17), -- Vesper Cutter {PvP} - Haste
+(14479,0,9981,18), -- Vesper Cutter {PvP} - Health
+(14480,0,9981,19), -- Vesper Cutter {PvP} - Focus
+(14481,0,9981,20), -- Vesper Slasher {PvP} - Haste
+(14482,0,9981,21), -- Vesper Slasher {PvP} - Health
+(14483,0,9981,22), -- Vesper Slasher {PvP} - Focus
+(14484,0,9981,23), -- Vesper Buster {PvP} - Mana Up
+(14485,0,9981,24), -- Vesper Buster {PvP} - Acumen
+(14486,0,9981,25), -- Vesper Buster {PvP} - Magic Hold
+(14487,0,9981,26), -- Vesper Shaper {PvP} - Crt. Damage
+(14488,0,9981,27), -- Vesper Shaper {PvP} - HP Drain
+(14489,0,9981,28), -- Vesper Shaper {PvP} - Haste
+(14490,0,9981,29), -- Vesper Fighter {PvP} - Focus
+(14491,0,9981,30), -- Vesper Fighter {PvP} - Health
+(14492,0,9981,31), -- Vesper Fighter {PvP} - Crt. Stun
+(14493,0,9981,32), -- Vesper Stormer {PvP} - Health
+(14494,0,9981,33), -- Vesper Stormer {PvP} - Guidance
+(14495,0,9981,34), -- Vesper Stormer {PvP} - Haste
+(14496,0,9981,35), -- Vesper Avenger {PvP} - HP Drain
+(14497,0,9981,36), -- Vesper Avenger {PvP} - Health
+(14498,0,9981,37), -- Vesper Avenger {PvP} - HP Regeneration
+(14499,0,9981,38), -- Vesper Retributer {PvP} - HP Regeneration
+(14500,0,9981,39), -- Vesper Retributer {PvP} - Health
+(14501,0,9981,40), -- Vesper Retributer {PvP} - HP Drain
+(14502,0,9981,41), -- Vesper Caster {PvP} - Acumen
+(14503,0,9981,42), -- Vesper Caster {PvP} - MP Regeneration
+(14504,0,9981,43), -- Vesper Caster {PvP} - Mana Up
+(14505,0,9981,44), -- Vesper Singer {PvP} - Empower
+(14506,0,9981,45), -- Vesper Singer {PvP} - MP Regeneration
+(14507,0,9981,46), -- Vesper Singer {PvP} - Magic Hold
+(14508,0,9981,47), -- Vesper Thrower {PvP} - Cheap Shot
+(14509,0,9981,48), -- Vesper Thrower {PvP} - Focus
+(14510,0,9981,49), -- Vesper Thrower {PvP} - Crt. Slow
+(14511,0,9981,50), -- Vesper Pincer {PvP} - Haste
+(14512,0,9981,51), -- Vesper Pincer {PvP} - Health
+(14513,0,9981,52), -- Vesper Pincer {PvP} - Focus
+(14514,0,9981,53), -- Vesper Sheutjeh {PvP} - Cheap Shot
+(14515,0,9981,54), -- Vesper Sheutjeh {PvP} - Focus
+(14516,0,9981,55), -- Vesper Sheutjeh {PvP} - Crt. Slow
+(14517,0,9981,56), -- Vesper Nagan {PvP} - Haste
+(14518,0,9981,57), -- Vesper Nagan {PvP} - Health
+(14519,0,9981,58); -- Vesper Nagan {PvP} - Focus
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) Dynasty PVP Weapons
+(10750,0,9982,1), -- Dynasty Sword {PvP} - Focus
+(10751,0,9982,2), -- Dynasty Sword - PvP - Health
+(10752,0,9982,3), -- Dynasty Sword - PvP - Light
+(10753,0,9982,4), -- Dynasty Blade {PvP} - Focus
+(10754,0,9982,5), -- Dynasty Blade - PvP - Health
+(10755,0,9982,6), -- Dynasty Blade - PvP - Light
+(10756,0,9982,7), -- Dynasty Cudgel {PvP} - Anger
+(10757,0,9982,8), -- Dynasty Cudgel {PvP} - Health
+(10758,0,9982,9), -- Dynasty Cudgel {PvP} - Rsk. Focus
+(10759,0,9982,10), -- Dynasty Crusher {PvP} - Anger
+(10760,0,9982,11), -- Dynasty Crusher {PvP} - Health
+(10761,0,9982,12), -- Dynasty Crusher {PvP} - Rsk. Focus
+(10762,0,9982,13), -- Dynasty Knife {PvP} - Focus
+(10763,0,9982,14), -- Dynasty Knife {PvP} - Evasion
+(10764,0,9982,15), -- Dynasty Knife {PvP} - Critical Damage
+(10765,0,9982,16), -- Dynasty Halberd {PvP} - Anger
+(10766,0,9982,17), -- Dynasty Halberd {PvP} - Critical Stun
+(10767,0,9982,18), -- Dynasty Halberd {PvP} - Light
+(10768,0,9982,19), -- Dynasty Bagh-Nakh {PvP} - Rsk. Evasion
+(10769,0,9982,20), -- Dynasty Bagh-Nakh {PvP} - Focus
+(10770,0,9982,21), -- Dynasty Bagh-Nakh {PvP} - Haste
+(10771,0,9982,22), -- Dynasty Phantom {PvP} - Acumen
+(10772,0,9982,23), -- Dynasty Phantom {PvP} - Mana Up
+(10773,0,9982,24), -- Dynasty Phantom {PvP} - Updown
+(10774,0,9982,25), -- Dynasty Mace {PvP} - Mana Up
+(10775,0,9982,26), -- Dynasty Mace {PvP} - Updown
+(10776,0,9982,27), -- Dynasty Mace {PvP} - Acumen
+(10777,0,9982,28), -- Dynasty Staff {PvP} - Mana Up
+(10778,0,9982,29), -- Dynasty Staff {PvP} - Updown
+(10779,0,9982,30), -- Dynasty Staff {PvP} - Acumen
+(10780,0,9982,31), -- Dynasty Bow {PvP} - Cheap Shot
+(10781,0,9982,32), -- Dynasty Bow {PvP} - Guidance
+(10782,0,9982,33), -- Dynasty Bow {PvP} - Focus
+(10783,0,9982,34), -- Dynasty Rapier {PvP} - Focus
+(10784,0,9982,35), -- Dynasty Rapier {PvP} - Health
+(10785,0,9982,36), -- Dynasty Rapier {PvP} - Light
+(10786,0,9982,37), -- Dynasty Ancient Sword {PvP} - Focus
+(10787,0,9982,38), -- Dynasty Ancient Sword {PvP} - Health
+(10788,0,9982,39), -- Dynasty Ancient Sword {PvP} - Light
+(10789,0,9982,40), -- Dynasty Crossbow {PvP} - Cheap Shot
+(10790,0,9982,41), -- Dynasty Crossbow - PvP - Guidance
+(10791,0,9982,42), -- Dynasty Crossbow - PvP - Focus
+(10792,0,9982,43), -- Dynasty Dual Sword {PvP}
+(14558,0,9982,44), -- Dynasty Dual Daggers {PvP}
+(12935,0,9982,45), -- Dynasty Ancient Sword - Great Gale {PvP} - Focus
+(12936,0,9982,46), -- Dynasty Ancient Sword - Great Gale {PvP} - Health
+(12937,0,9982,47), -- Dynasty Ancient Sword - Great Gale {PvP} - Light
+(12938,0,9982,48), -- Dynasty Knife - Great Gale {PvP} - Focus
+(12939,0,9982,49), -- Dynasty Knife - Great Gale {PvP} - Evasion
+(12940,0,9982,50), -- Dynasty Knife - Great Gale {PvP} - Critical Damage
+(12941,0,9982,51), -- Dynasty Dual Sword - Earth {PvP}
+(12942,0,9982,52), -- Dynasty Rapier - Earth {PvP} - Focus
+(12943,0,9982,53), -- Dynasty Rapier - Earth {PvP} - Health
+(12944,0,9982,54), -- Dynasty Rapier - Earth {PvP} - Light
+(12945,0,9982,55), -- Dynasty Mace - Earth {PvP} - Mana Up
+(12946,0,9982,56), -- Dynasty Mace - Earth {PvP} - Updown
+(12947,0,9982,57), -- Dynasty Mace - Earth {PvP} - Acumen
+(12948,0,9982,58), -- Dynasty Bagh-Nakh - Great Gale {PvP} - Rsk. Evasion
+(12949,0,9982,59), -- Dynasty Bagh-Nakh - Great Gale {PvP} - Focus
+(12950,0,9982,60), -- Dynasty Bagh-Nakh - Great Gale {PvP} - Haste
+(12951,0,9982,61), -- Dynasty Bow - Great Gale {PvP} - Cheap Shot
+(12952,0,9982,62), -- Dynasty Bow - Great Gale {PvP} - Guidance
+(12953,0,9982,63), -- Dynasty Bow - Great Gale {PvP} - Focus
+(12954,0,9982,64), -- Dynasty Blade - Great Gale {PvP} - Focus
+(12955,0,9982,65), -- Dynasty Blade - Great Gale {PvP} - Health
+(12956,0,9982,66), -- Dynasty Blade - Great Gale {PvP} - Light
+(12957,0,9982,67), -- Dynasty Sword - Earth {PvP} - Focus
+(12958,0,9982,68), -- Dynasty Sword - Earth {PvP} - Health
+(12959,0,9982,69), -- Dynasty Sword - Earth {PvP} - Light
+(12960,0,9982,70), -- Dynasty Staff - Holy Spirit {PvP} - Mana Up
+(12961,0,9982,71), -- Dynasty Staff - Holy Spirit {PvP} - Updown
+(12962,0,9982,72), -- Dynasty Staff - Holy Spirit {PvP} - Acumen
+(12963,0,9982,73), -- Dynasty Cudgel - Landslide {PvP} - Anger
+(12964,0,9982,74), -- Dynasty Cudgel - Landslide {PvP} - Health
+(12965,0,9982,75), -- Dynasty Cudgel - Landslide {PvP} - Rsk. Focus
+(12966,0,9982,76), -- Dynasty Crusher - Great Gale {PvP} - Anger
+(12967,0,9982,77), -- Dynasty Crusher - Great Gale {PvP} - Health
+(12968,0,9982,78), -- Dynasty Crusher - Great Gale {PvP} - Rsk. Focus
+(12969,0,9982,79), -- Dynasty Crossbow - Great Gale {PvP} - Cheap Shot
+(12970,0,9982,80), -- Dynasty Crossbow - Great Gale {PvP} - Guidance
+(12971,0,9982,81), -- Dynasty Crossbow - Great Gale {PvP} - Focus
+(12972,0,9982,82), -- Dynasty Phantom - Wisdom {PvP} - Acumen
+(12973,0,9982,83), -- Dynasty Phantom - Wisdom {PvP} - Mana Up
+(12974,0,9982,84), -- Dynasty Phantom - Wisdom {PvP} - Updown
+(12975,0,9982,85), -- Dynasty Halberd - Earth {PvP} - Anger
+(12976,0,9982,86), -- Dynasty Halberd - Earth {PvP} - Critical Stun
+(12977,0,9982,87), -- Dynasty Halberd - Earth {PvP} - Light
+(14528,0,9982,88); -- Dynasty Dual Daggers - Great Gale {PvP}
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) Icarus PVP Weapons
+(14363,0,9983,1), -- Icarus Sawsword {PvP}
+(14364,0,9983,2), -- Icarus Disperser {PvP}
+(14365,0,9983,3), -- Icarus Spirit {PvP}
+(14366,0,9983,4), -- Icarus Heavy Arms {PvP}
+(14367,0,9983,5), -- Icarus Trident {PvP}
+(14368,0,9983,6), -- Icarus Hammer {PvP}
+(14369,0,9983,7), -- Icarus Hand {PvP}
+(14370,0,9983,8), -- Icarus Hall {PvP}
+(14371,0,9983,9), -- Icarus Spitter {PvP}
+(14372,0,9983,10), -- Icarus Stinger {PvP}
+(14373,0,9983,11), -- Icarus Wingblade {PvP}
+(14374,0,9983,12), -- Icarus Shooter {PvP}
+(14375,0,9983,13), -- Icarus Dual Sword {PvP}
+(14376,0,9983,14), -- Icarus Sawsword {PvP} - Focus
+(14377,0,9983,15), -- Icarus Sawsword {PvP} - Health
+(14378,0,9983,16), -- Icarus Sawsword {PvP} - Light
+(14379,0,9983,17), -- Icarus Heavy Arms {PvP} - Focus
+(14380,0,9983,18), -- Icarus Heavy Arms {PvP} - Health
+(14381,0,9983,19), -- Icarus Heavy Arms {PvP} - Light
+(14382,0,9983,20), -- Icarus Spirit {PvP} - Acumen
+(14383,0,9983,21), -- Icarus Spirit {PvP} - Mana Up
+(14384,0,9983,22), -- Icarus Spirit {PvP} - Up Down
+(14385,0,9983,23), -- Icarus Spitter {PvP} - Cheap Shot
+(14386,0,9983,24), -- Icarus Spitter {PvP} - Guidance
+(14387,0,9983,25), -- Icarus Spitter {PvP} - Focus
+(14388,0,9983,26), -- Icarus Disperser {PvP} - Focus
+(14389,0,9983,27), -- Icarus Disperser {PvP} - Evasion
+(14390,0,9983,28), -- Icarus Disperser {PvP} - Critical Damage
+(14391,0,9983,29), -- Icarus Trident {PvP} - Anger
+(14392,0,9983,30), -- Icarus Trident {PvP} - Critical Stun
+(14393,0,9983,31), -- Icarus Trident {PvP} - Light
+(14394,0,9983,32), -- Icarus Hammer {PvP} - Anger
+(14395,0,9983,33), -- Icarus Hammer {PvP} - Health
+(14396,0,9983,34), -- Icarus Hammer {PvP} - Rsk. Focus
+(14397,0,9983,35), -- Icarus Hall {PvP} - Mana Up
+(14398,0,9983,36), -- Icarus Hall {PvP} - Up Down
+(14399,0,9983,37), -- Icarus Hall {PvP} - Acumen
+(14400,0,9983,38), -- Icarus Hand {PvP} - Rsk. Evasion
+(14401,0,9983,39), -- Icarus Hand {PvP} - Focus
+(14402,0,9983,40), -- Icarus Hand {PvP} - Haste
+(14403,0,9983,41), -- Icarus Stinger {PvP} - Focus
+(14404,0,9983,42), -- Icarus Stinger {PvP} - Health
+(14405,0,9983,43), -- Icarus Stinger {PvP} - Light
+(14406,0,9983,44), -- Icarus Wingblade {PvP} - Focus
+(14407,0,9983,45), -- Icarus Wingblade {PvP} - Health
+(14408,0,9983,46), -- Icarus Wingblade {PvP} - Light
+(14409,0,9983,47), -- Icarus Shooter {PvP} - Cheap Shot
+(14410,0,9983,48), -- Icarus Shooter {PvP} - Guidance
+(14411,0,9983,49), -- Icarus Shooter {PvP} - Focus
+(14412,0,9983,50), -- Icarus Dual Sword - Destruction {PvP}
+(14413,0,9983,51), -- Icarus Disperser - Confusion {PvP}
+(14414,0,9983,52), -- Icarus Disperser - Confusion {PvP} - Focus
+(14415,0,9983,53), -- Icarus Disperser - Confusion {PvP} - Evasion
+(14416,0,9983,54), -- Icarus Disperser - Confusion {PvP} - Critical Damage
+(14417,0,9983,55), -- Icarus Sawsword - Destruction {PvP}
+(14418,0,9983,56), -- Icarus Sawsword - Destruction {PvP} - Focus
+(14419,0,9983,57), -- Icarus Sawsword - Destruction {PvP} - Health
+(14420,0,9983,58), -- Icarus Sawsword - Destruction {PvP} - Light
+(14421,0,9983,59), -- Icarus Shooter - Concentration {PvP}
+(14422,0,9983,60), -- Icarus Shooter - Concentration {PvP} - Cheap Shot
+(14423,0,9983,61), -- Icarus Shooter - Concentration {PvP} - Guidance
+(14424,0,9983,62), -- Icarus Shooter - Concentration {PvP} - Focus
+(14425,0,9983,63), -- Icarus Stinger - Destruction {PvP}
+(14426,0,9983,64), -- Icarus Stinger - Destruction {PvP} - Focus
+(14427,0,9983,65), -- Icarus Stinger - Destruction {PvP} - Health
+(14428,0,9983,66), -- Icarus Stinger - Destruction {PvP} - Light
+(14429,0,9983,67), -- Icarus Spirit - Nature {PvP}
+(14430,0,9983,68), -- Icarus Spirit - Nature {PvP} - Acumen
+(14431,0,9983,69), -- Icarus Spirit - Nature {PvP} - Mana Up
+(14432,0,9983,70), -- Icarus Spirit - Nature {PvP} - Up Down
+(14433,0,9983,71), -- Icarus Spitter - Concentration {PvP}
+(14434,0,9983,72), -- Icarus Spitter - Concentration {PvP} - Cheap Shot
+(14435,0,9983,73), -- Icarus Spitter - Concentration {PvP} - Guidance
+(14436,0,9983,74), -- Icarus Spitter - Concentration {PvP} - Focus
+(14437,0,9983,75), -- Icarus Wingblade - Lightning {PvP}
+(14438,0,9983,76), -- Icarus Wingblade - Lightning {PvP} - Focus
+(14439,0,9983,77), -- Icarus Wingblade - Lightning {PvP} - Health
+(14440,0,9983,78), -- Icarus Wingblade - Lightning {PvP} - Light
+(14441,0,9983,79), -- Icarus Trident - Thunder {PvP}
+(14442,0,9983,80), -- Icarus Trident - Thunder {PvP} - Anger
+(14443,0,9983,81), -- Icarus Trident - Thunder {PvP} - Critical Stun
+(14444,0,9983,82), -- Icarus Trident - Thunder {PvP} - Light
+(14445,0,9983,83), -- Icarus Hammer - Earth {PvP}
+(14446,0,9983,84), -- Icarus Hammer - Earth {PvP} - Anger
+(14447,0,9983,85), -- Icarus Hammer - Earth {PvP} - Health
+(14448,0,9983,86), -- Icarus Hammer - Earth {PvP} - Rsk. Focus
+(14449,0,9983,87), -- Icarus Hand - Destruction {PvP}
+(14450,0,9983,88), -- Icarus Hand - Destruction {PvP} - Rsk. Evasion
+(14451,0,9983,89), -- Icarus Hand - Destruction {PvP} - Focus
+(14452,0,9983,90), -- Icarus Hand - Destruction {PvP} - Haste
+(14453,0,9983,91), -- Icarus Heavy Arms - Lightning {PvP}
+(14454,0,9983,92), -- Icarus Heavy Arms - Lightning {PvP} - Focus
+(14455,0,9983,93), -- Icarus Heavy Arms - Lightning {PvP} - Health
+(14456,0,9983,94), -- Icarus Heavy Arms - Lightning {PvP} - Light
+(14457,0,9983,95), -- Icarus Hall - Hail {PvP}
+(14458,0,9983,96), -- Icarus Hall - Hail {PvP} - Mana Up
+(14459,0,9983,97), -- Icarus Hall - Hail {PvP} - Up Down
+(14460,0,9983,98), -- Icarus Hall - Hail {PvP} - Acumen
+(14461,0,9983,99), -- Icarus Dual Daggers {PvP}
+(14529,0,9983,100); -- Icarus Dual Daggers - Confusion {PvP}
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) S PVP Weapons
+(10710,0,9984,1), -- Forgotten Blade {PvP} - Haste
+(10711,0,9984,2), -- Forgotten Blade {PvP} - Health
+(10712,0,9984,3), -- Forgotten Blade {PvP} - Focus
+(10713,0,9984,4), -- Heavens Divider {PvP} - Haste
+(10714,0,9984,5), -- Heavens Divider {PvP} - Health
+(10715,0,9984,6), -- Heavens Divider {PvP} - Focus
+(10716,0,9984,7), -- Basalt Battlehammer {PvP} - HP Drain
+(10717,0,9984,8), -- Basalt Battlehammer {PvP} - Health
+(10718,0,9984,9), -- Basalt Battlehammer {PvP} - HP Regeneration
+(10719,0,9984,10), -- Dragon Hunter Axe {PvP} - HP Regeneration
+(10720,0,9984,11), -- Dragon Hunter Axe {PvP} - Health
+(10721,0,9984,12), -- Dragon Hunter Axe {PvP} - HP Drain
+(10722,0,9984,13), -- Angel Slayer {PvP} - Critical Damage
+(10723,0,9984,14), -- Angel Slayer {PvP} - HP Drain
+(10724,0,9984,15), -- Angel Slayer {PvP} - Haste
+(10725,0,9984,16), -- Saint Spear {PvP} - Health
+(10726,0,9984,17), -- Saint Spear {PvP} - Guidance
+(10727,0,9984,18), -- Saint Spear {PvP} - Haste
+(10728,0,9984,19), -- Demon Splinter {PvP} - Focus
+(10729,0,9984,20), -- Demon Splinter {PvP} - Health
+(10730,0,9984,21), -- Demon Splinter {PvP} - Critical Stun
+(10731,0,9984,22), -- Arcana Mace {PvP} - Acumen
+(10732,0,9984,23), -- Arcana Mace {PvP} - MP Regeneration
+(10733,0,9984,24), -- Arcana Mace {PvP} - Mana Up
+(10734,0,9984,25), -- Imperial Staff {PvP} - Empower
+(10735,0,9984,26), -- Imperial Staff {PvP} - MP Regeneration
+(10736,0,9984,27), -- Imperial Staff {PvP} - Magic Hold
+(10737,0,9984,28), -- Draconic Bow {PvP} - Cheap Shot
+(10738,0,9984,29), -- Draconic Bow {PvP} - Focus
+(10739,0,9984,30), -- Draconic Bow {PvP} - Critical Slow
+(10740,0,9984,31), -- Laevateinn {PvP} - Haste
+(10741,0,9984,32), -- Laevateinn {PvP} - Health
+(10742,0,9984,33), -- Laevateinn {PvP} - Focus
+(10743,0,9984,34), -- Gram {PvP} - Haste
+(10744,0,9984,35), -- Gram {PvP} - Health
+(10745,0,9984,36), -- Gram {PvP} - Focus
+(10746,0,9984,37), -- Sarunga {PvP} - Cheap Shot
+(10747,0,9984,38), -- Sarunga - PvP - Focus
+(10748,0,9984,39), -- Sarunga - PvP - Critical Slow
+(10749,0,9984,40), -- Tallum Blade*Dark Legion {PvP}
+(12895,0,9984,41), -- Gram - Thunder {PvP} - Haste
+(12896,0,9984,42), -- Gram - Thunder {PvP} - Health
+(12897,0,9984,43), -- Gram - Thunder {PvP} - Focus
+(12898,0,9984,44), -- Demon Splinter - Thunder {PvP} - Focus
+(12899,0,9984,45), -- Demon Splinter - Thunder {PvP} - Health
+(12900,0,9984,46), -- Demon Splinter - Thunder {PvP} - Critical Stun
+(12901,0,9984,47), -- Draconic Bow - Earth {PvP} - Cheap Shot
+(12902,0,9984,48), -- Draconic Bow - Earth {PvP} - Focus
+(12903,0,9984,49), -- Draconic Bow - Earth {PvP} - Crt. Slow
+(12904,0,9984,50), -- Dragon Hunter Axe - Thunder {PvP} - HP Regeneration
+(12905,0,9984,51), -- Dragon Hunter Axe - Thunder {PvP} - Health
+(12906,0,9984,52), -- Dragon Hunter Axe - Thunder {PvP} - HP Drain
+(12907,0,9984,53), -- Laevateinn - Lightning {PvP} - Haste
+(12908,0,9984,54), -- Laevateinn - Lightning {PvP} - Health
+(12909,0,9984,55), -- Laevateinn - Lightning {PvP} - Focus
+(12910,0,9984,56), -- Basalt Battlehammer - Concentration {PvP} - HP Drain
+(12911,0,9984,57), -- Basalt Battlehammer - Concentration {PvP} - Health
+(12912,0,9984,58), -- Basalt Battlehammer - Concentration {PvP} - HP Regeneration
+(12913,0,9984,59), -- Sarunga - Earth {PvP} - Cheap Shot
+(12914,0,9984,60), -- Sarunga - Earth {PvP} - Focus
+(12915,0,9984,61), -- Sarunga - Earth {PvP} - Crt. Slow
+(12916,0,9984,62), -- Saint Spear - Destruction {PvP} - Health
+(12917,0,9984,63), -- Saint Spear - Destruction {PvP} - Guidance
+(12918,0,9984,64), -- Saint Spear - Destruction {PvP} - Haste
+(12919,0,9984,65), -- Arcana Mace - Nature {PvP} - Acumen
+(12920,0,9984,66), -- Arcana Mace - Nature {PvP} - MP Regeneration
+(12921,0,9984,67), -- Arcana Mace - Nature {PvP} - Mana Up
+(12922,0,9984,68), -- Angel Slayer - Concentration {PvP} - Crt. Damage
+(12923,0,9984,69), -- Angel Slayer - Concentration {PvP} - HP Drain
+(12924,0,9984,70), -- Angel Slayer - Concentration {PvP} - Haste
+(12925,0,9984,71), -- Imperial Staff - Nature {PvP} - Empower
+(12926,0,9984,72), -- Imperial Staff - Nature {PvP} - MP Regeneration
+(12927,0,9984,73), -- Imperial Staff - Nature {PvP} - Magic Hold
+(12928,0,9984,74), -- Tallum Blade*Dark Legion - Lightning {PvP}
+(12929,0,9984,75), -- Forgotten Blade - Lightning {PvP} - Haste
+(12930,0,9984,76), -- Forgotten Blade - Lightning {PvP} - Health
+(12931,0,9984,77), -- Forgotten Blade - Lightning {PvP} - Focus
+(12932,0,9984,78), -- Heavens Divider - Thunder {PvP} - Haste
+(12933,0,9984,79), -- Heavens Divider - Thunder {PvP} - Health
+(12934,0,9984,80); -- Heavens Divider - Thunder {PvP} - Focus
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) A PVP Weapons
+(10667,0,9985,1), -- Sirra\'s Blade - PvP - Haste
+(10668,0,9985,2), -- Sirra\'s Blade - PvP - Health
+(10669,0,9985,3), -- Sirra\'s Blade - PvP - Critical Poison
+(10670,0,9985,4), -- Sword of Ipos {PvP} - Focus
+(10671,0,9985,5), -- Sword of Ipos {PvP} - Haste
+(10672,0,9985,6), -- Sword of Ipos {PvP} - Health
+(10673,0,9985,7), -- Barakiel\'s Axe - PvP - Health
+(10674,0,9985,8), -- Barakiel\'s Axe - PvP - Haste
+(10675,0,9985,9), -- Barakiel\'s Axe - PvP - Focus
+(10676,0,9985,10), -- Behemoth\'s Tuning Fork - PvP - Focus
+(10677,0,9985,11), -- Behemoth\'s Tuning Fork - PvP - Health
+(10678,0,9985,12), -- Behemoth\'s Tuning Fork - PvP - Anger
+(10679,0,9985,13), -- Naga Storm {PvP} - Focus
+(10680,0,9985,14), -- Naga Storm {PvP} - Critical Damage
+(10681,0,9985,15), -- Naga Storm {PvP} - Back Blow
+(10682,0,9985,16), -- Tiphon\'s Spear - PvP - Critical Stun
+(10683,0,9985,17), -- Tiphon\'s Spear - PvP - Long Blow
+(10684,0,9985,18), -- Tiphon\'s Spear - PvP - Wild Blow
+(10685,0,9985,19), -- Shyeed\'s Bow - PvP - Cheap Shot
+(10686,0,9985,20), -- Shyeed\'s Bow - PvP - Focus
+(10687,0,9985,21), -- Shyeed\'s Bow - PvP - Quick Recovery
+(10688,0,9985,22), -- Sobekk\'s Hurricane - PvP - Rsk. Haste
+(10689,0,9985,23), -- Sobekk\'s Hurricane - PvP - Haste
+(10690,0,9985,24), -- Sobekk\'s Hurricane - PvP - Critical Drain
+(10691,0,9985,25), -- Themis\' Tongue - PvP - Mana Up
+(10692,0,9985,26), -- Themis\' Tongue - PvP - Magic Mental Shield
+(10693,0,9985,27), -- Themis\' Tongue - PvP - Magic Focus
+(10694,0,9985,28), -- Cabrio\'s Hand - PvP - Updown
+(10695,0,9985,29), -- Cabrio\'s Hand - PvP - Mana Up
+(10696,0,9985,30), -- Cabrio\'s Hand - PvP - Magic Silence
+(10697,0,9985,31), -- Daimon Crystal {PvP} - Mana Up
+(10698,0,9985,32), -- Daimon Crystal {PvP} - Acumen
+(10699,0,9985,33), -- Daimon Crystal {PvP} - Magic Mental Shield
+(10700,0,9985,34), -- Eclair Bijou {PvP} - Haste
+(10701,0,9985,35), -- Eclair Bijou - PvP - Health
+(10702,0,9985,36), -- Eclair Bijou - PvP - Critical Poison
+(10703,0,9985,37), -- Durendal {PvP} - Focus
+(10704,0,9985,38), -- Durendal {PvP} - Haste
+(10705,0,9985,39), -- Durendal {PvP} - Health
+(10706,0,9985,40), -- Screaming Vengeance {PvP} - Cheap Shot
+(10707,0,9985,41), -- Screaming Vengeance {PvP} - Focus
+(10708,0,9985,42), -- Screaming Vengeance {PvP} - Quick Recovery
+(10709,0,9985,43), -- Tallum Blade*Damascus {PvP}
+(12852,0,9985,44), -- Naga Storm - Molar {PvP} - Focus
+(12853,0,9985,45), -- Naga Storm - Molar {PvP} - Crt. Damage
+(12854,0,9985,46), -- Naga Storm - Molar {PvP} - Backblow
+(12855,0,9985,47), -- Daimon Crystal - Wisdom {PvP} - Mana Up
+(12856,0,9985,48), -- Daimon Crystal - Wisdom {PvP} - Acumen
+(12857,0,9985,49), -- Daimon Crystal - Wisdom {PvP} - Magic Mental Shield
+(12858,0,9985,50), -- Barakiel\'s Axe - On Fire - Health
+(12859,0,9985,51), -- Barakiel\'s Axe - On Fire - Haste
+(12860,0,9985,52), -- Barakiel\'s Axe - On Fire - Focus
+(12861,0,9985,53), -- Screaming Vengeance - Concentration {PvP} - Cheap Shot
+(12862,0,9985,54), -- Screaming Vengeance - Concentration {PvP} - Focus
+(12863,0,9985,55), -- Screaming Vengeance - Concentration {PvP} - Quick Recovery
+(12864,0,9985,56), -- Behemoth\'s Tuning Fork - Destruction - Focus
+(12865,0,9985,57), -- Behemoth\'s Tuning Fork - Destruction - Health
+(12866,0,9985,58), -- Behemoth\'s Tuning Fork - Destruction - Anger
+(12867,0,9985,59), -- Durendal - Earth {PvP} - Focus
+(12868,0,9985,60), -- Durendal - Earth {PvP} - Haste
+(12869,0,9985,61), -- Durendal - Earth {PvP} - Health
+(12870,0,9985,62), -- Shyeed\'s Bow - Concentration - Cheap Shot
+(12871,0,9985,63), -- Shyeed\'s Bow - Concentration - Focus
+(12872,0,9985,64), -- Shyeed\'s Bow - Concentration - Quick Recovery
+(12873,0,9985,65), -- Sword of Ipos - Earth {PvP} - Focus
+(12874,0,9985,66), -- Sword of Ipos - Earth {PvP} - Haste
+(12875,0,9985,67), -- Sword of Ipos - Earth {PvP} - Health
+(12876,0,9985,68), -- Sobekk\'s Hurricane - Landslide - Rsk. Haste
+(12877,0,9985,69), -- Sobekk\'s Hurricane - Landslide - Haste
+(12878,0,9985,70), -- Sobekk\'s Hurricane - Landslide - Crt. Drain
+(12879,0,9985,71), -- Sirra\'s Blade - Landslide - Haste
+(12880,0,9985,72), -- Sirra\'s Blade - Landslide - Health
+(12881,0,9985,73), -- Sirra\'s Blade - Landslide - Critical Poison
+(12882,0,9985,74), -- Eclair Bijou - Landslide {PvP} - Haste
+(12883,0,9985,75), -- Eclair Bijou - Landslide {PvP} - Health
+(12884,0,9985,76), -- Eclair Bijou - Landslide {PvP} - Critical Poison
+(12885,0,9985,77), -- Tiphon\'s Spear - Landslide - Critical Stun
+(12886,0,9985,78), -- Tiphon\'s Spear - Landslide - Longblow
+(12887,0,9985,79), -- Tiphon\'s Spear - Landslide - Wild Blow
+(12888,0,9985,80), -- Tallum Blade*Damascus - Landslide {PvP}
+(12889,0,9985,81), -- Themis\' Tongue - Cleverness - Mana Up
+(12890,0,9985,82), -- Themis\' Tongue - Cleverness - Magic Mental Shield
+(12891,0,9985,83), -- Themis\' Tongue - Cleverness - Magic Focus
+(12892,0,9985,84), -- Cabrio\'s Hand - Cleverness - Updown
+(12893,0,9985,85), -- Cabrio\'s Hand - Cleverness - Mana Up
+(12894,0,9985,86); -- Cabrio\'s Hand - Cleverness - Magic Silence
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) [reserved]
+(1,0,9986,1);
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) [reserved]
+(1,0,9987,1);
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) [reserved]
+(1,0,9988,1);
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) Fortress Misc
+(10129,0,9989,1),
+(10130,0,9989,2),
+(10143,0,9989,3),
+(10144,0,9989,4),
+(10145,0,9989,5),
+(10146,0,9989,6),
+(10147,0,9989,7),
+(10148,0,9989,8),
+(10149,0,9989,9),
+(10150,0,9989,10),
+(10151,0,9989,11),
+(10152,0,9989,12),
+(10153,0,9989,13),
+(10154,0,9989,14),
+(10155,0,9989,15),
+(10156,0,9989,16),
+(10157,0,9989,17),
+(10159,0,9989,18),
+(9688,0,9989,19),
+(9819,0,9989,20),
+(9811,0,9989,21);
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) Territory Weapons
+(14560,0,9990,1), -- Dagger of Val Turner Family
+(14561,0,9990,2), -- Slasher of Val Turner Family
+(14562,0,9990,3), -- Sword of Ashton Family
+(14563,0,9990,4), -- Claw of Ashton Family
+(14564,0,9990,5), -- Slasher of Esthus Family
+(14565,0,9990,6), -- Great Hammer of Esthus Family
+(14566,0,9990,7), -- Staff of Dake Family
+(14567,0,9990,8), -- Hall of Dake Family
+(14568,0,9990,9), -- Bow of Cadmus Family
+(14569,0,9990,10), -- Mace of Cadmus Family
+(14570,0,9990,11), -- Dual Sword of Hunter Family
+(14571,0,9990,12), -- Spear of Hunter Family
+(14572,0,9990,13), -- Staff of Abygail Family
+(14573,0,9990,14), -- Great Hammer of Abygail Family
+(14574,0,9990,15), -- Spear of Halter Family
+(14575,0,9990,16), -- Dagger of Halter Family
+(14576,0,9990,17), -- Mace of Orwen Family
+(14577,0,9990,18), -- Claw of Orwen Family'
+(14578,0,9990,19), -- Slicer of Val Turner Family
+(14579,0,9990,20), -- Epee of Ashton Family
+(14580,0,9990,21), -- Slicer of Esthus Family
+(14581,0,9990,22); -- Estoc of Cadmus Family
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) Territory Wards
+(13560,0,9991,1), -- Gludio Ward
+(13561,0,9991,2), -- Dion Ward
+(13562,0,9991,3), -- Giran Ward
+(13563,0,9991,4), -- Oren Ward
+(13564,0,9991,5), -- Aden Ward
+(13565,0,9991,6), -- Innadril Ward
+(13566,0,9991,7), -- Goddard Ward
+(13567,0,9991,8), -- Rune Ward
+(13568,0,9991,9); -- Schuttgart Ward
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) Territory Flags
+(13530,0,9992,1), -- Flag of Gludio
+(13531,0,9992,2), -- Flag of Dion
+(13532,0,9992,3), -- Flag of Giran
+(13533,0,9992,4), -- Flag of Oren
+(13534,0,9992,5), -- Flag of Aden
+(13535,0,9992,6), -- Flag of Innadril
+(13536,0,9992,7), -- Flag of Goddard
+(13537,0,9992,8), -- Flag of Rune
+(13538,0,9992,9); -- Flag of Schuttgart
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) Seeds
+(6727,0,9993,1),
+(6728,0,9993,2),
+(6729,0,9993,3),
+(6730,0,9993,4),
+(6731,0,9993,5),
+(6732,0,9993,6),
+(6733,0,9993,7),
+(6734,0,9993,8),
+(6735,0,9993,9),
+(6736,0,9993,10),
+(6737,0,9993,11),
+(6738,0,9993,12),
+(6739,0,9993,13),
+(6740,0,9993,14),
+(6741,0,9993,15),
+(6742,0,9993,16),
+(6743,0,9993,17),
+(6744,0,9993,18),
+(6745,0,9993,19),
+(6746,0,9993,20),
+(6747,0,9993,21),
+(6748,0,9993,22),
+(6749,0,9993,23),
+(6750,0,9993,24),
+(6751,0,9993,25),
+(6752,0,9993,26),
+(6753,0,9993,27),
+(6754,0,9993,28),
+(6755,0,9993,29),
+(6756,0,9993,30),
+(6757,0,9993,31),
+(6758,0,9993,32),
+(6759,0,9993,33),
+(6760,0,9993,34),
+(6761,0,9993,35),
+(6762,0,9993,36),
+(6763,0,9993,37),
+(6764,0,9993,38),
+(6765,0,9993,39),
+(6766,0,9993,40),
+(6767,0,9993,41),
+(6768,0,9993,42),
+(6769,0,9993,43),
+(6770,0,9993,44),
+(6771,0,9993,45),
+(6772,0,9993,46),
+(6773,0,9993,47),
+(6774,0,9993,48),
+(6775,0,9993,49),
+(6776,0,9993,50),
+(6777,0,9993,51),
+(6778,0,9993,52),
+(7016,0,9993,53),
+(7017,0,9993,54),
+(7018,0,9993,55),
+(7019,0,9993,56),
+(7020,0,9993,57),
+(7021,0,9993,58),
+(7022,0,9993,59),
+(7023,0,9993,60),
+(7024,0,9993,61),
+(7025,0,9993,62),
+(7026,0,9993,63),
+(7027,0,9993,64),
+(7028,0,9993,65),
+(7029,0,9993,66),
+(7030,0,9993,67),
+(7031,0,9993,68),
+(7032,0,9993,69),
+(7033,0,9993,70),
+(7034,0,9993,71),
+(7035,0,9993,72),
+(7036,0,9993,73),
+(7037,0,9993,74),
+(7038,0,9993,75),
+(7039,0,9993,76),
+(7040,0,9993,77),
+(7041,0,9993,78),
+(7042,0,9993,79),
+(7043,0,9993,80),
+(7044,0,9993,81),
+(7045,0,9993,82),
+(7046,0,9993,83),
+(7047,0,9993,84),
+(7048,0,9993,85),
+(7049,0,9993,86),
+(7050,0,9993,87),
+(7051,0,9993,88),
+(7052,0,9993,89),
+(7053,0,9993,90),
+(7054,0,9993,91),
+(7055,0,9993,92),
+(7056,0,9993,93),
+(7057,0,9993,94),
+(6541,0,9993,95),
+(6542,0,9993,96),
+(6543,0,9993,97),
+(6544,0,9993,98),
+(6545,0,9993,99),
+(6546,0,9993,100),
+(6547,0,9993,101),
+(6548,0,9993,102),
+(6549,0,9993,103),
+(6550,0,9993,104),
+(6551,0,9993,105),
+(6552,0,9993,106),
+(6553,0,9993,107),
+(6554,0,9993,108),
+(6555,0,9993,109),
+(6556,0,9993,110),
+(6557,0,9993,111),
+(6558,0,9993,112),
+(6559,0,9993,113),
+(6560,0,9993,114),
+(6561,0,9993,115),
+(6562,0,9993,116),
+(6563,0,9993,117),
+(6564,0,9993,118),
+(6565,0,9993,119),
+(6566,0,9993,120),
+(6567,0,9993,121),
+(6568,0,9993,122),
+(8223,0,9993,123),
+(8224,0,9993,124),
+(8225,0,9993,125),
+(8226,0,9993,126),
+(8227,0,9993,127),
+(8228,0,9993,128),
+(8229,0,9993,129),
+(8230,0,9993,130),
+(8231,0,9993,131),
+(8232,0,9993,132),
+(8233,0,9993,133),
+(8234,0,9993,134),
+(8235,0,9993,135),
+(8236,0,9993,136),
+(8237,0,9993,137),
+(8238,0,9993,138),
+(8239,0,9993,139),
+(8240,0,9993,140),
+(8241,0,9993,141),
+(8242,0,9993,142),
+(8243,0,9993,143),
+(8244,0,9993,144),
+(8245,0,9993,145),
+(8246,0,9993,146),
+(8247,0,9993,147),
+(8248,0,9993,148),
+(8249,0,9993,149),
+(8250,0,9993,150),
+(8251,0,9993,151),
+(8252,0,9993,152),
+(8253,0,9993,153),
+(8254,0,9993,154),
+(8255,0,9993,155),
+(8256,0,9993,156),
+(8257,0,9993,157),
+(8258,0,9993,158),
+(8259,0,9993,159),
+(8260,0,9993,160),
+(8261,0,9993,161),
+(8262,0,9993,162),
+(8263,0,9993,163),
+(8264,0,9993,164),
+(8265,0,9993,165),
+(8266,0,9993,166),
+(8267,0,9993,167),
+(8268,0,9993,168),
+(8269,0,9993,169),
+(8270,0,9993,170),
+(8271,0,9993,171),
+(8272,0,9993,172),
+(8521,0,9993,173),
+(8522,0,9993,174),
+(8523,0,9993,175),
+(8524,0,9993,176),
+(8525,0,9993,177),
+(8526,0,9993,178);
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) Siege Guards
+(7918,0,9994,1),
+(7919,0,9994,2),
+(7920,0,9994,3),
+(7921,0,9994,4),
+(7922,0,9994,5),
+(7923,0,9994,6),
+(7924,0,9994,7),
+(7925,0,9994,8),
+(7926,0,9994,9),
+(7927,0,9994,10),
+(7928,0,9994,11),
+(7929,0,9994,12),
+(7930,0,9994,13),
+(7931,0,9994,14),
+(7932,0,9994,15),
+(7933,0,9994,16),
+(7934,0,9994,17),
+(7935,0,9994,18),
+(7936,0,9994,19),
+(7937,0,9994,20),
+(7938,0,9994,21),
+(7939,0,9994,22),
+(7940,0,9994,23),
+(7941,0,9994,24),
+(7942,0,9994,25),
+(7943,0,9994,26),
+(7944,0,9994,27),
+(7945,0,9994,28),
+(7946,0,9994,29),
+(7947,0,9994,30),
+(7948,0,9994,31),
+(7949,0,9994,32),
+(7950,0,9994,33),
+(7951,0,9994,34),
+(7952,0,9994,35),
+(7953,0,9994,36),
+(7954,0,9994,37),
+(7955,0,9994,38),
+(7956,0,9994,39),
+(7957,0,9994,40),
+(7958,0,9994,41),
+(7959,0,9994,42),
+(7960,0,9994,43),
+(7961,0,9994,44),
+(7962,0,9994,45),
+(7963,0,9994,46),
+(7964,0,9994,47),
+(7965,0,9994,48),
+(7966,0,9994,49),
+(7967,0,9994,50),
+(7968,0,9994,51),
+(7969,0,9994,52),
+(7970,0,9994,53),
+(7971,0,9994,54),
+(7972,0,9994,55),
+(7973,0,9994,56),
+(7974,0,9994,57),
+(7975,0,9994,58),
+(7976,0,9994,59),
+(7977,0,9994,60),
+(7978,0,9994,61),
+(7979,0,9994,62),
+(7980,0,9994,63),
+(7981,0,9994,64),
+(7982,0,9994,65),
+(7983,0,9994,66),
+(7984,0,9994,67),
+(7985,0,9994,68),
+(7986,0,9994,69),
+(7987,0,9994,70),
+(7988,0,9994,71),
+(7989,0,9994,72),
+(7990,0,9994,73),
+(7991,0,9994,74),
+(7992,0,9994,75),
+(7993,0,9994,76),
+(7994,0,9994,77),
+(7995,0,9994,78),
+(7996,0,9994,79),
+(7997,0,9994,80),
+(7998,0,9994,81),
+(7999,0,9994,82),
+(8000,0,9994,83),
+(8001,0,9994,84),
+(8002,0,9994,85),
+(8003,0,9994,86),
+(8004,0,9994,87),
+(8005,0,9994,88),
+(8006,0,9994,89),
+(8007,0,9994,90),
+(8008,0,9994,91),
+(8009,0,9994,92),
+(8010,0,9994,93),
+(8011,0,9994,94),
+(8012,0,9994,95),
+(8013,0,9994,96),
+(8014,0,9994,97),
+(8015,0,9994,98),
+(8016,0,9994,99),
+(8017,0,9994,100),
+(8018,0,9994,101),
+(8019,0,9994,102),
+(8020,0,9994,103),
+(8021,0,9994,104),
+(8022,0,9994,105),
+(8023,0,9994,106),
+(8024,0,9994,107),
+(8025,0,9994,108),
+(8026,0,9994,109),
+(8027,0,9994,110),
+(8028,0,9994,111),
+(8029,0,9994,112);
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) [reserved]
+(1,0,9995,1);
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) [reserved]
+(1,0,9996,1);
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) A Weapons
+(2500,0,9997,1), -- Dark Legion\'s Edge
+(81,0,9997,2), -- Dragon Slayer
+(151,0,9997,3), -- Sword of Miracles
+(150,0,9997,4), -- Elemental Sword
+(80,0,9997,5), -- Tallum Blade
+(305,0,9997,6), -- Tallum Glaive
+(98,0,9997,7), -- Halberd
+(270,0,9997,8), -- Dragon Grinder
+(269,0,9997,9), -- Bloodd Tornado
+(236,0,9997,10), -- Soul Separator
+(235,0,9997,11), -- Bloody Orchid
+(289,0,9997,12), -- Soul Bow
+(288,0,9997,13), -- Carnage Bow
+(213,0,9997,14), -- Branch of The Mother Tree
+(164,0,9997,15), -- Elysian
+(2504,0,9997,16), -- Meteor Shower
+(209,0,9997,17), -- Dasparion\'s Staff
+(8678,0,9997,18), -- Sirra\'s Blade
+(8679,0,9997,19), -- Sword of Ipos
+(8680,0,9997,20), -- Barakiel\'s Axe
+(8681,0,9997,21), -- Behemoth\'s Tuning Fork
+(8682,0,9997,22), -- Naga Storm
+(8683,0,9997,23), -- Tiphon\'s Spear
+(8684,0,9997,24), -- Shyeed\'s Bow
+(8685,0,9997,25), -- Sobekk\'s Hurricane
+(8686,0,9997,26), -- Themis\' Tongue
+(8687,0,9997,27), -- Cabrio\'s Hand
+(8688,0,9997,28), -- Daimon Crystal
+(7902,0,9997,29), -- Doom Crusher
+(7899,0,9997,30), -- Destroyer Hammer
+(7894,0,9997,31), -- Spiritual Eye
+(7895,0,9997,32), -- Flaming Dragon Skull
+(5596,0,9997,33), -- Dasparion\'s Staff - Mana Up
+(5597,0,9997,34), -- Dasparion\'s Staff - Conversion
+(5598,0,9997,35), -- Dasparion\'s Staff - Acumen
+(5599,0,9997,36), -- Meteor Shower - Focus
+(5600,0,9997,37), -- Meteor Shower - Critical Bleed
+(5601,0,9997,38), -- Meteor Shower - Rsk. Haste
+(5602,0,9997,39), -- Elysian - Health
+(5603,0,9997,40), -- Elysian - Anger
+(5604,0,9997,41), -- Elysian - Critical Drain
+(5605,0,9997,42), -- Branch of The Mother Tree - Conversion
+(5606,0,9997,43), -- Branch of The Mother Tree - Magic Damage
+(5607,0,9997,44), -- Branch of The Mother Tree - Acumen
+(5608,0,9997,45), -- Carnage Bow - Light
+(5609,0,9997,46), -- Carnage Bow - Critical Bleed
+(5610,0,9997,47), -- Carnage Bow - Mana Up
+(5611,0,9997,48), -- Soul Bow - Cheap Shot
+(5612,0,9997,49), -- Soul Bow - Quick Recovery
+(5613,0,9997,50), -- Soul Bow - Critical Poison
+(5614,0,9997,51), -- Bloody Orchid - Focus
+(5615,0,9997,52), -- Bloody Orchid - Back Blow
+(5616,0,9997,53), -- Bloody Orchid - Critical Bleed
+(5617,0,9997,54), -- Soul Separator - Guidance
+(5618,0,9997,55), -- Soul Separator - Critical Damage
+(5619,0,9997,56), -- Soul Separator - Rsk. Haste
+(5620,0,9997,57), -- Blood Tornado - Haste
+(5621,0,9997,58), -- Blood Tornado - Focus
+(5622,0,9997,59), -- Blood Tornado - Anger
+(5623,0,9997,60), -- Dragon Grinder - Rsk. Evasion
+(5624,0,9997,61), -- Dragon Grinder - Guidance
+(5625,0,9997,62), -- Dragon Grinder - Health
+(5626,0,9997,63), -- Halberd - Haste
+(5627,0,9997,64), -- Halberd - Critical Stun
+(5628,0,9997,65), -- Halberd - Wide Blow
+(5632,0,9997,66), -- Tallum Glaive - Guidance
+(5633,0,9997,67), -- Tallum Glaive - Health
+(5634,0,9997,68), -- Tallum Glaive - Wide Blow
+(5635,0,9997,69), -- Tallum Blade - Critical Poison
+(5636,0,9997,70), -- Tallum Blade - Haste
+(5637,0,9997,71), -- Tallum Blade - Anger
+(5638,0,9997,72), -- Elemental Sword - Magic Power
+(5639,0,9997,73), -- Elemental Sword - Magic Paralyze
+(5640,0,9997,74), -- Elemental Sword - Empower
+(5641,0,9997,75), -- Sword of Miracles - Magic Power
+(5642,0,9997,76), -- Sword of Miracles - Magic Silence
+(5643,0,9997,77), -- Sword of Miracles - Acumen
+(5644,0,9997,78), -- Dragon Slayer - Health
+(5645,0,9997,79), -- Dragon Slayer - Critical Bleed
+(5646,0,9997,80), -- Dragon Slayer - Critical Drain
+(5647,0,9997,81), -- Dark Legion\'s Edge - Critical Damage
+(5648,0,9997,82), -- Dark Legion\'s Edge - Health
+(5649,0,9997,83), -- Dark Legion\'s Edge - Rsk. Focus
+(8788,0,9997,84), -- Sirra\'s Blade - Haste
+(8789,0,9997,85), -- Sirra\'s Blade - Health
+(8790,0,9997,86), -- Sirra\'s Blade - Critical Poison
+(8791,0,9997,87), -- Sword of Ipos - Focus
+(8792,0,9997,88), -- Sword of Ipos - Haste
+(8793,0,9997,89), -- Sword of Ipos - Health
+(8794,0,9997,90), -- Barakiel\'s Axe - Health
+(8795,0,9997,91), -- Barakiel\'s Axe - Haste
+(8796,0,9997,92), -- Barakiel\'s Axe - Focus
+(8797,0,9997,93), -- Behemoth\'s Tuning Fork - Focus
+(8798,0,9997,94), -- Behemoth\'s Tuning Fork - Health
+(8799,0,9997,95), -- Behemoth\'s Tuning Fork - Anger
+(8800,0,9997,96), -- Naga Storm - Focus
+(8801,0,9997,97), -- Naga Storm - Critical Damage
+(8802,0,9997,98), -- Naga Storm - Back Blow
+(8803,0,9997,99), -- Tiphon\'s Spear - Critical Stun
+(8804,0,9997,100), -- Tiphon\'s Spear - Towering Blow
+(8805,0,9997,101), -- Tiphon\'s Spear - Wild Blow
+(8806,0,9997,102), -- Shyeed\'s Bow - Cheap Shot
+(8807,0,9997,103), -- Shyeed\'s Bow - Focus
+(8808,0,9997,104), -- Shyeed\'s Bow - Quick Recovery
+(8809,0,9997,105), -- Sobekk\'s Hurricane - Rsk. Haste
+(8810,0,9997,106), -- Sobekk\'s Hurricane - Haste
+(8811,0,9997,107), -- Sobekk\'s Hurricane - Critical Drain
+(8812,0,9997,108), -- Themis\' Tongue - Mana Up
+(8813,0,9997,109), -- Themis\' Tongue - Magic Mental Shield
+(8814,0,9997,110), -- Themis\' Tongue - Magic Focus
+(8815,0,9997,111), -- Cabrio\'s Hand - Conversion
+(8816,0,9997,112), -- Cabrio\'s Hand - Mana Up
+(8817,0,9997,113), -- Cabrio\'s Hand - Magic Silence
+(8818,0,9997,114), -- Daimon Crystal - Mana Up
+(8819,0,9997,115), -- Daimon Crystal - Acumen
+(8820,0,9997,116), -- Daimon Crystal - Magic Mental Shield
+(8126,0,9997,117), -- Destroyer Hammer - Health
+(8127,0,9997,118), -- Destroyer Hammer - Haste
+(8128,0,9997,119), -- Destroyer Hammer - Critical Drain
+(8135,0,9997,120), -- Doom Crusher - Health
+(8136,0,9997,121), -- Doom Crusher - Anger
+(8137,0,9997,122), -- Doom Crusher - Rsk. Haste
+(8147,0,9997,123), -- Spiritual Eye - Mana Up
+(8148,0,9997,124), -- Spiritual Eye - Magic Poison
+(8149,0,9997,125), -- Spiritual Eye - Acumen
+(8150,0,9997,126), -- Flaming Dragon Skull - Acumen
+(8151,0,9997,127), -- Flaming Dragon Skull - Magic Power
+(8152,0,9997,128), -- Flaming Dragon Skull - Magic Silence
+(5704,0,9997,129), -- Keshanberk*Keshanberk
+(5705,0,9997,130), -- Keshanberk*Damascus
+(5706,0,9997,131), -- Damascus*Damascus
+(8763,0,9997,132); -- Elrokian Trap
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) S Weapons
+(6364,0,9998,1), -- Forgotten Blade
+(6365,0,9998,2), -- Basalt Battlehammer
+(6366,0,9998,3), -- Imperial Staff
+(6367,0,9998,4), -- Angel Slayer
+(6368,0,9998,5), -- Shining Bow
+(6369,0,9998,6), -- Dragon Hunter Axe
+(6370,0,9998,7), -- Saint Spear
+(6371,0,9998,8), -- Demon Splinter
+(6372,0,9998,9), -- Heaven\'s Divider
+(6579,0,9998,10), -- Arcana Mace
+(6580,0,9998,11), -- Tallum Blade*Dark Legion\'s Edge
+(7575,0,9998,12), -- Draconic Bow
+(6581,0,9998,13), -- Forgotten Blade - Haste
+(6582,0,9998,14), -- Forgotten Blade - Health
+(6583,0,9998,15), -- Forgotten Blade - Focus
+(6584,0,9998,16), -- Basalt Battlehammer - HP Drain
+(6585,0,9998,17), -- Basalt Battlehammer - Health
+(6586,0,9998,18), -- Basalt Battlehammer - HP Regeneration
+(6587,0,9998,19), -- Imperial Staff - Empower
+(6588,0,9998,20), -- Imperial Staff - MP Regeneration
+(6589,0,9998,21), -- Imperial Staff - Magic Hold
+(6590,0,9998,22), -- Angel Slayer - Critical Damage
+(6591,0,9998,23), -- Angel Slayer - HP Drain
+(6592,0,9998,24), -- Angel Slayer - Haste
+(6593,0,9998,25), -- Shining Bow - Cheap Shot
+(6594,0,9998,26), -- Shining Bow - Focus
+(6595,0,9998,27), -- Shining Bow - Critical Slow
+(6596,0,9998,28), -- Dragon Hunter Axe - HP Regeneration
+(6597,0,9998,29), -- Dragon Hunter Axe - Health
+(6598,0,9998,30), -- Dragon Hunter Axe - HP Drain
+(6599,0,9998,31), -- Saint Spear - Health
+(6600,0,9998,32), -- Saint Spear - Guidance
+(6601,0,9998,33), -- Saint Spear - Haste
+(6602,0,9998,34), -- Demon Splinter - Focus
+(6603,0,9998,35), -- Demon Splinter - Health
+(6604,0,9998,36), -- Demon Splinter - Critical Stun
+(6605,0,9998,37), -- Heavens Divider - Haste
+(6606,0,9998,38), -- Heavens Divider - Health
+(6607,0,9998,39), -- Heavens Divider - Focus
+(6608,0,9998,40), -- Arcana Mace - Acumen
+(6609,0,9998,41), -- Arcana Mace - MP Regeneration
+(6610,0,9998,42), -- Arcana Mace - Mana Up
+(7576,0,9998,43), -- Draconic Bow - Cheap Shot
+(7577,0,9998,44), -- Draconic Bow - Focus
+(7578,0,9998,45); -- Draconic Bow - Critical Slow
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) [reserved]
+(1,0,9999,1);
+
 -- GM SHOP END --
