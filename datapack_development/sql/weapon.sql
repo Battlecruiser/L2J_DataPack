@@ -2810,7 +2810,7 @@ INSERT INTO `weapon` VALUES
 (12910,'Basalt Battlehammer - Concentration {PvP} - HP Drain','rhand','true',1570,1,1,'fine_steel','s',281,20,'blunt',4,4.00000,0,0,0,379,0,132,-1,-1,48800000,2052,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (12911,'Basalt Battlehammer - Concentration {PvP} - Health','rhand','true',1570,1,1,'fine_steel','s',281,20,'blunt',4,4.00000,0,0,0,379,0,132,-1,-1,48800000,2052,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3013-3;'),
 (12912,'Basalt Battlehammer - Concentration {PvP} - HP Regeneration','rhand','true',1570,1,1,'fine_steel','s',281,20,'blunt',4,4.00000,0,0,0,379,0,132,-1,-1,48800000,2052,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
-(12913,'Sarunga - Earth {PvP} - Cheap Shot','lrhand','true',1600,1,1,'fine_steel','s',356,10,'crossbow',10,-1.00000,0,0,0,303,0,132,-1,-1,48800000,2052,'true','true','true','true',0,0,0,0,0,0,0,0,12901,'0-0;'),
+(12913,'Sarunga - Earth {PvP} - Cheap Shot','rhand','true',1600,1,1,'fine_steel','s',356,10,'crossbow',10,-1.00000,0,0,0,303,0,132,-1,-1,48800000,2052,'true','true','true','true',0,0,0,0,0,0,0,0,12901,'0-0;'),
 (12914,'Sarunga - Earth {PvP} - Focus','rhand','true',1600,1,1,'fine_steel','s',356,10,'crossbow',10,-1.00000,0,0,0,303,0,132,-1,-1,48800000,2052,'true','true','true','true',0,0,0,0,0,0,0,0,12902,'0-0;'),
 (12915,'Sarunga - Earth {PvP} - Crt. Slow','rhand','true',1600,1,1,'fine_steel','s',356,10,'crossbow',10,-1.00000,0,0,0,303,0,132,-1,-1,48800000,2052,'true','true','true','true',0,0,0,0,0,0,0,0,12903,'0-0;'),
 (12916,'Saint Spear - Destruction {PvP} - Health','lrhand','true',1800,1,1,'fine_steel','s',281,10,'pole',8,-3.00000,0,0,0,325,0,132,-1,-1,48800000,2052,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3013-3;'),
