@@ -633,4 +633,32 @@ INSERT INTO `merchant_shopids` VALUES
 ('9968', 'gm'), -- Designs (Gracia Items)
 ('9969', 'gm'), -- Materials for Designs (Gracia Items)
 ('9970', 'gm'), -- Mercenary Transformation Scrolls
-('9971', 'gm'); -- Disguise Scroll
+('9971', 'gm'), -- Disguise Scroll
+('9972', 'gm'), -- Santa Weapons
+('9973', 'gm'), -- Baguette Weapons
+('9974', 'gm'), -- Limited Time Weapons - 60 minutes
+('9975', 'gm'), -- Limited Time Weapons - 4 hours
+('9976', 'gm'), -- Transformation Sticks
+('9977', 'gm'), -- Misc Event Items
+('9978', 'gm'), -- Misc Consumables
+('9979', 'gm'), -- Arrows
+('9980', 'gm'), -- Infinity Weapons
+('9981', 'gm'), -- Vesper PVP Weapons
+('9982', 'gm'), -- Dynasty PVP Weapons
+('9983', 'gm'), -- Icarus PVP Weapons
+('9984', 'gm'), -- S PVP Weapons
+('9985', 'gm'), -- A PVP Weapons
+('9986', 'gm'), -- [reserved]
+('9987', 'gm'), -- [reserved]
+('9988', 'gm'), -- [reserved]
+('9989', 'gm'), -- Fortress Misc
+('9990', 'gm'), -- Territory Weapons
+('9991', 'gm'), -- Territory Wards
+('9992', 'gm'), -- Territory Flags
+('9993', 'gm'), -- Seeds
+('9994', 'gm'), -- Castle Guards
+('9995', 'gm'), -- [reserved]
+('9996', 'gm'), -- [reserved]
+('9997', 'gm'), -- A Weapons
+('9998', 'gm'), -- S Weapons
+('9999', 'gm'); -- [reserved]
