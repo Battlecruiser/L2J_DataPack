@@ -21,6 +21,7 @@ import net.sf.l2j.gameserver.model.actor.L2Attackable;
 import net.sf.l2j.gameserver.model.actor.L2Character;
 import net.sf.l2j.gameserver.model.actor.L2Npc;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
+import net.sf.l2j.gameserver.network.clientpackets.Say2;
 import net.sf.l2j.gameserver.network.serverpackets.CreatureSay;
 import net.sf.l2j.util.Rnd;
  
@@ -72,7 +73,7 @@ public class PolymorphingOnAttack extends L2AttackableAIScript
                 if (tmp[3] >= 0)
                 {
                     String text = MOBTEXTS[tmp[3]][Rnd.get(MOBTEXTS[tmp[3]].length)];
-                    npc.broadcastPacket(new CreatureSay(npc.getObjectId(),0,npc.getName(),text));
+                    npc.broadcastPacket(new CreatureSay(npc.getObjectId(),Say2.ALL,npc.getName(),text));
                 }
                 npc.getSpawn().decreaseCount(npc);
                 npc.deleteMe();
