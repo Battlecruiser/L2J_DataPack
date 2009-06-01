@@ -54,7 +54,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 					String id = st.nextToken();
 					int idval = Integer.parseInt(id);
 					String num = st.nextToken();
-					long numval = Integer.parseInt(num);
+					long numval = Long.parseLong(num);
 					createItem(activeChar, idval, numval);
 				}
 				else if (st.countTokens() == 1)
