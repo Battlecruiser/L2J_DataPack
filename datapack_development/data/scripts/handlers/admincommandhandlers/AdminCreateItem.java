@@ -54,7 +54,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 					String id = st.nextToken();
 					int idval = Integer.parseInt(id);
 					String num = st.nextToken();
-					int numval = Integer.parseInt(num);
+					long numval = Integer.parseInt(num);
 					createItem(activeChar, idval, numval);
 				}
 				else if (st.countTokens() == 1)
@@ -82,7 +82,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void createItem(L2PcInstance activeChar, int id, int num)
+	private void createItem(L2PcInstance activeChar, int id, long num)
 	{
 		L2Item template = ItemTable.getInstance().getTemplate(id);
 		if (template == null)
