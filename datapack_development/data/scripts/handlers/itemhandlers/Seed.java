@@ -89,10 +89,19 @@ public class Seed implements IItemHandler
 		
 		if (areaValid(MapRegionTable.getInstance().getAreaCastle(_activeChar)))
 		{
-			//TODO: get right skill level
 			_target.setSeeded(_seedId, _activeChar);
-			L2Skill skill = SkillTable.getInstance().getInfo(2097, 3); // Sowing skill
-			_activeChar.useMagic(skill, false, false);
+			int skillId;
+			int skillLvl;
+			final String[] skills = item.getEtcItem().getSkills();
+			if (skills != null)
+			{
+				String[] skill = skills[0].split("-");
+				skillId = Integer.parseInt(skill[0]);
+				skillLvl = Integer.parseInt(skill[1]);
+				L2Skill itemskill = SkillTable.getInstance().getInfo(skillId, skillLvl); // Sowing skill
+				_activeChar.useMagic(itemskill, false, false);
+			}
+			
 		}
 		else
 		{

@@ -1159,91 +1159,123 @@
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="2291" levels="1" name="Facelifting Potion">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="itemConsumeId" val="8664"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="500"/>
   <set name="staticHitTime" val="true"/>
+  <set name="skillType" val="CHANGE_APPEARANCE"/>
+  <set name="faceId" val="0"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
 <skill id="2292" levels="1" name="Facelifting Potion">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="itemConsumeId" val="8665"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="500"/>
   <set name="staticHitTime" val="true"/>
+  <set name="skillType" val="CHANGE_APPEARANCE"/>
+  <set name="faceId" val="1"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
 <skill id="2293" levels="1" name="Facelifting Potion">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="itemConsumeId" val="8666"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="500"/>
   <set name="staticHitTime" val="true"/>
+  <set name="skillType" val="CHANGE_APPEARANCE"/>
+  <set name="faceId" val="2"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
 <skill id="2294" levels="1" name="Dye Potion">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="itemConsumeId" val="8667"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="500"/>
   <set name="staticHitTime" val="true"/>
+  <set name="skillType" val="CHANGE_APPEARANCE"/>
+  <set name="hairColorId" val="0"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
 <skill id="2295" levels="1" name="Dye Potion">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="itemConsumeId" val="8668"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="500"/>
   <set name="staticHitTime" val="true"/>
+  <set name="skillType" val="CHANGE_APPEARANCE"/>
+  <set name="hairColorId" val="1"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
 <skill id="2296" levels="1" name="Dye Potion">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="itemConsumeId" val="8669"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="500"/>
   <set name="staticHitTime" val="true"/>
+  <set name="skillType" val="CHANGE_APPEARANCE"/>
+  <set name="hairColorId" val="2"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
 <skill id="2297" levels="1" name="Dye Potion">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="itemConsumeId" val="8670"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="500"/>
   <set name="staticHitTime" val="true"/>
+  <set name="skillType" val="CHANGE_APPEARANCE"/>
+  <set name="hairColorId" val="3"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <cond msgId="113" addName="1">
-    <player flyMounted="False"/>
+    <and>
+      <player flyMounted="False"/>
+      <not>
+        <player race="Kamael"/>
+      </not>
+    </and>
   </cond>
 </skill>
 <skill id="2298" levels="1" name="Hair Style Change Potion">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="itemConsumeId" val="8671"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="500"/>
   <set name="staticHitTime" val="true"/>
+  <set name="skillType" val="CHANGE_APPEARANCE"/>
+  <set name="hairStyleId" val="0"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
 </skill>
 <skill id="2299" levels="1" name="Hair Style Change Potion">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="itemConsumeId" val="8672"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="500"/>
   <set name="staticHitTime" val="true"/>
+  <set name="skillType" val="CHANGE_APPEARANCE"/>
+  <set name="hairStyleId" val="1"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <cond msgId="113" addName="1">
     <player flyMounted="False"/>
   </cond>
