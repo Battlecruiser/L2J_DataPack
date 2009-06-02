@@ -203,6 +203,7 @@ public class SummonFriend implements ISkillHandler
 		}
 		// set correct instance id
 		targetChar.setInstanceId(summonerChar.getInstanceId());
+		targetChar.setIsIn7sDungeon(summonerChar.isIn7sDungeon());
 	
 		targetChar.teleToLocation(summonerChar.getX(), summonerChar.getY(), summonerChar.getZ(), true);
 	}
