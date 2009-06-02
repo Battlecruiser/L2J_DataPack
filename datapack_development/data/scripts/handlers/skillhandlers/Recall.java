@@ -95,6 +95,8 @@ public class Recall implements ISkillHandler
 					}
 				}
 				target.setInstanceId(0);
+				if (target instanceof L2PcInstance)
+					((L2PcInstance)target).setIsIn7sDungeon(false);
 				if (skill.getSkillType() == L2SkillType.TELEPORT)
 				{
 					int[] coords = skill.getTeleportCoords();

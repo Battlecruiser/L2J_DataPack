@@ -150,9 +150,17 @@ public class ItemSkills implements IItemHandler
     	if (timeStamp != null && timeStamp.containsKey(skill.getId()))
     	{
     		int remainingTime = (int)(player.getReuseTimeStamp().get(skill.getId()).getRemaining()/1000);
+    		int hours = remainingTime/3600;
     		int minutes = (remainingTime%3600)/60;
     		int seconds = (remainingTime%60);
-    		if (minutes > 0)
+    		if (hours > 0)
+    		{
+    			sm = new SystemMessage(SystemMessageId.S2_HOURS_S3_MINUTES_S4_SECONDS_REMAINING_FOR_REUSE_S1);
+    			sm.addSkillName(skill);
+    			sm.addNumber(hours);
+    			sm.addNumber(minutes);
+    		}
+    		else if (minutes > 0)
     		{
     			sm = new SystemMessage(SystemMessageId.S2_MINUTES_S3_SECONDS_REMAINING_FOR_REUSE_S1);
     			sm.addSkillName(skill);
