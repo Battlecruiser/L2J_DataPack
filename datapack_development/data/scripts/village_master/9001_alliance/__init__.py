@@ -46,7 +46,7 @@ class Quest (JQuest) :
      st.setState(State.STARTED)
      return "9001-01.htm"
 
-QUEST      = Quest(9001,qn,"village_master")
+QUEST      = Quest(-1,qn,"village_master")
 
 
 
