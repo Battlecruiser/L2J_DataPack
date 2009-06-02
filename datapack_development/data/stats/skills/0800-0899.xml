@@ -498,6 +498,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
   <set name="reuseDelay" val="75000"/>
+  <set name="skillRadius" val="1000"/>
   <for>
     <effect name="Buff" time="120" val="0">
       <mul order="0x30" stat="maxHp" val="1.1"/>
