@@ -110,26 +110,6 @@ Control of this needs to be moved back into potions.java so proper message suppo
 				else
 					playable.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
 				break;
-			case 20393: // Sweet Fruit Cocktail
-				res = usePotion(playable, 22056, 1);
-				usePotion(playable, 22057, 1);
-				usePotion(playable, 22058, 1);
-				usePotion(playable, 22059, 1);
-				usePotion(playable, 22060, 1);
-				usePotion(playable, 22061, 1);
-				usePotion(playable, 22064, 1);
-				usePotion(playable, 22065, 1);
-				break;
-			case 20394: // Fresh Fruit Cocktail
-				res = usePotion(playable, 22062, 1);
-				usePotion(playable, 22063, 1);
-				usePotion(playable, 22065, 1);
-				usePotion(playable, 22066, 1);
-				usePotion(playable, 22067, 1);
-				usePotion(playable, 22068, 1);
-				usePotion(playable, 22069, 1);
-				usePotion(playable, 22070, 1);
-				break;
 			case 4416:
 			case 7061:
 				res = usePotion(playable, 2073, 1);
@@ -141,45 +121,6 @@ Control of this needs to be moved back into potions.java so proper message suppo
 			case 8519:
 			case 8520:
 				res = usePotion(playable, 5041, 1);
-				break;
-			case 10143:
-				res = usePotion(playable, 2379, 1);
-				usePotion(playable, 2380, 1);
-				usePotion(playable, 2381, 1);
-				usePotion(playable, 2382, 1);
-				usePotion(playable, 2383, 1);
-				break;
-			case 10144:
-				res = usePotion(playable, 2379, 1);
-				usePotion(playable, 2380, 1);
-				usePotion(playable, 2381, 1);
-				usePotion(playable, 2384, 1);
-				usePotion(playable, 2385, 1);
-				break;
-			case 10145:
-				res = usePotion(playable, 2379, 1);
-				usePotion(playable, 2380, 1);
-				usePotion(playable, 2381, 1);
-				usePotion(playable, 2384, 1);
-				usePotion(playable, 2386, 1);
-				break;
-			case 10146:
-				res = usePotion(playable, 2379, 1);
-				usePotion(playable, 2387, 1);
-				usePotion(playable, 2381, 1);
-				usePotion(playable, 2388, 1);
-				usePotion(playable, 2383, 1);
-				break;
-			case 10147:
-				res = usePotion(playable, 2379, 1);
-				usePotion(playable, 2387, 1);
-				usePotion(playable, 2381, 1);
-				usePotion(playable, 2383, 1);
-				usePotion(playable, 2389, 1);
-				break;
-			case 10148:
-				res = usePotion(playable, 2390, 1);
-				usePotion(playable, 2391, 1);
 				break;
 			default:
 		}
