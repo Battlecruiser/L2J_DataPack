@@ -216,14 +216,31 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="6043" levels="1" name="Phoenix Flame Feather">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="element" val="1"/> <!-- Fire -->
+  <set name="hitTime" val="2500"/>
+  <set name="isMagic" val="true"/>  
+  <set name="mpConsume" val="109"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="70"/>
+  <set name="reuseDelay" val="20000"/> <!-- Guess -->
+  <set name="skillRadius" val="200"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="target" val="TARGET_AURA"/>
 </skill>
 <skill id="6044" levels="1" name="Phoenix Flame Beak">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
+  <set name="element" val="1"/> <!-- Fire -->
+  <set name="hitTime" val="1080"/>
+  <set name="mpConsume" val="80"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="2156"/>
+  <set name="reuseDelay" val="3000"/>
+  <set name="SSBoost" val="2.0"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="target" val="TARGET_ONE"/>
 </skill>
 <skill id="6045" levels="1" name="Presentation - Fortune Bug">
   <set name="target" val="TARGET_NONE"/>
