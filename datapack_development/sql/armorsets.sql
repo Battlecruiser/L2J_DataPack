@@ -60,7 +60,7 @@ INSERT INTO `armorsets` VALUES (22,  2376,  2379, 2415, 5714, 5730, 3519, 1,    
 INSERT INTO `armorsets` VALUES (23,  2390,  0,    2415, 5715, 5731, 3521, 1,    0,    0,    3618,     0,       12980,   11366,     11371,   0);   -- Avadon leather set
 INSERT INTO `armorsets` VALUES (24,  2406,  0,    2415, 5716, 5732, 3523, 1,    0,    0,    3619,     0,       12981,   11367,     11372,   0);   -- Avadon robe set
 
-INSERT INTO `armorsets` VALUES (25,  358,   2380, 2416, 5718, 5734, 3524, 1,    0,    0,    3617,     11394,   11403,   11399,     11396,   0);   -- Blue Wolf's Breastplate set
+INSERT INTO `armorsets` VALUES (25,  358,   2380, 2416, 5718, 5734, 3524, 1,    0,    0,    3617,     11394,   11403,   11399,     11396,   0);   -- Blue Wolfs Breastplate set
 INSERT INTO `armorsets` VALUES (26,  2391,  0,    2416, 5719, 5735, 3526, 1,    0,    0,    3618,     0,       12984,   11400,     11397,   0);   -- Blue wolf leather set
 INSERT INTO `armorsets` VALUES (27,  2398,  2403, 2416, 5720, 5736, 3528, 1,    0,    0,    3619,     11404,   12985,   11401,     11398,   0);   -- Blue Wolf robe set
 
@@ -225,3 +225,8 @@ INSERT INTO `armorsets` VALUES (137, 14522, 13444,13139,13445,13446,8305, 1,    
 INSERT INTO `armorsets` VALUES (138, 14523, 13448,13140,13449,13450,8302, 1,    13471,3417, 3623,     0,       0,       0,         0,       0);   -- Vesper Noble Breastplate {PvP}
 INSERT INTO `armorsets` VALUES (139, 14524, 13451,13141,13452,13453,8304, 1,    0,    0,    3624,     0,       0,       0,         0,       0);   -- Vesper Noble Leather Breastplate {PvP}
 INSERT INTO `armorsets` VALUES (140, 14525, 13454,13142,13455,13456,8306, 1,    0,    0,    3625,     0,       0,       0,         0,       0);   -- Vesper Noble Tunic {PvP}
+
+-- Special Sets (as more armor sets are added, these should be the last in the list, adjust their IDs accordingly)
+-- #########################    id   chest  legs  head  glov  feet  skill sklvl shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
+INSERT INTO `armorsets` VALUES (141, 13803, 13804, 13802, 0, 0, 8277, 1, 0, 0, 0, 0, 0, 0, 0, 0); -- Natives Set (bestows Native transform skill when all are worn together)
+INSERT INTO `armorsets` VALUES (142, 13806, 13807, 13805, 0, 0, 8278, 1, 0, 0, 0, 0, 0, 0, 0, 0); -- Guard of Dawns Set (bestows Guard transform skill when all are worn together)
