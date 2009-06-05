@@ -10067,10 +10067,10 @@ INSERT INTO `droplist` VALUES
 (20970,5497,1,1,1,1628), -- Sealed Tallum Boots Lining
 (20970,5508,1,1,1,1628), -- Sealed Dark Crystal Gloves Design
 (20970,5509,1,1,1,1628), -- Sealed Tallum Gloves Design
-(20970,10609,1,1,3,4717), -- Forgotten Scroll - Chant of Critical Attack
-(20970,10581,1,1,3,5587), -- Forgotten Scroll - Improve Condition
-(20970,10584,1,1,3,4444), -- Forgotten Scroll - Improve Movement
-(20970,14217,1,1,3,4444), -- Forgotten Scroll - Condition of Paagrio
+(20970,10609,1,1,3,4098), -- Forgotten Scroll - Chant of Critical Attack
+(20970,10581,1,1,3,3690), -- Forgotten Scroll - Improve Condition
+(20970,10584,1,1,3,2873), -- Forgotten Scroll - Improve Movement
+(20970,14217,1,1,3,3937), -- Forgotten Scroll - Condition of Paagrio
 (20971,1876,1,1,-1,540396), -- Mithril Ore
 (20971,1877,1,1,-1,108079), -- Adamantite Nugget
 (20971,1895,1,1,-1,771995), -- Metallic Fiber
@@ -10081,6 +10081,8 @@ INSERT INTO `droplist` VALUES
 (20971,5494,1,1,1,2794), -- Sealed Dark Crystal Shield Fragment
 (20971,5525,1,1,1,2057), -- Sealed Dark Crystal Helmet Design
 (20971,5526,1,1,1,2057), -- Sealed Tallum Helm Design
+(20971,12769,1,1,3,7352), -- Forgotten Scroll - Evasion Chance
+(20971,12768,1,1,3,8196), -- Forgotten Scroll - Evasion Counter
 (20972,4077,1,1,-1,85462), -- Doom Shield Fragment
 (20972,4087,1,1,-1,44581), -- Stockings of Doom Pattern
 (20972,5494,1,1,-1,39900), -- Sealed Dark Crystal Shield Fragment
@@ -10093,6 +10095,8 @@ INSERT INTO `droplist` VALUES
 (20972,5497,1,1,1,1645), -- Sealed Tallum Boots Lining
 (20972,5508,1,1,1,1645), -- Sealed Dark Crystal Gloves Design
 (20972,5509,1,1,1,1645), -- Sealed Tallum Gloves Design
+(20972,12771,1,1,3,5952), -- Forgotten Scroll - Shadow Step
+(20972,12770,1,1,3,5714), -- Forgotten Scroll - Evasion Haste
 (20973,4078,1,1,-1,43112), -- Blue Wolf Breastplate Part
 (20973,5166,1,1,-1,3935), -- Recipe: Blessed Spiritshot (A) Compressed Package (100%)
 (20973,5496,1,1,-1,69201), -- Sealed Dark Crystal Boots Lining
