@@ -76,6 +76,11 @@ public class ChatTell implements IChatHandler
 				activeChar.sendMessage("Player is chat banned.");
 				return;
 			}
+			if (receiver.getClient().isDetached())
+			{
+				activeChar.sendMessage("Player is in offline mode.");
+				return;
+			}
 			
 			if (!receiver.getMessageRefusal())
 			{
