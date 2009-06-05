@@ -419,7 +419,7 @@
   </cond>
   <for>
     <effect name="Buff" time="3600" val="0" stackOrder="1.6" stackType="critical_dmg_up">
-      <mul order="0x30" stat="cAtk" val="1.5"/>
+      <mul order="0x30" stat="cAtk" val="1.35"/>
     </effect>
   </for>
 </skill>
@@ -563,8 +563,9 @@
   </cond>
   <for>
     <effect name="Buff" time="3600" val="0" stackOrder="3" stackType="MPrate">
-      <mul order="0x30" stat="MagicalMpConsumeRate" val="0.92"/>
-      <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.92"/>
+      <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.8"/>
+      <mul order="0x30" stat="MagicalMpConsumeRate" val="0.9"/>
+      <mul order="0x30" stat="DanceMpConsumeRate" val="0.8"/>
     </effect>
   </for>
 </skill>
