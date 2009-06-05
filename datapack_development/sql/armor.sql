@@ -2267,7 +2267,7 @@ INSERT INTO `armor` VALUES
 (13746,'Goddard Fire Protection Necklace','neck','false','none',150, 'wood','a',0,-1,-1,0,85,33,0,0,'false','false','true','false','0-0','0-0;'),
 (13747,'Rune Fire Protection Necklace','neck','false','none',150, 'wood','a',0,-1,-1,0,85,33,0,0,'false','false','true','false','0-0','0-0;'),
 (13748,'Schuttgart Wind Protection Necklace','neck','false','none',150, 'wood','a',0,-1,-1,0,85,33,0,0,'false','false','true','false','0-0','0-0;'),
-(13751,'Warrior\'s T-shirt','underwear','true','none',130, 'wood','a',0,-1,-1,28,0,0,0,0,'true','true','true','true','0-0;','8324-1'),
+(13751,'Warrior\'s T-shirt','underwear','true','none',130, 'wood','a',0,-1,-1,28,0,0,0,0,'true','true','true','true','0-0','8324-1'),
 (13752,'Olympiad Warrior\'s Ring','rfinger,lfinger','true','none',150, 'wood','a',0,-1,43200,0,42,21,0,0,'false','false','true','false','0-0','8292-1;'),
 (13753,'Olympiad Warrior\'s Necklace','neck','false','none',150, 'wood','a',0,-1,43200,0,85,26,0,0,'false','false','true','false','0-0','8294-1;'),
 (13754,'Olympiad Warrior\'s Earring','rear,lear','false','none',150, 'wood','a',0,-1,43200,0,63,31,0,0,'false','false','true','false','0-0','8293-1;'),
