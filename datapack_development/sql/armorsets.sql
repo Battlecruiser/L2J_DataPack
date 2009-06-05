@@ -228,5 +228,5 @@ INSERT INTO `armorsets` VALUES (140, 14525, 13454,13142,13455,13456,8306, 1,    
 
 -- Special Sets (as more armor sets are added, these should be the last in the list, adjust their IDs accordingly)
 -- #########################    id   chest  legs  head  glov  feet  skill sklvl shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
-INSERT INTO `armorsets` VALUES (141, 13803, 13804, 13802, 0, 0, 8277, 1, 0, 0, 0, 0, 0, 0, 0, 0); -- Natives Set (bestows Native transform skill when all are worn together)
-INSERT INTO `armorsets` VALUES (142, 13806, 13807, 13805, 0, 0, 8278, 1, 0, 0, 0, 0, 0, 0, 0, 0); -- Guard of Dawns Set (bestows Guard transform skill when all are worn together)
+INSERT INTO `armorsets` VALUES (141, 13803, 13804,13802,0,    0,    8277, 1,    0,    0,    0,        0,       0,       0,         0,       0);   -- Natives Set (bestows Native transform skill when all are worn together)
+INSERT INTO `armorsets` VALUES (142, 13806, 13807,13805,0,    0,    8278, 1,    0,    0,    0,        0,       0,       0,         0,       0);   -- Guard of Dawns Set (bestows Guard transform skill when all are worn together)
