@@ -60,7 +60,7 @@ INSERT INTO `armorsets` VALUES (22,  2376,  2379, 2415, 5714, 5730, 3519, 1,    
 INSERT INTO `armorsets` VALUES (23,  2390,  0,    2415, 5715, 5731, 3521, 1,    0,    0,    3618,     0,       12980,   11366,     11371,   0);   -- Avadon leather set
 INSERT INTO `armorsets` VALUES (24,  2406,  0,    2415, 5716, 5732, 3523, 1,    0,    0,    3619,     0,       12981,   11367,     11372,   0);   -- Avadon robe set
 
-INSERT INTO `armorsets` VALUES (25,  358,   2380, 2416, 5718, 5734, 3524, 1,    0,    0,    3617,     11394,   11403,   11399,     11396,   0);   -- Blue Wolfs Breastplate set
+INSERT INTO `armorsets` VALUES (25,  358,   2380, 2416, 5718, 5734, 3524, 1,    0,    0,    3617,     11394,   11403,   11399,     11396,   0);   -- Blue Wolf's Breastplate set
 INSERT INTO `armorsets` VALUES (26,  2391,  0,    2416, 5719, 5735, 3526, 1,    0,    0,    3618,     0,       12984,   11400,     11397,   0);   -- Blue wolf leather set
 INSERT INTO `armorsets` VALUES (27,  2398,  2403, 2416, 5720, 5736, 3528, 1,    0,    0,    3619,     11404,   12985,   11401,     11398,   0);   -- Blue Wolf robe set
 
