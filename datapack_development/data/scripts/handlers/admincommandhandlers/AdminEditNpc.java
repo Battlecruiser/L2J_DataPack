@@ -278,7 +278,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			long price = Long.parseLong(args[3]);
 			int order = findOrderTradeList(itemID, tradeList.getPriceForItemId(itemID), tradeListID);
 			
-			tradeList.replaceItem(itemID, Integer.parseInt(args[3]));
+			tradeList.replaceItem(itemID, Long.parseLong(args[3]));
 			updateTradeList(itemID, price, tradeListID, order);
 			
 			activeChar.sendMessage("Updated price for " + item.getName() + " in Trade List " + tradeListID);
