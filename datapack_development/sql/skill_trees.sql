@@ -16011,7 +16011,7 @@ INSERT INTO `skill_trees` VALUES
 (123,194,1,'Lucky',0,1),
 (124,194,1,'Lucky',0,1),
 
--- Expertise 239 D,C,B,A,S,S80 (Done by DJ MELERIX)
+-- Expertise 239 D,C,B,A,S,S80,S84 (Done by DJ MELERIX)
 
 (0,239,1,'Expertise D',0,20),
 (0,239,2,'Expertise C',0,40),
