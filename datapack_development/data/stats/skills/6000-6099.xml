@@ -220,6 +220,7 @@
   <set name="element" val="1"/> <!-- Fire -->
   <set name="hitTime" val="2500"/>
   <set name="isMagic" val="true"/>  
+  <set name="magicLvl" val="83"/>
   <set name="mpConsume" val="109"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="70"/>
@@ -234,12 +235,13 @@
   <set name="effectRange" val="400"/>
   <set name="element" val="1"/> <!-- Fire -->
   <set name="hitTime" val="1080"/>
+  <set name="magicLvl" val="83"/>
   <set name="mpConsume" val="80"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="2156"/>
   <set name="reuseDelay" val="3000"/>
-  <set name="SSBoost" val="2.0"/>
   <set name="skillType" val="PDAM"/>
+  <set name="SSBoost" val="2.0"/>
   <set name="target" val="TARGET_ONE"/>
 </skill>
 <skill id="6045" levels="1" name="Presentation - Fortune Bug">
@@ -497,17 +499,35 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="reuseDelay" val="60000"/>
+  <set name="reuseDelay" val="75000"/>
 </skill>
 <skill id="6095" levels="15" name="Panther Dark Claw">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by DJ MELERIX -->
+  <table name="#power"> 469 758 1136 1327 1525 1727 1925 2020 2067 2112 2156 2200 2241 2282 2320 </table>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
+  <set name="hitTime" val="1500"/>
+  <set name="mpConsume" val="42"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="#power"/>
+  <set name="reuseDelay" val="12000"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="SSBoost" val="2.0"/>
+  <set name="target" val="TARGET_ONE"/>
 </skill>
 <skill id="6096" levels="13" name="Panther Fatal Claw">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by DJ MELERIX -->
+  <table name="#power"> 3408 3980 4575 5180 5773 6060 6199 6335 6468 6598 6723 6844 6960 </table>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
+  <set name="hitTime" val="1080"/>
+  <set name="mpConsume" val="42"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="#power"/>
+  <set name="reuseDelay" val="8000"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="SSBoost" val="2.0"/>
+  <set name="target" val="TARGET_ONE"/>
 </skill>
 <skill id="6097" levels="1" name="Scissors">
   <set name="target" val="TARGET_NONE"/>
