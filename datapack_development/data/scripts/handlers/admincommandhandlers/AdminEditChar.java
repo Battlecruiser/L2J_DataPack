@@ -338,11 +338,11 @@ public class AdminEditChar implements IAdminCommandHandler
 				{
 					// Delete party window for other party members
 					player.getParty().broadcastToPartyMembers(player, new PartySmallWindowDeleteAll());
-					for (L2PcInstance member : player.getParty())
+					for (L2PcInstance member : player.getParty().getPartyMembers())
 					{
 						// And re-add
 						if (member != player)
-							member.sendPacket(new PartySmallWindowAll(member, player.getParty().getPartyMembers()));
+							member.sendPacket(new PartySmallWindowAll(member, player.getParty()));
 					}
 				}
 				if (player.getClan() != null)
