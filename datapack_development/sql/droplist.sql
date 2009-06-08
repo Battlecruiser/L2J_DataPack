@@ -25051,9 +25051,9 @@ INSERT INTO `droplist` VALUES
 (22155,5549,1,1,2,111111), -- Metallic Thread
 (22155,1889,1,1,2,66667), -- Compound Braid
 (22155,4044,1,1,2,40000), -- Thons
-(22155,5488,1,1,1,5376), -- Sealed Majestic Robe Fabric
+(22155,5326,1,1,1,44), -- Sealed Robe of Nightmare
+(22155,5329,1,1,1,44), -- Sealed Majestic Robe
 (22155,5487,1,1,1,3322), -- Sealed Robe of Nightmare Fabric
-(22155,5487,1,1,1,4672), -- Sealed Robe of Nightmare Fabric
 (22155,5488,1,1,1,2336), -- Sealed Majestic Robe Fabric
 (22155,960,1,1,2,363), -- Scroll: Enchant Armor (Grade S)
 (22155,6706,1,1,-1,125000), -- Sealed Imperial Crusader Helmet Pattern
