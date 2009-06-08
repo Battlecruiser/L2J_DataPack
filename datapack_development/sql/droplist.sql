@@ -36,7 +36,7 @@ CREATE TABLE `droplist` (
 --    1 is any item that is in weapon.sql, any item in armor.sql, and some of the items from etcitem. Before dropping the column, I had those marked in etcitem.sql. However, you can recognize them easily. If they are parts unique for crafting equipable items, it's category 1.
 --    2 is almost all of the other items except:
 --    3 and 4 are used for the other two seal stones (1 category each).
- 
+
 INSERT INTO `droplist` VALUES 
 (18001,1806,1,1,-1,10868), -- Recipe: Soulshot: B-Grade
 (18001,57,765,1528,0,700000), -- Adena
@@ -972,8 +972,8 @@ INSERT INTO `droplist` VALUES
 (20066,1865,1,3,-1,371004), -- Varnish
 (20066,1873,1,3,-1,148401), -- Silver Nugget
 (20066,57,196,367,0,700000), -- Adena
-(20066,347,1,1,1,250), -- Common Item - Ring Mail Breastplate
-(20066,376,1,1,1,399), -- Common Item - Iron Plate Gaiters
+(20066,347,1,1,1,250), -- Ring Mail Breastplate
+(20066,376,1,1,1,399), -- Iron Plate Gaiters
 (20066,1868,1,1,2,111111), -- Thread
 (20066,1873,1,1,2,16129), -- Silver Nugget
 (20066,2178,1,1,2,6410), -- Recipe: Dark Stockings
@@ -983,9 +983,9 @@ INSERT INTO `droplist` VALUES
 (20067,2020,1,1,-1,6122), -- Temptation of Abyss Piece
 (20067,2180,1,1,-1,26296), -- Recipe: Scale Mail
 (20067,57,186,343,0,700000), -- Adena
-(20067,12311,1,1,1,15873), -- Common Item - Red Crescent Earring
-(20067,12313,1,1,1,13514), -- Common Item - Ring of Devotion
-(20067,12312,1,1,1,9009), -- Common Item - Necklace of Devotion
+(20067,847,1,1,1,365), -- Red Crescent Earring
+(20067,890,1,1,1,546), -- Ring of Devotion
+(20067,910,1,1,1,274), -- Necklace of Devotion
 (20067,1899,1,1,1,7668), -- Necklace of Devotion Chain
 (20067,1864,1,1,2,125000), -- Stem
 (20067,1869,1,1,2,55556), -- Iron Ore
@@ -995,10 +995,10 @@ INSERT INTO `droplist` VALUES
 (20068,1899,1,1,-1,58713), -- Necklace of Devotion Chain
 (20068,2261,1,1,-1,5835), -- Recipe: Conjuror\'s Staff
 (20068,57,196,374,0,700000), -- Adena
-(20068,11619,1,1,1,900), -- Common Item - Scroll of Wisdom
-(20068,11612,1,1,1,900), -- Common Item - Branch of Life
-(20068,11616,1,1,1,900), -- Common Item - Temptation of Abyss
-(20068,11609,1,1,1,900), -- Common Item - Proof of Revenge
+(20068,101,1,1,1,21), -- Scroll of Wisdom
+(20068,312,1,1,1,21), -- Branch of Life
+(20068,313,1,1,1,21), -- Temptation of Abyss
+(20068,314,1,1,1,21), -- Proof of Revenge
 (20068,2020,1,1,1,739), -- Temptation of Abyss Piece
 (20068,1864,1,1,2,111111), -- Stem
 (20068,1869,1,1,2,71429), -- Iron Ore
@@ -1008,8 +1008,8 @@ INSERT INTO `droplist` VALUES
 (20070,2152,1,1,-1,68389), -- Recipe: Enchanted Necklace
 (20070,2182,1,1,-1,46633), -- Recipe: Scale Gaiters
 (20070,57,201,388,0,700000), -- Adena
-(20070,12006,1,1,1,15873), -- Common Item - Leather Boots
-(20070,12007,1,1,1,15385), -- Common Item - Crafted Leather Gloves
+(20070,40,1,1,1,522), -- Leather Boots
+(20070,604,1,1,1,522), -- Crafted Leather Gloves
 (20070,1931,1,1,1,7125), -- Leather Boot Lining
 (20070,1934,1,1,1,7125), -- Crafted Leather Gloves Lining
 (20070,1867,1,1,2,66667), -- Animal Skin
@@ -1021,8 +1021,8 @@ INSERT INTO `droplist` VALUES
 (20072,2263,1,1,-1,6340), -- Recipe: Dwarven Trident
 (20072,3953,1,1,-1,16333), -- Recipe: Blessed Spiritshot D
 (20072,57,210,411,0,700000), -- Adena
-(20072,12009,1,1,1,11364), -- Common Item - Bone Helmet
-(20072,12013,1,1,1,17544), -- Common Item - Bronze Shield
+(20072,45,1,1,1,489), -- Bone Helmet
+(20072,626,1,1,1,698), -- Bronze Shield
 (20072,1932,1,1,1,12126), -- Bone Helmet Design
 (20072,1866,1,1,2,23810), -- Suede
 (20072,1871,1,1,2,35714), -- Charcoal
@@ -1035,8 +1035,8 @@ INSERT INTO `droplist` VALUES
 (20074,1869,1,3,-1,423158), -- Iron Ore
 (20074,1900,1,1,-1,46297), -- Enchanted Necklace Chain
 (20074,57,216,426,0,700000), -- Adena
-(20074,12016,1,1,1,10204), -- Common Item - Leather Gauntlets
-(20074,12029,1,1,1,22222), -- Common Item - Blue Buckskin Boots
+(20074,605,1,1,1,695), -- Leather Gauntlets
+(20074,1123,1,1,1,695), -- Blue Buckskin Boots
 (20074,1864,1,1,2,62500), -- Stem
 (20074,1869,1,1,2,24390), -- Iron Ore
 (20074,1880,1,1,2,8197), -- Steel
@@ -1046,9 +1046,9 @@ INSERT INTO `droplist` VALUES
 (20075,1061,1,2,-1,235088), -- Healing Potion
 (20075,2153,1,1,-1,60326), -- Recipe: Tiger\'s Eye Earring
 (20075,57,197,391,0,700000), -- Adena
-(20075,12314,1,1,1,249), -- Common Item - Enchanted Earring
-(20075,12316,1,1,1,374), -- Common Item - Enchanted Ring
-(20075,12315,1,1,1,187), -- Common Item - Enchanted Necklace
+(20075,848,1,1,1,249), -- Enchanted Earring
+(20075,879,1,1,1,374), -- Enchanted Ring
+(20075,911,1,1,1,187), -- Enchanted Necklace
 (20075,1900,1,1,1,5798), -- Enchanted Necklace Chain
 (20075,955,1,1,2,142), -- Scroll: Enchant Weapon (Grade D)
 (20075,1831,1,1,2,125000), -- Antidote
@@ -1060,8 +1060,8 @@ INSERT INTO `droplist` VALUES
 (20076,1900,1,1,-1,49112), -- Enchanted Necklace Chain
 (20076,2250,1,1,-1,112222), -- Recipe: Bone Arrow
 (20076,57,228,452,0,700000), -- Adena
-(20076,12016,1,1,1,19231), -- Common Item - Leather Gauntlets
-(20076,12029,1,1,1,20408), -- Common Item - Blue Buckskin Boots
+(20076,605,1,1,1,737), -- Leather Gauntlets
+(20076,1123,1,1,1,737), -- Blue Buckskin Boots
 (20076,956,1,1,2,824), -- Scroll: Enchant Armor (Grade D)
 (20076,1864,1,1,2,83333), -- Stem
 (20076,1869,1,1,2,47619), -- Iron Ore
@@ -1072,8 +1072,8 @@ INSERT INTO `droplist` VALUES
 (20077,2153,1,1,-1,68815), -- Recipe: Tiger\'s Eye Earring
 (20077,2183,1,1,-1,29111), -- Recipe: Mithril Banded Mail
 (20077,57,225,448,0,700000), -- Adena
-(20077,12028,1,1,1,6757), -- Common Item - Bronze Helmet
-(20077,12025,1,1,1,6757), -- Common Item - Aspis
+(20077,46,1,1,1,484), -- Bronze Helmet
+(20077,627,1,1,1,691), -- Aspis
 (20077,955,1,1,2,242), -- Scroll: Enchant Weapon (Grade D)
 (20077,1865,1,1,2,31250), -- Varnish
 (20077,1870,1,1,2,35714), -- Coal
@@ -1082,12 +1082,12 @@ INSERT INTO `droplist` VALUES
 (20078,2023,1,1,-1,5483), -- Conjuror\'s Staff Head
 (20078,2024,1,1,-1,6303), -- Elven Bow Shaft
 (20078,57,224,448,0,700000), -- Adena
-(20078,12026,1,1,1,2674), -- Common Item - Elven Tunic
-(20078,12022,1,1,1,2674), -- Common Item - White Tunic
-(20078,12018,1,1,1,1335), -- Common Item - Mystic\'s Tunic
-(20078,12027,1,1,1,4000), -- Common Item - Elven Stockings
-(20078,12017,1,1,1,4000), -- Common Item - Dark Stockings
-(20078,12019,1,1,1,2674), -- Common Item - Mystic\'s Stockings
+(20078,433,1,1,1,61), -- Elven Tunic
+(20078,434,1,1,1,61), -- White Tunic
+(20078,435,1,1,1,61), -- Mystic\'s Tunic
+(20078,466,1,1,1,97), -- Elven Stockings
+(20078,467,1,1,1,97), -- Dark Stockings
+(20078,468,1,1,1,97), -- Mystic\'s Stockings
 (20078,1933,1,1,1,3556), -- Dark Stocking Fabric
 (20078,1936,1,1,1,2474), -- White Tunic Pattern
 (20078,736,1,1,2,33333), -- Scroll of Escape
@@ -1099,9 +1099,9 @@ INSERT INTO `droplist` VALUES
 (20079,1881,1,1,-1,58997), -- Coarse Bone Powder
 (20079,2266,1,1,-1,4576), -- Recipe: Shilen Knife
 (20079,57,224,448,0,700000), -- Adena
-(20079,12314,1,1,1,7194), -- Common Item - Enchanted Earring
-(20079,12316,1,1,1,13889), -- Common Item - Enchanted Ring
-(20079,12315,1,1,1,5780), -- Common Item - Enchanted Necklace
+(20079,848,1,1,1,284), -- Enchanted Earring
+(20079,879,1,1,1,426), -- Enchanted Ring
+(20079,911,1,1,1,213), -- Enchanted Necklace
 (20079,1900,1,1,1,6614), -- Enchanted Necklace Chain
 (20079,1061,1,1,2,20833), -- Healing Potion
 (20079,1867,1,1,2,52632), -- Animal Skin
@@ -1114,7 +1114,7 @@ INSERT INTO `droplist` VALUES
 (20080,2021,1,1,-1,6054), -- Spinebone Sword Blade
 (20080,2268,1,1,-1,4958), -- Recipe: Tome of Blood
 (20080,57,243,485,0,700000), -- Adena
-(20080,11642,1,1,1,1783), -- Common Item - Single-Edged Jamadhr
+(20080,259,1,1,1,81), -- Single-Edged Jamadhr
 (20080,737,1,1,2,5348), -- Scroll of Resurrection
 (20080,1864,1,1,2,111111), -- Stem
 (20080,1869,1,1,2,47619), -- Iron Ore
@@ -1124,9 +1124,9 @@ INSERT INTO `droplist` VALUES
 (20081,1061,1,2,-1,486166), -- Healing Potion
 (20081,1933,1,1,-1,94373), -- Dark Stocking Fabric
 (20081,57,406,814,0,700000), -- Adena
-(20081,12314,1,1,1,14085), -- Common Item - Enchanted Earring
-(20081,12316,1,1,1,19231), -- Common Item - Enchanted Ring
-(20081,12315,1,1,1,14085), -- Common Item - Enchanted Necklace
+(20081,848,1,1,1,515), -- Enchanted Earring
+(20081,879,1,1,1,772), -- Enchanted Ring
+(20081,911,1,1,1,386), -- Enchanted Necklace
 (20081,1900,1,1,1,11990), -- Enchanted Necklace Chain
 (20081,1874,1,1,2,7042), -- Oriharukon Ore
 (20081,1878,1,1,2,27778), -- Braided Hemp
@@ -1139,13 +1139,13 @@ INSERT INTO `droplist` VALUES
 (20082,1901,1,1,-1,66829), -- Tiger\'s Eye Earring Stone
 (20082,2275,1,1,-1,3456), -- Recipe: Heavy Bone Club
 (20082,57,245,491,0,700000), -- Adena
-(20082,12038,1,1,1,2688), -- Common Item - Gauntlets
-(20082,12033,1,1,1,5376), -- Common Item - Iron Boots
+(20082,63,1,1,1,145), -- Gauntlets
+(20082,553,1,1,1,145), -- Iron Boots
 (20082,1940,1,1,1,5485), -- Iron Boots Design
-(20082,12035,1,1,1,3759), -- Common Item - Reinforced Leather Boots
-(20082,12045,1,1,1,5917), -- Common Item - Boots of Knowledge
-(20082,12037,1,1,1,4310), -- Common Item - Reinforced Leather Gloves
-(20082,12046,1,1,1,2688), -- Common Item - Gloves of Knowledge
+(20082,2422,1,1,1,145), -- Reinforced Leather Boots
+(20082,2423,1,1,1,145), -- Boots of Knowledge
+(20082,2446,1,1,1,145), -- Reinforced Leather Gloves
+(20082,2447,1,1,1,145), -- Gloves of Knowledge
 (20082,1832,1,1,2,41667), -- Greater Antidote
 (20082,1875,1,1,2,2688), -- Stone of Purity
 (20082,1879,1,1,2,7519), -- Cokes
@@ -1158,10 +1158,10 @@ INSERT INTO `droplist` VALUES
 (20083,2975,1,1,-1,52981), -- Recipe: Brigandine Helmet
 (20083,2987,1,1,-1,57610), -- Recipe: Plate Shield
 (20083,57,301,602,0,700000), -- Adena
-(20083,12043,1,1,1,2309), -- Common Item - Mithril Banded Mail
-(20083,12036,1,1,1,2165), -- Common Item - Reinforced Leather Shirt
-(20083,12042,1,1,1,2451), -- Common Item - Mithril Banded Gaiters
-(20083,12034,1,1,1,2882), -- Common Item - Reinforced Leather Gaiters
+(20083,393,1,1,1,70), -- Mithril Banded Mail
+(20083,394,1,1,1,70), -- Reinforced Leather Shirt
+(20083,415,1,1,1,111), -- Mithril Banded Gaiters
+(20083,416,1,1,1,111), -- Reinforced Leather Gaiters
 (20083,1938,1,1,1,3536), -- Mithril Banded Mail Material
 (20083,1939,1,1,1,4619), -- Mithril Banded Gaiters Material
 (20083,1874,1,1,2,2882), -- Oriharukon Ore
@@ -1176,8 +1176,8 @@ INSERT INTO `droplist` VALUES
 (20084,1938,1,1,-1,37114), -- Mithril Banded Mail Material
 (20084,2978,1,1,-1,73905), -- Recipe: Elven Mithril Boots
 (20084,57,280,558,0,700000), -- Adena
-(20084,12050,1,1,1,10417), -- Common Item - Helmet
-(20084,12051,1,1,1,12987), -- Common Item - Hoplon
+(20084,47,1,1,1,386), -- Helmet
+(20084,628,1,1,1,551), -- Hoplon
 (20084,1341,10,30,2,142857), -- Bone Arrow
 (20084,1876,1,1,2,8850), -- Mithril Ore
 (20084,1877,1,1,2,2208), -- Adamantite Nugget
@@ -1190,13 +1190,13 @@ INSERT INTO `droplist` VALUES
 (20085,2278,1,1,-1,4560), -- Recipe: Strengthened Long Bow
 (20085,2422,1,1,-1,2513), -- Reinforced Leather Boots
 (20085,57,324,645,0,700000), -- Adena
-(20085,12038,1,1,1,6579), -- Common Item - Gauntlets
-(20085,12033,1,1,1,4587), -- Common Item - Iron Boots
+(20085,63,1,1,1,191), -- Gauntlets
+(20085,553,1,1,1,191), -- Iron Boots
 (20085,1940,1,1,1,7237), -- Iron Boots Design
-(20085,12035,1,1,1,7463), -- Common Item - Reinforced Leather Boots
-(20085,12045,1,1,1,6459), -- Common Item - Boots of Knowledge
-(20085,12037,1,1,1,5882), -- Common Item - Reinforced Leather Gloves
-(20085,12046,1,1,1,4310), -- Common Item - Gloves of Knowledge
+(20085,2422,1,1,1,191), -- Reinforced Leather Boots
+(20085,2423,1,1,1,191), -- Boots of Knowledge
+(20085,2446,1,1,1,191), -- Reinforced Leather Gloves
+(20085,2447,1,1,1,191), -- Gloves of Knowledge
 (20085,1865,1,1,2,66667), -- Varnish
 (20085,1870,1,1,2,66667), -- Coal
 (20085,1874,1,1,2,4016), -- Oriharukon Ore
@@ -1207,8 +1207,8 @@ INSERT INTO `droplist` VALUES
 (20086,1868,1,3,-1,490187), -- Thread
 (20086,1939,1,1,-1,43055), -- Mithril Banded Gaiters Material
 (20086,57,248,496,0,700000), -- Adena
-(20086,12047,1,1,1,5882), -- Common Item - Tunic of Knowledge
-(20086,12048,1,1,1,9804), -- Common Item - Stockings of Knowledge
+(20086,436,1,1,1,172), -- Tunic of Knowledge
+(20086,469,1,1,1,274), -- Stockings of Knowledge
 (20086,1874,1,1,2,3356), -- Oriharukon Ore
 (20086,1878,1,1,2,18868), -- Braided Hemp
 (20086,1884,1,1,2,27027), -- Cord
@@ -1220,10 +1220,10 @@ INSERT INTO `droplist` VALUES
 (20087,1940,1,2,-1,175519), -- Iron Boots Design
 (20087,2191,1,1,-1,157427), -- Recipe: RIP Gauntlets
 (20087,57,596,1189,0,700000), -- Adena
-(20087,12043,1,1,1,3165), -- Common Item - Mithril Banded Mail
-(20087,12036,1,1,1,3861), -- Common Item - Reinforced Leather Shirt
-(20087,12042,1,1,1,5263), -- Common Item - Mithril Banded Gaiters
-(20087,12034,1,1,1,7752), -- Common Item - Reinforced Leather Gaiters
+(20087,393,1,1,1,138), -- Mithril Banded Mail
+(20087,394,1,1,1,138), -- Reinforced Leather Shirt
+(20087,415,1,1,1,219), -- Mithril Banded Gaiters
+(20087,416,1,1,1,219), -- Reinforced Leather Gaiters
 (20087,1938,1,1,1,7007), -- Mithril Banded Mail Material
 (20087,1939,1,1,1,9154), -- Mithril Banded Gaiters Material
 (20087,1832,1,1,2,100000), -- Greater Antidote
@@ -1238,8 +1238,8 @@ INSERT INTO `droplist` VALUES
 (20088,1895,1,2,-1,373675), -- Metallic Fiber
 (20088,2149,1,1,-1,93419), -- Recipe: Metallic Fiber
 (20088,57,662,1326,0,700000), -- Adena
-(20088,11671,1,1,1,2710), -- Common Item - War Hammer
-(20088,11661,1,1,1,1116), -- Common Item - Dwarven Pike
+(20088,293,1,1,1,72), -- War Hammer
+(20088,296,1,1,1,72), -- Dwarven Pike
 (20088,1867,1,1,2,200000), -- Animal Skin
 (20088,1872,1,1,2,166667), -- Animal Bone
 (20088,1875,1,1,2,6536), -- Stone of Purity
@@ -1250,8 +1250,8 @@ INSERT INTO `droplist` VALUES
 (20089,1902,1,1,-1,55207), -- Elven Earring Beads
 (20089,2159,1,1,-1,33635), -- Recipe: Necklace of Darkness
 (20089,57,276,551,0,700000), -- Adena
-(20089,12054,1,1,1,2114), -- Common Item - Manticore Skin Shirt
-(20089,12052,1,1,1,2747), -- Common Item - Manticore Skin Gaiters
+(20089,395,1,1,1,63), -- Manticore Skin Shirt
+(20089,417,1,1,1,101), -- Manticore Skin Gaiters
 (20089,1942,1,1,1,3592), -- Manticore Skin Shirt Texture
 (20089,1943,1,1,1,5593), -- Manticore Skin Gaiters Pattern
 (20089,1825,1,1,2,2959), -- Recipe: Oriharukon
@@ -1266,10 +1266,10 @@ INSERT INTO `droplist` VALUES
 (20090,1868,1,7,-1,799241), -- Thread
 (20090,2197,1,1,-1,25133), -- Recipe: Salamander Skin Mail
 (20090,57,608,1213,0,700000), -- Adena
-(20090,12059,1,1,1,2611), -- Common Item - Brigandine Tunic
+(20090,352,1,1,1,70), -- Brigandine Tunic
 (20090,1941,1,1,1,4108), -- Brigandine Temper
-(20090,12056,1,1,1,3268), -- Common Item - Mithril Scale Gaiters
-(20090,12060,1,1,1,1742), -- Common Item - Brigandine Gaiters
+(20090,2377,1,1,1,111), -- Mithril Scale Gaiters
+(20090,2378,1,1,1,111), -- Brigandine Gaiters
 (20090,2918,1,1,1,6128), -- Mithril Scale Gaiters Material
 (20090,2919,1,1,1,6128), -- Brigandine Gaiters Material
 (20090,1341,10,30,2,333333), -- Bone Arrow
@@ -1600,10 +1600,10 @@ INSERT INTO `droplist` VALUES
 (20134,947,1,1,-1,679), -- Scroll: Enchant Weapon (Grade B)
 (20134,1871,1,4,-1,849303), -- Charcoal
 (20134,57,822,1672,0,700000), -- Adena
-(20134,12161,1,1,1,233), -- Common Item - Zubei\'s Breastplate
-(20134,12152,1,1,1,465), -- Common Item - Zubei\'s Gaiters
-(20134,12173,1,1,1,233), -- Common Item - Avadon Breastplate
-(20134,12172,1,1,1,233), -- Common Item - Avadon Gaiters
+(20134,357,1,1,1,7), -- Zubei\'s Breastplate
+(20134,383,1,1,1,10), -- Zubei\'s Gaiters
+(20134,2376,1,1,1,7), -- Avadon Breastplate
+(20134,2379,1,1,1,10), -- Avadon Gaiters
 (20134,4056,1,1,1,1136), -- Zubei\'s Breastplate Part
 (20134,4057,1,1,1,1755), -- Zubei\'s Gaiter Material
 (20134,4064,1,1,1,1136), -- Avadon Breastplate Part
@@ -1621,7 +1621,7 @@ INSERT INTO `droplist` VALUES
 (20135,2038,1,1,-1,8193), -- Maingauche Edge
 (20135,5231,1,1,-1,55388), -- Recipe: Metal Hardener (100%)
 (20135,57,390,779,0,700000), -- Adena
-(20135,11691,1,1,1,1224), -- Common Item - Bich\'Hwa
+(20135,261,1,1,1,29), -- Bich\'Hwa
 (20135,2039,1,1,1,2029), -- Bich\'Hwa Edge
 (20135,1867,1,1,2,83333), -- Animal Skin
 (20135,1872,1,1,2,83333), -- Animal Bone
@@ -1634,12 +1634,12 @@ INSERT INTO `droplist` VALUES
 (20136,1914,1,1,-1,149116), -- Earring of Binding Gemstone
 (20136,4601,1,1,-1,5898), -- Greater Dye of Strength <Str+3 Con-3>
 (20136,57,1834,3679,0,700000), -- Adena
-(20136,11821,1,1,1,5), -- Common Item - Caliburs (no drop info)
-(20136,11807,1,1,1,5), -- Common Item - Sword of Delusion
-(20136,11820,1,1,1,5), -- Common Item - Tsurugi
-(20136,11829,1,1,1,5), -- Common Item - Homunkulus\'s Sword
-(20136,11815,1,1,1,5), -- Common Item - Sword of Nightmare
-(20136,11805,1,1,1,5), -- Common Item - Sword of Whispering Death
+(20136,75,1,1,1,5), -- Caliburs
+(20136,76,1,1,1,5), -- Sword of Delusion
+(20136,77,1,1,1,5), -- Tsurugi
+(20136,84,1,1,1,5), -- Homunkulus\'s Sword
+(20136,134,1,1,1,5), -- Sword of Nightmare
+(20136,145,1,1,1,5), -- Sword of Whispering Death
 (20136,2089,1,1,1,499), -- Caliburs Edge
 (20136,2090,1,1,1,499), -- Delusional Blade
 (20136,2091,1,1,1,499), -- Tsurugi Blade
@@ -1689,10 +1689,10 @@ INSERT INTO `droplist` VALUES
 (20144,1901,1,1,-1,82871), -- Tiger\'s Eye Earring Stone
 (20144,2272,1,1,-1,4286), -- Recipe: Sword of Revolution
 (20144,57,304,607,0,700000), -- Adena
-(20144,12043,1,1,1,1681), -- Common Item - Mithril Banded Mail
-(20144,12036,1,1,1,2049), -- Common Item - Reinforced Leather Shirt
-(20144,12042,1,1,1,3623), -- Common Item - Mithril Banded Gaiters
-(20144,12034,1,1,1,3937), -- Common Item - Reinforced Leather Gaiters
+(20144,393,1,1,1,70), -- Mithril Banded Mail
+(20144,394,1,1,1,70), -- Reinforced Leather Shirt
+(20144,415,1,1,1,112), -- Mithril Banded Gaiters
+(20144,416,1,1,1,112), -- Reinforced Leather Gaiters
 (20144,1938,1,1,1,3575), -- Mithril Banded Mail Material
 (20144,1939,1,1,1,4671), -- Mithril Banded Gaiters Material
 (20144,1341,10,30,2,125000), -- Bone Arrow
@@ -1709,9 +1709,9 @@ INSERT INTO `droplist` VALUES
 (20145,2183,1,1,-1,33063), -- Recipe: Mithril Banded Mail
 (20145,2268,1,1,-1,5197), -- Recipe: Tome of Blood
 (20145,57,254,510,0,700000), -- Adena
-(20145,12314,1,1,1,11905), -- Common Item - Enchanted Earring
-(20145,12316,1,1,1,15625), -- Common Item - Enchanted Ring
-(20145,12315,1,1,1,5025), -- Common Item - Enchanted Necklace
+(20145,848,1,1,1,323), -- Enchanted Earring
+(20145,879,1,1,1,484), -- Enchanted Ring
+(20145,911,1,1,1,242), -- Enchanted Necklace
 (20145,1900,1,1,1,7512), -- Enchanted Necklace Chain
 (20145,1868,1,1,2,111111), -- Thread
 (20145,1873,1,1,2,18182), -- Silver Nugget
@@ -1723,10 +1723,10 @@ INSERT INTO `droplist` VALUES
 (20146,1914,1,1,-1,68167), -- Earring of Binding Gemstone
 (20146,1915,1,1,-1,106905), -- Ring of Ages Gemstone
 (20146,57,587,1194,0,700000), -- Adena
-(20146,12129,1,1,1,1464), -- Common Item - Tower Shield
-(20146,12126,1,1,1,1025), -- Common Item - Composite Shield
-(20146,12127,1,1,1,732), -- Common Item - Composite Helmet
-(20146,12120,1,1,1,1171), -- Common Item - Shining Circlet
+(20146,103,1,1,1,49), -- Tower Shield
+(20146,107,1,1,1,49), -- Composite Shield
+(20146,517,1,1,1,35), -- Composite Helmet
+(20146,1149,1,1,1,35), -- Shining Circlet
 (20146,1978,1,1,1,4021), -- Tower Shield Fragment
 (20146,1983,1,1,1,2751), -- Shining Circlet Pattern
 (20146,2957,1,1,1,2751), -- Composite Helmet Design
@@ -1795,9 +1795,9 @@ INSERT INTO `droplist` VALUES
 (20156,1899,1,1,-1,55740), -- Necklace of Devotion Chain
 (20156,2181,1,1,-1,35709), -- Recipe: White Tunic
 (20156,57,189,352,0,700000), -- Adena
-(20156,12311,1,1,1,4762), -- Common Item - Red Crescent Earring
-(20156,12313,1,1,1,15385), -- Common Item - Ring of Devotion
-(20156,12312,1,1,1,8333), -- Common Item - Necklace of Devotion
+(20156,847,1,1,1,373), -- Red Crescent Earring
+(20156,890,1,1,1,557), -- Ring of Devotion
+(20156,910,1,1,1,279), -- Necklace of Devotion
 (20156,1899,1,1,1,7821), -- Necklace of Devotion Chain
 (20156,1061,1,1,2,20408), -- Healing Potion
 (20156,1876,1,1,2,7143), -- Mithril Ore
@@ -1810,14 +1810,14 @@ INSERT INTO `droplist` VALUES
 (20157,2024,1,1,-1,7317), -- Elven Bow Shaft
 (20157,2153,1,2,-1,79880), -- Recipe: Tiger\'s Eye Earring
 (20157,57,218,431,0,700000), -- Adena
-(20157,11645,1,1,1,211), -- Common Item - Tomahawk
-(20157,11627,1,1,1,316), -- Common Item - Mace of Prayer
-(20157,11638,1,1,1,422), -- Common Item - Mace of Judgment
-(20157,11641,1,1,1,422), -- Common Item - Mace of Miracle
-(20157,11634,1,1,1,527), -- Common Item - Mystic Staff
-(20157,11644,1,1,1,422), -- Common Item - Conjuror\'s Staff
-(20157,11633,1,1,1,106), -- Common Item - Staff of Mana
-(20157,11630,1,1,1,316), -- Common Item - Doom Hammer
+(20157,86,1,1,1,9), -- Tomahawk
+(20157,179,1,1,1,9), -- Mace of Prayer
+(20157,180,1,1,1,9), -- Mace of Judgment
+(20157,181,1,1,1,9), -- Mace of Miracle
+(20157,182,1,1,1,9), -- Doom Hammer
+(20157,183,1,1,1,9), -- Mystic Staff
+(20157,184,1,1,1,9), -- Conjuror\'s Staff
+(20157,185,1,1,1,9), -- Staff of Mana
 (20157,2022,1,1,1,438), -- Mace of Judgment Head
 (20157,2023,1,1,1,348), -- Conjuror\'s Staff Head
 (20157,1061,1,1,2,24390), -- Healing Potion
@@ -1832,8 +1832,8 @@ INSERT INTO `droplist` VALUES
 (20158,1901,1,1,-1,78432), -- Tiger\'s Eye Earring Stone
 (20158,1939,1,1,-1,49877), -- Mithril Banded Gaiters Material
 (20158,57,288,574,0,700000), -- Adena
-(20158,12047,1,1,1,7299), -- Common Item - Tunic of Knowledge
-(20158,12048,1,1,1,8197), -- Common Item - Stockings of Knowledge
+(20158,436,1,1,1,199), -- Tunic of Knowledge
+(20158,469,1,1,1,318), -- Stockings of Knowledge
 (20158,1864,1,1,2,125000), -- Stem
 (20158,1869,1,1,2,55556), -- Iron Ore
 (20158,1880,1,1,2,5076), -- Steel
@@ -1844,7 +1844,7 @@ INSERT INTO `droplist` VALUES
 (20160,2152,1,1,-1,72606), -- Recipe: Enchanted Necklace
 (20160,2261,1,1,-1,6404), -- Recipe: Conjuror\'s Staff
 (20160,57,212,415,0,700000), -- Adena
-(20160,11608,1,1,1,3597), -- Common Item - Bagh-Nakh
+(20160,258,1,1,1,113), -- Bagh-Nakh
 (20160,1874,1,1,2,2994), -- Oriharukon Ore
 (20160,1878,1,1,2,18519), -- Braided Hemp
 (20160,1884,1,1,2,28571), -- Cord
@@ -1855,7 +1855,7 @@ INSERT INTO `droplist` VALUES
 (20161,1872,1,5,-1,912482), -- Animal Bone
 (20161,1984,1,1,-1,29340), -- Theca Leather Armor Pattern
 (20161,57,643,1305,0,700000), -- Adena
-(20161,11839,1,1,1,98), -- Common Item - Great Pata
+(20161,266,1,1,1,9), -- Great Pata
 (20161,2120,1,1,1,1214), -- Great Pata Blade
 (20161,1806,1,1,2,221), -- Recipe: Soulshot: B-Grade
 (20161,1867,1,1,2,50000), -- Animal Skin
@@ -1875,8 +1875,8 @@ INSERT INTO `droplist` VALUES
 (20168,1061,1,2,-1,268170), -- Healing Potion
 (20168,1877,1,1,-1,17699), -- Adamantite Nugget
 (20168,57,224,448,0,700000), -- Adena
-(20168,12028,1,1,1,14925), -- Common Item - Bronze Helmet
-(20168,12025,1,1,1,19231), -- Common Item - Aspis
+(20168,46,1,1,1,484), -- Bronze Helmet
+(20168,627,1,1,1,691), -- Aspis
 (20168,1865,1,1,2,47619), -- Varnish
 (20168,1870,1,1,2,47619), -- Coal
 (20168,1875,1,1,2,2353), -- Stone of Purity
@@ -1887,10 +1887,10 @@ INSERT INTO `droplist` VALUES
 (20171,1899,1,1,-1,58713), -- Necklace of Devotion Chain
 (20171,2019,1,1,-1,8081), -- Trident Edge
 (20171,57,196,374,0,700000), -- Adena
-(20171,11619,1,1,1,227), -- Common Item - Scroll of Wisdom
-(20171,11612,1,1,1,1138), -- Common Item - Branch of Life
-(20171,11616,1,1,1,227), -- Common Item - Temptation of Abyss
-(20171,11609,1,1,1,455), -- Common Item - Proof of Revenge
+(20171,101,1,1,1,21), -- Scroll of Wisdom
+(20171,312,1,1,1,21), -- Branch of Life
+(20171,313,1,1,1,21), -- Temptation of Abyss
+(20171,314,1,1,1,21), -- Proof of Revenge
 (20171,2020,1,1,1,739), -- Temptation of Abyss Piece
 (20171,1061,1,1,2,32258), -- Healing Potion
 (20171,1875,1,1,2,4329), -- Stone of Purity
@@ -1902,13 +1902,13 @@ INSERT INTO `droplist` VALUES
 (20176,2154,1,1,-1,64239), -- Recipe: Elven Earring
 (20176,2273,1,1,-1,4286), -- Recipe: Tarbar
 (20176,57,304,607,0,700000), -- Adena
-(20176,12038,1,1,1,4950), -- Common Item - Gauntlets
-(20176,12033,1,1,1,5556), -- Common Item - Iron Boots
+(20176,63,1,1,1,180), -- Gauntlets
+(20176,553,1,1,1,180), -- Iron Boots
 (20176,1940,1,1,1,6802), -- Iron Boots Design
-(20176,12035,1,1,1,5464), -- Common Item - Reinforced Leather Boots
-(20176,12045,1,1,1,5319), -- Common Item - Boots of Knowledge
-(20176,12037,1,1,1,5988), -- Common Item - Reinforced Leather Gloves
-(20176,12046,1,1,1,5102), -- Common Item - Gloves of Knowledge
+(20176,2422,1,1,1,180), -- Reinforced Leather Boots
+(20176,2423,1,1,1,180), -- Boots of Knowledge
+(20176,2446,1,1,1,180), -- Reinforced Leather Gloves
+(20176,2447,1,1,1,180), -- Gloves of Knowledge
 (20176,1867,1,1,2,71429), -- Animal Skin
 (20176,1872,1,1,2,71429), -- Animal Bone
 (20176,1882,1,1,2,11236), -- Leather
@@ -1920,8 +1920,8 @@ INSERT INTO `droplist` VALUES
 (20190,1900,1,1,-1,48640), -- Enchanted Necklace Chain
 (20190,2025,1,1,-1,6157), -- Dwarven Trident Edge
 (20190,57,226,448,0,700000), -- Adena
-(20190,11632,1,1,1,1284), -- Common Item - Long Bow
-(20190,11640,1,1,1,1284), -- Common Item - Elven Bow
+(20190,275,1,1,1,26), -- Long Bow
+(20190,276,1,1,1,26), -- Elven Bow
 (20190,2024,1,1,1,1154), -- Elven Bow Shaft
 (20190,1866,1,1,2,34483), -- Suede
 (20190,1871,1,1,2,55556), -- Charcoal
@@ -1932,8 +1932,8 @@ INSERT INTO `droplist` VALUES
 (20191,2153,1,1,-1,70191), -- Recipe: Tiger\'s Eye Earring
 (20191,2264,1,1,-1,4667), -- Recipe: Two-handed Sword
 (20191,57,228,457,0,700000), -- Adena
-(20191,12016,1,1,1,22222), -- Common Item - Leather Gauntlets
-(20191,12029,1,1,1,18868), -- Common Item - Blue Buckskin Boots
+(20191,605,1,1,1,741), -- Leather Gauntlets
+(20191,1123,1,1,1,741), -- Blue Buckskin Boots
 (20191,1867,1,1,2,55556), -- Animal Skin
 (20191,1872,1,1,2,62500), -- Animal Bone
 (20191,1882,1,1,2,11236), -- Leather
@@ -1945,9 +1945,10 @@ INSERT INTO `droplist` VALUES
 (20192,2146,1,1,-1,42016), -- Recipe: Artisan\'s frame
 (20192,2447,1,1,-1,2316), -- Gloves of Knowledge
 (20192,57,248,496,0,700000), -- Adena
-(20192,11673,1,1,1,719), -- Common Item - Kukuri
-(20192,11662,1,1,1,2155), -- Common Item - Dagger of Mana
-(20192,11660,1,1,1,719), -- Common Item - Shilen Knife
+(20192,223,1,1,1,13), -- Kukuri
+(20192,238,1,1,1,13), -- Dagger of Mana
+(20192,239,1,1,1,13), -- Mystic Knife
+(20192,241,1,1,1,13), -- Shilen Knife
 (20192,2028,1,1,1,744), -- Shilen Knife Edge
 (20192,1864,1,1,2,90909), -- Stem
 (20192,1869,1,1,2,52632), -- Iron Ore
@@ -1960,8 +1961,8 @@ INSERT INTO `droplist` VALUES
 (20193,1882,1,1,-1,140771), -- Leather
 (20193,2027,1,1,-1,8299), -- Spiked Club Head
 (20193,57,330,642,0,700000), -- Adena
-(20193,12050,1,1,1,21277), -- Common Item - Helmet
-(20193,12051,1,1,1,10638), -- Common Item - Hoplon
+(20193,47,1,1,1,443), -- Helmet
+(20193,628,1,1,1,632), -- Hoplon
 (20193,1341,10,30,2,200000), -- Bone Arrow
 (20193,1867,1,1,2,76923), -- Animal Skin
 (20193,1872,1,1,2,76923), -- Animal Bone
@@ -1973,9 +1974,9 @@ INSERT INTO `droplist` VALUES
 (20197,2020,1,1,-1,6667), -- Temptation of Abyss Piece
 (20197,2259,1,1,-1,5914), -- Recipe: Spinebone Sword
 (20197,57,197,380,0,700000), -- Adena
-(20197,12311,1,1,1,10204), -- Common Item - Red Crescent Earring
-(20197,12313,1,1,1,15385), -- Common Item - Ring of Devotion
-(20197,12312,1,1,1,14085), -- Common Item - Necklace of Devotion
+(20197,847,1,1,1,398), -- Red Crescent Earring
+(20197,890,1,1,1,594), -- Ring of Devotion
+(20197,910,1,1,1,298), -- Necklace of Devotion
 (20197,1899,1,1,1,8350), -- Necklace of Devotion Chain
 (20197,1341,10,30,2,100000), -- Bone Arrow
 (20197,1876,1,1,2,6369), -- Mithril Ore
@@ -1987,7 +1988,7 @@ INSERT INTO `droplist` VALUES
 (20197,2178,1,1,2,5102), -- Recipe: Dark Stockings
 (20198,1832,1,3,-1,479579), -- Greater Antidote
 (20198,57,220,435,0,700000), -- Adena
-(20198,11642,1,1,1,3205), -- Common Item - Single-Edged Jamadhr
+(20198,259,1,1,1,73), -- Single-Edged Jamadhr
 (20198,1874,1,1,2,2513), -- Oriharukon Ore
 (20198,1878,1,1,2,14925), -- Braided Hemp
 (20198,1884,1,1,2,23256), -- Cord
@@ -2000,8 +2001,8 @@ INSERT INTO `droplist` VALUES
 (20199,1882,1,1,-1,117012), -- Leather
 (20199,1900,1,2,-1,57610), -- Enchanted Necklace Chain
 (20199,57,267,533,0,700000), -- Adena
-(20199,12016,1,1,1,20000), -- Common Item - Leather Gauntlets
-(20199,12029,1,1,1,26316), -- Common Item - Blue Buckskin Boots
+(20199,605,1,1,1,864), -- Leather Gauntlets
+(20199,1123,1,1,1,864), -- Blue Buckskin Boots
 (20199,1867,1,1,2,83333), -- Animal Skin
 (20199,1872,1,1,2,83333), -- Animal Bone
 (20199,1882,1,1,2,15873), -- Leather
@@ -2013,12 +2014,12 @@ INSERT INTO `droplist` VALUES
 (20200,1877,1,1,-1,18616), -- Adamantite Nugget
 (20200,2183,1,1,-1,30618), -- Recipe: Mithril Banded Mail
 (20200,57,236,471,0,700000), -- Adena
-(20200,12026,1,1,1,2049), -- Common Item - Elven Tunic
-(20200,12022,1,1,1,2049), -- Common Item - White Tunic
-(20200,12018,1,1,1,1667), -- Common Item - Mystic\'s Tunic
-(20200,12027,1,1,1,2950), -- Common Item - Elven Stockings
-(20200,12017,1,1,1,2242), -- Common Item - Dark Stockings
-(20200,12019,1,1,1,3205), -- Common Item - Mystic\'s Stockings
+(20200,433,1,1,1,64), -- Elven Tunic
+(20200,434,1,1,1,64), -- White Tunic
+(20200,435,1,1,1,64), -- Mystic\'s Tunic
+(20200,466,1,1,1,102), -- Elven Stockings
+(20200,467,1,1,1,102), -- Dark Stockings
+(20200,468,1,1,1,102), -- Mystic\'s Stockings
 (20200,1933,1,1,1,3741), -- Dark Stocking Fabric
 (20200,1936,1,1,1,2602), -- White Tunic Pattern
 (20200,955,1,1,2,64), -- Scroll: Enchant Weapon (Grade D)
@@ -2034,8 +2035,8 @@ INSERT INTO `droplist` VALUES
 (20201,1870,1,2,-1,553893), -- Coal
 (20201,1933,1,1,-1,65164), -- Dark Stocking Fabric
 (20201,57,280,562,0,700000), -- Adena
-(20201,12021,1,1,1,9901), -- Common Item - Lion Skin Shirt
-(20201,12020,1,1,1,13699), -- Common Item - Lion Skin Gaiters
+(20201,392,1,1,1,303), -- Lion Skin Shirt
+(20201,414,1,1,1,485), -- Lion Skin Gaiters
 (20201,737,1,1,2,5682), -- Scroll of Resurrection
 (20201,1876,1,1,2,10000), -- Mithril Ore
 (20201,1877,1,1,2,2532), -- Adamantite Nugget
@@ -2047,9 +2048,9 @@ INSERT INTO `droplist` VALUES
 (20202,2154,1,1,-1,59015), -- Recipe: Elven Earring
 (20202,2198,1,1,-1,11556), -- Recipe: Sage\'s Rag
 (20202,57,279,557,0,700000), -- Adena
-(20202,12318,1,1,1,6944), -- Common Item - Tiger\'s Eye Earring
-(20202,12319,1,1,1,10526), -- Common Item - Black Pearl Ring
-(20202,12317,1,1,1,5051), -- Common Item - Near Forest Necklace
+(20202,849,1,1,1,228), -- Tiger\'s Eye Earring
+(20202,880,1,1,1,343), -- Black Pearl Ring
+(20202,912,1,1,1,171), -- Near Forest Necklace
 (20202,1901,1,1,1,10120), -- Tiger\'s Eye Earring Stone
 (20202,1874,1,1,2,3205), -- Oriharukon Ore
 (20202,1878,1,1,2,17241), -- Braided Hemp
@@ -2094,8 +2095,8 @@ INSERT INTO `droplist` VALUES
 (20206,1899,1,1,-1,54106), -- Necklace of Devotion Chain
 (20206,2182,1,1,-1,41570), -- Recipe: Scale Gaiters
 (20206,57,184,342,0,700000), -- Adena
-(20206,12015,1,1,1,4608), -- Common Item - Puma Skin Shirt
-(20206,12014,1,1,1,16949), -- Common Item - Puma Skin Gaiters
+(20206,391,1,1,1,311), -- Puma Skin Shirt
+(20206,413,1,1,1,497), -- Puma Skin Gaiters
 (20206,1864,1,1,2,80000), -- Stem
 (20206,1869,1,1,2,43478), -- Iron Ore
 (20206,1880,1,1,2,4608), -- Steel
@@ -2105,7 +2106,7 @@ INSERT INTO `droplist` VALUES
 (20207,2181,1,2,-1,68590), -- Recipe: White Tunic
 (20207,2263,1,1,-1,10640), -- Recipe: Dwarven Trident
 (20207,57,357,682,0,700000), -- Adena
-(20207,11613,1,1,1,3774), -- Common Item - Crafted Dagger
+(20207,220,1,1,1,188), -- Crafted Dagger
 (20207,1865,1,1,2,90909), -- Varnish
 (20207,1870,1,1,2,90909), -- Coal
 (20207,1875,1,1,2,6579), -- Stone of Purity
@@ -2115,8 +2116,8 @@ INSERT INTO `droplist` VALUES
 (20208,1872,1,3,-1,476958), -- Animal Bone
 (20208,1931,1,1,-1,93521), -- Leather Boot Lining
 (20208,57,371,714,0,700000), -- Adena
-(20208,12009,1,1,1,20000), -- Common Item - Bone Helmet
-(20208,12013,1,1,1,30303), -- Common Item - Bronze Shield
+(20208,45,1,1,1,856), -- Bone Helmet
+(20208,626,1,1,1,1223), -- Bronze Shield
 (20208,1932,1,1,1,21245), -- Bone Helmet Design
 (20208,1866,1,1,2,43478), -- Suede
 (20208,1871,1,1,2,66667), -- Charcoal
@@ -2128,7 +2129,7 @@ INSERT INTO `droplist` VALUES
 (20209,1889,1,1,-1,51639), -- Compound Braid
 (20209,2178,1,1,-1,123934), -- Recipe: Dark Stockings
 (20209,57,398,779,0,700000), -- Adena
-(20209,11606,1,1,1,4651), -- Common Item - Strengthened Bow
+(20209,274,1,1,1,213), -- Strengthened Bow
 (20209,1061,1,1,2,71429), -- Healing Potion
 (20209,1867,1,1,2,142857), -- Animal Skin
 (20209,1872,1,1,2,125000), -- Animal Bone
@@ -2138,8 +2139,8 @@ INSERT INTO `droplist` VALUES
 (20210,1900,1,2,-1,86113), -- Enchanted Necklace Chain
 (20210,2183,1,1,-1,51781), -- Recipe: Mithril Banded Mail
 (20210,57,400,793,0,700000), -- Adena
-(20210,12024,1,1,1,3663), -- Common Item - Scale Mail
-(20210,12023,1,1,1,7353), -- Common Item - Scale Gaiters
+(20210,348,1,1,1,162), -- Scale Mail
+(20210,377,1,1,1,259), -- Scale Gaiters
 (20210,1935,1,1,1,6008), -- Scale Mail Fragment
 (20210,1937,1,1,1,9238), -- Scale Gaiters Fragment
 (20210,1868,1,1,2,166667), -- Thread
@@ -2151,14 +2152,14 @@ INSERT INTO `droplist` VALUES
 (20211,1865,1,3,-1,839475), -- Varnish
 (20211,1869,1,6,-1,839475), -- Iron Ore
 (20211,57,426,850,0,700000), -- Adena
-(20211,11645,1,1,1,271), -- Common Item - Tomahawk
-(20211,11627,1,1,1,271), -- Common Item - Mace of Prayer
-(20211,11638,1,1,1,271), -- Common Item - Mace of Judgment
-(20211,11641,1,1,1,271), -- Common Item - Mace of Miracle
-(20211,11634,1,1,1,271), -- Common Item - Mystic Staff
-(20211,11644,1,1,1,271), -- Common Item - Conjuror\'s Staff
-(20211,11633,1,1,1,271), -- Common Item - Staff of Mana
-(20211,11630,1,1,1,271), -- Common Item - Doom Hammer
+(20211,86,1,1,1,15), -- Tomahawk
+(20211,179,1,1,1,15), -- Mace of Prayer
+(20211,180,1,1,1,15), -- Mace of Judgment
+(20211,181,1,1,1,15), -- Mace of Miracle
+(20211,182,1,1,1,15), -- Doom Hammer
+(20211,183,1,1,1,15), -- Mystic Staff
+(20211,184,1,1,1,15), -- Conjuror\'s Staff
+(20211,185,1,1,1,15), -- Staff of Mana
 (20211,2022,1,1,1,715), -- Mace of Judgment Head
 (20211,2023,1,1,1,569), -- Conjuror\'s Staff Head
 (20211,1864,1,1,2,166667), -- Stem
@@ -2170,10 +2171,10 @@ INSERT INTO `droplist` VALUES
 (20213,1894,1,2,-1,50112), -- Crafted Leather
 (20213,2292,1,1,-1,7934), -- Recipe: Light Crossbow
 (20213,57,1401,2795,0,700000), -- Adena
-(20213,12059,1,1,1,3534), -- Common Item - Brigandine Tunic
+(20213,352,1,1,1,83), -- Brigandine Tunic
 (20213,1941,1,1,1,4893), -- Brigandine Temper
-(20213,12056,1,1,1,5181), -- Common Item - Mithril Scale Gaiters
-(20213,12060,1,1,1,3650), -- Common Item - Brigandine Gaiters
+(20213,2377,1,1,1,132), -- Mithril Scale Gaiters
+(20213,2378,1,1,1,132), -- Brigandine Gaiters
 (20213,2918,1,1,1,7300), -- Mithril Scale Gaiters Material
 (20213,2919,1,1,1,7300), -- Brigandine Gaiters Material
 (20213,1341,80,240,2,58824), -- Bone Arrow
@@ -2188,9 +2189,9 @@ INSERT INTO `droplist` VALUES
 (20214,1879,1,1,-1,220767), -- Cokes
 (20214,2997,1,2,-1,105127), -- Recipe: Karmian Gloves
 (20214,57,883,1766,0,700000), -- Adena
-(20214,12325,1,1,1,6536), -- Common Item - Omen Beast\'s Eye Earring
-(20214,12323,1,1,1,9174), -- Common Item - Mithril Ring
-(20214,12324,1,1,1,4329), -- Common Item - Necklace of Darkness
+(20214,851,1,1,1,184), -- Omen Beast\'s Eye Earring
+(20214,882,1,1,1,275), -- Mithril Ring
+(20214,914,1,1,1,137), -- Necklace of Darkness
 (20214,1905,1,1,1,10784), -- Omen Beast\'s Eye Earring Gemstone
 (20214,1906,1,1,1,15238), -- Mithril Ring Wire
 (20214,1907,1,1,1,7712), -- Necklace of Darkness Gem
@@ -2204,7 +2205,7 @@ INSERT INTO `droplist` VALUES
 (20215,2206,1,1,-1,42260), -- Recipe: Mithril Shirt
 (20215,4469,1,1,-1,9152), -- Dye of Strength <Str+1 Con-1>
 (20215,57,1014,2048,0,700000), -- Adena
-(20215,11725,1,1,1,2632), -- Common Item - Glaive
+(20215,297,1,1,1,45), -- Glaive
 (20215,2055,1,1,1,3326), -- Glaive Edge
 (20215,1866,1,1,2,90909), -- Suede
 (20215,1871,1,1,2,142857), -- Charcoal
@@ -2218,15 +2219,15 @@ INSERT INTO `droplist` VALUES
 (20216,2297,1,1,-1,5995), -- Recipe: Flamberge
 (20216,2933,1,1,-1,153230), -- Sage\'s Worn Gloves Lining
 (20216,57,891,1806,0,700000), -- Adena
-(20216,12072,1,1,1,2849), -- Common Item - Mithril Gloves
-(20216,12076,1,1,1,5236), -- Common Item - Ogre Power Gauntlets
-(20216,12071,1,1,1,950), -- Common Item - Assault Boots
+(20216,61,1,1,1,118), -- Mithril Gloves
+(20216,607,1,1,1,118), -- Ogre Power Gauntlets
+(20216,1125,1,1,1,118), -- Assault Boots
 (20216,1949,1,1,1,6412), -- Mithril Gloves Design
 (20216,1957,1,1,1,6412), -- Assault Boots Part
 (20216,1963,1,1,1,6412), -- Ogre Power Gauntlets Part
-(20216,12075,1,1,1,5236), -- Common Item - Salamander Skin Boots
-(20216,12077,1,1,1,4274), -- Common Item - Plate Boots
-(20216,12082,1,1,1,3322), -- Common Item - Sage\'s Worn Gloves
+(20216,2427,1,1,1,118), -- Salamander Skin Boots
+(20216,2428,1,1,1,118), -- Plate Boots
+(20216,2451,1,1,1,118), -- Sage\'s Worn Gloves
 (20216,2931,1,1,1,6412), -- Salamander Skin Boot Lining
 (20216,2932,1,1,1,6412), -- Plate Boots Design
 (20216,2933,1,1,1,6412), -- Sage\'s Worn Gloves Lining
@@ -2240,16 +2241,16 @@ INSERT INTO `droplist` VALUES
 (20217,2075,1,1,-1,12620), -- Orcish Glaive Blade
 (20217,2163,1,1,-1,82092), -- Recipe: Earring of Protection
 (20217,57,646,1324,0,700000), -- Adena
-(20217,12085,1,1,1,4975), -- Common Item - Mithril Boots
+(20217,62,1,1,1,68), -- Mithril Boots
 (20217,1958,1,1,1,3798), -- Mithril Boots Design
-(20217,12093,1,1,1,994), -- Common Item - Chain Boots
-(20217,12098,1,1,1,3984), -- Common Item - Karmian Boots
-(20217,12101,1,1,1,3984), -- Common Item - Plated Leather Boots
-(20217,12088,1,1,1,6944), -- Common Item - Dwarven Chain Boots
-(20217,12089,1,1,1,1988), -- Common Item - Boots of Seal
-(20217,12087,1,1,1,1988), -- Common Item - Reinforced Mithril Gloves
-(20217,12092,1,1,1,994), -- Common Item - Chain Gloves
-(20217,12097,1,1,1,1988), -- Common Item - Karmian Gloves
+(20217,2429,1,1,1,68), -- Chain Boots
+(20217,2430,1,1,1,68), -- Karmian Boots
+(20217,2431,1,1,1,68), -- Plated Leather Boots
+(20217,2432,1,1,1,68), -- Dwarven Chain Boots
+(20217,2433,1,1,1,68), -- Boots of Seal
+(20217,2452,1,1,1,68), -- Reinforced Mithril Gloves
+(20217,2453,1,1,1,68), -- Chain Gloves
+(20217,2454,1,1,1,68), -- Karmian Gloves
 (20217,2937,1,1,1,3798), -- Chain Boots Part
 (20217,2938,1,1,1,3798), -- Karmian Boots Fabric
 (20217,2939,1,1,1,3798), -- Plate Leather Boot Lining
@@ -2271,10 +2272,10 @@ INSERT INTO `droplist` VALUES
 (20218,1908,1,1,-1,165429), -- Moonstone Earring Wire
 (20218,2073,1,1,-1,13503), -- Chakram Edge
 (20218,57,1094,2185,0,700000), -- Adena
-(20218,12091,1,1,1,27027), -- Common Item - Eldarake
+(20218,631,1,1,1,207), -- Eldarake
 (20218,1964,1,1,1,11120), -- Eldarake Temper
-(20218,12090,1,1,1,6803), -- Common Item - Chain Hood
-(20218,12096,1,1,1,6803), -- Common Item - Chain Shield
+(20218,2413,1,1,1,146), -- Chain Hood
+(20218,2495,1,1,1,207), -- Chain Shield
 (20218,2936,1,1,1,10100), -- Chain Hood Pattern
 (20218,2945,1,1,1,11120), -- Chain Shield Fragment
 (20218,1864,1,1,2,250000), -- Stem
@@ -2291,7 +2292,7 @@ INSERT INTO `droplist` VALUES
 (20219,2060,1,1,-1,12485), -- Stormbringer Blade
 (20219,2164,1,1,-1,120947), -- Recipe: Ring of Protection
 (20219,57,1209,2473,0,700000), -- Adena
-(20219,11759,1,1,1,954), -- Common Item - Crystallized Ice Bow
+(20219,281,1,1,1,33), -- Crystallized Ice Bow
 (20219,2074,1,1,1,2632), -- Crystallized Ice Bow Shaft
 (20219,1865,1,1,2,125000), -- Varnish
 (20219,1870,1,1,2,125000), -- Coal
@@ -2306,13 +2307,13 @@ INSERT INTO `droplist` VALUES
 (20220,1911,1,1,-1,128833), -- Earring of Protection Gemstone
 (20220,2944,1,1,-1,155699), -- Karmian Gloves Fabric
 (20220,57,1229,2489,0,700000), -- Adena
-(20220,12118,1,1,1,4016), -- Common Item - Crimson Boots
+(20220,1126,1,1,1,80), -- Crimson Boots
 (20220,1974,1,1,1,5379), -- Crimson Boot Fabric
-(20220,12114,1,1,1,1205), -- Common Item - Rind Leather Boots
-(20220,12101,1,1,1,3610), -- Common Item - Plated Leather Gloves
-(20220,12108,1,1,1,5208), -- Common Item - Dwarven Chain Gloves
-(20220,12116,1,1,1,3610), -- Common Item - Gloves of Seal
-(20220,12112,1,1,1,4808), -- Common Item - Rind Leather Gloves
+(20220,2434,1,1,1,80), -- Rind Leather Boots
+(20220,2455,1,1,1,86), -- Plated Leather Gloves
+(20220,2456,1,1,1,80), -- Dwarven Chain Gloves
+(20220,2457,1,1,1,80), -- Gloves of Seal
+(20220,2458,1,1,1,80), -- Rind Leather Gloves
 (20220,2946,1,1,1,3575), -- Plate Leather Gloves Design
 (20220,2948,1,1,1,5379), -- Rind Leather Boot Lining
 (20220,2949,1,1,1,5379), -- Dwarven Chain Gloves Design
@@ -2332,13 +2333,13 @@ INSERT INTO `droplist` VALUES
 (20221,2073,1,1,-1,16041), -- Chakram Edge
 (20221,2352,1,1,-1,4342), -- Recipe: Widow Maker
 (20221,57,1763,3582,0,700000), -- Adena
-(20221,12118,1,1,1,3788), -- Common Item - Crimson Boots
+(20221,1126,1,1,1,96), -- Crimson Boots
 (20221,1974,1,1,1,6444), -- Crimson Boot Fabric
-(20221,12114,1,1,1,5051), -- Common Item - Rind Leather Boots
-(20221,12101,1,1,1,7576), -- Common Item - Plated Leather Gloves
-(20221,12108,1,1,1,5682), -- Common Item - Dwarven Chain Gloves
-(20221,12116,1,1,1,2532), -- Common Item - Gloves of Seal
-(20221,12112,1,1,1,1898), -- Common Item - Rind Leather Gloves
+(20221,2434,1,1,1,96), -- Rind Leather Boots
+(20221,2455,1,1,1,103), -- Plated Leather Gloves
+(20221,2456,1,1,1,96), -- Dwarven Chain Gloves
+(20221,2457,1,1,1,96), -- Gloves of Seal
+(20221,2458,1,1,1,96), -- Rind Leather Gloves
 (20221,2946,1,1,1,4283), -- Plate Leather Gloves Design
 (20221,2948,1,1,1,6444), -- Rind Leather Boot Lining
 (20221,2949,1,1,1,6444), -- Dwarven Chain Gloves Design
@@ -2361,11 +2362,11 @@ INSERT INTO `droplist` VALUES
 (20222,1895,1,3,-1,523186), -- Metallic Fiber
 (20222,2168,1,1,-1,46594), -- Recipe: Necklace of Mermaid
 (20222,57,1340,2733,0,700000), -- Adena
-(20222,12106,1,1,1,6494), -- Common Item - Great Helmet
-(20222,12107,1,1,1,6897), -- Common Item - Knight\'s Shield
+(20222,500,1,1,1,112), -- Great Helmet
+(20222,632,1,1,1,161), -- Knight\'s Shield
 (20222,1971,1,1,1,8279), -- Great Helmet Material
 (20222,1972,1,1,1,10819), -- Knight\'s Shield Fragment
-(20222,12102,1,1,1,10753), -- Common Item - Dwarven Chain Shield
+(20222,2496,1,1,1,174), -- Dwarven Chain Shield
 (20222,2947,1,1,1,9660), -- Dwarven Chain Shield Fragment
 (20222,1539,1,1,2,23256), -- Greater Healing Potion
 (20222,1868,1,1,2,250000), -- Thread
@@ -2406,8 +2407,8 @@ INSERT INTO `droplist` VALUES
 (20225,2152,1,1,-1,61574), -- Recipe: Enchanted Necklace
 (20225,2259,1,1,-1,5431), -- Recipe: Spinebone Sword
 (20225,57,185,346,0,700000), -- Adena
-(20225,12006,1,1,1,16949), -- Common Item - Leather Boots
-(20225,12007,1,1,1,12658), -- Common Item - Crafted Leather Gloves
+(20225,40,1,1,1,470), -- Leather Boots
+(20225,604,1,1,1,470), -- Crafted Leather Gloves
 (20225,1931,1,1,1,6415), -- Leather Boot Lining
 (20225,1934,1,1,1,6415), -- Crafted Leather Gloves Lining
 (20225,1865,1,1,2,38462), -- Varnish
@@ -2420,9 +2421,9 @@ INSERT INTO `droplist` VALUES
 (20226,1868,1,1,-1,736790), -- Thread
 (20226,1899,1,1,-1,57562), -- Necklace of Devotion Chain
 (20226,57,192,367,0,700000), -- Adena
-(20226,11614,1,1,1,263), -- Common Item - Saber
+(20226,123,1,1,1,26), -- Saber
 (20226,2017,1,1,1,687), -- Saber Blade
-(20226,11625,1,1,1,263), -- Common Item - Heavy Sword
+(20226,5285,1,1,1,26), -- Heavy Sword
 (20226,5531,1,1,1,868), -- Heavy Sword Edge
 (20226,1866,1,1,2,41667), -- Suede
 (20226,1871,1,1,2,62500), -- Charcoal
@@ -2432,8 +2433,8 @@ INSERT INTO `droplist` VALUES
 (20227,2178,1,1,-1,62152), -- Recipe: Dark Stockings
 (20227,2260,1,1,-1,6032), -- Recipe: Mace of Judgment
 (20227,57,201,388,0,700000), -- Adena
-(20227,12015,1,1,1,11364), -- Common Item - Puma Skin Shirt
-(20227,12014,1,1,1,14493), -- Common Item - Puma Skin Gaiters
+(20227,391,1,1,1,349), -- Puma Skin Shirt
+(20227,413,1,1,1,558), -- Puma Skin Gaiters
 (20227,1867,1,1,2,66667), -- Animal Skin
 (20227,1872,1,1,2,66667), -- Animal Bone
 (20227,1882,1,1,2,13158), -- Leather
@@ -2443,9 +2444,9 @@ INSERT INTO `droplist` VALUES
 (20228,1931,1,1,-1,58137), -- Leather Boot Lining
 (20228,2180,1,1,-1,33440), -- Recipe: Scale Mail
 (20228,57,229,448,0,700000), -- Adena
-(20228,12311,1,1,1,14085), -- Common Item - Red Crescent Earring
-(20228,12313,1,1,1,17241), -- Common Item - Ring of Devotion
-(20228,12312,1,1,1,9434), -- Common Item - Necklace of Devotion
+(20228,847,1,1,1,464), -- Red Crescent Earring
+(20228,890,1,1,1,694), -- Ring of Devotion
+(20228,910,1,1,1,348), -- Necklace of Devotion
 (20228,1899,1,1,1,9751), -- Necklace of Devotion Chain
 (20228,1831,1,1,2,125000), -- Antidote
 (20228,1868,1,1,2,100000), -- Thread
@@ -2457,9 +2458,9 @@ INSERT INTO `droplist` VALUES
 (20229,1061,1,1,-1,297908), -- Healing Potion
 (20229,1864,1,3,-1,491548), -- Stem
 (20229,57,249,498,0,700000), -- Adena
-(20229,12314,1,1,1,8850), -- Common Item - Enchanted Earring
-(20229,12316,1,1,1,13514), -- Common Item - Enchanted Ring
-(20229,12315,1,1,1,6369), -- Common Item - Enchanted Necklace
+(20229,848,1,1,1,316), -- Enchanted Earring
+(20229,879,1,1,1,473), -- Enchanted Ring
+(20229,911,1,1,1,237), -- Enchanted Necklace
 (20229,1900,1,1,1,7348), -- Enchanted Necklace Chain
 (20229,1832,1,1,2,50000), -- Greater Antidote
 (20229,1864,1,1,2,90909), -- Stem
@@ -2472,7 +2473,7 @@ INSERT INTO `droplist` VALUES
 (20230,1834,1,2,-1,621516), -- Emergency Dressing
 (20230,1870,1,2,-1,559364), -- Coal
 (20230,57,284,566,0,700000), -- Adena
-(20230,11647,1,1,1,2801), -- Common Item - Pike
+(20230,292,1,1,1,95), -- Pike
 (20230,956,1,1,2,3344), -- Scroll: Enchant Armor (Grade D)
 (20230,1865,1,1,2,83333), -- Varnish
 (20230,1870,1,1,2,90909), -- Coal
@@ -2481,8 +2482,8 @@ INSERT INTO `droplist` VALUES
 (20231,1877,1,1,-1,21679), -- Adamantite Nugget
 (20231,2282,1,1,-1,3871), -- Recipe: Cursed Maingauche
 (20231,57,274,550,0,700000), -- Adena
-(20231,12016,1,1,1,25000), -- Common Item - Leather Gauntlets
-(20231,12029,1,1,1,27778), -- Common Item - Blue Buckskin Boots
+(20231,605,1,1,1,890), -- Leather Gauntlets
+(20231,1123,1,1,1,890), -- Blue Buckskin Boots
 (20231,955,1,1,2,293), -- Scroll: Enchant Weapon (Grade D)
 (20231,1832,1,1,2,66667), -- Greater Antidote
 (20231,1866,1,1,2,35714), -- Suede
@@ -2493,8 +2494,8 @@ INSERT INTO `droplist` VALUES
 (20232,2027,1,1,-1,6915), -- Spiked Club Head
 (20232,2147,1,1,-1,37702), -- Recipe: Blacksmith\'s frame
 (20232,57,268,535,0,700000), -- Adena
-(20232,12050,1,1,1,14286), -- Common Item - Helmet
-(20232,12051,1,1,1,11494), -- Common Item - Hoplon
+(20232,47,1,1,1,369), -- Helmet
+(20232,628,1,1,1,527), -- Hoplon
 (20232,1867,1,1,2,71429), -- Animal Skin
 (20232,1872,1,1,2,76923), -- Animal Bone
 (20232,1875,1,1,2,3390), -- Stone of Purity
@@ -2505,9 +2506,9 @@ INSERT INTO `droplist` VALUES
 (20233,2154,1,1,-1,66215), -- Recipe: Elven Earring
 (20233,2280,1,1,-1,4417), -- Recipe: Crucifix of Blood
 (20233,57,313,625,0,700000), -- Adena
-(20233,12318,1,1,1,7463), -- Common Item - Tiger\'s Eye Earring
-(20233,12319,1,1,1,12195), -- Common Item - Black Pearl Ring
-(20233,12317,1,1,1,6369), -- Common Item - Near Forest Necklace
+(20233,849,1,1,1,256), -- Tiger\'s Eye Earring
+(20233,880,1,1,1,385), -- Black Pearl Ring
+(20233,912,1,1,1,192), -- Near Forest Necklace
 (20233,1901,1,1,1,11355), -- Tiger\'s Eye Earring Stone
 (20233,1832,1,1,2,62500), -- Greater Antidote
 (20233,1868,1,1,2,111111), -- Thread
@@ -2520,8 +2521,8 @@ INSERT INTO `droplist` VALUES
 (20234,1938,1,1,-1,41949), -- Mithril Banded Mail Material
 (20234,2971,1,1,-1,33368), -- Recipe: Mithril Scale Gaiters
 (20234,57,316,631,0,700000), -- Adena
-(20234,11671,1,1,1,1138), -- Common Item - War Hammer
-(20234,11661,1,1,1,894), -- Common Item - Dwarven Pike
+(20234,293,1,1,1,35), -- War Hammer
+(20234,296,1,1,1,35), -- Dwarven Pike
 (20234,1868,1,1,2,166667), -- Thread
 (20234,1873,1,1,2,31250), -- Silver Nugget
 (20234,1876,1,1,2,15625), -- Mithril Ore
@@ -2531,9 +2532,9 @@ INSERT INTO `droplist` VALUES
 (20235,2163,1,1,-1,49522), -- Recipe: Earring of Protection
 (20235,2340,1,1,-1,2257), -- Recipe: Pa\'agrian Hammer
 (20235,57,479,955,0,700000), -- Adena
-(20235,11751,1,1,1,229), -- Common Item - Scythe
-(20235,11760,1,1,1,229), -- Common Item - Orcish Glaive
-(20235,11749,1,1,1,229), -- Common Item - Body Slasher
+(20235,96,1,1,1,7), -- Scythe
+(20235,298,1,1,1,7), -- Orcish Glaive
+(20235,302,1,1,1,7), -- Body Slasher
 (20235,2062,1,1,1,600), -- Scythe Edge
 (20235,2075,1,1,1,600), -- Orcish Glaive Blade
 (20235,2076,1,1,1,600), -- Body Slasher Blade
@@ -2549,16 +2550,16 @@ INSERT INTO `droplist` VALUES
 (20236,2219,1,1,-1,62388), -- Recipe: Crimson Boots
 (20236,3021,1,1,-1,3500), -- Recipe: Dwarven War Hammer
 (20236,57,484,989,0,700000), -- Adena
-(20236,12085,1,1,1,991), -- Common Item - Mithril Boots
+(20236,62,1,1,1,42), -- Mithril Boots
 (20236,1958,1,1,1,2371), -- Mithril Boots Design
-(20236,12093,1,1,1,1488), -- Common Item - Chain Boots
-(20236,12098,1,1,1,991), -- Common Item - Karmian Boots
-(20236,12101,1,1,1,1488), -- Common Item - Plated Leather Boots
-(20236,12088,1,1,1,1984), -- Common Item - Dwarven Chain Boots
-(20236,12089,1,1,1,1984), -- Common Item - Boots of Seal
-(20236,12087,1,1,1,991), -- Common Item - Reinforced Mithril Gloves
-(20236,12092,1,1,1,1984), -- Common Item - Chain Gloves
-(20236,12097,1,1,1,1984), -- Common Item - Karmian Gloves
+(20236,2429,1,1,1,42), -- Chain Boots
+(20236,2430,1,1,1,42), -- Karmian Boots
+(20236,2431,1,1,1,42), -- Plated Leather Boots
+(20236,2432,1,1,1,42), -- Dwarven Chain Boots
+(20236,2433,1,1,1,42), -- Boots of Seal
+(20236,2452,1,1,1,42), -- Reinforced Mithril Gloves
+(20236,2453,1,1,1,42), -- Chain Gloves
+(20236,2454,1,1,1,42), -- Karmian Gloves
 (20236,2937,1,1,1,2371), -- Chain Boots Part
 (20236,2938,1,1,1,2371), -- Karmian Boots Fabric
 (20236,2939,1,1,1,2371), -- Plate Leather Boot Lining
@@ -2580,8 +2581,8 @@ INSERT INTO `droplist` VALUES
 (20237,2329,1,1,-1,3142), -- Recipe: Tsurugi
 (20237,3010,1,1,-1,36717), -- Recipe: Composite Helmet
 (20237,57,656,1322,0,700000), -- Adena
-(20237,11790,1,1,1,868), -- Common Item - Elemental Bow
-(20237,11775,1,1,1,868), -- Common Item - Noble Elven Bow
+(20237,282,1,1,1,11), -- Elemental Bow
+(20237,285,1,1,1,11), -- Noble Elven Bow
 (20237,2085,1,1,1,1036), -- Crossbow Shaft
 (20237,2086,1,1,1,1036), -- Elven Bow of Nobility Shaft
 (20237,952,1,1,2,998), -- Scroll: Enchant Armor (Grade C)
@@ -2598,8 +2599,8 @@ INSERT INTO `droplist` VALUES
 (20238,2357,1,1,-1,2123), -- Recipe: Crystal Dagger
 (20238,4041,1,1,-1,11318), -- Mold Hardener
 (20238,57,630,1281,0,700000), -- Adena
-(20238,12110,1,1,1,1818), -- Common Item - Dwarven Chain Mail Shirt
-(20238,12109,1,1,1,1818), -- Common Item - Dwarven Chain Gaiters
+(20238,355,1,1,1,45), -- Dwarven Chain Mail Shirt
+(20238,382,1,1,1,72), -- Dwarven Chain Gaiters
 (20238,1968,1,1,1,3474), -- Dwarven Chain Mail Shirt Material
 (20238,1969,1,1,1,5510), -- Dwarven Chain Gaiters Material
 (20238,1866,1,1,2,40000), -- Suede
@@ -2616,10 +2617,10 @@ INSERT INTO `droplist` VALUES
 (20239,2079,1,1,-1,9515), -- Bec De Corbin Blade
 (20239,3007,1,1,-1,50362), -- Recipe: Theca Leather Boots
 (20239,57,669,1365,0,700000), -- Adena
-(20239,11783,1,1,1,150), -- Common Item - Shamshir
-(20239,11794,1,1,1,150), -- Common Item - Katana
-(20239,11789,1,1,1,150), -- Common Item - Spirit Sword
-(20239,11778,1,1,1,150), -- Common Item - Raid Sword
+(20239,73,1,1,1,6), -- Shamshir
+(20239,74,1,1,1,6), -- Katana
+(20239,131,1,1,1,6), -- Spirit Sword
+(20239,133,1,1,1,6), -- Raid Sword
 (20239,2077,1,1,1,510), -- Shamshir Blade
 (20239,2078,1,1,1,510), -- Katana Blade
 (20239,2080,1,1,1,510), -- Spirit Sword Blade
@@ -2638,7 +2639,7 @@ INSERT INTO `droplist` VALUES
 (20240,2353,1,1,-1,2430), -- Recipe: Samurai Longsword
 (20240,4601,1,1,-1,3310), -- Greater Dye of Strength <Str+3 Con-3>
 (20240,57,722,1466,0,700000), -- Adena
-(20240,11827,1,1,1,115), -- Common Item - Fist Blade
+(20240,265,1,1,1,15), -- Fist Blade
 (20240,2108,1,1,1,1650), -- Fist Blade Piece
 (20240,1864,1,1,2,142857), -- Stem
 (20240,1869,1,1,2,66667), -- Iron Ore
@@ -2653,9 +2654,9 @@ INSERT INTO `droplist` VALUES
 (20241,2100,1,1,-1,8563), -- Paradia Staff Head
 (20241,3015,1,1,-1,42434), -- Recipe: Drake Leather Gloves
 (20241,57,720,1455,0,700000), -- Adena
-(20241,12332,1,1,1,1949), -- Common Item - Earring of Binding
-(20241,12333,1,1,1,2849), -- Common Item - Ring of Ages
-(20241,12334,1,1,1,1704), -- Common Item - Necklace of Mermaid
+(20241,854,1,1,1,71), -- Earring of Binding
+(20241,885,1,1,1,107), -- Ring of Ages
+(20241,917,1,1,1,54), -- Necklace of Mermaid
 (20241,1914,1,1,1,5883), -- Earring of Binding Gemstone
 (20241,1915,1,1,1,9226), -- Ring of Ages Gemstone
 (20241,1916,1,1,1,4456), -- Necklace of Mermaid Teardrop
@@ -2676,9 +2677,9 @@ INSERT INTO `droplist` VALUES
 (20242,1918,1,1,-1,68473), -- Nassen\'s Earring Gemstone
 (20242,1985,1,1,-1,54518), -- Theca Leather Gaiters Pattern
 (20242,57,766,1555,0,700000), -- Adena
-(20242,12133,1,1,1,452), -- Common Item - Theca Leather Armor
-(20242,12135,1,1,1,245), -- Common Item - Drake Leather Armor
-(20242,12130,1,1,1,716), -- Common Item - Theca Leather Gaiters
+(20242,400,1,1,1,24), -- Theca Leather Armor
+(20242,401,1,1,1,13), -- Drake Leather Armor
+(20242,420,1,1,1,38), -- Theca Leather Gaiters
 (20242,1984,1,1,1,2086), -- Theca Leather Armor Pattern
 (20242,1985,1,1,1,3356), -- Theca Leather Gaiters Pattern
 (20242,1987,1,1,1,1485), -- Drake Leather Armor Texture
@@ -2698,15 +2699,15 @@ INSERT INTO `droplist` VALUES
 (20243,1873,1,2,-1,563815), -- Silver Nugget
 (20243,4599,1,1,-1,4698), -- Greater Dye of Wit <Wit+2 Int-2>
 (20243,57,682,1386,0,700000), -- Adena
-(20243,11833,1,1,1,3), -- Common Item - Pa\'agrian Axe (no drop info)
-(20243,11842,1,1,1,2), -- Common Item - Deadman\'s Staff
-(20243,11838,1,1,1,2), -- Common Item - Ghoul\'s Staff
-(20243,11855,1,1,1,2), -- Common Item - Demon\'s Staff
+(20243,203,1,1,1,3), -- Pa\'agrian Axe
+(20243,204,1,1,1,2), -- Deadman\'s Staff
+(20243,205,1,1,1,2), -- Ghoul\'s Staff
+(20243,206,1,1,1,2), -- Demon\'s Staff
 (20243,2112,1,1,1,253), -- Pa\'agrian Axe Blade
 (20243,2116,1,1,1,245), -- Deadman\'s Staff Head
 (20243,2117,1,1,1,245), -- Ghoul\'s Staff Head
 (20243,2118,1,1,1,245), -- Demon\'s Staff Head
-(20243,11856,1,1,1,2), -- Common Item - Yaksa Mace
+(20243,2503,1,1,1,2), -- Yaksa Mace
 (20243,2969,1,1,1,251), -- Yaksa Mace Head
 (20243,1864,1,1,2,111111), -- Stem
 (20243,1869,1,1,2,45455), -- Iron Ore
@@ -2722,9 +2723,9 @@ INSERT INTO `droplist` VALUES
 (20244,3955,1,1,-1,2899), -- Recipe: Blessed Spiritshot B
 (20244,4592,1,1,-1,4832), -- Greater Dye of Constitution <Con+2 Dex-2>
 (20244,57,701,1428,0,700000), -- Adena
-(20244,12133,1,1,1,422), -- Common Item - Theca Leather Armor
-(20244,12135,1,1,1,422), -- Common Item - Drake Leather Armor
-(20244,12130,1,1,1,1267), -- Common Item - Theca Leather Gaiters
+(20244,400,1,1,1,22), -- Theca Leather Armor
+(20244,401,1,1,1,12), -- Drake Leather Armor
+(20244,420,1,1,1,35), -- Theca Leather Gaiters
 (20244,1984,1,1,1,1913), -- Theca Leather Armor Pattern
 (20244,1985,1,1,1,3077), -- Theca Leather Gaiters Pattern
 (20244,1987,1,1,1,1362), -- Drake Leather Armor Texture
@@ -2785,14 +2786,14 @@ INSERT INTO `droplist` VALUES
 (20248,1865,1,2,-1,470054), -- Varnish
 (20248,2250,1,2,-1,117514), -- Recipe: Bone Arrow
 (20248,57,239,476,0,700000), -- Adena
-(20248,11645,1,1,1,366), -- Common Item - Tomahawk
-(20248,11627,1,1,1,366), -- Common Item - Mace of Prayer
-(20248,11638,1,1,1,366), -- Common Item - Mace of Judgment
-(20248,11641,1,1,1,366), -- Common Item - Mace of Miracle
-(20248,11634,1,1,1,366), -- Common Item - Mystic Staff
-(20248,11644,1,1,1,366), -- Common Item - Conjuror\'s Staff
-(20248,11633,1,1,1,366), -- Common Item - Staff of Mana
-(20248,11630,1,1,1,366), -- Common Item - Doom Hammer
+(20248,86,1,1,1,8), -- Tomahawk
+(20248,179,1,1,1,8), -- Mace of Prayer
+(20248,180,1,1,1,8), -- Mace of Judgment
+(20248,181,1,1,1,8), -- Mace of Miracle
+(20248,182,1,1,1,8), -- Doom Hammer
+(20248,183,1,1,1,8), -- Mystic Staff
+(20248,184,1,1,1,8), -- Conjuror\'s Staff
+(20248,185,1,1,1,8), -- Staff of Mana
 (20248,2022,1,1,1,400), -- Mace of Judgment Head
 (20248,2023,1,1,1,319), -- Conjuror\'s Staff Head
 (20248,1829,1,1,2,18182), -- Scroll of Escape: Clan Hall
@@ -2804,7 +2805,7 @@ INSERT INTO `droplist` VALUES
 (20249,1865,1,3,-1,500696), -- Varnish
 (20249,1873,1,2,-1,400557), -- Silver Nugget
 (20249,57,508,1015,0,700000), -- Adena
-(20249,11665,1,1,1,3344), -- Common Item - Triple-Edged Jamadhr
+(20249,260,1,1,1,110), -- Triple-Edged Jamadhr
 (20249,1341,20,60,2,142857), -- Bone Arrow
 (20249,1868,1,1,2,166667), -- Thread
 (20249,1873,1,1,2,38462), -- Silver Nugget
@@ -2816,9 +2817,9 @@ INSERT INTO `droplist` VALUES
 (20250,1899,1,1,-1,59505), -- Necklace of Devotion Chain
 (20250,2259,1,1,-1,5914), -- Recipe: Spinebone Sword
 (20250,57,197,380,0,700000), -- Adena
-(20250,12311,1,1,1,11111), -- Common Item - Red Crescent Earring
-(20250,12313,1,1,1,16667), -- Common Item - Ring of Devotion
-(20250,12312,1,1,1,5556), -- Common Item - Necklace of Devotion
+(20250,847,1,1,1,398), -- Red Crescent Earring
+(20250,890,1,1,1,594), -- Ring of Devotion
+(20250,910,1,1,1,298), -- Necklace of Devotion
 (20250,1899,1,1,1,8350), -- Necklace of Devotion Chain
 (20250,1865,1,1,2,37037), -- Varnish
 (20250,1870,1,1,2,58824), -- Coal
@@ -2829,9 +2830,9 @@ INSERT INTO `droplist` VALUES
 (20251,2017,1,1,-1,5320), -- Saber Blade
 (20251,2152,1,1,-1,70478), -- Recipe: Enchanted Necklace
 (20251,57,206,403,0,700000), -- Adena
-(20251,11614,1,1,1,298), -- Common Item - Saber
+(20251,123,1,1,1,28), -- Saber
 (20251,2017,1,1,1,747), -- Saber Blade
-(20251,11625,1,1,1,298), -- Common Item - Heavy Sword
+(20251,5285,1,1,1,28), -- Heavy Sword
 (20251,5531,1,1,1,943), -- Heavy Sword Edge
 (20251,1866,1,1,2,35714), -- Suede
 (20251,1871,1,1,2,55556), -- Charcoal
@@ -2841,8 +2842,8 @@ INSERT INTO `droplist` VALUES
 (20252,1865,1,2,-1,418968), -- Varnish
 (20252,1900,1,1,-1,45839), -- Enchanted Necklace Chain
 (20252,57,213,422,0,700000), -- Adena
-(20252,12016,1,1,1,20833), -- Common Item - Leather Gauntlets
-(20252,12029,1,1,1,16129), -- Common Item - Blue Buckskin Boots
+(20252,605,1,1,1,688), -- Leather Gauntlets
+(20252,1123,1,1,1,688), -- Blue Buckskin Boots
 (20252,1867,1,1,2,43478), -- Animal Skin
 (20252,1872,1,1,2,41667), -- Animal Bone
 (20252,1875,1,1,2,782), -- Stone of Purity
@@ -2855,8 +2856,8 @@ INSERT INTO `droplist` VALUES
 (20253,2153,1,1,-1,69496), -- Recipe: Tiger\'s Eye Earring
 (20253,2265,1,1,-1,4621), -- Recipe: Spiked Club
 (20253,57,227,452,0,700000), -- Adena
-(20253,12024,1,1,1,466), -- Common Item - Scale Mail
-(20253,12023,1,1,1,466), -- Common Item - Scale Gaiters
+(20253,348,1,1,1,92), -- Scale Mail
+(20253,377,1,1,1,147), -- Scale Gaiters
 (20253,1935,1,1,1,3411), -- Scale Mail Fragment
 (20253,1937,1,1,1,5245), -- Scale Gaiters Fragment
 (20253,1868,1,1,2,125000), -- Thread
@@ -2868,7 +2869,7 @@ INSERT INTO `droplist` VALUES
 (20254,2181,1,1,-1,41282), -- Recipe: White Tunic
 (20254,2262,1,1,-1,6404), -- Recipe: Elven Bow
 (20254,57,212,415,0,700000), -- Adena
-(20254,11622,1,1,1,3663), -- Common Item - Trident
+(20254,291,1,1,1,57), -- Trident
 (20254,2019,1,1,1,2489), -- Trident Edge
 (20254,1876,1,1,2,8333), -- Mithril Ore
 (20254,1877,1,1,2,1567), -- Adamantite Nugget
@@ -2890,8 +2891,8 @@ INSERT INTO `droplist` VALUES
 (20266,1878,1,1,-1,139896), -- Braided Hemp
 (20266,2180,1,1,-1,26296), -- Recipe: Scale Mail
 (20266,57,185,346,0,700000), -- Adena
-(20266,12010,1,1,1,9259), -- Common Item - Cursed Tunic
-(20266,12011,1,1,1,12987), -- Common Item - Cursed Stockings
+(20266,432,1,1,1,314), -- Cursed Tunic
+(20266,465,1,1,1,503), -- Cursed Stockings
 (20266,1874,1,1,2,5556), -- Oriharukon Ore
 (20266,1878,1,1,2,22222), -- Braided Hemp
 (20266,2260,1,1,2,617), -- Recipe: Mace of Judgment
@@ -2900,10 +2901,10 @@ INSERT INTO `droplist` VALUES
 (20267,1882,1,1,-1,104456), -- Leather
 (20267,2203,1,1,-1,102408), -- Recipe: Mithril Boots
 (20267,57,239,476,0,700000), -- Adena
-(20267,11635,1,1,1,437), -- Common Item - Bastard Sword
-(20267,11636,1,1,1,1751), -- Common Item - Spinebone Sword
-(20267,11643,1,1,1,1312), -- Common Item - Artisan\'s Sword
-(20267,11628,1,1,1,437), -- Common Item - Knight\'s Sword
+(20267,69,1,1,1,16), -- Bastard Sword
+(20267,125,1,1,1,16), -- Spinebone Sword
+(20267,126,1,1,1,16), -- Artisan\'s Sword
+(20267,128,1,1,1,16), -- Knight\'s Sword
 (20267,2021,1,1,1,649), -- Spinebone Sword Blade
 (20267,1868,1,1,2,111111), -- Thread
 (20267,1873,1,1,2,31250), -- Silver Nugget
@@ -2913,8 +2914,8 @@ INSERT INTO `droplist` VALUES
 (20268,1878,1,2,-1,256688), -- Braided Hemp
 (20268,1900,1,1,-1,70210), -- Enchanted Necklace Chain
 (20268,57,324,651,0,700000), -- Adena
-(20268,11632,1,1,1,830), -- Common Item - Long Bow
-(20268,11640,1,1,1,830), -- Common Item - Elven Bow
+(20268,275,1,1,1,37), -- Long Bow
+(20268,276,1,1,1,37), -- Elven Bow
 (20268,2024,1,1,1,1666), -- Elven Bow Shaft
 (20268,956,1,1,2,4149), -- Scroll: Enchant Armor (Grade D)
 (20268,1867,1,1,2,111111), -- Animal Skin
@@ -2925,8 +2926,8 @@ INSERT INTO `droplist` VALUES
 (20269,2029,1,1,-1,6641), -- Gastraphetes Shaft
 (20269,2154,1,1,-1,59605), -- Recipe: Elven Earring
 (20269,57,282,563,0,700000), -- Adena
-(20269,11666,1,1,1,870), -- Common Item - Spiked Club
-(20269,11663,1,1,1,870), -- Common Item - Staff of Magic
+(20269,157,1,1,1,21), -- Spiked Club
+(20269,186,1,1,1,21), -- Staff of Magic
 (20269,2027,1,1,1,1293), -- Spiked Club Head
 (20269,1875,1,1,2,3472), -- Stone of Purity
 (20269,1879,1,1,2,8696), -- Cokes
@@ -2939,10 +2940,10 @@ INSERT INTO `droplist` VALUES
 (20270,2972,1,1,-1,42031), -- Recipe: Brigandine Gaiters
 (20270,2976,1,1,-1,105219), -- Recipe: Manticore Skin Boots
 (20270,57,398,795,0,700000), -- Adena
-(20270,12043,1,1,1,4016), -- Common Item - Mithril Banded Mail
-(20270,12036,1,1,1,2899), -- Common Item - Reinforced Leather Shirt
-(20270,12042,1,1,1,4348), -- Common Item - Mithril Banded Gaiters
-(20270,12034,1,1,1,3058), -- Common Item - Reinforced Leather Gaiters
+(20270,393,1,1,1,92), -- Mithril Banded Mail
+(20270,394,1,1,1,92), -- Reinforced Leather Shirt
+(20270,415,1,1,1,147), -- Mithril Banded Gaiters
+(20270,416,1,1,1,147), -- Reinforced Leather Gaiters
 (20270,1938,1,1,1,4683), -- Mithril Banded Mail Material
 (20270,1939,1,1,1,6119), -- Mithril Banded Gaiters Material
 (20270,1341,20,60,2,166667), -- Bone Arrow
@@ -2954,9 +2955,9 @@ INSERT INTO `droplist` VALUES
 (20271,2155,1,2,-1,102837), -- Recipe: Elven Ring
 (20271,2271,1,1,-1,4576), -- Recipe: Winged Spear
 (20271,57,325,650,0,700000), -- Adena
-(20271,12318,1,1,1,8475), -- Common Item - Tiger\'s Eye Earring
-(20271,12319,1,1,1,11905), -- Common Item - Black Pearl Ring
-(20271,12317,1,1,1,6579), -- Common Item - Near Forest Necklace
+(20271,849,1,1,1,265), -- Tiger\'s Eye Earring
+(20271,880,1,1,1,398), -- Black Pearl Ring
+(20271,912,1,1,1,199), -- Near Forest Necklace
 (20271,1901,1,1,1,11763), -- Tiger\'s Eye Earring Stone
 (20271,1874,1,1,2,4673), -- Oriharukon Ore
 (20271,1878,1,1,2,20408), -- Braided Hemp
@@ -3062,9 +3063,9 @@ INSERT INTO `droplist` VALUES
 (20314,1874,1,1,-1,47395), -- Oriharukon Ore
 (20314,4472,1,1,-1,4062), -- Dye of Constitution <Con+1 Dex-1>
 (20314,57,377,679,0,700000), -- Adena
-(20314,11736,1,1,1,10), -- Common Item - Claymore (no drop info)
+(20314,70,1,1,1,10), -- Claymore
 (20314,2047,1,1,1,785), -- Claymore Blade
-(20314,11733,1,1,1,10), -- Common Item - Elven Long Sword
+(20314,2499,1,1,1,10), -- Elven Long Sword
 (20314,2967,1,1,1,774), -- Elven Long Sword Blade
 (20314,1864,1,1,2,101999), -- Stem
 (20314,1869,1,1,2,51000), -- Iron Ore
@@ -3422,7 +3423,7 @@ INSERT INTO `droplist` VALUES
 (20356,1873,1,1,-1,142694), -- Silver Nugget
 (20356,1899,1,1,-1,55740), -- Necklace of Devotion Chain
 (20356,57,188,353,0,700000), -- Adena
-(20356,11613,1,1,1,2083), -- Common Item - Crafted Dagger
+(20356,220,1,1,1,98), -- Crafted Dagger
 (20356,1868,1,1,2,142857), -- Thread
 (20356,1873,1,1,2,26316), -- Silver Nugget
 (20356,2178,1,1,2,10417), -- Recipe: Dark Stockings
@@ -4010,7 +4011,7 @@ INSERT INTO `droplist` VALUES
 (20438,1869,1,2,-1,375763), -- Iron Ore
 (20438,1899,1,1,-1,58713), -- Necklace of Devotion Chain
 (20438,57,196,374,0,700000), -- Adena
-(20438,11622,1,1,1,2037), -- Common Item - Trident
+(20438,291,1,1,1,52), -- Trident
 (20438,2019,1,1,1,2268), -- Trident Edge
 (20438,1875,1,1,2,2849), -- Stone of Purity
 (20438,1879,1,1,2,8130), -- Cokes
@@ -4411,10 +4412,10 @@ INSERT INTO `droplist` VALUES
 (20495,1936,1,1,-1,76940), -- White Tunic Pattern
 (20495,2267,1,1,-1,9723), -- Recipe: Gastraphetes
 (20495,57,476,952,0,700000), -- Adena
-(20495,11635,1,1,1,1044), -- Common Item - Bastard Sword
-(20495,11636,1,1,1,696), -- Common Item - Spinebone Sword
-(20495,11643,1,1,1,1044), -- Common Item - Artisan\'s Sword
-(20495,11628,1,1,1,1044), -- Common Item - Knight\'s Sword
+(20495,69,1,1,1,32), -- Bastard Sword
+(20495,125,1,1,1,32), -- Spinebone Sword
+(20495,126,1,1,1,32), -- Artisan\'s Sword
+(20495,128,1,1,1,32), -- Knight\'s Sword
 (20495,2021,1,1,1,1298), -- Spinebone Sword Blade
 (20495,955,1,1,2,1044), -- Scroll: Enchant Weapon (Grade D)
 (20495,1875,1,1,2,5208), -- Stone of Purity
@@ -4429,7 +4430,7 @@ INSERT INTO `droplist` VALUES
 (20496,1885,1,1,-1,62016), -- High Grade Suede
 (20496,2152,1,1,-1,131020), -- Recipe: Enchanted Necklace
 (20496,57,389,743,0,700000), -- Adena
-(20496,11606,1,1,1,5128), -- Common Item - Strengthened Bow
+(20496,274,1,1,1,204), -- Strengthened Bow
 (20496,1876,1,1,2,19231), -- Mithril Ore
 (20496,1877,1,1,2,6410), -- Adamantite Nugget
 (20496,1880,1,1,2,1282), -- Steel
@@ -4441,8 +4442,8 @@ INSERT INTO `droplist` VALUES
 (20497,2018,1,1,-1,10194), -- Assassin Knife Edge
 (20497,2259,1,1,-1,11911), -- Recipe: Spinebone Sword
 (20497,57,396,772,0,700000), -- Adena
-(20497,12015,1,1,1,17544), -- Common Item - Puma Skin Shirt
-(20497,12014,1,1,1,29412), -- Common Item - Puma Skin Gaiters
+(20497,391,1,1,1,688), -- Puma Skin Shirt
+(20497,413,1,1,1,1102), -- Puma Skin Gaiters
 (20497,1874,1,1,2,7299), -- Oriharukon Ore
 (20497,1878,1,1,2,34483), -- Braided Hemp
 (20497,1884,1,1,2,58824), -- Cord
@@ -4453,8 +4454,8 @@ INSERT INTO `droplist` VALUES
 (20498,2262,1,1,-1,11109), -- Recipe: Elven Bow
 (20498,3953,1,1,-1,28617), -- Recipe: Blessed Spiritshot D
 (20498,57,371,713,0,700000), -- Adena
-(20498,12009,1,1,1,21277), -- Common Item - Bone Helmet
-(20498,12013,1,1,1,25000), -- Common Item - Bronze Shield
+(20498,45,1,1,1,856), -- Bone Helmet
+(20498,626,1,1,1,1223), -- Bronze Shield
 (20498,1932,1,1,1,21245), -- Bone Helmet Design
 (20498,1875,1,1,2,3937), -- Stone of Purity
 (20498,1879,1,1,2,13333), -- Cokes
@@ -4466,8 +4467,8 @@ INSERT INTO `droplist` VALUES
 (20499,1880,1,1,-1,68521), -- Steel
 (20499,2017,1,1,-1,9106), -- Saber Blade
 (20499,57,358,682,0,700000), -- Adena
-(20499,12006,1,1,1,16949), -- Common Item - Leather Boots
-(20499,12007,1,1,1,31250), -- Common Item - Crafted Leather Gloves
+(20499,40,1,1,1,921), -- Leather Boots
+(20499,604,1,1,1,921), -- Crafted Leather Gloves
 (20499,1931,1,1,1,12568), -- Leather Boot Lining
 (20499,1934,1,1,1,12568), -- Crafted Leather Gloves Lining
 (20499,1876,1,1,2,9174), -- Mithril Ore
@@ -4480,9 +4481,9 @@ INSERT INTO `droplist` VALUES
 (20500,1931,1,1,-1,85035), -- Leather Boot Lining
 (20500,1932,1,1,-1,103256), -- Bone Helmet Design
 (20500,57,344,643,0,700000), -- Adena
-(20500,12311,1,1,1,15152), -- Common Item - Red Crescent Earring
-(20500,12313,1,1,1,23810), -- Common Item - Ring of Devotion
-(20500,12312,1,1,1,10989), -- Common Item - Necklace of Devotion
+(20500,847,1,1,1,679), -- Red Crescent Earring
+(20500,890,1,1,1,1015), -- Ring of Devotion
+(20500,910,1,1,1,509), -- Necklace of Devotion
 (20500,1899,1,1,1,14262), -- Necklace of Devotion Chain
 (20500,1874,1,1,2,5025), -- Oriharukon Ore
 (20500,1878,1,1,2,41667), -- Braided Hemp
@@ -4492,12 +4493,12 @@ INSERT INTO `droplist` VALUES
 (20501,1933,1,1,-1,92597), -- Dark Stocking Fabric
 (20501,2153,1,1,-1,122407), -- Recipe: Tiger\'s Eye Earring
 (20501,57,400,793,0,700000), -- Adena
-(20501,12026,1,1,1,1613), -- Common Item - Elven Tunic
-(20501,12022,1,1,1,3759), -- Common Item - White Tunic
-(20501,12018,1,1,1,2151), -- Common Item - Mystic\'s Tunic
-(20501,12027,1,1,1,4566), -- Common Item - Elven Stockings
-(20501,12017,1,1,1,4566), -- Common Item - Dark Stockings
-(20501,12019,1,1,1,3759), -- Common Item - Mystic\'s Stockings
+(20501,433,1,1,1,108), -- Elven Tunic
+(20501,434,1,1,1,108), -- White Tunic
+(20501,435,1,1,1,108), -- Mystic\'s Tunic
+(20501,466,1,1,1,173), -- Elven Stockings
+(20501,467,1,1,1,173), -- Dark Stockings
+(20501,468,1,1,1,173), -- Mystic\'s Stockings
 (20501,1933,1,1,1,6326), -- Dark Stocking Fabric
 (20501,1936,1,1,1,4400), -- White Tunic Pattern
 (20501,1875,1,1,2,5917), -- Stone of Purity
@@ -4848,9 +4849,9 @@ INSERT INTO `droplist` VALUES
 (20546,2279,1,1,-1,4056), -- Recipe: War Pick
 (20546,2979,1,1,-1,76017), -- Recipe: Manticore Skin Gloves
 (20546,57,288,574,0,700000), -- Adena
-(20546,12318,1,1,1,6993), -- Common Item - Tiger\'s Eye Earring
-(20546,12319,1,1,1,10526), -- Common Item - Black Pearl Ring
-(20546,12317,1,1,1,6993), -- Common Item - Near Forest Necklace
+(20546,849,1,1,1,235), -- Tiger\'s Eye Earring
+(20546,880,1,1,1,353), -- Black Pearl Ring
+(20546,912,1,1,1,177), -- Near Forest Necklace
 (20546,1901,1,1,1,10426), -- Tiger\'s Eye Earring Stone
 (20546,1876,1,1,2,10989), -- Mithril Ore
 (20546,1877,1,1,2,500), -- Adamantite Nugget
@@ -4886,11 +4887,11 @@ INSERT INTO `droplist` VALUES
 (20549,1901,1,1,-1,161334), -- Tiger\'s Eye Earring Stone
 (20549,1938,1,1,-1,78525), -- Mithril Banded Mail Material
 (20549,57,596,1178,0,700000), -- Adena
-(20549,11655,1,1,1,725), -- Common Item - Sword of Magic
-(20549,11667,1,1,1,725), -- Common Item - Two-Handed Sword
-(20549,11675,1,1,1,725), -- Common Item - Crimson Sword
-(20549,11670,1,1,1,725), -- Common Item - Elven Sword
-(20549,11657,1,1,1,725), -- Common Item - Sword of Occult
+(20549,83,1,1,1,29), -- Sword of Magic
+(20549,124,1,1,1,22), -- Two-Handed Sword
+(20549,127,1,1,1,22), -- Crimson Sword
+(20549,130,1,1,1,22), -- Elven Sword
+(20549,144,1,1,1,29), -- Sword of Occult
 (20549,2026,1,1,1,1246), -- Two-Handed Sword Edge
 (20549,1341,20,60,2,200000), -- Bone Arrow
 (20549,1866,1,1,2,90909), -- Suede
@@ -4902,10 +4903,10 @@ INSERT INTO `droplist` VALUES
 (20550,2154,1,1,-1,69153), -- Recipe: Elven Earring
 (20550,2276,1,1,-1,4614), -- Recipe: Maingauche
 (20550,57,327,655,0,700000), -- Adena
-(20550,12043,1,1,1,2227), -- Common Item - Mithril Banded Mail
-(20550,12036,1,1,1,2227), -- Common Item - Reinforced Leather Shirt
-(20550,12042,1,1,1,3610), -- Common Item - Mithril Banded Gaiters
-(20550,12034,1,1,1,4566), -- Common Item - Reinforced Leather Gaiters
+(20550,393,1,1,1,76), -- Mithril Banded Mail
+(20550,394,1,1,1,76), -- Reinforced Leather Shirt
+(20550,415,1,1,1,121), -- Mithril Banded Gaiters
+(20550,416,1,1,1,121), -- Reinforced Leather Gaiters
 (20550,1938,1,1,1,3849), -- Mithril Banded Mail Material
 (20550,1939,1,1,1,5028), -- Mithril Banded Gaiters Material
 (20550,1868,1,1,2,111111), -- Thread
@@ -4919,9 +4920,9 @@ INSERT INTO `droplist` VALUES
 (20551,1902,1,1,-1,66249), -- Elven Earring Beads
 (20551,2034,1,1,-1,6909), -- Sword of Revolution Blade
 (20551,57,332,662,0,700000), -- Adena
-(20551,12322,1,1,1,3676), -- Common Item - Elven Earring
-(20551,12321,1,1,1,6452), -- Common Item - Elven Ring
-(20551,12320,1,1,1,3236), -- Common Item - Elven Necklace
+(20551,850,1,1,1,121), -- Elven Earring
+(20551,881,1,1,1,181), -- Elven Ring
+(20551,913,1,1,1,91), -- Elven Necklace
 (20551,1902,1,1,1,5708), -- Elven Earring Beads
 (20551,1903,1,1,1,9398), -- Elven Ring Piece
 (20551,1904,1,1,1,5258), -- Elven Necklace Beads
@@ -4936,7 +4937,7 @@ INSERT INTO `droplist` VALUES
 (20552,1902,1,1,-1,142493), -- Elven Earring Beads
 (20552,1903,1,2,-1,234596), -- Elven Ring Piece
 (20552,57,714,1424,0,700000), -- Adena
-(20552,11714,1,1,1,1779), -- Common Item - Sword of Revolution
+(20552,129,1,1,1,52), -- Sword of Revolution
 (20552,2034,1,1,1,3842), -- Sword of Revolution Blade
 (20552,1864,1,3,2,142857), -- Stem
 (20552,1869,1,1,2,142857), -- Iron Ore
@@ -4948,7 +4949,7 @@ INSERT INTO `droplist` VALUES
 (20553,1904,1,1,-1,67641), -- Elven Necklace Beads
 (20553,2145,1,1,-1,51770), -- Recipe: Mithril Alloy
 (20553,57,368,733,0,700000), -- Adena
-(20553,11709,1,1,1,1037), -- Common Item - Crucifix of Blood
+(20553,318,1,1,1,27), -- Crucifix of Blood
 (20553,2042,1,1,1,1732), -- Crucifix of Blood Piece
 (20553,1865,1,1,2,76923), -- Varnish
 (20553,1870,1,1,2,71429), -- Coal
@@ -4960,8 +4961,8 @@ INSERT INTO `droplist` VALUES
 (20554,1941,1,1,-1,33586), -- Brigandine Temper
 (20554,2146,1,1,-1,60324), -- Recipe: Artisan\'s frame
 (20554,57,425,848,0,700000), -- Adena
-(20554,11685,1,1,1,526), -- Common Item - Maingauche
-(20554,11706,1,1,1,702), -- Common Item - Cursed Maingauche
+(20554,224,1,1,1,16), -- Maingauche
+(20554,1660,1,1,1,16), -- Cursed Maingauche
 (20554,2038,1,1,1,1154), -- Maingauche Edge
 (20554,2044,1,1,1,1154), -- Cursed Maingauche Edge
 (20554,1864,1,1,2,142857), -- Stem
@@ -4975,8 +4976,8 @@ INSERT INTO `droplist` VALUES
 (20555,1903,1,1,-1,126810), -- Elven Ring Piece
 (20555,2296,1,1,-1,4223), -- Recipe: Atuba Mace
 (20555,57,383,764,0,700000), -- Adena
-(20555,12054,1,1,1,2556), -- Common Item - Manticore Skin Shirt
-(20555,12052,1,1,1,5102), -- Common Item - Manticore Skin Gaiters
+(20555,395,1,1,1,88), -- Manticore Skin Shirt
+(20555,417,1,1,1,141), -- Manticore Skin Gaiters
 (20555,1942,1,1,1,5011), -- Manticore Skin Shirt Texture
 (20555,1943,1,1,1,7803), -- Manticore Skin Gaiters Pattern
 (20555,1864,1,1,2,166667), -- Stem
@@ -4989,7 +4990,7 @@ INSERT INTO `droplist` VALUES
 (20556,1957,1,1,-1,89096), -- Assault Boots Part
 (20556,2305,1,1,-1,3486), -- Recipe: Crystal Staff
 (20556,57,394,778,0,700000), -- Adena
-(20556,12083,1,1,1,3106), -- Common Item - Sage\'s Rag
+(20556,438,1,1,1,94), -- Sage\'s Rag
 (20556,1953,1,1,1,6421), -- Sage\'s Rag Lining
 (20556,1865,1,1,2,76923), -- Varnish
 (20556,1870,1,1,2,76923), -- Coal
@@ -5001,7 +5002,7 @@ INSERT INTO `droplist` VALUES
 (20557,3954,1,1,-1,2816), -- Recipe: Blessed Spiritshot C
 (20557,4469,1,1,-1,4827), -- Dye of Strength <Str+1 Con-1>
 (20557,57,414,837,0,700000), -- Adena
-(20557,11725,1,1,1,412), -- Common Item - Glaive
+(20557,297,1,1,1,24), -- Glaive
 (20557,2055,1,1,1,1754), -- Glaive Edge
 (20557,1866,1,1,2,40000), -- Suede
 (20557,1871,1,1,2,71429), -- Charcoal
@@ -5014,9 +5015,9 @@ INSERT INTO `droplist` VALUES
 (20558,2310,1,1,-1,3792), -- Recipe: Dark Elven Dagger
 (20558,2932,1,1,-1,96920), -- Plate Boots Design
 (20558,57,421,853,0,700000), -- Adena
-(20558,12325,1,1,1,6410), -- Common Item - Omen Beast\'s Eye Earring
-(20558,12323,1,1,1,5618), -- Common Item - Mithril Ring
-(20558,12324,1,1,1,4016), -- Common Item - Necklace of Darkness
+(20558,851,1,1,1,121), -- Omen Beast\'s Eye Earring
+(20558,882,1,1,1,180), -- Mithril Ring
+(20558,914,1,1,1,90), -- Necklace of Darkness
 (20558,1905,1,1,1,7070), -- Omen Beast\'s Eye Earring Gemstone
 (20558,1906,1,1,1,9990), -- Mithril Ring Wire
 (20558,1907,1,1,1,5056), -- Necklace of Darkness Gem
@@ -5032,8 +5033,8 @@ INSERT INTO `droplist` VALUES
 (20559,2163,1,1,-1,52120), -- Recipe: Earring of Protection
 (20559,2164,1,1,-1,78582), -- Recipe: Ring of Protection
 (20559,57,493,1007,0,700000), -- Adena
-(20559,11766,1,1,1,11), -- Common Item - Flamberge (no drop info)
-(20559,11756,1,1,1,11), -- Common Item - Stormbringer
+(20559,71,1,1,1,11), -- Flamberge
+(20559,72,1,1,1,11), -- Stormbringer
 (20559,2059,1,1,1,897), -- Flamberge Blade
 (20559,2060,1,1,1,959), -- Stormbringer Blade
 (20559,1895,1,1,2,34487), -- Metallic Fiber
@@ -5046,9 +5047,9 @@ INSERT INTO `droplist` VALUES
 (20560,2165,1,1,-1,36460), -- Recipe: Necklace of Protection
 (20560,2320,1,1,-1,3316), -- Recipe: Cursed Staff
 (20560,57,462,935,0,700000), -- Adena
-(20560,12326,1,1,1,2041), -- Common Item - Moonstone Earring
-(20560,12328,1,1,1,4082), -- Common Item - Aquastone Ring
-(20560,12327,1,1,1,680), -- Common Item - Aquastone Necklace
+(20560,852,1,1,1,97), -- Moonstone Earring
+(20560,883,1,1,1,146), -- Aquastone Ring
+(20560,915,1,1,1,73), -- Aquastone Necklace
 (20560,1908,1,1,1,7098), -- Moonstone Earring Wire
 (20560,1909,1,1,1,10122), -- Aquastone Ring Wire
 (20560,1910,1,1,1,5644), -- Aquastone Necklace Chain
@@ -5067,9 +5068,9 @@ INSERT INTO `droplist` VALUES
 (20561,2164,1,1,-1,86691), -- Recipe: Ring of Protection
 (20561,2940,1,1,-1,101302), -- Dwarven Chain Boots Part
 (20561,57,543,1111,0,700000), -- Adena
-(20561,11751,1,1,1,351), -- Common Item - Scythe
-(20561,11760,1,1,1,351), -- Common Item - Orcish Glaive
-(20561,11749,1,1,1,351), -- Common Item - Body Slasher
+(20561,96,1,1,1,8), -- Scythe
+(20561,298,1,1,1,8), -- Orcish Glaive
+(20561,302,1,1,1,8), -- Body Slasher
 (20561,2062,1,1,1,697), -- Scythe Edge
 (20561,2075,1,1,1,697), -- Orcish Glaive Blade
 (20561,2076,1,1,1,697), -- Body Slasher Blade
@@ -5087,9 +5088,9 @@ INSERT INTO `droplist` VALUES
 (20562,1867,1,3,-1,723243), -- Animal Skin
 (20562,2346,1,1,-1,2523), -- Recipe: Fist Blade
 (20562,57,525,1069,0,700000), -- Adena
-(20562,12329,1,1,1,2439), -- Common Item - Earring of Protection
-(20562,12331,1,1,1,3906), -- Common Item - Ring of Protection
-(20562,12330,1,1,1,1949), -- Common Item - Necklace of Protection
+(20562,853,1,1,1,82), -- Earring of Protection
+(20562,884,1,1,1,124), -- Ring of Protection
+(20562,916,1,1,1,62), -- Necklace of Protection
 (20562,1911,1,1,1,5960), -- Earring of Protection Gemstone
 (20562,1912,1,1,1,8635), -- Ring of Protection Gemstone
 (20562,1913,1,1,1,4873), -- Necklace of Protection Gemstone
@@ -5108,16 +5109,16 @@ INSERT INTO `droplist` VALUES
 (20563,1864,1,5,-1,904670), -- Stem
 (20563,1941,1,1,-1,35978), -- Brigandine Temper
 (20563,57,355,909,0,700000), -- Adena
-(20563,12068,1,1,1,1319), -- Common Item - Rip Gauntlets
-(20563,12070,1,1,1,2639), -- Common Item - Boots of Power
+(20563,606,1,1,1,79), -- Rip Gauntlets
+(20563,1124,1,1,1,79), -- Boots of Power
 (20563,1946,1,1,1,3951), -- Rip Gauntlets Pattern
 (20563,1948,1,1,1,3951), -- Boots of Power Pattern
-(20563,12053,1,1,1,2786), -- Common Item - Manticore Skin Boots
-(20563,12062,1,1,1,2494), -- Common Item - Brigandine Boots
-(20563,12066,1,1,1,3367), -- Common Item - Elven Mithril Boots
-(20563,12055,1,1,1,2494), -- Common Item - Manticore Skin Gloves
-(20563,12061,1,1,1,1466), -- Common Item - Brigandine Gauntlets
-(20563,12065,1,1,1,1761), -- Common Item - Elven Mithril Gloves
+(20563,2424,1,1,1,79), -- Manticore Skin Boots
+(20563,2425,1,1,1,79), -- Brigandine Boots
+(20563,2426,1,1,1,79), -- Elven Mithril Boots
+(20563,2448,1,1,1,79), -- Manticore Skin Gloves
+(20563,2449,1,1,1,79), -- Brigandine Gauntlets
+(20563,2450,1,1,1,79), -- Elven Mithril Gloves
 (20563,2923,1,1,1,3951), -- Manticore Skin Boot Lining
 (20563,2924,1,1,1,3951), -- Brigandine Boots Design
 (20563,2925,1,1,1,3951), -- Elven Mithril Boots Design
@@ -5134,10 +5135,10 @@ INSERT INTO `droplist` VALUES
 (20564,1885,1,1,-1,67856), -- High Grade Suede
 (20564,2306,1,1,-1,3556), -- Recipe: Stick of Faith
 (20564,57,402,804,0,700000), -- Adena
-(20564,12073,1,1,1,3205), -- Common Item - Square Shield
+(20564,630,1,1,1,133), -- Square Shield
 (20564,1956,1,1,1,7736), -- Square Shield Fragment
-(20564,12079,1,1,1,2967), -- Common Item - Plate Helmet
-(20564,12078,1,1,1,3717), -- Common Item - Plate Shield
+(20564,2412,1,1,1,93), -- Plate Helmet
+(20564,2494,1,1,1,133), -- Plate Shield
 (20564,2930,1,1,1,5494), -- Plate Helmet Design
 (20564,2934,1,1,1,7736), -- Plate Shield Fragment
 (20564,1866,1,1,2,45455), -- Suede
@@ -5151,7 +5152,7 @@ INSERT INTO `droplist` VALUES
 (20565,3954,1,1,-1,3134), -- Recipe: Blessed Spiritshot C
 (20565,4470,1,1,-1,5373), -- Dye of Strength <Str+1 Dex-1>
 (20565,57,461,932,0,700000), -- Adena
-(20565,11730,1,1,1,649), -- Common Item - Scallop Jamadhr
+(20565,262,1,1,1,27), -- Scallop Jamadhr
 (20565,2053,1,1,1,1952), -- Scallop Jamadhr Edge
 (20565,1875,1,1,2,5025), -- Stone of Purity
 (20565,1879,1,1,2,13158), -- Cokes
@@ -5164,10 +5165,10 @@ INSERT INTO `droplist` VALUES
 (20566,2995,1,1,-1,78255), -- Recipe: Reinforced Mithril Gloves
 (20566,3000,1,1,-1,63206), -- Recipe: Dwarven Chain Shield
 (20566,57,477,970,0,700000), -- Adena
-(20566,12073,1,1,1,3521), -- Common Item - Square Shield
+(20566,630,1,1,1,161), -- Square Shield
 (20566,1956,1,1,1,9368), -- Square Shield Fragment
-(20566,12079,1,1,1,3003), -- Common Item - Plate Helmet
-(20566,12078,1,1,1,4386), -- Common Item - Plate Shield
+(20566,2412,1,1,1,113), -- Plate Helmet
+(20566,2494,1,1,1,161), -- Plate Shield
 (20566,2930,1,1,1,6653), -- Plate Helmet Design
 (20566,2934,1,1,1,9368), -- Plate Shield Fragment
 (20566,1895,1,1,2,22222), -- Metallic Fiber
@@ -5180,7 +5181,7 @@ INSERT INTO `droplist` VALUES
 (20567,2165,1,1,-1,41845), -- Recipe: Necklace of Protection
 (20567,3004,1,1,-1,67836), -- Recipe: Rind Leather Gloves
 (20567,57,526,1078,0,700000), -- Adena
-(20567,11763,1,1,1,831), -- Common Item - Chakram
+(20567,263,1,1,1,23), -- Chakram
 (20567,2073,1,1,1,1995), -- Chakram Edge
 (20567,1864,1,1,2,83333), -- Stem
 (20567,1865,1,1,2,47619), -- Varnish
@@ -5196,14 +5197,14 @@ INSERT INTO `droplist` VALUES
 (20568,1908,1,1,-1,91015), -- Moonstone Earring Wire
 (20568,1961,1,1,-1,30756), -- Mithril Shirt Fabric
 (20568,57,465,945,0,700000), -- Adena
-(20568,11765,1,1,1,61), -- Common Item - Big Hammer
-(20568,11750,1,1,1,61), -- Common Item - Battle Axe
-(20568,11761,1,1,1,61), -- Common Item - Silver Axe
-(20568,11755,1,1,1,61), -- Common Item - Skull Graver
-(20568,11768,1,1,1,61), -- Common Item - Heavy Doom Hammer
-(20568,11764,1,1,1,61), -- Common Item - Crystal Staff
-(20568,11757,1,1,1,61), -- Common Item - Stick of Faith
-(20568,11767,1,1,1,61), -- Common Item - Heavy Doom Axe
+(20568,89,1,1,1,3), -- Big Hammer
+(20568,160,1,1,1,3), -- Battle Axe
+(20568,161,1,1,1,3), -- Silver Axe
+(20568,173,1,1,1,3), -- Skull Graver
+(20568,191,1,1,1,3), -- Heavy Doom Hammer
+(20568,192,1,1,1,3), -- Crystal Staff
+(20568,193,1,1,1,3), -- Stick of Faith
+(20568,194,1,1,1,3), -- Heavy Doom Axe
 (20568,2061,1,1,1,220), -- Big Hammer Head
 (20568,2063,1,1,1,220), -- Battle Axe Head
 (20568,2064,1,1,1,220), -- Silver Axe Head
@@ -5226,10 +5227,10 @@ INSERT INTO `droplist` VALUES
 (20569,2213,1,1,-1,16221), -- Recipe: Dwarven Chain Mail Shirt
 (20569,3001,1,1,-1,64883), -- Recipe: Rind Leather Boots
 (20569,57,504,1030,0,700000), -- Adena
-(20569,12091,1,1,1,3300), -- Common Item - Eldarake
+(20569,631,1,1,1,124), -- Eldarake
 (20569,1964,1,1,1,6650), -- Eldarake Temper
-(20569,12090,1,1,1,2841), -- Common Item - Chain Hood
-(20569,12096,1,1,1,4098), -- Common Item - Chain Shield
+(20569,2413,1,1,1,88), -- Chain Hood
+(20569,2495,1,1,1,124), -- Chain Shield
 (20569,2936,1,1,1,6040), -- Chain Hood Pattern
 (20569,2945,1,1,1,6650), -- Chain Shield Fragment
 (20569,1865,1,1,2,45455), -- Varnish
@@ -5247,8 +5248,8 @@ INSERT INTO `droplist` VALUES
 (20570,2216,1,1,-1,43296), -- Recipe: Great Helmet
 (20570,3008,1,1,-1,38101), -- Recipe: Theca Leather Gloves
 (20570,57,506,1033,0,700000), -- Adena
-(20570,12110,1,1,1,1431), -- Common Item - Dwarven Chain Mail Shirt
-(20570,12109,1,1,1,1996), -- Common Item - Dwarven Chain Gaiters
+(20570,355,1,1,1,37), -- Dwarven Chain Mail Shirt
+(20570,382,1,1,1,58), -- Dwarven Chain Gaiters
 (20570,1968,1,1,1,2797), -- Dwarven Chain Mail Shirt Material
 (20570,1969,1,1,1,4436), -- Dwarven Chain Gaiters Material
 (20570,1866,1,1,2,30303), -- Suede
@@ -5265,10 +5266,10 @@ INSERT INTO `droplist` VALUES
 (20571,2335,1,1,-1,2880), -- Recipe: War Axe
 (20571,2968,1,1,-1,8355), -- Dwarven Warhammer Head
 (20571,57,599,1219,0,700000), -- Adena
-(20571,11783,1,1,1,142), -- Common Item - Shamshir
-(20571,11794,1,1,1,236), -- Common Item - Katana
-(20571,11789,1,1,1,377), -- Common Item - Spirit Sword
-(20571,11778,1,1,1,377), -- Common Item - Raid Sword
+(20571,73,1,1,1,5), -- Shamshir
+(20571,74,1,1,1,5), -- Katana
+(20571,131,1,1,1,5), -- Spirit Sword
+(20571,133,1,1,1,5), -- Raid Sword
 (20571,2077,1,1,1,456), -- Shamshir Blade
 (20571,2078,1,1,1,456), -- Katana Blade
 (20571,2080,1,1,1,456), -- Spirit Sword Blade
@@ -5288,7 +5289,7 @@ INSERT INTO `droplist` VALUES
 (20572,2950,1,1,-1,114196), -- Gloves of Seal Pattern
 (20572,4125,1,1,-1,60346), -- Recipe: Maestro Mold
 (20572,57,656,1338,0,700000), -- Adena
-(20572,11782,1,1,1,463), -- Common Item - Bec de Corbin
+(20572,94,1,1,1,21), -- Bec de Corbin
 (20572,2079,1,1,1,2068), -- Bec De Corbin Blade
 (20572,1342,10,30,2,111111), -- Fine Steel Arrow
 (20572,1867,1,1,2,76923), -- Animal Skin
@@ -5306,8 +5307,8 @@ INSERT INTO `droplist` VALUES
 (20573,4122,1,1,-1,52347), -- Recipe: Maestro Holder
 (20573,5549,1,1,-1,117780), -- Metallic Thread
 (20573,57,472,959,0,700000), -- Adena
-(20573,12125,1,1,1,2625), -- Common Item - Composite Boots
-(20573,12119,1,1,1,2070), -- Common Item - Mithril Gauntlets
+(20573,64,1,1,1,100), -- Composite Boots
+(20573,608,1,1,1,100), -- Mithril Gauntlets
 (20573,1981,1,1,1,7163), -- Mithril Gauntlets Design
 (20573,2956,1,1,1,7163), -- Composite Boots Part
 (20573,1342,10,30,2,76923), -- Fine Steel Arrow
@@ -5326,12 +5327,12 @@ INSERT INTO `droplist` VALUES
 (20574,1867,1,3,-1,834496), -- Animal Skin
 (20574,4601,1,1,-1,2782), -- Greater Dye of Strength <Str+3 Con-3>
 (20574,57,497,1009,0,700000), -- Adena
-(20574,11821,1,1,1,33), -- Common Item - Caliburs
-(20574,11807,1,1,1,33), -- Common Item - Sword of Delusion
-(20574,11820,1,1,1,33), -- Common Item - Tsurugi
-(20574,11829,1,1,1,33), -- Common Item - Homunkulus\'s Sword
-(20574,11815,1,1,1,33), -- Common Item - Sword of Nightmare
-(20574,11805,1,1,1,33), -- Common Item - Sword of Whispering Death
+(20574,75,1,1,1,3), -- Caliburs
+(20574,76,1,1,1,3), -- Sword of Delusion
+(20574,77,1,1,1,3), -- Tsurugi
+(20574,84,1,1,1,3), -- Homunkulus\'s Sword
+(20574,134,1,1,1,3), -- Sword of Nightmare
+(20574,145,1,1,1,3), -- Sword of Whispering Death
 (20574,2089,1,1,1,236), -- Caliburs Edge
 (20574,2090,1,1,1,236), -- Delusional Blade
 (20574,2091,1,1,1,236), -- Tsurugi Blade
@@ -5355,9 +5356,9 @@ INSERT INTO `droplist` VALUES
 (20575,1870,1,3,-1,697860), -- Coal
 (20575,4598,1,1,-1,4652), -- Greater Dye of Mental Strength <Men+2 Wit-2>
 (20575,57,558,1137,0,700000), -- Adena
-(20575,11853,1,1,1,186), -- Common Item - Samurai Longsword
+(20575,135,1,1,1,5), -- Samurai Longsword
 (20575,2115,1,1,1,591), -- Samurai Longsword Blade
-(20575,11843,1,1,1,21), -- Common Item - Berserker Blade
+(20575,5286,1,1,1,5), -- Berserker Blade
 (20575,5530,1,1,1,592), -- Berserker Blade Edge
 (20575,1865,1,1,2,40000), -- Varnish
 (20575,1870,1,1,2,40000), -- Coal
@@ -5375,9 +5376,9 @@ INSERT INTO `droplist` VALUES
 (20576,4145,1,1,-1,12722), -- Recipe: Avadon Leather Armor
 (20576,4591,1,1,-1,9669), -- Greater Dye of Constitution <Con+2 Str-2>
 (20576,57,1121,2284,0,700000), -- Adena
-(20576,12336,1,1,1,1248), -- Common Item - Necklace of Binding
-(20576,12335,1,1,1,2421), -- Common Item - Nassen\'s Earring
-(20576,12337,1,1,1,2639), -- Common Item - Ring of Binding
+(20576,119,1,1,1,64), -- Necklace of Binding
+(20576,855,1,1,1,85), -- Nassen\'s Earring
+(20576,886,1,1,1,127), -- Ring of Binding
 (20576,1918,1,1,1,7730), -- Nassen\'s Earring Gemstone
 (20576,1920,1,1,1,6107), -- Necklace of Binding Chain
 (20576,2917,1,1,1,10252), -- Ring of Binding Gemstone
@@ -5397,9 +5398,9 @@ INSERT INTO `droplist` VALUES
 (20577,2030,1,1,-1,6880), -- Tome of Blood Page
 (20577,2154,1,1,-1,62979), -- Recipe: Elven Earring
 (20577,57,298,594,0,700000), -- Adena
-(20577,12318,1,1,1,8333), -- Common Item - Tiger\'s Eye Earring
-(20577,12319,1,1,1,8333), -- Common Item - Black Pearl Ring
-(20577,12317,1,1,1,4255), -- Common Item - Near Forest Necklace
+(20577,849,1,1,1,244), -- Tiger\'s Eye Earring
+(20577,880,1,1,1,366), -- Black Pearl Ring
+(20577,912,1,1,1,183), -- Near Forest Necklace
 (20577,1901,1,1,1,10800), -- Tiger\'s Eye Earring Stone
 (20577,1867,1,1,2,66667), -- Animal Skin
 (20577,1872,1,1,2,71428), -- Animal Bone
@@ -5412,7 +5413,7 @@ INSERT INTO `droplist` VALUES
 (20578,1901,1,1,-1,88354), -- Tiger\'s Eye Earring Stone
 (20578,1939,1,1,-1,56186), -- Mithril Banded Gaiters Material
 (20578,57,324,649,0,700000), -- Adena
-(20578,11659,1,1,1,268), -- Common Item - Gastraphetes
+(20578,278,1,1,1,36), -- Gastraphetes
 (20578,2029,1,1,1,2029), -- Gastraphetes Shaft
 (20578,1868,1,1,2,125000), -- Thread
 (20578,1873,1,1,2,31250), -- Silver Nugget
@@ -5424,16 +5425,16 @@ INSERT INTO `droplist` VALUES
 (20579,1943,1,1,-1,52975), -- Manticore Skin Gaiters Pattern
 (20579,1946,1,1,-1,90129), -- Rip Gauntlets Pattern
 (20579,57,338,675,0,700000), -- Adena
-(20579,12068,1,1,1,1259), -- Common Item - Rip Gauntlets
-(20579,12070,1,1,1,2336), -- Common Item - Boots of Power
+(20579,606,1,1,1,58), -- Rip Gauntlets
+(20579,1124,1,1,1,58), -- Boots of Power
 (20579,1946,1,1,1,2913), -- Rip Gauntlets Pattern
 (20579,1948,1,1,1,2913), -- Boots of Power Pattern
-(20579,12053,1,1,1,540), -- Common Item - Manticore Skin Boots
-(20579,12062,1,1,1,1618), -- Common Item - Brigandine Boots
-(20579,12066,1,1,1,1980), -- Common Item - Elven Mithril Boots
-(20579,12055,1,1,1,1618), -- Common Item - Manticore Skin Gloves
-(20579,12061,1,1,1,3058), -- Common Item - Brigandine Gauntlets
-(20579,12065,1,1,1,180), -- Common Item - Elven Mithril Gloves
+(20579,2424,1,1,1,58), -- Manticore Skin Boots
+(20579,2425,1,1,1,58), -- Brigandine Boots
+(20579,2426,1,1,1,58), -- Elven Mithril Boots
+(20579,2448,1,1,1,58), -- Manticore Skin Gloves
+(20579,2449,1,1,1,58), -- Brigandine Gauntlets
+(20579,2450,1,1,1,58), -- Elven Mithril Gloves
 (20579,2923,1,1,1,2913), -- Manticore Skin Boot Lining
 (20579,2924,1,1,1,2913), -- Brigandine Boots Design
 (20579,2925,1,1,1,2913), -- Elven Mithril Boots Design
@@ -5451,8 +5452,8 @@ INSERT INTO `droplist` VALUES
 (20580,1881,1,1,-1,170627), -- Coarse Bone Powder
 (20580,2031,1,1,-1,12954), -- Morning Star Head
 (20580,57,649,1245,0,700000), -- Adena
-(20580,12054,1,1,1,3215), -- Common Item - Manticore Skin Shirt
-(20580,12052,1,1,1,7246), -- Common Item - Manticore Skin Gaiters
+(20580,395,1,1,1,148), -- Manticore Skin Shirt
+(20580,417,1,1,1,237), -- Manticore Skin Gaiters
 (20580,1942,1,1,1,8435), -- Manticore Skin Shirt Texture
 (20580,1943,1,1,1,13135), -- Manticore Skin Gaiters Pattern
 (20580,1868,1,1,2,250000), -- Thread
@@ -5465,7 +5466,7 @@ INSERT INTO `droplist` VALUES
 (20581,2036,1,1,-1,7337), -- Skull Breaker Head
 (20581,2202,1,1,-1,74108), -- Recipe: Assault Boots
 (20581,57,368,733,0,700000), -- Adena
-(20581,11683,1,1,1,322), -- Common Item - Strengthened Long Bow
+(20581,279,1,1,1,27), -- Strengthened Long Bow
 (20581,2040,1,1,1,2168), -- Strengthened Long Bow Shaft
 (20581,1341,10,30,2,166667), -- Bone Arrow
 (20581,1875,1,1,2,2890), -- Stone of Purity
@@ -5480,10 +5481,10 @@ INSERT INTO `droplist` VALUES
 (20582,1894,1,1,-1,50607), -- Crafted Leather
 (20582,1942,1,1,-1,73568), -- Manticore Skin Shirt Texture
 (20582,57,728,1449,0,700000), -- Adena
-(20582,12069,1,1,1,8333), -- Common Item - Kite Shield
+(20582,629,1,1,1,317), -- Kite Shield
 (20582,1947,1,1,1,17893), -- Kite Shield Fragment
-(20582,12064,1,1,1,4149), -- Common Item - Brigandine Helmet
-(20582,12063,1,1,1,9709), -- Common Item - Brigandine Shield
+(20582,2411,1,1,1,222), -- Brigandine Helmet
+(20582,2493,1,1,1,317), -- Brigandine Shield
 (20582,2922,1,1,1,4786), -- Brigandine Helmet Design
 (20582,2929,1,1,1,17893), -- Brigandine Shield Fragment
 (20582,1341,20,60,2,200000), -- Bone Arrow
@@ -5497,7 +5498,7 @@ INSERT INTO `droplist` VALUES
 (20583,1944,1,1,-1,38777), -- Mithril Tunic Fabric
 (20583,2157,1,1,-1,62829), -- Recipe: Omen Beast\'s Eye Earring
 (20583,57,384,763,0,700000), -- Adena
-(20583,11691,1,1,1,902), -- Common Item - Bich\'Hwa
+(20583,261,1,1,1,29), -- Bich\'Hwa
 (20583,2039,1,1,1,1989), -- Bich\'Hwa Edge
 (20583,1865,1,1,2,52632), -- Varnish
 (20583,1870,1,1,2,90909), -- Coal
@@ -5508,7 +5509,7 @@ INSERT INTO `droplist` VALUES
 (20584,2211,1,1,-1,23082), -- Recipe: Plated Leather Armor
 (20584,2988,1,2,-1,43437), -- Recipe: Tempered Mithril Gaiters
 (20584,57,508,1017,0,700000), -- Adena
-(20584,11728,1,1,1,1082), -- Common Item - Light Crossbow
+(20584,280,1,1,1,29), -- Light Crossbow
 (20584,2054,1,1,1,2201), -- Light Crossbow Shaft
 (20584,1866,1,1,2,62500), -- Suede
 (20584,1871,1,1,2,90909), -- Charcoal
@@ -5519,11 +5520,11 @@ INSERT INTO `droplist` VALUES
 (20585,2204,1,1,-1,20103), -- Recipe: Chain Mail Shirt
 (20585,2308,1,1,-1,4433), -- Recipe: Cursed Dagger
 (20585,57,498,1006,0,700000), -- Adena
-(20585,11727,1,1,1,188), -- Common Item - Bonebreaker
-(20585,11732,1,1,1,376), -- Common Item - Atuba Hammer
-(20585,11737,1,1,1,564), -- Common Item - Ghost Staff
-(20585,11729,1,1,1,376), -- Common Item - Staff of Life
-(20585,11731,1,1,1,188), -- Common Item - Atuba Mace
+(20585,159,1,1,1,6), -- Bonebreaker
+(20585,187,1,1,1,6), -- Atuba Hammer
+(20585,188,1,1,1,6), -- Ghost Staff
+(20585,189,1,1,1,6), -- Staff of Life
+(20585,190,1,1,1,6), -- Atuba Mace
 (20585,2048,1,1,1,422), -- Bonebreaker Head
 (20585,2049,1,1,1,422), -- Atuba Hammer Head
 (20585,2050,1,1,1,447), -- Ghost Staff Head
@@ -5540,9 +5541,9 @@ INSERT INTO `droplist` VALUES
 (20586,2314,1,1,-1,4251), -- Recipe: Body Slasher
 (20586,3954,1,1,-1,3245), -- Recipe: Blessed Spiritshot C
 (20586,57,471,956,0,700000), -- Adena
-(20586,11736,1,1,1,248), -- Common Item - Claymore
+(20586,70,1,1,1,14), -- Claymore
 (20586,2047,1,1,1,1075), -- Claymore Blade
-(20586,11733,1,1,1,248), -- Common Item - Elven Long Sword
+(20586,2499,1,1,1,14), -- Elven Long Sword
 (20586,2967,1,1,1,1060), -- Elven Long Sword Blade
 (20586,1895,1,1,2,20833), -- Metallic Fiber
 (20586,2164,1,1,2,7692), -- Recipe: Ring of Protection
@@ -5554,14 +5555,14 @@ INSERT INTO `droplist` VALUES
 (20587,1953,1,1,-1,29397), -- Sage\'s Rag Lining
 (20587,2062,1,1,-1,7198), -- Scythe Edge
 (20587,57,442,905,0,700000), -- Adena
-(20587,11765,1,1,1,94), -- Common Item - Big Hammer
-(20587,11750,1,1,1,94), -- Common Item - Battle Axe
-(20587,11761,1,1,1,94), -- Common Item - Silver Axe
-(20587,11755,1,1,1,94), -- Common Item - Skull Graver
-(20587,11768,1,1,1,94), -- Common Item - Heavy Doom Hammer
-(20587,11764,1,1,1,94), -- Common Item - Crystal Staff
-(20587,11757,1,1,1,94), -- Common Item - Stick of Faith
-(20587,11767,1,1,1,94), -- Common Item - Heavy Doom Axe
+(20587,89,1,1,1,3), -- Big Hammer
+(20587,160,1,1,1,3), -- Battle Axe
+(20587,161,1,1,1,3), -- Silver Axe
+(20587,173,1,1,1,3), -- Skull Graver
+(20587,191,1,1,1,3), -- Heavy Doom Hammer
+(20587,192,1,1,1,3), -- Crystal Staff
+(20587,193,1,1,1,3), -- Stick of Faith
+(20587,194,1,1,1,3), -- Heavy Doom Axe
 (20587,2061,1,1,1,210), -- Big Hammer Head
 (20587,2063,1,1,1,210), -- Battle Axe Head
 (20587,2064,1,1,1,210), -- Silver Axe Head
@@ -5584,8 +5585,8 @@ INSERT INTO `droplist` VALUES
 (20588,1959,1,1,-1,48799), -- Chain Mail Shirt Material
 (20588,2324,1,1,-1,6312), -- Recipe: Elven Bow of Nobility
 (20588,57,587,1184,0,700000), -- Adena
-(20588,11766,1,1,1,479), -- Common Item - Flamberge
-(20588,11756,1,1,1,479), -- Common Item - Stormbringer
+(20588,71,1,1,1,13), -- Flamberge
+(20588,72,1,1,1,13), -- Stormbringer
 (20588,2059,1,1,1,1060), -- Flamberge Blade
 (20588,2060,1,1,1,1134), -- Stormbringer Blade
 (20588,1868,1,1,2,166667), -- Thread
@@ -5599,8 +5600,8 @@ INSERT INTO `droplist` VALUES
 (20589,1961,1,1,-1,57772), -- Mithril Shirt Fabric
 (20589,1962,1,1,-1,57772), -- Karmian Tunic Pattern
 (20589,57,875,1775,0,700000), -- Adena
-(20589,12099,1,1,1,2994), -- Common Item - Karmian Tunic
-(20589,12100,1,1,1,3745), -- Common Item - Karmian Stockings
+(20589,439,1,1,1,113), -- Karmian Tunic
+(20589,471,1,1,1,181), -- Karmian Stockings
 (20589,1954,1,1,1,11341), -- Karmian Stocking Design
 (20589,1962,1,1,1,6827), -- Karmian Tunic Pattern
 (20589,1868,1,1,2,125000), -- Thread
@@ -5616,8 +5617,8 @@ INSERT INTO `droplist` VALUES
 (20590,2163,1,1,-1,95320), -- Recipe: Earring of Protection
 (20590,2935,1,1,-1,99323), -- Tempered Mithril Gaiters Fragment
 (20590,57,901,1840,0,700000), -- Adena
-(20590,12110,1,1,1,2632), -- Common Item - Dwarven Chain Mail Shirt
-(20590,12109,1,1,1,5263), -- Common Item - Dwarven Chain Gaiters
+(20590,354,1,1,1,88), -- Chain Mail Shirt
+(20590,381,1,1,1,140), -- Chain Gaiters
 (20590,1959,1,1,1,5947), -- Chain Mail Shirt Material
 (20590,1960,1,1,1,12097), -- Chain Gaiters Part
 (20590,1867,1,1,2,111111), -- Animal Skin
@@ -5632,7 +5633,7 @@ INSERT INTO `droplist` VALUES
 (20591,1911,1,1,-1,162953), -- Earring of Protection Gemstone
 (20591,2947,1,1,-1,156493), -- Dwarven Chain Shield Fragment
 (20591,57,1058,2157,0,700000), -- Adena
-(20591,11782,1,1,1,839), -- Common Item - Bec de Corbin
+(20591,94,1,1,1,34), -- Bec de Corbin
 (20591,2079,1,1,1,3336), -- Bec De Corbin Blade
 (20591,1867,1,1,2,125000), -- Animal Skin
 (20591,1872,1,1,2,111111), -- Animal Bone
@@ -5647,9 +5648,9 @@ INSERT INTO `droplist` VALUES
 (20592,2166,1,2,-1,102106), -- Recipe: Earrings of Binding (100%)
 (20592,2951,1,1,-1,253333), -- Rind Leather Gloves Design
 (20592,57,1458,2964,0,700000), -- Adena
-(20592,11793,1,1,1,581), -- Common Item - Cursed Staff
+(20592,195,1,1,1,24), -- Cursed Staff
 (20592,2082,1,1,1,2352), -- Cursed Staff Head
-(20592,11777,1,1,1,436), -- Common Item - Dwarven War Hammer
+(20592,2502,1,1,1,24), -- Dwarven War Hammer
 (20592,2968,1,1,1,2252), -- Dwarven Warhammer Head
 (20592,1866,1,1,2,71429), -- Suede
 (20592,1871,1,1,2,111111), -- Charcoal
@@ -5665,10 +5666,10 @@ INSERT INTO `droplist` VALUES
 (20593,2083,1,1,-1,21493), -- Stiletto Edge
 (20593,2341,1,1,-1,7523), -- Recipe: Sage\'s Staff
 (20593,57,1563,3187,0,700000), -- Adena
-(20593,12105,1,1,1,2028), -- Common Item - Plated Leather
-(20593,12113,1,1,1,1013), -- Common Item - Rind Leather Armor
-(20593,12103,1,1,1,2786), -- Common Item - Plated Leather Gaiters
-(20593,12111,1,1,1,5076), -- Common Item - Rind Leather Gaiters
+(20593,398,1,1,1,81), -- Plated Leather
+(20593,399,1,1,1,75), -- Rind Leather Armor
+(20593,418,1,1,1,129), -- Plated Leather Gaiters
+(20593,419,1,1,1,119), -- Rind Leather Gaiters
 (20593,1966,1,1,1,6541), -- Plated Leather Fragment
 (20593,1967,1,1,1,9770), -- Plated Leather Gaiters Material
 (20593,1975,1,1,1,5884), -- Rind Leather Armor Design
@@ -5687,8 +5688,8 @@ INSERT INTO `droplist` VALUES
 (20594,1895,1,2,-1,632176), -- Metallic Fiber
 (20594,1978,1,1,-1,141834), -- Tower Shield Fragment
 (20594,57,1073,2178,0,700000), -- Adena
-(20594,11800,1,1,1,626), -- Common Item - Grace Dagger
-(20594,11803,1,1,1,1252), -- Common Item - Dark Screamer
+(20594,231,1,1,1,11), -- Grace Dagger
+(20594,233,1,1,1,11), -- Dark Screamer
 (20594,2106,1,1,1,1247), -- Grace Dagger Edge
 (20594,2107,1,1,1,1247), -- Dark Screamer Edge
 (20594,6669,1,1,2,19231), -- Deluxe Chest Key - Grade 5
@@ -5705,8 +5706,8 @@ INSERT INTO `droplist` VALUES
 (20595,2096,1,1,-1,12564), -- Sword of Whispering Death Blade
 (20595,2354,1,1,-1,3761), -- Recipe: Deadman\'s Staff
 (20595,57,1117,2270,0,700000), -- Adena
-(20595,11800,1,1,1,86), -- Common Item - Grace Dagger
-(20595,11803,1,1,1,86), -- Common Item - Dark Screamer
+(20595,231,1,1,1,12), -- Grace Dagger
+(20595,233,1,1,1,12), -- Dark Screamer
 (20595,2106,1,1,1,1299), -- Grace Dagger Edge
 (20595,2107,1,1,1,1299), -- Dark Screamer Edge
 (20595,1865,1,1,2,111111), -- Varnish
@@ -5723,14 +5724,14 @@ INSERT INTO `droplist` VALUES
 (20596,1875,1,2,-1,163079), -- Stone of Purity
 (20596,4609,1,1,-1,5436), -- Greater Dye of Mental Strength <Men+3 Int-3>
 (20596,57,1189,2403,0,700000), -- Adena
-(20596,11816,1,1,1,76), -- Common Item - War Axe
-(20596,11802,1,1,1,152), -- Common Item - Nirvana Axe
-(20596,11799,1,1,1,227), -- Common Item - Stick of Eternity
-(20596,11825,1,1,1,76), -- Common Item - Paradia Staff
-(20596,11824,1,1,1,76), -- Common Item - Pa\'agrian Hammer
-(20596,11828,1,1,1,76), -- Common Item - Sage\'s Staff
-(20596,11804,1,1,1,76), -- Common Item - Club of Nature
-(20596,11806,1,1,1,76), -- Common Item - Mace of The Underworld
+(20596,162,1,1,1,3), -- War Axe
+(20596,174,1,1,1,3), -- Nirvana Axe
+(20596,196,1,1,1,3), -- Stick of Eternity
+(20596,197,1,1,1,3), -- Paradia Staff
+(20596,199,1,1,1,3), -- Pa\'agrian Hammer
+(20596,200,1,1,1,3), -- Sage\'s Staff
+(20596,201,1,1,1,3), -- Club of Nature
+(20596,202,1,1,1,3), -- Mace of The Underworld
 (20596,2097,1,1,1,339), -- War Axe Blade
 (20596,2098,1,1,1,339), -- Nirvana Axe Blade
 (20596,2099,1,1,1,357), -- Stick of Eternity Shaft
@@ -5755,8 +5756,8 @@ INSERT INTO `droplist` VALUES
 (20597,2113,1,1,-1,19724), -- Scorpion Blade
 (20597,3034,1,1,-1,8146), -- Recipe: Spiritshot B
 (20597,57,1974,4008,0,700000), -- Adena
-(20597,12138,1,1,1,1344), -- Common Item - Divine Tunic
-(20597,12139,1,1,1,1934), -- Common Item - Divine Stockings
+(20597,442,1,1,1,71), -- Divine Tunic
+(20597,473,1,1,1,113), -- Divine Stockings
 (20597,1988,1,1,1,7225), -- Divine Tunic Fabric
 (20597,1989,1,1,1,11333), -- Divine Stocking Pattern
 (20597,1865,1,1,2,142857), -- Varnish
@@ -5774,8 +5775,8 @@ INSERT INTO `droplist` VALUES
 (20598,2120,1,1,-1,18102), -- Great Pata Blade
 (20598,4180,1,2,-1,418716), -- Recipe: Silver Arrow
 (20598,57,1822,3711,0,700000), -- Adena
-(20598,12138,1,1,1,1869), -- Common Item - Divine Tunic
-(20598,12139,1,1,1,1972), -- Common Item - Divine Stockings
+(20598,442,1,1,1,66), -- Divine Tunic
+(20598,473,1,1,1,104), -- Divine Stockings
 (20598,1988,1,1,1,6685), -- Divine Tunic Fabric
 (20598,1989,1,1,1,10486), -- Divine Stocking Pattern
 (20598,1864,1,3,2,125000), -- Stem
@@ -5792,13 +5793,13 @@ INSERT INTO `droplist` VALUES
 (20599,4146,1,1,-1,25088), -- Recipe: Tunic of Zubei
 (20599,4590,1,1,-1,13046), -- Greater Dye of Strength <Str+2 Dex-2>
 (20599,57,1893,3855,0,700000), -- Adena
-(20599,12132,1,1,1,1869), -- Common Item - Theca Leather Boots
-(20599,12136,1,1,1,2066), -- Common Item - Drake Leather Boots
-(20599,12142,1,1,1,1081), -- Common Item - Full Plate Boots
-(20599,12131,1,1,1,2558), -- Common Item - Theca Leather Gloves
-(20599,12134,1,1,1,786), -- Common Item - Drake Leather Gloves
-(20599,12141,1,1,1,983), -- Common Item - Full Plate Gauntlets
-(20599,12137,1,1,1,1179), -- Common Item - Divine Gloves
+(20599,2436,1,1,1,76), -- Theca Leather Boots
+(20599,2437,1,1,1,58), -- Drake Leather Boots
+(20599,2438,1,1,1,58), -- Full Plate Boots
+(20599,2460,1,1,1,76), -- Theca Leather Gloves
+(20599,2461,1,1,1,58), -- Drake Leather Gloves
+(20599,2462,1,1,1,58), -- Full Plate Gauntlets
+(20599,2463,1,1,1,58), -- Divine Gloves
 (20599,2954,1,1,1,6534), -- Theca Leather Boots Texture
 (20599,2955,1,1,1,6534), -- Theca Leather Gloves Texture
 (20599,2960,1,1,1,5622), -- Drake Leather Boots Design
@@ -5821,10 +5822,10 @@ INSERT INTO `droplist` VALUES
 (20600,1873,1,1,-1,358285), -- Silver Nugget
 (20600,1945,1,1,-1,71145), -- Mithril Stocking Design
 (20600,57,451,900,0,700000), -- Adena
-(20600,12069,1,1,1,6061), -- Common Item - Kite Shield
+(20600,629,1,1,1,197), -- Kite Shield
 (20600,1947,1,1,1,11112), -- Kite Shield Fragment
-(20600,12064,1,1,1,3610), -- Common Item - Brigandine Helmet
-(20600,12063,1,1,1,5464), -- Common Item - Brigandine Shield
+(20600,2411,1,1,1,138), -- Brigandine Helmet
+(20600,2493,1,1,1,197), -- Brigandine Shield
 (20600,2922,1,1,1,4202), -- Brigandine Helmet Design
 (20600,2929,1,1,1,11112), -- Brigandine Shield Fragment
 (20600,1868,1,1,2,200000), -- Thread
@@ -5837,8 +5838,8 @@ INSERT INTO `droplist` VALUES
 (20601,1905,1,2,-1,77656), -- Omen Beast\'s Eye Earring Gemstone
 (20601,2304,1,1,-1,3486), -- Recipe: Heavy Doom Hammer
 (20601,57,394,788,0,700000), -- Adena
-(20601,12081,1,1,1,1200), -- Common Item - Half Plate Armor
-(20601,12080,1,1,1,2075), -- Common Item - Plate Gaiters
+(20601,353,1,1,1,52), -- Half Plate Armor
+(20601,380,1,1,1,83), -- Plate Gaiters
 (20601,1950,1,1,1,3253), -- Half Plate Temper
 (20601,1951,1,1,1,5059), -- Plate Gaiters Part
 (20601,1864,1,1,2,166667), -- Stem
@@ -5851,7 +5852,7 @@ INSERT INTO `droplist` VALUES
 (20602,1889,1,1,-1,71904), -- Compound Braid
 (20602,2999,1,1,-1,72387), -- Recipe: Plated Leather Gloves
 (20602,57,529,1069,0,700000), -- Adena
-(20602,11728,1,1,1,417), -- Common Item - Light Crossbow
+(20602,280,1,1,1,31), -- Light Crossbow
 (20602,2054,1,1,1,2305), -- Light Crossbow Shaft
 (20602,1868,1,1,2,166667), -- Thread
 (20602,1873,1,1,2,38462), -- Silver Nugget
@@ -5865,15 +5866,15 @@ INSERT INTO `droplist` VALUES
 (20603,1952,1,1,-1,28372), -- Salamander Skin Mail Texture
 (20603,2311,1,1,-1,3868), -- Recipe: Chakram
 (20603,57,429,871,0,700000), -- Adena
-(20603,12072,1,1,1,3333), -- Common Item - Mithril Gloves
-(20603,12076,1,1,1,2083), -- Common Item - Ogre Power Gauntlets
-(20603,12071,1,1,1,2710), -- Common Item - Assault Boots
+(20603,61,1,1,1,76), -- Mithril Gloves
+(20603,607,1,1,1,76), -- Ogre Power Gauntlets
+(20603,1125,1,1,1,76), -- Assault Boots
 (20603,1949,1,1,1,4137), -- Mithril Gloves Design
 (20603,1957,1,1,1,4137), -- Assault Boots Part
 (20603,1963,1,1,1,4137), -- Ogre Power Gauntlets Part
-(20603,12075,1,1,1,3546), -- Common Item - Salamander Skin Boots
-(20603,12077,1,1,1,4386), -- Common Item - Plate Boots
-(20603,12082,1,1,1,2294), -- Common Item - Sage\'s Worn Gloves
+(20603,2427,1,1,1,76), -- Salamander Skin Boots
+(20603,2428,1,1,1,76), -- Plate Boots
+(20603,2451,1,1,1,76), -- Sage\'s Worn Gloves
 (20603,2931,1,1,1,4137), -- Salamander Skin Boot Lining
 (20603,2932,1,1,1,4137), -- Plate Boots Design
 (20603,2933,1,1,1,4137), -- Sage\'s Worn Gloves Lining
@@ -5888,9 +5889,9 @@ INSERT INTO `droplist` VALUES
 (20604,2323,1,1,-1,3768), -- Recipe: Elemental Bow
 (20604,4553,1,1,-1,4325), -- Greater Dye of Strength <Str+1 Con-1>
 (20604,57,522,1068,0,700000), -- Adena
-(20604,12326,1,1,1,3155), -- Common Item - Moonstone Earring
-(20604,12328,1,1,1,5263), -- Common Item - Aquastone Ring
-(20604,12327,1,1,1,2625), -- Common Item - Aquastone Necklace
+(20604,852,1,1,1,110), -- Moonstone Earring
+(20604,883,1,1,1,166), -- Aquastone Ring
+(20604,915,1,1,1,83), -- Aquastone Necklace
 (20604,1908,1,1,1,8066), -- Moonstone Earring Wire
 (20604,1909,1,1,1,11502), -- Aquastone Ring Wire
 (20604,1910,1,1,1,6414), -- Aquastone Necklace Chain
@@ -5905,8 +5906,8 @@ INSERT INTO `droplist` VALUES
 (20605,1908,1,1,-1,92835), -- Moonstone Earring Wire
 (20605,2059,1,1,-1,7282), -- Flamberge Blade
 (20605,57,475,964,0,700000), -- Adena
-(20605,12099,1,1,1,1199), -- Common Item - Karmian Tunic
-(20605,12100,1,1,1,2198), -- Common Item - Karmian Stockings
+(20605,439,1,1,1,62), -- Karmian Tunic
+(20605,471,1,1,1,98), -- Karmian Stockings
 (20605,1954,1,1,1,6159), -- Karmian Stocking Design
 (20605,1962,1,1,1,3707), -- Karmian Tunic Pattern
 (20605,1868,1,1,2,100000), -- Thread
@@ -5922,7 +5923,7 @@ INSERT INTO `droplist` VALUES
 (20606,2152,1,1,-1,115686), -- Recipe: Enchanted Necklace
 (20606,2260,1,1,-1,10203), -- Recipe: Mace of Judgment
 (20606,57,340,656,0,700000), -- Adena
-(20606,11613,1,1,1,180), -- Common Item - Crafted Dagger
+(20606,220,1,1,1,180), -- Crafted Dagger
 (20606,1864,1,1,2,200000), -- Stem
 (20606,1869,1,1,2,90909), -- Iron Ore
 (20606,1880,1,1,2,8000), -- Steel
@@ -5932,10 +5933,10 @@ INSERT INTO `droplist` VALUES
 (20607,1899,1,1,-1,107923), -- Necklace of Devotion Chain
 (20607,2020,1,1,-1,12091), -- Temptation of Abyss Piece
 (20607,57,356,696,0,700000), -- Adena
-(20607,11619,1,1,1,1969), -- Common Item - Scroll of Wisdom
-(20607,11612,1,1,1,1969), -- Common Item - Branch of Life
-(20607,11616,1,1,1,1969), -- Common Item - Temptation of Abyss
-(20607,11609,1,1,1,1969), -- Common Item - Proof of Revenge
+(20607,101,1,1,1,38), -- Scroll of Wisdom
+(20607,312,1,1,1,38), -- Branch of Life
+(20607,313,1,1,1,38), -- Temptation of Abyss
+(20607,314,1,1,1,38), -- Proof of Revenge
 (20607,2020,1,1,1,1358), -- Temptation of Abyss Piece
 (20607,1865,1,1,2,125000), -- Varnish
 (20607,1870,1,1,2,111111), -- Coal
@@ -5945,7 +5946,7 @@ INSERT INTO `droplist` VALUES
 (20608,2022,1,1,-1,10840), -- Mace of Judgment Head
 (20608,2153,1,1,-1,108228), -- Recipe: Tiger\'s Eye Earring
 (20608,57,354,700,0,700000), -- Adena
-(20608,11637,1,1,1,118), -- Common Item - Divine Tome (no drop info)
+(20608,315,1,1,1,118), -- Divine Tome
 (20608,1867,1,1,2,76923), -- Animal Skin
 (20608,1872,1,1,2,100000), -- Animal Bone
 (20608,1875,1,1,2,4464), -- Stone of Purity
@@ -5957,7 +5958,7 @@ INSERT INTO `droplist` VALUES
 (20609,1900,1,1,-1,79072), -- Enchanted Necklace Chain
 (20609,2265,1,1,-1,7474), -- Recipe: Spiked Club
 (20609,57,368,731,0,700000), -- Adena
-(20609,11642,1,1,1,2538), -- Common Item - Single-Edged Jamadhr
+(20609,259,1,1,1,123), -- Single-Edged Jamadhr
 (20609,956,1,1,2,2195), -- Scroll: Enchant Armor (Grade D)
 (20609,1866,1,1,2,66667), -- Suede
 (20609,1871,1,1,2,83333), -- Charcoal
@@ -5968,7 +5969,7 @@ INSERT INTO `droplist` VALUES
 (20610,2025,1,1,-1,10091), -- Dwarven Trident Edge
 (20610,2267,1,1,-1,7534), -- Recipe: Gastraphetes
 (20610,57,371,736,0,700000), -- Adena
-(20610,11647,1,1,1,14085), -- Common Item - Pike
+(20610,292,1,1,1,124), -- Pike
 (20610,1341,20,60,2,90909), -- Bone Arrow
 (20610,1864,1,1,2,111111), -- Stem
 (20610,1865,1,1,2,66667), -- Varnish
@@ -5981,14 +5982,14 @@ INSERT INTO `droplist` VALUES
 (20611,1884,1,1,-1,474660), -- Cord
 (20611,2153,1,1,-1,119957), -- Recipe: Tiger\'s Eye Earring
 (20611,57,390,782,0,700000), -- Adena
-(20611,11645,1,1,1,652), -- Common Item - Tomahawk
-(20611,11627,1,1,1,652), -- Common Item - Mace of Prayer
-(20611,11638,1,1,1,652), -- Common Item - Mace of Judgment
-(20611,11641,1,1,1,652), -- Common Item - Mace of Miracle
-(20611,11634,1,1,1,652), -- Common Item - Mystic Staff
-(20611,11644,1,1,1,652), -- Common Item - Conjuror\'s Staff
-(20611,11633,1,1,1,652), -- Common Item - Staff of Mana
-(20611,11630,1,1,1,652), -- Common Item - Doom Hammer
+(20611,86,1,1,1,14), -- Tomahawk
+(20611,179,1,1,1,14), -- Mace of Prayer
+(20611,180,1,1,1,14), -- Mace of Judgment
+(20611,181,1,1,1,14), -- Mace of Miracle
+(20611,182,1,1,1,14), -- Doom Hammer
+(20611,183,1,1,1,14), -- Mystic Staff
+(20611,184,1,1,1,14), -- Conjuror\'s Staff
+(20611,185,1,1,1,14), -- Staff of Mana
 (20611,2022,1,1,1,657), -- Mace of Judgment Head
 (20611,2023,1,1,1,523), -- Conjuror\'s Staff Head
 (20611,1829,1,1,2,38462), -- Scroll of Escape: Clan Hall
@@ -6002,8 +6003,8 @@ INSERT INTO `droplist` VALUES
 (20612,1869,2,3,-1,879358), -- Iron Ore
 (20612,1885,1,1,-1,73280), -- High Grade Suede
 (20612,57,447,892,0,700000), -- Adena
-(20612,12047,1,1,1,9901), -- Common Item - Tunic of Knowledge
-(20612,12048,1,1,1,25641), -- Common Item - Stockings of Knowledge
+(20612,436,1,1,1,308), -- Tunic of Knowledge
+(20612,469,1,1,1,492), -- Stockings of Knowledge
 (20612,1832,1,1,2,76923), -- Greater Antidote
 (20612,1866,1,1,2,45455), -- Suede
 (20612,1871,1,1,2,90909), -- Charcoal
@@ -6015,8 +6016,8 @@ INSERT INTO `droplist` VALUES
 (20613,1899,1,1,-1,102672), -- Necklace of Devotion Chain
 (20613,1934,1,1,-1,85895), -- Crafted Leather Gloves Lining
 (20613,57,241,656,0,700000), -- Adena
-(20613,12010,1,1,1,5236), -- Common Item - Cursed Tunic
-(20613,12011,1,1,1,37037), -- Common Item - Cursed Stockings
+(20613,432,1,1,1,589), -- Cursed Tunic
+(20613,465,1,1,1,944), -- Cursed Stockings
 (20613,1831,1,3,2,58824), -- Antidote
 (20613,1864,1,1,2,142857), -- Stem
 (20613,1865,1,1,2,58824), -- Varnish
@@ -6028,7 +6029,7 @@ INSERT INTO `droplist` VALUES
 (20614,1899,1,1,-1,100858), -- Necklace of Devotion Chain
 (20614,2152,1,1,-1,113643), -- Recipe: Enchanted Necklace
 (20614,57,340,6492,0,700000), -- Adena
-(20614,11613,1,1,1,2994), -- Common Item - Crafted Dagger
+(20614,220,1,1,1,177), -- Crafted Dagger
 (20614,1834,1,1,2,111111), -- Emergency Dressing
 (20614,1865,1,1,2,100000), -- Varnish
 (20614,1870,1,1,2,100000), -- Coal
@@ -6038,8 +6039,8 @@ INSERT INTO `droplist` VALUES
 (20615,1900,1,2,-1,81472), -- Enchanted Necklace Chain
 (20615,2185,1,1,-1,146585), -- Recipe: Iron Boots
 (20615,57,379,750,0,700000), -- Adena
-(20615,12028,1,1,1,38462), -- Common Item - Bronze Helmet
-(20615,12025,1,1,1,28571), -- Common Item - Aspis
+(20615,46,1,1,1,814), -- Bronze Helmet
+(20615,627,1,1,1,1163), -- Aspis
 (20615,1834,1,1,2,83333), -- Emergency Dressing
 (20615,1875,1,1,2,4202), -- Stone of Purity
 (20615,1879,1,1,2,7194), -- Cokes
@@ -6051,12 +6052,12 @@ INSERT INTO `droplist` VALUES
 (20616,1937,1,1,-1,66239), -- Scale Gaiters Fragment
 (20616,2153,1,1,-1,119911), -- Recipe: Tiger\'s Eye Earring
 (20616,57,390,781,0,700000), -- Adena
-(20616,12026,1,1,1,1193), -- Common Item - Elven Tunic
-(20616,12022,1,1,1,1988), -- Common Item - White Tunic
-(20616,12018,1,1,1,1988), -- Common Item - Mystic\'s Tunic
-(20616,12027,1,1,1,2387), -- Common Item - Elven Stockings
-(20616,12017,1,1,1,1988), -- Common Item - Dark Stockings
-(20616,12019,1,1,1,18182), -- Common Item - Mystic\'s Stockings
+(20616,433,1,1,1,106), -- Elven Tunic
+(20616,434,1,1,1,106), -- White Tunic
+(20616,435,1,1,1,106), -- Mystic\'s Tunic
+(20616,466,1,1,1,169), -- Elven Stockings
+(20616,467,1,1,1,169), -- Dark Stockings
+(20616,468,1,1,1,169), -- Mystic\'s Stockings
 (20616,1933,1,1,1,6197), -- Dark Stocking Fabric
 (20616,1936,1,1,1,4310), -- White Tunic Pattern
 (20616,737,1,1,2,1590), -- Scroll of Resurrection
@@ -6071,8 +6072,8 @@ INSERT INTO `droplist` VALUES
 (20617,1875,1,1,-1,49053), -- Stone of Purity
 (20617,1933,1,1,-1,86564), -- Dark Stocking Fabric
 (20617,57,374,743,0,700000), -- Adena
-(20617,12021,1,1,1,9709), -- Common Item - Lion Skin Shirt
-(20617,12020,1,1,1,22727), -- Common Item - Lion Skin Gaiters
+(20617,392,1,1,1,403), -- Lion Skin Shirt
+(20617,414,1,1,1,644), -- Lion Skin Gaiters
 (20617,1867,1,1,2,142857), -- Animal Skin
 (20617,1872,1,1,2,125000), -- Animal Bone
 (20617,1875,1,1,2,3226), -- Stone of Purity
@@ -6082,7 +6083,7 @@ INSERT INTO `droplist` VALUES
 (20618,1885,1,1,-1,67733), -- High Grade Suede
 (20618,1935,1,1,-1,45407), -- Scale Mail Fragment
 (20618,57,412,823,0,700000), -- Adena
-(20618,11637,1,1,1,3922), -- Common Item - Divine Tome
+(20618,315,1,1,1,138), -- Divine Tome
 (20618,1875,1,1,2,7813), -- Stone of Purity
 (20618,1879,1,1,2,19608), -- Cokes
 (20618,1885,1,1,2,4902), -- High Grade Suede
@@ -6093,8 +6094,8 @@ INSERT INTO `droplist` VALUES
 (20619,2270,1,1,-1,5961), -- Recipe: Goat Head Staff
 (20619,2981,1,2,-1,111713), -- Recipe: Elven Mithril Gloves
 (20619,57,324,841,0,700000), -- Adena
-(20619,11666,1,1,1,31), -- Common Item - Spiked Club (no drop info)
-(20619,11663,1,1,1,31), -- Common Item - Staff of Magic
+(20619,157,1,1,1,31), -- Spiked Club
+(20619,186,1,1,1,31), -- Staff of Magic
 (20619,2027,1,1,1,1938), -- Spiked Club Head
 (20619,1867,1,1,2,125000), -- Animal Skin
 (20619,1872,1,1,2,142857), -- Animal Bone
@@ -6106,9 +6107,9 @@ INSERT INTO `droplist` VALUES
 (20620,4039,1,2,-1,143581), -- Mold Glue
 (20620,4051,1,1,-1,167052), -- Adamantite Necklace Chain
 (20620,57,2090,4237,0,700000), -- Adena
-(20620,11889,1,1,1,59), -- Common Item - Great Sword
-(20620,11916,1,1,1,59), -- Common Item - Keshanberk
-(20620,11900,1,1,1,59), -- Common Item - Sword of Valhalla
+(20620,78,1,1,1,5), -- Great Sword
+(20620,142,1,1,1,5), -- Keshanberk
+(20620,148,1,1,1,5), -- Sword of Valhalla
 (20620,4104,1,1,1,1214), -- Great Sword Blade
 (20620,4107,1,1,1,1195), -- Keshanberk Blade
 (20620,4108,1,1,1,1195), -- Sword of Valhalla Blade
@@ -6126,8 +6127,8 @@ INSERT INTO `droplist` VALUES
 (20621,4199,1,1,-1,3553), -- Recipe: Bow of Peril
 (20621,5230,1,1,-1,6206), -- Recipe: Mithril Arrow (100%)
 (20621,57,2260,4576,0,700000), -- Adena
-(20621,12194,1,1,1,428), -- Common Item - Blue Wolf Leather Armor
-(20621,12186,1,1,1,1436), -- Common Item - Leather Armor of Doom
+(20621,2391,1,1,1,20), -- Blue Wolf Leather Armor
+(20621,2392,1,1,1,20), -- Leather Armor of Doom
 (20621,4082,1,1,1,3884), -- Blue Wolf Leather Armor Texture
 (20621,4083,1,1,1,3884), -- Leather Armor of Doom Design
 (20621,1868,1,1,2,250000), -- Thread
@@ -6144,9 +6145,9 @@ INSERT INTO `droplist` VALUES
 (20622,4044,1,2,-1,166084), -- Thons
 (20622,4053,1,2,-1,213567), -- Ring of Black Ore Gemstone
 (20622,57,2419,4898,0,700000), -- Adena
-(20622,12341,1,1,1,908), -- Common Item - Earring of Black Ore
-(20622,12343,1,1,1,2227), -- Common Item - Ring of Black Ore
-(20622,12342,1,1,1,1198), -- Common Item - Necklace of Black Ore
+(20622,864,1,1,1,54), -- Earring of Black Ore
+(20622,895,1,1,1,80), -- Ring of Black Ore
+(20622,926,1,1,1,40), -- Necklace of Black Ore
 (20622,4052,1,1,1,8684), -- Earring of Black Ore Piece
 (20622,4053,1,1,1,10513), -- Ring of Black Ore Gemstone
 (20622,4054,1,1,1,4831), -- Necklace of Black Ore Beads
@@ -6165,9 +6166,9 @@ INSERT INTO `droplist` VALUES
 (20623,4040,1,1,-1,133204), -- Mold Lubricant
 (20623,5230,1,1,-1,8880), -- Recipe: Mithril Arrow (100%)
 (20623,57,3236,6544,0,700000), -- Adena
-(20623,12183,1,1,1,2817), -- Common Item - Doom Shield
-(20623,12202,1,1,1,1451), -- Common Item - Blue Wolf Helmet
-(20623,12185,1,1,1,2049), -- Common Item - Doom Helmet
+(20623,110,1,1,1,78), -- Doom Shield
+(20623,2416,1,1,1,55), -- Blue Wolf Helmet
+(20623,2417,1,1,1,55), -- Doom Helmet
 (20623,4077,1,1,1,14749), -- Doom Shield Fragment
 (20623,4088,1,1,1,12392), -- Blue Wolf Helmet Design
 (20623,4089,1,1,1,12392), -- Doom Helmet Pattern
@@ -6185,9 +6186,9 @@ INSERT INTO `droplist` VALUES
 (20624,4052,1,1,-1,240524), -- Earring of Black Ore Piece
 (20624,4054,1,1,-1,133811), -- Necklace of Black Ore Beads
 (20624,57,3295,6681,0,700000), -- Adena
-(20624,11930,1,1,1,68), -- Common Item - Sword of Damascus
-(20624,11943,1,1,1,68), -- Common Item - Wizard\'s Tear
-(20624,11929,1,1,1,68), -- Common Item - Guardian Sword
+(20624,79,1,1,1,16), -- Sword of Damascus
+(20624,7889,1,1,1,16), -- Wizard\'s Tear
+(20624,7883,1,1,1,16), -- Guardian Sword
 (20624,4114,1,1,1,4392), -- Sword of Damascus Blade
 (20624,8336,1,1,1,1470), -- Blade of the Wizard\'s Tear
 (20624,8330,1,1,1,1430), -- Guardian Sword Blade
@@ -6208,7 +6209,7 @@ INSERT INTO `droplist` VALUES
 (20625,4044,1,1,-1,226724), -- Thons
 (20625,5230,1,1,-1,9069), -- Recipe: Mithril Arrow (100%)
 (20625,57,3298,6689,0,700000), -- Adena
-(20625,11933,1,1,1,710), -- Common Item - Bellion Cestus
+(20625,268,1,1,1,16), -- Bellion Cestus
 (20625,4120,1,1,1,4390), -- Bellion Cestus Edge
 (20625,8336,1,1,1,52), -- Blade of the Wizard\'s Tear
 (20625,8330,1,1,1,104), -- Guardian Sword Blade
@@ -6228,9 +6229,9 @@ INSERT INTO `droplist` VALUES
 (20626,4053,1,1,-1,360342), -- Ring of Black Ore Gemstone
 (20626,5230,1,1,-1,11209), -- Recipe: Mithril Arrow (100%)
 (20626,57,4056,8290,0,700000), -- Adena
-(20626,12204,1,1,1,567), -- Common Item - Blue Wolf Breastplate
-(20626,12193,1,1,1,1053), -- Common Item - Blue Wolf Gaiters
-(20626,12184,1,1,1,243), -- Common Item - Doom Plate Armor
+(20626,358,1,1,1,26), -- Blue Wolf Breastplate
+(20626,2380,1,1,1,42), -- Blue Wolf Gaiters
+(20626,2381,1,1,1,18), -- Doom Plate Armor
 (20626,4078,1,1,1,6046), -- Blue Wolf Breastplate Part
 (20626,4080,1,1,1,8514), -- Blue Wolf Gaiters Material
 (20626,4081,1,1,1,4080), -- Doom Plate Armor Temper
@@ -6248,10 +6249,10 @@ INSERT INTO `droplist` VALUES
 (20627,1877,1,1,-1,337512), -- Adamantite Nugget
 (20627,5478,1,2,-1,70954), -- Sealed Dark Crystal Leather Armor Pattern
 (20627,57,4085,8305,0,700000), -- Adena
-(20627,12221,1,1,1,1218), -- Common Item - Sealed Dark Crystal Gloves
-(20627,12224,1,1,1,1522), -- Common Item - Sealed Dark Crystal Boots
-(20627,12229,1,1,1,2028), -- Common Item - Sealed Tallum Gloves
-(20627,12231,1,1,1,1319), -- Common Item - Sealed Tallum Boots
+(20627,5290,1,1,1,54), -- Sealed Dark Crystal Gloves
+(20627,5291,1,1,1,54), -- Sealed Dark Crystal Boots
+(20627,5295,1,1,1,54), -- Sealed Tallum Gloves
+(20627,5296,1,1,1,54), -- Sealed Tallum Boots
 (20627,5496,1,1,1,7305), -- Sealed Dark Crystal Boots Lining
 (20627,5497,1,1,1,7305), -- Sealed Tallum Boots Lining
 (20627,5508,1,1,1,7305), -- Sealed Dark Crystal Gloves Design
@@ -6271,9 +6272,9 @@ INSERT INTO `droplist` VALUES
 (20628,1895,1,5,-1,868028), -- Metallic Fiber
 (20628,5479,1,1,-1,53931), -- Sealed Tallum Leather Armor Pattern
 (20628,57,4416,8962,0,700000), -- Adena
-(20628,12232,1,1,1,586), -- Common Item - Sealed Tallum Tunic
-(20628,12235,1,1,1,586), -- Common Item - Sealed Tallum Stockings
-(20628,12223,1,1,1,195), -- Common Item - Sealed Dark Crystal Robe
+(20628,5304,1,1,1,26), -- Sealed Tallum Tunic
+(20628,5305,1,1,1,42), -- Sealed Tallum Stockings
+(20628,5308,1,1,1,18), -- Sealed Dark Crystal Robe
 (20628,5485,1,1,1,3773), -- Sealed Tallum Tunic Texture
 (20628,5486,1,1,1,2655), -- Sealed Dark Crystal Robe Fabric
 (20628,5489,1,1,1,5922), -- Sealed Tallum Stockings Fabric
@@ -6289,9 +6290,9 @@ INSERT INTO `droplist` VALUES
 (20629,4077,1,1,-1,481585), -- Doom Shield Fragment
 (20629,4078,1,1,-1,156378), -- Blue Wolf Breastplate Part
 (20629,57,5183,10540,0,700000), -- Adena
-(20629,12226,1,1,1,439), -- Common Item - Sealed Dark Crystal Helmet
-(20629,12225,1,1,1,2924), -- Common Item - Sealed Dark Crystal Shield
-(20629,12234,1,1,1,1318), -- Common Item - Sealed Tallum Helmet
+(20629,5289,1,1,1,61), -- Sealed Dark Crystal Helmet
+(20629,5292,1,1,1,87), -- Sealed Dark Crystal Shield
+(20629,5294,1,1,1,61), -- Sealed Tallum Helmet
 (20629,5494,1,1,1,11069), -- Sealed Dark Crystal Shield Fragment
 (20629,5525,1,1,1,8147), -- Sealed Dark Crystal Helmet Design
 (20629,5526,1,1,1,8147), -- Sealed Tallum Helm Design
@@ -6309,10 +6310,10 @@ INSERT INTO `droplist` VALUES
 (20630,1943,1,1,-1,60383), -- Manticore Skin Gaiters Pattern
 (20630,2291,1,1,-1,4223), -- Recipe: Scallop Jamadhr
 (20630,57,383,764,0,700000), -- Adena
-(20630,12069,1,1,1,7194), -- Common Item - Kite Shield
+(20630,629,1,1,1,168), -- Kite Shield
 (20630,1947,1,1,1,9431), -- Kite Shield Fragment
-(20630,12064,1,1,1,1267), -- Common Item - Brigandine Helmet
-(20630,12063,1,1,1,5076), -- Common Item - Brigandine Shield
+(20630,2411,1,1,1,117), -- Brigandine Helmet
+(20630,2493,1,1,1,168), -- Brigandine Shield
 (20630,2922,1,1,1,2523), -- Brigandine Helmet Design
 (20630,2929,1,1,1,9431), -- Brigandine Shield Fragment
 (20630,1866,1,1,2,41667), -- Suede
@@ -6326,15 +6327,15 @@ INSERT INTO `droplist` VALUES
 (20631,2996,1,1,-1,81703), -- Recipe: Chain Gloves
 (20631,2998,1,1,-1,77403), -- Recipe: Chain Shield
 (20631,57,508,1017,0,700000), -- Adena
-(20631,12072,1,1,1,1348), -- Common Item - Mithril Gloves
-(20631,12076,1,1,1,1348), -- Common Item - Ogre Power Gauntlets
-(20631,12071,1,1,1,4049), -- Common Item - Assault Boots
+(20631,61,1,1,1,89), -- Mithril Gloves
+(20631,607,1,1,1,89), -- Ogre Power Gauntlets
+(20631,1125,1,1,1,89), -- Assault Boots
 (20631,1949,1,1,1,4808), -- Mithril Gloves Design
 (20631,1957,1,1,1,4808), -- Assault Boots Part
 (20631,1963,1,1,1,4808), -- Ogre Power Gauntlets Part
-(20631,12075,1,1,1,1348), -- Common Item - Salamander Skin Boots
-(20631,12077,1,1,1,4049), -- Common Item - Plate Boots
-(20631,12082,1,1,1,2695), -- Common Item - Sage\'s Worn Gloves
+(20631,2427,1,1,1,89), -- Salamander Skin Boots
+(20631,2428,1,1,1,89), -- Plate Boots
+(20631,2451,1,1,1,89), -- Sage\'s Worn Gloves
 (20631,2931,1,1,1,4808), -- Salamander Skin Boot Lining
 (20631,2932,1,1,1,4808), -- Plate Boots Design
 (20631,2933,1,1,1,4808), -- Sage\'s Worn Gloves Lining
@@ -6350,8 +6351,8 @@ INSERT INTO `droplist` VALUES
 (20632,1880,1,1,-1,102525), -- Steel
 (20632,1951,1,1,-1,51754), -- Plate Gaiters Part
 (20632,57,505,1015,0,700000), -- Adena
-(20632,12081,1,1,1,1815), -- Common Item - Half Plate Armor
-(20632,12080,1,1,1,2717), -- Common Item - Plate Gaiters
+(20632,353,1,1,1,66), -- Half Plate Armor
+(20632,380,1,1,1,106), -- Plate Gaiters
 (20632,1950,1,1,1,4178), -- Half Plate Temper
 (20632,1951,1,1,1,6498), -- Plate Gaiters Part
 (20632,1864,1,1,2,166667), -- Stem
@@ -6366,9 +6367,9 @@ INSERT INTO `droplist` VALUES
 (20633,2313,1,1,-1,4370), -- Recipe: Orcish Glaive
 (20633,4469,1,1,-1,5719), -- Dye of Strength <Str+1 Con-1>
 (20633,57,485,984,0,700000), -- Adena
-(20633,12325,1,1,1,1541), -- Common Item - Omen Beast\'s Eye Earring
-(20633,12323,1,1,1,6173), -- Common Item - Mithril Ring
-(20633,12324,1,1,1,2309), -- Common Item - Necklace of Darkness
+(20633,851,1,1,1,139), -- Omen Beast\'s Eye Earring
+(20633,882,1,1,1,208), -- Mithril Ring
+(20633,914,1,1,1,104), -- Necklace of Darkness
 (20633,1905,1,1,1,8148), -- Omen Beast\'s Eye Earring Gemstone
 (20633,1906,1,1,1,11513), -- Mithril Ring Wire
 (20633,1907,1,1,1,5827), -- Necklace of Darkness Gem
@@ -6383,8 +6384,8 @@ INSERT INTO `droplist` VALUES
 (20634,1908,1,1,-1,181732), -- Moonstone Earring Wire
 (20634,2213,1,1,-1,29800), -- Recipe: Dwarven Chain Mail Shirt
 (20634,57,925,1892,0,700000), -- Adena
-(20634,12095,1,1,1,2717), -- Common Item - Chain Mail Shirt
-(20634,12094,1,1,1,1629), -- Common Item - Chain Gaiters
+(20634,354,1,1,1,90), -- Chain Mail Shirt
+(20634,381,1,1,1,144), -- Chain Gaiters
 (20634,1959,1,1,1,6109), -- Chain Mail Shirt Material
 (20634,1960,1,1,1,12426), -- Chain Gaiters Part
 (20634,1867,1,1,2,100000), -- Animal Skin
@@ -6402,7 +6403,7 @@ INSERT INTO `droplist` VALUES
 (20635,2163,1,1,-1,49522), -- Recipe: Earring of Protection
 (20635,2215,1,1,-1,12365), -- Recipe: Robe of Seal
 (20635,57,470,954,0,700000), -- Adena
-(20635,11763,1,1,1,518), -- Common Item - Chakram
+(20635,263,1,1,1,21), -- Chakram
 (20635,2073,1,1,1,1773), -- Chakram Edge
 (20635,1866,1,1,2,27778), -- Suede
 (20635,1871,1,1,2,43478), -- Charcoal
@@ -6417,14 +6418,14 @@ INSERT INTO `droplist` VALUES
 (20636,2163,1,1,-1,55134), -- Recipe: Earring of Protection
 (20636,2214,1,1,-1,26815), -- Recipe: Dwarven Chain Gaiters
 (20636,57,521,1066,0,700000), -- Adena
-(20636,11765,1,1,1,59), -- Common Item - Big Hammer
-(20636,11750,1,1,1,59), -- Common Item - Battle Axe
-(20636,11761,1,1,1,59), -- Common Item - Silver Axe
-(20636,11755,1,1,1,59), -- Common Item - Skull Graver
-(20636,11768,1,1,1,59), -- Common Item - Heavy Doom Hammer
-(20636,11764,1,1,1,59), -- Common Item - Crystal Staff
-(20636,11757,1,1,1,59), -- Common Item - Stick of Faith
-(20636,11767,1,1,1,59), -- Common Item - Heavy Doom Axe
+(20636,89,1,1,1,3), -- Big Hammer
+(20636,160,1,1,1,3), -- Battle Axe
+(20636,161,1,1,1,3), -- Silver Axe
+(20636,173,1,1,1,3), -- Skull Graver
+(20636,191,1,1,1,3), -- Heavy Doom Hammer
+(20636,192,1,1,1,3), -- Crystal Staff
+(20636,193,1,1,1,3), -- Stick of Faith
+(20636,194,1,1,1,3), -- Heavy Doom Axe
 (20636,2061,1,1,1,247), -- Big Hammer Head
 (20636,2063,1,1,1,247), -- Battle Axe Head
 (20636,2064,1,1,1,247), -- Silver Axe Head
@@ -6447,13 +6448,13 @@ INSERT INTO `droplist` VALUES
 (20637,2337,1,1,-1,2622), -- Recipe: Stick of Eternity
 (20637,2338,1,1,-1,2622), -- Recipe: Paradia Staff
 (20637,57,546,1111,0,700000), -- Adena
-(20637,12118,1,1,1,2123), -- Common Item - Crimson Boots
+(20637,1126,1,1,1,52), -- Crimson Boots
 (20637,1974,1,1,1,3501), -- Crimson Boot Fabric
-(20637,12114,1,1,1,1770), -- Common Item - Rind Leather Boots
-(20637,12101,1,1,1,2299), -- Common Item - Plated Leather Gloves
-(20637,12108,1,1,1,3185), -- Common Item - Dwarven Chain Gloves
-(20637,12116,1,1,1,1770), -- Common Item - Gloves of Seal
-(20637,12112,1,1,1,2123), -- Common Item - Rind Leather Gloves
+(20637,2434,1,1,1,52), -- Rind Leather Boots
+(20637,2455,1,1,1,56), -- Plated Leather Gloves
+(20637,2456,1,1,1,52), -- Dwarven Chain Gloves
+(20637,2457,1,1,1,52), -- Gloves of Seal
+(20637,2458,1,1,1,52), -- Rind Leather Gloves
 (20637,2946,1,1,1,2327), -- Plate Leather Gloves Design
 (20637,2948,1,1,1,3501), -- Rind Leather Boot Lining
 (20637,2949,1,1,1,3501), -- Dwarven Chain Gloves Design
@@ -6474,8 +6475,8 @@ INSERT INTO `droplist` VALUES
 (20638,1911,1,2,-1,87518), -- Earring of Protection Gemstone
 (20638,2946,1,1,-1,65773), -- Plate Leather Gloves Design
 (20638,57,570,1158,0,700000), -- Adena
-(20638,11790,1,1,1,597), -- Common Item - Elemental Bow
-(20638,11775,1,1,1,597), -- Common Item - Noble Elven Bow
+(20638,282,1,1,1,10), -- Elemental Bow
+(20638,285,1,1,1,10), -- Noble Elven Bow
 (20638,2085,1,1,1,902), -- Crossbow Shaft
 (20638,2086,1,1,1,902), -- Elven Bow of Nobility Shaft
 (20638,952,1,1,2,1193), -- Scroll: Enchant Armor (Grade C)
@@ -6494,8 +6495,8 @@ INSERT INTO `droplist` VALUES
 (20639,2334,1,1,-1,5758), -- Recipe: Sword of Whispering Death
 (20639,2342,1,1,-1,5758), -- Recipe: Club of Nature
 (20639,57,1196,2439,0,700000), -- Adena
-(20639,11788,1,1,1,746), -- Common Item - Stiletto
-(20639,11779,1,1,1,746), -- Common Item - Soulfire Dirk
+(20639,227,1,1,1,20), -- Stiletto
+(20639,242,1,1,1,20), -- Soulfire Dirk
 (20639,2083,1,1,1,1823), -- Stiletto Edge
 (20639,2084,1,1,1,1823), -- Soulfire Dirk Blade
 (20639,1868,1,1,2,200000), -- Thread
@@ -6512,7 +6513,7 @@ INSERT INTO `droplist` VALUES
 (20640,1868,1,7,-1,793052), -- Thread
 (20640,1870,1,3,-1,594789), -- Coal
 (20640,57,576,1171,0,700000), -- Adena
-(20640,11814,1,1,1,235), -- Common Item - Akat Long Bow
+(20640,283,1,1,1,12), -- Akat Long Bow
 (20640,2109,1,1,1,1380), -- Akat Longbow Shaft
 (20640,1865,1,1,2,45455), -- Varnish
 (20640,1870,1,1,2,52632), -- Coal
@@ -6529,9 +6530,9 @@ INSERT INTO `droplist` VALUES
 (20641,2355,1,1,-1,2406), -- Recipe: Ghoul\'s Staff
 (20641,4042,1,1,-1,24583), -- Enria
 (20641,57,715,1452,0,700000), -- Adena
-(20641,12332,1,1,1,924), -- Common Item - Earring of Binding
-(20641,12333,1,1,1,3460), -- Common Item - Ring of Ages
-(20641,12334,1,1,1,1385), -- Common Item - Necklace of Mermaid
+(20641,854,1,1,1,69), -- Earring of Binding
+(20641,885,1,1,1,104), -- Ring of Ages
+(20641,917,1,1,1,52), -- Necklace of Mermaid
 (20641,1914,1,1,1,5712), -- Earring of Binding Gemstone
 (20641,1915,1,1,1,8958), -- Ring of Ages Gemstone
 (20641,1916,1,1,1,4327), -- Necklace of Mermaid Teardrop
@@ -6549,7 +6550,7 @@ INSERT INTO `droplist` VALUES
 (20642,2358,1,1,-1,2254), -- Recipe: Great Pata
 (20642,4602,1,1,-1,3070), -- Greater Dye of Strength <Str+3 Dex-3>
 (20642,57,672,1356,0,700000), -- Adena
-(20642,11814,1,1,1,293), -- Common Item - Akat Long Bow
+(20642,283,1,1,1,14), -- Akat Long Bow
 (20642,2109,1,1,1,1602), -- Akat Longbow Shaft
 (20642,1342,10,30,2,200000), -- Fine Steel Arrow
 (20642,1868,1,1,2,100000), -- Thread
@@ -6567,8 +6568,8 @@ INSERT INTO `droplist` VALUES
 (20643,2114,1,1,-1,6891), -- Widowmaker Head
 (20643,3955,1,1,-1,2846), -- Recipe: Blessed Spiritshot B
 (20643,57,689,1399,0,700000), -- Adena
-(20643,12145,1,1,1,851), -- Common Item - Full Plate Helmet
-(20643,12143,1,1,1,1984), -- Common Item - Full Plate Shield
+(20643,2414,1,1,1,50), -- Full Plate Helmet
+(20643,2497,1,1,1,71), -- Full Plate Shield
 (20643,2959,1,1,1,4544), -- Full Plate Helmet Design
 (20643,2966,1,1,1,7187), -- Full Plate Shield Fragment
 (20643,1894,1,1,2,1418), -- Crafted Leather
@@ -6585,8 +6586,8 @@ INSERT INTO `droplist` VALUES
 (20644,1865,1,3,-1,697860), -- Varnish
 (20644,1987,1,1,-1,21294), -- Drake Leather Armor Texture
 (20644,57,675,1374,0,700000), -- Adena
-(20644,12138,1,1,1,239), -- Common Item - Divine Tunic
-(20644,12139,1,1,1,717), -- Common Item - Divine Stockings
+(20644,442,1,1,1,25), -- Divine Tunic
+(20644,473,1,1,1,39), -- Divine Stockings
 (20644,1988,1,1,1,2476), -- Divine Tunic Fabric
 (20644,1989,1,1,1,3884), -- Divine Stocking Pattern
 (20644,1864,1,1,2,100000), -- Stem
@@ -6605,7 +6606,7 @@ INSERT INTO `droplist` VALUES
 (20645,1920,1,1,-1,107515), -- Necklace of Binding Chain
 (20645,2121,1,1,-1,14450), -- Eminence Bow Shaft
 (20645,57,1520,3095,0,700000), -- Adena
-(20645,11857,1,1,1,491), -- Common Item - Eminence Bow
+(20645,286,1,1,1,19), -- Eminence Bow
 (20645,2121,1,1,1,2668), -- Eminence Bow Shaft
 (20645,1865,1,1,2,111111), -- Varnish
 (20645,1870,1,1,2,125000), -- Coal
@@ -6621,9 +6622,9 @@ INSERT INTO `droplist` VALUES
 (20646,3034,1,1,-1,4735), -- Recipe: Spiritshot B
 (20646,4044,1,1,-1,78920), -- Thons
 (20646,57,1146,2333,0,700000), -- Adena
-(20646,11858,1,1,1,614), -- Common Item - Orcish Poleaxe
-(20646,11830,1,1,1,614), -- Common Item - Scorpion
-(20646,11832,1,1,1,614), -- Common Item - Widow Maker
+(20646,299,1,1,1,5), -- Orcish Poleaxe
+(20646,301,1,1,1,7), -- Scorpion
+(20646,303,1,1,1,7), -- Widow Maker
 (20646,2113,1,1,1,706), -- Scorpion Blade
 (20646,2114,1,1,1,706), -- Widowmaker Head
 (20646,2122,1,1,1,665), -- Orcish Poleaxe Blade
@@ -6640,10 +6641,10 @@ INSERT INTO `droplist` VALUES
 (20647,2960,1,1,-1,129649), -- Drake Leather Boots Design
 (20647,4049,1,1,-1,124889), -- Adamantite Earring Gemstone
 (20647,57,1151,2346,0,700000), -- Adena
-(20647,12147,1,1,1,744), -- Common Item - Zubei\'s Boots
-(20647,12149,1,1,1,372), -- Common Item - Avadon Boots
-(20647,12146,1,1,1,1862), -- Common Item - Zubei\'s Gauntlets
-(20647,12148,1,1,1,2232), -- Common Item - Avadon Gloves
+(20647,554,1,1,1,34), -- Zubei\'s Boots
+(20647,600,1,1,1,34), -- Avadon Boots
+(20647,612,1,1,1,34), -- Zubei\'s Gauntlets
+(20647,2464,1,1,1,34), -- Avadon Gloves
 (20647,4073,1,1,1,4575), -- Avadon Gloves Part
 (20647,4097,1,1,1,4575), -- Zubei\'s Boots Design
 (20647,4098,1,1,1,4575), -- Avadon Boots Design
@@ -6662,10 +6663,10 @@ INSERT INTO `droplist` VALUES
 (20648,2963,1,1,-1,139770), -- Full Plate Gauntlets Part
 (20648,4191,1,1,-1,2957), -- Recipe: Great Axe
 (20648,57,1241,2530,0,700000), -- Adena
-(20648,12147,1,1,1,1458), -- Common Item - Zubei\'s Boots
-(20648,12149,1,1,1,1458), -- Common Item - Avadon Boots
-(20648,12146,1,1,1,972), -- Common Item - Zubei\'s Gauntlets
-(20648,12148,1,1,1,2915), -- Common Item - Avadon Gloves
+(20648,554,1,1,1,37), -- Zubei\'s Boots
+(20648,600,1,1,1,37), -- Avadon Boots
+(20648,612,1,1,1,37), -- Zubei\'s Gauntlets
+(20648,2464,1,1,1,37), -- Avadon Gloves
 (20648,4073,1,1,1,4932), -- Avadon Gloves Part
 (20648,4097,1,1,1,4932), -- Zubei\'s Boots Design
 (20648,4098,1,1,1,4932), -- Avadon Boots Design
@@ -6684,9 +6685,9 @@ INSERT INTO `droplist` VALUES
 (20649,4133,1,1,-1,12988), -- Recipe: Zubei\'s Breastplate
 (20649,5549,1,2,-1,270151), -- Metallic Thread
 (20649,57,1306,2660,0,700000), -- Adena
-(20649,11889,1,1,1,73), -- Common Item - Great Sword
-(20649,11916,1,1,1,293), -- Common Item - Keshanberk
-(20649,11900,1,1,1,220), -- Common Item - Sword of Valhalla
+(20649,78,1,1,1,4), -- Great Sword
+(20649,142,1,1,1,4), -- Keshanberk
+(20649,148,1,1,1,4), -- Sword of Valhalla
 (20649,4104,1,1,1,761), -- Great Sword Blade
 (20649,4107,1,1,1,750), -- Keshanberk Blade
 (20649,4108,1,1,1,750), -- Sword of Valhalla Blade
@@ -6705,9 +6706,9 @@ INSERT INTO `droplist` VALUES
 (20650,4195,1,1,-1,2237), -- Recipe: Art of Battle Axe
 (20650,4613,1,1,-1,4042), -- Greater Dye of Strength <Str+4 Con-4>
 (20650,57,1417,2887,0,700000), -- Adena
-(20650,12338,1,1,1,1247), -- Common Item - Adamantite Earring
-(20650,12340,1,1,1,2101), -- Common Item - Adamantite Ring
-(20650,12339,1,1,1,1083), -- Common Item - Adamantite Necklace
+(20650,856,1,1,1,48), -- Adamantite Earring
+(20650,887,1,1,1,72), -- Adamantite Ring
+(20650,918,1,1,1,36), -- Adamantite Necklace
 (20650,4049,1,1,1,7570), -- Adamantite Earring Gemstone
 (20650,4050,1,1,1,8942), -- Adamantite Ring Wire
 (20650,4051,1,1,1,5597), -- Adamantite Necklace Chain
@@ -6724,9 +6725,9 @@ INSERT INTO `droplist` VALUES
 (20651,4050,1,2,-1,168983), -- Adamantite Ring Wire
 (20651,4196,1,1,-1,2082), -- Recipe: Staff of Evil Spirits
 (20651,57,1320,2684,0,700000), -- Adena
-(20651,11889,1,1,1,47), -- Common Item - Great Sword
-(20651,11916,1,1,1,47), -- Common Item - Keshanberk
-(20651,11900,1,1,1,47), -- Common Item - Sword of Valhalla
+(20651,78,1,1,1,4), -- Great Sword
+(20651,142,1,1,1,4), -- Keshanberk
+(20651,148,1,1,1,4), -- Sword of Valhalla
 (20651,4104,1,1,1,769), -- Great Sword Blade
 (20651,4107,1,1,1,757), -- Keshanberk Blade
 (20651,948,1,1,2,141), -- Scroll: Enchant Armor (Grade B)
@@ -6743,9 +6744,9 @@ INSERT INTO `droplist` VALUES
 (20652,4043,1,1,-1,96085), -- Asofe
 (20652,4129,1,1,-1,31197), -- Recipe: Earrings of Black Ore
 (20652,57,1398,2835,0,700000), -- Adena
-(20652,12151,1,1,1,532), -- Common Item - Zubei\'s Leather Shirt
-(20652,12150,1,1,1,266), -- Common Item - Zubei\'s Leather Gaiters
-(20652,12165,1,1,1,266), -- Common Item - Avadon Leather Armor
+(20652,2384,1,1,1,19), -- Zubei\'s Leather Shirt
+(20652,2388,1,1,1,30), -- Zubei\'s Leather Gaiters
+(20652,2390,1,1,1,13), -- Avadon Leather Armor
 (20652,4066,1,1,1,3345), -- Zubei\'s Leather Shirt Fabric
 (20652,4067,1,1,1,5079), -- Zubei\'s Leather Gaiter Texture
 (20652,4068,1,1,1,2570), -- Avadon Leather Armor Lining
@@ -6763,10 +6764,10 @@ INSERT INTO `droplist` VALUES
 (20654,4064,1,1,-1,97262), -- Avadon Breastplate Part
 (20654,5230,1,1,-1,7165), -- Recipe: Mithril Arrow (100%)
 (20654,57,2608,5283,0,700000), -- Adena
-(20654,12201,1,1,1,642), -- Common Item - Blue Wolf Tunic
-(20654,12192,1,1,1,642), -- Common Item - Tunic of Doom
-(20654,12203,1,1,1,321), -- Common Item - Blue Wolf Stockings
-(20654,12205,1,1,1,321), -- Common Item - Stockings of Doom
+(20654,2398,1,1,1,17), -- Blue Wolf Tunic
+(20654,2399,1,1,1,17), -- Tunic of Doom
+(20654,2403,1,1,1,27), -- Blue Wolf Stockings
+(20654,2404,1,1,1,27), -- Stockings of Doom
 (20654,4084,1,1,1,3447), -- Blue Wolf Tunic Fabric
 (20654,4085,1,1,1,3447), -- Tunic of Doom Pattern
 (20654,4086,1,1,1,4654), -- Blue Wolf Stockings Pattern
@@ -6784,9 +6785,9 @@ INSERT INTO `droplist` VALUES
 (20655,4067,1,1,-1,173432), -- Zubei\'s Leather Gaiter Texture
 (20655,4160,1,1,-1,13725), -- Recipe: Leather Armor of Doom
 (20655,57,2356,4762,0,700000), -- Adena
-(20655,12183,1,1,1,750), -- Common Item - Doom Shield
-(20655,12202,1,1,1,250), -- Common Item - Blue Wolf Helmet
-(20655,12185,1,1,1,250), -- Common Item - Doom Helmet
+(20655,110,1,1,1,57), -- Doom Shield
+(20655,2416,1,1,1,40), -- Blue Wolf Helmet
+(20655,2417,1,1,1,40), -- Doom Helmet
 (20655,4077,1,1,1,10729), -- Doom Shield Fragment
 (20655,4088,1,1,1,9014), -- Blue Wolf Helmet Design
 (20655,4089,1,1,1,9014), -- Doom Helmet Pattern
@@ -6804,10 +6805,10 @@ INSERT INTO `droplist` VALUES
 (20656,4040,1,2,-1,93328), -- Mold Lubricant
 (20656,4069,1,1,-1,110018), -- Tunic of Zubei Fabric
 (20656,57,2265,4585,0,700000), -- Adena
-(20656,12201,1,1,1,1214), -- Common Item - Blue Wolf Tunic
-(20656,12192,1,1,1,242), -- Common Item - Tunic of Doom
-(20656,12203,1,1,1,728), -- Common Item - Blue Wolf Stockings
-(20656,12205,1,1,1,485), -- Common Item - Stockings of Doom
+(20656,2398,1,1,1,15), -- Blue Wolf Tunic
+(20656,2399,1,1,1,15), -- Tunic of Doom
+(20656,2403,1,1,1,23), -- Blue Wolf Stockings
+(20656,2404,1,1,1,23), -- Stockings of Doom
 (20656,4084,1,1,1,2994), -- Blue Wolf Tunic Fabric
 (20656,4085,1,1,1,2994), -- Tunic of Doom Pattern
 (20656,4086,1,1,1,4042), -- Blue Wolf Stockings Pattern
@@ -6825,10 +6826,10 @@ INSERT INTO `droplist` VALUES
 (20657,1914,1,2,-1,193750), -- Earring of Binding Gemstone
 (20657,1920,1,1,-1,118007), -- Necklace of Binding Chain
 (20657,57,1677,3388,0,700000), -- Adena
-(20657,12201,1,1,1,939), -- Common Item - Blue Wolf Tunic
-(20657,12192,1,1,1,939), -- Common Item - Tunic of Doom
-(20657,12203,1,1,1,235), -- Common Item - Blue Wolf Stockings
-(20657,12205,1,1,1,235), -- Common Item - Stockings of Doom
+(20657,2398,1,1,1,11), -- Blue Wolf Tunic
+(20657,2399,1,1,1,11), -- Tunic of Doom
+(20657,2403,1,1,1,17), -- Blue Wolf Stockings
+(20657,2404,1,1,1,17), -- Stockings of Doom
 (20657,4084,1,1,1,2213), -- Blue Wolf Tunic Fabric
 (20657,4085,1,1,1,2213), -- Tunic of Doom Pattern
 (20657,4086,1,1,1,2987), -- Blue Wolf Stockings Pattern
@@ -6847,9 +6848,9 @@ INSERT INTO `droplist` VALUES
 (20658,2220,1,1,-1,68844), -- Recipe: Rind Leather Armor
 (20658,4054,1,1,-1,65494), -- Necklace of Black Ore Beads
 (20658,57,1613,3270,0,700000), -- Adena
-(20658,12341,1,1,1,228), -- Common Item - Earring of Black Ore
-(20658,12343,1,1,1,456), -- Common Item - Ring of Black Ore
-(20658,12342,1,1,1,228), -- Common Item - Necklace of Black Ore
+(20658,864,1,1,1,36), -- Earring of Black Ore
+(20658,895,1,1,1,54), -- Ring of Black Ore
+(20658,926,1,1,1,27), -- Necklace of Black Ore
 (20658,4052,1,1,1,5796), -- Earring of Black Ore Piece
 (20658,4053,1,1,1,7016), -- Ring of Black Ore Gemstone
 (20658,4054,1,1,1,3224), -- Necklace of Black Ore Beads
@@ -6867,10 +6868,10 @@ INSERT INTO `droplist` VALUES
 (20659,2062,1,1,-1,8390), -- Scythe Edge
 (20659,2163,1,1,-1,54581), -- Recipe: Earring of Protection
 (20659,57,518,1052,0,700000), -- Adena
-(20659,12091,1,1,1,3759), -- Common Item - Eldarake
+(20659,631,1,1,1,127), -- Eldarake
 (20659,1964,1,1,1,6810), -- Eldarake Temper
-(20659,12090,1,1,1,2315), -- Common Item - Chain Hood
-(20659,12096,1,1,1,6098), -- Common Item - Chain Shield
+(20659,2413,1,1,1,90), -- Chain Hood
+(20659,2495,1,1,1,127), -- Chain Shield
 (20659,2936,1,1,1,6185), -- Chain Hood Pattern
 (20659,2945,1,1,1,6810), -- Chain Shield Fragment
 (20659,1868,1,1,2,90909), -- Thread
@@ -6888,8 +6889,8 @@ INSERT INTO `droplist` VALUES
 (20660,2084,1,1,-1,8779), -- Soulfire Dirk Blade
 (20660,2330,1,1,-1,3073), -- Recipe: Homunkulus\'s Sword
 (20660,57,637,1303,0,700000), -- Adena
-(20660,12099,1,1,1,2762), -- Common Item - Karmian Tunic
-(20660,12100,1,1,1,4132), -- Common Item - Karmian Stockings
+(20660,439,1,1,1,83), -- Karmian Tunic
+(20660,471,1,1,1,132), -- Karmian Stockings
 (20660,1954,1,1,1,8300), -- Karmian Stocking Design
 (20660,1962,1,1,1,4996), -- Karmian Tunic Pattern
 (20660,1864,1,1,2,142857), -- Stem
@@ -6904,11 +6905,11 @@ INSERT INTO `droplist` VALUES
 (20661,2223,1,1,-1,48328), -- Recipe: Tower Shield
 (20661,2347,1,1,-1,2900), -- Recipe: Akat Long Bow
 (20661,57,603,1229,0,700000), -- Adena
-(20661,12106,1,1,1,4184), -- Common Item - Great Helmet
-(20661,12107,1,1,1,762), -- Common Item - Knight\'s Shield
+(20661,500,1,1,1,77), -- Great Helmet
+(20661,632,1,1,1,109), -- Knight\'s Shield
 (20661,1971,1,1,1,5637), -- Great Helmet Material
 (20661,1972,1,1,1,7367), -- Knight\'s Shield Fragment
-(20661,12102,1,1,1,4566), -- Common Item - Dwarven Chain Shield
+(20661,2496,1,1,1,119), -- Dwarven Chain Shield
 (20661,2947,1,1,1,6577), -- Dwarven Chain Shield Fragment
 (20661,1343,10,30,2,76923), -- Silver Arrow
 (20661,1868,1,1,2,90909), -- Thread
@@ -6926,10 +6927,10 @@ INSERT INTO `droplist` VALUES
 (20662,1873,1,2,-1,520615), -- Silver Nugget
 (20662,1911,1,1,-1,96805), -- Earring of Protection Gemstone
 (20662,57,630,1281,0,700000), -- Adena
-(20662,11783,1,1,1,170), -- Common Item - Shamshir
-(20662,11794,1,1,1,102), -- Common Item - Katana
-(20662,11789,1,1,1,68), -- Common Item - Spirit Sword
-(20662,11778,1,1,1,136), -- Common Item - Raid Sword
+(20662,73,1,1,1,6), -- Shamshir
+(20662,74,1,1,1,6), -- Katana
+(20662,131,1,1,1,6), -- Spirit Sword
+(20662,133,1,1,1,6), -- Raid Sword
 (20662,2077,1,1,1,479), -- Shamshir Blade
 (20662,2078,1,1,1,479), -- Katana Blade
 (20662,2080,1,1,1,479), -- Spirit Sword Blade
@@ -6949,9 +6950,9 @@ INSERT INTO `droplist` VALUES
 (20663,1981,1,1,-1,67117), -- Mithril Gauntlets Design
 (20663,4123,1,1,-1,50711), -- Recipe: Maestro Anvil Lock
 (20663,57,551,1124,0,700000), -- Adena
-(20663,12329,1,1,1,3226), -- Common Item - Earring of Protection
-(20663,12331,1,1,1,5128), -- Common Item - Ring of Protection
-(20663,12330,1,1,1,2740), -- Common Item - Necklace of Protection
+(20663,853,1,1,1,86), -- Earring of Protection
+(20663,884,1,1,1,130), -- Ring of Protection
+(20663,916,1,1,1,65), -- Necklace of Protection
 (20663,1911,1,1,1,6268), -- Earring of Protection Gemstone
 (20663,1912,1,1,1,9081), -- Ring of Protection Gemstone
 (20663,1913,1,1,1,5125), -- Necklace of Protection Gemstone
@@ -6969,8 +6970,8 @@ INSERT INTO `droplist` VALUES
 (20664,1867,1,5,-1,800904), -- Animal Skin
 (20664,2098,1,1,-1,6435), -- Nirvana Axe Blade
 (20664,57,582,1182,0,700000), -- Adena
-(20664,12125,1,1,1,3401), -- Common Item - Composite Boots
-(20664,12119,1,1,1,4115), -- Common Item - Mithril Gauntlets
+(20664,64,1,1,1,102), -- Composite Boots
+(20664,608,1,1,1,102), -- Mithril Gauntlets
 (20664,1981,1,1,1,7306), -- Mithril Gauntlets Design
 (20664,2956,1,1,1,7306), -- Composite Boots Part
 (20664,1539,1,1,2,12500), -- Greater Healing Potion
@@ -6990,14 +6991,14 @@ INSERT INTO `droplist` VALUES
 (20665,2359,1,1,-1,2406), -- Recipe: Eminence Bow
 (20665,4043,1,1,-1,49166), -- Asofe
 (20665,57,715,1452,0,700000), -- Adena
-(20665,11816,1,1,1,3), -- Common Item - War Axe
-(20665,11802,1,1,1,3), -- Common Item - Nirvana Axe
-(20665,11799,1,1,1,3), -- Common Item - Stick of Eternity
-(20665,11825,1,1,1,3), -- Common Item - Paradia Staff
-(20665,11824,1,1,1,8), -- Common Item - Pa\'agrian Hammer
-(20665,11828,1,1,1,3), -- Common Item - Sage\'s Staff
-(20665,11804,1,1,1,693), -- Common Item - Club of Nature
-(20665,11806,1,1,1,3), -- Common Item - Mace of The Underworld
+(20665,162,1,1,1,2), -- War Axe
+(20665,174,1,1,1,2), -- Nirvana Axe
+(20665,196,1,1,1,2), -- Stick of Eternity
+(20665,197,1,1,1,2), -- Paradia Staff
+(20665,199,1,1,1,2), -- Pa\'agrian Hammer
+(20665,200,1,1,1,2), -- Sage\'s Staff
+(20665,201,1,1,1,2), -- Club of Nature
+(20665,202,1,1,1,2), -- Mace of The Underworld
 (20665,2097,1,1,1,205), -- War Axe Blade
 (20665,2098,1,1,1,205), -- Nirvana Axe Blade
 (20665,2099,1,1,1,215), -- Stick of Eternity Shaft
@@ -7020,8 +7021,8 @@ INSERT INTO `droplist` VALUES
 (20666,1977,1,1,-1,22697), -- Composite Armor Temper
 (20666,4606,1,1,-1,3410), -- Greater Dye of Dexterity <Dex+3 Con-3>
 (20666,57,746,1502,0,700000), -- Adena
-(20666,12125,1,1,1,3106), -- Common Item - Composite Boots
-(20666,12119,1,1,1,3247), -- Common Item - Mithril Gauntlets
+(20666,64,1,1,1,130), -- Composite Boots
+(20666,608,1,1,1,130), -- Mithril Gauntlets
 (20666,1981,1,1,1,9332), -- Mithril Gauntlets Design
 (20666,2956,1,1,1,9332), -- Composite Boots Part
 (20666,1865,1,1,2,58824), -- Varnish
@@ -7040,9 +7041,9 @@ INSERT INTO `droplist` VALUES
 (20667,4141,1,1,-1,7601), -- Recipe: Avadon Breastplate
 (20667,4604,1,1,-1,3513), -- Greater Dye of Constitution <Con+3 Dex-3>
 (20667,57,766,1556,0,700000), -- Adena
-(20667,11858,1,1,1,6), -- Common Item - Orcish Poleaxe
-(20667,11830,1,1,1,2), -- Common Item - Scorpion
-(20667,11832,1,1,1,6), -- Common Item - Widow Maker
+(20667,299,1,1,1,4), -- Orcish Poleaxe
+(20667,301,1,1,1,5), -- Scorpion
+(20667,303,1,1,1,5), -- Widow Maker
 (20667,2113,1,1,1,471), -- Scorpion Blade
 (20667,2114,1,1,1,471), -- Widowmaker Head
 (20667,2122,1,1,1,444), -- Orcish Poleaxe Blade
@@ -7062,15 +7063,15 @@ INSERT INTO `droplist` VALUES
 (20668,2917,1,1,-1,80961), -- Ring of Binding Gemstone
 (20668,4147,1,1,-1,14487), -- Recipe: Stockings of Zubei
 (20668,57,682,1388,0,700000), -- Adena
-(20668,11833,1,1,1,3), -- Common Item - Pa\'agrian Axe (no drop info)
-(20668,11842,1,1,1,2), -- Common Item - Deadman\'s Staff
-(20668,11838,1,1,1,2), -- Common Item - Ghoul\'s Staff
-(20668,11855,1,1,1,2), -- Common Item - Demon\'s Staff
+(20668,203,1,1,1,3), -- Pa\'agrian Axe
+(20668,204,1,1,1,2), -- Deadman\'s Staff
+(20668,205,1,1,1,2), -- Ghoul\'s Staff
+(20668,206,1,1,1,2), -- Demon\'s Staff
 (20668,2112,1,1,1,253), -- Pa\'agrian Axe Blade
 (20668,2116,1,1,1,245), -- Deadman\'s Staff Head
 (20668,2117,1,1,1,245), -- Ghoul\'s Staff Head
 (20668,2118,1,1,1,245), -- Demon\'s Staff Head
-(20668,11856,1,1,1,2), -- Common Item - Yaksa Mace
+(20668,2503,1,1,1,2), -- Yaksa Mace
 (20668,2969,1,1,1,251), -- Yaksa Mace Head
 (20668,1866,1,1,2,37037), -- Suede
 (20668,1871,1,1,2,47619), -- Charcoal
@@ -7086,7 +7087,7 @@ INSERT INTO `droplist` VALUES
 (20669,4198,1,1,-1,1343), -- Recipe: Bellion Cestus
 (20669,4589,1,1,-1,5865), -- Greater Dye of Strength <Str+2 Con-2>
 (20669,57,851,1734,0,700000), -- Adena
-(20669,11857,1,1,1,94), -- Common Item - Eminence Bow
+(20669,286,1,1,1,11), -- Eminence Bow
 (20669,2121,1,1,1,1494), -- Eminence Bow Shaft
 (20669,1866,1,1,2,35714), -- Suede
 (20669,1871,1,1,2,50000), -- Charcoal
@@ -7188,10 +7189,10 @@ INSERT INTO `droplist` VALUES
 (20674,4053,1,1,-1,125008), -- Ring of Black Ore Gemstone
 (20674,4124,1,2,-1,129619), -- Recipe: Craftsman Mold
 (20674,57,1415,2868,0,700000), -- Adena
-(20674,12188,1,1,1,325), -- Common Item - Boots of Doom
-(20674,12189,1,1,1,595), -- Common Item - Blue Wolf Boots
-(20674,12187,1,1,1,494), -- Common Item - Doom Gloves
-(20674,12190,1,1,1,415), -- Common Item - Blue Wolf Gloves
+(20674,601,1,1,1,27), -- Boots of Doom
+(20674,2439,1,1,1,27), -- Blue Wolf Boots
+(20674,2475,1,1,1,27), -- Doom Gloves
+(20674,2487,1,1,1,27), -- Blue Wolf Gloves
 (20674,4090,1,1,1,4833), -- Blue Wolf Boots Design
 (20674,4091,1,1,1,4833), -- Doom Gloves Part
 (20674,4096,1,1,1,4833), -- Blue Wolf Gloves Fabric
@@ -7211,7 +7212,7 @@ INSERT INTO `droplist` VALUES
 (20675,4042,1,1,-1,20818), -- Enria
 (20675,4602,1,1,-1,2776), -- Greater Dye of Strength <Str+3 Dex-3>
 (20675,57,605,1229,0,700000), -- Adena
-(20675,12128,1,1,1,993), -- Common Item - Composite Armor
+(20675,60,1,1,1,36), -- Composite Armor
 (20675,1977,1,1,1,3821), -- Composite Armor Temper
 (20675,1867,1,1,2,71429), -- Animal Skin
 (20675,1872,1,1,2,66667), -- Animal Bone
@@ -7260,7 +7261,7 @@ INSERT INTO `droplist` VALUES
 (20678,1989,1,1,-1,40443), -- Divine Stocking Pattern
 (20678,4142,1,1,-1,10322), -- Recipe: Avadon Gaiters
 (20678,57,650,1321,0,700000), -- Adena
-(20678,11839,1,1,1,171), -- Common Item - Great Pata
+(20678,266,1,1,1,9), -- Great Pata
 (20678,2120,1,1,1,1190), -- Great Pata Blade
 (20678,1895,1,1,2,7874), -- Metallic Fiber
 (20678,4040,1,1,2,853), -- Mold Lubricant
@@ -7276,15 +7277,15 @@ INSERT INTO `droplist` VALUES
 (20679,1920,1,1,-1,47285), -- Necklace of Binding Chain
 (20679,4148,1,1,-1,6061), -- Recipe: Avadon Robe
 (20679,57,668,1361,0,700000), -- Adena
-(20679,11833,1,1,1,80), -- Common Item - Pa\'agrian Axe
-(20679,11842,1,1,1,80), -- Common Item - Deadman\'s Staff
-(20679,11838,1,1,1,80), -- Common Item - Ghoul\'s Staff
-(20679,11855,1,1,1,80), -- Common Item - Demon\'s Staff
+(20679,203,1,1,1,3), -- Pa\'agrian Axe
+(20679,204,1,1,1,2), -- Deadman\'s Staff
+(20679,205,1,1,1,2), -- Ghoul\'s Staff
+(20679,206,1,1,1,2), -- Demon\'s Staff
 (20679,2112,1,1,1,248), -- Pa\'agrian Axe Blade
 (20679,2116,1,1,1,241), -- Deadman\'s Staff Head
 (20679,2117,1,1,1,241), -- Ghoul\'s Staff Head
 (20679,2118,1,1,1,241), -- Demon\'s Staff Head
-(20679,11856,1,1,1,80), -- Common Item - Yaksa Mace
+(20679,2503,1,1,1,2), -- Yaksa Mace
 (20679,2969,1,1,1,246), -- Yaksa Mace Head
 (20679,1867,1,1,2,58824), -- Animal Skin
 (20679,1869,1,1,2,52632), -- Iron Ore
@@ -7302,9 +7303,9 @@ INSERT INTO `droplist` VALUES
 (20680,1876,1,1,-1,292781), -- Mithril Ore
 (20680,3034,1,1,-1,2928), -- Recipe: Spiritshot B
 (20680,57,708,1442,0,700000), -- Adena
-(20680,11858,1,1,1,40), -- Common Item - Orcish Poleaxe
-(20680,11830,1,1,1,40), -- Common Item - Scorpion
-(20680,11832,1,1,1,40), -- Common Item - Widow Maker
+(20680,299,1,1,1,3), -- Orcish Poleaxe
+(20680,301,1,1,1,4), -- Scorpion
+(20680,303,1,1,1,4), -- Widow Maker
 (20680,2113,1,1,1,437), -- Scorpion Blade
 (20680,2114,1,1,1,437), -- Widowmaker Head
 (20680,2122,1,1,1,412), -- Orcish Poleaxe Blade
@@ -7323,8 +7324,8 @@ INSERT INTO `droplist` VALUES
 (20681,1908,1,1,-1,95566), -- Moonstone Earring Wire
 (20681,2063,1,1,-1,7800), -- Battle Axe Head
 (20681,57,489,993,0,700000), -- Adena
-(20681,11766,1,1,1,156), -- Common Item - Flamberge
-(20681,11756,1,1,1,468), -- Common Item - Stormbringer
+(20681,71,1,1,1,11), -- Flamberge
+(20681,72,1,1,1,11), -- Stormbringer
 (20681,2059,1,1,1,886), -- Flamberge Blade
 (20681,2060,1,1,1,947), -- Stormbringer Blade
 (20681,1866,1,1,2,31250), -- Suede
@@ -7341,9 +7342,9 @@ INSERT INTO `droplist` VALUES
 (20682,1876,1,2,-1,200889), -- Mithril Ore
 (20682,4039,1,1,-1,33482), -- Mold Glue
 (20682,57,484,990,0,700000), -- Adena
-(20682,12086,1,1,1,2358), -- Common Item - Mithril Shirt
+(20682,397,1,1,1,63), -- Mithril Shirt
 (20682,1961,1,1,1,3798), -- Mithril Shirt Fabric
-(20682,12084,1,1,1,2584), -- Common Item - Tempered Mithril Gaiters
+(20682,2387,1,1,1,101), -- Tempered Mithril Gaiters
 (20682,2935,1,1,1,6310), -- Tempered Mithril Gaiters Fragment
 (20682,1865,1,1,2,52632), -- Varnish
 (20682,1870,1,1,2,58824), -- Coal
@@ -7358,8 +7359,8 @@ INSERT INTO `droplist` VALUES
 (20683,1974,1,2,-1,109837), -- Crimson Boot Fabric
 (20683,2336,1,1,-1,3037), -- Recipe: Nirvana Axe
 (20683,57,631,1286,0,700000), -- Adena
-(20683,11788,1,1,1,355), -- Common Item - Stiletto
-(20683,11779,1,1,1,178), -- Common Item - Soulfire Dirk
+(20683,227,1,1,1,11), -- Stiletto
+(20683,242,1,1,1,11), -- Soulfire Dirk
 (20683,2083,1,1,1,962), -- Stiletto Edge
 (20683,2084,1,1,1,962), -- Soulfire Dirk Blade
 (20683,1868,1,1,2,111111), -- Thread
@@ -7377,10 +7378,10 @@ INSERT INTO `droplist` VALUES
 (20684,1966,1,1,-1,49915), -- Plated Leather Fragment
 (20684,2078,1,1,-1,9084), -- Katana Blade
 (20684,57,662,1345,0,700000), -- Adena
-(20684,12105,1,1,1,1043), -- Common Item - Plated Leather
-(20684,12113,1,1,1,417), -- Common Item - Rind Leather Armor
-(20684,12103,1,1,1,1252), -- Common Item - Plated Leather Gaiters
-(20684,12111,1,1,1,2500), -- Common Item - Rind Leather Gaiters
+(20684,398,1,1,1,34), -- Plated Leather
+(20684,399,1,1,1,32), -- Rind Leather Armor
+(20684,418,1,1,1,55), -- Plated Leather Gaiters
+(20684,419,1,1,1,51), -- Rind Leather Gaiters
 (20684,1966,1,1,1,2765), -- Plated Leather Fragment
 (20684,1967,1,1,1,4130), -- Plated Leather Gaiters Material
 (20684,1975,1,1,1,2487), -- Rind Leather Armor Design
@@ -7399,9 +7400,9 @@ INSERT INTO `droplist` VALUES
 (20685,2090,1,1,-1,6218), -- Delusional Blade
 (20685,2166,1,1,-1,38678), -- Recipe: Earrings of Binding (100%)
 (20685,57,551,1123,0,700000), -- Adena
-(20685,11793,1,1,1,210), -- Common Item - Cursed Staff
+(20685,195,1,1,1,9), -- Cursed Staff
 (20685,2082,1,1,1,891), -- Cursed Staff Head
-(20685,11777,1,1,1,630), -- Common Item - Dwarven War Hammer
+(20685,2502,1,1,1,9), -- Dwarven War Hammer
 (20685,2968,1,1,1,853), -- Dwarven Warhammer Head
 (20685,1867,1,1,2,76923), -- Animal Skin
 (20685,1872,1,1,2,76923), -- Animal Bone
@@ -7417,7 +7418,7 @@ INSERT INTO `droplist` VALUES
 (20686,2169,1,1,-1,42130), -- Recipe: Necklace of Binding
 (20686,2231,1,1,-1,10260), -- Recipe: Full Plate Armor
 (20686,57,1153,2343,0,700000), -- Adena
-(20686,11817,1,1,1,975), -- Common Item - Heathen\'s Book
+(20686,326,1,1,1,23), -- Heathen\'s Book
 (20686,2110,1,1,1,2775), -- Heathen\'s Book Page
 (20686,1866,1,1,2,62500), -- Suede
 (20686,1871,1,1,2,76923), -- Charcoal
@@ -7433,10 +7434,10 @@ INSERT INTO `droplist` VALUES
 (20745,1832,1,3,-1,491857), -- Greater Antidote
 (20745,1901,1,1,-1,122285), -- Tiger\'s Eye Earring Stone
 (20745,57,449,894,0,700000), -- Adena
-(20745,12043,1,1,1,4762), -- Common Item - Mithril Banded Mail
-(20745,12036,1,1,1,4762), -- Common Item - Reinforced Leather Shirt
-(20745,12042,1,1,1,2381), -- Common Item - Mithril Banded Gaiters
-(20745,12034,1,1,1,9524), -- Common Item - Reinforced Leather Gaiters
+(20745,393,1,1,1,104), -- Mithril Banded Mail
+(20745,394,1,1,1,104), -- Reinforced Leather Shirt
+(20745,415,1,1,1,165), -- Mithril Banded Gaiters
+(20745,416,1,1,1,165), -- Reinforced Leather Gaiters
 (20745,1938,1,1,1,5275), -- Mithril Banded Mail Material
 (20745,1939,1,1,1,6892), -- Mithril Banded Gaiters Material
 (20745,1867,1,1,2,166666), -- Animal Skin
@@ -7448,7 +7449,7 @@ INSERT INTO `droplist` VALUES
 (20746,1900,1,1,-1,75887), -- Enchanted Necklace Chain
 (20746,2153,1,1,-1,107871), -- Recipe: Tiger\'s Eye Earring
 (20746,57,353,700,0,700000), -- Adena
-(20746,11642,1,1,1,1484), -- Common Item - Single-Edged Jamadhr
+(20746,259,1,1,1,118), -- Single-Edged Jamadhr
 (20746,1865,1,1,2,66667), -- Varnish
 (20746,1870,1,1,2,66667), -- Coal
 (20746,1875,1,1,2,7407), -- Stone of Purity
@@ -7459,8 +7460,8 @@ INSERT INTO `droplist` VALUES
 (20747,2024,1,1,-1,13897), -- Elven Bow Shaft
 (20747,2203,1,1,-1,212542), -- Recipe: Mithril Boots
 (20747,57,494,989,0,700000), -- Adena
-(20747,12028,1,1,1,27778), -- Common Item - Bronze Helmet
-(20747,12025,1,1,1,41667), -- Common Item - Aspis
+(20747,46,1,1,1,1067), -- Bronze Helmet
+(20747,627,1,1,1,1523), -- Aspis
 (20747,1867,1,1,2,142857), -- Animal Skin
 (20747,1872,1,1,2,142857), -- Animal Bone
 (20747,1875,1,1,2,17241), -- Stone of Purity
@@ -7472,8 +7473,8 @@ INSERT INTO `droplist` VALUES
 (20748,1866,1,1,-1,612460), -- Suede
 (20748,1871,1,3,-1,918690), -- Charcoal
 (20748,57,468,924,0,700000), -- Adena
-(20748,11632,1,1,1,1220), -- Common Item - Long Bow
-(20748,11640,1,1,1,1220), -- Common Item - Elven Bow
+(20748,275,1,1,1,52), -- Long Bow
+(20748,276,1,1,1,52), -- Elven Bow
 (20748,2024,1,1,1,2385), -- Elven Bow Shaft
 (20748,956,1,1,2,2391), -- Scroll: Enchant Armor (Grade D)
 (20748,1831,1,1,2,250000), -- Antidote
@@ -7486,8 +7487,8 @@ INSERT INTO `droplist` VALUES
 (20749,2025,1,1,-1,13512), -- Dwarven Trident Edge
 (20749,2153,1,1,-1,151721), -- Recipe: Tiger\'s Eye Earring
 (20749,57,522,960,0,700000), -- Adena
-(20749,12028,1,1,1,69444), -- Common Item - Bronze Helmet
-(20749,12025,1,1,1,69444), -- Common Item - Aspis
+(20749,46,1,1,1,1067), -- Bronze Helmet
+(20749,627,1,1,1,1523), -- Aspis
 (20749,1866,1,1,2,55556), -- Suede
 (20749,1871,1,1,2,250000), -- Charcoal
 (20749,1877,1,1,2,5332), -- Adamantite Nugget
@@ -7496,7 +7497,7 @@ INSERT INTO `droplist` VALUES
 (20750,1935,1,1,-1,53140), -- Scale Mail Fragment
 (20750,2183,1,1,-1,62579), -- Recipe: Mithril Banded Mail
 (20750,57,501,945,0,700000), -- Adena
-(20750,11646,1,1,1,161), -- Common Item - Poniard Dagger (no drop info)
+(20750,222,1,1,1,161), -- Poniard Dagger
 (20750,1829,1,1,2,16667), -- Scroll of Escape: Clan Hall
 (20750,1831,1,3,2,166666), -- Antidote
 (20750,1867,1,3,2,111111), -- Animal Skin
@@ -7506,16 +7507,16 @@ INSERT INTO `droplist` VALUES
 (20751,1949,1,1,-1,246500), -- Mithril Gloves Design
 (20751,2161,1,1,-1,214431), -- Recipe: Aquastone Ring
 (20751,57,1720,3517,0,700000), -- Adena
-(20751,12085,1,1,1,5348), -- Common Item - Mithril Boots
+(20751,62,1,1,1,93), -- Mithril Boots
 (20751,1958,1,1,1,5213), -- Mithril Boots Design
-(20751,12093,1,1,1,5348), -- Common Item - Chain Boots
-(20751,12098,1,1,1,5348), -- Common Item - Karmian Boots
-(20751,12101,1,1,1,5348), -- Common Item - Plated Leather Boots
-(20751,12088,1,1,1,5348), -- Common Item - Dwarven Chain Boots
-(20751,12089,1,1,1,5348), -- Common Item - Boots of Seal
-(20751,12087,1,1,1,5348), -- Common Item - Reinforced Mithril Gloves
-(20751,12092,1,1,1,5348), -- Common Item - Chain Gloves
-(20751,12097,1,1,1,5348), -- Common Item - Karmian Gloves
+(20751,2429,1,1,1,93), -- Chain Boots
+(20751,2430,1,1,1,93), -- Karmian Boots
+(20751,2431,1,1,1,93), -- Plated Leather Boots
+(20751,2432,1,1,1,93), -- Dwarven Chain Boots
+(20751,2433,1,1,1,93), -- Boots of Seal
+(20751,2452,1,1,1,93), -- Reinforced Mithril Gloves
+(20751,2453,1,1,1,93), -- Chain Gloves
+(20751,2454,1,1,1,93), -- Karmian Gloves
 (20751,2937,1,1,1,5213), -- Chain Boots Part
 (20751,2938,1,1,1,5213), -- Karmian Boots Fabric
 (20751,2939,1,1,1,5213), -- Plate Leather Boot Lining
@@ -7532,8 +7533,8 @@ INSERT INTO `droplist` VALUES
 (20752,1905,1,1,-1,194586), -- Omen Beast\'s Eye Earring Gemstone
 (20752,5549,1,1,-1,200035), -- Metallic Thread
 (20752,57,933,1879,0,700000), -- Adena
-(20752,12081,1,1,1,3300), -- Common Item - Half Plate Armor
-(20752,12080,1,1,1,9901), -- Common Item - Plate Gaiters
+(20752,353,1,1,1,129), -- Half Plate Armor
+(20752,380,1,1,1,206), -- Plate Gaiters
 (20752,1950,1,1,1,8151), -- Half Plate Temper
 (20752,1951,1,1,1,12677), -- Plate Gaiters Part
 (20752,1868,1,1,2,333333), -- Thread
@@ -7547,12 +7548,12 @@ INSERT INTO `droplist` VALUES
 (20753,1875,1,1,-1,186818), -- Stone of Purity
 (20753,4601,1,1,-1,6227), -- Greater Dye of Strength <Str+3 Con-3>
 (20753,57,1500,3018,0,700000), -- Adena
-(20753,11821,1,1,1,100), -- Common Item - Caliburs
-(20753,11807,1,1,1,100), -- Common Item - Sword of Delusion
-(20753,11820,1,1,1,100), -- Common Item - Tsurugi
-(20753,11829,1,1,1,100), -- Common Item - Homunkulus\'s Sword
-(20753,11815,1,1,1,100), -- Common Item - Sword of Nightmare
-(20753,11805,1,1,1,100), -- Common Item - Sword of Whispering Death
+(20753,75,1,1,1,5), -- Caliburs
+(20753,76,1,1,1,5), -- Sword of Delusion
+(20753,77,1,1,1,5), -- Tsurugi
+(20753,84,1,1,1,5), -- Homunkulus\'s Sword
+(20753,134,1,1,1,5), -- Sword of Nightmare
+(20753,145,1,1,1,5), -- Sword of Whispering Death
 (20753,2089,1,1,1,527), -- Caliburs Edge
 (20753,2090,1,1,1,527), -- Delusional Blade
 (20753,2091,1,1,1,527), -- Tsurugi Blade
@@ -7574,7 +7575,7 @@ INSERT INTO `droplist` VALUES
 (20754,1911,1,1,-1,229766), -- Earring of Protection Gemstone
 (20754,1967,1,1,-1,168487), -- Plated Leather Gaiters Material
 (20754,57,1636,3317,0,700000), -- Adena
-(20754,11782,1,1,1,4237), -- Common Item - Bec de Corbin
+(20754,94,1,1,1,48), -- Bec de Corbin
 (20754,2079,1,1,1,4703), -- Bec De Corbin Blade
 (20754,1864,1,3,2,166667), -- Stem
 (20754,1869,1,1,2,166667), -- Iron Ore
@@ -7590,7 +7591,7 @@ INSERT INTO `droplist` VALUES
 (20755,1900,1,1,-1,72865), -- Enchanted Necklace Chain
 (20755,2184,1,1,-1,69956), -- Recipe: Mithril Banded Gaiters
 (20755,57,337,674,0,700000), -- Adena
-(20755,11646,1,1,1,3175), -- Common Item - Poniard Dagger
+(20755,222,1,1,1,113), -- Poniard Dagger
 (20755,1341,10,30,2,200000), -- Bone Arrow
 (20755,1829,1,1,2,18868), -- Scroll of Escape: Clan Hall
 (20755,1876,1,1,2,7407), -- Mithril Ore
@@ -7603,7 +7604,7 @@ INSERT INTO `droplist` VALUES
 (20756,1932,1,1,-1,102623), -- Bone Helmet Design
 (20756,2262,1,1,-1,10039), -- Recipe: Elven Bow
 (20756,57,333,651,0,700000), -- Adena
-(20756,11606,1,1,1,4762), -- Common Item - Strengthened Bow
+(20756,274,1,1,1,177), -- Strengthened Bow
 (20756,1868,1,1,2,166666), -- Thread
 (20756,1873,1,1,2,32258), -- Silver Nugget
 (20756,1876,1,1,2,23810), -- Mithril Ore
@@ -7613,7 +7614,7 @@ INSERT INTO `droplist` VALUES
 (20757,1868,1,3,-1,476958), -- Thread
 (20757,2180,1,1,-1,35861), -- Recipe: Scale Mail
 (20757,57,248,476,0,700000), -- Adena
-(20757,11622,1,1,1,3759), -- Common Item - Trident
+(20757,291,1,1,1,66), -- Trident
 (20757,2019,1,1,1,2879), -- Trident Edge
 (20757,1875,1,1,2,2506), -- Stone of Purity
 (20757,1879,1,1,2,7519), -- Cokes
@@ -7624,9 +7625,9 @@ INSERT INTO `droplist` VALUES
 (20758,2167,1,1,-1,87619), -- Recipe: Ring of Ages
 (20758,2946,1,1,-1,95994), -- Plate Leather Gloves Design
 (20758,57,830,1692,0,700000), -- Adena
-(20758,12329,1,1,1,4098), -- Common Item - Earring of Protection
-(20758,12331,1,1,1,5128), -- Common Item - Ring of Protection
-(20758,12330,1,1,1,1024), -- Common Item - Necklace of Protection
+(20758,853,1,1,1,130), -- Earring of Protection
+(20758,884,1,1,1,196), -- Ring of Protection
+(20758,916,1,1,1,98), -- Necklace of Protection
 (20758,1911,1,1,1,9434), -- Earring of Protection Gemstone
 (20758,1912,1,1,1,13668), -- Ring of Protection Gemstone
 (20758,1913,1,1,1,7713), -- Necklace of Protection Gemstone
@@ -7643,10 +7644,10 @@ INSERT INTO `droplist` VALUES
 (20759,2166,1,1,-1,54709), -- Recipe: Earrings of Binding (100%)
 (20759,2167,1,1,-1,82342), -- Recipe: Ring of Ages
 (20759,57,781,1588,0,700000), -- Adena
-(20759,12105,1,1,1,1821), -- Common Item - Plated Leather
-(20759,12113,1,1,1,1093), -- Common Item - Rind Leather Armor
-(20759,12103,1,1,1,2183), -- Common Item - Plated Leather Gaiters
-(20759,12111,1,1,1,3636), -- Common Item - Rind Leather Gaiters
+(20759,398,1,1,1,41), -- Plated Leather
+(20759,399,1,1,1,38), -- Rind Leather Armor
+(20759,418,1,1,1,65), -- Plated Leather Gaiters
+(20759,419,1,1,1,60), -- Rind Leather Gaiters
 (20759,1966,1,1,1,3263), -- Plated Leather Fragment
 (20759,1967,1,1,1,4875), -- Plated Leather Gaiters Material
 (20759,1975,1,1,1,2936), -- Rind Leather Armor Design
@@ -7664,10 +7665,10 @@ INSERT INTO `droplist` VALUES
 (20760,1871,1,5,-1,837724), -- Charcoal
 (20760,1911,1,1,-1,124615), -- Earring of Protection Gemstone
 (20760,57,809,1650,0,700000), -- Adena
-(20760,12105,1,1,1,1098), -- Common Item - Plated Leather
-(20760,12113,1,1,1,366), -- Common Item - Rind Leather Armor
-(20760,12103,1,1,1,1828), -- Common Item - Plated Leather Gaiters
-(20760,12111,1,1,1,3289), -- Common Item - Rind Leather Gaiters
+(20760,398,1,1,1,42), -- Plated Leather
+(20760,399,1,1,1,39), -- Rind Leather Armor
+(20760,418,1,1,1,67), -- Plated Leather Gaiters
+(20760,419,1,1,1,62), -- Rind Leather Gaiters
 (20760,1966,1,1,1,3388), -- Plated Leather Fragment
 (20760,1967,1,1,1,5061), -- Plated Leather Gaiters Material
 (20760,1975,1,1,1,3048), -- Rind Leather Armor Design
@@ -7687,9 +7688,9 @@ INSERT INTO `droplist` VALUES
 (20761,1874,1,1,-1,452069), -- Oriharukon Ore
 (20761,1875,1,1,-1,452069), -- Stone of Purity
 (20761,57,3286,6671,0,700000), -- Adena
-(20761,12227,1,1,1,577), -- Common Item - Sealed Dark Crystal breastplate
-(20761,12220,1,1,1,385), -- Common Item - Sealed Dark Crystal Gaiters
-(20761,12233,1,1,1,192), -- Common Item - Sealed Tallum Plate Armor
+(20761,5287,1,1,1,15), -- Sealed Dark Crystal breastplate
+(20761,5288,1,1,1,24), -- Sealed Dark Crystal Gaiters
+(20761,5293,1,1,1,10), -- Sealed Tallum Plate Armor
 (20761,5520,1,1,1,2153), -- Sealed Dark Crystal Breastplate Pattern
 (20761,5521,1,1,1,1520), -- Sealed Tallum Plate Armor Pattern
 (20761,5524,1,1,1,3291), -- Sealed Dark Crystal Gaiters Pattern
@@ -7706,9 +7707,9 @@ INSERT INTO `droplist` VALUES
 (20762,1807,1,1,-1,6365), -- Recipe: Soulshot: A-Grade
 (20762,5478,1,1,-1,40140), -- Sealed Dark Crystal Leather Armor Pattern
 (20762,57,2311,4698,0,700000), -- Adena
-(20762,12222,1,1,1,288), -- Common Item - Sealed Dark Crystal Leather Armor
-(20762,12228,1,1,1,769), -- Common Item - Sealed Dark Crystalline Leggings
-(20762,12230,1,1,1,96), -- Common Item - Sealed Tallum Leather Armor
+(20762,5297,1,1,1,14), -- Sealed Dark Crystal Leather Armor
+(20762,5298,1,1,1,22), -- Sealed Dark Crystalline Leggings
+(20762,5301,1,1,1,10), -- Sealed Tallum Leather Armor
 (20762,5478,1,1,1,1976), -- Sealed Dark Crystal Leather Armor Pattern
 (20762,5479,1,1,1,1391), -- Sealed Tallum Leather Armor Pattern
 (20762,5482,1,1,1,3102), -- Sealed Dark Crystalline Leggings Design
@@ -7726,7 +7727,7 @@ INSERT INTO `droplist` VALUES
 (20763,1902,1,1,-1,128084), -- Elven Earring Beads
 (20763,1941,1,1,-1,50276), -- Brigandine Temper
 (20763,57,639,1270,0,700000), -- Adena
-(20763,11714,1,1,1,590), -- Common Item - Sword of Revolution
+(20763,129,1,1,1,47), -- Sword of Revolution
 (20763,2034,1,1,1,3453), -- Sword of Revolution Blade
 (20763,1867,1,1,2,200000), -- Animal Skin
 (20763,1872,1,1,2,166667), -- Animal Bone
@@ -7738,8 +7739,8 @@ INSERT INTO `droplist` VALUES
 (20764,1902,1,1,-1,114787), -- Elven Earring Beads
 (20764,1903,1,1,-1,188982), -- Elven Ring Piece
 (20764,57,577,1143,0,700000), -- Adena
-(20764,12057,1,1,1,2976), -- Common Item - Mithril Tunic
-(20764,12058,1,1,1,3968), -- Common Item - Mithril Stockings
+(20764,437,1,1,1,131), -- Mithril Tunic
+(20764,470,1,1,1,210), -- Mithril Stockings
 (20764,1944,1,1,1,7468), -- Mithril Tunic Fabric
 (20764,1945,1,1,1,11629), -- Mithril Stocking Design
 (20764,1867,1,1,2,142857), -- Animal Skin
@@ -7752,9 +7753,9 @@ INSERT INTO `droplist` VALUES
 (20765,1904,1,1,-1,91487), -- Elven Necklace Beads
 (20765,2145,1,1,-1,70020), -- Recipe: Mithril Alloy
 (20765,57,497,993,0,700000), -- Adena
-(20765,12322,1,1,1,10309), -- Common Item - Elven Earring
-(20765,12321,1,1,1,8264), -- Common Item - Elven Ring
-(20765,12320,1,1,1,2066), -- Common Item - Elven Necklace
+(20765,850,1,1,1,181), -- Elven Earring
+(20765,881,1,1,1,272), -- Elven Ring
+(20765,913,1,1,1,136), -- Elven Necklace
 (20765,1902,1,1,1,8558), -- Elven Earring Beads
 (20765,1903,1,1,1,14089), -- Elven Ring Piece
 (20765,1904,1,1,1,7883), -- Elven Necklace Beads
@@ -7768,13 +7769,13 @@ INSERT INTO `droplist` VALUES
 (20766,1901,1,1,-1,121045), -- Tiger\'s Eye Earring Stone
 (20766,2154,1,1,-1,93829), -- Recipe: Elven Earring
 (20766,57,445,889,0,700000), -- Adena
-(20766,12038,1,1,1,6494), -- Common Item - Gauntlets
-(20766,12033,1,1,1,5181), -- Common Item - Iron Boots
+(20766,63,1,1,1,263), -- Gauntlets
+(20766,553,1,1,1,263), -- Iron Boots
 (20766,1940,1,1,1,9935), -- Iron Boots Design
-(20766,12035,1,1,1,15625), -- Common Item - Reinforced Leather Boots
-(20766,12045,1,1,1,6494), -- Common Item - Boots of Knowledge
-(20766,12037,1,1,1,9091), -- Common Item - Reinforced Leather Gloves
-(20766,12046,1,1,1,14286), -- Common Item - Gloves of Knowledge
+(20766,2422,1,1,1,263), -- Reinforced Leather Boots
+(20766,2423,1,1,1,263), -- Boots of Knowledge
+(20766,2446,1,1,1,263), -- Reinforced Leather Gloves
+(20766,2447,1,1,1,263), -- Gloves of Knowledge
 (20766,1864,1,1,2,200000), -- Stem
 (20766,1869,1,1,2,90909), -- Iron Ore
 (20766,1878,1,1,2,37037), -- Braided Hemp
@@ -7786,7 +7787,7 @@ INSERT INTO `droplist` VALUES
 (20767,2076,1,1,-1,12289), -- Body Slasher Blade
 (20767,2220,1,1,-1,32441), -- Recipe: Rind Leather Armor
 (20767,57,760,1541,0,700000), -- Adena
-(20767,11759,1,1,1,3012), -- Common Item - Crystallized Ice Bow
+(20767,281,1,1,1,33), -- Crystallized Ice Bow
 (20767,2074,1,1,1,2623), -- Crystallized Ice Bow Shaft
 (20767,1865,1,1,2,76923), -- Varnish
 (20767,1870,1,1,2,71429), -- Coal
@@ -7801,10 +7802,10 @@ INSERT INTO `droplist` VALUES
 (20768,1909,1,1,-1,203930), -- Aquastone Ring Wire
 (20768,2163,1,1,-1,77046), -- Recipe: Earring of Protection
 (20768,57,728,1490,0,700000), -- Adena
-(20768,12091,1,1,1,13889), -- Common Item - Eldarake
+(20768,631,1,1,1,179), -- Eldarake
 (20768,1964,1,1,1,9612), -- Eldarake Temper
-(20768,12090,1,1,1,4065), -- Common Item - Chain Hood
-(20768,12096,1,1,1,3247), -- Common Item - Chain Shield
+(20768,2413,1,1,1,126), -- Chain Hood
+(20768,2495,1,1,1,179), -- Chain Shield
 (20768,2936,1,1,1,8730), -- Chain Hood Pattern
 (20768,2945,1,1,1,9612), -- Chain Shield Fragment
 (20768,1832,1,1,2,83333), -- Greater Antidote
@@ -7820,9 +7821,9 @@ INSERT INTO `droplist` VALUES
 (20769,4469,1,1,-1,6866), -- Dye of Strength <Str+1 Con-1>
 (20769,5220,1,1,-1,48064), -- Metal Hardener
 (20769,57,583,1182,0,700000), -- Adena
-(20769,11736,1,1,1,819), -- Common Item - Claymore
+(20769,70,1,1,1,17), -- Claymore
 (20769,2047,1,1,1,1327), -- Claymore Blade
-(20769,11733,1,1,1,1637), -- Common Item - Elven Long Sword
+(20769,2499,1,1,1,17), -- Elven Long Sword
 (20769,2967,1,1,1,1309), -- Elven Long Sword Blade
 (20769,1866,1,1,2,71429), -- Suede
 (20769,1871,1,1,2,111111), -- Charcoal
@@ -7835,11 +7836,11 @@ INSERT INTO `droplist` VALUES
 (20770,1905,1,1,-1,137195), -- Omen Beast\'s Eye Earring Gemstone
 (20770,1906,1,1,-1,193864), -- Mithril Ring Wire
 (20770,57,696,1393,0,700000), -- Adena
-(20770,11727,1,1,1,190), -- Common Item - Bonebreaker
-(20770,11732,1,1,1,190), -- Common Item - Atuba Hammer
-(20770,11737,1,1,1,190), -- Common Item - Ghost Staff
-(20770,11729,1,1,1,190), -- Common Item - Staff of Life
-(20770,11731,1,1,1,190), -- Common Item - Atuba Mace
+(20770,159,1,1,1,8), -- Bonebreaker
+(20770,187,1,1,1,8), -- Atuba Hammer
+(20770,188,1,1,1,8), -- Ghost Staff
+(20770,189,1,1,1,8), -- Staff of Life
+(20770,190,1,1,1,8), -- Atuba Mace
 (20770,2048,1,1,1,586), -- Bonebreaker Head
 (20770,2049,1,1,1,586), -- Atuba Hammer Head
 (20770,2050,1,1,1,621), -- Ghost Staff Head
@@ -7856,9 +7857,9 @@ INSERT INTO `droplist` VALUES
 (20771,1875,1,1,-1,291994), -- Stone of Purity
 (20771,4042,1,1,-1,72999), -- Enria
 (20771,57,2129,4296,0,700000), -- Adena
-(20771,11935,1,1,1,4), -- Common Item - Deadman\'s Glory (no drop info)
-(20771,11938,1,1,1,4), -- Common Item - Art of Battle Axe
-(20771,11934,1,1,1,4), -- Common Item - Staff of Evil Spirits
+(20771,171,1,1,1,4), -- Deadman\'s Glory
+(20771,175,1,1,1,4), -- Art of Battle Axe
+(20771,210,1,1,1,4), -- Staff of Evil Spirits
 (20771,4116,1,1,1,943), -- Deadman\'s Glory Stone
 (20771,4117,1,1,1,943), -- Art of Battle Axe Blade
 (20771,4118,1,1,1,893), -- Evil Spirit Head
@@ -7873,7 +7874,7 @@ INSERT INTO `droplist` VALUES
 (20772,1986,1,1,-1,44649), -- Full Plate Armor Temper
 (20772,4613,1,1,-1,5828), -- Greater Dye of Strength <Str+4 Con-4>
 (20772,57,2052,4155,0,700000), -- Adena
-(20772,11890,1,1,1,3300), -- Common Item - Great Axe
+(20772,300,1,1,1,15), -- Great Axe
 (20772,4113,1,1,1,3211), -- Great Axe Head
 (20772,1867,1,1,2,166667), -- Animal Skin
 (20772,1872,1,1,2,200000), -- Animal Bone
@@ -7889,9 +7890,9 @@ INSERT INTO `droplist` VALUES
 (20773,5478,1,1,-1,30441), -- Sealed Dark Crystal Leather Armor Pattern
 (20773,5479,1,1,-1,21420), -- Sealed Tallum Leather Armor Pattern
 (20773,57,1748,3569,0,700000), -- Adena
-(20773,12344,1,1,1,218), -- Common Item - Sealed Phoenix Necklace
-(20773,12345,1,1,1,218), -- Common Item - Sealed Phoenix Earring
-(20773,12346,1,1,1,611), -- Common Item - Sealed Phoenix Ring
+(20773,6323,1,1,1,21), -- Sealed Phoenix Necklace
+(20773,6324,1,1,1,28), -- Sealed Phoenix Earring
+(20773,6325,1,1,1,41), -- Sealed Phoenix Ring
 (20773,6341,1,1,1,4930), -- Sealed Phoenix Earring Gemstone
 (20773,6343,1,1,1,3811), -- Sealed Phoenix Necklace Beads
 (20773,6345,1,1,1,6818), -- Sealed Phoenix Ring Gemstone
@@ -7909,10 +7910,10 @@ INSERT INTO `droplist` VALUES
 (20774,1889,1,1,-1,253956), -- Compound Braid
 (20774,5478,1,1,-1,32033), -- Sealed Dark Crystal Leather Armor Pattern
 (20774,57,1844,3751,0,700000), -- Adena
-(20774,12221,1,1,1,497), -- Common Item - Sealed Dark Crystal Gloves
-(20774,12224,1,1,1,497), -- Common Item - Sealed Dark Crystal Boots
-(20774,12229,1,1,1,352), -- Common Item - Sealed Tallum Gloves
-(20774,12231,1,1,1,442), -- Common Item - Sealed Tallum Boots
+(20774,5290,1,1,1,25), -- Sealed Dark Crystal Gloves
+(20774,5291,1,1,1,25), -- Sealed Dark Crystal Boots
+(20774,5295,1,1,1,25), -- Sealed Tallum Gloves
+(20774,5296,1,1,1,25), -- Sealed Tallum Boots
 (20774,5496,1,1,1,3298), -- Sealed Dark Crystal Boots Lining
 (20774,5497,1,1,1,3298), -- Sealed Tallum Boots Lining
 (20774,5508,1,1,1,3298), -- Sealed Dark Crystal Gloves Design
@@ -7964,10 +7965,10 @@ INSERT INTO `droplist` VALUES
 (20778,1903,1,1,-1,135404), -- Elven Ring Piece
 (20778,2290,1,1,-1,4510), -- Recipe: Mithril Dagger
 (20778,57,343,761,0,700000), -- Adena
-(20778,12059,1,1,1,47), -- Common Item - Brigandine Tunic (no drop info, no material info)
+(20778,352,1,1,1,47), -- Brigandine Tunic
 (20778,1941,1,1,1,2782), -- Brigandine Temper
-(20778,12056,1,1,1,75), -- Common Item - Mithril Scale Gaiters
-(20778,12060,1,1,1,75), -- Common Item - Brigandine Gaiters
+(20778,2377,1,1,1,75), -- Mithril Scale Gaiters
+(20778,2378,1,1,1,75), -- Brigandine Gaiters
 (20778,2918,1,1,1,4149), -- Mithril Scale Gaiters Material
 (20778,2919,1,1,1,4149), -- Brigandine Gaiters Material
 (20778,1866,1,1,2,46624), -- Suede
@@ -7980,7 +7981,7 @@ INSERT INTO `droplist` VALUES
 (20779,1904,1,1,-1,67641), -- Elven Necklace Beads
 (20779,2158,1,1,-1,89700), -- Recipe: Mithril Ring
 (20779,57,307,611,0,700000), -- Adena
-(20779,11709,1,1,1,27), -- Common Item - Crucifix of Blood (completely no drop info)
+(20779,318,1,1,1,27), -- Crucifix of Blood
 (20779,2042,1,1,1,1732), -- Crucifix of Blood Piece
 (20779,1866,1,1,2,49954), -- Suede
 (20779,1871,1,1,2,74931), -- Charcoal
@@ -7992,8 +7993,8 @@ INSERT INTO `droplist` VALUES
 (20780,1901,1,1,-1,82051), -- Tiger\'s Eye Earring Stone
 (20780,2980,1,1,-1,79524), -- Recipe: Brigandine Gauntlets
 (20780,57,301,601,0,700000), -- Adena
-(20780,11666,1,1,1,238), -- Common Item - Spiked Club
-(20780,11663,1,1,1,238), -- Common Item - Staff of Magic
+(20780,157,1,1,1,22), -- Spiked Club
+(20780,186,1,1,1,22), -- Staff of Magic
 (20780,2027,1,1,1,1380), -- Spiked Club Head
 (20780,1866,1,1,2,62500), -- Suede
 (20780,1871,1,1,2,100000), -- Charcoal
@@ -8003,8 +8004,8 @@ INSERT INTO `droplist` VALUES
 (20781,1938,1,1,-1,39544), -- Mithril Banded Mail Material
 (20781,2192,1,1,-1,75029), -- Recipe: Kite Shield
 (20781,57,299,595,0,700000), -- Adena
-(20781,12047,1,1,1,4115), -- Common Item - Tunic of Knowledge
-(20781,12048,1,1,1,8547), -- Common Item - Stockings of Knowledge
+(20781,436,1,1,1,206), -- Tunic of Knowledge
+(20781,469,1,1,1,329), -- Stockings of Knowledge
 (20781,1875,1,1,2,1712), -- Stone of Purity
 (20781,1879,1,1,2,6849), -- Cokes
 (20781,1885,1,1,2,4115), -- High Grade Suede
@@ -8026,8 +8027,8 @@ INSERT INTO `droplist` VALUES
 (20783,1935,1,1,-1,15084), -- Scale Mail Fragment
 (20783,2203,1,1,-1,58822), -- Recipe: Mithril Boots
 (20783,57,137,273,0,700000), -- Adena
-(20783,11678,1,1,1,10), -- Common Item - Blood of Saints (no drop info)
-(20783,11676,1,1,1,10), -- Common Item - Tome of Blood
+(20783,316,1,1,1,10), -- Blood of Saints
+(20783,317,1,1,1,10), -- Tome of Blood
 (20783,2030,1,1,1,560), -- Tome of Blood Page
 (20783,1874,1,1,2,2381), -- Oriharukon Ore
 (20783,1878,1,1,2,8333), -- Braided Hemp
@@ -8040,11 +8041,11 @@ INSERT INTO `droplist` VALUES
 (20784,2153,1,1,-1,47454), -- Recipe: Tiger\'s Eye Earring
 (20784,2184,1,1,-1,32051), -- Recipe: Mithril Banded Gaiters
 (20784,57,154,309,0,700000), -- Adena
-(20784,11655,1,1,1,165), -- Common Item - Sword of Magic
-(20784,11667,1,1,1,165), -- Common Item - Two-Handed Sword
-(20784,11675,1,1,1,165), -- Common Item - Crimson Sword
-(20784,11670,1,1,1,165), -- Common Item - Elven Sword
-(20784,11657,1,1,1,165), -- Common Item - Sword of Occult
+(20784,83,1,1,1,8), -- Sword of Magic
+(20784,124,1,1,1,6), -- Two-Handed Sword
+(20784,127,1,1,1,6), -- Crimson Sword
+(20784,130,1,1,1,6), -- Elven Sword
+(20784,144,1,1,1,8), -- Sword of Occult
 (20784,2026,1,1,1,326), -- Two-Handed Sword Edge
 (20784,1875,1,1,2,2747), -- Stone of Purity
 (20784,1879,1,1,2,4950), -- Cokes
@@ -8056,16 +8057,16 @@ INSERT INTO `droplist` VALUES
 (20785,1933,1,1,-1,34617), -- Dark Stocking Fabric
 (20785,2022,1,1,-1,4583), -- Mace of Judgment Head
 (20785,57,149,298,0,700000), -- Adena
-(20785,12068,1,1,1,983), -- Common Item - Rip Gauntlets
-(20785,12070,1,1,1,590), -- Common Item - Boots of Power
+(20785,606,1,1,1,26), -- Rip Gauntlets
+(20785,1124,1,1,1,26), -- Boots of Power
 (20785,1946,1,1,1,1285), -- Rip Gauntlets Pattern
 (20785,1948,1,1,1,1285), -- Boots of Power Pattern
-(20785,12053,1,1,1,1376), -- Common Item - Manticore Skin Boots
-(20785,12062,1,1,1,590), -- Common Item - Brigandine Boots
-(20785,12066,1,1,1,393), -- Common Item - Elven Mithril Boots
-(20785,12055,1,1,1,393), -- Common Item - Manticore Skin Gloves
-(20785,12061,1,1,1,2165), -- Common Item - Brigandine Gauntlets
-(20785,12065,1,1,1,787), -- Common Item - Elven Mithril Gloves
+(20785,2424,1,1,1,26), -- Manticore Skin Boots
+(20785,2425,1,1,1,26), -- Brigandine Boots
+(20785,2426,1,1,1,26), -- Elven Mithril Boots
+(20785,2448,1,1,1,26), -- Manticore Skin Gloves
+(20785,2449,1,1,1,26), -- Brigandine Gauntlets
+(20785,2450,1,1,1,26), -- Elven Mithril Gloves
 (20785,2923,1,1,1,1285), -- Manticore Skin Boot Lining
 (20785,2924,1,1,1,1285), -- Brigandine Boots Design
 (20785,2925,1,1,1,1285), -- Elven Mithril Boots Design
@@ -8085,8 +8086,8 @@ INSERT INTO `droplist` VALUES
 (20786,2155,1,1,-1,52351), -- Recipe: Elven Ring
 (20786,5550,1,1,-1,4349), -- Durable Metal Plate
 (20786,57,166,330,0,700000), -- Adena
-(20786,12054,1,1,1,1575), -- Common Item - Manticore Skin Shirt
-(20786,12052,1,1,1,1770), -- Common Item - Manticore Skin Gaiters
+(20786,395,1,1,1,38), -- Manticore Skin Shirt
+(20786,417,1,1,1,61), -- Manticore Skin Gaiters
 (20786,1942,1,1,1,2150), -- Manticore Skin Shirt Texture
 (20786,1943,1,1,1,3348), -- Manticore Skin Gaiters Pattern
 (20786,1875,1,1,2,1770), -- Stone of Purity
@@ -8101,9 +8102,9 @@ INSERT INTO `droplist` VALUES
 (20787,2029,1,1,-1,4717), -- Gastraphetes Shaft
 (20787,5549,1,1,-1,39547), -- Metallic Thread
 (20787,57,199,397,0,700000), -- Adena
-(20787,12322,1,1,1,1616), -- Common Item - Elven Earring
-(20787,12321,1,1,1,4673), -- Common Item - Elven Ring
-(20787,12320,1,1,1,1616), -- Common Item - Elven Necklace
+(20787,850,1,1,1,73), -- Elven Earring
+(20787,881,1,1,1,110), -- Elven Ring
+(20787,913,1,1,1,55), -- Elven Necklace
 (20787,1902,1,1,1,3453), -- Elven Earring Beads
 (20787,1903,1,1,1,5684), -- Elven Ring Piece
 (20787,1904,1,1,1,3181), -- Elven Necklace Beads
@@ -8119,7 +8120,7 @@ INSERT INTO `droplist` VALUES
 (20788,1901,1,2,-1,96683), -- Tiger\'s Eye Earring Stone
 (20788,2186,1,1,-1,23411), -- Recipe: Brigandine Tunic
 (20788,57,356,708,0,700000), -- Adena
-(20788,11665,1,1,1,1256), -- Common Item - Triple-Edged Jamadhr
+(20788,260,1,1,1,77), -- Triple-Edged Jamadhr
 (20788,1874,1,1,2,3135), -- Oriharukon Ore
 (20788,1878,1,1,2,25000), -- Braided Hemp
 (20788,1884,1,1,2,31250), -- Cord
@@ -8132,10 +8133,10 @@ INSERT INTO `droplist` VALUES
 (20789,2154,1,1,-1,70536), -- Recipe: Elven Earring
 (20789,2188,1,1,-1,47058), -- Recipe: Manticore Skin Gaiters
 (20789,57,333,668,0,700000), -- Adena
-(20789,12043,1,1,1,2141), -- Common Item - Mithril Banded Mail
-(20789,12036,1,1,1,2857), -- Common Item - Reinforced Leather Shirt
-(20789,12042,1,1,1,3922), -- Common Item - Mithril Banded Gaiters
-(20789,12034,1,1,1,3571), -- Common Item - Reinforced Leather Gaiters
+(20789,393,1,1,1,77), -- Mithril Banded Mail
+(20789,394,1,1,1,77), -- Reinforced Leather Shirt
+(20789,415,1,1,1,123), -- Mithril Banded Gaiters
+(20789,416,1,1,1,123), -- Reinforced Leather Gaiters
 (20789,1938,1,1,1,3925), -- Mithril Banded Mail Material
 (20789,1939,1,1,1,5129), -- Mithril Banded Gaiters Material
 (20789,1341,10,30,2,166667), -- Bone Arrow
@@ -8150,8 +8151,8 @@ INSERT INTO `droplist` VALUES
 (20790,1902,1,1,-1,85432), -- Elven Earring Beads
 (20790,2039,1,1,-1,8536), -- Bich\'Hwa Edge
 (20790,57,428,852,0,700000), -- Adena
-(20790,11685,1,1,1,336), -- Common Item - Maingauche
-(20790,11706,1,1,1,336), -- Common Item - Cursed Maingauche
+(20790,224,1,1,1,16), -- Maingauche
+(20790,1660,1,1,1,16), -- Cursed Maingauche
 (20790,2038,1,1,1,1152), -- Maingauche Edge
 (20790,2044,1,1,1,1152), -- Cursed Maingauche Edge
 (20790,1341,10,30,2,166667), -- Bone Arrow
@@ -8168,10 +8169,10 @@ INSERT INTO `droplist` VALUES
 (20791,2041,1,1,-1,16162), -- War Pick Head
 (20791,2196,1,1,-1,59380), -- Recipe: Plate Gaiters
 (20791,57,736,1466,0,700000), -- Adena
-(20791,12059,1,1,1,702), -- Common Item - Brigandine Tunic
+(20791,352,1,1,1,84), -- Brigandine Tunic
 (20791,1941,1,1,1,4964), -- Brigandine Temper
-(20791,12056,1,1,1,2809), -- Common Item - Mithril Scale Gaiters
-(20791,12060,1,1,1,4219), -- Common Item - Brigandine Gaiters
+(20791,2377,1,1,1,134), -- Mithril Scale Gaiters
+(20791,2378,1,1,1,134), -- Brigandine Gaiters
 (20791,2918,1,1,1,7405), -- Mithril Scale Gaiters Material
 (20791,2919,1,1,1,7405), -- Brigandine Gaiters Material
 (20791,1876,1,1,2,29412), -- Mithril Ore
@@ -8185,11 +8186,11 @@ INSERT INTO `droplist` VALUES
 (20792,2035,1,1,-1,13647), -- Tarbar Head
 (20792,2202,1,1,-1,137841), -- Recipe: Assault Boots
 (20792,57,684,1363,0,700000), -- Adena
-(20792,11686,1,1,1,257), -- Common Item - Morning Star
-(20792,11693,1,1,1,257), -- Common Item - Goat Head Staff
-(20792,11708,1,1,1,257), -- Common Item - Tarbar
-(20792,11697,1,1,1,257), -- Common Item - Skull Breaker
-(20792,11713,1,1,1,257), -- Common Item - Heavy Bone Club
+(20792,88,1,1,1,10), -- Morning Star
+(20792,90,1,1,1,10), -- Goat Head Staff
+(20792,158,1,1,1,10), -- Tarbar
+(20792,169,1,1,1,10), -- Skull Breaker
+(20792,172,1,1,1,10), -- Heavy Bone Club
 (20792,2031,1,1,1,706), -- Morning Star Head
 (20792,2032,1,1,1,644), -- Goat Head Staff Head
 (20792,2035,1,1,1,706), -- Tarbar Head
@@ -8206,8 +8207,8 @@ INSERT INTO `droplist` VALUES
 (20793,1881,1,2,-1,196153), -- Coarse Bone Powder
 (20793,2037,1,1,-1,14892), -- Heavy Bone Club Head
 (20793,57,740,1478,0,700000), -- Adena
-(20793,11703,1,1,1,782), -- Common Item - Winged Spear
-(20793,11712,1,1,1,224), -- Common Item - War Pick
+(20793,93,1,1,1,28), -- Winged Spear
+(20793,294,1,1,1,28), -- War Pick
 (20793,2033,1,1,1,2121), -- Winged Spear Blade
 (20793,2041,1,1,1,2121), -- War Pick Head
 (20793,1341,10,30,2,333333), -- Bone Arrow
@@ -8222,7 +8223,7 @@ INSERT INTO `droplist` VALUES
 (20794,1952,1,1,-1,43994), -- Salamander Skin Mail Texture
 (20794,2991,1,1,-1,109007), -- Recipe: Karmian Boots
 (20794,57,678,1353,0,700000), -- Adena
-(20794,11726,1,1,1,39), -- Common Item - Mithril Dagger (no drop info)
+(20794,225,1,1,1,39), -- Mithril Dagger
 (20794,2052,1,1,1,2991), -- Mithril Dagger Blade
 (20794,1866,1,1,2,71429), -- Suede
 (20794,1871,1,1,2,100000), -- Charcoal
@@ -8235,9 +8236,9 @@ INSERT INTO `droplist` VALUES
 (20795,2161,1,1,-1,125863), -- Recipe: Aquastone Ring
 (20795,4469,1,1,-1,7408), -- Dye of Strength <Str+1 Con-1>
 (20795,57,654,1246,0,700000), -- Adena
-(20795,12325,1,1,1,13699), -- Common Item - Omen Beast\'s Eye Earring
-(20795,12323,1,1,1,55556), -- Common Item - Mithril Ring
-(20795,12324,1,1,1,6849), -- Common Item - Necklace of Darkness
+(20795,851,1,1,1,180), -- Omen Beast\'s Eye Earring
+(20795,882,1,1,1,269), -- Mithril Ring
+(20795,914,1,1,1,134), -- Necklace of Darkness
 (20795,1905,1,1,1,10554), -- Omen Beast\'s Eye Earring Gemstone
 (20795,1906,1,1,1,14914), -- Mithril Ring Wire
 (20795,1907,1,1,1,7548), -- Necklace of Darkness Gem
@@ -8252,7 +8253,7 @@ INSERT INTO `droplist` VALUES
 (20796,2199,1,1,-1,58509), -- Recipe: Karmian Stockings
 (20796,2930,1,1,-1,111783), -- Plate Helmet Design
 (20796,57,671,1364,0,700000), -- Adena
-(20796,12074,1,1,1,6173), -- Common Item - Salamander Skin Mail
+(20796,396,1,1,1,163), -- Salamander Skin Mail
 (20796,1952,1,1,1,11152), -- Salamander Skin Mail Texture
 (20796,737,1,1,2,8621), -- Scroll of Resurrection
 (20796,1868,1,1,2,166667), -- Thread
@@ -8268,9 +8269,9 @@ INSERT INTO `droplist` VALUES
 (20797,2163,1,1,-1,107465), -- Recipe: Earring of Protection
 (20797,4440,1,1,-1,7339), -- Recipe: Knuckle Duster
 (20797,57,1025,2077,0,700000), -- Adena
-(20797,12086,1,1,1,3472), -- Common Item - Mithril Shirt
+(20797,397,1,1,1,132), -- Mithril Shirt
 (20797,1961,1,1,1,7965), -- Mithril Shirt Fabric
-(20797,12084,1,1,1,1736), -- Common Item - Tempered Mithril Gaiters
+(20797,2387,1,1,1,211), -- Tempered Mithril Gaiters
 (20797,2935,1,1,1,13232), -- Tempered Mithril Gaiters Fragment
 (20797,1864,1,1,2,200000), -- Stem
 (20797,1869,1,1,2,125000), -- Iron Ore
@@ -8285,8 +8286,8 @@ INSERT INTO `droplist` VALUES
 (20798,4042,1,1,-1,28419), -- Enria
 (20798,4043,1,1,-1,56838), -- Asofe
 (20798,57,826,1677,0,700000), -- Adena
-(20798,11766,1,1,1,618), -- Common Item - Flamberge
-(20798,11756,1,1,1,618), -- Common Item - Stormbringer
+(20798,71,1,1,1,18), -- Flamberge
+(20798,72,1,1,1,18), -- Stormbringer
 (20798,2059,1,1,1,1497), -- Flamberge Blade
 (20798,2060,1,1,1,1600), -- Stormbringer Blade
 (20798,1864,1,1,2,166667), -- Stem
@@ -8301,8 +8302,8 @@ INSERT INTO `droplist` VALUES
 (20799,2164,1,1,-1,132064), -- Recipe: Ring of Protection
 (20799,2317,1,1,-1,5982), -- Recipe: Bec de Corbin
 (20799,57,828,1693,0,700000), -- Adena
-(20799,12095,1,1,1,4587), -- Common Item - Chain Mail Shirt
-(20799,12094,1,1,1,1969), -- Common Item - Chain Gaiters
+(20799,354,1,1,1,81), -- Chain Mail Shirt
+(20799,381,1,1,1,129), -- Chain Gaiters
 (20799,1959,1,1,1,5465), -- Chain Mail Shirt Material
 (20799,1960,1,1,1,11116), -- Chain Gaiters Part
 (20799,1866,1,1,2,71429), -- Suede
@@ -8319,8 +8320,8 @@ INSERT INTO `droplist` VALUES
 (20800,1966,1,1,-1,58706), -- Plated Leather Fragment
 (20800,2223,1,1,-1,62324), -- Recipe: Tower Shield
 (20800,57,777,1584,0,700000), -- Adena
-(20800,12110,1,1,1,730), -- Common Item - Dwarven Chain Mail Shirt
-(20800,12109,1,1,1,4386), -- Common Item - Dwarven Chain Gaiters
+(20800,355,1,1,1,56), -- Dwarven Chain Mail Shirt
+(20800,382,1,1,1,89), -- Dwarven Chain Gaiters
 (20800,1968,1,1,1,4292), -- Dwarven Chain Mail Shirt Material
 (20800,1969,1,1,1,6808), -- Dwarven Chain Gaiters Material
 (20800,1867,1,1,2,100000), -- Animal Skin
@@ -8337,7 +8338,7 @@ INSERT INTO `droplist` VALUES
 (20801,2330,1,1,-1,4513), -- Recipe: Homunkulus\'s Sword
 (20801,2946,1,1,-1,108463), -- Plate Leather Gloves Design
 (20801,57,942,1907,0,700000), -- Adena
-(20801,11766,1,1,1,2137), -- Common Item - Knuckle Duster
+(20801,4233,1,1,1,30), -- Knuckle Duster
 (20801,1539,1,1,2,11765), -- Greater Healing Potion
 (20801,1868,1,1,2,142857), -- Thread
 (20801,1873,1,1,2,28571), -- Silver Nugget
@@ -8355,7 +8356,7 @@ INSERT INTO `droplist` VALUES
 (20802,2333,1,1,-1,4258), -- Recipe: Sword of Nightmare
 (20802,4039,1,1,-1,61038), -- Mold Glue
 (20802,57,886,1798,0,700000), -- Adena
-(20802,11792,1,1,1,29), -- Common Item - Horn of Glory (no drop info, no material info)
+(20802,325,1,1,1,29), -- Horn of Glory
 (20802,2088,1,1,1,2859), -- Horn of Glory Fragment
 (20802,737,1,1,2,11591), -- Scroll of Resurrection
 (20802,1342,10,30,2,200000), -- Fine Steel Arrow
@@ -8370,8 +8371,8 @@ INSERT INTO `droplist` VALUES
 (20803,4043,1,1,-1,114615), -- Asofe
 (20803,4044,1,3,-1,114615), -- Thons
 (20803,57,1666,3379,0,700000), -- Adena
-(20803,11800,1,1,1,577), -- Common Item - Grace Dagger
-(20803,11803,1,1,1,1155), -- Common Item - Dark Screamer
+(20803,231,1,1,1,17), -- Grace Dagger
+(20803,233,1,1,1,17), -- Dark Screamer
 (20803,2106,1,1,1,1938), -- Grace Dagger Edge
 (20803,2107,1,1,1,1938), -- Dark Screamer Edge
 (20803,1895,1,1,2,47619), -- Metallic Fiber
@@ -8387,10 +8388,10 @@ INSERT INTO `droplist` VALUES
 (20804,2160,1,1,-1,108461), -- Recipe: Moonstone Earring
 (20804,4470,1,1,-1,9607), -- Dye of Strength <Str+1 Dex-1>
 (20804,57,830,1660,0,700000), -- Adena
-(20804,12073,1,1,1,8772), -- Common Item - Square Shield
+(20804,630,1,1,1,274), -- Square Shield
 (20804,1956,1,1,1,15971), -- Square Shield Fragment
-(20804,12079,1,1,1,5780), -- Common Item - Plate Helmet
-(20804,12078,1,1,1,8000), -- Common Item - Plate Shield
+(20804,2412,1,1,1,192), -- Plate Helmet
+(20804,2494,1,1,1,274), -- Plate Shield
 (20804,2930,1,1,1,11343), -- Plate Helmet Design
 (20804,2934,1,1,1,15971), -- Plate Shield Fragment
 (20804,735,1,1,2,9901), -- Potion of Alacrity
@@ -8405,11 +8406,11 @@ INSERT INTO `droplist` VALUES
 (20805,2053,1,1,-1,15044), -- Scallop Jamadhr Edge
 (20805,2162,1,1,-1,87895), -- Recipe: Aquastone Necklace
 (20805,57,892,1903,0,700000), -- Adena
-(20805,11727,1,1,1,159), -- Common Item - Bonebreaker
-(20805,11732,1,1,1,476), -- Common Item - Atuba Hammer
-(20805,11737,1,1,1,265), -- Common Item - Ghost Staff
-(20805,11729,1,1,1,424), -- Common Item - Staff of Life
-(20805,11731,1,1,1,371), -- Common Item - Atuba Mace
+(20805,159,1,1,1,11), -- Bonebreaker
+(20805,187,1,1,1,11), -- Atuba Hammer
+(20805,188,1,1,1,11), -- Ghost Staff
+(20805,189,1,1,1,11), -- Staff of Life
+(20805,190,1,1,1,11), -- Atuba Mace
 (20805,2048,1,1,1,756), -- Bonebreaker Head
 (20805,2049,1,1,1,756), -- Atuba Hammer Head
 (20805,2050,1,1,1,801), -- Ghost Staff Head
@@ -8424,9 +8425,9 @@ INSERT INTO `droplist` VALUES
 (20806,2204,1,1,-1,34598), -- Recipe: Chain Mail Shirt
 (20806,2934,1,2,-1,198321), -- Plate Shield Fragment
 (20806,57,846,1718,0,700000), -- Adena
-(20806,11736,1,1,1,986), -- Common Item - Claymore
+(20806,70,1,1,1,25), -- Claymore
 (20806,2047,1,1,1,1929), -- Claymore Blade
-(20806,11733,1,1,1,455), -- Common Item - Elven Long Sword
+(20806,2499,1,1,1,25), -- Elven Long Sword
 (20806,2967,1,1,1,1903), -- Elven Long Sword Blade
 (20806,1865,1,1,2,142857), -- Varnish
 (20806,1870,1,1,2,142857), -- Coal
@@ -8441,8 +8442,8 @@ INSERT INTO `droplist` VALUES
 (20807,1910,1,1,-1,138290), -- Aquastone Necklace Chain
 (20807,2164,1,2,-1,141269), -- Recipe: Ring of Protection
 (20807,57,887,1813,0,700000), -- Adena
-(20807,12099,1,1,1,1328), -- Common Item - Karmian Tunic
-(20807,12100,1,1,1,4878), -- Common Item - Karmian Stockings
+(20807,439,1,1,1,115), -- Karmian Tunic
+(20807,471,1,1,1,184), -- Karmian Stockings
 (20807,1954,1,1,1,11537), -- Karmian Stocking Design
 (20807,1962,1,1,1,6944), -- Karmian Tunic Pattern
 (20807,737,1,1,2,10204), -- Scroll of Resurrection
@@ -8461,8 +8462,8 @@ INSERT INTO `droplist` VALUES
 (20808,1954,1,1,-1,121027), -- Karmian Stocking Design
 (20808,2163,1,1,-1,116149), -- Recipe: Earring of Protection
 (20808,57,1103,2236,0,700000), -- Adena
-(20808,12099,1,1,1,5747), -- Common Item - Karmian Tunic
-(20808,12100,1,1,1,8621), -- Common Item - Karmian Stockings
+(20808,439,1,1,1,142), -- Karmian Tunic
+(20808,471,1,1,1,227), -- Karmian Stockings
 (20808,1954,1,1,1,14301), -- Karmian Stocking Design
 (20808,1962,1,1,1,8608), -- Karmian Tunic Pattern
 (20808,1894,1,1,2,5181), -- Crafted Leather
@@ -8477,10 +8478,10 @@ INSERT INTO `droplist` VALUES
 (20809,4439,1,1,-1,278503), -- Avadon Shield Fragment
 (20809,4973,1,1,-1,43704), -- Recipe: Earring of Black Ore (70%)
 (20809,57,1955,3973,0,700000), -- Adena
-(20809,12161,1,1,1,138), -- Common Item - Zubei\'s Breastplate
-(20809,12152,1,1,1,415), -- Common Item - Zubei\'s Gaiters
-(20809,12173,1,1,1,138), -- Common Item - Avadon Breastplate
-(20809,12172,1,1,1,553), -- Common Item - Avadon Gaiters
+(20809,357,1,1,1,15), -- Zubei\'s Breastplate
+(20809,383,1,1,1,23), -- Zubei\'s Gaiters
+(20809,2376,1,1,1,15), -- Avadon Breastplate
+(20809,2379,1,1,1,23), -- Avadon Gaiters
 (20809,4056,1,1,1,2699), -- Zubei\'s Breastplate Part
 (20809,4057,1,1,1,4171), -- Zubei\'s Gaiter Material
 (20809,4064,1,1,1,2699), -- Avadon Breastplate Part
@@ -8499,8 +8500,8 @@ INSERT INTO `droplist` VALUES
 (20810,4109,1,1,-1,22751), -- Kris Edge
 (20810,4974,1,1,-1,65557), -- Recipe: Ring of Black Ore (70%)
 (20810,57,1955,3974,0,700000), -- Adena
-(20810,11918,1,1,1,101), -- Common Item - Heavy War Axe
-(20810,11908,1,1,1,201), -- Common Item - Sprite\'s Staff
+(20810,91,1,1,1,7), -- Heavy War Axe
+(20810,92,1,1,1,7), -- Sprite\'s Staff
 (20810,4105,1,1,1,1707), -- Heavy War Axe Head
 (20810,4106,1,1,1,1679), -- Sprite\'s Staff Head
 (20810,1874,1,1,2,6250), -- Oriharukon Ore
@@ -8517,9 +8518,9 @@ INSERT INTO `droplist` VALUES
 (20811,1875,1,2,-1,318218), -- Stone of Purity
 (20811,4040,1,1,-1,95465), -- Mold Lubricant
 (20811,57,2315,4695,0,700000), -- Adena
-(20811,11889,1,1,1,267), -- Common Item - Great Sword
-(20811,11916,1,1,1,267), -- Common Item - Keshanberk
-(20811,11900,1,1,1,667), -- Common Item - Sword of Valhalla
+(20811,78,1,1,1,6), -- Great Sword
+(20811,142,1,1,1,6), -- Keshanberk
+(20811,148,1,1,1,6), -- Sword of Valhalla
 (20811,4104,1,1,1,1345), -- Great Sword Blade
 (20811,4107,1,1,1,1324), -- Keshanberk Blade
 (20811,4108,1,1,1,1324), -- Sword of Valhalla Blade
@@ -8539,7 +8540,7 @@ INSERT INTO `droplist` VALUES
 (20812,4613,1,1,-1,6500), -- Greater Dye of Strength <Str+4 Con-4>
 (20812,4617,1,1,-1,6500), -- Greater Dye of Dexterity <Dex+4 Str-4>
 (20812,57,2288,4634,0,700000), -- Adena
-(20812,11896,1,1,1,483), -- Common Item - Dark Elven Long Bow
+(20812,284,1,1,1,17), -- Dark Elven Long Bow
 (20812,4112,1,1,1,3940), -- Dark Elven Longbow Shaft
 (20812,1867,1,1,2,250000), -- Animal Skin
 (20812,1872,1,1,2,250000), -- Animal Bone
@@ -8553,10 +8554,10 @@ INSERT INTO `droplist` VALUES
 (20813,4982,1,1,-1,21348), -- Recipe: Blue Wolf Gaiters (60%)
 (20813,5230,1,1,-1,5721), -- Recipe: Mithril Arrow (100%)
 (20813,57,2083,4219,0,700000), -- Adena
-(20813,12201,1,1,1,469), -- Common Item - Blue Wolf Tunic
-(20813,12192,1,1,1,469), -- Common Item - Tunic of Doom
-(20813,12203,1,1,1,469), -- Common Item - Blue Wolf Stockings
-(20813,12205,1,1,1,469), -- Common Item - Stockings of Doom
+(20813,2398,1,1,1,14), -- Blue Wolf Tunic
+(20813,2399,1,1,1,14), -- Tunic of Doom
+(20813,2403,1,1,1,21), -- Blue Wolf Stockings
+(20813,2404,1,1,1,21), -- Stockings of Doom
 (20813,4084,1,1,1,2753), -- Blue Wolf Tunic Fabric
 (20813,4085,1,1,1,2753), -- Tunic of Doom Pattern
 (20813,4086,1,1,1,3717), -- Blue Wolf Stockings Pattern
@@ -8573,10 +8574,10 @@ INSERT INTO `droplist` VALUES
 (20814,4053,1,1,-1,212371), -- Ring of Black Ore Gemstone
 (20814,5230,1,1,-1,6606), -- Recipe: Mithril Arrow (100%)
 (20814,57,2405,4872,0,700000), -- Adena
-(20814,12188,1,1,1,1052), -- Common Item - Boots of Doom
-(20814,12189,1,1,1,1842), -- Common Item - Blue Wolf Boots
-(20814,12187,1,1,1,789), -- Common Item - Doom Gloves
-(20814,12190,1,1,1,2101), -- Common Item - Blue Wolf Gloves
+(20814,601,1,1,1,46), -- Boots of Doom
+(20814,2439,1,1,1,46), -- Blue Wolf Boots
+(20814,2475,1,1,1,46), -- Doom Gloves
+(20814,2487,1,1,1,46), -- Blue Wolf Gloves
 (20814,4090,1,1,1,8211), -- Blue Wolf Boots Design
 (20814,4091,1,1,1,8211), -- Doom Gloves Part
 (20814,4096,1,1,1,8211), -- Blue Wolf Gloves Fabric
@@ -8595,8 +8596,8 @@ INSERT INTO `droplist` VALUES
 (20815,4054,1,1,-1,121075), -- Necklace of Black Ore Beads
 (20815,4984,1,1,-1,17414), -- Recipe: Blue Wolf Leather Armor (60%)
 (20815,57,2984,6041,0,700000), -- Adena
-(20815,12194,1,1,1,260), -- Common Item - Blue Wolf Leather Armor
-(20815,12186,1,1,1,260), -- Common Item - Leather Armor of Doom
+(20815,2391,1,1,1,26), -- Blue Wolf Leather Armor
+(20815,2392,1,1,1,26), -- Leather Armor of Doom
 (20815,4082,1,1,1,5129), -- Blue Wolf Leather Armor Texture
 (20815,4083,1,1,1,5129), -- Leather Armor of Doom Design
 (20815,1865,1,1,2,200000), -- Varnish
@@ -8612,8 +8613,8 @@ INSERT INTO `droplist` VALUES
 (20816,4039,1,1,-1,170952), -- Mold Glue
 (20816,5230,1,1,-1,6838), -- Recipe: Mithril Arrow (100%)
 (20816,57,2490,5040,0,700000), -- Adena
-(20816,12194,1,1,1,1321), -- Common Item - Blue Wolf Leather Armor
-(20816,12186,1,1,1,377), -- Common Item - Leather Armor of Doom
+(20816,2391,1,1,1,22), -- Blue Wolf Leather Armor
+(20816,2392,1,1,1,22), -- Leather Armor of Doom
 (20816,4082,1,1,1,4279), -- Blue Wolf Leather Armor Texture
 (20816,4083,1,1,1,4279), -- Leather Armor of Doom Design
 (20816,1864,1,3,2,142857), -- Stem
@@ -8630,7 +8631,7 @@ INSERT INTO `droplist` VALUES
 (20817,4053,1,1,-1,213331), -- Ring of Black Ore Gemstone
 (20817,5230,1,1,-1,6636), -- Recipe: Mithril Arrow (100%)
 (20817,57,2419,4891,0,700000), -- Adena
-(20817,11933,1,1,1,482), -- Common Item - Bellion Cestus
+(20817,268,1,1,1,12), -- Bellion Cestus
 (20817,4120,1,1,1,3212), -- Bellion Cestus Edge
 (20817,1865,1,1,2,166667), -- Varnish
 (20817,1870,1,1,2,166667), -- Coal
@@ -8646,7 +8647,7 @@ INSERT INTO `droplist` VALUES
 (20818,4105,1,1,-1,28426), -- Heavy War Axe Head
 (20818,4620,1,1,-1,6852), -- Greater Dye of Intelligence <Int+4 Wit-4>
 (20818,57,2415,4882,0,700000), -- Adena
-(20818,11944,1,1,1,680), -- Common Item - Bow of Peril
+(20818,287,1,1,1,12), -- Bow of Peril
 (20818,4121,1,1,1,3196), -- Bow of Peril Shaft
 (20818,1866,1,1,2,83333), -- Suede
 (20818,1871,1,1,2,142857), -- Charcoal
@@ -8663,9 +8664,9 @@ INSERT INTO `droplist` VALUES
 (20819,4078,1,1,-1,72249), -- Blue Wolf Breastplate Part
 (20819,5230,1,1,-1,6595), -- Recipe: Mithril Arrow (100%)
 (20819,57,2405,4861,0,700000), -- Adena
-(20819,11935,1,1,1,147), -- Common Item - Deadman\'s Glory
-(20819,11938,1,1,1,147), -- Common Item - Art of Battle Axe
-(20819,11934,1,1,1,147), -- Common Item - Staff of Evil Spirits
+(20819,171,1,1,1,4), -- Deadman\'s Glory
+(20819,175,1,1,1,4), -- Art of Battle Axe
+(20819,210,1,1,1,4), -- Staff of Evil Spirits
 (20819,4116,1,1,1,1065), -- Deadman\'s Glory Stone
 (20819,4117,1,1,1,1065), -- Art of Battle Axe Blade
 (20819,4118,1,1,1,1009), -- Evil Spirit Head
@@ -8683,9 +8684,9 @@ INSERT INTO `droplist` VALUES
 (20820,4080,1,1,-1,175157), -- Blue Wolf Gaiters Material
 (20820,5230,1,1,-1,11354), -- Recipe: Mithril Arrow (100%)
 (20820,57,4130,8372,0,700000), -- Adena
-(20820,12341,1,1,1,1377), -- Common Item - Earring of Black Ore
-(20820,12343,1,1,1,4808), -- Common Item - Ring of Black Ore
-(20820,12342,1,1,1,1835), -- Common Item - Necklace of Black Ore
+(20820,864,1,1,1,91), -- Earring of Black Ore
+(20820,895,1,1,1,137), -- Ring of Black Ore
+(20820,926,1,1,1,69), -- Necklace of Black Ore
 (20820,4052,1,1,1,14841), -- Earring of Black Ore Piece
 (20820,4053,1,1,1,17967), -- Ring of Black Ore Gemstone
 (20820,4054,1,1,1,8257), -- Necklace of Black Ore Beads
@@ -8703,7 +8704,7 @@ INSERT INTO `droplist` VALUES
 (20821,4080,1,1,-1,137424), -- Blue Wolf Gaiters Material
 (20821,4084,1,1,-1,116108), -- Blue Wolf Tunic Fabric
 (20821,57,3241,6568,0,700000), -- Adena
-(20821,11932,1,1,1,297), -- Common Item - Lance
+(20821,97,1,1,1,16), -- Lance
 (20821,4115,1,1,1,4305), -- Lance Blade
 (20821,1867,1,3,2,166667), -- Animal Skin
 (20821,1872,1,3,2,100000), -- Animal Bone
@@ -8718,7 +8719,7 @@ INSERT INTO `droplist` VALUES
 (20822,1894,1,1,-1,235548), -- Crafted Leather
 (20822,4077,1,1,-1,301984), -- Doom Shield Fragment
 (20822,57,3256,6601,0,700000), -- Adena
-(20822,11932,1,1,1,231), -- Common Item - Lance
+(20822,97,1,1,1,16), -- Lance
 (20822,4115,1,1,1,4326), -- Lance Blade
 (20822,1868,1,3,2,200000), -- Thread
 (20822,1873,1,1,2,76923), -- Silver Nugget
@@ -8735,10 +8736,10 @@ INSERT INTO `droplist` VALUES
 (20823,4089,1,1,-1,280431), -- Doom Helmet Pattern
 (20823,5416,1,1,-1,30303), -- Recipe: Sealed Dark Crystal Breastplate(60%)
 (20823,57,3581,7317,0,700000), -- Adena
-(20823,12201,1,1,1,2415), -- Common Item - Blue Wolf Tunic
-(20823,12192,1,1,1,691), -- Common Item - Tunic of Doom
-(20823,12203,1,1,1,2762), -- Common Item - Blue Wolf Stockings
-(20823,12205,1,1,1,345), -- Common Item - Stockings of Doom
+(20823,2398,1,1,1,23), -- Blue Wolf Tunic
+(20823,2399,1,1,1,23), -- Tunic of Doom
+(20823,2403,1,1,1,37), -- Blue Wolf Stockings
+(20823,2404,1,1,1,37), -- Stockings of Doom
 (20823,4084,1,1,1,4760), -- Blue Wolf Tunic Fabric
 (20823,4085,1,1,1,4760), -- Tunic of Doom Pattern
 (20823,4086,1,1,1,6427), -- Blue Wolf Stockings Pattern
@@ -8757,9 +8758,9 @@ INSERT INTO `droplist` VALUES
 (20824,4081,1,1,-1,69258), -- Doom Plate Armor Temper
 (20824,5424,1,1,-1,19448), -- Recipe: Sealed Dark Crystal Gaiters(60%)
 (20824,57,3391,6929,0,700000), -- Adena
-(20824,12341,1,1,1,2558), -- Common Item - Earring of Black Ore
-(20824,12343,1,1,1,2865), -- Common Item - Ring of Black Ore
-(20824,12342,1,1,1,1522), -- Common Item - Necklace of Black Ore
+(20824,864,1,1,1,75), -- Earring of Black Ore
+(20824,895,1,1,1,113), -- Ring of Black Ore
+(20824,926,1,1,1,57), -- Necklace of Black Ore
 (20824,4052,1,1,1,12247), -- Earring of Black Ore Piece
 (20824,4053,1,1,1,14827), -- Ring of Black Ore Gemstone
 (20824,4054,1,1,1,6814), -- Necklace of Black Ore Beads
@@ -8777,9 +8778,9 @@ INSERT INTO `droplist` VALUES
 (20825,1807,1,1,-1,9816), -- Recipe: Soulshot: A-Grade
 (20825,1876,1,3,-1,736209), -- Mithril Ore
 (20825,57,3566,7246,0,700000), -- Adena
-(20825,12226,1,1,1,2114), -- Common Item - Sealed Dark Crystal Helmet
-(20825,12225,1,1,1,1389), -- Common Item - Sealed Dark Crystal Shield
-(20825,12234,1,1,1,926), -- Common Item - Sealed Tallum Helmet
+(20825,5289,1,1,1,42), -- Sealed Dark Crystal Helmet
+(20825,5292,1,1,1,60), -- Sealed Dark Crystal Shield
+(20825,5294,1,1,1,42), -- Sealed Tallum Helmet
 (20825,5494,1,1,1,7612), -- Sealed Dark Crystal Shield Fragment
 (20825,5525,1,1,1,5603), -- Sealed Dark Crystal Helmet Design
 (20825,5526,1,1,1,5603), -- Sealed Tallum Helm Design
@@ -8796,9 +8797,9 @@ INSERT INTO `droplist` VALUES
 (20826,4041,1,1,-1,58279), -- Mold Hardener
 (20826,5478,1,1,-1,56358), -- Sealed Dark Crystal Leather Armor Pattern
 (20826,57,3245,6597,0,700000), -- Adena
-(20826,12227,1,1,1,1041), -- Common Item - Sealed Dark Crystal breastplate
-(20826,12220,1,1,1,2079), -- Common Item - Sealed Dark Crystal Gaiters
-(20826,12233,1,1,1,347), -- Common Item - Sealed Tallum Plate Armor
+(20826,5287,1,1,1,15), -- Sealed Dark Crystal breastplate
+(20826,5288,1,1,1,23), -- Sealed Dark Crystal Gaiters
+(20826,5293,1,1,1,10), -- Sealed Tallum Plate Armor
 (20826,5520,1,1,1,2129), -- Sealed Dark Crystal Breastplate Pattern
 (20826,5521,1,1,1,1502), -- Sealed Tallum Plate Armor Pattern
 (20826,5524,1,1,1,3253), -- Sealed Dark Crystal Gaiters Pattern
@@ -8816,9 +8817,9 @@ INSERT INTO `droplist` VALUES
 (20827,4117,1,1,-1,35684), -- Art of Battle Axe Blade
 (20827,4118,1,1,-1,33808), -- Evil Spirit Head
 (20827,57,3958,8033,0,700000), -- Adena
-(20827,12222,1,1,1,517), -- Common Item - Sealed Dark Crystal Leather Armor
-(20827,12228,1,1,1,1292), -- Common Item - Sealed Dark Crystalline Leggings
-(20827,12230,1,1,1,259), -- Common Item - Sealed Tallum Leather Armor
+(20827,5297,1,1,1,24), -- Sealed Dark Crystal Leather Armor
+(20827,5298,1,1,1,38), -- Sealed Dark Crystalline Leggings
+(20827,5301,1,1,1,16), -- Sealed Tallum Leather Armor
 (20827,5478,1,1,1,3381), -- Sealed Dark Crystal Leather Armor Pattern
 (20827,5479,1,1,1,2379), -- Sealed Tallum Leather Armor Pattern
 (20827,5482,1,1,1,5306), -- Sealed Dark Crystalline Leggings Design
@@ -8836,9 +8837,9 @@ INSERT INTO `droplist` VALUES
 (20828,4121,1,1,-1,40562), -- Bow of Peril Shaft
 (20828,5479,1,1,-1,55110), -- Sealed Tallum Leather Armor Pattern
 (20828,57,4514,9172,0,700000), -- Adena
-(20828,12232,1,1,1,1225), -- Common Item - Sealed Tallum Tunic
-(20828,12235,1,1,1,1225), -- Common Item - Sealed Tallum Stockings
-(20828,12223,1,1,1,612), -- Common Item - Sealed Dark Crystal Robe
+(20828,5304,1,1,1,27), -- Sealed Tallum Tunic
+(20828,5305,1,1,1,43), -- Sealed Tallum Stockings
+(20828,5308,1,1,1,19), -- Sealed Dark Crystal Robe
 (20828,5485,1,1,1,3855), -- Sealed Tallum Tunic Texture
 (20828,5486,1,1,1,2713), -- Sealed Dark Crystal Robe Fabric
 (20828,5489,1,1,1,6051), -- Sealed Tallum Stockings Fabric
@@ -8854,9 +8855,9 @@ INSERT INTO `droplist` VALUES
 (20829,5479,1,1,-1,73868), -- Sealed Tallum Leather Armor Pattern
 (20829,5550,1,1,-1,166449), -- Durable Metal Plate
 (20829,57,6036,12290,0,700000), -- Adena
-(20829,12227,1,1,1,483), -- Common Item - Sealed Dark Crystal breastplate
-(20829,12220,1,1,1,1449), -- Common Item - Sealed Dark Crystal Gaiters
-(20829,12233,1,1,1,483), -- Common Item - Sealed Tallum Plate Armor
+(20829,5287,1,1,1,27), -- Sealed Dark Crystal breastplate
+(20829,5288,1,1,1,43), -- Sealed Dark Crystal Gaiters
+(20829,5293,1,1,1,19), -- Sealed Tallum Plate Armor
 (20829,5520,1,1,1,3964), -- Sealed Dark Crystal Breastplate Pattern
 (20829,5521,1,1,1,2797), -- Sealed Tallum Plate Armor Pattern
 (20829,5524,1,1,1,6059), -- Sealed Dark Crystal Gaiters Pattern
@@ -8874,15 +8875,15 @@ INSERT INTO `droplist` VALUES
 (20832,1902,1,1,-1,89886), -- Elven Earring Beads
 (20832,5231,1,1,-1,63369), -- Recipe: Metal Hardener (100%)
 (20832,57,430,872,0,700000), -- Adena
-(20832,12072,1,1,1,3854), -- Common Item - Mithril Gloves
-(20832,12076,1,1,1,3854), -- Common Item - Ogre Power Gauntlets
-(20832,12071,1,1,1,3854), -- Common Item - Assault Boots
+(20832,61,1,1,1,76), -- Mithril Gloves
+(20832,607,1,1,1,76), -- Ogre Power Gauntlets
+(20832,1125,1,1,1,76), -- Assault Boots
 (20832,1949,1,1,1,4144), -- Mithril Gloves Design
 (20832,1957,1,1,1,4144), -- Assault Boots Part
 (20832,1963,1,1,1,4144), -- Ogre Power Gauntlets Part
-(20832,12075,1,1,1,3854), -- Common Item - Salamander Skin Boots
-(20832,12077,1,1,1,3854), -- Common Item - Plate Boots
-(20832,12082,1,1,1,3854), -- Common Item - Sage\'s Worn Gloves
+(20832,2427,1,1,1,76), -- Salamander Skin Boots
+(20832,2428,1,1,1,76), -- Plate Boots
+(20832,2451,1,1,1,76), -- Sage\'s Worn Gloves
 (20832,2931,1,1,1,4144), -- Salamander Skin Boot Lining
 (20832,2932,1,1,1,4144), -- Plate Boots Design
 (20832,2933,1,1,1,4144), -- Sage\'s Worn Gloves Lining
@@ -8897,7 +8898,7 @@ INSERT INTO `droplist` VALUES
 (20833,1875,1,1,-1,65752), -- Stone of Purity
 (20833,1905,1,1,-1,95942), -- Omen Beast\'s Eye Earring Gemstone
 (20833,57,479,969,0,700000), -- Adena
-(20833,11759,1,1,1,21), -- Common Item - Crystallized Ice Bow (no drop info, no material info)
+(20833,281,1,1,1,21), -- Crystallized Ice Bow
 (20833,2074,1,1,1,1651), -- Crystallized Ice Bow Shaft
 (20833,1867,1,1,2,66667), -- Animal Skin
 (20833,1872,1,1,2,90909), -- Animal Bone
@@ -8910,8 +8911,8 @@ INSERT INTO `droplist` VALUES
 (20834,1878,1,1,-1,587109), -- Braided Hemp
 (20834,1885,1,1,-1,122314), -- High Grade Suede
 (20834,57,600,1212,0,700000), -- Adena
-(20834,12081,1,1,1,95), -- Common Item - Half Plate Armor (no spawn)
-(20834,12080,1,1,1,152), -- Common Item - Plate Gaiters
+(20834,353,1,1,1,95), -- Half Plate Armor
+(20834,380,1,1,1,152), -- Plate Gaiters
 (20834,1950,1,1,1,5981), -- Half Plate Temper
 (20834,1951,1,1,1,9302), -- Plate Gaiters Part
 (20834,1864,1,1,2,184262), -- Stem
@@ -8926,8 +8927,8 @@ INSERT INTO `droplist` VALUES
 (20835,1879,1,1,-1,134810), -- Cokes
 (20835,1906,1,1,-1,111184), -- Mithril Ring Wire
 (20835,57,394,793,0,700000), -- Adena
-(20835,12099,1,1,1,5556), -- Common Item - Karmian Tunic (low drop info)
-(20835,12100,1,1,1,5556), -- Common Item - Karmian Stockings
+(20835,439,1,1,1,51), -- Karmian Tunic
+(20835,471,1,1,1,81), -- Karmian Stockings
 (20835,1954,1,1,1,5081), -- Karmian Stocking Design
 (20835,1962,1,1,1,3059), -- Karmian Tunic Pattern
 (20835,1865,1,1,2,38229), -- Varnish
@@ -8943,9 +8944,9 @@ INSERT INTO `droplist` VALUES
 (20836,1874,1,1,-1,113820), -- Oriharukon Ore
 (20836,1875,1,2,-1,113820), -- Stone of Purity
 (20836,57,827,1684,0,700000), -- Adena
-(20836,11751,1,1,1,12), -- Common Item - Scythe (no drop info, low material info)
-(20836,11760,1,1,1,12), -- Common Item - Orcish Glaive
-(20836,11749,1,1,1,12), -- Common Item - Body Slasher
+(20836,96,1,1,1,12), -- Scythe
+(20836,298,1,1,1,12), -- Orcish Glaive
+(20836,302,1,1,1,12), -- Body Slasher
 (20836,2062,1,1,1,1055), -- Scythe Edge
 (20836,2075,1,1,1,1055), -- Orcish Glaive Blade
 (20836,2076,1,1,1,1055), -- Body Slasher Blade
@@ -8961,16 +8962,16 @@ INSERT INTO `droplist` VALUES
 (20837,1960,1,1,-1,91767), -- Chain Gaiters Part
 (20837,2214,1,1,-1,41557), -- Recipe: Dwarven Chain Gaiters
 (20837,57,676,1373,0,700000), -- Adena
-(20837,12085,1,1,1,70), -- Common Item - Mithril Boots (no spawn)
+(20837,62,1,1,1,70), -- Mithril Boots
 (20837,1958,1,1,1,3953), -- Mithril Boots Design
-(20837,12093,1,1,1,70), -- Common Item - Chain Boots
-(20837,12098,1,1,1,70), -- Common Item - Karmian Boots
-(20837,12101,1,1,1,70), -- Common Item - Plated Leather Boots
-(20837,12088,1,1,1,70), -- Common Item - Dwarven Chain Boots
-(20837,12089,1,1,1,70), -- Common Item - Boots of Seal
-(20837,12087,1,1,1,70), -- Common Item - Reinforced Mithril Gloves
-(20837,12092,1,1,1,70), -- Common Item - Chain Gloves
-(20837,12097,1,1,1,70), -- Common Item - Karmian Gloves
+(20837,2429,1,1,1,70), -- Chain Boots
+(20837,2430,1,1,1,70), -- Karmian Boots
+(20837,2431,1,1,1,70), -- Plated Leather Boots
+(20837,2432,1,1,1,70), -- Dwarven Chain Boots
+(20837,2433,1,1,1,70), -- Boots of Seal
+(20837,2452,1,1,1,70), -- Reinforced Mithril Gloves
+(20837,2453,1,1,1,70), -- Chain Gloves
+(20837,2454,1,1,1,70), -- Karmian Gloves
 (20837,2937,1,1,1,3953), -- Chain Boots Part
 (20837,2938,1,1,1,3953), -- Karmian Boots Fabric
 (20837,2939,1,1,1,3953), -- Plate Leather Boot Lining
@@ -8990,9 +8991,9 @@ INSERT INTO `droplist` VALUES
 (20838,1964,1,1,-1,126854), -- Eldarake Temper
 (20838,2216,1,1,-1,64869), -- Recipe: Great Helmet
 (20838,57,633,1287,0,700000), -- Adena
-(20838,12326,1,1,1,160), -- Common Item - Moonstone Earring (no spawn)
-(20838,12328,1,1,1,241), -- Common Item - Aquastone Ring
-(20838,12327,1,1,1,120), -- Common Item - Aquastone Necklace
+(20838,852,1,1,1,160), -- Moonstone Earring
+(20838,883,1,1,1,241), -- Aquastone Ring
+(20838,915,1,1,1,120), -- Aquastone Necklace
 (20838,1908,1,1,1,11709), -- Moonstone Earring Wire
 (20838,1909,1,1,1,16698), -- Aquastone Ring Wire
 (20838,1910,1,1,1,9311), -- Aquastone Necklace Chain
@@ -9006,10 +9007,10 @@ INSERT INTO `droplist` VALUES
 (20839,2066,1,1,-1,7366), -- Heavy Doom Hammer Head
 (20839,2320,1,1,-1,3272), -- Recipe: Cursed Staff
 (20839,57,454,925,0,700000), -- Adena
-(20839,12091,1,1,1,112), -- Common Item - Eldarake (no drop info, no material info)
+(20839,631,1,1,1,112), -- Eldarake
 (20839,1964,1,1,1,5978), -- Eldarake Temper
-(20839,12090,1,1,1,79), -- Common Item - Chain Hood
-(20839,12096,1,1,1,112), -- Common Item - Chain Shield
+(20839,2413,1,1,1,79), -- Chain Hood
+(20839,2495,1,1,1,112), -- Chain Shield
 (20839,2936,1,1,1,5430), -- Chain Hood Pattern
 (20839,2945,1,1,1,5978), -- Chain Shield Fragment
 (20839,1867,1,1,2,73977), -- Animal Skin
@@ -9024,8 +9025,8 @@ INSERT INTO `droplist` VALUES
 (20840,2166,1,1,-1,32854), -- Recipe: Earrings of Binding (100%)
 (20840,2328,1,1,-1,2254), -- Recipe: Sword of Delusion
 (20840,57,469,927,0,700000), -- Adena
-(20840,11788,1,1,1,8), -- Common Item - Stiletto (no drop info, no material info)
-(20840,11779,1,1,1,8), -- Common Item - Soulfire Dirk
+(20840,227,1,1,1,8), -- Stiletto
+(20840,242,1,1,1,8), -- Soulfire Dirk
 (20840,2083,1,1,1,714), -- Stiletto Edge
 (20840,2084,1,1,1,714), -- Soulfire Dirk Blade
 (20840,952,1,1,2,818), -- Scroll: Enchant Armor (Grade C)
@@ -9039,8 +9040,8 @@ INSERT INTO `droplist` VALUES
 (20841,1911,1,2,-1,74098), -- Earring of Protection Gemstone
 (20841,4438,1,1,-1,7105), -- Knuckle Duster Edge
 (20841,57,488,971,0,700000), -- Adena
-(20841,11790,1,1,1,8), -- Common Item - Elemental Bow (no drop info, no material info)
-(20841,11775,1,1,1,8), -- Common Item - Noble Elven Bow
+(20841,282,1,1,1,8), -- Elemental Bow
+(20841,285,1,1,1,8), -- Noble Elven Bow
 (20841,2085,1,1,1,764), -- Crossbow Shaft
 (20841,2086,1,1,1,764), -- Elven Bow of Nobility Shaft
 (20841,952,1,1,2,736), -- Scroll: Enchant Armor (Grade C)
@@ -9055,9 +9056,9 @@ INSERT INTO `droplist` VALUES
 (20842,2167,1,1,-1,48512), -- Recipe: Ring of Ages
 (20842,2335,1,1,-1,2211), -- Recipe: War Axe
 (20842,57,467,920,0,700000), -- Adena
-(20842,12329,1,1,1,72), -- Common Item - Earring of Protection (no drop info, no material info)
-(20842,12331,1,1,1,109), -- Common Item - Ring of Protection
-(20842,12330,1,1,1,54), -- Common Item - Necklace of Protection
+(20842,853,1,1,1,72), -- Earring of Protection
+(20842,884,1,1,1,109), -- Ring of Protection
+(20842,916,1,1,1,54), -- Necklace of Protection
 (20842,1911,1,1,1,5224), -- Earring of Protection Gemstone
 (20842,1912,1,1,1,7568), -- Ring of Protection Gemstone
 (20842,1913,1,1,1,4271), -- Necklace of Protection Gemstone
@@ -9071,7 +9072,7 @@ INSERT INTO `droplist` VALUES
 (20843,1914,1,1,-1,67599), -- Earring of Binding Gemstone
 (20843,4601,1,1,-1,2674), -- Greater Dye of Strength <Str+3 Con-3>
 (20843,57,602,1169,0,700000), -- Adena
-(20843,11814,1,1,1,12), -- Common Item - Akat Long Bow (no drop info, no material info)
+(20843,283,1,1,1,12), -- Akat Long Bow
 (20843,2109,1,1,1,1396), -- Akat Longbow Shaft
 (20843,1866,1,1,2,41467), -- Suede
 (20843,1871,1,1,2,62200), -- Charcoal
@@ -9085,9 +9086,9 @@ INSERT INTO `droplist` VALUES
 (20844,4041,1,1,-1,9345), -- Mold Hardener
 (20844,4603,1,1,-1,2388), -- Greater Dye of Constitution <Con+3 Str-3>
 (20844,57,540,1036,0,700000), -- Adena
-(20844,12332,1,1,1,51), -- Common Item - Earring of Binding (too low drop info, no material info)
-(20844,12333,1,1,1,76), -- Common Item - Ring of Ages
-(20844,12334,1,1,1,38), -- Common Item - Necklace of Mermaid
+(20844,854,1,1,1,51), -- Earring of Binding
+(20844,885,1,1,1,76), -- Ring of Ages
+(20844,917,1,1,1,38), -- Necklace of Mermaid
 (20844,1914,1,1,1,4162), -- Earring of Binding Gemstone
 (20844,1915,1,1,1,6527), -- Ring of Ages Gemstone
 (20844,1916,1,1,1,3152), -- Necklace of Mermaid Teardrop
@@ -9103,12 +9104,12 @@ INSERT INTO `droplist` VALUES
 (20845,2354,1,1,-1,2389), -- Recipe: Deadman\'s Staff
 (20845,4042,1,1,-1,24403), -- Enria
 (20845,57,731,1419,0,700000), -- Adena
-(20845,11821,1,1,1,3), -- Common Item - Caliburs (too low drop info, no material info)
-(20845,11807,1,1,1,3), -- Common Item - Sword of Delusion
-(20845,11820,1,1,1,3), -- Common Item - Tsurugi
-(20845,11829,1,1,1,3), -- Common Item - Homunkulus\'s Sword
-(20845,11815,1,1,1,3), -- Common Item - Sword of Nightmare
-(20845,11805,1,1,1,3), -- Common Item - Sword of Whispering Death
+(20845,75,1,1,1,3), -- Caliburs
+(20845,76,1,1,1,3), -- Sword of Delusion
+(20845,77,1,1,1,3), -- Tsurugi
+(20845,84,1,1,1,3), -- Homunkulus\'s Sword
+(20845,134,1,1,1,3), -- Sword of Nightmare
+(20845,145,1,1,1,3), -- Sword of Whispering Death
 (20845,2089,1,1,1,275), -- Caliburs Edge
 (20845,2090,1,1,1,275), -- Delusional Blade
 (20845,2091,1,1,1,275), -- Tsurugi Blade
@@ -9129,9 +9130,9 @@ INSERT INTO `droplist` VALUES
 (20846,2955,1,1,-1,81734), -- Theca Leather Gloves Texture
 (20846,4042,1,1,-1,21523), -- Enria
 (20846,57,995,1654,0,700000), -- Adena
-(20846,12133,1,1,1,20), -- Common Item - Theca Leather Armor (no drop info, no material info)
-(20846,12135,1,1,1,11), -- Common Item - Drake Leather Armor
-(20846,12130,1,1,1,31), -- Common Item - Theca Leather Gaiters
+(20846,400,1,1,1,20), -- Theca Leather Armor
+(20846,401,1,1,1,11), -- Drake Leather Armor
+(20846,420,1,1,1,31), -- Theca Leather Gaiters
 (20846,1984,1,1,1,1704), -- Theca Leather Armor Pattern
 (20846,1985,1,1,1,2741), -- Theca Leather Gaiters Pattern
 (20846,1987,1,1,1,1213), -- Drake Leather Armor Texture
@@ -9146,14 +9147,14 @@ INSERT INTO `droplist` VALUES
 (20847,1806,1,1,-1,2469), -- Recipe: Soulshot: B-Grade
 (20847,1985,1,1,-1,42562), -- Theca Leather Gaiters Pattern
 (20847,4937,1,1,-1,20368), -- Recipe: Adamantite Earrings (70%)
-(20847,57,497,1455,0,700000), -- Adena (absolutely no info)
-(20847,12132,1,1,1,24), -- Common Item - Theca Leather Boots
-(20847,12136,1,1,1,19), -- Common Item - Drake Leather Boots
-(20847,12142,1,1,1,19), -- Common Item - Full Plate Boots
-(20847,12131,1,1,1,24), -- Common Item - Theca Leather Gloves
-(20847,12134,1,1,1,19), -- Common Item - Drake Leather Gloves
-(20847,12141,1,1,1,19), -- Common Item - Full Plate Gauntlets
-(20847,12137,1,1,1,19), -- Common Item - Divine Gloves
+(20847,57,497,1455,0,700000), -- Adena
+(20847,2436,1,1,1,24), -- Theca Leather Boots
+(20847,2437,1,1,1,19), -- Drake Leather Boots
+(20847,2438,1,1,1,19), -- Full Plate Boots
+(20847,2460,1,1,1,24), -- Theca Leather Gloves
+(20847,2461,1,1,1,19), -- Drake Leather Gloves
+(20847,2462,1,1,1,19), -- Full Plate Gauntlets
+(20847,2463,1,1,1,19), -- Divine Gloves
 (20847,2954,1,1,1,2061), -- Theca Leather Boots Texture
 (20847,2955,1,1,1,2061), -- Theca Leather Gloves Texture
 (20847,2960,1,1,1,1773), -- Drake Leather Boots Design
@@ -9173,10 +9174,10 @@ INSERT INTO `droplist` VALUES
 (20848,1871,1,3,-1,794014), -- Charcoal
 (20848,1895,1,1,-1,453722), -- Metallic Fiber
 (20848,1908,1,1,-1,150381), -- Moonstone Earring Wire
-(20848,57,638,1538,0,700000), -- Adena (absolutely no info)
-(20848,11751,1,1,1,11), -- Common Item - Scythe
-(20848,11760,1,1,1,11), -- Common Item - Orcish Glaive
-(20848,11749,1,1,1,11), -- Common Item - Body Slasher
+(20848,57,638,1538,0,700000), -- Adena
+(20848,96,1,1,1,11), -- Scythe
+(20848,298,1,1,1,11), -- Orcish Glaive
+(20848,302,1,1,1,11), -- Body Slasher
 (20848,2062,1,1,1,982), -- Scythe Edge
 (20848,2075,1,1,1,982), -- Orcish Glaive Blade
 (20848,2076,1,1,1,982), -- Body Slasher Blade
@@ -9189,8 +9190,8 @@ INSERT INTO `droplist` VALUES
 (20849,1805,1,1,-1,4207), -- Recipe: Soulshot: C-Grade
 (20849,1956,1,1,-1,143260), -- Square Shield Fragment
 (20849,4469,1,1,-1,7212), -- Dye of Strength <Str+1 Con-1>
-(20849,57,653,1222,0,700000), -- Adena (absolutely no info)
-(20849,12083,1,1,1,148), -- Common Item - Sage\'s Rag
+(20849,57,653,1222,0,700000), -- Adena
+(20849,438,1,1,1,148), -- Sage\'s Rag
 (20849,1953,1,1,1,10151), -- Sage\'s Rag Lining
 (20849,1867,1,1,2,93894), -- Animal Skin
 (20849,1869,1,1,2,70420), -- Iron Ore
@@ -9204,9 +9205,9 @@ INSERT INTO `droplist` VALUES
 (20859,3035,1,1,-1,22803), -- Recipe: Spiritshot A
 (20859,5479,1,1,-1,101196), -- Sealed Tallum Leather Armor Pattern
 (20859,57,8261,16860,0,700000), -- Adena
-(20859,12227,1,1,1,713), -- Common Item - Sealed Dark Crystal breastplate
-(20859,12220,1,1,1,2421), -- Common Item - Sealed Dark Crystal Gaiters
-(20859,12233,1,1,1,428), -- Common Item - Sealed Tallum Plate Armor
+(20859,5287,1,1,1,37), -- Sealed Dark Crystal breastplate
+(20859,5288,1,1,1,59), -- Sealed Dark Crystal Gaiters
+(20859,5293,1,1,1,25), -- Sealed Tallum Plate Armor
 (20859,5520,1,1,1,5431), -- Sealed Dark Crystal Breastplate Pattern
 (20859,5521,1,1,1,3832), -- Sealed Tallum Plate Armor Pattern
 (20859,5524,1,1,1,8300), -- Sealed Dark Crystal Gaiters Pattern
@@ -9223,9 +9224,9 @@ INSERT INTO `droplist` VALUES
 (20860,5482,1,1,-1,317205), -- Sealed Dark Crystalline Leggings Design
 (20860,5485,1,1,-1,202094), -- Sealed Tallum Tunic Texture
 (20860,57,9685,19719,0,700000), -- Adena
-(20860,12227,1,1,1,1316), -- Common Item - Sealed Dark Crystal breastplate
-(20860,12220,1,1,1,1842), -- Common Item - Sealed Dark Crystal Gaiters
-(20860,12233,1,1,1,1842), -- Common Item - Sealed Tallum Plate Armor
+(20860,5287,1,1,1,52), -- Sealed Dark Crystal breastplate
+(20860,5288,1,1,1,82), -- Sealed Dark Crystal Gaiters
+(20860,5293,1,1,1,35), -- Sealed Tallum Plate Armor
 (20860,5520,1,1,1,7631), -- Sealed Dark Crystal Breastplate Pattern
 (20860,5521,1,1,1,5385), -- Sealed Tallum Plate Armor Pattern
 (20860,5524,1,1,1,11663), -- Sealed Dark Crystal Gaiters Pattern
@@ -9277,9 +9278,9 @@ INSERT INTO `droplist` VALUES
 (20922,1899,1,1,-1,25903), -- Necklace of Devotion Chain
 (20922,1932,1,1,-1,26314), -- Bone Helmet Design
 (20922,57,86,165,0,700000), -- Adena
-(20922,11614,1,1,1,332), -- Common Item - Saber
+(20922,123,1,1,1,12), -- Saber
 (20922,2017,1,1,1,309), -- Saber Blade
-(20922,11625,1,1,1,332), -- Common Item - Heavy Sword
+(20922,5285,1,1,1,12), -- Heavy Sword
 (20922,5531,1,1,1,391), -- Heavy Sword Edge
 (20922,1060,1,1,2,50000), -- Lesser Healing Potion
 (20922,1874,1,1,2,2994), -- Oriharukon Ore
@@ -9290,8 +9291,8 @@ INSERT INTO `droplist` VALUES
 (20923,2152,1,1,-1,42069), -- Recipe: Enchanted Necklace
 (20923,2263,1,1,-1,3710), -- Recipe: Dwarven Trident
 (20923,57,123,241,0,700000), -- Adena
-(20923,12010,1,1,1,5882), -- Common Item - Cursed Tunic
-(20923,12011,1,1,1,10989), -- Common Item - Cursed Stockings
+(20923,432,1,1,1,215), -- Cursed Tunic
+(20923,465,1,1,1,343), -- Cursed Stockings
 (20923,735,1,1,2,2410), -- Potion of Alacrity
 (20923,1875,1,1,2,2146), -- Stone of Purity
 (20923,1879,1,1,2,5348), -- Cokes
@@ -9302,7 +9303,7 @@ INSERT INTO `droplist` VALUES
 (20924,1937,1,1,-1,24815), -- Scale Gaiters Fragment
 (20924,2250,1,1,-1,72213), -- Recipe: Bone Arrow
 (20924,57,146,292,0,700000), -- Adena
-(20924,11642,1,1,1,1332), -- Common Item - Single-Edged Jamadhr
+(20924,259,1,1,1,49), -- Single-Edged Jamadhr
 (20924,1876,1,1,2,3546), -- Mithril Ore
 (20924,1877,1,1,2,1110), -- Adamantite Nugget
 (20924,1880,1,1,2,2217), -- Steel
@@ -9328,9 +9329,9 @@ INSERT INTO `droplist` VALUES
 (20926,1875,1,1,-1,11891), -- Stone of Purity
 (20926,2018,1,1,-1,2370), -- Assassin Knife Edge
 (20926,57,94,177,0,700000), -- Adena
-(20926,11623,1,1,1,192), -- Common Item - Hand Axe
-(20926,11615,1,1,1,769), -- Common Item - Scalpel
-(20926,11610,1,1,1,385), -- Common Item - Bone Staff
+(20926,156,1,1,1,17), -- Hand Axe
+(20926,167,1,1,1,17), -- Scalpel
+(20926,178,1,1,1,17), -- Bone Staff
 (20926,1831,1,1,2,47619), -- Antidote
 (20926,1834,1,1,2,17857), -- Emergency Dressing
 (20926,1875,1,1,2,962), -- Stone of Purity
@@ -9342,7 +9343,7 @@ INSERT INTO `droplist` VALUES
 (20927,1899,1,1,-1,39234), -- Necklace of Devotion Chain
 (20927,1932,1,1,-1,39856), -- Bone Helmet Design
 (20927,57,130,251,0,700000), -- Adena
-(20927,11613,1,1,1,1447), -- Common Item - Crafted Dagger
+(20927,220,1,1,1,69), -- Crafted Dagger
 (20927,1876,1,1,2,5917), -- Mithril Ore
 (20927,1877,1,1,2,527), -- Adamantite Nugget
 (20927,1880,1,1,2,3559), -- Steel
@@ -9353,8 +9354,8 @@ INSERT INTO `droplist` VALUES
 (20928,2153,1,1,-1,38605), -- Recipe: Tiger\'s Eye Earring
 (20928,2183,1,1,-1,16331), -- Recipe: Mithril Banded Mail
 (20928,57,126,251,0,700000), -- Adena
-(20928,12024,1,1,1,92), -- Common Item - Scale Mail
-(20928,12023,1,1,1,2618), -- Common Item - Scale Gaiters
+(20928,348,1,1,1,52), -- Scale Mail
+(20928,377,1,1,1,82), -- Scale Gaiters
 (20928,1935,1,1,1,1895), -- Scale Mail Fragment
 (20928,1937,1,1,1,2914), -- Scale Gaiters Fragment
 (20928,1832,1,1,2,25000), -- Greater Antidote
@@ -9369,7 +9370,7 @@ INSERT INTO `droplist` VALUES
 (20929,1871,1,1,-1,232889), -- Charcoal
 (20929,1900,1,1,-1,25480), -- Enchanted Necklace Chain
 (20929,57,118,235,0,700000), -- Adena
-(20929,11637,1,1,1,3846), -- Common Item - Divine Tome
+(20929,315,1,1,1,40), -- Divine Tome
 (20929,1060,1,1,2,47619), -- Lesser Healing Potion
 (20929,1865,1,1,2,22727), -- Varnish
 (20929,1870,1,1,2,15385), -- Coal
@@ -9381,11 +9382,11 @@ INSERT INTO `droplist` VALUES
 (20930,2154,1,1,-1,38910), -- Recipe: Elven Earring
 (20930,2156,1,1,-1,29074), -- Recipe: Elven Necklace
 (20930,57,184,367,0,700000), -- Adena
-(20930,11655,1,1,1,467), -- Common Item - Sword of Magic
-(20930,11667,1,1,1,467), -- Common Item - Two-Handed Sword
-(20930,11675,1,1,1,467), -- Common Item - Crimson Sword
-(20930,11670,1,1,1,467), -- Common Item - Elven Sword
-(20930,11657,1,1,1,467), -- Common Item - Sword of Occult
+(20930,83,1,1,1,10), -- Sword of Magic
+(20930,124,1,1,1,7), -- Two-Handed Sword
+(20930,127,1,1,1,7), -- Crimson Sword
+(20930,130,1,1,1,7), -- Elven Sword
+(20930,144,1,1,1,10), -- Sword of Occult
 (20930,2026,1,1,1,388), -- Two-Handed Sword Edge
 (20930,735,1,1,2,1558), -- Potion of Alacrity
 (20930,1864,1,1,2,55556), -- Stem
@@ -9398,8 +9399,8 @@ INSERT INTO `droplist` VALUES
 (20931,1940,1,1,-1,60251), -- Iron Boots Design
 (20931,2271,1,1,-1,2883), -- Recipe: Winged Spear
 (20931,57,204,409,0,700000), -- Adena
-(20931,11671,1,1,1,438), -- Common Item - War Hammer
-(20931,11661,1,1,1,438), -- Common Item - Dwarven Pike
+(20931,293,1,1,1,22), -- War Hammer
+(20931,296,1,1,1,22), -- Dwarven Pike
 (20931,1865,1,1,2,30303), -- Varnish
 (20931,1870,1,1,2,32258), -- Coal
 (20931,1875,1,1,2,2188), -- Stone of Purity
@@ -9411,9 +9412,9 @@ INSERT INTO `droplist` VALUES
 (20932,2032,1,1,-1,4069), -- Goat Head Staff Head
 (20932,5220,1,1,-1,17613), -- Metal Hardener
 (20932,57,223,446,0,700000), -- Adena
-(20932,12322,1,1,1,2611), -- Common Item - Elven Earring
-(20932,12321,1,1,1,3049), -- Common Item - Elven Ring
-(20932,12320,1,1,1,870), -- Common Item - Elven Necklace
+(20932,850,1,1,1,82), -- Elven Earring
+(20932,881,1,1,1,122), -- Elven Ring
+(20932,913,1,1,1,61), -- Elven Necklace
 (20932,1902,1,1,1,3844), -- Elven Earring Beads
 (20932,1903,1,1,1,6329), -- Elven Ring Piece
 (20932,1904,1,1,1,3541), -- Elven Necklace Beads
@@ -9428,7 +9429,7 @@ INSERT INTO `droplist` VALUES
 (20933,1880,1,1,-1,50326), -- Steel
 (20933,1894,1,1,-1,17658), -- Crafted Leather
 (20933,57,253,505,0,700000), -- Adena
-(20933,11691,1,1,1,19), -- Common Item - Bich\'Hwa
+(20933,261,1,1,1,19), -- Bich\'Hwa
 (20933,2039,1,1,1,1317), -- Bich\'Hwa Edge
 (20933,1865,1,1,2,55556), -- Varnish
 (20933,1870,1,1,2,50000), -- Coal
@@ -9440,8 +9441,8 @@ INSERT INTO `droplist` VALUES
 (20934,1938,1,1,-1,18324), -- Mithril Banded Mail Material
 (20934,2028,1,1,-1,3238), -- Shilen Knife Edge
 (20934,57,139,276,0,700000), -- Adena
-(20934,12047,1,1,1,1068), -- Common Item - Tunic of Knowledge
-(20934,12048,1,1,1,5348), -- Common Item - Stockings of Knowledge
+(20934,436,1,1,1,96), -- Tunic of Knowledge
+(20934,469,1,1,1,153), -- Stockings of Knowledge
 (20934,1867,1,1,2,40000), -- Animal Skin
 (20934,1872,1,1,2,32258), -- Animal Bone
 (20934,1882,1,1,2,5348), -- Leather
@@ -9451,10 +9452,10 @@ INSERT INTO `droplist` VALUES
 (20935,1872,1,1,-1,396209), -- Animal Bone
 (20935,2040,1,1,-1,3438), -- Strengthened Long Bow Shaft
 (20935,57,151,301,0,700000), -- Adena
-(20935,12069,1,1,1,7194), -- Common Item - Kite Shield
+(20935,629,1,1,1,66), -- Kite Shield
 (20935,1947,1,1,1,3687), -- Kite Shield Fragment
-(20935,12064,1,1,1,2353), -- Common Item - Brigandine Helmet
-(20935,12063,1,1,1,2994), -- Common Item - Brigandine Shield
+(20935,2411,1,1,1,46), -- Brigandine Helmet
+(20935,2493,1,1,1,66), -- Brigandine Shield
 (20935,2922,1,1,1,987), -- Brigandine Helmet Design
 (20935,2929,1,1,1,3687), -- Brigandine Shield Fragment
 (20935,1868,1,1,2,47619), -- Thread
@@ -9468,8 +9469,8 @@ INSERT INTO `droplist` VALUES
 (20936,1875,1,1,-1,37494), -- Stone of Purity
 (20936,1902,1,1,-1,56982), -- Elven Earring Beads
 (20936,57,283,656,0,700000), -- Adena
-(20936,12057,1,1,1,4902), -- Common Item - Mithril Tunic
-(20936,12058,1,1,1,3690), -- Common Item - Mithril Stockings
+(20936,437,1,1,1,65), -- Mithril Tunic
+(20936,470,1,1,1,104), -- Mithril Stockings
 (20936,1944,1,1,1,3707), -- Mithril Tunic Fabric
 (20936,1945,1,1,1,5773), -- Mithril Stocking Design
 (20936,1865,1,1,2,62500), -- Varnish
@@ -9482,15 +9483,15 @@ INSERT INTO `droplist` VALUES
 (20937,2054,1,1,-1,6241), -- Light Crossbow Shaft
 (20937,4480,1,1,-1,4191), -- Dye of Wit <Wit+1 Men-1>
 (20937,57,363,727,0,700000), -- Adena
-(20937,12072,1,1,1,1133), -- Common Item - Mithril Gloves
-(20937,12076,1,1,1,3401), -- Common Item - Ogre Power Gauntlets
-(20937,12071,1,1,1,1133), -- Common Item - Assault Boots
+(20937,61,1,1,1,63), -- Mithril Gloves
+(20937,607,1,1,1,63), -- Ogre Power Gauntlets
+(20937,1125,1,1,1,63), -- Assault Boots
 (20937,1949,1,1,1,3425), -- Mithril Gloves Design
 (20937,1957,1,1,1,3425), -- Assault Boots Part
 (20937,1963,1,1,1,3425), -- Ogre Power Gauntlets Part
-(20937,12075,1,1,1,3401), -- Common Item - Salamander Skin Boots
-(20937,12077,1,1,1,2268), -- Common Item - Plate Boots
-(20937,12082,1,1,1,2268), -- Common Item - Sage\'s Worn Gloves
+(20937,2427,1,1,1,63), -- Salamander Skin Boots
+(20937,2428,1,1,1,63), -- Plate Boots
+(20937,2451,1,1,1,63), -- Sage\'s Worn Gloves
 (20937,2931,1,1,1,3425), -- Salamander Skin Boot Lining
 (20937,2932,1,1,1,3425), -- Plate Boots Design
 (20937,2933,1,1,1,3425), -- Sage\'s Worn Gloves Lining
@@ -9505,7 +9506,7 @@ INSERT INTO `droplist` VALUES
 (20938,2070,1,1,-1,6390), -- Cursed Dagger Blade
 (20938,2323,1,1,-1,2804), -- Recipe: Elemental Bow
 (20938,57,388,794,0,700000), -- Adena
-(20938,11759,1,1,1,954), -- Common Item - Crystallized Ice Bow
+(20938,281,1,1,1,17), -- Crystallized Ice Bow
 (20938,2074,1,1,1,1347), -- Crystallized Ice Bow Shaft
 (20938,1867,1,1,2,55556), -- Animal Skin
 (20938,1872,1,1,2,52632), -- Animal Bone
@@ -9520,9 +9521,9 @@ INSERT INTO `droplist` VALUES
 (20939,1873,1,1,-1,359325), -- Silver Nugget
 (20939,2067,1,1,-1,6474), -- Crystal Staff Head
 (20939,57,436,886,0,700000), -- Adena
-(20939,12086,1,1,1,2072), -- Common Item - Mithril Shirt
+(20939,397,1,1,1,57), -- Mithril Shirt
 (20939,1961,1,1,1,3397), -- Mithril Shirt Fabric
-(20939,12084,1,1,1,4184), -- Common Item - Tempered Mithril Gaiters
+(20939,2387,1,1,1,90), -- Tempered Mithril Gaiters
 (20939,2935,1,1,1,5643), -- Tempered Mithril Gaiters Fragment
 (20939,1868,1,1,2,90909), -- Thread
 (20939,1873,1,1,2,17857), -- Silver Nugget
@@ -9537,7 +9538,7 @@ INSERT INTO `droplist` VALUES
 (20940,4589,1,1,-1,4500), -- Greater Dye of Strength <Str+2 Con-2>
 (20940,5550,1,1,-1,18001), -- Durable Metal Plate
 (20940,57,653,1328,0,700000), -- Adena
-(20940,11766,1,1,1,454), -- Common Item - Knuckle Duster
+(20940,4233,1,1,1,21), -- Knuckle Duster
 (20940,1864,1,1,2,125000), -- Stem
 (20940,1869,1,1,2,58824), -- Iron Ore
 (20940,1880,1,1,2,5000), -- Steel
@@ -9553,7 +9554,7 @@ INSERT INTO `droplist` VALUES
 (20941,2233,1,1,-1,9943), -- Recipe: Divine Tunic
 (20941,4601,1,1,-1,2364), -- Greater Dye of Strength <Str+3 Con-3>
 (20941,57,516,1046,0,700000), -- Adena
-(20941,12128,1,1,1,450), -- Common Item - Composite Armor
+(20941,60,1,1,1,31), -- Composite Armor
 (20941,1977,1,1,1,3255), -- Composite Armor Temper
 (20941,1865,1,1,2,45455), -- Varnish
 (20941,1870,1,1,2,45455), -- Coal
@@ -9567,7 +9568,7 @@ INSERT INTO `droplist` VALUES
 (20942,2301,1,1,-1,2338), -- Recipe: Battle Axe
 (20942,2931,1,1,-1,59751), -- Salamander Skin Boot Lining
 (20942,57,259,526,0,700000), -- Adena
-(20942,11726,1,1,1,15), -- Common Item - Mithril Dagger
+(20942,225,1,1,1,15), -- Mithril Dagger
 (20942,2052,1,1,1,1167), -- Mithril Dagger Blade
 (20942,1866,1,1,2,25000), -- Suede
 (20942,1871,1,1,2,38462), -- Charcoal
@@ -9578,7 +9579,7 @@ INSERT INTO `droplist` VALUES
 (20943,1875,1,1,-1,51365), -- Stone of Purity
 (20943,2163,1,1,-1,39310), -- Recipe: Earring of Protection
 (20943,57,373,758,0,700000), -- Adena
-(20943,11763,1,1,1,999), -- Common Item - Chakram
+(20943,263,1,1,1,16), -- Chakram
 (20943,2073,1,1,1,1408), -- Chakram Edge
 (20943,1867,1,1,2,55556), -- Animal Skin
 (20943,1872,1,1,2,58824), -- Animal Bone
@@ -9592,9 +9593,9 @@ INSERT INTO `droplist` VALUES
 (20944,2329,1,1,-1,1517), -- Recipe: Tsurugi
 (20944,2947,1,1,-1,46596), -- Dwarven Chain Shield Fragment
 (20944,57,315,643,0,700000), -- Adena
-(20944,12329,1,1,1,951), -- Common Item - Earring of Protection
-(20944,12331,1,1,1,2849), -- Common Item - Ring of Protection
-(20944,12330,1,1,1,951), -- Common Item - Necklace of Protection
+(20944,853,1,1,1,50), -- Earring of Protection
+(20944,884,1,1,1,75), -- Ring of Protection
+(20944,916,1,1,1,37), -- Necklace of Protection
 (20944,1911,1,1,1,3584), -- Earring of Protection Gemstone
 (20944,1912,1,1,1,5192), -- Ring of Protection Gemstone
 (20944,1913,1,1,1,2930), -- Necklace of Protection Gemstone
@@ -9610,8 +9611,8 @@ INSERT INTO `droplist` VALUES
 (20945,1876,1,1,-1,146675), -- Mithril Ore
 (20945,4601,1,1,-1,1630), -- Greater Dye of Strength <Str+3 Con-3>
 (20945,57,355,722,0,700000), -- Adena
-(20945,12125,1,1,1,2976), -- Common Item - Composite Boots
-(20945,12119,1,1,1,1261), -- Common Item - Mithril Gauntlets
+(20945,64,1,1,1,62), -- Composite Boots
+(20945,608,1,1,1,62), -- Mithril Gauntlets
 (20945,1981,1,1,1,4460), -- Mithril Gauntlets Design
 (20945,2956,1,1,1,4460), -- Composite Boots Part
 (20945,1868,1,1,2,71429), -- Thread
@@ -9628,10 +9629,10 @@ INSERT INTO `droplist` VALUES
 (20946,1914,1,1,-1,63512), -- Earring of Binding Gemstone
 (20946,2169,1,1,-1,20009), -- Recipe: Necklace of Binding
 (20946,57,550,1111,0,700000), -- Adena
-(20946,12129,1,1,1,2028), -- Common Item - Tower Shield
-(20946,12126,1,1,1,902), -- Common Item - Composite Shield
-(20946,12127,1,1,1,1802), -- Common Item - Composite Helmet
-(20946,12120,1,1,1,1127), -- Common Item - Shining Circlet
+(20946,103,1,1,1,46), -- Tower Shield
+(20946,107,1,1,1,46), -- Composite Shield
+(20946,517,1,1,1,32), -- Composite Helmet
+(20946,1149,1,1,1,32), -- Shining Circlet
 (20946,1978,1,1,1,3746), -- Tower Shield Fragment
 (20946,1983,1,1,1,2563), -- Shining Circlet Pattern
 (20946,2957,1,1,1,2564), -- Composite Helmet Design
@@ -9649,7 +9650,7 @@ INSERT INTO `droplist` VALUES
 (20947,4938,1,1,-1,30291), -- Recipe: Adamantite Ring (70%)
 (20947,4967,1,1,-1,1410), -- Recipe: Sword of Valhalla (60%)
 (20947,57,592,1205,0,700000), -- Adena
-(20947,12144,1,1,1,138), -- Common Item - Full Plate Armor
+(20947,356,1,1,1,22), -- Full Plate Armor
 (20947,1986,1,1,1,2388), -- Full Plate Armor Temper
 (20947,1864,1,1,2,100000), -- Stem
 (20947,1869,1,1,2,47619), -- Iron Ore
@@ -10124,9 +10125,9 @@ INSERT INTO `droplist` VALUES
 (20975,4078,1,1,-1,51418), -- Blue Wolf Breastplate Part
 (20975,5230,1,1,-1,4693), -- Recipe: Mithril Arrow (100%)
 (20975,57,1711,3459,0,700000), -- Adena
-(20975,12183,1,1,1,571), -- Common Item - Doom Shield
-(20975,12202,1,1,1,285), -- Common Item - Blue Wolf Helmet
-(20975,12185,1,1,1,1427), -- Common Item - Doom Helmet
+(20975,110,1,1,1,42), -- Doom Shield
+(20975,2416,1,1,1,29), -- Blue Wolf Helmet
+(20975,2417,1,1,1,29), -- Doom Helmet
 (20975,4077,1,1,1,7795), -- Doom Shield Fragment
 (20975,4088,1,1,1,6549), -- Blue Wolf Helmet Design
 (20975,4089,1,1,1,6549), -- Doom Helmet Pattern
@@ -10144,9 +10145,9 @@ INSERT INTO `droplist` VALUES
 (20976,4080,1,1,-1,61307), -- Blue Wolf Gaiters Material
 (20976,5230,1,1,-1,3974), -- Recipe: Mithril Arrow (100%)
 (20976,57,1447,2929,0,700000), -- Adena
-(20976,12204,1,1,1,421), -- Common Item - Blue Wolf Breastplate
-(20976,12193,1,1,1,421), -- Common Item - Blue Wolf Gaiters
-(20976,12184,1,1,1,210), -- Common Item - Doom Plate Armor
+(20976,358,1,1,1,10), -- Blue Wolf Breastplate
+(20976,2380,1,1,1,15), -- Blue Wolf Gaiters
+(20976,2381,1,1,1,7), -- Doom Plate Armor
 (20976,4078,1,1,1,2144), -- Blue Wolf Breastplate Part
 (20976,4080,1,1,1,3019), -- Blue Wolf Gaiters Material
 (20976,4081,1,1,1,1447), -- Doom Plate Armor Temper
@@ -10165,9 +10166,9 @@ INSERT INTO `droplist` VALUES
 (20977,1876,1,1,-1,938515), -- Mithril Ore
 (20977,4052,1,1,-1,166138), -- Earring of Black Ore Piece
 (20977,57,2281,4615,0,700000), -- Adena
-(20977,12341,1,1,1,2232), -- Common Item - Earring of Black Ore
-(20977,12343,1,1,1,11111), -- Common Item - Ring of Black Ore
-(20977,12342,1,1,1,2232), -- Common Item - Necklace of Black Ore
+(20977,864,1,1,1,51), -- Earring of Black Ore
+(20977,895,1,1,1,76), -- Ring of Black Ore
+(20977,926,1,1,1,38), -- Necklace of Black Ore
 (20977,4052,1,1,1,8178), -- Earring of Black Ore Piece
 (20977,4053,1,1,1,9901), -- Ring of Black Ore Gemstone
 (20977,4054,1,1,1,4550), -- Necklace of Black Ore Beads
@@ -10182,8 +10183,8 @@ INSERT INTO `droplist` VALUES
 (20978,4081,1,1,-1,49498), -- Doom Plate Armor Temper
 (20978,5230,1,1,-1,6696), -- Recipe: Mithril Arrow (100%)
 (20978,57,2442,4931,0,700000), -- Adena
-(20978,11930,1,1,1,12), -- Common Item - Sword of Damascus (no drop info)
-(20978,11943,1,1,1,15), -- Common Item - Wizard\'s Tear
+(20978,79,1,1,1,12), -- Sword of Damascus
+(20978,7889,1,1,1,15), -- Wizard\'s Tear
 (20978,4114,1,1,1,3247), -- Sword of Damascus Blade
 (20978,8336,1,1,1,1515), -- Blade of the Wizard's Tear
 (20978,1830,1,1,2,76923), -- Scroll of Escape: Castle
@@ -10198,9 +10199,9 @@ INSERT INTO `droplist` VALUES
 (20979,4082,1,1,-1,50238), -- Blue Wolf Leather Armor Texture
 (20979,5550,1,1,-1,59281), -- Durable Metal Plate
 (20979,57,2165,4366,0,700000), -- Adena
-(20979,11935,1,1,1,4), -- Common Item - Deadman\'s Glory (no drop info)
-(20979,11938,1,1,1,4), -- Common Item - Art of Battle Axe
-(20979,11934,1,1,1,4), -- Common Item - Staff of Evil Spirits
+(20979,171,1,1,1,4), -- Deadman\'s Glory
+(20979,175,1,1,1,4), -- Art of Battle Axe
+(20979,210,1,1,1,4), -- Staff of Evil Spirits
 (20979,4116,1,1,1,957), -- Deadman\'s Glory Stone
 (20979,4117,1,1,1,957), -- Art of Battle Axe Blade
 (20979,4118,1,1,1,907), -- Evil Spirit Head
@@ -10216,9 +10217,9 @@ INSERT INTO `droplist` VALUES
 (20980,4041,1,1,-1,44965), -- Mold Hardener
 (20980,4085,1,1,-1,89867), -- Tunic of Doom Pattern
 (20980,57,2504,5090,0,700000), -- Adena
-(20980,12227,1,1,1,1695), -- Common Item - Sealed Dark Crystal breastplate
-(20980,12220,1,1,1,1357), -- Common Item - Sealed Dark Crystal Gaiters
-(20980,12233,1,1,1,339), -- Common Item - Sealed Tallum Plate Armor
+(20980,5287,1,1,1,11), -- Sealed Dark Crystal breastplate
+(20980,5288,1,1,1,18), -- Sealed Dark Crystal Gaiters
+(20980,5293,1,1,1,8), -- Sealed Tallum Plate Armor
 (20980,5520,1,1,1,1642), -- Sealed Dark Crystal Breastplate Pattern
 (20980,5521,1,1,1,1159), -- Sealed Tallum Plate Armor Pattern
 (20980,5524,1,1,1,2510), -- Sealed Dark Crystal Gaiters Pattern
@@ -10234,9 +10235,9 @@ INSERT INTO `droplist` VALUES
 (20981,4085,1,1,-1,84693), -- Tunic of Doom Pattern
 (20981,5230,1,1,-1,6498), -- Recipe: Mithril Arrow (100%)
 (20981,57,2354,4802,0,700000), -- Adena
-(20981,12204,1,1,1,353), -- Common Item - Blue Wolf Breastplate
-(20981,12193,1,1,1,353), -- Common Item - Blue Wolf Gaiters
-(20981,12184,1,1,1,353), -- Common Item - Doom Plate Armor
+(20981,358,1,1,1,15), -- Blue Wolf Breastplate
+(20981,2380,1,1,1,24), -- Blue Wolf Gaiters
+(20981,2381,1,1,1,11), -- Doom Plate Armor
 (20981,4078,1,1,1,3505), -- Blue Wolf Breastplate Part
 (20981,4080,1,1,1,4935), -- Blue Wolf Gaiters Material
 (20981,4081,1,1,1,2365), -- Doom Plate Armor Temper
@@ -10253,10 +10254,10 @@ INSERT INTO `droplist` VALUES
 (20982,4085,1,1,-1,78645), -- Tunic of Doom Pattern
 (20982,5230,1,1,-1,6034), -- Recipe: Mithril Arrow (100%)
 (20982,57,2185,4461,0,700000), -- Adena
-(20982,12201,1,1,1,341), -- Common Item - Blue Wolf Tunic
-(20982,12192,1,1,1,341), -- Common Item - Tunic of Doom
-(20982,12203,1,1,1,683), -- Common Item - Blue Wolf Stockings
-(20982,12205,1,1,1,683), -- Common Item - Stockings of Doom
+(20982,2398,1,1,1,14), -- Blue Wolf Tunic
+(20982,2399,1,1,1,14), -- Tunic of Doom
+(20982,2403,1,1,1,23), -- Blue Wolf Stockings
+(20982,2404,1,1,1,23), -- Stockings of Doom
 (20982,4084,1,1,1,2903), -- Blue Wolf Tunic Fabric
 (20982,4085,1,1,1,2903), -- Tunic of Doom Pattern
 (20982,4086,1,1,1,3920), -- Blue Wolf Stockings Pattern
@@ -10276,9 +10277,9 @@ INSERT INTO `droplist` VALUES
 (20983,5478,1,1,-1,57040), -- Sealed Dark Crystal Leather Armor Pattern
 (20983,5549,1,1,-1,678321), -- Metallic Thread
 (20983,57,3280,6678,0,700000), -- Adena
-(20983,12222,1,1,1,536), -- Common Item - Sealed Dark Crystal Leather Armor
-(20983,12228,1,1,1,804), -- Common Item - Sealed Dark Crystalline Leggings
-(20983,12230,1,1,1,402), -- Common Item - Sealed Tallum Leather Armor
+(20983,5297,1,1,1,20), -- Sealed Dark Crystal Leather Armor
+(20983,5298,1,1,1,31), -- Sealed Dark Crystalline Leggings
+(20983,5301,1,1,1,14), -- Sealed Tallum Leather Armor
 (20983,5478,1,1,1,2808), -- Sealed Dark Crystal Leather Armor Pattern
 (20983,5479,1,1,1,1976), -- Sealed Tallum Leather Armor Pattern
 (20983,5482,1,1,1,4408), -- Sealed Dark Crystalline Leggings Design
@@ -10294,9 +10295,9 @@ INSERT INTO `droplist` VALUES
 (20984,4041,1,1,-1,54145), -- Mold Hardener
 (20984,5478,1,1,-1,52361), -- Sealed Dark Crystal Leather Armor Pattern
 (20984,57,3007,6136,0,700000), -- Adena
-(20984,12232,1,1,1,808), -- Common Item - Sealed Tallum Tunic
-(20984,12235,1,1,1,808), -- Common Item - Sealed Tallum Stockings
-(20984,12223,1,1,1,404), -- Common Item - Sealed Dark Crystal Robe
+(20984,5304,1,1,1,18), -- Sealed Tallum Tunic
+(20984,5305,1,1,1,29), -- Sealed Tallum Stockings
+(20984,5308,1,1,1,13), -- Sealed Dark Crystal Robe
 (20984,5485,1,1,1,2578), -- Sealed Tallum Tunic Texture
 (20984,5486,1,1,1,1814), -- Sealed Dark Crystal Robe Fabric
 (20984,5489,1,1,1,4046), -- Sealed Tallum Stockings Fabric
@@ -10314,9 +10315,9 @@ INSERT INTO `droplist` VALUES
 (20985,3035,1,1,-1,8840), -- Recipe: Spiritshot A
 (20985,5479,1,1,-1,39229), -- Sealed Tallum Leather Armor Pattern
 (20985,57,3203,6534,0,700000), -- Adena
-(20985,12344,1,1,1,794), -- Common Item - Sealed Phoenix Necklace
-(20985,12345,1,1,1,1590), -- Common Item - Sealed Phoenix Earring
-(20985,12346,1,1,1,1590), -- Common Item - Sealed Phoenix Ring
+(20985,6323,1,1,1,38), -- Sealed Phoenix Necklace
+(20985,6324,1,1,1,50), -- Sealed Phoenix Earring
+(20985,6325,1,1,1,75), -- Sealed Phoenix Ring
 (20985,6341,1,1,1,9028), -- Sealed Phoenix Earring Gemstone
 (20985,6343,1,1,1,6979), -- Sealed Phoenix Necklace Beads
 (20985,6345,1,1,1,12486), -- Sealed Phoenix Ring Gemstone
@@ -10333,8 +10334,8 @@ INSERT INTO `droplist` VALUES
 (20986,1984,1,1,-1,77945), -- Theca Leather Armor Pattern
 (20986,4043,1,1,-1,121204), -- Asofe
 (20986,57,1937,3158,0,700000), -- Adena
-(20986,12145,1,1,1,126), -- Common Item - Full Plate Helmet (too low drop info, no material info)
-(20986,12143,1,1,1,180), -- Common Item - Full Plate Shield
+(20986,2414,1,1,1,126), -- Full Plate Helmet
+(20986,2497,1,1,1,180), -- Full Plate Shield
 (20986,2959,1,1,1,11610), -- Full Plate Helmet Design
 (20986,2966,1,1,1,18366), -- Full Plate Shield Fragment
 (20986,1894,1,1,2,6730), -- Crafted Leather
@@ -10349,9 +10350,9 @@ INSERT INTO `droplist` VALUES
 (20987,1918,1,1,-1,142963), -- Nassen\'s Earring Gemstone
 (20987,4039,1,1,-1,110034), -- Mold Glue
 (20987,57,1658,3230,0,700000), -- Adena
-(20987,11858,1,1,1,7), -- Common Item - Orcish Poleaxe (no drop info, no material info)
-(20987,11830,1,1,1,9), -- Common Item - Scorpion
-(20987,11832,1,1,1,9), -- Common Item - Widow Maker
+(20987,299,1,1,1,7), -- Orcish Poleaxe
+(20987,301,1,1,1,9), -- Scorpion
+(20987,303,1,1,1,9), -- Widow Maker
 (20987,2113,1,1,1,984), -- Scorpion Blade
 (20987,2114,1,1,1,984), -- Widowmaker Head
 (20987,2122,1,1,1,928), -- Orcish Poleaxe Blade
@@ -10368,9 +10369,9 @@ INSERT INTO `droplist` VALUES
 (20988,1920,1,1,-1,124241), -- Necklace of Binding Chain
 (20988,1984,1,1,-1,77834), -- Theca Leather Armor Pattern
 (20988,57,2106,3561,0,700000), -- Adena
-(20988,12133,1,1,1,55), -- Common Item - Theca Leather Armor (no drop info, no material info)
-(20988,12135,1,1,1,29), -- Common Item - Drake Leather Armor
-(20988,12130,1,1,1,87), -- Common Item - Theca Leather Gaiters
+(20988,400,1,1,1,55), -- Theca Leather Armor
+(20988,401,1,1,1,29), -- Drake Leather Armor
+(20988,420,1,1,1,87), -- Theca Leather Gaiters
 (20988,1984,1,1,1,4791), -- Theca Leather Armor Pattern
 (20988,1985,1,1,1,7706), -- Theca Leather Gaiters Pattern
 (20988,1987,1,1,1,3410), -- Drake Leather Armor Texture
@@ -10386,10 +10387,10 @@ INSERT INTO `droplist` VALUES
 (20989,1871,1,3,-1,900608), -- Charcoal
 (20989,1902,1,1,-1,91247), -- Elven Earring Beads
 (20989,57,457,910,0,700000), -- Adena
-(20989,12059,1,1,1,996), -- Common Item - Brigandine Tunic
+(20989,352,1,1,1,52), -- Brigandine Tunic
 (20989,1941,1,1,1,3086), -- Brigandine Temper
-(20989,12056,1,1,1,2985), -- Common Item - Mithril Scale Gaiters
-(20989,12060,1,1,1,1992), -- Common Item - Brigandine Gaiters
+(20989,2377,1,1,1,83), -- Mithril Scale Gaiters
+(20989,2378,1,1,1,83), -- Brigandine Gaiters
 (20989,2918,1,1,1,4603), -- Mithril Scale Gaiters Material
 (20989,2919,1,1,1,4603), -- Brigandine Gaiters Material
 (20989,1866,1,1,2,62500), -- Suede
@@ -10402,8 +10403,8 @@ INSERT INTO `droplist` VALUES
 (20990,1903,1,1,-1,142615), -- Elven Ring Piece
 (20990,2145,1,1,-1,61070), -- Recipe: Mithril Alloy
 (20990,57,434,864,0,700000), -- Adena
-(20990,12057,1,1,1,3861), -- Common Item - Mithril Tunic
-(20990,12058,1,1,1,2899), -- Common Item - Mithril Stockings
+(20990,437,1,1,1,99), -- Mithril Tunic
+(20990,470,1,1,1,158), -- Mithril Stockings
 (20990,1944,1,1,1,5636), -- Mithril Tunic Fabric
 (20990,1945,1,1,1,8776), -- Mithril Stocking Design
 (20990,1341,10,30,2,250000), -- Bone Arrow
@@ -10417,8 +10418,8 @@ INSERT INTO `droplist` VALUES
 (20991,1909,1,1,-1,452966), -- Aquastone Ring Wire
 (20991,2064,1,1,-1,25926), -- Silver Axe Head
 (20991,57,1632,3299,0,700000), -- Adena
-(20991,12095,1,1,1,6211), -- Common Item - Chain Mail Shirt
-(20991,12094,1,1,1,10870), -- Common Item - Chain Gaiters
+(20991,354,1,1,1,157), -- Chain Mail Shirt
+(20991,381,1,1,1,251), -- Chain Gaiters
 (20991,1959,1,1,1,10677), -- Chain Mail Shirt Material
 (20991,1960,1,1,1,21718), -- Chain Gaiters Part
 (20991,1875,1,1,2,7752), -- Stone of Purity
@@ -10434,9 +10435,9 @@ INSERT INTO `droplist` VALUES
 (20992,1909,1,2,-1,405019), -- Aquastone Ring Wire
 (20992,2163,1,1,-1,153019), -- Recipe: Earring of Protection
 (20992,57,1446,2961,0,700000), -- Adena
-(20992,12326,1,1,1,16667), -- Common Item - Moonstone Earring
-(20992,12328,1,1,1,13514), -- Common Item - Aquastone Ring
-(20992,12327,1,1,1,11765), -- Common Item - Aquastone Necklace
+(20992,852,1,1,1,305), -- Moonstone Earring
+(20992,883,1,1,1,459), -- Aquastone Ring
+(20992,915,1,1,1,229), -- Aquastone Necklace
 (20992,1908,1,1,1,22370), -- Moonstone Earring Wire
 (20992,1909,1,1,1,31900), -- Aquastone Ring Wire
 (20992,1910,1,1,1,17788), -- Aquastone Necklace Chain
@@ -10452,16 +10453,16 @@ INSERT INTO `droplist` VALUES
 (20993,1869,1,7,-1,795642), -- Iron Ore
 (20993,2163,1,1,-1,162376), -- Recipe: Earring of Protection
 (20993,57,1538,3139,0,700000), -- Adena
-(20993,12085,1,1,1,3922), -- Common Item - Mithril Boots
+(20993,62,1,1,1,133), -- Mithril Boots
 (20993,1958,1,1,1,7512), -- Mithril Boots Design
-(20993,12093,1,1,1,2801), -- Common Item - Chain Boots
-(20993,12098,1,1,1,4484), -- Common Item - Karmian Boots
-(20993,12101,1,1,1,8929), -- Common Item - Plated Leather Boots
-(20993,12088,1,1,1,2242), -- Common Item - Dwarven Chain Boots
-(20993,12089,1,1,1,2801), -- Common Item - Boots of Seal
-(20993,12087,1,1,1,2242), -- Common Item - Reinforced Mithril Gloves
-(20993,12092,1,1,1,4484), -- Common Item - Chain Gloves
-(20993,12097,1,1,1,5051), -- Common Item - Karmian Gloves
+(20993,2429,1,1,1,133), -- Chain Boots
+(20993,2430,1,1,1,133), -- Karmian Boots
+(20993,2431,1,1,1,133), -- Plated Leather Boots
+(20993,2432,1,1,1,133), -- Dwarven Chain Boots
+(20993,2433,1,1,1,133), -- Boots of Seal
+(20993,2452,1,1,1,133), -- Reinforced Mithril Gloves
+(20993,2453,1,1,1,133), -- Chain Gloves
+(20993,2454,1,1,1,133), -- Karmian Gloves
 (20993,2937,1,1,1,7512), -- Chain Boots Part
 (20993,2938,1,1,1,7512), -- Karmian Boots Fabric
 (20993,2939,1,1,1,7512), -- Plate Leather Boot Lining
@@ -10483,7 +10484,7 @@ INSERT INTO `droplist` VALUES
 (20994,4043,1,1,-1,120913), -- Asofe
 (20994,4044,1,1,-1,120913), -- Thons
 (20994,57,1756,3567,0,700000), -- Adena
-(20994,11827,1,1,1,841), -- Common Item - Fist Blade
+(20994,265,1,1,1,35), -- Fist Blade
 (20994,2108,1,1,1,4018), -- Fist Blade Piece
 (20994,1894,1,1,2,6536), -- Crafted Leather
 (20994,3015,1,1,2,1629), -- Recipe: Drake Leather Gloves
@@ -10498,11 +10499,11 @@ INSERT INTO `droplist` VALUES
 (20995,1966,1,1,-1,100636), -- Plated Leather Fragment
 (20995,2166,1,1,-1,93438), -- Recipe: Earrings of Binding (100%)
 (20995,57,1334,2711,0,700000), -- Adena
-(20995,12106,1,1,1,5181), -- Common Item - Great Helmet
-(20995,12107,1,1,1,10309), -- Common Item - Knight\'s Shield
+(20995,500,1,1,1,169), -- Great Helmet
+(20995,632,1,1,1,241), -- Knight\'s Shield
 (20995,1971,1,1,1,12462), -- Great Helmet Material
 (20995,1972,1,1,1,16285), -- Knight\'s Shield Fragment
-(20995,12102,1,1,1,11236), -- Common Item - Dwarven Chain Shield
+(20995,2496,1,1,1,261), -- Dwarven Chain Shield
 (20995,2947,1,1,1,14540), -- Dwarven Chain Shield Fragment
 (20995,1539,1,1,2,28571), -- Greater Healing Potion
 (20995,1865,1,1,2,125000), -- Varnish
@@ -10518,7 +10519,7 @@ INSERT INTO `droplist` VALUES
 (20996,1869,1,3,-1,695676), -- Iron Ore
 (20996,1914,1,1,-1,78166), -- Earring of Binding Gemstone
 (20996,57,674,1369,0,700000), -- Adena
-(20996,11827,1,1,1,91), -- Common Item - Fist Blade
+(20996,265,1,1,1,14), -- Fist Blade
 (20996,2108,1,1,1,1541), -- Fist Blade Piece
 (20996,1864,1,1,2,125000), -- Stem
 (20996,1869,1,1,2,62500), -- Iron Ore
@@ -10533,7 +10534,7 @@ INSERT INTO `droplist` VALUES
 (20997,1915,1,2,-1,109205), -- Ring of Ages Gemstone
 (20997,4601,1,1,-1,2754), -- Greater Dye of Strength <Str+3 Con-3>
 (20997,57,601,1220,0,700000), -- Adena
-(20997,12128,1,1,1,529), -- Common Item - Composite Armor
+(20997,60,1,1,1,36), -- Composite Armor
 (20997,1977,1,1,1,3792), -- Composite Armor Temper
 (20997,1868,1,1,2,111111), -- Thread
 (20997,1873,1,1,2,25000), -- Silver Nugget
@@ -10549,14 +10550,14 @@ INSERT INTO `droplist` VALUES
 (20998,2169,1,1,-1,24190), -- Recipe: Necklace of Binding
 (20998,2170,1,1,-1,32234), -- Recipe: Nassen\'s Earring
 (20998,57,664,1343,0,700000), -- Adena
-(20998,11816,1,1,1,64), -- Common Item - War Axe
-(20998,11802,1,1,1,64), -- Common Item - Nirvana Axe
-(20998,11799,1,1,1,64), -- Common Item - Stick of Eternity
-(20998,11825,1,1,1,64), -- Common Item - Paradia Staff
-(20998,11824,1,1,1,64), -- Common Item - Pa\'agrian Hammer
-(20998,11828,1,1,1,64), -- Common Item - Sage\'s Staff
-(20998,11804,1,1,1,64), -- Common Item - Club of Nature
-(20998,11806,1,1,1,64), -- Common Item - Mace of The Underworld
+(20998,162,1,1,1,2), -- War Axe
+(20998,174,1,1,1,2), -- Nirvana Axe
+(20998,196,1,1,1,2), -- Stick of Eternity
+(20998,197,1,1,1,2), -- Paradia Staff
+(20998,199,1,1,1,2), -- Pa\'agrian Hammer
+(20998,200,1,1,1,2), -- Sage\'s Staff
+(20998,201,1,1,1,2), -- Club of Nature
+(20998,202,1,1,1,2), -- Mace of The Underworld
 (20998,2097,1,1,1,190), -- War Axe Blade
 (20998,2098,1,1,1,190), -- Nirvana Axe Blade
 (20998,2099,1,1,1,200), -- Stick of Eternity Shaft
@@ -10580,7 +10581,7 @@ INSERT INTO `droplist` VALUES
 (20999,1873,1,2,-1,649473), -- Silver Nugget
 (20999,1918,1,2,-1,70320), -- Nassen\'s Earring Gemstone
 (20999,57,787,1598,0,700000), -- Adena
-(20999,11863,1,1,1,113), -- Common Item - Crystal Dagger
+(20999,228,1,1,1,10), --  Crystal Dagger
 (20999,2119,1,1,1,1367), -- Crystal Dagger Blade
 (20999,1806,1,1,2,226), -- Recipe: Soulshot: B-Grade
 (20999,1868,1,1,2,125000), -- Thread
@@ -10596,9 +10597,9 @@ INSERT INTO `droplist` VALUES
 (21000,1918,1,1,-1,61656), -- Nassen\'s Earring Gemstone
 (21000,1986,1,1,-1,15043), -- Full Plate Armor Temper
 (21000,57,688,1402,0,700000), -- Adena
-(21000,11858,1,1,1,40), -- Common Item - Orcish Poleaxe
-(21000,11830,1,1,1,40), -- Common Item - Scorpion
-(21000,11832,1,1,1,40), -- Common Item - Widow Maker
+(21000,299,1,1,1,3), -- Orcish Poleaxe
+(21000,301,1,1,1,4), -- Scorpion
+(21000,303,1,1,1,4), -- Widow Maker
 (21000,2113,1,1,1,425), -- Scorpion Blade
 (21000,2114,1,1,1,425), -- Widowmaker Head
 (21000,2122,1,1,1,400), -- Orcish Poleaxe Blade
@@ -10619,7 +10620,7 @@ INSERT INTO `droplist` VALUES
 (21001,1988,1,1,-1,37076), -- Divine Tunic Fabric
 (21001,4042,1,1,-1,32160), -- Enria
 (21001,57,933,1901,0,700000), -- Adena
-(21001,11857,1,1,1,125), -- Common Item - Eminence Bow
+(21001,286,1,1,1,12), -- Eminence Bow
 (21001,2121,1,1,1,1639), -- Eminence Bow Shaft
 (21001,1868,1,1,2,125000), -- Thread
 (21001,1873,1,1,2,27027), -- Silver Nugget
@@ -10822,8 +10823,8 @@ INSERT INTO `droplist` VALUES
 (21011,1884,1,1,-1,272296), -- Cord
 (21011,1900,1,1,-1,48411), -- Enchanted Necklace Chain
 (21011,57,224,444,0,700000), -- Adena
-(21011,12028,1,1,1,6579), -- Common Item - Bronze Helmet
-(21011,12025,1,1,1,6579), -- Common Item - Aspis
+(21011,46,1,1,1,484), -- Bronze Helmet
+(21011,627,1,1,1,691), -- Aspis
 (21011,1061,1,1,2,18319), -- Healing Potion
 (21011,1864,1,1,2,60450), -- Stem
 (21011,1865,1,1,2,30225), -- Varnish
@@ -10836,8 +10837,8 @@ INSERT INTO `droplist` VALUES
 (21012,2153,1,1,-1,84661), -- Recipe: Tiger\'s Eye Earring
 (21012,2185,1,1,-1,107160), -- Recipe: Iron Boots
 (21012,57,277,550,0,700000), -- Adena
-(21012,11632,1,1,1,3401), -- Common Item - Long Bow
-(21012,11640,1,1,1,3401), -- Common Item - Elven Bow
+(21012,275,1,1,1,31), -- Long Bow
+(21012,276,1,1,1,31), -- Elven Bow
 (21012,2024,1,1,1,1413), -- Elven Bow Shaft
 (21012,1833,1,1,2,113326), -- Bandage
 (21012,1868,1,1,2,84994), -- Thread
@@ -10850,9 +10851,9 @@ INSERT INTO `droplist` VALUES
 (21013,1933,1,1,-1,75496), -- Dark Stocking Fabric
 (21013,2023,1,1,-1,7952), -- Conjuror\'s Staff Head
 (21013,57,324,649,0,700000), -- Adena
-(21013,12314,1,1,1,412), -- Common Item - Enchanted Earring (no drop info, no material info)
-(21013,12316,1,1,1,618), -- Common Item - Enchanted Ring
-(21013,12315,1,1,1,309), -- Common Item - Enchanted Necklace
+(21013,848,1,1,1,412), -- Enchanted Earring
+(21013,879,1,1,1,618), -- Enchanted Ring
+(21013,911,1,1,1,309), -- Enchanted Necklace
 (21013,1900,1,1,1,9592), -- Enchanted Necklace Chain
 (21013,737,1,1,2,5845), -- Scroll of Resurrection
 (21013,1061,1,1,2,35422), -- Healing Potion
@@ -10864,8 +10865,8 @@ INSERT INTO `droplist` VALUES
 (21014,1958,1,1,-1,59544), -- Mithril Boots Design
 (21014,2977,1,1,-1,88678), -- Recipe: Brigandine Boots
 (21014,57,336,671,0,700000), -- Adena
-(21014,11678,1,1,1,574), -- Common Item - Blood of Saints
-(21014,11676,1,1,1,574), -- Common Item - Tome of Blood
+(21014,316,1,1,1,25), -- Blood of Saints
+(21014,317,1,1,1,25), -- Tome of Blood
 (21014,2030,1,1,1,1374), -- Tome of Blood Page
 (21014,1865,1,1,2,58824), -- Varnish
 (21014,1870,1,1,2,62500), -- Coal
@@ -10877,11 +10878,11 @@ INSERT INTO `droplist` VALUES
 (21015,1873,1,1,-1,270295), -- Silver Nugget
 (21015,1940,1,1,-1,100856), -- Iron Boots Design
 (21015,57,342,683,0,700000), -- Adena
-(21015,11655,1,1,1,347), -- Common Item - Sword of Magic
-(21015,11667,1,1,1,347), -- Common Item - Two-Handed Sword
-(21015,11675,1,1,1,347), -- Common Item - Crimson Sword
-(21015,11670,1,1,1,347), -- Common Item - Elven Sword
-(21015,11657,1,1,1,347), -- Common Item - Sword of Occult
+(21015,83,1,1,1,17), -- Sword of Magic
+(21015,124,1,1,1,13), -- Two-Handed Sword
+(21015,127,1,1,1,13), -- Crimson Sword
+(21015,130,1,1,1,13), -- Elven Sword
+(21015,144,1,1,1,17), -- Sword of Occult
 (21015,2026,1,1,1,721), -- Two-Handed Sword Edge
 (21015,1868,1,1,2,166667), -- Thread
 (21015,1873,1,1,2,28571), -- Silver Nugget
@@ -10892,13 +10893,13 @@ INSERT INTO `droplist` VALUES
 (21016,1882,1,1,-1,160833), -- Leather
 (21016,1901,1,1,-1,99966), -- Tiger\'s Eye Earring Stone
 (21016,57,367,732,0,700000), -- Adena
-(21016,12031,1,1,1,2193), -- Common Item - Mithril Breastplate
-(21016,12041,1,1,1,1645), -- Common Item - Mithril Gaiters
-(21016,12032,1,1,1,3289), -- Common Item - Compound Scale Mail
-(21016,12030,1,1,1,1645), -- Common Item - Dwarven Scale Mail
-(21016,12044,1,1,1,1096), -- Common Item - Blast Plate
-(21016,12049,1,1,1,2740), -- Common Item - Compound Scale Gaiters
-(21016,12039,1,1,1,4926), -- Common Item - Dwarven Scale Gaiters
+(21016,58,1,1,1,61), -- Mithril Breastplate
+(21016,59,1,1,1,87), -- Mithril Gaiters
+(21016,349,1,1,1,61), -- Compound Scale Mail
+(21016,350,1,1,1,61), -- Dwarven Scale Mail
+(21016,351,1,1,1,55), -- Blast Plate
+(21016,378,1,1,1,87), -- Compound Scale Gaiters
+(21016,379,1,1,1,87), -- Dwarven Scale Gaiters
 (21016,1864,1,1,2,111111), -- Stem
 (21016,1869,1,1,2,58824), -- Iron Ore
 (21016,1880,1,1,2,5495), -- Steel
@@ -10910,9 +10911,9 @@ INSERT INTO `droplist` VALUES
 (21017,1880,1,1,-1,144955), -- Steel
 (21017,1989,1,1,-1,43688), -- Divine Stocking Pattern
 (21017,57,701,1428,0,700000), -- Adena
-(21017,12133,1,1,1,694), -- Common Item - Theca Leather Armor
-(21017,12135,1,1,1,116), -- Common Item - Drake Leather Armor
-(21017,12130,1,1,1,1099), -- Common Item - Theca Leather Gaiters
+(21017,400,1,1,1,22), -- Theca Leather Armor
+(21017,401,1,1,1,12), -- Drake Leather Armor
+(21017,420,1,1,1,35), -- Theca Leather Gaiters
 (21017,1984,1,1,1,1913), -- Theca Leather Armor Pattern
 (21017,1985,1,1,1,3077), -- Theca Leather Gaiters Pattern
 (21017,1987,1,1,1,1362), -- Drake Leather Armor Texture
@@ -11014,9 +11015,9 @@ INSERT INTO `droplist` VALUES
 (21023,2019,1,1,-1,7922), -- Trident Edge
 (21023,2263,1,1,-1,5720), -- Recipe: Dwarven Trident
 (21023,57,193,367,0,700000), -- Adena
-(21023,11623,1,1,1,2008), -- Common Item - Hand Axe
-(21023,11615,1,1,1,2008), -- Common Item - Scalpel
-(21023,11610,1,1,1,2008), -- Common Item - Bone Staff
+(21023,156,1,1,1,34), -- Hand Axe
+(21023,167,1,1,1,34), -- Scalpel
+(21023,178,1,1,1,34), -- Bone Staff
 (21023,1864,1,1,2,71429), -- Stem
 (21023,1865,1,1,2,55556), -- Varnish
 (21023,1866,1,1,2,6024), -- Suede
@@ -11027,7 +11028,7 @@ INSERT INTO `droplist` VALUES
 (21024,1934,1,1,-1,50280), -- Crafted Leather Gloves Lining
 (21024,2178,1,1,-1,61543), -- Recipe: Dark Stockings
 (21024,57,200,383,0,700000), -- Adena
-(21024,11613,1,1,1,1153), -- Common Item - Crafted Dagger
+(21024,220,1,1,1,106), -- Crafted Dagger
 (21024,1864,1,1,2,83333), -- Stem
 (21024,1869,1,1,2,47619), -- Iron Ore
 (21024,1878,1,1,2,14925), -- Braided Hemp
@@ -11037,7 +11038,7 @@ INSERT INTO `droplist` VALUES
 (21025,1871,1,1,-1,404316), -- Charcoal
 (21025,2152,1,1,-1,71182), -- Recipe: Enchanted Necklace
 (21025,57,208,407,0,700000), -- Adena
-(21025,11622,1,1,1,1996), -- Common Item - Trident
+(21025,291,1,1,1,56), -- Trident
 (21025,2019,1,1,1,2440), -- Trident Edge
 (21025,1864,1,1,2,100000), -- Stem
 (21025,1865,1,1,2,400009), -- Varnish
@@ -11049,8 +11050,8 @@ INSERT INTO `droplist` VALUES
 (21026,1900,1,1,-1,47223), -- Enchanted Necklace Chain
 (21026,2025,1,1,-1,5978), -- Dwarven Trident Edge
 (21026,57,220,435,0,700000), -- Adena
-(21026,11632,1,1,1,1157), -- Common Item - Long Bow
-(21026,11640,1,1,1,1157), -- Common Item - Elven Bow
+(21026,275,1,1,1,25), -- Long Bow
+(21026,276,1,1,1,25), -- Elven Bow
 (21026,2024,1,1,1,1121), -- Elven Bow Shaft
 (21026,737,1,1,2,3236), -- Scroll of Resurrection
 (21026,1867,1,1,2,58824), -- Animal Skin
@@ -11063,11 +11064,11 @@ INSERT INTO `droplist` VALUES
 (21034,2154,1,1,-1,63039), -- Recipe: Elven Earring
 (21034,2302,1,1,-1,2571), -- Recipe: Silver Axe
 (21034,57,296,590,0,700000), -- Adena
-(21034,11686,1,1,1,243), -- Common Item - Morning Star
-(21034,11693,1,1,1,243), -- Common Item - Goat Head Staff
-(21034,11708,1,1,1,243), -- Common Item - Tarbar
-(21034,11697,1,1,1,243), -- Common Item - Skull Breaker
-(21034,11713,1,1,1,243), -- Common Item - Heavy Bone Club
+(21034,88,1,1,1,5), -- Morning Star
+(21034,90,1,1,1,5), -- Goat Head Staff
+(21034,158,1,1,1,5), -- Tarbar
+(21034,169,1,1,1,5), -- Skull Breaker
+(21034,172,1,1,1,5), -- Heavy Bone Club
 (21034,2031,1,1,1,309), -- Morning Star Head
 (21034,2032,1,1,1,282), -- Goat Head Staff Head
 (21034,2035,1,1,1,309), -- Tarbar Head
@@ -11085,7 +11086,7 @@ INSERT INTO `droplist` VALUES
 (21035,1905,1,1,-1,144342), -- Omen Beast\'s Eye Earring Gemstone
 (21035,1952,1,1,-1,47529), -- Salamander Skin Mail Texture
 (21035,57,916,1852,0,700000), -- Adena
-(21035,12074,1,1,1,5682), -- Common Item - Salamander Skin Mail
+(21035,396,1,1,1,174), -- Salamander Skin Mail
 (21035,1952,1,1,1,11934), -- Salamander Skin Mail Texture
 (21035,1865,1,1,2,100000), -- Varnish
 (21035,1870,1,1,2,111111), -- Coal
@@ -11100,8 +11101,8 @@ INSERT INTO `droplist` VALUES
 (21036,2070,1,1,-1,14854), -- Cursed Dagger Blade
 (21036,2316,1,1,-1,6518), -- Recipe: Katana
 (21036,57,1057,2156,0,700000), -- Adena
-(21036,12095,1,1,1,4082), -- Common Item - Chain Mail Shirt
-(21036,12094,1,1,1,12195), -- Common Item - Chain Gaiters
+(21036,354,1,1,1,88), -- Chain Mail Shirt
+(21036,381,1,1,1,140), -- Chain Gaiters
 (21036,1959,1,1,1,5955), -- Chain Mail Shirt Material
 (21036,1960,1,1,1,12113), -- Chain Gaiters Part
 (21036,1895,1,1,2,50000), -- Metallic Fiber
@@ -11113,13 +11114,13 @@ INSERT INTO `droplist` VALUES
 (21037,4040,1,1,-1,38652), -- Mold Lubricant
 (21037,5231,1,1,-1,138044), -- Recipe: Metal Hardener (100%)
 (21037,57,1372,2791,0,700000), -- Adena
-(21037,12118,1,1,1,1473), -- Common Item - Crimson Boots
+(21037,1126,1,1,1,89), -- Crimson Boots
 (21037,1974,1,1,1,6001), -- Crimson Boot Fabric
-(21037,12114,1,1,1,4425), -- Common Item - Rind Leather Boots
-(21037,12101,1,1,1,6623), -- Common Item - Plated Leather Gloves
-(21037,12108,1,1,1,4425), -- Common Item - Dwarven Chain Gloves
-(21037,12116,1,1,1,4425), -- Common Item - Gloves of Seal
-(21037,12112,1,1,1,5155), -- Common Item - Rind Leather Gloves
+(21037,2434,1,1,1,89), -- Rind Leather Boots
+(21037,2455,1,1,1,96), -- Plated Leather Gloves
+(21037,2456,1,1,1,89), -- Dwarven Chain Gloves
+(21037,2457,1,1,1,89), -- Gloves of Seal
+(21037,2458,1,1,1,89), -- Rind Leather Gloves
 (21037,2946,1,1,1,3989), -- Plate Leather Gloves Design
 (21037,2948,1,1,1,6001), -- Rind Leather Boot Lining
 (21037,2949,1,1,1,6001), -- Dwarven Chain Gloves Design
@@ -11139,11 +11140,11 @@ INSERT INTO `droplist` VALUES
 (21038,2166,1,1,-1,64819), -- Recipe: Earrings of Binding (100%)
 (21038,5231,1,1,-1,136582), -- Recipe: Metal Hardener (100%)
 (21038,57,1037,2113,0,700000), -- Adena
-(21038,12106,1,1,1,5814), -- Common Item - Great Helmet
-(21038,12107,1,1,1,9174), -- Common Item - Knight\'s Shield
+(21038,500,1,1,1,117), -- Great Helmet
+(21038,632,1,1,1,168), -- Knight\'s Shield
 (21038,1971,1,1,1,8645), -- Great Helmet Material
 (21038,1972,1,1,1,11297), -- Knight\'s Shield Fragment
-(21038,12102,1,1,1,9174), -- Common Item - Dwarven Chain Shield
+(21038,2496,1,1,1,182), -- Dwarven Chain Shield
 (21038,2947,1,1,1,10087), -- Dwarven Chain Shield Fragment
 (21038,952,1,1,2,831), -- Scroll: Enchant Armor (Grade C)
 (21038,1867,1,1,2,125000), -- Animal Skin
@@ -11158,9 +11159,9 @@ INSERT INTO `droplist` VALUES
 (21039,1871,1,5,-1,661279), -- Charcoal
 (21039,1905,1,1,-1,192980), -- Omen Beast\'s Eye Earring Gemstone
 (21039,57,1039,2093,0,700000), -- Adena
-(21039,11736,1,1,1,28), -- Common Item - Claymore (no drop info)
+(21039,70,1,1,1,28), -- Claymore
 (21039,2047,1,1,1,2190), -- Claymore Blade
-(21039,11733,1,1,1,28), -- Common Item - Elven Long Sword
+(21039,2499,1,1,1,28), -- Elven Long Sword
 (21039,2967,1,1,1,2160), -- Elven Long Sword Blade
 (21039,1866,1,1,2,100000), -- Suede
 (21039,1871,1,1,2,200000), -- Charcoal
@@ -11172,9 +11173,9 @@ INSERT INTO `droplist` VALUES
 (21040,1911,1,1,-1,227781), -- Earring of Protection Gemstone
 (21040,1967,1,1,-1,167031), -- Plated Leather Gaiters Material
 (21040,57,1649,3351,0,700000), -- Adena
-(21040,11793,1,1,1,903), -- Common Item - Cursed Staff
+(21040,195,1,1,1,24), -- Cursed Staff
 (21040,2082,1,1,1,2391), -- Cursed Staff Head
-(21040,11777,1,1,1,903), -- Common Item - Dwarven War Hammer
+(21040,2502,1,1,1,24), -- Dwarven War Hammer
 (21040,2968,1,1,1,2289), -- Dwarven Warhammer Head
 (21040,952,1,1,2,2585), -- Scroll: Enchant Armor (Grade C)
 (21040,1867,1,1,2,200000), -- Animal Skin
@@ -11190,9 +11191,9 @@ INSERT INTO `droplist` VALUES
 (21058,4129,1,1,-1,52907), -- Recipe: Earrings of Black Ore
 (21058,4617,1,1,-1,6743), -- Greater Dye of Dexterity <Dex+4 Str-4>
 (21058,57,2369,4811,0,700000), -- Adena
-(21058,11889,1,1,1,264), -- Common Item - Great Sword
-(21058,11916,1,1,1,264), -- Common Item - Keshanberk
-(21058,11900,1,1,1,264), -- Common Item - Sword of Valhalla
+(21058,78,1,1,1,6), -- Great Sword
+(21058,142,1,1,1,6), -- Keshanberk
+(21058,148,1,1,1,6), -- Sword of Valhalla
 (21058,4104,1,1,1,1378), -- Great Sword Blade
 (21058,4107,1,1,1,1356), -- Keshanberk Blade
 (21058,4108,1,1,1,1356), -- Sword of Valhalla Blade
@@ -11208,7 +11209,7 @@ INSERT INTO `droplist` VALUES
 (21059,4129,1,1,-1,45227), -- Recipe: Earrings of Black Ore
 (21059,4130,1,1,-1,67840), -- Recipe: Ring of Black Ore
 (21059,57,2020,4116,0,700000), -- Adena
-(21059,11896,1,1,1,843), -- Common Item - Dark Elven Long Bow
+(21059,284,1,1,1,15), -- Dark Elven Long Bow
 (21059,4112,1,1,1,3495), -- Dark Elven Longbow Shaft
 (21059,1864,1,3,2,125000), -- Stem
 (21059,1869,1,1,2,125000), -- Iron Ore
@@ -11224,8 +11225,8 @@ INSERT INTO `droplist` VALUES
 (21060,1865,1,11,-1,835788), -- Varnish
 (21060,4050,1,1,-1,258918), -- Adamantite Ring Wire
 (21060,57,2020,4113,0,700000), -- Adena
-(21060,11915,1,1,1,159), -- Common Item - Kris
-(21060,11919,1,1,1,159), -- Common Item - Hell Knife
+(21060,229,1,1,1,8), -- Kris
+(21060,243,1,1,1,8), -- Hell Knife
 (21060,4109,1,1,1,1739), -- Kris Edge
 (21060,4110,1,1,1,1739), -- Hell Knife Edge
 (21060,1343,20,60,2,100000), -- Silver Arrow
@@ -11241,9 +11242,9 @@ INSERT INTO `droplist` VALUES
 (21061,1895,1,7,-1,790309), -- Metallic Fiber
 (21061,5478,1,1,-1,69780), -- Sealed Dark Crystal Leather Armor Pattern
 (21061,57,4020,8163,0,700000), -- Adena
-(21061,12227,1,1,1,245), -- Common Item - Sealed Dark Crystal breastplate
-(21061,12220,1,1,1,858), -- Common Item - Sealed Dark Crystal Gaiters
-(21061,12233,1,1,1,551), -- Common Item - Sealed Tallum Plate Armor
+(21061,5287,1,1,1,18), -- Sealed Dark Crystal breastplate
+(21061,5288,1,1,1,29), -- Sealed Dark Crystal Gaiters
+(21061,5293,1,1,1,13), -- Sealed Tallum Plate Armor
 (21061,5520,1,1,1,2635), -- Sealed Dark Crystal Breastplate Pattern
 (21061,5521,1,1,1,1860), -- Sealed Tallum Plate Armor Pattern
 (21061,5524,1,1,1,4028), -- Sealed Dark Crystal Gaiters Pattern
@@ -11261,9 +11262,9 @@ INSERT INTO `droplist` VALUES
 (21063,5220,1,2,-1,715633), -- Metal Hardener
 (21063,5478,1,1,-1,150444), -- Sealed Dark Crystal Leather Armor Pattern
 (21063,57,8664,17620,0,700000), -- Adena
-(21063,12227,1,1,1,1511), -- Common Item - Sealed Dark Crystal breastplate
-(21063,12220,1,1,1,1761), -- Common Item - Sealed Dark Crystal Gaiters
-(21063,12233,1,1,1,252), -- Common Item - Sealed Tallum Plate Armor
+(21063,5287,1,1,1,39), -- Sealed Dark Crystal breastplate
+(21063,5288,1,1,1,61), -- Sealed Dark Crystal Gaiters
+(21063,5293,1,1,1,27), -- Sealed Tallum Plate Armor
 (21063,5520,1,1,1,5681), -- Sealed Dark Crystal Breastplate Pattern
 (21063,5521,1,1,1,4009), -- Sealed Tallum Plate Armor Pattern
 (21063,5524,1,1,1,8683), -- Sealed Dark Crystal Gaiters Pattern
@@ -11282,9 +11283,9 @@ INSERT INTO `droplist` VALUES
 (21064,5230,1,1,-1,12272), -- Recipe: Mithril Arrow (100%)
 (21064,5479,1,1,-1,54461), -- Sealed Tallum Leather Armor Pattern
 (21064,57,4450,9065,0,700000), -- Adena
-(21064,12227,1,1,1,392), -- Common Item - Sealed Dark Crystal breastplate
-(21064,12220,1,1,1,1176), -- Common Item - Sealed Dark Crystal Gaiters
-(21064,12233,1,1,1,392), -- Common Item - Sealed Tallum Plate Armor
+(21064,5287,1,1,1,20), -- Sealed Dark Crystal breastplate
+(21064,5288,1,1,1,32), -- Sealed Dark Crystal Gaiters
+(21064,5293,1,1,1,14), -- Sealed Tallum Plate Armor
 (21064,5520,1,1,1,2923), -- Sealed Dark Crystal Breastplate Pattern
 (21064,5521,1,1,1,2063), -- Sealed Tallum Plate Armor Pattern
 (21064,5524,1,1,1,4467), -- Sealed Dark Crystal Gaiters Pattern
@@ -11302,10 +11303,10 @@ INSERT INTO `droplist` VALUES
 (21065,1807,1,1,-1,13828), -- Recipe: Soulshot: A-Grade
 (21065,4120,1,1,-1,45319), -- Bellion Cestus Edge
 (21065,57,5007,10220,0,700000), -- Adena
-(21065,12221,1,1,1,2004), -- Common Item - Sealed Dark Crystal Gloves
-(21065,12224,1,1,1,1003), -- Common Item - Sealed Dark Crystal Boots
-(21065,12229,1,1,1,1754), -- Common Item - Sealed Tallum Gloves
-(21065,12231,1,1,1,2257), -- Common Item - Sealed Tallum Boots
+(21065,5290,1,1,1,67), -- Sealed Dark Crystal Gloves
+(21065,5291,1,1,1,67), -- Sealed Dark Crystal Boots
+(21065,5295,1,1,1,67), -- Sealed Tallum Gloves
+(21065,5296,1,1,1,67), -- Sealed Tallum Boots
 (21065,5496,1,1,1,8979), -- Sealed Dark Crystal Boots Lining
 (21065,5497,1,1,1,8979), -- Sealed Tallum Boots Lining
 (21065,5508,1,1,1,8979), -- Sealed Dark Crystal Gloves Design
@@ -11323,9 +11324,9 @@ INSERT INTO `droplist` VALUES
 (21066,5230,1,1,-1,13915), -- Recipe: Mithril Arrow (100%)
 (21066,5482,1,1,-1,137743), -- Sealed Dark Crystalline Leggings Design
 (21066,57,5047,10270,0,700000), -- Adena
-(21066,12226,1,1,1,1332), -- Common Item - Sealed Dark Crystal Helmet
-(21066,12225,1,1,1,2132), -- Common Item - Sealed Dark Crystal Shield
-(21066,12234,1,1,1,1730), -- Common Item - Sealed Tallum Helmet
+(21066,5289,1,1,1,60), -- Sealed Dark Crystal Helmet
+(21066,5292,1,1,1,85), -- Sealed Dark Crystal Shield
+(21066,5294,1,1,1,60), -- Sealed Tallum Helmet
 (21066,5494,1,1,1,10790), -- Sealed Dark Crystal Shield Fragment
 (21066,5525,1,1,1,7942), -- Sealed Dark Crystal Helmet Design
 (21066,5526,1,1,1,7942), -- Sealed Tallum Helm Design
@@ -11344,9 +11345,9 @@ INSERT INTO `droplist` VALUES
 (21068,5479,1,1,-1,145173), -- Sealed Tallum Leather Armor Pattern
 (21068,5485,1,1,-1,206309), -- Sealed Tallum Tunic Texture
 (21068,57,11870,24160,0,700000), -- Adena
-(21068,12227,1,1,1,1754), -- Common Item - Sealed Dark Crystal breastplate
-(21068,12220,1,1,1,2506), -- Common Item - Sealed Dark Crystal Gaiters
-(21068,12233,1,1,1,752), -- Common Item - Sealed Tallum Plate Armor
+(21068,5287,1,1,1,53), -- Sealed Dark Crystal breastplate
+(21068,5288,1,1,1,84), -- Sealed Dark Crystal Gaiters
+(21068,5293,1,1,1,36), -- Sealed Tallum Plate Armor
 (21068,5520,1,1,1,7790), -- Sealed Dark Crystal Breastplate Pattern
 (21068,5521,1,1,1,5497), -- Sealed Tallum Plate Armor Pattern
 (21068,5524,1,1,1,11907), -- Sealed Dark Crystal Gaiters Pattern
@@ -11365,10 +11366,10 @@ INSERT INTO `droplist` VALUES
 (21069,4041,1,1,-1,114774), -- Mold Hardener
 (21069,4080,1,1,-1,271501), -- Blue Wolf Gaiters Material
 (21069,57,6379,13000,0,700000), -- Adena
-(21069,12221,1,1,1,2155), -- Common Item - Sealed Dark Crystal Gloves
-(21069,12224,1,1,1,2667), -- Common Item - Sealed Dark Crystal Boots
-(21069,12229,1,1,1,2463), -- Common Item - Sealed Tallum Gloves
-(21069,12231,1,1,1,3279), -- Common Item - Sealed Tallum Boots
+(21069,5290,1,1,1,85), -- Sealed Dark Crystal Gloves
+(21069,5291,1,1,1,85), -- Sealed Dark Crystal Boots
+(21069,5295,1,1,1,85), -- Sealed Tallum Gloves
+(21069,5296,1,1,1,85), -- Sealed Tallum Boots
 (21069,5496,1,1,1,11427), -- Sealed Dark Crystal Boots Lining
 (21069,5497,1,1,1,11427), -- Sealed Tallum Boots Lining
 (21069,5508,1,1,1,11427), -- Sealed Dark Crystal Gloves Design
@@ -11387,9 +11388,9 @@ INSERT INTO `droplist` VALUES
 (21071,5486,1,1,-1,150978), -- Sealed Dark Crystal Robe Fabric
 (21071,5489,1,1,-1,336768), -- Sealed Tallum Stockings Fabric
 (21071,57,12340,25140,0,700000), -- Adena
-(21071,12222,1,1,1,2985), -- Common Item - Sealed Dark Crystal Leather Armor
-(21071,12228,1,1,1,3215), -- Common Item - Sealed Dark Crystalline Leggings
-(21071,12230,1,1,1,1147), -- Common Item - Sealed Tallum Leather Armor
+(21071,5297,1,1,1,73), -- Sealed Dark Crystal Leather Armor
+(21071,5298,1,1,1,116), -- Sealed Dark Crystalline Leggings
+(21071,5301,1,1,1,50), -- Sealed Tallum Leather Armor
 (21071,5478,1,1,1,10562), -- Sealed Dark Crystal Leather Armor Pattern
 (21071,5479,1,1,1,7432), -- Sealed Tallum Leather Armor Pattern
 (21071,5482,1,1,1,16578), -- Sealed Dark Crystalline Leggings Design
@@ -11406,9 +11407,9 @@ INSERT INTO `droplist` VALUES
 (21072,5161,1,1,-1,14439), -- Recipe: Spiritshot (A) Compressed Package (100%)
 (21072,5230,1,1,-1,14439), -- Recipe: Mithril Arrow (100%)
 (21072,57,5240,10670,0,700000), -- Adena
-(21072,12226,1,1,1,3165), -- Common Item - Sealed Dark Crystal Helmet
-(21072,12225,1,1,1,3876), -- Common Item - Sealed Dark Crystal Shield
-(21072,12234,1,1,1,352), -- Common Item - Sealed Tallum Helmet
+(21072,5289,1,1,1,62), -- Sealed Dark Crystal Helmet
+(21072,5292,1,1,1,88), -- Sealed Dark Crystal Shield
+(21072,5294,1,1,1,62), -- Sealed Tallum Helmet
 (21072,5494,1,1,1,11196), -- Sealed Dark Crystal Shield Fragment
 (21072,5525,1,1,1,8241), -- Sealed Dark Crystal Helmet Design
 (21072,5526,1,1,1,8241), -- Sealed Tallum Helm Design
@@ -11424,7 +11425,7 @@ INSERT INTO `droplist` VALUES
 (21073,4052,1,1,-1,167558), -- Earring of Black Ore Piece
 (21073,5230,1,1,-1,6310), -- Recipe: Mithril Arrow (100%)
 (21073,57,2319,4638,0,700000), -- Adena
-(21073,11944,1,1,1,11), -- Common Item - Bow of Peril (no drop info)
+(21073,287,1,1,1,11), -- Bow of Peril
 (21073,4121,1,1,1,3045), -- Bow of Peril Shaft
 (21073,1830,1,1,2,38462), -- Scroll of Escape: Castle
 (21073,1864,1,3,2,111111), -- Stem
@@ -11437,10 +11438,10 @@ INSERT INTO `droplist` VALUES
 (21074,5478,1,1,-1,51911), -- Sealed Dark Crystal Leather Armor Pattern
 (21074,5482,1,1,-1,81480), -- Sealed Dark Crystalline Leggings Design
 (21074,57,2985,6083,0,700000), -- Adena
-(21074,12221,1,1,1,1580), -- Common Item - Sealed Dark Crystal Gloves
-(21074,12224,1,1,1,1580), -- Common Item - Sealed Dark Crystal Boots
-(21074,12229,1,1,1,1580), -- Common Item - Sealed Tallum Gloves
-(21074,12231,1,1,1,1580), -- Common Item - Sealed Tallum Boots
+(21074,5290,1,1,1,40), -- Sealed Dark Crystal Gloves
+(21074,5291,1,1,1,40), -- Sealed Dark Crystal Boots
+(21074,5295,1,1,1,40), -- Sealed Tallum Gloves
+(21074,5296,1,1,1,40), -- Sealed Tallum Boots
 (21074,5496,1,1,1,5345), -- Sealed Dark Crystal Boots Lining
 (21074,5497,1,1,1,5345), -- Sealed Tallum Boots Lining
 (21074,5508,1,1,1,5345), -- Sealed Dark Crystal Gloves Design
@@ -11457,10 +11458,10 @@ INSERT INTO `droplist` VALUES
 (21075,4052,1,1,-1,158037), -- Earring of Black Ore Piece
 (21075,4616,1,1,-1,6157), -- Greater Dye of Constitution <Con+4 Dex-4>
 (21075,57,2191,4376,0,700000), -- Adena
-(21075,12188,1,1,1,415), -- Common Item - Boots of Doom
-(21075,12189,1,1,1,415), -- Common Item - Blue Wolf Boots
-(21075,12187,1,1,1,415), -- Common Item - Doom Gloves
-(21075,12190,1,1,1,415), -- Common Item - Blue Wolf Gloves
+(21075,601,1,1,1,41), -- Boots of Doom
+(21075,2439,1,1,1,41), -- Blue Wolf Boots
+(21075,2475,1,1,1,41), -- Doom Gloves
+(21075,2487,1,1,1,41), -- Blue Wolf Gloves
 (21075,4090,1,1,1,7398), -- Blue Wolf Boots Design
 (21075,4091,1,1,1,7398), -- Doom Gloves Part
 (21075,4096,1,1,1,7398), -- Blue Wolf Gloves Fabric
@@ -11478,10 +11479,10 @@ INSERT INTO `droplist` VALUES
 (21076,4053,1,1,-1,187709), -- Ring of Black Ore Gemstone
 (21076,5230,1,1,-1,5839), -- Recipe: Mithril Arrow (100%)
 (21076,57,2130,4285,0,700000), -- Adena
-(21076,12201,1,1,1,795), -- Common Item - Blue Wolf Tunic
-(21076,12192,1,1,1,795), -- Common Item - Tunic of Doom
-(21076,12203,1,1,1,795), -- Common Item - Blue Wolf Stockings
-(21076,12205,1,1,1,795), -- Common Item - Stockings of Doom
+(21076,2398,1,1,1,14), -- Blue Wolf Tunic
+(21076,2399,1,1,1,14), -- Tunic of Doom
+(21076,2403,1,1,1,22), -- Blue Wolf Stockings
+(21076,2404,1,1,1,22), -- Stockings of Doom
 (21076,4084,1,1,1,2809), -- Blue Wolf Tunic Fabric
 (21076,4085,1,1,1,2809), -- Tunic of Doom Pattern
 (21076,4086,1,1,1,3793), -- Blue Wolf Stockings Pattern
@@ -11498,9 +11499,9 @@ INSERT INTO `droplist` VALUES
 (21077,4054,1,1,-1,82050), -- Necklace of Black Ore Beads
 (21077,5230,1,1,-1,5554), -- Recipe: Mithril Arrow (100%)
 (21077,57,2023,4088,0,700000), -- Adena
-(21077,12341,1,1,1,1076), -- Common Item - Earring of Black Ore
-(21077,12343,1,1,1,1603), -- Common Item - Ring of Black Ore
-(21077,12342,1,1,1,813), -- Common Item - Necklace of Black Ore
+(21077,864,1,1,1,45), -- Earring of Black Ore
+(21077,895,1,1,1,67), -- Ring of Black Ore
+(21077,926,1,1,1,34), -- Necklace of Black Ore
 (21077,4052,1,1,1,7260), -- Earring of Black Ore Piece
 (21077,4053,1,1,1,8790), -- Ring of Black Ore Gemstone
 (21077,4054,1,1,1,4039), -- Necklace of Black Ore Beads
@@ -11517,9 +11518,9 @@ INSERT INTO `droplist` VALUES
 (21078,4040,1,1,-1,110398), -- Mold Lubricant
 (21078,5485,1,1,-1,46417), -- Sealed Tallum Tunic Texture
 (21078,57,2685,5428,0,700000), -- Adena
-(21078,12226,1,1,1,212), -- Common Item - Sealed Dark Crystal Helmet
-(21078,12225,1,1,1,299), -- Common Item - Sealed Dark Crystal Shield
-(21078,12234,1,1,1,212), -- Common Item - Sealed Tallum Helmet
+(21078,5289,1,1,1,32), -- Sealed Dark Crystal Helmet
+(21078,5292,1,1,1,45), -- Sealed Dark Crystal Shield
+(21078,5294,1,1,1,32), -- Sealed Tallum Helmet
 (21078,5494,1,1,1,5707), -- Sealed Dark Crystal Shield Fragment
 (21078,5525,1,1,1,4201), -- Sealed Dark Crystal Helmet Design
 (21078,5526,1,1,1,4201), -- Sealed Tallum Helm Design
@@ -11535,9 +11536,9 @@ INSERT INTO `droplist` VALUES
 (21079,4042,1,1,-1,87540), -- Enria
 (21079,5478,1,1,-1,44167), -- Sealed Dark Crystal Leather Armor Pattern
 (21079,57,2550,5165,0,700000), -- Adena
-(21079,12232,1,1,1,590), -- Common Item - Sealed Tallum Tunic
-(21079,12235,1,1,1,944), -- Common Item - Sealed Tallum Stockings
-(21079,12223,1,1,1,432), -- Common Item - Sealed Dark Crystal Robe
+(21079,5304,1,1,1,15), -- Sealed Tallum Tunic
+(21079,5305,1,1,1,24), -- Sealed Tallum Stockings
+(21079,5308,1,1,1,11), -- Sealed Dark Crystal Robe
 (21079,5485,1,1,1,2175), -- Sealed Tallum Tunic Texture
 (21079,5486,1,1,1,1530), -- Sealed Dark Crystal Robe Fabric
 (21079,5489,1,1,1,3413), -- Sealed Tallum Stockings Fabric
@@ -11554,9 +11555,9 @@ INSERT INTO `droplist` VALUES
 (21080,3035,1,1,-1,6473), -- Recipe: Spiritshot A
 (21080,5479,1,1,-1,28725), -- Sealed Tallum Leather Armor Pattern
 (21080,57,2353,4764,0,700000), -- Adena
-(21080,12344,1,1,1,1221), -- Common Item - Sealed Phoenix Necklace
-(21080,12345,1,1,1,1613), -- Common Item - Sealed Phoenix Earring
-(21080,12346,1,1,1,2398), -- Common Item - Sealed Phoenix Ring
+(21080,6323,1,1,1,28), -- Sealed Phoenix Necklace
+(21080,6324,1,1,1,37), -- Sealed Phoenix Earring
+(21080,6325,1,1,1,55), -- Sealed Phoenix Ring
 (21080,6341,1,1,1,6611), -- Sealed Phoenix Earring Gemstone
 (21080,6343,1,1,1,5110), -- Sealed Phoenix Necklace Beads
 (21080,6345,1,1,1,9143), -- Sealed Phoenix Ring Gemstone
@@ -11572,9 +11573,9 @@ INSERT INTO `droplist` VALUES
 (21081,5230,1,1,-1,8208), -- Recipe: Mithril Arrow (100%)
 (21081,5478,1,1,-1,51767), -- Sealed Dark Crystal Leather Armor Pattern
 (21081,57,2994,6056,0,700000), -- Adena
-(21081,12222,1,1,1,485), -- Common Item - Sealed Dark Crystal Leather Armor
-(21081,12228,1,1,1,755), -- Common Item - Sealed Dark Crystalline Leggings
-(21081,12230,1,1,1,323), -- Common Item - Sealed Tallum Leather Armor
+(21081,5297,1,1,1,18), -- Sealed Dark Crystal Leather Armor
+(21081,5298,1,1,1,28), -- Sealed Dark Crystalline Leggings
+(21081,5301,1,1,1,12), -- Sealed Tallum Leather Armor
 (21081,5478,1,1,1,2549), -- Sealed Dark Crystal Leather Armor Pattern
 (21081,5479,1,1,1,1794), -- Sealed Tallum Leather Armor Pattern
 (21081,5482,1,1,1,4000), -- Sealed Dark Crystalline Leggings Design
@@ -11589,9 +11590,9 @@ INSERT INTO `droplist` VALUES
 (21082,5482,1,1,-1,77916), -- Sealed Dark Crystalline Leggings Design
 (21082,5486,1,1,-1,34931), -- Sealed Dark Crystal Robe Fabric
 (21082,57,2884,5776,0,700000), -- Adena
-(21082,12232,1,1,1,2217), -- Common Item - Sealed Tallum Tunic
-(21082,12235,1,1,1,3521), -- Common Item - Sealed Tallum Stockings
-(21082,12223,1,1,1,1565), -- Common Item - Sealed Dark Crystal Robe
+(21082,5304,1,1,1,17), -- Sealed Tallum Tunic
+(21082,5305,1,1,1,27), -- Sealed Tallum Stockings
+(21082,5308,1,1,1,12), -- Sealed Dark Crystal Robe
 (21082,5485,1,1,1,2444), -- Sealed Tallum Tunic Texture
 (21082,5486,1,1,1,1720), -- Sealed Dark Crystal Robe Fabric
 (21082,5489,1,1,1,3836), -- Sealed Tallum Stockings Fabric
@@ -11605,9 +11606,9 @@ INSERT INTO `droplist` VALUES
 (21083,5485,1,1,-1,51860), -- Sealed Tallum Tunic Texture
 (21083,5486,1,1,-1,36492), -- Sealed Dark Crystal Robe Fabric
 (21083,57,2987,6015,0,700000), -- Adena
-(21083,12344,1,1,1,1792), -- Common Item - Sealed Phoenix Necklace
-(21083,12345,1,1,1,2407), -- Common Item - Sealed Phoenix Earring
-(21083,12346,1,1,1,3584), -- Common Item - Sealed Phoenix Ring
+(21083,6323,1,1,1,35), -- Sealed Phoenix Necklace
+(21083,6324,1,1,1,47), -- Sealed Phoenix Earring
+(21083,6325,1,1,1,70), -- Sealed Phoenix Ring
 (21083,6341,1,1,1,8398), -- Sealed Phoenix Earring Gemstone
 (21083,6343,1,1,1,6492), -- Sealed Phoenix Necklace Beads
 (21083,6345,1,1,1,11615), -- Sealed Phoenix Ring Gemstone
@@ -11622,9 +11623,9 @@ INSERT INTO `droplist` VALUES
 (21084,4056,1,1,-1,74312), -- Zubei\'s Breastplate Part
 (21084,4129,1,2,-1,44434), -- Recipe: Earrings of Black Ore
 (21084,57,1989,4041,0,700000), -- Adena
-(21084,11889,1,1,1,274), -- Common Item - Great Sword
-(21084,11916,1,1,1,274), -- Common Item - Keshanberk
-(21084,11900,1,1,1,137), -- Common Item - Sword of Valhalla
+(21084,78,1,1,1,5), -- Great Sword
+(21084,142,1,1,1,5), -- Keshanberk
+(21084,148,1,1,1,5), -- Sword of Valhalla
 (21084,4104,1,1,1,1157), -- Great Sword Blade
 (21084,4107,1,1,1,1139), -- Keshanberk Blade
 (21084,4108,1,1,1,1139), -- Sword of Valhalla Blade
@@ -11643,9 +11644,9 @@ INSERT INTO `droplist` VALUES
 (21085,5479,1,1,-1,56536), -- Sealed Tallum Leather Armor Pattern
 (21085,5489,1,1,-1,126108), -- Sealed Tallum Stockings Fabric
 (21085,57,4618,9398,0,700000), -- Adena
-(21085,12222,1,1,1,1992), -- Common Item - Sealed Dark Crystal Leather Armor
-(21085,12228,1,1,1,996), -- Common Item - Sealed Dark Crystalline Leggings
-(21085,12230,1,1,1,498), -- Common Item - Sealed Tallum Leather Armor
+(21085,5297,1,1,1,28), -- Sealed Dark Crystal Leather Armor
+(21085,5298,1,1,1,44), -- Sealed Dark Crystalline Leggings
+(21085,5301,1,1,1,19), -- Sealed Tallum Leather Armor
 (21085,5478,1,1,1,3955), -- Sealed Dark Crystal Leather Armor Pattern
 (21085,5479,1,1,1,2783), -- Sealed Tallum Leather Armor Pattern
 (21085,5482,1,1,1,6208), -- Sealed Dark Crystalline Leggings Design
@@ -11663,9 +11664,9 @@ INSERT INTO `droplist` VALUES
 (21086,1895,1,5,-1,910686), -- Metallic Fiber
 (21086,5482,1,1,-1,126209), -- Sealed Dark Crystalline Leggings Design
 (21086,57,4625,9425,0,700000), -- Adena
-(21086,12227,1,1,1,347), -- Common Item - Sealed Dark Crystal breastplate
-(21086,12220,1,1,1,347), -- Common Item - Sealed Dark Crystal Gaiters
-(21086,12233,1,1,1,173), -- Common Item - Sealed Tallum Plate Armor
+(21086,5287,1,1,1,21), -- Sealed Dark Crystal breastplate
+(21086,5288,1,1,1,33), -- Sealed Dark Crystal Gaiters
+(21086,5293,1,1,1,14), -- Sealed Tallum Plate Armor
 (21086,5520,1,1,1,3037), -- Sealed Dark Crystal Breastplate Pattern
 (21086,5521,1,1,1,2143), -- Sealed Tallum Plate Armor Pattern
 (21086,5524,1,1,1,4641), -- Sealed Dark Crystal Gaiters Pattern
@@ -11681,9 +11682,9 @@ INSERT INTO `droplist` VALUES
 (21087,4082,1,1,-1,149902), -- Blue Wolf Leather Armor Texture
 (21087,5494,1,1,-1,278616), -- Sealed Dark Crystal Shield Fragment
 (21087,57,6417,13060,0,700000), -- Adena
-(21087,12227,1,1,1,1466), -- Common Item - Sealed Dark Crystal breastplate
-(21087,12220,1,1,1,1152), -- Common Item - Sealed Dark Crystal Gaiters
-(21087,12233,1,1,1,524), -- Common Item - Sealed Tallum Plate Armor
+(21087,5287,1,1,1,29), -- Sealed Dark Crystal breastplate
+(21087,5288,1,1,1,46), -- Sealed Dark Crystal Gaiters
+(21087,5293,1,1,1,20), -- Sealed Tallum Plate Armor
 (21087,5520,1,1,1,4213), -- Sealed Dark Crystal Breastplate Pattern
 (21087,5521,1,1,1,2973), -- Sealed Tallum Plate Armor Pattern
 (21087,5524,1,1,1,6438), -- Sealed Dark Crystal Gaiters Pattern
@@ -11703,9 +11704,9 @@ INSERT INTO `droplist` VALUES
 (21088,5230,1,1,-1,13538), -- Recipe: Mithril Arrow (100%)
 (21088,5485,1,1,-1,85381), -- Sealed Tallum Tunic Texture
 (21088,57,4909,10000,0,700000), -- Adena
-(21088,12232,1,1,1,1101), -- Common Item - Sealed Tallum Tunic
-(21088,12235,1,1,1,661), -- Common Item - Sealed Tallum Stockings
-(21088,12223,1,1,1,661), -- Common Item - Sealed Dark Crystal Robe
+(21088,5287,1,1,1,22), -- Sealed Dark Crystal breastplate
+(21088,5288,1,1,1,35), -- Sealed Dark Crystal Gaiters
+(21088,5293,1,1,1,15), -- Sealed Tallum Plate Armor
 (21088,5485,1,1,1,4887), -- Sealed Tallum Tunic Texture
 (21088,5486,1,1,1,3439), -- Sealed Dark Crystal Robe Fabric
 (21088,5489,1,1,1,7670), -- Sealed Tallum Stockings Fabric
@@ -11725,9 +11726,9 @@ INSERT INTO `droplist` VALUES
 (21089,4116,1,1,-1,51588), -- Deadman\'s Glory Stone
 (21089,5480,1,1,-1,52974), -- Sealed Leather Armor of Nightmare Fabric
 (21089,57,5703,11630,0,700000), -- Adena
-(21089,12232,1,1,1,521), -- Common Item - Sealed Tallum Tunic
-(21089,12235,1,1,1,1821), -- Common Item - Sealed Tallum Stockings
-(21089,12223,1,1,1,781), -- Common Item - Sealed Dark Crystal Robe
+(21089,5304,1,1,1,34), -- Sealed Tallum Tunic
+(21089,5305,1,1,1,54), -- Sealed Tallum Stockings
+(21089,5308,1,1,1,23), -- Sealed Dark Crystal Robe
 (21089,5485,1,1,1,4887), -- Sealed Tallum Tunic Texture
 (21089,5486,1,1,1,3439), -- Sealed Dark Crystal Robe Fabric
 (21089,5489,1,1,1,7670), -- Sealed Tallum Stockings Fabric
@@ -11744,9 +11745,9 @@ INSERT INTO `droplist` VALUES
 (21090,5230,1,1,-1,12101), -- Recipe: Mithril Arrow (100%)
 (21090,5486,1,1,-1,53701), -- Sealed Dark Crystal Robe Fabric
 (21090,57,4386,8941,0,700000), -- Adena
-(21090,12227,1,1,1,184), -- Common Item - Sealed Dark Crystal breastplate
-(21090,12220,1,1,1,1473), -- Common Item - Sealed Dark Crystal Gaiters
-(21090,12233,1,1,1,368), -- Common Item - Sealed Tallum Plate Armor
+(21090,5287,1,1,1,20), -- Sealed Dark Crystal breastplate
+(21090,5288,1,1,1,31), -- Sealed Dark Crystal Gaiters
+(21090,5293,1,1,1,14), -- Sealed Tallum Plate Armor
 (21090,5520,1,1,1,2882), -- Sealed Dark Crystal Breastplate Pattern
 (21090,5521,1,1,1,2034), -- Sealed Tallum Plate Armor Pattern
 (21090,5524,1,1,1,4405), -- Sealed Dark Crystal Gaiters Pattern
@@ -11764,9 +11765,9 @@ INSERT INTO `droplist` VALUES
 (21091,5479,1,1,-1,36097), -- Sealed Tallum Leather Armor Pattern
 (21091,5482,1,1,-1,80517), -- Sealed Dark Crystalline Leggings Design
 (21091,57,2948,6005,0,700000), -- Adena
-(21091,12222,1,1,1,729), -- Common Item - Sealed Dark Crystal Leather Armor
-(21091,12228,1,1,1,729), -- Common Item - Sealed Dark Crystalline Leggings
-(21091,12230,1,1,1,912), -- Common Item - Sealed Tallum Leather Armor
+(21091,5297,1,1,1,18), -- Sealed Dark Crystal Leather Armor
+(21091,5298,1,1,1,28), -- Sealed Dark Crystalline Leggings
+(21091,5301,1,1,1,12), -- Sealed Tallum Leather Armor
 (21091,5478,1,1,1,2526), -- Sealed Dark Crystal Leather Armor Pattern
 (21091,5479,1,1,1,1777), -- Sealed Tallum Leather Armor Pattern
 (21091,5482,1,1,1,3964), -- Sealed Dark Crystalline Leggings Design
@@ -11781,9 +11782,9 @@ INSERT INTO `droplist` VALUES
 (21092,5478,1,1,-1,50115), -- Sealed Dark Crystal Leather Armor Pattern
 (21092,5485,1,1,-1,50115), -- Sealed Tallum Tunic Texture
 (21092,57,2881,5868,0,700000), -- Adena
-(21092,12226,1,1,1,1114), -- Common Item - Sealed Dark Crystal Helmet
-(21092,12225,1,1,1,1299), -- Common Item - Sealed Dark Crystal Shield
-(21092,12234,1,1,1,1669), -- Common Item - Sealed Tallum Helmet
+(21092,5289,1,1,1,34), -- Sealed Dark Crystal Helmet
+(21092,5292,1,1,1,49), -- Sealed Dark Crystal Shield
+(21092,5294,1,1,1,34), -- Sealed Tallum Helmet
 (21092,5494,1,1,1,6162), -- Sealed Dark Crystal Shield Fragment
 (21092,5525,1,1,1,4536), -- Sealed Dark Crystal Helmet Design
 (21092,5526,1,1,1,4536), -- Sealed Tallum Helm Design
@@ -11864,8 +11865,8 @@ INSERT INTO `droplist` VALUES
 (21099,1899,1,1,-1,55740), -- Necklace of Devotion Chain
 (21099,2152,1,1,-1,62805), -- Recipe: Enchanted Necklace
 (21099,57,157,294,0,700000), -- Adena
-(21099,12009,1,1,1,427), -- Common Item - Bone Helmet (no drop info, no material info)
-(21099,12013,1,1,1,610), -- Common Item - Bronze Shield
+(21099,45,1,1,1,427), -- Bone Helmet
+(21099,626,1,1,1,610), -- Bronze Shield
 (21099,1932,1,1,1,10594), -- Bone Helmet Design
 (21099,1875,1,1,2,3337), -- Stone of Purity
 (21099,1879,1,1,2,8343), -- Cokes
@@ -11899,12 +11900,12 @@ INSERT INTO `droplist` VALUES
 (21102,2153,1,1,-1,70191), -- Recipe: Tiger\'s Eye Earring
 (21102,2183,1,1,-1,29693), -- Recipe: Mithril Banded Mail
 (21102,57,228,457,0,700000), -- Adena
-(21102,12026,1,1,1,818), -- Common Item - Elven Tunic
-(21102,12022,1,1,1,2457), -- Common Item - White Tunic
-(21102,12018,1,1,1,1227), -- Common Item - Mystic\'s Tunic
-(21102,12027,1,1,1,1637), -- Common Item - Elven Stockings
-(21102,12017,1,1,1,3676), -- Common Item - Dark Stockings
-(21102,12019,1,1,1,2045), -- Common Item - Mystic\'s Stockings
+(21102,433,1,1,1,62), -- Elven Tunic
+(21102,434,1,1,1,62), -- White Tunic
+(21102,435,1,1,1,62), -- Mystic\'s Tunic
+(21102,466,1,1,1,99), -- Elven Stockings
+(21102,467,1,1,1,99), -- Dark Stockings
+(21102,468,1,1,1,99), -- Mystic\'s Stockings
 (21102,1933,1,1,1,3628), -- Dark Stocking Fabric
 (21102,1936,1,1,1,2523), -- White Tunic Pattern
 (21102,956,1,1,2,414), -- Scroll: Enchant Armor (Grade D)
@@ -11917,8 +11918,8 @@ INSERT INTO `droplist` VALUES
 (21103,1879,1,1,-1,78342), -- Cokes
 (21103,1933,1,1,-1,55300), -- Dark Stocking Fabric
 (21103,57,239,476,0,700000), -- Adena
-(21103,12024,1,1,1,3759), -- Common Item - Scale Mail
-(21103,12023,1,1,1,5051), -- Common Item - Scale Gaiters
+(21103,348,1,1,1,97), -- Scale Mail
+(21103,377,1,1,1,155), -- Scale Gaiters
 (21103,1935,1,1,1,3588), -- Scale Mail Fragment
 (21103,1937,1,1,1,5517), -- Scale Gaiters Fragment
 (21103,1061,1,1,2,28571), -- Healing Potion
@@ -11932,8 +11933,8 @@ INSERT INTO `droplist` VALUES
 (21104,1876,1,1,-1,117263), -- Mithril Ore
 (21104,1935,1,1,-1,32755), -- Scale Mail Fragment
 (21104,57,296,595,0,700000), -- Adena
-(21104,12016,1,1,1,29412), -- Common Item - Leather Gauntlets
-(21104,12029,1,1,1,25641), -- Common Item - Blue Buckskin Boots
+(21104,605,1,1,1,962), -- Leather Gauntlets
+(21104,1123,1,1,1,962), -- Blue Buckskin Boots
 (21104,1876,1,1,2,10638), -- Mithril Ore
 (21104,1877,1,1,2,1938), -- Adamantite Nugget
 (21104,1880,1,1,2,4785), -- Steel
@@ -11945,10 +11946,10 @@ INSERT INTO `droplist` VALUES
 (21105,2154,1,1,-1,72155), -- Recipe: Elven Earring
 (21105,2155,1,1,-1,108174), -- Recipe: Elven Ring
 (21105,57,342,683,0,700000), -- Adena
-(21105,12043,1,1,1,3155), -- Common Item - Mithril Banded Mail
-(21105,12036,1,1,1,451), -- Common Item - Reinforced Leather Shirt
-(21105,12042,1,1,1,4505), -- Common Item - Mithril Banded Gaiters
-(21105,12034,1,1,1,3610), -- Common Item - Reinforced Leather Gaiters
+(21105,393,1,1,1,79), -- Mithril Banded Mail
+(21105,394,1,1,1,79), -- Reinforced Leather Shirt
+(21105,415,1,1,1,126), -- Mithril Banded Gaiters
+(21105,416,1,1,1,126), -- Reinforced Leather Gaiters
 (21105,1938,1,1,1,4016), -- Mithril Banded Mail Material
 (21105,1939,1,1,1,5246), -- Mithril Banded Gaiters Material
 (21105,1874,1,1,2,1805), -- Oriharukon Ore
@@ -11961,8 +11962,8 @@ INSERT INTO `droplist` VALUES
 (21106,1938,1,1,-1,38175), -- Mithril Banded Mail Material
 (21106,5550,1,1,-1,7571), -- Durable Metal Plate
 (21106,57,288,574,0,700000), -- Adena
-(21106,12050,1,1,1,9804), -- Common Item - Helmet
-(21106,12051,1,1,1,15873), -- Common Item - Hoplon
+(21106,47,1,1,1,397), -- Helmet
+(21106,628,1,1,1,567), -- Hoplon
 (21106,1341,10,30,2,125000), -- Bone Arrow
 (21106,1875,1,1,2,2732), -- Stone of Purity
 (21106,1879,1,1,2,5464), -- Cokes
@@ -11975,7 +11976,7 @@ INSERT INTO `droplist` VALUES
 (21107,1940,1,2,-1,178805), -- Iron Boots Design
 (21107,2156,1,1,-1,95840), -- Recipe: Elven Necklace
 (21107,57,610,1210,0,700000), -- Adena
-(21107,11665,1,1,1,4651), -- Common Item - Triple-Edged Jamadhr
+(21107,260,1,1,1,132), -- Triple-Edged Jamadhr
 (21107,1876,1,1,2,26316), -- Mithril Ore
 (21107,1877,1,1,2,3731), -- Adamantite Nugget
 (21107,1880,1,1,2,12048), -- Steel
@@ -12235,7 +12236,7 @@ INSERT INTO `droplist` VALUES
 (21123,1899,1,2,-1,69786), -- Necklace of Devotion Chain
 (21123,2152,1,2,-1,78632), -- Recipe: Enchanted Necklace
 (21123,57,236,442,0,700000), -- Adena
-(21123,11613,1,1,1,2762), -- Common Item - Crafted Dagger
+(21123,220,1,1,1,123), -- Crafted Dagger
 (21123,1874,1,1,2,4739), -- Oriharukon Ore
 (21123,1878,1,1,2,27778), -- Braided Hemp
 (21123,2178,1,1,2,8475), -- Recipe: Dark Stockings
@@ -12327,8 +12328,8 @@ INSERT INTO `droplist` VALUES
 (21131,1872,1,3,-1,466319), -- Animal Bone
 (21131,1899,1,1,-1,54647), -- Necklace of Devotion Chain
 (21131,57,185,345,0,700000), -- Adena
-(21131,12009,1,1,1,13889), -- Common Item - Bone Helmet
-(21131,12013,1,1,1,23810), -- Common Item - Bronze Shield
+(21131,45,1,1,1,419), -- Bone Helmet
+(21131,626,1,1,1,598), -- Bronze Shield
 (21131,1932,1,1,1,10386), -- Bone Helmet Design
 (21131,1867,1,1,2,71429), -- Animal Skin
 (21131,1872,1,1,2,58824), -- Animal Bone
@@ -12348,9 +12349,9 @@ INSERT INTO `droplist` VALUES
 (21133,1878,1,1,-1,120077), -- Braided Hemp
 (21133,1899,1,1,-1,46905), -- Necklace of Devotion Chain
 (21133,57,160,295,0,700000), -- Adena
-(21133,11623,1,1,1,7576), -- Common Item - Hand Axe (no material info)
-(21133,11615,1,1,1,7576), -- Common Item - Scalpel
-(21133,11610,1,1,1,7576), -- Common Item - Bone Staff
+(21133,156,1,1,1,28), -- Hand Axe
+(21133,167,1,1,1,28), -- Scalpel
+(21133,178,1,1,1,28), -- Bone Staff
 (21133,1061,1,1,2,20422), -- Healing Potion
 (21133,1864,1,1,2,67391), -- Stem
 (21133,1869,1,1,2,33696), -- Iron Ore
@@ -12360,7 +12361,7 @@ INSERT INTO `droplist` VALUES
 (21134,1932,1,1,-1,49704), -- Bone Helmet Design
 (21134,2152,1,1,-1,55130), -- Recipe: Enchanted Necklace
 (21134,57,164,312,0,700000), -- Adena
-(21134,11608,1,1,1,10989), -- Common Item - Bagh-Nakh (no material info)
+(21134,258,1,1,1,86), -- Bagh-Nakh
 (21134,1865,1,1,2,35149), -- Varnish
 (21134,1870,1,1,2,35149), -- Coal
 (21134,1875,1,1,2,2344), -- Stone of Purity
@@ -12370,7 +12371,7 @@ INSERT INTO `droplist` VALUES
 (21135,2178,1,1,-1,61030), -- Recipe: Dark Stockings
 (21135,5220,1,1,-1,15258), -- Metal Hardener
 (21135,57,201,368,0,700000), -- Adena
-(21135,11606,1,1,1,105), -- Common Item - Strengthened Bow (no drop info, no material info)
+(21135,274,1,1,1,105), -- Strengthened Bow
 (21135,1866,1,1,2,28544), -- Suede
 (21135,1871,1,1,2,42816), -- Charcoal
 (21135,1885,1,1,2,3568), -- High Grade Suede
@@ -12380,7 +12381,7 @@ INSERT INTO `droplist` VALUES
 (21136,2017,1,1,-1,4477), -- Saber Blade
 (21136,2180,1,1,-1,25333), -- Recipe: Scale Mail
 (21136,57,174,336,0,700000), -- Adena
-(21136,11613,1,1,1,10101), -- Common Item - Crafted Dagger (no material info)
+(21136,220,1,1,1,92), -- Crafted Dagger
 (21136,1834,1,1,2,42022), -- Emergency Dressing
 (21136,1867,1,1,2,50426), -- Animal Skin
 (21136,1872,1,1,2,50426), -- Animal Bone
@@ -12390,7 +12391,7 @@ INSERT INTO `droplist` VALUES
 (21137,1933,1,1,-1,42316), -- Dark Stocking Fabric
 (21137,2153,1,1,-1,55938), -- Recipe: Tiger\'s Eye Earring
 (21137,57,185,357,0,700000), -- Adena
-(21137,11637,1,1,1,61), -- Common Item - Divine Tome (no drop info, no material info)
+(21137,315,1,1,1,61), -- Divine Tome
 (21137,737,1,1,2,3276), -- Scroll of Resurrection
 (21137,1868,1,1,2,65519), -- Thread
 (21137,1873,1,1,2,13104), -- Silver Nugget
@@ -12401,7 +12402,7 @@ INSERT INTO `droplist` VALUES
 (21138,1864,1,1,-1,766967), -- Stem
 (21138,1869,1,1,-1,383484), -- Iron Ore
 (21138,57,199,383,0,700000), -- Adena
-(21138,11647,1,1,1,10309), -- Common Item - Pike (no material info)
+(21138,292,1,1,1,65), -- Pike
 (21138,1341,10,30,2,116423), -- Bone Arrow
 (21138,1829,1,1,2,13971), -- Scroll of Escape: Clan Hall
 (21138,1864,1,2,2,69854), -- Stem
@@ -12423,8 +12424,8 @@ INSERT INTO `droplist` VALUES
 (21140,1899,1,1,-1,171735), -- Necklace of Devotion Chain
 (21140,2152,1,1,-1,193505), -- Recipe: Enchanted Necklace
 (21140,57,477,911,0,700000), -- Adena
-(21140,12008,1,1,1,739), -- Common Item - Ring Mail Breastplate
-(21140,12012,1,1,1,1182), -- Common Item - Iron Plate Gaiters
+(21140,347,1,1,1,739), -- Ring Mail Breastplate
+(21140,376,1,1,1,1182), -- Iron Plate Gaiters
 (21140,1866,1,1,2,83333), -- Suede
 (21140,1871,1,1,2,125000), -- Charcoal
 (21140,1877,1,1,2,1639), -- Adamantite Nugget
@@ -12433,8 +12434,8 @@ INSERT INTO `droplist` VALUES
 (21141,1931,1,1,-1,166219), -- Leather Boot Lining
 (21141,2178,1,1,-1,203452), -- Recipe: Dark Stockings
 (21141,57,545,1067,0,700000), -- Adena
-(21141,12010,1,1,1,16949), -- Common Item - Cursed Tunic
-(21141,12011,1,1,1,25641), -- Common Item - Cursed Stockings
+(21141,432,1,1,1,1140), -- Cursed Tunic
+(21141,465,1,1,1,1826), -- Cursed Stockings
 (21141,1867,1,1,2,125000), -- Animal Skin
 (21141,1872,1,1,2,125000), -- Animal Bone
 (21141,1875,1,1,2,6757), -- Stone of Purity
@@ -12444,9 +12445,9 @@ INSERT INTO `droplist` VALUES
 (21142,1933,1,1,-1,148528), -- Dark Stocking Fabric
 (21142,2153,1,1,-1,196344), -- Recipe: Tiger\'s Eye Earring
 (21142,57,535,1059,0,700000), -- Adena
-(21142,12314,1,1,1,11111), -- Common Item - Enchanted Earring
-(21142,12316,1,1,1,17857), -- Common Item - Enchanted Ring
-(21142,12315,1,1,1,10309), -- Common Item - Enchanted Necklace
+(21142,848,1,1,1,810), -- Enchanted Earring
+(21142,879,1,1,1,1215), -- Enchanted Ring
+(21142,911,1,1,1,608), -- Enchanted Necklace
 (21142,1900,1,1,1,18871), -- Enchanted Necklace Chain
 (21142,955,1,1,2,690), -- Scroll: Enchant Weapon (Grade D)
 (21142,1868,1,1,2,200000), -- Thread
@@ -12456,8 +12457,8 @@ INSERT INTO `droplist` VALUES
 (21143,1872,1,3,-1,934937), -- Animal Bone
 (21143,1875,1,1,-1,93494), -- Stone of Purity
 (21143,57,593,1182,0,700000), -- Adena
-(21143,12016,1,1,1,41667), -- Common Item - Leather Gauntlets
-(21143,12029,1,1,1,50000), -- Common Item - Blue Buckskin Boots
+(21143,605,1,1,1,2302), -- Leather Gauntlets
+(21143,1123,1,1,1,2302), -- Blue Buckskin Boots
 (21143,1867,1,1,2,125000), -- Animal Skin
 (21143,1872,1,1,2,125000), -- Animal Bone
 (21143,1875,1,1,2,8929), -- Stone of Purity
@@ -12468,8 +12469,8 @@ INSERT INTO `droplist` VALUES
 (21144,1938,1,1,-1,111661), -- Mithril Banded Mail Material
 (21144,2154,1,1,-1,177832), -- Recipe: Elven Earring
 (21144,57,702,1399,0,700000), -- Adena
-(21144,12050,1,1,1,21739), -- Common Item - Helmet
-(21144,12051,1,1,1,34483), -- Common Item - Hoplon
+(21144,47,1,1,1,1160), -- Helmet
+(21144,628,1,1,1,1657), -- Hoplon
 (21144,1865,1,1,2,100000), -- Varnish
 (21144,1870,1,1,2,111111), -- Coal
 (21144,1875,1,1,2,5208), -- Stone of Purity
@@ -12481,7 +12482,7 @@ INSERT INTO `droplist` VALUES
 (21145,1885,1,1,-1,175930), -- High Grade Suede
 (21145,1902,1,1,-1,213897), -- Elven Earring Beads
 (21145,57,893,1781,0,700000), -- Adena
-(21145,11714,1,1,1,1034), -- Common Item - Sword of Revolution
+(21145,129,1,1,1,78), -- Sword of Revolution
 (21145,2034,1,1,1,5766), -- Sword of Revolution Blade
 (21145,1832,1,1,2,142857), -- Greater Antidote
 (21145,1866,1,1,2,90909), -- Suede
@@ -12494,11 +12495,11 @@ INSERT INTO `droplist` VALUES
 (21146,1903,1,1,-1,378338), -- Elven Ring Piece
 (21146,2145,1,1,-1,162010), -- Recipe: Mithril Alloy
 (21146,57,951,1898,0,700000), -- Adena
-(21146,11686,1,1,1,245), -- Common Item - Morning Star
-(21146,11693,1,1,1,245), -- Common Item - Goat Head Staff
-(21146,11708,1,1,1,245), -- Common Item - Tarbar
-(21146,11697,1,1,1,245), -- Common Item - Skull Breaker
-(21146,11713,1,1,1,245), -- Common Item - Heavy Bone Club
+(21146,88,1,1,1,17), -- Morning Star
+(21146,90,1,1,1,17), -- Goat Head Staff
+(21146,158,1,1,1,17), -- Tarbar
+(21146,169,1,1,1,17), -- Skull Breaker
+(21146,172,1,1,1,17), -- Heavy Bone Club
 (21146,2031,1,1,1,1187), -- Morning Star Head
 (21146,2032,1,1,1,1084), -- Goat Head Staff Head
 (21146,2035,1,1,1,1187), -- Tarbar Head
@@ -12514,7 +12515,7 @@ INSERT INTO `droplist` VALUES
 (21147,1905,1,1,-1,268330), -- Omen Beast\'s Eye Earring Gemstone
 (21147,1906,1,1,-1,379166), -- Mithril Ring Wire
 (21147,57,1113,2260,0,700000), -- Adena
-(21147,11730,1,1,1,2092), -- Common Item - Scallop Jamadhr
+(21147,262,1,1,1,77), -- Scallop Jamadhr
 (21147,2053,1,1,1,5727), -- Scallop Jamadhr Edge
 (21147,1868,1,3,2,250000), -- Thread
 (21147,1873,1,1,2,90909), -- Silver Nugget
@@ -12526,7 +12527,7 @@ INSERT INTO `droplist` VALUES
 (21148,1880,1,1,-1,273822), -- Steel
 (21148,5550,1,1,-1,36510), -- Durable Metal Plate
 (21148,57,1099,2253,0,700000), -- Adena
-(21148,11759,1,1,1,880), -- Common Item - Crystallized Ice Bow
+(21148,281,1,1,1,57), -- Crystallized Ice Bow
 (21148,2074,1,1,1,4583), -- Crystallized Ice Bow Shaft
 (21148,1864,1,3,2,90909), -- Stem
 (21148,1869,1,1,2,90909), -- Iron Ore
@@ -12542,8 +12543,8 @@ INSERT INTO `droplist` VALUES
 (21149,1909,1,1,-1,426601), -- Aquastone Ring Wire
 (21149,2163,1,1,-1,161172), -- Recipe: Earring of Protection
 (21149,57,1269,2596,0,700000), -- Adena
-(21149,11762,1,1,1,1656), -- Common Item - Cursed Dagger
-(21149,11747,1,1,1,331), -- Common Item - Dark Elven Dagger
+(21149,226,1,1,1,33), -- Cursed Dagger
+(21149,232,1,1,1,33), -- Dark Elven Dagger
 (21149,2070,1,1,1,2964), -- Cursed Dagger Blade
 (21149,2072,1,1,1,2964), -- Dark Elven Dagger Edge
 (21149,1868,1,1,2,250000), -- Thread
@@ -12561,7 +12562,7 @@ INSERT INTO `droplist` VALUES
 (21150,1911,1,1,-1,266897), -- Earring of Protection Gemstone
 (21150,2166,1,1,-1,121642), -- Recipe: Earrings of Binding (100%)
 (21150,57,1445,2946,0,700000), -- Adena
-(21150,11792,1,1,1,1458), -- Common Item - Horn of Glory
+(21150,325,1,1,1,56), -- Horn of Glory
 (21150,2088,1,1,1,5603), -- Horn of Glory Fragment
 (21150,1342,10,30,2,200000), -- Fine Steel Arrow
 (21150,1866,1,1,2,66667), -- Suede
@@ -12580,8 +12581,8 @@ INSERT INTO `droplist` VALUES
 (21151,4043,1,1,-1,124707), -- Asofe
 (21151,4601,1,1,-1,8314), -- Greater Dye of Strength <Str+3 Con-3>
 (21151,57,1509,3068,0,700000), -- Adena
-(21151,11800,1,1,1,213), -- Common Item - Grace Dagger
-(21151,11803,1,1,1,213), -- Common Item - Dark Screamer
+(21151,231,1,1,1,18), -- Grace Dagger
+(21151,233,1,1,1,18), -- Dark Screamer
 (21151,2106,1,1,1,2109), -- Grace Dagger Edge
 (21151,2107,1,1,1,2109), -- Dark Screamer Edge
 (21151,1864,1,3,2,125000), -- Stem
@@ -12597,9 +12598,9 @@ INSERT INTO `droplist` VALUES
 (21152,1920,1,1,-1,136989), -- Necklace of Binding Chain
 (21152,4600,1,1,-1,13345), -- Greater Dye of Wit <Wit+2 Men-2>
 (21152,57,1616,3283,0,700000), -- Adena
-(21152,12133,1,1,1,1506), -- Common Item - Theca Leather Armor
-(21152,12135,1,1,1,1290), -- Common Item - Drake Leather Armor
-(21152,12130,1,1,1,3226), -- Common Item - Theca Leather Gaiters
+(21152,400,1,1,1,60), -- Theca Leather Armor
+(21152,401,1,1,1,32), -- Drake Leather Armor
+(21152,420,1,1,1,96), -- Theca Leather Gaiters
 (21152,1984,1,1,1,5282), -- Theca Leather Armor Pattern
 (21152,1985,1,1,1,8496), -- Theca Leather Gaiters Pattern
 (21152,1987,1,1,1,3759), -- Drake Leather Armor Texture
@@ -12618,10 +12619,10 @@ INSERT INTO `droplist` VALUES
 (21153,4049,1,1,-1,248435), -- Adamantite Earring Gemstone
 (21153,4129,1,1,-1,51260), -- Recipe: Earrings of Black Ore
 (21153,57,1906,3892,0,700000), -- Adena
-(21153,12161,1,1,1,489), -- Common Item - Zubei\'s Breastplate
-(21153,12152,1,1,1,391), -- Common Item - Zubei\'s Gaiters
-(21153,12173,1,1,1,587), -- Common Item - Avadon Breastplate
-(21153,12172,1,1,1,684), -- Common Item - Avadon Gaiters
+(21153,357,1,1,1,17), -- Zubei\'s Breastplate
+(21153,383,1,1,1,27), -- Zubei\'s Gaiters
+(21153,2376,1,1,1,17), -- Avadon Breastplate
+(21153,2379,1,1,1,27), -- Avadon Gaiters
 (21153,4056,1,1,1,3165), -- Zubei\'s Breastplate Part
 (21153,4057,1,1,1,4892), -- Zubei\'s Gaiter Material
 (21153,4064,1,1,1,3165), -- Avadon Breastplate Part
@@ -12640,9 +12641,9 @@ INSERT INTO `droplist` VALUES
 (21154,4613,1,1,-1,6863), -- Greater Dye of Strength <Str+4 Con-4>
 (21154,4614,1,1,-1,6863), -- Greater Dye of Strength <Str+4 Dex-4>
 (21154,57,2005,4083,0,700000), -- Adena
-(21154,12175,1,1,1,772), -- Common Item - Tunic of Zubei
-(21154,12176,1,1,1,1103), -- Common Item - Stockings of Zubei
-(21154,12166,1,1,1,221), -- Common Item - Avadon Robe
+(21154,2397,1,1,1,32), -- Tunic of Zubei
+(21154,2402,1,1,1,51), -- Stockings of Zubei
+(21154,2406,1,1,1,22), -- Avadon Robe
 (21154,4069,1,1,1,5774), -- Tunic of Zubei Fabric
 (21154,4070,1,1,1,8767), -- Stockings of Zubei Fabric
 (21154,4071,1,1,1,4436), -- Avadon Robe Fabric
@@ -12658,9 +12659,9 @@ INSERT INTO `droplist` VALUES
 (21155,4051,1,1,-1,194613), -- Adamantite Necklace Chain
 (21155,4130,1,1,-1,81463), -- Recipe: Ring of Black Ore
 (21155,57,2021,4119,0,700000), -- Adena
-(21155,12338,1,1,1,1730), -- Common Item - Adamantite Earring
-(21155,12340,1,1,1,3788), -- Common Item - Adamantite Ring
-(21155,12339,1,1,1,1082), -- Common Item - Adamantite Necklace
+(21155,856,1,1,1,82), -- Adamantite Earring
+(21155,887,1,1,1,123), -- Adamantite Ring
+(21155,918,1,1,1,62), -- Adamantite Necklace
 (21155,4049,1,1,1,12961), -- Adamantite Earring Gemstone
 (21155,4050,1,1,1,15310), -- Adamantite Ring Wire
 (21155,4051,1,1,1,9583), -- Adamantite Necklace Chain
@@ -12677,10 +12678,10 @@ INSERT INTO `droplist` VALUES
 (21156,4056,1,1,-1,97490), -- Zubei\'s Breastplate Part
 (21156,4131,1,1,-1,43791), -- Recipe: Necklace of Black Ore
 (21156,57,2177,4415,0,700000), -- Adena
-(21156,12147,1,1,1,2101), -- Common Item - Zubei\'s Boots
-(21156,12149,1,1,1,2151), -- Common Item - Avadon Boots
-(21156,12146,1,1,1,1563), -- Common Item - Zubei\'s Gauntlets
-(21156,12148,1,1,1,1613), -- Common Item - Avadon Gloves
+(21156,554,1,1,1,77), -- Zubei\'s Boots
+(21156,600,1,1,1,77), -- Avadon Boots
+(21156,612,1,1,1,77), -- Zubei\'s Gauntlets
+(21156,2464,1,1,1,77), -- Avadon Gloves
 (21156,4073,1,1,1,10348), -- Avadon Gloves Part
 (21156,4097,1,1,1,10348), -- Zubei\'s Boots Design
 (21156,4098,1,1,1,10348), -- Avadon Boots Design
@@ -12699,9 +12700,9 @@ INSERT INTO `droplist` VALUES
 (21157,4052,1,1,-1,217530), -- Earring of Black Ore Piece
 (21157,5549,1,2,-1,614413), -- Metallic Thread
 (21157,57,2488,5032,0,700000), -- Adena
-(21157,12183,1,1,1,1112), -- Common Item - Doom Shield
-(21157,12202,1,1,1,1016), -- Common Item - Blue Wolf Helmet
-(21157,12185,1,1,1,762), -- Common Item - Doom Helmet
+(21157,110,1,1,1,72), -- Doom Shield
+(21157,2416,1,1,1,50), -- Blue Wolf Helmet
+(21157,2417,1,1,1,50), -- Doom Helmet
 (21157,4077,1,1,1,13606), -- Doom Shield Fragment
 (21157,4088,1,1,1,11431), -- Blue Wolf Helmet Design
 (21157,4089,1,1,1,11431), -- Doom Helmet Pattern
@@ -12720,8 +12721,8 @@ INSERT INTO `droplist` VALUES
 (21158,4053,1,1,-1,298243), -- Ring of Black Ore Gemstone
 (21158,5230,1,1,-1,9277), -- Recipe: Mithril Arrow (100%)
 (21158,57,2798,5718,0,700000), -- Adena
-(21158,12194,1,1,1,438), -- Common Item - Blue Wolf Leather Armor
-(21158,12186,1,1,1,657), -- Common Item - Leather Armor of Doom
+(21158,2391,1,1,1,30), -- Blue Wolf Leather Armor
+(21158,2392,1,1,1,30), -- Leather Armor of Doom
 (21158,4082,1,1,1,5805), -- Blue Wolf Leather Armor Texture
 (21158,4083,1,1,1,5805), -- Leather Armor of Doom Design
 (21158,1344,30,90,2,71429), -- Mithril Arrow
@@ -12739,9 +12740,9 @@ INSERT INTO `droplist` VALUES
 (21159,4043,1,1,-1,239642), -- Asofe
 (21159,5478,1,1,-1,60455), -- Sealed Dark Crystal Leather Armor Pattern
 (21159,57,2901,5897,0,700000), -- Adena
-(21159,12232,1,1,1,212), -- Common Item - Sealed Tallum Tunic
-(21159,12235,1,1,1,1186), -- Common Item - Sealed Tallum Stockings
-(21159,12223,1,1,1,212), -- Common Item - Sealed Dark Crystal Robe
+(21159,5304,1,1,1,21), -- Sealed Tallum Tunic
+(21159,5305,1,1,1,33), -- Sealed Tallum Stockings
+(21159,5308,1,1,1,14), -- Sealed Dark Crystal Robe
 (21159,5485,1,1,1,2976), -- Sealed Tallum Tunic Texture
 (21159,5486,1,1,1,2094), -- Sealed Dark Crystal Robe Fabric
 (21159,5489,1,1,1,4671), -- Sealed Tallum Stockings Fabric
@@ -12762,9 +12763,9 @@ INSERT INTO `droplist` VALUES
 (21160,5479,1,1,-1,44366), -- Sealed Tallum Leather Armor Pattern
 (21160,5482,1,1,-1,98961), -- Sealed Dark Crystalline Leggings Design
 (21160,57,3019,6154,0,700000), -- Adena
-(21160,12232,1,1,1,520), -- Common Item - Sealed Tallum Tunic
-(21160,12235,1,1,1,1560), -- Common Item - Sealed Tallum Stockings
-(21160,12223,1,1,1,260), -- Common Item - Sealed Dark Crystal Robe
+(21160,5304,1,1,1,22), -- Sealed Tallum Tunic
+(21160,5305,1,1,1,35), -- Sealed Tallum Stockings
+(21160,5308,1,1,1,15), -- Sealed Dark Crystal Robe
 (21160,5485,1,1,1,3104), -- Sealed Tallum Tunic Texture
 (21160,5486,1,1,1,2184), -- Sealed Dark Crystal Robe Fabric
 (21160,5489,1,1,1,4872), -- Sealed Tallum Stockings Fabric
@@ -12781,9 +12782,9 @@ INSERT INTO `droplist` VALUES
 (21161,4041,1,1,-1,71260), -- Mold Hardener
 (21161,5485,1,1,-1,68911), -- Sealed Tallum Tunic Texture
 (21161,57,3302,6724,0,700000), -- Adena
-(21161,12344,1,1,1,1003), -- Common Item - Sealed Phoenix Necklace
-(21161,12345,1,1,1,2066), -- Common Item - Sealed Phoenix Earring
-(21161,12346,1,1,1,4132), -- Common Item - Sealed Phoenix Ring
+(21161,6323,1,1,1,47), -- Sealed Phoenix Necklace
+(21161,6324,1,1,1,62), -- Sealed Phoenix Earring
+(21161,6325,1,1,1,93), -- Sealed Phoenix Ring
 (21161,6341,1,1,1,11159), -- Sealed Phoenix Earring Gemstone
 (21161,6343,1,1,1,8627), -- Sealed Phoenix Necklace Beads
 (21161,6345,1,1,1,15434), -- Sealed Phoenix Ring Gemstone
@@ -12800,9 +12801,9 @@ INSERT INTO `droplist` VALUES
 (21162,5478,1,1,-1,69011), -- Sealed Dark Crystal Leather Armor Pattern
 (21162,5486,1,1,-1,48561), -- Sealed Dark Crystal Robe Fabric
 (21162,57,3305,6737,0,700000), -- Adena
-(21162,12222,1,1,1,597), -- Common Item - Sealed Dark Crystal Leather Armor
-(21162,12228,1,1,1,847), -- Common Item - Sealed Dark Crystalline Leggings
-(21162,12230,1,1,1,310), -- Common Item - Sealed Tallum Leather Armor
+(21162,5297,1,1,1,24), -- Sealed Dark Crystal Leather Armor
+(21162,5298,1,1,1,38), -- Sealed Dark Crystalline Leggings
+(21162,5301,1,1,1,16), -- Sealed Tallum Leather Armor
 (21162,5478,1,1,1,3398), -- Sealed Dark Crystal Leather Armor Pattern
 (21162,5479,1,1,1,2391), -- Sealed Tallum Leather Armor Pattern
 (21162,5482,1,1,1,5333), -- Sealed Dark Crystalline Leggings Design
@@ -12820,10 +12821,10 @@ INSERT INTO `droplist` VALUES
 (21163,5480,1,1,-1,39041), -- Sealed Leather Armor of Nightmare Fabric
 (21163,5481,1,1,-1,39041), -- Sealed Majestic Leather Armor Fabric
 (21163,57,3493,7152,0,700000), -- Adena
-(21163,12221,1,1,1,1330), -- Common Item - Sealed Dark Crystal Gloves
-(21163,12224,1,1,1,1247), -- Common Item - Sealed Dark Crystal Boots
-(21163,12229,1,1,1,1387), -- Common Item - Sealed Tallum Gloves
-(21163,12231,1,1,1,1783), -- Common Item - Sealed Tallum Boots
+(21163,5290,1,1,1,56), -- Sealed Dark Crystal Gloves
+(21163,5291,1,1,1,56), -- Sealed Dark Crystal Boots
+(21163,5295,1,1,1,56), -- Sealed Tallum Gloves
+(21163,5296,1,1,1,56), -- Sealed Tallum Boots
 (21163,5496,1,1,1,7532), -- Sealed Dark Crystal Boots Lining
 (21163,5497,1,1,1,7532), -- Sealed Tallum Boots Lining
 (21163,5508,1,1,1,7532), -- Sealed Dark Crystal Gloves Design
@@ -12832,9 +12833,9 @@ INSERT INTO `droplist` VALUES
 (21164,5481,1,1,-1,44804), -- Sealed Majestic Leather Armor Fabric
 (21164,5487,1,1,-1,44963), -- Sealed Robe of Nightmare Fabric
 (21164,57,4018,8199,0,700000), -- Adena
-(21164,12350,1,1,1,843), -- Common Item - Sealed Majestic Necklace
-(21164,12352,1,1,1,1206), -- Common Item - Sealed Majestic Earring
-(21164,12351,1,1,1,2841), -- Common Item - Sealed Majestic Ring
+(21164,6326,1,1,1,38), -- Sealed Majestic Necklace
+(21164,6327,1,1,1,51), -- Sealed Majestic Earring
+(21164,6328,1,1,1,76), -- Sealed Majestic Ring
 (21164,6342,1,1,1,11135), -- Sealed Majestic Earring Gemstone
 (21164,6344,1,1,1,7206), -- Sealed Majestic Necklace Beads
 (21164,6346,1,1,1,16004), -- Sealed Majestic Ring Gemstone
@@ -12853,8 +12854,8 @@ INSERT INTO `droplist` VALUES
 (21165,5488,1,1,-1,46422), -- Sealed Majestic Robe Fabric
 (21165,5495,1,1,-1,156540), -- Sealed Shield of Nightmare Fragment
 (21165,57,4147,8467,0,700000), -- Adena
-(21165,12265,1,1,1,1477), -- Common Item - Sealed Leather Armor of Nightmare
-(21165,12258,1,1,1,425), -- Common Item - Sealed Majestic Leather Armor
+(21165,5320,1,1,1,20), -- Sealed Leather Armor of Nightmare
+(21165,5323,1,1,1,20), -- Sealed Majestic Leather Armor
 (21165,5480,1,1,1,3417), -- Sealed Leather Armor of Nightmare Fabric
 (21165,5481,1,1,1,3417), -- Sealed Majestic Leather Armor Fabric
 (21165,729,1,1,2,49), -- Scroll: Enchant Weapon (Grade A)
@@ -12897,9 +12898,9 @@ INSERT INTO `droplist` VALUES
 (21168,1899,1,1,-1,184636), -- Necklace of Devotion Chain
 (21168,5549,1,1,-1,118167), -- Metallic Thread
 (21168,6360,97,190,0,700000), -- Blue Seal Stone
-(21168,12311,1,1,1,27027), -- Common Item - Red Crescent Earring
-(21168,12313,1,1,1,45455), -- Common Item - Ring of Devotion
-(21168,12312,1,1,1,18519), -- Common Item - Necklace of Devotion
+(21168,847,1,1,1,1233), -- Red Crescent Earring
+(21168,890,1,1,1,1843), -- Ring of Devotion
+(21168,910,1,1,1,924), -- Necklace of Devotion
 (21168,1899,1,1,1,25907), -- Necklace of Devotion Chain
 (21168,1868,1,3,2,100000), -- Thread
 (21168,1873,1,1,2,38462), -- Silver Nugget
@@ -12912,8 +12913,8 @@ INSERT INTO `droplist` VALUES
 (21169,1900,1,1,-1,159184), -- Enchanted Necklace Chain
 (21169,2153,1,1,-1,226274), -- Recipe: Tiger\'s Eye Earring
 (21169,6360,128,259,0,700000), -- Blue Seal Stone
-(21169,12016,1,1,1,50000), -- Common Item - Leather Gauntlets
-(21169,12029,1,1,1,50000), -- Common Item - Blue Buckskin Boots
+(21169,605,1,1,1,2388), -- Leather Gauntlets
+(21169,1123,1,1,1,2388), -- Blue Buckskin Boots
 (21169,1864,1,3,2,125000), -- Stem
 (21169,1869,1,1,2,125000), -- Iron Ore
 (21169,1880,1,1,2,13514), -- Steel
@@ -12924,8 +12925,8 @@ INSERT INTO `droplist` VALUES
 (21170,1938,1,1,-1,108529), -- Mithril Banded Mail Material
 (21170,2154,1,1,-1,172845), -- Recipe: Elven Earring
 (21170,6360,108,211,0,700000), -- Blue Seal Stone
-(21170,12050,1,1,1,27027), -- Common Item - Helmet
-(21170,12051,1,1,1,33333), -- Common Item - Hoplon
+(21170,47,1,1,1,1127), -- Helmet
+(21170,628,1,1,1,1611), -- Hoplon
 (21170,1864,1,1,2,250000), -- Stem
 (21170,1869,1,1,2,125000), -- Iron Ore
 (21170,1880,1,1,2,12346), -- Steel
@@ -12938,11 +12939,11 @@ INSERT INTO `droplist` VALUES
 (21171,1870,1,5,-1,684631), -- Coal
 (21171,1939,1,1,-1,180403), -- Mithril Banded Gaiters Material
 (21171,6360,96,192,0,700000), -- Blue Seal Stone
-(21171,11655,1,1,1,1012), -- Common Item - Sword of Magic
-(21171,11667,1,1,1,1215), -- Common Item - Two-Handed Sword
-(21171,11675,1,1,1,1618), -- Common Item - Crimson Sword
-(21171,11670,1,1,1,202), -- Common Item - Elven Sword
-(21171,11657,1,1,1,1416), -- Common Item - Sword of Occult
+(21171,83,1,1,1,51), -- Sword of Magic
+(21171,124,1,1,1,38), -- Two-Handed Sword
+(21171,127,1,1,1,38), -- Crimson Sword
+(21171,130,1,1,1,38), -- Elven Sword
+(21171,144,1,1,1,51), -- Sword of Occult
 (21171,2026,1,1,1,1215), -- Two-Handed Sword Edge
 (21171,1865,1,1,2,250000), -- Varnish
 (21171,1870,1,3,2,111111), -- Coal
@@ -12954,11 +12955,11 @@ INSERT INTO `droplist` VALUES
 (21172,1902,1,1,-1,245252), -- Elven Earring Beads
 (21172,2145,1,1,-1,172903), -- Recipe: Mithril Alloy
 (21172,6360,89,178,0,700000), -- Blue Seal Stone
-(21172,11686,1,1,1,229), -- Common Item - Morning Star
-(21172,11693,1,1,1,229), -- Common Item - Goat Head Staff
-(21172,11708,1,1,1,229), -- Common Item - Tarbar
-(21172,11697,1,1,1,229), -- Common Item - Skull Breaker
-(21172,11713,1,1,1,229), -- Common Item - Heavy Bone Club
+(21172,88,1,1,1,18), -- Morning Star
+(21172,90,1,1,1,18), -- Goat Head Staff
+(21172,158,1,1,1,18), -- Tarbar
+(21172,169,1,1,1,18), -- Skull Breaker
+(21172,172,1,1,1,18), -- Heavy Bone Club
 (21172,2031,1,1,1,1267), -- Morning Star Head
 (21172,2032,1,1,1,1157), -- Goat Head Staff Head
 (21172,2035,1,1,1,1267), -- Tarbar Head
@@ -12975,7 +12976,7 @@ INSERT INTO `droplist` VALUES
 (21173,1881,1,1,-1,341080), -- Coarse Bone Powder
 (21173,1905,1,1,-1,248842), -- Omen Beast\'s Eye Earring Gemstone
 (21173,6360,56,111,0,700000), -- Blue Seal Stone
-(21173,11730,1,1,1,1727), -- Common Item - Scallop Jamadhr
+(21173,262,1,1,1,72), -- Scallop Jamadhr
 (21173,2053,1,1,1,5311), -- Scallop Jamadhr Edge
 (21173,1805,1,1,2,472), -- Recipe: Soulshot: C-Grade
 (21173,1867,1,1,2,166667), -- Animal Skin
@@ -12991,7 +12992,7 @@ INSERT INTO `droplist` VALUES
 (21174,1908,1,1,-1,309962), -- Moonstone Earring Wire
 (21174,2163,1,1,-1,167000), -- Recipe: Earring of Protection
 (21174,6360,33,62,0,700000), -- Blue Seal Stone
-(21174,11759,1,1,1,1727), -- Common Item - Crystallized Ice Bow
+(21174,281,1,1,1,68), -- Crystallized Ice Bow
 (21174,2074,1,1,1,5479), -- Crystallized Ice Bow Shaft
 (21174,1868,1,3,2,200000), -- Thread
 (21174,1873,1,1,2,76923), -- Silver Nugget
@@ -13005,8 +13006,8 @@ INSERT INTO `droplist` VALUES
 (21175,440,1,1,-1,1053), -- Robe of Seal
 (21175,1912,1,1,-1,401114), -- Ring of Protection Gemstone
 (21175,4590,1,1,-1,12408), -- Greater Dye of Strength <Str+2 Dex-2>
-(21175,11788,1,1,1,1057), -- Common Item - Stiletto
-(21175,11779,1,1,1,634), -- Common Item - Soulfire Dirk
+(21175,227,1,1,1,29), -- Stiletto
+(21175,242,1,1,1,29), -- Soulfire Dirk
 (21175,2083,1,1,1,2740), -- Stiletto Edge
 (21175,2084,1,1,1,2740), -- Soulfire Dirk Blade
 (21175,951,1,1,2,423), -- Scroll: Enchant Weapon (Grade C)
@@ -13022,7 +13023,7 @@ INSERT INTO `droplist` VALUES
 (21176,4041,1,1,-1,32965), -- Mold Hardener
 (21176,4601,1,1,-1,8424), -- Greater Dye of Strength <Str+3 Con-3>
 (21176,6360,133,267,0,700000), -- Blue Seal Stone
-(21176,11817,1,1,1,975), -- Common Item - Heathen\'s Book
+(21176,326,1,1,1,37), -- Heathen\'s Book
 (21176,2110,1,1,1,4419), -- Heathen\'s Book Page
 (21176,1864,4,12,2,50000), -- Stem
 (21176,1865,2,6,2,38462), -- Varnish
@@ -13037,9 +13038,9 @@ INSERT INTO `droplist` VALUES
 (21177,1920,1,1,-1,176944), -- Necklace of Binding Chain
 (21177,4594,1,1,-1,17237), -- Greater Dye of Dexterity <Dex+2 Con-2>
 (21177,6360,148,301,0,700000), -- Blue Seal Stone
-(21177,11858,1,1,1,188), -- Common Item - Orcish Poleaxe
-(21177,11830,1,1,1,188), -- Common Item - Scorpion
-(21177,11832,1,1,1,1130), -- Common Item - Widow Maker
+(21177,299,1,1,1,11), -- Orcish Poleaxe
+(21177,301,1,1,1,14), -- Scorpion
+(21177,303,1,1,1,14), -- Widow Maker
 (21177,2113,1,1,1,1541), -- Scorpion Blade
 (21177,2114,1,1,1,1541), -- Widowmaker Head
 (21177,2122,1,1,1,1453), -- Orcish Poleaxe Blade
@@ -13057,9 +13058,9 @@ INSERT INTO `droplist` VALUES
 (21178,4129,1,1,-1,59998), -- Recipe: Earrings of Black Ore
 (21178,4610,1,1,-1,12320), -- Greater Dye of Mental Strength <Men+3 Wit-3>
 (21178,6360,73,146,0,700000), -- Blue Seal Stone
-(21178,12151,1,1,1,824), -- Common Item - Zubei\'s Leather Shirt
-(21178,12150,1,1,1,1730), -- Common Item - Zubei\'s Leather Gaiters
-(21178,12165,1,1,1,577), -- Common Item - Avadon Leather Armor
+(21178,2384,1,1,1,35), -- Zubei\'s Leather Shirt
+(21178,2388,1,1,1,57), -- Zubei\'s Leather Gaiters
+(21178,2390,1,1,1,24), -- Avadon Leather Armor
 (21178,4066,1,1,1,6434), -- Zubei\'s Leather Shirt Fabric
 (21178,4067,1,1,1,9768), -- Zubei\'s Leather Gaiter Texture
 (21178,4068,1,1,1,4943), -- Avadon Leather Armor Lining
@@ -13077,10 +13078,10 @@ INSERT INTO `droplist` VALUES
 (21179,1872,1,15,-1,888172), -- Animal Bone
 (21179,4613,1,1,-1,7350), -- Greater Dye of Strength <Str+4 Con-4>
 (21179,6360,7,15,0,700000), -- Blue Seal Stone
-(21179,12161,1,1,1,400), -- Common Item - Zubei\'s Breastplate
-(21179,12152,1,1,1,824), -- Common Item - Zubei\'s Gaiters
-(21179,12173,1,1,1,352), -- Common Item - Avadon Breastplate
-(21179,12172,1,1,1,934), -- Common Item - Avadon Gaiters
+(21179,357,1,1,1,19), -- Zubei\'s Breastplate
+(21179,383,1,1,1,31), -- Zubei\'s Gaiters
+(21179,2376,1,1,1,19), -- Avadon Breastplate
+(21179,2379,1,1,1,31), -- Avadon Gaiters
 (21179,4056,1,1,1,3561), -- Zubei\'s Breastplate Part
 (21179,4057,1,1,1,5504), -- Zubei\'s Gaiter Material
 (21179,4064,1,1,1,3561), -- Avadon Breastplate Part
@@ -13097,10 +13098,10 @@ INSERT INTO `droplist` VALUES
 (21180,4052,1,1,-1,266218), -- Earring of Black Ore Piece
 (21180,4053,1,1,-1,322303), -- Ring of Black Ore Gemstone
 (21180,5230,1,1,-1,10026), -- Recipe: Mithril Arrow (100%)
-(21180,12201,1,1,1,481), -- Common Item - Blue Wolf Tunic
-(21180,12192,1,1,1,321), -- Common Item - Tunic of Doom
-(21180,12203,1,1,1,642), -- Common Item - Blue Wolf Stockings
-(21180,12205,1,1,1,642), -- Common Item - Stockings of Doom
+(21180,2398,1,1,1,24), -- Blue Wolf Tunic
+(21180,2399,1,1,1,24), -- Tunic of Doom
+(21180,2403,1,1,1,37), -- Blue Wolf Stockings
+(21180,2404,1,1,1,37), -- Stockings of Doom
 (21180,4084,1,1,1,4824), -- Blue Wolf Tunic Fabric
 (21180,4085,1,1,1,4824), -- Tunic of Doom Pattern
 (21180,4086,1,1,1,6513), -- Blue Wolf Stockings Pattern
@@ -13116,9 +13117,9 @@ INSERT INTO `droplist` VALUES
 (21181,4041,1,1,-1,69372), -- Mold Hardener
 (21181,4054,1,2,-1,157136), -- Necklace of Black Ore Beads
 (21181,5230,1,1,-1,10637), -- Recipe: Mithril Arrow (100%)
-(21181,12341,1,1,1,1812), -- Common Item - Earring of Black Ore
-(21181,12343,1,1,1,2762), -- Common Item - Ring of Black Ore
-(21181,12342,1,1,1,1292), -- Common Item - Necklace of Black Ore
+(21181,864,1,1,1,86), -- Earring of Black Ore
+(21181,895,1,1,1,128), -- Ring of Black Ore
+(21181,926,1,1,1,64), -- Necklace of Black Ore
 (21181,4052,1,1,1,13904), -- Earring of Black Ore Piece
 (21181,4053,1,1,1,16833), -- Ring of Black Ore Gemstone
 (21181,4054,1,1,1,7735), -- Necklace of Black Ore Beads
@@ -13133,10 +13134,10 @@ INSERT INTO `droplist` VALUES
 (21181,6362,14,27,4,700000), -- Red Seal Stone
 (21182,1876,1,3,-1,721648), -- Mithril Ore
 (21182,5478,1,2,-1,60684), -- Sealed Dark Crystal Leather Armor Pattern
-(21182,12221,1,1,1,898), -- Common Item - Sealed Dark Crystal Gloves
-(21182,12224,1,1,1,1170), -- Common Item - Sealed Dark Crystal Boots
-(21182,12229,1,1,1,1522), -- Common Item - Sealed Tallum Gloves
-(21182,12231,1,1,1,1468), -- Common Item - Sealed Tallum Boots
+(21182,5290,1,1,1,46), -- Sealed Dark Crystal Gloves
+(21182,5291,1,1,1,46), -- Sealed Dark Crystal Boots
+(21182,5295,1,1,1,46), -- Sealed Tallum Gloves
+(21182,5296,1,1,1,46), -- Sealed Tallum Boots
 (21182,5496,1,1,1,6248), -- Sealed Dark Crystal Boots Lining
 (21182,5497,1,1,1,6248), -- Sealed Tallum Boots Lining
 (21182,5508,1,1,1,6248), -- Sealed Dark Crystal Gloves Design
@@ -13153,9 +13154,9 @@ INSERT INTO `droplist` VALUES
 (21183,1807,1,1,-1,13420), -- Recipe: Soulshot: A-Grade
 (21183,3035,1,1,-1,13420), -- Recipe: Spiritshot A
 (21183,5479,1,1,-1,59556), -- Sealed Tallum Leather Armor Pattern
-(21183,12226,1,1,1,1136), -- Common Item - Sealed Dark Crystal Helmet
-(21183,12225,1,1,1,2012), -- Common Item - Sealed Dark Crystal Shield
-(21183,12234,1,1,1,1006), -- Common Item - Sealed Tallum Helmet
+(21183,5289,1,1,1,57), -- Sealed Dark Crystal Helmet
+(21183,5292,1,1,1,82), -- Sealed Dark Crystal Shield
+(21183,5294,1,1,1,57), -- Sealed Tallum Helmet
 (21183,5494,1,1,1,10406), -- Sealed Dark Crystal Shield Fragment
 (21183,5525,1,1,1,7660), -- Sealed Dark Crystal Helmet Design
 (21183,5526,1,1,1,7660), -- Sealed Tallum Helm Design
@@ -13169,9 +13170,9 @@ INSERT INTO `droplist` VALUES
 (21184,729,1,1,-1,1173), -- Scroll: Enchant Weapon (Grade A)
 (21184,1895,1,5,-1,753968), -- Metallic Fiber
 (21184,5480,1,1,-1,47365), -- Sealed Leather Armor of Nightmare Fabric
-(21184,12232,1,1,1,674), -- Common Item - Sealed Tallum Tunic
-(21184,12235,1,1,1,1524), -- Common Item - Sealed Tallum Stockings
-(21184,12223,1,1,1,488), -- Common Item - Sealed Dark Crystal Robe
+(21184,5304,1,1,1,30), -- Sealed Tallum Tunic
+(21184,5305,1,1,1,48), -- Sealed Tallum Stockings
+(21184,5308,1,1,1,21), -- Sealed Dark Crystal Robe
 (21184,5485,1,1,1,4370), -- Sealed Tallum Tunic Texture
 (21184,5486,1,1,1,3075), -- Sealed Dark Crystal Robe Fabric
 (21184,5489,1,1,1,6858), -- Sealed Tallum Stockings Fabric
@@ -13180,9 +13181,9 @@ INSERT INTO `droplist` VALUES
 (21185,1875,1,2,-1,629418), -- Stone of Purity
 (21185,5481,1,1,-1,42365), -- Sealed Majestic Leather Armor Fabric
 (21185,5487,1,1,-1,42515), -- Sealed Robe of Nightmare Fabric
-(21185,12232,1,1,1,728), -- Common Item - Sealed Tallum Tunic
-(21185,12235,1,1,1,1142), -- Common Item - Sealed Tallum Stockings
-(21185,12223,1,1,1,370), -- Common Item - Sealed Dark Crystal Robe
+(21185,5304,1,1,1,27), -- Sealed Tallum Tunic
+(21185,5305,1,1,1,43), -- Sealed Tallum Stockings
+(21185,5308,1,1,1,19), -- Sealed Dark Crystal Robe
 (21185,5485,1,1,1,3909), -- Sealed Tallum Tunic Texture
 (21185,5486,1,1,1,2750), -- Sealed Dark Crystal Robe Fabric
 (21185,5489,1,1,1,6135), -- Sealed Tallum Stockings Fabric
@@ -13191,9 +13192,9 @@ INSERT INTO `droplist` VALUES
 (21186,730,1,1,-1,10564), -- Scroll: Enchant Armor (Grade A)
 (21186,5480,1,1,-1,56883), -- Sealed Leather Armor of Nightmare Fabric
 (21186,5488,1,1,-1,57085), -- Sealed Majestic Robe Fabric
-(21186,12269,1,1,1,1140), -- Common Item - Sealed Helm of Nightmare
-(21186,12268,1,1,1,1534), -- Common Item - Sealed Shield of Nightmare
-(21186,12261,1,1,1,834), -- Common Item - Sealed Majestic Circlet
+(21186,5312,1,1,1,48), -- Sealed Helm of Nightmare
+(21186,5315,1,1,1,68), -- Sealed Shield of Nightmare
+(21186,5317,1,1,1,48), -- Sealed Majestic Circlet
 (21186,5495,1,1,1,9477), -- Sealed Shield of Nightmare Fragment
 (21186,5527,1,1,1,7462), -- Sealed Helm of Nightmare Design
 (21186,5528,1,1,1,7462), -- Sealed Majestic Circlet Design
@@ -13235,9 +13236,9 @@ INSERT INTO `droplist` VALUES
 (21189,1899,1,1,-1,184636), -- Necklace of Devotion Chain
 (21189,5549,1,1,-1,118167), -- Metallic Thread
 (21189,6360,97,190,0,700000), -- Blue Seal Stone
-(21189,12311,1,1,1,27778), -- Common Item - Red Crescent Earring
-(21189,12313,1,1,1,33333), -- Common Item - Ring of Devotion
-(21189,12312,1,1,1,14706), -- Common Item - Necklace of Devotion
+(21189,847,1,1,1,1233), -- Red Crescent Earring
+(21189,890,1,1,1,1843), -- Ring of Devotion
+(21189,910,1,1,1,924), -- Necklace of Devotion
 (21189,1899,1,1,1,25907), -- Necklace of Devotion Chain
 (21189,1868,1,1,2,200000), -- Thread
 (21189,1873,1,1,2,43478), -- Silver Nugget
@@ -13249,8 +13250,8 @@ INSERT INTO `droplist` VALUES
 (21190,1900,1,1,-1,159184), -- Enchanted Necklace Chain
 (21190,2153,1,1,-1,226274), -- Recipe: Tiger\'s Eye Earring
 (21190,6360,128,259,0,700000), -- Blue Seal Stone
-(21190,12016,1,1,1,50000), -- Common Item - Leather Gauntlets
-(21190,12029,1,1,1,50000), -- Common Item - Blue Buckskin Boots
+(21190,605,1,1,1,2388), -- Leather Gauntlets
+(21190,1123,1,1,1,2388), -- Blue Buckskin Boots
 (21190,1864,1,1,2,200000), -- Stem
 (21190,1869,1,1,2,111111), -- Iron Ore
 (21190,1880,1,1,2,10870), -- Steel
@@ -13262,8 +13263,8 @@ INSERT INTO `droplist` VALUES
 (21191,1938,1,1,-1,108529), -- Mithril Banded Mail Material
 (21191,2154,1,1,-1,172845), -- Recipe: Elven Earring
 (21191,6360,108,211,0,700000), -- Blue Seal Stone
-(21191,12050,1,1,1,25000), -- Common Item - Helmet
-(21191,12051,1,1,1,40000), -- Common Item - Hoplon
+(21191,47,1,1,1,1127), -- Helmet
+(21191,628,1,1,1,1611), -- Hoplon
 (21191,1864,1,3,2,142857), -- Stem
 (21191,1869,1,1,2,166667), -- Iron Ore
 (21191,1880,1,1,2,16667), -- Steel
@@ -13275,11 +13276,11 @@ INSERT INTO `droplist` VALUES
 (21192,1870,1,5,-1,684631), -- Coal
 (21192,1939,1,1,-1,180403), -- Mithril Banded Gaiters Material
 (21192,6360,96,192,0,700000), -- Blue Seal Stone
-(21192,11655,1,1,1,1481), -- Common Item - Sword of Magic
-(21192,11667,1,1,1,370), -- Common Item - Two-Handed Sword
-(21192,11675,1,1,1,370), -- Common Item - Crimson Sword
-(21192,11670,1,1,1,1481), -- Common Item - Elven Sword
-(21192,11657,1,1,1,370), -- Common Item - Sword of Occult
+(21192,83,1,1,1,51), -- Sword of Magic
+(21192,124,1,1,1,38), -- Two-Handed Sword
+(21192,127,1,1,1,38), -- Crimson Sword
+(21192,130,1,1,1,38), -- Elven Sword
+(21192,144,1,1,1,51), -- Sword of Occult
 (21192,2026,1,1,1,2191), -- Two-Handed Sword Edge
 (21192,1865,1,1,2,166667), -- Varnish
 (21192,1870,1,1,2,166667), -- Coal
@@ -13292,11 +13293,11 @@ INSERT INTO `droplist` VALUES
 (21193,1902,1,1,-1,245252), -- Elven Earring Beads
 (21193,2145,1,1,-1,172903), -- Recipe: Mithril Alloy
 (21193,6360,89,178,0,700000), -- Blue Seal Stone
-(21193,11686,1,1,1,324), -- Common Item - Morning Star
-(21193,11693,1,1,1,324), -- Common Item - Goat Head Staff
-(21193,11708,1,1,1,324), -- Common Item - Tarbar
-(21193,11697,1,1,1,324), -- Common Item - Skull Breaker
-(21193,11713,1,1,1,324), -- Common Item - Heavy Bone Club
+(21193,88,1,1,1,18), -- Morning Star
+(21193,90,1,1,1,18), -- Goat Head Staff
+(21193,158,1,1,1,18), -- Tarbar
+(21193,169,1,1,1,18), -- Skull Breaker
+(21193,172,1,1,1,18), -- Heavy Bone Club
 (21193,2031,1,1,1,1267), -- Morning Star Head
 (21193,2032,1,1,1,1157), -- Goat Head Staff Head
 (21193,2035,1,1,1,1267), -- Tarbar Head
@@ -13312,7 +13313,7 @@ INSERT INTO `droplist` VALUES
 (21194,1881,1,1,-1,341080), -- Coarse Bone Powder
 (21194,1905,1,1,-1,248842), -- Omen Beast\'s Eye Earring Gemstone
 (21194,6360,56,111,0,700000), -- Blue Seal Stone
-(21194,11730,1,1,1,1282), -- Common Item - Scallop Jamadhr
+(21194,262,1,1,1,72), -- Scallop Jamadhr
 (21194,2053,1,1,1,5311), -- Scallop Jamadhr Edge
 (21194,1805,1,1,2,466), -- Recipe: Soulshot: C-Grade
 (21194,1867,2,6,2,52632), -- Animal Skin
@@ -13326,7 +13327,7 @@ INSERT INTO `droplist` VALUES
 (21195,440,1,1,-1,926), -- Robe of Seal
 (21195,1908,1,2,-1,309962), -- Moonstone Earring Wire
 (21195,6360,33,62,0,700000), -- Blue Seal Stone
-(21195,11759,1,1,1,1631), -- Common Item - Crystallized Ice Bow
+(21195,281,1,1,1,68), -- Crystallized Ice Bow
 (21195,2074,1,1,1,5479), -- Crystallized Ice Bow Shaft
 (21195,1868,1,3,2,200000), -- Thread
 (21195,1873,1,1,2,76923), -- Silver Nugget
@@ -13341,8 +13342,8 @@ INSERT INTO `droplist` VALUES
 (21196,1911,1,1,-1,276857), -- Earring of Protection Gemstone
 (21196,2166,1,1,-1,126181), -- Recipe: Earrings of Binding (100%)
 (21196,2167,1,1,-1,189915), -- Recipe: Ring of Ages
-(21196,11788,1,1,1,594), -- Common Item - Stiletto
-(21196,11779,1,1,1,297), -- Common Item - Soulfire Dirk
+(21196,227,1,1,1,29), -- Stiletto
+(21196,242,1,1,1,29), -- Soulfire Dirk
 (21196,2083,1,1,1,2740), -- Stiletto Edge
 (21196,2084,1,1,1,2740), -- Soulfire Dirk Blade
 (21196,951,1,1,2,500), -- Scroll: Enchant Weapon (Grade C)
@@ -13357,7 +13358,7 @@ INSERT INTO `droplist` VALUES
 (21197,4041,1,1,-1,35892), -- Mold Hardener
 (21197,4603,1,1,-1,9172), -- Greater Dye of Constitution <Con+3 Str-3>
 (21197,6360,145,291,0,700000), -- Blue Seal Stone
-(21197,11817,1,1,1,618), -- Common Item - Heathen\'s Book
+(21197,326,1,1,1,40), -- Heathen\'s Book
 (21197,2110,1,1,1,4811), -- Heathen\'s Book Page
 (21197,1867,1,3,2,111111), -- Animal Skin
 (21197,1869,2,6,2,62500), -- Iron Ore
@@ -13371,9 +13372,9 @@ INSERT INTO `droplist` VALUES
 (21198,1920,1,1,-1,176944), -- Necklace of Binding Chain
 (21198,4593,1,1,-1,17237), -- Greater Dye of Dexterity <Dex+2 Str-2>
 (21198,6360,148,301,0,700000), -- Blue Seal Stone
-(21198,11858,1,1,1,721), -- Common Item - Orcish Poleaxe
-(21198,11830,1,1,1,721), -- Common Item - Scorpion
-(21198,11832,1,1,1,721), -- Common Item - Widow Maker
+(21198,299,1,1,1,11), -- Orcish Poleaxe
+(21198,301,1,1,1,14), -- Scorpion
+(21198,303,1,1,1,14), -- Widow Maker
 (21198,2113,1,1,1,1541), -- Scorpion Blade
 (21198,2114,1,1,1,1541), -- Widowmaker Head
 (21198,2122,1,1,1,1453), -- Orcish Poleaxe Blade
@@ -13391,9 +13392,9 @@ INSERT INTO `droplist` VALUES
 (21199,4129,1,1,-1,59998), -- Recipe: Earrings of Black Ore
 (21199,4611,1,1,-1,12320), -- Greater Dye of Wit <Wit+3 Int-3>
 (21199,6360,73,146,0,700000), -- Blue Seal Stone
-(21199,12151,1,1,1,1035), -- Common Item - Zubei\'s Leather Shirt
-(21199,12150,1,1,1,906), -- Common Item - Zubei\'s Leather Gaiters
-(21199,12165,1,1,1,647), -- Common Item - Avadon Leather Armor
+(21199,2384,1,1,1,35), -- Zubei\'s Leather Shirt
+(21199,2388,1,1,1,57), -- Zubei\'s Leather Gaiters
+(21199,2390,1,1,1,24), -- Avadon Leather Armor
 (21199,4066,1,1,1,6434), -- Zubei\'s Leather Shirt Fabric
 (21199,4067,1,1,1,9768), -- Zubei\'s Leather Gaiter Texture
 (21199,4068,1,1,1,4943), -- Avadon Leather Armor Lining
@@ -13411,10 +13412,10 @@ INSERT INTO `droplist` VALUES
 (21200,4129,1,1,-1,62795), -- Recipe: Earrings of Black Ore
 (21200,4613,1,1,-1,8003), -- Greater Dye of Strength <Str+4 Con-4>
 (21200,6360,8,16,0,700000), -- Blue Seal Stone
-(21200,12161,1,1,1,624), -- Common Item - Zubei\'s Breastplate
-(21200,12152,1,1,1,957), -- Common Item - Zubei\'s Gaiters
-(21200,12173,1,1,1,499), -- Common Item - Avadon Breastplate
-(21200,12172,1,1,1,791), -- Common Item - Avadon Gaiters
+(21200,357,1,1,1,21), -- Zubei\'s Breastplate
+(21200,383,1,1,1,33), -- Zubei\'s Gaiters
+(21200,2376,1,1,1,21), -- Avadon Breastplate
+(21200,2379,1,1,1,33), -- Avadon Gaiters
 (21200,4056,1,1,1,3878), -- Zubei\'s Breastplate Part
 (21200,4057,1,1,1,5993), -- Zubei\'s Gaiter Material
 (21200,4064,1,1,1,3878), -- Avadon Breastplate Part
@@ -13431,10 +13432,10 @@ INSERT INTO `droplist` VALUES
 (21201,4052,1,1,-1,266218), -- Earring of Black Ore Piece
 (21201,4053,1,1,-1,322303), -- Ring of Black Ore Gemstone
 (21201,5230,1,1,-1,10026), -- Recipe: Mithril Arrow (100%)
-(21201,12201,1,1,1,809), -- Common Item - Blue Wolf Tunic
-(21201,12192,1,1,1,539), -- Common Item - Tunic of Doom
-(21201,12203,1,1,1,539), -- Common Item - Blue Wolf Stockings
-(21201,12205,1,1,1,539), -- Common Item - Stockings of Doom
+(21201,2398,1,1,1,24), -- Blue Wolf Tunic
+(21201,2399,1,1,1,24), -- Tunic of Doom
+(21201,2403,1,1,1,37), -- Blue Wolf Stockings
+(21201,2404,1,1,1,37), -- Stockings of Doom
 (21201,4084,1,1,1,4824), -- Blue Wolf Tunic Fabric
 (21201,4085,1,1,1,4824), -- Tunic of Doom Pattern
 (21201,4086,1,1,1,6513), -- Blue Wolf Stockings Pattern
@@ -13451,9 +13452,9 @@ INSERT INTO `droplist` VALUES
 (21202,4041,1,1,-1,69372), -- Mold Hardener
 (21202,4054,1,1,-1,157136), -- Necklace of Black Ore Beads
 (21202,5230,1,1,-1,10637), -- Recipe: Mithril Arrow (100%)
-(21202,12341,1,1,1,1572), -- Common Item - Earring of Black Ore
-(21202,12343,1,1,1,1946), -- Common Item - Ring of Black Ore
-(21202,12342,1,1,1,1348), -- Common Item - Necklace of Black Ore
+(21202,864,1,1,1,86), -- Earring of Black Ore
+(21202,895,1,1,1,128), -- Ring of Black Ore
+(21202,926,1,1,1,64), -- Necklace of Black Ore
 (21202,4052,1,1,1,13904), -- Earring of Black Ore Piece
 (21202,4053,1,1,1,16833), -- Ring of Black Ore Gemstone
 (21202,4054,1,1,1,7735), -- Necklace of Black Ore Beads
@@ -13468,10 +13469,10 @@ INSERT INTO `droplist` VALUES
 (21203,1876,1,3,-1,785729), -- Mithril Ore
 (21203,4042,1,1,-1,130955), -- Enria
 (21203,5478,1,1,-1,66072), -- Sealed Dark Crystal Leather Armor Pattern
-(21203,12221,1,1,1,1821), -- Common Item - Sealed Dark Crystal Gloves
-(21203,12224,1,1,1,554), -- Common Item - Sealed Dark Crystal Boots
-(21203,12229,1,1,1,1425), -- Common Item - Sealed Tallum Gloves
-(21203,12231,1,1,1,951), -- Common Item - Sealed Tallum Boots
+(21203,5290,1,1,1,51), -- Sealed Dark Crystal Gloves
+(21203,5291,1,1,1,51), -- Sealed Dark Crystal Boots
+(21203,5295,1,1,1,51), -- Sealed Tallum Gloves
+(21203,5296,1,1,1,51), -- Sealed Tallum Boots
 (21203,5496,1,1,1,6802), -- Sealed Dark Crystal Boots Lining
 (21203,5497,1,1,1,6802), -- Sealed Tallum Boots Lining
 (21203,5508,1,1,1,6802), -- Sealed Dark Crystal Gloves Design
@@ -13488,9 +13489,9 @@ INSERT INTO `droplist` VALUES
 (21204,1807,1,1,-1,13420), -- Recipe: Soulshot: A-Grade
 (21204,3035,1,1,-1,13420), -- Recipe: Spiritshot A
 (21204,5479,1,1,-1,59556), -- Sealed Tallum Leather Armor Pattern
-(21204,12226,1,1,1,2786), -- Common Item - Sealed Dark Crystal Helmet
-(21204,12225,1,1,1,2212), -- Common Item - Sealed Dark Crystal Shield
-(21204,12234,1,1,1,655), -- Common Item - Sealed Tallum Helmet
+(21204,5289,1,1,1,57), -- Sealed Dark Crystal Helmet
+(21204,5292,1,1,1,82), -- Sealed Dark Crystal Shield
+(21204,5294,1,1,1,57), -- Sealed Tallum Helmet
 (21204,5494,1,1,1,10406), -- Sealed Dark Crystal Shield Fragment
 (21204,5525,1,1,1,7660), -- Sealed Dark Crystal Helmet Design
 (21204,5526,1,1,1,7660), -- Sealed Tallum Helm Design
@@ -13504,9 +13505,9 @@ INSERT INTO `droplist` VALUES
 (21205,729,1,1,-1,1173), -- Scroll: Enchant Weapon (Grade A)
 (21205,1895,1,5,-1,753968), -- Metallic Fiber
 (21205,5480,1,1,-1,47365), -- Sealed Leather Armor of Nightmare Fabric
-(21205,12222,1,1,1,654), -- Common Item - Sealed Dark Crystal Leather Armor
-(21205,12228,1,1,1,1410), -- Common Item - Sealed Dark Crystalline Leggings
-(21205,12230,1,1,1,516), -- Common Item - Sealed Tallum Leather Armor
+(21205,5297,1,1,1,30), -- Sealed Dark Crystal Leather Armor
+(21205,5298,1,1,1,48), -- Sealed Dark Crystalline Leggings
+(21205,5301,1,1,1,21), -- Sealed Tallum Leather Armor
 (21205,5478,1,1,1,4370), -- Sealed Dark Crystal Leather Armor Pattern
 (21205,5479,1,1,1,3075), -- Sealed Tallum Leather Armor Pattern
 (21205,5482,1,1,1,6858), -- Sealed Dark Crystalline Leggings Design
@@ -13520,9 +13521,9 @@ INSERT INTO `droplist` VALUES
 (21206,1875,1,1,-1,685308), -- Stone of Purity
 (21206,5481,1,1,-1,46127), -- Sealed Majestic Leather Armor Fabric
 (21206,5487,1,1,-1,46290), -- Sealed Robe of Nightmare Fabric
-(21206,12227,1,1,1,535), -- Common Item - Sealed Dark Crystal breastplate
-(21206,12220,1,1,1,1028), -- Common Item - Sealed Dark Crystal Gaiters
-(21206,12233,1,1,1,392), -- Common Item - Sealed Tallum Plate Armor
+(21206,5287,1,1,1,22), -- Sealed Dark Crystal breastplate
+(21206,5288,1,1,1,36), -- Sealed Dark Crystal Gaiters
+(21206,5293,1,1,1,15), -- Sealed Tallum Plate Armor
 (21206,5520,1,1,1,3264), -- Sealed Dark Crystal Breastplate Pattern
 (21206,5521,1,1,1,2304), -- Sealed Tallum Plate Armor Pattern
 (21206,5524,1,1,1,4989), -- Sealed Dark Crystal Gaiters Pattern
@@ -13531,9 +13532,9 @@ INSERT INTO `droplist` VALUES
 (21207,730,1,1,-1,10564), -- Scroll: Enchant Armor (Grade A)
 (21207,5480,1,1,-1,56883), -- Sealed Leather Armor of Nightmare Fabric
 (21207,5488,1,1,-1,57085), -- Sealed Majestic Robe Fabric
-(21207,12269,1,1,1,1597), -- Common Item - Sealed Helm of Nightmare
-(21207,12268,1,1,1,2278), -- Common Item - Sealed Shield of Nightmare
-(21207,12261,1,1,1,1205), -- Common Item - Sealed Majestic Circlet
+(21207,5312,1,1,1,48), -- Sealed Helm of Nightmare
+(21207,5315,1,1,1,68), -- Sealed Shield of Nightmare
+(21207,5317,1,1,1,48), -- Sealed Majestic Circlet
 (21207,5495,1,1,1,9477), -- Sealed Shield of Nightmare Fragment
 (21207,5527,1,1,1,7462), -- Sealed Helm of Nightmare Design
 (21207,5528,1,1,1,7462), -- Sealed Majestic Circlet Design
@@ -13568,9 +13569,9 @@ INSERT INTO `droplist` VALUES
 (21210,1877,1,1,-1,43997), -- Adamantite Nugget
 (21210,1899,1,1,-1,171864), -- Necklace of Devotion Chain
 (21210,57,484,907,0,700000), -- Adena
-(21210,11614,1,1,1,1109), -- Common Item - Saber
+(21210,123,1,1,1,76), -- Saber
 (21210,2017,1,1,1,2051), -- Saber Blade
-(21210,11625,1,1,1,2217), -- Common Item - Heavy Sword
+(21210,5285,1,1,1,76), -- Heavy Sword
 (21210,5531,1,1,1,2592), -- Heavy Sword Edge
 (21210,1866,1,1,2,90909), -- Suede
 (21210,1871,1,1,2,125000), -- Charcoal
@@ -13580,9 +13581,9 @@ INSERT INTO `droplist` VALUES
 (21211,1932,1,1,-1,182156), -- Bone Helmet Design
 (21211,2152,1,1,-1,202039), -- Recipe: Enchanted Necklace
 (21211,57,495,955,0,700000), -- Adena
-(21211,11623,1,1,1,821), -- Common Item - Hand Axe
-(21211,11615,1,1,1,4386), -- Common Item - Scalpel
-(21211,11610,1,1,1,2463), -- Common Item - Bone Staff
+(21211,156,1,1,1,105), -- Hand Axe
+(21211,167,1,1,1,105), -- Scalpel
+(21211,178,1,1,1,106), -- Bone Staff
 (21211,1867,1,1,2,166667), -- Animal Skin
 (21211,1872,1,1,2,142857), -- Animal Bone
 (21211,1875,1,1,2,6849), -- Stone of Purity
@@ -13591,8 +13592,8 @@ INSERT INTO `droplist` VALUES
 (21213,1900,1,2,-1,162437), -- Enchanted Necklace Chain
 (21213,2153,1,2,-1,230897), -- Recipe: Tiger\'s Eye Earring
 (21213,57,626,1255,0,700000), -- Adena
-(21213,11632,1,1,1,1733), -- Common Item - Long Bow
-(21213,11640,1,1,1,2198), -- Common Item - Elven Bow
+(21213,275,1,1,1,84), -- Long Bow
+(21213,276,1,1,1,84), -- Elven Bow
 (21213,2024,1,1,1,3853), -- Elven Bow Shaft
 (21213,1061,1,1,2,90909), -- Healing Potion
 (21213,1864,3,9,2,50000), -- Stem
@@ -13603,10 +13604,10 @@ INSERT INTO `droplist` VALUES
 (21214,1875,1,1,-1,123331), -- Stone of Purity
 (21214,1901,1,1,-1,255520), -- Tiger\'s Eye Earring Stone
 (21214,57,781,1559,0,700000), -- Adena
-(21214,11673,1,1,1,838), -- Common Item - Kukuri
-(21214,11662,1,1,1,733), -- Common Item - Dagger of Mana
-(21214,11664,1,1,1,1047), -- Common Item - Mystic Knife
-(21214,11660,1,1,1,1151), -- Common Item - Shilen Knife
+(21214,223,1,1,1,41), -- Kukuri
+(21214,238,1,1,1,41), -- Dagger of Mana
+(21214,239,1,1,1,41), -- Mystic Knife
+(21214,241,1,1,1,41), -- Shilen Knife
 (21214,2028,1,1,1,2338), -- Shilen Knife Edge
 (21214,1865,1,1,2,166667), -- Varnish
 (21214,1870,1,1,2,166667), -- Coal
@@ -13617,7 +13618,7 @@ INSERT INTO `droplist` VALUES
 (21215,1902,1,1,-1,197653), -- Elven Earring Beads
 (21215,2145,1,1,-1,139345), -- Recipe: Mithril Alloy
 (21215,57,824,1645,0,700000), -- Adena
-(21215,11709,1,1,1,1041), -- Common Item - Crucifix of Blood
+(21215,318,1,1,1,73), -- Crucifix of Blood
 (21215,2042,1,1,1,4659), -- Crucifix of Blood Piece
 (21215,1825,1,1,2,10417), -- Recipe: Oriharukon
 (21215,1866,1,1,2,100000), -- Suede
@@ -13629,7 +13630,7 @@ INSERT INTO `droplist` VALUES
 (21217,1889,1,1,-1,166356), -- Compound Braid
 (21217,1905,1,1,-1,242738), -- Omen Beast\'s Eye Earring Gemstone
 (21217,57,1020,2061,0,700000), -- Adena
-(21217,12074,1,1,1,6098), -- Common Item - Salamander Skin Mail
+(21217,396,1,1,1,293), -- Salamander Skin Mail
 (21217,1952,1,1,1,20068), -- Salamander Skin Mail Texture
 (21217,1868,1,3,2,142857), -- Thread
 (21217,1873,1,1,2,62500), -- Silver Nugget
@@ -13641,8 +13642,8 @@ INSERT INTO `droplist` VALUES
 (21218,1909,1,1,-1,408198), -- Aquastone Ring Wire
 (21218,2163,1,1,-1,154220), -- Recipe: Earring of Protection
 (21218,57,1220,2478,0,700000), -- Adena
-(21218,12095,1,1,1,1211), -- Common Item - Chain Mail Shirt
-(21218,12094,1,1,1,2421), -- Common Item - Chain Gaiters
+(21218,354,1,1,1,142), -- Chain Mail Shirt
+(21218,381,1,1,1,227), -- Chain Gaiters
 (21218,1959,1,1,1,9622), -- Chain Mail Shirt Material
 (21218,1960,1,1,1,19572), -- Chain Gaiters Part
 (21218,1864,1,1,2,250000), -- Stem
@@ -13658,7 +13659,7 @@ INSERT INTO `droplist` VALUES
 (21219,1912,1,1,-1,336857), -- Ring of Protection Gemstone
 (21219,2166,1,1,-1,105967), -- Recipe: Earrings of Binding (100%)
 (21219,57,1258,2567,0,700000), -- Adena
-(21219,12115,1,1,1,3546), -- Common Item - Robe of Seal
+(21219,440,1,1,1,196), -- Robe of Seal
 (21219,1970,1,1,1,15466), -- Robe of Seal Fabric
 (21219,1866,1,1,2,125000), -- Suede
 (21219,1871,1,1,2,200000), -- Charcoal
@@ -13670,8 +13671,8 @@ INSERT INTO `droplist` VALUES
 (21221,1872,1,11,-1,854850), -- Animal Bone
 (21221,4605,1,1,-1,8548), -- Greater Dye of Dexterity <Dex+3 Str-3>
 (21221,57,1558,3150,0,700000), -- Adena
-(21221,12125,1,1,1,7407), -- Common Item - Composite Boots
-(21221,12119,1,1,1,4926), -- Common Item - Mithril Gauntlets
+(21221,64,1,1,1,325), -- Composite Boots
+(21221,608,1,1,1,325), -- Mithril Gauntlets
 (21221,1981,1,1,1,23394), -- Mithril Gauntlets Design
 (21221,2956,1,1,1,23394), -- Composite Boots Part
 (21221,1342,30,90,2,76923), -- Fine Steel Arrow
@@ -13690,8 +13691,8 @@ INSERT INTO `droplist` VALUES
 (21222,1920,1,1,-1,155991), -- Necklace of Binding Chain
 (21222,4126,1,1,-1,75228), -- Recipe: Adamantite Earrings
 (21222,57,1837,3743,0,700000), -- Adena
-(21222,12145,1,1,1,1484), -- Common Item - Full Plate Helmet
-(21222,12143,1,1,1,2227), -- Common Item - Full Plate Shield
+(21222,2414,1,1,1,158), -- Full Plate Helmet
+(21222,2497,1,1,1,225), -- Full Plate Shield
 (21222,2959,1,1,1,14556), -- Full Plate Helmet Design
 (21222,2966,1,1,1,23027), -- Full Plate Shield Fragment
 (21222,1868,1,1,2,333333), -- Thread
@@ -13708,9 +13709,9 @@ INSERT INTO `droplist` VALUES
 (21223,4129,1,1,-1,50493), -- Recipe: Earrings of Black Ore
 (21223,4603,1,1,-1,10368), -- Greater Dye of Constitution <Con+3 Str-3>
 (21223,57,1877,3833,0,700000), -- Adena
-(21223,11889,1,1,1,77), -- Common Item - Great Sword
-(21223,11916,1,1,1,77), -- Common Item - Keshanberk
-(21223,11900,1,1,1,461), -- Common Item - Sword of Valhalla
+(21223,78,1,1,1,6), -- Great Sword
+(21223,142,1,1,1,6), -- Keshanberk
+(21223,148,1,1,1,6), -- Sword of Valhalla
 (21223,4104,1,1,1,1314), -- Great Sword Blade
 (21223,4107,1,1,1,1294), -- Keshanberk Blade
 (21223,4108,1,1,1,1294), -- Sword of Valhalla Blade
@@ -13728,8 +13729,8 @@ INSERT INTO `droplist` VALUES
 (21224,4039,1,1,-1,169879), -- Mold Glue
 (21224,4613,1,1,-1,7029), -- Greater Dye of Strength <Str+4 Con-4>
 (21224,57,2056,4180,0,700000), -- Adena
-(21224,11918,1,1,1,677), -- Common Item - Heavy War Axe
-(21224,11908,1,1,1,474), -- Common Item - Sprite\'s Staff
+(21224,91,1,1,1,9), -- Heavy War Axe
+(21224,92,1,1,1,9), -- Sprite\'s Staff
 (21224,4105,1,1,1,2154), -- Heavy War Axe Head
 (21224,4106,1,1,1,2119), -- Sprite\'s Staff Head
 (21224,1343,10,30,2,250000), -- Silver Arrow
@@ -13746,8 +13747,8 @@ INSERT INTO `droplist` VALUES
 (21225,4053,1,1,-1,239104), -- Ring of Black Ore Gemstone
 (21225,5230,1,1,-1,7438), -- Recipe: Mithril Arrow (100%)
 (21225,57,2256,4571,0,700000), -- Adena
-(21225,12194,1,1,1,308), -- Common Item - Blue Wolf Leather Armor
-(21225,12186,1,1,1,246), -- Common Item - Leather Armor of Doom
+(21225,2391,1,1,1,24), -- Blue Wolf Leather Armor
+(21225,2392,1,1,1,24), -- Leather Armor of Doom
 (21225,4082,1,1,1,4654), -- Blue Wolf Leather Armor Texture
 (21225,4083,1,1,1,4654), -- Leather Armor of Doom Design
 (21225,1830,1,1,2,111111), -- Scroll of Escape: Castle
@@ -13760,9 +13761,9 @@ INSERT INTO `droplist` VALUES
 (21226,4054,1,1,-1,128347), -- Necklace of Black Ore Beads
 (21226,5230,1,1,-1,8688), -- Recipe: Mithril Arrow (100%)
 (21226,57,2634,5340,0,700000), -- Adena
-(21226,11930,1,1,1,104), -- Common Item - Sword of Damascus
-(21226,11943,1,1,1,104), -- Common Item - Wizard\'s Tear
-(21226,11929,1,1,1,311), -- Common Item - Guardian Sword
+(21226,79,1,1,1,15), -- Sword of Damascus
+(21226,7889,1,1,1,15), -- Wizard\'s Tear
+(21226,7883,1,1,1,15), -- Guardian Sword
 (21226,4114,1,1,1,4213), -- Sword of Damascus Blade
 (21226,8336,1,1,1,1321), -- Blade of the Wizard\'s Tear
 (21226,8330,1,1,1,1288), -- Guardian Sword Blade
@@ -13780,7 +13781,7 @@ INSERT INTO `droplist` VALUES
 (21227,5230,1,1,-1,9320), -- Recipe: Mithril Arrow (100%)
 (21227,5549,1,1,-1,699015), -- Metallic Thread
 (21227,57,2811,5744,0,700000), -- Adena
-(21227,11944,1,1,1,336), -- Common Item - Bow of Peril
+(21227,287,1,1,1,16), -- Bow of Peril
 (21227,4121,1,1,1,4497), -- Bow of Peril Shaft
 (21227,1868,1,3,2,200000), -- Thread
 (21227,1873,1,1,2,76923), -- Silver Nugget
@@ -13796,9 +13797,9 @@ INSERT INTO `droplist` VALUES
 (21228,3035,1,1,-1,9504), -- Recipe: Spiritshot A
 (21228,5478,1,1,-1,59940), -- Sealed Dark Crystal Leather Armor Pattern
 (21228,57,2875,5849,0,700000), -- Adena
-(21228,12227,1,1,1,386), -- Common Item - Sealed Dark Crystal breastplate
-(21228,12220,1,1,1,617), -- Common Item - Sealed Dark Crystal Gaiters
-(21228,12233,1,1,1,77), -- Common Item - Sealed Tallum Plate Armor
+(21228,5287,1,1,1,16), -- Sealed Dark Crystal breastplate
+(21228,5288,1,1,1,25), -- Sealed Dark Crystal Gaiters
+(21228,5293,1,1,1,11), -- Sealed Tallum Plate Armor
 (21228,5520,1,1,1,2264), -- Sealed Dark Crystal Breastplate Pattern
 (21228,5521,1,1,1,1597), -- Sealed Tallum Plate Armor Pattern
 (21228,5524,1,1,1,3460), -- Sealed Dark Crystal Gaiters Pattern
@@ -13814,9 +13815,9 @@ INSERT INTO `droplist` VALUES
 (21229,4044,1,1,-1,257630), -- Thons
 (21229,5479,1,1,-1,45733), -- Sealed Tallum Leather Armor Pattern
 (21229,57,3110,6350,0,700000), -- Adena
-(21229,12344,1,1,1,774), -- Common Item - Sealed Phoenix Necklace
-(21229,12345,1,1,1,1309), -- Common Item - Sealed Phoenix Earring
-(21229,12346,1,1,1,2083), -- Common Item - Sealed Phoenix Ring
+(21229,6323,1,1,1,44), -- Sealed Phoenix Necklace
+(21229,6324,1,1,1,59), -- Sealed Phoenix Earring
+(21229,6325,1,1,1,88), -- Sealed Phoenix Ring
 (21229,6341,1,1,1,10525), -- Sealed Phoenix Earring Gemstone
 (21229,6343,1,1,1,8136), -- Sealed Phoenix Necklace Beads
 (21229,6345,1,1,1,14557), -- Sealed Phoenix Ring Gemstone
@@ -13833,9 +13834,9 @@ INSERT INTO `droplist` VALUES
 (21230,5481,1,1,-1,39987), -- Sealed Majestic Leather Armor Fabric
 (21230,5487,1,1,-1,40128), -- Sealed Robe of Nightmare Fabric
 (21230,57,3587,7319,0,700000), -- Adena
-(21230,12226,1,1,1,1284), -- Common Item - Sealed Dark Crystal Helmet
-(21230,12225,1,1,1,1410), -- Common Item - Sealed Dark Crystal Shield
-(21230,12234,1,1,1,1163), -- Common Item - Sealed Tallum Helmet
+(21230,5289,1,1,1,51), -- Sealed Dark Crystal Helmet
+(21230,5292,1,1,1,72), -- Sealed Dark Crystal Shield
+(21230,5294,1,1,1,51), -- Sealed Tallum Helmet
 (21230,5494,1,1,1,9213), -- Sealed Dark Crystal Shield Fragment
 (21230,5525,1,1,1,6782), -- Sealed Dark Crystal Helmet Design
 (21230,5526,1,1,1,6782), -- Sealed Tallum Helm Design
@@ -13851,9 +13852,9 @@ INSERT INTO `droplist` VALUES
 (21231,1875,1,1,-1,597002), -- Stone of Purity
 (21231,5480,1,1,-1,40183), -- Sealed Leather Armor of Nightmare Fabric
 (21231,57,3602,7359,0,700000), -- Adena
-(21231,12226,1,1,1,2387), -- Common Item - Sealed Dark Crystal Helmet
-(21231,12225,1,1,1,1321), -- Common Item - Sealed Dark Crystal Shield
-(21231,12234,1,1,1,1618), -- Common Item - Sealed Tallum Helmet
+(21231,5289,1,1,1,51), -- Sealed Dark Crystal Helmet
+(21231,5292,1,1,1,73), -- Sealed Dark Crystal Shield
+(21231,5294,1,1,1,51), -- Sealed Tallum Helmet
 (21231,5494,1,1,1,9259), -- Sealed Dark Crystal Shield Fragment
 (21231,5525,1,1,1,6815), -- Sealed Dark Crystal Helmet Design
 (21231,5526,1,1,1,6815), -- Sealed Tallum Helm Design
@@ -13870,10 +13871,10 @@ INSERT INTO `droplist` VALUES
 (21236,1900,1,1,-1,141604), -- Enchanted Necklace Chain
 (21236,2153,1,2,-1,201284), -- Recipe: Tiger\'s Eye Earring
 (21236,57,546,1092,0,700000), -- Adena
-(21236,11635,1,1,1,460), -- Common Item - Bastard Sword
-(21236,11636,1,1,1,690), -- Common Item - Spinebone Sword
-(21236,11643,1,1,1,1149), -- Common Item - Artisan\'s Sword
-(21236,11628,1,1,1,1149), -- Common Item - Knight\'s Sword
+(21236,69,1,1,1,44), -- Bastard Sword
+(21236,125,1,1,1,44), -- Spinebone Sword
+(21236,126,1,1,1,44), -- Artisan\'s Sword
+(21236,128,1,1,1,44), -- Knight\'s Sword
 (21236,2021,1,1,1,1787), -- Spinebone Sword Blade
 (21236,1867,1,3,2,111111), -- Animal Skin
 (21236,1872,1,1,2,200000), -- Animal Bone
@@ -13883,14 +13884,14 @@ INSERT INTO `droplist` VALUES
 (21237,1935,1,1,-1,82942), -- Scale Mail Fragment
 (21237,2183,1,1,-1,97676), -- Recipe: Mithril Banded Mail
 (21237,57,626,1255,0,700000), -- Adena
-(21237,11645,1,1,1,609), -- Common Item - Tomahawk
-(21237,11627,1,1,1,406), -- Common Item - Mace of Prayer
-(21237,11638,1,1,1,406), -- Common Item - Mace of Judgment
-(21237,11641,1,1,1,508), -- Common Item - Mace of Miracle
-(21237,11634,1,1,1,711), -- Common Item - Mystic Staff
-(21237,11644,1,1,1,812), -- Common Item - Conjuror\'s Staff
-(21237,11633,1,1,1,711), -- Common Item - Staff of Mana
-(21237,11630,1,1,1,406), -- Common Item - Doom Hammer
+(21237,86,1,1,1,26), -- Tomahawk
+(21237,179,1,1,1,26), -- Mace of Prayer
+(21237,180,1,1,1,26), -- Mace of Judgment
+(21237,181,1,1,1,26), -- Mace of Miracle
+(21237,182,1,1,1,26), -- Doom Hammer
+(21237,183,1,1,1,26), -- Mystic Staff
+(21237,184,1,1,1,26), -- Conjuror\'s Staff
+(21237,185,1,1,1,26), -- Staff of Mana
 (21237,2022,1,1,1,1264), -- Mace of Judgment Head
 (21237,2023,1,1,1,1006), -- Conjuror\'s Staff Head
 (21237,1868,1,3,2,125000), -- Thread
@@ -13903,7 +13904,7 @@ INSERT INTO `droplist` VALUES
 (21238,1884,1,3,-1,569220), -- Cord
 (21238,1901,1,2,-1,255520), -- Tiger\'s Eye Earring Stone
 (21238,57,781,1559,0,700000), -- Adena
-(21238,11665,1,1,1,3922), -- Common Item - Triple-Edged Jamadhr
+(21238,260,1,1,1,203), -- Triple-Edged Jamadhr
 (21238,1341,20,60,2,200000), -- Bone Arrow
 (21238,1874,1,1,2,6944), -- Oriharukon Ore
 (21238,1878,1,1,2,47619), -- Braided Hemp
@@ -13915,7 +13916,7 @@ INSERT INTO `droplist` VALUES
 (21239,1902,1,1,-1,197653), -- Elven Earring Beads
 (21239,2145,1,1,-1,139345), -- Recipe: Mithril Alloy
 (21239,57,824,1645,0,700000), -- Adena
-(21239,11683,1,1,1,1325), -- Common Item - Strengthened Long Bow
+(21239,279,1,1,1,73), -- Strengthened Long Bow
 (21239,2040,1,1,1,5834), -- Strengthened Long Bow Shaft
 (21239,1865,1,1,2,142857), -- Varnish
 (21239,1870,1,1,2,166667), -- Coal
@@ -13927,8 +13928,8 @@ INSERT INTO `droplist` VALUES
 (21240,1871,1,5,-1,741221), -- Charcoal
 (21240,1903,1,1,-1,370920), -- Elven Ring Piece
 (21240,57,932,1861,0,700000), -- Adena
-(21240,11685,1,1,1,1006), -- Common Item - Maingauche
-(21240,11706,1,1,1,782), -- Common Item - Cursed Maingauche
+(21240,224,1,1,1,42), -- Maingauche
+(21240,1660,1,1,1,42), -- Cursed Maingauche
 (21240,2038,1,1,1,3037), -- Maingauche Edge
 (21240,2044,1,1,1,3037), -- Cursed Maingauche Edge
 (21240,1341,60,180,2,142857), -- Bone Arrow
@@ -13939,7 +13940,7 @@ INSERT INTO `droplist` VALUES
 (21241,1905,1,1,-1,242738), -- Omen Beast\'s Eye Earring Gemstone
 (21241,4469,1,1,-1,14259), -- Dye of Strength <Str+1 Con-1>
 (21241,57,1020,2061,0,700000), -- Adena
-(21241,12074,1,1,1,6410), -- Common Item - Salamander Skin Mail
+(21241,396,1,1,1,293), -- Salamander Skin Mail
 (21241,1952,1,1,1,20068), -- Salamander Skin Mail Texture
 (21241,1867,1,1,2,200000), -- Animal Skin
 (21241,1872,1,3,2,100000), -- Animal Bone
@@ -13952,9 +13953,9 @@ INSERT INTO `droplist` VALUES
 (21242,1909,1,1,-1,408198), -- Aquastone Ring Wire
 (21242,2163,1,1,-1,154220), -- Recipe: Earring of Protection
 (21242,57,1220,2478,0,700000), -- Adena
-(21242,11751,1,1,1,1029), -- Common Item - Scythe
-(21242,11760,1,1,1,655), -- Common Item - Orcish Glaive
-(21242,11749,1,1,1,187), -- Common Item - Body Slasher
+(21242,96,1,1,1,21), -- Scythe
+(21242,298,1,1,1,21), -- Orcish Glaive
+(21242,302,1,1,1,21), -- Body Slasher
 (21242,2062,1,1,1,1868), -- Scythe Edge
 (21242,2075,1,1,1,1868), -- Orcish Glaive Blade
 (21242,2076,1,1,1,1868), -- Body Slasher Blade
@@ -13971,10 +13972,10 @@ INSERT INTO `droplist` VALUES
 (21243,1911,1,1,-1,232505), -- Earring of Protection Gemstone
 (21243,2166,1,1,-1,105967), -- Recipe: Earrings of Binding (100%)
 (21243,57,1258,2567,0,700000), -- Adena
-(21243,12105,1,1,1,2058), -- Common Item - Plated Leather
-(21243,12113,1,1,1,2232), -- Common Item - Rind Leather Armor
-(21243,12103,1,1,1,3937), -- Common Item - Plated Leather Gaiters
-(21243,12111,1,1,1,3401), -- Common Item - Rind Leather Gaiters
+(21243,398,1,1,1,78), -- Plated Leather
+(21243,399,1,1,1,72), -- Rind Leather Armor
+(21243,418,1,1,1,125), -- Plated Leather Gaiters
+(21243,419,1,1,1,115), -- Rind Leather Gaiters
 (21243,1966,1,1,1,6321), -- Plated Leather Fragment
 (21243,1967,1,1,1,9442), -- Plated Leather Gaiters Material
 (21243,1975,1,1,1,5687), -- Rind Leather Armor Design
@@ -13992,7 +13993,7 @@ INSERT INTO `droplist` VALUES
 (21244,1914,1,1,-1,195478), -- Earring of Binding Gemstone
 (21244,4601,1,1,-1,7732), -- Greater Dye of Strength <Str+3 Con-3>
 (21244,57,1404,2854,0,700000), -- Adena
-(21244,12128,1,1,1,2392), -- Common Item - Composite Armor
+(21244,60,1,1,1,100), -- Composite Armor
 (21244,1977,1,1,1,10643), -- Composite Armor Temper
 (21244,1865,1,1,2,125000), -- Varnish
 (21244,1870,1,1,2,125000), -- Coal
@@ -14009,7 +14010,7 @@ INSERT INTO `droplist` VALUES
 (21245,2169,1,1,-1,68085), -- Recipe: Necklace of Binding
 (21245,2170,1,1,-1,90727), -- Recipe: Nassen\'s Earring
 (21245,57,1558,3150,0,700000), -- Adena
-(21245,12128,1,1,1,2088), -- Common Item - Composite Armor
+(21245,60,1,1,1,111), -- Composite Armor
 (21245,1977,1,1,1,11766), -- Composite Armor Temper
 (21245,1866,1,1,2,83333), -- Suede
 (21245,1871,1,1,2,125000), -- Charcoal
@@ -14026,9 +14027,9 @@ INSERT INTO `droplist` VALUES
 (21246,1918,1,1,-1,197438), -- Nassen\'s Earring Gemstone
 (21246,4042,1,1,-1,75981), -- Enria
 (21246,57,1837,3743,0,700000), -- Adena
-(21246,12336,1,1,1,312), -- Common Item - Necklace of Binding
-(21246,12335,1,1,1,2809), -- Common Item - Nassen\'s Earring
-(21246,12337,1,1,1,6579), -- Common Item - Ring of Binding
+(21246,119,1,1,1,100), -- Necklace of Binding
+(21246,855,1,1,1,133), -- Nassen\'s Earring
+(21246,886,1,1,1,199), -- Ring of Binding
 (21246,1918,1,1,1,12150), -- Nassen\'s Earring Gemstone
 (21246,1920,1,1,1,9599), -- Necklace of Binding Chain
 (21246,2917,1,1,1,16113), -- Ring of Binding Gemstone
@@ -14047,10 +14048,10 @@ INSERT INTO `droplist` VALUES
 (21247,4129,1,1,-1,50493), -- Recipe: Earrings of Black Ore
 (21247,4613,1,1,-1,6435), -- Greater Dye of Strength <Str+4 Con-4>
 (21247,57,1877,3833,0,700000), -- Adena
-(21247,12147,1,1,1,637), -- Common Item - Zubei\'s Boots
-(21247,12149,1,1,1,1912), -- Common Item - Avadon Boots
-(21247,12146,1,1,1,956), -- Common Item - Zubei\'s Gauntlets
-(21247,12148,1,1,1,1592), -- Common Item - Avadon Gloves
+(21247,554,1,1,1,67), -- Zubei\'s Boots
+(21247,600,1,1,1,67), -- Avadon Boots
+(21247,612,1,1,1,67), -- Zubei\'s Gauntlets
+(21247,2464,1,1,1,67), -- Avadon Gloves
 (21247,4073,1,1,1,8963), -- Avadon Gloves Part
 (21247,4097,1,1,1,8963), -- Zubei\'s Boots Design
 (21247,4098,1,1,1,8963), -- Avadon Boots Design
@@ -14068,10 +14069,10 @@ INSERT INTO `droplist` VALUES
 (21248,4051,1,1,-1,197649), -- Adamantite Necklace Chain
 (21248,4130,1,1,-1,82733), -- Recipe: Ring of Black Ore
 (21248,57,2056,4180,0,700000), -- Adena
-(21248,12160,1,1,1,1376), -- Common Item - Zubei\'s Helmet
-(21248,12159,1,1,1,1965), -- Common Item - Zubei\'s Shield
-(21248,12171,1,1,1,1965), -- Common Item - Avadon Shield
-(21248,12170,1,1,1,1114), -- Common Item - Avadon Circlet
+(21248,503,1,1,1,49), -- Zubei\'s Helmet
+(21248,633,1,1,1,70), -- Zubei\'s Shield
+(21248,673,1,1,1,70), -- Avadon Shield
+(21248,2415,1,1,1,49), -- Avadon Circlet
 (21248,4072,1,1,1,8454), -- Avadon Circlet Pattern
 (21248,4101,1,1,1,10911), -- Zubei\'s Shield Fragment
 (21248,4102,1,1,1,8453), -- Zubei\'s Helmet Design
@@ -14090,9 +14091,9 @@ INSERT INTO `droplist` VALUES
 (21249,4053,1,1,-1,239104), -- Ring of Black Ore Gemstone
 (21249,5230,1,1,-1,7438), -- Recipe: Mithril Arrow (100%)
 (21249,57,2256,4571,0,700000), -- Adena
-(21249,12204,1,1,1,473), -- Common Item - Blue Wolf Breastplate
-(21249,12193,1,1,1,473), -- Common Item - Blue Wolf Gaiters
-(21249,12184,1,1,1,473), -- Common Item - Doom Plate Armor
+(21249,358,1,1,1,18), -- Blue Wolf Breastplate
+(21249,2380,1,1,1,28), -- Blue Wolf Gaiters
+(21249,2381,1,1,1,12), -- Doom Plate Armor
 (21249,4078,1,1,1,4012), -- Blue Wolf Breastplate Part
 (21249,4080,1,1,1,5649), -- Blue Wolf Gaiters Material
 (21249,4081,1,1,1,2707), -- Doom Plate Armor Temper
@@ -14108,9 +14109,9 @@ INSERT INTO `droplist` VALUES
 (21250,4053,1,1,-1,279304), -- Ring of Black Ore Gemstone
 (21250,5230,1,1,-1,8688), -- Recipe: Mithril Arrow (100%)
 (21250,57,2634,5340,0,700000), -- Adena
-(21250,11935,1,1,1,60), -- Common Item - Deadman\'s Glory
-(21250,11938,1,1,1,60), -- Common Item - Art of Battle Axe
-(21250,11934,1,1,1,60), -- Common Item - Staff of Evil Spirits
+(21250,171,1,1,1,5), -- Deadman\'s Glory
+(21250,175,1,1,1,5), -- Art of Battle Axe
+(21250,210,1,1,1,5), -- Staff of Evil Spirits
 (21250,4116,1,1,1,1402), -- Deadman\'s Glory Stone
 (21250,4117,1,1,1,1402), -- Art of Battle Axe Blade
 (21250,4118,1,1,1,1329), -- Evil Spirit Head
@@ -14129,10 +14130,10 @@ INSERT INTO `droplist` VALUES
 (21251,4054,1,1,-1,137683), -- Necklace of Black Ore Beads
 (21251,5230,1,1,-1,9320), -- Recipe: Mithril Arrow (100%)
 (21251,57,2811,5744,0,700000), -- Adena
-(21251,12201,1,1,1,306), -- Common Item - Blue Wolf Tunic
-(21251,12192,1,1,1,674), -- Common Item - Tunic of Doom
-(21251,12203,1,1,1,980), -- Common Item - Blue Wolf Stockings
-(21251,12205,1,1,1,613), -- Common Item - Stockings of Doom
+(21251,2398,1,1,1,22), -- Blue Wolf Tunic
+(21251,2399,1,1,1,22), -- Tunic of Doom
+(21251,2403,1,1,1,35), -- Blue Wolf Stockings
+(21251,2404,1,1,1,35), -- Stockings of Doom
 (21251,4084,1,1,1,4484), -- Blue Wolf Tunic Fabric
 (21251,4085,1,1,1,4484), -- Tunic of Doom Pattern
 (21251,4086,1,1,1,6054), -- Blue Wolf Stockings Pattern
@@ -14150,9 +14151,9 @@ INSERT INTO `droplist` VALUES
 (21252,5230,1,1,-1,9504), -- Recipe: Mithril Arrow (100%)
 (21252,5478,1,1,-1,59940), -- Sealed Dark Crystal Leather Armor Pattern
 (21252,57,2875,5849,0,700000), -- Adena
-(21252,12222,1,1,1,907), -- Common Item - Sealed Dark Crystal Leather Armor
-(21252,12228,1,1,1,302), -- Common Item - Sealed Dark Crystalline Leggings
-(21252,12230,1,1,1,302), -- Common Item - Sealed Tallum Leather Armor
+(21252,5297,1,1,1,21), -- Sealed Dark Crystal Leather Armor
+(21252,5298,1,1,1,33), -- Sealed Dark Crystalline Leggings
+(21252,5301,1,1,1,14), -- Sealed Tallum Leather Armor
 (21252,5478,1,1,1,2951), -- Sealed Dark Crystal Leather Armor Pattern
 (21252,5479,1,1,1,2077), -- Sealed Tallum Leather Armor Pattern
 (21252,5482,1,1,1,4631), -- Sealed Dark Crystalline Leggings Design
@@ -14166,9 +14167,9 @@ INSERT INTO `droplist` VALUES
 (21253,3035,1,1,-1,10305), -- Recipe: Spiritshot A
 (21253,5479,1,2,-1,45733), -- Sealed Tallum Leather Armor Pattern
 (21253,57,3110,6350,0,700000), -- Adena
-(21253,12232,1,1,1,737), -- Common Item - Sealed Tallum Tunic
-(21253,12235,1,1,1,1044), -- Common Item - Sealed Tallum Stockings
-(21253,12223,1,1,1,410), -- Common Item - Sealed Dark Crystal Robe
+(21253,5304,1,1,1,22), -- Sealed Tallum Tunic
+(21253,5305,1,1,1,36), -- Sealed Tallum Stockings
+(21253,5308,1,1,1,15), -- Sealed Dark Crystal Robe
 (21253,5485,1,1,1,3200), -- Sealed Tallum Tunic Texture
 (21253,5486,1,1,1,2252), -- Sealed Dark Crystal Robe Fabric
 (21253,5489,1,1,1,5022), -- Sealed Tallum Stockings Fabric
@@ -14180,9 +14181,9 @@ INSERT INTO `droplist` VALUES
 (21254,1877,1,1,-1,356449), -- Adamantite Nugget
 (21254,5480,1,1,-1,39987), -- Sealed Leather Armor of Nightmare Fabric
 (21254,57,3587,7319,0,700000), -- Adena
-(21254,12344,1,1,1,1182), -- Common Item - Sealed Phoenix Necklace
-(21254,12345,1,1,1,1592), -- Common Item - Sealed Phoenix Earring
-(21254,12346,1,1,1,2469), -- Common Item - Sealed Phoenix Ring
+(21254,6323,1,1,1,51), -- Sealed Phoenix Necklace
+(21254,6324,1,1,1,67), -- Sealed Phoenix Earring
+(21254,6325,1,1,1,101), -- Sealed Phoenix Ring
 (21254,6341,1,1,1,12134), -- Sealed Phoenix Earring Gemstone
 (21254,6343,1,1,1,9381), -- Sealed Phoenix Necklace Beads
 (21254,6345,1,1,1,16783), -- Sealed Phoenix Ring Gemstone
@@ -14191,9 +14192,9 @@ INSERT INTO `droplist` VALUES
 (21255,5481,1,1,-1,42554), -- Sealed Majestic Leather Armor Fabric
 (21255,5487,1,1,-1,42704), -- Sealed Robe of Nightmare Fabric
 (21255,57,3814,7793,0,700000), -- Adena
-(21255,12222,1,1,1,489), -- Common Item - Sealed Dark Crystal Leather Armor
-(21255,12228,1,1,1,1600), -- Common Item - Sealed Dark Crystalline Leggings
-(21255,12230,1,1,1,400), -- Common Item - Sealed Tallum Leather Armor
+(21255,5297,1,1,1,27), -- Sealed Dark Crystal Leather Armor
+(21255,5298,1,1,1,44), -- Sealed Dark Crystalline Leggings
+(21255,5301,1,1,1,19), -- Sealed Tallum Leather Armor
 (21255,5478,1,1,1,3926), -- Sealed Dark Crystal Leather Armor Pattern
 (21255,5479,1,1,1,2763), -- Sealed Tallum Leather Armor Pattern
 (21255,5482,1,1,1,6162), -- Sealed Dark Crystalline Leggings Design
@@ -14241,8 +14242,8 @@ INSERT INTO `droplist` VALUES
 (21261,2169,1,1,-1,24807), -- Recipe: Necklace of Binding
 (21261,2170,1,1,-1,33056), -- Recipe: Nassen\'s Earring
 (21261,57,654,1329,0,700000), -- Adena
-(21261,11800,1,1,1,240), -- Common Item - Grace Dagger
-(21261,11803,1,1,1,80), -- Common Item - Dark Screamer
+(21261,231,1,1,1,7), -- Grace Dagger
+(21261,233,1,1,1,7), -- Dark Screamer
 (21261,2106,1,1,1,790), -- Grace Dagger Edge
 (21261,2107,1,1,1,790), -- Dark Screamer Edge
 (21261,1539,1,1,2,14493), -- Greater Healing Potion
@@ -14259,7 +14260,7 @@ INSERT INTO `droplist` VALUES
 (21262,2169,1,1,-1,44949), -- Recipe: Necklace of Binding
 (21262,2170,1,1,-1,59897), -- Recipe: Nassen\'s Earring
 (21262,57,879,1786,0,700000), -- Adena
-(21262,11863,1,1,1,16), -- Common Item - Crystal Dagger (no drop info)
+(21262,228,1,1,1,16), -- Crystal Dagger
 (21262,2119,1,1,1,2137), -- Crystal Dagger Blade
 (21262,1539,1,1,2,20000), -- Greater Healing Potion
 (21262,1864,1,1,2,142857), -- Stem
@@ -14274,7 +14275,7 @@ INSERT INTO `droplist` VALUES
 (21263,2169,1,1,-1,68758), -- Recipe: Necklace of Binding
 (21263,2170,1,1,-1,91623), -- Recipe: Nassen\'s Earring
 (21263,57,1233,2511,0,700000), -- Adena
-(21263,11863,1,1,1,24), -- Common Item - Crystal Dagger (no drop info)
+(21263,228,1,1,1,24), -- Crystal Dagger
 (21263,2119,1,1,1,3269), -- Crystal Dagger Blade
 (21263,1539,1,1,2,24390), -- Greater Healing Potion
 (21263,1864,1,1,2,200000), -- Stem
@@ -14306,11 +14307,11 @@ INSERT INTO `droplist` VALUES
 (21265,1869,1,1,-1,522665), -- Iron Ore
 (21265,1901,1,1,-1,72191), -- Tiger\'s Eye Earring Stone
 (21265,57,264,530,0,700000), -- Adena
-(21265,11655,1,1,1,164), -- Common Item - Sword of Magic
-(21265,11667,1,1,1,164), -- Common Item - Two-Handed Sword
-(21265,11675,1,1,1,164), -- Common Item - Crimson Sword
-(21265,11670,1,1,1,164), -- Common Item - Elven Sword
-(21265,11657,1,1,1,164), -- Common Item - Sword of Occult
+(21265,83,1,1,1,13), -- Sword of Magic
+(21265,124,1,1,1,10), -- Two-Handed Sword
+(21265,127,1,1,1,10), -- Crimson Sword
+(21265,130,1,1,1,10), -- Elven Sword
+(21265,144,1,1,1,13), -- Sword of Occult
 (21265,2026,1,1,1,558), -- Two-Handed Sword Edge
 (21265,1864,1,1,2,142857), -- Stem
 (21265,1869,1,1,2,76923), -- Iron Ore
@@ -14321,7 +14322,7 @@ INSERT INTO `droplist` VALUES
 (21268,2026,1,1,-1,11701), -- Two-Handed Sword Edge
 (21268,2156,1,1,-1,77773), -- Recipe: Elven Necklace
 (21268,57,493,986,0,700000), -- Adena
-(21268,11659,1,1,1,5128), -- Common Item - Gastraphetes
+(21268,278,1,1,1,54), -- Gastraphetes
 (21268,2029,1,1,1,3083), -- Gastraphetes Shaft
 (21268,1341,20,60,2,142857), -- Bone Arrow
 (21268,1867,1,1,2,125000), -- Animal Skin
@@ -14334,7 +14335,7 @@ INSERT INTO `droplist` VALUES
 (21269,1902,1,1,-1,112065), -- Elven Earring Beads
 (21269,2145,1,1,-1,79006), -- Recipe: Mithril Alloy
 (21269,57,561,1118,0,700000), -- Adena
-(21269,11714,1,1,1,1125), -- Common Item - Sword of Revolution
+(21269,129,1,1,1,41), -- Sword of Revolution
 (21269,2034,1,1,1,3021), -- Sword of Revolution Blade
 (21269,1825,1,1,2,7407), -- Recipe: Oriharukon
 (21269,1867,1,1,2,200000), -- Animal Skin
@@ -14345,11 +14346,11 @@ INSERT INTO `droplist` VALUES
 (21270,1903,1,1,-1,212668), -- Elven Ring Piece
 (21270,6036,1,1,-1,42498), -- Greater Magic Haste Potion
 (21270,57,648,1289,0,700000), -- Adena
-(21270,11686,1,1,1,263), -- Common Item - Morning Star
-(21270,11693,1,1,1,263), -- Common Item - Goat Head Staff
-(21270,11708,1,1,1,263), -- Common Item - Tarbar
-(21270,11697,1,1,1,263), -- Common Item - Skull Breaker
-(21270,11713,1,1,1,263), -- Common Item - Heavy Bone Club
+(21270,88,1,1,1,10), -- Morning Star
+(21270,90,1,1,1,10), -- Goat Head Staff
+(21270,158,1,1,1,10), -- Tarbar
+(21270,169,1,1,1,10), -- Skull Breaker
+(21270,172,1,1,1,10), -- Heavy Bone Club
 (21270,2031,1,1,1,668), -- Morning Star Head
 (21270,2032,1,1,1,609), -- Goat Head Staff Head
 (21270,2035,1,1,1,668), -- Tarbar Head
@@ -14364,7 +14365,7 @@ INSERT INTO `droplist` VALUES
 (21271,1869,1,1,-1,754767), -- Iron Ore
 (21271,1901,1,1,-1,104250), -- Tiger\'s Eye Earring Stone
 (21271,57,385,758,0,700000), -- Adena
-(21271,11714,1,1,1,28), -- Common Item - Sword of Revolution (no drop info)
+(21271,129,1,1,1,28), -- Sword of Revolution
 (21271,2034,1,1,1,2062), -- Sword of Revolution Blade
 (21271,1864,1,1,2,250000), -- Stem
 (21271,1869,1,1,2,83333), -- Iron Ore
@@ -14375,7 +14376,7 @@ INSERT INTO `droplist` VALUES
 (21272,1869,1,3,-1,669131), -- Iron Ore
 (21272,1901,1,1,-1,184843), -- Tiger\'s Eye Earring Stone
 (21272,57,696,1334,0,700000), -- Adena
-(21272,11714,1,1,1,50), -- Common Item - Sword of Revolution (no drop info)
+(21272,129,1,1,1,50), -- Sword of Revolution
 (21272,2034,1,1,1,3655), -- Sword of Revolution Blade
 (21272,1864,3,9,2,90909), -- Stem
 (21272,1869,1,1,2,200000), -- Iron Ore
@@ -14386,7 +14387,7 @@ INSERT INTO `droplist` VALUES
 (21273,1869,1,7,-1,775604), -- Iron Ore
 (21273,1901,1,1,-1,535638), -- Tiger\'s Eye Earring Stone
 (21273,57,2003,3917,0,700000), -- Adena
-(21273,11714,1,1,1,144), -- Common Item - Sword of Revolution (no drop info, no material info)
+(21273,129,1,1,1,144), -- Sword of Revolution
 (21273,2034,1,1,1,10591), -- Sword of Revolution Blade
 (21273,1864,3,9,2,133643), -- Stem
 (21273,1869,2,6,2,100233), -- Iron Ore
@@ -17770,7 +17771,7 @@ INSERT INTO `droplist` VALUES
 (21496,730,1,1,-1,2340), -- Scroll: Enchant Armor (Grade A)
 (21496,5494,1,1,-1,58968), -- Sealed Dark Crystal Shield Fragment
 (21496,6335,1,1,-1,10799), -- Recipe: Sealed Majestic Necklace(70%)
-(21496,11946,1,1,1,3), -- Common Item - Dasparion\'s Staff (unknown chances)
+(21496,11946,1,1,1,3), -- Common Item - Dasparion\'s Staff
 (21496,11949,1,1,1,3), -- Common Item - Meteor Shower
 (21496,11958,1,1,1,3), -- Common Item - Destroyer Hammer
 (21496,11953,1,1,1,3), -- Common Item - Spiritual Eye
@@ -17786,7 +17787,7 @@ INSERT INTO `droplist` VALUES
 (21497,1884,1,3,-1,725988), -- Cord
 (21497,4039,1,1,-1,78649), -- Mold Glue
 (21497,5496,1,1,-1,55321), -- Sealed Dark Crystal Boots Lining
-(21497,11957,1,1,1,2), -- Common Item - Tallum Blade (unknown chances)
+(21497,11957,1,1,1,2), -- Common Item - Tallum Blade
 (21497,11952,1,1,1,2), -- Common Item - Elemental Sword
 (21497,11954,1,1,1,2), -- Common Item - Infernal Master
 (21497,5547,1,1,1,593), -- Elemental Sword Edge
@@ -19495,15 +19496,15 @@ INSERT INTO `droplist` VALUES
 (21602,1902,1,1,-1,122065), -- Elven Earring Beads
 (21602,5231,1,1,-1,86056), -- Recipe: Metal Hardener (100%)
 (21602,57,583,1165,0,700000), -- Adena
-(21602,12072,1,1,1,5464), -- Common Item - Mithril Gloves
-(21602,12076,1,1,1,5464), -- Common Item - Ogre Power Gauntlets
-(21602,12071,1,1,1,5464), -- Common Item - Assault Boots
+(21602,61,1,1,1,104), -- Mithril Gloves
+(21602,607,1,1,1,104), -- Ogre Power Gauntlets
+(21602,1125,1,1,1,104), -- Assault Boots
 (21602,1949,1,1,1,5627), -- Mithril Gloves Design
 (21602,1957,1,1,1,5627), -- Assault Boots Part
 (21602,1963,1,1,1,5627), -- Ogre Power Gauntlets Part
-(21602,12075,1,1,1,5464), -- Common Item - Salamander Skin Boots
-(21602,12077,1,1,1,5464), -- Common Item - Plate Boots
-(21602,12082,1,1,1,5464), -- Common Item - Sage\'s Worn Gloves
+(21602,2427,1,1,1,104), -- Salamander Skin Boots
+(21602,2428,1,1,1,104), -- Plate Boots
+(21602,2451,1,1,1,104), -- Sage\'s Worn Gloves
 (21602,2931,1,1,1,5627), -- Salamander Skin Boot Lining
 (21602,2932,1,1,1,5627), -- Plate Boots Design
 (21602,2933,1,1,1,5627), -- Sage\'s Worn Gloves Lining
@@ -19518,15 +19519,15 @@ INSERT INTO `droplist` VALUES
 (21603,1902,1,1,-1,172850), -- Elven Earring Beads
 (21603,5231,1,1,-1,121859), -- Recipe: Metal Hardener (100%)
 (21603,57,963,1590,0,700000), -- Adena
-(21603,12072,1,1,1,146), -- Common Item - Mithril Gloves (no drop info, no material info)
-(21603,12076,1,1,1,146), -- Common Item - Ogre Power Gauntlets
-(21603,12071,1,1,1,146), -- Common Item - Assault Boots
+(21603,61,1,1,1,146), -- Mithril Gloves
+(21603,607,1,1,1,146), -- Ogre Power Gauntlets
+(21603,1125,1,1,1,146), -- Assault Boots
 (21603,1949,1,1,1,7968), -- Mithril Gloves Design
 (21603,1957,1,1,1,7968), -- Assault Boots Part
 (21603,1963,1,1,1,7968), -- Ogre Power Gauntlets Part
-(21603,12075,1,1,1,146), -- Common Item - Salamander Skin Boots
-(21603,12077,1,1,1,146), -- Common Item - Plate Boots
-(21603,12082,1,1,1,146), -- Common Item - Sage\'s Worn Gloves
+(21603,2427,1,1,1,146), -- Salamander Skin Boots
+(21603,2428,1,1,1,146), -- Plate Boots
+(21603,2451,1,1,1,146), -- Sage\'s Worn Gloves
 (21603,2931,1,1,1,7968), -- Salamander Skin Boot Lining
 (21603,2932,1,1,1,7968), -- Plate Boots Design
 (21603,2933,1,1,1,7968), -- Sage\'s Worn Gloves Lining
@@ -19541,8 +19542,8 @@ INSERT INTO `droplist` VALUES
 (21604,1905,1,1,-1,268330), -- Omen Beast\'s Eye Earring Gemstone
 (21604,4469,1,1,-1,15762), -- Dye of Strength <Str+1 Con-1>
 (21604,57,1382,2703,0,700000), -- Adena
-(21604,12081,1,1,1,6211), -- Common Item - Half Plate Armor
-(21604,12080,1,1,1,6211), -- Common Item - Plate Gaiters
+(21604,353,1,1,1,178), -- Half Plate Armor
+(21604,380,1,1,1,284), -- Plate Gaiters
 (21604,1950,1,1,1,11240), -- Half Plate Temper
 (21604,1951,1,1,1,17481), -- Plate Gaiters Part
 (21604,1805,1,1,2,924), -- Recipe: Soulshot: C-Grade
@@ -19554,7 +19555,7 @@ INSERT INTO `droplist` VALUES
 (21605,1875,1,1,-1,89292), -- Stone of Purity
 (21605,1905,1,1,-1,130289), -- Omen Beast\'s Eye Earring Gemstone
 (21605,57,648,1314,0,700000), -- Adena
-(21605,11759,1,1,1,28), -- Common Item - Crystallized Ice Bow (no drop info, no material info)
+(21605,281,1,1,1,28), -- Crystallized Ice Bow
 (21605,2074,1,1,1,2242), -- Crystallized Ice Bow Shaft
 (21605,1867,1,1,2,120574), -- Animal Skin
 (21605,1872,1,1,2,120574), -- Animal Bone
@@ -19567,7 +19568,7 @@ INSERT INTO `droplist` VALUES
 (21606,1875,1,1,-1,126442), -- Stone of Purity
 (21606,1905,1,1,-1,184497), -- Omen Beast\'s Eye Earring Gemstone
 (21606,57,943,1789,0,700000), -- Adena
-(21606,11759,1,1,1,21), -- Common Item - Crystallized Ice Bow (no drop info, no material info)
+(21606,281,1,1,1,40), -- Crystallized Ice Bow
 (21606,2074,1,1,1,3174), -- Crystallized Ice Bow Shaft
 (21606,1867,1,1,2,170738), -- Animal Skin
 (21606,1872,1,1,2,170738), -- Animal Bone
@@ -19580,8 +19581,8 @@ INSERT INTO `droplist` VALUES
 (21607,1909,1,1,-1,400213), -- Aquastone Ring Wire
 (21607,2163,1,1,-1,151203), -- Recipe: Earring of Protection
 (21607,57,1429,2915,0,700000), -- Adena
-(21607,12095,1,1,1,5988), -- Common Item - Chain Mail Shirt (no material info)
-(21607,12094,1,1,1,11905), -- Common Item - Chain Gaiters
+(21607,354,1,1,1,139), -- Chain Mail Shirt
+(21607,381,1,1,1,222), -- Chain Gaiters
 (21607,1959,1,1,1,9433), -- Chain Mail Shirt Material
 (21607,1960,1,1,1,19189), -- Chain Gaiters Part
 (21607,1875,1,1,2,15563), -- Stone of Purity
@@ -19595,8 +19596,8 @@ INSERT INTO `droplist` VALUES
 (21608,1879,1,1,-1,183072), -- Cokes
 (21608,1906,1,1,-1,150987), -- Mithril Ring Wire
 (21608,57,549,1079,0,700000), -- Adena
-(21608,12099,1,1,1,6333), -- Common Item - Karmian Tunic (no material info)
-(21608,12100,1,1,1,8333), -- Common Item - Karmian Stockings
+(21608,439,1,1,1,69), -- Karmian Tunic
+(21608,471,1,1,1,110), -- Karmian Stockings
 (21608,1954,1,1,1,6900), -- Karmian Stocking Design
 (21608,1962,1,1,1,4154), -- Karmian Tunic Pattern
 (21608,1865,1,1,2,51914), -- Varnish
@@ -19613,8 +19614,8 @@ INSERT INTO `droplist` VALUES
 (21609,1879,1,1,-1,259240), -- Cokes
 (21609,1906,1,1,-1,213806), -- Mithril Ring Wire
 (21609,57,835,1369,0,700000), -- Adena
-(21609,12099,1,1,1,69), -- Common Item - Karmian Tunic (no drop info, no material info)
-(21609,12100,1,1,1,110), -- Common Item - Karmian Stockings
+(21609,439,1,1,1,97), -- Karmian Tunic
+(21609,471,1,1,1,156), -- Karmian Stockings
 (21609,1954,1,1,1,9771), -- Karmian Stocking Design
 (21609,1962,1,1,1,5882), -- Karmian Tunic Pattern
 (21609,1865,1,1,2,73513), -- Varnish
@@ -19633,9 +19634,9 @@ INSERT INTO `droplist` VALUES
 (21610,2163,1,1,-1,144852), -- Recipe: Earring of Protection
 (21610,4043,1,1,-1,94637), -- Asofe
 (21610,57,1392,2790,0,700000), -- Adena
-(21610,12086,1,1,1,5263), -- Common Item - Mithril Shirt (low drop info, no material info)
+(21610,397,1,1,1,178), -- Mithril Shirt
 (21610,1961,1,1,1,10735), -- Mithril Shirt Fabric
-(21610,12084,1,1,1,10526), -- Common Item - Tempered Mithril Gaiters
+(21610,2387,1,1,1,284), -- Tempered Mithril Gaiters
 (21610,2935,1,1,1,17835), -- Tempered Mithril Gaiters Fragment
 (21610,1864,1,3,2,111111), -- Stem
 (21610,1869,1,1,2,200000), -- Iron Ore
@@ -19648,10 +19649,10 @@ INSERT INTO `droplist` VALUES
 (21611,2066,1,1,-1,10003), -- Heavy Doom Hammer Head
 (21611,2320,1,1,-1,4444), -- Recipe: Cursed Staff
 (21611,57,643,1220,0,700000), -- Adena
-(21611,12091,1,1,1,152), -- Common Item - Eldarake
+(21611,631,1,1,1,152), -- Eldarake
 (21611,1964,1,1,1,8118), -- Eldarake Temper
-(21611,12090,1,1,1,107), -- Common Item - Chain Hood
-(21611,12096,1,1,1,152), -- Common Item - Chain Shield
+(21611,2413,1,1,1,107), -- Chain Hood
+(21611,2495,1,1,1,152), -- Chain Shield
 (21611,2936,1,1,1,7374), -- Chain Hood Pattern
 (21611,2945,1,1,1,8118), -- Chain Shield Fragment
 (21611,1867,1,1,2,100461), -- Animal Skin
@@ -19666,10 +19667,10 @@ INSERT INTO `droplist` VALUES
 (21612,2066,1,1,-1,14165), -- Heavy Doom Hammer Head
 (21612,2320,1,1,-1,6293), -- Recipe: Cursed Staff
 (21612,57,934,1570,0,700000), -- Adena
-(21612,12091,1,1,1,13889), -- Common Item - Eldarake (no drop info, no material info)
+(21612,631,1,1,1,214), -- Eldarake
 (21612,1964,1,1,1,11496), -- Eldarake Temper
-(21612,12090,1,1,1,4065), -- Common Item - Chain Hood
-(21612,12096,1,1,1,3247), -- Common Item - Chain Shield
+(21612,2413,1,1,1,151), -- Chain Hood
+(21612,2495,1,1,1,214), -- Chain Shield
 (21612,2936,1,1,1,10441), -- Chain Hood Pattern
 (21612,2945,1,1,1,11496), -- Chain Shield Fragment
 (21612,1867,1,1,2,142257), -- Animal Skin
@@ -19684,8 +19685,8 @@ INSERT INTO `droplist` VALUES
 (21613,2062,1,1,-1,24174), -- Scythe Edge
 (21613,2219,1,1,-1,191437), -- Recipe: Crimson Boots
 (21613,57,1521,3011,0,700000), -- Adena
-(21613,11762,1,1,1,32), -- Common Item - Cursed Dagger (no drop info, no material info)
-(21613,11747,1,1,1,32), -- Common Item - Dark Elven Dagger
+(21613,226,1,1,1,32), -- Cursed Dagger
+(21613,232,1,1,1,32), -- Dark Elven Dagger
 (21613,2070,1,1,1,2892), -- Cursed Dagger Blade
 (21613,2072,1,1,1,2892), -- Dark Elven Dagger Edge
 (21613,1864,1,3,2,242778), -- Stem
@@ -19700,8 +19701,8 @@ INSERT INTO `droplist` VALUES
 (21614,2166,1,1,-1,44616), -- Recipe: Earrings of Binding (100%)
 (21614,2328,1,1,-1,3061), -- Recipe: Sword of Delusion
 (21614,57,716,1240,0,700000), -- Adena
-(21614,11788,1,1,1,11), -- Common Item - Stiletto (no drop info, no material info)
-(21614,11779,1,1,1,11), -- Common Item - Soulfire Dirk
+(21614,227,1,1,1,11), -- Stiletto
+(21614,242,1,1,1,11), -- Soulfire Dirk
 (21614,2083,1,1,1,969), -- Stiletto Edge
 (21614,2084,1,1,1,969), -- Soulfire Dirk Blade
 (21614,952,1,1,2,1111), -- Scroll: Enchant Armor (Grade C)
@@ -19715,8 +19716,8 @@ INSERT INTO `droplist` VALUES
 (21615,2166,1,1,-1,63178), -- Recipe: Earrings of Binding (100%)
 (21615,2328,1,1,-1,4334), -- Recipe: Sword of Delusion
 (21615,57,750,1531,0,700000), -- Adena
-(21615,11788,1,1,1,15), -- Common Item - Stiletto (no drop info, no material info)
-(21615,11779,1,1,1,15), -- Common Item - Soulfire Dirk
+(21615,227,1,1,1,15), -- Stiletto
+(21615,242,1,1,1,15), -- Soulfire Dirk
 (21615,2083,1,1,1,1373), -- Stiletto Edge
 (21615,2084,1,1,1,1373), -- Soulfire Dirk Blade
 (21615,952,1,1,2,1573), -- Scroll: Enchant Armor (Grade C)
@@ -19730,11 +19731,11 @@ INSERT INTO `droplist` VALUES
 (21616,1911,1,1,-1,253020), -- Earring of Protection Gemstone
 (21616,1966,1,1,-1,124201), -- Plated Leather Fragment
 (21616,57,1834,3326,0,700000), -- Adena
-(21616,12106,1,1,1,6536), -- Common Item - Great Helmet (low drop info, no material info)
-(21616,12107,1,1,1,6536), -- Common Item - Knight\'s Shield
+(21616,500,1,1,1,208), -- Great Helmet
+(21616,632,1,1,1,298), -- Knight\'s Shield
 (21616,1971,1,1,1,15380), -- Great Helmet Material
 (21616,1972,1,1,1,20098), -- Knight\'s Shield Fragment
-(21616,12102,1,1,1,6536), -- Common Item - Dwarven Chain Shield
+(21616,2496,1,1,1,323), -- Dwarven Chain Shield
 (21616,2947,1,1,1,17945), -- Dwarven Chain Shield Fragment
 (21616,951,1,1,2,457), -- Scroll: Enchant Weapon (Grade C)
 (21616,1868,1,3,2,251215), -- Thread
@@ -19746,8 +19747,8 @@ INSERT INTO `droplist` VALUES
 (21617,1911,1,1,-1,99629), -- Earring of Protection Gemstone
 (21617,4438,1,1,-1,9553), -- Knuckle Duster Edge
 (21617,57,666,1313,0,700000), -- Adena
-(21617,11790,1,1,1,11), -- Common Item - Elemental Bow (no drop info, no material info)
-(21617,11775,1,1,1,11), -- Common Item - Noble Elven Bow
+(21617,282,1,1,1,11), -- Elemental Bow
+(21617,285,1,1,1,11), -- Noble Elven Bow
 (21617,2085,1,1,1,1027), -- Crossbow Shaft
 (21617,2086,1,1,1,1027), -- Elven Bow of Nobility Shaft
 (21617,952,1,1,2,990), -- Scroll: Enchant Armor (Grade C)
@@ -19762,8 +19763,8 @@ INSERT INTO `droplist` VALUES
 (21618,1911,1,1,-1,141079), -- Earring of Protection Gemstone
 (21618,4438,1,1,-1,13527), -- Knuckle Duster Edge
 (21618,57,985,1865,0,700000), -- Adena
-(21618,11790,1,1,1,11), -- Common Item - Elemental Bow (no drop info, no material info)
-(21618,11775,1,1,1,11), -- Common Item - Noble Elven Bow
+(21618,282,1,1,1,15), -- Elemental Bow
+(21618,285,1,1,1,15), -- Noble Elven Bow
 (21618,2085,1,1,1,1454), -- Crossbow Shaft
 (21618,2086,1,1,1,1454), -- Elven Bow of Nobility Shaft
 (21618,952,1,1,2,1401), -- Scroll: Enchant Armor (Grade C)
@@ -19778,8 +19779,8 @@ INSERT INTO `droplist` VALUES
 (21619,2166,1,1,-1,117363), -- Recipe: Earrings of Binding (100%)
 (21619,2167,1,1,-1,176643), -- Recipe: Ring of Ages
 (21619,57,1743,3406,0,700000), -- Adena
-(21619,11790,1,1,1,11), -- Common Item - Elemental Bow (no drop info)
-(21619,11775,1,1,1,11), -- Common Item - Noble Elven Bow
+(21619,282,1,1,1,27), -- Elemental Bow
+(21619,285,1,1,1,27), -- Noble Elven Bow
 (21619,2085,1,1,1,2653), -- Crossbow Shaft
 (21619,2086,1,1,1,2653), -- Elven Bow of Nobility Shaft
 (21619,952,1,1,2,3410), -- Scroll: Enchant Armor (Grade C)
@@ -19792,9 +19793,9 @@ INSERT INTO `droplist` VALUES
 (21620,2167,1,1,-1,65879), -- Recipe: Ring of Ages
 (21620,2335,1,1,-1,3003), -- Recipe: War Axe
 (21620,57,640,1251,0,700000), -- Adena
-(21620,12329,1,1,1,98), -- Common Item - Earring of Protection (no drop info, no material info)
-(21620,12331,1,1,1,147), -- Common Item - Ring of Protection
-(21620,12330,1,1,1,74), -- Common Item - Necklace of Protection
+(21620,853,1,1,1,98), -- Earring of Protection
+(21620,884,1,1,1,147), -- Ring of Protection
+(21620,916,1,1,1,74), -- Necklace of Protection
 (21620,1911,1,1,1,7093), -- Earring of Protection Gemstone
 (21620,1912,1,1,1,10277), -- Ring of Protection Gemstone
 (21620,1913,1,1,1,5799), -- Necklace of Protection Gemstone
@@ -19808,9 +19809,9 @@ INSERT INTO `droplist` VALUES
 (21621,2167,1,1,-1,93288), -- Recipe: Ring of Ages
 (21621,2335,1,1,-1,4252), -- Recipe: War Axe
 (21621,57,736,1501,0,700000), -- Adena
-(21621,12329,1,1,1,98), -- Common Item - Earring of Protection (low drop info, no material info)
-(21621,12331,1,1,1,147), -- Common Item - Ring of Protection
-(21621,12330,1,1,1,74), -- Common Item - Necklace of Protection
+(21621,853,1,1,1,138), -- Earring of Protection
+(21621,884,1,1,1,208), -- Ring of Protection
+(21621,916,1,1,1,104), -- Necklace of Protection
 (21621,1911,1,1,1,10044), -- Earring of Protection Gemstone
 (21621,1912,1,1,1,14552), -- Ring of Protection Gemstone
 (21621,1913,1,1,1,8212), -- Necklace of Protection Gemstone
@@ -19824,9 +19825,9 @@ INSERT INTO `droplist` VALUES
 (21622,1865,1,7,-1,834354), -- Varnish
 (21622,1913,1,1,-1,202944), -- Necklace of Protection Gemstone
 (21622,57,1628,3287,0,700000), -- Adena
-(21622,12329,1,1,1,8612), -- Common Item - Earring of Protection
-(21622,12331,1,1,1,12987), -- Common Item - Ring of Protection
-(21622,12330,1,1,1,6459), -- Common Item - Necklace of Protection
+(21622,853,1,1,1,252), -- Earring of Protection
+(21622,884,1,1,1,380), -- Ring of Protection
+(21622,916,1,1,1,189), -- Necklace of Protection
 (21622,1911,1,1,1,18333), -- Earring of Protection Gemstone
 (21622,1912,1,1,1,26561), -- Ring of Protection Gemstone
 (21622,1913,1,1,1,14989), -- Necklace of Protection Gemstone
@@ -19843,7 +19844,7 @@ INSERT INTO `droplist` VALUES
 (21623,1914,1,1,-1,91799), -- Earring of Binding Gemstone
 (21623,4601,1,1,-1,3631), -- Greater Dye of Strength <Str+3 Con-3>
 (21623,57,912,1457,0,700000), -- Adena
-(21623,11814,1,1,1,16), -- Common Item - Akat Long Bow (no drop info, no material info)
+(21623,283,1,1,1,16), -- Akat Long Bow
 (21623,2109,1,1,1,1895), -- Akat Longbow Shaft
 (21623,1866,1,1,2,56312), -- Suede
 (21623,1871,1,1,2,84467), -- Charcoal
@@ -19858,7 +19859,7 @@ INSERT INTO `droplist` VALUES
 (21624,1914,1,1,-1,129992), -- Earring of Binding Gemstone
 (21624,4601,1,1,-1,5142), -- Greater Dye of Strength <Str+3 Con-3>
 (21624,57,1153,2145,0,700000), -- Adena
-(21624,11814,1,1,1,23), -- Common Item - Akat Long Bow (no drop info, no material info)
+(21624,283,1,1,1,23), -- Akat Long Bow
 (21624,2109,1,1,1,2683), -- Akat Longbow Shaft
 (21624,1866,1,1,2,79740), -- Suede
 (21624,1871,1,1,2,119610), -- Charcoal
@@ -19884,9 +19885,9 @@ INSERT INTO `droplist` VALUES
 (21626,4041,1,1,-1,12690), -- Mold Hardener
 (21626,4603,1,1,-1,3243), -- Greater Dye of Constitution <Con+3 Str-3>
 (21626,57,589,1197,0,700000), -- Adena
-(21626,12332,1,1,1,51), -- Common Item - Earring of Binding (no drop info, no material info)
-(21626,12333,1,1,1,76), -- Common Item - Ring of Ages
-(21626,12334,1,1,1,38), -- Common Item - Necklace of Mermaid
+(21626,854,1,1,1,69), -- Earring of Binding
+(21626,885,1,1,1,103), -- Ring of Ages
+(21626,917,1,1,1,52), -- Necklace of Mermaid
 (21626,1914,1,1,1,5652), -- Earring of Binding Gemstone
 (21626,1915,1,1,1,8863), -- Ring of Ages Gemstone
 (21626,1916,1,1,1,4281), -- Necklace of Mermaid Teardrop
@@ -19902,9 +19903,9 @@ INSERT INTO `droplist` VALUES
 (21627,4041,1,1,-1,17970), -- Mold Hardener
 (21627,4603,1,1,-1,4592), -- Greater Dye of Constitution <Con+3 Str-3>
 (21627,57,835,1695,0,700000), -- Adena
-(21627,12332,1,1,1,51), -- Common Item - Earring of Binding (no drop info, no material info)
-(21627,12333,1,1,1,76), -- Common Item - Ring of Ages
-(21627,12334,1,1,1,38), -- Common Item - Necklace of Mermaid
+(21627,854,1,1,1,97), -- Earring of Binding
+(21627,885,1,1,1,146), -- Ring of Ages
+(21627,917,1,1,1,73), -- Necklace of Mermaid
 (21627,1914,1,1,1,8003), -- Earring of Binding Gemstone
 (21627,1915,1,1,1,12550), -- Ring of Ages Gemstone
 (21627,1916,1,1,1,6062), -- Necklace of Mermaid Teardrop
@@ -19920,14 +19921,14 @@ INSERT INTO `droplist` VALUES
 (21628,1874,1,1,-1,251462), -- Oriharukon Ore
 (21628,4604,1,1,-1,8382), -- Greater Dye of Constitution <Con+3 Dex-3>
 (21628,57,1932,3513,0,700000), -- Adena
-(21628,11816,1,1,1,5), -- Common Item - War Axe (no drop info, no material info)
-(21628,11802,1,1,1,5), -- Common Item - Nirvana Axe
-(21628,11799,1,1,1,5), -- Common Item - Stick of Eternity
-(21628,11825,1,1,1,5), -- Common Item - Paradia Staff
-(21628,11824,1,1,1,5), -- Common Item - Pa\'agrian Hammer
-(21628,11828,1,1,1,5), -- Common Item - Sage\'s Staff
-(21628,11804,1,1,1,5), -- Common Item - Club of Nature
-(21628,11806,1,1,1,5), -- Common Item - Mace of The Underworld
+(21628,162,1,1,1,5), -- War Axe
+(21628,174,1,1,1,5), -- Nirvana Axe
+(21628,196,1,1,1,5), -- Stick of Eternity
+(21628,197,1,1,1,5), -- Paradia Staff
+(21628,199,1,1,1,5), -- Pa\'agrian Hammer
+(21628,200,1,1,1,5), -- Sage\'s Staff
+(21628,201,1,1,1,5), -- Club of Nature
+(21628,202,1,1,1,5), -- Mace of The Underworld
 (21628,2097,1,1,1,523), -- War Axe Blade
 (21628,2098,1,1,1,523), -- Nirvana Axe Blade
 (21628,2099,1,1,1,550), -- Stick of Eternity Shaft
@@ -19947,12 +19948,12 @@ INSERT INTO `droplist` VALUES
 (21629,2354,1,1,-1,3244), -- Recipe: Deadman\'s Staff
 (21629,4042,1,1,-1,33140), -- Enria
 (21629,57,1154,1934,0,700000), -- Adena
-(21629,11821,1,1,1,4), -- Common Item - Caliburs (no drop info, no material info)
-(21629,11807,1,1,1,4), -- Common Item - Sword of Delusion
-(21629,11820,1,1,1,4), -- Common Item - Tsurugi
-(21629,11829,1,1,1,4), -- Common Item - Homunkulus\'s Sword
-(21629,11815,1,1,1,4), -- Common Item - Sword of Nightmare
-(21629,11805,1,1,1,4), -- Common Item - Sword of Whispering Death
+(21629,75,1,1,1,4), -- Caliburs
+(21629,76,1,1,1,4), -- Sword of Delusion
+(21629,77,1,1,1,4), -- Tsurugi
+(21629,84,1,1,1,4), -- Homunkulus\'s Sword
+(21629,134,1,1,1,4), -- Sword of Nightmare
+(21629,145,1,1,1,4), -- Sword of Whispering Death
 (21629,2089,1,1,1,374), -- Caliburs Edge
 (21629,2090,1,1,1,374), -- Delusional Blade
 (21629,2091,1,1,1,374), -- Tsurugi Blade
@@ -19972,12 +19973,12 @@ INSERT INTO `droplist` VALUES
 (21630,2354,1,1,-1,4593), -- Recipe: Deadman\'s Staff
 (21630,4042,1,1,-1,46928), -- Enria
 (21630,57,1461,2742,0,700000), -- Adena
-(21630,11821,1,1,1,4), -- Common Item - Caliburs (no drop info, no material info)
-(21630,11807,1,1,1,4), -- Common Item - Sword of Delusion
-(21630,11820,1,1,1,4), -- Common Item - Tsurugi
-(21630,11829,1,1,1,4), -- Common Item - Homunkulus\'s Sword
-(21630,11815,1,1,1,4), -- Common Item - Sword of Nightmare
-(21630,11805,1,1,1,4), -- Common Item - Sword of Whispering Death
+(21630,75,1,1,1,5), -- Caliburs
+(21630,76,1,1,1,5), -- Sword of Delusion
+(21630,77,1,1,1,5), -- Tsurugi
+(21630,84,1,1,1,5), -- Homunkulus\'s Sword
+(21630,134,1,1,1,5), -- Sword of Nightmare
+(21630,145,1,1,1,5), -- Sword of Whispering Death
 (21630,2089,1,1,1,529), -- Caliburs Edge
 (21630,2090,1,1,1,529), -- Delusional Blade
 (21630,2091,1,1,1,529), -- Tsurugi Blade
@@ -19997,10 +19998,10 @@ INSERT INTO `droplist` VALUES
 (21631,2092,1,1,-1,25159), -- Homunkulus\'s Sword Blade
 (21631,2353,1,1,-1,7531), -- Recipe: Samurai Longsword
 (21631,57,2300,4439,0,700000), -- Adena
-(21631,12129,1,1,1,9494), -- Common Item - Tower Shield
-(21631,12126,1,1,1,9494), -- Common Item - Composite Shield
-(21631,12127,1,1,1,9494), -- Common Item - Composite Helmet
-(21631,12120,1,1,1,9494), -- Common Item - Shining Circlet
+(21631,103,1,1,1,185), -- Tower Shield
+(21631,107,1,1,1,185), -- Composite Shield
+(21631,517,1,1,1,130), -- Composite Helmet
+(21631,1149,1,1,1,130), -- Shining Circlet
 (21631,1978,1,1,1,15297), -- Tower Shield Fragment
 (21631,1983,1,1,1,10467), -- Shining Circlet Pattern
 (21631,2957,1,1,1,10467), -- Composite Helmet Design
@@ -20017,9 +20018,9 @@ INSERT INTO `droplist` VALUES
 (21632,2955,1,1,-1,110994), -- Theca Leather Gloves Texture
 (21632,4042,1,1,-1,29228), -- Enria
 (21632,57,995,1654,0,700000), -- Adena
-(21632,12133,1,1,1,27), -- Common Item - Theca Leather Armor (no drop info, no material info)
-(21632,12135,1,1,1,14), -- Common Item - Drake Leather Armor
-(21632,12130,1,1,1,42), -- Common Item - Theca Leather Gaiters
+(21632,400,1,1,1,27), -- Theca Leather Armor
+(21632,401,1,1,1,14), -- Drake Leather Armor
+(21632,420,1,1,1,42), -- Theca Leather Gaiters
 (21632,1984,1,1,1,2314), -- Theca Leather Armor Pattern
 (21632,1985,1,1,1,3722), -- Theca Leather Gaiters Pattern
 (21632,1987,1,1,1,1647), -- Drake Leather Armor Texture
@@ -20035,9 +20036,9 @@ INSERT INTO `droplist` VALUES
 (21633,2955,1,1,-1,157174), -- Theca Leather Gloves Texture
 (21633,4042,1,1,-1,41389), -- Enria
 (21633,57,1003,2037,0,700000), -- Adena
-(21633,12133,1,1,1,27), -- Common Item - Theca Leather Armor (no drop info, no material info)
-(21633,12135,1,1,1,14), -- Common Item - Drake Leather Armor
-(21633,12130,1,1,1,42), -- Common Item - Theca Leather Gaiters
+(21633,400,1,1,1,38), -- Theca Leather Armor
+(21633,401,1,1,1,20), -- Drake Leather Armor
+(21633,420,1,1,1,60), -- Theca Leather Gaiters
 (21633,1984,1,1,1,3276), -- Theca Leather Armor Pattern
 (21633,1985,1,1,1,5270), -- Theca Leather Gaiters Pattern
 (21633,1987,1,1,1,2332), -- Drake Leather Armor Texture
@@ -20053,9 +20054,9 @@ INSERT INTO `droplist` VALUES
 (21634,1918,1,1,-1,196309), -- Nassen\'s Earring Gemstone
 (21634,4039,1,1,-1,151093), -- Mold Glue
 (21634,57,2230,4448,0,700000), -- Adena
-(21634,11853,1,1,1,14), -- Common Item - Samurai Longsword (no drop info, no material info)
+(21634,135,1,1,1,14), -- Samurai Longsword
 (21634,2115,1,1,1,1918), -- Samurai Longsword Blade
-(21634,11843,1,1,1,14), -- Common Item - Berserker Blade
+(21634,5286,1,1,1,14), -- Berserker Blade
 (21634,5530,1,1,1,1920), -- Berserker Blade Edge
 (21634,1806,1,1,2,558), -- Recipe: Soulshot: B-Grade
 (21634,1894,1,1,2,9788), -- Crafted Leather
@@ -20068,13 +20069,13 @@ INSERT INTO `droplist` VALUES
 (21635,1985,1,1,-1,57799), -- Theca Leather Gaiters Pattern
 (21635,4937,1,1,-1,27660), -- Recipe: Adamantite Earrings (70%)
 (21635,57,675,1375,0,700000), -- Adena
-(21635,12132,1,1,1,33), -- Common Item - Theca Leather Boots (no drop info, no material info)
-(21635,12136,1,1,1,25), -- Common Item - Drake Leather Boots
-(21635,12142,1,1,1,25), -- Common Item - Full Plate Boots
-(21635,12131,1,1,1,33), -- Common Item - Theca Leather Gloves
-(21635,12134,1,1,1,25), -- Common Item - Drake Leather Gloves
-(21635,12141,1,1,1,25), -- Common Item - Full Plate Gauntlets
-(21635,12137,1,1,1,25), -- Common Item - Divine Gloves
+(21635,2436,1,1,1,33), -- Theca Leather Boots
+(21635,2437,1,1,1,25), -- Drake Leather Boots
+(21635,2438,1,1,1,25), -- Full Plate Boots
+(21635,2460,1,1,1,33), -- Theca Leather Gloves
+(21635,2461,1,1,1,25), -- Drake Leather Gloves
+(21635,2462,1,1,1,25), -- Full Plate Gauntlets
+(21635,2463,1,1,1,25), -- Divine Gloves
 (21635,2954,1,1,1,2799), -- Theca Leather Boots Texture
 (21635,2955,1,1,1,2799), -- Theca Leather Gloves Texture
 (21635,2960,1,1,1,2408), -- Drake Leather Boots Design
@@ -20094,13 +20095,13 @@ INSERT INTO `droplist` VALUES
 (21636,1985,1,1,-1,81846), -- Theca Leather Gaiters Pattern
 (21636,4937,1,1,-1,39167), -- Recipe: Adamantite Earrings (70%)
 (21636,57,956,1948,0,700000), -- Adena
-(21636,12132,1,1,1,33), -- Common Item - Theca Leather Boots (no drop info, no material info)
-(21636,12136,1,1,1,25), -- Common Item - Drake Leather Boots
-(21636,12142,1,1,1,25), -- Common Item - Full Plate Boots
-(21636,12131,1,1,1,33), -- Common Item - Theca Leather Gloves
-(21636,12134,1,1,1,25), -- Common Item - Drake Leather Gloves
-(21636,12141,1,1,1,25), -- Common Item - Full Plate Gauntlets
-(21636,12137,1,1,1,25), -- Common Item - Divine Gloves
+(21636,2436,1,1,1,46), -- Theca Leather Boots
+(21636,2437,1,1,1,35), -- Drake Leather Boots
+(21636,2438,1,1,1,35), -- Full Plate Boots
+(21636,2460,1,1,1,46), -- Theca Leather Gloves
+(21636,2461,1,1,1,35), -- Drake Leather Gloves
+(21636,2462,1,1,1,35), -- Full Plate Gauntlets
+(21636,2463,1,1,1,35), -- Divine Gloves
 (21636,2954,1,1,1,3963), -- Theca Leather Boots Texture
 (21636,2955,1,1,1,3963), -- Theca Leather Gloves Texture
 (21636,2960,1,1,1,3410), -- Drake Leather Boots Design
@@ -20120,9 +20121,9 @@ INSERT INTO `droplist` VALUES
 (21637,2116,1,1,-1,20383), -- Deadman\'s Staff Head
 (21637,4141,1,1,-1,20829), -- Recipe: Avadon Breastplate
 (21637,57,1746,3555,0,700000), -- Adena
-(21637,11853,1,1,1,14), -- Common Item - Samurai Longsword (no drop info, no material info)
+(21637,135,1,1,1,14), -- Samurai Longsword
 (21637,2115,1,1,1,1833), -- Samurai Longsword Blade
-(21637,11843,1,1,1,14), -- Common Item - Berserker Blade
+(21637,5286,1,1,1,14), -- Berserker Blade
 (21637,5530,1,1,1,1835), -- Berserker Blade Edge
 (21637,1864,4,12,2,57130), -- Stem
 (21637,1865,2,6,2,45704), -- Varnish
@@ -20136,8 +20137,8 @@ INSERT INTO `droplist` VALUES
 (21638,1935,1,1,-1,21240), -- Scale Mail Fragment
 (21638,2203,1,1,-1,82830), -- Recipe: Mithril Boots
 (21638,57,193,384,0,700000), -- Adena
-(21638,11678,1,1,1,831), -- Common Item - Blood of Saints
-(21638,11676,1,1,1,831), -- Common Item - Tome of Blood
+(21638,316,1,1,1,14), -- Blood of Saints
+(21638,317,1,1,1,14), -- Tome of Blood
 (21638,2030,1,1,1,789), -- Tome of Blood Page
 (21638,1874,1,1,2,1661), -- Oriharukon Ore
 (21638,1878,1,1,2,10000), -- Braided Hemp
@@ -20150,11 +20151,11 @@ INSERT INTO `droplist` VALUES
 (21639,2153,1,1,-1,69838), -- Recipe: Tiger\'s Eye Earring
 (21639,2184,1,1,-1,47170), -- Recipe: Mithril Banded Gaiters
 (21639,57,227,455,0,700000), -- Adena
-(21639,11655,1,1,1,827), -- Common Item - Sword of Magic
-(21639,11667,1,1,1,207), -- Common Item - Two-Handed Sword
-(21639,11675,1,1,1,207), -- Common Item - Crimson Sword
-(21639,11670,1,1,1,207), -- Common Item - Elven Sword
-(21639,11657,1,1,1,413), -- Common Item - Sword of Occult
+(21639,83,1,1,1,12), -- Sword of Magic
+(21639,124,1,1,1,9), -- Two-Handed Sword
+(21639,127,1,1,1,9), -- Crimson Sword
+(21639,130,1,1,1,9), -- Elven Sword
+(21639,144,1,1,1,12), -- Sword of Occult
 (21639,2026,1,1,1,480), -- Two-Handed Sword Edge
 (21639,1875,1,1,2,3106), -- Stone of Purity
 (21639,1879,1,1,2,7463), -- Cokes
@@ -20170,11 +20171,11 @@ INSERT INTO `droplist` VALUES
 (21641,2154,1,1,-1,62363), -- Recipe: Elven Earring
 (21641,2302,1,1,-1,2544), -- Recipe: Silver Axe
 (21641,57,296,590,0,700000), -- Adena
-(21641,11686,1,1,1,222), -- Common Item - Morning Star
-(21641,11693,1,1,1,222), -- Common Item - Goat Head Staff
-(21641,11708,1,1,1,222), -- Common Item - Tarbar
-(21641,11697,1,1,1,222), -- Common Item - Skull Breaker
-(21641,11713,1,1,1,222), -- Common Item - Heavy Bone Club
+(21641,88,1,1,1,5), -- Morning Star
+(21641,90,1,1,1,5), -- Goat Head Staff
+(21641,158,1,1,1,5), -- Tarbar
+(21641,169,1,1,1,5), -- Skull Breaker
+(21641,172,1,1,1,5), -- Heavy Bone Club
 (21641,2031,1,1,1,305), -- Morning Star Head
 (21641,2032,1,1,1,279), -- Goat Head Staff Head
 (21641,2035,1,1,1,305), -- Tarbar Head
@@ -20192,7 +20193,7 @@ INSERT INTO `droplist` VALUES
 (21642,1904,1,1,-1,49887), -- Elven Necklace Beads
 (21642,2145,1,1,-1,38181), -- Recipe: Mithril Alloy
 (21642,57,271,541,0,700000), -- Adena
-(21642,11683,1,1,1,394), -- Common Item - Strengthened Long Bow
+(21642,279,1,1,1,20), -- Strengthened Long Bow
 (21642,2040,1,1,1,1599), -- Strengthened Long Bow Shaft
 (21642,1868,1,1,2,100000), -- Thread
 (21642,1873,1,1,2,22222), -- Silver Nugget
@@ -20204,7 +20205,7 @@ INSERT INTO `droplist` VALUES
 (21643,1904,1,1,-1,63389), -- Elven Necklace Beads
 (21643,2145,1,1,-1,48515), -- Recipe: Mithril Alloy
 (21643,57,345,686,0,700000), -- Adena
-(21643,11683,1,1,1,1252), -- Common Item - Strengthened Long Bow
+(21643,279,1,1,1,26), -- Strengthened Long Bow
 (21643,2040,1,1,1,2031), -- Strengthened Long Bow Shaft
 (21643,1868,1,1,2,142857), -- Thread
 (21643,1873,1,1,2,38462), -- Silver Nugget
@@ -20216,8 +20217,8 @@ INSERT INTO `droplist` VALUES
 (21644,2155,1,1,-1,52351), -- Recipe: Elven Ring
 (21644,5550,1,1,-1,4349), -- Durable Metal Plate
 (21644,57,166,330,0,700000), -- Adena
-(21644,12054,1,1,1,157), -- Common Item - Manticore Skin Shirt
-(21644,12052,1,1,1,2198), -- Common Item - Manticore Skin Gaiters
+(21644,395,1,1,1,38), -- Manticore Skin Shirt
+(21644,417,1,1,1,61), -- Manticore Skin Gaiters
 (21644,1942,1,1,1,2150), -- Manticore Skin Shirt Texture
 (21644,1943,1,1,1,3348), -- Manticore Skin Gaiters Pattern
 (21644,1875,1,1,2,2198), -- Stone of Purity
@@ -20232,9 +20233,9 @@ INSERT INTO `droplist` VALUES
 (21645,2029,1,1,-1,7131), -- Gastraphetes Shaft
 (21645,5549,1,1,-1,59780), -- Metallic Thread
 (21645,57,301,600,0,700000), -- Adena
-(21645,12322,1,1,1,4505), -- Common Item - Elven Earring
-(21645,12321,1,1,1,6211), -- Common Item - Elven Ring
-(21645,12320,1,1,1,3436), -- Common Item - Elven Necklace
+(21645,850,1,1,1,111), -- Elven Earring
+(21645,881,1,1,1,166), -- Elven Ring
+(21645,913,1,1,1,83), -- Elven Necklace
 (21645,1902,1,1,1,5219), -- Elven Earring Beads
 (21645,1903,1,1,1,8592), -- Elven Ring Piece
 (21645,1904,1,1,1,4807), -- Elven Necklace Beads
@@ -20482,8 +20483,8 @@ INSERT INTO `droplist` VALUES
 (21659,1869,1,3,-1,635864), -- Iron Ore
 (21659,1900,1,1,-1,139139), -- Enchanted Necklace Chain
 (21659,57,536,1073,0,700000), -- Adena
-(21659,12028,1,1,1,52632), -- Common Item - Bronze Helmet (needs drop check, low material info)
-(21659,12025,1,1,1,27027), -- Common Item - Aspis
+(21659,46,1,1,1,1390), -- Bronze Helmet
+(21659,627,1,1,1,1986), -- Aspis
 (21659,737,1,1,2,11583), -- Scroll of Resurrection
 (21659,1864,1,1,2,231650), -- Stem
 (21659,1869,1,1,2,115825), -- Iron Ore
@@ -20494,13 +20495,13 @@ INSERT INTO `droplist` VALUES
 (21660,1940,1,1,-1,264838), -- Iron Boots Design
 (21660,2190,1,1,-1,126744), -- Recipe: Mithril Stockings
 (21660,57,749,1495,0,700000), -- Adena
-(21660,12038,1,1,1,22599), -- Common Item - Gauntlets (needs drop check, low material info)
-(21660,12033,1,1,1,22599), -- Common Item - Iron Boots
+(21660,63,1,1,1,531), -- Gauntlets
+(21660,553,1,1,1,531), -- Iron Boots
 (21660,1940,1,1,1,20116), -- Iron Boots Design
-(21660,12035,1,1,1,22599), -- Common Item - Reinforced Leather Boots
-(21660,12045,1,1,1,22599), -- Common Item - Boots of Knowledge
-(21660,12037,1,1,1,22599), -- Common Item - Reinforced Leather Gloves
-(21660,12046,1,1,1,22599), -- Common Item - Gloves of Knowledge
+(21660,2422,1,1,1,531), -- Reinforced Leather Boots
+(21660,2423,1,1,1,531), -- Boots of Knowledge
+(21660,2446,1,1,1,531), -- Reinforced Leather Gloves
+(21660,2447,1,1,1,531), -- Gloves of Knowledge
 (21660,1865,1,1,2,235862), -- Varnish
 (21660,1870,1,3,2,117931), -- Coal
 (21660,1874,1,1,2,15725), -- Oriharukon Ore
@@ -20509,7 +20510,7 @@ INSERT INTO `droplist` VALUES
 (21661,1879,1,1,-1,228329), -- Cokes
 (21661,1901,1,1,-1,189223), -- Tiger\'s Eye Earring Stone
 (21661,57,579,1158,0,700000), -- Adena
-(21661,11659,1,1,1,76), -- Common Item - Gastraphetes (no drop info, low material info)
+(21661,278,1,1,1,76), -- Gastraphetes
 (21661,2029,1,1,1,4345), -- Gastraphetes Shaft
 (21661,1875,1,1,2,8094), -- Stone of Purity
 (21661,1879,1,1,2,20234), -- Cokes
@@ -20521,9 +20522,9 @@ INSERT INTO `droplist` VALUES
 (21662,2026,1,1,-1,18347), -- Two-Handed Sword Edge
 (21662,2191,1,1,-1,204063), -- Recipe: RIP Gauntlets
 (21662,57,644,1285,0,700000), -- Adena
-(21662,12318,1,1,1,37037), -- Common Item - Tiger\'s Eye Earring (needs drop check, low material info)
-(21662,12319,1,1,1,37037), -- Common Item - Black Pearl Ring
-(21662,12317,1,1,1,7463), -- Common Item - Near Forest Necklace
+(21662,849,1,1,1,631), -- Tiger\'s Eye Earring
+(21662,880,1,1,1,947), -- Black Pearl Ring
+(21662,912,1,1,1,473), -- Near Forest Necklace
 (21662,1901,1,1,1,27987), -- Tiger\'s Eye Earring Stone
 (21662,1876,1,1,2,27017), -- Mithril Ore
 (21662,1877,1,1,2,5404), -- Adamantite Nugget
@@ -20535,9 +20536,9 @@ INSERT INTO `droplist` VALUES
 (21663,1939,1,1,-1,131576), -- Mithril Banded Gaiters Material
 (21663,2154,1,1,-1,160385), -- Recipe: Elven Earring
 (21663,57,633,1266,0,700000), -- Adena
-(21663,12318,1,1,1,7752), -- Common Item - Tiger\'s Eye Earring (needs drop check, low material info)
-(21663,12319,1,1,1,7752), -- Common Item - Black Pearl Ring
-(21663,12317,1,1,1,7752), -- Common Item - Near Forest Necklace
+(21663,849,1,1,1,620), -- Tiger\'s Eye Earring
+(21663,880,1,1,1,931), -- Black Pearl Ring
+(21663,912,1,1,1,465), -- Near Forest Necklace
 (21663,1901,1,1,1,27502), -- Tiger\'s Eye Earring Stone
 (21663,1874,1,1,2,8850), -- Oriharukon Ore
 (21663,1878,1,1,2,53098), -- Braided Hemp
@@ -20549,9 +20550,9 @@ INSERT INTO `droplist` VALUES
 (21664,2153,1,1,-1,127997), -- Recipe: Tiger\'s Eye Earring
 (21664,2183,1,1,-1,54146), -- Recipe: Mithril Banded Mail
 (21664,57,347,694,0,700000), -- Adena
-(21664,12314,1,1,1,17241), -- Common Item - Enchanted Earring (needs drop check, low material info)
-(21664,12316,1,1,1,34483), -- Common Item - Enchanted Ring
-(21664,12315,1,1,1,17241), -- Common Item - Enchanted Necklace
+(21664,848,1,1,1,528), -- Enchanted Earring
+(21664,879,1,1,1,792), -- Enchanted Ring
+(21664,911,1,1,1,396), -- Enchanted Necklace
 (21664,1900,1,1,1,12302), -- Enchanted Necklace Chain
 (21664,955,1,1,2,360), -- Scroll: Enchant Weapon (Grade D)
 (21664,1864,1,1,2,179900), -- Stem
@@ -20562,8 +20563,8 @@ INSERT INTO `droplist` VALUES
 (21665,2028,1,1,-1,16040), -- Shilen Knife Edge
 (21665,2192,1,1,-1,172191), -- Recipe: Kite Shield
 (21665,57,570,1138,0,700000), -- Adena
-(21665,12047,1,1,1,50000), -- Common Item - Tunic of Knowledge (needs drop check, low material info)
-(21665,12048,1,1,1,76923), -- Common Item - Stockings of Knowledge
+(21665,436,1,1,1,473), -- Tunic of Knowledge
+(21665,469,1,1,1,754), -- Stockings of Knowledge
 (21665,1341,10,30,2,341801), -- Bone Arrow
 (21665,1875,1,1,2,6836), -- Stone of Purity
 (21665,1879,1,1,2,17090), -- Cokes
@@ -20575,10 +20576,10 @@ INSERT INTO `droplist` VALUES
 (21666,1872,1,3,-1,688304), -- Animal Bone
 (21666,1935,1,1,-1,57679), -- Scale Mail Fragment
 (21666,57,436,871,0,700000), -- Adena
-(21666,11635,1,1,1,36), -- Common Item - Bastard Sword (no drop info, low material info)
-(21666,11636,1,1,1,36), -- Common Item - Spinebone Sword
-(21666,11643,1,1,1,36), -- Common Item - Artisan\'s Sword
-(21666,11628,1,1,1,36), -- Common Item - Knight\'s Sword
+(21666,69,1,1,1,36), -- Bastard Sword
+(21666,125,1,1,1,36), -- Spinebone Sword
+(21666,126,1,1,1,36), -- Artisan\'s Sword
+(21666,128,1,1,1,36), -- Knight\'s Sword
 (21666,2021,1,1,1,1425), -- Spinebone Sword Blade
 (21666,956,1,1,2,3762), -- Scroll: Enchant Armor (Grade D)
 (21666,1867,1,1,2,150453), -- Animal Skin
@@ -20589,8 +20590,8 @@ INSERT INTO `droplist` VALUES
 (21667,1940,1,1,-1,180800), -- Iron Boots Design
 (21667,2155,1,1,-1,194440), -- Recipe: Elven Ring
 (21667,57,512,1024,0,700000), -- Adena
-(21667,12050,1,1,1,27778), -- Common Item - Helmet (needs drop check, low material info)
-(21667,12051,1,1,1,55556), -- Common Item - Hoplon
+(21667,47,1,1,1,846), -- Helmet
+(21667,628,1,1,1,1209), -- Hoplon
 (21667,1874,1,1,2,7157), -- Oriharukon Ore
 (21667,1878,1,1,2,42939), -- Braided Hemp
 (21667,1884,1,1,2,66060), -- Cord
@@ -20601,8 +20602,8 @@ INSERT INTO `droplist` VALUES
 (21668,1864,1,5,-1,724636), -- Stem
 (21668,1936,1,1,-1,88949), -- White Tunic Pattern
 (21668,57,459,917,0,700000), -- Adena
-(21668,12024,1,1,1,224), -- Common Item - Scale Mail (no drop info, low material info)
-(21668,12023,1,1,1,357), -- Common Item - Scale Gaiters
+(21668,348,1,1,1,224), -- Scale Mail
+(21668,377,1,1,1,357), -- Scale Gaiters
 (21668,1935,1,1,1,8296), -- Scale Mail Fragment
 (21668,1937,1,1,1,12758), -- Scale Gaiters Fragment
 (21668,1061,1,1,2,59999), -- Healing Potion
@@ -20615,8 +20616,8 @@ INSERT INTO `droplist` VALUES
 (21669,2156,1,1,-1,102046), -- Recipe: Elven Necklace
 (21669,5550,1,1,-1,17008), -- Durable Metal Plate
 (21669,57,539,1078,0,700000), -- Adena
-(21669,11678,1,1,1,47), -- Common Item - Blood of Saints (no drop info, low material info)
-(21669,11676,1,1,1,47), -- Common Item - Tome of Blood
+(21669,316,1,1,1,47), -- Blood of Saints
+(21669,317,1,1,1,47), -- Tome of Blood
 (21669,2030,1,1,1,2645), -- Tome of Blood Page
 (21669,1341,20,60,2,188394), -- Bone Arrow
 (21669,1864,1,3,2,75358), -- Stem
@@ -20628,10 +20629,10 @@ INSERT INTO `droplist` VALUES
 (21670,1884,1,1,-1,926136), -- Cord
 (21670,2029,1,1,-1,17952), -- Gastraphetes Shaft
 (21670,57,636,1268,0,700000), -- Adena
-(21670,12043,1,1,1,13158), -- Common Item - Mithril Banded Mail (needs drop check, low material info)
-(21670,12036,1,1,1,13158), -- Common Item - Reinforced Leather Shirt
-(21670,12042,1,1,1,13158), -- Common Item - Mithril Banded Gaiters
-(21670,12034,1,1,1,13158), -- Common Item - Reinforced Leather Gaiters
+(21670,393,1,1,1,176), -- Mithril Banded Mail
+(21670,394,1,1,1,176), -- Reinforced Leather Shirt
+(21670,415,1,1,1,281), -- Mithril Banded Gaiters
+(21670,416,1,1,1,281), -- Reinforced Leather Gaiters
 (21670,1938,1,1,1,8967), -- Mithril Banded Mail Material
 (21670,1939,1,1,1,11715), -- Mithril Banded Gaiters Material
 (21670,1874,1,1,2,8891), -- Oriharukon Ore
@@ -20644,8 +20645,8 @@ INSERT INTO `droplist` VALUES
 (21671,2184,1,1,-1,46479), -- Recipe: Mithril Banded Gaiters
 (21671,2185,1,1,-1,87103), -- Recipe: Iron Boots
 (21671,57,187,373,0,700000), -- Adena
-(21671,12016,1,1,1,5780), -- Common Item - Leather Gauntlets (needs drop check, low material info)
-(21671,12029,1,1,1,5780), -- Common Item - Blue Buckskin Boots
+(21671,605,1,1,1,726), -- Leather Gauntlets
+(21671,1123,1,1,1,726), -- Blue Buckskin Boots
 (21671,1830,1,1,2,13817), -- Scroll of Escape: Castle
 (21671,1876,1,1,2,6909), -- Mithril Ore
 (21671,1877,1,1,2,1382), -- Adamantite Nugget
@@ -20657,8 +20658,8 @@ INSERT INTO `droplist` VALUES
 (21672,2193,1,1,-1,424088), -- Recipe: Boots of Power
 (21672,2269,1,1,-1,22628), -- Recipe: Morning Star
 (21672,57,1338,2670,0,700000), -- Adena
-(21672,11666,1,1,1,14706), -- Common Item - Spiked Club
-(21672,11663,1,1,1,11364), -- Common Item - Staff of Magic
+(21672,157,1,1,1,117), -- Spiked Club
+(21672,186,1,1,1,117), -- Staff of Magic
 (21672,2027,1,1,1,7355), -- Spiked Club Head
 (21672,1864,4,12,2,62500), -- Stem
 (21672,1865,2,6,2,76923), -- Varnish
@@ -20670,10 +20671,10 @@ INSERT INTO `droplist` VALUES
 (21673,1901,1,1,-1,445848), -- Tiger\'s Eye Earring Stone
 (21673,5220,1,1,-1,129118), -- Metal Hardener
 (21673,57,1363,2720,0,700000), -- Adena
-(21673,12043,1,1,1,5814), -- Common Item - Mithril Banded Mail
-(21673,12036,1,1,1,5814), -- Common Item - Reinforced Leather Shirt
-(21673,12042,1,1,1,24390), -- Common Item - Mithril Banded Gaiters
-(21673,12034,1,1,1,15873), -- Common Item - Reinforced Leather Gaiters
+(21673,393,1,1,1,377), -- Mithril Banded Mail
+(21673,394,1,1,1,377), -- Reinforced Leather Shirt
+(21673,415,1,1,1,601), -- Mithril Banded Gaiters
+(21673,416,1,1,1,601), -- Reinforced Leather Gaiters
 (21673,1938,1,1,1,19232), -- Mithril Banded Mail Material
 (21673,1939,1,1,1,25127), -- Mithril Banded Gaiters Material
 (21673,1874,1,1,2,20408), -- Oriharukon Ore
@@ -20686,7 +20687,7 @@ INSERT INTO `droplist` VALUES
 (21674,1939,1,1,-1,11057), -- Mithril Banded Gaiters Material
 (21674,2270,1,1,-1,899), -- Recipe: Goat Head Staff
 (21674,57,53,106,0,700000), -- Adena
-(21674,11665,1,1,1,14), -- Common Item - Triple-Edged Jamadhr (no drop info, low material info)
+(21674,260,1,1,1,14), -- Triple-Edged Jamadhr
 (21674,1875,1,1,2,638), -- Stone of Purity
 (21674,1879,1,1,2,1594), -- Cokes
 (21674,1885,1,1,2,797), -- High Grade Suede
@@ -20698,7 +20699,7 @@ INSERT INTO `droplist` VALUES
 (21675,1880,1,1,-1,26283), -- Steel
 (21675,2021,1,1,-1,3319), -- Spinebone Sword Blade
 (21675,57,111,222,0,700000), -- Adena
-(21675,11647,1,1,1,45), -- Common Item - Pike (no drop info, low material info)
+(21675,292,1,1,1,45), -- Pike
 (21675,1864,1,1,2,57452), -- Stem
 (21675,1869,1,1,2,28726), -- Iron Ore
 (21675,1880,1,1,2,2873), -- Steel
@@ -20708,9 +20709,9 @@ INSERT INTO `droplist` VALUES
 (21676,1870,1,6,-1,726143), -- Coal
 (21676,2029,1,1,-1,34646), -- Gastraphetes Shaft
 (21676,57,1227,2454,0,700000), -- Adena
-(21676,12318,1,1,1,58824), -- Common Item - Tiger\'s Eye Earring
-(21676,12319,1,1,1,43478), -- Common Item - Black Pearl Ring
-(21676,12317,1,1,1,4425), -- Common Item - Near Forest Necklace
+(21676,849,1,1,1,1201), -- Tiger\'s Eye Earring
+(21676,880,1,1,1,1805), -- Black Pearl Ring
+(21676,912,1,1,1,901), -- Near Forest Necklace
 (21676,1901,1,1,1,53326), -- Tiger\'s Eye Earring Stone
 (21676,1865,1,3,2,200000), -- Varnish
 (21676,1870,1,3,2,76923), -- Coal
@@ -20731,16 +20732,16 @@ INSERT INTO `droplist` VALUES
 (21679,956,1,1,-1,77629), -- Scroll: Enchant Armor (Grade D)
 (21679,6387,1,1,-1,93155), -- Blessed Scroll of Resurrection for Pets
 (21679,57,982,1965,0,700000), -- Adena
-(21679,12016,1,1,1,58824), -- Common Item - Leather Gauntlets (needs drop check)
-(21679,12029,1,1,1,71429), -- Common Item - Blue Buckskin Boots
+(21679,605,1,1,1,3822), -- Leather Gauntlets
+(21679,1123,1,1,1,3822), -- Blue Buckskin Boots
 (21679,955,1,1,2,2546), -- Scroll: Enchant Weapon (Grade D)
 (21679,956,1,1,2,34483), -- Scroll: Enchant Armor (Grade D)
 (21680,1901,1,1,-1,427616), -- Tiger\'s Eye Earring Stone
 (21680,1938,1,1,-1,208130), -- Mithril Banded Mail Material
 (21680,2154,1,1,-1,331471), -- Recipe: Elven Earring
 (21680,57,1308,2609,0,700000), -- Adena
-(21680,11678,1,1,1,3571), -- Common Item - Blood of Saints (need drop check)
-(21680,11676,1,1,1,3571), -- Common Item - Tome of Blood
+(21680,316,1,1,1,114), -- Blood of Saints
+(21680,317,1,1,1,114), -- Tome of Blood
 (21680,2030,1,1,1,6418), -- Tome of Blood Page
 (21680,955,1,1,2,3293), -- Scroll: Enchant Weapon (Grade D)
 (21680,956,1,1,2,50000), -- Scroll: Enchant Armor (Grade D)
@@ -20748,16 +20749,16 @@ INSERT INTO `droplist` VALUES
 (21681,2155,1,1,-1,431241), -- Recipe: Elven Ring
 (21681,2156,1,1,-1,214931), -- Recipe: Elven Necklace
 (21681,57,1135,2270,0,700000), -- Adena
-(21681,12050,1,1,1,18519), -- Common Item - Helmet (needs drop check)
-(21681,12051,1,1,1,50000), -- Common Item - Hoplon
+(21681,47,1,1,1,1875), -- Helmet
+(21681,628,1,1,1,2681), -- Hoplon
 (21681,955,1,1,2,2857), -- Scroll: Enchant Weapon (Grade D)
 (21681,956,1,1,2,9174), -- Scroll: Enchant Armor (Grade D)
 (21682,1944,1,1,-1,111449), -- Mithril Tunic Fabric
 (21682,2148,1,1,-1,156068), -- Recipe: Crafted Leather
 (21682,6036,1,1,-1,72832), -- Greater Magic Haste Potion
 (21682,57,916,1829,0,700000), -- Adena
-(21682,12057,1,1,1,9174), -- Common Item - Mithril Tunic (needs drop check, low material info)
-(21682,12058,1,1,1,9174), -- Common Item - Mithril Stockings
+(21682,437,1,1,1,253), -- Mithril Tunic
+(21682,470,1,1,1,404), -- Mithril Stockings
 (21682,1944,1,1,1,14402), -- Mithril Tunic Fabric
 (21682,1945,1,1,1,22426), -- Mithril Stocking Design
 (21682,1867,1,3,2,150594), -- Animal Skin
@@ -20769,7 +20770,7 @@ INSERT INTO `droplist` VALUES
 (21683,1954,1,1,-1,154134), -- Karmian Stocking Design
 (21683,2164,1,1,-1,223021), -- Recipe: Ring of Protection
 (21683,57,1170,2376,0,700000), -- Adena
-(21683,11763,1,1,1,60), -- Common Item - Chakram (no drop info, low material info)
+(21683,263,1,1,1,60), -- Chakram
 (21683,2073,1,1,1,5296), -- Chakram Edge
 (21683,1868,1,3,2,228373), -- Thread
 (21683,1873,1,1,2,91350), -- Silver Nugget
@@ -20783,8 +20784,8 @@ INSERT INTO `droplist` VALUES
 (21684,1907,1,1,-1,158364), -- Necklace of Darkness Gem
 (21684,2160,1,1,-1,146870), -- Recipe: Moonstone Earring
 (21684,57,919,1865,0,700000), -- Adena
-(21684,12081,1,1,1,4132), -- Common Item - Half Plate Armor (needs drop check, low material info)
-(21684,12080,1,1,1,4132), -- Common Item - Plate Gaiters
+(21684,353,1,1,1,147), -- Half Plate Armor
+(21684,380,1,1,1,235), -- Plate Gaiters
 (21684,1950,1,1,1,9276), -- Half Plate Temper
 (21684,1951,1,1,1,14427), -- Plate Gaiters Part
 (21684,1867,1,3,2,76923), -- Animal Skin
@@ -20796,8 +20797,8 @@ INSERT INTO `droplist` VALUES
 (21685,1958,1,1,-1,223881), -- Mithril Boots Design
 (21685,2165,1,1,-1,95428), -- Recipe: Necklace of Protection
 (21685,57,1005,2042,0,700000), -- Adena
-(21685,12099,1,1,1,6944), -- Common Item - Karmian Tunic (needs drop check, low material info)
-(21685,12100,1,1,1,6944), -- Common Item - Karmian Stockings
+(21685,439,1,1,1,156), -- Karmian Tunic
+(21685,471,1,1,1,249), -- Karmian Stockings
 (21685,1954,1,1,1,15646), -- Karmian Stocking Design
 (21685,1962,1,1,1,9418), -- Karmian Tunic Pattern
 (21685,1868,1,3,2,196190), -- Thread
@@ -20811,7 +20812,7 @@ INSERT INTO `droplist` VALUES
 (21686,1869,1,5,-1,829734), -- Iron Ore
 (21686,4470,1,1,-1,14224), -- Dye of Strength <Str+1 Dex-1>
 (21686,57,1004,2040,0,700000), -- Adena
-(21686,11728,1,1,1,70), -- Common Item - Light Crossbow (no drop info, low material info)
+(21686,280,1,1,1,70), -- Light Crossbow
 (21686,2054,1,1,1,5320), -- Light Crossbow Shaft
 (21686,1864,3,9,2,83331), -- Stem
 (21686,1869,2,6,2,62499), -- Iron Ore
@@ -20822,16 +20823,16 @@ INSERT INTO `droplist` VALUES
 (21687,1946,1,1,-1,191085), -- Rip Gauntlets Pattern
 (21687,2149,1,1,-1,101002), -- Recipe: Metallic Fiber
 (21687,57,593,1184,0,700000), -- Adena
-(21687,12068,1,1,1,3365), -- Common Item - Rip Gauntlets (needs drop check, low material info)
-(21687,12070,1,1,1,3365), -- Common Item - Boots of Power
+(21687,606,1,1,1,123), -- Rip Gauntlets
+(21687,1124,1,1,1,123), -- Boots of Power
 (21687,1946,1,1,1,6175), -- Rip Gauntlets Pattern
 (21687,1948,1,1,1,6175), -- Boots of Power Pattern
-(21687,12053,1,1,1,3365), -- Common Item - Manticore Skin Boots
-(21687,12062,1,1,1,3365), -- Common Item - Brigandine Boots
-(21687,12066,1,1,1,3365), -- Common Item - Elven Mithril Boots
-(21687,12055,1,1,1,3365), -- Common Item - Manticore Skin Gloves
-(21687,12061,1,1,1,3365), -- Common Item - Brigandine Gauntlets
-(21687,12065,1,1,1,3365), -- Common Item - Elven Mithril Gloves
+(21687,2424,1,1,1,123), -- Manticore Skin Boots
+(21687,2425,1,1,1,123), -- Brigandine Boots
+(21687,2426,1,1,1,123), -- Elven Mithril Boots
+(21687,2448,1,1,1,123), -- Manticore Skin Gloves
+(21687,2449,1,1,1,123), -- Brigandine Gauntlets
+(21687,2450,1,1,1,123), -- Elven Mithril Gloves
 (21687,2923,1,1,1,6175), -- Manticore Skin Boot Lining
 (21687,2924,1,1,1,6175), -- Brigandine Boots Design
 (21687,2925,1,1,1,6175), -- Elven Mithril Boots Design
@@ -20848,7 +20849,7 @@ INSERT INTO `droplist` VALUES
 (21688,1959,1,1,-1,59414), -- Chain Mail Shirt Material
 (21688,4042,1,1,-1,36763), -- Enria
 (21688,57,890,1808,0,700000), -- Adena
-(21688,11759,1,1,1,46), -- Common Item - Crystallized Ice Bow (no drop info, low material info)
+(21688,281,1,1,1,46), -- Crystallized Ice Bow
 (21688,2074,1,1,1,3692), -- Crystallized Ice Bow Shaft
 (21688,1868,1,3,2,173746), -- Thread
 (21688,1873,1,1,2,69499), -- Silver Nugget
@@ -20861,10 +20862,10 @@ INSERT INTO `droplist` VALUES
 (21689,1872,1,4,-1,788384), -- Animal Bone
 (21689,6036,1,1,-1,59129), -- Greater Magic Haste Potion
 (21689,57,744,1485,0,700000), -- Adena
-(21689,12059,1,1,1,8658), -- Common Item - Brigandine Tunic (needs drop check, low material info)
+(21689,352,1,1,1,103), -- Brigandine Tunic
 (21689,1941,1,1,1,6078), -- Brigandine Temper
-(21689,12056,1,1,1,8658), -- Common Item - Mithril Scale Gaiters
-(21689,12060,1,1,1,8658), -- Common Item - Brigandine Gaiters
+(21689,2377,1,1,1,164), -- Mithril Scale Gaiters
+(21689,2378,1,1,1,164), -- Brigandine Gaiters
 (21689,2918,1,1,1,9066), -- Mithril Scale Gaiters Material
 (21689,2919,1,1,1,9066), -- Brigandine Gaiters Material
 (21689,1867,1,3,2,122260), -- Animal Skin
@@ -20876,15 +20877,15 @@ INSERT INTO `droplist` VALUES
 (21690,1950,1,1,-1,65333), -- Half Plate Temper
 (21690,2161,1,1,-1,195428), -- Recipe: Aquastone Ring
 (21690,57,812,1649,0,700000), -- Adena
-(21690,12072,1,1,1,7752), -- Common Item - Mithril Gloves (needs drop check, low material info)
-(21690,12076,1,1,1,7752), -- Common Item - Ogre Power Gauntlets
-(21690,12071,1,1,1,7752), -- Common Item - Assault Boots
+(21690,61,1,1,1,173), -- Mithril Gloves
+(21690,607,1,1,1,173), -- Ogre Power Gauntlets
+(21690,1125,1,1,1,173), -- Assault Boots
 (21690,1949,1,1,1,9401), -- Mithril Gloves Design
 (21690,1957,1,1,1,9401), -- Assault Boots Part
 (21690,1963,1,1,1,9401), -- Ogre Power Gauntlets Part
-(21690,12075,1,1,1,7752), -- Common Item - Salamander Skin Boots
-(21690,12077,1,1,1,7752), -- Common Item - Plate Boots
-(21690,12082,1,1,1,7752), -- Common Item - Sage\'s Worn Gloves
+(21690,2427,1,1,1,173), -- Salamander Skin Boots
+(21690,2428,1,1,1,173), -- Plate Boots
+(21690,2451,1,1,1,173), -- Sage\'s Worn Gloves
 (21690,2931,1,1,1,9401), -- Salamander Skin Boot Lining
 (21690,2932,1,1,1,9401), -- Plate Boots Design
 (21690,2933,1,1,1,9401), -- Sage\'s Worn Gloves Lining
@@ -20897,7 +20898,7 @@ INSERT INTO `droplist` VALUES
 (21691,1948,1,1,-1,252365), -- Boots of Power Pattern
 (21691,2157,1,1,-1,154339), -- Recipe: Omen Beast\'s Eye Earring
 (21691,57,783,1563,0,700000), -- Adena
-(21691,11606,1,1,1,69), -- Common Item - Strengthened Long Bow (no drop info, low material info)
+(21691,279,1,1,1,69), -- Strengthened Long Bow
 (21691,2040,1,1,1,5585), -- Strengthened Long Bow Shaft
 (21691,1865,1,1,2,193071), -- Varnish
 (21691,1870,1,1,2,193071), -- Coal
@@ -20908,11 +20909,11 @@ INSERT INTO `droplist` VALUES
 (21692,1951,1,1,-1,106997), -- Plate Gaiters Part
 (21692,2162,1,1,-1,102397), -- Recipe: Aquastone Necklace
 (21692,57,855,1737,0,700000), -- Adena
-(21692,11727,1,1,1,12), -- Common Item - Bonebreaker (no drop info, low material info)
-(21692,11732,1,1,1,12), -- Common Item - Atuba Hammer
-(21692,11737,1,1,1,12), -- Common Item - Ghost Staff
-(21692,11729,1,1,1,12), -- Common Item - Staff of Life
-(21692,11731,1,1,1,12), -- Common Item - Atuba Mace
+(21692,159,1,1,1,12), -- Bonebreaker
+(21692,187,1,1,1,12), -- Atuba Hammer
+(21692,188,1,1,1,12), -- Ghost Staff
+(21692,189,1,1,1,12), -- Staff of Life
+(21692,190,1,1,1,12), -- Atuba Mace
 (21692,2048,1,1,1,881), -- Bonebreaker Head
 (21692,2049,1,1,1,881), -- Atuba Hammer Head
 (21692,2050,1,1,1,934), -- Ghost Staff Head
@@ -20927,10 +20928,10 @@ INSERT INTO `droplist` VALUES
 (21693,2213,1,1,-1,38183), -- Recipe: Dwarven Chain Mail Shirt
 (21693,2214,1,1,-1,61018), -- Recipe: Dwarven Chain Gaiters
 (21693,57,992,2016,0,700000), -- Adena
-(21693,12091,1,1,1,22727), -- Common Item - Eldarake (needs drop check, low material info)
+(21693,631,1,1,1,292), -- Eldarake
 (21693,1964,1,1,1,15652), -- Eldarake Temper
-(21693,12090,1,1,1,14925), -- Common Item - Chain Hood
-(21693,12096,1,1,1,22727), -- Common Item - Chain Shield
+(21693,2413,1,1,1,205), -- Chain Hood
+(21693,2495,1,1,1,292), -- Chain Shield
 (21693,2936,1,1,1,14216), -- Chain Hood Pattern
 (21693,2945,1,1,1,15652), -- Chain Shield Fragment
 (21693,1868,1,3,2,193696), -- Thread
@@ -20943,11 +20944,11 @@ INSERT INTO `droplist` VALUES
 (21694,2031,1,1,-1,7696), -- Morning Star Head
 (21694,2158,1,1,-1,94088), -- Recipe: Mithril Ring
 (21694,57,319,636,0,700000), -- Adena
-(21694,11686,1,1,1,6), -- Common Item - Morning Star (no drop info, low material info)
-(21694,11693,1,1,1,6), -- Common Item - Goat Head Staff
-(21694,11708,1,1,1,6), -- Common Item - Tarbar
-(21694,11697,1,1,1,6), -- Common Item - Skull Breaker
-(21694,11713,1,1,1,6), -- Common Item - Heavy Bone Club
+(21694,88,1,1,1,6), -- Morning Star
+(21694,90,1,1,1,6), -- Goat Head Staff
+(21694,158,1,1,1,6), -- Tarbar
+(21694,169,1,1,1,6), -- Skull Breaker
+(21694,172,1,1,1,6), -- Heavy Bone Club
 (21694,2031,1,1,1,398), -- Morning Star Head
 (21694,2032,1,1,1,364), -- Goat Head Staff Head
 (21694,2035,1,1,1,398), -- Tarbar Head
@@ -20961,9 +20962,9 @@ INSERT INTO `droplist` VALUES
 (21695,1961,1,1,-1,165638), -- Mithril Shirt Fabric
 (21695,4041,1,1,-1,45010), -- Mold Hardener
 (21695,57,2089,4243,0,700000), -- Adena
-(21695,11751,1,1,1,346), -- Common Item - Scythe
-(21695,11760,1,1,1,1040), -- Common Item - Orcish Glaive
-(21695,11749,1,1,1,346), -- Common Item - Body Slasher
+(21695,96,1,1,1,36), -- Scythe
+(21695,298,1,1,1,36), -- Orcish Glaive
+(21695,302,1,1,1,36), -- Body Slasher
 (21695,2062,1,1,1,3198), -- Scythe Edge
 (21695,2075,1,1,1,3198), -- Orcish Glaive Blade
 (21695,2076,1,1,1,3198), -- Body Slasher Blade
@@ -20979,7 +20980,7 @@ INSERT INTO `droplist` VALUES
 (21696,1962,1,1,-1,168775), -- Karmian Tunic Pattern
 (21696,2215,1,1,-1,67188), -- Recipe: Robe of Seal
 (21696,57,2128,4323,0,700000), -- Adena
-(21696,11759,1,1,1,2632), -- Common Item - Crystallized Ice Bow
+(21696,281,1,1,1,109), -- Crystallized Ice Bow
 (21696,2074,1,1,1,8828), -- Crystallized Ice Bow Shaft
 (21696,1894,1,1,2,10526), -- Crafted Leather
 (21696,2217,1,1,2,18519), -- Recipe: Knight\'s Shield
@@ -20993,7 +20994,7 @@ INSERT INTO `droplist` VALUES
 (21697,2059,1,1,-1,1528), -- Flamberge Blade
 (21697,2216,1,1,-1,8499), -- Recipe: Great Helmet
 (21697,57,83,169,0,700000), -- Adena
-(21697,11763,1,1,1,5), -- Common Item - Chakram (no drop info, low material info)
+(21697,263,1,1,1,5), -- Chakram
 (21697,2073,1,1,1,376), -- Chakram Edge
 (21697,1864,1,1,2,32403), -- Stem
 (21697,1869,1,1,2,16202), -- Iron Ore
@@ -21006,8 +21007,8 @@ INSERT INTO `droplist` VALUES
 (21698,2032,1,1,-1,4173), -- Goat Head Staff Head
 (21698,6036,1,1,-1,15052), -- Greater Magic Haste Potion
 (21698,57,189,378,0,700000), -- Adena
-(21698,12054,1,1,1,5000), -- Common Item - Manticore Skin Shirt (needs drop check, low material info)
-(21698,12052,1,1,1,1667), -- Common Item - Manticore Skin Gaiters
+(21698,395,1,1,1,53), -- Manticore Skin Shirt
+(21698,417,1,1,1,84), -- Manticore Skin Gaiters
 (21698,1942,1,1,1,2977), -- Manticore Skin Shirt Texture
 (21698,1943,1,1,1,4636), -- Manticore Skin Gaiters Pattern
 (21698,1341,10,30,2,155621), -- Bone Arrow
@@ -21019,9 +21020,9 @@ INSERT INTO `droplist` VALUES
 (21699,2199,1,1,-1,203650), -- Recipe: Karmian Stockings
 (21699,2203,1,3,-1,525763), -- Recipe: Mithril Boots
 (21699,57,1947,3955,0,700000), -- Adena
-(21699,11736,1,1,1,899), -- Common Item - Claymore
+(21699,70,1,1,1,68), -- Claymore
 (21699,2047,1,1,1,5327), -- Claymore Blade
-(21699,11733,1,1,1,899), -- Common Item - Elven Long Sword
+(21699,2499,1,1,1,68), -- Elven Long Sword
 (21699,2967,1,1,1,5255), -- Elven Long Sword Blade
 (21699,1864,4,12,2,121183), -- Stem
 (21699,1869,1,3,2,161577), -- Iron Ore
@@ -21042,8 +21043,8 @@ INSERT INTO `droplist` VALUES
 (21702,1903,1,1,-1,667427), -- Elven Ring Piece
 (21702,2157,1,1,-1,330680), -- Recipe: Omen Beast\'s Eye Earring
 (21702,57,1678,3349,0,700000), -- Adena
-(21702,12054,1,1,1,13514), -- Common Item - Manticore Skin Shirt
-(21702,12052,1,1,1,19608), -- Common Item - Manticore Skin Gaiters
+(21702,395,1,1,1,462), -- Manticore Skin Shirt
+(21702,417,1,1,1,739), -- Manticore Skin Gaiters
 (21702,1942,1,1,1,26373), -- Manticore Skin Shirt Texture
 (21702,1943,1,1,1,41068), -- Manticore Skin Gaiters Pattern
 (21702,951,1,1,2,1236), -- Scroll: Enchant Weapon (Grade C)
@@ -21052,10 +21053,10 @@ INSERT INTO `droplist` VALUES
 (21703,952,1,1,-1,67447), -- Scroll: Enchant Armor (Grade C)
 (21703,2163,1,1,-1,258089), -- Recipe: Earring of Protection
 (21703,57,2041,4146,0,700000), -- Adena
-(21703,12091,1,1,1,14085), -- Common Item - Eldarake
+(21703,631,1,1,1,600), -- Eldarake
 (21703,1964,1,1,1,32198), -- Eldarake Temper
-(21703,12090,1,1,1,8130), -- Common Item - Chain Hood
-(21703,12096,1,1,1,13158), -- Common Item - Chain Shield
+(21703,2413,1,1,1,422), -- Chain Hood
+(21703,2495,1,1,1,600), -- Chain Shield
 (21703,2936,1,1,1,29245), -- Chain Hood Pattern
 (21703,2945,1,1,1,32198), -- Chain Shield Fragment
 (21703,951,1,1,2,2024), -- Scroll: Enchant Weapon (Grade C)
@@ -21067,15 +21068,15 @@ INSERT INTO `droplist` VALUES
 (21704,952,1,1,-1,59525), -- Scroll: Enchant Armor (Grade C)
 (21704,1905,1,1,-1,434276), -- Omen Beast\'s Eye Earring Gemstone
 (21704,57,1801,3658,0,700000), -- Adena
-(21704,12072,1,1,1,9009), -- Common Item - Mithril Gloves
-(21704,12076,1,1,1,14085), -- Common Item - Ogre Power Gauntlets
-(21704,12071,1,1,1,7692), -- Common Item - Assault Boots
+(21704,61,1,1,1,383), -- Mithril Gloves
+(21704,607,1,1,1,383), -- Ogre Power Gauntlets
+(21704,1125,1,1,1,383), -- Assault Boots
 (21704,1949,1,1,1,20850), -- Mithril Gloves Design
 (21704,1957,1,1,1,20850), -- Assault Boots Part
 (21704,1963,1,1,1,20850), -- Ogre Power Gauntlets Part
-(21704,12075,1,1,1,10204), -- Common Item - Salamander Skin Boots
-(21704,12077,1,1,1,9009), -- Common Item - Plate Boots
-(21704,12082,1,1,1,6410), -- Common Item - Sage\'s Worn Gloves
+(21704,2427,1,1,1,383), -- Salamander Skin Boots
+(21704,2428,1,1,1,383), -- Plate Boots
+(21704,2451,1,1,1,383), -- Sage\'s Worn Gloves
 (21704,2931,1,1,1,20850), -- Salamander Skin Boot Lining
 (21704,2932,1,1,1,20850), -- Plate Boots Design
 (21704,2933,1,1,1,20850), -- Sage\'s Worn Gloves Lining
@@ -21085,12 +21086,12 @@ INSERT INTO `droplist` VALUES
 (21705,1915,1,1,-1,301229), -- Ring of Ages Gemstone
 (21705,2169,1,1,-1,60512), -- Recipe: Necklace of Binding
 (21705,57,1379,2804,0,700000), -- Adena
-(21705,11821,1,1,1,761), -- Common Item - Caliburs (needs drop check, low material info)
-(21705,11807,1,1,1,761), -- Common Item - Sword of Delusion
-(21705,11820,1,1,1,761), -- Common Item - Tsurugi
-(21705,11829,1,1,1,761), -- Common Item - Homunkulus\'s Sword
-(21705,11815,1,1,1,761), -- Common Item - Sword of Nightmare
-(21705,11805,1,1,1,761), -- Common Item - Sword of Whispering Death
+(21705,75,1,1,1,6), -- Caliburs
+(21705,76,1,1,1,6), -- Sword of Delusion
+(21705,77,1,1,1,6), -- Tsurugi
+(21705,84,1,1,1,6), -- Homunkulus\'s Sword
+(21705,134,1,1,1,6), -- Sword of Nightmare
+(21705,145,1,1,1,6), -- Sword of Whispering Death
 (21705,2089,1,1,1,643), -- Caliburs Edge
 (21705,2090,1,1,1,643), -- Delusional Blade
 (21705,2091,1,1,1,643), -- Tsurugi Blade
@@ -21108,9 +21109,9 @@ INSERT INTO `droplist` VALUES
 (21706,2117,1,1,-1,20573), -- Ghoul\'s Staff Head
 (21706,4039,1,1,-1,145756), -- Mold Glue
 (21706,57,1762,3590,0,700000), -- Adena
-(21706,11853,1,1,1,14), -- Common Item - Samurai Longsword (no drop info, low material info)
+(21706,135,1,1,1,14), -- Samurai Longsword
 (21706,2115,1,1,1,1850), -- Samurai Longsword Blade
-(21706,11843,1,1,1,14), -- Common Item - Berserker Blade
+(21706,5286,1,1,1,14), -- Berserker Blade
 (21706,5530,1,1,1,1852), -- Berserker Blade Edge
 (21706,1865,1,1,2,230647), -- Varnish
 (21706,1870,1,1,2,230647), -- Coal
@@ -21124,7 +21125,7 @@ INSERT INTO `droplist` VALUES
 (21707,1920,1,1,-1,119175), -- Necklace of Binding Chain
 (21707,3034,1,1,-1,6966), -- Recipe: Spiritshot B
 (21707,57,1406,2856,0,700000), -- Adena
-(21707,11857,1,1,1,21), -- Common Item - Eminence Bow (no drop info, low material info)
+(21707,286,1,1,1,21), -- Eminence Bow
 (21707,2121,1,1,1,2958), -- Eminence Bow Shaft
 (21707,1875,1,1,2,14289), -- Stone of Purity
 (21707,1879,1,1,2,35722), -- Cokes
@@ -21138,7 +21139,7 @@ INSERT INTO `droplist` VALUES
 (21708,4142,1,1,-1,28896), -- Recipe: Avadon Gaiters
 (21708,4143,1,1,-1,24080), -- Recipe: Zubei\'s Leather Shirt
 (21708,57,1514,3084,0,700000), -- Adena
-(21708,11857,1,1,1,2778), -- Common Item - Eminence Bow (need drop check, low material info)
+(21708,286,1,1,1,23), -- Eminence Bow
 (21708,2121,1,1,1,3190), -- Eminence Bow Shaft
 (21708,1864,3,9,2,66048), -- Stem
 (21708,1869,1,1,2,198143), -- Iron Ore
@@ -21152,15 +21153,15 @@ INSERT INTO `droplist` VALUES
 (21709,1985,1,1,-1,131322), -- Theca Leather Gaiters Pattern
 (21709,3955,1,1,-1,7617), -- Recipe: Blessed Spiritshot B
 (21709,57,1538,3123,0,700000), -- Adena
-(21709,11833,1,1,1,858), -- Common Item - Pa\'agrian Axe (need drop check, low material info)
-(21709,11842,1,1,1,858), -- Common Item - Deadman\'s Staff
-(21709,11838,1,1,1,858), -- Common Item - Ghoul\'s Staff
-(21709,11855,1,1,1,858), -- Common Item - Demon\'s Staff
+(21709,203,1,1,1,6), -- Pa\'agrian Axe
+(21709,204,1,1,1,5), -- Deadman\'s Staff
+(21709,205,1,1,1,5), -- Ghoul\'s Staff
+(21709,206,1,1,1,5), -- Demon\'s Staff
 (21709,2112,1,1,1,682), -- Pa\'agrian Axe Blade
 (21709,2116,1,1,1,662), -- Deadman\'s Staff Head
 (21709,2117,1,1,1,662), -- Ghoul\'s Staff Head
 (21709,2118,1,1,1,662), -- Demon\'s Staff Head
-(21709,11856,1,1,1,858), -- Common Item - Yaksa Mace
+(21709,2503,1,1,1,5), -- Yaksa Mace
 (21709,2969,1,1,1,676), -- Yaksa Mace Head
 (21709,1895,1,1,2,80352), -- Metallic Fiber
 (21709,3955,1,1,2,563), -- Recipe: Blessed Spiritshot B
@@ -21173,8 +21174,8 @@ INSERT INTO `droplist` VALUES
 (21710,1916,1,1,-1,94154), -- Necklace of Mermaid Teardrop
 (21710,2170,1,1,-1,52185), -- Recipe: Nassen\'s Earring
 (21710,57,893,1815,0,700000), -- Adena
-(21710,12125,1,1,1,2591), -- Common Item - Composite Boots (need drop check, low material info)
-(21710,12119,1,1,1,2591), -- Common Item - Mithril Gauntlets
+(21710,64,1,1,1,187), -- Composite Boots
+(21710,608,1,1,1,187), -- Mithril Gauntlets
 (21710,1981,1,1,1,13456), -- Mithril Gauntlets Design
 (21710,2956,1,1,1,13456), -- Composite Boots Part
 (21710,1539,1,1,2,29049), -- Greater Healing Potion
@@ -21189,15 +21190,15 @@ INSERT INTO `droplist` VALUES
 (21711,4040,1,1,-1,66534), -- Mold Lubricant
 (21711,4041,1,1,-1,28928), -- Mold Hardener
 (21711,57,1341,2731,0,700000), -- Adena
-(21711,11833,1,1,1,6), -- Common Item - Pa\'agrian Axe (no drop info, low material info)
-(21711,11842,1,1,1,5), -- Common Item - Deadman\'s Staff
-(21711,11838,1,1,1,5), -- Common Item - Ghoul\'s Staff
-(21711,11855,1,1,1,5), -- Common Item - Demon\'s Staff
+(21711,203,1,1,1,6), -- Pa\'agrian Axe
+(21711,204,1,1,1,5), -- Deadman\'s Staff
+(21711,205,1,1,1,5), -- Ghoul\'s Staff
+(21711,206,1,1,1,5), -- Demon\'s Staff
 (21711,2112,1,1,1,595), -- Pa\'agrian Axe Blade
 (21711,2116,1,1,1,578), -- Deadman\'s Staff Head
 (21711,2117,1,1,1,578), -- Ghoul\'s Staff Head
 (21711,2118,1,1,1,578), -- Demon\'s Staff Head
-(21711,11856,1,1,1,5), -- Common Item -Yaksa Mace
+(21711,2503,1,1,1,5), -- Yaksa Mace
 (21711,2969,1,1,1,591), -- Yaksa Mace Head
 (21711,1866,1,1,2,116984), -- Suede
 (21711,1871,1,1,2,175476), -- Charcoal
@@ -21211,9 +21212,9 @@ INSERT INTO `droplist` VALUES
 (21712,4602,1,1,-1,6168), -- Greater Dye of Strength <Str+3 Dex-3>
 (21712,5549,1,1,-1,277568), -- Metallic Thread
 (21712,57,1120,2277,0,700000), -- Adena
-(21712,12332,1,1,1,3690), -- Common Item - Earring of Binding (need drop check, low material info)
-(21712,12333,1,1,1,7353), -- Common Item - Ring of Ages
-(21712,12334,1,1,1,1845), -- Common Item - Necklace of Mermaid
+(21712,854,1,1,1,130), -- Earring of Binding
+(21712,885,1,1,1,196), -- Ring of Ages
+(21712,917,1,1,1,98), -- Necklace of Mermaid
 (21712,1914,1,1,1,10749), -- Earring of Binding Gemstone
 (21712,1915,1,1,1,16857), -- Ring of Ages Gemstone
 (21712,1916,1,1,1,8142), -- Necklace of Mermaid Teardrop
@@ -21228,9 +21229,9 @@ INSERT INTO `droplist` VALUES
 (21713,1986,1,1,-1,32542), -- Full Plate Armor Temper
 (21713,4043,1,1,-1,102654), -- Asofe
 (21713,57,1243,2526,0,700000), -- Adena
-(21713,11853,1,1,1,10), -- Common Item - Samurai Longsword (no drop info, low material info)
+(21713,135,1,1,1,10), -- Samurai Longsword
 (21713,2115,1,1,1,1303), -- Samurai Longsword Blade
-(21713,11843,1,1,1,10), -- Common Item - Berserker Blade
+(21713,5286,1,1,1,10), -- Berserker Blade
 (21713,5530,1,1,1,1305), -- Berserker Blade Edge
 (21713,1865,1,1,2,189516), -- Varnish
 (21713,1870,1,1,2,189516), -- Coal
@@ -21242,8 +21243,8 @@ INSERT INTO `droplist` VALUES
 (21714,1978,1,1,-1,187320), -- Tower Shield Fragment
 (21714,2231,1,1,-1,12596), -- Recipe: Full Plate Armor
 (21714,57,1179,2397,0,700000), -- Adena
-(21714,12125,1,1,1,6211), -- Common Item - Composite Boots (need drop check, low material info)
-(21714,12119,1,1,1,3096), -- Common Item - Mithril Gauntlets
+(21714,64,1,1,1,247), -- Composite Boots
+(21714,608,1,1,1,247), -- Mithril Gauntlets
 (21714,1981,1,1,1,17771), -- Mithril Gauntlets Design
 (21714,2956,1,1,1,17771), -- Composite Boots Part
 (21714,1895,1,1,2,57546), -- Metallic Fiber
@@ -21257,8 +21258,8 @@ INSERT INTO `droplist` VALUES
 (21715,4126,1,1,-1,53513), -- Recipe: Adamantite Earrings
 (21715,4127,1,1,-1,80270), -- Recipe: Adamantite Ring
 (21715,57,1309,2660,0,700000), -- Adena
-(21715,12138,1,1,1,2591), -- Common Item - Divine Tunic (need drop check, low material info)
-(21715,12139,1,1,1,2591), -- Common Item - Divine Stockings
+(21715,442,1,1,1,56), -- Divine Tunic
+(21715,473,1,1,1,90), -- Divine Stockings
 (21715,1988,1,1,1,5753), -- Divine Tunic Fabric
 (21715,1989,1,1,1,9024), -- Divine Stocking Pattern
 (21715,1867,1,3,2,133042), -- Animal Skin
@@ -21272,9 +21273,9 @@ INSERT INTO `droplist` VALUES
 (21716,2121,1,1,-1,17055), -- Eminence Bow Shaft
 (21716,4144,1,1,-1,38116), -- Recipe: Zubei\'s Leather Gaiters
 (21716,57,1495,3045,0,700000), -- Adena
-(21716,11853,1,1,1,12), -- Common Item - Samurai Longsword (no drop info, low material info)
+(21716,135,1,1,1,12), -- Samurai Longsword
 (21716,2115,1,1,1,1569), -- Samurai Longsword Blade
-(21716,11843,1,1,1,12), -- Common Item - Berserker Blade
+(21716,5286,1,1,1,12), -- Berserker Blade
 (21716,5530,1,1,1,1571), -- Berserker Blade Edge
 (21716,1874,1,1,2,15216), -- Oriharukon Ore
 (21716,1878,1,1,2,91291), -- Braided Hemp
@@ -21287,10 +21288,10 @@ INSERT INTO `droplist` VALUES
 (21717,1981,1,1,-1,69975), -- Mithril Gauntlets Design
 (21717,2232,1,1,-1,6837), -- Recipe: Drake Leather Armor
 (21717,57,480,976,0,700000), -- Adena
-(21717,12129,1,1,1,315), -- Common Item - Tower Shield
-(21717,12126,1,1,1,315), -- Common Item - Composite Shield
-(21717,12127,1,1,1,315), -- Common Item - Composite Helmet
-(21717,12120,1,1,1,315), -- Common Item - Shining Circlet
+(21717,103,1,1,1,48), -- Tower Shield
+(21717,107,1,1,1,48), -- Composite Shield
+(21717,517,1,1,1,34), -- Composite Helmet
+(21717,1149,1,1,1,34), -- Shining Circlet
 (21717,1978,1,1,1,3942), -- Tower Shield Fragment
 (21717,1983,1,1,1,2697), -- Shining Circlet Pattern
 (21717,2957,1,1,1,2697), -- Composite Helmet Design
@@ -21310,8 +21311,8 @@ INSERT INTO `droplist` VALUES
 (21718,4044,1,1,-1,260224), -- Thons
 (21718,4145,1,1,-1,34240), -- Recipe: Avadon Leather Armor
 (21718,57,3146,6410,0,700000), -- Adena
-(21718,12138,1,1,1,3676), -- Common Item - Divine Tunic
-(21718,12139,1,1,1,3861), -- Common Item - Divine Stockings
+(21718,442,1,1,1,135), -- Divine Tunic
+(21718,473,1,1,1,215), -- Divine Stockings
 (21718,1988,1,1,1,13848), -- Divine Tunic Fabric
 (21718,1989,1,1,1,21722), -- Divine Stocking Pattern
 (21718,1868,1,3,2,250000), -- Thread
@@ -21328,13 +21329,13 @@ INSERT INTO `droplist` VALUES
 (21719,2917,1,2,-1,456896), -- Ring of Binding Gemstone
 (21719,4146,1,1,-1,50991), -- Recipe: Tunic of Zubei
 (21719,57,3206,6531,0,700000), -- Adena
-(21719,12132,1,1,1,4831), -- Common Item - Theca Leather Boots
-(21719,12136,1,1,1,2232), -- Common Item - Drake Leather Boots
-(21719,12142,1,1,1,1859), -- Common Item - Full Plate Boots
-(21719,12131,1,1,1,4464), -- Common Item - Theca Leather Gloves
-(21719,12134,1,1,1,1115), -- Common Item - Drake Leather Gloves
-(21719,12141,1,1,1,1115), -- Common Item - Full Plate Gauntlets
-(21719,12137,1,1,1,3344), -- Common Item - Divine Gloves
+(21719,2436,1,1,1,153), -- Theca Leather Boots
+(21719,2437,1,1,1,118), -- Drake Leather Boots
+(21719,2438,1,1,1,118), -- Full Plate Boots
+(21719,2460,1,1,1,153), -- Theca Leather Gloves
+(21719,2461,1,1,1,118), -- Drake Leather Gloves
+(21719,2462,1,1,1,118), -- Full Plate Gauntlets
+(21719,2463,1,1,1,118), -- Divine Gloves
 (21719,2954,1,1,1,13280), -- Theca Leather Boots Texture
 (21719,2955,1,1,1,13280), -- Theca Leather Gloves Texture
 (21719,2960,1,1,1,11426), -- Drake Leather Boots Design
@@ -21354,9 +21355,9 @@ INSERT INTO `droplist` VALUES
 (21720,2955,1,1,-1,19633), -- Theca Leather Gloves Texture
 (21720,4147,1,1,-1,3188), -- Recipe: Stockings of Zubei
 (21720,57,125,255,0,700000), -- Adena
-(21720,11858,1,1,1,1), -- Common Item - Orcish Poleaxe (no drop info, low material info)
-(21720,11830,1,1,1,1), -- Common Item - Scorpion
-(21720,11832,1,1,1,1), -- Common Item - Widow Maker
+(21720,299,1,1,1,1), -- Orcish Poleaxe
+(21720,301,1,1,1,1), -- Scorpion
+(21720,303,1,1,1,1), -- Widow Maker
 (21720,2113,1,1,1,93), -- Scorpion Blade
 (21720,2114,1,1,1,93), -- Widowmaker Head
 (21720,2122,1,1,1,88), -- Orcish Poleaxe Blade
@@ -21370,8 +21371,8 @@ INSERT INTO `droplist` VALUES
 (21721,1865,1,1,-1,706609), -- Varnish
 (21721,4603,1,1,-1,1570), -- Greater Dye of Constitution <Con+3 Str-3>
 (21721,57,285,580,0,700000), -- Adena
-(21721,11800,1,1,1,220), -- Common Item - Grace Dagger
-(21721,11803,1,1,1,220), -- Common Item - Dark Screamer
+(21721,231,1,1,1,4), -- Grace Dagger
+(21721,233,1,1,1,4), -- Dark Screamer
 (21721,2106,1,1,1,399), -- Grace Dagger Edge
 (21721,2107,1,1,1,399), -- Dark Screamer Edge
 (21721,1865,1,1,2,30303), -- Varnish
@@ -21384,9 +21385,9 @@ INSERT INTO `droplist` VALUES
 (21722,2112,1,1,-1,35759), -- Pa\'agrian Axe Blade
 (21722,4128,1,1,-1,91389), -- Recipe: Adamantite Necklace
 (21722,57,2981,6056,0,700000), -- Adena
-(21722,11858,1,1,1,165), -- Common Item - Orcish Poleaxe
-(21722,11830,1,1,1,165), -- Common Item - Scorpion
-(21722,11832,1,1,1,165), -- Common Item - Widow Maker
+(21722,299,1,1,1,15), -- Orcish Poleaxe
+(21722,301,1,1,1,20), -- Scorpion
+(21722,303,1,1,1,20), -- Widow Maker
 (21722,2113,1,1,1,2201), -- Scorpion Blade
 (21722,2114,1,1,1,2201), -- Widowmaker Head
 (21722,2122,1,1,1,2074), -- Orcish Poleaxe Blade
@@ -21418,14 +21419,14 @@ INSERT INTO `droplist` VALUES
 (21725,952,1,1,-1,83480), -- Scroll: Enchant Armor (Grade C)
 (21725,1914,1,1,-1,351741), -- Earring of Binding Gemstone
 (21725,57,2526,5135,0,700000), -- Adena
-(21725,11816,1,1,1,57), -- Common Item - War Axe
-(21725,11802,1,1,1,57), -- Common Item - Nirvana Axe
-(21725,11799,1,1,1,57), -- Common Item - Stick of Eternity
-(21725,11825,1,1,1,57), -- Common Item - Paradia Staff
-(21725,11824,1,1,1,57), -- Common Item - Pa\'agrian Hammer
-(21725,11828,1,1,1,57), -- Common Item - Sage\'s Staff
-(21725,11804,1,1,1,57), -- Common Item - Club of Nature
-(21725,11806,1,1,1,57), -- Common Item - Mace of The Underworld
+(21725,162,1,1,1,8), -- War Axe
+(21725,174,1,1,1,8), -- Nirvana Axe
+(21725,196,1,1,1,8), -- Stick of Eternity
+(21725,197,1,1,1,8), -- Paradia Staff
+(21725,199,1,1,1,8), -- Pa\'agrian Hammer
+(21725,200,1,1,1,8), -- Sage\'s Staff
+(21725,201,1,1,1,8), -- Club of Nature
+(21725,202,1,1,1,8), -- Mace of The Underworld
 (21725,2097,1,1,1,867), -- War Axe Blade
 (21725,2098,1,1,1,867), -- Nirvana Axe Blade
 (21725,2099,1,1,1,913), -- Stick of Eternity Shaft
@@ -21446,9 +21447,9 @@ INSERT INTO `droplist` VALUES
 (21726,952,1,1,-1,101724), -- Scroll: Enchant Armor (Grade C)
 (21726,4127,1,1,-1,188844), -- Recipe: Adamantite Ring
 (21726,57,3075,6264,0,700000), -- Adena
-(21726,12336,1,1,1,2841), -- Common Item - Necklace of Binding
-(21726,12335,1,1,1,6098), -- Common Item - Nassen\'s Earring
-(21726,12337,1,1,1,8547), -- Common Item - Ring of Binding
+(21726,119,1,1,1,167), -- Necklace of Binding
+(21726,855,1,1,1,222), -- Nassen\'s Earring
+(21726,886,1,1,1,333), -- Ring of Binding
 (21726,1918,1,1,1,20332), -- Nassen\'s Earring Gemstone
 (21726,1920,1,1,1,16064), -- Necklace of Binding Chain
 (21726,2917,1,1,1,26965), -- Ring of Binding Gemstone
@@ -21461,9 +21462,9 @@ INSERT INTO `droplist` VALUES
 (21727,952,1,1,-1,91069), -- Scroll: Enchant Armor (Grade C)
 (21727,1984,1,1,-1,146414), -- Theca Leather Armor Pattern
 (21727,57,2758,5602,0,700000), -- Adena
-(21727,12336,1,1,1,5650), -- Common Item - Necklace of Binding
-(21727,12335,1,1,1,4348), -- Common Item - Nassen\'s Earring
-(21727,12337,1,1,1,5650), -- Common Item - Ring of Binding
+(21727,119,1,1,1,149), -- Necklace of Binding
+(21727,855,1,1,1,199), -- Nassen\'s Earring
+(21727,886,1,1,1,299), -- Ring of Binding
 (21727,1918,1,1,1,18202), -- Nassen\'s Earring Gemstone
 (21727,1920,1,1,1,14381), -- Necklace of Binding Chain
 (21727,2917,1,1,1,24141), -- Ring of Binding Gemstone
@@ -21476,10 +21477,10 @@ INSERT INTO `droplist` VALUES
 (21728,1881,1,1,-1,667688), -- Coarse Bone Powder
 (21728,4614,1,1,-1,6907), -- Greater Dye of Strength <Str+4 Dex-4>
 (21728,57,2020,4107,0,700000), -- Adena
-(21728,12161,1,1,1,18), -- Common Item - Zubei\'s Breastplate (no drop info, low material info)
-(21728,12152,1,1,1,29), -- Common Item - Zubei\'s Gaiters
-(21728,12173,1,1,1,18), -- Common Item - Avadon Breastplate
-(21728,12172,1,1,1,29), -- Common Item - Avadon Gaiters
+(21728,357,1,1,1,18), -- Zubei\'s Breastplate
+(21728,383,1,1,1,29), -- Zubei\'s Gaiters
+(21728,2376,1,1,1,18), -- Avadon Breastplate
+(21728,2379,1,1,1,29), -- Avadon Gaiters
 (21728,4056,1,1,1,3347), -- Zubei\'s Breastplate Part
 (21728,4057,1,1,1,5172), -- Zubei\'s Gaiter Material
 (21728,4064,1,1,1,3347), -- Avadon Breastplate Part
@@ -21496,7 +21497,7 @@ INSERT INTO `droplist` VALUES
 (21729,3035,1,1,-1,8333), -- Recipe: Spiritshot A
 (21729,4085,1,1,-1,108621), -- Tunic of Doom Pattern
 (21729,57,2526,5122,0,700000), -- Adena
-(21729,11932,1,1,1,15), -- Common Item - Lance (no drop info, low material info)
+(21729,97,1,1,1,15), -- Lance
 (21729,4115,1,1,1,4028), -- Lance Blade
 (21729,1874,1,1,2,20514), -- Oriharukon Ore
 (21729,1878,1,1,2,123079), -- Braided Hemp
@@ -21509,7 +21510,7 @@ INSERT INTO `droplist` VALUES
 (21730,4088,1,1,-1,189843), -- Blue Wolf Helmet Design
 (21730,5276,1,1,-1,6698), -- Recipe: Greater Spiritshot (A) Compressed Package(100%)
 (21730,57,2032,4115,0,700000), -- Adena
-(21730,11944,1,1,1,12), -- Common Item - Bow of Peril (no drop info)
+(21730,287,1,1,1,12), -- Bow of Peril
 (21730,4121,1,1,1,3232), -- Bow of Peril Shaft
 (21730,1865,1,1,2,142857), -- Varnish
 (21730,1870,1,1,2,166667), -- Coal
@@ -21523,9 +21524,9 @@ INSERT INTO `droplist` VALUES
 (21731,4042,1,1,-1,89488), -- Enria
 (21731,4086,1,1,-1,125994), -- Blue Wolf Stockings Pattern
 (21731,57,2170,4400,0,700000), -- Adena
-(21731,12183,1,1,1,63), -- Common Item - Doom Shield
-(21731,12202,1,1,1,44), -- Common Item - Blue Wolf Helmet
-(21731,12185,1,1,1,44), -- Common Item - Doom Helmet
+(21731,110,1,1,1,63), -- Doom Shield
+(21731,2416,1,1,1,44), -- Blue Wolf Helmet
+(21731,2417,1,1,1,44), -- Doom Helmet
 (21731,4077,1,1,1,11890), -- Doom Shield Fragment
 (21731,4088,1,1,1,9990), -- Blue Wolf Helmet Design
 (21731,4089,1,1,1,9990), -- Doom Helmet Pattern
@@ -21541,7 +21542,7 @@ INSERT INTO `droplist` VALUES
 (21732,4089,1,1,-1,207583), -- Doom Helmet Pattern
 (21732,5281,1,1,-1,7324), -- Recipe: Greater Blessed Spiritshot (A) Compressed Package(100%)
 (21732,57,2222,4499,0,700000), -- Adena
-(21732,11939,1,1,1,13), -- Common Item - Demon\'s Sword (no drop info, low material info)
+(21732,234,1,1,1,13), -- Demon\'s Sword
 (21732,4119,1,1,1,3551), -- Demon\'s Sword Edge
 (21732,1343,30,90,2,110370), -- Silver Arrow
 (21732,1864,4,12,2,57945), -- Stem
@@ -21556,8 +21557,8 @@ INSERT INTO `droplist` VALUES
 (21733,4057,1,1,-1,90651), -- Zubei\'s Gaiter Material
 (21733,4131,1,1,-1,26348), -- Recipe: Necklace of Black Ore
 (21733,57,1308,2658,0,700000), -- Adena
-(21733,11918,1,1,1,6), -- Common Item - Heavy War Axe (no drop info, low material info)
-(21733,11908,1,1,1,6), -- Common Item - Sprite\'s Staff
+(21733,91,1,1,1,6), -- Heavy War Axe
+(21733,92,1,1,1,6), -- Sprite\'s Staff
 (21733,4105,1,1,1,1370), -- Heavy War Axe Head
 (21733,4106,1,1,1,1347), -- Sprite\'s Staff Head
 (21733,1343,20,60,2,97682), -- Silver Arrow
@@ -21572,8 +21573,8 @@ INSERT INTO `droplist` VALUES
 (21734,4087,1,1,-1,111581), -- Stockings of Doom Pattern
 (21734,4088,1,1,-1,179707), -- Blue Wolf Helmet Design
 (21734,57,1922,3897,0,700000), -- Adena
-(21734,12194,1,1,1,20), -- Common Item - Blue Wolf Leather Armor (no drop info, low material info)
-(21734,12186,1,1,1,20), -- Common Item - Leather Armor of Doom
+(21734,2391,1,1,1,20), -- Blue Wolf Leather Armor
+(21734,2392,1,1,1,20), -- Leather Armor of Doom
 (21734,4082,1,1,1,3968), -- Blue Wolf Leather Armor Texture
 (21734,4083,1,1,1,3968), -- Leather Armor of Doom Design
 (21734,729,1,1,2,26), -- Scroll: Enchant Weapon (Grade A)
@@ -21587,7 +21588,7 @@ INSERT INTO `droplist` VALUES
 (21735,4064,1,1,-1,73583), -- Avadon Breastplate Part
 (21735,4154,1,1,-1,48112), -- Recipe: Doom Shield
 (21735,57,1640,3334,0,700000), -- Adena
-(21735,11890,1,1,1,14), -- Common Item - Great Axe (no drop info, low material info)
+(21735,300,1,1,1,14), -- Great Axe
 (21735,4113,1,1,1,3090), -- Great Axe Head
 (21735,1894,1,1,2,8428), -- Crafted Leather
 (21735,4039,1,1,2,8006), -- Mold Glue
@@ -21599,7 +21600,7 @@ INSERT INTO `droplist` VALUES
 (21736,5220,1,1,-1,177666), -- Metal Hardener
 (21736,5438,1,1,-1,2427), -- Recipe: Meteor Shower(60%)
 (21736,57,1797,3638,0,700000), -- Adena
-(21736,11932,1,1,1,11), -- Common Item - Lance (no drop info, low material info)
+(21736,97,1,1,1,11), -- Lance
 (21736,4115,1,1,1,2862), -- Lance Blade
 (21736,1866,1,1,2,145778), -- Suede
 (21736,1871,1,1,2,218667), -- Charcoal
@@ -21612,8 +21613,8 @@ INSERT INTO `droplist` VALUES
 (21737,4615,1,1,-1,5904), -- Greater Dye of Constitution <Con+4 Str-4>
 (21737,5550,1,1,-1,57068), -- Durable Metal Plate
 (21737,57,1727,3510,0,700000), -- Adena
-(21737,11915,1,1,1,8), -- Common Item - Kris (no drop info, low material info)
-(21737,11919,1,1,1,8), -- Common Item - Hell Knife
+(21737,229,1,1,1,8), -- Kris
+(21737,243,1,1,1,8), -- Hell Knife
 (21737,4109,1,1,1,1781), -- Kris Edge
 (21737,4110,1,1,1,1781), -- Hell Knife Edge
 (21737,1343,30,90,2,86005), -- Silver Arrow
@@ -21629,9 +21630,9 @@ INSERT INTO `droplist` VALUES
 (21738,4096,1,1,-1,209972), -- Blue Wolf Gloves Fabric
 (21738,5444,1,1,-1,2556), -- Recipe: Carnage Bow(60%)
 (21738,57,1892,3831,0,700000), -- Adena
-(21738,11930,1,1,1,11), -- Common Item - Sword of Damascus (no drop info)
-(21738,11943,1,1,1,11), -- Common Item - Wizard\'s Tear
-(21738,11929,1,1,1,11), -- Common Item - Guardian Sword
+(21738,79,1,1,1,11), -- Sword of Damascus
+(21738,7889,1,1,1,11), -- Wizard\'s Tear
+(21738,7883,1,1,1,11), -- Guardian Sword
 (21738,8336,1,1,1,1119), -- Blade of the Wizard\'s Tear
 (21738,8330,1,1,1,959), -- Guardian Sword Blade
 (21738,4114,1,1,1,3024), -- Sword of Damascus Blade
@@ -21647,9 +21648,9 @@ INSERT INTO `droplist` VALUES
 (21739,5156,1,1,-1,7068), -- Recipe: Soulshot (A) Compressed Package (100%)
 (21739,5220,1,1,-1,212040), -- Metal Hardener
 (21739,57,2143,4344,0,700000), -- Adena
-(21739,12341,1,1,1,1344), -- Common Item - Earring of Black Ore
-(21739,12343,1,1,1,5376), -- Common Item - Ring of Black Ore
-(21739,12342,1,1,1,2688), -- Common Item - Necklace of Black Ore
+(21739,864,1,1,1,57), -- Earring of Black Ore
+(21739,895,1,1,1,85), -- Ring of Black Ore
+(21739,926,1,1,1,43), -- Necklace of Black Ore
 (21739,4052,1,1,1,9239), -- Earring of Black Ore Piece
 (21739,4053,1,1,1,11185), -- Ring of Black Ore Gemstone
 (21739,4054,1,1,1,5140), -- Necklace of Black Ore Beads
@@ -21665,10 +21666,10 @@ INSERT INTO `droplist` VALUES
 (21740,4066,1,1,-1,41079), -- Zubei\'s Leather Shirt Fabric
 (21740,4155,1,1,-1,5411), -- Recipe: Blue Wolf Breastplate
 (21740,57,703,1429,0,700000), -- Adena
-(21740,12161,1,1,1,108), -- Common Item - Zubei\'s Breastplate
-(21740,12152,1,1,1,108), -- Common Item - Zubei\'s Gaiters
-(21740,12173,1,1,1,108), -- Common Item - Avadon Breastplate
-(21740,12172,1,1,1,108), -- Common Item - Avadon Gaiters
+(21740,357,1,1,1,7), -- Zubei\'s Breastplate
+(21740,383,1,1,1,10), -- Zubei\'s Gaiters
+(21740,2376,1,1,1,7), -- Avadon Breastplate
+(21740,2379,1,1,1,10), -- Avadon Gaiters
 (21740,4056,1,1,1,1165), -- Zubei\'s Breastplate Part
 (21740,4057,1,1,1,1800), -- Zubei\'s Gaiter Material
 (21740,4064,1,1,1,1165), -- Avadon Breastplate Part
@@ -21684,9 +21685,9 @@ INSERT INTO `droplist` VALUES
 (21741,4090,1,1,-1,500943), -- Blue Wolf Boots Design
 (21741,5161,1,1,-1,14878), -- Recipe: Spiritshot (A) Compressed Package (100%)
 (21741,57,4510,9145,0,700000), -- Adena
-(21741,11930,1,1,1,64), -- Common Item - Sword of Damascus
-(21741,11943,1,1,1,64), -- Common Item - Wizard\'s Tear
-(21741,11929,1,1,1,128), -- Common Item - Guardian Sword
+(21741,79,1,1,1,26), -- Sword of Damascus
+(21741,7889,1,1,1,26), -- Wizard\'s Tear
+(21741,7883,1,1,1,26), -- Guardian Sword
 (21741,8336,1,1,1,2272), -- Blade of the Wizard\'s Tear
 (21741,8330,1,1,1,2057), -- Guardian Sword Blade
 (21741,4114,1,1,1,7213), -- Sword of Damascus Blade
@@ -21703,7 +21704,7 @@ INSERT INTO `droplist` VALUES
 (21742,4096,1,1,-1,510430), -- Blue Wolf Gloves Fabric
 (21742,5166,1,1,-1,15160), -- Recipe: Blessed Spiritshot (A) Compressed Package (100%)
 (21742,57,4596,9318,0,700000), -- Adena
-(21742,11939,1,1,1,450), -- Common Item - Demon\'s Sword
+(21742,234,1,1,1,26), -- Demon\'s Sword
 (21742,4119,1,1,1,7350), -- Demon\'s Sword Edge
 (21742,1343,100,300,2,43478), -- Silver Arrow
 (21742,1867,1,3,2,142857), -- Animal Skin
@@ -21719,9 +21720,9 @@ INSERT INTO `droplist` VALUES
 (21743,4041,1,1,-1,3856), -- Mold Hardener
 (21743,4099,1,1,-1,19905), -- Doom Boots Part
 (21743,57,179,363,0,700000), -- Adena
-(21743,12204,1,1,1,2), -- Common Item - Blue Wolf Breastplate (no drop info)
-(21743,12193,1,1,1,3), -- Common Item - Blue Wolf Gaiters
-(21743,12184,1,1,1,1), -- Common Item - Doom Plate Armor
+(21743,358,1,1,1,2), -- Blue Wolf Breastplate
+(21743,2380,1,1,1,3), -- Blue Wolf Gaiters
+(21743,2381,1,1,1,1), -- Doom Plate Armor
 (21743,4078,1,1,1,319), -- Blue Wolf Breastplate Part
 (21743,4080,1,1,1,449), -- Blue Wolf Gaiters Material
 (21743,4081,1,1,1,216), -- Doom Plate Armor Temper
@@ -21737,9 +21738,9 @@ INSERT INTO `droplist` VALUES
 (21744,4067,1,1,-1,37049), -- Zubei\'s Leather Gaiter Texture
 (21744,4157,1,1,-1,5149), -- Recipe: Blue Wolf Gaiters
 (21744,57,418,849,0,700000), -- Adena
-(21744,12175,1,1,1,114), -- Common Item - Tunic of Zubei
-(21744,12176,1,1,1,227), -- Common Item - Stockings of Zubei
-(21744,12166,1,1,1,227), -- Common Item - Avadon Robee
+(21744,2397,1,1,1,7), -- Tunic of Zubei
+(21744,2402,1,1,1,11), -- Stockings of Zubei
+(21744,2406,1,1,1,5), -- Avadon Robe
 (21744,4069,1,1,1,1202), -- Tunic of Zubei Fabric
 (21744,4070,1,1,1,1824), -- Stockings of Zubei Fabric
 (21744,4071,1,1,1,923), -- Avadon Robe Fabric
@@ -21754,7 +21755,7 @@ INSERT INTO `droplist` VALUES
 (21745,5446,1,1,-1,5820), -- Recipe: Bloody Orchid(60%)
 (21745,5452,1,1,-1,5820), -- Recipe: Blood Tornado(60%)
 (21745,57,4309,8724,0,700000), -- Adena
-(21745,11933,1,1,1,422), -- Common Item - Bellion Cestus
+(21745,268,1,1,1,25), -- Bellion Cestus
 (21745,4120,1,1,1,6873), -- Bellion Cestus Edge
 (21745,1343,80,240,2,50000), -- Silver Arrow
 (21745,1866,1,1,2,200000), -- Suede
@@ -21787,7 +21788,7 @@ INSERT INTO `droplist` VALUES
 (21748,948,1,1,-1,22926), -- Scroll: Enchant Armor (Grade B)
 (21748,4129,1,1,-1,99246), -- Recipe: Earrings of Black Ore
 (21748,57,3700,7521,0,700000), -- Adena
-(21748,11903,1,1,1,330), -- Common Item - Arthro Nail
+(21748,267,1,1,1,32), -- Arthro Nail
 (21748,4111,1,1,1,7751), -- Arthro Nail Blade
 (21748,947,1,1,2,110), -- Scroll: Enchant Weapon (Grade B)
 (21748,948,1,1,2,991), -- Scroll: Enchant Armor (Grade B)
@@ -21803,10 +21804,10 @@ INSERT INTO `droplist` VALUES
 (21749,948,1,1,-1,27262), -- Scroll: Enchant Armor (Grade B)
 (21749,4053,1,1,-1,467420), -- Ring of Black Ore Gemstone
 (21749,57,4408,8937,0,700000), -- Adena
-(21749,12188,1,1,1,1464), -- Common Item - Boots of Doom
-(21749,12189,1,1,1,2833), -- Common Item - Blue Wolf Boots
-(21749,12187,1,1,1,2732), -- Common Item - Doom Gloves
-(21749,12190,1,1,1,2732), -- Common Item - Blue Wolf Gloves
+(21749,601,1,1,1,101), -- Boots of Doom
+(21749,2439,1,1,1,101), -- Blue Wolf Boots
+(21749,2475,1,1,1,101), -- Doom Gloves
+(21749,2487,1,1,1,101), -- Blue Wolf Gloves
 (21749,4090,1,1,1,18072), -- Blue Wolf Boots Design
 (21749,4091,1,1,1,18072), -- Doom Gloves Part
 (21749,4096,1,1,1,18072), -- Blue Wolf Gloves Fabric
@@ -21820,9 +21821,9 @@ INSERT INTO `droplist` VALUES
 (21750,948,1,1,-1,24627), -- Scroll: Enchant Armor (Grade B)
 (21750,5230,1,1,-1,13135), -- Recipe: Mithril Arrow (100%)
 (21750,57,3985,8069,0,700000), -- Adena
-(21750,12183,1,1,1,3344), -- Common Item - Doom Shield
-(21750,12202,1,1,1,1502), -- Common Item - Blue Wolf Helmet
-(21750,12185,1,1,1,923), -- Common Item - Doom Helmet
+(21750,110,1,1,1,115), -- Doom Shield
+(21750,2416,1,1,1,81), -- Blue Wolf Helmet
+(21750,2417,1,1,1,81), -- Doom Helmet
 (21750,4077,1,1,1,21815), -- Doom Shield Fragment
 (21750,4088,1,1,1,18328), -- Blue Wolf Helmet Design
 (21750,4089,1,1,1,18328), -- Doom Helmet Pattern
@@ -21836,7 +21837,7 @@ INSERT INTO `droplist` VALUES
 (21751,1876,1,3,-1,700393), -- Mithril Ore
 (21751,1895,1,5,-1,667041), -- Metallic Fiber
 (21751,57,2825,5748,0,700000), -- Adena
-(21751,11950,1,1,1,12), -- Common Item - Blood Tornado (no drop info)
+(21751,269,1,1,1,12), -- Blood Tornado
 (21751,5539,1,1,1,3489), -- Blood Tornado Edge
 (21751,1343,30,90,2,111111), -- Silver Arrow
 (21751,1868,1,3,2,250000), -- Thread
@@ -21851,7 +21852,7 @@ INSERT INTO `droplist` VALUES
 (21752,5522,1,1,-1,29108), -- Sealed Armor of Nightmare Pattern
 (21752,5523,1,1,-1,29108), -- Sealed Majestic Plate Armor Pattern
 (21752,57,3440,7020,0,700000), -- Adena
-(21752,11950,1,1,1,12), -- Common Item - Blood Tornado (no drop info)
+(21752,269,1,1,1,14), -- Blood Tornado
 (21752,5539,1,1,1,4258), -- Blood Tornado Edge
 (21752,1344,40,120,2,76923), -- Mithril Arrow
 (21752,1867,1,3,2,90909), -- Animal Skin
@@ -21865,9 +21866,9 @@ INSERT INTO `droplist` VALUES
 (21753,5520,1,1,-1,44699), -- Sealed Dark Crystal Breastplate Pattern
 (21753,5521,1,1,-1,31541), -- Sealed Tallum Plate Armor Pattern
 (21753,57,2793,5688,0,700000), -- Adena
-(21753,12227,1,1,1,456), -- Common Item - Sealed Dark Crystal breastplate
-(21753,12220,1,1,1,456), -- Common Item - Sealed Dark Crystal Gaiters
-(21753,12233,1,1,1,456), -- Common Item - Sealed Tallum Plate Armor
+(21753,5287,1,1,1,15), -- Sealed Dark Crystal breastplate
+(21753,5288,1,1,1,24), -- Sealed Dark Crystal Gaiters
+(21753,5293,1,1,1,11), -- Sealed Tallum Plate Armor
 (21753,5520,1,1,1,2201), -- Sealed Dark Crystal Breastplate Pattern
 (21753,5521,1,1,1,1553), -- Sealed Tallum Plate Armor Pattern
 (21753,5524,1,1,1,3364), -- Sealed Dark Crystal Gaiters Pattern
@@ -21885,7 +21886,7 @@ INSERT INTO `droplist` VALUES
 (21754,5277,1,1,-1,3263), -- Recipe: Greater Spiritshot (S) Compressed Package(100%)
 (21754,5527,1,1,-1,87790), -- Sealed Helm of Nightmare Design
 (21754,57,2956,6030,0,700000), -- Adena
-(21754,11955,1,1,1,352), -- Common Item - Carnage Bow
+(21754,288,1,1,1,12), -- Carnage Bow
 (21754,5535,1,1,1,3701), -- Carnage Bow Stave
 (21754,1868,1,3,2,200000), -- Thread
 (21754,1873,1,1,2,90909), -- Silver Nugget
@@ -21899,9 +21900,9 @@ INSERT INTO `droplist` VALUES
 (21755,1874,1,1,-1,505293), -- Oriharukon Ore
 (21755,4043,1,1,-1,252647), -- Asofe
 (21755,57,3054,6219,0,700000), -- Adena
-(21755,12344,1,1,1,1033), -- Common Item - Sealed Phoenix Necklace
-(21755,12345,1,1,1,517), -- Common Item - Sealed Phoenix Earring
-(21755,12346,1,1,1,1550), -- Common Item - Sealed Phoenix Ring
+(21755,6323,1,1,1,43), -- Sealed Phoenix Necklace
+(21755,6324,1,1,1,57), -- Sealed Phoenix Earring
+(21755,6325,1,1,1,86), -- Sealed Phoenix Ring
 (21755,6341,1,1,1,10321), -- Sealed Phoenix Earring Gemstone
 (21755,6343,1,1,1,7979), -- Sealed Phoenix Necklace Beads
 (21755,6345,1,1,1,14275), -- Sealed Phoenix Ring Gemstone
@@ -21917,7 +21918,7 @@ INSERT INTO `droplist` VALUES
 (21756,5524,1,1,-1,44675), -- Sealed Dark Crystal Gaiters Pattern
 (21756,5525,1,1,-1,70068), -- Sealed Dark Crystal Helmet Design
 (21756,57,1828,3720,0,700000), -- Adena
-(21756,11955,1,1,1,8), -- Common Item - Carnage Bow (no drop info)
+(21756,288,1,1,1,8), -- Carnage Bow
 (21756,5535,1,1,1,2284), -- Carnage Bow Stave
 (21756,1868,1,1,2,250000), -- Thread
 (21756,1873,1,1,2,58824), -- Silver Nugget
@@ -21931,7 +21932,7 @@ INSERT INTO `droplist` VALUES
 (21757,5282,1,1,-1,2890), -- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%)
 (21757,5528,1,1,-1,77747), -- Sealed Majestic Circlet Design
 (21757,57,2617,5341,0,700000), -- Adena
-(21757,11951,1,1,1,11), -- Common Item - Bloody Orchid (no drop info, low material info)
+(21757,235,1,1,1,11), -- Bloody Orchid
 (21757,5536,1,1,1,3268), -- Bloody Orchid Head
 (21757,1344,20,60,2,171502), -- Mithril Arrow
 (21757,1866,1,1,2,182935), -- Suede
@@ -21944,7 +21945,7 @@ INSERT INTO `droplist` VALUES
 (21758,5526,1,1,-1,87899), -- Sealed Tallum Helm Design
 (21758,6335,1,1,-1,21870), -- Recipe: Sealed Majestic Necklace(70%)
 (21758,57,2294,4666,0,700000), -- Adena
-(21758,11951,1,1,1,10), -- Common Item - Bloody Orchid (no drop info, low material info)
+(21758,235,1,1,1,10), -- Bloody Orchid
 (21758,5536,1,1,1,2857), -- Bloody Orchid Head
 (21758,1343,20,60,2,171389), -- Silver Arrow
 (21758,1865,1,3,2,79982), -- Varnish
@@ -21958,8 +21959,8 @@ INSERT INTO `droplist` VALUES
 (21759,5524,1,1,-1,60409), -- Sealed Dark Crystal Gaiters Pattern
 (21759,5525,1,1,-1,94746), -- Sealed Dark Crystal Helmet Design
 (21759,57,2470,5029,0,700000), -- Adena
-(21759,11946,1,1,1,5), --  Common Item - Dasparion\'s Staff (no drop info)
-(21759,11949,1,1,1,5), --  Common Item - Meteor Shower
+(21759,212,1,1,1,5), -- Dasparion\'s Staff
+(21759,2504,1,1,1,5), -- Meteor Shower
 (21759,5532,1,1,1,1526), -- Meteor Shower Head
 (21759,5543,1,1,1,1541), -- Dasparion\'s Staff Edge
 (21759,1344,20,60,2,161648), -- Mithril Arrow
@@ -21974,10 +21975,10 @@ INSERT INTO `droplist` VALUES
 (21760,5220,1,1,-1,239453), -- Metal Hardener
 (21760,5532,1,1,-1,20187), -- Meteor Shower Head
 (21760,57,2415,4913,0,700000), -- Adena
-(21760,12221,1,1,1,668), -- Common Item - Sealed Dark Crystal Gloves
-(21760,12224,1,1,1,668), -- Common Item - Sealed Dark Crystal Boots
-(21760,12229,1,1,1,668), -- Common Item - Sealed Tallum Gloves
-(21760,12231,1,1,1,668), -- Common Item - Sealed Tallum Boots
+(21760,5290,1,1,1,39), -- Sealed Dark Crystal Gloves
+(21760,5291,1,1,1,39), -- Sealed Dark Crystal Boots
+(21760,5295,1,1,1,39), -- Sealed Tallum Gloves
+(21760,5296,1,1,1,39), -- Sealed Tallum Boots
 (21760,5496,1,1,1,5183), -- Sealed Dark Crystal Boots Lining
 (21760,5497,1,1,1,5183), -- Sealed Tallum Boots Lining
 (21760,5508,1,1,1,5183), -- Sealed Dark Crystal Gloves Design
@@ -21994,7 +21995,7 @@ INSERT INTO `droplist` VALUES
 (21761,5526,1,1,-1,99769), -- Sealed Tallum Helm Design
 (21761,6335,1,1,-1,24823), -- Recipe: Sealed Majestic Necklace(70%)
 (21761,57,2601,5296,0,700000), -- Adena
-(21761,11950,1,1,1,1209), -- Common Item - Blood Tornado
+(21761,269,1,1,1,11), -- Blood Tornado
 (21761,5539,1,1,1,3215), -- Blood Tornado Edge
 (21761,1867,1,1,2,250000), -- Animal Skin
 (21761,1872,1,3,2,125000), -- Animal Bone
@@ -22009,7 +22010,7 @@ INSERT INTO `droplist` VALUES
 (21762,5533,1,1,-1,19885), -- Elysian Head
 (21762,6901,1,1,-1,7249), -- Recipe: Shining Arrow (100%)
 (21762,57,2918,5954,0,700000), -- Adena
-(21762,11950,1,1,1,12), -- Common Item - Blood Tornado (no drop info)
+(21762,269,1,1,1,12), -- Blood Tornado
 (21762,5539,1,1,1,3612), -- Blood Tornado Edge
 (21762,1867,1,3,2,166667), -- Animal Skin
 (21762,1872,1,1,2,333333), -- Animal Bone
@@ -22022,12 +22023,12 @@ INSERT INTO `droplist` VALUES
 (21763,6337,1,1,-1,12497), -- Recipe: Sealed Majestic Earring(70%)
 (21763,6339,1,1,-1,18746), -- Recipe: Sealed Majestic Ring(70%)
 (21763,57,983,2000,0,700000), -- Adena
-(21763,11946,1,1,1,2), -- Common Item - Dasparion\'s Staff (no drop info)
-(21763,11949,1,1,1,2), -- Common Item - Meteor Shower
+(21763,212,1,1,1,2), -- Dasparion\'s Staff
+(21763,2504,1,1,1,2), -- Meteor Shower
 (21763,8346,1,1,1,316), -- Hammer Piece of Destroyer
-(21763,11958,1,1,1,2), -- Common Item - Destroyer Hammer
+(21763,7899,1,1,1,2), -- Destroyer Hammer
 (21763,8341,1,1,1,694), -- Spiritual Eye Piece
-(21763,11953,1,1,1,2), -- Common Item - Spiritual Eye
+(21763,7894,1,1,1,2), -- Spiritual Eye
 (21763,5532,1,1,1,607), -- Meteor Shower Head
 (21763,5543,1,1,1,613), -- Dasparion\'s Staff Edge
 (21763,1343,10,30,2,83333), -- Silver Arrow
@@ -22043,7 +22044,7 @@ INSERT INTO `droplist` VALUES
 (21764,4042,1,1,-1,254331), -- Enria
 (21764,5534,1,1,-1,41894), -- Soul Bow Stave
 (21764,57,6142,12533,0,700000), -- Adena
-(21764,11950,1,1,1,708), -- Common Item - Blood Tornado
+(21764,269,1,1,1,25), -- Blood Tornado
 (21764,5539,1,1,1,7602), -- Blood Tornado Edge
 (21764,1344,20,60,2,333333), -- Mithril Arrow
 (21764,1895,1,1,2,125000), -- Metallic Fiber
@@ -22058,7 +22059,7 @@ INSERT INTO `droplist` VALUES
 (21765,3036,1,1,-1,6911), -- Recipe: Spiritshot S
 (21765,5537,1,1,-1,42658), -- Soul Separator Head
 (21765,57,6259,12770,0,700000), -- Adena
-(21765,11955,1,1,1,415), -- Common Item - Carnage Bow
+(21765,288,1,1,1,26), -- Carnage Bow
 (21765,5535,1,1,1,7835), -- Carnage Bow Stave
 (21765,1868,3,9,2,166667), -- Thread
 (21765,1873,1,1,2,200000), -- Silver Nugget
@@ -22073,7 +22074,7 @@ INSERT INTO `droplist` VALUES
 (21766,4041,1,1,-1,5273), -- Mold Hardener
 (21766,5538,1,1,-1,1663), -- Dragon Grinder Edge
 (21766,57,244,498,0,700000), -- Adena
-(21766,11951,1,1,1,69), -- Common Item - Bloody Orchid
+(21766,235,1,1,1,1), -- Bloody Orchid
 (21766,5536,1,1,1,306), -- Bloody Orchid Head
 (21766,1344,10,30,2,20408), -- Mithril Arrow
 (21766,1808,1,1,2,12), -- Recipe: Soulshot: S Grade
@@ -22088,7 +22089,7 @@ INSERT INTO `droplist` VALUES
 (21767,4044,1,1,-1,48251), -- Thons
 (21767,5536,1,1,-1,4925), -- Bloody Orchid Head
 (21767,57,584,1188,0,700000), -- Adena
-(21767,11950,1,1,1,3), -- Common Item - Blood Tornado (no drop info)
+(21767,269,1,1,1,3), -- Blood Tornado
 (21767,5539,1,1,1,721), -- Blood Tornado Edge
 (21767,1868,1,1,2,83333), -- Thread
 (21767,1873,1,1,2,17544), -- Silver Nugget
@@ -22102,7 +22103,7 @@ INSERT INTO `droplist` VALUES
 (21768,6337,1,1,-1,75366), -- Recipe: Sealed Majestic Earring(70%)
 (21768,6339,1,1,-1,113048), -- Recipe: Sealed Majestic Ring(70%)
 (21768,57,5923,12058,0,700000), -- Adena
-(21768,11951,1,1,1,711), -- Common Item - Bloody Orchid
+(21768,235,1,1,1,24), -- Bloody Orchid
 (21768,5536,1,1,1,7385), -- Bloody Orchid Head
 (21768,1866,1,3,2,90909), -- Suede
 (21768,1871,1,3,2,200000), -- Charcoal
@@ -22132,7 +22133,7 @@ INSERT INTO `droplist` VALUES
 (21771,730,1,1,-1,10688), -- Scroll: Enchant Armor (Grade A)
 (21771,5479,1,1,-1,75894), -- Sealed Tallum Leather Armor Pattern
 (21771,57,5173,10525,0,700000), -- Adena
-(21771,11951,1,1,1,598), -- Common Item - Bloody Orchid
+(21771,235,1,1,1,21), -- Bloody Orchid
 (21771,5536,1,1,1,6446), -- Bloody Orchid Head
 (21771,729,1,1,2,133), -- Scroll: Enchant Weapon (Grade A)
 (21771,730,1,1,2,465), -- Scroll: Enchant Armor (Grade A)
@@ -22143,12 +22144,12 @@ INSERT INTO `droplist` VALUES
 (21772,730,1,1,-1,12428), -- Scroll: Enchant Armor (Grade A)
 (21772,6901,1,1,-1,14913), -- Recipe: Shining Arrow (100%)
 (21772,57,6003,12248,0,700000), -- Adena
-(21772,11946,1,1,1,120), --  Common Item - Dasparion\'s Staff
-(21772,11949,1,1,1,179), --  Common Item - Meteor Shower
+(21772,212,1,1,1,13), --  Dasparion\'s Staff
+(21772,2504,1,1,1,13), --  Meteor Shower
 (21772,8346,1,1,1,1262), -- Hammer Piece of Destroyer
-(21772,11958,1,1,1,120), --  Common Item - Destroyer Hammer
+(21772,78998,1,1,1,13), --  Destroyer Hammer
 (21772,8341,1,1,1,1727), -- Spiritual Eye Piece
-(21772,11953,1,1,1,60), -- Common Item - Spiritual Eye
+(21772,7894,1,1,1,13), -- Spiritual Eye
 (21772,5532,1,1,1,3713), -- Meteor Shower Head
 (21772,5543,1,1,1,3748), -- Dasparion\'s Staff Edge
 (21772,729,1,1,2,245), -- Scroll: Enchant Weapon (Grade A)
@@ -22161,7 +22162,7 @@ INSERT INTO `droplist` VALUES
 (21773,730,1,1,-1,11328), -- Scroll: Enchant Armor (Grade A)
 (21773,5482,1,1,-1,179418), -- Sealed Dark Crystalline Leggings Design
 (21773,57,5478,11154,0,700000), -- Adena
-(21773,11955,1,1,1,137), -- Common Item - Carnage Bow
+(21773,288,1,1,1,22), -- Carnage Bow
 (21773,5535,1,1,1,6851), -- Carnage Bow Stave
 (21773,729,1,1,2,224), -- Scroll: Enchant Weapon (Grade A)
 (21773,730,1,1,2,618), -- Scroll: Enchant Armor (Grade A)
@@ -22172,7 +22173,7 @@ INSERT INTO `droplist` VALUES
 (21774,1895,1,5,-1,893102), -- Metallic Fiber
 (21774,5546,1,1,-1,28259), -- Sword of Miracles Edge
 (21774,57,3773,7702,0,700000), -- Adena
-(21774,11976,1,1,1,469), -- Common Item - Tallum Glaive
+(21774,305,1,1,1,11), -- Tallum Glaive
 (21774,5541,1,1,1,3798), -- Tallum Glaive Edge
 (21774,959,1,1,2,19), -- Scroll: Enchant Weapon (Grade S)
 (21774,1868,3,9,2,111111), -- Thread
@@ -22186,8 +22187,8 @@ INSERT INTO `droplist` VALUES
 (21775,4041,1,1,-1,97124), -- Mold Hardener
 (21775,5220,1,1,-1,446773), -- Metal Hardener
 (21775,57,4493,9173,0,700000), -- Adena
-(21775,12263,1,1,1,1232), -- Common Item - Sealed Armor of Nightmare
-(21775,12262,1,1,1,410), -- Common Item - Sealed Majestic Plate Armor
+(21775,5311,1,1,1,17), -- Sealed Armor of Nightmare
+(21775,5316,1,1,1,17), -- Sealed Majestic Plate Armor
 (21775,5522,1,1,1,2809), -- Sealed Armor of Nightmare Pattern
 (21775,5523,1,1,1,2809), -- Sealed Majestic Plate Armor Pattern
 (21775,959,1,1,2,22), -- Scroll: Enchant Weapon (Grade S)
@@ -22202,8 +22203,8 @@ INSERT INTO `droplist` VALUES
 (21776,6708,1,1,-1,130329), -- Sealed Draconic Leather Gloves Fabric
 (21776,6709,1,1,-1,130329), -- Sealed Draconic Leather Boots Design
 (21776,57,3684,7518,0,700000), -- Adena
-(21776,12266,1,1,1,663), -- Common Item - Sealed Robe of Nightmare
-(21776,12259,1,1,1,332), -- Common Item - Sealed Majestic Robe
+(21776,5326,1,1,1,18), -- Sealed Robe of Nightmare
+(21776,5329,1,1,1,18), -- Sealed Majestic Robe
 (21776,5487,1,1,1,3045), -- Sealed Robe of Nightmare Fabric
 (21776,5488,1,1,1,3045), -- Sealed Majestic Robe Fabric
 (21776,960,1,1,2,498), -- Scroll: Enchant Armor (Grade S)
@@ -22220,8 +22221,8 @@ INSERT INTO `droplist` VALUES
 (21777,6693,1,1,-1,21116), -- Dragon Hunter Axe Blade
 (21777,6694,1,1,-1,21116), -- Saint Spear Blade
 (21777,57,3860,7880,0,700000), -- Adena
-(21777,12266,1,1,1,361), -- Common Item - Sealed Robe of Nightmare
-(21777,12259,1,1,1,361), -- Common Item - Sealed Majestic Robe
+(21777,5326,1,1,1,19), -- Sealed Robe of Nightmare
+(21777,5329,1,1,1,19), -- Sealed Majestic Robe
 (21777,5487,1,1,1,3192), -- Sealed Robe of Nightmare Fabric
 (21777,5488,1,1,1,3192), -- Sealed Majestic Robe Fabric
 (21777,960,1,1,2,163), -- Scroll: Enchant Armor (Grade S)
@@ -22236,9 +22237,9 @@ INSERT INTO `droplist` VALUES
 (21778,4042,1,1,-1,166816), -- Enria
 (21778,4043,1,1,-1,333633), -- Asofe
 (21778,57,4028,8221,0,700000), -- Adena
-(21778,12350,1,1,1,543), -- Common Item - Sealed Majestic Necklace
-(21778,12352,1,1,1,3802), -- Common Item - Sealed Majestic Earring
-(21778,12351,1,1,1,2174), -- Common Item - Sealed Majestic Ring
+(21778,6326,1,1,1,38), -- Sealed Majestic Necklace
+(21778,6327,1,1,1,51), -- Sealed Majestic Earring
+(21778,6328,1,1,1,76), -- Sealed Majestic Ring
 (21778,6342,1,1,1,11162), -- Sealed Majestic Earring Gemstone
 (21778,6344,1,1,1,7224), -- Sealed Majestic Necklace Beads
 (21778,6346,1,1,1,16043), -- Sealed Majestic Ring Gemstone
@@ -22253,8 +22254,8 @@ INSERT INTO `droplist` VALUES
 (21779,5167,1,1,-1,2697), -- Recipe: Blessed Spiritshot (S) Compressed Package (100%)
 (21779,6342,1,1,-1,137475), -- Sealed Majestic Earring Gemstone
 (21779,57,2441,4984,0,700000), -- Adena
-(21779,12265,1,1,1,351), -- Common Item - Sealed Leather Armor of Nightmare
-(21779,12258,1,1,1,351), -- Common Item - Sealed Majestic Leather Armor
+(21779,5320,1,1,1,12), -- Sealed Leather Armor of Nightmare
+(21779,5323,1,1,1,12), -- Sealed Majestic Leather Armor
 (21779,5480,1,1,1,2012), -- Sealed Leather Armor of Nightmare Fabric
 (21779,5481,1,1,1,2012), -- Sealed Majestic Leather Armor Fabric
 (21779,960,1,1,2,120), -- Scroll: Enchant Armor (Grade S)
@@ -22269,9 +22270,9 @@ INSERT INTO `droplist` VALUES
 (21780,1894,1,1,-1,298162), -- Crafted Leather
 (21780,4042,1,1,-1,141627), -- Enria
 (21780,57,3419,6979,0,700000), -- Adena
-(21780,12350,1,1,1,441), -- Common Item - Sealed Majestic Necklace
-(21780,12352,1,1,1,575), -- Common Item - Sealed Majestic Earring
-(21780,12351,1,1,1,870), -- Common Item - Sealed Majestic Ring
+(21780,6326,1,1,1,33), -- Sealed Majestic Necklace
+(21780,6327,1,1,1,43), -- Sealed Majestic Earring
+(21780,6328,1,1,1,65), -- Sealed Majestic Ring
 (21780,6342,1,1,1,9477), -- Sealed Majestic Earring Gemstone
 (21780,6344,1,1,1,6133), -- Sealed Majestic Necklace Beads
 (21780,6346,1,1,1,13620), -- Sealed Majestic Ring Gemstone
@@ -22286,8 +22287,8 @@ INSERT INTO `droplist` VALUES
 (21781,4041,1,1,-1,66202), -- Mold Hardener
 (21781,6344,1,1,-1,111606), -- Sealed Majestic Necklace Beads
 (21781,57,3063,6253,0,700000), -- Adena
-(21781,12263,1,1,1,427), -- Common Item - Sealed Armor of Nightmare
-(21781,12262,1,1,1,427), -- Common Item - Sealed Majestic Plate Armor
+(21781,5311,1,1,1,11), -- Sealed Armor of Nightmare
+(21781,5316,1,1,1,11), -- Sealed Majestic Plate Armor
 (21781,5522,1,1,1,1915), -- Sealed Armor of Nightmare Pattern
 (21781,5523,1,1,1,1915), -- Sealed Majestic Plate Armor Pattern
 (21781,959,1,1,2,16), -- Scroll: Enchant Weapon (Grade S)
@@ -22302,10 +22303,10 @@ INSERT INTO `droplist` VALUES
 (21782,6711,1,1,-1,40103), -- Sealed Major Arcana Robe Part
 (21782,6712,1,1,-1,115239), -- Sealed Major Arcana Gloves fabric
 (21782,57,3257,6648,0,700000), -- Adena
-(21782,12264,1,1,1,1122), -- Common Item - Sealed Gloves of Nightmare
-(21782,12267,1,1,1,1122), -- Common Item - Sealed Boots of Nightmare
-(21782,12257,1,1,1,1122), -- Common Item - Sealed Majestic Gloves
-(21782,12260,1,1,1,1122), -- Common Item - Sealed Majestic Boots
+(21782,5313,1,1,1,34), -- Sealed Gloves of Nightmare
+(21782,5314,1,1,1,34), -- Sealed Boots of Nightmare
+(21782,5318,1,1,1,34), -- Sealed Majestic Gloves
+(21782,5319,1,1,1,34), -- Sealed Majestic Boots
 (21782,5502,1,1,1,5047), -- Sealed Boots of Nightmare Lining
 (21782,5503,1,1,1,5047), -- Sealed Majestic Boots Lining
 (21782,5514,1,1,1,5047), -- Sealed Gloves of Nightmare Design
@@ -22322,8 +22323,8 @@ INSERT INTO `droplist` VALUES
 (21783,5480,1,1,-1,35965), -- Sealed Leather Armor of Nightmare Fabric
 (21783,6346,1,1,-1,260950), -- Sealed Majestic Ring Gemstone
 (21783,57,3224,6583,0,700000), -- Adena
-(21783,12266,1,1,1,465), -- Common Item - Sealed Robe of Nightmare
-(21783,12259,1,1,1,465), -- Common Item - Sealed Majestic Robe
+(21783,5326,1,1,1,16), -- Sealed Robe of Nightmare
+(21783,5329,1,1,1,16), -- Sealed Majestic Robe
 (21783,5487,1,1,1,2666), -- Sealed Robe of Nightmare Fabric
 (21783,5488,1,1,1,2666), -- Sealed Majestic Robe Fabric
 (21783,960,1,1,2,136), -- Scroll: Enchant Armor (Grade S)
@@ -22339,9 +22340,9 @@ INSERT INTO `droplist` VALUES
 (21784,4041,1,1,-1,74112), -- Mold Hardener
 (21784,4044,1,1,-1,284097), -- Thons
 (21784,57,3430,7000,0,700000), -- Adena
-(21784,12269,1,1,1,355), -- Common Item - Sealed Helm of Nightmare
-(21784,12268,1,1,1,510), -- Common Item - Sealed Shield of Nightmare
-(21784,12261,1,1,1,355), -- Common Item - Sealed Majestic Circlet
+(21784,5312,1,1,1,32), -- Sealed Helm of Nightmare
+(21784,5315,1,1,1,46), -- Sealed Shield of Nightmare
+(21784,5317,1,1,1,32), -- Sealed Majestic Circlet
 (21784,5495,1,1,1,6372), -- Sealed Shield of Nightmare Fragment
 (21784,5527,1,1,1,5017), -- Sealed Helm of Nightmare Design
 (21784,5528,1,1,1,5017), -- Sealed Majestic Circlet Design
@@ -22356,10 +22357,10 @@ INSERT INTO `droplist` VALUES
 (21785,6696,1,1,-1,20802), -- Heavens Divider Edge
 (21785,6697,1,1,-1,20090), -- Arcana Mace Head
 (21785,57,3811,7780,0,700000), -- Adena
-(21785,12264,1,1,1,869), -- Common Item - Sealed Gloves of Nightmare
-(21785,12267,1,1,1,869), -- Common Item - Sealed Boots of Nightmare
-(21785,12257,1,1,1,869), -- Common Item - Sealed Majestic Gloves
-(21785,12260,1,1,1,869), -- Common Item - Sealed Majestic Boots
+(21785,5313,1,1,1,40), -- Sealed Gloves of Nightmare
+(21785,5314,1,1,1,40), -- Sealed Boots of Nightmare
+(21785,5318,1,1,1,40), -- Sealed Majestic Gloves
+(21785,5319,1,1,1,40), -- Sealed Majestic Boots
 (21785,5502,1,1,1,5908), -- Sealed Boots of Nightmare Lining
 (21785,5503,1,1,1,5908), -- Sealed Majestic Boots Lining
 (21785,5514,1,1,1,5908), -- Sealed Gloves of Nightmare Design
@@ -22377,9 +22378,9 @@ INSERT INTO `droplist` VALUES
 (21786,5277,1,1,-1,1450), -- Recipe: Greater Spiritshot (S) Compressed Package(100%)
 (21786,5481,1,1,-1,14641), -- Sealed Majestic Leather Armor Fabric
 (21786,57,1313,2680,0,700000), -- Adena
-(21786,12350,1,1,1,512), -- Common Item - Sealed Majestic Necklace
-(21786,12352,1,1,1,512), -- Common Item - Sealed Majestic Earring
-(21786,12351,1,1,1,512), -- Common Item - Sealed Majestic Ring
+(21786,6326,1,1,1,13), -- Sealed Majestic Necklace
+(21786,6327,1,1,1,17), -- Sealed Majestic Earring
+(21786,6328,1,1,1,25), -- Sealed Majestic Ring
 (21786,6342,1,1,1,3639), -- Sealed Majestic Earring Gemstone
 (21786,6344,1,1,1,2355), -- Sealed Majestic Necklace Beads
 (21786,6346,1,1,1,5230), -- Sealed Majestic Ring Gemstone
@@ -22394,9 +22395,9 @@ INSERT INTO `droplist` VALUES
 (21787,960,1,1,-1,7976), -- Scroll: Enchant Armor (Grade S)
 (21787,6688,1,1,-1,43102), -- Forgotten Blade Edge
 (21787,57,8022,16377,0,700000), -- Adena
-(21787,12269,1,1,1,1361), -- Common Item - Sealed Helm of Nightmare
-(21787,12268,1,1,1,2747), -- Common Item - Sealed Shield of Nightmare
-(21787,12261,1,1,1,1862), -- Common Item - Sealed Majestic Circlet
+(21787,5312,1,1,1,75), -- Sealed Helm of Nightmare
+(21787,5315,1,1,1,107), -- Sealed Shield of Nightmare
+(21787,5317,1,1,1,75), -- Sealed Majestic Circlet
 (21787,5495,1,1,1,14907), -- Sealed Shield of Nightmare Fragment
 (21787,5527,1,1,1,11737), -- Sealed Helm of Nightmare Design
 (21787,5528,1,1,1,11737), -- Sealed Majestic Circlet Design
@@ -22413,9 +22414,9 @@ INSERT INTO `droplist` VALUES
 (21788,6699,1,1,-1,442867), -- Sealed Tateossian Ring Gem
 (21788,6700,1,1,-1,243251), -- Sealed Tateossian Ring Wire
 (21788,57,8174,16687,0,700000), -- Adena
-(21788,11968,1,1,1,179), -- Common Item - Dragon Slayer
-(21788,11971,1,1,1,327), -- Common Item - Sword of Miracles 
-(21788,11964,1,1,1,179), -- Common Item - Dark Legion\'s Edge
+(21788,81,1,1,1,8), -- Dragon Slayer
+(21788,151,1,1,1,8), -- Sword of Miracles 
+(21788,2500,1,1,1,8), -- Dark Legion\'s Edge
 (21788,5529,1,1,1,2745), -- Dragon Slayer Edge
 (21788,5545,1,1,1,2745), -- Dark Legion\'s Edge Blade
 (21788,5546,1,1,1,3015), -- Sword of Miracles Edge
@@ -22433,12 +22434,12 @@ INSERT INTO `droplist` VALUES
 (21789,1894,1,1,-1,27802), -- Crafted Leather
 (21789,4039,1,1,-1,26412), -- Mold Glue
 (21789,57,319,651,0,700000), -- Adena
-(21789,11974,1,1,1,1), -- Common Item - Elysian (no drop info)
-(21789,11970,1,1,1,1), -- Common Item - Branch of The Mother Tree
+(21789,164,1,1,1,1), -- Elysian
+(21789,213,1,1,1,1), -- Branch of The Mother Tree
 (21789,8342,1,1,1,50), -- Flaming Dragon Skull Piece
-(21789,11969,1,1,1,1), -- Common Item - Flaming Dragon Skull
+(21789,7895,1,1,1,1), -- Flaming Dragon Skull
 (21789,8349,1,1,1,50), -- Doom Crusher Head
-(21789,11966,1,1,1,1), -- Common Item - Doom Crusher
+(21789,7902,1,1,1,1), -- Doom Crusher
 (21789,5533,1,1,1,161), -- Elysian Head
 (21789,5544,1,1,1,161), -- Branch of The Mother Tree Head
 (21789,959,1,1,2,2), -- Scroll: Enchant Weapon (Grade S)
@@ -22452,10 +22453,10 @@ INSERT INTO `droplist` VALUES
 (21790,5487,1,1,-1,8727), -- Sealed Robe of Nightmare Fabric
 (21790,5550,1,1,-1,25841), -- Durable Metal Plate
 (21790,57,780,1592,0,700000), -- Adena
-(21790,12264,1,1,1,106), -- Common Item - Sealed Gloves of Nightmare
-(21790,12267,1,1,1,211), -- Common Item - Sealed Boots of Nightmare
-(21790,12257,1,1,1,106), -- Common Item - Sealed Majestic Gloves
-(21790,12260,1,1,1,317), -- Common Item - Sealed Majestic Boots
+(21790,5313,1,1,1,9), -- Sealed Gloves of Nightmare
+(21790,5314,1,1,1,9), -- Sealed Boots of Nightmare
+(21790,5318,1,1,1,9), -- Sealed Majestic Gloves
+(21790,5319,1,1,1,9), -- Sealed Majestic Boots
 (21790,5502,1,1,1,1209), -- Sealed Boots of Nightmare Lining
 (21790,5503,1,1,1,1209), -- Sealed Majestic Boots Lining
 (21790,5514,1,1,1,1209), -- Sealed Gloves of Nightmare Design
@@ -22473,12 +22474,12 @@ INSERT INTO `droplist` VALUES
 (21791,1875,1,3,-1,646906), -- Stone of Purity
 (21791,4040,1,1,-1,388144), -- Mold Lubricant
 (21791,57,7810,15940,0,700000), -- Adena
-(21791,11974,1,1,1,64), -- Common Item - Elysian
-(21791,11970,1,1,1,64), -- Common Item - Branch of The Mother Tree
+(21791,16,1,1,1,11), -- Elysian
+(21791,213,1,1,1,11), -- Branch of The Mother Tree
 (21791,8342,1,1,1,2008), -- Flaming Dragon Skull Piece
-(21791,11969,1,1,1,64), -- Common Item - Flaming Dragon Skull
+(21791,7895,1,1,1,11), -- Flaming Dragon Skull
 (21791,8349,1,1,1,2141), -- Doom Crusher Head
-(21791,11966,1,1,1,64), -- Common Item - Doom Crusher
+(21791,7902,1,1,1,11), -- Doom Crusher
 (21791,5533,1,1,1,3932), -- Elysian Head
 (21791,5544,1,1,1,3928), -- Branch of The Mother Tree Head
 (21791,959,1,1,2,39), -- Scroll: Enchant Weapon (Grade S)
@@ -22509,9 +22510,9 @@ INSERT INTO `droplist` VALUES
 (21794,960,1,1,-1,6869), -- Scroll: Enchant Armor (Grade S)
 (21794,1808,1,1,-1,7632), -- Recipe: Soulshot: S Grade
 (21794,57,6908,14104,0,700000), -- Adena
-(21794,11968,1,1,1,145), -- Common Item - Dragon Slayer
-(21794,11971,1,1,1,217), -- Common Item - Sword of Miracles 
-(21794,11964,1,1,1,145), -- Common Item - Dark Legion\'s Edge
+(21794,81,1,1,1,7), -- Dragon Slayer
+(21794,151,1,1,1,7), -- Sword of Miracles 
+(21794,2500,1,1,1,7), -- Dark Legion\'s Edge
 (21794,5529,1,1,1,2320), -- Dragon Slayer Edge
 (21794,5545,1,1,1,2320), -- Dark Legion\'s Edge Blade
 (21794,5546,1,1,1,2548), -- Sword of Miracles Edge
@@ -22524,7 +22525,7 @@ INSERT INTO `droplist` VALUES
 (21795,960,1,1,-1,7795), -- Scroll: Enchant Armor (Grade S)
 (21795,6691,1,1,-1,42123), -- Angel Slayer Blade
 (21795,57,7840,16005,0,700000), -- Adena
-(21795,11975,1,1,1,504), -- Common Item - Soul Bow
+(21795,289,1,1,1,22), -- Soul Bow
 (21795,5534,1,1,1,7902), -- Soul Bow Stave
 (21795,959,1,1,2,116), -- Scroll: Enchant Weapon (Grade S)
 (21795,960,1,1,2,432), -- Scroll: Enchant Armor (Grade S)
@@ -22534,7 +22535,7 @@ INSERT INTO `droplist` VALUES
 (21796,959,1,1,-1,718), -- Scroll: Enchant Weapon (Grade S)
 (21796,960,1,1,-1,7180), -- Scroll: Enchant Armor (Grade S)
 (21796,57,7224,14744,0,700000), -- Adena
-(21796,11975,1,1,1,449), -- Common Item - Soul Bow
+(21796,289,1,1,1,20), -- Soul Bow
 (21796,5534,1,1,1,7279), -- Soul Bow Stave
 (21796,959,1,1,2,107), -- Scroll: Enchant Weapon (Grade S)
 (21796,960,1,1,2,269), -- Scroll: Enchant Armor (Grade S)
@@ -22544,8 +22545,8 @@ INSERT INTO `droplist` VALUES
 (21797,1869,1,4,-1,652298), -- Iron Ore
 (21797,2961,1,1,-1,35519), -- Full Plate Boots Part
 (21797,57,315,642,0,700000), -- Adena
-(21797,12145,1,1,1,404), -- Common Item - Full Plate Helmet
-(21797,12143,1,1,1,404), -- Common Item - Full Plate Shield
+(21797,2414,1,1,1,23), -- Full Plate Helmet
+(21797,2497,1,1,1,33), -- Full Plate Shield
 (21797,2959,1,1,1,2083), -- Full Plate Helmet Design
 (21797,2966,1,1,1,3295), -- Full Plate Shield Fragment
 (21797,1867,1,1,2,30303), -- Animal Skin
@@ -22638,8 +22639,8 @@ INSERT INTO `droplist` VALUES
 (21803,1899,1,1,-1,49588), -- Necklace of Devotion Chain
 (21803,5220,1,1,-1,12695), -- Metal Hardener
 (21803,57,137,264,0,700000), -- Adena
-(21803,12006,1,1,1,1471), -- Common Item - Leather Boots
-(21803,12007,1,1,1,1471), -- Common Item - Crafted Leather Gloves
+(21803,40,1,1,1,427), -- Leather Boots
+(21803,604,1,1,1,427), -- Crafted Leather Gloves
 (21803,1931,1,1,1,5821), -- Leather Boot Lining
 (21803,1934,1,1,1,5821), -- Crafted Leather Gloves Lining
 (21803,1866,1,1,2,23749), -- Suede
@@ -22651,8 +22652,8 @@ INSERT INTO `droplist` VALUES
 (21804,1900,1,1,-1,39943), -- Enchanted Necklace Chain
 (21804,2250,1,1,-1,91271), -- Recipe: Bone Arrow
 (21804,57,154,308,0,700000), -- Adena
-(21804,12028,1,1,1,13889), -- Common Item - Bronze Helmet
-(21804,12025,1,1,1,17241), -- Common Item - Aspis
+(21804,46,1,1,1,400), -- Bronze Helmet
+(21804,627,1,1,1,570), -- Aspis
 (21804,1867,1,1,2,66502), -- Animal Skin
 (21804,1872,1,1,2,66502), -- Animal Bone
 (21804,1882,1,1,2,11084), -- Leather
@@ -22661,13 +22662,13 @@ INSERT INTO `droplist` VALUES
 (21805,1938,1,1,-1,29277), -- Mithril Banded Mail Material
 (21805,2154,1,1,-1,46627), -- Recipe: Elven Earring
 (21805,57,184,368,0,700000), -- Adena
-(21805,12038,1,1,1,3030), -- Common Item - Gauntlets
-(21805,12033,1,1,1,3030), -- Common Item - Iron Boots
+(21805,63,1,1,1,131), -- Gauntlets
+(21805,553,1,1,1,131), -- Iron Boots
 (21805,1940,1,1,1,4937), -- Iron Boots Design
-(21805,12035,1,1,1,3030), -- Common Item - Reinforced Leather Boots
-(21805,12045,1,1,1,3030), -- Common Item - Boots of Knowledge
-(21805,12037,1,1,1,3030), -- Common Item - Reinforced Leather Gloves
-(21805,12046,1,1,1,3030), -- Common Item - Gloves of Knowledge
+(21805,2422,1,1,1,131), -- Reinforced Leather Boots
+(21805,2423,1,1,1,131), -- Boots of Knowledge
+(21805,2446,1,1,1,131), -- Reinforced Leather Gloves
+(21805,2447,1,1,1,131), -- Gloves of Knowledge
 (21805,1868,1,1,2,92622), -- Thread
 (21805,1873,1,1,2,18525), -- Silver Nugget
 (21805,1889,1,1,2,3088), -- Compound Braid
@@ -22677,8 +22678,8 @@ INSERT INTO `droplist` VALUES
 (21806,1880,1,1,-1,51242), -- Steel
 (21806,1939,1,1,-1,45008), -- Mithril Banded Gaiters Material
 (21806,57,216,433,0,700000), -- Adena
-(21806,12050,1,1,1,4049), -- Common Item - Helmet
-(21806,12051,1,1,1,20408), -- Common Item - Hoplon
+(21806,47,1,1,1,358), -- Helmet
+(21806,628,1,1,1,512), -- Hoplon
 (21806,1864,1,1,2,108980), -- Stem
 (21806,1869,1,1,2,54490), -- Iron Ore
 (21806,1880,1,1,2,5449), -- Steel
@@ -22688,16 +22689,16 @@ INSERT INTO `droplist` VALUES
 (21807,2157,1,1,-1,49421), -- Recipe: Omen Beast\'s Eye Earring
 (21807,2158,1,1,-1,74010), -- Recipe: Mithril Ring
 (21807,57,253,504,0,700000), -- Adena
-(21807,12068,1,1,1,1484), -- Common Item - Rip Gauntlets
-(21807,12070,1,1,1,1484), -- Common Item - Boots of Power
+(21807,606,1,1,1,52), -- Rip Gauntlets
+(21807,1124,1,1,1,52), -- Boots of Power
 (21807,1946,1,1,1,2612), -- Rip Gauntlets Pattern
 (21807,1948,1,1,1,2612), -- Boots of Power Pattern
-(21807,12053,1,1,1,1484), -- Common Item - Manticore Skin Boots
-(21807,12062,1,1,1,1484), -- Common Item - Brigandine Boots
-(21807,12066,1,1,1,1484), -- Common Item - Elven Mithril Boots
-(21807,12055,1,1,1,1484), -- Common Item - Manticore Skin Gloves
-(21807,12061,1,1,1,1484), -- Common Item - Brigandine Gauntlets
-(21807,12065,1,1,1,1484), -- Common Item - Elven Mithril Gloves
+(21807,2424,1,1,1,52), -- Manticore Skin Boots
+(21807,2425,1,1,1,52), -- Brigandine Boots
+(21807,2426,1,1,1,52), -- Elven Mithril Boots
+(21807,2448,1,1,1,52), -- Manticore Skin Gloves
+(21807,2449,1,1,1,52), -- Brigandine Gauntlets
+(21807,2450,1,1,1,52), -- Elven Mithril Gloves
 (21807,2923,1,1,1,2612), -- Manticore Skin Boot Lining
 (21807,2924,1,1,1,2612), -- Brigandine Boots Design
 (21807,2925,1,1,1,2612), -- Elven Mithril Boots Design
@@ -22712,10 +22713,10 @@ INSERT INTO `droplist` VALUES
 (21808,1871,1,1,-1,690083), -- Charcoal
 (21808,1905,1,1,-1,67129), -- Omen Beast\'s Eye Earring Gemstone
 (21808,57,282,570,0,700000), -- Adena
-(21808,12073,1,1,1,1387), -- Common Item - Square Shield
+(21808,630,1,1,1,113), -- Square Shield
 (21808,1956,1,1,1,6556), -- Square Shield Fragment
-(21808,12079,1,1,1,1387), -- Common Item - Plate Helmet
-(21808,12078,1,1,1,1387), -- Common Item - Plate Shield
+(21808,2412,1,1,1,79), -- Plate Helmet
+(21808,2494,1,1,1,113), -- Plate Shield
 (21808,2930,1,1,1,4656), -- Plate Helmet Design
 (21808,2934,1,1,1,6556), -- Plate Shield Fragment
 (21808,1866,1,1,2,57755), -- Suede
@@ -22726,16 +22727,16 @@ INSERT INTO `droplist` VALUES
 (21809,2163,1,1,-1,40459), -- Recipe: Earring of Protection
 (21809,4553,1,1,-1,3172), -- Greater Dye of Strength <Str+1 Con-1>
 (21809,57,320,650,0,700000), -- Adena
-(21809,12085,1,1,1,1226), -- Common Item - Mithril Boots
+(21809,62,1,1,1,34), -- Mithril Boots
 (21809,1958,1,1,1,1872), -- Mithril Boots Design
-(21809,12093,1,1,1,1226), -- Common Item - Chain Boots
-(21809,12098,1,1,1,1226), -- Common Item - Karmian Boots
-(21809,12101,1,1,1,1226), -- Common Item - Plated Leather Boots
-(21809,12088,1,1,1,1226), -- Common Item - Dwarven Chain Boots
-(21809,12089,1,1,1,1226), -- Common Item - Boots of Seal
-(21809,12087,1,1,1,1226), -- Common Item - Reinforced Mithril Gloves
-(21809,12092,1,1,1,1226), -- Common Item - Chain Gloves
-(21809,12097,1,1,1,1226), -- Common Item - Karmian Gloves
+(21809,2429,1,1,1,34), -- Chain Boots
+(21809,2430,1,1,1,34), -- Karmian Boots
+(21809,2431,1,1,1,34), -- Plated Leather Boots
+(21809,2432,1,1,1,34), -- Dwarven Chain Boots
+(21809,2433,1,1,1,34), -- Boots of Seal
+(21809,2452,1,1,1,34), -- Reinforced Mithril Gloves
+(21809,2453,1,1,1,34), -- Chain Gloves
+(21809,2454,1,1,1,34), -- Karmian Gloves
 (21809,2937,1,1,1,1872), -- Chain Boots Part
 (21809,2938,1,1,1,1872), -- Karmian Boots Fabric
 (21809,2939,1,1,1,1872), -- Plate Leather Boot Lining
@@ -22755,11 +22756,11 @@ INSERT INTO `droplist` VALUES
 (21810,1967,1,1,-1,49218), -- Plated Leather Gaiters Material
 (21810,2166,1,1,-1,30590), -- Recipe: Earrings of Binding (100%)
 (21810,57,364,740,0,700000), -- Adena
-(21810,12106,1,1,1,1304), -- Common Item - Great Helmet
-(21810,12107,1,1,1,1144), -- Common Item - Knight\'s Shield
+(21810,500,1,1,1,56), -- Great Helmet
+(21810,632,1,1,1,79), -- Knight\'s Shield
 (21810,1971,1,1,1,4080), -- Great Helmet Material
 (21810,1972,1,1,1,5332), -- Knight\'s Shield Fragment
-(21810,12102,1,1,1,1144), -- Common Item - Dwarven Chain Shield
+(21810,2496,1,1,1,86), -- Dwarven Chain Shield
 (21810,2947,1,1,1,4760), -- Dwarven Chain Shield Fragment
 (21810,1868,1,1,2,133280), -- Thread
 (21810,1873,1,1,2,26656), -- Silver Nugget
@@ -22773,8 +22774,8 @@ INSERT INTO `droplist` VALUES
 (21811,1884,1,1,-1,629333), -- Cord
 (21811,4601,1,1,-1,2273), -- Greater Dye of Strength <Str+3 Con-3>
 (21811,57,413,839,0,700000), -- Adena
-(21811,12125,1,1,1,1136), -- Common Item - Composite Boots
-(21811,12119,1,1,1,1136), -- Common Item - Mithril Gauntlets
+(21811,64,1,1,1,87), -- Composite Boots
+(21811,608,1,1,1,87), -- Mithril Gauntlets
 (21811,1981,1,1,1,6220), -- Mithril Gauntlets Design
 (21811,2956,1,1,1,6220), -- Composite Boots Part
 (21811,1864,1,1,2,140971), -- Stem
@@ -22788,8 +22789,8 @@ INSERT INTO `droplist` VALUES
 (21812,1985,1,1,-1,39710), -- Theca Leather Gaiters Pattern
 (21812,4126,1,1,-1,19003), -- Recipe: Adamantite Earrings
 (21812,57,464,945,0,700000), -- Adena
-(21812,12145,1,1,1,904), -- Common Item - Full Plate Helmet
-(21812,12143,1,1,1,904), -- Common Item - Full Plate Shield
+(21812,2414,1,1,1,40), -- Full Plate Helmet
+(21812,2497,1,1,1,57), -- Full Plate Shield
 (21812,2959,1,1,1,3677), -- Full Plate Helmet Design
 (21812,2966,1,1,1,5817), -- Full Plate Shield Fragment
 (21812,1865,1,1,2,70867), -- Varnish
@@ -23004,8 +23005,8 @@ INSERT INTO `droplist` VALUES
 (22001,1867,1,1,2,38462), -- Animal Skin
 (22001,1882,1,1,2,14085), -- Leather
 (22001,2152,1,1,2,6250), -- Recipe: Enchanted Necklace (Grade D)
-(22001,12015,1,1,1,3135), -- Common Item - Puma Skin Shirt
-(22001,12014,1,1,1,7813), -- Common Item - Puma Skin Gaiters
+(22001,391,1,1,1,166), -- Puma Skin Shirt (Grade D)
+(22001,413,1,1,1,483), -- Puma Skin Gaiters (Grade D)
 (22001,1867,1,2,-1,250000), -- Animal Skin
 (22001,1899,1,1,-1,25000), -- Necklace of Devotion Chain
 (22001,2152,1,1,-1,6500), -- Recipe: Enchanted Necklace (Grade D)
@@ -23015,7 +23016,7 @@ INSERT INTO `droplist` VALUES
 (22002,1881,1,1,2,4763), -- Coarse Bone Powder
 (22002,8301,1,1,2,1429), -- Recipe: Priest Sword
 (22002,1875,1,1,2,4651), -- Stone of Purity
-(22002,11608,1,1,1,952), -- Common Item - Bagh-Nakh
+(22002,258,1,1,1,8), -- Bagh-Nakh (Grade D)
 (22002,1931,1,1,-1,25000), -- Leather Boot Lining
 (22002,2178,1,1,-1,6000), -- Recipe: Dark Stockings
 (22002,1932,1,1,-1,25000), -- Bone Helmet Design
@@ -23025,7 +23026,7 @@ INSERT INTO `droplist` VALUES
 (22003,1889,1,1,2,2188), -- Compound Braid
 (22003,1874,1,1,2,1821), -- Oriharukon ore
 (22003,5220,1,1,2,364), -- Metal Hardener
-(22003,11606,1,1,1,2188), -- Common Item - Strengthened Bow
+(22003,274,1,1,1,8), -- Strengthened Bow (Grade D)
 (22003,2180,1,1,2,2188), -- Recipe: Scale Mail
 (22003,1874,1,1,-1,150000), -- Oriharukon ore
 (22003,1878,1,2,-1,250000), -- Braided Hemp
@@ -23041,10 +23042,10 @@ INSERT INTO `droplist` VALUES
 (22004,1885,1,1,2,1517), -- High Grade Suede
 (22004,8327,1,1,2,1786), -- Steel Sword Blade
 (22004,5531,1,1,2,1786), -- Heavy Sword Edge
-(22004,11614,1,1,1,434), -- Common Item - Saber
-(22004,11625,1,1,1,434), -- Common Item - Heavy Sword
-(22004,11611,1,1,1,434), -- Common Item - Priest Sword
-(22004,11605,1,1,1,217), -- Common Item - Steel Sword
+(22004,123,1,1,1,12), -- Saber
+(22004,5285,1,1,1,12), -- Heavy Sword
+(22004,7885,1,1,1,12), -- Priest Sword
+(22004,7880,1,1,1,12), -- Steel Sword
 (22004,2180,1,1,-1,6280), -- Recipe: Scale Mail (Grade D)
 (22004,2017,1,1,-1,6786), -- Saber Blade
 (22004,2181,1,1,-1,6348), -- Recipe: White Tunic (Grade D)
@@ -23052,7 +23053,7 @@ INSERT INTO `droplist` VALUES
 (22005,1880,1,1,2,4274), -- Steel
 (22005,1881,1,1,2,6494), -- Coarse Bone Powder
 (22005,2182,1,1,2,5988), -- Recipe: Scale Gaiters (Grade D)
-(22005,11613,1,1,1,3953), -- Common Item - Crafted Dagger
+(22005,220,1,1,1,8), -- Crafted Dagger
 (22005,1876,1,1,2,9901), -- Mithril Ore
 (22005,1877,1,1,2,1718), -- Adamantite Nugget
 (22005,1882,1,1,2,10526), -- Leather
@@ -23063,7 +23064,7 @@ INSERT INTO `droplist` VALUES
 (22006,1878,1,1,2,17241), -- Braided Hemp
 (22006,1884,1,1,2,29412), -- Cord
 (22006,1889,1,1,2,3802), -- Compound Braid
-(22006,11647,1,1,1,2020), -- Common Item - Pike
+(22006,292,1,1,1,12), -- Pike
 (22006,1874,1,1,2,2874), -- Oriharukon ore
 (22006,5220,1,1,2,1399), -- Metal Hardener
 (22006,737,1,1,2,5587), -- Scroll of Resurrection
@@ -23071,14 +23072,14 @@ INSERT INTO `droplist` VALUES
 (22006,1900,1,2,-1,25000), -- Enchanted Necklace Chain
 (22006,2153,1,1,-1,5000), -- Recipe: Tiger\'s Eye Earring
 (22007,57,245,485,0,700000), -- Adena
-(22007,11645,1,1,1,219), -- Common Item - Tomahawk
-(22007,11627,1,1,1,219), -- Common Item - Mace of Prayer
-(22007,11638,1,1,1,219), -- Common Item - Mace of Judgment
-(22007,11641,1,1,1,219), -- Common Item - Mace of Miracle
-(22007,11634,1,1,1,219), -- Common Item - Mystic Staff
-(22007,11644,1,1,1,219), -- Common Item - Conjuror\'s Staff
-(22007,11633,1,1,1,219), -- Common Item - Staff of Mana
-(22007,11630,1,1,1,219), -- Common Item - Doom Hammer
+(22007,86,1,1,1,10), -- Tomahawk
+(22007,179,1,1,1,10), -- Mace of Prayer
+(22007,180,1,1,1,10), -- Mace of Judgment
+(22007,181,1,1,1,10), -- Mace of Miracle
+(22007,182,1,1,1,10), -- Doom Hammer
+(22007,183,1,1,1,10), -- Mystic Staff
+(22007,184,1,1,1,10), -- Conjuror\'s Staff
+(22007,185,1,1,1,10), -- Staff of Mana
 (22007,1876,1,1,2,8772), -- Mithril Ore
 (22007,1880,1,1,2,5952), -- Steel
 (22007,1877,1,1,2,3145), -- Adamantite Nugget
@@ -23099,15 +23100,15 @@ INSERT INTO `droplist` VALUES
 (22008,956,1,1,2,1427), -- Scroll: Enchant Armor (Grade D)
 (22008,1937,1,1,2,5714), -- Scale Gaiters Fragment
 (22008,1935,1,1,2,2660), -- Scale Mail Fragment
-(22008,12024,1,1,1,2933), -- Common Item - Scale Mail
-(22008,12023,1,1,1,3937), -- Common Item - Scale Gaiters
+(22008,348,1,1,1,92), -- Scale Mail
+(22008,377,1,1,1,162), -- Scale Gaiters
 (22008,955,1,1,-1,5000), -- Scroll: Enchant Weapon (Grade D)
 (22008,1877,1,1,-1,25000), -- Adamantite Nugget
 (22008,1881,1,2,-1,58667), -- Coarse Bone Powder
 (22009,57,272,542,0,700000), -- Adena
-(22009,12314,1,1,1,10204), -- Common Item - Enchanted Earring
-(22009,12316,1,1,1,13158), -- Common Item - Enchanted Ring
-(22009,12315,1,1,1,9009), -- Common Item - Enchanted Necklace
+(22009,848,1,1,1,204), -- Enchanted Earring (Grade D)
+(22009,879,1,1,1,321), -- Enchanted Ring (Grade D)
+(22009,911,1,1,1,409), -- Enchanted Necklace (Grade D)
 (22009,1900,1,1,2,7092), -- Enchanted Necklace Chain
 (22009,1875,1,1,2,4762), -- Stone of Purity
 (22009,1879,1,1,2,7353), -- Cokes
@@ -23125,8 +23126,8 @@ INSERT INTO `droplist` VALUES
 (22010,1829,1,1,2,27027), -- Scroll of Escape: Clan Hall
 (22010,5549,1,1,2,5181), -- Metallic Thread
 (22010,1889,1,1,2,4049), -- Compound Braid
-(22010,12028,1,1,1,14286), -- Common Item - Bronze Helmet
-(22010,12025,1,1,1,22727), -- Common Item - Aspis
+(22010,46,1,1,1,981), -- Bronze Helmet (Grade D)
+(22010,627,1,1,1,588), -- Aspis (Grade D)
 (22010,1937,1,1,-1,5714), -- Scale Gaiters Fragment
 (22010,2185,1,1,-1,8192), -- Recipe: Iron Boots
 (22010,2021,1,1,-1,6882), -- Spinebone Sword Blade
@@ -23175,10 +23176,10 @@ INSERT INTO `droplist` VALUES
 (22017,737,1,1,2,5051), -- Scroll of Resurrection
 (22017,2021,1,1,1,654), -- Spinebone Sword Blade
 (22017,5550,1,1,2,840), -- Durable Metal Plate
-(22017,11635,1,1,1,420), -- Common Item - Bastard Sword
-(22017,11636,1,1,1,420), -- Common Item - Spinebone Sword
-(22017,11643,1,1,1,420), -- Common Item - Artisan\'s Sword
-(22017,11628,1,1,1,420), -- Common Item - Knight\'s Sword
+(22017,125,1,1,1,8), -- Spinebone Sword
+(22017,128,1,1,1,8), -- Knight\'s Sword
+(22017,69,1,1,1,8), -- Bastard Sword
+(22017,126,1,1,1,8), -- Artisan\'s Sword
 (22017,1900,1,1,-1,25000), -- Enchanted Necklace Chain
 (22017,2153,1,1,-1,5000), -- Recipe: Tiger\'s Eye Earring
 (22017,1933,1,1,-1,25000), -- Dark Stocking Fabric
@@ -23186,8 +23187,8 @@ INSERT INTO `droplist` VALUES
 (22018,1872,1,1,3,71429), -- Animal Bone
 (22018,1867,1,1,2,76923), -- Animal Skin
 (22018,1882,1,1,2,14493), -- Leather
-(22018,12021,1,1,1,5988), -- Common Item - Lion Skin Shirt
-(22018,12020,1,1,1,5988), -- Common Item - Lion Skin Gaiters
+(22018,392,1,1,1,88), -- Lion Skin Shirt
+(22018,414,1,1,1,88), -- Lion Skin Gaiters
 (22018,955,1,1,2,210), -- Scroll: Enchant Weapon (Grade D)
 (22018,956,1,1,-1,5000), -- Scroll: Enchant Armor (Grade D)
 (22018,1872,1,4,-1,250000), -- Animal Bone
@@ -23201,12 +23202,12 @@ INSERT INTO `droplist` VALUES
 (22019,1936,1,1,1,2681), -- White Tunic Pattern
 (22019,956,1,1,2,2899), -- Scroll: Enchant Armor (Grade D)
 (22019,5550,1,1,2,317), -- Durable Metal Plate
-(22019,12026,1,1,1,1932), -- Common Item - Elven Tunic
-(22019,12022,1,1,1,1932), -- Common Item - White Tunic
-(22019,12018,1,1,1,1932), -- Common Item - Mystic\'s Tunic
-(22019,12027,1,1,1,1932), -- Common Item - Elven Stockings
-(22019,12017,1,1,1,1932), -- Common Item - Dark Stockings
-(22019,12019,1,1,1,1932), -- Common Item - Mystic\'s Stockings
+(22019,466,1,1,1,88), -- Elven Stockings
+(22019,433,1,1,1,88), -- Elven Tunic
+(22019,435,1,1,1,88), -- Mystic\'s Tunic
+(22019,467,1,1,1,88), -- Dark Stockings
+(22019,434,1,1,1,88), -- White Tunic
+(22019,468,1,1,1,88), -- Mystic\'s Stockings
 (22019,1834,1,2,-1,50000), -- Emergency Dressing
 (22019,1935,1,1,-1,25000), -- Scale Mail Fragment
 (22019,2183,1,1,-1,5000), -- Recipe: Mithril Banded Mail
@@ -23216,13 +23217,13 @@ INSERT INTO `droplist` VALUES
 (22020,1881,1,1,2,6369), -- Coarse Bone Powder
 (22020,1875,1,1,2,4762), -- Stone of Purity
 (22020,8302,1,1,2,893), -- Recipe: Sword of Magic Fog (100%)
-(22020,12031,1,1,1,1392), -- Common Item - Mithril Breastplate
-(22020,12041,1,1,1,3185), -- Common Item - Mithril Gaiters
-(22020,12032,1,1,1,1392), -- Common Item - Compound Scale Mail
-(22020,12030,1,1,1,1392), -- Common Item - Dwarven Scale Mail
-(22020,12044,1,1,1,1392), -- Common Item - Blast Plate
-(22020,12049,1,1,1,3185), -- Common Item - Compound Scale Gaiters
-(22020,12039,1,1,1,3185), -- Common Item - Dwarven Scale Gaiters
+(22020,378,1,1,1,88), -- Compound Scale Gaiters
+(22020,59,1,1,1,88), -- Mithril Gaiters
+(22020,351,1,1,1,88), -- Blast Plate
+(22020,58,1,1,1,88), -- Mithril Breastplate
+(22020,349,1,1,1,88), -- Compound Scale Mail
+(22020,379,1,1,1,88), -- Dwarven Scale Gaiters
+(22020,350,1,1,1,88), -- Dwarven Scale Mail
 (22020,1901,1,1,-1,25000), -- Tiger\'s Eye Earring Stone
 (22020,2154,1,1,-1,5000), -- Recipe: Elven Earring
 (22020,1938,1,1,-1,25000), -- Mithril Banded Mail Material
@@ -23235,8 +23236,8 @@ INSERT INTO `droplist` VALUES
 (22021,2027,1,1,1,1912), -- Spiked Club Head
 (22021,5220,1,1,2,2058), -- Metal Hardener
 (22021,8295,1,1,2,1028), -- Recipe: Titan Sword (100%)
-(22021,11666,1,1,1,2058), -- Common Item - Spiked Club
-(22021,11663,1,1,1,2058), -- Common Item - Staff of Magic
+(22021,157,1,1,1,8), -- Spiked Club
+(22021,186,1,1,1,8), -- Staff of Magic
 (22021,5220,1,1,-1,50000), -- Metal Hardener
 (22021,1874,1,1,-1,50000), -- Oriharukon Ore
 (22021,1939,1,1,-1,25000), -- Mithril Banded Gaiters Material
@@ -23247,10 +23248,10 @@ INSERT INTO `droplist` VALUES
 (22022,2156,1,1,2,7042), -- Recipe: Elven Necklace
 (22022,1875,1,1,2,8547), -- Stone of Purity
 (22022,2028,1,1,1,808), -- Shilen Knife Edge
-(22022,11673,1,1,1,379), -- Common Item - Kukuri
-(22022,11662,1,1,1,379), -- Common Item - Dagger of Mana
-(22022,11664,1,1,1,379), -- Common Item - Mystic Knife
-(22022,11660,1,1,1,379), -- Common Item - Shilen Knife
+(22022,238,1,1,1,8), -- Dagger of Mana
+(22022,223,1,1,1,8), -- Kukuri
+(22022,239,1,1,1,8), -- Mystic Knife
+(22022,241,1,1,1,8), -- Shilen Knife
 (22022,2155,1,1,-1,5000), -- Recipe: Elven Ring
 (22022,1940,1,2,-1,25000), -- Iron Boots Design
 (22022,2156,1,1,-1,5000), -- Recipe: Elven Necklace
@@ -23261,11 +23262,11 @@ INSERT INTO `droplist` VALUES
 (22023,1889,1,1,2,4566), -- Compound Braid
 (22023,2026,1,1,1,763), -- Two-Handed Sword Edge
 (22023,8295,1,1,2,610), -- Recipe: Titan Sword (100%)
-(22023,11655,1,1,1,122), -- Common Item - Sword of Magic
-(22023,11667,1,1,1,122), -- Common Item - Two-Handed Sword
-(22023,11675,1,1,1,122), -- Common Item - Crimson Sword
-(22023,11670,1,1,1,122), -- Common Item - Elven Sword
-(22023,11657,1,1,1,122), -- Common Item - Sword of Occult
+(22023,83,1,1,1,8), -- Sword of Magic
+(22023,124,1,1,1,8), -- Two-Handed Sword
+(22023,127,1,1,1,8), -- Crimson Sword
+(22023,130,1,1,1,8), -- Elven Sword
+(22023,144,1,1,1,8), -- Sword of Occult
 (22023,8295,1,1,-1,25000), -- Recipe: Titan Sword (100%)
 (22023,1868,1,3,-1,50000), -- Thread
 (22023,1873,1,2,-1,50000), -- Silver Nugget
@@ -23277,8 +23278,8 @@ INSERT INTO `droplist` VALUES
 (22024,1825,1,1,2,5128), -- Recipe: Oriharukon
 (22024,1875,1,1,2,5128), -- Stone of Purity
 (22024,1942,1,1,1,4043), -- Manticore Skin Shirt Texture
-(22024,12054,1,1,1,25645), -- Common Item - Manticore Skin Shirt
-(22024,12052,1,1,1,5435), -- Common Item - Manticore Skin Gaiters
+(22024,417,1,1,1,88), -- Manticore Skin Gaiters
+(22024,395,1,1,1,88), -- Manticore Skin Shirt
 (22024,6036,1,1,-1,5000), -- Greater Magic Haste Potion
 (22024,1902,1,1,-1,25000), -- Elven Earring Beads
 (22024,1825,1,1,-1,5000), -- Recipe: Oriharukon
@@ -23291,9 +23292,9 @@ INSERT INTO `droplist` VALUES
 (22025,2919,1,1,1,4149), -- Brigandine Gaiters Material
 (22025,1941,1,1,1,2463), -- Brigandine Temper
 (22025,1894,1,1,2,4444), -- Crafted Leather
-(22025,12059,1,1,1,887), -- Common Item - Brigandine Tunic
-(22025,12056,1,1,1,1773), -- Common Item - Mithril Scale Gaiters
-(22025,12060,1,1,1,1773), -- Common Item - Brigandine Gaiters
+(22025,34,1,1,1,88), -- Bronze Gaiters
+(22025,395,1,1,1,88), -- Manticore Skin Shirt
+(22025,417,1,1,1,88), -- Manticore Skin Gaiters
 (22025,1903,1,1,-1,25000), -- Elven Ring Piece
 (22025,2145,1,1,-1,5000), -- Recipe: Mithril Alloy
 (22025,1904,1,1,-1,15000), -- Elven Necklace Beads
@@ -23306,9 +23307,9 @@ INSERT INTO `droplist` VALUES
 (22026,8333,1,1,1,1639), -- Sword of Magic Fog Blade 
 (22026,8328,1,1,1,569), -- Titan Sword Blade 
 (22026,2034,1,1,1,213), -- Sword of Revolution Blade
-(22026,11714,1,1,1,1068), -- Common Item - Sword of Revolution
-(22026,11696,1,1,1,1068), -- Common Item - Sword of Magic Fog
-(22026,11710,1,1,1,1068), -- Common Item - Titan Sword
+(22026,129,1,1,1,16), -- Sword of Revolution
+(22026,7886,1,1,1,16), -- Sword of Magic Fog
+(22026,7881,1,1,1,16), -- Titan Sword
 (22026,1864,1,5,-1,50000), -- Stem
 (22026,1869,1,3,-1,50000), -- Iron Ore
 (22026,6036,1,1,-1,5000); -- Greater Magic Haste Potion
@@ -23320,7 +23321,7 @@ INSERT INTO `droplist` VALUES
 (22027,2147,1,1,2,15625), -- Recipe: Blacksmith\'s frame
 (22027,1874,1,1,2,11905), -- Oriharukon Ore
 (22027,6036,1,1,2,8850), -- Greater Magic Haste Potion
-(22027,11683,1,1,1,1038), -- Common Item - Strengthened Long Bow
+(22027,279,1,1,1,38), -- Strengthened Long Bow
 (22027,2040,1,1,1,8333), -- Strengthened Long Bow Shaft
 (22028,57,834,1661,0,700000), -- Adena
 (22028,1864,3,9,2,47619), -- Stem
@@ -23331,9 +23332,9 @@ INSERT INTO `droplist` VALUES
 (22028,8333,1,1,1,2825), -- Sword of Magic Fog Blade 
 (22028,8328,1,1,1,2825), -- Titan Sword Blade 
 (22028,2034,1,1,1,2825), -- Sword of Revolution Blade
-(22028,11714,1,1,1,943), -- Common Item - Sword of Revolution
-(22028,11696,1,1,1,943), -- Common Item - Sword of Magic Fog
-(22028,11710,1,1,1,943), -- Common Item - Titan Sword
+(22028,129,1,1,1,16), -- Sword of Revolution
+(22028,7886,1,1,1,16), -- Sword of Magic Fog
+(22028,7881,1,1,1,16), -- Titan Sword
 (22029,57,517,984,0,700000), -- Adena
 (22029,1868,1,1,2,250000), -- Thread
 (22029,5549,1,1,2,14286), -- Metallic Thread
@@ -23350,7 +23351,7 @@ INSERT INTO `droplist` VALUES
 (22030,1876,1,1,2,25641), -- Mithril Ore
 (22030,1895,1,1,2,37037), -- Metalic Fibber
 (22030,1953,1,1,1,8333), -- Sage's Rag Lining
-(22030,12083,1,1,1,1689), -- Common Item - Sage\'s Rag
+(22030,438,1,1,1,19), -- Sage\'s Rag
 (22030,1905,1,1,-1,65000), -- Omen Beast's Eye Earring Gemstone
 (22030,2160,1,1,-1,40000), -- Recipe: Moonstone Earring
 (22031,57,462,934,0,700000), -- Adena
@@ -23380,8 +23381,8 @@ INSERT INTO `droplist` VALUES
 (22034,1872,1,1,2,90909), -- Animal Bone
 (22034,1867,1,1,2,100000), -- Animal Skin
 (22034,1881,1,1,2,4739), -- Coarse Bone Powder
-(22034,12099,1,1,1,4739), -- Common Item - Karmian Tunic
-(22034,12100,1,1,1,9434), -- Common Item - Karmian Stockings
+(22034,439,1,1,1,47), -- Karmian Tunic
+(22034,471,1,1,1,94), -- Karmian Stockings
 (22034,1954,1,1,1,4739), -- Karmian Stocking Design
 (22034,1962,1,1,1,4739), -- Karmian Tunic Pattern
 (22034,1875,1,1,2,9434), -- Stone of Purity
@@ -23408,8 +23409,8 @@ INSERT INTO `droplist` VALUES
 (22037,1872,1,1,2,62500), -- Animal Bone
 (22037,1867,1,1,2,100000), -- Animal Skin
 (22037,1881,1,1,2,8772), -- Coarse Bone Powder
-(22037,12099,1,1,1,8772), -- Common Item - Karmian Tunic
-(22037,12100,1,1,1,5848), -- Common Item - Karmian Stockings
+(22037,439,1,1,1,47), -- Karmian Tunic
+(22037,471,1,1,1,94), -- Karmian Stockings
 (22037,1954,1,1,1,11628), -- Karmian Stocking Design
 (22037,1962,1,1,1,8772), -- Karmian Tunic Pattern
 (22037,1875,1,1,2,5848), -- Stone of Purity
@@ -23421,7 +23422,7 @@ INSERT INTO `droplist` VALUES
 (22038,57,688,1387,0,700000), -- Adena
 (22038,1871,1,1,2,90909), -- Charcoal
 (22038,1866,1,1,2,83333), -- Suede
-(22038,12109,1,1,1,11905), -- Common Item - Dwarven Chain Gaiters
+(22038,382,1,1,1,119), -- Dwarven Chain Gaiters
 (22038,8724,1,1,200,5236), -- Life Stone: level 49
 (22038,1911,1,1,-1,125000), -- Earring of Protection Gemstone
 (22039,57,717,1431,0,700000), -- Adena
@@ -23451,14 +23452,14 @@ INSERT INTO `droplist` VALUES
 (22045,2926,1,1,1,2169), -- Manticore Skin Gloves Lining
 (22045,2927,1,1,1,4348), -- Brigandine Gauntlets Pattern
 (22045,2928,1,1,1,2169), -- Elven Mithril Gloves Design
-(22045,12053,1,1,1,205), -- Common Item - Manticore Skin Boots
-(22045,12062,1,1,1,205), -- Common Item - Brigandine Boots
-(22045,12066,1,1,1,205), -- Common Item - Elven Mithril Boots
-(22045,12055,1,1,1,205), -- Common Item - Manticore Skin Gloves
-(22045,12061,1,1,1,205), -- Common Item - Brigandine Gauntlets
-(22045,12065,1,1,1,205), -- Common Item - Elven Mithril Gloves
-(22045,12068,1,1,1,205), -- Common Item - Rip Gauntlets
-(22045,12070,1,1,1,205), -- Common Item - Boots of Power
+(22045,606,1,1,1,58), -- Rip Gauntlets
+(22045,1124,1,1,1,58), -- Boots of Power
+(22045,2424,1,1,1,58), -- Manticore Skin Boots
+(22045,2425,1,1,1,58), -- Brigandine Boots
+(22045,2426,1,1,1,58), -- Elven Mithril Boots
+(22045,2448,1,1,1,58), -- Manticore Skin Gloves
+(22045,2449,1,1,1,58), -- Brigandine Gauntlets
+(22045,2450,1,1,1,58), -- Elven Mithril Gloves
 (22045,1879,1,1,-1,30000), -- Cokes
 (22045,1875,1,1,-1,30000), -- Stone of Purity
 (22045,1902,1,1,-1,20000), -- Elven Earring Beads
@@ -23471,8 +23472,8 @@ INSERT INTO `droplist` VALUES
 (22046,8723,1,1,200,1346), -- Life Stone: level 46
 (22047,57,188,386,0,700000), -- Adena
 (22047,1895,1,1,2,13333), -- Metalic Fibber
-(22047,12099,1,1,1,603), -- Common Item - Karmian Tunic
-(22047,12100,1,1,1,603), -- Common Item - Karmian Stockings
+(22047,439,1,1,1,47), -- Karmian Tunic
+(22047,471,1,1,1,94), -- Karmian Stockings
 (22047,1954,1,1,1,1389), -- Karmian Stocking Design
 (22047,1962,1,1,1,4167), -- Karmian Tunic Pattern
 (22047,2166,1,1,1,2778), -- Recipe: Ring of Protection
@@ -23488,9 +23489,9 @@ INSERT INTO `droplist` VALUES
 (22048,1907,1,1,1,1683), -- Necklace of Darkness Gem
 (22048,5550,1,1,2,1683), -- Durable Metal Plate
 (22048,5549,1,1,2,2525), -- Metallic Thread
-(22048,12325,1,1,1,841), -- Common Item - Omen Beast\'s Eye Earring
-(22048,12323,1,1,1,841), -- Common Item - Mithril Ring
-(22048,12324,1,1,1,841), -- Common Item - Necklace of Darkness
+(22048,882,1,1,1,263), -- Mithril Ring
+(22048,851,1,1,2,263), -- Omen Beast's Eye Earring 
+(22048,914,1,1,2,263), -- Necklace of Darkness 
 (22048,1906,1,1,1,843),    -- Mithril Ring Wire
 (22048,1875,1,1,2,1261),    -- Stone of Purity
 (22048,1875,1,3,-1,15211), -- Stone of Purity
@@ -23520,8 +23521,8 @@ INSERT INTO `droplist` VALUES
 (22050,2072,1,1,1,623),      -- Dark Elven Dagger Edge
 (22050,8733,1,1,200,486),      -- Mid-Grade Life Stone: level 46
 (22050,4041,1,1,2,383),      -- Mold Hardener
-(22050,11762,1,1,1,1135), -- Common Item - Cursed Dagger
-(22050,11747,1,1,1,162), -- Common Item - Dark Elven Dagger
+(22050,226,1,1,2,10), -- Cursed Dagger
+(22050,232,1,1,1,10), -- Dark Elven Dagger
 (22050,1881,1,2,-1,25135), -- Coarse Bone Powder
 (22050,2163,1,1,-1,11524), -- Recipe: Earring of Protection
 (22050,1908,1,1,-1,9745), -- Moonstone Earring Wire
@@ -23537,13 +23538,13 @@ INSERT INTO `droplist` VALUES
 (22051,4044,1,1,2,615), -- Thons
 (22051,8724,1,1,200,2155),  -- Life Stone: level 49
 (22051,4041,1,1,2,615), -- Mold Hardener
-(22051,12118,1,1,1,1845), -- Common Item - Crimson Boots
+(22051,1126,1,1,1,53), -- Crimson Boots
 (22051,8734,1,1,200,615), -- Mid-Grade Life Stone: level 49
-(22051,12114,1,1,1,308), -- Common Item - Rind Leather Boots
-(22051,12101,1,1,1,2155), -- Common Item - Plated Leather Gloves
-(22051,12108,1,1,1,923), -- Common Item - Dwarven Chain Gloves
-(22051,12116,1,1,1,923), -- Common Item - Gloves of Seal
-(22051,12112,1,1,1,1845), -- Common Item - Rind Leather Gloves
+(22051,2434,1,1,2,18), -- Rind Leather Boots 
+(22051,2455,1,1,2,53), -- Plated Leather Gloves 
+(22051,2456,1,1,2,53), -- Dwarven Chain Gloves 
+(22051,2457,1,1,2,76), -- Gloves of Seal 
+(22051,2458,1,1,2,53), -- Rind Leather Gloves 
 (22051,951,1,1,1,195),      -- Scroll: Enchant Weapon (Grade C)
 (22051,1894,1,1,-1,8456), -- Crafted Leather
 (22051,4589,1,1,-1,17321), -- Greater Dye of STR <Str+2 Con-2>
@@ -23561,8 +23562,8 @@ INSERT INTO `droplist` VALUES
 (22052,8734,1,1,200,365),      -- Mid-Grade Life Stone: level 49
 (22052,8744,1,1,200,15), -- High-Grade Life Stone: level 49
 (22052,8296,1,1,2,244),      -- Recipe: Pa'agrian Sword (100%)
-(22052,12110,1,1,1,730), -- Common Item - Dwarven Chain Mail Shirt
-(22052,12109,1,1,1,1704), -- Common Item - Dwarven Chain Gaiters
+(22052,382,1,1,2,93), -- Dwarven Chain Gaiters 
+(22052,355,1,1,2,28), -- Dwarven Chain mail Shirt 
 (22052,1912,1,2,-1,8521), -- Ring of Protection Gemstone
 (22052,2166,1,1,-1,13584), -- Recipe: Earrings of Binding (100%)
 (22052,2167,1,1,-1,15241), -- Recipe: Ring of Ages
@@ -23578,9 +23579,9 @@ INSERT INTO `droplist` VALUES
 (22053,8724,1,1,200,2353),      -- Life Stone: level 49
 (22053,4041,1,1,2,770),      -- Mold Hardener
 (22053,8734,1,1,200,770),      -- Mid-Grade Life Stone: level 49
-(22053,12102,1,1,1,4785), -- Common Item - Dwarven Chain Shield
-(22053,12106,1,1,1,2740), -- Common Item - Great Helmet
-(22053,12107,1,1,1,3717), -- Common Item - Knight\'s Shield
+(22053,632,1,1,2,211),  -- Knight's Shield 
+(22053,2496,1,1,2,133), -- Dwarven Chain Shield 
+(22053,500,1,1,2,66), -- Great Helmet 
 (22053,8744,1,1,200,43),      -- High-Grade Life Stone: level 49
 (22053,1866,1,3,-1,16725), -- Suede
 (22053,1913,1,1,-1,8125), -- Necklace of Protection Gemstone
@@ -23601,12 +23602,12 @@ INSERT INTO `droplist` VALUES
 (22054,8734,1,1,200,936),      -- Mid-Grade Life Stone: level 49
 (22054,8724,1,1,200,2457),      -- Life Stone: level 49
 (22054,8744,1,1,200,74), -- High-Grade Life Stone: level 49
-(22054,12118,1,1,1,1842), -- Common Item - Crimson Boots
-(22054,12114,1,1,1,936), -- Common Item - Rind Leather Boots
-(22054,12101,1,1,1,2762), -- Common Item - Plated Leather Gloves
-(22054,12108,1,1,1,2762), -- Common Item - Dwarven Chain Gloves
-(22054,12116,1,1,1,936), -- Common Item - Gloves of Seal
-(22054,12112,1,1,1,1534), -- Common Item - Rind Leather Gloves
+(22054,2455,1,1,1,81), -- Plated Leather Gloves
+(22054,2434,1,1,2,194), -- Rind Leather Boots 
+(22054,1126,1,1,2,97), -- Crimson Boots 
+(22054,2458,1,1,2,90), -- Rind Leather Gloves 
+(22054,2457,1,1,2,84), -- Gloves of Seal 
+(22054,2456,1,1,2,81), -- Dwarven Chain Gloves 
 (22054,1884,1,3,-1,370370), -- Cord
 (22054,4590,1,1,-1,17325), -- Greater Dye of STR <Str+2 Dex-2>
 (22054,1966,1,1,-1,35012), -- Plated Leather Fragment
@@ -23624,9 +23625,9 @@ INSERT INTO `droplist` VALUES
 (22055,8734,1,1,200,596), -- Mid-Grade Life Stone: level 49
 (22055,8754,1,1,200,24), -- Top-Grade Life Stone: level 49
 (22055,8318,1,1,2,60),      -- Recipe: Dwarven Hammer (100%)
-(22055,12102,1,1,1,5435), -- Common Item - Dwarven Chain Shield
-(22055,12106,1,1,1,3125), -- Common Item - Great Helmet
-(22055,12107,1,1,1,4854), -- Common Item - Knight\'s Shield
+(22055,632,1,1,2,139), -- Knight's Shield 
+(22055,2496,1,1,2,113), -- Dwarven Chain Shield 
+(22055,500,1,1,2,52), -- Great Helmet
 (22055,2168,1,1,-1,26541), -- Recipe: Necklace of Mermaid
 (22055,1967,1,1,-1,25123), -- Plated Leather Gaiters Material
 (22055,2222,1,1,-1,13211), -- Recipe: Composite Armor
@@ -23640,8 +23641,8 @@ INSERT INTO `droplist` VALUES
 (22056,8724,1,1,200,3185), -- Life Stone: level 49
 (22056,2222,1,1,2,590),      -- Recipe: Composite Armor
 (22056,8734,1,1,200,405),      -- Mid-Grade Life Stone: level 49
-(22056,12110,1,1,1,1916), -- Common Item - Dwarven Chain Mail Shirt
-(22056,12109,1,1,1,2398), -- Common Item - Dwarven Chain Gaiters
+(22056,382,1,1,2,97), -- Dwarven Chain Gaiters 
+(22056,355,1,1,2,46), -- Dwarven Chain mail Shirt 
 (22056,8744,1,1,200,74),      -- High-Grade Life Stone: level 49
 (22056,8754,1,1,200,18), -- Top-Grade Life Stone: level 49
 (22056,1876,1,3,-1,216210), -- Mithril Ore
@@ -23660,9 +23661,9 @@ INSERT INTO `droplist` VALUES
 (22057,8725,1,1,200,1761),      -- Life Stone: level 52
 (22057,8735,1,1,200,392),      -- Mid-Grade Life Stone: level 52
 (22057,8745,1,1,200,33),      -- High-Grade Life Stone: level 52
-(22057,12332,1,1,1,1208), -- Common Item - Earring of Binding
-(22057,12333,1,1,1,2481), -- Common Item - Ring of Ages
-(22057,12334,1,1,1,1175), -- Common Item - Necklace of Mermaid
+(22057,885,1,1,2,77), -- Ring of Ages 
+(22057,917,1,1,2,46), -- Necklace of Mermaid 
+(22057,854,1,1,2,31), -- Earring of Binding 
 (22057,1539,1,2,-1,131157), -- Greater Healing Potion
 (22057,1875,1,2,-1,91969), -- Stone of Purity
 (22057,4601,1,1,-1,25142), -- Greater Dye of STR <Str+3 Con-3>
@@ -23678,9 +23679,9 @@ INSERT INTO `droplist` VALUES
 (22058,4043,1,1,2,2475),		-- Asofe
 (22058,5550,1,1,2,779),		-- Durable Metal Plate
 (22058,8725,1,1,200,2053),		-- Life Stone: level 52
-(22058,12332,1,1,1,3333), -- Common Item - Earring of Binding
-(22058,12333,1,1,1,2907), -- Common Item - Ring of Ages
-(22058,12334,1,1,1,1984), -- Common Item - Necklace of Mermaid
+(22058,885,1,1,2,178), -- Ring of Ages
+(22058,854,1,1,2,71), -- Earring of Binding
+(22058,917,1,1,2,71), -- Necklace of Mermaid
 (22058,8735,1,1,200,708),		-- Mid-Grade Life Stone: level 52
 (22058,8745,1,1,200,18), -- High-Grade Life Stone: level 52
 (22058,1914,1,1,-1,125051),	-- Earring of Binding Gemstone
@@ -23723,8 +23724,8 @@ INSERT INTO `droplist` VALUES
 (22062,2234,1,1,2,2268), -- Recipe: Divine Stockings
 (22062,2106,1,1,1,2268), -- Grace Dagger Edge
 (22062,2107,1,1,1,1359), -- Dark Screamer Edge
-(22062,11800,1,1,1,906), -- Common Item - Grace Dagger
-(22062,11803,1,1,1,906), -- Common Item - Dark Screamer
+(22062,231,1,1,1,10), -- Grace Dagger
+(22062,233,1,1,1,10), -- Dark Screamer
 (22062,8725,1,1,200,6329), -- Life Stone: level 52
 (22062,8735,1,1,200,1359), -- Mid-Grade Life Stone: level 52
 (22062,8745,1,1,200,453), -- High-Grade Life Stone: level 52
@@ -23828,9 +23829,9 @@ INSERT INTO `droplist` VALUES
 (22074,2115,1,1,1,2008),	-- Samurai Longsword Blade
 (22074,5530,1,1,1,1267),	-- Berserker Blade Edge
 (22074,8335,1,1,1,1479),	-- Ecliptic Sword Blade
-(22074,11853,1,1,1,347), -- Common Item - Samurai Longsword
-(22074,11850,1,1,1,347),	-- Common Item - Ecliptic Sword
-(22074,11843,1,1,1,347), -- Common Item - Berserker Blade
+(22074,11853,1,1,1,7), -- Samurai Longsword
+(22074,11850,1,1,1,7),	-- Ecliptic Sword
+(22074,11843,1,1,1,7), -- Berserker Blade
 (22074,4142,1,1,2,2083),	-- Recipe: Avadon Gaiters
 (22074,2115,1,1,-1,97315),	-- Samurai Longsword Blade
 (22074,4141,1,1,-1,25162),	-- Recipe: Avadon Breastplate
@@ -23893,8 +23894,8 @@ INSERT INTO `droplist` VALUES
 (22079,4040,1,1,2,821), -- Mold Lubricant
 (22079,4126,1,1,2,1094), -- Recipe: Adamantite Earrings
 (22079,4041,1,1,2,274), -- Mold Hardener
-(22079,12138,1,1,1,274), -- Common Item - Divine Tunic
-(22079,12139,1,1,1,821), -- Common Item - Divine Stockings
+(22079,473,1,1,1,31), -- Divine Stockings
+(22079,442,1,1,1,16), -- Divine Tunic
 (22079,2121,1,1,-1,20680), -- Eminence Bow Shaft
 (22079,4145,1,1,-1,19075), -- Recipe: Avadon Leather Armor
 (22079,2122,1,1,-1,16626), -- Orcish Poleaxe Blade
@@ -23908,9 +23909,9 @@ INSERT INTO `droplist` VALUES
 (22080,2917,1,1,1,6849), -- Ring of Binding Gemstone
 (22080,1918,1,1,1,5291), -- Nassen\'s Earring Gemstone
 (22080,1920,1,1,1,4115), -- Necklace of Binding Chain
-(22080,12336,1,1,1,399), -- Common Item - Necklace of Binding
-(22080,12335,1,1,1,399), -- Common Item - Nassen\'s Earring
-(22080,12337,1,1,1,1595), -- Common Item - Ring of Binding
+(22080,886,1,1,1,154), -- Ring of Binding
+(22080,855,1,1,1,113), -- Nassen\'s Earring
+(22080,119,1,1,1,88), -- Necklace of Binding
 (22080,8726,1,1,200,1196), -- Life Stone: level 55
 (22080,8736,1,1,200,399), -- Mid-Grade Life Stone: level 55
 (22080,1867,1,5,-1,823561), -- Animal Skin
@@ -23930,13 +23931,13 @@ INSERT INTO `droplist` VALUES
 (22081,2960,1,1,1,1754), -- Drake Leather Boots Design
 (22081,2962,1,1,1,1515), -- Drake Leather Gloves Design
 (22081,4128,1,1,2,549), -- Recipe: Adamantite Necklace
-(22081,12132,1,1,1,664), -- Common Item - Theca Leather Boots
-(22081,12136,1,1,1,527), -- Common Item - Drake Leather Boots
-(22081,12142,1,1,1,298), -- Common Item - Full Plate Boots
-(22081,12131,1,1,1,458), -- Common Item - Theca Leather Gloves
-(22081,12134,1,1,1,321), -- Common Item - Drake Leather Gloves
-(22081,12141,1,1,1,572), -- Common Item - Full Plate Gauntlets
-(22081,12137,1,1,1,458), -- Common Item - Divine Gloves
+(22081,2436,1,1,1,18), -- Theca Leather Boots
+(22081,2437,1,1,1,18), -- Drake Leather Boots
+(22081,2438,1,1,1,18), -- Full Plate Boots
+(22081,2460,1,1,1,18), -- Theca Leather Gloves
+(22081,2461,1,1,1,18), -- Drake Leather Gloves
+(22081,2462,1,1,1,18), -- Full Plate Gauntlets
+(22081,2463,1,1,1,18), -- Divine Gloves
 (22081,4146,1,1,-1,58761), -- Recipe: Tunic of Zubei
 (22081,2954,1,2,-1,22577), -- Theca Leather Boots Texture
 (22081,4147,1,2,-1,1135), -- Recipe: Stockings of Zubei
@@ -23951,8 +23952,8 @@ INSERT INTO `droplist` VALUES
 (22082,4128,1,1,2,662), -- Recipe: Adamantite Necklace
 (22082,2966,1,1,1,6172), -- Full Plate Shield Fragment
 (22082,2959,1,1,1,3921), -- Full Plate Helmet Design
-(22082,12145,1,1,1,1362), -- Common Item - Full Plate Helmet
-(22082,12143,1,1,1,1779), -- Common Item - Full Plate Shield
+(22082,2497,1,1,1,83), -- Full Plate Shield
+(22082,2414,1,1,1,71), -- Full Plate Helmet
 (22082,8726,1,1,200,1135), -- Life Stone: level 55
 (22082,8736,1,1,200,265), -- Mid-Grade Life Stone: level 55
 (22082,8746,1,1,200,19), -- High-Grade Life Stone: level 55
@@ -23970,9 +23971,9 @@ INSERT INTO `droplist` VALUES
 (22083,4040,1,1,2,981), -- Mold Lubricant
 (22083,4041,1,1,2,981), -- Mold Hardener
 (22083,4134,1,1,2,967), -- Recipe: Zubei\'s Gaiters
-(22083,12336,1,1,1,981), -- Common Item - Necklace of Binding
-(22083,12335,1,1,1,2208), -- Common Item - Nassen\'s Earring
-(22083,12337,1,1,1,1965), -- Common Item - Ring of Binding
+(22083,886,1,1,1,64), -- Ring of Binding
+(22083,119,1,1,1,40), -- Necklace of Binding
+(22083,855,1,1,1,24), -- Nassen\'s Earring
 (22083,2959,1,2,-1,20931), -- Full Plate Helmet Design
 (22083,4148,1,1,-1,10906), -- Recipe: Avadon Robe
 (22083,2960,1,2,-1,106563), -- Drake Leather Boots Design
@@ -24004,9 +24005,9 @@ INSERT INTO `droplist` VALUES
 (22085,4039,1,1,2,1379), -- Mold Glue
 (22085,4043,1,1,2,1724), -- Asofe
 (22085,1806,1,1,1,77), -- Recipe: Soulshot: B-Grade
-(22085,12336,1,1,1,690), -- Common Item - Necklace of Binding
-(22085,12335,1,1,1,1227), -- Common Item - Nassen\'s Earring
-(22085,12337,1,1,1,1572), -- Common Item - Ring of Binding
+(22085,886,1,1,1,60), -- Ring of Binding
+(22085,855,1,1,1,45), -- Nassen\'s Earring
+(22085,119,1,1,1,15), -- Necklace of Binding
 (22085,1918,1,1,-1,197438), -- Nassen\'s Earring Gemstone
 (22085,4043,1,1,-1,121204), -- Asofe
 (22085,1874,1,2,-1,113674), -- Oriharukon Ore
@@ -24275,10 +24276,10 @@ INSERT INTO `droplist` VALUES
 (22105,8346,1,1,1,1200), -- Hammer Piece of Destroyer 
 (22105,5532,1,1,1,900), -- Meteor Shower Head
 (22105,8341,1,1,1,600), -- Spiritual Eye Piece
-(22105,11946,1,1,1,115), --  Common Item - Dasparion\'s Staff
-(22105,11949,1,1,1,115), --  Common Item - Meteor Shower
-(22105,11953,1,1,1,115), --  Common Item - Spiritual Eye
-(22105,11958,1,1,1,115), --  Common Item - Destroyer Hammer
+(22105,212,1,1,1,8), -- Dasparion\'s Staff
+(22105,2504,1,1,1,8), -- Meteor Shower
+(22105,7894,1,1,1,8), -- Spiritual Eye
+(22105,7899,1,1,1,8), -- Destroyer Hammer
 (22105,3957,1,1,1,51), -- Recipe: Blessed Spiritshot S
 (22105,8731,1,1,200,2358), -- Life Stone: level 70
 (22105,8741,1,1,200,512), -- Mid-Grade Life Stone: level 70
@@ -24297,10 +24298,10 @@ INSERT INTO `droplist` VALUES
 (22106,8341,1,1,1,1173), -- Spiritual Eye Piece
 (22106,8346,1,1,1,1173), -- Hammer Piece of Destroyer 
 (22106,5532,1,1,1,262), -- Meteor Shower Head
-(22106,11946,1,1,1,254), --  Common Item - Dasparion\'s Staff
-(22106,11949,1,1,1,145), --  Common Item - Meteor Shower
-(22106,11953,1,1,1,36), --  Common Item - Spiritual Eye
-(22106,11958,1,1,1,73), --  Common Item - Destroyer Hammer
+(22106,212,1,1,1,8), -- Dasparion\'s Staff
+(22106,2504,1,1,1,8), -- Meteor Shower
+(22106,7894,1,1,1,8), -- Spiritual Eye
+(22106,7899,1,1,1,8), -- Destroyer Hammer
 (22106,8487,1,1,2,500), -- Recipe: Destroyer Hammer(60%)
 (22106,3957,1,1,1,145), -- Recipe: Blessed Spiritshot S
 (22106,8731,1,1,200,2688), -- Life Stone: level 70
@@ -24316,7 +24317,7 @@ INSERT INTO `droplist` VALUES
 (22107,4039,1,1,2,11765), -- Mold Glue
 (22107,4041,1,1,2,3067), -- Mold Hardener
 (22107,5542,1,1,1,5747), -- Halberd Edge
-(22107,11960,1,1,1,248), -- Common Item - Halberd
+(22107,98,1,1,1,8), -- Halberd
 (22107,3957,1,1,1,304), -- Recipe: Blessed Spiritshot S
 (22107,8731,1,1,200,2817), -- Life Stone: level 70
 (22107,8741,1,1,200,580), -- Mid-Grade Life Stone: level 70
@@ -24335,9 +24336,9 @@ INSERT INTO `droplist` VALUES
 (22108,5479,1,1,1,4695), -- Sealed Tallum Leather Armor Pattern
 (22108,5478,1,1,1,3356), -- Sealed Dark Crystal Leather Armor Pattern
 (22108,5272,1,1,2,563), -- Recipe: Greater Soulshot(S) Compressed Package(100%)
-(22108,12222,1,1,1,704), -- Common Item - Sealed Dark Crystal Leather Armor
-(22108,12228,1,1,1,1495), -- Common Item - Sealed Dark Crystalline Leggings
-(22108,12230,1,1,1,440), -- Common Item - Sealed Tallum Leather Armor
+(22108,5297,1,1,1,88), -- Sealed Dark Crystal Leather Armor
+(22108,5298,1,1,1,88), -- Sealed Dark Crystalline Leggings
+(22108,5301,1,1,1,66), -- Sealed Tallum Leather Armor
 (22108,5485,1,1,-1,25000), -- Sealed Tallum Tunic Texture
 (22108,5442,1,1,-1,5000), -- Recipe: Soul Bow(60%)
 (22108,5486,1,1,-1,25000), -- Sealed Dark Crystal Robe Fabric
@@ -24352,9 +24353,9 @@ INSERT INTO `droplist` VALUES
 (22109,5521,1,1,1,2632), -- Sealed Tallum Plate Armor Pattern
 (22109,5520,1,1,1,1757), -- Sealed Dark Crystal Breastplate Pattern
 (22109,5162,1,1,2,970), -- Recipe: Spiritshot(S) Compressed Package(100%)
-(22109,12227,1,1,1,1107), -- Common Item - Sealed Dark Crystal breastplate
-(22109,12220,1,1,1,705), -- Common Item - Sealed Dark Crystal Gaiters
-(22109,12233,1,1,1,604), -- Common Item - Sealed Tallum Plate Armor
+(22109,5287,1,1,1,88), -- Sealed Dark Crystal breastplate
+(22109,5288,1,1,1,88), -- Sealed Dark Crystal Gaiters
+(22109,5293,1,1,1,66), -- Sealed Tallum Plate Armor
 (22109,5448,1,1,-1,5000), -- Recipe: Soul Separator(60%)
 (22109,5489,1,1,-1,15000), -- Sealed Tallum Stockings Fabric
 (22109,730,1,1,-1,500), -- Scroll: Enchant Armor(Grade A)
@@ -24368,6 +24369,9 @@ INSERT INTO `droplist` VALUES
 (22110,5524,1,1,1,4016), -- Sealed Dark Crystal Gaiters Pattern
 (22110,5521,1,1,1,4016), -- Sealed Tallum Plate Armor Pattern
 (22110,5167,1,1,2,4016), -- Recipe: Blessed Spiritshot(S) Compressed Package(100%)
+(22110,5287,1,1,1,88), -- Sealed Dark Crystal breastplate
+(22110,5288,1,1,1,88), -- Sealed Dark Crystal Gaiters
+(22110,5293,1,1,1,66), -- Sealed Tallum Plate Armor
 (22110,1885,1,1,-1,900000), -- High Grade Suede
 (22110,5494,1,1,-1,180000), -- Sealed Dark Crystal Shield Fragment
 (22110,4041,1,1,-1,90000), -- Mold Hardener
@@ -24381,6 +24385,10 @@ INSERT INTO `droplist` VALUES
 (22111,5543,1,1,1,1209), -- Dasparion\'s Staff Edge
 (22111,5532,1,1,1,1209), -- Meteor Shower Head
 (22111,5548,1,1,1,1209), -- Tallum Blade Edge
+(22111,212,1,1,1,8), -- Dasparion\'s Staff
+(22111,2504,1,1,1,8), -- Meteor Shower
+(22111,7894,1,1,1,8), -- Spiritual Eye
+(22111,7899,1,1,1,8), -- Destroyer Hammer
 (22111,8346,1,1,1,1243), -- Hammer Piece of Destroyer
 (22111,8341,1,1,1,746), -- Spiritual Eye Piece
 (22111,8731,1,1,200,2183), -- Life Stone: level 70
@@ -24397,9 +24405,9 @@ INSERT INTO `droplist` VALUES
 (22112,5526,1,1,1,9434), -- Sealed Tallum Helm Design
 (22112,5525,1,1,1,6944), -- Sealed Dark Crystal Helmet Design
 (22112,4041,1,1,2,5650), -- Mold Hardener
-(22112,12226,1,1,1,1511), -- Common Item - Sealed Dark Crystal Helmet
-(22112,12225,1,1,1,3021), -- Common Item - Sealed Dark Crystal Shield
-(22112,12234,1,1,1,1008), -- Common Item - Sealed Tallum Helmet
+(22112,5289,1,1,1,88), -- Sealed Dark Crystal Helmet
+(22112,5294,1,1,1,88), -- Sealed Tallum Helmet
+(22112,5292,1,1,1,88), -- Sealed Dark Crystal Shield
 (22112,5277,1,1,2,1483), -- Recipe: Greater Spiritshot(S) Compressed Package(100%)
 (22112,5478,1,1,-1,200000), -- Sealed Dark Crystal Leather Armor Pattern
 (22112,729,1,1,-1,2500), -- Scroll: Enchant Weapon(Grade A)
@@ -24416,9 +24424,9 @@ INSERT INTO `droplist` VALUES
 (22113,8331,1,1,1,1686), -- Infernal Master Blade
 (22113,5548,1,1,1,1125), -- Tallum Blade Edge
 (22113,5277,1,1,2,407), -- Recipe: Greater Spiritshot(S) Compressed Package(100%)
-(22113,11957,1,1,1,102), -- Common Item - Tallum Blade
-(22113,11952,1,1,1,102), -- Common Item - Elemental Sword
-(22113,11954,1,1,1,102), -- Common Item - Infernal Master
+(22113,80,1,1,1,8), -- Tallum Blade
+(22113,150,1,1,1,8), -- Elemental Sword
+(22113,7884,1,1,1,8), -- Infernal Master
 (22113,8731,1,1,200,7813), -- Life Stone: level 70
 (22113,8741,1,1,200,611), -- Mid-Grade Life Stone: level 70
 (22113,1875,1,3,-1,800000), -- Stone of Purity
@@ -24431,6 +24439,9 @@ INSERT INTO `droplist` VALUES
 (22114,1876,1,1,2,90909), -- Mithril Ore
 (22114,4042,1,1,2,4878), -- Enria
 (22114,8331,1,1,1,13514), -- Infernal Master Blade
+(22114,80,1,1,1,8), -- Tallum Blade
+(22114,150,1,1,1,8), -- Elemental Sword
+(22114,7884,1,1,1,8), -- Infernal Master
 (22114,8731,1,1,200,2439), -- Life Stone: level 70
 (22115,57,3878,7933,0,700000), -- Adena
 (22115,1867,1,3,2,125000), -- Animal Skin
@@ -24442,9 +24453,9 @@ INSERT INTO `droplist` VALUES
 (22115,8331,1,1,1,4237), -- Infernal Master Blade
 (22115,5547,1,1,1,3185), -- Elemental Sword Edge
 (22115,5548,1,1,1,3185), -- Tallum Blade Edge
-(22115,11957,1,1,1,660), -- Common Item - Tallum Blade
-(22115,11952,1,1,1,660), -- Common Item - Elemental Sword
-(22115,11954,1,1,1,660), -- Common Item - Infernal Master
+(22115,150,1,1,1,8), -- Elemental Sword
+(22115,7884,1,1,1,8), -- Infernal Master
+(22115,80,1,1,1,8), -- Tallum Blade
 (22115,8732,1,1,200,1608), -- Life Stone: level 76
 (22115,8742,1,1,200,495), -- Mid-Grade Life Stone: level 76
 (22115,3036,1,1,2,500), -- Recipe: Spiritshot S
@@ -24458,7 +24469,7 @@ INSERT INTO `droplist` VALUES
 (22116,5220,1,1,2,11628), -- Metal Hardener
 (22116,5539,1,1,1,9174), -- Blood Tornado Edge
 (22116,4041,1,1,2,2331), -- Mold Hardener
-(22116,11950,1,1,1,376), -- Common Item - Blood Tornado
+(22116,269,1,1,1,8), -- Blood Tornado
 (22116,8732,1,1,200,3155), -- Life Stone: level 76
 (22116,8742,1,1,200,226), -- Mid-Grade Life Stone: level 76
 (22116,8752,1,1,200,226), -- High-Grade Life Stone: level 76
@@ -24474,7 +24485,7 @@ INSERT INTO `droplist` VALUES
 (22117,4043,1,1,2,4065), -- Asofe
 (22117,5550,1,1,2,5208), -- Durable Metal Plate
 (22117,5542,1,1,1,5618), -- Halberd Edge
-(22117,11960,1,1,1,1739), -- Common Item - Halberd
+(22117,98,1,1,1,8), -- Halberd
 (22117,5157,1,1,2,500), -- Recipe: Soulshot(S) Compressed Package(100%)
 (22117,5502,1,1,-1,25000), -- Sealed Boots of Nightmare Lining
 (22117,5550,1,1,-1,50000), -- Durable Metal Plate
@@ -24489,9 +24500,9 @@ INSERT INTO `droplist` VALUES
 (22118,1894,1,1,2,14586), -- Crafted Leather
 (22118,4042,1,1,2,9804), -- Enria
 (22118,6342,1,1,1,5000), -- Sealed Majestic Earring Gemstone
-(22118,12350,1,1,1,1560), -- Common Item - Sealed Majestic Necklace
-(22118,12352,1,1,1,1718), -- Common Item - Sealed Majestic Earring
-(22118,12351,1,1,1,2342), -- Common Item - Sealed Majestic Ring
+(22118,6326,1,1,2,111), -- Sealed Majestic Necklace
+(22118,6327,1,1,2,111), -- Sealed Majestic Earring
+(22118,6328,1,1,2,111), -- Sealed Majestic Ring
 (22118,959,1,1,1,180), -- Scroll: Enchant Weapon(Grade S)
 (22118,5503,1,1,-1,250000), -- Sealed Majestic Boots Lining
 (22118,5272,1,1,-1,5000), -- Recipe: Greater Soulshot(S) Compressed Package(100%)
@@ -24508,9 +24519,9 @@ INSERT INTO `droplist` VALUES
 (22119,6346,1,1,1,18519), -- Sealed Majestic Ring Gemstone
 (22119,6342,1,1,1,18519), -- Sealed Majestic Earring Gemstone
 (22119,6344,1,1,1,18519), -- Sealed Majestic Necklace Beads
-(22119,12350,1,1,1,2381), -- Common Item - Sealed Majestic Necklace
-(22119,12352,1,1,1,2381), -- Common Item - Sealed Majestic Earring
-(22119,12351,1,1,1,2381), -- Common Item - Sealed Majestic Ring
+(22119,6326,1,1,2,111), -- Sealed Majestic Necklace
+(22119,6327,1,1,2,111), -- Sealed Majestic Earring
+(22119,6328,1,1,2,111), -- Sealed Majestic Ring
 (22119,1873,1,1,2,200000), -- Silver Nugget
 (22120,57,5464,11150,0,700000), -- Adena
 (22120,1870,2,6,2,100000), -- Coal
@@ -24522,10 +24533,10 @@ INSERT INTO `droplist` VALUES
 (22120,5502,1,1,1,9259), -- Sealed Boots of Nightmare Lining
 (22120,5515,1,1,1,9259), -- Sealed Majestic Gloves Design
 (22120,5503,1,1,1,3968), -- Sealed Majestic Boots Lining
-(22120,12264,1,1,1,1342), -- Common Item - Sealed Gloves of Nightmare
-(22120,12267,1,1,1,1789), -- Common Item - Sealed Boots of Nightmare
-(22120,12257,1,1,1,1044), -- Common Item - Sealed Majestic Gloves
-(22120,12260,1,1,1,1938), -- Common Item - Sealed Majestic Boots
+(22120,5314,1,1,1,88), -- Sealed Boots of Nightmare
+(22120,5318,1,1,1,88), -- Sealed Majestic Gloves
+(22120,5313,1,1,1,88), -- Sealed Gloves of Nightmare
+(22120,5319,1,1,1,88), -- Sealed Majestic Boots
 (22120,6901,1,1,2,500), -- Recipe: Shining Arrow(100%)
 (22120,5522,1,1,-1,250000), -- Sealed Armor of Nightmare Pattern
 (22120,5282,1,1,-1,5000), -- Recipe: Greater Blessed Spiritshot(S) Compressed Package(100%)
@@ -24540,8 +24551,8 @@ INSERT INTO `droplist` VALUES
 (22121,4039,1,1,2,25000), -- Mold Glue
 (22121,5487,1,1,1,7194), -- Sealed Robe of Nightmare Fabric
 (22121,5488,1,1,1,7194), -- Sealed Majestic Robe Fabric
-(22121,12266,1,1,1,357), -- Common Item - Sealed Robe of Nightmare
-(22121,12259,1,1,1,535), -- Common Item - Sealed Majestic Robe
+(22121,5326,1,1,1,66), -- Sealed Robe of Nightmare
+(22121,5329,1,1,1,66), -- Sealed Majestic Robe
 (22121,959,1,1,2,180), -- Scroll: Enchant Weapon(Grade S)
 (22121,5523,1,1,-1,150000), -- Sealed Majestic Plate Armor Pattern
 (22121,1808,1,1,-1,5000), -- Recipe: Soulshot: S Grade
@@ -24557,10 +24568,10 @@ INSERT INTO `droplist` VALUES
 (22122,5515,1,1,1,8196), -- Sealed Majestic Gloves Design
 (22122,5503,1,1,1,8064), -- Sealed Majestic Boots Lining
 (22122,960,1,1,2,319), -- Scroll: Enchant Armor (Grade S)
-(22122,12264,1,1,1,1395), -- Common Item - Sealed Gloves of Nightmare
-(22122,12267,1,1,1,1475), -- Common Item - Sealed Boots of Nightmare
-(22122,12257,1,1,1,1236), -- Common Item - Sealed Majestic Gloves
-(22122,12260,1,1,1,1634), -- Common Item - Sealed Majestic Boots
+(22122,5314,1,1,1,136), -- Sealed Boots of Nightmare
+(22122,5319,1,1,1,87), -- Sealed Majestic Boots
+(22122,5313,1,1,1,68), -- Sealed Gloves of Nightmare
+(22122,5318,1,1,1,48), -- Sealed Majestic Gloves
 (22122,4040,1,2,-1,62500), -- Mold Lubricant
 (22122,6346,1,3,-1,125000), -- Sealed Majestic Ring Gemstone
 (22122,6901,1,1,-1,5000), -- Recipe: Shining Arrow (100%)
@@ -24573,9 +24584,9 @@ INSERT INTO `droplist` VALUES
 (22123,5527,1,1,1,8928), -- Sealed Helm of Nightmare Design
 (22123,5528,1,1,1,8474), -- Sealed Majestic Circlet Design
 (22123,6901,1,1,2,596), -- Recipe: Shining Arrow (100%)
-(22123,12269,1,1,1,1192), -- Common Item - Sealed Helm of Nightmare
-(22123,12268,1,1,1,1629), -- Common Item - Sealed Shield of Nightmare
-(22123,12261,1,1,1,1908), -- Common Item - Sealed Majestic Circlet
+(22123,5312,1,1,1,48), -- Sealed Helm of Nightmare
+(22123,5315,1,1,1,68), -- Sealed Shield of Nightmare
+(22123,5317,1,1,1,48), -- Sealed Majestic Circlet
 (22123,6342,1,1,-1,250000), -- Sealed Majestic Earring Gemstone
 (22123,5282,1,1,-1,5000), -- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%)
 (22123,6344,1,1,-1,125000), -- Sealed Majestic Necklace Beads
@@ -24592,9 +24603,9 @@ INSERT INTO `droplist` VALUES
 (22124,4042,1,1,2,7042), -- Enria
 (22124,6344,1,1,1,7751), -- Sealed Majestic Necklace Beads
 (22124,959,1,1,2,55), -- Scroll: Enchant Weapon (Grade S)
-(22124,12350,1,1,1,1828), -- Common Item - Sealed Majestic Necklace
-(22124,12352,1,1,1,1220), -- Common Item - Sealed Majestic Earring
-(22124,12351,1,1,1,2288), -- Common Item - Sealed Majestic Ring
+(22124,6327,1,1,1,55), -- Sealed Majestic Earring
+(22124,6326,1,1,1,27), -- Sealed Majestic Necklace
+(22124,6328,1,1,1,139), -- Sealed Majestic Ring
 (22124,4040,1,1,-1,500000), -- Mold Lubricant
 (22124,5480,1,1,-1,125000), -- Sealed Leather Armor of Nightmare Fabric
 (22124,1808,1,1,-1,5000), -- Recipe: Soulshot: S Grade
@@ -24608,7 +24619,7 @@ INSERT INTO `droplist` VALUES
 (22125,4042,1,1,2,11111), -- Enria
 (22125,5541,1,1,1,4465), -- Tallum Glaive Edge
 (22125,960,1,1,2,209), -- Scroll: Enchant Armor (Grade S)
-(22125,11976,1,1,1,314), -- Common Item - Tallum Glaive
+(22125,305,1,1,1,8), -- Tallum Glaive
 (22125,5481,1,1,-1,125000), -- Sealed Majestic Leather Armor Fabric
 (22125,5487,1,1,-1,120000), -- Sealed Robe of Nightmare Fabric
 (22125,3036,1,1,-1,5000), -- Recipe: Spiritshot S
@@ -24621,8 +24632,8 @@ INSERT INTO `droplist` VALUES
 (22126,5523,1,1,1,3164), -- Sealed Majestic Plate Armor Pattern
 (22126,5522,1,1,1,2816), -- Sealed Armor of Nightmare Pattern
 (22126,6901,1,1,2,370), -- Recipe: Shining Arrow (100%)
-(22126,12263,1,1,1,347), -- Common Item - Sealed Armor of Nightmare
-(22126,12262,1,1,1,532), -- Common Item - Sealed Majestic Plate Armor
+(22126,5311,1,1,1,30), -- Sealed Armor of Nightmare
+(22126,5316,1,1,1,30), -- Sealed Majestic Plate Armor
 (22126,4043,1,2,-1,645000), -- Asofe
 (22126,5488,1,1,-1,78000), -- Sealed Majestic Robe Fabric
 (22126,5550,1,1,-1,270000), -- Durable Metal Plate
@@ -24630,10 +24641,10 @@ INSERT INTO `droplist` VALUES
 (22126,8742,1,1,200,671), -- Mid-Grade Life Stone: level 76
 (22126,8752,1,1,200,162), -- High-Grade Life Stone: level 76
 (22127,57,4689,9571,0,700000), -- Adena
-(22127,11974,1,1,1,35), -- Common Item - Elysian
-(22127,11970,1,1,1,35), -- Common Item - Branch of The Mother Tree
-(22127,11969,1,1,1,35), -- Common Item - Flaming Dragon Skull
-(22127,11966,1,1,1,35), -- Common Item - Doom Crusher
+(22127,16,1,1,1,11), -- Elysian
+(22127,213,1,1,1,11), -- Branch of The Mother Tree
+(22127,7895,1,1,1,11), -- Flaming Dragon Skull
+(22127,7902,1,1,1,11), -- Doom Crusher
 (22127,1867,1,3,2,250000), -- Animal Skin
 (22127,1881,1,1,2,76923), -- Coarse Bone Powder
 (22127,1872,4,12,2,83333), -- Animal Bone
@@ -24652,7 +24663,7 @@ INSERT INTO `droplist` VALUES
 (22128,5550,1,1,2,2212), -- Durable Metal Plate
 (22128,5534,1,1,1,1060), -- Soul Bow Stave
 (22128,960,1,1,2,187), -- Scroll: Enchant Armor (Grade S)
-(22128,11975,1,1,1,8), -- Common Item - Soul Bow (no drop info)
+(22128,289,1,1,1,8), -- Soul Bow
 (22128,1875,1,1,-1,50000), -- Stone of Purity
 (22128,4041,1,1,-1,50000), -- Mold Hardener
 (22129,57,4923,10050,0,700000), -- Adena
@@ -24664,8 +24675,8 @@ INSERT INTO `droplist` VALUES
 (22129,5480,1,1,1,4291), -- Sealed Leather Armor of Nightmare Fabric
 (22129,5481,1,1,1,3717), -- Sealed Majestic Leather Armor Fabric
 (22129,6901,1,1,2,546), -- Recipe: Shining Arrow (100%)
-(22129,12265,1,1,1,567), -- Common Item - Sealed Leather Armor of Nightmare
-(22129,12258,1,1,1,536), -- Common Item - Sealed Majestic Leather Armor
+(22129,5320,1,1,1,36), -- Sealed Leather Armor of Nightmare
+(22129,5323,1,1,1,36), -- Sealed Majestic Leather Armor
 (22129,6698,1,2,-1,264400), -- Sealed Tateossian Earring  Part
 (22129,6699,1,2,-1,302600), -- Sealed Tateossian Ring Gem
 (22129,6700,1,1,-1,167000), -- Sealed Tateossian Necklace Chain
@@ -24677,7 +24688,7 @@ INSERT INTO `droplist` VALUES
 (22130,8056,1,1,3,32258), -- Key of Splendor Room
 (22130,4044,1,1,2,20000), -- Thons
 (22130,5537,1,1,1,6993), -- Soul Separator Head
-(22130,11973,1,1,1,629), -- Common Item - Soul Separator
+(22130,236,1,1,1,8), -- Soul Separator
 (22130,959,1,1,2,11), -- Scroll: Enchant Weapon (Grade S)
 (22130,1894,1,2,-1,739100), -- Crafted Leather
 (22130,4039,1,2,-1,683400), -- Mold Glue
@@ -24694,8 +24705,8 @@ INSERT INTO `droplist` VALUES
 (22131,5488,1,1,1,7299), -- Sealed Majestic Robe Fabric
 (22131,5487,1,1,1,6622), -- Sealed Robe of Nightmare Fabric
 (22131,960,1,1,2,519), -- Scroll: Enchant Armor (Grade S)
-(22131,12266,1,1,1,736), -- Common Item - Sealed Robe of Nightmare
-(22131,12259,1,1,1,876), -- Common Item - Sealed Majestic Robe
+(22131,5326,1,1,1,44), -- Sealed Robe of Nightmare
+(22131,5329,1,1,1,44), -- Sealed Majestic Robe
 (22131,6706,1,1,-1,383000), -- Sealed Imperial Crusader Helmet Pattern
 (22131,6705,1,1,-1,319600), -- Sealed Imperial Crusader Shield Part
 (22131,6704,1,1,-1,330500), -- Sealed Imperial Crusader Boots Design
@@ -24710,9 +24721,9 @@ INSERT INTO `droplist` VALUES
 (22132,5529,1,1,1,1545), -- Dragon Slayer Edge
 (22132,5545,1,1,1,1545), -- Dark Legion\'s Edge Blade
 (22132,6901,1,1,2,383), -- Recipe: Shining Arrow (100%)
-(22132,11968,1,1,1,133), -- Common Item - Dragon Slayer
-(22132,11971,1,1,1,50), -- Common Item - Sword of Miracles 
-(22132,11964,1,1,1,100), -- Common Item - Dark Legion\'s Edge
+(22132,81,1,1,1,8), -- Dragon Slayer
+(22132,151,1,1,1,8), -- Sword of Miracles 
+(22132,2500,1,1,1,8), -- Dark Legion\'s Edge
 (22132,6702,1,2,-1,104100), -- Sealed Imperial Crusader Gaiters Pattern
 (22132,6701,1,1,-1,78100), -- Sealed Imperial Crusader Breastplate Part
 (22132,6703,1,2,-1,207000), -- Sealed Imperial Crusader Gauntlets Design
@@ -24727,7 +24738,7 @@ INSERT INTO `droplist` VALUES
 (22133,1875,1,1,2,18182), -- Stone of Purity
 (22133,5537,1,1,1,1838), -- Soul Separator Head
 (22133,4041,1,1,2,1580), -- Mold Hardener
-(22133,11973,1,1,1,8), -- Common Item - Soul Separator (no drop info)
+(22133,236,1,1,1,8), -- Soul Separator
 (22133,959,1,1,2,180), -- Scroll: Enchant Weapon (Grade S)
 (22133,6901,1,1,-1,5000), -- Recipe: Shining Arrow (100%)
 (22133,6696,1,1,-1,25000), -- Heavens Divider Edge
@@ -24741,9 +24752,9 @@ INSERT INTO `droplist` VALUES
 (22134,5545,1,1,1,3636), -- Dark Legion\'s Edge Blade
 (22134,5546,1,1,1,3636), -- Sword of Miracles Edge
 (22134,960,1,1,2,384), -- Scroll: Enchant Armor (Grade S)
-(22134,11968,1,1,1,48), -- Common Item - Dragon Slayer
-(22134,11971,1,1,1,24), -- Common Item - Sword of Miracles 
-(22134,11964,1,1,1,24), -- Common Item - Dark Legion\'s Edge
+(22134,81,1,1,1,8), -- Dragon Slayer
+(22134,151,1,1,1,8), -- Sword of Miracles 
+(22134,2500,1,1,1,8), -- Dark Legion\'s Edge
 (22134,6709,1,1,-1,175000), -- Sealed Draconic Leather Boots Design
 (22134,6707,1,1,-1,55000), -- Sealed Draconic Leather Armor Part
 (22134,6708,1,1,-1,210000), -- Sealed Draconic Leather Gloves Fabric
@@ -24757,9 +24768,9 @@ INSERT INTO `droplist` VALUES
 (22135,4042,1,1,2,13158), -- Enria
 (22135,6344,1,1,1,14285), -- Sealed Majestic Necklace Beads
 (22135,6901,1,1,2,941), -- Recipe: Shining Arrow (100%)
-(22135,12350,1,1,1,2132), -- Common Item - Sealed Majestic Necklace
-(22135,12352,1,1,1,2326), -- Common Item - Sealed Majestic Earring
-(22135,12351,1,1,1,3367), -- Common Item - Sealed Majestic Ring
+(22135,6326,1,1,1,139), -- Sealed Majestic Necklace
+(22135,6327,1,1,1,139), -- Sealed Majestic Earring
+(22135,6328,1,1,1,139), -- Sealed Majestic Ring
 (22135,6694,1,1,-1,25000), -- Saint Spear Blade
 (22135,6691,1,1,-1,25000), -- Angel Slayer Blade
 (22135,6693,1,1,-1,25000), -- Dragon Hunter Axe Blade
@@ -24788,7 +24799,7 @@ INSERT INTO `droplist` VALUES
 (22139,4039,1,1,2,16129), -- Mold Glue
 (22139,4044,1,1,2,15625), -- Thons
 (22139,5541,1,1,1,4854), -- Tallum Glaive Edge
-(22139,11976,1,1,1,37), -- Common Item - Tallum Glaive
+(22139,305,1,1,1,8), -- Tallum Glaive
 (22139,4041,1,1,2,4065), -- Mold Hardener
 (22139,959,1,1,2,180), -- Scroll: Enchant Weapon (Grade S)
 (22139,5515,1,1,-1,125000), -- Sealed Majestic Gloves Design
@@ -24807,10 +24818,10 @@ INSERT INTO `droplist` VALUES
 (22140,5514,1,1,1,6020), -- Sealed Gloves of Nightmare Design
 (22140,4041,1,1,2,6667), -- Mold Hardener
 (22140,960,1,1,2,225), -- Scroll: Enchant Armor (Grade S)
-(22140,12264,1,1,1,2358), -- Common Item - Sealed Gloves of Nightmare
-(22140,12267,1,1,1,1048), -- Common Item - Sealed Boots of Nightmare
-(22140,12257,1,1,1,1011), -- Common Item - Sealed Majestic Gloves
-(22140,12260,1,1,1,711), -- Common Item - Sealed Majestic Boots
+(22140,5313,1,1,1,88), -- Sealed Gloves of Nightmare
+(22140,5314,1,1,1,88), -- Sealed Boots of Nightmare
+(22140,5318,1,1,1,88), -- Sealed Majestic Gloves
+(22140,5319,1,1,1,88), -- Sealed Majestic Boots
 (22140,5495,1,1,-1,250000), -- Sealed Shield of Nightmare Fragment
 (22140,5488,1,1,-1,125000), -- Sealed Majestic Robe Fabric
 (22140,730,1,1,-1,5000), -- Scroll: Enchant Armor (Grade A)
@@ -24827,9 +24838,9 @@ INSERT INTO `droplist` VALUES
 (22141,6901,1,1,2,227), -- Recipe: Shining Arrow (100%)
 (22141,8732,1,1,200,3106), -- Life Stone: level 76
 (22141,8742,1,1,200,718), -- Mid-Grade Life Stone: level 76
-(22141,12269,1,1,1,681), -- Common Item - Sealed Helm of Nightmare
-(22141,12268,1,1,1,1059), -- Common Item - Sealed Shield of Nightmare
-(22141,12261,1,1,1,340), -- Common Item - Sealed Majestic Circlet
+(22141,5315,1,1,1,88), -- Sealed Shield of Nightmare
+(22141,5312,1,1,1,88), -- Sealed Helm of Nightmare
+(22141,5317,1,1,1,88), -- Sealed Majestic Circlet
 (22141,5488,1,1,-1,125000), -- Sealed Majestic Robe Fabric
 (22141,730,1,1,-1,5000), -- Scroll: Enchant Armor (Grade A)
 (22141,5480,1,1,-1,125000), -- Sealed Leather Armor of Nightmare Fabric
@@ -24843,9 +24854,9 @@ INSERT INTO `droplist` VALUES
 (22142,5527,1,1,1,8352), -- Sealed Helm of Nightmare Design
 (22142,5528,1,1,1,6024), -- Sealed Majestic Circlet Design
 (22142,4041,1,1,2,3802), -- Mold Hardener
-(22142,12269,1,1,1,1266), -- Common Item - Sealed Helm of Nightmare
-(22142,12268,1,1,1,1736), -- Common Item - Sealed Shield of Nightmare
-(22142,12261,1,1,1,828), -- Common Item - Sealed Majestic Circlet
+(22142,5315,1,1,1,88), -- Sealed Shield of Nightmare
+(22142,5317,1,1,1,88), -- Sealed Majestic Circlet
+(22142,5312,1,1,1,88), -- Sealed Helm of Nightmare
 (22142,959,1,1,2,32), -- Scroll: Enchant Weapon (Grade S)
 (22142,5220,1,1,-1,250000), -- Metal Hardener
 (22142,5495,1,1,-1,175000), -- Sealed Shield of Nightmare Fragment
@@ -24862,10 +24873,10 @@ INSERT INTO `droplist` VALUES
 (22143,5502,1,1,1,7575), -- Sealed Boots of Nightmare Lining
 (22143,5550,1,1,2,10204), -- Durable Metal Plate
 (22143,960,1,1,1,750), -- Scroll: Enchant Armor (Grade S)
-(22143,12264,1,1,1,3344), -- Common Item - Sealed Gloves of Nightmare
-(22143,12267,1,1,1,1435), -- Common Item - Sealed Boots of Nightmare
-(22143,12257,1,1,1,277), -- Common Item - Sealed Majestic Gloves
-(22143,12260,1,1,1,1499), -- Common Item - Sealed Majestic Boots
+(22143,5318,1,1,1,88), -- Sealed Majestic Gloves
+(22143,5314,1,1,1,88), -- Sealed Boots of Nightmare
+(22143,5313,1,1,1,88), -- Sealed Gloves of Nightmare
+(22143,5319,1,1,1,88), -- Sealed Majestic Boots
 (22143,5502,1,1,-1,175000), -- Sealed Boots of Nightmare Lining
 (22143,5503,1,1,-1,175000), -- Sealed Majestic Boots Lining
 (22143,5157,1,1,-1,2500), -- Recipe: Soulshot(S) Compressed Package(100%)
@@ -24883,9 +24894,9 @@ INSERT INTO `droplist` VALUES
 (22144,8732,1,1,200,3690), -- Life Stone: level 76
 (22144,8742,1,1,200,50), -- Mid-Grade Life Stone: level 76
 (22144,8752,1,1,200,357), -- High-Grade Life Stone: level 76
-(22144,11968,1,1,1,7), -- Common Item - Dragon Slayer
-(22144,11971,1,1,1,7), -- Common Item - Sword of Miracles 
-(22144,11964,1,1,1,7), -- Common Item - Dark Legion\'s Edge
+(22144,81,1,1,1,8), -- Dragon Slayer
+(22144,151,1,1,1,8), -- Sword of Miracles 
+(22144,2500,1,1,1,8), -- Dark Legion\'s Edge
 (22144,1894,1,1,-1,350000), -- Crafted Leather
 (22144,4042,1,1,-1,222000), -- Enria
 (22144,5514,1,1,-1,125000), -- Sealed Gloves of Nightmare Design
@@ -24899,9 +24910,9 @@ INSERT INTO `droplist` VALUES
 (22145,6342,1,1,1,12195), -- Sealed Majestic Earring Gemstone
 (22145,4044,1,1,2,17241), -- Thons
 (22145,6344,1,1,1,8264), -- Sealed Majestic Necklace Beads
-(22145,12350,1,1,1,1600), -- Common Item - Sealed Majestic Necklace
-(22145,12352,1,1,1,903), -- Common Item - Sealed Majestic Earring
-(22145,12351,1,1,1,2506), -- Common Item - Sealed Majestic Ring
+(22145,6328,1,1,1,88), -- Sealed Majestic Ring
+(22145,6327,1,1,1,88), -- Sealed Majestic Earring
+(22145,6326,1,1,1,88), -- Sealed Majestic Necklace
 (22145,5162,1,1,-1,2500), -- Recipe: Spiritshot (S) Compressed Package (100%)
 (22145,5515,1,1,-1,125000), -- Sealed Majestic Gloves Design
 (22145,5167,1,1,-1,2500), -- Recipe: Blessed Spiritshot (S) Compressed Package (100%)
@@ -24914,8 +24925,8 @@ INSERT INTO `droplist` VALUES
 (22146,1873,4,12,2,37037), -- Silver Nugget
 (22146,5487,1,1,1,4672), -- Sealed Robe of Nightmare Fabric
 (22146,5488,1,1,1,2336), -- Sealed Majestic Robe Fabric
-(22146,12266,1,1,1,68), -- Common Item - Sealed Robe of Nightmare
-(22146,12259,1,1,1,68), -- Common Item - Sealed Majestic Robe
+(22146,5326,1,1,1,44), -- Sealed Robe of Nightmare
+(22146,5329,1,1,1,44), -- Sealed Majestic Robe
 (22147,57,4937,10080,0,700000), -- Adena
 (22147,1867,13,39,2,30303), -- Animal Skin
 (22147,1344,40,120,2,125000), -- Mithril Arrow
@@ -24926,9 +24937,9 @@ INSERT INTO `droplist` VALUES
 (22147,1872,8,24,2,22727), -- Animal Bone
 (22147,6344,1,1,1,7812), -- Sealed Majestic Necklace Beads
 (22147,6346,1,1,1,7811), -- Sealed Majestic Ring Gemstone
-(22147,12350,1,1,1,1183), -- Common Item - Sealed Majestic Necklace
-(22147,12352,1,1,1,845), -- Common Item - Sealed Majestic Earring
-(22147,12351,1,1,1,1014), -- Common Item - Sealed Majestic Ring
+(22147,6328,1,1,1,88), -- Sealed Majestic Ring
+(22147,6327,1,1,1,88), -- Sealed Majestic Earring
+(22147,6326,1,1,1,88), -- Sealed Majestic Necklace
 (22147,6901,1,1,2,1326), -- Recipe: Shining Arrow (100%)
 (22147,6901,1,1,-1,5000), -- Recipe: Shining Arrow (100%)
 (22147,8732,1,1,200,1689), -- Life Stone: level 76
@@ -24940,6 +24951,7 @@ INSERT INTO `droplist` VALUES
 (22148,1871,3,9,2,66667), -- Charcoal
 (22148,1872,7,21,2,41667), -- Animal Bone
 (22148,5538,1,1,1,7092), -- Dragon Grinder Edge
+(22148,270,1,1,1,16), -- Dragon Grinder
 (22149,8273,6,6,3,1000000), -- Anteroom Key
 (22149,57,4691,9502,0,700000), -- Adena
 (22149,1895,1,1,2,83333), -- Metallic Fiber
@@ -24951,9 +24963,9 @@ INSERT INTO `droplist` VALUES
 (22149,5529,1,1,1,2849), -- Dragon Slayer Edge
 (22149,5546,1,1,1,2849), -- Sword of Miracles Edge
 (22149,5545,1,1,1,2375), -- Dark Legion's Edge Blade
-(22149,11968,1,1,1,77), -- Common Item - Dragon Slayer
-(22149,11971,1,1,1,77), -- Common Item - Sword of Miracles 
-(22149,11964,1,1,1,77), -- Common Item - Dark Legion\'s Edge
+(22149,81,1,1,1,8), -- Dragon Slayer
+(22149,151,1,1,1,8), -- Sword of Miracles 
+(22149,2500,1,1,1,8), -- Dark Legion\'s Edge
 (22149,960,1,1,2,280), -- Scroll: Enchant Armor (Grade S)
 (22149,4042,1,1,-1,222000), -- Enria
 (22149,1876,1,2,-1,350000), -- Mithril Ore
@@ -24969,9 +24981,9 @@ INSERT INTO `droplist` VALUES
 (22150,5529,1,1,1,1288), -- Dragon Slayer Edge
 (22150,5546,1,1,1,1277), -- Sword of Miracles Edge
 (22150,5545,1,1,1,1277), -- Dark Legion's Edge Blade
-(22150,11968,1,1,1,116), -- Common Item - Dragon Slayer
-(22150,11971,1,1,1,116), -- Common Item - Sword of Miracles 
-(22150,11964,1,1,1,116), -- Common Item - Dark Legion\'s Edge
+(22150,81,1,1,1,8), -- Dragon Slayer
+(22150,151,1,1,1,8), -- Sword of Miracles 
+(22150,2500,1,1,1,8), -- Dark Legion\'s Edge
 (22150,6901,1,1,-1,5000), -- Recipe: Shining Arrow (100%)
 (22150,6688,1,1,-1,25000), -- Forgotten Blade Edge
 (22151,57,5768,11730,0,700000), -- Adena
@@ -24984,6 +24996,9 @@ INSERT INTO `droplist` VALUES
 (22151,5529,1,1,1,2941), -- Dragon Slayer Edge
 (22151,5546,1,1,1,2207), -- Sword of Miracles Edge
 (22151,5545,1,1,1,2207), -- Dark Legion's Edge Blade
+(22151,81,1,1,1,8), -- Dragon Slayer
+(22151,151,1,1,1,8), -- Sword of Miracles 
+(22151,2500,1,1,1,8), -- Dark Legion\'s Edge
 (22151,5549,1,3,-1,500000), -- Metallic Thread
 (22152,57,5060,10310,0,700000), -- Adena
 (22152,1344,30,90,2,166667), -- Mithril Arrow
@@ -24993,7 +25008,7 @@ INSERT INTO `droplist` VALUES
 (22152,1889,1,1,2,37037), -- Compound Braid
 (22152,4044,1,1,2,25000), -- Thons
 (22152,5537,1,1,1,2298), -- Soul Separator Head
-(22152,11973,1,1,1,167), -- Common Item - Soul Separator
+(22152,236,1,1,1,16), -- Soul Separator
 (22152,960,1,1,2,575), -- Scroll: Enchant Armor (Grade S)
 (22152,1889,1,1,-1,400000), -- Compound Braid
 (22152,6690,1,1,-1,175000), -- Imperial Staff Head
@@ -25012,6 +25027,9 @@ INSERT INTO `droplist` VALUES
 (22153,5546,1,1,1,1422), -- Sword of Miracles Edge
 (22153,5545,1,1,1,1422), -- Dark Legion's Edge Blade
 (22153,5529,1,1,1,948), -- Dragon Slayer Edge
+(22153,81,1,1,1,8), -- Dragon Slayer
+(22153,151,1,1,1,8), -- Sword of Miracles 
+(22153,2500,1,1,1,8), -- Dark Legion\'s Edge
 (22153,6901,1,1,2,1119), -- Recipe: Shining Arrow (100%)
 (22154,57,4954,10040,0,700000), -- Adena
 (22154,1868,4,12,2,166667), -- Thread
@@ -25023,9 +25041,9 @@ INSERT INTO `droplist` VALUES
 (22154,1873,3,9,2,7092), -- Silver Nugget
 (22154,4042,1,1,2,14285), -- Enria
 (22154,6346,1,1,1,9615), -- Sealed Majestic Ring Gemstone
-(22154,12350,1,1,1,1183), -- Common Item - Sealed Majestic Necklace
-(22154,12352,1,1,1,845), -- Common Item - Sealed Majestic Earring
-(22154,12351,1,1,1,1014), -- Common Item - Sealed Majestic Ring
+(22154,6328,1,1,1,88), -- Sealed Majestic Ring
+(22154,6327,1,1,1,88), -- Sealed Majestic Earring
+(22154,6326,1,1,1,88), -- Sealed Majestic Necklace
 (22154,1895,1,5,-1,550000), -- Metallic Fiber
 (22155,57,7056,14390,0,700000), -- Adena
 (22155,1868,15,45,2,40000), -- Thread
@@ -25035,8 +25053,8 @@ INSERT INTO `droplist` VALUES
 (22155,4044,1,1,2,40000), -- Thons
 (22155,5488,1,1,1,5376), -- Sealed Majestic Robe Fabric
 (22155,5487,1,1,1,3322), -- Sealed Robe of Nightmare Fabric
-(22155,12266,1,1,1,907), -- Common Item - Sealed Robe of Nightmare
-(22155,12259,1,1,1,907), -- Common Item - Sealed Majestic Robe
+(22155,5487,1,1,1,4672), -- Sealed Robe of Nightmare Fabric
+(22155,5488,1,1,1,2336), -- Sealed Majestic Robe Fabric
 (22155,960,1,1,2,363), -- Scroll: Enchant Armor (Grade S)
 (22155,6706,1,1,-1,125000), -- Sealed Imperial Crusader Helmet Pattern
 (22155,6705,1,1,-1,222000), -- Sealed Imperial Crusader Shield Part
@@ -25052,9 +25070,9 @@ INSERT INTO `droplist` VALUES
 (22156,6344,1,1,1,8621), -- Sealed Majestic Necklace Beads
 (22156,8732,1,1,200,7353), -- Life Stone: level 76
 (22156,8742,1,1,200,920), -- Mid-Grade Life Stone: level 76
-(22156,12350,1,1,1,920), -- Common Item - Sealed Majestic Necklace
-(22156,12352,1,1,1,1838), -- Common Item - Sealed Majestic Earring
-(22156,12351,1,1,1,3676), -- Common Item - Sealed Majestic Ring
+(22156,6328,1,1,1,88), -- Sealed Majestic Ring
+(22156,6327,1,1,1,88), -- Sealed Majestic Earring
+(22156,6326,1,1,1,88), -- Sealed Majestic Necklace
 (22156,6901,1,1,2,920), -- Recipe: Shining Arrow (100%)
 (22156,6689,1,1,-1,175000), -- Basalt Battlehammer Head
 (22156,6690,1,1,-1,175000), -- Imperial Staff Head
@@ -25067,9 +25085,9 @@ INSERT INTO `droplist` VALUES
 (22157,6346,1,1,1,17857), -- Sealed Majestic Ring Gemstone
 (22157,6342,1,1,1,12346), -- Sealed Majestic Earring Gemstone
 (22157,6344,1,1,1,10638), -- Sealed Majestic Necklace Beads
-(22157,12350,1,1,1,920), -- Common Item - Sealed Majestic Necklace
-(22157,12352,1,1,1,1838), -- Common Item - Sealed Majestic Earring
-(22157,12351,1,1,1,3676), -- Common Item - Sealed Majestic Ring
+(22157,6328,1,1,1,88), -- Sealed Majestic Ring
+(22157,6327,1,1,1,88), -- Sealed Majestic Earring
+(22157,6326,1,1,1,88), -- Sealed Majestic Necklace
 (22157,4042,1,1,2,7194), -- Enria
 (22157,4039,1,1,-1,400000), -- Mold Glue
 (22157,1894,1,1,-1,800000), -- Crafted Leather
@@ -25086,10 +25104,10 @@ INSERT INTO `droplist` VALUES
 (22158,8732,1,1,200,4274), -- Life Stone: level 76
 (22158,8742,1,1,200,214), -- Mid-Grade Life Stone: level 76
 (22158,960,1,1,2,245), -- Scroll: Enchant Armor (Grade S)
-(22158,12264,1,1,1,1070), -- Common Item - Sealed Gloves of Nightmare
-(22158,12267,1,1,1,1070), -- Common Item - Sealed Boots of Nightmare
-(22158,12257,1,1,1,1070), -- Common Item - Sealed Majestic Gloves
-(22158,12260,1,1,1,1070), -- Common Item - Sealed Majestic Boots
+(22158,5318,1,1,1,88), -- Sealed Majestic Gloves
+(22158,5314,1,1,1,88), -- Sealed Boots of Nightmare
+(22158,5313,1,1,1,88), -- Sealed Gloves of Nightmare
+(22158,5319,1,1,1,88), -- Sealed Majestic Boots
 (22158,4040,1,1,-1,300000), -- Mold Lubricant
 (22158,1877,1,1,-1,400000), -- Adamantite Nugget
 (22159,57,7213,14750,0,700000), -- Adena
@@ -25102,8 +25120,8 @@ INSERT INTO `droplist` VALUES
 (22159,8742,1,1,200,1686), -- Mid-Grade Life Stone: level 76
 (22159,5487,1,1,1,7936), -- Sealed Robe of Nightmare Fabric
 (22159,5488,1,1,1,5263), -- Sealed Majestic Robe Fabric
-(22159,12266,1,1,1,1686), -- Common Item - Sealed Robe of Nightmare
-(22159,12259,1,1,1,1686), -- Common Item - Sealed Majestic Robe
+(22159,5326,1,1,1,44), -- Sealed Robe of Nightmare
+(22159,5329,1,1,1,44), -- Sealed Majestic Robe
 (22159,6901,1,1,2,1098), -- Recipe: Shining Arrow (100%)
 (22159,6703,1,1,-1,125000), -- Sealed Imperial Crusader Gauntlets Design
 (22159,6702,1,1,-1,125000), -- Sealed Imperial Crusader Gaiters Pattern
@@ -25116,9 +25134,9 @@ INSERT INTO `droplist` VALUES
 (22160,4042,1,1,2,10526), -- Enria
 (22160,4043,1,1,2,34483), -- Asofe
 (22160,4040,1,1,2,17544), -- Mold Lubricant
-(22160,12350,1,1,1,1754), -- Common Item - Sealed Majestic Necklace
-(22160,12352,1,1,1,3509), -- Common Item - Sealed Majestic Earring
-(22160,12351,1,1,1,1754), -- Common Item - Sealed Majestic Ring
+(22160,6328,1,1,1,88), -- Sealed Majestic Ring
+(22160,6327,1,1,1,88), -- Sealed Majestic Earring
+(22160,6326,1,1,1,88), -- Sealed Majestic Necklace
 (22160,6693,1,1,-1,125000), -- Dragon Hunter Axe Blade
 (22160,6694,1,1,-1,125000), -- Saint Spear Blade
 (22160,6691,1,1,-1,125000), -- Angel Slayer Blade
@@ -25132,9 +25150,9 @@ INSERT INTO `droplist` VALUES
 (22161,4042,1,1,2,13333), -- Enria
 (22161,5527,1,1,1,10500), -- Sealed Helm of Nightmare Design
 (22161,5528,1,1,1,8547), -- Sealed Majestic Circlet Design
-(22161,12269,1,1,1,893), -- Common Item - Sealed Helm of Nightmare
-(22161,12268,1,1,1,4464), -- Common Item - Sealed Shield of Nightmare
-(22161,12261,1,1,1,3571), -- Common Item - Sealed Majestic Circlet
+(22161,5317,1,1,1,88), -- Sealed Majestic Circlet
+(22161,5312,1,1,1,88), -- Sealed Helm of Nightmare
+(22161,5315,1,1,1,88), -- Sealed Shield of Nightmare
 (22161,960,1,1,2,336), -- Scroll: Enchant Armor (Grade S)
 (22161,1894,1,1,-1,800000), -- Crafted Leather
 (22161,4039,1,1,-1,400000), -- Mold Glue
@@ -25149,9 +25167,9 @@ INSERT INTO `droplist` VALUES
 (22162,5529,1,1,1,1612), -- Dragon Slayer Edge
 (22162,5545,1,1,1,1612), -- Dark Legion's Edge Blade
 (22162,6901,1,1,2,1612), -- Recipe: Shining Arrow (100%)
-(22162,11968,1,1,1,116), -- Common Item - Dragon Slayer
-(22162,11971,1,1,1,116), -- Common Item - Sword of Miracles 
-(22162,11964,1,1,1,116), -- Common Item - Dark Legion\'s Edge
+(22162,81,1,1,1,8), -- Dragon Slayer
+(22162,151,1,1,1,8), -- Sword of Miracles 
+(22162,2500,1,1,1,8), -- Dark Legion\'s Edge
 (22162,1877,1,1,-1,300000), -- Adamantite Nugget
 (22162,4040,1,1,-1,400000), -- Mold Lubricant
 (22163,57,8381,17080,0,700000), -- Adena
@@ -25160,7 +25178,7 @@ INSERT INTO `droplist` VALUES
 (22163,4040,1,1,2,21739), -- Mold Lubricant
 (22163,4041,1,1,2,12500), -- Mold Hardener
 (22163,1877,1,1,2,38462), -- Adamantite Nugget
-(22163,11973,1,1,1,185), -- Common Item - Soul Separator
+(22163,236,1,1,1,16), -- Soul Separator
 (22163,959,1,1,2,185), -- Scroll: Enchant Weapon (Grade S)
 (22163,5537,1,1,1,9433), -- Soul Separator Head
 (22163,8732,1,1,200,1555), -- Life Stone: level 76
@@ -25178,9 +25196,9 @@ INSERT INTO `droplist` VALUES
 (22164,6344,1,1,1,13088), -- Sealed Majestic Necklace Beads
 (22164,4040,1,1,2,14925), -- Mold Lubricant
 (22164,960,1,1,2,282), -- Scroll: Enchant Armor (Grade S)
-(22164,12350,1,1,1,4149), -- Common Item - Sealed Majestic Necklace
-(22164,12352,1,1,1,831), -- Common Item - Sealed Majestic Earring
-(22164,12351,1,1,1,2494), -- Common Item - Sealed Majestic Ring
+(22164,6328,1,1,1,88), -- Sealed Majestic Ring
+(22164,6327,1,1,1,88), -- Sealed Majestic Earring
+(22164,6326,1,1,1,88), -- Sealed Majestic Necklace
 (22164,6697,1,1,-1,125000), -- Arcana Mace Head
 (22164,6696,1,1,-1,125000), -- Heavens Divider Edge
 (22164,6695,1,1,-1,125000), -- Demon Splinter Blade
@@ -25196,10 +25214,10 @@ INSERT INTO `droplist` VALUES
 (22165,4041,1,1,2,6757), -- Mold Hardener
 (22165,6901,1,1,2,531), -- Recipe: Shining Arrow (100%)
 (22165,8732,1,1,200,6757), -- Life Stone: level 76
-(22165,12264,1,1,1,424), -- Common Item - Sealed Gloves of Nightmare
-(22165,12267,1,1,1,424), -- Common Item - Sealed Boots of Nightmare
-(22165,12257,1,1,1,424), -- Common Item - Sealed Majestic Gloves
-(22165,12260,1,1,1,424), -- Common Item - Sealed Majestic Boots
+(22165,5318,1,1,1,88), -- Sealed Majestic Gloves
+(22165,5314,1,1,1,88), -- Sealed Boots of Nightmare
+(22165,5313,1,1,1,88), -- Sealed Gloves of Nightmare
+(22165,5319,1,1,1,88), -- Sealed Majestic Boots
 (22165,1894,1,1,-1,800000), -- Crafted Leather
 (22165,4039,1,1,-1,400000), -- Mold Glue
 (22166,57,6168,12560,0,700000), -- Adena
@@ -25211,9 +25229,9 @@ INSERT INTO `droplist` VALUES
 (22166,6342,1,1,1,20000), -- Sealed Majestic Earring Gemstone
 (22166,6344,1,1,1,12658), -- Sealed Majestic Necklace Beads
 (22166,5550,1,1,2,9091), -- Durable Metal Plate
-(22166,12350,1,1,1,1238), -- Common Item - Sealed Majestic Necklace
-(22166,12352,1,1,1,2475), -- Common Item - Sealed Majestic Earring
-(22166,12351,1,1,1,4132), -- Common Item - Sealed Majestic Ring
+(22166,6328,1,1,1,88), -- Sealed Majestic Ring
+(22166,6327,1,1,1,88), -- Sealed Majestic Earring
+(22166,6326,1,1,1,88), -- Sealed Majestic Necklace
 (22166,1877,1,1,-1,300000), -- Adamantite Nugget
 (22166,4040,1,1,-1,400000), -- Mold Lubricant
 (22167,57,7450,15090,0,700000), -- Adena
@@ -25224,8 +25242,8 @@ INSERT INTO `droplist` VALUES
 (22167,5488,1,1,1,8547), -- Sealed Majestic Robe Fabric
 (22167,4041,1,1,2,9615), -- Mold Hardener
 (22167,960,1,1,2,623), -- Scroll: Enchant Armor (Grade S)
-(22167,12266,1,1,1,1484), -- Common Item - Sealed Robe of Nightmare
-(22167,12259,1,1,1,1188), -- Common Item - Sealed Majestic Robe
+(22167,5326,1,1,1,44), -- Sealed Robe of Nightmare
+(22167,5329,1,1,1,44), -- Sealed Majestic Robe
 (22167,6712,1,1,-1,125000), -- Sealed Major Arcana Gloves fabric
 (22167,6711,1,1,-1,125000), -- Sealed Major Arcana Robe Part
 (22167,6710,1,1,-1,125000), -- Sealed Draconic Leather Helmet Pattern
@@ -25237,8 +25255,8 @@ INSERT INTO `droplist` VALUES
 (22168,1867,13,39,2,50000), -- Animal Skin
 (22168,5481,1,1,1,10309), -- Sealed Majestic Leather Armor Fabric
 (22168,5480,1,1,1,2066), -- Sealed Leather Armor of Nightmare Fabric
-(22168,12265,1,1,1,152), -- Common Item - Sealed Leather Armor of Nightmare
-(22168,12258,1,1,1,152), -- Common Item - Sealed Majestic Leather Armor
+(22168,5320,1,1,1,36), -- Sealed Leather Armor of Nightmare
+(22168,5323,1,1,1,36), -- Sealed Majestic Leather Armor
 (22168,6700,1,1,-1,125000), -- Sealed Tateossian Ring wire
 (22168,6698,1,1,-1,125000), -- Sealed Tateossian Earring  Part
 (22168,6699,1,1,-1,125000), -- Sealed Tateossian Ring Gem
@@ -25251,8 +25269,8 @@ INSERT INTO `droplist` VALUES
 (22169,1873,4,11,2,20000), -- Silver Nugget
 (22169,5522,1,1,1,5376), -- Sealed Armor of Nightmare Pattern
 (22169,5523,1,1,1,5714), -- Sealed Majestic Plate Armor Pattern
-(22169,12263,1,1,1,1247), -- Common Item - Sealed Armor of Nightmare
-(22169,12262,1,1,1,1247), -- Common Item - Sealed Majestic Plate Armor
+(22169,5311,1,1,1,30), -- Sealed Armor of Nightmare
+(22169,5316,1,1,1,30), -- Sealed Majestic Plate Armor
 (22169,4039,1,1,-1,400000), -- Mold Glue
 (22169,1894,1,1,-1,800000), -- Crafted Leather
 (22169,4040,1,1,-1,400000), -- Mold Lubricant
@@ -25264,8 +25282,8 @@ INSERT INTO `droplist` VALUES
 (22170,5487,1,1,1,9346), -- Sealed Robe of Nightmare Fabric
 (22170,5488,1,1,1,5102), -- Sealed Majestic Robe Fabric
 (22170,4041,1,1,2,8547), -- Mold Hardener
-(22170,12266,1,1,1,1016), -- Common Item - Sealed Robe of Nightmare
-(22170,12259,1,1,1,711), -- Common Item - Sealed Majestic Robe
+(22170,5326,1,1,1,44), -- Sealed Robe of Nightmare
+(22170,5329,1,1,1,44), -- Sealed Majestic Robe
 (22170,1877,1,1,-1,300000), -- Adamantite Nugget
 (22170,4040,1,1,-1,400000), -- Mold Lubricant
 (22170,960,1,1,-1,5000), -- Scroll: Enchant Armor (Grade S)
@@ -25280,10 +25298,10 @@ INSERT INTO `droplist` VALUES
 (22171,5544,1,1,1,1342), -- Branch of The Mother Tree Head
 (22171,8349,1,1,1,1342), -- Doom Crusher Head
 (22171,6901,1,1,2,1342), -- Recipe: Shining Arrow (100%)
-(22171,11970,1,1,1,620), -- Common Item - Branch of The Mother Tree
-(22171,11974,1,1,1,620), -- Common Item - Elysian
-(22171,11969,1,1,1,620), -- Common Item - Flaming Dragon Skull
-(22171,11966,1,1,1,620), -- Common Item - Doom Crusher
+(22171,16,1,1,1,8), -- Elysian
+(22171,213,1,1,1,8), -- Branch of The Mother Tree
+(22171,7895,1,1,1,8), -- Flaming Dragon Skull
+(22171,7902,1,1,1,8), -- Doom Crusher
 (22171,6713,1,1,-1,125000), -- Sealed Major Arcana Boots Design
 (22171,6714,1,1,-1,125000), -- Sealed Major Arcana Circlet Pattern
 (22171,7579,1,1,-1,125000), -- Draconic Bow Shaft
@@ -25298,9 +25316,9 @@ INSERT INTO `droplist` VALUES
 (22172,5528,1,1,1,10989), -- Sealed Majestic Circlet Design
 (22172,4041,1,1,2,6452), -- Mold Hardener
 (22172,959,1,1,2,255), -- Scroll: Enchant Weapon (Grade S)
-(22172,12269,1,1,1,429), -- Common Item - Sealed Helm of Nightmare
-(22172,12268,1,1,1,429), -- Common Item - Sealed Shield of Nightmare
-(22172,12261,1,1,1,429), -- Common Item - Sealed Majestic Circlet
+(22172,5317,1,1,1,88), -- Sealed Majestic Circlet
+(22172,5312,1,1,1,88), -- Sealed Helm of Nightmare
+(22172,5315,1,1,1,88), -- Sealed Shield of Nightmare
 (22172,8742,1,1,200,1287), -- Mid-Grade Life Stone: level 76
 (22172,6714,1,1,-1,125000), -- Sealed Major Arcana Circlet Pattern
 (22172,6901,1,1,-1,10000), -- Recipe: Shining Arrow (100%)
@@ -25312,8 +25330,8 @@ INSERT INTO `droplist` VALUES
 (22173,4044,1,1,2,14925), -- Thons
 (22173,5487,1,1,1,5681), -- Sealed Robe of Nightmare Fabric
 (22173,5488,1,1,1,4329), -- Sealed Majestic Robe Fabric
-(22173,12266,1,1,1,577), -- Common Item - Sealed Robe of Nightmare
-(22173,12259,1,1,1,1443), -- Common Item - Sealed Majestic Robe
+(22173,5326,1,1,1,44), -- Sealed Robe of Nightmare
+(22173,5329,1,1,1,44), -- Sealed Majestic Robe
 (22173,960,1,1,2,227), -- Scroll: Enchant Armor (Grade S)
 (22173,4039,1,1,-1,400000), -- Mold Glue
 (22173,1894,1,1,-1,800000), -- Crafted Leather
@@ -25323,12 +25341,12 @@ INSERT INTO `droplist` VALUES
 (22174,1872,5,15,2,90909), -- Animal Bone
 (22174,1867,9,27,2,52632), -- Animal Skin
 (22174,1875,1,1,2,62500), -- Stone of Purity
-(22174,5480,1,1,1,5347), -- Sealed Leather Armor of Nightmare Fabric
-(22174,5481,1,1,1,2849), -- Sealed Majestic Leather Armor Fabric
 (22174,6901,1,1,2,1650), -- Recipe: Shining Arrow (100%)
 (22174,4041,1,1,2,3300), -- Mold Hardener
-(22174,12266,1,1,1,478), -- Common Item - Sealed Robe of Nightmare
-(22174,12259,1,1,1,1196), -- Common Item - Sealed Majestic Robe
+(22174,5487,1,1,1,5681), -- Sealed Robe of Nightmare Fabric
+(22174,5488,1,1,1,4329), -- Sealed Majestic Robe Fabric
+(22174,5326,1,1,1,44), -- Sealed Robe of Nightmare
+(22174,5329,1,1,1,44), -- Sealed Majestic Robe
 (22174,1877,1,1,-1,300000), -- Adamantite Nugget
 (22174,4040,1,1,-1,400000), -- Mold Lubricant
 (22175,57,215,508,0,700000), -- Adena
@@ -26275,8 +26293,8 @@ INSERT INTO `droplist` VALUES
 (22320,9674,4,12,101,100000), -- Darion's Badge
 (22320,5522,1,1,1,12500), -- Sealed Armor of Nightmare Pattern
 (22320,5523,1,1,1,12048), -- Sealed Majestic Plate Armor Pattern
-(22320,12261,1,1,1,1852), -- Common Item - Sealed Armor of Nightmare
-(22320,12262,1,1,1,1064), -- Common Item - Sealed Majestic Plate Armor
+(22320,5311,1,1,1,101), -- Sealed Armor of Nightmare
+(22320,5316,1,1,1,101), -- Sealed Majestic Plate Armor
 (22320,1895,1,3,2,200000), -- Metallic Fiber
 (22320,4040,1,1,2,40000), -- Mold Lubricant
 (22320,9628,1,1,2,15873), -- Leonard
@@ -26290,8 +26308,8 @@ INSERT INTO `droplist` VALUES
 (22321,9674,3,9,101,100000), -- Darion's Badge
 (22321,5487,1,1,1,14706), -- Sealed Robe of Nightmare Fabric
 (22321,5488,1,1,1,14925), -- Sealed Majestic Robe Fabric
-(22321,12266,1,1,1,2183), -- Common Item - Sealed Robe of Nightmare
-(22321,12259,1,1,1,1572), -- Common Item - Sealed Majestic Robe
+(22321,5326,1,1,1,153), -- Sealed Robe of Nightmare
+(22321,5329,1,1,1,153), -- Sealed Majestic Robe
 (22321,1344,900,2700,2,20408), -- Mithril Arrow
 (22321,1866,16,48,2,31250), -- Suede
 (22321,1885,1,1,2,125000), -- High Grade Suede
@@ -26310,9 +26328,9 @@ INSERT INTO `droplist` VALUES
 (22324,5527,1,1,1,6667), -- Sealed Helm of Nightmare Design
 (22324,5528,1,1,1,5556), -- Sealed Majestic Circlet Design
 (22324,960,1,1,2,235), -- Scroll: Enchant Armor (S)
-(22324,12269,1,1,1,564), -- Common Item - Sealed Helm of Nightmare
-(22324,12268,1,1,1,1410), -- Common Item - Sealed Shield of Nightmare
-(22324,12261,1,1,1,846), -- Common Item - Sealed Majestic Circlet
+(22324,5317,1,1,1,276), -- Sealed Majestic Circlet
+(22324,5312,1,1,1,276), -- Sealed Helm of Nightmare
+(22324,5315,1,1,1,276), -- Sealed Shield of Nightmare
 (22324,1864,4,12,2,83333), -- Stem
 (22324,1865,2,6,2,66667), -- Varnish
 (22324,1866,3,9,2,40000), -- Suede
@@ -26328,9 +26346,9 @@ INSERT INTO `droplist` VALUES
 (22325,5527,1,1,1,5525), -- Sealed Helm of Nightmare Design
 (22325,5528,1,1,1,5587), -- Sealed Majestic Circlet Design
 (22325,6901,1,1,2,437), -- Recipe: Shining Arrow (100%)
-(22325,12269,1,1,1,631), -- Common Item - Sealed Helm of Nightmare
-(22325,12268,1,1,1,631), -- Common Item - Sealed Shield of Nightmare
-(22325,12261,1,1,1,1214), -- Common Item - Sealed Majestic Circlet
+(22325,5317,1,1,1,71), -- Sealed Majestic Circlet
+(22325,5312,1,1,1,71), -- Sealed Helm of Nightmare
+(22325,5315,1,1,1,71), -- Sealed Shield of Nightmare
 (22325,1344,40,120,2,90909), -- Mithril Arrow
 (22325,1867,1,3,2,125000), -- Animal Skin
 (22325,1869,2,6,2,62500), -- Iron Ore
@@ -26348,10 +26366,10 @@ INSERT INTO `droplist` VALUES
 (22327,5544,1,1,1,5814), -- Branch Of The Mother Tree Head
 (22327,8342,1,1,1,5882), -- Flaming Dragon Skull Piece
 (22327,960,1,1,2,871), -- Scroll: Enchant Armor (S)
-(22327,11970,1,1,1,653), -- Common Item - Branch of The Mother Tree
-(22327,11974,1,1,1,218), -- Common Item - Elysian
-(22327,11969,1,1,1,145), -- Common Item - Flaming Dragon Skull
-(22327,11966,1,1,1,363), -- Common Item - Doom Crusher
+(22327,16,1,1,1,11), -- Elysian
+(22327,213,1,1,1,11), -- Branch of The Mother Tree
+(22327,7895,1,1,1,11), -- Flaming Dragon Skull
+(22327,7902,1,1,1,11), -- Doom Crusher
 (22327,1868,199,587,2,19231), -- Thread
 (22327,1873,18,54,2,33333), -- Silver Nugget
 (22327,1876,4,12,2,83333), -- Mithril Ore
@@ -26365,7 +26383,7 @@ INSERT INTO `droplist` VALUES
 (22328,9599,1,3,100,590000), -- Ancient Tome of the Demon
 (22328,9674,1,3,101,166667), -- Darion's Badge
 (22328,5538,1,1,1,20833), -- Dragon Grinder Edge
-(22328,11967,1,1,1,3401), -- Common Item - Dragon Grinder
+(22328,270,1,1,1,33), -- Dragon Grinder
 (22328,1879,1,1,2,142857), -- Cokes
 (22328,1885,1,1,2,90909), -- High Grade Suede
 (22328,9628,1,1,2,6250), -- Leonard
@@ -26382,7 +26400,7 @@ INSERT INTO `droplist` VALUES
 (22329,9599,2,6,100,680000), -- Ancient Tome of the Demon
 (22329,9674,14,42,101,52632), -- Darion's Badge
 (22329,5534,1,1,1,28571), -- Soul Bow Stave
-(22329,11975,1,1,1,3460), -- Common Item - Soul Bow
+(22329,289,1,1,1,364), -- Soul Bow
 (22329,1344,360,1080,2,125000), -- Mithril Arrow
 (22329,1895,21,60,2,32258), -- Metallic Fiber
 (22329,4040,1,1,2,71429), -- Mold Lubricant
@@ -26396,7 +26414,7 @@ INSERT INTO `droplist` VALUES
 (22330,57,2044,4100,0,700000), -- Adena
 (22330,9599,1,1,100,200000), -- Ancient Tome of the Demon
 (22330,5537,1,1,1,2469), -- Soul Separator Head
-(22330,11973,1,1,1,252), -- Common Item - Soul Separator
+(22330,236,1,1,1,11), -- Soul Separator
 (22330,1879,1,1,2,28571), -- Cokes
 (22330,1885,1,1,2,13158), -- High Grade Suede
 (22330,9628,1,1,2,1362), -- Leonard
@@ -26415,8 +26433,8 @@ INSERT INTO `droplist` VALUES
 (22335,10012,4,12,101,32258), -- Scorpion Poison stinger
 (22335,5487,1,1,1,12195), -- Sealed Robe of Nightmare Fabric
 (22335,5488,1,1,1,14286), -- Sealed Majestic Robe Fabric
-(22335,12266,1,1,1,1319), -- Common Item - Sealed Robe of Nightmare
-(22335,12259,1,1,1,1715), -- Common Item - Sealed Majestic Robe
+(22335,5326,1,1,1,153), -- Sealed Robe of Nightmare
+(22335,5329,1,1,1,153), -- Sealed Majestic Robe
 (22335,1868,15,45,2,90909), -- Thread
 (22335,1873,2,6,2,142857), -- Silver Nugget
 (22335,1876,3,9,2,40000), -- Mithril Ore
@@ -26432,10 +26450,10 @@ INSERT INTO `droplist` VALUES
 (22337,5503,1,1,1,5682), -- Sealed Majestic Boots Lining
 (22337,5515,1,1,1,4926), -- Sealed Majestic Gloves Design
 (22337,5502,1,1,1,6849), -- Sealed Boots of Nightmare Lining
-(22337,12264,1,1,1,1520), -- Common Item - Sealed Gloves of Nightmare
-(22337,12267,1,1,1,760), -- Common Item - Sealed Boots of Nightmare
-(22337,12257,1,1,1,380), -- Common Item - Sealed Majestic Gloves
-(22337,12260,1,1,1,1520), -- Common Item - Sealed Majestic Boots
+(22337,5318,1,1,1,88), -- Sealed Majestic Gloves
+(22337,5314,1,1,1,88), -- Sealed Boots of Nightmare
+(22337,5313,1,1,1,88), -- Sealed Gloves of Nightmare
+(22337,5319,1,1,1,88), -- Sealed Majestic Boots
 (22337,1871,1,3,2,250000), -- Charcoal
 (22337,1866,1,3,2,100000), -- Suede
 (22337,1877,1,1,2,17544), -- Adamantite Nugget
@@ -26449,9 +26467,9 @@ INSERT INTO `droplist` VALUES
 (22339,5545,1,1,1,741), -- Dark Legion's Edge Blade
 (22339,5546,1,1,1,1335), -- Sword of Miracles Edge
 (22339,5529,1,1,1,1335), -- Dragon Slayer Edge
-(22339,11964,1,1,1,198), -- Common Item - Dark Legion's Edge
-(22339,11971,1,1,1,198), -- Common Item - Sword of Miracles 
-(22339,11968,1,1,1,198), -- Common Item - Dragon Slayer
+(22339,81,1,1,1,8), -- Dragon Slayer
+(22339,151,1,1,1,8), -- Sword of Miracles 
+(22339,2500,1,1,1,8), -- Dark Legion\'s Edge
 (22339,1879,1,1,2,40000), -- Cokes
 (22339,1885,1,1,2,20000), -- High Grade Suede
 (22339,9628,1,1,2,2667), -- Leonard
@@ -26479,8 +26497,8 @@ INSERT INTO `droplist` VALUES
 (22349,5480,1,1,1,25000), -- Sealed Leather Armor of Nightmare Fabric
 (22349,5481,1,1,1,26316), -- Sealed Majestic Leather Armor Fabric
 (22349,960,1,1,2,1855), -- Scroll: Enchant Armor (S)
-(22349,12265,1,1,1,3704), -- Common Item - Sealed Leather Armor of Nightmare
-(22349,12258,1,1,1,3472), -- Common Item - Sealed Majestic Leather Armor
+(22349,5320,1,1,1,292), -- Sealed Leather Armor of Nightmare
+(22349,5323,1,1,1,292), -- Sealed Majestic Leather Armor
 (22349,1895,12,36,2,43478), -- Metallic Fiber
 (22349,4040,1,1,2,62500), -- Mold Lubricant
 (22349,1344,300,900,2,142857), -- Mithril Arrow
@@ -26496,8 +26514,8 @@ INSERT INTO `droplist` VALUES
 (22350,5480,1,1,1,25000), -- Sealed Leather Armor of Nightmare Fabric
 (22350,5481,1,1,1,28571), -- Sealed Majestic Leather Armor Fabric
 (22350,6901,1,1,2,3401), -- Recipe: Shining Arrow (100%)
-(22350,12265,1,1,1,3155), -- Common Item - Sealed Leather Armor of Nightmare
-(22350,12258,1,1,1,4854), -- Common Item - Sealed Majestic Leather Armor
+(22350,5320,1,1,1,102), -- Sealed Leather Armor of Nightmare
+(22350,5323,1,1,1,102), -- Sealed Majestic Leather Armor
 (22350,1879,3,9,2,90909), -- Cokes
 (22350,1885,1,1,2,250000), -- High Grade Suede
 (22350,9628,1,1,2,29412), -- Leonard
@@ -26513,9 +26531,9 @@ INSERT INTO `droplist` VALUES
 (22351,5545,1,1,1,13699), -- Dark Legion's Edge Blade
 (22351,5546,1,1,1,12346), -- Sword of Miracles Edge
 (22351,5529,1,1,1,10417), -- Dragon Slayer Edge
-(22351,11964,1,1,1,241), -- Common Item - Dark Legion's Edge
-(22351,11971,1,1,1,241), -- Common Item - Sword of Miracles 
-(22351,11968,1,1,1,241), -- Common Item - Dragon Slayer
+(22351,81,1,1,1,33), -- Dragon Slayer
+(22351,151,1,1,1,33), -- Sword of Miracles 
+(22351,2500,1,1,1,33), -- Dark Legion\'s Edge
 (22351,1868,15,45,2,142857), -- Thread
 (22351,1873,16,48,2,29412), -- Silver Nugget
 (22351,1876,3,9,2,66667), -- Mithril Ore
@@ -26536,9 +26554,9 @@ INSERT INTO `droplist` VALUES
 (22352,5545,1,1,1,8000), -- Dark Legion's Edge Blade
 (22352,5546,1,1,1,12048), -- Sword of Miracles Edge
 (22352,5529,1,1,1,10526), -- Dragon Slayer Edge
-(22352,11964,1,1,1,728), -- Common Item - Dark Legion's Edge
-(22352,11971,1,1,1,2183), -- Common Item - Sword of Miracles 
-(22352,11968,1,1,1,1093), -- Common Item - Dragon Slayer
+(22352,81,1,1,1,33), -- Dragon Slayer
+(22352,151,1,1,1,33), -- Sword of Miracles 
+(22352,2500,1,1,1,33), -- Dark Legion\'s Edge
 (22352,1868,140,404,2,27778), -- Thread
 (22352,1873,16,48,2,45455), -- Silver Nugget
 (22352,1876,3,9,2,100000), -- Mithril Ore
