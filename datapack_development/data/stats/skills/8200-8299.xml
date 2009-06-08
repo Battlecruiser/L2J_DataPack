@@ -901,14 +901,24 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="8290" levels="12" name="Add Belt Inventory Slot">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by Bloodshed -->
+  <table name="#inventoryLimit"> 3 6 9 12 15 18 21 24 27 30 33 36 </table>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <add order="0x40" stat="inventoryLimit" val="#inventoryLimit"/>
+  </for>
 </skill>
 <skill id="8291" levels="12" name="Add Belt Weight Gauge">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <!-- Done by Bloodshed -->
+  <table name="#maxLoad"> 1000 2000 3000 4000 5000 6000 7000 8000 9000 10000 11000 12000 </table>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <add order="0x40" stat="maxLoad" val="#maxLoad"/>
+  </for>
 </skill>
 <skill id="8292" levels="1" name="Olympiad Warrior's Ring">
   <set name="target" val="TARGET_NONE"/>
