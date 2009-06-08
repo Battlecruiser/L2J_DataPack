@@ -385,15 +385,15 @@ public class MC_Show extends Quest
 				{
 					String text = (String) talks.get("event")[0];
 					String nextEvent = (String) talks.get("event")[1];
-					int time = Integer.valueOf((String) talks.get("event")[2]);
+					int time = (Integer) talks.get(event)[2];
 					autoChat(npc,text,1);
 					startQuestTimer(nextEvent,time, npc, null);
 				}
 				else if (walks.containsKey(event))
 				{
-					int x = Integer.valueOf((String) walks.get("event")[0]);
-					int y = Integer.valueOf((String) walks.get("event")[1]);
-					int z = Integer.valueOf((String) walks.get("event")[2]);
+					int x = (Integer) walks.get("event")[0];
+					int y = (Integer) walks.get("event")[1];
+					int z = (Integer) walks.get("event")[2];
 					String nextEvent = (String) walks.get("event")[3];
 					int time = Integer.valueOf((String) walks.get("event")[4]);
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO,new L2CharPosition(x,y,z,0));
