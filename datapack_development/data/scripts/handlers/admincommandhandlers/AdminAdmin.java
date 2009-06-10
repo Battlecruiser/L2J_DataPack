@@ -220,7 +220,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				}
 				else if (type.startsWith("skill"))
 				{
-					SkillTable.reload();
+					SkillTable.getInstance().reload();
 					activeChar.sendMessage("skills reloaded");
 				}
 				else if (type.equals("npc"))
