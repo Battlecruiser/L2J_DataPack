@@ -25379,7 +25379,7 @@ INSERT INTO `droplist` VALUES
 (22196,11968,1,1,1,2564), -- Common Item - Dragon Slayer (10x lower drop now!)
 (22196,11971,1,1,1,2564), -- Common Item - Sword of Miracles 
 (22196,11964,1,1,1,2564), -- Common Item - Dark Legion\'s Edge
-(22196,10114,1,1,-1,100000), -- Sealed Arcana Sickle Piece
+(22196,13099,1,1,-1,100000), -- Sealed Arcana Sickle Piece
 (22197,57,5813,11860,0,700000), -- Adena
 (22197,1879,1,1,2,76923), -- Cokes
 (22197,1885,1,1,2,34483), -- High Grade Suede
@@ -25412,7 +25412,7 @@ INSERT INTO `droplist` VALUES
 (22198,5546,1,1,1,6024), -- Sword of Miracles Edge
 (22198,8955,1,1,2,931), -- Green Primeval Crystal
 (22198,5545,1,1,1,931), -- Dark Legion\'s Edge Blade
-(22198,10114,1,1,-1,200000), -- Sealed Arcana Sickle Piece
+(22198,13099,1,1,-1,200000), -- Sealed Arcana Sickle Piece
 (22199,57,22930,46460,0,700000), -- Adena
 (22199,6346,1,1,1,83333), -- Sealed Majestic Ring Gemstone
 (22199,6342,1,1,1,111111), -- Sealed Majestic Earring Gemstone
@@ -25454,7 +25454,7 @@ INSERT INTO `droplist` VALUES
 (22201,11966,1,1,2,192), -- Common Item - Doom Crusher (no drop info)
 (22201,8349,1,1,1,1348), -- Doom Crusher Head
 (22201,1895,1,7,-1,500250), -- Metallic Fiber
-(22201,10114,1,1,-1,200000), -- Sealed Arcana Sickle Piece
+(22201,13099,1,1,-1,200000), -- Sealed Arcana Sickle Piece
 (22201,4040,1,1,-1,333333), -- Mold Lubricant
 (22202,57,6041,12310,0,700000), -- Adena
 (22202,1879,1,1,2,111111), -- Cokes
@@ -25597,7 +25597,7 @@ INSERT INTO `droplist` VALUES
 (22218,11971,1,1,1,2045), -- Common Item - Sword of Miracles 
 (22218,11964,1,1,1,2045), -- Common Item - Dark Legion\'s Edge
 (22218,8954,1,1,2,1597), -- Blue Primeval Crystal
-(22218,10114,1,1,-1,100000), -- Sealed Arcana Sickle Piece
+(22218,13099,1,1,-1,100000), -- Sealed Arcana Sickle Piece
 (22219,57,5495,11210,0,700000), -- Adena
 (22219,1879,1,1,2,83333), -- Cokes
 (22219,1885,1,1,2,34483), -- High Grade Suede
