@@ -18731,7 +18731,9 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (13152,0,9928,43),
 (8786,0,9928,44),
 (1540,0,9928,45),
-(10166,0,9928,46);
+(10166,0,9928,46),
+(20393,0,9928,47),
+(20394,0,9928,48);
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
 -- (GM-Shop) Elixirs
@@ -21139,7 +21141,11 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (8875,0,9978,3),
 (8876,0,9978,4),
 (3031,0,9978,5),
-(1785,0,9978,6);
+(1785,0,9978,6),
+(9451,0,9978,7),
+(10413,0,9978,8),
+(13796,0,9978,9),
+(13841,0,9978,10);
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Arrows
