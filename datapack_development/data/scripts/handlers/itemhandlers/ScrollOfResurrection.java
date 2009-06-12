@@ -55,7 +55,6 @@ public class ScrollOfResurrection implements IItemHandler
 		
 		int itemId = item.getItemId();
 		//boolean blessedScroll = (itemId != 737);
-		boolean humanScroll = (itemId == 3936 || itemId == 3959 || itemId == 737);
 		boolean petScroll = (itemId == 6387 || itemId == 737);
 		
 		// SoR Animation section
@@ -83,7 +82,7 @@ public class ScrollOfResurrection implements IItemHandler
 				if (targetPlayer != null)
 					castle = CastleManager.getInstance().getCastle(targetPlayer.getX(), targetPlayer.getY(), targetPlayer.getZ());
 				else
-					castle = CastleManager.getInstance().getCastle(targetPet.getX(), targetPet.getY(), targetPet.getZ());
+					castle = CastleManager.getInstance().getCastle(targetPet.getOwner().getX(), targetPet.getOwner().getY(), targetPet.getOwner().getZ());
 				
 				if (castle != null && castle.getSiege().getIsInProgress())
 				{
@@ -125,7 +124,7 @@ public class ScrollOfResurrection implements IItemHandler
 							activeChar.sendPacket(new SystemMessage(SystemMessageId.RES_HAS_ALREADY_BEEN_PROPOSED)); // Resurrection is already been proposed.
 						condGood = false;
 					}
-					else if (!humanScroll)
+					else if (petScroll)
 					{
 						condGood = false;
 						activeChar.sendMessage("You do not have the correct scroll");
