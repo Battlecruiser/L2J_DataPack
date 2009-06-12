@@ -19,7 +19,7 @@
   <set name="hitTime" val="2000"/>
 </skill>
 <skill id="5003" levels="1" name="Giselle - Tempest">
-  <set name="element" val="3"/> <!-- Wind -->
+  <set name="element" val="2"/> <!-- Wind -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -117,7 +117,7 @@
 </skill>
 <skill id="5013" levels="1" name="Frintezza Ghost Drain">
   <!-- Lvl 1: Portrait ghost drains HP. -->
-  <set name="element" val="6"/> <!-- Dark -->
+  <set name="element" val="5"/> <!-- Dark -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -180,7 +180,7 @@
 </skill>
 <skill id="5019" levels="1" name="Frintezza's Daemon Drain">
   <!-- Lvl 1: Demon 3 HP drain range. -->
-  <set name="element" val="6"/> <!-- Dark -->
+  <set name="element" val="5"/> <!-- Dark -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -466,7 +466,8 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
-  <set name="element" val="2"/> <!-- Water -->
+  <set name="element" val="1"/> <!-- Water -->
+  <set name="elementPower" val="20"/>
   <set name="reuseDelay" val="3000"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="4000"/>
@@ -549,7 +550,8 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
-  <set name="element" val="6"/> <!-- Unholy -->
+  <set name="element" val="5"/> <!-- Unholy -->
+  <set name="elementPower" val="20"/>
   <set name="reuseDelay" val="3000"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="4000"/>
@@ -676,7 +678,8 @@
   <table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
-  <set name="element" val="3"/> <!-- Wind -->
+  <set name="element" val="2"/> <!-- Wind -->
+  <set name="elementPower" val="20"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1500"/>
   <set name="skillType" val="MDAM"/>
