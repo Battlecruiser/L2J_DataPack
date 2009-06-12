@@ -52,22 +52,18 @@ public class FishShots implements IItemHandler
 		L2Weapon weaponItem = activeChar.getActiveWeaponItem();
 		
 		if (weaponInst == null || weaponItem.getItemType() != L2WeaponType.ROD)
-		{
 			return;
-		}
 		
 		if (weaponInst.getChargedFishshot())
-		{
 			// spirit shot is already active
 			return;
-		}
 		
 		int FishshotId = item.getItemId();
 		int grade = weaponItem.getCrystalType();
 		long count = item.getCount();
 		
 		if ((grade == L2Item.CRYSTAL_NONE && FishshotId != 6535) || (grade == L2Item.CRYSTAL_D && FishshotId != 6536) || (grade == L2Item.CRYSTAL_C && FishshotId != 6537) || (grade == L2Item.CRYSTAL_B && FishshotId != 6538)
-				|| (grade == L2Item.CRYSTAL_A && FishshotId != 6539) || (grade == L2Item.CRYSTAL_S && FishshotId != 6540) || (grade == L2Item.CRYSTAL_S80 && FishshotId != 6540))
+				|| (grade == L2Item.CRYSTAL_A && FishshotId != 6539) || (FishshotId != 6540 && grade == L2Item.CRYSTAL_S ))
 		{
 			//1479 - This fishing shot is not fit for the fishing pole crystal.
 			activeChar.sendPacket(new SystemMessage(SystemMessageId.WRONG_FISHINGSHOT_GRADE));
@@ -75,17 +71,14 @@ public class FishShots implements IItemHandler
 		}
 		
 		if (count < 1)
-		{
 			return;
-		}
 		
 		weaponInst.setChargedFishshot(true);
 		activeChar.destroyItemWithoutTrace("Consume", item.getObjectId(), 1, null, false);
 		L2Object oldTarget = activeChar.getTarget();
 		activeChar.setTarget(activeChar);
 		
-		MagicSkillUse MSU = new MagicSkillUse(activeChar, SKILL_IDS[grade], 1, 0, 0);
-		Broadcast.toSelfAndKnownPlayers(activeChar, MSU);
+		Broadcast.toSelfAndKnownPlayers(activeChar, new MagicSkillUse(activeChar, SKILL_IDS[grade], 1, 0, 0));
 		activeChar.setTarget(oldTarget);
 	}
 }
