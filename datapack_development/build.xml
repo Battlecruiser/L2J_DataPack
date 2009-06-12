@@ -29,6 +29,7 @@
   <property name="build" location="build"/>
   <property name="build.dist" location="${build}/dist"/>
   <property name="build.dist.game" location="${build.dist}/gameserver"/>
+  <property name="build.dist.lang" location="${build.dist}/languages"/>
   <property name="build.dist.login" location="${build.dist}/login"/>
   <property name="build.dist.sql" location="${build.dist}/sql"/>
   <property name="build.dist.tools" location="${build.dist}/tools"/>
@@ -41,7 +42,10 @@
       <mkdir dir="${build.dist}"/>
       <mkdir dir="${build.dist.game}"/>
       <mkdir dir="${build.dist.doc}" />
+      <mkdir dir="${build.dist.lang}" />
       <mkdir dir="${build.dist.login}" />
+      <mkdir dir="${build.dist.sql}" />
+      <mkdir dir="${build.dist.tools}" />
     </target>
 
     <target name="export"
@@ -71,7 +75,6 @@
       <sync todir="${build.dist.sql}">
          <fileset dir="${basedir}/sql">
             <include name="*.*"/>
-            <include name="experimental/*.*"/>
             <include name="custom/*.*"/>
             <include name="maintenance/*.*"/>
             <include name="mods/*.*"/>
@@ -86,6 +89,12 @@
            <exclude name="*.log"/>
            <exclude name="*backup.sql"/>
          </fileset>
+      </sync>
+      <sync todir="${build.dist.lang}">
+        <fileset dir="$${basedir}/data/lang">
+          <include name="configurator/*.*"/>
+          <include name="gsregister/*.*"/>
+        </fileset>
       </sync>
       <sync todir="${build.dist.login}">
         <fileset dir="${build.dist.game}/data">
