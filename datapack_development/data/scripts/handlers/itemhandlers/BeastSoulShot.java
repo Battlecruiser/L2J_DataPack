@@ -52,9 +52,7 @@ public class BeastSoulShot implements IItemHandler
 			return;
 		}
 		else if (playable instanceof L2PcInstance)
-		{
 			activeOwner = (L2PcInstance) playable;
-		}
 		
 		if (activeOwner == null)
 			return;
