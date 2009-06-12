@@ -91,7 +91,7 @@
          </fileset>
       </sync>
       <sync todir="${build.dist.lang}">
-        <fileset dir="$${basedir}/data/lang">
+        <fileset dir="${basedir}/data/lang">
           <include name="configurator/*.*"/>
           <include name="gsregister/*.*"/>
         </fileset>
