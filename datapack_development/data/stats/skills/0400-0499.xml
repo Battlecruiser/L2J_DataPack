@@ -10,7 +10,8 @@
   <set name="weaponsAllowed" val="18444"/> <!-- Sword/Big Sword/Blunt/Big Blunt -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
-  <set name="element" val="5"/> <!-- Holy -->
+  <set name="element" val="4"/> <!-- Holy -->
+  <set name="elementPower" val="20"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="4000"/>
   <set name="hitTime" val="1300"/>
@@ -40,7 +41,8 @@
   <set name="weaponsAllowed" val="18956"/> <!-- Dual Sword/Sword/Big Sword/Blunt/Big Blunt -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="power" val="#power"/>
-  <set name="element" val="6"/> <!-- Dark -->
+  <set name="element" val="5"/> <!-- Dark -->
+  <set name="elementPower" val="20"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="4000"/>
   <set name="hitTime" val="1300"/>
@@ -516,7 +518,7 @@
   <set name="hitTime" val="2000"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="element" val="1"/> <!-- Fire -->
+  <set name="element" val="0"/> <!-- Fire -->
   <for>
     <effect name="Buff" time="300" val="0" abnormal="flame">
       <add order="0x40" stat="firePower" val="#firePower"/>
@@ -1046,7 +1048,7 @@
   <set name="effectNpcId" val="13025"/>
   <set name="offensive" val="True"/>
   <set name="effectId" val="5124"/>
-  <set name="element" val="1"/> <!-- Fire -->
+  <set name="element" val="0"/> <!-- Fire -->
   <set name="isMagic" val="true"/>
   <set name="power" val="200"/>
   <set name="itemConsumeId" val="8875"/>
@@ -1459,7 +1461,7 @@
   <set name="skillType" val="CONT"/>
   <set name="staticHitTime" val="true"/>
   <set name="operateType" val="OP_TOGGLE"/>
-  <set name="element" val="6"/> <!-- Dark -->
+  <set name="element" val="5"/> <!-- Dark -->
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="0">
        <add order="0x40" stat="darkPower" val="10"/>

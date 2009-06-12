@@ -217,7 +217,8 @@
 </skill>
 <skill id="6043" levels="1" name="Phoenix Flame Feather">
   <!-- Done by DJ MELERIX -->
-  <set name="element" val="1"/> <!-- Fire -->
+  <set name="element" val="0"/> <!-- Fire -->
+  <set name="elementPower" val="20"/>
   <set name="hitTime" val="2500"/>
   <set name="isMagic" val="true"/>  
   <set name="magicLvl" val="83"/>
@@ -233,7 +234,8 @@
   <!-- Done by DJ MELERIX -->
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
-  <set name="element" val="1"/> <!-- Fire -->
+  <set name="element" val="0"/> <!-- Fire -->
+  <set name="elementPower" val="20"/>
   <set name="hitTime" val="1080"/>
   <set name="magicLvl" val="83"/>
   <set name="mpConsume" val="80"/>
