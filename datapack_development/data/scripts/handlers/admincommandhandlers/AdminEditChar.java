@@ -552,13 +552,9 @@ public class AdminEditChar implements IAdminCommandHandler
 		String account = "N/A";
 		try
 		{
-			StringTokenizer clientinfo = new StringTokenizer(player.getClient().toString(), " ]:-[");
-			clientinfo.nextToken();
-			clientinfo.nextToken();
-			clientinfo.nextToken();
-			account = clientinfo.nextToken();
-			clientinfo.nextToken();
-			ip = clientinfo.nextToken();
+			String clientInfo = player.getClient().toString();
+			account = clientInfo.substring(clientInfo.indexOf("Account: ")+9, clientInfo.indexOf(" - IP: "));
+			ip = clientInfo.substring(clientInfo.indexOf(" - IP: ")+7,clientInfo.lastIndexOf("]"));
 		}
 		catch (Exception e)
 		{
