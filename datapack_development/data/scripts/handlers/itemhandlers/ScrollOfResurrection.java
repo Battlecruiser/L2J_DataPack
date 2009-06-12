@@ -55,7 +55,7 @@ public class ScrollOfResurrection implements IItemHandler
 		
 		int itemId = item.getItemId();
 		//boolean blessedScroll = (itemId != 737);
-		boolean petScroll = (itemId == 6387 || itemId == 737);
+		boolean petScroll = (itemId == 6387);
 		
 		// SoR Animation section
 		L2Character target = (L2Character) activeChar.getTarget();
@@ -102,11 +102,6 @@ public class ScrollOfResurrection implements IItemHandler
 								activeChar.sendPacket(new SystemMessage(SystemMessageId.CANNOT_RES_PET2)); // A pet cannot be resurrected while it's owner is in the process of resurrecting.
 							condGood = false;
 						}
-					}
-					else if (!petScroll)
-					{
-						condGood = false;
-						activeChar.sendMessage("You do not have the correct scroll");
 					}
 				}
 				else
