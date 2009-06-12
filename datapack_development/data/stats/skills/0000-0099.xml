@@ -851,7 +851,8 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_UNDEAD"/>
-  <set name="element" val="5"/> <!-- Holy -->
+  <set name="element" val="4"/> <!-- Holy -->
+  <set name="elementPower" val="20"/>
   <set name="reuseDelay" val="2000"/>
   <set name="hitTime" val="1900"/>
   <set name="skillType" val="MDAM"/>
@@ -1088,7 +1089,8 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="element" val="6"/> <!-- Dark -->
+  <set name="element" val="5"/> <!-- Dark -->
+  <set name="elementPower" val="20"/>
   <set name="reuseDelay" val="4000"/>
   <set name="hitTime" val="3000"/>
   <set name="skillType" val="DRAIN"/>

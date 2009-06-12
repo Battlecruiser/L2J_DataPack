@@ -1787,7 +1787,7 @@
   <enchant1 name="aggroPoints" val="655"/>
   <enchant2 name="aggroPoints" val="655"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
-  <set name="element" val="5"/> <!-- Holy -->
+  <set name="element" val="4"/> <!-- Holy -->
   <for>
     <effect name="Buff" time="120" val="0">
       <add order="0x40" stat="holyPower" val="20"/>
@@ -1866,7 +1866,8 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="element" val="1"/> <!-- Fire -->
+  <set name="element" val="0"/> <!-- Fire -->
+  <set name="elementPower" val="20"/>
   <set name="ignoreShld" val="true"/>
   <set name="overHit" val="true"/>
   <set name="SSBoost" val="2.0"/>

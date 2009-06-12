@@ -177,7 +177,8 @@
   <set name="lvlDepend" val="1"/>
   <set name="power" val="#power"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="element" val="2"/> <!-- Water -->
+  <set name="element" val="1"/> <!-- Water -->
+  <set name="elementPower" val="20"/>
   <set name="reuseDelay" val="2000"/>
   <set name="hitTime" val="3000"/>
   <set name="skillType" val="MDAM"/>
@@ -1079,7 +1080,7 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
   <set name="operateType" val="OP_TOGGLE"/>
-  <set name="element" val="5"/> <!-- Holy -->
+  <set name="element" val="4"/> <!-- Holy -->
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="0">
       <add order="0x40" stat="holyPower" val="10"/>
