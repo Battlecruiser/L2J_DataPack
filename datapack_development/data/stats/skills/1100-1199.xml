@@ -205,7 +205,7 @@
   <table name="#npcIds"> 14111 14116 14112 14117 14113 14118 14114 14119 14115 14120 14121 14122 14123 14124 14125 14126 14127 14128 </table>
   <table name="#enchantNpcId"> 14129 14130 14131 14132 14133 14134 14135 14136 14137 14138 14139 14140 14141 14142 14143 14144 14145 14146 14147 14148 14149 14150 14151 14152 14153 14154 14155 14156 14157 14158 </table>
   <table name="#expPenalty"> 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.29 0.28 0.27 0.26 0.25 0.24 0.23 0.22 0.21 0.2 0.18 </table>
-  <table name="#enchantExpPenalty"> 0.16 0.14 0.12 0.1 0.08 0.06 0.04 0.02 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</table>
+  <table name="#enchantExpPenalty"> 0.16 0.14 0.12 0.1 0.08 0.06 0.04 0.02 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </table>
   <set name="npcId" val="#npcIds"/>
   <enchant1 name="npcId" val="#enchantNpcId"/>
   <set name="expPenalty" val="#expPenalty"/> <!-- percent of earned Exp will be consumed." -->
@@ -698,7 +698,7 @@
 <skill id="1157" levels="5" name="Body To Mind" enchantLevels1="30">
   <table name="#hpConsume"> 131 209 280 318 366 </table>
   <table name="#power"> 22 35 47 53 61 </table>
-  <table name="#ench1power">70 70 70 70 71 71 71 71 71 71 72 72 72 72 72 72 72 73 73 73 73 73 73 74 74 74 74 74 74 75</table>
+  <table name="#ench1power"> 70 70 70 70 71 71 71 71 71 71 72 72 72 72 72 72 72 73 73 73 73 73 73 74 74 74 74 74 74 75 </table>
   <table name="#aggroPoints"> 243 379 495 549 611 </table>
   <set name="hpConsume" val="#hpConsume"/>
   <set name="power" val="#power"/>
