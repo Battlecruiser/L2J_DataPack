@@ -160,7 +160,7 @@ class Quest (JQuest) :
         htmltext = "<html><body>This quest has already been completed.</body></html>"
      elif npcId == 31092 :
         if player.getClassId().level() == 1 and not st.getInt("onlyone"):
-           htmltext = "31092-05.htm"
+           htmltext = "31092-04.htm"
    if id == State.CREATED and npcId == 31435 :
      if player.getLevel() < 39 or player.getClassId().level() != 1 or player.getRace().ordinal() == 5:
        htmltext = "31435-00.htm"
