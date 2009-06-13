@@ -1594,7 +1594,7 @@
   </for>
 </skill>
 <skill id="1483" levels="7" name="Thin Skin">
-  <table name="#mpConsume"> 42 48 54 58 62 65 68</table>
+  <table name="#mpConsume"> 42 48 54 58 62 65 68 </table>
   <table name="#lvl"> 1 2 3 4 5 6 7 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="isMagic" val="true"/>
@@ -1610,7 +1610,7 @@
   </for>
 </skill>
 <skill id="1484" levels="4" name="Enervation">
-  <table name="#mpConsume"> 55 60 64 67</table>
+  <table name="#mpConsume"> 55 60 64 67 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="isMagic" val="true"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1625,7 +1625,7 @@
   </for>
 </skill>
 <skill id="1485" levels="3" name="Spite">
-  <table name="#mpConsume"> 62 65 68</table>
+  <table name="#mpConsume"> 62 65 68 </table>
   <table name="#lvl"> 1 2 3 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="isMagic" val="true"/>
@@ -1641,8 +1641,8 @@
   </for>
 </skill>
 <skill id="1486" levels="4" name="Mental Impoverish">
-  <table name="#mpConsume"> 64 65 67 68</table>
-  <table name="#lvl"> 1 2 3 4</table>
+  <table name="#mpConsume"> 64 65 67 68 </table>
+  <table name="#lvl"> 1 2 3 4 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="isMagic" val="true"/>
   <set name="target" val="TARGET_ONE"/>
