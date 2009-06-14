@@ -973,10 +973,23 @@
   <set name="hitTime" val="1200"/>
 </skill>
 <skill id="777" levels="1" name="Demolition Impact">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by caramon81, momo61 & toxocara77 -->
+  <!-- TODO: Reuse & Radius needs to be verified -->
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
+  <set name="baseCritRate" val="15"/>
   <set name="hitTime" val="1200"/>
+  <set name="magiclvl" val="83"/>
+  <set name="mpConsume" val="160"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="overHit" val="true"/>
+  <set name="power" val="5750"/>
+  <set name="reuseDelay" val="21000"/>
+  <set name="skillRadius" val="150"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="SSBoost" val="2.0"/>
+  <set name="target" val="TARGET_FRONT_AREA"/>
+  <set name="weaponsAllowed" val="18432"/> <!-- Big Sword/Big Blunt -->
 </skill>
 <skill id="778" levels="1" name="Golem Armor">
   <set name="target" val="TARGET_NONE"/>
