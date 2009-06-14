@@ -959,13 +959,13 @@
   <set name="aggroPoints" val="666"/>
   <for>
     <effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
-      <mul stat="pDef" val="1.2" order="0x30"/>
-      <add stat="accCombat" val="4" order="0x40"/>
-      <mul stat="pAtk" val="1.1" order="0x30"/>
-      <mul stat="pAtkSpd" val="1.2" order="0x30"/>
-      <mul stat="maxHp" val="1.2" order="0x30"/>
-      <mul stat="regHp" val="1.2" order="0x30"/>
-      <mul stat="runSpd" val="0.9" order="0x30"/>
+      <mul order="0x30" stat="pDef" val="1.2"/>
+      <add order="0x40" stat="accCombat" val="4"/>
+      <mul order="0x30" stat="pAtk" val="1.1"/>
+      <mul order="0x30" stat="pAtkSpd" val="1.2"/>
+      <mul order="0x30" stat="maxHp" val="1.2"/>
+      <mul order="0x30" stat="regHp" val="1.2"/>
+      <mul order="0x30" stat="runSpd" val="0.9"/>
       <mul order="0x30" stat="debuffVuln" val="0.9"/>
     </effect>
   </for>
@@ -986,12 +986,12 @@
   <set name="aggroPoints" val="666"/>
   <for>
     <effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
-      <mul stat="regMp" val="1.2" order="0x30"/>
-      <mul stat="mDef" val="1.2" order="0x30"/>
-      <mul stat="mCritRate" val="1.02" order="0x30"/>
-      <mul stat="mAtk" val="1.2" order="0x30"/>
-      <mul stat="mAtkSpd" val="1.2" order="0x30"/>
-      <mul stat="runSpd" val="0.8" order="0x30"/>
+      <mul order="0x30" stat="regMp" val="1.2"/>
+      <mul order="0x30" stat="mDef" val="1.2"/>
+      <mul order="0x30" stat="mCritRate" val="1.02"/>
+      <mul order="0x30" stat="mAtk" val="1.2"/>
+      <mul order="0x30" stat="mAtkSpd" val="1.2"/>
+      <mul order="0x30" stat="runSpd" val="0.8"/>
       <mul order="0x30" stat="debuffVuln" val="0.9"/>
     </effect>
   </for>
@@ -1043,17 +1043,17 @@
   <set name="aggroPoints" val="669"/>
   <for>
     <effect name="Buff" time="300" val="0" stackOrder="2" stackType="multi_buff">
-      <mul stat="rCrit" val="1.2" order="0x30"/>
-      <mul stat="pAtk" val="1.1" order="0x30"/>
-      <mul stat="cAtk" val="1.2" order="0x30"/>
-      <mul stat="pAtkSpd" val="1.2" order="0x30"/>
-      <mul stat="maxHp" val="1.2" order="0x30"/>
-      <mul stat="runSpd" val="0.8" order="0x30"/>
-      <add stat="accCombat" val="4" order="0x40"/>
-      <mul stat="pDef" val="1.2" order="0x30"/>
-      <mul stat="mDef" val="1.2" order="0x30"/>
-      <mul stat="mAtk" val="1.2" order="0x30"/>
-      <mul stat="mAtkSpd" val="1.2" order="0x30"/>
+      <mul order="0x30" stat="rCrit" val="1.2"/>
+      <mul order="0x30" stat="pAtk" val="1.1"/>
+      <mul order="0x30" stat="cAtk" val="1.2"/>
+      <mul order="0x30" stat="pAtkSpd" val="1.2"/>
+      <mul order="0x30" stat="maxHp" val="1.2"/>
+      <mul order="0x30" stat="runSpd" val="0.8"/>
+      <add order="0x40" stat="accCombat" val="4"/>
+      <mul order="0x30" stat="pDef" val="1.2"/>
+      <mul order="0x30" stat="mDef" val="1.2"/>
+      <mul order="0x30" stat="mAtk" val="1.2"/>
+      <mul order="0x30" stat="mAtkSpd" val="1.2"/>
       <mul order="0x30" stat="debuffVuln" val="0.8"/>
     </effect>
   </for>
@@ -1100,10 +1100,10 @@
   <set name="aggroPoints" val="662"/>
   <for>
     <effect name="Buff" time="1200" val="0">
-      <add stat="waterRes" val="20" order="0x40"/>
-      <add stat="fireRes" val="30" order="0x40"/>
-      <add stat="windRes" val="20" order="0x40"/>
-      <add stat="earthRes" val="20" order="0x40"/>
+      <add order="0x40" stat="waterRes" val="20"/>
+      <add order="0x40" stat="fireRes" val="30"/>
+      <add order="0x40" stat="windRes" val="20"/>
+      <add order="0x40" stat="earthRes" val="20"/>
     </effect>
   </for>
 </skill>
@@ -1121,8 +1121,8 @@
   <set name="aggroPoints" val="666"/>
   <for>
     <effect name="Buff" time="1200" val="0">
-      <add stat="darkRes" val="30" order="0x40"/>
-      <add stat="holyRes" val="20" order="0x40"/>
+      <add order="0x40" stat="darkRes" val="30"/>
+      <add order="0x40" stat="holyRes" val="20"/>
     </effect>
   </for>
 </skill>
@@ -1422,13 +1422,13 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <for>
     <effect name="Debuff" time="120" val="0">
-      <mul stat="pAtk" order="0x30" val="0.9"/>
-      <mul stat="runSpd" order="0x30" val="0.8"/>
-      <mul stat="mDef" order="0x30" val="0.7"/>
-      <mul stat="pAtkSpd" order="0x30" val="0.7"/>
-      <mul stat="rCrit" order="0x30" val="0.7"/>
-      <mul stat="cAtk" order="0x30" val="0.7"/>
-      <sub stat="accCombat" order="0x40" val="6"/>
+      <mul order="0x30" stat="pAtk" val="0.9"/>
+      <mul order="0x30" stat="runSpd" val="0.8"/>
+      <mul order="0x30" stat="mDef" val="0.7"/>
+      <mul order="0x30" stat="pAtkSpd" val="0.7"/>
+      <mul order="0x30" stat="rCrit" val="0.7"/>
+      <mul order="0x30" stat="cAtk" val="0.7"/>
+      <sub order="0x40" stat="accCombat" val="6"/>
     </effect>
   </for>
 </skill>
@@ -1451,7 +1451,7 @@
   <set name="effectRange" val="1100"/>
   <for>
     <effect name="Debuff" time="120" val="0">
-      <mul stat="gainHp" val="0.5" order="0x30"/>
+      <mul order="0x30" stat="gainHp" val="0.5"/>
     </effect>
   </for>
 </skill>
