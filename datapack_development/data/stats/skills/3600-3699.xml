@@ -89,13 +89,13 @@
   <set name="isMagic" val="true"/>
   <set name="minPledgeClass" val="2"/>
   <for>
-    <mul stat="maxCp" val="#maxCp" order="0x30"/>
-    <mul stat="pAtk" val="#pAtk" order="0x30"/>
-    <mul stat="mAtk" val="#mAtk" order="0x30"/>
-    <mul stat="pDef" val="#pDef" order="0x30"/>
-    <mul stat="mDef" val="#mDef" order="0x30"/>
-    <add stat="accCombat" val="#accCombat" order="0x40"/>
-    <add stat="runSpd" val="#runSpd" order="0x40"/>
+    <mul order="0x30" stat="maxCp" val="#maxCp"/>
+    <mul order="0x30" stat="pAtk" val="#pAtk"/>
+    <mul order="0x30" stat="mAtk" val="#mAtk"/>
+    <mul order="0x30" stat="pDef" val="#pDef"/>
+    <mul order="0x30" stat="mDef" val="#mDef"/>
+    <add order="0x40" stat="accCombat" val="#accCombat"/>
+    <add order="0x40" stat="runSpd" val="#runSpd"/>
     <add order="0x40" stat="absorbDam" val="100"/> <!-- absorb 100% HP from damage inflicted on enemies -->
     <mul order="0x30" stat="regCp" val="20"/>
   </for>
@@ -126,8 +126,8 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <mul val="1.05" order="0x30" stat="pDef"/>
-    <add val="85" order="0x40" stat="maxHp"/>
+    <mul order="0x30" stat="pDef" val="1.05"/>
+    <add order="0x40" stat="maxHp" val="85"/>
   </for>
 </skill>
 <skill id="3606" levels="1" name="Clan Oath Light Armor Set">
@@ -135,8 +135,8 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <mul val="1.05" order="0x30" stat="pDef"/>
-    <add val="3" order="0x40" stat="rEvas"/>
+    <mul order="0x30" stat="pDef" val="1.05"/>
+    <add order="0x40" stat="rEvas" val="3"/>
   </for>
 </skill>
 <skill id="3607" levels="1" name="Clan Oath Robe Set">
@@ -144,8 +144,8 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <mul val="1.05" order="0x30" stat="pDef"/>
-    <mul val="1.05" order="0x30" stat="mAtkSpd"/>
+    <mul order="0x30" stat="pDef" val="1.05"/>
+    <mul order="0x30" stat="mAtkSpd" val="1.05"/>
   </for>
 </skill>
 <skill id="3608" levels="2" name="Apella Heavy Armor Set">
@@ -174,8 +174,8 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <add val="#maxCP" order="0x40" stat="maxCp"/>
-    <mul val="1.4" order="0x30" stat="regCp"/>
+    <add order="0x40" stat="maxCp" val="#maxCP"/>
+    <mul order="0x30" stat="regCp" val="1.4"/>
     <!-- TODO lvl1:
         There is a 10% probability that evasion is increased by 2 and critical damage is decreased by 86 if the damage inflicted by PC is more than 50.
      -->
@@ -191,8 +191,8 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <add val="#maxCP" order="0x40" stat="maxCp"/>
-    <mul val="1.4" order="0x30" stat="regCp"/>
+    <add order="0x40" stat="maxCp" val="#maxCP"/>
+    <mul order="0x30" stat="regCp" val="1.4"/>
     <!-- TODO lvl1:
         There is a 10% probability that moving speed is increased by 10 and defense power is increased by 5% if the damage inflicted by PC is more than 50.
      -->
@@ -426,13 +426,13 @@
   <set name="isMagic" val="true"/>
   <set name="minPledgeClass" val="2"/>
   <for>
-    <mul stat="maxCp" val="#maxCp" order="0x30"/>
-    <mul stat="pAtk" val="#pAtk" order="0x30"/>
-    <mul stat="mAtk" val="#mAtk" order="0x30"/>
-    <mul stat="pDef" val="#pDef" order="0x30"/>
-    <mul stat="mDef" val="#mDef" order="0x30"/>
-    <add stat="accCombat" val="#accCombat" order="0x40"/>
-    <add stat="runSpd" val="#runSpd" order="0x40"/>
+    <mul order="0x30" stat="maxCp" val="#maxCp"/>
+    <mul order="0x30" stat="pAtk" val="#pAtk"/>
+    <mul order="0x30" stat="mAtk" val="#mAtk"/>
+    <mul order="0x30" stat="pDef" val="#pDef"/>
+    <mul order="0x30" stat="mDef" val="#mDef"/>
+    <add order="0x40" stat="accCombat" val="#accCombat"/>
+    <add order="0x40" stat="runSpd" val="#runSpd"/>
     <add order="0x40" stat="absorbDam" val="100"/> <!-- absorb 100% HP from damage inflicted on enemies -->
     <mul order="0x30" stat="regCp" val="20"/>
   </for>
