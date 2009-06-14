@@ -614,10 +614,10 @@
   <set name="effectRange" val="900"/>
   <for>
     <effect name="Buff" time="1200" val="0" stackOrder="#stack" stackType="MentalShield">
-      <mul stat="rootVuln" val="#vuln" order="0x30"/>
-      <mul stat="sleepVuln" val="#vuln" order="0x30"/>
-      <mul stat="confusionVuln" val="#vuln" order="0x30"/>
-      <mul stat="derangementVuln" val="#vuln" order="0x30"/>
+      <mul order="0x30" stat="rootVuln" val="#vuln"/>
+      <mul order="0x30" stat="sleepVuln" val="#vuln"/>
+      <mul order="0x30" stat="confusionVuln" val="#vuln"/>
+      <mul order="0x30" stat="derangementVuln" val="#vuln"/>
     </effect>
   </for>
 </skill>
@@ -686,7 +686,7 @@
   <set name="effectRange" val="900"/>
   <for>
     <effect name="Buff" time="1200" val="0" stackOrder="#stack" stackType="ShockVuln">
-      <mul stat="stunVuln" val="#vuln" order="0x30"/>
+      <mul order="0x30" stat="stunVuln" val="#vuln"/>
     </effect>
   </for>
 </skill>
@@ -1006,7 +1006,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <for>
     <effect count="1200" name="ManaHealOverTime" time="3" val="55.56">
-      <add stat="maxMp" order="0x40" val="5000"/>
+      <add order="0x40" stat="maxMp" val="5000"/>
     </effect>
   </for>
 </skill>
@@ -1019,7 +1019,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <for>
     <effect count="1200" name="ManaHealOverTime" time="3" val="83.34">
-      <add stat="maxMp" order="0x40" val="10000"/>
+      <add order="0x40" stat="maxMp" val="10000"/>
     </effect>
   </for>
 </skill>
@@ -1032,7 +1032,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <for>
     <effect count="1200" name="ManaHealOverTime" time="3" val="183.33">
-      <add stat="maxMp" order="0x40" val="28000"/>
+      <add order="0x40" stat="maxMp" val="28000"/>
     </effect>
   </for>
 </skill>
@@ -1045,7 +1045,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <for>
     <effect count="1200" name="ManaHealOverTime" time="3" val="350.1">
-      <add stat="maxMp" order="0x40" val="58000"/>
+      <add order="0x40" stat="maxMp" val="58000"/>
     </effect>
   </for>
 </skill>
@@ -1058,7 +1058,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <for>
     <effect count="1200" name="ManaHealOverTime" time="3" val="600">
-      <add stat="maxMp" order="0x40" val="103000"/>
+      <add order="0x40" stat="maxMp" val="103000"/>
     </effect>
   </for>
 </skill>
@@ -1071,7 +1071,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <for>
     <effect count="1200" name="ManaHealOverTime" time="3" val="616.8">
-      <add stat="maxMp" order="0x40" val="106000"/>
+      <add order="0x40" stat="maxMp" val="106000"/>
     </effect>
   </for>
 </skill>
@@ -1084,7 +1084,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <for>
     <effect count="1200" name="ManaHealOverTime" time="3" val="866.7">
-      <add stat="maxMp" order="0x40" val="151000"/>
+      <add order="0x40" stat="maxMp" val="151000"/>
     </effect>
   </for>
 </skill>
@@ -1097,7 +1097,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <for>
     <effect count="1200" name="ManaHealOverTime" time="3" val="1116.6">
-      <add stat="maxMp" order="0x40" val="196000"/>
+      <add order="0x40" stat="maxMp" val="196000"/>
     </effect>
   </for>
 </skill>

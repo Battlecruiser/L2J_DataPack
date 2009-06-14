@@ -275,8 +275,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <for>
     <effect name="Buff" time="8" val="0">
-      <mul stat="regHp" val="1.2" order="0x30"/>
-      <mul stat="regCp" val="1.2" order="0x30"/>
+      <mul order="0x30" stat="regHp" val="1.2"/>
+      <mul order="0x30" stat="regCp" val="1.2"/>
     </effect>
   </for>
 </skill>

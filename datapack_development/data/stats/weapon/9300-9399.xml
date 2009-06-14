@@ -507,21 +507,21 @@
 </item>
 <item id="9343" name="Lacerator - Rsk. Focus">
   <for>
-   <set val="210" order="0x08" stat="pAtk"/>
-   <set val="114" order="0x08" stat="mAtk"/>
-   <set val="10" order="0x08" stat="rCrit"/>
-   <set val="406" order="0x08" stat="pAtkSpd"/>
-   <enchant val="0" order="0x0C" stat="pAtk"/>
-   <enchant val="0" order="0x0C" stat="mAtk"/>
-       <!-- SA: Rsk. Focus -->
-   <add order="0x40" stat="rCrit" val="130">
-		<and>        
-			<player hp="60"/>
-		</and>
-   </add>
-	<!-- Enhances damage to target during PvP -->
-   <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-   <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+    <set val="210" order="0x08" stat="pAtk"/>
+    <set val="114" order="0x08" stat="mAtk"/>
+    <set val="10" order="0x08" stat="rCrit"/>
+    <set val="406" order="0x08" stat="pAtkSpd"/>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Rsk. Focus -->
+    <add order="0x40" stat="rCrit" val="130">
+      <and>
+        <player hp="60"/>
+      </and>
+    </add>
+    <!-- Enhances damage to target during PvP -->
+    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="9344" name="Undertaker">

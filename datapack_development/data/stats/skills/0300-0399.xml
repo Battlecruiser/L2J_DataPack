@@ -470,7 +470,7 @@
   <set name="skillType" val="PASSIVE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <set stat="shieldDefAngle" val="360" order="0x10">
+    <set order="0x10" stat="shieldDefAngle" val="360">
       <using kind="Shield"/> <!-- when a shield is equipped. -->
     </set>
   </for>
@@ -509,13 +509,13 @@
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="0">
       <mul order="0x30" stat="sDef" val="0.6"/>
-      <set stat="shieldDefAngle" val="360" order="0x10"/>
+      <set order="0x10" stat="shieldDefAngle" val="360"/>
     </effect>
   </for>
   <enchant1for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="2" val="0">
       <mul order="0x30" stat="sDef" val="#ench1sDef"/>
-      <set stat="shieldDefAngle" val="360" order="0x10"/>
+      <set order="0x10" stat="shieldDefAngle" val="360"/>
     </effect>
   </enchant1for>
 </skill>
