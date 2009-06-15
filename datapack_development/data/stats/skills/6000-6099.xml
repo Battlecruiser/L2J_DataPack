@@ -509,6 +509,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <set name="hitTime" val="1500"/>
+  <set name="lvlDepend" val="2"/>
   <set name="mpConsume" val="42"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="#power"/>
@@ -516,6 +517,11 @@
   <set name="skillType" val="PDAM"/>
   <set name="SSBoost" val="2.0"/>
   <set name="target" val="TARGET_ONE"/>
+  <for>
+    <effect name="Debuff" time="30" val="0" effectPower="80" effectType="WEAKNESS">
+      <sub order="0x40" stat="darkRes" val="25"/>
+    </effect>
+  </for>
 </skill>
 <skill id="6096" levels="13" name="Panther Fatal Claw">
   <!-- Done by DJ MELERIX -->
