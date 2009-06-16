@@ -498,10 +498,17 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="6094" levels="11" name="Panther Cancel">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Done by DJ MELERIX -->
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
+  <set name="hitTime" val="1500"/>
+  <set name="maxNegated" val="3"/> <!-- TODO: maxNegated amount needs to be verified, because in PTS maxNegated is upto 3, but in Live appears to be upto 2 -->
+  <set name="mpConsume" val="42"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="80"/>
   <set name="reuseDelay" val="75000"/>
+  <set name="skillType" val="CANCEL"/>
+  <set name="target" val="TARGET_ONE"/>
 </skill>
 <skill id="6095" levels="15" name="Panther Dark Claw">
   <!-- Done by DJ MELERIX -->
