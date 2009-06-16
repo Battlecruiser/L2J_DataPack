@@ -14,11 +14,13 @@
     <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="#mdot">
       <add order="0x40" stat="pAtk" val="#pAtk"/>
     </effect>
+    <add order="0x40" stat="absorbDamMana" val="10"/>
   </for>
   <enchant1for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="4">
       <add order="0x40" stat="pAtk" val="#ench1patk"/>
     </effect>
+    <add order="0x40" stat="absorbDamMana" val="10"/>
   </enchant1for>
 </skill>
 <skill id="1002" levels="3" name="Flame Chant" enchantLevels1="30" enchantLevels2="30">
