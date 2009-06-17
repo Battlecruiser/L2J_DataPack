@@ -29,6 +29,7 @@ import net.sf.l2j.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import net.sf.l2j.gameserver.skills.Env;
 import net.sf.l2j.gameserver.skills.Formulas;
 import net.sf.l2j.gameserver.templates.skills.L2SkillType;
+import net.sf.l2j.gameserver.util.Util;
 
 /**
  *
@@ -48,19 +49,8 @@ public class InstantJump implements ISkillHandler
 	{
 		
 		L2Character target = (L2Character)targets[0];
-		
-		
-		//if (activeChar.isAlikeDead()|| target.isInsideZone(L2Character.ZONE_PEACE)) //to prevent bugging - retail like - cannot use this skill in peace zone
-		//	return;
-		
-		
-		//if(targets.length > 1 || targets.length == 0) // this is about bad target type in DP... just dont use anything else than TARGET_ONE...
-		//	return;
-		
 		int x=0,y=0,z=0;
 		
-		// Gracia Final support = it ports u behind ur target, uncomment these lines when Gracia Final! is out.
-		/*
 		int px = target.getX();
 		int py = target.getY();
 		double ph = Util.convertHeadingToDegree(target.getHeading());
@@ -75,13 +65,8 @@ public class InstantJump implements ISkillHandler
 		x = (int) (px + (25 * Math.cos(ph)));
 		y = (int) (py + (25 * Math.sin(ph)));
 		z = target.getZ();
-		*/
 		
-		// Gracia Part I+II pozitioning - comment these lines when gracia final is out
-		Random rnd = new Random(); //  a little random location around player... not directly "into him"
-		x = target.getX() + rnd.nextInt(5);
-		y = target.getY() + rnd.nextInt(5);
-		z = target.getZ();
+
 		
 		
 		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);

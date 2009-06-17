@@ -66,9 +66,12 @@ public class Pdam implements ISkillHandler
 			_log.fine("Begin Skill processing in Pdam.java " + skill.getSkillType());
 		}
 		
+		L2ItemInstance weapon = activeChar.getActiveWeaponInstance();
+		boolean soul = (weapon != null && weapon.getChargedSoulshot() == L2ItemInstance.CHARGED_SOULSHOT && weapon.getItemType() != L2WeaponType.DAGGER);
+		
 		for (L2Character target: (L2Character[]) targets)
 		{
-			L2ItemInstance weapon = activeChar.getActiveWeaponInstance();
+			
 			if (activeChar instanceof L2PcInstance && target instanceof L2PcInstance && ((L2PcInstance)target).isFakeDeath())
 			{
 				target.stopFakeDeath(null);
@@ -83,7 +86,6 @@ public class Pdam implements ISkillHandler
 			if (skill.getBaseCritRate() > 0)
 				crit = Formulas.calcCrit(skill.getBaseCritRate() * 10 * Formulas.getSTRBonus(activeChar), target);
 			
-			boolean soul = (weapon != null && weapon.getChargedSoulshot() == L2ItemInstance.CHARGED_SOULSHOT && weapon.getItemType() != L2WeaponType.DAGGER);
 			
 			if (!crit && (skill.getCondition() & L2Skill.COND_CRIT) != 0)
 				damage = 0;
@@ -113,8 +115,6 @@ public class Pdam implements ISkillHandler
 			if (crit)
 				damage *= 2; // PDAM Critical damage always 2x and not affected by buffs
 				
-			if (soul && weapon != null)
-				weapon.setChargedSoulshot(L2ItemInstance.CHARGED_NONE);
 			
 			final boolean skillIsEvaded = Formulas.calcPhysicalSkillEvasion(target, skill);
 			final byte reflect = Formulas.calcSkillReflect(target, skill);
@@ -139,7 +139,7 @@ public class Pdam implements ISkillHandler
 						{
 							// activate attacked effects, if any
 							target.stopSkillEffects(skill.getId());
-							if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, false, false, false))
+							if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, false, false, true))
 							{
 								skill.getEffects(activeChar, target, new Env(shld, false, false, false));
 							
@@ -296,6 +296,9 @@ public class Pdam implements ISkillHandler
 			if (skill.isSuicideAttack())
 				activeChar.doDie(activeChar);
 		}
+		
+		if (soul && weapon != null)
+			weapon.setChargedSoulshot(L2ItemInstance.CHARGED_NONE);
 	}
 	
 	/**
