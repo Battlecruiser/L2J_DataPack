@@ -125,14 +125,7 @@ public class Disablers implements ISkillHandler
 				}
 			}
 			else
-			{
-				if (weaponInst.getChargedSoulshot() == L2ItemInstance.CHARGED_SOULSHOT)
-				{
-					ss = true;
-					if (skill.getId() != 1020) // vitalize
-						weaponInst.setChargedSoulshot(L2ItemInstance.CHARGED_NONE);
-				}
-			}
+				ss = true;
 		}
 		// If there is no weapon equipped, check for an active summon.
 		else if (activeChar instanceof L2Summon)
@@ -153,13 +146,7 @@ public class Disablers implements ISkillHandler
 				}
 			}
 			else
-			{
-				if (activeSummon.getChargedSoulShot() == L2ItemInstance.CHARGED_SOULSHOT)
-				{
-					ss = true;
-					activeSummon.setChargedSoulShot(L2ItemInstance.CHARGED_NONE);
-				}
-			}
+				ss = true;
 		}
 		else if (activeChar instanceof L2Npc)
 		{
