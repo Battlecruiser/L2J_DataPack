@@ -14,7 +14,6 @@
  */
 package handlers.skillhandlers;
 
-import java.util.Random;
 
 import net.sf.l2j.gameserver.ai.CtrlIntention;
 import net.sf.l2j.gameserver.handler.ISkillHandler;
