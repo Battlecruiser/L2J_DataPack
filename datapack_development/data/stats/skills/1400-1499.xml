@@ -1757,15 +1757,15 @@
   <set name="mpConsume" val="145"/>
   <set name="power" val="117"/>
   <set name="target" val="TARGET_AURA"/>
-  <set name="skillRadius" val="100"/> <!-- guess -->
+  <set name="skillRadius" val="200"/>
   <set name="element" val="5"/> <!-- Dark -->
   <set name="elementPower" val="20"/>
   <set name="isMagic" val="true"/>
-  <set name="skillType" val="MDAM"/>
+  <set name="skillType" val="DRAIN"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="20000"/> <!-- guess -->
-  <set name="absorbPart" val="0.4"/>
+  <set name="absorbPart" val="0.4"/> <!-- absorbs 40% of damage -->
   <for>
     <effect name="Debuff" time="30" val="0">
       <mul order="0x30" stat="pAtk" val="0.5"/>
