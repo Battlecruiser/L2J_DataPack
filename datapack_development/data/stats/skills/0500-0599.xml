@@ -606,7 +606,7 @@
   <set name="reuseDelay" val="8000"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="weaponsAllowed" val="16"/> <!-- Dagger -->
+  <set name="weaponsAllowed" val="262160"/> <!-- Dagger/Dual Daggers -->
   <for>
     <effect name="Debuff" time="30" val="0">
       <mul order="0x30" stat="critVuln" val="1.3"/>
