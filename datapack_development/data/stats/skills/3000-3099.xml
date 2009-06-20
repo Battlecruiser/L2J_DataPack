@@ -289,9 +289,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <add order="0x40" stat="blowRate" val="#rate">
-      <using kind="Dagger"/>
-    </add>
+    <add order="0x40" stat="blowRate" val="#rate"/>
   </for>
 </skill>
 <skill id="3036" levels="6" name="Special Ability: Haste">

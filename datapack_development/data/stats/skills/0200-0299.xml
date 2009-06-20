@@ -66,15 +66,15 @@
   <set name="triggeredLevel" val="1"/>
   <set name="activationChance" val="25"/>
   <set name="chanceType" val="ON_CRIT"/>
-  <set name="weaponsAllowed" val="16"/> <!-- Dagger -->
+  <set name="weaponsAllowed" val="262160"/> <!-- Dagger/Dual Daggers -->
   <for>
     <add order="0x40" stat="pAtk" val="#pAtk">
-      <using kind="Dagger"/>
+      <using kind="Dagger,Dual Dagger"/>
     </add>
   </for>
   <enchant1for>
     <add order="0x40" stat="pAtk" val="#ench1pAtk">
-      <using kind="Dagger"/>
+      <using kind="Dagger,Dual Dagger"/>
     </add>
   </enchant1for>
 </skill>
@@ -1353,7 +1353,7 @@
   <table name="#power"> 1107 1176 1249 1325 1405 1488 1574 1664 1757 1853 1953 2057 2164 2274 2388 2505 2625 2748 2875 3004 3136 3271 3408 3548 3690 3834 3980 4127 4275 4425 4575 4726 4878 5029 5180 5330 5479 </table>
   <table name="#ench1Power"> 5536 5593 5650 5708 5765 5822 5879 5936 5993 6050 6107 6164 6222 6279 6336 6396 6450 6507 6564 6621 6678 6736 6793 6850 6907 6964 7021 7078 7135 7192 </table>
   <table name="#ench2Power"> 5504 5529 5554 5579 5604 5629 5654 5680 5705 5730 5755 5780 5805 5830 5855 5880 5905 5930 5955 5980 6005 6030 6055 6080 6105 6130 6156 6180 6206 6231 </table>
-  <set name="weaponsAllowed" val="16"/> <!-- Dagger -->
+  <set name="weaponsAllowed" val="262160"/> <!-- Dagger/Dual Daggers -->
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="power" val="#power"/>
