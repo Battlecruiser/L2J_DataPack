@@ -16,6 +16,7 @@ package ai.group_template;
 
 import static net.sf.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
 import net.sf.l2j.gameserver.ai.CtrlEvent;
+import net.sf.l2j.gameserver.ai.CtrlIntention;
 import net.sf.l2j.gameserver.datatables.NpcTable;
 import net.sf.l2j.gameserver.instancemanager.DimensionalRiftManager;
 import net.sf.l2j.gameserver.model.L2Object;
@@ -164,6 +165,13 @@ public class L2AttackableAIScript extends QuestJython
     
     public String onAggroRangeEnter (L2Npc npc, L2PcInstance player, boolean isPet) 
     { 
+    	L2Character target = isPet ? player.getPet() : player;
+    	
+    	((L2Attackable) npc).addToAggroList(target);
+
+		// Set the intention to the L2Attackable to AI_INTENTION_ACTIVE
+		if (npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE)
+			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
     	return null; 
     }
 

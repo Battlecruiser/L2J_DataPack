@@ -52,8 +52,10 @@ public class Monastery extends L2AttackableAIScript
  
     public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
     {
+    	System.out.print("1");
     	if (equals(mobs1,npc.getNpcId()) && !npc.isInCombat())
     	{
+    		System.out.print("2");
     		if (player.getActiveWeaponInstance() != null)
     		{
     			npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), text[0]));
@@ -63,9 +65,6 @@ public class Monastery extends L2AttackableAIScript
     				case 22126:
     				{
     					L2Skill skill = SkillTable.getInstance().getInfo(4589,8);
-    	    			((L2Attackable) npc).getAggroListRP().remove(player);
-    	    			if (isPet)
-    	    				((L2Attackable) npc).getAggroListRP().remove(player.getPet());
     	    			npc.setTarget(player);
     	    			npc.doCast(skill);
     	    			break;
@@ -79,14 +78,8 @@ public class Monastery extends L2AttackableAIScript
     				}
     			}
     		}
-    		else 
-    		{
-    			((L2Attackable) npc).getAggroListRP().remove(player);
-    			if (isPet)
-    				((L2Attackable) npc).getAggroListRP().remove(player.getPet());
-    			return null;
-    		}
-    		
+    		else if (!player.isInCombat()) 
+    			return null;    		
     	}
         return super.onAggroRangeEnter(npc, player, isPet);
     }
@@ -134,6 +127,7 @@ public class Monastery extends L2AttackableAIScript
     	    		L2Playable target = (L2Playable) (obj instanceof L2PcInstance ? obj : ((L2Summon) obj).getOwner());
     	    		if (target.getActiveWeaponInstance() != null && !npc.isInCombat())
     	    		{
+    	    			npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), text[0]));
     	    			switch (npc.getNpcId())
     	    			{
     	    				case 22124:
@@ -141,7 +135,6 @@ public class Monastery extends L2AttackableAIScript
     	    				case 22127:
     	    				{
     	    					L2Skill skill = SkillTable.getInstance().getInfo(4589,8);
-    	    	    			((L2Attackable) npc).getAggroListRP().remove(target);
     	    	    			npc.setTarget(target);
     	    	    			npc.doCast(skill);
     	    	    			break;
