@@ -6199,7 +6199,7 @@ INSERT INTO `etcitem` VALUES
 (8053,'Hot Spring Letter U','false','none',0,'stackable','steel','none',-1,-1,0,0,'false','false','true','false','none','0-0;'),
 (8054,'Hot Spring Letter W','false','none',0,'stackable','steel','none',-1,-1,0,0,'false','false','true','false','none','0-0;'),
 (8055,'Hot Spring Letter Y','false','none',0,'stackable','steel','none',-1,-1,0,0,'false','false','true','false','none','0-0;'),
-(8056,'Key of Splendor Room','false','none',0,'stackable','steel','none',-1,-1,0,0,'true','true','true','true','none','0-0;'),
+(8056,'Key of Splendor Room','false','none',0,'stackable','steel','none',-1,-1,0,0,'true','true','true','true','PaganKeys','2238-1;'),
 (8057,'Silver Hemocyte','false','none',0,'stackable','steel','none',-1,-1,0,0,'true','true','true','true','none','0-0;'),
 (8058,'Lockup Research Report','false','quest',0,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','none','0-0;'),
 (8059,'Research Report','false','none',0,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','Book','0-0;'),
