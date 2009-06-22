@@ -52,10 +52,8 @@ public class Monastery extends L2AttackableAIScript
  
     public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
     {
-    	System.out.print("1");
     	if (equals(mobs1,npc.getNpcId()) && !npc.isInCombat())
     	{
-    		System.out.print("2");
     		if (player.getActiveWeaponInstance() != null)
     		{
     			npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), text[0]));
