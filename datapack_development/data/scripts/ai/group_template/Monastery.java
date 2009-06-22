@@ -79,7 +79,7 @@ public class Monastery extends L2AttackableAIScript
     				}
     			}
     		}
-    		else if (!player.isInCombat())
+    		else 
     		{
     			((L2Attackable) npc).getAggroListRP().remove(player);
     			if (isPet)
