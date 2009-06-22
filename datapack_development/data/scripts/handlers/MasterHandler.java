@@ -134,6 +134,7 @@ public class MasterHandler
 		ItemHandler.getInstance().registerItemHandler(new RollingDice());
 		ItemHandler.getInstance().registerItemHandler(new EnchantAttribute());
 		ItemHandler.getInstance().registerItemHandler(new EnchantScrolls());
+		ItemHandler.getInstance().registerItemHandler(new ExtractableItems());
 		ItemHandler.getInstance().registerItemHandler(new Book());
 		ItemHandler.getInstance().registerItemHandler(new SoulCrystals());
 		ItemHandler.getInstance().registerItemHandler(new SevenSignsRecord());
