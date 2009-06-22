@@ -14,6 +14,7 @@
  */
 package handlers.itemhandlers;
 
+import net.sf.l2j.gameserver.datatables.DoorTable;
 import net.sf.l2j.gameserver.handler.IItemHandler;
 import net.sf.l2j.gameserver.model.L2ItemInstance;
 import net.sf.l2j.gameserver.model.L2Object;
@@ -74,6 +75,19 @@ public class PaganKeys implements IItemHandler
 		
 		switch (itemId)
 		{
+			case 8056:
+				if (door.getDoorId() == 23150004||door.getDoorId() == 23150003)
+				{
+					DoorTable.getInstance().getDoor(23150003).openMe();
+					DoorTable.getInstance().getDoor(23150003).onOpen();
+					DoorTable.getInstance().getDoor(23150004).openMe();
+					DoorTable.getInstance().getDoor(23150003).onOpen();
+				}
+				else
+				{
+					activeChar.sendMessage("Incorrect Door.");
+				}
+				break;
 			case 8273: //AnteroomKey
 				if (door.getDoorName().startsWith("Anteroom"))
 				{
