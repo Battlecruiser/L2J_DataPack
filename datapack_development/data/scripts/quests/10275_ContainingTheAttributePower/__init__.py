@@ -55,12 +55,12 @@ class Quest (JQuest) :
             st.playSound("ItemSound.quest_middle")
         elif event == "32325-06.htm" :
             if st.getQuestItemsCount(YinSword):
-               st.takeItems(YinSword)
+               st.takeItems(YinSword,1)
                htmltext = "32325-07.htm"
             st.giveItems(YinSword,1,Elementals.FIRE,10)
         elif event == "32326-06.htm" :
             if st.getQuestItemsCount(YangSword):
-               st.takeItems(YangSword)
+               st.takeItems(YangSword,1)
                htmltext = "32326-07.htm"
             st.giveItems(YangSword,1,Elementals.EARTH,10)
         elif event == "32325-09.htm" :
@@ -123,7 +123,7 @@ class Quest (JQuest) :
                    htmltext = "32325-04.htm"
                 elif cond == 4:
                    htmltext = "32325-08.htm"
-                   st.takeItems(YinSword)
+                   st.takeItems(YinSword,1)
                 elif cond == 6:
                    htmltext = "32325-10.htm"
             elif npcId == Yang:
@@ -133,7 +133,7 @@ class Quest (JQuest) :
                    htmltext = "32326-04.htm"
                 elif cond == 9:
                    htmltext = "32326-08.htm"
-                   st.takeItems(YangSword)
+                   st.takeItems(YangSword,1)
                 elif cond == 11:
                    htmltext = "32326-10.htm"
         return htmltext
