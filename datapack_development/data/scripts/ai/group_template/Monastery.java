@@ -52,7 +52,7 @@ public class Monastery extends L2AttackableAIScript
  
     public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
     {
-    	if (equals(mobs1,npc.getNpcId()) && !npc.isInCombat())
+    	if (contains(mobs1,npc.getNpcId()) && !npc.isInCombat())
     	{
     		if (player.getActiveWeaponInstance() != null)
     		{
@@ -84,7 +84,7 @@ public class Monastery extends L2AttackableAIScript
 
     public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
 	{
-    	if (equals(mobs2,npc.getNpcId()))
+    	if (contains(mobs2,npc.getNpcId()))
     	{
     		if (skill.getSkillType() == L2SkillType.AGGDAMAGE && targets.length != 0)
     		{
@@ -105,7 +105,7 @@ public class Monastery extends L2AttackableAIScript
     
     public String onSpawn(L2Npc npc)
 	{
-    	if (equals(mobs1,npc.getNpcId()))
+    	if (contains(mobs1,npc.getNpcId()))
     	{
     		FastList<L2Playable> result = new FastList<L2Playable>();
     		Collection<L2Object> objs = npc.getKnownList().getKnownObjects().values();
@@ -154,7 +154,7 @@ public class Monastery extends L2AttackableAIScript
     
     public String onSpellFinished(L2Npc npc, L2PcInstance player, L2Skill skill)
     {
-    	if (equals(mobs1,npc.getNpcId()) && skill.getId() == 4589)
+    	if (contains(mobs1,npc.getNpcId()) && skill.getId() == 4589)
     	{
     		npc.setIsRunning(true);
     		((L2Attackable) npc).addDamageHate(player, 0, 999);
@@ -163,15 +163,6 @@ public class Monastery extends L2AttackableAIScript
     	return super.onSpellFinished(npc, player, skill);
     }
     
-    private boolean equals (int[] val1, int val2)
-    {
-    	for (int i=0;i<val1.length;i++)
-    	{
-    		if (val2 == val1[i])
-    			return true;
-    	}
-    	return false;
-    }
     public static void main(String[] args)
     {
         new Monastery(-1, "Monastery", "ai");
