@@ -52,10 +52,11 @@ public class Monastery extends L2AttackableAIScript
  
     public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
     {
-    	if (contains(mobs1,npc.getNpcId()) && !npc.isInCombat())
+    	if (contains(mobs1,npc.getNpcId()) && !npc.isInCombat() && npc.getTarget() == null)
     	{
     		if (player.getActiveWeaponInstance() != null)
     		{
+    			npc.setTarget(player);
     			npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), text[0]));
     			switch (npc.getNpcId())
     			{
@@ -63,7 +64,6 @@ public class Monastery extends L2AttackableAIScript
     				case 22126:
     				{
     					L2Skill skill = SkillTable.getInstance().getInfo(4589,8);
-    	    			npc.setTarget(player);
     	    			npc.doCast(skill);
     	    			break;
     				}
@@ -123,8 +123,9 @@ public class Monastery extends L2AttackableAIScript
     			for (Object obj : characters)
     			{
     	    		L2Playable target = (L2Playable) (obj instanceof L2PcInstance ? obj : ((L2Summon) obj).getOwner());
-    	    		if (target.getActiveWeaponInstance() != null && !npc.isInCombat())
+    	    		if (target.getActiveWeaponInstance() != null && !npc.isInCombat() && npc.getTarget() == null)
     	    		{
+    	    			npc.setTarget(target);
     	    			npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), text[0]));
     	    			switch (npc.getNpcId())
     	    			{
@@ -133,7 +134,6 @@ public class Monastery extends L2AttackableAIScript
     	    				case 22127:
     	    				{
     	    					L2Skill skill = SkillTable.getInstance().getInfo(4589,8);
-    	    	    			npc.setTarget(target);
     	    	    			npc.doCast(skill);
     	    	    			break;
     	    				}
