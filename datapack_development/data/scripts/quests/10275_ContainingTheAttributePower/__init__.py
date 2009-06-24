@@ -124,6 +124,7 @@ class Quest (JQuest) :
                 elif cond == 4:
                    htmltext = "32325-08.htm"
                    st.takeItems(YinSword,1)
+                   st.takeItems(SoulPieceWater,-1)
                 elif cond == 6:
                    htmltext = "32325-10.htm"
             elif npcId == Yang:
@@ -134,6 +135,7 @@ class Quest (JQuest) :
                 elif cond == 9:
                    htmltext = "32326-08.htm"
                    st.takeItems(YangSword,1)
+                   st.takeItems(SoulPieceAir,-1)
                 elif cond == 11:
                    htmltext = "32326-10.htm"
         return htmltext
@@ -147,15 +149,15 @@ class Quest (JQuest) :
             if st.getItemEquipped(9) == YangSword and st.getInt("cond") in [8,10] and st.getQuestItemsCount(SoulPieceAir) < 6 and st.getRandom(100) < 30:
                 st.giveItems(SoulPieceAir,1)
                 if st.getQuestItemsCount(SoulPieceAir) >= 6 :
-                    st.set("cond",st.getInt("cond")+1)
+                    st.set("cond",str(st.getInt("cond")+1))
                     st.playSound("ItemSound.quest_middle")
                 else:
                     st.playSound("ItemSound.quest_itemget")
         elif npcId == Water :
-            if st.getItemEquipped(9) == YinSword and st.getInt("cond") == [3,5] and st.getQuestItemsCount(SoulPieceWater) < 6 and st.getRandom(100) < 30:
+            if st.getItemEquipped(9) == YinSword and st.getInt("cond") in [3,5] and st.getQuestItemsCount(SoulPieceWater) < 6 and st.getRandom(100) < 30:
                 st.giveItems(SoulPieceWater,1)
                 if st.getQuestItemsCount(SoulPieceWater) >= 6 :
-                    st.set("cond",st.getInt("cond")+1)
+                    st.set("cond",str(st.getInt("cond")+1))
                     st.playSound("ItemSound.quest_middle")
                 else:
                     st.playSound("ItemSound.quest_itemget")
