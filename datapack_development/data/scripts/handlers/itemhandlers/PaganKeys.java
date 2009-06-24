@@ -75,6 +75,30 @@ public class PaganKeys implements IItemHandler
 		
 		switch (itemId)
 		{
+			case 9698:
+				if (door.getDoorId() == 24220020)
+				{
+					DoorTable.getInstance().getDoor(24220020).openMe();
+					DoorTable.getInstance().getDoor(24220020).onOpen();
+				}
+				else
+				{
+					activeChar.sendMessage("Incorrect Door.");
+				}
+				break;
+			case 9699:
+				if (door.getDoorId() == 24220022)
+				{
+					DoorTable.getInstance().getDoor(24220022).openMe();
+					DoorTable.getInstance().getDoor(24220022).onOpen();
+					DoorTable.getInstance().getDoor(23150004).openMe();
+					DoorTable.getInstance().getDoor(23150003).onOpen();
+				}
+				else
+				{
+					activeChar.sendMessage("Incorrect Door.");
+				}
+				break;
 			case 8056:
 				if (door.getDoorId() == 23150004||door.getDoorId() == 23150003)
 				{
