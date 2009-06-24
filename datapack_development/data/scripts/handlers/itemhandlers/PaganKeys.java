@@ -103,7 +103,7 @@ public class PaganKeys implements IItemHandler
 					DoorTable.getInstance().getDoor(23150003).openMe();
 					DoorTable.getInstance().getDoor(23150003).onOpen();
 					DoorTable.getInstance().getDoor(23150004).openMe();
-					DoorTable.getInstance().getDoor(23150003).onOpen();
+					DoorTable.getInstance().getDoor(23150004).onOpen();
 				}
 				else
 				{
@@ -115,7 +115,6 @@ public class PaganKeys implements IItemHandler
 				{
 					if (Rnd.get(100) < openChance)
 					{
-						activeChar.sendMessage("You opened Anterooms Door.");
 						door.openMe();
 						door.onOpen(); // Closes the door after 60sec
 						activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), 3));
@@ -134,23 +133,13 @@ public class PaganKeys implements IItemHandler
 					activeChar.sendMessage("Incorrect Door.");
 				}
 				break;
-			case 8274: //Chapel key, Chapel Door has a Gatekeeper?? I use this key for Altar Entrance
-				if (door.getDoorName().startsWith("Altar_Entrance"))
+			case 8274: //Chapel key
+				if (door.getDoorId() == 19160010||door.getDoorId() == 19160011)
 				{
-					if (Rnd.get(100) < openChance)
-					{
-						activeChar.sendMessage("You opened Altar Entrance.");
-						door.openMe();
-						door.onOpen();
-						activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), 3));
-					}
-					else
-					{
-						activeChar.sendMessage("You failed to open Altar Entrance.");
-						activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), 13));
-						PlaySound playSound = new PlaySound("interfacesound.system_close_01");
-						activeChar.sendPacket(playSound);
-					}
+					DoorTable.getInstance().getDoor(19160010).openMe();
+					DoorTable.getInstance().getDoor(19160010).onOpen();
+					DoorTable.getInstance().getDoor(19160011).openMe();
+					DoorTable.getInstance().getDoor(19160011).onOpen();
 				}
 				else
 				{
@@ -162,7 +151,6 @@ public class PaganKeys implements IItemHandler
 				{
 					if (Rnd.get(100) < openChance)
 					{
-						activeChar.sendMessage("You opened Door of Darkness.");
 						door.openMe();
 						door.onOpen();
 						activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), 3));
