@@ -91,8 +91,6 @@ public class PaganKeys implements IItemHandler
 				{
 					DoorTable.getInstance().getDoor(24220022).openMe();
 					DoorTable.getInstance().getDoor(24220022).onOpen();
-					DoorTable.getInstance().getDoor(23150004).openMe();
-					DoorTable.getInstance().getDoor(23150003).onOpen();
 				}
 				else
 				{
