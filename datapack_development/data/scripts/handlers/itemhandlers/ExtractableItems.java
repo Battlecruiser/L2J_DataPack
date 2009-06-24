@@ -84,7 +84,6 @@ public class ExtractableItems implements IItemHandler
 		if (createItemID[0] <= 0 || createItemID.length == 0 )
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessageId.NOTHING_INSIDE_THAT));
-			return;
 		}
 		
 		else
