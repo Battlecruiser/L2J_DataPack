@@ -1048,11 +1048,13 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
-  <set name="effectType" val="NEGATE"/>
   <set name="negateId" val="1339"/>
   <cond msgId="109">
     <target active_effect_id="1339"/>
   </cond>
+  <for>
+    <!-- effect name="Negate" val="0" effectType="NEGATE"/ TODO: Needs Core-Side Support -->
+  </for>
 </skill>
 <skill id="1452" levels="1" name="Count of Fire">
   <set name="magicLvl" val="79"/>
@@ -1090,11 +1092,13 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
-  <set name="effectType" val="NEGATE"/>
   <set name="negateId" val="1340"/>
   <cond msgId="109">
     <target active_effect_id="1340"/>
   </cond>
+  <for>
+    <!-- effect name="Negate" val="0" effectType="NEGATE"/ TODO: Needs Core-Side Support -->
+  </for>
 </skill>
 <skill id="1454" levels="1" name="Diamond Dust">
   <set name="hitTime" val="3000"/>
@@ -1150,11 +1154,13 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
-  <set name="effectType" val="NEGATE"/>
   <set name="negateId" val="1341"/>
   <cond msgId="109">
     <target active_effect_id="1341"/>
   </cond>
+  <for>
+    <!-- effect name="Negate" val="0" effectType="NEGATE"/ TODO: Needs Core-Side Support -->
+  </for>
 </skill>
 <skill id="1457" levels="1" name="Empowering Echo">
   <set name="mpConsume" val="145"/>
@@ -1690,11 +1696,13 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1200"/>
   <set name="reuseDelay" val="360000"/> <!-- Need retail -->
-  <set name="effectType" val="NEGATE"/> <!-- Possibly require core-side improvement to allow NEGATE inside a HEAL_PERCENT skill -->
   <set name="negateId" val="1487"/>
   <cond msg="Target does not have an active Restoration skill."> <!-- Need retail msg if there is one. -->
     <target active_effect_id="1487"/>
   </cond>
+  <for>
+    <!-- effect name="Negate" val="0" effectType="NEGATE"/ TODO: Needs Core-Side Support -->
+  </for>
 </skill>
 <skill id="1489" levels="1" name="Summoner Ability - Resist Attribute">
   <set name="target" val="TARGET_NONE"/>

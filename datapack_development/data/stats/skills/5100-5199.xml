@@ -436,7 +436,6 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <set name="skillType" val="POISON"/>
-  <set name="effectPower" val="35"/>
   <for>
     <effect count="10" name="DamOverTime" time="3" val="96" abnormal="poison" effectPower="35" effectType="POISON">
       <mul order="0x30" stat="pAtkSpd" val="0.7"/>

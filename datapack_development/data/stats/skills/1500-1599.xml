@@ -256,12 +256,14 @@
   <set name="isMagic" val="true"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
-  <set name="effectType" val="NEGATE"/>
   <set name="negateId" val="1512"/>
   <set name="soulMaxConsumeCount" val="5"/>
   <cond msgId="109">
     <target active_effect_id="1512"/>
   </cond>
+  <for>
+    <!-- effect name="Negate" val="0" effectType="NEGATE"/ TODO: Needs Core-Side Support -->
+  </for>
 </skill>
 <skill id="1514" levels="1" name="Soul Barrier">
   <set name="hitTime" val="1500"/>
