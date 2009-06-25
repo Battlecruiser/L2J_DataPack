@@ -586,8 +586,6 @@
   <set name="isDebuff" val="true"/>
   <set name="castRange" val="150"/>
   <set name="effectRange" val="650"/>
-  <set name="effectType" val="DEBUFF"/>
-  <set name="effectPower" val="1000"/>
   <for>
     <effect self="1" name="Debuff" time="3" val="0">
       <mul order="0x30" stat="pvpMagicalDmg" val="0.5"/>
