@@ -76,8 +76,8 @@ public class Monastery extends L2AttackableAIScript
     				}
     			}
     		}
-    		else if (!player.isInCombat()) 
-    			return null;    		
+    		else if (((L2Attackable)npc).getMostHated() == null) 
+    			return null;
     	}
         return super.onAggroRangeEnter(npc, player, isPet);
     }
