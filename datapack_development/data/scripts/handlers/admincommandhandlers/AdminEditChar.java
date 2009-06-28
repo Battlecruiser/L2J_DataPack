@@ -815,7 +815,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				else
 				{
-					ip = client.getConnection().getSocket().getInetAddress().getHostAddress();
+					ip = client.getConnection().getInetAddress().getHostAddress();
 					if (!ip.equals(IpAdress))
 						continue;
 				}
