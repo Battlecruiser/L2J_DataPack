@@ -1475,7 +1475,7 @@
 </skill>
 <skill id="94" levels="2" name="Rage" enchantLevels1="30" enchantLevels2="30">
   <table name="#swordbluntpole"> 1.21 1.29 </table>
-  <table name="#twohands"> 1.04 1.06 </table>
+  <table name="#twohands"> 1.07 1.06 </table>
   <table name="#accCombat"> 2 4 </table>
   <table name="#mpConsume"> 11 25 </table>
   <table name="#uprate"> 1 2 </table>
@@ -1493,7 +1493,7 @@
     <effect name="Buff" time="90" val="0" stackOrder="#uprate" stackType="pa_up_special">
       <mul order="0x30" stat="pAtk" val="1.2"/>
       <mul order="0x30" stat="pAtk" val="#swordbluntpole">
-        <using kind="Sword,Blunt,Pole"/>
+        <using kind="Sword,Big Sword,Blunt,Big Blunt,Pole"/>
       </mul>
       <mul order="0x30" stat="pAtk" val="#twohands">
         <using kind="Big Sword,Big Blunt"/>
