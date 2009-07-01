@@ -610,14 +610,14 @@
   </cond>
   <for>
     <effect name="Buff" time="3600" val="0" stackOrder="2" stackType="berserk">
-      <mul order="0x30" stat="mAtk" val="1.16"/>
-      <mul order="0x30" stat="pAtk" val="1.08"/>
-      <mul order="0x30" stat="mDef" val="0.84"/>
       <mul order="0x30" stat="pDef" val="0.92"/>
-      <mul order="0x30" stat="mAtkSpd" val="1.08"/>
-      <mul order="0x30" stat="pAtkSpd" val="1.08"/>
-      <add order="0x40" stat="runSpd" val="8"/>
+      <mul order="0x30" stat="mDef" val="0.84"/>
       <sub order="0x40" stat="rEvas" val="4"/>
+      <mul order="0x30" stat="pAtk" val="1.08"/>
+      <mul order="0x30" stat="mAtk" val="1.16"/>
+      <mul order="0x30" stat="pAtkSpd" val="1.08"/>
+      <mul order="0x30" stat="mAtkSpd" val="1.08"/>
+      <add order="0x40" stat="runSpd" val="8"/>
     </effect>
   </for>
 </skill>
@@ -659,8 +659,8 @@
   <set name="buffDuration" val="3600000"/>
   <for>
     <effect name="Buff" time="3600" val="0" stackOrder="4" stackType="MPrate">
-      <mul order="0x30" stat="MagicalMpConsumeRate" val="0.9"/>
       <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.8"/>
+      <mul order="0x30" stat="MagicalMpConsumeRate" val="0.9"/>
       <mul order="0x30" stat="DanceMpConsumeRate" val="0.8"/>
     </effect>
   </for>
@@ -676,5 +676,117 @@
       <add order="0x40" stat="mCritRate" val="2"/>
     </effect>
   </for>
+</skill>
+<skill id="22071" levels="1" name="Huge Fortuna Box">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="22072" levels="1" name="Huge Fortuna Cube">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="22073" levels="1" name="Weapon Enchant Scroll - S Grade">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="22074" levels="1" name="Armor Enchant Scroll - S Grade">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="22075" levels="1" name="Ancient Weapon Enchant Crystal - S grade">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="22076" levels="1" name="Ancient Armor Enchant Crystal - S grade">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="22077" levels="1" name="Divine Weapon Enchant Crystal - S grade">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="22078" levels="1" name="Divine Armor Enchant Crystal - S grade">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="22079" levels="1" name="Resist Aqua">
+  <!-- Increases resistance to water type attacks by 20% for 1 hour -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="22080" levels="1" name="Resist Wind">
+  <!-- Increases resistance to wind type attacks by 20% for 1 hour -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="22081" levels="1" name="Resist Fire">
+  <!-- Increases resistance to fire type attacks by 20% for 1 hour -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="22082" levels="1" name="Resist Holy">
+  <!-- Increases resistance to divinity type attacks by 23% for 1 hour -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="22083" levels="1" name="Resist Unholy">
+  <!-- Increases resistance to darkness type attacks by 23% for 1 hour -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="22084" levels="1" name="Mental Shield">
+  <!-- Increases resistance to hold/sleep/abnormal mental attacks by 40 for 1 hour -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="22085" levels="1" name="Focus">
+  <!-- Increases Critical attack rate by 30 for 1 hour -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="22086" levels="1" name="Concentration">
+  <!-- Decreases magic cancel damage by 36 for 1 hour -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="22087" levels="1" name="Blessing Shield">
+  <!-- Increases Shield defense rate by 15 for 1 hour -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="22088" levels="1" name="Agility">
+  <!-- Increases evasion rate by 4 for 1 hour -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="22089" levels="1" name="Regeneration">
+  <!-- Increases HP Regeneration by 20% for 1 hour -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="22090" levels="1" name="Advanced Block">
+  <!-- Increases Shield P. Def. by 40% for 1 hour -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 </list>

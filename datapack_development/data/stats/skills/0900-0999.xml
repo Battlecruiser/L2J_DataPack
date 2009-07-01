@@ -136,8 +136,8 @@
   <for>
     <effect name="Buff" time="120" val="0">
       <mul order="0x30" stat="debuffVuln" val="0.7"/>
-      <mul order="0x30" stat="gainHp" val="0.7"/>
-	  <!-- Missing: Provides an 80% chance of removing a party member's de-buffs. (When Used) -->
+      <mul order="0x30" stat="gainHp" val="1.3"/>
+      <!-- Missing: Provides an 80% chance of removing a party member's de-buffs. (When Used) -->
     </effect>
   </for>
 </skill>
@@ -180,7 +180,7 @@
     </effect>
   </for>
 </skill>
-<skill id="917" levels="1" name="Champion's Favor">
+<skill id="917" levels="1" name="Final Secret">
   <set name="hitTime" val="1500"/>
   <set name="mpConsume" val="37"/>
   <set name="operateType" val="OP_ACTIVE"/>
