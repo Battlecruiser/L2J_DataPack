@@ -1508,7 +1508,7 @@
   <!-- Done by Misanthrope -->
   <table name="#magicLvl"> 46 60 </table>
   <table name="#mpConsume"> 82 110 </table>
-  <table name="#mAtk"> 1200 1800 </table>
+  <table name="#pDef"> 1200 1800 </table>
   <table name="#mDef"> 900 1350 </table>
   <set name="hitTime" val="2500"/>
   <set name="isMagic" val="true"/>
@@ -1521,7 +1521,7 @@
   <set name="target" val="TARGET_PARTY"/>
   <for>
     <effect name="Buff" time="15" val="0" stackOrder="1" stackType="pd_up_special">
-      <add order="0x40" stat="mAtk" val="#mAtk"/>
+      <add order="0x40" stat="pDef" val="#pDef"/>
       <add order="0x40" stat="mDef" val="#mDef"/>
     </effect>
   </for>
