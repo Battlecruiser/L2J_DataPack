@@ -1509,7 +1509,7 @@
     <effect name="Buff" time="90" val="0" stackOrder="2" stackType="pa_up_special">
       <mul order="0x30" stat="pAtk" val="1.2"/>
       <mul order="0x30" stat="pAtk" val="#ench1atk">
-        <using kind="Sword,Blunt,Pole"/>
+        <using kind="Sword,Big Sword,Blunt,Big Blunt,Pole"/>
       </mul>
       <mul order="0x30" stat="pAtk" val="1.06">
         <using kind="Big Sword,Big Blunt"/>
@@ -1525,7 +1525,7 @@
     <effect name="Buff" time="90" val="0" stackOrder="2" stackType="pa_up_special">
       <mul order="0x30" stat="pAtk" val="1.2"/>
       <mul order="0x30" stat="pAtk" val="1.29">
-        <using kind="Sword,Blunt,Pole"/>
+        <using kind="Sword,Big Sword,Blunt,Big Blunt,Pole"/>
       </mul>
       <mul order="0x30" stat="pAtk" val="#ench2atk">
         <using kind="Big Sword,Big Blunt"/>
