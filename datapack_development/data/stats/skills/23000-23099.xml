@@ -152,7 +152,8 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
-<skill id="23024" levels="1" name="Agathion of Love Special Skill">
+<skill id="23024" levels="1" name="Agathion of Love Special Skill - Energy Recovery Ability">
+  <!-- Recovers energy when acquiring Exp. for 20 minutes. Reuse Delay 12 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -208,10 +209,11 @@
   <set name="skillType" val="RECALL"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="200"/>
-  <set name="reuseDelay" val="300000"/>
+  <set name="reuseDelay" val="43200000"/>
   <set name="staticReuse" val="true"/>
 </skill>
-<skill id="23032" levels="1" name="Brown Maneki Neko Agathion Special Skill - Vitality Recovery Ability">
+<skill id="23032" levels="1" name="Brown Maneki Neko Agathion Special Skill - Ability of Energy Recovery">
+  <!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -223,12 +225,14 @@
   <set name="staticHitTime" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
-<skill id="23034" levels="1" name="One-Eyed Bat Drove Agathion Special Skill - Resist Unholy Ability">
+<skill id="23034" levels="1" name="One-eyed Bat Drove Agathion Special Skill - Ability of Resist Unholy">
+  <!-- Increases resistance to darkness type attacks by 30% for 5 minutes. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
-<skill id="23035" levels="1" name="One-Eyed Bat Drove Agathion Special Skill - Vitality Recovery Ability">
+<skill id="23035" levels="1" name="One-eyed Bat Drove Agathion Special Skill - Ability of Energy Recovery">
+  <!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -240,7 +244,8 @@
   <set name="staticHitTime" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
-<skill id="23037" levels="1" name="Pegasus Agathion Special Skill - Wind Walk Ability">
+<skill id="23037" levels="1" name="Pegasus Agathion Special Skill - Ability of Wind Walk">
+  <!-- Increases moving speed by 33 for 5 minutes. Reuse Delay 4 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -250,7 +255,7 @@
   <set name="skillType" val="RECALL"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="200"/>
-  <set name="reuseDelay" val="300000"/>
+  <set name="reuseDelay" val="43200000"/>
   <set name="staticReuse" val="true"/>
 </skill>
 <skill id="23039" levels="1" name="Yellow-Robed Tojigong Agathion Cute Trick">
@@ -274,17 +279,20 @@
   <set name="staticHitTime" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
-<skill id="23042" levels="1" name="Yellow-Robed Tojigong Agathion Special Skill - Greater Heal Ability">
+<skill id="23042" levels="1" name="Yellow-robed Tojigong Agathion Special Skill - Ability of Greater Heal">
+  <!-- Recovers HP by 444 and increases HP Recovery by 30 for 15 seconds. Reuse Delay 4 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
-<skill id="23043" levels="1" name="Blue-Robed Tojigong Agathion Special Skill - Reflect Damage Ability">
+<skill id="23043" levels="1" name="Blue-robed Tojigong Agathion Special Skill - Ability of Reflect Damage">
+  <!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
-<skill id="23044" levels="1" name="Green-Robed Tojigong Agathion Special Skill - Mana Regeneration Ability">
+<skill id="23044" levels="1" name="Green-robed Tojigong Agathion Special Skill - Ability of Mana Regeneration">
+  <!-- Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -358,16 +366,19 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="23057" levels="1" name="Red Sumo Wrestler Agathion Special Skill - Death Whisper Ability">
+  <!-- Increases Critical attack power by 35% for 5 minutes. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="23058" levels="1" name="Blue Sumo Wrestler Agathion Special Skill - Wild Magic Ability">
+  <!-- For 5 minutes, increases by 2% the occurrence rate of damage that is caused by damage magic. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="23059" levels="1" name="Great Sumo Match Agathion Special Skill - Mysterious Power">
+  <!-- A mysterious power that no one knows. Use with caution! Reuse Delay 1 hour -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -388,21 +399,36 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="23063" levels="1" name="Button-Eyed Bear Doll Agathion Special Skill - Ability of Energy Recovery">
+  <!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="23064" levels="1" name="God of Fortune Agathion Special Skill - Energy Recovery Ability">
+  <!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="23065" levels="1" name="Wonboso Agathion Special Skill - Wind Walk Ability">
+  <!-- Increases moving speed by 20 for 5 minutes. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="23066" levels="1" name="Daewoonso Agathion Special Skill - New Year's Gift Ability">
+  <!-- Can receive a New Year's Gift. Reuse Delay 1 hours -->
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="23067" levels="1" name="Pomona Agathion Cute Trick">
+  <set name="target" val="TARGET_NONE"/>
+  <set name="skillType" val="NOTDONE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+</skill>
+<skill id="23068" levels="1" name="Pomona Agathion Special Skill - Mental Shield Ability">
+  <!-- Increases resistance to hold/sleep/abnormal mental attacks by 50 for 10 minutes. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>

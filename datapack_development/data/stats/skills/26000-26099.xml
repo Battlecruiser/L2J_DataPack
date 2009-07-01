@@ -170,7 +170,7 @@
     <player flyMounted="False"/>
   </cond>
   <for>
-    <effect count="7" name="HealOverTime" time="2" val="100" stackOrder="50" stackType="HpRecover"/>
+    <effect count="5" name="HealOverTime" time="3" val="150" stackOrder="50" stackType="HpRecover"/>
   </for>
 </skill>
 <skill id="26026" levels="1" name="High-grade Healing Potion">
@@ -187,7 +187,7 @@
     <player flyMounted="False"/>
   </cond>
   <for>
-    <effect count="7" name="HealOverTime" time="2" val="48" stackOrder="24" stackType="HpRecover"/>
+    <effect count="5" name="HealOverTime" time="3" val="72" stackOrder="24" stackType="HpRecover"/>
   </for>
 </skill>
 <skill id="26027" levels="6" name="Secret medicine of Will">
@@ -409,7 +409,7 @@
   </cond>
   <for>
     <effect name="Buff" time="3600" val="0" stackOrder="10" stackType="vampRage">
-      <add order="0x40" stat="absorbDam" val="9"/>
+      <add order="0x40" stat="absorbDam" val="9"/> <!-- absorb 9% HP from damage inflicted on enemies -->
     </effect>
   </for>
 </skill>
@@ -443,14 +443,14 @@
   </cond>
   <for>
     <effect name="Buff" time="3600" val="0" stackOrder="2" stackType="berserk">
-      <mul order="0x30" stat="mAtk" val="1.16"/>
-      <mul order="0x30" stat="pAtk" val="1.08"/>
-      <mul order="0x30" stat="mDef" val="0.84"/>
       <mul order="0x30" stat="pDef" val="0.92"/>
-      <mul order="0x30" stat="mAtkSpd" val="1.08"/>
-      <mul order="0x30" stat="pAtkSpd" val="1.08"/>
-      <add order="0x40" stat="runSpd" val="8"/>
+      <mul order="0x30" stat="mDef" val="0.84"/>
       <sub order="0x40" stat="rEvas" val="4"/>
+      <mul order="0x30" stat="pAtk" val="1.08"/>
+      <mul order="0x30" stat="mAtk" val="1.16"/>
+      <mul order="0x30" stat="pAtkSpd" val="1.08"/>
+      <mul order="0x30" stat="mAtkSpd" val="1.08"/>
+      <add order="0x40" stat="runSpd" val="8"/>
     </effect>
   </for>
 </skill>
@@ -501,8 +501,8 @@
   </cond>
   <for>
     <effect name="Buff" time="3600" val="0" stackOrder="4" stackType="MPrate">
-      <mul order="0x30" stat="MagicalMpConsumeRate" val="0.9"/>
       <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.8"/>
+      <mul order="0x30" stat="MagicalMpConsumeRate" val="0.9"/>
       <mul order="0x30" stat="DanceMpConsumeRate" val="0.8"/>
     </effect>
   </for>

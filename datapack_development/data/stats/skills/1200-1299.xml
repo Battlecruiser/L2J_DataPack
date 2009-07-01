@@ -627,14 +627,13 @@
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="isDebuff" val="true"/>
   <set name="castRange" val="150"/>
   <set name="effectRange" val="650"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2mpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume"/>
   <for>
-    <effect self="1" name="Debuff" time="3" val="0" effectPower="60" effectType="DEBUFF">
+    <effect self="1" name="Buff" time="3" val="0">
       <mul order="0x30" stat="pvpMagicalDmg" val="0.5"/>
     </effect>
   </for>
