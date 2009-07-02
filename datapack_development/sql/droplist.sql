@@ -26648,6 +26648,16 @@ INSERT INTO `droplist` VALUES
 (22352,6901,1,1,-1,10000), -- Recipe: Shining Arrow (100%)
 (22352,6695,1,1,-1,125000), -- Demon Splinter Blade
 (22352,6694,1,1,-1,125000), -- Saint Spear Blade
+(22353,57,123990,240040,0,700000), -- Adena
+(22353,9599,6,18,100,960000), -- Ancient Tome of the Demon
+(22353,9682,1,1,101,1000000), -- Contained Life Force
+(22353,5534,1,1,1,140000), -- Soul Bow Stave
+(22353,9551,1,1,200,140000), -- Divine Stone
+(22353,6901,1,1,2,70000), -- Recipe: Shining Arrow (100%)
+(22353,4042,1,1,2,232564), -- Enria
+(22353,1867,381,868,2,47619), -- Animal Skin
+(22353,1872,62,179,2,333333), -- Animal Bone
+(22353,1894,1,1,2,23256), -- Crafted Leather
 (22359,57,4236,8436,0,700000), -- Adena
 (22359,9599,1,1,100,333333), -- Ancient Tome of the Demon
 (22359,5534,1,1,1,6849), -- Soul Bow Stave
@@ -26658,7 +26668,251 @@ INSERT INTO `droplist` VALUES
 (22359,960,1,1,2,1142), -- Scroll: Enchant Armor (S)
 (22359,9551,1,1,200,1142), -- Divine Stone
 (22359,1895,1,5,-1,700000), -- Metallic Fiber
-(22359,6701,1,1,-1,55000); -- Sealed Imperial Crusader Breastplate Part
+(22359,6701,1,1,-1,55000), -- Sealed Imperial Crusader Breastplate Part
+(22360,57,12300,24470,0,700000), -- Adena
+(22360,9599,1,3,100,540000), -- Ancient Tome of the Demon
+(22360,1345,50,150,0,125000), -- Shining Arrow
+(22360,1864,35,82,2,24390), -- Stem
+(22360,1869,10,27,2,37037), -- Iron Ore
+(22360,1880,1,1,2,90909), -- Steel
+(22360,4043,1,1,2,20833), -- Asofe
+(22360,5534,1,1,1,20833), -- Soul Bow Stave
+(22360,9551,1,1,200,3484), -- Divine Stone
+(22360,6702,1,2,-1,100000), -- Sealed Imperial Crusader Gaiters Pattern
+(22360,5550,1,1,-1,700000), -- Durable Metal Plate
+(22361,57,46880,92910,0,700000), -- Adena
+(22361,9599,3,9,100,690000), -- Ancient Tome of the Demon
+(22361,9714,1,1,101,520000), -- Key of the Evil Eye
+(22361,5522,1,1,1,66667), -- Sealed Armor of Nightmare Pattern
+(22361,5523,1,1,1,20408), -- Sealed Majestic Plate Armor Pattern
+(22361,4042,1,1,2,125000), -- Enria
+(22361,1867,28,66,2,90909), -- Animal Skin
+(22361,1872,67,175,2,76923), -- Animal Bone
+(22361,1882,39,43,2,13514), -- Leather
+(22361,1894,7,12,2,27027), -- Crafted Leather
+(22361,9551,1,1,200,55556), -- Divine Stone
+(22361,6703,2,2,-1,200000), -- Sealed Imperial Crusader Gauntlets Design
+(22361,6704,2,3,-1,600000), -- Sealed Imperial Crusader Boots Design
+(22362,57,119320,233800,0,700000), -- Adena
+(22362,9599,6,20,100,740000), -- Ancient Tome of the Demon
+(22362,8349,1,1,1,41666), -- Doom Crusher Head
+(22362,5533,1,1,1,41666), -- Elysian Head
+(22362,5544,1,1,1,41666), -- Branch Of The Mother Tree Head
+(22362,8342,1,1,1,41666), -- Flaming Dragon Skull Piece
+(22362,1345,3562,4656,0,41666), -- Shining Arrow
+(22362,1895,14,23,2,125000), -- Metallic Fiber
+(22362,9628,1,1,2,142857), -- Leonard
+(22362,9630,1,1,2,41666), -- Orichalcum
+(22362,9551,1,1,200,20408), -- Divine Stone
+(22362,8702,1,1,2,20408), -- Recipe: Shyeed\'s Bow (60%)
+(22363,57,34450,67970,0,700000), -- Adena
+(22363,9685,1,1,101,200000), -- Gate Key: Darkness
+(22363,5545,1,1,1,13514), -- Dark Legion\'s Edge Blade
+(22363,5546,1,1,1,13514), -- Sword of Miracles Edge
+(22363,5529,1,1,1,13514), -- Dragon Slayer Edge
+(22363,1879,4,9,2,66667), -- Cokes
+(22363,1885,1,1,2,333333), -- High Grade Suede
+(22363,9628,1,1,2,33333), -- Leonard
+(22363,9630,1,1,2,23810), -- Orichalcum
+(22363,9629,1,1,2,13514), -- Adamantine
+(22363,9551,1,1,200,23810), -- Divine Stone
+(22363,6861,1,1,2,13514), -- Recipe: Sealed Imperial Crusader Shield (60%)
+(22363,6706,1,1,-1,350000), -- Sealed Imperial Crusader Helmet Pattern
+(22363,6705,1,1,-1,700000), -- Sealed Imperial Crusader Shield Part
+(22364,57,9951,19890,0,700000), -- Adena
+(22364,9685,1,1,101,18182), -- Gate Key: Darkness
+(22364,1879,1,1,2,166667), -- Cokes
+(22364,1885,1,1,2,100000), -- High Grade Suede
+(22364,9628,1,1,2,9091), -- Leonard
+(22364,9630,1,1,2,6623), -- Orichalcum
+(22364,9629,1,1,2,1653), -- Adamantine
+(22364,9551,1,1,200,12346), -- Divine Stone
+(22364,8349,1,1,1,1653), -- Doom Crusher Head
+(22364,5533,1,1,1,1653), -- Elysian Head
+(22364,5544,1,1,1,1653), -- Branch Of The Mother Tree Head
+(22364,8342,1,1,1,1653), -- Flaming Dragon Skull Piece
+(22364,13100,1,1,2,1653), -- Recipe: Sealed Arcana Sigil (60%)
+(22365,57,21320,42690,0,700000), -- Adena
+(22365,9685,1,1,101,111111), -- Gate Key: Darkness
+(22365,1894,1,1,2,66667), -- Crafted Leather
+(22365,4044,1,1,2,62500), -- Thons
+(22365,4041,1,1,2,18519), -- Mold Hardener
+(22365,4039,1,1,2,66667), -- Mold Glue
+(22365,5534,1,1,1,26316), -- Soul Bow Stave
+(22365,289,1,1,1,206), -- Soul Bow
+(22365,6893,1,1,2,206), -- Recipe: Saint Spear (60%)
+(22365,960,1,1,2,826), -- Scroll: Enchant Armor (S)
+(22365,14166,1,1,200,8696), -- Life Stone - level 84
+(22365,14167,1,1,200,2273), -- Mid-Grade Life Stone - level 84
+(22365,1894,2,3,-1,300000), -- Crafted Leather
+(22365,4044,1,2,-1,300000), -- Thons
+(22365,6708,1,1,-1,800000), -- Sealed Draconic Leather Gloves Fabric
+(22367,57,7242,14500,0,700000), -- Adena
+(22367,1345,10,30,0,333333), -- Shining Arrow
+(22367,1879,1,1,2,76923), -- Cokes
+(22367,1885,1,1,2,38462), -- High Grade Suede
+(22367,9628,1,1,2,4854), -- Leonard
+(22367,9630,1,1,2,1418), -- Orichalcum
+(22367,9629,1,1,2,2227), -- Adamantine
+(22367,9551,1,1,200,3247), -- Divine Stone
+(22367,5480,1,1,1,6667), -- Sealed Leather Armor of Nightmare Fabric
+(22367,5481,1,1,1,6667), -- Sealed Majestic Leather Armor Fabric
+(22367,8690,1,1,2,203), -- Recipe: Sirra\'s Blade (60%)
+(22367,14166,1,1,200,1825), -- Life Stone - level 84
+(22367,14167,1,1,200,608), -- Mid-Grade Life Stone - level 84
+(22367,4042,1,1,-1,250000), -- Enria
+(22367,6710,1,1,-1,500000), -- Sealed Draconic Leather Helmet Pattern
+(22368,57,81090,162240,0,700000), -- Adena
+(22368,1895,12,36,2,125000), -- Metallic Fiber
+(22368,4040,2,6,2,41667), -- Mold Lubricant
+(22368,9628,1,1,2,76923), -- Leonard
+(22368,9630,1,1,2,50000), -- Orichalcum
+(22368,960,1,1,2,3322), -- Scroll: Enchant Armor (S)
+(22368,9551,1,1,200,76923), -- Divine Stone
+(22368,6883,1,1,2,1456), -- Recipe: Basalt Battlehammer (60%)
+(22368,5514,1,1,1,142857), -- Sealed Gloves of Nightmare Design
+(22368,5503,1,1,1,142857), -- Sealed Majestic Boots Lining
+(22368,5515,1,1,1,142857), -- Sealed Majestic Gloves Design
+(22368,5502,1,1,1,142857), -- Sealed Boots of Nightmare Lining
+(22368,5318,1,1,1,1040), -- Sealed Majestic Gloves
+(22368,5314,1,1,1,1040), -- Sealed Boots of Nightmare
+(22368,5313,1,1,1,623), -- Sealed Gloves of Nightmare
+(22368,5319,1,1,1,831), -- Sealed Majestic Boots
+(22368,6711,1,1,-1,700000), -- Sealed Major Arcana Robe Part
+(22369,57,8026,16070,0,700000), -- Adena
+(22369,9687,1,1,101,500000), -- Gate Key: Blood
+(22369,8349,1,1,1,2546), -- Doom Crusher Head
+(22369,5533,1,1,1,2546), -- Elysian Head
+(22369,5544,1,1,1,2546), -- Branch Of The Mother Tree Head
+(22369,8342,1,1,1,2546), -- Flaming Dragon Skull Piece
+(22369,1868,15,45,2,55556), -- Thread
+(22369,1873,2,6,2,83333), -- Silver Nugget
+(22369,1889,1,1,2,66667), -- Compound Braid
+(22369,4044,1,1,2,28571), -- Thons
+(22369,5549,1,1,2,90909), -- Metallic Thread
+(22369,9551,1,1,200,4673), -- Divine Stone
+(22369,6901,1,1,2,636), -- Recipe: Shining Arrow (100%)
+(22370,57,29990,59920,0,700000), -- Adena
+(22370,9686,1,1,101,200000), -- Gate Key: Destruction
+(22370,9849,1,1,102,980000), -- Fiery Demon Blood
+(22370,1879,3,9,2,76923), -- Cokes
+(22370,1885,1,1,2,250000), -- High Grade Suede
+(22370,9628,1,1,2,29412), -- Leonard
+(22370,9630,1,1,2,12048), -- Orichalcum
+(22370,9629,1,1,2,10417), -- Adamantine
+(22370,9551,1,1,200,10417), -- Divine Stone
+(22370,6861,1,1,2,6897), -- Recipe: Sealed Imperial Crusader Shield (60%)
+(22370,5495,1,1,1,76923), -- Sealed Shield of Nightmare Fragment
+(22370,5527,1,1,1,45455), -- Sealed Helm of Nightmare Design
+(22370,5528,1,1,1,45455), -- Sealed Majestic Circlet Design
+(22370,1885,3,13,-1,390000), -- High Grade Suede
+(22370,960,1,1,-1,60000), -- Scroll: Enchant Armor (S)
+(22371,57,9807,19630,0,700000), -- Adena
+(22371,1345,20,60,0,250000), -- Shining Arrow
+(22371,1879,1,1,2,111111), -- Cokes
+(22371,1885,1,1,2,52632), -- High Grade Suede
+(22371,9628,1,1,2,5682), -- Leonard
+(22371,9630,1,1,2,3058), -- Orichalcum
+(22371,9629,1,1,2,2183), -- Adamantine
+(22371,9551,1,1,200,5682), -- Divine Stone
+(22371,5480,1,1,1,7407), -- Sealed Leather Armor of Nightmare Fabric
+(22371,5481,1,1,1,12195), -- Sealed Majestic Leather Armor Fabric
+(22371,14166,1,1,200,3058), -- Life Stone - level 84
+(22371,14167,1,1,200,1311), -- Mid-Grade Life Stone - level 84
+(22371,14168,1,1,200,437), -- High-Grade Life Stone - level 84
+(22371,6714,1,1,-1,450000), -- Sealed Major Arcana Circlet Pattern
+(22371,7579,1,1,-1,50000), -- Draconic Bow Shaft
+(22372,57,25090,49790,0,700000), -- Adena
+(22372,9849,1,1,102,980000), -- Fiery Demon Blood
+(22372,1344,247,708,2,142857), -- Mithril Arrow
+(22372,1894,1,1,2,76923), -- Crafted Leather
+(22372,4044,1,1,2,83333), -- Thons
+(22372,4041,1,1,2,10753), -- Mold Hardener
+(22372,4039,1,1,2,90909), -- Mold Glue
+(22372,9551,1,1,200,25000), -- Divine Stone
+(22372,6901,1,1,2,3571), -- Recipe: Shining Arrow (100%)
+(22372,5546,1,1,1,21277), -- Sword of Miracles Edge
+(22372,5529,1,1,1,7143), -- Dragon Slayer Edge
+(22372,8712,1,1,-1,150000), -- Sirra\'s Blade Edge
+(22372,6901,1,1,-1,50000), -- Recipe: Shining Arrow (100%)
+(22373,57,7603,15210,0,700000), -- Adena
+(22373,9599,1,2,100,333333), -- Ancient Tome of the Demon
+(22373,5480,1,1,1,8000), -- Sealed Leather Armor of Nightmare Fabric
+(22373,5481,1,1,1,8000), -- Sealed Majestic Leather Armor Fabric
+(22373,1895,1,1,2,250000), -- Metallic Fiber
+(22373,4040,1,1,2,11905), -- Mold Lubricant
+(22373,9628,1,1,2,8000), -- Leonard
+(22373,9630,1,1,2,15625), -- Orichalcum
+(22373,9551,1,1,200,8000), -- Divine Stone
+(22373,6853,1,1,2,1996), -- Recipe: Sealed Imperial Crusader Breastplate (60%)
+(22373,6849,1,1,2,1996), -- Recipe: Sealed Tateossian Ring (70%)
+(22373,1895,1,7,-1,226000), -- Metallic Fiber
+(22373,4040,1,1,-1,56000), -- Mold Lubricant
+(22373,8713,1,1,-1,10000), -- Sword of Ipos Blade
+(22374,57,21260,42000,0,700000), -- Adena
+(22374,9599,2,6,100,500000), -- Ancient Tome of the Demon
+(22374,5514,1,1,1,31250), -- Sealed Gloves of Nightmare Design
+(22374,5503,1,1,1,31250), -- Sealed Majestic Boots Lining
+(22374,5515,1,1,1,31250), -- Sealed Majestic Gloves Design
+(22374,5502,1,1,1,31250), -- Sealed Boots of Nightmare Lining
+(22374,1344,296,812,2,71429), -- Mithril Arrow
+(22374,4041,1,1,2,31250), -- Mold Hardener
+(22374,1881,5,8,2,52632), -- Coarse Bone Powder
+(22374,1872,84,96,2,31250), -- Animal Bone
+(22374,1867,9,27,2,142857), -- Animal Skin
+(22374,1875,1,1,2,71429), -- Stone of Purity
+(22374,9551,1,1,200,20408), -- Divine Stone
+(22374,960,1,1,2,979), -- Scroll: Enchant Armor (S)
+(22374,6865,1,1,2,979), -- Recipe: Sealed Draconic Leather Armor (60%)
+(22374,6847,1,1,2,2941), -- Recipe: Sealed Tateossian Earring (70%)
+(22374,8714,1,1,-1,300000), -- Barakiel\'s Axe Piece
+(22375,57,45040,89930,0,700000), -- Adena
+(22375,9599,3,9,100,680000), -- Ancient Tome of the Demon
+(22375,8349,1,1,1,10000), -- Doom Crusher Head
+(22375,5533,1,1,1,10000), -- Elysian Head
+(22375,5544,1,1,1,10000), -- Branch Of The Mother Tree Head
+(22375,8342,1,1,1,10000), -- Flaming Dragon Skull Piece
+(22375,1868,126,351,2,35714), -- Thread
+(22375,1873,12,36,2,66667), -- Silver Nugget
+(22375,1889,4,10,2,30303), -- Compound Braid
+(22375,4044,1,1,2,142857), -- Thons
+(22375,5549,3,9,2,50000), -- Metallic Thread
+(22375,9551,1,1,200,35714), -- Divine Stone
+(22375,6901,1,1,2,5848), -- Recipe: Shining Arrow (100%)
+(22375,6851,1,1,2,1464), -- Recipe: Sealed Tateossian Necklace(70%)
+(22375,8715,1,1,-1,150000), -- Behemoth\'s Tuning Fork Piece
+(22375,4044,1,5,-1,700000), -- Thons
+(22376,57,121720,237530,0,700000), -- Adena
+(22376,9599,7,21,100,780000), -- Ancient Tome of the Demon
+(22376,6346,1,1,1,570000), -- Sealed Majestic Ring Gemstone
+(22376,6342,1,1,1,333333), -- Sealed Majestic Earring Gemstone
+(22376,6344,1,1,1,200000), -- Sealed Majestic Necklace Beads
+(22376,4041,1,1,2,111111), -- Mold Hardener
+(22376,1881,43,102,2,25641), -- Coarse Bone Powder
+(22376,1872,249,706,2,76923), -- Animal Bone
+(22376,1867,997,1689,2,18868), -- Animal Skin
+(22376,1875,5,11,2,142857), -- Stone of Purity
+(22376,9551,1,1,200,90909), -- Divine Stone
+(22376,6855,1,1,2,16949), -- Recipe: Sealed Imperial Crusader Gaiters (60%)
+(22376,1875,1,29,-1,600000), -- Stone of Purity
+(22376,8716,1,1,-1,500000), -- Naga Storm Piece
+(22449,57,20760,41250,0,700000), -- Adena
+(22449,9599,2,4,100,690000), -- Ancient Tome of the Demon
+(22449,1895,4,9,2,166667), -- Metallic Fiber
+(22449,4040,1,1,2,37037), -- Mold Lubricant
+(22449,9628,1,1,2,18519), -- Leonard
+(22449,9630,1,1,2,18519), -- Orichalcum
+(22449,9551,1,1,200,100000), -- Divine Stone
+(22449,55382,1,1,1,9346), -- Dragon Grinder Edge
+(22449,6689,1,1,-1,200000), -- Basalt Battlehammer Head
+(22450,57,988,1976,0,700000), -- Adena
+(22450,9599,1,1,100,90909), -- Ancient Tome of the Demon
+(22450,1868,1,1,2,250000), -- Thread
+(22450,1873,1,1,2,47619), -- Silver Nugget
+(22450,1895,1,1,2,43478), -- Metallic Fiber
+(22450,5534,1,1,1,2421), -- Soul Bow Stave
+(22450,1876,1,1,2,26315), -- Mithril Ore
+(22450,4042,1,1,2,1211); -- Enria
 
 -- Category Explanation (RaidBoss & their minions)
 --   0 is full armor and armor mats
