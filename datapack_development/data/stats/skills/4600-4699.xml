@@ -348,13 +348,16 @@
   </for>
 </skill>
 <skill id="4617" levels="1" name="Dispel Petrification">
-  <!-- Needs to be done -->
-  <set name="mpConsume" val="73"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="PASSIVE"/>
-  <set name="magicLvl" val="80"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <!-- Done by DJ MELERIX -->
   <set name="aggroPoints" val="100"/>
+  <set name="isMagic" val="true"/>
+  <set name="magicLvl" val="80"/>
+  <set name="mpConsume" val="58"/>
+  <set name="mpInitialConsume" val="15"/>
+  <set name="negateId" val="4616"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillType" val="NEGATE"/>
+  <set name="target" val="TARGET_SELF"/>
 </skill>
 <skill id="4618" levels="1" name="NPC Cancel PC Target">
   <set name="mpConsume" val="35"/>
