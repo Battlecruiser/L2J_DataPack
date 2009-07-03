@@ -72,7 +72,13 @@
 </item>
 <item id="13889" name="Holy Spirit's Cloak - Kamael exclusive">
   <cond msgId="1518">
-    <player race="Kamael"/>
+    <and>
+      <player race="Kamael"/>
+      <or>
+        <player active_skill_id="8286"/> <!-- Vesper Noble Leather Breastplate -->
+        <player active_skill_id="8304"/> <!-- Vesper Noble Leather Breastplate {PvP} -->
+      </or>
+    </and>
   </cond>
   <for>
     <add val="20" order="0x10" stat="pDef"/>
@@ -80,18 +86,41 @@
   </for>
 </item>
 <item id="13890" name="Holy Spirit's Cloak">
+  <cond msgId="1518">
+    <or>
+      <player active_skill_id="8284"/> <!-- Vesper Noble Breastplate -->
+      <player active_skill_id="8302"/> <!-- Vesper Noble Breastplate {PvP} -->
+    </or>
+  </cond>
   <for>
     <add val="20" order="0x10" stat="pDef"/>
     <add order="0x40" stat="darkRes" val="30"/> <!-- Dark Attribute Defense +30 -->
   </for>
 </item>
 <item id="13891" name="Holy Spirit's Cloak - Light Armor exclusive">
+  <cond msgId="1518">
+    <and>
+      <not>
+        <player race="Kamael"/>
+      </not>
+      <or>
+        <player active_skill_id="8286"/> <!-- Vesper Noble Leather Breastplate -->
+        <player active_skill_id="8304"/> <!-- Vesper Noble Leather Breastplate {PvP} -->
+      </or>
+    </and>
+  </cond>
   <for>
     <add val="20" order="0x10" stat="pDef"/>
     <add order="0x40" stat="darkRes" val="30"/> <!-- Dark Attribute Defense +30 -->
   </for>
 </item>
 <item id="13892" name="Holy Spirit's Cloak - Robe exclusive">
+  <cond msgId="1518">
+    <or>
+      <player active_skill_id="8288"/> <!-- Vesper Noble Tunic -->
+      <player active_skill_id="8306"/> <!-- Vesper Noble Tunic {PvP} -->
+    </or>
+  </cond>
   <for>
     <add val="20" order="0x10" stat="pDef"/>
     <add order="0x40" stat="darkRes" val="30"/> <!-- Dark Attribute Defense +30 -->
