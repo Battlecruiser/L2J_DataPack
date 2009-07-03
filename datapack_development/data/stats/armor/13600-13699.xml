@@ -1,18 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 <item id="13687" name="Knight's Cloak">
+  <cond msgId="1518">
+    <and>
+      <player pledgeClass="3"/>
+      <player castle="-1"/>
+      <or>
+        <player active_skill_id="8284"/> <!-- Vesper Noble Breastplate -->
+        <player active_skill_id="8302"/> <!-- Vesper Noble Breastplate {PvP} -->
+      </or>
+    </and>
+  </cond>
   <for>
     <add val="20" order="0x10" stat="pDef"/>
     <add order="0x40" stat="darkRes" val="30"/> <!-- Dark Attribute Defense +30 -->
   </for>
 </item>
 <item id="13688" name="Knight's Cloak - Light Armor exclusive">
+  <cond msgId="1518">
+    <and>
+      <player pledgeClass="3"/>
+      <player castle="-1"/>
+      <not>
+        <player race="Kamael"/>
+      </not>
+      <or>
+        <player active_skill_id="8286"/> <!-- Vesper Noble Leather Breastplate -->
+        <player active_skill_id="8304"/> <!-- Vesper Noble Leather Breastplate {PvP} -->
+      </or>
+    </and>
+  </cond>
   <for>
     <add val="20" order="0x10" stat="pDef"/>
     <add order="0x40" stat="darkRes" val="30"/> <!-- Dark Attribute Defense +30 -->
   </for>
 </item>
 <item id="13689" name="Knight's Cloak - Robe exclusive">
+  <cond msgId="1518">
+    <and>
+      <player pledgeClass="3"/>
+      <player castle="-1"/>
+      <or>
+        <player active_skill_id="8288"/> <!-- Vesper Noble Tunic -->
+        <player active_skill_id="8306"/> <!-- Vesper Noble Tunic {PvP} -->
+      </or>
+    </and>
+  </cond>
   <for>
     <add val="20" order="0x10" stat="pDef"/>
     <add order="0x40" stat="darkRes" val="30"/> <!-- Dark Attribute Defense +30 -->
@@ -20,7 +53,15 @@
 </item>
 <item id="13690" name="Knight's Cloak - Kamael exclusive">
   <cond msgId="1518">
-    <player race="Kamael"/>
+    <and>
+      <player pledgeClass="3"/>
+      <player castle="-1"/>
+      <player race="Kamael"/>
+      <or>
+        <player active_skill_id="8286"/> <!-- Vesper Noble Leather Breastplate -->
+        <player active_skill_id="8304"/> <!-- Vesper Noble Leather Breastplate {PvP} -->
+      </or>
+    </and>
   </cond>
   <for>
     <add val="20" order="0x10" stat="pDef"/>
