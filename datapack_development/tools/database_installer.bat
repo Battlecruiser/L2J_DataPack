@@ -587,6 +587,7 @@ merchants.sql
 minions.sql
 npc.sql
 npcskills.sql
+olympiad_data.sql
 olympiad_nobles.sql
 olympiad_nobles_eom.sql
 pets.sql
