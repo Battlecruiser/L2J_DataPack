@@ -1047,7 +1047,6 @@
   <set name="reuseDelay" val="150000"/>
   <set name="hitTime" val="2000"/>
   <set name="aggroPoints" val="669"/>
-  <set name="useShield" val="true"/>
   <for>
     <effect name="Buff" time="300" val="0">
       <add order="0x40" stat="reflectSkillPhysic" val="30">
@@ -1069,7 +1068,6 @@
   <set name="reuseDelay" val="150000"/>
   <set name="hitTime" val="2000"/>
   <set name="aggroPoints" val="669"/>
-  <set name="useShield" val="true"/>
   <for>
     <effect name="Buff" time="300" val="0">
       <add order="0x40" stat="reflectSkillPhysic" val="10">
@@ -1095,7 +1093,6 @@
   <set name="effectRange" val="400"/>
   <set name="reuseDelay" val="3000"/>
   <set name="hitTime" val="1000"/>
-  <set name="useShield" val="true"/>
   <for>
     <effect name="Stun" time="2" val="0" stackOrder="1" stackType="Stun"/>
     <effect name="RemoveTarget" noicon="1" val="0"/>
@@ -1115,7 +1112,6 @@
   <set name="effectRange" val="400"/>
   <set name="reuseDelay" val="8000"/>
   <set name="hitTime" val="2000"/>
-  <set name="useShield" val="true"/>
   <for>
     <effect name="PhysicalMute" time="60" val="0"/>
     <effect name="RemoveTarget" noicon="1" val="0"/>
@@ -1262,7 +1258,7 @@
   <set name="mpConsume" val="35"/>
   <set name="power" val="40"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="STUN"/>
+  <set name="skillType" val="AGGREDUCE_CHAR"/>
   <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="40"/>
@@ -1463,7 +1459,6 @@
   <set name="skillType" val="AGGDEBUFF"/>
   <set name="magicLvl" val="77"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="useShield" val="true"/>
   <for>
     <effect self="1" name="ImmobileBuff" time="30" val="0" stackOrder="3" stackType="pd_up_special">
       <add order="0x40" stat="pDef" val="5400"/>
