@@ -1246,11 +1246,23 @@
   <set name="weaponsAllowed" val="65536"/> <!-- Crossbow -->
 </skill>
 <skill id="791" levels="1" name="Lightning Shock">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="soulMaxConsumeCount" val="5"/>
+  <!-- Done by DJ MELERIX -->
   <set name="hitTime" val="1080"/>
+  <set name="isDebuff" val="true"/>
+  <set name="lvlDepend" val="1"/>
+  <set name="magicLvl" val="83"/>
+  <set name="mpConsume" val="52"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="1510"/>
+  <set name="reuseDelay" val="6000"/>
+  <set name="skillRadius" val="200"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="soulMaxConsumeCount" val="5"/>
+  <set name="SSBoost" val="2.0"/>
+  <set name="target" val="TARGET_AURA"/>
+  <for>
+    <effect name="Paralyze" time="9" val="0" effectPower="20" effectType="PARALYZE"/>
+  </for>
 </skill>
 <skill id="792" levels="1" name="Betrayal Mark">
   <set name="target" val="TARGET_NONE"/>
