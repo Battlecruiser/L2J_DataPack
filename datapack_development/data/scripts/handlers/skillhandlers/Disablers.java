@@ -107,7 +107,7 @@ public class Disablers implements ISkillHandler
 			}
 		}
 		
-		if (weaponInst != null && !skill.useShield())
+		if (weaponInst != null)
 		{
 			if (skill.isMagic())
 			{
