@@ -191,6 +191,7 @@
 </skill>
 <skill id="1511" levels="8" name="Curse of Life Flow">
   <!-- CT2.2 retail partially confirmed -->
+  <table name="#magicLvl"> 60 62 64 66 68 70 72 74 </table>
   <table name="#mpConsume"> 34 35 37 38 39 39 40 42 </table>
   <table name="#lvl"> 1 2 3 4 5 6 7 8 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -200,6 +201,7 @@
   <set name="power" val="80"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="DEBUFF"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1200"/>

@@ -14761,6 +14761,7 @@ INSERT INTO `skill_trees` VALUES
 (128,466,41,'Magic Immunity',81000,60),
 (128,465,35,'Light Armor Mastery',81000,60),
 (128,465,36,'Light Armor Mastery',81000,60),
+(128,1511,2,'Curse of Life Flow',250000,62);
 (128,1529,1,'Soul Web',250000,62),
 (128,465,37,'Light Armor Mastery',130000,62),
 (128,465,38,'Light Armor Mastery',130000,62),
@@ -14784,6 +14785,7 @@ INSERT INTO `skill_trees` VALUES
 (128,1437,14,'Dark Flame',130000,62),
 (128,1438,3,'Annihilation Circle',250000,62),
 (128,1435,7,'Death Mark',250000,62),
+(128,1511,3,'Curse of Life Flow',300000,64);
 (128,1529,2,'Soul Web',300000,64),
 (128,1438,4,'Annihilation Circle',300000,64),
 (128,1437,15,'Dark Flame',150000,64),
@@ -14807,6 +14809,7 @@ INSERT INTO `skill_trees` VALUES
 (128,466,45,'Magic Immunity',150000,64),
 (128,465,39,'Light Armor Mastery',150000,64),
 (128,465,40,'Light Armor Mastery',150000,64),
+(128,1511,4,'Curse of Life Flow',310000,66);
 (128,1529,3,'Soul Web',310000,66),
 (128,465,41,'Light Armor Mastery',160000,66),
 (128,465,42,'Light Armor Mastery',160000,66),
@@ -14837,6 +14840,7 @@ INSERT INTO `skill_trees` VALUES
 (128,1437,18,'Dark Flame',160000,66),
 (128,1438,5,'Annihilation Circle',310000,66),
 (128,1435,8,'Death Mark',310000,66),
+(128,1511,5,'Curse of Life Flow',460000,68);
 (128,1529,4,'Soul Web',460000,68),
 (128,1438,6,'Annihilation Circle',460000,68),
 (128,1437,19,'Dark Flame',230000,68),
@@ -14861,6 +14865,7 @@ INSERT INTO `skill_trees` VALUES
 (128,466,49,'Magic Immunity',230000,68),
 (128,465,43,'Light Armor Mastery',230000,68),
 (128,465,44,'Light Armor Mastery',230000,68),
+(128,1511,6,'Curse of Life Flow',550000,70);
 (128,1529,5,'Soul Web',550000,70),
 (128,465,45,'Light Armor Mastery',280000,70),
 (128,465,46,'Light Armor Mastery',280000,70),
@@ -14885,6 +14890,7 @@ INSERT INTO `skill_trees` VALUES
 (128,1437,22,'Dark Flame',280000,70),
 (128,1438,7,'Annihilation Circle',550000,70),
 (128,1435,9,'Death Mark',550000,70),
+(128,1511,7,'Curse of Life Flow',630000,72);
 (128,1529,6,'Soul Web',630000,72),
 (128,1438,8,'Annihilation Circle',630000,72),
 (128,1437,23,'Dark Flame',320000,72),
@@ -14911,6 +14917,7 @@ INSERT INTO `skill_trees` VALUES
 (128,466,53,'Magic Immunity',320000,72),
 (128,465,47,'Light Armor Mastery',320000,72),
 (128,465,48,'Light Armor Mastery',320000,72),
+(128,1511,8,'Curse of Life Flow',1440000,74);
 (128,1529,7,'Soul Web',1440000,74),
 (128,465,49,'Light Armor Mastery',720000,74),
 (128,465,50,'Light Armor Mastery',720000,74),
@@ -15134,6 +15141,7 @@ INSERT INTO `skill_trees` VALUES
 (129,466,41,'Magic Immunity',81000,60),
 (129,465,35,'Light Armor Mastery',81000,60),
 (129,465,36,'Light Armor Mastery',81000,60),
+(129,1511,2,'Curse of Life Flow',250000,62);
 (129,1529,1,'Soul Web',250000,62),
 (129,465,37,'Light Armor Mastery',130000,62),
 (129,465,38,'Light Armor Mastery',130000,62),
@@ -15157,7 +15165,7 @@ INSERT INTO `skill_trees` VALUES
 (129,1437,14,'Dark Flame',130000,62),
 (129,1438,3,'Annihilation Circle',250000,62),
 (129,1435,7,'Death Mark',250000,62),
-(129,1529,4,'Soul Web',460000,68),
+(129,1511,3,'Curse of Life Flow',300000,64);
 (129,1529,2,'Soul Web',300000,64),
 (129,1438,4,'Annihilation Circle',300000,64),
 (129,1437,15,'Dark Flame',150000,64),
@@ -15181,6 +15189,7 @@ INSERT INTO `skill_trees` VALUES
 (129,466,45,'Magic Immunity',150000,64),
 (129,465,39,'Light Armor Mastery',150000,64),
 (129,465,40,'Light Armor Mastery',150000,64),
+(129,1511,4,'Curse of Life Flow',310000,66);
 (129,1529,3,'Soul Web',310000,66),
 (129,465,41,'Light Armor Mastery',160000,66),
 (129,465,42,'Light Armor Mastery',160000,66),
@@ -15211,6 +15220,8 @@ INSERT INTO `skill_trees` VALUES
 (129,1437,18,'Dark Flame',160000,66),
 (129,1438,5,'Annihilation Circle',310000,66),
 (129,1435,8,'Death Mark',310000,66),
+(129,1511,5,'Curse of Life Flow',460000,68);
+(129,1529,4,'Soul Web',460000,68),
 (129,1438,6,'Annihilation Circle',460000,68),
 (129,1437,19,'Dark Flame',230000,68),
 (129,1437,20,'Dark Flame',230000,68),
@@ -15234,6 +15245,7 @@ INSERT INTO `skill_trees` VALUES
 (129,466,49,'Magic Immunity',230000,68),
 (129,465,43,'Light Armor Mastery',230000,68),
 (129,465,44,'Light Armor Mastery',230000,68),
+(129,1511,6,'Curse of Life Flow',550000,70);
 (129,1529,5,'Soul Web',550000,70),
 (129,465,45,'Light Armor Mastery',280000,70),
 (129,465,46,'Light Armor Mastery',280000,70),
@@ -15258,6 +15270,7 @@ INSERT INTO `skill_trees` VALUES
 (129,1437,22,'Dark Flame',280000,70),
 (129,1438,7,'Annihilation Circle',550000,70),
 (129,1435,9,'Death Mark',550000,70),
+(129,1511,7,'Curse of Life Flow',630000,72);
 (129,1529,6,'Soul Web',630000,72),
 (129,1438,8,'Annihilation Circle',630000,72),
 (129,1437,23,'Dark Flame',320000,72),
@@ -15284,6 +15297,7 @@ INSERT INTO `skill_trees` VALUES
 (129,466,53,'Magic Immunity',320000,72),
 (129,465,47,'Light Armor Mastery',320000,72),
 (129,465,48,'Light Armor Mastery',320000,72),
+(129,1511,8,'Curse of Life Flow',1440000,74);
 (129,1529,7,'Soul Web',1440000,74),
 (129,465,49,'Light Armor Mastery',720000,74),
 (129,465,50,'Light Armor Mastery',720000,74),
