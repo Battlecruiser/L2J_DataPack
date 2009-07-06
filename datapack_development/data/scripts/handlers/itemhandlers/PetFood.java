@@ -14,6 +14,7 @@
  */
 package handlers.itemhandlers;
 
+import net.sf.l2j.Config;
 import net.sf.l2j.gameserver.datatables.SkillTable;
 import net.sf.l2j.gameserver.handler.IItemHandler;
 import net.sf.l2j.gameserver.model.L2ItemInstance;
@@ -78,7 +79,7 @@ public class PetFood implements IItemHandler
 				if (((L2PetInstance)activeChar).destroyItem("Consume", item.getObjectId(), 1, null, false))
 				{
 					activeChar.broadcastPacket(new MagicSkillUse(activeChar, activeChar, magicId, 1, 0, 0));
-					((L2PetInstance)activeChar).setCurrentFed(((L2PetInstance)activeChar).getCurrentFed() + skill.getFeed());
+					((L2PetInstance)activeChar).setCurrentFed(((L2PetInstance)activeChar).getCurrentFed() + (skill.getFeed() * Config.PET_FOOD_RATE));
 					((L2PetInstance)activeChar).broadcastStatusUpdate();
 					if (((L2PetInstance)activeChar).getCurrentFed() < (0.55 * ((L2PetInstance)activeChar).getPetData().getPetMaxFeed()))
 						((L2PetInstance)activeChar).getOwner().sendPacket(new SystemMessage(SystemMessageId.YOUR_PET_ATE_A_LITTLE_BUT_IS_STILL_HUNGRY));
