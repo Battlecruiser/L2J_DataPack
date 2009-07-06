@@ -77,7 +77,7 @@ INSERT INTO `etcitem` VALUES
 (723,'Crafted Leather Boots','false','none',200,'normal','leather','none',-1,-1,0,0,'false','false','true','false','none','0-0;'),
 (724,'Reinforced Boots','false','none',250,'normal','steel','none',-1,-1,0,0,'false','false','true','false','none','0-0;'),
 (725,'Healing Drug','false','potion',180,'stackable','liquid','none',-1,-1,50,0,'true','true','true','true','ItemSkills','2002-1;'),
-(726,'Mana Drug','false','potion',180,'stackable','liquid','none',-1,-1,80,0,'true','true','true','true','ItemSkills','9007-1;'),
+(726,'Mana Drug','false','potion',180,'stackable','liquid','none',-1,-1,80,0,'true','true','true','true','Potions','0-0;'),
 (727,'Healing Potion','false','potion',180,'stackable','liquid','none',-1,-1,80,0,'true','true','true','true','Potions','0-0;'),
 (728,'Mana Potion','false','potion',180,'stackable','liquid','none',-1,-1,2000,0,'true','true','true','true','Potions','0-0;'),
 (729,'Scroll: Enchant Weapon (A)','false','scroll',120,'stackable','paper','none',-1,-1,1800000,0,'true','true','true','true','EnchantScrolls','2006-1;'),
