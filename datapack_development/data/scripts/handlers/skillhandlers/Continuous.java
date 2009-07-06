@@ -125,7 +125,7 @@ public class Continuous implements ISkillHandler
 				if (player != null)
 				{
 					L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
-					if (weaponInst != null  && !skill.useShield())
+					if (weaponInst != null)
 					{
 						if (skill.isMagic())
 						{
