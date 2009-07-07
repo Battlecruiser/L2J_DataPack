@@ -10152,7 +10152,7 @@ INSERT INTO `skill_trees` VALUES
 (41,258,13,'Light Armor Mastery',32000,56),
 (41,258,14,'Light Armor Mastery',32000,56),
 (41,258,15,'Light Armor Mastery',32000,56),
-(41,213,5,'Boost Mana',950000,56),
+(41,213,5,'Boost Mana',95000,56),
 (41,1126,15,'Servitor Recharge',48000,56),
 (41,1126,16,'Servitor Recharge',48000,56),
 (41,1127,25,'Servitor Heal',32000,56),
