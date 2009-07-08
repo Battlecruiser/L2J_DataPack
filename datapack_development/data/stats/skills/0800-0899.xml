@@ -329,7 +329,9 @@
       <mul order="0x30" stat="pAtk" val="1.05">
         <using kind="Blunt,Big Blunt"/>
       </mul>
-      <mul order="0x30" stat="stunProf" val="1.08"/>
+      <mul order="0x30" stat="stunProf" val="1.08">
+        <using kind="Blunt,Big Blunt"/>
+      </mul>
     </effect>
   </for>
 </skill>
