@@ -167,7 +167,7 @@ public class L2AttackableAIScript extends QuestJython
     { 
     	L2Character target = isPet ? player.getPet() : player;
     	
-    	((L2Attackable) npc).addToAggroList(target);
+    	((L2Attackable) npc).addDamageHate(target, 0, 1);
 
 		// Set the intention to the L2Attackable to AI_INTENTION_ACTIVE
 		if (npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE)
