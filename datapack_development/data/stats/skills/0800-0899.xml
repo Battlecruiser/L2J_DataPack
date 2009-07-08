@@ -305,10 +305,10 @@
   <for>
     <effect name="Buff" time="600" val="0" stackOrder="1" stackType="ws_weapon">
       <mul order="0x30" stat="pAtk" val="1.05">
-        <using kind="Sword,Big Sword,Ancient,Rapier"/>
+        <using kind="Sword,Big Sword,Dual Sword,Ancient,Rapier,Dagger,Dual Dagger"/>
       </mul>
       <basemul order="0x30" stat="rCrit" val="0.2">
-        <using kind="Sword,Big Sword,Ancient,Rapier"/>
+        <using kind="Sword,Big Sword,Dual Sword,Ancient,Rapier,Dagger,Dual Dagger"/>
       </basemul>
     </effect>
   </for>
@@ -325,11 +325,11 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <for>
-    <!-- Missing: weight for shock attack by 8 -->
     <effect name="Buff" time="600" val="0" stackOrder="1" stackType="ws_weapon">
       <mul order="0x30" stat="pAtk" val="1.05">
         <using kind="Blunt,Big Blunt"/>
       </mul>
+      <mul order="0x30" stat="stunProf" val="1.08"/>
     </effect>
   </for>
 </skill>
