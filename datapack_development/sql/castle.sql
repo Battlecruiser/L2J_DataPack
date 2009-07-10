@@ -2,7 +2,7 @@ CREATE TABLE IF NOT EXISTS `castle` (
   `id` INT NOT NULL default 0,
   `name` varchar(25) NOT NULL,
   `taxPercent` INT NOT NULL default 15,
-  `treasury` INT NOT NULL default 0,
+  `treasury` BIGINT NOT NULL default 0,
   `siegeDate` DECIMAL(20,0) NOT NULL default 0,
   `regTimeOver` enum('true','false') DEFAULT 'true' NOT NULL,
   `regTimeEnd` DECIMAL(20,0) NOT NULL default 0,
