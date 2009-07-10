@@ -62,7 +62,7 @@
   </for>
   <enchant1for>
     <effect name="Stun" time="9" val="0" effectPower="#ench1effectPower" effectType="STUN" stackOrder="1" stackType="Stun"/>
-    <effect name="RemoveTarget" noicon="1" val="0" effectPower="50" effectType="DEBUFF"/>
+    <effect name="RemoveTarget" noicon="1" val="0" effectPower="#ench1effectPower" effectType="DEBUFF"/>
   </enchant1for>
   <enchant3for>
     <effect name="Debuff" time="9" val="0">
