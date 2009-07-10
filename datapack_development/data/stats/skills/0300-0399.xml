@@ -1083,7 +1083,7 @@
   <set name="magicLvl" val="77"/>
   <set name="weaponsAllowed" val="2"/> <!-- Shield -->
   <set name="lvlDepend" val="2"/>
-  <set name="power" val="80"/>
+  <set name="power" val="80"/> <!-- Base Land Rate -->
   <set name="mpConsume" val="18"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="STUN"/>
@@ -1102,7 +1102,7 @@
   <set name="magicLvl" val="77"/>
   <set name="weaponsAllowed" val="2"/> <!-- Shield -->
   <set name="lvlDepend" val="1"/>
-  <set name="power" val="40"/>
+  <set name="power" val="40"/> <!-- Base Land Rate -->
   <set name="mpConsume" val="35"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="MUTE"/>
@@ -1329,7 +1329,7 @@
       <mul order="0x30" stat="pDef" val="0.7"/>
       <mul order="0x30" stat="mDef" val="0.7"/>
     </effect>
-    <effect name="RemoveTarget" noicon="1" val="0"/>
+    <effect name="RemoveTarget" noicon="1" val="0" effectPower="40" effectType="DEBUFF"/>
   </for>
 </skill>
 <skill id="362" levels="1" name="Armor Crush">
