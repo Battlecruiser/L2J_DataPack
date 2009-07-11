@@ -68,17 +68,17 @@ MAX = 100
 #templates
 number  = ["second","third","fourth","fifth","sixth"]
 header  = "<html><body>Warehouse Freightman Romp:<br><br>"
-link    = "<td align=center><a action=\"bypass -h Quest 386_StolenDignity "
-middle  = "</tr></table><br><br>Your selection thus far: <br><br><table border=1 width=120 hieght=64>"
+link    = "<a action=\"bypass -h Quest 386_StolenDignity "
+middle  = "<br><br>Your selection thus far: <br><br><table border=1 width=120 hieght=64>"
 footer  = "</table></body></html>"
 loser   = "Wow! How unlucky can you get? Your choices are highlighted in red below. As you can see, your choices didn't make a single line! Losing this badly is actually quite rare!<br><br>You look so sad, I feel bad for you... Wait here...<br><br>.<br><br>.<br><br>.<br><br>Take this... I hope it will bring you better luck in the future.<br><br>"
 winner  = "Excellent! As you can see, you've formed three lines! Congratulations! As promised, I'll give you some unclaimed merchandise from the warehouse. Wait here...<br><br>.<br><br>.<br><br>.<br><br>Whew, it's dusty! OK, here you go. Do you like it?<br><br>"
 average = "Hum. Well, your choices are highlighted in red below. As you can see your choices didn't formed three lines... but you were near, so don't be sad. You can always get another few infernium ores and try again. Better luck in the future!<br><br>"
 
 def partial(st) :
-    html = " number:<br><br><table border=0><tr>"
+    html = " number:<br><br>"
     for z in range(1,10) :
-        html += link+str(z)+"\">"+str(z)+"</a></td>"
+        html += link+str(z)+"\">"+str(z)+"</a>&nbsp;&nbsp;&nbsp;&nbsp;"
     html += middle
     chosen = st.get("chosen").split()
     for y in range(0,7,3) :
