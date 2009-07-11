@@ -3006,7 +3006,7 @@ INSERT INTO `weapon` VALUES
 (13536,'Flag of Goddard','rhand','false',500,1,1,'fine_steel','none',0,0,'sword',0,0,0,0,0,325,0,0,-1,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (13537,'Flag of Rune','rhand','false',500,1,1,'fine_steel','none',0,0,'sword',0,0,0,0,0,325,0,0,-1,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (13538,'Flag of Schuttgart','rhand','false',500,1,1,'fine_steel','none',0,0,'sword',0,0,0,0,0,325,0,0,-1,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
-(13539,'Staff of Master Yogi ','rhand','false',10,0,0,'fine_steel','none',11,20,'blunt',4,4,0,0,0,325,0,12,-1,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
+(13539,'Staff of Master Yogi ','lrhand','false',10,0,0,'fine_steel','none',11,20,'blunt',4,4,0,0,0,325,0,12,-1,-1,0,0,'false','false','true','false',0,0,0,0,0,0,0,0,0,'0-0;'),
 (13556,'Airship Control Key','none','false',0,0,0,'fine_steel','none',1,10,'sword',8,0,0,0,0,379,0,1,-1,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (13557,'Airship Cannon','none','false',0,0,0,'fine_steel','none',1,10,'sword',8,0,0,0,0,379,0,1,-1,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (13558,'Airship Cannon Briquet','rhand','false',0,0,0,'fine_steel','none',1,10,'sword',8,0,0,0,0,379,0,1,-1,-1,0,0,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
