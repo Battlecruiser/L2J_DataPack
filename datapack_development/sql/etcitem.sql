@@ -9406,7 +9406,7 @@ INSERT INTO `etcitem` VALUES
 (22043,'Death Whisper Scroll','false','none',120,'stackable','paper','none',-1,-1,0,0,'false','false','true','false','ItemSkills','26035-1;'),
 (22044,'Guidance Scroll','false','none',120,'stackable','paper','none',-1,-1,0,0,'false','false','true','false','ItemSkills','26036-1;'),
 (22045,'Empower Scroll','false','none',120,'stackable','paper','none',-1,-1,0,0,'false','false','true','false','ItemSkills','26037-1;'),
-(22046,'Grater Acumen Scroll','false','none',120,'stackable','paper','none',-1,-1,0,0,'false','false','true','false','ItemSkills','26038-1;'),
+(22046,'Greater Acumen Scroll','false','none',120,'stackable','paper','none',-1,-1,0,0,'false','false','true','false','ItemSkills','26038-1;'),
 (22047,'Vampiric Rage Scroll','false','none',120,'stackable','paper','none',-1,-1,0,0,'false','false','true','false','ItemSkills','26039-1;'),
 (22048,'Bless the Body Scroll','false','none',120,'stackable','paper','none',-1,-1,0,0,'false','false','true','false','ItemSkills','26040-1;'),
 (22049,'Berserker Spirit Scroll','false','none',120,'stackable','paper','none',-1,-1,0,0,'false','false','true','false','ItemSkills','26041-1;'),
