@@ -164,6 +164,8 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_effect_menu','1'),
 ('admin_abnormal','1'),
 ('admin_abnormal_menu','1'),
+('admin_special','1'),
+('admin_special_menu','1'),
 ('admin_play_sounds','1'),
 ('admin_play_sound','1'),
 ('admin_atmosphere','1'),

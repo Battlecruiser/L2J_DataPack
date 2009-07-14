@@ -515,7 +515,7 @@
   <set name="effectRange" val="1200"/>
   <set name="hitTime" val="3000"/>
   <for>
-    <effect count="10" name="DamOverTime" time="3" val="#dmg" abnormal="poison">
+    <effect count="10" name="DamOverTime" time="3" val="#dmg" abnormal="deathmark">
       <mul order="0x30" stat="pDef" val="#amount"/>
       <mul order="0x30" stat="mDef" val="#amount"/>
     </effect>
