@@ -469,9 +469,7 @@
   <set name="skillType" val="PASSIVE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <set order="0x10" stat="shieldDefAngle" val="360">
-      <using kind="Shield"/> <!-- when a shield is equipped. -->
-    </set>
+    <set order="0x10" stat="shieldDefAngle" val="360"/>
   </for>
 </skill>
 <skill id="317" levels="5" name="Focus Attack">
