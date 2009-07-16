@@ -1513,7 +1513,6 @@
   </for>
 </skill>
 <skill id="1374" levels="1" name="Heroic Valor">
-  <!-- Done by KID -->
   <set name="mpConsume" val="289"/>
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="80"/>
@@ -1533,7 +1532,6 @@
   </for>
 </skill>
 <skill id="1375" levels="1" name="Heroic Grandeur">
-<!-- Done by KID -->
   <set name="mpConsume" val="109"/>
   <set name="power" val="40"/>
   <set name="magicLvl" val="78"/>
@@ -1560,7 +1558,6 @@
   </for>
 </skill>
 <skill id="1376" levels="1" name="Heroic Dread">
-<!-- Done by KID -->
   <set name="mpConsume" val="109"/>
   <set name="power" val="40"/>
   <set name="magicLvl" val="78"/>
@@ -1598,7 +1595,6 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="1380" levels="10" name="Betray">
-  <!-- Done by KID [C5] -->
   <!-- need to check duration and reuse delay -->
   <table name="#mpConsume"> 52 54 55 58 60 62 64 65 67 69 </table>
   <table name="#itemConsumeCount"> 3 3 3 3 4 4 4 5 5 5 </table>
@@ -1619,7 +1615,6 @@
   </for>
 </skill>
 <skill id="1381" levels="5" name="Mass Fear">
-  <!-- Done by KID -->
   <table name="#magicLvl"> 58 62 66 70 74 </table>
   <table name="#mpConsume"> 80 87 93 98 103 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1640,7 +1635,6 @@
   </for>
 </skill>
 <skill id="1382" levels="5" name="Mass Gloom">
-  <!-- Done by KID -->
   <table name="#magicLvl"> 58 62 66 70 74 </table>
   <table name="#mpConsume"> 80 87 93 98 103 </table>
   <table name="#itemConsumeCount"> 4 4 4 5 5 </table>
@@ -1665,7 +1659,6 @@
   </for>
 </skill>
 <skill id="1383" levels="5" name="Mass Surrender to Fire">
-  <!-- Done by KID -->
   <table name="#magicLvl"> 58 62 66 70 74 </table>
   <table name="#mpConsume"> 80 87 93 98 103 </table>
   <table name="#itemConsumeCount"> 2 2 2 3 3 </table>
@@ -1691,7 +1684,6 @@
   </for>
 </skill>
 <skill id="1384" levels="5" name="Mass Surrender to Water">
-  <!-- Done by KID -->
   <table name="#magicLvl"> 58 62 66 70 74 </table>
   <table name="#mpConsume"> 80 87 93 98 103 </table>
   <table name="#itemConsumeCount"> 2 2 2 3 3 </table>
@@ -1717,7 +1709,6 @@
   </for>
 </skill>
 <skill id="1385" levels="5" name="Mass Surrender to Wind">
-  <!-- Done by KID -->
   <table name="#magicLvl"> 58 62 66 70 74 </table>
   <table name="#mpConsume"> 80 87 93 98 103 </table>
   <table name="#itemConsumeCount"> 2 2 2 3 3 </table>
@@ -1743,7 +1734,6 @@
   </for>
 </skill>
 <skill id="1386" levels="10" name="Arcane Disruption">
-  <!-- Done by KID -->
   <table name="#mpConsume"> 52 54 55 58 60 62 64 65 67 69 </table>
   <table name="#magicLvl"> 56 58 60 62 64 66 68 70 72 74 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1783,7 +1773,6 @@
   <set name="random_count" val="#random_count"/>
 </skill>
 <skill id="1388" levels="3" name="Greater Might">
-  <!-- Done by KID -->
   <table name="#pAtk"> 1.04 1.07 1.1 </table>
   <table name="#mpConsume"> 54 62 69 </table>
   <table name="#itemConsumeCount"> 1 2 3 </table>
@@ -1805,7 +1794,6 @@
   </for>
 </skill>
 <skill id="1389" levels="3" name="Greater Shield">
-  <!-- Done by KID -->
   <table name="#pDef"> 1.05 1.1 1.15 </table>
   <table name="#mpConsume"> 54 62 69 </table>
   <table name="#itemConsumeCount"> 1 2 3 </table>
@@ -1827,7 +1815,6 @@
   </for>
 </skill>
 <skill id="1390" levels="3" name="War Chant">
-  <!-- Done by KID -->
   <table name="#mpConsume"> 213 244 272 </table>
   <table name="#pAtk"> 1.04 1.07 1.1 </table>
   <table name="#itemConsumeCount"> 4 8 12 </table>
@@ -1848,7 +1835,6 @@
   </for>
 </skill>
 <skill id="1391" levels="3" name="Earth Chant">
-  <!-- Done by KID -->
   <table name="#mpConsume"> 213 244 272 </table>
   <table name="#pDef"> 1.05 1.1 1.15 </table>
   <table name="#itemConsumeCount"> 4 8 12 </table>
@@ -1869,7 +1855,6 @@
   </for>
 </skill>
 <skill id="1392" levels="3" name="Holy Resistance">
-  <!-- Done by KID -->
   <table name="#mpConsume"> 54 62 69 </table>
   <table name="#holyRes"> 15 23 30 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1888,7 +1873,6 @@
   </for>
 </skill>
 <skill id="1393" levels="3" name="Unholy Resistance">
-  <!-- Done by KID -->
   <table name="#mpConsume"> 54 62 69 </table>
   <table name="#darkRes"> 15 23 30 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1907,7 +1891,6 @@
   </for>
 </skill>
 <skill id="1394" levels="10" name="Trance" enchantLevels1="30" enchantLevels2="30">
-  <!-- Done by KID -->
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1936,7 +1919,6 @@
   </for>
 </skill>
 <skill id="1395" levels="10" name="Erase" enchantLevels1="30">
-  <!-- Erase Done by Scafu -->
   <table name="#mpConsume"> 52 54 55 58 60 62 64 65 67 69 </table>
   <table name="#itemConsumeCount"> 3 3 3 3 4 4 4 5 5 5 </table>
   <table name="#magicLvl"> 56 58 60 62 64 66 68 70 72 74 </table>
@@ -2004,7 +1986,6 @@
   </for>
 </skill>
 <skill id="1398" levels="10" name="Mana Burn" enchantLevels1="30" enchantLevels2="30">
-  <!-- Done by KID -->
   <table name="#ench1Power"> 162 163 164 164 165 166 166 167 168 168 169 170 170 171 172 172 173 174 174 175 176 176 177 178 178 179 180 180 181 182 </table>
   <table name="#ench2MpConsume"> 100 98 97 96 95 93 91 90 88 87 86 85 83 82 81 80 78 77 75 73 72 71 70 68 67 66 65 63 62 60 </table>
   <table name="#mpConsume"> 77 80 83 87 89 93 95 98 100 103 </table>
@@ -2023,7 +2004,6 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
 </skill>
 <skill id="1399" levels="5" name="Mana Storm" enchantLevels1="30" enchantLevels2="30">
-  <!-- Done by KID -->
   <table name="#ench1Power"> 81 81 82 82 82 83 83 83 84 84 84 85 85 85 86 86 86 87 87 87 88 88 88 89 89 89 89 90 90 90 91 </table>
   <table name="#ench2MpConsume"> 150 148 146 143 142 140 137 136 133 132 130 127 126 123 121 120 117 116 113 111 110 107 105 103 101 98 97 95 93 91 </table>
   <table name="#mpConsume"> 120 129 138 147 153 </table>

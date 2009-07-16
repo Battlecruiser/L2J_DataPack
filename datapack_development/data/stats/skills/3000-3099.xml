@@ -83,7 +83,6 @@
   Lvl 4: Increases Max HP. Allows simultaneous attacks on multiple targets. Inflicts additional damage during PvP.
   Lvl 5: Increases Max HP. Increases damage inflicted during PvP.
   -->
-  <!-- Done by DJ MELERIX -->
   <!-- Guess Lvl 5 -->
   <table name="#atkCountMax"> 0 4 0 4 0 </table>
   <table name="#magicLvl"> 1 1 64 64 64 </table>
@@ -133,7 +132,6 @@
   </for>
 </skill>
 <skill id="3018" levels="6" name="Special Ability: Back Blow">
-  <!-- Done by DJ MELERIX -->
   <!-- Swords only -->
   <table name="#magicLvl"> 46 49 52 55 58 61 </table>
   <table name="#rCrit"> 1.71 1.67 1.63 1.6 1.56 1.53 </table>
@@ -149,7 +147,6 @@
   </for>
 </skill>
 <skill id="3019" levels="6" name="Special Ability: Back Blow">
-  <!-- Done by DJ MELERIX -->
   <!-- Daggers Only -->
   <table name="#magicLvl"> 46 49 52 55 58 61 </table>
   <table name="#rCrit"> 1.5 1.47 1.45 1.42 1.4 1.37 </table>
@@ -293,7 +290,6 @@
   </for>
 </skill>
 <skill id="3036" levels="6" name="Special Ability: Haste">
-  <!-- Done by DJ MELERIX -->
   <!-- For Swords & Blunts -->
   <table name="#magicLvl"> 46 49 52 55 58 61 </table>
   <table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 </table>
@@ -306,7 +302,6 @@
   </for>
 </skill>
 <skill id="3037" levels="6" name="Special Ability: Haste">
-  <!-- Done by DJ MELERIX -->
   <!-- For Fists -->
   <table name="#magicLvl"> 46 49 52 55 58 61 </table>
   <table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 </table>
@@ -319,7 +314,6 @@
   </for>
 </skill>
 <skill id="3038" levels="6" name="Special Ability: Haste">
-  <!-- Done by DJ MELERIX -->
   <!-- For Bows -->
   <table name="#magicLvl"> 46 49 52 55 58 61 </table>
   <table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 </table>
@@ -459,7 +453,6 @@
   Lvl 2: Decreases Max HP and increases Max MP. Increases damage inflicted during PvP.
   Lvl 3: Decreases Max HP and increases maximum MP. Increases damage inflicted during PvP.
   -->
-  <!-- Done by DJ MELERIX -->
   <!-- Guess Lvl 3 -->
   <table name="#pvpBonus"> 1 1.05 1.05 </table>
   <set name="magicLvl" val="64"/>
@@ -596,7 +589,6 @@
   <set name="castRange" val="600"/>
 </skill>
 <skill id="3063" levels="2" name="Special Ability: Back Blow">
-  <!-- Done by DJ MELERIX -->
   <table name="#magicLvl"> 64 64 </table> <!-- Guess Lvl 2 -->
   <table name="#rCrit"> 1.37 1.37 </table> <!-- Guess Lvl 2 -->
   <set name="condition" val="8"/>
@@ -637,7 +629,6 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="3068" levels="3" name="Special Ability: Haste">
-  <!-- Done by DJ MELERIX -->
   <!--
   Lvl 1: Increases ATK Spd.
   Lvl 2: Increases Atk. Spd. Increases damage inflicted during PvP.

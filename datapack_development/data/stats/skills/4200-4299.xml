@@ -389,7 +389,6 @@
   <set name="negateId" val="4223"/>
 </skill>
 <skill id="4225" levels="6" name="Resist Stun Attacks">
-  <!-- Done by DJ MELERIX -->
   <table name="#stunVuln"> 0.85 0.7 0.5 0.3 0.1 0 </table>
   <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -400,7 +399,6 @@
   </for>
 </skill>
 <skill id="4226" levels="1" name="Ban Heal">
-  <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="skillType" val="BUFF"/>
@@ -503,7 +501,6 @@
   </for>
 </skill>
 <skill id="4234" levels="12" name="BOSS Spear Attack">
-  <!-- Done by DJ MELERIX -->
   <table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
   <table name="#mpConsume"> 36 50 69 93 118 143 166 175 182 186 189 192 </table>
   <table name="#power"> 352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790 </table>
@@ -519,7 +516,6 @@
 </skill>
 <skill id="4235" levels="1" name="none">
   <!-- Dietrich/Mikhail/Gustav Recall Skill -->
-  <!-- Done by DJ MELERIX -->
   <set name="hitTime" val="15000"/>
   <set name="magicLvl" val="70"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -568,7 +564,6 @@
 </skill>
 <skill id="4238" levels="1" name="Increase Re-use Time">
   <!-- Dietrich Skill -->
-  <!-- Done by DJ MELERIX -->
   <set name="hitTime" val="4000"/>
   <set name="isDebuff" val="true"/>
   <set name="magicLvl" val="70"/>
@@ -586,7 +581,6 @@
   </for>
 </skill>
 <skill id="4239" levels="1" name="Antharas Regeneration">
-  <!-- Done by DJ MELERIX -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -597,7 +591,6 @@
   </for>
 </skill>
 <skill id="4240" levels="1" name="Antharas Regeneration">
-  <!-- Done by DJ MELERIX -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -608,7 +601,6 @@
   </for>
 </skill>
 <skill id="4241" levels="1" name="Antharas Regeneration">
-  <!-- Done by DJ MELERIX -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -626,7 +618,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="4243" levels="1" name="Venomous Poison">
-  <!-- Done by DJ MELERIX -->
   <set name="abnormalLvl" val="9"/>
   <set name="magicLvl" val="70"/>
   <set name="power" val="100"/>
@@ -659,7 +650,6 @@
   <set name="effectRange" val="200"/>
 </skill>
 <skill id="4245" levels="1" name="Mimic of Wrath">
-  <!-- Done by DJ MELERIX -->
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
@@ -672,7 +662,6 @@
   </for>
 </skill>
 <skill id="4246" levels="1" name="Strong in 'nan' activity magic DOT">
-  <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="skillType" val="BUFF"/>
@@ -837,7 +826,6 @@
   <set name="effectRange" val="1500"/>
 </skill>
 <skill id="4256" levels="1" name="100% Stun Resistance.">
-  <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -865,7 +853,6 @@
   <set name="effectRange" val="1000"/>
 </skill>
 <skill id="4258" levels="1" name="Hinder Strider">
-  <!-- Done by DJ MELERIX -->
   <!-- AI driven skill in GrandBosses -->
   <set name="castRange" val="1000"/>
   <set name="effectRange" val="2000"/>
@@ -949,7 +936,6 @@
   <set name="effectRange" val="1100"/>
 </skill>
 <skill id="4262" levels="1" name="Holiday Wind Walk">
-  <!-- Done by DJ MELERIX -->
   <set name="aggroPoints" val="285"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
@@ -965,7 +951,6 @@
   </for>
 </skill>
 <skill id="4263" levels="1" name="Holiday Haste">
-  <!-- Done by DJ MELERIX -->
   <set name="aggroPoints" val="418"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
@@ -981,7 +966,6 @@
   </for>
 </skill>
 <skill id="4264" levels="1" name="Holiday Empower">
-  <!-- Done by DJ MELERIX -->
   <set name="aggroPoints" val="243"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
@@ -997,7 +981,6 @@
   </for>
 </skill>
 <skill id="4265" levels="1" name="Holiday Might">
-  <!-- Done by DJ MELERIX -->
   <set name="aggroPoints" val="379"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
@@ -1013,7 +996,6 @@
   </for>
 </skill>
 <skill id="4266" levels="1" name="Holiday Shield">
-  <!-- Done by DJ MELERIX -->
   <set name="aggroPoints" val="418"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
