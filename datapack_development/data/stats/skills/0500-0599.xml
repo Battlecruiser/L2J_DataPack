@@ -251,7 +251,6 @@
   </for>
 </skill>
 <skill id="510" levels="5" name="Deadly Roulette">
-  <!-- Done by erhiwan -->
   <table name="#lethal2"> 10 18 26 34 42 50 </table> <!-- Guess -->
   <table name="#magicLvl"> 66 68 70 72 74 </table>
   <table name="#mpConsume"> 100 103 106 109 112 </table>
@@ -539,7 +538,6 @@
   </for>
 </skill>
 <skill id="528" levels="1" name="Shield of Faith">
-  <!-- Done by DJ MELERIX -->
   <set name="hitTime" val="1000"/>
   <set name="mpConsume" val="43"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -556,7 +554,6 @@
   </for>
 </skill>
 <skill id="529" levels="1" name="Song of Elemental">
-  <!-- Done by theREALizzy -->
   <set name="mpConsume" val="54"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
@@ -654,7 +651,6 @@
   <set name="chanceType" val="ON_ATTACKED"/>
 </skill>
 <skill id="536" levels="1" name="Over the Body">
-  <!-- Done by DJ MELERIX -->
   <set name="cpConsume" val="99999"/> <!-- When the skill is used, all of your CP are consumed. -->
   <set name="hitTime" val="2000"/>
   <set name="mpConsume" val="143"/>

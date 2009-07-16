@@ -333,7 +333,6 @@
   </for>
 </skill>
 <skill id="4616" levels="1" name="Fake Petrification">
-  <!-- Done by DJ MELERIX -->
   <set name="aggroPoints" val="100"/>
   <set name="isMagic" val="true"/>
   <set name="magicLvl" val="80"/>
@@ -348,7 +347,6 @@
   </for>
 </skill>
 <skill id="4617" levels="1" name="Dispel Petrification">
-  <!-- Done by DJ MELERIX -->
   <set name="aggroPoints" val="100"/>
   <set name="isMagic" val="true"/>
   <set name="magicLvl" val="80"/>
@@ -966,7 +964,6 @@
   </for>
 </skill>
 <skill id="4650" levels="1" name="NPC AE - Dispel Hold">
-  <!-- Done by DJ MELERIX -->
   <set name="isMagic" val="true"/>
   <set name="magicLvl" val="40"/>
   <set name="mpConsume" val="42"/>
@@ -978,7 +975,6 @@
   <set name="target" val="TARGET_AURA"/>
 </skill>
 <skill id="4651" levels="3" name="NPC AE - Dispel Slow">
-  <!-- Done by DJ MELERIX -->
   <table name="#magicLvl"> 20 40 60 </table>
   <table name="#mpConsume"> 23 42 66 </table>
   <table name="#mpInitialConsume"> 6 11 17 </table>
@@ -993,7 +989,6 @@
   <set name="target" val="TARGET_AURA"/>
 </skill>
 <skill id="4652" levels="1" name="NPC AE - Dispel Silence">
-  <!-- Done by DJ MELERIX -->
   <set name="isMagic" val="true"/>
   <set name="magicLvl" val="40"/>
   <set name="mpConsume" val="42"/>
@@ -1627,7 +1622,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="4691" levels="5" name="Valakas Regeneration">
-  <!-- Done by DJ MELERIX -->
   <table name="#regHp"> 0.15 0.5 0.8 1 1.2 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1639,7 +1633,6 @@
   </for>
 </skill>
 <skill id="4692" levels="1" name="Quest BOSS Big Body">
-  <!-- Done by DJ MELERIX -->
   <set name="aggroPoints" val="100"/>
   <set name="isMagic" val="true"/>
   <set name="magicLvl" val="76"/>
@@ -1651,7 +1644,6 @@
   </for>
 </skill>
 <skill id="4693" levels="1" name="Quest BOSS Dispel Big Body">
-  <!-- Done by DJ MELERIX -->
   <set name="aggroPoints" val="100"/>
   <set name="negateId" val="4692"/>
   <set name="isMagic" val="true"/>
