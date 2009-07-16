@@ -375,7 +375,9 @@
   <set name="reuseDelay" val="30000"/>
   <set name="transformId" val="316"/>
   <for>
-    <effect name="Transformation" time="18400" val="0"/>
+    <effect name="Transformation" time="18400" val="0">
+      <mul order="0x30" stat="pvpMagicalDmg" val="0.6"/>
+    </effect>
   </for>
 </skill>
 <skill id="1521" levels="1" name="Inquisitor">
@@ -387,7 +389,9 @@
   <set name="reuseDelay" val="30000"/>
   <set name="transformId" val="317"/>
   <for>
-    <effect name="Transformation" time="18400" val="0"/>
+    <effect name="Transformation" time="18400" val="0">
+      <mul order="0x30" stat="pvpMagicalDmg" val="0.6"/>
+    </effect>
   </for>
 </skill>
 <skill id="1522" levels="1" name="Inquisitor">
@@ -399,7 +403,9 @@
   <set name="reuseDelay" val="30000"/>
   <set name="transformId" val="318"/>
   <for>
-    <effect name="Transformation" time="18400" val="0"/>
+    <effect name="Transformation" time="18400" val="0">
+      <mul order="0x30" stat="pvpMagicalDmg" val="0.6"/>
+    </effect>
   </for>
 </skill>
 <skill id="1523" levels="42" name="Divine Punishment">
