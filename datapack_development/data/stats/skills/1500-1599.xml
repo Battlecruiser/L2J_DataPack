@@ -15,7 +15,7 @@
     <effect name="Buff" time="2400" val="0" stackOrder="99" stackType="ma_up">
       <mul order="0x30" stat="mAtk" val="1.75"/>
     </effect>
-    <effect name="Debuff" time="2400" val="0" stackOrder="99" stackType="MagicDefUp" noicon="1"> <!-- temp fix (debuff type) to have working stack -->
+    <effect name="Buff" time="2400" val="0" stackOrder="99" stackType="MagicDefUp" noicon="1">
       <mul order="0x30" stat="mDef" val="1.3"/>
     </effect>
   </for>
@@ -35,7 +35,7 @@
     <effect name="Buff" time="2400" val="0" stackOrder="99" stackType="max_hp_up">
       <mul order="0x30" stat="maxHp" val="1.35"/>
     </effect>
-    <effect name="Debuff" time="2400" val="0" stackOrder="99" stackType="max_mp_up" noicon="1"> <!-- temp fix (debuff type) to have working stack -->
+    <effect name="Buff" time="2400" val="0" stackOrder="99" stackType="max_mp_up" noicon="1">
       <mul order="0x30" stat="maxMp" val="1.35"/>
     </effect>
   </for>
@@ -55,7 +55,7 @@
     <effect name="Buff" time="2400" val="0" stackOrder="99" stackType="critical_prob_up">
       <basemul order="0x30" stat="rCrit" val="0.3"/>
     </effect>
-    <effect name="Debuff" time="2400" val="0" stackOrder="99" stackType="critical_dmg_up" noicon="1"> <!-- temp fix (debuff type) to have working stack -->
+    <effect name="Buff" time="2400" val="0" stackOrder="99" stackType="critical_dmg_up" noicon="1">
       <mul order="0x30" stat="cAtk" val="1.35"/>
     </effect>
   </for>
@@ -75,7 +75,7 @@
     <effect name="Buff" time="2400" val="0" stackOrder="99" stackType="shieldProbUp">
       <mul order="0x30" stat="rShld" val="1.3"/>
     </effect>
-    <effect name="Debuff" time="2400" val="0" stackOrder="99" stackType="sdef_up" noicon="1"> <!-- temp fix (debuff type) to have working stack -->
+    <effect name="Buff" time="2400" val="0" stackOrder="99" stackType="sdef_up" noicon="1">
       <mul order="0x30" stat="sDef" val="1.5"/>
     </effect>
   </for>
@@ -95,7 +95,7 @@
     <effect name="Buff" time="2400" val="0" stackOrder="99" stackType="speed_up">
       <add order="0x40" stat="runSpd" val="33"/>
     </effect>
-    <effect name="Debuff" time="2400" val="0" stackOrder="99" stackType="rEvas" noicon="1"> <!-- temp fix (debuff type) to have working stack -->
+    <effect name="Buff" time="2400" val="0" stackOrder="99" stackType="rEvas" noicon="1">
       <add order="0x40" stat="rEvas" val="4"/>
     </effect>
   </for>
@@ -323,7 +323,7 @@
     <effect name="Buff" time="2400" val="0" stackOrder="99" stackType="pa_up">
       <mul order="0x30" stat="pAtk" val="1.15"/>
     </effect>
-    <effect name="Debuff" time="2400" val="0" stackOrder="99" stackType="pd_up" noicon="1"> <!-- temp fix (debuff type) to have working stack -->
+    <effect name="Buff" time="2400" val="0" stackOrder="99" stackType="pd_up" noicon="1">
       <mul order="0x30" stat="pDef" val="1.15"/>
     </effect>
   </for>
@@ -342,7 +342,7 @@
     <effect name="Buff" time="2400" val="0" stackOrder="99" stackType="critical_prob_up">
       <basemul order="0x30" stat="rCrit" val="0.3"/>
     </effect>
-    <effect name="Debuff" time="2400" val="0" stackOrder="99" stackType="critical_dmg_up" noicon="1"> <!-- temp fix (debuff type) to have working stack -->
+    <effect name="Buff" time="2400" val="0" stackOrder="99" stackType="critical_dmg_up" noicon="1">
       <mul order="0x30" stat="cAtk" val="1.35"/>
     </effect>
   </for>
@@ -361,7 +361,7 @@
     <effect name="Buff" time="2400" val="0" stackOrder="99" stackType="vampRage">
        <add order="0x40" stat="absorbDam" val="9"/> <!-- absorb 9% HP from damage inflicted on enemies -->
     </effect>
-    <effect name="Debuff" time="2400" val="0" stackOrder="99" stackType="attack_time_down" noicon="1"> <!-- temp fix (debuff type) to have working stack -->
+    <effect name="Buff" time="2400" val="0" stackOrder="99" stackType="attack_time_down" noicon="1">
       <mul order="0x30" stat="pAtkSpd" val="1.33"/>
     </effect>
   </for>
@@ -410,7 +410,6 @@
 </skill>
 <skill id="1523" levels="42" name="Divine Punishment">
   <!-- Inquisitor Stance Skill -->
-  <!-- Missing: In PvP combat, the power of Divine Punishment skill have been decreased by 60%. -->
   <table name="#mpConsume"> 35 37 38 38 39 40 42 42 43 44 45 45 47 48 49 49 50 52 53 53 54 55 55 57 58 58 59 60 60 62 62 63 63 64 64 65 65 67 67 67 68 68 </table>
   <table name="#magicLvl"> 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
   <table name="#power"> 51 52 54 55 57 58 60 61 63 64 66 68 69 71 72 74 75 77 78 80 81 83 85 86 88 89 90 92 93 95 96 97 99 100 101 102 103 105 106 107 108 109 </table>
@@ -501,7 +500,6 @@
 </skill>
 <skill id="1528" levels="42" name="Divine Flash">
   <!-- Inquisitor Stance Skill -->
-  <!-- Missing: In PvP combat, the power of Divine Flash skill have been decreased by 60%. -->
   <table name="#mpConsume"> 57 59 60 62 63 65 67 68 69 70 73 74 75 77 79 80 82 83 85 87 88 89 90 93 94 95 97 98 99 100 102 103 104 105 105 107 108 109 109 110 112 112 </table>
   <table name="#magicLvl"> 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
   <table name="#power"> 29 29 30 31 32 33 33 34 35 36 37 38 39 39 40 41 42 43 44 45 45 46 47 48 49 50 50 51 52 53 54 54 55 56 56 57 58 58 59 60 60 61 </table>
@@ -636,7 +634,7 @@
     <effect name="Buff" time="2400" val="0" stackOrder="99" stackType="speed_up">
       <add order="0x40" stat="runSpd" val="33"/>
     </effect>
-    <effect name="Debuff" time="2400" val="0" stackOrder="99" stackType="rEvas" noicon="1"> <!-- temp fix (debuff type) to have working stack -->
+    <effect name="Buff" time="2400" val="0" stackOrder="99" stackType="rEvas" noicon="1">
       <add order="0x40" stat="rEvas" val="4"/>
     </effect>
   </for>
@@ -657,7 +655,7 @@
     <effect name="Buff" time="2400" val="0" stackOrder="99" stackType="pa_up">
       <mul order="0x30" stat="pAtk" val="1.15"/>
     </effect>
-    <effect name="Debuff" time="2400" val="0" stackOrder="99" stackType="pd_up" noicon="1"> <!-- temp fix (debuff type) to have working stack -->
+    <effect name="Buff" time="2400" val="0" stackOrder="99" stackType="pd_up" noicon="1">
       <mul order="0x30" stat="pDef" val="1.15"/>
     </effect>
   </for>
@@ -676,7 +674,7 @@
     <effect name="Buff" time="2400" val="0" stackOrder="99" stackType="critical_prob_up">
       <basemul order="0x30" stat="rCrit" val="0.3"/>
     </effect>
-    <effect name="Debuff" time="2400" val="0" stackOrder="99" stackType="critical_dmg_up" noicon="1"> <!-- temp fix (debuff type) to have working stack -->
+    <effect name="Buff" time="2400" val="0" stackOrder="99" stackType="critical_dmg_up" noicon="1">
       <mul order="0x30" stat="cAtk" val="1.35"/>
     </effect>
   </for>
@@ -695,7 +693,7 @@
     <effect name="Buff" time="2400" val="0" stackOrder="99" stackType="max_hp_up">
       <mul order="0x30" stat="maxHp" val="1.35"/>
     </effect>
-    <effect name="Debuff" time="2400" val="0" stackOrder="99" stackType="max_mp_up" noicon="1"> <!-- temp fix (debuff type) to have working stack -->
+    <effect name="Buff" time="2400" val="0" stackOrder="99" stackType="max_mp_up" noicon="1">
       <mul order="0x30" stat="maxMp" val="1.35"/>
     </effect>
   </for>

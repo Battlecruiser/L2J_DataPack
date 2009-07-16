@@ -1816,7 +1816,7 @@
     <effect name="Buff" time="2400" val="0" stackOrder="99" stackType="pa_up">
       <mul order="0x30" stat="pAtk" val="1.15"/>
     </effect>
-    <effect name="Debuff" time="2400" val="0" stackOrder="99" stackType="pd_up" noicon="1"> <!-- temp fix (debuff type) to have working stack -->
+    <effect name="Buff" time="2400" val="0" stackOrder="99" stackType="pd_up" noicon="1">
       <mul order="0x30" stat="pDef" val="1.15"/>
     </effect>
   </for>
