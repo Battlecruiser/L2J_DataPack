@@ -1388,7 +1388,7 @@
   <set name="target" val="TARGET_SELF"/>
   <for>
     <effect count="0x7fffffff" name="MpConsumePerLevel" time="3" val="0.5"> <!-- TODO: MpConsumePerLevel amount is guessed -->
-      <add order="0x40" stat="vengeancePdam" val="100"/>
+      <add order="0x40" stat="vengeancePdam" val="10"/>
     </effect>
   </for>
 </skill>
