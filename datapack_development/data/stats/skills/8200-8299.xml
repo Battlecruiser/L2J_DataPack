@@ -522,18 +522,23 @@
   <set name="power" val="549"/>
 </skill>
 <skill id="8238" levels="1" name="Shalin Strike">
+  <set name="mpConsume" val="74"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="hitTime" val="2500"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
 </skill>
 <skill id="8239" levels="1" name="Critical Up">
+  <set name="mpConsume" val="74"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="hitTime" val="2500"/>
 </skill>
 <skill id="8240" levels="3" name="Obliteration Storm">
+  <set name="mpConsume" val="149"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -546,16 +551,22 @@
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="8242" levels="1" name="Ice Ball">
+  <set name="mpConsume" val="61"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="hitTime" val="3000"/>
+  <set name="castRange" val="900"/>
+  <set name="effectRange" val="1400"/>
 </skill>
 <skill id="8243" levels="1" name="Chill Strike">
+  <set name="mpConsume" val="61"/>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="hitTime" val="850"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
 </skill>
 <skill id="8244" levels="1" name="Transform Gatekeeper">
   <set name="target" val="TARGET_SELF"/>
@@ -580,7 +591,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="transformId" val="108"/>
   <for>
-    <effect name="Transformation" time="3600" val="0"/> <!-- duration 1 hr -->
+    <effect name="Transformation" time="3600" val="0"/>
   </for>
 </skill>
 <skill id="8247" levels="1" name="Mount Light Purple Maned Horse">
@@ -589,7 +600,9 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="transformId" val="106"/>
   <for>
-    <effect name="Transformation" time="1800" val="0"/> <!-- duration Guess -->
+    <effect name="Transformation" time="1800" val="0">
+      <add order="0x40" stat="runSpd" val="50"/> <!-- Run Speed +50 -->
+    </effect>
   </for>
 </skill>
 <skill id="8248" levels="1" name="Cancel Gatekeeper Transformation">
@@ -611,9 +624,12 @@
   <set name="hitTime" val="15000"/>
 </skill>
 <skill id="8251" levels="1" name="Collection Agathion Release Seal">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="AGATHION"/>
+  <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="npcId" val="16061"/>
 </skill>
 <skill id="8252" levels="1" name="Test - Transform Mount1">
   <set name="target" val="TARGET_NONE"/>
@@ -626,39 +642,60 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="8254" levels="1" name="Release Seal on Agathion - Monkey">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="AGATHION"/>
+  <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="npcId" val="16054"/>
 </skill>
 <skill id="8255" levels="1" name="Release Seal on Agathion - Griffin">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="AGATHION"/>
+  <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="npcId" val="16055"/>
 </skill>
 <skill id="8256" levels="1" name="Release Seal on Agathion - Joy">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="AGATHION"/>
+  <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="npcId" val="16056"/>
 </skill>
 <skill id="8257" levels="1" name="Release Seal on Agathion - Anger">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="AGATHION"/>
+  <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="npcId" val="16058"/>
 </skill>
 <skill id="8258" levels="1" name="Release Seal on Agathion - Sorrow">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="AGATHION"/>
+  <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="npcId" val="16057"/>
 </skill>
 <skill id="8259" levels="1" name="Release Seal on Agathion - Boy Teddy Bear">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="AGATHION"/>
+  <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="npcId" val="16059"/>
 </skill>
 <skill id="8260" levels="1" name="Release Seal on Agathion - Girl Teddy Bear">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="AGATHION"/>
+  <set name="hitTime" val="3000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="npcId" val="16060"/>
 </skill>
 <skill id="8261" levels="1" name="Steam Beatle Mount">
   <set name="target" val="TARGET_NONE"/>
@@ -670,7 +707,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
-<skill id="8263" levels="1" name="Transform Snow Kung">
+<skill id="8263" levels="1" name="Transform Snow King">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -745,7 +782,7 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
-<skill id="8278" levels="1" name="Transform Guard of Down">
+<skill id="8278" levels="1" name="Transform Guard of Dawn">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
@@ -857,62 +894,188 @@
   </for>
 </skill>
 <skill id="8289" levels="1" name="Special Ability Focus">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!--
+TGS' Notes: With Gracia Final there are 4 new SA Focus skills and 4 levels of focus for the new Vesper weapons. Not too hard to figure out what goes where...
+-->
+<!--
+Guessing...
+14130	Vesper Fighter - Focus	8289	1	
+14490	Vesper Fighter {PvP} - Focus	8289	1	
+-->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="84"/> <!-- Guessing -->
+  <for>
+    <add order="0x40" stat="rCrit" val="96"/>
+    <mul order="0x30" stat="pvpPhysDmg" val="1.05"/>
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/>
+    <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/>
+  </for>
 </skill>
 <skill id="8290" levels="12" name="Add Belt Inventory Slot">
   <table name="#inventoryLimit"> 3 6 9 12 15 18 21 24 27 30 33 36 </table>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <for>
     <add order="0x40" stat="inventoryLimit" val="#inventoryLimit"/>
   </for>
 </skill>
 <skill id="8291" levels="12" name="Add Belt Weight Gauge">
   <table name="#maxLoad"> 1000 2000 3000 4000 5000 6000 7000 8000 9000 10000 11000 12000 </table>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <for>
     <add order="0x40" stat="maxLoad" val="#maxLoad"/>
   </for>
 </skill>
 <skill id="8292" levels="1" name="Olympiad Warrior's Ring">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- Last Updated: May 21, 2009 -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <for>
+    <add order="0x40" stat="maxMp" val="21"/>
+    <add order="0x40" stat="accCombat" val="1"/> <!-- Guessing - value Unknown, using low value as placeholder -->
+    <add order="0x40" stat="cAtkAdd" val="1"/> <!-- Guessing - value Unknown, using low value as placeholder -->
+    <mul order="0x30" stat="rootVuln" val="0.7"/> <!-- Hold resistance +30% -->
+    <mul order="0x30" stat="rootProf" val="1.3"/> <!-- Hold proficiency +30% -->
+  </for>
 </skill>
 <skill id="8293" levels="1" name="Olympiad Warrior's Earring">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- Last Updated: May 21, 2009 -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <for>
+    <add order="0x40" stat="maxMp" val="31"/>
+    <mul order="0x30" stat="stunVuln" val="0.8"/> <!-- Stun resistance +20% -->
+    <mul order="0x30" stat="stunProf" val="1.2"/> <!-- Stun proficiency +20% -->
+    <!-- Mental attack resistance elements copied from mental shield -->
+    <mul order="0x30" stat="rootVuln" val="0.8"/>
+    <mul order="0x30" stat="sleepVuln" val="0.8"/>
+    <mul order="0x30" stat="confusionVuln" val="0.8"/>
+    <mul order="0x30" stat="derangementVuln" val="0.8"/>
+    <mul order="0x30" stat="rootProf" val="1.2"/>
+    <mul order="0x30" stat="sleepProf" val="1.2"/>
+    <mul order="0x30" stat="confusionProf" val="1.2"/>
+    <mul order="0x30" stat="derangementProf" val="1.2"/>
+    <add order="0x40" stat="absorbDam" val="1"/> <!-- Vampiric Rage Effect --> <!-- Guessing - value Unknown, using low value as placeholder -->
+  </for>
 </skill>
 <skill id="8294" levels="1" name="Olympiad Warrior's Necklace">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- Last Updated: May 21, 2009 -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <for>
+    <add order="0x40" stat="maxMp" val="42"/>
+    <mul order="0x30" stat="sleepVuln" val="0.85"/> <!-- Sleep resistance +15% -->
+    <mul order="0x30" stat="sleepProf" val="1.15"/> <!-- Sleep proficiency +15% -->
+    <mul order="0x30" stat="rootVuln" val="0.85"/> <!-- Hold resistance +15% -->
+    <mul order="0x30" stat="rootProf" val="1.15"/> <!-- Hold proficiency +15% -->
+    <mul order="0x30" stat="stunVuln" val="0.85"/> <!-- Stun resistance +15% -->
+    <mul order="0x30" stat="stunProf" val="1.15"/> <!-- Stun proficiency +15% -->
+    <mul order="0x30" stat="mReuse" val="0.99"/> <!-- Guessing - value Unknown, using low value as placeholder -->
+    <add order="0x40" stat="reflectDam" val="1"/> <!-- Guessing - value Unknown, using low value as placeholder -->
+  </for>
 </skill>
 <skill id="8295" levels="1" name="Special Ability Focus">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!--
+TGS' Notes: With Gracia Final there are 4 new SA Focus skills and 4 levels of focus for the new Vesper weapons. Not too hard to figure out what goes where...
+-->
+<!--
+Guessing...
+14120	Vesper Cutter - Focus	8295	1	
+14123	Vesper Slasher - Focus	8295	1	
+14480	Vesper Cutter {PvP} - Focus	8295	1	
+14483	Vesper Slasher {PvP} - Focus	8295	1	
+14159	Vesper Nagan - Focus	8295	1	
+14519	Vesper Nagan {PvP} - Focus	8295	1	
+-->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="84"/> <!-- Guessing -->
+  <for>
+    <add order="0x40" stat="rCrit" val="100"/>
+    <mul order="0x30" stat="pvpPhysDmg" val="1.05"/>
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/>
+    <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/>
+  </for>
 </skill>
 <skill id="8296" levels="1" name="Special Ability Focus">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!--
+TGS' Notes: With Gracia Final there are 4 new SA Focus skills and 4 levels of focus for the new Vesper weapons. Not too hard to figure out what goes where...
+-->
+<!--
+Guessing...
+14153	Vesper Pincer - Focus	8296	1	
+14155	Vesper Sheutjeh - Focus	8296	1	
+14513	Vesper Pincer {PvP} - Focus	8296	1	
+14515	Vesper Sheutjeh {PvP} - Focus	8296	1	
+-->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="84"/> <!-- Guessing -->
+  <for>
+    <add order="0x40" stat="rCrit" val="102"/>
+    <mul order="0x30" stat="pvpPhysDmg" val="1.05"/>
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/>
+    <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/>
+  </for>
 </skill>
 <skill id="8297" levels="1" name="Special Ability Haste">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!--
+Guessing...
+14118	Vesper Cutter - Haste	8297	1	
+14121	Vesper Slasher - Haste	8297	1	
+14129	Vesper Shaper - Haste	8297	1	
+14135	Vesper Stormer - Haste	8297	1	
+14151	Vesper Pincer - Haste	8297	1	
+14157	Vesper Nagan - Haste	8297	1	
+14402,'Icarus Hand {PvP} - Haste	8297	1	
+14452,'Icarus Hand - Destruction {PvP} - Haste	8297	1	
+14478	Vesper Cutter {PvP} - Haste	8297	1	
+14481	Vesper Slasher {PvP} - Haste	8297	1	
+14489	Vesper Shaper {PvP} - Haste	8297	1	
+14495	Vesper Stormer {PvP} - Haste	8297	1	
+14511	Vesper Pincer {PvP} - Haste	8297	1	
+14517	Vesper Nagan {PvP} - Haste	8297	1	
+-->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="84"/> <!-- Guessing -->
+  <for>
+    <mul order="0x30" stat="pAtkSpd" val="1.09"/>
+    <mul order="0x30" stat="pvpPhysDmg" val="1.05"/>
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/>
+    <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/>
+  </for>
 </skill>
 <skill id="8298" levels="1" name="Special Ability Focus">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!--
+TGS' Notes: With Gracia Final there are 4 new SA Focus skills and 4 levels of focus for the new Vesper weapons. Not too hard to figure out what goes where...
+-->
+<!--
+Guessing...
+14149	Vesper Thrower - Focus	8298	1	
+14509	Vesper Thrower {PvP} - Focus	8298	1	
+-->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="84"/> <!-- Guessing -->
+  <for>
+    <add order="0x40" stat="rCrit" val="104"/>
+    <mul order="0x30" stat="pvpPhysDmg" val="1.05"/>
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/>
+    <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/>
+  </for>
 </skill>
 <skill id="8299" levels="1" name="Arcana Sigil">
   <set name="target" val="TARGET_NONE"/>
