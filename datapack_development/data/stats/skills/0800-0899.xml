@@ -238,7 +238,6 @@
   </for>
 </skill>
 <skill id="822" levels="3" name="Repair Golem">
-  <!-- Done by _DS_ -->
   <table name="#mpConsume"> 61 78 88 </table>
   <table name="#power"> 8 12 15 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -252,7 +251,6 @@
   <set name="effectRange" val="80"/>
 </skill>
 <skill id="823" levels="3" name="Strengthen Golem">
-  <!-- Done by _DS_ -->
   <table name="#pAtk"> 1.08 1.12 1.15 </table>
   <table name="#pAtkSpd"> 1.03 1.06 1.09 </table>
   <table name="#mpConsume"> 24 36 42 </table>
@@ -272,7 +270,6 @@
   </for>
 </skill>
 <skill id="824" levels="3" name="Armor Golem">
-  <!-- Done by _DS_ -->
   <table name="#pDef"> 1.08 1.12 1.15 </table>
   <table name="#maxHp"> 1.05 1.08 1.1 </table>
   <table name="#mpConsume"> 35 44 41 </table>
@@ -461,7 +458,6 @@
   <set name="npcId" val="13128"/>
 </skill>
 <skill id="832" levels="1" name="Fast Recovery">
-  <!-- Done by DJ MELERIX -->
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
@@ -472,7 +468,6 @@
   </for>
 </skill>
 <skill id="833" levels="1" name="Body Reconstruction">
-  <!-- Done by Light -->
   <set name="hitTime" val="1500"/>
   <set name="mpConsume" val="94"/>
   <set name="operateType" val="OP_ACTIVE"/>

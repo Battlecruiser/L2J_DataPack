@@ -73,7 +73,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="2010" levels="1" name="Endeavor Potion">
-  <!-- Done by DJ MELERIX -->
   <set name="itemConsumeId" val="733"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="buffDuration" val="300000"/>
@@ -91,7 +90,6 @@
   </for>
 </skill>
 <skill id="2011" levels="1" name="Haste Potion">
-  <!-- Done by dc -->
   <set name="itemConsumeId" val="734"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
@@ -109,7 +107,6 @@
   </for>
 </skill>
 <skill id="2012" levels="1" name="Potion of Alacrity">
-  <!-- Done by dc -->
   <set name="itemConsumeId" val="735"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
@@ -281,7 +278,6 @@
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="2034" levels="1" name="Greater Haste Potion">
-  <!-- Done by dc -->
   <set name="itemConsumeId" val="1374"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
@@ -299,7 +295,6 @@
   </for>
 </skill>
 <skill id="2035" levels="1" name="Greater Swift Attack Potion">
-  <!-- Done by dc -->
   <set name="itemConsumeId" val="1375"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
@@ -476,7 +471,6 @@
   </for>
 </skill>
 <skill id="2051" levels="1" name="Scroll of Death Whisper">
-  <!-- Done by dc -->
   <set name="itemConsumeId" val="3927"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
@@ -494,7 +488,6 @@
   </for>
 </skill>
 <skill id="2052" levels="1" name="Scroll of Focus">
-  <!-- Done by dc -->
   <set name="itemConsumeId" val="3928"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
@@ -512,7 +505,6 @@
   </for>
 </skill>
 <skill id="2053" levels="1" name="Scroll of Greater Acumen">
-  <!-- Done by dc -->
   <set name="itemConsumeId" val="3929"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
@@ -530,7 +522,6 @@
   </for>
 </skill>
 <skill id="2054" levels="1" name="Scroll of Haste">
-  <!-- Done by dc -->
   <set name="itemConsumeId" val="3930"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
@@ -545,7 +536,6 @@
   </for>
 </skill>
 <skill id="2055" levels="1" name="Scroll of Agility">
-  <!-- Done by dc -->
   <set name="itemConsumeId" val="3931"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
@@ -563,7 +553,6 @@
   </for>
 </skill>
 <skill id="2056" levels="1" name="Scroll of Mystic Empower">
-  <!-- Done by dc -->
   <set name="itemConsumeId" val="3932"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
@@ -581,7 +570,6 @@
   </for>
 </skill>
 <skill id="2057" levels="1" name="Scroll of Might">
-  <!-- Done by dc -->
   <set name="itemConsumeId" val="3933"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
@@ -599,7 +587,6 @@
   </for>
 </skill>
 <skill id="2058" levels="1" name="Scroll of Wind Walk">
-  <!-- Done by dc -->
   <set name="itemConsumeId" val="3934"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
@@ -617,7 +604,6 @@
   </for>
 </skill>
 <skill id="2059" levels="1" name="Scroll of Shield">
-  <!-- Done by dc -->
   <set name="itemConsumeId" val="3935"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
@@ -667,7 +653,6 @@
   <set name="feed" val="150"/>
 </skill>
 <skill id="2064" levels="1" name="Scroll of Mana Regeneration">
-  <!-- Done by dc -->
   <set name="itemConsumeId" val="4218"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
@@ -773,7 +758,6 @@
   </for>
 </skill>
 <skill id="2075" levels="1" name="Decrease Hate Scroll">
-  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="600"/>
   <set name="effectRange" val="800"/>
   <set name="isPotion" val="true"/>
@@ -787,7 +771,6 @@
   </cond>
 </skill>
 <skill id="2076" levels="1" name="Bless of Eva">
-  <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="skillType" val="BUFF"/>
@@ -1092,7 +1075,6 @@
   <set name="effectRange" val="500"/>
 </skill>
 <skill id="2097" levels="3" name="Sowing">
-  <!-- Done by l3x-->
   <table name="#mpConsume"> 4 6 8 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_ONE"/>
@@ -1106,7 +1088,6 @@
   <set name="castRange" val="40"/>
 </skill>
 <skill id="2098" levels="1" name="Harvesting">
-  <!-- Done by l3x-->
   <set name="mpConsume" val="3"/>
   <set name="target" val="TARGET_CORPSE_MOB"/>
   <set name="hitTime" val="500"/>

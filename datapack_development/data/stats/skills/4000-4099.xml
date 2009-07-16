@@ -39,7 +39,6 @@
   <set name="absorbPart" val="0.2"/> <!-- absorbs 20% of damage -->
 </skill>
 <skill id="4003" levels="1" name="Golem Body">
-  <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -51,7 +50,6 @@
   </for>
 </skill>
 <skill id="4004" levels="1" name="Fragile Skull">
-  <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -61,7 +59,6 @@
   </for>
 </skill>
 <skill id="4005" levels="1" name="Floating Target">
-  <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -72,7 +69,6 @@
   </for>
 </skill>
 <skill id="4006" levels="1" name="Burning Wood">
-  <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -83,7 +79,6 @@
   </for>
 </skill>
 <skill id="4007" levels="1" name="Immortal Life">
-  <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -95,7 +90,6 @@
   </for>
 </skill>
 <skill id="4008" levels="1" name="Insect Skin">
-  <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -153,7 +147,6 @@
   </for>
 </skill>
 <skill id="4013" levels="1" name="Resistance To Fire, Vulnerable To Water">
-  <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -164,7 +157,6 @@
   </for>
 </skill>
 <skill id="4014" levels="1" name="Resistance To Water, Vulnerable To Fire">
-  <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -175,7 +167,6 @@
   </for>
 </skill>
 <skill id="4015" levels="1" name="Resistance To Wind, Vulnerable To Earth">
-  <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -186,7 +177,6 @@
   </for>
 </skill>
 <skill id="4016" levels="1" name="Resistance To Earth, Vulnerable To Wind">
-  <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -314,7 +304,6 @@
   <set name="aggroPoints" val="#aggro"/>
 </skill>
 <skill id="4026" levels="1" name="Gludio Flame">
-  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <set name="element" val="0"/> <!-- Fire -->
@@ -332,7 +321,6 @@
   <set name="target" val="TARGET_AREA"/>
 </skill>
 <skill id="4027" levels="1" name="Gludio Heal">
-  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="hitTime" val="5000"/>
@@ -608,7 +596,6 @@
   <set name="effectRange" val="1200"/>
 </skill>
 <skill id="4041" levels="2" name="Cruma Blaze">
-  <!-- Done by DJ MELERIX -->
   <table name="#magicLvl"> 45 50 </table>
   <table name="#mpInitialConsume"> 8 9 </table>
   <table name="#mpConsume"> 32 36 </table>
@@ -628,7 +615,6 @@
   <set name="target" val="TARGET_ONE"/>
 </skill>
 <skill id="4042" levels="1" name="Nurka Blaze">
-  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="element" val="0"/> <!-- Fire -->
@@ -644,7 +630,6 @@
   <set name="target" val="TARGET_ONE"/>
 </skill>
 <skill id="4043" levels="1" name="Partisan Flame">
-  <!-- Done by DJ MELERIX -->
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <set name="element" val="0"/> <!-- Fire -->
@@ -662,7 +647,6 @@
   <set name="target" val="TARGET_AREA"/>
 </skill>
 <skill id="4044" levels="1" name="Partisan Heal">
-  <!-- Done by DJ MELERIX -->
   <set name="aggroPoints" val="100"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
@@ -732,7 +716,6 @@
   </for>
 </skill>
 <skill id="4048" levels="3" name="NPC Dash">
-  <!-- Done by dc -->
   <table name="#runSpd"> 1.5 1.8 2 </table>
   <set name="magicLvl" val="10"/>
   <set name="mpConsume" val="12"/>
@@ -1028,7 +1011,6 @@
   <set name="effectRange" val="1100"/>
 </skill>
 <skill id="4070" levels="1" name="Decrease Atk. Spd.">
-  <!-- Done by dc -->
   <set name="lvlDepend" val="1"/>
   <set name="power" val="10"/> <!-- Base Land Rate -->
   <set name="target" val="TARGET_ONE"/>
@@ -1095,7 +1077,6 @@
   </for>
 </skill>
 <skill id="4074" levels="2" name="NPC Haste">
-  <!-- Done by dc -->
   <table name="#magicLvl"> 30 70 </table>
   <table name="#mpInitialConsume"> 3 7 </table>
   <table name="#mpConsume"> 11 26 </table>
@@ -1138,7 +1119,6 @@
   </for>
 </skill>
 <skill id="4076" levels="3" name="Decrease Speed">
-  <!-- Done by dc -->
   <table name="#Tab-runSpd"> 0.85 0.7 0.5 </table>
   <table name="#mpConsume"> 20 35 65 </table>
   <table name="#magicLvl"> 20 40 70 </table>
@@ -1223,7 +1203,6 @@
   <set name="aggroPoints" val="100"/>
 </skill>
 <skill id="4081" levels="1" name="Pretending to steal">
-  <!-- Done by DJ MELERIX -->
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="BUFF"/> <!-- Just Broadcast -->
@@ -1261,7 +1240,6 @@
   <set name="effectRange" val="1100"/>
 </skill>
 <skill id="4084" levels="10" name="Resist Physical Attack">
-  <!-- Done by dc -->
   <table name="#Tab-pDef"> 1.05 1.11 1.17 1.25 1.33 1.43 1.67 2 3.33 10 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -1281,7 +1259,6 @@
   </for>
 </skill>
 <skill id="4086" levels="1" name="Critical Chance">
-  <!-- Done by dc -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="magicLvl" val="1"/>
@@ -1334,7 +1311,6 @@
   </for>
 </skill>
 <skill id="4089" levels="1" name="NPC Bear Spirit Totem">
-  <!-- Done by dc -->
   <set name="magicLvl" val="40"/>
   <set name="mpConsume" val="18"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1351,7 +1327,6 @@
   </for>
 </skill>
 <skill id="4090" levels="1" name="NPC Wolf Spirit Totem">
-  <!-- Done by dc -->
   <set name="magicLvl" val="40"/>
   <set name="mpConsume" val="18"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1384,7 +1359,6 @@
   </for>
 </skill>
 <skill id="4092" levels="1" name="NPC Puma Spirit Totem">
-  <!-- Done by dc -->
   <set name="magicLvl" val="40"/>
   <set name="mpConsume" val="18"/>
   <set name="target" val="TARGET_SELF"/>
@@ -1400,7 +1374,6 @@
   </for>
 </skill>
 <skill id="4093" levels="1" name="Evasion">
-  <!-- Done by dc -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="magicLvl" val="1"/>
@@ -1425,7 +1398,6 @@
   <set name="negateStats" val="BUFF DEBUFF"/>
 </skill>
 <skill id="4095" levels="1" name="Damage Shield">
-  <!-- Done by DJ MELERIX -->
   <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="skillType" val="REFLECT"/>
@@ -1435,7 +1407,6 @@
   </for>
 </skill>
 <skill id="4096" levels="3" name="NPC Hawkeye">
-  <!-- Done by dc -->
   <table name="#magicLvl"> 20 40 70 </table>
   <table name="#mpConsume"> 10 18 33 </table>
   <table name="#accCombat"> 6 8 10 </table>
@@ -1497,7 +1468,6 @@
   </for>
 </skill>
 <skill id="4099" levels="2" name="NPC Berserk">
-  <!-- Done by dc -->
   <table name="#magicLvl"> 40 70 </table>
   <table name="#mpInitialConsume"> 4 7 </table>
   <table name="#mpConsume"> 14 26 </table>
