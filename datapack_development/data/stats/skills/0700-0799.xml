@@ -979,10 +979,25 @@
   </for>
 </skill>
 <skill id="776" levels="1" name="Force of Destruction">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- TODO: Reuse & effecPower needs to be verified -->
+  <set name="baseCritRate" val="15"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
   <set name="hitTime" val="1200"/>
+  <set name="magicLvl" val="83"/>
+  <set name="mpConsume" val="37"/>
+  <set name="numCharges" val="2"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="overHit" val="true"/>
+  <set name="power" val="2516"/>
+  <set name="reuseDelay" val="20000"/>
+  <set name="skillType" val="CHARGEDAM"/>
+  <set name="SSBoost" val="2.0"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="weaponsAllowed" val="1024"/> <!-- Dual Fist -->
+  <for>
+    <effect count="8" name="DamOverTime" val="212" effectPower="40" effectType="DOT"/>
+  </for>
 </skill>
 <skill id="777" levels="1" name="Demolition Impact">
   <!-- TODO: Reuse & Radius needs to be verified -->
