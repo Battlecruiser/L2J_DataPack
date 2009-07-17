@@ -138,3 +138,5 @@ of this directory a little bit.
 326100001.xml -> Weaver Olf Kanore: Belts
 326100002.xml -> Weaver Olf Kanore: S80 & S84 Clock Unseal
 326100002.xml -> Weaver Olf Kanore: S80 & S84 Cloak Reseal
+
+325460001.xml -> Asyatei - Soul Trader
