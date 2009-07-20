@@ -424,7 +424,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
-    <mul order="0x40" stat="accCombat" val="#accCombat"/>
+    <add order="0x40" stat="accCombat" val="#accCombat"/>
     <mul order="0x30" stat="pvpPhysDmg" val="#pvpbonus"/>
     <mul order="0x30" stat="pvpMagicalDmg" val="#pvpbonus"/>
   </for>
