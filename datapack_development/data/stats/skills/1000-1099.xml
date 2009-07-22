@@ -952,18 +952,18 @@
   <set name="mpInitialConsume" val="#mpInitialConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="power" val="35"/>
+  <set name="power" val="35"/> <!-- Base Land Rate -->
   <set name="target" val="TARGET_AREA_UNDEAD"/>
   <set name="skillRadius" val="1000"/>
   <set name="reuseDelay" val="10000"/>
   <set name="hitTime" val="7000"/>
   <set name="isDebuff" val="true"/>
   <set name="lvlDepend" val="1"/>
-  <set name="skillType" val="DEBUFF"/>
+  <set name="skillType" val="AGGREMOVE"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <for>
-    <effect name="Buff" time="120" val="0" stackOrder="1" stackType="turn_passive">
+    <effect name="Debuff" time="120" val="0" stackOrder="1" stackType="turn_passive">
       <sub order="0x40" stat="aggression" val="100000"/>
     </effect>
   </for>
