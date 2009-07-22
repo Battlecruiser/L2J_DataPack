@@ -363,7 +363,7 @@ INSERT INTO `etcitem` VALUES
 (1141,'Rusted Bronze Sword','false','quest',0,'stackable','steel','none',-1,-1,0,0,'true','false','true','true','none','0-0;'),
 (1143,'Simplon\'s Letter','false','quest',0,'stackable','steel','none',-1,-1,0,0,'false','false','true','false','none','0-0;'),
 (1144,'Venomous Spider Leg','false','quest',0,'stackable','steel','none',-1,-1,0,0,'false','false','true','false','none','0-0;'),
-(1145,'Medallion of Warrior','false','quest',0,'stackable','steel','none',-1,-1,0,0,'true','false','true','true','none','0-0;'),
+(1145,'Medallion of Warrior','false','quest',0,'stackable','steel','none',-1,-1,0,0,'false','false','true','false','none','0-0;'),
 (1150,'Spellbook: Wind Strike','false','spellbook',120,'stackable','paper','none',-1,-1,50,0,'true','true','true','true','none','0-0;'),
 (1151,'Spellbook: Self Heal','false','spellbook',120,'stackable','paper','none',-1,-1,50,0,'true','true','true','true','none','0-0;'),
 (1152,'Spellbook: Heal','false','spellbook',120,'stackable','paper','none',-1,-1,100,0,'true','true','true','true','none','0-0;'),
