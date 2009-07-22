@@ -479,9 +479,21 @@
   </for>
 </skill>
 <skill id="947" levels="1" name="Lucky Strike">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="40"/>
+  <set name="effectRange" val="400"/>
+  <set name="hitTime" val="1700"/>
+  <set name="magicLvl" val="83"/>
+  <set name="mpConsume" val="70"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="4312"/>
+  <set name="reuseDelay" val="3000"/>
+  <set name="skillRadius" val="150"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="SSBoost" val="2.0"/>
+  <set name="target" val="TARGET_AREA"/>
+  <for>
+    <effect name="Spoil" val="0"/>
+  </for>
 </skill>
 <skill id="948" levels="1" name="Eye for Eye">
   <set name="hitTime" val="500"/>

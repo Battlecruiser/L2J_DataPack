@@ -201,12 +201,12 @@
   <table name="#mpConsume"> 19 21 22 24 25 27 28 29 30 31 32 33 34 34 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="power" val="70"/>
+  <set name="power" val="70"/> <!-- Base Land Rate -->
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="5000"/>
   <set name="hitTime" val="1200"/>
   <set name="isDebuff" val="true"/>
-  <set name="skillType" val="DEBUFF"/>
+  <set name="skillType" val="AGGREMOVE"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="500"/>
   <set name="effectRange" val="900"/>
