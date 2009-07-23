@@ -1,5 +1,5 @@
 Given the fact that no convention is widely adopted for the naming of these files yet,
-I decided to keep a list of what each file is meant to be, to improve the usability
+We decided to keep a list of what each file is meant to be, to improve the usability
 of this directory a little bit.
 
 001.xml  -> Non-grade items exchange, just for education
