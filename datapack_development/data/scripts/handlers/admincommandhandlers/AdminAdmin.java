@@ -135,6 +135,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				target = activeChar;
 				target.setHero(target.isHero() ? false : true);
 			}
+			target.broadcastUserInfo();
 		}
 		else if (command.startsWith("admin_diet"))
 		{
