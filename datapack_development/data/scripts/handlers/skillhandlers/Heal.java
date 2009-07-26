@@ -28,6 +28,7 @@ import net.sf.l2j.gameserver.model.actor.instance.L2SiegeFlagInstance;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.StatusUpdate;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
+import net.sf.l2j.gameserver.skills.Formulas;
 import net.sf.l2j.gameserver.skills.Stats;
 import net.sf.l2j.gameserver.templates.skills.L2SkillType;
 
@@ -63,7 +64,7 @@ public class Heal implements ISkillHandler
 		catch (Exception e)
 		{
 		}
-		
+
 		L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
 		
 		L2PcInstance player = null;
@@ -143,10 +144,15 @@ public class Heal implements ISkillHandler
 			// Extra bonus (since CT1.5)
 			if (!skill.isPotion())
 				hp += target.calcStat(Stats.HEAL_STATIC_BONUS, 0, null, null);
-			
+
 			if (target instanceof L2DoorInstance || target instanceof L2SiegeFlagInstance)
 				hp = 0;
-			
+
+			// Heal critic, since CT2.3 Gracia Final
+			if(skill.getSkillType() == L2SkillType.HEAL && !skill.isPotion()
+						&& Formulas.calcMCrit(activeChar.getMCriticalHit(target, skill)))
+				hp *= 3;
+
 			//from CT2 u will receive exact HP, u can't go over it, if u have full HP and u get HP buff, u will receive 0HP restored message
 			if ((target.getCurrentHp() + hp) >= target.getMaxHp())
 			{
