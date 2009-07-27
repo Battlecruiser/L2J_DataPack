@@ -45,12 +45,12 @@ of this directory a little bit.
 313880001.xml -> Quest 633: In The Forgotten Village - Exchange Livers
 320540001.xml -> Quest 650: A Broken Dream
 
-310820001.xml -> Varka alliance - Lv1
-310820002.xml -> Varka alliance - Lv2
-310820003.xml -> Varka alliance - Lv3
 313750001.xml -> Ketra alliance - Lv1
 313750002.xml -> Ketra alliance - Lv2
 313750003.xml -> Ketra alliance - Lv3
+313820001.xml -> Varka alliance - Lv1
+313820002.xml -> Varka alliance - Lv2
+313820003.xml -> Varka alliance - Lv3
 
 310922001.xml -> Seven Signs - Black Marketeer of Mammon - SA Removal for AA
 310922002.xml -> Seven Signs - Black Marketeer of Mammon - Black Market Items
