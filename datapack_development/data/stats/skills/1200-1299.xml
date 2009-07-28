@@ -95,7 +95,7 @@
   <enchant2 name="mpConsume" val="#ench2mpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume"/>
   <for>
-    <effect name="Debuff" time="15" val="0" stackOrder="#pAtkSpd" stackType="attack_time_up">
+    <effect name="Debuff" time="30" val="0" stackOrder="#pAtkSpd" stackType="attack_time_up">
       <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
     </effect>
   </for>
