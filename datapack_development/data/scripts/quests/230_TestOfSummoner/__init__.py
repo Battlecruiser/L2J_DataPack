@@ -101,8 +101,9 @@ DROPLIST_SUMMON = {
 27107: ["Brynthea", CRYSTAL_OF_PROGRESS6,CRYSTAL_OF_INPROGRESS6,CRYSTAL_OF_FOUL6,CRYSTAL_OF_DEFEAT6,CRYSTAL_OF_VICTORY6]  # Silhoutte Tilfo
 }
 
-# Reduces the Beginner Arcanas on every try to kill a Summon by one, item and stat!
+# Reduces the Beginner Arcanas on every try to kill a Summon by one, item and stat! Also add the player to the Death notify list
 def takeBeginnerArcanas(st):
+   st.addNotifyOfDeath(st.getPlayer())
    st.takeItems(BEGINNERS_ARCANA,1)
    st.set("Beginner_Arcanas",str(st.getInt("Beginner_Arcanas")-1))
 
@@ -269,9 +270,6 @@ class Quest (JQuest) :
                elif SummonerStat == 2:          # ready to fight... already take the mission to kill his pet
                   htmltext = str(npcId)+"-08.htm"
                elif SummonerStat == 3:          # in battle...
-                  # this will add the player and his pet to the list of notified objects in onDeath Part
-                  st.addNotifyOfDeath(player)
-                  st.addNotifyOfDeath(player.getPet())
                   htmltext = str(npcId)+"-09.htm"
                elif SummonerStat == 4:          # haha... your summon lose
                   htmltext = str(npcId)+"-05.htm"
@@ -292,6 +290,7 @@ class Quest (JQuest) :
       npcId = killer.getNpcId()
 ##      if (deadPerson == st.getPlayer() or deadPerson = st.getPlayer().getPet()) and npcId in DROPLIST_SUMMON.keys() :
       if npcId in DROPLIST_SUMMON.keys() :
+         st.getPlayer().removeNotifyQuestOfDeath(st)
          # var means the variable of the SummonerManager, the rest are all Crystalls wich mark the status
          var,start,progress,foul,defeat,victory = DROPLIST_SUMMON[npcId]
          if int(st.get(var)) == 3 :
@@ -375,6 +374,7 @@ class Quest (JQuest) :
                      isName = 0
                   st.set(var,"6")
                   st.giveItems(victory,1)       # if he wons without cheating, set stat won and give victory crystal
+                  st.getPlayer().removeNotifyQuestOfDeath(st)
                   st.playSound("Itemsound.quest_middle")
             # if a foul has occured, find the player who had the duel in progress and give a foul crystal
             else :
@@ -382,8 +382,11 @@ class Quest (JQuest) :
                if foulPlayer :  # if not null (perhaps the player went offline)...
                   st = foulPlayer.getQuestState(qn)
                   if st :  # the original player has not aborted the quest
-                     st.set(var,"5")               # if the player cheats, give foul crystal and set stat to cheat
-                     st.giveItems(foul,1)
+                     var,start,progress,foul,defeat,victory = DROPLIST_SUMMON[npcId]
+                     if st.getInt(var) == 3:
+                        st.set(var,"5")               # if the player cheats, give foul crystal and set stat to cheat
+                        st.giveItems(foul,1)
+                        st.getPlayer().removeNotifyQuestOfDeath(st)
             # finally, clear the inProgress mob info.
             self.inProgressDuelMobs.pop(npcId)
       return
