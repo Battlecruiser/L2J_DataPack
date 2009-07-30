@@ -454,10 +454,10 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="magicLvl" val="1"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="operateType" val="OP_PASSIVE"/>
   <set name="element" val="4"/> <!-- Holy -->
   <for>
-    <add order="0x40" stat="holyPower" val="1"/>
+    <add order="0x40" stat="holyPower" val="10"/>
   </for>
 </skill>
 <skill id="4336" levels="5" name="Dark Attack Weak Point">
