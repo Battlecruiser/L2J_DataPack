@@ -2493,7 +2493,6 @@ INSERT INTO `armor` VALUES
 (20250,'Agathion Seal Bracelet - Green-Robed Tojigong - Mana Regeneration - 7 Day Expiration Period','lbracelet','false','none',150,'wood','none',0,-1,10080,0,0,0,0,0,'false','false','true','false','0-0','21040-1;3267-1;'),
 (20252,'Agathion Seal Bracelet - Bugbear','lbracelet','false','none',150,'wood','none',0,-1,-1,0,0,0,0,0,'false','false','true','false','0-0','21041-1;3267-1;23017-1;23041-1;'),
 (20253,'Agathion of Love (Event)','lbracelet','false','none',150, 'wood','none',0,-1,-1,0,0,0,0,0,'false','false','true','false','0-0','8245-1;23024-1;3267-1;'),
-(20266,'Baguette Shield - 7 Day Expiration Period','lhand','false','none',500, 'wood','none',0,-1,10080,0,0,0,0,0,'true','true','true','true','0-0','0-0;'),
 (20275,'Gold Afro','hairall','false','none',10, 'wood','none',0,-1,-1,0,0,0,0,0,'true','true','true','true','0-0','0-0;'),
 (20276,'Pink Afro','hairall','false','none',10, 'wood','none',0,-1,-1,0,0,0,0,0,'true','true','true','true','0-0','0-0;'),
 (20297,'Agathion Seal Bracelet - Red Sumo Wrestler','lbracelet','false','none',150, 'wood','none',0,-1,-1,0,0,0,0,0,'false','false','true','false','0-0','21043-1;3267-1;23049-1;'),
