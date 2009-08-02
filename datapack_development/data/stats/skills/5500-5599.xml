@@ -502,28 +502,84 @@
   <set name="hitTime" val="1200"/>
 </skill>
 <skill id="5586" levels="3" name="Pet Might">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume"> 10 20 35 </table>
+  <table name="#rate"> 1.08 1.12 1.15 </table>
+  <table name="#aggro"> 121 204 379 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="target" val="TARGET_OWNER_PET"/>
+  <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
+  <set name="aggroPoints" val="#aggro"/>
+  <for>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="#rate" stackType="pa_up">
+      <mul order="0x30" stat="pAtk" val="#rate"/>
+    </effect>
+  </for>
 </skill>
 <skill id="5587" levels="3" name="Pet Shield">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume"> 10 23 39 </table>
+  <table name="#rate"> 1.08 1.12 1.15 </table>
+  <table name="#aggro"> 121 243 418 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="target" val="TARGET_OWNER_PET"/>
+  <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
+  <set name="aggroPoints" val="#aggro"/>
+  <for>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="#rate" stackType="pd_up">
+      <mul order="0x30" stat="pDef" val="#rate"/>
+    </effect>
+  </for>
 </skill>
 <skill id="5588" levels="3" name="Pet Focus">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#mpConsume"> 23 39 48 </table>
+  <table name="#Tab-rCrit"> 0.2 0.25 0.3 </table>
+  <table name="#aggro"> 243 418 495 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="target" val="TARGET_OWNER_PET"/>
+  <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
+  <set name="aggroPoints" val="#aggro"/>
+  <for>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="#Tab-rCrit" stackType="critical_prob_up">
+      <basemul order="0x30" stat="rCrit" val="#Tab-rCrit"/>
+    </effect>
+  </for>
 </skill>
 <skill id="5589" levels="3" name="Pet Death Wisper">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <table name="#Tab-cAtk"> 1.25 1.3 1.35 </table>
+  <table name="#aggro"> 379 457 532 </table>
+  <table name="#mpConsume"> 35 44 52 </table>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="target" val="TARGET_OWNER_PET"/>
+  <set name="reuseDelay" val="6000"/>
   <set name="hitTime" val="4000"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="castRange" val="400"/>
+  <set name="effectRange" val="900"/>
+  <set name="aggroPoints" val="#aggro"/>
+  <for>
+    <effect count="1" name="Buff" time="120" val="0" stackOrder="#Tab-cAtk" stackType="critical_dmg_up">
+      <mul order="0x30" stat="cAtk" val="#Tab-cAtk"/>
+    </effect>
+  </for>
 </skill>
 <skill id="5590" levels="12" name="Pet Battle Heal">
   <table name="#mpConsume"> 13 23 34 47 60 74 85 92 95 98 99 99 </table>
