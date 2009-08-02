@@ -4,31 +4,37 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="901" levels="6" name="Dark Strike">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="1000"/>
 </skill>
 <skill id="902" levels="6" name="Bursting Flame">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="903" levels="6" name="Stratum Explosion">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="904" levels="6" name="Corpse Burst">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="1500"/>
 </skill>
 <skill id="905" levels="6" name="Dark Detonation">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="906" levels="6" name="Lance Step">
   <table name="#mpConsume"> 72 73 74 74 75 75 </table>
@@ -50,7 +56,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="element" val="1"/> <!-- Water -->
   <set name="elementPower" val="20"/>
-  <set name="hitTime" val="1000"/>
+  <set name="hitTime" val="4000"/>
   <set name="SSBoost" val="2.0"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -65,7 +71,7 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="80"/>
-  <set name="hitTime" val="1000"/>
+  <set name="hitTime" val="4000"/>
   <set name="SSBoost" val="2.0"/>
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -76,18 +82,21 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="reuseDelay" val="4000"/>
+  <set name="hitTime" val="1500"/>
 </skill>
 <skill id="910" levels="6" name="Water Jet">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="reuseDelay" val="2000"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="911" levels="11" name="Energy Burst">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="reuseDelay" val="1000"/>
+  <set name="hitTime" val="1000"/>
 </skill>
 <skill id="912" levels="1" name="Summon Imperial Phoenix">
   <set name="mpConsume" val="145"/>
@@ -252,7 +261,6 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="500"/>
   <set name="reuseDelay" val="180000"/>
 </skill>
 <skill id="923" levels="1" name="Dual Dagger Mastery">
@@ -332,36 +340,42 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="1800"/>
 </skill>
 <skill id="929" levels="1" name="Spirit of the Cat">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="reuseDelay" val="360000"/>
+  <set name="hitTime" val="2500"/>
 </skill>
 <skill id="930" levels="1" name="Spirit of the Demon">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="reuseDelay" val="360000"/>
+  <set name="hitTime" val="2500"/>
 </skill>
 <skill id="931" levels="1" name="Spirit of the Unicorn">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="reuseDelay" val="360000"/>
+  <set name="hitTime" val="2500"/>
 </skill>
 <skill id="932" levels="9" name="Star Stone Gathering">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="reuseDelay" val="10000"/>
+  <set name="hitTime" val="6000"/>
 </skill>
 <skill id="933" levels="1" name="Detection">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="reuseDelay" val="8000"/>
+  <set name="hitTime" val="2500"/>
 </skill>
 <skill id="934" levels="1" name="Sigil Mastery">
   <set name="operateType" val="OP_PASSIVE"/>
@@ -531,11 +545,13 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="1080"/>
 </skill>
 <skill id="951" levels="7" name="Wing Assault">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="800"/>
 </skill>
 <skill id="952" levels="5" name="Collector's Experience">
   <table name="#pAtk"> 72.7 86.1 100.2 114.8 129.3 </table>
@@ -555,5 +571,6 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="reuseDelay" val="11000"/>
+  <set name="hitTime" val="900"/>
 </skill>
 </list>

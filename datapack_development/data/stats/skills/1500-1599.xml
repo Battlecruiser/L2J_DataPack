@@ -158,7 +158,7 @@
   <set name="target" val="TARGET_AURA"/>
   <set name="skillRadius" val="200"/>
   <set name="reuseDelay" val="3000000"/>
-  <set name="hitTime" val="4000"/>
+  <set name="hitTime" val="1500"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="isDebuff" val="true"/>
@@ -615,6 +615,7 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="2500"/>
 </skill>
 <skill id="1535" levels="1" name="Chant of Movement">
   <set name="mpConsume" val="65"/>
@@ -746,12 +747,14 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="1542" levels="1" name="Counter Critical">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="reuseDelay" val="2000"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="1543" levels="1" name="Great Fury">
   <set name="target" val="TARGET_SELF"/>
@@ -769,6 +772,7 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="1500"/>
 </skill>
 <skill id="1545" levels="1" name="Soul Sucking">
   <set name="target" val="TARGET_NONE"/>
