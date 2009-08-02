@@ -377,7 +377,6 @@
 <skill id="2335" levels="1" name="Fire Resist Potion">
   <set name="itemConsumeId" val="9997"/>
   <set name="itemConsumeCount" val="1"/>
-  <set name="hitTime" val="100"/>
   <set name="staticHitTime" val="true"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -396,7 +395,6 @@
 <skill id="2336" levels="1" name="Water Resist Potion">
   <set name="itemConsumeId" val="9998"/>
   <set name="itemConsumeCount" val="1"/>
-  <set name="hitTime" val="100"/>
   <set name="staticHitTime" val="true"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -415,7 +413,6 @@
 <skill id="2337" levels="1" name="Wind Resist Potion">
   <set name="itemConsumeId" val="10000"/>
   <set name="itemConsumeCount" val="1"/>
-  <set name="hitTime" val="100"/>
   <set name="staticHitTime" val="true"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -434,7 +431,6 @@
 <skill id="2338" levels="1" name="Earth Resist Potion">
   <set name="itemConsumeId" val="9999"/>
   <set name="itemConsumeCount" val="1"/>
-  <set name="hitTime" val="100"/>
   <set name="staticHitTime" val="true"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -453,7 +449,6 @@
 <skill id="2339" levels="1" name="Holy Resist Potion">
   <set name="itemConsumeId" val="10002"/>
   <set name="itemConsumeCount" val="1"/>
-  <set name="hitTime" val="100"/>
   <set name="staticHitTime" val="true"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -472,7 +467,6 @@
 <skill id="2340" levels="1" name="Unholy Resist Potion">
   <set name="itemConsumeId" val="10001"/>
   <set name="itemConsumeCount" val="1"/>
-  <set name="hitTime" val="100"/>
   <set name="staticHitTime" val="true"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
@@ -611,7 +605,7 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="1000"/>
+  <set name="hitTime" val="100"/>
   <set name="staticHitTime" val="true"/>
 </skill>
 <skill id="2358" levels="1" name="Holy Water">
@@ -639,7 +633,6 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="FEED_PET"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="feed" val="1000"/>
 </skill>
 <skill id="2362" levels="1" name="Prison Gate Key">
   <set name="target" val="TARGET_NONE"/>

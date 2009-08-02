@@ -14,6 +14,7 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="100"/>
 </skill>
 <skill id="2803" levels="1" name="Seed of Revenge">
   <set name="itemConsumeId" val="14170"/>
@@ -558,6 +559,7 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="2000"/>
 </skill>
 <skill id="2840" levels="1" name="Star Stone Gathering">
   <set name="itemConsumeId" val="13728"/>
@@ -566,7 +568,7 @@
   <set name="skillType" val="LEARN_SKILL"/>
   <set name="learnSkillId" val="932"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="1500"/>
+  <set name="hitTime" val="100"/>
   <set name="staticHitTime" val="true"/>
   <cond msgId="113" addName="1">
     <player level="75"/>
@@ -716,11 +718,13 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="1500"/>
 </skill>
 <skill id="2870" levels="1" name="Event - Head Milk Cow Summon Scroll">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="1500"/>
 </skill>
 <skill id="2871" levels="1" name="Summon Gloomy Milk Cow">
   <set name="target" val="TARGET_NONE"/>
@@ -771,11 +775,13 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="1500"/>
 </skill>
 <skill id="2881" levels="1" name="Event - Gloomy Head Milk Cow Summon Scroll">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="1500"/>
 </skill>
 <skill id="2882" levels="1" name="Crystal Cube">
   <set name="target" val="TARGET_NONE"/>
@@ -786,11 +792,13 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="100"/>
 </skill>
 <skill id="2884" levels="1" name="Energy Replenishing Herb Tea">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="100"/>
 </skill>
 <skill id="2885" levels="1" name="Shield">
   <set name="target" val="TARGET_NONE"/>
@@ -836,6 +844,7 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="100"/>
 </skill>
 <skill id="2894" levels="1" name="White Day Candy">
   <set name="target" val="TARGET_NONE"/>
@@ -856,15 +865,18 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="100"/>
 </skill>
 <skill id="2898" levels="1" name="Fresh Cream Herb">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="100"/>
 </skill>
 <skill id="2899" levels="1" name="Cheesecake Herb">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="100"/>
 </skill>
 </list>
