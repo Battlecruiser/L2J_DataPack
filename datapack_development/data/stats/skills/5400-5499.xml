@@ -597,6 +597,7 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="5481" levels="1" name="Transform Penalty">
   <!-- You cannot be transformed while under this effect. -->
@@ -676,7 +677,7 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="2500"/>
+  <set name="hitTime" val="25000"/>
 </skill>
 <skill id="5494" levels="1" name="Gust">
   <set name="target" val="TARGET_NONE"/>

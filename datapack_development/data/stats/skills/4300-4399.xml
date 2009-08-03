@@ -875,7 +875,6 @@
   <!-- Fighter -->
   <set name="power" val="100"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="500"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -895,7 +894,6 @@
   <!-- Mage -->
   <set name="power" val="100"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="500"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
@@ -914,7 +912,6 @@
 <skill id="4363" levels="1" name="Curse of Destruction">
   <set name="power" val="100"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="500"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="isMagic" val="true"/>
   <set name="isDebuff" val="true"/>
@@ -930,7 +927,6 @@
 <skill id="4364" levels="2" name="Blessing of Revelations">
   <!-- Fighter -->
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -950,7 +946,6 @@
 <skill id="4365" levels="2" name="Blessing of Revelations">
   <!-- Mage -->
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -969,7 +964,6 @@
 </skill>
 <skill id="4366" levels="1" name="Blessing of Prophecy">
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="500"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -984,7 +978,6 @@
   </for>
 </skill>
 <skill id="4367" levels="1" name="Clan Hall Manager Buff">
-  <set name="hitTime" val="500"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="MPHOT"/>
   <set name="isMagic" val="true"/>
@@ -994,7 +987,6 @@
   </for>
 </skill>
 <skill id="4368" levels="1" name="Clan Hall Manager Buff">
-  <set name="hitTime" val="500"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="MPHOT"/>
   <set name="isMagic" val="true"/>
@@ -1006,7 +998,6 @@
   </for>
 </skill>
 <skill id="4369" levels="1" name="Clan Hall Manager Buff">
-  <set name="hitTime" val="500"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="MPHOT"/>
   <set name="isMagic" val="true"/>
@@ -1018,7 +1009,6 @@
   </for>
 </skill>
 <skill id="4370" levels="1" name="Clan Hall Manager Buff">
-  <set name="hitTime" val="500"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="MPHOT"/>
   <set name="isMagic" val="true"/>
@@ -1030,7 +1020,6 @@
   </for>
 </skill>
 <skill id="4371" levels="1" name="Clan Hall Manager Buff">
-  <set name="hitTime" val="500"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="MPHOT"/>
   <set name="isMagic" val="true"/>
@@ -1042,7 +1031,6 @@
   </for>
 </skill>
 <skill id="4372" levels="1" name="Clan Hall Manager Buff">
-  <set name="hitTime" val="500"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="MPHOT"/>
   <set name="isMagic" val="true"/>
@@ -1054,7 +1042,6 @@
   </for>
 </skill>
 <skill id="4373" levels="1" name="Clan Hall Manager Buff">
-  <set name="hitTime" val="500"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="MPHOT"/>
   <set name="isMagic" val="true"/>
@@ -1066,7 +1053,6 @@
   </for>
 </skill>
 <skill id="4374" levels="1" name="Clan Hall Manager Buff">
-  <set name="hitTime" val="500"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="MPHOT"/>
   <set name="isMagic" val="true"/>
@@ -1078,7 +1064,6 @@
   </for>
 </skill>
 <skill id="4375" levels="1" name="Clan Hall Manager Buff">
-  <set name="hitTime" val="500"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="skillType" val="MPHOT"/>
   <set name="isMagic" val="true"/>
@@ -1270,7 +1255,6 @@
   <table name="#Tab-runSpd"> 20 33 </table>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="100"/>
-  <set name="hitTime" val="100"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="magicLvl" val="1"/>
@@ -1287,7 +1271,6 @@
   <table name="#rate"> 1.08 1.12 1.15 </table>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="100"/>
-  <set name="hitTime" val="100"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="magicLvl" val="1"/>

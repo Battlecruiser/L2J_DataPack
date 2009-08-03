@@ -204,7 +204,7 @@
   <set name="skillType" val="MDAM"/>
   <set name="element" val="5"/> <!-- Dark -->
   <set name="elementPower" val="20"/>
-  <set name="hitTime" val="3000"/>
+  <set name="hitTime" val="4000"/>
   <set name="reuseDelay" val="3000"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
@@ -322,7 +322,7 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="3000"/>
+  <set name="hitTime" val="830"/>
 </skill>
 <skill id="5351" levels="9" name="NPC(party) - Physical Single Long Range Attack - Earth">
   <set name="target" val="TARGET_NONE"/>
@@ -370,13 +370,13 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="1000"/>
+  <set name="hitTime" val="830"/>
 </skill>
 <skill id="5359" levels="9" name="NPC(party) - Physical Single Long Range Attack - Dark">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="2000"/>
+  <set name="hitTime" val="4500"/>
 </skill>
 <skill id="5360" levels="9" name="NPC(party) - Physical Range Close Range Attack - Dark">
   <set name="target" val="TARGET_NONE"/>
@@ -402,6 +402,7 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="830"/>
 </skill>
 <skill id="5364" levels="9" name="Bleed">
   <!-- Condition causing target to instantly decrease HP by bleeding. Effect 8-10. -->
@@ -539,7 +540,7 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="5000"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="5386" levels="9" name="NPC(party) -Magic Single Long Range DD - Holy">
   <set name="target" val="TARGET_NONE"/>
