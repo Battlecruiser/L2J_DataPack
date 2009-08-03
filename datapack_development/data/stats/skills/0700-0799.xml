@@ -1005,7 +1005,7 @@
   <set name="effectRange" val="400"/>
   <set name="baseCritRate" val="15"/>
   <set name="hitTime" val="1200"/>
-  <set name="magiclvl" val="83"/>
+  <set name="magicLvl" val="83"/>
   <set name="mpConsume" val="160"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="overHit" val="true"/>
@@ -1222,9 +1222,9 @@
       <mul order="0x30" stat="pAtk" val="1.3"/>
       <add order="0x40" stat="runSpd" val="20"/>
       <mul order="0x30" stat="pAtkSpd" val="1.3"/>
-      <mul order="0x40" stat="rCrit" val="100">
+      <add order="0x40" stat="rCrit" val="100">
         <using kind="Sword,Big Sword"/>
-      </mul>
+      </add>
       <mul order="0x30" stat="cAtk" val="2">
         <using kind="Blunt,Big Blunt"/>
       </mul>

@@ -1257,7 +1257,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
     <add order="0x40" stat="pDef" val="#pDef"/>
-    <mul order="0x40" stat="regMp" val="1.1"/>
+    <mul order="0x30" stat="regMp" val="1.1"/>
     <add order="0x40" stat="rEvas" val="#rEvas"/>
   </for>
 </skill>
