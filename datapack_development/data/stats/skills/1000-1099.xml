@@ -1440,8 +1440,8 @@
   <enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume"/>
   <for>
     <effect name="Debuff" time="30" val="0" stackOrder="2" stackType="FireAtr">
-      <sub order="0x30" stat="fireRes" val="20"/>
-      <add order="0x30" stat="waterRes" val="10"/>
+      <sub order="0x40" stat="fireRes" val="20"/>
+      <add order="0x40" stat="waterRes" val="10"/>
     </effect>
   </for>
 </skill>
