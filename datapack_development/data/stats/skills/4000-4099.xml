@@ -717,6 +717,7 @@
 </skill>
 <skill id="4048" levels="3" name="NPC Dash">
   <table name="#runSpd"> 1.5 1.8 2 </table>
+  <set name="hitTime" val="1000"/>
   <set name="magicLvl" val="10"/>
   <set name="mpConsume" val="12"/>
   <set name="target" val="TARGET_SELF"/>

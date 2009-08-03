@@ -4,11 +4,14 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="2000"/>
 </skill>
 <skill id="5901" levels="2" name="Mist of Oblivion">
+  <table name="#hitTime"> 2000 22940 </table>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="#hitTime"/>
 </skill>
 <skill id="5902" levels="1" name="NPC Trigger Target Cancel">
   <set name="target" val="TARGET_NONE"/>
@@ -19,41 +22,52 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="2000"/>
 </skill>
 <skill id="5904" levels="3" name="Mist of Souliter">
+  <table name="#hitTime"> 2000 22940 22940 </table>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="#hitTime"/>
 </skill>
 <skill id="5905" levels="1" name="Confusing Nuph">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="2000"/>
 </skill>
 <skill id="5906" levels="1" name="Ritual of Revive">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="5907" levels="2" name="Ritual of Entombment">
+  <table name="#hitTime"> 3000 34400 </table>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="#hitTime"/>
 </skill>
 <skill id="5908" levels="2" name="Ritual of Entombment">
+  <table name="#hitTime"> 3000 34400 </table>
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="#hitTime"/>
 </skill>
 <skill id="5909" levels="1" name="Stronghold Attack">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="1000"/>
 </skill>
 <skill id="5910" levels="1" name="Stronghold Attack">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="1000"/>
 </skill>
 <skill id="5911" levels="1" name="Pestilence Cleanse">
   <set name="target" val="TARGET_NONE"/>
@@ -99,41 +113,49 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="12610"/>
 </skill>
 <skill id="5920" levels="1" name="Tentacle of Agony">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="91740"/>
 </skill>
 <skill id="5921" levels="1" name="Inhale">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="26950"/>
 </skill>
 <skill id="5922" levels="1" name="Exhale">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="22700"/>
 </skill>
 <skill id="5923" levels="1" name="Soul Retain">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="1000"/>
 </skill>
 <skill id="5924" levels="1" name="Devour Soul">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="5000"/>
 </skill>
 <skill id="5925" levels="1" name="Goring Charge">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="800"/>
 </skill>
 <skill id="5926" levels="1" name="Breath Corruption">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="2000"/>
 </skill>
 <skill id="5927" levels="4" name="Immortal Frenzy">
   <set name="target" val="TARGET_NONE"/>
@@ -164,11 +186,13 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="1500"/>
 </skill>
 <skill id="5933" levels="1" name="Dark Blade">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="1500"/>
 </skill>
 <skill id="5934" levels="1" name="Meet the soul of darkness and fight against it.">
   <set name="target" val="TARGET_NONE"/>
@@ -179,11 +203,13 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="1500"/>
 </skill>
 <skill id="5936" levels="1" name="Earth Ring">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="1500"/>
 </skill>
 <skill id="5937" levels="1" name="Self Stun">
   <set name="target" val="TARGET_NONE"/>
@@ -259,46 +285,55 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="5952" levels="1" name="Agathion's Blessing">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="5953" levels="1" name="Agathion's Blessing">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="5954" levels="1" name="Agathion Cute Trick - Tin Plate Golem">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="5955" levels="1" name="Agathion Cute Trick - Joy">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="5956" levels="1" name="Agathion Cute Trick - Anger">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="5957" levels="1" name="Agathion Cute Trick - Sorrow">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="5958" levels="1" name="Agathion Cute Trick - Boy Teddy Bear">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="5959" levels="1" name="Agathion Cute Trick - Girl Teddy Bear">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="5960" levels="1" name="Stronghold Reactivate">
   <set name="target" val="TARGET_NONE"/>
@@ -309,16 +344,19 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="5962" levels="1" name="Air Defense Cannon">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="7000"/>
 </skill>
 <skill id="5963" levels="1" name="Emery Conversion">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="1000"/>
 </skill>
 <skill id="5964" levels="1" name="Fairy Flame">
   <set name="target" val="TARGET_NONE"/>
@@ -344,66 +382,79 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="1500"/>
 </skill>
 <skill id="5969" levels="2" name="Punch of Doom">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="1360"/>
 </skill>
 <skill id="5970" levels="1" name="Seduced Knight's Help">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="5971" levels="1" name="Seduced Ranger's Help">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="5972" levels="1" name="Seduced Wizard's Help">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="5973" levels="1" name="Seduced Warrior's Help">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="5974" levels="1" name="Tiat Transformation">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="7900"/>
 </skill>
 <skill id="5975" levels="3" name="Dark Attack">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="1000"/>
 </skill>
 <skill id="5976" levels="3" name="Dark Storm">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="2500"/>
 </skill>
 <skill id="5977" levels="3" name="Dark Strike">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="1000"/>
 </skill>
 <skill id="5978" levels="1" name="Death Strike">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="1000"/>
 </skill>
 <skill id="5979" levels="1" name="Forced Move">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="2500"/>
 </skill>
 <skill id="5980" levels="3" name="Seal Isolation">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="2500"/>
 </skill>
 <skill id="5981" levels="3" name="Lilith's Curse">
   <set name="target" val="TARGET_NONE"/>
@@ -463,26 +514,31 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="1000"/>
 </skill>
 <skill id="5988" levels="1" name="Armor Maintenance">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="1000"/>
 </skill>
 <skill id="5989" levels="1" name="Invincible">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3500"/>
 </skill>
 <skill id="5990" levels="3" name="Lesser Heal">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="2000"/>
 </skill>
 <skill id="5991" levels="1" name="Presentation - Summon Tiat">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="11760"/>
 </skill>
 <skill id="5992" levels="12" name="NPC Hate">
   <set name="target" val="TARGET_NONE"/>
@@ -493,6 +549,7 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="2000"/>
 </skill>
 <skill id="5994" levels="1" name="Effect of Doubt">
   <set name="target" val="TARGET_NONE"/>

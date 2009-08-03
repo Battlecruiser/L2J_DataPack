@@ -515,7 +515,7 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="HEAL"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="10000"/>
+  <set name="hitTime" val="5000"/>
   <set name="mpConsume" val="77"/>
   <set name="isMagic" val="true"/>
   <set name="reuseDelay" val="40000"/>
@@ -771,11 +771,13 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="8276" levels="1" name="Shield Branding">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="100"/>
 </skill>
 <skill id="8277" levels="1" name="Transform Native">
   <set name="target" val="TARGET_NONE"/>
@@ -791,11 +793,13 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="100"/>
 </skill>
 <skill id="8280" levels="1" name="Blessing of Earth">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="100"/>
 </skill>
 <skill id="8281" levels="1" name="Inventory Slot Add">
   <set name="target" val="TARGET_NONE"/>

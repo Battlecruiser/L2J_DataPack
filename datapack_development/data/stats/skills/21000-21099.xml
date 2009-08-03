@@ -281,6 +281,7 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="21043" levels="1" name="Agathion Seal Cancel - Red Sumo Wrestler">
   <set name="target" val="TARGET_SELF"/>
@@ -356,208 +357,243 @@
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="21053" levels="1" name="Bless the Soul">
   <!-- Increases Max MP by 25% for 30 minutes -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="21054" levels="1" name="Blessed Resurrection Ability">
   <!-- Can use the ability of Blessed Resurrection. Reuse Delay 12 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="21055" levels="1" name="Wind Walk">
   <!-- Increases moving speed by 20 for 2 minutes. Reuse delay 18 minutes -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="21056" levels="1" name="Agility">
   <!-- Increases evasion rate by 4 for 1 hour. Reuse Delay 24 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="21057" levels="1" name="Reflect">
   <!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="21058" levels="1" name="Mana Regeneration">
   <!-- Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="21059" levels="1" name="Greater Heal">
   <!-- Recovers HP by 444 and increases HP Recovery by 30 for 15 seconds. Reuse Delay 4 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="21060" levels="1" name="Death Whisper">
   <!-- Increases Critical attack power by 35% for 5 minutes. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="21061" levels="1" name="Agility">
   <!-- Increases evasion rate by 4 for 1 hour. Reuse Delay 24 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="21062" levels="1" name="Wild Magic">
   <!-- For 5 minutes, increases by 2% the occurrence rate of damage that is caused by damage magic. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="21063" levels="1" name="Wind Walk">
   <!-- Increases moving speed by 20 for 2 minutes. Reuse delay 18 minutes -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="21064" levels="1" name="Mana Regeneration">
   <!-- Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="21065" levels="1" name="Reflect">
   <!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="21066" levels="1" name="Energy Recovery">
   <!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="21067" levels="1" name="Blessed Escape Ability">
   <!-- Can use the ability of Blessed Return. Reuse Delay 12 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="200"/>
 </skill>
 <skill id="21068" levels="1" name="Resist Unholy">
   <!-- Increases resistance to darkness type attacks by 30 for 5 minutes. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="21069" levels="1" name="Wind Walk">
   <!-- Increases moving speed by 20 for 2 minutes. Reuse delay 18 minutes -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="21070" levels="1" name="Death Whisper">
   <!-- Increases Critical attack power by 35% for 5 minutes. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="21071" levels="1" name="Agility">
   <!-- Increases evasion rate by 4 for 1 hour. Reuse Delay 24 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="21072" levels="1" name="Wild Magic">
   <!-- For 5 minutes, increases by 2% the occurrence rate of damage that is caused by damage magic. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="21073" levels="1" name="Mana Regeneration">
   <!-- Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="21074" levels="1" name="Reflect">
   <!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="21075" levels="1" name="Greater Heal">
   <!-- Recovers HP by 444 and increases HP Recovery by 30 for 15 seconds. Reuse Delay 4 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="21076" levels="1" name="Resist Unholy">
   <!-- Increases resistance to darkness type attacks by 30 for 5 minutes. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="21077" levels="1" name="Wind Walk">
   <!-- Increases moving speed by 20 for 2 minutes. Reuse delay 18 minutes -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="21078" levels="1" name="Death Whisper">
   <!-- Increases Critical attack power by 35% for 5 minutes. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="21079" levels="1" name="Agility">
   <!-- Increases evasion rate by 4 for 1 hour. Reuse Delay 24 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 <skill id="21080" levels="1" name="Wild Magic">
   <!-- For 5 minutes, increases by 2% the occurrence rate of damage that is caused by damage magic. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="21081" levels="1" name="Mana Regeneration">
   <!-- Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="21082" levels="1" name="Reflect">
   <!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="21083" levels="1" name="Greater Heal">
   <!-- Recovers HP by 444 and increases HP Recovery by 30 for 15 seconds. Reuse Delay 4 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="21084" levels="1" name="Energy Recovery">
   <!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="21085" levels="1" name="Agathion Seal Cancel - Pomona">
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="3000"/>
 </skill>
 <skill id="21086" levels="1" name="Blessing of Love">
   <!-- Can feel the warm love of family. Protects the target with sacred power. Makes the target invincible for 10 seconds. Reuse Delay 4 hours -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="4000"/>
 </skill>
 </list>
