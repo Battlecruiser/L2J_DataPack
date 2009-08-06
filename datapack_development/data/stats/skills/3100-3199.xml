@@ -1791,6 +1791,9 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
+  <for>
+    <effect name="SilenceMagicPhysical" time="30" val="0" stackOrder="30" stackType="silence_all"/>
+  </for>
 </skill>
 <skill id="3199" levels="3" name="Item Skill: Skill Refresh">
   <table name="#mpInitialConsume"> 11 13 14 </table>
