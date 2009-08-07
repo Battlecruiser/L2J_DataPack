@@ -1544,7 +1544,7 @@
   <for>
     <effect name="Buff" time="90" val="0">
       <mul order="0x30" stat="rCrit" val="#rate"/>
-      <mul order="0x30" stat="cAtkAdd" val="#rate"/>
+      <mul order="0x30" stat="cAtk" val="#rate"/>
       <mul order="0x30" stat="pDef" val="0.8"/>
     </effect>
   </for>
