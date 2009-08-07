@@ -1007,7 +1007,9 @@
   <set name="staticHitTime" val="true"/>
   <set name="staticReuse" val="true"/>
   <for>
-    <mul order="0x30" stat="PhysicalMpConsumeRate" val="#PhysicalMpConsumeRate"/>
+    <effect name="Buff" time="120" val="0">
+      <mul order="0x30" stat="PhysicalMpConsumeRate" val="#PhysicalMpConsumeRate"/>
+    </effect>
   </for>
 </skill>
 <skill id="3162" levels="3" name="Item Skill: Spell Clarity">
@@ -1025,7 +1027,9 @@
   <set name="staticHitTime" val="true"/>
   <set name="staticReuse" val="true"/>
   <for>
-    <mul order="0x30" stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate"/>
+    <effect name="Buff" time="120" val="0">
+      <mul order="0x30" stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate"/>
+    </effect>
   </for>
 </skill>
 <skill id="3163" levels="3" name="Item Skill: Music Clarity">
@@ -1043,7 +1047,9 @@
   <set name="staticHitTime" val="true"/>
   <set name="staticReuse" val="true"/>
   <for>
-    <mul order="0x30" stat="DanceMpConsumeRate" val="#DanceMpConsumeRate"/>
+    <effect name="Buff" time="120" val="0">
+      <mul order="0x30" stat="DanceMpConsumeRate" val="#DanceMpConsumeRate"/>
+    </effect>
   </for>
 </skill>
 <skill id="3164" levels="3" name="Item Skill: Clarity">
@@ -1061,9 +1067,11 @@
   <set name="staticHitTime" val="true"/>
   <set name="staticReuse" val="true"/>
   <for>
-    <mul order="0x30" stat="PhysicalMpConsumeRate" val="#MpConsumeRate"/>
-    <mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRate"/>
-    <mul order="0x30" stat="DanceMpConsumeRate" val="#MpConsumeRate"/>
+    <effect name="Buff" time="120" val="0">
+      <mul order="0x30" stat="PhysicalMpConsumeRate" val="#MpConsumeRate"/>
+      <mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRate"/>
+      <mul order="0x30" stat="DanceMpConsumeRate" val="#MpConsumeRate"/>
+    </effect>
   </for>
 </skill>
 <skill id="3165" levels="10" name="Item Skill: Prominence">
