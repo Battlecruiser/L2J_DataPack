@@ -2749,7 +2749,7 @@ INSERT INTO `etcitem` VALUES
 (3835,'Blood of Eva','false','none',0,'normal','steel','none',-1,-1,0,0,'true','false','true','true','none','0-0;'),
 (3836,'Athrea\'s Coin','false','none',0,'normal','steel','none',-1,-1,0,0,'true','false','true','true','none','0-0;'),
 (3837,'Symbol of Loyalty','false','none',0,'normal','steel','none',-1,-1,0,0,'true','false','true','true','none','0-0;'),
-(3838,'Recipe: Titan\'s Powerstone','false','recipe',30,'stackable','liquid','none',-1,-1,0,0,'true','false','true','true','none','0-0;'),
+(3838,'Recipe: Titan\'s Powerstone','false','recipe',30,'stackable','liquid','none',-1,-1,0,0,'true','false','true','true','Recipes','0-0;'),
 (3839,'Mist Drake Egg','false','none',0,'stackable','steel','none',-1,-1,0,0,'true','false','true','true','none','0-0;'),
 (3840,'Blitz Wyrm Egg','false','none',0,'stackable','steel','none',-1,-1,0,0,'true','false','true','true','none','0-0;'),
 (3841,'Drake Egg','false','none',0,'stackable','steel','none',-1,-1,0,0,'true','false','true','true','none','0-0;'),
