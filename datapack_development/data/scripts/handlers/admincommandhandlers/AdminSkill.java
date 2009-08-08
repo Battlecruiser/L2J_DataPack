@@ -146,6 +146,7 @@ public class AdminSkill implements IAdminCommandHandler
 				activeChar.sendMessage("You removed all skills from " + player.getName());
 				player.sendMessage("Admin removed all skills from you.");
 				player.sendSkillList();
+				player.broadcastUserInfo();
 			}
 		}
 		else if (command.startsWith("admin_add_clan_skill"))
