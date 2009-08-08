@@ -14,19 +14,20 @@
  */
 package handlers.skillhandlers;
 
+import java.util.logging.Level;
+import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import net.sf.l2j.Config;
 import net.sf.l2j.gameserver.ai.CtrlIntention;
 import net.sf.l2j.gameserver.datatables.SkillTable;
 import net.sf.l2j.gameserver.handler.ISkillHandler;
-import net.sf.l2j.gameserver.lib.Log;
 import net.sf.l2j.gameserver.model.L2Effect;
 import net.sf.l2j.gameserver.model.L2ItemInstance;
 import net.sf.l2j.gameserver.model.L2Object;
 import net.sf.l2j.gameserver.model.L2Skill;
 import net.sf.l2j.gameserver.model.actor.L2Character;
-import net.sf.l2j.gameserver.model.actor.L2Npc;
+import net.sf.l2j.gameserver.model.actor.L2Playable;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -43,7 +44,8 @@ import net.sf.l2j.gameserver.templates.skills.L2SkillType;
 
 public class Pdam implements ISkillHandler
 {
-	private static Logger _log = Logger.getLogger(Pdam.class.getName());
+	private static final Logger _log = Logger.getLogger(Pdam.class.getName());
+	private static final Logger _logDamage = Logger.getLogger("damage");
 	
 	private static final L2SkillType[] SKILL_IDS =
 	{
@@ -67,7 +69,7 @@ public class Pdam implements ISkillHandler
 		}
 		
 		L2ItemInstance weapon = activeChar.getActiveWeaponInstance();
-		boolean soul = (weapon != null && weapon.getChargedSoulshot() == L2ItemInstance.CHARGED_SOULSHOT && weapon.getItemType() != L2WeaponType.DAGGER);
+		final boolean soul = (weapon != null && weapon.getChargedSoulshot() == L2ItemInstance.CHARGED_SOULSHOT && weapon.getItemType() != L2WeaponType.DAGGER);
 		
 		for (L2Character target: (L2Character[]) targets)
 		{
@@ -79,8 +81,8 @@ public class Pdam implements ISkillHandler
 			else if (target.isDead())
 				continue;
 			
-			boolean dual = activeChar.isUsingDualWeapon();
-			byte shld = Formulas.calcShldUse(activeChar, target, skill);
+			final boolean dual = activeChar.isUsingDualWeapon();
+			final byte shld = Formulas.calcShldUse(activeChar, target, skill);
 			// PDAM critical chance not affected by buffs, only by STR. Only some skills are meant to crit.
 			boolean crit = false;
 			if (skill.getBaseCritRate() > 0)
@@ -91,10 +93,12 @@ public class Pdam implements ISkillHandler
 				damage = 0;
 			else
 				damage = (int) Formulas.calcPhysDam(activeChar, target, skill, shld, false, dual, soul);
-			if (skill.getMaxSoulConsumeCount() > 0 && activeChar instanceof L2PcInstance && ((L2PcInstance) activeChar).getSouls() > 0)
+			if (skill.getMaxSoulConsumeCount() > 0 && activeChar instanceof L2PcInstance)
 			{
 				switch (((L2PcInstance) activeChar).getSouls())
 				{
+					case 0:
+						break;
 					case 1:
 						damage *= 1.10;
 						break;
@@ -156,22 +160,19 @@ public class Pdam implements ISkillHandler
 							}
 						}
 					
-						if (Config.LOG_GAME_DAMAGE && damage > 5000 && activeChar instanceof L2PcInstance)
+						if (Config.LOG_GAME_DAMAGE
+								&& activeChar instanceof L2Playable
+								&& damage > Config.LOG_GAME_DAMAGE_THRESHOLD)
 						{
-							String name = "";
-							if (target.isRaid())
-								name = "RaidBoss ";
-							if (target instanceof L2Npc)
-								name += target.getName() + "(" + ((L2Npc) target).getTemplate().npcId + ")";
-							if (target instanceof L2PcInstance)
-								name = target.getName() + "(" + target.getObjectId() + ") ";
-							name += target.getLevel() + " lvl";
-							Log.add(activeChar.getName() + "(" + activeChar.getObjectId() + ") " + activeChar.getLevel() + " lvl did damage " + damage + " with skill " + skill.getName() + "(" + skill.getId() + ") to " + name, "damage_pdam");
+							LogRecord record = new LogRecord(Level.INFO, "");
+							record.setParameters(new Object[]{activeChar, " did damage ", damage, skill, " to ", target});
+							record.setLoggerName("pdam");
+							_logDamage.log(record);
 						}
 					}
 				
 					// Possibility of a lethal strike
-					boolean lethal = Formulas.calcLethalHit(activeChar, target, skill);
+					final boolean lethal = Formulas.calcLethalHit(activeChar, target, skill);
 				
 					// Make damage directly to HP
 					if (!lethal && skill.getDmgDirectlyToHP())
