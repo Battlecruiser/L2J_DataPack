@@ -1923,11 +1923,6 @@
   <cond msgId="113" addName="1">
     <target abnormal="1"/> <!-- bleed -->
   </cond>
-  <for>
-    <effect count="7" name="DamOverTime" time="3" val="74" abnormal="bleed" effectPower="40" effectType="BLEED">
-      <mul order="0x30" stat="runSpd" val="0.8"/>
-    </effect>
-  </for>
 </skill>
 <skill id="499" levels="3" name="Courage">
   <table name="#mpConsume"> 16 22 29 </table>
