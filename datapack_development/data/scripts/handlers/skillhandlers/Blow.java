@@ -14,6 +14,11 @@
  */
 package handlers.skillhandlers;
 
+import java.util.logging.Level;
+import java.util.logging.LogRecord;
+import java.util.logging.Logger;
+
+import net.sf.l2j.Config;
 import net.sf.l2j.gameserver.ai.CtrlIntention;
 import net.sf.l2j.gameserver.handler.ISkillHandler;
 import net.sf.l2j.gameserver.model.L2Effect;
@@ -21,6 +26,7 @@ import net.sf.l2j.gameserver.model.L2ItemInstance;
 import net.sf.l2j.gameserver.model.L2Object;
 import net.sf.l2j.gameserver.model.L2Skill;
 import net.sf.l2j.gameserver.model.actor.L2Character;
+import net.sf.l2j.gameserver.model.actor.L2Playable;
 import net.sf.l2j.gameserver.model.actor.L2Summon;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.model.actor.instance.L2SummonInstance;
@@ -40,6 +46,8 @@ import net.sf.l2j.gameserver.util.Util;
  */
 public class Blow implements ISkillHandler
 {
+	private static final Logger _logDamage = Logger.getLogger("damage");
+
 	private static final L2SkillType[] SKILL_IDS =
 	{
 		L2SkillType.BLOW
@@ -123,7 +131,17 @@ public class Blow implements ISkillHandler
 				
 				if (soul)
 					weapon.setChargedSoulshot(L2ItemInstance.CHARGED_NONE);
-				
+
+				if (Config.LOG_GAME_DAMAGE
+						&& activeChar instanceof L2Playable
+						&& damage > Config.LOG_GAME_DAMAGE_THRESHOLD)
+				{
+					LogRecord record = new LogRecord(Level.INFO, "");
+					record.setParameters(new Object[]{activeChar, " did damage ", (int)damage, skill, " to ", target});
+					record.setLoggerName("pdam");
+					_logDamage.log(record);
+				}
+
 				if (skill.getDmgDirectlyToHP() && target instanceof L2PcInstance)
 				{
 					final L2Character[] ts = {target, activeChar};
