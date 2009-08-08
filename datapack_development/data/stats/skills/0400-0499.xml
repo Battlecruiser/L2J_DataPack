@@ -1920,6 +1920,9 @@
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
+  <cond msgId="113" addName="1">
+    <target abnormal="1"/> <!-- bleed -->
+  </cond>
   <for>
     <effect count="7" name="DamOverTime" time="3" val="74" abnormal="bleed" effectPower="40" effectType="BLEED">
       <mul order="0x30" stat="runSpd" val="0.8"/>
