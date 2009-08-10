@@ -22212,7 +22212,10 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (6618,0,9980,8), -- Infinity Fang
 (6619,0,9980,9), -- Infinity Bow
 (6620,0,9980,10), -- Infinity Wing
-(6621,0,9980,111); -- Infinity Spear
+(6621,0,9980,11), -- Infinity Spear
+(9388,0,9980,12), -- Infinity Rapier
+(9389,0,9980,13), -- Infinity Sword
+(9390,0,9980,14); -- Infinity Shooter
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Vesper PVP Weapons
