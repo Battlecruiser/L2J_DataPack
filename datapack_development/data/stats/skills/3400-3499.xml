@@ -224,6 +224,8 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="triggeredId" val="3579"/>
   <set name="triggeredLevel" val="1"/>
+  <set name="activationChance" val="100"/> <!-- On Each Critical Hit -->
+  <set name="chanceType" val="ON_CRIT"/>
   <for>
     <!-- The following values are copied from Infinity Blade SA -->
     <mul order="0x30" stat="maxHp" val="1.25"/> <!-- HP +25% -->
