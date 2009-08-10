@@ -195,6 +195,7 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_seten','1'),
 ('admin_setun','1'),
 ('admin_setba','1'),
+('admin_setbe','1'),
 ('admin_enchant','1'),
 
 -- EVENT ENGINE
