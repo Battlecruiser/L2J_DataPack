@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-<skill id="5200" levels="3" name="Pet Recharge">
-  <!-- Custom values from L2Emu -->
-  <table name="#mpConsume"> 50 60 70 </table>
-  <table name="#power"> 100.0 120.0 140.0 </table>
-  <table name="#aggro"> 604 617 630 </table>
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="#power"/>
-  <set name="target" val="TARGET_OWNER_PET"/>
-  <set name="reuseDelay" val="12000"/>
-  <set name="hitTime" val="6000"/>
-  <set name="skillType" val="MANAHEAL"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
+<skill id="5200" levels="8" name="Pet Recharge">
+  <table name="#aggroPoints"> 268 285 313 331 360 379 399 418 </table> <!-- Using the first levels from skill Recharge 1013 -->
+  <table name="#mpConsume"> 39 42 45 48 53 56 59 62 </table>
+  <table name="#power"> 49 52 57 60 66 70 73 77 </table> <!-- Using the first levels from skill Recharge 1013 -->
+  <set name="aggroPoints" val="#aggroPoints"/>
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
-  <set name="aggroPoints" val="#aggro"/>
+  <set name="hitTime" val="6000"/>
+  <set name="isMagic" val="true"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="#power"/>
+  <set name="reuseDelay" val="3000"/>
+  <set name="skillType" val="MANARECHARGE"/>
+  <set name="target" val="TARGET_OWNER_PET"/>
 </skill>
 <skill id="5201" levels="6" name="Pet Concentration">
   <table name="#mpConsume"> 20 27 39 48 55 64 </table>
