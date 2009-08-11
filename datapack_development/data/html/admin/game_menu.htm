@@ -1,6 +1,6 @@
-<html><title>L2J Game Panel</title><body><br>
+<html><title>L2J Game Panel</title><body>
 <center>
-<table width=260>
+<table width=270 border=0 bgcolor="666666">
 <tr>
 <td><button value="Main" action="bypass -h admin_admin" width=50 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 <td><button value="Game" action="bypass -h admin_admin2" width=50 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
@@ -8,46 +8,75 @@
 <td><button value="Server" action="bypass -h admin_admin4" width=50 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 <td><button value="Mods" action="bypass -h admin_admin5" width=50 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 </tr>
-</table><br>
-<table width=240><tr>
+</table>
+<br>
+<table width=240>
+<tr>
 <td>QuickBox:</td>
 <td><edit var="qbox" width=120 height=15></td>
-<td><button value="Help" action="bypass -h admin_help help/game_menu.htm" width=45 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-</tr></table><br>Character related:
-<table width=240><tr>
-<td><button value="Manage" action="bypass -h admin_char_manage" width=55 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td><button value="List" action="bypass -h admin_show_characters 0" width=55 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td><button value="ChangeName" action="bypass -h admin_changename $qbox" width=55 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td><button value="SetTitle" action="bypass -h admin_settitle $qbox" width=55 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-</tr></table><br>
-Clan related:
-<table width=240><tr>
-<td><button value="Create" action="bypass -h admin_pledge create $qbox" width=55 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td><button value="Delete" action="bypass -h admin_pledge dismiss $qbox" width=55 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td><button value="SetLevel" action="bypass -h admin_pledge setlevel $qbox" width=55 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td><button value="Reputatn" action="bypass -h admin_pledge rep $qbox" width=55 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-</tr><tr>
-<td><button value="Cstle/CH" action="bypass -h admin_siege" width=55 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td><button value="Fortress" action="bypass -h admin_fortsiege" width=55 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td><button value="Info" action="bypass -h admin_pledge info" width=55 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td></tr></table><br>
+<td><button value="Help" action="bypass -h admin_help help/game_menu.htm" width=45 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+</table>
+<br>
+Characters Related:
+<table width=240>
+<tr>
+<td><button value="List" action="bypass -h admin_show_characters 0" width=60 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Set Name" action="bypass -h admin_changename $qbox" width=60 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Set Title" action="bypass -h admin_settitle $qbox" width=60 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Manage" action="bypass -h admin_char_manage" width=60 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+</table>
+<br>
+Clan Related:
+<table width=240>
+<tr>
+<td><button value="Create" action="bypass -h admin_pledge create $qbox" width=82 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Info" action="bypass -h admin_pledge info" width=82 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Set Level" action="bypass -h admin_pledge setlevel $qbox" width=82 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+<tr>
+<td><button value="Delete" action="bypass -h admin_pledge dismiss $qbox" width=82 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Reputation" action="bypass -h admin_pledge rep $qbox" width=82 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+</table>
+<br>
+War Related:
+<table width=240>
+<tr>
+<td><button value="Castle / CH" action="bypass -h admin_siege" width=82 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Fortress" action="bypass -h admin_fortsiege" width=82 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Territory" action="bypass -h admin_territory" width=82 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+</table>
+<br>
 Cursed Weapons:
-<table width=240><tr>
-<td><button value="Info" action="bypass -h admin_cw_info_menu $qbox" width=73 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td><button value="Add" action="bypass -h admin_cw_add $qbox" width=73 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td><button value="Remove" action="bypass -h admin_cw_remove $qbox" width=73 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td></td>
-</tr></table><br>
+<table width=240>
+<tr>
+<td><button value="Info" action="bypass -h admin_cw_info_menu $qbox" width=60 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Add" action="bypass -h admin_cw_add $qbox" width=60 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Remove" action="bypass -h admin_cw_remove $qbox" width=60 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Reload" action="bypass -h admin_cw_reload" width=60 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+</table>
+<br>
 Seven Signs:
-<table width=240><tr>
-<td><button value="Blacksmith" action="bypass -h admin_mammon_find 1" width=73 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td><button value="Merchant" action="bypass -h admin_mammon_find 2" width=73 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td><button value="Respawn" action="bypass -h admin_mammon_respawn" width=73 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td></td>
-</tr></table><br>
+<table width=240>
+<tr>
+<td><button value="Blacksmith" action="bypass -h admin_mammon_find 1" width=82 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Merchant" action="bypass -h admin_mammon_find 2" width=82 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Respawn" action="bypass -h admin_mammon_respawn" width=82 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+</table>
+<br>
 Olympiad:
-<table width=240><tr>
-<td><button value="SaveOlympd" action="bypass -h admin_saveolymp" width=80 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td><button value="ManualHero" action="bypass -h admin_manualhero" width=80 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-</tr></table><br></center>
-Server Software: running L2J created by L2Chef and the L2J team. l2jserver.com for details
+<table width=240>
+<tr>
+<td><button value="Save Olympiad" action="bypass -h admin_saveolymp" width=125 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Manual Hero" action="bypass -h admin_manualhero" width=125 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+</table>
+<br>
+</center>
+Server Software: Running L2J created by L2Chef and the L2J team. www.l2jserver.com for details.
 </body></html>
