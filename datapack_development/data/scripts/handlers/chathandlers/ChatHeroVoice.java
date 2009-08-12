@@ -22,7 +22,7 @@ import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.network.serverpackets.CreatureSay;
 
 /**
- * A chat handler
+ * Hero chat handler.
  *
  * @author  durgus
  */
@@ -39,22 +39,18 @@ public class ChatHeroVoice implements IChatHandler
 	 */
 	public void handleChat(int type, L2PcInstance activeChar, String target, String text)
 	{
-		if (activeChar.isHero())
+		if (activeChar.isHero() || activeChar.isGM())
 		{
 			if (!activeChar.getFloodProtectors().getHeroVoice().tryPerformAction("hero voice"))
 			{
 				activeChar.sendMessage("Action failed. Heroes are only able to speak in the global channel once every 10 seconds.");
 				return;
 			}
-			
 			CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
 			
 			Collection<L2PcInstance> pls = L2World.getInstance().getAllPlayers().values();
-			//synchronized (L2World.getInstance().getAllPlayers())
-			{
-				for (L2PcInstance player : pls)
-					player.sendPacket(cs);
-			}
+			for (L2PcInstance player : pls)
+				player.sendPacket(cs);
 		}
 	}
 	

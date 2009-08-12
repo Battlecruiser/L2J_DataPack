@@ -25,7 +25,7 @@ import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.network.serverpackets.CreatureSay;
 
 /**
- * A chat handler
+ * Shout chat handler.
  *
  * @author  durgus
  */
@@ -45,19 +45,22 @@ public class ChatShout implements IChatHandler
 		CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
 		
 		Collection<L2PcInstance> pls = L2World.getInstance().getAllPlayers().values();
-				
+		
 		if (Config.DEFAULT_GLOBAL_CHAT.equalsIgnoreCase("on") || (Config.DEFAULT_GLOBAL_CHAT.equalsIgnoreCase("gm") && activeChar.isGM()))
 		{
 			int region = MapRegionTable.getInstance().getMapRegion(activeChar.getX(), activeChar.getY());
-			//synchronized (L2World.getInstance().getAllPlayers())
-			{
-				for (L2PcInstance player : pls)
-					if (region == MapRegionTable.getInstance().getMapRegion(player.getX(), player.getY()) && !BlockList.isBlocked(player, activeChar) && player.getInstanceId() == activeChar.getInstanceId())
-						player.sendPacket(cs);
-			}
+			for (L2PcInstance player : pls)
+				if (region == MapRegionTable.getInstance().getMapRegion(player.getX(), player.getY()) && !BlockList.isBlocked(player, activeChar) && player.getInstanceId() == activeChar.getInstanceId())
+					player.sendPacket(cs);
 		}
 		else if (Config.DEFAULT_GLOBAL_CHAT.equalsIgnoreCase("global"))
 		{
+			if (!activeChar.getFloodProtectors().getHeroVoice().tryPerformAction("global chat"))
+			{
+				activeChar.sendMessage("Do not spam shout channel.");
+				return;
+			}
+			
 			for (L2PcInstance player : pls)
 			{
 				if (!BlockList.isBlocked(player, activeChar))

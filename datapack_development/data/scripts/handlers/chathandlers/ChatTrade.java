@@ -25,7 +25,7 @@ import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.network.serverpackets.CreatureSay;
 
 /**
- * A chat handler
+ * Trade chat handler.
  *
  * @author  durgus
  */
@@ -48,21 +48,23 @@ public class ChatTrade implements IChatHandler
 		
 		if (Config.DEFAULT_TRADE_CHAT.equalsIgnoreCase("on") || (Config.DEFAULT_TRADE_CHAT.equalsIgnoreCase("gm") && activeChar.isGM()))
 		{
+			int region = MapRegionTable.getInstance().getMapRegion(activeChar.getX(), activeChar.getY());
+			for (L2PcInstance player : pls)
+				if (region == MapRegionTable.getInstance().getMapRegion(player.getX(), player.getY()) && !BlockList.isBlocked(player, activeChar) && player.getInstanceId() == activeChar.getInstanceId())
+					player.sendPacket(cs);
+		}
+		else if (Config.DEFAULT_TRADE_CHAT.equalsIgnoreCase("global"))
+		{
+			if (!activeChar.getFloodProtectors().getHeroVoice().tryPerformAction("global chat"))
+			{
+				activeChar.sendMessage("Do not spam trade channel.");
+				return;
+			}
+			
 			for (L2PcInstance player : pls)
 			{
 				if (!BlockList.isBlocked(player, activeChar))
 					player.sendPacket(cs);
-			}
-			
-		}
-		else if (Config.DEFAULT_TRADE_CHAT.equalsIgnoreCase("limited"))
-		{
-			int region = MapRegionTable.getInstance().getMapRegion(activeChar.getX(), activeChar.getY());
-			//synchronized (L2World.getInstance().getAllPlayers())
-			{
-				for (L2PcInstance player : pls)
-					if (region == MapRegionTable.getInstance().getMapRegion(player.getX(), player.getY()) && !BlockList.isBlocked(player, activeChar) && player.getInstanceId() == activeChar.getInstanceId())
-						player.sendPacket(cs);
 			}
 		}
 	}
