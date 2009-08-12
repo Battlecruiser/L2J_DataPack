@@ -197,6 +197,7 @@
   <set name="effectRange" val="400"/>
 </skill>
 <skill id="818" levels="1" name="Evasion Counter">
+  <set name="magicLvl" val="74"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
@@ -206,6 +207,7 @@
   <set name="chanceType" val="ON_EVADED_HIT"/>
 </skill>
 <skill id="819" levels="1" name="Evasion Chance">
+  <set name="magicLvl" val="74"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
@@ -215,6 +217,7 @@
   <set name="chanceType" val="ON_EVADED_HIT"/>
 </skill>
 <skill id="820" levels="1" name="Evasion Haste">
+  <set name="magicLvl" val="74"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
@@ -534,6 +537,7 @@
   <set name="mpConsume" val="72"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
+  <set name="magicLvl" val="75"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="10000"/>
@@ -554,6 +558,7 @@
   <set name="mpConsume" val="72"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
+  <set name="magicLvl" val="75"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="10000"/>
@@ -573,6 +578,7 @@
   <set name="mpConsume" val="72"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
+  <set name="magicLvl" val="75"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="2500"/>
   <set name="reuseDelay" val="10000"/>
