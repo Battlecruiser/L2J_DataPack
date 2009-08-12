@@ -74,7 +74,7 @@
     </and>
   </cond>
 </skill>
-<skill id="2506" levels="1" name="Chant of Critical">
+<skill id="2506" levels="1" name="Chant of Critical Attack">
   <set name="itemConsumeId" val="10609"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
@@ -139,7 +139,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="transformId" val="107"/>
   <for>
-    <effect name="Transformation" time="1800" val="0"/> <!-- duration Guess -->
+    <effect name="Transformation" time="3600" val="0"/>
   </for>
 </skill>
 <skill id="2512" levels="1" name="Herb of Vampiric Rage">

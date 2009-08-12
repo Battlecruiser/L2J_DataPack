@@ -24,7 +24,7 @@ import net.sf.l2j.gameserver.network.serverpackets.CreatureSay;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * A chat handler
+ * Tell chat handler.
  *
  * @author  durgus
  */
@@ -41,17 +41,15 @@ public class ChatTell implements IChatHandler
 	 */
 	public void handleChat(int type, L2PcInstance activeChar, String target, String text)
 	{
-		//Return if player is chat banned
 		if (activeChar.isChatBanned())
 		{
-			activeChar.sendMessage("You are currently banned from chat");
+			activeChar.sendPacket(new SystemMessage(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED));
 			return;
 		}
 		
-		//return if player is in jail
 		if (Config.JAIL_DISABLE_CHAT && activeChar.isInJail())
 		{
-			activeChar.sendMessage("You are currently in jail and cannot chat.");
+			activeChar.sendPacket(new SystemMessage(SystemMessageId.CHATTING_PROHIBITED));
 			return;
 		}
 		
@@ -73,7 +71,7 @@ public class ChatTell implements IChatHandler
 			}
 			if (receiver.isChatBanned())
 			{
-				activeChar.sendMessage("Player is chat banned.");
+				activeChar.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_CHAT_BANNED));
 				return;
 			}
 			if (receiver.getClient().isDetached())
@@ -81,7 +79,6 @@ public class ChatTell implements IChatHandler
 				activeChar.sendMessage("Player is in offline mode.");
 				return;
 			}
-			
 			if (!receiver.getMessageRefusal())
 			{
 				receiver.sendPacket(cs);
