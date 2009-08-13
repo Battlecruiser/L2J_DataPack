@@ -29,7 +29,7 @@ class Quest (JQuest) :
     elif htmltext == "32010-02.htm" :
        st.playSound("ItemSound.quest_finish")
        st.giveItems(MARK,1)
-       st.exitQuest(1)
+       st.set("cond","2")
     return htmltext
 
  def onTalk (self,npc,player):
@@ -55,9 +55,9 @@ class Quest (JQuest) :
        elif npcId == FLAURON :
          if cond == 1 :
            htmltext = "32010-01.htm"
-           st.set("cond","2")
          else :
            htmltext = "32010-03.htm"
+           st.exitQuest(1)
    return htmltext
 
 QUEST       = Quest(636,qn,"The Truth Beyond the Gate")
