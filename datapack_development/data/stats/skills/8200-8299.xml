@@ -595,13 +595,13 @@
   </for>
 </skill>
 <skill id="8247" levels="1" name="Mount Light Purple Maned Horse">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
   <set name="transformId" val="106"/>
   <for>
     <effect name="Transformation" time="1800" val="0">
-      <add order="0x40" stat="runSpd" val="50"/> <!-- Run Speed +50 -->
+      <mul order="0x30" stat="runSpd" val="1.5"/> <!-- Run Speed +50% -->
     </effect>
   </for>
 </skill>
@@ -698,14 +698,26 @@
   <set name="npcId" val="16060"/>
 </skill>
 <skill id="8261" levels="1" name="Steam Beatle Mount">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="transformId" val="110"/>
+  <for>
+    <effect name="Transformation" time="1800" val="0">
+      <mul order="0x30" stat="runSpd" val="1.5"/> <!-- Run Speed +50% -->
+    </effect>
+  </for>
 </skill>
 <skill id="8262" levels="1" name="Tawny Maned Lion Mount">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="transformId" val="109"/>
+  <for>
+    <effect name="Transformation" time="1800" val="0">
+      <mul order="0x30" stat="runSpd" val="1.5"/> <!-- Run Speed +50% -->
+    </effect>
+  </for>
 </skill>
 <skill id="8263" levels="1" name="Transform Snow King">
   <set name="target" val="TARGET_NONE"/>
