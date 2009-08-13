@@ -964,11 +964,21 @@
   <set name="weaponsAllowed" val="32"/> <!-- Bow -->
 </skill>
 <skill id="774" levels="1" name="Dread Pool">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="magicLvl" val="83"/>
-  <set name="operateType" val="OP_PASSIVE"/>
   <set name="hitTime" val="1000"/>
+  <set name="isDebuff" val="true"/>
+  <set name="magicLvl" val="83"/>
+  <set name="mpConsume" val="87"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="40"/> <!-- Guess -->
+  <set name="reuseDelay" val="75000"/>
+  <set name="skillRadius" val="100"/>
+  <set name="skillType" val="FEAR"/>
+  <set name="target" val="TARGET_AURA"/>
+  <for>
+    <effect count="4" name="Fear" time="2" val="0">
+      <mul order="0x30" stat="runSpd" val="0.67"/>
+    </effect>
+  </for>
 </skill>
 <skill id="775" levels="1" name="Weapon Blockade">
   <set name="castRange" val="40"/>
