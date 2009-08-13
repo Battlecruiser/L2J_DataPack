@@ -391,7 +391,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <mul order="0x30" stat="derangementVuln" val="0"/>
+    <mul order="0x30" stat="derangementVuln" val="0.5"/> <!-- TEMP FIX: Changed from 0 to 0.5 due to formulas are not retail like -->
   </for>
 </skill>
 <skill id="4122" levels="1" name="Antharas">

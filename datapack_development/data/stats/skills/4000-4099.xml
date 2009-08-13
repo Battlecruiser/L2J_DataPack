@@ -1224,9 +1224,9 @@
   <set name="effectRange" val="1100"/>
   <set name="killByDOT" val="true"/>
   <for>
-    <effect name="ImmobileBuff" time="4200" val="0"/>
     <effect name="Root" time="4200" val="0"/>
-    <effect count="1400" name="DamOverTime" time="3" val="60" abnormal="poison"/>
+    <effect count="1400" name="DamOverTime" time="3" val="60" abnormal="poison" noicon="1"/>
+    <effect name="ImmobileBuff" time="4200" val="0" noicon="1"/> <!-- TEMP FIX -->
   </for>
 </skill>
 <skill id="4083" levels="1" name="Die! You fool!">

@@ -126,7 +126,7 @@
   <set name="target" val="TARGET_SELF"/>
   <for>
     <effect name="Buff" time="1200" val="0">
-      <mul order="0x30" stat="magicDamVul" val="0.5"/> <!-- TODO: needs to be verified, desc say 100% but it can't be 100% resist for 20min (is weird) -->
+      <mul order="0x30" stat="magicDamVul" val="0.5"/> <!-- TEMP FIX: Changed from 0 to 0.5 due to formulas are not retail like -->
     </effect>
   </for>
 </skill>
