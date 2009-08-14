@@ -10,8 +10,8 @@ public class MagicLeader extends L2Transformation
 {
 	public MagicLeader()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(18, 1800, 11.0, 24.0);
+		// id, colRadius, colHeight
+		super(18, 11.0, 24.0);
 	}
 
 	public void onTransform()

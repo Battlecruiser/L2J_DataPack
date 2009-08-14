@@ -8,10 +8,10 @@ public class VanguardTempleKnight extends L2Transformation
 {
 	public VanguardTempleKnight()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(314, Integer.MAX_VALUE, 7.0, 24.0);
+		// id
+		super(314);
 	}
-	
+
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 314 || getPlayer().isCursedWeaponEquipped())

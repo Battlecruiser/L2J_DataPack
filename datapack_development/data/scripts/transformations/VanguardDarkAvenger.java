@@ -8,8 +8,8 @@ public class VanguardDarkAvenger extends L2Transformation
 {
 	public VanguardDarkAvenger()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(313, Integer.MAX_VALUE, 8.0, 23.0);
+		// id
+		super(313);
 	}
 	
 	public void onTransform()

@@ -8,10 +8,10 @@ public class VanguardPaladin extends L2Transformation
 {
 	public VanguardPaladin()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(312, Integer.MAX_VALUE, 8.0, 23.0);
+		// id
+		super(312);
 	}
-	
+
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 312 || getPlayer().isCursedWeaponEquipped())

@@ -10,8 +10,8 @@ public class FortressCaptain extends L2Transformation
 {
 	public FortressCaptain()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(21, 1800, 14.0, 27.0);
+		// id, colRadius, colHeight
+		super(21, 14.0, 27.0);
 	}
 
 	public void onTransform()

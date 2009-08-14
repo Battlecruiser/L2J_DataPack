@@ -4,8 +4,6 @@ import net.sf.l2j.gameserver.model.L2Transformation;
 import net.sf.l2j.gameserver.instancemanager.TransformationManager;
 
 /**
- * This is currently only a test of the java script engine
- * 
  * @author durgus
  *
  */
@@ -13,8 +11,8 @@ public class Akamanah extends L2Transformation
 {
     public Akamanah()
     {
-        // id, duration (secs), colRadius, colHeight
-        super(302, Integer.MAX_VALUE, 10.0, 32.73);
+        // id, colRadius, colHeight
+        super(302, 10.0, 32.73);
     }
     
     public void onTransform()

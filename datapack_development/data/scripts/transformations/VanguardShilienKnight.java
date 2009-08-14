@@ -8,10 +8,10 @@ public class VanguardShilienKnight extends L2Transformation
 {
 	public VanguardShilienKnight()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(315, Integer.MAX_VALUE, 6.0, 23.0);
+		// id
+		super(315);
 	}
-	
+
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 315 || getPlayer().isCursedWeaponEquipped())

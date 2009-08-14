@@ -8,10 +8,10 @@ public class InquisitorShilienElder extends L2Transformation
 {
 	public InquisitorShilienElder()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(318, Integer.MAX_VALUE, 8.0, 25.0);
+		// id
+		super(318);
 	}
-	
+
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 318 || getPlayer().isCursedWeaponEquipped())
