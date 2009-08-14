@@ -8,8 +8,8 @@ public class Teleporter2 extends L2Transformation
 {
 	public Teleporter2()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(107, 1800, 11.0, 25.0);
+		// id, colRadius, colHeight
+		super(107, 11.0, 25.0);
 	}
 
 	public void onTransform()

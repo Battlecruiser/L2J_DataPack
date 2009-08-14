@@ -8,10 +8,10 @@ public class InquisitorBishop extends L2Transformation
 {
 	public InquisitorBishop()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(316, Integer.MAX_VALUE, 8.0, 22.0);
+		// id
+		super(316);
 	}
-	
+
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 316 || getPlayer().isCursedWeaponEquipped())

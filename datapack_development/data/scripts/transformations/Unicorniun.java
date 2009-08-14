@@ -10,8 +10,8 @@ public class Unicorniun extends L2Transformation
 {
 	public Unicorniun()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(219, 1800, 16.0, 24.0);
+		// id, colRadius, colHeight
+		super(219, 16.0, 24.0);
 	}
 
 	public void onTransform()

@@ -9,8 +9,8 @@ public class GrizzlyBear extends L2Transformation
 {
 	public GrizzlyBear()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(320, 1800, 21.0, 40.0);
+		// id, colRadius, colHeight
+		super(320, 21.0, 40.0);
 	}
 
 	public void onTransform()

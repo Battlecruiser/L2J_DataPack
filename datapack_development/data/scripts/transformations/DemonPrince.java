@@ -18,8 +18,8 @@ public class DemonPrince extends L2Transformation
 {
 	public DemonPrince()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(311, 1800, 33.0, 49.0);
+		// id, colRadius, colHeight
+		super(311, 33.0, 49.0);
 	}
 
 	public void onTransform()

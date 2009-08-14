@@ -10,8 +10,8 @@ public class ScrollRed extends L2Transformation
 {
 	public ScrollRed()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(121, 1800, 12.0, 28.0);
+		// id, colRadius, colHeight
+		super(121, 12.0, 28.0);
 	}
 
 	public void onTransform()

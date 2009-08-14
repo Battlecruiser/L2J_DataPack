@@ -10,8 +10,8 @@ public class HumanMercenary extends L2Transformation
 {
 	public HumanMercenary()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(10, 1800, 12.0, 24.0);
+		// id, colRadius, colHeight
+		super(10, 12.0, 24.0);
 	}
 
 	public void onTransform()

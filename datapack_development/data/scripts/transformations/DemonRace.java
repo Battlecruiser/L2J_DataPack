@@ -10,8 +10,8 @@ public class DemonRace extends L2Transformation
 {
 	public DemonRace()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(220, 1800, 16.0, 29.0);
+		// id, colRadius, colHeight
+		super(220, 16.0, 29.0);
 	}
 
 	public void onTransform()

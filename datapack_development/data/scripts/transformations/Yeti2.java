@@ -8,8 +8,8 @@ public class Yeti2 extends L2Transformation
 {
 	public Yeti2()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(323, 1800, 18.0, 32.0);
+		// id, colRadius, colHeight
+		super(323, 18.0, 32.0);
 	}
 
 	public void onTransform()

@@ -10,8 +10,8 @@ public class Frog extends L2Transformation
 {
 	public Frog()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(111, 1800, 20.0, 8.0);
+		// id, colRadius, colHeight
+		super(111, 20.0, 8.0);
 	}
 
 	public void onTransform()

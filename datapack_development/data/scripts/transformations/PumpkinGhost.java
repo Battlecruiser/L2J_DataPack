@@ -8,8 +8,8 @@ public class PumpkinGhost extends L2Transformation
 {
 	public PumpkinGhost()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(108, 3600, 18.0, 32.0);
+		// id, colRadius, colHeight
+		super(108, 18.0, 32.0);
 	}
 
 	public void onTransform()

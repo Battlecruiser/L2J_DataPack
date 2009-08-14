@@ -10,8 +10,8 @@ public class KamaelGuardCaptain extends L2Transformation
 {
 	public KamaelGuardCaptain()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(19, 1800, 12.0, 23.0);
+		// id, colRadius, colHeight
+		super(19, 12.0, 23.0);
 	}
 
 	public void onTransform()

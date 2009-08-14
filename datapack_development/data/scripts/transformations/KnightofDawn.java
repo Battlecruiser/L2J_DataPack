@@ -10,8 +10,8 @@ public class KnightofDawn extends L2Transformation
 {
 	public KnightofDawn()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(20, 1800, 12.0, 25.0);
+		// id, colRadius, colHeight
+		super(20, 12.0, 25.0);
 	}
 
 	public void onTransform()

@@ -13,9 +13,8 @@ public class Zariche extends L2Transformation
 {
     public Zariche()
     {
-        // id, duration (secs), colRadius, colHeight
-        // "infinite" duration - ended manually
-        super(301, Integer.MAX_VALUE, 9.0, 31.0);
+        // id, colRadius, colHeight
+        super(301, 9.0, 31.0);
     }
     
     public void onTransform()

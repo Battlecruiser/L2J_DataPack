@@ -10,8 +10,8 @@ public class RoyalGuardCaptain extends L2Transformation
 {
 	public RoyalGuardCaptain()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(16, 1800, 12.0, 24.0);
+		// id, colRadius, colHeight
+		super(16, 12.0, 24.0);
 	}
 
 	public void onTransform()

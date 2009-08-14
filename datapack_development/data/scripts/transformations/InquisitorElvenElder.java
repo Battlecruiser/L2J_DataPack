@@ -8,10 +8,10 @@ public class InquisitorElvenElder extends L2Transformation
 {
 	public InquisitorElvenElder()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(317, Integer.MAX_VALUE, 7.0, 24.0);
+		// id
+		super(317);
 	}
-	
+
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 317 || getPlayer().isCursedWeaponEquipped())

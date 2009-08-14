@@ -10,8 +10,8 @@ public class SnowKung extends L2Transformation
 {
 	public SnowKung()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(114, 1800, 27.0, 31.0);
+		// id, colRadius, colHeight
+		super(114, 27.0, 31.0);
 	}
 
 	public void onTransform()

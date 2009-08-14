@@ -10,8 +10,8 @@ public class WingTow extends L2Transformation
 {
 	public WingTow()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(120, 1800, 8.0, 8.0);
+		// id, colRadius, colHeight
+		super(120, 8.0, 8.0);
 	}
 
 	public void onTransform()

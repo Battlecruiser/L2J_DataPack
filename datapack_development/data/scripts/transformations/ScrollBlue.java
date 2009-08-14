@@ -10,8 +10,8 @@ public class ScrollBlue extends L2Transformation
 {
 	public ScrollBlue()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(122, 1800, 12.0, 28.0);
+		// id, colRadius, colHeight
+		super(122, 12.0, 28.0);
 	}
 
 	public void onTransform()
