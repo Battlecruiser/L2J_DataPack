@@ -10,8 +10,8 @@ public class YoungChild extends L2Transformation
 {
 	public YoungChild()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(112, 1800, 10.0, 12.0);
+		// id, colRadius, colHeight
+		super(112, 10.0, 12.0);
 	}
 
 	public void onTransform()

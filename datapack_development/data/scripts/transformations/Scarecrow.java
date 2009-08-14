@@ -10,8 +10,8 @@ public class Scarecrow extends L2Transformation
 {
 	public Scarecrow()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(115, 1800, 14.0, 30.0);
+		// id, colRadius, colHeight
+		super(115, 14.0, 30.0);
 	}
 
 	public void onTransform()

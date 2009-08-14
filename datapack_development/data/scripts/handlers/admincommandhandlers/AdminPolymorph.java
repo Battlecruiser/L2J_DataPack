@@ -78,19 +78,14 @@ public class AdminPolymorph implements IAdminCommandHandler
 					try
 					{
 						int id = Integer.parseInt(parts[1]);
-						long duration = Long.MAX_VALUE; // forever by default
-						if (parts.length > 2)
-						{
-							duration = Long.parseLong(parts[2]);
-						}
-						if (!TransformationManager.getInstance().transformPlayer(id, cha, duration))
+						if (!TransformationManager.getInstance().transformPlayer(id, cha))
 						{
 							cha.sendMessage("Unknow transformation id: " + id);
 						}
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Usage: //transform <id> [duration (secs)]");
+						activeChar.sendMessage("Usage: //transform <id>");
 					}
 				}
 				else if (parts.length == 1)

@@ -10,8 +10,8 @@ public class OrcMercenary extends L2Transformation
 {
 	public OrcMercenary()
 	{
-		// id, duration (secs), colRadius, colHeight
-		super(13, 1800, 14.0, 27.0);
+		// id, colRadius, colHeight
+		super(13, 14.0, 27.0);
 	}
 
 	public void onTransform()
