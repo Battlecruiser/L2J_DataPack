@@ -173,7 +173,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
     <add order="0x40" stat="windRes" val="50"/>
-    <add order="0x40" stat="earthRes" val="15"/>
+    <sub order="0x40" stat="earthRes" val="15"/>
   </for>
 </skill>
 <skill id="4016" levels="1" name="Resistance To Earth, Vulnerable To Wind">
