@@ -19023,9 +19023,9 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (10659,0,9914,31),
 (10408,0,9914,32),
 (13025,0,9914,33),
-(13026,0,9914,34);
-
--- ADD OTHER AGATHIONS
+(13026,0,9914,34),
+(13546,0,9914,35),  -- Steam Sledge Mounting Bracelet
+(13547,0,9914,36);  -- Tawny-Maned Lion Mounting Bracelet
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
 -- (GM-Shop) Talisman
@@ -19120,7 +19120,11 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (13067,0,9916,4),
 (13068,0,9916,5),
 (10639,0,9916,6),
-(3470,0,9916,7);
+(3470,0,9916,7),
+(9142,0,9916,8),
+(9143,0,9916,9),
+(14720,0,9916,10),
+(14721,0,9916,11);
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
 -- (GM-Shop) Boss Jewels
@@ -19159,7 +19163,15 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (10307,0,9918,20),
 (10661,0,9918,21),
 (10662,0,9918,22),
-(10663,0,9918,23);
+(10663,0,9918,23),
+(13548,0,9918,24),  -- Toy Knight Hunting Helper Necklace
+(13549,0,9918,25),  -- Soul Monk Hunting Helper Necklace
+(13550,0,9918,26),  -- Owl Monk Hunting Helper Necklace
+(14061,0,9918,27),  -- Toy Knight Summon Bracelet
+(14062,0,9918,28),  -- Spirit Shaman Summon Bracelet
+(14063,0,9918,29),  -- Owl Monk Summon Bracelet
+(14064,0,9918,30);  -- Turtle Ascetic Summon Bracelet
+
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
 -- (GM-Shop) Castle Circlets
@@ -19622,7 +19634,12 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (13524,0,9925,69), -- Gracia Soldier One-handed Sword
 (13525,0,9925,70), -- Gracia Soldier Shield
 (13061,0,9925,71), -- Exclusive to Monsters (Baroness\' Employee)
-(13062,0,9925,72); -- Exclusive to Monsters (Employee\'s Friend)
+(13062,0,9925,72), -- Exclusive to Monsters (Employee\'s Friend)
+(13809,0,9925,73), -- Court Magician\'s Magic Staff
+(13842,0,9925,74), -- Tiat Two-Handed Weapon
+(13843,0,9925,75), -- Draconic Peltast Weapon
+(13845,0,9925,76), -- Attribute Master Yin\'s Sword
+(13881,0,9925,77); -- Attribute Master Yang\'s Sword
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
 -- (GM-Shop) Sigils
@@ -22145,10 +22162,58 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Misc Event Items
-(13971,0,9977,1), -- Red Boing Fantasy Hammer
-(13972,0,9977,2), -- Blue Boing Fantasy Hammer
-(13973,0,9977,3), -- Small Red Boing Fantasy Hammer
-(13974,0,9977,4); -- Small Blue Boing Fantasy Hammer
+(10254,0,9977,1), -- 1st Place Treasure Sack
+(10255,0,9977,2), -- 2nd Place Treasure Sack
+(10256,0,9977,3), -- 3rd Place Treasure Sack
+(10257,0,9977,4), -- 4th Place Treasure Sack
+(10258,0,9977,5), -- 5th Place Treasure Sack
+(10259,0,9977,6), -- 6th Place Treasure Sack
+(10272,0,9977,7), -- Treasure Sack Piece
+(13971,0,9977,8), -- Red Boing Fantasy Hammer
+(13972,0,9977,9), -- Blue Boing Fantasy Hammer
+(13973,0,9977,10), -- Small Red Boing Fantasy Hammer
+(13974,0,9977,11), -- Small Blue Boing Fantasy Hammer
+(13539,0,9977,12), -- Staff of Master Yogi
+(13540,0,9977,13), -- Master Yogi\'s Scroll: Enchant Weapon
+(13541,0,9977,14), -- Yogi\'s Enchanted Treasure Box
+(13542,0,9977,15), -- Yogi\'s Enchanted Reward Cube
+(20189,0,9977,16), -- Premium Valentine Decoration Pack
+(20190,0,9977,17), -- Premium Valentine Decoration - 15 Day Expiration Period
+(20191,0,9977,18), -- Valentine Cake Recipe
+(20192,0,9977,19), -- Valentine Dark Chocolate
+(20193,0,9977,20), -- Valentine White Chocolate
+(20194,0,9977,21), -- Valentine Fresh Cream
+(20195,0,9977,22), -- Simple Valentine Cake
+(20196,0,9977,23), -- Velvety Valentine Cake
+(20197,0,9977,24), -- Delectable Valentine Cake
+(20198,0,9977,25), -- Decadent Valentine Cake
+(20199,0,9977,26), -- Heavenly Valentine Cake - 30 Day Expiration Period
+(20210,0,9977,27), -- Charming Valentine Gift Set
+(20211,0,9977,28), -- Naughty Valentine Gift Set
+(20214,0,9977,29), -- Chocolate Cookie
+(14720,0,9977,30), -- Event - Apiga
+(14721,0,9977,31), -- Event - Golden Apiga
+(14722,0,9977,32), -- Event - Cupid\'s Fatigue Recovery Potion
+(14723,0,9977,33), -- Event - Cupid\'s Powerful Fatigue Recovery Potion
+(14724,0,9977,34), -- Event - Milk Cow Summon Scroll
+(14725,0,9977,35), -- Event - Head Milk Cow Summon Scroll
+(14726,0,9977,36), -- Event - Gloomy Milk Cow Summon Scroll
+(14727,0,9977,37), -- Event - Gloomy Head Milk Cow Summon Scroll
+(14728,0,9977,38), -- Event - Orr Cube - 30 day limited period
+(14729,0,9977,39), -- Event - Crystal Cube
+(14730,0,9977,40), -- Event - Golden Orr Cube Fragment
+(14731,0,9977,41), -- Event - Silver Orr Cube Fragment
+(14732,0,9977,42), -- Event - Copper Orr Cube Fragment
+(14733,0,9977,43), -- Event - Black Orr Cube Fragment
+(14734,0,9977,44), -- Event - Clear Crystal Cube Fragment
+(14735,0,9977,45), -- Event - Purple Crystal Cube Fragment
+(14736,0,9977,46), -- Event - Pink Crystal Cube Fragment
+(14737,0,9977,47), -- Event - Dark Brown Crystal Cube Fragment
+(14738,0,9977,48), -- Event - Black Crystal Cube Fragment
+(14739,0,9977,49), -- Event - Fresh Milk
+(14740,0,9977,50), -- Event - Save the Cow Event Pack
+(9142,0,9977,51), -- Event - Apiga
+(9143,0,9977,52); -- Event - Golden Apiga
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Misc Consumables
@@ -22161,7 +22226,23 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (9451,0,9978,7),
 (10413,0,9978,8),
 (13796,0,9978,9),
-(13841,0,9978,10);
+(13841,0,9978,10),
+(5589,0,9978,11),
+(8615,0,9978,12),
+(14038,0,9978,13), -- Stone of Stamina
+(14039,0,9978,14), -- High-quality Stone of Stamina
+(14040,0,9978,15), -- Stone of Mana
+(14041,0,9978,16), -- High-quality Stone of Mana
+(14042,0,9978,17), -- Stone of Recovery
+(14043,0,9978,18), -- High-quality Stone of Recovery
+(14044,0,9978,19), -- Stone of Destruction
+(14045,0,9978,20), -- Stone of Invincibility
+(14046,0,9978,21), -- Stone of Great Speed
+(14047,0,9978,22), -- Stone of Speed
+(14048,0,9978,23), -- Stone of Concentration
+(14049,0,9978,24), -- Stone of Ease
+(14050,0,9978,25), -- Stone of Abundance
+(14051,0,9978,26); -- Recovery Stone
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Arrows
