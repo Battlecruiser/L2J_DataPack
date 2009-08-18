@@ -33,6 +33,7 @@ import net.sf.l2j.gameserver.instancemanager.GrandBossManager;
 import net.sf.l2j.gameserver.instancemanager.SiegeManager;
 import net.sf.l2j.gameserver.model.L2Skill;
 import net.sf.l2j.gameserver.model.L2World;
+import net.sf.l2j.gameserver.model.actor.L2Character;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.model.entity.TvTEvent;
 import net.sf.l2j.gameserver.network.SystemMessageId;
@@ -393,6 +394,11 @@ public class Wedding implements IVoicedCommandHandler
 		else if (!TvTEvent.onEscapeUse(activeChar.getObjectId()))
 		{
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			return false;
+		}
+		else if (activeChar.isInsideZone(L2Character.ZONE_NOSUMMONFRIEND))
+		{
+			activeChar.sendMessage("You are in area which blocks summoning.");
 			return false;
 		}
 		
