@@ -601,7 +601,7 @@
   <set name="transformId" val="106"/>
   <for>
     <effect name="Transformation" time="1800" val="0">
-      <mul order="0x30" stat="runSpd" val="1.5"/> <!-- Run Speed +50% -->
+      <mul order="0x30" stat="runSpd" val="1.5"/> <!-- Run Speed +40% -->
     </effect>
   </for>
 </skill>
@@ -704,7 +704,7 @@
   <set name="transformId" val="110"/>
   <for>
     <effect name="Transformation" time="1800" val="0">
-      <mul order="0x30" stat="runSpd" val="1.5"/> <!-- Run Speed +50% -->
+      <mul order="0x30" stat="runSpd" val="1.5"/> <!-- Run Speed +40% -->
     </effect>
   </for>
 </skill>
@@ -715,24 +715,36 @@
   <set name="transformId" val="109"/>
   <for>
     <effect name="Transformation" time="1800" val="0">
-      <mul order="0x30" stat="runSpd" val="1.5"/> <!-- Run Speed +50% -->
+      <mul order="0x30" stat="runSpd" val="1.5"/> <!-- Run Speed +40% -->
     </effect>
   </for>
 </skill>
 <skill id="8263" levels="1" name="Transform Snow King">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="transformId" val="114"/>
+  <for>
+    <effect name="Transformation" time="3600" val="0"/> <!-- Guess -->
+  </for>
 </skill>
 <skill id="8264" levels="1" name="Transform Scarecrow Jack">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="transformId" val="115"/>
+  <for>
+    <effect name="Transformation" time="3600" val="0"/> <!-- Guess -->
+  </for>
 </skill>
 <skill id="8265" levels="1" name="Transform Tin Golem">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="transformId" val="116"/>
+  <for>
+    <effect name="Transformation" time="3600" val="0"/> <!-- Guess -->
+  </for>
 </skill>
 <skill id="8266" levels="1" name="Gludio Talisman">
   <set name="target" val="TARGET_NONE"/>
@@ -792,14 +804,22 @@
   <set name="hitTime" val="100"/>
 </skill>
 <skill id="8277" levels="1" name="Transform Native">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="transformId" val="101"/>
+  <for>
+    <effect name="Transformation" time="-1" val="0"/>
+  </for>
 </skill>
 <skill id="8278" levels="1" name="Transform Guard of Dawn">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="transformId" val="113"/>
+  <for>
+    <effect name="Transformation" time="3600" val="0"/> <!-- Guess -->
+  </for>
 </skill>
 <skill id="8279" levels="1" name="Blessing of Fire">
   <set name="target" val="TARGET_NONE"/>

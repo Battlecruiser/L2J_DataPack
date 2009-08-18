@@ -856,9 +856,14 @@
   </for>
 </skill>
 <skill id="767" levels="1" name="Expose Weak Point">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+  <set name="activationChance" val="5"/>
+  <set name="chanceType" val="ON_ATTACKED"/>
+  <set name="magicLvl" val="81"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="triggeredId" val="5565"/>
+  <set name="triggeredLevel" val="1"/>
 </skill>
 <skill id="768" levels="1" name="Exciting Adventure">
   <set name="magicLvl" val="83"/>

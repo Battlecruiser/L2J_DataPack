@@ -550,7 +550,7 @@
     <player landingZone="True"/>
   </cond>
   <for>
-    <effect name="Transformation" time="-1" val="0"> <!-- Transformation have unlimited time -->
+    <effect name="Transformation" time="-1" val="0"> <!-- Transformation has unlimited time -->
     </effect>
   </for>
 </skill>
@@ -570,7 +570,7 @@
     <player landingZone="True"/>
   </cond>
   <for>
-    <effect name="Transformation" time="-1" val="0"> <!-- Transformation have unlimited time -->
+    <effect name="Transformation" time="-1" val="0"> <!-- Transformation has unlimited time -->
     </effect>
   </for>
 </skill>
@@ -590,7 +590,7 @@
     <player landingZone="True"/>
   </cond>
   <for>
-    <effect name="Transformation" time="-1" val="0"> <!-- Transformation have unlimited time -->
+    <effect name="Transformation" time="-1" val="0"> <!-- Transformation has unlimited time -->
     </effect>
   </for>
 </skill>
@@ -705,76 +705,124 @@
   </for>
 </skill>
 <skill id="857" levels="1" name="Human Mercenary">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
   <set name="hitTime" val="2500"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="transformId" val="10"/>
+  <for>
+    <effect name="Transformation" time="3600" val="0"/> <!-- Guess -->
+  </for>
 </skill>
 <skill id="858" levels="1" name="Elf Mercenary">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
   <set name="hitTime" val="2500"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="transformId" val="11"/>
+  <for>
+    <effect name="Transformation" time="3600" val="0"/> <!-- Guess -->
+  </for>
 </skill>
 <skill id="859" levels="1" name="Dark Elf Mercenary">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
   <set name="hitTime" val="2500"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="transformId" val="12"/>
+  <for>
+    <effect name="Transformation" time="3600" val="0"/> <!-- Guess -->
+  </for>
 </skill>
 <skill id="860" levels="1" name="Orc Mercenary">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
   <set name="hitTime" val="2500"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="transformId" val="13"/>
+  <for>
+    <effect name="Transformation" time="3600" val="0"/> <!-- Guess -->
+  </for>
 </skill>
 <skill id="861" levels="1" name="Dwarf Mercenary">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
   <set name="hitTime" val="2500"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="transformId" val="14"/>
+  <for>
+    <effect name="Transformation" time="3600" val="0"/> <!-- Guess -->
+  </for>
 </skill>
 <skill id="862" levels="1" name="Kamael Mercenary">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
   <set name="hitTime" val="2500"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="transformId" val="15"/>
+  <for>
+    <effect name="Transformation" time="3600" val="0"/> <!-- Guess -->
+  </for>
 </skill>
 <skill id="863" levels="1" name="Royal Guard Captain">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
   <set name="hitTime" val="2500"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="transformId" val="16"/>
+  <for>
+    <effect name="Transformation" time="3600" val="0"/> <!-- Guess -->
+  </for>
 </skill>
 <skill id="864" levels="1" name="Archer Captain">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
   <set name="hitTime" val="2500"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="transformId" val="17"/>
+  <for>
+    <effect name="Transformation" time="3600" val="0"/> <!-- Guess -->
+  </for>
 </skill>
 <skill id="865" levels="1" name="Magic Leader">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
   <set name="hitTime" val="2500"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="transformId" val="18"/>
+  <for>
+    <effect name="Transformation" time="3600" val="0"/> <!-- Guess -->
+  </for>
 </skill>
 <skill id="866" levels="1" name="Kamael Guard Captain">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
   <set name="hitTime" val="2500"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="transformId" val="19"/>
+  <for>
+    <effect name="Transformation" time="3600" val="0"/> <!-- Guess -->
+  </for>
 </skill>
 <skill id="867" levels="1" name="Knight of Dawn">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
   <set name="hitTime" val="2500"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="transformId" val="20"/>
+  <for>
+    <effect name="Transformation" time="3600" val="0"/> <!-- Guess -->
+  </for>
 </skill>
 <skill id="868" levels="1" name="Fortress Captain">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
   <set name="hitTime" val="2500"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="transformId" val="21"/>
+  <for>
+    <effect name="Transformation" time="3600" val="0"/> <!-- Guess -->
+  </for>
 </skill>
 <skill id="869" levels="1" name="Mercenary Power Strike">
   <set name="target" val="TARGET_NONE"/>

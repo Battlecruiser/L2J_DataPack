@@ -525,13 +525,14 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="656" levels="3" name="Transform Divine Warrior">
+  <table name="#reuseDelay"> 14400000 7200000 3600000 </table>
   <set name="mpConsume" val="31"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="14400000"/>
+  <set name="reuseDelay" val="#reuseDelay"/>
   <set name="staticReuse" val="true"/>
   <set name="staticHitTime" val="true"/>
   <set name="transformId" val="253"/>
@@ -543,13 +544,14 @@
   </for>
 </skill>
 <skill id="657" levels="3" name="Transform Divine Knight">
+  <table name="#reuseDelay"> 14400000 7200000 3600000 </table>
   <set name="mpConsume" val="31"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="14400000"/>
+  <set name="reuseDelay" val="#reuseDelay"/>
   <set name="staticReuse" val="true"/>
   <set name="staticHitTime" val="true"/>
   <set name="transformId" val="252"/>
@@ -561,13 +563,14 @@
   </for>
 </skill>
 <skill id="658" levels="3" name="Transform Divine Rogue">
+  <table name="#reuseDelay"> 14400000 7200000 3600000 </table>
   <set name="mpConsume" val="31"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="14400000"/>
+  <set name="reuseDelay" val="#reuseDelay"/>
   <set name="staticReuse" val="true"/>
   <set name="staticHitTime" val="true"/>
   <set name="transformId" val="254"/>
@@ -579,13 +582,14 @@
   </for>
 </skill>
 <skill id="659" levels="3" name="Transform Divine Wizard">
+  <table name="#reuseDelay"> 14400000 7200000 3600000 </table>
   <set name="mpConsume" val="31"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="14400000"/>
+  <set name="reuseDelay" val="#reuseDelay"/>
   <set name="staticReuse" val="true"/>
   <set name="staticHitTime" val="true"/>
   <set name="transformId" val="256"/>
@@ -593,17 +597,20 @@
     <player olympiad="false"/>
   </cond>
   <for>
-    <effect name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
+    <effect name="Transformation" time="1800" val="0"> <!-- Transformation lasts 30 minutes -->
+      <mul order="0x30" stat="pvpMagicalDmg" val="0.4"/>
+    </effect>
   </for>
 </skill>
 <skill id="660" levels="3" name="Transform Divine Summoner">
+  <table name="#reuseDelay"> 14400000 7200000 3600000 </table>
   <set name="mpConsume" val="31"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="14400000"/>
+  <set name="reuseDelay" val="#reuseDelay"/>
   <set name="staticReuse" val="true"/>
   <set name="staticHitTime" val="true"/>
   <set name="transformId" val="258"/>
@@ -615,13 +622,14 @@
   </for>
 </skill>
 <skill id="661" levels="3" name="Transform Divine Healer">
+  <table name="#reuseDelay"> 14400000 7200000 3600000 </table>
   <set name="mpConsume" val="31"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="14400000"/>
+  <set name="reuseDelay" val="#reuseDelay"/>
   <set name="staticReuse" val="true"/>
   <set name="staticHitTime" val="true"/>
   <set name="transformId" val="255"/>
@@ -633,13 +641,14 @@
   </for>
 </skill>
 <skill id="662" levels="3" name="Transform Divine Enchanter">
+  <table name="#reuseDelay"> 14400000 7200000 3600000 </table>
   <set name="mpConsume" val="31"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="14400000"/>
+  <set name="reuseDelay" val="#reuseDelay"/>
   <set name="staticReuse" val="true"/>
   <set name="staticHitTime" val="true"/>
   <set name="transformId" val="257"/>

@@ -148,9 +148,13 @@
   </for>
 </skill>
 <skill id="3418" levels="1" name="Active Skill: Transform Pig">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="transformId" val="104"/>
+  <for>
+    <effect name="Transformation" time="300" val="0"/>
+  </for>
 </skill>
 <skill id="3419" levels="1" name="Magic Immunity">
   <set name="target" val="TARGET_NONE"/>

@@ -181,14 +181,22 @@
   <set name="hitTime" val="3500"/>
 </skill>
 <skill id="6035" levels="1" name="Transform Red Team">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="transformId" val="121"/>
+  <for>
+    <effect name="Transformation" time="3600" val="0"/>
+  </for>
 </skill>
 <skill id="6036" levels="1" name="Transform Blue Team">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="transformId" val="122"/>
+  <for>
+    <effect name="Transformation" time="3600" val="0"/>
+  </for>
 </skill>
 <skill id="6037" levels="1" name="Soul Unleash">
   <set name="target" val="TARGET_NONE"/>

@@ -389,10 +389,19 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="5565" levels="1" name="Expose Weak Point">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
   <set name="hitTime" val="1500"/>
+  <set name="isDebuff" val="true"/>
+  <set name="magicLvl" val="81"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="80"/> <!-- Base Land Rate --> <!-- Guess -->
+  <set name="skillType" val="DEBUFF"/>
+  <set name="target" val="TARGET_ONE"/>
+  <for>
+    <effect name="Debuff" time="30" val="0" stackOrder="0.8" stackType="pDefDown">
+      <mul order="0x30" stat="pDef" val="0.8"/>
+      <basemul order="0x30" stat="rCrit" val="0.2"/>
+    </effect>
+  </for>
 </skill>
 <skill id="5566" levels="1" name="Post of Destruction">
   <set name="target" val="TARGET_NONE"/>
