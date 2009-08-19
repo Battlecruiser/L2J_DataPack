@@ -32,7 +32,7 @@
   <set name="effectRange" val="900"/>
   <set name="aggroPoints" val="#aggro"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="#effect" stackType="Concentration">
+    <effect name="Buff" time="120" val="0" stackOrder="#effect" stackType="Concentration">
       <sub order="0x40" stat="cancel" val="#cancel"/>
     </effect>
   </for>

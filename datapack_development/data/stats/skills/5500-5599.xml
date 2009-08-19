@@ -526,7 +526,7 @@
   <set name="effectRange" val="900"/>
   <set name="aggroPoints" val="#aggro"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="#rate" stackType="pa_up">
+    <effect name="Buff" time="120" val="0" stackOrder="#rate" stackType="pa_up">
       <mul order="0x30" stat="pAtk" val="#rate"/>
     </effect>
   </for>
@@ -546,7 +546,7 @@
   <set name="effectRange" val="900"/>
   <set name="aggroPoints" val="#aggro"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="#rate" stackType="pd_up">
+    <effect name="Buff" time="120" val="0" stackOrder="#rate" stackType="pd_up">
       <mul order="0x30" stat="pDef" val="#rate"/>
     </effect>
   </for>
@@ -566,7 +566,7 @@
   <set name="effectRange" val="900"/>
   <set name="aggroPoints" val="#aggro"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="#Tab-rCrit" stackType="critical_prob_up">
+    <effect name="Buff" time="120" val="0" stackOrder="#Tab-rCrit" stackType="critical_prob_up">
       <basemul order="0x30" stat="rCrit" val="#Tab-rCrit"/>
     </effect>
   </for>
@@ -586,7 +586,7 @@
   <set name="effectRange" val="900"/>
   <set name="aggroPoints" val="#aggro"/>
   <for>
-    <effect count="1" name="Buff" time="120" val="0" stackOrder="#Tab-cAtk" stackType="critical_dmg_up">
+    <effect name="Buff" time="120" val="0" stackOrder="#Tab-cAtk" stackType="critical_dmg_up">
       <mul order="0x30" stat="cAtk" val="#Tab-cAtk"/>
     </effect>
   </for>
