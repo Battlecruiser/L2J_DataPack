@@ -31,28 +31,12 @@
   </for>
 </item>
 <item id="13885" name="Sealed Arcana Sigil">
-  <cond msgId="1518">
-    <or>
-      <player active_skill_id="925"/>
-      <player active_skill_id="926"/>
-      <player active_skill_id="934"/>
-      <player active_skill_id="935"/>
-    </or>
-  </cond>
   <for>
     <add val="13" order="0x10" stat="pDef"/>
     <enchant val="0" order="0x0C" stat="pDef"/>
   </for>
 </item>
 <item id="13886" name="Sealed Dynasty Sigil">
-  <cond msgId="1518">
-    <or>
-      <player active_skill_id="925"/>
-      <player active_skill_id="926"/>
-      <player active_skill_id="934"/>
-      <player active_skill_id="935"/>
-    </or>
-  </cond>
   <for>
     <add val="15" order="0x10" stat="pDef"/>
     <enchant val="0" order="0x0C" stat="pDef"/>
