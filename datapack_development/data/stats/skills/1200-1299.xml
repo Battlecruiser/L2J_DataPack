@@ -737,7 +737,11 @@
   <enchant1 name="power" val="#ench1Power"/>
   <enchant2 name="mpConsume" val="#ench2mpConsume"/>
   <enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume"/>
-  <enchant4 name="elementPower" val="#enchElementPower"/>
+  <enchant4for>
+    <effect self="1" name="Buff" time="60" val="0" stackOrder="1" stackType="ElementPwr">
+      <add order="0x40" stat="darkPower" val="#enchElementPower"/>
+    </effect>
+  </enchant4for>
 </skill>
 <skill id="1235" levels="28" name="Hydro Blast" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30" enchantLevels4="30" >
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
