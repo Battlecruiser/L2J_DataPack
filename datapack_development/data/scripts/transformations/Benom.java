@@ -4,20 +4,12 @@ import net.sf.l2j.gameserver.datatables.SkillTable;
 import net.sf.l2j.gameserver.instancemanager.TransformationManager;
 import net.sf.l2j.gameserver.model.L2Transformation;
 
-/**
- * Description: <br>
- * This will handle the transformation, giving the skills, and removing them, when the player logs out and is transformed these skills
- * do not save. 
- * 
- * @author Ahmed
- *
- */
 public class Benom extends L2Transformation
 {
 	public Benom()
 	{
 		// id, colRadius, colHeight
-		super(307, 10.0, 57.5);
+		super(307, 10, 57.5);
 	}
 
 	public void onTransform()
@@ -25,38 +17,42 @@ public class Benom extends L2Transformation
 		if (getPlayer().getTransformationId() != 307 || getPlayer().isCursedWeaponEquipped())
 			return;
 
-		// give transformation skills
 		transformedSkills();
 	}
 
 	public void transformedSkills()
 	{
-		// Transfrom Dispel
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		// Benom Power Smash
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(725, 1), false);
+		// Benom Sonic Storm
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(726, 1), false);
+		// Benom Disillusion
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(727, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(725, 1), false);
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(726, 1), false);
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(727, 1), false);
+		// Transfrom Dispel
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{619,5491,725,726,727});
+		getPlayer().setTransformAllowedSkills(new int[]{725,726,727,5491,619});
 	}
 
 	public void onUntransform()
 	{
-		// remove transformation skills
 		removeSkills();
 	}
 
 	public void removeSkills()
 	{
-		// Transfrom Dispel
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		// Benom Power Smash
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(725, 1), false);
+		// Benom Sonic Storm
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(726, 1), false);
+		// Benom Disillusion
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(727, 1), false, false);
 		// Decrease Bow/Crossbow Attack Speed
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false);
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(725, 1), false);
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(726, 1), false);
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(727, 1), false, false);
+		// Transfrom Dispel
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
 		getPlayer().setTransformAllowedSkills(new int[]{});
 	}

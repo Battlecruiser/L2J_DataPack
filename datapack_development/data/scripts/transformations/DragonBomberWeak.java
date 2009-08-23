@@ -4,20 +4,12 @@ import net.sf.l2j.gameserver.datatables.SkillTable;
 import net.sf.l2j.gameserver.instancemanager.TransformationManager;
 import net.sf.l2j.gameserver.model.L2Transformation;
 
-/**
- * Description: <br>
- * This will handle the transformation, giving the skills, and removing them, when the player logs out and is transformed these skills
- * do not save. 
- * 
- * @author durgus
- *
- */
 public class DragonBomberWeak extends L2Transformation
 {
 	public DragonBomberWeak()
 	{
 		// id, colRadius, colHeight
-		super(218, 8.0, 22.0);
+		super(218, 8, 22);
 	}
 
 	public void onTransform()
@@ -25,48 +17,46 @@ public class DragonBomberWeak extends L2Transformation
 		if (getPlayer().getTransformationId() != 218 || getPlayer().isCursedWeaponEquipped())
 			return;
 
-		// give transformation skills
 		transformedSkills();
 	}
 
 	public void transformedSkills()
 	{
-		// Death Blow
+		// Death Blow (up to 4 levels)
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(580, 2), false);
-		// Sand Cloud
+		// Sand Cloud (up to 4 levels)
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(581, 2), false);
-		// Scope Bleed
+		// Scope Bleed (up to 4 levels)
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(582, 2), false);
-		// Assimilation
+		// Assimilation (up to 4 levels)
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(583, 2), false);
-		// Transfrom Dispel
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		// Transfrom Dispel
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{619,5491,580,581,582,583});
+		getPlayer().setTransformAllowedSkills(new int[]{580,581,582,583,5491,619});
 	}
 
 	public void onUntransform()
 	{
-		// remove transformation skills
 		removeSkills();
 	}
 
 	public void removeSkills()
 	{
-		// Death Blow
+		// Death Blow (up to 4 levels)
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(580, 2), false);
-		// Sand Cloud
+		// Sand Cloud (up to 4 levels)
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(581, 2), false);
-		// Scope Bleed
+		// Scope Bleed (up to 4 levels)
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(582, 2), false);
-		// Assimilation
+		// Assimilation (up to 4 levels)
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(583, 2), false, false);
-		// Transfrom Dispel
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		// Transfrom Dispel
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
 		getPlayer().setTransformAllowedSkills(new int[]{});
 	}

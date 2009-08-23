@@ -4,20 +4,12 @@ import net.sf.l2j.gameserver.datatables.SkillTable;
 import net.sf.l2j.gameserver.instancemanager.TransformationManager;
 import net.sf.l2j.gameserver.model.L2Transformation;
 
-/**
- * Description: <br>
- * This will handle the transformation, giving the skills, and removing them, when the player logs out and is transformed these skills
- * do not save. 
- * 
- * @author Ahmed
- *
- */
 public class Heretic extends L2Transformation
 {
 	public Heretic()
 	{
 		// id, colRadius, colHeight
-		super(3, 8.0, 20.0);
+		super(3, 8, 20);
 	}
 
 	public void onTransform()
@@ -25,74 +17,96 @@ public class Heretic extends L2Transformation
 		if (getPlayer().getTransformationId() != 3 || getPlayer().isCursedWeaponEquipped())
 			return;
 
-		// give transformation skills
 		transformedSkills();
 	}
 
 	public void transformedSkills()
 	{
-		// Transfrom Dispel
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
-		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
 		if (getPlayer().getLevel() >= 76)
 		{
+			// Heretic Heal (up to 3 levels)
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(738, 3), false);
+			// Heretic Battle Heal (up to 3 levels)
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(739, 3), false);
+			// Heretic Resurrection (up to 3 levels)
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(740, 3), false);
+			// Heretic Heal Side Effect (up to 3 levels)
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(741, 3), false);
 		}
 		else if (getPlayer().getLevel() >= 73)
 		{
+			// Heretic Heal (up to 3 levels)
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(738, 2), false);
+			// Heretic Battle Heal (up to 3 levels)
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(739, 2), false);
+			// Heretic Resurrection (up to 3 levels)
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(740, 2), false);
+			// Heretic Heal Side Effect (up to 3 levels)
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(741, 2), false);
 		}
 		else if (getPlayer().getLevel() >= 70)
 		{
+			// Heretic Heal (up to 3 levels)
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(738, 1), false);
+			// Heretic Battle Heal (up to 3 levels)
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(739, 1), false);
+			// Heretic Resurrection (up to 3 levels)
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(740, 1), false);
+			// Heretic Heal Side Effect (up to 3 levels)
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(741, 1), false);
 		}
-		getPlayer().setTransformAllowedSkills(new int[]{619,5491,738,739,740,741});
+		// Decrease Bow/Crossbow Attack Speed
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		// Transfrom Dispel
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
+
+		getPlayer().setTransformAllowedSkills(new int[]{738,739,740,741,5491,619});
 	}
 
 	public void onUntransform()
 	{
-		// remove transformation skills
 		removeSkills();
 	}
 
 	public void removeSkills()
 	{
-		// Transfrom Dispel
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
-		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false);
-
 		if (getPlayer().getLevel() >= 76)
 		{
+			// Heretic Heal (up to 3 levels)
 			getPlayer().removeSkill(SkillTable.getInstance().getInfo(738, 3), false);
+			// Heretic Battle Heal (up to 3 levels)
 			getPlayer().removeSkill(SkillTable.getInstance().getInfo(739, 3), false);
+			// Heretic Resurrection (up to 3 levels)
 			getPlayer().removeSkill(SkillTable.getInstance().getInfo(740, 3), false);
+			// Heretic Heal Side Effect (up to 3 levels)
 			getPlayer().removeSkill(SkillTable.getInstance().getInfo(741, 3), false, false);
 		}
 		else if (getPlayer().getLevel() >= 73)
 		{
+			// Heretic Heal (up to 3 levels)
 			getPlayer().removeSkill(SkillTable.getInstance().getInfo(738, 2), false);
+			// Heretic Battle Heal (up to 3 levels)
 			getPlayer().removeSkill(SkillTable.getInstance().getInfo(739, 2), false);
+			// Heretic Resurrection (up to 3 levels)
 			getPlayer().removeSkill(SkillTable.getInstance().getInfo(740, 2), false);
+			// Heretic Heal Side Effect (up to 3 levels)
 			getPlayer().removeSkill(SkillTable.getInstance().getInfo(741, 2), false, false);
 		}
 		else
 		{
+			// Heretic Heal (up to 3 levels)
 			getPlayer().removeSkill(SkillTable.getInstance().getInfo(738, 1), false);
+			// Heretic Battle Heal (up to 3 levels)
 			getPlayer().removeSkill(SkillTable.getInstance().getInfo(739, 1), false);
+			// Heretic Resurrection (up to 3 levels)
 			getPlayer().removeSkill(SkillTable.getInstance().getInfo(740, 1), false);
+			// Heretic Heal Side Effect (up to 3 levels)
 			getPlayer().removeSkill(SkillTable.getInstance().getInfo(741, 1), false, false);
 		}
+		// Decrease Bow/Crossbow Attack Speed
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		// Transfrom Dispel
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
 		getPlayer().setTransformAllowedSkills(new int[]{});
 	}

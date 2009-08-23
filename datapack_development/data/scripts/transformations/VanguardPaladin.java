@@ -17,10 +17,9 @@ public class VanguardPaladin extends L2Transformation
 		if (getPlayer().getTransformationId() != 312 || getPlayer().isCursedWeaponEquipped())
 			return;
 
-		// give transformation skills
 		transformedSkills();
 	}
-	
+
 	public void transformedSkills()
 	{
 		if (getPlayer().getLevel() > 43)
@@ -40,13 +39,12 @@ public class VanguardPaladin extends L2Transformation
 		// Switch Stance
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(838, 1), false);
 	}
-	
+
 	public void onUntransform()
 	{
-		// remove transformation skills
 		removeSkills();
 	}
-	
+
 	public void removeSkills()
 	{
 		// Power Divide
@@ -62,7 +60,7 @@ public class VanguardPaladin extends L2Transformation
 
 		getPlayer().setTransformAllowedSkills(new int[]{});
 	}
-	
+
 	public static void main(String[] args)
 	{
 		TransformationManager.getInstance().registerTransformation(new VanguardPaladin());

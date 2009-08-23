@@ -4,20 +4,12 @@ import net.sf.l2j.gameserver.datatables.SkillTable;
 import net.sf.l2j.gameserver.instancemanager.TransformationManager;
 import net.sf.l2j.gameserver.model.L2Transformation;
 
-/**
- * Description: <br>
- * This will handle the transformation, giving the skills, and removing them, when the player logs out and is transformed these skills
- * do not save. 
- * 
- * @author Ahmed
- *
- */
 public class Kiyachi extends L2Transformation
 {
 	public Kiyachi()
 	{
 		// id, colRadius, colHeight
-		super(310, 12.0, 29.8);
+		super(310, 12, 29.8);
 	}
 
 	public void onTransform()
@@ -25,36 +17,38 @@ public class Kiyachi extends L2Transformation
 		if (getPlayer().getTransformationId() != 310 || getPlayer().isCursedWeaponEquipped())
 			return;
 
-		// give transformation skills
 		transformedSkills();
 	}
 
 	public void transformedSkills()
 	{
-		// Transfrom Dispel
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		// Kechi Double Cutter
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(733, 1), false);
+		// Kechi Air Blade
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(734, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(733, 1), false);
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(734, 1), false);
+		// Transfrom Dispel
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{619,5491,733,734});
+		getPlayer().setTransformAllowedSkills(new int[]{733,734,5491,619});
 	}
 
 	public void onUntransform()
 	{
-		// remove transformation skills
 		removeSkills();
 	}
 
 	public void removeSkills()
 	{
-		// Transfrom Dispel
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		// Kechi Double Cutter
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(733, 1), false);
+		// Kechi Air Blade
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(734, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false);
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(733, 1), false);
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(734, 1), false);
+		// Transfrom Dispel
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
 		getPlayer().setTransformAllowedSkills(new int[]{});
 	}

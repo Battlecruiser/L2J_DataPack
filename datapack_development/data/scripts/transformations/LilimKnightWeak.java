@@ -4,22 +4,12 @@ import net.sf.l2j.gameserver.datatables.SkillTable;
 import net.sf.l2j.gameserver.instancemanager.TransformationManager;
 import net.sf.l2j.gameserver.model.L2Transformation;
 
-/**
- * Description: <br>
- * This will handle the transformation, giving the skills, and removing them, when the player logs out and is transformed these skills
- * do not save. 
- * When the player logs back in, there will be a call from the enterworld packet that will add all their skills.
- * The enterworld packet will transform a player.
- * 
- * @author durgus
- *
- */
 public class LilimKnightWeak extends L2Transformation
 {
 	public LilimKnightWeak()
 	{
 		// id, colRadius, colHeight
-		super(209, 8.0, 24.4);
+		super(209, 8, 24.4);
 	}
 
 	public void onTransform()
@@ -27,48 +17,46 @@ public class LilimKnightWeak extends L2Transformation
 		if (getPlayer().getTransformationId() != 209 || getPlayer().isCursedWeaponEquipped())
 			return;
 
-		// give transformation skills
 		transformedSkills();
 	}
 
 	public void transformedSkills()
 	{
-		// Attack Buster
+		// Attack Buster (up to 4 levels)
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(568, 2), false);
-		// Attack Storm
+		// Attack Storm (up to 4 levels)
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(569, 2), false);
-		// Attack Rage
+		// Attack Rage (up to 4 levels)
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(570, 2), false);
-		// Poison Dust
+		// Poison Dust (up to 4 levels)
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(571, 2), false);
-		// Transfrom Dispel
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		// Transfrom Dispel
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{619,5491,568,569,570,571});
+		getPlayer().setTransformAllowedSkills(new int[]{568,569,570,571,5491,619});
 	}
 
 	public void onUntransform()
 	{
-		// remove transformation skills
 		removeSkills();
 	}
 
 	public void removeSkills()
 	{
-		// Attack Buster
+		// Attack Buster (up to 4 levels)
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(568, 2), false);
-		// Attack Storm
+		// Attack Storm (up to 4 levels)
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(569, 2), false);
-		// Attack Rage
+		// Attack Rage (up to 4 levels)
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(570, 2), false);
-		// Poison Dust
+		// Poison Dust (up to 4 levels)
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(571, 2), false);
-		// Transfrom Dispel
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		// Transfrom Dispel
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
 		getPlayer().setTransformAllowedSkills(new int[]{});
 	}

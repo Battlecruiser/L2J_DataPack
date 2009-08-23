@@ -1,46 +1,104 @@
-<html><body>
-<table width=260><tr>
-<td width=40><button value="Main" action="bypass -h admin_admin" width=40 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td width=180><center>Character Information</center></td>
-<td width=40><button value="Back" action="bypass -h admin_show_characters 0" width=40 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-</tr></table>
+<html><title>Information Panel: %name%</title><body>
 <center>
-<table width=240>
+<table width=270 border=0 bgcolor="666666">
 <tr>
-<td><button value="Go To" action="bypass -h admin_goto_char_menu %name%" width=55 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td><button value="Kick" action="bypass -h admin_kick_menu %name%" width=55 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td><button value="Ban Acc" action="bypass -h admin_ban_acc %name%" width=55 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td><button value="Ban Chr" action="bypass -h admin_ban_char %name%" width=55 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-</tr><tr>
-<td><button value="Recall" action="bypass -h admin_recall_char_menu %name%" width=55 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td><button value="Skills" action="bypass -h admin_show_skills" width=55 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td><button value="Edit" action="bypass -h admin_edit_character" width=55 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td><button value="Class" action="bypass -h admin_setclass" width=55 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-</tr><tr>
-<td><button value="Lv/Exp/Sp" action="bypass -h admin_add_exp_sp_to_character" width=55 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Main" action="bypass -h admin_admin" width=50 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Game" action="bypass -h admin_admin2" width=50 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Effects" action="bypass -h admin_admin3" width=50 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Server" action="bypass -h admin_admin4" width=50 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Mods" action="bypass -h admin_admin5" width=50 height=15 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 </tr>
 </table>
-</center><br>
-<table width=270>		
-<tr><td width=135>Account: <font color="LEVEL"><a action="bypass -h admin_find_account %name%">%account%</a></font></td><td width=135>IP: <font color="LEVEL"><a action="bypass -h admin_find_ip %ip%">%ip%</a></font></td></tr>	
-<tr><td width=135>Name: %name%</td><td width=135>Level: %level%</td></tr>	
-<tr><td width=135>Clan: %clan%</td><td width=135>Exp: %xp%</td></tr>
-<tr><td width=135>Class: %class%</td><td width=135>SP: %sp%</td></tr>      
-</table>
-<table width=270>
-<tr><td width=270>Character Coordinates: %x% %y% %z%</td></tr>
+<br>
+<table width=240>
+<tr>
+<td><button value="Go To" action="bypass -h admin_goto_char_menu %name%" width=55 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Kick" action="bypass -h admin_kick_menu %name%" width=55 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Ban Acc" action="bypass -h admin_ban_acc %name%" width=55 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Ban Chr" action="bypass -h admin_ban_char %name%" width=55 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr><tr>
+<td><button value="Recall" action="bypass -h admin_recall_char_menu %name%" width=55 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Skills" action="bypass -h admin_show_skills" width=55 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Edit" action="bypass -h admin_edit_character" width=55 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Class" action="bypass -h admin_setclass" width=55 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr><tr>
+<td><button value="Lv/Exp/Sp" action="bypass -h admin_add_exp_sp_to_character" width=55 height=18 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
 </table>
 <br>
-<table width=270>
-<tr><td width=40></td><td width=70>Current:</td><td width=70>Maximum:</td><td width=90></td></tr>
-<tr><td width=40>HP:</td><td width=70>%currenthp%</td><td width=70>%maxhp%</td><td width=70>Karma: %karma%</td><td width=20></td></tr>
-<tr><td width=40>MP:</td><td width=70>%currentmp%</td><td width=70>%maxmp%</td><td width=70>PvP Flag: %pvpflag%</td><td width=20></td></tr>
-<tr><td width=40>CP:</td><td width=70>%currentcp%</td><td width=70>%maxcp%</td><td width=70>PvP Kills: %pvpkills%</td><td width=20></td></tr>
-<tr><td width=40>Load:</td><td width=70>%currentload%</td><td width=70>%maxload%</td><td width=70></td><td width=20></td></tr>
+<table width=240 bgcolor="666666">
+<tr>
+<td>Account Name: </td><td><font color="LEVEL"><a action="bypass -h admin_find_account %name%">%account%</a></font></td>
+</tr>
+<tr>
+<td>Account IP: </td><td><font color="LEVEL"><a action="bypass -h admin_find_ip %ip%">%ip%</a></font></td>
+</tr>
 </table>
-<table width=270>		
-<tr><td width=65>Patk: %patk%</td><td width=65>Matk: %matk%</td><td width=65>Pdef: %pdef%</td><td width=65>Mdef: %mdef%</td></tr>
-<tr><td width=65>Accu: %accuracy%</td><td width=65>Evas: %evasion%</td><td width=65>Crit: %critical%</td><td width=65>Speed: %runspeed%</td></tr>
-<tr><td width=65>AtkSpd: %patkspd%</td><td width=65>MSpd: %matkspd%</td></tr>
+<br>
+<br>
+<table width=240 bgcolor="666666">
+<tr>
+<td>Name:</td><td>%name%</td><td><button value="Refresh" action="bypass -h admin_current_player" width=60 height=20 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+<tr>
+<td>Clan:</td><td>%clan%</td>
+</tr>
+<tr>
+<td>Level:</td><td>%level%</td>
+</tr>
+<tr>
+<td>Class:</td><td>%class%</td>
+</tr>
+<tr>
+<td>CP:</td><td> <font color="LEVEL">%currentcp%</font> / %maxcp%</td>
+</tr>
+<tr>
+<td>HP:</td><td> <font color="LEVEL">%currenthp%</font> / %maxhp%</td>
+</tr>
+<tr>
+<td>MP:</td><td><font color="LEVEL">%currentmp%</font> / %maxmp%</td>
+</tr>
+<tr>
+<td>Weight:</td><td>%currentload% / %maxload%</td>
+</tr>
+<tr>
+<td>EXP:</td><td>%xp%</td>
+</tr>
+<tr>
+<td>SP:</td><td>%sp%</td>
+</tr>
 </table>
+<br>
+<table width=240>
+<tr>
+<td>PvP Kills: </td><td>%pvpkills%</td>
+<td>Karma: </td><td>%karma%</td>
+</tr>
+<tr>
+<td>PK Kills: </td><td>%pkkills%</td>
+<td>PvP Flag: </td><td>%pvpflag%</td>
+</tr>
+</table>
+<br>
+<table width=240 bgcolor="666666">
+<tr>
+<td>P. Atk:</td><td>%patk%</td><td>M. Atk:</td><td>%matk%</td>
+</tr>
+<tr>
+<td>P. Def:</td><td>%pdef%</td><td>M. Def:</td><td>%mdef%</td>
+</tr>
+<tr>
+<td>Accuracy:</td><td>%accuracy%</td><td>Evasion:</td><td>%evasion%</td>
+</tr>
+<tr>
+<td>Crit Rate:</td><td>%critical%</td><td>Speed:</td><td>%runspeed%</td></tr>
+</tr>
+<tr>
+<td>Atk. Spd.:</td><td>%patkspd%</td><td>Casting Spd.:</td><td>%matkspd%</td></tr>
+</tr>
+<tr>
+</table>
+<br>
+Player Coordinates: %x% %y% %z%
+</center>
 </body></html>
