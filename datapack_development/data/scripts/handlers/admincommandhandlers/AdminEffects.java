@@ -155,7 +155,7 @@ public class AdminEffects implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Use: //earthquake <intensity> <duration>");
+				activeChar.sendMessage("Usage: //earthquake <intensity> <duration>");
 			}
 		}
 		else if (command.startsWith("admin_atmosphere"))
@@ -168,18 +168,22 @@ public class AdminEffects implements IAdminCommandHandler
 			}
 			catch (Exception ex)
 			{
+				activeChar.sendMessage("Usage: //atmosphere <signsky dawn|dusk>|<sky day|night|red>");
 			}
 		}
 		else if (command.equals("admin_play_sounds"))
+		{
 			AdminHelpPage.showHelpPage(activeChar, "songs/songs.htm");
+		}
 		else if (command.startsWith("admin_play_sounds"))
 		{
 			try
 			{
-				AdminHelpPage.showHelpPage(activeChar, "songs/songs" + command.substring(17) + ".htm");
+				AdminHelpPage.showHelpPage(activeChar, "songs/songs" + command.substring(18) + ".htm");
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
+				activeChar.sendMessage("Usage: //play_sounds <pagenumber>");
 			}
 		}
 		else if (command.startsWith("admin_play_sound"))
@@ -190,9 +194,52 @@ public class AdminEffects implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
+				activeChar.sendMessage("Usage: //play_sound <soundname>");
 			}
 		}
-		else if (command.startsWith("admin_para") || command.startsWith("admin_para_menu"))
+		else if (command.equals("admin_para_all"))
+		{
+			try
+			{
+				Collection<L2PcInstance> plrs = activeChar.getKnownList().getKnownPlayers().values();
+				//synchronized (activeChar.getKnownList().getKnownPlayers())
+				{
+					for (L2PcInstance player : plrs)
+					{
+						if (!player.isGM())
+						{
+							player.startAbnormalEffect(0x0400);
+							player.setIsParalyzed(true);
+							StopMove sm = new StopMove(player);
+							player.sendPacket(sm);
+							player.broadcastPacket(sm);
+						}
+					}
+				}
+			}
+			catch (Exception e)
+			{
+			}
+		}
+		else if (command.equals("admin_unpara_all"))
+		{
+			try
+			{
+				Collection<L2PcInstance> plrs = activeChar.getKnownList().getKnownPlayers().values();
+				//synchronized (activeChar.getKnownList().getKnownPlayers())
+				{
+					for (L2PcInstance player : plrs)
+					{
+						player.stopAbnormalEffect(0x0400);
+						player.setIsParalyzed(false);
+					}
+				}
+			}
+			catch (Exception e)
+			{
+			}
+		}
+		else if (command.startsWith("admin_para")) // || command.startsWith("admin_para_menu"))
 		{
 			String type = "1";
 			try
@@ -223,8 +270,16 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 			}
 		}
-		else if (command.equals("admin_unpara") || command.equals("admin_unpara_menu"))
+		else if (command.startsWith("admin_unpara")) // || command.startsWith("admin_unpara_menu"))
 		{
+			String type = "1";
+			try
+			{
+				type = st.nextToken();
+			}
+			catch (Exception e)
+			{
+			}
 			try
 			{
 				L2Object target = activeChar.getTarget();
@@ -232,50 +287,11 @@ public class AdminEffects implements IAdminCommandHandler
 				if (target instanceof L2Character)
 				{
 					player = (L2Character) target;
-					player.stopAbnormalEffect((short) 0x0400);
-					player.setIsParalyzed(false);
-				}
-			}
-			catch (Exception e)
-			{
-			}
-		}
-		else if (command.startsWith("admin_para_all"))
-		{
-			try
-			{
-				Collection<L2PcInstance> plrs = activeChar.getKnownList().getKnownPlayers().values();
-				//synchronized (activeChar.getKnownList().getKnownPlayers())
-				{
-					for (L2PcInstance player : plrs)
-					{
-						if (!player.isGM())
-						{
-							player.startAbnormalEffect(0x0400);
-							player.setIsParalyzed(true);
-							StopMove sm = new StopMove(player);
-							player.sendPacket(sm);
-							player.broadcastPacket(sm);
-						}
-					}
-				}
-			}
-			catch (Exception e)
-			{
-			}
-		}
-		else if (command.startsWith("admin_unpara_all"))
-		{
-			try
-			{
-				Collection<L2PcInstance> plrs = activeChar.getKnownList().getKnownPlayers().values();
-				//synchronized (activeChar.getKnownList().getKnownPlayers())
-				{
-					for (L2PcInstance player : plrs)
-					{
+					if (type.equals("1"))
 						player.stopAbnormalEffect(0x0400);
-						player.setIsParalyzed(false);
-					}
+					else
+						player.stopAbnormalEffect(0x0800);
+					player.setIsParalyzed(false);
 				}
 			}
 			catch (Exception e)
@@ -307,7 +323,7 @@ public class AdminEffects implements IAdminCommandHandler
 				if (target instanceof L2Character)
 				{
 					player = (L2Character) target;
-					player.stopAbnormalEffect((short) 0x2000);
+					player.stopAbnormalEffect(0x2000);
 				}
 			}
 			catch (Exception e)
@@ -333,7 +349,7 @@ public class AdminEffects implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Use //gmspeed value (0=off...4=max).");
+				activeChar.sendMessage("Usage: //gmspeed <value> (0=off...4=max)");
 			}
 		}
 		else if (command.startsWith("admin_polyself"))
@@ -351,6 +367,7 @@ public class AdminEffects implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
+				activeChar.sendMessage("Usage: //polyself <npcId>");
 			}
 		}
 		else if (command.startsWith("admin_unpolyself"))
@@ -364,7 +381,7 @@ public class AdminEffects implements IAdminCommandHandler
 			activeChar.sendPacket(info2);
 			activeChar.broadcastPacket(new ExBrExtraUserInfo(activeChar));
 		}
-		else if (command.equals("admin_clear_teams"))
+		else if (command.equals("admin_clearteams"))
 		{
 			try
 			{
@@ -395,7 +412,7 @@ public class AdminEffects implements IAdminCommandHandler
 					{
 						if (activeChar.isInsideRadius(player, 400, false, true))
 						{
-							player.setTeam(0);
+							player.setTeam(teamVal);
 							if (teamVal != 0)
 							{
 								player.sendMessage("You have joined team " + teamVal);
@@ -407,24 +424,32 @@ public class AdminEffects implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
+				activeChar.sendMessage("Usage: //setteam_close <teamId>");
 			}
 		}
 		else if (command.startsWith("admin_setteam"))
 		{
-			String val = command.substring(14);
-			int teamVal = Integer.parseInt(val);
-			L2Object target = activeChar.getTarget();
-			L2PcInstance player = null;
-			if (target instanceof L2PcInstance)
-				player = (L2PcInstance) target;
-			else
-				return false;
-			player.setTeam(teamVal);
-			if (teamVal != 0)
+			try
 			{
-				player.sendMessage("You have joined team " + teamVal);
+				String val = st.nextToken();
+				int teamVal = Integer.parseInt(val);
+				L2Object target = activeChar.getTarget();
+				L2PcInstance player = null;
+				if (target instanceof L2PcInstance)
+					player = (L2PcInstance) target;
+				else
+					return false;
+				player.setTeam(teamVal);
+				if (teamVal != 0)
+				{
+					player.sendMessage("You have joined team " + teamVal);
+				}
+				player.broadcastUserInfo();
 			}
-			player.broadcastUserInfo();
+			catch (Exception e)
+			{
+				activeChar.sendMessage("Usage: //setteam <teamId>");
+			}
 		}
 		else if (command.startsWith("admin_social"))
 		{
