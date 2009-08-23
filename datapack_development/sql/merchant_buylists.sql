@@ -19164,14 +19164,17 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (10661,0,9918,21),
 (10662,0,9918,22),
 (10663,0,9918,23),
-(13548,0,9918,24),  -- Toy Knight Hunting Helper Necklace
-(13549,0,9918,25),  -- Soul Monk Hunting Helper Necklace
-(13550,0,9918,26),  -- Owl Monk Hunting Helper Necklace
-(14061,0,9918,27),  -- Toy Knight Summon Bracelet
-(14062,0,9918,28),  -- Spirit Shaman Summon Bracelet
-(14063,0,9918,29),  -- Owl Monk Summon Bracelet
-(14064,0,9918,30);  -- Turtle Ascetic Summon Bracelet
-
+(13017,0,9918,24),  -- White Weasel Hunting Helper Necklace
+(13018,0,9918,25),  -- Fairy Princess Hunting Helper Necklace
+(13019,0,9918,26),  -- Wild Beast Fighter Hunting Helper Necklace
+(13020,0,9918,27),  -- Fox Shaman Hunting Helper Necklace
+(13548,0,9918,28),  -- Toy Knight Hunting Helper Necklace
+(13549,0,9918,29),  -- Soul Monk Hunting Helper Necklace
+(13550,0,9918,30),  -- Owl Monk Hunting Helper Necklace
+(14061,0,9918,31),  -- Toy Knight Summon Bracelet
+(14062,0,9918,32),  -- Spirit Shaman Summon Bracelet
+(14063,0,9918,33),  -- Owl Monk Summon Bracelet
+(14064,0,9918,34);  -- Turtle Ascetic Summon Bracelet
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
 -- (GM-Shop) Castle Circlets

@@ -4,22 +4,12 @@ import net.sf.l2j.gameserver.datatables.SkillTable;
 import net.sf.l2j.gameserver.instancemanager.TransformationManager;
 import net.sf.l2j.gameserver.model.L2Transformation;
 
-/**
- * Description: <br>
- * This will handle the transformation, giving the skills, and removing them, when the player logs out and is transformed these skills
- * do not save. 
- * When the player logs back in, there will be a call from the enterworld packet that will add all their skills.
- * The enterworld packet will transform a player.
- * 
- * @author Ahmed
- *
- */
 public class DemonPrince extends L2Transformation
 {
 	public DemonPrince()
 	{
 		// id, colRadius, colHeight
-		super(311, 33.0, 49.0);
+		super(311, 33, 49);
 	}
 
 	public void onTransform()
@@ -27,38 +17,42 @@ public class DemonPrince extends L2Transformation
 		if (getPlayer().getTransformationId() != 311 || getPlayer().isCursedWeaponEquipped())
 			return;
 
-		// give transformation skills
 		transformedSkills();
 	}
 
 	public void transformedSkills()
 	{
-		// Transfrom Dispel
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		// Devil Spinning Weapon
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(735, 1), false);
+		// Devil Seed
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(736, 1), false);
+		// Devil Ultimate Defense
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(737, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(735, 1), false);
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(736, 1), false);
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(737, 1), false);
+		// Transfrom Dispel
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{619,5491,735,736,737});
+		getPlayer().setTransformAllowedSkills(new int[]{735,736,737,5491,619});
 	}
 
 	public void onUntransform()
 	{
-		// remove transformation skills
 		removeSkills();
 	}
 
 	public void removeSkills()
 	{
-		// Transfrom Dispel
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		// Devil Spinning Weapon
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(735, 1), false);
+		// Devil Seed
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(736, 1), false);
+		// Devil Ultimate Defense
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(737, 1), false, false);
 		// Decrease Bow/Crossbow Attack Speed
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false);
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(735, 1), false);
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(736, 1), false);
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(737, 1), false, false);
+		// Transfrom Dispel
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
 		getPlayer().setTransformAllowedSkills(new int[]{});
 	}

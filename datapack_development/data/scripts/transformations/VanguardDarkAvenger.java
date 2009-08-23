@@ -11,16 +11,15 @@ public class VanguardDarkAvenger extends L2Transformation
 		// id
 		super(313);
 	}
-	
+
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 313 || getPlayer().isCursedWeaponEquipped())
 			return;
 
-		// give transformation skills
 		transformedSkills();
 	}
-	
+
 	public void transformedSkills()
 	{
 		if (getPlayer().getLevel() > 43)
@@ -30,7 +29,7 @@ public class VanguardDarkAvenger extends L2Transformation
 			// Blade Hurricane
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(815, getPlayer().getLevel() - 43), false);
 			// Dual Weapon Mastery
-			getPlayer().addSkill(SkillTable.getInstance().getInfo(144, getPlayer().getLevel() - 43), false);			
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(144, getPlayer().getLevel() - 43), false);
 			getPlayer().setTransformAllowedSkills(new int[]{838,5491,817,815,28,18,283,65,401,86});
 		}
 		else
@@ -40,13 +39,12 @@ public class VanguardDarkAvenger extends L2Transformation
 		// Switch Stance
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(838, 1), false);
 	}
-	
+
 	public void onUntransform()
 	{
-		// remove transformation skills
 		removeSkills();
 	}
-	
+
 	public void removeSkills()
 	{
 		// Double Strike
@@ -62,7 +60,7 @@ public class VanguardDarkAvenger extends L2Transformation
 
 		getPlayer().setTransformAllowedSkills(new int[]{});
 	}
-	
+
 	public static void main(String[] args)
 	{
 		TransformationManager.getInstance().registerTransformation(new VanguardDarkAvenger());

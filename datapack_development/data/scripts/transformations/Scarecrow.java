@@ -1,17 +1,15 @@
-//Update by rocknow
 package transformations;
 
 import net.sf.l2j.gameserver.datatables.SkillTable;
 import net.sf.l2j.gameserver.instancemanager.TransformationManager;
 import net.sf.l2j.gameserver.model.L2Transformation;
 
-
 public class Scarecrow extends L2Transformation
 {
 	public Scarecrow()
 	{
 		// id, colRadius, colHeight
-		super(115, 14.0, 30.0);
+		super(115, 14, 30);
 	}
 
 	public void onTransform()
@@ -19,32 +17,38 @@ public class Scarecrow extends L2Transformation
 		if (getPlayer().getTransformationId() != 115 || getPlayer().isCursedWeaponEquipped())
 			return;
 
-		// give transformation skills
 		transformedSkills();
 	}
 
 	public void transformedSkills()
 	{
-		// Dismount
+		// Fake Attack
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(940, 1), false);
+		// Special Motion 
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(942, 1), false);
+		// Dissonance
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(5437, 2), false);
+		// Transfrom Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
-		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{619,5491});
+		getPlayer().setTransformAllowedSkills(new int[]{940,942,5437,619});
 	}
 
 	public void onUntransform()
 	{
-		// remove transformation skills
 		removeSkills();
 	}
 
 	public void removeSkills()
 	{
-		// Dismount
+		// Fake Attack
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(940, 1), false);
+		// Special Motion 
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(942, 1), false);
+		// Dissonance
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5437, 2), false);
+		// Transfrom Dispel
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
-		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false);
 
 		getPlayer().setTransformAllowedSkills(new int[]{});
 	}
