@@ -4,20 +4,12 @@ import net.sf.l2j.gameserver.datatables.SkillTable;
 import net.sf.l2j.gameserver.instancemanager.TransformationManager;
 import net.sf.l2j.gameserver.model.L2Transformation;
 
-/**
- * Description: <br>
- * This will handle the transformation, giving the skills, and removing them, when the player logs out and is transformed these skills
- * do not save. 
- * 
- * @author durgus
- *
- */
 public class OnyxBeast extends L2Transformation
 {
 	public OnyxBeast()
 	{
 		// id, colRadius, colHeight
-		super(1, 14.0, 15.0);
+		super(1, 14, 15);
 	}
 
 	public void onTransform()
@@ -25,7 +17,6 @@ public class OnyxBeast extends L2Transformation
 		if (getPlayer().getTransformationId() != 1 || getPlayer().isCursedWeaponEquipped())
 			return;
 
-		// give transformation skills
 		transformedSkills();
 	}
 
@@ -35,17 +26,16 @@ public class OnyxBeast extends L2Transformation
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(584, 1), false);
 		// Fast Moving
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(585, 1), false);
-		// Transfrom Dispel
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		// Transfrom Dispel
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{619,5491,584,585});
+		getPlayer().setTransformAllowedSkills(new int[]{584,585,5491,619});
 	}
 
 	public void onUntransform()
 	{
-		// remove transformation skills
 		removeSkills();
 	}
 
@@ -55,10 +45,10 @@ public class OnyxBeast extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(584, 1), false);
 		// Fast Moving
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(585, 1), false, false);
-		// Transfrom Dispel
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		// Transfrom Dispel
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
 		getPlayer().setTransformAllowedSkills(new int[]{});
 	}
