@@ -45,11 +45,16 @@ public class LearnSkill implements ISkillHandler
 			return;
 		
 		L2PcInstance player = ((L2PcInstance)activeChar);
-		if (player.getSkillLevel(skill.getNewSkillId()) < 0 && skill.getNewSkillId() != 0)
+		L2Skill newSkill = null;
+		
+		for (int i = 0; i < skill.getNewSkillId().length; i++)
 		{
-			L2Skill newSkill = SkillTable.getInstance().getInfo(skill.getNewSkillId(), skill.getNewSkillLvl());
-			if (newSkill != null)
-				player.addSkill(newSkill, true);
+			if (player.getSkillLevel(skill.getNewSkillId()[i]) < 0 && skill.getNewSkillId()[i] != 0)
+			{
+				newSkill = SkillTable.getInstance().getInfo(skill.getNewSkillId()[i], skill.getNewSkillLvl()[i]);
+				if (newSkill != null)
+					player.addSkill(newSkill, true);
+			}
 		}
 	}
 	
