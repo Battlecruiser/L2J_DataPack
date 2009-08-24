@@ -57,6 +57,7 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `clan_create_expiry_time` BIGINT UNSIGNED NOT NULL DEFAULT 0,
   `death_penalty_level` SMALLINT UNSIGNED NOT NULL DEFAULT 0,
   `bookmarkslot` SMALLINT UNSIGNED NOT NULL DEFAULT 0,
+  `vitality_points` SMALLINT UNSIGNED NOT NULL DEFAULT 0,
   PRIMARY KEY (`charId`),
   KEY `clanid` (`clanid`)
 );
