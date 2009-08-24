@@ -585,7 +585,9 @@
     <player flyMounted="False"/>
   </cond>
   <for>
-    <effect name="Buff" time="300" val="0" abnormal="vitality"/>
+    <effect name="Buff" time="300" val="0" abnormal="vitality">
+      <sub order="0x40" stat="vitalityConsumeRate" val="10"/>
+    </effect>
   </for>
 </skill>
 <skill id="2581" levels="1" name="not_used">

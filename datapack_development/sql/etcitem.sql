@@ -8164,7 +8164,7 @@ INSERT INTO `etcitem` VALUES
 (13020,'Fox Shaman Hunting Helper Necklace','false','none',10,'normal','paper','none',-1,-1,0,0,'true','true','true','true','none','0-0;'),
 (13021,'Color Name','false','none',5,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','none','0-0;'),
 (13027,'Gran Kain\'s Gift Box - 30 day limited period','false','none',0,'normal','paper','none',-1,-1,0,0,'true','true','true','true','none','0-0;'),
-(13028,'Vitality Replenishing Herb','false','none',0,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','none','0-0;'),
+(13028,'Vitality Replenishing Herb','false','herb',0,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','ItemSkills','2580-1;'),
 (13029,'Vitality Replenishing Transformation Herb - Timitran','false','none',0,'normal','paper','none',-1,-1,0,0,'true','true','true','true','none','0-0;'),
 (13030,'Vitality Replenishing Transformation Herb - Lava Golem','false','none',0,'normal','paper','none',-1,-1,0,0,'true','true','true','true','none','0-0;'),
 (13031,'Vitality Replenishing Transformation Herb - Yeti','false','none',0,'normal','paper','none',-1,-1,0,0,'true','true','true','true','none','0-0;'),
