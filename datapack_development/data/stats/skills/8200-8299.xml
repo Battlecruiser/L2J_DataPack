@@ -574,7 +574,9 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="transformId" val="319"/>
   <for>
-    <effect name="Transformation" time="3600" val="0"/>
+    <effect name="Transformation" time="3600" val="0">
+      <sub order="0x40" stat="vitalityConsumeRate" val="10"/>
+    </effect>
   </for>
 </skill>
 <skill id="8245" levels="1" name="Summon Agathion - Love">

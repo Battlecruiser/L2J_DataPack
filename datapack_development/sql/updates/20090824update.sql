@@ -1,0 +1,1 @@
+ALTER TABLE `characters` ADD `vitality_points` SMALLINT UNSIGNED NOT NULL DEFAULT 0 AFTER `bookmarkslot`;

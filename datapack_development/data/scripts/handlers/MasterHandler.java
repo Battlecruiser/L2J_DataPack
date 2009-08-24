@@ -193,6 +193,7 @@ public class MasterHandler
 		SkillHandler.getInstance().registerSkillHandler(new TransformDispel());
 		SkillHandler.getInstance().registerSkillHandler(new Trap());
 		SkillHandler.getInstance().registerSkillHandler(new GiveSp());
+		SkillHandler.getInstance().registerSkillHandler(new GiveVitality());
 		SkillHandler.getInstance().registerSkillHandler(new InstantJump());
 		SkillHandler.getInstance().registerSkillHandler(new Dummy());
 		SkillHandler.getInstance().registerSkillHandler(new Extractable());
