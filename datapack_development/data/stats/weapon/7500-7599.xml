@@ -31,15 +31,12 @@
     <set val="293" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Cheap Shot -->
-    <set val="1" order="0x08" stat="MpConsume">
+    <!-- SA: Cheap Shot --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <set order="0x08" stat="MpConsume" val="1">
        <and>
-          <game skill="false" chance="26"/> 
-       </and> 
+          <game skill="false" chance="26"/>
+       </and>
     </set>
-    <!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="7577" name="Draconic Bow - Focus">
@@ -62,9 +59,6 @@
     <set val="293" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 </list>

@@ -130,6 +130,8 @@
     <set val="293" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Quick Recovery --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <mul val="0.87" order="0x30" stat="atkReuse"/>
   </for>
 </item>
 <item id="11012" name="Bow of Peril - Earth - Cheap Shot">
@@ -141,6 +143,12 @@
     <set val="293" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Cheap Shot --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <sub order="0x08" stat="MpConsume" val="2">
+       <and>
+          <game skill="false" chance="42"/>
+       </and>
+    </sub>
   </for>
 </item>
 <item id="11013" name="Hell Hound - Earth">
@@ -174,6 +182,8 @@
     <set val="303" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Quick Recovery --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <mul val="0.87" order="0x30" stat="atkReuse"/>
   </for>
 </item>
 <item id="11016" name="Hell Hound - Earth - Cheap Shot">
@@ -185,6 +195,8 @@
     <set val="303" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Cheap Shot --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <mul order="0x08" stat="MpConsume" val="0.88"/>
   </for>
 </item>
 <item id="11017" name="Dasparion's Staff - Hail">
@@ -812,6 +824,8 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Wide Blow --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <set val="180" order="0x08" stat="pAtkAngle"/>
   </for>
 </item>
 <item id="11074" name="Keshanberk*Damascus - Destruction">

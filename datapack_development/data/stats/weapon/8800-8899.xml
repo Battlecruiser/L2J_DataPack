@@ -9,11 +9,6 @@
     <set val="433" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Focus -->
-    <add val="61" order="0x40" stat="rCrit"/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="8801" name="Naga Storm - Critical Damage">
@@ -25,11 +20,6 @@
     <set val="433" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Critical Damage -->
-    <add val="200" order="0x40" stat="cAtkAdd"/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="8802" name="Naga Storm - Back Blow">
@@ -52,9 +42,6 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="8804" name="Tiphon's Spear - Towering Blow">
@@ -66,14 +53,11 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Long Blow --> <!-- is Towering Blow just a name change ??? -->
+    <!-- SA: Towering Blow --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
     <set val="80" order="0x08" stat="pAtkRange"/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
-<item id="8805" name="Tiphon's Spear - Wild Blow">
+<item id="8805" name="Tiphon's Spear - Wide Blow">
   <for>
     <set val="251" order="0x08" stat="pAtk"/>
     <set val="121" order="0x08" stat="mAtk"/>
@@ -82,11 +66,8 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Wide Blow --> <!-- is Wild Blow just engrish ??? -->
+    <!-- SA: Wide Blow --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
     <set val="180" order="0x08" stat="pAtkAngle"/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="8806" name="Shyeed's Bow - Cheap Shot">
@@ -98,15 +79,12 @@
     <set val="227" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-	<!-- SA: Cheap Shot --> <!-- reduces MPconsume by only 1 MP... bad description  ??? -->
-    <sub val="1" order="0x40" stat="MpConsume"> 
+    <!-- SA: Cheap Shot --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <set order="0x08" stat="MpConsume" val="1">
        <and>
-          <game skill="false" chance="30"/> 
-       </and> 
-    </sub>
-    <!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+          <game skill="false" chance="30"/>
+       </and>
+    </set>
   </for>
 </item>
 <item id="8807" name="Shyeed's Bow - Focus">
@@ -118,11 +96,6 @@
     <set val="227" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Focus -->
-    <add val="61" order="0x40" stat="rCrit"/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="8808" name="Shyeed's Bow - Quick Recovery">
@@ -134,11 +107,8 @@
     <set val="227" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Quick Recovery -->
+    <!-- SA: Quick Recovery --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
     <mul val="0.87" order="0x30" stat="atkReuse"/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="8809" name="Sobekk's Hurricane - Rsk. Haste">
@@ -150,15 +120,6 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Rsk. Haste -->
-    <mul order="0x30" stat="pAtkSpd" val="1.11">
-      <and>
-        <player hp="60"/>
-      </and>
-    </mul>
-    <!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="8810" name="Sobekk's Hurricane - Haste">
@@ -181,9 +142,6 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="8812" name="Themis' Tongue - Mana Up">
@@ -206,9 +164,6 @@
     <set val="379" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="8814" name="Themis' Tongue - Magic Focus">
@@ -220,9 +175,6 @@
     <set val="379" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="8815" name="Cabrio's Hand - Conversion">
@@ -256,9 +208,6 @@
     <set val="379" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="8818" name="Daimon Crystal - Mana Up">
@@ -292,9 +241,6 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="8821" name="Shadow Item: Two Handed Sword">
@@ -311,7 +257,6 @@
     <set val="64" order="0x08" stat="pAtk"/>
     <set val="39" order="0x08" stat="mAtk"/>
     <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
     <set val="379" order="0x08" stat="pAtkSpd"/>
   </for>
 </item>
@@ -446,7 +391,6 @@
     <set val="148" order="0x08" stat="pAtk"/>
     <set val="68" order="0x08" stat="mAtk"/>
     <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
     <set val="325" order="0x08" stat="pAtkSpd"/>
   </for>
 </item>
@@ -464,7 +408,6 @@
     <set val="139" order="0x08" stat="pAtk"/>
     <set val="76" order="0x08" stat="mAtk"/>
     <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
     <set val="379" order="0x08" stat="pAtkSpd"/>
   </for>
 </item>
@@ -527,7 +470,6 @@
     <set val="169" order="0x08" stat="pAtk"/>
     <set val="76" order="0x08" stat="mAtk"/>
     <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
     <set val="325" order="0x08" stat="pAtkSpd"/>
   </for>
 </item>
@@ -554,7 +496,6 @@
     <set val="213" order="0x08" stat="pAtk"/>
     <set val="91" order="0x08" stat="mAtk"/>
     <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
     <set val="325" order="0x08" stat="pAtkSpd"/>
   </for>
 </item>
