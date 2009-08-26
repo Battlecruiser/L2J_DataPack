@@ -86,7 +86,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			try
 			{
 				String[] commandSplit = command.split(" ");
-				int npcId = Integer.valueOf(commandSplit[1]);
+				int npcId = Integer.parseInt(commandSplit[1]);
 				L2NpcTemplate npc = NpcTable.getInstance().getTemplate(npcId);
 				Show_Npc_Property(activeChar, npc);
 			}
@@ -817,24 +817,24 @@ public class AdminEditNpc implements IAdminCommandHandler
 			}
 			
 			if (statToSet.equals("templateId"))
-				newNpcData.set("idTemplate", Integer.valueOf(value));
+				newNpcData.set("idTemplate", Integer.parseInt(value));
 			else if (statToSet.equals("name"))
 				newNpcData.set("name", value);
 			else if (statToSet.equals("serverSideName"))
-				newNpcData.set("serverSideName", Integer.valueOf(value));
+				newNpcData.set("serverSideName", Integer.parseInt(value));
 			else if (statToSet.equals("title"))
 				newNpcData.set("title", value);
 			else if (statToSet.equals("serverSideTitle"))
-				newNpcData.set("serverSideTitle", Integer.valueOf(value) == 1 ? 1 : 0);
+				newNpcData.set("serverSideTitle", Integer.parseInt(value) == 1 ? 1 : 0);
 			else if (statToSet.equals("collisionRadius"))
-				newNpcData.set("collision_radius", Integer.valueOf(value));
+				newNpcData.set("collision_radius", Integer.parseInt(value));
 			else if (statToSet.equals("collisionHeight"))
-				newNpcData.set("collision_height", Integer.valueOf(value));
+				newNpcData.set("collision_height", Integer.parseInt(value));
 			else if (statToSet.equals("level"))
-				newNpcData.set("level", Integer.valueOf(value));
+				newNpcData.set("level", Integer.parseInt(value));
 			else if (statToSet.equals("sex"))
 			{
-				int intValue = Integer.valueOf(value);
+				int intValue = Integer.parseInt(value);
 				newNpcData.set("sex", intValue == 0 ? "male" : intValue == 1 ? "female" : "etc");
 			}
 			else if (statToSet.equals("type"))
@@ -843,62 +843,62 @@ public class AdminEditNpc implements IAdminCommandHandler
 				newNpcData.set("type", value);
 			}
 			else if (statToSet.equals("attackRange"))
-				newNpcData.set("attackrange", Integer.valueOf(value));
+				newNpcData.set("attackrange", Integer.parseInt(value));
 			else if (statToSet.equals("hp"))
-				newNpcData.set("hp", Integer.valueOf(value));
+				newNpcData.set("hp", Integer.parseInt(value));
 			else if (statToSet.equals("mp"))
-				newNpcData.set("mp", Integer.valueOf(value));
+				newNpcData.set("mp", Integer.parseInt(value));
 			else if (statToSet.equals("hpRegen"))
-				newNpcData.set("hpreg", Integer.valueOf(value));
+				newNpcData.set("hpreg", Integer.parseInt(value));
 			else if (statToSet.equals("mpRegen"))
-				newNpcData.set("mpreg", Integer.valueOf(value));
+				newNpcData.set("mpreg", Integer.parseInt(value));
 			else if (statToSet.equals("str"))
-				newNpcData.set("str", Integer.valueOf(value));
+				newNpcData.set("str", Integer.parseInt(value));
 			else if (statToSet.equals("con"))
-				newNpcData.set("con", Integer.valueOf(value));
+				newNpcData.set("con", Integer.parseInt(value));
 			else if (statToSet.equals("dex"))
-				newNpcData.set("dex", Integer.valueOf(value));
+				newNpcData.set("dex", Integer.parseInt(value));
 			else if (statToSet.equals("int"))
-				newNpcData.set("int", Integer.valueOf(value));
+				newNpcData.set("int", Integer.parseInt(value));
 			else if (statToSet.equals("wit"))
-				newNpcData.set("wit", Integer.valueOf(value));
+				newNpcData.set("wit", Integer.parseInt(value));
 			else if (statToSet.equals("men"))
-				newNpcData.set("men", Integer.valueOf(value));
+				newNpcData.set("men", Integer.parseInt(value));
 			else if (statToSet.equals("exp"))
-				newNpcData.set("exp", Integer.valueOf(value));
+				newNpcData.set("exp", Integer.parseInt(value));
 			else if (statToSet.equals("sp"))
-				newNpcData.set("sp", Integer.valueOf(value));
+				newNpcData.set("sp", Integer.parseInt(value));
 			else if (statToSet.equals("pAtk"))
-				newNpcData.set("patk", Integer.valueOf(value));
+				newNpcData.set("patk", Integer.parseInt(value));
 			else if (statToSet.equals("pDef"))
-				newNpcData.set("pdef", Integer.valueOf(value));
+				newNpcData.set("pdef", Integer.parseInt(value));
 			else if (statToSet.equals("mAtk"))
-				newNpcData.set("matk", Integer.valueOf(value));
+				newNpcData.set("matk", Integer.parseInt(value));
 			else if (statToSet.equals("mDef"))
-				newNpcData.set("mdef", Integer.valueOf(value));
+				newNpcData.set("mdef", Integer.parseInt(value));
 			else if (statToSet.equals("pAtkSpd"))
-				newNpcData.set("atkspd", Integer.valueOf(value));
+				newNpcData.set("atkspd", Integer.parseInt(value));
 			else if (statToSet.equals("aggro"))
-				newNpcData.set("aggro", Integer.valueOf(value));
+				newNpcData.set("aggro", Integer.parseInt(value));
 			else if (statToSet.equals("mAtkSpd"))
-				newNpcData.set("matkspd", Integer.valueOf(value));
+				newNpcData.set("matkspd", Integer.parseInt(value));
 			else if (statToSet.equals("rHand"))
-				newNpcData.set("rhand", Integer.valueOf(value));
+				newNpcData.set("rhand", Integer.parseInt(value));
 			else if (statToSet.equals("lHand"))
-				newNpcData.set("lhand", Integer.valueOf(value));
+				newNpcData.set("lhand", Integer.parseInt(value));
 			else if (statToSet.equals("armor"))
-				newNpcData.set("armor", Integer.valueOf(value));
+				newNpcData.set("armor", Integer.parseInt(value));
 			else if (statToSet.equals("runSpd"))
-				newNpcData.set("runspd", Integer.valueOf(value));
+				newNpcData.set("runspd", Integer.parseInt(value));
 			else if (statToSet.equals("factionId"))
 				newNpcData.set("faction_id", value);
 			else if (statToSet.equals("factionRange"))
-				newNpcData.set("faction_range", Integer.valueOf(value));
+				newNpcData.set("faction_range", Integer.parseInt(value));
 			else if (statToSet.equals("isUndead"))
-				newNpcData.set("isUndead", Integer.valueOf(value) == 1 ? 1 : 0);
+				newNpcData.set("isUndead", Integer.parseInt(value) == 1 ? 1 : 0);
 			else if (statToSet.equals("absorbLevel"))
 			{
-				int intVal = Integer.valueOf(value);
+				int intVal = Integer.parseInt(value);
 				newNpcData.set("absorb_level", intVal < 0 ? 0 : intVal > 12 ? 0 : intVal);
 			}
 		}
