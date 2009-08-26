@@ -216,6 +216,8 @@
     <set val="303" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Cheap Shot --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <mul order="0x08" stat="MpConsume" val="0.88"/>
   </for>
 </item>
 <item id="12862" name="Screaming Vengeance - Concentration {PvP} - Focus">
@@ -238,6 +240,8 @@
     <set val="303" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Quick Recovery --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <mul val="0.83" order="0x30" stat="atkReuse"/>
   </for>
 </item>
 <item id="12864" name="Behemoth's Tuning Fork - Destruction - Focus">
@@ -315,6 +319,12 @@
     <set val="227" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Cheap Shot --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <set order="0x08" stat="MpConsume" val="1">
+       <and>
+          <game skill="false" chance="30"/>
+       </and>
+    </set>
   </for>
 </item>
 <item id="12871" name="Shyeed's Bow - Concentration - Focus">
@@ -337,6 +347,8 @@
     <set val="227" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Quick Recovery --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <mul val="0.83" order="0x30" stat="atkReuse"/>
   </for>
 </item>
 <item id="12873" name="Sword of Ipos - Earth {PvP} - Focus">
@@ -482,7 +494,7 @@
     <enchant val="0" order="0x0C" stat="mAtk"/>
   </for>
 </item>
-<item id="12886" name="Tiphon's Spear - Landslide - Longblow">
+<item id="12886" name="Tiphon's Spear - Landslide - Towering Blow">
   <for>
     <set val="251" order="0x08" stat="pAtk"/>
     <set val="121" order="0x08" stat="mAtk"/>
@@ -491,9 +503,11 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Towering Blow --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <set val="80" order="0x08" stat="pAtkRange"/>
   </for>
 </item>
-<item id="12887" name="Tiphon's Spear - Landslide - Wild Blow">
+<item id="12887" name="Tiphon's Spear - Landslide - Wide Blow">
   <for>
     <set val="251" order="0x08" stat="pAtk"/>
     <set val="121" order="0x08" stat="mAtk"/>
@@ -502,6 +516,8 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Wide Blow --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <set val="180" order="0x08" stat="pAtkAngle"/>
   </for>
 </item>
 <item id="12888" name="Tallum Blade*Damascus - Landslide {PvP}">

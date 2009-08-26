@@ -152,6 +152,8 @@
     <set val="303" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Cheap Shot --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <mul order="0x08" stat="MpConsume" val="0.88"/>
   </for>
 </item>
 <item id="11114" name="Reaper - Clairvoyance - Quick Recovery">
@@ -163,6 +165,8 @@
     <set val="303" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Quick Recovery --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <mul val="0.85" order="0x30" stat="atkReuse"/>
   </for>
 </item>
 <item id="11115" name="Reaper - Clairvoyance - Critical Poison">
@@ -284,6 +288,12 @@
     <set val="227" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Cheap Shot --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <set order="0x08" stat="MpConsume" val="2">
+       <and>
+          <game skill="false" chance="47"/>
+       </and>
+    </set>
   </for>
 </item>
 <item id="11126" name="Soul Bow - Clairvoyance - Quick Recovery">
@@ -295,6 +305,8 @@
     <set val="227" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Quick Recovery --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <mul val="0.85" order="0x30" stat="atkReuse"/>
   </for>
 </item>
 <item id="11127" name="Soul Bow - Clairvoyance - Critical Poison">
@@ -350,6 +362,8 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Wide Blow --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <set val="180" order="0x08" stat="pAtkAngle"/>
   </for>
 </item>
 <item id="11132" name="Enchanted Cerberus Fang">
@@ -513,6 +527,8 @@
     <set val="303" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Cheap Shot --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <mul order="0x08" stat="MpConsume" val="0.88"/>
   </for>
 </item>
 <item id="11147" name="Screaming Vengeance - Concentration - Focus">
@@ -535,6 +551,8 @@
     <set val="303" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Quick Recovery --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <mul val="0.83" order="0x30" stat="atkReuse"/>
   </for>
 </item>
 <item id="11149" name="Behemoth's Tuning Fork - Destruction">
@@ -645,6 +663,12 @@
     <set val="227" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Cheap Shot --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <set order="0x08" stat="MpConsume" val="1">
+       <and>
+          <game skill="false" chance="30"/>
+       </and>
+    </set>
   </for>
 </item>
 <item id="11159" name="Shyeed's Bow - Concentration - Focus">
@@ -667,6 +691,8 @@
     <set val="227" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Quick Recovery --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <mul val="0.83" order="0x30" stat="atkReuse"/>
   </for>
 </item>
 <item id="11161" name="Sword of Ipos - Earth">
@@ -867,7 +893,7 @@
     <enchant val="0" order="0x0C" stat="mAtk"/>
   </for>
 </item>
-<item id="11179" name="Tiphon's Spear - Landslide - Long Blow">
+<item id="11179" name="Tiphon's Spear - Landslide - Towering Blow">
   <for>
     <set val="251" order="0x08" stat="pAtk"/>
     <set val="121" order="0x08" stat="mAtk"/>
@@ -876,9 +902,11 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Towering Blow --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <set val="80" order="0x08" stat="pAtkRange"/>
   </for>
 </item>
-<item id="11180" name="Tiphon's Spear - Landslide - Wild Blow">
+<item id="11180" name="Tiphon's Spear - Landslide - Wide Blow">
   <for>
     <set val="251" order="0x08" stat="pAtk"/>
     <set val="121" order="0x08" stat="mAtk"/>
@@ -887,6 +915,8 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Wide Blow --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <set val="180" order="0x08" stat="pAtkAngle"/>
   </for>
 </item>
 <item id="11181" name="Tallum Blade*Damascus - Landslide">
@@ -1096,6 +1126,12 @@
     <set val="293" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Cheap Shot --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <set order="0x08" stat="MpConsume" val="1">
+       <and>
+          <game skill="false" chance="26"/>
+       </and>
+    </set>
   </for>
 </item>
 </list>
