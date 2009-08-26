@@ -52,13 +52,11 @@ public class AdminBuffs implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("The player " + playername
-					        + " is not online");
+					activeChar.sendMessage("The player " + playername + " is not online");
 					return false;
 				}
 			}
-			else if ((activeChar.getTarget() != null)
-			        && (activeChar.getTarget() instanceof L2PcInstance))
+			else if ((activeChar.getTarget() != null) && (activeChar.getTarget() instanceof L2PcInstance))
 			{
 				showBuffs((L2PcInstance) activeChar.getTarget(), activeChar);
 				return true;
@@ -82,8 +80,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Failed removing effect: "
-				        + e.getMessage());
+				activeChar.sendMessage("Failed removing effect: " + e.getMessage());
 				activeChar.sendMessage("Usage: //stopbuff <playername> [skillId]");
 				return false;
 			}
@@ -113,13 +110,11 @@ public class AdminBuffs implements IAdminCommandHandler
 				
 				for (L2Character knownChar : activeChar.getKnownList().getKnownCharactersInRadius(radius))
 				{
-					if ((knownChar instanceof L2PcInstance)
-					        && !(knownChar.equals(activeChar)))
+					if ((knownChar instanceof L2PcInstance) && !(knownChar.equals(activeChar)))
 						knownChar.stopAllEffects();
 				}
 				
-				activeChar.sendMessage("All effects canceled within raidus "
-				        + radius);
+				activeChar.sendMessage("All effects canceled within raidus " + radius);
 				return true;
 			}
 			catch (NumberFormatException e)
@@ -141,35 +136,35 @@ public class AdminBuffs implements IAdminCommandHandler
 	public void showBuffs(L2PcInstance player, L2PcInstance activeChar)
 	{
 		final L2Effect[] effects = player.getAllEffects();
-                final StringBuilder html = StringUtil.startAppend(
-                        500 + effects.length * 200,
-                        "<html><center><font color=\"LEVEL\">Effects of ",
-                        player.getName(),
-                        "</font><center><br>" +
-                        "<table>" +
-                        "<tr><td width=200>Skill</td><td width=70>Action</td></tr>"
-                        );
+		final StringBuilder html = StringUtil.startAppend(500 + effects.length * 200,
+				"<html><center><font color=\"LEVEL\">Effects of ",
+				player.getName(),
+				"</font><center><br>" +
+				"<table>" +
+				"<tr><td width=200>Skill</td><td width=70>Action</td></tr>"
+		);
 		
 		for (L2Effect e : effects) {
 			if (e != null) {
-                            StringUtil.append(html,
-                                    "<tr><td>",
-                                    e.getSkill().getName(),
-                                    "</td><td><button value=\"Remove\" action=\"bypass -h admin_stopbuff ",
-                                    player.getName(),
-                                    " ",
-                                    String.valueOf(e.getSkill().getId()),
-                                    "\" width=60 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td></tr>");
+				StringUtil.append(html,
+						"<tr><td>",
+						e.getSkill().getName(),
+						"</td><td><button value=\"Remove\" action=\"bypass -h admin_stopbuff ",
+						player.getName(),
+						" ",
+						String.valueOf(e.getSkill().getId()),
+						"\" width=60 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>"
+				);
 			}
 		}
 
-                StringUtil.append(html,
-                        "</table><br>" +
-                        "<button value=\"Remove All\" action=\"bypass -h admin_stopallbuffs ",
-		        player.getName(),
-		        "\" width=60 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\">" +
-                        "</html>"
-                        );
+		StringUtil.append(html,
+				"</table><br>" +
+				"<button value=\"Remove All\" action=\"bypass -h admin_stopallbuffs ",
+				player.getName(),
+				"\" width=60 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">" +
+				"</html>"
+		);
 		
 		NpcHtmlMessage ms = new NpcHtmlMessage(1);
 		ms.setHtml(html.toString());
@@ -199,9 +194,7 @@ public class AdminBuffs implements IAdminCommandHandler
 				if ((e != null) && (e.getSkill().getId() == SkillId))
 				{
 					e.exit();
-					remover.sendMessage("Removed " + e.getSkill().getName()
-					        + " level " + e.getSkill().getLevel() + " from "
-					        + playername);
+					remover.sendMessage("Removed " + e.getSkill().getName() + " level " + e.getSkill().getLevel() + " from " + playername);
 				}
 			}
 			showBuffs(player, remover);
@@ -229,9 +222,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		}
 		else
 		{
-			remover.sendMessage("Can not remove effects from " + playername
-			        + ". Player appears offline.");
-			showBuffs(player, remover);
+			remover.sendMessage("The player " + playername + " is not online");
 		}
 	}
 	
