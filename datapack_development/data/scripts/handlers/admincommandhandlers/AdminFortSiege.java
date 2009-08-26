@@ -61,7 +61,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 		int fortId = 0;
 		if (st.hasMoreTokens())
 		{
-			fortId = Integer.valueOf(st.nextToken());
+			fortId = Integer.parseInt(st.nextToken());
 			fort = FortManager.getInstance().getFortById(fortId);
 		}
 		// Get fort
