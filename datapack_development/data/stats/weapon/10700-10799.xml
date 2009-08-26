@@ -75,6 +75,8 @@
     <set val="303" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Cheap Shot --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <mul order="0x08" stat="MpConsume" val="0.88"/>
   </for>
 </item>
 <item id="10707" name="Screaming Vengeance {PvP} - Focus">
@@ -97,6 +99,8 @@
     <set val="303" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Quick Recovery --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <mul val="0.83" order="0x30" stat="atkReuse"/>
   </for>
 </item>
 <item id="10709" name="Tallum Blade*Damascus {PvP}">
@@ -141,11 +145,6 @@
     <set val="379" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Focus -->
-    <add val="84" order="0x40" stat="rCrit"/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="10713" name="Heavens Divider {PvP} - Haste">
@@ -256,11 +255,6 @@
     <set val="433" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Critical Damage -->
-    <add val="265" order="0x40" stat="cAtkAdd"/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="10723" name="Angel Slayer {PvP} - HP Drain">
@@ -272,11 +266,6 @@
     <set val="433" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: HP Drain -->
-    <add val="3" order="0x40" stat="absorbDam"/>
-    <!-- Enhances damage to target during PvP -->
-    <mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-    <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
   </for>
 </item>
 <item id="10724" name="Angel Slayer {PvP} - Haste">
@@ -431,6 +420,12 @@
     <set val="293" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Cheap Shot --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <set order="0x08" stat="MpConsume" val="1">
+       <and>
+          <game skill="false" chance="26"/>
+       </and>
+    </set>
   </for>
 </item>
 <item id="10738" name="Draconic Bow {PvP} - Focus">
@@ -530,6 +525,8 @@
     <set val="303" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Cheap Shot --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <mul order="0x08" stat="MpConsume" val="0.88"/>
   </for>
 </item>
 <item id="10747" name="Sarunga - PvP - Focus">
@@ -904,6 +901,12 @@
     <set val="293" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Cheap Shot --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <set order="0x08" stat="MpConsume" val="1">
+       <and>
+          <game skill="false" chance="26"/>
+       </and>
+    </set>
   </for>
 </item>
 <item id="10781" name="Dynasty Bow {PvP} - Guidance">
@@ -1003,6 +1006,8 @@
     <set val="303" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Cheap Shot --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <mul order="0x08" stat="MpConsume" val="0.88"/>
   </for>
 </item>
 <item id="10790" name="Dynasty Crossbow - PvP - Guidance">

@@ -1,77 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 <skill id="3600" levels="10" name="Special Ability: Anger">
-  <!-- For Poles -->
-  <!--
-      Lvl 1:  Decreases the character's Maximum HP but increases P. Atk. Allows the character to attack multiple opponents.
-      Lvl 2:  Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents.
-      Lvl 3:  Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents.
-      Lvl 4:  Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents.
-      Lvl 5:  Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents.
-      Lvl 6:  Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents.
-      Lvl 7:  Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents and inflicts additional damage during PvP.
-      Lvl 8:  Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents and inflicts additional damage during PvP.
-      Lvl 9:  Decreases the character's Maximum HP but increases P. Atk., and allows the character to attack multiple opponents and inflicts additional damage during PvP.
-      Lvl 10: Decreases MaxHP and increases P. Atk. Enables the character to attack multiple opponents. Increases damage inflicted during PvP.
-  -->
-  <!-- Guess Lvl 10 -->
-  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 80 </table> 
-  <table name="#pAtk"> 20.44 22.64 24.77 26.78 28.59 30.12 31.30 39 45 78 </table>
-  <table name="#pvp"> 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
-  <set name="magicLvl" val="#magicLvl"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="BUFF"/>
+<!-- s_opt_anger_polearm_1/2/3/4/5/6/7/8/9 -->
+<!--
+4834	Scythe - Anger	3600-1	
+4837	Orcish Glaive - Anger	3600-1	
+4846	Scorpion - Anger	3600-3	
+4855	Great Axe - Anger	3600-5	
+4858	Lance - Anger	3600-6	
+-->
+<!--
+Guessing...
+9869	Dynasty Halberd - Anger	3600-10	Decreases your HP by 15% and increases P. Atk. by 78. Increases damage inflicted during PvP.
+10449	Icarus Trident - Anger	3600-10	Decreases HP by 15% while increasing P. Atk. by 78 on a critical attack. Increases damage inflicted during PvP.
+10765	Dynasty Halberd {PvP} - Anger	3600-10	
+10875	Great Axe - Thunder - Anger	3600-5	A Masterwork Item that increases the critical effect.\n\nDecreases Max HP by 15%, and increases P. Atk. by 28.
+10968	Lance - Earth - Anger	3600-6	A Masterwork Item that increases Max HP.\n\nDecreases Max HP by 15%, and increases P. Atk. by 30.
+11297	Dynasty Halberd - Earth - Anger	3600-10	A Masterwork Item that increases Max HP.\n\nDecreases Max HP by 15% and increases P. Atk. by 78. Increases damage inflicted during PvP.
+11330	Icarus Trident - Thunder - Anger	3600-10	A Masterwork Item that increases critical attack impact.\n\nDecreases Max HP by 15% and increases P. Atk. by 78. Increases damage inflicted during PvP.
+12975	Dynasty Halberd - Earth {PvP} - Anger	3600-10	A Masterwork Item that increases Max HP.\n\nDecreases Max HP by 15% and increases P. Atk. by 78. Increases damage inflicted during PvP.
+14391	Icarus Trident {PvP} - Anger	3600-10	
+14442	Icarus Trident - Thunder {PvP} - Anger	3600-10	
+-->
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 80 </table>
+  <table name="#pAtk"> 20.44 22.64 24.77 26.78 28.59 30.12 31.30 39 45 78 </table> <!-- Guessing Level 10 -->
+  <table name="#pvpBonus"> 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table> <!-- Guessing Level 10 -->
   <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <for>
     <add order="0x40" stat="pAtk" val="#pAtk"/>
     <mul order="0x30" stat="maxHp" val="0.85"/>
-    <mul order="0x30" stat="pvpPhysDmg" val="#pvp"/>
-    <mul order="0x30" stat="pvpMagicalDmg" val="#pvp"/>
     <add order="0x40" stat="atkCountMax" val="4"/>
+    <mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus"/>
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus"/>
+    <mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus"/>
   </for>
 </skill>
 <skill id="3601" levels="9" name="Special Ability: Haste">
-  <!-- For Poles -->
-  <!--
-      Lvl 1: Increases Atk.Spd., and enables the character to attack multiple opponents.
-      Lvl 2: Increases Atk.Spd., and enables the character to attack multiple opponents.
-      Lvl 3: Increases Atk.Spd., and enables the character to attack multiple opponents.
-      Lvl 4: Increases Atk.Spd., and enables the character to attack multiple opponents.
-      Lvl 5: Increases Atk.Spd., and enables the character to attack multiple opponents.
-      Lvl 6: Increases Atk.Spd., and enables the character to attack multiple opponents.
-      Lvl 7: Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
-      Lvl 8: Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
-      Lvl 9: Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
-  -->
-  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 </table>
+<!-- s_opt_haste_polearm -->
+<!--
+5626	Halberd - Haste	pole	3601-7;	Increases Atk. Spd. by about 6%. Enhances damage to a target during PvP.
+6601	Saint Spear - Haste	pole	3601-9;	Increases Atk. Spd. by about 7%. Increases damage inflicted during PvP.
+-->
   <table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 1.06 1.06 1.07 </table>
-  <table name="#pvp"> 1 1 1 1 1 1 1.05 1.05 1.05 </table>
-  <set name="magicLvl" val="#magicLvl"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="BUFF"/>
+  <table name="#pvpBonus"> 1 1 1 1 1 1 1.05 1.05 1.05 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 </table>
   <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="75"/>
   <for>
     <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
-    <mul order="0x30" stat="pvpPhysDmg" val="#pvp"/>
-    <mul order="0x30" stat="pvpMagicalDmg" val="#pvp"/>
     <add order="0x40" stat="atkCountMax" val="4"/>
+    <mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus"/>
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus"/>
+    <mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus"/>
   </for>
 </skill>
-<skill id="3602" levels="9" name="Special Ability: Guidance">
-  <!--
-      Lvl 1 - Increases Atk. Spd., and enables the character to attack multiple opponents and inflicts additional damage during PvP.
-      Lvl 2 - Increases Accuracy, and enables the character to attack multiple opponents.
-      Lvl 3 - Increases Accuracy, and enables the character to attack multiple opponents.
-      Lvl 4 - Increases Accuracy, and enables the character to attack multiple opponents.
-      Lvl 5 - Increases Accuracy, and enables the character to attack multiple opponents.
-      Lvl 6 - Increases Accuracy, and enables the character to attack multiple opponents.
-      Lvl 7 - Increases Accuracy, and enables the character to attack multiple opponents and inflicts additional damage during PvP.
-      Lvl 8 - Increases Accuracy, and enables the character to attack multiple opponents and inflicts additional damage during PvP.
-      Lvl 9 - Increases Accuracy, and enables the character to attack multiple opponents and inflicts additional damage during PvP.
-  -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<skill id="3602" levels="10" name="Special Ability: Guidance">
+<!-- s_opt_guidence_polearm -->
+<!--
+5632	Tallum Glaive - Guidance	3602-8;	Increases Accuracy by 4. Increases damage inflicted during PvP.
+11129	Tallum Glaive - On Fire - Guidance	3602-8;	A Masterwork Item that increases HP regeneration.\n\nIncreases Accuracy by 4. Increases damage inflicted during PvP.
+6600	Saint Spear - Guidance	3602-9;	Increases Accuracy by 5. Increases damage inflicted during PvP.
+-->
+<!--
+Guessing...
+10726	Saint Spear - PvP - Guidance	3602-9;	Increases Accuracy by 5. Increases damage inflicted during PvP.
+11220	Saint Spear - Destruction - Guidance	3602-9;	A Masterwork Item that increases P. Atk. Increases Accuracy by 5. Increases damage inflicted during PvP.
+12917	Saint Spear - Landslide - Guidance	3602-9;	A Masterwork Item that has a chance to stun when attacking. Increases Accuracy by 5. Increases damage inflicted during PvP.
+14134	Vesper Stormer - Guidance	3602-10;	
+14494	Vesper Stormer {PvP} - Guidance	3602-10;	
+-->
+  <table name="#accCombat"> 6.88 6.07 5.72 5.37 5.02 4.68 4.34 3.95 5.27 7.5 </table> <!-- Guessing Level 10 -->
+  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 80 </table> <!-- Guessing Level 10 -->
+  <table name="#pvpBonus"> 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table> <!-- Guessing Level 10 -->
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <for>
+    <add order="0x40" stat="accCombat" val="#accCombat"/>
+    <add order="0x40" stat="atkCountMax" val="4"/>
+    <mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus"/>
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus"/>
+    <mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus"/>
+  </for>
 </skill>
 <skill id="3603" levels="10" name="Demon Sword Zariche">
   <table name="#maxCp"> 12 13 14 15 17 19 21 23 25 27 </table>
@@ -96,6 +112,12 @@
     <add order="0x40" stat="runSpd" val="#runSpd"/>
     <add order="0x40" stat="absorbDam" val="100"/> <!-- absorb 100% HP from damage inflicted on enemies -->
     <mul order="0x30" stat="regCp" val="20"/>
+    <set order="0x08" stat="STR" val="40"/>
+    <set order="0x08" stat="DEX" val="30"/>
+    <set order="0x08" stat="CON" val="43"/>
+    <set order="0x08" stat="INT" val="21"/>
+    <set order="0x08" stat="WIT" val="15"/>
+    <set order="0x08" stat="MEN" val="21"/>
   </for>
 </skill>
 <skill id="3604" levels="1" name="Frintezza's Necklace">
@@ -335,10 +357,7 @@
   </for>
 </skill>
 <skill id="3626" levels="1" name="Kabokula">
-  <!--
-  Description(s):
-      Used when trapping a roaring Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone.
-  -->
+<!-- Used when trapping a roaring Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone. -->
   <set name="itemConsumeId" val="8764"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="magicLvl" val="77"/>
@@ -360,10 +379,7 @@
   </cond>
 </skill>
 <skill id="3627" levels="1" name="Tapirawa">
-  <!--
-  Description(s):
-      Used on a quivering Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone.
-  -->
+<!-- Used on a quivering Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone. -->
   <set name="itemConsumeId" val="8764"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="magicLvl" val="77"/>
@@ -385,10 +401,7 @@
   </cond>
 </skill>
 <skill id="3628" levels="1" name="Shabonoba">
-  <!--
-  Description(s):
-      Used on a struggling Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone.
-  -->
+<!-- Used on a struggling Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone. -->
   <set name="itemConsumeId" val="8764"/>
   <set name="itemConsumeCount" val="1"/>
   <set name="magicLvl" val="77"/>
@@ -410,7 +423,6 @@
   </cond>
 </skill>
 <skill id="3629" levels="10" name="Blood Sword Akamanah">
-  <!-- Needs to be finished - below is a copy of 3603 Demon Sword Zariche -->
   <table name="#maxCp"> 12 13 14 15 17 19 21 23 25 27 </table>
   <table name="#pAtk"> 3 4.5 6 7.5 9 10.5 11 11.5 12 12.5 </table>
   <table name="#mAtk"> 3 3.25 3.5 3.75 4 4.25 4.5 5 5.5 5.75 </table>
@@ -433,26 +445,32 @@
     <add order="0x40" stat="runSpd" val="#runSpd"/>
     <add order="0x40" stat="absorbDam" val="100"/> <!-- absorb 100% HP from damage inflicted on enemies -->
     <mul order="0x30" stat="regCp" val="20"/>
+    <set order="0x08" stat="STR" val="40"/>
+    <set order="0x08" stat="DEX" val="30"/>
+    <set order="0x08" stat="CON" val="43"/>
+    <set order="0x08" stat="INT" val="21"/>
+    <set order="0x08" stat="WIT" val="15"/>
+    <set order="0x08" stat="MEN" val="21"/>
   </for>
 </skill>
 <skill id="3630" levels="1" name="Void Burst">
-  <set name="mpConsume" val="140"/>
-  <set name="power" val="1000"/> <!-- Guess -->
   <set name="target" val="TARGET_AURA"/>
-  <set name="hitTime" val="2000"/>
-  <set name="reuseDelay" val="60000"/> <!-- Need check -->
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="mpConsume" val="140"/>
+  <set name="power" val="2500"/> <!-- Guess -->
+  <set name="hitTime" val="2000"/>
+  <set name="reuseDelay" val="10000"/> <!-- Guess -->
   <set name="skillRadius" val="200"/>
 </skill>
 <skill id="3631" levels="1" name="Void Flow">
-  <set name="mpConsume" val="140"/>
-  <set name="power" val="1000"/> <!-- Guess -->
   <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="1900"/>
-  <set name="reuseDelay" val="60000"/> <!-- Need check -->
   <set name="skillType" val="PDAM"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="mpConsume" val="140"/>
+  <set name="power" val="1000"/> <!-- Guess -->
+  <set name="hitTime" val="1900"/>
+  <set name="reuseDelay" val="4000"/> <!-- Guess -->
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
 </skill>
@@ -483,10 +501,10 @@
   </for>
 </skill>
 <skill id="3634" levels="1" name="Special Ability Infinity Sword">
-  <set name="magicLvl" val="80"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="85"/>
   <for>
     <!-- The following values are copied from Infinity Cleaver SA -->
     <add order="0x40" stat="cAtkAdd" val="504"/> <!-- P.Atk. +504 on a critical hit -->
@@ -501,14 +519,14 @@
   </for>
 </skill>
 <skill id="3635" levels="1" name="Special Ability Infinity Shooter">
-  <set name="magicLvl" val="80"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="85"/>
+  <set name="chanceType" val="ON_CRIT"/>
+  <set name="activationChance" val="7"/>
   <set name="triggeredId" val="3594"/>
   <set name="triggeredLevel" val="1"/>
-  <set name="activationChance" val="100"/> <!-- On Each Critical Hit -->
-  <set name="chanceType" val="ON_CRIT"/>
   <for>
     <!-- The following values are copied from Infinity Bow SA -->
     <mul order="0x30" stat="maxMp" val="1.3"/> <!-- MP +30% -->
@@ -517,7 +535,7 @@
     <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
     <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
     <mul order="0x30" stat="atkReuse" val="0.81"/> <!-- 19% Quick Recovery -->
-    <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.88"/> <!-- MP Consumption -12% --> <!-- Gessing -->
+    <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.88"/> <!-- MP Consumption -12% --> <!-- Guessing -->
   </for>
 </skill>
 <skill id="3636" levels="1" name="Dynasty Platinum Plate - Shield Master">
@@ -720,46 +738,87 @@
   </for>
 </skill>
 <skill id="3650" levels="1" name="PvP Weapon - CP Drain">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- Has a chance to recover CP when attacking. -->
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="triggeredId" val="5681"/>
+  <set name="triggeredLevel" val="1"/>
+  <set name="activationChance" val="1"/> <!-- Guessing -->
+  <set name="chanceType" val="ON_HIT"/>
 </skill>
 <skill id="3651" levels="1" name="PvP Weapon - Cancel">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- Has a chance to cancel 1 or more of the opponent's enhanced conditions when attacking. -->
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="triggeredId" val="5682"/>
+  <set name="triggeredLevel" val="1"/>
+  <set name="activationChance" val="1"/> <!-- Guessing -->
+  <set name="chanceType" val="ON_HIT"/>
 </skill>
 <skill id="3652" levels="1" name="PvP Weapon - Ignore Shield Defense">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- Has a chance to decrease the opponent's shield defense when attacking. -->
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="triggeredId" val="5683"/>
+  <set name="triggeredLevel" val="1"/>
+  <set name="activationChance" val="1"/> <!-- Guessing -->
+  <set name="chanceType" val="ON_HIT"/>
 </skill>
 <skill id="3653" levels="1" name="PvP Weapon - Attack Chance">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- Has a chance to inflict additional damage when attacking. -->
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="triggeredId" val="5684"/>
+  <set name="triggeredLevel" val="1"/>
+  <set name="activationChance" val="1"/> <!-- Guessing -->
+  <set name="chanceType" val="ON_HIT"/>
 </skill>
 <skill id="3654" levels="1" name="PvP Weapon - Casting">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- Increases Casting Spd. when being attacked. -->
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="triggeredId" val="5685"/>
+  <set name="triggeredLevel" val="1"/>
+  <set name="activationChance" val="1"/> <!-- Guessing -->
+  <set name="chanceType" val="ON_ATTACKED"/>
 </skill>
 <skill id="3655" levels="1" name="PvP Weapon - Rapid Fire">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- Has a chance to increase bow/crossbow attack speed when attacking. -->
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="triggeredId" val="5686"/>
+  <set name="triggeredLevel" val="1"/>
+  <set name="activationChance" val="1"/> <!-- Guessing -->
+  <set name="chanceType" val="ON_HIT"/>
 </skill>
 <skill id="3656" levels="1" name="PvP Weapon - Decrease Range">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- Has a chance to decrease bow/crossbow range when attacking. -->
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="triggeredId" val="5687"/>
+  <set name="triggeredLevel" val="1"/>
+  <set name="activationChance" val="1"/> <!-- Guessing -->
+  <set name="chanceType" val="ON_HIT"/>
 </skill>
 <skill id="3657" levels="1" name="PvP Weapon - Decrease Resist">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
+<!-- Has a chance to decrease attribute resistance when attacking. -->
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="triggeredId" val="5688"/>
+  <set name="triggeredLevel" val="1"/>
+  <set name="activationChance" val="1"/> <!-- Guessing -->
+  <set name="chanceType" val="ON_HIT"/>
 </skill>
 <skill id="3658" levels="1" name="PvP Shield - Reflect Damage">
+<!-- Has a chance to reflect the enemy's attack when being attacked. -->
   <set name="target" val="TARGET_NONE"/>
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>

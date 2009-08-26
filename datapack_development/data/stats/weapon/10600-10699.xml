@@ -176,7 +176,7 @@
     <enchant val="0" order="0x0C" stat="mAtk"/>
   </for>
 </item>
-<item id="10683" name="Tiphon's Spear - PvP - Long Blow">
+<item id="10683" name="Tiphon's Spear - PvP - Towering Blow">
   <for>
     <set val="251" order="0x08" stat="pAtk"/>
     <set val="121" order="0x08" stat="mAtk"/>
@@ -185,9 +185,11 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Towering Blow --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <set val="80" order="0x08" stat="pAtkRange"/>
   </for>
 </item>
-<item id="10684" name="Tiphon's Spear - PvP - Wild Blow">
+<item id="10684" name="Tiphon's Spear - PvP - Wide Blow">
   <for>
     <set val="251" order="0x08" stat="pAtk"/>
     <set val="121" order="0x08" stat="mAtk"/>
@@ -196,6 +198,8 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Wide Blow --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <set val="180" order="0x08" stat="pAtkAngle"/>
   </for>
 </item>
 <item id="10685" name="Shyeed's Bow - PvP - Cheap Shot">
@@ -207,6 +211,12 @@
     <set val="227" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Cheap Shot --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <sub order="0x08" stat="MpConsume" val="1">
+       <and>
+          <game skill="false" chance="30"/>
+       </and>
+    </sub>
   </for>
 </item>
 <item id="10686" name="Shyeed's Bow - PvP - Focus">
@@ -229,6 +239,8 @@
     <set val="227" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
+    <!-- SA: Quick Recovery --> <!-- TGS' Notes: There is no SA skill for this one. It's actually modified on the weapon itself. -->
+    <mul val="0.83" order="0x30" stat="atkReuse"/>
   </for>
 </item>
 <item id="10688" name="Sobekk's Hurricane - PvP - Rsk. Haste">

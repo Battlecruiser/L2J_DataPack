@@ -9,8 +9,6 @@
     <set val="379" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Guidance -->
-    <add val="5" order="0x40" stat="accCombat"/>
   </for>
 </item>
 <item id="6308" name="Sword of Limit - Critical Drain">
@@ -44,8 +42,6 @@
     <set val="379" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Empower -->
-    <add val="24" order="0x40" stat="mAtk"/>
   </for>
 </item>
 <item id="6311" name="Sword of Whispering Death - Magic Power">
@@ -57,9 +53,6 @@
     <set val="379" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-	<!-- SA: Magic Power -->
-    <add val="99" order="0x40" stat="mAtk"/>
-    <mul val="1.15" order="0x30" stat="MpConsume"/> 
   </for>
 </item>
 <item id="6312" name="Sword of Whispering Death - Magic Silence">
@@ -67,7 +60,6 @@
     <set val="111" order="0x08" stat="pAtk"/>
     <set val="101" order="0x08" stat="mAtk"/>
     <set val="8" order="0x08" stat="rCrit"/>
-    <add val="0" order="0x10" stat="accCombat"/>
     <set val="379" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
@@ -126,8 +118,6 @@
     <set val="325" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Critical Damage -->
-    <add val="270" order="0x40" stat="cAtkAdd"/>
   </for>
 </item>
 <item id="6349" name="Berserker Blade - Haste">
@@ -172,12 +162,6 @@
     <set val="433" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Rsk. Haste -->
-    <mul order="0x30" stat="pAtkSpd" val="1.13">
-      <and>
-        <player hp="60"/>
-      </and>
-    </mul>
   </for>
 </item>
 <item id="6357" name="Stiletto - Rsk. Haste">
@@ -189,12 +173,6 @@
     <set val="433" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Rsk. Haste -->
-    <mul order="0x30" stat="pAtkSpd" val="1.12">
-      <and>
-        <player hp="60"/>
-      </and>
-    </mul>
   </for>
 </item>
 <item id="6358" name="Crystal Dagger - Critical Damage">
@@ -206,8 +184,6 @@
     <set val="433" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Critical Damage -->
-    <add val="140" order="0x40" stat="cAtkAdd"/>
   </for>
 </item>
 <item id="6359" name="Demon Dagger - Critical Damage">
@@ -219,8 +195,6 @@
     <set val="433" order="0x08" stat="pAtkSpd"/>
     <enchant val="0" order="0x0C" stat="pAtk"/>
     <enchant val="0" order="0x0C" stat="mAtk"/>
-    <!-- SA: Critical Damage -->
-    <add val="160" order="0x40" stat="cAtkAdd"/>
   </for>
 </item>
 <item id="6364" name="Forgotten Blade">

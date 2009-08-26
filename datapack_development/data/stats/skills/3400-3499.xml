@@ -822,13 +822,72 @@
     <mul order="0x30" stat="regMp" val="1.02"/>
   </for>
 </skill>
-<skill id="3498" levels="1" name="Special Ability Light">
+<skill id="3498" levels="1" name="Special Ability: Light">
+<!-- Unknown Internal Name -->
+<!--
+Guessing...
+4683	Stormbringer - Light	3498-1;	
+4707	Sword of Nightmare - Light	3498-1;	
+4713	Flamberge - Light	3498-1;	
+4836	Scythe - Light	3498-1;	
+4845	Bec de Corbin - Light	3498-1;	
+4857	Great Axe - Light	3498-1;	
+5608	Carnage Bow - Light	3498-1;	
+9231	Soldat Estoc - Light	3498-1;	
+9235	Schlager - Light	3498-1;	
+9279	Blinzlasher - Light	3498-1;	
+9337	Doomchanter - Light	3498-1;	
+9379	Dynasty Rapier - Light	3498-1;	
+9383	Dynasty Ancient Sword - Light	3498-1;	
+9856	Dynasty Sword - Light	3498-1;	
+9859	Dynasty Blade - Light	3498-1;	
+9871	Dynasty Halberd - Light	3498-1;	
+10436	Icarus Sawsword - Light	3498-1;	
+10439	Icarus Heavy Arms - Light	3498-1;	
+10451	Icarus Trident - Light	3498-1;	
+10463	Icarus Stinger - Light	3498-1;	
+10466	Icarus Wingblade - Light	3498-1;	
+10752	Dynasty Sword {PvP} - Light	3498-1;	
+10755	Dynasty Blade {PvP} - Light	3498-1;	
+10767	Dynasty Halberd {PvP} - Light	3498-1;	
+10785	Dynasty Rapier {PvP} - Light	3498-1;	
+10788	Dynasty Ancient Sword {PvP} - Light	3498-1;	
+10877	Great Axe - Thunder - Light	3498-1;	
+11022	Doomchanter - Concentration - Light	3498-1;	
+11054	Carnage Bow - Concentration - Light	3498-1;	
+11246	Dynasty Ancient Sword - Great Gale - Light	3498-1;	
+11255	Dynasty Rapier - Earth - Light	3498-1;	
+11271	Dynasty Blade - Great Gale - Light	3498-1;	
+11275	Dynasty Sword - Earth - Light	3498-1;	
+11299	Dynasty Halberd - Earth - Light	3498-1;	
+11308	Icarus Sawsword - Destruction - Light	3498-1;	
+11316	Icarus Stinger - Destruction - Light	3498-1;	
+11328	Icarus Wingblade - Lightning - Light	3498-1;	
+11332	Icarus Trident - Thunder - Light	3498-1;	
+11344	Icarus Heavy Arms - Lightning - Light	3498-1;	
+12937	Dynasty Ancient Sword - Great Gale {PvP} - Light	3498-1;	
+12944	Dynasty Rapier - Earth {PvP} - Light	3498-1;	
+12956	Dynasty Blade - Great Gale {PvP} - Light	3498-1;	
+12959	Dynasty Sword - Earth {PvP} - Light	3498-1;	
+12977	Dynasty Halberd - Earth {PvP} - Light	3498-1;	
+14378	Icarus Sawsword {PvP} - Light	3498-1;	
+14381	Icarus Heavy Arms {PvP} - Light	3498-1;	
+14393	Icarus Trident {PvP} - Light	3498-1;	
+14405	Icarus Stinger {PvP} - Light	3498-1;	
+14408	Icarus Wingblade {PvP} - Light	3498-1;	
+14420	Icarus Sawsword - Destruction {PvP} - Light	3498-1;	
+14428	Icarus Stinger - Destruction {PvP} - Light	3498-1;	
+14440	Icarus Wingblade - Lightning {PvP} - Light	3498-1;	
+14444	Icarus Trident - Thunder {PvP} - Light	3498-1;	
+14456	Icarus Heavy Arms - Lightning {PvP} - Light	3498-1;	
+-->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
     <mul order="0x30" stat="maxLoad" val="1.2" />
     <mul order="0x30" stat="pvpPhysDmg" val="1.05"/>
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/>
   </for>
 </skill>
