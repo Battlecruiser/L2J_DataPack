@@ -365,11 +365,10 @@
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="reuseDelay" val="180000"/>
-  <set name="hitTime" val="500"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <for>
     <effect count="1" name="Hide" time="30" val="0">
-	  <mul order="0x30" stat="runSpd" val="0.7"/>
+      <mul order="0x30" stat="runSpd" val="0.7"/>
     </effect>
   </for>
 </skill>
@@ -540,11 +539,9 @@
   <set name="skillType" val="DETECTION"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="mpConsume" val="67"/>
-  <set name="reuseDelay" val="30000"/> <!-- Guessed -->
-  <set name="hitTime" val="3000"/> <!-- Guessed -->
+  <set name="reuseDelay" val="8000"/>
+  <set name="hitTime" val="2500"/>
   <set name="skillRadius" val="300"/> <!-- Guessed -->
-  <for>
-  </for>
 </skill>
 <skill id="934" levels="1" name="Sigil Mastery">
   <set name="operateType" val="OP_PASSIVE"/>
