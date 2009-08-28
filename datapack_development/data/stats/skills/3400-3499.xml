@@ -60,15 +60,25 @@
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="3411" levels="1" name="Special Ability: Focus">
-  <!-- For Duals +4 -->
-  <set name="magicLvl" val="80"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="BUFF"/>
+<!-- Unknown Internal Name -->
+<!--
+Guessing...
+52	Vesper Dual Sword	3411	1	Critical +109/PvP/+10% HP
+10004	Dynasty Dual Sword	3411	1	When enchanted, the P.Atk of a dualsword will increase more than that of a two-handed sword, blunt or fist weapon. When enchanted by 4 or more charges, the critical rate will increase by 109, and the MaxHP will increase by 10%. Enhances damage done to the target during PvP.
+10415	Icarus Dual Sword	3411	1	When enchanted, the P. Atk. of dual-swords, two-handed swords, two-handed blunt weapons and fist weapons will increase more than that of one-handed swords. When enchanted by 4 or more, Increases Critical Attack by 109, and Max HP increases by 10%. Increases the damage inflicted during PvP.
+14375	Icarus Dual Sword {PvP}	3411	1	Critical +109/PvP/+10% HP
+14412	Icarus Dual Sword - Destruction {PvP}	3411	1	Critical +109/PvP/+10% HP
+14462	Vesper Dual Sword {PvP}	3411	1	Critical +109/PvP/+10% HP
+-->
   <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="80"/>
   <for>
     <add order="0x40" stat="rCrit" val="109"/>
     <mul order="0x30" stat="maxHp" val="1.1"/>
     <mul order="0x30" stat="pvpPhysDmg" val="1.05"/>
+    <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/>
   </for>
 </skill>
@@ -211,25 +221,24 @@
 </skill>
 <skill id="3426" levels="1" name="Maximum Ability">
   <!-- Rapier +4 Skill -->
-  <!-- A critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members. -->
-  <set name="activationChance" val="25"/> <!-- Guess -->
-  <set name="chanceType" val="ON_CRIT"/>
-  <set name="magicLvl" val="80"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="80"/>
   <set name="triggeredId" val="5547"/>
   <set name="triggeredLevel" val="1"/>
+  <set name="activationChance" val="5"/> <!-- Guess -->
+  <set name="chanceType" val="ON_CRIT"/>
 </skill>
 <skill id="3427" levels="1" name="Special Ability: Infinity Rapier">
-  <set name="magicLvl" val="80"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="85"/>
+  <set name="chanceType" val="ON_CRIT"/>
+  <set name="activationChance" val="5"/>
   <set name="triggeredId" val="3579"/>
   <set name="triggeredLevel" val="1"/>
-  <set name="activationChance" val="100"/> <!-- On Each Critical Hit -->
-  <set name="chanceType" val="ON_CRIT"/>
   <for>
     <!-- The following values are copied from Infinity Blade SA -->
     <mul order="0x30" stat="maxHp" val="1.25"/> <!-- HP +25% -->
