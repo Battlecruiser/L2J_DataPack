@@ -1007,7 +1007,7 @@
   <set name="staticHitTime" val="true"/>
   <set name="staticReuse" val="true"/>
   <for>
-    <effect name="Buff" time="120" val="0">
+    <effect name="Buff" time="60" val="0">
       <mul order="0x30" stat="PhysicalMpConsumeRate" val="#PhysicalMpConsumeRate"/>
     </effect>
   </for>
@@ -1027,7 +1027,7 @@
   <set name="staticHitTime" val="true"/>
   <set name="staticReuse" val="true"/>
   <for>
-    <effect name="Buff" time="120" val="0">
+    <effect name="Buff" time="60" val="0">
       <mul order="0x30" stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate"/>
     </effect>
   </for>
@@ -1047,7 +1047,7 @@
   <set name="staticHitTime" val="true"/>
   <set name="staticReuse" val="true"/>
   <for>
-    <effect name="Buff" time="120" val="0">
+    <effect name="Buff" time="60" val="0">
       <mul order="0x30" stat="DanceMpConsumeRate" val="#DanceMpConsumeRate"/>
     </effect>
   </for>
@@ -1067,7 +1067,7 @@
   <set name="staticHitTime" val="true"/>
   <set name="staticReuse" val="true"/>
   <for>
-    <effect name="Buff" time="120" val="0">
+    <effect name="Buff" time="60" val="0">
       <mul order="0x30" stat="PhysicalMpConsumeRate" val="#MpConsumeRate"/>
       <mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRate"/>
       <mul order="0x30" stat="DanceMpConsumeRate" val="#MpConsumeRate"/>
