@@ -1619,14 +1619,14 @@
   <table name="#magicLvl"> 58 62 66 70 74 </table>
   <table name="#mpConsume"> 80 87 93 98 103 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="reuseDelay" val="8000"/>
+  <set name="reuseDelay" val="75000"/>
   <set name="hitTime" val="6000"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="FEAR"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="15"/> <!-- Guess -->
+  <set name="power" val="30"/>
   <set name="castRange" val="500"/>
   <set name="effectRange" val="1000"/>
   <set name="isDebuff" val="true"/>
