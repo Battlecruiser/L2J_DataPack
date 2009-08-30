@@ -21,7 +21,7 @@
 <skill id="501" levels="12" name="Violent Temper">
   <table name="#magicLvl"> 49 52 55 58 60 62 64 66 68 70 72 74 </table>
   <table name="#mpConsume"> 22 24 25 27 28 29 30 31 32 33 34 34 </table>
-  <set name="power" val="80"/> <!-- Guess -->
+  <set name="power" val="80"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="1800"/>
@@ -298,7 +298,7 @@
   <enchant2 name="mpConsume" val="#ench2MpConsume"/>
   <for>
     <!-- Retail Values CT2.3: 44 44 44 44 44 44 44 44 44 54 54 54 54 54 54 54 54 54 54 62 62 62 62 62 62 62 62 62 62 67 67 67 67 67 * 1 Sec -->
-    <effect count="20" name="DamOverTime" val="#dot" abnormal="bleed" effectPower="40" effectType="BLEED"> <!-- Guess effectPower -->
+    <effect count="20" name="DamOverTime" val="#dot" abnormal="bleed" effectPower="50" effectType="BLEED">
       <mul order="0x30" stat="runSpd" val="0.8"/>
     </effect>
   </for>
@@ -317,7 +317,7 @@
   <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="0"/>
-  <set name="reuseDelay" val="10000"/> <!-- Guess -->
+  <set name="reuseDelay" val="150000"/>
   <set name="skillType" val="PDAM"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="weaponsAllowed" val="65536"/> <!-- Crossbow -->
@@ -565,7 +565,7 @@
   <set name="mpConsume" val="78"/>
   <set name="power" val="6060"/>
   <set name="hitTime" val="1080"/>
-  <set name="SSBoost" val="2.0"/> <!-- Guess -->
+  <set name="SSBoost" val="2.0"/>
   <set name="overHit" val="true"/>
   <set name="magicLvl" val="78"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -652,7 +652,7 @@
   <set name="isDebuff" val="true"/>
   <set name="magicLvl" val="79"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="80"/> <!-- Guess -->
+  <set name="power" val="80"/>
   <set name="reuseDelay" val="8000"/>
   <set name="skillType" val="DEBUFF"/>
   <set name="target" val="TARGET_ONE"/>
