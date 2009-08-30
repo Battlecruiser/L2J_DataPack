@@ -486,6 +486,7 @@
   </for>
 </skill>
 <skill id="121" levels="6" name="Battle Roar" enchantLevels1="30" >
+  <!-- @Calculation@ (#power / 100 ) * (100 * #maxHp) = ~#maxHp -->
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <table name="#ench1Reuse"> 147500 145000 142500 140000 137500 135000 132500 130000 127500 125000 122500 120000 117500 115000 112500 110000 107500 105000 102500 100000 97500 95000 92500 90000 87500 85000 82500 80000 77500 75000 </table>
