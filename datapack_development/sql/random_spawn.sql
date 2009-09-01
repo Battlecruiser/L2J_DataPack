@@ -12,143 +12,143 @@ CREATE TABLE `random_spawn` (
 );
 
 INSERT INTO `random_spawn` VALUES 
--- (2,31092,1,-1,60,0,'false','false'),
--- (3,31092,1,-1,60,0,'false','false'),
--- (4,31092,1,-1,60,0,'false','false'),
--- (5,31092,1,-1,60,0,'false','false'),
--- (6,31092,1,-1,60,0,'false','false'),
--- (7,31092,1,-1,60,0,'false','false'),
--- (8,31092,1,-1,60,0,'false','false'),
-(9,31111,1,-1,60,0,'false','false'),
-(10,31112,1,-1,60,0,'false','false'),
-(11,31113,1,-1,-1,-1,'true','true'),
-(12,31126,1,-1,-1,-1,'true','true'),
-(13,31094,1,-1,60,0,'false','false'),
-(14,31094,1,-1,60,0,'false','false'),
-(15,31094,1,-1,60,0,'false','false'),
-(16,31094,1,-1,60,0,'false','false'),
-(17,31094,1,-1,60,0,'false','false'),
-(18,31094,1,-1,60,0,'false','false'),
-(19,31094,1,-1,60,0,'false','false'),
-(20,31094,1,-1,60,0,'false','false'),
-(21,31094,1,-1,60,0,'false','false'),
-(22,31094,1,-1,60,0,'false','false'),
-(23,31094,1,-1,60,0,'false','false'),
-(24,31094,1,-1,60,0,'false','false'),
-(25,31094,1,-1,60,0,'false','false'),
-(26,31094,1,-1,60,0,'false','false'),
-(27,31094,1,-1,60,0,'false','false'),
-(28,31094,1,-1,60,0,'false','false'),
-(29,31094,1,-1,60,0,'false','false'),
-(30,31094,1,-1,60,0,'false','false'),
-(31,31094,1,-1,60,0,'false','false'),
-(32,31094,1,-1,60,0,'false','false'),
-(33,31094,1,-1,60,0,'false','false'),
-(34,31094,1,-1,60,0,'false','false'),
-(35,31094,1,-1,60,0,'false','false'),
-(36,31094,1,-1,60,0,'false','false'),
-(37,31094,1,-1,60,0,'false','false'),
-(38,31094,1,-1,60,0,'false','false'),
-(39,31094,1,-1,60,0,'false','false'),
-(40,31094,1,-1,60,0,'false','false'),
-(41,31093,1,-1,60,0,'false','false'),
-(42,31093,1,-1,60,0,'false','false'),
-(43,31093,1,-1,60,0,'false','false'),
-(44,31093,1,-1,60,0,'false','false'),
-(45,31093,1,-1,60,0,'false','false'),
-(46,31093,1,-1,60,0,'false','false'),
-(47,31093,1,-1,60,0,'false','false'),
-(48,31093,1,-1,60,0,'false','false'),
-(49,31093,1,-1,60,0,'false','false'),
-(50,31093,1,-1,60,0,'false','false'),
-(51,31093,1,-1,60,0,'false','false'),
-(52,31093,1,-1,60,0,'false','false'),
-(53,31093,1,-1,60,0,'false','false'),
-(54,31093,1,-1,60,0,'false','false'),
-(55,31093,1,-1,60,0,'false','false'),
-(56,31093,1,-1,60,0,'false','false'),
-(57,31093,1,-1,60,0,'false','false'),
-(58,31093,1,-1,60,0,'false','false'),
-(59,31093,1,-1,60,0,'false','false'),
-(60,31093,1,-1,60,0,'false','false'),
-(61,31093,1,-1,60,0,'false','false'),
-(62,31093,1,-1,60,0,'false','false'),
-(63,31093,1,-1,60,0,'false','false'),
-(64,31093,1,-1,60,0,'false','false'),
-(65,31093,1,-1,60,0,'false','false'),
-(66,31093,1,-1,60,0,'false','false'),
-(67,31093,1,-1,60,0,'false','false'),
-(68,31093,1,-1,60,0,'false','false'),
-(69,31093,1,-1,60,0,'false','false'),
-(70,31093,1,-1,60,0,'false','false'),
-(71,31093,1,-1,60,0,'false','false'),
-(72,31093,1,-1,60,0,'false','false'),
-(73,31093,1,-1,60,0,'false','false'),
-(74,31093,1,-1,60,0,'false','false'),
-(75,31093,1,-1,60,0,'false','false'),
-(76,31093,1,-1,60,0,'false','false'),
-(77,31093,1,-1,60,0,'false','false'),
-(78,31093,1,-1,60,0,'false','false'),
-(79,31093,1,-1,60,0,'false','false'),
-(80,31093,1,-1,60,0,'false','false'),
-(81,31093,1,-1,60,0,'false','false'),
-(82,31170,1,-1,60,0,'false','false'),
-(83,31171,1,-1,60,0,'false','false'),
-(84,31170,1,-1,60,0,'false','false'),
-(85,31171,1,-1,60,0,'false','false'),
-(86,31170,1,-1,60,0,'false','false'),
-(87,31171,1,-1,60,0,'false','false'),
-(88,31170,1,-1,60,0,'false','false'),
-(89,31171,1,-1,60,0,'false','false'),
-(90,31170,1,-1,60,0,'false','false'),
-(91,31171,1,-1,60,0,'false','false'),
-(92,31170,1,-1,60,0,'false','false'),
-(93,31171,1,-1,60,0,'false','false'),
-(94,31170,1,-1,60,0,'false','false'),
-(95,31171,1,-1,60,0,'false','false'),
-(96,31170,1,-1,60,0,'false','false'),
-(97,31171,1,-1,60,0,'false','false'),
-(98,31170,1,-1,60,0,'false','false'),
-(99,31171,1,-1,60,0,'false','false'),
-(100,31170,1,-1,60,0,'false','false'),
-(101,31171,1,-1,60,0,'false','false'),
-(102,31170,1,-1,60,0,'false','false'),
-(103,31171,1,-1,60,0,'false','false'),
-(104,31170,1,-1,60,0,'false','false'),
-(105,31171,1,-1,60,0,'false','false'),
-(106,31170,1,-1,60,0,'false','false'),
-(107,31171,1,-1,60,0,'false','false'),
-(108,31170,1,-1,60,0,'false','false'),
-(109,31171,1,-1,60,0,'false','false'),
+-- (2,31092,1,-1,60,0,'false','false'), -- Black Marketeer of Mammon
+-- (3,31092,1,-1,60,0,'false','false'), -- Black Marketeer of Mammon
+-- (4,31092,1,-1,60,0,'false','false'), -- Black Marketeer of Mammon
+-- (5,31092,1,-1,60,0,'false','false'), -- Black Marketeer of Mammon
+-- (6,31092,1,-1,60,0,'false','false'), -- Black Marketeer of Mammon
+-- (7,31092,1,-1,60,0,'false','false'), -- Black Marketeer of Mammon
+-- (8,31092,1,-1,60,0,'false','false'), -- Black Marketeer of Mammon
+(9,31111,1,-1,60,0,'false','false'), -- Gatekeeper Spirit
+(10,31112,1,-1,60,0,'false','false'),-- Gatekeeper Spirit
+(11,31113,1,-1,-1,-1,'true','true'), -- Merchant of Mammon
+(12,31126,1,-1,-1,-1,'true','true'), -- Blacksmith of Mammon
+(13,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(14,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(15,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(16,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(17,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(18,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(19,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(20,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(21,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(22,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(23,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(24,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(25,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(26,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(27,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(28,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(29,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(30,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(31,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(32,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(33,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(34,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(35,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(36,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(37,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(38,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(39,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(40,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(41,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(42,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(43,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(44,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(45,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(46,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(47,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(48,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(49,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(50,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(51,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(52,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(53,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(54,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(55,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(56,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(57,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(58,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(59,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(60,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(61,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(62,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(63,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(64,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(65,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(66,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(67,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(68,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(69,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(70,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(71,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(72,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(73,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(74,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(75,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(76,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(77,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(78,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(79,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(80,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(81,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(82,31170,1,-1,60,0,'false','false'), -- Crest of Dusk
+(83,31171,1,-1,60,0,'false','false'), -- Crest of Dawn
+(84,31170,1,-1,60,0,'false','false'), -- Crest of Dusk
+(85,31171,1,-1,60,0,'false','false'), -- Crest of Dawn
+(86,31170,1,-1,60,0,'false','false'), -- Crest of Dusk
+(87,31171,1,-1,60,0,'false','false'), -- Crest of Dawn
+(88,31170,1,-1,60,0,'false','false'), -- Crest of Dusk
+(89,31171,1,-1,60,0,'false','false'), -- Crest of Dawn
+(90,31170,1,-1,60,0,'false','false'), -- Crest of Dusk
+(91,31171,1,-1,60,0,'false','false'), -- Crest of Dawn
+(92,31170,1,-1,60,0,'false','false'), -- Crest of Dusk
+(93,31171,1,-1,60,0,'false','false'), -- Crest of Dawn
+(94,31170,1,-1,60,0,'false','false'), -- Crest of Dusk
+(95,31171,1,-1,60,0,'false','false'), -- Crest of Dawn
+(96,31170,1,-1,60,0,'false','false'), -- Crest of Dusk
+(97,31171,1,-1,60,0,'false','false'), -- Crest of Dawn
+(98,31170,1,-1,60,0,'false','false'), -- Crest of Dusk
+(99,31171,1,-1,60,0,'false','false'), -- Crest of Dawn
+(100,31170,1,-1,60,0,'false','false'), -- Crest of Dusk
+(101,31171,1,-1,60,0,'false','false'), -- Crest of Dawn
+(102,31170,1,-1,60,0,'false','false'), -- Crest of Dusk
+(103,31171,1,-1,60,0,'false','false'), -- Crest of Dawn
+(104,31170,1,-1,60,0,'false','false'), -- Crest of Dusk
+(105,31171,1,-1,60,0,'false','false'), -- Crest of Dawn
+(106,31170,1,-1,60,0,'false','false'), -- Crest of Dusk
+(107,31171,1,-1,60,0,'false','false'), -- Crest of Dawn
+(108,31170,1,-1,60,0,'false','false'), -- Crest of Dusk
+(109,31171,1,-1,60,0,'false','false'), -- Crest of Dawn
 (110,25283,1,-1,86400,0,'false','false'), -- Lilith (80)
 (111,25286,1,-1,86400,0,'false','false'), -- Anakim (80)
-(112,27316,1,1800000,14400000,1800000,'false','false'),
-(113,31094,1,-1,60,0,'false','false'),
-(114,31093,1,-1,60,0,'false','false'),
-(115,31094,1,-1,60,0,'false','false'),
-(116,31093,1,-1,60,0,'false','false'),
-(117,31094,1,-1,60,0,'false','false'),
-(118,31093,1,-1,60,0,'false','false'),
-(119,31094,1,-1,60,0,'false','false'),
-(120,31093,1,-1,60,0,'false','false'),
-(121,31093,1,-1,60,0,'false','false'),
-(122,31094,1,-1,60,0,'false','false'),
-(123,31093,1,-1,60,0,'false','false'),
-(124,31093,1,-1,60,0,'false','false'),
-(125,31094,1,-1,60,0,'false','false'),
-(126,31094,1,-1,60,0,'false','false'),
-(127,31093,1,-1,60,0,'false','false'),
-(128,31094,1,-1,60,0,'false','false'),
-(129,31093,1,-1,60,0,'false','false'),
-(130,31094,1,-1,60,0,'false','false'),
-(131,31093,1,-1,60,0,'false','false'),
-(132,31094,1,-1,60,0,'false','false'),
-(133,32014,1,-1,1800000,1800000,'false','true'),
-(134,32013,1,-1,1800000,1800000,'false','true'),
-(135,32049,1,-1,1200000,1200000,'false','true'),
-(136,32012,1,-1,1800000,1800000,'false','true'),
-(137,32335,1,-1,120000,120000,'false','true'),
-(138,32335,1,-1,120000,120000,'false','true'),
-(139,32335,1,-1,120000,120000,'false','true'),
-(140,32335,1,-1,120000,120000,'false','true'),
-(141,32335,1,-1,120000,120000,'false','true');
+(112,27316,1,1800000,14400000,1800000,'false','false'), -- Fallen Chieftain Vegus
+(113,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(114,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(115,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(116,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(117,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(118,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(119,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(120,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(121,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(122,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(123,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(124,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(125,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(126,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(127,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(128,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(129,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(130,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(131,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
+(132,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
+(133,32014,1,-1,1800000,1800000,'false','true'), -- Ivan (Runaway Youth quest)
+(134,32013,1,-1,1800000,1800000,'false','true'), -- Suki (Wild Maiden quest)
+(135,32049,1,-1,1200000,1200000,'false','true'), -- Rooney (Blacksmith of wind Rooney)
+(136,32012,1,-1,1800000,1800000,'false','true'), -- Tantan (Aged ExAdventurer quest)
+(137,32335,1,-1,120000,120000,'false','true'), -- Marksman (Guards on kamael island)
+(138,32335,1,-1,120000,120000,'false','true'), -- Marksman (Guards on kamael island)
+(139,32335,1,-1,120000,120000,'false','true'), -- Marksman (Guards on kamael island)
+(140,32335,1,-1,120000,120000,'false','true'), -- Marksman (Guards on kamael island)
+(141,32335,1,-1,120000,120000,'false','true'); -- Marksman (Guards on kamael island)

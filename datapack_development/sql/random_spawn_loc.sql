@@ -9,6 +9,7 @@ CREATE TABLE `random_spawn_loc` (
 );
 
 INSERT INTO `random_spawn_loc` VALUES
+-- Black Marketeer of Mammon
 (2,-12345,121695,-2984,0),
 (3,81360,150016,-3528,16000),
 (4,120493,76520,-2136,35500),
@@ -16,22 +17,30 @@ INSERT INTO `random_spawn_loc` VALUES
 (6,113481,218450,-3624,33000),
 (7,80129,56947,-1552,32500),
 (8,146986,29566,-2271,32500),
+
+-- Gatekeeper Spirit
 (9,183280,-11905,-4904,-1),
 (10,185662,-13093,-5498,-1),
+
+-- Merchant of Mammon
 (11,-52172,78884,-4741,-1), -- Necropolis of Devotion
 (11,-41350,209876,-5087,-1), -- Necropolis of Sacrifice
-(11,-21657,77164,-5173,-1), -- The Patriots Necropolis 
-(11,45029,123802,-5413,-1), -- The Pilgrims Necropolis 
+(11,-21657,77164,-5173,-1), -- The Patriots Necropolis
+(11,45029,123802,-5413,-1), -- The Pilgrims Necropolis
 (11,83175,208998,-5439,-1), -- The Saints Necropolis
 (11,111337,173804,-5439,-1), -- Necropolis of Worship
-(11,118343,132578,-4831,-1), -- Necropolis of Martyrdom 
+(11,118343,132578,-4831,-1), -- Necropolis of Martyrdom
 (11,172373,-17833,-4901,-1), -- The Disciple Necropolis
+
+-- Blacksmith of Mammon
 (12,-19360,13278,-4901,-1), -- Catacomb of Dark Omens
 (12,-53131,-250502,-7909,-1), -- Catacomb of the Heretic
 (12,46303,170091,-4981,-1), -- Catacomb of the Branded
 (12,-20485,-251008,-8165,-1), -- Catacomb of the Apostate
 (12,12669,-248698,-9581,-1), -- Catacomb of Forbidden Path
 (12,140519,79464,-5429,-1), -- Catacomb of the Witch
+
+-- Orator of Revelations
 (13,-84356,152742,-3204,-1),
 (14,-83157,149846,-3155,-1),
 (15,-79563,152726,-3204,-1),
@@ -60,6 +69,8 @@ INSERT INTO `random_spawn_loc` VALUES
 (38,143926,26468,-2338,-1),
 (39,147460,20537,-2101,-1),
 (40,150417,25182,-2141,-1),
+
+-- Preacher of Doom
 (41,-83107,150270,-3155,-1),
 (42,-83070,152740,-3204,-1),
 (43,-80752,152738,-3204,-1),
@@ -101,6 +112,8 @@ INSERT INTO `random_spawn_loc` VALUES
 (79,148013,27029,-2231,-1),
 (80,149515,27641,-2295,-1),
 (81,149899,24719,-2167,-1),
+
+-- Crest of Dusk / Dawn
 (82,-41312,206625,-3412,-1),
 (83,-41312,206625,-3412,-1),
 (84,-55428,79357,-3059,-1),
@@ -129,9 +142,17 @@ INSERT INTO `random_spawn_loc` VALUES
 (107,137278,79936,-3751,-1),
 (108,169152,-17344,-3228,-1),
 (109,169152,-17344,-3228,-1),
-(110,184410,-10111,-5488,-1), -- Lilith (80)
-(111,185000,-13000,-5488,-1), -- Anakim (80)
+
+ -- Lilith (80)
+(110,184410,-10111,-5488,-1),
+
+ -- Anakim (80)
+(111,185000,-13000,-5488,-1),
+
+-- Fallen Chieftain Vegus
 (112,171708,43964,-4972,-1),
+
+-- Orator of Revelations / Preacher of Doom
 (113,147943,-56176,-2781,-1),
 (114,148064,-56288,-2781,-1),
 (115,147703,-58879,-2981,-1),
@@ -183,7 +204,7 @@ INSERT INTO `random_spawn_loc` VALUES
 (136,94500,-10129,-3290,-1),
 (136,96534,-1237,-3677,-1),
 
--- guards on kamael island
+-- Guards on kamael island
 (137,-73271,53065,-3696,59621),
 (137,-77006,45317,-2752,19656),
 (137,-77375,44929,-2720,13828),
