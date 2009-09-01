@@ -17,7 +17,10 @@
     <add order="0x40" stat="maxHp" val="531"/> <!-- Max HP +531 -->
     <mul order="0x30" stat="sleepVuln" val="0.3"/> <!-- resistance to sleep by 70% -->
     <mul order="0x30" stat="rootVuln" val="0.3"/> <!-- resistance to hold by 70% -->
-    <!-- Missing: Decreases damage received during PvP and decreases all the attacker's speeds with a fixed rate. -->
+    <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
+    <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
+    <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
+    <!-- Missing: Decreases all the attacker's speeds with a fixed rate. -->
   </for>
 </skill>
 <skill id="8302" levels="1" name="Vesper Noble Heavy Armor Set for Adults">
@@ -32,7 +35,10 @@
     <add order="0x40" stat="maxHp" val="540"/> <!-- Max HP +540 -->
     <mul order="0x30" stat="sleepVuln" val="0.3"/> <!-- resistance to sleep by 70% -->
     <mul order="0x30" stat="rootVuln" val="0.3"/> <!-- resistance to hold by 70% -->
-    <!-- Missing: Decreases damage received during PvP and decreases all the attacker's speeds with a fixed rate. -->
+    <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
+    <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
+    <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
+    <!-- Missing: Decreases all the attacker's speeds with a fixed rate. -->
   </for>
 </skill>
 <skill id="8303" levels="1" name="Vesper Light Armor Set for Adults">
@@ -47,7 +53,10 @@
     <mul order="0x30" stat="pAtkSpd" val="1.0557"/> <!-- Atk. Spd. +5.57% -->
     <mul order="0x30" stat="regMp" val="1.0557"/> <!-- MP Recovery Rate by 5.57% -->
     <add order="0x40" stat="maxMp" val="347.4"/> <!-- Max MP by 347.4 -->
-    <!-- Missing: Decreases damage received during PvP, and blows away the opponent's target with a fixed rate when being attacked. -->
+    <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
+    <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
+    <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
+    <!-- Missing: Blows away the opponent's target with a fixed rate when being attacked. -->
   </for>
 </skill>
 <skill id="8304" levels="1" name="Vesper Noble Light Armor Set for Adults">
@@ -62,7 +71,10 @@
     <mul order="0x30" stat="pAtkSpd" val="1.0557"/> <!-- Atk. Spd. +5.57% -->
     <mul order="0x30" stat="regMp" val="1.0557"/> <!-- MP Recovery Rate by 5.57% -->
     <add order="0x40" stat="maxMp" val="354"/> <!-- Max MP by 354 -->
-    <!-- Missing: Decreases damage received during PvP, and blows away the opponent's target with a fixed rate when being attacked. -->
+    <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
+    <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
+    <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
+    <!-- Missing: Blows away the opponent's target with a fixed rate when being attacked. -->
   </for>
 </skill>
 <skill id="8305" levels="1" name="Vesper Robe Set for Adults">
@@ -78,7 +90,10 @@
     <mul order="0x30" stat="regMp" val="1.0557"/> <!-- MP Recovery Rate by 5.57% -->
     <mul order="0x30" stat="stunVuln" val="0.5"/> <!-- resistance to Stun Attacks by 50% -->
     <sub order="0x40" stat="cancel" val="30"/> <!-- decreases the damage to be cancelled by magic by 30 -->
-    <!-- Missing: Decreases damage received during PvP, and decreases critical rate and critical damage with a fixed rate when being attacked. -->
+    <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
+    <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
+    <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
+    <!-- Missing: Decreases critical rate and critical damage with a fixed rate when being attacked. -->
   </for>
 </skill>
 <skill id="8306" levels="1" name="Vesper Noble Robe Set for Adults">
@@ -94,7 +109,10 @@
     <mul order="0x30" stat="regMp" val="1.0557"/> <!-- MP Recovery Rate by 5.57% -->
     <mul order="0x30" stat="stunVuln" val="0.5"/> <!-- resistance to Stun Attacks by 50% -->
     <sub order="0x40" stat="cancel" val="30"/> <!-- decreases the damage to be cancelled by magic by 30 -->
-    <!-- Missing: Decreases damage received during PvP, and decreases critical rate and critical damage with a fixed rate when being attacked. -->
+    <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
+    <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
+    <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
+    <!-- Missing: Decreases critical rate and critical damage with a fixed rate when being attacked. -->
   </for>
 </skill>
 <skill id="8307" levels="1" name="Boing Hammer's Effect of Doubt">
