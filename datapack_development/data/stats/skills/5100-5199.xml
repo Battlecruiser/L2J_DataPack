@@ -462,11 +462,10 @@
   <set name="hitTime" val="2500"/>
 </skill>
 <skill id="5144" levels="1" name="Mirage">
-  <!-- Needs to be verified -->
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="skillType" val="AGGDAMAGE"/>
+  <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
     <effect name="RemoveTarget" val="0"/>

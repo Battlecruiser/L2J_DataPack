@@ -860,14 +860,36 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="5690" levels="1" name="PvP Armor - Damage Down">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
+  <set name="hitTime" val="100"/>
+  <set name="isDebuff" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="100"/> <!-- Base Land Rate -->
+  <set name="skillType" val="DEBUFF"/>
+  <set name="target" val="TARGET_ONE"/>
+  <for>
+    <effect name="Debuff" time="15" val="0">
+      <mul order="0x30" stat="pAtk" val="0.8"/>
+      <mul order="0x30" stat="mAtk" val="0.8"/>
+    </effect>
+  </for>
 </skill>
 <skill id="5691" levels="1" name="PvP Armor - Critical Down">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
+  <set name="hitTime" val="100"/>
+  <set name="isDebuff" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="100"/> <!-- Base Land Rate -->
+  <set name="skillType" val="DEBUFF"/>
+  <set name="target" val="TARGET_ONE"/>
+  <for>
+    <effect name="Debuff" time="15" val="0">
+      <mul order="0x30" stat="rCrit" val="0.8"/>
+      <mul order="0x30" stat="cAtk" val="0.8"/>
+    </effect>
+  </for>
 </skill>
 <skill id="5692" levels="1" name="PvP Armor - Heal">
   <set name="target" val="TARGET_NONE"/>
@@ -875,14 +897,32 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="5693" levels="1" name="PvP Armor - Speed Down">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
+  <set name="hitTime" val="100"/>
+  <set name="isDebuff" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="100"/> <!-- Base Land Rate -->
+  <set name="skillType" val="DEBUFF"/>
+  <set name="target" val="TARGET_ONE"/>
+  <for>
+    <effect name="Debuff" time="15" val="0">
+      <mul order="0x30" stat="pAtkSpd" val="0.8"/>
+      <mul order="0x30" stat="mAtkSpd" val="0.8"/>
+      <mul order="0x30" stat="runSpd" val="0.8"/>
+    </effect>
+  </for>
 </skill>
 <skill id="5694" levels="1" name="PvP Armor - Mirage">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
+  <set name="hitTime" val="100"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_ONE"/>
+  <for>
+    <effect name="RemoveTarget" val="0"/>
+  </for>
 </skill>
 <skill id="5695" levels="1" name="Talisman - Increase Force">
   <set name="target" val="TARGET_NONE"/>
