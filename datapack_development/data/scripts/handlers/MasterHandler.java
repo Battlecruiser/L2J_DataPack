@@ -175,7 +175,6 @@ public class MasterHandler
 		SkillHandler.getInstance().registerSkillHandler(new SummonFriend());
 		SkillHandler.getInstance().registerSkillHandler(new SummonTreasureKey());
 		SkillHandler.getInstance().registerSkillHandler(new Disablers());
-		SkillHandler.getInstance().registerSkillHandler(new Recall());
 		SkillHandler.getInstance().registerSkillHandler(new BallistaBomb());
 		SkillHandler.getInstance().registerSkillHandler(new TakeCastle());
 		SkillHandler.getInstance().registerSkillHandler(new TakeFort());
@@ -184,7 +183,6 @@ public class MasterHandler
 		SkillHandler.getInstance().registerSkillHandler(new Craft());
 		SkillHandler.getInstance().registerSkillHandler(new Fishing());
 		SkillHandler.getInstance().registerSkillHandler(new FishingSkill());
-		SkillHandler.getInstance().registerSkillHandler(new LearnSkill());
 		SkillHandler.getInstance().registerSkillHandler(new BeastFeed());
 		SkillHandler.getInstance().registerSkillHandler(new DeluxeKey());
 		SkillHandler.getInstance().registerSkillHandler(new Sow());
