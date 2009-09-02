@@ -1584,7 +1584,8 @@
   <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <for>
-    <effect name="Stun" time="9" val="0" stackOrder="1" effectPower="80" effectType="STUN" stackType="fly_away"/>
+    <effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN"/>
+    <effect name="ThrowUp" noicon="1" val="0" stackOrder="1" stackType="fly_away"/>
   </for>
 </skill>
 <skill id="4689" levels="2" name="Valakas Fear">
