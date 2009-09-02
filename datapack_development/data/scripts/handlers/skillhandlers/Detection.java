@@ -33,38 +33,44 @@ public class Detection implements ISkillHandler
 	{
 		L2SkillType.DETECTION
 	};
-	
+
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		for (L2Character inKnownlist : activeChar.getKnownList().getKnownPlayersInRadius(skill.getSkillRadius()))
+		final boolean hasParty;
+		final boolean hasClan;
+		final boolean hasAlly;
+		final L2PcInstance player = activeChar.getActingPlayer();
+		if (player != null)
 		{
-			if (inKnownlist != null)
+			hasParty = player.isInParty();
+			hasClan = player.getClanId() > 0;
+			hasAlly = player.getAllyId() > 0;
+		}
+		else
+		{
+			hasParty = false;
+			hasClan = false;
+			hasAlly = false;
+		}
+
+		for (L2PcInstance target : activeChar.getKnownList().getKnownPlayersInRadius(skill.getSkillRadius()))
+		{
+			if (target != null && target.getAppearance().getInvisible())
 			{
-				L2Effect eHide = inKnownlist.getFirstEffect(L2EffectType.HIDE);
-				
-				if (eHide == null)
+				if (hasParty && target.getParty() != null && player.getParty().getPartyLeaderOID() == target.getParty().getPartyLeaderOID())
 					continue;
-				
-				if (activeChar instanceof L2PcInstance && inKnownlist instanceof L2PcInstance)
-				{
-					L2PcInstance player = ((L2PcInstance) activeChar);
-					L2PcInstance target = ((L2PcInstance) inKnownlist);
-					if (player.getParty() != null && target.getParty() != null && player.getParty().getPartyLeaderOID() == target.getParty().getPartyLeaderOID())
-						continue;
-				
-					if (player.getClan() != null && target.getClan() != null && player.getClan().getClanId() == target.getClan().getClanId())
-						continue;
-				
-					if (player.getAllyId() > 0 && target.getAllyId() > 0 && player.getClan().getAllyId() == target.getClan().getAllyId())
-						continue;
-				}
-				
+				if (hasClan && player.getClanId() == target.getClanId())
+					continue;
+				if (hasAlly && player.getAllyId() == target.getAllyId())
+					continue;
+
+				L2Effect eHide = target.getFirstEffect(L2EffectType.HIDE);
 				if (eHide != null)
 					eHide.exit();
 			}
 		}
 	}
-	
+
 	public L2SkillType[] getSkillIds()
 	{
 		return SKILL_IDS;
