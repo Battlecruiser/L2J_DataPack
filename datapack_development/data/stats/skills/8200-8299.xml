@@ -15,7 +15,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Missing: Has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
 <skill id="8201" levels="1" name="Major Arcana Robe Set - PvP">
@@ -34,7 +33,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Missing: Has a chance to decrease critical rate and critical damage when attacked. -->
   </for>
 </skill>
 <skill id="8202" levels="1" name="Dynasty Breastplate - PvP">
@@ -50,7 +48,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Missing: Has a chance to decrease an attacker's speed modifiers. -->
   </for>
 </skill>
 <skill id="8203" levels="1" name="Dynasty Breastplate - PvP Shield Master">
@@ -68,7 +65,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Missing: Has a chance to decrease an attacker's speed modifiers. -->
   </for>
 </skill>
 <skill id="8204" levels="1" name="Dynasty Breastplate - PvP Weapon Master">
@@ -86,7 +82,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Missing: Has a chance to decrease an attacker's speed modifiers. -->
   </for>
 </skill>
 <skill id="8205" levels="1" name="Dynasty Breastplate - PvP Force Master">
@@ -103,7 +98,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Missing: Has a chance to decrease an attacker's speed modifiers. -->
   </for>
 </skill>
 <skill id="8206" levels="1" name="Dynasty Breastplate - PvP Bard">
@@ -120,7 +114,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Has a chance to decrease an attacker's speed modifiers. -->
   </for>
 </skill>
 <skill id="8207" levels="1" name="Dynasty Leather Armor - PvP">
@@ -137,7 +130,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Missing: Has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
 <skill id="8208" levels="1" name="Dynasty Leather Armor - PvP Dagger Master">
@@ -152,7 +144,6 @@
     <add order="0x40" stat="darkRes" val="8"/> <!-- Dark resistance +8 -->
     <mul order="0x30" stat="rootVuln" val="0.87"/> <!-- Hold resistance are increased +13% -->
     <mul order="0x30" stat="pAtkSpd" val="1.0266"/> <!-- Atk. Spd. are increased +2.66% -->
-    <!-- Decreases damage received during PvP and has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
 <skill id="8209" levels="1" name="Dynasty Leather Armor - PvP Bow Master">
@@ -170,7 +161,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Missing: Has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
 <skill id="8210" levels="1" name="Dynasty Tunic - PvP">
@@ -186,7 +176,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Missing: Has a chance to decrease critical hit and critical damage when attacked. -->
   </for>
 </skill>
 <skill id="8211" levels="1" name="Dynasty Tunic - PvP Healer">
@@ -204,7 +193,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Missing: Has a chance to decrease critical hit and critical damage when attacked. -->
   </for>
 </skill>
 <skill id="8212" levels="1" name="Dynasty Tunic - PvP Enchanter">
@@ -219,7 +207,6 @@
     <add order="0x40" stat="darkRes" val="8"/> <!-- Dark Resistance +8 -->
     <mul order="0x30" stat="MagicalMpConsumeRate" val="0.95"/> <!-- Decrease MP consumption -5% -->
     <sub order="0x40" stat="cancel" val="15"/> <!-- Decrease magic cancel rate -15% -->
-    <!-- Decreases damage received during PvP and has a chance to decrease critical hit and critical damage when attacked. -->
   </for>
 </skill>
 <skill id="8213" levels="1" name="Dynasty Tunic - PvP Summoner">
@@ -237,7 +224,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Missing: Has a chance to decrease critical hit and critical damage when attacked. -->
   </for>
 </skill>
 <skill id="8214" levels="1" name="Dynasty Tunic - PvP Wizard">
@@ -255,7 +241,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Missing: Has a chance to decrease critical hit and critical damage when attacked. -->
   </for>
 </skill>
 <skill id="8215" levels="1" name="Dynasty Leather Armor - PvP Force Master">
@@ -273,7 +258,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Missing: Has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
 <skill id="8216" levels="1" name="Dynasty Leather Armor - PvP Weapon Master">
@@ -292,7 +276,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Missing: Has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
 <skill id="8217" levels="1" name="Dynasty Leather Armor - PvP Enchanter">
@@ -311,7 +294,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Missing: Has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
 <skill id="8218" levels="1" name="Dynasty Leather Armor - PvP Summoner">
@@ -326,7 +308,6 @@
     <add order="0x40" stat="darkRes" val="8"/> <!-- Dark Resistance +8 -->
     <mul order="0x30" stat="pAtk" val="1.0266"/> <!-- Increase P. Atk. +2.66% -->
     <mul order="0x30" stat="pDef" val="1.0266"/> <!-- Increase P. Def. +2.66% -->
-    <!-- Decreases damage received during PvP and has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
 <skill id="8219" levels="1" name="Dynasty Platinum Breastplate - PvP Shield Master">
@@ -344,7 +325,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Missing: Has a chance to decrease an attacker's speed modifiers. -->
   </for>
 </skill>
 <skill id="8220" levels="1" name="Dynasty Platinum Breastplate - PvP Weapon Master">
@@ -362,7 +342,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Missing: Has a chance to decrease an attacker's speed modifiers. -->
   </for>
 </skill>
 <skill id="8221" levels="1" name="Dynasty Platinum Breastplate - PvP Bard">
@@ -379,7 +358,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Missing: Has a chance to decrease an attacker's speed modifiers. -->
   </for>
 </skill>
 <skill id="8222" levels="1" name="Dynasty Platinum Breastplate - PvP Force Master">
@@ -396,7 +374,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Missing: Has a chance to decrease an attacker's speed modifiers. -->
   </for>
 </skill>
 <skill id="8223" levels="1" name="Dynasty Jewel Leather Armor - PvP Dagger Master">
@@ -414,7 +391,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Missing: Has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
 <skill id="8224" levels="1" name="Dynasty Jewel Leather Armor - PvP Bow Master">
@@ -432,7 +408,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Missing: Has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
 <skill id="8225" levels="1" name="Dynasty Jewel Leather Armor - PvP Force Master">
@@ -450,7 +425,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Missing: Has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
 <skill id="8226" levels="1" name="Dynasty Jewel Leather Armor - PvP Weapon Master">
@@ -466,7 +440,6 @@
     <add order="0x40" stat="darkRes" val="8"/> <!-- Darkness Resistance +8 -->
     <add order="0x40" stat="cAtkAdd" val="282"/> <!-- Critical Damage +282 -->
     <basemul order="0x30" stat="rCrit" val="0.0295"/> <!-- Critical Rate +2.95% Increase -->
-    <!-- Decreases damage received during PvP and has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
 <skill id="8227" levels="1" name="Dynasty Jewel Leather Armor - PvP Summoner">
@@ -484,7 +457,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Missing: Has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
 <skill id="8228" levels="1" name="Dynasty Jewel Leather Armor - PvP Enchanter">
@@ -503,7 +475,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Missing: Has a chance to cancel an attacker's target when attacked. -->
   </for>
 </skill>
 <skill id="8229" levels="1" name="Dynasty Silver Satin Tunic - PvP Healer">
@@ -521,7 +492,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Missing: Has a chance to decrease critical hit and critical damage when attacked. -->
   </for>
 </skill>
 <skill id="8230" levels="1" name="Dynasty Silver Satin Tunic - PvP Enchanter">
@@ -539,7 +509,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Missing: Has a chance to decrease critical hit and critical damage when attacked. -->
   </for>
 </skill>
 <skill id="8231" levels="1" name="Dynasty Silver Satin Tunic - PvP Summoner">
@@ -557,7 +526,6 @@
     <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
-    <!-- Missing: Has a chance to decrease critical hit and critical damage when attacked. -->
   </for>
 </skill>
 <skill id="8232" levels="1" name="Dynasty Silver Satin Tunic - PvP Wizard">
@@ -572,7 +540,6 @@
     <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
     <add order="0x40" stat="darkRes" val="8"/> <!-- Dark Resistance +8 -->
     <mul order="0x30" stat="mAtk" val="1.066"/> <!-- M. Atk. +6.6% -->
-    <!-- Decreases damage received during PvP and has a chance to decrease critical hit and critical damage when attacked. -->
   </for>
 </skill>
 <skill id="8233" levels="1" name="Zubei's Helmet">
