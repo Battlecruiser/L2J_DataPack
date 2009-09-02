@@ -144,6 +144,9 @@
     <add order="0x40" stat="darkRes" val="8"/> <!-- Dark resistance +8 -->
     <mul order="0x30" stat="rootVuln" val="0.87"/> <!-- Hold resistance are increased +13% -->
     <mul order="0x30" stat="pAtkSpd" val="1.0266"/> <!-- Atk. Spd. are increased +2.66% -->
+    <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
+    <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
+    <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
   </for>
 </skill>
 <skill id="8209" levels="1" name="Dynasty Leather Armor - PvP Bow Master">
@@ -207,6 +210,9 @@
     <add order="0x40" stat="darkRes" val="8"/> <!-- Dark Resistance +8 -->
     <mul order="0x30" stat="MagicalMpConsumeRate" val="0.95"/> <!-- Decrease MP consumption -5% -->
     <sub order="0x40" stat="cancel" val="15"/> <!-- Decrease magic cancel rate -15% -->
+    <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
+    <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
+    <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
   </for>
 </skill>
 <skill id="8213" levels="1" name="Dynasty Tunic - PvP Summoner">
@@ -308,6 +314,9 @@
     <add order="0x40" stat="darkRes" val="8"/> <!-- Dark Resistance +8 -->
     <mul order="0x30" stat="pAtk" val="1.0266"/> <!-- Increase P. Atk. +2.66% -->
     <mul order="0x30" stat="pDef" val="1.0266"/> <!-- Increase P. Def. +2.66% -->
+    <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
+    <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
+    <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
   </for>
 </skill>
 <skill id="8219" levels="1" name="Dynasty Platinum Breastplate - PvP Shield Master">
@@ -440,6 +449,9 @@
     <add order="0x40" stat="darkRes" val="8"/> <!-- Darkness Resistance +8 -->
     <add order="0x40" stat="cAtkAdd" val="282"/> <!-- Critical Damage +282 -->
     <basemul order="0x30" stat="rCrit" val="0.0295"/> <!-- Critical Rate +2.95% Increase -->
+    <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
+    <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
+    <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
   </for>
 </skill>
 <skill id="8227" levels="1" name="Dynasty Jewel Leather Armor - PvP Summoner">
@@ -540,6 +552,9 @@
     <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
     <add order="0x40" stat="darkRes" val="8"/> <!-- Dark Resistance +8 -->
     <mul order="0x30" stat="mAtk" val="1.066"/> <!-- M. Atk. +6.6% -->
+    <mul order="0x30" stat="pvpPhysDef" val="1.05"/>
+    <mul order="0x30" stat="pvpMagicalDef" val="1.05"/>
+    <mul order="0x30" stat="pvpPhysSkillsDef" val="1.05"/>
   </for>
 </skill>
 <skill id="8233" levels="1" name="Zubei's Helmet">
