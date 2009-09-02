@@ -659,41 +659,47 @@
 <skill id="755" levels="1" name="Protection of Rune">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
+  <set name="magicLvl" val="82"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="triggeredId" val="5556"/>
   <set name="triggeredLevel" val="1"/>
-  <set name="activationChance" val="30"/> <!-- guessed -->
-  <set name="chanceType" val="ON_ATTACKED"/>
+  <set name="activationChance" val="5"/> <!-- Guess -->
+  <set name="activationElements" val="0,1,2,3,4,5"/>
+  <set name="chanceType" val="ON_HIT_BY_OFFENSIVE_SKILL"/>
   <for>
-     <mul order="0x30" stat="mDef" val="1.15"/>
+    <mul order="0x30" stat="mDef" val="1.15"/>
   </for>
 </skill>
 <skill id="756" levels="1" name="Protection of Elemental">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
+  <set name="magicLvl" val="82"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="triggeredId" val="5557"/>
   <set name="triggeredLevel" val="1"/>
-  <set name="activationChance" val="30"/> <!-- guessed -->
-  <set name="chanceType" val="ON_ATTACKED"/>
+  <set name="activationChance" val="5"/> <!-- Guess -->
+  <set name="activationElements" val="0,1,2,3"/>
+  <set name="chanceType" val="ON_HIT_BY_OFFENSIVE_SKILL"/>
   <for>
-      <add order="0x40" stat="fireRes" val="20"/>
-      <add order="0x40" stat="waterRes" val="20"/>
-      <add order="0x40" stat="windRes" val="20"/>
-      <add order="0x40" stat="earthRes" val="20"/>
+    <add order="0x40" stat="fireRes" val="20"/>
+    <add order="0x40" stat="waterRes" val="20"/>
+    <add order="0x40" stat="windRes" val="20"/>
+    <add order="0x40" stat="earthRes" val="20"/>
   </for>
 </skill>
 <skill id="757" levels="1" name="Protection of Alignment">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
+  <set name="magicLvl" val="82"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="triggeredId" val="5558"/>
   <set name="triggeredLevel" val="1"/>
-  <set name="activationChance" val="30"/> <!-- guessed -->
-  <set name="chanceType" val="ON_ATTACKED"/>
+  <set name="activationChance" val="5"/> <!-- Guess -->
+  <set name="activationElements" val="4,5"/>
+  <set name="chanceType" val="ON_HIT_BY_OFFENSIVE_SKILL"/>
   <for>
-      <add order="0x40" stat="holyRes" val="20"/>
-      <add order="0x40" stat="darkRes" val="20"/>
+    <add order="0x40" stat="holyRes" val="20"/>
+    <add order="0x40" stat="darkRes" val="20"/>
   </for>
 </skill>
 <skill id="758" levels="1" name="Fighter's Will">
