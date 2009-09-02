@@ -48,6 +48,11 @@
   <for/>
 </item>
 <item id="13078" name="Arcana Sigil">
+  <cond msgId="1518">
+    <not>
+      <player race="Kamael"/>
+    </not>
+  </cond>
   <for>
     <add val="13" order="0x10" stat="pDef"/>
     <enchant val="0" order="0x0C" stat="pDef"/>

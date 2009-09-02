@@ -83,6 +83,11 @@
   </for>
 </item>
 <item id="13529" name="Test Sigil">
+  <cond msgId="1518">
+    <not>
+      <player race="Kamael"/>
+    </not>
+  </cond>
   <for/>
 </item>
 <item id="13543" name="Agathion Summon Bracelet - Collection">
