@@ -343,20 +343,56 @@
   <set name="skillType" val="NOTDONE"/>
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
-<skill id="5556" levels="1" name="Protection Power">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+<skill id="5556" levels="1" name="Protection of Rune">
+  <set name="magicLvl" val="82"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <for>
+    <effect name="Buff" time="10" val="0" stackOrder="1" stackType="ProtBoost">
+      <add order="0x40" stat="mDef" val="1000"/>
+      <add order="0x40" stat="fireRes" val="20"/>
+      <add order="0x40" stat="waterRes" val="20"/>
+      <add order="0x40" stat="windRes" val="20"/>
+      <add order="0x40" stat="earthRes" val="20"/>
+      <add order="0x40" stat="holyRes" val="20"/>
+      <add order="0x40" stat="darkRes" val="20"/>
+    </effect>
+  </for>
 </skill>
 <skill id="5557" levels="1" name="Protection of Elemental">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="82"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <for>
+    <effect name="Buff" time="10" val="0" stackOrder="1" stackType="ProtBoost">
+      <add order="0x40" stat="mDef" val="1000"/>
+      <add order="0x40" stat="fireRes" val="20"/>
+      <add order="0x40" stat="waterRes" val="20"/>
+      <add order="0x40" stat="windRes" val="20"/>
+      <add order="0x40" stat="earthRes" val="20"/>
+      <add order="0x40" stat="holyRes" val="20"/>
+      <add order="0x40" stat="darkRes" val="20"/>
+    </effect>
+  </for>
 </skill>
 <skill id="5558" levels="1" name="Protection of Alignment">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="82"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <for>
+    <effect name="Buff" time="10" val="0" stackOrder="1" stackType="ProtBoost">
+      <add order="0x40" stat="mDef" val="1000"/>
+      <add order="0x40" stat="fireRes" val="20"/>
+      <add order="0x40" stat="waterRes" val="20"/>
+      <add order="0x40" stat="windRes" val="20"/>
+      <add order="0x40" stat="earthRes" val="20"/>
+      <add order="0x40" stat="holyRes" val="20"/>
+      <add order="0x40" stat="darkRes" val="20"/>
+    </effect>
+  </for>
 </skill>
 <skill id="5559" levels="1" name="Fighter's Will">
   <set name="target" val="TARGET_NONE"/>
