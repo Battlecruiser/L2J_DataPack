@@ -26,6 +26,10 @@ public class AurabirdFalcon extends L2Transformation
 		// Air Blink
 		if (getPlayer().getLevel() >= 75)
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(885, 1), false);
+		
+		// Exhilarate
+		if (getPlayer().getLevel() >= 83)
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(894, 1), false);
 
 		int lvl = getPlayer().getLevel() -74;
 
@@ -61,6 +65,9 @@ public class AurabirdFalcon extends L2Transformation
 	{
 		// Air Blink
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(885, 1), false);
+		
+		// Exhilarate
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(894, 1), false);
 
 		int lvl = getPlayer().getLevel() -74;
 

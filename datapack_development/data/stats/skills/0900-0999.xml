@@ -196,11 +196,19 @@
   <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="911" levels="11" name="Energy Burst">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Aurabird Falcon & Owl -->
+  <table name="#power"> 469 482 494 505 517 528 539 550 561 571 580 </table>
+  <table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
+  <table name="#magicLvl"> 75 76 77 78 79 80 81 82 83 84 85 </table>
+  <set name="power" val="#power"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_AURA"/>
+  <set name="skillRadius" val="100"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="reuseDelay" val="1000"/>
   <set name="hitTime" val="1000"/>
+  <set name="skillType" val="PDAM"/>
 </skill>
 <skill id="912" levels="1" name="Summon Imperial Phoenix">
   <set name="mpConsume" val="145"/>
