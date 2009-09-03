@@ -605,6 +605,13 @@
   </cond>
   <for>
     <effect name="Transformation" time="-1" val="0"> <!-- Transformation has unlimited time -->
+      <set order="0x08" stat="STR" val="41"/>
+      <set order="0x08" stat="DEX" val="33"/>
+      <set order="0x08" stat="CON" val="31"/>
+      <set order="0x08" stat="INT" val="29"/>
+      <set order="0x08" stat="WIT" val="11"/>
+      <set order="0x08" stat="MEN" val="25"/>
+      <mul order="0x30" stat="maxCp" val="0.15"/>
     </effect>
   </for>
 </skill>
@@ -625,6 +632,13 @@
   </cond>
   <for>
     <effect name="Transformation" time="-1" val="0"> <!-- Transformation has unlimited time -->
+      <set order="0x08" stat="STR" val="41"/>
+      <set order="0x08" stat="DEX" val="33"/>
+      <set order="0x08" stat="CON" val="31"/>
+      <set order="0x08" stat="INT" val="29"/>
+      <set order="0x08" stat="WIT" val="11"/>
+      <set order="0x08" stat="MEN" val="25"/>
+      <mul order="0x30" stat="maxCp" val="0.15"/>
     </effect>
   </for>
 </skill>
@@ -949,13 +963,28 @@
   <set name="hitTime" val="4000"/>
 </skill>
 <skill id="884" levels="11" name="Air Assault">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Aurabird Falcon & Owl -->
+  <table name="#power"> 200 215 230 245 260 275 290 305 320 335 350 </table> <!-- Guess -->
+  <table name="#magicLvl"> 75 76 77 78 79 80 81 82 83 84 85 </table>
+  <set name="power" val="#power"/>
+  <set name="mpConsume" val="30"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="reuseDelay" val="23000"/>
   <set name="hitTime" val="800"/>
+  <set name="flyType" val="CHARGE"/>
+  <set name="isMagic" val="true"/>
+  <set name="mpConsume" val="30"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="target" val="TARGET_AREA"/>
+  <set name="skillRadius" val="100"/>
+  <set name="castRange" val="2500"/>
+  <for>
+    <effect name="EnemyCharge" val="0"/>
+  </for>  
 </skill>
 <skill id="885" levels="1" name="Air Blink">
+  <!-- Aurabird Falcon & Owl -->
   <set name="coolTime" val="200"/>
   <set name="flyCourse" val="0"/> <!-- Teleport to Back -->
   <set name="flyRadius" val="500"/>
@@ -974,8 +1003,11 @@
   </for>
 </skill>
 <skill id="886" levels="11" name="Air Shock Bomb">
+  <!-- Aurabird Falcon -->
   <table name="#power"> 2251 2310 2367 2424 2480 2534 2588 2639 2690 2738 2784 </table>
   <table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
+  <table name="#magicLvl"> 75 76 77 78 79 80 81 82 83 84 85 </table>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="hitTime" val="1500"/>
   <set name="isDebuff" val="true"/>
   <set name="mpConsume" val="#mpConsume"/>
@@ -991,67 +1023,161 @@
   </for>
 </skill>
 <skill id="887" levels="11" name="Sky Clutch">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="reuseDelay" val="3000"/>
+  <!-- Aurabird Owl -->
+  <table name="#power"> 110 111 112 114 115 116 117 119 120 121 122 </table>
+  <table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
+  <table name="#magicLvl"> 75 76 77 78 79 80 81 82 83 84 85 </table>
+  <set name="power" val="#power"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="hitTime" val="1500"/>
+  <set name="isDebuff" val="true"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="reuseDelay" val="3000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="castRange" val="900"/>
+  <set name="effectRange" val="1800"/>
+  <for>
+    <effect name="Root" time="9" val="0" effectPower="50" effectType="ROOT" stackOrder="1" stackType="Root"/>
+  </for>
 </skill>
 <skill id="888" levels="11" name="Energy Storm">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Aurabird Falcon -->
+  <table name="#power"> 3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640 </table>
+  <table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
+  <table name="#magicLvl"> 75 76 77 78 79 80 81 82 83 84 85 </table>
+  <set name="power" val="#power"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="reuseDelay" val="1000"/>
   <set name="hitTime" val="1080"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="castRange" val="200"/>
+  <set name="effectRange" val="500"/>
 </skill>
 <skill id="889" levels="11" name="Energy Storm">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Aurabird Owl -->
+  <table name="#power"> 3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640 </table>
+  <table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
+  <table name="#magicLvl"> 75 76 77 78 79 80 81 82 83 84 85 </table>
+  <set name="power" val="#power"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="reuseDelay" val="1000"/>
   <set name="hitTime" val="1080"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="castRange" val="200"/>
+  <set name="effectRange" val="500"/>
 </skill>
 <skill id="890" levels="11" name="Prodigious Flare">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+   <!-- Aurabird Falcon -->
+  <table name="#power"> 5627 5773 5918 6060 6199 6335 6468 6598 6723 6844 6960 </table>
+  <table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
+  <table name="#magicLvl"> 75 76 77 78 79 80 81 82 83 84 85 </table>
+  <set name="power" val="#power"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="reuseDelay" val="2000"/>
   <set name="hitTime" val="1500"/>
+  <set name="skillType" val="PDAM"/>
+  <set name="castRange" val="200"/>
+  <set name="effectRange" val="500"/>
 </skill>
 <skill id="891" levels="11" name="Energy Shot">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="reuseDelay" val="3000"/>
+  <!-- Aurabird Falcon -->
+  <table name="#power"> 88 89 90 91 92 93 94 95 96 97 98 </table>
+  <table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
+  <table name="#magicLvl"> 75 76 77 78 79 80 81 82 83 84 85 </table>
+  <set name="power" val="#power"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="hitTime" val="3000"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="reuseDelay" val="3000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="castRange" val="900"/>
+  <set name="effectRange" val="1800"/>
 </skill>
 <skill id="892" levels="11" name="Energy Shot">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="reuseDelay" val="3000"/>
+   <!-- Aurabird Owl -->
+  <table name="#power"> 131 133 135 136 138 139 141 142 144 145 146 </table>
+  <table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
+  <table name="#magicLvl"> 75 76 77 78 79 80 81 82 83 84 85 </table>
+  <set name="power" val="#power"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="hitTime" val="3000"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="reuseDelay" val="3000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="castRange" val="900"/>
+  <set name="effectRange" val="1800"/>
 </skill>
 <skill id="893" levels="11" name="Concentrated Energy Shot">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="reuseDelay" val="4000"/>
+   <!-- Aurabird Owl -->
+  <table name="#power"> 197 199 202 204 206 209 211 213 215 217 219</table>
+  <table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
+  <table name="#magicLvl"> 75 76 77 78 79 80 81 82 83 84 85 </table>
+  <set name="power" val="#power"/>
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="hitTime" val="4000"/>
+  <set name="isMagic" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="reuseDelay" val="4000"/>
+  <set name="skillType" val="MDAM"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="castRange" val="900"/>
+  <set name="effectRange" val="1800"/>
 </skill>
 <skill id="894" levels="1" name="Exhilarate">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="reuseDelay" val="8000"/>
+  <!-- Aurabird Falcon -->
+  <set name="magicLvl" val="83"/>
+  <set name="mpConsume" val="69"/>
+  <set name="isMagic" val="true"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="8000"/>
+  <for>
+    <effect name="Buff" time="600" val="0" stackOrder="1" stackType="Exhilarate">
+      <mul order="0x30" stat="maxHp" val="1.20"/>
+	  <mul order="0x30" stat="pAtk" val="1.08"/>
+	  <mul order="0x30" stat="pDef" val="1.18"/>
+	  <mul order="0x30" stat="pAtkSpd" val="1.20"/>
+    </effect>
+  </for>
 </skill>
 <skill id="895" levels="1" name="Exhilarate">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="reuseDelay" val="8000"/>
+  <!-- Aurabird Owl -->
+  <set name="magicLvl" val="83"/>
+  <set name="mpConsume" val="70"/>
+  <set name="isMagic" val="true"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
   <set name="hitTime" val="1500"/>
+  <set name="reuseDelay" val="8000"/>
+  <for>
+    <effect name="Buff" time="600" val="0" stackOrder="1" stackType="Exhilarate">
+      <mul order="0x30" stat="mAtk" val="1.20"/>
+	  <mul order="0x30" stat="mDef" val="1.16"/>
+	  <mul order="0x30" stat="mAtkSpd" val="1.20"/>
+    </effect>
+  </for>
 </skill>
 <skill id="896" levels="6" name="Rolling Step">
   <table name="#mpConsume"> 72 73 74 74 75 75 </table>
