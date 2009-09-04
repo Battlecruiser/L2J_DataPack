@@ -953,7 +953,7 @@ INSERT INTO `weapon` VALUES
 (6584,'Basalt Battlehammer - HP Drain','rhand','true',1570,1,1,'adamantaite','s',281,20,'blunt',4,4.00000,0,0,0,379,0,132,-1,-1,42759400,2052,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3568-1;'),
 (6585,'Basalt Battlehammer - Health','rhand','true',1570,1,1,'adamantaite','s',281,20,'blunt',4,4.00000,0,0,0,379,0,132,-1,-1,42759400,2052,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3013-3;'),
 (6586,'Basalt Battlehammer - HP Regeneration','rhand','true',1570,1,1,'adamantaite','s',281,20,'blunt',4,4.00000,0,0,0,379,0,132,-1,-1,42759400,2052,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3569-1;'),
-(6587,'Imperial Staff - Empower','lrhand','true',910,1,1,'adamantaite','s',274,20,'bigblunt',4,4.00000,0,0,0,325,0,193,-1,-1,42759400,2052,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3075-1;'),
+(6587,'Imperial Staff - Empower','lrhand','true',910,1,1,'adamantaite','s',274,20,'bigblunt',4,4.00000,0,0,0,325,0,193,-1,-1,42759400,2052,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3575-1;'),
 (6588,'Imperial Staff - MP Regeneration','lrhand','true',910,1,1,'adamantaite','s',274,20,'bigblunt',4,4.00000,0,0,0,325,0,193,-1,-1,42759400,2052,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3576-1;'),
 (6589,'Imperial Staff - Magic Hold','lrhand','true',910,1,1,'adamantaite','s',274,20,'bigblunt',4,4.00000,0,0,0,325,0,193,-1,-1,42759400,2052,'true','true','true','true',0,0,3577,1,20,0,0,0,0,'3552-1;'), -- PvP Bonus Damage Skill Assigned
 (6590,'Angel Slayer - Critical Damage','rhand','true',950,1,1,'adamantaite','s',246,5,'dagger',12,-3.00000,0,0,0,433,0,132,-1,-1,42759400,2052,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3572-1;'),
@@ -1755,7 +1755,7 @@ INSERT INTO `weapon` VALUES
 (10731,'Arcana Mace {PvP} - Acumen','rhand','true',1300,1,1,'fine_steel','s',225,20,'blunt',4,4.00000,0,0,0,379,0,175,-1,-1,42759400,2052,'false','false','true','false',0,0,0,0,0,0,0,0,0,'3047-3;'),
 (10732,'Arcana Mace {PvP} - MP Regeneration','rhand','true',1300,1,1,'fine_steel','s',225,20,'blunt',4,4.00000,0,0,0,379,0,175,-1,-1,42759400,2052,'false','false','true','false',0,0,0,0,0,0,0,0,0,'3576-1;'),
 (10733,'Arcana Mace {PvP} - Mana Up','rhand','true',1300,1,1,'fine_steel','s',225,20,'blunt',4,4.00000,0,0,0,379,0,175,-1,-1,42759400,2052,'false','false','true','false',0,0,0,0,0,0,0,0,0,'3014-2;'),
-(10734,'Imperial Staff {PvP} - Empower','lrhand','true',910,1,1,'fine_steel','s',274,20,'bigblunt',4,4.00000,0,0,0,325,0,193,-1,-1,42759400,2052,'false','false','true','false',0,0,0,0,0,0,0,0,0,'3075-1;'),
+(10734,'Imperial Staff {PvP} - Empower','lrhand','true',910,1,1,'fine_steel','s',274,20,'bigblunt',4,4.00000,0,0,0,325,0,193,-1,-1,42759400,2052,'false','false','true','false',0,0,0,0,0,0,0,0,0,'3575-1;'),
 (10735,'Imperial Staff {PvP} - MP Regeneration','lrhand','true',910,1,1,'fine_steel','s',274,20,'bigblunt',4,4.00000,0,0,0,325,0,193,-1,-1,42759400,2052,'false','false','true','false',0,0,0,0,0,0,0,0,0,'3576-1;'),
 (10736,'Imperial Staff {PvP} - Magic Hold','lrhand','true',910,1,1,'fine_steel','s',274,20,'bigblunt',4,4.00000,0,0,0,325,0,193,-1,-1,42759400,2052,'false','false','true','false',0,0,3577,1,20,0,0,0,0,'3552-1;'), -- PvP Bonus Damage Skill Assigned
 (10737,'Draconic Bow {PvP} - Cheap Shot','lrhand','true',1650,1,1,'fine_steel','s',581,5,'bow',12,-3.00000,0,0,0,293,11,132,-1,-1,42759400,2052,'false','false','true','false',0,0,0,0,0,0,0,0,10746,'3552-1;'), -- PvP Bonus Damage Skill Assigned
@@ -2175,7 +2175,7 @@ INSERT INTO `weapon` VALUES
 (11228,'Angel Slayer - Concentration - HP Drain','rhand','true',950,1,1,'fine_steel','s',246,5,'dagger',12,-3.00000,0,0,0,433,0,132,-1,-1,42759400,2052,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3568-1;'),
 (11229,'Angel Slayer - Concentration - Haste','rhand','true',950,1,1,'fine_steel','s',246,5,'dagger',12,-3.00000,0,0,0,433,0,132,-1,-1,42759400,2052,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3564-1;'),
 (11230,'Imperial Staff - Nature','lrhand','true',910,1,1,'fine_steel','s',274,20,'bigblunt',4,4.00000,0,0,0,325,0,193,-1,-1,42759400,2052,'true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
-(11231,'Imperial Staff - Nature - Empower','lrhand','true',910,1,1,'fine_steel','s',274,20,'bigblunt',4,4.00000,0,0,0,325,0,193,-1,-1,42759400,2052,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3075-1;'),
+(11231,'Imperial Staff - Nature - Empower','lrhand','true',910,1,1,'fine_steel','s',274,20,'bigblunt',4,4.00000,0,0,0,325,0,193,-1,-1,42759400,2052,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3575-1;'),
 (11232,'Imperial Staff - Nature - MP Regeneration','lrhand','true',910,1,1,'fine_steel','s',274,20,'bigblunt',4,4.00000,0,0,0,325,0,193,-1,-1,42759400,2052,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3576-1;'),
 (11233,'Imperial Staff - Nature - Magic Hold','lrhand','true',910,1,1,'fine_steel','s',274,20,'bigblunt',4,4.00000,0,0,0,325,0,193,-1,-1,42759400,2052,'true','true','true','true',0,0,3577,1,20,0,0,0,0,'3552-1;'), -- PvP Bonus Damage Skill Assigned
 (11234,'Tallum Blade*Dark Legion\'s Edge - Thunder','lrhand','true',2080,1,1,'fine_steel','s',342,10,'dual',8,0.00000,0,0,0,325,0,132,-1,-1,42759400,2052,'true','true','true','true',3570,1,0,0,0,0,0,0,0,'0-0;'),
@@ -2822,7 +2822,7 @@ INSERT INTO `weapon` VALUES
 (12922,'Angel Slayer - Concentration {PvP} - Critical Damage','rhand','true',950,1,1,'fine_steel','s',246,5,'dagger',12,-3.00000,0,0,0,433,0,132,-1,-1,42759400,2052,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3066-4;'),
 (12923,'Angel Slayer - Concentration {PvP} - HP Drain','rhand','true',950,1,1,'fine_steel','s',246,5,'dagger',12,-3.00000,0,0,0,433,0,132,-1,-1,42759400,2052,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3568-1;'),
 (12924,'Angel Slayer - Concentration {PvP} - Haste','rhand','true',950,1,1,'fine_steel','s',246,5,'dagger',12,-3.00000,0,0,0,433,0,132,-1,-1,42759400,2052,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3564-1;'),
-(12925,'Imperial Staff - Nature {PvP} - Empower','lrhand','true',910,1,1,'fine_steel','s',274,20,'bigblunt',4,4.00000,0,0,0,325,0,193,-1,-1,42759400,2052,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3075-1;'),
+(12925,'Imperial Staff - Nature {PvP} - Empower','lrhand','true',910,1,1,'fine_steel','s',274,20,'bigblunt',4,4.00000,0,0,0,325,0,193,-1,-1,42759400,2052,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3575-1;'),
 (12926,'Imperial Staff - Nature {PvP} - MP Regeneration','lrhand','true',910,1,1,'fine_steel','s',274,20,'bigblunt',4,4.00000,0,0,0,325,0,193,-1,-1,42759400,2052,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3576-1;'),
 (12927,'Imperial Staff - Nature {PvP} - Magic Hold','lrhand','true',910,1,1,'fine_steel','s',274,20,'bigblunt',4,4.00000,0,0,0,325,0,193,-1,-1,42759400,2052,'true','true','true','true',0,0,3577,1,20,0,0,0,0,'3552-1;'), -- PvP Bonus Damage Skill Assigned
 (12928,'Tallum Blade*Dark Legion - Lightning {PvP}','lrhand','true',2080,1,1,'fine_steel','s',342,10,'dual',8,0.00000,0,0,0,325,0,132,-1,-1,42759400,2052,'true','true','true','true',3570,1,0,0,0,0,0,0,0,'0-0;'),
