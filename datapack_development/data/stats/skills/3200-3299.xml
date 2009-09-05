@@ -545,21 +545,21 @@
   </for>
 </skill>
 <skill id="3249" levels="10" name="Item Skill: Focus">
-  <table name="#rCrit"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <table name="#rCrit"> 0.1 0.11 0.12 0.13 0.14 0.15 0.16 0.17 0.18 0.19 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <mul order="0x30" stat="rCrit" val="#rCrit"/>
+    <basemul order="0x30" stat="rCrit" val="#rCrit"/>
   </for>
 </skill>
 <skill id="3250" levels="10" name="Item Skill: Wild Magic">
-  <table name="#mCritRate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <table name="#mCritRate"> 0.1 0.11 0.12 0.13 0.14 0.15 0.16 0.17 0.18 0.19 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
-    <mul order="0x30" stat="mCritRate" val="#mCritRate"/>
+    <basemul order="0x30" stat="mCritRate" val="#mCritRate"/>
   </for>
 </skill>
 <skill id="3251" levels="10" name="Item Skill: Weight Limit">
