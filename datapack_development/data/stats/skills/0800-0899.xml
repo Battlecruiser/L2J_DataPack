@@ -1076,7 +1076,7 @@
   <set name="effectRange" val="500"/>
 </skill>
 <skill id="890" levels="11" name="Prodigious Flare">
-   <!-- Aurabird Falcon -->
+  <!-- Aurabird Falcon -->
   <table name="#power"> 5627 5773 5918 6060 6199 6335 6468 6598 6723 6844 6960 </table>
   <table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
   <table name="#magicLvl"> 75 76 77 78 79 80 81 82 83 84 85 </table>
@@ -1109,7 +1109,7 @@
   <set name="effectRange" val="1800"/>
 </skill>
 <skill id="892" levels="11" name="Energy Shot">
-   <!-- Aurabird Owl -->
+  <!-- Aurabird Owl -->
   <table name="#power"> 131 133 135 136 138 139 141 142 144 145 146 </table>
   <table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
   <table name="#magicLvl"> 75 76 77 78 79 80 81 82 83 84 85 </table>
@@ -1126,7 +1126,7 @@
   <set name="effectRange" val="1800"/>
 </skill>
 <skill id="893" levels="11" name="Concentrated Energy Shot">
-   <!-- Aurabird Owl -->
+  <!-- Aurabird Owl -->
   <table name="#power"> 197 199 202 204 206 209 211 213 215 217 219</table>
   <table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
   <table name="#magicLvl"> 75 76 77 78 79 80 81 82 83 84 85 </table>
@@ -1155,9 +1155,9 @@
   <for>
     <effect name="Buff" time="600" val="0" stackOrder="1" stackType="Exhilarate">
       <mul order="0x30" stat="maxHp" val="1.20"/>
-	  <mul order="0x30" stat="pAtk" val="1.08"/>
-	  <mul order="0x30" stat="pDef" val="1.18"/>
-	  <mul order="0x30" stat="pAtkSpd" val="1.20"/>
+      <mul order="0x30" stat="pAtk" val="1.08"/>
+      <mul order="0x30" stat="pDef" val="1.18"/>
+      <mul order="0x30" stat="pAtkSpd" val="1.20"/>
     </effect>
   </for>
 </skill>
@@ -1174,8 +1174,8 @@
   <for>
     <effect name="Buff" time="600" val="0" stackOrder="1" stackType="Exhilarate">
       <mul order="0x30" stat="mAtk" val="1.20"/>
-	  <mul order="0x30" stat="mDef" val="1.16"/>
-	  <mul order="0x30" stat="mAtkSpd" val="1.20"/>
+      <mul order="0x30" stat="mDef" val="1.16"/>
+      <mul order="0x30" stat="mAtkSpd" val="1.20"/>
     </effect>
   </for>
 </skill>

@@ -405,7 +405,7 @@
 </skill>
 <skill id="5646" levels="2" name="Unicorn Seraphim - Wild Magic">
   <table name="#aggro"> 582 635 </table>
-  <table name="#mCrit"> 1.3 1.4 </table>
+  <table name="#mCrit"> 0.3 0.4 </table>
   <table name="#mpConsume"> 58 65 </table>
   <set name="aggroPoints" val="#aggro"/>
   <set name="castRange" val="400"/>
@@ -419,7 +419,7 @@
   <set name="target" val="TARGET_ONE"/>
   <for>
     <effect name="Buff" time="1200" val="0" stackOrder="#mCrit" stackType="magic_critical_up">
-      <mul order="0x30" stat="mCritRate" val="#mCrit"/>
+      <basemul order="0x30" stat="mCritRate" val="#mCrit"/>
     </effect>
   </for>
 </skill>
@@ -886,7 +886,7 @@
   <set name="target" val="TARGET_ONE"/>
   <for>
     <effect name="Debuff" time="15" val="0">
-      <mul order="0x30" stat="rCrit" val="0.8"/>
+      <basemul order="0x30" stat="rCrit" val="-0.2"/>
       <mul order="0x30" stat="cAtk" val="0.8"/>
     </effect>
   </for>
