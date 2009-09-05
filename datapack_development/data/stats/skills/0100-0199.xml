@@ -24,7 +24,7 @@
     <effect name="Stun" time="9" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
-<skill id="101" levels="40" name="Stunning Shot" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30" enchantLevels4="30" >
+<skill id="101" levels="40" name="Stunning Shot" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30" enchantLevels4="30">
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <table name="#ench3-pDef"> 0.99 0.98 0.98 0.97 0.97 0.95 0.94 0.93 0.93 0.92 0.91 0.9 0.9 0.88 0.87 0.86 0.86 0.85 0.84 0.81 0.8 0.8 0.79 0.78 0.78 0.77 0.76 0.74 0.73 0.72 </table>
   <table name="#ench4-mDef"> 0.99 0.98 0.98 0.97 0.97 0.95 0.94 0.93 0.93 0.92 0.91 0.9 0.9 0.88 0.87 0.86 0.86 0.85 0.84 0.81 0.8 0.8 0.79 0.78 0.78 0.77 0.76 0.74 0.73 0.72 </table>
@@ -271,7 +271,7 @@
     </effect>
   </for>
 </skill>
-<skill id="110" levels="2" name="Ultimate Defense" enchantLevels1="30" enchantLevels2="30" >
+<skill id="110" levels="2" name="Ultimate Defense" enchantLevels1="30" enchantLevels2="30">
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -311,7 +311,7 @@
     </effect>
   </enchant2for>
 </skill>
-<skill id="111" levels="2" name="Ultimate Evasion" enchantLevels1="30" enchantLevels2="30" >
+<skill id="111" levels="2" name="Ultimate Evasion" enchantLevels1="30" enchantLevels2="30">
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <table name="#ench1time"> 30 31 32 32 33 34 35 35 36 37 38 38 39 40 41 41 42 43 43 44 45 46 46 47 48 49 49 50 51 52 </table>
   <table name="#ench2reuseDelay"> 890000 880000 870000 860000 850000 840000 830000 820000 810000 800000 790000 780000 770000 760000 750000 740000 730000 720000 710000 700000 690000 680000 670000 660000 650000 640000 630000 620000 610000 600000 </table>
@@ -344,7 +344,7 @@
     </effect>
   </enchant1for>
 </skill>
-<skill id="112" levels="4" name="Deflect Arrow" enchantLevels1="30" enchantLevels2="30" >
+<skill id="112" levels="4" name="Deflect Arrow" enchantLevels1="30" enchantLevels2="30">
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -386,7 +386,7 @@
     </add>
   </for>
 </skill>
-<skill id="115" levels="17" name="Power Break" enchantLevels1="30" enchantLevels2="30" >
+<skill id="115" levels="17" name="Power Break" enchantLevels1="30" enchantLevels2="30">
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -420,7 +420,7 @@
     </effect>
   </for>
 </skill>
-<skill id="116" levels="14" name="Howl" enchantLevels1="30" enchantLevels2="30" >
+<skill id="116" levels="14" name="Howl" enchantLevels1="30" enchantLevels2="30">
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -485,7 +485,7 @@
     <effect name="Stun" time="9" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="Stun"/>
   </for>
 </skill>
-<skill id="121" levels="6" name="Battle Roar" enchantLevels1="30" >
+<skill id="121" levels="6" name="Battle Roar" enchantLevels1="30">
   <!-- @Calculation@ (#power / 100 ) * (100 * #maxHp) = ~#maxHp -->
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
@@ -509,7 +509,7 @@
     </effect>
   </for>
 </skill>
-<skill id="122" levels="15" name="Hex" enchantLevels1="30" enchantLevels2="30" >
+<skill id="122" levels="15" name="Hex" enchantLevels1="30" enchantLevels2="30">
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -538,7 +538,7 @@
     </effect>
   </for>
 </skill>
-<skill id="123" levels="3" name="Spirit Barrier" enchantLevels1="30" enchantLevels2="30" >
+<skill id="123" levels="3" name="Spirit Barrier" enchantLevels1="30" enchantLevels2="30">
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -571,7 +571,7 @@
     </effect>
   </enchant1for>
 </skill>
-<skill id="127" levels="14" name="Hamstring" enchantLevels1="30" enchantLevels2="30" >
+<skill id="127" levels="14" name="Hamstring" enchantLevels1="30" enchantLevels2="30">
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
   <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -627,7 +627,7 @@
     <effect count="10" name="DamOverTime" time="3" val="#dot" abnormal="poison"/>
   </for>
 </skill>
-<skill id="130" levels="2" name="Thrill Fight" enchantLevels1="30" >
+<skill id="130" levels="2" name="Thrill Fight" enchantLevels1="30">
   <table name="#pAtkSpd"> 1.05 1.1 </table>
   <table name="#mpConsume"> 21 25 </table>
   <table name="#ench1runSpd"> 0.81 0.82 0.82 0.83 0.84 0.84 0.85 0.86 0.86 0.87 0.88 0.88 0.89 0.9 0.9 0.91 0.92 0.92 0.93 0.94 0.94 0.95 0.96 0.96 0.97 0.98 0.98 0.99 1.00 1.00 </table>
@@ -652,7 +652,7 @@
     </effect>
   </enchant1for>
 </skill>
-<skill id="131" levels="3" name="Hawk Eye" enchantLevels1="30" >
+<skill id="131" levels="3" name="Hawk Eye" enchantLevels1="30">
   <table name="#ench1time"> 310 320 330 340 350 360 370 380 390 400 410 420 430 440 450 460 470 480 490 500 510 520 530 540 550 560 570 580 590 600 </table>
   <table name="#accCombat"> 6 8 10 </table>
   <table name="#mpConsume"> 18 22 27 </table>
