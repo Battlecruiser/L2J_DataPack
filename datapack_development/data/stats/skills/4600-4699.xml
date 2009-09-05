@@ -471,7 +471,7 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="aggroPoints" val="-100"/>
   <for>
-    <effect name="Debuff" time="5" val="0" >
+    <effect name="Debuff" time="5" val="0">
       <mul order="0x30" stat="gainHp" val="0"/>
     </effect>
   </for>
