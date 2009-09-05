@@ -706,7 +706,7 @@
   </for>
 </skill>
 <skill id="5163" levels="10" name="Focus">
-  <table name="#rate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <table name="#rCrit"> 0.1 0.11 0.12 0.13 0.14 0.15 0.16 0.17 0.18 0.19 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="target" val="TARGET_SELF"/>
@@ -716,12 +716,12 @@
   <set name="hitTime" val="4000"/>
   <for>
     <effect name="Buff" time="15" val="0">
-      <mul order="0x30" stat="rCrit" val="#rate"/>
+      <basemul order="0x30" stat="rCrit" val="#rCrit"/>
     </effect>
   </for>
 </skill>
 <skill id="5164" levels="10" name="Wild Magic">
-  <table name="#rate"> 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 </table>
+  <table name="#rate"> 0.1 0.11 0.12 0.13 0.14 0.15 0.16 0.17 0.18 0.19 </table>
   <table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="target" val="TARGET_SELF"/>
@@ -731,7 +731,7 @@
   <set name="hitTime" val="4000"/>
   <for>
     <effect name="Buff" time="15" val="0">
-      <mul order="0x30" stat="mCritRate" val="#rate"/>
+      <basemul order="0x30" stat="mCritRate" val="#rate"/>
     </effect>
   </for>
 </skill>
