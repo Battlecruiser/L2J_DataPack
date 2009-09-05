@@ -712,18 +712,10 @@
   <set name="chanceType" val="ON_HIT"/>
   <for>
     <add order="0x40" stat="pAtk" val="100">
-      <and>
-        <not>
-          <using kind="Bow,Crossbow"/>
-        </not>
-      </and>
+      <using kind="Sword,Blunt,Dagger,Pole,Fist,Dual Sword,Dual Fist,Big Sword,Big Blunt,Ancient,Rapier,Dual Dagger"/>
     </add>
     <mul order="0x30" stat="pAtkSpd" val="1.1">
-      <and>
-        <not>
-          <using kind="Bow,Crossbow"/>
-        </not>
-      </and>
+      <using kind="Sword,Blunt,Dagger,Pole,Fist,Dual Sword,Dual Fist,Big Sword,Big Blunt,Ancient,Rapier,Dual Dagger"/>
     </mul>
   </for>
 </skill>
