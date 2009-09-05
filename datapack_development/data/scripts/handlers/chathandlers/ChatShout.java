@@ -55,7 +55,7 @@ public class ChatShout implements IChatHandler
 		}
 		else if (Config.DEFAULT_GLOBAL_CHAT.equalsIgnoreCase("global"))
 		{
-			if (!activeChar.getFloodProtectors().getGlobalChat().tryPerformAction("global chat"))
+			if (!activeChar.isGM() && !activeChar.getFloodProtectors().getGlobalChat().tryPerformAction("global chat"))
 			{
 				activeChar.sendMessage("Do not spam shout channel.");
 				return;
