@@ -585,7 +585,7 @@ INSERT INTO `teleport` VALUES
 ('Garden of Eva,3rd level - 1000 adena',9125,77868,250400,-9328,1000,0),
 ('Garden of Eva,4th level - 1000 adena',9126,78721,253309,-9840,1000,0),
 ('Garden of Eva,5th level - 1000 adena',9127,82951,252354,-10592,1000,0),
--- Noble Gate Pass
+-- Olympiad Token
 ('Gludin Arena - 1 Noble Gate Pass',9900,-87328,142266,-3640,1,1),
 ('Coliseum - 1 Noble Gate Pass',9901,146440,46723,-3432,1,1),
 ('Giran Arena - 1 Noble Gate Pass',9902,73579,142709,-3768,1,1),
