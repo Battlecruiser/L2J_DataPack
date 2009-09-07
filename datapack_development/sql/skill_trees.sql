@@ -13390,6 +13390,7 @@ INSERT INTO `skill_trees` VALUES
 (57,36,16,'Whirlwind',57000,55),
 (57,36,17,'Whirlwind',57000,55),
 (57,36,18,'Whirlwind',57000,55),
+(57,823,3,'Strengthen Golem',183000,58), 
 (57,190,19,'Fatal Strike',61000,58),
 (57,190,20,'Fatal Strike',61000,58),
 (57,190,21,'Fatal Strike',61000,58),

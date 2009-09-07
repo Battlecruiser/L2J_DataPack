@@ -9,7 +9,7 @@ public class SteamBeatle extends L2Transformation
 	public SteamBeatle()
 	{
 		// id, colRadius, colHeight
-		super(110, 40, 28);
+		super(110, 40, 27.5);
 	}
 
 	public void onTransform()
