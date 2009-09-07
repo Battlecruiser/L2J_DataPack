@@ -172,11 +172,16 @@
 </skill>
 <skill id="22030" levels="1" name="Cream Puff Herb">
   <set name="hitTime" val="100"/>
+  <set name="itemConsumeId" val="20273"/>
+  <set name="itemConsumeCount" val="1"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isPotion" val="true"/>
   <set name="buffDuration" val="300000"/>
+  <cond msgId="113" addName="1">
+    <player flyMounted="False"/>
+  </cond>
   <for>
     <effect name="Buff" time="300" val="0" abnormal="vitality">
       <sub order="0x40" stat="vitalityConsumeRate" val="10"/>
