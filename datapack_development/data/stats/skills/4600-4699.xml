@@ -1732,7 +1732,7 @@
 </skill>
 <skill id="4699" levels="13" name="Blessing of Queen">
   <table name="#rCrit"> 0.25 0.27 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3 </table>
-  <table name="#crit"> 1.2 1.22 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 </table>
+  <table name="#cAtk"> 1.2 1.22 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 </table>
   <table name="#time"> 120 120 120 150 165 180 195 210 225 240 255 270 285 </table>
   <table name="#magicLvl"> 57 66 75 77 78 79 80 81 82 83 84 85 86 </table>
   <table name="#mpConsume"> 122 157 194 202 207 212 215 220 224 229 233 237 242 </table>
@@ -1749,7 +1749,7 @@
   <for>
     <effect name="Buff" time="#time" val="0" stackOrder="1" stackType="QueenBuff">
       <basemul order="0x30" stat="rCrit" val="#rCrit"/>
-      <mul order="0x30" stat="cAtk" val="#crit"/>
+      <mul order="0x30" stat="cAtk" val="#cAtk"/>
     </effect>
   </for>
 </skill>

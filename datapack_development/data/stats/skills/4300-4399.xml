@@ -838,7 +838,7 @@
   </for>
 </skill>
 <skill id="4359" levels="3" name="Clan Hall: Focus">
-  <table name="#Tab-rCrit"> 0.2 0.25 0.3 </table>
+  <table name="#rCrit"> 0.2 0.25 0.3 </table>
   <table name="#mpConsume"> 300 0 600 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="target" val="TARGET_ONE"/>
@@ -849,8 +849,8 @@
   <set name="castRange" val="400"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect name="Buff" time="1200" val="0" stackOrder="#Tab-rCrit" stackType="critical_prob_up">
-      <basemul order="0x30" stat="rCrit" val="#Tab-rCrit"/>
+    <effect name="Buff" time="1200" val="0" stackOrder="#rCrit" stackType="critical_prob_up">
+      <basemul order="0x30" stat="rCrit" val="#rCrit"/>
     </effect>
   </for>
 </skill>
