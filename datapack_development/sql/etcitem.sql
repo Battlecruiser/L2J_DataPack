@@ -9259,7 +9259,7 @@ INSERT INTO `etcitem` VALUES
 (20254,'Agathion of Love Pack (Event)','false','none',100,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','none','0-0;'),
 (20271,'Baguette Legacy','false','none',10,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','none','0-0;'),
 (20272,'Baguette Herb','false','herb',0,'normal','paper','none',-1,-1,0,0,'true','true','true','true','none','22029-1;'),
-(20273,'Cream Puff Herb','false','herb',0,'normal','paper','none',-1,-1,0,0,'true','true','true','true','none','22030-1;'),
+(20273,'Cream Puff Herb','false','herb',0,'normal','paper','none',-1,-1,0,0,'true','true','true','true','ItemSkills','22030-1;'),
 (20274,'Cheesecake Herb','false','herb',0,'normal','paper','none',-1,-1,0,0,'true','true','true','true','none','22031-1;'),
 (20277,'Baguette Legacy - Kamael','false','none',10,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','none','0-0;'),
 (20278,'Gold Afro Hair Pack','false','none',10,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','none','0-0;'),
