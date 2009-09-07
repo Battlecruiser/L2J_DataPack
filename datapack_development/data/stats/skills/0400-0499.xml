@@ -285,7 +285,8 @@
   <table name="#mpConsume"> 52 56 58 60 62 64 66 68 70 72 </table>
   <table name="#power"> 1832 2091 2272 2460 2653 2850 3050 3252 3453 3653 </table>
   <table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74 </table>
-  <table name="#rate"> 0.1 0.1 0.1 0.15 0.15 0.2 0.2 0.25 0.25 0.3 </table>
+  <table name="#rCrit"> 0.1 0.1 0.1 0.15 0.15 0.2 0.2 0.25 0.25 0.3 </table>
+  <table name="#blowRate"> 1.1 1.1 1.1 1.15 1.15 1.2 1.2 1.25 1.25 1.3 </table>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="weaponsAllowed" val="262160"/> <!-- Dagger/Dual Daggers -->
   <set name="mpConsume" val="#mpConsume"/>
@@ -312,14 +313,15 @@
   <enchant6 name="element" val="3"/>
   <for>
     <effect self="1" name="Buff" time="15" val="0">
-      <basemul order="0x30" stat="rCrit" val="#rate"/>
-      <mul order="0x30" stat="blowRate" val="#rate"/>
+      <basemul order="0x30" stat="rCrit" val="#rCrit"/>
+      <mul order="0x30" stat="blowRate" val="#blowRate"/>
     </effect>
   </for>
 </skill>
 <skill id="410" levels="3" name="Mortal Strike">
   <table name="#mpConsume"> 27 31 34 </table>
-  <table name="#rate"> 0.1 0.15 0.2 </table>
+  <table name="#rCrit"> 0.1 0.15 0.2 </table>
+  <table name="#blowRate"> 1.1 1.15 1.2 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="weaponsAllowed" val="262160"/> <!-- Dagger/Dual Daggers -->
   <set name="reuseDelay" val="150000"/>
@@ -329,8 +331,8 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <for>
     <effect name="Buff" time="120" val="0">
-      <basemul order="0x30" stat="rCrit" val="#rate"/>
-      <mul order="0x30" stat="blowRate" val="#rate"/>
+      <basemul order="0x30" stat="rCrit" val="#rCrit"/>
+      <mul order="0x30" stat="blowRate" val="#blowRate"/>
     </effect>
   </for>
 </skill>
