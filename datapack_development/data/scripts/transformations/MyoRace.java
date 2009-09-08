@@ -12,7 +12,7 @@ public class MyoRace extends L2Transformation
 	public MyoRace()
 	{
 		// id, colRadius, colHeight
-		super(219, 16, 23);
+		super(219, 10, 23);
 	}
 
 	public void onTransform()

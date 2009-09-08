@@ -9,7 +9,7 @@ public class AurabirdOwl extends L2Transformation
 	public AurabirdOwl()
 	{
 		// id, colRadius, colHeight
-		super(9, 40, 19);
+		super(9, 40, 18.57);
 	}
 
 	public void onTransform()

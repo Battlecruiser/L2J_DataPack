@@ -9,7 +9,7 @@ public class DragonBomberStrong extends L2Transformation
 	public DragonBomberStrong()
 	{
 		// id, colRadius, colHeight
-		super(216, 8, 22);
+		super(216, 16, 24);
 	}
 
 	public void onTransform()

@@ -9,7 +9,7 @@ public class HeavyTow extends L2Transformation
 	public HeavyTow()
 	{
 		// id, colRadius, colHeight
-		super(119, 8, 8);
+		super(119, 4.4, 8.25);
 	}
 
 	public void onTransform()

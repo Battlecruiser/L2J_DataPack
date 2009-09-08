@@ -9,7 +9,7 @@ public class DwarfMercenary extends L2Transformation
 	public DwarfMercenary()
 	{
 		// id, colRadius, colHeight
-		super(14, 13, 29);
+		super(14, 8, 19);
 	}
 
 	public void onTransform()

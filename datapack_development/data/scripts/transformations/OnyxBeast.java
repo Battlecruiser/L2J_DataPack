@@ -9,7 +9,7 @@ public class OnyxBeast extends L2Transformation
 	public OnyxBeast()
 	{
 		// id, colRadius, colHeight
-		super(1, 14, 15);
+		super(1, 14, 14.5);
 	}
 
 	public void onTransform()

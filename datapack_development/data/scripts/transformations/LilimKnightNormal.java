@@ -9,7 +9,7 @@ public class LilimKnightNormal extends L2Transformation
 	public LilimKnightNormal()
 	{
 		// id, colRadius, colHeight
-		super(208, 8, 24.4);
+		super(208, 12, 25.5);
 	}
 
 	public void onTransform()

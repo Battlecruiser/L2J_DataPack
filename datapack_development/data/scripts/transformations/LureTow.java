@@ -9,7 +9,7 @@ public class LureTow extends L2Transformation
 	public LureTow()
 	{
 		// id, colRadius, colHeight
-		super(118, 8, 8);
+		super(118, 4.4, 8.25);
 	}
 
 	public void onTransform()

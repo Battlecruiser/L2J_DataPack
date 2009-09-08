@@ -9,7 +9,7 @@ public class GuardsoftheDawn extends L2Transformation
 	public GuardsoftheDawn()
 	{
 		// id, colRadius, colHeight
-		super(113, 12, 24);
+		super(113, 8, 23.5);
 	}
 
 	public void onTransform()

@@ -9,7 +9,7 @@ public class PumpkinGhost extends L2Transformation
 	public PumpkinGhost()
 	{
 		// id, colRadius, colHeight
-		super(108, 18, 32);
+		super(108, 12, 18);
 	}
 
 	public void onTransform()

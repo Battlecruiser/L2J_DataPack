@@ -9,7 +9,7 @@ public class Heretic extends L2Transformation
 	public Heretic()
 	{
 		// id, colRadius, colHeight
-		super(3, 8, 20);
+		super(3, 7.7, 28.4);
 	}
 
 	public void onTransform()

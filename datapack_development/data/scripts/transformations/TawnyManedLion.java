@@ -9,7 +9,7 @@ public class TawnyManedLion extends L2Transformation
 	public TawnyManedLion()
 	{
 		// id, colRadius, colHeight
-		super(109, 30, 23);
+		super(109, 25, 22.5);
 	}
 
 	public void onTransform()

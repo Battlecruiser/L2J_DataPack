@@ -9,7 +9,7 @@ public class DivineRogue extends L2Transformation
 	public DivineRogue()
 	{
 		// id, colRadius, colHeight
-		super(254, 13, 27.5);
+		super(254, 10, 28);
 	}
 
 	public void onTransform()

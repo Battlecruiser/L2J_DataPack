@@ -9,7 +9,7 @@ public class DarkElfMercenary extends L2Transformation
 	public DarkElfMercenary()
 	{
 		// id, colRadius, colHeight
-		super(12, 12, 25);
+		super(12, 8, 25);
 	}
 
 	public void onTransform()
