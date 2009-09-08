@@ -9,7 +9,7 @@ public class LilimKnightWeak extends L2Transformation
 	public LilimKnightWeak()
 	{
 		// id, colRadius, colHeight
-		super(209, 8, 24.4);
+		super(209, 12, 25.5);
 	}
 
 	public void onTransform()

@@ -9,7 +9,7 @@ public class Benom extends L2Transformation
 	public Benom()
 	{
 		// id, colRadius, colHeight
-		super(307, 10, 57.5);
+		super(307, 20, 56);
 	}
 
 	public void onTransform()

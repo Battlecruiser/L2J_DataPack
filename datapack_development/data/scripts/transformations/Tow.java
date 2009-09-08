@@ -9,7 +9,7 @@ public class Tow extends L2Transformation
 	public Tow()
 	{
 		// id, colRadius, colHeight
-		super(117, 8, 8);
+		super(117, 4.4, 8.25);
 	}
 
 	public void onTransform()

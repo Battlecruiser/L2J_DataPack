@@ -9,7 +9,7 @@ public class DivineWizard extends L2Transformation
 	public DivineWizard()
 	{
 		// id, colRadius, colHeight
-		super(256, 10, 27);
+		super(256, 10, 26);
 	}
 
 	public void onTransform()

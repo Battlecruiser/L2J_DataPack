@@ -9,7 +9,7 @@ public class UnicornWeak extends L2Transformation
 	public UnicornWeak()
 	{
 		// id, colRadius, colHeight
-		super(206, 8, 25.5);
+		super(206, 15, 28);
 	}
 
 	public void onTransform()

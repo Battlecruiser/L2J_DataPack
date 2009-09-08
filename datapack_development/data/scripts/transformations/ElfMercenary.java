@@ -9,7 +9,7 @@ public class ElfMercenary extends L2Transformation
 	public ElfMercenary()
 	{
 		// id, colRadius, colHeight
-		super(11, 12, 23);
+		super(11, 8, 23.5);
 	}
 
 	public void onTransform()

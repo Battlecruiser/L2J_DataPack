@@ -9,7 +9,7 @@ public class LavaGolem extends L2Transformation
 	public LavaGolem()
 	{
 		// id, colRadius, colHeight
-		super(322, 20, 48);
+		super(322, 45, 45);
 	}
 
 	public void onTransform()

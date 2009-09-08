@@ -9,7 +9,7 @@ public class ArcherCaptain extends L2Transformation
 	public ArcherCaptain()
 	{
 		// id, colRadius, colHeight
-		super(17, 14, 24);
+		super(17, 10, 23.5);
 	}
 
 	public void onTransform()

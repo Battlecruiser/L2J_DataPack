@@ -9,7 +9,7 @@ public class TinGolem extends L2Transformation
 	public TinGolem()
 	{
 		// id, colRadius, colHeight
-		super(116, 16, 19);
+		super(116, 13, 18.5);
 	}
 
 	public void onTransform()
