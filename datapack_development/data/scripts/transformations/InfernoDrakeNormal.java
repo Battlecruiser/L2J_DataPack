@@ -9,7 +9,7 @@ public class InfernoDrakeNormal extends L2Transformation
 	public InfernoDrakeNormal()
 	{
 		// id, colRadius, colHeight
-		super(214, 8, 22);
+		super(214, 15, 24);
 	}
 
 	public void onTransform()

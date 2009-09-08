@@ -9,7 +9,7 @@ public class Zombie extends L2Transformation
 	public Zombie()
 	{
 		// id, colRadius, colHeight
-		super(303, 11, 25);
+		super(303, 11, 24.6);
 	}
 
 	public void onTransform()

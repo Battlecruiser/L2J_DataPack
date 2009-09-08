@@ -9,7 +9,7 @@ public class DivineSummoner extends L2Transformation
 	public DivineSummoner()
 	{
 		// id, colRadius, colHeight
-		super(258, 10, 27);
+		super(258, 10, 25);
 	}
 
 	public void onTransform()

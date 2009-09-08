@@ -9,7 +9,7 @@ public class KamaelMercenary extends L2Transformation
 	public KamaelMercenary()
 	{
 		// id, colRadius, colHeight
-		super(15, 12, 25);
+		super(15, 13, 25);
 	}
 
 	public void onTransform()

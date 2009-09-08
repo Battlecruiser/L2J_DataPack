@@ -9,7 +9,7 @@ public class Yeti extends L2Transformation
 	public Yeti()
 	{
 		// id, colRadius, colHeight
-		super(102, 18, 32);
+		super(102, 15, 27.5);
 	}
 
 	public void onTransform()
