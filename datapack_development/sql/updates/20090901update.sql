@@ -1,0 +1,1 @@
+ALTER TABLE `custom_armorsets` ADD `skill` VARCHAR( 70 ) NOT NULL DEFAULT '0-0;' AFTER `feet`;
