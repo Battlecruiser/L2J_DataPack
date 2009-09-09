@@ -140,3 +140,10 @@ of this directory a little bit.
 326100002.xml -> Weaver Olf Kanore: S80 & S84 Cloak Reseal
 
 325460001.xml -> Asyatei - Soul Trader
+
+326150001.xml -> Maestro Ishuma - Craft a Dualsword
+326150002.xml -> Maestro Ishuma - Apply Dynasty, Icarus, Vesper Weapon SA
+326150003.xml -> Maestro Ishuma - Remove Dynasty, Icarus, Vesper Weapon SA
+326150004.xml -> Maestro Ishuma - Unseal Dynasty, Vesper Armor
+326150005.xml -> Maestro Ishuma - Unseal Dynasty, Vesper Accesories
+326150005.xml -> Maestro Ishuma - Upgrade Vesper Armor to Vesper Noble Armor
