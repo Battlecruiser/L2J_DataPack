@@ -37,7 +37,7 @@ ALTER TABLE `custom_etcitem` MODIFY `skill` varchar(70) NOT NULL default '0-0;';
 ALTER TABLE `custom_etcitem` MODIFY `html` varchar(5) NOT NULL default 'false';
  
 ALTER TABLE `custom_weapon` MODIFY `name` varchar(120) NOT NULL default '0';
- ALTER TABLE `custom_weapon` MODIFY`bodypart` varchar(15) NOT NULL default '';
+ALTER TABLE `custom_weapon` MODIFY`bodypart` varchar(15) NOT NULL default '';
 ALTER TABLE `custom_weapon` MODIFY `crystallizable` varchar(5) NOT NULL default 'false';
 ALTER TABLE `custom_weapon` MODIFY `weight` decimal(4,0) NOT NULL default '0';
 ALTER TABLE `custom_weapon` MODIFY `soulshots` decimal(2,0) NOT NULL default '0';
