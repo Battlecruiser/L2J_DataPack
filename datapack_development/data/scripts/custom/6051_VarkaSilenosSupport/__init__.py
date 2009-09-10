@@ -102,7 +102,7 @@ class Quest (JQuest) :
         else:
             htmltext = "31380-2.htm"
     elif npcId == Hagos :
-        if Alevel > 0 :
+        if Alevel >= 0 :
             htmltext = "31381-no.htm"
         elif Alevel == -1 :
             htmltext = "31381-1.htm"
@@ -139,3 +139,5 @@ for i in NPCS:
 QUEST.addTalkId(Udan)
 QUEST.addTalkId(Hagos)
 QUEST.addTalkId(Teranu)
+QUEST.addStartNpc(Hagos)
+QUEST.addStartNpc(Teranu)

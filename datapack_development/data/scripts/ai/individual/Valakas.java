@@ -137,13 +137,14 @@ public class Valakas extends L2AttackableAIScript
             L2GrandBossInstance valakas = (L2GrandBossInstance) addSpawn(VALAKAS,loc_x,loc_y,loc_z,heading,false,0);
             GrandBossManager.getInstance().addBoss(valakas);
             final L2Npc _valakas = valakas;
+            final int _status = status;
             ThreadPoolManager.getInstance().scheduleGeneral(new Runnable() {
 				public void run()
 				{
 					try
 		            {
 			            _valakas.setCurrentHpMp(hp,mp);
-						_valakas.setIsInvul(true);
+			            if (_status != FIGHTING) _valakas.setIsInvul(true);
 		                _valakas.setRunning();
 		            }
 		            catch (Throwable e)
@@ -161,7 +162,7 @@ public class Valakas extends L2AttackableAIScript
             else if (status == FIGHTING)
             {
                 // Start repeating timer to check for inactivity
-                startQuestTimer("valakas_despawn",60000, valakas, null, true);
+                startQuestTimer("1002",60000, valakas, null, true);
                 valakas.setIsInvul(false);
             }
         }
