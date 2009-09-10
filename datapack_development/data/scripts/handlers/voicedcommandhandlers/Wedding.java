@@ -404,7 +404,7 @@ public class Wedding implements IVoicedCommandHandler
 		
 		int teleportTimer = Config.L2JMOD_WEDDING_TELEPORT_DURATION * 1000;
 		
-		activeChar.sendMessage("After " + teleportTimer / 60000 + " min. you will be teleported to your fiance.");
+		activeChar.sendMessage("After " + teleportTimer / 60000 + " min. you will be teleported to your partner.");
 		activeChar.getInventory().reduceAdena("Wedding", Config.L2JMOD_WEDDING_TELEPORT_PRICE, activeChar, null);
 		
 		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);

@@ -139,3 +139,5 @@ for i in NPCS:
 QUEST.addTalkId(Asefa)
 QUEST.addTalkId(Kurfa)
 QUEST.addTalkId(Jaff)
+QUEST.addStartNpc(Kurfa)
+QUEST.addStartNpc(Jaff)
