@@ -860,10 +860,12 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="8275" levels="1" name="Release Seal on Agathion - pvp">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="3000"/>
+  <set name="target" val="TARGET_SELF"/> 
+  <set name="skillType" val="AGATHION"/> 
+  <set name="hitTime" val="3000"/> 
+  <set name="staticHitTime" val="true"/> 
+  <set name="operateType" val="OP_ACTIVE"/> 
+  <set name="npcId" val="16062"/>
 </skill>
 <skill id="8276" levels="1" name="Shield Branding">
   <set name="target" val="TARGET_NONE"/>

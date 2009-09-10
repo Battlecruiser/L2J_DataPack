@@ -186,25 +186,25 @@ class Quest (JQuest) :
           st.takeItems(REORINS_HAMMER,1)
           htmltext = "31002-08.htm"
           st.set("cond","5")
-        elif cond < 8 :     # waiting for Leorin's Mold
+        elif cond < 10 :     # waiting for Leorin's Mold
           htmltext = "31002-08b.htm"
-        elif cond == 8 :  # got Leorin's Mold!  Go to the next step (B Crystals)
+        elif cond == 10 :  # got Leorin's Mold!  Go to the next step (B Crystals)
           st.takeItems(REORINS_MOLD,1)
           htmltext = "31002-09.htm"
-          st.set("cond","9")
+          st.set("cond","11")
           qs = st.getPlayer().getQuestState("255_Tutorial")
           if qs:
              st.showQuestionMark(13)
              st.playSound("ItemSound.quest_tutorial")
         # waiting for 984 B Grade Crystals
-        elif cond == 9 and (st.getQuestItemsCount(CRYSTAL_B) < 984) :
+        elif cond == 11 and (st.getQuestItemsCount(CRYSTAL_B) < 984) :
           htmltext = "31002-09a.htm"
-        elif cond == 9 : # got the crystals
+        elif cond == 11 : # got the crystals
           st.takeItems(CRYSTAL_B,984)
           htmltext = "31002-10.htm"
-          st.set("cond","10")
+          st.set("cond","12")
         # all is ready.  Now give a menu to trade the B weapon for the player's choice of A Weapon.
-        elif cond == 10:
+        elif cond == 12:
           if st.getInt("bypass") :
             htmltext = "31002-AGradeList.htm"
           else :
@@ -244,7 +244,7 @@ class Quest (JQuest) :
           htmltext = "30833-03.htm"  # great! Here is your mold for Leorin
           st.takeItems(RED_PIPETTE_KNIFE,1)
           st.giveItems(REORINS_MOLD,1)
-          st.set("cond","8")
+          st.set("cond","10")
         #revisit after you've gotten the mold: What are you still doing here?
         if st.getInt("cond")>7 :
           htmltext = "30833-04.htm"  # Have you given the mold to Leorin, yet?
