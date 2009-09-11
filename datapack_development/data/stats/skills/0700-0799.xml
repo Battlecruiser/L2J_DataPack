@@ -745,7 +745,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
-    <effect name="Buff" time="30" val="0" stackOrder="1" stackType="pd_up_special">
+    <effect name="Buff" time="30" val="0" abnormal="invulnerable" stackOrder="1" stackType="pd_up_special">
       <add order="0x40" stat="mDef" val="5000"/>
     </effect>
   </for>
