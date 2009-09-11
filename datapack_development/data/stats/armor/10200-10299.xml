@@ -2,32 +2,32 @@
 <list>
 <item id="10207" name="Enhanced Striped Scale Shirt">
   <for>
-    <add val="26" order="0x10" stat="pDef"/>
-    <enchant val="0" order="0x0C" stat="pDef"/>
+    <add order="0x10" stat="pDef" val="26"/>
+    <enchant order="0x0C" stat="pDef" val="0"/>
   </for>
 </item>
 <item id="10208" name="Enhanced Striped Mithril Shirt">
   <for>
-    <add val="30" order="0x10" stat="pDef"/>
-    <add val="70" order="0x40" stat="maxMp"/>
-    <enchant val="0" order="0x0C" stat="pDef"/>
+    <add order="0x10" stat="pDef" val="30"/>
+    <add order="0x40" stat="maxMp" val="70"/>
+    <enchant order="0x0C" stat="pDef" val="0"/>
   </for>
 </item>
 <item id="10209" name="Enhanced Steel Bracelet">
   <for>
-    <set val="3" order="0x50" stat="talisman"/>
+    <set order="0x50" stat="talisman" val="3"/>
   </for>
 </item>
 <item id="10210" name="Enhanced Mithril Bracelet">
   <for>
-    <add val="120" order="0x40" stat="maxMp"/>
-    <set val="4" order="0x50" stat="talisman"/>
+    <add order="0x40" stat="maxMp" val="120"/>
+    <set order="0x50" stat="talisman" val="4"/>
   </for>
 </item>
 <item id="10211" name="Blessed Ring of Resurrection">
   <for>
-    <add val="30" order="0x10" stat="mDef"/>
-    <enchant val="0" order="0x0C" stat="mDef"/>
+    <add order="0x10" stat="mDef" val="30"/>
+    <enchant order="0x0C" stat="mDef" val="0"/>
   </for>
 </item>
 <item id="10214" name="Dynasty Leather Armor - Summoner">
@@ -35,14 +35,14 @@
     <player class_id_restriction="96, 104, 111"/>
   </cond>
   <for>
-    <add val="170" order="0x10" stat="pDef"/>
-    <enchant val="0" order="0x0C" stat="pDef"/>
+    <add order="0x10" stat="pDef" val="170"/>
+    <enchant order="0x0C" stat="pDef" val="0"/>
   </for>
 </item>
 <item id="10227" name="Dynasty Platinum Plate">
   <for>
-    <add val="220" order="0x10" stat="pDef"/>
-    <enchant val="0" order="0x0C" stat="pDef"/>
+    <add order="0x10" stat="pDef" val="220"/>
+    <enchant order="0x0C" stat="pDef" val="0"/>
   </for>
 </item>
 <item id="10228" name="Dynasty Platinum Plate - Shield Master">
@@ -50,8 +50,8 @@
     <player class_id_restriction="90, 91, 99, 106"/>
   </cond>
   <for>
-    <add val="220" order="0x10" stat="pDef"/>
-    <enchant val="0" order="0x0C" stat="pDef"/>
+    <add order="0x10" stat="pDef" val="220"/>
+    <enchant order="0x0C" stat="pDef" val="0"/>
   </for>
 </item>
 <item id="10229" name="Dynasty Platinum Plate - Weapon Master">
@@ -59,8 +59,8 @@
     <player class_id_restriction="89, 113, 117, 118"/>
   </cond>
   <for>
-    <add val="220" order="0x10" stat="pDef"/>
-    <enchant val="0" order="0x0C" stat="pDef"/>
+    <add order="0x10" stat="pDef" val="220"/>
+    <enchant order="0x0C" stat="pDef" val="0"/>
   </for>
 </item>
 <item id="10230" name="Dynasty Platinum Plate - Force Master">
@@ -68,8 +68,8 @@
     <player class_id_restriction="88, 114"/>
   </cond>
   <for>
-    <add val="220" order="0x10" stat="pDef"/>
-    <enchant val="0" order="0x0C" stat="pDef"/>
+    <add order="0x10" stat="pDef" val="220"/>
+    <enchant order="0x0C" stat="pDef" val="0"/>
   </for>
 </item>
 <item id="10231" name="Dynasty Platinum Plate - Bard">
@@ -77,14 +77,14 @@
     <player class_id_restriction="100, 107"/>
   </cond>
   <for>
-    <add val="220" order="0x10" stat="pDef"/>
-    <enchant val="0" order="0x0C" stat="pDef"/>
+    <add order="0x10" stat="pDef" val="220"/>
+    <enchant order="0x0C" stat="pDef" val="0"/>
   </for>
 </item>
 <item id="10232" name="Dynasty Jewel Leather Mail">
   <for>
-    <add val="166" order="0x10" stat="pDef"/>
-    <enchant val="0" order="0x0C" stat="pDef"/>
+    <add order="0x10" stat="pDef" val="166"/>
+    <enchant order="0x0C" stat="pDef" val="0"/>
   </for>
 </item>
 <item id="10233" name="Dynasty Jewel Leather Mail - Dagger Master">
@@ -92,8 +92,8 @@
     <player class_id_restriction="93, 101, 108"/>
   </cond>
   <for>
-    <add val="166" order="0x10" stat="pDef"/>
-    <enchant val="0" order="0x0C" stat="pDef"/>
+    <add order="0x10" stat="pDef" val="166"/>
+    <enchant order="0x0C" stat="pDef" val="0"/>
   </for>
 </item>
 <item id="10234" name="Dynasty Jewel Leather Mail - Bow Master">
@@ -101,15 +101,15 @@
     <player class_id_restriction="92, 102, 109, 134"/>
   </cond>
   <for>
-    <add val="166" order="0x10" stat="pDef"/>
-    <enchant val="0" order="0x0C" stat="pDef"/>
+    <add order="0x10" stat="pDef" val="166"/>
+    <enchant order="0x0C" stat="pDef" val="0"/>
   </for>
 </item>
 <item id="10235" name="Dynasty Silver Satin Tunic">
   <for>
-    <add val="110" order="0x10" stat="pDef"/>
-    <add val="592" order="0x40" stat="maxMp"/>
-    <enchant val="0" order="0x0C" stat="pDef"/>
+    <add order="0x10" stat="pDef" val="110"/>
+    <add order="0x40" stat="maxMp" val="592"/>
+    <enchant order="0x0C" stat="pDef" val="0"/>
   </for>
 </item>
 <item id="10236" name="Dynasty Silver Satin Tunic - Healer">
@@ -117,9 +117,9 @@
     <player class_id_restriction="97, 105, 112"/>
   </cond>
   <for>
-    <add val="110" order="0x10" stat="pDef"/>
-    <add val="592" order="0x40" stat="maxMp"/>
-    <enchant val="0" order="0x0C" stat="pDef"/>
+    <add order="0x10" stat="pDef" val="110"/>
+    <add order="0x40" stat="maxMp" val="592"/>
+    <enchant order="0x0C" stat="pDef" val="0"/>
   </for>
 </item>
 <item id="10237" name="Dynasty Silver Satin Tunic - Enchanter">
@@ -127,9 +127,9 @@
     <player class_id_restriction="98, 115, 116"/>
   </cond>
   <for>
-    <add val="110" order="0x10" stat="pDef"/>
-    <add val="592" order="0x40" stat="maxMp"/>
-    <enchant val="0" order="0x0C" stat="pDef"/>
+    <add order="0x10" stat="pDef" val="110"/>
+    <add order="0x40" stat="maxMp" val="592"/>
+    <enchant order="0x0C" stat="pDef" val="0"/>
   </for>
 </item>
 <item id="10238" name="Dynasty Silver Satin Tunic - Summoner">
@@ -137,9 +137,9 @@
     <player class_id_restriction="96, 104, 111"/>
   </cond>
   <for>
-    <add val="110" order="0x10" stat="pDef"/>
-    <add val="592" order="0x40" stat="maxMp"/>
-    <enchant val="0" order="0x0C" stat="pDef"/>
+    <add order="0x10" stat="pDef" val="110"/>
+    <add order="0x40" stat="maxMp" val="592"/>
+    <enchant order="0x0C" stat="pDef" val="0"/>
   </for>
 </item>
 <item id="10239" name="Dynasty Silver Satin Tunic - Human Wizard">
@@ -147,9 +147,9 @@
     <player class_id_restriction="94, 95, 103, 110"/>
   </cond>
   <for>
-    <add val="110" order="0x10" stat="pDef"/>
-    <add val="592" order="0x40" stat="maxMp"/>
-    <enchant val="0" order="0x0C" stat="pDef"/>
+    <add order="0x10" stat="pDef" val="110"/>
+    <add order="0x40" stat="maxMp" val="592"/>
+    <enchant order="0x0C" stat="pDef" val="0"/>
   </for>
 </item>
 <item id="10240" name="Bird Nest">

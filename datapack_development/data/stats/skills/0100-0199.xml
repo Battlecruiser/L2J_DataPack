@@ -290,21 +290,21 @@
   <set name="aggroPoints" val="#aggro"/>
   <enchant2 name="reuseDelay" val="#ench2reuseDelay"/>
   <for>
-    <effect name="ImmobileBuff" time="30" val="0" stackOrder="1" stackType="pd_up_special">
+    <effect name="ImmobileBuff" time="30" val="0" abnormal="invulnerable" stackOrder="1" stackType="pd_up_special">
       <add order="0x40" stat="pDef" val="#pDef"/>
       <add order="0x40" stat="mDef" val="#mDef"/>
       <mul order="0x30" stat="cancelVuln" val="0.2"/>
     </effect>
   </for>
   <enchant1for>
-    <effect name="ImmobileBuff" time="#ench1time" val="0" stackOrder="1" stackType="pd_up_special">
+    <effect name="ImmobileBuff" time="#ench1time" val="0" abnormal="invulnerable" stackOrder="1" stackType="pd_up_special">
       <add order="0x40" stat="pDef" val="3600"/>
       <add order="0x40" stat="mDef" val="2700"/>
       <mul order="0x30" stat="cancelVuln" val="0.2"/>
     </effect>
   </enchant1for>
   <enchant2for>
-    <effect name="ImmobileBuff" time="30" val="0" stackOrder="1" stackType="pd_up_special">
+    <effect name="ImmobileBuff" time="30" val="0" abnormal="invulnerable" stackOrder="1" stackType="pd_up_special">
       <add order="0x40" stat="pDef" val="3600"/>
       <add order="0x40" stat="mDef" val="2700"/>
       <mul order="0x30" stat="cancelVuln" val="0.2"/>

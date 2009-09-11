@@ -147,3 +147,8 @@ of this directory a little bit.
 326150004.xml -> Maestro Ishuma - Unseal Dynasty, Vesper Armor
 326150005.xml -> Maestro Ishuma - Unseal Dynasty, Vesper Accesories
 326150005.xml -> Maestro Ishuma - Upgrade Vesper Armor to Vesper Noble Armor
+
+323470001.xml -> Shadai - Cursed Soul Crystals
+323470002.xml -> Shadai - Shoulder Ornament and Forgotten Scrolls
+323470003.xml -> Shadai - Enhance Armor
+323470004.xml -> Shadai - Remove Enhancement
