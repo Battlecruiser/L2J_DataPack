@@ -3069,7 +3069,7 @@ INSERT INTO `weapon` VALUES
 (14124,'Vesper Buster - Mana Up','rhand','true',1520,1,1,'fine_steel','s84',317,10,'sword',8,0,0,0,0,379,0,234,-1,-1,146873000,7050,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3014-3;'),
 (14125,'Vesper Buster - Acumen','rhand','true',1520,1,1,'fine_steel','s84',317,10,'sword',8,0,0,0,0,379,0,234,-1,-1,146873000,7050,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3047-3;'),
 (14126,'Vesper Buster - Magic Hold','rhand','true',1520,1,1,'fine_steel','s84',317,10,'sword',8,0,0,0,0,379,0,234,-1,-1,146873000,7050,'true','true','true','true',0,0,3577,1,20,0,0,0,0,'3552-1;'), -- PvP Bonus Damage Skill Assigned
-(14127,'Vesper Shaper - Critical Damage','rhand','true',1520,1,1,'fine_steel','s84',346,5,'dagger',12,-3,0,0,0,433,0,176,-1,-1,146873000,7050,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3426-12;'),
+(14127,'Vesper Shaper - Critical Damage','rhand','true',1520,1,1,'fine_steel','s84',346,5,'dagger',12,-3,0,0,0,433,0,176,-1,-1,146873000,7050,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3572-2;'),
 (14128,'Vesper Shaper - HP Drain','rhand','true',1520,1,1,'fine_steel','s84',346,5,'dagger',12,-3,0,0,0,433,0,176,-1,-1,146873000,7050,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3568-1;'),
 (14129,'Vesper Shaper - Haste','rhand','true',1520,1,1,'fine_steel','s84',346,5,'dagger',12,-3,0,0,0,433,0,176,-1,-1,146873000,7050,'true','true','true','true',0,0,0,0,0,0,0,0,0,'8297-1;'),
 (14130,'Vesper Fighter - Focus','lrhand','true',1550,1,1,'fine_steel','s84',482,5,'dualfist',4,4,0,0,0,325,0,176,-1,-1,146873000,7050,'true','true','true','true',0,0,0,0,0,0,0,0,0,'8289-1;'),
@@ -3226,7 +3226,7 @@ INSERT INTO `weapon` VALUES
 (14484,'Vesper Buster {PvP} - Mana Up','rhand','true',1520,1,1,'fine_steel','s84',317,10,'sword',8,0,0,0,0,379,0,234,-1,-1,146873000,7050,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3014-3;'),
 (14485,'Vesper Buster {PvP} - Acumen','rhand','true',1520,1,1,'fine_steel','s84',317,10,'sword',8,0,0,0,0,379,0,234,-1,-1,146873000,7050,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3047-3;'),
 (14486,'Vesper Buster {PvP} - Magic Hold','rhand','true',1520,1,1,'fine_steel','s84',317,10,'sword',8,0,0,0,0,379,0,234,-1,-1,146873000,7050,'true','true','true','true',0,0,3577,1,20,0,0,0,0,'3552-1;'), -- PvP Bonus Damage Skill Assigned
-(14487,'Vesper Shaper {PvP} - Critical Damage','rhand','true',1520,1,1,'fine_steel','s84',346,5,'dagger',12,-3,0,0,0,433,0,176,-1,-1,146873000,7050,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3426-12;'),
+(14487,'Vesper Shaper {PvP} - Critical Damage','rhand','true',1520,1,1,'fine_steel','s84',346,5,'dagger',12,-3,0,0,0,433,0,176,-1,-1,146873000,7050,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3572-2;'),
 (14488,'Vesper Shaper {PvP} - HP Drain','rhand','true',1520,1,1,'fine_steel','s84',346,5,'dagger',12,-3,0,0,0,433,0,176,-1,-1,146873000,7050,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3568-1;'),
 (14489,'Vesper Shaper {PvP} - Haste','rhand','true',1520,1,1,'fine_steel','s84',346,5,'dagger',12,-3,0,0,0,433,0,176,-1,-1,146873000,7050,'true','true','true','true',0,0,0,0,0,0,0,0,0,'8297-1;'),
 (14490,'Vesper Fighter {PvP} - Focus','lrhand','true',1550,1,1,'fine_steel','s84',482,5,'dualfist',4,4,0,0,0,325,0,176,-1,-1,146873000,7050,'true','true','true','true',0,0,0,0,0,0,0,0,0,'8289-1;'),

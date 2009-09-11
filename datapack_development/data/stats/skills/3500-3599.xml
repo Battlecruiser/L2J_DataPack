@@ -1002,21 +1002,22 @@ Guessing...
   </for>
 </skill>
 <skill id="3572" levels="2" name="Special Ability: Critical Damage">
-<!-- s_opt_crt_damage75 -->
-<!--
-6590	Angel Slayer - Critical Damage	3572-1;	Increases P. Atk. by 265 on a critical attack. Increases damage inflicted during PvP.
--->
-<!--
-Guessing...
-10722	Angel Slayer - PvP - Critical Damage	3572-1;	
-11227	Angel Slayer - Concentration - Critical Damage	3572-1;	
--->
+  <!-- s_opt_crt_damage75 -->
+  <!--
+  6590  Angel Slayer - Critical Damage                  3572-1;	Increases P. Atk. by 265 on a critical attack. Increases damage inflicted during PvP.
+  10722 Angel Slayer - PvP - Critical Damage            3572-1;
+  11227 Angel Slayer - Concentration - Critical Damage  3572-1;
+  14127 Vesper Shaper - Critical Damage	                3572-2;
+  14487 Vesper Shaper {PvP} - Critical Damage           3572-2;
+  -->
+  <table name="#cAtkAdd"> 265 665 </table>
+  <table name="#magicLvl"> 75 84 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
-  <set name="magicLvl" val="75"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <for>
-    <add order="0x40" stat="cAtkAdd" val="265"/>
+    <add order="0x40" stat="cAtkAdd" val="#cAtkAdd"/>
     <mul order="0x30" stat="pvpPhysDmg" val="1.05"/>
     <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/>
     <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/>
