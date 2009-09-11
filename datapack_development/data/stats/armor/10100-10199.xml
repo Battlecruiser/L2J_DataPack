@@ -7,8 +7,8 @@
     </not>
   </cond>
   <for>
-    <add val="15" order="0x10" stat="pDef"/>
-    <enchant val="0" order="0x0C" stat="pDef"/>
+    <add order="0x10" stat="pDef" val="15"/>
+    <enchant order="0x0C" stat="pDef" val="0"/>
   </for>
 </item>
 <item id="10120" name="Sealed Dynasty Sigil">
@@ -18,8 +18,8 @@
     </not>
   </cond>
   <for>
-    <add val="15" order="0x10" stat="pDef"/>
-    <enchant val="0" order="0x0C" stat="pDef"/>
+    <add order="0x10" stat="pDef" val="15"/>
+    <enchant order="0x0C" stat="pDef" val="0"/>
   </for>
 </item>
 <item id="10121" name="Sealed Arcana Sigil">
@@ -29,26 +29,26 @@
     </not>
   </cond>
   <for>
-    <add val="13" order="0x10" stat="pDef"/>
-    <enchant val="0" order="0x0C" stat="pDef"/>
+    <add order="0x10" stat="pDef" val="13"/>
+    <enchant order="0x0C" stat="pDef" val="0"/>
   </for>
 </item>
 <item id="10122" name="Red Crescent Earring">
   <for>
-    <add val="24" order="0x10" stat="mDef"/>
-    <enchant val="0" order="0x0C" stat="mDef"/>
+    <add order="0x10" stat="mDef" val="24"/>
+    <enchant order="0x0C" stat="mDef" val="0"/>
   </for>
 </item>
 <item id="10123" name="Necklace of Devotion">
   <for>
-    <add val="32" order="0x10" stat="mDef"/>
-    <enchant val="0" order="0x0C" stat="mDef"/>
+    <add order="0x10" stat="mDef" val="32"/>
+    <enchant order="0x0C" stat="mDef" val="0"/>
   </for>
 </item>
 <item id="10124" name="Ring of Devotion">
   <for>
-    <add val="16" order="0x10" stat="mDef"/>
-    <enchant val="0" order="0x0C" stat="mDef"/>
+    <add order="0x10" stat="mDef" val="16"/>
+    <enchant order="0x0C" stat="mDef" val="0"/>
   </for>
 </item>
 <item id="10126" name="Dynasty Leather Armor - Force Master">
@@ -56,9 +56,9 @@
     <player class_id_restriction="88, 114"/>
   </cond>
   <for>
-    <add val="170" order="0x10" stat="pDef"/>
-    <enchant val="0" order="0x0C" stat="pDef"/>
-    <enchant val="0" order="0x40" stat="maxHp"/>
+    <add order="0x10" stat="pDef" val="170"/>
+    <enchant order="0x0C" stat="pDef" val="0"/>
+    <enchant order="0x40" stat="maxHp" val="0"/>
   </for>
 </item>
 <item id="10127" name="Dynasty Leather Armor - Weapon Master">
@@ -66,9 +66,9 @@
     <player class_id_restriction="89, 113, 117, 118, 131, 132, 133"/>
   </cond>
   <for>
-    <add val="170" order="0x10" stat="pDef"/>
-    <enchant val="0" order="0x0C" stat="pDef"/>
-    <enchant val="0" order="0x40" stat="maxHp"/>
+    <add order="0x10" stat="pDef" val="170"/>
+    <enchant order="0x0C" stat="pDef" val="0"/>
+    <enchant order="0x40" stat="maxHp" val="0"/>
   </for>
 </item>
 <item id="10139" name="Agathion Bracelet">
@@ -76,8 +76,8 @@
 </item>
 <item id="10140" name="Blessed Ring of Escape">
   <for>
-    <add val="49" order="0x10" stat="mDef"/>
-    <enchant val="0" order="0x0C" stat="mDef"/>
+    <add order="0x10" stat="mDef" val="49"/>
+    <enchant order="0x0C" stat="mDef" val="0"/>
   </for>
 </item>
 <item id="10141" name="Grey Talisman - Yeti Transform">
@@ -94,9 +94,9 @@
     <player class_id_restriction="98, 115, 116, 136"/>
   </cond>
   <for>
-    <add val="170" order="0x10" stat="pDef"/>
-    <enchant val="0" order="0x0C" stat="pDef"/>
-    <enchant val="0" order="0x40" stat="maxHp"/>
+    <add order="0x10" stat="pDef" val="170"/>
+    <enchant order="0x0C" stat="pDef" val="0"/>
+    <enchant order="0x40" stat="maxHp" val="0"/>
   </for>
 </item>
 <item id="10169" name="Enchanter Circlet (Kamael only)">
@@ -107,10 +107,10 @@
 </item>
 <item id="10170" name="Baylor's Earring">
   <for>
-    <add val="71" order="0x10" stat="mDef"/>
-    <add val="31" order="0x40" stat="maxMp"/>
+    <add order="0x10" stat="mDef" val="71"/>
+    <add order="0x40" stat="maxMp" val="31"/>
     <add order="0x40" stat="darkRes" val="30"/> <!-- Dark Resistance +30% -->
-    <enchant val="0" order="0x0C" stat="mDef"/>
+    <enchant order="0x0C" stat="mDef" val="0"/>
   </for>
 </item>
 <item id="10175" name="Gobblin Circlet (Event)">
