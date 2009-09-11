@@ -39,6 +39,7 @@ class Quest (JQuest) :
        if st.getQuestItemsCount(7267) > 0 :
           st.takeItems(7267,1)
           player.teleToLocation(183813,-115157,-3303)
+          st.set("allowEnter","1")
           return
        else :
           htmltext = "31540-06.htm"
@@ -82,7 +83,8 @@ class Quest (JQuest) :
             if status == 0 or status == 1 : #If entrance to see Valakas is unlocked (he is Dormant or Waiting)
                 if self.count >= 200 :
                    htmltext = "31385-03.htm"
-                else :
+                elif st.getInt("allowEnter") == 1:
+                   st.unset("allowEnter")
                    zone = GrandBossManager.getInstance().getZone(212852,-114842,-1632)
                    if zone :
                       zone.allowPlayerEntry(player,30)
@@ -95,6 +97,8 @@ class Quest (JQuest) :
                       self.valakasAI.startQuestTimer("1001",1800000, valakas, None)
                       GrandBossManager.getInstance().setBossStatus(29028,1)
                    return
+                else: #player cheated, wasn't ported via npc Klein
+                  htmltext = "31385-04.htm"   
             elif status == 2 :
                 htmltext = "31385-02.htm"
             else :
