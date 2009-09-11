@@ -2240,9 +2240,7 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
     <add order="0x40" stat="accCombat" val="3">
-      <cond>
-        <game time="night"/>
-      </cond>
+      <game night="true"/>
     </add>
   </for>
 </skill>
