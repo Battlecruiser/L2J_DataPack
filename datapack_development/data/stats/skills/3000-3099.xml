@@ -725,21 +725,15 @@ Guessing...
 9294	Admiral's Estoc - Critical Damage	3426-1;	3023-4;	Kamael exclusive weapon: Samurai Long Sword. Increases P. Atk. by 231 on a critical attack. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members.
 9310	Innominate Victory - Critical Damage	ancient	3023-5;	Kamael Exclusive Weapon: Great Sword. Increases P. Atk. by 247 on a critical attack.
 9318	Colichemarde - Critical Damage	3426-1;	3023-6;	Kamael exclusive weapon: Sword of Damascus Conversion. Increases P. Atk. by 262 on a critical attack. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members.
-14127	Vesper Shaper - Critical Damage	3426-12;	
-14487	Vesper Shaper {PvP} - Critical Damage	3426-12;	
 -->
-  <table name="#cAtkAdd"> 174.78 194.1 213.12 231.29 247.98 262.57 0 0 0 0 0 665 </table> <!-- Guessing Level 7/8/9/10/11/12 -->
-  <table name="#pvpBonus"> 1 1 1 1 1 1 1 1 1 1 1 1.05 </table> <!-- Guessing Level 7/8/9/10/11/12 -->
-  <table name="#magicLvl"> 46 49 52 55 58 61 1 1 1 1 1 84 </table> <!-- Guessing Level 7/8/9/10/11/12 -->
+  <table name="#cAtkAdd"> 174.78 194.1 213.12 231.29 247.98 262.57 </table>
+  <table name="#magicLvl"> 46 49 52 55 58 61 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="magicLvl" val="#magicLvl"/>
   <for>
     <add order="0x40" stat="cAtkAdd" val="#cAtkAdd"/>
-    <mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus"/>
-    <mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus"/>
-    <mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus"/>
   </for>
 </skill>
 <skill id="3024" levels="6" name="Special Ability: Critical Poison">
