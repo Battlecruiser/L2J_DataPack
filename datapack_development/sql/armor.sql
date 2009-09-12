@@ -2551,3 +2551,6 @@ UPDATE `armor` SET time = "4320" WHERE (name LIKE '%3 Day%') or (name LIKE '%3-D
 UPDATE `armor` SET time = "10080" WHERE (name LIKE '%7 Day%') or (name LIKE '%7-Day%');
 UPDATE `armor` SET time = "21600" WHERE (name LIKE '%15 Day%') or (name LIKE '%15-Day%');
 UPDATE `armor` SET time = "43200" WHERE (name LIKE '%30 Day%') or (name LIKE '%30-Day%');
+
+-- PvP Armors can not be traded, or dropped, or shipped, or sold. Just like augmented items but with more restrictions.
+UPDATE `armor` SET sellable = "false", dropable = "false", tradeable = "false" WHERE name LIKE '%{PvP}%';
