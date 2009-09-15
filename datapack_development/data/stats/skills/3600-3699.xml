@@ -738,74 +738,67 @@ Guessing...
   </for>
 </skill>
 <skill id="3650" levels="1" name="PvP Weapon - CP Drain">
-  <!-- Has a chance to recover CP when attacking. -->
+  <set name="activationChance" val="15"/>
+  <set name="chanceType" val="ON_HIT"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="triggeredId" val="5681"/>
   <set name="triggeredLevel" val="1"/>
-  <set name="activationChance" val="1"/> <!-- Guessing -->
-  <set name="chanceType" val="ON_HIT"/>
 </skill>
 <skill id="3651" levels="1" name="PvP Weapon - Cancel">
-  <!-- Has a chance to cancel 1 or more of the opponent's enhanced conditions when attacking. -->
+  <set name="activationChance" val="15"/>
+  <set name="chanceType" val="ON_HIT"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="triggeredId" val="5682"/>
   <set name="triggeredLevel" val="1"/>
-  <set name="activationChance" val="1"/> <!-- Guessing -->
-  <set name="chanceType" val="ON_HIT"/>
 </skill>
 <skill id="3652" levels="1" name="PvP Weapon - Ignore Shield Defense">
-  <!-- Has a chance to decrease the opponent's shield defense when attacking. -->
+  <set name="activationChance" val="15"/>
+  <set name="chanceType" val="ON_HIT"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="triggeredId" val="5683"/>
   <set name="triggeredLevel" val="1"/>
-  <set name="activationChance" val="1"/> <!-- Guessing -->
-  <set name="chanceType" val="ON_HIT"/>
 </skill>
 <skill id="3653" levels="1" name="PvP Weapon - Attack Chance">
-  <!-- Has a chance to inflict additional damage when attacking. -->
+  <set name="activationChance" val="5"/>
+  <set name="chanceType" val="ON_HIT"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="triggeredId" val="5684"/>
   <set name="triggeredLevel" val="1"/>
-  <set name="activationChance" val="1"/> <!-- Guessing -->
-  <set name="chanceType" val="ON_HIT"/>
 </skill>
 <skill id="3654" levels="1" name="PvP Weapon - Casting">
-  <!-- Increases Casting Spd. when being attacked. -->
+  <set name="activationChance" val="15"/>
+  <set name="chanceType" val="ON_MAGIC_OFFENSIVE"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="triggeredId" val="5685"/>
   <set name="triggeredLevel" val="1"/>
-  <set name="activationChance" val="1"/> <!-- Guessing -->
-  <set name="chanceType" val="ON_ATTACKED"/>
 </skill>
 <skill id="3655" levels="1" name="PvP Weapon - Rapid Fire">
-  <!-- Has a chance to increase bow/crossbow attack speed when attacking. -->
+  <set name="activationChance" val="15"/>
+  <set name="chanceType" val="ON_HIT"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <set name="triggeredId" val="5686"/>
   <set name="triggeredLevel" val="1"/>
-  <set name="activationChance" val="1"/> <!-- Guessing -->
-  <set name="chanceType" val="ON_HIT"/>
 </skill>
 <skill id="3656" levels="1" name="PvP Weapon - Decrease Range">
-  <!-- Has a chance to decrease bow/crossbow range when attacking. -->
+  <set name="activationChance" val="15"/>
+  <set name="chanceType" val="ON_HIT"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
-  <set name="triggeredId" val="5687"/>
+  <set name="triggeredId" val="5683"/>
   <set name="triggeredLevel" val="1"/>
-  <set name="activationChance" val="1"/> <!-- Guessing -->
-  <set name="chanceType" val="ON_HIT"/>
 </skill>
 <skill id="3657" levels="1" name="PvP Weapon - Decrease Resist">
   <!-- Has a chance to decrease attribute resistance when attacking. -->
