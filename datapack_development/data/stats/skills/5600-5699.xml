@@ -807,46 +807,91 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="5681" levels="1" name="PvP Weapon - CP Drain">
-<!-- Triggered from 3650 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <!-- Needs to be verified -->
+  <set name="absorbAbs" val="200"/> <!-- TODO: possibly will requiere Core-Side support for absorbCpAbs -->
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
+  <set name="hitTime" val="100"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="200"/>
+  <set name="skillType" val="CPDAM"/>
+  <set name="target" val="TARGET_ONE"/>
 </skill>
 <skill id="5682" levels="1" name="PvP Weapon - Cancel">
-<!-- Triggered from 3651 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
+  <set name="hitTime" val="100"/>
+  <set name="isDebuff" val="true"/>
+  <set name="maxNegated" val="2"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="25"/> <!-- Base Land Rate -->
+  <set name="skillType" val="CANCEL"/>
+  <set name="target" val="TARGET_ONE"/>
 </skill>
 <skill id="5683" levels="1" name="PvP Weapon - Ignore Shield Defense">
-<!-- Triggered from 3652 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
+  <set name="hitTime" val="100"/>
+  <set name="isDebuff" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="100"/> <!-- Base Land Rate -->
+  <set name="skillType" val="DEBUFF"/>
+  <set name="target" val="TARGET_ONE"/>
+  <for>
+    <effect name="Debuff" time="15" val="0">
+      <mul order="0x30" stat="sDef" val="0"/>
+    </effect>
+  </for>
 </skill>
 <skill id="5684" levels="1" name="PvP Weapon - Attack Chance">
-<!-- Triggered from 3653 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
+  <set name="hitTime" val="100"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="100"/> <!-- Guess -->
+  <set name="skillType" val="PDAM"/>
+  <set name="target" val="TARGET_ONE"/>
 </skill>
 <skill id="5685" levels="1" name="PvP Weapon - Casting">
-<!-- Triggered from 3654 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="100"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <effect name="Buff" time="15" val="0">
+      <add order="0x40" stat="mAtkSpd" val="100"/>
+    </effect>
+  </for>
 </skill>
 <skill id="5686" levels="1" name="PvP Weapon - Rapid Fire">
-<!-- Triggered from 3655 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="hitTime" val="100"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <effect name="Buff" time="15" val="0">
+      <add order="0x40" stat="pAtkSpd" val="100">
+        <using kind="Bow,Crossbow"/>
+      </add>
+    </effect>
+  </for>
 </skill>
 <skill id="5687" levels="1" name="PvP Weapon - Decrease Range">
-<!-- Triggered from 3656 -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="castRange" val="600"/>
+  <set name="effectRange" val="1100"/>
+  <set name="hitTime" val="100"/>
+  <set name="isDebuff" val="true"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="100"/> <!-- Base Land Rate -->
+  <set name="skillType" val="DEBUFF"/>
+  <set name="target" val="TARGET_ONE"/>
+  <for>
+    <effect name="Debuff" time="15" val="0">
+      <mul order="0x30" stat="pAtkRange" val="0.8">
+        <using kind="Bow,Crossbow"/>
+      </mul>
+    </effect>
+  </for>
 </skill>
 <skill id="5688" levels="1" name="PvP Weapon - Decrease Resist">
 <!-- Triggered from 3657 -->
