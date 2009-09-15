@@ -18,14 +18,12 @@ import net.sf.l2j.gameserver.handler.IItemHandler;
 import net.sf.l2j.gameserver.model.L2ItemInstance;
 import net.sf.l2j.gameserver.model.actor.L2Playable;
 import net.sf.l2j.gameserver.model.actor.L2Summon;
-import net.sf.l2j.gameserver.model.actor.instance.L2BabyPetInstance;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.model.actor.instance.L2PetInstance;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.ExAutoSoulShot;
 import net.sf.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
-import net.sf.l2j.gameserver.templates.item.L2Weapon;
 import net.sf.l2j.gameserver.util.Broadcast;
 
 /**
@@ -68,37 +66,36 @@ public class BeastSpiritShot implements IItemHandler
 		
 		int itemId = item.getItemId();
 		boolean isBlessed = (itemId == 6647 || itemId == 20334);
-		int shotConsumption = 1;
+		int shotConsumption = 1; // TODO: this should be readed from npc.sql(summons)/pets_stats.sql tables
 		
 		L2ItemInstance weaponInst = null;
-		L2Weapon weaponItem = null;
 		
-		if ((activePet instanceof L2PetInstance) && !(activePet instanceof L2BabyPetInstance))
+		if (activePet instanceof L2PetInstance)
+			weaponInst = ((L2PetInstance) activePet).getActiveWeaponInstance();	
+		
+		if (weaponInst == null)
 		{
-			weaponInst = ((L2PetInstance) activePet).getActiveWeaponInstance();
-			weaponItem = ((L2PetInstance) activePet).getActiveWeaponItem();
-			
-			if (weaponInst == null)
-			{
-				activeOwner.sendPacket(new SystemMessage(SystemMessageId.CANNOT_USE_SPIRITSHOTS));
+			if (activePet.getChargedSpiritShot() != L2ItemInstance.CHARGED_NONE)
 				return;
-			}
 			
+			if (isBlessed)
+				activePet.setChargedSpiritShot(L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT);
+			else
+				activePet.setChargedSpiritShot(L2ItemInstance.CHARGED_SPIRITSHOT);
+		}
+		else
+		{
 			if (weaponInst.getChargedSpiritshot() != L2ItemInstance.CHARGED_NONE)
 			{
 				// SpiritShots are already active.
 				return;
 			}
-			
 			long shotCount = item.getCount();
-			shotConsumption = weaponItem.getSpiritShotCount();
-			
 			if (shotConsumption == 0)
 			{
 				activeOwner.sendPacket(new SystemMessage(SystemMessageId.CANNOT_USE_SPIRITSHOTS));
 				return;
 			}
-			
 			if (!(shotCount > shotConsumption))
 			{
 				// Not enough SpiritShots to use.
@@ -110,16 +107,6 @@ public class BeastSpiritShot implements IItemHandler
 				weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT);
 			else
 				weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_SPIRITSHOT);
-		}
-		else
-		{
-			if (activePet.getChargedSpiritShot() != L2ItemInstance.CHARGED_NONE)
-				return;
-			
-			if (isBlessed)
-				activePet.setChargedSpiritShot(L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT);
-			else
-				activePet.setChargedSpiritShot(L2ItemInstance.CHARGED_SPIRITSHOT);
 		}
 		
 		if (!activeOwner.destroyItemWithoutTrace("Consume", item.getObjectId(), shotConsumption, null, false))
