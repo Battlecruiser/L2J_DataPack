@@ -395,9 +395,15 @@
   </for>
 </skill>
 <skill id="5559" levels="1" name="Fighter's Will">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="magicLvl" val="81"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="skillType" val="BUFF"/>
+  <set name="target" val="TARGET_SELF"/>
+  <for>
+    <effect name="Buff" time="10" val="0">
+      <basemul order="0x30" stat="rCrit" val="0.2"/>
+    </effect>
+  </for>
 </skill>
 <skill id="5560" levels="1" name="Archer's Will">
   <set name="target" val="TARGET_NONE"/>
