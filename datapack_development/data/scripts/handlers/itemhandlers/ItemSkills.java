@@ -130,7 +130,8 @@ public class ItemSkills implements IItemHandler
 								else
 								{
 									playable.stopMove(null);
-									playable.doCast(itemSkill);
+									if (!playable.isCastingNow())
+										playable.doCast(itemSkill);
 								}
 								if (itemSkill.getReuseDelay() > 0)
 									activeChar.addTimeStamp(skillId, itemSkill.getReuseDelay());

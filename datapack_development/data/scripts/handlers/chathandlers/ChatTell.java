@@ -43,7 +43,7 @@ public class ChatTell implements IChatHandler
 	{
 		if (activeChar.isChatBanned())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED));
+			activeChar.sendPacket(new SystemMessage(SystemMessageId.THE_PERSON_IS_IN_MESSAGE_REFUSAL_MODE));
 			return;
 		}
 		
@@ -71,7 +71,7 @@ public class ChatTell implements IChatHandler
 			}
 			if (receiver.isChatBanned())
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_CHAT_BANNED));
+				activeChar.sendPacket(new SystemMessage(SystemMessageId.THE_PERSON_IS_IN_MESSAGE_REFUSAL_MODE));
 				return;
 			}
 			if (receiver.getClient().isDetached())
@@ -85,17 +85,10 @@ public class ChatTell implements IChatHandler
 				activeChar.sendPacket(new CreatureSay(activeChar.getObjectId(), type, "->" + receiver.getName(), text));
 			}
 			else
-			{
 				activeChar.sendPacket(new SystemMessage(SystemMessageId.THE_PERSON_IS_IN_MESSAGE_REFUSAL_MODE));
-			}
 		}
 		else
-		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_NOT_ONLINE);
-			sm.addString(target);
-			activeChar.sendPacket(sm);
-			sm = null;
-		}
+			activeChar.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME));
 	}
 	
 	/**

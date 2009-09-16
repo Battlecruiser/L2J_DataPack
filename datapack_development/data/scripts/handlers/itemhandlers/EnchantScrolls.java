@@ -18,13 +18,10 @@ import net.sf.l2j.gameserver.handler.IItemHandler;
 import net.sf.l2j.gameserver.model.L2ItemInstance;
 import net.sf.l2j.gameserver.model.actor.L2Playable;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.ChooseInventoryItem;
-import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 
 public class EnchantScrolls implements IItemHandler
 {
-	
 	/**
 	 * 
 	 * @see net.sf.l2j.gameserver.handler.IItemHandler#useItem(net.sf.l2j.gameserver.model.actor.L2Playable, net.sf.l2j.gameserver.model.L2ItemInstance)
@@ -33,12 +30,12 @@ public class EnchantScrolls implements IItemHandler
 	{
 		if (!(playable instanceof L2PcInstance))
 			return;
+
 		L2PcInstance activeChar = (L2PcInstance) playable;
 		if (activeChar.isCastingNow())
 			return;
-		
+
 		activeChar.setActiveEnchantItem(item);
-		activeChar.sendPacket(new SystemMessage(SystemMessageId.SELECT_ITEM_TO_ENCHANT));
 		activeChar.sendPacket(new ChooseInventoryItem(item.getItemId()));
 	}
 }

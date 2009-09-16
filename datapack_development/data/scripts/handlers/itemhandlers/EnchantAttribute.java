@@ -18,9 +18,7 @@ import net.sf.l2j.gameserver.handler.IItemHandler;
 import net.sf.l2j.gameserver.model.L2ItemInstance;
 import net.sf.l2j.gameserver.model.actor.L2Playable;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.ExChooseInventoryAttributeItem;
-import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 
 public class EnchantAttribute implements IItemHandler
 {
@@ -31,11 +29,8 @@ public class EnchantAttribute implements IItemHandler
 
 		L2PcInstance activeChar = (L2PcInstance) playable;
 		if (activeChar.isCastingNow())
-		{
 			return;
-		}
 
-		activeChar.sendPacket(new SystemMessage(SystemMessageId.SELECT_ITEM_TO_ADD_ELEMENTAL_POWER));
 		activeChar.setActiveEnchantAttrItem(item);
 		activeChar.sendPacket(new ExChooseInventoryAttributeItem(item.getItemId()));
 	}
