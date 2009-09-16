@@ -25,7 +25,6 @@ import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
  */
 public class InstanceZone implements IUserCommandHandler
 {
-	
 	private static final int[] COMMAND_IDS =
 	{
 		114
@@ -36,7 +35,6 @@ public class InstanceZone implements IUserCommandHandler
 	 */
 	public int[] getUserCommandList()
 	{
-		
 		return COMMAND_IDS;
 	}
 	

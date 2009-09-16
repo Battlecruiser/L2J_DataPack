@@ -19,10 +19,6 @@ import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
 
-/**
- *
- *
- */
 public class Time implements IUserCommandHandler
 {
 	private static final int[] COMMAND_IDS =
