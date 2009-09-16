@@ -53,7 +53,7 @@ public class TakeCastle implements ISkillHandler
 			return;
 		
 		Castle castle = CastleManager.getInstance().getCastle(player);
-		if (castle == null || !checkIfOkToCastSealOfRule(player, castle, true))
+		if (castle == null || !checkIfOkToCastSealOfRule(player, castle))
 			return;
 		
 		try
@@ -76,24 +76,13 @@ public class TakeCastle implements ISkillHandler
 	}
 	
 	/**
-	 * Return true if character clan place a flag<BR><BR>
-	 *
-	 * @param activeChar The L2Character of the character placing the flag
-	 *
-	 */
-	public static boolean checkIfOkToCastSealOfRule(L2Character activeChar, boolean isCheckOnly)
-	{
-		return checkIfOkToCastSealOfRule(activeChar, CastleManager.getInstance().getCastle(activeChar), isCheckOnly);
-	}
-	
-	/**
 	 * 
 	 * @param activeChar
 	 * @param castle
 	 * @param isCheckOnly
 	 * @return
 	 */
-	public static boolean checkIfOkToCastSealOfRule(L2Character activeChar, Castle castle, boolean isCheckOnly)
+	public static boolean checkIfOkToCastSealOfRule(L2Character activeChar, Castle castle)
 	{
 		if (!(activeChar instanceof L2PcInstance))
 			return false;
@@ -113,16 +102,12 @@ public class TakeCastle implements ISkillHandler
 			text = "You must be an attacker to use this skill";
 		else
 		{
-			if (!isCheckOnly)
-			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.OPPONENT_STARTED_ENGRAVING);
-				castle.getSiege().announceToPlayer(sm, false);
-			}
+			SystemMessage sm = new SystemMessage(SystemMessageId.OPPONENT_STARTED_ENGRAVING);
+			castle.getSiege().announceToPlayer(sm, false);
 			return true;
 		}
 		
-		if (!isCheckOnly)
-			player.sendMessage(text);
+		player.sendMessage(text);
 		return false;
 	}
 }
