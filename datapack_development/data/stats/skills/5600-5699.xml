@@ -859,7 +859,7 @@
   <set name="target" val="TARGET_SELF"/>
   <for>
     <effect name="Buff" time="15" val="0">
-      <add order="0x40" stat="mAtkSpd" val="100"/>
+      <mul order="0x30" stat="mAtkSpd" val="1.15"/>
     </effect>
   </for>
 </skill>
