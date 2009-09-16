@@ -165,7 +165,6 @@ public class MasterHandler
 		SkillHandler.getInstance().registerSkillHandler(new BalanceLife());
 		SkillHandler.getInstance().registerSkillHandler(new Charge());
 		SkillHandler.getInstance().registerSkillHandler(new Continuous());
-		SkillHandler.getInstance().registerSkillHandler(new ChangeFace());
 		SkillHandler.getInstance().registerSkillHandler(new Detection());
 		SkillHandler.getInstance().registerSkillHandler(new Resurrect());
 		SkillHandler.getInstance().registerSkillHandler(new ShiftTarget());
