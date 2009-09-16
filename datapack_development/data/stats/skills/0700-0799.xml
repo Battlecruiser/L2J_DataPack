@@ -705,10 +705,11 @@
 <skill id="758" levels="1" name="Fighter's Will">
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
+  <set name="magicLvl" val="81"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="triggeredId" val="5559"/>
   <set name="triggeredLevel" val="1"/>
-  <set name="activationChance" val="5"/> <!-- guessed -->
+  <set name="activationChance" val="10"/> <!-- guessed -->
   <set name="chanceType" val="ON_HIT"/>
   <for>
     <add order="0x40" stat="pAtk" val="100">
