@@ -88,7 +88,10 @@
       <player race="Kamael"/>
     </not>
   </cond>
-  <for/>
+  <for>
+    <sub order="0x10" stat="rEvas" val="8"/>
+    <enchant order="0x0C" stat="pDef" val="0"/>
+  </for>
 </item>
 <item id="13543" name="Agathion Summon Bracelet - Collection">
   <for/>

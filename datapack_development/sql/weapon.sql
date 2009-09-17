@@ -1516,7 +1516,7 @@ INSERT INTO `weapon` VALUES
 (9372,'Sarunga','rhand','true',1600,1,1,'wood','s',356,10,'crossbow',10,-1.00000,0,0,0,303,0,132,-1,-1,42759400,2052,'true','true','true','true',0,0,0,0,0,0,0,0,7575,'0-0;'),
 (9373,'Sarunga - Cheap Shot','rhand','true',1600,1,1,'wood','s',356,10,'crossbow',10,-1.00000,0,0,0,303,0,132,-1,-1,42759400,2052,'true','true','true','true',0,0,0,0,0,0,0,0,7576,'3552-1;'), -- PvP Bonus Damage Skill Assigned
 (9374,'Sarunga - Focus','rhand','true',1600,1,1,'wood','s',356,10,'crossbow',10,-1.00000,0,0,0,303,0,132,-1,-1,42759400,2052,'true','true','true','true',0,0,0,0,0,0,0,0,7577,'3567-1;'),
-(9375,'Sarnga - Critical Slow','rhand','true',1600,1,1,'wood','s',356,10,'crossbow',10,-1.00000,0,0,0,303,0,132,-1,-1,42759400,2052,'true','true','true','true',0,0,0,0,0,3574,1,16,7578,'3552-1;'), -- PvP Bonus Damage Skill Assigned
+(9375,'Sarunga - Critical Slow','rhand','true',1600,1,1,'wood','s',356,10,'crossbow',10,-1.00000,0,0,0,303,0,132,-1,-1,42759400,2052,'true','true','true','true',0,0,0,0,0,3574,1,16,7578,'3552-1;'), -- PvP Bonus Damage Skill Assigned
 (9376,'Dynasty Rapier','rhand','true',1280,1,1,'wood','s80',302,40,'rapier',10,-1.00000,0,0,0,406,0,151,-1,-1,74946000,3597,'true','true','true','true',3426,1,0,0,0,0,0,0,9442,'0-0;'),
 (9377,'Dynasty Rapier - Focus','rhand','true',1280,1,1,'wood','s80',302,40,'rapier',10,-1.00000,0,0,0,406,0,151,-1,-1,74946000,3597,'true','true','true','true',3426,1,0,0,0,0,0,0,9854,'3566-2;'),
 (9378,'Dynasty Rapier - Health','rhand','true',1280,1,1,'wood','s80',302,40,'rapier',10,-1.00000,0,0,0,406,0,151,-1,-1,74946000,3597,'true','true','true','true',3426,1,0,0,0,0,0,0,9855,'3013-5;'),
