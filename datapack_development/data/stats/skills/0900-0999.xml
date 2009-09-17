@@ -287,15 +287,20 @@
   </for>
 </skill>
 <skill id="916" levels="4" name="Shield Deflect Magic">
+  <set name="weaponsAllowed" val="2"/> <!-- Shield -->
+  <table name="#mpConsume"> 28 29 29 29 </table>
+  <table name="#magicLvl"> 60 64 68 72 </table>
+  <table name="#vengeanceMdam"> 35 40 45 50 </table> 
+  <set name="mpConsume" val="#mpConsume"/>
+  <set name="magicLvl" val="#magicLvl"/>
   <set name="hitTime" val="500"/>
-  <set name="mpConsume" val="28"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="reuseDelay" val="45000"/>
   <set name="skillType" val="BUFF"/>
   <set name="target" val="TARGET_SELF"/>
   <for>
     <effect name="Buff" time="8" val="0">
-      <add order="0x40" stat="vengeanceMdam" val="100"/>
+      <add order="0x40" stat="vengeanceMdam" val="#vengeanceMdam"/>
     </effect>
   </for>
 </skill>

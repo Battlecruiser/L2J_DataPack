@@ -536,9 +536,9 @@ Guessing...
     <add order="0x40" stat="reflectDam" val="5"/>
   </for>
 </skill>
-<skill id="3552" levels="2" name="Special Ability: PvP Damage">
+<skill id="3552" levels="4" name="Special Ability: PvP Damage">
 <!-- s_opt_pvp_dmg_bonus1 -->
-  <table name="#atkCountMax"> 0 4 </table>
+  <table name="#atkCountMax"> 0 4 0 4 </table>
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_PASSIVE"/>
