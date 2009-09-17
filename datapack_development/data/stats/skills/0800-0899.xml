@@ -51,8 +51,8 @@
   <set name="skillType" val="BUFF"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <for>
-    <effect name="Buff" time="300" val="0" stackOrder="1.40" stackType="pa_up">
-      <mul order="0x30" stat="pAtk" val="1.40"/>
+    <effect name="Buff" time="300" val="0" stackOrder="1.4" stackType="pa_up">
+      <mul order="0x30" stat="pAtk" val="1.4"/>
     </effect>
   </for>
 </skill>
@@ -1154,10 +1154,10 @@
   <set name="reuseDelay" val="8000"/>
   <for>
     <effect name="Buff" time="600" val="0" stackOrder="1" stackType="Exhilarate">
-      <mul order="0x30" stat="maxHp" val="1.20"/>
+      <mul order="0x30" stat="maxHp" val="1.2"/>
       <mul order="0x30" stat="pAtk" val="1.08"/>
       <mul order="0x30" stat="pDef" val="1.18"/>
-      <mul order="0x30" stat="pAtkSpd" val="1.20"/>
+      <mul order="0x30" stat="pAtkSpd" val="1.2"/>
     </effect>
   </for>
 </skill>
@@ -1173,9 +1173,9 @@
   <set name="reuseDelay" val="8000"/>
   <for>
     <effect name="Buff" time="600" val="0" stackOrder="1" stackType="Exhilarate">
-      <mul order="0x30" stat="mAtk" val="1.20"/>
+      <mul order="0x30" stat="mAtk" val="1.2"/>
       <mul order="0x30" stat="mDef" val="1.16"/>
-      <mul order="0x30" stat="mAtkSpd" val="1.20"/>
+      <mul order="0x30" stat="mAtkSpd" val="1.2"/>
     </effect>
   </for>
 </skill>
