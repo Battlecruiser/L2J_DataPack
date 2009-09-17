@@ -998,7 +998,7 @@ INSERT INTO `etcitem` VALUES
 (1831,'Antidote','false','potion',20,'stackable','liquid','none',-1,-1,75,0,'true','true','true','true','ItemSkills','2042-1;'),
 (1832,'Greater Antidote','false','potion',20,'stackable','liquid','none',-1,-1,180,0,'true','true','true','true','ItemSkills','2043-1;'),
 (1833,'Bandage','false','potion',20,'stackable','liquid','none',-1,-1,75,0,'true','true','true','true','ItemSkills','2044-1;'),
-(1834,'Emergency Dressing','false','potion',20,'stackable','liquid','none',-1,-1,180,0,'true','true','true','true','ItemSkills','0-0;'),
+(1834,'Emergency Dressing','false','potion',20,'stackable','liquid','none',-1,-1,180,0,'true','true','true','true','ItemSkills','2045-1;'),
 (1835,'Soulshot: No Grade','false','shot',4,'stackable','paper','none',-1,-1,6,0,'true','true','true','true','SoulShots','0-0;'),
 (1836,'Kendell\'s 1st Order','false','quest',0,'stackable','steel','none',-1,-1,0,0,'false','false','true','false','none','0-0;'),
 (1837,'Kendell\'s 2nd Order','false','quest',0,'stackable','steel','none',-1,-1,0,0,'false','false','true','false','none','0-0;'),
