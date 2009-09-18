@@ -1016,6 +1016,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="stayAfterDeath" val="true"/>
   <for>
     <mul order="0x30" stat="pAtkSpd" val="#rate"/>
     <mul order="0x30" stat="mAtkSpd" val="#rate"/>
@@ -1049,6 +1050,7 @@
   <set name="skillType" val="BUFF"/>
   <set name="magicLvl" val="1"/>
   <set name="operateType" val="OP_PASSIVE"/>
+  <set name="stayAfterDeath" val="true"/>
   <for>
     <mul order="0x30" stat="regHp" val="#rate"/>
     <mul order="0x30" stat="regMp" val="#rate"/>
