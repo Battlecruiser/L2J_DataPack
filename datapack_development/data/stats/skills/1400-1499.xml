@@ -394,6 +394,9 @@
   <set name="itemConsumeCount" val="1"/>
   <set name="mpInitialConsume" val="36"/>
   <set name="mpConsume" val="36"/>
+  <cond msgId="1509">
+    <player olympiad="false"/>
+  </cond>
   <for>
     <effect self="1" count="9" name="SignetMDam" time="2" val="0"/>
   </for>
@@ -419,6 +422,9 @@
   <set name="itemConsumeCount" val="1"/>
   <set name="mpInitialConsume" val="36"/>
   <set name="mpConsume" val="36"/>
+  <cond msgId="1509">
+    <player olympiad="false"/>
+  </cond>
   <for>
     <effect self="1" count="9" name="SignetMDam" time="2" val="0"/>
   </for>
@@ -444,6 +450,9 @@
   <set name="itemConsumeCount" val="1"/>
   <set name="mpInitialConsume" val="36"/>
   <set name="mpConsume" val="36"/>
+  <cond msgId="1509">
+    <player olympiad="false"/>
+  </cond>
   <for>
     <effect self="1" count="9" name="SignetMDam" time="2" val="0"/>
   </for>
@@ -455,6 +464,9 @@
   <set name="staticReuse" val="true"/>
   <set name="operateType" val="OP_PASSIVE"/>
   <set name="hitTime" val="5000"/>
+  <cond msgId="1509">
+    <player olympiad="false"/>
+  </cond>
 </skill>
 <skill id="1423" levels="1" name="Gehenna">
   <set name="target" val="TARGET_GROUND"/>
@@ -477,6 +489,9 @@
   <set name="itemConsumeCount" val="1"/>
   <set name="mpInitialConsume" val="36"/>
   <set name="mpConsume" val="36"/>
+  <cond msgId="1509">
+    <player olympiad="false"/>
+  </cond>
   <for>
     <effect self="1" count="9" name="SignetMDam" time="2" val="0"/>
   </for>
@@ -500,6 +515,9 @@
   <set name="itemConsumeCount" val="1"/>
   <set name="mpInitialConsume" val="70"/>
   <set name="mpConsume" val="70"/>
+  <cond msgId="1509">
+    <player olympiad="false"/>
+  </cond>
   <for>
     <effect count="6" name="SignetAntiSummon" time="5" val="0"/>
   </for>
