@@ -679,4 +679,8 @@ INSERT INTO `merchant_shopids` VALUES
 ('9996', 'gm'), -- [reserved]
 ('9997', 'gm'), -- A Weapons
 ('9998', 'gm'), -- S Weapons
-('9999', 'gm'); -- [reserved]
+('9999', 'gm'), -- Masterwork Jewels
+('10000', 'gm'), -- Masterwork Armor B
+('10001', 'gm'), -- Masterwork Armor A
+('10002', 'gm'), -- Masterwork Armor S
+('10003', 'gm'); -- Masterwork Armor S80
