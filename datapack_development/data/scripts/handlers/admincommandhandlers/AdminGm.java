@@ -24,7 +24,7 @@ import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  * This class handles following admin commands:
- * - gm = turns gm mode on/off
+ * - gm = turns gm mode off
  *
  * @version $Revision: 1.2.4.4 $ $Date: 2005/04/11 10:06:06 $
  */
