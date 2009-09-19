@@ -957,7 +957,7 @@
   <set name="canBeDispeled" val="false"/>
   <for>
     <effect name="Buff" time="1200" val="0">
-      <mul order="0x30" stat="cancelVuln" val="0.75"/>
+      <sub order="0x40" stat="cancel" val="25"/>
       <mul order="0x30" stat="rootVuln" val="0.75"/>
       <mul order="0x30" stat="derangementVuln" val="0.75"/>
       <mul order="0x30" stat="stunVuln" val="#vuln"/>
