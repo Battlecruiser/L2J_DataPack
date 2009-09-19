@@ -30,7 +30,7 @@ public class VanguardDarkAvenger extends L2Transformation
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(815, getPlayer().getLevel() - 43), false);
 			// Dual Weapon Mastery
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(144, getPlayer().getLevel() - 43), false);
-			getPlayer().setTransformAllowedSkills(new int[]{838,5491,817,815,28,18,283,65,401,86});
+			getPlayer().setTransformAllowedSkills(new int[]{838,5491,817,815,144,28,18,283,65,401,86});
 		}
 		else
 			getPlayer().setTransformAllowedSkills(new int[]{838,5491,28,18,283,65,401,86});
