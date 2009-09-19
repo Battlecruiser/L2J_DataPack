@@ -30,7 +30,7 @@ public class VanguardTempleKnight extends L2Transformation
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(814, getPlayer().getLevel() - 43), false);
 			// Two handed mastery
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(293, getPlayer().getLevel() - 43), false);
-			getPlayer().setTransformAllowedSkills(new int[]{838,5491,816,814,28,18,10,67,449,400,197});
+			getPlayer().setTransformAllowedSkills(new int[]{838,5491,816,814,293,28,18,10,67,449,400,197});
 		}
 		else
 			getPlayer().setTransformAllowedSkills(new int[]{838,5491,28,18,10,67,449,400,197});
