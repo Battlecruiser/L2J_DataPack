@@ -19,12 +19,12 @@ CREATE TABLE `armorsets` (
 );
 
 -- NO GRADE Armor Sets
--- #########################    id   chest  legs  head  glov  feet  skill                    shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
+-- #########################    id   chest  legs  head  glov  feet  skill                           shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
 INSERT INTO `armorsets` VALUES (1,   23,    2386, 43,   0,    0,    '3006-1;3500-1;',               0,    0,    0,        0,       0,       0,         0,       0);     -- Wooden Breastplate set (heavy)
 INSERT INTO `armorsets` VALUES (2,   1101,  1104, 44,   0,    0,    '3006-1;3501-1;',               0,    0,    0,        0,       0,       0,         0,       0);     -- Devotion robe set (robe)
 
 -- D GRADE Armor Sets
--- #########################    id   chest  legs  head  glov  feet  skill                    shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
+-- #########################    id   chest  legs  head  glov  feet  skill                           shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
 INSERT INTO `armorsets` VALUES (3,   58,    59,   47,   0,    0,    '3006-1;3502-1;',               628,  3543, 3611,     0,       0,       0,         0,       0);     -- Mithril Breastplate set(heavy)
 INSERT INTO `armorsets` VALUES (4,   352,   2378, 2411, 0,    0,    '3006-1;3506-1;',               2493, 3544, 3611,     0,       0,       0,         0,       0);     -- Brigandine Armor set
 
@@ -35,7 +35,7 @@ INSERT INTO `armorsets` VALUES (7,   436,   469,  0,    2447, 0,    '3006-1;3504
 INSERT INTO `armorsets` VALUES (8,   437,   470,  0,    2450, 0,    '3006-1;3507-1;',               0,    0,    3613,     0,       0,       0,         0,       0);     -- Mithril Tunic
 
 -- C GRADE Armor Sets
--- #########################    id   chest  legs  head  glov  feet  skill                    shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
+-- #########################    id   chest  legs  head  glov  feet  skill                           shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
 INSERT INTO `armorsets` VALUES (9,   354,   381,  2413, 0,    0,    '3006-1;3509-1;',               2495, 3545, 3614,     0,       0,       0,         0,       0);     -- Chain Mail Shirt set
 INSERT INTO `armorsets` VALUES (10,  60,    0,    517,  0,    0,    '3006-1;3512-1;',               107,  3546, 3614,     0,       0,       0,         0,       0);     -- Composite Armor set
 INSERT INTO `armorsets` VALUES (11,  356,   0,    2414, 0,    0,    '3006-1;3516-1;',               2497, 3547, 3614,     0,       0,       0,         0,       0);     -- Full Plate Armor set
@@ -50,7 +50,7 @@ INSERT INTO `armorsets` VALUES (17,  441,   472,  0,    2459, 0,    '3006-1;3513
 INSERT INTO `armorsets` VALUES (18,  442,   473,  0,    2463, 0,    '3006-1;3517-1;',               0,    0,    3616,     0,       0,       0,         0,       0);     -- Divine robe set
 
 -- B GRADE Armor Sets
--- #########################    id   chest  legs  head  glov  feet  skill                    shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
+-- #########################    id   chest  legs  head  glov  feet  skill                           shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
 INSERT INTO `armorsets` VALUES (19,  357,   383,  503,  5710, 5726, '3006-1;3518-1;',               0,    0,    3617,     11355,   11363,   11356,     11359,   0);     -- Zubei's Breastplate set
 INSERT INTO `armorsets` VALUES (20,  2384,  2388, 503,  5711, 5727, '3006-1;3520-1;',               0,    0,    3618,     11353,   12978,   11357,     11360,   0);     -- Zubei's leather set
 INSERT INTO `armorsets` VALUES (21,  2397,  2402, 503,  5712, 5728, '3006-1;3522-1;',               0,    0,    3619,     11378,   12979,   11358,     11361,   0);     -- Zubei robe set
@@ -68,7 +68,7 @@ INSERT INTO `armorsets` VALUES (29,  2392,  0,    2417, 5723, 5739, '3006-1;3527
 INSERT INTO `armorsets` VALUES (30,  2399,  2404, 2417, 5724, 5740, '3006-1;3529-1;',               0,    0,    3619,     11406,   12983,   11381,     11384,   0);     -- Doom robe set
 
 -- A GRADE Armor Sets
--- #########################    id   chest  legs  head  glov  feet  skill                    shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
+-- #########################    id   chest  legs  head  glov  feet  skill                           shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
 INSERT INTO `armorsets` VALUES (31,  365,   388,  512,  5765, 5777, '3006-1;3530-1;',               641,  3550, 3620,     11407,   11417,   11408,     11413,   11416); -- Dark Crystal Breastplate set
 INSERT INTO `armorsets` VALUES (32,  2385,  2389, 512,  5766, 5778, '3006-1;3532-1;',               0,    0,    3621,     11419,   12986,   11409,     11414,   0);     -- Dark Crystal leather set
 INSERT INTO `armorsets` VALUES (33,  2407,  0,    512,  5767, 5779, '3006-1;3535-1;',               0,    0,    3622,     0,       12987,   11410,     11415,   0);     -- Dark Crystal robe set
@@ -86,13 +86,13 @@ INSERT INTO `armorsets` VALUES (41,  2395,  0,    2419, 5775, 5787, '3006-1;3539
 INSERT INTO `armorsets` VALUES (42,  2409,  0,    2419, 5776, 5788, '3006-1;3541-1;',               0,    0,    3622,     0,       12991,   11450,     11455,   0);     -- Majestic robe set
 
 -- S GRADE Armor Sets
--- #########################    id   chest  legs  head  glov  feet  skill                    shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
+-- #########################    id   chest  legs  head  glov  feet  skill                           shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
 INSERT INTO `armorsets` VALUES (43,  6373,  6374, 6378, 6375, 6376, '3006-1;3553-1;',               6377, 3554, 3623,     11505,   11509,   11506,     11507,   11508); -- Imperial crusader set
 INSERT INTO `armorsets` VALUES (44,  6379,  0,    6382, 6380, 6381, '3006-1;3555-1;',               0,    0,    3624,     0,       11486,   11483,     11484,   0);     -- Draconic leather set
 INSERT INTO `armorsets` VALUES (45,  6383,  0,    6386, 6384, 6385, '3006-1;3556-1;',               0,    0,    3625,     0,       11490,   11487,     11489,   0);     -- Major arcana robe set
 
 -- Clan Armor Sets
--- #########################    id   chest  legs  head  glov  feet  skill                    shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
+-- #########################    id   chest  legs  head  glov  feet  skill                           shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
 INSERT INTO `armorsets` VALUES (46,  7851,  0,    7850, 7852, 7853, '3006-1;3605-1;',               0,    0,    3611,     0,       0,       0,         0,       0);     -- Clan oath Armor set (heavy)
 INSERT INTO `armorsets` VALUES (47,  7854,  0,    7850, 7855, 7856, '3006-1;3606-1;',               0,    0,    3612,     0,       0,       0,         0,       0);     -- Clan Oath Brigandine set (light)
 INSERT INTO `armorsets` VALUES (48,  7857,  0,    7850, 7858, 7859, '3006-1;3607-1;',               0,    0,    3613,     0,       0,       0,         0,       0);     -- Clan Oath Aketon set (robe)
@@ -110,7 +110,7 @@ INSERT INTO `armorsets` VALUES (56,  9834,  0,    9830, 9835, 9836, '3006-1;3609
 INSERT INTO `armorsets` VALUES (57,  9837,  0,    9830, 9838, 9839, '3006-1;3610-2;',               0,    0,    3622,     0,       0,       0,         0,       0);     -- Improved Apella Doublet set (robe)
 
 -- S80 Dynasty Armor Sets
--- #########################    id   chest  legs  head  glov  feet  skill                    shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
+-- #########################    id   chest  legs  head  glov  feet  skill                           shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
 INSERT INTO `armorsets` VALUES (58,  9432,  9437, 9438, 9439, 9440, '3006-1;3416-1;',               0,    0,    3625,     11558,   11539,   11514,     11533,   0);     -- Dynasty Tunic
 INSERT INTO `armorsets` VALUES (59,  9433,  9437, 9438, 9439, 9440, '3006-1;3354-1;',               0,    0,    3625,     11558,   11539,   11514,     11533,   0);     -- Dynasty Tunic - Healer
 INSERT INTO `armorsets` VALUES (60,  9434,  9437, 9438, 9439, 9440, '3006-1;3355-1;',               0,    0,    3625,     11558,   11539,   11514,     11533,   0);     -- Dynasty Tunic - Enchanter
@@ -150,7 +150,7 @@ INSERT INTO `armorsets` VALUES (87,  10489, 9428, 9429, 9430, 9431, '3006-1;3646
 INSERT INTO `armorsets` VALUES (88,  10490, 9428, 9429, 9430, 9431, '3006-1;3644-1;',               0,    0,    3624,     11516,   11525,   11515,     11524,   0);     -- Dynasty Jeweled Leather Armor Summoner
 
 -- S84 Vesper Armor Sets
--- #########################    id   chest  legs  head  glov  feet  skill                    shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
+-- #########################    id   chest  legs  head  glov  feet  skill                           shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
 INSERT INTO `armorsets` VALUES (89,  13432, 13438,13137,13439,13440,'3006-1;8283-1;',               13471,3417, 3623,     0,       0,       0,         0,       0);     -- Vesper Breastplate
 INSERT INTO `armorsets` VALUES (90,  13433, 13441,13138,13442,13443,'3006-1;8285-1;',               0,    0,    3624,     0,       0,       0,         0,       0);     -- Vesper Leather Breastplate
 INSERT INTO `armorsets` VALUES (91,  13434, 13444,13139,13445,13446,'3006-1;8287-1;',               0,    0,    3625,     0,       0,       0,         0,       0);     -- Vesper Tunic
@@ -160,7 +160,7 @@ INSERT INTO `armorsets` VALUES (93,  13436, 13451,13141,13452,13453,'3006-1;8286
 INSERT INTO `armorsets` VALUES (94,  13437, 13454,13142,13455,13456,'3006-1;8288-1;',               0,    0,    3625,     0,       0,       0,         0,       0);     -- Vesper Noble Tunic
 
 -- A GRADE PVP Armor Sets
--- #########################    id   chest  legs  head  glov  feet  skill		     shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
+-- #########################    id   chest  legs  head  glov  feet  skill		            shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
 INSERT INTO `armorsets` VALUES (95,  10793, 0,    2418, 5771, 5783, '3006-1;8193-1;3659-1;3662-1;', 2498, 3551, 3620,     0,       11481,   11472,     11477,   11480); -- Armor of Nightmare - PvP
 INSERT INTO `armorsets` VALUES (96,  10794, 0,    2419, 5774, 5786, '3006-1;8194-1;3659-1;3662-1;', 0,    0,    3620,     0,       11456,   11448,     11453,   0);     -- Majestic Plate Armor - PvP
 INSERT INTO `armorsets` VALUES (97,  10795, 0,    2418, 5772, 5784, '3006-1;8195-1;3663-1;',        0,    0,    3621,     0,       12992,   11473,     11478,   0);     -- Leather Armor of Nightmare - PvP
@@ -169,13 +169,13 @@ INSERT INTO `armorsets` VALUES (99,  10797, 0,    2418, 5773, 5785, '3006-1;8197
 INSERT INTO `armorsets` VALUES (100, 10798, 0,    2419, 5776, 5788, '3006-1;8198-1;3660-1;',        0,    0,    3622,     0,       12991,   11450,     11455,   0);     -- Majestic Robe - PvP
 
 -- S GRADE PVP Armor Sets
--- #########################    id   chest  legs  head  glov  feet  skill                    shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
+-- #########################    id   chest  legs  head  glov  feet  skill                           shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
 INSERT INTO `armorsets` VALUES (101, 10799, 6374, 6378, 6375, 6376, '3006-1;8199-1;3659-1;3662-1;', 6377, 3554, 3623,     11505,   11509,   11506,     11507,   11508); -- Imperial Crusader Breastplate - PvP
 INSERT INTO `armorsets` VALUES (102, 10800, 0,    6382, 6380, 6381, '3006-1;8200-1;3663-1;',        0,    0,    3624,     0,       11486,   11483,     11484,   0);     -- Draconic Leather Armor - PvP
 INSERT INTO `armorsets` VALUES (103, 10801, 0,    6386, 6384, 6385, '3006-1;8201-1;3660-1;',        0,    0,    3625,     0,       11490,   11487,     11489,   0);     -- Major Arcana Robe - PvP
 
 -- S80 Dynasty PVP Armor Sets
--- #########################    id   chest  legs  head  glov  feet  skill                    shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
+-- #########################    id   chest  legs  head  glov  feet  skill                           shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
 INSERT INTO `armorsets` VALUES (104, 10802, 9421, 9422, 9423, 9424, '3006-1;8202-1;3659-1;3662-1;', 9441, 3417, 3623,     11512,   11557,   11513,     11526,   11532); -- Dynasty Breastplate - PvP
 INSERT INTO `armorsets` VALUES (105, 10803, 9421, 9422, 9423, 9424, '3006-1;8203-1;3659-1;3662-1;', 9441, 3417, 3623,     11512,   11557,   11513,     11526,   11532); -- Dynasty Breastplate - PvP Shield Master
 INSERT INTO `armorsets` VALUES (106, 10804, 9421, 9422, 9423, 9424, '3006-1;8204-1;3659-1;3662-1;', 0,    0,    3623,     11512,   11557,   11513,     11526,   0);     -- Dynasty Breastplate - PvP Weapon Master
@@ -216,7 +216,7 @@ INSERT INTO `armorsets` VALUES (133, 10834, 9428, 9429, 9430, 9431, '3006-1;8228
 INSERT INTO `armorsets` VALUES (134, 10835, 9428, 9429, 9430, 9431, '3006-1;8227-1;3663-1;',        0,    0,    3624,     11516,   11525,   11515,     11524,   0);     -- Dynasty Jewel Leather Armor - PvP	Summoner
 
 -- S84 Vesper PVP Armor Sets
--- #########################    id   chest  legs  head  glov  feet  skill                    shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
+-- #########################    id   chest  legs  head  glov  feet  skill                           shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
 INSERT INTO `armorsets` VALUES (135, 14520, 13438,13137,13439,13440,'3006-1;8301-1;3659-1;3662-1;', 13471,3417, 3623,     0,       0,       0,         0,       0);     -- Vesper Breastplate {PvP}
 INSERT INTO `armorsets` VALUES (136, 14521, 13441,13138,13442,13443,'3006-1;8303-1;3663-1;',        0,    0,    3624,     0,       0,       0,         0,       0);     -- Vesper Leather Breastplate {PvP}
 INSERT INTO `armorsets` VALUES (137, 14522, 13444,13139,13445,13446,'3006-1;8305-1;3660-1;',        0,    0,    3625,     0,       0,       0,         0,       0);     -- Vesper Tunic {PvP}
@@ -226,6 +226,6 @@ INSERT INTO `armorsets` VALUES (139, 14524, 13451,13141,13452,13453,'3006-1;8304
 INSERT INTO `armorsets` VALUES (140, 14525, 13454,13142,13455,13456,'3006-1;8306-1;3660-1;',        0,    0,    3625,     0,       0,       0,         0,       0);     -- Vesper Noble Tunic {PvP}
 
 -- Special Sets (as more armor sets are added, these should be the last in the list, adjust their IDs accordingly)
--- #########################    id   chest  legs  head  glov  feet  skill                    shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
-INSERT INTO `armorsets` VALUES (141, 13803, 13804,13802,0,    0,    '8277-1;',               0,    0,    0,        0,       0,       0,         0,       0);     -- Natives Set (bestows Native transform skill when all are worn together)
-INSERT INTO `armorsets` VALUES (142, 13806, 13807,13805,0,    0,    '8278-1;',               0,    0,    0,        0,       0,       0,         0,       0);     -- Guard of Dawns Set (bestows Guard transform skill when all are worn together)
+-- #########################    id   chest  legs  head  glov  feet  skill                           shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
+INSERT INTO `armorsets` VALUES (141, 13803, 13804,13802,0,    0,    '8277-1;',                      0,    0,    0,        0,       0,       0,         0,       0);     -- Natives Set (bestows Native transform skill when all are worn together)
+INSERT INTO `armorsets` VALUES (142, 13806, 13807,13805,0,    0,    '8278-1;',                      0,    0,    0,        0,       0,       0,         0,       0);     -- Guard of Dawns Set (bestows Guard transform skill when all are worn together)
