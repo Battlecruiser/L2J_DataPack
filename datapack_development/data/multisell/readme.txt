@@ -54,7 +54,9 @@ of this directory a little bit.
 
 310922001.xml -> Seven Signs - Black Marketeer of Mammon - SA Removal for AA
 310922002.xml -> Seven Signs - Black Marketeer of Mammon - Black Market Items
+
 311132501.xml -> Seven Signs - Merchant of Mammon - Buy Etc Items
+
 311262501.xml -> Seven Signs - Blacksmith of Mammon - SA: S-Grade
 311262502.xml -> Seven Signs - Blacksmith of Mammon - A-grade duals
 311262503.xml -> Seven Signs - Blacksmith of Mammon - Duals S-Grade.
@@ -70,6 +72,7 @@ of this directory a little bit.
 311262513.xml -> Seven Signs - Blacksmith of Mammon - Foundation Items
 311262514.xml -> Seven Signs - Blacksmith of Mammon - Unseal S80-Grade Armor
 311262515.xml -> Seven Signs - Blacksmith of Mammon - Unseal S80-grade Accesories
+311262516.xml -> Seven Signs - Blacksmith of Mammon - Exchange rare armor for superior armor.
 
 306893001.xml -> Shadow weaponry system. D-grade coupons exchange
 306893002.xml -> Shadow weaponry system. C-grade coupons exchange
