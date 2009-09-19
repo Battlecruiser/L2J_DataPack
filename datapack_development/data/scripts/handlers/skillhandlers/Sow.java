@@ -62,7 +62,7 @@ public class Sow implements ISkillHandler
 		
 		L2Object[] targetList = skill.getTargetList(activeChar);
 		
-		if (targetList == null)
+		if (targetList == null || targetList.length == 0)
 		{
 			return;
 		}
