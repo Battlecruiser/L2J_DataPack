@@ -72,7 +72,9 @@ public class AdminSpawn implements IAdminCommandHandler
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (command.equals("admin_show_spawns"))
+		{
 			AdminHelpPage.showHelpPage(activeChar, "spawns.htm");
+		}
 		else if (command.startsWith("admin_spawn_index"))
 		{
 			StringTokenizer st = new StringTokenizer(command, " ");
@@ -96,7 +98,9 @@ public class AdminSpawn implements IAdminCommandHandler
 			}
 		}
 		else if (command.equals("admin_show_npcs"))
+		{
 			AdminHelpPage.showHelpPage(activeChar, "npcs.htm");
+		}
 		else if (command.startsWith("admin_npc_index"))
 		{
 			StringTokenizer st = new StringTokenizer(command, " ");
@@ -119,7 +123,44 @@ public class AdminSpawn implements IAdminCommandHandler
 				AdminHelpPage.showHelpPage(activeChar, "npcs.htm");
 			}
 		}
-		else if (command.startsWith("admin_spawn") || command.startsWith("admin_spawn_monster"))
+		else if (command.startsWith("admin_unspawnall"))
+		{
+			Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.NPC_SERVER_NOT_OPERATING));
+			RaidBossSpawnManager.getInstance().cleanUp();
+			DayNightSpawnManager.getInstance().cleanUp();
+			L2World.getInstance().deleteVisibleNpcSpawns();
+			GmListTable.broadcastMessageToGMs("NPC Unspawn completed!");
+		}
+		else if (command.startsWith("admin_spawnday"))
+		{
+			DayNightSpawnManager.getInstance().spawnDayCreatures();
+		}
+		else if (command.startsWith("admin_spawnnight"))
+		{
+			DayNightSpawnManager.getInstance().spawnNightCreatures();
+		}
+		else if (command.startsWith("admin_respawnall") || command.startsWith("admin_spawn_reload"))
+		{
+			// make sure all spawns are deleted
+			RaidBossSpawnManager.getInstance().cleanUp();
+			DayNightSpawnManager.getInstance().cleanUp();
+			L2World.getInstance().deleteVisibleNpcSpawns();
+			// now respawn all
+			NpcTable.getInstance().reloadAllNpc();
+			SpawnTable.getInstance().reloadAll();
+			RaidBossSpawnManager.getInstance().reloadBosses();
+			AutoSpawnHandler.getInstance().reload();
+			AutoChatHandler.getInstance().reload();
+			SevenSigns.getInstance().spawnSevenSignsNPC();
+			QuestManager.getInstance().reloadAllQuests();
+			GmListTable.broadcastMessageToGMs("NPC Respawn completed!");
+		}
+		else if (command.startsWith("admin_teleport_reload"))
+		{
+			TeleportLocationTable.getInstance().reloadAll();
+			GmListTable.broadcastMessageToGMs("Teleport List Table reloaded.");
+		}
+		else if (command.startsWith("admin_spawn_monster") || command.startsWith("admin_spawn"))
 		{
 			StringTokenizer st = new StringTokenizer(command, " ");
 			try
@@ -141,39 +182,6 @@ public class AdminSpawn implements IAdminCommandHandler
 			{ // Case of wrong or missing monster data
 				AdminHelpPage.showHelpPage(activeChar, "spawns.htm");
 			}
-		}
-		else if (command.startsWith("admin_unspawnall"))
-		{
-			Broadcast.toAllOnlinePlayers(new SystemMessage(SystemMessageId.NPC_SERVER_NOT_OPERATING));
-			RaidBossSpawnManager.getInstance().cleanUp();
-			DayNightSpawnManager.getInstance().cleanUp();
-			L2World.getInstance().deleteVisibleNpcSpawns();
-			GmListTable.broadcastMessageToGMs("NPC Unspawn completed!");
-		}
-		else if (command.startsWith("admin_spawnday"))
-			DayNightSpawnManager.getInstance().spawnDayCreatures();
-		else if (command.startsWith("admin_spawnnight"))
-			DayNightSpawnManager.getInstance().spawnNightCreatures();
-		else if (command.startsWith("admin_respawnall") || command.startsWith("admin_spawn_reload"))
-		{
-			// make sure all spawns are deleted
-			RaidBossSpawnManager.getInstance().cleanUp();
-			DayNightSpawnManager.getInstance().cleanUp();
-			L2World.getInstance().deleteVisibleNpcSpawns();
-			// now respawn all
-			NpcTable.getInstance().reloadAllNpc();
-			SpawnTable.getInstance().reloadAll();
-			RaidBossSpawnManager.getInstance().reloadBosses();
-			AutoSpawnHandler.getInstance().reload();
-			AutoChatHandler.getInstance().reload();
-			SevenSigns.getInstance().spawnSevenSignsNPC();
-			QuestManager.getInstance().reloadAllQuests();
-			GmListTable.broadcastMessageToGMs("NPC Respawn completed!");
-		}
-		else if (command.startsWith("admin_teleport_reload"))
-		{
-			TeleportLocationTable.getInstance().reloadAll();
-			GmListTable.broadcastMessageToGMs("Teleport List Table reloaded.");
 		}
 		return true;
 	}
@@ -208,7 +216,6 @@ public class AdminSpawn implements IAdminCommandHandler
 			L2Spawn spawn = new L2Spawn(template1);
 			if (Config.SAVE_GMSPAWN_ON_CUSTOM)
 				spawn.setCustom(true);
-			
 			spawn.setLocx(target.getX());
 			spawn.setLocy(target.getY());
 			spawn.setLocz(target.getZ());
