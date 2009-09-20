@@ -728,6 +728,7 @@
   <set name="triggeredLevel" val="1"/>
   <set name="activationChance" val="5"/>
   <set name="chanceType" val="ON_HIT"/>
+  <set name="weaponsAllowed" val="65568"/> <!-- Bow/Crossbow -->
   <for>
     <add order="0x40" stat="accCombat" val="8">
       <using kind="Bow,Crossbow"/>
