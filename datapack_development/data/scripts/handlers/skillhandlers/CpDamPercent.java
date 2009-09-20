@@ -30,11 +30,11 @@ import net.sf.l2j.gameserver.templates.skills.L2SkillType;
  * Just a quick draft to support Wrath skill. Missing angle based calculation etc.
  */
 
-public class CpDam implements ISkillHandler
+public class CpDamPercent implements ISkillHandler
 {
 	private static final L2SkillType[] SKILL_IDS =
 	{
-		L2SkillType.CPDAM
+		L2SkillType.CPDAMPERCENT
 	};
 	
 	/**
@@ -106,7 +106,7 @@ public class CpDam implements ISkillHandler
 			byte shld = Formulas.calcShldUse(activeChar, target, skill);
 			if (!Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
 				return;
-			int damage = (int) (target.getCurrentCp() - (target.getCurrentCp() - skill.getPower()));
+			int damage = (int) (target.getCurrentCp() * (skill.getPower() / 100));
 			
 			// Manage attack or cast break of the target (calculating rate, sending message...)
 			if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
