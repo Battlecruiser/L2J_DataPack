@@ -1,0 +1,4 @@
+UPDATE character_subclasses SET class_id=128 WHERE class_id=129 AND charId IN (SELECT charId FROM characters where race=5 AND sex=1); -- female main -> male soulbreaker sub
+UPDATE character_subclasses SET class_id=129 WHERE class_id=128 AND charId IN (SELECT charId FROM characters where race=5 AND sex=0); -- male main   -> female soulbreaker sub
+UPDATE character_subclasses SET class_id=132 WHERE class_id=133 AND charId IN (SELECT charId FROM characters where race=5 AND sex=1); -- female main -> male soulhound sub
+UPDATE character_subclasses SET class_id=133 WHERE class_id=132 AND charId IN (SELECT charId FROM characters where race=5 AND sex=0); -- male main   -> female soulhound sub
