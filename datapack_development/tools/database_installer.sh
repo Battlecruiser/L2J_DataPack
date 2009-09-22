@@ -298,11 +298,11 @@ $MYG < ../sql/character_subclasses.sql &> /dev/null
 $MYG < ../sql/character_tpbookmark.sql &> /dev/null
 $MYG < ../sql/characters.sql &> /dev/null
 $MYG < ../sql/clan_data.sql &> /dev/null
+$MYG < ../sql/clan_notices.sql &> /dev/null
 $MYG < ../sql/clan_privs.sql &> /dev/null
 $MYG < ../sql/clan_skills.sql &> /dev/null
 $MYG < ../sql/clan_subpledges.sql &> /dev/null
 $MYG < ../sql/clan_wars.sql &> /dev/null
-$MYG < ../sql/clan_notices.sql &> /dev/null
 $MYG < ../sql/clanhall_functions.sql &> /dev/null
 $MYG < ../sql/class_list.sql &> /dev/null
 $MYG < ../sql/cursed_weapons.sql &> /dev/null
