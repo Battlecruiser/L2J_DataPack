@@ -343,7 +343,7 @@ set msg=no default for fresh install
 )
 echo LOGINSERVER DATABASE install type:
 echo.
-echo (f)ull: I will destroy data in your `accounts` and 
+echo (f)ull: I will destroy data in your `accounts` and
 echo    and `gameserver` tables.
 echo.
 echo (s)kip: I'll take you to the gameserver database
@@ -546,11 +546,11 @@ character_subclasses.sql
 character_tpbookmark.sql
 characters.sql
 clan_data.sql
+clan_notices.sql
 clan_privs.sql
 clan_skills.sql
 clan_subpledges.sql
 clan_wars.sql
-clan_notices.sql
 clanhall_functions.sql
 class_list.sql
 cursed_weapons.sql
