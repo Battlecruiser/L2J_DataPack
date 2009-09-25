@@ -22303,19 +22303,20 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (14056,0,9976,1), -- Snow Kung Transformation Stick - 30-day limited period
 (14057,0,9976,2), -- Scarecrow Jack Transformation Stick - 30-day limited period
 (14058,0,9976,3), -- Tin Golem Transformation Stick - 30-day limited period
-(14069,0,9976,4), -- Snow Kung Transformation Stick (event) - 30-day limited period
+(14069,0,9976,4), -- Snow Kung Transformation Stick (Event) - 30-day limited period
 (14070,0,9976,5), -- Scarecrow Jack Transformation Stick (Event) - 30-day limited period
-(14071,0,9976,6), -- Tin Golem Transformation Stick (event) - 30-day limited period
+(14071,0,9976,6), -- Tin Golem Transformation Stick (Event) - 30-day limited period
 (14088,0,9976,7), -- Snow Kung Transformation Stick - 7-day Limited Period
 (14089,0,9976,8), -- Scarecrow Jack Transformation Stick - 7-day Limited Period
 (14090,0,9976,9), -- Tin Golem Transformation Stick - 7-day Limited Period
-(14096,0,9976,10), -- Snow Kung Transformation Stick (event) - 7-day Limited Period
+(14096,0,9976,10), -- Snow Kung Transformation Stick (Event) - 7-day Limited Period
 (14097,0,9976,11), -- Scarecrow Jack Transformation Stick (Event) - 7-day Limited Period
-(14098,0,9976,12), -- Tin Golem Transformation Stick (event) - 7-day Limited Period
-(13253,0,9976,13), -- Pumpkin Transformation Stick - 7-day Limited Period
+(14098,0,9976,12), -- Tin Golem Transformation Stick (Event) - 7-day Limited Period
+(12800,0,9976,13), -- Pumpkin Transformation Stick - 30-day limited period
 (13324,0,9976,14), -- Pumpkin Transformation Stick (Event) - 30-day limited period
-(13339,0,9976,15), -- Pumpkin Transformation Stick (Event) - 7-day Limited Period
-(12814,0,9976,16); -- Shadow Item - Gatekeeper Transformation Stick
+(13253,0,9976,15), -- Pumpkin Transformation Stick - 7-day Limited Period
+(13339,0,9976,16), -- Pumpkin Transformation Stick (Event) - 7-day Limited Period
+(12814,0,9976,17); -- Shadow Item - Gatekeeper Transformation Stick
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Misc Event Items
