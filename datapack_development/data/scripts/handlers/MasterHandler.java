@@ -224,6 +224,8 @@ public class MasterHandler
 			VoicedCommandHandler.getInstance().registerVoicedCommandHandler(new Wedding());
 		if (Config.BANKING_SYSTEM_ENABLED)
 			VoicedCommandHandler.getInstance().registerVoicedCommandHandler(new Banking());
+		if (Config.TVT_ALLOW_VOICED_COMMAND)
+			VoicedCommandHandler.getInstance().registerVoicedCommandHandler(new TvTVoicedInfo());
 		_log.config("Loaded " + VoicedCommandHandler.getInstance().size() + " VoicedHandlers");
 	}
 	
