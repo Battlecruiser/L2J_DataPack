@@ -14,7 +14,7 @@
 <table width=250>
 <tr>
 <td>Enchant Value 0-65535:</td>
-<td><edit var="qbox" width=80 height=15></td>
+<td><edit var="qbox" width=75 height=12></td>
 </tr>
 </table>
 <br>
@@ -70,12 +70,12 @@
 <font color="LEVEL">Attribute Enhancement:</font><br>
 <table width=250>
 <tr>
-<td>Element Type (e.g. Dark):</td>
-<td><edit var="ebox" width=80 height=15></td>
+<td>Element Type:</td>
+<td><combobox width=75 var=ebox list=Fire;Water;Wind;Earth;Dark;Holy></td>
 </tr>
 <tr>
 <td>Element Value 0-450:</td>
-<td><edit var="vbox" width=80 height=15></td>
+<td><edit var="vbox" width=75 height=12></td>
 </tr>
 </table>
 <br>
@@ -99,5 +99,6 @@
 <td><button value="150" action="bypass -h admin_setlw $ebox 150" width=35 height=20 back="L2UI_ct1.button_df_down" fore="L2UI_ct1.button_df"></td>
 </tr>
 </table>
+<br>
 </center>
 </body></html>
