@@ -66,7 +66,6 @@ class Quest (JQuest) :
         htmltext = "31328-04.htm"
     else :
       htmltext = "31328-00.htm"
-      st.exitQuest(1)
     return htmltext
 
  def onKill(self, npc, player, isPet) :
