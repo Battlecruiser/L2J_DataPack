@@ -29,7 +29,6 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_manualhero','1'),
 ('admin_sethero','1'),
 ('admin_endolympiad','1'),
-('admin_find_dualbox','1'),
 
 -- ANNOUNCEMENTS
 ('admin_list_announcements','1'),
@@ -39,17 +38,18 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_del_announcement','1'),
 ('admin_announce','1'),
 ('admin_announce_menu','1'),
+('admin_reload_autoannounce','1'),
 
 -- BAN
 ('admin_ban','1'),
 ('admin_ban_acc','1'),
 ('admin_ban_char','1'),
 ('admin_ban_chat','1'),
-('admin_jail','1'),
 ('admin_unban','1'),
 ('admin_unban_acc','1'),
 ('admin_unban_char','1'),
 ('admin_unban_chat','1'),
+('admin_jail','1'),
 ('admin_unjail','1'),
 
 -- BBS
@@ -99,15 +99,16 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 
 -- EDIT CHAR
 ('admin_edit_character','1'),
-('admin_current_player','1'),
-('admin_nokarma','1'),
 ('admin_setkarma','1'),
+('admin_setfame','1'),
 ('admin_character_list','1'),
 ('admin_character_info','1'),
 ('admin_show_characters','1'),
 ('admin_find_character','1'),
+('admin_current_player','1'),
 ('admin_find_ip','1'),
 ('admin_find_account','1'),
+('admin_find_dualbox','1'),
 ('admin_save_modifications','1'),
 ('admin_rec','1'),
 ('admin_settitle','1'),
@@ -117,6 +118,7 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_setclass','1'),
 ('admin_fullfood','1'),
 ('admin_remove_clan_penalty','1'),
+('admin_nokarma','1'),
 
 -- EDIT NPC
 ('admin_edit_npc','1'),
@@ -162,11 +164,11 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_social','1'),
 ('admin_effect','1'),
 ('admin_social_menu','1'),
+('admin_special','1'),
+('admin_special_menu','1'),
 ('admin_effect_menu','1'),
 ('admin_abnormal','1'),
 ('admin_abnormal_menu','1'),
-('admin_special','1'),
-('admin_special_menu','1'),
 ('admin_play_sounds','1'),
 ('admin_play_sound','1'),
 ('admin_atmosphere','1'),
@@ -210,7 +212,8 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_event_panel','1'),
 ('admin_event_control_begin','1'),
 ('admin_event_control_teleport','1'),
-('admin_add','1'), ('admin_event_see','1'),
+('admin_add','1'),
+('admin_event_see','1'),
 ('admin_event_del','1'),
 ('admin_delete_buffer','1'),
 ('admin_event_control_sit','1'),
@@ -236,11 +239,8 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 -- FORT SIEGE
 ('admin_fortsiege','1'),
 ('admin_add_fortattacker','1'),
-('admin_add_fortdefender','1'),
-('admin_add_fortguard','1'),
 ('admin_list_fortsiege_clans','1'),
 ('admin_clear_fortsiege_list','1'),
-('admin_move_fortdefenders','1'),
 ('admin_spawn_fortdoors','1'),
 ('admin_endfortsiege','1'),
 ('admin_startfortsiege','1'),
