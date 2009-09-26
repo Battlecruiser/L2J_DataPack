@@ -22474,7 +22474,7 @@ INSERT INTO `droplist` VALUES
 (21791,1875,1,3,-1,646906), -- Stone of Purity
 (21791,4040,1,1,-1,388144), -- Mold Lubricant
 (21791,57,7810,15940,0,700000), -- Adena
-(21791,16,1,1,1,11), -- Elysian
+(21791,164,1,1,1,11), -- Elysian
 (21791,213,1,1,1,11), -- Branch of The Mother Tree
 (21791,8342,1,1,1,2008), -- Flaming Dragon Skull Piece
 (21791,7895,1,1,1,11), -- Flaming Dragon Skull
@@ -24641,7 +24641,7 @@ INSERT INTO `droplist` VALUES
 (22126,8742,1,1,200,671), -- Mid-Grade Life Stone: level 76
 (22126,8752,1,1,200,162), -- High-Grade Life Stone: level 76
 (22127,57,4689,9571,0,700000), -- Adena
-(22127,16,1,1,1,11), -- Elysian
+(22127,164,1,1,1,11), -- Elysian
 (22127,213,1,1,1,11), -- Branch of The Mother Tree
 (22127,7895,1,1,1,11), -- Flaming Dragon Skull
 (22127,7902,1,1,1,11), -- Doom Crusher
@@ -25298,7 +25298,7 @@ INSERT INTO `droplist` VALUES
 (22171,5544,1,1,1,1342), -- Branch of The Mother Tree Head
 (22171,8349,1,1,1,1342), -- Doom Crusher Head
 (22171,6901,1,1,2,1342), -- Recipe: Shining Arrow (100%)
-(22171,16,1,1,1,8), -- Elysian
+(22171,164,1,1,1,8), -- Elysian
 (22171,213,1,1,1,8), -- Branch of The Mother Tree
 (22171,7895,1,1,1,8), -- Flaming Dragon Skull
 (22171,7902,1,1,1,8), -- Doom Crusher
@@ -26447,7 +26447,7 @@ INSERT INTO `droplist` VALUES
 (22327,5544,1,1,1,5814), -- Branch Of The Mother Tree Head
 (22327,8342,1,1,1,5882), -- Flaming Dragon Skull Piece
 (22327,960,1,1,2,871), -- Scroll: Enchant Armor (S)
-(22327,16,1,1,1,11), -- Elysian
+(22327,164,1,1,1,11), -- Elysian
 (22327,213,1,1,1,11), -- Branch of The Mother Tree
 (22327,7895,1,1,1,11), -- Flaming Dragon Skull
 (22327,7902,1,1,1,11), -- Doom Crusher
