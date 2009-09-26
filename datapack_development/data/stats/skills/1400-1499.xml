@@ -351,12 +351,12 @@
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="#power"/>
   <set name="isDebuff" val="true"/>
-  <set name="reuseDelay" val="10000"/>
+  <set name="reuseDelay" val="4000"/>
   <set name="skillRadius" val="200"/>
   <set name="skillType" val="MDAM"/>
   <set name="target" val="TARGET_AURA"/>
   <for>
-    <effect name="RemoveTarget" val="0" effectPower="40" effectType="DEBUFF"/>
+    <effect name="RemoveTarget" val="0" effectPower="40" effectType="DEBUFF"/> <!-- Guess effectPower -->
   </for>
 </skill>
 <skill id="1418" levels="1" name="Celestial Shield">
