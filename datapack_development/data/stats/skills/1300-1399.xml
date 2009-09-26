@@ -1598,7 +1598,6 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="1380" levels="10" name="Betray">
-  <!-- need to check duration and reuse delay -->
   <table name="#mpConsume"> 52 54 55 58 60 62 64 65 67 69 </table>
   <table name="#itemConsumeCount"> 3 3 3 3 4 4 4 5 5 5 </table>
   <set name="mpConsume" val="#mpConsume"/>
@@ -1609,12 +1608,13 @@
   <set name="target" val="TARGET_ENEMY_SUMMON"/>
   <set name="skillType" val="BETRAY"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="80"/> <!-- Base Land Rate -->
   <set name="isDebuff" val="true"/>
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="isMagic" val="true"/>
   <for>
-    <effect name="Betray" time="25" val="0"/>
+    <effect name="Betray" time="30" val="0"/>
   </for>
 </skill>
 <skill id="1381" levels="5" name="Mass Fear">
@@ -1628,7 +1628,7 @@
   <set name="skillType" val="FEAR"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
-  <set name="power" val="30"/>
+  <set name="power" val="30"/> <!-- Base Land Rate -->
   <set name="castRange" val="500"/>
   <set name="effectRange" val="1000"/>
   <set name="isDebuff" val="true"/>
@@ -1644,7 +1644,7 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="2508"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
-  <set name="reuseDelay" val="8000"/>
+  <set name="reuseDelay" val="15000"/>
   <set name="hitTime" val="6000"/>
   <set name="target" val="TARGET_AREA"/>
   <set name="skillRadius" val="230"/>
@@ -1652,6 +1652,7 @@
   <set name="isDebuff" val="true"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="40"/> <!-- Base Land Rate -->
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <set name="isMagic" val="true"/>
@@ -1676,6 +1677,7 @@
   <set name="isDebuff" val="true"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="40"/> <!-- Base Land Rate -->
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <set name="isMagic" val="true"/>
@@ -1701,6 +1703,7 @@
   <set name="isDebuff" val="true"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="40"/> <!-- Base Land Rate -->
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <set name="isMagic" val="true"/>
@@ -1725,6 +1728,7 @@
   <set name="skillType" val="WEAKNESS"/>
   <set name="magicLvl" val="#magicLvl"/>
   <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="40"/> <!-- Base Land Rate -->
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
   <set name="isDebuff" val="true"/>
@@ -1741,7 +1745,7 @@
   <table name="#magicLvl"> 56 58 60 62 64 66 68 70 72 74 </table>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="power" val="80"/>
+  <set name="power" val="80"/> <!-- Base Land Rate -->
   <set name="lvlDepend" val="2"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="reuseDelay" val="4000"/>
@@ -1824,7 +1828,7 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
-  <set name="reuseDelay" val="4000"/>
+  <set name="reuseDelay" val="5000"/>
   <set name="hitTime" val="2500"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
@@ -1844,7 +1848,7 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="3031"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
-  <set name="reuseDelay" val="4000"/>
+  <set name="reuseDelay" val="5000"/>
   <set name="hitTime" val="2500"/>
   <set name="target" val="TARGET_PARTY"/>
   <set name="skillRadius" val="1000"/>
@@ -1870,7 +1874,7 @@
   <set name="effectRange" val="900"/>
   <set name="isMagic" val="true"/>
   <for>
-    <effect name="Buff" time="1200" val="0">
+    <effect name="Buff" time="1200" val="0" stackOrder="1" stackType="holyAtr">
       <add order="0x40" stat="holyRes" val="#holyRes"/>
     </effect>
   </for>
@@ -1895,18 +1899,15 @@
 </skill>
 <skill id="1394" levels="10" name="Trance" enchantLevels1="30" enchantLevels2="30">
   <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
-  <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
-  <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <table name="#ench1MpConsume"> 32 32 32 31 31 31 30 30 28 28 28 27 27 27 26 26 26 25 25 23 23 23 22 22 22 21 21 21 20 20 </table>
+  <table name="#ench2Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
   <table name="#mpConsume"> 27 28 28 29 30 32 33 33 34 35 </table>
   <table name="#magicLvl"> 56 58 60 62 64 66 68 70 72 74 </table>
   <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="80"/>
-  <table name="#ench2Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
+  <set name="power" val="80"/> <!-- Base Land Rate -->
   <set name="magicLvl" val="#magicLvl"/>
   <set name="lvlDepend" val="2"/>
-  <!-- reuse delay should be "nearly instant" -->
-  <set name="reuseDelay" val="2000"/>
+  <set name="reuseDelay" val="1000"/>
   <set name="hitTime" val="3000"/>
   <set name="target" val="TARGET_ONE"/>
   <set name="isDebuff" val="true"/>
@@ -1915,7 +1916,9 @@
   <set name="castRange" val="600"/>
   <set name="effectRange" val="1100"/>
   <set name="isMagic" val="true"/>
+  <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant1 name="mpConsume" val="#ench1MpConsume"/>
+  <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
   <enchant2 name="power" val="#ench2Power"/>
   <for>
     <effect name="Sleep" time="15" val="0" stackOrder="1" stackType="sleep"/>
@@ -1931,10 +1934,9 @@
   <enchant1 name="mpConsume" val="#ench1MpConsume"/>
   <set name="mpConsume" val="#mpConsume"/>
   <set name="itemConsumeId" val="3031"/>
-  <set name="power" val="50"/>
   <set name="itemConsumeCount" val="#itemConsumeCount"/>
   <set name="magicLvl" val="#magicLvl"/>
-  <set name="reuseDelay" val="10000"/>
+  <set name="reuseDelay" val="11000"/>
   <set name="hitTime" val="4000"/>
   <set name="target" val="TARGET_ENEMY_SUMMON"/>
   <set name="skillType" val="ERASE"/>
