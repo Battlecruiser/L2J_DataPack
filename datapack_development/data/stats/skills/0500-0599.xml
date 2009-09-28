@@ -1359,10 +1359,11 @@
   <set name="hitTime" val="3000"/>
   <set name="isDebuff" val="true"/>
   <set name="skillType" val="PDAM"/>
+  <set name="lvlDepend" val="1"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="baseCritRate" val="15"/>
   <for>
-    <effect name="Stun" time="5" val="0"/>
+    <effect name="Stun" time="5" val="0" stackOrder="1" stackType="Stun" effectPower="50" effectType="STUN"/> <!-- Guess effectPower -->
   </for>
 </skill>
 <skill id="574" levels="4" name="Bomb Installation">
