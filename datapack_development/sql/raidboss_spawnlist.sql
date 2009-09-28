@@ -1,6 +1,4 @@
-DROP TABLE IF EXISTS `raidboss_spawnlist`;
-
-CREATE TABLE `raidboss_spawnlist` (
+CREATE TABLE IF NOT EXISTS `raidboss_spawnlist` (
   `boss_id` INT NOT NULL default 0,
   `amount` INT NOT NULL default 0,
   `loc_x` INT NOT NULL default 0,
@@ -15,7 +13,7 @@ CREATE TABLE `raidboss_spawnlist` (
   PRIMARY KEY (`boss_id`,`loc_x`,`loc_y`,`loc_z`)
 );
 
-INSERT INTO `raidboss_spawnlist` VALUES
+INSERT IGNORE INTO `raidboss_spawnlist` VALUES
 (25001,1,-54416,146480,-2887,0,43200,129600,0,95986,545), -- Greyclaw Kutus (23)
 (25004,1,-94208,100240,-3520,0,43200,129600,0,168366,763), -- Turek Mercenary Captain (30)
 (25007,1,124240,75376,-2800,0,43200,129600,0,331522,1062), -- Retreat Spider Cletu (42)
