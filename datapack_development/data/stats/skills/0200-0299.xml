@@ -1883,7 +1883,7 @@
   <set name="power" val="#power"/>
   <set name="lvlDepend" val="1"/>
   <set name="target" val="TARGET_ONE"/>
-  <set name="reuseDelay" val="30000"/>
+  <set name="reuseDelay" val="15000"/>
   <set name="hitTime" val="3000"/>
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
@@ -1892,7 +1892,7 @@
   <set name="isDebuff" val="true"/>
   <set name="effectRange" val="900"/>
   <for>
-    <effect name="Paralyze" time="10" val="0" effectPower="20" effectType="PARALYZE"/>
+    <effect name="Paralyze" time="15" val="0" effectPower="40" effectType="PARALYZE"/>
   </for>
 </skill>
 <skill id="280" levels="37" name="Burning Fist" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30">
