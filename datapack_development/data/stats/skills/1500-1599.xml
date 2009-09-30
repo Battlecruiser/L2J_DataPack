@@ -377,7 +377,7 @@
   <set name="reuseDelay" val="30000"/>
   <set name="transformId" val="316"/>
   <for>
-    <effect name="Transformation" time="18400" val="0">
+    <effect name="Transformation" time="21600" val="0">
       <mul order="0x30" stat="pvpMagicalDmg" val="0.4"/>
     </effect>
   </for>
@@ -391,7 +391,7 @@
   <set name="reuseDelay" val="30000"/>
   <set name="transformId" val="317"/>
   <for>
-    <effect name="Transformation" time="18400" val="0">
+    <effect name="Transformation" time="21600" val="0">
       <mul order="0x30" stat="pvpMagicalDmg" val="0.4"/>
     </effect>
   </for>
@@ -405,7 +405,7 @@
   <set name="reuseDelay" val="30000"/>
   <set name="transformId" val="318"/>
   <for>
-    <effect name="Transformation" time="18400" val="0">
+    <effect name="Transformation" time="21600" val="0">
       <mul order="0x30" stat="pvpMagicalDmg" val="0.4"/>
     </effect>
   </for>
@@ -722,7 +722,7 @@
   <set name="mpConsume" val="#mpConsume"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="power" val="80"/> <!-- Base Land Rate -->
-  <set name="reuseDelay" val="5000"/>
+  <set name="reuseDelay" val="3000"/>
   <set name="skillType" val="WEAKNESS"/>
   <set name="target" val="TARGET_ONE"/>
   <for>
