@@ -2235,7 +2235,7 @@
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
-  <set name="reuseDelay" val="240000"/>
+  <set name="reuseDelay" val="300000"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
@@ -2252,7 +2252,7 @@
   <set name="elementPower" val="20"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="MDAM"/>
-  <set name="reuseDelay" val="240000"/>
+  <set name="reuseDelay" val="300000"/>
   <set name="isDebuff" val="true"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -2262,7 +2262,7 @@
   <enchant3 name="elementPower" val="#enchElementPower"/>
   <for>
     <!-- Retail Values CT2.3: 60 HP * 1 Sec -->
-    <effect count="15" name="DamOverTime" val="60" effectPower="80" effectType="DOT"/>
+    <effect count="15" name="DamOverTime" val="60" effectPower="80" effectType="DOT"/> <!-- Guess effectPower -->
   </for>
 </skill>
 <skill id="1290" levels="1" name="Blizzard" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30">
@@ -2278,7 +2278,7 @@
   <set name="elementPower" val="20"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="MDAM"/>
-  <set name="reuseDelay" val="240000"/>
+  <set name="reuseDelay" val="300000"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
@@ -2286,7 +2286,7 @@
   <set name="effectRange" val="1400"/>
   <enchant3 name="elementPower" val="#enchElementPower"/>
   <for>
-    <effect name="Debuff" time="30" val="0" effectPower="80" effectType="DEBUFF" stackOrder="0.5" stackType="RunSpeedDown">
+    <effect name="Debuff" time="30" val="0" effectPower="40" effectType="DEBUFF" stackOrder="0.5" stackType="RunSpeedDown">
       <mul order="0x30" stat="runSpd" val="0.5"/>
     </effect>
   </for>
@@ -2304,7 +2304,7 @@
   <set name="elementPower" val="20"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="MDAM"/>
-  <set name="reuseDelay" val="240000"/>
+  <set name="reuseDelay" val="300000"/>
   <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
@@ -2327,7 +2327,7 @@
   <set name="skillType" val="MDAM"/>
   <set name="isMagic" val="true"/>
   <set name="overHit" val="true"/>
-  <set name="reuseDelay" val="240000"/>
+  <set name="reuseDelay" val="300000"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="castRange" val="900"/>
   <set name="effectRange" val="1400"/>
@@ -2340,7 +2340,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="MDAM"/>
-  <set name="reuseDelay" val="240000"/>
+  <set name="reuseDelay" val="300000"/>
   <set name="isMagic" val="true"/>
   <set name="overHit" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
@@ -2355,7 +2355,7 @@
   <set name="target" val="TARGET_ONE"/>
   <set name="hitTime" val="4000"/>
   <set name="skillType" val="MDAM"/>
-  <set name="reuseDelay" val="240000"/>
+  <set name="reuseDelay" val="300000"/>
   <set name="isMagic" val="true"/>
   <set name="overHit" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
