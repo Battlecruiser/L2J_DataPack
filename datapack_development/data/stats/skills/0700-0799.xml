@@ -602,7 +602,7 @@
   <set name="castRange" val="40"/>
   <set name="effectRange" val="400"/>
   <for>
-    <effect name="Stun" time="7" val="0" stackOrder="1" stackType="Stun"/>
+    <effect name="Stun" time="7" val="0" stackOrder="1" stackType="Stun" effectPower="40" effectType="STUN"/>
   </for>
 </skill>
 <skill id="750" levels="1" name="Oel Mahum Ultimate Defense">
