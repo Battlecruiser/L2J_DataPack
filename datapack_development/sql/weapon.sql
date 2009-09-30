@@ -3244,7 +3244,7 @@ INSERT INTO `weapon` VALUES
 (14502,'Vesper Caster {PvP} - Acumen','rhand','true',1080,1,1,'fine_steel','s84',317,20,'blunt',4,4,0,0,0,379,0,234,-1,-1,146873000,7050,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3047-3;3654-1;'),
 (14503,'Vesper Caster {PvP} - MP Regeneration','rhand','true',1080,1,1,'fine_steel','s84',317,20,'blunt',4,4,0,0,0,379,0,234,-1,-1,146873000,7050,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3576-2;3654-1;'),
 (14504,'Vesper Caster {PvP} - Mana Up','rhand','true',1080,1,1,'fine_steel','s84',317,20,'blunt',4,4,0,0,0,379,0,234,-1,-1,146873000,7050,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3014-3;3654-1;'),
-(14505,'Vesper Singer {PvP} - Empower','lrhand','true',1080,1,1,'fine_steel','s84',386,20,'bigblunt',4,4,0,0,0,325,0,257,-1,-1,146873000,7050,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3075-2;3654-1;'),
+(14505,'Vesper Singer {PvP} - Empower','lrhand','true',1080,1,1,'fine_steel','s84',386,20,'bigblunt',4,4,0,0,0,325,0,257,-1,-1,146873000,7050,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3575-2;3654-1;'),
 (14506,'Vesper Singer {PvP} - MP Regeneration','lrhand','true',1080,1,1,'fine_steel','s84',386,20,'bigblunt',4,4,0,0,0,325,0,257,-1,-1,146873000,7050,'true','true','true','true',0,0,0,0,0,0,0,0,0,'3576-2;3654-1;'),
 (14507,'Vesper Singer {PvP} - Magic Hold','lrhand','true',1080,1,1,'fine_steel','s84',386,20,'bigblunt',4,4,0,0,0,325,0,257,-1,-1,146873000,7050,'true','true','true','true',0,0,3577,1,20,0,0,0,0,'3552-1;3654-1;'), -- PvP Bonus Damage Skill Assigned
 (14508,'Vesper Thrower {PvP} - Cheap Shot','lrhand','true',1520,1,1,'fine_steel','s84',724,5,'bow',12,-3,0,0,0,293,12,176,-1,-1,146873000,7050,'true','true','true','true',0,0,0,0,0,0,0,0,14514,'3552-1;3655-1;'), -- PvP Bonus Damage Skill Assigned
