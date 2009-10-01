@@ -42,6 +42,7 @@ import net.sf.l2j.gameserver.network.serverpackets.ConfirmDlg;
 import net.sf.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import net.sf.l2j.gameserver.network.serverpackets.SetupGauge;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
+import net.sf.l2j.gameserver.skills.AbnormalEffect;
 import net.sf.l2j.gameserver.util.Broadcast;
 
 /**
@@ -136,7 +137,7 @@ public class Wedding implements IVoicedCommandHandler
 			activeChar.sendMessage("You are already engaged.");
 			if (Config.L2JMOD_WEDDING_PUNISH_INFIDELITY)
 			{
-				activeChar.startAbnormalEffect((short) 0x2000); // give player a Big Head
+				activeChar.startAbnormalEffect(AbnormalEffect.BIG_HEAD); // give player a Big Head
 				// lets recycle the sevensigns debuffs
 				int skillId;
 				
