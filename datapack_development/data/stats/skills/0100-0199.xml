@@ -65,17 +65,15 @@
     <effect name="RemoveTarget" noicon="1" val="0" effectPower="#ench1effectPower" effectType="DEBUFF"/>
   </enchant1for>
   <enchant3for>
-    <effect name="Debuff" time="9" val="0">
+    <effect name="Stun" time="9" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="Stun">
       <mul order="0x30" stat="pDef" val="#ench3-pDef"/>
     </effect>
-    <effect name="Stun" time="9" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="Stun" noicon="1"/>
     <effect name="RemoveTarget" noicon="1" val="0" effectPower="50" effectType="DEBUFF"/>
   </enchant3for>
   <enchant4for>
-    <effect name="Debuff" time="9" val="0">
+    <effect name="Stun" time="9" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="Stun">
       <mul order="0x30" stat="mDef" val="#ench4-mDef"/>
     </effect>
-    <effect name="Stun" time="9" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="Stun" noicon="1"/>
     <effect name="RemoveTarget" noicon="1" val="0" effectPower="50" effectType="DEBUFF"/>
   </enchant4for>
 </skill>
