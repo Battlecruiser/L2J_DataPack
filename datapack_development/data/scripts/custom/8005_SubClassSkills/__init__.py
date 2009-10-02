@@ -101,8 +101,11 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if event == "learn":
      htmltext = ""
+     st2 = player.getQuestState("136_MoreThanMeetsTheEye")
      if player.isSubClassActive():
        htmltext = "8005-04.htm"
+     elif not st2 or st2.getState() != State.COMPLETED :
+       htmltext = "8005-03.htm"
      else:
        j=0
        for i in SKILLITEMS:
