@@ -7197,7 +7197,7 @@ INSERT INTO `etcitem` VALUES
 (9816,'Earth Egg','false','none',0,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','none','0-0;'),
 (9817,'Nonliving Nucleus','false','none',0,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','none','0-0;'),
 (9818,'Angelic Essence','false','none',0,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','none','0-0;'),
-(9849,'Fiery Demon Blood','false','none',0,'normal','wood','none',-1,-1,0,0,'true','true','true','true','none','0-0;'),
+(9849,'Fiery Demon Blood','false','none',0,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','ItemSkills','2357-1;'),
 (9850,'Basic Caravan Certificate','false','none',0,'normal','wood','none',-1,-1,0,0,'true','true','true','true','none','0-0;'),
 (9851,'Standard Caravan Certificate','false','none',0,'normal','wood','none',-1,-1,0,0,'true','true','true','true','none','0-0;'),
 (9852,'Premium Caravan Certificate','false','none',0,'normal','wood','none',-1,-1,0,0,'true','true','true','true','none','0-0;'),
