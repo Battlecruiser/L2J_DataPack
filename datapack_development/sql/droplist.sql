@@ -49,7 +49,7 @@ INSERT INTO `droplist` VALUES
 (18001,1878,1,1,2,37037), -- Braided Hemp
 (18001,1885,1,1,2,7092), -- High Grade Suede
 (18001,1889,1,1,2,5435), -- Compound Braid
-(18001,4197,1,1,2,8), -- Recipe: Demon\'s Sword
+(18001,4197,1,1,2,8), -- Recipe: Demon Dagger
 (18003,1871,1,1,-1,9797), -- Charcoal
 (18010,57,173,347,0,700000), -- Adena
 (18012,57,148,293,0,700000), -- Adena
@@ -9802,8 +9802,8 @@ INSERT INTO `droplist` VALUES
 (20956,4106,1,1,-1,10962), -- Sprite\'s Staff Head
 (20956,4987,1,1,-1,8081), -- Recipe: Tunic of Doom (60%)
 (20956,57,954,1912,0,700000), -- Adena
-(20956,11939,1,1,1,186), -- Common Item - Demon\'s Sword
-(20956,4119,1,1,1,1259), -- Demon\'s Sword Edge
+(20956,11939,1,1,1,186), -- Common Item - Demon Dagger
+(20956,4119,1,1,1,1259), -- Demon Dagger Edge
 (20956,1874,1,1,2,2571), -- Oriharukon Ore
 (20956,1878,1,1,2,17857), -- Braided Hemp
 (20956,1884,1,1,2,41667), -- Cord
@@ -10694,7 +10694,7 @@ INSERT INTO `droplist` VALUES
 (21004,4042,1,1,2,1139), -- Enria
 (21004,4129,1,1,2,545), -- Recipe: Earrings of Black Ore
 (21004,4167,1,1,2,545), -- Recipe: Blue Wolf Boots
-(21004,4197,1,1,2,64), -- Recipe: Demon\'s Sword
+(21004,4197,1,1,2,64), -- Recipe: Demon Dagger
 (21004,8728,1,1,200,737), -- Life Stone: level 61
 (21004,8738,1,1,200,152), -- Mid-Grade Life Stone: level 61
 (21004,8748,1,1,200,8), -- High-Grade Life Stone: level 61
@@ -10716,7 +10716,7 @@ INSERT INTO `droplist` VALUES
 (21005,4042,1,1,2,1030), -- Enria
 (21005,4129,1,1,2,549), -- Recipe: Earrings of Black Ore
 (21005,4167,1,1,2,678), -- Recipe: Blue Wolf Boots
-(21005,4197,1,1,2,27), -- Recipe: Demon\'s Sword
+(21005,4197,1,1,2,27), -- Recipe: Demon Dagger
 (21005,8728,1,1,200,935), -- Life Stone: level 61
 (21005,8738,1,1,200,271), -- Mid-Grade Life Stone: level 61
 (21005,8748,1,1,200,41), -- High-Grade Life Stone: level 61
@@ -11279,7 +11279,7 @@ INSERT INTO `droplist` VALUES
 (21063,8730,1,1,200,7042), -- Life Stone: level 67
 (21063,8740,1,1,200,1511), -- Mid-Grade Life Stone: level 67
 (21063,8760,1,1,200,252), -- Top-Grade Life Stone: level 67
-(21064,4119,1,1,-1,40287), -- Demon\'s Sword Edge
+(21064,4119,1,1,-1,40287), -- Demon Dagger Edge
 (21064,5230,1,1,-1,12272), -- Recipe: Mithril Arrow (100%)
 (21064,5479,1,1,-1,54461), -- Sealed Tallum Leather Armor Pattern
 (21064,57,4450,9065,0,700000), -- Adena
@@ -11471,7 +11471,7 @@ INSERT INTO `droplist` VALUES
 (21075,1877,1,1,2,1658), -- Adamantite Nugget
 (21075,4040,1,1,2,1658), -- Mold Lubricant
 (21075,4041,1,1,2,1658), -- Mold Hardener
-(21075,5005,1,1,2,144), -- Recipe: Demon\'s Sword (60%)
+(21075,5005,1,1,2,144), -- Recipe: Demon Dagger (60%)
 (21075,5418,1,1,2,492), -- Recipe: Sealed Tallum Plate Armor(60%)
 (21075,5276,1,1,2,252), -- Recipe: Greater Spiritshot (A) Compressed Package(100%)
 (21075,8729,1,1,200,4975), -- Life Stone: level 64
@@ -11569,7 +11569,7 @@ INSERT INTO `droplist` VALUES
 (21080,5166,1,1,2,274), -- Recipe: Blessed Spiritshot (A) Compressed Package (100%)
 (21080,6036,1,1,2,6452), -- Greater Magic Haste Potion
 (21080,8730,1,1,200,921), -- Life Stone: level 67
-(21081,4119,1,1,-1,26946), -- Demon\'s Sword Edge
+(21081,4119,1,1,-1,26946), -- Demon Dagger Edge
 (21081,5230,1,1,-1,8208), -- Recipe: Mithril Arrow (100%)
 (21081,5478,1,1,-1,51767), -- Sealed Dark Crystal Leather Armor Pattern
 (21081,57,2994,6056,0,700000), -- Adena
@@ -17259,7 +17259,7 @@ INSERT INTO `droplist` VALUES
 (21445,8729,1,1,200,1072), -- Life Stone: level 64
 (21445,8739,1,1,200,513), -- Mid-Grade Life Stone: level 64
 (21446,1885,1,1,-1,209411), -- High Grade Suede
-(21446,4119,1,1,-1,10999), -- Demon\'s Sword Edge
+(21446,4119,1,1,-1,10999), -- Demon Dagger Edge
 (21446,5468,1,1,-1,1373), -- Recipe: Elemental Sword(60%)
 (21446,57,1221,2470,0,700000), -- Adena
 (21446,11935,1,1,1,40), -- Common Item - Deadman\'s Glory
@@ -17489,7 +17489,7 @@ INSERT INTO `droplist` VALUES
 (21465,1889,1,1,2,15108), -- Compound Braid
 (21465,5220,1,1,2,9065), -- Metal Hardener
 (21466,4042,1,2,-1,86105), -- Enria
-(21466,4119,1,1,-1,22614), -- Demon\'s Sword Edge
+(21466,4119,1,1,-1,22614), -- Demon Dagger Edge
 (21466,5452,1,1,-1,2823), -- Recipe: Blood Tornado(60%)
 (21466,5368,1,1,2,1244), -- Recipe: Sealed Dark Crystal Boots(60%)
 (21466,12188,1,1,1,48), -- Common Item - Boots of Doom (unknown chances)
@@ -17562,7 +17562,7 @@ INSERT INTO `droplist` VALUES
 (21473,5230,1,1,-1,3510), -- Recipe: Mithril Arrow (100%)
 (21473,57,1047,2118,0,700000), -- Adena
 (21474,4039,1,1,-1,73747), -- Mold Glue
-(21474,4119,1,1,-1,9684), -- Demon\'s Sword Edge
+(21474,4119,1,1,-1,9684), -- Demon Dagger Edge
 (21474,5271,1,1,-1,2950), -- Recipe: Greater Soulshot (A) Compressed Package(100%)
 (21474,57,881,1779,0,700000), -- Adena
 (21475,4120,1,1,-1,11505), -- Bellion Cestus Edge
@@ -18372,8 +18372,8 @@ INSERT INTO `droplist` VALUES
 (21536,5446,1,1,-1,1639), -- Recipe: Bloody Orchid(60%)
 (21536,5452,1,1,-1,1639), -- Recipe: Blood Tornado(60%)
 (21536,57,1454,2948,0,700000), -- Adena
-(21536,11939,1,1,1,306), -- Common Item - Demon\'s Sword
-(21536,4119,1,1,1,1939), -- Demon\'s Sword Edge
+(21536,11939,1,1,1,306), -- Common Item - Demon Dagger
+(21536,4119,1,1,1,1939), -- Demon Dagger Edge
 (21536,1894,1,1,2,3676), -- Crafted Leather
 (21536,4039,1,1,2,4292), -- Mold Glue
 (21536,4041,1,1,2,766), -- Mold Hardener
@@ -18477,8 +18477,8 @@ INSERT INTO `droplist` VALUES
 (21542,3035,1,1,-1,3091), -- Recipe: Spiritshot A
 (21542,4053,1,1,-1,99376), -- Ring of Black Ore Gemstone
 (21542,57,1128,2280,0,700000), -- Adena
-(21542,11939,1,1,1,6), -- Common Item - Demon\'s Sword (no drop info)
-(21542,4119,1,1,1,1499), -- Demon\'s Sword Edge
+(21542,11939,1,1,1,6), -- Common Item - Demon Dagger (no drop info)
+(21542,4119,1,1,1,1499), -- Demon Dagger Edge
 (21542,1343,10,30,2,125000), -- Silver Arrow
 (21542,1864,1,1,2,142857), -- Stem
 (21542,1869,1,1,2,70000), -- Iron Ore
@@ -18871,7 +18871,7 @@ INSERT INTO `droplist` VALUES
 (21562,8730,1,1,200,1458), -- Life Stone: level 67
 (21562,8740,1,1,200,416), -- Mid-Grade Life Stone: level 67
 (21563,4042,1,1,-1,54757), -- Enria
-(21563,4119,1,1,-1,14381), -- Demon\'s Sword Edge
+(21563,4119,1,1,-1,14381), -- Demon Dagger Edge
 (21563,5161,1,1,-1,4381), -- Recipe: Spiritshot (A) Compressed Package (100%)
 (21563,57,1585,3240,0,700000), -- Adena
 (21563,12204,1,1,1,140), -- Common Item - Blue Wolf Breastplate
@@ -21542,8 +21542,8 @@ INSERT INTO `droplist` VALUES
 (21732,4089,1,1,-1,207583), -- Doom Helmet Pattern
 (21732,5281,1,1,-1,7324), -- Recipe: Greater Blessed Spiritshot (A) Compressed Package(100%)
 (21732,57,2222,4499,0,700000), -- Adena
-(21732,234,1,1,1,13), -- Demon\'s Sword
-(21732,4119,1,1,1,3551), -- Demon\'s Sword Edge
+(21732,234,1,1,1,13), -- Demon Dagger
+(21732,4119,1,1,1,3551), -- Demon Dagger Edge
 (21732,1343,30,90,2,110370), -- Silver Arrow
 (21732,1864,4,12,2,57945), -- Stem
 (21732,1869,2,6,2,46356), -- Iron Ore
@@ -21704,8 +21704,8 @@ INSERT INTO `droplist` VALUES
 (21742,4096,1,1,-1,510430), -- Blue Wolf Gloves Fabric
 (21742,5166,1,1,-1,15160), -- Recipe: Blessed Spiritshot (A) Compressed Package (100%)
 (21742,57,4596,9318,0,700000), -- Adena
-(21742,234,1,1,1,26), -- Demon\'s Sword
-(21742,4119,1,1,1,7350), -- Demon\'s Sword Edge
+(21742,234,1,1,1,26), -- Demon Dagger
+(21742,4119,1,1,1,7350), -- Demon Dagger Edge
 (21742,1343,100,300,2,43478), -- Silver Arrow
 (21742,1867,1,3,2,142857), -- Animal Skin
 (21742,1872,2,6,2,111111), -- Animal Bone
@@ -27862,8 +27862,8 @@ INSERT INTO `droplist` VALUES
 (25179,2392,1,1,0,19621), -- Leather Armor of Doom
 (25179,4082,4,12,0,489140), -- Blue Wolf Leather Armor Texture
 (25179,4083,8,22,0,260875), -- Leather Armor of Doom Design
-(25179,234,1,1,1,15862), -- Demon\'s Sword
-(25179,4119,3,9,1,757907), -- Demon\'s Sword Edge
+(25179,234,1,1,1,15862), -- Demon Dagger
+(25179,4119,3,9,1,757907), -- Demon Dagger Edge
 (25179,947,1,1,2,179568), -- Scroll: Enchant Weapon (Grade B)
 (25179,948,1,3,2,561149), -- Scroll: Enchant Armor (Grade B)
 (25179,6571,1,1,2,12827), -- Blessed Scroll: Enchant Weapon (Grade B)
@@ -29082,8 +29082,8 @@ INSERT INTO `droplist` VALUES
 (25423,4085,23,67,0,50063), -- Tunic of Doom Pattern
 (25423,4086,6,18,0,253489), -- Blue Wolf Stockings Pattern
 (25423,4087,11,31,0,144851), -- Stockings of Doom Pattern
-(25423,234,1,1,1,11875), -- Demon\'s Sword
-(25423,4119,3,9,1,567393), -- Demon\'s Sword Edge
+(25423,234,1,1,1,11875), -- Demon Dagger
+(25423,4119,3,9,1,567393), -- Demon Dagger Edge
 (25423,4622,1,3,2,173832), -- Greater Dye of Mental Strength <Men+4 Wit-4>
 (25423,4623,1,1,2,347663), -- Greater Dye of Wit <Wit+4 Int-4>
 (25423,4624,1,1,2,347663), -- Greater Dye of Wit <Wit+4 Men-4>
@@ -30655,10 +30655,3 @@ INSERT INTO `droplist` VALUES
 (36386,9912,4,6,1,1000000), -- Knight's Epaulette
 (36387,9912,1,3,1,1000000), -- Knight's Epaulette
 (36388,9912,1,3,1,1000000); -- Knight's Epaulette
-
--- temp ct2.3 forgotten scrolls
-INSERT INTO `droplist` VALUES
-(29163,10550,1,3,1,1000000), -- Forgotten Scroll - Protection of Elemental
-(29163,10552,1,3,1,1000000), -- Forgotten Scroll - Fighter's Will
-(29163,10553,1,3,1,1000000), -- Forgotten Scroll - Archer's Will
-(29163,14219,1,3,1,1000000); -- Forgotten Scroll - Magician's Will

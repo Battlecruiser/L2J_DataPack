@@ -20738,7 +20738,13 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (9412,0,9944,21),
 (9413,0,9944,22),
 (9414,0,9944,23),
-(9415,0,9944,24);
+(9415,0,9944,24),
+(13507,0,9944,25),
+(13508,0,9944,26),
+(13509,0,9944,27),
+(13510,0,9944,28),
+(13511,0,9944,29),
+(13512,0,9944,30);
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
 -- (GM-Shop) Buff Scrolls (event)
