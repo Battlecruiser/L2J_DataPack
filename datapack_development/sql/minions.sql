@@ -208,8 +208,6 @@ INSERT INTO `minions` VALUES
 (25155,25157,1,1),
 (25159,25160,2,2),
 (25159,25161,2,2),
--- (25163,25164,1,3), -- minion npcID removed in interlude
--- (25163,25165,1,2), -- minion npcID removed in interlude
 (25166,25167,2,2),
 (25166,25168,2,2),
 (25170,25171,3,3),
