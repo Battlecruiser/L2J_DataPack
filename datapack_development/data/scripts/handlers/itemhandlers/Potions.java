@@ -21,7 +21,6 @@ import net.sf.l2j.gameserver.model.L2Effect;
 import net.sf.l2j.gameserver.model.L2ItemInstance;
 import net.sf.l2j.gameserver.model.L2Skill;
 import net.sf.l2j.gameserver.model.actor.L2Playable;
-import net.sf.l2j.gameserver.model.actor.L2Summon;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.model.actor.instance.L2PetInstance;
 import net.sf.l2j.gameserver.model.entity.TvTEvent;
@@ -200,28 +199,21 @@ Control of this needs to be moved back into potions.java so proper message suppo
 	 * @param itemId
 	 * @return
 	 */
-	private boolean isEffectReplaceable(L2Playable playable, Enum<L2EffectType> effectType, int itemId)
+	private boolean isEffectReplaceable(L2Playable playable, L2EffectType effectType, int itemId)
 	{
-		L2Effect[] effects = playable.getAllEffects();
-		L2PcInstance activeChar = (L2PcInstance) ((playable instanceof L2PcInstance) ? playable : ((L2Summon) playable).getOwner());
-		if (effects == null)
+		L2Effect e = playable.getFirstEffect(effectType);
+		if (e == null)
 			return true;
 
-		for (L2Effect e : effects)
-		{
-			if (e.getEffectType() == effectType)
-			{
-				// One can reuse pots after 2/3 of their duration is over.
-				// It would be faster to check if its > 10 but that would screw custom pot durations...
-				if (e.getTaskTime() > (e.getSkill().getBuffDuration() * 67) / 100000)
-					return true;
-				SystemMessage sm = new SystemMessage(SystemMessageId.S1_PREPARED_FOR_REUSE);
-				sm.addItemName(itemId);
-				activeChar.sendPacket(sm);
-				return false;
-			}
-		}
-		return true;
+		// One can reuse pots after 2/3 of their duration is over.
+		// It would be faster to check if its > 10 but that would screw custom pot durations...
+		if (e.getTaskTime() > (e.getSkill().getBuffDuration() * 67) / 100000)
+			return true;
+
+		SystemMessage sm = new SystemMessage(SystemMessageId.S1_PREPARED_FOR_REUSE);
+		sm.addItemName(itemId);
+		playable.sendPacket(sm);
+		return false;
 	}
 	
 	/**
