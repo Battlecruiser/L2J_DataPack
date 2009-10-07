@@ -27,6 +27,7 @@ CREATE TABLE IF NOT EXISTS `custom_weapon` (
   `dropable` varchar(5) NOT NULL default 'false',
   `destroyable` varchar(5) NOT NULL default 'false',
   `tradeable` varchar(5) NOT NULL default 'false',
+  `depositable` varchar(5) NOT NULL default 'false',
   `enchant4_skill_id` decimal(11,0) NOT NULL default '0',
   `enchant4_skill_lvl` decimal(11,0) NOT NULL default '0',
   `onCast_skill_id` decimal(11,0) NOT NULL default '0',
