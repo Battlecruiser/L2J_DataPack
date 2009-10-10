@@ -22,12 +22,13 @@
 </skill>
 <skill id="3005" levels="1" name="Bleed">
   <set name="abnormalLvl" val="5"/>
-  <set name="power" val="50"/> <!-- Base Land Rate -->
-  <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="BLEED"/>
-  <set name="lvlDepend" val="1"/>
-  <set name="operateType" val="OP_ACTIVE"/>
   <set name="isDebuff" val="true"/>
+  <set name="lvlDepend" val="1"/>
+  <set name="magicLvl" val="40"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="power" val="100"/> <!-- Activation chance is defined in SQL, not through power. -->
+  <set name="skillType" val="BLEED"/>
+  <set name="target" val="TARGET_ONE"/>
   <for>
     <effect count="7" name="DamOverTime" time="3" val="66" abnormal="bleed">
       <mul order="0x30" stat="runSpd" val="0.8"/>
