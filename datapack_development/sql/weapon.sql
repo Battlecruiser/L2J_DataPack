@@ -418,7 +418,7 @@ INSERT INTO `weapon` VALUES
 (1472,'Dreadbane','lrhand','true',300,2,2,'bronze','d',50,10,'pole',8,-3.00000,0,0,0,325,0,26,-1,-1,409000,743,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3599-1;'),
 (1510,'Butcher\'s Sword','rhand','false',1450,1,1,'steel','none',13,10,'sword',8,0.00000,0,0,0,379,0,10,-1,-1,19500,0,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (1511,'Silversmith Hammer','rhand','false',1860,1,1,'steel','none',13,20,'blunt',4,4.00000,0,0,0,379,0,10,-1,-1,19500,0,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
-(1660,'Cursed Maingauche','rhand','true',1070,3,3,'fine_steel','d',62,5,'dagger',12,-3.00000,0,0,0,433,0,42,-1,-1,1074000,1983,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
+(1660,'Cursed Maingauche','rhand','true',1070,3,3,'fine_steel','d',62,5,'dagger',12,-3.00000,0,0,0,433,0,42,-1,-1,1074000,1983,'true','true','true','true','true',0,0,0,0,0,3005,1,50,0,'0-0;'),
 (2368,'Training Gloves','lrhand','false',1580,1,1,'cloth','none',7,5,'dualfist',4,4.00000,0,0,0,325,0,5,-1,-1,106,0,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (2369,'Squire\'s Sword','rhand','false',1600,1,1,'steel','none',6,10,'sword',8,0.00000,0,0,0,379,0,5,-1,-1,106,0,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (2370,'Guild Member\'s Club','rhand','false',1910,1,1,'wood','none',6,20,'blunt',4,4.00000,0,0,0,379,0,5,-1,-1,106,0,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'0-0;'),
