@@ -43,16 +43,12 @@ public class IOPRace extends Quest
 		if (st == null)
 			st = newQuestState(player);
 
-		int npcId = npc.getNpcId();
-		if (npcId == RIGNOS)
-		{
-			if (player.getLevel() < 78)
-				return "32349-notavailable.htm";
-			else if ((_player != -1) && (_player == player.getObjectId()) && (st.getQuestItemsCount(STAMP) == 4))
-				return "32349-return.htm"; // retail text missing
-			else if (_player != -1)
-				return "32349-notavailable.htm";
-		}
+		if (player.getLevel() < 78)
+			return "32349-notavailable.htm";
+		else if ((_player != -1) && (_player == player.getObjectId()) && (st.getQuestItemsCount(STAMP) == 4))
+			return "32349-return.htm"; // retail text missing
+		else if (_player != -1)
+			return "32349-notavailable.htm";
 
 		npc.showChatWindow(player);
 		return null;
@@ -64,37 +60,33 @@ public class IOPRace extends Quest
 		if (st == null)
 			st = newQuestState(player);
 
-		int npcId = npc.getNpcId();
-		if (npcId == RIGNOS)
+		if (_player == -1)
 		{
-			if (_player == -1)
+			// clean old data
+			player.stopSkillEffects(5239);
+			if (player.getPet() != null)
+				player.getPet().stopSkillEffects(5239);
+
+			st.takeItems(STAMP, -1);
+			st.set("1st", "0");
+			st.set("2nd", "0");
+			st.set("3rd", "0");
+			st.set("4th", "0");
+
+			L2Skill skill = SkillTable.getInstance().getInfo(5239, 5);
+			if (skill != null)
 			{
-				// clean old data
-				player.stopSkillEffects(5239);
+				npc.setTarget(player);
+				npc.doCast(skill);
 				if (player.getPet() != null)
-					player.getPet().stopSkillEffects(5239);
-
-				st.takeItems(STAMP, -1);
-				st.set("1st", "0");
-				st.set("2nd", "0");
-				st.set("3rd", "0");
-				st.set("4th", "0");
-
-				L2Skill skill = SkillTable.getInstance().getInfo(5239, 5);
-				if (skill != null)
 				{
-					npc.setTarget(player);
+					npc.setTarget(player.getPet());
 					npc.doCast(skill);
-					if (player.getPet() != null)
-					{
-						npc.setTarget(player.getPet());
-						npc.doCast(skill);
-					}
 				}
-
-				startQuestTimer("timer", 1800000, null, null); // 30 min
-				_player = player.getObjectId();
 			}
+
+			startQuestTimer("timer", 1800000, null, null); // 30 min
+			_player = player.getObjectId();
 		}
 
 		return null;
@@ -103,7 +95,6 @@ public class IOPRace extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
 
 		if (event.equalsIgnoreCase("timer"))
 		{
@@ -111,11 +102,12 @@ public class IOPRace extends Quest
 			return null;
 		}
 		else if (event.equalsIgnoreCase("finish")) // this is probably custom
-		{
+		{			
 			if (_player == player.getObjectId())
 			{
 				_player = -1;
-
+				
+				QuestState st = player.getQuestState(getName());
 				st.takeItems(STAMP, -1);
 				st.giveItems(KEY, 3);
 				player.stopSkillEffects(5239);
