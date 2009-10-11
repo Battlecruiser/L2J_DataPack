@@ -24195,19 +24195,19 @@ INSERT INTO `npcskills` VALUES
 (29099,4415,1),
 (29099,4045,1),
 (29099,5479,1),
-(29099,5221,1), -- Should be AI handled ?
-(29099,5222,1), -- Should be AI handled ?
-(29099,5223,1), -- Should be AI handled ?
-(29099,5224,1), -- Should be AI handled ?
-(29099,5225,1), -- Should be AI handled ?
-(29099,5226,1), -- Should be AI handled ?
+-- (29099,5221,1), -- Should be AI handled ?
+-- (29099,5222,1), -- Should be AI handled ?
+-- (29099,5223,1), -- Should be AI handled ?
+-- (29099,5224,1), -- Should be AI handled ?
+-- (29099,5225,1), -- Should be AI handled ?
+-- (29099,5226,1), -- Should be AI handled ?
 (29099,5227,1), -- Should be AI handled ?
-(29099,5228,1), -- Should be AI handled ?
-(29099,5229,1), -- Should be AI handled ?
-(29099,5401,1), -- Should be AI handled ?
-(29099,5402,1), -- Should be AI handled ?
-(29099,5403,1), -- Should be AI handled ?
-(29099,5404,1); -- Should be AI handled ?
+(29099,5228,1); -- Should be AI handled ?
+-- (29099,5229,1), -- Should be AI handled ?
+-- (29099,5401,1), -- Should be AI handled ?
+-- (29099,5402,1), -- Should be AI handled ?
+-- (29099,5403,1), -- Should be AI handled ?
+-- (29099,5404,1); -- Should be AI handled ?
 
 INSERT INTO `npcskills` VALUES
 (29100,4032,10),

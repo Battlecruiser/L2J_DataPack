@@ -14,7 +14,10 @@
  */
 package handlers.usercommandhandlers;
 
+import java.util.Map;
+
 import net.sf.l2j.gameserver.handler.IUserCommandHandler;
+import net.sf.l2j.gameserver.instancemanager.InstanceManager;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -46,8 +49,32 @@ public class InstanceZone implements IUserCommandHandler
 		if (id != COMMAND_IDS[0])
 			return false;
 		
-		activeChar.sendPacket(new SystemMessage(SystemMessageId.NO_INSTANCEZONE_TIME_LIMIT));
-		
+		Map<Integer, Long> instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(activeChar.getObjectId());
+		boolean firstMessage = true;
+		if (instanceTimes != null)
+			for(int instanceId : instanceTimes.keySet())
+			{
+				long remainingTime = (instanceTimes.get(instanceId) - System.currentTimeMillis()) / 1000;
+				if (remainingTime > 60)
+				{
+					if (firstMessage)
+					{
+						firstMessage = false;
+						activeChar.sendPacket(new SystemMessage(SystemMessageId.INSTANCE_ZONE_TIME_LIMIT));
+					}
+					int hours = (int) (remainingTime / 3600);
+					int minutes = (int) ((remainingTime%3600) / 60);
+					SystemMessage sm = new SystemMessage(SystemMessageId.AVAILABLE_AFTER_S1_S2_HOURS_S3_MINUTES);
+					sm.addString(InstanceManager.getInstance().getInstanceIdName(instanceId));
+					sm.addNumber(hours);
+					sm.addNumber(minutes);
+					activeChar.sendPacket(sm);
+				}
+				else
+					InstanceManager.getInstance().deleteInstanceTime(activeChar.getObjectId(), instanceId);
+			}
+		if (firstMessage)
+			activeChar.sendPacket(new SystemMessage(SystemMessageId.NO_INSTANCEZONE_TIME_LIMIT));
 		return true;
 	}
 }

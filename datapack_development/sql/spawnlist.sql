@@ -38582,10 +38582,6 @@ INSERT INTO `spawnlist` VALUES
 INSERT INTO `spawnlist` VALUES
 (null,'PavelRuins/ArchaicL',1,32045,96352,-110320,-3305,0,0,0,60,0,0);
 
--- Blacksmith of Power Lahm (Trader) of S80 Recipes and ingridients
-INSERT INTO `spawnlist` VALUES
-(null,'Emerald_Square',1,32359,146785,140987,-11885,0,0,24413,60,0,0);
-
 -- Kamael Island - by Vice
 INSERT INTO `spawnlist` VALUES
 (null,'Kamael Island',1,18342,-125478,38195,1176,0,0,21472,60,0,0),

@@ -2251,6 +2251,18 @@ INSERT INTO `zone_vertices` (`id`,`order`,`x`,`y`) VALUES
 (20100,5,42476,18164),
 (20100,6,42480,16448);
 
+-- support for Emerald Square
+INSERT INTO `zone_vertices` VALUES
+-- first secret room
+(20105,0,144175,142396),
+(20105,1,144251,142588),
+-- second secret room
+(20106,0,147400,143631),
+(20106,1,147484,143828),
+-- third secret room
+(20107,0,149396,143473),
+(20107,1,149559,143584);
+
 -- Pagan's mark zone
 INSERT INTO `zone_vertices` (`id`,`order`,`x`,`y`) VALUES 
 (30100,0,-16100,-36620),
