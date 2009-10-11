@@ -463,6 +463,24 @@ INSERT INTO `minions` VALUES
 (21544,21545,1,1),
 (21544,21546,1,1);
 
+-- Steam Corridor groups
+INSERT INTO `minions` VALUES 
+(22305,22308,1,1),
+(22306,22308,2,2),
+(22306,22309,2,2),
+(22307,22308,1,1),
+(22307,22309,2,2),
+(22307,22310,1,1),
+(22416,22308,1,1),
+(22416,22309,1,1),
+(22416,22310,1,1),
+(22416,22417,1,1);
+
+-- Emerald Square groups
+INSERT INTO `minions` VALUES 
+(22299,22300,2,2),
+(22301,22290,2,2);
+
 -- Original Sin Wardens
 INSERT INTO `minions` VALUES
 (22423,22424,1,1),

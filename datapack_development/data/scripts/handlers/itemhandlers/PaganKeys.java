@@ -16,6 +16,7 @@ package handlers.itemhandlers;
 
 import net.sf.l2j.gameserver.datatables.DoorTable;
 import net.sf.l2j.gameserver.handler.IItemHandler;
+import net.sf.l2j.gameserver.instancemanager.InstanceManager;
 import net.sf.l2j.gameserver.model.L2ItemInstance;
 import net.sf.l2j.gameserver.model.L2Object;
 import net.sf.l2j.gameserver.model.actor.L2Playable;
@@ -78,8 +79,18 @@ public class PaganKeys implements IItemHandler
 			case 9698:
 				if (door.getDoorId() == 24220020)
 				{
-					DoorTable.getInstance().getDoor(24220020).openMe();
-					DoorTable.getInstance().getDoor(24220020).onOpen();
+					if (activeChar.getInstanceId() != door.getInstanceId())
+					{
+						for (L2DoorInstance instanceDoor : InstanceManager.getInstance().getInstance(activeChar.getInstanceId()).getDoors())
+							if (instanceDoor.getDoorId() == door.getDoorId())
+							{
+								instanceDoor.openMe();
+							}
+					}
+					else
+					{
+						door.openMe();
+					}
 				}
 				else
 				{
@@ -89,8 +100,18 @@ public class PaganKeys implements IItemHandler
 			case 9699:
 				if (door.getDoorId() == 24220022)
 				{
-					DoorTable.getInstance().getDoor(24220022).openMe();
-					DoorTable.getInstance().getDoor(24220022).onOpen();
+					if (activeChar.getInstanceId() != door.getInstanceId())
+					{
+						for (L2DoorInstance instanceDoor : InstanceManager.getInstance().getInstance(activeChar.getInstanceId()).getDoors())
+							if (instanceDoor.getDoorId() == door.getDoorId())
+							{
+								instanceDoor.openMe();
+							}
+					}
+					else
+					{
+						door.openMe();
+					}
 				}
 				else
 				{

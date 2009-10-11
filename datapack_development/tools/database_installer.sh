@@ -285,6 +285,7 @@ $MYG < ../sql/char_templates.sql &> /dev/null
 $MYG < ../sql/char_creation_items.sql &> /dev/null
 $MYG < ../sql/character_friends.sql &> /dev/null
 $MYG < ../sql/character_hennas.sql &> /dev/null
+$MYG < ../sql/character_instance_time.sql &> /dev/null
 $MYG < ../sql/character_macroses.sql &> /dev/null
 $MYG < ../sql/character_quest_global_data.sql &> /dev/null 
 $MYG < ../sql/character_quests.sql &> /dev/null

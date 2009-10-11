@@ -623,11 +623,23 @@
   <set name="staticHitTime" val="true"/>
 </skill>
 <skill id="2360" levels="1" name="Water Dragon Claw">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="staticReuse" val="true"/>
   <set name="hitTime" val="500"/>
   <set name="staticHitTime" val="true"/>
+  <set name="reuseDelay" val="8000"/> <!-- unknown -->
+  <set name="skillType" val="DEBUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="itemConsumeId" val="9700"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="castRange" val="150"/>
+  <set name="effectRange" val="400"/>
+  <cond msgId="113" addName="1">
+    <and>
+      <player flyMounted="False"/>
+      <target npcId="29099"/>
+    </and>
+  </cond>
 </skill>
 <skill id="2361" levels="1" name="Evolving Wolf's Food">
   <set name="target" val="TARGET_SELF"/>
@@ -710,11 +722,23 @@
   </for>
 </skill>
 <skill id="2369" levels="1" name="Water Dragon Scale">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="target" val="TARGET_ONE"/>
+  <set name="staticReuse" val="true"/>
   <set name="hitTime" val="500"/>
   <set name="staticHitTime" val="true"/>
+  <set name="reuseDelay" val="8000"/> <!-- unknown -->
+  <set name="skillType" val="DEBUFF"/>
+  <set name="operateType" val="OP_ACTIVE"/>
+  <set name="itemConsumeId" val="9691"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="castRange" val="150"/>
+  <set name="effectRange" val="400"/>
+  <cond msgId="113" addName="1">
+    <and>
+      <player flyMounted="False"/>
+      <target npcId="25534"/>
+    </and>
+  </cond>
 </skill>
 <skill id="2370" levels="1" name="Scroll of Transformation - Pig">
   <set name="itemConsumeId" val="9897"/>
