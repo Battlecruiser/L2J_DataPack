@@ -7245,7 +7245,7 @@ INSERT INTO `etcitem` VALUES
 (10001,'Dark Potion','false','none',10,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','true','ItemSkills','2340-1;'),
 (10002,'Divine Potion','false','none',10,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','true','ItemSkills','2339-1;'),
 (10012,'Scorpion Poison stinger','false','none',20,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
-(10013,'Race Stamp','false','none',20,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
+(10013,'Race Stamp','false','none',20,'stackable','wood','none',-1,-1,0,0,'false','false','true','false','false','none','0-0;'),
 (10014,'Control Room Card','false','none',20,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
 (10015,'Prison Gate Key','false','none',0,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
 (10016,'Underground Warehouse Key','false','none',10,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),

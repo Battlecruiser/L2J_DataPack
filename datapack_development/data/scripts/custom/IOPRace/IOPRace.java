@@ -102,7 +102,7 @@ public class IOPRace extends Quest
 			return null;
 		}
 		else if (event.equalsIgnoreCase("finish")) // this is probably custom
-		{			
+		{
 			if (_player == player.getObjectId())
 			{
 				_player = -1;
