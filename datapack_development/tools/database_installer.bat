@@ -533,6 +533,7 @@ char_creation_items.sql
 char_templates.sql
 character_friends.sql
 character_hennas.sql
+character_instance_time.sql
 character_macroses.sql
 character_quest_global_data.sql
 character_quests.sql
