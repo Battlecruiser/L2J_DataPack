@@ -241,10 +241,14 @@
   <set name="operateType" val="OP_PASSIVE"/>
 </skill>
 <skill id="2525" levels="1" name="Scroll to move to Kamael Village">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
+  <set name="itemConsumeId" val="12753"/>
+  <set name="itemConsumeCount" val="1"/>
+  <set name="target" val="TARGET_SELF"/>
   <set name="hitTime" val="10000"/>
+  <set name="staticHitTime" val="true"/>
+  <set name="skillType" val="TELEPORT"/>
+  <set name="teleCoords" val="-120050,44500,360"/>
+  <set name="operateType" val="OP_ACTIVE"/>
 </skill>
 <skill id="2526" levels="1" name="Evasion Counter">
   <set name="itemConsumeId" val="12768"/>
