@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS `char_creation_items` (
 
 INSERT INTO `char_creation_items` VALUES
 (-1,5588,1,'false'), -- All classes - Tutorial Guide
-(-1,9716,10,'false'), -- All classes - Scroll of Escape: Kamael Village
+(-1,12753,10,'false'), -- All classes - Scroll to move to Kamael Village
 (-1,10650,5,'false'), -- All classes - Adventurer's Scroll of Escape
 (0,10,1,'false'), -- Human Fighter - Dagger
 (0,1146,1,'true'), -- Human Fighter - Squire's Shirt
