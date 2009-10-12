@@ -247,6 +247,8 @@ public class DarkCloudMansion extends Quest
 			{
 				for (L2PcInstance partyMember : party.getPartyMembers())
 				{
+					if (partyMember.getQuestState(qn) == null)
+						newQuestState(partyMember);
 					world.allowed.add(partyMember.getObjectId());
 					teleportplayer(partyMember,teleto);
 				}
@@ -350,15 +352,13 @@ public class DarkCloudMansion extends Quest
 
 	protected void runHall(DMCWorld world)
 	{
+		spawnHall(world);
 		world.status = 1;
 		openDoor(D1, world.instanceId);
-		spawnHall(world);
 	}
 	
 	protected void runFirstRoom(DMCWorld world)
 	{
-		world.status = 2;
-		openDoor(D2, world.instanceId);
 		DMCRoom FirstRoom = new DMCRoom();
 		DMCNpc thisnpc;
 
@@ -387,21 +387,21 @@ public class DarkCloudMansion extends Quest
 		FirstRoom.npcList.add(thisnpc);
 
 		world.rooms.put("FirstRoom", FirstRoom);
+		world.status = 2;
+		openDoor(D2, world.instanceId);
 		if (debug)
 			_log.info("DarkCloudMansion: spawned first room");
 	}
 	
 	protected void runHall2(DMCWorld world)
 	{
-		world.status = 3;
 		addSpawn(SOFaith,147818,179643,-6117,0,false,0,false,world.instanceId);
 		spawnHall(world);
+		world.status = 3;
 	}
 	
 	protected void runSecondRoom(DMCWorld world)
 	{
-		world.status = 4;
-		openDoor(D3, world.instanceId);
 		DMCRoom SecondRoom = new DMCRoom();
 		DMCNpc thisnpc;
 
@@ -444,21 +444,21 @@ public class DarkCloudMansion extends Quest
 		SecondRoom.npcList.add(thisnpc);
 
 		world.rooms.put("SecondRoom", SecondRoom);
+		world.status = 4;
+		openDoor(D3, world.instanceId);
 		if (debug)
 			_log.info("DarkCloudMansion: spawned second room");
 	}
 	
 	protected void runHall3(DMCWorld world)
 	{
-		world.status = 5;
 		addSpawn(SOAdversity,147808,181281,-6117,16383,false,0,false,world.instanceId);
 		spawnHall(world);
+		world.status = 5;
 	}
 	
 	protected void runThirdRoom(DMCWorld world)
 	{
-		world.status = 6;
-		openDoor(D4, world.instanceId);
 		DMCRoom ThirdRoom = new DMCRoom();
 		DMCNpc thisnpc = new DMCNpc();
 		thisnpc.isDead = false;
@@ -487,13 +487,14 @@ public class DarkCloudMansion extends Quest
 			thisnpc.npc.setIsNoRndWalk(true);
 		ThirdRoom.npcList.add(thisnpc);
 		world.rooms.put("ThirdRoom", ThirdRoom);
+		world.status = 6;
+		openDoor(D4, world.instanceId);
 		if (debug)
 			_log.info("DarkCloudMansion: spawned third room");
 	}
 	
 	protected void runThirdRoom2(DMCWorld world)
 	{
-		world.status = 8;
 		addSpawn(SOAdventure,148910,178397,-6117,16383,false,0,false,world.instanceId);
 		DMCRoom ThirdRoom = new DMCRoom();
 		DMCNpc thisnpc = new DMCNpc();
@@ -523,14 +524,13 @@ public class DarkCloudMansion extends Quest
 			thisnpc.npc.setIsNoRndWalk(true);
 		ThirdRoom.npcList.add(thisnpc);
 		world.rooms.put("ThirdRoom2", ThirdRoom);
+		world.status = 8;
 		if (debug)
 			_log.info("DarkCloudMansion: spawned third room second time");
 	}
 
 	protected void runForthRoom(DMCWorld world)
 	{
-		world.status = 7;
-		openDoor(D5, world.instanceId);
 		DMCRoom ForthRoom = new DMCRoom();
 		ForthRoom.counter = 0;
 		DMCNpc thisnpc;
@@ -565,15 +565,17 @@ public class DarkCloudMansion extends Quest
 		}
 		
 		world.rooms.put("ForthRoom", ForthRoom);
+		world.status = 7;
+		openDoor(D5, world.instanceId);
 		if (debug)
 			_log.info("DarkCloudMansion: spawned forth room");
 	}
 	
 	protected void runFifthRoom(DMCWorld world)
 	{
+		spawnFifthRoom(world);
 		world.status = 9;
 		openDoor(D6,world.instanceId);
-		spawnFifthRoom(world);
 		if (debug)
 			_log.info("DarkCloudMansion: spawned fifth room");
 	}
