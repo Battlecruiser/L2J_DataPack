@@ -8093,7 +8093,7 @@ INSERT INTO `etcitem` VALUES
 (12737,'Foundation Sealed Dynasty Necklace','false','none',150,'normal','paper','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
 (12738,'Foundation Sealed Dynasty Ring','false','none',150,'normal','paper','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
 (12739,'Foundation Sealed Dynasty Earring','false','none',150,'normal','paper','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
-(12753,'Kamael Village Teleportation Scroll','false','scroll',0,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','ItemSkills','2525-1;'),
+(12753,'Kamael Village Teleportation Scroll','false','scroll',0,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','true','ItemSkills','2525-1;'),
 (12754,'Accessory Life Stone - level 46','false','none',2,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
 (12755,'Accessory Life Stone - level 49','false','none',2,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
 (12756,'Accessory Life Stone - level 52','false','none',2,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
