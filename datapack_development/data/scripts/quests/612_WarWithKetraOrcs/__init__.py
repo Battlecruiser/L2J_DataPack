@@ -78,7 +78,6 @@ class Quest (JQuest) :
      if st :
          npcId = npc.getNpcId()
          id = st.getInt("id")
-         cond = st.getInt("cond")
          Molars = st.getQuestItemsCount(Molar)
          if npcId == Ashas and player.getAllianceWithVarkaKetra() <= -1 : #the alliance check is only temporary, should be done on core side/AI
              if id == 1 :
