@@ -1733,7 +1733,7 @@ INSERT INTO `npc` VALUES
 (18471,18471,'Hall Guard',0,'',0,'LineageMonster4.Anthias',20,41,1,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,253,0,253,0,0,NULL,80,120,'',0,0,0,'LAST_HIT',0,0,0,'balanced','false'),
 (18472,18472,'Hall Guard',0,'',0,'LineageMonster4.Anthias',20,41,1,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,253,0,253,0,0,NULL,80,120,'',0,0,0,'LAST_HIT',0,0,0,'balanced','false'),
 (18473,18473,'Hall Captain',0,'',0,'LineageMonster3.cannibal_stakato_leader_120p',20,27,1,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,253,0,253,0,0,NULL,80,120,'',0,0,0,'LAST_HIT',0,0,0,'balanced','false'),
-(18474,18474,'Alarm',0,'',0,'LineageNpcEV.trioll_altar',9,33.5,1,'male','L2Monster',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,253,0,253,0,0,NULL,80,120,'',0,0,0,'LAST_HIT',0,0,0,'balanced','false'),
+(18474,18474,'Alarm',0,'',0,'LineageNpcEV.trioll_altar',9,33.5,83,'male','L2Monster',40,4717,1973,0,0,40,43,30,21,20,20,0,0,1943,609,901,494,253,0,253,0,0,NULL,80,120,'',0,0,0,'LAST_HIT',0,0,0,'balanced','false'),
 (18475,18475,'Hall Guard',0,'',0,'LineageMonster.undine',20,41,1,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,253,0,253,0,0,NULL,80,120,'',0,0,0,'LAST_HIT',0,0,0,'balanced','false'),
 (18476,18476,'Hall Guard',0,'',0,'LineageMonster.lienrik_210p',20,41,1,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,253,0,253,0,0,NULL,80,120,'',0,0,0,'LAST_HIT',0,0,0,'balanced','false'),
 (18477,18477,'Coral Treasure Chest',0,'',0,'LineageMonster.mimic_even',8.5,8.5,1,'male','L2Npc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,253,0,253,0,0,NULL,80,120,'',0,0,0,'LAST_HIT',0,0,0,'balanced','false'),
