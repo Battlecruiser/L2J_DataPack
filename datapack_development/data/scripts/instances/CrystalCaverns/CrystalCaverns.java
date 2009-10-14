@@ -981,6 +981,7 @@ public class CrystalCaverns extends Quest
 				tele.x = 153689;
 				tele.y = 142226;
 				tele.z = -9750;
+				tele.instanceId = world.instanceId;
 				teleportplayer(player,tele);
 			}
 			else if (event.equalsIgnoreCase("Timer2")||event.equalsIgnoreCase("Timer3")||event.equalsIgnoreCase("Timer4")||event.equalsIgnoreCase("Timer5"))
@@ -1130,6 +1131,8 @@ public class CrystalCaverns extends Quest
 					npc.addSkill(SkillTable.getInstance().getInfo(5244, 1));
 					npc.addSkill(SkillTable.getInstance().getInfo(5245, 1));
 					world._alarm = addSpawn(ALARMID,spawnLoc[0],spawnLoc[1],spawnLoc[2],10800,false,0,false,world.instanceId);
+					world._alarm.disableCoreAI(true);
+					world._alarm.setIsImmobilized(true);
 					world._alarm.broadcastPacket(new CreatureSay(world._alarm.getObjectId(),1,world._alarm.getName(),"Alarm signal was switched off! All will in the danger, if we do not take measures immediately!"));
 				}
 			}
