@@ -77,13 +77,11 @@ class Quest (JQuest) :
      if st :
         npcId = npc.getNpcId()
         id = st.getInt("id")
-        cond = st.getInt("cond")
         manes = st.getQuestItemsCount(Mane)
         if npcId == Kadun :
          if id == 1 :
              if manes :
                  htmltext = "31370-04.htm"
-                 st.set("cond","2")
              else :
                 htmltext = "31370-05.htm"
          else :
