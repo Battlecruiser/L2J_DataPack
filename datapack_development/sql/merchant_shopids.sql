@@ -668,7 +668,7 @@ INSERT INTO `merchant_shopids` VALUES
 ('9985', 'gm'), -- A PVP Weapons
 ('9986', 'gm'), -- [reserved]
 ('9987', 'gm'), -- [reserved]
-('9988', 'gm'), -- [reserved]
+('9988', 'gm'), -- Territory Items
 ('9989', 'gm'), -- Fortress Misc
 ('9990', 'gm'), -- Territory Weapons
 ('9991', 'gm'), -- Territory Wards
