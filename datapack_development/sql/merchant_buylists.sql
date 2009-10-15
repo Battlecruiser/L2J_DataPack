@@ -22898,8 +22898,25 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (1,0,9987,1);
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
--- (GM-Shop) [reserved]
-(1,0,9988,1);
+-- (GM-Shop) Territory Items
+(13757,0,9988,1), -- Gludio Territory Badge
+(13758,0,9988,2), -- Dion Territory Badge
+(13759,0,9988,3), -- Giran Territory Badge
+(13760,0,9988,4), -- Oren Territory Badge
+(13761,0,9988,5), -- Aden Territory Badge
+(13762,0,9988,6), -- Innadril Territory Badge
+(13763,0,9988,7), -- Goddard Territory Badge
+(13764,0,9988,8), -- Rune Territory Badge
+(13765,0,9988,9), -- Schuttgart Territory Badge
+(13731,0,9988,10), -- Gludio Blessed Scroll of Escape
+(13732,0,9988,11), -- Dion Blessed Scroll of Escape
+(13733,0,9988,12), -- Giran Blessed Scroll of Escape
+(13734,0,9988,13), -- Oren Blessed Scroll of Escape
+(13735,0,9988,14), -- Aden Blessed Scroll of Escape
+(13736,0,9988,15), -- Innadril Blessed Scroll of Escape
+(13737,0,9988,16), -- Goddard Blessed Scroll of Escape
+(13738,0,9988,17), -- Rune Blessed Scroll of Escape
+(13739,0,9988,18); -- Schuttgart Blessed Scroll of Escape
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Fortress Misc
