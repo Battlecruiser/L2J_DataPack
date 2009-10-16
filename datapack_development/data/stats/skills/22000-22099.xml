@@ -274,11 +274,9 @@
     <and>
       <player flyMounted="False"/>
       <player level="#minLvl"/>
-      <and>
-        <not>
-          <player level="#maxLvl"/>
-        </not>
-      </and>
+      <not>
+        <player level="#maxLvl"/>
+      </not>
     </and>
   </cond>
 </skill>
@@ -299,11 +297,9 @@
     <and>
       <player flyMounted="False"/>
       <player level="#minLvl"/>
-      <and>
-        <not>
-          <player level="#maxLvl"/>
-        </not>
-      </and>
+      <not>
+        <player level="#maxLvl"/>
+      </not>
     </and>
   </cond>
 </skill>
