@@ -451,11 +451,9 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
     <mul order="0x30" stat="pAtkSpd" val="0.8">
-      <and>
-        <not>
-          <using kind="Magic"/>
-        </not>
-      </and>
+      <not>
+        <using kind="Magic"/>
+      </not>
     </mul>
   </for>
 </skill>
@@ -859,11 +857,9 @@
   <set name="operateType" val="OP_PASSIVE"/>
   <for>
     <mul order="0x30" stat="mAtkSpd" val="0.5">
-      <and>
-        <not>
-           <using kind="Magic"/>
-        </not>
-      </and>
+      <not>
+        <using kind="Magic"/>
+      </not>
     </mul>
   </for>
 </skill>
