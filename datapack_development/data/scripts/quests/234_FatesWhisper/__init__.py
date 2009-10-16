@@ -31,7 +31,7 @@ CHEST_SPAWNS = {
   
 #mobId=[cond,dropId,rate]
 DROPLIST={
-29020: [7,RED_PIPETTE_KNIFE,10]        #Baium...NOTE: rate may need adjustment
+29020: [7,RED_PIPETTE_KNIFE,100]
 }
 
 ## START: Weapon exchange section (any top B grade for 2nd best A grade)
