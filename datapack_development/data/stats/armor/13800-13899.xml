@@ -73,7 +73,7 @@
   </for>
 </item>
 <item id="13889" name="Holy Spirit's Cloak - Kamael exclusive">
-  <cond msgId="1518">
+  <cond msgId="2453">
     <and>
       <player race="Kamael"/>
       <or>
@@ -88,7 +88,7 @@
   </for>
 </item>
 <item id="13890" name="Holy Spirit's Cloak">
-  <cond msgId="1518">
+  <cond msgId="2453">
     <or>
       <player active_skill_id="8284"/> <!-- Vesper Noble Breastplate -->
       <player active_skill_id="8302"/> <!-- Vesper Noble Breastplate {PvP} -->
@@ -100,7 +100,7 @@
   </for>
 </item>
 <item id="13891" name="Holy Spirit's Cloak - Light Armor exclusive">
-  <cond msgId="1518">
+  <cond msgId="2453">
     <and>
       <not>
         <player race="Kamael"/>
@@ -117,7 +117,7 @@
   </for>
 </item>
 <item id="13892" name="Holy Spirit's Cloak - Robe exclusive">
-  <cond msgId="1518">
+  <cond msgId="2453">
     <or>
       <player active_skill_id="8288"/> <!-- Vesper Noble Tunic -->
       <player active_skill_id="8306"/> <!-- Vesper Noble Tunic {PvP} -->

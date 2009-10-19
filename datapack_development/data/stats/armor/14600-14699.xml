@@ -7,7 +7,7 @@
   </for>
 </item>
 <item id="14601" name="Ancient Cloak - Kamael exclusive - Kamael Use">
-  <cond msgId="1518">
+  <cond msgId="2453">
     <and>
       <player race="Kamael"/>
       <or>
@@ -29,7 +29,7 @@
   </for>
 </item>
 <item id="14602" name="Ancient Cloak">
-  <cond msgId="1518">
+  <cond msgId="2453">
     <and>
       <player race="Kamael"/>
       <or>
@@ -51,7 +51,7 @@
   </for>
 </item>
 <item id="14608" name="Ancient Cloak - Light Armor exclusive">
-  <cond msgId="1518">
+  <cond msgId="2453">
     <and>
       <not>
         <player race="Kamael"/>
@@ -73,7 +73,7 @@
   </for>
 </item>
 <item id="14609" name="Ancient Cloak">
-  <cond msgId="1518">
+  <cond msgId="2453">
     <or>
       <player active_skill_id="3348"/> <!-- Dynasty Breast Plate - Shield Master -->
       <player active_skill_id="3349"/> <!-- Dynasty Breast Plate - Weapon Master -->
@@ -98,7 +98,7 @@
   </for>
 </item>
 <item id="14610" name="Ancient Cloak - Robe exclusive">
-  <cond msgId="1518">
+  <cond msgId="2453">
     <or>
       <player active_skill_id="3354"/> <!-- Dynasty Tunic - Healer -->
       <player active_skill_id="3355"/> <!-- Dynasty Tunic - Enchanter -->
