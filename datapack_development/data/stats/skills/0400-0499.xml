@@ -1535,7 +1535,6 @@
   </for>
 </skill>
 <skill id="480" levels="1" name="Dark Blade">
-  <!-- Needs to be finished -->
   <!-- CT2.2 retail confirmed -->
   <set name="target" val="TARGET_SELF"/>
   <set name="skillType" val="CONT"/>
@@ -1544,7 +1543,7 @@
   <set name="element" val="5"/> <!-- Dark -->
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="0">
-       <add order="0x40" stat="darkPower" val="10"/>
+      <add order="0x40" stat="darkPower" val="10"/>
     </effect>
   </for>
 </skill>
@@ -1557,7 +1556,7 @@
   <set name="operateType" val="OP_TOGGLE"/>
   <for>
     <effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="0">
-       <add order="0x40" stat="darkRes" val="#darkRes"/>
+      <add order="0x40" stat="darkRes" val="#darkRes"/>
     </effect>
   </for>
 </skill>
