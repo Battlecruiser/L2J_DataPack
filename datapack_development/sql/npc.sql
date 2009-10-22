@@ -9429,9 +9429,6 @@ INSERT INTO `npc` VALUES
 (70010,31606,'Catrina',1,'L2J TvT Event Manager',1,'Monster2.queen_of_cat',8,15,70,'female','L2TvTEventNpc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,0,333,0,0,NULL,28,120,'',0,0,0,'LAST_HIT',0,0,0,'balanced','false'),
 (1000003,32226,'Shiela',1,'L2J NPC Buffer',1,'LineageNPC2.K_F1_grand',11,22.25,70,'male','L2NpcBuffer',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,0,333,0,0,NULL,28,120,'',0,0,0,'LAST_HIT',0,0,0,'balanced','false');
 
--- Agathion Standards
-UPDATE `npc` SET type='L2Npc', level='55', sp='0', exp='0', hp='2643', mp='988', attackrange='40', AI='fighter', atkspd='253', patk='665', matk='311', pdef='322', mdef='262', str='40', `int`='21', dex='30', wit='20', con='43', men='25', collision_radius='13', collision_height='11.5', rhand='0', lhand='0' WHERE name LIKE '%Agathion%';
-
 -- Fortress: Support Unit
 UPDATE `npc` SET collision_radius='9', collision_height='23.5', level='70' WHERE name='Support Unit Captain';
 -- Fortress: Scout Golem
@@ -9454,3 +9451,6 @@ UPDATE `npc` SET level='70', sp='0', exp='0', hp='3862', mp='1494', attackrange=
 UPDATE `npc` SET level='70', sp='0', exp='0', hp='3862', mp='1494', attackrange='40', AI='fighter', atkspd='253', patk='1303', matk='607', pdef='471', mdef='382', str='40', `int`='21', dex='30', wit='20', con='43', men='20', hpreg='0', mpreg='0', aggro='0', matkspd='333', faction_range='0', absorb_level='0', absorb_type='LAST_HIT', ss='0', bss='0', ss_rate='0', drop_herbs='false' WHERE type='L2ClanHallDoormen';
 UPDATE `npc` SET level='70', sp='0', exp='0', hp='3862', mp='1494', attackrange='40', AI='fighter', atkspd='253', patk='1303', matk='607', pdef='471', mdef='382', str='40', `int`='21', dex='30', wit='20', con='43', men='20', hpreg='0', mpreg='0', aggro='0', matkspd='333', faction_range='0', absorb_level='0', absorb_type='LAST_HIT', ss='0', bss='0', ss_rate='0', drop_herbs='false' WHERE type='L2CastleDoormen';
 UPDATE `npc` SET level='70', sp='0', exp='0', hp='3862', mp='1494', attackrange='40', AI='fighter', atkspd='253', patk='1303', matk='607', pdef='471', mdef='382', str='40', `int`='21', dex='30', wit='20', con='43', men='20', hpreg='0', mpreg='0', aggro='0', matkspd='333', faction_range='0', absorb_level='0', absorb_type='LAST_HIT', ss='0', bss='0', ss_rate='0', drop_herbs='false' WHERE type='L2FortDoormen';
+
+-- Agathion Standards
+UPDATE `npc` SET type='L2Npc', level='55', sp='0', exp='0', hp='2643', mp='988', attackrange='40', AI='fighter', atkspd='253', patk='665', matk='311', pdef='322', mdef='262', str='40', `int`='21', dex='30', wit='20', con='43', men='25', collision_radius='13', collision_height='11.5', rhand='0', lhand='0' WHERE name LIKE '%Agathion%';
