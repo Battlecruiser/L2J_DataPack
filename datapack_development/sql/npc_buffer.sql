@@ -19,6 +19,8 @@ INSERT IGNORE INTO `npc_buffer` VALUES
 (36402,4342,2,0,0,4342),
 (36402,4358,3,0,0,4358),
 (36402,4360,3,0,0,4360),
+
+-- Custom NPC Buffer (TODO: This should be moved to custom tables)
 (1000003,264,1,57,100,264),
 (1000003,265,1,57,100,265),
 (1000003,266,1,57,100,266),
