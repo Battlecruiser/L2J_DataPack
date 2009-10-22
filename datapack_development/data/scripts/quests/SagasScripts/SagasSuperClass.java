@@ -69,7 +69,8 @@ public class SagasSuperClass extends QuestJython
 			addTalkId(npc);
 		for (int mobid : Mob)
 			addKillId(mobid);
-		questItemIds = Items;
+		questItemIds = Items.clone();
+		questItemIds[0] = 0; questItemIds[2] = 0; //remove Ice Crystal and Divine Stone of Wisdom
 		for (int Archon_Minion = 21646; Archon_Minion < 21652; Archon_Minion++)
 			addKillId(Archon_Minion);
 		int[] Archon_Hellisha_Norm = {18212, 18214, 18215, 18216, 18218};
@@ -208,7 +209,8 @@ public class SagasSuperClass extends QuestJython
 				if (player.getLevel() < 76)
 				{
 					htmltext = "0-02.htm";
-					st.exitQuest(true);
+					if (st.getState() == State.CREATED)
+						st.exitQuest(true);
 				}
 				else
 					htmltext = "0-05.htm";
