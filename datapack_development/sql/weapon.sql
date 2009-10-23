@@ -3346,7 +3346,7 @@ INSERT INTO `weapon` VALUES
 (20149,'Dismantler - Event - 4 Hour Expiration Period','lrhand','false',643,1,1,'fine_steel','b',210,15,'ancient',8,2,0,0,0,350,0,99,-1,240,0,0,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (20150,'Hell Hound - Event - 4 Hour Expiration Period','rhand','false',567,2,1,'fine_steel','b',245,10,'crossbow',10,-1,0,0,0,303,0,99,-1,240,0,0,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (20151,'Dark Legion - Event - 4 Hour Expiration Period','rhand','false',440,1,1,'fine_steel','a',232,10,'sword',8,0,0,0,0,379,0,114,-1,240,0,0,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'0-0;'),
-(20152,'Dragon Slayer - Event - 4 Hour Expiration Period','rhand','false',613,1,1,'fine_steel','a',282,10,'sword',8,0,0,0,0,325,0,114,-1,240,0,0,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'0-0;'),
+(20152,'Dragon Slayer - Event - 4 Hour Expiration Period','lrhand','false',613,1,1,'fine_steel','a',282,10,'bigsword',8,0,0,0,0,325,0,114,-1,240,0,0,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (20153,'Soul Separator - Event - 4 Hour Expiration Period','rhand','false',317,1,1,'fine_steel','a',203,5,'dagger',12,-3,0,0,0,433,0,114,-1,240,0,0,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (20154,'Elysian - Event - 4 Hour Expiration Period','none','false',527,1,1,'fine_steel','a',232,20,'blunt',4,4,0,0,0,379,0,114,-1,240,0,0,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (20155,'Doom Crusher - Event - 4 Hour Expiration Period','rhand','false',633,1,1,'fine_steel','a',282,20,'blunt',4,4,0,0,0,325,0,114,-1,240,0,0,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'0-0;'),
