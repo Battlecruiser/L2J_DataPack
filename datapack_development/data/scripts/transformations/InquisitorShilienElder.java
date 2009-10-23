@@ -34,7 +34,7 @@ public class InquisitorShilienElder extends L2Transformation
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(1524, getPlayer().getLevel() - 43), false);
 			// Divine Curse
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(1525, getPlayer().getLevel() - 43), false);
-			getPlayer().setTransformAllowedSkills(new int[]{838,5491,1523,1528,1524,1525,1430,1303,1059});
+			getPlayer().setTransformAllowedSkills(new int[]{838,5491,1523,1528,1524,1525,1430,1303,1059,1043});
 		}
 		else
 			getPlayer().setTransformAllowedSkills(new int[]{838,5491,1430,1303,1059});
