@@ -73,7 +73,6 @@
   <set name="reuseDelay" val="4000"/>
   <set name="hitTime" val="2000"/>
   <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
   <set name="operateType" val="OP_ACTIVE"/>
   <set name="aggroPoints" val="#aggro"/>
   <enchant1 name="hpConsume" val="#ench1hpConsume"/>
@@ -84,7 +83,7 @@
   </for>
   <enchant1for>
     <effect name="Buff" time="1200" val="0" stackOrder="#ench1maxMp" stackType="max_mp_up">
-       <mul order="0x30" stat="maxMp" val="#ench1maxMp"/>
+      <mul order="0x30" stat="maxMp" val="#ench1maxMp"/>
     </effect>
   </enchant1for>
 </skill>
