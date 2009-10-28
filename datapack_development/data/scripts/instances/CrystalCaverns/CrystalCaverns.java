@@ -532,6 +532,7 @@ public class CrystalCaverns extends Quest
 			instanceId = InstanceManager.getInstance().createDynamicInstance(template);
 			world = new CCWorld(System.currentTimeMillis() + 5400000);
 			world.instanceId = instanceId;
+			world.templateId = INSTANCEID;
 			InstanceManager.getInstance().addWorld(world);
 			_log.info("Crystal Caverns started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
 			runOracle((CCWorld)world);
