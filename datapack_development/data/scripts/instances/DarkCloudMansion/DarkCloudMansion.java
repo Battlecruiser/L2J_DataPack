@@ -55,6 +55,7 @@ public class DarkCloudMansion extends Quest
 	private static boolean noRndWalk = true;
 	
 	private static String qn = "DarkCloudMansion";
+	private static final int INSTANCEID = 9;
 	
 	private class teleCoord {int instanceId; int x; int y; int z;}
 
@@ -233,6 +234,7 @@ public class DarkCloudMansion extends Quest
 			instanceId = InstanceManager.getInstance().createDynamicInstance(template);
 			world = new DMCWorld();
 			world.instanceId = instanceId;
+			world.templateId = INSTANCEID;
 			InstanceManager.getInstance().addWorld(world);
 			_log.info("DarkCloudMansion: started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
 			runStartRoom((DMCWorld)world);
