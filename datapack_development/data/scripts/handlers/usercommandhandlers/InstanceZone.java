@@ -18,6 +18,7 @@ import java.util.Map;
 
 import net.sf.l2j.gameserver.handler.IUserCommandHandler;
 import net.sf.l2j.gameserver.instancemanager.InstanceManager;
+import net.sf.l2j.gameserver.instancemanager.InstanceManager.InstanceWorld;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.network.SystemMessageId;
 import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -48,7 +49,15 @@ public class InstanceZone implements IUserCommandHandler
 	{
 		if (id != COMMAND_IDS[0])
 			return false;
-		
+
+		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(activeChar);
+		if (world != null && world.templateId >= 0)
+		{
+			SystemMessage sm = new SystemMessage(SystemMessageId.INSTANT_ZONE_CURRENTLY_INUSE);
+			sm.addString(InstanceManager.getInstance().getInstanceIdName(world.templateId));
+			activeChar.sendPacket(sm);
+		}
+
 		Map<Integer, Long> instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(activeChar.getObjectId());
 		boolean firstMessage = true;
 		if (instanceTimes != null)
