@@ -306,7 +306,7 @@ public class FeedableBeasts extends L2AttackableAIScript
         temp = new GrowthCapableMob(1,40);
         temp.addMobs(CRYSTAL_SPICE,Cougar_1_Crystal_2);
         _GrowthCapableMobs.put(21495, temp);
-        _GrowthCapableMobs.put(21496, temp);
+        _GrowthCapableMobs.put(21497, temp);
                 
         temp = new GrowthCapableMob(2,25);
         temp.addMobs(GOLDEN_SPICE,Cougar_2_1);
