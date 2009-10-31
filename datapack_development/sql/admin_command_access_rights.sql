@@ -277,15 +277,17 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 -- HELP PAGE
 ('admin_help','1'),
 
--- INSTANCES
+-- INSTANCE
 ('admin_setinstance','1'),
 ('admin_ghoston','1'),
 ('admin_ghostoff','1'),
 ('admin_createinstance','1'),
 ('admin_destroyinstance','1'),
 ('admin_listinstances','1'),
-('admin_instancezone', '1'),
-('admin_instancezone_clear', '1'),
+
+-- INSTANCE ZONE
+('admin_instancezone','1'),
+('admin_instancezone_clear','1'),
 
 -- INVUL
 ('admin_invul','1'),
