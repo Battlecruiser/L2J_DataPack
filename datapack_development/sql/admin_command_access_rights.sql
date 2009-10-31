@@ -284,6 +284,8 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_createinstance','1'),
 ('admin_destroyinstance','1'),
 ('admin_listinstances','1'),
+('admin_instancezone', '1'),
+('admin_instancezone_clear', '1'),
 
 -- INVUL
 ('admin_invul','1'),
