@@ -69,6 +69,7 @@ public class MasterHandler
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminHeal());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminHelpPage());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminInstance());
+		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminInstanceZone());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminInvul());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminKick());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminKill());
