@@ -7071,7 +7071,7 @@ INSERT INTO `etcitem` VALUES
 (9687,'Gate Key: Blood','false','none',10,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','true','ItemSkills','2356-1;'),
 (9688,'Ballista Bomb','false','none',5,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','true','ItemSkills','2342-1;'),
 (9689,'Spirit of the Lake','false','none',5,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','true','ItemSkills','2368-1;'),
-(9690,'Contaminated Crystal','false','none',20,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
+(9690,'Contaminated Crystal','false','none',20,'stackable','wood','none',-1,-1,0,0,'false','false','true','false','false','none','0-0;'),
 (9691,'Water Dragon Scale','false','none',20,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','true','ItemSkills','2369-1;'),
 (9692,'Red Coral','false','none',20,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
 (9693,'Crystal Fragment','false','none',20,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
