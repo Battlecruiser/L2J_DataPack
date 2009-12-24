@@ -71,6 +71,32 @@ if [ -z "$LSPASS" ]; then
 elif [ "$LSUSER" == "$LSPASS" ]; then
   echo "You're not too brilliant choosing passwords huh?"
 fi
+#CB
+echo -ne "\nPlease enter MySQL Community Server hostname (default localhost): "
+read CBDBHOST
+if [ -z "$CBDBHOST" ]; then
+  CBDBHOST="localhost"
+fi
+echo -ne "\nPlease enter MySQL Community Server database name (default l2jcb): "
+read CBDB
+if [ -z "$CBDB" ]; then
+  CBDB="l2jcb"
+fi
+echo -ne "\nPlease enter MySQL Community Server user (default root): "
+read CBUSER
+if [ -z "$CBUSER" ]; then
+  CBUSER="root"
+fi
+echo -ne "\nPlease enter MySQL Community Server $CBUSER's password (won't be displayed) :"
+stty -echo
+read CBPASS
+stty echo
+echo ""
+if [ -z "$CBPASS" ]; then
+  echo "Hum.. I'll let it be but don't be stupid and avoid empty passwords"
+elif [ "$CBUSER" == "$CBPASS" ]; then
+  echo "You're not too brilliant choosing passwords huh?"
+fi
 #GS
 echo -ne "\nPlease enter MySQL Game Server hostname (default $LSDBHOST): "
 read GSDBHOST
@@ -120,6 +146,10 @@ LSDBHOST=$LSDBHOST
 LSDB=$LSDB
 LSUSER=$LSUSER
 LSPASS=$LSPASS
+CBDBHOST=$CBDBHOST
+CBDB=$CBDB
+CBUSER=$CBUSER
+CBPASS=$CBPASS
 GSDBHOST=$GSDBHOST
 GSDB=$GSDB
 GSUSER=$GSUSER
@@ -164,12 +194,12 @@ echo ""
 echo "Choose full (f) if you don't have and 'accounts' table or would"
 echo "prefer to erase the existing accounts information."
 echo "Choose skip (s) to skip loginserver DB installation and go to"
-echo "gameserver DB installation/upgrade."
+echo "communityserver DB installation/upgrade."
 echo -ne "LOGINSERVER DB install type: (f) full, (s) skip or (q) quit? "
 read LOGINPROMPT
 case "$LOGINPROMPT" in
 	"f"|"F") logininstall; loginupgrade; gsbackup; asktype;;
-	"s"|"S") gsbackup; asktype;;
+	"s"|"S") cbbackup; askcbtype;;
 	"q"|"Q") finish;;
 	*) asklogin;;
 esac
@@ -199,6 +229,27 @@ while :
      if [ $? -ne 0 ];then
      echo ""
      echo "There was a problem accesing your GS database, either it wasnt created or authentication data is incorrect."
+     exit 1
+     fi
+     break
+   elif [ "$LSB" == "n" -o "$LSB" == "N" ]; then 
+     break
+   fi
+  done 
+}
+
+cbbackup(){
+while :
+  do
+   echo ""
+   echo -ne "Do you want to make a backup copy of your CBDB? (y/n): "
+   read LSB
+   if [ "$LSB" == "Y" -o "$LSB" == "y" ]; then
+     echo "Making a backup of the original communityserver database."
+     $MYSQLDUMPPATH --add-drop-table -h $CBDBHOST -u $CBUSER --password=$CBPASS $CBDB > communityserver_backup.sql
+     if [ $? -ne 0 ];then
+     echo ""
+     echo "There was a problem accesing your CB database, either it wasnt created or authentication data is incorrect."
      exit 1
      fi
      break
@@ -244,6 +295,43 @@ case "$INSTALLTYPE" in
 esac
 }
 
+askcbtype(){
+echo ""
+echo ""
+echo "WARNING: A full install (f) will destroy all existing community data."
+echo -ne "COMMUNITYSERVER DB install type: (f) full install, (u) upgrade, (s) skip or (q) quit? "
+read INSTALLTYPE
+case "$INSTALLTYPE" in
+	"f"|"F") fullcbinstall; upgradecbinstall I; gsbackup; asktype;;
+	"u"|"U") upgradecbinstall U; gsbackup; asktype;;
+	"s"|"S") gsbackup; asktype;;
+	"q"|"Q") finish;;
+	*) asktype;;
+esac
+}
+
+fullcbinstall(){
+echo "Deleting all communityserver tables for new content."
+$MYG < commuity_install.sql &> /dev/null
+}
+
+upgradecbinstall(){
+if [ "$1" == "I" ]; then 
+echo "Installling new communityserver content."
+else
+echo "Upgrading communityserver content"
+fi
+if [ "$1" == "I" ]; then
+$MYG < ../cb_sql/clan_introductions.sql &> /dev/null
+$MYG < ../cb_sql/comments.sql &> /dev/null
+$MYG < ../cb_sql/forums.sql &> /dev/null
+$MYG < ../cb_sql/gameservers.sql &> /dev/null
+$MYG < ../cb_sql/posts.sql &> /dev/null
+$MYG < ../cb_sql/topics.sql &> /dev/null
+fi
+newbie_helper_cb
+}
+
 fullinstall(){
 echo "Deleting all gameserver tables for new content."
 $MYG < full_install.sql &> /dev/null
@@ -262,7 +350,6 @@ $MYG < ../sql/castle.sql &> /dev/null
 $MYG < ../sql/clanhall.sql &> /dev/null
 $MYG < ../sql/fort.sql &> /dev/null
 $MYG < ../sql/forums.sql &> /dev/null
-$MYG < ../sql/grandboss_data.sql &> /dev/null
 $MYG < ../sql/npc_buffer.sql &> /dev/null
 $MYG < ../sql/seven_signs_festival.sql &> /dev/null
 $MYG < ../sql/seven_signs_status.sql &> /dev/null
@@ -322,6 +409,7 @@ $MYG < ../sql/fortsiege_clans.sql &> /dev/null
 $MYG < ../sql/four_sepulchers_spawnlist.sql &> /dev/null
 $MYG < ../sql/games.sql &> /dev/null
 $MYG < ../sql/global_tasks.sql &> /dev/null
+$MYG < ../sql/grandboss_data.sql &> /dev/null
 $MYG < ../sql/grandboss_list.sql &> /dev/null
 $MYG < ../sql/helper_buff_list.sql &> /dev/null
 $MYG < ../sql/henna.sql &> /dev/null
@@ -338,8 +426,10 @@ $MYG < ../sql/merchant_buylists.sql &> /dev/null
 $MYG < ../sql/merchant_lease.sql &> /dev/null
 $MYG < ../sql/merchant_shopids.sql &> /dev/null
 $MYG < ../sql/merchants.sql &> /dev/null
+$MYG < ../sql/messages.sql &> /dev/null
 $MYG < ../sql/minions.sql &> /dev/null
 $MYG < ../sql/npc.sql &> /dev/null
+$MYG < ../sql/npcAIData.sql &> /dev/null
 $MYG < ../sql/npcskills.sql &> /dev/null
 $MYG < ../sql/olympiad_data.sql &> /dev/null
 $MYG < ../sql/olympiad_nobles.sql&> /dev/null
@@ -448,6 +538,33 @@ while :
      echo ""
      break
    elif [ "$NOB" == "n" -o "$NOB" == "N" ]; then 
+     break
+   fi
+  done 
+}
+
+newbie_helper_cb(){
+while :
+  do
+   echo ""
+   echo -ne "If you're not that skilled applying changes within 'updates' folder, i can try to do it for you (y). If you wish to do it on your own, choose (n). Should i parse updates files? (Y/n)"
+   read NOB
+   if [ "$NOB" == "Y" -o "$NOB" == "y" -o "$NOB" == "" ]; then
+     echo ""
+     echo "There we go, it may take some time..."
+     echo "updates parser results. Last run: "`date` >cb_database_installer.log
+     for file in $(ls ../cb_sql/updates/*sql);do
+        echo $file|cut -d/ -f4 >> cb_database_installer.log
+        $MYG < $file 2>> cb_database_installer.log
+        if [ $? -eq 0 ];then
+            echo "no errors">> cb_database_installer.log
+        fi
+     done
+     echo ""
+     echo "Log available at $(pwd)/cb_database_installer.log"
+     echo ""
+     break
+   elif [ "$NOB" == "n" -o "$NOB" == "N" ]; then
      break
    fi
   done 

@@ -44,7 +44,7 @@ ren %config_file% vars.bat
 call vars.bat
 ren vars.bat %config_file%
 call :colors 17
-if /i %config_version% == 1 goto ls_section
+if /i %config_version% == 2 goto ls_section
 set upgrade_mode=2
 echo It seems to be the first time you run this version of
 echo database_installer but I found a settings file already.
@@ -86,7 +86,7 @@ goto :eof
 call :colors 17
 title L2JDP installer - Setup
 cls
-set config_version=1
+set config_version=2
 if NOT %upgrade_mode% == 2 (
 set fresh_setup=1
 set mysqlBinPath=%ProgramFiles%\MySQL\MySQL Server 5.1\bin
@@ -94,6 +94,10 @@ set lsuser=root
 set lspass=
 set lsdb=l2jdb
 set lshost=localhost
+set cbuser=root
+set cbpass=
+set cbdb=l2jcb
+set cbhost=localhost
 set gsuser=root
 set gspass=
 set gsdb=l2jdb
@@ -159,14 +163,28 @@ if NOT "%lspass%"=="%gspass%" set gspass=%lspass%
 if NOT "%lsdb%"=="%gsdb%" set gsdb=%lsdb%
 if NOT "%lshost%"=="%gshost%" set gshost=%lshost%
 echo.
-echo 3-GameServer settings
+cls
+echo.
+echo 3-Community Board Server settings
+echo --------------------
+echo I will connect to the MySQL server you specify, and setup a
+echo Community Board server database there, most people use a single MySQL
+echo server for both Login and Gameserver which CBserver can use too,
+echo but CBserver requires a different database!
+echo.
+set /P cbuser="MySQL Username (default is '%cbuser%'): "
+set /P cbpass="Password (will be shown as you type, default '%cbpass%'): "
+set /P cbdb="Database (default is '%cbdb%'): "
+set /P cbhost="Host (default is '%cbhost%'): "
+echo.
+echo 4-GameServer settings
 echo --------------------
 set /P gsuser="User (default is '%gsuser%'): "
 set /P gspass="Pass (default is '%gspass%'): "
 set /P gsdb="Database (default is '%gsdb%'): "
 set /P gshost="Host (default is '%gshost%'): "
 echo.
-echo 4-Misc. settings
+echo 5-Misc. settings
 echo --------------------
 set /P cmode="Color mode (c)olor or (n)on-color, default %cmode% : "
 set /P backup="Path for your backups (default '%backup%'): "
@@ -198,6 +216,10 @@ echo set lsuser=%lsuser%>> %config_file%
 echo set lspass=%lspass%>> %config_file%
 echo set lsdb=%lsdb%>> %config_file%
 echo set lshost=%lshost% >> %config_file%
+echo set cbuser=%cbuser%>> %config_file%
+echo set cbpass=%cbpass%>> %config_file%
+echo set cbdb=%cbdb%>> %config_file%
+echo set cbhost=%cbhost% >> %config_file%
 echo set gsuser=%gsuser%>> %config_file%
 echo set gspass=%gspass%>> %config_file%
 echo set gsdb=%gsdb%>> %config_file%
@@ -233,7 +255,7 @@ echo.
 echo Backup attempt failed! A possible reason for this to 
 echo happen, is that your DB doesn't exist yet. I could 
 echo try to create %lsdb% for you, or maybe you prefer to
-echo proceed with the GameServer part of this tool.
+echo proceed with the CommunityServer part of this tool.
 echo.
 :ls_ask1
 set lsdbprompt=y
@@ -249,7 +271,7 @@ echo (q)uit
 echo.
 set /p lsdbprompt= Choose (default yes):
 if /i %lsdbprompt%==y goto lsdbcreate
-if /i %lsdbprompt%==n goto gs_backup
+if /i %lsdbprompt%==n goto cb_backup
 if /i %lsdbprompt%==r goto configure
 if /i %lsdbprompt%==q goto end
 goto ls_ask1
@@ -268,11 +290,14 @@ echo script again later. But maybe you'd prefer to go on now.
 echo.
 if %stage% == 1 set label=ls_err1
 if %stage% == 2 set label=ls_err2
-if %stage% == 3 set label=gs_backup
-if %stage% == 4 set label=gs_err1
-if %stage% == 5 set label=gs_err2
-if %stage% == 6 set label=horrible_end
-if %stage% == 7 set label=horrible_end
+if %stage% == 3 set label=cb_backup
+if %stage% == 4 set label=cb_err1
+if %stage% == 5 set label=cb_err2
+if %stage% == 6 set label=gs_backup
+if %stage% == 7 set label=gs_err1
+if %stage% == 8 set label=gs_err2
+if %stage% == 9 set label=horrible_end
+if %stage% == 10 set label=horrible_end
 :omfgask1
 set omfgprompt=q
 echo (c)ontinue running the script
@@ -324,7 +349,7 @@ echo.
 echo (q)uit now
 echo.
 set /p omfgprompt= Choose (default quit):
-if /i %omfgprompt%==c goto gs_backup
+if /i %omfgprompt%==c goto cb_backup
 if /i %omfgprompt%==q goto horrible_end
 if /i %omfgprompt%==r goto configure
 goto ls_ask2
@@ -346,7 +371,7 @@ echo.
 echo (f)ull: I will destroy data in your `accounts` and
 echo    and `gameserver` tables.
 echo.
-echo (s)kip: I'll take you to the gameserver database
+echo (s)kip: I'll take you to the communityserver database
 echo    installation and upgrade options.
 echo.
 echo (r)econfigure: You'll be able to redefine MySQL path,
@@ -357,7 +382,7 @@ echo (q)uit
 echo.
 set /p loginprompt= Choose (%msg%) : 
 if /i %loginprompt%==f goto logininstall
-if /i %loginprompt%==s goto gs_backup
+if /i %loginprompt%==s goto cb_backup
 if /i %loginprompt%==r goto configure
 if /i %loginprompt%==q goto end
 goto asklogin
@@ -372,13 +397,171 @@ set cmdline="%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% 
 %cmdline%
 if not %ERRORLEVEL% == 0 goto omfg
 set full=1
+goto cb_backup
+
+:cb_backup
+cls
+call :colors 17
+set cmdline=
+if %full% == 1 goto communityinstall
+set stage=4
+title L2JDP installer - Community Board Server database setup
+echo.
+echo Trying to make a backup of your cbserver database.
+set cmdline="%mysqldumpPath%" --add-drop-table -h %cbhost% -u %cbuser% --password=%cbpass% %cbdb% ^> "%backup%\cbserver_backup.sql" 2^> NUL
+%cmdline%
+if %ERRORLEVEL% == 0 goto cbdbok
+REM if %safe_mode% == 1 goto omfg
+:cb_err1
+call :colors 47
+title L2JDP installer - Community Board Server database setup ERROR!!!
+cls
+echo.
+echo Backup attempt failed! A possible reason for this to 
+echo happen, is that your DB doesn't exist yet. I could 
+echo try to create %cbdb% for you, or maybe you prefer to
+echo proceed with the GameServer part of this tool.
+echo.
+:cb_ask1
+set cbdbprompt=y
+echo ATTEMPT TO CREATE COMMUNITYSERVER DATABASE:
+echo.
+echo (y)es
+echo.
+echo (n)o
+echo.
+echo (r)econfigure
+echo.
+echo (q)uit
+echo.
+set /p cbdbprompt= Choose (default yes):
+if /i %cbdbprompt%==y goto cbdbcreate
+if /i %cbdbprompt%==n goto gs_backup
+if /i %cbdbprompt%==r goto configure
+if /i %cbdbprompt%==q goto end
+goto cb_ask1
+
+:cbdbcreate
+call :colors 17
+set cmdline=
+set stage=5
+title L2JDP installer - Communty Board Server database setup - DB Creation
+echo.
+echo Trying to create a Community Board Server database...
+set cmdline="%mysqlPath%" -h %cbhost% -u %cbuser% --password=%cbpass% -e "CREATE DATABASE %cbdb%" 2^> NUL
+%cmdline%
+if %ERRORLEVEL% == 0 goto communityinstall
+if %safe_mode% == 1 goto omfg
+:cb_err2
+call :colors 47
+title L2JDP installer - Community Board Server database setup - DB Creation error
+cls
+echo An error occured while trying to create a database for 
+echo your Community Board server.
+echo.
+echo Possible reasons:
+echo 1-You provided innacurate info , check user, password, etc.
+echo 2-User %cbuser% don't have enough privileges for 
+echo database creation. Check your MySQL privileges.
+echo 3-Database exists already...?
+echo.
+echo Unless you're sure that the pending actions of this tool 
+echo could work, i'd suggest you to look for correct values
+echo and try this script again later.
+echo.
+:cb_ask2
+set omfgprompt=q
+echo (c)ontinue running
+echo.
+echo (r)econfigure
+echo.
+echo (q)uit now
+echo.
+set /p omfgprompt= Choose (default quit):
+if /i %omfgprompt%==c goto gs_backup
+if /i %omfgprompt%==q goto horrible_end
+if /i %omfgprompt%==r goto configure
+goto cb_ask2
+
+:cbdbok
+call :colors 17
+title L2JDP installer - Community Board Server database setup - WARNING!!!
+echo.
+:askcommunity
+if %fresh_setup%==0 (
+set communityprompt=s
+set msg=default skip
+) else (
+set communityprompt=x
+set msg=no default for fresh install
+)
+echo COMMUNITYSERVER DATABASE install type:
+echo.
+echo (f)ull: WARNING! I'll destroy ALL of your existing community
+echo    data (i really mean it: mail, forum, memo.. ALL)
+echo.
+echo (u)pgrade: I'll do my best to preserve all of your community
+echo    data.
+echo.
+echo (s)kip: I'll take you to the gameserver database
+echo    installation and upgrade options.
+echo.
+echo (r)econfigure: You'll be able to redefine MySQL path,
+echo    user and database information and start over with
+echo    those fresh values.
+echo.
+echo (q)uit
+echo.
+set /p communityprompt= Choose (%msg%) : 
+if /i %communityprompt%==f goto communityinstall
+if /i %communityprompt%==u goto upgradecbinstall
+if /i %communityprompt%==s goto gs_backup
+if /i %communityprompt%==r goto configure
+if /i %communityprompt%==q goto end
+goto askcommunity
+
+:communityinstall
+set stage=6
+call :colors 17
+set cmdline=
+title L2JDP installer - Community Board Server database setup - Full install
+echo Deleting communityserver tables for new content.
+set cmdline="%mysqlPath%" -h %cbhost% -u %cbuser% --password=%cbpass% -D %cbdb% ^< community_install.sql 2^> NUL
+%cmdline%
+if not %ERRORLEVEL% == 0 goto omfg
+goto upgradecbinstall
+
+:upgradecbinstall
+set stage=6
+set cmdline=
+if %full% == 1 (
+title L2JDP installer - Community Board Server database setup - Installing...
+echo Installing new communityserver content.
+) else (
+title L2JDP installer - Community Board Server database setup - Upgrading...
+echo Upgrading communityserver content.
+)
+if %logging% == 0 set output=NUL
+set dest=cb
+for %%i in (
+clan_introductions.sql
+comments.sql
+forums.sql
+gameservers.sql
+posts.sql
+topics.sql
+) do call :dump %%i
+
+echo done...
+echo.
 goto gs_backup
 
 :gs_backup
+cls
 call :colors 17
 set cmdline=
 if %full% == 1 goto fullinstall
-set stage=4
+set stage=7
 title L2JDP installer - Game server database setup
 cls
 echo.
@@ -386,7 +569,7 @@ echo Making a backup of the original gameserver database.
 set cmdline="%mysqldumpPath%" --add-drop-table -h %gshost% -u %gsuser% --password=%gspass% %gsdb% ^> "%backup%\gameserver_backup.sql" 2^> NUL
 %cmdline%
 if %ERRORLEVEL% == 0 goto gsdbok
-if %safe_mode% == 1 goto omfg
+rem if %safe_mode% == 1 goto omfg
 :gs_err1
 call :colors 47
 title L2JDP installer - Game Server database setup - Backup failed!
@@ -418,7 +601,7 @@ goto askgsdb
 
 :gsdbcreate
 call :colors 17
-set stage=5
+set stage=8
 set cmdline=
 title L2JDP installer - Game Server database setup - DB Creation
 cls
@@ -484,7 +667,7 @@ goto asktype
 
 :fullinstall
 call :colors 17
-set stage=6
+set stage=9
 set cmdline=
 title L2JDP installer - Game Server database setup - Full install
 echo Deleting all gameserver tables for new content...
@@ -497,7 +680,7 @@ echo Game Server tables were deleted.
 goto upgradeinstall
 
 :upgradeinstall
-set stage=6
+set stage=9
 set cmdline=
 if %full% == 1 (
 title L2JDP installer - Game Server database setup - Installing...
@@ -570,6 +753,7 @@ fortsiege_clans.sql
 four_sepulchers_spawnlist.sql
 games.sql
 global_tasks.sql
+grandboss_data.sql
 grandboss_list.sql
 helper_buff_list.sql
 henna.sql
@@ -586,8 +770,10 @@ merchant_buylists.sql
 merchant_lease.sql
 merchant_shopids.sql
 merchants.sql
+messages.sql
 minions.sql
 npc.sql
+npcAIData.sql
 npcskills.sql
 olympiad_data.sql
 olympiad_nobles.sql
@@ -625,7 +811,6 @@ castle.sql
 clanhall.sql
 fort.sql
 forums.sql
-grandboss_data.sql
 npc_buffer.sql
 seven_signs_festival.sql
 seven_signs_status.sql
@@ -641,6 +826,7 @@ if /i %full% == 1 (set action=Installing) else (set action=Upgrading)
 echo %action% %1>>"%output%"
 echo %action% %~nx1
 if "%dest%"=="ls" set cmdline="%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% ^< ..\sql\%1 2^>^>"%output%"
+if "%dest%"=="cb" set cmdline="%mysqlPath%" -h %cbhost% -u %cbuser% --password=%cbpass% -D %cbdb% ^< ..\cb_sql\%1 2^>^>"%output%"
 if "%dest%"=="gs" set cmdline="%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< ..\sql\%1 2^>^>"%output%"
 %cmdline%
 if %logging%==0 if NOT %ERRORLEVEL%==0 call :omfg2 %1
@@ -768,13 +954,14 @@ goto newbie_helper
 
 :newbie_helper
 call :colors 17
-set stage=7
-title L2JDP installer - Game Server database setup - update SQL files
+set stage=10
+title L2JDP installer - Game/CB Server database setup - update SQL files
 cls
 if %full% == 1 goto end
 echo.
-echo In the sql/updates folder, we use to store cummulative
-echo changes needed by the database structures.
+echo In the sql/updates and cb_sql/updates folders,
+echo we use to store cummulative changes needed by
+echo the database structures.
 echo.
 echo Usually these SQL files are created whenever some new
 echo feature implementation requires it.
@@ -786,11 +973,17 @@ set nbprompt=a
 echo.
 echo What we do with the files in sql/updates folder?
 echo.
-echo (a)utomagic processing: I'll get into the folder and 
+echo (a)utomagic processing: I'll get into the folders and 
 echo    try to dump _every_ '.sql' file i find there, into 
 echo    your database. A fresh setup wouldn't usually need 
 echo    such a thing. And, as any automagic task, this may
 echo    pose a risk on your data.
+echo.
+echo automagi(c) processing: I'll do the automagic process
+echo    only with the cb_sql/updates folder.
+echo.
+echo automa(g)ic processing: I'll do the automagic process
+echo    only with the sql/updates folder.
 echo.
 echo (s)kip: I'll do nothing, it's up to you to find out
 echo    which file does what, which one could be of use for
@@ -798,6 +991,8 @@ echo    you, etc.
 echo.
 set /p nbprompt= Choose (default auto):
 if /i %nbprompt%==a goto nbinstall
+if /i %nbprompt%==c goto nbcbinstall
+if /i %nbprompt%==g goto nbinstall
 if /i %nbprompt%==s goto end
 goto asknb
 :nbinstall
@@ -809,6 +1004,17 @@ call temp.bat> nul
 del temp.bat
 move errors.txt %workdir%
 cd %workdir%
+if /i %nbprompt%==g goto nbfinished
+:nbcbinstall
+cd ..\cb_sql\updates\
+echo @echo off> temp.bat
+if exist cberrors.txt del cberrors.txt
+for %%i in (*.sql) do echo "%mysqlPath%" -h %cbhost% -u %cbuser% --password=%cbpass% -D %cbdb% ^< %%i 2^>^> cberrors.txt >> temp.bat
+call temp.bat> nul
+del temp.bat
+move cberrors.txt %workdir%
+cd %workdir%
+:nbfinished
 title L2JDP installer - Game Server database setup - updates processing complete
 cls
 echo Automagic processing finished, i'm leaving an 'errors.txt'

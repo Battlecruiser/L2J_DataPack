@@ -120,7 +120,7 @@ INSERT INTO `armorsets` VALUES
 
   (63,  9425,  9428, 9429, 9430, 9431, '3006-1;3413-1;',               0,    0,    3624,     11516,   11525,   11515,     11524,   0),     -- Dynasty Leather Armor
   (64,  9426,  9428, 9429, 9430, 9431, '3006-1;3352-1;',               0,    0,    3624,     11516,   11525,   11515,     11524,   0),     -- Dynasty Leather Armor - Dagger Master
-  (75,  9427,  9428, 9429, 9430, 9431, '3006-1;3353-1;',               0,    0,    3624,     11516,   11525,   11515,     11524,   0),     -- Dynasty Leather Armor - Bow Master
+  (65,  9427,  9428, 9429, 9430, 9431, '3006-1;3353-1;',               0,    0,    3624,     11516,   11525,   11515,     11524,   0),     -- Dynasty Leather Armor - Bow Master
 
   (66,  9432,  9437, 9438, 9439, 9440, '3006-1;3416-1;',               0,    0,    3625,     11558,   11539,   11514,     11533,   0),     -- Dynasty Tunic
   (67,  9433,  9437, 9438, 9439, 9440, '3006-1;3354-1;',               0,    0,    3625,     11558,   11539,   11514,     11533,   0),     -- Dynasty Tunic - Healer
@@ -231,5 +231,5 @@ INSERT INTO `armorsets` VALUES
 
 -- Special Sets
 -- id   chest  legs  head  glov  feet  skill                           shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
-  (141, 13803, 13804,13802,0,    0,    '8277-1;',                      0,    0,    0,        0,       0,       0,         0,       0),     -- Natives Set (bestows Native transform skill when all are worn together)
+  (141,  9670,  9671, 9669,0,    0,    '8277-1;',                      0,    0,    0,        0,       0,       0,         0,       0),     -- Natives Set (bestows Native transform skill when all are worn together)
   (142, 13806, 13807,13805,0,    0,    '8278-1;',                      0,    0,    0,        0,       0,       0,         0,       0);     -- Guard of Dawns Set (bestows Guard transform skill when all are worn together)

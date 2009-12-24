@@ -1,6 +1,3 @@
--- ----------------------------
--- Table structure for character_tpbookmark
--- ----------------------------
 CREATE TABLE IF NOT EXISTS `character_tpbookmark` (
   `charId` int(20) NOT NULL,
   `Id` int(20) NOT NULL,

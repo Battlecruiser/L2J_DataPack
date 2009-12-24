@@ -198,7 +198,6 @@ INSERT INTO `merchant_shopids` VALUES
 (3126301,'31263'),
 (3126500,'31265'),
 (3127400,'31274'),
-(3128400,'31284'),
 (3130000,'31300'),
 (3130001,'31300'),
 (3130002,'31300'),
@@ -225,8 +224,6 @@ INSERT INTO `merchant_shopids` VALUES
 (3130900,'31309'),
 (3131800,'31318'),
 (3131900,'31319'),
-(3133800,'31338'),
-(3133900,'31339'),
 (3135100,'31351'),
 (3136600,'31366'),
 (3138600,'31386'),
@@ -443,6 +440,7 @@ INSERT INTO `merchant_shopids` VALUES
 (335558, '35558'),
 (335644, '35644'),
 (335645, '35645'),
+(336456, '36456'),
 
 -- Castles Item creation
 (351001,'35100'),
@@ -666,7 +664,7 @@ INSERT INTO `merchant_shopids` VALUES
 ('9983', 'gm'), -- Icarus PVP Weapons
 ('9984', 'gm'), -- S PVP Weapons
 ('9985', 'gm'), -- A PVP Weapons
-('9986', 'gm'), -- [reserved]
+('9986', 'gm'), -- Hair Accessory Part 2
 ('9987', 'gm'), -- [reserved]
 ('9988', 'gm'), -- Territory Items
 ('9989', 'gm'), -- Fortress Misc
