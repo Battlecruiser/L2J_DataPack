@@ -1,125 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-<item id="10119" name="Dynasty Sigil">
-  <cond msgId="1518">
-    <not>
-      <player race="Kamael"/>
-    </not>
-  </cond>
-  <for>
-    <add order="0x10" stat="pDef" val="15"/>
-    <sub order="0x10" stat="rEvas" val="8"/>
-    <enchant order="0x0C" stat="pDef" val="0"/>
-  </for>
-</item>
-<item id="10120" name="Sealed Dynasty Sigil">
-  <cond msgId="1518">
-    <not>
-      <player race="Kamael"/>
-    </not>
-  </cond>
-  <for>
-    <add order="0x10" stat="pDef" val="15"/>
-    <sub order="0x10" stat="rEvas" val="8"/>
-    <enchant order="0x0C" stat="pDef" val="0"/>
-  </for>
-</item>
-<item id="10121" name="Sealed Arcana Sigil">
-  <cond msgId="1518">
-    <not>
-      <player race="Kamael"/>
-    </not>
-  </cond>
-  <for>
-    <add order="0x10" stat="pDef" val="13"/>
-    <sub order="0x10" stat="rEvas" val="8"/>
-    <enchant order="0x0C" stat="pDef" val="0"/>
-  </for>
-</item>
-<item id="10122" name="Red Crescent Earring">
-  <for>
-    <add order="0x10" stat="mDef" val="24"/>
-    <enchant order="0x0C" stat="mDef" val="0"/>
-  </for>
-</item>
-<item id="10123" name="Necklace of Devotion">
-  <for>
-    <add order="0x10" stat="mDef" val="32"/>
-    <enchant order="0x0C" stat="mDef" val="0"/>
-  </for>
-</item>
-<item id="10124" name="Ring of Devotion">
-  <for>
-    <add order="0x10" stat="mDef" val="16"/>
-    <enchant order="0x0C" stat="mDef" val="0"/>
-  </for>
-</item>
-<item id="10126" name="Dynasty Leather Armor - Force Master">
-  <cond msgId="1518">
-    <player class_id_restriction="88, 114"/>
-  </cond>
-  <for>
-    <add order="0x10" stat="pDef" val="170"/>
-    <enchant order="0x0C" stat="pDef" val="0"/>
-  </for>
-</item>
-<item id="10127" name="Dynasty Leather Armor - Weapon Master">
-  <cond msgId="1518">
-    <player class_id_restriction="89, 113, 117, 118, 131, 132, 133"/>
-  </cond>
-  <for>
-    <add order="0x10" stat="pDef" val="170"/>
-    <enchant order="0x0C" stat="pDef" val="0"/>
-  </for>
-</item>
-<item id="10139" name="Agathion Bracelet">
-  <for/>
-</item>
-<item id="10140" name="Blessed Ring of Escape">
-  <for>
-    <add order="0x10" stat="mDef" val="49"/>
-    <enchant order="0x0C" stat="mDef" val="0"/>
-  </for>
-</item>
-<item id="10141" name="Grey Talisman - Yeti Transform">
-  <for/>
-</item>
-<item id="10142" name="Grey Talisman - Buffalo Transform">
-  <for/>
-</item>
-<item id="10158" name="Grey Talisman of Upper Grade Fishing">
-  <for/>
-</item>
-<item id="10168" name="Dynasty Leather Armor - Enchanter">
-  <cond msgId="1518">
-    <player class_id_restriction="98, 115, 116, 136"/>
-  </cond>
-  <for>
-    <add order="0x10" stat="pDef" val="170"/>
-    <enchant order="0x0C" stat="pDef" val="0"/>
-  </for>
-</item>
-<item id="10169" name="Enchanter Circlet (Kamael only)">
-  <cond msgId="1518">
-    <player class_id_restriction="136"/>
-  </cond>
-  <for/>
-</item>
-<item id="10170" name="Baylor's Earring">
-  <for>
-    <add order="0x10" stat="mDef" val="71"/>
-    <add order="0x40" stat="maxMp" val="31"/>
-    <add order="0x40" stat="darkRes" val="30"/> <!-- Dark Resistance +30% -->
-    <enchant order="0x0C" stat="mDef" val="0"/>
-  </for>
-</item>
-<item id="10175" name="Gobblin Circlet (Event)">
-  <for/>
-</item>
-<item id="10176" name="White Half Mask">
-  <for/>
-</item>
-<item id="10177" name="Black Half Mask">
-  <for/>
-</item>
+	<item id="10119" name="Dynasty Sigil">
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="15" />
+			<sub order="0x10" stat="rEvas" val="8" />
+			<enchant order="0x0C" stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="10120" name="Sealed Dynasty Sigil">
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="15" />
+			<sub order="0x10" stat="rEvas" val="8" />
+			<enchant order="0x0C" stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="10121" name="Sealed Arcana Sigil">
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="13" />
+			<sub order="0x10" stat="rEvas" val="8" />
+			<enchant order="0x0C" stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="10122" name="Red Crescent Earring">
+		<for>
+			<add order="0x10" stat="mDef" val="24" />
+			<enchant order="0x0C" stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="10123" name="Necklace of Devotion">
+		<for>
+			<add order="0x10" stat="mDef" val="32" />
+			<enchant order="0x0C" stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="10124" name="Ring of Devotion">
+		<for>
+			<add order="0x10" stat="mDef" val="16" />
+			<enchant order="0x0C" stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="10126" name="Dynasty Leather Armor - Force Master">
+		<cond msgId="1518">
+			<player class_id_restriction="88, 114" />
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="170" />
+			<enchant order="0x0C" stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="10127" name="Dynasty Leather Armor - Weapon Master">
+		<cond msgId="1518">
+			<player class_id_restriction="89, 113, 117, 118, 131, 132, 133" />
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="170" />
+			<enchant order="0x0C" stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="10139" name="Agathion Bracelet">
+		<for />
+	</item>
+	<item id="10140" name="Blessed Ring of Escape">
+		<for>
+			<add order="0x10" stat="mDef" val="49" />
+			<enchant order="0x0C" stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="10141" name="Grey Talisman - Yeti Transform">
+		<for />
+	</item>
+	<item id="10142" name="Grey Talisman - Buffalo Transform">
+		<for />
+	</item>
+	<item id="10158" name="Grey Talisman of Upper Grade Fishing">
+		<for />
+	</item>
+	<item id="10168" name="Dynasty Leather Armor - Enchanter">
+		<cond msgId="1518">
+			<player class_id_restriction="98, 115, 116, 136" />
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="170" />
+			<enchant order="0x0C" stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="10169" name="Enchanter Circlet (Kamael only)">
+		<cond msgId="1518">
+			<player class_id_restriction="136" />
+		</cond>
+		<for />
+	</item>
+	<item id="10170" name="Baylor's Earring">
+		<for>
+			<add order="0x10" stat="mDef" val="71" />
+			<add order="0x40" stat="maxMp" val="31" />
+			<add order="0x40" stat="darkRes" val="30" /> <!-- Dark Resistance +30% -->
+			<enchant order="0x0C" stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="10175" name="Gobblin Circlet (Event)">
+		<for />
+	</item>
+	<item id="10176" name="White Half Mask">
+		<for />
+	</item>
+	<item id="10177" name="Black Half Mask">
+		<for />
+	</item>
 </list>

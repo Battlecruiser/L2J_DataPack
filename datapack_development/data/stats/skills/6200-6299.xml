@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="6200" levels="1" name="NPC Transform Dispel">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6201" levels="1" name="Transformation Condition - Frog">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6202" levels="1" name="Transformation Condition - Young Child">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6203" levels="1" name="Transformed Condition - Native">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6204" levels="1" name="Transformed Condition - Guards of the Dawn">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6205" levels="19" name="Strider Bite">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6206" levels="19" name="Strider Fear">
+		<!-- Frightens the enemy and causes him to flee for 10 seconds. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6207" levels="1" name="Strider Dash">
+		<!-- Increases one's own moving speed by 66 for 15 seconds. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6208" levels="1" name="Blessed Guidance">
+		<!-- Blessed Guidance. For 10 seconds, increases accuracy by 2. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6209" levels="4" name="Weapon Grade Penalty">
+		<table name="#rCrit"> -0.1 -0.2 -0.3 -0.4 </table>
+		<table name="#cAtk"> 0.9 0.8 0.7 0.6 </table>
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="stayAfterDeath" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<sub order="0x40" stat="accCombat" val="16" />
+			<basemul order="0x30" stat="rCrit" val="#rCrit" />
+			<mul order="0x30" stat="cAtk" val="#cAtk" />
+			<mul order="0x30" stat="pAtkSpd" val="0.9" />
+			<mul order="0x30" stat="pAtk" val="0.9" />
+		</for>
+	</skill>
+	<skill id="6213" levels="4" name="Armor Grade Penalty">
+		<table name="#rEvas"> 2.5 5 7.5 10 </table>
+		<table name="#amount"> 0.8333 0.6944 0.5787 0.4823 </table>
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="stayAfterDeath" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<sub order="0x40" stat="rEvas" val="#rEvas" />
+			<mul order="0x30" stat="pAtkSpd" val="#amount" />
+			<mul order="0x30" stat="mAtkSpd" val="#amount" />
+			<mul order="0x30" stat="runSpd" val="#amount" />
+		</for>
+	</skill>
+	<skill id="6217" levels="1" name="Raid Boss - Level 81">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6218" levels="1" name="Raid Boss - Level 81">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6219" levels="1" name="Raid Boss - Level 81">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6220" levels="1" name="Raid Boss - Level 81">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6221" levels="1" name="Raid Boss - Level 82">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6222" levels="1" name="Raid Boss - Level 84">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6223" levels="1" name="Raid Boss - Level 84">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6224" levels="1" name="Raid Boss - Level 84">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6225" levels="1" name="Raid Boss - Level 84">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6226" levels="1" name="Raid Boss - Level 84">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6227" levels="1" name="Raid Boss - Level 84">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6228" levels="1" name="Raid Boss - Level 83">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6229" levels="1" name="Raid Boss - Level 84">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6230" levels="1" name="Raid Boss - Level 82">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6231" levels="1" name="Raid Boss - Level 82">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6232" levels="1" name="Raid Boss - Level 83">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6233" levels="1" name="Raid Boss - Level 83">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6234" levels="1" name="Presentation - Adena Firework">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6235" levels="1" name="Blessed Focus">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6236" levels="1" name="Presentation - Party Recall">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6237" levels="1" name="Moving Speed Decrease">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6238" levels="1" name="Moving Speed Decrease">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6239" levels="1" name="Proof of Space and Time">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6240" levels="5" name="Heatstroke">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6241" levels="1" name="Heatstroke Prevention Effect - Gludio">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6242" levels="1" name="Heatstroke Prevention Effect - Dion">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6243" levels="1" name="Heatstroke Prevention Effect - Giran">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6244" levels="1" name="Heatstroke Prevention Effect - Oren">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6245" levels="1" name="Heatstroke Prevention Effect - Aden">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6246" levels="1" name="Heatstroke Prevention Effect - Innadril">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6247" levels="1" name="Heatstroke Prevention Effect - Goddard">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6248" levels="1" name="Heatstroke Prevention Effect - Rune">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6249" levels="1" name="Heatstroke Prevention Effect -Schuttgart">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6250" levels="1" name="Severe Heatstroke">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6251" levels="1" name="Summon Humidity">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6252" levels="1" name="Humidity Attack">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6253" levels="1" name="Heatstroke Prevention Effect - Gludio">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6254" levels="1" name="Heatstroke Prevention Effect - Dion">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6255" levels="1" name="Heatstroke Prevention Effect - Giran">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6256" levels="1" name="Heatstroke Prevention Effect - Oren">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6257" levels="1" name="Heatstroke Prevention Effect - Aden">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6258" levels="1" name="Heatstroke Prevention Effect - Innadril">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6259" levels="1" name="Heatstroke Prevention Effect - Goddard">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6260" levels="1" name="Heatstroke Prevention Effect - Rune">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="6261" levels="1" name="Heatstroke Prevention Effect - Schuttgart">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+</list>

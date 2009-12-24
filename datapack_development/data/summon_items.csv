@@ -1,19 +1,21 @@
 #Syntax:
-#  itemID;npcID;summonType
+#  itemID;npcID;summonType;despawnDelay(only for type static)
+#  despawnDelay - in seconds, -1 unlimited
 #
-# summonType: 0 = static, 1 = pet, 2 = wyvern
+# summonType: 0 = Static, 1 = Pet, 2 = Wyvern
 #
 
-#Static
+### Static ###
 # Christmas Tree
-5560;13006;0
+5560;13006;0;1200
 # Special Cristmas Tree
-5561;13007;0
+5561;13007;0;1200
 
-#Pets
+
+### Pets ###
 # Wolf
 2375;12077;1
-#Black Wolf
+# Evolved Wolf
 9882;16025;1
 # Great Wolf
 10163;16030;1
@@ -41,6 +43,8 @@
 10309;16039;1
 # Red Twilight Strider
 10310;16040;1
+# Guardian Strider
+14819;16068;1
 # Sin Eater
 4425;12564;1
 # Baby Bufallo
@@ -49,12 +53,38 @@
 6649;12782;1
 # Baby Kookaburra
 6650;12781;1
-# IBaby Bufallo
+# Improved Baby Bufallo
 10311;16034;1
-# IBaby Cougar
+# Improved Baby Cougar
 10312;16036;1
-# IBaby Kookaburra
+# Improved Baby Kookaburra
 10313;16035;1
+# Deinonychus
+14828;16067;1
+# White Weasel
+13017;16045;1
+# Fairy Princess
+13018;16046;1
+# Wild Beast Fighter
+13019;16044;1
+# Fox Shaman
+13020;16043;1
+# Toy Knight (Bracelet)
+14061;16052;1
+# Spirit Shaman (Bracelet)
+14062;16051;1
+# Owl Monk (Bracelet)
+14063;16050;1
+# Turtle Ascetic (Bracelet)
+14064;16053;1
+# Toy Knight
+13548;16052;1
+# Soul Shaman
+13549;16051;1
+# Owl Monk
+13550;16050;1
+# Turtle Ascetic
+13551;16053;1
 
-#Wyvern
+### Wyvern ###
 8663;12621;2

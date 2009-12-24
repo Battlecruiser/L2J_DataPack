@@ -194,3 +194,5 @@ of this directory a little bit.
 364960001.xml -> Territory Manager - Goddard
 364970001.xml -> Territory Manager - Rune
 364980001.xml -> Territory Manager - Schuttgart
+
+326580001.xml -> S80 Armors / Jewels - Delusion Chamber
