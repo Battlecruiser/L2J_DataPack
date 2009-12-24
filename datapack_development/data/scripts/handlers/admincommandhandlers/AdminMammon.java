@@ -17,15 +17,16 @@ package handlers.admincommandhandlers;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import net.sf.l2j.gameserver.SevenSigns;
-import net.sf.l2j.gameserver.datatables.NpcTable;
-import net.sf.l2j.gameserver.datatables.SpawnTable;
-import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
-import net.sf.l2j.gameserver.model.AutoSpawnHandler;
-import net.sf.l2j.gameserver.model.AutoSpawnHandler.AutoSpawnInstance;
-import net.sf.l2j.gameserver.model.actor.L2Npc;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.SevenSigns;
+import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.datatables.SpawnTable;
+import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.model.AutoSpawnHandler;
+import com.l2jserver.gameserver.model.AutoSpawnHandler.AutoSpawnInstance;
+import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+
 
 /**
  * Admin Command Handler for Mammon NPCs

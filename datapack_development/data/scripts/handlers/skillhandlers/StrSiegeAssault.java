@@ -14,20 +14,20 @@
  */
 package handlers.skillhandlers;
 
-import net.sf.l2j.gameserver.handler.ISkillHandler;
-import net.sf.l2j.gameserver.instancemanager.CastleManager;
-import net.sf.l2j.gameserver.instancemanager.FortManager;
-import net.sf.l2j.gameserver.model.L2ItemInstance;
-import net.sf.l2j.gameserver.model.L2Object;
-import net.sf.l2j.gameserver.model.L2Skill;
-import net.sf.l2j.gameserver.model.actor.L2Character;
-import net.sf.l2j.gameserver.model.actor.instance.L2DoorInstance;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.model.entity.Castle;
-import net.sf.l2j.gameserver.model.entity.Fort;
-import net.sf.l2j.gameserver.skills.Formulas;
-import net.sf.l2j.gameserver.templates.item.L2WeaponType;
-import net.sf.l2j.gameserver.templates.skills.L2SkillType;
+import com.l2jserver.gameserver.handler.ISkillHandler;
+import com.l2jserver.gameserver.instancemanager.CastleManager;
+import com.l2jserver.gameserver.instancemanager.FortManager;
+import com.l2jserver.gameserver.model.L2ItemInstance;
+import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.L2Skill;
+import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.entity.Castle;
+import com.l2jserver.gameserver.model.entity.Fort;
+import com.l2jserver.gameserver.skills.Formulas;
+import com.l2jserver.gameserver.templates.item.L2WeaponType;
+import com.l2jserver.gameserver.templates.skills.L2SkillType;
 
 /**
  * @author _tomciaaa_
@@ -42,7 +42,7 @@ public class StrSiegeAssault implements ISkillHandler
 	
 	/**
 	 * 
-	 * @see net.sf.l2j.gameserver.handler.ISkillHandler#useSkill(net.sf.l2j.gameserver.model.actor.L2Character, net.sf.l2j.gameserver.model.L2Skill, net.sf.l2j.gameserver.model.L2Object[])
+	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
 	 */
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
@@ -65,12 +65,12 @@ public class StrSiegeAssault implements ISkillHandler
 		
 		if (castle != null)
 		{
-			if (!checkIfOkToUseStriderSiegeAssault(player, castle, true))
+			if (!player.checkIfOkToUseStriderSiegeAssault(castle))
 				return;
 		}
 		else
 		{
-			if (!checkIfOkToUseStriderSiegeAssault(player, fort, true))
+			if (!player.checkIfOkToUseStriderSiegeAssault(fort))
 				return;
 		}
 		
@@ -120,95 +120,16 @@ public class StrSiegeAssault implements ISkillHandler
 	
 	/**
 	 * 
-	 * @see net.sf.l2j.gameserver.handler.ISkillHandler#getSkillIds()
+	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
 	 */
 	public L2SkillType[] getSkillIds()
 	{
 		return SKILL_IDS;
 	}
 	
-	/**
-	 * Return true if character clan place a flag<BR><BR>
-	 *
-	 * @param activeChar The L2Character of the character placing the flag
-	 * @param isCheckOnly if false, it will send a notification to the player telling him
-	 * why it failed
-	 */
-	public static boolean checkIfOkToUseStriderSiegeAssault(L2Character activeChar, boolean isCheckOnly)
+	public static void main(String[] args)
 	{
-		Castle castle = CastleManager.getInstance().getCastle(activeChar);
-		Fort fort = FortManager.getInstance().getFort(activeChar);
-		
-		if ((castle == null) && (fort == null))
-			return false;
-		
-		if (castle != null)
-			return checkIfOkToUseStriderSiegeAssault(activeChar, castle, isCheckOnly);
-		else
-			return checkIfOkToUseStriderSiegeAssault(activeChar, fort, isCheckOnly);
-		
-	}
-	
-	/**
-	 * 
-	 * @param activeChar
-	 * @param castle
-	 * @param isCheckOnly
-	 * @return
-	 */
-	public static boolean checkIfOkToUseStriderSiegeAssault(L2Character activeChar, Castle castle, boolean isCheckOnly)
-	{
-		if (!(activeChar instanceof L2PcInstance))
-			return false;
-		
-		String text = "";
-		L2PcInstance player = (L2PcInstance) activeChar;
-		
-		if (castle == null || castle.getCastleId() <= 0)
-			text = "You must be on castle ground to use strider siege assault";
-		else if (!castle.getSiege().getIsInProgress())
-			text = "You can only use strider siege assault during a siege.";
-		else if (!(player.getTarget() instanceof L2DoorInstance))
-			text = "You can only use strider siege assault on doors and walls.";
-		else if (!player.isRidingStrider())
-			text = "You can only use strider siege assault when on strider.";
-		else
-			return true;
-		
-		if (!isCheckOnly)
-			player.sendMessage(text);
-		return false;
-	}
-	
-	/**
-	 * 
-	 * @param activeChar
-	 * @param fort
-	 * @param isCheckOnly
-	 * @return
-	 */
-	public static boolean checkIfOkToUseStriderSiegeAssault(L2Character activeChar, Fort fort, boolean isCheckOnly)
-	{
-		if (!(activeChar instanceof L2PcInstance))
-			return false;
-		
-		String text = "";
-		L2PcInstance player = (L2PcInstance) activeChar;
-		
-		if (fort == null || fort.getFortId() <= 0)
-			text = "You must be on fort ground to use strider siege assault";
-		else if (!fort.getSiege().getIsInProgress())
-			text = "You can only use strider siege assault during a siege.";
-		else if (!(player.getTarget() instanceof L2DoorInstance))
-			text = "You can only use strider siege assault on doors and walls.";
-		else if (!player.isRidingStrider())
-			text = "You can only use strider siege assault when on strider.";
-		else
-			return true;
-		
-		if (!isCheckOnly)
-			player.sendMessage(text);
-		return false;
+		new StrSiegeAssault();
 	}
 	
 }

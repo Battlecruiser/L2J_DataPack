@@ -20,30 +20,31 @@ import java.sql.ResultSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import net.sf.l2j.Config;
-import net.sf.l2j.L2DatabaseFactory;
-import net.sf.l2j.gameserver.GameTimeController;
-import net.sf.l2j.gameserver.SevenSigns;
-import net.sf.l2j.gameserver.ThreadPoolManager;
-import net.sf.l2j.gameserver.ai.CtrlIntention;
-import net.sf.l2j.gameserver.datatables.SkillTable;
-import net.sf.l2j.gameserver.handler.IVoicedCommandHandler;
-import net.sf.l2j.gameserver.instancemanager.CoupleManager;
-import net.sf.l2j.gameserver.instancemanager.GrandBossManager;
-import net.sf.l2j.gameserver.instancemanager.SiegeManager;
-import net.sf.l2j.gameserver.model.L2Skill;
-import net.sf.l2j.gameserver.model.L2World;
-import net.sf.l2j.gameserver.model.actor.L2Character;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.model.entity.TvTEvent;
-import net.sf.l2j.gameserver.network.SystemMessageId;
-import net.sf.l2j.gameserver.network.serverpackets.ActionFailed;
-import net.sf.l2j.gameserver.network.serverpackets.ConfirmDlg;
-import net.sf.l2j.gameserver.network.serverpackets.MagicSkillUse;
-import net.sf.l2j.gameserver.network.serverpackets.SetupGauge;
-import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
-import net.sf.l2j.gameserver.skills.AbnormalEffect;
-import net.sf.l2j.gameserver.util.Broadcast;
+import com.l2jserver.Config;
+import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.gameserver.GameTimeController;
+import com.l2jserver.gameserver.SevenSigns;
+import com.l2jserver.gameserver.ThreadPoolManager;
+import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
+import com.l2jserver.gameserver.instancemanager.CoupleManager;
+import com.l2jserver.gameserver.instancemanager.GrandBossManager;
+import com.l2jserver.gameserver.instancemanager.SiegeManager;
+import com.l2jserver.gameserver.model.L2Skill;
+import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.entity.TvTEvent;
+import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
+import com.l2jserver.gameserver.network.serverpackets.ConfirmDlg;
+import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
+import com.l2jserver.gameserver.network.serverpackets.SetupGauge;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.skills.AbnormalEffect;
+import com.l2jserver.gameserver.util.Broadcast;
+
 
 /**
  * @author evill33t
@@ -61,9 +62,9 @@ public class Wedding implements IVoicedCommandHandler
 	
 	/**
 	 * 
-	 * @see net.sf.l2j.gameserver.handler.IVoicedCommandHandler#useVoicedCommand(java.lang.String, net.sf.l2j.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
+	 * @see com.l2jserver.gameserver.handler.IVoicedCommandHandler#useVoicedCommand(java.lang.String, com.l2jserver.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
 	 */
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String target)
+	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
 	{
 		if (command.startsWith("engage"))
 			return engage(activeChar);
@@ -147,9 +148,9 @@ public class Wedding implements IVoicedCommandHandler
 					skillLevel = 2;
 				
 				if (activeChar.isMageClass())
-					skillId = 4361;
-				else
 					skillId = 4362;
+				else
+					skillId = 4361;
 				
 				L2Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
 				
@@ -472,7 +473,7 @@ public class Wedding implements IVoicedCommandHandler
 	
 	/**
 	 * 
-	 * @see net.sf.l2j.gameserver.handler.IVoicedCommandHandler#getVoicedCommandList()
+	 * @see com.l2jserver.gameserver.handler.IVoicedCommandHandler#getVoicedCommandList()
 	 */
 	public String[] getVoicedCommandList()
 	{

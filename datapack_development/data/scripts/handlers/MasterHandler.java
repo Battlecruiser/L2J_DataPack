@@ -23,13 +23,14 @@ import handlers.voicedcommandhandlers.*;
 
 import java.util.logging.Logger;
 
-import net.sf.l2j.Config;
-import net.sf.l2j.gameserver.handler.AdminCommandHandler;
-import net.sf.l2j.gameserver.handler.ChatHandler;
-import net.sf.l2j.gameserver.handler.ItemHandler;
-import net.sf.l2j.gameserver.handler.SkillHandler;
-import net.sf.l2j.gameserver.handler.UserCommandHandler;
-import net.sf.l2j.gameserver.handler.VoicedCommandHandler;
+import com.l2jserver.Config;
+import com.l2jserver.gameserver.handler.AdminCommandHandler;
+import com.l2jserver.gameserver.handler.ChatHandler;
+import com.l2jserver.gameserver.handler.ItemHandler;
+import com.l2jserver.gameserver.handler.SkillHandler;
+import com.l2jserver.gameserver.handler.UserCommandHandler;
+import com.l2jserver.gameserver.handler.VoicedCommandHandler;
+
 
 /**
  *
@@ -100,6 +101,7 @@ public class MasterHandler
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminTest());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminTvTEvent());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminUnblockIp());
+		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminVitality());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminZone());
 		_log.config("Loaded " + AdminCommandHandler.getInstance().size() + "  AdminCommandHandlers");
 	}
@@ -130,6 +132,7 @@ public class MasterHandler
 		ItemHandler.getInstance().registerItemHandler(new BeastSpiritShot());
 		ItemHandler.getInstance().registerItemHandler(new PaganKeys());
 		ItemHandler.getInstance().registerItemHandler(new Maps());
+		ItemHandler.getInstance().registerItemHandler(new NicknameColor());
 		ItemHandler.getInstance().registerItemHandler(new Potions());
 		ItemHandler.getInstance().registerItemHandler(new Recipes());
 		ItemHandler.getInstance().registerItemHandler(new RollingDice());
@@ -215,6 +218,7 @@ public class MasterHandler
 		UserCommandHandler.getInstance().registerUserCommandHandler(new ChannelLeave());
 		UserCommandHandler.getInstance().registerUserCommandHandler(new ChannelDelete());
 		UserCommandHandler.getInstance().registerUserCommandHandler(new ChannelListUpdate());
+		UserCommandHandler.getInstance().registerUserCommandHandler(new Birthday());
 		_log.config("Loaded " + UserCommandHandler.getInstance().size() + " UserHandlers");
 	}
 	

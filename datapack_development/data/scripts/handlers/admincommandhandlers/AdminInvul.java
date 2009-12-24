@@ -16,10 +16,11 @@ package handlers.admincommandhandlers;
 
 import java.util.logging.Logger;
 
-import net.sf.l2j.Config;
-import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
-import net.sf.l2j.gameserver.model.L2Object;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.Config;
+import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+
 
 /**
  * This class handles following admin commands:

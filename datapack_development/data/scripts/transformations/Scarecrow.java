@@ -1,8 +1,8 @@
 package transformations;
 
-import net.sf.l2j.gameserver.datatables.SkillTable;
-import net.sf.l2j.gameserver.instancemanager.TransformationManager;
-import net.sf.l2j.gameserver.model.L2Transformation;
+import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.instancemanager.TransformationManager;
+import com.l2jserver.gameserver.model.L2Transformation;
 
 public class Scarecrow extends L2Transformation
 {
@@ -28,7 +28,7 @@ public class Scarecrow extends L2Transformation
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(942, 1), false);
 		// Dissonance
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(5437, 2), false);
-		// Transfrom Dispel
+		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
 		getPlayer().setTransformAllowedSkills(new int[]{940,942,5437,619});
@@ -47,7 +47,7 @@ public class Scarecrow extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(942, 1), false);
 		// Dissonance
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5437, 2), false);
-		// Transfrom Dispel
+		// Transform Dispel
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
 		getPlayer().setTransformAllowedSkills(new int[]{});

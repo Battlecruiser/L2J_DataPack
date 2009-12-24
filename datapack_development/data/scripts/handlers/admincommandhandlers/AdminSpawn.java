@@ -18,28 +18,29 @@ import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
-import net.sf.l2j.Config;
-import net.sf.l2j.gameserver.GmListTable;
-import net.sf.l2j.gameserver.SevenSigns;
-import net.sf.l2j.gameserver.datatables.NpcTable;
-import net.sf.l2j.gameserver.datatables.SpawnTable;
-import net.sf.l2j.gameserver.datatables.TeleportLocationTable;
-import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
-import net.sf.l2j.gameserver.instancemanager.DayNightSpawnManager;
-import net.sf.l2j.gameserver.instancemanager.QuestManager;
-import net.sf.l2j.gameserver.instancemanager.RaidBossSpawnManager;
-import net.sf.l2j.gameserver.model.AutoChatHandler;
-import net.sf.l2j.gameserver.model.AutoSpawnHandler;
-import net.sf.l2j.gameserver.model.L2Object;
-import net.sf.l2j.gameserver.model.L2Spawn;
-import net.sf.l2j.gameserver.model.L2World;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.network.SystemMessageId;
-import net.sf.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
-import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
-import net.sf.l2j.gameserver.templates.chars.L2NpcTemplate;
-import net.sf.l2j.gameserver.util.Broadcast;
-import net.sf.l2j.gameserver.util.StringUtil;
+import com.l2jserver.Config;
+import com.l2jserver.gameserver.GmListTable;
+import com.l2jserver.gameserver.SevenSigns;
+import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.datatables.SpawnTable;
+import com.l2jserver.gameserver.datatables.TeleportLocationTable;
+import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.instancemanager.DayNightSpawnManager;
+import com.l2jserver.gameserver.instancemanager.QuestManager;
+import com.l2jserver.gameserver.instancemanager.RaidBossSpawnManager;
+import com.l2jserver.gameserver.model.AutoChatHandler;
+import com.l2jserver.gameserver.model.AutoSpawnHandler;
+import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.L2Spawn;
+import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.templates.chars.L2NpcTemplate;
+import com.l2jserver.gameserver.util.Broadcast;
+import com.l2jserver.gameserver.util.StringUtil;
+
 
 /**
  * This class handles following admin commands: - show_spawns = shows menu -
@@ -259,84 +260,46 @@ public class AdminSpawn implements IAdminCommandHandler
 	private void showMonsters(L2PcInstance activeChar, int level, int from)
 	{
 		L2NpcTemplate[] mobs = NpcTable.getInstance().getAllMonstersOfLevel(level);
-                final StringBuilder tb = StringUtil.startAppend(500 + mobs.length * 80,
-                        "<html><title>Spawn Monster:</title><body><p> Level ",
-                        String.valueOf(level),
-                        ":<br>Total Npc's : ",
-                        String.valueOf(mobs.length),
-                        "<br>"
-                        );
-		
-		// Start
-		String end1 = "<br><center><button value=\"Next\" action=\"bypass -h admin_spawn_index " + level + " $from$\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></center></body></html>";
-		String end2 = "<br><center><button value=\"Back\" action=\"bypass -h admin_show_spawns\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></center></body></html>";
-		
+		final StringBuilder tb = StringUtil.startAppend(500 + mobs.length * 80,
+				"<html><title>Spawn Monster:</title><body><p> Level : ", 
+				Integer.toString(level), 
+				"<br>Total Npc's : ",
+				Integer.toString(mobs.length), 
+				"<br>");
+
 		// Loop
-		boolean ended = true;
-		for (int i = from; i < mobs.length; i++)
-		{
-                    StringUtil.append(tb,
-                            "<a action=\"bypass -h admin_spawn_monster ",
-                            String.valueOf(mobs[i].npcId),
-                            "\">",
-                            mobs[i].name,
-                            "</a><br1>"
-                            );
-			
-			if ((tb.length() + end2.length()) > 8192) {
-				end1 = end1.replace("$from$", "" + i);
-				ended = false;
-				break;
-			}
-		}
+		int i = from;
+		for (int j = 0; i < mobs.length && j < 50; i++, j++)
+			StringUtil.append(tb, "<a action=\"bypass -h admin_spawn_monster ", Integer.toString(mobs[i].npcId), "\">", mobs[i].name, "</a><br1>");
 		
-		// End
-		if (ended)
-			tb.append(end2);
+		if (i == mobs.length)
+			tb.append("<br><center><button value=\"Back\" action=\"bypass -h admin_show_spawns\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></center></body></html>");
 		else
-			tb.append(end1);
-		
+			StringUtil.append(tb, "<br><center><button value=\"Next\" action=\"bypass -h admin_spawn_index ", Integer.toString(level), " ", Integer.toString(i), "\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><button value=\"Back\" action=\"bypass -h admin_show_spawns\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></center></body></html>");
+
 		activeChar.sendPacket(new NpcHtmlMessage(5, tb.toString()));
 	}
-	
+
 	private void showNpcs(L2PcInstance activeChar, String starting, int from)
 	{
 		L2NpcTemplate[] mobs = NpcTable.getInstance().getAllNpcStartingWith(starting);
-                final StringBuilder tb = StringUtil.startAppend(500 + mobs.length * 80,
-                        "<html><title>Spawn Monster:</title><body><p> There are ",
-                        String.valueOf(mobs.length),
-                        " Npcs whose name starts with ",
-                        starting,
-                        ":<br>"
-                        );
+		final StringBuilder tb = StringUtil.startAppend(500 + mobs.length * 80,
+				"<html><title>Spawn Monster:</title><body><p> There are ", 
+				Integer.toString(mobs.length),
+				" Npcs whose name starts with ", 
+				starting, 
+				":<br>");
 
-		// Start
-		String end1 = "<br><center><button value=\"Next\" action=\"bypass -h admin_npc_index " + starting + " $from$\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></center></body></html>";
-		String end2 = "<br><center><button value=\"Back\" action=\"bypass -h admin_show_npcs\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></center></body></html>";
+		// Loop
+		int i = from;
+		for (int j = 0; i < mobs.length && j < 50; i++, j++)
+			StringUtil.append(tb, "<a action=\"bypass -h admin_spawn_monster ", Integer.toString(mobs[i].npcId), "\">", mobs[i].name, "</a><br1>");
 
-                // Loop
-		boolean ended = true;
-		for (int i = from; i < mobs.length; i++) {
-                    StringUtil.append(tb,
-                            "<a action=\"bypass -h admin_spawn_monster ",
-                            String.valueOf(mobs[i].npcId),
-                            "\">",
-                            mobs[i].name,
-                            "</a><br1>"
-                            );
-
-			if ((tb.length() + end2.length()) > 8192)
-			{
-				end1 = end1.replace("$from$", "" + i);
-				ended = false;
-				break;
-			}
-		}
-		// End
-		if (ended)
-			tb.append(end2);
+		if (i == mobs.length)
+			tb.append("<br><center><button value=\"Back\" action=\"bypass -h admin_show_npcs\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></center></body></html>");
 		else
-			tb.append(end1);
+			StringUtil.append(tb, "<br><center><button value=\"Next\" action=\"bypass -h admin_npc_index ", starting, " ", Integer.toString(i), "\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><button value=\"Back\" action=\"bypass -h admin_show_npcs\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></center></body></html>");
+
 		activeChar.sendPacket(new NpcHtmlMessage(5, tb.toString()));
 	}
 }

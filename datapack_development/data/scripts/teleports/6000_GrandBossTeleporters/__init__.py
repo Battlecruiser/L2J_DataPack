@@ -1,13 +1,14 @@
 #Made by Emperorc
 import sys
-from net.sf.l2j.gameserver.datatables import DoorTable
-from net.sf.l2j.gameserver.model.quest import State
-from net.sf.l2j.gameserver.model.quest import QuestState
-from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-from net.sf.l2j.gameserver.datatables import SpawnTable
-from net.sf.l2j.util import Rnd
-from net.sf.l2j.gameserver.instancemanager import QuestManager
-from net.sf.l2j.gameserver.instancemanager import GrandBossManager
+from com.l2jserver import Config
+from com.l2jserver.gameserver.datatables import DoorTable
+from com.l2jserver.gameserver.model.quest import State
+from com.l2jserver.gameserver.model.quest import QuestState
+from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.datatables import SpawnTable
+from com.l2jserver.util import Rnd
+from com.l2jserver.gameserver.instancemanager import QuestManager
+from com.l2jserver.gameserver.instancemanager import GrandBossManager
 
 qn = "6000_GrandBossTeleporters"
 
@@ -49,28 +50,30 @@ class Quest (JQuest) :
     npcId = npc.getNpcId()
     htmltext = ""
     if npcId == 13001 : #heart of warding
-        htmltext = "13001-01.htm"
         if self.antharasAI :
             status = GrandBossManager.getInstance().getBossStatus(29019)
-            if status == 0 or status == 1 : #If entrance to see Antharas is unlocked (he is Dormant or Waiting)
+            statusW = GrandBossManager.getInstance().getBossStatus(29066)
+            statusN = GrandBossManager.getInstance().getBossStatus(29067)
+            statusS = GrandBossManager.getInstance().getBossStatus(29068)
+            if status == 2 or statusW == 2 or statusN == 2 or statusS == 2:
+                htmltext = "13001-02.htm"
+            elif status == 3 or statusW == 3 or statusN == 3 or statusS == 3:
+                htmltext = "13001-01.htm"
+            elif status == 0 or status == 1 : #If entrance to see Antharas is unlocked (he is Dormant or Waiting)
                 st = player.getQuestState(qn)
                 if st.getQuestItemsCount(3865) > 0 :
                     st.takeItems(3865,1)
                     zone = GrandBossManager.getInstance().getZone(179700,113800,-7709)
                     if zone : 
-                       zone.allowPlayerEntry(player,30)
-                    x = 179700 + Rnd.get(700)
-                    y = 113800 + Rnd.get(2100)
+                        zone.allowPlayerEntry(player,30)
+                    x = 179700 + Rnd.get(700) 
+                    y = 113800 + Rnd.get(2100) 
                     player.teleToLocation(x,y,-7709)
                     if status == 0 :
-                        antharas = GrandBossManager.getInstance().getBoss(29019)
-                        self.antharasAI.startQuestTimer("waiting",1800000, antharas, None)
-                        GrandBossManager.getInstance().setBossStatus(29019,1)
+                        self.antharasAI.setAntharasSpawnTask()
                     return
                 else :
                     htmltext = "13001-03.htm"
-            elif status == 2 :
-                htmltext = "13001-02.htm"
     elif npcId == 31859 : #antharas teleport cube
         x = 79800 + Rnd.get(600)
         y = 151200 + Rnd.get(1100)
@@ -95,7 +98,7 @@ class Quest (JQuest) :
                    self.count = self.count+1
                    if status == 0 :
                       valakas = GrandBossManager.getInstance().getBoss(29028)
-                      self.valakasAI.startQuestTimer("1001",1800000, valakas, None)
+                      self.valakasAI.startQuestTimer("1001",Config.Valakas_Wait_Time, valakas, None)
                       GrandBossManager.getInstance().setBossStatus(29028,1)
                    return
                 else: #player cheated, wasn't ported via npc Klein

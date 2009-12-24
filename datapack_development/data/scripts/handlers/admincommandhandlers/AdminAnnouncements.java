@@ -15,12 +15,21 @@
 package handlers.admincommandhandlers;
 
 import java.util.Collection;
+import java.util.List;
+import java.util.StringTokenizer;
 
-import net.sf.l2j.gameserver.Announcements;
-import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
-import net.sf.l2j.gameserver.model.L2World;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.taskmanager.AutoAnnounceTaskManager;
+import javolution.text.TextBuilder;
+
+import com.l2jserver.gameserver.Announcements;
+import com.l2jserver.gameserver.cache.HtmCache;
+import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jserver.gameserver.taskmanager.AutoAnnounceTaskManager;
+import com.l2jserver.gameserver.taskmanager.AutoAnnounceTaskManager.AutoAnnouncement;
+import com.l2jserver.gameserver.util.StringUtil;
+
 
 /**
  * This class handles following admin commands:
@@ -45,7 +54,10 @@ public class AdminAnnouncements implements IAdminCommandHandler
 		"admin_del_announcement",
 		"admin_announce",
 		"admin_announce_menu",
-		"admin_reload_autoannounce"
+		"admin_list_autoann",
+		"admin_reload_autoann",
+		"admin_add_autoann",
+		"admin_del_autoann"
 	};
 	
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
@@ -110,14 +122,98 @@ public class AdminAnnouncements implements IAdminCommandHandler
 			// Call method from another class
 			Announcements.getInstance().handleAnnounce(command, 15);
 		}
-		
-		else if (command.startsWith("admin_reload_autoannounce"))
+		else if (command.startsWith("admin_list_autoann"))
+		{
+			listAutoAnnouncements(activeChar);
+		}
+		else if (command.startsWith("admin_reload_autoann"))
 		{
 			AutoAnnounceTaskManager.getInstance().restore();
 			activeChar.sendMessage("AutoAnnouncement Reloaded.");
+			listAutoAnnouncements(activeChar);
 		}
-
+		else if (command.startsWith("admin_add_autoann"))
+		{
+			StringTokenizer st = new StringTokenizer(command);
+			st.nextToken();
+			
+			if (!st.hasMoreTokens())
+			{
+				activeChar.sendMessage("Not enough parameters for adding autoannounce!");
+				return false;
+			}
+			long initial = Long.parseLong(st.nextToken());
+			if (!st.hasMoreTokens())
+			{
+				activeChar.sendMessage("Not enough parameters for adding autoannounce!");
+				return false;
+			}
+			long delay = Long.parseLong(st.nextToken());
+			if (!st.hasMoreTokens())
+			{
+				activeChar.sendMessage("Not enough parameters for adding autoannounce!");
+				return false;
+			}
+			int repeat = Integer.parseInt(st.nextToken());
+			if (!st.hasMoreTokens())
+			{
+				activeChar.sendMessage("Not enough parameters for adding autoannounce!");
+				return false;
+			}
+			TextBuilder memo = new TextBuilder();
+			while (st.hasMoreTokens())
+			{
+				memo.append(st.nextToken());
+				memo.append(" ");
+			}
+			
+			AutoAnnounceTaskManager.getInstance().addAutoAnnounce(initial*1000, delay*1000, repeat, memo.toString().trim());
+			listAutoAnnouncements(activeChar);
+		}
+		
+		else if (command.startsWith("admin_del_autoann"))
+		{
+			StringTokenizer st = new StringTokenizer(command);
+			st.nextToken();
+			
+			if (!st.hasMoreTokens())
+			{
+				activeChar.sendMessage("Not enough parameters for deleting autoannounce!");
+				return false;
+			}
+			
+			AutoAnnounceTaskManager.getInstance().deleteAutoAnnounce(Integer.parseInt(st.nextToken()));
+			listAutoAnnouncements(activeChar);
+		}
 		return true;
+	}
+	
+	private void listAutoAnnouncements(L2PcInstance activeChar)
+	{
+		String content = HtmCache.getInstance().getHtmForce("data/html/admin/autoannounce.htm");
+		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		adminReply.setHtml(content);
+		
+		final StringBuilder replyMSG = StringUtil.startAppend(500, "<br>");
+		List<AutoAnnouncement> autoannouncements = AutoAnnounceTaskManager.getInstance().getAutoAnnouncements();
+		for (int i = 0; i < autoannouncements.size(); i++)
+		{
+			AutoAnnouncement autoann = autoannouncements.get(i);
+			TextBuilder memo2 = new TextBuilder();
+			for (String memo0 : autoann.getMemo())
+			{
+				memo2.append(memo0);
+				memo2.append("/n");
+			}
+			replyMSG.append("<table width=260><tr><td width=220>");
+			replyMSG.append(memo2.toString().trim());
+			replyMSG.append("</td><td width=40><button value=\"Delete\" action=\"bypass -h admin_del_autoann ");
+			replyMSG.append(i); 
+			replyMSG.append("\" width=60 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table>");
+		}
+		adminReply.replace("%announces%", replyMSG.toString());
+		
+		activeChar.sendPacket(adminReply);
 	}
 	
 	public String[] getAdminCommandList()

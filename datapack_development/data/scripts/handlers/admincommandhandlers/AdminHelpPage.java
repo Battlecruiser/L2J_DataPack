@@ -14,10 +14,10 @@
  */
 package handlers.admincommandhandlers;
 
-import net.sf.l2j.gameserver.cache.HtmCache;
-import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jserver.gameserver.cache.HtmCache;
+import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
  * This class handles following admin commands:

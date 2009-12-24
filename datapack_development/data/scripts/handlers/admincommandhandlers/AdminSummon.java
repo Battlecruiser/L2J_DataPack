@@ -16,10 +16,11 @@ package handlers.admincommandhandlers;
 
 import java.util.logging.Logger;
 
-import net.sf.l2j.gameserver.datatables.AdminCommandAccessRights;
-import net.sf.l2j.gameserver.handler.AdminCommandHandler;
-import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.datatables.AdminCommandAccessRights;
+import com.l2jserver.gameserver.handler.AdminCommandHandler;
+import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+
 
 /**
  *
@@ -34,7 +35,7 @@ public class AdminSummon implements IAdminCommandHandler
 		"admin_summon"
 	};
 	/**
-	 * @see net.sf.l2j.gameserver.handler.IAdminCommandHandler#getAdminCommandList()
+	 * @see com.l2jserver.gameserver.handler.IAdminCommandHandler#getAdminCommandList()
 	 */
 	public String[] getAdminCommandList()
 	{
@@ -43,7 +44,7 @@ public class AdminSummon implements IAdminCommandHandler
 	}
 	
 	/**
-	 * @see net.sf.l2j.gameserver.handler.IAdminCommandHandler#useAdminCommand(java.lang.String, net.sf.l2j.gameserver.model.actor.instance.L2PcInstance)
+	 * @see com.l2jserver.gameserver.handler.IAdminCommandHandler#useAdminCommand(java.lang.String, com.l2jserver.gameserver.model.actor.instance.L2PcInstance)
 	 */
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{

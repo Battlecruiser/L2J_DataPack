@@ -14,20 +14,20 @@
  */
 package handlers.skillhandlers;
 
-import net.sf.l2j.Config;
-import net.sf.l2j.gameserver.datatables.ExtractableSkillsData;
-import net.sf.l2j.gameserver.datatables.ItemTable;
-import net.sf.l2j.gameserver.handler.ISkillHandler;
-import net.sf.l2j.gameserver.model.L2ExtractableProductItem;
-import net.sf.l2j.gameserver.model.L2ExtractableSkill;
-import net.sf.l2j.gameserver.model.L2Object;
-import net.sf.l2j.gameserver.model.L2Skill;
-import net.sf.l2j.gameserver.model.actor.L2Character;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.network.SystemMessageId;
-import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
-import net.sf.l2j.gameserver.templates.skills.L2SkillType;
-import net.sf.l2j.util.Rnd;
+import com.l2jserver.Config;
+import com.l2jserver.gameserver.datatables.ExtractableSkillsData;
+import com.l2jserver.gameserver.datatables.ItemTable;
+import com.l2jserver.gameserver.handler.ISkillHandler;
+import com.l2jserver.gameserver.model.L2ExtractableProductItem;
+import com.l2jserver.gameserver.model.L2ExtractableSkill;
+import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.L2Skill;
+import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.templates.skills.L2SkillType;
+import com.l2jserver.util.Rnd;
 
 public class Extractable implements ISkillHandler
 {
@@ -38,7 +38,7 @@ public class Extractable implements ISkillHandler
 	
 	/**
 	 * 
-	 * @see net.sf.l2j.gameserver.handler.ISkillHandler#useSkill(net.sf.l2j.gameserver.model.actor.L2Character, net.sf.l2j.gameserver.model.L2Skill, net.sf.l2j.gameserver.model.L2Object[])
+	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
 	 */
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
@@ -133,7 +133,7 @@ public class Extractable implements ISkillHandler
 	
 	/**
 	 * 
-	 * @see net.sf.l2j.gameserver.handler.ISkillHandler#getSkillIds()
+	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
 	 */
 	public L2SkillType[] getSkillIds()
 	{

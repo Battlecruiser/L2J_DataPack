@@ -14,12 +14,12 @@
  */
 package custom.IOPRace;
 
-import net.sf.l2j.gameserver.model.actor.L2Npc;
-import net.sf.l2j.gameserver.datatables.SkillTable;
-import net.sf.l2j.gameserver.model.L2Skill;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.model.quest.Quest;
-import net.sf.l2j.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.model.L2Skill;
+import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.quest.Quest;
+import com.l2jserver.gameserver.model.quest.QuestState;
 
 public class IOPRace extends Quest
 {
@@ -46,7 +46,7 @@ public class IOPRace extends Quest
 		if (player.getLevel() < 78)
 			return "32349-notavailable.htm";
 		else if ((_player != -1) && (_player == player.getObjectId()) && (st.getQuestItemsCount(STAMP) == 4))
-			return "32349-return.htm"; // retail text missing
+			return "32349-return.htm";
 		else if (_player != -1)
 			return "32349-notavailable.htm";
 
@@ -101,20 +101,13 @@ public class IOPRace extends Quest
 			_player = -1;
 			return null;
 		}
-		else if (event.equalsIgnoreCase("finish")) // this is probably custom
+		else if (event.equalsIgnoreCase("finish"))
 		{
 			if (_player == player.getObjectId())
 			{
-				_player = -1;
-				
 				QuestState st = player.getQuestState(getName());
-				st.takeItems(STAMP, -1);
 				st.giveItems(KEY, 3);
-				player.stopSkillEffects(5239);
-				if (player.getPet() != null)
-					player.getPet().stopSkillEffects(5239);
-				cancelQuestTimers("timer");
-				htmltext = "32349-finish.htm"; // need better message
+				st.takeItems(STAMP, -1);
 				st.exitQuest(true);
 			}
 		}

@@ -15,25 +15,27 @@
 package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
+import java.util.logging.Logger;
 
-import net.sf.l2j.Config;
-import net.sf.l2j.gameserver.GmListTable;
-import net.sf.l2j.gameserver.cache.HtmCache;
-import net.sf.l2j.gameserver.datatables.AccessLevels;
-import net.sf.l2j.gameserver.datatables.AdminCommandAccessRights;
-import net.sf.l2j.gameserver.datatables.ItemTable;
-import net.sf.l2j.gameserver.datatables.NpcTable;
-import net.sf.l2j.gameserver.datatables.NpcWalkerRoutesTable;
-import net.sf.l2j.gameserver.datatables.SkillTable;
-import net.sf.l2j.gameserver.datatables.TeleportLocationTable;
-import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
-import net.sf.l2j.gameserver.instancemanager.Manager;
-import net.sf.l2j.gameserver.instancemanager.QuestManager;
-import net.sf.l2j.gameserver.model.L2Multisell;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.model.olympiad.Olympiad;
-import net.sf.l2j.gameserver.network.SystemMessageId;
-import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.Config;
+import com.l2jserver.gameserver.GmListTable;
+import com.l2jserver.gameserver.cache.HtmCache;
+import com.l2jserver.gameserver.datatables.AccessLevels;
+import com.l2jserver.gameserver.datatables.AdminCommandAccessRights;
+import com.l2jserver.gameserver.datatables.ItemTable;
+import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.datatables.NpcWalkerRoutesTable;
+import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.TeleportLocationTable;
+import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.instancemanager.Manager;
+import com.l2jserver.gameserver.instancemanager.QuestManager;
+import com.l2jserver.gameserver.model.L2Multisell;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.olympiad.Olympiad;
+import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+
 
 /**
  * This class handles following admin commands:
@@ -50,6 +52,7 @@ import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
  */
 public class AdminAdmin implements IAdminCommandHandler
 {
+	private static Logger _log = Logger.getLogger(AdminAdmin.class.getName());
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -117,7 +120,7 @@ public class AdminAdmin implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				e.printStackTrace();
+				_log.warning("An error occured while ending olympiad: " + e);
 			}
 			activeChar.sendMessage("Heroes formed");
 		}
@@ -206,29 +209,30 @@ public class AdminAdmin implements IAdminCommandHandler
 		{
 			StringTokenizer st = new StringTokenizer(command);
 			st.nextToken();
+			String type = "";
 			try
 			{
-				String type = st.nextToken();
+				type = st.nextToken();
 				if (type.equals("multisell"))
 				{
 					L2Multisell.getInstance().reload();
-					activeChar.sendMessage("multisell reloaded");
+					activeChar.sendMessage("All Multisells have been reloaded");
 				}
 				else if (type.startsWith("teleport"))
 				{
 					TeleportLocationTable.getInstance().reloadAll();
-					activeChar.sendMessage("teleport location table reloaded");
+					activeChar.sendMessage("Teleport Locations have been reloaded");
 				}
 				else if (type.startsWith("skill"))
 				{
 					SkillTable.getInstance().reload();
-					activeChar.sendMessage("skills reloaded");
+					activeChar.sendMessage("All Skills have been reloaded");
 				}
 				else if (type.equals("npc"))
 				{
 					NpcTable.getInstance().reloadAllNpc();
 					QuestManager.getInstance().reloadAllQuests();
-					activeChar.sendMessage("npcs reloaded");
+					activeChar.sendMessage("All NPCs have been reloaded");
 				}
 				else if (type.startsWith("htm"))
 				{
@@ -238,22 +242,22 @@ public class AdminAdmin implements IAdminCommandHandler
 				else if (type.startsWith("item"))
 				{
 					ItemTable.getInstance().reload();
-					activeChar.sendMessage("Item templates reloaded");
+					activeChar.sendMessage("Item Templates have been reloaded");
 				}
 				else if (type.startsWith("config"))
 				{
 					Config.load();
-					activeChar.sendMessage("All config settings have been reload");
+					activeChar.sendMessage("All Config Settings have been reloaded");
 				}
 				else if (type.startsWith("instancemanager"))
 				{
 					Manager.reloadAll();
-					activeChar.sendMessage("All instance manager has been reloaded");
+					activeChar.sendMessage("All Instance Manager has been reloaded");
 				}
 				else if (type.startsWith("npcwalkers"))
 				{
 					NpcWalkerRoutesTable.getInstance().load();
-					activeChar.sendMessage("All NPC walker routes have been reloaded");
+					activeChar.sendMessage("NPC Walker Routes have been reloaded");
 				}
 				else if (type.startsWith("access"))
 				{
@@ -270,7 +274,9 @@ public class AdminAdmin implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Usage:  //reload <multisell|skill|npc|htm|item|instancemanager>");
+				activeChar.sendMessage("An error occured while reloading " + type + " !");
+				activeChar.sendMessage("Usage: //reload <multisell|teleport|skill|npc|htm|item|config|instancemanager|npcwalkers|access|quests>");
+				_log.warning("An error occured while reloading " + type + ": " + e); //do not mask an exception here
 			}
 		}
 		
