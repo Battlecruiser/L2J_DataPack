@@ -1,1049 +1,1155 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-<skill id="600" levels="1" name="Residence Guidance">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="isMagic" val="true"/>
-  <for>
-    <add order="0x40" stat="accCombat" val="4"/>
-  </for>
-</skill>
-<skill id="601" levels="1" name="Residence Agility">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="isMagic" val="true"/>
-  <for>
-    <add order="0x40" stat="rEvas" val="4"/>
-  </for>
-</skill>
-<skill id="602" levels="1" name="Residence Shield Block">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="isMagic" val="true"/>
-  <for>
-    <add order="0x40" stat="rShld" val="54.7"/>
-  </for>
-</skill>
-<skill id="603" levels="1" name="Residence Shield Defense">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="isMagic" val="true"/>
-  <for>
-    <add order="0x40" stat="sDef" val="225"/>
-  </for>
-</skill>
-<skill id="604" levels="1" name="Residence Resist Typhoon">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="isMagic" val="true"/>
-  <for>
-    <add order="0x40" stat="windRes" val="10"/>
-    <add order="0x40" stat="waterRes" val="10"/>
-  </for>
-</skill>
-<skill id="605" levels="1" name="Residence Resist Lava">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="isMagic" val="true"/>
-  <for>
-    <add order="0x40" stat="fireRes" val="10"/>
-    <add order="0x40" stat="earthRes" val="10"/>
-  </for>
-</skill>
-<skill id="606" levels="1" name="Residence Fortitude">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="isMagic" val="true"/>
-  <for>
-    <mul order="0x30" stat="stunVuln" val="0.9"/>
-  </for>
-</skill>
-<skill id="607" levels="1" name="Residence Freedom">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="isMagic" val="true"/>
-  <for>
-    <mul order="0x30" stat="rootVuln" val="0.9"/>
-  </for>
-</skill>
-<skill id="608" levels="1" name="Residence Vigilance">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="isMagic" val="true"/>
-  <for>
-    <mul order="0x30" stat="sleepVuln" val="0.9"/>
-  </for>
-</skill>
-<skill id="609" levels="1" name="Residence Movement">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="isMagic" val="true"/>
-  <for>
-    <add order="0x40" stat="runSpd" val="6"/>
-  </for>
-</skill>
-<skill id="610" levels="1" name="Residence Death Fortune">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="611" levels="3" name="Fire Squad">
-  <table name="#rCrit"> 0 15 15 </table>
-  <table name="#cAtk"> 0 0 100 </table>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="isMagic" val="true"/>
-  <for>
-    <add order="0x40" stat="pAtk" val="17.3"/>
-    <add order="0x40" stat="rCrit" val="#rCrit"/>
-    <add order="0x40" stat="cAtk" val="#cAtk"/>
-  </for>
-</skill>
-<skill id="612" levels="3" name="Water Squad">
-  <table name="#mDef"> 0 17.6 17.6 </table>
-  <table name="#sDef"> 1 1 1.6 </table>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="isMagic" val="true"/>
-  <for>
-    <add order="0x40" stat="pDef" val="27.3"/>
-    <add order="0x40" stat="mDef" val="#mDef"/>
-    <mul order="0x30" stat="sDef" val="#sDef"/>
-  </for>
-</skill>
-<skill id="613" levels="3" name="Wind Squad">
-  <table name="#rEvas"> 0 2 2 </table>
-  <table name="#runSpd"> 0 0 3 </table>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="isMagic" val="true"/>
-  <for>
-    <add order="0x40" stat="accCombat" val="2"/>
-    <add order="0x40" stat="rEvas" val="#rEvas"/>
-    <add order="0x40" stat="runSpd" val="#runSpd"/>
-  </for>
-</skill>
-<skill id="614" levels="3" name="Earth Squad">
-  <table name="#mDef"> 17 31.1 44 </table>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="isMagic" val="true"/>
-  <for>
-    <add order="0x40" stat="mDef" val="#mDef"/>
-  </for>
-</skill>
-<skill id="615" levels="3" name="Holy Squad">
-  <table name="#maxMp"> 1 1.3 1.3 </table>
-  <table name="#MpConsumeRate"> 1 1 0.95 </table>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="isMagic" val="true"/>
-  <for>
-    <add order="0x40" stat="regHp" val="20"/>
-    <mul order="0x30" stat="maxMp" val="#maxMp"/>
-    <mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRate"/>
-    <mul order="0x30" stat="PhysicalMpConsumeRate" val="#MpConsumeRate"/>
-  </for>
-</skill>
-<skill id="616" levels="3" name="Dark Squad">
-  <table name="#mAtk"> 7.17 19.32 19.32 </table>
-  <table name="#cAtk"> 1 1 1.01 </table>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="isMagic" val="true"/>
-  <for>
-    <add order="0x40" stat="mAtk" val="#mAtk"/>
-    <mul order="0x30" stat="cAtk" val="#cAtk"/>
-  </for>
-</skill>
-<skill id="617" levels="1" name="Transform Onyx Beast">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="14400000"/>
-  <set name="staticReuse" val="true"/>
-  <set name="staticHitTime" val="true"/>
-  <set name="transformId" val="1"/>
-  <cond msgId="1509">
-    <player olympiad="false"/>
-  </cond>
-  <for>
-    <effect name="Transformation" time="1800" val="0"> <!-- Transformation lasts 30 minutes -->
-      <set order="0x08" stat="STR" val="40"/>
-      <set order="0x08" stat="DEX" val="30"/>
-      <set order="0x08" stat="CON" val="43"/>
-      <set order="0x08" stat="INT" val="21"/>
-      <set order="0x08" stat="WIT" val="11"/>
-      <set order="0x08" stat="MEN" val="25"/>
-      <add order="0x40" stat="runSpd" val="11"/>
-    </effect>
-  </for>
-</skill>
-<skill id="618" levels="1" name="Transform Death Blader">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="14400000"/>
-  <set name="staticReuse" val="true"/>
-  <set name="staticHitTime" val="true"/>
-  <set name="transformId" val="2"/>
-  <cond msgId="1509">
-    <player olympiad="false"/>
-  </cond>
-  <for>
-    <effect name="Transformation" time="1800" val="0"> <!-- Transformation lasts 30 minutes -->
-      <set order="0x08" stat="STR" val="40"/>
-      <set order="0x08" stat="DEX" val="30"/>
-      <set order="0x08" stat="CON" val="43"/>
-      <set order="0x08" stat="INT" val="21"/>
-      <set order="0x08" stat="WIT" val="11"/>
-      <set order="0x08" stat="MEN" val="25"/>
-    </effect>
-  </for>
-</skill>
-<skill id="619" levels="1" name="Transform Dispel">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="TRANSFORMDISPEL"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="2500"/>
-</skill>
-<skill id="620" levels="1" name="Quiver of Bolts - Grade B">
-  <set name="mpConsume" val="366"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="3000"/>
-  <set name="isMagic" val="true"/>
-  <set name="skillType" val="CREATE_ITEM"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="itemConsumeId" val="1460"/>
-  <set name="itemConsumeCount" val="1"/>
-  <set name="create_item_id" val="9635"/>
-  <set name="create_item_count" val="700"/>
-  <set name="random_count" val="2100"/>
-</skill>
-<skill id="621" levels="1" name="Create Special Bolt">
-  <!-- Needs to be verified -->
-  <set name="mpConsume" val="38"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="hitTime" val="3000"/>
-  <set name="isMagic" val="true"/>
-  <set name="reuseDelay" val="150000"/>
-  <set name="skillType" val="CREATE_ITEM"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="create_item_id" val="10113"/>
-  <set name="create_item_count" val="1"/>
-</skill>
-<skill id="622" levels="2" name="Ultimate Escape">
-  <table name="#rEvas"> 20 35 </table>
-  <table name="#runSpd"> 33 66 </table>
-  <set name="mpConsume" val="38"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="1500"/>
-  <set name="reuseDelay" val="900000"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="target" val="TARGET_SELF"/>
-  <!-- TODO: skill can't be used while mounted on pet, also effect removed when mounted -->
-  <for>
-    <effect name="Buff" time="20" val="0">
-      <add order="0x40" stat="rEvas" val="#rEvas"/>
-      <add order="0x40" stat="runSpd" val="#runSpd"/>
-    </effect>
-  </for>
-</skill>
-<skill id="623" levels="1" name="Find Trap">
-  <set name="mpConsume" val="67"/>
-  <set name="power" val="78"/>
-  <set name="reuseDelay" val="3000"/>
-  <set name="target" val="TARGET_AURA"/>
-  <set name="hitTime" val="2500"/>
-  <set name="skillType" val="DETECT_TRAP"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="skillRadius" val="400"/>
-</skill>
-<skill id="624" levels="1" name="Remove Trap">
-  <set name="mpConsume" val="17"/>
-  <set name="power" val="78"/>
-  <set name="reuseDelay" val="8000"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="4000"/>
-  <set name="skillType" val="REMOVE_TRAP"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="400"/>
-  <set name="effectRange" val="900"/>
-</skill>
-<skill id="625" levels="1" name="Soul Gathering">
-  <!-- CT2.2 retail confirmed -->
-  <set name="hpConsume" val="200"/>
-  <set name="hitTime" val="1500"/>
-  <set name="itemConsumeId" val="3031"/>
-  <set name="itemConsumeCount" val="10"/>
-  <set name="reuseDelay" val="1800000"/>
-  <set name="staticReuse" val="true"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="CHARGESOUL"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="num_souls" val="40"/>
-</skill>
-<skill id="626" levels="4" name="Critical Sense">
-  <table name="#rCrit"> 0.1 0.15 0.2 0.25 </table>
-  <table name="#cAtk"> 111 177 253 317 </table>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <basemul order="0x30" stat="rCrit" val="#rCrit"/>
-    <add order="0x40" stat="cAtkAdd" val="#cAtk"/>
-  </for>
-</skill>
-<skill id="627" levels="40" name="Soul Shock" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30" enchantLevels4="30" enchantLevels5="30" enchantLevels6="30">
-  <table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
-  <table name="#ench1Power"> 2268 2286 2304 2322 2339 2357 2375 2393 2410 2428 2446 2464 2481 2499 2517 2535 2553 2570 2588 2606 2624 2641 2659 2677 2695 2712 2730 2748 2766 2784 </table>
-  <table name="#ench2MpConsume"> 107 105 103 101 99 98 96 94 92 90 89 87 85 83 81 79 78 76 74 72 70 69 67 65 63 61 59 58 56 54 </table>
-  <table name="#enchElementPower"> 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 </table>
-  <table name="#mpConsume"> 48 49 51 52 54 56 56 58 59 61 63 65 66 68 70 72 72 74 76 78 80 81 83 85 87 88 89 91 92 94 96 97 99 100 102 103 105 106 108 109 </table>
-  <table name="#power"> 344 367 391 443 471 500 530 562 595 630 666 703 742 782 823 866 910 955 1002 1050 1100 1150 1202 1255 1309 1364 1420 1476 1534 1592 1651 1710 1770 1830 1891 1951 2012 2072 2132 2192 </table>
-  <table name="#magicLvl"> 40 41 42 43 44 44 45 46 47 48 49 50 51 51 52 53 54 55 56 57 58 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 </table>
-  <set name="weaponsAllowed" val="65568"/> <!-- Bow/Crossbow -->
-  <set name="mpConsume" val="#mpConsume"/>
-  <set name="power" val="#power"/>
-  <set name="magicLvl" val="#magicLvl"/>
-  <set name="overHit" val="true"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="PDAM"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="200"/>
-  <set name="lvlDepend" val="1"/>
-  <set name="overHit" val="true"/>
-  <set name="SSBoost" val="2.0"/>
-  <set name="hitTime" val="1500"/>
-  <set name="reuseDelay" val="15000"/>
-  <set name="isDebuff" val="true"/>
-  <set name="soulMaxConsumeCount" val="5"/>
-  <set name="effectRange" val="200"/>
-  <enchant1 name="magicLvl" val="#enchantMagicLvl"/>
-  <enchant2 name="magicLvl" val="#enchantMagicLvl"/>
-  <enchant3 name="magicLvl" val="#enchantMagicLvl"/>
-  <enchant4 name="magicLvl" val="#enchantMagicLvl"/>
-  <enchant5 name="magicLvl" val="#enchantMagicLvl"/>
-  <enchant6 name="magicLvl" val="#enchantMagicLvl"/>
-  <enchant1 name="power" val="#ench1Power"/>
-  <enchant2 name="mpConsume" val="#ench2MpConsume"/>
-  <enchant3 name="elementPower" val="#enchElementPower"/>
-  <enchant3 name="element" val="0"/>
-  <enchant4 name="elementPower" val="#enchElementPower"/>
-  <enchant4 name="element" val="1"/>
-  <enchant5 name="elementPower" val="#enchElementPower"/>
-  <enchant5 name="element" val="2"/>
-  <enchant6 name="elementPower" val="#enchElementPower"/>
-  <enchant6 name="element" val="3"/>
-  <for>
-    <effect count="3" name="Fear" val="0" effectPower="20" effectType="FEAR"/>
-  </for>
-</skill>
-<skill id="628" levels="1" name="Warp">
-  <!-- CT2.2 retail confirmed -->
-  <set name="coolTime" val="200"/>
-  <set name="flyCourse" val="180"/> <!-- Teleport to Front -->
-  <set name="flyRadius" val="500"/>
-  <set name="hitTime" val="100"/>
-  <set name="isMagic" val="true"/>
-  <set name="mpConsume" val="30"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="reuseDelay" val="10000"/>
-  <set name="skillRadius" val="150"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="target" val="TARGET_SELF"/>
-  <for>
-    <effect self="1" name="Warp" val="0"/>
-  </for>
-</skill>
-<skill id="629" levels="1" name="Rabbit Magic Eye">
-  <!-- CT2.2 retail confirmed -->
-  <set name="target" val="TARGET_AURA"/>
-  <set name="skillRadius" val="100"/>
-  <set name="skillType" val="DUMMY"/>
-  <set name="hitTime" val="1500"/>
-  <set name="reuseDelay" val="5000"/>
-  <set name="staticHitTime" val="true"/>
-  <set name="staticReuse" val="true"/>
-  <set name="neutral" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-</skill>
-<skill id="630" levels="1" name="Rabbit Tornado">
-  <!-- CT2.2 retail confirmed -->
-  <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="DUMMY"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="60000"/>
-  <set name="staticReuse" val="true"/>
-  <set name="staticHitTime" val="true"/>
-  <set name="neutral" val="true"/>
-  <set name="castRange" val="40"/>
-  <set name="effectRange" val="400"/>
-  <cond msgId="109">
-    <target npcId="13098"/>
-  </cond>
-</skill>
-<skill id="631" levels="6" name="Emergent Ability - Attack">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="632" levels="6" name="Emergent Ability - Defense">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="633" levels="6" name="Emergent Ability - Empower">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="634" levels="6" name="Emergent Ability - Magic Defense">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="635" levels="3" name="Not In Use">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="636" levels="3" name="Not In Use">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="637" levels="1" name="Master Ability - Attack">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="638" levels="1" name="Master Ability - Empower">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="639" levels="1" name="Master Ability - Casting">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="640" levels="1" name="Master Ability - Focus">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="641" levels="1" name="Knight Ability - Boost HP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="642" levels="1" name="Enchanter Ability - Boost Mana">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="643" levels="1" name="Summoner Ability - Boost HP/MP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="644" levels="1" name="Rogue Ability - Evasion">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="645" levels="1" name="Rogue Ability - Long Shot">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="646" levels="1" name="Wizard Ability - Mana Gain">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="647" levels="1" name="Enchanter Ability - Mana Recovery">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="648" levels="1" name="Healer Ability - Prayer">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="650" levels="1" name="Warrior Ability - Resist Trait">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="651" levels="1" name="Warrior Ability - Haste">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="652" levels="1" name="Knight Ability - Defense">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="653" levels="1" name="Rogue Ability - Critical Chance">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="654" levels="1" name="Wizard Ability - Mana Steal">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="655" levels="1" name="Enchanter Ability - Barrier">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="656" levels="3" name="Transform Divine Warrior">
-  <table name="#reuseDelay"> 14400000 7200000 3600000 </table>
-  <set name="mpConsume" val="31"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="#reuseDelay"/>
-  <set name="staticReuse" val="true"/>
-  <set name="staticHitTime" val="true"/>
-  <set name="transformId" val="253"/>
-  <cond msgId="1509">
-    <player olympiad="false"/>
-  </cond>
-  <for>
-    <effect name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
-  </for>
-</skill>
-<skill id="657" levels="3" name="Transform Divine Knight">
-  <table name="#reuseDelay"> 14400000 7200000 3600000 </table>
-  <set name="mpConsume" val="31"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="#reuseDelay"/>
-  <set name="staticReuse" val="true"/>
-  <set name="staticHitTime" val="true"/>
-  <set name="transformId" val="252"/>
-  <cond msgId="1509">
-    <player olympiad="false"/>
-  </cond>
-  <for>
-    <effect name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
-  </for>
-</skill>
-<skill id="658" levels="3" name="Transform Divine Rogue">
-  <table name="#reuseDelay"> 14400000 7200000 3600000 </table>
-  <set name="mpConsume" val="31"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="#reuseDelay"/>
-  <set name="staticReuse" val="true"/>
-  <set name="staticHitTime" val="true"/>
-  <set name="transformId" val="254"/>
-  <cond msgId="1509">
-    <player olympiad="false"/>
-  </cond>
-  <for>
-    <effect name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
-  </for>
-</skill>
-<skill id="659" levels="3" name="Transform Divine Wizard">
-  <table name="#reuseDelay"> 14400000 7200000 3600000 </table>
-  <set name="mpConsume" val="31"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="#reuseDelay"/>
-  <set name="staticReuse" val="true"/>
-  <set name="staticHitTime" val="true"/>
-  <set name="transformId" val="256"/>
-  <cond msgId="1509">
-    <player olympiad="false"/>
-  </cond>
-  <for>
-    <effect name="Transformation" time="1800" val="0"> <!-- Transformation lasts 30 minutes -->
-      <mul order="0x30" stat="pvpMagicalDmg" val="0.4"/>
-    </effect>
-  </for>
-</skill>
-<skill id="660" levels="3" name="Transform Divine Summoner">
-  <table name="#reuseDelay"> 14400000 7200000 3600000 </table>
-  <set name="mpConsume" val="31"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="#reuseDelay"/>
-  <set name="staticReuse" val="true"/>
-  <set name="staticHitTime" val="true"/>
-  <set name="transformId" val="258"/>
-  <cond msgId="1509">
-    <player olympiad="false"/>
-  </cond>
-  <for>
-    <effect name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
-  </for>
-</skill>
-<skill id="661" levels="3" name="Transform Divine Healer">
-  <table name="#reuseDelay"> 14400000 7200000 3600000 </table>
-  <set name="mpConsume" val="31"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="#reuseDelay"/>
-  <set name="staticReuse" val="true"/>
-  <set name="staticHitTime" val="true"/>
-  <set name="transformId" val="255"/>
-  <cond msgId="1509">
-    <player olympiad="false"/>
-  </cond>
-  <for>
-    <effect name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
-  </for>
-</skill>
-<skill id="662" levels="3" name="Transform Divine Enchanter">
-  <table name="#reuseDelay"> 14400000 7200000 3600000 </table>
-  <set name="mpConsume" val="31"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="#reuseDelay"/>
-  <set name="staticReuse" val="true"/>
-  <set name="staticHitTime" val="true"/>
-  <set name="transformId" val="257"/>
-  <cond msgId="1509">
-    <player olympiad="false"/>
-  </cond>
-  <for>
-    <effect name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
-  </for>
-</skill>
-<skill id="663" levels="1" name="Transform Zaken">
-  <set name="mpConsume" val="31"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="14400000"/>
-  <set name="staticReuse" val="true"/>
-  <set name="staticHitTime" val="true"/>
-  <set name="transformId" val="305"/>
-  <cond msgId="1509">
-    <player olympiad="false"/>
-  </cond>
-  <for>
-    <effect name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
-  </for>
-</skill>
-<skill id="664" levels="1" name="Transform Anakim">
-  <set name="mpConsume" val="31"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="14400000"/>
-  <set name="staticReuse" val="true"/>
-  <set name="staticHitTime" val="true"/>
-  <set name="transformId" val="306"/>
-  <cond msgId="1509">
-    <player olympiad="false"/>
-  </cond>
-  <for>
-    <effect name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
-  </for>
-</skill>
-<skill id="665" levels="1" name="Transform Venom">
-  <set name="mpConsume" val="31"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="14400000"/>
-  <set name="staticReuse" val="true"/>
-  <set name="staticHitTime" val="true"/>
-  <set name="transformId" val="307"/>
-  <cond msgId="1509">
-    <player olympiad="false"/>
-  </cond>
-  <for>
-    <effect name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
-  </for>
-</skill>
-<skill id="666" levels="1" name="Transform Gordon">
-  <set name="mpConsume" val="31"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="14400000"/>
-  <set name="staticReuse" val="true"/>
-  <set name="staticHitTime" val="true"/>
-  <set name="transformId" val="308"/>
-  <cond msgId="1509">
-    <player olympiad="false"/>
-  </cond>
-  <for>
-    <effect name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
-  </for>
-</skill>
-<skill id="667" levels="1" name="Transform Ranku">
-  <set name="mpConsume" val="31"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="14400000"/>
-  <set name="staticReuse" val="true"/>
-  <set name="staticHitTime" val="true"/>
-  <set name="transformId" val="309"/>
-  <cond msgId="1509">
-    <player olympiad="false"/>
-  </cond>
-  <for>
-    <effect name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
-  </for>
-</skill>
-<skill id="668" levels="1" name="Transform Kechi">
-  <set name="mpConsume" val="31"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="14400000"/>
-  <set name="staticReuse" val="true"/>
-  <set name="staticHitTime" val="true"/>
-  <set name="transformId" val="310"/>
-  <cond msgId="1509">
-    <player olympiad="false"/>
-  </cond>
-  <for>
-    <effect name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
-  </for>
-</skill>
-<skill id="669" levels="1" name="Transform Demon Prince">
-  <set name="mpConsume" val="31"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="14400000"/>
-  <set name="staticReuse" val="true"/>
-  <set name="staticHitTime" val="true"/>
-  <set name="transformId" val="311"/>
-  <cond msgId="1509">
-    <player olympiad="false"/>
-  </cond>
-  <for>
-    <effect name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
-  </for>
-</skill>
-<skill id="670" levels="1" name="Transform Heretic">
-  <set name="mpConsume" val="31"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="14400000"/>
-  <set name="staticReuse" val="true"/>
-  <set name="staticHitTime" val="true"/>
-  <set name="transformId" val="3"/>
-  <cond msgId="1509">
-    <player olympiad="false"/>
-  </cond>
-  <for>
-    <effect name="Transformation" time="1800" val="0"> <!-- Transformation lasts 30 minutes -->
-      <set order="0x08" stat="STR" val="22"/>
-      <set order="0x08" stat="DEX" val="21"/>
-      <set order="0x08" stat="CON" val="27"/>
-      <set order="0x08" stat="INT" val="41"/>
-      <set order="0x08" stat="WIT" val="20"/>
-      <set order="0x08" stat="MEN" val="39"/>
-    </effect>
-  </for>
-</skill>
-<skill id="671" levels="1" name="Transform Vale Master">
-  <set name="mpConsume" val="31"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="14400000"/>
-  <set name="staticReuse" val="true"/>
-  <set name="staticHitTime" val="true"/>
-  <set name="transformId" val="4"/>
-  <cond msgId="1509">
-    <player olympiad="false"/>
-  </cond>
-  <for>
-    <effect name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
-  </for>
-</skill>
-<skill id="672" levels="1" name="Transform Saber Tooth Tiger">
-  <set name="mpConsume" val="31"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="14400000"/>
-  <set name="staticReuse" val="true"/>
-  <set name="staticHitTime" val="true"/>
-  <set name="transformId" val="5"/>
-  <cond msgId="1509">
-    <player olympiad="false"/>
-  </cond>
-  <for>
-    <effect name="Transformation" time="1800" val="0"> <!-- Transformation lasts 30 minutes -->
-      <set order="0x08" stat="STR" val="40"/>
-      <set order="0x08" stat="DEX" val="30"/>
-      <set order="0x08" stat="CON" val="43"/>
-      <set order="0x08" stat="INT" val="21"/>
-      <set order="0x08" stat="WIT" val="11"/>
-      <set order="0x08" stat="MEN" val="25"/>
-    </effect>
-  </for>
-</skill>
-<skill id="673" levels="1" name="Transform Oel Mahum">
-  <set name="mpConsume" val="31"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="14400000"/>
-  <set name="staticReuse" val="true"/>
-  <set name="staticHitTime" val="true"/>
-  <set name="transformId" val="6"/>
-  <cond msgId="1509">
-    <player olympiad="false"/>
-  </cond>
-  <for>
-    <effect name="Transformation" time="1800" val="0"> <!-- Transformation lasts 30 minutes -->
-      <set order="0x08" stat="STR" val="40"/>
-      <set order="0x08" stat="DEX" val="30"/>
-      <set order="0x08" stat="CON" val="43"/>
-      <set order="0x08" stat="INT" val="21"/>
-      <set order="0x08" stat="WIT" val="11"/>
-      <set order="0x08" stat="MEN" val="25"/>
-    </effect>
-  </for>
-</skill>
-<skill id="674" levels="1" name="Transform Doll Blader">
-  <set name="mpConsume" val="31"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="isMagic" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="hitTime" val="2500"/>
-  <set name="reuseDelay" val="14400000"/>
-  <set name="staticReuse" val="true"/>
-  <set name="staticHitTime" val="true"/>
-  <set name="transformId" val="7"/>
-  <cond msgId="1509">
-    <player olympiad="false"/>
-  </cond>
-  <for>
-    <effect name="Transformation" time="1800" val="0"/> <!-- Transformation lasts 30 minutes -->
-  </for>
-</skill>
-<skill id="675" levels="1" name="Divine Warrior Cross Slash">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="1730"/>
-</skill>
-<skill id="676" levels="1" name="Divine Warrior Sonic Blaster">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="1900"/>
-</skill>
-<skill id="677" levels="1" name="Divine Warrior Transfixion of Earth">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="1070"/>
-</skill>
-<skill id="678" levels="1" name="Divine Warrior War Cry">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="1500"/>
-</skill>
-<skill id="679" levels="1" name="Sacrifice Warrior">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="2500"/>
-</skill>
-<skill id="680" levels="1" name="Divine Knight Hate">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="700"/>
-</skill>
-<skill id="681" levels="1" name="Divine Knight Hate Aura">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="1000"/>
-</skill>
-<skill id="682" levels="1" name="Divine Knight Stun Attack">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="1080"/>
-</skill>
-<skill id="683" levels="1" name="Divine Knight Thunder Storm">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="1080"/>
-</skill>
-<skill id="684" levels="1" name="Divine Knight Ultimate Defense">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="1000"/>
-</skill>
-<skill id="685" levels="1" name="Sacrifice Knight">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="2500"/>
-</skill>
-<skill id="686" levels="1" name="Divine Rogue Stun Shot">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="3000"/>
-</skill>
-<skill id="687" levels="1" name="Divine Rogue Double Shot">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="3000"/>
-</skill>
-<skill id="688" levels="1" name="Divine Rogue Bleed Attack">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="1080"/>
-</skill>
-<skill id="689" levels="1" name="Divine Rogue Deadly Blow">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="1080"/>
-</skill>
-<skill id="690" levels="1" name="Divine Rogue Agility">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="4000"/>
-</skill>
-<skill id="691" levels="1" name="Sacrifice Rogue">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="2500"/>
-</skill>
-<skill id="692" levels="1" name="Divine Wizard Holy Flare">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="1500"/>
-</skill>
-<skill id="693" levels="1" name="Divine Wizard Holy Strike">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="5000"/>
-</skill>
-<skill id="694" levels="1" name="Divine Wizard Holy Curtain">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="5000"/>
-</skill>
-<skill id="695" levels="1" name="Divine Wizard Holy Cloud">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="5000"/>
-</skill>
-<skill id="696" levels="1" name="Divine Wizard Surrender to Holy">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="1500"/>
-</skill>
-<skill id="697" levels="1" name="Sacrifice Wizard">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="2500"/>
-</skill>
-<skill id="698" levels="1" name="Divine Healer Major Heal">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="5000"/>
-</skill>
-<skill id="699" levels="1" name="Divine Healer Battle Heal">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="2000"/>
-</skill>
+	<skill id="600" levels="1" name="Residence Guidance">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="isMagic" val="true" />
+		<set name="isClanSkill" val="true" />
+		<for>
+			<add order="0x40" stat="accCombat" val="4" />
+		</for>
+	</skill>
+	<skill id="601" levels="1" name="Residence Agility">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="isMagic" val="true" />
+		<set name="isClanSkill" val="true" />
+		<for>
+			<add order="0x40" stat="rEvas" val="4" />
+		</for>
+	</skill>
+	<skill id="602" levels="1" name="Residence Shield Block">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="isMagic" val="true" />
+		<set name="isClanSkill" val="true" />
+		<for>
+			<add order="0x40" stat="rShld" val="54.7" />
+		</for>
+	</skill>
+	<skill id="603" levels="1" name="Residence Shield Defense">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="isMagic" val="true" />
+		<set name="isClanSkill" val="true" />
+		<for>
+			<add order="0x40" stat="sDef" val="225" />
+		</for>
+	</skill>
+	<skill id="604" levels="1" name="Residence Resist Typhoon">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="isMagic" val="true" />
+		<set name="isClanSkill" val="true" />
+		<for>
+			<add order="0x40" stat="windRes" val="10" />
+			<add order="0x40" stat="waterRes" val="10" />
+		</for>
+	</skill>
+	<skill id="605" levels="1" name="Residence Resist Lava">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="isMagic" val="true" />
+		<set name="isClanSkill" val="true" />
+		<for>
+			<add order="0x40" stat="fireRes" val="10" />
+			<add order="0x40" stat="earthRes" val="10" />
+		</for>
+	</skill>
+	<skill id="606" levels="1" name="Residence Fortitude">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="isMagic" val="true" />
+		<set name="isClanSkill" val="true" />
+		<for>
+			<mul order="0x30" stat="stunVuln" val="0.9" />
+		</for>
+	</skill>
+	<skill id="607" levels="1" name="Residence Freedom">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="isMagic" val="true" />
+		<set name="isClanSkill" val="true" />
+		<for>
+			<mul order="0x30" stat="rootVuln" val="0.9" />
+		</for>
+	</skill>
+	<skill id="608" levels="1" name="Residence Vigilance">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="isMagic" val="true" />
+		<set name="isClanSkill" val="true" />
+		<for>
+			<mul order="0x30" stat="sleepVuln" val="0.9" />
+		</for>
+	</skill>
+	<skill id="609" levels="1" name="Residence Movement">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="isMagic" val="true" />
+		<set name="isClanSkill" val="true" />
+		<for>
+			<add order="0x40" stat="runSpd" val="6" />
+		</for>
+	</skill>
+	<skill id="610" levels="1" name="Residence Death Fortune">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="isClanSkill" val="true" />
+	</skill>
+	<skill id="611" levels="3" name="Fire Squad">
+		<table name="#rCrit"> 0 15 15 </table>
+		<table name="#cAtk"> 0 0 100 </table>
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="isMagic" val="true" />
+		<set name="isClanSkill" val="true" />
+		<for>
+			<add order="0x40" stat="pAtk" val="17.3" />
+			<add order="0x40" stat="rCrit" val="#rCrit" />
+			<add order="0x40" stat="cAtk" val="#cAtk" />
+		</for>
+	</skill>
+	<skill id="612" levels="3" name="Water Squad">
+		<table name="#mDef"> 0 17.6 17.6 </table>
+		<table name="#sDef"> 1 1 1.6 </table>
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="isMagic" val="true" />
+		<set name="isClanSkill" val="true" />
+		<for>
+			<add order="0x40" stat="pDef" val="27.3" />
+			<add order="0x40" stat="mDef" val="#mDef" />
+			<mul order="0x30" stat="sDef" val="#sDef" />
+		</for>
+	</skill>
+	<skill id="613" levels="3" name="Wind Squad">
+		<table name="#rEvas"> 0 2 2 </table>
+		<table name="#runSpd"> 0 0 3 </table>
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="isMagic" val="true" />
+		<set name="isClanSkill" val="true" />
+		<for>
+			<add order="0x40" stat="accCombat" val="2" />
+			<add order="0x40" stat="rEvas" val="#rEvas" />
+			<add order="0x40" stat="runSpd" val="#runSpd" />
+		</for>
+	</skill>
+	<skill id="614" levels="3" name="Earth Squad">
+		<table name="#mDef"> 17 31.1 44 </table>
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="isMagic" val="true" />
+		<set name="isClanSkill" val="true" />
+		<for>
+			<add order="0x40" stat="mDef" val="#mDef" />
+		</for>
+	</skill>
+	<skill id="615" levels="3" name="Holy Squad">
+		<table name="#maxMp"> 1 1.3 1.3 </table>
+		<table name="#MpConsumeRate"> 1 1 0.95 </table>
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="isMagic" val="true" />
+		<set name="isClanSkill" val="true" />
+		<for>
+			<add order="0x40" stat="regHp" val="20" />
+			<mul order="0x30" stat="maxMp" val="#maxMp" />
+			<mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRate" />
+			<mul order="0x30" stat="PhysicalMpConsumeRate" val="#MpConsumeRate" />
+		</for>
+	</skill>
+	<skill id="616" levels="3" name="Dark Squad">
+		<table name="#mAtk"> 7.17 19.32 19.32 </table>
+		<table name="#cAtk"> 1 1 1.01 </table>
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="isMagic" val="true" />
+		<set name="isClanSkill" val="true" />
+		<for>
+			<add order="0x40" stat="mAtk" val="#mAtk" />
+			<mul order="0x30" stat="cAtk" val="#cAtk" />
+		</for>
+	</skill>
+	<skill id="617" levels="1" name="Transform Onyx Beast">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="1" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0"> <!-- Transformation lasts 30 minutes -->
+				<set order="0x08" stat="STR" val="40" />
+				<set order="0x08" stat="DEX" val="30" />
+				<set order="0x08" stat="CON" val="43" />
+				<set order="0x08" stat="INT" val="21" />
+				<set order="0x08" stat="WIT" val="11" />
+				<set order="0x08" stat="MEN" val="25" />
+				<add order="0x40" stat="runSpd" val="11" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="618" levels="1" name="Transform Death Blader">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="2" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0"> <!-- Transformation lasts 30 minutes -->
+				<set order="0x08" stat="STR" val="40" />
+				<set order="0x08" stat="DEX" val="30" />
+				<set order="0x08" stat="CON" val="43" />
+				<set order="0x08" stat="INT" val="21" />
+				<set order="0x08" stat="WIT" val="11" />
+				<set order="0x08" stat="MEN" val="25" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="619" levels="1" name="Transform Dispel">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="TRANSFORMDISPEL" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="2500" />
+	</skill>
+	<skill id="620" levels="1" name="Quiver of Bolts - Grade B">
+		<set name="mpConsume" val="366" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="true" />
+		<set name="skillType" val="CREATE_ITEM" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="itemConsumeId" val="1460" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="create_item_id" val="9635" />
+		<set name="create_item_count" val="700" />
+		<set name="random_count" val="2100" />
+	</skill>
+	<skill id="621" levels="1" name="Create Special Bolt">
+		<!-- Needs to be verified -->
+		<set name="mpConsume" val="38" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="true" />
+		<set name="reuseDelay" val="150000" />
+		<set name="skillType" val="CREATE_ITEM" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="create_item_id" val="10113" />
+		<set name="create_item_count" val="1" />
+	</skill>
+	<skill id="622" levels="2" name="Ultimate Escape">
+		<table name="#rEvas"> 20 35 </table>
+		<table name="#runSpd"> 33 66 </table>
+		<table name="#pSkillEvas"> 0 25 </table>
+		<set name="mpConsume" val="38" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="900000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<!-- TODO: skill can't be used while mounted on pet, also effect removed when mounted -->
+		<for>
+			<effect name="Buff" time="20" val="0">
+				<add order="0x40" stat="rEvas" val="#rEvas" />
+				<add order="0x40" stat="runSpd" val="#runSpd" />
+				<add order="0x40" stat="pSkillEvas" val="#pSkillEvas" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="623" levels="1" name="Find Trap">
+		<set name="mpConsume" val="67" />
+		<set name="power" val="78" />
+		<set name="reuseDelay" val="3000" />
+		<set name="target" val="TARGET_AURA" />
+		<set name="hitTime" val="2500" />
+		<set name="skillType" val="DETECT_TRAP" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="400" />
+	</skill>
+	<skill id="624" levels="1" name="Remove Trap">
+		<set name="mpConsume" val="17" />
+		<set name="power" val="78" />
+		<set name="reuseDelay" val="8000" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="hitTime" val="4000" />
+		<set name="skillType" val="REMOVE_TRAP" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+	</skill>
+	<skill id="625" levels="1" name="Soul Gathering">
+		<!-- CT2.2 retail confirmed -->
+		<set name="hpConsume" val="200" />
+		<set name="hitTime" val="1500" />
+		<set name="itemConsumeId" val="3031" />
+		<set name="itemConsumeCount" val="10" />
+		<set name="reuseDelay" val="1800000" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="CHARGESOUL" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="num_souls" val="40" />
+	</skill>
+	<skill id="626" levels="4" name="Critical Sense" enchantLevels1="30" enchantLevels2="30">
+		<table name="#ench1rCrit"> 0.251 0.253 0.255 0.256 0.258 0.260 0.261 0.263 0.265 0.266 0.268 0.270 0.271 0.273 0.275 0.276 0.278 0.280 0.281 0.283 0.285 0.286 0.288 0.290 0.291 0.293 0.295 0.296 0.298 0.300 </table>
+		<table name="#ench2cAtk"> 430 431 432 434 435 436 438 439 440 441 442 443 444 445 446 447 448 449 450 452 453 454 456 457 459 460 461 463 464 466 467 468 469 470 </table>
+		<table name="#rCrit"> 0.1 0.15 0.2 0.25 </table>
+		<table name="#cAtk"> 111 177 253 317 </table>
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<basemul order="0x30" stat="rCrit" val="#rCrit" />
+			<add order="0x40" stat="cAtkAdd" val="#cAtk" />
+		</for>
+		<enchant1for>
+			<basemul order="0x30" stat="rCrit" val="#ench1rCrit" />
+			<add order="0x40" stat="cAtkAdd" val="317" />
+		</enchant1for>
+		<enchant2for>
+			<basemul order="0x30" stat="rCrit" val="0.25" />
+			<add order="0x40" stat="cAtkAdd" val="#ench2cAtk" />
+		</enchant2for>
+	</skill>
+	<skill id="627" levels="40" name="Soul Shock" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30">
+		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
+		<table name="#ench1Power"> 2268 2286 2304 2322 2339 2357 2375 2393 2410 2428 2446 2464 2481 2499 2517 2535 2553 2570 2588 2606 2624 2641 2659 2677 2695 2712 2730 2748 2766 2784 </table>
+		<table name="#ench2MpConsume"> 107 105 103 101 99 98 96 94 92 90 89 87 85 83 81 79 78 76 74 72 70 69 67 65 63 61 59 58 56 54 </table>
+		<table name="#ench3Time"> 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 </table>
+		<table name="#enchElementPower"> 1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50 </table>
+		<table name="#mpConsume"> 48 49 51 52 54 56 56 58 59 61 63 65 66 68 70 72 72 74 76 78 80 81 83 85 87 88 89 91 92 94 96 97 99 100 102 103 105 106 108 109 </table>
+		<table name="#power"> 344 367 391 443 471 500 530 562 595 630 666 703 742 782 823 866 910 955 1002 1050 1100 1150 1202 1255 1309 1364 1420 1476 1534 1592 1651 1710 1770 1830 1891 1951 2012 2072 2132 2192 </table>
+		<table name="#magicLvl"> 40 41 42 43 44 44 45 46 47 48 49 50 51 51 52 53 54 55 56 57 58 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 </table>
+		<set name="weaponsAllowed" val="65568" /> <!-- Bow/Crossbow -->
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="power" val="#power" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="overHit" val="true" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="PDAM" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="200" />
+		<set name="lvlDepend" val="1" />
+		<set name="overHit" val="true" />
+		<set name="SSBoost" val="2.0" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="15000" />
+		<set name="isDebuff" val="true" />
+		<set name="soulMaxConsumeCount" val="5" />
+		<set name="effectRange" val="200" />
+		<for>
+			<effect count="3" name="Fear" val="0" effectPower="20" effectType="FEAR" />
+		</for>
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant1 name="power" val="#ench1Power" />
+		<enchant2 name="mpConsume" val="#ench2MpConsume" />
+		<enchant3for>
+			<effect count="#ench3Time" name="Fear" val="0" effectPower="20" effectType="FEAR" />
+		</enchant3for>
+	</skill>
+	<skill id="628" levels="1" name="Warp">
+		<!-- CT2.2 retail confirmed -->
+		<set name="coolTime" val="200" />
+		<set name="flyCourse" val="180" /> <!-- Teleport to Front -->
+		<set name="flyRadius" val="500" />
+		<set name="hitTime" val="100" />
+		<set name="isMagic" val="true" />
+		<set name="mpConsume" val="30" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="10000" />
+		<set name="skillRadius" val="150" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect self="1" name="Warp" val="0" />
+		</for>
+	</skill>
+	<skill id="629" levels="1" name="Rabbit Magic Eye">
+		<!-- CT2.2 retail confirmed -->
+		<set name="target" val="TARGET_AURA" />
+		<set name="skillRadius" val="100" />
+		<set name="skillType" val="DUMMY" />
+		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<set name="neutral" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+	</skill>
+	<skill id="630" levels="1" name="Rabbit Tornado">
+		<!-- CT2.2 retail confirmed -->
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="60000" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="neutral" val="true" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<cond msgId="109">
+			<target npcId="13098" />
+		</cond>
+	</skill>
+	<skill id="631" levels="6" name="Emergent Ability - Attack">
+		<table name="#patk"> 22 42 60 75 89 99 </table>
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="pAtk" val="#patk" />
+		</for>
+	</skill>
+	<skill id="632" levels="6" name="Emergent Ability - Defense">
+		<table name="#pdef"> 9 18 26 35 44 53 </table>
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="pDef" val="#pdef" />
+		</for>
+	</skill>
+	<skill id="633" levels="6" name="Emergent Ability - Empower">
+		<table name="#matk"> 11 20 29 37 43 48 </table>
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="mAtk" val="#matk" />
+		</for>
+	</skill>
+	<skill id="634" levels="6" name="Emergent Ability - Magic Defense">
+		<table name="#mdef"> 15 30 45 61 79 91 </table>
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="mDef" val="#mdef" />
+		</for>
+	</skill>
+	<skill id="635" levels="3" name="Not In Use">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="636" levels="3" name="Not In Use">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="637" levels="1" name="Master Ability - Attack">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="pAtk" val="35" /> <!-- guessed -->
+		</for>
+	</skill>
+	<skill id="638" levels="1" name="Master Ability - Empower">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="mAtk" val="29" />
+		</for>
+	</skill>
+	<skill id="639" levels="1" name="Master Ability - Casting">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="mAtkSpd" val="11" />
+		</for>
+	</skill>
+	<skill id="640" levels="1" name="Master Ability - Focus">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="rCrit" val="30" />
+		</for>
+	</skill>
+	<skill id="641" levels="1" name="Knight Ability - Boost HP">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="maxHp" val="1.06" />
+		</for>
+	</skill>
+	<skill id="642" levels="1" name="Enchanter Ability - Boost Mana">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="maxMp" val="148" />
+		</for>
+	</skill>
+	<skill id="643" levels="1" name="Summoner Ability - Boost HP/MP">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="maxHp" val="147" />
+			<add order="0x40" stat="maxMp" val="74" />
+		</for>
+	</skill>
+	<skill id="644" levels="1" name="Rogue Ability - Evasion">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="rEvas" val="4" />
+		</for>
+	</skill>
+	<skill id="645" levels="1" name="Rogue Ability - Long Shot">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="pAtkRange" val="100">
+				<using kind="Bow" />
+			</add>
+		</for>
+	</skill>
+	<skill id="646" levels="1" name="Wizard Ability - Mana Gain">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="gainMp" val="20" />
+		</for>
+	</skill>
+	<skill id="647" levels="1" name="Enchanter Ability - Mana Recovery">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="isMagic" val="true" />
+		<for>
+			<add order="0x40" stat="regMp" val="0.5" />
+		</for>
+	</skill>
+	<skill id="648" levels="1" name="Healer Ability - Prayer">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="gainHp" val="19" />
+		</for>
+	</skill>
+	<skill id="650" levels="1" name="Warrior Ability - Resist Trait">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<!-- these are just guessed values -->
+			<mul order="0x30" stat="cancelVuln" val="0.97" />
+			<mul order="0x30" stat="stunVuln" val="0.97" />
+			<mul order="0x30" stat="rootVuln" val="0.97" />
+			<mul order="0x30" stat="sleepVuln" val="0.97" />
+			<mul order="0x30" stat="paralyzeVuln" val="0.97" />
+		</for>
+	</skill>
+	<skill id="651" levels="1" name="Warrior Ability - Haste">
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5572" />
+		<set name="triggeredLevel" val="1" />
+		<set name="activationChance" val="5" />
+		<set name="chanceType" val="ON_HIT" />
+	</skill>
+	<skill id="652" levels="1" name="Knight Ability - Defense">
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5573" />
+		<set name="triggeredLevel" val="1" />
+		<set name="activationChance" val="3" />
+		<set name="chanceType" val="ON_ATTACKED" />
+	</skill>
+	<skill id="653" levels="1" name="Rogue Ability - Critical Chance">
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5574" />
+		<set name="triggeredLevel" val="1" />
+		<set name="activationChance" val="5" />
+		<set name="chanceType" val="ON_HIT" />
+	</skill>
+	<skill id="654" levels="1" name="Wizard Ability - Mana Steal">
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5575" />
+		<set name="triggeredLevel" val="1" />
+		<set name="activationChance" val="3" />
+		<set name="chanceType" val="ON_HIT" />
+	</skill>
+	<skill id="655" levels="1" name="Enchanter Ability - Barrier">
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5576" />
+		<set name="triggeredLevel" val="1" />
+		<set name="activationChance" val="3" />
+		<set name="chanceType" val="ON_ATTACKED" />
+	</skill>
+	<skill id="656" levels="3" name="Transform Divine Warrior">
+		<table name="#reuseDelay"> 14400000 7200000 3600000 </table>
+		<set name="mpConsume" val="31" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="#reuseDelay" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="253" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
+	</skill>
+	<skill id="657" levels="3" name="Transform Divine Knight">
+		<table name="#reuseDelay"> 14400000 7200000 3600000 </table>
+		<set name="mpConsume" val="31" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="#reuseDelay" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="252" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
+	</skill>
+	<skill id="658" levels="3" name="Transform Divine Rogue">
+		<table name="#reuseDelay"> 14400000 7200000 3600000 </table>
+		<set name="mpConsume" val="31" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="#reuseDelay" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="254" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
+	</skill>
+	<skill id="659" levels="3" name="Transform Divine Wizard">
+		<table name="#reuseDelay"> 14400000 7200000 3600000 </table>
+		<set name="mpConsume" val="31" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="#reuseDelay" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="256" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0"> <!-- Transformation lasts 30 minutes -->
+				<mul order="0x30" stat="pvpMagicalDmg" val="0.4" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="660" levels="3" name="Transform Divine Summoner">
+		<table name="#reuseDelay"> 14400000 7200000 3600000 </table>
+		<set name="mpConsume" val="31" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="#reuseDelay" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="258" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
+	</skill>
+	<skill id="661" levels="3" name="Transform Divine Healer">
+		<table name="#reuseDelay"> 14400000 7200000 3600000 </table>
+		<set name="mpConsume" val="31" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="#reuseDelay" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="255" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
+	</skill>
+	<skill id="662" levels="3" name="Transform Divine Enchanter">
+		<table name="#reuseDelay"> 14400000 7200000 3600000 </table>
+		<set name="mpConsume" val="31" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="#reuseDelay" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="257" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
+	</skill>
+	<skill id="663" levels="1" name="Transform Zaken">
+		<set name="mpConsume" val="31" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="305" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
+	</skill>
+	<skill id="664" levels="1" name="Transform Anakim">
+		<set name="mpConsume" val="31" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="306" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
+	</skill>
+	<skill id="665" levels="1" name="Transform Venom">
+		<set name="mpConsume" val="31" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="307" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
+	</skill>
+	<skill id="666" levels="1" name="Transform Gordon">
+		<set name="mpConsume" val="31" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="308" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
+	</skill>
+	<skill id="667" levels="1" name="Transform Ranku">
+		<set name="mpConsume" val="31" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="309" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
+	</skill>
+	<skill id="668" levels="1" name="Transform Kechi">
+		<set name="mpConsume" val="31" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="310" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
+	</skill>
+	<skill id="669" levels="1" name="Transform Demon Prince">
+		<set name="mpConsume" val="31" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="311" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
+	</skill>
+	<skill id="670" levels="1" name="Transform Heretic">
+		<set name="mpConsume" val="31" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="3" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0"> <!-- Transformation lasts 30 minutes -->
+				<set order="0x08" stat="STR" val="22" />
+				<set order="0x08" stat="DEX" val="21" />
+				<set order="0x08" stat="CON" val="27" />
+				<set order="0x08" stat="INT" val="41" />
+				<set order="0x08" stat="WIT" val="20" />
+				<set order="0x08" stat="MEN" val="39" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="671" levels="1" name="Transform Vale Master">
+		<set name="mpConsume" val="31" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="4" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
+	</skill>
+	<skill id="672" levels="1" name="Transform Saber Tooth Tiger">
+		<set name="mpConsume" val="31" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="5" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0"> <!-- Transformation lasts 30 minutes -->
+				<set order="0x08" stat="STR" val="40" />
+				<set order="0x08" stat="DEX" val="30" />
+				<set order="0x08" stat="CON" val="43" />
+				<set order="0x08" stat="INT" val="21" />
+				<set order="0x08" stat="WIT" val="11" />
+				<set order="0x08" stat="MEN" val="25" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="673" levels="1" name="Transform Oel Mahum">
+		<set name="mpConsume" val="31" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="6" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0"> <!-- Transformation lasts 30 minutes -->
+				<set order="0x08" stat="STR" val="40" />
+				<set order="0x08" stat="DEX" val="30" />
+				<set order="0x08" stat="CON" val="43" />
+				<set order="0x08" stat="INT" val="21" />
+				<set order="0x08" stat="WIT" val="11" />
+				<set order="0x08" stat="MEN" val="25" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="674" levels="1" name="Transform Doll Blader">
+		<set name="mpConsume" val="31" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="2500" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="7" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
+	</skill>
+	<skill id="675" levels="1" name="Divine Warrior Cross Slash">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="1730" />
+	</skill>
+	<skill id="676" levels="1" name="Divine Warrior Sonic Blaster">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="1900" />
+	</skill>
+	<skill id="677" levels="1" name="Divine Warrior Transfixion of Earth">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="1070" />
+	</skill>
+	<skill id="678" levels="1" name="Divine Warrior War Cry">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="1500" />
+	</skill>
+	<skill id="679" levels="1" name="Sacrifice Warrior">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="2500" />
+	</skill>
+	<skill id="680" levels="1" name="Divine Knight Hate">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="700" />
+	</skill>
+	<skill id="681" levels="1" name="Divine Knight Hate Aura">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="1000" />
+	</skill>
+	<skill id="682" levels="1" name="Divine Knight Stun Attack">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="1080" />
+	</skill>
+	<skill id="683" levels="1" name="Divine Knight Thunder Storm">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="1080" />
+	</skill>
+	<skill id="684" levels="1" name="Divine Knight Ultimate Defense">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="1000" />
+	</skill>
+	<skill id="685" levels="1" name="Sacrifice Knight">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="2500" />
+	</skill>
+	<skill id="686" levels="1" name="Divine Rogue Stun Shot">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="3000" />
+	</skill>
+	<skill id="687" levels="1" name="Divine Rogue Double Shot">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="3000" />
+	</skill>
+	<skill id="688" levels="1" name="Divine Rogue Bleed Attack">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="1080" />
+	</skill>
+	<skill id="689" levels="1" name="Divine Rogue Deadly Blow">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="1080" />
+	</skill>
+	<skill id="690" levels="1" name="Divine Rogue Agility">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="4000" />
+	</skill>
+	<skill id="691" levels="1" name="Sacrifice Rogue">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="2500" />
+	</skill>
+	<skill id="692" levels="1" name="Divine Wizard Holy Flare">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="1500" />
+	</skill>
+	<skill id="693" levels="1" name="Divine Wizard Holy Strike">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="5000" />
+	</skill>
+	<skill id="694" levels="1" name="Divine Wizard Holy Curtain">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="5000" />
+	</skill>
+	<skill id="695" levels="1" name="Divine Wizard Holy Cloud">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="5000" />
+	</skill>
+	<skill id="696" levels="1" name="Divine Wizard Surrender to Holy">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="1500" />
+	</skill>
+	<skill id="697" levels="1" name="Sacrifice Wizard">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="2500" />
+	</skill>
+	<skill id="698" levels="1" name="Divine Healer Major Heal">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="5000" />
+	</skill>
+	<skill id="699" levels="1" name="Divine Healer Battle Heal">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="2000" />
+	</skill>
 </list>

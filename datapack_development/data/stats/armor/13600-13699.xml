@@ -1,71 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-<item id="13687" name="Knight's Cloak">
-  <cond msgId="2453">
-    <and>
-      <player pledgeClass="3"/>
-      <player castle="-1"/>
-      <or>
-        <player active_skill_id="8284"/> <!-- Vesper Noble Breastplate -->
-        <player active_skill_id="8302"/> <!-- Vesper Noble Breastplate {PvP} -->
-      </or>
-    </and>
-  </cond>
-  <for>
-    <add order="0x10" stat="pDef" val="20"/>
-    <add order="0x40" stat="darkRes" val="30"/> <!-- Dark Attribute Defense +30 -->
-  </for>
-</item>
-<item id="13688" name="Knight's Cloak - Light Armor exclusive">
-  <cond msgId="2453">
-    <and>
-      <player pledgeClass="3"/>
-      <player castle="-1"/>
-      <not>
-        <player race="Kamael"/>
-      </not>
-      <or>
-        <player active_skill_id="8286"/> <!-- Vesper Noble Leather Breastplate -->
-        <player active_skill_id="8304"/> <!-- Vesper Noble Leather Breastplate {PvP} -->
-      </or>
-    </and>
-  </cond>
-  <for>
-    <add order="0x10" stat="pDef" val="20"/>
-    <add order="0x40" stat="darkRes" val="30"/> <!-- Dark Attribute Defense +30 -->
-  </for>
-</item>
-<item id="13689" name="Knight's Cloak - Robe exclusive">
-  <cond msgId="2453">
-    <and>
-      <player pledgeClass="3"/>
-      <player castle="-1"/>
-      <or>
-        <player active_skill_id="8288"/> <!-- Vesper Noble Tunic -->
-        <player active_skill_id="8306"/> <!-- Vesper Noble Tunic {PvP} -->
-      </or>
-    </and>
-  </cond>
-  <for>
-    <add order="0x10" stat="pDef" val="20"/>
-    <add order="0x40" stat="darkRes" val="30"/> <!-- Dark Attribute Defense +30 -->
-  </for>
-</item>
-<item id="13690" name="Knight's Cloak - Kamael exclusive">
-  <cond msgId="2453">
-    <and>
-      <player pledgeClass="3"/>
-      <player castle="-1"/>
-      <player race="Kamael"/>
-      <or>
-        <player active_skill_id="8286"/> <!-- Vesper Noble Leather Breastplate -->
-        <player active_skill_id="8304"/> <!-- Vesper Noble Leather Breastplate {PvP} -->
-      </or>
-    </and>
-  </cond>
-  <for>
-    <add order="0x10" stat="pDef" val="20"/>
-    <add order="0x40" stat="darkRes" val="30"/> <!-- Dark Attribute Defense +30 -->
-  </for>
-</item>
+	<item id="13687" name="Knight's Cloak">
+		<cond msgId="2453">
+			<and>
+				<player pledgeClass="5" /> <!-- Barons or higher ranks -->
+				<player castle="-1" /> <!-- owns a castle -->
+				<player cloakStatus="1" />
+			</and>
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="20" />
+			<add order="0x40" stat="darkRes" val="30" /> <!-- Dark Attribute Defense +30 -->
+		</for>
+	</item>
+	<item id="13688" name="Knight's Cloak - Light Armor exclusive">
+		<cond msgId="2453">
+			<and>
+				<player pledgeClass="5" /> <!-- Barons or higher ranks -->
+				<player castle="-1" /> <!-- owns a castle -->
+				<player class_id_restriction="92, 102, 109, 93, 101, 108" /> <!-- Bow Masters and Dagger Masters -->
+				<player cloakStatus="1" />
+				<not>
+					<player race="Kamael" /> <!-- excluding Kamaels -->
+				</not>
+			</and>
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="20" />
+			<add order="0x40" stat="darkRes" val="30" /> <!-- Dark Attribute Defense +30 -->
+		</for>
+	</item>
+	<item id="13689" name="Knight's Cloak - Robe exclusive">
+		<cond msgId="2453">
+			<and>
+				<player pledgeClass="5" /> <!-- Barons or higher ranks -->
+				<player castle="-1" /> <!-- owns a castle -->
+				<player class_id_restriction="97, 105, 112, 98, 115, 116, 96, 104, 111, 94, 95, 103, 110" /> <!-- Healer, Enchanter, Summoner and Wizard -->
+				<player cloakStatus="1" />
+				<not>
+					<player race="Kamael" /> <!-- excluding Kamaels -->
+				</not>
+			</and>
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="20" />
+			<add order="0x40" stat="darkRes" val="30" /> <!-- Dark Attribute Defense +30 -->
+		</for>
+	</item>
+	<item id="13690" name="Knight's Cloak - Kamael exclusive">
+		<cond msgId="2453">
+			<and>
+				<player pledgeClass="5" /> <!-- Barons or higher ranks -->
+				<player castle="-1" /> <!-- owns a castle -->
+				<player race="Kamael" /> <!-- Kamael exclusive cloak -->
+				<player cloakStatus="1" />
+			</and>
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="20" />
+			<add order="0x40" stat="darkRes" val="30" /> <!-- Dark Attribute Defense +30 -->
+		</for>
+	</item>
 </list>

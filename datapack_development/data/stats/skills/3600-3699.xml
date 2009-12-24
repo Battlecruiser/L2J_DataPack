@@ -1,1061 +1,1142 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-<skill id="3600" levels="10" name="Special Ability: Anger">
-<!-- s_opt_anger_polearm_1/2/3/4/5/6/7/8/9 -->
-<!--
-4834	Scythe - Anger	3600-1	
-4837	Orcish Glaive - Anger	3600-1	
-4846	Scorpion - Anger	3600-3	
-4855	Great Axe - Anger	3600-5	
-4858	Lance - Anger	3600-6	
--->
-<!--
-Guessing...
-9869	Dynasty Halberd - Anger	3600-10	Decreases your HP by 15% and increases P. Atk. by 78. Increases damage inflicted during PvP.
-10449	Icarus Trident - Anger	3600-10	Decreases HP by 15% while increasing P. Atk. by 78 on a critical attack. Increases damage inflicted during PvP.
-10765	Dynasty Halberd {PvP} - Anger	3600-10	
-10875	Great Axe - Thunder - Anger	3600-5	A Masterwork Item that increases the critical effect.\n\nDecreases Max HP by 15%, and increases P. Atk. by 28.
-10968	Lance - Earth - Anger	3600-6	A Masterwork Item that increases Max HP.\n\nDecreases Max HP by 15%, and increases P. Atk. by 30.
-11297	Dynasty Halberd - Earth - Anger	3600-10	A Masterwork Item that increases Max HP.\n\nDecreases Max HP by 15% and increases P. Atk. by 78. Increases damage inflicted during PvP.
-11330	Icarus Trident - Thunder - Anger	3600-10	A Masterwork Item that increases critical attack impact.\n\nDecreases Max HP by 15% and increases P. Atk. by 78. Increases damage inflicted during PvP.
-12975	Dynasty Halberd - Earth {PvP} - Anger	3600-10	A Masterwork Item that increases Max HP.\n\nDecreases Max HP by 15% and increases P. Atk. by 78. Increases damage inflicted during PvP.
-14391	Icarus Trident {PvP} - Anger	3600-10	
-14442	Icarus Trident - Thunder {PvP} - Anger	3600-10	
--->
-  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 80 </table>
-  <table name="#pAtk"> 20.44 22.64 24.77 26.78 28.59 30.12 31.30 39 45 78 </table> <!-- Guessing Level 10 -->
-  <table name="#pvpBonus"> 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table> <!-- Guessing Level 10 -->
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="magicLvl" val="#magicLvl"/>
-  <for>
-    <add order="0x40" stat="pAtk" val="#pAtk"/>
-    <mul order="0x30" stat="maxHp" val="0.85"/>
-    <add order="0x40" stat="atkCountMax" val="4"/>
-    <mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus"/>
-    <mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus"/>
-    <mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus"/>
-  </for>
-</skill>
-<skill id="3601" levels="9" name="Special Ability: Haste">
-<!-- s_opt_haste_polearm -->
-<!--
-5626	Halberd - Haste	pole	3601-7;	Increases Atk. Spd. by about 6%. Enhances damage to a target during PvP.
-6601	Saint Spear - Haste	pole	3601-9;	Increases Atk. Spd. by about 7%. Increases damage inflicted during PvP.
--->
-  <table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 1.06 1.06 1.07 </table>
-  <table name="#pvpBonus"> 1 1 1 1 1 1 1.05 1.05 1.05 </table>
-  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 </table>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="magicLvl" val="75"/>
-  <for>
-    <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
-    <add order="0x40" stat="atkCountMax" val="4"/>
-    <mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus"/>
-    <mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus"/>
-    <mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus"/>
-  </for>
-</skill>
-<skill id="3602" levels="10" name="Special Ability: Guidance">
-<!-- s_opt_guidence_polearm -->
-<!--
-5632	Tallum Glaive - Guidance	3602-8;	Increases Accuracy by 4. Increases damage inflicted during PvP.
-11129	Tallum Glaive - On Fire - Guidance	3602-8;	A Masterwork Item that increases HP regeneration.\n\nIncreases Accuracy by 4. Increases damage inflicted during PvP.
-6600	Saint Spear - Guidance	3602-9;	Increases Accuracy by 5. Increases damage inflicted during PvP.
--->
-<!--
-Guessing...
-10726	Saint Spear - PvP - Guidance	3602-9;	Increases Accuracy by 5. Increases damage inflicted during PvP.
-11220	Saint Spear - Destruction - Guidance	3602-9;	A Masterwork Item that increases P. Atk. Increases Accuracy by 5. Increases damage inflicted during PvP.
-12917	Saint Spear - Landslide - Guidance	3602-9;	A Masterwork Item that has a chance to stun when attacking. Increases Accuracy by 5. Increases damage inflicted during PvP.
-14134	Vesper Stormer - Guidance	3602-10;	
-14494	Vesper Stormer {PvP} - Guidance	3602-10;	
--->
-  <table name="#accCombat"> 6.88 6.07 5.72 5.37 5.02 4.68 4.34 3.95 5.27 7.5 </table> <!-- Guessing Level 10 -->
-  <table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 80 </table> <!-- Guessing Level 10 -->
-  <table name="#pvpBonus"> 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table> <!-- Guessing Level 10 -->
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="magicLvl" val="#magicLvl"/>
-  <for>
-    <add order="0x40" stat="accCombat" val="#accCombat"/>
-    <add order="0x40" stat="atkCountMax" val="4"/>
-    <mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus"/>
-    <mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus"/>
-    <mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus"/>
-  </for>
-</skill>
-<skill id="3603" levels="10" name="Demon Sword Zariche">
-  <table name="#maxCp"> 12 13 14 15 17 19 21 23 25 27 </table>
-  <table name="#pAtk"> 3 4.5 6 7.5 9 10.5 11 11.5 12 12.5 </table>
-  <table name="#mAtk"> 3 3.25 3.5 3.75 4 4.25 4.5 5 5.5 5.75 </table>
-  <table name="#pDef"> 2.5 2.6 2.7 2.8 2.9 3 3.25 3.5 3.75 4 </table>
-  <table name="#mDef"> 3 3.1 3.2 3.3 3.4 3.5 3.75 4 4.25 4.5 </table>
-  <table name="#runSpd"> 4 6 8 10 12 14 16 18 19 20 </table>
-  <table name="#accCombat"> 15 20 25 30 35 40 45 50 55 60 </table>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="isMagic" val="true"/>
-  <set name="minPledgeClass" val="2"/>
-  <for>
-    <mul order="0x30" stat="maxCp" val="#maxCp"/>
-    <mul order="0x30" stat="pAtk" val="#pAtk"/>
-    <mul order="0x30" stat="mAtk" val="#mAtk"/>
-    <mul order="0x30" stat="pDef" val="#pDef"/>
-    <mul order="0x30" stat="mDef" val="#mDef"/>
-    <add order="0x40" stat="accCombat" val="#accCombat"/>
-    <add order="0x40" stat="runSpd" val="#runSpd"/>
-    <add order="0x40" stat="absorbDam" val="100"/> <!-- absorb 100% HP from damage inflicted on enemies -->
-    <mul order="0x30" stat="regCp" val="20"/>
-    <set order="0x08" stat="STR" val="40"/>
-    <set order="0x08" stat="DEX" val="30"/>
-    <set order="0x08" stat="CON" val="43"/>
-    <set order="0x08" stat="INT" val="21"/>
-    <set order="0x08" stat="WIT" val="15"/>
-    <set order="0x08" stat="MEN" val="21"/>
-  </for>
-</skill>
-<skill id="3604" levels="1" name="Frintezza's Necklace">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <mul order="0x30" stat="sleepVuln" val="0.85"/>
-    <mul order="0x30" stat="poisonVuln" val="0.75"/>
-    <mul order="0x30" stat="bleedVuln" val="0.75"/>
-    <mul order="0x30" stat="paralyzeVuln" val="0.85"/>
-    <mul order="0x30" stat="stunVuln" val="0.85"/>
-    <add order="0x40" stat="darkRes" val="15"/>
-    <mul order="0x30" stat="bleedProf" val="1.25"/>
-    <mul order="0x30" stat="poisonProf" val="1.25"/>
-    <mul order="0x30" stat="sleepProf" val="1.15"/>
-    <mul order="0x30" stat="paralyzeProf" val="1.15"/>
-    <mul order="0x30" stat="stunProf" val="1.15"/>
-    <add order="0x40" stat="reflectDam" val="5"/>
-    <mul order="0x30" stat="mReuse" val="0.9"/>
-    <mul order="0x30" stat="pReuse" val="0.9"/>
-  </for>
-</skill>
-<skill id="3605" levels="1" name="Clan Oath Heavy Armor Set">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <mul order="0x30" stat="pDef" val="1.05"/>
-    <add order="0x40" stat="maxHp" val="85"/>
-  </for>
-</skill>
-<skill id="3606" levels="1" name="Clan Oath Light Armor Set">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <mul order="0x30" stat="pDef" val="1.05"/>
-    <add order="0x40" stat="rEvas" val="3"/>
-  </for>
-</skill>
-<skill id="3607" levels="1" name="Clan Oath Robe Set">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <mul order="0x30" stat="pDef" val="1.05"/>
-    <mul order="0x30" stat="mAtkSpd" val="1.05"/>
-  </for>
-</skill>
-<skill id="3608" levels="2" name="Apella Heavy Armor Set">
-  <!-- Needs to be finished -->
-  <table name="#maxCP"> 1035 1116 </table>
-  <table name="#rCrit"> 1 1.02621 </table>
-  <table name="#cAtk"> 0 3 </table>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <add order="0x40" stat="maxCp" val="#maxCP"/>
-    <mul order="0x30" stat="regCp" val="1.4"/>
-    <!-- TODO lvl1:
-        There is a 10% probability that magic defense power is increased by 5% and critical damage is decreased by 3 if the damage inflicted by PC is more than 50.
-     -->
-    <!-- TODO lvl2:
-        when the PC receives more than 50 damage, there is a 10% probability that magic defense power is increased by 5%, the critical damage is decreased by 3, and the critical strike probability is increased by 2.621.
-     -->
-  </for>
-</skill>
-<skill id="3609" levels="2" name="Apella Light Armor Set">
-  <!-- Needs to be finished -->
-  <table name="#maxCP"> 1035 1116 </table>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <add order="0x40" stat="maxCp" val="#maxCP"/>
-    <mul order="0x30" stat="regCp" val="1.4"/>
-    <!-- TODO lvl1:
-        There is a 10% probability that evasion is increased by 2 and critical damage is decreased by 86 if the damage inflicted by PC is more than 50.
-     -->
-    <!-- TODO lvl2:
-        when the PC receives more than 50 damage, there is a 10% probability that evasion is increased by 2 and critical damage is decreased by 86. Attack speed is increased by 2.5%.
-     -->
-  </for>
-</skill>
-<skill id="3610" levels="2" name="Apella Robe Set">
-  <!-- Needs to be finished -->
-  <table name="#maxCP"> 1035 1116 </table>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <add order="0x40" stat="maxCp" val="#maxCP"/>
-    <mul order="0x30" stat="regCp" val="1.4"/>
-    <!-- TODO lvl1:
-        There is a 10% probability that moving speed is increased by 10 and defense power is increased by 5% if the damage inflicted by PC is more than 50.
-     -->
-    <!-- TODO lvl2:
-        Has a 10% chance to increase Speed by 10, increase P. Def. by 5% and increase M. Atk. by 6 if the damage inflicted by a PC is more than 50.
-     -->
-  </for>
-</skill>
-<skill id="3611" levels="1" name="Enchant Heavy Armor (Grade D)">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <add order="0x40" stat="pDef" val="25"/>
-    <add order="0x40" stat="regMp" val="2"/>
-  </for>
-</skill>
-<skill id="3612" levels="1" name="Enchant Light Armor (Grade D)">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <add order="0x40" stat="rEvas" val="2"/>
-    <add order="0x40" stat="mDef" val="12"/>
-  </for>
-</skill>
-<skill id="3613" levels="1" name="Enchant Robe (Grade D)">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <add order="0x40" stat="pDef" val="16"/>
-    <mul order="0x30" stat="maxLoad" val="1.3"/>
-  </for>
-</skill>
-<skill id="3614" levels="1" name="Enchant Heavy Armor (Grade C)">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <add order="0x40" stat="pDef" val="38"/>
-    <add order="0x40" stat="regMp" val="2"/>
-  </for>
-</skill>
-<skill id="3615" levels="1" name="Enchant Light Armor (Grade C)">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <add order="0x40" stat="rEvas" val="2"/>
-    <add order="0x40" stat="mDef" val="20"/>
-  </for>
-</skill>
-<skill id="3616" levels="1" name="Enchant Robe (Grade C)">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <add order="0x40" stat="pDef" val="24"/>
-    <mul order="0x30" stat="maxLoad" val="1.3"/>
-  </for>
-</skill>
-<skill id="3617" levels="1" name="Enchant Heavy Armor (Grade B)">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <add order="0x40" stat="pDef" val="44"/>
-    <add order="0x40" stat="regMp" val="2"/>
-  </for>
-</skill>
-<skill id="3618" levels="1" name="Enchant Light Armor (Grade B)">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <add order="0x40" stat="rEvas" val="2"/>
-    <add order="0x40" stat="mDef" val="24"/>
-  </for>
-</skill>
-<skill id="3619" levels="1" name="Enchant Robe (Grade B)">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <add order="0x40" stat="pDef" val="28"/>
-    <mul order="0x30" stat="maxLoad" val="1.3"/>
-  </for>
-</skill>
-<skill id="3620" levels="1" name="Enchant Heavy Armor (Grade A)">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <add order="0x40" stat="pDef" val="50"/>
-    <add order="0x40" stat="regMp" val="2"/>
-  </for>
-</skill>
-<skill id="3621" levels="1" name="Enchant Light Armor (Grade A)">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <add order="0x40" stat="rEvas" val="2"/>
-    <add order="0x40" stat="mDef" val="28"/>
-  </for>
-</skill>
-<skill id="3622" levels="1" name="Enchant Robe (Grade A)">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <add order="0x40" stat="pDef" val="32"/>
-    <mul order="0x30" stat="maxLoad" val="1.3"/>
-  </for>
-</skill>
-<skill id="3623" levels="1" name="Enchant Heavy Armor (Grade S)">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <add order="0x40" stat="pDef" val="56"/>
-    <add order="0x40" stat="regMp" val="2"/>
-  </for>
-</skill>
-<skill id="3624" levels="1" name="Enchant Light Armor (Grade S)">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <add order="0x40" stat="rEvas" val="2"/>
-    <add order="0x40" stat="mDef" val="32"/>
-  </for>
-</skill>
-<skill id="3625" levels="1" name="Enchant Robe (Grade S)">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <add order="0x40" stat="pDef" val="36"/>
-    <mul order="0x30" stat="maxLoad" val="1.3"/>
-  </for>
-</skill>
-<skill id="3626" levels="1" name="Kabokula">
-<!-- Used when trapping a roaring Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone. -->
-  <set name="itemConsumeId" val="8764"/>
-  <set name="itemConsumeCount" val="1"/>
-  <set name="magicLvl" val="77"/>
-  <set name="triggeredId" val="5106"/>
-  <set name="triggeredLevel" val="1"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="25000"/>
-  <set name="staticHitTime" val="true"/>
-  <set name="staticReuse" val="true"/>
-  <set name="skillType" val="FUSION"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="300"/>
-  <set name="effectRange" val="900"/>
-  <set name="reuseDelay" val="30000"/>
-  <set name="isMagic" val="true"/>
-  <set name="isDebuff" val="true"/>
-  <cond msgId="109">
-    <target npcId="22215 22216 22217"/>
-  </cond>
-</skill>
-<skill id="3627" levels="1" name="Tapirawa">
-<!-- Used on a quivering Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone. -->
-  <set name="itemConsumeId" val="8764"/>
-  <set name="itemConsumeCount" val="1"/>
-  <set name="magicLvl" val="77"/>
-  <set name="triggeredId" val="5107"/>
-  <set name="triggeredLevel" val="1"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="25000"/>
-  <set name="staticHitTime" val="true"/>
-  <set name="staticReuse" val="true"/>
-  <set name="skillType" val="FUSION"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="300"/>
-  <set name="effectRange" val="900"/>
-  <set name="reuseDelay" val="30000"/>
-  <set name="isMagic" val="true"/>
-  <set name="isDebuff" val="true"/>
-  <cond msgId="109">
-    <target npcId="22215 22216 22217"/>
-  </cond>
-</skill>
-<skill id="3628" levels="1" name="Shabonoba">
-<!-- Used on a struggling Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone. -->
-  <set name="itemConsumeId" val="8764"/>
-  <set name="itemConsumeCount" val="1"/>
-  <set name="magicLvl" val="77"/>
-  <set name="triggeredId" val="5108"/>
-  <set name="triggeredLevel" val="1"/>
-  <set name="target" val="TARGET_ONE"/>
-  <set name="hitTime" val="25000"/>
-  <set name="staticHitTime" val="true"/>
-  <set name="staticReuse" val="true"/>
-  <set name="skillType" val="FUSION"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="castRange" val="300"/>
-  <set name="effectRange" val="900"/>
-  <set name="reuseDelay" val="30000"/>
-  <set name="isMagic" val="true"/>
-  <set name="isDebuff" val="true"/>
-  <cond msgId="109">
-    <target npcId="22215 22216 22217"/>
-  </cond>
-</skill>
-<skill id="3629" levels="10" name="Blood Sword Akamanah">
-  <table name="#maxCp"> 12 13 14 15 17 19 21 23 25 27 </table>
-  <table name="#pAtk"> 3 4.5 6 7.5 9 10.5 11 11.5 12 12.5 </table>
-  <table name="#mAtk"> 3 3.25 3.5 3.75 4 4.25 4.5 5 5.5 5.75 </table>
-  <table name="#pDef"> 2.5 2.6 2.7 2.8 2.9 3 3.25 3.5 3.75 4 </table>
-  <table name="#mDef"> 3 3.1 3.2 3.3 3.4 3.5 3.75 4 4.25 4.5 </table>
-  <table name="#runSpd"> 4 6 8 10 12 14 16 18 19 20 </table>
-  <table name="#accCombat"> 15 20 25 30 35 40 45 50 55 60 </table>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="isMagic" val="true"/>
-  <set name="minPledgeClass" val="2"/>
-  <for>
-    <mul order="0x30" stat="maxCp" val="#maxCp"/>
-    <mul order="0x30" stat="pAtk" val="#pAtk"/>
-    <mul order="0x30" stat="mAtk" val="#mAtk"/>
-    <mul order="0x30" stat="pDef" val="#pDef"/>
-    <mul order="0x30" stat="mDef" val="#mDef"/>
-    <add order="0x40" stat="accCombat" val="#accCombat"/>
-    <add order="0x40" stat="runSpd" val="#runSpd"/>
-    <add order="0x40" stat="absorbDam" val="100"/> <!-- absorb 100% HP from damage inflicted on enemies -->
-    <mul order="0x30" stat="regCp" val="20"/>
-    <set order="0x08" stat="STR" val="40"/>
-    <set order="0x08" stat="DEX" val="30"/>
-    <set order="0x08" stat="CON" val="43"/>
-    <set order="0x08" stat="INT" val="21"/>
-    <set order="0x08" stat="WIT" val="15"/>
-    <set order="0x08" stat="MEN" val="21"/>
-  </for>
-</skill>
-<skill id="3630" levels="1" name="Void Burst">
-  <set name="target" val="TARGET_AURA"/>
-  <set name="skillType" val="PDAM"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="mpConsume" val="140"/>
-  <set name="power" val="2500"/> <!-- Guess -->
-  <set name="hitTime" val="2000"/>
-  <set name="reuseDelay" val="10000"/> <!-- Guess -->
-  <set name="skillRadius" val="200"/>
-</skill>
-<skill id="3631" levels="1" name="Void Flow">
-  <set name="target" val="TARGET_ONE"/>
-  <set name="skillType" val="PDAM"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <set name="mpConsume" val="140"/>
-  <set name="power" val="1000"/> <!-- Guess -->
-  <set name="hitTime" val="1900"/>
-  <set name="reuseDelay" val="4000"/> <!-- Guess -->
-  <set name="castRange" val="600"/>
-  <set name="effectRange" val="1100"/>
-</skill>
-<skill id="3632" levels="1" name="Clan Gate">
-  <!-- Active: Creates a gate that summons clan members. You cannot move while this skill is active. -->
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="hitTime" val="10000"/>
-  <set name="reuseDelay" val="900000"/>
-  <set name="staticReuse" val="true"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <cond msgId="1509">
-    <player olympiad="false"/>
-  </cond>
-  <for>
-    <effect name="ClanGate" time="120" val="0"/> 
-    <effect name="ImmobileBuff" time="120" val="0" noicon="1"/>
-  </for>
-</skill>
-<skill id="3633" levels="2" name="Residential Shock Immunity">
-  <table name="#vuln"> 0.5 0 </table>
-  <table name="#stack"> 50 100 </table>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="reuseDelay" val="1800000"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_ACTIVE"/>
-  <for>
-    <effect name="Buff" time="10" val="0" stackOrder="#stack" stackType="ShockVuln">
-      <mul order="0x30" stat="stunVuln" val="#vuln"/>
-    </effect>
-  </for>
-</skill>
-<skill id="3634" levels="1" name="Special Ability Infinity Sword">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="magicLvl" val="85"/>
-  <for>
-    <!-- The following values are copied from Infinity Cleaver SA -->
-    <add order="0x40" stat="cAtkAdd" val="504"/> <!-- P.Atk. +504 on a critical hit -->
-    <mul order="0x30" stat="maxHp" val="1.25"/> <!-- HP +25% -->
-    <mul order="0x30" stat="maxCp" val="1.5"/> <!-- CP +50% -->
-    <add order="0x40" stat="rCrit" val="78.7"/> <!-- Critical +78.7 -->
-    <mul order="0x30" stat="pvpPhysDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
-    <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
-    <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
-    <add order="0x40" stat="reflectSkillPhysic" val="10"/> <!-- Reflect Skills 10% of the time -->
-    <add order="0x40" stat="reflectSkillMagic" val="10"/> <!-- Reflect Skills 10% of the time -->
-  </for>
-</skill>
-<skill id="3635" levels="1" name="Special Ability Infinity Shooter">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="magicLvl" val="85"/>
-  <set name="chanceType" val="ON_CRIT"/>
-  <set name="activationChance" val="7"/>
-  <set name="triggeredId" val="3594"/>
-  <set name="triggeredLevel" val="1"/>
-  <for>
-    <!-- The following values are copied from Infinity Bow SA -->
-    <mul order="0x30" stat="maxMp" val="1.3"/> <!-- MP +30% -->
-    <mul order="0x30" stat="maxCp" val="1.5"/> <!-- CP +50% -->
-    <mul order="0x30" stat="pvpPhysDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
-    <mul order="0x30" stat="pvpMagicalDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
-    <mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05"/> <!-- PVP Damage Bonus +5% -->
-    <mul order="0x30" stat="atkReuse" val="0.81"/> <!-- 19% Quick Recovery -->
-    <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.88"/> <!-- MP Consumption -12% --> <!-- Guessing -->
-  </for>
-</skill>
-<skill id="3636" levels="1" name="Dynasty Platinum Plate - Shield Master">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <sub order="0x10" stat="STR" val="2"/> <!-- Str -2 -->
-    <add order="0x10" stat="CON" val="2"/> <!-- Con +2 -->
-    <mul order="0x30" stat="pDef" val="1.066"/> <!-- P. Def. +6.6% -->
-    <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 -->
-    <mul order="0x30" stat="gainHp" val="1.04"/> <!-- Heal Capacity +4% -->
-    <add order="0x40" stat="darkRes" val="8"/> <!-- Dark Resistance +8 -->
-    <mul order="0x30" stat="stunVuln" val="0.85"/> <!-- Stun Resistance +15 -->
-    <add order="0x10" stat="cloak" val="1"/>
-  </for>
-</skill>
-<skill id="3637" levels="1" name="Dynasty Platinum Plate - Weapon Master">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
-    <add order="0x10" stat="STR" val="2"/> <!-- Str +2 -->
-    <mul order="0x30" stat="pAtk" val="1.066"/> <!-- P. Atk. +6.6% -->
-    <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 -->
-    <add order="0x40" stat="darkRes" val="8"/> <!-- Darkness Resistance +8 -->
-    <add order="0x40" stat="cAtkAdd" val="282"/> <!-- Critical Damage +282 -->
-    <basemul order="0x30" stat="rCrit" val="0.0295"/> <!-- Critical Rate +2.95% Increase -->
-    <add order="0x10" stat="cloak" val="1"/>
-  </for>
-</skill>
-<skill id="3638" levels="1" name="Dynasty Platinum Plate - Bard">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
-    <add order="0x10" stat="STR" val="2"/> <!-- Str +2 -->
-    <mul order="0x30" stat="pDef" val="1.066"/> <!-- P. Def. +6.6% -->
-    <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 -->
-    <add order="0x40" stat="darkRes" val="8"/> <!-- Dark Resistance +8 -->
-    <mul order="0x30" stat="DanceMpConsumeRate" val="0.94"/> <!-- MP Consumption -6% Decrease for Song and Dance Skills  -->
-    <add order="0x10" stat="cloak" val="1"/>
-  </for>
-</skill>
-<skill id="3639" levels="1" name="Dynasty Platinum Plate - Force Master">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
-    <add order="0x10" stat="STR" val="2"/> <!-- Str +2 -->
-    <mul order="0x30" stat="pAtk" val="1.066"/> <!-- P. Atk. +6.6% -->
-    <add order="0x40" stat="maxHp" val="492"/> <!-- Max. HP +492 -->
-    <add order="0x40" stat="darkRes" val="8"/> <!-- Resistance to Darkness attacks +8 -->
-    <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.94"/> <!-- Decreases MP consumption by 6% for active skills -->
-    <add order="0x10" stat="cloak" val="1"/>
-  </for>
-</skill>
-<skill id="3640" levels="1" name="Dynasty Jewel Leather Mail Dagger Master">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
-    <add order="0x10" stat="DEX" val="2"/> <!-- Dex +2 -->
-    <add order="0x40" stat="rEvas" val="5.3"/> <!-- Evasion +5.3 -->
-    <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 -->
-    <add order="0x40" stat="darkRes" val="8"/> <!-- Dark Resistance +8 -->
-    <mul order="0x30" stat="rootVuln" val="0.85"/> <!-- Hold Resistance +15% -->
-    <mul order="0x30" stat="pAtkSpd" val="1.0324"/> <!-- Atk. Spd. +3.24% -->
-    <add order="0x10" stat="cloak" val="1"/>
-  </for>
-</skill>
-<skill id="3641" levels="1" name="Dynasty Jewel Leather Mail Bow Master">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
-    <add order="0x10" stat="DEX" val="2"/> <!-- Dex +2 -->
-    <add order="0x40" stat="accCombat" val="5.3"/> <!-- Accuracy +5.3 -->
-    <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
-    <add order="0x40" stat="darkRes" val="8"/> <!-- Dark Resistance +8 -->
-    <mul order="0x30" stat="pAtkSpd" val="1.0324"/> <!-- Atk. Spd. +3.24% -->
-    <add order="0x40" stat="regMp" val="1.066"/> <!-- MP Recovery +6.6% -->
-    <add order="0x10" stat="cloak" val="1"/>
-  </for>
-</skill>
-<skill id="3642" levels="1" name="Dynasty Jeweled Leather Armor Force Master">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
-    <add order="0x10" stat="STR" val="1"/> <!-- Str +1 -->
-    <add order="0x10" stat="DEX" val="1"/> <!-- Dex +1 -->
-    <mul order="0x30" stat="pAtk" val="1.066"/> <!-- P. Atk. +6.6% -->
-    <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 -->
-    <add order="0x40" stat="darkRes" val="8"/> <!-- Dark Resistance +8 -->
-    <mul order="0x30" stat="PhysicalMpConsumeRate" val="0.94"/> <!-- MP Consumption -6% -->
-  </for>
-</skill>
-<skill id="3643" levels="1" name="Dynasty Jeweled Leather Armor Weapon Master">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <sub order="0x10" stat="CON" val="2"/> <!-- Con -2 -->
-    <add order="0x10" stat="STR" val="1"/> <!-- Str +1 -->
-    <add order="0x10" stat="DEX" val="1"/> <!-- Dex +1 -->
-    <mul order="0x30" stat="pAtk" val="1.066"/> <!-- Physical Attack Power +6.6% -->
-    <add order="0x40" stat="maxHp" val="492"/> <!-- Maximum HP +492 effect -->
-    <add order="0x40" stat="darkRes" val="8"/> <!-- Darkness Resistance +8 -->
-    <add order="0x40" stat="cAtkAdd" val="282"/> <!-- Critical Damage +282 -->
-    <basemul order="0x30" stat="rCrit" val="0.0295"/> <!-- Critical Rate +2.95% Increase -->
-    <add order="0x10" stat="cloak" val="1"/>
-  </for>
-</skill>
-<skill id="3644" levels="1" name="Dynasty Jeweled Leather Armor Summoner">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <sub order="0x10" stat="STR" val="2"/> <!-- Str -2 -->
-    <add order="0x10" stat="CON" val="2"/> <!-- Con +2 -->
-    <mul order="0x30" stat="pAtkSpd" val="1.066"/> <!-- Atk. Spd. +6.6% -->
-    <add order="0x40" stat="maxHp" val="492"/> <!-- Max HP +492 -->
-    <add order="0x40" stat="darkRes" val="8"/> <!-- Dark Resistance +8 -->
-    <mul order="0x30" stat="pAtk" val="1.0266"/> <!-- P. Atk. +2.66% -->
-    <mul order="0x30" stat="pDef" val="1.0266"/> <!-- P. Def. +2.66% -->
-  </for>
-</skill>
-<skill id="3645" levels="1" name="Dynasty Silver Satin Tunic Healer">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <sub order="0x10" stat="INT" val="2"/> <!-- Int -2 -->
-    <add order="0x10" stat="MEN" val="2"/> <!-- Men +2 -->
-    <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
-    <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
-    <add order="0x40" stat="darkRes" val="8"/> <!-- Dark Resistance +8 -->
-    <mul order="0x30" stat="giveHp" val="1.22"/> <!-- Heal Capacity +22 -->
-    <sub order="0x40" stat="cancel" val="15"/> <!-- Magic Cancel Rate -15 -->
-    <add order="0x10" stat="cloak" val="1"/>
-  </for>
-</skill>
-<skill id="3646" levels="1" name="Dynasty Silver Satin Tunic Enchanter">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <sub order="0x10" stat="INT" val="2"/> <!-- Int -2 -->
-    <add order="0x10" stat="MEN" val="2"/> <!-- Men +2 -->
-    <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
-    <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
-    <add order="0x40" stat="darkRes" val="8"/> <!-- Dark Resistance +8 -->
-    <mul order="0x30" stat="MagicalMpConsumeRate" val="0.94"/> <!-- MP Consumption -6% -->
-    <sub order="0x40" stat="cancel" val="15"/> <!-- Magic Cancel Rate -15 -->
-    <add order="0x10" stat="cloak" val="1"/>
-  </for>
-</skill>
-<skill id="3647" levels="1" name="Dynasty Silver Satin Tunic Summoner">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <sub order="0x10" stat="INT" val="2"/> <!-- Int -2 -->
-    <add order="0x10" stat="MEN" val="2"/> <!-- Men +2 -->
-    <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
-    <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
-    <add order="0x40" stat="darkRes" val="8"/> <!-- Dark Resistance +8 -->
-    <mul order="0x30" stat="pAtk" val="1.033"/> <!-- P. Atk. +3.3% -->
-    <mul order="0x30" stat="pDef" val="1.033"/> <!-- P. Def. +3.3% -->
-    <add order="0x10" stat="cloak" val="1"/>
-  </for>
-</skill>
-<skill id="3648" levels="1" name="Dynasty Silver Satin Tunic Human Wizard">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <add order="0x10" stat="INT" val="1"/> <!-- Int +1 -->
-    <add order="0x10" stat="WIT" val="1"/> <!-- Wit +1 -->
-    <sub order="0x10" stat="MEN" val="2"/> <!-- Men -2 -->
-    <mul order="0x30" stat="mAtkSpd" val="1.15"/> <!-- Casting Spd. +15% -->
-    <add order="0x40" stat="maxMp" val="321"/> <!-- Max MP +321 -->
-    <add order="0x40" stat="darkRes" val="8"/> <!-- Dark Resistance +8 -->
-    <mul order="0x30" stat="mAtk" val="1.066"/> <!-- M. Atk. +6.6% -->
-    <add order="0x10" stat="cloak" val="1"/>
-  </for>
-</skill>
-<skill id="3649" levels="1" name="Beleth's Ring">
-  <set name="target" val="TARGET_SELF"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <for>
-    <mul order="0x30" stat="magicDamVul" val="0.88"/>
-    <mul order="0x30" stat="derangementProf" val="1.1"/>
-    <mul order="0x30" stat="derangementVuln" val="0.9"/>
-    <add order="0x40" stat="darkRes" val="15"/>
-  </for>
-</skill>
-<skill id="3650" levels="1" name="PvP Weapon - CP Drain">
-  <set name="activationChance" val="15"/>
-  <set name="chanceType" val="ON_HIT"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="triggeredId" val="5681"/>
-  <set name="triggeredLevel" val="1"/>
-  <set name="pvpChanceOnly" val="true"/>
-</skill>
-<skill id="3651" levels="1" name="PvP Weapon - Cancel">
-  <set name="activationChance" val="15"/>
-  <set name="chanceType" val="ON_HIT"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="triggeredId" val="5682"/>
-  <set name="triggeredLevel" val="1"/>
-  <set name="pvpChanceOnly" val="true"/>
-</skill>
-<skill id="3652" levels="1" name="PvP Weapon - Ignore Shield Defense">
-  <set name="activationChance" val="15"/>
-  <set name="chanceType" val="ON_HIT"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="triggeredId" val="5683"/>
-  <set name="triggeredLevel" val="1"/>
-  <set name="pvpChanceOnly" val="true"/>
-</skill>
-<skill id="3653" levels="1" name="PvP Weapon - Attack Chance">
-  <set name="activationChance" val="5"/>
-  <set name="chanceType" val="ON_HIT"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="triggeredId" val="5684"/>
-  <set name="triggeredLevel" val="1"/>
-  <set name="pvpChanceOnly" val="true"/>
-</skill>
-<skill id="3654" levels="1" name="PvP Weapon - Casting">
-  <set name="activationChance" val="15"/>
-  <set name="chanceType" val="ON_ATTACKED"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="triggeredId" val="5685"/>
-  <set name="triggeredLevel" val="1"/>
-  <set name="pvpChanceOnly" val="true"/>
-</skill>
-<skill id="3655" levels="1" name="PvP Weapon - Rapid Fire">
-  <set name="activationChance" val="15"/>
-  <set name="chanceType" val="ON_HIT"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="triggeredId" val="5686"/>
-  <set name="triggeredLevel" val="1"/>
-  <set name="pvpChanceOnly" val="true"/>
-</skill>
-<skill id="3656" levels="1" name="PvP Weapon - Decrease Range">
-  <set name="activationChance" val="15"/>
-  <set name="chanceType" val="ON_HIT"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="triggeredId" val="5687"/>
-  <set name="triggeredLevel" val="1"/>
-  <set name="pvpChanceOnly" val="true"/>
-</skill>
-<skill id="3657" levels="1" name="PvP Weapon - Decrease Resist">
-  <!-- Has a chance to decrease attribute resistance when attacking. -->
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="triggeredId" val="5688"/>
-  <set name="triggeredLevel" val="1"/>
-  <set name="activationChance" val="1"/> <!-- Guessing -->
-  <set name="chanceType" val="ON_HIT"/>
-  <set name="pvpChanceOnly" val="true"/>
-</skill>
-<skill id="3658" levels="1" name="PvP Shield - Reflect Damage">
-  <!-- Has a chance to reflect the enemy's attack when being attacked. -->
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3659" levels="1" name="PvP Armor - Damage Down">
-  <set name="activationChance" val="15"/>
-  <set name="chanceType" val="ON_ATTACKED"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="triggeredId" val="5690"/>
-  <set name="triggeredLevel" val="1"/>
-  <set name="pvpChanceOnly" val="true"/>
-</skill>
-<skill id="3660" levels="1" name="PvP Armor - Critical Down">
-  <set name="activationChance" val="15"/>
-  <set name="chanceType" val="ON_ATTACKED"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="triggeredId" val="5691"/>
-  <set name="triggeredLevel" val="1"/>
-  <set name="pvpChanceOnly" val="true"/>
-</skill>
-<skill id="3661" levels="1" name="PvP Armor - Heal">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3662" levels="1" name="PvP Armor - Speed Down">
-  <set name="activationChance" val="15"/>
-  <set name="chanceType" val="ON_ATTACKED"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="triggeredId" val="5693"/>
-  <set name="triggeredLevel" val="1"/>
-  <set name="pvpChanceOnly" val="true"/>
-</skill>
-<skill id="3663" levels="1" name="PvP Armor - Mirage">
-  <set name="activationChance" val="15"/>
-  <set name="chanceType" val="ON_ATTACKED"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="skillType" val="BUFF"/>
-  <set name="target" val="TARGET_SELF"/>
-  <set name="triggeredId" val="5694"/>
-  <set name="triggeredLevel" val="1"/>
-  <set name="pvpChanceOnly" val="true"/>
-</skill>
-<skill id="3664" levels="1" name="Red Talisman - Max. CP">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="4000"/>
-</skill>
-<skill id="3665" levels="2" name="Red Talisman - CP Regeneration">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-  <set name="hitTime" val="4000"/>
-</skill>
-<skill id="3666" levels="1" name="Yellow Talisman - Increase Force">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3667" levels="1" name="Yellow Talisman - Damage Transition">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3668" levels="1" name="Zubei's Leather Gaiters">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3669" levels="1" name="Zubei's Leather Shirt">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3670" levels="1" name="Zubei's Gauntlet">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3671" levels="1" name="Zubei's Boots">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3672" levels="1" name="Zubei's Gaiters">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3673" levels="1" name="Zubei's Gauntlet">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3674" levels="1" name="Zubei's Boots">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3675" levels="1" name="Zubei's Helmet">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3676" levels="1" name="Zubei's Breastplate">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3677" levels="1" name="Tunic of Zubei">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3678" levels="1" name="Stockings of Zubei">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3679" levels="1" name="Zubei's Gauntlet">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3680" levels="1" name="Zubei's Boots">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3681" levels="1" name="Zubei's Shield">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3682" levels="1" name="Avadon Gloves">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3683" levels="1" name="Avadon Boots">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3684" levels="1" name="Avadon Circlet">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3685" levels="1" name="Avadon Gaiters">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3686" levels="1" name="Avadon Breastplate">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3687" levels="1" name="Avadon Shield">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3688" levels="1" name="Avadon Circlet">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3689" levels="1" name="Avadon Gloves">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3690" levels="1" name="Avadon Leather Armor">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3691" levels="1" name="Avadon Boots">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3692" levels="1" name="Avadon Circlet">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3693" levels="1" name="Avadon Gloves">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3694" levels="1" name="Avadon Robe">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3695" levels="1" name="Avadon Boots">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3696" levels="1" name="Doom Gloves">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3697" levels="1" name="Doom Boots">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3698" levels="1" name="Doom Plate Armor">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
-<skill id="3699" levels="1" name="Doom Helmet">
-  <set name="target" val="TARGET_NONE"/>
-  <set name="skillType" val="NOTDONE"/>
-  <set name="operateType" val="OP_PASSIVE"/>
-</skill>
+	<skill id="3600" levels="10" name="Special Ability: Anger">
+		<!-- s_opt_anger_polearm_1/2/3/4/5/6/7/8/9 -->
+		<!--
+			4834 Scythe - Anger 3600-1 
+			4837 Orcish Glaive - Anger 3600-1 
+			4846 Scorpion - Anger 3600-3 
+			4855 Great Axe - Anger 3600-5 
+			4858 Lance - Anger 3600-6
+		-->
+		<!--
+			Guessing... 
+			9869 Dynasty Halberd - Anger 3600-10 Decreases your HP by 15% and increases P. Atk. by 78. Increases damage inflicted during PvP. 
+			10449 Icarus Trident - Anger 3600-10 Decreases HP by 15% while increasing P. Atk. by 78 on a critical attack. Increases damage inflicted during PvP. 
+			10765 Dynasty Halberd {PvP} - Anger 3600-10 
+			10875 Great Axe - Thunder - Anger 3600-5 A Masterwork Item that increases the critical effect.\n\nDecreases Max HP by 15%, and increases P. Atk. by 28. 
+			10968 Lance - Earth - Anger 3600-6 A Masterwork Item that increases Max HP.\n\nDecreases Max HP by 15%, and increases P. Atk. by 30. 
+			11297 Dynasty Halberd - Earth - Anger 3600-10 A Masterwork Item that increases Max HP.\n\nDecreases Max HP by 15% and increases P. Atk. by 78. Increases damage inflicted during PvP. 
+			11330 Icarus Trident - Thunder - Anger 3600-10 A Masterwork Item that increases critical attack impact.\n\nDecreases Max HP by 15% and increases P. Atk. by 78. Increases damage inflicted during PvP. 
+			12975 Dynasty Halberd - Earth {PvP} - Anger 3600-10 A Masterwork Item that increases Max HP.\n\nDecreases Max HP by 15% and increases P. Atk. by 78. Increases damage inflicted during PvP. 
+			14391 Icarus Trident {PvP} - Anger 3600-10 
+			14442 Icarus Trident - Thunder {PvP} - Anger 3600-10
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 80 </table>
+		<table name="#pAtk"> 20.44 22.64 24.77 26.78 28.59 30.12 31.30 39 45 78 </table> <!-- Guessing Level 10 -->
+		<table name="#pvpBonus"> 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table> <!-- Guessing Level 10 -->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="magicLvl" val="#magicLvl" />
+		<for>
+			<add order="0x40" stat="pAtk" val="#pAtk" />
+			<mul order="0x30" stat="maxHp" val="0.85" />
+			<add order="0x40" stat="atkCountMax" val="4" />
+			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
+			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
+			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+		</for>
+	</skill>
+	<skill id="3601" levels="9" name="Special Ability: Haste">
+		<!-- s_opt_haste_polearm -->
+		<!--
+			5626 Halberd - Haste pole 3601-7; Increases Atk. Spd. by about 6%. Enhances damage to a target during PvP. 
+			6601 Saint Spear - Haste pole 3601-9; Increases Atk. Spd. by about 7%. Increases damage inflicted during PvP.
+		-->
+		<table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 1.06 1.06 1.07 </table>
+		<table name="#pvpBonus"> 1 1 1 1 1 1 1.05 1.05 1.05 </table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 </table>
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="magicLvl" val="75" />
+		<for>
+			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+			<add order="0x40" stat="atkCountMax" val="4" />
+			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
+			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
+			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+		</for>
+	</skill>
+	<skill id="3602" levels="10" name="Special Ability: Guidance">
+		<!-- s_opt_guidence_polearm -->
+		<!--
+			5632 Tallum Glaive - Guidance 3602-8; Increases Accuracy by 4. Increases damage inflicted during PvP. 
+			11129 Tallum Glaive - On Fire - Guidance 3602-8; A Masterwork Item that increases HP regeneration.\n\nIncreases Accuracy by 4. Increases damage inflicted during PvP. 
+			6600 Saint Spear - Guidance 3602-9; Increases Accuracy by 5. Increases damage inflicted during PvP.
+		-->
+		<!--
+			Guessing... 
+			10726 Saint Spear - PvP - Guidance 3602-9; Increases Accuracy by 5. Increases damage inflicted during PvP. 
+			11220 Saint Spear - Destruction - Guidance 3602-9; A Masterwork Item that increases P. Atk. Increases Accuracy by 5. Increases damage inflicted during PvP. 
+			12917 Saint Spear - Landslide - Guidance 3602-9; A Masterwork Item that has a chance to stun when attacking. Increases Accuracy by 5. Increases damage inflicted during PvP. 
+			14134 Vesper Stormer - Guidance 3602-10; 
+			14494 Vesper Stormer {PvP} - Guidance 3602-10;
+		-->
+		<table name="#accCombat"> 6.88 6.07 5.72 5.37 5.02 4.68 4.34 3.95 5.27 7.5 </table> <!-- Guessing Level 10 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 80 </table> <!-- Guessing Level 10 -->
+		<table name="#pvpBonus"> 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table> <!-- Guessing Level 10 -->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="magicLvl" val="#magicLvl" />
+		<for>
+			<add order="0x40" stat="accCombat" val="#accCombat" />
+			<add order="0x40" stat="atkCountMax" val="4" />
+			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
+			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
+			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+		</for>
+	</skill>
+	<skill id="3603" levels="10" name="Demon Sword Zariche">
+		<table name="#maxCp"> 12 13 14 15 17 19 21 23 25 27 </table>
+		<table name="#pAtk"> 3 4.5 6 7.5 9 10.5 11 11.5 12 12.5 </table>
+		<table name="#mAtk"> 3 3.25 3.5 3.75 4 4.25 4.5 5 5.5 5.75 </table>
+		<table name="#pDef"> 2.5 2.6 2.7 2.8 2.9 3 3.25 3.5 3.75 4 </table>
+		<table name="#mDef"> 3 3.1 3.2 3.3 3.4 3.5 3.75 4 4.25 4.5 </table>
+		<table name="#runSpd"> 4 6 8 10 12 14 16 18 19 20 </table>
+		<table name="#accCombat"> 15 20 25 30 35 40 45 50 55 60 </table>
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="isMagic" val="true" />
+		<set name="minPledgeClass" val="2" />
+		<for>
+			<mul order="0x30" stat="maxCp" val="#maxCp" />
+			<mul order="0x30" stat="pAtk" val="#pAtk" />
+			<mul order="0x30" stat="mAtk" val="#mAtk" />
+			<mul order="0x30" stat="pDef" val="#pDef" />
+			<mul order="0x30" stat="mDef" val="#mDef" />
+			<add order="0x40" stat="accCombat" val="#accCombat" />
+			<add order="0x40" stat="runSpd" val="#runSpd" />
+			<add order="0x40" stat="absorbDam" val="100" /> <!-- absorb 100% HP from damage inflicted on enemies -->
+			<mul order="0x30" stat="regCp" val="20" />
+			<set order="0x08" stat="STR" val="40" />
+			<set order="0x08" stat="DEX" val="30" />
+			<set order="0x08" stat="CON" val="43" />
+			<set order="0x08" stat="INT" val="21" />
+			<set order="0x08" stat="WIT" val="15" />
+			<set order="0x08" stat="MEN" val="21" />
+		</for>
+	</skill>
+	<skill id="3604" levels="1" name="Frintezza's Necklace">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="sleepVuln" val="0.85" />
+			<mul order="0x30" stat="poisonVuln" val="0.75" />
+			<mul order="0x30" stat="bleedVuln" val="0.75" />
+			<mul order="0x30" stat="paralyzeVuln" val="0.85" />
+			<mul order="0x30" stat="stunVuln" val="0.85" />
+			<add order="0x40" stat="darkRes" val="15" />
+			<mul order="0x30" stat="bleedProf" val="1.25" />
+			<mul order="0x30" stat="poisonProf" val="1.25" />
+			<mul order="0x30" stat="sleepProf" val="1.15" />
+			<mul order="0x30" stat="paralyzeProf" val="1.15" />
+			<mul order="0x30" stat="stunProf" val="1.15" />
+			<add order="0x40" stat="reflectDam" val="5" />
+			<mul order="0x30" stat="mReuse" val="0.9" />
+			<mul order="0x30" stat="pReuse" val="0.9" />
+		</for>
+	</skill>
+	<skill id="3605" levels="1" name="Clan Oath Heavy Armor Set">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="pDef" val="1.05" />
+			<add order="0x40" stat="maxHp" val="85" />
+		</for>
+	</skill>
+	<skill id="3606" levels="1" name="Clan Oath Light Armor Set">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="pDef" val="1.05" />
+			<add order="0x40" stat="rEvas" val="3" />
+		</for>
+	</skill>
+	<skill id="3607" levels="1" name="Clan Oath Robe Set">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="pDef" val="1.05" />
+			<mul order="0x30" stat="mAtkSpd" val="1.05" />
+		</for>
+	</skill>
+	<skill id="3608" levels="2" name="Apella Heavy Armor Set">
+		<!-- Needs to be finished -->
+		<table name="#maxCP"> 1035 1116 </table>
+		<table name="#rCrit"> 1 1.02621 </table>
+		<table name="#cAtk"> 0 3 </table>
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="maxCp" val="#maxCP" />
+			<mul order="0x30" stat="regCp" val="1.4" />
+			<!-- TODO lvl1: There is a 10% probability that magic defense power is increased by 5% and critical damage is decreased by 3 if the damage inflicted by PC is more than 50. -->
+			<!-- TODO lvl2: When the PC receives more than 50 damage, there is a 10% probability that magic defense power is increased by 5%, the critical damage is decreased by 3, and the critical strike probability is increased by 2.621. -->
+		</for>
+	</skill>
+	<skill id="3609" levels="2" name="Apella Light Armor Set">
+		<!-- Needs to be finished -->
+		<table name="#maxCP"> 1035 1116 </table>
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="maxCp" val="#maxCP" />
+			<mul order="0x30" stat="regCp" val="1.4" />
+			<!-- TODO lvl1: There is a 10% probability that evasion is increased by 2 and critical damage is decreased by 86 if the damage inflicted by PC is more than 50. -->
+			<!-- TODO lvl2: When the PC receives more than 50 damage, there is a 10% probability that evasion is increased by 2 and critical damage is decreased by 86. Attack speed is increased by 2.5%. -->
+		</for>
+	</skill>
+	<skill id="3610" levels="2" name="Apella Robe Set">
+		<!-- Needs to be finished -->
+		<table name="#maxCP"> 1035 1116 </table>
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="maxCp" val="#maxCP" />
+			<mul order="0x30" stat="regCp" val="1.4" />
+			<!-- TODO lvl1: There is a 10% probability that moving speed is increased by 10 and defense power is increased by 5% if the damage inflicted by PC is more than 50. -->
+			<!-- TODO lvl2: Has a 10% chance to increase Speed by 10, increase P. Def. by 5% and increase M. Atk. by 6 if the damage inflicted by a PC is more than 50. -->
+		</for>
+	</skill>
+	<skill id="3611" levels="1" name="Enchant Heavy Armor (Grade D)">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="pDef" val="25" />
+			<add order="0x40" stat="regMp" val="2" />
+		</for>
+	</skill>
+	<skill id="3612" levels="1" name="Enchant Light Armor (Grade D)">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="rEvas" val="2" />
+			<add order="0x40" stat="mDef" val="12" />
+		</for>
+	</skill>
+	<skill id="3613" levels="1" name="Enchant Robe (Grade D)">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="pDef" val="16" />
+			<mul order="0x30" stat="maxLoad" val="1.3" />
+		</for>
+	</skill>
+	<skill id="3614" levels="1" name="Enchant Heavy Armor (Grade C)">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="pDef" val="38" />
+			<add order="0x40" stat="regMp" val="2" />
+		</for>
+	</skill>
+	<skill id="3615" levels="1" name="Enchant Light Armor (Grade C)">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="rEvas" val="2" />
+			<add order="0x40" stat="mDef" val="20" />
+		</for>
+	</skill>
+	<skill id="3616" levels="1" name="Enchant Robe (Grade C)">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="pDef" val="24" />
+			<mul order="0x30" stat="maxLoad" val="1.3" />
+		</for>
+	</skill>
+	<skill id="3617" levels="1" name="Enchant Heavy Armor (Grade B)">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="pDef" val="44" />
+			<add order="0x40" stat="regMp" val="2" />
+		</for>
+	</skill>
+	<skill id="3618" levels="1" name="Enchant Light Armor (Grade B)">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="rEvas" val="2" />
+			<add order="0x40" stat="mDef" val="24" />
+		</for>
+	</skill>
+	<skill id="3619" levels="1" name="Enchant Robe (Grade B)">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="pDef" val="28" />
+			<mul order="0x30" stat="maxLoad" val="1.3" />
+		</for>
+	</skill>
+	<skill id="3620" levels="1" name="Enchant Heavy Armor (Grade A)">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="pDef" val="50" />
+			<add order="0x40" stat="regMp" val="2" />
+		</for>
+	</skill>
+	<skill id="3621" levels="1" name="Enchant Light Armor (Grade A)">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="rEvas" val="2" />
+			<add order="0x40" stat="mDef" val="28" />
+		</for>
+	</skill>
+	<skill id="3622" levels="1" name="Enchant Robe (Grade A)">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="pDef" val="32" />
+			<mul order="0x30" stat="maxLoad" val="1.3" />
+		</for>
+	</skill>
+	<skill id="3623" levels="1" name="Enchant Heavy Armor (Grade S)">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="pDef" val="56" />
+			<add order="0x40" stat="regMp" val="2" />
+		</for>
+	</skill>
+	<skill id="3624" levels="1" name="Enchant Light Armor (Grade S)">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="rEvas" val="2" />
+			<add order="0x40" stat="mDef" val="32" />
+		</for>
+	</skill>
+	<skill id="3625" levels="1" name="Enchant Robe (Grade S)">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="pDef" val="36" />
+			<mul order="0x30" stat="maxLoad" val="1.3" />
+		</for>
+	</skill>
+	<skill id="3626" levels="1" name="Kabokula">
+		<set name="itemConsumeId" val="8764" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="77" />
+		<set name="triggeredId" val="5106" />
+		<set name="triggeredLevel" val="1" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="hitTime" val="25000" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<set name="skillType" val="FUSION" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="300" />
+		<set name="effectRange" val="900" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="true" />
+		<set name="isDebuff" val="true" />
+		<cond msgId="109">
+			<target npcId="22215 22216 22217" />
+		</cond>
+	</skill>
+	<skill id="3627" levels="1" name="Tapirawa">
+		<set name="itemConsumeId" val="8764" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="77" />
+		<set name="triggeredId" val="5107" />
+		<set name="triggeredLevel" val="1" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="hitTime" val="25000" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<set name="skillType" val="FUSION" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="300" />
+		<set name="effectRange" val="900" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="true" />
+		<set name="isDebuff" val="true" />
+		<cond msgId="109">
+			<target npcId="22215 22216 22217" />
+		</cond>
+	</skill>
+	<skill id="3628" levels="1" name="Shabonoba">
+		<set name="itemConsumeId" val="8764" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="77" />
+		<set name="triggeredId" val="5108" />
+		<set name="triggeredLevel" val="1" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="hitTime" val="25000" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<set name="skillType" val="FUSION" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="300" />
+		<set name="effectRange" val="900" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isMagic" val="true" />
+		<set name="isDebuff" val="true" />
+		<cond msgId="109">
+			<target npcId="22215 22216 22217" />
+		</cond>
+	</skill>
+	<skill id="3629" levels="10" name="Blood Sword Akamanah">
+		<table name="#maxCp"> 12 13 14 15 17 19 21 23 25 27 </table>
+		<table name="#pAtk"> 3 4.5 6 7.5 9 10.5 11 11.5 12 12.5 </table>
+		<table name="#mAtk"> 3 3.25 3.5 3.75 4 4.25 4.5 5 5.5 5.75 </table>
+		<table name="#pDef"> 2.5 2.6 2.7 2.8 2.9 3 3.25 3.5 3.75 4 </table>
+		<table name="#mDef"> 3 3.1 3.2 3.3 3.4 3.5 3.75 4 4.25 4.5 </table>
+		<table name="#runSpd"> 4 6 8 10 12 14 16 18 19 20 </table>
+		<table name="#accCombat"> 15 20 25 30 35 40 45 50 55 60 </table>
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="isMagic" val="true" />
+		<set name="minPledgeClass" val="2" />
+		<for>
+			<mul order="0x30" stat="maxCp" val="#maxCp" />
+			<mul order="0x30" stat="pAtk" val="#pAtk" />
+			<mul order="0x30" stat="mAtk" val="#mAtk" />
+			<mul order="0x30" stat="pDef" val="#pDef" />
+			<mul order="0x30" stat="mDef" val="#mDef" />
+			<add order="0x40" stat="accCombat" val="#accCombat" />
+			<add order="0x40" stat="runSpd" val="#runSpd" />
+			<add order="0x40" stat="absorbDam" val="100" /> <!-- absorb 100% HP from damage inflicted on enemies -->
+			<mul order="0x30" stat="regCp" val="20" />
+			<set order="0x08" stat="STR" val="40" />
+			<set order="0x08" stat="DEX" val="30" />
+			<set order="0x08" stat="CON" val="43" />
+			<set order="0x08" stat="INT" val="21" />
+			<set order="0x08" stat="WIT" val="15" />
+			<set order="0x08" stat="MEN" val="21" />
+		</for>
+	</skill>
+	<skill id="3630" levels="1" name="Void Burst">
+		<set name="target" val="TARGET_AURA" />
+		<set name="skillType" val="PDAM" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="mpConsume" val="140" />
+		<set name="power" val="2500" /> <!-- Guess -->
+		<set name="hitTime" val="2000" />
+		<set name="reuseDelay" val="10000" /> <!-- Guess -->
+		<set name="skillRadius" val="200" />
+	</skill>
+	<skill id="3631" levels="1" name="Void Flow">
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="PDAM" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="mpConsume" val="140" />
+		<set name="power" val="1000" /> <!-- Guess -->
+		<set name="hitTime" val="1900" />
+		<set name="reuseDelay" val="4000" /> <!-- Guess -->
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+	</skill>
+	<skill id="3632" levels="1" name="Clan Gate">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="10000" />
+		<set name="reuseDelay" val="900000" />
+		<set name="staticReuse" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="ClanGate" time="120" val="0" />
+			<effect name="ImmobileBuff" time="120" val="0" noicon="1" />
+		</for>
+	</skill>
+	<skill id="3633" levels="2" name="Residential Shock Immunity">
+		<table name="#vuln"> 0.5 0 </table>
+		<table name="#stack"> 50 100 </table>
+		<set name="target" val="TARGET_SELF" />
+		<set name="reuseDelay" val="1800000" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="Buff" time="10" val="0" stackOrder="#stack" stackType="ShockVuln">
+				<mul order="0x30" stat="stunVuln" val="#vuln" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="3634" levels="1" name="Special Ability Infinity Sword">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="magicLvl" val="85" />
+		<for>
+			<!-- The following values are copied from Infinity Cleaver SA -->
+			<add order="0x40" stat="cAtkAdd" val="504" /> <!-- P.Atk. +504 on a critical hit -->
+			<mul order="0x30" stat="maxHp" val="1.25" /> <!-- HP +25% -->
+			<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
+			<add order="0x40" stat="rCrit" val="78.7" /> <!-- Critical +78.7 -->
+			<mul order="0x30" stat="pvpPhysDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
+			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
+			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
+			<add order="0x40" stat="reflectSkillPhysic" val="10" /> <!-- Reflect Skills 10% of the time -->
+			<add order="0x40" stat="reflectSkillMagic" val="10" /> <!-- Reflect Skills 10% of the time -->
+		</for>
+	</skill>
+	<skill id="3635" levels="1" name="Special Ability Infinity Shooter">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="magicLvl" val="85" />
+		<set name="chanceType" val="ON_CRIT" />
+		<set name="activationChance" val="7" />
+		<set name="triggeredId" val="3594" />
+		<set name="triggeredLevel" val="1" />
+		<for>
+			<!-- The following values are copied from Infinity Bow SA -->
+			<mul order="0x30" stat="maxMp" val="1.3" /> <!-- MP +30% -->
+			<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
+			<mul order="0x30" stat="pvpPhysDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
+			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
+			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
+			<mul order="0x30" stat="atkReuse" val="0.81" /> <!-- 19% Quick Recovery -->
+			<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.88" /> <!-- MP Consumption -12% --> <!-- Guessing -->
+		</for>
+	</skill>
+	<skill id="3636" levels="1" name="Dynasty Platinum Plate - Shield Master">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<sub order="0x10" stat="STR" val="2" /> <!-- Str -2 -->
+			<add order="0x10" stat="CON" val="2" /> <!-- Con +2 -->
+			<mul order="0x30" stat="pDef" val="1.066" /> <!-- P. Def. +6.6% -->
+			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
+			<mul order="0x30" stat="gainHp" val="1.04" /> <!-- Heal Capacity +4% -->
+			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+			<mul order="0x30" stat="stunVuln" val="0.85" /> <!-- Stun Resistance +15 -->
+			<add order="0x10" stat="cloak" val="1" />
+		</for>
+	</skill>
+	<skill id="3637" levels="1" name="Dynasty Platinum Plate - Weapon Master">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<sub order="0x10" stat="CON" val="2" /> <!-- Con -2 -->
+			<add order="0x10" stat="STR" val="2" /> <!-- Str +2 -->
+			<mul order="0x30" stat="pAtk" val="1.066" /> <!-- P. Atk. +6.6% -->
+			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
+			<add order="0x40" stat="darkRes" val="8" /> <!-- Darkness Resistance +8 -->
+			<add order="0x40" stat="cAtkAdd" val="282" /> <!-- Critical Damage +282 -->
+			<basemul order="0x30" stat="rCrit" val="0.0295" /> <!-- Critical Rate +2.95% Increase -->
+			<add order="0x10" stat="cloak" val="1" />
+		</for>
+	</skill>
+	<skill id="3638" levels="1" name="Dynasty Platinum Plate - Bard">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<sub order="0x10" stat="CON" val="2" /> <!-- Con -2 -->
+			<add order="0x10" stat="STR" val="2" /> <!-- Str +2 -->
+			<mul order="0x30" stat="pDef" val="1.066" /> <!-- P. Def. +6.6% -->
+			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
+			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+			<mul order="0x30" stat="DanceMpConsumeRate" val="0.94" /> <!-- MP Consumption -6% Decrease for Song and Dance Skills  -->
+			<add order="0x10" stat="cloak" val="1" />
+		</for>
+	</skill>
+	<skill id="3639" levels="1" name="Dynasty Platinum Plate - Force Master">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<sub order="0x10" stat="CON" val="2" /> <!-- Con -2 -->
+			<add order="0x10" stat="STR" val="2" /> <!-- Str +2 -->
+			<mul order="0x30" stat="pAtk" val="1.066" /> <!-- P. Atk. +6.6% -->
+			<add order="0x40" stat="maxHp" val="492" /> <!-- Max. HP +492 -->
+			<add order="0x40" stat="darkRes" val="8" /> <!-- Resistance to Darkness attacks +8 -->
+			<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.94" /> <!-- Decreases MP consumption by 6% for active skills -->
+			<add order="0x10" stat="cloak" val="1" />
+		</for>
+	</skill>
+	<skill id="3640" levels="1" name="Dynasty Jewel Leather Mail Dagger Master">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<sub order="0x10" stat="CON" val="2" /> <!-- Con -2 -->
+			<add order="0x10" stat="DEX" val="2" /> <!-- Dex +2 -->
+			<add order="0x40" stat="rEvas" val="5.3" /> <!-- Evasion +5.3 -->
+			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
+			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+			<mul order="0x30" stat="rootVuln" val="0.85" /> <!-- Hold Resistance +15% -->
+			<mul order="0x30" stat="pAtkSpd" val="1.0324" /> <!-- Atk. Spd. +3.24% -->
+			<add order="0x10" stat="cloak" val="1" />
+		</for>
+	</skill>
+	<skill id="3641" levels="1" name="Dynasty Jewel Leather Mail Bow Master">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<sub order="0x10" stat="CON" val="2" /> <!-- Con -2 -->
+			<add order="0x10" stat="DEX" val="2" /> <!-- Dex +2 -->
+			<add order="0x40" stat="accCombat" val="5.3" /> <!-- Accuracy +5.3 -->
+			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
+			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+			<mul order="0x30" stat="pAtkSpd" val="1.0324" /> <!-- Atk. Spd. +3.24% -->
+			<add order="0x40" stat="regMp" val="1.066" /> <!-- MP Recovery +6.6% -->
+			<add order="0x10" stat="cloak" val="1" />
+		</for>
+	</skill>
+	<skill id="3642" levels="1" name="Dynasty Jeweled Leather Armor Force Master">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<sub order="0x10" stat="CON" val="2" /> <!-- Con -2 -->
+			<add order="0x10" stat="STR" val="1" /> <!-- Str +1 -->
+			<add order="0x10" stat="DEX" val="1" /> <!-- Dex +1 -->
+			<mul order="0x30" stat="pAtk" val="1.066" /> <!-- P. Atk. +6.6% -->
+			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
+			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+			<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.94" /> <!-- MP Consumption -6% -->
+			<add order="0x10" stat="cloak" val="1" />
+		</for>
+	</skill>
+	<skill id="3643" levels="1" name="Dynasty Jeweled Leather Armor Weapon Master">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<sub order="0x10" stat="CON" val="2" /> <!-- Con -2 -->
+			<add order="0x10" stat="STR" val="1" /> <!-- Str +1 -->
+			<add order="0x10" stat="DEX" val="1" /> <!-- Dex +1 -->
+			<mul order="0x30" stat="pAtk" val="1.066" /> <!-- Physical Attack Power +6.6% -->
+			<add order="0x40" stat="maxHp" val="492" /> <!-- Maximum HP +492 effect -->
+			<add order="0x40" stat="darkRes" val="8" /> <!-- Darkness Resistance +8 -->
+			<add order="0x40" stat="cAtkAdd" val="282" /> <!-- Critical Damage +282 -->
+			<basemul order="0x30" stat="rCrit" val="0.0295" /> <!-- Critical Rate +2.95% Increase -->
+			<add order="0x10" stat="cloak" val="1" />
+		</for>
+	</skill>
+	<skill id="3644" levels="1" name="Dynasty Jeweled Leather Armor Summoner">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<sub order="0x10" stat="STR" val="2" /> <!-- Str -2 -->
+			<add order="0x10" stat="CON" val="2" /> <!-- Con +2 -->
+			<mul order="0x30" stat="pAtkSpd" val="1.066" /> <!-- Atk. Spd. +6.6% -->
+			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
+			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+			<mul order="0x30" stat="pAtk" val="1.0266" /> <!-- P. Atk. +2.66% -->
+			<mul order="0x30" stat="pDef" val="1.0266" /> <!-- P. Def. +2.66% -->
+			<add order="0x10" stat="cloak" val="1" />
+		</for>
+	</skill>
+	<skill id="3645" levels="1" name="Dynasty Silver Satin Tunic Healer">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<sub order="0x10" stat="INT" val="2" /> <!-- Int -2 -->
+			<add order="0x10" stat="MEN" val="2" /> <!-- Men +2 -->
+			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
+			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+			<mul order="0x30" stat="giveHp" val="1.22" /> <!-- Heal Capacity +22 -->
+			<sub order="0x40" stat="cancel" val="15" /> <!-- Magic Cancel Rate -15 -->
+			<add order="0x10" stat="cloak" val="1" />
+		</for>
+	</skill>
+	<skill id="3646" levels="1" name="Dynasty Silver Satin Tunic Enchanter">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<sub order="0x10" stat="INT" val="2" /> <!-- Int -2 -->
+			<add order="0x10" stat="MEN" val="2" /> <!-- Men +2 -->
+			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
+			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.94" /> <!-- MP Consumption -6% -->
+			<sub order="0x40" stat="cancel" val="15" /> <!-- Magic Cancel Rate -15 -->
+			<add order="0x10" stat="cloak" val="1" />
+		</for>
+	</skill>
+	<skill id="3647" levels="1" name="Dynasty Silver Satin Tunic Summoner">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<sub order="0x10" stat="INT" val="2" /> <!-- Int -2 -->
+			<add order="0x10" stat="MEN" val="2" /> <!-- Men +2 -->
+			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
+			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+			<mul order="0x30" stat="pAtk" val="1.033" /> <!-- P. Atk. +3.3% -->
+			<mul order="0x30" stat="pDef" val="1.033" /> <!-- P. Def. +3.3% -->
+			<add order="0x10" stat="cloak" val="1" />
+		</for>
+	</skill>
+	<skill id="3648" levels="1" name="Dynasty Silver Satin Tunic Human Wizard">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x10" stat="INT" val="1" /> <!-- Int +1 -->
+			<add order="0x10" stat="WIT" val="1" /> <!-- Wit +1 -->
+			<sub order="0x10" stat="MEN" val="2" /> <!-- Men -2 -->
+			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
+			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+			<mul order="0x30" stat="mAtk" val="1.066" /> <!-- M. Atk. +6.6% -->
+			<add order="0x10" stat="cloak" val="1" />
+		</for>
+	</skill>
+	<skill id="3649" levels="1" name="Beleth's Ring">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="magicDamVul" val="0.88" />
+			<add order="0x40" stat="maxHp" val="105" />
+			<mul order="0x30" stat="derangementProf" val="1.1" />
+			<mul order="0x30" stat="derangementVuln" val="0.9" />
+			<add order="0x40" stat="maxMp" val="38" />
+			<add order="0x40" stat="regMp" val="0.23" />
+			<add order="0x40" stat="darkRes" val="30" />
+		</for>
+	</skill>
+	<skill id="3650" levels="1" name="PvP Weapon - CP Drain">
+		<set name="activationChance" val="15" />
+		<set name="chanceType" val="ON_HIT" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5681" />
+		<set name="triggeredLevel" val="1" />
+		<set name="pvpChanceOnly" val="true" />
+	</skill>
+	<skill id="3651" levels="1" name="PvP Weapon - Cancel">
+		<set name="activationChance" val="15" />
+		<set name="chanceType" val="ON_HIT" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5682" />
+		<set name="triggeredLevel" val="1" />
+		<set name="pvpChanceOnly" val="true" />
+	</skill>
+	<skill id="3652" levels="1" name="PvP Weapon - Ignore Shield Defense">
+		<set name="activationChance" val="15" />
+		<set name="chanceType" val="ON_HIT" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5683" />
+		<set name="triggeredLevel" val="1" />
+		<set name="pvpChanceOnly" val="true" />
+	</skill>
+	<skill id="3653" levels="1" name="PvP Weapon - Attack Chance">
+		<set name="activationChance" val="5" />
+		<set name="chanceType" val="ON_HIT" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5684" />
+		<set name="triggeredLevel" val="1" />
+		<set name="pvpChanceOnly" val="true" />
+	</skill>
+	<skill id="3654" levels="1" name="PvP Weapon - Casting">
+		<set name="activationChance" val="15" />
+		<set name="chanceType" val="ON_ATTACKED" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5685" />
+		<set name="triggeredLevel" val="1" />
+		<set name="pvpChanceOnly" val="true" />
+	</skill>
+	<skill id="3655" levels="1" name="PvP Weapon - Rapid Fire">
+		<set name="activationChance" val="15" />
+		<set name="chanceType" val="ON_HIT" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5686" />
+		<set name="triggeredLevel" val="1" />
+		<set name="pvpChanceOnly" val="true" />
+	</skill>
+	<skill id="3656" levels="1" name="PvP Weapon - Decrease Range">
+		<set name="activationChance" val="15" />
+		<set name="chanceType" val="ON_HIT" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5687" />
+		<set name="triggeredLevel" val="1" />
+		<set name="pvpChanceOnly" val="true" />
+	</skill>
+	<skill id="3657" levels="1" name="PvP Weapon - Decrease Resist">
+		<!-- Has a chance to decrease attribute resistance when attacking. -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5688" />
+		<set name="triggeredLevel" val="1" />
+		<set name="activationChance" val="1" /> <!-- Guessing -->
+		<set name="chanceType" val="ON_HIT" />
+		<set name="pvpChanceOnly" val="true" />
+	</skill>
+	<skill id="3658" levels="1" name="PvP Shield - Reflect Damage">
+		<!-- Has a chance to reflect the enemy's attack when being attacked. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="3659" levels="1" name="PvP Armor - Damage Down">
+		<set name="activationChance" val="15" />
+		<set name="chanceType" val="ON_ATTACKED" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5690" />
+		<set name="triggeredLevel" val="1" />
+		<set name="pvpChanceOnly" val="true" />
+	</skill>
+	<skill id="3660" levels="1" name="PvP Armor - Critical Down">
+		<set name="activationChance" val="15" />
+		<set name="chanceType" val="ON_ATTACKED" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5691" />
+		<set name="triggeredLevel" val="1" />
+		<set name="pvpChanceOnly" val="true" />
+	</skill>
+	<skill id="3661" levels="1" name="PvP Armor - Heal">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="3662" levels="1" name="PvP Armor - Speed Down">
+		<set name="activationChance" val="15" />
+		<set name="chanceType" val="ON_ATTACKED" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5693" />
+		<set name="triggeredLevel" val="1" />
+		<set name="pvpChanceOnly" val="true" />
+	</skill>
+	<skill id="3663" levels="1" name="PvP Armor - Mirage">
+		<set name="activationChance" val="15" />
+		<set name="chanceType" val="ON_ATTACKED" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5694" />
+		<set name="triggeredLevel" val="1" />
+		<set name="pvpChanceOnly" val="true" />
+	</skill>
+	<skill id="3664" levels="1" name="Red Talisman - Max. CP">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="4000" />
+	</skill>
+	<skill id="3665" levels="2" name="Red Talisman - CP Regeneration">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="4000" />
+	</skill>
+	<skill id="3666" levels="1" name="Yellow Talisman - Increase Force">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="3667" levels="1" name="Yellow Talisman - Damage Transition">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="3668" levels="1" name="Zubei's Leather Gaiters">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="rEvas" val="0.5" />
+		</for>
+	</skill>
+	<skill id="3669" levels="1" name="Zubei's Leather Shirt">
+		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="3670" levels="1" name="Zubei's Gauntlet">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="rEvas" val="0.5" />
+		</for>
+	</skill>
+	<skill id="3671" levels="1" name="Zubei's Boots">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="rEvas" val="0.5" />
+		</for>
+	</skill>
+	<skill id="3672" levels="1" name="Zubei's Gaiters">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="pDef" val="1.00655" />
+			<add order="0x40" stat="maxHp" val="36.75" />
+		</for>
+	</skill>
+	<skill id="3673" levels="1" name="Zubei's Gauntlet">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="pDef" val="1.00655" />
+			<add order="0x40" stat="maxHp" val="36.75" />
+		</for>
+	</skill>
+	<skill id="3674" levels="1" name="Zubei's Boots">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="pDef" val="1.00655" />
+			<add order="0x40" stat="maxHp" val="36.75" />
+		</for>
+	</skill>
+	<skill id="3675" levels="1" name="Zubei's Helmet">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="pDef" val="1.00655" />
+			<add order="0x40" stat="maxHp" val="36.75" />
+		</for>
+	</skill>
+	<skill id="3676" levels="1" name="Zubei's Breastplate">
+		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="3677" levels="1" name="Tunic of Zubei">
+		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="3678" levels="1" name="Stockings of Zubei">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="mAtk" val="1.0125" />
+		</for>
+	</skill>
+	<skill id="3679" levels="1" name="Zubei's Gauntlet">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="mAtk" val="1.0125" />
+		</for>
+	</skill>
+	<skill id="3680" levels="1" name="Zubei's Boots">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="mAtk" val="1.0125" />
+		</for>
+	</skill>
+	<skill id="3681" levels="1" name="Zubei's Shield">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="mDef" val="1.01" />
+		</for>
+	</skill>
+	<skill id="3682" levels="1" name="Avadon Gloves">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="maxHp" val="36.75" />
+		</for>
+	</skill>
+	<skill id="3683" levels="1" name="Avadon Boots">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="maxHp" val="36.75" />
+		</for>
+	</skill>
+	<skill id="3684" levels="1" name="Avadon Circlet">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="maxHp" val="36.75" />
+		</for>
+	</skill>
+	<skill id="3685" levels="1" name="Avadon Gaiters">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="maxHp" val="36.75" />
+		</for>
+	</skill>
+	<skill id="3686" levels="1" name="Avadon Breastplate">
+		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="3687" levels="1" name="Avadon Shield">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="mDef" val="1.01" />
+		</for>
+	</skill>
+	<skill id="3688" levels="1" name="Avadon Circlet">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="mDef" val="1.00875" />
+			<add order="0x40" stat="maxLoad" val="965.83" />
+		</for>
+	</skill>
+	<skill id="3689" levels="1" name="Avadon Gloves">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="mDef" val="1.00875" />
+			<add order="0x40" stat="maxLoad" val="965.83" />
+		</for>
+	</skill>
+	<skill id="3690" levels="1" name="Avadon Leather Armor">
+		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="3691" levels="1" name="Avadon Boots">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="mDef" val="1.00875" />
+			<add order="0x40" stat="maxLoad" val="965.83" />
+		</for>
+	</skill>
+	<skill id="3692" levels="1" name="Avadon Circlet">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="pDef" val="1.008745" />
+		</for>
+	</skill>
+	<skill id="3693" levels="1" name="Avadon Gloves">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="pDef" val="1.008745" />
+		</for>
+	</skill>
+	<skill id="3694" levels="1" name="Avadon Robe">
+		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="3695" levels="1" name="Avadon Boots">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="pDef" val="1.008745" />
+		</for>
+	</skill>
+	<skill id="3696" levels="1" name="Doom Gloves">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="maxHp" val="53.33" />
+			<add order="0x40" stat="breath" val="33.33" />
+		</for>
+	</skill>
+	<skill id="3697" levels="1" name="Doom Boots">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="maxHp" val="53.33" />
+			<add order="0x40" stat="breath" val="33.33" />
+		</for>
+	</skill>
+	<skill id="3698" levels="1" name="Doom Plate Armor">
+		<!-- It has been changed so that a rare type upper armor is not manufactured during item creation. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="3699" levels="1" name="Doom Helmet">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="maxHp" val="53.33" />
+			<add order="0x40" stat="breath" val="33.33" />
+		</for>
+	</skill>
 </list>

@@ -1,155 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-<item id="13802" name="Native's Hood">
-  <for>
-    <add order="0x10" stat="pDef" val="33"/>
-  </for>
-</item>
-<item id="13803" name="Native's Tunic">
-  <for>
-    <add order="0x10" stat="pDef" val="53"/>
-  </for>
-</item>
-<item id="13804" name="Native's Trousers">
-  <for>
-    <add order="0x10" stat="pDef" val="29"/>
-  </for>
-</item>
-<item id="13805" name="Guards of the Dawn Helmet">
-  <for>
-    <add order="0x10" stat="pDef" val="33"/>
-  </for>
-</item>
-<item id="13806" name="Guards of the Dawn Tunic">
-  <for>
-    <add order="0x10" stat="pDef" val="53"/>
-  </for>
-</item>
-<item id="13807" name="Guards of the Dawn Trousers">
-  <for>
-    <add order="0x10" stat="pDef" val="29"/>
-  </for>
-</item>
-<item id="13885" name="Sealed Arcana Sigil">
-  <cond msgId="1518">
-    <not>
-      <player race="Kamael"/>
-    </not>
-  </cond>
-  <for>
-    <add order="0x10" stat="pDef" val="13"/>
-    <sub order="0x10" stat="rEvas" val="8"/>
-    <enchant order="0x0C" stat="pDef" val="0"/>
-  </for>
-</item>
-<item id="13886" name="Sealed Dynasty Sigil">
-  <cond msgId="1518">
-    <not>
-      <player race="Kamael"/>
-    </not>
-  </cond>
-  <for>
-    <add order="0x10" stat="pDef" val="15"/>
-    <sub order="0x10" stat="rEvas" val="8"/>
-    <enchant order="0x0C" stat="pDef" val="0"/>
-  </for>
-</item>
-<item id="13887" name="Sealed Vesper Sigil">
-  <cond msgId="1518">
-    <not>
-      <player race="Kamael"/>
-    </not>
-  </cond>
-  <for>
-    <add order="0x10" stat="pDef" val="17"/>
-    <sub order="0x10" stat="rEvas" val="8"/>
-    <enchant order="0x0C" stat="pDef" val="0"/>
-  </for>
-</item>
-<item id="13888" name="Sealed Lord's Cloak">
-  <for>
-    <add order="0x10" stat="pDef" val="20"/>
-    <enchant order="0x0C" stat="pDef" val="0"/>
-  </for>
-</item>
-<item id="13889" name="Holy Spirit's Cloak - Kamael exclusive">
-  <cond msgId="2453">
-    <and>
-      <player race="Kamael"/>
-      <or>
-        <player active_skill_id="8286"/> <!-- Vesper Noble Leather Breastplate -->
-        <player active_skill_id="8304"/> <!-- Vesper Noble Leather Breastplate {PvP} -->
-      </or>
-    </and>
-  </cond>
-  <for>
-    <add order="0x10" stat="pDef" val="20"/>
-    <add order="0x40" stat="darkRes" val="30"/> <!-- Dark Attribute Defense +30 -->
-  </for>
-</item>
-<item id="13890" name="Holy Spirit's Cloak">
-  <cond msgId="2453">
-    <or>
-      <player active_skill_id="8284"/> <!-- Vesper Noble Breastplate -->
-      <player active_skill_id="8302"/> <!-- Vesper Noble Breastplate {PvP} -->
-    </or>
-  </cond>
-  <for>
-    <add order="0x10" stat="pDef" val="20"/>
-    <add order="0x40" stat="darkRes" val="30"/> <!-- Dark Attribute Defense +30 -->
-  </for>
-</item>
-<item id="13891" name="Holy Spirit's Cloak - Light Armor exclusive">
-  <cond msgId="2453">
-    <and>
-      <not>
-        <player race="Kamael"/>
-      </not>
-      <or>
-        <player active_skill_id="8286"/> <!-- Vesper Noble Leather Breastplate -->
-        <player active_skill_id="8304"/> <!-- Vesper Noble Leather Breastplate {PvP} -->
-      </or>
-    </and>
-  </cond>
-  <for>
-    <add order="0x10" stat="pDef" val="20"/>
-    <add order="0x40" stat="darkRes" val="30"/> <!-- Dark Attribute Defense +30 -->
-  </for>
-</item>
-<item id="13892" name="Holy Spirit's Cloak - Robe exclusive">
-  <cond msgId="2453">
-    <or>
-      <player active_skill_id="8288"/> <!-- Vesper Noble Tunic -->
-      <player active_skill_id="8306"/> <!-- Vesper Noble Tunic {PvP} -->
-    </or>
-  </cond>
-  <for>
-    <add order="0x10" stat="pDef" val="20"/>
-    <add order="0x40" stat="darkRes" val="30"/> <!-- Dark Attribute Defense +30 -->
-  </for>
-</item>
-<item id="13894" name="Cloth Belt">
-  <for>
-    <add order="0x10" stat="pDef" val="10"/>
-    <enchant order="0x0C" stat="pDef" val="0"/>
-  </for>
-</item>
-<item id="13895" name="Leather Belt">
-  <for>
-    <add order="0x10" stat="pDef" val="11"/>
-    <enchant order="0x0C" stat="pDef" val="0"/>
-  </for>
-</item>
-<item id="13896" name="Iron Belt">
-  <for>
-    <add order="0x10" stat="pDef" val="12"/>
-    <enchant order="0x0C" stat="pDef" val="0"/>
-  </for>
-</item>
-<item id="13897" name="Mithril Belt">
-  <for>
-    <add order="0x10" stat="pDef" val="14"/>
-    <enchant order="0x0C" stat="pDef" val="0"/>
-  </for>
-</item>
+	<item id="13802" name="Native's Hood">
+		<for>
+			<add order="0x10" stat="pDef" val="33" />
+		</for>
+	</item>
+	<item id="13803" name="Native's Tunic">
+		<for>
+			<add order="0x10" stat="pDef" val="53" />
+		</for>
+	</item>
+	<item id="13804" name="Native's Trousers">
+		<for>
+			<add order="0x10" stat="pDef" val="29" />
+		</for>
+	</item>
+	<item id="13805" name="Guards of the Dawn Helmet">
+		<for>
+			<add order="0x10" stat="pDef" val="33" />
+		</for>
+	</item>
+	<item id="13806" name="Guards of the Dawn Tunic">
+		<for>
+			<add order="0x10" stat="pDef" val="53" />
+		</for>
+	</item>
+	<item id="13807" name="Guards of the Dawn Trousers">
+		<for>
+			<add order="0x10" stat="pDef" val="29" />
+		</for>
+	</item>
+	<item id="13885" name="Sealed Arcana Sigil">
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="13" />
+			<sub order="0x10" stat="rEvas" val="8" />
+			<enchant order="0x0C" stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="13886" name="Sealed Dynasty Sigil">
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="15" />
+			<sub order="0x10" stat="rEvas" val="8" />
+			<enchant order="0x0C" stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="13887" name="Sealed Vesper Sigil">
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="17" />
+			<sub order="0x10" stat="rEvas" val="8" />
+			<enchant order="0x0C" stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="13888" name="Sealed Lord's Cloak">
+		<for>
+			<add order="0x10" stat="pDef" val="20" />
+			<enchant order="0x0C" stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="13889" name="Holy Spirit's Cloak - Kamael exclusive">
+		<cond msgId="2453">
+			<player race="Kamael" /> <!-- Kamael exclusive cloak -->
+			<player cloakStatus="1" />
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="20" />
+			<add order="0x40" stat="darkRes" val="30" /> <!-- Dark Attribute Defense +30 -->
+		</for>
+	</item>
+	<item id="13890" name="Holy Spirit's Cloak">
+		<cond msgId="2453">
+			<player cloakStatus="1" />
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="20" />
+			<add order="0x40" stat="darkRes" val="30" /> <!-- Dark Attribute Defense +30 -->
+		</for>
+	</item>
+	<item id="13891" name="Holy Spirit's Cloak - Light Armor exclusive">
+		<cond msgId="2453">
+			<and>
+				<player class_id_restriction="93, 101, 108, 92, 102, 109" /> <!-- Dagger Master and Bow Master -->
+				<player cloakStatus="1" />
+				<not>
+					<player race="Kamael" /> <!-- excluding Kamaels -->
+				</not>
+			</and>
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="20" />
+			<add order="0x40" stat="darkRes" val="30" /> <!-- Dark Attribute Defense +30 -->
+		</for>
+	</item>
+	<item id="13892" name="Holy Spirit's Cloak - Robe exclusive">
+		<cond msgId="2453">
+			<and>
+				<player class_id_restriction="97, 105, 112, 98, 115, 116, 96, 104, 111, 94, 95, 103, 110" /> <!-- Healer, Enchanter, Summoner and Wizard -->
+				<player cloakStatus="1" />
+				<not>
+					<player race="Kamael" /> <!-- excluding Kamaels -->
+				</not>
+			</and>
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="20" />
+			<add order="0x40" stat="darkRes" val="30" /> <!-- Dark Attribute Defense +30 -->
+		</for>
+	</item>
+	<item id="13894" name="Cloth Belt">
+		<for>
+			<add order="0x10" stat="pDef" val="10" />
+			<enchant order="0x0C" stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="13895" name="Leather Belt">
+		<for>
+			<add order="0x10" stat="pDef" val="11" />
+			<enchant order="0x0C" stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="13896" name="Iron Belt">
+		<for>
+			<add order="0x10" stat="pDef" val="12" />
+			<enchant order="0x0C" stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="13897" name="Mithril Belt">
+		<for>
+			<add order="0x10" stat="pDef" val="14" />
+			<enchant order="0x0C" stat="pDef" val="0" />
+		</for>
+	</item>
 </list>
