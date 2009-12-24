@@ -16,12 +16,13 @@ package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
-import net.sf.l2j.Config;
-import net.sf.l2j.gameserver.LoginServerThread;
-import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.network.gameserverpackets.ServerStatus;
-import net.sf.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jserver.Config;
+import com.l2jserver.gameserver.LoginServerThread;
+import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.gameserverpackets.ServerStatus;
+import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
+
 
 /**
  * This class handles the admin commands that acts on the login
@@ -41,7 +42,7 @@ public class AdminLogin implements IAdminCommandHandler
 	
 	/**
 	 * 
-	 * @see net.sf.l2j.gameserver.handler.IAdminCommandHandler#useAdminCommand(java.lang.String, net.sf.l2j.gameserver.model.actor.instance.L2PcInstance)
+	 * @see com.l2jserver.gameserver.handler.IAdminCommandHandler#useAdminCommand(java.lang.String, com.l2jserver.gameserver.model.actor.instance.L2PcInstance)
 	 */
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
@@ -153,7 +154,7 @@ public class AdminLogin implements IAdminCommandHandler
 	
 	/**
 	 * 
-	 * @see net.sf.l2j.gameserver.handler.IAdminCommandHandler#getAdminCommandList()
+	 * @see com.l2jserver.gameserver.handler.IAdminCommandHandler#getAdminCommandList()
 	 */
 	public String[] getAdminCommandList()
 	{

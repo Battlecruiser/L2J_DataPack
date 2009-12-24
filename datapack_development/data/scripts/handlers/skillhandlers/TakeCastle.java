@@ -14,18 +14,14 @@
  */
 package handlers.skillhandlers;
 
-import net.sf.l2j.gameserver.handler.ISkillHandler;
-import net.sf.l2j.gameserver.instancemanager.CastleManager;
-import net.sf.l2j.gameserver.model.L2Object;
-import net.sf.l2j.gameserver.model.L2Skill;
-import net.sf.l2j.gameserver.model.actor.L2Character;
-import net.sf.l2j.gameserver.model.actor.instance.L2ArtefactInstance;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.model.entity.Castle;
-import net.sf.l2j.gameserver.network.SystemMessageId;
-import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
-import net.sf.l2j.gameserver.templates.skills.L2SkillType;
-import net.sf.l2j.gameserver.util.Util;
+import com.l2jserver.gameserver.handler.ISkillHandler;
+import com.l2jserver.gameserver.instancemanager.CastleManager;
+import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.L2Skill;
+import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.entity.Castle;
+import com.l2jserver.gameserver.templates.skills.L2SkillType;
 
 /**
  * @author _drunk_
@@ -40,7 +36,7 @@ public class TakeCastle implements ISkillHandler
 	
 	/**
 	 * 
-	 * @see net.sf.l2j.gameserver.handler.ISkillHandler#useSkill(net.sf.l2j.gameserver.model.actor.L2Character, net.sf.l2j.gameserver.model.L2Skill, net.sf.l2j.gameserver.model.L2Object[])
+	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
 	 */
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
@@ -53,61 +49,32 @@ public class TakeCastle implements ISkillHandler
 			return;
 		
 		Castle castle = CastleManager.getInstance().getCastle(player);
-		if (castle == null || !checkIfOkToCastSealOfRule(player, castle))
+		if (castle == null || !player.checkIfOkToCastSealOfRule(castle, true, skill))
 			return;
 		
 		try
 		{
-			if (targets[0] instanceof L2ArtefactInstance)
-				castle.Engrave(player.getClan(), targets[0].getObjectId());
+			castle.Engrave(player.getClan(), targets[0]);
 		}
 		catch (Exception e)
 		{
+			e.printStackTrace();
 		}
 	}
 	
 	/**
 	 * 
-	 * @see net.sf.l2j.gameserver.handler.ISkillHandler#getSkillIds()
+	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
 	 */
 	public L2SkillType[] getSkillIds()
 	{
 		return SKILL_IDS;
 	}
+
+
 	
-	/**
-	 * 
-	 * @param activeChar
-	 * @param castle
-	 * @param isCheckOnly
-	 * @return
-	 */
-	public static boolean checkIfOkToCastSealOfRule(L2Character activeChar, Castle castle)
+	public static void main(String[] args)
 	{
-		if (!(activeChar instanceof L2PcInstance))
-			return false;
-		
-		String text = "";
-		L2PcInstance player = (L2PcInstance) activeChar;
-		
-		if (castle == null || castle.getCastleId() <= 0)
-			text = "You must be on castle ground to use this skill";
-		else if (!(player.getTarget() instanceof L2ArtefactInstance))
-			text = "You can only use this skill on an artifact";
-		else if (!castle.getSiege().getIsInProgress())
-			text = "You can only use this skill during a siege.";
-		else if (!Util.checkIfInRange(200, player, player.getTarget(), true))
-			text = "You are not in range of the artifact.";
-		else if (castle.getSiege().getAttackerClan(player.getClan()) == null)
-			text = "You must be an attacker to use this skill";
-		else
-		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.OPPONENT_STARTED_ENGRAVING);
-			castle.getSiege().announceToPlayer(sm, false);
-			return true;
-		}
-		
-		player.sendMessage(text);
-		return false;
+		new TakeCastle();
 	}
 }

@@ -1,8 +1,8 @@
 package transformations;
 
-import net.sf.l2j.gameserver.datatables.SkillTable;
-import net.sf.l2j.gameserver.instancemanager.TransformationManager;
-import net.sf.l2j.gameserver.model.L2Transformation;
+import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.instancemanager.TransformationManager;
+import com.l2jserver.gameserver.model.L2Transformation;
 
 public class AurabirdFalcon extends L2Transformation
 {
@@ -48,7 +48,7 @@ public class AurabirdFalcon extends L2Transformation
 			// Energy Burst (up to 11 levels)
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(911, lvl), false);
 		}
-		// Transfrom Dispel
+		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
 		getPlayer().setTransformAllowedSkills(new int[]{884,885,886,888,890,891,894,911,932,619});
@@ -86,7 +86,7 @@ public class AurabirdFalcon extends L2Transformation
 			// Energy Burst (up to 11 levels)
 			getPlayer().removeSkill(SkillTable.getInstance().getInfo(911, lvl), false);
 		}
-		// Transfrom Dispel
+		// Transform Dispel
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
 		getPlayer().setTransformAllowedSkills(new int[]{});

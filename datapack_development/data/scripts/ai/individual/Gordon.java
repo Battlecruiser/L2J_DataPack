@@ -15,13 +15,15 @@
 package ai.individual;
 
 import java.util.Collection;
-import net.sf.l2j.gameserver.ai.CtrlIntention;
-import net.sf.l2j.gameserver.datatables.SpawnTable;
-import net.sf.l2j.gameserver.model.L2CharPosition;
-import net.sf.l2j.gameserver.model.L2Spawn;
-import net.sf.l2j.gameserver.model.actor.L2Attackable;
-import net.sf.l2j.gameserver.model.actor.L2Npc;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
+
+import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.datatables.SpawnTable;
+import com.l2jserver.gameserver.model.L2CharPosition;
+import com.l2jserver.gameserver.model.L2Spawn;
+import com.l2jserver.gameserver.model.actor.L2Attackable;
+import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+
 import ai.group_template.L2AttackableAIScript;
 
 /**
@@ -98,7 +100,7 @@ public class Gordon extends L2AttackableAIScript
 		X = WALKS[_isWalkTo-1][0];
 		Y = WALKS[_isWalkTo-1][1];
 		Z = WALKS[_isWalkTo-1][2];
-		if (event == "time_isAttacked")
+		if (event.equalsIgnoreCase("time_isAttacked"))
 		{
 			_isAttacked = false;
 			if (npc.getNpcId() == GORDON)
@@ -107,7 +109,7 @@ public class Gordon extends L2AttackableAIScript
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(X, Y, Z, 0));
 			}
 		}
-		else if (event == "check_ai")
+		else if (event.equalsIgnoreCase("check_ai"))
 		{
 			cancelQuestTimer("check_ai", null, null);
 			if (_isSpawned == false)
@@ -121,7 +123,7 @@ public class Gordon extends L2AttackableAIScript
 				}
 			}
 		}
-		else if (event == "Start")
+		else if (event.equalsIgnoreCase("Start"))
 		{
 			if (npc != null && _isSpawned == true)
 			{

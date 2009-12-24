@@ -3,14 +3,14 @@
 
 import sys
 
-from net.sf.l2j.gameserver.datatables import CharTemplateTable
-from net.sf.l2j.gameserver.model.base         import ClassType
-from net.sf.l2j.gameserver.model.base         import Race
-from net.sf.l2j.gameserver.model.quest        import State
-from net.sf.l2j.gameserver.model.quest        import QuestState
-from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-from net.sf.l2j.gameserver.network            import SystemMessageId
-from net.sf.l2j.gameserver.network.serverpackets import SystemMessage
+from com.l2jserver.gameserver.datatables import CharTemplateTable
+from com.l2jserver.gameserver.model.base         import ClassType
+from com.l2jserver.gameserver.model.base         import Race
+from com.l2jserver.gameserver.model.quest        import State
+from com.l2jserver.gameserver.model.quest        import QuestState
+from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.network            import SystemMessageId
+from com.l2jserver.gameserver.network.serverpackets import SystemMessage
 
 qn = "9002_SubClassCertification"
 NPC=[30026,30031,30037,30066,30070,30109,30115,30120,30154,30174,30175,30176,30187, \
@@ -50,29 +50,6 @@ TRANSFORMITEMS={
 6:10291  # Healers
 }
 
-def isCorrectMaster(npc, player):
-  charTemp = CharTemplateTable.getInstance().getTemplate(player.getClassId())
-  currentRace = charTemp.race
-  if ((npc.getVillageMasterRace() == Race.Human) and (currentRace == Race.Human or currentRace == Race.Elf) and npc.getVillageMasterTeachType() == ClassType.Fighter and not player.isMageClass()):
-    return True
-  elif ((npc.getVillageMasterRace() == Race.Human) and (currentRace == Race.Human or currentRace == Race.Elf) and npc.getVillageMasterTeachType() == ClassType.Mystic and player.getClassId().getId() in WIZARDCLASSES):
-    return True
-  elif ((npc.getVillageMasterRace() == Race.Human) and (currentRace == Race.Human or currentRace == Race.Elf) and npc.getVillageMasterTeachType() == ClassType.Mystic and player.getClassId().getId() in SUMMONERCLASSES):
-    return True
-  elif ((npc.getVillageMasterRace() == Race.Human) and (currentRace == Race.Human or currentRace == Race.Elf) and npc.getVillageMasterTeachType() == ClassType.Priest and player.getClassId().getId() in HEALERCLASSES):
-    return True
-  elif ((npc.getVillageMasterRace() == Race.Human) and (currentRace == Race.Human or currentRace == Race.Elf) and npc.getVillageMasterTeachType() == ClassType.Priest and player.getClassId().getId() in ENCHANTERCLASSES and player.isMageClass()):
-    return True
-  elif (npc.getVillageMasterRace() == Race.DarkElf and currentRace == Race.DarkElf):
-    return True
-  elif (npc.getVillageMasterRace() == Race.Orc and currentRace == Race.Orc):
-    return True
-  elif (npc.getVillageMasterRace() == Race.Dwarf and currentRace == Race.Dwarf):
-    return True
-  elif (npc.getVillageMasterRace() == Race.Kamael and currentRace == Race.Kamael):
-    return True
-  return False
-
 def getClassIndex(player):
   if player.getClassId().getId() in WARRIORCLASSES:
     return 0
@@ -111,7 +88,7 @@ class Quest (JQuest) :
    htmltext = event
    if event == "GetCertified":
      if player.isSubClassActive():
-       if isCorrectMaster(npc, player):
+       if npc.checkVillageMaster(player.getActiveClass()):
          if player.getLevel() >= 65:
            return "CertificationList.htm"
          else:

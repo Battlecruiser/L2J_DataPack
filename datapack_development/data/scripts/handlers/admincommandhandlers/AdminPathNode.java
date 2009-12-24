@@ -16,11 +16,12 @@ package handlers.admincommandhandlers;
 
 import java.util.List;
 
-import net.sf.l2j.Config;
-import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.pathfinding.AbstractNodeLoc;
-import net.sf.l2j.gameserver.pathfinding.PathFinding;
+import com.l2jserver.Config;
+import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.pathfinding.AbstractNodeLoc;
+import com.l2jserver.gameserver.pathfinding.PathFinding;
+
 
 public class AdminPathNode implements IAdminCommandHandler
 {

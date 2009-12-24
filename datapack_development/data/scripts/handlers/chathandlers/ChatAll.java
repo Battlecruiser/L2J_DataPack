@@ -18,13 +18,14 @@ import java.util.Collection;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
-import net.sf.l2j.Config;
-import net.sf.l2j.gameserver.handler.IChatHandler;
-import net.sf.l2j.gameserver.handler.IVoicedCommandHandler;
-import net.sf.l2j.gameserver.handler.VoicedCommandHandler;
-import net.sf.l2j.gameserver.model.BlockList;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.network.serverpackets.CreatureSay;
+import com.l2jserver.Config;
+import com.l2jserver.gameserver.handler.IChatHandler;
+import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
+import com.l2jserver.gameserver.handler.VoicedCommandHandler;
+import com.l2jserver.gameserver.model.BlockList;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
+
 
 /**
  * A chat handler
@@ -42,9 +43,9 @@ public class ChatAll implements IChatHandler
 	
 	/**
 	 * Handle chat type 'all'
-	 * @see net.sf.l2j.gameserver.handler.IChatHandler#handleChat(int, net.sf.l2j.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
+	 * @see com.l2jserver.gameserver.handler.IChatHandler#handleChat(int, com.l2jserver.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
 	 */
-	public void handleChat(int type, L2PcInstance activeChar, String target, String text)
+	public void handleChat(int type, L2PcInstance activeChar, String params, String text)
 	{
 		boolean vcd_used = false;
 		if (text.startsWith("."))
@@ -56,7 +57,7 @@ public class ChatAll implements IChatHandler
 			if (st.countTokens() > 1)
 			{
 				command = st.nextToken().substring(1);
-				target = text.substring(command.length() + 2);
+				params = text.substring(command.length() + 2);
 				vch = VoicedCommandHandler.getInstance().getVoicedCommandHandler(command);
 			}
 			else
@@ -68,7 +69,7 @@ public class ChatAll implements IChatHandler
 			}
 			if (vch != null)
 			{
-				vch.useVoicedCommand(command, activeChar, target);
+				vch.useVoicedCommand(command, activeChar, params);
 				vcd_used = true;
 			}
 			else
@@ -98,7 +99,7 @@ public class ChatAll implements IChatHandler
 	
 	/**
 	 * Returns the chat types registered to this handler
-	 * @see net.sf.l2j.gameserver.handler.IChatHandler#getChatTypeList()
+	 * @see com.l2jserver.gameserver.handler.IChatHandler#getChatTypeList()
 	 */
 	public int[] getChatTypeList()
 	{

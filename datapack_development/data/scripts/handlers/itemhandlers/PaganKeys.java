@@ -14,20 +14,20 @@
  */
 package handlers.itemhandlers;
 
-import net.sf.l2j.gameserver.datatables.DoorTable;
-import net.sf.l2j.gameserver.handler.IItemHandler;
-import net.sf.l2j.gameserver.instancemanager.InstanceManager;
-import net.sf.l2j.gameserver.model.L2ItemInstance;
-import net.sf.l2j.gameserver.model.L2Object;
-import net.sf.l2j.gameserver.model.actor.L2Playable;
-import net.sf.l2j.gameserver.model.actor.instance.L2DoorInstance;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.network.SystemMessageId;
-import net.sf.l2j.gameserver.network.serverpackets.ActionFailed;
-import net.sf.l2j.gameserver.network.serverpackets.PlaySound;
-import net.sf.l2j.gameserver.network.serverpackets.SocialAction;
-import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
-import net.sf.l2j.util.Rnd;
+import com.l2jserver.gameserver.datatables.DoorTable;
+import com.l2jserver.gameserver.handler.IItemHandler;
+import com.l2jserver.gameserver.instancemanager.InstanceManager;
+import com.l2jserver.gameserver.model.L2ItemInstance;
+import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.actor.L2Playable;
+import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
+import com.l2jserver.gameserver.network.serverpackets.PlaySound;
+import com.l2jserver.gameserver.network.serverpackets.SocialAction;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.util.Rnd;
 
 /**
  * @author  chris
@@ -38,7 +38,7 @@ public class PaganKeys implements IItemHandler
 	
 	/**
 	 * 
-	 * @see net.sf.l2j.gameserver.handler.IItemHandler#useItem(net.sf.l2j.gameserver.model.actor.L2Playable, net.sf.l2j.gameserver.model.L2ItemInstance)
+	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.L2ItemInstance)
 	 */
 	public void useItem(L2Playable playable, L2ItemInstance item)
 	{
@@ -132,7 +132,8 @@ public class PaganKeys implements IItemHandler
 				}
 				break;
 			case 8273: //AnteroomKey
-				if (door.getDoorName().startsWith("Anteroom"))
+				if (door.getDoorName() != null
+						&& door.getDoorName().startsWith("Anteroom"))
 				{
 					if (Rnd.get(100) < openChance)
 					{
@@ -168,7 +169,8 @@ public class PaganKeys implements IItemHandler
 				}
 				break;
 			case 8275: //Key of Darkness
-				if (door.getDoorName().startsWith("Door_of_Darkness"))
+				if (door.getDoorName() != null
+						&& door.getDoorName().startsWith("Door_of_Darkness"))
 				{
 					if (Rnd.get(100) < openChance)
 					{

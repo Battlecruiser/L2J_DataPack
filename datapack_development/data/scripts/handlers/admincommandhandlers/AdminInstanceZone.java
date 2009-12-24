@@ -3,13 +3,14 @@ package handlers.admincommandhandlers;
 import java.util.Map;
 import java.util.StringTokenizer;
 
-import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
-import net.sf.l2j.gameserver.instancemanager.InstanceManager;
-import net.sf.l2j.gameserver.model.L2World;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
-import net.sf.l2j.gameserver.util.GMAudit;
-import net.sf.l2j.gameserver.util.StringUtil;
+import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.instancemanager.InstanceManager;
+import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jserver.gameserver.util.GMAudit;
+import com.l2jserver.gameserver.util.StringUtil;
+
 
 public class AdminInstanceZone implements IAdminCommandHandler
 {
@@ -92,8 +93,7 @@ public class AdminInstanceZone implements IAdminCommandHandler
 
 	private void display(L2PcInstance player, L2PcInstance activeChar)
 	{
-		Map<Integer, Long> instanceTimes;
-		instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(player.getObjectId());
+		Map<Integer, Long> instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(player.getObjectId());
 
 		final StringBuilder html = StringUtil.startAppend(500 + instanceTimes.size() * 200,
 				"<html><center><font color=\"LEVEL\">Instances for ",

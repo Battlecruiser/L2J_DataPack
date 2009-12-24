@@ -14,15 +14,15 @@
  */
 package handlers.admincommandhandlers;
 
-import net.sf.l2j.gameserver.MonsterRace;
-import net.sf.l2j.gameserver.ThreadPoolManager;
-import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.network.SystemMessageId;
-import net.sf.l2j.gameserver.network.serverpackets.DeleteObject;
-import net.sf.l2j.gameserver.network.serverpackets.MonRaceInfo;
-import net.sf.l2j.gameserver.network.serverpackets.PlaySound;
-import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.MonsterRace;
+import com.l2jserver.gameserver.ThreadPoolManager;
+import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.DeleteObject;
+import com.l2jserver.gameserver.network.serverpackets.MonRaceInfo;
+import com.l2jserver.gameserver.network.serverpackets.PlaySound;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * This class handles following admin commands: - invul = turns invulnerability

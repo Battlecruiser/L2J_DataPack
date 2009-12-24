@@ -16,11 +16,11 @@ package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
-import net.sf.l2j.gameserver.datatables.ItemTable;
-import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.network.serverpackets.ItemList;
-import net.sf.l2j.gameserver.templates.item.L2Item;
+import com.l2jserver.gameserver.datatables.ItemTable;
+import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.templates.item.L2Item;
+
 
 /**
  * This class handles following admin commands:
@@ -34,7 +34,8 @@ public class AdminCreateItem implements IAdminCommandHandler
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_itemcreate",
-		"admin_create_item"
+		"admin_create_item",
+		"admin_give_item_target"
 	};
 	
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
@@ -55,18 +56,58 @@ public class AdminCreateItem implements IAdminCommandHandler
 					int idval = Integer.parseInt(id);
 					String num = st.nextToken();
 					long numval = Long.parseLong(num);
-					createItem(activeChar, idval, numval);
+					createItem(activeChar, activeChar, idval, numval);
 				}
 				else if (st.countTokens() == 1)
 				{
 					String id = st.nextToken();
 					int idval = Integer.parseInt(id);
-					createItem(activeChar, idval, 1);
+					createItem(activeChar, activeChar, idval, 1);
 				}
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				activeChar.sendMessage("Usage: //itemcreate <itemId> [amount]");
+				activeChar.sendMessage("Usage: //create_item <itemId> [amount]");
+			}
+			catch (NumberFormatException nfe)
+			{
+				activeChar.sendMessage("Specify a valid number.");
+			}
+			AdminHelpPage.showHelpPage(activeChar, "itemcreation.htm");
+		}
+		else if (command.startsWith("admin_give_item_target"))
+		{
+			try
+			{
+				L2PcInstance target;
+				if (activeChar.getTarget() instanceof L2PcInstance)
+					target = (L2PcInstance) activeChar.getTarget();
+				else
+				{
+					activeChar.sendMessage("Invalid target.");
+					return false;
+				}
+
+				String val = command.substring(22);
+				StringTokenizer st = new StringTokenizer(val);
+				if (st.countTokens() == 2)
+				{
+					String id = st.nextToken();
+					int idval = Integer.parseInt(id);
+					String num = st.nextToken();
+					long numval = Long.parseLong(num);
+					createItem(activeChar, target, idval, numval);
+				}
+				else if (st.countTokens() == 1)
+				{
+					String id = st.nextToken();
+					int idval = Integer.parseInt(id);
+					createItem(activeChar, target, idval, 1);
+				}
+			}
+			catch (StringIndexOutOfBoundsException e)
+			{
+				activeChar.sendMessage("Usage: //give_item_target <itemId> [amount]");
 			}
 			catch (NumberFormatException nfe)
 			{
@@ -82,7 +123,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void createItem(L2PcInstance activeChar, int id, long num)
+	private void createItem(L2PcInstance activeChar, L2PcInstance target, int id, long num)
 	{
 		L2Item template = ItemTable.getInstance().getTemplate(id);
 		if (template == null)
@@ -90,20 +131,16 @@ public class AdminCreateItem implements IAdminCommandHandler
 			activeChar.sendMessage("This item doesn't exist.");
 			return;
 		}
-		if (num > 20)
+		if (num > 10 && !template.isStackable())
 		{
-			if (!template.isStackable())
-			{
-				activeChar.sendMessage("This item does not stack - Creation aborted.");
-				return;
-			}
+			activeChar.sendMessage("This item does not stack - Creation aborted.");
+			return;
 		}
 		
-		activeChar.getInventory().addItem("Admin", id, num, activeChar, null);
-		
-		ItemList il = new ItemList(activeChar, true);
-		activeChar.sendPacket(il);
-		
-		activeChar.sendMessage("You have spawned " + num + " item(s) number " + id + " in your inventory.");
+		target.getInventory().addItem("Admin", id, num, activeChar, null);
+
+		if (activeChar != target)
+			target.sendMessage("Admin spawned " + num + " "+template.getName()+" in your inventory.");
+		activeChar.sendMessage("You have spawned " + num + " "+template.getName()+"(" + id + ") in "+target.getName()+" inventory.");
 	}
 }

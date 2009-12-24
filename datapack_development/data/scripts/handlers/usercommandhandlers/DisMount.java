@@ -14,8 +14,8 @@
  */
 package handlers.usercommandhandlers;
 
-import net.sf.l2j.gameserver.handler.IUserCommandHandler;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.handler.IUserCommandHandler;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  * Support for /dismount command.
@@ -30,7 +30,7 @@ public class DisMount implements IUserCommandHandler
 	
 	/**
 	 * 
-	 * @see net.sf.l2j.gameserver.handler.IUserCommandHandler#useUserCommand(int, net.sf.l2j.gameserver.model.actor.instance.L2PcInstance)
+	 * @see com.l2jserver.gameserver.handler.IUserCommandHandler#useUserCommand(int, com.l2jserver.gameserver.model.actor.instance.L2PcInstance)
 	 */
 	public synchronized boolean useUserCommand(int id, L2PcInstance activeChar)
 	{
@@ -47,7 +47,7 @@ public class DisMount implements IUserCommandHandler
 	
 	/**
 	 * 
-	 * @see net.sf.l2j.gameserver.handler.IUserCommandHandler#getUserCommandList()
+	 * @see com.l2jserver.gameserver.handler.IUserCommandHandler#getUserCommandList()
 	 */
 	public int[] getUserCommandList()
 	{

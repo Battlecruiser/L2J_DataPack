@@ -2,17 +2,20 @@ package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
-import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
-import net.sf.l2j.gameserver.model.L2Effect;
-import net.sf.l2j.gameserver.model.L2World;
-import net.sf.l2j.gameserver.model.actor.L2Character;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
-import net.sf.l2j.gameserver.util.GMAudit;
-import net.sf.l2j.gameserver.util.StringUtil;
+import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.model.L2Effect;
+import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jserver.gameserver.util.GMAudit;
+import com.l2jserver.gameserver.util.StringUtil;
+
 
 public class AdminBuffs implements IAdminCommandHandler
 {
+	private final static int PAGE_LIMIT = 20;
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -24,8 +27,6 @@ public class AdminBuffs implements IAdminCommandHandler
 	
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		String target = (activeChar.getTarget() != null) ? activeChar.getTarget().getName() : "no-target";
-		GMAudit.auditGMAction(activeChar.getName(), command, target, "");
 		
 		if (command.startsWith("admin_getbuffs"))
 		{
@@ -47,7 +48,10 @@ public class AdminBuffs implements IAdminCommandHandler
 				
 				if (player != null)
 				{
-					showBuffs(player, activeChar);
+					int page = 1;
+					if (st.hasMoreTokens())
+						page = Integer.parseInt(st.nextToken());
+					showBuffs(activeChar, player, page);
 					return true;
 				}
 				else
@@ -56,13 +60,16 @@ public class AdminBuffs implements IAdminCommandHandler
 					return false;
 				}
 			}
-			else if ((activeChar.getTarget() != null) && (activeChar.getTarget() instanceof L2PcInstance))
+			else if ((activeChar.getTarget() != null) && (activeChar.getTarget() instanceof L2Character))
 			{
-				showBuffs((L2PcInstance) activeChar.getTarget(), activeChar);
+				showBuffs(activeChar, (L2Character) activeChar.getTarget(), 1);
 				return true;
 			}
 			else
+			{
+				activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 				return true;
+			}
 		}
 		
 		else if (command.startsWith("admin_stopbuff"))
@@ -72,32 +79,34 @@ public class AdminBuffs implements IAdminCommandHandler
 				StringTokenizer st = new StringTokenizer(command, " ");
 				
 				st.nextToken();
-				String playername = st.nextToken();
-				int SkillId = Integer.parseInt(st.nextToken());
+				int objectId = Integer.parseInt(st.nextToken());
+				int skillId = Integer.parseInt(st.nextToken());
 				
-				removeBuff(activeChar, playername, SkillId);
+				removeBuff(activeChar, objectId, skillId);
 				return true;
 			}
 			catch (Exception e)
 			{
 				activeChar.sendMessage("Failed removing effect: " + e.getMessage());
-				activeChar.sendMessage("Usage: //stopbuff <playername> [skillId]");
+				activeChar.sendMessage("Usage: //stopbuff <objectId> <skillId>");
 				return false;
 			}
 		}
 		else if (command.startsWith("admin_stopallbuffs"))
 		{
-			StringTokenizer st = new StringTokenizer(command, " ");
-			st.nextToken();
-			String playername = st.nextToken();
-			if (playername != null)
+			try
 			{
-				removeAllBuffs(activeChar, playername);
+				StringTokenizer st = new StringTokenizer(command, " ");
+				st.nextToken();
+				int objectId = Integer.parseInt(st.nextToken());
+				removeAllBuffs(activeChar, objectId);
 				return true;
 			}
-			else
+			catch (Exception e) {
+				activeChar.sendMessage("Failed removing all effects: " + e.getMessage());
+				activeChar.sendMessage("Usage: //stopallbuffs <objectId>");
 				return false;
-			
+			}
 		}
 		else if (command.startsWith("admin_areacancel"))
 		{
@@ -133,96 +142,123 @@ public class AdminBuffs implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	public void showBuffs(L2PcInstance player, L2PcInstance activeChar)
+	public void showBuffs(L2PcInstance activeChar, L2Character target, int page)
 	{
-		final L2Effect[] effects = player.getAllEffects();
-		final StringBuilder html = StringUtil.startAppend(500 + effects.length * 200,
-				"<html><center><font color=\"LEVEL\">Effects of ",
-				player.getName(),
-				"</font><center><br>" +
-				"<table>" +
-				"<tr><td width=200>Skill</td><td width=70>Action</td></tr>"
-		);
+		final L2Effect[] effects = target.getAllEffects();
 		
-		for (L2Effect e : effects) {
-			if (e != null) {
-				StringUtil.append(html,
-						"<tr><td>",
-						e.getSkill().getName(),
-						"</td><td><button value=\"Remove\" action=\"bypass -h admin_stopbuff ",
-						player.getName(),
-						" ",
-						String.valueOf(e.getSkill().getId()),
-						"\" width=60 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>"
-				);
+		if (page > effects.length / PAGE_LIMIT + 1 || page < 1)
+			return;
+		
+		int max = effects.length / PAGE_LIMIT;
+		if (effects.length > PAGE_LIMIT * max)
+			max++;
+		
+		final StringBuilder html = StringUtil.startAppend(500 + effects.length * 200, 
+				"<html><table width=\"100%\" bgcolor=666666><tr><td width=40><button value=\"Main\" action=\"bypass -h admin_admin\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=180><center><font color=\"LEVEL\">Effects of ", 
+				target.getName(),
+				"</font></td><td width=40><button value=\"Back\" action=\"bypass -h admin_admin3\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table><br><table width=\"100%\"><tr><td width=200>Skill</td><td width=30>Rem. Time</td><td width=70>Action</td></tr>");
+		
+		int start = ((page - 1) * PAGE_LIMIT);
+		int end = Math.min(((page - 1) * PAGE_LIMIT) + PAGE_LIMIT, effects.length);
+		
+		for (int i = start; i < end; i++)
+		{
+			L2Effect e = effects[i];
+			if (e != null)
+			{
+				StringUtil.append(html, 
+						"<tr><td>", 
+						e.getSkill().getName(), 
+						"</td><td>", 
+						e.getSkill().isToggle() ? "toggle" : e.getPeriod() - e.getTime() + "s",
+						"</td><td><button value=\"Remove\" action=\"bypass -h admin_stopbuff ", 
+						Integer.toString(target.getObjectId()), 
+						" ", 
+						String.valueOf(e.getSkill().getId()), 
+						"\" width=60 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
 			}
 		}
-
-		StringUtil.append(html,
-				"</table><br>" +
-				"<button value=\"Remove All\" action=\"bypass -h admin_stopallbuffs ",
-				player.getName(),
-				"\" width=60 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">" +
-				"</html>"
-		);
+		
+		html.append("</table><table width=300 bgcolor=666666><tr>");
+		for (int x = 0; x < max; x++)
+		{
+			int pagenr = x + 1;
+			if (page == pagenr)
+			{
+				html.append("<td>Page ");
+				html.append(pagenr);
+				html.append("</td>");
+			}
+			else
+			{
+				html.append("<td><a action=\"bypass -h admin_getbuffs ");
+				html.append(target.getName());
+				html.append(" ");
+				html.append(x+1);
+				html.append("\"> Page ");
+				html.append(pagenr);
+				html.append(" </a></td>");
+			}
+		}
+		
+		html.append("</tr></table>");
+		
+		StringUtil.append(html, "<br><center><button value=\"Remove All\" action=\"bypass -h admin_stopallbuffs ", 
+				Integer.toString(target.getObjectId()),
+				"\" width=75 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></html>");
 		
 		NpcHtmlMessage ms = new NpcHtmlMessage(1);
 		ms.setHtml(html.toString());
-		
 		activeChar.sendPacket(ms);
 		
-		GMAudit.auditGMAction(activeChar.getName(), "get_buffs", player.getName(), "");
+		GMAudit.auditGMAction(activeChar.getName(), "getbuffs", target.getName() + " (" + Integer.toString(target.getObjectId()) + ")", "");
 	}
 	
-	private void removeBuff(L2PcInstance remover, String playername, int SkillId)
+	private void removeBuff(L2PcInstance activeChar, int objId, int skillId)
 	{
-		L2PcInstance player = null;
+		L2Character target = null;
 		try
 		{
-			player = L2World.getInstance().getPlayer(playername);
+			target = (L2Character) L2World.getInstance().findObject(objId);
 		}
 		catch (Exception e)
 		{
 		}
 		
-		if ((player != null) && (SkillId > 0))
+		if ((target != null) && (skillId > 0))
 		{
-			L2Effect[] effects = player.getAllEffects();
+			L2Effect[] effects = target.getAllEffects();
 			
 			for (L2Effect e : effects)
 			{
-				if ((e != null) && (e.getSkill().getId() == SkillId))
+				if ((e != null) && (e.getSkill().getId() == skillId))
 				{
 					e.exit();
-					remover.sendMessage("Removed " + e.getSkill().getName() + " level " + e.getSkill().getLevel() + " from " + playername);
+					activeChar.sendMessage("Removed " + e.getSkill().getName() + " level " + e.getSkill().getLevel() + " from " + target.getName() + " (" + objId + ")");
 				}
 			}
-			showBuffs(player, remover);
-			GMAudit.auditGMAction(remover.getName(), "stopbuffs", playername, "");
+			showBuffs(activeChar, target, 1);
+			GMAudit.auditGMAction(activeChar.getName(), "stopbuff", target.getName() + " (" + objId + ")", Integer.toString(skillId));
 		}
 	}
 	
-	private void removeAllBuffs(L2PcInstance remover, String playername)
+	private void removeAllBuffs(L2PcInstance activeChar, int objId)
 	{
-		L2PcInstance player = null;
+		L2Character target = null;
 		try
 		{
-			player = L2World.getInstance().getPlayer(playername);
+			target = (L2Character) L2World.getInstance().findObject(objId);
 		}
 		catch (Exception e)
 		{
 		}
 		
-		if (player != null)
+		if (target != null)
 		{
-			player.stopAllEffects();
-			remover.sendMessage("Removed all effects from " + playername);
-			GMAudit.auditGMAction(remover.getName(), "stopallbuffs", playername, "");
-			showBuffs(player, remover);
-		}
-		else
-		{
-			remover.sendMessage("The player " + playername + " is not online");
+			target.stopAllEffects();
+			activeChar.sendMessage("Removed all effects from " + target.getName() + " (" + objId + ")");
+			GMAudit.auditGMAction(activeChar.getName(), "stopallbuffs", target.getName() + " (" + objId + ")", "");
+			showBuffs(activeChar, target, 1);
 		}
 	}
 	

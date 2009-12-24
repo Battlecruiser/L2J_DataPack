@@ -1,8 +1,8 @@
 package transformations;
 
-import net.sf.l2j.gameserver.datatables.SkillTable;
-import net.sf.l2j.gameserver.instancemanager.TransformationManager;
-import net.sf.l2j.gameserver.model.L2Transformation;
+import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.instancemanager.TransformationManager;
+import com.l2jserver.gameserver.model.L2Transformation;
 
 /**
  * TODO: Buffs disappear once you get transformed, but reappear after the transformed state wears off.
@@ -36,7 +36,7 @@ public class ScrollRed extends L2Transformation
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(5853, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
-		// Transfrom Dispel
+		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
 		getPlayer().setTransformAllowedSkills(new int[]{5853,5491,619});
@@ -53,7 +53,7 @@ public class ScrollRed extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5853, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false);
-		// Transfrom Dispel
+		// Transform Dispel
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
 		getPlayer().setTransformAllowedSkills(new int[]{});

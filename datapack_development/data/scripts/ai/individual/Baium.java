@@ -14,36 +14,38 @@
  */
 package ai.individual;
 
-import static net.sf.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_FOLLOW;
-import static net.sf.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
+import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_FOLLOW;
+import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 
 import java.util.Collection;
+
+import com.l2jserver.Config;
+import com.l2jserver.gameserver.GeoData;
+import com.l2jserver.gameserver.ThreadPoolManager;
+import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.instancemanager.GrandBossManager;
+import com.l2jserver.gameserver.model.L2Effect;
+import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.L2Skill;
+import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.L2Summon;
+import com.l2jserver.gameserver.model.actor.instance.L2DecoyInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.quest.QuestTimer;
+import com.l2jserver.gameserver.model.zone.type.L2BossZone;
+import com.l2jserver.gameserver.network.serverpackets.Earthquake;
+import com.l2jserver.gameserver.network.serverpackets.MoveToPawn;
+import com.l2jserver.gameserver.network.serverpackets.PlaySound;
+import com.l2jserver.gameserver.network.serverpackets.SocialAction;
+import com.l2jserver.gameserver.templates.StatsSet;
+import com.l2jserver.gameserver.util.Util;
+import com.l2jserver.util.Rnd;
 
 import javolution.util.FastList;
 import ai.group_template.L2AttackableAIScript;
 
-import net.sf.l2j.gameserver.GeoData;
-import net.sf.l2j.gameserver.ThreadPoolManager;
-import net.sf.l2j.gameserver.datatables.SkillTable;
-import net.sf.l2j.gameserver.instancemanager.GrandBossManager;
-import net.sf.l2j.gameserver.model.L2Effect;
-import net.sf.l2j.gameserver.model.L2Object;
-import net.sf.l2j.gameserver.model.L2Skill;
-import net.sf.l2j.gameserver.model.actor.L2Character;
-import net.sf.l2j.gameserver.model.actor.L2Npc;
-import net.sf.l2j.gameserver.model.actor.L2Summon;
-import net.sf.l2j.gameserver.model.actor.instance.L2DecoyInstance;
-import net.sf.l2j.gameserver.model.actor.instance.L2GrandBossInstance;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.model.quest.QuestTimer;
-import net.sf.l2j.gameserver.model.zone.type.L2BossZone;
-import net.sf.l2j.gameserver.network.serverpackets.Earthquake;
-import net.sf.l2j.gameserver.network.serverpackets.MoveToPawn;
-import net.sf.l2j.gameserver.network.serverpackets.PlaySound;
-import net.sf.l2j.gameserver.network.serverpackets.SocialAction;
-import net.sf.l2j.gameserver.templates.StatsSet;
-import net.sf.l2j.gameserver.util.Util;
-import net.sf.l2j.util.Rnd;
 
 /**
  * Baium AI
@@ -220,7 +222,7 @@ public class Baium extends L2AttackableAIScript
                     _Zone.oustAllPlayers();
                     cancelQuestTimer("baium_despawn", npc, null);
                 }
-                else if ((_LastAttackVsBaiumTime + 300000 < System.currentTimeMillis()) && npc.getCurrentHp() < ( ( npc.getMaxHp() * 3 ) / 4 ))
+                else if ((_LastAttackVsBaiumTime + 300000 < System.currentTimeMillis()) && npc.getCurrentHp() < ( ( npc.getMaxHp() * 3 ) / 4.0 ))
                 {
                 	npc.setIsCastingNow(false); //just in case
                 	npc.setTarget(npc);
@@ -357,7 +359,7 @@ public class Baium extends L2AttackableAIScript
         // spawn the "Teleportation Cubic" for 15 minutes (to allow players to exit the lair)
         addSpawn(29055,115203,16620,10078,0,false,900000); ////should we teleport everyone out if the cubic despawns??
         // "lock" baium for 5 days and 1 to 8 hours [i.e. 432,000,000 +  1*3,600,000 + random-less-than(8*3,600,000) millisecs]
-        long respawnTime = ((121 + Rnd.get(8)) * 3600000);
+        long respawnTime = (long)Config.Interval_Of_Baium_Spawn + Rnd.get(Config.Random_Of_Baium_Spawn);
         GrandBossManager.getInstance().setBossStatus(LIVE_BAIUM,DEAD);
         startQuestTimer("baium_unlock", respawnTime, null, null);
         // also save the respawn time so that the info is maintained past reboots
@@ -450,7 +452,7 @@ public class Baium extends L2AttackableAIScript
 	public int getRandomSkill(L2Npc npc)
 	{
 		int skill;
-		if( npc.getCurrentHp() > ( ( npc.getMaxHp() * 3 ) / 4 ) )
+		if( npc.getCurrentHp() > ( ( npc.getMaxHp() * 3 ) / 4.0 ) )
 		{
 			if( Rnd.get(100) < 10 )
 				skill = 4128;
@@ -459,7 +461,7 @@ public class Baium extends L2AttackableAIScript
 			else
 				skill = 4127;
 		}
-		else if( npc.getCurrentHp() > ( ( npc.getMaxHp() * 2 ) / 4) )
+		else if( npc.getCurrentHp() > ( ( npc.getMaxHp() * 2 ) / 4.0) )
 		{
 			if( Rnd.get(100) < 10 )
 				skill = 4131;
@@ -470,7 +472,7 @@ public class Baium extends L2AttackableAIScript
 			else
 				skill = 4127;
 		}
-		else if( npc.getCurrentHp() > ( ( npc.getMaxHp() * 1 ) / 4 ) )
+		else if( npc.getCurrentHp() > ( ( npc.getMaxHp() * 1 ) / 4.0 ) )
 		{
 			if( Rnd.get(100) < 10 )
 				skill = 4130;

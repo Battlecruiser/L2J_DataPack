@@ -14,14 +14,14 @@
  */
 package handlers.chathandlers;
 
-import net.sf.l2j.Config;
-import net.sf.l2j.gameserver.handler.IChatHandler;
-import net.sf.l2j.gameserver.model.BlockList;
-import net.sf.l2j.gameserver.model.L2World;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.network.SystemMessageId;
-import net.sf.l2j.gameserver.network.serverpackets.CreatureSay;
-import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.Config;
+import com.l2jserver.gameserver.handler.IChatHandler;
+import com.l2jserver.gameserver.model.BlockList;
+import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * Tell chat handler.
@@ -37,7 +37,7 @@ public class ChatTell implements IChatHandler
 	
 	/**
 	 * Handle chat type 'tell'
-	 * @see net.sf.l2j.gameserver.handler.IChatHandler#handleChat(int, net.sf.l2j.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
+	 * @see com.l2jserver.gameserver.handler.IChatHandler#handleChat(int, com.l2jserver.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
 	 */
 	public void handleChat(int type, L2PcInstance activeChar, String target, String text)
 	{
@@ -47,7 +47,7 @@ public class ChatTell implements IChatHandler
 			return;
 		}
 		
-		if (Config.JAIL_DISABLE_CHAT && activeChar.isInJail())
+		if (Config.JAIL_DISABLE_CHAT && activeChar.isInJail() && !activeChar.isGM())
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessageId.CHATTING_PROHIBITED));
 			return;
@@ -64,7 +64,7 @@ public class ChatTell implements IChatHandler
 		
 		if (receiver != null && !BlockList.isBlocked(receiver, activeChar))
 		{
-			if (Config.JAIL_DISABLE_CHAT && receiver.isInJail())
+			if (Config.JAIL_DISABLE_CHAT && receiver.isInJail() && !activeChar.isGM())
 			{
 				activeChar.sendMessage("Player is in jail.");
 				return;
@@ -93,7 +93,7 @@ public class ChatTell implements IChatHandler
 	
 	/**
 	 * Returns the chat types registered to this handler
-	 * @see net.sf.l2j.gameserver.handler.IChatHandler#getChatTypeList()
+	 * @see com.l2jserver.gameserver.handler.IChatHandler#getChatTypeList()
 	 */
 	public int[] getChatTypeList()
 	{

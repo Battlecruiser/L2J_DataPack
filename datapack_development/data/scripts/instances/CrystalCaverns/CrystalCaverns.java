@@ -15,47 +15,48 @@ package instances.CrystalCaverns;
 import java.util.List;
 import java.util.Map;
 
+import com.l2jserver.Config;
+import com.l2jserver.gameserver.GeoData;
+import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.instancemanager.InstanceManager;
+import com.l2jserver.gameserver.instancemanager.InstanceManager.InstanceWorld;
+import com.l2jserver.gameserver.model.L2CharPosition;
+import com.l2jserver.gameserver.model.L2ItemInstance;
+import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.L2Party;
+import com.l2jserver.gameserver.model.L2Skill;
+import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.Location;
+import com.l2jserver.gameserver.model.L2Skill.SkillTargetType;
+import com.l2jserver.gameserver.model.actor.L2Attackable;
+import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.L2Summon;
+import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.entity.Instance;
+import com.l2jserver.gameserver.model.quest.Quest;
+import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.model.quest.State;
+import com.l2jserver.gameserver.model.zone.L2ZoneType;
+import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
+import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
+import com.l2jserver.gameserver.network.serverpackets.FlyToLocation;
+import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
+import com.l2jserver.gameserver.network.serverpackets.PlaySound;
+import com.l2jserver.gameserver.network.serverpackets.SocialAction;
+import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
+import com.l2jserver.gameserver.network.serverpackets.FlyToLocation.FlyType;
+import com.l2jserver.gameserver.util.Util;
+import com.l2jserver.util.Rnd;
+
 import javolution.util.FastList;
 import javolution.util.FastMap;
-import net.sf.l2j.Config;
-import net.sf.l2j.gameserver.GeoData;
-import net.sf.l2j.gameserver.ai.CtrlIntention;
-import net.sf.l2j.gameserver.datatables.SkillTable;
-import net.sf.l2j.gameserver.instancemanager.InstanceManager;
-import net.sf.l2j.gameserver.instancemanager.InstanceManager.InstanceWorld;
-import net.sf.l2j.gameserver.model.L2CharPosition;
-import net.sf.l2j.gameserver.model.L2ItemInstance;
-import net.sf.l2j.gameserver.model.L2Object;
-import net.sf.l2j.gameserver.model.L2Party;
-import net.sf.l2j.gameserver.model.L2Skill;
-import net.sf.l2j.gameserver.model.L2World;
-import net.sf.l2j.gameserver.model.Location;
-import net.sf.l2j.gameserver.model.L2Skill.SkillTargetType;
-import net.sf.l2j.gameserver.model.actor.L2Attackable;
-import net.sf.l2j.gameserver.model.actor.L2Character;
-import net.sf.l2j.gameserver.model.actor.L2Npc;
-import net.sf.l2j.gameserver.model.actor.L2Summon;
-import net.sf.l2j.gameserver.model.actor.instance.L2DoorInstance;
-import net.sf.l2j.gameserver.model.actor.instance.L2MonsterInstance;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.model.entity.Instance;
-import net.sf.l2j.gameserver.model.quest.Quest;
-import net.sf.l2j.gameserver.model.quest.QuestState;
-import net.sf.l2j.gameserver.model.quest.State;
-import net.sf.l2j.gameserver.model.zone.L2ZoneType;
-import net.sf.l2j.gameserver.network.SystemMessageId;
-import net.sf.l2j.gameserver.network.serverpackets.ActionFailed;
-import net.sf.l2j.gameserver.network.serverpackets.CreatureSay;
-import net.sf.l2j.gameserver.network.serverpackets.FlyToLocation;
-import net.sf.l2j.gameserver.network.serverpackets.MagicSkillUse;
-import net.sf.l2j.gameserver.network.serverpackets.PlaySound;
-import net.sf.l2j.gameserver.network.serverpackets.SocialAction;
-import net.sf.l2j.gameserver.network.serverpackets.SpecialCamera;
-import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
-import net.sf.l2j.gameserver.network.serverpackets.ValidateLocation;
-import net.sf.l2j.gameserver.network.serverpackets.FlyToLocation.FlyType;
-import net.sf.l2j.gameserver.util.Util;
-import net.sf.l2j.util.Rnd;
 
 public class CrystalCaverns extends Quest
 {
@@ -508,7 +509,6 @@ public class CrystalCaverns extends Quest
 
 	protected int enterInstance(L2PcInstance player, String template, teleCoord teleto)
 	{
-		int instanceId = 0;
 		//check for existing instances for this player
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		//existing instance
@@ -521,7 +521,7 @@ public class CrystalCaverns extends Quest
 			}
 			teleto.instanceId = world.instanceId;
 			teleportplayer(player,teleto);
-			return instanceId;
+			return world.instanceId;
 		}
 		//New instance
 		else
@@ -529,7 +529,7 @@ public class CrystalCaverns extends Quest
 			if (!checkConditions(player))
 				return 0;
 			L2Party party = player.getParty();
-			instanceId = InstanceManager.getInstance().createDynamicInstance(template);
+			int instanceId = InstanceManager.getInstance().createDynamicInstance(template);
 			world = new CCWorld(System.currentTimeMillis() + 5400000);
 			world.instanceId = instanceId;
 			world.templateId = INSTANCEID;
@@ -1291,6 +1291,8 @@ public class CrystalCaverns extends Quest
 
 	private void giveRewards(L2PcInstance player, int instanceId, int bossCry, boolean isBaylor)
 	{
+		final int num = Math.max((int)Config.RATE_DROP_ITEMS_BY_RAID, 1);
+
 		L2Party party = player.getParty();
 		if (party != null)
 		{
@@ -1306,9 +1308,9 @@ public class CrystalCaverns extends Quest
 						st.giveItems(bossCry, 1);
 					}
 					if (Rnd.get(10) < 5)
-						st.giveItems(WHITE_SEED, 1);
+						st.giveItems(WHITE_SEED, num);
 					else
-						st.giveItems(BLACK_SEED, 1);
+						st.giveItems(BLACK_SEED, num);
 				}
 		}
 		else if (player.getInstanceId() == instanceId)
@@ -1322,9 +1324,9 @@ public class CrystalCaverns extends Quest
 				st.giveItems(bossCry, 1);
 			}
 			if (Rnd.get(10) < 5)
-				st.giveItems(WHITE_SEED, 1);
+				st.giveItems(WHITE_SEED, num);
 			else
-				st.giveItems(BLACK_SEED, 1);
+				st.giveItems(BLACK_SEED, num);
 		}
 
 	}

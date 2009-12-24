@@ -15,16 +15,17 @@
 package ai.individual;
 
 
+import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.model.actor.L2Attackable;
+import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+
 import javolution.util.FastMap;
 import javolution.util.FastList;
 import javolution.util.FastSet;
 import ai.group_template.L2AttackableAIScript;
-import net.sf.l2j.gameserver.ai.CtrlIntention;
-import net.sf.l2j.gameserver.datatables.NpcTable;
-import net.sf.l2j.gameserver.model.actor.L2Attackable;
-import net.sf.l2j.gameserver.model.actor.L2Character;
-import net.sf.l2j.gameserver.model.actor.L2Npc;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 
 public class DarkWaterDragon extends L2AttackableAIScript
 {
@@ -156,7 +157,7 @@ public class DarkWaterDragon extends L2AttackableAIScript
                     }
                     _Shades.clear();
                 }
-                if (npc.getCurrentHp() < (npc.getMaxHp() / 2) && !(secondSpawn.contains(npcObjId)))
+                if (npc.getCurrentHp() < (npc.getMaxHp() / 2.0) && !(secondSpawn.contains(npcObjId)))
                 {
                     //Spawn second 5 shades on half hp of on Dark Water Dragon
                     int x = npc.getX();
