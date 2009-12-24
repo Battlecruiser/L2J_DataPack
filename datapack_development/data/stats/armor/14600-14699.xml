@@ -1,204 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-<item id="14600" name="Schuttgart Dark Protection Ring">
-  <for>
-    <add order="0x10" stat="mDef" val="42"/>
-    <enchant order="0x0C" stat="mDef" val="0"/>
-  </for>
-</item>
-<item id="14601" name="Ancient Cloak - Kamael exclusive - Kamael Use">
-  <cond msgId="2453">
-    <and>
-      <player race="Kamael"/>
-      <or>
-        <player active_skill_id="3413"/> <!-- Dynasty Leather Armor -->
-        <player active_skill_id="3415"/> <!-- Dynasty Leather Armor - Weapon Master -->
-        <player active_skill_id="3353"/> <!-- Dynasty Leather Armor - Bow Master -->
-        <player active_skill_id="3641"/> <!-- Dynasty Jewel Leather Mail Bow Master -->
-        <player active_skill_id="3643"/> <!-- Dynasty Jeweled Leather Armor Weapon Master -->
-        <player active_skill_id="8207"/> <!-- Dynasty Leather Armor - PvP -->
-        <player active_skill_id="8209"/> <!-- Dynasty Leather Armor - PvP Bow Master -->
-        <player active_skill_id="8216"/> <!-- Dynasty Leather Armor - PvP Weapon Master -->
-        <player active_skill_id="8224"/> <!-- Dynasty Jewel Leather Armor - PvP Bow Master -->
-        <player active_skill_id="8226"/> <!-- Dynasty Jewel Leather Armor - PvP Weapon Master -->
-      </or>
-    </and>
-  </cond>
-  <for>
-    <add order="0x10" stat="pDef" val="20"/>
-  </for>
-</item>
-<item id="14602" name="Ancient Cloak">
-  <cond msgId="2453">
-    <and>
-      <player race="Kamael"/>
-      <or>
-        <player active_skill_id="8286"/> <!-- Vesper Noble Leather Breastplate -->
-        <player active_skill_id="8304"/> <!-- Vesper Noble Leather Breastplate {PvP} -->
-      </or>
-    </and>
-  </cond>
-  <for>
-    <add order="0x10" stat="pDef" val="20"/>
-  </for>
-</item>
-<item id="14604" name="Red Talisman - Territory Guardian">
-  <for>
-  </for>
-</item>
-<item id="14605" name="Red Talisman - Territory Guard">
-  <for>
-  </for>
-</item>
-<item id="14608" name="Ancient Cloak - Light Armor exclusive">
-  <cond msgId="2453">
-    <and>
-      <not>
-        <player race="Kamael"/>
-      </not>
-      <or>
-        <player active_skill_id="3352"/> <!-- Dynasty Leather Armor - Dagger Master -->
-        <player active_skill_id="3353"/> <!-- Dynasty Leather Armor - Bow Master -->
-        <player active_skill_id="3640"/> <!-- Dynasty Jewel Leather Mail Dagger Master -->
-        <player active_skill_id="3641"/> <!-- Dynasty Jewel Leather Mail Bow Master -->
-        <player active_skill_id="8208"/> <!-- Dynasty Leather Armor - PvP Dagger Master -->
-        <player active_skill_id="8209"/> <!-- Dynasty Leather Armor - PvP Bow Master -->
-        <player active_skill_id="8223"/> <!-- Dynasty Jewel Leather Armor - PvP Dagger Master -->
-        <player active_skill_id="8224"/> <!-- Dynasty Jewel Leather Armor - PvP Bow Master -->
-      </or>
-    </and>
-  </cond>
-  <for>
-    <add order="0x10" stat="pDef" val="20"/>
-  </for>
-</item>
-<item id="14609" name="Ancient Cloak">
-  <cond msgId="2453">
-    <or>
-      <player active_skill_id="3348"/> <!-- Dynasty Breast Plate - Shield Master -->
-      <player active_skill_id="3349"/> <!-- Dynasty Breast Plate - Weapon Master -->
-      <player active_skill_id="3350"/> <!-- Dynasty Breast Plate - Force Master-->
-      <player active_skill_id="3351"/> <!-- Dynasty Breast Plate - Bard -->
-      <player active_skill_id="3636"/> <!-- Dynasty Platinum Plate - Shield Master -->
-      <player active_skill_id="3637"/> <!-- Dynasty Platinum Plate - Weapon Master -->
-      <player active_skill_id="3639"/> <!-- Dynasty Platinum Plate - Force Master -->
-      <player active_skill_id="3638"/> <!-- Dynasty Platinum Plate - Bard -->
-      <player active_skill_id="8203"/> <!-- Dynasty Breastplate - PvP Shield Master -->
-      <player active_skill_id="8204"/> <!-- Dynasty Breastplate - PvP Weapon Master -->
-      <player active_skill_id="8205"/> <!-- Dynasty Breastplate - PvP Force Master -->
-      <player active_skill_id="8206"/> <!-- Dynasty Breastplate - PvP Bard -->
-      <player active_skill_id="8219"/> <!-- Dynasty Platinum Breastplate - PvP Shield Master -->
-      <player active_skill_id="8220"/> <!-- Dynasty Platinum Breastplate - PvP Weapon Master -->
-      <player active_skill_id="8222"/> <!-- Dynasty Platinum Breastplate - PvP Force Master -->
-      <player active_skill_id="8221"/> <!-- Dynasty Platinum Breastplate - PvP Bard -->
-    </or>
-  </cond>
-  <for>
-    <add order="0x10" stat="pDef" val="20"/>
-  </for>
-</item>
-<item id="14610" name="Ancient Cloak - Robe exclusive">
-  <cond msgId="2453">
-    <or>
-      <player active_skill_id="3354"/> <!-- Dynasty Tunic - Healer -->
-      <player active_skill_id="3355"/> <!-- Dynasty Tunic - Enchanter -->
-      <player active_skill_id="3356"/> <!-- Dynasty Tunic - Summoner -->
-      <player active_skill_id="3357"/> <!-- Dynasty Tunic - Human Wizard -->
-      <player active_skill_id="3645"/> <!-- Dynasty Silver Satin Tunic Healer -->
-      <player active_skill_id="3646"/> <!-- Dynasty Silver Satin Tunic Enchanter -->
-      <player active_skill_id="3647"/> <!-- Dynasty Silver Satin Tunic Summoner -->
-      <player active_skill_id="3648"/> <!-- Dynasty Silver Satin Tunic Human Wizard -->
-      <player active_skill_id="8211"/> <!-- Dynasty Tunic - PvP Healer -->
-      <player active_skill_id="8212"/> <!-- Dynasty Tunic - PvP Enchanter -->
-      <player active_skill_id="8213"/> <!-- Dynasty Tunic - PvP Summoner -->
-      <player active_skill_id="8214"/> <!-- Dynasty Tunic - PvP Wizard -->
-      <player active_skill_id="8229"/> <!-- Dynasty Silver Satin Tunic - PvP Healer -->
-      <player active_skill_id="8230"/> <!-- Dynasty Silver Satin Tunic - PvP Enchanter -->
-      <player active_skill_id="8231"/> <!-- Dynasty Silver Satin Tunic - PvP Summoner -->
-      <player active_skill_id="8232"/> <!-- Dynasty Silver Satin Tunic - PvP Wizard -->
-    </or>
-  </cond>
-  <for>
-    <add order="0x10" stat="pDef" val="20"/>
-  </for>
-</item>
-<item id="14611" name="Rudolph's Nose">
-  <for>
-  </for>
-</item>
-<item id="14613" name="Rock-Paper-Scissors Santa Hat">
-  <for>
-  </for>
-</item>
-<item id="14617" name="Agathion Seal Bracelet - Rudolph">
-  <for>
-  </for>
-</item>
-<item id="14664" name="Gludio Protection Earring">
-  <for>
-    <add order="0x10" stat="mDef" val="63"/>
-    <add order="0x40" stat="waterRes" val="8"/>
-    <enchant order="0x0C" stat="mDef" val="0"/>
-  </for>
-</item>
-<item id="14665" name="Dion Protection Earring">
-  <for>
-    <add order="0x10" stat="mDef" val="63"/>
-    <add order="0x40" stat="holyRes" val="8"/>
-    <enchant order="0x0C" stat="mDef" val="0"/>
-  </for>
-</item>
-<item id="14666" name="Giran Protection Earring">
-  <for>
-    <add order="0x10" stat="mDef" val="63"/>
-    <add order="0x40" stat="windRes" val="8"/>
-    <enchant order="0x0C" stat="mDef" val="0"/>
-  </for>
-</item>
-<item id="14667" name="Oren Protection Earring">
-  <for>
-    <add order="0x10" stat="mDef" val="63"/>
-    <add order="0x40" stat="darkRes" val="8"/>
-    <enchant order="0x0C" stat="mDef" val="0"/>
-  </for>
-</item>
-<item id="14668" name="Aden Protection Earring">
-  <for>
-    <add order="0x10" stat="mDef" val="63"/>
-    <add order="0x40" stat="earthRes" val="8"/>
-    <enchant order="0x0C" stat="mDef" val="0"/>
-  </for>
-</item>
-<item id="14669" name="Innadril Protection Earring">
-  <for>
-    <add order="0x10" stat="mDef" val="63"/>
-    <add order="0x40" stat="waterRes" val="8"/>
-    <enchant order="0x0C" stat="mDef" val="0"/>
-  </for>
-</item>
-<item id="14670" name="Goddard Protection Earring">
-  <for>
-    <add order="0x10" stat="mDef" val="63"/>
-    <add order="0x40" stat="fireRes" val="8"/>
-    <enchant order="0x0C" stat="mDef" val="0"/>
-  </for>
-</item>
-<item id="14671" name="Rune Protection Earring">
-  <for>
-    <add order="0x10" stat="mDef" val="63"/>
-    <add order="0x40" stat="fireRes" val="8"/>
-    <enchant order="0x0C" stat="mDef" val="0"/>
-  </for>
-</item>
-<item id="14672" name="Schuttgart Protection Earring">
-  <for>
-    <add order="0x10" stat="mDef" val="63"/>
-    <add order="0x40" stat="windRes" val="8"/>
-    <enchant order="0x0C" stat="mDef" val="0"/>
-  </for>
-</item>
-<item id="14675" name="Agathion Seal Bracelet - Saerom">
-  <for>
-  </for>
-</item>
+	<item id="14600" name="Schuttgart Dark Protection Ring">
+		<for>
+			<add order="0x10" stat="mDef" val="42" />
+			<enchant order="0x0C" stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="14601" name="Ancient Cloak - Kamael exclusive - Kamael Use">
+		<cond msgId="2453">
+			<player race="Kamael" /> <!-- Kamael exclusive cloak -->
+			<player cloakStatus="1" />
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="20" />
+		</for>
+	</item>
+	<item id="14602" name="Ancient Cloak">
+		<cond msgId="2453">
+			<player race="Kamael" /> <!-- Kamael exclusive cloak -->
+			<player cloakStatus="1" />
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="20" />
+		</for>
+	</item>
+	<item id="14604" name="Red Talisman - Territory Guardian">
+		<for>
+		</for>
+	</item>
+	<item id="14605" name="Red Talisman - Territory Guard">
+		<for>
+		</for>
+	</item>
+	<item id="14608" name="Ancient Cloak - Light Armor exclusive">
+		<cond msgId="2453">
+			<and>
+				<player class_id_restriction="93, 101, 108, 92, 102, 109" /> <!-- Dagger Master and Bow Master -->
+				<player cloakStatus="1" />
+				<not>
+					<player race="Kamael" /> <!-- excluding Kamaels -->
+				</not>
+			</and>
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="20" />
+		</for>
+	</item>
+	<item id="14609" name="Ancient Cloak">
+		<cond msgId="2453">
+			<player cloakStatus="1" />
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="20" />
+		</for>
+	</item>
+	<item id="14610" name="Ancient Cloak - Robe exclusive">
+		<cond msgId="2453">
+			<and>
+				<player class_id_restriction="97, 105, 112, 98, 115, 116, 96, 104, 111, 94, 95, 103, 110" /> <!-- Healer, Enchanter, Summoner and Wizard -->
+				<player cloakStatus="1" />
+				<not>
+					<player race="Kamael" /> <!-- excluding Kamaels -->
+				</not>
+			</and>
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="20" />
+		</for>
+	</item>
+	<item id="14611" name="Rudolph's Nose">
+		<for>
+		</for>
+	</item>
+	<item id="14613" name="Rock-Paper-Scissors Santa Hat">
+		<for>
+		</for>
+	</item>
+	<item id="14617" name="Agathion Seal Bracelet - Rudolph">
+		<for>
+		</for>
+	</item>
+	<item id="14664" name="Gludio Protection Earring">
+		<for>
+			<add order="0x10" stat="mDef" val="63" />
+			<add order="0x40" stat="waterRes" val="8" />
+			<enchant order="0x0C" stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="14665" name="Dion Protection Earring">
+		<for>
+			<add order="0x10" stat="mDef" val="63" />
+			<add order="0x40" stat="holyRes" val="8" />
+			<enchant order="0x0C" stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="14666" name="Giran Protection Earring">
+		<for>
+			<add order="0x10" stat="mDef" val="63" />
+			<add order="0x40" stat="windRes" val="8" />
+			<enchant order="0x0C" stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="14667" name="Oren Protection Earring">
+		<for>
+			<add order="0x10" stat="mDef" val="63" />
+			<add order="0x40" stat="darkRes" val="8" />
+			<enchant order="0x0C" stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="14668" name="Aden Protection Earring">
+		<for>
+			<add order="0x10" stat="mDef" val="63" />
+			<add order="0x40" stat="earthRes" val="8" />
+			<enchant order="0x0C" stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="14669" name="Innadril Protection Earring">
+		<for>
+			<add order="0x10" stat="mDef" val="63" />
+			<add order="0x40" stat="waterRes" val="8" />
+			<enchant order="0x0C" stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="14670" name="Goddard Protection Earring">
+		<for>
+			<add order="0x10" stat="mDef" val="63" />
+			<add order="0x40" stat="fireRes" val="8" />
+			<enchant order="0x0C" stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="14671" name="Rune Protection Earring">
+		<for>
+			<add order="0x10" stat="mDef" val="63" />
+			<add order="0x40" stat="fireRes" val="8" />
+			<enchant order="0x0C" stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="14672" name="Schuttgart Protection Earring">
+		<for>
+			<add order="0x10" stat="mDef" val="63" />
+			<add order="0x40" stat="windRes" val="8" />
+			<enchant order="0x0C" stat="mDef" val="0" />
+		</for>
+	</item>
+	<item id="14675" name="Agathion Seal Bracelet - Saerom">
+		<for>
+		</for>
+	</item>
 </list>

@@ -1,60 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-<item id="13000" name="Sealed Helm of Nightmare - Light Armor Use">
-  <for>
-    <add order="0x10" stat="pDef" val="73"/>
-    <enchant order="0x0C" stat="pDef" val="0"/>
-  </for>
-</item>
-<item id="13001" name="Sealed Helm of Nightmare - Robe Use">
-  <for>
-    <add order="0x10" stat="pDef" val="73"/>
-    <enchant order="0x0C" stat="pDef" val="0"/>
-  </for>
-</item>
-<item id="13022" name="Light Purple-Maned Horse Mounting Bracelet - 7 day limited period">
-  <for/>
-</item>
-<item id="13023" name="Agathion of Love - 30-day limited period">
-  <for/>
-</item>
-<item id="13024" name="Sudden Agathion - 30-day limited period">
-  <for/>
-</item>
-<item id="13025" name="Shiny Agathion - 30-day limited period">
-  <for/>
-</item>
-<item id="13026" name="Sobbing Agathion - 30-day limited period">
-  <for/>
-</item>
-<item id="13050" name="Tigress exclusive armor">
-  <for>
-    <add order="0x10" stat="pDef" val="49"/>
-    <add order="0x10" stat="mDef" val="49"/>
-  </for>
-</item>
-<item id="13058" name="Silenos Hair Accessory">
-  <for/>
-</item>
-<item id="13074" name="Shadow Item - Sorcerer Hat">
-  <for/>
-</item>
-<item id="13075" name="Shadow Item - Black Mask">
-  <for/>
-</item>
-<item id="13076" name="Shadow Item - Dragonfly Goggle">
-  <for/>
-</item>
-<item id="13078" name="Arcana Sigil">
-  <cond msgId="1518">
-    <not>
-      <player race="Kamael"/>
-    </not>
-  </cond>
-  <for>
-    <add order="0x10" stat="pDef" val="13"/>
-    <sub order="0x10" stat="rEvas" val="8"/>
-    <enchant order="0x0C" stat="pDef" val="0"/>
-  </for>
-</item>
+	<item id="13000" name="Sealed Helm of Nightmare - Light Armor Use">
+		<for>
+			<add order="0x10" stat="pDef" val="73" />
+			<enchant order="0x0C" stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="13001" name="Sealed Helm of Nightmare - Robe Use">
+		<for>
+			<add order="0x10" stat="pDef" val="73" />
+			<enchant order="0x0C" stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="13022" name="Light Purple-Maned Horse Mounting Bracelet - 7 day limited period">
+		<for />
+	</item>
+	<item id="13023" name="Agathion of Love - 30-day limited period">
+		<for />
+	</item>
+	<item id="13024" name="Sudden Agathion - 30-day limited period">
+		<for />
+	</item>
+	<item id="13025" name="Shiny Agathion - 30-day limited period">
+		<for />
+	</item>
+	<item id="13026" name="Sobbing Agathion - 30-day limited period">
+		<for />
+	</item>
+	<item id="13050" name="Tigress exclusive armor">
+		<for>
+			<add order="0x10" stat="pDef" val="49" />
+			<add order="0x10" stat="mDef" val="49" />
+		</for>
+	</item>
+	<item id="13058" name="Silenos Hair Accessory">
+		<for />
+	</item>
+	<item id="13074" name="Shadow Item - Sorcerer Hat">
+		<for />
+	</item>
+	<item id="13075" name="Shadow Item - Black Mask">
+		<for />
+	</item>
+	<item id="13076" name="Shadow Item - Dragonfly Goggle">
+		<for />
+	</item>
+	<item id="13078" name="Arcana Sigil">
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="13" />
+			<sub order="0x10" stat="rEvas" val="8" />
+			<enchant order="0x0C" stat="pDef" val="0" />
+		</for>
+	</item>
 </list>
