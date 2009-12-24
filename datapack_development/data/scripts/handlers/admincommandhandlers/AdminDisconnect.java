@@ -14,11 +14,9 @@
  */
 package handlers.admincommandhandlers;
 
-import net.sf.l2j.gameserver.communitybbs.Manager.RegionBBSManager;
-import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
-import net.sf.l2j.gameserver.model.L2Object;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.network.serverpackets.LeaveWorld;
+import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  * This class handles following admin commands:
@@ -64,13 +62,7 @@ public class AdminDisconnect implements IAdminCommandHandler
 		{
 			activeChar.sendMessage("Character " + player.getName() + " disconnected from server.");
 			
-			//Logout Character
-			LeaveWorld ql = new LeaveWorld();
-			player.sendPacket(ql);
-			
-			RegionBBSManager.getInstance().changeCommunityBoard();
-			
-			player.closeNetConnection();
+			player.logout();
 		}
 	}
 }

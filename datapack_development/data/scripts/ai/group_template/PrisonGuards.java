@@ -16,18 +16,19 @@ package ai.group_template;
 
 import java.util.Map;
 
+import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.L2Skill;
+import com.l2jserver.gameserver.model.actor.L2Attackable;
+import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.serverpackets.NpcSay;
+import com.l2jserver.util.Rnd;
+
 import javolution.util.FastMap;
 
-import net.sf.l2j.gameserver.ai.CtrlIntention;
-import net.sf.l2j.gameserver.datatables.SkillTable;
-import net.sf.l2j.gameserver.model.L2Object;
-import net.sf.l2j.gameserver.model.L2Skill;
-import net.sf.l2j.gameserver.model.actor.L2Attackable;
-import net.sf.l2j.gameserver.model.actor.L2Character;
-import net.sf.l2j.gameserver.model.actor.L2Npc;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.network.serverpackets.NpcSay;
-import net.sf.l2j.util.Rnd;
 
 public class PrisonGuards extends L2AttackableAIScript
 {
@@ -97,7 +98,7 @@ public class PrisonGuards extends L2AttackableAIScript
 			_guards.remove(npc);
 			_guards.put(newGuard, place);
 		}
-		else if (event == "attackEnd")
+		else if (event.equalsIgnoreCase("attackEnd"))
 		{
 			if (npc.getNpcId() == GUARD2)
 			{

@@ -14,10 +14,10 @@
  */
 package handlers.admincommandhandlers;
 
-import net.sf.l2j.Config;
-import net.sf.l2j.gameserver.GeoData;
-import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.Config;
+import com.l2jserver.gameserver.GeoData;
+import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  *

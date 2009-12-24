@@ -17,13 +17,14 @@ package handlers.admincommandhandlers;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-import net.sf.l2j.Config;
-import net.sf.l2j.gameserver.GameTimeController;
-import net.sf.l2j.gameserver.Shutdown;
-import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
-import net.sf.l2j.gameserver.model.L2World;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jserver.Config;
+import com.l2jserver.gameserver.GameTimeController;
+import com.l2jserver.gameserver.Shutdown;
+import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
+
 
 /**
  * This class handles following admin commands:
@@ -96,7 +97,7 @@ public class AdminShutdown implements IAdminCommandHandler
 		adminReply.replace("%used%", String.valueOf(Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()));
 		adminReply.replace("%xp%", String.valueOf(Config.RATE_XP));
 		adminReply.replace("%sp%", String.valueOf(Config.RATE_SP));
-		adminReply.replace("%adena%", String.valueOf(Config.RATE_DROP_ADENA));
+		adminReply.replace("%adena%", String.valueOf(Config.RATE_DROP_ITEMS_ID.get(57)));
 		adminReply.replace("%drop%", String.valueOf(Config.RATE_DROP_ITEMS));
 		adminReply.replace("%time%", String.valueOf(format.format(cal.getTime())));
 		activeChar.sendPacket(adminReply);

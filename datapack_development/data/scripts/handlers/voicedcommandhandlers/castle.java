@@ -14,11 +14,11 @@
  */
 package handlers.voicedcommandhandlers;
 
-import net.sf.l2j.gameserver.handler.IVoicedCommandHandler;
-import net.sf.l2j.gameserver.instancemanager.CastleManager;
-import net.sf.l2j.gameserver.model.actor.instance.L2DoorInstance;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.model.entity.Castle;
+import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
+import com.l2jserver.gameserver.instancemanager.CastleManager;
+import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.entity.Castle;
 
 /**
  *
@@ -35,11 +35,11 @@ public class castle implements IVoicedCommandHandler
 	
 	/**
 	 * 
-	 * @see net.sf.l2j.gameserver.handler.IVoicedCommandHandler#useVoicedCommand(java.lang.String, net.sf.l2j.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
+	 * @see com.l2jserver.gameserver.handler.IVoicedCommandHandler#useVoicedCommand(java.lang.String, com.l2jserver.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
 	 */
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String target)
+	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
 	{
-		if (command.startsWith("open doors") && target.equals("castle") && (activeChar.isClanLeader()))
+		if (command.startsWith("open doors") && params.equals("castle") && (activeChar.isClanLeader()))
 		{
 			L2DoorInstance door = (L2DoorInstance) activeChar.getTarget();
 			Castle castle = CastleManager.getInstance().getCastleById(activeChar.getClan().getHasCastle());
@@ -51,7 +51,7 @@ public class castle implements IVoicedCommandHandler
 			}
 			
 		}
-		else if (command.startsWith("close doors") && target.equals("castle") && (activeChar.isClanLeader()))
+		else if (command.startsWith("close doors") && params.equals("castle") && (activeChar.isClanLeader()))
 		{
 			L2DoorInstance door = (L2DoorInstance) activeChar.getTarget();
 			Castle castle = CastleManager.getInstance().getCastleById(activeChar.getClan().getHasCastle());
@@ -63,7 +63,7 @@ public class castle implements IVoicedCommandHandler
 			}
 			
 		}
-		else if (command.startsWith("ride wyvern") && target.equals("castle"))
+		else if (command.startsWith("ride wyvern") && params.equals("castle"))
 		{
 			if (activeChar.getClan().getHasCastle() > 0 && activeChar.isClanLeader())
 			{
@@ -75,7 +75,7 @@ public class castle implements IVoicedCommandHandler
 	
 	/**
 	 * 
-	 * @see net.sf.l2j.gameserver.handler.IVoicedCommandHandler#getVoicedCommandList()
+	 * @see com.l2jserver.gameserver.handler.IVoicedCommandHandler#getVoicedCommandList()
 	 */
 	public String[] getVoicedCommandList()
 	{

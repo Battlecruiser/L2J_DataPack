@@ -1,8 +1,8 @@
 package transformations;
 
-import net.sf.l2j.gameserver.datatables.SkillTable;
-import net.sf.l2j.gameserver.instancemanager.TransformationManager;
-import net.sf.l2j.gameserver.model.L2Transformation;
+import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.instancemanager.TransformationManager;
+import com.l2jserver.gameserver.model.L2Transformation;
 
 public class FlyingFinalForm extends L2Transformation
 {
@@ -40,7 +40,7 @@ public class FlyingFinalForm extends L2Transformation
 			// Death Beam (up to 7 levels)
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(1544, lvl), false);
 		}
-		// Transfrom Dispel
+		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
 		getPlayer().setTransformAllowedSkills(new int[]{932,950,951,953,1544,1545,619});
@@ -71,7 +71,7 @@ public class FlyingFinalForm extends L2Transformation
 			// Death Beam (up to 7 levels)
 			getPlayer().removeSkill(SkillTable.getInstance().getInfo(1544, lvl), false);
 		}
-		// Transfrom Dispel
+		// Transform Dispel
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
 		getPlayer().setTransformAllowedSkills(new int[]{});

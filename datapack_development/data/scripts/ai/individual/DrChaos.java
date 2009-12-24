@@ -16,16 +16,17 @@ package ai.individual;
 
 import java.util.Map;
 
-import net.sf.l2j.gameserver.ai.CtrlIntention;
-import net.sf.l2j.gameserver.datatables.SpawnTable;
-import net.sf.l2j.gameserver.model.L2CharPosition;
-import net.sf.l2j.gameserver.model.L2Spawn;
-import net.sf.l2j.gameserver.model.actor.L2Npc;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.model.quest.Quest;
-import net.sf.l2j.gameserver.network.serverpackets.PlaySound;
-import net.sf.l2j.gameserver.network.serverpackets.SocialAction;
-import net.sf.l2j.gameserver.network.serverpackets.SpecialCamera;
+import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.datatables.SpawnTable;
+import com.l2jserver.gameserver.model.L2CharPosition;
+import com.l2jserver.gameserver.model.L2Spawn;
+import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.quest.Quest;
+import com.l2jserver.gameserver.network.serverpackets.PlaySound;
+import com.l2jserver.gameserver.network.serverpackets.SocialAction;
+import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
+
 
 /**
  * DrChaos AI
@@ -48,7 +49,7 @@ public class DrChaos extends Quest
 		_IsGolemSpawned = false;
 	}
 	
-  	public L2Npc FindTemplate(int npcId)
+  	public L2Npc findTemplate(int npcId)
   	{
 	    L2Npc npcInstance = null;
 	    L2Spawn spawn;
@@ -69,7 +70,7 @@ public class DrChaos extends Quest
 	{
 	    if (event.equalsIgnoreCase("1"))
 	    {
-	       L2Npc machine_instance = FindTemplate(STRANGE_MACHINE);
+	       L2Npc machine_instance = findTemplate(STRANGE_MACHINE);
 	       if (machine_instance != null)
 	       {
 	         npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, machine_instance);

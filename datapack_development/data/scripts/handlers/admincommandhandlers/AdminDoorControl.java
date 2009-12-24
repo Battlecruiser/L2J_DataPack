@@ -14,13 +14,13 @@
  */
 package handlers.admincommandhandlers;
 
-import net.sf.l2j.gameserver.datatables.DoorTable;
-import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
-import net.sf.l2j.gameserver.instancemanager.CastleManager;
-import net.sf.l2j.gameserver.model.L2Object;
-import net.sf.l2j.gameserver.model.actor.instance.L2DoorInstance;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.model.entity.Castle;
+import com.l2jserver.gameserver.datatables.DoorTable;
+import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.instancemanager.CastleManager;
+import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.entity.Castle;
 
 /**
  * This class handles following admin commands:
@@ -41,7 +41,7 @@ import net.sf.l2j.gameserver.model.entity.Castle;
  */
 public class AdminDoorControl implements IAdminCommandHandler
 {
-	private static DoorTable _doorTable;
+	private static DoorTable _doorTable = DoorTable.getInstance();
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_open",
@@ -52,8 +52,6 @@ public class AdminDoorControl implements IAdminCommandHandler
 	
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		_doorTable = DoorTable.getInstance();
-		
 		try
 		{
 			if (command.startsWith("admin_open "))

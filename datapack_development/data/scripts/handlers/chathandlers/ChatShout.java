@@ -16,13 +16,14 @@ package handlers.chathandlers;
 
 import java.util.Collection;
 
-import net.sf.l2j.Config;
-import net.sf.l2j.gameserver.datatables.MapRegionTable;
-import net.sf.l2j.gameserver.handler.IChatHandler;
-import net.sf.l2j.gameserver.model.BlockList;
-import net.sf.l2j.gameserver.model.L2World;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.network.serverpackets.CreatureSay;
+import com.l2jserver.Config;
+import com.l2jserver.gameserver.datatables.MapRegionTable;
+import com.l2jserver.gameserver.handler.IChatHandler;
+import com.l2jserver.gameserver.model.BlockList;
+import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
+
 
 /**
  * Shout chat handler.
@@ -38,7 +39,7 @@ public class ChatShout implements IChatHandler
 	
 	/**
 	 * Handle chat type 'shout'
-	 * @see net.sf.l2j.gameserver.handler.IChatHandler#handleChat(int, net.sf.l2j.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
+	 * @see com.l2jserver.gameserver.handler.IChatHandler#handleChat(int, com.l2jserver.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
 	 */
 	public void handleChat(int type, L2PcInstance activeChar, String target, String text)
 	{
@@ -73,7 +74,7 @@ public class ChatShout implements IChatHandler
 	
 	/**
 	 * Returns the chat types registered to this handler
-	 * @see net.sf.l2j.gameserver.handler.IChatHandler#getChatTypeList()
+	 * @see com.l2jserver.gameserver.handler.IChatHandler#getChatTypeList()
 	 */
 	public int[] getChatTypeList()
 	{

@@ -3,16 +3,16 @@
 
 import sys
 
-from net.sf.l2j                               import Config
-from net.sf.l2j.gameserver.datatables         import SkillTable
-from net.sf.l2j.gameserver.model.quest        import State
-from net.sf.l2j.gameserver.model.quest        import QuestState
-from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
-from net.sf.l2j.gameserver.network            import SystemMessageId
-from net.sf.l2j.gameserver.network.serverpackets import AcquireSkillInfo
-from net.sf.l2j.gameserver.network.serverpackets import AcquireSkillList
-from net.sf.l2j.gameserver.network.serverpackets import SystemMessage
-from net.sf.l2j.gameserver.util               import Util
+from com.l2jserver                               import Config
+from com.l2jserver.gameserver.datatables         import SkillTable
+from com.l2jserver.gameserver.model.quest        import State
+from com.l2jserver.gameserver.model.quest        import QuestState
+from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.network            import SystemMessageId
+from com.l2jserver.gameserver.network.serverpackets import AcquireSkillInfo
+from com.l2jserver.gameserver.network.serverpackets import AcquireSkillList
+from com.l2jserver.gameserver.network.serverpackets import SystemMessage
+from com.l2jserver.gameserver.util               import Util
 
 qn = "8005_SubClassSkills"
 NPC=32323

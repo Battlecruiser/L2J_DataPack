@@ -14,20 +14,23 @@
  */
 package handlers.itemhandlers;
 
-import net.sf.l2j.Config;
-import net.sf.l2j.gameserver.datatables.SkillTable;
-import net.sf.l2j.gameserver.handler.IItemHandler;
-import net.sf.l2j.gameserver.model.L2Effect;
-import net.sf.l2j.gameserver.model.L2ItemInstance;
-import net.sf.l2j.gameserver.model.L2Skill;
-import net.sf.l2j.gameserver.model.actor.L2Playable;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.model.actor.instance.L2PetInstance;
-import net.sf.l2j.gameserver.model.entity.TvTEvent;
-import net.sf.l2j.gameserver.network.SystemMessageId;
-import net.sf.l2j.gameserver.network.serverpackets.ActionFailed;
-import net.sf.l2j.gameserver.network.serverpackets.SystemMessage;
-import net.sf.l2j.gameserver.templates.skills.L2EffectType;
+import javolution.util.FastMap;
+
+import com.l2jserver.Config;
+import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.handler.IItemHandler;
+import com.l2jserver.gameserver.model.L2Effect;
+import com.l2jserver.gameserver.model.L2ItemInstance;
+import com.l2jserver.gameserver.model.L2Skill;
+import com.l2jserver.gameserver.model.actor.L2Playable;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance.TimeStamp;
+import com.l2jserver.gameserver.model.entity.TvTEvent;
+import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.templates.skills.L2EffectType;
 
 /**
  * 
@@ -38,7 +41,7 @@ import net.sf.l2j.gameserver.templates.skills.L2EffectType;
 public class Potions implements IItemHandler
 {
 	/**
-	 * @see net.sf.l2j.gameserver.handler.IItemHandler#useItem(net.sf.l2j.gameserver.model.actor.L2Playable, net.sf.l2j.gameserver.model.L2ItemInstance)
+	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.L2ItemInstance)
 	 */
 	public synchronized void useItem(L2Playable playable, L2ItemInstance item)
 	{
@@ -70,15 +73,15 @@ public class Potions implements IItemHandler
 		switch (itemId)
 		{
 			
-			case 726: // Custom Mana Drug, xml: 9007
+			case 726: // Custom Mana Drug, xml: 10000
 				if (Config.L2JMOD_ENABLE_MANA_POTIONS_SUPPORT)
-					usePotion(activeChar, 9007, 1);
+					usePotion(activeChar, 10000, 1);
 				else
 					playable.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
 				break;
-			case 728: // Custom Mana Potion, xml: 9008
+			case 728: // Custom Mana Potion, xml: 10001
 				if (Config.L2JMOD_ENABLE_MANA_POTIONS_SUPPORT)
-					usePotion(activeChar, 9008, 1);
+					usePotion(activeChar, 10001, 1);
 				else
 					playable.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
 				break;
@@ -94,26 +97,21 @@ public class Potions implements IItemHandler
 					return;
 				res = usePotion(playable, 2031, 1);
 				break;
-/*
-Control of this needs to be moved back into potions.java so proper message support can be handled for specific events.
+			// Control of this needs to be moved back into potions.java so proper message support can be handled for specific events.
 			case 10409: // Empty Bottle of Souls
-				if (activeChar.getActiveClass() >= 123 && activeChar.getActiveClass() <= 136) //Kamael classes only
-				{
-					if (activeChar.getSouls() >= 6)
-						res = usePotion(activeChar, 2498, 1);
-					else
-						playable.sendPacket(new SystemMessage(SystemMessageId.THERE_IS_NOT_ENOUGH_SOUL));
-				}
+				// system message should be handled in the xml
+				if (activeChar.getSouls() >= SkillTable.getInstance().getInfo(2498, 1).getSoulConsumeCount())
+					res = usePotion(activeChar, 2498, 1);
 				else
-					playable.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
+				{
+					SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+					sm.addSkillName(2498);
+					playable.sendPacket(sm);
+				}
 				break;
-*/
 			case 10410: // 5 Souls Bottle
 			case 10411:
-				if (activeChar.getActiveClass() >= 123 && activeChar.getActiveClass() <= 136) // Kamael classes only
-					res = usePotion(activeChar, 2499, 1);
-				else
-					playable.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
+				res = usePotion(activeChar, 2499, 1);
 				break;
 			case 20393: // Sweet Fruit Cocktail  
 				res = usePotion(playable, 22056, 1);  
@@ -235,9 +233,7 @@ Control of this needs to be moved back into potions.java so proper message suppo
 			// Return false if potion is in reuse so it is not destroyed from inventory
 			if (activeChar.isSkillDisabled(skill.getId()))
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.S1_PREPARED_FOR_REUSE);
-				sm.addSkillName(skill);
-				activeChar.sendPacket(sm);
+				displayReuse(activeChar, skill);
 				return false;
 			}
 			if (skill.isPotion())
@@ -264,5 +260,48 @@ Control of this needs to be moved back into potions.java so proper message suppo
 			}
 		}
 		return false;
+	}
+
+	private final void displayReuse(L2Playable activeChar, L2Skill skill)
+	{
+		final L2PcInstance player = activeChar.getActingPlayer();
+		if (player == null)
+			return;
+
+		final FastMap<Integer, TimeStamp> timeStamp = player.getReuseTimeStamp();
+		SystemMessage sm = null;
+
+		if (timeStamp != null && timeStamp.containsKey(skill.getId()))
+		{
+			final int remainingTime = (int)(player.getReuseTimeStamp().get(skill.getId()).getRemaining()/1000);
+			final int hours = remainingTime/3600;
+			final int minutes = (remainingTime%3600)/60;
+			final int seconds = (remainingTime%60);
+			if (hours > 0)
+			{
+				sm = new SystemMessage(SystemMessageId.S2_HOURS_S3_MINUTES_S4_SECONDS_REMAINING_FOR_REUSE_S1);
+				sm.addSkillName(skill);
+				sm.addNumber(hours);
+				sm.addNumber(minutes);
+			}
+			else if (minutes > 0)
+			{
+				sm = new SystemMessage(SystemMessageId.S2_MINUTES_S3_SECONDS_REMAINING_FOR_REUSE_S1);
+				sm.addSkillName(skill);
+				sm.addNumber(minutes);
+			}
+			else
+			{
+				sm = new SystemMessage(SystemMessageId.S2_SECONDS_REMAINING_FOR_REUSE_S1);
+				sm.addSkillName(skill);
+			}
+			sm.addNumber(seconds);
+		}
+		else
+		{
+			sm = new SystemMessage(SystemMessageId.S1_PREPARED_FOR_REUSE);
+			sm.addSkillName(skill);
+		}
+		player.sendPacket(sm);
 	}
 }

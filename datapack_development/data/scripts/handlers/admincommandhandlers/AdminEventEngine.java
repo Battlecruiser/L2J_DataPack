@@ -27,20 +27,21 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
-import net.sf.l2j.gameserver.datatables.SpawnTable;
-import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
-import net.sf.l2j.gameserver.model.L2Spawn;
-import net.sf.l2j.gameserver.model.L2World;
-import net.sf.l2j.gameserver.model.actor.L2Npc;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.model.entity.L2Event;
-import net.sf.l2j.gameserver.network.serverpackets.CharInfo;
-import net.sf.l2j.gameserver.network.serverpackets.ExBrExtraUserInfo;
-import net.sf.l2j.gameserver.network.serverpackets.ItemList;
-import net.sf.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
-import net.sf.l2j.gameserver.network.serverpackets.PlaySound;
-import net.sf.l2j.gameserver.network.serverpackets.UserInfo;
-import net.sf.l2j.gameserver.util.StringUtil;
+import com.l2jserver.gameserver.datatables.SpawnTable;
+import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.model.L2Spawn;
+import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.entity.L2Event;
+import com.l2jserver.gameserver.network.serverpackets.CharInfo;
+import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
+import com.l2jserver.gameserver.network.serverpackets.ItemList;
+import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jserver.gameserver.network.serverpackets.PlaySound;
+import com.l2jserver.gameserver.network.serverpackets.UserInfo;
+import com.l2jserver.gameserver.util.StringUtil;
+
 
 /**
  * This class handles following admin commands:
@@ -119,6 +120,7 @@ public class AdminEventEngine implements IAdminCommandHandler
                                         );
 				adminReply.setHtml(replyMSG);
 				activeChar.sendPacket(adminReply);
+				inbr.close();
 			}
 			catch (Exception e)
 			{
@@ -167,6 +169,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 				p.println(activeChar.getName());
 				p.println(tempBuffer);
 				file.close();
+				p.close();
 			}
 			catch (Exception e)
 			{

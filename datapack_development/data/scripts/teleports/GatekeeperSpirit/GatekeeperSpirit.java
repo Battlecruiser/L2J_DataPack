@@ -14,10 +14,10 @@
  */
 package teleports.GatekeeperSpirit;
 
-import net.sf.l2j.gameserver.SevenSigns;
-import net.sf.l2j.gameserver.model.actor.L2Npc;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.model.quest.Quest;
+import com.l2jserver.gameserver.SevenSigns;
+import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.quest.Quest;
 
 public class GatekeeperSpirit extends Quest
 {
