@@ -1,0 +1,1 @@
+RENAME TABLE `registred_gameservers` TO `registered_gameservers`;

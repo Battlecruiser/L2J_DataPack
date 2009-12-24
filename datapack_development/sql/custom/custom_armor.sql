@@ -1,6 +1,7 @@
 CREATE TABLE IF NOT EXISTS `custom_armor` (
   `item_id` int(11) NOT NULL default '0',
   `name` varchar(120) NOT NULL default '',
+  `additionalname` varchar(120) NOT NULL default '',
   `bodypart` varchar(15) NOT NULL default 'none',
   `crystallizable` varchar(5) NOT NULL default 'false',
   `armor_type` varchar(5) NOT NULL default 'none',
@@ -8,8 +9,8 @@ CREATE TABLE IF NOT EXISTS `custom_armor` (
   `material` varchar(15) NOT NULL default 'wood',
   `crystal_type` varchar(4) NOT NULL default 'none',
   `avoid_modify` int(1) NOT NULL default '0',
-  `duration` int(3) NOT NULL default '-1', -- duration for shadown items
-  `time` int(4) NOT NULL default '-1',     -- duration for time limited items
+  `duration` int(3) NOT NULL default '-1', -- duration in minutes for shadown items
+  `time` int(4) NOT NULL default '-1',     -- duration in minutes for time limited items
   `p_def` int(3) NOT NULL default '0',
   `m_def` int(2) NOT NULL default '0',
   `mp_bonus` int(3) NOT NULL default '0',

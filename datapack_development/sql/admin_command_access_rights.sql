@@ -38,7 +38,10 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_del_announcement','1'),
 ('admin_announce','1'),
 ('admin_announce_menu','1'),
-('admin_reload_autoannounce','1'),
+('admin_list_autoann', '1'),
+('admin_reload_autoann','1'),
+('admin_add_autoann', '1'),
+('admin_del_autoann', '1'),
 
 -- BAN
 ('admin_ban','1'),
@@ -76,6 +79,7 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 -- CREATE ITEM
 ('admin_itemcreate','1'),
 ('admin_create_item','1'),
+('admin_give_item_target','1'),
 
 -- CURSED WEPONS
 ('admin_cw_info','1'),
@@ -119,6 +123,7 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_fullfood','1'),
 ('admin_remove_clan_penalty','1'),
 ('admin_nokarma','1'),
+('admin_summon_info','1'),
 
 -- EDIT NPC
 ('admin_edit_npc','1'),
@@ -133,6 +138,10 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_delShopItem','1'),
 ('admin_editShopItem','1'),
 ('admin_close_window','1'),
+('admin_show_skilllist_npc','1'), 
+('admin_add_skill_npc','1'), 
+('admin_edit_skill_npc','1'), 
+('admin_del_skill_npc','1'), 
 
 -- EFFECTS
 ('admin_invis','1'),
@@ -518,6 +527,13 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 
 -- UNBLOCK IP
 ('admin_unblockip','1'),
+
+-- VITALITY
+('admin_set_vitality','1'),
+('admin_set_vitality_level','1'),
+('admin_full_vitality','1'),
+('admin_empty_vitality','1'),
+('admin_get_vitality','1'),
 
 -- ZONE
 ('admin_zone_check','1'),

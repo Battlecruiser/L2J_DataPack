@@ -1,6 +1,7 @@
 CREATE TABLE IF NOT EXISTS `custom_weapon` (
   `item_id` decimal(11,0) NOT NULL default '0',
   `name` varchar(120) NOT NULL default '0',
+  `additionalname` varchar(120) NOT NULL default '',
   `bodypart` varchar(15) NOT NULL default '',
   `crystallizable` varchar(5) NOT NULL default 'false',
   `weight` decimal(4,0) NOT NULL default '0',
@@ -19,8 +20,8 @@ CREATE TABLE IF NOT EXISTS `custom_weapon` (
   `atk_speed` decimal(3,0) NOT NULL default '0',
   `mp_consume` decimal(2,0) NOT NULL default '0',
   `m_dam` decimal(3,0) NOT NULL default '0',
-  `duration` int(3) NOT NULL default '-1',    -- duration for shadow items
-  `time` int(4) NOT NULL default '-1',              -- duration for time limited items
+  `duration` int(3) NOT NULL default '-1', -- duration in minutes for shadow items
+  `time` int(4) NOT NULL default '-1',     -- duration in minutes for time limited items
   `price` decimal(11,0) NOT NULL default '0',
   `crystal_count` int(4) NOT NULL default '0',
   `sellable` varchar(5) NOT NULL default 'false',
