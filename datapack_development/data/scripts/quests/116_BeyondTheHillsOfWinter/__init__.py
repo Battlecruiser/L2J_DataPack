@@ -11,10 +11,10 @@
 #----------------------------------------------------------------------------
 
 import sys
-from net.sf.l2j import Config
-from net.sf.l2j.gameserver.model.quest import State
-from net.sf.l2j.gameserver.model.quest import QuestState
-from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver import Config
+from com.l2jserver.gameserver.model.quest import State
+from com.l2jserver.gameserver.model.quest import QuestState
+from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 
 qn = "116_BeyondTheHillsOfWinter"
 
@@ -65,7 +65,7 @@ class Quest (JQuest) :
 		elif event == "adena" :
 			st.takeItems(SGOODS, -1)
 			st.playSound("ItemSound.quest_itemget")
-			st.giveItems(ADENA, int(16500*Config.RATE_QUESTS_REWARD))
+			st.giveItems(ADENA, 16500)
 			st.addExpAndSp(82792,4981)
 			htmltext = "32052-02.htm"
 			st.playSound("ItemSound.quest_finish")

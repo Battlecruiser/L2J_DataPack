@@ -3,12 +3,12 @@
 # v0.1.r0 2005.12.05
 # v1.1.r0 2008.03.27: Update/Rewrite by Emperorc
 import sys
-from net.sf.l2j.gameserver.datatables         			import SkillTable
-from net.sf.l2j.gameserver.network.serverpackets      	import NpcSay 
-from net.sf.l2j.gameserver.network.serverpackets      	import MagicSkillUse
-from net.sf.l2j.gameserver.model.quest        			import State
-from net.sf.l2j.gameserver.model.quest        			import QuestState
-from net.sf.l2j.gameserver.model.quest.jython 			import QuestJython as JQuest
+from com.l2jserver.gameserver.datatables         			import SkillTable
+from com.l2jserver.gameserver.network.serverpackets      	import NpcSay 
+from com.l2jserver.gameserver.network.serverpackets      	import MagicSkillUse
+from com.l2jserver.gameserver.model.quest        			import State
+from com.l2jserver.gameserver.model.quest        			import QuestState
+from com.l2jserver.gameserver.model.quest.jython 			import QuestJython as JQuest
 
 qn="501_ProofOfClanAlliance"
 

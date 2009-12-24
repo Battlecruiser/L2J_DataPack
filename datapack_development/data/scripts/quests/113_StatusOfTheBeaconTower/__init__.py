@@ -2,9 +2,9 @@
 # this script is part of the Official L2J Datapack Project.
 # Visit http://www.l2jdp.com/forum/ for more details.
 import sys
-from net.sf.l2j.gameserver.model.quest import State
-from net.sf.l2j.gameserver.model.quest import QuestState
-from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.model.quest import State
+from com.l2jserver.gameserver.model.quest import QuestState
+from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 
 qn = "113_StatusOfTheBeaconTower"
 
@@ -39,7 +39,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onTalk (self,npc,player):        
-    htmltext = "<html><head><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+    htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
     st = player.getQuestState(qn)
     if not st : return htmltext
     state = st.getState()
