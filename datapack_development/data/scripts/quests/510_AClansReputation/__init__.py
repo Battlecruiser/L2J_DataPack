@@ -1,9 +1,9 @@
 import sys
-from net.sf.l2j.gameserver.model.quest        			import State
-from net.sf.l2j.gameserver.model.quest        			import QuestState
-from net.sf.l2j.gameserver.model.quest.jython 			import QuestJython as JQuest
-from net.sf.l2j.gameserver.network.serverpackets      	import PledgeShowInfoUpdate
-from net.sf.l2j.gameserver.network.serverpackets      	import SystemMessage
+from com.l2jserver.gameserver.model.quest        			import State
+from com.l2jserver.gameserver.model.quest        			import QuestState
+from com.l2jserver.gameserver.model.quest.jython 			import QuestJython as JQuest
+from com.l2jserver.gameserver.network.serverpackets      	import PledgeShowInfoUpdate
+from com.l2jserver.gameserver.network.serverpackets      	import SystemMessage
 
 qn="510_AClansReputation"
 
@@ -61,7 +61,7 @@ class Quest (JQuest) :
            htmltext = "31331-7.htm" # custom html
            st.takeItems(Claw,-1)
            reward = int(CLAN_POINTS_REWARD * count)
-           clan.setReputationScore(clan.getReputationScore()+reward,True)
+           clan.addReputationScore(reward,True)
            player.sendPacket(SystemMessage(1777).addNumber(reward))
            clan.broadcastToOnlineMembers(PledgeShowInfoUpdate(clan))
   return htmltext

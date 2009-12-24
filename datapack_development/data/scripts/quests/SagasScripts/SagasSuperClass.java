@@ -14,25 +14,25 @@
  */
 package quests.SagasScripts;
 
-import net.sf.l2j.gameserver.ai.CtrlIntention;
-import net.sf.l2j.gameserver.instancemanager.QuestManager;
-import net.sf.l2j.gameserver.model.L2Object;
-import net.sf.l2j.gameserver.model.L2Party;
-import net.sf.l2j.gameserver.model.L2Skill;
-import net.sf.l2j.gameserver.model.L2World;
-import net.sf.l2j.gameserver.model.actor.L2Attackable;
-import net.sf.l2j.gameserver.model.actor.L2Character;
-import net.sf.l2j.gameserver.model.actor.L2Npc;
-import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
-import net.sf.l2j.gameserver.model.quest.Quest;
-import net.sf.l2j.gameserver.model.quest.QuestState;
-import net.sf.l2j.gameserver.model.quest.State;
-import net.sf.l2j.gameserver.model.quest.jython.QuestJython;
-import net.sf.l2j.gameserver.network.serverpackets.MagicSkillUse;
-import net.sf.l2j.gameserver.network.serverpackets.NpcSay;
-import net.sf.l2j.util.L2FastList;
-import net.sf.l2j.util.L2FastMap;
-import net.sf.l2j.util.Rnd;
+import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.instancemanager.QuestManager;
+import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.L2Party;
+import com.l2jserver.gameserver.model.L2Skill;
+import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.actor.L2Attackable;
+import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.quest.Quest;
+import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.model.quest.State;
+import com.l2jserver.gameserver.model.quest.jython.QuestJython;
+import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
+import com.l2jserver.gameserver.network.serverpackets.NpcSay;
+import com.l2jserver.util.L2FastList;
+import com.l2jserver.util.L2FastMap;
+import com.l2jserver.util.Rnd;
 
 public class SagasSuperClass extends QuestJython
 {
@@ -233,6 +233,10 @@ public class SagasSuperClass extends QuestJython
 						player.setBaseClass(Class);
 					player.broadcastUserInfo();
 					Cast(npc,player,4339,1);
+
+					Quest q = QuestManager.getInstance().getQuest("SkillTransfer");
+					if (q != null)
+						q.startQuestTimer("givePormanders", 1, npc, player);
 				}
 				else
 				{
@@ -650,6 +654,10 @@ public class SagasSuperClass extends QuestJython
 									player.setBaseClass(Class);
 								player.broadcastUserInfo();
 								Cast(npc,player,4339,1);
+
+								Quest q = QuestManager.getInstance().getQuest("SkillTransfer");
+								if (q != null)
+									q.startQuestTimer("givePormanders", 1, npc, player);
 							}
 						}
 						else

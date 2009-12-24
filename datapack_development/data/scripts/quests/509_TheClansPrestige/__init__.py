@@ -1,10 +1,10 @@
 import sys
-from net.sf.l2j.gameserver.model.quest        			import State
-from net.sf.l2j.gameserver.model.quest        			import QuestState
-from net.sf.l2j.gameserver.model.quest.jython 			import QuestJython as JQuest
-from net.sf.l2j.gameserver.network.serverpackets      	import PledgeShowInfoUpdate
-from net.sf.l2j.gameserver.network.serverpackets      	import SystemMessage
-from net.sf.l2j.util import Rnd
+from com.l2jserver.gameserver.model.quest        			import State
+from com.l2jserver.gameserver.model.quest        			import QuestState
+from com.l2jserver.gameserver.model.quest.jython 			import QuestJython as JQuest
+from com.l2jserver.gameserver.network.serverpackets      	import PledgeShowInfoUpdate
+from com.l2jserver.gameserver.network.serverpackets      	import SystemMessage
+from com.l2jserver.util import Rnd
 
 qn="509_TheClansPrestige"
 
@@ -97,7 +97,7 @@ class Quest (JQuest) :
         elif count == 1 :
            htmltext = "31331-"+str(raid)+"b.htm"
            st.takeItems(item,1)
-           clan.setReputationScore(clan.getReputationScore()+CLAN_POINTS_REWARD,True)
+           clan.addReputationScore(CLAN_POINTS_REWARD,True)
            player.sendPacket(SystemMessage(1777).addNumber(CLAN_POINTS_REWARD))
            clan.broadcastToOnlineMembers(PledgeShowInfoUpdate(clan))
   return htmltext
