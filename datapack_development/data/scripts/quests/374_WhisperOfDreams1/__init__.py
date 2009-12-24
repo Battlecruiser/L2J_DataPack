@@ -1,10 +1,10 @@
 # Whisper of Dreams, part 1 version 0.1 
 # by DrLecter
 import sys
-from net.sf.l2j import Config
-from net.sf.l2j.gameserver.model.quest import State
-from net.sf.l2j.gameserver.model.quest import QuestState
-from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver import Config
+from com.l2jserver.gameserver.model.quest import State
+from com.l2jserver.gameserver.model.quest import QuestState
+from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 #Quest info
 QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 374,"WhisperOfDreams1","Whisper of Dreams, part 1"
 qn = "374_WhisperOfDreams1"
@@ -25,7 +25,7 @@ SHOP_LIST={
 5489:["etc_leather_gray_i00",  6,15550,"Sealed Tallum Stockings Fabrics"] 
 }
  
-ADENA_X=int(Config.RATE_DROP_ADENA)
+ADENA_X=int(Config.RATE_DROP_ITEMS_ID.get(57))
  
 #Quest items
 CB_TOOTH, DW_LIGHT, SEALD_MSTONE, MSTONE = range(5884,5888)

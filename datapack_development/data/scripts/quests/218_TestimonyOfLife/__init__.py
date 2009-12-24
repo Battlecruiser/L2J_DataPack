@@ -3,9 +3,9 @@
 # Fixed by Artful (http://L2PLanet.ru Lineage2 C3 Server)
 # rewritten and conditions added by zerghase
 import sys
-from net.sf.l2j.gameserver.model.quest import State
-from net.sf.l2j.gameserver.model.quest import QuestState
-from net.sf.l2j.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.model.quest import State
+from com.l2jserver.gameserver.model.quest import QuestState
+from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 
 qn = "218_TestimonyOfLife"
 
