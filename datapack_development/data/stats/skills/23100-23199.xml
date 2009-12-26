@@ -277,9 +277,13 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="23154" levels="1" name="Kadomas Special Skill - Fireworks">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="4000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="23155" levels="1" name="Reindeer Scratch">
 		<!-- Raises affection level. For 10 minutes, raises physical critical rate by 30% and chance of magical critical rate by 2. -->
