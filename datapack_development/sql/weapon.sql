@@ -3454,8 +3454,8 @@ INSERT INTO `weapon` VALUES
 (15324,'For PC cafe use - Gram','Weapons for PC Cafe Use','lrhand','false',1800,1,1,'wood','s',304,15,'ancient',8,2.00000,0,0,0,350,0,132,-1,-1,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'0-0;'),
 (15325,'For PC cafe use - Sarnga','Weapons for PC Cafe Use','rhand','false',1600,1,1,'wood','s',356,10,'crossbow',10,-1.00000,0,0,0,303,0,132,-1,-1,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'0-0;'),
 (15326,'For PC cafe use - Tallum Blade *Dark Legion','Weapons for PC Cafe Use','lrhand','false',2080,1,1,'wood','s',342,10,'dual',8,0.00000,0,0,0,325,0,132,-1,-1,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'0-0;'),
-(15342,'Aqua Elf Transforming Harp','60 day limited period','rhand','false',0,0,0,'wood','none',1,10,'sword',8,0.00000,0,0,0,379,0,1,-1,86400,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'0-0;'),
-(15344,'Aqua Elf Transforming Harp - Event','60 day limited period','rhand','false',0,0,0,'wood','none',1,10,'sword',8,0.00000,0,0,0,379,0,1,-1,86400,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'0-0;'),
+(15342,'Aqua Elf Transforming Harp','60 day limited period','rhand','false',0,0,0,'wood','none',1,10,'sword',8,0.00000,0,0,0,379,0,1,-1,86400,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'2994-1;'),
+(15344,'Aqua Elf Transforming Harp - Event','60 day limited period','rhand','false',0,0,0,'wood','none',1,10,'sword',8,0.00000,0,0,0,379,0,1,-1,86400,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'2994-1;'),
 (15403,'PC Cafe Use - Berserker Blade','Weapon for PC Cafe Use','none','false',1380,3,3,'wood','none',190,10,'none',8,0.00000,0,0,0,325,0,83,-1,-1,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'0-0;'),
 (20109,'Sword of Revolution - Event','4 Hour Expiration Period','rhand','false',483,3,3,'fine_steel','d',79,10,'sword',8,0.00000,0,0,0,379,0,47,-1,240,0,0,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (20110,'Titan Sword - Event','4 Hour Expiration Period','lrhand','false',673,3,3,'fine_steel','d',96,10,'bigsword',8,0.00000,0,0,0,325,0,47,-1,240,0,0,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'0-0;'),
@@ -3549,7 +3549,7 @@ INSERT INTO `weapon` VALUES
 (20641,'Standard Item - Knight\'s Sword*Elven Sword','','lrhand','false',100,3,3,'wood','d',107,10,'dual',8,0.00000,0,0,0,325,0,51,-1,-1,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'0-0;'),
 (20644,'Standard Item - Plate Shield','','lhand','false',100,0,0,'wood','d',0,0,'none',0,0.00000,-8,154,20,0,0,0,-1,-1,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'0-0;'),
 (20649,'Standard Item - Ghost Staff','','lrhand','false',100,3,3,'wood','d',90,20,'bigblunt',4,4.00000,0,0,0,325,0,79,-1,-1,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'0-0;'),
-(20867,'Kadomas Transformation Stick','7 day limited period','none','false',150,0,0,'wood','none',1,10,'none',8,0.00000,0,0,0,379,0,1,-1,10080,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'0-0;');
+(20867,'Kadomas Transformation Stick','7 day limited period','lrhand','false',150,0,0,'wood','none',1,10,'none',8,0.00000,0,0,0,379,0,1,-1,10080,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'21169-1;');
 
 -- Fixes all improper weapon slotting.
 UPDATE `weapon` SET bodypart = "rhand" WHERE (weaponType = "dagger") or (weaponType = "sword") or (weaponType = "rapier") or (weaponType = "crossbow");
