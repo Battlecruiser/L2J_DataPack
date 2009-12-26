@@ -62,7 +62,7 @@ public class ChatTell implements IChatHandler
 		
 		receiver = L2World.getInstance().getPlayer(target);
 		
-		if (receiver != null && !BlockList.isBlocked(receiver, activeChar))
+		if (receiver != null)
 		{
 			if (Config.JAIL_DISABLE_CHAT && receiver.isInJail() && !activeChar.isGM())
 			{
@@ -79,7 +79,7 @@ public class ChatTell implements IChatHandler
 				activeChar.sendMessage("Player is in offline mode.");
 				return;
 			}
-			if (!receiver.getMessageRefusal())
+			if (!BlockList.isBlocked(receiver, activeChar))
 			{
 				receiver.sendPacket(cs);
 				activeChar.sendPacket(new CreatureSay(activeChar.getObjectId(), type, "->" + receiver.getName(), text));
