@@ -381,9 +381,13 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="21169" levels="1" name="Transform Kadomas">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="transformId" val="20000" />
+		<for>
+			<effect name="Transformation" time="3600" val="0" />
+		</for>
 	</skill>
 	<skill id="21170" levels="1" name="Blessed Soul">
 		<!-- Increases Max MP by 25% for 20 minutes. Reuse delay is 1 hours. -->

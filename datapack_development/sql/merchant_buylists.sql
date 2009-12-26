@@ -22010,7 +22010,10 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (13324,0,9976,14), -- Pumpkin Transformation Stick (Event) - 30-day limited period
 (13253,0,9976,15), -- Pumpkin Transformation Stick - 7-day Limited Period
 (13339,0,9976,16), -- Pumpkin Transformation Stick (Event) - 7-day Limited Period
-(12814,0,9976,17); -- Shadow Item - Gatekeeper Transformation Stick
+(12814,0,9976,17), -- Shadow Item - Gatekeeper Transformation Stick
+(15342,0,9976,18), -- Aqua Elf Transforming Harp
+(15344,0,9976,19), -- Aqua Elf Transforming Harp - Event
+(20867,0,9976,20); -- Kadomas Transformation Stick
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Misc Event Items

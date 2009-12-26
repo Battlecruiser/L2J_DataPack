@@ -22,10 +22,12 @@ public class Kadomas extends L2Transformation
 
 	public void transformedSkills()
 	{
+		//Kadomas Special Skill - Fireworks
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(23154, 1), false);
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{619});
+		getPlayer().setTransformAllowedSkills(new int[]{23154,619});
 	}
 
 	public void onUntransform()
@@ -35,6 +37,8 @@ public class Kadomas extends L2Transformation
 
 	public void removeSkills()
 	{
+		//Kadomas Special Skill - Fireworks
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(23154, 1), false);
 		// Transform Dispel
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
