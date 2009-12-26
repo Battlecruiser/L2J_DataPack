@@ -703,9 +703,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="1800" val="0"> <!-- Transformation lasts 30 minutes -->
-				<mul order="0x30" stat="pvpMagicalDmg" val="0.4" />
-			</effect>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
 	<skill id="660" levels="3" name="Transform Divine Summoner">
@@ -1246,7 +1244,11 @@
 		<set name="reuseDelay" val="1500" />
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_ONE" />
-		<!-- TODO: Temporarily decreases your magic attack power during PvP. should be in transformation -->
+		<for>
+			<effect self="1" name="Buff" time="3" val="0">
+				<mul order="0x30" stat="pvpMagicalDmg" val="0.5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="693" levels="1" name="Divine Wizard Holy Strike">
 		<set name="castRange" val="900" />
@@ -1264,10 +1266,18 @@
 		<set name="target" val="TARGET_UNDEAD" />
 	</skill>
 	<skill id="694" levels="1" name="Divine Wizard Holy Curtain">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="500" />
+		<set name="effectRange" val="1000" />
+		<set name="element" val="4" /> <!-- Holy -->
+		<set name="elementPower" val="20" />
 		<set name="hitTime" val="5000" />
+		<set name="isMagic" val="true" />
+		<set name="mpConsume" val="109" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="10000" />
+		<set name="skillRadius" val="100" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="695" levels="1" name="Divine Wizard Holy Cloud">
 		<set name="castRange" val="500" />
