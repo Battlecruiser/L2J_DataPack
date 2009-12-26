@@ -1003,28 +1003,59 @@
 		</for>
 	</skill>
 	<skill id="675" levels="1" name="Divine Warrior Cross Slash">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="hitTime" val="1730" />
+		<set name="baseCritRate" val="15" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1733" />
+		<set name="mpConsume" val="112" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="overHit" val="true" />
+		<set name="power" val="2904" />
+		<set name="reuseDelay" val="5000" />
+		<set name="skillType" val="PDAM" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="676" levels="1" name="Divine Warrior Sonic Blaster">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="baseCritRate" val="15" />
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1900" />
+		<set name="mpConsume" val="56" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="overHit" val="true" />
+		<set name="power" val="2323" />
+		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="PDAM" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="677" levels="1" name="Divine Warrior Transfixion of Earth">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="hitTime" val="1070" />
+		<set name="hitTime" val="1067" />
+		<set name="ignoreShld" val="true" />
+		<set name="mpConsume" val="80" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="overHit" val="true" />
+		<set name="power" val="2323" />
+		<set name="reuseDelay" val="4000" />
+		<set name="skillType" val="PDAM" />
+		<set name="skillRadius" val="150" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="678" levels="1" name="Divine Warrior War Cry">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="aggroPoints" val="408" />
 		<set name="hitTime" val="1500" />
+		<set name="mpConsume" val="36" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="45000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" time="60" val="0" stackOrder="2" stackType="pa_up_special">
+				<mul order="0x30" stat="pAtk" val="1.25" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="679" levels="1" name="Sacrifice Warrior">
 		<set name="target" val="TARGET_NONE" />
@@ -1033,34 +1064,81 @@
 		<set name="hitTime" val="2500" />
 	</skill>
 	<skill id="680" levels="1" name="Divine Knight Hate">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
 		<set name="hitTime" val="700" />
+		<set name="isDebuff" val="true" />
+		<set name="mpConsume" val="51" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="6752" />
+		<set name="reuseDelay" val="6000" />
+		<set name="skillType" val="AGGDAMAGE" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="TargetMe" time="3" val="0" />
+		</for>
 	</skill>
 	<skill id="681" levels="1" name="Divine Knight Hate Aura">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="1000" />
+		<set name="isDebuff" val="true" />
+		<set name="mpConsume" val="144" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="6752" />
+		<set name="reuseDelay" val="40000" />
+		<set name="skillType" val="AGGDAMAGE" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="TargetMe" time="3" val="0" />
+		</for>
 	</skill>
 	<skill id="682" levels="1" name="Divine Knight Stun Attack">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="mpConsume" val="76" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="overHit" val="true" />
+		<set name="power" val="1162" />
+		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="PDAM" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Stun" time="9" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="Stun" />
+		</for>
 	</skill>
 	<skill id="683" levels="1" name="Divine Knight Thunder Storm">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="1080" />
+		<set name="ignoreShld" val="true" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="mpConsume" val="114" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="overHit" val="true" />
+		<set name="power" val="775" />
+		<set name="reuseDelay" val="5000" />
+		<set name="skillType" val="PDAM" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Stun" time="9" val="0" stackOrder="1" stackType="Stun" effectPower="50" effectType="STUN" />
+		</for>
 	</skill>
 	<skill id="684" levels="1" name="Divine Knight Ultimate Defense">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="aggroPoints" val="438" />
 		<set name="hitTime" val="1000" />
+		<set name="mpConsume" val="36" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="900000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<effect name="ImmobileBuff" time="30" val="0" stackOrder="1" stackType="pd_up_special">
+			<add order="0x40" stat="pDef" val="3600" />
+			<add order="0x40" stat="mDef" val="2700" />
+			<mul order="0x30" stat="cancelVuln" val="0.2" />
+		</effect>
 	</skill>
 	<skill id="685" levels="1" name="Sacrifice Knight">
 		<set name="target" val="TARGET_NONE" />
@@ -1069,34 +1147,88 @@
 		<set name="hitTime" val="2500" />
 	</skill>
 	<skill id="686" levels="1" name="Divine Rogue Stun Shot">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="3000" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="mpConsume" val="116" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="overHit" val="true" />
+		<set name="power" val="2323" />
+		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="PDAM" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Stun" time="9" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="Stun" />
+			<effect name="RemoveTarget" noicon="1" val="0" effectPower="50" effectType="DEBUFF" />
+		</for>
 	</skill>
 	<skill id="687" levels="1" name="Divine Rogue Double Shot">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- TODO: Needs Core-Side Support for "Shoots 2 arrows continuously" -->
+		<set name="baseCritRate" val="15" />
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="3000" />
+		<set name="mpConsume" val="159" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="overHit" val="true" />
+		<set name="power" val="6195" />
+		<set name="skillType" val="PDAM" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="688" levels="1" name="Divine Rogue Bleed Attack">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="mpConsume" val="80" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="overHit" val="true" />
+		<set name="power" val="1549" />
+		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="PDAM" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect count="7" name="DamOverTime" time="3" val="67" abnormal="bleed" effectPower="80" effectType="BLEED">
+				<mul order="0x30" stat="runSpd" val="0.8" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="689" levels="1" name="Divine Rogue Deadly Blow">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="40" />
+		<set name="condition" val="16" />
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
+		<set name="lethal1" val="5" />
+		<set name="mpConsume" val="72" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="overHit" val="true" />
+		<set name="power" val="6969" />
+		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="BLOW" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="690" levels="1" name="Divine Rogue Agility">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="aggroPoints" val="495" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="true" />
+		<set name="mpConsume" val="73" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Buff" time="1200" val="0" stackOrder="4" stackType="rEvas">
+				<add order="0x40" stat="rEvas" val="4" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="691" levels="1" name="Sacrifice Rogue">
 		<set name="target" val="TARGET_NONE" />
@@ -1105,16 +1237,31 @@
 		<set name="hitTime" val="2500" />
 	</skill>
 	<skill id="692" levels="1" name="Divine Wizard Holy Flare">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="150" />
+		<set name="effectRange" val="650" />
 		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="102" />
+		<set name="reuseDelay" val="1500" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_ONE" />
+		<!-- TODO: Temporarily decreases your magic attack power during PvP. should be in transformation -->
 	</skill>
 	<skill id="693" levels="1" name="Divine Wizard Holy Strike">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1400" />
+		<set name="element" val="4" /> <!-- Holy -->
+		<set name="elementPower" val="20" />
 		<set name="hitTime" val="5000" />
+		<set name="isMagic" val="true" />
+		<set name="mpConsume" val="90" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="overHit" val="true" />
+		<set name="power" val="128" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_UNDEAD" />
 	</skill>
 	<skill id="694" levels="1" name="Divine Wizard Holy Curtain">
 		<set name="target" val="TARGET_NONE" />
@@ -1123,16 +1270,42 @@
 		<set name="hitTime" val="5000" />
 	</skill>
 	<skill id="695" levels="1" name="Divine Wizard Holy Cloud">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="500" />
+		<set name="effectRange" val="1000" />
 		<set name="hitTime" val="5000" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="true" />
+		<set name="lvlDepend" val="2" />
+		<set name="mpConsume" val="109" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="10000" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="SLEEP" />
+		<set name="target" val="TARGET_AREA" />
+		<for>
+			<effect name="Sleep" time="30" val="0" stackOrder="1" stackType="sleep" />
+		</for>
 	</skill>
 	<skill id="696" levels="1" name="Divine Wizard Surrender to Holy">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="750" />
+		<set name="effectRange" val="1250" />
 		<set name="hitTime" val="1500" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="true" />
+		<set name="lvlDepend" val="2" />
+		<set name="mpConsume" val="73" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="WEAKNESS" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Debuff" time="30" val="0" stackOrder="2" stackType="surrender">
+				<sub order="0x40" stat="holyRes" val="25" />
+				<add order="0x40" stat="darkRes" val="12" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="697" levels="1" name="Sacrifice Wizard">
 		<set name="target" val="TARGET_NONE" />
@@ -1141,15 +1314,28 @@
 		<set name="hitTime" val="2500" />
 	</skill>
 	<skill id="698" levels="1" name="Divine Healer Major Heal">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="5000" />
+		<set name="isMagic" val="true" />
+		<set name="mpConsume" val="84" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="946" />
+		<set name="reuseDelay" val="1000" />
+		<set name="skillType" val="HEAL" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="699" levels="1" name="Divine Healer Battle Heal">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="aggroPoints" val="274" />
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="true" />
+		<set name="mpConsume" val="189" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="826" />
+		<set name="reuseDelay" val="1000" />
+		<set name="skillType" val="HEAL" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 </list>
