@@ -1571,10 +1571,18 @@
 		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="797" levels="1" name="Divine Rogue Piercing Attack">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="830" />
+		<set name="mpConsume" val="88" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="overHit" val="true" />
+		<set name="power" val="2111" />
+		<set name="reuseDelay" val="25000" />
+		<set name="skillRadius" val="80" />
+		<set name="skillType" val="PDAM" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_MULTIFACE" />
 	</skill>
 	<skill id="798" levels="1" name="Divine Warrior Assault Attack">
 		<set name="abnormalLvl" val="8" />
