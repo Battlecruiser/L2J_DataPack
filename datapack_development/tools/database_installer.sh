@@ -312,7 +312,7 @@ esac
 
 fullcbinstall(){
 echo "Deleting all communityserver tables for new content."
-$MYG < commuity_install.sql &> /dev/null
+$MYG < community_install.sql &> /dev/null
 }
 
 upgradecbinstall(){
