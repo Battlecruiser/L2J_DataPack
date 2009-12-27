@@ -24,7 +24,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="isMagic" val="true" />
 		<for>
-			<add order="0x40" stat="mDef" val="20" />
+			<mul order="0x30" stat="magicDamVul" val="0.95" />
 		</for>
 	</skill>
 	<skill id="803" levels="1" name="Healer Ability - Divine Protection">

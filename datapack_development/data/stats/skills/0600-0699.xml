@@ -542,7 +542,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="pAtkRange" val="100">
+			<add order="0x40" stat="pAtkRange" val="200">
 				<using kind="Bow" />
 			</add>
 		</for>
@@ -591,7 +591,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5572" />
 		<set name="triggeredLevel" val="1" />
-		<set name="activationChance" val="5" />
+		<set name="activationChance" val="1" />
 		<set name="chanceType" val="ON_HIT" />
 	</skill>
 	<skill id="652" levels="1" name="Knight Ability - Defense">
@@ -609,7 +609,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5574" />
 		<set name="triggeredLevel" val="1" />
-		<set name="activationChance" val="5" />
+		<set name="activationChance" val="1" />
 		<set name="chanceType" val="ON_HIT" />
 	</skill>
 	<skill id="654" levels="1" name="Wizard Ability - Mana Steal">
@@ -618,7 +618,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5575" />
 		<set name="triggeredLevel" val="1" />
-		<set name="activationChance" val="3" />
+		<set name="activationChance" val="1" />
 		<set name="chanceType" val="ON_HIT" />
 	</skill>
 	<skill id="655" levels="1" name="Enchanter Ability - Barrier">
