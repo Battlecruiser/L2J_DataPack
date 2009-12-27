@@ -1551,6 +1551,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isMagic" val="true" />
 		<set name="canBeReflected" val="false" />
+		<set name="canBeDispeled" val="false" />
 		<for>
 			<effect name="SilenceMagicPhysical" time="60" val="0">
 				<mul order="0x30" stat="mDef" val="0.5" />
@@ -1577,6 +1578,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
 		<set name="canBeReflected" val="false" />
+		<set name="canBeDispeled" val="false" />
 		<for>
 			<effect count="15" name="Fear" time="2" val="0">
 				<add order="0x40" stat="runSpd" val="66" />
