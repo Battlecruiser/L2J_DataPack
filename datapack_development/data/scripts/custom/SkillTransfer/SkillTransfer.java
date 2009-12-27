@@ -229,7 +229,7 @@ public class SkillTransfer extends Quest
 	{
 		String htmltext = "";
 
-		if (npc == null || player == null)
+		if (player == null)
 			return htmltext;
 
 		if (event.equalsIgnoreCase("learn"))
