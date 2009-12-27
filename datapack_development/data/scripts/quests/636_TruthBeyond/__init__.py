@@ -29,7 +29,7 @@ class Quest (JQuest) :
     elif htmltext == "32010-02.htm" :
        st.playSound("ItemSound.quest_finish")
        st.giveItems(MARK,1)
-       st.set("cond","2")
+       st.exitQuest(1)
     return htmltext
 
  def onTalk (self,npc,player):
