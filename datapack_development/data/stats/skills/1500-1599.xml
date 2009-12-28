@@ -200,7 +200,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="200" />
 		<set name="reuseDelay" val="15000" />
-		<set name="power" val="80" />
+		<set name="power" val="70" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -214,7 +214,6 @@
 		</for>
 	</skill>
 	<skill id="1512" levels="1" name="Soul Vortex">
-		<!-- Needs to be verified -->
 		<set name="mpInitialConsume" val="21" />
 		<set name="mpConsume" val="84" />
 		<set name="magicLvl" val="77" />
@@ -241,7 +240,6 @@
 		</for>
 	</skill>
 	<skill id="1513" levels="1" name="Soul Vortex Extinction">
-		<!-- Needs to be verified -->
 		<set name="mpInitialConsume" val="28" />
 		<set name="mpConsume" val="80" />
 		<set name="magicLvl" val="79" />
@@ -320,7 +318,7 @@
 		<set name="mpConsume" val="35" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="166" />
-		<set name="reuseDelay" val="1500" />
+		<set name="reuseDelay" val="15000" />
 		<set name="skillType" val="MDAM" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="target" val="TARGET_ONE" />
@@ -547,7 +545,7 @@
 		<set name="hitTime" val="2500" />
 		<set name="coolTime" val="200" />
 		<set name="reuseDelay" val="15000" />
-		<set name="power" val="80" />
+		<set name="power" val="60" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="magicLvl" val="#magicLvl" />
