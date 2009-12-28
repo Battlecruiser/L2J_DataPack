@@ -1499,10 +1499,13 @@
 		</for>
 	</skill>
 	<skill id="792" levels="1" name="Betrayal Mark">
+		<!-- duration is 30 seconds -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="power" val="70" /> <!-- Base Land Rate -->
 		<set name="hitTime" val="1200" />
+		<set name="reuseDelay" val="11000" />
 	</skill>
 	<skill id="793" levels="1" name="Rush Impact">
 		<set name="castRange" val="600" />
@@ -1526,7 +1529,7 @@
 			<target mindistance="200" />
 		</cond>
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="Stun" />
+			<effect name="Stun" time="9" val="0" effectPower="60" effectType="STUN" stackOrder="1" stackType="Stun" />
 		</for>
 	</skill>
 	<skill id="794" levels="1" name="Mass Disarm">
@@ -1536,7 +1539,7 @@
 		<set name="magicLvl" val="79" />
 		<set name="mpConsume" val="58" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="power" val="70" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="150000" />
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="DISARM" />
