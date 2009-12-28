@@ -869,9 +869,11 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="removedOnAnyActionExceptMove" val="true" />
 		<for>
-			<effect name="Invincible" time="10" val="0" stackOrder="1" stackType="Instant_Shield" />
+			<effect name="Buff" time="10" val="0">
+				<add order="0x40" stat="pDef" val="3600" />
+				<add order="0x40" stat="mDef" val="2700" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3285" levels="1" name="Blue Talisman of Defense">
