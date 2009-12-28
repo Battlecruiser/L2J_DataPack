@@ -370,7 +370,7 @@
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="effectRange" val="200" />
 		<for>
-			<effect count="3" name="Fear" val="0" effectPower="20" effectType="FEAR" />
+			<effect count="3" name="Fear" val="0" effectPower="40" effectType="FEAR" />
 		</for>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -378,7 +378,7 @@
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant3for>
-			<effect count="#ench3Time" name="Fear" val="0" effectPower="20" effectType="FEAR" />
+			<effect count="#ench3Time" name="Fear" val="0" effectPower="40" effectType="FEAR" />
 		</enchant3for>
 	</skill>
 	<skill id="628" levels="1" name="Warp">

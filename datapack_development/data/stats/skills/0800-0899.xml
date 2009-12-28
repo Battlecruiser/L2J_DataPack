@@ -552,16 +552,20 @@
 		</for>
 	</skill>
 	<skill id="835" levels="4" name="Imbue Seed of Destruction">
+		<!-- duration is 20 seconds -->
+		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="1800" />
+		<set name="reuseDelay" val="15000" />
 	</skill>
 	<skill id="836" levels="3" name="Oblivion Trap">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="45000" />
 	</skill>
 	<skill id="837" levels="1" name="Painkiller">
 		<!-- CT2.2 retail confirmed -->

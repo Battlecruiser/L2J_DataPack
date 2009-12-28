@@ -1453,7 +1453,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="reuseDelay" val="1800" />
+		<set name="reuseDelay" val="2000" />
 		<set name="hitTime" val="2000" />
 		<for>
 			<effect name="Buff" time="1200" val="0" stackOrder="1.15" stackType="attack_time_down">
@@ -1743,7 +1743,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="power" val="70" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="DISARM" />
 		<set name="target" val="TARGET_ONE" />
@@ -1793,7 +1793,7 @@
 		<set name="mpConsume" val="53" />
 		<set name="target" val="TARGET_PARTY_MEMBER" />
 		<set name="hitTime" val="2500" />
-		<set name="reuseDelay" val="4000" />
+		<set name="reuseDelay" val="5000" />
 		<set name="coolTime" val="720" />
 		<set name="skillRadius" val="205" />
 		<set name="skillType" val="SHIFT_TARGET" />
@@ -1914,7 +1914,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
-		<set name="reuseDelay" val="9000" />
+		<set name="reuseDelay" val="4000" />
 		<set name="skillType" val="STUN" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="target" val="TARGET_ONE" />
@@ -1927,7 +1927,7 @@
 		</cond>
 		<for>
 			<effect name="EnemyCharge" val="0" />
-			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" stackOrder="1" stackType="Stun" />
+			<effect name="Stun" time="9" val="0" effectPower="70" effectType="STUN" stackOrder="1" stackType="Stun" />
 		</for>
 		<enchant1for>
 			<effect name="EnemyCharge" val="0" />
@@ -1938,7 +1938,7 @@
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#ench1Dmg"> 135 135 136 136 137 137 138 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 </table>
 		<table name="#ench3MpConsume"> 85 84 83 82 81 80 79 78 78 77 76 75 74 73 72 71 71 70 69 68 67 66 65 64 64 63 62 61 60 59 </table>
-		<table name="#ench2effectPower"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
+		<table name="#ench2effectPower"> 50 51 52 52 53 54 54 55 56 56 57 58 58 59 60 60 61 62 62 63 64 64 65 66 66 67 68 68 69 70 </table>
 		<table name="#abnormalLvl"> 6 6 7 7 7 7 7 8 8 8 </table>
 		<table name="#castRange"> 500 500 500 500 500 500 600 600 600 600 </table>
 		<table name="#dmg"> 107 107 123 123 123 123 123 134 134 134 </table>
@@ -1957,7 +1957,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
-		<set name="reuseDelay" val="9000" />
+		<set name="reuseDelay" val="4000" />
 		<set name="skillRadius" val="#castRange" />
 		<set name="skillType" val="BLEED" />
 		<set name="soulMaxConsumeCount" val="5" />
@@ -1971,13 +1971,13 @@
 			<target mindistance="200" />
 		</cond>
 		<for>
-			<effect count="20" name="DamOverTime" val="#dmg" effectPower="80" effectType="BLEED" abnormal="bleed">
+			<effect count="20" name="DamOverTime" val="#dmg" effectPower="50" effectType="BLEED" abnormal="bleed">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 			<effect name="EnemyCharge" val="0" />
 		</for>
 		<enchant1for>
-			<effect count="20" name="DamOverTime" val="#ench1Dmg" effectPower="80" effectType="BLEED" abnormal="bleed">
+			<effect count="20" name="DamOverTime" val="#ench1Dmg" effectPower="50" effectType="BLEED" abnormal="bleed">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 			<effect name="EnemyCharge" val="0" />
@@ -2005,7 +2005,7 @@
 		<set name="skillRadius" val="150" />
 		<set name="overHit" val="true" />
 		<set name="SSBoost" val="2.0" />
-		<set name="reuseDelay" val="3000" />
+		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="720" />
 		<set name="skillType" val="PDAM" />
