@@ -370,7 +370,7 @@
 		<set name="effectRange" val="900" />
 		<cond msgId="113" addName="1">
 			<not>
-				<target class_id_restriction="29, 30, 105, 42, 43, 112" />
+				<target active_skill_id="1013" /> <!-- Cannot be used to classes that has Recharge skill -->
 			</not>
 		</cond>
 	</skill>
