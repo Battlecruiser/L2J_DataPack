@@ -519,19 +519,37 @@
 		<set name="hitTime" val="3500" />
 	</skill>
 	<skill id="6090" levels="1" name="Lightning Strike">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Lightning Strike effect -->
+		<set name="isDebuff" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="skillType" val="PARALYZE" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Paralyze" time="10" val="0" />
+		</for>
 	</skill>
 	<skill id="6091" levels="1" name="Anger">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Anchor effect -->
+		<set name="isDebuff" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="skillType" val="PARALYZE" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Paralyze" time="10" val="0" />
+		</for>
 	</skill>
 	<skill id="6092" levels="1" name="Lightning Shock">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Lightning Shock effect -->
+		<set name="isDebuff" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="skillType" val="PARALYZE" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Paralyze" time="9" val="0" />
+		</for>
 	</skill>
 	<skill id="6093" levels="1" name="Panther Hide">
 		<set name="target" val="TARGET_NONE" />

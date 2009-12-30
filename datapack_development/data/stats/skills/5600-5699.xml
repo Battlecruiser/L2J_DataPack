@@ -981,9 +981,15 @@
 		</for>
 	</skill>
 	<skill id="5697" levels="4" name="Seal">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Imbue Seed of Destruction effect -->
+		<set name="isDebuff" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="skillType" val="MUTE" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="SilenceMagicPhysical" time="10" val="0" />
+		</for>
 	</skill>
 	<skill id="5698" levels="37" name="Bless the Blood">
 		<table name="#power"> 236 245 254 262 271 281 290 290 290 290 290 290 290 290 290 290 290 290 290 290 290 290 290 290 290 290 290 290 290 290 290 290 290 290 290 290 290 </table> <!-- guess -->

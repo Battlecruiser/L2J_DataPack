@@ -218,6 +218,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5430" levels="1" name="Spoil Bomb">
+		<!-- Spoil Bomb effect -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -338,17 +339,14 @@
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="5447" levels="7" name="Paralysis">
-		<table name="#dmg"> 76 76 76 76 83 83 83 </table>
-		<set name="target" val="TARGET_ONE" />
-		<set name="element" val="5" /> <!-- Dark -->
-		<set name="skillType" val="PARALYZE" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<!-- Imbue Dark Seed effect -->
 		<set name="isDebuff" val="true" />
-		<set name="castRange" val="40" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="skillType" val="PARALYZE" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Paralyze" time="20" val="0" />
-			<effect count="5" name="DamOverTime" time="3" val="#dmg" abnormal="poison" noicon="1" />
+			<effect name="Paralyze" time="10" val="0" />
 		</for>
 	</skill>
 	<skill id="5448" levels="1" name="Obilivion">
