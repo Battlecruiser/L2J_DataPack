@@ -30563,8 +30563,7 @@ INSERT INTO `droplist` VALUES
 (22684,9539,1,1,1,2100),-- Sealed Dynasty Leather Boots Piece 
 (22684,9544,1,1,1,1600),-- Sealed Dynasty Shoes Piece 
 (22684,9543,1,1,1,1600),-- Sealed Dynasty Glove Piece 
-(22684,9538,1,1,1,800),-- Sealed Dynasty Leather Glove Piece 
-(22684,9518,1,1,1,400),-- Sealed Dynasty Boots 
+(22684,9538,1,1,1,800),-- Sealed Dynasty Leather Glove Piece
 (22684,9534,1,1,1,400),-- Sealed Dynasty Boot Piece 
 (22684,9533,1,1,1,400),-- Sealed Dynasty Gauntlet Piece
 (22685,57,768,1506,0,700000),-- Adena
