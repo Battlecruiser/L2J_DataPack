@@ -774,14 +774,20 @@
 	</skill>
 	<skill id="537" levels="1" name="Spoil Bomb">
 		<!-- TODO: Needs core-side support for TimeSkillTrigger effect -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1800" />
+		<set name="magicLvl" val="79" />
+		<set name="mpConsume" val="72" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="15000" />
+		<set name="skillRadius" val="100" /> <!-- Guess -->
+		<set name="skillType" val="SPOIL" />
+		<set name="target" val="TARGET_AREA" />
 		<for>
-			<!-- effect name="TimeSkillTrigger" time="20" noicon="1" val="0" triggeredId="5043" triggeredLevel="1" / -->
+			<effect name="Spoil" time="10" val="0" />
+			<!-- effect name="TimeSkillTrigger" time="10" noicon="1" val="0" triggeredId="5043" triggeredLevel="1" / -->
 		</for>
 	</skill>
 	<skill id="538" levels="1" name="Final Form">
