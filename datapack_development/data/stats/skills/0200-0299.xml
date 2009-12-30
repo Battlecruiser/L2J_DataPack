@@ -1886,39 +1886,40 @@
 		<set name="isCubic" val="true" />
 	</skill>
 	<skill id="279" levels="5" name="Lightning Strike" enchantLevels1="30" enchantLevels2="30">
+		<!-- TODO: Needs core-side support for TimeSkillTrigger effect -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
-		<table name="#enchantPower"> 109 109 110 111 111 112 113 113 114 115 115 116 116 117 118 118 119 120 120 121 122 122 123 124 124 125 125 126 127 127 </table>
 		<table name="#enchantMpConsume"> 100 98 97 96 95 93 92 90 88 87 86 85 83 81 80 78 77 76 75 73 71 70 68 67 66 65 62 61 60 58 </table>
+		<table name="#enchantPower"> 109 109 110 111 111 112 113 113 114 115 115 116 116 117 118 118 119 120 120 121 122 122 123 124 124 125 125 126 127 127 </table>
+		<table name="#magicLvl"> 58 62 66 70 74 </table>
+		<table name="#mpConsume"> 64 69 73 78 82 </table>
+		<table name="#mpInitialConsume"> 16 18 20 20 21 </table>
+		<table name="#power"> 82 89 96 102 108 </table>
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="3000" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="15000" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#enchantPower" />
-		<enchant2 name="mpConsume" val="#enchantMpConsume" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<table name="#mpInitialConsume"> 16 18 20 20 21 </table>
-		<table name="#mpConsume"> 64 69 73 78 82 </table>
-		<table name="#magicLvl"> 58 62 66 70 74 </table>
-		<table name="#power"> 82 89 96 102 108 </table>
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="lvlDepend" val="1" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="reuseDelay" val="15000" />
-		<set name="hitTime" val="3000" />
-		<set name="skillType" val="MDAM" />
-		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="400" />
-		<set name="isDebuff" val="true" />
-		<set name="effectRange" val="900" />
+		<enchant2 name="mpConsume" val="#enchantMpConsume" />
 		<for>
 			<effect name="Debuff" time="15" val="0" effectPower="40" effectType="DEBUFF">
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />
 			</effect>
-			<!-- TODO: This Paralize effect should be in the skill 6090 -->
-			<effect name="Paralyze" time="10" noicon="1" val="0" effectPower="40" effectType="PARALYZE" />
+			<!-- effect name="TimeSkillTrigger" time="20" noicon="1" val="0" triggeredId="6090" triggeredLevel="1" / -->
+			<effect name="Paralyze" time="10" noicon="1" val="0" effectPower="40" effectType="PARALYZE" /> <!-- Temp Fix -->
 		</for>
 	</skill>
 	<skill id="280" levels="37" name="Burning Fist" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30">
