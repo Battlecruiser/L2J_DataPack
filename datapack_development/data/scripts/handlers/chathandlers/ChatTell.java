@@ -79,7 +79,7 @@ public class ChatTell implements IChatHandler
 				activeChar.sendMessage("Player is in offline mode.");
 				return;
 			}
-			if (!BlockList.isBlocked(receiver, activeChar))
+			if (!receiver.isSilenceMode() && !BlockList.isBlocked(receiver, activeChar))
 			{
 				receiver.sendPacket(cs);
 				activeChar.sendPacket(new CreatureSay(activeChar.getObjectId(), type, "->" + receiver.getName(), text));
