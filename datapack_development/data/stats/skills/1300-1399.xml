@@ -1383,10 +1383,10 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="666" />
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="4" stackType="hit_up">
+			<effect name="Buff" time="1200" val="0" stackOrder="90" stackType="hit_up">
 				<add order="0x40" stat="accCombat" val="4" />
 			</effect>
-			<effect name="Buff" time="1200" val="0" noicon="1" stackOrder="1.3" stackType="critDamEvas">
+			<effect name="Buff" time="1200" val="0" noicon="1" stackOrder="90" stackType="critDamEvas">
 				<mul order="0x30" stat="critDamEvas" val="1.3" />
 			</effect>
 		</for>
@@ -1403,10 +1403,10 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="666" />
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="1.75" stackType="ma_up">
+			<effect name="Buff" time="1200" val="0" stackOrder="90" stackType="ma_up">
 				<mul order="0x30" stat="mAtk" val="1.75" />
 			</effect>
-			<effect name="Buff" time="1200" noicon="1" val="0" stackOrder="1.3" stackType="MagicDefUp">
+			<effect name="Buff" time="1200" noicon="1" val="0" stackOrder="90" stackType="MagicDefUp">
 				<mul order="0x30" stat="mDef" val="1.3" />
 			</effect>
 		</for>
