@@ -34569,7 +34569,7 @@ INSERT INTO `droplist` VALUES
 (25431,9817,1,3,100,250000),-- Flamestone Golem (44)
 
 -- Angelic Essence
-(25064,9819,1,3,100,250000),-- Wizard of Storm Teruk (40)
+(25064,9818,1,3,100,250000),-- Wizard of Storm Teruk (40)
 (25487,9818,1,2,100,250000),-- Water Spirit Lian (40)
 (25010,9818,2,7,100,250000),-- Furious Thieles (55)
 (25070,9818,1,4,100,250000),-- Enchanted Forest Watcher Ruell (55)
