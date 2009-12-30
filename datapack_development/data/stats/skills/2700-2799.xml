@@ -751,10 +751,10 @@
 			<player flyMounted="True" />
 		</cond>
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="1.15" stackType="attack_time_down">
+			<effect name="Buff" time="1200" val="0" stackOrder="90" stackType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="1.15" />
 			</effect>
-			<effect name="Buff" time="1200" val="0" stackOrder="1.23" stackType="casting_time_down" noicon="1">
+			<effect name="Buff" time="1200" val="0" stackOrder="90" stackType="casting_time_down" noicon="1">
 				<mul order="0x30" stat="mAtkSpd" val="1.23" />
 			</effect>
 		</for>
