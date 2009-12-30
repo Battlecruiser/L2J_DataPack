@@ -552,13 +552,28 @@
 		</for>
 	</skill>
 	<skill id="835" levels="4" name="Imbue Seed of Destruction">
-		<!-- duration is 20 seconds -->
-		<set name="power" val="80" /> <!-- Base Land Rate -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- TODO: Needs core-side support for TimeSkillTrigger effect -->
+		<table name="#mdot"> 76 83 83 83 </table>
+		<table name="#magicLvl"> 68 70 72 74 </table>
+		<!-- table name="#triggeredLevel"> 1 2 3 4 </table -->
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1800" />
+		<set name="isDebuff" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10112" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="30" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="15000" />
+		<set name="skillType" val="MDOT" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect count="7" name="ManaDamOverTime" time="3" val="#mdot" abnormal="poison" />
+			<!-- effect name="TimeSkillTrigger" time="20" noicon="1" val="0" triggeredId="5697" triggeredLevel="#triggeredLevel" / -->
+			<effect name="SilenceMagicPhysical" time="10" noicon="1" val="0" effectPower="40" effectType="MUTE" /> <!-- Temp Fix -->
+		</for>
 	</skill>
 	<skill id="836" levels="3" name="Oblivion Trap">
 		<set name="target" val="TARGET_NONE" />

@@ -1494,8 +1494,8 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
-			<!-- TODO: This Paralize effect should be in the skill 6092 -->
-			<effect name="Paralyze" time="9" val="0" effectPower="20" effectType="PARALYZE" />
+			<!-- effect name="ChanceSkillTrigger" time="1" val="0" triggeredId="6092" triggeredLevel="1" chanceType="ON_HIT" activationChance="40" / -->
+			<effect name="Paralyze" time="9" val="0" effectPower="40" effectType="PARALYZE" /> <!-- Temp Fix -->
 		</for>
 	</skill>
 	<skill id="792" levels="1" name="Betrayal Mark">
