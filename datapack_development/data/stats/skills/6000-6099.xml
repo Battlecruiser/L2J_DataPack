@@ -545,10 +545,10 @@
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
-		<set name="skillType" val="PARALYZE" />
+		<set name="skillType" val="STUN" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Paralyze" time="9" val="0" />
+			<effect name="Stun" time="9" val="0" stackOrder="1" stackType="Stun" />
 		</for>
 	</skill>
 	<skill id="6093" levels="1" name="Panther Hide">
