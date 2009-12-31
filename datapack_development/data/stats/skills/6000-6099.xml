@@ -352,11 +352,9 @@
 		<for>
 			<effect name="Buff" time="8" val="0">
 				<mul order="0x30" stat="cAtk" val="2">
-					<and>
-						<not>
-							<using kind="Bow,Crossbow" />
-						</not>
-					</and>
+					<not>
+						<using kind="Bow,Crossbow" />
+					</not>
 				</mul>
 			</effect>
 		</for>
