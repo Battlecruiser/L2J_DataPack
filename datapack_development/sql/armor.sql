@@ -824,7 +824,7 @@ INSERT INTO `armor` VALUES
 (6839,'Circlet of Giran','','face','false','none',10,'wood','none',0,-1,-1,0,0,0,500000,0,'true','false','true','false','true','0-0','3633-1;'),
 (6840,'Circlet of Aden','','face','false','none',10,'wood','none',0,-1,-1,0,0,0,500000,0,'true','false','true','false','true','0-0','3633-2;'),
 (6841,'The Lord\'s Crown','','face','false','none',10,'wood','none',0,-1,-1,0,0,0,0,0,'false','false','true','false','true','0-0','3632-1;3633-2;'),
-(6842,'Wings of Destiny Circlet','','face','false','none',10,'wood','none',0,-1,-1,0,0,0,0,0,'false','false','true','false','true','0-0','0-0;'),
+(6842,'Wings of Destiny Circlet','','face','false','none',10,'wood','none',0,-1,-1,0,0,0,0,0,'false','false','true','false','false','0-0','0-0;'),
 (6843,'Cat Ear','','hair','false','none',10,'wood','none',0,-1,-1,0,0,0,500000,0,'true','true','true','true','true','0-0','0-0;'),
 (6844,'Lady\'s Hair Pin','','hair','false','none',10,'wood','none',0,-1,-1,0,0,0,500000,0,'true','true','true','true','true','0-0','0-0;'),
 (6845,'Pirate\'s Eye Patch','','face','false','none',10,'wood','none',0,-1,-1,0,0,0,500000,0,'true','true','true','true','true','0-0','0-0;'),
