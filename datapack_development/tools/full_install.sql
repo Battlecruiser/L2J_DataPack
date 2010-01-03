@@ -65,6 +65,7 @@ DROP TABLE IF EXISTS character_quest_global_data;
 DROP TABLE IF EXISTS character_quests;
 DROP TABLE IF EXISTS character_raid_points;
 DROP TABLE IF EXISTS character_recipebook;
+DROP TABLE IF EXISTS character_recipeshoplist;
 DROP TABLE IF EXISTS character_recommends;
 DROP TABLE IF EXISTS character_shortcuts;
 DROP TABLE IF EXISTS character_skills_save;
