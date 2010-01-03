@@ -271,6 +271,8 @@ public class AdminAdmin implements IAdminCommandHandler
 					activeChar.sendMessage("All Quests have been reloaded");
 				}
 				
+				activeChar.sendMessage("WARNING: There are several known issues regarding this feature. Reloading server data during runtime is STRONGLY NOT RECOMMENDED for live servers, just for developing environments.");
+				
 			}
 			catch (Exception e)
 			{
