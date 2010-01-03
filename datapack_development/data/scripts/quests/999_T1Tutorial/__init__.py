@@ -74,10 +74,11 @@ TALKS={
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr): 
-     if not Config.DISABLE_TUTORIAL :
-         JQuest.__init__(self,id,name,descr)
+    JQuest.__init__(self,id,name,descr)
 
  def onAdvEvent(self,event,npc,player):
+    if Config.DISABLE_TUTORIAL :
+        return
     st = player.getQuestState(qn)
     if not st: return
     htmltext = event
@@ -134,6 +135,8 @@ class Quest (JQuest) :
     return htmltext
 
  def onFirstTalk (self,npc,player):
+   if Config.DISABLE_TUTORIAL :
+     return
    qs = player.getQuestState(qnTutorial)
    if not qs : 
       npc.showChatWindow(player)
@@ -225,6 +228,8 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill(self,npc,player,isPet):
+   if Config.DISABLE_TUTORIAL :
+     return
    st = player.getQuestState(qn)
    if not st : return
    qs = st.getPlayer().getQuestState(qnTutorial)
