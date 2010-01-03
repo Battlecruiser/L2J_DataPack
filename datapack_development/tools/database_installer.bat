@@ -722,6 +722,7 @@ character_quest_global_data.sql
 character_quests.sql
 character_raid_points.sql
 character_recipebook.sql
+character_recipeshoplist.sql
 character_recommends.sql
 character_shortcuts.sql
 character_skills.sql
