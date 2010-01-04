@@ -1494,8 +1494,8 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
-			<!-- TODO: This Stun effect should be in the skill 6092 -->
-			<effect name="Stun" time="9" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="Stun" />
+			<!-- TODO: This Paralyze effect should be in the skill 6092 -->
+			<effect name="Paralyze" time="9" val="0" effectPower="40" effectType="PARALYZE" /> <!-- Temp Fix -->
 		</for>
 	</skill>
 	<skill id="792" levels="1" name="Betrayal Mark">
