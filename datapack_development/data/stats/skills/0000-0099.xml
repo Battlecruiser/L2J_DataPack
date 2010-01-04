@@ -297,7 +297,7 @@
 		<set name="itemConsumeId" val="1458" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="4000" />
+		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="6000" />
 		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
@@ -996,7 +996,7 @@
 		<set name="target" val="TARGET_UNDEAD" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
-		<set name="reuseDelay" val="2000" />
+		<set name="reuseDelay" val="1000" />
 		<set name="hitTime" val="1900" />
 		<set name="skillType" val="MDAM" />
 		<set name="isMagic" val="true" />
@@ -1372,7 +1372,7 @@
 	<skill id="80" levels="1" name="Detect Beast Weakness">
 		<set name="mpConsume" val="24" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="2000" />
+		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1540,7 +1540,7 @@
 	<skill id="87" levels="1" name="Detect Animal Weakness">
 		<set name="mpConsume" val="18" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="2000" />
+		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1554,7 +1554,7 @@
 	<skill id="88" levels="1" name="Detect Dragon Weakness">
 		<set name="mpConsume" val="27" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="2000" />
+		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1770,7 +1770,7 @@
 		<table name="#mpConsume"> 35 38 40 42 43 45 46 48 49 50 51 </table>
 		<table name="#magicLvl"> 52 55 58 60 62 64 66 68 70 72 74 </table>
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="40" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="lvlDepend" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_AREA_UNDEAD" />

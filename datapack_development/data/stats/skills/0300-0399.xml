@@ -372,7 +372,7 @@
 		<set name="weaponsAllowed" val="32" /> <!-- Bow -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="60000" />
+		<set name="reuseDelay" val="75000" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -941,7 +941,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
-		<set name="reuseDelay" val="7000" />
+		<set name="reuseDelay" val="8000" />
 		<set name="overHit" val="true" />
 		<set name="baseCritRate" val="15" />
 		<set name="SSBoost" val="2.0" />
@@ -958,7 +958,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
-		<set name="reuseDelay" val="5000" />
+		<set name="reuseDelay" val="4000" />
 		<set name="overHit" val="true" />
 		<set name="condition" val="16" />
 		<set name="lethal1" val="5" />
@@ -1153,7 +1153,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="overHit" val="true" />
 		<set name="SSBoost" val="2.0" />
-		<set name="reuseDelay" val="20000" />
+		<set name="reuseDelay" val="15000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1284,7 +1284,7 @@
 		<set name="weaponsAllowed" val="262160" /> <!-- Dagger/Dual Daggers -->
 		<set name="magicLvl" val="77" />
 		<set name="mpConsume" val="35" />
-		<set name="power" val="40" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="AGGREDUCE_CHAR" />
 		<set name="lvlDepend" val="1" />
