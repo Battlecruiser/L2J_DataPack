@@ -98,31 +98,28 @@ class Quest (JQuest) :
        if not amount :
           htmltext = "30754-06a.htm"
        else:
-          if st.getRandom(SPECIAL)>=amount :
-            st.giveItems(ADENA,amount*60)
-          else :
-            htmltext="30754-10.htm"
-            st.set("ok","1")
-            st.set("amount",str(amount))
+          st.giveItems(ADENA,amount*60)
           st.takeItems(ARTICLES_DEAD_HEROES,-1)
-     elif event == "30754-11.htm" and cond == 1 :
-         if st.getInt("ok") != 1:
-            htmltext=default
-         else :
-            random = st.getRandom(100)
-            st.set("cond","2")
-            st.unset("ok")
-            if random < 25 :
-               htmltext = "30754-12.htm"
-               st.giveItems(OLD_KEY,1)
-            elif random < 50 :
-               htmltext = "30754-13.htm"
-               st.giveItems(OLD_HILT,1)
-            elif random < 75 :
-               htmltext = "30754-14.htm"
-               st.giveItems(OLD_TOTEM,1)
-            else :
-               st.giveItems(CRUCIFIX,1)
+          random = st.getRandom(1000)
+          if random < 10 :
+             htmltext = "30754-12.htm"
+             st.giveItems(OLD_KEY,1)
+             st.set("cond","2")
+          elif random < 20 :
+             htmltext = "30754-13.htm"
+             st.giveItems(OLD_HILT,1)
+             st.set("cond","2")
+          elif random < 30 :
+             htmltext = "30754-14.htm"
+             st.giveItems(OLD_TOTEM,1)
+             st.set("cond","2")
+          elif random < 40 :
+             htmltext = "30754-15.htm"
+             st.giveItems(CRUCIFIX,1)
+             st.set("cond","2")
+          else :
+             htmltext = "30754-16.htm"
+             st.set("cond","1")
      return htmltext
 
  def onTalk (self,npc,player):
@@ -147,35 +144,13 @@ class Quest (JQuest) :
         if amount :
            htmltext = "30754-05.htm"
         else :
-           htmltext = "30754-09.htm"
+           htmltext = "30754-04.htm"
      elif cond==2 :
         if npcId == GILMORE :
           htmltext="30754-15.htm"
         elif rewards(st,npcId) :
            htmltext=str(npcId)+"-01.htm"
-           st.set("cond","3")
            st.playSound("ItemSound.quest_middle")
-     elif cond==3 :
-       if npcId==GILMORE:
-         amt=st.getInt("amount")
-         mission=st.getInt("mission")
-         bonus = 0
-         if mission == 1 :
-            bonus = 1500
-         elif mission == 2 :
-            st.giveItems(4044,1)
-         elif mission == 3 :
-            st.giveItems(4043,1)
-         elif mission == 4 :
-            st.giveItems(4042,1)
-         if amt:
-            st.unset("amount")
-            st.giveItems(ADENA,amt*50+bonus)
-         htmltext="30754-16.htm"
-         st.set("cond","1")
-         st.unset("mission")
-       else :
-         htmltext = str(npcId)+"-02.htm"
      return htmltext
 
  def onKill(self,npc,player,isPet):
