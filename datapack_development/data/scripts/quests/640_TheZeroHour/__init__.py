@@ -13,7 +13,7 @@ qn = "640_TheZeroHour"
 Kahman = 31554
 
 #MONSTERS
-MONSTERS = range(22105,22121)
+MONSTERS = range(22105,22112)+range(22113,22120)+[22121]
 
 #ITEMS
 Fang = 8085
