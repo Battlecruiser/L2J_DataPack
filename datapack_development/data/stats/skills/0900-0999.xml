@@ -458,7 +458,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<for>
-			<effect count="10" name="DamOverTime" val="#dot" abnormal="flame" effectType="DOT" effectPower="50" />
+			<effect count="10" name="DamOverTime" val="#dot" abnormal="flame" effectPower="50" effectType="DOT" />
 		</for>
 	</skill>
 	<skill id="928" levels="1" name="Duel Blow">
