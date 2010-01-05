@@ -120,9 +120,7 @@ class Quest (JQuest) :
            st.set("cond","3")
            st.startQuestTimer("poison_timer",3600000)
            st.addNotifyOfDeath(player)
-           skill = SkillTable.getInstance().getInfo(4082,1)
-           npc.setTarget(player)
-           npc.doCast(skill)
+           SkillTable.getInstance().getInfo(4082,1).getEffects(npc,player);
        elif event == "poison_timer" :
            st.exitQuest(1)
            if DEBUG :
