@@ -35,7 +35,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />
-		<set name="power" val="35" />
+		<set name="power" val="35" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillRadius" val="200" />
 		<set name="element" val="0" /> <!-- Fire -->
@@ -117,7 +117,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="20" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="reuseDelay" val="8000" />
+		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="CONFUSE_MOB_ONLY" />
 		<set name="isDebuff" val="true" />
