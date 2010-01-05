@@ -69,7 +69,7 @@ class Quest (JQuest) :
                 if st2 and st2.getState() == State.COMPLETED :
                     htmltext = "31554-01.htm"
                 else :
-                    htmltext = "31554-00.htm" #todo: missing retail html
+                    htmltext = "31554-10.htm"
             else :
                 htmltext = "31554-00.htm" 
         elif st.getQuestItemsCount(Fang) >= 1 :
