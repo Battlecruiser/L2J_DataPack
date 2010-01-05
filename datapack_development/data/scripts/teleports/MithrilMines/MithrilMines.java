@@ -14,10 +14,6 @@
  */
 package teleports.MithrilMines;
 
-import java.util.Map;
-
-import javolution.util.FastMap;
-
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -25,8 +21,16 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 
 public class MithrilMines extends Quest
 {
-	private static Map<String, Object[]> data = new FastMap<String, Object[]>();
-
+	private static final int[][] data = 
+	{
+		{171946, -173352, 3440},
+		{175499, -181586, -904},
+		{173462, -174011, 3480},
+		{179299, -182831, -224},
+		{178591, -184615, 360},
+		{175499, -181586, -904}
+	};
+	
 	private final static int npcId = 32652;
 
 	public MithrilMines(int questId, String name, String descr)
@@ -35,30 +39,19 @@ public class MithrilMines extends Quest
 		addStartNpc(npcId);
 		addFirstTalkId(npcId);
 		addTalkId(npcId);
-
-		loadData();
 	}
-
-	private void loadData()
-	{
-		data.put("1", new Object[]{171946, -173352, 3440});
-		data.put("2", new Object[]{175499, -181586, -904});
-		data.put("3", new Object[]{173462, -174011, 3480});
-		data.put("4", new Object[]{179299, -182831, -224});
-		data.put("5", new Object[]{178591, -184615, 360});
-		data.put("6", new Object[]{175499, -181586, -904});
-	}
-
+	
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
 		QuestState st = player.getQuestState(getName());
 
-		if (data.containsKey(event))
+		int loc = Integer.parseInt(event) - 1;
+		if (data.length > loc)
 		{
-			int x = (Integer) data.get(event)[0];
-			int y = (Integer) data.get(event)[1];
-			int z = (Integer) data.get(event)[2];
+			int x = data[loc][0];
+			int y = data[loc][1];
+			int z = data[loc][2];
 
 			player.teleToLocation(x, y, z);
 			st.exitQuest(true);
@@ -74,11 +67,11 @@ public class MithrilMines extends Quest
 		if (st == null)
 			st = newQuestState(player);
 
-		if (npc.isInsideRadius(173147, -173762, 50, true))
+		if (npc.isInsideRadius(173147, -173762, L2Npc.INTERACTION_DISTANCE, true))
 			htmltext = "32652-01.htm";
-		else if (npc.isInsideRadius(181941, -174614, 50, true))
+		else if (npc.isInsideRadius(181941, -174614, L2Npc.INTERACTION_DISTANCE, true))
 			htmltext = "32652-02.htm";
-		else if (npc.isInsideRadius(179560, -182956, 50, true))
+		else if (npc.isInsideRadius(179560, -182956, L2Npc.INTERACTION_DISTANCE, true))
 			htmltext = "32652-03.htm";
 
 		return htmltext;
