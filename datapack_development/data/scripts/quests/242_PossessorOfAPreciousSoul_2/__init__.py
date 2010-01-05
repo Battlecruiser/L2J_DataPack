@@ -81,10 +81,10 @@ class Quest (JQuest) :
    elif event == "1" :
      npc.getSpawn().stopRespawn();
      npc.deleteMe();
-     st.addSpawn(PURE_UNICORN,npc,False)
+     st.addSpawn(PURE_UNICORN,85884,-76588,-3470,False)
    elif event == "2" :
      npc.doDie(npc)
-     npc2 = st.addSpawn(FALLEN_UNICORN,npc,False)
+     npc2 = st.addSpawn(FALLEN_UNICORN,85884,-76588,-3470,False)
      time.sleep(1000)
      npc2.getSpawn().startRespawn();
    return htmltext
