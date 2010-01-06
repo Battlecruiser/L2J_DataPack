@@ -1096,7 +1096,7 @@ title L2JDP installer - Script execution finished
 cls
 echo.
 echo L2JDP database_installer version 0.2.2
-echo (C) 2007-2009 L2J Datapack Team
+echo (C) 2007-2010 L2J Datapack Team
 echo database_installer comes with ABSOLUTELY NO WARRANTY;
 echo This is free software, and you are welcome to redistribute it
 echo under certain conditions; See the file gpl.txt for further
