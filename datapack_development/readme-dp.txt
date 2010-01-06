@@ -1,4 +1,4 @@
-Copyright 2005-2009 L2J-DataPack team
+Copyright 2005-2010 L2J-DataPack team
 
 This file is part of the L2J-DataPack.
 
@@ -24,7 +24,7 @@ Wiki: http://www.l2jdp.com/trac/wiki
 Download: Our wiki contain directives for you to get the latest datapack 
 revision either from nightly builds or via Subversion.
 
-IRC: irc.freenode.net #l2j-datapack
+IRC: irc.freenode.net #l2j #l2j-datapack
 
 L2J-Datapack is *NOT* L2J. L2J is *NOT* L2J-Datapack. Comments, questions, 
 suggestions etc. should be directed to the appropriate forums.
@@ -72,5 +72,5 @@ an update after some certain changeset, you should run the relevant SQL sequence
 
 -the l2j-datapack team
 
-L2JDP, Copyright (C) 2005-2009 L2JDP comes with ABSOLUTELY NO WARRANTY. This is 
+L2JDP, Copyright (C) 2005-2010 L2JDP comes with ABSOLUTELY NO WARRANTY. This is 
 free software, and you are welcome to redistribute it under certain conditions.
