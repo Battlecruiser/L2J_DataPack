@@ -1414,7 +1414,7 @@
 			<player active_effect_id_lvl="5563,3" />
 		</cond>
 		<for>
-			<effect count="20" name="HealOverTime" time="3" val="150">
+			<effect count="20" name="HealOverTime" time="3" val="150" stackOrder="1" stackType="touch">
 				<mul order="0x30" stat="cancelVuln" val="0.4" />
 				<mul order="0x30" stat="debuffVuln" val="0.7" />
 				<mul order="0x30" stat="gainHp" val="1.3" />

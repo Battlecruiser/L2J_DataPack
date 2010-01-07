@@ -901,7 +901,7 @@
 		<set name="hitTime" val="1800" />
 		<set name="aggroPoints" val="811" />
 		<for>
-			<effect count="40" name="HealOverTime" time="3" val="150">
+			<effect count="40" name="HealOverTime" time="3" val="150" stackOrder="2" stackType="touch">
 				<mul order="0x30" stat="cancelVuln" val="0" />
 				<mul order="0x30" stat="debuffVuln" val="0.7" />
 				<mul order="0x30" stat="gainHp" val="1.3" />
