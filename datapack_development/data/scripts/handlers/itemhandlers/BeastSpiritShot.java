@@ -66,7 +66,15 @@ public class BeastSpiritShot implements IItemHandler
 		
 		int itemId = item.getItemId();
 		boolean isBlessed = (itemId == 6647 || itemId == 20334);
-		int shotConsumption = 1; // TODO: this should be readed from npc.sql(summons)/pets_stats.sql tables
+		short shotConsumption = activePet.getSpiritShotsPerHit();
+		
+		long shotCount = item.getCount();
+		if (!(shotCount > shotConsumption))
+		{
+			// Not enough SpiritShots to use.
+			activeOwner.sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_SPIRITHOTS_FOR_PET));
+			return;
+		}
 		
 		L2ItemInstance weaponInst = null;
 		
@@ -88,18 +96,6 @@ public class BeastSpiritShot implements IItemHandler
 			if (weaponInst.getChargedSpiritshot() != L2ItemInstance.CHARGED_NONE)
 			{
 				// SpiritShots are already active.
-				return;
-			}
-			long shotCount = item.getCount();
-			if (shotConsumption == 0)
-			{
-				activeOwner.sendPacket(new SystemMessage(SystemMessageId.CANNOT_USE_SPIRITSHOTS));
-				return;
-			}
-			if (!(shotCount > shotConsumption))
-			{
-				// Not enough SpiritShots to use.
-				activeOwner.sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_SPIRITHOTS_FOR_PET));
 				return;
 			}
 			
