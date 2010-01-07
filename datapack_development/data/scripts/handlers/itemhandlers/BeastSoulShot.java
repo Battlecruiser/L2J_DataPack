@@ -69,7 +69,16 @@ public class BeastSoulShot implements IItemHandler
 		}
 		
 		int itemId = item.getItemId();
-		int shotConsumption = 1; // TODO: this should be readed from npc.sql(summons)/pets_stats.sql tables
+		short shotConsumption = activePet.getSoulShotsPerHit();
+		long shotCount = item.getCount();
+		
+		if (!(shotCount > shotConsumption))
+		{
+			// Not enough Soulshots to use.
+			activeOwner.sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_SOULSHOTS_FOR_PET));
+			return;
+		}
+		
 		L2ItemInstance weaponInst = null;
 		
 		if (activePet instanceof L2PetInstance)
@@ -87,18 +96,6 @@ public class BeastSoulShot implements IItemHandler
 			if (weaponInst.getChargedSoulshot() != L2ItemInstance.CHARGED_NONE)
 			{
 				// SoulShots are already active.
-				return;
-			}
-			long shotCount = item.getCount();
-			if (shotConsumption == 0)
-			{
-				activeOwner.sendPacket(new SystemMessage(SystemMessageId.CANNOT_USE_SOULSHOTS));
-				return;
-			}
-			if (!(shotCount > shotConsumption))
-			{
-				// Not enough Soulshots to use.
-				activeOwner.sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_SOULSHOTS_FOR_PET));
 				return;
 			}
 			weaponInst.setChargedSoulshot(L2ItemInstance.CHARGED_SOULSHOT);
