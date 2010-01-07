@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.util.Rnd;
 
@@ -119,33 +118,6 @@ public class Kamaloka extends Quest
 		{ -49805, -206139,  -8117 },
 		{ -10700, -174882, -10936 },
 		{ -10700, -174882, -10936 }
-	};
-
-	/*
-	 * Teleport points for returning back
-	 * 
-	 * x, y, z
-	 */
-	private static final int[][] RETURN_TELEPORTS =
-	{
-		{ -13870,  123767, -3117 },
-		{ -13870,  123767, -3117 },
-		{ -13870,  123767, -3117 },
-		{  18149,  146024, -3100 },
-		{  18149,  146024, -3100 },
-		{  18149,  146024, -3100 },
-		{ 108449,  221607, -3598 },
-		{ 108449,  221607, -3598 },
-		{ 108449,  221607, -3598 },
-		{  80985,   56373, -1560 },
-		{  80985,   56373, -1560 },
-		{  80985,   56373, -1560 },
-		{  85945, -142176, -1341 },
-		{  85945, -142176, -1341 },
-		{  85945, -142176, -1341 },
-		{  42673,  -47988,  -797 },
-		{  42673,  -47988,  -797 },
-		{  42673,  -47988,  -797 }
 	};
 
 	/*
@@ -428,7 +400,7 @@ public class Kamaloka extends Quest
 	 * 
 	 * @return true if party allowed to enter
 	 */
-	private boolean checkConditions(L2PcInstance player, int index)
+	private static final boolean checkConditions(L2PcInstance player, int index)
 	{
 		final L2Party party = player.getParty();
 		// player must be in party
@@ -503,7 +475,7 @@ public class Kamaloka extends Quest
 	 * 
 	 * @param ch player
 	 */
-	private void removeBuffs(L2Character ch)
+	private static final void removeBuffs(L2Character ch)
 	{
 		for (L2Effect e : ch.getAllEffects())
 		{
@@ -539,7 +511,7 @@ public class Kamaloka extends Quest
 	 * @param coords x,y,z
 	 * @param instanceId
 	 */
-	private void teleportPlayer(L2PcInstance player, int[] coords, int instanceId)
+	private static final void teleportPlayer(L2PcInstance player, int[] coords, int instanceId)
 	{
 		player.setInstanceId(instanceId);
 		player.teleToLocation(coords[0], coords[1], coords[2], true);
@@ -557,7 +529,7 @@ public class Kamaloka extends Quest
 	 * @param player party leader
 	 * @param index (0-17) kamaloka index in arrays
 	 */
-	protected synchronized void enterInstance(L2PcInstance player, int index)
+	private final synchronized void enterInstance(L2PcInstance player, int index)
 	{
 		int templateId;
 		try
@@ -610,7 +582,8 @@ public class Kamaloka extends Quest
 			// set name for the kamaloka
 			inst.setName(InstanceManager.getInstance().getInstanceIdName(templateId));
 			// set return location
-			inst.setSpawnLoc(RETURN_TELEPORTS[index]);
+			final int[] returnLoc = { player.getX(), player.getY(), player.getZ() };
+			inst.setSpawnLoc(returnLoc);
 			// disable summon friend into instance
 			inst.setAllowSummon(false);
 			// set duration and empty destroy time
@@ -647,7 +620,7 @@ public class Kamaloka extends Quest
 	 * Called on instance finish and handles reenter time for instance
 	 * @param world instanceWorld
 	 */
-	private void finishInstance(InstanceWorld world)
+	private static final void finishInstance(InstanceWorld world)
 	{
 		if (world instanceof KamaWorld)
 		{
@@ -684,7 +657,7 @@ public class Kamaloka extends Quest
 	 * @param world instanceWorld
 	 */
 	@SuppressWarnings("all")
-	private void spawnKama(KamaWorld world)
+	private final void spawnKama(KamaWorld world)
 	{
 		int[] npcs;
 		int[][] spawns;
@@ -755,7 +728,7 @@ public class Kamaloka extends Quest
 	/**
 	 * Handles only player's enter, single parameter - integer kamaloka index
 	 */
-	public String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
+	public final String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
 	{
 		if (npc == null)
 			return "";
@@ -773,7 +746,7 @@ public class Kamaloka extends Quest
 	/**
 	 * Talk with captains and using of the escape teleporter
 	 */
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
@@ -803,36 +776,28 @@ public class Kamaloka extends Quest
 			}
 		}
 		else
-		{
-			// captains htmls 
-			NpcHtmlMessage msg = new NpcHtmlMessage(npc.getObjectId());
-			msg.setFile("data/scripts/instances/Kamaloka/" + npcId + ".htm");
-			player.sendPacket(msg);
-		}
+			return npcId + ".htm";
+
 		return "";
 	}
 
 	/**
 	 * Only escape teleporters first talk handled
 	 */
-	public String onFirstTalk (L2Npc npc, L2PcInstance player)
+	public final String onFirstTalk (L2Npc npc, L2PcInstance player)
 	{
 		if (npc.getNpcId() == TELEPORTER)
 		{
-			NpcHtmlMessage msg = new NpcHtmlMessage(npc.getObjectId());
 			if (player.isInParty() && player.getParty().isLeader(player))
-			{
-				msg.setFile("data/scripts/instances/Kamaloka/32496.htm");
-				msg.replace("%objectId%", String.valueOf(npc.getObjectId()));
-			}
+				return "32496.htm";
 			else
-				msg.setFile("data/scripts/instances/Kamaloka/32496-no.htm");
-			player.sendPacket(msg);
+				return "32496-no.htm";
 		}
+
 		return "";
 	}
 
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
 		final InstanceWorld tmpWorld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if (tmpWorld instanceof KamaWorld)
@@ -966,6 +931,6 @@ public class Kamaloka extends Quest
 
 	public static void main(String[] args)
 	{
-		new Kamaloka(-1, "Kamaloka", qn);
+		new Kamaloka(-1, qn, "instances");
 	}	
 }
