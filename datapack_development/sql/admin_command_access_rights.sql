@@ -107,6 +107,7 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_setfame','1'),
 ('admin_character_list','1'),
 ('admin_character_info','1'),
+('admin_debug','1'),
 ('admin_show_characters','1'),
 ('admin_find_character','1'),
 ('admin_current_player','1'),
@@ -383,6 +384,7 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_accept_petition','1'),
 ('admin_reject_petition','1'),
 ('admin_reset_petitions','1'),
+('admin_force_peti','1'),
 
 -- PFORGE
 ('admin_forge','1'),
