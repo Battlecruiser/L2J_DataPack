@@ -16,6 +16,7 @@ package handlers.admincommandhandlers;
 
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.PetitionManager;
+import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -34,7 +35,8 @@ public class AdminPetition implements IAdminCommandHandler
 		"admin_view_petition",
 		"admin_accept_petition",
 		"admin_reject_petition",
-		"admin_reset_petitions"
+		"admin_reset_petitions",
+		"admin_force_peti"
 	};
 	
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
@@ -83,6 +85,29 @@ public class AdminPetition implements IAdminCommandHandler
 				return false;
 			}
 			PetitionManager.getInstance().clearPendingPetitions();
+		}
+		else if (command.startsWith("admin_force_peti"))
+		{
+			try
+			{
+				L2Object targetChar = activeChar.getTarget();
+				if (targetChar == null || !(targetChar instanceof L2PcInstance))
+				{
+					activeChar.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+					return false;
+				}
+				L2PcInstance targetPlayer = (L2PcInstance) targetChar;
+
+				String val = command.substring(15);
+
+				petitionId = PetitionManager.getInstance().submitPetition(targetPlayer, val, 9);
+				PetitionManager.getInstance().acceptPetition(activeChar, petitionId);
+			}
+			catch (StringIndexOutOfBoundsException e)
+			{
+				activeChar.sendMessage("Usage: //force_peti text");
+				return false;
+			}
 		}
 		return true;
 	}
