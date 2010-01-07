@@ -50,7 +50,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 			<add order="0x40" stat="atkCountMax" val="4" />
