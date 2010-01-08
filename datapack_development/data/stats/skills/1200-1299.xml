@@ -411,7 +411,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="80" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="lvlDepend" val="2" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="2000" />
@@ -524,7 +524,7 @@
 		<enchant1 name="npcId" val="#enchantNpcId" />
 		<table name="#mpInitialConsume"> 8 9 11 12 14 16 18 19 21 22 22 23 24 25 26 26 27 28 </table>
 		<table name="#mpConsume"> 31 35 42 48 56 62 69 75 82 85 88 92 95 98 101 104 106 109 </table>
-		<table name="#reuseDelay"> 21600000 21600000 21600000 21600000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 </table>
+		<table name="#reuseDelay"> 5400000 5400000 5400000 5400000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="itemConsumeId" val="1458" />
@@ -2012,7 +2012,7 @@
 		<set name="summonTimeLostIdle" val="500" />
 		<set name="summonTimeLostActive" val="1000" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="4000" />
+		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="15000" />
 		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
@@ -2080,7 +2080,7 @@
 		<set name="itemConsumeId" val="1458" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="4000" />
+		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="6000" />
 		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
