@@ -1,5 +1,4 @@
 alter table weapon add change_weaponId decimal(11,0) NOT NULL default '0';
-
 update weapon set change_weaponId=123 where item_Id=9216;
 update weapon set change_weaponId=5285 where item_Id=9210;
 update weapon set change_weaponId=7880 where item_Id=9211;
