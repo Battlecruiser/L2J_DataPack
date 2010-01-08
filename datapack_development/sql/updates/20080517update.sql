@@ -10,6 +10,5 @@ ALTER TABLE `access_levels` CHANGE `allow_altg` `allowAltg` TINYINT(1) UNSIGNED 
 ALTER TABLE `access_levels` CHANGE `give_damage` `giveDamage` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0;
 ALTER TABLE `access_levels` CHANGE `take_aggro` `takeAggro` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0;
 ALTER TABLE `access_levels` CHANGE `gain_exp` `gainExp` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0;
-
 ALTER TABLE `admin_command_access_rights` CHANGE `admin_command` `adminCommand` VARCHAR(255);
 ALTER TABLE `admin_command_access_rights` CHANGE `access_levels` `accessLevels` VARCHAR(255);

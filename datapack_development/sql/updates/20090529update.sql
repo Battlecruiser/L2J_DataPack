@@ -11,13 +11,11 @@ ALTER TABLE `custom_armor` MODIFY `sellable` varchar(5) NOT NULL default 'false'
 ALTER TABLE `custom_armor` MODIFY `dropable` varchar(5) NOT NULL default 'false';
 ALTER TABLE `custom_armor` MODIFY `destroyable` varchar(5) NOT NULL default 'false';
 ALTER TABLE `custom_armor` MODIFY `tradeable` varchar(5) NOT NULL default 'false';
- 
 ALTER TABLE `custom_armorsets` ADD `mw_legs` SMALLINT UNSIGNED NOT NULL DEFAULT '0';
 ALTER TABLE `custom_armorsets` ADD `mw_head` SMALLINT UNSIGNED NOT NULL DEFAULT '0';
 ALTER TABLE `custom_armorsets` ADD `mw_gloves` SMALLINT UNSIGNED NOT NULL DEFAULT '0';
 ALTER TABLE `custom_armorsets` ADD `mw_feet` SMALLINT UNSIGNED NOT NULL DEFAULT '0';
 ALTER TABLE `custom_armorsets` ADD `mw_shield` SMALLINT UNSIGNED NOT NULL DEFAULT '0';
- 
 ALTER TABLE `custom_etcitem` MODIFY `item_id` decimal(11,0) NOT NULL default '0';
 ALTER TABLE `custom_etcitem` MODIFY `name` varchar(100) NOT NULL default '';
 ALTER TABLE `custom_etcitem` MODIFY `crystallizable` varchar(5) NOT NULL default 'false';
@@ -35,7 +33,6 @@ ALTER TABLE `custom_etcitem` MODIFY `destroyable` varchar(5) NOT NULL default 'f
 ALTER TABLE `custom_etcitem` MODIFY `tradeable` varchar(5) NOT NULL default 'false';
 ALTER TABLE `custom_etcitem` MODIFY `skill` varchar(70) NOT NULL default '0-0;';
 ALTER TABLE `custom_etcitem` MODIFY `html` varchar(5) NOT NULL default 'false';
- 
 ALTER TABLE `custom_weapon` MODIFY `name` varchar(120) NOT NULL default '0';
 ALTER TABLE `custom_weapon` MODIFY`bodypart` varchar(15) NOT NULL default '';
 ALTER TABLE `custom_weapon` MODIFY `crystallizable` varchar(5) NOT NULL default 'false';
