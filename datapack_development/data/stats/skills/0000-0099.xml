@@ -225,7 +225,9 @@
 		<!-- charge values -->
 		<set name="itemConsumeId" val="5589" />
 		<set name="itemConsumeCount" val="3" />
-		<set name="requiredCharges" val="2" />
+		<cond msgId="113" addName="1">
+			<player Charges="2" />
+		</cond>
 	</skill>
 	<skill id="8" levels="8" name="Sonic Focus">
 		<table name="#maxCharges"> 1 2 3 4 5 6 7 8 </table>
@@ -240,6 +242,11 @@
 		<!-- Can be charged up to level 8 -->
 		<set name="numCharges" val="1" />
 		<set name="maxCharges" val="#maxCharges" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player Charges="#maxCharges" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="9" levels="34" name="Sonic Buster" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30" enchantLevels4="30" enchantLevels5="30" enchantLevels6="30">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -285,7 +292,9 @@
 		<!-- charge values -->
 		<set name="itemConsumeId" val="5589" />
 		<set name="itemConsumeCount" val="3" />
-		<set name="requiredCharges" val="2" />
+		<cond msgId="113" addName="1">
+			<player Charges="2" />
+		</cond>
 	</skill>
 	<skill id="10" levels="8" name="Summon Storm Cubic">
 		<table name="#mpInitialConsume"> 7 9 10 11 12 13 13 14 </table>
@@ -448,7 +457,9 @@
 		<!-- charge values -->
 		<set name="itemConsumeId" val="5589" />
 		<set name="itemConsumeCount" val="2" />
-		<set name="requiredCharges" val="2" />
+		<cond msgId="113" addName="1">
+			<player Charges="2" />
+		</cond>
 	</skill>
 	<skill id="18" levels="37" name="Aura of Hate" enchantLevels1="30" enchantLevels2="30">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -814,7 +825,9 @@
 		<!-- charge values -->
 		<set name="itemConsumeId" val="5589" />
 		<set name="itemConsumeCount" val="2" />
-		<set name="requiredCharges" val="2" />
+		<cond msgId="113" addName="1">
+			<player Charges="2" />
+		</cond>
 	</skill>
 	<skill id="36" levels="37" name="Whirlwind" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30" enchantLevels4="30" enchantLevels5="30" enchantLevels6="30">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -1021,6 +1034,11 @@
 		<!-- Can be charged up to Level 8 -->
 		<set name="numCharges" val="1" />
 		<set name="maxCharges" val="#maxCharges" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player Charges="#maxCharges" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="51" levels="1" name="Lure" enchantLevels1="30">
 		<table name="#ench1mpConsume"> 43 43 43 42 42 42 41 41 41 40 40 40 39 39 39 38 38 38 37 37 37 36 36 36 35 35 35 34 34 34 </table>
