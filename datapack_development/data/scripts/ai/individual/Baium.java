@@ -276,26 +276,23 @@ public class Baium extends L2AttackableAIScript
         }
         else if (npcId == ANGELIC_VORTEX)
         {
-            if (GrandBossManager.getInstance().getBossStatus(LIVE_BAIUM) == ASLEEP)
+            if (player.isFlying())
             {
-                if (player.isFlying())
-                {
-                    //print "Player "+player.getName()+" attempted to enter Baium's lair while flying!";
-                    htmltext = "<html><body>Angelic Vortex:<br>You may not enter while flying a wyvern</body></html>";
-                }
-                else if (player.getQuestState("baium").getQuestItemsCount(4295) > 0) // bloody fabric
-                {
-                    player.getQuestState("baium").takeItems(4295,1);
-                    // allow entry for the player for the next 30 secs (more than enough time for the TP to happen)
-                    // Note: this just means 30secs to get in, no limits on how long it takes before we get out.
-                    _Zone.allowPlayerEntry(player,30);
-                    player.teleToLocation(113100,14500,10077);
-                }
-                else
-                    htmltext = "<html><body>Angelic Vortex:<br>You do not have enough items</body></html>";
+                //print "Player "+player.getName()+" attempted to enter Baium's lair while flying!";
+                return "<html><body>Angelic Vortex:<br>You may not enter while flying a wyvern</body></html>";
+            }
+            
+            if (GrandBossManager.getInstance().getBossStatus(LIVE_BAIUM) == ASLEEP
+            		&& player.getQuestState("baium").getQuestItemsCount(4295) > 0) // bloody fabric
+            {
+                player.getQuestState("baium").takeItems(4295,1);
+                // allow entry for the player for the next 30 secs (more than enough time for the TP to happen)
+                // Note: this just means 30secs to get in, no limits on how long it takes before we get out.
+                _Zone.allowPlayerEntry(player,30);
+                player.teleToLocation(113100,14500,10077);
             }
             else
-                htmltext = "<html><body>Angelic Vortex:<br>You may not enter at this time</body></html>";
+            	npc.showChatWindow(player, 1);
         }
         return htmltext;
     }
