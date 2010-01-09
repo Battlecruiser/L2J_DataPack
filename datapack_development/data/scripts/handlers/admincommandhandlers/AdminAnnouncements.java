@@ -20,6 +20,7 @@ import java.util.StringTokenizer;
 
 import javolution.text.TextBuilder;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.Announcements;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
@@ -73,6 +74,8 @@ public class AdminAnnouncements implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_announce_menu"))
 		{
+			if (Config.GM_ANNOUNCER_NAME && command.length() > 20)
+				command += " ("+activeChar.getName()+")";
 			Announcements.getInstance().handleAnnounce(command, 20);
 			Announcements.getInstance().listAnnouncements(activeChar);
 		}
@@ -119,6 +122,8 @@ public class AdminAnnouncements implements IAdminCommandHandler
 		// Command is admin announce
 		else if (command.startsWith("admin_announce"))
 		{
+			if (Config.GM_ANNOUNCER_NAME && command.length() > 15)
+				command += " ("+activeChar.getName()+")";
 			// Call method from another class
 			Announcements.getInstance().handleAnnounce(command, 15);
 		}
