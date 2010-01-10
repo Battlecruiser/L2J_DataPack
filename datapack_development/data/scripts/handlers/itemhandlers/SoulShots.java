@@ -19,7 +19,6 @@ import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ExAutoSoulShot;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.skills.Stats;
@@ -112,16 +111,7 @@ public class SoulShots implements IItemHandler
 			
 			if (!activeChar.destroyItemWithoutTrace("Consume", item.getObjectId(), SSCount, null, false))
 			{
-				if (activeChar.getAutoSoulShot().containsKey(itemId))
-				{
-					activeChar.removeAutoSoulShot(itemId);
-					activeChar.sendPacket(new ExAutoSoulShot(itemId, 0));
-					
-					SystemMessage sm = new SystemMessage(SystemMessageId.AUTO_USE_OF_S1_CANCELLED);
-					sm.addString(item.getItem().getName());
-					activeChar.sendPacket(sm);
-				}
-				else
+				if (!activeChar.disableAutoShot(itemId))
 					activeChar.sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_SOULSHOTS));
 				return;
 			}
