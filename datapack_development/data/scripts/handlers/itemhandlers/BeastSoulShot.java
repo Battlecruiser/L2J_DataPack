@@ -21,7 +21,6 @@ import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ExAutoSoulShot;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Broadcast;
@@ -75,7 +74,8 @@ public class BeastSoulShot implements IItemHandler
 		if (!(shotCount > shotConsumption))
 		{
 			// Not enough Soulshots to use.
-			activeOwner.sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_SOULSHOTS_FOR_PET));
+			if (!activeOwner.disableAutoShot(itemId))
+				activeOwner.sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_SOULSHOTS_FOR_PET));
 			return;
 		}
 		
@@ -104,18 +104,8 @@ public class BeastSoulShot implements IItemHandler
 		// If the player doesn't have enough beast soulshot remaining, remove any auto soulshot task.
 		if (!activeOwner.destroyItemWithoutTrace("Consume", item.getObjectId(), shotConsumption, null, false))
 		{
-			if (activeOwner.getAutoSoulShot().containsKey(itemId))
-			{
-				activeOwner.removeAutoSoulShot(itemId);
-				activeOwner.sendPacket(new ExAutoSoulShot(itemId, 0));
-				
-				SystemMessage sm = new SystemMessage(SystemMessageId.AUTO_USE_OF_S1_CANCELLED);
-				sm.addString(item.getItem().getName());
-				activeOwner.sendPacket(sm);
-				return;
-			}
-			
-			activeOwner.sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_SOULSHOTS));
+			if (!activeOwner.disableAutoShot(itemId))
+				activeOwner.sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_SOULSHOTS_FOR_PET));
 			return;
 		}
 		
