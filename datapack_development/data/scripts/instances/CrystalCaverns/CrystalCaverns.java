@@ -1761,6 +1761,8 @@ public class CrystalCaverns extends Quest
 							else
 							{
 								QuestState st = ((L2PcInstance)character).getQuestState(qn);
+								if (st == null)
+									st = newQuestState((L2PcInstance)character);
 								if (st.getQuestItemsCount(RACE_KEY) == 0)
 									return "";
 								if (world.roomsStatus[zone.getId() - 20104] == 0)
