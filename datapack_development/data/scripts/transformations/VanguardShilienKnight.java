@@ -24,20 +24,24 @@ public class VanguardShilienKnight extends L2Transformation
 	{
 		if (getPlayer().getLevel() > 43)
 		{
-			// Double Strike
-			getPlayer().addSkill(SkillTable.getInstance().getInfo(817, getPlayer().getLevel() - 43), false);
-			// Blade Hurricane
-			getPlayer().addSkill(SkillTable.getInstance().getInfo(815, getPlayer().getLevel() - 43), false);
 			// Dual Weapon Mastery
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(144, getPlayer().getLevel() - 43), false);
-			getPlayer().setTransformAllowedSkills(new int[]{838,5491,817,815,144,28,18,22,33,401,278,289,279});
+			// Blade Hurricane
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(815, getPlayer().getLevel() - 43), false);
+			// Double Strike
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(817, getPlayer().getLevel() - 43), false);
+			// Boost Morale
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(956, getPlayer().getLevel() - 43), false);
+			// Triple Blade Slash
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(958, getPlayer().getLevel() - 43), false);
+			getPlayer().setTransformAllowedSkills(new int[]{18,22,28,33,144,278,279,289,401,815,817,838,956,958,5491});
 		}
 		else
-			getPlayer().setTransformAllowedSkills(new int[]{838,5491,28,18,22,33,401,278,289,279});
-		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false); 
-		// Switch Stance
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(838, 1), false);
+			getPlayer().setTransformAllowedSkills(new int[]{18,22,28,33,278,279,289,401,838,5491});
+			// Switch Stance
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(838, 1), false);
+			// Decrease Bow/Crossbow Attack Speed
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
 	}
 
 	public void onUntransform()
@@ -47,16 +51,20 @@ public class VanguardShilienKnight extends L2Transformation
 
 	public void removeSkills()
 	{
-		// Double Strike
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(817, getPlayer().getLevel() - 43), false);
-		// Blade Hurricane
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(815, getPlayer().getLevel() - 43), false);
 		// Dual Weapon Mastery
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(144, getPlayer().getLevel() - 43), false);
-		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false); 
+		// Blade Hurricane
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(815, getPlayer().getLevel() - 43), false);
+		// Double Strike
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(817, getPlayer().getLevel() - 43), false);
 		// Switch Stance
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(838, 1), false);
+		// Boost Morale
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(956, getPlayer().getLevel() - 43), false);
+		// Triple Blade Slash
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(958, getPlayer().getLevel() - 43), false);
+		// Decrease Bow/Crossbow Attack Speed
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false);
 
 		getPlayer().setTransformAllowedSkills(new int[]{});
 	}
