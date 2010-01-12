@@ -24,20 +24,24 @@ public class VanguardTempleKnight extends L2Transformation
 	{
 		if (getPlayer().getLevel() > 43)
 		{
-			// Power Divide
-			getPlayer().addSkill(SkillTable.getInstance().getInfo(816, getPlayer().getLevel() - 43), false);
-			// Full Swing
-			getPlayer().addSkill(SkillTable.getInstance().getInfo(814, getPlayer().getLevel() - 43), false);
 			// Two handed mastery
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(293, getPlayer().getLevel() - 43), false);
-			getPlayer().setTransformAllowedSkills(new int[]{838,5491,816,814,293,28,18,10,67,449,400,197});
+			// Full Swing
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(814, getPlayer().getLevel() - 43), false);
+			// Power Divide
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(816, getPlayer().getLevel() - 43), false);
+			// Boost Morale
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(956, getPlayer().getLevel() - 43), false);
+			// Guillotine Attack
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(957, getPlayer().getLevel() - 43), false);
+			getPlayer().setTransformAllowedSkills(new int[]{10,18,28,67,197,293,400,449,814,816,838,956,957,5491});
 		}
 		else
-			getPlayer().setTransformAllowedSkills(new int[]{838,5491,28,18,10,67,449,400,197});
-		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false); 
-		// Switch Stance
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(838, 1), false);
+			getPlayer().setTransformAllowedSkills(new int[]{10,18,28,67,197,400,449,838,5491});
+			// Switch Stance
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(838, 1), false);
+			// Decrease Bow/Crossbow Attack Speed
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
 	}
 
 	public void onUntransform()
@@ -47,16 +51,20 @@ public class VanguardTempleKnight extends L2Transformation
 
 	public void removeSkills()
 	{
-		// Power Divide
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(816, getPlayer().getLevel() - 43), false);
-		// Full Swing
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(814, getPlayer().getLevel() - 43), false);
 		// Two handed mastery
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(293, getPlayer().getLevel() - 43), false);
-		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false); 
+		// Full Swing
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(814, getPlayer().getLevel() - 43), false);
+		// Power Divide
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(816, getPlayer().getLevel() - 43), false);
 		// Switch Stance
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(838, 1), false);
+		// Boost Morale
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(956, getPlayer().getLevel() - 43), false);
+		// Guillotine Attack
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(957, getPlayer().getLevel() - 43), false);
+		// Decrease Bow/Crossbow Attack Speed
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false);
 
 		getPlayer().setTransformAllowedSkills(new int[]{});
 	}
