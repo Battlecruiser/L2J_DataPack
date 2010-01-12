@@ -109,12 +109,12 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="810" levels="1" name="Vanguard">
-		<set name="mpConsume" val="31" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="5000" />
+		<set name="mpConsume" val="31" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="30000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="312" />
 		<for>
 			<effect name="Transformation" time="21600" val="0">
@@ -124,12 +124,12 @@
 		</for>
 	</skill>
 	<skill id="811" levels="1" name="Vanguard">
-		<set name="mpConsume" val="31" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="5000" />
+		<set name="mpConsume" val="31" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="30000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="313" />
 		<for>
 			<effect name="Transformation" time="21600" val="0">
@@ -139,12 +139,12 @@
 		</for>
 	</skill>
 	<skill id="812" levels="1" name="Vanguard">
-		<set name="mpConsume" val="31" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="5000" />
+		<set name="mpConsume" val="31" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="30000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="314" />
 		<for>
 			<effect name="Transformation" time="21600" val="0">
@@ -154,12 +154,12 @@
 		</for>
 	</skill>
 	<skill id="813" levels="1" name="Vanguard">
-		<set name="mpConsume" val="31" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="5000" />
+		<set name="mpConsume" val="31" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="30000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="315" />
 		<for>
 			<effect name="Transformation" time="21600" val="0">
@@ -170,88 +170,85 @@
 	</skill>
 	<skill id="814" levels="43" name="Full Swing">
 		<!-- Vanguard Stance Skill -->
+		<table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table> <!-- Guess -->
 		<table name="#mpConsume"> 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83 </table>
-		<table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table> <!-- Guess - need retail confirmation -->
 		<table name="#power"> 893 945 998 1054 1112 1172 1234 1298 1365 1433 1503 1575 1649 1725 1803 1882 1963 2045 2129 2214 2301 2388 2476 2565 2655 2745 2836 2927 3018 3108 3198 3288 3376 3464 3551 3636 3720 3801 3881 3959 4034 4107 4176 </table>
 		<set name="baseCritRate" val="15" />
-		<set name="weaponsAllowed" val="18432" /> <!-- Big Sword/Big Blunt -->
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="150" />
-		<set name="overHit" val="true" />
-		<set name="SSBoost" val="2.0" />
-		<set name="reuseDelay" val="17000" /> <!-- Guess - need retail confirmation -->
 		<set name="hitTime" val="1070" />
-		<set name="coolTime" val="720" />
-		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<set name="ignoreShld" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="overHit" val="true" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="17000" /> <!-- Guess -->
+		<set name="skillRadius" val="150" />
+		<set name="skillType" val="PDAM" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_AURA" />
+		<set name="weaponsAllowed" val="18432" /> <!-- Big Sword/Big Blunt -->
 	</skill>
 	<skill id="815" levels="43" name="Blade Hurricane">
 		<!-- Vanguard Stance Skill -->
+		<table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table> <!-- Guess -->
 		<table name="#mpConsume"> 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83 </table>
-		<table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table> <!-- Guess - need retail confirmation -->
 		<table name="#power"> 893 945 998 1054 1112 1172 1234 1298 1365 1433 1503 1575 1649 1725 1803 1882 1963 2045 2129 2214 2301 2388 2476 2565 2655 2745 2836 2927 3018 3108 3198 3288 3376 3464 3551 3636 3720 3801 3881 3959 4034 4107 4176 </table>
 		<set name="baseCritRate" val="15" />
-		<set name="weaponsAllowed" val="512" /> <!-- Dual Sword -->
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="150" />
-		<set name="overHit" val="true" />
-		<set name="SSBoost" val="2.0" />
-		<set name="reuseDelay" val="17000" /> <!-- Guess - need retail confirmation -->
 		<set name="hitTime" val="1070" />
-		<set name="coolTime" val="720" />
-		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<set name="ignoreShld" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="overHit" val="true" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="17000" /> <!-- Guess -->
+		<set name="skillRadius" val="150" />
+		<set name="skillType" val="PDAM" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_AURA" />
+		<set name="weaponsAllowed" val="512" /> <!-- Dual Sword -->
 	</skill>
 	<skill id="816" levels="43" name="Cleave">
 		<!-- Vanguard Stance Skill -->
+		<table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table> <!-- Guess -->
 		<table name="#mpConsume"> 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83 </table>
-		<table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table> <!-- Guess - need retail confirmation -->
 		<table name="#power"> 992 1049 1109 1171 1236 1302 1371 1443 1516 1592 1670 1750 1832 1917 2003 2091 2181 2272 2366 2460 2556 2653 2751 2850 2950 3050 3151 3252 3353 3453 3553 3653 3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640 </table>
-		<set name="weaponsAllowed" val="18432" /> <!-- Big Sword/Big Blunt -->
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="overHit" val="true" />
-		<set name="SSBoost" val="2.0" />
-		<set name="reuseDelay" val="20000" /> <!-- Guess - need retail confirmation -->
-		<set name="hitTime" val="1620" />
-		<set name="coolTime" val="720" />
-		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="ignoreShld" val="true" />
+		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1620" />
+		<set name="ignoreShld" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="overHit" val="true" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="20000" /> <!-- Guess -->
+		<set name="skillType" val="PDAM" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="weaponsAllowed" val="18432" /> <!-- Big Sword/Big Blunt -->
 	</skill>
 	<skill id="817" levels="43" name="Double Strike">
 		<!-- Vanguard Stance Skill -->
+		<table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table> <!-- Guess -->
 		<table name="#mpConsume"> 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83 </table>
-		<table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table> <!-- Guess - need retail confirmation -->
 		<table name="#power"> 992 1049 1109 1171 1236 1302 1371 1443 1516 1592 1670 1750 1832 1917 2003 2091 2181 2272 2366 2460 2556 2653 2751 2850 2950 3050 3151 3252 3353 3453 3553 3653 3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640 </table>
 		<set name="baseCritRate" val="15" />
-		<set name="weaponsAllowed" val="512" /> <!-- Dual Sword -->
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="overHit" val="true" />
-		<set name="SSBoost" val="2.0" />
-		<set name="reuseDelay" val="17000" /> <!-- Guess - need retail confirmation -->
-		<set name="hitTime" val="1730" />
-		<set name="coolTime" val="720" />
-		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="ignoreShld" val="true" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1730" />
+		<set name="ignoreShld" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="overHit" val="true" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="17000" /> <!-- Guess -->
+		<set name="skillType" val="PDAM" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="weaponsAllowed" val="512" /> <!-- Dual Sword -->
 	</skill>
 	<skill id="818" levels="1" name="Evasion Counter">
 		<set name="magicLvl" val="74" />
