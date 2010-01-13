@@ -1083,6 +1083,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="daggerWpnVuln" val="#Tab-daggerVuln" />
+			<mul order="0x30" stat="rapierWpnVuln" val="#Tab-daggerVuln" />
 		</for>
 	</skill>
 	<skill id="4274" levels="5" name="Blunt Weapon Weak Point">
