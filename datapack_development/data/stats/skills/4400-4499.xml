@@ -528,6 +528,7 @@
 		<for>
 			<mul order="0x30" stat="bigSwordWpnVuln" val="#vuln" />
 			<mul order="0x30" stat="bigBluntWpnVuln" val="#vuln" />
+			<mul order="0x30" stat="ancientWpnVuln" val="#vuln" />
 		</for>
 	</skill>
 	<skill id="4429" levels="5" name="Greater Resist Fire Attacks">
@@ -709,6 +710,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="daggerWpnVuln" val="#vuln" />
+			<mul order="0x30" stat="rapierWpnVuln" val="#vuln" />
 		</for>
 	</skill>
 	<skill id="4449" levels="5" name="Greater Resist Two-handed Weapons">
@@ -719,6 +721,7 @@
 		<for>
 			<mul order="0x30" stat="bigSwordWpnVuln" val="#vuln" />
 			<mul order="0x30" stat="bigBluntWpnVuln" val="#vuln" />
+			<mul order="0x30" stat="ancientWpnVuln" val="#vuln" />
 		</for>
 	</skill>
 	<skill id="4450" levels="5" name="Stun Attack Weak Point">
@@ -836,6 +839,8 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="bigSwordWpnVuln" val="#vuln" />
+			<mul order="0x30" stat="bigBluntWpnVuln" val="#vuln" />
+			<mul order="0x30" stat="ancientWpnVuln" val="#vuln" />
 		</for>
 	</skill>
 	<skill id="4463" levels="3" name="Surrender To Water">
