@@ -286,15 +286,6 @@
 		<stat name="spawnY" val="145048" />
 		<stat name="spawnZ" val="-3126" />
 	</zone>
-	<zone id="11037" type="Town" shape="NPoly" minZ="-2000" maxZ="-4000">
-		<stat name="name" val="Primeval Isle" />
-		<stat name="townId" val="19" />
-		<stat name="taxById" val="8" />
-		<stat name="isPeaceZone" val="false" />
-		<stat name="spawnX" val="10468" />
-		<stat name="spawnY" val="-24569" />
-		<stat name="spawnZ" val="-3645" />
-	</zone>
 	<zone id="11038" type="Town" shape="NPoly" minZ="250" maxZ="2250">
 		<stat name="name" val="Kamael Village" />
 		<stat name="townId" val="20" />
@@ -916,6 +907,14 @@
 		<stat name="name" val="Lair of Valakas" />
 		<stat name="InvadeTime" val="1800000" />
 	</zone>
+	<!-- zone id="12009" type="BossZone" shape="Cuboid" minZ="-5600" maxZ="-3895" -->
+	<!-- stat name="name" val="Lair of Lilith" / -->
+	<!-- stat name="InvadeTime" val="60000" / -->
+	<!-- /zone -->
+	<!-- zone id="12010" type="BossZone" shape="Cuboid" minZ="-5600" maxZ="-3895" -->
+	<!-- stat name="name" val="Lair of Anakim" / -->
+	<!-- stat name="InvadeTime" val="60000" / -->
+	<!-- /zone -->
 	<zone id="12011" type="BossZone" shape="NPoly" minZ="-4815" maxZ="-315">
 		<stat name="name" val="Lair of Zaken" />
 		<stat name="EnabledByDefault" val="false" />
@@ -928,15 +927,16 @@
 		<stat name="name" val="Lair of Orfen" />
 		<stat name="EnabledByDefault" val="false" />
 	</zone>
+	<!-- zone id="12014" type="BossZone" shape="Cuboid" minZ="-10730" maxZ="-10290" -->
+	<!-- stat name="name" val="Altar of Sacrifice" / -->
+	<!-- stat name="InvadeTime" val="60000" / -->
+	<!-- /zone -->
 	<zone id="12015" type="BossZone" shape="NPoly" minZ="-4000" maxZ="-500">
 		<stat name="name" val="Ice Queens Castle" />
 		<stat name="oustX" val="115844" />
 		<stat name="oustY" val="-125602" />
 		<stat name="oustZ" val="-3352" />
 	</zone>
-	<!--
-		<zone id="12009" type="BossZone" shape="Cuboid" minZ="-5600" maxZ="-3895"> <stat name="name" val="Lair of Lilith" /> <stat name="InvadeTime" val="60000" /> </zone> <zone id="12010" type="BossZone" shape="Cuboid" minZ="-5600" maxZ="-3895"> <stat name="name" val="Lair of Anakim" /> <stat name="InvadeTime" val="60000" /> </zone> <zone id="12014" type="BossZone" shape="Cuboid" minZ="-10730" maxZ="-10290"> <stat name="name" val="Altar of Sacrifice" /> <stat name="InvadeTime" val="60000" /> </zone>
-	-->
 
 	<!-- Landing Zones -->
 	<zone id="14000" type="LandingZone" shape="NPoly" minZ="2668" maxZ="2750" />
@@ -2513,8 +2513,18 @@
 	<!-- Pagans mark -->
 	<zone id='30100' type='PaganZone' shape='NPoly' minZ='-10735' maxZ='-10720' />
 
-	<!-- Primeval Isle (Peace Zone) (vertices, min Z & Max Z are estimated) -->
+	<!-- Primeval Isle Zones (vertices, min Z & Max Z are estimated) -->
+	<!-- Primeval Isle (Peace Zone) -->
 	<zone id="40000" type="PeaceZone" shape="NPoly" minZ="-4300" maxZ="-3300" />
+	<!-- Primeval Isle (Town Zone) -->
+	<zone id="40001" type="Town" shape="Cuboid" minZ="-4300" maxZ="2700">
+		<stat name="name" val="Primeval Isle" />
+		<stat name="townId" val="19" />
+		<stat name="isPeaceZone" val="false" />
+		<stat name="spawnX" val="10468" />
+		<stat name="spawnY" val="-24569" />
+		<stat name="spawnZ" val="-3645" />
+	</zone>
 
 	<!-- Hellbound Zones (vertices, min Z & Max Z are estimated) -->
 	<!-- Hellbound Desert -->
@@ -2534,6 +2544,15 @@
 	<zone id="40103" type="WaterZone" shape="NPoly" minZ="-3430" maxZ="-3360" />
 	<!-- Hellbound Lake 2 -->
 	<zone id="40104" type="WaterZone" shape="NPoly" minZ="-2280" maxZ="-2130" />
+	<!-- TODO: Hellbound (Town Zone) Needs core-side support -->
+	<!-- zone id="40105" type="Town" shape="NPoly" minZ="-30000" maxZ="30000" -->
+	<!-- stat name="name" val="Hellbound" / -->
+	<!-- stat name="townId" val="?" / -->
+	<!-- stat name="isPeaceZone" val="false" / -->
+	<!-- stat name="spawnX" val="-16341" / -->
+	<!-- stat name="spawnY" val="209285" / -->
+	<!-- stat name="spawnZ" val="-3665" / -->
+	<!-- /zone -->
 
 	<!-- Rune Castle (Water Zones) (vertices, min Z & Max Z are estimated) -->
 	<zone id="40500" type="WaterZone" shape="NPoly" minZ="-1310" maxZ="-1120" />
