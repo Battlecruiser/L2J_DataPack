@@ -782,7 +782,7 @@
 	<skill id="956" levels="3" name="Boost Morale">
 		<!-- Vanguard Stance Skill -->
 		<table name="#accCombat"> 4 6 8 </table>
-		<table name="#rCrit"> 0.5 1 1.5 </table>
+		<table name="#rCrit"> 50 100 150 </table>
 		<table name="#cAtk"> 1.1 1.2 1.3 </table>
 		<set name="hitTime" val="2000" />
 		<set name="mpConsume" val="133" />
@@ -795,9 +795,9 @@
 				<add order="0x40" stat="accCombat" val="#accCombat">
 					<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword" />
 				</add>
-				<basemul order="0x30" stat="rCrit" val="#rCrit">
+				<add order="0x40" stat="rCrit" val="#rCrit">
 					<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword" />
-				</basemul>
+				</add>
 				<mul order="0x30" stat="cAtk" val="#cAtk">
 					<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword" />
 				</mul>
