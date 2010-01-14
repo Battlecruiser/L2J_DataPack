@@ -196,3 +196,9 @@ of this directory a little bit.
 364980001.xml -> Territory Manager - Schuttgart
 
 326580001.xml -> S80 Armors / Jewels - Delusion Chamber
+
+3122800.xml -> Heavy Medal Event - No collector level
+3122801.xml -> Heavy Medal Event - Rabbit
+3122802.xml -> Heavy Medal Event - Hyena
+3122803.xml -> Heavy Medal Event - Fox
+3122804.xml -> Heavy Medal Event - Wolf
