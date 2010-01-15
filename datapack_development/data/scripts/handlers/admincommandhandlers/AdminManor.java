@@ -17,18 +17,13 @@ package handlers.admincommandhandlers;
 import java.util.List;
 import java.util.StringTokenizer;
 
-import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.CastleManorManager;
-import com.l2jserver.gameserver.instancemanager.CastleManorManager.CropProcure;
-import com.l2jserver.gameserver.instancemanager.CastleManorManager.SeedProduction;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Castle;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.util.StringUtil;
-
-import javolution.util.FastList;
 
 /**
  * Admin comand handler for Manor System
@@ -95,30 +90,14 @@ public class AdminManor implements IAdminCommandHandler
 			if (castleId > 0)
 			{
 				Castle castle = CastleManager.getInstance().getCastleById(castleId);
-				castle.setCropProcure(new FastList<CropProcure>(), CastleManorManager.PERIOD_CURRENT);
-				castle.setCropProcure(new FastList<CropProcure>(), CastleManorManager.PERIOD_NEXT);
-				castle.setSeedProduction(new FastList<SeedProduction>(), CastleManorManager.PERIOD_CURRENT);
-				castle.setSeedProduction(new FastList<SeedProduction>(), CastleManorManager.PERIOD_NEXT);
-				if (Config.ALT_MANOR_SAVE_ALL_ACTIONS)
-				{
-					castle.saveCropData();
-					castle.saveSeedData();
-				}
+				castle.resetManor();
 				activeChar.sendMessage("Manor data for " + castle.getName() + " was nulled");
 			}
 			else
 			{
 				for (Castle castle : CastleManager.getInstance().getCastles())
 				{
-					castle.setCropProcure(new FastList<CropProcure>(), CastleManorManager.PERIOD_CURRENT);
-					castle.setCropProcure(new FastList<CropProcure>(), CastleManorManager.PERIOD_NEXT);
-					castle.setSeedProduction(new FastList<SeedProduction>(), CastleManorManager.PERIOD_CURRENT);
-					castle.setSeedProduction(new FastList<SeedProduction>(), CastleManorManager.PERIOD_NEXT);
-					if (Config.ALT_MANOR_SAVE_ALL_ACTIONS)
-					{
-						castle.saveCropData();
-						castle.saveSeedData();
-					}
+					castle.resetManor();
 				}
 				activeChar.sendMessage("Manor data was nulled");
 			}
