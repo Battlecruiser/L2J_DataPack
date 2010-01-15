@@ -176,7 +176,7 @@ public class AdminSiege implements IAdminCommandHandler
 					else if (newAdminSiegeDate.getTimeInMillis() != castle.getSiegeDate().getTimeInMillis())
 					{
 						castle.getSiegeDate().setTimeInMillis(newAdminSiegeDate.getTimeInMillis());
-						// castle.getSiege().saveSiegeDate();
+						castle.getSiege().saveSiegeDate();
 					}
 				}
 				showSiegeTimePage(activeChar,castle);
