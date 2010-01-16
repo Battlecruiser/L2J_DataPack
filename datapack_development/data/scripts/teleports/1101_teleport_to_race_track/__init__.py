@@ -3,10 +3,11 @@
 #
 import sys
 
-from com.l2jserver.gameserver.model.actor.instance import L2PcInstance
-from com.l2jserver.gameserver.model.quest          import State
-from com.l2jserver.gameserver.model.quest          import QuestState
-from com.l2jserver.gameserver.model.quest.jython   import QuestJython as JQuest
+from com.l2jserver.gameserver.model.actor.instance  import L2PcInstance
+from com.l2jserver.gameserver.model.quest           import State
+from com.l2jserver.gameserver.model.quest           import QuestState
+from com.l2jserver.gameserver.model.quest.jython    import QuestJython as JQuest
+from com.l2jserver.gameserver.network.serverpackets import NpcSay
 qn = "1101_teleport_to_race_track"
 
 RACE_MANAGER = 30995
@@ -55,10 +56,11 @@ class Quest (JQuest) :
         return_id = st.getInt("id") - 1
         if return_id < 13:
            st.getPlayer().teleToLocation(RETURN_LOCS[return_id][0],RETURN_LOCS[return_id][1],RETURN_LOCS[return_id][2])
-           st.exitQuest(1)
-           return
-     # no base location founded, teleport him to nearest race GK
-     st.getPlayer().teleToLocation(12882,181053,-3560)
+           st.unset("id")
+     else:
+        # no base location
+        player.sendPacket(NpcSay(npc.getObjectId(),0,npc.getNpcId(),"You've arrived here from a different way. I'll send you to Rune Township which is the nearest town."))
+        st.getPlayer().teleToLocation(15670,142983,-2700)
      st.exitQuest(1)
    return
 
@@ -68,4 +70,5 @@ for npcId in TELEPORTERS.keys() :
     QUEST.addStartNpc(npcId)
     QUEST.addTalkId(npcId)
 
+QUEST.addStartNpc(RACE_MANAGER)
 QUEST.addTalkId(RACE_MANAGER)
