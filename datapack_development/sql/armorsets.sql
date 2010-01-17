@@ -110,9 +110,9 @@ INSERT INTO `armorsets` VALUES
   (56,  9834,  0,    9830, 9835, 9836, '3006-1;3609-2;',               0,    0,    3621,     0,       0,       0,         0,       0),     -- Improved Apella Brigandine set (light)
   (57,  9837,  0,    9830, 9838, 9839, '3006-1;3610-2;',               0,    0,    3622,     0,       0,       0,         0,       0),     -- Improved Apella Doublet set (robe)
 
-  (58,  14583  0,    14582,14584,14585 '3006-1;3608-2;',               0,    0,    3620,     0,       0,       0,         0,       0),     -- Apella Combat Armor set (heavy)
-  (59,  14586  0,    14582,14587,14588 '3006-1;3609-2;',               0,    0,    3621,     0,       0,       0,         0,       0),     -- Apella Combat Clothes set (light)
-  (60,  14589  0,    14582,14590,14591 '3006-1;3610-2;',               0,    0,    3622,     0,       0,       0,         0,       0),     -- Apella Combat Overcoat set (robe)
+  (58,  14583, 0,    14582,14584,14585,'3006-1;3608-2;',               0,    0,    3620,     0,       0,       0,         0,       0),     -- Apella Combat Armor set (heavy)
+  (59,  14586, 0,    14582,14587,14588,'3006-1;3609-2;',               0,    0,    3621,     0,       0,       0,         0,       0),     -- Apella Combat Clothes set (light)
+  (60,  14589, 0,    14582,14590,14591,'3006-1;3610-2;',               0,    0,    3622,     0,       0,       0,         0,       0),     -- Apella Combat Overcoat set (robe)
 
 -- S80 Dynasty Armor Sets
 -- id   chest  legs  head  glov  feet  skill                           shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
