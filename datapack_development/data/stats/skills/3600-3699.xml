@@ -169,44 +169,48 @@
 		</for>
 	</skill>
 	<skill id="3608" levels="2" name="Apella Heavy Armor Set">
-		<!-- Needs to be finished -->
 		<table name="#maxCP"> 1035 1116 </table>
-		<table name="#rCrit"> 1 1.02621 </table>
-		<table name="#cAtk"> 0 3 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#triggeredLevel"> 1 2 </table>
+		<set name="activationChance" val="10" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5605" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
 		<for>
 			<add order="0x40" stat="maxCp" val="#maxCP" />
 			<mul order="0x30" stat="regCp" val="1.4" />
-			<!-- TODO lvl1: There is a 10% probability that magic defense power is increased by 5% and critical damage is decreased by 3 if the damage inflicted by PC is more than 50. -->
-			<!-- TODO lvl2: When the PC receives more than 50 damage, there is a 10% probability that magic defense power is increased by 5%, the critical damage is decreased by 3, and the critical strike probability is increased by 2.621. -->
 		</for>
 	</skill>
 	<skill id="3609" levels="2" name="Apella Light Armor Set">
-		<!-- Needs to be finished -->
 		<table name="#maxCP"> 1035 1116 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#triggeredLevel"> 1 2 </table>
+		<set name="activationChance" val="10" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5607" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
 		<for>
 			<add order="0x40" stat="maxCp" val="#maxCP" />
 			<mul order="0x30" stat="regCp" val="1.4" />
-			<!-- TODO lvl1: There is a 10% probability that evasion is increased by 2 and critical damage is decreased by 86 if the damage inflicted by PC is more than 50. -->
-			<!-- TODO lvl2: When the PC receives more than 50 damage, there is a 10% probability that evasion is increased by 2 and critical damage is decreased by 86. Attack speed is increased by 2.5%. -->
 		</for>
 	</skill>
 	<skill id="3610" levels="2" name="Apella Robe Set">
-		<!-- Needs to be finished -->
 		<table name="#maxCP"> 1035 1116 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#triggeredLevel"> 1 2 </table>
+		<set name="activationChance" val="10" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5608" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
 		<for>
 			<add order="0x40" stat="maxCp" val="#maxCP" />
 			<mul order="0x30" stat="regCp" val="1.4" />
-			<!-- TODO lvl1: There is a 10% probability that moving speed is increased by 10 and defense power is increased by 5% if the damage inflicted by PC is more than 50. -->
-			<!-- TODO lvl2: Has a 10% chance to increase Speed by 10, increase P. Def. by 5% and increase M. Atk. by 6 if the damage inflicted by a PC is more than 50. -->
 		</for>
 	</skill>
 	<skill id="3611" levels="1" name="Enchant Heavy Armor (Grade D)">
