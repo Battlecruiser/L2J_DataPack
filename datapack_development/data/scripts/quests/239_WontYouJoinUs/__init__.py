@@ -51,7 +51,7 @@ class Quest (JQuest) :
 			elif cond == 0 :
 				if qs2 :
 					if qs2.getState() == State.COMPLETED :
-						htmltext = "32463-12.htm"
+						htmltext = "32643-12.htm"
 				elif qs :
 					if qs.getState() == State.COMPLETED and player.getLevel() >= 82 :
 						htmltext = "32643-01.htm"
