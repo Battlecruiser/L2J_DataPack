@@ -220,6 +220,7 @@
 	</skill>
 	<skill id="6041" levels="1" name="Phoenix Rush">
 		<set name="target" val="TARGET_NONE" />
+		<set name="reuseDelay" val="30000" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="800" />
@@ -232,7 +233,7 @@
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="59" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="reuseDelay" val="15000" />
+		<set name="reuseDelay" val="180000" />
 		<set name="skillType" val="CANCEL_DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
@@ -245,7 +246,7 @@
 		<set name="mpConsume" val="109" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="70" />
-		<set name="reuseDelay" val="20000" /> <!-- Guess -->
+		<set name="reuseDelay" val="15000" />
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AURA" />
@@ -260,7 +261,7 @@
 		<set name="mpConsume" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="2156" />
-		<set name="reuseDelay" val="3000" />
+		<set name="reuseDelay" val="13000" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
