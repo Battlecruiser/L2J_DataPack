@@ -6232,7 +6232,7 @@ INSERT INTO `etcitem` VALUES
 (8084,'Crystal of Purity','','false','none',0,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
 (8085,'Fang of Stakato','','false','quest',0,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
 (8086,'Box Containing the Fire of Holy Spirit','','false','quest',0,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
-(8087,'Cursed Doll','','false','none',0,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
+(8087,'Cursed Doll','','false','quest',0,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
 (8088,'Orc Grave Goods','','false','quest',0,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
 (8089,'Cursed Grave Goods','','false','quest',0,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
 (8090,'Electric Wave Detector','','false','none',0,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
