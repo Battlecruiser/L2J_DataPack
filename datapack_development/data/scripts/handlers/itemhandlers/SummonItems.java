@@ -154,7 +154,7 @@ public class SummonItems implements IItemHandler
 			case 1: // pet summons
 				final L2Object oldTarget = activeChar.getTarget();
 				activeChar.setTarget(activeChar);
-				Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, 2046, 1, 5000, 0), 2000);
+				Broadcast.toSelfAndKnownPlayers(activeChar, new MagicSkillUse(activeChar, 2046, 1, 5000, 0));
 				activeChar.setTarget(oldTarget);
 				activeChar.sendPacket(new SetupGauge(0, 5000));
 				activeChar.sendPacket(new SystemMessage(SystemMessageId.SUMMON_A_PET));
