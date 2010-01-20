@@ -595,6 +595,9 @@
 		<set name="staticReuse" val="true" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="319" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
 		<for>
 			<effect name="Transformation" time="3600" val="0">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />

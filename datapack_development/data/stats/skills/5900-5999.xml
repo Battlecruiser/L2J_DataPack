@@ -489,6 +489,9 @@
 		<set name="transformId" val="8" />
 		<set name="castRange" val="1500" />
 		<set name="effectRange" val="2100" />
+		<cond msgId="2721">
+			<player landingZone="True" />
+		</cond>
 		<for>
 			<effect name="Transformation" time="-1" val="0"> <!-- Transformation has unlimited time -->
 			</effect>
@@ -507,6 +510,9 @@
 		<set name="transformId" val="9" />
 		<set name="castRange" val="1500" />
 		<set name="effectRange" val="2100" />
+		<cond msgId="2721">
+			<player landingZone="True" />
+		</cond>
 		<for>
 			<effect name="Transformation" time="-1" val="0"> <!-- Transformation has unlimited time -->
 			</effect>
