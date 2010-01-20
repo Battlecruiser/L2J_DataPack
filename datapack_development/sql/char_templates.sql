@@ -135,6 +135,3 @@ INSERT INTO `char_templates` VALUES
 (134, 'Trickster', 5, 39, 30, 35, 28, 11, 27, 4, 72, 3, 47, 342, 333, 35, 45, 35, 122, 87000, -125533, 38114, 1142, 0, 8.0, 22.6, 7.0, 22.6),
 (135, 'Inspector', 5, 39, 30, 35, 28, 11, 27, 4, 72, 3, 47, 342, 333, 35, 45, 35, 122, 87000, -125533, 38114, 1142, 0, 8.0, 25.2, 7.0, 22.6),
 (136, 'Judicator', 5, 39, 30, 35, 28, 11, 27, 4, 72, 3, 47, 342, 333, 35, 45, 35, 122, 87000, -125533, 38114, 1142, 0, 8.0, 25.2, 7.0, 22.6);
-
--- TEMP FIX until Core-Side is improved to read `F_COL_R` & `F_COL_H` for Female Characters.
-UPDATE char_templates SET M_COL_H=22.6 WHERE ClassId=124 OR ClassId=126 OR ClassId=129 OR ClassId=130 OR ClassId=133 OR ClassId=134;

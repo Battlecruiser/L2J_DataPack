@@ -1012,23 +1012,10 @@
 		</for>
 	</skill>
 	<skill id="4267" levels="1" name="Grade Penalty">
-		<table name="#rate"> 0.22 0.19 0.16 0.13 0.1 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="magicLvl" val="1" />
+		<!-- Not Used Anymore -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="stayAfterDeath" val="true" />
-		<for>
-			<mul order="0x30" stat="pAtkSpd" val="#rate" />
-			<mul order="0x30" stat="mAtkSpd" val="#rate" />
-			<mul order="0x30" stat="rEvas" val="#rate" />
-			<mul order="0x30" stat="rExp" val="#rate" />
-			<mul order="0x30" stat="runSpd" val="#rate" />
-			<mul order="0x30" stat="regHp" val="#rate" />
-			<mul order="0x30" stat="regCp" val="#rate" />
-			<mul order="0x30" stat="regMp" val="#rate" />
-			<sub order="0x40" stat="accCombat" val="20" />
-		</for>
 	</skill>
 	<skill id="4268" levels="1" name="Danger Area">
 		<!-- This Skill Is Only For Description In The Client -->
@@ -1046,6 +1033,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4270" levels="4" name="Weight Penalty">
+		<!-- TODO: This skill is just informative, decreased stats shouldn't be here -->
 		<table name="#rate"> 0.5 0.5 0.5 0.5 </table>
 		<table name="#rateSpd"> 1 0.5 0.5 0 </table>
 		<set name="target" val="TARGET_SELF" />
