@@ -365,6 +365,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="transformId" val="105" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
 		<for>
 			<effect name="Transformation" time="600" val="0" /> <!-- Transformation lasts 10 minutes -->
 		</for>
