@@ -488,19 +488,55 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5567" levels="1" name="Flame Armor">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Based in "Count of Fire" skill -->
+		<!-- TODO: Duration & Damage needs to be verified -->
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="83" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="20" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="skillType" val="DOT" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect count="10" name="DamOverTime" val="173" />
+		</for>
 	</skill>
 	<skill id="5568" levels="1" name="Frost Armor">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Based in "Diamond Dust" skill -->
+		<!-- TODO: Duration & Decreased stats needs to be verified -->
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="83" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Debuff" time="15" val="0" stackOrder="0.7" stackType="RunSpeedDown">
+				<mul order="0x30" stat="runSpd" val="0.6" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5569" levels="1" name="Hurricane Armor">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Based in "Wind Shackle" skill -->
+		<!-- TODO: Duration & Decreased stats needs to be verified -->
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="83" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Debuff" time="15" val="0" stackOrder="0.77" stackType="attack_time_up">
+				<mul order="0x30" stat="pAtkSpd" val="0.77" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5570" levels="1" name="Excessive Royalty">
 		<set name="target" val="TARGET_PET" />
