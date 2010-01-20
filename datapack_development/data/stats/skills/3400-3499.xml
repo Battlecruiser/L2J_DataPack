@@ -164,6 +164,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="transformId" val="104" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
 		<for>
 			<effect name="Transformation" time="300" val="0" />
 		</for>
