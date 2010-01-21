@@ -74,7 +74,7 @@ public class ChatTell implements IChatHandler
 				activeChar.sendPacket(new SystemMessage(SystemMessageId.THE_PERSON_IS_IN_MESSAGE_REFUSAL_MODE));
 				return;
 			}
-			if (receiver.getClient().isDetached())
+			if (receiver.getClient() == null || receiver.getClient().isDetached())
 			{
 				activeChar.sendMessage("Player is in offline mode.");
 				return;
