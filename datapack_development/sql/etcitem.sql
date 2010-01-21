@@ -5332,7 +5332,7 @@ INSERT INTO `etcitem` VALUES
 (7057,'Seed: Twin Codran','','false','seed',1,'stackable','paper','none',-1,-1,50,0,'true','true','true','true','true','Seed','2097-3;'),
 (7061,'Echo Crystal - Theme of Birthday','','false','none',10,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','true','Potions','2073-1;'),
 (7062,'Echo Crystal - Theme of Wedding','','false','none',10,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','true','ItemSkills','2230-1;'),
-(7063,'Map - Forest of the Dead','','false','none',1,'normal','paper','none',-1,-1,0,0,'false','false','false','false','false','Book','0-0;'),
+(7063,'Map - Forest of the Dead','','false','none',1,'normal','paper','none',-1,-1,0,0,'false','false','true','false','false','Book','0-0;'),
 (7064,'Lidia\'s Diary','','false','none',1,'normal','paper','none',-1,-1,0,0,'false','false','false','false','false','Book','0-0;'),
 (7065,'Lidia\'s Letter','','false','none',1,'normal','paper','none',-1,-1,0,0,'false','false','false','false','false','Book','0-0;'),
 (7066,'Contract','','false','none',1,'normal','paper','none',-1,-1,0,0,'false','false','false','false','false','Book','0-0;'),
