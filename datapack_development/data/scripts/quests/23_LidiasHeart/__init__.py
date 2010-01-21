@@ -29,7 +29,7 @@ class Quest (JQuest) :
 
     def __init__(self,id,name,descr):  
        JQuest.__init__(self,id,name,descr)
-       self.questItemIds = [MapForestofDeadman,SilverKey,LidiaHairPin,LidiaDiary,SilverSpear] 
+       self.questItemIds = [SilverKey,LidiaHairPin,LidiaDiary,SilverSpear] 
 
     def onAdvEvent (self,event,npc,player) :
         st = player.getQuestState(qn)
