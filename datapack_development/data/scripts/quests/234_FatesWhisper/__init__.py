@@ -31,10 +31,9 @@ CHEST_SPAWNS = {
   25126:31029, # Golkonda, the Longhorn General
   25220:31030  # Death Lord Hallate
   }
-  
+
 #mobId=[cond,dropId,rate]
 DROPLIST={
-29020: [7,RED_PIPETTE_KNIFE,100],
 20823: [8,BLOOD_STAINED_CLOTH,80],
 20826: [8,BLOOD_STAINED_CLOTH,80],
 20827: [8,BLOOD_STAINED_CLOTH,80],
@@ -65,10 +64,10 @@ Weapons={
 
 class Quest (JQuest) :
 
-  def __init__(self,id,name,descr): 
+  def __init__(self,id,name,descr):
     JQuest.__init__(self,id,name,descr)
     self.questItemIds = [BLOOD_STAINED_CLOTH,WHITE_CLOTH,PIPETTE_KNIFE,RED_PIPETTE_KNIFE]
-  
+
   def onAdvEvent (self,event,npc, player) :
     htmltext = event
     st = player.getQuestState(qn)
@@ -131,7 +130,7 @@ class Quest (JQuest) :
           st.unset("bypass")
           st.unset("weaponId")
         else:
-          htmltext = st.showHtmlFile("31002-15.htm").replace("%weaponname%",Weapons[st.getInt("weaponId")])   
+          htmltext = st.showHtmlFile("31002-15.htm").replace("%weaponname%",Weapons[st.getInt("weaponId")])
       else:
         htmltext="<html><body>Maestro Reorin:<br>Are you trying to cheat me?!  What happenned to the weapon you were about to give me for the neutralization of Infernum's evil aura?</body></html>"
         #st.exitQuest(1)
@@ -144,7 +143,7 @@ class Quest (JQuest) :
 
     npcId = npc.getNpcId()
     id = st.getState()
-    
+
     # first time when a player join the quest
     if id == State.CREATED:
       if player.getLevel() >= 75:
@@ -228,7 +227,7 @@ class Quest (JQuest) :
       elif npcId == NPC[2] and cond==4 and not st.getQuestItemsCount(REORINS_HAMMER) :
         htmltext = "30847-01.htm"  # go to trader Zenkin
         st.giveItems(REORINS_HAMMER,1)
-      # I already told you I don't have it!  
+      # I already told you I don't have it!
       elif npcId == NPC[2] and cond>=4 :
         htmltext = "30847-02.htm"  # go to trader Zenkin
       ## ZENKIN
@@ -286,18 +285,17 @@ class Quest (JQuest) :
           htmltext = "31030-01.htm"
         elif npcId == NPC[7] :
           htmltext = "<html><body>This chest looks empty</body></html>"
-    return htmltext    
+    return htmltext
 
-  def onAttack (self, npc, player, damage, isPet,skill):
+  def onAttack (self, npc, player, damage, isPet, skill):
     st = player.getQuestState(qn)
     if not st : return 
     if st.getState() != State.STARTED : return 
+    if isPet : return
 
-    npcId = npc.getNpcId()
-    value,dropId,chance = DROPLIST[npcId]
-    if value == st.getInt("cond") and npcId==29020 :
-      if player.getActiveWeaponItem() and player.getActiveWeaponItem().getItemId() == PIPETTE_KNIFE and st.getRandom(100)<chance and st.getQuestItemsCount(dropId) == 0:
-        st.giveItems(dropId,1)
+    if st.getInt("cond") == 7 and npc.getNpcId() == 29020 :
+      if player.getActiveWeaponItem() and player.getActiveWeaponItem().getItemId() == PIPETTE_KNIFE and st.getQuestItemsCount(RED_PIPETTE_KNIFE) == 0:
+        st.giveItems(RED_PIPETTE_KNIFE,1)
         st.takeItems(PIPETTE_KNIFE,1)
         st.playSound("Itemsound.quest_itemget")
     return
@@ -348,7 +346,7 @@ QUEST.addStartNpc(NPC[0])
 
 for npcId in NPC:
   QUEST.addTalkId(npcId)
-  
+ 
 for mobId in DROPLIST.keys() :
   QUEST.addKillId(mobId)
 
