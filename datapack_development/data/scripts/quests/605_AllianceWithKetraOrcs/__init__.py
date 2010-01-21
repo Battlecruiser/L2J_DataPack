@@ -4,6 +4,7 @@ from com.l2jserver import Config
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.util import Util
 
 qn = "605_AllianceWithKetraOrcs"
 
@@ -374,13 +375,15 @@ class Quest (JQuest) :
                   elif id == 2 and item != 0 :
                       giveReward(st,item,chance,MAX,drop)
               elif npcId in Ketra_Orcs :
-                  decreaseAlliance(st)
                   party = partyMember.getParty()
                   if party :
-                      for player in party.getPartyMembers().toArray() :
-                          pst = player.getQuestState(qn)
-                          if pst :
-                              decreaseAlliance(pst)
+                      for member in party.getPartyMembers().toArray() :
+                          if Util.checkIfInRange(5000, player, member, True) :
+                              pst = member.getQuestState(qn)
+                              if pst :
+                                  decreaseAlliance(pst)
+                  else :
+                      decreaseAlliance(st)
    return
 
 QUEST       = Quest(605,qn,"Alliance With Ketra Orcs")
