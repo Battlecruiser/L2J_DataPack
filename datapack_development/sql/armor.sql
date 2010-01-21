@@ -2702,7 +2702,7 @@ INSERT INTO `armor` VALUES
 (20090,'Assassin\'s Bamboo Hat','Energy - 3 Day Expiration Period','hairall','false','none',10,'wood','none',0,-1,4320,0,0,0,0,0,'true','true','true','true','true','0-0','0-0;'),
 (20091,'Assassin\'s Bamboo Hat','Energy - 30 Day Expiration Period','hairall','false','none',10,'wood','none',0,-1,43200,0,0,0,0,0,'true','true','true','true','true','0-0','0-0;'),
 (20094,'Agathion Seal Bracelet: Rudolph','Energy - 30 Day Expiration Period','lbracelet','false','none',150,'wood','none',0,-1,43200,0,0,0,0,0,'false','false','true','false','true','0-0','3425-1;3267-1;5537-1;23016-1;'),
-(20095,'Santa Horn Hat','','hairall','false','none',10,'wood','none',0,-1,-1,0,0,0,0,0,'true','false','true','true','true','0-0','0-0;'),
+(20095,'Santa Horn Hat','','hairall','false','none',10,'wood','none',0,-1,-1,0,0,0,0,0,'false','false','true','false','true','0-0','0-0;'),
 (20098,'Formal Dress - Event','1 hour Shadow time','fullarmor','false','none',1000,'cloth','none',0,60,60,0,0,0,5000000,0,'true','true','true','true','true','0-0','0-0;'),
 (20099,'Formal Dress - Event','7 Day Expiration Period','fullarmor','false','none',1000,'cloth','none',0,-1,10080,0,0,0,5000000,0,'true','true','true','true','true','0-0','0-0;'),
 (20100,'Saving Santa Hat','24 Hour Expiration Period','hairall','false','none',10,'wood','none',0,-1,1440,0,0,0,0,0,'false','false','true','false','true','0-0','21014-1;21015-1;21016-1;'),
