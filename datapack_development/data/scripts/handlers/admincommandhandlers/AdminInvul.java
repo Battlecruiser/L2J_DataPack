@@ -17,6 +17,7 @@ package handlers.admincommandhandlers;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.handler.AdminCommandHandler;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -41,7 +42,12 @@ public class AdminInvul implements IAdminCommandHandler
 	{
 		
 		if (command.equals("admin_invul"))
+		{
 			handleInvul(activeChar);
+			IAdminCommandHandler ach = AdminCommandHandler.getInstance().getAdminCommandHandler("admin_admin7");
+			if (ach != null)
+				ach.useAdminCommand("admin_admin7", activeChar);
+		}
 		if (command.equals("admin_setinvul"))
 		{
 			L2Object target = activeChar.getTarget();

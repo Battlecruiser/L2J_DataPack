@@ -76,6 +76,7 @@ public class AdminPetition implements IAdminCommandHandler
 		{
 			if (!PetitionManager.getInstance().rejectPetition(activeChar, petitionId))
 				activeChar.sendPacket(new SystemMessage(SystemMessageId.FAILED_CANCEL_PETITION_TRY_LATER));
+			PetitionManager.getInstance().sendPendingPetitionList(activeChar);
 		}
 		else if (command.equals("admin_reset_petitions"))
 		{
@@ -85,6 +86,7 @@ public class AdminPetition implements IAdminCommandHandler
 				return false;
 			}
 			PetitionManager.getInstance().clearPendingPetitions();
+			PetitionManager.getInstance().sendPendingPetitionList(activeChar);
 		}
 		else if (command.startsWith("admin_force_peti"))
 		{
