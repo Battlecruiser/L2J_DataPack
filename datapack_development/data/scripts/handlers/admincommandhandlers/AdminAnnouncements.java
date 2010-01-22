@@ -23,6 +23,7 @@ import javolution.text.TextBuilder;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.Announcements;
 import com.l2jserver.gameserver.cache.HtmCache;
+import com.l2jserver.gameserver.handler.AdminCommandHandler;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -77,7 +78,10 @@ public class AdminAnnouncements implements IAdminCommandHandler
 			if (Config.GM_ANNOUNCER_NAME && command.length() > 20)
 				command += " ("+activeChar.getName()+")";
 			Announcements.getInstance().handleAnnounce(command, 20);
-			Announcements.getInstance().listAnnouncements(activeChar);
+			IAdminCommandHandler ach = AdminCommandHandler.getInstance().getAdminCommandHandler("admin_admin7");
+			if (ach != null)
+				ach.useAdminCommand("admin_admin7", activeChar);
+			//Announcements.getInstance().listAnnouncements(activeChar);
 		}
 		else if (command.equals("admin_announce_announcements"))
 		{

@@ -40,6 +40,8 @@ GM Actions:<table width=270><tr>
 <td><button value="GM Shop" action="bypass -h admin_gmshop" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 </tr><tr>
 <td><button value="Instance" action="bypass -h admin_help instancezone.htm" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Announc" action="bypass -h admin_list_announcements" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="AutoAnn" action="bypass -h admin_list_autoann $qbox" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 </tr>
 </table>
 <br>
@@ -51,4 +53,6 @@ GM Actions:<table width=270><tr>
 <td><button value="4" action="bypass -h admin_gmspeed_menu 4" width=35 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 <td><button value="Off" action="bypass -h admin_gmspeed_menu 0" width=35 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 </tr></table><br>
+<center><multiedit var="new_announcement" width=250 height=40></center>
+<button value="Announce" action="bypass -h admin_announce_menu $new_announcement" width=70 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
 </center></body></html>
