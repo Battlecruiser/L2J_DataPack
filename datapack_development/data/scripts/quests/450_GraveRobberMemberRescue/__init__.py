@@ -72,6 +72,7 @@ class Quest (JQuest) :
 				st.giveItems(ADENA,65000)
 				st.takeItems(EVIDENCE_OF_MIGRATION,10)
 				st.setState(State.COMPLETED)
+				st.unset("cond")
 				st.exitQuest(False)
 				st.playSound("ItemSound.quest_finish")
 				reset = Calendar.getInstance()
