@@ -35,6 +35,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 	{
 		"admin_itemcreate",
 		"admin_create_item",
+		"admin_create_coin",
 		"admin_give_item_target"
 	};
 	
@@ -68,6 +69,40 @@ public class AdminCreateItem implements IAdminCommandHandler
 			catch (StringIndexOutOfBoundsException e)
 			{
 				activeChar.sendMessage("Usage: //create_item <itemId> [amount]");
+			}
+			catch (NumberFormatException nfe)
+			{
+				activeChar.sendMessage("Specify a valid number.");
+			}
+			AdminHelpPage.showHelpPage(activeChar, "itemcreation.htm");
+		}
+		else if (command.startsWith("admin_create_coin"))
+		{
+			try
+			{
+				String val = command.substring(17);
+				StringTokenizer st = new StringTokenizer(val);
+				if (st.countTokens() == 2)
+				{
+					String name = st.nextToken();
+					int idval = getCoinId(name);
+					if(idval > 0)
+					{
+						String num = st.nextToken();
+						long numval = Long.parseLong(num);
+						createItem(activeChar, activeChar, idval, numval);
+					}
+				}
+				else if (st.countTokens() == 1)
+				{
+					String name = st.nextToken();
+					int idval = getCoinId(name);
+					createItem(activeChar, activeChar, idval, 1);
+				}
+			}
+			catch (StringIndexOutOfBoundsException e)
+			{
+				activeChar.sendMessage("Usage: //create_coin <name> [amount]");
 			}
 			catch (NumberFormatException nfe)
 			{
@@ -142,5 +177,29 @@ public class AdminCreateItem implements IAdminCommandHandler
 		if (activeChar != target)
 			target.sendMessage("Admin spawned " + num + " "+template.getName()+" in your inventory.");
 		activeChar.sendMessage("You have spawned " + num + " "+template.getName()+"(" + id + ") in "+target.getName()+" inventory.");
+	}
+	
+	private int getCoinId(String name)
+	{
+		int id;
+		if (name.equalsIgnoreCase("adena"))
+			id = 57;
+		else if (name.equalsIgnoreCase("ancientadena"))
+			id = 5575;
+		else if (name.equalsIgnoreCase("festivaladena"))
+			id = 6673;
+		else if (name.equalsIgnoreCase("blueeva"))
+			id = 4355;
+		else if (name.equalsIgnoreCase("goldeinhasad"))
+			id = 4356;
+		else if (name.equalsIgnoreCase("silvershilen"))
+			id = 4357;
+		else if (name.equalsIgnoreCase("bloodypaagrio"))
+			id = 4358;
+		else if (name.equalsIgnoreCase("fantasyislecoin"))
+			id = 13067;
+		else id = 0;
+		
+		return id;
 	}
 }

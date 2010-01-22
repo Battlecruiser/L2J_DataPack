@@ -96,7 +96,11 @@ public class AdminInstanceZone implements IAdminCommandHandler
 		Map<Integer, Long> instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(player.getObjectId());
 
 		final StringBuilder html = StringUtil.startAppend(500 + instanceTimes.size() * 200,
-				"<html><center><font color=\"LEVEL\">Instances for ",
+				"<html><center><table width=260><tr>"+
+				"<td width=40><button value=\"Main\" action=\"bypass -h admin_admin\" width=40 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>"+
+				"<td width=180><center>Character Instances</center></td>"+
+				"<td width=40><button value=\"Back\" action=\"bypass -h admin_current_player\" width=40 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>"+
+				"</tr></table><br><font color=\"LEVEL\">Instances for ",
 				player.getName(),
 				"</font><center><br>" +
 				"<table>" +
