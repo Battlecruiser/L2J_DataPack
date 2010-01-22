@@ -16,6 +16,8 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_admin3','1'),
 ('admin_admin4','1'),
 ('admin_admin5','1'),
+('admin_admin6','1'),
+('admin_admin7','1'),
 ('admin_gmliston','1'),
 ('admin_gmlistoff','1'),
 ('admin_silence','1'),
@@ -29,6 +31,8 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_manualhero','1'),
 ('admin_sethero','1'),
 ('admin_endolympiad','1'),
+('admin_setconfig','1'),
+('admin_config_server','1'),
 
 -- ANNOUNCEMENTS
 ('admin_list_announcements','1'),
