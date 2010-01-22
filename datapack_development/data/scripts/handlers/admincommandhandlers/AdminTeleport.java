@@ -498,7 +498,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				_log.warning("ERROR: NPC " + target.getObjectId() + " has a 'null' spawn.");
 				return;
 			}
-			int respawnTime = spawn.getRespawnDelay();
+			int respawnTime = spawn.getRespawnDelay() / 1000;
 			
 			target.deleteMe();
 			spawn.stopRespawn();
