@@ -99,11 +99,13 @@ public class AdminAdmin implements IAdminCommandHandler
 		{
 			GmListTable.getInstance().showGm(activeChar);
 			activeChar.sendMessage("Registered into gm list");
+			AdminHelpPage.showHelpPage(activeChar,"gm_menu.htm");
 		}
 		else if (command.startsWith("admin_gmlistoff"))
 		{
 			GmListTable.getInstance().hideGm(activeChar);
 			activeChar.sendMessage("Removed from gm list");
+			AdminHelpPage.showHelpPage(activeChar,"gm_menu.htm");
 		}
 		else if (command.startsWith("admin_silence"))
 		{
@@ -117,6 +119,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				activeChar.setSilenceMode(true);
 				activeChar.sendPacket(new SystemMessage(SystemMessageId.MESSAGE_REFUSAL_MODE));
 			}
+			AdminHelpPage.showHelpPage(activeChar,"gm_menu.htm");
 		}
 		else if (command.startsWith("admin_saveolymp"))
 		{
@@ -185,6 +188,7 @@ public class AdminAdmin implements IAdminCommandHandler
 			{
 				activeChar.refreshOverloaded();
 			}
+			AdminHelpPage.showHelpPage(activeChar,"gm_menu.htm");
 		}
 		else if (command.startsWith("admin_tradeoff"))
 		{
@@ -215,6 +219,7 @@ public class AdminAdmin implements IAdminCommandHandler
 					activeChar.sendMessage("Trade refusal enabled");
 				}
 			}
+			AdminHelpPage.showHelpPage(activeChar,"gm_menu.htm");
 		}
 		else if (command.startsWith("admin_reload"))
 		{
