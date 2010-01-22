@@ -154,9 +154,9 @@ public class AdminBuffs implements IAdminCommandHandler
 			max++;
 		
 		final StringBuilder html = StringUtil.startAppend(500 + effects.length * 200, 
-				"<html><table width=\"100%\" bgcolor=666666><tr><td width=40><button value=\"Main\" action=\"bypass -h admin_admin\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=180><center><font color=\"LEVEL\">Effects of ", 
+				"<html><table width=\"100%\"><tr><td width=45><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=180><center><font color=\"LEVEL\">Effects of ", 
 				target.getName(),
-				"</font></td><td width=40><button value=\"Back\" action=\"bypass -h admin_admin3\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table><br><table width=\"100%\"><tr><td width=200>Skill</td><td width=30>Rem. Time</td><td width=70>Action</td></tr>");
+				"</font></td><td width=45><button value=\"Back\" action=\"bypass -h admin_current_player\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table><br><table width=\"100%\"><tr><td width=200>Skill</td><td width=30>Rem. Time</td><td width=70>Action</td></tr>");
 		
 		int start = ((page - 1) * PAGE_LIMIT);
 		int end = Math.min(((page - 1) * PAGE_LIMIT) + PAGE_LIMIT, effects.length);
@@ -175,11 +175,11 @@ public class AdminBuffs implements IAdminCommandHandler
 						Integer.toString(target.getObjectId()), 
 						" ", 
 						String.valueOf(e.getSkill().getId()), 
-						"\" width=60 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
+						"\" width=60 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
 			}
 		}
 		
-		html.append("</table><table width=300 bgcolor=666666><tr>");
+		html.append("</table><table width=300 bgcolor=444444><tr>");
 		for (int x = 0; x < max; x++)
 		{
 			int pagenr = x + 1;
@@ -205,7 +205,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		
 		StringUtil.append(html, "<br><center><button value=\"Remove All\" action=\"bypass -h admin_stopallbuffs ", 
 				Integer.toString(target.getObjectId()),
-				"\" width=75 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></html>");
+				"\" width=80 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></html>");
 		
 		NpcHtmlMessage ms = new NpcHtmlMessage(1);
 		ms.setHtml(html.toString());
