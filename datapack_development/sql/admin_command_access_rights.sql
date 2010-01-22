@@ -125,6 +125,8 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_remove_clan_penalty','1'),
 ('admin_nokarma','1'),
 ('admin_summon_info','1'),
+('admin_summon_setlvl','1'),
+('admin_unsummon','1'),
 
 -- EDIT NPC
 ('admin_edit_npc','1'),

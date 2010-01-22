@@ -1,12 +1,33 @@
 <html><title>GM Pet Info</title><body>
-<font color="LEVEL">Name:</font> %name%<br1>
-<font color="LEVEL">Level:</font> %level%<br1>
-<font color="LEVEL">Owner:</font> %owner%<br1>
-<font color="LEVEL">Type:</font> %class%<br>
-<font color="LEVEL">AI:</font> %ai%<br1>
-<font color="LEVEL">Hp:</font> %hp%<br1>
-<font color="LEVEL">Mp:</font> %mp%<br1>
-<font color="LEVEL">Karma:</font> %karma%<br1>
-<font color="LEVEL">Food:</font> %food%<br1>
-<font color="LEVEL">Load:</font> %load%<br1>
-</body></html>
+<center>
+<table width=270 border=0>
+<tr>
+<td><button value="Kill" action="bypass -h admin_kill_menu" width=50 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Res" action="bypass -h admin_res" width=50 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Heal" action="bypass -h admin_heal" width=50 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Food" action="bypass -h admin_fullfood" width=50 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Uns" action="bypass -h admin_unsummon" width=50 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+</table>
+<br><img src="L2UI.SquareWhite" width=260 height=1><br>
+<table width=270 border=0>
+<tr><td><table width=270 border=0 bgcolor=131210><tr><td width=100><font color="LEVEL">Type:</font></td><td align=right width=170>%class%</td></tr></table></td></tr>
+<tr><td><table width=270 border=0><tr><td width=100><font color="LEVEL">AI:</font></td><td align=right width=170>%ai%</td></tr></table></td></tr>
+<tr><td><table width=270 border=0 bgcolor=131210><tr><td width=100><font color="LEVEL">Owner:</font></td><td align=right width=170>%owner%</td></tr></table></td></tr>
+<tr><td><table width=270 border=0><tr><td width=100><font color="LEVEL">Name:</font></td><td align=right width=170>%name%</td></tr></table></td></tr>
+<tr><td><table width=270 border=0 bgcolor=131210><tr><td width=100><font color="LEVEL">Level:</font></td><td align=right width=170><font color="00FF00">%level%</font></td></tr></table></td></tr>
+<tr><td><table width=270 border=0><tr><td width=100><font color="LEVEL">Hp:</font></td><td align=right width=170>%hp%</td></tr></table></td></tr>
+<tr><td><table width=270 border=0 bgcolor=131210><tr><td width=100><font color="LEVEL">Mp:</font></td><td align=right width=170>%mp%</td></tr></table></td></tr>
+<tr><td><table width=270 border=0><tr><td width=100><font color="LEVEL">Food:</font></td><td align=right width=170>%food%</td></tr></table></td></tr>
+<tr><td><table width=270 border=0 bgcolor=131210><tr><td width=100><font color="LEVEL">Load:</font></td><td align=right width=170>%load%</td></tr></table></td></tr>
+<tr><td><table width=270 border=0><tr><td width=100><font color="LEVEL">Karma:</font></td><td align=right width=170>%karma%</td></tr></table></td></tr>
+</table>
+<br><img src="L2UI.SquareWhite" width=260 height=1><br>
+<table width=240>
+<tr>
+<td><font color="LEVEL">Level:</font></td>
+<td><edit var="qbox" width=30 height=13></td>
+<td><button value="Change Level" action="bypass -h admin_summon_setlvl $qbox" width=120 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr>
+</table>
+</center></body></html>
