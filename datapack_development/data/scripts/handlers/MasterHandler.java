@@ -91,6 +91,7 @@ public class MasterHandler
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminRes());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminRide());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminShop());
+		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminShowQuests());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminShutdown());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminSiege());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminSkill());

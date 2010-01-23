@@ -47,7 +47,7 @@ public class AdminGmChat implements IAdminCommandHandler
 		else if (command.startsWith("admin_snoop"))
 			snoop(command, activeChar);
 		if (command.startsWith("admin_gmchat_menu"))
-			AdminHelpPage.showHelpPage(activeChar, "main_menu.htm");
+			AdminHelpPage.showHelpPage(activeChar, "gm_menu.htm");
 		return true;
 	}
 	

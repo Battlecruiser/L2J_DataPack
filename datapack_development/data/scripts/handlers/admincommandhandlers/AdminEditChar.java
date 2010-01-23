@@ -101,6 +101,8 @@ public class AdminEditChar implements IAdminCommandHandler
 		"admin_setsex", // changes characters' sex
 		"admin_setcolor", // change charnames' color display
 		"admin_setclass", // changes chars' classId
+		"admin_setpk",		// changes PK count
+		"admin_setpvp",		// changes PVP count
 		"admin_fullfood", // fulfills a pet's food bar
 		"admin_remove_clan_penalty", // removes clan penalties
 		"admin_summon_info", //displays an information window about target summon
@@ -215,6 +217,60 @@ public class AdminEditChar implements IAdminCommandHandler
 				activeChar.sendMessage("Usage: //setkarma <new_karma_value>");
 			}
 		}
+		else if (command.startsWith("admin_setpk"))
+		{
+			try
+			{
+				String val = command.substring(12);
+				int pk  = Integer.parseInt(val);
+				L2Object target = activeChar.getTarget();
+				if(target instanceof L2PcInstance)
+				{
+					L2PcInstance player = (L2PcInstance) target;
+					player.setPkKills(pk);
+					player.broadcastUserInfo();
+					player.sendPacket(new UserInfo(player));
+					player.sendPacket(new ExBrExtraUserInfo(player));
+					player.sendMessage("A GM changed your PK count to " + pk);
+					activeChar.sendMessage(player.getName()+"'s PK count changed to "+pk);
+				}
+				else
+					activeChar.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
+			}
+			catch (Exception e)
+			{
+				if (Config.DEVELOPER)
+					_log.warning("Set pk error: " + e);
+				activeChar.sendMessage("Usage: //setpk <pk_count>");
+			}
+		}
+		else if (command.startsWith("admin_setpvp"))
+		{
+			try
+			{
+				String val = command.substring(13);
+				int pvp  = Integer.parseInt(val);
+				L2Object target = activeChar.getTarget();
+				if(target instanceof L2PcInstance)
+				{
+					L2PcInstance player = (L2PcInstance) target;
+					player.setPvpKills(pvp);
+					player.broadcastUserInfo();
+					player.sendPacket(new UserInfo(player));
+					player.sendPacket(new ExBrExtraUserInfo(player));
+					player.sendMessage("A GM changed your PVP count to " + pvp);
+					activeChar.sendMessage(player.getName()+"'s PVP count changed to "+pvp);
+				}
+				else
+					activeChar.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
+			}
+			catch (Exception e)
+			{
+				if (Config.DEVELOPER)
+					_log.warning("Set pvp error: " + e);
+				activeChar.sendMessage("Usage: //setpvp <pvp_count>");
+			}
+		}
 		else if (command.startsWith("admin_setfame"))
 		{
 			try
@@ -226,14 +282,14 @@ public class AdminEditChar implements IAdminCommandHandler
 				{
 					L2PcInstance player = (L2PcInstance) target;
 					player.setFame(fame);
+					player.broadcastUserInfo();
 					player.sendPacket(new UserInfo(player));
 					player.sendPacket(new ExBrExtraUserInfo(player));
-					player.sendMessage("A GM changed your Reputation points to " + fame);
+					player.sendMessage("A GM changed your Reputation points to " +fame);
+					activeChar.sendMessage(player.getName()+"'s Fame changed to "+fame);
 				}
 				else
-				{
 					activeChar.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
-				}
 			}
 			catch (Exception e)
 			{
@@ -262,18 +318,18 @@ public class AdminEditChar implements IAdminCommandHandler
 				String val = command.substring(10);
 				int recVal = Integer.parseInt(val);
 				L2Object target = activeChar.getTarget();
-				L2PcInstance player = null;
 				if (target instanceof L2PcInstance)
 				{
-					player = (L2PcInstance) target;
+					L2PcInstance player = (L2PcInstance) target;
+					player.setRecomHave(recVal);
+					player.broadcastUserInfo();
+					player.sendPacket(new UserInfo(player));
+					player.sendPacket(new ExBrExtraUserInfo(player));
+					player.sendMessage("A GM changed your Recommend points to " +recVal);
+					activeChar.sendMessage(player.getName()+"'s Recommend changed to "+recVal);
 				}
 				else
-				{
-					return false;
-				}
-				player.setRecomHave(recVal);
-				player.sendMessage("You have been recommended by a GM");
-				player.broadcastUserInfo();
+					activeChar.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
 			}
 			catch (Exception e)
 			{
