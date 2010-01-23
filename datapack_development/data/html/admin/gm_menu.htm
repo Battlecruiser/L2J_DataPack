@@ -22,8 +22,7 @@
 <td><button value="Help" action="bypass -h admin_help help/main_menu.htm" width=45 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 </tr>
 </table>
-<br>
-GM Actions:<table width=270><tr>
+<table width=270><tr>
 <td><button value="List ON" action="bypass -h admin_gmliston" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 <td><button value="List OFF" action="bypass -h admin_gmlistoff" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 <td><button value="Diet" action="bypass -h admin_diet" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
@@ -34,25 +33,34 @@ GM Actions:<table width=270><tr>
 <td><button value="TradeOff" action="bypass -h admin_tradeoff" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 <td><button value="Invul" action="bypass -h admin_invul" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 </tr><tr>
-<td><button value="Wyvern" action="bypass -h admin_ride_wyvern" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td><button value="Strider" action="bypass -h admin_ride_strider" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Announc" action="bypass -h admin_list_announcements" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="AutoAnn" action="bypass -h admin_list_autoann $qbox" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 <td><button value="Enhance" action="bypass -h admin_enchant" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 <td><button value="GM Shop" action="bypass -h admin_gmshop" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 </tr><tr>
 <td><button value="Instance" action="bypass -h admin_help instancezone.htm" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td><button value="Announc" action="bypass -h admin_list_announcements" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td><button value="AutoAnn" action="bypass -h admin_list_autoann $qbox" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td></td>
+<td></td>
 </tr>
-</table>
-<br>
+</table><br1>
 <table width=270><tr>
-<td>GM Speed:</td>
+<td><font color="LEVEL">GM Speed:</font></td>
 <td><button value="1" action="bypass -h admin_gmspeed_menu 1" width=35 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 <td><button value="2" action="bypass -h admin_gmspeed_menu 2" width=35 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 <td><button value="3" action="bypass -h admin_gmspeed_menu 3" width=35 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 <td><button value="4" action="bypass -h admin_gmspeed_menu 4" width=35 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 <td><button value="Off" action="bypass -h admin_gmspeed_menu 0" width=35 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 </tr></table><br>
-<center><multiedit var="new_announcement" width=250 height=40></center>
-<button value="Announce" action="bypass -h admin_announce_menu $new_announcement" width=70 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+<center><multiedit var="new_announcement" width=250 height=50></center>
+<table width="160">
+<tr>
+<td><button value="Announce" action="bypass -h admin_announce_menu $new_announcement" width=80 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="GM Chat" action="bypass -h admin_gmchat_menu $new_announcement" width=80 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr></table><br>
+<table width=270><tr>
+<td><button value="Fenrir" action="bypass -h admin_ride_wolf" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Strider" action="bypass -h admin_ride_strider" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Wyvern" action="bypass -h admin_ride_wyvern" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+<td><button value="Horse" action="bypass -h admin_ride_horse" width=65 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr></table><br>
 </center></body></html>
