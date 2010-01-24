@@ -1164,13 +1164,16 @@
 		<set name="lvlDepend" val="2" />
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="58" />
-		<set name="numCharges" val="2" />
+		<set name="numCharges" val="2" /> <!-- 2 Charges are consumed -->
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="15000" />
 		<set name="skillType" val="DISARM" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="weaponsAllowed" val="512" /> <!-- Dual Sword -->
+		<cond msgId="113" addName="1">
+			<player Charges="2" /> <!-- Need to recharge 2nd stage of Sword Energy. -->
+		</cond>
 		<for>
 			<effect name="Disarm" time="5" val="0" />
 		</for>
@@ -1183,7 +1186,7 @@
 		<set name="hitTime" val="1200" />
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="37" />
-		<set name="numCharges" val="2" />
+		<set name="numCharges" val="2" /> <!-- 2 Charges are consumed -->
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
 		<set name="power" val="2516" />
@@ -1192,6 +1195,9 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="weaponsAllowed" val="1024" /> <!-- Dual Fist -->
+		<cond msgId="113" addName="1">
+			<player Charges="2" /> <!-- Chi Energy Stage 2 Recharge needed. -->
+		</cond>
 		<for>
 			<effect count="8" name="DamOverTime" val="212" effectPower="40" effectType="DOT" />
 		</for>
