@@ -32,14 +32,12 @@ public class InquisitorElvenElder extends L2Transformation
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(1524, getPlayer().getLevel() - 43), false);
 			// Divine Curse
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(1525, getPlayer().getLevel() - 43), false);
-			getPlayer().setTransformAllowedSkills(new int[]{838,5491,1523,1528,1524,1525,1430,1043,1400,1303});
+			getPlayer().setTransformAllowedSkills(new int[]{838,1523,1528,1524,1525,1430,1043,1400,1303});
 		}
 		else
-			getPlayer().setTransformAllowedSkills(new int[]{838,5491,1430,1043,1400,1303});
-		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false); 
-		// Switch Stance
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(838, 1), false);
+			getPlayer().setTransformAllowedSkills(new int[]{838,1430,1043,1400,1303});
+			// Switch Stance
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(838, 1), false);
 	}
 
 	public void onUntransform()
@@ -57,8 +55,6 @@ public class InquisitorElvenElder extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1524, getPlayer().getLevel() - 43), false);
 		// Divine Curse
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1525, getPlayer().getLevel() - 43), false);
-		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false); 
 		// Switch Stance
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(838, 1), false);
 
