@@ -546,4 +546,8 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 
 -- ZONE
 ('admin_zone_check','1'),
-('admin_zone_reload','1');
+('admin_zone_reload','1'),
+
+-- voice commands
+('banchat','7'),
+('unbanchat','7');
