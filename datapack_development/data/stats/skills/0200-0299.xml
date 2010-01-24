@@ -288,7 +288,6 @@
 	<skill id="225" levels="3" name="Acrobatic Move">
 		<table name="#gain"> 4 5 6 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="condition" val="1" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
@@ -1336,7 +1335,6 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="ignoreShld" val="true" />
 		<set name="SSBoost" val="2.0" />
-		<set name="condition" val="128" />
 		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="1670" />
 		<set name="overHit" val="true" />
@@ -1345,8 +1343,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
-		<!-- charge values -->
-		<set name="numCharges" val="4" />
+		<set name="numCharges" val="4" /> <!-- 4 Charges are consumed -->
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
@@ -1362,6 +1359,9 @@
 		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="element" val="3" />
 		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
+		<cond msgId="113" addName="1">
+			<player Charges="4" /> <!-- Need to recharge 4th stage of Sword Energy. -->
+		</cond>
 	</skill>
 	<skill id="262" levels="37" name="Holy Blessing" enchantLevels1="30" enchantLevels2="30">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -1409,7 +1409,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="condition" val="16" />
+		<set name="condition" val="16" /> <!-- Crit -->
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="1080" />
 		<set name="coolTime" val="720" />
@@ -2060,7 +2060,6 @@
 		<set name="overHit" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="ignoreShld" val="true" />
-		<set name="condition" val="128" />
 		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="1360" />
 		<set name="coolTime" val="440" />
@@ -2069,8 +2068,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
-		<!-- charge values -->
-		<set name="numCharges" val="2" />
+		<set name="numCharges" val="2" /> <!-- 2 Charges are consumed -->
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
@@ -2086,6 +2084,9 @@
 		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="element" val="3" />
 		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
+		<cond msgId="113" addName="1">
+			<player Charges="2" /> <!-- Requires a hand-to-hand weapon recharged to its 2nd energy stage. -->
+		</cond>
 	</skill>
 	<skill id="285" levels="27" name="Higher Mana Gain">
 		<table name="#gainMp"> 22 24 28 29 31 32 38 39 41 42 48 49 50 52 53 59 61 62 64 66 72 73 75 76 78 79 81 </table>

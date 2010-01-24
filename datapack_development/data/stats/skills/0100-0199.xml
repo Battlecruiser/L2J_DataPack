@@ -708,13 +708,12 @@
 		<table name="#aggro"> 341 408 495 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="condition" val="32" />
 		<set name="reuseDelay" val="600000" />
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="#aggro" />
-		<cond msg="Only works when HP becomes 30 percent or lower.">
+		<cond msgId="113" addName="1">
 			<player hp="30" />
 		</cond>
 		<for>
@@ -809,7 +808,6 @@
 		<table name="#hp"> 1.9 2.7 2.9 3.6 4.5 4.7 5.6 6.7 </table>
 		<table name="#mp"> 1.9 2.1 2.2 2.5 2.7 2.8 3.1 3.5 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="condition" val="4" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
@@ -915,7 +913,6 @@
 		<table name="#hp"> 2.5 3 3.5 4 4.5 5 5.5 6 </table>
 		<table name="#mp"> 1.8 1.9 2 2.1 2.2 2.3 2.4 2.5 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="condition" val="1" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
@@ -952,13 +949,12 @@
 		<table name="#aggro"> 303 438 523 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="condition" val="32" />
 		<set name="reuseDelay" val="600000" />
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="#aggro" />
-		<cond msg="Usable only when HP are 30 percent or lower.">
+		<cond msgId="113" addName="1">
 			<player hp="30" />
 		</cond>
 		<for>
@@ -989,13 +985,12 @@
 		<set name="mpConsume" val="25" />
 		<set name="power" val="100" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="condition" val="32" />
 		<set name="reuseDelay" val="900000" />
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="181" />
-		<cond msg="Only usable if HP is 10 percent or lower.">
+		<cond msgId="113" addName="1">
 			<player hp="10" />
 		</cond>
 	</skill>

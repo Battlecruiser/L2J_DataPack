@@ -158,7 +158,7 @@
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="condition" val="16" />
+		<set name="condition" val="16" /> <!-- Crit -->
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="720" />
@@ -358,7 +358,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="weaponsAllowed" val="65536" /> <!-- Crossbow -->
-		<cond msg="Can be used when HP is below 10 percent.">
+		<cond msgId="113" addName="1">
 			<player hp="10" />
 		</cond>
 	</skill>
@@ -757,7 +757,7 @@
 		<set name="reuseDelay" val="900000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<cond msg="Available to use when CP is more than 80 percent.">
+		<cond msgId="113" addName="1">
 			<player cp="80" />
 		</cond>
 		<for>
