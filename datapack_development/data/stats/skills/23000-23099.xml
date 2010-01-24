@@ -118,14 +118,42 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="23017" levels="1" name="Holiday Festival">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="holiday">
+				<mul order="0x30" stat="maxHp" val="1.1" />
+				<mul order="0x30" stat="maxMp" val="1.1" />
+				<mul order="0x30" stat="maxCp" val="1.1" />
+				<mul order="0x30" stat="pAtk" val="1.1" />
+				<mul order="0x30" stat="pDef" val="1.1" />
+				<mul order="0x30" stat="mAtk" val="1.15" />
+				<mul order="0x30" stat="runSpd" val="1.1" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.8" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.8" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.8" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23018" levels="1" name="Thomas D. Turkey's Mistake">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="holiday">
+				<mul order="0x30" stat="maxHp" val="1.15" />
+				<mul order="0x30" stat="maxMp" val="1.15" />
+				<mul order="0x30" stat="maxCp" val="1.15" />
+				<mul order="0x30" stat="pAtk" val="1.15" />
+				<mul order="0x30" stat="pDef" val="1.15" />
+				<mul order="0x30" stat="mAtk" val="1.20" />
+				<mul order="0x30" stat="runSpd" val="1.15" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.6" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.6" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.6" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23019" levels="3" name="Scissors">
 		<set name="target" val="TARGET_ONE" />
