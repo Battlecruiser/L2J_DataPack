@@ -232,6 +232,8 @@ public class MasterHandler
 			VoicedCommandHandler.getInstance().registerVoicedCommandHandler(new Banking());
 		if (Config.TVT_ALLOW_VOICED_COMMAND)
 			VoicedCommandHandler.getInstance().registerVoicedCommandHandler(new TvTVoicedInfo());
+		if (Config.L2JMOD_CHAT_ADMIN)
+			VoicedCommandHandler.getInstance().registerVoicedCommandHandler(new ChatAdmin());
 		_log.config("Loaded " + VoicedCommandHandler.getInstance().size() + " VoicedHandlers");
 	}
 	
