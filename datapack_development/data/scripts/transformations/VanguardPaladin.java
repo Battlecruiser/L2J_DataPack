@@ -34,14 +34,12 @@ public class VanguardPaladin extends L2Transformation
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(956, getPlayer().getLevel() - 43), false);
 			// Guillotine Attack
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(957, getPlayer().getLevel() - 43), false);
-			getPlayer().setTransformAllowedSkills(new int[]{18,28,196,197,293,400,406,814,816,838,956,957,5491});
+			getPlayer().setTransformAllowedSkills(new int[]{18,28,196,197,293,400,406,814,816,838,956,957});
 		}
 		else
-			getPlayer().setTransformAllowedSkills(new int[]{18,28,196,197,400,406,838,5491});
+			getPlayer().setTransformAllowedSkills(new int[]{18,28,196,197,400,406,838});
 			// Switch Stance
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(838, 1), false);
-			// Decrease Bow/Crossbow Attack Speed
-			getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
 	}
 
 	public void onUntransform()
@@ -63,8 +61,6 @@ public class VanguardPaladin extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(956, getPlayer().getLevel() - 43), false);
 		// Guillotine Attack
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(957, getPlayer().getLevel() - 43), false);
-		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false);
 
 		getPlayer().setTransformAllowedSkills(new int[]{});
 	}
