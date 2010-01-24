@@ -605,7 +605,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="condition" val="16" />
+		<set name="condition" val="16" /> <!-- Crit -->
 		<set name="reuseDelay" val="30000" />
 		<set name="hitTime" val="1080" />
 		<set name="coolTime" val="720" />
@@ -722,7 +722,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="662" />
-		<cond msg="Usable only while mounted on a Wyvern.">
+		<cond msgId="113" addName="1">
 			<player flying="true" />
 		</cond>
 		<for>
@@ -960,7 +960,7 @@
 		<set name="effectRange" val="400" />
 		<set name="reuseDelay" val="4000" />
 		<set name="overHit" val="true" />
-		<set name="condition" val="16" />
+		<set name="condition" val="16" /> <!-- Crit -->
 		<set name="lethal1" val="5" />
 		<set name="hitTime" val="1800" />
 		<set name="baseCritRate" val="15" />

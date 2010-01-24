@@ -113,7 +113,6 @@
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="SSBoost" val="2.0" />
-		<set name="condition" val="128" />
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="1730" />
 		<set name="coolTime" val="167" />
@@ -137,8 +136,10 @@
 		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="element" val="3" />
 		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
-		<!-- charge values -->
-		<set name="numCharges" val="3" />
+		<set name="numCharges" val="3" /> <!-- 3 Charges are consumed -->
+		<cond msgId="113" addName="1">
+			<player Charges="3" /> <!-- Requires a dualsword weapon whose 3rd energy stage has been recharged. -->
+		</cond>
 	</skill>
 	<skill id="6" levels="37" name="Sonic Blaster" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30" enchantLevels4="30" enchantLevels5="30" enchantLevels6="30">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -162,7 +163,6 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="SSBoost" val="2.0" />
 		<set name="overHit" val="true" />
-		<set name="condition" val="128" />
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="1900" />
 		<set name="skillType" val="CHARGEDAM" />
@@ -179,8 +179,10 @@
 		<enchant5 name="element" val="2" />
 		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="element" val="3" />
-		<!-- charge values -->
-		<set name="numCharges" val="2" />
+		<set name="numCharges" val="2" /> <!-- 2 Charges are consumed -->
+		<cond msgId="113" addName="1">
+			<player Charges="2" /> <!-- Requires a dualsword, sword or blunt weapon weapon whose 2nd energy stage has been recharged. -->
+		</cond>
 	</skill>
 	<skill id="7" levels="28" name="Sonic Storm" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30" enchantLevels4="30" enchantLevels5="30" enchantLevels6="30">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -203,7 +205,6 @@
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillRadius" val="150" />
 		<set name="SSBoost" val="2.0" />
-		<set name="condition" val="128" />
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="1900" />
@@ -222,11 +223,10 @@
 		<enchant5 name="element" val="2" />
 		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="element" val="3" />
-		<!-- charge values -->
 		<set name="itemConsumeId" val="5589" />
 		<set name="itemConsumeCount" val="3" />
 		<cond msgId="113" addName="1">
-			<player Charges="2" />
+			<player Charges="2" /> <!-- Requires a sword, blunt weapon or dualsword weapon whose 2nd energy stage has been recharged. -->
 		</cond>
 	</skill>
 	<skill id="8" levels="8" name="Sonic Focus">
@@ -271,7 +271,6 @@
 		<set name="target" val="TARGET_MULTIFACE" />
 		<set name="skillRadius" val="200" />
 		<set name="overHit" val="true" />
-		<set name="condition" val="128" />
 		<set name="reuseDelay" val="2000" />
 		<set name="hitTime" val="720" />
 		<set name="coolTime" val="280" />
@@ -293,7 +292,7 @@
 		<set name="itemConsumeId" val="5589" />
 		<set name="itemConsumeCount" val="3" />
 		<cond msgId="113" addName="1">
-			<player Charges="2" />
+			<player Charges="2" /> <!-- Requires a sword, blunt weapon or dualsword weapon whose 2nd energy stage has been recharged. -->
 		</cond>
 	</skill>
 	<skill id="10" levels="8" name="Summon Storm Cubic">
@@ -403,7 +402,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="condition" val="16" />
+		<set name="condition" val="16" /> <!-- Crit -->
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="1080" />
 		<set name="coolTime" val="720" />
@@ -436,7 +435,6 @@
 		<set name="overHit" val="true" />
 		<set name="skillRadius" val="200" />
 		<set name="SSBoost" val="2.0" />
-		<set name="condition" val="128" />
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="780" />
 		<set name="coolTime" val="217" />
@@ -458,7 +456,7 @@
 		<set name="itemConsumeId" val="5589" />
 		<set name="itemConsumeCount" val="2" />
 		<cond msgId="113" addName="1">
-			<player Charges="2" />
+			<player Charges="1" /> <!-- Requires a hand-to-hand weapon whose 1st energy stage has been recharged. -->
 		</cond>
 	</skill>
 	<skill id="18" levels="37" name="Aura of Hate" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30">
@@ -739,7 +737,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="condition" val="24" />
+		<set name="condition" val="24" /> <!-- Behind/Crit -->
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="1080" />
 		<set name="coolTime" val="720" />
@@ -826,7 +824,6 @@
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillRadius" val="150" />
 		<set name="SSBoost" val="2.0" />
-		<set name="condition" val="128" />
 		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="CHARGEDAM" />
@@ -848,7 +845,7 @@
 		<set name="itemConsumeId" val="5589" />
 		<set name="itemConsumeCount" val="2" />
 		<cond msgId="113" addName="1">
-			<player Charges="2" />
+			<player Charges="1" /> <!-- Requires a hand-to-hand weapon whose 1st energy stage has been recharged. -->
 		</cond>
 	</skill>
 	<skill id="36" levels="37" name="Whirlwind" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30" enchantLevels4="30" enchantLevels5="30" enchantLevels6="30">
@@ -1097,7 +1094,6 @@
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="condition" val="128" />
 		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="1900" />
 		<set name="overHit" val="true" />
