@@ -225,11 +225,19 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6041" levels="1" name="Phoenix Rush">
-		<set name="target" val="TARGET_NONE" />
-		<set name="reuseDelay" val="30000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
 		<set name="hitTime" val="800" />
+		<set name="magicLvl" val="83" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="2160" /> <!-- Guess -->
+		<set name="reuseDelay" val="30000" />
+		<set name="skillType" val="PDAM" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="EnemyCharge" val="0" />
+		</for>
 	</skill>
 	<skill id="6042" levels="1" name="Phoenix Cleanse">
 		<set name="castRange" val="600" />
