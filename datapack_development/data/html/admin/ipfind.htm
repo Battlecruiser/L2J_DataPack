@@ -1,10 +1,10 @@
 <html><body>
 <table width=270><tr>
 <td width=45><button value="Main" action="bypass -h admin_admin" width=45 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-<td width=180><center>Characters logged from %ip%: </center></td>
-<td width=45><button value="Back" action="bypass -h admin_show_characters 0" width=45 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
-</tr></table>
-<br>
+<td width=180><center>Ip Menu</center></td>
+<td width=45><button value="Back" action="bypass -h admin_current_player" width=45 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
+</tr></table><br>
+Characters logged from <font color="LEVEL">%ip%</font>:<br>
 <table width=270>		
 <tr><td width=80>Name</td><td width=110>Class</td><td width=40>Level</td></tr>
 %results%
@@ -12,8 +12,8 @@
 <br>
 <center>
 <table><tr>
-<td width=60>IP Number:</td>
-<td><edit var="ip_number" width=80></td>
+<td width=100>IP Number:</td>
+<td><edit var="ip_number" width=100></td>
 <td><button value="Find" action="bypass -h admin_find_ip $ip_number" width=40 height=21 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df"></td>
 </tr></table></center>
 <br>Found %number% character%end%

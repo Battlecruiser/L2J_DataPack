@@ -67,6 +67,7 @@ public class AdminAdmin implements IAdminCommandHandler
 		"admin_admin5",
 		"admin_admin6",
 		"admin_admin7",
+		"admin_admin8",
 		"admin_gmliston",
 		"admin_gmlistoff",
 		"admin_silence",
@@ -388,6 +389,9 @@ public class AdminAdmin implements IAdminCommandHandler
 			case 7:
 				filename = "gm";
 				break;
+			case 8:
+				filename = "old";
+				break;
 			default:
 				if (Config.GM_ADMIN_MENU_STYLE.equals("modern"))
 					filename = "main";
@@ -402,7 +406,7 @@ public class AdminAdmin implements IAdminCommandHandler
 	{		
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		TextBuilder replyMSG = new TextBuilder("<html><title>L2J :: Config</title><body>");
-		replyMSG.append("<center><table width=270><tr><td width=60><button value=\"Main\" action=\"bypass -h admin_admin\" width=60 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=150>Config Server Panel</td><td width=60><button value=\"Back\" action=\"bypass -h admin_admin\" width=60 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table></center><br>");
+		replyMSG.append("<center><table width=270><tr><td width=60><button value=\"Main\" action=\"bypass -h admin_admin\" width=60 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=150>Config Server Panel</td><td width=60><button value=\"Back\" action=\"bypass -h admin_admin4\" width=60 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table></center><br>");
 		replyMSG.append("<center><table width=260><tr><td width=140></td><td width=40></td><td width=40></td></tr>");
 		replyMSG.append("<tr><td><font color=\"00AA00\">Drop:</font></td><td></td><td></td></tr>");
 		replyMSG.append("<tr><td><font color=\"LEVEL\">Rate EXP</font> = "
