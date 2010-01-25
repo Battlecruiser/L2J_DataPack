@@ -180,7 +180,7 @@ These functions, their triggers, and the parameters passed into the script are d
 	self.foo(5)
 
 	The full listing of available functions can be seen in the class com.l2jserver.gameserver.model.quest.Quest, which 
-	is located at net/sf/l2j/gameserver/model/quest/Quest.java from the l2jserver project.  However, a few of the
+	is located at com/l2jsever/gameserver/model/quest/Quest.java from the l2jserver project.  However, a few of the
 	more common functions are summarized here:
 	a) startQuestTimer(name, time, npc, player, repeating)
 		Starts a timer.  The timer will call onAdvEvent(name, npc, player) each time that it fires.
