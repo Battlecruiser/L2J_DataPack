@@ -269,15 +269,19 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="110" levels="2" name="Ultimate Defense" enchantLevels1="30" enchantLevels2="30">
+	<skill id="110" levels="2" name="Ultimate Defense" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<table name="#pDef"> 1800 3600 </table>
 		<table name="#mDef"> 1350 2700 </table>
 		<table name="#mpConsume"> 10 21 </table>
 		<table name="#ench1time"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 </table>
 		<table name="#ench2reuseDelay"> 890000 880000 870000 860000 850000 840000 830000 820000 810000 800000 790000 780000 770000 760000 750000 740000 730000 720000 710000 700000 690000 680000 670000 660000 650000 640000 630000 620000 610000 600000 </table>
+		<table name="#ench3decreasePenalty"> 0.2 0.21 0.22 0.23 0.24 0.25 0.26 0.27 0.28 0.29 0.3 0.31 0.32 0.33 0.34 0.35 0.36 0.37 0.38 0.39 0.4 0.41 0.42 0.43 0.44 0.45 0.46 0.47 0.48 0.49 </table>
+		<table name="#enchpDef"> 3636 3672 3708 3744 3780 3816 3852 3888 3924 3960 3996 4032 4068 4104 4140 4176 4212 4248 4284 4320 4356 4392 4428 4464 4500 4536 4572 4608 4644 4680 </table>
+		<table name="#enchmDef"> 2727 2754 2781 2808 2835 2862 2889 2916 2943 2970 2997 3024 3051 3078 3105 3132 3159 3186 3213 3240 3267 3294 3321 3348 3375 3402 3429 3456 3483 3510 </table>
 		<table name="#aggro"> 204 438 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_SELF" />
@@ -296,18 +300,26 @@
 		</for>
 		<enchant1for>
 			<effect name="ImmobileBuff" time="#ench1time" val="0" abnormal="invulnerable" stackOrder="1" stackType="pd_up_special">
-				<add order="0x40" stat="pDef" val="3600" />
-				<add order="0x40" stat="mDef" val="2700" />
+				<add order="0x40" stat="pDef" val="#enchpDef" />
+				<add order="0x40" stat="mDef" val="#enchmDef" />
 				<mul order="0x30" stat="cancelVuln" val="0.2" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
 			<effect name="ImmobileBuff" time="30" val="0" abnormal="invulnerable" stackOrder="1" stackType="pd_up_special">
-				<add order="0x40" stat="pDef" val="3600" />
-				<add order="0x40" stat="mDef" val="2700" />
+				<add order="0x40" stat="pDef" val="#enchpDef" />
+				<add order="0x40" stat="mDef" val="#enchmDef" />
 				<mul order="0x30" stat="cancelVuln" val="0.2" />
 			</effect>
 		</enchant2for>
+		<enchant3for>
+			<effect name="Buff" time="30" val="0" abnormal="invulnerable" stackOrder="1" stackType="pd_up_special">
+				<add order="0x40" stat="pDef" val="#enchpDef" />
+				<add order="0x40" stat="mDef" val="#enchmDef" />
+				<mul order="0x30" stat="cancelVuln" val="0.2" />
+				<mul order="0x30" stat="runSpd" val="#ench3decreasePenalty" />
+			</effect>
+		</enchant3for>
 	</skill>
 	<skill id="111" levels="2" name="Ultimate Evasion" enchantLevels1="30" enchantLevels2="30">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
