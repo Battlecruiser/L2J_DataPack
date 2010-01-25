@@ -824,8 +824,8 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant4 name="elementPower" val="#enchElementPower" />
 		<for>
-			<effect name="Debuff" time="30" val="0" effectPower="60" effectType="DEBUFF" stackOrder="0.7" stackType="RunSpeedDown">
-				<mul order="0x30" stat="runSpd" val="0.7" />
+			<effect name="Debuff" time="60" val="0" effectPower="60" effectType="DEBUFF" stackOrder="0.8" stackType="RunSpeedDown">
+				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
 	</skill>
