@@ -33799,8 +33799,6 @@ INSERT INTO `npcskills` VALUES
 
 -- Reed Field Area
 INSERT INTO `npcskills` VALUES
-('18805','4408','10'),
-('18806','4408','10'),
 ('22650','4670','9'),
 ('22650','5909','1'),
 ('22650','4416','6'),
