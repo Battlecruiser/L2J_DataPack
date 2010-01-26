@@ -350,7 +350,6 @@ $MYG < ../sql/castle.sql &> /dev/null
 $MYG < ../sql/clanhall.sql &> /dev/null
 $MYG < ../sql/fort.sql &> /dev/null
 $MYG < ../sql/forums.sql &> /dev/null
-$MYG < ../sql/npc_buffer.sql &> /dev/null
 $MYG < ../sql/seven_signs_festival.sql &> /dev/null
 $MYG < ../sql/seven_signs_status.sql &> /dev/null
 fi
@@ -430,6 +429,7 @@ $MYG < ../sql/merchants.sql &> /dev/null
 $MYG < ../sql/messages.sql &> /dev/null
 $MYG < ../sql/minions.sql &> /dev/null
 $MYG < ../sql/npc.sql &> /dev/null
+$MYG < ../sql/npc_buffer.sql &> /dev/null
 $MYG < ../sql/npcAIData.sql &> /dev/null
 $MYG < ../sql/npcskills.sql &> /dev/null
 $MYG < ../sql/olympiad_data.sql &> /dev/null
