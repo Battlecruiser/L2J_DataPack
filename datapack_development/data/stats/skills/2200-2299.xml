@@ -1000,6 +1000,8 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
+		<set name="reuseDelay" val="10000" />
+		<set name="staticReuse" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
