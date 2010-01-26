@@ -45,6 +45,7 @@ import com.l2jserver.gameserver.network.communityserver.CommunityServerThread;
 import com.l2jserver.gameserver.network.communityserver.writepackets.WorldInfo;
 import com.l2jserver.gameserver.network.serverpackets.CharInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
+import com.l2jserver.gameserver.network.serverpackets.GMViewItemList;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.PartySmallWindowAll;
 import com.l2jserver.gameserver.network.serverpackets.PartySmallWindowDeleteAll;
@@ -107,7 +108,8 @@ public class AdminEditChar implements IAdminCommandHandler
 		"admin_remove_clan_penalty", // removes clan penalties
 		"admin_summon_info", //displays an information window about target summon
 		"admin_unsummon",
-		"admin_summon_setlvl"
+		"admin_summon_setlvl",
+		"admin_show_pet_inv"
 	};
 	
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
@@ -602,6 +604,32 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				activeChar.sendMessage("Usable only with Pets");
 			}
+		}
+		else if (command.startsWith("admin_show_pet_inv"))
+		{
+			String val;
+			int objId;
+			L2Object target;
+			try
+			{
+				val = command.substring(19);
+				objId = Integer.parseInt(val);
+				target = L2World.getInstance().getPet(objId);
+			}
+			catch (Exception e)
+			{
+				target = activeChar.getTarget();
+			}
+			
+			if (target instanceof L2PetInstance)
+			{
+				activeChar.sendPacket(new GMViewItemList((L2PetInstance) target));
+			}
+			else
+			{
+				activeChar.sendMessage("Usable only with Pets");
+			}
+			
 		}
 		return true;
 	}
@@ -1105,6 +1133,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		String name = target.getName();
 		html.replace("%name%", name == null ? "N/A" : name);
 		html.replace("%level%", Integer.toString(target.getLevel()));
+		html.replace("%exp%", Long.toString(target.getStat().getExp()));
 		String owner = target.getActingPlayer().getName();
 		html.replace("%owner%", " <a action=\"bypass -h admin_character_info " +owner+"\">"+owner+"</a>");
 		html.replace("%class%", target.getClass().getSimpleName());
@@ -1112,6 +1141,13 @@ public class AdminEditChar implements IAdminCommandHandler
 		html.replace("%hp%", (int)target.getStatus().getCurrentHp()+"/"+target.getStat().getMaxHp());
 		html.replace("%mp%", (int)target.getStatus().getCurrentMp()+"/"+target.getStat().getMaxMp());
 		html.replace("%karma%", Integer.toString(target.getKarma()));
+		if (target instanceof L2PetInstance)
+		{
+			int objId = target.getActingPlayer().getObjectId();
+			html.replace("%inv%", " <a action=\"bypass admin_show_pet_inv " +objId+ "\">view</a>");
+		}
+		else
+			html.replace("%inv%", "none");
 		if (target instanceof L2PetInstance)
 		{
 			html.replace("%food%", ((L2PetInstance) target).getCurrentFed()+"/"+((L2PetInstance)target).getPetData().getPetMaxFeed());
