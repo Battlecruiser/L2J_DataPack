@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="2600" levels="1" name="Gran Kain's Echo Crystal - Theme of Solitude">
-		<set name="itemConsumeId" val="13264" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -9,7 +8,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2601" levels="1" name="Gran Kain's Echo Crystal - Theme of the Feast">
-		<set name="itemConsumeId" val="13265" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -17,7 +15,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2602" levels="1" name="Gran Kain's Echo Crystal - Theme of Celebration">
-		<set name="itemConsumeId" val="13266" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -25,7 +22,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2603" levels="1" name="Gran Kain's Echo Crystal - Theme of Comedy">
-		<set name="itemConsumeId" val="13267" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -33,7 +29,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2604" levels="1" name="Gran Kain's Firework">
-		<set name="itemConsumeId" val="13268" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
@@ -42,7 +37,6 @@
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="2605" levels="1" name="Gran Kain's Large Firework">
-		<set name="itemConsumeId" val="13269" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
@@ -68,8 +62,6 @@
 			Lvl 3: Red Crystal of Fantasy
 		-->
 		<table name="#power"> 50000 100000 200000 </table>
-		<table name="#itemConsumeId"> 13386 13387 13388 </table>
-		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="hitTime" val="200" />
 		<set name="staticHitTime" val="true" />
@@ -87,9 +79,7 @@
 		</cond>
 	</skill>
 	<skill id="2609" levels="20" name="Escape">
-		<table name="#itemConsumeId"> 13395 13396 13397 13398 13399 13400 13401 13402 13403 13404 13405 13406 13407 13408 13409 13410 13411 13412 13413 13414 </table>
 		<table name="#teleCoords"> -84318,244579,-3730 46934,51467,-2977 9745,15606,-4574 -44836,-112524,-235 115113,-178212,-901 -80826,149775,-3043 -12678,122776,-3116 15670,142983,-2705 17836,170178,-3507 83400,147943,-3404 105918,109759,-3207 111409,219364,-3545 82956,53162,-1495 85348,16142,-3699 116819,76994,-2714 146331,25762,-2018 147928,-55273,-2734 43799,-47727,-798 87331,-142842,-1317 -117251,46771,360 </table>
-		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="20000" />
@@ -202,6 +192,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="2630" levels="1" name="Presentation - Collect Items">
+		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -209,8 +200,6 @@
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="6000" />
 		<set name="staticReuse" val="true" />
-		<set name="itemConsumeId" val="13844" />
-		<set name="itemConsumeCount" val="1" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1200" />
 		<cond msgId="113" addName="1">
@@ -341,9 +330,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="2649" levels="9" name="Escape - Gludin Village">
-		<table name="#itemConsumeId"> 13731 13732 13733 13734 13735 13736 13737 13738 13739 </table>
 		<table name="#teleCoords"> -12678,122776,-3116 15670,142983,-2705 83400,147943,-3404 111409,219364,-3545 82956,53162,-1495 146331,25762,-2018 147928,-55273,-2734 43799,-47727,-798 87331,-142842,-1317 </table>
-		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="200" />
@@ -352,7 +339,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2650" levels="1" name="Summon Imperial Phoenix">
-		<set name="itemConsumeId" val="14200" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -368,7 +354,6 @@
 		</cond>
 	</skill>
 	<skill id="2651" levels="1" name="Deflect Magic">
-		<set name="itemConsumeId" val="14207" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -384,7 +369,6 @@
 		</cond>
 	</skill>
 	<skill id="2652" levels="1" name="Song of Purification">
-		<set name="itemConsumeId" val="14198" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -400,7 +384,6 @@
 		</cond>
 	</skill>
 	<skill id="2653" levels="1" name="Dance of Berserker">
-		<set name="itemConsumeId" val="14199" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -416,7 +399,6 @@
 		</cond>
 	</skill>
 	<skill id="2654" levels="1" name="Final Secret">
-		<set name="itemConsumeId" val="14208" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -432,7 +414,6 @@
 		</cond>
 	</skill>
 	<skill id="2655" levels="1" name="Maximum Force Focus">
-		<set name="itemConsumeId" val="14201" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -448,7 +429,6 @@
 		</cond>
 	</skill>
 	<skill id="2656" levels="1" name="Maximum Sonic Focus">
-		<set name="itemConsumeId" val="14202" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -464,7 +444,6 @@
 		</cond>
 	</skill>
 	<skill id="2657" levels="1" name="Hide">
-		<set name="itemConsumeId" val="14209" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -480,7 +459,6 @@
 		</cond>
 	</skill>
 	<skill id="2658" levels="1" name="Dual Dagger Mastery">
-		<set name="itemConsumeId" val="14210" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -496,7 +474,6 @@
 		</cond>
 	</skill>
 	<skill id="2659" levels="1" name="Seven Arrow">
-		<set name="itemConsumeId" val="14211" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -512,7 +489,6 @@
 		</cond>
 	</skill>
 	<skill id="2660" levels="1" name="Enlightenment">
-		<set name="itemConsumeId" val="14212" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -528,7 +504,6 @@
 		</cond>
 	</skill>
 	<skill id="2661" levels="1" name="Enlightenment">
-		<set name="itemConsumeId" val="14213" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -544,7 +519,6 @@
 		</cond>
 	</skill>
 	<skill id="2662" levels="1" name="Chant of Movement">
-		<set name="itemConsumeId" val="14214" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -560,7 +534,6 @@
 		</cond>
 	</skill>
 	<skill id="2663" levels="1" name="Combat of Pa'agrio">
-		<set name="itemConsumeId" val="14215" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -576,7 +549,6 @@
 		</cond>
 	</skill>
 	<skill id="2664" levels="1" name="Critical of Pa'agrio">
-		<set name="itemConsumeId" val="14216" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -592,7 +564,6 @@
 		</cond>
 	</skill>
 	<skill id="2665" levels="1" name="Condition of Pa'agrio">
-		<set name="itemConsumeId" val="14217" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -608,7 +579,6 @@
 		</cond>
 	</skill>
 	<skill id="2666" levels="1" name="Duel Blow">
-		<set name="itemConsumeId" val="14218" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -624,7 +594,6 @@
 		</cond>
 	</skill>
 	<skill id="2667" levels="1" name="Spirit of the Cat">
-		<set name="itemConsumeId" val="14204" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -640,7 +609,6 @@
 		</cond>
 	</skill>
 	<skill id="2668" levels="1" name="Spirit of the Phantom">
-		<set name="itemConsumeId" val="14206" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -656,7 +624,6 @@
 		</cond>
 	</skill>
 	<skill id="2669" levels="1" name="Spirit of the Unicorn">
-		<set name="itemConsumeId" val="14205" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
