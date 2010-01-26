@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="2001" levels="1" name="Red Potion">
-		<set name="itemConsumeId" val="65" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="HOT" />
@@ -16,7 +15,6 @@
 		</for>
 	</skill>
 	<skill id="2002" levels="1" name="Healing Drug">
-		<set name="itemConsumeId" val="725" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="HOT" />
@@ -73,7 +71,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2010" levels="1" name="Endeavor Potion">
-		<set name="itemConsumeId" val="733" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="buffDuration" val="300000" />
 		<set name="isPotion" val="true" />
@@ -90,7 +87,6 @@
 		</for>
 	</skill>
 	<skill id="2011" levels="1" name="Haste Potion">
-		<set name="itemConsumeId" val="734" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -107,7 +103,6 @@
 		</for>
 	</skill>
 	<skill id="2012" levels="1" name="Potion of Alacrity">
-		<set name="itemConsumeId" val="735" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -124,7 +119,6 @@
 		</for>
 	</skill>
 	<skill id="2013" levels="1" name="Scroll Of Escape">
-		<set name="itemConsumeId" val="736" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="20000" />
@@ -182,7 +176,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2023" levels="1" name="Star Shard">
-		<set name="itemConsumeId" val="6403" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
@@ -191,7 +184,6 @@
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="2024" levels="1" name="Firework">
-		<set name="itemConsumeId" val="6406" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
@@ -200,7 +192,6 @@
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="2025" levels="1" name="Large Firework">
-		<set name="itemConsumeId" val="6407" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
@@ -239,6 +230,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2031" levels="1" name="Lesser Healing Potion">
+		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="HOT" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -256,6 +248,7 @@
 		</for>
 	</skill>
 	<skill id="2032" levels="1" name="Healing potion">
+		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="HOT" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -278,7 +271,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2034" levels="1" name="Greater Haste Potion">
-		<set name="itemConsumeId" val="1374" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -295,7 +287,6 @@
 		</for>
 	</skill>
 	<skill id="2035" levels="1" name="Greater Swift Attack Potion">
-		<set name="itemConsumeId" val="1375" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -312,8 +303,6 @@
 		</for>
 	</skill>
 	<skill id="2036" levels="2" name="Blessed Scroll of Escape">
-		<table name="#itemConsumeId"> 1538 3958 </table>
-		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="200" />
@@ -321,7 +310,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2037" levels="1" name="Greater Healing Potion">
-		<set name="itemConsumeId" val="1539" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="HOT" />
@@ -340,7 +328,6 @@
 		</for>
 	</skill>
 	<skill id="2038" levels="1" name="Quick Healing Potion">
-		<set name="itemConsumeId" val="1540" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="power" val="435" />
 		<set name="target" val="TARGET_SELF" />
@@ -357,7 +344,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2040" levels="1" name="Scroll of Escape: Clan Hall">
-		<set name="itemConsumeId" val="1829" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="20000" />
@@ -367,7 +353,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2041" levels="1" name="Scroll of Escape: Castle">
-		<set name="itemConsumeId" val="1830" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="20000" />
@@ -377,7 +362,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2042" levels="1" name="Antidote">
-		<set name="itemConsumeId" val="1831" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NEGATE" />
@@ -389,7 +373,6 @@
 		</cond>
 	</skill>
 	<skill id="2043" levels="1" name="Greater Antidote">
-		<set name="itemConsumeId" val="1832" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NEGATE" />
@@ -401,7 +384,6 @@
 		</cond>
 	</skill>
 	<skill id="2044" levels="1" name="Bandage">
-		<set name="itemConsumeId" val="1833" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NEGATE" />
@@ -413,7 +395,6 @@
 		</cond>
 	</skill>
 	<skill id="2045" levels="1" name="Emergency Dressing">
-		<set name="itemConsumeId" val="1834" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NEGATE" />
@@ -454,7 +435,6 @@
 		<set name="effectRange" val="600" />
 	</skill>
 	<skill id="2050" levels="1" name="Scroll of Guidance">
-		<set name="itemConsumeId" val="3926" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="4000" />
@@ -471,7 +451,6 @@
 		</for>
 	</skill>
 	<skill id="2051" levels="1" name="Scroll of Death Whisper">
-		<set name="itemConsumeId" val="3927" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="4000" />
@@ -488,7 +467,6 @@
 		</for>
 	</skill>
 	<skill id="2052" levels="1" name="Scroll of Focus">
-		<set name="itemConsumeId" val="3928" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="4000" />
@@ -505,7 +483,6 @@
 		</for>
 	</skill>
 	<skill id="2053" levels="1" name="Scroll of Greater Acumen">
-		<set name="itemConsumeId" val="3929" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="4000" />
@@ -522,7 +499,6 @@
 		</for>
 	</skill>
 	<skill id="2054" levels="1" name="Scroll of Haste">
-		<set name="itemConsumeId" val="3930" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="4000" />
@@ -536,7 +512,6 @@
 		</for>
 	</skill>
 	<skill id="2055" levels="1" name="Scroll of Agility">
-		<set name="itemConsumeId" val="3931" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="4000" />
@@ -553,7 +528,6 @@
 		</for>
 	</skill>
 	<skill id="2056" levels="1" name="Scroll of Mystic Empower">
-		<set name="itemConsumeId" val="3932" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="4000" />
@@ -570,7 +544,6 @@
 		</for>
 	</skill>
 	<skill id="2057" levels="1" name="Scroll of Might">
-		<set name="itemConsumeId" val="3933" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="4000" />
@@ -587,7 +560,6 @@
 		</for>
 	</skill>
 	<skill id="2058" levels="1" name="Scroll of Wind Walk">
-		<set name="itemConsumeId" val="3934" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="4000" />
@@ -604,7 +576,6 @@
 		</for>
 	</skill>
 	<skill id="2059" levels="1" name="Scroll of Shield">
-		<set name="itemConsumeId" val="3935" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="4000" />
@@ -621,7 +592,6 @@
 		</for>
 	</skill>
 	<skill id="2060" levels="1" name="Healing Medicine">
-		<set name="itemConsumeId" val="3889" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="negateId" val="4082" />
 		<set name="target" val="TARGET_SELF" />
@@ -653,7 +623,6 @@
 		<set name="feed" val="150" />
 	</skill>
 	<skill id="2064" levels="1" name="Scroll of Mana Regeneration">
-		<set name="itemConsumeId" val="4218" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="4000" />
@@ -678,7 +647,6 @@
 		<set name="castRange" val="40" />
 	</skill>
 	<skill id="2066" levels="1" name="Item - Theme Sound Crystal">
-		<set name="itemConsumeId" val="5010" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -686,7 +654,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2067" levels="1" name="Item - Theme Sound Crystal">
-		<set name="itemConsumeId" val="4417" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -694,7 +661,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2068" levels="1" name="Item - Race Sound Crystal">
-		<set name="itemConsumeId" val="4412" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -702,7 +668,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2069" levels="1" name="Item - Race Sound Crystal">
-		<set name="itemConsumeId" val="4411" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -710,7 +675,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2070" levels="1" name="Item - Race Sound Crystal">
-		<set name="itemConsumeId" val="4413" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -718,7 +682,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2071" levels="1" name="Item - Race Sound Crystal">
-		<set name="itemConsumeId" val="4415" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -726,7 +689,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2072" levels="1" name="Item - Race Sound Crystal">
-		<set name="itemConsumeId" val="4414" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
@@ -734,17 +696,17 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2073" levels="1" name="Item - Theme Sound Crystal">
+		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2074" levels="1" name="Potion of Critical Escape">
+		<set name="itemConsumeCount" val="1" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="800" />
 		<set name="isPotion" val="true" />
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="4677" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" />
@@ -760,11 +722,10 @@
 		</for>
 	</skill>
 	<skill id="2075" levels="1" name="Decrease Hate Scroll">
+		<set name="itemConsumeCount" val="1" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="800" />
 		<set name="isPotion" val="true" />
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="4678" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="70" />
@@ -776,7 +737,6 @@
 	</skill>
 	<skill id="2076" levels="1" name="Bless of Eva">
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="4679" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
@@ -799,7 +759,6 @@
 		</cond>
 	</skill>
 	<skill id="2078" levels="1" name="Compressed Package of Soulshots: No Grade">
-		<set name="itemConsumeId" val="5134" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
@@ -814,7 +773,6 @@
 		</cond>
 	</skill>
 	<skill id="2079" levels="1" name="Compressed Package of Soulshots: D-grade">
-		<set name="itemConsumeId" val="5135" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
@@ -829,7 +787,6 @@
 		</cond>
 	</skill>
 	<skill id="2080" levels="1" name="Compressed Package of Soulshots: C-grade">
-		<set name="itemConsumeId" val="5136" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
@@ -844,7 +801,6 @@
 		</cond>
 	</skill>
 	<skill id="2081" levels="1" name="Compressed Package of Soulshots: B-grade">
-		<set name="itemConsumeId" val="5137" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
@@ -859,7 +815,6 @@
 		</cond>
 	</skill>
 	<skill id="2082" levels="1" name="Compressed Package of Soulshots: A-grade">
-		<set name="itemConsumeId" val="5138" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
@@ -874,7 +829,6 @@
 		</cond>
 	</skill>
 	<skill id="2083" levels="1" name="Compressed Package of Soulshots: S-grade">
-		<set name="itemConsumeId" val="5139" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
@@ -889,7 +843,6 @@
 		</cond>
 	</skill>
 	<skill id="2084" levels="1" name="Compressed Package of Spiritshots: No Grade">
-		<set name="itemConsumeId" val="5140" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
@@ -904,7 +857,6 @@
 		</cond>
 	</skill>
 	<skill id="2085" levels="1" name="Compressed Package of Spiritshots: D-grade">
-		<set name="itemConsumeId" val="5141" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
@@ -919,7 +871,6 @@
 		</cond>
 	</skill>
 	<skill id="2086" levels="1" name="Compressed Package of Spiritshots: C-grade">
-		<set name="itemConsumeId" val="5142" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
@@ -934,7 +885,6 @@
 		</cond>
 	</skill>
 	<skill id="2087" levels="1" name="Compressed Package of Spiritshots: B-grade">
-		<set name="itemConsumeId" val="5143" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
@@ -949,7 +899,6 @@
 		</cond>
 	</skill>
 	<skill id="2088" levels="1" name="Compressed Package of Spiritshots: A-grade">
-		<set name="itemConsumeId" val="5144" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
@@ -964,7 +913,6 @@
 		</cond>
 	</skill>
 	<skill id="2089" levels="1" name="Compressed Package of Spiritshots: S-grade">
-		<set name="itemConsumeId" val="5145" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
@@ -979,7 +927,6 @@
 		</cond>
 	</skill>
 	<skill id="2090" levels="1" name="Compressed Package of Blessed Spiritshots: No Grade">
-		<set name="itemConsumeId" val="5146" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
@@ -994,7 +941,6 @@
 		</cond>
 	</skill>
 	<skill id="2091" levels="1" name="Compressed Package of Blessed Spiritshots: D-grade">
-		<set name="itemConsumeId" val="5147" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
@@ -1009,7 +955,6 @@
 		</cond>
 	</skill>
 	<skill id="2092" levels="1" name="Compressed Package of Blessed Spiritshots: C-grade">
-		<set name="itemConsumeId" val="5148" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
@@ -1024,7 +969,6 @@
 		</cond>
 	</skill>
 	<skill id="2093" levels="1" name="Compressed Package of Blessed Spiritshots: B-grade">
-		<set name="itemConsumeId" val="5149" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
@@ -1039,7 +983,6 @@
 		</cond>
 	</skill>
 	<skill id="2094" levels="1" name="Compressed Package of Blessed Spiritshots: A-grade">
-		<set name="itemConsumeId" val="5150" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="CREATE_ITEM" />
@@ -1054,7 +997,6 @@
 		</cond>
 	</skill>
 	<skill id="2095" levels="1" name="Compressed Package of Blessed Spiritshots: S-grade">
-		<set name="itemConsumeId" val="5151" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="CREATE_ITEM" />

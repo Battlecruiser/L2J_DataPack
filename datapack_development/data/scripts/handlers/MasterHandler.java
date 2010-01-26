@@ -134,7 +134,6 @@ public class MasterHandler
 		ItemHandler.getInstance().registerItemHandler(new PaganKeys());
 		ItemHandler.getInstance().registerItemHandler(new Maps());
 		ItemHandler.getInstance().registerItemHandler(new NicknameColor());
-		ItemHandler.getInstance().registerItemHandler(new Potions());
 		ItemHandler.getInstance().registerItemHandler(new Recipes());
 		ItemHandler.getInstance().registerItemHandler(new RollingDice());
 		ItemHandler.getInstance().registerItemHandler(new EnchantAttribute());

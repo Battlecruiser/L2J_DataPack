@@ -25,14 +25,13 @@
 		<set name="hitTime" val="100" />
 	</skill>
 	<skill id="22004" levels="1" name="Energy Ginseng">
+		<set name="itemConsumeCount" val="1" />
 		<set name="hitTime" val="100" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="300000" />
-		<set name="itemConsumeId" val="20004" />
-		<set name="itemConsumeCount" val="1" />
 		<for>
 			<effect name="Buff" time="300" val="0" abnormal="vitality">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
@@ -47,7 +46,6 @@
 	</skill>
 	<skill id="22006" levels="1" name="Halloween Candy">
 		<!-- Needs to be verified -->
-		<set name="itemConsumeId" val="20034" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="GIVE_VITALITY" />
@@ -76,7 +74,6 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="22011" levels="1" name="Santa Claus' Gift - Joy">
-		<set name="itemConsumeId" val="20075" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="EXTRACTABLE" />
@@ -89,7 +86,6 @@
 		</cond>
 	</skill>
 	<skill id="22012" levels="1" name="Santa Claus' Gift - Enjoyment">
-		<set name="itemConsumeId" val="20076" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="EXTRACTABLE" />
@@ -205,7 +201,6 @@
 		</for>
 	</skill>
 	<skill id="22017" levels="1" name="Santa Claus' Gift - Luck">
-		<set name="itemConsumeId" val="20077" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="EXTRACTABLE" />
@@ -218,7 +213,6 @@
 		</cond>
 	</skill>
 	<skill id="22018" levels="1" name="Santa Claus' Gift - Luck">
-		<set name="itemConsumeId" val="20078" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="EXTRACTABLE" />
@@ -375,7 +369,6 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="22042" levels="1" name="High Grade Potion of Will">
-		<set name="itemConsumeId" val="20353" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="power" val="200" />
 		<set name="target" val="TARGET_SELF" />
@@ -390,10 +383,8 @@
 	</skill>
 	<skill id="22043" levels="6" name="Secret medicine of Will">
 		<table name="#power"> 200 800 1500 2000 2500 3000 </table>
-		<table name="#itemConsumeId"> 0 20354 20355 20356 20357 20358 </table>
 		<table name="#minLvl"> 0 20 40 52 61 76 </table>
 		<table name="#maxLvl"> 20 40 52 61 76 86 </table>
-		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_SELF" />
@@ -413,10 +404,8 @@
 		</cond>
 	</skill>
 	<skill id="22044" levels="6" name="Secret medicine of Life">
-		<table name="#itemConsumeId"> 0 20359 20360 20361 20362 20363 </table>
 		<table name="#minLvl"> 0 20 40 52 61 76 </table>
 		<table name="#maxLvl"> 20 40 52 61 76 86 </table>
-		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="power" val="50" />
 		<set name="target" val="TARGET_SELF" />
@@ -436,7 +425,6 @@
 		</cond>
 	</skill>
 	<skill id="22045" levels="1" name="Omen Beast Transformation Scroll">
-		<set name="itemConsumeId" val="20364" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -451,7 +439,6 @@
 		</for>
 	</skill>
 	<skill id="22046" levels="1" name="Death Blader Transformation Scroll">
-		<set name="itemConsumeId" val="20365" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -466,7 +453,6 @@
 		</for>
 	</skill>
 	<skill id="22047" levels="1" name="Grail Apostle Transformation Scroll">
-		<set name="itemConsumeId" val="20366" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -481,7 +467,6 @@
 		</for>
 	</skill>
 	<skill id="22048" levels="1" name="Unicorn Transformation Scroll">
-		<set name="itemConsumeId" val="20367" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -496,7 +481,6 @@
 		</for>
 	</skill>
 	<skill id="22049" levels="1" name="Lilim Knight Transformation Scroll">
-		<set name="itemConsumeId" val="20368" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -511,7 +495,6 @@
 		</for>
 	</skill>
 	<skill id="22050" levels="1" name="Golem Guardian Transformation Scroll">
-		<set name="itemConsumeId" val="20369" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -526,7 +509,6 @@
 		</for>
 	</skill>
 	<skill id="22051" levels="1" name="Inferno Drake Transformation Scroll">
-		<set name="itemConsumeId" val="20370" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -541,7 +523,6 @@
 		</for>
 	</skill>
 	<skill id="22052" levels="1" name="Dragon Bomber Transformation Scroll">
-		<set name="itemConsumeId" val="20371" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -556,9 +537,7 @@
 		</for>
 	</skill>
 	<skill id="22053" levels="19" name="Escape">
-		<table name="#itemConsumeId"> 20372 20373 20374 20375 20376 20377 20378 20379 20380 20381 20382 20383 20384 20385 20386 20387 20388 20389 20390 </table>
 		<table name="#teleCoords"> -84318,244579,-3730 46934,51467,-2977 9745,15606,-4574 -44836,-112524,-235 115113,-178212,-901 -80826,149775,-3043 -12678,122776,-3116 15670,142983,-2705 17836,170178,-3507 83400,147943,-3404 105918,109759,-3207 111409,219364,-3545 82956,53162,-1495 85348,16142,-3699 116819,76994,-2714 146331,25762,-2018 147928,-55273,-2734 43799,-47727,-798 87331,-142842,-1317 </table>
-		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="20000" />
@@ -567,7 +546,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="22054" levels="1" name="Potion of Energy Maintenance">
-		<set name="itemConsumeId" val="20391" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -586,7 +564,6 @@
 		</for>
 	</skill>
 	<skill id="22055" levels="1" name="Potion of Energy Replenishing">
-		<set name="itemConsumeId" val="20392" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="GIVE_VITALITY" />
@@ -600,6 +577,7 @@
 		</cond>
 	</skill>
 	<skill id="22056" levels="1" name="Wind Walk">
+		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -690,6 +668,7 @@
 		</for>
 	</skill>
 	<skill id="22062" levels="1" name="Empower">
+		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
