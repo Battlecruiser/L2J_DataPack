@@ -774,6 +774,7 @@ merchants.sql
 messages.sql
 minions.sql
 npc.sql
+npc_buffer.sql
 npcAIData.sql
 npcskills.sql
 olympiad_data.sql
@@ -812,7 +813,6 @@ castle.sql
 clanhall.sql
 fort.sql
 forums.sql
-npc_buffer.sql
 seven_signs_festival.sql
 seven_signs_status.sql
 ) do call :dump %%i 
