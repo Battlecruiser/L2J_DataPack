@@ -33,7 +33,8 @@ public class Extractable implements ISkillHandler
 {
 	private static final L2SkillType[] SKILL_IDS =
 	{
-		L2SkillType.EXTRACTABLE
+		L2SkillType.EXTRACTABLE,
+		L2SkillType.EXTRACTABLE_FISH
 	};
 	
 	/**
@@ -46,9 +47,6 @@ public class Extractable implements ISkillHandler
 			return;
 		
 		L2PcInstance player = (L2PcInstance)activeChar;
-		int itemID = skill.getReferenceItemId();
-		if (itemID == 0)
-			return;
 		L2ExtractableSkill exitem = ExtractableSkillsData.getInstance().getExtractableItem(skill);
 		
 		if (exitem == null)
@@ -70,9 +68,9 @@ public class Extractable implements ISkillHandler
 				{
 					createItemID[i] = expi.getId()[i];
 
-					if ((itemID >= 6411 && itemID <= 6518) || (itemID >= 7726 && itemID <= 7860) || (itemID >= 8403 && itemID <= 8483)) 
+					if (skill.getSkillType() == L2SkillType.EXTRACTABLE_FISH)
 						createAmount[i] = (int)(expi.getAmmount()[i]* Config.RATE_EXTR_FISH);
-					else 
+					else
 						createAmount[i] = expi.getAmmount()[i];
 				}
 				break;

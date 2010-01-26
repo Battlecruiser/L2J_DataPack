@@ -481,7 +481,6 @@
 		<set name="hitTime" val="2500" />
 	</skill>
 	<skill id="2780" levels="1" name="Magician's Will">
-		<set name="itemConsumeId" val="14219" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -497,7 +496,6 @@
 		</cond>
 	</skill>
 	<skill id="2781" levels="1" name="Silent Mind">
-		<set name="itemConsumeId" val="14220" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -513,7 +511,6 @@
 		</cond>
 	</skill>
 	<skill id="2782" levels="1" name="Turn Stone">
-		<set name="itemConsumeId" val="14221" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -529,7 +526,6 @@
 		</cond>
 	</skill>
 	<skill id="2783" levels="1" name="Lucky Strike">
-		<set name="itemConsumeId" val="14222" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -545,7 +541,6 @@
 		</cond>
 	</skill>
 	<skill id="2784" levels="1" name="Eye for Eye">
-		<set name="itemConsumeId" val="14223" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -561,7 +556,6 @@
 		</cond>
 	</skill>
 	<skill id="2785" levels="1" name="Curse of Desparion">
-		<set name="itemConsumeId" val="14224" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -577,7 +571,6 @@
 		</cond>
 	</skill>
 	<skill id="2786" levels="1" name="Counter Critical">
-		<set name="itemConsumeId" val="14225" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -593,7 +586,6 @@
 		</cond>
 	</skill>
 	<skill id="2787" levels="1" name="Onslaught of Pa'agrio">
-		<set name="itemConsumeId" val="14226" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -609,7 +601,6 @@
 		</cond>
 	</skill>
 	<skill id="2788" levels="1" name="Great Fury">
-		<set name="itemConsumeId" val="14227" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -625,7 +616,6 @@
 		</cond>
 	</skill>
 	<skill id="2789" levels="1" name="Final Flying Form">
-		<set name="itemConsumeId" val="13552" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -641,7 +631,6 @@
 		</cond>
 	</skill>
 	<skill id="2790" levels="1" name="Aura Bird - Falcon">
-		<set name="itemConsumeId" val="13553" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -654,7 +643,6 @@
 		</cond>
 	</skill>
 	<skill id="2791" levels="1" name="Aura Bird - Owl">
-		<set name="itemConsumeId" val="13554" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LEARN_SKILL" />
@@ -668,8 +656,6 @@
 	</skill>
 	<skill id="2792" levels="2" name="Stone of Stamina">
 		<table name="#power"> 700 20000 </table> <!-- Need Fix -->
-		<table name="#itemConsumeId"> 14038 14039 </table>
-		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="magicLvl" val="1" />
@@ -684,8 +670,6 @@
 	</skill>
 	<skill id="2793" levels="2" name="Stone of Mana">
 		<table name="#power"> 500 20000 </table> <!-- Need Fix -->
-		<table name="#itemConsumeId"> 14040 14041 </table>
-		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="magicLvl" val="1" />
@@ -705,7 +689,6 @@
 		<set name="hitTime" val="100" />
 	</skill>
 	<skill id="2795" levels="1" name="Stone of Destruction">
-		<set name="itemConsumeId" val="14044" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="magicLvl" val="1" />
@@ -722,7 +705,6 @@
 		</for>
 	</skill>
 	<skill id="2796" levels="1" name="Stone of Invincibility">
-		<set name="itemConsumeId" val="14045" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="magicLvl" val="1" />
@@ -739,7 +721,6 @@
 		</for>
 	</skill>
 	<skill id="2797" levels="1" name="Stone of Great Speed">
-		<set name="itemConsumeId" val="14046" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="magicLvl" val="1" />
@@ -760,7 +741,6 @@
 		</for>
 	</skill>
 	<skill id="2798" levels="1" name="Stone of Speed">
-		<set name="itemConsumeId" val="14047" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="magicLvl" val="1" />
@@ -777,7 +757,6 @@
 		</for>
 	</skill>
 	<skill id="2799" levels="1" name="Stone of Concentration">
-		<set name="itemConsumeId" val="14048" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="isPotion" val="true" />
 		<set name="magicLvl" val="1" />
