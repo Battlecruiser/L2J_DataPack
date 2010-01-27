@@ -34100,7 +34100,7 @@ INSERT INTO `droplist` VALUES
 (29056,4118,4,12,1,70562),-- Evil Spirit Head
 (29056,8340,36,108,1,39453),-- Bones Head of Kaim Vanul
 (29056,8348,8,22,1,189375),-- Star Buster Head
-(29056,8180,100,200,3,200000),-- Circlet of Ice Fairy Sirra
+(29056,8180,1,1,3,200000),-- Circlet of Ice Fairy Sirra
 (29057,1344,20,60,2,928000),-- Mithril Arrow
 (29058,1539,1,1,2,227733),-- Greater Healing Potion
 (29065,6367,1,1,1,4497),-- Angel Slayer
