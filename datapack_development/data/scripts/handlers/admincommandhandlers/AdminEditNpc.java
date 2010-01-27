@@ -927,16 +927,12 @@ public class AdminEditNpc implements IAdminCommandHandler
 				newNpcData.set("enchant", Integer.parseInt(value)); 
 			else if (statToSet.equals("runSpd"))
 				newNpcData.set("runspd", Integer.parseInt(value));
-			else if (statToSet.equals("factionId"))
-				newNpcData.set("faction_id", value);
-			else if (statToSet.equals("factionRange"))
-				newNpcData.set("faction_range", Integer.parseInt(value));
 			else if (statToSet.equals("isUndead"))
 				newNpcData.set("isUndead", Integer.parseInt(value) == 1 ? 1 : 0);
 			else if (statToSet.equals("absorbLevel"))
 			{
 				int intVal = Integer.parseInt(value);
-				newNpcData.set("absorb_level", intVal < 0 ? 0 : intVal > 12 ? 0 : intVal);
+				newNpcData.set("absorb_level", intVal < 0 ? 0 : intVal > 16 ? 0 : intVal);
 			}
 		}
 		catch (Exception e)

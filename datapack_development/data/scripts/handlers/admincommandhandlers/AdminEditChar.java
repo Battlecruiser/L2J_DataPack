@@ -109,7 +109,8 @@ public class AdminEditChar implements IAdminCommandHandler
 		"admin_summon_info", //displays an information window about target summon
 		"admin_unsummon",
 		"admin_summon_setlvl",
-		"admin_show_pet_inv"
+		"admin_show_pet_inv",
+		"admin_partyinfo"
 	};
 	
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
@@ -628,6 +629,35 @@ public class AdminEditChar implements IAdminCommandHandler
 			else
 			{
 				activeChar.sendMessage("Usable only with Pets");
+			}
+			
+		}
+		else if (command.startsWith("admin_partyinfo"))
+		{
+			String val;
+			L2Object target;
+			try
+			{
+				val = command.substring(16);
+				target = L2World.getInstance().getPlayer(val);
+				if (target == null) 
+					target = activeChar.getTarget();
+			}
+			catch (Exception e)
+			{
+				target = activeChar.getTarget();
+			}
+			
+			if (target instanceof L2PcInstance)
+			{
+				if (((L2PcInstance) target).isInParty())
+					gatherPartyInfo((L2PcInstance) target, activeChar);
+				else
+					activeChar.sendMessage("Not in party.");
+			}
+			else
+			{
+				activeChar.sendMessage("Invalid target.");
 			}
 			
 		}
@@ -1159,5 +1189,25 @@ public class AdminEditChar implements IAdminCommandHandler
 			html.replace("%load%","N/A");
 		}
 		activeChar.sendPacket(html);
+	}
+	
+	private void gatherPartyInfo(L2PcInstance target, L2PcInstance activeChar)
+	{
+		boolean color = true;
+		NpcHtmlMessage html = new NpcHtmlMessage(0);
+		html.setFile("data/html/admin/partyinfo.htm");
+		StringBuilder text = new StringBuilder(400);
+		for (L2PcInstance member : target.getParty().getPartyMembers())
+		{
+			if (color)
+				text.append("<tr><td><table width=270 border=0 bgcolor=131210 cellpadding=2><tr><td width=20>");
+			else
+				text.append("<tr><td><table width=270 border=0 cellpadding=2><tr><td width=20>");
+			text.append(member.getLevel() +"</td><td width=130><a action=\"bypass -h admin_character_info " +member.getName()+"\">"+member.getName()+"</a>");
+			text.append("</td><td width=120 align=right>"+member.getClassId().toString()+"</td></tr></table></td></tr>");
+			color = !color;
+		}
+		html.replace("%party%", text.toString());
+		activeChar.sendPacket(html);		
 	}
 }
