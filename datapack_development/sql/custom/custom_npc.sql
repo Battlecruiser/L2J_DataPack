@@ -37,17 +37,14 @@ CREATE TABLE IF NOT EXISTS `custom_npc`(
   `enchant` INT NOT NULL default 0, 
   `walkspd` decimal(3,0) default NULL,
   `runspd` decimal(3,0) default NULL,
-  `faction_id` varchar(40) default NULL,
-  `faction_range` decimal(4,0) default NULL,
   `isUndead` int(11) default 0,
   `absorb_level` decimal(2,0) default 0,
   `absorb_type` enum('FULL_PARTY','LAST_HIT','PARTY_ONE_RANDOM') DEFAULT 'LAST_HIT' NOT NULL,
-  `AI` varchar(8) default "fighter",
   `drop_herbs` enum('true','false') DEFAULT 'false' NOT NULL,
   PRIMARY KEY (`id`)
 );
 
 INSERT IGNORE INTO `custom_npc` VALUES
-(50007,31324,'Andromeda',1,'L2J Wedding Manager',1,'NPC.a_casino_FDarkElf',8,23,70,'female','L2WeddingManager',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,0,333,0,0,NULL,0,28,120,'',0,0,0,'LAST_HIT','balanced','false'),
-(70010,31606,'Catrina',1,'L2J TvT Event Manager',1,'Monster2.queen_of_cat',8,15,70,'female','L2TvTEventNpc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,0,333,0,0,NULL,0,28,120,'',0,0,0,'LAST_HIT','balanced','false'),
-(1000003,32226,'Shiela',1,'L2J NPC Buffer',1,'LineageNPC2.K_F1_grand',11,22.25,70,'male','L2NpcBuffer',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,0,333,0,0,NULL,0,28,120,'',0,0,0,'LAST_HIT','balanced','false');
+(50007,31324,'Andromeda',1,'L2J Wedding Manager',1,'NPC.a_casino_FDarkElf',8,23,70,'female','L2WeddingManager',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,0,333,0,0,NULL,0,28,120,0,0,'LAST_HIT','false'),
+(70010,31606,'Catrina',1,'L2J TvT Event Manager',1,'Monster2.queen_of_cat',8,15,70,'female','L2TvTEventNpc',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,0,333,0,0,NULL,0,28,120,0,0,'LAST_HIT','false'),
+(1000003,32226,'Shiela',1,'L2J NPC Buffer',1,'LineageNPC2.K_F1_grand',11,22.25,70,'male','L2NpcBuffer',40,2444,2444,0,0,10,10,10,10,10,10,0,0,500,500,500,500,278,0,333,0,0,NULL,0,28,120,0,0,'LAST_HIT','false');
