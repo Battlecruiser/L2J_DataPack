@@ -122,32 +122,29 @@ public class Continuous implements ISkillHandler
 			
 			if (skill.isOffensive() || skill.isDebuff())
 			{
-				if (player != null)
+				L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
+				if (weaponInst != null)
 				{
-					L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
-					if (weaponInst != null)
+					if (skill.isMagic())
 					{
-						if (skill.isMagic())
+						if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
 						{
-							if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
-							{
-								bss = true;
-								if (skill.getId() != 1020) // vitalize
-									weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
-							}
-							else if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_SPIRITSHOT)
-							{
-								sps = true;
-								if (skill.getId() != 1020) // vitalize
-									weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
-							}
-						}
-						else if (weaponInst.getChargedSoulshot() == L2ItemInstance.CHARGED_SOULSHOT)
-						{
-							ss = true;
+							bss = true;
 							if (skill.getId() != 1020) // vitalize
-								weaponInst.setChargedSoulshot(L2ItemInstance.CHARGED_NONE);
+								weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
 						}
+						else if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_SPIRITSHOT)
+						{
+							sps = true;
+							if (skill.getId() != 1020) // vitalize
+								weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
+						}
+					}
+					else if (weaponInst.getChargedSoulshot() == L2ItemInstance.CHARGED_SOULSHOT)
+					{
+						ss = true;
+						if (skill.getId() != 1020) // vitalize
+							weaponInst.setChargedSoulshot(L2ItemInstance.CHARGED_NONE);
 					}
 				}
 				else if (activeChar instanceof L2Summon)
