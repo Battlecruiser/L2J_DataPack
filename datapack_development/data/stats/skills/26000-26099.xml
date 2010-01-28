@@ -186,9 +186,11 @@
 		</for>
 	</skill>
 	<skill id="26027" levels="6" name="Secret medicine of Will">
+		<table name="#itemConsumeId"> 0 22027 22028 22029 22030 22031 </table>
 		<table name="#power"> 200 800 1500 2000 2500 3000 </table>
 		<table name="#minLvl"> 0 20 40 52 61 76 </table>
 		<table name="#maxLvl"> 20 40 52 61 76 86 </table>
+		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_SELF" />
@@ -208,8 +210,10 @@
 		</cond>
 	</skill>
 	<skill id="26028" levels="6" name="Secret medicine of Life">
+		<table name="#itemConsumeId"> 0 22032 22033 22034 22035 22036 </table>
 		<table name="#minLvl"> 0 20 40 52 61 76 </table>
 		<table name="#maxLvl"> 20 40 52 61 76 86 </table>
+		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="power" val="50" />
 		<set name="target" val="TARGET_SELF" />

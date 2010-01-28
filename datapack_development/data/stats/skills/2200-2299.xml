@@ -1017,8 +1017,10 @@
 		</for>
 	</skill>
 	<skill id="2287" levels="6" name="Elixir of Life">
+		<table name="#itemConsumeId"> 8622 8623 8624 8625 8626 8627 </table>
 		<table name="#minLvl"> 0 20 40 52 61 76 </table>
 		<table name="#maxLvl"> 20 40 52 61 76 86 </table>
+		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="power" val="50" />
 		<set name="target" val="TARGET_SELF" />
@@ -1038,9 +1040,11 @@
 		</cond>
 	</skill>
 	<skill id="2288" levels="6" name="Elixir of Mental Strength">
+		<table name="#itemConsumeId"> 8628 8629 8630 8631 8632 8633 </table>
 		<table name="#power"> 75 125 175 250 350 420 </table>
 		<table name="#minLvl"> 0 20 40 52 61 76 </table>
 		<table name="#maxLvl"> 20 40 52 61 76 86 </table>
+		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_SELF" />
@@ -1060,9 +1064,11 @@
 		</cond>
 	</skill>
 	<skill id="2289" levels="6" name="Elixir of CP">
+		<table name="#itemConsumeId"> 8634 8635 8636 8637 8638 8639 </table>
 		<table name="#power"> 100 200 600 800 1000 1200 </table>
 		<table name="#minLvl"> 0 20 40 52 61 76 </table>
 		<table name="#maxLvl"> 20 40 52 61 76 86 </table>
+		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_SELF" />
