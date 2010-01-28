@@ -103,7 +103,7 @@ public class ItemSkills implements IItemHandler
 
 							if (itemSkill.getItemConsumeId() == 0 && itemSkill.getItemConsume() > 0)
 							{
-								if (!activeChar.destroyItem("Consume", item, itemSkill.getItemConsume(), null, true))
+								if (!playable.destroyItem("Consume", item.getObjectId(), itemSkill.getItemConsume(), null, false))
 								{
 									activeChar.sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_ITEMS));
 									return;
