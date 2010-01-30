@@ -1886,7 +1886,6 @@
 		<set name="isCubic" val="true" />
 	</skill>
 	<skill id="279" levels="5" name="Lightning Strike" enchantLevels1="30" enchantLevels2="30">
-		<!-- TODO: Needs core-side support for TimeSkillTrigger effect -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#enchantMpConsume"> 100 98 97 96 95 93 92 90 88 87 86 85 83 81 80 78 77 76 75 73 71 70 68 67 66 65 62 61 60 58 </table>
 		<table name="#enchantPower"> 109 109 110 111 111 112 113 113 114 115 115 116 116 117 118 118 119 120 120 121 122 122 123 124 124 125 125 126 127 127 </table>
@@ -1913,13 +1912,11 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#enchantMpConsume" />
 		<for>
-			<effect name="Debuff" time="15" val="0" effectPower="40" effectType="DEBUFF">
+			<effect name="ChanceSkillTrigger" time="15" val="0" triggeredId="6090" triggeredLevel="1" chanceType="ON_EXIT" effectPower="40" effectType="DEBUFF">
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />
 			</effect>
-			<!-- effect name="TimeSkillTrigger" time="20" noicon="1" val="0" triggeredId="6090" triggeredLevel="1" / -->
-			<effect name="Paralyze" time="10" noicon="1" val="0" effectPower="40" effectType="PARALYZE" /> <!-- Temp Fix -->
 		</for>
 	</skill>
 	<skill id="280" levels="37" name="Burning Fist" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30">

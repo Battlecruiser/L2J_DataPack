@@ -561,11 +561,10 @@
 		</for>
 	</skill>
 	<skill id="523" levels="7" name="Imbue Dark Seed">
-		<!-- TODO: Needs core-side support for TimeSkillTrigger effect -->
 		<table name="#dot"> 76 76 76 76 83 83 83 </table>
 		<table name="#effectLevel"> 1 2 3 4 5 6 7 </table>
 		<table name="#magicLvl"> 62 64 66 68 70 72 74 </table>
-		<!-- table name="#triggeredLevel"> 1 2 3 4 4 6 7 </table -->
+		<table name="#triggeredLevel"> 1 2 3 4 4 6 7 </table>
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -583,8 +582,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect count="7" name="DamOverTime" time="3" val="#dot" abnormal="poison" />
-			<!-- effect name="TimeSkillTrigger" time="20" noicon="1" val="0" triggeredId="5447" triggeredLevel="#triggeredLevel" / -->
-			<effect name="Paralyze" time="10" noicon="1" val="0" /> <!-- Temp Fix -->
+			<effect name="ChanceSkillTrigger" time="20" noicon="1" val="0" triggeredId="5447" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
 	<skill id="524" levels="1" name="Cure Dark Seed">
@@ -772,7 +770,6 @@
 		</for>
 	</skill>
 	<skill id="537" levels="1" name="Spoil Bomb">
-		<!-- TODO: Needs core-side support for TimeSkillTrigger effect -->
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1800" />
@@ -786,7 +783,7 @@
 		<set name="target" val="TARGET_AREA" />
 		<for>
 			<effect name="Spoil" time="10" val="0" />
-			<!-- effect name="TimeSkillTrigger" time="10" noicon="1" val="0" triggeredId="5043" triggeredLevel="1" / -->
+			<effect name="ChanceSkillTrigger" time="10" noicon="1" val="0" triggeredId="5043" triggeredLevel="1" chanceType="ON_EXIT" />
 		</for>
 	</skill>
 	<skill id="538" levels="1" name="Final Form">

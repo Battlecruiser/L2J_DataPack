@@ -549,10 +549,9 @@
 		</for>
 	</skill>
 	<skill id="835" levels="4" name="Imbue Seed of Destruction">
-		<!-- TODO: Needs core-side support for TimeSkillTrigger effect -->
 		<table name="#mdot"> 76 83 83 83 </table>
 		<table name="#magicLvl"> 68 70 72 74 </table>
-		<!-- table name="#triggeredLevel"> 1 2 3 4 </table -->
+		<table name="#triggeredLevel"> 1 2 3 4 </table>
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1800" />
@@ -568,8 +567,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect count="7" name="ManaDamOverTime" time="3" val="#mdot" abnormal="poison" />
-			<!-- effect name="TimeSkillTrigger" time="20" noicon="1" val="0" triggeredId="5697" triggeredLevel="#triggeredLevel" / -->
-			<effect name="SilenceMagicPhysical" time="10" noicon="1" val="0" effectPower="40" effectType="MUTE" /> <!-- Temp Fix -->
+			<effect name="ChanceSkillTrigger" time="20" noicon="1" val="0" triggeredId="5697" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
 	<skill id="836" levels="3" name="Oblivion Trap">
