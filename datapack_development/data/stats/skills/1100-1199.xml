@@ -907,7 +907,6 @@
 		</for>
 	</skill>
 	<skill id="1170" levels="13" name="Anchor" enchantLevels1="30" enchantLevels2="30">
-		<!-- TODO: Needs core-side support for TimeSkillTrigger effect -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#ench2mpConsume"> 54 54 53 53 52 52 51 51 50 50 49 49 48 48 47 47 46 46 45 45 44 44 43 43 42 42 41 41 40 40 </table>
 		<table name="#ench2mpInitialConsume"> 13 13 13 13 13 13 12 12 12 12 12 12 12 12 11 11 11 11 11 11 11 11 10 10 10 10 10 10 10 10 </table>
@@ -935,13 +934,11 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Debuff" time="15" val="0">
+			<effect name="ChanceSkillTrigger" time="15" noicon="1" val="0" triggeredId="6091" triggeredLevel="1" chanceType="ON_EXIT">
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />
 			</effect>
-			<!-- effect name="TimeSkillTrigger" time="20" noicon="1" val="0" triggeredId="6091" triggeredLevel="1" / -->
-			<effect name="Paralyze" time="10" noicon="1" val="0" /> <!-- Temp Fix -->
 		</for>
 	</skill>
 	<skill id="1171" levels="19" name="Blazing Circle" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30">
