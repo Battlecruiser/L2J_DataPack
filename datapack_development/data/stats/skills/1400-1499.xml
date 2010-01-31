@@ -357,7 +357,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
-			<effect name="RemoveTarget" val="0" effectPower="40" effectType="DEBUFF" /> <!-- Guess effectPower -->
+			<effect name="RemoveTarget" noicon="1" val="0" effectPower="40" effectType="DEBUFF" /> <!-- Guess effectPower -->
 		</for>
 	</skill>
 	<skill id="1418" levels="1" name="Celestial Shield">
@@ -757,7 +757,7 @@
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="elementPower" val="#enchElementPower" />
 		<for>
-			<effect name="RemoveTarget" val="0" effectPower="40" effectType="DEBUFF" />
+			<effect name="RemoveTarget" noicon="1" val="0" effectPower="40" effectType="DEBUFF" />
 		</for>
 	</skill>
 	<skill id="1437" levels="26" name="Dark Flame" enchantLevels1="30" enchantLevels2="30" enchantLevels4="30">

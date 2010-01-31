@@ -333,7 +333,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="RemoveTarget" val="0" />
+			<effect name="RemoveTarget" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="12" levels="14" name="Switch">
@@ -351,7 +351,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<for>
-			<effect name="RemoveTarget" val="0" />
+			<effect name="RemoveTarget" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="13" levels="1" name="Summon Siege Golem" enchantLevels1="30">
