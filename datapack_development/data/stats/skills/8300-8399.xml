@@ -314,9 +314,12 @@
 	</skill>
 	<skill id="8337" levels="1" name="Weight Up">
 		<!-- Increases the weight limit by 5000. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="maxLoad" val="5000" />
+		</for>
 	</skill>
 	<skill id="8338" levels="4" name="Low-grade Magic Rune Clip Iron Belt">
 		<set name="target" val="TARGET_NONE" />
