@@ -18,6 +18,7 @@ import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Summon;
+import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -628,7 +629,7 @@ public class Kamaloka extends Quest
 			reenter.set(Calendar.MINUTE, RESET_MIN);
 			// if time is >= RESET_HOUR - roll to the next day
 			if (reenter.get(Calendar.HOUR_OF_DAY) >= RESET_HOUR)
-				reenter.roll(Calendar.DATE, true);
+				reenter.add(Calendar.DATE, 1);
 			reenter.set(Calendar.HOUR_OF_DAY, RESET_HOUR);
 
 			SystemMessage sm = new SystemMessage(SystemMessageId.INSTANT_ZONE_RESTRICTED);
@@ -722,6 +723,7 @@ public class Kamaloka extends Quest
 
 		// boss
 		npc = addSpawn(BOSS[index][0], BOSS[index][1], BOSS[index][2], BOSS[index][3], 0, false, 0, false, world.instanceId);
+		((L2MonsterInstance)npc).setOnKillDelay(100);
 		world.boss = npc;
 	}
 
