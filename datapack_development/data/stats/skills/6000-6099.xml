@@ -227,6 +227,7 @@
 	<skill id="6041" levels="1" name="Phoenix Rush">
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
+		<set name="flyType" val="CHARGE" />
 		<set name="hitTime" val="800" />
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -236,7 +237,7 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="EnemyCharge" val="0" />
+			<effect self="1" name="EnemyCharge" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="6042" levels="1" name="Phoenix Cleanse">
