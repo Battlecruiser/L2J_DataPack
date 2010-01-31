@@ -79,7 +79,7 @@ class Quest (JQuest) :
 				reset.set(Calendar.MINUTE, RESET_MIN)
 				# if time is >= RESET_HOUR - roll to the next day
 				if reset.get(Calendar.HOUR_OF_DAY) >= RESET_HOUR :
-					reset.roll(Calendar.DATE, True)
+					reset.add(Calendar.DATE, 1)
 				reset.set(Calendar.HOUR_OF_DAY, RESET_HOUR)
 				st.set("reset",str(reset.getTimeInMillis()))
 		elif cond == 1 and npcId == WARRIOR_NPC :
