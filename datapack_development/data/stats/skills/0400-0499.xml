@@ -1737,7 +1737,7 @@
 			<target mindistance="200" />
 		</cond>
 		<for>
-			<effect self="1" name="EnemyCharge" noicon="1" val="0" />
+			<effect name="EnemyCharge" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="485" levels="7" name="Disarm" enchantLevels1="30" enchantLevels2="30">
@@ -1939,11 +1939,11 @@
 			<target mindistance="200" />
 		</cond>
 		<for>
-			<effect self="1" name="EnemyCharge" noicon="1" val="0" />
+			<effect name="EnemyCharge" noicon="1" val="0" />
 			<effect name="Stun" time="9" val="0" effectPower="70" effectType="STUN" stackOrder="1" stackType="Stun" />
 		</for>
 		<enchant1for>
-			<effect self="1" name="EnemyCharge" noicon="1" val="0" />
+			<effect name="EnemyCharge" noicon="1" val="0" />
 			<effect name="Stun" time="9" val="0" effectPower="#ench1effectPower" effectType="STUN" stackOrder="1" stackType="Stun" />
 		</enchant1for>
 	</skill>
@@ -1984,19 +1984,19 @@
 			<target mindistance="200" />
 		</cond>
 		<for>
-			<effect self="1" name="EnemyCharge" noicon="1" val="0" />
+			<effect name="EnemyCharge" noicon="1" val="0" />
 			<effect count="20" name="DamOverTime" val="#dmg" effectPower="50" effectType="BLEED" abnormal="bleed">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect self="1" name="EnemyCharge" noicon="1" val="0" />
+			<effect name="EnemyCharge" noicon="1" val="0" />
 			<effect count="20" name="DamOverTime" val="#ench1Dmg" effectPower="50" effectType="BLEED" abnormal="bleed">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect self="1" name="EnemyCharge" noicon="1" val="0" />
+			<effect name="EnemyCharge" noicon="1" val="0" />
 			<effect count="20" name="DamOverTime" val="134" effectPower="#ench2effectPower" effectType="BLEED" abnormal="bleed">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
