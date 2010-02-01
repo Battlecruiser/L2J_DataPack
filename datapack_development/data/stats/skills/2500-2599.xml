@@ -550,6 +550,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="10000" />
 		<set name="buffDuration" val="5000" />
+		<set name="isPotion" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -642,9 +643,15 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="2592" levels="1" name="Quick Healing Potion">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="power" val="550" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="HEAL" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="isPotion" val="true" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 	</skill>
 	<skill id="2593" levels="1" name="Bow/Crossbow Attack Resistance Potion">
 		<set name="target" val="TARGET_NONE" />
