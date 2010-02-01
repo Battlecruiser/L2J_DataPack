@@ -355,7 +355,8 @@
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="400" />
 		<for>
-			<effect name="ThrowUp" time="2" val="0" effectPower="80" effectType="STUN" />
+			<effect name="Stun" time="3" val="0" effectPower="80" effectType="STUN" />
+			<effect name="ThrowUp" noicon="1" val="0" stackOrder="1" stackType="fly_away" />
 		</for>
 	</skill>
 	<skill id="5230" levels="1" name="Stun">
