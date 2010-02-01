@@ -59,7 +59,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_PARTY_MEMBER" />
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="multi_buff">
 				<add order="0x40" stat="mCritRate" val="2" />
 				<mul order="0x30" stat="regMp" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.1" />
@@ -88,7 +88,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_PARTY_MEMBER" />
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="multi_buff">
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="regHp" val="1.2" />
 				<add order="0x40" stat="mCritRate" val="2" />
@@ -119,7 +119,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_PARTY_MEMBER" />
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="multi_buff">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<basemul order="0x30" stat="rCrit" val="0.2" />
 				<mul order="0x30" stat="mCritRate" val="1.2" />
