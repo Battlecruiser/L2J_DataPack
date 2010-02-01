@@ -2535,9 +2535,7 @@
 		<stat name="reuse" val="9000" />
 	</zone>
 	<!-- Hellbound (No Landing Zone) -->
-	<zone id="40101" type="NoLandingZone" shape="NPoly" minZ="-30000" maxZ="30000">
-		<stat name="dismountDelay" val="1" />
-	</zone>
+	<zone id="40101" type="ScriptZone" shape="NPoly" minZ="-30000" maxZ="30000" />
 	<!-- Hellbound (No Summon Friend zone) -->
 	<zone id="40102" type="NoSummonZone" shape="NPoly" minZ="-30000" maxZ="30000" />
 	<!-- Hellbound Lake 1 -->
