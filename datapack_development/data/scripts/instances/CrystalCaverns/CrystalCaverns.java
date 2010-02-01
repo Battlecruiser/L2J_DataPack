@@ -1527,6 +1527,7 @@ public class CrystalCaverns extends Quest
 			}
 			else if (npc.getNpcId() == BAYLOR)
 			{
+				world.status = 31;
 				world._baylor = null;
 				npc.broadcastPacket(new PlaySound(1, "BS01_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 				Instance baylorInstance = InstanceManager.getInstance().getInstance(npc.getInstanceId());
@@ -1669,7 +1670,7 @@ public class CrystalCaverns extends Quest
 			}
 			else if (npc.getNpcId() == ORACLE_GUIDE_3)
 			{
-				if (checkBaylorConditions(player))
+				if (world.status < 30 && checkBaylorConditions(player))
 				{
 					world._raiders.clear();
 					L2Party party = player.getParty();
@@ -1687,6 +1688,7 @@ public class CrystalCaverns extends Quest
 				}
 				else
 					return "";
+				world.status = 30;
 				long time = world.endTime - System.currentTimeMillis();
 				Instance baylorInstance = InstanceManager.getInstance().getInstance(world.instanceId);
 				baylorInstance.setDuration((int) time);
@@ -1709,7 +1711,6 @@ public class CrystalCaverns extends Quest
 					p.broadcastPacket(new ValidateLocation(p));
 				}
 				startQuestTimer("Baylor", 30000, npc, null);
-				world.status = 30;
 			}
 			else if (npc.getNpcId() == ORACLE_GUIDE_4 && world.status == 31)
 			{
