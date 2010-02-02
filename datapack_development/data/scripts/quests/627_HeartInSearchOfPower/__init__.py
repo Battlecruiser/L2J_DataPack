@@ -11,7 +11,10 @@ qn = "627_HeartInSearchOfPower"
 M_NECROMANCER,ENFEUX = 31518,31519
 
 #ITEMS
-SEAL_OF_LIGHT,GEM_OF_SUBMISSION,GEM_OF_SAINTS = 7170,7171,7172
+SEAL_OF_LIGHT,BEAD_OF_OBEDIENCE,GEM_OF_SAINTS = 7170,7171,7172
+
+#CHANCE
+DROP_CHANCE = 90
 
 #REWARDS
 ADENA = 57
@@ -21,7 +24,7 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
      JQuest.__init__(self,id,name,descr)
-     self.questItemIds = [GEM_OF_SUBMISSION]
+     self.questItemIds = [BEAD_OF_OBEDIENCE]
 
  def onEvent (self,event,st) :
    htmltext = event
@@ -30,7 +33,7 @@ class Quest (JQuest) :
      st.setState(State.STARTED)
      st.playSound("ItemSound.quest_accept")
    elif event == "31518-3.htm" :
-     st.takeItems(GEM_OF_SUBMISSION,300)
+     st.takeItems(BEAD_OF_OBEDIENCE,300)
      st.giveItems(SEAL_OF_LIGHT,1)
      st.set("cond","3")
    elif event == "31519-1.htm" :
@@ -76,7 +79,7 @@ class Quest (JQuest) :
        if npcId == M_NECROMANCER :
           if cond == 1 :
             htmltext = "31518-1a.htm"
-          elif st.getQuestItemsCount(GEM_OF_SUBMISSION) == 300 :
+          elif st.getQuestItemsCount(BEAD_OF_OBEDIENCE) == 300 :
             htmltext = "31518-2.htm"
           elif st.getQuestItemsCount(GEM_OF_SAINTS) :
             htmltext = "31518-4.htm"
@@ -90,14 +93,19 @@ class Quest (JQuest) :
   st = player.getQuestState(qn)
   if st :
     if st.getState() == State.STARTED :
-      count = st.getQuestItemsCount(GEM_OF_SUBMISSION)
+      count = st.getQuestItemsCount(BEAD_OF_OBEDIENCE)
       if st.getInt("cond") == 1 and count < 300 :
-         st.giveItems(GEM_OF_SUBMISSION,1)  
-         if count == 299 :  
-           st.playSound("ItemSound.quest_middle")  
-           st.set("cond","2")  
-         else:  
-           st.playSound("ItemSound.quest_itemget") 
+        numItems, chance = divmod(DROP_CHANCE*Config.RATE_QUEST_DROP,100)
+        if st.getRandom(100) < chance : 
+           numItems += 1
+        if numItems :
+           if count + numItems >= 300 :
+              numItems = 300 - count
+              st.playSound("ItemSound.quest_middle")
+              st.set("cond","2")
+           else:
+              st.playSound("ItemSound.quest_itemget")
+           st.giveItems(BEAD_OF_OBEDIENCE,int(numItems))
   return
 
 QUEST       = Quest(627,qn,"Heart In Search Of Power")

@@ -51,7 +51,7 @@ class Quest (JQuest) :
             cost,item,amount = REWARDS[event]
             if st.getQuestItemsCount(Fang)>=cost :
                 st.takeItems(Fang,cost)
-                st.giveItems(item, amount)
+                st.rewardItems(item, amount)
                 htmltext = "31554-09.htm"
             else :
                 htmltext = "31554-06.htm"
