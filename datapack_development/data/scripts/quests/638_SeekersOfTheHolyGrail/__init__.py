@@ -7,8 +7,6 @@ from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 
 qn = "638_SeekersOfTheHolyGrail"
 
-DROP_CHANCE = 30
-
 #NPC
 INNOCENTIN = 31328
 
@@ -17,6 +15,9 @@ MOBS = range(22138,22175)
 
 #ITEM
 TOTEM = 8068
+
+# Drop chance
+DROP_CHANCE = 30
 
 class Quest (JQuest) :
 
@@ -51,15 +52,15 @@ class Quest (JQuest) :
         rr = st.getRandom(3)
         if rr == 0 :
           st.takeItems(TOTEM,2000)
-          st.giveItems(959,st.getRandom(4)+3)
+          st.rewardItems(959,st.getRandom(4)+3)
           st.playSound("ItemSound.quest_middle")
         if rr == 1 :
           st.takeItems(TOTEM,2000)
-          st.giveItems(57,3576000)
+          st.rewardItems(57,3576000)
           st.playSound("ItemSound.quest_middle")
         if rr == 2 :
           st.takeItems(TOTEM,2000)
-          st.giveItems(960,st.getRandom(4)+3)
+          st.rewardItems(960,st.getRandom(4)+3)
           st.playSound("ItemSound.quest_middle")
         htmltext = "31328-03.htm"
       else :
@@ -75,13 +76,12 @@ class Quest (JQuest) :
     if st :
       count = st.getQuestItemsCount(TOTEM)
       if st.getInt("cond") == 1 :
-        chance = DROP_CHANCE * Config.RATE_QUEST_DROP
-        numItems, chance = divmod(chance,100)
-        if st.getRandom(100) < chance : 
+        numItems, chance = divmod(DROP_CHANCE * Config.RATE_QUEST_DROP,100)
+        if st.getRandom(100) < chance :
            numItems += 1
         if numItems :
-           st.playSound("ItemSound.quest_itemget")   
-           st.giveItems(TOTEM,int(numItems))       
+           st.playSound("ItemSound.quest_itemget")
+           st.giveItems(TOTEM,int(numItems))
     return
 
 QUEST       = Quest(638,qn,"Seekers of the Holy Grail")
