@@ -1,5 +1,6 @@
 package instances.Pailaka;
 
+import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager.InstanceWorld;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -404,9 +405,33 @@ public class PailakaSongOfIceAndFire extends Quest
 		{
 			InstanceWorld world = InstanceManager.getInstance().getWorld(character.getInstanceId());
 			if (world != null && world.templateId == INSTANCE_ID)
-				teleportPlayer((L2PcInstance)character, TELEPORT, world.instanceId);
+				ThreadPoolManager.getInstance().scheduleGeneral(new Teleport(character, world.instanceId), 1000);
 		}
 		return super.onExitZone(character,zone);
+	}
+
+	static final class Teleport implements Runnable
+	{
+		private final L2Character _char;
+		private final int _instanceId;
+
+		public Teleport(L2Character c, int id)
+		{
+			_char = c;
+			_instanceId = id;
+		}
+
+		public void run()
+		{
+			try
+			{
+				teleportPlayer((L2PcInstance)_char, TELEPORT, _instanceId);
+			}
+			catch (Exception e)
+			{
+				e.printStackTrace();
+			}
+		}
 	}
 
 	public PailakaSongOfIceAndFire(int questId, String name, String descr)
