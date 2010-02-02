@@ -14,6 +14,7 @@
  */
 package teleports.Warpgate;
 
+import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.instancemanager.HellboundManager;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -79,10 +80,32 @@ public class Warpgate extends Quest
 	{
 		if (character instanceof L2PcInstance)
 		{
-			if (!canEnter((L2PcInstance)character))
-				character.teleToLocation(-16555, 209375, -3670, true);
+			if (!canEnter((L2PcInstance)character) && !character.isGM())
+				ThreadPoolManager.getInstance().scheduleGeneral(new Teleport(character), 1000);
 		}
 		return null;
+	}
+
+	static final class Teleport implements Runnable
+	{
+		private final L2Character _char;
+
+		public Teleport(L2Character c)
+		{
+			_char = c;
+		}
+
+		public void run()
+		{
+			try
+			{
+				_char.teleToLocation(-16555, 209375, -3670, true);
+			}
+			catch (Exception e)
+			{
+				e.printStackTrace();
+			}
+		}
 	}
 
 	public Warpgate(int questId, String name, String descr)

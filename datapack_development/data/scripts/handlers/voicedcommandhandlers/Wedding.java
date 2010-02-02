@@ -352,6 +352,11 @@ public class Wedding implements IVoicedCommandHandler
 			activeChar.sendMessage("Your partner is in an event.");
 			return false;
 		}
+		else if (partner.isInsideZone(L2Character.ZONE_NOSUMMONFRIEND))
+		{
+			activeChar.sendMessage("Your partner is in area which blocks summoning.");
+			return false;
+		}
 		else if (activeChar.isInJail())
 		{
 			activeChar.sendMessage("You are in Jail!");
