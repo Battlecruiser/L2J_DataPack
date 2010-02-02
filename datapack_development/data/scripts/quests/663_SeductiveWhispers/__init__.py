@@ -1,5 +1,6 @@
 # by minlexx
 import sys
+from com.l2jserver import Config
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
@@ -174,8 +175,11 @@ class Quest (JQuest) :
    if st.getState() != State.STARTED : return
    npcId = npc.getNpcId()
    if npcId in MOBS:
-     if st.getRandom(100) < DROP_CHANCE:
-       st.giveItems(SPIRIT_BEAD,1)
+     numItems, chance = divmod(DROP_CHANCE*Config.RATE_QUEST_DROP,100)
+     if st.getRandom(100) < chance :
+       numItems += 1
+     if numItems:
+       st.giveItems(SPIRIT_BEAD,int(numItems))
        st.playSound("ItemSound.quest_itemget")
    return
 

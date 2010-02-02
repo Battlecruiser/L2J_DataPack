@@ -1,6 +1,7 @@
 # by minlexx
 # cleanup by Emperorc
 import sys
+from com.l2jserver import Config
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
@@ -117,7 +118,7 @@ class Quest (JQuest) :
          htmltext = htmltext.replace("LINK1",link1).replace("LINK2",link2).replace("LINK3",link3).replace("LINK4",link4).replace("LINK5",link5).replace("PRIZE",prizestr)
          if prize :
              for item,amt in REWARDS[prize] :
-                 st.giveItems(item,amt)
+                 st.rewardItems(item,amt)
      elif event.startswith("Klump_openCard") : # 'Open' card
          num = int(event[14])
          self.games[name][num-1] = st.getRandom(14) + 1 # generate index of random card, except index 0, which means 'card is closed'
@@ -150,8 +151,11 @@ class Quest (JQuest) :
      if st.getState() != State.STARTED : return
      npcId = npc.getNpcId()
      if npcId in MOBS:
-         if st.getRandom(100) < DROP_CHANCE:
-             st.giveItems(RED_GEM,1)
+         numItems, chance = divmod(DROP_CHANCE*Config.RATE_QUEST_DROP,100)
+         if st.getRandom(100) < chance :
+             numItems += 1
+         if numItems :
+             st.giveItems(RED_GEM,int(numItems))
              st.playSound("ItemSound.quest_itemget")
      return
 
