@@ -128,13 +128,13 @@ class Quest (JQuest) :
            st.giveItems(57,6331)
            if player.getClassId().getId() in range(18,25) :
              st.giveItems(SWORD_OF_SENTINEL_ID,1)
-             st.giveItems(1835,int(1000*Config.RATE_QUESTS_REWARD))
+             st.rewardItems(1835,1000)
            else:
              st.giveItems(STAFF_OF_SENTINEL_ID,1)
-             st.giveItems(2509,int(1000*Config.RATE_QUESTS_REWARD))
+             st.rewardItems(2509,1000)
            for item in range(4412,4417) :
-             st.giveItems(item,int(10*Config.RATE_QUESTS_REWARD))
-           st.giveItems(1060,int(100*Config.RATE_QUESTS_REWARD))
+             st.rewardItems(item,10)
+           st.rewardItems(1060,100)
            st.addExpAndSp(30202,1339)
    return htmltext
 

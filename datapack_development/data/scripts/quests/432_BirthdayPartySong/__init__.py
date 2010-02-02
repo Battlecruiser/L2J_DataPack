@@ -56,7 +56,7 @@ class Quest (JQuest) :
      if not st : return 
      if st.getState() != State.STARTED : return 
      if st.getInt("cond") == 1 :
-             numItems, chance = divmod(100*Config.RATE_DROP_QUEST,100)
+             numItems, chance = divmod(100*Config.RATE_QUEST_DROP,100)
              if st.getRandom(100) < chance :
                  numItems = numItems + 1
              count = st.getQuestItemsCount(RED_CRYSTALS_ID)

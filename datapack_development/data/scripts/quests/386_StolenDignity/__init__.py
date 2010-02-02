@@ -11,7 +11,7 @@ QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 386,"StolenDignity","Stolen Dignity"
 qn = "386_StolenDignity"
 
 #Variables
-DROP_RATE=15*Config.RATE_DROP_QUEST
+DROP_RATE=15*Config.RATE_QUEST_DROP
 REQUIRED_ORE=100 #how many items will be paid for a game (affects onkill sounds too)
 
 #Quest items
@@ -199,7 +199,7 @@ class Quest (JQuest) :
      partyMember = self.getRandomPartyMemberState(player, State.STARTED)
      if not partyMember : return
      st = partyMember.getQuestState(qn)
-     numItems,chance = divmod(MOB[npc.getNpcId()]*Config.RATE_DROP_QUEST,MAX)
+     numItems,chance = divmod(MOB[npc.getNpcId()]*Config.RATE_QUEST_DROP,MAX)
      prevItems = st.getQuestItemsCount(SI_ORE)
      if st.getRandom(MAX) < chance :
         numItems = numItems + 1

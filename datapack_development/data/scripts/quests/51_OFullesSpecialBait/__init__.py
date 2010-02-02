@@ -69,7 +69,7 @@ class Quest (JQuest) :
    if st :
       count = st.getQuestItemsCount(LOST_BAIT)
       if st.getInt("cond") == 1 and count < 100 :
-         chance = 33 * Config.RATE_DROP_QUEST
+         chance = 33 * Config.RATE_QUEST_DROP
          numItems, chance = divmod(chance,100)
          if st.getRandom(100) < chance : 
             numItems += 1

@@ -137,7 +137,7 @@ class Quest (JQuest) :
      if st :
          count = st.getQuestItemsCount(EVIL_SPIRIT)
          if st.getInt("cond") == 7 and count < 200 :
-            chance = DROP_CHANCE * Config.RATE_DROP_QUEST
+            chance = DROP_CHANCE * Config.RATE_QUEST_DROP
             numItems, chance = divmod(chance,100)
             if st.getRandom(100) < chance : 
                numItems += 1

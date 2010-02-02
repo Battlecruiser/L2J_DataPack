@@ -83,7 +83,7 @@ class Quest (JQuest) :
         if not partyMember: return
         st = partyMember.getQuestState(qn)
         if not st : return
-        st.giveItems(Fang,int(Config.RATE_DROP_QUEST))
+        st.giveItems(Fang,int(Config.RATE_QUEST_DROP))
         st.playSound("ItemSound.quest_itemget")
         return
 

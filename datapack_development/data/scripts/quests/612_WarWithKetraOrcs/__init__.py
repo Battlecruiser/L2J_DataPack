@@ -99,7 +99,7 @@ class Quest (JQuest) :
      if npcId in Ketra_Orcs and partyMember.getAllianceWithVarkaKetra() <= -1 :
     #see comments in 611 : Alliance with Varka Silenos for reason for doing st2 check
        if not st2 :
-         numItems,chance = divmod(Chance[npcId]*Config.RATE_DROP_QUEST,1000)
+         numItems,chance = divmod(Chance[npcId]*Config.RATE_QUEST_DROP,1000)
          if st.getRandom(1000) < chance :
            numItems += 1
          numItems = int(numItems)

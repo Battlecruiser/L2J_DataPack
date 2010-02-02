@@ -84,7 +84,7 @@ class Quest (JQuest) :
    
      count = st.getQuestItemsCount(REMAINS)
      if count < REQUIRED :
-        chance = DROP_RATE * Config.RATE_DROP_QUEST
+        chance = DROP_RATE * Config.RATE_QUEST_DROP
         numItems, chance = divmod(chance,100)
         if st.getRandom(DROP_MAX) < chance :
            numItems += 1

@@ -138,9 +138,9 @@ class Quest (JQuest) :
                   st.playTutorialVoice("tutorial_voice_026")
                   st.giveItems(SOULSHOT_NO_GRADE_FOR_BEGINNERS,7000)
                st.playSound("ItemSound.quest_tutorial")
-            st.giveItems(1060,int(100*Config.RATE_QUESTS_REWARD))     # Lesser Healing Potions 
+            st.rewardItems(1060,100)     # Lesser Healing Potions 
             for item in range(4412,4417) : 
-                st.giveItems(item,int(10*Config.RATE_QUESTS_REWARD))   # Echo crystals 
+                st.rewardItems(item,10)   # Echo crystals 
             st.addExpAndSp(41478,3555)
             player.sendPacket(SocialAction(player.getObjectId(),3))
             st.exitQuest(False) 

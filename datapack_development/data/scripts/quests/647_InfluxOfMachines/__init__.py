@@ -74,7 +74,7 @@ class Quest (JQuest) :
             cond = st.getInt("cond")
             count = st.getQuestItemsCount(DESTROYED_GOLEM_SHARD)
             if cond == 1 and count < 500:
-                chance = DROP_CHANCE*Config.RATE_DROP_QUEST
+                chance = DROP_CHANCE*Config.RATE_QUEST_DROP
                 numItems, chance = divmod(chance,100)
                 if st.getRandom(100) < chance : 
                     numItems += 1

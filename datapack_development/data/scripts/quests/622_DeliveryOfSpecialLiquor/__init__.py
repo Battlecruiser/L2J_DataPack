@@ -112,7 +112,7 @@ class Quest (JQuest) :
         random = st.getRandom(1000)
         if random < 800 :
           st.giveItems(ADENA,18800)
-          st.giveItems(HASTE_POTION,int(Config.RATE_QUESTS_REWARD))
+          st.rewardItems(HASTE_POTION,1)
         elif random < 880 :
           st.giveItems(6849+ALT_RP100,1)
         elif random < 960 :

@@ -159,7 +159,7 @@ class Quest (JQuest) :
      
      npcId = npc.getNpcId()
      item,chance=MOB[npcId]
-     chance*=Config.RATE_DROP_QUEST
+     chance*=Config.RATE_QUEST_DROP
      chance = int(chance)
      numItems,chance = divmod(chance,100)
      if st.getRandom(100) < chance :

@@ -253,15 +253,15 @@ class Quest (JQuest) :
         while claw > 0:
           n = st.getRandom(5)
           if n < 1 :
-            st.giveItems(ALACRITY_POTION, int(ala_count*Config.RATE_QUESTS_REWARD))
+            st.rewardItems(ALACRITY_POTION,ala_count)
           elif n < 2 :
-            st.giveItems(SOULSHOT_D, int(soul_count*Config.RATE_QUESTS_REWARD))
+            st.rewardItems(SOULSHOT_D,soul_count)
           elif n < 3:
-            st.giveItems(SCROLL_ESCAPE, int(soe_count*Config.RATE_QUESTS_REWARD))
+            st.rewardItems(SCROLL_ESCAPE,soe_count)
           elif n < 4:
-            st.giveItems(SPIRITSHOT_D,int(spir_count*Config.RATE_QUESTS_REWARD))
+            st.rewardItems(SPIRITSHOT_D,spir_count)
           elif n == 4:
-            st.giveItems(HEALING_POTION,int(heal_count*Config.RATE_QUESTS_REWARD))
+            st.rewardItems(HEALING_POTION,heal_count)
           claw-=1
         if check_eye:
           return p_eye
@@ -303,43 +303,43 @@ class Quest (JQuest) :
           statue = "Whats this?  A fragment of a stone statue?  Hmm it looks like a Statue of Shilen, the goddess  Isnt she the goddess of death?  For some reason, I dont have a good feeling about this.  But, if this was not a fragment but the complete statue, it could have fetched a large amount of money  There is someone who can put together a broken relic like this Hes Blacksmith Rupio.  If you collect all the fragments of the statue and take them to him, he will put them together to restore it and make it complete.<br>" 
           tablet = "A broken tablet fragment?  Hmm  It has some incomprehensible symbols on it.  Is this a relic from ancient times?  If it was not a fragment but a complete tablet, this might have been a very valuable historical object.  If you can find all the fragments of the tablet, you can get them to be restored to its complete form  If you are interested, go see <font color=\"LEVEL\">Rupio</font> the blacksmith. He is an expert of relic restoration.<br>"
           if random < 21 :
-            st.giveItems(GLUDIO_APPLE,int(Config.RATE_QUESTS_REWARD))
+            st.rewardItems(GLUDIO_APPLE,1)
             return html+redfoot+standart+"<br>Fruit?  Oh, they must be apples grown in Gludio!  Mmm they look delicious.  If you take them to the market before they go bad, I guess you will be able to make some money.<br>"+back+htmlend
           elif random < 41:
-            st.giveItems(CORN_MEAL,int(Config.RATE_QUESTS_REWARD))
+            st.rewardItems(CORN_MEAL,1)
             return html+redfoot+standart+"Isnt this corn meal?  Isnt this used to feed pigs?  Well, anyhow, since its not anything you can use for yourself, you should take it to the market to sell it.<br>"+back+htmlend
           elif random < 61:
-            st.giveItems(WOLF_PELTS,int(Config.RATE_QUESTS_REWARD))
+            st.rewardItems(WOLF_PELTS,1)
             return html+redfoot+standart+"<br>Whats this pelts?  Dire Wolf Pelts?  They seem to have been tanned by a leather craftman. But they are not of high quality.  Maybe they can be used to make leather hats?  Well, anyhow, if you take them to the market, you will get some money for them.<br>"+back+htmlend
           elif random < 74:
-            st.giveItems(MONNSTONE,int(Config.RATE_QUESTS_REWARD))
+            st.rewardItems(MONNSTONE,1)
             return html+redfoot+standart+"<br>A gem?  Oh wow, a Moonstone!  You should be able to sell it at a fairly good price.<br>"+back+htmlend
           elif random < 86:
-            st.giveItems(GLUDIO_WEETS_FLOWER,int(Config.RATE_QUESTS_REWARD))
+            st.rewardItems(GLUDIO_WEETS_FLOWER,1)
             return html+redfoot+standart+"<br>Hmm?  Whats this powder?  Should I taste it?   Yes, this must be Gludio Wheat Flour!  It can be used for baking bread I guess.   Well, anyhow, you should be able to sell it for a decent price at the market.<br>"+back+htmlend
           elif random < 98:
-            st.giveItems(SPIDERSILK_ROPE,int(Config.RATE_QUESTS_REWARD))
+            st.rewardItems(SPIDERSILK_ROPE,1)
             return html+redfoot+standart+"Whats this?  Its Spidersilk Rope!  Its a very strong and light rope that is made from the spidersilk that is collected from the Tarantula Spiders webs in the Spine Mountain Range.  If you take it to a store, Im sure you should be able to get a really good price for it.<br>"+back+htmlend
           elif random < 99:
-            st.giveItems(ALEXANDRIT,int(Config.RATE_QUESTS_REWARD))
+            st.rewardItems(ALEXANDRIT,1)
             return html+redfoot+standart+back+htmlend
           elif random < 109:
-            st.giveItems(SILVER_TEA,int(Config.RATE_QUESTS_REWARD))
+            st.rewardItems(SILVER_TEA,1)
             return html+redfoot+standart+"Hmm?  A silver bowl?  And a teacup?  They seem to be of pretty high quality!  It seems like they were made by elven artisans.  I am not interested in such exquisite items but, anyway, if you take them to a store, you should be able to sell them for a fairly good price.<br>"+back+htmlend
           elif random < 119:
-            st.giveItems(GOLEM_PART,int(Config.RATE_QUESTS_REWARD))
+            st.rewardItems(GOLEM_PART,1)
             return html+redfoot+standart+"Hmm?  Machine parts?  This Guild Mark seems to be that of the Black Anvil Guild what do you think?  Although I dont know for sure, these seem to be parts that are used by dwarves to do repair work on golems.  If you take them to a store, I think you will be able to sell them at a pretty reasonable price.<br>"+back+htmlend
           elif random < 123:
-            st.giveItems(FIRE_EMERALD,int(Config.RATE_QUESTS_REWARD))
+            st.rewardItems(FIRE_EMERALD,1)
             return html+redfoot+standart+"Whats this gem?  Ah!  Its a Fire Emerald!  Dont you know about it?  its a rare and precious gemstone that gives out a strong red light when its exposed to sun light.  You are so lucky!  You can take it to a store and sell it at a very high price.<br>"+back+htmlend
           elif random < 127:
-            st.giveItems(SILK_FROCK,int(Config.RATE_QUESTS_REWARD))
+            st.rewardItems(SILK_FROCK,1)
             return html+redfoot+standart+"Isnt this a dress?!  This is a silk dress for a woman.  It looks pretty expensive, dont you think?  Take a look at this design.  This is an item that has been imported from Avella of the East.  At a time like this, who would use such a luxurious item?  This must be ordered by a noblewoman who has a liking for foreign products dont you think?  You should take this to a store and sell it off!  Im sure you will get a very high price for it.<br>"+back+htmlend
           elif random < 131:
-            st.giveItems(PORCELAN_URN,int(Config.RATE_QUESTS_REWARD))
+            st.rewardItems(PORCELAN_URN,1)
             return html+redfoot+standart+back+htmlend
           elif random < 132:
-            st.giveItems(IMPERIAL_DIAMOND,int(Config.RATE_QUESTS_REWARD))
+            st.rewardItems(IMPERIAL_DIAMOND,1)
             return html+redfoot+standart+"Hmm?  Dont tell me!  I dont believe it!!!  Wow, an Imperial Diamond?  Isnt this the one that was used to decorate the crown of the king of Elmo-Aden?  Its truly beautiful!   You are extremely lucky!  You got yourself a priceless item.  If you take it to the market, Im sure you will be able to get a huge amount of money for it.<br>"+back+htmlend
           elif random < 147:
             random_stat=st.getRandom(4)

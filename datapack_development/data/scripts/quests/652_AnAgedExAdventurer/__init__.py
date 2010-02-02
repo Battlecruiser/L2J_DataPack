@@ -52,7 +52,7 @@ class Quest (JQuest) :
        EAD_CHANCE = st.getRandom(100)
        st.giveItems(57,5026)
        if EAD_CHANCE <= 50:
-          st.giveItems(956,int(1*Config.RATE_QUESTS_REWARD))
+          st.rewardItems(956,1)
        st.playSound("ItemSound.quest_finish")
        st.exitQuest(1)
    return htmltext
