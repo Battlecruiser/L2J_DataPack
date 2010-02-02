@@ -91,8 +91,8 @@ class Quest (JQuest) :
          st.takeItems(KARTAS_TRANSLATION,1)
          st.giveItems(ELDRITCH_DAGGER,1)
          for item in range(4412,4417) :
-               st.giveItems(item,int(10*Config.RATE_QUESTS_REWARD))
-         st.giveItems(1060,int(100*Config.RATE_QUESTS_REWARD))
+               st.rewardItems(item,10)
+         st.rewardItems(1060,100)
          if player.getClassId().isMage() :
             st.giveItems(2509,500)
          else :

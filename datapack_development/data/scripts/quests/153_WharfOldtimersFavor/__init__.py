@@ -76,7 +76,7 @@ class Quest (JQuest) :
             st.takeItems(CLOTH_BUNDLE_ID,st.getQuestItemsCount(CLOTH_BUNDLE_ID))
             if st.getQuestItemsCount(SILVIAS_RECEIPT_ID) == 0 :
               st.giveItems(SILVIAS_RECEIPT_ID,1)
-              st.giveItems(1835,3*int(Config.RATE_QUESTS_REWARD))
+              st.rewardItems(1835,3)
               if st.getQuestItemsCount(JACKSONS_RECEIPT_ID)!=0 and st.getQuestItemsCount(SILVIAS_RECEIPT_ID)!=0 and st.getQuestItemsCount(RANTS_RECEIPT_ID)!=0:
                  st.set("cond","2")
                  st.playSound("ItemSound.quest_middle")

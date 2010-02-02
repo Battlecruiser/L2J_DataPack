@@ -47,7 +47,7 @@ class Quest (JQuest) :
       if st.getQuestItemsCount(GRAVE_GOODS) == 180 :
          item,qty = REWARDS[event]
          st.takeItems(GRAVE_GOODS,-1)
-         st.giveItems(item,int(qty*Config.RATE_QUESTS_REWARD))
+         st.rewardItems(item,qty)
          st.playSound("ItemSound.quest_finish")
          st.exitQuest(1)
          htmltext = "32017-07.htm"
@@ -80,7 +80,7 @@ class Quest (JQuest) :
   if st :
     count = st.getQuestItemsCount(GRAVE_GOODS)
     if st.getInt("cond") == 1 and count < 180 :
-      chance = DROP_CHANCE * Config.RATE_DROP_QUEST
+      chance = DROP_CHANCE * Config.RATE_QUEST_DROP
       numItems, chance = divmod(chance,100)
       if st.getRandom(100) < chance : 
          numItems += 1

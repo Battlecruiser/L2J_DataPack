@@ -496,7 +496,7 @@ class Quest (JQuest):
            count = 10
         else :
            count = 20
-        numItems, chance = divmod(BACK_DROP*Config.RATE_DROP_QUEST,100)
+        numItems, chance = divmod(BACK_DROP*Config.RATE_QUEST_DROP,100)
         if st.getRandom(100) <= chance :
           numItems += 1
         numItems = int(numItems)
@@ -533,7 +533,7 @@ class Quest (JQuest):
       prevItems = st.getQuestItemsCount(eggs)
       if st.getQuestItemsCount(scale) == 1 and prevItems < REQUIRED_EGGS :
          if npcId == eggdropper :
-            chance = EGG_DROP*Config.RATE_DROP_QUEST
+            chance = EGG_DROP*Config.RATE_QUEST_DROP
             numItems, chance = divmod(chance,100)
             if st.getRandom(100) <= chance :
                numItems += 1

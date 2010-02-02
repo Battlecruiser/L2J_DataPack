@@ -44,16 +44,16 @@ class Quest (JQuest) :
      if event == "31518-6.htm" :
        st.giveItems(ADENA,100000)
      elif event == "31518-7.htm" :
-       st.giveItems(ASOFE,int(13*Config.RATE_QUESTS_REWARD))
+       st.rewardItems(ASOFE,13)
        st.giveItems(ADENA,6400)
      elif event == "31518-8.htm" :
-       st.giveItems(THONS,int(13*Config.RATE_QUESTS_REWARD))
+       st.rewardItems(THONS,13)
        st.giveItems(ADENA,6400)
      elif event == "31518-9.htm" :
-       st.giveItems(ENRIA,int(6*Config.RATE_QUESTS_REWARD))
+       st.rewardItems(ENRIA,6)
        st.giveItems(ADENA,13600)
      elif event == "31518-10.htm" :
-       st.giveItems(MOLD_HARDENER,int(3*Config.RATE_QUESTS_REWARD))
+       st.rewardItems(MOLD_HARDENER,3)
        st.giveItems(ADENA,17200)
      st.playSound("ItemSound.quest_finish")
      st.exitQuest(1)

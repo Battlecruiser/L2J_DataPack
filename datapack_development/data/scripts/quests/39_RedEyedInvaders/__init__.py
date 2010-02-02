@@ -40,7 +40,7 @@ def drop(partyMember,array) :
     item,max,item2,condition = array
     st = partyMember.getQuestState(qn)
     count = st.getQuestItemsCount(item)
-    numItems,chance = divmod(100*Config.RATE_QUESTS_REWARD,100)
+    numItems,chance = divmod(100*Config.RATE_QUEST_DROP,100)
     if st.getRandom(100) < chance :
         numItems = numItems + 1
     if count+numItems > max :

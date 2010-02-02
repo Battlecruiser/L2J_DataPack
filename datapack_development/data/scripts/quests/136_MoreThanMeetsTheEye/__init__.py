@@ -127,11 +127,11 @@ class Quest (JQuest) :
       max,cond = DROPCONFIG[itemId]
       drop1 = st.getRandom(100)
       drop2 = st.getRandom(100)
-      qty1,chance1 = divmod(chance1*Config.RATE_DROP_QUEST,100)
+      qty1,chance1 = divmod(chance1*Config.RATE_QUEST_DROP,100)
       if drop1 < chance1 : qty1 += 1
       qty1 = int(qty1)
       if qty1 :
-         qty2,chance2 = divmod(chance2*Config.RATE_DROP_QUEST,100)
+         qty2,chance2 = divmod(chance2*Config.RATE_QUEST_DROP,100)
          if drop2 < chance2 : qty2 += 1
          qty = qty1 + int(qty2)
          if (qty + count) >= max :

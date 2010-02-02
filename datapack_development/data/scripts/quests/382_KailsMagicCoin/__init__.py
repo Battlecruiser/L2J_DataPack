@@ -57,7 +57,7 @@ class Quest (JQuest) :
       st = player.getQuestState(qn)
       if not st : return 
       if st.getState() != State.STARTED : return 
-      numItems,chance = divmod(CHANCE*Config.RATE_DROP_QUEST,MAX)
+      numItems,chance = divmod(CHANCE*Config.RATE_QUEST_DROP,MAX)
       if st.getQuestItemsCount(ROYAL_MEMBERSHIP) :
          if st.getRandom(MAX) < chance :
             numItems = numItems + 1

@@ -12,7 +12,7 @@ qn = "377_GiantsExploration2"
 
 #Variables
 #Titan Ancient Books drop rate in %
-DROP_RATE=15*Config.RATE_DROP_QUEST
+DROP_RATE=15*Config.RATE_QUEST_DROP
 MAX = 100
 #Alternative rewards. Set this to a non-zero value and recipes will be 100% instead of 60%
 ALT_RP_100=0

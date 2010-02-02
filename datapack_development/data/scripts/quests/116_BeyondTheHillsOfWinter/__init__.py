@@ -57,7 +57,7 @@ class Quest (JQuest) :
 		elif event == "materials" :
 			st.takeItems(SGOODS, -1)
 			st.playSound("ItemSound.quest_itemget")
-			st.giveItems(SS, int(1650*Config.RATE_QUESTS_REWARD))
+			st.rewardItems(SS,1650)
 			st.addExpAndSp(82792,4981)
 			htmltext = "32052-02.htm"
 			st.playSound("ItemSound.quest_finish")

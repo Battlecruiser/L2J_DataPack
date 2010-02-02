@@ -111,14 +111,14 @@ class Quest (JQuest) :
             st.giveItems(57,19799)
             st.takeItems(STEELBENDERS_HEAD_ID,1)
             st.giveItems(BLOODSABER_ID,1)
-            st.giveItems(1060,int(100*Config.RATE_QUESTS_REWARD))     # Lesser Healing Potions
+            st.rewardItems(1060,100)     # Lesser Healing Potions
             mage = player.getClassId().isMage()
             if mage :
                st.giveItems(SPIRITSHOT_NO_GRADE,500)
             else : 
                st.giveItems(SOULSHOT_NO_GRADE,1000)
             for item in range(4412,4417) : 
-               st.giveItems(item,int(10*Config.RATE_QUESTS_REWARD))   # Echo crystals 
+               st.rewardItems(item,10)   # Echo crystals 
             st.unset("cond")
             st.exitQuest(False)
             st.playSound("ItemSound.quest_finish")
@@ -139,7 +139,7 @@ class Quest (JQuest) :
    if npcId in [20517,20518,20455] :
       bones = st.getQuestItemsCount(BONE_FRAGMENT1_ID)
       if st.getQuestItemsCount(CECKTINONS_VOUCHER2_ID) == 1 and bones < 10 :
-         numItems, chance = divmod(30*Config.RATE_DROP_QUEST,100)
+         numItems, chance = divmod(30*Config.RATE_QUEST_DROP,100)
          if st.getRandom(100) <= chance :
             numItems += 1
          numItems = int(numItems)
@@ -153,7 +153,7 @@ class Quest (JQuest) :
             st.giveItems(BONE_FRAGMENT1_ID,numItems)
    elif npcId in [20015,20020] :
       if st.getQuestItemsCount(PRESERVE_OIL_ID) == 1 :
-         if st.getRandom(10)<3*Config.RATE_DROP_QUEST :
+         if st.getRandom(10)<3*Config.RATE_QUEST_DROP :
             st.set("cond","7")
             st.giveItems(ZOMBIE_HEAD_ID,1)
             st.playSound("ItemSound.quest_middle")

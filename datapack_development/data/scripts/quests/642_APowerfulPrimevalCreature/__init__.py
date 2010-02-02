@@ -91,11 +91,11 @@ class Quest (JQuest) :
           if cond == 1 :
              if npcId == 18344 :
                 itemId = DINOSAUR_EGG
-                chance = EGG_DROP_CHANCE*Config.RATE_DROP_QUEST
+                chance = EGG_DROP_CHANCE*Config.RATE_QUEST_DROP
                 numItems, chance = divmod(chance,100)
              else :
                 itemId = DINOSAUR_TISSUE
-                chance = TISSUE_DROP_CHANCE*Config.RATE_DROP_QUEST
+                chance = TISSUE_DROP_CHANCE*Config.RATE_QUEST_DROP
                 numItems, chance = divmod(chance,100)
              if st.getRandom(100) < chance : 
                 numItems += 1

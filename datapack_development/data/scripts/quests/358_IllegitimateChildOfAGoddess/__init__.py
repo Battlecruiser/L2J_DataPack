@@ -11,7 +11,7 @@ QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 358,"IllegitimateChildOfAGoddess","I
 qn = "358_IllegitimateChildOfAGoddess"
 
 #Variables
-DROP_RATE=12*Config.RATE_DROP_QUEST  #in %
+DROP_RATE=12*Config.RATE_QUEST_DROP  #in %
 REQUIRED=108 #how many items will be paid for a reward (affects onkill sounds too)
 
 #Quest items
@@ -51,7 +51,7 @@ class Quest (JQuest) :
           st.takeItems(SN_SCALE,REQUIRED)
           item=REWARDS[st.getRandom(len(REWARDS))]
           if ALT_RP_100: item +=1
-          st.giveItems(item ,1)
+          st.rewardItems(item ,1)
           st.exitQuest(1)
           st.playSound("ItemSound.quest_finish")
        else :

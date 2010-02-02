@@ -71,7 +71,7 @@ class Quest (JQuest) :
    
    count = st.getQuestItemsCount(KASHA_WOLF_FANG)
    if count < 50 :
-      numItems, chance = divmod(125*Config.RATE_DROP_QUEST,100)
+      numItems, chance = divmod(125*Config.RATE_QUEST_DROP,100)
       if st.getRandom(100) <= chance :
          numItems += 1
       numItems = int(numItems)

@@ -104,7 +104,7 @@ class Quest (JQuest) :
    
    if st.getInt("cond") == 1 :
       chance,item,max = DROPLIST[npc.getNpcId()]
-      numItems,chance = divmod(chance*Config.RATE_DROP_QUEST,100)
+      numItems,chance = divmod(chance*Config.RATE_QUEST_DROP,100)
       count = st.getQuestItemsCount(item)
       if count < max :
          if st.getRandom(100) < chance :

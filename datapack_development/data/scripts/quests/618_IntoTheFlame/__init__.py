@@ -87,7 +87,7 @@ class Quest (JQuest) :
       if not st : return
       count = st.getQuestItemsCount(VACUALITE_ORE)
       if st.getInt("cond") == 2 and count < 50 :
-         chance = CHANCE_FOR_QUEST_ITEMS * Config.RATE_DROP_QUEST
+         chance = CHANCE_FOR_QUEST_ITEMS * Config.RATE_QUEST_DROP
          numItems, chance = divmod(chance,100)
          if st.getRandom(100) < chance : 
             numItems += 1

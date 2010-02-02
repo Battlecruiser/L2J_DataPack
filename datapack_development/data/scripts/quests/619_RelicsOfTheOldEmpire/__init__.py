@@ -86,12 +86,12 @@ class Quest (JQuest) :
      st = partyMember.getQuestState(qn)
      if st :
        if st.getState() == State.STARTED :
-         numItems, chance = divmod(100*Config.RATE_DROP_QUEST,100)
+         numItems, chance = divmod(100*Config.RATE_QUEST_DROP,100)
          if st.getRandom(100) < chance :
             numItems += 1
          st.giveItems(RELICS,int(numItems))
          st.playSound("ItemSound.quest_itemget")
-         if st.getRandom(100) < (5*Config.RATE_DROP_QUEST) :
+         if st.getRandom(100) < (5*Config.RATE_QUEST_DROP) :
              st.giveItems(ENTRANCE,1)
              st.playSound("ItemSound.quest_middle")
      return

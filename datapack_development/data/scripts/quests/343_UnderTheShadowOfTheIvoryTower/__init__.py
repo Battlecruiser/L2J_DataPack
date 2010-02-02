@@ -62,7 +62,7 @@ class Quest (JQuest) :
         if st.getQuestItemsCount(ECTOPLASM) :
            st.takeItems(ECTOPLASM,1)
            item=RANDOM_REWARDS[st.getRandom(len(RANDOM_REWARDS))]
-           st.giveItems(item[0],int(item[1]*Config.RATE_QUESTS_REWARD))
+           st.rewardItems(item[0],int(item[1]))
            htmltext="30835-02a.htm"
      elif event == "30934-02.htm" :
         if orbs < 10 :

@@ -358,7 +358,7 @@ class Quest (JQuest) :
    
    cond=st.getInt("cond")
    grade=st.getInt("grade")
-   chance=int((npc.getLevel() - grade * 3 - 20)*Config.RATE_DROP_QUEST)
+   chance=int((npc.getLevel() - grade * 3 - 20)*Config.RATE_QUEST_DROP)
    item=DROP_LIST[npcId][0]
    random = st.getRandom(100)
    if item == KALDIS_COIN :

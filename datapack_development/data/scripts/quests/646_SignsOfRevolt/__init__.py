@@ -72,7 +72,7 @@ class Quest (JQuest) :
       if st.getState() == State.STARTED :
          count = st.getQuestItemsCount(CURSED_DOLL)
          if st.getInt("cond") == 1 and count < 180 :
-            chance = DROP_CHANCE * Config.RATE_DROP_QUEST
+            chance = DROP_CHANCE * Config.RATE_QUEST_DROP
             numItems, chance = divmod(chance,100)
             if st.getRandom(100) < chance :
                numItems += 1

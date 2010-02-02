@@ -79,7 +79,7 @@ class Quest (JQuest) :
    partyMember2 = self.getRandomPartyMemberState(player, State.COMPLETED)
    if not partyMember1 and not partyMember2 : return
    partyMember = partyMember1
-   numItems,chance = divmod(100*Config.RATE_DROP_QUEST,100)
+   numItems,chance = divmod(100*Config.RATE_QUEST_DROP,100)
    dropchance = Rnd.get(100)
    if dropchance  < chance:
     # player who has State.COMPLETED up to 2 out of 3 item collections may consume the party drop

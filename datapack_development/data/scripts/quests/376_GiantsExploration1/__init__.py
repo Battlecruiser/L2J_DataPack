@@ -11,10 +11,10 @@ qn = "376_GiantsExploration1"
 
 #Variables
 #Ancient parchment drop rate in %
-DROP_RATE   = 15*Config.RATE_DROP_QUEST
+DROP_RATE   = 15*Config.RATE_QUEST_DROP
 MAX = 100
 #Mysterious Book drop rate in %
-DROP_RATE_2 = 5*Config.RATE_DROP_QUEST
+DROP_RATE_2 = 5*Config.RATE_QUEST_DROP
 #By changing this setting you can make a group of recipes harder to get
 RP_BALANCE = 50
 #Changing this value to non-zero, will turn recipes to 100% instead of 60%

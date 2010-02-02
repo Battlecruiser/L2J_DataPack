@@ -66,7 +66,7 @@ class Quest (JQuest) :
    if st.getState() != State.STARTED : return 
    
    count = st.getQuestItemsCount(WOLF_PELT)
-   numItems, chance = divmod(100*Config.RATE_DROP_QUEST,100)
+   numItems, chance = divmod(100*Config.RATE_QUEST_DROP,100)
    if st.getRandom(100) <chance :
      numItems = numItems + 1
    if count+numItems>=40 :
