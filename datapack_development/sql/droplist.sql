@@ -9422,7 +9422,7 @@ INSERT INTO `droplist` VALUES
 (20836,2062,1,1,1,1291),-- Scythe Edge
 (20836,2075,1,1,1,1291),-- Orcish Glaive Blade
 (20836,2076,1,1,1,1291),-- Body Slasher Blade
-(20836,1867,1,1,2,1316591),-- Animal Skin
+(20836,1867,1,1,2,131659),-- Animal Skin
 (20836,1872,1,1,2,131659),-- Animal Bone
 (20836,1875,1,1,2,6583),-- Stone of Purity
 (20836,1881,1,1,2,13166),-- Coarse Bone Powder
@@ -11690,7 +11690,7 @@ INSERT INTO `droplist` VALUES
 (21024,1884,1,1,2,31883),-- Cord
 (21024,2180,1,1,2,3895),-- Recipe: Scale Mail
 (21025,1868,1,3,-1,485180),-- Thread
-(21025,1871,1,1,-1,4851806),-- Charcoal
+(21025,1871,1,1,-1,485180),-- Charcoal
 (21025,2152,1,1,-1,85419),-- Recipe: Enchanted Necklace
 (21025,57,208,407,0,700000),-- Adena
 (21025,291,1,1,1,86),-- Trident
@@ -16720,7 +16720,7 @@ INSERT INTO `droplist` VALUES
 (21361,5522,1,1,1,2295),-- Sealed Armor of Nightmare Pattern
 (21361,5523,1,1,1,2295),-- Sealed Majestic Plate Armor Pattern
 (21361,959,1,1,2,11),-- Scroll: Enchant Weapon (Grade S)
-(21361,1867,1,3,2,1119815),-- Animal Skin
+(21361,1867,1,3,2,119815),-- Animal Skin
 (21361,1869,2,6,2,67396),-- Iron Ore
 (21361,1870,2,6,2,53917),-- Coal
 (21361,1871,3,9,2,44931),-- Charcoal
@@ -22960,7 +22960,7 @@ INSERT INTO `droplist` VALUES
 (21729,4115,1,1,1,4107),-- Lance Blade
 (21729,1874,1,1,2,12554),-- Oriharukon Ore
 (21729,1878,1,1,2,75423),-- Braided Hemp
-(21729,1884,1,1,2,1158882),-- Cord
+(21729,1884,1,1,2,115882),-- Cord
 (21729,1889,1,1,2,12554),-- Compound Braid
 (21729,5220,1,1,2,7532),-- Metal Hardener
 (21729,6337,1,1,2,966),-- Recipe: Sealed Majestic Earring(70%)
