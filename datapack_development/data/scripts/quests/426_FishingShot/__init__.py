@@ -120,7 +120,7 @@ class Quest (JQuest) :
    if st.getRandom(1000) <= chance :
        drop += 1
    if drop != 0 : 
-       st.giveItems(SWEET_FLUID,drop*int(Config.RATE_DROP_QUEST))
+       st.giveItems(SWEET_FLUID,drop*int(Config.RATE_QUEST_DROP))
        st.playSound("ItemSound.quest_itemget")  
    return
 

@@ -59,7 +59,7 @@ class Quest (JQuest) :
      st = partyMember.getQuestState(qn) 
      count = st.getQuestItemsCount(SILVER_CRYSTAL_ID)
      if st.getInt("cond") == 1 and count < 50 :
-        chance = 100 * Config.RATE_DROP_QUEST
+        chance = 100 * Config.RATE_QUEST_DROP
         numItems, chance = divmod(chance,100)
         if st.getRandom(100) < chance : 
            numItems += 1

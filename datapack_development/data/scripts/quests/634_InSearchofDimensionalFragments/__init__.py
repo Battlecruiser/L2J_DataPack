@@ -49,7 +49,7 @@ class Quest (JQuest) :
     st = partyMember.getQuestState(qn)
     if st :
         if st.getState() == State.STARTED :
-            itemMultiplier,chance = divmod(80*Config.RATE_DROP_QUEST,1000)
+            itemMultiplier,chance = divmod(80*Config.RATE_QUEST_DROP,1000)
             if st.getRandom(1000) < chance :
                 itemMultiplier += 1
             numItems = int(itemMultiplier * (npc.getLevel() * 0.15 +1.6))

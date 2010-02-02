@@ -113,7 +113,7 @@ class Quest (JQuest) :
      torches = st.getQuestItemsCount(TORCH)
      chance = DROPLIST[npc.getNpcId()]
      drop = st.getRandom(100)
-     qty,chance = divmod(chance*Config.RATE_DROP_QUEST,100)
+     qty,chance = divmod(chance*Config.RATE_QUEST_DROP,100)
      if drop < chance : qty += 1
      qty = int(qty)
      if qty :

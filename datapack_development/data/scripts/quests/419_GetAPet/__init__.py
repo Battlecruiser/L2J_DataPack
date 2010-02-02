@@ -244,7 +244,7 @@ class Quest (JQuest):
             npcs = [ SPIDER_K1 ]
             item = SPIDER_LEG6
          if npcId in npcs :
-            chance = SPIDER_LEG_DROP * Config.RATE_DROP_QUEST
+            chance = SPIDER_LEG_DROP * Config.RATE_QUEST_DROP
             numItems, chance = divmod(chance,100)
             count = st.getQuestItemsCount(item)
             if st.getRandom(100) < chance :

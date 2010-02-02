@@ -49,7 +49,7 @@ class Quest (JQuest) :
          htmltext = "30042-05.htm"
    elif npcId == 30311 and st.getInt("cond") and st.getQuestItemsCount(OFFICIAL_LETTER_ID) and id == State.STARTED:
       st.takeItems(OFFICIAL_LETTER_ID,-1)
-      st.giveItems(HASTE_POTION_ID,int(Config.RATE_QUESTS_REWARD))
+      st.rewardItems(HASTE_POTION_ID,1)
       st.unset("cond")
       st.exitQuest(False)
       st.playSound("ItemSound.quest_finish")

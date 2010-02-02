@@ -41,7 +41,7 @@ class Quest (JQuest) :
          if amount2 :
              htmltext = "30969-03.htm"
              st.giveItems(ADENA,3880)
-             st.giveItems(BILL_OF_IASON_HEINE,int(amount2*Config.RATE_QUESTS_REWARD))
+             st.rewardItems(BILL_OF_IASON_HEINE,int(amount2))
              st.takeItems(BARREL_OF_LEAGUE,-1)
      elif event == "30969-06.htm" :
          if not (amount + amount2) :

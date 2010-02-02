@@ -99,7 +99,7 @@ class Quest (JQuest) :
       if st.getState() == State.STARTED :
          count = st.getQuestItemsCount(item)
          if st.getInt("cond") == 1 and count < 100 :
-            numItems, chance = divmod(chance*Config.RATE_DROP_QUEST,100)
+            numItems, chance = divmod(chance*Config.RATE_QUEST_DROP,100)
             if dropchance  < chance:
                numItems += 1
             if count + numItems >= 100 :

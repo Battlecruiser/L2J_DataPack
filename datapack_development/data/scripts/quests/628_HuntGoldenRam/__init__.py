@@ -143,7 +143,7 @@ class Quest (JQuest) :
         if st.getState() == State.STARTED :
             npcId = npc.getNpcId()
             cond = st.getInt("cond")
-            chance = CHANCE[npcId]*Config.RATE_DROP_QUEST
+            chance = CHANCE[npcId]*Config.RATE_QUEST_DROP
             numItems, chance = divmod(chance,MAX)
             if st.getRandom(100) <chance :
                numItems = numItems + 1

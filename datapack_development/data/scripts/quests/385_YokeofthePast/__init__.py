@@ -99,7 +99,7 @@ class Quest (JQuest) :
     partyMember = self.getRandomPartyMemberState(player, State.STARTED)
     if not partyMember : return
     st = partyMember.getQuestState(qn)
-    chance = CHANCE[npc.getNpcId()]*Config.RATE_DROP_QUEST
+    chance = CHANCE[npc.getNpcId()]*Config.RATE_QUEST_DROP
     numItems, chance = divmod(chance,MAX)
     if st.getRandom(MAX)<chance :
       numItems = numItems + 1

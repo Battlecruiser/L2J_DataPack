@@ -146,7 +146,7 @@ def giveReward(st,item,chance,MAX,drop) :
   if st.getQuestItemsCount(item) > 0 :
     count = st.getQuestItemsCount(drop)
     if count < MAX or drop == Mane :
-      numItems,chance = divmod(chance*Config.RATE_DROP_QUEST,1000)
+      numItems,chance = divmod(chance*Config.RATE_QUEST_DROP,1000)
       if st.getRandom(1000) < chance :
         numItems += 1
       numItems = int(numItems)

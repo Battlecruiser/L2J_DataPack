@@ -106,7 +106,7 @@ class Quest (JQuest) :
     if not st : return
     chance = 30
     drop = st.getRandom(100)
-    qty,chance = divmod(chance*Config.RATE_DROP_QUEST,100)
+    qty,chance = divmod(chance*Config.RATE_QUEST_DROP,100)
     if drop < chance : qty += 1
     qty = int(qty)
     if qty :

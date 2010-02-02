@@ -62,7 +62,7 @@ class Quest (JQuest):
            if not partyMember: return
            st = partyMember.getQuestState(qn)
            if not st: return
-           chance = Z_BRAIN_CHANCE * Config.RATE_DROP_QUEST
+           chance = Z_BRAIN_CHANCE * Config.RATE_QUEST_DROP
            numItems, chance = divmod(chance,100)
            if st.getRandom(100) < chance:
               numItems += 1
@@ -74,7 +74,7 @@ class Quest (JQuest):
            if not partyMember: return                
            st = partyMember.getQuestState(qn)
            if not st: return
-           chance = V_HEART_CHANCE * Config.RATE_DROP_QUEST
+           chance = V_HEART_CHANCE * Config.RATE_QUEST_DROP
            numItems, chance = divmod(chance,100)
            count = st.getQuestItemsCount(V_HEART)
            if st.getRandom(100) < chance:

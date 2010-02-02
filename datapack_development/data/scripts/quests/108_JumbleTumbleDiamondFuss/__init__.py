@@ -103,10 +103,10 @@ class Quest (JQuest) :
              else :
                 st.giveItems(SOULSHOT_NO_GRADE_FOR_BEGINNERS,7000)
                 st.playTutorialVoice("tutorial_voice_026")
-          st.giveItems(1060,int(100*Config.RATE_QUESTS_REWARD))     # Lesser Healing Potions 
+          st.rewardItems(1060,100)     # Lesser Healing Potions 
           st.giveItems(SILVERSMITH_HAMMER,1) 
           for item in range(4412,4417) :
-              st.giveItems(item,int(10*Config.RATE_QUESTS_REWARD))   # Echo crystals
+              st.rewardItems(item,10)   # Echo crystals
           st.takeItems(STAR_DIAMOND,-1) 
           st.addExpAndSp(34565,2962)
           st.set("cond","0") 

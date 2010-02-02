@@ -15,7 +15,7 @@ ARTICLES_DEAD_HEROES,OLD_KEY,OLD_HILT,OLD_TOTEM,CRUCIFIX = range(4269,4274)
 
 #Chances
 CHANCE = 36
-SPECIAL = int(1+(1000/Config.RATE_QUESTS_REWARD))
+SPECIAL = int(1+(1000/Config.RATE_QUEST_REWARD))
 #NPCs
 GILMORE = 30754
 RODEMAI = 30756
@@ -161,7 +161,7 @@ class Quest (JQuest) :
      if st.getState() != State.STARTED : return 
    
      npcId = npc.getNpcId()
-     chance = (CHANCE+(npcId-20234)*2)*Config.RATE_DROP_QUEST
+     chance = (CHANCE+(npcId-20234)*2)*Config.RATE_QUEST_DROP
      bonus = int(divmod(chance,100)[0])
      if st.getInt("cond") == 1 and st.getRandom(100)<chance :
          st.giveItems(ARTICLES_DEAD_HEROES,1+bonus)
