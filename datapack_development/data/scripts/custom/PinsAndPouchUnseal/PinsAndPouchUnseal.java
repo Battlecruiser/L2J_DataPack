@@ -30,8 +30,9 @@ public class PinsAndPouchUnseal extends Quest
 	
 	private final static int[] PINSPRICE = {3200,11800,26500,136600};
 	private final static int[] POUCHSPRICE = {2600,9400,21200,109300};
+	private final static int[] CLIPORNAMENTPRICE = {26500,136600};
 	// faild, low, mid, high, top
-	private final static int[] CHANCES = {60,84,94,98,100};
+	private final static int[] CHANCES = {49,78,95,99,100};
 
 	// sealdId, lowId, midId, highId, topId
 	private final static int[][] PINS = {{13898,13902,13903,13904,13905},
@@ -45,6 +46,15 @@ public class PinsAndPouchUnseal extends Quest
 		{13919,13926,13927,13928,13929},
 		{13920,13930,13931,13932,13933},
 		{13921,13934,13935,13936,13937}
+	};
+
+	// "B,C grade" is the Magic Clip
+	// "A,S grade" is the Magic Ornament
+	// sealdId, lowId, midId, highId, topId
+	private final static int[][] CLIPSORNAMENTS = {{14902,14906,14907,14908,14909},
+		{14903,14910,14911,14912,14913},
+		{14904,14914,14915,14916,14917},
+		{14905,14918,14919,14920,14921}
 	};
 
 	public PinsAndPouchUnseal(int questId, String name, String descr)
@@ -77,6 +87,16 @@ public class PinsAndPouchUnseal extends Quest
 			{
 				price = POUCHSPRICE[grade];
 				itemIds = POUCHS[grade];
+			}
+			else if (event.endsWith("_clip"))
+			{
+				price = CLIPORNAMENTPRICE[grade];
+				itemIds = CLIPSORNAMENTS[grade];
+			}
+			else if (event.endsWith("_ornament"))
+			{
+				price = CLIPORNAMENTPRICE[grade];
+				itemIds = CLIPSORNAMENTS[grade + 2];
 			}
 			else
 				// this should not happen!
