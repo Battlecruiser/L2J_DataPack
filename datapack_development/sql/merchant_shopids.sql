@@ -673,8 +673,8 @@ INSERT INTO `merchant_shopids` VALUES
 ('9992', 'gm'), -- Territory Flags
 ('9993', 'gm'), -- Seeds
 ('9994', 'gm'), -- Castle Guards
-('9995', 'gm'), -- [reserved]
-('9996', 'gm'), -- [reserved]
+('9995', 'gm'), -- Magic Clip
+('9996', 'gm'), -- Magic Ornament
 ('9997', 'gm'), -- A Weapons
 ('9998', 'gm'), -- S Weapons
 ('9999', 'gm'), -- Masterwork Jewels
