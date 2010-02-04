@@ -62,7 +62,7 @@ public class InquisitorShilienElder extends L2Transformation
 		// Switch Stance
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(838, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{});
+		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
 
 	public static void main(String[] args)
