@@ -28,10 +28,8 @@ public class PinsAndPouchUnseal extends Quest
 		32610,32612
 	};
 	
-	private final static int[] PINSPRICE = {3200,11800,26500,136600};
-	private final static int[] POUCHSPRICE = {2600,9400,21200,109300};
-	private final static int[] CLIPORNAMENTPRICE = {26500,136600};
-	// faild, low, mid, high, top
+	private final static int[] UNSEALPRICE = {3200,11800,26500,136600};
+	// failed, low, mid, high, top
 	private final static int[] CHANCES = {49,78,95,99,100};
 
 	// sealdId, lowId, midId, highId, topId
@@ -80,23 +78,23 @@ public class PinsAndPouchUnseal extends Quest
 			int[] itemIds;
 			if (event.endsWith("_pin"))
 			{
-				price = PINSPRICE[grade];
+				price = UNSEALPRICE[grade];
 				itemIds = PINS[grade];
 			}
 			else if (event.endsWith("_pouch"))
 			{
-				price = POUCHSPRICE[grade];
+				price = UNSEALPRICE[grade];
 				itemIds = POUCHS[grade];
 			}
 			else if (event.endsWith("_clip"))
 			{
-				price = CLIPORNAMENTPRICE[grade];
-				itemIds = CLIPSORNAMENTS[grade];
+				price = UNSEALPRICE[grade];
+				itemIds = CLIPSORNAMENTS[grade - 2];
 			}
 			else if (event.endsWith("_ornament"))
 			{
-				price = CLIPORNAMENTPRICE[grade];
-				itemIds = CLIPSORNAMENTS[grade + 2];
+				price = UNSEALPRICE[grade];
+				itemIds = CLIPSORNAMENTS[grade];
 			}
 			else
 				// this should not happen!
