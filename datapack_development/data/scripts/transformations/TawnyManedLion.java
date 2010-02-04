@@ -42,7 +42,7 @@ public class TawnyManedLion extends L2Transformation
 		// Dismount
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(839, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{});
+		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
 
 	public static void main(String[] args)

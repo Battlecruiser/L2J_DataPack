@@ -6,6 +6,8 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class AquaElf extends L2Transformation
 {
+	private static final int[] SKILLS = new int[]{619};
+	
 	public AquaElf()
 	{
 		// id, colRadius, colHeight
@@ -25,7 +27,7 @@ public class AquaElf extends L2Transformation
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{619});
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
 	public void onUntransform()
@@ -38,7 +40,7 @@ public class AquaElf extends L2Transformation
 		// Transform Dispel
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{});
+		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
 
 	public static void main(String[] args)

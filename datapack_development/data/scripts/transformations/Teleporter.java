@@ -70,7 +70,7 @@ Or will it still remove the level 40 skill? Needs to be tested.
 		// Cancel Gatekeeper Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(8248, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{});
+		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
 
 	public static void main(String[] args)
