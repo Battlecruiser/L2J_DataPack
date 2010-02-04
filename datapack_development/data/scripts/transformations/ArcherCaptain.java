@@ -6,6 +6,8 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class ArcherCaptain extends L2Transformation
 {
+	private static final int[] SKILLS = new int[]{5419, 619};
+	
 	public ArcherCaptain()
 	{
 		// id, colRadius, colHeight
@@ -27,7 +29,7 @@ public class ArcherCaptain extends L2Transformation
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{5491,619});
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
 	public void onUntransform()
@@ -42,7 +44,7 @@ public class ArcherCaptain extends L2Transformation
 		// Transform Dispel
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{});
+		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
 
 	public static void main(String[] args)

@@ -62,7 +62,7 @@ public class VanguardShilienKnight extends L2Transformation
 		// Triple Blade Slash
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(958, getPlayer().getLevel() - 43), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{});
+		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
 
 	public static void main(String[] args)

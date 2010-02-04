@@ -6,6 +6,8 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class Anakim extends L2Transformation
 {
+	private static final int[] SKILLS = new int[]{720,721,722,723,724,5491,619};
+	
 	public Anakim()
 	{
 		// id, colRadius, colHeight
@@ -37,7 +39,7 @@ public class Anakim extends L2Transformation
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{720,721,722,723,724,5491,619});
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
 	public void onUntransform()
@@ -62,7 +64,7 @@ public class Anakim extends L2Transformation
 		// Transform Dispel
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{});
+		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
 
 	public static void main(String[] args)
