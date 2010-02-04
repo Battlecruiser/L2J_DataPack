@@ -299,7 +299,7 @@
 		<set name="effectRange" val="900" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="120" val="0">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="item_skill">
 				<add order="0x40" stat="maxHp" val="#maxHp" />
 			</effect>
 		</for>
@@ -322,7 +322,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="120" val="0">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="item_skill">
 				<add order="0x40" stat="maxHp" val="#maxHp" />
 			</effect>
 		</for>
@@ -344,7 +344,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="120" val="0">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="item_skill">
 				<mul order="0x30" stat="gainHp" val="#gainHp" />
 			</effect>
 		</for>
@@ -391,7 +391,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="120" val="0">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="item_skill">
 				<add order="0x40" stat="maxMp" val="#maxMp" />
 			</effect>
 		</for>
@@ -413,7 +413,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="120" val="0">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="item_skill">
 				<mul order="0x30" stat="gainMp" val="#maxMp" />
 			</effect>
 		</for>
@@ -453,7 +453,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="120" val="0">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="item_skill">
 				<add order="0x40" stat="maxCp" val="#maxCp" />
 			</effect>
 		</for>
@@ -475,7 +475,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="120" val="0">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="item_skill">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
@@ -497,7 +497,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="120" val="0">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="item_skill">
 				<mul order="0x30" stat="mAtk" val="#mAtk" />
 			</effect>
 		</for>
@@ -520,7 +520,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="120" val="0">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="item_skill">
 				<mul order="0x30" stat="pvpPhysDmg" val="#pvpPhysDmg" />
 			</effect>
 		</for>
@@ -543,7 +543,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="120" val="0">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="item_skill">
 				<mul order="0x30" stat="pDef" val="#pDef" />
 			</effect>
 		</for>
@@ -566,7 +566,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="120" val="0">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="item_skill">
 				<mul order="0x30" stat="mDef" val="#mDef" />
 			</effect>
 		</for>
@@ -615,7 +615,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="120" val="0">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="item_skill">
 				<mul order="0x30" stat="giveHp" val="#giveHp" />
 			</effect>
 		</for>
@@ -638,7 +638,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="120" val="0">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="item_skill">
 				<add order="0x40" stat="rEvas" val="#rEvas" />
 			</effect>
 		</for>
@@ -661,7 +661,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="120" val="0">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="item_skill">
 				<add order="0x40" stat="accCombat" val="#accCombat" />
 			</effect>
 		</for>
@@ -684,7 +684,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="120" val="0">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="item_skill">
 				<basemul order="0x30" stat="rCrit" val="#rCrit" />
 			</effect>
 		</for>
@@ -707,7 +707,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="120" val="0">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="item_skill">
 				<basemul order="0x30" stat="mCritRate" val="#mCritRate" />
 			</effect>
 		</for>
@@ -730,7 +730,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="120" val="0">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="item_skill">
 				<mul order="0x30" stat="breath" val="#breath" />
 			</effect>
 		</for>
@@ -793,7 +793,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="120" val="0" stackOrder="#absorbDam" stackType="vampRage">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="item_skill">
 				<add order="0x40" stat="absorbDam" val="#absorbDam" /> <!-- absorb HP from damage inflicted on enemies -->
 			</effect>
 		</for>
@@ -987,7 +987,7 @@
 		<set name="isMagic" val="true" />
 		<set name="removedOnAnyActionExceptMove" val="true" />
 		<for>
-			<effect name="Invincible" time="10" val="0" stackOrder="1" stackType="Instant_Shield" />
+			<effect name="Invincible" time="10" val="0" stackOrder="1" stackType="item_skill" />
 		</for>
 	</skill>
 	<skill id="3159" levels="3" name="Item Skill: Stealth">
@@ -1008,7 +1008,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="SilentMove" time="120" val="0">
+			<effect name="SilentMove" time="120" val="0" stackOrder="1" stackType="item_skill">
 				<div order="0x30" stat="pAtk" val="#pAtk" />
 				<div order="0x30" stat="accCombat" val="#accCombat" />
 				<div order="0x30" stat="pDef" val="#pDef" />
@@ -1053,7 +1053,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="60" val="0">
+			<effect name="Buff" time="60" val="0" stackOrder="1" stackType="item_skill">
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
 			</effect>
 		</for>
@@ -1074,7 +1074,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="60" val="0">
+			<effect name="Buff" time="60" val="0" stackOrder="1" stackType="item_skill">
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate" />
 			</effect>
 		</for>
@@ -1095,7 +1095,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="60" val="0">
+			<effect name="Buff" time="60" val="0" stackOrder="1" stackType="item_skill">
 				<mul order="0x30" stat="DanceMpConsumeRate" val="#DanceMpConsumeRate" />
 			</effect>
 		</for>
@@ -1116,7 +1116,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="60" val="0">
+			<effect name="Buff" time="60" val="0" stackOrder="1" stackType="item_skill">
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="#MpConsumeRate" />
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRate" />
 				<mul order="0x30" stat="DanceMpConsumeRate" val="#MpConsumeRate" />
@@ -1899,7 +1899,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" time="120" val="0">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="item_skill">
 				<mul order="0x30" stat="pReuse" val="#pReuseRate" />
 			</effect>
 		</for>
