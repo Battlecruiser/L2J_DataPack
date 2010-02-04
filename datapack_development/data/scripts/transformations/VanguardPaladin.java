@@ -58,7 +58,7 @@ public class VanguardPaladin extends L2Transformation
 		// Switch Stance
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(838, 1), false);
 		// Boost Morale
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(956, getPlayer().getLevel() - 43), false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(956, getPlayer().getLevel() - 43), false, false);
 		// Guillotine Attack
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(957, getPlayer().getLevel() - 43), false);
 
