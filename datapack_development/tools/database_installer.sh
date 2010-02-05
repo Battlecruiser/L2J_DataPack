@@ -384,6 +384,8 @@ $MYG < ../sql/character_skills.sql &> /dev/null
 $MYG < ../sql/character_skills_save.sql &> /dev/null
 $MYG < ../sql/character_subclasses.sql &> /dev/null
 $MYG < ../sql/character_tpbookmark.sql &> /dev/null
+$MYG < ../sql/character_ui_actions &> /dev/null
+$MYG < ../sql/character_ui_categories &> /dev/null
 $MYG < ../sql/characters.sql &> /dev/null
 $MYG < ../sql/clan_data.sql &> /dev/null
 $MYG < ../sql/clan_notices.sql &> /dev/null

@@ -74,6 +74,8 @@ DROP TABLE IF EXISTS character_subclasses;
 DROP TABLE IF EXISTS character_tpbookmark;
 DROP TABLE IF EXISTS characters;
 DROP TABLE IF EXISTS item_attributes;
+DROP TABLE IF EXISTS character_ui_actions;
+DROP TABLE IF EXISTS character_ui_categories;
 DROP TABLE IF EXISTS items;
 DROP TABLE IF EXISTS itemsonground;
 DROP TABLE IF EXISTS locations;
