@@ -116,10 +116,16 @@
 		<set name="hitTime" val="2000" />
 	</skill>
 	<skill id="6124" levels="1" name="Agathion Cute Trick - Saerom">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
+		<cond msgId="2292">
+			<player agathionId="16063"/>
+		</cond>
 	</skill>
 	<skill id="6125" levels="1" name="Paralysis">
 		<set name="target" val="TARGET_NONE" />
@@ -184,10 +190,16 @@
 		<set name="hitTime" val="6000" />
 	</skill>
 	<skill id="6136" levels="1" name="Agathion Cute Trick - Juju">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
+		<cond msgId="2292">
+			<player agathionId="16064"/>
+		</cond>
 	</skill>
 	<skill id="6137" levels="1" name="Agathion Juju - Effect of Doubt">
 		<set name="target" val="TARGET_NONE" />
@@ -448,9 +460,16 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6197" levels="1" name="Agathion Cute Trick - Oink Oink">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
+		<cond msgId="2292">
+			<player agathionId="16065"/>
+		</cond>
 	</skill>
 	<skill id="6198" levels="1" name="Agathion Cute Trick - Light of the Dawn">
 		<set name="target" val="TARGET_NONE" />

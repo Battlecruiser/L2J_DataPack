@@ -316,35 +316,56 @@
 	<skill id="5955" levels="1" name="Agathion Cute Trick - Joy">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
+		<cond msgId="2292">
+			<player agathionId="16056"/>
+		</cond>
 	</skill>
 	<skill id="5956" levels="1" name="Agathion Cute Trick - Anger">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
+		<cond msgId="2292">
+			<player agathionId="16058"/>
+		</cond>
 	</skill>
 	<skill id="5957" levels="1" name="Agathion Cute Trick - Sorrow">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
-		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
+		<cond msgId="2292">
+			<player agathionId="16057"/>
+		</cond>
 	</skill>
 	<skill id="5958" levels="1" name="Agathion Cute Trick - Boy Teddy Bear">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="hitTime" val="3000" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
+		<cond msgId="2292">
+			<player agathionId="16059"/>
+		</cond>
 	</skill>
 	<skill id="5959" levels="1" name="Agathion Cute Trick - Girl Teddy Bear">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="hitTime" val="3000" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
+		<cond msgId="2292">
+			<player agathionId="16060"/>
+		</cond>
 	</skill>
 	<skill id="5960" levels="1" name="Stronghold Reactivate">
 		<set name="target" val="TARGET_NONE" />

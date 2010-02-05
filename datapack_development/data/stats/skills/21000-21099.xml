@@ -379,7 +379,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="npcId" val="1516" />
 	</skill>
-	<skill id="21040" levels="1" name="Release Seal on Agathion - Yellow-robed Tojigong">
+	<skill id="21040" levels="1" name="Release Seal on Agathion - Green-robed Tojigong">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
@@ -702,10 +702,12 @@
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="21085" levels="1" name="Agathion Seal Cancel - Pomona">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="npcId" val="1527" />
 	</skill>
 	<skill id="21086" levels="1" name="Blessing of Love">
 		<!-- Can feel the warm love of family. Protects the target with sacred power. Makes the target invincible for 10 seconds. Reuse Delay 4 hours -->
@@ -744,10 +746,12 @@
 	</skill>
 	<skill id="21091" levels="1" name="Agathion Seal Cancel - Weaver">
 		<!-- Removes the seal on the Agathion. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="npcId" val="1528" />
 	</skill>
 	<skill id="21092" levels="1" name="Theme - Love">
 		<set name="target" val="TARGET_NONE" />
