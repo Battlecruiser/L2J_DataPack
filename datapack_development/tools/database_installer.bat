@@ -729,8 +729,8 @@ character_skills.sql
 character_skills_save.sql
 character_subclasses.sql
 character_tpbookmark.sql
-character_ui_actions
-character_ui_categories
+character_ui_actions.sql
+character_ui_categories.sql
 characters.sql
 clan_data.sql
 clan_notices.sql
