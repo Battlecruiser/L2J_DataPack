@@ -369,6 +369,7 @@
 		<table name="#ench2MpConsume"> 33 33 32 32 32 31 31 30 30 29 29 28 28 28 27 27 26 26 25 25 25 24 24 23 23 22 22 21 20 20 </table>
 		<table name="#aggro"> 566 582 597 611 624 635 646 655 </table>
 		<table name="#pAtkRange"> 50 50 100 100 150 150 200 200 </table>
+		<table name="#ench2decreasePenalty"> 0.07 0.08 0.10 0.11 0.13 0.14 0.16 0.17 1.19 0.20 0.22 0.23 0.25 0.26 0.28 0.29 0.31 0.32 0.34 0.35 0.37 0.38 0.40 0.41 0.43 0.44 0.46 0.47 0.49 0.50 </table>
 		<set name="weaponsAllowed" val="32" /> <!-- Bow -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_SELF" />
@@ -410,6 +411,23 @@
 				</add>
 			</effect>
 		</enchant1for>
+		<enchant2for>
+			<effect name="Buff" time="120" val="0">
+				<add order="0x40" stat="pAtk" val="260">
+					<using kind="Bow" />
+				</add>
+				<add order="0x40" stat="accCombat" val="6">
+					<using kind="Bow" />
+				</add>
+				<basemul order="0x30" stat="rCrit" val="0.2">
+					<using kind="Bow" />
+				</basemul>
+				<add order="0x40" stat="pAtkRange" val="200">
+					<using kind="Bow" />
+				</add>
+				<mul order="0x30" stat="runSpd" val="#ench2decreasePenalty" />
+			</effect>
+		</enchant2for>
 	</skill>
 	<skill id="314" levels="16" name="Fatal Counter" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30" enchantLevels4="30" enchantLevels5="30" enchantLevels6="30">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
