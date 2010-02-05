@@ -259,15 +259,20 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="8327" levels="1" name="Release Seal on Agathion - Juju">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="AGATHION" />
 		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="npcId" val="16064" />
 	</skill>
 	<skill id="8328" levels="1" name="Release Seal on Agathion - Oink oink">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="AGATHION" />
+		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="npcId" val="16065" />
 	</skill>
 	<skill id="8329" levels="1" name="Summon Friend">
 		<set name="target" val="TARGET_NONE" />
