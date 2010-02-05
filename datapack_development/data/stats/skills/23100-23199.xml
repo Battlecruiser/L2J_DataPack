@@ -254,12 +254,21 @@
 	</skill>
 	<skill id="23134" levels="1" name="Miss Chipao Agathion Special Skill - Decrease Weight">
 		<!-- For 1 hour, increases the weight penalty interval by 9000. Reuse delay is 4 hours. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="staticReuse" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1556"/>
 		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="9000" stackType="Weight">
+				<add order="0x40" stat="maxLoad" val="9000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23135" levels="1" name="Nepal Snow Agathion Cute Trick">
 		<set name="target" val="TARGET_SELF" />
@@ -275,12 +284,21 @@
 	</skill>
 	<skill id="23136" levels="1" name="Nepal Snow Agathion Special Skill - Snow's Haste">
 		<!-- Increases Atk. Spd. by 33% for 20 minutes. Reuse delay is 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="staticReuse" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1557"/>
 		</cond>
+		<for>
+			<effect name="Buff" time="1200" val="0" stackOrder="1.33" stackType="attack_time_down">
+				<mul order="0x30" stat="pAtkSpd" val="1.33" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23137" levels="1" name="Round Ball Snow Agathion Cute Trick">
 		<set name="target" val="TARGET_SELF" />
@@ -296,12 +314,21 @@
 	</skill>
 	<skill id="23138" levels="1" name="Round Ball Snow Agathion Special Skill - Snow's Acumen">
 		<!-- Increases Casting Spd. by 30% for 20 minutes. Reuse delay is 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="staticReuse" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1558"/>
 		</cond>
+		<for>
+			<effect name="Buff" time="1200" val="0" stackOrder="4" stackType="casting_time_down">
+				<mul order="0x30" stat="mAtkSpd" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23139" levels="1" name="Ladder Snow Agathion Cute Trick">
 		<set name="target" val="TARGET_SELF" />
@@ -317,12 +344,24 @@
 	</skill>
 	<skill id="23140" levels="1" name="Ladder Snow Agathion Special Skill - Snow's Wind Walk">
 		<!-- Increases moving speed by 20 for 20 minutes. Reuse delay is 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="staticReuse" val="true" />		
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 		<cond msgId="2292">
 			<player agathionId="1559"/>
 		</cond>
+		<for>
+			<effect name="Buff" time="300" val="0" stackOrder="40" stackType="speed_up">
+				<add order="0x40" stat="runSpd" val="33" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23141" levels="1" name="Iken Agathion Cute Trick">
 		<set name="target" val="TARGET_SELF" />

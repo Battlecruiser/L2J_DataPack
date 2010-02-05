@@ -215,7 +215,7 @@
 			<player agathionId="16033"/>
 		</cond>
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormal="vitality">
+			<effect name="Buff" time="300" val="0" abnormal="vitality">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -428,13 +428,20 @@
 	</skill>
 	<skill id="23034" levels="1" name="One-eyed Bat Drove Agathion Special Skill - Ability of Resist Unholy">
 		<!-- Increases resistance to darkness type attacks by 30% for 5 minutes. Reuse Delay 1 hours -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="3000" />
+		<set name="reuseDelay" val="3600000"/>
+		<set name="staticReuse" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1513"/>
 		</cond>
+		<for>
+			<effect name="Buff" time="300" val="0" stackOrder="3" stackType="element_potion">
+				<add order="0x40" stat="darkRes" val="30" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23035" levels="1" name="One-eyed Bat Drove Agathion Special Skill - Ability of Energy Recovery">
 		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
@@ -536,33 +543,58 @@
 	</skill>
 	<skill id="23042" levels="1" name="Yellow-robed Tojigong Agathion Special Skill - Ability of Greater Heal">
 		<!-- Recovers HP by 444 and increases HP Recovery by 30 for 15 seconds. Reuse Delay 4 hours -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="power" val="444" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="HEAL" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1515"/>
 		</cond>
+		<for>
+			<effect name="Buff" time="15" val="0" stackOrder="1" stackType="hp_regen_up">
+				<add order="0x30" stat="regHp" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23043" levels="1" name="Blue-robed Tojigong Agathion Special Skill - Ability of Reflect Damage">
 		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="REFLECT" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1516"/>
 		</cond>
+		<for>
+			<effect name="Buff" time="300" val="0" stackOrder="20" stackType="DmgShield">
+				<add order="0x40" stat="reflectDam" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23044" levels="1" name="Green-robed Tojigong Agathion Special Skill - Ability of Mana Regeneration">
 		<!-- Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="3000" />
-			<cond msgId="2292">
+		<set name="staticHitTime" val="true" />
+		<cond msgId="2292">
 			<player agathionId="1517"/>
 		</cond>
+		<for>
+			<effect name="Buff" time="300" val="0">
+				<add order="0x40" stat="regMp" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23045" levels="1" name="Bugbear Agathion Cute Trick">
 		<set name="target" val="TARGET_SELF" />
@@ -710,23 +742,39 @@
 	</skill>
 	<skill id="23057" levels="1" name="Red Sumo Wrestler Agathion Special Skill - Death Whisper Ability">
 		<!-- Increases Critical attack power by 35% for 5 minutes. Reuse Delay 1 hours -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1519"/>
 		</cond>
+		<for>
+			<effect name="Buff" time="300" val="0" stackOrder="1.33" stackType="critical_dmg_up">
+				<mul order="0x30" stat="cAtk" val="1.35" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23058" levels="1" name="Blue Sumo Wrestler Agathion Special Skill - Wild Magic Ability">
 		<!-- For 5 minutes, increases by 2% the occurrence rate of damage that is caused by damage magic. Reuse Delay 1 hours -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1520"/>
 		</cond>
+		<for>
+			<effect name="Buff" time="300" val="0" stackOrder="2" stackType="magic_critical_up">
+				<basemul order="0x30" stat="mCritRate" val="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23059" levels="1" name="Great Sumo Match Agathion Special Skill - Mysterious Power">
 		<!-- A mysterious power that no one knows. Use with caution! Reuse Delay 1 hour -->
@@ -857,13 +905,24 @@
 	</skill>
 	<skill id="23068" levels="1" name="Pomona Agathion Special Skill - Mental Shield Ability">
 		<!-- Increases resistance to hold/sleep/abnormal mental attacks by 50 for 10 minutes. Reuse Delay 1 hours -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="hitTime" val="6000" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="staticReuse" val="true" />
 		<cond msgId="2292">
 			<player agathionId="1527"/>
 		</cond>
+		<for>
+			<effect name="Buff" time="600" val="0" stackOrder="50" stackType="MentalShield">
+				<mul order="0x30" stat="rootVuln" val="0.5" />
+				<mul order="0x30" stat="sleepVuln" val="0.5" />
+				<mul order="0x30" stat="confusionVuln" val="0.5" />
+				<mul order="0x30" stat="derangementVuln" val="0.5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23069" levels="1" name="Threatening Roar">
 		<!-- Decreases moving speed and Atk. Spd. by 80% for 10 seconds. -->
