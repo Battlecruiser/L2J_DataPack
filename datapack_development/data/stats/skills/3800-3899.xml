@@ -257,9 +257,14 @@
 		</for>
 	</skill>
 	<skill id="3831" levels="2" name="Rapier of Boost HP">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Increases Max HP of Masterwork Rapier Weapon. -->
+		<table name="#maxHp"> 319 444 </table>
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="maxHp" val="#maxHp" />
+		</for>
 	</skill>
 	<skill id="3832" levels="1" name="Rapier of Critical Power">
 		<!-- Increases Crit. Power Damage of Masterwork Rapier Weapon. -->
@@ -300,9 +305,14 @@
 		</for>
 	</skill>
 	<skill id="3836" levels="2" name="Dual-Blade Weapon of Boost HP">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Increases Max HP of Masterwork Dual-Blade Weapon. -->
+		<table name="#maxHp"> 319 444 </table>
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="maxHp" val="#maxHp" />
+		</for>
 	</skill>
 	<skill id="3837" levels="1" name="Dual-Blade Weapon of Critical Power">
 		<!-- Increases Crit. Power Damage of Masterwork Dual-Blade Weapon. -->
@@ -356,9 +366,13 @@
 		</for>
 	</skill>
 	<skill id="3843" levels="1" name="Two-handed Sword of Boost HP">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Increases Max HP of Masterwork Two-handed Sword Weapon. -->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="maxHp" val="319" />
+		</for>
 	</skill>
 	<skill id="3844" levels="1" name="Two-handed Sword of Critical Power">
 		<!-- Increases Critical Power Damage of Masterwork Two-handed Sword Weapon. -->
@@ -552,7 +566,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="maxHp" val="444" />
+			<add order="0x40" stat="maxHp" val="319" />
 		</for>
 	</skill>
 	<skill id="3868" levels="4" name="Crossbow of Guidance">
@@ -592,7 +606,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="maxHp" val="444" />
+			<add order="0x40" stat="maxHp" val="319" />
 		</for>
 	</skill>
 	<skill id="3873" levels="2" name="Polearm of Critical Power">
