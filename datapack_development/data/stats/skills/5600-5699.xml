@@ -759,44 +759,108 @@
 		</for>
 	</skill>
 	<skill id="5665" levels="1" name="Stun">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Masterwork Sword of Stun (3829) -->
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="STUN" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicLvl" val="80" />
+		<set name="power" val="50" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
+		<for>
+			<effect name="Stun" time="9" val="0" stackOrder="1" stackType="Stun" />
+		</for>
 	</skill>
 	<skill id="5666" levels="1" name="Stun">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Masterwork Rapier of Stun (3834) -->
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="STUN" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicLvl" val="80" />
+		<set name="power" val="50" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
+		<for>
+			<effect name="Stun" time="9" val="0" stackOrder="1" stackType="Stun" />
+		</for>
 	</skill>
 	<skill id="5667" levels="1" name="Stun">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Masterwork Dual-Blade of Stun (3839) -->
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="STUN" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicLvl" val="80" />
+		<set name="power" val="50" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
+		<for>
+			<effect name="Stun" time="9" val="0" stackOrder="1" stackType="Stun" />
+		</for>
 	</skill>
 	<skill id="5668" levels="1" name="Poison">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Masterwork Dagger of Poison (3861) -->
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="POISON" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="50" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="abnormalLvl" val="7" />
+		<for>
+			<effect count="10" name="DamOverTime" time="3" val="100" abnormal="poison" />
+		</for>
 	</skill>
 	<skill id="5669" levels="1" name="Stun">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Masterwork Pole of Stun (3876) -->
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="STUN" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicLvl" val="80" />
+		<set name="power" val="50" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
+		<for>
+			<effect name="Stun" time="9" val="0" stackOrder="1" stackType="Stun" />
+		</for>
 	</skill>
 	<skill id="5670" levels="1" name="Stun">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Masterwork Fist of Stun (3882) -->
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="STUN" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicLvl" val="80" />
+		<set name="power" val="50" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
+		<for>
+			<effect name="Stun" time="9" val="0" stackOrder="1" stackType="Stun" />
+		</for>
 	</skill>
 	<skill id="5671" levels="1" name="Stun">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Masterwork Blunt of Stun (3885-1) -->
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="STUN" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicLvl" val="80" />
+		<set name="power" val="50" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
+		<for>
+			<effect name="Stun" time="9" val="0" stackOrder="1" stackType="Stun" />
+		</for>
 	</skill>
 	<skill id="5672" levels="1" name="Stun">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Masterwork Blunt of Stun (3885-2) -->
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="STUN" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicLvl" val="80" />
+		<set name="power" val="50" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
+		<for>
+			<effect name="Stun" time="9" val="0" stackOrder="1" stackType="Stun" />
+		</for>
 	</skill>
 	<skill id="5673" levels="1" name="Evasion Counter">
 		<set name="magicLvl" val="74" />
