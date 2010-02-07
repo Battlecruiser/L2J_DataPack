@@ -681,4 +681,6 @@ INSERT INTO `merchant_shopids` VALUES
 ('10000', 'gm'), -- Masterwork Armor B
 ('10001', 'gm'), -- Masterwork Armor A
 ('10002', 'gm'), -- Masterwork Armor S
-('10003', 'gm'); -- Masterwork Armor S80
+('10003', 'gm'), -- Masterwork Armor S80
+('10004', 'gm'), -- Agathions
+('10005', 'gm'); -- Mounts

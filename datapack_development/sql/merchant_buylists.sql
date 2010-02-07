@@ -18870,42 +18870,17 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
 -- (GM-Shop) Bracelets
-(9589,0,9914,1),
-(9590,0,9914,2),
-(9591,0,9914,3),
-(9592,0,9914,4),
-(10209,0,9914,5),
-(10210,0,9914,6),
-(13295,0,9914,7),
-(9607,0,9914,8),
-(9608,0,9914,9),
-(9609,0,9914,10),
-(9610,0,9914,11),
-(9611,0,9914,12),
-(9612,0,9914,13),
-(9613,0,9914,14),
-(9614,0,9914,15),
-(9615,0,9914,16),
-(10018,0,9914,17),
-(10320,0,9914,18),
-(10326,0,9914,19),
-(13023,0,9914,20),
-(13254,0,9914,21),
-(20006,0,9914,22),
-(20007,0,9914,23),
-(20008,0,9914,24),
-(20010,0,9914,25),
-(20012,0,9914,26),
-(9605,0,9914,27),
-(9606,0,9914,28),
-(10606,0,9914,29),
-(10660,0,9914,30),
-(10659,0,9914,31),
-(10408,0,9914,32),
-(13025,0,9914,33),
-(13026,0,9914,34),
-(13546,0,9914,35),  -- Steam Sledge Mounting Bracelet
-(13547,0,9914,36);  -- Tawny-Maned Lion Mounting Bracelet
+(9589,0,9914,1), -- Iron Bracelet
+(9590,0,9914,2), -- Bronze Bracelet
+(9591,0,9914,3), -- Steel Bracelet
+(9592,0,9914,4), -- Mithril Bracelet
+(10209,0,9914,5), -- Enhanced Steel Bracelet
+(10210,0,9914,6), -- Enhanced Mithril Bracelet
+(13295,0,9914,7), -- Pailaka Bracelet
+(15312,0,9914,8), -- Dawn\'s Bracelet
+(15208,0,9914,9), -- Bracelet of Friendship 30 day limited period
+(20594,0,9914,10), -- Summon of Love Bracelet (event) 24 hours limited period
+(20628,0,9914,11); -- Summon of Love Bracelet 7 day limited period
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
 -- (GM-Shop) Talisman
@@ -23454,5 +23429,218 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (11514,0,10003,14),
 (11533,0,10003,15),
 (11539,0,10003,16);
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) Agathions
+(9605,0,10004,1), -- Agathion Seal Bracelet - Rainbow Clan Hall	
+(9606,0,10004,2), -- Agathion Seal Bracelet - Wild Beast Reserve	
+(9607,0,10004,3), -- Agathion Seal Bracelet - Gludio	
+(9608,0,10004,4), -- Agathion Seal Bracelet - Dion	
+(9609,0,10004,5), -- Agathion Seal Bracelet - Giran	
+(9610,0,10004,6), -- Agathion Seal Bracelet - Oren	
+(9611,0,10004,7), -- Agathion Seal Bracelet - Aden	
+(9612,0,10004,8), -- Agathion Seal Bracelet - Innadril	
+(9613,0,10004,9), -- Agathion Seal Bracelet - Goddard	
+(9614,0,10004,10), -- Agathion Seal Bracelet - Rune	
+(9615,0,10004,11), -- Agathion Seal Bracelet - Schuttgart	
+(9909,0,10004,12), -- Agathion Seal Bracelet	
+(10018,0,10004,13), -- Agathion Seal Bracelet - Fortress	
+(10139,0,10004,14), -- Agathion Bracelet
+(10316,0,10004,15), -- Agathion Seal Bracelet - Little Angel Firecracker
+(10317,0,10004,16), -- Agathion Seal Bracelet - Little Angel Big Head
+(10318,0,10004,17), -- Agathion Seal Bracelet - Little Angel Escape
+(10319,0,10004,18), -- Agathion Seal Bracelet - Little Angel Resurrection
+(10320,0,10004,19), -- Agathion Seal Bracelet - Little Angel	
+(10322,0,10004,20), -- Agathion Seal Bracelet - Little Devil Firecracker
+(10323,0,10004,21), -- Agathion Seal Bracelet - Little Devil Big Head
+(10324,0,10004,22), -- Agathion Seal Bracelet - Little Devil Escape
+(10325,0,10004,23), -- Agathion Seal Bracelet - Little Devil Resurrection
+(10326,0,10004,24), -- Agathion Seal Bracelet - Little Devil	
+(10606,0,10004,25), -- Agathion Seal Bracelet - Rudolph	
+(10659,0,10004,26), -- Agathion Summon Bracelet - Monkey	
+(10660,0,10004,27), -- Agathion Summon Bracelet - Griffin	
+(12779,0,10004,28), -- Agathion Seal Bracelet - Little Angel	
+(12780,0,10004,29), -- Agathion Seal Bracelet - Little Devil	
+(13023,0,10004,30), -- Agathion of Love 30-day limited period
+(13024,0,10004,31), -- Sudden Agathion 30-day limited period
+(13025,0,10004,32), -- Shiny Agathion 30-day limited period
+(13026,0,10004,33), -- Sobbing Agathion 30-day limited period
+(13254,0,10004,34), -- Agathion of Love 7-day Limited Period
+(13309,0,10004,35), -- Agathion of Love (Event) 30-day limited period
+(13340,0,10004,36), -- Agathion of Love (Event) 7-day Limited Period
+(13543,0,10004,37), -- Agathion Summon Bracelet - Collection	
+(13544,0,10004,38), -- Agathion Summon Bracelet - Boy Teddy Bear	
+(13545,0,10004,39), -- Agathion Summon Bracelet - Girl Teddy Bear	
+(13756,0,10004,40), -- Agathion Summon Bracelet - Knight	
+(14027,0,10004,41), -- Collection Agathion Summon Bracelet	
+(14059,0,10004,42), -- Teddy Boy Agathion Bracelet 30-day limited period
+(14060,0,10004,43), -- Teddy Girl Agathion Bracelet 30-day limited period
+(14072,0,10004,44), -- Teddy Boy Agathion Bracelet (event) 30-day limited period
+(14073,0,10004,45), -- Teddy Girl Agathion Bracelet (event) 30-day limited period
+(14075,0,10004,46), -- Sudden Agathion (Event) 30-day limited period
+(14076,0,10004,47), -- Shiny Agathion (Event) 30-day limited period
+(14077,0,10004,48), -- Sobbing Agathion (Event) 30-day limited period
+(14091,0,10004,49), -- Teddy Boy Agathion Bracelet 7-day Limited Period
+(14092,0,10004,50), -- Teddy Girl Agathion Bracelet 7-day Limited Period
+(14093,0,10004,51), -- Sudden Agathion 7-day Limited Period
+(14094,0,10004,52), -- Shiny Agathion 7-day Limited Period
+(14095,0,10004,53), -- Sobbing Agathion 7-day Limited Period
+(14099,0,10004,54), -- Teddy Boy Agathion Bracelet (event) 7-day Limited Period
+(14100,0,10004,55), -- Teddy Girl Agathion Bracelet (event) 7-day Limited Period
+(14101,0,10004,56), -- Sudden Agathion (Event) 7-day Limited Period
+(14102,0,10004,57), -- Shiny Agathion (Event) 7-day Limited Period
+(14103,0,10004,58), -- Sobbing Agathion (Event) 7-day Limited Period
+(14104,0,10004,59), -- Shadow Item - Collection Agathion Summon Bracelet	
+(14617,0,10004,60), -- Agathion Seal Bracelet - Rudolph	
+(14675,0,10004,61), -- Agathion Seal Bracelet - Saerom	
+(14775,0,10004,62), -- Agathion Seal Bracelet - Love 14 day limited period
+(14776,0,10004,63), -- Agathion Seal Bracelet - Juju 14 day limited period
+(15220,0,10004,64), -- Agathion Seal Bracelet - Oink Oink 10 day limited period
+(20006,0,10004,65), -- Agathion Seal Bracelet - Majo	
+(20007,0,10004,66), -- Agathion Seal Bracelet - Gold Majo	
+(20008,0,10004,67), -- Agathion Seal Bracelet - Black Majo	
+(20009,0,10004,68), -- Agathion Seal Bracelet - Majo Big Head 30 Day Expiration Period
+(20010,0,10004,69), -- Agathion Seal Bracelet - Gold Majo Resurrection 30 Day Expiration Period
+(20011,0,10004,70), -- Agathion Seal Bracelet - Black Majo Escape 30 Day Expiration Period
+(20012,0,10004,71), -- Agathion Seal Bracelet - Plaipitak	
+(20013,0,10004,72), -- Agathion Seal Bracelet - Plaipitak Big Head 30 Day Expiration Period
+(20014,0,10004,73), -- Agathion Seal Bracelet - Plaipitak Resurrection 30 Day Expiration Period
+(20015,0,10004,74), -- Agathion Seal Bracelet - Plaipitak Escape 30 Day Expiration Period
+(20063,0,10004,75), -- Agathion Seal Bracelet - Baby Panda	
+(20064,0,10004,76), -- Agathion Seal Bracelet - Bamboo Panda	
+(20065,0,10004,77), -- Agathion Seal Bracelet - Sexy Panda	
+(20066,0,10004,78), -- Agathion Seal Bracelet - Baby Panda Big Head-15 Day Expiration Period
+(20067,0,10004,79), -- Agathion Seal Bracelet - Bamboo Panda Resurrection-15 Day Expiration Period
+(20068,0,10004,80), -- Agathion Seal Bracelet - Sexy Panda Escape-15 Day Expiration Period
+(20094,0,10004,81), -- Agathion Seal Bracelet: Rudolph Energy - 30 Day Expiration Period
+(20200,0,10004,82), -- Agathion of Love 3 Day Expiration Period
+(20201,0,10004,83), -- Agathion of Love 7 Day Expiration Period
+(20202,0,10004,84), -- Agathion of Love 15 Day Expiration Period
+(20203,0,10004,85), -- Agathion of Love 30 Day Expiration Period
+(20212,0,10004,86), -- Agathion Seal Bracelet - Charming Cupid	
+(20213,0,10004,87), -- Agathion Seal Bracelet - Naughty Cupid	
+(20221,0,10004,88), -- Agathion Seal Bracelet - White Maneki Neko	
+(20222,0,10004,89), -- Agathion Seal Bracelet - Black Maneki Neko	
+(20223,0,10004,90), -- Agathion Seal Bracelet - Brown Maneki Neko	
+(20224,0,10004,91), -- Agathion Seal Bracelet - White Maneki Neko Resurrection - 7 Day Expiration Period
+(20225,0,10004,92), -- Agathion Seal Bracelet - Black Maneki Neko Escape - 7 Day Expiration Period
+(20226,0,10004,93), -- Agathion Seal Bracelet - Brown Maneki Neko Vitality - 7-day limited time
+(20230,0,10004,94), -- Agathion Seal Bracelet - One-Eyed Bat Drove	
+(20231,0,10004,95), -- Agathion Seal Bracelet - One-Eyed Bat Drove Resist Unholy - 7 Day Expiration Period
+(20232,0,10004,96), -- Agathion Seal Bracelet - One-Eyed Bat Drove Vitality - 7 Day Expiration Period
+(20236,0,10004,97), -- Agathion Seal Bracelet - Pegasus	
+(20237,0,10004,98), -- Agathion Seal Bracelet - Pegasus Wind Walk - 7 Day Expiration Period
+(20238,0,10004,99), -- Agathion Seal Bracelet - Pegasus Escape - 7 Day Expiration Period
+(20245,0,10004,100), -- Agathion Seal Bracelet - Yellow-Robed Tojigong	
+(20246,0,10004,101), -- Agathion Seal Bracelet - Blue-Robed Tojigong	
+(20247,0,10004,102), -- Agathion Seal Bracelet - Green-Robed Tojigong	
+(20248,0,10004,103), -- Agathion Seal Bracelet - Yellow-Robed Tojigong Greater Heal - 7 Day Expiration Period
+(20249,0,10004,104), -- Agathion Seal Bracelet - Blue-Robed Tojigong Reflect Damage - 7 Day Expiration Period
+(20250,0,10004,105), -- Agathion Seal Bracelet - Green-Robed Tojigong Mana Regeneration - 7 Day Expiration Period
+(20252,0,10004,106), -- Agathion Seal Bracelet - Bugbear	
+(20253,0,10004,107), -- Agathion of Love (Event)	
+(20297,0,10004,108), -- Agathion Seal Bracelet - Red Sumo Wrestler	
+(20298,0,10004,109), -- Agathion Seal Bracelet - Red Sumo Wrestler Death Whisper - 7 Day Expiration Period
+(20299,0,10004,110), -- Agathion Seal Bracelet - Blue Sumo Wrestler	
+(20300,0,10004,111), -- Agathion Seal Bracelet - Blue Sumo Wrestler Wild Magic - 7 Day Expiration Period
+(20301,0,10004,112), -- Agathion Seal Bracelet - Great Sumo Match	
+(20302,0,10004,113), -- Agathion Seal Bracelet - Great Sumo Match Big Head / Firework - 7 Day Expiration Period
+(20303,0,10004,114), -- Agathion Seal Bracelet - Button-Eyed Bear Doll	
+(20304,0,10004,115), -- Agathion Seal Bracelet - Button-Eyed Bear Doll Escape - 7 Day Expiration Period
+(20305,0,10004,116), -- Agathion Seal Bracelet - Button-Eyed Bear Doll Resurrection - 7 Day Expiration Period
+(20306,0,10004,117), -- Agathion Seal Bracelet - Button-Eyed Bear Doll Energy - 7 Day Expiration Period
+(20307,0,10004,118), -- Agathion Seal Bracelet - God of Fortune	
+(20308,0,10004,119), -- Agathion Seal Bracelet - God of Fortune Energy - 7 Day Expiration Period
+(20309,0,10004,120), -- Agathion Seal Bracelet - Dryad	
+(20310,0,10004,121), -- Agathion Seal Bracelet - Wonboso	
+(20311,0,10004,122), -- Agathion Seal Bracelet - Wonboso Wind Walk - 7 Day Expiration Period
+(20312,0,10004,123), -- Agathion Seal Bracelet - Daewoonso	
+(20313,0,10004,124), -- Agathion Seal Bracelet - Daewoonso New Year\'s Gift - 7 Day Expiration Period
+(20405,0,10004,125), -- Agathion Seal Bracelet - Majo Big Head - 7 day limited period
+(20406,0,10004,126), -- Agathion Seal Bracelet - Gold Crown Majo Resurrection - 7 day limited period
+(20407,0,10004,127), -- Agathion Seal Bracelet - Black Crown Majo Escape - 7 day limited period
+(20408,0,10004,128), -- Agathion Seal Bracelet - Plaipitak Big Head - 7 day limited period
+(20409,0,10004,129), -- Agathion Seal Bracelet - Plaipitak Resurrection - 7 day limited period
+(20410,0,10004,130), -- Agathion Seal Bracelet - Plaipitak Escape - 7 day limited period
+(20411,0,10004,131), -- Agathion Seal Bracelet - Baby Panda Big Head - 7 day limited period
+(20412,0,10004,132), -- Agathion Seal Bracelet - Bamboo Panda Resurrection - 7 day limited period
+(20413,0,10004,133), -- Agathion Seal Bracelet - Sexy Panda Escape - 7 day limited period
+(20495,0,10004,134), -- Agathion Seal Bracelet - Pomona	
+(20496,0,10004,135), -- Agathion Seal Bracelet - Pomona Mental Shield - 7 day limited period
+(20591,0,10004,136), -- Agathion Seal Bracelet - Weaver	
+(20592,0,10004,137), -- Agathion Seal Bracelet - Weaver Power of the Golden Calf - 24 hours limited period
+(20593,0,10004,138), -- Agathion Seal Bracelet - Weaver Power of the Golden Calf - 3 day limited period
+(20621,0,10004,139), -- Agathion Seal Bracelet - Female Weaver Flute Sound - 24 hours limited time
+(20622,0,10004,140), -- Agathion Seal Bracelet - Female Weaver Flute Sound - 3 day limited time
+(20654,0,10004,141), -- Agathion Seal Bracelet - Chon-chon	
+(20655,0,10004,142), -- Agathion Seal Bracelet - Chon-chon Great Warrior\'s Soul Power - 7 days limited time
+(20656,0,10004,143), -- Agathion Seal Bracelet - Tang-tang	
+(20657,0,10004,144), -- Agathion Seal Bracelet - Tang-tang Great Wizard\'s Soul Power - 7 days limited time
+(20660,0,10004,145), -- Agathion Seal Bracelet - Monkey King	
+(20661,0,10004,146), -- Agathion Seal Bracelet - Monkey King Great Wizard\'s Soul Power - 7 days limited time
+(20662,0,10004,147), -- Agathion Seal Bracelet - Utanka Agathion	
+(20663,0,10004,148), -- Agathion Seal Bracelet - Utanka Agathion Great Warrior\'s Soul Power - 7 days limited time
+(20664,0,10004,149), -- Agathion Seal Bracelet - Bonus B Agathion	
+(20665,0,10004,150), -- Agathion Seal Bracelet - Bonus B Agathion Great Adventurer\'s Soul Power - 7 days limited time
+(20726,0,10004,151), -- Agathion Seal Bracelet - Zombie	
+(20727,0,10004,152), -- Agathion Seal Bracelet - Zombie Escape from Death - 7 day limited period
+(20732,0,10004,153), -- Agathion Seal Bracelet - Baekyi Hwamae	
+(20733,0,10004,154), -- Agathion Seal Bracelet - Kwanwoo Hwamae	
+(20774,0,10004,155), -- Agathion Seal Bracelet - Guangong Aura of Fury - 7 day limited period
+(20775,0,10004,156), -- Agathion Seal Bracelet - Gwanseum Nyang Nyang Blessing of Mercy - 7 day limited period
+(20776,0,10004,157), -- Agathion Seal Bracelet - Blue Opera Sword of Recovery - 7 day limited period
+(20777,0,10004,158), -- Agathion Seal Bracelet - Blue Opera Sword of Lightning - 7 day limited period
+(20778,0,10004,159), -- Agathion Seal Bracelet - Red Opera Spear of Flames - 7 day limited period
+(20779,0,10004,160), -- Agathion Seal Bracelet - Opera	
+(20780,0,10004,161), -- Agathion Seal Bracelet - Opera Sword of Life - 30 day limited period
+(20781,0,10004,162), -- Agathion Seal Bracelet - Miss Chipao Miss Chipao\'s Blessing - 7 day limited period
+(20782,0,10004,163), -- Agathion Seal Bracelet - Nepal Snow	
+(20783,0,10004,164), -- Agathion Seal Bracelet - Round Ball Snow	
+(20784,0,10004,165), -- Agathion Seal Bracelet - Ladder Snow	
+(20785,0,10004,166), -- Agathion Seal Bracelet - Nepal Snow Snow\'s Haste - 7 day limited period
+(20786,0,10004,167), -- Agathion Seal Bracelet - Round Ball Snow Snow\'s Acumen - 7 day limited period
+(20787,0,10004,168), -- Agathion Seal Bracelet - Ladder Snow Snow\'s Wind Walk - 7 day limited period
+(20818,0,10004,169), -- Agathion Seal Bracelet - Iken	
+(20819,0,10004,170), -- Agathion Seal Bracelet - Iken Prominent Outsider Adventurer\'s Ability - 7 day limited period
+(20820,0,10004,171), -- Agathion Seal Bracelet - Lana	
+(20821,0,10004,172), -- Agathion Seal Bracelet - Lana Prominent Outsider Adventurer\'s Ability - 7 day limited period
+(20822,0,10004,173), -- Agathion Seal Bracelet - Gnocian	
+(20823,0,10004,174), -- Agathion Seal Bracelet - Gnocian Prominent Outsider Adventurer\'s Ability - 7 day limited period
+(20824,0,10004,175), -- Agathion Seal Bracelet - Orodriel	
+(20825,0,10004,176), -- Agathion Seal Bracelet - Orodriel Prominent Outsider Adventurer\'s Ability - 7 day limited period
+(20826,0,10004,177), -- Agathion Seal Bracelet - Lakinos	
+(20827,0,10004,178), -- Agathion Seal Bracelet - Lakinos Prominent Outsider Adventurer\'s Ability - 7 day limited period
+(20828,0,10004,179), -- Agathion Seal Bracelet - Mortia	
+(20829,0,10004,180), -- Agathion Seal Bracelet - Mortia Prominent Outsider Adventurer\'s Ability - 7 day limited period
+(20830,0,10004,181), -- Agathion Seal Bracelet - Hayance	
+(20831,0,10004,182), -- Agathion Seal Bracelet - Hayance Prominent Outsider Adventurer\'s Ability - 7 day limited period
+(20832,0,10004,183), -- Agathion Seal Bracelet - Meruril	
+(20833,0,10004,184), -- Agathion Seal Bracelet - Meruril Prominent Outsider Adventurer\'s Ability - 7 day limited period
+(20834,0,10004,185), -- Agathion Seal Bracelet - Taman ze Lapatui	
+(20835,0,10004,186), -- Agathion Seal Bracelet - Taman ze Lapatui Prominent Outsider Adventurer\'s Ability - 7 day limited period
+(20836,0,10004,187), -- Agathion Seal Bracelet - Kaurin	
+(20837,0,10004,188), -- Agathion Seal Bracelet - Kaurin Prominent Outsider Adventurer\'s Ability - 7 day limited period
+(20838,0,10004,189), -- Agathion Seal Bracelet - Ahertbein	
+(20839,0,10004,190), -- Agathion Seal Bracelet - Ahertbein Prominent Outsider Adventurer\'s Ability - 7 day limited period
+(20840,0,10004,191), -- Agathion Seal Bracelet - Naonin	
+(20841,0,10004,192); -- Agathion Seal Bracelet - Naonin Prominent Outsider Adventurer\'s Ability - 7 day limited period
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) Mount Agathions
+(13022,0,10005,1), -- Light Purple-Maned Horse Mounting Bracelet 7 day limited period
+(13308,0,10005,2), -- Light Purple-Maned Horse Mounting Bracelet (Event) 7-day Limited Period
+(13546,0,10005,3), -- Steam Sledge Mounting Bracelet	
+(13547,0,10005,4), -- Tawny-Maned Lion Mounting Bracelet
+(14053,0,10005,5), -- Gold-Maned Lion Mounting Bracelet 7-day Limited Period
+(14054,0,10005,6), -- Steam Beatle Mounting Bracelet 7-day Limited Period
+(14066,0,10005,7), -- Gold Maned Lion Mounting Bracelet (event) 7-day Limited Period
+(14067,0,10005,8), -- Steam Beatle Mounting Bracelet (event) 7-day Limited Period
+(20029,0,10005,9), -- Light Purple-Maned Horse Mounting Bracelet	
+(20030,0,10005,10), -- Light Purple-Maned Horse Mounting Bracelet 30 Day Expiration Period
+(20396,0,10005,11), -- Steam Beatle Mounting Bracelet	
+(20448,0,10005,12), -- Light Purple Maned Horse Mounting Bracelet 7 day limited period
+(20449,0,10005,13), -- Steam Beatle Mounting Bracelet 7 day limited period
+(20535,0,10005,14), -- Steam Sledge Mounting Bracelet 30 day limited period
+(20536,0,10005,15); -- Tawny Maned Lion Mounting Bracelet 30 day limited period
 
 -- GM SHOP END --
