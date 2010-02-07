@@ -35,6 +35,7 @@
 		<table name="#ench12Power"> 0 1 2 2 3 4 4 5 6 6 7 8 8 9 10 10 11 12 12 13 14 14 15 16 16 17 18 18 19 20 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="nextActionAttack" val="true" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillRadius" val="200" />
 		<set name="reuseDelay" val="3000" />
@@ -479,6 +480,7 @@
 		<set name="weaponsAllowed" val="18432" /> <!-- Big Sword/Big Blunt -->
 		<set name="hpConsume" val="#hpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="nextActionAttack" val="true" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="ignoreShld" val="true" />
@@ -621,6 +623,7 @@
 		<set name="weaponsAllowed" val="262160" /> <!-- Dagger/Dual Daggers -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="nextActionAttack" val="true" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="condition" val="16" /> <!-- Crit -->
@@ -935,6 +938,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="78" />
 		<set name="maxNegated" val="5" />
+		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="80" /> <!-- Base Land Rate for DEBUFF -->
 		<set name="reuseDelay" val="150000" />
@@ -968,6 +972,7 @@
 	</skill>
 	<skill id="344" levels="1" name="Lethal Blow">
 		<set name="mpConsume" val="77" />
+		<set name="nextActionAttack" val="true" />
 		<set name="weaponsAllowed" val="262160" /> <!-- Dagger/Dual Daggers -->
 		<set name="magicLvl" val="76" />
 		<set name="power" val="5773" />
@@ -986,6 +991,7 @@
 	<skill id="345" levels="1" name="Sonic Rage">
 		<set name="weaponsAllowed" val="512" /> <!-- Dual Sword -->
 		<set name="magicLvl" val="78" />
+		<set name="nextActionAttack" val="true" />
 		<set name="hpConsume" val="50" />
 		<set name="mpConsume" val="5" />
 		<set name="SSBoost" val="2.0" />
@@ -1004,6 +1010,7 @@
 	<skill id="346" levels="1" name="Raging Force">
 		<set name="weaponsAllowed" val="1024" /> <!-- Dual Fist -->
 		<set name="magicLvl" val="78" />
+		<set name="nextActionAttack" val="true" />
 		<set name="hpConsume" val="50" />
 		<set name="mpConsume" val="5" />
 		<set name="overHit" val="true" />
@@ -1049,6 +1056,7 @@
 		<set name="hitTime" val="1700" />
 		<set name="magicLvl" val="76" />
 		<set name="mpConsume" val="70" />
+		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
 		<set name="power" val="5" />
@@ -1127,6 +1135,7 @@
 	</skill>
 	<skill id="352" levels="1" name="Shield Bash">
 		<set name="magicLvl" val="77" />
+		<set name="nextActionAttack" val="true" />
 		<set name="weaponsAllowed" val="2" /> <!-- Shield -->
 		<set name="lvlDepend" val="2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
@@ -1146,6 +1155,7 @@
 	</skill>
 	<skill id="353" levels="1" name="Shield Slam">
 		<set name="magicLvl" val="77" />
+		<set name="nextActionAttack" val="true" />
 		<set name="weaponsAllowed" val="2" /> <!-- Shield -->
 		<set name="lvlDepend" val="1" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
@@ -1384,6 +1394,7 @@
 		<set name="magicLvl" val="77" />
 		<set name="weaponsAllowed" val="18444" /> <!-- Sword/Big Sword/Blunt/Big Blunt -->
 		<set name="mpConsume" val="35" />
+		<set name="nextActionAttack" val="true" />
 		<set name="hpConsume" val="338" />
 		<set name="power" val="3077" />
 		<set name="target" val="TARGET_ONE" />
