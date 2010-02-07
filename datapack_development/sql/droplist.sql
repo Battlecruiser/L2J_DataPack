@@ -30611,6 +30611,289 @@ INSERT INTO `droplist` VALUES
 (22690,9573,1,1,200,2700),-- Life Stone: level 80 
 (22690,9574,1,1,200,800);-- Mid-Grade Life Stone: level 80
 
+-- Gracia Epilog : Field of Silence and Field of Whispers
+INSERT INTO `droplist` VALUES
+-- Mucrokian Fanatic
+(22650,57,829,1666,0,700000), -- Adena
+(22650,9618,1,1,1,300), -- Dynasty Phantom Piece
+(22650,9617,1,1,1,500), -- Dynasty Blade Piece
+(22650,9616,1,1,1,200), -- Dynasty Sword Piece
+(22650,4043,1,1,2,20000), -- Asofe
+(22650,4042,1,1,2,9000), -- Enria
+(22650,4040,1,1,2,10000), -- Mold Lubricant
+(22650,1895,1,1,2,170000), -- Metallic Fiber
+-- (22650,14824,1,1,6,600), -- Ancient Herb - Slayer
+-- (22650,14825,1,1,6,1000), -- Ancient Herb - Immortal
+-- (22650,14826,1,1,6,3000), -- Ancient Herb - Terminator
+-- (22650,14827,1,1,6,10000), -- Ancient Herb - Guide
+-- Mucrokian Ascetic
+(22651,57,829,1666,0,700000), -- Adena
+(22651,10547,1,1,1,200), -- Dynasty Crusher Fragment
+(22651,10546,1,1,1,200), -- Dynasty Staff Fragment
+(22651,9622,1,1,1,100), -- Halberd Cudgel Piece
+(22651,9623,1,1,1,300), -- Dynasty Mace Piece
+(22651,9630,1,1,2,3000), -- Orichalcum
+(22651,9629,1,1,2,2000), -- Adamantine
+(22651,9628,1,1,2,4000), -- Leonard
+(22651,1885,1,1,2,40000), -- High Grade Suede
+(22651,1879,1,1,2,90000), -- Cokes
+-- (22651,14824,1,1,6,700), -- Ancient Herb - Slayer
+-- (22651,14825,1,1,6,1000), -- Ancient Herb - Immortal
+-- (22651,14826,1,1,6,3000), -- Ancient Herb - Terminator
+-- (22651,14827,1,1,6,8000), -- Ancient Herb - Guide
+-- Mucrokian Savior
+(22652,57,829,1666,0,700000), -- Adena
+(22652,10403,1,1,1,600), -- Icarus Hand Piece
+(22652,1894,1,1,2,10000), -- Crafted Leather
+(22652,4039,1,1,2,10000), -- Mold Glue
+(22652,4041,1,1,2,3000), -- Mold Hardener
+(22652,4044,1,1,2,10000), -- Thons
+-- (22652,14826,1,1,6,5000), -- Ancient Herb - Terminator
+-- (22652,14825,1,1,6,2000), -- Ancient Herb - Immortal
+-- (22652,14824,1,1,6,1000), -- Ancient Herb - Slayer
+-- (22652,14827,1,1,6,20000), -- Ancient Herb - Guide
+(22652,9575,1,1,200,200), -- High-Grade Life Stone: level 80
+(22652,9573,1,1,200,2000), -- Life Stone: level 80
+(22652,9574,1,1,200,400), -- Mid-Grade Life Stone: level 80
+-- Mucrokian Preacher
+(22653,57,829,1666,0,700000), -- Adena
+(22653,10405,1,1,1,600), -- Icarus Spitter Piece
+(22653,1894,1,1,2,10000), -- Crafted Leather
+(22653,4039,1,1,2,10000), -- Mold Glue
+(22653,4041,1,1,2,3000), -- Mold Hardener
+(22653,4044,1,1,2,10000), -- Thons
+-- (22653,14826,1,1,6,4000), -- Ancient Herb - Terminator
+-- (22653,14825,1,1,6,1000), -- Ancient Herb - Immortal
+-- (22653,14824,1,1,6,900), -- Ancient Herb - Slayer
+-- (22653,14827,1,1,6,10000), -- Ancient Herb - Guide
+(22653,9575,1,1,200,100), -- High-Grade Life Stone: level 80
+(22653,9573,1,1,200,3000), -- Life Stone: level 80
+(22653,9574,1,1,200,600), -- Mid-Grade Life Stone: level 80
+-- Contaminated Mucrokian
+(22654,57,829,1666,0,700000), -- Adena
+(22654,9620,1,1,1,2000), -- Dynasty Knife Piece
+(22654,1879,1,1,2,10000), -- Cokes
+(22654,1885,1,1,2,7000), -- High Grade Suede
+(22654,9629,1,1,2,2000), -- Adamantine
+-- (22654,14827,1,1,6,5000), -- Ancient Herb - Guide
+(22654,9573,1,1,200,3000), -- Life Stone: level 80
+-- Awakened Mucrokian
+(22655,57,829,1666,0,700000), -- Adena
+(22655,9621,1,1,1,1000), -- Dynasty Halberd Piece
+(22655,1894,1,1,2,30000), -- Crafted Leather
+(22655,4039,1,1,2,20000), -- Mold Glue
+(22655,4041,1,1,2,8000), -- Mold Hardener
+(22655,4044,1,1,2,30000), -- Thons
+-- (22655,14826,1,1,6,2000), -- Ancient Herb - Terminator
+-- (22655,14825,1,1,6,2000), -- Ancient Herb - Immortal
+-- (22655,14827,1,1,6,10000), -- Ancient Herb - Guide
+(22655,9573,1,1,200,2000), -- Life Stone: level 80
+-- Suppressor
+(22656,57,829,1666,0,700000), -- Adena
+(22656,9530,1,1,1,1000), -- Sealed Dynasty Breast Plate Piece
+(22656,9531,1,1,1,3000), -- Sealed Dynasty Gaiter Piece
+(22656,9630,1,1,2,3000), -- Orichalcum
+(22656,9629,1,1,2,900), -- Adamantine
+(22656,9628,1,1,2,2000), -- Leonard
+(22656,1885,1,1,2,20000), -- High Grade Suede
+(22656,1879,1,1,2,20000), -- Cokes
+-- (22656,14824,1,1,6,1000), -- Ancient Herb - Slayer
+-- (22656,14825,1,1,6,3000), -- Ancient Herb - Immortal
+-- (22656,14826,1,1,6,5000), -- Ancient Herb - Terminator
+-- (22656,14827,1,1,6,20000), -- Ancient Herb - Guide
+(22656,9575,1,1,200,500), -- High-Grade Life Stone: level 80
+(22656,9573,1,1,200,1000), -- Life Stone: level 80
+-- Exterminator
+(22657,57,829,1666,0,700000), -- Adena
+(22657,9535,1,1,1,900), -- Sealed Dynasty Leather Armor Piece
+(22657,9536,1,1,1,1000), -- Sealed Dynasty Leather Leggings Piece
+(22657,9629,1,1,2,1000), -- Adamantine
+(22657,9628,1,1,2,1000), -- Leonard
+(22657,9630,1,1,2,3000), -- Orichalcum
+(22657,1885,1,1,2,30000), -- High Grade Suede
+(22657,1879,1,1,2,30000), -- Cokes
+-- (22657,14825,1,1,6,2000), -- Ancient Herb - Immortal
+-- (22657,14824,1,1,6,1000), -- Ancient Herb - Slayer
+-- (22657,14826,1,1,6,6000), -- Ancient Herb - Terminator
+-- (22657,14827,1,1,6,20000), -- Ancient Herb - Guide
+(22657,9574,1,1,200,900), -- Mid-Grade Life Stone: level 80
+(22657,9573,1,1,200,2000), -- Life Stone: level 80
+(22657,9575,1,1,200,200), -- High-Grade Life Stone: level 80
+-- Evil Spirits in Magic Force
+(22658,57,829,1666,0,700000), -- Adena
+(22658,9541,1,1,1,2000), -- Sealed Dynasty Stocking Piece
+(22658,9540,1,1,1,1000), -- Sealed Dynasty Tunic Piece
+(22658,9525,1,1,1,70), -- Sealed Dynasty Stockings
+(22658,4044,1,1,2,10000), -- Thons
+(22658,4041,1,1,2,3000), -- Mold Hardener
+(22658,4039,1,1,2,10000), -- Mold Glue
+(22658,1894,1,1,2,10000), -- Crafted Leather
+-- (22658,14826,1,1,6,4000), -- Ancient Herb - Terminator
+-- (22658,14825,1,1,6,1000), -- Ancient Herb - Immortal
+-- (22658,14824,1,1,6,700), -- Ancient Herb - Slayer
+-- (22658,14827,1,1,6,10000), -- Ancient Herb - Guide
+(22658,9575,1,1,200,80), -- High-Grade Life Stone: level 80
+(22658,9573,1,1,200,3000), -- Life Stone: level 80
+(22658,9574,1,1,200,500), -- Mid-Grade Life Stone: level 80
+-- Guardian Waterspirit
+(22659,57,829,1666,0,700000), -- Adena
+(22659,9993,1,1,1,2000), -- Sealed Dynasty Ring Gemstone
+(22659,9992,1,1,1,1000), -- Sealed Dynasty Necklace Gemstone
+(22659,9452,1,1,1,80), -- Sealed Dynasty Earring
+(22659,9453,1,1,1,50), -- Sealed Dynasty Necklace
+(22659,9991,1,1,1,1000), -- Sealed Dynasty Earring Gemstone
+(22659,9630,1,1,2,2000), -- Orichalcum
+(22659,9629,1,1,2,2000), -- Adamantine
+(22659,9628,1,1,2,3000), -- Leonard
+(22659,1885,1,1,2,20000), -- High Grade Suede
+(22659,1879,1,1,2,20000), -- Cokes
+-- (22659,14824,1,1,6,800), -- Ancient Herb - Slayer
+-- (22659,14825,1,1,6,1000), -- Ancient Herb - Immortal
+-- (22659,14826,1,1,6,4000), -- Ancient Herb - Terminator
+-- (22659,14827,1,1,6,10000), -- Ancient Herb - Guide
+(22659,9574,1,1,200,600), -- Mid-Grade Life Stone: level 80
+(22659,9573,1,1,200,2000); -- Life Stone: level 80
+
+-- Gracia Epilog : Den of Evil
+INSERT INTO `droplist` VALUES
+-- Ragna Orc
+(22691,57,829,1666,0,700000), -- Adena
+(22691,9621,1,1,1,400), -- Dynasty Halberd Piece
+(22691,9629,1,1,2,700), -- Adamantine
+(22691,9628,1,1,2,1000), -- Leonard
+(22691,9630,1,1,2,900), -- Orichalcum
+(22691,1885,1,1,2,10000), -- High Grade Suede
+(22691,1879,1,1,2,30000), -- Cokes
+(22691,9574,1,1,200,300), -- Mid-Grade Life Stone: level 80
+(22691,9573,1,1,200,1000), -- Life Stone: level 80
+(22691,9575,1,1,200,30), -- High-Grade Life Stone: level 80
+-- Ragna Orc Warrior
+(22692,57,829,1666,0,700000), -- Adena
+(22692,9531,1,1,1,2000), -- Sealed Dynasty Gaiter Piece
+(22692,9530,1,1,1,700), -- Sealed Dynasty Breast Plate Piece
+(22692,9515,1,1,1,4), -- Sealed Dynasty Gaiter
+(22692,9514,1,1,1,4), -- Sealed Dynasty Breast Plate
+(22692,4044,1,1,2,7000), -- Thons
+(22692,4041,1,1,2,2000), -- Mold Hardener
+(22692,4039,1,1,2,7000), -- Mold Glue
+(22692,1894,1,1,2,8000), -- Crafted Leather
+(22692,9573,1,1,200,2000), -- Life Stone: level 80
+(22692,9574,1,1,200,400), -- Mid-Grade Life Stone: level 80
+(22692,9575,1,1,200,50), -- High-Grade Life Stone: level 80
+-- Ragna Orc Hero
+(22693,57,829,1666,0,700000), -- Adena
+(22693,9536,1,1,1,1000), -- Sealed Dynasty Leather Leggings Piece
+(22693,9535,1,1,1,700), -- Sealed Dynasty Leather Armor Piece
+(22693,9519,1,1,1,30), -- Sealed Dynasty Leather Armor
+(22693,1885,1,1,2,20000), -- High Grade Suede
+(22693,1879,1,1,2,30000), -- Cokes
+(22693,9628,1,1,2,1000), -- Leonard
+(22693,9629,1,1,2,1000), -- Adamantine
+(22693,9630,1,1,2,1000), -- Orichalcum
+(22693,9573,1,1,200,1000), -- Life Stone: level 80
+(22693,9574,1,1,200,400), -- Mid-Grade Life Stone: level 80
+-- Ragna Orc Commander
+(22694,57,829,1666,0,700000), -- Adena
+(22694,9540,1,1,1,600), -- Sealed Dynasty Tunic Piece
+(22694,9541,1,1,1,1000), -- Sealed Dynasty Stocking Piece
+(22694,9629,1,1,2,1000), -- Adamantine
+(22694,9628,1,1,2,2000), -- Leonard
+(22694,9630,1,1,2,1000), -- Orichalcum
+(22694,1885,1,1,2,20000), -- High Grade Suede
+(22694,1879,1,1,2,30000), -- Cokes
+(22694,9574,1,1,200,200), -- Mid-Grade Life Stone: level 80
+(22694,9573,1,1,200,900), -- Life Stone: level 80
+-- Ragna Orc Healer
+(22695,57,829,1666,0,700000), -- Adena
+(22695,9992,1,1,1,500), -- Sealed Dynasty Necklace Gemstone
+(22695,9991,1,1,1,500), -- Sealed Dynasty Earring Gemstone
+(22695,9454,1,1,1,30), -- Sealed Dynasty Ring
+(22695,9453,1,1,1,30), -- Sealed Dynasty Necklace
+(22695,9993,1,1,1,700), -- Sealed Dynasty Ring Gemstone
+(22695,4044,1,1,2,6000), -- Thons
+(22695,4041,1,1,2,2000), -- Mold Hardener
+(22695,4039,1,1,2,6000), -- Mold Glue
+(22695,1894,1,1,2,6000), -- Crafted Leather
+(22695,9573,1,1,200,1000), -- Life Stone: level 80
+(22695,9574,1,1,200,400), -- Mid-Grade Life Stone: level 80
+(22695,9575,1,1,200,30), -- High-Grade Life Stone: level 80
+-- Ragna Orc Shaman
+(22696,57,829,1666,0,700000), -- Adena
+(22696,9544,1,1,1,600), -- Sealed Dynasty Shoes Piece
+(22696,9543,1,1,1,700), -- Sealed Dynasty Glove Piece
+(22696,9539,1,1,1,500), -- Sealed Dynasty Leather Boots Piece
+(22696,9538,1,1,1,700), -- Sealed Dynasty Leather Glove Piece
+(22696,9534,1,1,1,500), -- Sealed Dynasty Boot Piece
+(22696,9533,1,1,1,600), -- Sealed Dynasty Gauntlet Piece
+(22696,9518,1,1,1,30), -- Sealed Dynasty Boots
+(22696,9517,1,1,1,8), -- Sealed Dynasty Gauntlets
+(22696,9629,1,1,2,900), -- Adamantine
+(22696,9628,1,1,2,1000), -- Leonard
+(22696,9630,1,1,2,1000), -- Orichalcum
+(22696,1879,1,1,2,30000), -- Cokes
+(22696,1885,1,1,2,20000), -- High Grade Suede
+(22696,9574,1,1,200,300), -- Mid-Grade Life Stone: level 80
+(22696,9575,1,1,200,40), -- High-Grade Life Stone: level 80
+(22696,9573,1,1,200,1000), -- Life Stone: level 80
+-- Ragna Orc Seer
+(22697,57,829,1666,0,700000), -- Adena
+(22697,9545,1,1,1,600), -- Sealed Dynasty Shield Piece
+(22697,9542,1,1,1,700), -- Sealed Dynasty Circlet Piece
+(22697,9532,1,1,1,700), -- Sealed Dynasty Helmet Piece
+(22697,9516,1,1,1,30), -- Sealed Dynasty Helmet
+(22697,10114,1,1,1,400), -- Sealed Dynasty Sigil Piece
+(22697,9630,1,1,2,1000), -- Orichalcum
+(22697,9629,1,1,2,900), -- Adamantine
+(22697,9628,1,1,2,1000), -- Leonard
+(22697,1885,1,1,2,20000), -- High Grade Suede
+(22697,960,1,1,2,100), -- Scroll: Enchant Armor (S)
+(22697,1879,1,1,2,30000), -- Cokes
+(22697,9574,1,1,200,200), -- Mid-Grade Life Stone: level 80
+(22697,9573,1,1,200,1000), -- Life Stone: level 80
+(22697,9575,1,1,200,40), -- High-Grade Life Stone: level 80
+-- Ragna Orc Archer
+(22698,57,829,1666,0,700000), -- Adena
+(22698,9617,1,1,1,70), -- Dynasty Blade Piece
+(22698,9616,1,1,1,200), -- Dynasty Sword Piece
+(22698,9618,1,1,1,70), -- Dynasty Phantom Piece
+(22698,4044,1,1,2,8000), -- Thons
+(22698,4041,1,1,2,2000), -- Mold Hardener
+(22698,4039,1,1,2,7000), -- Mold Glue
+(22698,1894,1,1,2,8000), -- Crafted Leather
+(22698,9574,1,1,200,300), -- Mid-Grade Life Stone: level 80
+(22698,9575,1,1,200,100), -- High-Grade Life Stone: level 80
+(22698,9573,1,1,200,2000), -- Life Stone: level 80
+-- Ragna Orc Sniper
+(22699,57,829,1666,0,700000), -- Adena
+(22699,9622,1,1,1,200), -- Halberd Cudgel Piece
+(22699,9623,1,1,1,300), -- Dynasty Mace Piece
+(22699,1894,1,1,2,8000), -- Crafted Leather
+(22699,4039,1,1,2,7000), -- Mold Glue
+(22699,4041,1,1,2,2000), -- Mold Hardener
+(22699,4044,1,1,2,6000), -- Thons
+(22699,9573,1,1,200,2000), -- Life Stone: level 80
+(22699,9574,1,1,200,300), -- Mid-Grade Life Stone: level 80
+-- Varangka's Dre Vanul
+(22701,57,829,1666,0,700000), -- Adena
+(22701,9619,1,1,1,400), -- Dynasty Bow Piece
+(22701,1895,1,1,2,60000), -- Metallic Fiber
+(22701,4040,1,1,2,4000), -- Mold Lubricant
+(22701,9628,1,1,2,2000), -- Leonard
+(22701,9630,1,1,2,1000), -- Orichalcum
+(22701,9573,1,1,200,1000), -- Life Stone: level 80
+(22701,9574,1,1,200,200), -- Mid-Grade Life Stone: level 80
+(22701,9575,1,1,200,100), -- High-Grade Life Stone: level 80
+-- Varangka's Destroyer
+(22702,57,829,1666,0,700000), -- Adena
+(22702,9620,1,1,1,300), -- Dynasty Knife Piece
+(22702,1895,1,1,2,60000), -- Metallic Fiber
+(22702,4040,1,1,2,4000), -- Mold Lubricant
+(22702,9628,1,1,2,2000), -- Leonard
+(22702,9630,1,1,2,1000), -- Orichalcum
+(22702,9573,1,1,200,1000), -- Life Stone: level 80
+(22702,9574,1,1,200,300), -- Mid-Grade Life Stone: level 80
+(22702,9575,1,1,200,80); -- High-Grade Life Stone: level 80
+
 -- Category Explanation (RaidBoss & their minions)
 --   0 is full armor and armor mats
 --   1 is full weapon and weapon mats
