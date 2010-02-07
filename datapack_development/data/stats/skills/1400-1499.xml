@@ -1374,6 +1374,7 @@
 		<set name="reuseDelay" val="900000" />
 		<set name="hitTime" val="11000" />
 		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="109" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="117" />
@@ -1388,6 +1389,7 @@
 		<set name="hitTime" val="11000" />
 		<set name="reuseDelay" val="900000" />
 		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="109" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="117" />
@@ -1838,6 +1840,7 @@
 		<set name="itemConsumeId" val="3031" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="240000" />
+		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="73" />
 		<set name="target" val="TARGET_PET" />
 		<set name="hitTime" val="1000" />
@@ -1851,7 +1854,8 @@
 			<effect name="Invincible" time="8" val="0" stackOrder="1" stackType="Instant_Shield" />
 		</for>
 	</skill>
-	<skill id="1497" levels="1" name="Excessive Loyalty">
+	<skill id="1497" levels="1" name="Excessive Royalty">
+		<set name="magicLvl" val="81" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -1863,6 +1867,7 @@
 	<skill id="1498" levels="1" name="Mutual Response">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="81" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
 			<effect name="ChanceSkillTrigger" val="0" triggeredId="5571" chanceType="ON_HIT" activationChance="14" />
