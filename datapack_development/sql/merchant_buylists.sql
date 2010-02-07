@@ -23643,4 +23643,32 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (20535,0,10005,14), -- Steam Sledge Mounting Bracelet 30 day limited period
 (20536,0,10005,15); -- Tawny Maned Lion Mounting Bracelet 30 day limited period
 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) Masks
+(20712,0,10006,1),	-- Mask of Giant Hercules - Event - 2 Hour Limited Period
+(20713,0,10006,2),	-- Mask of Silent Scream - Event - 2 Hour Limited Period
+(20714,0,10006,3),	-- Spirit of Wrath Mask - Event - 2 Hour Limited Period
+(20715,0,10006,4),	-- Undecaying Corpse Mask - Event - 2 Hour Limited Period
+(20716,0,10006,5),	-- PPlanet X235 Alien Mask - Event - 2 Hour Limited Period
+(20710,0,10006,6),	-- Halloween Toy Box - Event
+(20718,0,10006,7),	-- Shiny Mask of Giant Hercules - Event - 4 hours Limited Period
+(20719,0,10006,8),	-- Shiny Mask of Silent Scream - Event - 4 hours Limited Period
+(20720,0,10006,9),	-- Shiny Spirit of Wrath Mask - Event - 4 hours Limited Period
+(20721,0,10006,10),	-- Shiny Undecaying Corpse Mask - Event - 4 hours Limited Period
+(20722,0,10006,11),	-- Shiny Planet X235 Alien Mask - Event - 4 hours Limited Period
+(20717,0,10006,12),	-- Shiny Halloween Toy Box - Event
+(20743,0,10006,13),	-- Shiny Mask of Giant Hercules - 7 day limited period
+(20744,0,10006,14),	-- Shiny Mask of Silent Scream - 7 day limited period
+(20745,0,10006,15),	-- Shiny Spirit of Wrath Mast - 7 day limited period
+(20746,0,10006,16),	-- Shiny Undecaying Corpse Mask - 7 day limited period
+(20747,0,10006,17),	-- Shiny Planet X235 Alien Mask - 7 day limited period
+(20723,0,10006,18),	-- Golden Jack O'Lantern Mask
+(20748,0,10006,19),	-- Shiny Mask of Giant Hercules 7 day Pack
+(20749,0,10006,20),	-- Shiny Mask of Silent Scream 7 day Pack
+(20750,0,10006,21),	-- Shiny Spirit of Wrath Mask 7 day Pack
+(20751,0,10006,22),	-- Shiny Undecaying Corpse Mask 7Day Pack
+(20752,0,10006,23);	-- Shiny Planet X235 Alien Mask 7 day Pack
+
+
+
 -- GM SHOP END --
