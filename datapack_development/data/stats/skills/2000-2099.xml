@@ -1025,6 +1025,7 @@
 	<skill id="2097" levels="3" name="Sowing">
 		<table name="#mpConsume"> 4 6 8 </table>
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="nextActionAttack" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="1800" />
