@@ -1099,6 +1099,7 @@
 	</skill>
 	<skill id="5697" levels="4" name="Seal">
 		<!-- Imbue Seed of Destruction effect -->
+		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
