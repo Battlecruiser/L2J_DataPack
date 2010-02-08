@@ -530,3 +530,10 @@ INSERT INTO `minions` VALUES
 INSERT INTO `minions` VALUES
 (22678, 22684, 1, 1),
 (22679, 22686, 1, 1);
+
+-- Giants Cave
+INSERT INTO `minions` VALUES
+(25684, 25685, 3, 3),
+(22666, 22667, 1, 4),
+(22670, 22671, 1, 2),
+(22670, 22672, 1, 3);
