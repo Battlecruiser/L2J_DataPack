@@ -30754,6 +30754,208 @@ INSERT INTO `droplist` VALUES
 (22659,9574,1,1,200,600), -- Mid-Grade Life Stone: level 80
 (22659,9573,1,1,200,2000); -- Life Stone: level 80
 
+-- Gracia Epilog : Giants Cave
+INSERT INTO `droplist` VALUES
+-- Lesser Giant Soldier
+(22661,57,789,2128,0,700000), -- Adena
+(22661,9545,1,1,1,10000), -- Sealed Dynasty Shield Piece
+(22661,9542,1,1,1,9000), -- Sealed Dynasty Circlet Piece
+(22661,9537,1,1,1,9000), -- Sealed Dynasty Leather Helmet Piece
+(22661,9532,1,1,1,9000), -- Sealed Dynasty Helmet Piece
+(22661,9529,1,1,1,90), -- Sealed Dynasty Shield
+(22661,10114,1,1,1,7000), -- Sealed Dynasty Sigil Piece
+(22661,9516,1,1,1,60), -- Sealed Dynasty Helmet
+(22661,1885,1,1,2,120000), -- High Grade Suede
+(22661,1879,1,1,2,80000), -- Cokes
+(22661,9628,1,1,2,20000), -- Leonard
+(22661,9629,1,1,2,10000), -- Adamantine
+(22661,9573,1,1,200,1000), -- Life Stone: level 80
+(22661,9575,1,1,200,300), -- High-Grade Life Stone: level 80
+(22661,9574,1,1,200,5000), -- Mid-Grade Life Stone: level 80
+-- Lesser Giant Shooter
+(22662,57,789,2128,0,700000), -- Adena
+(22662,9618,1,1,1,2000), -- Dynasty Phantom Piece
+(22662,9617,1,1,1,3000), -- Dynasty Blade Piece
+(22662,9616,1,1,1,2000), -- Dynasty Sword Piece
+(22662,1885,1,1,2,120000), -- High Grade Suede
+(22662,1879,1,1,2,80000), -- Cokes
+(22662,9628,1,1,2,10000), -- Leonard
+(22662,9629,1,1,2,10000), -- Adamantine
+(22662,9630,1,1,2,10000), -- Orichalcum
+(22662,9574,1,1,200,5000), -- Mid-Grade Life Stone: level 80
+(22662,9575,1,1,200,200), -- High-Grade Life Stone: level 80
+(22662,9573,1,1,200,10000), -- Life Stone: level 80
+-- Lesser Giant Scout
+(22663,57,789,2128,0,700000), -- Adena
+(22663,10546,1,1,1,1000), -- Dynasty Staff Fragment
+(22663,9623,1,1,1,1000), -- Dynasty Mace Piece
+(22663,9622,1,1,1,1000), -- Halberd Cudgel Piece
+(22663,10547,1,1,1,2000), -- Dynasty Crusher Fragment
+(22663,1885,1,1,2,220000), -- High Grade Suede
+(22663,9628,1,1,2,20000), -- Leonard
+(22663,9629,1,1,2,10000), -- Adamantine
+(22663,9630,1,1,2,10000), -- Orichalcum
+(22663,1879,1,1,2,70000), -- Cokes
+(22663,9574,1,1,200,5000), -- Mid-Grade Life Stone: level 80
+(22663,9575,1,1,200,400), -- High-Grade Life Stone: level 80
+(22663,9573,1,1,200,10000), -- Life Stone: level 80
+-- Lesser Giant Mage
+(22664,57,789,2128,0,700000), -- Adena
+(22664,9624,1,1,1,7000), -- Dynasty Bagh-Nakh Piece
+(22664,1895,1,1,2,150000), -- Metallic Fiber
+(22664,4040,1,1,2,60000), -- Mold Lubricant
+(22664,9628,1,1,2,20000), -- Leonard
+(22664,9630,1,1,2,20000), -- Orichalcum
+(22664,9573,1,1,200,20000), -- Life Stone: level 80
+(22664,9574,1,1,200,5000), -- Mid-Grade Life Stone: level 80
+(22664,9575,1,1,200,400), -- High-Grade Life Stone: level 80
+-- Lesser Giant Elder
+(22665,57,789,2128,0,700000), -- Adena
+(22665,9619,1,1,1,7000), -- Dynasty Bow Piece
+(22665,1895,1,1,2,140000), -- Metallic Fiber
+(22665,4040,1,1,2,60000), -- Mold Lubricant
+(22665,9628,1,1,2,20000), -- Leonard
+(22665,9630,1,1,2,20000), -- Orichalcum
+(22665,9573,1,1,200,20000), -- Life Stone: level 80
+(22665,9574,1,1,200,4000), -- Mid-Grade Life Stone: level 80
+(22665,9575,1,1,200,500), -- High-Grade Life Stone: level 80
+-- Barif
+(22666,57,789,2128,0,700000), -- Adena
+(22666,9620,1,1,1,500), -- Dynasty Knife Piece
+(22666,9629,1,1,2,2000), -- Adamantine
+(22666,9628,1,1,2,2000), -- Leonard
+(22666,9630,1,1,2,1000), -- Orichalcum
+(22666,1885,1,1,2,30000), -- High Grade Suede
+(22666,1879,1,1,2,60000), -- Cokes
+(22666,9574,1,1,200,400), -- Mid-Grade Life Stone: level 80
+(22666,9573,1,1,200,3000), -- Life Stone: level 80
+(22666,9575,1,1,200,80), -- High-Grade Life Stone: level 80
+-- Barifs Pet
+(22667,57,789,2128,0,700000), -- Adena
+(22667,9621,1,1,1,900), -- Dynasty Halberd Piece
+(22667,1894,1,1,2,10000), -- Crafted Leather
+(22667,4039,1,1,2,10000), -- Mold Glue
+(22667,4041,1,1,2,3000), -- Mold Hardener
+(22667,4044,1,1,2,10000), -- Thons
+(22667,9573,1,1,200,3000), -- Life Stone: level 80
+(22667,9574,1,1,200,500), -- Mid-Grade Life Stone: level 80
+(22667,9575,1,1,200,30), -- High-Grade Life Stone: level 80
+-- Gamlin
+(22668,57,789,2128,0,700000), -- Adena
+(22668,9531,1,1,1,3000), -- Sealed Dynasty Gaiter Piece
+(22668,9530,1,1,1,700), -- Sealed Dynasty Breast Plate Piece
+(22668,9515,1,1,1,30), -- Sealed Dynasty Gaiter
+(22668,9514,1,1,1,10), -- Sealed Dynasty Breast Plate
+(22668,1885,1,1,2,20000), -- High Grade Suede
+(22668,1879,1,1,2,50000), -- Cokes
+(22668,9628,1,1,2,2000), -- Leonard
+(22668,9629,1,1,2,1000), -- Adamantine
+(22668,9630,1,1,2,1000), -- Orichalcum
+(22668,9573,1,1,200,2000), -- Life Stone: level 80
+(22668,9574,1,1,200,600), -- Mid-Grade Life Stone: level 80
+(22668,9575,1,1,200,60), -- High-Grade Life Stone: level 80
+-- Leogul
+(22669,57,789,2128,0,700000), -- Adena
+(22669,9535,1,1,1,2000), -- Sealed Dynasty Leather Armor Piece
+(22669,1894,1,1,2,10000), -- Crafted Leather
+(22669,4039,1,1,2,8000), -- Mold Glue
+(22669,4041,1,1,2,7000), -- Mold Hardener
+(22669,4044,1,1,2,10000), -- Thons
+(22669,9573,1,1,200,2000), -- Life Stone: level 80
+-- Cursed Lord
+(22670,57,789,2128,0,700000), -- Adena
+(22670,9524,1,1,1,30), -- Sealed Dynasty Tunic
+(22670,9540,1,1,1,1000), -- Sealed Dynasty Tunic Piece
+(22670,9541,1,1,1,2000), -- Sealed Dynasty Stocking Piece
+(22670,9629,1,1,2,1000), -- Adamantine
+(22670,9628,1,1,2,3000), -- Leonard
+(22670,9630,1,1,2,2000), -- Orichalcum
+(22670,1885,1,1,2,30000), -- High Grade Suede
+(22670,1879,1,1,2,60000), -- Cokes
+(22670,9574,1,1,200,400), -- Mid-Grade Life Stone: level 80
+(22670,9575,1,1,200,90), -- High-Grade Life Stone: level 80
+(22670,9573,1,1,200,3000), -- Life Stone: level 80
+-- Cursed Guardian
+(22671,57,789,2128,0,700000), -- Adena
+(22671,9992,1,1,1,800), -- Sealed Dynasty Necklace Gemstone
+(22671,9991,1,1,1,1000), -- Sealed Dynasty Earring Gemstone
+(22671,9454,1,1,1,20), -- Sealed Dynasty Ring
+(22671,9453,1,1,1,20), -- Sealed Dynasty Necklace
+(22671,9452,1,1,1,20), -- Sealed Dynasty Earring
+(22671,9993,1,1,1,2000), -- Sealed Dynasty Ring Gemstone
+(22671,4044,1,1,2,20000), -- Thons
+(22671,4041,1,1,2,4000), -- Mold Hardener
+(22671,4039,1,1,2,20000), -- Mold Glue
+(22671,1894,1,1,2,20000), -- Crafted Leather
+-- Cursed Seer
+(22672,57,789,2128,0,700000), -- Adena
+(22672,9544,1,1,1,1000), -- Sealed Dynasty Shoes Piece
+(22672,9543,1,1,1,1000), -- Sealed Dynasty Glove Piece
+(22672,9539,1,1,1,1000), -- Sealed Dynasty Leather Boots Piece
+(22672,9538,1,1,1,1000), -- Sealed Dynasty Leather Glove Piece
+(22672,9534,1,1,1,1000), -- Sealed Dynasty Boot Piece
+(22672,9533,1,1,1,1000), -- Sealed Dynasty Gauntlet Piece
+(22672,9527,1,1,1,20), -- Sealed Dynasty Gloves
+(22672,9518,1,1,1,20), -- Sealed Dynasty Boots
+(22672,1885,1,1,2,40000), -- High Grade Suede
+(22672,1879,1,1,2,80000), -- Cokes
+(22672,9628,1,1,2,4000), -- Leonard
+(22672,9629,1,1,2,2000), -- Adamantine
+(22672,9630,1,1,2,3000), -- Orichalcum
+-- Hirokai
+(22673,57,789,2128,0,700000), -- Adena
+(22673,10114,1,1,1,600), -- Sealed Dynasty Sigil Piece
+(22673,9545,1,1,1,1000), -- Sealed Dynasty Shield Piece
+(22673,9542,1,1,1,900), -- Sealed Dynasty Circlet Piece
+(22673,9532,1,1,1,900), -- Sealed Dynasty Helmet Piece
+(22673,9529,1,1,1,4), -- Sealed Dynasty Shield
+(22673,9526,1,1,1,5), -- Sealed Dynasty Circlet
+(22673,9521,1,1,1,8), -- Sealed Dynasty Leather Helmet
+(22673,9516,1,1,1,4), -- Sealed Dynasty Helmet
+(22673,13886,1,1,1,4), -- Sealed Dynasty Sigil
+(22673,1885,1,1,2,40000), -- High Grade Suede
+(22673,9628,1,1,2,3000), -- Leonard
+(22673,9629,1,1,2,2000), -- Adamantine
+(22673,9630,1,1,2,2000), -- Orichalcum
+(22673,1879,1,1,2,70000), -- Cokes
+-- Imagro
+(22674,57,789,2128,0,700000), -- Adena
+(22674,9444,1,1,1,4), -- Dynasty Phantom
+(22674,9616,1,1,1,300), -- Dynasty Sword Piece
+(22674,9617,1,1,1,200), -- Dynasty Blade Piece
+(22674,9618,1,1,1,200), -- Dynasty Phantom Piece
+(22674,1895,1,1,2,140000), -- Metallic Fiber
+(22674,4040,1,1,2,10000), -- Mold Lubricant
+(22674,4042,1,1,2,8000), -- Enria
+(22674,4043,1,1,2,20000), -- Asofe
+-- Palit
+(22675,57,789,2128,0,700000), -- Adena
+(22675,9622,1,1,1,100), -- Halberd Cudgel Piece
+(22675,9623,1,1,1,400), -- Dynasty Mace Piece
+(22675,10546,1,1,1,100), -- Dynasty Staff Fragment
+(22675,10547,1,1,1,200), -- Dynasty Crusher Fragment
+(22675,1894,1,1,2,20000), -- Crafted Leather
+(22675,4039,1,1,2,20000), -- Mold Glue
+(22675,4041,1,1,2,4000), -- Mold Hardener
+(22675,4044,1,1,2,20000), -- Thons
+-- Hamlet
+(22676,57,789,2128,0,700000), -- Adena
+(22676,9450,1,1,1,1), -- Dynasty Bagh-Nakh
+(22676,9624,1,1,1,700), -- Dynasty Bagh-Nakh Piece
+(22676,1879,1,1,2,70000), -- Cokes
+(22676,1885,1,1,2,30000), -- High Grade Suede
+(22676,9628,1,1,2,3000), -- Leonard
+(22676,9629,1,1,2,2000), -- Adamantine
+(22676,9630,1,1,2,2000), -- Orichalcum
+-- Klennot
+(22677,57,789,2128,0,700000), -- Adena
+(22677,9619,1,1,1,600), -- Dynasty Bow Piece
+(22677,1879,1,1,2,70000), -- Cokes
+(22677,1885,1,1,2,40000), -- High Grade Suede
+(22677,9628,1,1,2,3000), -- Leonard
+(22677,9629,1,1,2,2000), -- Adamantine
+(22677,9630,1,1,2,3000); -- Orichalcum
+
 -- Gracia Epilog : Den of Evil
 INSERT INTO `droplist` VALUES
 -- Ragna Orc
