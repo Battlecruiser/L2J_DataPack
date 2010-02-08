@@ -535,6 +535,7 @@
 	</skill>
 	<skill id="6090" levels="1" name="Lightning Strike">
 		<!-- Lightning Strike effect -->
+		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
@@ -546,6 +547,7 @@
 	</skill>
 	<skill id="6091" levels="1" name="Anger">
 		<!-- Anchor effect -->
+		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
@@ -557,6 +559,7 @@
 	</skill>
 	<skill id="6092" levels="1" name="Lightning Shock">
 		<!-- Lightning Shock effect -->
+		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
