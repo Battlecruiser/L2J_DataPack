@@ -257,3 +257,7 @@ INSERT IGNORE INTO `raidboss_spawnlist` VALUES
 -- (25681,1,0,0,0,0,43200,129600,0,9999,9999), -- Gorgolos (?) -- stats to be done
 -- (25684,1,0,0,0,0,43200,129600,0,9999,9999), -- Last Titan Utenus (?) -- stats to be done
 -- (25687,1,0,0,0,0,43200,129600,0,9999,9999), -- Hekaton Prime (?) -- stats to be done
+-- (25684,1,187537,60792,-4984,0,43200,129600,0,9999,9999), -- Last Titan Utenus (?) -- stats to be done
+-- (25684,1,194252,54552,-4368,0,43200,129600,0,9999,9999), -- Giant Marpanak (?) -- stats to be done
+-- (25256,1,170420,42920,-4808,0,43200,129600,0,9999,9999), -- Taik High Prefect Arak (?) -- stats to be done
+
