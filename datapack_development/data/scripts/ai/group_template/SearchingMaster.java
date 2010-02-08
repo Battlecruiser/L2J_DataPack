@@ -36,6 +36,9 @@ public class SearchingMaster extends L2AttackableAIScript
 
 	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isPet)
 	{
+		if (player == null)
+			return null;
+		
 		L2Character attacker = isPet ? player.getPet().getOwner() : player;
 
 		npc.setIsRunning(true);
