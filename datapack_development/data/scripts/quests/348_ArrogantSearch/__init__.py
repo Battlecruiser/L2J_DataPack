@@ -1,4 +1,4 @@
-# Arrogant Search version 0.1 
+# Arrogant Search version 0.1
 # by Fulminus
 # in this version, the quest only works as total solo (no option to work with friends) and
 # only for the purpose of gaining access to Baium's floor (not for making money via rewards).
@@ -14,13 +14,13 @@ qn = "348_ArrogantSearch"
 #Messages
 default   = "<html><body>I have nothing to say to you.</body></html>"
 #MOBS TO KILL
+YINTZU = 20647
+PALIOTE = 20648
 ARK_GUARDIAN_ELBEROTH = 27182
 ARK_GUARDIAN_SHADOWFANG = 27183
 ANGEL_KILLER = 27184
 PLATINUM_TRIBE_SHAMAN = 20828
 PLATINUM_TRIBE_OVERLORD = 20829
-LESSER_GIANT_MAGE = 20657
-LESSER_GIANT_ELDER = 20658
 GUARDIAN_ANGEL_1 = 20830
 GUARDIAN_ANGEL_2 = 20859
 SEAL_ANGEL_1 = 20831
@@ -40,7 +40,7 @@ HARDIN = 30832
 HEINE = 30969
 
 #items
-TITANS_POWERSTONE = 4287
+SHELL_OF_MONSTERS = 14857
 HANELLINS_FIRST_LETTER = 4288
 HANELLINS_SECOND_LETTER = 4289
 HANELLINS_THIRD_LETTER = 4290
@@ -87,8 +87,8 @@ HEINE: [6, 'heine_delivery', '30969-01.htm', '30969-01a.htm', '30969-01b.htm']
 
 #mob: cond, giveItem, amount, chance%, takeItem (assumed to take only 1 of it)
 DROPS ={
-LESSER_GIANT_MAGE: [2,TITANS_POWERSTONE,1,10,0],
-LESSER_GIANT_ELDER: [2,TITANS_POWERSTONE,1,10,0],
+YINTZU: [2,SHELL_OF_MONSTERS,1,10,0],
+PALIOTE: [2,SHELL_OF_MONSTERS,1,10,0],
 ANGEL_KILLER: [5, FIRST_KEY_OF_ARK,1,100,0],
 ARK_GUARDIAN_ELBEROTH: [5, SECOND_KEY_OF_ARK,1,100,0],
 ARK_GUARDIAN_SHADOWFANG: [5, THIRD_KEY_OF_ARK,1,100,0],
@@ -139,19 +139,20 @@ class Quest (JQuest) :
 
  def onEvent (self,event,st) :
     htmltext = event
-    if event == "30864_02" :
+    if event == "30864-02c.htm" :
         st.setState(State.STARTED)
         st.set("cond","2")
-        htmltext = "30864-03.htm"
+        st.set("reward1","0")    # for first reward in cond == 25
+        for i in BLOODY_OWNERS.keys() : # goods are not delivered
+            st.set(BLOODY_OWNERS[i][1],"0")
     elif event == "30864_04a" :  #work alone
         st.set("cond","4")
-        st.takeItems(TITANS_POWERSTONE,-1)
         htmltext = "30864-04c.htm"
         st.set("companions","0")
     elif event == "30864_04b" :  #work with friends
         st.set("cond","3")
         st.set("companions","1")
-        st.takeItems(TITANS_POWERSTONE,-1)
+        st.takeItems(SHELL_OF_MONSTERS,-1)
         htmltext = "not yet implemented"
         #todo: give flowers & handle the multiperson quest...
     elif event == "30864_07" : #platinum tribe info
@@ -166,7 +167,7 @@ class Quest (JQuest) :
     elif event == "30864_07money" : #want more fabrics
         htmltext = "30864-07money.htm"
         st.set("cond","25")
-    elif event == "30864_08" : # 
+    elif event == "30864_08" : #
         htmltext = "30864-08b.htm"
     elif event == "30864_08b" : # more about angels blood
         htmltext = "30864-08c.htm" # more about angels blood
@@ -208,25 +209,20 @@ class Quest (JQuest) :
                 htmltext = "30864-Baium.htm"
                 st.exitQuest(1)
             else : #else, start the quest normally
-                st.set("cond","0")
                 if player.getLevel() < 60 :
                     st.exitQuest(1)
                     htmltext = "30864-01.htm"     #not qualified
-                    st.exitQuest(1)
                 elif cond==0 :
-                    st.set("cond","1")
-                    st.set("reward1","0")    # for first reward in cond == 25
-                    for i in BLOODY_OWNERS.keys() : # goods are not delivered
-                        st.set(BLOODY_OWNERS[i][1],"0")
-                    htmltext = "30864-02.htm"    # Successful start: begin the dialog which will set cond=2
+                    htmltext = "30864-02.htm"
                 # Player abandoned in the middle of last dialog...repeat the dialog.
                 elif cond==1  :
                     htmltext = "30864-02.htm"    # begin the dialog which will set cond=2
         # Has returned before getting the powerstone
         elif cond==2 :
-            if st.getQuestItemsCount(TITANS_POWERSTONE)==0 :
-                htmltext = "30864-03a.htm"    # go get the titan's powerstone
+            if st.getQuestItemsCount(SHELL_OF_MONSTERS)==0 :
+                htmltext = "30864-03.htm"    # go get the shell of monsters
             else :
+                st.takeItems(SHELL_OF_MONSTERS,-1)
                 htmltext = "30864-04.htm"    # Ask "work alone or in group?"...only alone is implemented in v0.1
         elif cond==4 :
             st.set("cond","5")
@@ -270,7 +266,7 @@ class Quest (JQuest) :
             st.giveItems(lowbgrade,1)
             st.set("reward1","1")
         elif cond == 26 and st.getQuestItemsCount(WHITE_FABRIC_1)>0 :
-            htmltext = "30864-09a.htm" # 
+            htmltext = "30864-09a.htm" #
         elif cond == 26 and st.getQuestItemsCount(BLOODED_FABRIC)<10 :
             htmltext = "30864-09b.htm" # Where are other pieces?
             st.giveItems(ADENA,5000)
@@ -320,7 +316,7 @@ class Quest (JQuest) :
                     st.addSpawn(ARKS[npcId][1],120000)
                 return ARKS[npcId][2]
             # if the player already has openned the chest and has its content, show "chest empty"
-            elif st.getQuestItemsCount(ARKS[npcId][5])==1:  
+            elif st.getQuestItemsCount(ARKS[npcId][5])==1:
                 htmltext = ARKS[npcId][4]
             else:   # the player has the key and doesn't have the contents, give the contents
                 htmltext = ARKS[npcId][3]
@@ -337,23 +333,23 @@ class Quest (JQuest) :
             else :
                 htmltext = "30980-03.htm"
     elif cond == 27 :
-        if npcId in BLOODY_OWNERS.keys() : 
+        if npcId in BLOODY_OWNERS.keys() :
             if st.getInt(BLOODY_OWNERS[npcId][1])<1 :
                 if st.getQuestItemsCount(BLOODED_FABRIC)>=BLOODY_OWNERS[npcId][0] : # deliver blood
                     st.takeItems(BLOODED_FABRIC,BLOODY_OWNERS[npcId][0])
                     st.set(BLOODY_OWNERS[npcId][1],"1")
                     htmltext = BLOODY_OWNERS[npcId][2]
                 else : # not enough blood
-                    htmltext = BLOODY_OWNERS[npcId][3] 
+                    htmltext = BLOODY_OWNERS[npcId][3]
             else : # already delivered
                 htmltext = BLOODY_OWNERS[npcId][4]
     return htmltext
- 
+
  def onAttack (self, npc, player, damage, isPet, skill):
      st = player.getQuestState(qn)
      if not st : return
      if st.getState() != State.STARTED : return
-   
+
      npcId = npc.getNpcId()
      if npcId in ATTACK_DROPS_24.keys() :
          cond = ATTACK_DROPS_24[npcId][0]
@@ -379,9 +375,9 @@ class Quest (JQuest) :
 
  def onKill(self,npc,player,isPet):
      st = player.getQuestState(qn)
-     if not st : return 
-     if st.getState() != State.STARTED : return 
-   
+     if not st : return
+     if st.getState() != State.STARTED : return
+
      npcId = npc.getNpcId()
      if npcId in DROPS.keys() :
          cond = DROPS[npcId][0]
