@@ -228,6 +228,7 @@
 	</skill>
 	<skill id="5430" levels="1" name="Spoil Bomb">
 		<!-- Spoil Bomb effect -->
+		<set name="ignoreResists" val="true" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -349,6 +350,7 @@
 	</skill>
 	<skill id="5447" levels="7" name="Paralysis">
 		<!-- Imbue Dark Seed effect -->
+		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
