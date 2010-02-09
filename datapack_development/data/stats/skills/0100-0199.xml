@@ -555,6 +555,7 @@
 		<table name="#ench1time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
 		<table name="#ench2mpConsume"> 20 20 19 19 19 18 18 18 17 17 17 16 16 16 15 15 15 14 14 14 13 13 12 12 12 11 11 11 10 10 </table>
 		<table name="#ench2MpConsume_Init"> 5 5 5 5 5 5 5 5 5 5 4 4 4 4 4 4 4 4 4 4 3 3 3 3 3 3 3 3 3 3 </table>
+		<table name="#ench2mDef"> 1.31 1.31 1.31 1.31 1.31 1.31 1.31 1.32 1.32 1.32 1.32 1.32 1.32 1.32 1.33 1.33 1.33 1.33 1.33 1.33 1.33 1.33 1.34 1.34 1.34 1.34 1.34 1.34 1.34 1.35 </table>
 		<table name="#mDef"> 1.15 1.23 1.3 </table>
 		<table name="#mpInitialConsume"> 4 5 6 </table>
 		<table name="#mpConsume"> 14 18 22 </table>
@@ -580,6 +581,11 @@
 				<mul order="0x30" stat="mDef" val="1.3" />
 			</effect>
 		</enchant1for>
+		<enchant2for>
+			<effect name="Buff" time="1200" val="0" stackOrder="1.3" stackType="MagicDefUp">
+				<mul order="0x30" stat="mDef" val="#ench2mDef" />
+			</effect>
+		</enchant2for>
 	</skill>
 	<skill id="127" levels="14" name="Hamstring" enchantLevels1="30" enchantLevels2="30">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
