@@ -360,9 +360,9 @@
 		</enchant2for>
 	</skill>
 	<skill id="313" levels="8" name="Snipe" enchantLevels1="30" enchantLevels2="30">
+		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#mpConsume"> 28 29 30 31 32 33 34 34 </table>
 		<table name="#pAtk"> 124 134 145 155 166 177 188 199 </table>
 		<table name="#accCombat"> 3 3 4 4 5 5 6 6 </table>
@@ -414,7 +414,7 @@
 		</enchant1for>
 		<enchant2for>
 			<effect name="Buff" time="120" val="0">
-				<add order="0x40" stat="pAtk" val="260">
+				<add order="0x40" stat="pAtk" val="200">
 					<using kind="Bow" />
 				</add>
 				<add order="0x40" stat="accCombat" val="6">
