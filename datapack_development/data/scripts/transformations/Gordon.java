@@ -6,6 +6,7 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class Gordon extends L2Transformation
 {
+	private static final int[] SKILLS = {728,729,730,5491,619};
 	public Gordon()
 	{
 		// id, colRadius, colHeight
@@ -33,7 +34,7 @@ public class Gordon extends L2Transformation
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{728,729,730,5491,619});
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
 	public void onUntransform()

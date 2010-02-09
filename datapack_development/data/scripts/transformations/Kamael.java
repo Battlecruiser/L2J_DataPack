@@ -6,6 +6,7 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class Kamael extends L2Transformation
 {
+	private static final int[] SKILLS = {539,540,1471,1472,5491,619};
 	public Kamael()
 	{
 		// id, duration (secs), colRadius, colHeight
@@ -35,7 +36,7 @@ public class Kamael extends L2Transformation
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{539,540,1471,1472,5491,619});
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
 	public void onUntransform()

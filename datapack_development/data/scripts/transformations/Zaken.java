@@ -6,6 +6,7 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class Zaken extends L2Transformation
 {
+	private static final int[] SKILLS = {715,716,717,718,719,5491,619};
 	public Zaken()
 	{
 		// id, colRadius, colHeight
@@ -37,7 +38,7 @@ public class Zaken extends L2Transformation
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{715,716,717,718,719,5491,619});
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
 	public void onUntransform()

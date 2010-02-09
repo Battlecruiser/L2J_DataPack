@@ -9,6 +9,7 @@ import com.l2jserver.gameserver.model.L2Transformation;
  */
 public class MyoRace extends L2Transformation
 {
+	private static final int[] SKILLS = {896,897,898,899,900,5491,619};
 	public MyoRace()
 	{
 		// id, colRadius, colHeight
@@ -43,7 +44,7 @@ public class MyoRace extends L2Transformation
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{896,897,898,899,900,5491,619});
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
 	public void onUntransform()

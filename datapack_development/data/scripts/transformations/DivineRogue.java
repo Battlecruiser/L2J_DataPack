@@ -6,6 +6,7 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class DivineRogue extends L2Transformation
 {
+	private static final int[] SKILLS = {686,687,688,689,690,691,797,5491,619};
 	public DivineRogue()
 	{
 		// id, colRadius, colHeight
@@ -41,7 +42,7 @@ public class DivineRogue extends L2Transformation
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{686,687,688,689,690,691,797,5491,619});
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
 	public void onUntransform()

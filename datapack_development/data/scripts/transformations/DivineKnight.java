@@ -6,6 +6,7 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class DivineKnight extends L2Transformation
 {
+	private static final int[] SKILLS = {680,681,682,683,684,685,795,796,5491,619};
 	public DivineKnight()
 	{
 		// id, colRadius, colHeight
@@ -43,7 +44,7 @@ public class DivineKnight extends L2Transformation
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{680,681,682,683,684,685,795,796,5491,619});
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
 	public void onUntransform()
