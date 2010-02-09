@@ -6,6 +6,7 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class InfernoDrakeNormal extends L2Transformation
 {
+	private static final int[] SKILLS = {619,5491,576,577,578,579};
 	public InfernoDrakeNormal()
 	{
 		// id, colRadius, colHeight
@@ -35,7 +36,7 @@ public class InfernoDrakeNormal extends L2Transformation
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{619,5491,576,577,578,579});
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
 	public void onUntransform()

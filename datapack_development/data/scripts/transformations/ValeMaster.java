@@ -6,6 +6,7 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class ValeMaster extends L2Transformation
 {
+	private static final int[] SKILLS = {742,743,744,745,5491,619};
 	public ValeMaster()
 	{
 		// id, colRadius, colHeight
@@ -60,7 +61,7 @@ public class ValeMaster extends L2Transformation
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{742,743,744,745,5491,619});
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
 	public void onUntransform()

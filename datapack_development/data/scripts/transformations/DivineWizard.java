@@ -6,6 +6,7 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class DivineWizard extends L2Transformation
 {
+	private static final int[] SKILLS = {692,693,694,695,696,697,5491,619};
 	public DivineWizard()
 	{
 		// id, colRadius, colHeight
@@ -39,7 +40,7 @@ public class DivineWizard extends L2Transformation
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{692,693,694,695,696,697,5491,619});
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
 	public void onUntransform()

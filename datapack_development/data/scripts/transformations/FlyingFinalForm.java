@@ -6,6 +6,7 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class FlyingFinalForm extends L2Transformation
 {
+	private static final int[] SKILLS = {932,950,951,953,1544,1545,619};
 	public FlyingFinalForm()
 	{
 		// id, colRadius, colHeight
@@ -43,7 +44,7 @@ public class FlyingFinalForm extends L2Transformation
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{932,950,951,953,1544,1545,619});
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
 	public void onUntransform()

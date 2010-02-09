@@ -6,6 +6,7 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class DragonBomberWeak extends L2Transformation
 {
+	private static final int[] SKILLS = {580,581,582,583,5491,619};
 	public DragonBomberWeak()
 	{
 		// id, colRadius, colHeight
@@ -35,7 +36,7 @@ public class DragonBomberWeak extends L2Transformation
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{580,581,582,583,5491,619});
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
 	public void onUntransform()

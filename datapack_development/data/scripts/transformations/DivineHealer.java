@@ -6,6 +6,7 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class DivineHealer extends L2Transformation
 {
+	private static final int[] SKILLS = {648,803,1490,698,699,700,701,702,703,5491,619};
 	public DivineHealer()
 	{
 		// id, colRadius, colHeight
@@ -39,7 +40,7 @@ public class DivineHealer extends L2Transformation
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{648,803,1490,698,699,700,701,702,703,5491,619});
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
 	public void onUntransform()

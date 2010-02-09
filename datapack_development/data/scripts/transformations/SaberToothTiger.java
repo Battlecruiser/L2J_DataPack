@@ -6,6 +6,7 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class SaberToothTiger extends L2Transformation
 {
+	private static final int[] SKILLS = {746,747,748,5491,619};
 	public SaberToothTiger()
 	{
 		// id, colRadius, colHeight
@@ -50,7 +51,7 @@ public class SaberToothTiger extends L2Transformation
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{746,747,748,5491,619});
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
 	public void onUntransform()

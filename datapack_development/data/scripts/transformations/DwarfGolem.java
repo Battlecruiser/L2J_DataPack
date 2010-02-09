@@ -6,6 +6,7 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class DwarfGolem extends L2Transformation
 {
+	private static final int[] SKILLS = {806,807,808,809,5491,619};
 	public DwarfGolem()
 	{
 		// id, colRadius, colHeight
@@ -35,7 +36,7 @@ public class DwarfGolem extends L2Transformation
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{806,807,808,809,5491,619});
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
 	public void onUntransform()

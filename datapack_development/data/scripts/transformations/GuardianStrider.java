@@ -6,6 +6,7 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class GuardianStrider extends L2Transformation
 {
+	private static final int[] SKILLS = {839};
 	public GuardianStrider()
 	{
 		// id, colRadius, colHeight
@@ -25,7 +26,7 @@ public class GuardianStrider extends L2Transformation
 		// Dismount
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(839, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{839});
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
 	public void onUntransform()

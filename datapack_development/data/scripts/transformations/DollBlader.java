@@ -6,6 +6,7 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class DollBlader extends L2Transformation
 {
+	private static final int[] SKILLS = {752,753,754,5491,619};
 	public DollBlader()
 	{
 		// id, colRadius, colHeight
@@ -51,7 +52,7 @@ public class DollBlader extends L2Transformation
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{752,753,754,5491,619});
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
 	public void onUntransform()

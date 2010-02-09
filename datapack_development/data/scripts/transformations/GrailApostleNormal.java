@@ -6,6 +6,7 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class GrailApostleNormal extends L2Transformation
 {
+	private static final int[] SKILLS = {559,560,561,562,5491,619};
 	public GrailApostleNormal()
 	{
 		// id, colRadius, colHeight
@@ -35,7 +36,7 @@ public class GrailApostleNormal extends L2Transformation
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{559,560,561,562,5491,619});
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
 	public void onUntransform()

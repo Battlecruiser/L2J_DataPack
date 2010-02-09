@@ -6,6 +6,7 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class OlMahum extends L2Transformation
 {
+	private static final int[] SKILLS = {749,750,751,5491,619};
 	public OlMahum()
 	{
 		// id, colRadius, colHeight
@@ -54,7 +55,7 @@ public class OlMahum extends L2Transformation
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{749,750,751,5491,619});
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
 	public void onUntransform()
