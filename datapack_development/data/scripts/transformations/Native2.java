@@ -6,6 +6,7 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class Native2 extends L2Transformation
 {
+	private static final int[] SKILLS = {619};
 	public Native2()
 	{
 		// id, colRadius, colHeight
@@ -25,7 +26,7 @@ public class Native2 extends L2Transformation
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{619});
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
 	public void onUntransform()

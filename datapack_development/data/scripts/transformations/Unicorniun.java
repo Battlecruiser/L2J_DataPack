@@ -9,6 +9,7 @@ import com.l2jserver.gameserver.model.L2Transformation;
  */
 public class Unicorniun extends L2Transformation
 {
+	private static final int[] SKILLS = {906,907,908,909,910,5491,619};
 	public Unicorniun()
 	{
 		// id, colRadius, colHeight
@@ -43,7 +44,7 @@ public class Unicorniun extends L2Transformation
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{906,907,908,909,910,5491,619});
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
 	public void onUntransform()

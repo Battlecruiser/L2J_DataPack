@@ -6,6 +6,7 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class Rabbit extends L2Transformation
 {
+	private static final int[] SKILLS = {629,630,5491,619};
 	public Rabbit()
 	{
 		// id, colRadius, colHeight
@@ -31,7 +32,7 @@ public class Rabbit extends L2Transformation
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
-		getPlayer().setTransformAllowedSkills(new int[]{629,630,5491,619});
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
 	public void onUntransform()
