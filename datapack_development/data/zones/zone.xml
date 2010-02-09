@@ -2512,7 +2512,7 @@
 
 	<!-- Pailaka (Forgotten Temple) -->
 	<zone id='20108' type='ScriptZone' shape='NPoly' minZ='-5050' maxZ='-3900' />
-	
+
 	<!-- Pagans mark -->
 	<zone id='30100' type='PaganZone' shape='NPoly' minZ='-10735' maxZ='-10720' />
 
@@ -2545,15 +2545,15 @@
 	<zone id="40103" type="WaterZone" shape="NPoly" minZ="-3430" maxZ="-3360" />
 	<!-- Hellbound Lake 2 -->
 	<zone id="40104" type="WaterZone" shape="NPoly" minZ="-2280" maxZ="-2130" />
-	<!-- TODO: Hellbound (Town Zone) Needs core-side support -->
-	<!-- zone id="40105" type="Town" shape="NPoly" minZ="-30000" maxZ="30000" -->
-	<!-- stat name="name" val="Hellbound" / -->
-	<!-- stat name="townId" val="?" / -->
-	<!-- stat name="isPeaceZone" val="false" / -->
-	<!-- stat name="spawnX" val="-16341" / -->
-	<!-- stat name="spawnY" val="209285" / -->
-	<!-- stat name="spawnZ" val="-3665" / -->
-	<!-- /zone -->
+	<!-- Hellbound (Town Zone) -->
+	<zone id="40105" type="Town" shape="NPoly" minZ="-30000" maxZ="30000">
+		<stat name="name" val="Hellbound" />
+		<stat name="townId" val="20" />
+		<stat name="isPeaceZone" val="false" />
+		<stat name="spawnX" val="-16341" />
+		<stat name="spawnY" val="209285" />
+		<stat name="spawnZ" val="-3665" />
+	</zone>
 
 	<!-- Rune Castle (Water Zones) (vertices, min Z & Max Z are estimated) -->
 	<zone id="40500" type="WaterZone" shape="NPoly" minZ="-1310" maxZ="-1120" />
