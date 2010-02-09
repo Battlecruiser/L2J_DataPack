@@ -665,7 +665,7 @@ INSERT INTO `merchant_shopids` VALUES
 ('9984', 'gm'), -- S PVP Weapons
 ('9985', 'gm'), -- A PVP Weapons
 ('9986', 'gm'), -- Hair Accessory Part 2
-('9987', 'gm'), -- [reserved]
+('9987', 'gm'), -- Territory Jewels
 ('9988', 'gm'), -- Territory Items
 ('9989', 'gm'), -- Fortress Misc
 ('9990', 'gm'), -- Territory Weapons

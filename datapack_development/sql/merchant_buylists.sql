@@ -22649,8 +22649,61 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (20897,0,9986,41); -- Purple Paper Mask Blessed Soul - 7 day limited period
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
--- (GM-Shop) [reserved]
-(1,0,9987,1);
+-- (GM-Shop) Territory Jewels
+('14592','0','9987','1'), -- Gludio Earth Protection Ring
+('14664','0','9987','2'), -- Gludio Protection Earring
+('13740','0','9987','3'), -- Gludio Water Protection Necklace
+('15291','0','9987','4'), -- Gludio Earth Royal Guard Ring
+('14801','0','9987','5'), -- Gludio Guard Earring
+('15282','0','9987','6'), -- Gludio Water Royal Guard Necklace
+('14593','0','9987','7'), -- Dion Water Protection Ring
+('14665','0','9987','8'), -- Dion Protection Earring
+('13741','0','9987','9'), -- Dion Divinity Protection Necklace
+('15292','0','9987','10'), -- Dion Water Royal Guard Ring
+('14802','0','9987','11'), -- Dion Guard Earring
+('15283','0','9987','12'), -- Dion Divinity Royal Guard Necklace
+('14594','0','9987','13'), -- Giran Fire Protection Ring
+('14666','0','9987','14'), -- Giran Protection Earring
+('13742','0','9987','15'), -- Giran Wind Protection Necklace
+('15293','0','9987','16'), -- Giran Fire Royal Guard Ring
+('14803','0','9987','17'), -- Giran Guard Earring
+('15284','0','9987','18'), -- Giran Wind Royal Guard Necklace
+('14595','0','9987','19'), -- Oren Earth Protection Ring
+('14667','0','9987','20'), -- Oren Protection Earring
+('13743','0','9987','21'), -- Oren Protection Necklace of Darkness
+('15294','0','9987','22'), -- Oren Earth Royal Guard Ring
+('14804','0','9987','23'), -- Oren Guard Earring
+('15285','0','9987','24'), -- Oren Royal Guard Necklace of Darkness
+('14596','0','9987','25'), -- Aden Divinity Protection Ring
+('14668','0','9987','26'), -- Aden Protection Earring
+('13744','0','9987','27'), -- Aden Earth Protection Necklace
+('15295','0','9987','28'), -- Aden Divinity Royal Guard Ring
+('15286','0','9987','29'), -- Aden Earth Royal Guard Necklace
+('14805','0','9987','30'), -- Aden Guard Earring
+('14597','0','9987','31'), -- Innadril Divinity Protection Ring
+('14669','0','9987','32'), -- Innadril Protection Earring
+('13745','0','9987','33'), -- Innadril Water Protection Necklace
+('15296','0','9987','34'), -- Innadril Divinity Royal Guard Ring
+('14806','0','9987','35'), -- Innadril Guard Earring
+('15287','0','9987','36'), -- Innadril Water Royal Guard Necklace
+('14598','0','9987','37'), -- Goddard Dark Protection Ring
+('14670','0','9987','38'), -- Goddard Protection Earring
+('13746','0','9987','39'), -- Goddard Fire Protection Necklace
+('15297','0','9987','40'), -- Goddard Dark Royal Guard Ring
+('14807','0','9987','41'), -- Goddard Guard Earring
+('15288','0','9987','42'), -- Goddard Fire Royal Guard Necklace
+('14599','0','9987','43'), -- Rune Wind Protection Ring
+('14671','0','9987','44'), -- Rune Protection Earring
+('13747','0','9987','45'), -- Rune Fire Protection Necklace
+('15298','0','9987','46'), -- Rune Wind Royal Guard Ring
+('14808','0','9987','47'), -- Rune Guard Earring
+('15289','0','9987','48'), -- Rune Fire Royal Guard Necklace
+('14600','0','9987','49'), -- Schuttgart Dark Protection Ring
+('14672','0','9987','50'), -- Schuttgart Protection Earring
+('13748','0','9987','51'), -- Schuttgart Wind Protection Necklace
+('15299','0','9987','52'), -- Schuttgart Dark Royal Guard Ring
+('14809','0','9987','53'), -- Schuttgart Guard Earring
+('15290','0','9987','54'); -- Schuttgart Wind Royal Guard Necklace
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Territory Items
