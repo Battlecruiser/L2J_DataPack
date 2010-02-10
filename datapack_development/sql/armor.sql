@@ -2858,7 +2858,7 @@ INSERT INTO `armor` VALUES
 (20633,'Watermelon Hat','Ability of a Cool Watermelon - 7 day limited period','hairall','false','none',10,'wood','none',0,-1,10080,0,0,0,0,0,'false','false','true','false','false','0-0','0-0;'),
 (20634,'Watermelon Hat','','hairall','false','none',10,'wood','none',0,-1,-1,0,0,0,0,0,'false','false','true','false','false','0-0','0-0;'),
 (20642,'Standard Item - Mithril Gloves','','none','false','none',100,'wood','none',0,-1,-1,29,0,0,0,0,'false','false','false','false','false','0-0','0-0;'),
-(20643,'Standard Item -','Plate Boots','none','false','none',100,'wood','none',0,-1,-1,29,0,0,0,0,'false','false','false','false','false','0-0','0-0;'),
+(20643,'Standard Item - Plate Boots','','none','false','none',100,'wood','none',0,-1,-1,29,0,0,0,0,'false','false','false','false','false','0-0','0-0;'),
 (20645,'Standard Item - Plate Helmet','','none','false','none',100,'wood','none',0,-1,-1,44,0,0,0,0,'false','false','false','false','false','0-0','0-0;'),
 (20646,'Standard Item - Plate Gaiters','','none','false','none',100,'wood','none',0,-1,-1,70,0,0,0,0,'false','false','false','false','false','0-0','0-0;'),
 (20647,'Standard Item - Half Plate Armor','','none','false','none',100,'wood','none',0,-1,-1,111,0,0,0,0,'false','false','false','false','false','0-0','0-0;'),
