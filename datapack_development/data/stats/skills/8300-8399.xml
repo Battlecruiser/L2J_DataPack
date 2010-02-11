@@ -152,41 +152,6 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="8313" levels="9" name="Earring of Protection">
-		<table name="#bleedVuln"> 0.85 1 1 1 1 1 1 1 1 </table>
-		<table name="#poisonVuln"> 1 0.85 1 1 1 1 1 1 1 </table>
-		<table name="#paralyzeVuln"> 1 1 0.85 1 1 1 1 1 1 </table>
-		<table name="#rootVuln"> 1 1 1 0.85 1 1 1 0.85 1 </table>
-		<table name="#stunVuln"> 1 1 1 1 0.85 0.85 1 1 1 </table>
-		<table name="#sleepVuln"> 1 1 1 1 1 1 0.85 1 1 </table>
-		<table name="#derangementVuln"> 1 1 1 1 1 1 1 1 0.85 </table>
-		<table name="#stunProf"> 1.15 1 1 1 1 1 1.15 1 1 </table>
-		<table name="#rootProf"> 1 1.15 1 1 1 1 1 1 1.15 </table>
-		<table name="#bleedProf"> 1 1 1.15 1 1 1 1 1 1 </table>
-		<table name="#paralyzeProf"> 1 1 1 1.15 1 1 1 1 1 </table>
-		<table name="#derangementProf"> 1 1 1 1 1.15 1 1 1 1 </table>
-		<table name="#sleepProf"> 1 1 1 1 1 1.15 1 1 1 </table>
-		<table name="#poisonProf"> 1 1 1 1 1 1 1 1.15 1 </table>
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
-		<for>
-			<mul order="0x30" stat="bleedVuln" val="#bleedVuln" />
-			<mul order="0x30" stat="poisonVuln" val="#poisonVuln" />
-			<mul order="0x30" stat="paralyzeVuln" val="#paralyzeVuln" />
-			<mul order="0x30" stat="rootVuln" val="#rootVuln" />
-			<mul order="0x30" stat="stunVuln" val="#stunVuln" />
-			<mul order="0x30" stat="sleepVuln" val="#sleepVuln" />
-			<mul order="0x30" stat="derangementVuln" val="#derangementVuln" />
-			<mul order="0x30" stat="stunProf" val="#stunProf" />
-			<mul order="0x30" stat="rootProf" val="#rootProf" />
-			<mul order="0x30" stat="bleedProf" val="#bleedProf" />
-			<mul order="0x30" stat="paralyzeProf" val="#paralyzeProf" />
-			<mul order="0x30" stat="derangementProf" val="#derangementProf" />
-			<mul order="0x30" stat="sleepProf" val="#sleepProf" />
-			<mul order="0x30" stat="poisonProf" val="#poisonProf" />
-		</for>
-	</skill>
 	<skill id="8314" levels="1" name="Release Seal on Agathion - Saerom">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />
@@ -376,7 +341,7 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="8348" levels="1" name="Royal Guard Earring - Gludio">
+	<skill id="8348" levels="2" name="Royal Guard Earring - Gludio">
 		<!-- Increases maximum CP by 5 and resistance to bleed attacks by 15. Increases bonus for shock attacks by 15. -->
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
@@ -491,6 +456,210 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="8360" levels="1" name="Energy Maintenance Effect">
+		<!-- Energy is maintained for 30 minutes when acquiring Exp. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8361" levels="1" name="Sixth Anniversary Party Earring">
+		<!-- Increases resistance to shock/mind attack by 20% and shock/mind attack bonus by 20%. Recovers 4% of the damage to the enemy as your HP. Excludes damage caused by skills and long-range attack. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8365" levels="1" name="Dynasty Tunic">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8366" levels="1" name="Dynasty Jewel Leather Armor">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8367" levels="1" name="Dynasty Jewel Leather Mail">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8368" levels="1" name="Dynasty Jewel Leather Mail">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8369" levels="1" name="Halloween Pumpkin Card">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8370" levels="1" name="Rotten Pumpkin Card">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8371" levels="1" name="Transform Halloween Pumpkin">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8372" levels="1" name="Super Strong Giant's Mask">
+		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, P. Atk. by 5%, and earth tolerance by 5. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8373" levels="1" name="Silent Scream's Mask">
+		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, Critical rate by 5%, and wind tolerance by 5. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8374" levels="1" name="Wrathful Spirit's Mask">
+		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, moving speed by 5%, and fire tolerance by 5. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8375" levels="1" name="Unrotten Corpse's Mask">
+		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, skill's MP consumption by 5%, and darkness tolerance by 5. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8376" levels="1" name="Planet X235 Alien Mask's Effect">
+		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, damage magic's Prominent Damage occurrence by 2, and water tolerance by 5. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8377" levels="1" name="Golden Jack O'Lantern Mask's Effect">
+		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 20%, moving speed by 10%, and resistance to debuffs by 10%. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8379" levels="2" name="Royal Guard Ring - Gludio">
+		<!-- Lvl 1: Increases earth type defense by 12. -->
+		<!-- Lvl 2: Increases earth type defense by 15. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8380" levels="2" name="Royal Guard Ring - Dion">
+		<!-- Lvl 1: Increases water type defense by 12. -->
+		<!-- Lvl 2: Increases water type defense by 15. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8381" levels="2" name="Royal Guard Ring - Giran">
+		<!-- Lvl 1: Increases fire type defense by 12. -->
+		<!-- Lvl 2: Increases fire type defense by 15. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8382" levels="2" name="Royal Guard Ring - Oren">
+		<!-- Lvl 1: Increases earth type defense by 12. -->
+		<!-- Lvl 2: Increases earth type defense by 15. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8383" levels="2" name="Royal Guard Ring - Aden">
+		<!-- Lvl 1: Increases divinity type defense by 12. -->
+		<!-- Lvl 2: Increases divinity type defense by 15. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8384" levels="2" name="Royal Guard Ring - Innadril">
+		<!-- Lvl 1: Increases divinity type defense by 12. -->
+		<!-- Lvl 2: Increases divinity type defense by 15. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8385" levels="2" name="Royal Guard Ring - Goddard">
+		<!-- Lvl 1: Increases darkness type defense by 12. -->
+		<!-- Lvl 2: Increases darkness type defense by 15. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8386" levels="2" name="Royal Guard Ring - Rune">
+		<!-- Lvl 1: Increases wind type defense by 12. -->
+		<!-- Lvl 2: Increases wind type defense by 15. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8387" levels="2" name="Royal Guard Ring - Schuttgart">
+		<!-- Lvl 1: Increases darkness type defense by 12. -->
+		<!-- Lvl 2: Increases darkness type defense by 15. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8388" levels="2" name="Royal Guard Necklace - Gludio">
+		<!-- Lvl 1: Increases water type defense by 26. -->
+		<!-- Lvl 2: Increases water type defense by 30. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8389" levels="2" name="Royal Guard Necklace - Dion">
+		<!-- Lvl 1: Increases divinity type defense by 26. -->
+		<!-- Lvl 2: Increases divinity type defense by 30. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8390" levels="2" name="Royal Guard Necklace - Giran">
+		<!-- Lvl 1: Increases wind type defense by 26. -->
+		<!-- Lvl 2: Increases wind type defense by 30. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8391" levels="2" name="Royal Guard Necklace - Oren">
+		<!-- Lvl 1: Increases darkness type defense by 26. -->
+		<!-- Lvl 2: Increases darkness type defense by 30. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8392" levels="2" name="Royal Guard Necklace - Aden">
+		<!-- Lvl 1: Increases earth type defense by 26. -->
+		<!-- Lvl 2: Increases earth type defense by 30. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8393" levels="2" name="Royal Guard Necklace - Innadril">
+		<!-- Lvl 1: Increases water type defense by 26. -->
+		<!-- Lvl 2: Increases water type defense by 30. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8394" levels="2" name="Royal Guard Necklace - Goddard">
+		<!-- Lvl 1: Increases fire type defense by 26. -->
+		<!-- Lvl 2: Increases fire type defense by 30. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8395" levels="2" name="Royal Guard Necklace - Rune">
+		<!-- Lvl 1: Increases fire type defense by 26. -->
+		<!-- Lvl 2: Increases fire type defense by 30. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8396" levels="2" name="Royal Guard Necklace - Schuttgart">
+		<!-- Lvl 1: Increases wind type defense by 12. -->
+		<!-- Lvl 2: Increases wind type defense by 15. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
