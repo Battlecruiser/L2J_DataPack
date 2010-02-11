@@ -3551,3 +3551,27 @@ INSERT INTO `weapon` VALUES
 (20644,'Standard Item - Plate Shield','','lhand','false',100,0,0,'wood','d',0,0,'none',0,0.00000,-8,154,20,0,0,0,-1,-1,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'0-0;'),
 (20649,'Standard Item - Ghost Staff','','lrhand','false',100,3,3,'wood','d',90,20,'bigblunt',4,4.00000,0,0,0,325,0,79,-1,-1,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'0-0;'),
 (20867,'Kadomas Transformation Stick','7 day limited period','lrhand','false',150,0,0,'wood','none',1,10,'none',8,0.00000,0,0,0,379,0,1,-1,10080,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'21169-1;');
+
+-- Fixes all improper weapon slotting.
+UPDATE `weapon` SET bodypart = "rhand" WHERE (weaponType = "dagger") or (weaponType = "sword") or (weaponType = "rapier") or (weaponType = "crossbow");
+UPDATE `weapon` SET bodypart = "lrhand" WHERE (weaponType = "pole") or (weaponType = "bow") or (weaponType = "ancient") or (weaponType = "bigsword") or (weaponType = "bigblunt") or (weaponType = "dualfist") or (weaponType = "dual") or (weaponType = "dualdagger");
+
+UPDATE `weapon` SET time = "240" WHERE (additionalname LIKE '%4 hour%') or (additionalname LIKE '%4-hour%');
+UPDATE `weapon` SET time = "10080" WHERE (additionalname LIKE '%7 Day%') or (additionalname LIKE '%7-Day%');
+UPDATE `weapon` SET time = "14400" WHERE (additionalname LIKE '%10 Day%') or (additionalname LIKE '%10-Day%');
+UPDATE `weapon` SET time = "20160" WHERE (additionalname LIKE '%14 Day%') or (additionalname LIKE '%14-Day%');
+UPDATE `weapon` SET time = "43200" WHERE (additionalname LIKE '%30 Day%') or (additionalname LIKE '%30-Day%');
+UPDATE `weapon` SET time = "86400" WHERE (additionalname LIKE '%60 Day%') or (additionalname LIKE '%60-Day%');
+
+-- Ensures that all rapiers have the rapier skill, then sets the Infinity Rapier one to 0 (since it's called via the Infinity SA)
+UPDATE `weapon` SET enchant4_skill_id = "3426", enchant4_skill_lvl = "1" WHERE weaponType = "rapier";
+UPDATE `weapon` SET enchant4_skill_id = "0", enchant4_skill_lvl = "0" WHERE item_id = "9388";
+
+-- Weapons that are limited should not be able to be changed as far as I know. I do not know if changing a weapon will reset the timer on it. Until tested, this entry should remain. Just to be safe. ;)
+UPDATE `weapon` SET change_weaponId = "0" WHERE (duration > 0) or (time > 0);
+
+-- Despite this change not being EXACTLY retail-like, I find it maintains proper logic. It also prevents any possible exploit that might come from having retail information (prices and crystal counts) on NPC items.
+UPDATE `weapon` SET crystallizable = "false", crystal_type = "none", price = "0", crystal_count = "0" WHERE name LIKE '%NPC Item %';
+
+-- PvP weapons can not be changed via the Kamael skill, or traded, or dropped, or shipped, or sold. Just like augmented items but with more restrictions.
+UPDATE `weapon` SET change_weaponId = "0", sellable = "false", dropable = "false", tradeable = "false" WHERE name LIKE '%{PvP}%';
