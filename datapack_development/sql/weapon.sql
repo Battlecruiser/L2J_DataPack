@@ -1717,7 +1717,7 @@ INSERT INTO `weapon` VALUES
 (10691,'Themis\' Tongue {PvP}','Mana Up','rhand','true',820,1,1,'fine_steel','a',201,10,'sword',8,0.00000,0,0,0,379,0,162,-1,-1,26970000,2157,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3014-2;3654-1;'),
 (10692,'Themis\' Tongue {PvP}','Magic Mental Shield','rhand','true',820,1,1,'fine_steel','a',201,10,'sword',8,0.00000,0,0,0,379,0,162,-1,-1,26970000,2157,'false','false','true','false','true',0,0,1035,2,50,0,0,0,0,'3552-1;3654-1;'),
 (10693,'Themis\' Tongue {PvP}','Magic Focus','rhand','true',820,1,1,'fine_steel','a',201,10,'sword',8,0.00000,0,0,0,379,0,162,-1,-1,26970000,2157,'false','false','true','false','true',0,0,1077,3,20,0,0,0,0,'3552-1;3654-1;'),
-(10694,'Cabrio\'s Hand {PvP}','Updown','rhand','true',1510,1,1,'fine_steel','a',201,20,'blunt',4,4.00000,0,0,0,379,0,162,-1,-1,26970000,2157,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3048-3;3654-1;'),
+(10694,'Cabrio\'s Hand {PvP}','Conversion','rhand','true',1510,1,1,'fine_steel','a',201,20,'blunt',4,4.00000,0,0,0,379,0,162,-1,-1,26970000,2157,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3048-3;3654-1;'),
 (10695,'Cabrio\'s Hand {PvP}','Mana Up','rhand','true',1510,1,1,'fine_steel','a',201,20,'blunt',4,4.00000,0,0,0,379,0,162,-1,-1,26970000,2157,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3014-2;3654-1;'),
 (10696,'Cabrio\'s Hand {PvP}','Magic Silence','rhand','true',1510,1,1,'fine_steel','a',201,20,'blunt',4,4.00000,0,0,0,379,0,162,-1,-1,26970000,2157,'false','false','true','false','true',0,0,3074,2,10,0,0,0,0,'3552-1;3654-1;'),
 (10697,'Daimon Crystal {PvP}','Mana Up','lrhand','true',880,1,1,'fine_steel','a',245,20,'bigblunt',4,4.00000,0,0,0,325,0,177,-1,-1,26970000,2157,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3014-2;3654-1;'),
@@ -1796,12 +1796,12 @@ INSERT INTO `weapon` VALUES
 (10770,'Dynasty Bagh-Nakh {PvP}','Haste','lrhand','true',1550,1,1,'fine_steel','s80',405,5,'dualfist',4,4.00000,0,0,0,325,0,151,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3037-2;3651-1;3652-1;'),
 (10771,'Dynasty Phantom {PvP}','Acumen','rhand','true',1520,1,1,'fine_steel','s80',267,10,'sword',8,0.00000,0,0,0,379,0,202,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3047-3;3654-1;'),
 (10772,'Dynasty Phantom {PvP}','Mana Up','rhand','true',1520,1,1,'fine_steel','s80',267,10,'sword',8,0.00000,0,0,0,379,0,202,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3014-3;3654-1;'),
-(10773,'Dynasty Phantom {PvP}','Updown','rhand','true',1520,1,1,'fine_steel','s80',267,10,'sword',8,0.00000,0,0,0,379,0,202,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3048-3;3654-1;'),
+(10773,'Dynasty Phantom {PvP}','Conversion','rhand','true',1520,1,1,'fine_steel','s80',267,10,'sword',8,0.00000,0,0,0,379,0,202,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3048-3;3654-1;'),
 (10774,'Dynasty Mace {PvP}','Mana Up','rhand','true',1080,1,1,'fine_steel','s80',267,20,'blunt',4,4.00000,0,0,0,379,0,202,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3014-3;3654-1;'),
-(10775,'Dynasty Mace {PvP}','Updown','rhand','true',1080,1,1,'fine_steel','s80',267,20,'blunt',4,4.00000,0,0,0,379,0,202,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3048-3;3654-1;'),
+(10775,'Dynasty Mace {PvP}','Conversion','rhand','true',1080,1,1,'fine_steel','s80',267,20,'blunt',4,4.00000,0,0,0,379,0,202,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3048-3;3654-1;'),
 (10776,'Dynasty Mace {PvP}','Acumen','rhand','true',1080,1,1,'fine_steel','s80',267,20,'blunt',4,4.00000,0,0,0,379,0,202,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3047-3;3654-1;'),
 (10777,'Dynasty Staff {PvP}','Mana Up','lrhand','true',1080,1,1,'fine_steel','s80',325,20,'bigblunt',4,4.00000,0,0,0,325,0,222,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3014-3;3654-1;'),
-(10778,'Dynasty Staff {PvP}','Updown','lrhand','true',1080,1,1,'fine_steel','s80',325,20,'bigblunt',4,4.00000,0,0,0,325,0,222,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3048-3;3654-1;'),
+(10778,'Dynasty Staff {PvP}','Conversion','lrhand','true',1080,1,1,'fine_steel','s80',325,20,'bigblunt',4,4.00000,0,0,0,325,0,222,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3048-3;3654-1;'),
 (10779,'Dynasty Staff {PvP}','Acumen','lrhand','true',1080,1,1,'fine_steel','s80',325,20,'bigblunt',4,4.00000,0,0,0,325,0,222,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3047-3;3654-1;'),
 (10780,'Dynasty Bow {PvP}','Cheap Shot','lrhand','true',1520,1,1,'fine_steel','s80',654,5,'bow',12,-3.00000,0,0,0,293,11,151,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3552-1;3655-1;'),
 (10781,'Dynasty Bow {PvP}','Guidance','lrhand','true',1520,1,1,'fine_steel','s80',654,5,'bow',12,-3.00000,0,0,0,293,11,151,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3573-1;3655-1;'),
@@ -1946,7 +1946,7 @@ INSERT INTO `weapon` VALUES
 (10997,'Kaim Vanul\'s Bones - Earth','','rhand','true',1570,1,1,'fine_steel','b',155,20,'blunt',4,4.00000,0,0,0,379,0,132,-1,-1,10091400,1346,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (10998,'Kaim Vanul\'s Bones - Earth','Mana Up','rhand','true',1570,1,1,'fine_steel','b',155,20,'blunt',4,4.00000,0,0,0,379,0,132,-1,-1,10091400,1346,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3014-2;'),
 (10999,'Kaim Vanul\'s Bones - Earth','Magic Silence','rhand','true',1570,1,1,'fine_steel','b',155,20,'blunt',4,4.00000,0,0,0,379,0,132,-1,-1,10091400,1346,'true','true','true','true','true',0,0,3078,3,10,0,0,0,0,'0-0;'),
-(11000,'Kaim Vanul\'s Bones - Earth','Updown','rhand','true',1570,1,1,'fine_steel','b',155,20,'blunt',4,4.00000,0,0,0,379,0,132,-1,-1,10091400,1346,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3048-1;'),
+(11000,'Kaim Vanul\'s Bones - Earth','Conversion','rhand','true',1570,1,1,'fine_steel','b',155,20,'blunt',4,4.00000,0,0,0,379,0,132,-1,-1,10091400,1346,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3048-1;'),
 (11001,'Colichemarde - Earth','','rhand','true',1350,1,1,'fine_steel','b',176,40,'rapier',10,-1.00000,0,0,0,406,0,99,-1,-1,10091400,1346,'true','true','true','true','true',3426,1,0,0,0,0,0,0,10959,'3831-1;'),
 (11002,'Colichemarde - Earth','Focus','rhand','true',1350,1,1,'fine_steel','b',176,40,'rapier',10,-1.00000,0,0,0,406,0,99,-1,-1,10091400,1346,'true','true','true','true','true',3426,1,0,0,0,0,0,0,10960,'3010-6;3831-1;'),
 (11003,'Colichemarde - Earth','Critical Damage','rhand','true',1350,1,1,'fine_steel','b',176,40,'rapier',10,-1.00000,0,0,0,406,0,99,-1,-1,10091400,1346,'true','true','true','true','true',3426,1,0,0,0,0,0,0,10961,'3023-3;3831-1;'),
@@ -1954,7 +1954,7 @@ INSERT INTO `weapon` VALUES
 (11005,'Wizard\'s Tear - Cleverness','','rhand','true',1350,1,1,'fine_steel','b',155,10,'sword',8,0.00000,0,0,0,379,0,132,-1,-1,10091400,1346,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (11006,'Wizard\'s Tear - Cleverness','Acumen','rhand','true',1350,1,1,'fine_steel','b',155,10,'sword',8,0.00000,0,0,0,379,0,132,-1,-1,10091400,1346,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3047-1;'),
 (11007,'Wizard\'s Tear - Cleverness','Magic Power','rhand','true',1350,1,1,'fine_steel','b',155,10,'sword',8,0.00000,0,0,0,379,0,132,-1,-1,10091400,1346,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3077-6;'),
-(11008,'Wizard\'s Tear - Cleverness','Updown','rhand','true',1350,1,1,'fine_steel','b',155,10,'sword',8,0.00000,0,0,0,379,0,132,-1,-1,10091400,1346,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3048-1;'),
+(11008,'Wizard\'s Tear - Cleverness','Conversion','rhand','true',1350,1,1,'fine_steel','b',155,10,'sword',8,0.00000,0,0,0,379,0,132,-1,-1,10091400,1346,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3048-1;'),
 (11009,'Bow of Peril - Earth','','lrhand','true',1700,3,1,'fine_steel','b',400,5,'bow',12,-3.00000,0,0,0,293,9,99,-1,-1,10091400,1346,'true','true','true','true','true',0,0,0,0,0,0,0,0,11013,'3867-1;'),
 (11010,'Bow of Peril - Earth','Guidance','lrhand','true',1700,3,1,'fine_steel','b',400,5,'bow',12,-3.00000,0,0,0,293,9,99,-1,-1,10091400,1346,'true','true','true','true','true',0,0,0,0,0,0,0,0,11014,'3008-6;3867-1;'),
 (11011,'Bow of Peril - Earth','Quick Recovery','lrhand','true',1700,3,1,'fine_steel','b',400,5,'bow',12,-3.00000,0,0,0,293,9,99,-1,-1,10091400,1346,'true','true','true','true','true',0,0,0,0,0,0,0,0,11015,'3867-1;'),
@@ -1965,7 +1965,7 @@ INSERT INTO `weapon` VALUES
 (11016,'Hell Hound - Earth','Cheap Shot','rhand','true',1700,2,1,'fine_steel','b',245,10,'crossbow',10,-1.00000,0,0,0,303,0,99,-1,-1,10091400,1346,'true','true','true','true','true',0,0,0,0,0,0,0,0,11012,'3872-1;'),
 (11017,'Dasparion\'s Staff - Hail','','lrhand','true',920,1,1,'fine_steel','a',207,20,'bigblunt',4,4.00000,0,0,0,325,0,157,-1,-1,14098000,1128,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3899-2;'),
 (11018,'Dasparion\'s Staff - Hail','Mana Up','lrhand','true',920,1,1,'fine_steel','a',207,20,'bigblunt',4,4.00000,0,0,0,325,0,157,-1,-1,14098000,1128,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3014-2;3899-2;'),
-(11019,'Dasparion\'s Staff - Hail','Updown','lrhand','true',920,1,1,'fine_steel','a',207,20,'bigblunt',4,4.00000,0,0,0,325,0,157,-1,-1,14098000,1128,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3048-2;3899-2;'),
+(11019,'Dasparion\'s Staff - Hail','Conversion','lrhand','true',920,1,1,'fine_steel','a',207,20,'bigblunt',4,4.00000,0,0,0,325,0,157,-1,-1,14098000,1128,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3048-2;3899-2;'),
 (11020,'Dasparion\'s Staff - Hail','Acumen','lrhand','true',920,1,1,'fine_steel','a',207,20,'bigblunt',4,4.00000,0,0,0,325,0,157,-1,-1,14098000,1128,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3047-2;3899-2;'),
 (11021,'Doomchanter - Concentration','','rhand','true',1670,1,1,'fine_steel','a',270,10,'crossbow',10,-1.00000,0,0,0,303,0,107,-1,-1,14098000,1128,'true','true','true','true','true',0,0,0,0,0,0,0,0,11053,'3868-2;'),
 (11022,'Doomchanter - Concentration','Light','rhand','true',1670,1,1,'fine_steel','a',270,10,'crossbow',10,-1.00000,0,0,0,303,0,107,-1,-1,14098000,1128,'true','true','true','true','true',0,0,0,0,0,0,0,0,11054,'3498-1;3868-2;'),
@@ -2051,7 +2051,7 @@ INSERT INTO `weapon` VALUES
 (11102,'Flaming Dragon Skull - Wisdom','Magic Power','rhand','true',1530,1,1,'fine_steel','a',186,20,'blunt',4,4.00000,0,0,0,379,0,152,-1,-1,27000000,1659,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3073-1;3892-1;'),
 (11103,'Flaming Dragon Skull - Wisdom','Magic Silence','rhand','true',1530,1,1,'fine_steel','a',186,20,'blunt',4,4.00000,0,0,0,379,0,152,-1,-1,27000000,1659,'true','true','true','true','true',0,0,3074,2,10,0,0,0,0,'3552-1;3892-1;'),
 (11104,'Branch of the Mother Tree - Nature','','lrhand','true',900,1,1,'fine_steel','a',226,20,'bigblunt',4,4.00000,0,0,0,325,0,167,-1,-1,27000000,1659,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3901-1;'),
-(11105,'Branch of the Mother Tree - Nature','Updown','lrhand','true',900,1,1,'fine_steel','a',226,20,'bigblunt',4,4.00000,0,0,0,325,0,167,-1,-1,27000000,1659,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3048-2;3901-1;'),
+(11105,'Branch of the Mother Tree - Nature','Conversion','lrhand','true',900,1,1,'fine_steel','a',226,20,'bigblunt',4,4.00000,0,0,0,325,0,167,-1,-1,27000000,1659,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3048-2;3901-1;'),
 (11106,'Branch of the Mother Tree - Nature','Magic Damage','lrhand','true',900,1,1,'fine_steel','a',226,20,'bigblunt',4,4.00000,0,0,0,325,0,167,-1,-1,27000000,1659,'true','true','true','true','true',0,0,3049,2,30,0,0,0,0,'3552-1;3901-1;'),
 (11107,'Branch of the Mother Tree - Nature','Acumen','lrhand','true',900,1,1,'fine_steel','a',226,20,'bigblunt',4,4.00000,0,0,0,325,0,167,-1,-1,27000000,1659,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3047-2;3901-1;'),
 (11108,'Sword of Miracles - Holy Spirit','','rhand','true',840,1,1,'fine_steel','a',186,10,'sword',8,0.00000,0,0,0,379,0,152,-1,-1,27000000,1659,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3856-1;'),
@@ -2133,7 +2133,7 @@ INSERT INTO `weapon` VALUES
 (11184,'Themis\' Tongue - Cleverness','Magic Mental Shield','rhand','true',820,1,1,'fine_steel','a',202,10,'sword',8,0.00000,0,0,0,379,0,161,-1,-1,26970000,2157,'true','true','true','true','true',0,0,1035,2,50,0,0,0,0,'3552-1;3853-1;'),
 (11185,'Themis\' Tongue - Cleverness','Magic Focus','rhand','true',820,1,1,'fine_steel','a',202,10,'sword',8,0.00000,0,0,0,379,0,161,-1,-1,26970000,2157,'true','true','true','true','true',0,0,1077,3,20,0,0,0,0,'3552-1;3853-1;'),
 (11186,'Cabrio\'s Hand - Cleverness','','rhand','true',1510,1,1,'fine_steel','a',202,20,'blunt',4,4.00000,0,0,0,379,0,161,-1,-1,26970000,2157,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3893-1;'),
-(11187,'Cabrio\'s Hand - Cleverness','Updown','rhand','true',1510,1,1,'fine_steel','a',202,20,'blunt',4,4.00000,0,0,0,379,0,161,-1,-1,26970000,2157,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3048-3;3893-1;'),
+(11187,'Cabrio\'s Hand - Cleverness','Conversion','rhand','true',1510,1,1,'fine_steel','a',202,20,'blunt',4,4.00000,0,0,0,379,0,161,-1,-1,26970000,2157,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3048-3;3893-1;'),
 (11188,'Cabrio\'s Hand - Cleverness','Mana Up','rhand','true',1510,1,1,'fine_steel','a',202,20,'blunt',4,4.00000,0,0,0,379,0,161,-1,-1,26970000,2157,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3014-2;3893-1;'),
 (11189,'Cabrio\'s Hand - Cleverness','Magic Silence','rhand','true',1510,1,1,'fine_steel','a',202,20,'blunt',4,4.00000,0,0,0,379,0,161,-1,-1,26970000,2157,'true','true','true','true','true',0,0,3074,2,10,0,0,0,0,'3552-1;3893-1;'),
 (11190,'Gram - Thunder','','lrhand','true',1800,1,1,'fine_steel','s',304,15,'ancient',8,2.00000,0,0,0,350,0,132,-1,-1,42759400,2052,'true','true','true','true','true',0,0,0,0,0,0,0,0,11239,'3850-1;'),
@@ -2204,7 +2204,7 @@ INSERT INTO `weapon` VALUES
 (11255,'Dynasty Rapier - Earth','Light','rhand','true',1280,1,1,'fine_steel','s80',302,40,'rapier',10,-1.00000,0,0,0,406,0,151,-1,-1,74946000,3597,'true','true','true','true','true',3426,1,0,0,0,0,0,0,11275,'3498-1;'),
 (11256,'Dynasty Mace - Earth','','rhand','true',1080,1,1,'fine_steel','s80',267,20,'blunt',4,4.00000,0,0,0,379,0,202,-1,-1,74946000,3597,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (11257,'Dynasty Mace - Earth','Mana Up','rhand','true',1080,1,1,'fine_steel','s80',267,20,'blunt',4,4.00000,0,0,0,379,0,202,-1,-1,74946000,3597,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3014-3;'),
-(11258,'Dynasty Mace - Earth','Updown','rhand','true',1080,1,1,'fine_steel','s80',267,20,'blunt',4,4.00000,0,0,0,379,0,202,-1,-1,74946000,3597,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3048-3;'),
+(11258,'Dynasty Mace - Earth','Conversion','rhand','true',1080,1,1,'fine_steel','s80',267,20,'blunt',4,4.00000,0,0,0,379,0,202,-1,-1,74946000,3597,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3048-3;'),
 (11259,'Dynasty Mace - Earth','Acumen','rhand','true',1080,1,1,'fine_steel','s80',267,20,'blunt',4,4.00000,0,0,0,379,0,202,-1,-1,74946000,3597,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3047-2;'),
 (11260,'Dynasty Bagh-Nakh - Great Gale','','lrhand','true',1550,1,1,'fine_steel','s80',405,5,'dualfist',4,4.00000,0,0,0,325,0,151,-1,-1,74946000,3597,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (11261,'Dynasty Bagh-Nakh - Great Gale','Rsk. Evasion','lrhand','true',1550,1,1,'fine_steel','s80',405,5,'dualfist',4,4.00000,0,0,0,325,0,151,-1,-1,74946000,3597,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3069-1;'),
@@ -2224,7 +2224,7 @@ INSERT INTO `weapon` VALUES
 (11275,'Dynasty Sword - Earth','Light','rhand','true',1520,1,1,'fine_steel','s80',333,10,'sword',8,0.00000,0,0,0,379,0,151,-1,-1,74946000,3597,'true','true','true','true','true',0,0,0,0,0,0,0,0,11255,'3498-1;'),
 (11276,'Dynasty Staff - Holy Spirit','','lrhand','true',1080,1,1,'fine_steel','s80',325,20,'bigblunt',4,4.00000,0,0,0,325,0,222,-1,-1,74946000,3597,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (11277,'Dynasty Staff - Holy Spirit','Mana Up','lrhand','true',1080,1,1,'fine_steel','s80',325,20,'bigblunt',4,4.00000,0,0,0,325,0,222,-1,-1,74946000,3597,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3014-3;'),
-(11278,'Dynasty Staff - Holy Spirit','Updown','lrhand','true',1080,1,1,'fine_steel','s80',325,20,'bigblunt',4,4.00000,0,0,0,325,0,222,-1,-1,74946000,3597,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3048-3;'),
+(11278,'Dynasty Staff - Holy Spirit','Conversion','lrhand','true',1080,1,1,'fine_steel','s80',325,20,'bigblunt',4,4.00000,0,0,0,325,0,222,-1,-1,74946000,3597,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3048-3;'),
 (11279,'Dynasty Staff - Holy Spirit','Acumen','lrhand','true',1080,1,1,'fine_steel','s80',325,20,'bigblunt',4,4.00000,0,0,0,325,0,222,-1,-1,74946000,3597,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3047-2;'),
 (11280,'Dynasty Cudgel - Landslide','','rhand','true',1740,1,1,'fine_steel','s80',333,20,'blunt',4,4.00000,0,0,0,379,0,151,-1,-1,74946000,3597,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (11281,'Dynasty Cudgel - Landslide','Anger','rhand','true',1740,1,1,'fine_steel','s80',333,20,'blunt',4,4.00000,0,0,0,379,0,151,-1,-1,74946000,3597,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3057-3;'),
@@ -2241,7 +2241,7 @@ INSERT INTO `weapon` VALUES
 (11292,'Dynasty Phantom - Nature','','rhand','true',1520,1,1,'fine_steel','s80',267,10,'sword',8,0.00000,0,0,0,379,0,202,-1,-1,74946000,3597,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (11293,'Dynasty Phantom - Nature','Acumen','rhand','true',1520,1,1,'fine_steel','s80',267,10,'sword',8,0.00000,0,0,0,379,0,202,-1,-1,74946000,3597,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3047-2;'),
 (11294,'Dynasty Phantom - Nature','Mana Up','rhand','true',1520,1,1,'fine_steel','s80',267,10,'sword',8,0.00000,0,0,0,379,0,202,-1,-1,74946000,3597,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3014-3;'),
-(11295,'Dynasty Phantom - Nature','Updown','rhand','true',1520,1,1,'fine_steel','s80',267,10,'sword',8,0.00000,0,0,0,379,0,202,-1,-1,74946000,3597,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3048-3;'),
+(11295,'Dynasty Phantom - Nature','Conversion','rhand','true',1520,1,1,'fine_steel','s80',267,10,'sword',8,0.00000,0,0,0,379,0,202,-1,-1,74946000,3597,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3048-3;'),
 (11296,'Dynasty Halberd - Earth','','lrhand','true',2010,1,1,'fine_steel','s80',333,10,'pole',8,-3.00000,0,0,0,325,0,151,-1,-1,74946000,3597,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3599-1;'),
 (11297,'Dynasty Halberd - Earth','Anger','lrhand','true',2010,1,1,'fine_steel','s80',333,10,'pole',8,-3.00000,0,0,0,325,0,151,-1,-1,74946000,3597,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3600-10;'),
 (11298,'Dynasty Halberd - Earth','Critical Stun','lrhand','true',2010,1,1,'fine_steel','s80',333,10,'pole',8,-3.00000,0,0,0,325,0,151,-1,-1,74946000,3597,'true','true','true','true','true',0,0,0,0,0,3070,3,48,0,'3552-2;'),
@@ -2266,7 +2266,7 @@ INSERT INTO `weapon` VALUES
 (11317,'Icarus Spirit - Nature','','rhand','true',1520,1,1,'fine_steel','s80',290,10,'sword',8,0.00000,0,0,0,379,0,217,-1,-1,103439000,4965,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (11318,'Icarus Spirit - Nature','Acumen','rhand','true',1520,1,1,'fine_steel','s80',290,10,'sword',8,0.00000,0,0,0,379,0,217,-1,-1,103439000,4965,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3047-3;'),
 (11319,'Icarus Spirit - Nature','Mana Up','rhand','true',1520,1,1,'fine_steel','s80',290,10,'sword',8,0.00000,0,0,0,379,0,217,-1,-1,103439000,4965,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3014-3;'),
-(11320,'Icarus Spirit - Nature','Updown','rhand','true',1520,1,1,'fine_steel','s80',290,10,'sword',8,0.00000,0,0,0,379,0,217,-1,-1,103439000,4965,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3048-3;'),
+(11320,'Icarus Spirit - Nature','Conversion','rhand','true',1520,1,1,'fine_steel','s80',290,10,'sword',8,0.00000,0,0,0,379,0,217,-1,-1,103439000,4965,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3048-3;'),
 (11321,'Icarus Spitter - Concentration','','lrhand','true',1520,1,1,'fine_steel','s80',689,5,'bow',12,-3.00000,0,0,0,293,11,163,-1,-1,103439000,4965,'true','true','true','true','true',0,0,0,0,0,0,0,0,11309,'0-0;'),
 (11322,'Icarus Spitter - Concentration','Cheap Shot','lrhand','true',1520,1,1,'fine_steel','s80',689,5,'bow',12,-3.00000,0,0,0,293,11,163,-1,-1,103439000,4965,'true','true','true','true','true',0,0,0,0,0,0,0,0,11310,'3552-1;'),
 (11323,'Icarus Spitter - Concentration','Guidance','lrhand','true',1520,1,1,'fine_steel','s80',689,5,'bow',12,-3.00000,0,0,0,293,11,163,-1,-1,103439000,4965,'true','true','true','true','true',0,0,0,0,0,0,0,0,11311,'3573-1;'),
@@ -2295,7 +2295,7 @@ INSERT INTO `weapon` VALUES
 (11344,'Icarus Heavy Arms - Lightning','Light','lrhand','true',1740,1,1,'fine_steel','s80',442,10,'bigsword',8,0.00000,0,0,0,325,0,163,-1,-1,103439000,4965,'true','true','true','true','true',0,0,0,0,0,0,0,0,11328,'3498-1;'),
 (11345,'Icarus Hall - Hail','','rhand','true',1080,1,1,'fine_steel','s80',290,20,'blunt',4,4.00000,0,0,0,379,0,217,-1,-1,103439000,4965,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'0-0;'),
 (11346,'Icarus Hall - Hail','Mana Up','rhand','true',1080,1,1,'fine_steel','s80',290,20,'blunt',4,4.00000,0,0,0,379,0,217,-1,-1,103439000,4965,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3014-3;'),
-(11347,'Icarus Hall - Hail','Updown','rhand','true',1080,1,1,'fine_steel','s80',290,20,'blunt',4,4.00000,0,0,0,379,0,217,-1,-1,103439000,4965,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3048-3;'),
+(11347,'Icarus Hall - Hail','Conversion','rhand','true',1080,1,1,'fine_steel','s80',290,20,'blunt',4,4.00000,0,0,0,379,0,217,-1,-1,103439000,4965,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3048-3;'),
 (11348,'Icarus Hall - Hail','Acumen','rhand','true',1080,1,1,'fine_steel','s80',290,20,'blunt',4,4.00000,0,0,0,379,0,217,-1,-1,103439000,4965,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3047-3;'),
 (11362,'Zubei\'s Shield','','lhand','true',1210,0,0,'fine_steel','b',0,0,'none',0,0.00000,-8,216,20,0,0,0,-1,-1,419000,56,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3681-1;'),
 (11374,'Avadon Shield','','lhand','true',1210,0,0,'fine_steel','b',0,0,'none',0,0.00000,-8,216,20,0,0,0,-1,-1,419000,56,'true','true','true','true','true',0,0,0,0,0,0,0,0,0,'3687-1;'),
@@ -2791,7 +2791,7 @@ INSERT INTO `weapon` VALUES
 (12889,'Themis\' Tongue - Cleverness {PvP}','Mana Up','rhand','true',820,1,1,'fine_steel','a',202,10,'sword',8,0.00000,0,0,0,379,0,161,-1,-1,26970000,2157,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3014-2;3853-1;'),
 (12890,'Themis\' Tongue - Cleverness {PvP}','Magic Mental Shield','rhand','true',820,1,1,'fine_steel','a',202,10,'sword',8,0.00000,0,0,0,379,0,161,-1,-1,26970000,2157,'false','false','true','false','true',0,0,1035,2,50,0,0,0,0,'3552-1;3853-1;'),
 (12891,'Themis\' Tongue - Cleverness {PvP}','Magic Focus','rhand','true',820,1,1,'fine_steel','a',202,10,'sword',8,0.00000,0,0,0,379,0,161,-1,-1,26970000,2157,'false','false','true','false','true',0,0,1077,3,20,0,0,0,0,'3552-1;3853-1;'),
-(12892,'Cabrio\'s Hand - Cleverness {PvP}','Updown','rhand','true',1510,1,1,'fine_steel','a',202,20,'blunt',4,4.00000,0,0,0,379,0,161,-1,-1,26970000,2157,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3048-3;3893-1;'),
+(12892,'Cabrio\'s Hand - Cleverness {PvP}','Conversion','rhand','true',1510,1,1,'fine_steel','a',202,20,'blunt',4,4.00000,0,0,0,379,0,161,-1,-1,26970000,2157,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3048-3;3893-1;'),
 (12893,'Cabrio\'s Hand - Cleverness {PvP}','Mana Up','rhand','true',1510,1,1,'fine_steel','a',202,20,'blunt',4,4.00000,0,0,0,379,0,161,-1,-1,26970000,2157,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3014-2;3893-1;'),
 (12894,'Cabrio\'s Hand - Cleverness {PvP}','Magic Silence','rhand','true',1510,1,1,'fine_steel','a',202,20,'blunt',4,4.00000,0,0,0,379,0,161,-1,-1,26970000,2157,'false','false','true','false','true',0,0,3074,2,10,0,0,0,0,'3552-1;3893-1;'),
 (12895,'Gram - Thunder {PvP}','Haste','lrhand','true',1800,1,1,'fine_steel','s',304,15,'ancient',8,2.00000,0,0,0,350,0,132,-1,-1,42759400,2052,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3564-1;3653-1;3850-1;'),
@@ -2845,7 +2845,7 @@ INSERT INTO `weapon` VALUES
 (12943,'Dynasty Rapier - Earth {PvP}','Health','rhand','true',1280,1,1,'fine_steel','s80',302,40,'rapier',10,-1.00000,0,0,0,406,0,151,-1,-1,74946000,3597,'false','false','true','false','true',3426,1,0,0,0,0,0,0,0,'3013-5;3650-1;'),
 (12944,'Dynasty Rapier - Earth {PvP}','Light','rhand','true',1280,1,1,'fine_steel','s80',302,40,'rapier',10,-1.00000,0,0,0,406,0,151,-1,-1,74946000,3597,'false','false','true','false','true',3426,1,0,0,0,0,0,0,0,'3498-1;3650-1;'),
 (12945,'Dynasty Mace - Earth {PvP}','Mana Up','rhand','true',1080,1,1,'fine_steel','s80',267,20,'blunt',4,4.00000,0,0,0,379,0,202,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3014-3;3654-1;'),
-(12946,'Dynasty Mace - Earth {PvP}','Updown','rhand','true',1080,1,1,'fine_steel','s80',267,20,'blunt',4,4.00000,0,0,0,379,0,202,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3048-3;3654-1;'),
+(12946,'Dynasty Mace - Earth {PvP}','Conversion','rhand','true',1080,1,1,'fine_steel','s80',267,20,'blunt',4,4.00000,0,0,0,379,0,202,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3048-3;3654-1;'),
 (12947,'Dynasty Mace - Earth {PvP}','Acumen','rhand','true',1080,1,1,'fine_steel','s80',267,20,'blunt',4,4.00000,0,0,0,379,0,202,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3047-2;3654-1;'),
 (12948,'Dynasty Bagh-Nakh - Great Gale {PvP}','Rsk. Evasion','lrhand','true',1550,1,1,'fine_steel','s80',405,5,'dualfist',4,4.00000,0,0,0,325,0,151,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3069-1;3651-1;3652-1;'),
 (12949,'Dynasty Bagh-Nakh - Great Gale {PvP}','Focus','lrhand','true',1550,1,1,'fine_steel','s80',405,5,'dualfist',4,4.00000,0,0,0,325,0,151,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3565-2;3651-1;3652-1;'),
@@ -2860,7 +2860,7 @@ INSERT INTO `weapon` VALUES
 (12958,'Dynasty Sword - Earth {PvP}','Health','rhand','true',1520,1,1,'fine_steel','s80',333,10,'sword',8,0.00000,0,0,0,379,0,151,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3013-5;3650-1;'),
 (12959,'Dynasty Sword - Earth {PvP}','Light','rhand','true',1520,1,1,'fine_steel','s80',333,10,'sword',8,0.00000,0,0,0,379,0,151,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3498-1;3650-1;'),
 (12960,'Dynasty Staff - Holy Spirit {PvP}','Mana Up','lrhand','true',1080,1,1,'fine_steel','s80',325,20,'bigblunt',4,4.00000,0,0,0,325,0,222,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3014-3;3654-1;'),
-(12961,'Dynasty Staff - Holy Spirit {PvP}','Updown','lrhand','true',1080,1,1,'fine_steel','s80',325,20,'bigblunt',4,4.00000,0,0,0,325,0,222,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3048-3;3654-1;'),
+(12961,'Dynasty Staff - Holy Spirit {PvP}','Conversion','lrhand','true',1080,1,1,'fine_steel','s80',325,20,'bigblunt',4,4.00000,0,0,0,325,0,222,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3048-3;3654-1;'),
 (12962,'Dynasty Staff - Holy Spirit {PvP}','Acumen','lrhand','true',1080,1,1,'fine_steel','s80',325,20,'bigblunt',4,4.00000,0,0,0,325,0,222,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3047-2;3654-1;'),
 (12963,'Dynasty Cudgel - Landslide {PvP}','Anger','rhand','true',1740,1,1,'fine_steel','s80',333,20,'blunt',4,4.00000,0,0,0,379,0,151,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3057-3;3650-1;'),
 (12964,'Dynasty Cudgel - Landslide {PvP}','Health','rhand','true',1740,1,1,'fine_steel','s80',333,20,'blunt',4,4.00000,0,0,0,379,0,151,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3013-5;3650-1;'),
@@ -2873,7 +2873,7 @@ INSERT INTO `weapon` VALUES
 (12971,'Dynasty Crossbow - Great Gale {PvP}','Focus','rhand','true',1580,1,1,'fine_steel','s80',401,10,'crossbow',10,-1.00000,0,0,0,303,0,151,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3567-2;3655-1;'),
 (12972,'Dynasty Phantom - Nature {PvP}','Acumen','rhand','true',1520,1,1,'fine_steel','s80',267,10,'sword',8,0.00000,0,0,0,379,0,202,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3047-2;3654-1;'),
 (12973,'Dynasty Phantom - Nature {PvP}','Mana Up','rhand','true',1520,1,1,'fine_steel','s80',267,10,'sword',8,0.00000,0,0,0,379,0,202,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3014-3;3654-1;'),
-(12974,'Dynasty Phantom - Nature {PvP}','Updown','rhand','true',1520,1,1,'fine_steel','s80',267,10,'sword',8,0.00000,0,0,0,379,0,202,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3048-3;3654-1;'),
+(12974,'Dynasty Phantom - Nature {PvP}','Conversion','rhand','true',1520,1,1,'fine_steel','s80',267,10,'sword',8,0.00000,0,0,0,379,0,202,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3048-3;3654-1;'),
 (12975,'Dynasty Halberd - Earth {PvP}','Anger','lrhand','true',2010,1,1,'fine_steel','s80',333,10,'pole',8,-3.00000,0,0,0,325,0,151,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3600-10;3653-1;'),
 (12976,'Dynasty Halberd - Earth {PvP}','Critical Stun','lrhand','true',2010,1,1,'fine_steel','s80',333,10,'pole',8,-3.00000,0,0,0,325,0,151,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,3070,3,48,0,'3552-2;3653-1;'),
 (12977,'Dynasty Halberd - Earth {PvP}','Light','lrhand','true',2010,1,1,'fine_steel','s80',333,10,'pole',8,-3.00000,0,0,0,325,0,151,-1,-1,74946000,3597,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'3599-1;3498-1;3653-1;'),
@@ -3457,6 +3457,7 @@ INSERT INTO `weapon` VALUES
 (15342,'Aqua Elf Transforming Harp','60 day limited period','rhand','false',0,0,0,'wood','none',1,10,'sword',8,0.00000,0,0,0,379,0,1,-1,86400,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'2994-1;'),
 (15344,'Aqua Elf Transforming Harp - Event','60 day limited period','rhand','false',0,0,0,'wood','none',1,10,'sword',8,0.00000,0,0,0,379,0,1,-1,86400,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'2994-1;'),
 (15403,'PC Cafe Use - Berserker Blade','Weapon for PC Cafe Use','none','false',1380,3,3,'wood','none',190,10,'none',8,0.00000,0,0,0,325,0,83,-1,-1,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'0-0;'),
+(15436,'Halloween Transformation Stick','7 day limited period','none','false',10,0,0,'wood','none',1,10,'none',0,0.00000,0,0,0,379,0,1,-1,10080,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'0-0;'),
 (20109,'Sword of Revolution - Event','4 Hour Expiration Period','rhand','false',483,3,3,'fine_steel','d',79,10,'sword',8,0.00000,0,0,0,379,0,47,-1,240,0,0,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'21017-1;'),
 (20110,'Titan Sword - Event','4 Hour Expiration Period','lrhand','false',673,3,3,'fine_steel','d',96,10,'bigsword',8,0.00000,0,0,0,325,0,47,-1,240,0,0,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'21018-1;'),
 (20111,'Maingauche - Event','4 Hour Expiration Period','rhand','false',357,3,3,'fine_steel','d',69,5,'dagger',12,-3.00000,0,0,0,433,0,47,-1,240,0,0,'false','false','true','false','true',0,0,0,0,0,0,0,0,0,'21019-1;'),
@@ -3550,27 +3551,3 @@ INSERT INTO `weapon` VALUES
 (20644,'Standard Item - Plate Shield','','lhand','false',100,0,0,'wood','d',0,0,'none',0,0.00000,-8,154,20,0,0,0,-1,-1,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'0-0;'),
 (20649,'Standard Item - Ghost Staff','','lrhand','false',100,3,3,'wood','d',90,20,'bigblunt',4,4.00000,0,0,0,325,0,79,-1,-1,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'0-0;'),
 (20867,'Kadomas Transformation Stick','7 day limited period','lrhand','false',150,0,0,'wood','none',1,10,'none',8,0.00000,0,0,0,379,0,1,-1,10080,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'21169-1;');
-
--- Fixes all improper weapon slotting.
-UPDATE `weapon` SET bodypart = "rhand" WHERE (weaponType = "dagger") or (weaponType = "sword") or (weaponType = "rapier") or (weaponType = "crossbow");
-UPDATE `weapon` SET bodypart = "lrhand" WHERE (weaponType = "pole") or (weaponType = "bow") or (weaponType = "ancient") or (weaponType = "bigsword") or (weaponType = "bigblunt") or (weaponType = "dualfist") or (weaponType = "dual") or (weaponType = "dualdagger");
-
-UPDATE `weapon` SET time = "240" WHERE (additionalname LIKE '%4 hour%') or (additionalname LIKE '%4-hour%');
-UPDATE `weapon` SET time = "10080" WHERE (additionalname LIKE '%7 Day%') or (additionalname LIKE '%7-Day%');
-UPDATE `weapon` SET time = "14400" WHERE (additionalname LIKE '%10 Day%') or (additionalname LIKE '%10-Day%');
-UPDATE `weapon` SET time = "20160" WHERE (additionalname LIKE '%14 Day%') or (additionalname LIKE '%14-Day%');
-UPDATE `weapon` SET time = "43200" WHERE (additionalname LIKE '%30 Day%') or (additionalname LIKE '%30-Day%');
-UPDATE `weapon` SET time = "86400" WHERE (additionalname LIKE '%60 Day%') or (additionalname LIKE '%60-Day%');
-
--- Ensures that all rapiers have the rapier skill, then sets the Infinity Rapier one to 0 (since it's called via the Infinity SA)
-UPDATE `weapon` SET enchant4_skill_id = "3426", enchant4_skill_lvl = "1" WHERE weaponType = "rapier";
-UPDATE `weapon` SET enchant4_skill_id = "0", enchant4_skill_lvl = "0" WHERE item_id = "9388";
-
--- Weapons that are limited should not be able to be changed as far as I know. I do not know if changing a weapon will reset the timer on it. Until tested, this entry should remain. Just to be safe. ;)
-UPDATE `weapon` SET change_weaponId = "0" WHERE (duration > 0) or (time > 0);
-
--- Despite this change not being EXACTLY retail-like, I find it maintains proper logic. It also prevents any possible exploit that might come from having retail information (prices and crystal counts) on NPC items.
-UPDATE `weapon` SET crystallizable = "false", crystal_type = "none", price = "0", crystal_count = "0" WHERE name LIKE '%NPC Item %';
-
--- PvP weapons can not be changed via the Kamael skill, or traded, or dropped, or shipped, or sold. Just like augmented items but with more restrictions.
-UPDATE `weapon` SET change_weaponId = "0", sellable = "false", dropable = "false", tradeable = "false" WHERE name LIKE '%{PvP}%';
