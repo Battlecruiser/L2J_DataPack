@@ -9853,3 +9853,10 @@ INSERT INTO `npc` VALUES
 (36597,36597,'Supplies Safe',0,'',0,'LineageMonster.mimic',8.50,8.50,80,'male','L2Monster',40,5198,1859,0.00,0.00,40,43,30,21,20,20,0,0,1952,577,905,469,253,0,333,0,0,0,0,80,1,0,0,'LAST_HIT','false'),
 (36598,36598,'Supplies Safe',0,'',0,'LineageMonster.mimic',8.50,8.50,80,'male','L2Monster',40,5198,1859,0.00,0.00,40,43,30,21,20,20,0,0,1952,577,905,469,253,0,333,0,0,0,0,80,1,0,0,'LAST_HIT','false'),
 (36599,36599,'Supplies Safe',0,'',0,'LineageMonster.mimic',8.50,8.50,80,'male','L2Monster',40,5198,1859,0.00,0.00,40,43,30,21,20,20,0,0,1952,577,905,469,253,0,333,0,0,0,0,80,1,0,0,'LAST_HIT','false');
+
+-- 
+-- Addons
+--
+
+-- Defenders correction
+UPDATE `npc` SET `isUndead`='0' WHERE `type`='L2Defender';
