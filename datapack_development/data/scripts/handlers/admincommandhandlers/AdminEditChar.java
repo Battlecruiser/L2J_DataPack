@@ -101,6 +101,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		"admin_changename", // changes char name
 		"admin_setsex", // changes characters' sex
 		"admin_setcolor", // change charnames' color display
+		"admin_settcolor", // change char title color
 		"admin_setclass", // changes chars' classId
 		"admin_setpk",		// changes PK count
 		"admin_setpvp",		// changes PVP count
@@ -478,6 +479,30 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				player.getAppearance().setNameColor(Integer.decode("0x" + val));
 				player.sendMessage("Your name color has been changed by a GM");
+				player.broadcastUserInfo();
+			}
+			catch (Exception e)
+			{ //Case of empty color or invalid hex string
+				activeChar.sendMessage("You need to specify a valid new color.");
+			}
+		}
+		else if (command.startsWith("admin_settcolor"))
+		{
+			try
+			{
+				String val = command.substring(16);
+				L2Object target = activeChar.getTarget();
+				L2PcInstance player = null;
+				if (target instanceof L2PcInstance)
+				{
+					player = (L2PcInstance) target;
+				}
+				else
+				{
+					return false;
+				}
+				player.getAppearance().setTitleColor(Integer.decode("0x" + val));
+				player.sendMessage("Your title color has been changed by a GM");
 				player.broadcastUserInfo();
 			}
 			catch (Exception e)
