@@ -127,6 +127,7 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_changename','1'),
 ('admin_setsex','1'),
 ('admin_setcolor','1'),
+('admin_settcolor','1'),
 ('admin_setclass','1'),
 ('admin_fullfood','1'),
 ('admin_remove_clan_penalty','1'),
