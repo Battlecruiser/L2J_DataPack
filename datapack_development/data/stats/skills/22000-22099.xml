@@ -244,26 +244,62 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="22023" levels="1" name="Simple Valentine Cake">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-	</skill>
-	<skill id="22024" levels="1" name="Velvety Valentine Cake">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-	</skill>
-	<skill id="22025" levels="1" name="Delectable Valentine Cake">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-	</skill>
-	<skill id="22026" levels="1" name="Decadent Valentine Cake">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-	</skill>
+ 	<skill id="22023" levels="1" name="Simple Valentine Cake">
+		<set name="itemConsumeId" val="20195"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="EXTRACTABLE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="-1"/>
+		<cond msgId="129">
+			<and>
+				<player invSize="10"/>
+				<player weight="80"/>
+			</and>
+		</cond>
+ 	</skill>
+ 	<skill id="22024" levels="1" name="Velvety Valentine Cake">
+		<set name="itemConsumeId" val="20196"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="EXTRACTABLE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="-1"/>
+		<cond msgId="129">
+			<and>
+				<player invSize="10"/>
+				<player weight="80"/>
+			</and>
+		</cond>
+ 	</skill>
+ 	<skill id="22025" levels="1" name="Delectable Valentine Cake">
+		<set name="itemConsumeId" val="20197"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="EXTRACTABLE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="-1"/>
+		<cond msgId="129">
+			<and>
+				<player invSize="10"/>
+				<player weight="80"/>
+			</and>
+		</cond>
+ 	</skill>
+ 	<skill id="22026" levels="1" name="Decadent Valentine Cake">
+		<set name="itemConsumeId" val="20198"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="EXTRACTABLE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="-1"/>
+		<cond msgId="129">
+			<and>
+				<player invSize="10"/>
+				<player weight="80"/>
+			</and>
+		</cond>
+ 	</skill>
 	<skill id="22027" levels="1" name="Heavenly Valentine Cake">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
