@@ -84,6 +84,7 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_itemcreate','1'),
 ('admin_create_item','1'),
 ('admin_give_item_target','1'),
+('admin_give_item_to_all','1'),
 
 -- CURSED WEPONS
 ('admin_cw_info','1'),
