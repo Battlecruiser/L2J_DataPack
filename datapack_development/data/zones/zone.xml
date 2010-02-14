@@ -12,16 +12,12 @@
 	<zone id="10007" type="DerbyTrackZone" shape="NPoly" minZ="-3624" maxZ="-3424" /> <!-- [20_23] dion_monster_race8 -->
 	<zone id="10008" type="Arena" shape="Npoly" minZ="-3596" maxZ="-3396"> <!-- [20_23] dion_monster_pvp -->
 		<stat name="name" val="Monster Race Track" />
-		<stat name="spawnX" val="12312" />
-		<stat name="spawnY" val="182752" />
-		<stat name="spawnZ" val="-3558" />
+		<spawn X="12312" Y="182752" Z="-3558" />
 	</zone>
 	<!-- Gludin Arena -->
 	<zone id="10009" type="Arena" shape="NPoly" minZ="-3752" maxZ="-3352"> <!-- [17_22] gludin_pvp -->
 		<stat name="name" val="Gludin Arena" />
-		<stat name="spawnX" val="-86979" />
-		<stat name="spawnY" val="142402" />
-		<stat name="spawnZ" val="-3643" />
+		<spawn X="-86979" Y="142402" Z="-3643" />
 	</zone>
 	<zone id="10010" type="PeaceZone" shape="NPoly" minZ="-3723" maxZ="-3223" /> <!-- [17_22] gludin_pvp_peace_1 -->
 	<zone id="10011" type="PeaceZone" shape="NPoly" minZ="-3745" maxZ="-3245" /> <!-- [17_22] gludin_pvp_peace_2 -->
@@ -31,9 +27,7 @@
 	<!-- Giran Arena -->
 	<zone id="10014" type="Arena" shape="NPoly" minZ="-3850" maxZ="-3350"> <!-- [22_22] giran_pvp_battle -->
 		<stat name="name" val="Giran Arena" />
-		<stat name="spawnX" val="73890" />
-		<stat name="spawnY" val="142656" />
-		<stat name="spawnZ" val="-3778" />
+		<spawn X="73890" Y="142656" Z="-3778" />
 	</zone>
 	<zone id="10015" type="PeaceZone" shape="NPoly" minZ="-3851" maxZ="-3351" /> <!-- [22_22] giran_pvp_peace1 -->
 	<zone id="10016" type="PeaceZone" shape="NPoly" minZ="-3855" maxZ="-3355" /> <!-- [22_22] giran_pvp_peace2 -->
@@ -43,21 +37,15 @@
 	<!-- Coliseum -->
 	<zone id="10019" type="Arena" shape="NPoly" minZ="-3498" maxZ="-3298"> <!-- [24_19] colosseum_battle1 -->
 		<stat name="name" val="Coliseum 1" />
-		<stat name="spawnX" val="147451" />
-		<stat name="spawnY" val="46728" />
-		<stat name="spawnZ" val="-3410" />
+		<spawn X="147451" Y="46728" Z="-3410" />
 	</zone>
 	<zone id="10020" type="Arena" shape="NPoly" minZ="-3498" maxZ="-3298"> <!-- [24_19] colosseum_battle2 -->
 		<stat name="name" val="Coliseum 2" />
-		<stat name="spawnX" val="147451" />
-		<stat name="spawnY" val="46728" />
-		<stat name="spawnZ" val="-3410" />
+		<spawn X="147451" Y="46728" Z="-3410" />
 	</zone>
 	<zone id="10021" type="Arena" shape="NPoly" minZ="-3587" maxZ="-3387"> <!-- [24_19] colosseum_battle3 -->
 		<stat name="name" val="Coliseum 3" />
-		<stat name="spawnX" val="147451" />
-		<stat name="spawnY" val="46728" />
-		<stat name="spawnZ" val="-3410" />
+		<spawn X="147451" Y="46728" Z="-3410" />
 	</zone>
 	<zone id="10022" type="PeaceZone" shape="NPoly" minZ="-3468" maxZ="-3268" /> <!-- [24_19] colosseum_peace1 -->
 	<zone id="10023" type="PeaceZone" shape="NPoly" minZ="-3472" maxZ="-3272" /> <!-- [24_19] colosseum_peace2 -->
@@ -145,169 +133,356 @@
 		<stat name="townId" val="9" />
 		<stat name="redirectTownId" val="11" />
 		<stat name="taxById" val="3" />
-		<stat name="spawnX" val="81236" />
-		<stat name="spawnY" val="148638" />
-		<stat name="spawnZ" val="-3469" />
+		<spawn X="82480" Y="149087" Z="-3350" />
+		<spawn X="81440" Y="149119" Z="-3350" />
+		<spawn X="81376" Y="148095" Z="-3350" />
+		<spawn X="82496" Y="148095" Z="-3350" />
+		<spawn X="83473" Y="149223" Z="-3300" />
+		<spawn X="83426" Y="148835" Z="-3300" />
+		<spawn X="83409" Y="148578" Z="-3300" />
+		<spawn X="83415" Y="148235" Z="-3300" />
+		<spawn X="82272" Y="147801" Z="-3350" />
+		<spawn X="81562" Y="147782" Z="-3350" />
+		<spawn X="81062" Y="148144" Z="-3350" />
+		<spawn X="81033" Y="148883" Z="-3350" />
+		<spawn X="81637" Y="149427" Z="-3350" />
+		<spawn X="82292" Y="149450" Z="-3350" />
 	</zone>
 	<zone id="11021" type="Town" shape="NPoly" minZ="-4700" maxZ="-3600">
 		<stat name="name" val="DE Village" />
 		<stat name="townId" val="1" />
 		<stat name="taxById" val="4" />
-		<stat name="spawnX" val="12181" />
-		<stat name="spawnY" val="16675" />
-		<stat name="spawnZ" val="-4580" />
+		<spawn X="11632" Y="16812" Z="-4500" />
+		<spawn X="11217" Y="16837" Z="-4500" />
+		<spawn X="11498" Y="16979" Z="-4500" />
+		<spawn X="11404" Y="16699" Z="-4500" />
+		<spawn X="12501" Y="16768" Z="-4500" />
+		<spawn X="12104" Y="17385" Z="-4500" />
+		<spawn X="11603" Y="17770" Z="-4500" />
+		<spawn X="12519" Y="16376" Z="-4500" />
+		<spawn X="10355" Y="17270" Z="-4500" />
+		<spawn X="10146" Y="16965" Z="-4500" />
+		<spawn X="10691" Y="16343" Z="-4500" />
+		<spawn X="11193" Y="15963" Z="-4500" />
 	</zone>
 	<zone id="11022" type="Town" shape="NPoly" minZ="-3800" maxZ="-3700">
 		<stat name="name" val="Talking Island" />
 		<stat name="townId" val="2" />
 		<stat name="taxById" val="1" />
-		<stat name="spawnX" val="-84176" />
-		<stat name="spawnY" val="243382" />
-		<stat name="spawnZ" val="-3126" />
+		<spawn X="-83990" Y="243336" Z="-3700" />
+		<spawn X="-83964" Y="242680" Z="-3700" />
+		<spawn X="-84512" Y="242679" Z="-3700" />
+		<spawn X="-84623" Y="243193" Z="-3700" />
+		<spawn X="-83742" Y="242214" Z="-3700" />
+		<spawn X="-83537" Y="242537" Z="-3700" />
+		<spawn X="-83700" Y="242896" Z="-3700" />
+		<spawn X="-83646" Y="243397" Z="-3700" />
+		<spawn X="-83808" Y="243637" Z="-3700" />
+		<spawn X="-84903" Y="243489" Z="-3700" />
+		<spawn X="-84852" Y="243174" Z="-3700" />
+		<spawn X="-84892" Y="242479" Z="-3700" />
+		<spawn X="-84756" Y="242155" Z="-3700" />
+		<spawn X="-83761" Y="243620" Z="-3700" />
 	</zone>
 	<zone id="11023" type="Town" shape="NPoly" minZ="-3600" maxZ="-2750">
 		<stat name="name" val="Elven Village" />
 		<stat name="townId" val="3" />
 		<stat name="taxById" val="4" />
-		<stat name="spawnX" val="45525" />
-		<stat name="spawnY" val="48376" />
-		<stat name="spawnZ" val="-3059" />
+		<spawn X="45487" Y="49767" Z="-2950" />
+		<spawn X="45080" Y="49614" Z="-2950" />
+		<spawn X="45284" Y="49309" Z="-2950" />
+		<spawn X="45576" Y="49412" Z="-2950" />
+		<spawn X="45896" Y="49831" Z="-2950" />
+		<spawn X="45463" Y="50097" Z="-2950" />
+		<spawn X="44935" Y="49798" Z="-2950" />
+		<spawn X="44798" Y="49475" Z="-2950" />
+		<spawn X="45100" Y="49025" Z="-2950" />
+		<spawn X="45912" Y="49363" Z="-2950" />
+		<spawn X="45788" Y="49861" Z="-2950" />
+		<spawn X="45325" Y="50067" Z="-2950" />
 	</zone>
 	<zone id="11024" type="Town" shape="NPoly" minZ="-400" maxZ="-200">
 		<stat name="name" val="Orc Village" />
 		<stat name="townId" val="4" />
 		<stat name="taxById" val="9" />
-		<stat name="spawnX" val="-45232" />
-		<stat name="spawnY" val="-113603" />
-		<stat name="spawnZ" val="-224" />
+		<spawn X="-44316" Y="-113136" Z="-80" />
+		<spawn X="-44296" Y="-114048" Z="-80" />
+		<spawn X="-44704" Y="-112896" Z="-80" />
+		<spawn X="-44720" Y="-114304" Z="-80" />
+		<spawn X="-44206" Y="-113392" Z="-80" />
+		<spawn X="-43970" Y="-114150" Z="-80" />
+		<spawn X="-44328" Y="-114625" Z="-80" />
+		<spawn X="-44884" Y="-115063" Z="-80" />
+		<spawn X="-44923" Y="-114659" Z="-80" />
+		<spawn X="-44232" Y="-113701" Z="-80" />
+		<spawn X="-44596" Y="-112956" Z="-80" />
+		<spawn X="-44987" Y="-112394" Z="-80" />
+		<spawn X="-45498" Y="-111800" Z="-80" />
+		<spawn X="-44637" Y="-112373" Z="-80" />
+		<spawn X="-44189" Y="-113065" Z="-80" />
+		<spawn X="-44048" Y="-113463" Z="-80" />
 	</zone>
 	<zone id="11025" type="Town" shape="NPoly" minZ="-3300" maxZ="-3000">
 		<stat name="name" val="Gludin Village" />
 		<stat name="townId" val="5" />
 		<stat name="taxById" val="1" />
-		<stat name="spawnX" val="-82856" />
-		<stat name="spawnY" val="150901" />
-		<stat name="spawnZ" val="-3128" />
+		<spawn X="-83520" Y="150560" Z="-3000" />
+		<spawn X="-82464" Y="150848" Z="-3000" />
+		<spawn X="-84064" Y="150864" Z="-3000" />
+		<spawn X="-83408" Y="151376" Z="-3000" />
+		<spawn X="-82195" Y="150489" Z="-3000" />
+		<spawn X="-81787" Y="150780" Z="-3000" />
+		<spawn X="-81721" Y="151202" Z="-3000" />
+		<spawn X="-82241" Y="151163" Z="-3000" />
+		<spawn X="-82575" Y="151025" Z="-3000" />
+		<spawn X="-82909" Y="150357" Z="-3000" />
+		<spawn X="-83584" Y="150512" Z="-3000" />
+		<spawn X="-83529" Y="151205" Z="-3000" />
+		<spawn X="-82035" Y="152647" Z="-3000" />
+		<spawn X="-80053" Y="154348" Z="-3000" />
 	</zone>
 	<zone id="11026" type="Town" shape="NPoly" minZ="-1600" maxZ="-800">
 		<stat name="name" val="Dwarven Village" />
 		<stat name="townId" val="6" />
 		<stat name="taxById" val="9" />
-		<stat name="spawnX" val="115074" />
-		<stat name="spawnY" val="-178115" />
-		<stat name="spawnZ" val="-880" />
+		<spawn X="116176" Y="-182448" Z="-1400" />
+		<spawn X="116476" Y="-182904" Z="-1500" />
+		<spawn X="115248" Y="-178816" Z="-850" />
+		<spawn X="116352" Y="-179264" Z="-1000" />
+		<spawn X="115271" Y="-178561" Z="-820" />
+		<spawn X="115249" Y="-177859" Z="-820" />
+		<spawn X="115485" Y="-178077" Z="-820" />
+		<spawn X="115790" Y="-179146" Z="-890" />
+		<spawn X="116507" Y="-179597" Z="-1000" />
+		<spawn X="116725" Y="-180147" Z="-1000" />
+		<spawn X="116738" Y="-181494" Z="-1300" />
+		<spawn X="116775" Y="-182367" Z="-1400" />
+		<spawn X="116587" Y="-183032" Z="-1400" />
+		<spawn X="116321" Y="-182734" Z="-1400" />
 	</zone>
 	<zone id="11027" type="Town" shape="NPoly" minZ="-3200" maxZ="-2900">
 		<stat name="name" val="Gludio Castle Town" />
 		<stat name="townId" val="7" />
 		<stat name="redirectTownId" val="5" />
 		<stat name="taxById" val="1" />
-		<stat name="spawnX" val="-14138" />
-		<stat name="spawnY" val="122042" />
-		<stat name="spawnZ" val="-2988" />
+		<spawn X="-14288" Y="122752" Z="-3000" />
+		<spawn X="-14592" Y="123232" Z="-3000" />
+		<spawn X="-14704" Y="122032" Z="-3000" />
+		<spawn X="-13904" Y="123456" Z="-3000" />
+		<spawn X="-15314" Y="124131" Z="-3000" />
+		<spawn X="-15564" Y="123896" Z="-3000" />
+		<spawn X="-14279" Y="124446" Z="-3000" />
+		<spawn X="-14465" Y="124434" Z="-3000" />
+		<spawn X="-13709" Y="123563" Z="-3000" />
+		<spawn X="-13513" Y="123752" Z="-3000" />
+		<spawn X="-14683" Y="121945" Z="-3000" />
+		<spawn X="-14491" Y="121915" Z="-3000" />
 	</zone>
 	<zone id="11028" type="Town" shape="NPoly" minZ="-3250" maxZ="-2600">
 		<stat name="name" val="Dion Castle Town" />
 		<stat name="townId" val="8" />
 		<stat name="redirectTownId" val="7" />
 		<stat name="taxById" val="2" />
-		<stat name="spawnX" val="18823" />
-		<stat name="spawnY" val="145048" />
-		<stat name="spawnZ" val="-3126" />
+		<spawn X="19025" Y="145245" Z="-3107" />
+		<spawn X="18576" Y="145136" Z="-3104" />
+		<spawn X="18717" Y="145711" Z="-3097" />
+		<spawn X="18512" Y="145536" Z="-3100" />
+		<spawn X="18954" Y="144428" Z="-3000" />
+		<spawn X="19150" Y="143941" Z="-3020" />
+		<spawn X="19134" Y="144847" Z="-3020" />
+		<spawn X="19613" Y="145607" Z="-3020" />
+		<spawn X="18078" Y="145925" Z="-3020" />
+		<spawn X="17398" Y="145456" Z="-3000" />
+		<spawn X="17144" Y="145055" Z="-3000" />
+		<spawn X="19012" Y="145140" Z="-3020" />
 	</zone>
 	<zone id="11029" type="Town" shape="NPoly" minZ="-2250" maxZ="-1400">
 		<stat name="name" val="Town of Oren" />
 		<stat name="townId" val="10" />
 		<stat name="redirectTownId" val="11" />
 		<stat name="taxById" val="4" />
-		<stat name="spawnX" val="80853" />
-		<stat name="spawnY" val="54653" />
-		<stat name="spawnZ" val="-1524" />
+		<spawn X="80304" Y="56241" Z="-1500" />
+		<spawn X="80594" Y="55837" Z="-1500" />
+		<spawn X="79933" Y="55752" Z="-1500" />
+		<spawn X="80267" Y="55497" Z="-1500" />
+		<spawn X="80334" Y="54400" Z="-1500" />
+		<spawn X="82445" Y="56012" Z="-1480" />
+		<spawn X="82323" Y="55466" Z="-1480" />
+		<spawn X="82880" Y="55390" Z="-1480" />
+		<spawn X="82638" Y="53885" Z="-1440" />
+		<spawn X="82552" Y="53447" Z="-1440" />
+		<spawn X="82213" Y="53964" Z="-1440" />
+		<spawn X="80054" Y="53209" Z="-1500" />
+		<spawn X="79706" Y="52986" Z="-1500" />
+		<spawn X="82123" Y="53535" Z="-1440" />
 	</zone>
 	<zone id="11030" type="Town" shape="NPoly" minZ="-2800" maxZ="-1600">
 		<stat name="name" val="Hunter Village" />
 		<stat name="townId" val="11" />
 		<stat name="taxById" val="5" />
-		<stat name="spawnX" val="117163" />
-		<stat name="spawnY" val="76511" />
-		<stat name="spawnZ" val="-2712" />
+		<spawn X="116127" Y="76015" Z="-2729" />
+		<spawn X="115683" Y="77610" Z="-2650" />
+		<spawn X="117304" Y="76318" Z="-2670" />
+		<spawn X="119862" Y="76603" Z="-2220" />
+		<spawn X="117671" Y="78998" Z="-2210" />
+		<spawn X="117189" Y="78952" Z="-2210" />
+		<spawn X="115861" Y="75200" Z="-2550" />
+		<spawn X="118275" Y="74859" Z="-2557" />
+		<spawn X="118229" Y="74677" Z="-2450" />
+		<spawn X="115685" Y="75072" Z="-2550" />
+		<spawn X="116704" Y="75695" Z="-2680" />
+		<spawn X="116737" Y="76738" Z="-2650" />
+		<spawn X="115193" Y="77594" Z="-2670" />
+		<spawn X="116158" Y="77443" Z="-2660" />
 	</zone>
 	<zone id="11031" type="Town" shape="NPoly" minZ="-2700" maxZ="-1900">
 		<stat name="name" val="Town of Aden" />
 		<stat name="townId" val="12" />
 		<stat name="redirectTownId" val="10" />
 		<stat name="taxById" val="5" />
-		<stat name="spawnX" val="147391" />
-		<stat name="spawnY" val="25967" />
-		<stat name="spawnZ" val="-2012" />
+		<spawn X="146494" Y="30584" Z="-2420" />
+		<spawn X="146038" Y="30519" Z="-2420" />
+		<spawn X="148112" Y="30439" Z="-2420" />
+		<spawn X="148565" Y="30463" Z="-2420" />
+		<spawn X="150227" Y="29104" Z="-2420" />
+		<spawn X="144626" Y="29145" Z="-2420" />
+		<spawn X="144635" Y="26664" Z="-2220" />
+		<spawn X="144526" Y="24661" Z="-2100" />
+		<spawn X="144559" Y="22835" Z="-2100" />
+		<spawn X="145686" Y="21114" Z="-2100" />
+		<spawn X="148946" Y="21121" Z="-2070" />
+		<spawn X="148010" Y="27996" Z="-2256" />
+		<spawn X="147970" Y="27040" Z="-2191" />
+		<spawn X="146814" Y="27108" Z="-2189" />
+		<spawn X="146819" Y="28063" Z="-2252" />
 	</zone>
 	<zone id="11032" type="Town" shape="NPoly" minZ="-3550" maxZ="-2600">
 		<stat name="name" val="Goddard" />
 		<stat name="townId" val="13" />
 		<stat name="redirectTownId" val="14" />
 		<stat name="taxById" val="7" />
-		<stat name="spawnX" val="148558" />
-		<stat name="spawnY" val="-56030" />
-		<stat name="spawnZ" val="-2781" />
+		<spawn X="148560" Y="-55904" Z="-2779" />
+		<spawn X="150704" Y="-55744" Z="-2979" />
+		<spawn X="150400" Y="-56752" Z="-2979" />
+		<spawn X="149872" Y="-57424" Z="-2979" />
+		<spawn X="149088" Y="-56256" Z="-2779" />
+		<spawn X="147664" Y="-56464" Z="-2779" />
+		<spawn X="147680" Y="-56928" Z="-2779" />
+		<spawn X="146832" Y="-55904" Z="-2779" />
+		<spawn X="146368" Y="-56256" Z="-2779" />
+		<spawn X="149120" Y="-58064" Z="-2979" />
+		<spawn X="148288" Y="-58304" Z="-2979" />
+		<spawn X="147680" Y="-58208" Z="-2979" />
+		<spawn X="147232" Y="-58480" Z="-2979" />
+		<spawn X="146272" Y="-58176" Z="-2979" />
+		<spawn X="145696" Y="-57696" Z="-2979" />
+		<spawn X="145264" Y="-57680" Z="-2979" />
+		<spawn X="145392" Y="-56960" Z="-2979" />
+		<spawn X="144752" Y="-56752" Z="-2979" />
+		<spawn X="144960" Y="-56224" Z="-2979" />
+		<spawn X="144944" Y="-55392" Z="-2979" />
+		<spawn X="144496" Y="-55088" Z="-2979" />
 	</zone>
 	<zone id="11033" type="Town" shape="Cuboid" minZ="-1200" maxZ="3000">
 		<stat name="name" val="Rune Castle Town" />
 		<stat name="townId" val="14" />
 		<stat name="redirectTownId" val="13" />
 		<stat name="taxById" val="8" />
-		<stat name="spawnX" val="43894" />
-		<stat name="spawnY" val="-48330" />
-		<stat name="spawnZ" val="-797" />
+		<spawn X="38096" Y="-46976" Z="899" />
+		<spawn X="38608" Y="-47168" Z="899" />
+		<spawn X="38752" Y="-47792" Z="899" />
+		<spawn X="38848" Y="-48640" Z="899" />
+		<spawn X="38272" Y="-49008" Z="899" />
+		<spawn X="38112" Y="-49792" Z="899" />
+		<spawn X="43408" Y="-51120" Z="-800" />
+		<spawn X="43536" Y="-50416" Z="-800" />
+		<spawn X="44368" Y="-50592" Z="-800" />
+		<spawn X="44000" Y="-49952" Z="-800" />
+		<spawn X="45072" Y="-49936" Z="-800" />
+		<spawn X="45824" Y="-49056" Z="-800" />
+		<spawn X="45632" Y="-47968" Z="-800" />
+		<spawn X="44864" Y="-47824" Z="-800" />
+		<spawn X="43744" Y="-47920" Z="-800" />
+		<spawn X="43792" Y="-48928" Z="-800" />
 	</zone>
 	<zone id="11034" type="Town" shape="NPoly" minZ="-3800" maxZ="-3400">
 		<stat name="name" val="Heine" />
 		<stat name="townId" val="15" />
 		<stat name="redirectTownId" val="16" />
 		<stat name="taxById" val="6" />
-		<stat name="spawnX" val="111381" />
-		<stat name="spawnY" val="219064" />
-		<stat name="spawnZ" val="-3543" />
+		<spawn X="107568" Y="218256" Z="-3624" />
+		<spawn X="107920" Y="218240" Z="-3624" />
+		<spawn X="107808" Y="217856" Z="-3624" />
+		<spawn X="108032" Y="218048" Z="-3624" />
+		<spawn X="107552" Y="218000" Z="-3624" />
+		<spawn X="110912" Y="219584" Z="-3624" />
+		<spawn X="110768" Y="219824" Z="-3624" />
+		<spawn X="110688" Y="220576" Z="-3624" />
+		<spawn X="110896" Y="220768" Z="-3624" />
+		<spawn X="111856" Y="220752" Z="-3624" />
+		<spawn X="112112" Y="220576" Z="-3624" />
+		<spawn X="112064" Y="219792" Z="-3624" />
+		<spawn X="111888" Y="219584" Z="-3624" />
 	</zone>
 	<zone id="11035" type="Town" shape="NPoly" minZ="-2350" maxZ="-1200">
 		<stat name="name" val="Schuttgart" />
 		<stat name="townId" val="17" />
 		<stat name="redirectTownId" val="14" />
 		<stat name="taxById" val="9" />
-		<stat name="spawnX" val="87331" />
-		<stat name="spawnY" val="-142842" />
-		<stat name="spawnZ" val="-1317" />
+		<spawn X="84720" Y="-141936" Z="-1536" />
+		<spawn X="85056" Y="-141328" Z="-1536" />
+		<spawn X="85472" Y="-140752" Z="-1536" />
+		<spawn X="85968" Y="-142384" Z="-1536" />
+		<spawn X="86400" Y="-142672" Z="-1536" />
+		<spawn X="87184" Y="-140256" Z="-1536" />
+		<spawn X="87344" Y="-141696" Z="-1536" />
+		<spawn X="87776" Y="-140384" Z="-1536" />
+		<spawn X="88240" Y="-142736" Z="-1536" />
+		<spawn X="88448" Y="-140512" Z="-1536" />
+		<spawn X="88624" Y="-142480" Z="-1536" />
+		<spawn X="89360" Y="-140944" Z="-1536" />
+		<spawn X="89712" Y="-141472" Z="-1536" />
 	</zone>
 	<zone id="11036" type="Town" shape="NPoly" minZ="-3600" maxZ="-3400">
 		<stat name="name" val="Floran Village" />
 		<stat name="townId" val="16" />
 		<stat name="taxById" val="2" />
 		<stat name="isPeaceZone" val="false" />
-		<stat name="spawnX" val="18823" />
-		<stat name="spawnY" val="145048" />
-		<stat name="spawnZ" val="-3126" />
+		<spawn X="19025" Y="145245" Z="-3107" />
+		<spawn X="18576" Y="145136" Z="-3104" />
+		<spawn X="18717" Y="145711" Z="-3097" />
+		<spawn X="18512" Y="145536" Z="-3100" />
+		<spawn X="18954" Y="144428" Z="-3000" />
+		<spawn X="19150" Y="143941" Z="-3020" />
+		<spawn X="19134" Y="144847" Z="-3020" />
+		<spawn X="19613" Y="145607" Z="-3020" />
+		<spawn X="18078" Y="145925" Z="-3020" />
+		<spawn X="17398" Y="145456" Z="-3000" />
+		<spawn X="17144" Y="145055" Z="-3000" />
+		<spawn X="19012" Y="145140" Z="-3020" />
 	</zone>
 	<zone id="11038" type="Town" shape="NPoly" minZ="250" maxZ="2250">
-		<stat name="name" val="Kamael Village" />
-		<stat name="townId" val="20" />
-		<stat name="taxById" val="5" />
-		<stat name="spawnX" val="-118092" />
-		<stat name="spawnY" val="46955" />
-		<stat name="spawnZ" val="360" />
+		<stat name="name" val="Kamael Village" /> 
+		<stat name="townId" val="20" /> 
+		<stat name="taxById" val="5" /> 
+		<spawn X="-115604" Y="45773" Z="466" />
+		<spawn X="-116749" Y="46618" Z="331" />
+		<spawn X="-118995" Y="46661" Z="331" />
+		<spawn X="-119098" Y="44161" Z="507" />
+		<spawn X="-117081" Y="44171" Z="507" />
+		<spawn X="-117729" Y="45552" Z="368" />
+		<spawn X="-115997" Y="41736" Z="1241" />
 	</zone>
 	<zone id="11039" type="Town" shape="Cuboid" minZ="-4324" maxZ="3097">
-		<stat name="name" val="Fantasy Isle" />
-		<stat name="townId" val="22" />
-		<stat name="taxById" val="14" />
-		<stat name="spawnX" val="-58752" />
-		<stat name="spawnY" val="-56898" />
-		<stat name="spawnZ" val="-2032" />
+		<stat name="name" val="Fantasy Isle" /> 
+		<stat name="townId" val="22" /> 
+		<stat name="taxById" val="14" /> 
+		<spawn X="-58752" Y="-56898" Z="-2032" />
 	</zone>
 	<zone id="11040" type="Town" shape="Cuboid" minZ="1080" maxZ="3210">
-		<stat name="name" val="Keucereus" />
-		<stat name="townId" val="33" />
-		<stat name="spawnX" val="-184284" />
-		<stat name="spawnY" val="242723" />
-		<stat name="spawnZ" val="1577" />
+		<stat name="name" val="Keucereus" /> 
+		<stat name="townId" val="33" /> 
+		<spawn X="-184284" Y="242723" Z="1577" />
 	</zone>
 
 	<!-- No landing -->
@@ -316,481 +491,333 @@
 	<!-- Clan Hall Zones -->
 	<zone id="11100" type="ClanHallZone" shape="Cuboid" minZ="-2000" maxZ="-1800">
 		<stat name="clanHallId" val="21" />
-		<stat name="spawnX" val="43399" />
-		<stat name="spawnY" val="108888" />
-		<stat name="spawnZ" val="-1980" />
+		<spawn X="43399" Y="108888" Z="-1980" />
 	</zone>
 	<zone id="11101" type="ClanHallZone" shape="Cuboid" minZ="-3200" maxZ="-3000">
 		<stat name="clanHallId" val="22" />
-		<stat name="spawnX" val="-15975" />
-		<stat name="spawnY" val="123562" />
-		<stat name="spawnZ" val="-3101" />
+		<spawn X="-15975" Y="123562" Z="-3101" />
 	</zone>
 	<zone id="11102" type="ClanHallZone" shape="Cuboid" minZ="-3200" maxZ="-3000">
 		<stat name="clanHallId" val="23" />
-		<stat name="spawnX" val="-14950" />
-		<stat name="spawnY" val="125575" />
-		<stat name="spawnZ" val="-3128" />
+		<spawn X="-14950" Y="125575" Z="-3128" />
 	</zone>
 	<zone id="11103" type="ClanHallZone" shape="Cuboid" minZ="-3200" maxZ="-3000">
 		<stat name="clanHallId" val="24" />
-		<stat name="spawnX" val="-13875" />
-		<stat name="spawnY" val="125375" />
-		<stat name="spawnZ" val="-3128" />
+		<spawn X="-13875" Y="125375" Z="-3128" />
 	</zone>
 	<zone id="11104" type="ClanHallZone" shape="Cuboid" minZ="-3200" maxZ="-3000">
 		<stat name="clanHallId" val="25" />
-		<stat name="spawnX" val="-12625" />
-		<stat name="spawnY" val="124075" />
-		<stat name="spawnZ" val="-3096" />
+		<spawn X="-12625" Y="124075" Z="-3096" />
 	</zone>
 	<zone id="11105" type="ClanHallZone" shape="Cuboid" minZ="-3200" maxZ="-3000">
 		<stat name="clanHallId" val="26" />
-		<stat name="spawnX" val="-84475" />
-		<stat name="spawnY" val="151950" />
-		<stat name="spawnZ" val="-3123" />
+		<spawn X="-84475" Y="151950" Z="-3123" />
 	</zone>
 	<zone id="11106" type="ClanHallZone" shape="Cuboid" minZ="-3200" maxZ="-3000">
 		<stat name="clanHallId" val="27" />
-		<stat name="spawnX" val="-83875" />
-		<stat name="spawnY" val="153325" />
-		<stat name="spawnZ" val="-3159" />
+		<spawn X="-83875" Y="153325" Z="-3159" />
 	</zone>
 	<zone id="11107" type="ClanHallZone" shape="Cuboid" minZ="-3200" maxZ="-3000">
 		<stat name="clanHallId" val="28" />
-		<stat name="spawnX" val="-83800" />
-		<stat name="spawnY" val="155500" />
-		<stat name="spawnZ" val="-3160" />
+		<spawn X="-83800" Y="155500" Z="-3160" />
 	</zone>
 	<zone id="11108" type="ClanHallZone" shape="Cuboid" minZ="-3200" maxZ="-3000">
 		<stat name="clanHallId" val="29" />
-		<stat name="spawnX" val="-79800" />
-		<stat name="spawnY" val="149625" />
-		<stat name="spawnZ" val="-3038" />
+		<spawn X="-79800" Y="149625" Z="-3038" />
 	</zone>
 	<zone id="11109" type="ClanHallZone" shape="Cuboid" minZ="-3200" maxZ="-3000">
 		<stat name="clanHallId" val="30" />
-		<stat name="spawnX" val="-79500" />
-		<stat name="spawnY" val="151800" />
-		<stat name="spawnZ" val="-3041" />
+		<spawn X="-79500" Y="151800" Z="-3041" />
 	</zone>
 	<zone id="11110" type="ClanHallZone" shape="Cuboid" minZ="-3200" maxZ="-3000">
 		<stat name="clanHallId" val="31" />
-		<stat name="spawnX" val="17700" />
-		<stat name="spawnY" val="145075" />
-		<stat name="spawnZ" val="-3036" />
+		<spawn X="17700" Y="145075" Z="-3036" />
 	</zone>
 	<zone id="11111" type="ClanHallZone" shape="Cuboid" minZ="-3200" maxZ="-3000">
 		<stat name="clanHallId" val="32" />
-		<stat name="spawnX" val="18725" />
-		<stat name="spawnY" val="143350" />
-		<stat name="spawnZ" val="-3010" />
+		<spawn X="18725" Y="143350" Z="-3010" />
 	</zone>
 	<zone id="11112" type="ClanHallZone" shape="Cuboid" minZ="-3200" maxZ="-3000">
 		<stat name="clanHallId" val="33" />
-		<stat name="spawnX" val="20175" />
-		<stat name="spawnY" val="146150" />
-		<stat name="spawnZ" val="-3111" />
+		<spawn X="20175" Y="146150" Z="-3111" />
 	</zone>
 	<zone id="11113" type="ClanHallZone" shape="Cuboid" minZ="0" maxZ="0">
 		<stat name="clanHallId" val="34" />
-		<stat name="spawnX" val="178256" />
-		<stat name="spawnY" val="-15714" />
-		<stat name="spawnZ" val="-2263" />
+		<spawn X="178256" Y="-15714" Z="-2263" />
 	</zone>
 	<zone id="11114" type="ClanHallZone" shape="Cuboid" minZ="-2000" maxZ="-1800">
 		<stat name="clanHallId" val="35" />
-		<stat name="spawnX" val="80182" />
-		<stat name="spawnY" val="-15484" />
-		<stat name="spawnZ" val="-1804" />
+		<spawn X="80182" Y="-15484" Z="-1804" />
 	</zone>
 	<zone id="11115" type="ClanHallZone" shape="Cuboid" minZ="-2200" maxZ="-2000">
 		<stat name="clanHallId" val="36" />
-		<stat name="spawnX" val="149134" />
-		<stat name="spawnY" val="23139" />
-		<stat name="spawnZ" val="-2160" />
+		<spawn X="149134" Y="23139" Z="-2160" />
 	</zone>
 	<zone id="11116" type="ClanHallZone" shape="Cuboid" minZ="-2200" maxZ="-2000">
 		<stat name="clanHallId" val="37" />
-		<stat name="spawnX" val="150643" />
-		<stat name="spawnY" val="23653" />
-		<stat name="spawnZ" val="-2150" />
+		<spawn X="150643" Y="23653" Z="-2150" />
 	</zone>
 	<zone id="11117" type="ClanHallZone" shape="Cuboid" minZ="-2200" maxZ="-2000">
 		<stat name="clanHallId" val="38" />
-		<stat name="spawnX" val="145667" />
-		<stat name="spawnY" val="25355" />
-		<stat name="spawnZ" val="-2150" />
+		<spawn X="145667" Y="25355" Z="-2150" />
 	</zone>
 	<zone id="11118" type="ClanHallZone" shape="Cuboid" minZ="-2300" maxZ="-2000">
 		<stat name="clanHallId" val="39" />
-		<stat name="spawnX" val="150748" />
-		<stat name="spawnY" val="26540" />
-		<stat name="spawnZ" val="-2280" />
+		<spawn X="150748" Y="26540" Z="-2280" />
 	</zone>
 	<zone id="11119" type="ClanHallZone" shape="Cuboid" minZ="-2300" maxZ="-2000">
 		<stat name="clanHallId" val="40" />
-		<stat name="spawnX" val="143991" />
-		<stat name="spawnY" val="27091" />
-		<stat name="spawnZ" val="-2290" />
+		<spawn X="143991" Y="27091" Z="-2290" />
 	</zone>
 	<zone id="11120" type="ClanHallZone" shape="Cuboid" minZ="-2300" maxZ="-2000">
 		<stat name="clanHallId" val="41" />
-		<stat name="spawnX" val="144014" />
-		<stat name="spawnY" val="28202" />
-		<stat name="spawnZ" val="-2280" />
+		<spawn X="144014" Y="28202" Z="-2280" />
 	</zone>
 	<zone id="11121" type="ClanHallZone" shape="Cuboid" minZ="-3600" maxZ="-3400">
 		<stat name="clanHallId" val="42" />
-		<stat name="spawnX" val="78590" />
-		<stat name="spawnY" val="148101" />
-		<stat name="spawnZ" val="-3581" />
+		<spawn X="78590" Y="148101" Z="-3581" />
 	</zone>
 	<zone id="11122" type="ClanHallZone" shape="Cuboid" minZ="-3600" maxZ="-3400">
 		<stat name="clanHallId" val="43" />
-		<stat name="spawnX" val="82056" />
-		<stat name="spawnY" val="145336" />
-		<stat name="spawnZ" val="-3520" />
+		<spawn X="82056" Y="145336" Z="-3520" />
 	</zone>
 	<zone id="11123" type="ClanHallZone" shape="Cuboid" minZ="-3500" maxZ="-3300">
 		<stat name="clanHallId" val="44" />
-		<stat name="spawnX" val="83393" />
-		<stat name="spawnY" val="145313" />
-		<stat name="spawnZ" val="-3389" />
+		<spawn X="83393" Y="145313" Z="-3389" />
 	</zone>
 	<zone id="11124" type="ClanHallZone" shape="Cuboid" minZ="-3600" maxZ="-3400">
 		<stat name="clanHallId" val="45" />
-		<stat name="spawnX" val="80971" />
-		<stat name="spawnY" val="151587" />
-		<stat name="spawnZ" val="-3517" />
+		<spawn X="80971" Y="151587" Z="-3517" />
 	</zone>
 	<zone id="11125" type="ClanHallZone" shape="Cuboid" minZ="-3600" maxZ="-3400">
 		<stat name="clanHallId" val="46" />
-		<stat name="spawnX" val="82101" />
-		<stat name="spawnY" val="151911" />
-		<stat name="spawnZ" val="-3520" />
+		<spawn X="82101" Y="151911" Z="-3520" />
 	</zone>
 	<zone id="11126" type="ClanHallZone" shape="NPoly" minZ="-2800" maxZ="-2600">
 		<stat name="clanHallId" val="47" />
-		<stat name="spawnX" val="146025" />
-		<stat name="spawnY" val="-55534" />
-		<stat name="spawnZ" val="-2765" />
+		<spawn X="146025" Y="-55534" Z="-2765" />
 	</zone>
 	<zone id="11127" type="ClanHallZone" shape="NPoly" minZ="-2800" maxZ="-2600">
 		<stat name="clanHallId" val="48" />
-		<stat name="spawnX" val="146901" />
-		<stat name="spawnY" val="-56857" />
-		<stat name="spawnZ" val="-2765" />
+		<spawn X="146901" Y="-56857" Z="-2765" />
 	</zone>
 	<zone id="11128" type="ClanHallZone" shape="NPoly" minZ="-2800" maxZ="-2600">
 		<stat name="clanHallId" val="49" />
-		<stat name="spawnX" val="148479" />
-		<stat name="spawnY" val="-56874" />
-		<stat name="spawnZ" val="-2765" />
+		<spawn X="148479" Y="-56874" Z="-2765" />
 	</zone>
 	<zone id="11129" type="ClanHallZone" shape="NPoly" minZ="-2800" maxZ="-2600">
 		<stat name="clanHallId" val="50" />
-		<stat name="spawnX" val="149390" />
-		<stat name="spawnY" val="-55587" />
-		<stat name="spawnZ" val="-2765" />
+		<spawn X="149390" Y="-55587" Z="-2765" />
 	</zone>
 	<zone id="11130" type="ClanHallZone" shape="NPoly" minZ="850" maxZ="990">
 		<stat name="clanHallId" val="51" />
-		<stat name="spawnX" val="37733" />
-		<stat name="spawnY" val="-50781" />
-		<stat name="spawnZ" val="896" />
+		<spawn X="37733" Y="-50781" Z="896" />
 	</zone>
 	<zone id="11131" type="ClanHallZone" shape="NPoly" minZ="850" maxZ="990">
 		<stat name="clanHallId" val="52" />
-		<stat name="spawnX" val="38727" />
-		<stat name="spawnY" val="-50460" />
-		<stat name="spawnZ" val="896" />
+		<spawn X="38727" Y="-50460" Z="896" />
 	</zone>
 	<zone id="11132" type="ClanHallZone" shape="NPoly" minZ="850" maxZ="990">
 		<stat name="clanHallId" val="53" />
-		<stat name="spawnX" val="39473" />
-		<stat name="spawnY" val="-49680" />
-		<stat name="spawnZ" val="896" />
+		<spawn X="39473" Y="-49680" Z="896" />
 	</zone>
 	<zone id="11133" type="ClanHallZone" shape="NPoly" minZ="850" maxZ="990">
 		<stat name="clanHallId" val="54" />
-		<stat name="spawnX" val="39623" />
-		<stat name="spawnY" val="-48245" />
-		<stat name="spawnZ" val="896" />
+		<spawn X="39623" Y="-48245" Z="896" />
 	</zone>
 	<zone id="11134" type="ClanHallZone" shape="NPoly" minZ="850" maxZ="990">
 		<stat name="clanHallId" val="55" />
-		<stat name="spawnX" val="39598" />
-		<stat name="spawnY" val="-46904" />
-		<stat name="spawnZ" val="896" />
+		<spawn X="39598" Y="-46904" Z="896" />
 	</zone>
 	<zone id="11135" type="ClanHallZone" shape="NPoly" minZ="850" maxZ="990">
 		<stat name="clanHallId" val="56" />
-		<stat name="spawnX" val="38747" />
-		<stat name="spawnY" val="-46026" />
-		<stat name="spawnZ" val="896" />
+		<spawn X="38747" Y="-46026" Z="896" />
 	</zone>
 	<zone id="11136" type="ClanHallZone" shape="NPoly" minZ="850" maxZ="990">
 		<stat name="clanHallId" val="57" />
-		<stat name="spawnX" val="37730" />
-		<stat name="spawnY" val="-45666" />
-		<stat name="spawnZ" val="896" />
+		<spawn X="37730" Y="-45666" Z="896" />
 	</zone>
 	<zone id="11137" type="ClanHallZone" shape="NPoly" minZ="-1400" maxZ="-1200">
 		<stat name="clanHallId" val="58" />
-		<stat name="spawnX" val="85747" />
-		<stat name="spawnY" val="-143108" />
-		<stat name="spawnZ" val="-1328" />
+		<spawn X="85747" Y="-143108" Z="-1328" />
 	</zone>
 	<zone id="11138" type="ClanHallZone" shape="NPoly" minZ="-1400" maxZ="-1200">
 		<stat name="clanHallId" val="59" />
-		<stat name="spawnX" val="86582" />
-		<stat name="spawnY" val="-141910" />
-		<stat name="spawnZ" val="-1328" />
+		<spawn X="86582" Y="-141910" Z="-1328" />
 	</zone>
 	<zone id="11139" type="ClanHallZone" shape="NPoly" minZ="-1400" maxZ="-1200">
 		<stat name="clanHallId" val="60" />
-		<stat name="spawnX" val="88162" />
-		<stat name="spawnY" val="-141930" />
-		<stat name="spawnZ" val="-1328" />
+		<spawn X="88162" Y="-141930" Z="-1328" />
 	</zone>
 	<zone id="11140" type="ClanHallZone" shape="NPoly" minZ="-1400" maxZ="-1200">
 		<stat name="clanHallId" val="61" />
-		<stat name="spawnX" val="89000" />
-		<stat name="spawnY" val="-143190" />
-		<stat name="spawnZ" val="-1328" />
+		<spawn X="89000" Y="-143190" Z="-1328" />
 	</zone>
 	<zone id="11141" type="ClanHallZone" shape="NPoly" minZ="-2100" maxZ="-1100">
 		<stat name="clanHallId" val="62" />
-		<stat name="spawnX" val="141002" />
-		<stat name="spawnY" val="-124607" />
-		<stat name="spawnZ" val="-1896" />
+		<spawn X="141002" Y="-124607" Z="-1896" />
 	</zone>
 	<zone id="11142" type="ClanHallZone" shape="NPoly" minZ="-1500" maxZ="-500">
 		<stat name="clanHallId" val="63" />
-		<stat name="spawnX" val="58020" />
-		<stat name="spawnY" val="-92943" />
-		<stat name="spawnZ" val="-1360" />
+		<spawn X="58020" Y="-92943" Z="-1360" />
 	</zone>
 	<zone id="11143" type="ClanHallZone" shape="NPoly" minZ="500" maxZ="1500">
 		<stat name="clanHallId" val="64" />
-		<stat name="spawnX" val="57970" />
-		<stat name="spawnY" val="-28572" />
-		<stat name="spawnZ" val="569" />
+		<spawn X="57970" Y="-28572" Z="569" />
 	</zone>
 
 	<!-- Fortress Zones -->
 	<zone id="11501" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
 		<!-- Shanty Fortress -->
 		<stat name="fortId" val="101" />
-		<stat name="spawnX" val="-52667" />
-		<stat name="spawnY" val="156933" />
-		<stat name="spawnZ" val="-1727" />
+		<spawn X="-52667" Y="156933" Z="-1727" />
 	</zone>
 	<zone id="11502" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
 		<!-- Southern Fortress -->
 		<stat name="fortId" val="102" />
-		<stat name="spawnX" val="-22672" />
-		<stat name="spawnY" val="219354" />
-		<stat name="spawnZ" val="-2910" />
+		<spawn X="-22672" Y="219354" Z="-2910" />
 	</zone>
 	<zone id="11503" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
 		<!-- Hive Fortress -->
 		<stat name="fortId" val="103" />
-		<stat name="spawnX" val="16917" />
-		<stat name="spawnY" val="187773" />
-		<stat name="spawnZ" val="-2596" />
+		<spawn X="16917" Y="187773" Z="-2596" />
 	</zone>
 	<zone id="11504" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
 		<!-- Valley Fortress -->
 		<stat name="fortId" val="104" />
-		<stat name="spawnX" val="126520" />
-		<stat name="spawnY" val="123318" />
-		<stat name="spawnZ" val="-2257" />
+		<spawn X="126520" Y="123318" Z="-2257" />
 	</zone>
 	<zone id="11505" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
 		<!-- Ivory Fortress -->
 		<stat name="fortId" val="105" />
-		<stat name="spawnX" val="73206" />
-		<stat name="spawnY" val="4544" />
-		<stat name="spawnZ" val="-2717" />
+		<spawn X="73206" Y="4544" Z="-2717" />
 	</zone>
 	<zone id="11506" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
 		<!-- Narsell Fortress -->
 		<stat name="fortId" val="106" />
-		<stat name="spawnX" val="155178" />
-		<stat name="spawnY" val="55625" />
-		<stat name="spawnZ" val="-2926" />
+		<spawn X="155178" Y="55625" Z="-2926" />
 	</zone>
 	<zone id="11507" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
 		<!-- Bayou Fortress -->
 		<stat name="fortId" val="107" />
-		<stat name="spawnX" val="190365" />
-		<stat name="spawnY" val="39690" />
-		<stat name="spawnZ" val="-3082" />
+		<spawn X="190365" Y="39690" Z="-3082" />
 	</zone>
 	<zone id="11508" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
 		<!-- White Sands Fortress -->
 		<stat name="fortId" val="108" />
-		<stat name="spawnX" val="118653" />
-		<stat name="spawnY" val="204543" />
-		<stat name="spawnZ" val="-3006" />
+		<spawn X="118653" Y="204543" Z="-3006" />
 	</zone>
 	<zone id="11509" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
 		<!-- Borderland Fortress -->
 		<stat name="fortId" val="109" />
-		<stat name="spawnX" val="159414" />
-		<stat name="spawnY" val="-69964" />
-		<stat name="spawnZ" val="-2536" />
+		<spawn X="159414" Y="-69964" Z="-2536" />
 	</zone>
 	<zone id="11510" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
 		<!-- Swamp Fortress -->
 		<stat name="fortId" val="110" />
-		<stat name="spawnX" val="70262" />
-		<stat name="spawnY" val="-61571" />
-		<stat name="spawnZ" val="-2460" />
+		<spawn X="70262" Y="-61571" Z="-2460" />
 	</zone>
 	<zone id="11511" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
 		<!-- Archaic Fortress -->
 		<stat name="fortId" val="111" />
-		<stat name="spawnX" val="109644" />
-		<stat name="spawnY" val="-140807" />
-		<stat name="spawnZ" val="-2629" />
+		<spawn X="109644" Y="-140807" Z="-2629" />
 	</zone>
 	<zone id="11512" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
 		<!-- Floran Fortress - Border -->
 		<stat name="fortId" val="112" />
-		<stat name="spawnX" val="5578" />
-		<stat name="spawnY" val="150206" />
-		<stat name="spawnZ" val="-2563" />
+		<spawn X="5578" Y="150206" Z="-2563" />
 	</zone>
 	<zone id="11513" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
 		<!-- Cloud Mountain Fortress - Border -->
 		<stat name="fortId" val="113" />
-		<stat name="spawnX" val="-52803" />
-		<stat name="spawnY" val="91164" />
-		<stat name="spawnZ" val="-2493" />
+		<spawn X="-52803" Y="91164" Z="-2493" />
 	</zone>
 	<zone id="11514" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
 		<!-- Tanor Fortress - Border -->
 		<stat name="fortId" val="114" />
-		<stat name="spawnX" val="60692" />
-		<stat name="spawnY" val="139337" />
-		<stat name="spawnZ" val="-1426" />
+		<spawn X="60692" Y="139337" Z="-1426" />
 	</zone>
 	<zone id="11515" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
 		<!-- Dragonspine Fortress - Border -->
 		<stat name="fortId" val="115" />
-		<stat name="spawnX" val="11983" />
-		<stat name="spawnY" val="95021" />
-		<stat name="spawnZ" val="-3100" />
+		<spawn X="11983" Y="95021" Z="-3100" />
 	</zone>
 	<zone id="11516" type="FortZone" shape="NPoly" minZ="-3800" maxZ="3200">
 		<!-- Antharas Fortress - Border -->
 		<stat name="fortId" val="116" />
-		<stat name="spawnX" val="79479" />
-		<stat name="spawnY" val="90670" />
-		<stat name="spawnZ" val="-2558" />
+		<spawn X="79479" Y="90670" Z="-2558" />
 	</zone>
 	<zone id="11517" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
 		<!-- Western Fortress - Border -->
 		<stat name="fortId" val="117" />
-		<stat name="spawnX" val="111820" />
-		<stat name="spawnY" val="-15115" />
-		<stat name="spawnZ" val="-669" />
+		<spawn X="111820" Y="-15115" Z="-669" />
 	</zone>
 	<zone id="11518" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
 		<!-- Hunters Fortress - Border -->
 		<stat name="fortId" val="118" />
-		<stat name="spawnX" val="125685" />
-		<stat name="spawnY" val="95145" />
-		<stat name="spawnZ" val="-1812" />
+		<spawn X="125685" Y="95145" Z="-1812" />
 	</zone>
 	<zone id="11519" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
 		<!-- Aaru Fortress - Border -->
 		<stat name="fortId" val="119" />
-		<stat name="spawnX" val="73459" />
-		<stat name="spawnY" val="186257" />
-		<stat name="spawnZ" val="-2255" />
+		<spawn X="73459" Y="186257" Z="-2255" />
 	</zone>
 	<zone id="11520" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
 		<!-- Demon Fortress - Border -->
 		<stat name="fortId" val="120" />
-		<stat name="spawnX" val="100686" />
-		<stat name="spawnY" val="-54872" />
-		<stat name="spawnZ" val="-319" />
+		<spawn X="100686" Y="-54872" Z="-319" />
 	</zone>
 	<zone id="11521" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
 		<!-- Monastic Fortress - Border -->
 		<stat name="fortId" val="121" />
-		<stat name="spawnX" val="72598" />
-		<stat name="spawnY" val="-94905" />
-		<stat name="spawnZ" val="-1102" />
+		<spawn X="72598" Y="-94905" Z="-1102" />
 	</zone>
 
 	<!-- Castle Zones -->
 	<zone id="112000" type="NoHqZone" shape="NPoly" minZ="-4448" maxZ="3551" />
 	<zone id="11200" type="CastleZone" shape="NPoly" minZ="-4448" maxZ="3551">
 		<stat name="castleId" val="1" />
-		<stat name="spawnX" val="-16770" />
-		<stat name="spawnY" val="109356" />
-		<stat name="spawnZ" val="-1798" />
+		<spawn X="-16770" Y="109356" Z="-1798" />
 	</zone>
 	<zone id="112010" type="NoHqZone" shape="NPoly" minZ="-4642" maxZ="4000" />
 	<zone id="11201" type="CastleZone" shape="NPoly" minZ="-4642" maxZ="4000">
 		<stat name="castleId" val="2" />
-		<stat name="spawnX" val="20515" />
-		<stat name="spawnY" val="160384" />
-		<stat name="spawnZ" val="-1992" />
+		<spawn X="20515" Y="160384" Z="-1992" />
 	</zone>
 	<zone id="112020" type="NoHqZone" shape="NPoly" minZ="-4515" maxZ="19935" />
 	<zone id="11202" type="CastleZone" shape="NPoly" minZ="-4515" maxZ="19935">
 		<stat name="castleId" val="3" />
-		<stat name="spawnX" val="116553" />
-		<stat name="spawnY" val="146396" />
-		<stat name="spawnZ" val="-1868" />
+		<spawn X="116553" Y="146396" Z="-1868" />
 	</zone>
 	<zone id="112030" type="NoHqZone" shape="NPoly" minZ="-4242" maxZ="19935" />
 	<zone id="11203" type="CastleZone" shape="NPoly" minZ="-4242" maxZ="19935">
 		<stat name="castleId" val="4" />
-		<stat name="spawnX" val="82644" />
-		<stat name="spawnY" val="38542" />
-		<stat name="spawnZ" val="-1592" />
+		<spawn X="82644" Y="38542" Z="-1592" />
 	</zone>
 	<zone id="112040" type="NoHqZone" shape="NPoly" minZ="-3184" maxZ="6816" />
 	<zone id="11204" type="CastleZone" shape="NPoly" minZ="-3184" maxZ="6816">
 		<stat name="castleId" val="5" />
-		<stat name="spawnX" val="147726" />
-		<stat name="spawnY" val="4611" />
-		<stat name="spawnZ" val="-2788" />
+		<spawn X="147726" Y="4611" Z="-2788" />
 	</zone>
 	<zone id="112050" type="NoHqZone" shape="NPoly" minZ="-2738" maxZ="4000" />
 	<zone id="11205" type="CastleZone" shape="NPoly" minZ="-2738" maxZ="4000">
 		<stat name="castleId" val="6" />
-		<stat name="spawnX" val="114796" />
-		<stat name="spawnY" val="249159" />
-		<stat name="spawnZ" val="-88" />
+		<spawn X="114796" Y="249159" Z="-88" />
 	</zone>
 	<zone id="112060" type="NoHqZone" shape="NPoly" minZ="-3397" maxZ="2103" />
 	<zone id="11206" type="CastleZone" shape="NPoly" minZ="-3397" maxZ="2103">
 		<stat name="castleId" val="7" />
-		<stat name="spawnX" val="147451" />
-		<stat name="spawnY" val="-46878" />
-		<stat name="spawnZ" val="-961" />
+		<spawn X="147451" Y="-46878" Z="-961" />
 	</zone>
 	<zone id="112070" type="NoHqZone" shape="NPoly" minZ="-3000" maxZ="20000" />
 	<zone id="11207" type="CastleZone" shape="Cuboid" minZ="-3000" maxZ="20000">
 		<stat name="castleId" val="8" />
-		<stat name="spawnX" val="10558" />
-		<stat name="spawnY" val="-49160" />
-		<stat name="spawnZ" val="3856" />
+		<spawn X="10558" Y="-49160" Z="3856" />
 	</zone>
 	<zone id="112080" type="NoHqZone" shape="NPoly" minZ="-3800" maxZ="20000" />
 	<zone id="11208" type="CastleZone" shape="Cuboid" minZ="-3800" maxZ="20000">
 		<stat name="castleId" val="9" />
-		<stat name="spawnX" val="77555" />
-		<stat name="spawnY" val="-150903" />
-		<stat name="spawnZ" val="769" />
+		<spawn X="77555" Y="-150903" Z="769" />
 	</zone>
 
 	<!-- Castle Teleport Zones -->
@@ -2506,15 +2533,15 @@
 	</zone>
 
 	<!-- Emerald Square zone -->
-	<zone id='20105' type='ScriptZone' shape='Cuboid' minZ='-11900' maxZ='-11800' />
-	<zone id='20106' type='ScriptZone' shape='Cuboid' minZ='-12250' maxZ='-12150' />
-	<zone id='20107' type='ScriptZone' shape='Cuboid' minZ='-12150' maxZ='-12000' />
+	<zone id="20105" type="ScriptZone" shape="Cuboid" minZ="-11900" maxZ="-11800" />
+	<zone id="20106" type="ScriptZone" shape="Cuboid" minZ="-12250" maxZ="-12150" />
+	<zone id="20107" type="ScriptZone" shape="Cuboid" minZ="-12150" maxZ="-12000" />
 
 	<!-- Pailaka (Forgotten Temple) -->
-	<zone id='20108' type='ScriptZone' shape='NPoly' minZ='-5050' maxZ='-3900' />
+	<zone id="20108" type="ScriptZone" shape="NPoly" minZ="-5050" maxZ="-3900" />
 
 	<!-- Pagans mark -->
-	<zone id='30100' type='PaganZone' shape='NPoly' minZ='-10735' maxZ='-10720' />
+	<zone id="30100" type="PaganZone" shape="NPoly" minZ="-10735" maxZ="-10720" />
 
 	<!-- Primeval Isle Zones (vertices, min Z & Max Z are estimated) -->
 	<!-- Primeval Isle (Peace Zone) -->
@@ -2524,9 +2551,7 @@
 		<stat name="name" val="Primeval Isle" />
 		<stat name="townId" val="19" />
 		<stat name="isPeaceZone" val="false" />
-		<stat name="spawnX" val="10468" />
-		<stat name="spawnY" val="-24569" />
-		<stat name="spawnZ" val="-3645" />
+		<spawn X="10468" Y="-24569" Z="-3645" />
 	</zone>
 
 	<!-- Hellbound Zones (vertices, min Z & Max Z are estimated) -->
@@ -2550,9 +2575,7 @@
 		<stat name="name" val="Hellbound" />
 		<stat name="townId" val="20" />
 		<stat name="isPeaceZone" val="false" />
-		<stat name="spawnX" val="-16341" />
-		<stat name="spawnY" val="209285" />
-		<stat name="spawnZ" val="-3665" />
+		<spawn X="-16341" Y="209285" Z="-3665" />
 	</zone>
 
 	<!-- Rune Castle (Water Zones) (vertices, min Z & Max Z are estimated) -->
