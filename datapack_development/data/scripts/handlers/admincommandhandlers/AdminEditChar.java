@@ -1139,7 +1139,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		for (L2PcInstance player : players)
 		{
 			client = player.getClient();
-			if (client.isDetached())
+			if (client == null || client.isDetached())
 				continue;
 			else
 			{
