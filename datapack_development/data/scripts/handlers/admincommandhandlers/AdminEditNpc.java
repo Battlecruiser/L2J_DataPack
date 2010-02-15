@@ -990,7 +990,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 							myPage++;
 							i = 0;
 						}
-						break;
+						continue;
 					}
 					if (shown == PAGE_LIMIT)
 					{
