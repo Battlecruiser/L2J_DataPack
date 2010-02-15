@@ -29,6 +29,7 @@ public class Warpgate extends Quest
 	private static final String THATS_BLOODY_HOT = "133_ThatsBloodyHot";
 	private static final String PATH_TO_HELLBOUND = "130_PathToHellbound";
 
+	private static final int MAP = 9994;
 	private static final int ZONE = 40101;
 
 	private static final int[] WARPGATES =
@@ -82,6 +83,11 @@ public class Warpgate extends Quest
 		{
 			if (!canEnter((L2PcInstance)character) && !character.isGM())
 				ThreadPoolManager.getInstance().scheduleGeneral(new Teleport(character), 1000);
+			else if (!((L2PcInstance)character).isMinimapAllowed())
+			{
+				if (character.getInventory().getItemByItemId(MAP) != null)
+					((L2PcInstance)character).setMinimapAllowed(true);
+			}
 		}
 		return null;
 	}
