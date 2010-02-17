@@ -1,5 +1,6 @@
 # Created by Gnacik
-# 2010-02-09 based on official Franz server
+# 2010-02-17 based on official Franz server
+
 import sys
 from com.l2jserver.gameserver.model.quest				import State
 from com.l2jserver.gameserver.model.quest				import QuestState
@@ -27,6 +28,19 @@ class Quest (JQuest) :
 		JQuest.__init__(self,id,name,descr)
 		self.questItemIds = [ANCIENT_PARCHMENT]
 
+	def onExchangeRequest(self,event,st,qty,rem) :
+		if st.getQuestItemsCount(BOOK1) >= rem and st.getQuestItemsCount(BOOK2) >= rem and st.getQuestItemsCount(BOOK3) >= rem and st.getQuestItemsCount(BOOK4) >= rem and st.getQuestItemsCount(BOOK5) >= rem :
+			st.takeItems(BOOK1,rem)
+			st.takeItems(BOOK2,rem)
+			st.takeItems(BOOK3,rem)
+			st.takeItems(BOOK4,rem)
+			st.takeItems(BOOK5,rem)
+			st.giveItems(int(event),qty)
+			st.playSound("ItemSound.quest_finish")
+			return "31147-ok.htm"
+		else:
+			return "31147-no.htm"
+
 	def onAdvEvent (self,event,npc,player) :
 		htmltext = event
 		st = player.getQuestState(qn)
@@ -35,6 +49,36 @@ class Quest (JQuest) :
 			st.set("cond","1")
 			st.setState(State.STARTED)
 			st.playSound("ItemSound.quest_accept")
+		elif event == "31147-quit.htm" :
+			st.unset("cond")
+			st.exitQuest(1)
+			st.playSound("ItemSound.quest_finish")
+		elif event.isdigit() :
+			if int(event) == 9967 :											# Recipe - Dynasty Sword (60%)
+				htmltext = self.onExchangeRequest(event,st,1,10)
+			elif int(event) == 9968 :										# Recipe - Dynasty Blade (60%)
+				htmltext = self.onExchangeRequest(event,st,1,10)
+			elif int(event) == 9969 :										# Recipe - Dynasty Phantom (60%)
+				htmltext = self.onExchangeRequest(event,st,1,10)
+			elif int(event) == 9970 :										# Recipe - Dynasty Bow (60%)
+				htmltext = self.onExchangeRequest(event,st,1,10)
+			elif int(event) == 9971 :										# Recipe - Dynasty Knife (60%)
+				htmltext = self.onExchangeRequest(event,st,1,10)
+			elif int(event) == 9972 :										# Recipe - Dynasty Halberd (60%)
+				htmltext = self.onExchangeRequest(event,st,1,10)
+			elif int(event) == 9973 :										# Recipe - Dynasty Cudgel (60%)
+				htmltext = self.onExchangeRequest(event,st,1,10)
+			elif int(event) == 9974 :										# Recipe - Dynasty Mace (60%)
+				htmltext = self.onExchangeRequest(event,st,1,10)
+			elif int(event) == 9975 :										# Recipe - Dynasty Bagh-Nakh (60%)
+				htmltext = self.onExchangeRequest(event,st,1,10)
+			elif int(event) == 9628 :										# Leonard
+				htmltext = self.onExchangeRequest(event,st,6,1)
+			elif int(event) == 9629 :										# Adamantine
+				htmltext = self.onExchangeRequest(event,st,3,1)
+			elif int(event) == 9630 :										# Orichalcum
+				htmltext = self.onExchangeRequest(event,st,4,1)
+
 		return htmltext
 
 	def onTalk (self,npc,player) :
