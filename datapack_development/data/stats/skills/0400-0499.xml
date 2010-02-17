@@ -1952,8 +1952,8 @@
 	<skill id="495" levels="10" name="Blade Rush" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#ench1Dmg"> 135 135 136 136 137 137 138 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 </table>
+		<table name="#ench2Power"> 50 51 52 52 53 54 54 55 56 56 57 58 58 59 60 60 61 62 62 63 64 64 65 66 66 67 68 68 69 70 </table>
 		<table name="#ench3MpConsume"> 85 84 83 82 81 80 79 78 78 77 76 75 74 73 72 71 71 70 69 68 67 66 65 64 64 63 62 61 60 59 </table>
-		<table name="#ench2effectPower"> 50 51 52 52 53 54 54 55 56 56 57 58 58 59 60 60 61 62 62 63 64 64 65 66 66 67 68 68 69 70 </table>
 		<table name="#abnormalLvl"> 6 6 7 7 7 7 7 8 8 8 </table>
 		<table name="#castRange"> 500 500 500 500 500 500 600 600 600 600 </table>
 		<table name="#dmg"> 107 107 123 123 123 123 123 134 134 134 </table>
@@ -1971,7 +1971,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="power" val="50" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="4000" />
 		<set name="skillRadius" val="#castRange" />
 		<set name="skillType" val="BLEED" />
@@ -1980,26 +1980,22 @@
 		<set name="weaponsAllowed" val="32768" /> <!-- Ancient -->
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="power" val="#ench2Power" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="mpConsume" val="#ench3MpConsume" />
 		<cond msgId="113" addName="1">
 			<target mindistance="200" />
 		</cond>
 		<for>
-			<effect count="20" name="DamOverTime" val="#dmg" effectPower="50" effectType="BLEED" abnormal="bleed">
+			<effect count="20" name="DamOverTime" val="#dmg" abnormal="bleed">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect count="20" name="DamOverTime" val="#ench1Dmg" effectPower="50" effectType="BLEED" abnormal="bleed">
+			<effect count="20" name="DamOverTime" val="#ench1Dmg" abnormal="bleed">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</enchant1for>
-		<enchant2for>
-			<effect count="20" name="DamOverTime" val="134" effectPower="#ench2effectPower" effectType="BLEED" abnormal="bleed">
-				<mul order="0x30" stat="runSpd" val="0.8" />
-			</effect>
-		</enchant2for>
 	</skill>
 	<skill id="496" levels="31" name="Slashing Blade" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30" enchantLevels4="30" enchantLevels5="30" enchantLevels6="30">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
