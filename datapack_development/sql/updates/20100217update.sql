@@ -1,0 +1,1 @@
+ALTER TABLE `raidboss_spawnlist` DROP PRIMARY KEY, ADD PRIMARY KEY (`boss_id`);

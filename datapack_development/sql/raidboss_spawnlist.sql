@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS `raidboss_spawnlist` (
   `respawn_time` BIGINT NOT NULL default 0,
   `currentHp` decimal(8,0) default NULL,
   `currentMp` decimal(8,0) default NULL,
-  PRIMARY KEY (`boss_id`,`loc_x`,`loc_y`,`loc_z`)
+  PRIMARY KEY (`boss_id`)
 );
 
 INSERT IGNORE INTO `raidboss_spawnlist` VALUES
