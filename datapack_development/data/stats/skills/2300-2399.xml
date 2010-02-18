@@ -584,18 +584,39 @@
 		<set name="staticHitTime" val="true" />
 	</skill>
 	<skill id="2358" levels="1" name="Holy Water">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="8000" /> <!-- unknown -->
+		<set name="skillType" val="DEBUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="150" />
+		<set name="effectRange" val="400" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player flyMounted="False" />
+				<target npcId="18463,18464,18465" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="2359" levels="1" name="Magic Bottle">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="8000" /> <!-- unknown -->
+		<set name="skillType" val="DEBUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="150" />
+		<set name="effectRange" val="400" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player flyMounted="False" />
+				<target npcId="22349,22350,22351,22352,22353" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="2360" levels="1" name="Water Dragon Claw">
 		<set name="itemConsumeCount" val="1" />
