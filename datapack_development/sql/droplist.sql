@@ -30502,6 +30502,42 @@ INSERT INTO `droplist` VALUES
 (22450,4042,1,1,-1,28068),-- Enria
 (22450,960,1,1,-1,674); -- Scroll: Enchant Armor (S)
 
+-- RimKamaloka
+INSERT INTO `droplist` VALUES
+(22452,956,1,1,1,9200), -- Scroll: Enchant Armor (D)
+(22453,956,1,1,1,11100), -- Scroll: Enchant Armor (D)
+(22454,956,1,1,1,9100), -- Scroll: Enchant Armor (D)
+(22455,956,1,1,1,10500), -- Scroll: Enchant Armor (D)
+(22456,956,1,1,1,11000), -- Scroll: Enchant Armor (D)
+(22457,956,1,1,1,12100), -- Scroll: Enchant Armor (D)
+(22458,956,1,1,1,16500), -- Scroll: Enchant Armor (D)
+(22459,956,1,1,1,15600), -- Scroll: Enchant Armor (D)
+(22460,956,1,1,1,16000), -- Scroll: Enchant Armor (D)
+(22461,956,1,1,1,20200), -- Scroll: Enchant Armor (D)
+(22462,956,1,1,1,18800), -- Scroll: Enchant Armor (D)
+(22463,956,1,1,1,25700), -- Scroll: Enchant Armor (D)
+(22464,952,1,1,1,7500), -- Scroll: Enchant Armor (C)
+(22465,952,1,1,1,6400), -- Scroll: Enchant Armor (C)
+(22466,952,1,1,1,10000), -- Scroll: Enchant Armor (C)
+(22467,952,1,1,1,15200), -- Scroll: Enchant Armor (C)
+(22468,952,1,1,1,13400), -- Scroll: Enchant Armor (C)
+(22469,952,1,1,1,14300), -- Scroll: Enchant Armor (C)
+(22470,948,1,1,1,2900), -- Scroll: Enchant Armor (B)
+(22471,948,1,1,1,4300), -- Scroll: Enchant Armor (B)
+(22472,948,1,1,1,3700), -- Scroll: Enchant Armor (B)
+(22473,948,1,1,1,3200), -- Scroll: Enchant Armor (B)
+(22474,948,1,1,1,3600), -- Scroll: Enchant Armor (B)
+(22475,948,1,1,1,4600), -- Scroll: Enchant Armor (B)
+(22476,730,1,1,1,1500), -- Scroll: Enchant Armor (A)
+(22477,730,1,1,1,1300), -- Scroll: Enchant Armor (A)
+(22478,730,1,1,1,1600), -- Scroll: Enchant Armor (A)
+(22479,730,1,1,1,1500), -- Scroll: Enchant Armor (A)
+(22480,730,1,1,1,1400), -- Scroll: Enchant Armor (A)
+(22481,730,1,1,1,1900), -- Scroll: Enchant Armor (A)
+(22482,960,1,1,1,800), -- Scroll: Enchant Armor (S)
+(22483,960,1,1,1,500), -- Scroll: Enchant Armor (S)
+(22484,960,1,1,1,1300); -- Scroll: Enchant Armor (S)
+
 -- CT2 Epilogue Mithril Mines
 INSERT INTO `droplist` VALUES
 (22678,57,702,1400,0,700000),-- Adena

@@ -202,3 +202,5 @@ of this directory a little bit.
 3122802.xml -> Heavy Medal Event - Hyena
 3122803.xml -> Heavy Medal Event - Fox
 3122804.xml -> Heavy Medal Event - Wolf
+
+324840001.xml -> RimKamaloka
