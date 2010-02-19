@@ -190,7 +190,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 				{
 					if (activeChar != onlinePlayer && onlinePlayer.isOnline() == 1 && (onlinePlayer.getClient() != null && !onlinePlayer.getClient().isDetached()))
 					{
-						onlinePlayer.getInventory().addItem("Admin", idval, numval, activeChar, null);
+						onlinePlayer.getInventory().addItem("Admin", idval, numval, onlinePlayer, activeChar);
 						onlinePlayer.sendMessage("Admin spawned "+numval+" "+template.getName()+" in your inventory.");
 						counter++;
 					}
