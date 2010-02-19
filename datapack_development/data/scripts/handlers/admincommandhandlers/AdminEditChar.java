@@ -1225,11 +1225,11 @@ public class AdminEditChar implements IAdminCommandHandler
 		for (L2PcInstance member : target.getParty().getPartyMembers())
 		{
 			if (color)
-				text.append("<tr><td><table width=270 border=0 bgcolor=131210 cellpadding=2><tr><td width=20>");
+				text.append("<tr><td><table width=270 border=0 bgcolor=131210 cellpadding=2><tr><td width=30 align=right>");
 			else
-				text.append("<tr><td><table width=270 border=0 cellpadding=2><tr><td width=20>");
+				text.append("<tr><td><table width=270 border=0 cellpadding=2><tr><td width=30 align=right>");
 			text.append(member.getLevel() +"</td><td width=130><a action=\"bypass -h admin_character_info " +member.getName()+"\">"+member.getName()+"</a>");
-			text.append("</td><td width=120 align=right>"+member.getClassId().toString()+"</td></tr></table></td></tr>");
+			text.append("</td><td width=110 align=right>"+member.getClassId().toString()+"</td></tr></table></td></tr>");
 			color = !color;
 		}
 		html.replace("%party%", text.toString());
