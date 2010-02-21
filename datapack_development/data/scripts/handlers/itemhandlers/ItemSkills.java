@@ -15,7 +15,6 @@
 package handlers.itemhandlers;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.L2Skill;
@@ -28,6 +27,7 @@ import com.l2jserver.gameserver.model.entity.TvTEvent;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.skills.SkillHolder;
 import com.l2jserver.gameserver.templates.item.L2EtcItemType;
 
 import javolution.util.FastMap;
@@ -76,94 +76,91 @@ public class ItemSkills implements IItemHandler
 
 		int skillId;
 		int skillLvl;
-
-		final String[] skills = item.getEtcItem().getSkills();
+		
+		final SkillHolder[] skills = item.getEtcItem().getSkills();
 		if (skills != null)
 		{
-			for (String skillInfo : skills)
+			for (SkillHolder skillInfo : skills)
 			{
-				String[] skill = skillInfo.split("-");
-				if (skill != null && skill.length == 2)
+				if(skillInfo == null)
+					continue;
+				
+				skillId = skillInfo.getSkillId();
+				skillLvl = skillInfo.getSkillLvl();
+				L2Skill itemSkill = skillInfo.getSkill();
+				
+				if (itemSkill != null)
 				{
-					skillId = Integer.parseInt(skill[0]);
-					skillLvl = Integer.parseInt(skill[1]);
-					if (skillId > 0 && skillLvl > 0)
+					if (!itemSkill.checkCondition(playable, playable.getTarget(), false))
+					       return;
+
+					if (playable.isSkillDisabled(skillId))
 					{
-						L2Skill itemSkill = SkillTable.getInstance().getInfo(skillId, skillLvl);
-						if (itemSkill != null)
+						reuse(activeChar,itemSkill);
+						return ;
+					}
+
+					if (itemSkill.getItemConsumeId() == 0 && itemSkill.getItemConsume() > 0)
+					{
+						if (!playable.destroyItem("Consume", item.getObjectId(), itemSkill.getItemConsume(), null, false))
 						{
-							if (!itemSkill.checkCondition(playable, playable.getTarget(), false))
-					        	return;
-
-							if (playable.isSkillDisabled(skillId))
-							{
-								reuse(activeChar,itemSkill);
-								return ;
-							}
-
-							if (itemSkill.getItemConsumeId() == 0 && itemSkill.getItemConsume() > 0)
-							{
-								if (!playable.destroyItem("Consume", item.getObjectId(), itemSkill.getItemConsume(), null, false))
-								{
-									activeChar.sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_ITEMS));
-									return;
-								}
-							}
-
-							// send message to owner
-							if (isPet)
-							{
-								SystemMessage sm = new SystemMessage(SystemMessageId.PET_USES_S1);
-								sm.addString(itemSkill.getName());
-								activeChar.sendPacket(sm);
-							}
-							else
-							{
-								switch (skillId)
-								{
-									// short buff icon for healing potions
-									case 2031:
-									case 2032:
-									case 2037:
-									case 26025:
-									case 26026:
-										int buffId = activeChar._shortBuffTaskSkillId;
-										// greater healing potions
-										if (skillId == 2037 || skillId == 26025)
-											activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration()/1000);
-										// healing potions
-										else if ((skillId == 2032 || skillId == 26026) && buffId !=2037 && buffId != 26025)
-											activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration()/1000);
-										// lesser healing potions
-										else
-										{
-											if (buffId != 2037 && buffId != 26025 && buffId != 2032 && buffId != 26026)
-												activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration()/1000);
-										}
-										break;
-								}
-							}
-
-							if (itemSkill.isPotion())
-							{
-								playable.doSimultaneousCast(itemSkill);
-								// Summons should be affected by herbs too, self time effect is handled at L2Effect constructor
-								if (!isPet && item.getItemType() == L2EtcItemType.HERB && activeChar.getPet() != null && activeChar.getPet() instanceof L2SummonInstance)
-									activeChar.getPet().doSimultaneousCast(itemSkill);
-							}
-							else
-							{
-								playable.stopMove(null);
-								if (!playable.isCastingNow())
-									playable.doCast(itemSkill);
-							}
-
-							if (itemSkill.getReuseDelay() > 0)
-							{
-								activeChar.addTimeStamp(skillId, itemSkill.getReuseDelay());
-								activeChar.disableSkill(skillId, itemSkill.getReuseDelay());
-							}
+							activeChar.sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_ITEMS));
+							return;
 						}
+					}
+
+					// send message to owner
+					if (isPet)
+					{
+						SystemMessage sm = new SystemMessage(SystemMessageId.PET_USES_S1);
+						sm.addString(itemSkill.getName());
+						activeChar.sendPacket(sm);
+					}
+					else
+					{
+						switch (skillId)
+						{
+						// short buff icon for healing potions
+						case 2031:
+						case 2032:
+						case 2037:
+						case 26025:
+						case 26026:
+							int buffId = activeChar._shortBuffTaskSkillId;
+							// greater healing potions
+							if (skillId == 2037 || skillId == 26025)
+								activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration()/1000);
+							// healing potions
+							else if ((skillId == 2032 || skillId == 26026) && buffId !=2037 && buffId != 26025)
+								activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration()/1000);
+							// lesser healing potions
+							else
+							{
+								if (buffId != 2037 && buffId != 26025 && buffId != 2032 && buffId != 26026)
+									activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration()/1000);
+							}
+							break;
+						}
+					}
+
+					if (itemSkill.isPotion())
+					{
+						playable.doSimultaneousCast(itemSkill);
+						// Summons should be affected by herbs too, self time effect is handled at L2Effect constructor
+						if (!isPet && item.getItemType() == L2EtcItemType.HERB && activeChar.getPet() != null && activeChar.getPet() instanceof L2SummonInstance)
+							activeChar.getPet().doSimultaneousCast(itemSkill);
+					}
+					else
+					{
+						playable.stopMove(null);
+						if (!playable.isCastingNow())
+							playable.doCast(itemSkill);
+					}
+
+					if (itemSkill.getReuseDelay() > 0)
+					{
+						activeChar.addTimeStamp(skillId, itemSkill.getReuseDelay());
+						activeChar.disableSkill(skillId, itemSkill.getReuseDelay());
 					}
 				}
 			}
