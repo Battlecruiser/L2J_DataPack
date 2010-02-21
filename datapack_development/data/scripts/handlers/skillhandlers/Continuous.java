@@ -65,8 +65,7 @@ public class Continuous implements ISkillHandler
 		L2SkillType.AGGDEBUFF,
 		L2SkillType.FUSION
 	};
-	private L2Skill _skill;
-	
+
 	/**
 	 * 
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
@@ -78,21 +77,13 @@ public class Continuous implements ISkillHandler
 		L2PcInstance player = null;
 		if (activeChar instanceof L2PcInstance)
 			player = (L2PcInstance) activeChar;
+		
 		if (skill.getEffectId() != 0)
 		{
-			int skillLevel = skill.getEffectLvl();
-			int skillEffectId = skill.getEffectId();
-			if (skillLevel == 0)
-			{
-				_skill = SkillTable.getInstance().getInfo(skillEffectId, 1);
-			}
-			else
-			{
-				_skill = SkillTable.getInstance().getInfo(skillEffectId, skillLevel);
-			}
+			L2Skill sk = SkillTable.getInstance().getInfo(skill.getEffectId(), skill.getEffectLvl() == 0 ? 1 : skill.getEffectLvl());
 			
-			if (_skill != null)
-				skill = _skill;
+			if (sk != null)
+				skill = sk;
 		}
 		
 		for (L2Character target: (L2Character[]) targets)
