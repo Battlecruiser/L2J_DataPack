@@ -15,7 +15,6 @@
 package handlers.itemhandlers;
 
 import com.l2jserver.gameserver.datatables.MapRegionTable;
-import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.instancemanager.CastleManorManager;
 import com.l2jserver.gameserver.model.L2ItemInstance;
@@ -31,6 +30,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.skills.SkillHolder;
 
 /**
  * @author  l3x
@@ -90,15 +90,13 @@ public class Seed implements IItemHandler
 		if (areaValid(MapRegionTable.getInstance().getAreaCastle(_activeChar)))
 		{
 			_target.setSeeded(_seedId, _activeChar);
-			int skillId;
-			int skillLvl;
-			final String[] skills = item.getEtcItem().getSkills();
+			final SkillHolder[] skills = item.getEtcItem().getSkills();
 			if (skills != null)
 			{
-				String[] skill = skills[0].split("-");
-				skillId = Integer.parseInt(skill[0]);
-				skillLvl = Integer.parseInt(skill[1]);
-				L2Skill itemskill = SkillTable.getInstance().getInfo(skillId, skillLvl); // Sowing skill
+				if(skills[0] == null)
+					return;
+				
+				L2Skill itemskill = skills[0].getSkill();
 				_activeChar.useMagic(itemskill, false, false);
 			}
 			
