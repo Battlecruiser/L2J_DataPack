@@ -579,25 +579,10 @@
 		<set name="hitTime" val="5000" />
 	</skill>
 	<skill id="5264" levels="12" name="Death Mark">
-		<!-- CT2.2 retail confirmed -->
-		<table name="#dmg"> 72 96 123 123 150 150 174 174 189 189 189 189 </table>
-		<table name="#amount"> 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
-		<set name="target" val="TARGET_ONE" />
-		<set name="element" val="5" /> <!-- Dark -->
-		<set name="elementPower" val="20" />
-		<set name="skillType" val="POISON" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isDebuff" val="true" />
-		<set name="isMagic" val="true" />
-		<set name="castRange" val="600" />
-		<set name="effectRange" val="1200" />
-		<set name="hitTime" val="3000" />
-		<for>
-			<effect count="10" name="DamOverTime" time="3" val="#dmg" abnormal="deathmark">
-				<mul order="0x30" stat="pDef" val="#amount" />
-				<mul order="0x30" stat="mDef" val="#amount" />
-			</effect>
-		</for>
+		<!-- Not Used Anymore -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5265" levels="12" name="NPC - Soul Emission">
 		<set name="target" val="TARGET_NONE" />

@@ -705,24 +705,31 @@
 		<set name="soulMaxConsumeCount" val="5" />
 	</skill>
 	<skill id="1435" levels="10" name="Death Mark">
-		<!-- CT2.2 retail confirmed -->
+		<table name="#amount"> 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+		<table name="#dmg"> 72 96 123 123 150 150 174 174 189 189 </table>
 		<table name="#magicLvl"> 24 32 40 46 52 58 62 66 70 74 </table>
 		<table name="#mpConsume"> 12 14 18 22 24 28 29 32 33 35 </table>
-		<table name="#EffectLvl"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="70" /> <!-- Base Land Rate -->
-		<set name="target" val="TARGET_ONE" />
-		<set name="lvlDepend" val="3" />
-		<set name="reuseDelay" val="11000" />
-		<set name="hitTime" val="1200" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="isMagic" val="true" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
-		<set name="effectId" val="5264" />
-		<set name="effectLevel" val="#EffectLvl" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="1200" />
+		<set name="isMagic" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="70" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="11000" />
+		<set name="skillType" val="DOT" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<!-- Retail Values CT2.3: 24 32 41 41 50 50 58 58 63 63HP * 3 sec -->
+			<effect count="10" name="DamOverTime" time="3" val="#dmg" abnormal="deathmark">
+				<mul order="0x30" stat="pDef" val="#amount" />
+				<mul order="0x30" stat="mDef" val="#amount" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1436" levels="30" name="Soul of Pain" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30">
 		<!-- CT2.2 retail confirmed -->
