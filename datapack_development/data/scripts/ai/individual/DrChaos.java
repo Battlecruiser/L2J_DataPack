@@ -74,7 +74,7 @@ public class DrChaos extends Quest
 	       if (machine_instance != null)
 	       {
 	         npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, machine_instance);
-	         machine_instance.broadcastPacket(new SpecialCamera(machine_instance.getObjectId(),1,-200,15,10000,20000));
+	         machine_instance.broadcastPacket(new SpecialCamera(machine_instance.getObjectId(),1,-200,15,10000,20000,0,0,1,0));
 	       }
 	       else
 	         //print "Dr Chaos AI: problem finding Strange Machine (npcid = "+STRANGE_MACHINE+"). Error: not spawned!"
@@ -85,7 +85,7 @@ public class DrChaos extends Quest
 	       npc.broadcastPacket(new SocialAction(npc.getObjectId(),3));
 	    else if (event.equalsIgnoreCase("3"))
 	    {
-	       npc.broadcastPacket(new SpecialCamera(npc.getObjectId(),1,-150,10,3000,20000));
+	       npc.broadcastPacket(new SpecialCamera(npc.getObjectId(),1,-150,10,3000,20000,0,0,1,0));
 	       startQuestTimer("4",2500,npc,player);
 	    }
 	    else if (event.equalsIgnoreCase("4"))
@@ -106,7 +106,7 @@ public class DrChaos extends Quest
 	       }
 	    }
 	    else if (event.equalsIgnoreCase("6"))
-	       npc.broadcastPacket(new SpecialCamera(npc.getObjectId(),30,-200,20,6000,8000));
+	       npc.broadcastPacket(new SpecialCamera(npc.getObjectId(),30,-200,20,6000,8000,0,0,1,0));
 	    return super.onAdvEvent(event, npc, player);
 	}
 
