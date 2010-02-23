@@ -18,6 +18,7 @@ import handlers.admincommandhandlers.*;
 import handlers.chathandlers.*;
 import handlers.itemhandlers.*;
 import handlers.skillhandlers.*;
+import handlers.targethandlers.*;
 import handlers.usercommandhandlers.*;
 import handlers.voicedcommandhandlers.*;
 
@@ -28,6 +29,7 @@ import com.l2jserver.gameserver.handler.AdminCommandHandler;
 import com.l2jserver.gameserver.handler.ChatHandler;
 import com.l2jserver.gameserver.handler.ItemHandler;
 import com.l2jserver.gameserver.handler.SkillHandler;
+import com.l2jserver.gameserver.handler.TargetListHandler;
 import com.l2jserver.gameserver.handler.UserCommandHandler;
 import com.l2jserver.gameserver.handler.VoicedCommandHandler;
 
@@ -237,6 +239,19 @@ public class MasterHandler
 		_log.config("Loaded " + VoicedCommandHandler.getInstance().size() + " VoicedHandlers");
 	}
 	
+	private static void loadTargetHandlers()
+	{
+		TargetListHandler.getInstance().registerNewTargetHandler(new AllyClanTarget());
+		TargetListHandler.getInstance().registerNewTargetHandler(new AreaTarget());
+		TargetListHandler.getInstance().registerNewTargetHandler(new CorpseTarget());
+		TargetListHandler.getInstance().registerNewTargetHandler(new NullTarget());
+		TargetListHandler.getInstance().registerNewTargetHandler(new PartyTarget());
+		TargetListHandler.getInstance().registerNewTargetHandler(new SingleHumanTarget());
+		TargetListHandler.getInstance().registerNewTargetHandler(new SpecialTarget());
+		TargetListHandler.getInstance().registerNewTargetHandler(new SummonTarget());
+		_log.config("Loaded " + TargetListHandler.getInstance().size() + " TargetListHandlers");
+	}
+	
 	/**
 	 * @param args
 	 */
@@ -249,6 +264,7 @@ public class MasterHandler
 		loadSkillHandlers();
 		loadUserHandlers();
 		loadVoicedHandlers();
+		loadTargetHandlers();
 		_log.config("Handlers Loaded...");
 	}
 }
