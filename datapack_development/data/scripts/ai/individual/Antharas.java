@@ -435,7 +435,7 @@ public class Antharas extends L2AttackableAIScript
 				break;
 			case 2:
 				// Set camera.
-				broadcastPacket(new SpecialCamera(_antharas.getObjectId(),700,13,-19,0,20000));
+				broadcastPacket(new SpecialCamera(_antharas.getObjectId(),700,13,-19,0,20000,0,0,1,0));
 
 				// Set next task.
 				if (_socialTask != null)
@@ -448,7 +448,7 @@ public class Antharas extends L2AttackableAIScript
 
 			case 3:
 				// Do social.
-				broadcastPacket(new SpecialCamera(_antharas.getObjectId(),700,13,0,6000,20000));
+				broadcastPacket(new SpecialCamera(_antharas.getObjectId(),700,13,0,6000,20000,0,0,1,0));
 				// Set next task.
 				if (_socialTask != null)
 				{
@@ -458,7 +458,7 @@ public class Antharas extends L2AttackableAIScript
 				_socialTask = ThreadPoolManager.getInstance().scheduleGeneral(new AntharasSpawn(4), 10000);
 				break;
 			case 4:
-				broadcastPacket(new SpecialCamera(_antharas.getObjectId(),3700,0,-3,0,10000));
+				broadcastPacket(new SpecialCamera(_antharas.getObjectId(),3700,0,-3,0,10000,0,0,1,0));
 				// Set next task.
 				if (_socialTask != null)
 				{
@@ -470,7 +470,7 @@ public class Antharas extends L2AttackableAIScript
 
 			case 5:
 				// Do social.
-				broadcastPacket(new SpecialCamera(_antharas.getObjectId(),1100,0,-3,22000,30000));
+				broadcastPacket(new SpecialCamera(_antharas.getObjectId(),1100,0,-3,22000,30000,0,0,1,0));
 				// Set next task.
 				if (_socialTask != null)
 				{
@@ -482,7 +482,7 @@ public class Antharas extends L2AttackableAIScript
 
 			case 6:
 				// Set camera.
-				broadcastPacket(new SpecialCamera(_antharas.getObjectId(),1100,0,-3,300,7000));
+				broadcastPacket(new SpecialCamera(_antharas.getObjectId(),1100,0,-3,300,7000,0,0,1,0));
 				// Set next task.
 				if (_socialTask != null)
 				{

@@ -77,6 +77,9 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_cache_crest_reload','1'),
 ('admin_cache_crest_fix','1'),
 
+-- SPECIAL CAMERA TEST
+('admin_camera','1'),
+
 -- CHANGE ACCESS LEVEL
 ('admin_changelvl','1'),
 
