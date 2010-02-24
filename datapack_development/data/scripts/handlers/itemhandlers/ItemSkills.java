@@ -96,7 +96,7 @@ public class ItemSkills implements IItemHandler
 
 					if (playable.isSkillDisabled(skillId))
 					{
-						reuse(activeChar,itemSkill);
+						reuse(activeChar,itemSkill, item);
 						return ;
 					}
 
@@ -167,11 +167,11 @@ public class ItemSkills implements IItemHandler
 		}
 	}
 	
-	private void reuse(L2PcInstance player,L2Skill skill)
+	private void reuse(L2PcInstance player,L2Skill skill, L2ItemInstance item)
 	{
 		SystemMessage sm = null;
     	FastMap<Integer, TimeStamp> timeStamp = player.getReuseTimeStamp();
-			
+
     	if (timeStamp != null && timeStamp.containsKey(skill.getId()))
     	{
     		int remainingTime = (int)(player.getReuseTimeStamp().get(skill.getId()).getRemaining()/1000);
@@ -181,27 +181,36 @@ public class ItemSkills implements IItemHandler
     		if (hours > 0)
     		{
     			sm = new SystemMessage(SystemMessageId.S2_HOURS_S3_MINUTES_S4_SECONDS_REMAINING_FOR_REUSE_S1);
-    			sm.addSkillName(skill);
+    			if (skill.isPotion())
+        			sm.addItemName(item);
+    			else
+    				sm.addSkillName(skill);
     			sm.addNumber(hours);
     			sm.addNumber(minutes);
     		}
     		else if (minutes > 0)
     		{
     			sm = new SystemMessage(SystemMessageId.S2_MINUTES_S3_SECONDS_REMAINING_FOR_REUSE_S1);
-    			sm.addSkillName(skill);
+    			if (skill.isPotion())
+        			sm.addItemName(item);
+    			else
+    				sm.addSkillName(skill);
     			sm.addNumber(minutes);
     		}
     		else
     		{
     			sm = new SystemMessage(SystemMessageId.S2_SECONDS_REMAINING_FOR_REUSE_S1);
-    			sm.addSkillName(skill);
+    			if (skill.isPotion())
+        			sm.addItemName(item);
+    			else
+    				sm.addSkillName(skill);
     		}
     		sm.addNumber(seconds);
     	}
     	else
     	{
     		sm = new SystemMessage(SystemMessageId.S1_PREPARED_FOR_REUSE);
-    		sm.addSkillName(skill);
+    		sm.addItemName(item);
     	}
     	player.sendPacket(sm);
 	}
