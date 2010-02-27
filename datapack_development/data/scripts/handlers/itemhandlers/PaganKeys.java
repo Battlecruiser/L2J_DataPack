@@ -24,10 +24,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
-import com.l2jserver.gameserver.network.serverpackets.PlaySound;
-import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.util.Rnd;
 
 /**
  * @author  chris
@@ -68,8 +65,6 @@ public class PaganKeys implements IItemHandler
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		
-		int openChance = 35;
 		
 		if (!playable.destroyItem("Consume", item.getObjectId(), 1, null, false))
 			return;
@@ -125,66 +120,6 @@ public class PaganKeys implements IItemHandler
 					DoorTable.getInstance().getDoor(23150003).onOpen();
 					DoorTable.getInstance().getDoor(23150004).openMe();
 					DoorTable.getInstance().getDoor(23150004).onOpen();
-				}
-				else
-				{
-					activeChar.sendMessage("Incorrect Door.");
-				}
-				break;
-			case 8273: //AnteroomKey
-				if (door.getDoorName() != null
-						&& door.getDoorName().startsWith("Anteroom"))
-				{
-					if (Rnd.get(100) < openChance)
-					{
-						door.openMe();
-						door.onOpen(); // Closes the door after 60sec
-						activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), 3));
-					}
-					else
-					{
-						//test with: activeChar.sendPacket(new SystemMessage(SystemMessage.FAILED_TO_UNLOCK_DOOR));
-						activeChar.sendMessage("You failed to open Anterooms Door.");
-						activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), 13));
-						PlaySound playSound = new PlaySound("interfacesound.system_close_01");
-						activeChar.sendPacket(playSound);
-					}
-				}
-				else
-				{
-					activeChar.sendMessage("Incorrect Door.");
-				}
-				break;
-			case 8274: //Chapel key
-				if (door.getDoorId() == 19160010||door.getDoorId() == 19160011)
-				{
-					DoorTable.getInstance().getDoor(19160010).openMe();
-					DoorTable.getInstance().getDoor(19160010).onOpen();
-					DoorTable.getInstance().getDoor(19160011).openMe();
-					DoorTable.getInstance().getDoor(19160011).onOpen();
-				}
-				else
-				{
-					activeChar.sendMessage("Incorrect Door.");
-				}
-				break;
-			case 8275: //Key of Darkness
-				if (door.getDoorName() != null
-						&& door.getDoorName().startsWith("Door_of_Darkness"))
-				{
-					if (Rnd.get(100) < openChance)
-					{
-						door.openMe();
-						door.onOpen();
-						activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), 3));
-					}
-					else
-					{
-						activeChar.sendMessage("You failed to open Door of Darkness.");
-						activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), 13));
-						PlaySound playSound = new PlaySound("interfacesound.system_close_01");
-						activeChar.sendPacket(playSound);
-					}
 				}
 				else
 				{
