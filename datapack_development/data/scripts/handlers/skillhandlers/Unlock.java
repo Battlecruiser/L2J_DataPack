@@ -16,16 +16,17 @@ package handlers.skillhandlers;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.handler.ISkillHandler;
+import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2ChestInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.skills.Formulas;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
 import com.l2jserver.util.Rnd;
 
@@ -33,7 +34,8 @@ public class Unlock implements ISkillHandler
 {
 	private static final L2SkillType[] SKILL_IDS =
 	{
-		L2SkillType.UNLOCK
+		L2SkillType.UNLOCK,
+		L2SkillType.UNLOCK_SPECIAL
 	};
 	
 	/**
@@ -49,146 +51,155 @@ public class Unlock implements ISkillHandler
 		
 		for (L2Object target: targets)
 		{
-			boolean success = Formulas.calculateUnlockChance(skill);
 			if (target instanceof L2DoorInstance)
 			{
 				L2DoorInstance door = (L2DoorInstance) target;
-				if (!door.isUnlockable() || door.getFort() != null)
+				// Check if door in the different instance
+				if (activeChar.getInstanceId() != door.getInstanceId())
+				{
+					// Search for the instance
+					final Instance inst = InstanceManager.getInstance().getInstance(activeChar.getInstanceId());
+					if (inst == null)
+					{
+						// Instance not found
+						activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+						return;
+					}
+					for (L2DoorInstance instanceDoor : inst.getDoors())
+					{
+						if (instanceDoor.getDoorId() == door.getDoorId())
+						{
+							// Door found
+							door = instanceDoor;
+							break;
+						}
+					}
+					// Checking instance again
+					if (activeChar.getInstanceId() != door.getInstanceId())
+					{
+						activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+						return;
+					}
+				}
+
+				if ((!door.isUnlockable() && skill.getSkillType() != L2SkillType.UNLOCK_SPECIAL)
+						|| door.getFort() != null)
 				{
 					activeChar.sendPacket(new SystemMessage(SystemMessageId.UNABLE_TO_UNLOCK_DOOR));
 					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 				
-				if (success && (!door.getOpen()))
+				if (doorUnlock(skill) && (!door.getOpen()))
 				{
 					door.openMe();
 					door.onOpen();
-					activeChar.sendMessage("Unlock the door!");
 				}
 				else
-				{
 					activeChar.sendPacket(new SystemMessage(SystemMessageId.FAILED_TO_UNLOCK_DOOR));
-				}
 			}
 			else if (target instanceof L2ChestInstance)
 			{
 				L2ChestInstance chest = (L2ChestInstance) target;
-				if (chest.getCurrentHp() <= 0 || chest.isInteracted())
+				if (chest.getCurrentHp() <= 0
+						|| chest.isInteracted() 
+						|| activeChar.getInstanceId() != chest.getInstanceId())
 				{
 					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 				else
 				{
-					int chestChance = 0;
-					int chestGroup = 0;
-					int chestTrapLimit = 0;
-					
-					if (chest.getLevel() > 60)
-						chestGroup = 4;
-					else if (chest.getLevel() > 40)
-						chestGroup = 3;
-					else if (chest.getLevel() > 30)
-						chestGroup = 2;
-					else
-						chestGroup = 1;
-					
-					switch (chestGroup)
-					{
-						case 1:
-						{
-							if (skill.getLevel() > 10)
-								chestChance = 100;
-							else if (skill.getLevel() >= 3)
-								chestChance = 50;
-							else if (skill.getLevel() == 2)
-								chestChance = 45;
-							else if (skill.getLevel() == 1)
-								chestChance = 40;
-							
-							chestTrapLimit = 10;
-						}
-							break;
-						case 2:
-						{
-							if (skill.getLevel() > 12)
-								chestChance = 100;
-							else if (skill.getLevel() >= 7)
-								chestChance = 50;
-							else if (skill.getLevel() == 6)
-								chestChance = 45;
-							else if (skill.getLevel() == 5)
-								chestChance = 40;
-							else if (skill.getLevel() == 4)
-								chestChance = 35;
-							else if (skill.getLevel() == 3)
-								chestChance = 30;
-							
-							chestTrapLimit = 30;
-						}
-							break;
-						case 3:
-						{
-							if (skill.getLevel() >= 14)
-								chestChance = 50;
-							else if (skill.getLevel() == 13)
-								chestChance = 45;
-							else if (skill.getLevel() == 12)
-								chestChance = 40;
-							else if (skill.getLevel() == 11)
-								chestChance = 35;
-							else if (skill.getLevel() == 10)
-								chestChance = 30;
-							else if (skill.getLevel() == 9)
-								chestChance = 25;
-							else if (skill.getLevel() == 8)
-								chestChance = 20;
-							else if (skill.getLevel() == 7)
-								chestChance = 15;
-							else if (skill.getLevel() == 6)
-								chestChance = 10;
-							
-							chestTrapLimit = 50;
-						}
-							break;
-						case 4:
-						{
-							if (skill.getLevel() >= 14)
-								chestChance = 50;
-							else if (skill.getLevel() == 13)
-								chestChance = 45;
-							else if (skill.getLevel() == 12)
-								chestChance = 40;
-							else if (skill.getLevel() == 11)
-								chestChance = 35;
-							
-							chestTrapLimit = 80;
-						}
-							break;
-					}
-					if (Rnd.get(100) <= chestChance)
+					chest.setInteracted();
+					if (chestUnlock(skill, chest))
 					{
 						activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), 3));
 						chest.setSpecialDrop();
 						chest.setMustRewardExpSp(false);
-						chest.setInteracted();
 						chest.reduceCurrentHp(99999999, activeChar, skill);
 					}
 					else
 					{
 						activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), 13));
-						if (Rnd.get(100) < chestTrapLimit)
-							chest.chestTrap(activeChar);
-						chest.setInteracted();
 						chest.addDamageHate(activeChar, 0, 1);
 						chest.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, activeChar);
+						if (chestTrap(chest))
+							chest.chestTrap(activeChar);
 					}
 				}
 			}
 		}
 	}
-	
+
+	private static final boolean doorUnlock(L2Skill skill)
+	{
+		if (skill.getSkillType() == L2SkillType.UNLOCK_SPECIAL)
+			return Rnd.get(100) < skill.getPower();
+
+		switch (skill.getLevel())
+		{
+			case 0:
+				return false;
+			case 1:
+				return Rnd.get(120) < 30;
+			case 2:
+				return Rnd.get(120) < 50;
+			case 3:
+				return Rnd.get(120) < 75;
+			default:
+				return Rnd.get(120) < 100;
+		}
+	}
+
+	private static final boolean chestUnlock(L2Skill skill, L2Character chest)
+	{
+		int chance = 0;
+		if (chest.getLevel() > 60)
+		{
+			if (skill.getLevel() < 10)
+				return false;
+
+			chance = (skill.getLevel() - 10) * 5 + 30;
+		}
+		else if (chest.getLevel() > 40)
+		{
+			if (skill.getLevel() < 6)
+				return false;
+
+			chance = (skill.getLevel() - 6) * 5 + 10;
+		}
+		else if (chest.getLevel() > 30)
+		{
+			if (skill.getLevel() < 3)
+				return false;
+			if (skill.getLevel() > 12)
+				return true;
+
+			chance = (skill.getLevel() - 3) * 5 + 30;
+		}
+		else
+		{
+			if (skill.getLevel() > 10)
+				return true;
+
+			chance = skill.getLevel() * 5 + 35;
+		}
+
+		chance = Math.min(chance, 50);
+		return Rnd.get(100) < chance;
+	}
+
+	private static final boolean chestTrap(L2Character chest)
+	{
+		if (chest.getLevel() > 60)
+			return Rnd.get(100) < 80;
+		if (chest.getLevel() > 40)
+			return Rnd.get(100) < 50;
+		if (chest.getLevel() > 30)
+			return Rnd.get(100) < 30;
+		return Rnd.get(100) < 10;
+	}
+
 	/**
 	 * 
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
