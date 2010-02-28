@@ -522,14 +522,14 @@ public class AdminEditChar implements IAdminCommandHandler
 			else
 				activeChar.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
 		}
-		else if(command.startsWith("admin_unpenalty"))
+		else if(command.startsWith("admin_remove_clan_penalty"))
 		{
 			try 
 			{
 				StringTokenizer st = new StringTokenizer(command, " ");
 				if (st.countTokens() != 3)
 				{
-					activeChar.sendMessage("Usage: //unpenalty join|create charname");
+					activeChar.sendMessage("Usage: //remove_clan_penalty join|create charname");
 					return false;
 				}
 
