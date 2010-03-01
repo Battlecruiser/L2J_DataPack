@@ -6,7 +6,7 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class AurabirdOwl extends L2Transformation
 {
-	private static final int[] SKILLS = new int[]{884,885,886,888,890,891,894,911,932,619};
+	private static final int[] SKILLS = new int[]{884,885,887,889,892,893,895,911,932,619};
 	
 	public AurabirdOwl()
 	{
