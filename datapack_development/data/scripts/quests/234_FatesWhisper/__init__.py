@@ -50,7 +50,7 @@ Weapons={
 79:"Sword of Damascus",
 2626:"Samurai Dualsword",
 287:"Bow of Peril",
-1303:"Lance",
+97:"Lance",
 175:"Art of Battle Axe",
 210:"Staff of Evil Spirits",
 234:"Demon Dagger" ,
