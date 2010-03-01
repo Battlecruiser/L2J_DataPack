@@ -6,7 +6,7 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class ArcherCaptain extends L2Transformation
 {
-	private static final int[] SKILLS = new int[]{5419, 619};
+	private static final int[] SKILLS = new int[]{5491, 619};
 	
 	public ArcherCaptain()
 	{
