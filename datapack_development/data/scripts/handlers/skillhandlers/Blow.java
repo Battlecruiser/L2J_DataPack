@@ -109,6 +109,29 @@ public class Blow implements ISkillHandler
 				if (Formulas.calcCrit(skill.getBaseCritRate() * 10 * Formulas.getSTRBonus(activeChar), target))
 					crit = true;
 				double damage = (int) Formulas.calcBlowDamage(activeChar, target, skill, shld, soul);
+				if (skill.getMaxSoulConsumeCount() > 0 && activeChar instanceof L2PcInstance)
+				{
+					switch (((L2PcInstance) activeChar).getSouls())
+					{
+						case 0:
+							break;
+						case 1:
+							damage *= 1.10;
+							break;
+						case 2:
+							damage *= 1.12;
+							break;
+						case 3:
+							damage *= 1.15;
+							break;
+						case 4:
+							damage *= 1.18;
+							break;
+						default:
+							damage *= 1.20;
+							break;
+					}
+				}
 				if (crit)
 				{
 					damage *= 2;
