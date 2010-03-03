@@ -63,7 +63,7 @@ class Quest (JQuest) :
 	def onAdvEvent (self,event,npc,player) :
 		htmltext = event
 		st = player.getQuestState(qn)
-		qs = st.getPlayer().getQuestState("238_SuccesFailureOfBusiness")
+		qs = player.getQuestState("238_SuccesFailureOfBusiness")
 		if not st : return
 		if event == "32646-04.htm" :
 			self.questItemIds = [MUCROKIAN_HIDE, AWAKENED_MUCROKIAN_HIDE]
@@ -94,34 +94,32 @@ class Quest (JQuest) :
 		return htmltext
 
 	def onTalk (self,npc,player) :
-		htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>" 
-		st = player.getQuestState(qn) 
+		htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+		st = player.getQuestState(qn)
 		if not st : return htmltext
 
 		npcId = npc.getNpcId()
 		cond = st.getInt("cond")
-		id = st.getState()
-		qs2 = st.getPlayer().getQuestState("309_ForAGoodCause")
+		qs2 = player.getQuestState("309_ForAGoodCause")
 		if npcId == KATENSA :
-			if qs2 :
-				if qs2.getState() == State.STARTED :
-					htmltext = "32646-15.htm"
+			if qs2 and qs2.getState() == State.STARTED :
+				htmltext = "32646-15.htm"
 			elif cond == 0 :
 				if player.getLevel() >= 82 :
 					htmltext = "32646-01.htm"
 				else :
 					htmltext = "32646-00.htm"
 					st.exitQuest(1)
-			elif id == State.STARTED :
+			elif st.getState() == State.STARTED :
 				if st.getQuestItemsCount(MUCROKIAN_HIDE) >= 1 or st.getQuestItemsCount(AWAKENED_MUCROKIAN_HIDE) >= 1:
 					htmltext = "32646-06.htm"
 				else :
-					htmltext = "32646-05.htm"				
+					htmltext = "32646-05.htm"
 		return htmltext
 
 	def onKill(self,npc,player,isPet) :
 		st = player.getQuestState(qn)
-		if not st : return 
+		if not st : return
 		if st.getState() != State.STARTED : return
 		npcId = npc.getNpcId()
 		cond = st.getInt("cond")
