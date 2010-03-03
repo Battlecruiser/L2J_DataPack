@@ -36,8 +36,7 @@ public class ManaHeal implements ISkillHandler
 	private static final L2SkillType[] SKILL_IDS =
 	{
 		L2SkillType.MANAHEAL,
-		L2SkillType.MANARECHARGE,
-		L2SkillType.MANAHEAL_PERCENT
+		L2SkillType.MANARECHARGE
 	};
 	
 	/**
@@ -49,15 +48,8 @@ public class ManaHeal implements ISkillHandler
 		for (L2Character target: (L2Character[]) targets)
 		{
 			double mp = skill.getPower();
-			if (skill.getSkillType() == L2SkillType.MANAHEAL_PERCENT)
-			{
-				//double mp = skill.getPower();
-				mp = target.getMaxMp() * mp / 100.0;
-			}
-			else
-			{
-				mp = (skill.getSkillType() == L2SkillType.MANARECHARGE) ? target.calcStat(Stats.RECHARGE_MP_RATE, mp, null, null) : mp;
-			}
+			mp = (skill.getSkillType() == L2SkillType.MANARECHARGE) ? target.calcStat(Stats.RECHARGE_MP_RATE, mp, null, null) : mp;
+
 			//from CT2 u will receive exact MP, u can't go over it, if u have full MP and u get MP buff, u will receive 0MP restored message
 			if ((target.getCurrentMp() + mp) >= target.getMaxMp())
 			{

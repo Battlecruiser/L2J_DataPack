@@ -166,6 +166,7 @@ public class MasterHandler
 		SkillHandler.getInstance().registerSkillHandler(new CpDamPercent());
 		SkillHandler.getInstance().registerSkillHandler(new Manadam());
 		SkillHandler.getInstance().registerSkillHandler(new Heal());
+		SkillHandler.getInstance().registerSkillHandler(new HealPercent());
 		SkillHandler.getInstance().registerSkillHandler(new CombatPointHeal());
 		SkillHandler.getInstance().registerSkillHandler(new ManaHeal());
 		SkillHandler.getInstance().registerSkillHandler(new BalanceLife());
