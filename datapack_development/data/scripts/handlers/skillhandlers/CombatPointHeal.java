@@ -34,8 +34,7 @@ public class CombatPointHeal implements ISkillHandler
 {
 	private static final L2SkillType[] SKILL_IDS =
 	{
-		L2SkillType.COMBATPOINTHEAL,
-		L2SkillType.CPHEAL_PERCENT
+		L2SkillType.COMBATPOINTHEAL
 	};
 	
 	/**
@@ -60,13 +59,7 @@ public class CombatPointHeal implements ISkillHandler
 		{
 			double cp = skill.getPower();
 			
-			if (skill.getSkillType() == L2SkillType.CPHEAL_PERCENT)
-				cp = target.getMaxCp() * cp / 100;
-			//int cLev = activeChar.getLevel();
-			//hp += skill.getPower()/*+(Math.sqrt(cLev)*cLev)+cLev*/;
-
-			//from CT2 u will receive exact CP, u can't go over it, if u have full CP and u get CP buff, u will receive 0CP restored message
-			else if ((target.getCurrentCp() + cp) >= target.getMaxCp())
+			if ((target.getCurrentCp() + cp) >= target.getMaxCp())
 			{
 				cp = target.getMaxCp() - target.getCurrentCp();
 			}

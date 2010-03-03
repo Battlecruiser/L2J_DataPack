@@ -43,7 +43,6 @@ public class Heal implements ISkillHandler
 	private static final L2SkillType[] SKILL_IDS =
 	{
 		L2SkillType.HEAL,
-		L2SkillType.HEAL_PERCENT,
 		L2SkillType.HEAL_STATIC
 	};
 	
@@ -138,7 +137,7 @@ public class Heal implements ISkillHandler
 			//hp += skill.getPower()/*+(Math.sqrt(cLev)*cLev)+cLev*/;
 			if (skill.getSkillType() == L2SkillType.HEAL_STATIC)
 				hp = skill.getPower();
-			else if (skill.getSkillType() != L2SkillType.HEAL_PERCENT)
+			else
 				hp *= target.calcStat(Stats.HEAL_EFFECTIVNESS, 100, null, null) / 100;
 			
 			// Healer proficiency (since CT1)
