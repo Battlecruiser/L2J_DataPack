@@ -110,13 +110,20 @@
 		<set name="reuseDelay" val="3600000" />
 	</skill>
 	<skill id="1506" levels="1" name="Blessing of Eva">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="magicLvl" val="83" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="isMagic" val="true" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="1440000" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="83" />
+		<set name="mpConsume" val="73" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" />
+		<set name="reuseDelay" val="1800000" /> <!-- Guess -->
+		<set name="skillType" val="HPMPCPHEAL_PERCENT" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<!-- effect name="CancelDebuff" val="0" effectPower="25" effectType="CANCEL_DEBUFF"/ TODO: Needs Core-Side Support -->
+		</for>
 	</skill>
 	<skill id="1507" levels="1" name="Lord of Vampire">
 		<set name="mpConsume" val="37" />
