@@ -398,7 +398,7 @@ $MYG < ../sql/class_list.sql &> /dev/null
 $MYG < ../sql/cursed_weapons.sql &> /dev/null
 $MYG < ../sql/dimensional_rift.sql &> /dev/null
 $MYG < ../sql/droplist.sql &> /dev/null
-$MYG < ../sql/enchant_skill_trees.sql &> /dev/null
+$MYG < ../sql/enchant_skill_groups.sql &> /dev/null
 $MYG < ../sql/etcitem.sql &> /dev/null
 $MYG < ../sql/fish.sql &> /dev/null
 $MYG < ../sql/fishing_skill_trees.sql &> /dev/null
