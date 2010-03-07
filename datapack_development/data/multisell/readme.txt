@@ -119,16 +119,18 @@ of this directory a little bit.
 350980008.xml -> Manor Products: Rune
 350980009.xml -> Manor Products: Schuttgart
 
-356551001.xml -> Castle Merchant - magic related products (hear/face gear)
-356551002.xml -> Castle Merchant - bracelets
-356551003.xml -> Castle Merchant - t-shirts
-
 350980012.xml -> BlackSmith Lahm
 
-36142001.xml -> Dragonspine fortress buylist
-36114001.xml -> Tanor Fortress Support Unit Captain - magic related products (hear/face gear)
-36114002.xml -> Tanor Fortress Support Unit Captain - bracelets
-36114003.xml -> Tanor Fortress Support Unit Captain - t-shirts
+90002001.xml -> Castle Merchant - magic related products (hear/face gear)
+90002002.xml -> Castle Merchant - bracelets
+90002003.xml -> Castle Merchant - t-shirts
+90002004.xml -> Castle Merchant - enchanted t-shirts
+
+90001000.xml -> Suspicious Merchant
+90001001.xml -> Support Unit Captain - magic related products (hear/face gear)
+90001002.xml -> Support Unit Captain - bracelets
+90001003.xml -> Support Unit Captain - t-shirts
+90001004.xml -> Support Unit Captain - enchanted t-shirts
 
 32326001.xml -> Yang - Elemental potions
 32326002.xml -> Yang - Elemental stones
