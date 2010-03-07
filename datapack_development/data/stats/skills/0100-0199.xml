@@ -25,7 +25,7 @@
 			<effect name="Stun" time="9" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="Stun" />
 		</for>
 	</skill>
-	<skill id="101" levels="40" name="Stunning Shot" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30" enchantLevels4="30">
+	<skill id="101" levels="40" name="Stunning Shot" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#ench3-pDef"> 0.99 0.98 0.98 0.97 0.97 0.95 0.94 0.93 0.93 0.92 0.91 0.9 0.9 0.88 0.87 0.86 0.86 0.85 0.84 0.81 0.8 0.8 0.79 0.78 0.78 0.77 0.76 0.74 0.73 0.72 </table>
 		<table name="#ench4-mDef"> 0.99 0.98 0.98 0.97 0.97 0.95 0.94 0.93 0.93 0.92 0.91 0.9 0.9 0.88 0.87 0.86 0.86 0.85 0.84 0.81 0.8 0.8 0.79 0.78 0.78 0.77 0.76 0.74 0.73 0.72 </table>
@@ -78,7 +78,7 @@
 			<effect name="RemoveTarget" noicon="1" val="0" effectPower="50" effectType="DEBUFF" />
 		</enchant4for>
 	</skill>
-	<skill id="102" levels="16" name="Entangle" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30">
+	<skill id="102" levels="16" name="Entangle" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -159,7 +159,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="105" levels="24" name="Freezing Strike" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30" enchantLevels4="30">
+	<skill id="105" levels="24" name="Freezing Strike" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -218,7 +218,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="107" levels="9" name="Holy Aura" enchantLevels1="30" enchantLevels2="30">
+	<skill id="107" levels="9" name="Holy Aura" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#enchantmpConsume"> 51 50 50 49 48 48 47 47 46 45 45 44 44 43 42 42 41 41 40 39 39 38 38 37 37 36 35 35 34 34 </table>
 		<table name="#enchantPower"> 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 58 59 60 61 62 63 64 65 66 67 68 </table>
@@ -270,7 +270,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="110" levels="2" name="Ultimate Defense" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30">
+	<skill id="110" levels="2" name="Ultimate Defense" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -322,7 +322,7 @@
 			</effect>
 		</enchant3for>
 	</skill>
-	<skill id="111" levels="2" name="Ultimate Evasion" enchantLevels1="30" enchantLevels2="30">
+	<skill id="111" levels="2" name="Ultimate Evasion" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#ench1time"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 </table>
 		<table name="#ench2reuseDelay"> 885000 870000 855000 840000 825000 810000 795000 780000 765000 750000 735000 720000 705000 690000 675000 660000 645000 630000 615000 600000 585000 570000 555000 540000 525000 510000 495000 480000 465000 450000 </table>
@@ -355,7 +355,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="112" levels="4" name="Deflect Arrow" enchantLevels1="30" enchantLevels2="30">
+	<skill id="112" levels="4" name="Deflect Arrow" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -397,7 +397,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="115" levels="17" name="Power Break" enchantLevels1="30" enchantLevels2="30">
+	<skill id="115" levels="17" name="Power Break" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -431,7 +431,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="116" levels="14" name="Howl" enchantLevels1="30" enchantLevels2="30">
+	<skill id="116" levels="14" name="Howl" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -495,7 +495,7 @@
 			<effect name="Stun" time="9" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="Stun" />
 		</for>
 	</skill>
-	<skill id="121" levels="6" name="Battle Roar" enchantLevels1="30">
+	<skill id="121" levels="6" name="Battle Roar" enchantGroup1="1">
 		<!-- @Calculation@ (#power / 100 ) * (100 * #maxHp) = ~#maxHp -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
@@ -519,7 +519,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="122" levels="15" name="Hex" enchantLevels1="30" enchantLevels2="30">
+	<skill id="122" levels="15" name="Hex" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -548,7 +548,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="123" levels="3" name="Spirit Barrier" enchantLevels1="30" enchantLevels2="30">
+	<skill id="123" levels="3" name="Spirit Barrier" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -587,7 +587,7 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="127" levels="14" name="Hamstring" enchantLevels1="30" enchantLevels2="30">
+	<skill id="127" levels="14" name="Hamstring" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -643,7 +643,7 @@
 			<effect count="10" name="DamOverTime" time="3" val="#dot" abnormal="poison" />
 		</for>
 	</skill>
-	<skill id="130" levels="2" name="Thrill Fight" enchantLevels1="30">
+	<skill id="130" levels="2" name="Thrill Fight" enchantGroup1="1">
 		<table name="#pAtkSpd"> 1.05 1.1 </table>
 		<table name="#mpConsume"> 21 25 </table>
 		<table name="#ench1runSpd"> 0.81 0.82 0.82 0.83 0.84 0.84 0.85 0.86 0.86 0.87 0.88 0.88 0.89 0.9 0.9 0.91 0.92 0.92 0.93 0.94 0.94 0.95 0.96 0.96 0.97 0.98 0.98 0.99 1.00 1.00 </table>
@@ -668,7 +668,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="131" levels="3" name="Hawk Eye" enchantLevels1="30">
+	<skill id="131" levels="3" name="Hawk Eye" enchantGroup1="1">
 		<table name="#ench1time"> 310 320 330 340 350 360 370 380 390 400 410 420 430 440 450 460 470 480 490 500 510 520 530 540 550 560 570 580 590 600 </table>
 		<table name="#accCombat"> 6 8 10 </table>
 		<table name="#mpConsume"> 18 22 27 </table>
@@ -693,7 +693,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="134" levels="1" name="Toughness" enchantLevels1="30">
+	<skill id="134" levels="1" name="Toughness" enchantGroup1="1">
 		<table name="#ench1vuln"> 0.79 0.79 0.79 0.78 0.78 0.78 0.77 0.77 0.77 0.76 0.76 0.76 0.76 0.75 0.75 0.75 0.74 0.74 0.74 0.73 0.73 0.73 0.73 0.72 0.72 0.72 0.71 0.71 0.71 0.7 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -709,7 +709,7 @@
 			<mul order="0x30" stat="poisonVuln" val="#ench1vuln" />
 		</enchant1for>
 	</skill>
-	<skill id="137" levels="4" name="Critical Chance" enchantLevels1="30">
+	<skill id="137" levels="4" name="Critical Chance" enchantGroup1="1">
 		<table name="#ench1rate"> 0.5 0.5 0.51 0.51 0.51 0.52 0.52 0.52 0.53 0.53 0.53 0.54 0.54 0.54 0.55 0.55 0.55 0.56 0.56 0.56 0.57 0.57 0.57 0.58 0.58 0.58 0.59 0.59 0.59 0.60 </table>
 		<table name="#rate"> 0.2 0.3 0.4 0.5 </table>
 		<set name="target" val="TARGET_SELF" />
@@ -775,7 +775,7 @@
 		<set name="skillType" val="COREDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="144" levels="37" name="Dual Weapon Mastery" enchantLevels1="30">
+	<skill id="144" levels="37" name="Dual Weapon Mastery" enchantGroup1="1">
 		<table name="#pAtk"> 23.7 25.4 27.1 29 30.9 32.9 35 37.1 39.4 41.7 44.1 46.6 49.2 51.9 54.6 57.5 60.4 63.3 66.4 69.5 72.7 76 79.3 82.7 86.1 89.6 93.1 96.6 100.2 103.8 107.5 111.1 114.8 118.4 122.1 125.7 129.3 </table>
 		<table name="#ench1pAtk"> 137 138 139 140 141 142 143 144 145 146 147 148 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 </table>
 		<set name="target" val="TARGET_SELF" />
@@ -792,7 +792,7 @@
 			</add>
 		</enchant1for>
 	</skill>
-	<skill id="146" levels="45" name="Anti Magic" enchantLevels1="30">
+	<skill id="146" levels="45" name="Anti Magic" enchantGroup1="1">
 		<table name="#mDef"> 10 12 14 16 18 20 23 25 28 30 34 36 40 42 43 46 47 49 52 54 56 59 61 63 66 68 70 72 74 76 78 80 82 84 86 88 91 93 95 97 99 102 104 106 108 </table>
 		<table name="#magicDamVul"> 1 1 0.95 0.95 0.95 0.95 0.9 0.9 0.9 0.9 0.9 0.9 0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.75 0.75 0.75 0.75 0.75 0.75 0.7 0.7 0.7 0.7 0.7 0.7 </table>
 		<table name="#ench1mDef"> 113 114 115 115 116 117 117 118 119 119 120 121 121 122 123 123 124 125 125 126 127 127 128 129 129 130 131 131 132 133 </table>
@@ -808,7 +808,7 @@
 			<mul order="0x30" stat="magicDamVul" val="0.7" />
 		</enchant1for>
 	</skill>
-	<skill id="147" levels="51" name="Magic Resistance" enchantLevels1="30">
+	<skill id="147" levels="51" name="Magic Resistance" enchantGroup1="1">
 		<table name="#mDef"> 19 20 22 23 24 26 27 28 30 31 32 35 36 37 40 42 43 44 46 47 49 51 52 54 56 57 59 61 63 64 66 68 70 72 74 76 78 80 82 84 86 88 91 93 95 97 99 102 104 106 108 </table>
 		<table name="#magicDamVul"> 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.85 0.85 0.85 0.85 0.85 0.85 0.8 0.8 0.8 0.8 0.8 0.8 </table>
 		<table name="#ench1mDef"> 113 114 115 115 116 117 117 118 119 119 120 121 121 122 123 123 124 125 125 126 127 127 128 129 129 130 131 131 132 133 </table>
@@ -903,7 +903,7 @@
 		<set name="skillType" val="PASSIVE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="168" levels="3" name="Boost Attack Speed" enchantLevels1="30">
+	<skill id="168" levels="3" name="Boost Attack Speed" enchantGroup1="1">
 		<table name="#rate"> 1.05 1.07 1.1 </table>
 		<table name="#ench1rate"> 1.101 1.102 1.103 1.104 1.105 1.106 1.107 1.108 1.109 1.11 1.111 1.112 1.113 1.114 1.115 1.116 1.117 1.118 1.119 1.12 1.121 1.122 1.123 1.124 1.125 1.126 1.127 1.128 1.129 1.13 </table>
 		<set name="target" val="TARGET_SELF" />
@@ -916,7 +916,7 @@
 			<mul order="0x30" stat="pAtkSpd" val="#ench1rate" />
 		</enchant1for>
 	</skill>
-	<skill id="169" levels="2" name="Quick Step" enchantLevels1="30">
+	<skill id="169" levels="2" name="Quick Step" enchantGroup1="1">
 		<table name="#spd"> 7 11 </table>
 		<table name="#ench1spd"> 12 12 12 12 12 12 12 12 12 13 13 13 13 13 13 13 13 13 13 14 14 14 14 14 14 14 14 14 14 15 </table>
 		<set name="target" val="TARGET_SELF" />
@@ -1014,7 +1014,7 @@
 			<player hp="10" />
 		</cond>
 	</skill>
-	<skill id="190" levels="37" name="Fatal Strike" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30" enchantLevels4="30" enchantLevels5="30" enchantLevels6="30">
+	<skill id="190" levels="37" name="Fatal Strike" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -1058,7 +1058,7 @@
 		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="element" val="3" />
 	</skill>
-	<skill id="191" levels="6" name="Focus Mind" enchantLevels1="30">
+	<skill id="191" levels="6" name="Focus Mind" enchantGroup1="1">
 		<table name="#regMp"> 3.1 3.5 3.9 4.3 4.7 5.1 </table>
 		<table name="#ench1regMp"> 5.6 5.7 5.8 5.8 5.9 6 6.1 6.2 6.3 6.3 6.4 6.5 6.6 6.7 6.8 6.8 6.9 7 7.1 7.2 7.3 7.3 7.4 7.5 7.6 7.7 7.8 7.8 7.9 8 </table>
 		<set name="target" val="TARGET_SELF" />
@@ -1071,7 +1071,7 @@
 			<add order="0x40" stat="regMp" val="#ench1regMp" />
 		</enchant1for>
 	</skill>
-	<skill id="193" levels="7" name="Critical Power" enchantLevels1="30">
+	<skill id="193" levels="7" name="Critical Power" enchantGroup1="1">
 		<table name="#crit"> 32 56 93 177 295 384 406 </table>
 		<table name="#ench1crit"> 430 433 436 439 442 445 448 451 454 457 460 463 466 469 472 474 477 480 483 486 489 492 495 498 501 504 507 510 513 516 </table>
 		<set name="target" val="TARGET_SELF" />
@@ -1125,7 +1125,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="198" levels="3" name="Boost Evasion" enchantLevels1="30">
+	<skill id="198" levels="3" name="Boost Evasion" enchantGroup1="1">
 		<table name="#rEvas"> 2 3 4 </table>
 		<table name="#ench1rEvas"> 5 5 5 5 5 5 5 5 5 6 6 6 6 6 6 6 6 6 6 7 7 7 7 7 7 7 7 7 7 8 </table>
 		<set name="target" val="TARGET_SELF" />

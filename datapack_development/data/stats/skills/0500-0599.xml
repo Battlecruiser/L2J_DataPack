@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="500" levels="2" name="True Berserker" enchantLevels1="30" enchantLevels2="30">
+	<skill id="500" levels="2" name="True Berserker" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#amount"> 1.05 1.08 </table>
 		<table name="#amount2"> 2 4 </table>
@@ -40,7 +40,7 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="501" levels="12" name="Violent Temper" enchantLevels1="30" enchantLevels2="30">
+	<skill id="501" levels="12" name="Violent Temper" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#magicLvl"> 49 52 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 22 24 25 27 28 29 30 31 32 33 34 34 </table>
@@ -73,7 +73,7 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="502" levels="5" name="Life to Soul" enchantLevels1="30" enchantLevels2="30">
+	<skill id="502" levels="5" name="Life to Soul" enchantGroup1="1" enchantGroup2="1">
 		<!-- CT2.2 retail confirmed -->
 		<table name="#ench1num_souls"> 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 </table>
 		<table name="#ench2hpConsume"> 312 310 318 316 314 312 310 308 306 304 302 300 298 296 294 292 290 288 286 284 282 280 278 276 274 272 270 268 264 262 </table>
@@ -104,7 +104,7 @@
 		<set name="effectRange" val="400" />
 		<set name="reuseDelay" val="4000" />
 	</skill>
-	<skill id="504" levels="37" name="Triple Thrust" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30" enchantLevels4="30" enchantLevels5="30" enchantLevels6="30">
+	<skill id="504" levels="37" name="Triple Thrust" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 3255 3278 3300 3322 3344 3366 3388 3411 3433 3455 3477 3499 3521 3544 3566 3588 3610 3632 3654 3676 3699 3721 3743 3765 3787 3809 3832 3854 3876 3898 </table>
 		<table name="#ench2MpConsume"> 59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 </table>
@@ -145,7 +145,7 @@
 		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="element" val="3" />
 	</skill>
-	<skill id="505" levels="28" name="Shining Edge" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30" enchantLevels4="30" enchantLevels5="30" enchantLevels6="30">
+	<skill id="505" levels="28" name="Shining Edge" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 5813 5852 5892 5932 5971 6011 6050 6090 6129 6169 6209 6248 6288 6327 6367 6406 6446 6486 6525 6565 6604 6644 6683 6723 6763 6802 6842 6881 6921 6960 </table>
 		<table name="#ench2MpConsume"> 59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 </table>
@@ -186,7 +186,7 @@
 		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="element" val="3" />
 	</skill>
-	<skill id="506" levels="4" name="Checkmate" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30">
+	<skill id="506" levels="4" name="Checkmate" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 5813 5852 5892 5932 5971 6011 6050 6090 6129 6169 6209 6248 6288 6327 6367 6406 6446 6486 6525 6565 6604 6644 6683 6723 6763 6802 6842 6881 6921 6960 </table>
 		<table name="#ench2MpConsume"> 50 49 48 47 46 46 45 44 43 42 41 41 40 39 38 37 36 36 35 34 33 32 31 31 30 29 28 27 26 26 </table>
@@ -222,7 +222,7 @@
 		<enchant3 name="elementPower" val="#enchElementPower" />
 		<enchant3 name="element" val="5" />
 	</skill>
-	<skill id="507" levels="37" name="Twin Shot" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30" enchantLevels4="30" enchantLevels5="30" enchantLevels6="30">
+	<skill id="507" levels="37" name="Twin Shot" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 5167 5202 5237 5273 5308 5343 5378 5413 5448 5484 5519 5554 5589 5621 5660 5695 5730 5765 5800 5835 5871 5906 5941 5976 6011 6046 6082 6117 6152 6187 </table>
 		<table name="#ench2MpConsume"> 133 131 129 127 125 123 121 119 117 115 113 111 109 107 105 103 101 99 97 95 93 91 89 87 85 83 81 79 77 75 </table>
@@ -262,7 +262,7 @@
 		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="element" val="3" />
 	</skill>
-	<skill id="508" levels="31" name="Rising Shot" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30" enchantLevels4="30" enchantLevels5="30" enchantLevels6="30">
+	<skill id="508" levels="31" name="Rising Shot" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 1292 1301 1310 1319 1327 1336 1345 1354 1362 1371 1380 1389 1398 1406 1415 1424 1433 1442 1450 1459 1468 147 1486 1494 1503 1512 1521 1530 1538 1547 </table>
 		<table name="#ench2MpConsume"> 199 196 193 190 187 184 181 178 175 172 169 166 163 160 157 154 151 148 145 142 139 136 133 130 127 124 121 118 115 113 </table>
@@ -302,7 +302,7 @@
 		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="element" val="3" />
 	</skill>
-	<skill id="509" levels="34" name="Bleeding Shot" enchantLevels1="30" enchantLevels2="30">
+	<skill id="509" levels="34" name="Bleeding Shot" enchantGroup1="2" enchantGroup2="2">
 		<table name="#dot"> 44 44 44 44 44 44 44 44 44 54 54 54 54 54 54 54 54 54 54 62 62 62 62 62 62 62 62 62 62 67 67 67 67 67 </table>
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 2325 2341 2357 2373 2389 2405 2420 2436 2452 2468 2484 2500 2515 2531 2547 2563 2579 2595 2610 2626 2642 2658 2674 2690 2705 2721 2737 2753 2769 2784 </table>

@@ -36,7 +36,7 @@
 		<set name="negateStats" val="ROOT PARALYZE DEBUFF" />
 		<set name="aggroPoints" val="582" />
 	</skill>
-	<skill id="1303" levels="2" name="Wild Magic" enchantLevels1="30" enchantLevels2="30">
+	<skill id="1303" levels="2" name="Wild Magic" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -71,7 +71,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="1304" levels="3" name="Advanced Block" enchantLevels1="30" enchantLevels2="30">
+	<skill id="1304" levels="3" name="Advanced Block" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -106,7 +106,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="1305" levels="5" name="The Honor of Pa'agrio" enchantLevels1="30" enchantLevels2="30">
+	<skill id="1305" levels="5" name="The Honor of Pa'agrio" enchantGroup1="2" enchantGroup2="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -132,7 +132,7 @@
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 	</skill>
-	<skill id="1306" levels="6" name="Ritual of Life" enchantLevels1="30" enchantLevels2="30">
+	<skill id="1306" levels="6" name="Ritual of Life" enchantGroup1="2" enchantGroup2="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -159,7 +159,7 @@
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 	</skill>
-	<skill id="1307" levels="3" name="Prayer" enchantLevels1="30" enchantLevels2="30">
+	<skill id="1307" levels="3" name="Prayer" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -193,7 +193,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="1308" levels="3" name="Chant of Predator" enchantLevels1="30" enchantLevels2="30">
+	<skill id="1308" levels="3" name="Chant of Predator" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -227,7 +227,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="1309" levels="3" name="Chant of Eagle" enchantLevels1="30" enchantLevels2="30">
+	<skill id="1309" levels="3" name="Chant of Eagle" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -261,7 +261,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="1310" levels="4" name="Chant of Vampire" enchantLevels1="30" enchantLevels2="30">
+	<skill id="1310" levels="4" name="Chant of Vampire" enchantGroup1="1" enchantGroup2="1">
 		<table name="#ench1time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
 		<table name="#ench2MpConsume"> 213 209 206 202 198 195 191 188 184 180 177 173 169 166 162 159 155 151 148 144 141 137 133 130 126 122 119 115 112 108 </table>
 		<table name="#ench2mpInitialConsume"> 54 53 52 51 50 49 48 47 46 45 44 44 43 42 41 40 39 38 37 36 35 34 33 33 32 31 30 29 28 27 </table>
@@ -292,7 +292,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="1311" levels="6" name="Body Of Avatar" enchantLevels1="30" enchantLevels2="30">
+	<skill id="1311" levels="6" name="Body Of Avatar" enchantGroup1="1" enchantGroup2="1">
 		<!-- @Calculation@ (#power / 100 ) * (100 * #maxHp) = ~#maxHp -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
@@ -576,7 +576,7 @@
 		<set name="summonTotalLifeTime" val="900000" />
 		<set name="isCubic" val="true" />
 	</skill>
-	<skill id="1331" levels="10" name="Summon Feline Queen" enchantLevels1="30">
+	<skill id="1331" levels="10" name="Summon Feline Queen" enchantGroup1="1">
 		<table name="#enchantNpcId"> 14265 14266 14267 14268 14269 14270 14271 14272 14273 14274 14275 14276 14277 14278 14279 14280 14281 14282 14283 14284 14285 14286 14287 14288 14289 14290 14291 14292 14293 14294 </table>
 		<enchant1 name="npcId" val="#enchantNpcId" />
 		<table name="#mpInitialConsume"> 14 16 18 19 21 22 22 23 24 25 </table>
@@ -606,7 +606,7 @@
 		<set name="npcId" val="#npcIds" />
 		<set name="expPenalty" val="#expPenalty" /> <!-- percent of earned Exp will be consumed -->
 	</skill>
-	<skill id="1332" levels="10" name="Summon Unicorn Seraphim" enchantLevels1="30">
+	<skill id="1332" levels="10" name="Summon Unicorn Seraphim" enchantGroup1="1">
 		<table name="#enchantNpcId"> 14449 14450 14451 14452 14453 14454 14455 14456 14457 14458 14459 14460 14461 14462 14463 14464 14465 14466 14467 14468 14469 14470 14471 14472 14473 14474 14475 14476 14477 14478 </table>
 		<enchant1 name="npcId" val="#enchantNpcId" />
 		<table name="#mpInitialConsume"> 14 16 18 19 21 22 22 23 24 25 </table>
@@ -636,7 +636,7 @@
 		<set name="npcId" val="#npcIds" />
 		<set name="expPenalty" val="#expPenalty" /> <!-- percent of earned Exp will be consumed -->
 	</skill>
-	<skill id="1333" levels="10" name="Summon Nightshade" enchantLevels1="30">
+	<skill id="1333" levels="10" name="Summon Nightshade" enchantGroup1="1">
 		<table name="#enchantNpcId"> 14633 14634 14635 14636 14637 14638 14639 14640 14641 14642 14643 14644 14645 14646 14647 14648 14649 14650 14651 14652 14653 14654 14655 14656 14657 14658 14659 14660 14661 14662 </table>
 		<enchant1 name="npcId" val="#enchantNpcId" />
 		<table name="#mpInitialConsume"> 14 16 18 19 21 22 22 23 24 25 </table>
@@ -666,7 +666,7 @@
 		<set name="npcId" val="#npcIds" />
 		<set name="expPenalty" val="#expPenalty" /> <!-- percent of earned Exp will be consumed -->
 	</skill>
-	<skill id="1334" levels="7" name="Summon Cursed Man" enchantLevels1="30">
+	<skill id="1334" levels="7" name="Summon Cursed Man" enchantGroup1="1">
 		<table name="#enchantNpcId"> 14081 14082 14083 14084 14085 14086 14087 14088 14089 14090 14091 14092 14093 14094 14095 14096 14097 14098 14099 14100 14101 14102 14103 14104 14105 14106 14107 14108 14109 14110 </table>
 		<enchant1 name="npcId" val="#enchantNpcId" />
 		<table name="#mpInitialConsume"> 21 22 24 26 26 27 28 </table>
@@ -1899,7 +1899,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1394" levels="10" name="Trance" enchantLevels1="30" enchantLevels2="30">
+	<skill id="1394" levels="10" name="Trance" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#ench1MpConsume"> 32 32 32 31 31 31 30 30 28 28 28 27 27 27 26 26 26 25 25 23 23 23 22 22 22 21 21 21 20 20 </table>
 		<table name="#ench2Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
@@ -1926,7 +1926,7 @@
 			<effect name="Sleep" time="15" val="0" stackOrder="1" stackType="sleep" />
 		</for>
 	</skill>
-	<skill id="1395" levels="10" name="Erase" enchantLevels1="30">
+	<skill id="1395" levels="10" name="Erase" enchantGroup1="1">
 		<table name="#mpConsume"> 52 54 55 58 60 62 64 65 67 69 </table>
 		<table name="#itemConsumeCount"> 3 3 3 3 4 4 4 5 5 5 </table>
 		<table name="#magicLvl"> 56 58 60 62 64 66 68 70 72 74 </table>
@@ -1992,7 +1992,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1398" levels="10" name="Mana Burn" enchantLevels1="30" enchantLevels2="30">
+	<skill id="1398" levels="10" name="Mana Burn" enchantGroup1="2" enchantGroup2="2">
 		<table name="#ench1Power"> 162 163 164 164 165 166 166 167 168 168 169 170 170 171 172 172 173 174 174 175 176 176 177 178 178 179 180 180 181 182 </table>
 		<table name="#ench2MpConsume"> 100 98 97 96 95 93 91 90 88 87 86 85 83 82 81 80 78 77 75 73 72 71 70 68 67 66 65 63 62 60 </table>
 		<table name="#mpConsume"> 77 80 83 87 89 93 95 98 100 103 </table>
@@ -2010,7 +2010,7 @@
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 	</skill>
-	<skill id="1399" levels="5" name="Mana Storm" enchantLevels1="30" enchantLevels2="30">
+	<skill id="1399" levels="5" name="Mana Storm" enchantGroup1="2" enchantGroup2="2">
 		<table name="#ench1Power"> 81 81 82 82 82 83 83 83 84 84 84 85 85 85 86 86 86 87 87 87 88 88 88 89 89 89 89 90 90 90 91 </table>
 		<table name="#ench2MpConsume"> 150 148 146 143 142 140 137 136 133 132 130 127 126 123 121 120 117 116 113 111 110 107 105 103 101 98 97 95 93 91 </table>
 		<table name="#mpConsume"> 120 129 138 147 153 </table>
