@@ -35,7 +35,7 @@ DROP TABLE IF EXISTS class_list;
 DROP TABLE IF EXISTS cursed_weapons;
 DROP TABLE IF EXISTS dimensional_rift;
 DROP TABLE IF EXISTS droplist;
-DROP TABLE IF EXISTS enchant_skill_trees;
+DROP TABLE IF EXISTS enchant_skill_groups;
 DROP TABLE IF EXISTS etcitem;
 DROP TABLE IF EXISTS fish;
 DROP TABLE IF EXISTS fishing_skill_trees;

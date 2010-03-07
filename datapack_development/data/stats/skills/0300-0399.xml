@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="301" levels="5" name="Summon Big Boom" enchantLevels1="30">
+	<skill id="301" levels="5" name="Summon Big Boom" enchantGroup1="1">
 		<table name="#enchantNpcIds"> 14707 14708 14709 14710 14711 14712 14713 14714 14715 14716 14717 14718 14719 14720 14721 14722 14723 14724 14725 14726 14727 14728 14729 14730 14731 14732 14733 14734 14735 14736 </table>
 		<enchant1 name="npcId" val="#enchantNpcIds" />
 		<table name="#mpConsume"> 74 82 88 94 100 </table>
@@ -26,7 +26,7 @@
 		<table name="#ench1expPenalty"> 0.28 0.26 0.24 0.22 0.20 0.18 0.16 0.14 0.12 0.10 0.08 0.06 0.04 0.02 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </table>
 		<enchant1 name="expPenalty" val="#ench1expPenalty" />
 	</skill>
-	<skill id="302" levels="9" name="Spoil Festival" enchantLevels1="30" enchantLevels2="30">
+	<skill id="302" levels="9" name="Spoil Festival" enchantGroup1="2" enchantGroup2="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -61,7 +61,7 @@
 			<effect count="5" name="DamOverTime" time="3" val="354" />
 		</enchant2for>
 	</skill>
-	<skill id="303" levels="4" name="Soul of Sagittarius" enchantLevels1="30">
+	<skill id="303" levels="4" name="Soul of Sagittarius" enchantGroup1="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<table name="#maxMp"> 1.1 1.15 1.2 1.25 </table>
@@ -88,7 +88,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="304" levels="1" name="Song of Vitality" enchantLevels1="30" enchantLevels2="30">
+	<skill id="304" levels="1" name="Song of Vitality" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -118,7 +118,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="305" levels="1" name="Song of Vengeance" enchantLevels1="30" enchantLevels2="30">
+	<skill id="305" levels="1" name="Song of Vengeance" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -146,7 +146,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="306" levels="1" name="Song of Flame Guard" enchantLevels1="30" enchantLevels2="30">
+	<skill id="306" levels="1" name="Song of Flame Guard" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -176,7 +176,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="307" levels="1" name="Dance of Aqua Guard" enchantLevels1="30" enchantLevels2="30">
+	<skill id="307" levels="1" name="Dance of Aqua Guard" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -207,7 +207,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="308" levels="1" name="Song of Storm Guard" enchantLevels1="30" enchantLevels2="30">
+	<skill id="308" levels="1" name="Song of Storm Guard" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -237,7 +237,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="309" levels="1" name="Dance of Earth Guard" enchantLevels1="30" enchantLevels2="30">
+	<skill id="309" levels="1" name="Dance of Earth Guard" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -268,7 +268,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="310" levels="1" name="Dance of the Vampire" enchantLevels1="30" enchantLevels2="30">
+	<skill id="310" levels="1" name="Dance of the Vampire" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -297,7 +297,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="311" levels="1" name="Dance of Protection" enchantLevels1="30" enchantLevels2="30">
+	<skill id="311" levels="1" name="Dance of Protection" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -328,7 +328,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="312" levels="20" name="Vicious Stance" enchantLevels1="30" enchantLevels2="30">
+	<skill id="312" levels="20" name="Vicious Stance" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -359,7 +359,7 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="313" levels="8" name="Snipe" enchantLevels1="30" enchantLevels2="30">
+	<skill id="313" levels="8" name="Snipe" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -430,7 +430,7 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="314" levels="16" name="Fatal Counter" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30" enchantLevels4="30" enchantLevels5="30" enchantLevels6="30">
+	<skill id="314" levels="16" name="Fatal Counter" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -468,7 +468,7 @@
 		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="element" val="3" />
 	</skill>
-	<skill id="315" levels="16" name="Crush of Doom" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30" enchantLevels4="30" enchantLevels5="30" enchantLevels6="30">
+	<skill id="315" levels="16" name="Crush of Doom" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#power"> 4558 4750 4944 5142 5342 5545 5751 5958 6166 6376 6586 6797 7006 7218 7427 7635 </table>
 		<table name="#magicLvl"> 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
@@ -541,7 +541,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="318" levels="1" name="Aegis Stance" enchantLevels1="30">
+	<skill id="318" levels="1" name="Aegis Stance" enchantGroup1="1">
 		<table name="#ench1sDef"> 0.61 0.62 0.62 0.63 0.64 0.64 0.65 0.66 0.66 0.67 0.68 0.68 0.69 0.7 0.7 0.71 0.72 0.72 0.73 0.74 0.74 0.75 0.76 0.76 0.77 0.78 0.78 0.79 0.8 0.8 </table>
 		<set name="mpInitialConsume" val="9" />
 		<set name="target" val="TARGET_SELF" />
@@ -585,7 +585,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="320" levels="10" name="Wrath" enchantLevels1="30" enchantLevels2="30">
+	<skill id="320" levels="10" name="Wrath" enchantGroup1="2" enchantGroup2="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -611,7 +611,7 @@
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 	</skill>
-	<skill id="321" levels="10" name="Blinding Blow" enchantLevels1="30" enchantLevels2="30">
+	<skill id="321" levels="10" name="Blinding Blow" enchantGroup1="2" enchantGroup2="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -646,7 +646,7 @@
 			<effect name="Bluff" val="0" effectPower="40" effectType="STUN" />
 		</for>
 	</skill>
-	<skill id="322" levels="6" name="Shield Fortress" enchantLevels1="30" enchantLevels2="30">
+	<skill id="322" levels="6" name="Shield Fortress" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />

@@ -322,7 +322,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="num_souls" val="40" />
 	</skill>
-	<skill id="626" levels="4" name="Critical Sense" enchantLevels1="30" enchantLevels2="30">
+	<skill id="626" levels="4" name="Critical Sense" enchantGroup1="1" enchantGroup2="1">
 		<table name="#ench1rCrit"> 0.251 0.253 0.255 0.256 0.258 0.260 0.261 0.263 0.265 0.266 0.268 0.270 0.271 0.273 0.275 0.276 0.278 0.280 0.281 0.283 0.285 0.286 0.288 0.290 0.291 0.293 0.295 0.296 0.298 0.300 </table>
 		<table name="#ench2cAtk"> 430 431 432 434 435 436 438 439 440 441 442 443 444 445 446 447 448 449 450 452 453 454 456 457 459 460 461 463 464 466 467 468 469 470 </table>
 		<table name="#rCrit"> 0.1 0.15 0.2 0.25 </table>
@@ -343,7 +343,7 @@
 			<add order="0x40" stat="cAtkAdd" val="#ench2cAtk" />
 		</enchant2for>
 	</skill>
-	<skill id="627" levels="40" name="Soul Shock" enchantLevels1="30" enchantLevels2="30" enchantLevels3="30" enchantLevels4="30">
+	<skill id="627" levels="40" name="Soul Shock" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 2268 2286 2304 2322 2339 2357 2375 2393 2410 2428 2446 2464 2481 2499 2517 2535 2553 2570 2588 2606 2624 2641 2659 2677 2695 2712 2730 2748 2766 2784 </table>
 		<table name="#ench2MpConsume"> 107 105 103 101 99 98 96 94 92 90 89 87 85 83 81 79 78 76 74 72 70 69 67 65 63 61 59 58 56 54 </table>
