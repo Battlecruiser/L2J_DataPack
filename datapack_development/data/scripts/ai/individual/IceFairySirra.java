@@ -302,7 +302,7 @@ public class IceFairySirra extends L2AttackableAIScript
 	public void sendHtml(L2Npc npc, L2PcInstance player, String filename)
 	{
 		NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
-		html.setFile(filename);
+		html.setFile(player.getHtmlPrefix(), filename);
 		html.replace("%objectId%", String.valueOf(npc.getObjectId()));
 		player.sendPacket(html);
 		player.sendPacket( ActionFailed.STATIC_PACKET );
