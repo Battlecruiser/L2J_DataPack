@@ -18,7 +18,7 @@ CREATE TABLE `enchant_skill_groups` (
   PRIMARY KEY (`group_id`,`level`)
 );
 
-INSERT IGNORE INTO `enchant_skill_groups` VALUES
+INSERT INTO `enchant_skill_groups` VALUES
 -- 2nd class Buffs Debuffs Toogle and Summons
 (1,1,74250,0,503980,82,92,97,97,97,97,97,97,97,97),
 (1,2,74250,0,503980,80,90,95,95,95,95,95,95,95,95),
