@@ -68,10 +68,14 @@ public class Lang implements IVoicedCommandHandler
 			if (activeChar.setLang(lang))
 			{
 				msg.setFile(activeChar.getHtmlPrefix(), "data/html/mods/Lang/Ok.htm");
+				activeChar.sendPacket(msg);
 				return true;
 			}
 			else
+			{
 				msg.setFile(activeChar.getHtmlPrefix(), "data/html/mods/Lang/Error.htm");
+				activeChar.sendPacket(msg);
+			}
 		}
 
 		return false;
