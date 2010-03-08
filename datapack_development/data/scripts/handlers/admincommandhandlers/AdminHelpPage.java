@@ -61,7 +61,7 @@ public class AdminHelpPage implements IAdminCommandHandler
 	//PUBLIC & STATIC so other classes from package can include it directly
 	public static void showHelpPage(L2PcInstance targetChar, String filename)
 	{
-		String content = HtmCache.getInstance().getHtmForce("data/html/admin/" + filename);
+		String content = HtmCache.getInstance().getHtmForce(targetChar.getHtmlPrefix(), "data/html/admin/" + filename);
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setHtml(content);
 		targetChar.sendPacket(adminReply);

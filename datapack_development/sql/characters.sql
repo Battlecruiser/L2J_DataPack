@@ -60,6 +60,7 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `bookmarkslot` SMALLINT UNSIGNED NOT NULL DEFAULT 0,
   `vitality_points` SMALLINT UNSIGNED NOT NULL DEFAULT 0,
   `createTime` DECIMAL(20,0) NOT NULL default 0,
+  `language` VARCHAR(2) DEFAULT NULL,
   PRIMARY KEY (`charId`),
   KEY `clanid` (`clanid`)
 );

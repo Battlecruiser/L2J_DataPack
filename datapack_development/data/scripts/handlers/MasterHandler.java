@@ -235,6 +235,8 @@ public class MasterHandler
 			VoicedCommandHandler.getInstance().registerVoicedCommandHandler(new TvTVoicedInfo());
 		if (Config.L2JMOD_CHAT_ADMIN)
 			VoicedCommandHandler.getInstance().registerVoicedCommandHandler(new ChatAdmin());
+		if (Config.L2JMOD_MULTILANG_ENABLE && Config.L2JMOD_MULTILANG_VOICED_ALLOW)
+			VoicedCommandHandler.getInstance().registerVoicedCommandHandler(new Lang());
 		_log.config("Loaded " + VoicedCommandHandler.getInstance().size() + " VoicedHandlers");
 	}
 	

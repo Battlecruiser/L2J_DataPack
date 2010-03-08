@@ -719,7 +719,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			charactersEnd = charactersStart + maxCharactersPerPage;
 		
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		adminReply.setFile("data/html/admin/charlist.htm");
+		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/charlist.htm");
 
                 final StringBuilder replyMSG = new StringBuilder(1000);
 
@@ -787,7 +787,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 		}
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		adminReply.setFile("data/html/admin/" + filename);
+		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/" + filename);
 		adminReply.replace("%name%", player.getName());
 		adminReply.replace("%level%", String.valueOf(player.getLevel()));
 		adminReply.replace("%clan%", String.valueOf(ClanTable.getInstance().getClan(player.getClanId())));
@@ -952,7 +952,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			players = allPlayers.toArray(new L2PcInstance[allPlayers.size()]);
 		}
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		adminReply.setFile("data/html/admin/charfind.htm");
+		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/charfind.htm");
 
                 final StringBuilder replyMSG = new StringBuilder(1000);
 
@@ -1024,7 +1024,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		String name, ip = "0.0.0.0";
                 final StringBuilder replyMSG = new StringBuilder(1000);
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		adminReply.setFile("data/html/admin/ipfind.htm");
+		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/ipfind.htm");
 		for (L2PcInstance player: players)
 		{
 			client = player.getClient();
@@ -1104,7 +1104,7 @@ public class AdminEditChar implements IAdminCommandHandler
                         final StringBuilder replyMSG =
                                 new StringBuilder(chars.size() * 20);
 			NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-			adminReply.setFile("data/html/admin/accountinfo.htm");
+			adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/accountinfo.htm");
 			for (String charname : chars.values()) {
                             StringUtil.append(replyMSG,
                                     charname,
@@ -1175,7 +1175,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 		
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		adminReply.setFile("data/html/admin/dualbox.htm");
+		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/dualbox.htm");
 		adminReply.replace("%multibox%", String.valueOf(multibox));
 		adminReply.replace("%results%", results.toString());
 		activeChar.sendPacket(adminReply);
@@ -1184,7 +1184,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	private void gatherSummonInfo(L2Summon target, L2PcInstance activeChar)
 	{
 		NpcHtmlMessage html = new NpcHtmlMessage(0);
-		html.setFile("data/html/admin/petinfo.htm");
+		html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/petinfo.htm");
 		String name = target.getName();
 		html.replace("%name%", name == null ? "N/A" : name);
 		html.replace("%level%", Integer.toString(target.getLevel()));
@@ -1220,7 +1220,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	{
 		boolean color = true;
 		NpcHtmlMessage html = new NpcHtmlMessage(0);
-		html.setFile("data/html/admin/partyinfo.htm");
+		html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/partyinfo.htm");
 		StringBuilder text = new StringBuilder(400);
 		for (L2PcInstance member : target.getParty().getPartyMembers())
 		{
