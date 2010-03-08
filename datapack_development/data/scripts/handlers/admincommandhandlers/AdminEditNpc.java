@@ -777,7 +777,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	private void showNpcProperty(L2PcInstance activeChar, L2NpcTemplate npc)
 	{
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		String content = HtmCache.getInstance().getHtm("data/html/admin/editnpc.htm");
+		String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/editnpc.htm");
 		
 		if (content != null)
 		{

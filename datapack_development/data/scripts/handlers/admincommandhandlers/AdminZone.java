@@ -61,7 +61,7 @@ public class AdminZone implements IAdminCommandHandler
 		
 		if (actualCommand.equalsIgnoreCase("admin_zone_check"))
 		{
-			final String htmContent = HtmCache.getInstance().getHtm("data/html/admin/zone.htm");
+			final String htmContent = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/zone.htm");
 			NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 			adminReply.setHtml(htmContent);			
 			adminReply.replace("%PEACE%", (activeChar.isInsideZone(L2Character.ZONE_PEACE) ? "<font color=\"LEVEL\">YES</font>" : "NO"));

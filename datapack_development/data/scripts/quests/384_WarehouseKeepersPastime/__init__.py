@@ -4,7 +4,6 @@ from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 from com.l2jserver.util import Rnd
-from com.l2jserver.gameserver.cache import HtmCache
 
 qn = "384_WarehouseKeepersPastime"
 
@@ -171,24 +170,24 @@ class Quest (JQuest) :
    elif event.startswith("select_1-") : #first pick
        selection = int(event[9])
        self.gameStatus[player.getName()][1].append(selection)
-       htmltext = HtmCache.getInstance().getHtm("data/scripts/quests/" + qn + "/" + npcId + "-14.htm")
+       htmltext = self.getHtm(player.getHtmlPrefix(), npcId + "-14.htm")
        htmltext = self.fillBoard(player,htmltext)
    elif event.startswith("select_2-") : #pick #2-5
        selection = int(event[9])
        guess = self.gameStatus[player.getName()][1]
        num_guesses = len(guess)
        if selection in guess : #already chose that number!
-           htmltext = HtmCache.getInstance().getHtm("data/scripts/quests/" + qn + "/" + npcId + "-" + str(14+2*num_guesses) + ".htm")
+           htmltext = self.getHtm(player.getHtmlPrefix(), npcId + "-" + str(14+2*num_guesses) + ".htm")
        else :
            self.gameStatus[player.getName()][1].append(selection)
            num_guesses += 1
-           htmltext = HtmCache.getInstance().getHtm("data/scripts/quests/" + qn + "/" + npcId + "-" + str(11+2*num_guesses) + ".htm")
+           htmltext = self.getHtm(player.getHtmlPrefix(), npcId + "-" + str(11+2*num_guesses) + ".htm")
        htmltext = self.fillBoard(player,htmltext)
    elif event.startswith("select_3-") : #pick #6
        selection = int(event[9])
        guess = self.gameStatus[player.getName()][1]
        if selection in guess : #already chose that number!
-           htmltext = HtmCache.getInstance().getHtm("data/scripts/quests/" + qn + "/" + npcId + "-26.htm")
+           htmltext = self.getHtm(player.getHtmlPrefix(), npcId + "-26.htm")
            htmltext = self.fillBoard(player,htmltext)
        else :
            self.gameStatus[player.getName()][1].append(selection)
@@ -197,14 +196,14 @@ class Quest (JQuest) :
            if wins == 3 :
                item = self.getReward(eval("Rewards_"+str(bet)+"_Win"))
                st.giveItems(item,1)
-               htmltext = HtmCache.getInstance().getHtm("data/scripts/quests/" + qn + "/" + npcId + "-23.htm")
+               htmltext = self.getHtm(player.getHtmlPrefix(), npcId + "-23.htm")
            elif wins == 0 :
                item = self.getReward(eval("Rewards_"+str(bet)+"_Lose"))
                if item == 2437 : st.giveItems(2463,1)
                st.giveItems(item,1)
-               htmltext = HtmCache.getInstance().getHtm("data/scripts/quests/" + qn + "/" + npcId + "-25.htm")
+               htmltext = self.getHtm(player.getHtmlPrefix(), npcId + "-25.htm")
            else :
-               htmltext = HtmCache.getInstance().getHtm("data/scripts/quests/" + qn + "/" + npcId + "-24.htm")
+               htmltext = self.getHtm(player.getHtmlPrefix(), npcId + "-24.htm")
            guess = self.gameStatus[player.getName()][1]
            for i in range(9) :
               num = self.gameStatus[player.getName()][0][i]

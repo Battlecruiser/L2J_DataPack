@@ -37,7 +37,7 @@ public class TvTVoicedInfo implements IVoicedCommandHandler
 	 * Recompiling the script will get the new html would be enough too [DrHouse]
 	 */
 	private static final boolean USE_STATIC_HTML = true;
-	private static final String HTML = HtmCache.getInstance().getHtm("data/html/mods/TvTEvent/Status.htm");
+	private static final String HTML = HtmCache.getInstance().getHtm(null, "data/html/mods/TvTEvent/Status.htm");
 
 	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String target)
 	{
@@ -46,7 +46,7 @@ public class TvTVoicedInfo implements IVoicedCommandHandler
 			if (TvTEvent.isStarting() || TvTEvent.isStarted())
 			{
 				String htmContent = (USE_STATIC_HTML && !HTML.isEmpty()) ? HTML : 
-					HtmCache.getInstance().getHtm("data/html/mods/TvTEvent/Status.htm");
+					HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/mods/TvTEvent/Status.htm");
 				
 				try
 				{

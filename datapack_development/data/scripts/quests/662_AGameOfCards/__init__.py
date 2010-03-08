@@ -5,7 +5,6 @@ from com.l2jserver import Config
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
-from com.l2jserver.gameserver.cache import HtmCache
 
 qn = "662_AGameOfCards"
 
@@ -113,7 +112,7 @@ class Quest (JQuest) :
            if card3 == 0: link3 = "<a action=\"bypass -h Quest 662_AGameOfCards Klump_openCard3.htm\">Put the third card face up.</a><br>"
            if card4 == 0: link4 = "<a action=\"bypass -h Quest 662_AGameOfCards Klump_openCard4.htm\">Put the fourth card face up.</a><br>"
            if card5 == 0: link5 = "<a action=\"bypass -h Quest 662_AGameOfCards Klump_openCard5.htm\">Put the fifth card face up.</a><br>"
-         htmltext = HtmCache.getInstance().getHtm("data/scripts/quests/" + qn + "/Klump_PlayField.htm")
+         htmltext = self.getHtm(st.getPlayer().getHtmlPrefix(), "Klump_PlayField.htm")
          htmltext = htmltext.replace("CARD1",CARD_VALUES[card1]).replace("CARD2",CARD_VALUES[card2]).replace("CARD3",CARD_VALUES[card3]).replace("CARD4",CARD_VALUES[card4]).replace("CARD5",CARD_VALUES[card5])
          htmltext = htmltext.replace("LINK1",link1).replace("LINK2",link2).replace("LINK3",link3).replace("LINK4",link4).replace("LINK5",link5).replace("PRIZE",prizestr)
          if prize :

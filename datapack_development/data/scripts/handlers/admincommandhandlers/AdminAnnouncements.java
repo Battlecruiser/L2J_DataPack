@@ -195,7 +195,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 	
 	private void listAutoAnnouncements(L2PcInstance activeChar)
 	{
-		String content = HtmCache.getInstance().getHtmForce("data/html/admin/autoannounce.htm");
+		String content = HtmCache.getInstance().getHtmForce(activeChar.getHtmlPrefix(), "data/html/admin/autoannounce.htm");
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setHtml(content);
 		
