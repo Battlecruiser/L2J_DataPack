@@ -15,6 +15,7 @@
 package handlers;
 
 import handlers.admincommandhandlers.*;
+import handlers.bypasshandlers.*;
 import handlers.chathandlers.*;
 import handlers.itemhandlers.*;
 import handlers.skillhandlers.*;
@@ -25,6 +26,7 @@ import java.util.logging.Logger;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.AdminCommandHandler;
+import com.l2jserver.gameserver.handler.BypassHandler;
 import com.l2jserver.gameserver.handler.ChatHandler;
 import com.l2jserver.gameserver.handler.ItemHandler;
 import com.l2jserver.gameserver.handler.SkillHandler;
@@ -107,7 +109,36 @@ public class MasterHandler
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminZone());
 		_log.config("Loaded " + AdminCommandHandler.getInstance().size() + "  AdminCommandHandlers");
 	}
-	
+
+	private static void loadBypassHandlers()
+	{
+		BypassHandler.getInstance().registerBypassHandler(new Augment());
+		BypassHandler.getInstance().registerBypassHandler(new Buy());
+		BypassHandler.getInstance().registerBypassHandler(new BuyShadowItem());
+		BypassHandler.getInstance().registerBypassHandler(new ChatLink());
+		BypassHandler.getInstance().registerBypassHandler(new CPRecovery());
+		BypassHandler.getInstance().registerBypassHandler(new DrawHenna());
+		BypassHandler.getInstance().registerBypassHandler(new FishSkillList());
+		BypassHandler.getInstance().registerBypassHandler(new Link());
+		BypassHandler.getInstance().registerBypassHandler(new Loto());
+		BypassHandler.getInstance().registerBypassHandler(new Multisell());
+		BypassHandler.getInstance().registerBypassHandler(new Observation());
+		BypassHandler.getInstance().registerBypassHandler(new QuestLink());
+		BypassHandler.getInstance().registerBypassHandler(new QuestList());
+		BypassHandler.getInstance().registerBypassHandler(new ReleaseAttribute());
+		BypassHandler.getInstance().registerBypassHandler(new RemoveDeathPenalty());
+		BypassHandler.getInstance().registerBypassHandler(new RemoveHennaList());
+		BypassHandler.getInstance().registerBypassHandler(new RentPet());
+		BypassHandler.getInstance().registerBypassHandler(new RideWyvern());
+		BypassHandler.getInstance().registerBypassHandler(new Rift());
+		BypassHandler.getInstance().registerBypassHandler(new SupportBlessing());
+		BypassHandler.getInstance().registerBypassHandler(new SupportMagic());
+		BypassHandler.getInstance().registerBypassHandler(new TerritoryStatus());
+		BypassHandler.getInstance().registerBypassHandler(new Transform());
+		BypassHandler.getInstance().registerBypassHandler(new Wear());
+		_log.config("Loaded " + BypassHandler.getInstance().size() + "  BypassHandlers");
+	}
+
 	private static void loadChatHandlers()
 	{
 		ChatHandler.getInstance().registerChatHandler(new ChatAll());
@@ -247,6 +278,7 @@ public class MasterHandler
 	{
 		_log.config("Loading Handlers...");
 		loadAdminHandlers();
+		loadBypassHandlers();
 		loadChatHandlers();
 		loadItemHandlers();
 		loadSkillHandlers();
