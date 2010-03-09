@@ -597,8 +597,9 @@
 		<set name="negateId" val="5447" />
 	</skill>
 	<skill id="525" levels="6" name="Decoy">
+		<table name="#mpConsume"> 75 94 110 123 130 137 </table>
 		<table name="#npcId"> 13071 13072 13073 13074 13075 13076 </table>
-		<set name="mpConsume" val="60" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="summonTotalLifeTime" val="20000" />
 		<set name="hitTime" val="2000" />
