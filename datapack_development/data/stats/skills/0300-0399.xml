@@ -430,7 +430,7 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="314" levels="16" name="Fatal Counter" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2">
+	<skill id="314" levels="16" name="Fatal Counter" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -438,12 +438,14 @@
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant7 name="magicLvl" val="#enchantMagicLvl" />
 		<table name="#mpConsume"> 116 119 121 122 124 126 129 131 133 135 138 140 142 144 146 148 </table>
 		<table name="#magicLvl"> 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#power"> 2908 3030 3154 3280 3408 3537 3668 3800 3933 4067 4201 4336 4470 4604 4738 4870 </table>
 		<table name="#ench1Power"> 4915 4959 5003 5047 5090 5134 5178 5222 5266 5310 5354 5398 5442 5486 5529 5573 5617 5661 5705 5749 5793 5837 5881 5925 5968 6012 6056 6100 6144 6188 </table>
 		<table name="#ench2mpConsume"> 149 147 146 144 142 141 139 138 136 135 133 132 130 129 127 126 124 123 121 120 118 117 115 113 112 110 109 107 106 104 </table>
 		<table name="#enchElementPower"> 1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50 </table>
+		<table name="#enchDuel"> 4955 5040 5125 5210 5295 5380 5465 5551 5636 5721 5806 5891 5976 6061 6147 6232 6317 6402 6487 6572 6657 6742 6828 6913 6998 7083 7168 7253 7338 7424 </table>
 		<set name="weaponsAllowed" val="32" /> <!-- Bow -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -467,15 +469,17 @@
 		<enchant5 name="element" val="2" />
 		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="element" val="3" />
+		<enchant7 name="pvpPower" val="#enchDuel" />
 	</skill>
-	<skill id="315" levels="16" name="Crush of Doom" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2">
+	<skill id="315" levels="16" name="Crush of Doom" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#power"> 4558 4750 4944 5142 5342 5545 5751 5958 6166 6376 6586 6797 7006 7218 7427 7635 </table>
 		<table name="#magicLvl"> 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#hpConsume"> 208 212 212 217 221 225 229 233 237 240 244 248 251 255 258 261 </table>
 		<table name="#ench2HpConsume"> 259 256 252 249 245 242 239 235 232 228 225 222 218 215 211 208 205 201 198 195 191 188 184 181 178 174 171 167 164 161 </table>
 		<table name="#ench1Power"> 7710 7779 7848 7917 7986 8055 8123 8192 8261 8330 8399 8468 8537 8605 8674 8743 8812 8881 8950 9019 9088 9156 9225 9294 9363 9432 9501 9570 9639 9707 </table>
-		<table name="#enchElementPower"> 1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50 </table>
+		<table name="#enchElementPower"> 2 4 5 7 9 10 12 14 15 17 18 20 22 23 25 27 28 30 32 33 35 36 38 40 41 43 45 46 48 50 </table>
+		<table name="#enchDuel"> 7768 7901 8035 8168 8302 8435 8569 8702 8836 8969 9103 9236 9370 9503 9637 9770 9903 10037 10170 10304 10437 10571 10704 10838 10971 11105 11238 11372 11505 11639 </table>
 		<set name="baseCritRate" val="15" />
 		<set name="weaponsAllowed" val="18432" /> <!-- Big Sword/Big Blunt -->
 		<set name="hpConsume" val="#hpConsume" />
@@ -509,6 +513,8 @@
 		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="element" val="3" />
 		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant7 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant7 name="pvpPower" val="#enchDuel" />
 	</skill>
 	<skill id="316" levels="1" name="Aegis">
 		<set name="target" val="TARGET_SELF" />
@@ -542,7 +548,7 @@
 		</for>
 	</skill>
 	<skill id="318" levels="1" name="Aegis Stance" enchantGroup1="1">
-		<table name="#ench1sDef"> 0.61 0.62 0.62 0.63 0.64 0.64 0.65 0.66 0.66 0.67 0.68 0.68 0.69 0.7 0.7 0.71 0.72 0.72 0.73 0.74 0.74 0.75 0.76 0.76 0.77 0.78 0.78 0.79 0.8 0.8 </table>
+		<table name="#ench1sDef"> 0.61 0.62 0.63 0.64 0.65 0.66 0.67 0.68 0.69 0.7 0.71 0.72 0.73 0.74 0.75 0.76 0.77 0.78 0.79 0.8 0.81 0.82 0.83 0.84 0.85 0.86 0.87 0.88 0.89 0.9 </table>
 		<set name="mpInitialConsume" val="9" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="CONT" />
@@ -560,9 +566,11 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="319" levels="2" name="Agile Movement">
+	<skill id="319" levels="2" name="Agile Movement" enchantGroup1="1" enchantGroup2="1">
 		<table name="#accCombat"> 2 3 </table>
 		<table name="#runSpd"> 5 10 </table>
+		<table name="#ench1runSpd"> 11 11 11 12 12 12 13 13 13 14 14 14 14 15 15 15 16 16 16 17 17 17 17 18 18 18 19 19 19 20 </table>
+		<table name="#ench2acc"> 4 4 4 4 4 4 4 4 4 4 4 4 4 4 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 6 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -584,6 +592,42 @@
 				</and>
 			</add>
 		</for>
+		<enchant1for>
+			<add order="0x40" stat="runSpd" val="#ench1runSpd">
+				<and>
+					<using kind="Light" />
+					<not>
+						<using kind="Heavy,Magic" />
+					</not>
+				</and>
+			</add>
+			<add order="0x40" stat="accCombat" val="3">
+				<and>
+					<using kind="Light" />
+					<not>
+						<using kind="Heavy,Magic" />
+					</not>
+				</and>
+			</add>
+		</enchant1for>
+		<enchant2for>
+			<add order="0x40" stat="runSpd" val="10">
+				<and>
+					<using kind="Light" />
+					<not>
+						<using kind="Heavy,Magic" />
+					</not>
+				</and>
+			</add>
+			<add order="0x40" stat="accCombat" val="#ench2acc">
+				<and>
+					<using kind="Light" />
+					<not>
+						<using kind="Heavy,Magic" />
+					</not>
+				</and>
+			</add>
+		</enchant2for>
 	</skill>
 	<skill id="320" levels="10" name="Wrath" enchantGroup1="2" enchantGroup2="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
