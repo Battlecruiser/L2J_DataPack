@@ -1315,7 +1315,7 @@ INSERT INTO `armor` VALUES
 (10247,'Fish Hat','','hairall','false','none',10,'wood','none',0,-1,-1,0,0,0,0,0,'true','true','true','true','true','0-0','0-0;'),
 (10248,'Straw Hat','','hairall','false','none',10,'wood','none',0,-1,-1,0,0,0,0,0,'true','true','true','true','true','0-0','0-0;'),
 (10249,'Chicken Hat','','hairall','false','none',10,'wood','none',0,-1,-1,0,0,0,0,0,'true','true','true','true','true','0-0','0-0;'),
-(10250,'Adventurer Hat (Event)','','hairall','false','none',10,'wood','none',0,-1,-1,0,0,0,0,0,'true','true','true','true','true','0-0','0-0;'),
+(10250,'Adventurer Hat (Event)','','hairall','false','none',10,'wood','none',0,-1,-1,0,0,0,0,0,'false','false','true','false','true','0-0','0-0;'),
 (10251,'Medieval Party Mask','','hairall','false','none',10,'wood','none',0,-1,-1,0,0,0,0,0,'true','true','true','true','true','0-0','0-0;'),
 (10273,'Wolf Summoning Bracelet','','lbracelet','false','none',150,'wood','none',0,200,-1,0,0,0,0,0,'true','true','true','true','true','0-0','0-0;'),
 (10314,'Beleth\'s Ring','','rfinger,lfinger','true','none',150,'wood','s',0,-1,-1,0,48,21,0,152,'true','true','true','true','true','0-0','3649-1;'),
