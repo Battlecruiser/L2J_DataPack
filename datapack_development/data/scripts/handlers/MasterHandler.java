@@ -116,6 +116,7 @@ public class MasterHandler
 		BypassHandler.getInstance().registerBypassHandler(new Buy());
 		BypassHandler.getInstance().registerBypassHandler(new BuyShadowItem());
 		BypassHandler.getInstance().registerBypassHandler(new ChatLink());
+		BypassHandler.getInstance().registerBypassHandler(new ClanWarehouse());
 		BypassHandler.getInstance().registerBypassHandler(new CPRecovery());
 		BypassHandler.getInstance().registerBypassHandler(new DrawHenna());
 		BypassHandler.getInstance().registerBypassHandler(new FishSkillList());
@@ -124,6 +125,7 @@ public class MasterHandler
 		BypassHandler.getInstance().registerBypassHandler(new Multisell());
 		BypassHandler.getInstance().registerBypassHandler(new Observation());
 		BypassHandler.getInstance().registerBypassHandler(new QuestLink());
+		BypassHandler.getInstance().registerBypassHandler(new PrivateWarehouse());
 		BypassHandler.getInstance().registerBypassHandler(new QuestList());
 		BypassHandler.getInstance().registerBypassHandler(new ReleaseAttribute());
 		BypassHandler.getInstance().registerBypassHandler(new RemoveDeathPenalty());
@@ -131,6 +133,7 @@ public class MasterHandler
 		BypassHandler.getInstance().registerBypassHandler(new RentPet());
 		BypassHandler.getInstance().registerBypassHandler(new RideWyvern());
 		BypassHandler.getInstance().registerBypassHandler(new Rift());
+		BypassHandler.getInstance().registerBypassHandler(new SkillList());
 		BypassHandler.getInstance().registerBypassHandler(new SupportBlessing());
 		BypassHandler.getInstance().registerBypassHandler(new SupportMagic());
 		BypassHandler.getInstance().registerBypassHandler(new TerritoryStatus());
