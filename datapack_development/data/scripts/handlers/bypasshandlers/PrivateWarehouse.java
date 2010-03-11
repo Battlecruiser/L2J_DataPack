@@ -62,7 +62,7 @@ public class PrivateWarehouse implements IBypassHandler
 			}
 			else if (command.startsWith(COMMANDS[1])) // WithdrawSortedP
 			{
-				final String param[] = command.split("_");
+				final String param[] = command.split(" ");
 
 				if (param.length > 2)
 					showWithdrawWindow(activeChar, WarehouseListType.valueOf(param[1]), SortedWareHouseWithdrawalList.getOrder(param[2]));
