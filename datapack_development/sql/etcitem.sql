@@ -9202,7 +9202,7 @@ INSERT INTO `etcitem` VALUES
 (14858,'Scout\'s Note','','false','none',0,'normal','wood','none',-1,-1,0,0,'false','false','false','false','false','none','0-0;'),
 (14859,'Stakato Queen\'s Fang','','false','none',0,'normal','wood','none',-1,-1,0,0,'false','false','false','false','false','none','0-0;'),
 (14860,'Box Containing the Flame of the Holy Spirit','','false','none',0,'normal','wood','none',-1,-1,0,0,'false','false','false','false','false','none','0-0;'),
-(14861,'Cursed Burial Items','','false','none',0,'normal','wood','none',-1,-1,0,0,'false','false','false','false','false','none','0-0;'),
+(14861,'Cursed Burial Items','','false','quest',0,'stackable','wood','none',-1,-1,0,0,'false','false','false','false','false','none','0-0;'),
 (14862,'Flauen\'s Letter','','false','quest',0,'normal','wood','none',-1,-1,0,0,'false','false','true','false','false','none','0-0;'),
 (14863,'Letter to Helvetica','','false','quest',0,'normal','wood','none',-1,-1,0,0,'false','false','true','false','false','none','0-0;'),
 (14864,'Letter to Athenia','','false','quest',0,'normal','wood','none',-1,-1,0,0,'false','false','true','false','false','none','0-0;'),
