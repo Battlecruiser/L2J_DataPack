@@ -1593,15 +1593,27 @@ public class AdminEditNpc implements IAdminCommandHandler
 			}
 			
 			con = L2DatabaseFactory.getInstance().getConnection();
-			
-			PreparedStatement statement = con.prepareStatement("UPDATE `npcskills` SET `level`=? WHERE `npcid`=? AND `skillid`=?");
-			statement.setInt(1, level);
-			statement.setInt(2, npcId);
-			statement.setInt(3, skillId);
-			
-			statement.execute();
-			statement.close();
-			
+			int updated = 0;
+			if(Config.CUSTOM_NPC_SKILLS_TABLE)
+			{
+				PreparedStatement statement2 = con.prepareStatement("UPDATE `custom_npcskills` SET `level`=? WHERE `npcid`=? AND `skillid`=?");
+				statement2.setInt(1, level);
+				statement2.setInt(2, npcId);
+				statement2.setInt(3, skillId);
+				
+				updated = statement2.executeUpdate();
+				statement2.close();
+			}
+			if(updated == 0)
+			{
+				PreparedStatement statement = con.prepareStatement("UPDATE `npcskills` SET `level`=? WHERE `npcid`=? AND `skillid`=?");
+				statement.setInt(1, level);
+				statement.setInt(2, npcId);
+				statement.setInt(3, skillId);
+				
+				statement.execute();
+				statement.close();
+			}
 			reloadNpcSkillList(npcId);
 			
 			showNpcSkillList(activeChar, npcId, 0);
@@ -1659,12 +1671,25 @@ public class AdminEditNpc implements IAdminCommandHandler
 			
 			con = L2DatabaseFactory.getInstance().getConnection();
 			
-			PreparedStatement statement = con.prepareStatement("INSERT INTO `npcskills`(`npcid`, `skillid`, `level`) VALUES(?,?,?)");
-			statement.setInt(1, npcId);
-			statement.setInt(2, skillId);
-			statement.setInt(3, level);
-			statement.execute();
-			statement.close();
+			if(Config.CUSTOM_NPC_SKILLS_TABLE)
+			{
+				PreparedStatement statement = con.prepareStatement("INSERT INTO `custom_npcskills`(`npcid`, `skillid`, `level`) VALUES(?,?,?)");
+				statement.setInt(1, npcId);
+				statement.setInt(2, skillId);
+				statement.setInt(3, level);
+				statement.execute();
+				statement.close();
+			}
+			else
+			{
+				PreparedStatement statement = con.prepareStatement("INSERT INTO `npcskills`(`npcid`, `skillid`, `level`) VALUES(?,?,?)");
+				statement.setInt(1, npcId);
+				statement.setInt(2, skillId);
+				statement.setInt(3, level);
+				statement.execute();
+				statement.close();
+			}
+
 			
 			reloadNpcSkillList(npcId);
 			
@@ -1697,11 +1722,23 @@ public class AdminEditNpc implements IAdminCommandHandler
 			
 			if (npcId > 0)
 			{
-				PreparedStatement statement2 = con.prepareStatement("DELETE FROM `npcskills` WHERE `npcid`=? AND `skillid`=?");
-				statement2.setInt(1, npcId);
-				statement2.setInt(2, skillId);
-				statement2.execute();
-				statement2.close();
+				int updated = 0;
+				if(Config.CUSTOM_NPC_SKILLS_TABLE)
+				{
+					PreparedStatement statement = con.prepareStatement("DELETE FROM `custom_npcskills` WHERE `npcid`=? AND `skillid`=?");
+					statement.setInt(1, npcId);
+					statement.setInt(2, skillId);
+					updated = statement.executeUpdate();
+					statement.close();
+				}
+				if(updated == 0)
+				{
+					PreparedStatement statement2 = con.prepareStatement("DELETE FROM `npcskills` WHERE `npcid`=? AND `skillid`=?");
+					statement2.setInt(1, npcId);
+					statement2.setInt(2, skillId);
+					statement2.execute();
+					statement2.close();
+				}
 				
 				reloadNpcSkillList(npcId);
 				
@@ -1738,6 +1775,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			if (npcData.getSkills() != null)
 				npcData.getSkills().clear();
 			
+			
 			// without race
 			PreparedStatement statement = con.prepareStatement("SELECT `skillid`, `level` FROM `npcskills` WHERE `npcid`=? AND `skillid` <> 4416");
 			statement.setInt(1, npcId);
@@ -1753,6 +1791,24 @@ public class AdminEditNpc implements IAdminCommandHandler
 			}
 			skillDataList.close();
 			statement.close();
+			
+			if(Config.CUSTOM_NPC_SKILLS_TABLE)
+			{
+				PreparedStatement statement2 = con.prepareStatement("SELECT `skillid`, `level` FROM `npcskills` WHERE `npcid`=? AND `skillid` <> 4416");
+				statement2.setInt(1, npcId);
+				ResultSet skillDataList2 = statement2.executeQuery();
+				
+				while (skillDataList2.next())
+				{
+					int idval = skillDataList2.getInt("skillid");
+					int levelval = skillDataList2.getInt("level");
+					skillData = SkillTable.getInstance().getInfo(idval, levelval);
+					if (skillData != null)
+						npcData.addSkill(skillData);
+				}
+				skillDataList2.close();
+				statement2.close();
+			}
 		}
 		catch (Exception e)
 		{
