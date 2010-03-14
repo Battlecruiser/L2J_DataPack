@@ -201,7 +201,7 @@
 		<table name="#runSpd"> 2 3 3 1 </table>
 		<table name="#mAtkSpd"> 2 3 3 2 </table>
 		<table name="#pAtk"> 1 1 10000 1 </table>
-		<table name="#pReuse"> 0.01 0.01 0.01 1 </table>
+		<table name="#reuse"> 0.01 0.01 0.01 1 </table>
 		<table name="#amount"> 1 1 1 2 </table>
 		<set name="aggroPoints" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -213,7 +213,8 @@
 				<mul order="0x30" stat="runSpd" val="#runSpd" />
 				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
-				<mul order="0x30" stat="pReuse" val="#pReuse" />
+				<mul order="0x30" stat="pReuse" val="#reuse" />
+				<mul order="0x30" stat="mReuse" val="#reuse" />
 				<mul order="0x30" stat="regMp" val="#amount" />
 				<mul order="0x30" stat="regMp" val="#amount" />
 				<mul order="0x30" stat="maxMp" val="#amount" />
