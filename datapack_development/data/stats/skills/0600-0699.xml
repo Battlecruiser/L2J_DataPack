@@ -26,6 +26,9 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="isMagic" val="true" />
 		<set name="isClanSkill" val="true" />
+		<cond addName="1" msgId="113">
+			<using kind="Shield" />
+		</cond>
 		<for>
 			<add order="0x40" stat="rShld" val="54.7" />
 		</for>
@@ -36,6 +39,9 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="isMagic" val="true" />
 		<set name="isClanSkill" val="true" />
+		<cond addName="1" msgId="113">
+			<using kind="Shield" />
+		</cond>
 		<for>
 			<add order="0x40" stat="sDef" val="225" />
 		</for>
