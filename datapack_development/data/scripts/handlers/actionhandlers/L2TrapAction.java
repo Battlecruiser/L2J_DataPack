@@ -1,0 +1,46 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+package handlers.actionhandlers;
+
+import com.l2jserver.gameserver.handler.IActionHandler;
+import com.l2jserver.gameserver.model.L2Object.InstanceType;
+import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+
+public class L2TrapAction implements IActionHandler
+{
+	public boolean action(L2PcInstance activeChar, L2Character target, boolean interact)
+	{
+		// Aggression target lock effect
+		if (activeChar.isLockedTarget() && activeChar.getLockedTarget() != target)
+		{
+			activeChar.sendPacket(new SystemMessage(SystemMessageId.FAILED_CHANGE_TARGET));
+			return false;
+		}
+
+		activeChar.setTarget(target);
+		MyTargetSelected my = new MyTargetSelected(target.getObjectId(), activeChar.getLevel()- target.getLevel());
+		activeChar.sendPacket(my);
+		return true;
+	}
+
+	public InstanceType getInstanceType()
+	{
+		return InstanceType.L2Trap;
+	}
+}

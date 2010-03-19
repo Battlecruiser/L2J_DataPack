@@ -14,6 +14,7 @@
  */
 package handlers;
 
+import handlers.actionhandlers.*;
 import handlers.admincommandhandlers.*;
 import handlers.bypasshandlers.*;
 import handlers.chathandlers.*;
@@ -25,6 +26,7 @@ import handlers.voicedcommandhandlers.*;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.handler.ActionHandler;
 import com.l2jserver.gameserver.handler.AdminCommandHandler;
 import com.l2jserver.gameserver.handler.BypassHandler;
 import com.l2jserver.gameserver.handler.ChatHandler;
@@ -41,7 +43,32 @@ import com.l2jserver.gameserver.handler.VoicedCommandHandler;
 public class MasterHandler
 {
 	private static Logger _log = Logger.getLogger(MasterHandler.class.getName());
-	
+
+	private static void loadActionHandlers()
+	{
+		ActionHandler.getInstance().registerActionHandler(new L2ArtefactInstanceAction());
+		ActionHandler.getInstance().registerActionHandler(new L2DecoyAction());
+		ActionHandler.getInstance().registerActionHandler(new L2DoorInstanceAction());
+		ActionHandler.getInstance().registerActionHandler(new L2NpcAction());
+		ActionHandler.getInstance().registerActionHandler(new L2PcInstanceAction());
+		ActionHandler.getInstance().registerActionHandler(new L2PetInstanceAction());
+		ActionHandler.getInstance().registerActionHandler(new L2StaticObjectInstanceAction());
+		ActionHandler.getInstance().registerActionHandler(new L2SummonAction());
+		ActionHandler.getInstance().registerActionHandler(new L2TrapAction());
+		_log.config("Loaded " + ActionHandler.getInstance().size() + "  ActionHandlers");
+	}
+
+	private static void loadActionShiftHandlers()
+	{
+		ActionHandler.getInstance().registerActionShiftHandler(new L2DoorInstanceActionShift());
+		ActionHandler.getInstance().registerActionShiftHandler(new L2MerchantInstanceActionShift());
+		ActionHandler.getInstance().registerActionShiftHandler(new L2NpcActionShift());
+		ActionHandler.getInstance().registerActionShiftHandler(new L2PcInstanceActionShift());
+		ActionHandler.getInstance().registerActionShiftHandler(new L2StaticObjectInstanceActionShift());
+		ActionHandler.getInstance().registerActionShiftHandler(new L2SummonActionShift());
+		_log.config("Loaded " + ActionHandler.getInstance().sizeShift() + " ActionShiftHandlers");
+	}
+
 	private static void loadAdminHandlers()
 	{
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminAdmin());
@@ -280,6 +307,8 @@ public class MasterHandler
 	public static void main(String[] args)
 	{
 		_log.config("Loading Handlers...");
+		loadActionHandlers();
+		loadActionShiftHandlers();
 		loadAdminHandlers();
 		loadBypassHandlers();
 		loadChatHandlers();
