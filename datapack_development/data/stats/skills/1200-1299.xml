@@ -1075,16 +1075,14 @@
 		</for>
 	</skill>
 	<skill id="1245" levels="14" name="Steal Essence" enchantGroup1="2" enchantGroup2="2">
+		<table name="#ench1Power"> 109 109 110 111 111 112 113 113 114 115 115 116 116 117 118 118 119 120 120 121 122 122 123 124 124 125 125 126 127 127 </table>
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
-		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<table name="#ench2mpConsume"> 107 106 104 103 101 99 98 96 95 93 92 90 89 87 86 84 83 81 79 78 76 75 73 72 70 69 67 66 64 62 </table>
-		<table name="#ench2mpInitialConsume"> 26 26 26 25 25 24 24 24 23 23 23 22 22 21 21 21 20 20 19 19 19 18 18 18 17 17 16 16 16 15 </table>
-		<table name="#mpInitialConsume"> 18 21 23 25 27 28 29 30 31 32 34 34 35 36 </table>
-		<table name="#mpConsume"> 74 79 89 97 106 110 115 119 123 127 130 135 138 141 </table>
+		<table name="#ench2mpInitialConsume"> 34 34 34 33 33 32 32 31 31 30 30 29 29 28 28 27 27 26 26 26 25 25 24 24 23 23 22 22 21 21 </table>
+		<table name="#ench2mpConsume"> 139 138 136 134 132 130 128 126 124 122 121 119 117 115 113 111 109 107 106 104 102 100 98 96 94 92 91 89 87 85 </table>
+		<table name="#mpInitialConsume"> 18 20 22 24 26 27 28 29 30 31 32 33 34 35 </table>
+		<table name="#mpConsume"> 74 80 90 98 107 111 116 120 124 128 132 136 139 142 </table>
 		<table name="#magicLvl"> 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#power"> 52 58 65 72 78 82 85 89 92 96 99 102 105 108 </table>
-		<table name="#ench1Power"> 109 109 110 111 111 112 113 113 114 115 115 116 116 117 118 118 119 120 120 121 122 122 123 124 124 125 125 126 127 127 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1098,7 +1096,9 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="absorbPart" val="0.8" /> <!-- absorbs 80% of damage -->
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 	</skill>
