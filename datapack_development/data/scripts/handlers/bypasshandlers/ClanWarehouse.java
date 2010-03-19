@@ -41,8 +41,7 @@ public class ClanWarehouse implements IBypassHandler
 
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
-		if (!(target.isInstanceType(InstanceType.L2WarehouseInstance)
-				|| target.isInstanceType(InstanceType.L2ClanHallManagerInstance)))
+		if (!target.isInstanceType(InstanceType.L2WarehouseInstance, InstanceType.L2ClanHallManagerInstance))
 			return false;
 
 		if (activeChar.isEnchanting())
