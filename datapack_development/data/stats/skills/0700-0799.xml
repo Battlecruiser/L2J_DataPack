@@ -1514,7 +1514,21 @@
 		<set name="hitTime" val="1200" />
 		<set name="reuseDelay" val="11000" />
 	</skill>
-	<skill id="793" levels="1" name="Rush Impact">
+	<skill id="793" levels="1" name="Rush Impact" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6" enchantGroup5="6" enchantGroup6="6" enchantGroup7="6" enchantGroup8="6">
+		<table name="#enchantMagicLvl"> 78 79 79 80 80 81 81 82 82 83 83 84 84 85 85 </table>
+		<table name="#ench1Power"> 4071 4102 4133 4164 4195 4226 4257 4289 4320 4351 4382 4413 4444 4475 4507 </table>
+		<table name="#ench2mpConsume"> 80 78 76 74 72 70 68 66 64 62 59 57 55 53 51 </table>
+		<table name="#ench3effectPower"> 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 </table>
+		<table name="#enchElementPower"> 4 7 10 14 17 20 24 27 30 34 37 40 43 47 50 </table>
+		<table name="#ench8Duel"> 4104 4168 4232 4297 4361 4425 4490 4554 4618 4683 4747 4811 4875 4940 5004 </table>
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant6 name="magicLvl" val="#enchantMagicLvl" /> 
+		<enchant7 name="magicLvl" val="#enchantMagicLvl" /> 
+		<enchant8 name="magicLvl" val="#enchantMagicLvl" /> 
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="320" />
 		<set name="effectRange" val="1100" />
@@ -1532,14 +1546,36 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="weaponsAllowed" val="32768" /> <!-- Ancient -->
+		<enchant1 name="power" val="#ench1Power" />
+		<enchant2 name="mpConsume" val="#ench2mpConsume" />
+		<enchant4 name="element" val="0" />
+		<enchant4 name="elementPower" val="#enchElementPower" />
+		<enchant5 name="element" val="1" />
+		<enchant5 name="elementPower" val="#enchElementPower" />
+		<enchant6 name="element" val="2" />
+		<enchant6 name="elementPower" val="#enchElementPower" />
+		<enchant7 name="element" val="3" />
+		<enchant7 name="elementPower" val="#enchElementPower" />
+		<enchant8 name="pvpPower" val="#ench8Duel" />
 		<cond msgId="113" addName="1">
 			<target mindistance="200" />
 		</cond>
 		<for>
 			<effect name="Stun" time="9" val="0" effectPower="60" effectType="STUN" stackOrder="1" stackType="Stun" />
 		</for>
+		<enchant3cond msgId="113" addName="1">
+			<target mindistance="200" />
+		</enchant3cond>
+		<enchant3for>
+			<effect name="Stun" time="9" val="0" effectPower="#ench3effectPower" effectType="STUN" stackOrder="1" stackType="Stun" />
+		</enchant3for>
 	</skill>
-	<skill id="794" levels="1" name="Mass Disarm">
+	<skill id="794" levels="1" name="Mass Disarm" enchantGroup1="6" enchantGroup2="6">
+		<table name="#enchantMagicLvl"> 79 80 80 81 81 82 82 82 83 83 83 84 84 85 85 </table>
+		<table name="#ench1Power"> 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
+		<table name="#ench2Reuse"> 145000 140000 135000 130000 125000 120000 115000 110000 105000 100000 95000 90000 85000 80000 75000 </table>
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<set name="hitTime" val="1500" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="2" />
@@ -1551,6 +1587,8 @@
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="DISARM" />
 		<set name="target" val="TARGET_AURA" />
+		<enchant1 name="power" val="#ench1Power" />
+		<enchant2 name="reuseDelay" val="#ench2Reuse" />
 		<for>
 			<effect name="Disarm" time="5" val="0" />
 		</for>

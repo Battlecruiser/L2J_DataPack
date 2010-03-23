@@ -220,7 +220,17 @@
 			<effect name="ChanceSkillTrigger" time="30" val="0" triggeredId="5591" triggeredLevel="#lvl" chanceType="ON_ATTACKED_HIT" activationChance="40" abnormal="poison" stackOrder="8" stackType="poison" />
 		</for>
 	</skill>
-	<skill id="1512" levels="1" name="Soul Vortex">
+	<skill id="1512" levels="1" name="Soul Vortex" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
+		<table name="#enchantMagicLvl"> 77 78 78 79 79 80 80 81 81 82 82 83 84 85 85 </table>
+		<table name="#ench1Power"> 113 114 115 116 117 118 119 119 120 121 122 123 124 125 126 </table>
+		<table name="#ench2mpInitialConsume"> 20 19 19 18 17 17 16 15 15 14 13 12 12 11 10 </table>
+		<table name="#ench2mpConsume"> 81 78 74 72 70 66 64 61 58 56 53 50 46 45 42 </table>
+		<table name="#ench3effectPower"> 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 </table>
+		<table name="#ench4Duel"> 114 116 118 119 121 123 124 126 128 130 131 133 135 136 138 </table>
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<set name="mpInitialConsume" val="21" />
 		<set name="mpConsume" val="84" />
 		<set name="magicLvl" val="77" />
@@ -237,6 +247,10 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="soulMaxConsumeCount" val="5" />
+		<enchant1 name="power" val="#ench1Power" />
+		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
+		<enchant2 name="mpConsume" val="#ench2mpConsume" />
+		<enchant4 name="pvpPower" val="#ench4Duel" />
 		<for>
 			<!-- Retail Values CT2.3: 12MP * 3 Sec -->
 			<effect count="10" name="ManaDamOverTime" time="3" val="36" effectPower="80" effectType="MDOT">
@@ -245,8 +259,23 @@
 				<mul order="0x30" stat="mAtkSpd" val="0.7" />
 			</effect>
 		</for>
+		<enchant3for>
+			<effect count="10" name="ManaDamOverTime" time="3" val="36" effectPower="#ench3effectPower" effectType="MDOT">
+				<mul order="0x30" stat="runSpd" val="0.8" />
+				<mul order="0x30" stat="pAtkSpd" val="0.7" />
+				<mul order="0x30" stat="mAtkSpd" val="0.7" />
+			</effect>
+		</enchant3for>
 	</skill>
-	<skill id="1513" levels="1" name="Soul Vortex Extinction">
+	<skill id="1513" levels="1" name="Soul Vortex Extinction" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
+		<table name="#enchantMagicLvl"> 79 80 80 81 81 82 82 82 83 83 83 84 84 85 85 </table>
+		<table name="#ench1Power"> 197 198 198 199 199 200 200 201 202 202 203 203 204 204 205 </table>
+		<table name="#ench2mpInitialConsume"> 20 20 19 18 18 17 16 15 15 14 13 13 12 11 11 </table>
+		<table name="#ench2mpConsume"> 82 78 77 74 70 68 65 62 60 57 54 50 48 46 42 </table>
+		<table name="#ench3Duel"> 198 199 201 202 204 205 206 208 209 211 212 213 215 216 218 </table>
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<set name="mpInitialConsume" val="28" />
 		<set name="mpConsume" val="80" />
 		<set name="magicLvl" val="79" />
@@ -261,6 +290,10 @@
 		<set name="effectRange" val="1400" />
 		<set name="negateId" val="1512" />
 		<set name="soulMaxConsumeCount" val="5" />
+		<enchant1 name="power" val="#ench1Power" />
+		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
+		<enchant2 name="mpConsume" val="#ench2mpConsume" />
+		<enchant3 name="pvpPower" val="#ench3Duel" />
 		<cond msgId="109">
 			<target active_effect_id="1512" />
 		</cond>
@@ -316,7 +349,12 @@
 			<effect name="ChanceSkillTrigger" time="1200" val="0" triggeredId="5592" chanceType="ON_ATTACKED" activationChance="15" />
 		</for>
 	</skill>
-	<skill id="1516" levels="1" name="Soul Strike">
+	<skill id="1516" levels="1" name="Soul Strike" enchantGroup1="6" enchantGroup2="6">
+		<table name="#enchantMagicLvl"> 76 76 77 78 78 79 80 80 81 82 82 83 84 85 85 </table>
+		<table name="#ench1Power"> 167 168 169 170 171 173 174 175 176 177 178 180 181 182 183 </table>
+		<table name="#ench2Duel"> 168 170 172 174 176 178 180 182 184 186 188 190 192 194 196 </table>
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
 		<set name="hitTime" val="2000" />
@@ -329,6 +367,8 @@
 		<set name="skillType" val="MDAM" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="target" val="TARGET_ONE" />
+		<enchant1 name="power" val="#ench1Power" />
+		<enchant2 name="pvpPower" val="#ench2Duel" />
 	</skill>
 	<skill id="1517" levels="1" name="Chant of Combat">
 		<set name="mpConsume" val="65" />
