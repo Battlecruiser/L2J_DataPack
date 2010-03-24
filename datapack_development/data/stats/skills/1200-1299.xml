@@ -1621,18 +1621,28 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="1262" levels="5" name="Transfer Pain">
+	<skill id="1262" levels="5" name="Transfer Pain" enchantGroup1="1">
+		<table name="#enchant1MagicLvl"> 71 71 72 72 73 73 74 74 75 75 76 76 77 77 78 78 79 79 80 80 81 81 82 82 83 83 84 84 85 85 </table>
+		<table name="#enchant1power"> 51 52 52 53 54 54 55 56 56 57 57 58 59 59 60 61 61 62 63 63 64 64 65 66 66 67 68 68 69 70 </table>
+		<table name="#magicLvl"> 40 48 56 58 70 </table>
 		<table name="#mpInitialConsume"> 7 9 11 12 13 </table>
 		<table name="#power"> 10 20 30 40 50 </table>
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="CONT" />
 		<set name="operateType" val="OP_TOGGLE" />
+		<set name="skillType" val="CONT" />
+		<set name="target" val="TARGET_SELF" />
+		<enchant1 name="magicLvl" val="#enchant1MagicLvl" />
 		<for>
 			<effect count="0x7fffffff" name="MpConsumePerLevel" time="3" val="0.2">
 				<add order="0x40" stat="transDam" val="#power" />
 			</effect>
 		</for>
+		<enchant1for>
+			<effect count="0x7fffffff" name="MpConsumePerLevel" time="3" val="0.2">
+				<add order="0x40" stat="transDam" val="#enchant1power" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="1263" levels="13" name="Curse Gloom" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
