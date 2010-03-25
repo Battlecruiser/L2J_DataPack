@@ -657,19 +657,72 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="2860" levels="6" name="Highest Power Secret Medicine of Life">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<table name="#minLvl"> 0 20 40 52 61 76 </table>
+		<table name="#maxLvl"> 20 40 52 61 76 86 </table>
+		<set name="itemConsumeCount" val="1" />
+		<set name="power" val="100" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
+		<set name="sharedReuse" val="2287-1" />
+		<set name="isPotion" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player flyMounted="False" />
+				<player level="#minLvl" />
+				<not>
+					<player level="#maxLvl" />
+				</not>
+			</and>
+		</cond>
 	</skill>
 	<skill id="2861" levels="6" name="Highest Power Secret Medicine of Mind">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<table name="#power"> 150 250 350 500 700 840 </table>
+		<table name="#minLvl"> 0 20 40 52 61 76 </table>
+		<table name="#maxLvl"> 20 40 52 61 76 86 </table>
+		<set name="itemConsumeCount" val="1" />
+		<set name="power" val="#power" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="MANAHEAL" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
+		<set name="sharedReuse" val="2287-1" />
+		<set name="isPotion" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player flyMounted="False" />
+				<player level="#minLvl" />
+				<not>
+					<player level="#maxLvl" />
+				</not>
+			</and>
+		</cond>
 	</skill>
 	<skill id="2862" levels="6" name="Highest Power Secret Medicine of Will">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<table name="#power"> 200 400 1200 1600 2000 2400 </table>
+		<table name="#minLvl"> 0 20 40 52 61 76 </table>
+		<table name="#maxLvl"> 20 40 52 61 76 86 </table>
+		<set name="itemConsumeCount" val="1" />
+		<set name="power" val="#power" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="COMBATPOINTHEAL" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
+		<set name="sharedReuse" val="2289-1" />
+		<set name="isPotion" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player flyMounted="False" />
+				<player level="#minLvl" />
+				<not>
+					<player level="#maxLvl" />
+				</not>
+			</and>
+		</cond>
 	</skill>
 	<skill id="2863" levels="1" name="Highest Power Healing Potion">
 		<set name="target" val="TARGET_NONE" />

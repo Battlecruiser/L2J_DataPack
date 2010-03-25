@@ -410,11 +410,9 @@
 		</cond>
 	</skill>
 	<skill id="22043" levels="6" name="Secret medicine of Will">
-		<table name="#itemConsumeId"> 0 20354 20355 20356 20357 20358 </table>
 		<table name="#power"> 200 800 1500 2000 2500 3000 </table>
 		<table name="#minLvl"> 0 20 40 52 61 76 </table>
 		<table name="#maxLvl"> 20 40 52 61 76 86 </table>
-		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_SELF" />
@@ -422,6 +420,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
+		<set name="sharedReuse" val="2289-1" />
 		<set name="isPotion" val="true" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -434,10 +433,8 @@
 		</cond>
 	</skill>
 	<skill id="22044" levels="6" name="Secret medicine of Life">
-		<table name="#itemConsumeId"> 0 20359 20360 20361 20362 20363 </table>
 		<table name="#minLvl"> 0 20 40 52 61 76 </table>
 		<table name="#maxLvl"> 20 40 52 61 76 86 </table>
-		<set name="itemConsumeId" val="#itemConsumeId" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="power" val="50" />
 		<set name="target" val="TARGET_SELF" />
@@ -445,6 +442,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
+		<set name="sharedReuse" val="2287-1" />
 		<set name="isPotion" val="true" />
 		<cond msgId="113" addName="1">
 			<and>
