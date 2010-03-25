@@ -18,14 +18,15 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.L2Skill;
+import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2SummonInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance.TimeStamp;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
+import com.l2jserver.gameserver.network.serverpackets.ExUseSharedGroupItem;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.skills.SkillHolder;
 import com.l2jserver.gameserver.templates.item.L2EtcItemType;
@@ -41,30 +42,34 @@ public class ItemSkills implements IItemHandler
 	 */
 	public void useItem(L2Playable playable, L2ItemInstance item)
 	{
-		L2PcInstance activeChar; // use activeChar only for L2PcInstance checks where cannot be used PetInstance
-		boolean isPet = playable instanceof L2PetInstance;
-		if (playable instanceof L2PcInstance)
-			activeChar = (L2PcInstance) playable;
-		else if (isPet)
+		L2PcInstance activeChar;
+		boolean isPet = playable.isInstanceType(InstanceType.L2PetInstance);
+		if (isPet)
 			activeChar = ((L2PetInstance) playable).getOwner();
+		else if (playable.isInstanceType(InstanceType.L2PcInstance))
+			activeChar = (L2PcInstance) playable;
 		else
 			return;
+
 		if (activeChar.isInOlympiadMode())
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT));
 			return;
 		}
+
 		if (!TvTEvent.onScrollUse(playable.getObjectId()))
 		{
 			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
+
 		// pets can use items only when they are tradeable
 		if (isPet && !item.isTradeable())
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessageId.ITEM_NOT_FOR_PETS));
 			return;
 		}
+
 		if (item.getItemId() == 726 || item.getItemId() == 728)
 		{
 			if (!Config.L2JMOD_ENABLE_MANA_POTIONS_SUPPORT)
@@ -94,7 +99,7 @@ public class ItemSkills implements IItemHandler
 					if (!itemSkill.checkCondition(playable, playable.getTarget(), false))
 					       return;
 
-					if (playable.isSkillDisabled(skillId))
+					if (playable.isSkillDisabled(itemSkill))
 					{
 						reuse(activeChar,itemSkill, item);
 						return ;
@@ -147,7 +152,10 @@ public class ItemSkills implements IItemHandler
 					{
 						playable.doSimultaneousCast(itemSkill);
 						// Summons should be affected by herbs too, self time effect is handled at L2Effect constructor
-						if (!isPet && item.getItemType() == L2EtcItemType.HERB && activeChar.getPet() != null && activeChar.getPet() instanceof L2SummonInstance)
+						if (!isPet
+								&& item.getItemType() == L2EtcItemType.HERB
+								&& activeChar.getPet() != null
+								&& activeChar.getPet().isInstanceType(InstanceType.L2SummonInstance))
 							activeChar.getPet().doSimultaneousCast(itemSkill);
 					}
 					else
@@ -159,8 +167,17 @@ public class ItemSkills implements IItemHandler
 
 					if (itemSkill.getReuseDelay() > 0)
 					{
-						activeChar.addTimeStamp(skillId, itemSkill.getReuseDelay());
-						activeChar.disableSkill(skillId, itemSkill.getReuseDelay());
+						activeChar.addTimeStamp(itemSkill, itemSkill.getReuseDelay());
+						activeChar.disableSkill(itemSkill, itemSkill.getReuseDelay());
+						if (item.isEtcItem())
+						{
+							final int group = item.getEtcItem().getSharedReuseGroup();
+							if (group >= 0)
+								activeChar.sendPacket(new ExUseSharedGroupItem(item.getItemId(),
+										group,
+										itemSkill.getReuseDelay(),
+										itemSkill.getReuseDelay()));
+						}
 					}
 				}
 			}
@@ -170,14 +187,14 @@ public class ItemSkills implements IItemHandler
 	private void reuse(L2PcInstance player,L2Skill skill, L2ItemInstance item)
 	{
 		SystemMessage sm = null;
-    	FastMap<Integer, TimeStamp> timeStamp = player.getReuseTimeStamp();
+    	final FastMap<Integer, TimeStamp> timeStamp = player.getReuseTimeStamp();
 
-    	if (timeStamp != null && timeStamp.containsKey(skill.getId()))
+    	if (timeStamp != null && timeStamp.containsKey(skill.getReuseHashCode()))
     	{
-    		int remainingTime = (int)(player.getReuseTimeStamp().get(skill.getId()).getRemaining()/1000);
-    		int hours = remainingTime/3600;
-    		int minutes = (remainingTime%3600)/60;
-    		int seconds = (remainingTime%60);
+    		final long remainingTime = player.getReuseTimeStamp().get(skill.getReuseHashCode()).getRemaining();
+    		final int hours = (int)(remainingTime / 3600000L);
+    		final int minutes = (int)(remainingTime % 3600000L) / 60000;
+    		final int seconds = (int)(remainingTime % 60);
     		if (hours > 0)
     		{
     			sm = new SystemMessage(SystemMessageId.S2_HOURS_S3_MINUTES_S4_SECONDS_REMAINING_FOR_REUSE_S1);
@@ -206,6 +223,16 @@ public class ItemSkills implements IItemHandler
     				sm.addSkillName(skill);
     		}
     		sm.addNumber(seconds);
+
+    		if (item.isEtcItem())
+    		{
+				final int group = item.getEtcItem().getSharedReuseGroup();
+    			if (group >= 0)
+    				player.sendPacket(new ExUseSharedGroupItem(item.getItemId(),
+    						group,
+    						(int)remainingTime,
+    						skill.getReuseDelay()));
+    		}
     	}
     	else
     	{

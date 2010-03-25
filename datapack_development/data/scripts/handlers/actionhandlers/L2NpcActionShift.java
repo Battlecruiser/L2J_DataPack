@@ -78,7 +78,7 @@ public class L2NpcActionShift implements IActionHandler
                         final StringBuilder html1 = StringUtil.startAppend(500,
                                 "<html><body><center><font color=\"LEVEL\">NPC Info</font></center><br>" +
                                 "Instance Type: ",
-                                getClass().getSimpleName(),
+                                target.getClass().getSimpleName(),
                                 "<br1>Faction: ",
                                 ((L2Npc)target).getFactionId() != null ? ((L2Npc)target).getFactionId() : "null"
                                 );
