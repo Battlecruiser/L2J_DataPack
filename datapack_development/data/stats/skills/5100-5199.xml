@@ -29,26 +29,16 @@
 		<set name="effectRange" val="1100" />
 	</skill>
 	<skill id="5104" levels="3" name="Battle Force">
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="CONT" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="1000" /> <!-- Must be validated -->
-		<for>
-			<effect count="0x7fffffff" name="Fusion" time="600" val="15" stackOrder="0" stackType="BattleForce">
-				<mul order="0x30" stat="pAtk" val="1.1" /> <!-- Guess -->
-			</effect>
-		</for>
+		<!-- Not Used Anymore -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5105" levels="3" name="Spell Force">
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="CONT" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="1000" /> <!-- Must be validated -->
-		<for>
-			<effect count="0x7fffffff" name="Fusion" time="600" val="15" stackOrder="0" stackType="SpellForce">
-				<mul order="0x30" stat="mAtk" val="1.1" /> <!-- Guess -->
-			</effect>
-		</for>
+		<!-- Not Used Anymore -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5106" levels="4" name="Capture A State">
 		<set name="target" val="TARGET_ONE" />

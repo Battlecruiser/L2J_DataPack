@@ -708,32 +708,16 @@
 		</for>
 	</skill>
 	<skill id="426" levels="1" name="Battle Force">
-		<set name="mpInitialConsume" val="12" />
-		<set name="magicLvl" val="77" />
-		<set name="triggeredId" val="5104" />
-		<set name="triggeredLevel" val="1" />
-		<set name="target" val="TARGET_PARTY_OTHER" />
-		<set name="hitTime" val="15000" />
-		<set name="skillType" val="FUSION" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="1400" />
-		<set name="reuseDelay" val="30000" />
-		<set name="isMagic" val="true" />
+		<!-- Not Used Anymore -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="427" levels="1" name="Spell Force">
-		<set name="mpInitialConsume" val="12" />
-		<set name="magicLvl" val="77" />
-		<set name="triggeredId" val="5105" />
-		<set name="triggeredLevel" val="1" />
-		<set name="target" val="TARGET_PARTY_OTHER" />
-		<set name="hitTime" val="15000" />
-		<set name="skillType" val="FUSION" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="1400" />
-		<set name="reuseDelay" val="30000" />
-		<set name="isMagic" val="true" />
+		<!-- Not Used Anymore -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="428" levels="1" name="Inner Rhythm" enchantGroup1="5">
 		<table name="#ench1DanceMpConsumeRate"> 0.89 0.89 0.89 0.89 0.89 0.89 0.89 0.88 0.88 0.88 0.88 0.88 0.88 0.88 0.87 </table>
