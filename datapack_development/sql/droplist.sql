@@ -30723,7 +30723,7 @@ INSERT INTO `droplist` VALUES
 (22661,9516,1,1,1,100),-- Sealed Dynasty Helmet
 (22661,9529,1,1,1,100),-- Sealed Dynasty Shield
 (22661,9521,1,1,1,100),-- Sealed Dynasty Leather Helmet
-(22661,10120,1,1,1,100),-- Sealed Dynasty Sigil
+(22661,13886,1,1,1,100),-- Sealed Dynasty Sigil
 (22661,9526,1,1,1,100),-- Sealed Dynasty Circlet
 (22661,1885,1,1,2,455300),-- High Grade Suede
 (22661,1879,3,9,2,150300),-- Cokes
@@ -30943,7 +30943,7 @@ INSERT INTO `droplist` VALUES
 (22673,9529,1,1,1,5),-- Sealed Dynasty Shield
 (22673,9526,1,1,1,4),-- Sealed Dynasty Circlet
 (22673,9521,1,1,1,4),-- Sealed Dynasty Leather Helmet
-(22673,10120,1,1,1,5),-- Sealed Dynasty Sigil
+(22673,13886,1,1,1,5),-- Sealed Dynasty Sigil
 (22673,1879,1,1,2,142800),-- Cokes
 (22673,1885,1,1,2,69500),-- High Grade Suede
 (22673,9629,1,1,2,6700),-- Leonard
@@ -31136,7 +31136,7 @@ INSERT INTO `droplist` VALUES
 (22685,9529,1,1,1,4),-- Sealed Dynasty Shield
 (22685,9526,1,1,1,3),-- Sealed Dynasty Circlet
 (22685,9521,1,1,1,3),-- Sealed Dynasty Leather Helmet
-(22685,10120,1,1,1,4),-- Sealed Dynasty Sigil
+(22685,13886,1,1,1,4),-- Sealed Dynasty Sigil
 (22685,5167,1,1,2,400),-- Recipe: Blessed Spiritshot (S) Compressed Package (100%)
 (22685,1879,1,1,2,86000),-- Cokes
 (22685,1885,1,1,2,44200),-- High Grade Suede
@@ -31339,7 +31339,7 @@ INSERT INTO `droplist` VALUES
 (22697,9529,1,1,1,4),-- Sealed Dynasty Shield
 (22697,9526,1,1,1,3),-- Sealed Dynasty Circlet
 (22697,9521,1,1,1,3),-- Sealed Dynasty Leather Helmet
-(22697,10120,1,1,1,4),-- Sealed Dynasty Sigil
+(22697,13886,1,1,1,4),-- Sealed Dynasty Sigil
 (22697,9630,1,1,2,1000), -- Orichalcum
 (22697,9629,1,1,2,900), -- Adamantine
 (22697,9628,1,1,2,1000), -- Leonard
