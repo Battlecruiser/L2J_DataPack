@@ -23,6 +23,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 
 /**
@@ -106,6 +107,7 @@ public class CharacterBirthday extends Quest
 		}
 		if (st != null && player.checkBirthDay() == 0)
 		{
+			st.setState(State.STARTED);
 			L2Npc spawned = st.addSpawn(32600, player);
 			st.startQuestTimer("despawn_npc", 60000, spawned);
 			is_spawned = true;
