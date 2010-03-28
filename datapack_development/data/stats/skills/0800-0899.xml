@@ -682,27 +682,55 @@
 		<set name="hitTime" val="1500" />
 	</skill>
 	<skill id="844" levels="1" name="Outpost Construction">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="mpInitialConsume" val="30" />
+		<set name="itemConsumeId" val="2132" />
+		<set name="itemConsumeCount" val="120" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="4000" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="skillType" val="SIEGEFLAG" />
+		<set name="isOutpost" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="845" levels="1" name="Outpost Demolition">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="4000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="10000" />
+		<set name="staticReuse" val="true" />
+		<set name="castRange" val="100" />
+		<set name="effectRange" val="600" />
+		<cond msgId="109">
+			<target npcId="36590" />
+		</cond>
 	</skill>
 	<skill id="846" levels="1" name="Possess Ward">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="pAtkSpd" val="0.1" />
+			<mul order="0x30" stat="mAtkSpd" val="0.1" />
+			<mul order="0x30" stat="runSpd" val="0.5" />
+		</for>
 	</skill>
 	<skill id="847" levels="1" name="Ward Transport">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="180000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="10000" />
+		<set name="staticReuse" val="true" />
+		<set name="castRange" val="100" />
+		<set name="effectRange" val="600" />
+		<cond msgId="109">
+			<target npcId="36590" />
+		</cond>
 	</skill>
 	<skill id="848" levels="1" name="Gludio Territory Benefaction">
 		<set name="target" val="TARGET_SELF" />

@@ -456,6 +456,9 @@ $MYG < ../sql/spawnlist.sql &> /dev/null
 $MYG < ../sql/special_skill_trees.sql &> /dev/null
 $MYG < ../sql/teleport.sql &> /dev/null
 $MYG < ../sql/topic.sql &> /dev/null
+$MYG < ../sql/territories.sql &> /dev/null
+$MYG < ../sql/territory_registrations.sql &> /dev/null
+$MYG < ../sql/territory_spawnlist.sql &> /dev/null
 $MYG < ../sql/transform_skill_trees.sql &> /dev/null
 $MYG < ../sql/walker_routes.sql &> /dev/null
 $MYG < ../sql/weapon.sql &> /dev/null
