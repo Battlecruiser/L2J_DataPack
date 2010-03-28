@@ -650,171 +650,535 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="2672" levels="1" name="Gludio Human Mercenary">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="10" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 	<skill id="2673" levels="1" name="Gludio Elf Mercenary">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="11" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 	<skill id="2674" levels="1" name="Gludio Dark Elf Mercenary">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="12" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 	<skill id="2675" levels="1" name="Gludio Orc Mercenary">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="13" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 	<skill id="2676" levels="1" name="Gludio Dwarf Mercenary">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="14" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 	<skill id="2677" levels="1" name="Gludio Kamael Mercenary">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="15" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 	<skill id="2678" levels="1" name="Gludio Royal Guard Captain">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="16" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 	<skill id="2679" levels="1" name="Gludio Archer Captain">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="17" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 	<skill id="2680" levels="1" name="Gludio Magic Leader">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="18" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 	<skill id="2681" levels="1" name="Gludio Kamael Guard Captain">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="19" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 	<skill id="2682" levels="1" name="Gludio Knight of Dawn">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="20" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 	<skill id="2683" levels="1" name="Gludio Fortress Captain">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="21" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 	<skill id="2684" levels="1" name="Dion Human Mercenary">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="10" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="82" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 	<skill id="2685" levels="1" name="Dion Elf Mercenary">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="11" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="82" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 	<skill id="2686" levels="1" name="Dion Dark Elf Mercenary">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="12" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="82" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 	<skill id="2687" levels="1" name="Dion Orc Mercenary">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="13" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="82" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 	<skill id="2688" levels="1" name="Dion Dwarf Mercenary">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="14" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="82" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 	<skill id="2689" levels="1" name="Dion Kamael Mercenary">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="15" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="82" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 	<skill id="2690" levels="1" name="Dion Royal Guard Captain">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="16" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="82" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 	<skill id="2691" levels="1" name="Dion Archer Captain">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="17" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="82" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 	<skill id="2692" levels="1" name="Dion Magic Leader">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="18" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="82" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 	<skill id="2693" levels="1" name="Dion Kamael Guard Captain">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="19" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="82" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 	<skill id="2694" levels="1" name="Dion Knight of Dawn">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="20" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="82" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 	<skill id="2695" levels="1" name="Dion Fortress Captain">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="21" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="82" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 	<skill id="2696" levels="1" name="Giran Human Mercenary">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="10" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="83" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 	<skill id="2697" levels="1" name="Giran Elf Mercenary">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="11" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="83" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 	<skill id="2698" levels="1" name="Giran Dark Elf Mercenary">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="12" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="83" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 	<skill id="2699" levels="1" name="Giran Orc Mercenary">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
+		<set name="staticHitTime" val="true" />
+		<set name="transformId" val="13" />
+		<set name="itemConsumeCount" val="1" />
+		<cond msgId="2955">
+			<and>
+				<player siegeZone="147" />
+				<player siegeSide="83" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0" /> <!-- Transformation lasts 30 minutes -->
+		</for>
 	</skill>
 </list>

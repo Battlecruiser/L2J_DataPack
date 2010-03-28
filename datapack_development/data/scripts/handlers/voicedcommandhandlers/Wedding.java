@@ -266,6 +266,11 @@ public class Wedding implements IVoicedCommandHandler
 			activeChar.sendMessage("You are inside a Boss Zone.");
 			return false;
 		}
+		if (activeChar.isCombatFlagEquipped())
+		{
+			activeChar.sendMessage("While you are holding a Combat Flag or Territory Ward you can't go to your love!");
+			return false;
+		}
 		
 		L2PcInstance partner;
 		partner = (L2PcInstance) L2World.getInstance().findObject(activeChar.getPartnerId());
