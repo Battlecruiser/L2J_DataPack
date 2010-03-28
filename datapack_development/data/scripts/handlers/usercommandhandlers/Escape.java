@@ -81,7 +81,7 @@ public class Escape implements IUserCommandHandler
 		}
 
 		if (activeChar.isCastingNow() || activeChar.isMovementDisabled() || activeChar.isMuted() 
-				|| activeChar.isAlikeDead() || activeChar.isInOlympiadMode() || activeChar.inObserverMode())
+				|| activeChar.isAlikeDead() || activeChar.isInOlympiadMode() || activeChar.inObserverMode() || activeChar.isCombatFlagEquipped())
 			return false;
 		activeChar.forceIsCasting(GameTimeController.getGameTicks() + unstuckTimer / GameTimeController.MILLIS_IN_TICK);
 
