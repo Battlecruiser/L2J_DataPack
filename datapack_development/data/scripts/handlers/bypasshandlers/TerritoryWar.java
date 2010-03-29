@@ -83,8 +83,10 @@ public class TerritoryWar implements IBypassHandler
 				if (st.countTokens() < 1)
 					return false;
 
+				String itemId = st.nextToken();
 				NpcHtmlMessage html = new NpcHtmlMessage(mercman.getObjectId());
 				html.setFile(activeChar.getHtmlPrefix(), "data/html/mercmanager/" + st.nextToken());
+				html.replace("%itemId%", itemId);
 				html.replace("%noblessBadge%", String.valueOf(TerritoryWarManager.MINTWBADGEFORNOBLESS));
 				html.replace("%striderBadge%", String.valueOf(TerritoryWarManager.MINTWBADGEFORSTRIDERS));
 				html.replace("%gstriderBadge%", String.valueOf(TerritoryWarManager.MINTWBADGEFORBIGSTRIDER));
