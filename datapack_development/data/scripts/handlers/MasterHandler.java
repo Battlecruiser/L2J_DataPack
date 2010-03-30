@@ -148,6 +148,7 @@ public class MasterHandler
 		BypassHandler.getInstance().registerBypassHandler(new CPRecovery());
 		BypassHandler.getInstance().registerBypassHandler(new DrawHenna());
 		BypassHandler.getInstance().registerBypassHandler(new FishSkillList());
+		BypassHandler.getInstance().registerBypassHandler(new FortSiege());
 		BypassHandler.getInstance().registerBypassHandler(new Link());
 		BypassHandler.getInstance().registerBypassHandler(new Loto());
 		BypassHandler.getInstance().registerBypassHandler(new Multisell());
