@@ -39586,7 +39586,9 @@ INSERT INTO spawnlist VALUES
 (null,'Oren Area',1,32568,85839,37536,-2480,0,0,0,60,0,0),
 (null,'Oren Area',1,32569,82717,47060,-3232,0,0,33103,60,0,0),
 (null,'Enchanted Valley',1,32570,124694,62730,-3624,0,0,49152,60,0,0),
-(null,'Kamael Village',1,32469,-111519,41742,2175,0,0,31385,60,0,0);
+(null,'Kamael Village',1,32469,-111519,41742,2175,0,0,31385,60,0,0),
+(null,'Dwarven Village',1,30993,115075,-178133,-880,0,0,1000,60,0,0);
+
 
 
 -- Gracia Epilogue Mithril Mines
