@@ -1275,7 +1275,7 @@ INSERT INTO `armor` VALUES
 (10124,'Ring of Devotion','','rfinger,lfinger','false','none',150,'gold','d',0,-1,-1,0,16,0,0,0,'false','false','true','false','true','0-0','0-0;'),
 (10126,'Dynasty Leather Armor','Force Master','chest','true','light',4180,'wood','s80',0,-1,-1,170,0,0,18298000,878,'true','true','true','true','true','0-0','0-0;'),
 (10127,'Dynasty Leather Armor','Weapon Master','chest','true','light',4180,'wood','s80',0,-1,-1,170,0,0,18298000,878,'true','true','true','true','true','0-0','0-0;'),
-(10139,'Agathion Bracelet','','lbracelet','false','none',150,'wood','none',0,700,-1,0,0,0,0,0,'false','false','true','false','true','0-0','3267-1;3369-1;5414-1;'),
+(10139,'Agathion Bracelet','','lbracelet','false','none',150,'wood','none',0,700,-1,0,0,0,0,0,'false','false','true','false','true','0-0','3267-1;3269-1;5414-1;'),
 (10140,'Blessed Ring of Escape','','rfinger,lfinger','false','none',150,'wood','none',0,250,-1,0,24,0,0,0,'true','true','true','true','true','0-0','3408-1;'),
 (10141,'Grey Talisman - Yeti Transform','','talisman','false','none',150,'wood','none',0,70,-1,0,0,0,0,0,'false','false','true','false','true','0-0','3335-1;'),
 (10142,'Grey Talisman - Buffalo Transform','','talisman','false','none',150,'wood','none',0,70,-1,0,0,0,0,0,'false','false','true','false','true','0-0','3336-1;'),
