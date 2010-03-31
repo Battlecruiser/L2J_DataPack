@@ -715,7 +715,7 @@
 		<table name="#enchantMagicLvl"> 78 79 79 80 80 81 81 82 82 83 83 84 84 85 85 </table>
 		<table name="#ench1Power"> 6502 6535 6568 6601 6634 6667 6700 6733 6766 6799 6833 6866 6899 6932 6965 </table>
 		<table name="#ench2mpConsume"> 77 74 72 69 67 64 61 59 56 53 51 48 45 43 40 </table>
-		<table name="#ench3elementPower"> 3 6 10 13 16 20 23 26 30 33 36 40 43 46 50 </table>
+		<table name="#ench3elementPower"> 3 6 10 13 16 20 23 26 30 33 36 40 43 46 46 </table>
 		<table name="#ench4Duel"> 6157 6253 6350 6446 6543 6639 6736 6832 6929 7025 7122 7218 7315 7411 7508 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -767,20 +767,20 @@
 		<set name="target" val="TARGET_PARTY" />
 		<enchant3 name="reuseDelay" val="#ench3Reuse" />
 		<for>
-			<effect name="Buff" time="15" val="0" stackOrder="1" stackType="pd_up_special">
+			<effect name="Buff" time="15" val="0" stackOrder="1" stackType="pd_up_special_party">
 				<add order="0x40" stat="pDef" val="3600" />
 				<add order="0x40" stat="mDef" val="2700" />
 			</effect>
 			<!-- Needs Core Support: absorbs most of the damage they (Party Members) will receive for the duration of the spell -->
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="15" val="0" stackOrder="1" stackType="pd_up_special">
+			<effect name="Buff" time="15" val="0" stackOrder="1" stackType="pd_up_special_party">
 				<add order="0x40" stat="pDef" val="#ench1pDef" />
 				<add order="0x40" stat="mDef" val="#ench1mDef" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="Buff" time="#ench2Time" val="0" stackOrder="1" stackType="pd_up_special">
+			<effect name="Buff" time="#ench2Time" val="0" stackOrder="1" stackType="pd_up_special_party">
 				<add order="0x40" stat="pDef" val="3600" />
 				<add order="0x40" stat="mDef" val="2700" />
 			</effect>
