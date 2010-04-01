@@ -315,8 +315,9 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 	</skill>
-	<skill id="625" levels="1" name="Soul Gathering">
-		<!-- CT2.2 retail confirmed -->
+	<skill id="625" levels="1" name="Soul Gathering" enchantGroup1="1" enchantGroup2="1">
+		<table name="#ench1hpConsume"> 196 193 190 186 183 180 176 173 170 166 163 160 156 153 150 146 143 140 136 133 130 126 123 120 116 113 110 106 103 100 </table>
+		<table name="#ench2reuseDelay"> 1770000 1710000 1710000 1680000 1650000 1620000 1590000 1560000 1530000 1500000 1470000 1440000 1380000 1350000 1320000 1290000 1260000 1230000 1200000 1170000 1140000 1080000 1080000 1050000 1020000 990000 960000 930000 900000 870000 </table>
 		<set name="hpConsume" val="200" />
 		<set name="hitTime" val="1500" />
 		<set name="itemConsumeId" val="3031" />
@@ -327,10 +328,12 @@
 		<set name="skillType" val="CHARGESOUL" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="num_souls" val="40" />
+		<enchant1 name="hpConsume" val="#ench1hpConsume" />
+		<enchant2 name="reuseDelay" val="#ench2reuseDelay" />
 	</skill>
 	<skill id="626" levels="4" name="Critical Sense" enchantGroup1="1" enchantGroup2="1">
 		<table name="#ench1rCrit"> 0.251 0.253 0.255 0.256 0.258 0.260 0.261 0.263 0.265 0.266 0.268 0.270 0.271 0.273 0.275 0.276 0.278 0.280 0.281 0.283 0.285 0.286 0.288 0.290 0.291 0.293 0.295 0.296 0.298 0.300 </table>
-		<table name="#ench2cAtk"> 430 431 432 434 435 436 438 439 440 441 442 443 444 445 446 447 448 449 450 452 453 454 456 457 459 460 461 463 464 466 467 468 469 470 </table>
+		<table name="#ench2cAtk"> 322 327 331 336 341 346 350 355 360 365 369 374 379 384 388 393 398 403 407 412 417 422 426 431 436 441 445 450 455 460 </table>
 		<table name="#rCrit"> 0.1 0.15 0.2 0.25 </table>
 		<table name="#cAtk"> 111 177 253 317 </table>
 		<set name="target" val="TARGET_SELF" />
