@@ -2396,41 +2396,89 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1392" levels="3" name="Holy Resistance">
+	<skill id="1392" levels="3" name="Holy Resistance" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
+		<table name="#ench1holyRes"> 34 38 42 46 50 54 58 62 66 70 74 78 82 86 90 94 98 102 106 110 114 118 122 126 130 134 138 142 146 150 </table>
+		<table name="#ench2mpConsume"> 68 67 65 64 63 62 60 59 58 57 55 54 53 52 50 49 49 48 47 45 44 43 42 40 39 38 37 35 34 33 </table>
+		<table name="#enchholyRes"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 </table>
+		<table name="#ench3time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
 		<table name="#mpConsume"> 54 62 69 </table>
 		<table name="#holyRes"> 15 23 30 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="4000" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="mpConsume" val="#ench2mpConsume" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<effect name="Buff" time="1200" val="0" stackOrder="1" stackType="holyAtr">
 				<add order="0x40" stat="holyRes" val="#holyRes" />
 			</effect>
 		</for>
+		<enchant1for>
+			<effect name="Buff" time="1200" val="0" stackOrder="1" stackType="holyAtr">
+				<add order="0x40" stat="holyRes" val="#ench1holyRes" />
+			</effect>
+		</enchant1for>
+		<enchant2for>
+			<effect name="Buff" time="1200" val="0" stackOrder="1" stackType="holyAtr">
+				<add order="0x40" stat="holyRes" val="#enchholyRes" />
+			</effect>
+		</enchant2for>
+		<enchant3for>
+			<effect name="Buff" time="#ench3time" val="0" stackOrder="1" stackType="holyAtr">
+				<add order="0x40" stat="holyRes" val="#enchholyRes" />
+			</effect>
+		</enchant3for>
 	</skill>
-	<skill id="1393" levels="3" name="Unholy Resistance">
+	<skill id="1393" levels="3" name="Unholy Resistance" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
+		<table name="#ench1darkRes"> 34 38 42 46 50 54 58 62 66 70 74 78 82 86 90 94 98 102 106 110 114 118 122 126 130 134 138 142 146 150 </table>
+		<table name="#ench2mpConsume"> 68 67 65 64 63 62 60 59 58 57 55 54 53 52 50 49 49 48 47 45 44 43 42 40 39 38 37 35 34 33 </table>
+		<table name="#enchdarkRes"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 </table>
+		<table name="#ench3time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
 		<table name="#mpConsume"> 54 62 69 </table>
 		<table name="#darkRes"> 15 23 30 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="4000" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="true" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="mpConsume" val="#ench2mpConsume" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<effect name="Buff" time="1200" val="0" stackOrder="1" stackType="DarkAtr">
 				<add order="0x40" stat="darkRes" val="#darkRes" />
 			</effect>
 		</for>
+		<enchant1for>
+			<effect name="Buff" time="1200" val="0" stackOrder="1" stackType="DarkAtr">
+				<add order="0x40" stat="darkRes" val="#ench1darkRes" />
+			</effect>
+		</enchant1for>
+		<enchant2for>
+			<effect name="Buff" time="1200" val="0" stackOrder="1" stackType="DarkAtr">
+				<add order="0x40" stat="darkRes" val="#enchdarkRes" />
+			</effect>
+		</enchant2for>
+		<enchant3for>
+			<effect name="Buff" time="#ench3time" val="0" stackOrder="1" stackType="DarkAtr">
+				<add order="0x40" stat="darkRes" val="#enchdarkRes" />
+			</effect>
+		</enchant3for>
 	</skill>
 	<skill id="1394" levels="10" name="Trance" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
