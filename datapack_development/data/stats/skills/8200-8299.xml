@@ -635,14 +635,15 @@
 		<set name="power" val="549" />
 	</skill>
 	<skill id="8238" levels="1" name="Shalin Strike">
-		<set name="mpConsume" val="74" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="hitTime" val="2328" />
-		<set name="reuseDelay" val="20000" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
+		<set name="mpConsume" val="74"/>
+		<set name="power" val="1500"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="reuseDelay" val="13000"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="2500"/>
+		<set name="castRange" val="40"/>
+		<set name="effectRange" val="400"/>
 	</skill>
 	<skill id="8239" levels="1" name="Critical Up">
 		<set name="mpConsume" val="74" />
@@ -665,22 +666,29 @@
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="8242" levels="1" name="Ice Ball">
-		<set name="mpConsume" val="61" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="hitTime" val="3000" />
-		<set name="castRange" val="900" />
-		<set name="effectRange" val="1400" />
+		<set name="mpConsume" val="61"/>
+		<set name="power" val="100"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="element" val="3"/>
+		<set name="reuseDelay" val="8000"/>
+		<set name="hitTime" val="3100"/>
+		<set name="coolTime" val="200"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="isMagic" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="8243" levels="1" name="Chill Strike">
-		<set name="mpConsume" val="61" />
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="hitTime" val="850" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
+		<set name="mpConsume" val="61"/>
+		<set name="power" val="100"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="element" val="3"/>
+		<set name="reuseDelay" val="8000"/>
+		<set name="hitTime" val="850"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="isMagic" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="8244" levels="1" name="Transform Gatekeeper">
 		<set name="target" val="TARGET_SELF" />
