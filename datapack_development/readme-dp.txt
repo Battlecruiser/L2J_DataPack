@@ -70,7 +70,7 @@ IMPORTANT: 	There may also be changes altering table structures, if you need  su
 an update after some certain changeset, you should run the relevant SQL sequence from
 /sql/updates/. Database_installer tool will provide a way for you to execute them all.
 
--the l2j-datapack team
+-the L2j-DataPack team
 
 L2JDP, Copyright (C) 2005-2010 L2JDP comes with ABSOLUTELY NO WARRANTY. This is 
 free software, and you are welcome to redistribute it under certain conditions.
