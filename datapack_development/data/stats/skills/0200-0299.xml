@@ -468,15 +468,17 @@
 			<add order="0x40" stat="regMp" val="#ench1regMp" />
 		</enchant1for>
 	</skill>
-	<skill id="230" levels="2" name="Sprint" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+	<skill id="230" levels="2" name="Sprint" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<table name="#ench1time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
 		<table name="#ench2MpConsume"> 17 17 17 16 16 16 15 15 15 14 14 14 13 13 13 12 12 12 11 11 11 11 10 10 9 8 8 8 7 7 </table>
 		<table name="#ench2MpConsume_Init"> 5 5 5 5 5 5 5 5 5 5 4 4 4 4 4 4 4 4 4 4 3 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#ench3rEvas"> 1 1 1 1 1 1 1 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 4 4 4 4 4 4 4 5 </table>
+		<table name="#ench4Vuln"> 0.99 0.98 0.97 0.96 0.95 0.94 0.93 0.92 0.91 0.9 0.89 0.88 0.87 0.86 0.85 0.84 0.83 0.82 0.81 0.8 0.79 0.78 0.77 0.76 0.75 0.74 0.73 0.72 0.71 0.7 </table>
 		<table name="#mpInitialConsume"> 3 5 </table>
 		<table name="#mpConsume"> 11 19 </table>
 		<table name="#runSpd"> 22 33 </table>
@@ -508,6 +510,12 @@
 				<add order="0x40" stat="rEvas" val="#ench3rEvas" />
 			</effect>
 		</enchant3for>
+		<enchant4for>
+			<effect name="Buff" time="1200" val="0" stackOrder="33" stackType="speed_up">
+				<add order="0x40" stat="runSpd" val="33" />
+				<mul order="0x30" stat="movementVuln" val="#ench4Vuln" />
+			</effect>
+		</enchant4for>
 	</skill>
 	<skill id="231" levels="50" name="Heavy Armor Mastery" enchantGroup1="1" enchantGroup2="1">
 		<table name="#pDef"> 1.9 3.3 4.8 6.4 8.1 8.9 9.8 11.7 12.7 13.7 15.8 16.9 18 20.4 21.6 22.8 24.1 25.4 26.7 28 29.4 30.8 32.2 33.7 35.2 36.7 38.2 39.8 41.4 43 44.6 46.3 48 49.7 51.4 53.2 55 56.7 58.6 60.4 62.2 64.1 66 67.8 69.7 71.6 73.6 75.5 77.4 79.3 </table>
@@ -1705,7 +1713,7 @@
 			<effect name="Stun" time="9" val="0" effectPower="#ench1effectPower" effectType="STUN" stackOrder="1" stackType="Stun" />
 		</enchant1for>
 	</skill>
-	<skill id="261" levels="22" name="Triple Sonic Slash" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2">
+	<skill id="261" levels="22" name="Triple Sonic Slash" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#mpConsume"> 103 105 108 110 113 115 118 120 121 123 125 128 130 132 134 136 139 141 143 145 146 148 </table>
 		<table name="#ench2MpConsume"> 147 145 142 140 137 135 133 130 128 125 123 120 118 115 113 111 108 106 103 101 98 96 94 91 89 86 84 81 79 76 </table>
@@ -1713,6 +1721,7 @@
 		<table name="#power"> 1948 2042 2138 2236 2337 2439 2544 2651 2760 2870 2982 3095 3210 3325 3442 3559 3676 3794 3911 4029 4146 4262 </table>
 		<table name="#ench1Power"> 4299 4338 4376 4415 4453 4491 4530 4568 4607 4645 4683 4722 4760 4799 4837 4875 4914 4952 4991 5029 5067 5106 5144 5183 5221 5259 5298 5336 5375 5413 </table>
 		<table name="#enchElementPower"> 1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50 </table>
+		<table name="#enchDuel"> 4336 4410 4485 4559 4634 4708 4783 4857 4932 5006 5081 5155 5230 5304 5379 5453 5527 5602 5676 5751 5825 5900 5974 6049 6123 6198 6272 6347 6347 6496 </table>
 		<set name="baseCritRate" val="15" />
 		<set name="weaponsAllowed" val="512" /> <!-- Dual Sword -->
 		<set name="mpConsume" val="#mpConsume" />
@@ -1746,21 +1755,25 @@
 		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="element" val="3" />
 		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant7 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant7 name="pvpPower" val="#enchDuel" />
 		<cond msgId="113" addName="1">
 			<player Charges="4" /> <!-- Need to recharge 4th stage of Sword Energy. -->
 		</cond>
 	</skill>
-	<skill id="262" levels="37" name="Holy Blessing" enchantGroup1="2" enchantGroup2="2">
+	<skill id="262" levels="37" name="Holy Blessing" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<table name="#ench2MpConsume"> 236 233 232 230 227 225 223 221 218 217 215 212 211 208 206 205 202 200 198 196 193 192 190 187 186 183 181 180 177 175 </table>
-		<table name="#mpInitialConsume"> 23 24 25 25 26 26 27 28 29 30 31 32 32 32 33 34 35 36 36 37 38 39 39 39 40 41 42 42 43 44 45 45 46 46 47 48 48 </table>
-		<table name="#mpConsume"> 92 95 97 97 101 104 107 111 114 118 121 125 127 127 131 134 138 141 144 148 151 154 156 156 159 162 165 168 171 174 177 179 182 184 186 189 191 </table>
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
+		<table name="#mpConsume"> 115 119 122 122 127 130 134 139 143 148 152 157 159 159 164 168 173 177 180 185 189 193 195 195 199 203 207 210 214 218 222 224 228 230 233 237 239 </table>
 		<table name="#magicLvl"> 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#power"> 236 245 254 262 271 281 290 299 308 318 327 337 346 356 365 375 384 393 403 412 421 430 439 448 457 466 474 482 490 498 506 513 520 527 534 540 546 </table>
-		<table name="#ench1Power"> 550 553 556 560 563 566 570 573 576 579 583 586 589 593 596 599 603 606 609 613 616 619 622 626 629 632 636 639 642 646 </table>
 		<table name="#aggro"> 337 349 362 375 388 401 414 427 440 454 467 481 494 508 521 535 548 562 575 588 602 615 627 640 653 665 677 689 700 711 722 733 743 753 763 772 780 </table>
+		<table name="#ench1Power"> 583 619 656 692 729 765 802 838 875 911 947 984 1020 1057 1093 1130 1166 1203 1239 1276 1312 1348 1385 1421 1458 1494 1531 1567 1604 1640 </table>
+		<table name="#ench2MpConsume"> 233 230 226 222 218 215 211 206 202 198 195 191 187 183 178 175 171 167 163 160 156 151 147 143 140 136 132 127 123 120 </table>
+		<table name="#ench34MpConsume"> 236 233 231 228 226 223 221 218 216 215 212 210 207 205 202 200 197 195 192 190 188 186 183 181 178 176 173 171 168 166 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
@@ -1775,8 +1788,18 @@
 		<set name="aggroPoints" val="#aggro" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
+		<enchant3 name="mpConsume" val="#ench34MpConsume" />
+		<enchant4 name="mpConsume" val="#ench34MpConsume" />
+		<enchant3 name="negateStats" val="POISON" />
+		<enchant3 name="negateLvl" val="9" />
+		<enchant3 name="effectType" val="NEGATE" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant4 name="negateStats" val="BLEED" />
+		<enchant4 name="negateLvl" val="9" />
+		<enchant4 name="effectType" val="NEGATE" />
+		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 	</skill>
-	<skill id="263" levels="37" name="Deadly Blow" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2">
+	<skill id="263" levels="37" name="Deadly Blow" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -1784,13 +1807,15 @@
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant7 name="magicLvl" val="#enchantMagicLvl" />
 		<table name="#ench2MpConsume"> 67 66 64 63 62 61 60 58 57 56 55 54 52 51 50 49 48 46 45 44 43 42 40 39 38 37 36 34 33 32 </table>
 		<table name="#mpConsume"> 33 34 35 35 36 37 38 39 40 41 42 43 45 45 46 47 48 49 50 52 53 54 55 55 56 57 58 59 60 61 62 63 64 65 66 67 68 </table>
 		<table name="#magicLvl"> 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#power"> 1107 1176 1249 1325 1405 1488 1574 1664 1757 1853 1953 2057 2164 2274 2388 2505 2625 2748 2875 3004 3136 3271 3408 3548 3690 3834 3980 4127 4275 4425 4575 4726 4878 5029 5180 5330 5479 </table>
 		<table name="#ench1Power"> 5536 5593 5650 5708 5765 5822 5879 5936 5993 6050 6107 6164 6222 6279 6336 6396 6450 6507 6564 6621 6678 6736 6793 6850 6907 6964 7021 7078 7135 7192 </table>
 		<table name="#ench2Power"> 5504 5529 5554 5579 5604 5629 5654 5680 5705 5730 5755 5780 5805 5830 5855 5880 5905 5930 5955 5980 6005 6030 6055 6080 6105 6130 6156 6180 6206 6231 </table>
-		<table name="#enchElementPower"> 1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50 </table>
+		<table name="#enchDuel"> 5608 5737 5866 5995 6124 6253 6382 6511 6640 6769 6898 7027 7157 7286 7415 7544 7673 7802 7931 8060 8189 8318 8447 8576 8705 8834 8963 9092 9221 9350 </table>
+		<table name="#enchElementPower"> 2 4 5 7 9 10 12 14 15 17 18 20 22 23 25 27 28 30 32 33 35 36 38 40 41 43 45 46 48 50 </table>
 		<set name="weaponsAllowed" val="262160" /> <!-- Dagger/Dual Daggers -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1822,6 +1847,8 @@
 		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="element" val="3" />
 		<enchant6 name="power" val="#ench2Power" />
+		<enchant7 name="power" val="#ench2Power" />
+		<enchant7 name="pvpPower" val="#enchDuel" />
 	</skill>
 	<skill id="264" levels="1" name="Song of Earth" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -2250,11 +2277,13 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="278" levels="6" name="Summon Viper Cubic">
+	<skill id="278" levels="6" name="Summon Viper Cubic" enchantGroup1="2">
+		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#mpInitialConsume"> 9 10 11 12 13 14 </table>
 		<table name="#mpConsume"> 35 40 44 48 51 53 </table>
 		<table name="#itemConsumeCount"> 3 4 5 6 6 6 </table>
 		<table name="#mAtk"> 531 773 1026 1264 1530 1822 </table>
+		<table name="#ench2mAtk"> 1850 1900 1950 2000 2050 2100 2150 2200 2250 2300 2350 2400 2450 2500 2550 2600 2650 2700 2750 2800 2850 2900 2950 3000 3050 3100 3150 3200 3250 3300 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="itemConsumeId" val="1458" />
@@ -2272,11 +2301,14 @@
 		<set name="activationchance" val="55" /> <!-- Guess -->
 		<set name="summonTotalLifeTime" val="900000" />
 		<set name="isCubic" val="true" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant1 name="power" val="#ench2mAtk" />
 	</skill>
-	<skill id="279" levels="5" name="Lightning Strike" enchantGroup1="2" enchantGroup2="2">
+	<skill id="279" levels="5" name="Lightning Strike" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#enchantMpConsume"> 100 98 97 96 95 93 92 90 88 87 86 85 83 81 80 78 77 76 75 73 71 70 68 67 66 65 62 61 60 58 </table>
 		<table name="#enchantPower"> 109 109 110 111 111 112 113 113 114 115 115 116 116 117 118 118 119 120 120 121 122 122 123 124 124 125 125 126 127 127 </table>
+		<table name="#ench3Power"> 40 41 42 42 43 44 44 45 46 46 47 48 48 49 50 50 51 52 52 53 54 54 55 56 56 57 58 58 59 60 </table>
 		<table name="#magicLvl"> 58 62 66 70 74 </table>
 		<table name="#mpConsume"> 64 69 73 78 82 </table>
 		<table name="#mpInitialConsume"> 16 18 20 20 21 </table>
@@ -2300,6 +2332,7 @@
 		<enchant1 name="power" val="#enchantPower" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#enchantMpConsume" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<effect name="ChanceSkillTrigger" time="15" val="0" triggeredId="6090" triggeredLevel="1" chanceType="ON_EXIT" effectPower="40" effectType="DEBUFF">
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
@@ -2307,6 +2340,13 @@
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />
 			</effect>
 		</for>
+		<enchant3for>
+			<effect name="ChanceSkillTrigger" time="15" val="0" triggeredId="6090" triggeredLevel="1" chanceType="ON_EXIT" effectPower="#ench3Power" effectType="DEBUFF">
+				<mul order="0x30" stat="pAtkSpd" val="0.5" />
+				<mul order="0x30" stat="runSpd" val="0.5" />
+				<mul order="0x30" stat="mAtkSpd" val="0.5" />
+			</effect>
+		</enchant3for>
 	</skill>
 	<skill id="280" levels="37" name="Burning Fist" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -2342,7 +2382,7 @@
 		<enchant3 name="element" val="0" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 	</skill>
-	<skill id="281" levels="37" name="Soul Breaker" enchantGroup1="2" enchantGroup2="2">
+	<skill id="281" levels="37" name="Soul Breaker" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#mpConsume"> 35 36 37 37 38 39 40 42 43 44 45 46 47 48 49 50 51 52 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 </table>
 		<table name="#magicLvl"> 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
@@ -2352,6 +2392,7 @@
 		<table name="#ench1effectPower"> 51 52 53 54 55 56 57 58 59 60 61 63 64 65 66 67 68 69 70 71 72 73 74 76 77 78 79 80 81 82 </table>
 		<table name="#ench2MpConsume"> 70 69 68 67 66 64 63 62 61 60 58 57 56 55 54 53 51 50 49 48 47 45 44 43 42 41 40 38 37 36 </table>
 		<table name="#ench2power"> 2432 2454 2476 2497 2519 2541 2563 2584 2606 2628 2650 2671 2693 2715 2737 2758 2780 2802 2823 2845 2867 2889 2910 2932 2954 2976 2997 3019 3041 3063 </table>
+		<table name="#ench34pmDef"> 0.99 0.99 0.99 0.98 0.98 0.98 0.97 0.97 0.97 0.96 0.96 0.96 0.96 0.95 0.95 0.95 0.94 0.94 0.94 0.93 0.93 0.93 0.93 0.92 0.92 0.92 0.91 0.91 0.91 0.9 </table>
 		<set name="baseCritRate" val="15" />
 		<set name="weaponsAllowed" val="1024" /> <!-- Dual Fist -->
 		<set name="mpConsume" val="#mpConsume" />
@@ -2373,6 +2414,8 @@
 		<set name="effectRange" val="400" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant2 name="power" val="#ench2power" />
 		<for>
@@ -2381,6 +2424,16 @@
 		<enchant1for>
 			<effect name="Stun" time="9" val="0" effectPower="#ench1effectPower" effectType="STUN" stackOrder="1" stackType="Stun" />
 		</enchant1for>
+		 <enchant3for>
+			<effect name="Stun" time="9" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="Stun">
+				<mul order="0x30" stat="pDef" val="#ench34pmDef" />
+			</effect>
+		</enchant3for>
+		<enchant4for>
+			<effect name="Stun" time="9" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="Stun">
+				<mul order="0x30" stat="mDef" val="#ench34pmDef" />
+			</effect>
+		</enchant4for>
 	</skill>
 	<skill id="282" levels="1" name="Puma Spirit Totem">
 		<set name="magicLvl" val="40" />
@@ -2432,7 +2485,7 @@
 		<table name="#ench1expPenalty"> 0.14 0.13 0.12 0.11 0.1 0.09 0.08 0.07 0.06 0.05 0.04 0.03 0.02 0.01 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </table>
 		<enchant1 name="expPenalty" val="#ench1expPenalty" />
 	</skill>
-	<skill id="284" levels="40" name="Hurricane Assault" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2">
+	<skill id="284" levels="40" name="Hurricane Assault" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#ench2MpConsume"> 104 103 102 102 101 101 100 99 99 98 97 97 96 95 95 94 93 93 92 91 91 90 90 89 88 88 87 86 86 85 </table>
 		<table name="#mpConsume"> 44 45 47 50 52 54 54 55 57 59 60 62 64 66 67 69 69 71 73 75 76 78 80 82 83 85 85 87 89 90 92 93 95 96 98 99 101 102 104 105 </table>
@@ -2440,6 +2493,7 @@
 		<table name="#power"> 501 535 570 607 646 729 773 820 868 918 971 1025 1081 1140 1200 1262 1327 1393 1461 1531 1603 1677 1753 1830 1908 1988 2070 2153 2237 2322 2408 2494 2581 2669 2757 2846 2934 3022 3109 3196 </table>
 		<table name="#ench1Power"> 3225 3254 3283 3312 3340 3369 3398 3427 3456 3484 3513 3542 3571 3600 3628 3657 3686 3715 3744 3772 3801 3830 3859 3888 3916 3945 3974 4003 4032 4061 </table>
 		<table name="#enchElementPower"> 1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50 </table>
+		<table name="#enchDuel"> 3251 3307 3363 3419 3475 3531 3587 3642 3698 3754 3810 3866 3922 3978 4034 4089 4145 4201 4257 4313 4369 4425 4480 4536 4592 4648 4704 4760 4816 4872 </table>
 		<set name="baseCritRate" val="15" />
 		<set name="weaponsAllowed" val="1024" /> <!-- Dual Fist -->
 		<set name="mpConsume" val="#mpConsume" />
@@ -2473,6 +2527,8 @@
 		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="element" val="3" />
 		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant7 name="pvpPower" val="#enchDuel" />
+		<enchant7 name="magicLvl" val="#enchantMagicLvl" />
 		<cond msgId="113" addName="1">
 			<player Charges="2" /> <!-- Requires a hand-to-hand weapon recharged to its 2nd energy stage. -->
 		</cond>
@@ -2563,10 +2619,11 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="289" levels="15" name="Life Leech" enchantGroup1="2" enchantGroup2="2">
+	<skill id="289" levels="15" name="Life Leech" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<table name="#mpInitialConsume"> 10 10 12 12 12 14 14 16 15 16 17 17 17 17 19 </table>
 		<table name="#mpConsume"> 37 39 42 46 50 51 55 57 60 62 63 66 68 70 70 </table>
 		<table name="#magicLvl"> 40 43 46 49 52 55 58 60 62 64 66 68 70 72 74 </table>
@@ -2574,6 +2631,7 @@
 		<table name="#ench1power"> 55 55 55 56 56 56 57 57 57 58 58 58 58 59 59 59 60 60 60 61 61 61 62 62 62 63 63 63 64 64 </table>
 		<table name="#ench2mpConsume"> 69 69 68 68 67 67 66 65 65 64 64 63 63 62 61 61 69 69 59 58 58 57 57 56 55 55 54 53 52 51 </table>
 		<table name="#ench2mpConsume_Init"> 18 18 17 17 17 17 16 16 16 15 15 14 14 13 13 13 12 12 12 11 11 10 10 10 9 9 9 8 8 8 </table>
+		<table name="#ench3absorbPart"> 0.8 0.81 0.82 0.82 0.83 0.84 0.84 0.85 0.86 0.86 0.87 0.88 0.88 0.89 0.9 0.9 0.91 0.92 0.92 0.93 0.94 0.94 0.95 0.96 0.96 0.97 0.98 0.98 0.99 1 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -2590,6 +2648,7 @@
 		<enchant1 name="power" val="#ench1power" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpConsume_Init" />
+		<enchant3 name="absorbPart" val="#ench3absorbPart" />
 	</skill>
 	<skill id="290" levels="14" name="Final Frenzy" enchantGroup1="1">
 		<table name="#final"> 32.9 39.4 46.6 54.6 63.3 72.7 79.3 86.1 93.1 100.2 107.5 114.8 122.1 129.3 </table>
