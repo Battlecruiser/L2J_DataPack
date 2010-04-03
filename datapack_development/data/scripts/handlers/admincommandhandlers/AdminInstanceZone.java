@@ -9,7 +9,7 @@ import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.util.GMAudit;
-import com.l2jserver.gameserver.util.StringUtil;
+import com.l2jserver.util.StringUtil;
 
 
 public class AdminInstanceZone implements IAdminCommandHandler
