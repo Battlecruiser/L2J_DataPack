@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2StaticObjectInstance;
 import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.StaticObject;
-import com.l2jserver.gameserver.util.StringUtil;
+import com.l2jserver.util.StringUtil;
 
 public class L2StaticObjectInstanceActionShift implements IActionHandler
 {
