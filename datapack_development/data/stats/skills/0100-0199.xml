@@ -424,16 +424,15 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="115" levels="17" name="Power Break" enchantGroup1="1" enchantGroup2="1">
+	<skill id="115" levels="17" name="Power Break" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
-		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<table name="#mpInitialConsume"> 3 3 4 4 5 5 5 5 6 6 6 6 7 7 7 7 7 </table>
 		<table name="#mpConsume"> 11 14 14 15 17 18 19 20 22 22 23 24 25 26 26 27 28 </table>
 		<table name="#magicLvl"> 32 36 40 43 46 49 52 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#pAtk"> 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#ench1Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
 		<table name="#ench2time"> 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75 78 81 84 87 90 93 96 99 102 105 108 111 114 117 120 </table>
+		<table name="#ench3Attack"> 191 196 201 206 211 216 221 227 232 237 242 247 252 257 263 268 273 278 283 288 293 298 304 309 314 319 324 329 334 340 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -448,7 +447,12 @@
 		<set name="castRange" val="600" />
 		<set name="isDebuff" val="true" />
 		<set name="effectRange" val="1100" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant3 name="skillType" val="PDAM" />
+		<enchant3 name="power" val="#ench3Attack" />
 		<for>
 			<effect name="Debuff" time="30" val="0" stackOrder="#pAtk" stackType="pAtkDown">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
@@ -459,6 +463,11 @@
 				<mul order="0x30" stat="pAtk" val="0.77" />
 			</effect>
 		</enchant2for>
+		<enchant3for>
+			<effect name="Debuff" time="30" val="0" stackOrder="0.77" stackType="pAtkDown" effectPower="80" effectType="DEBUFF">
+				<mul order="0x30" stat="pAtk" val="0.77" />
+			</effect>
+		</enchant3for>
 	</skill>
 	<skill id="116" levels="14" name="Howl" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -560,15 +569,14 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="122" levels="15" name="Hex" enchantGroup1="1" enchantGroup2="1">
+	<skill id="122" levels="15" name="Hex" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
-		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<table name="#ench1Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 94 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
 		<table name="#ench2time"> 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75 78 81 84 87 90 93 96 99 102 105 108 111 114 117 120 </table>
+		<table name="#ench3Attack"> 191 196 201 206 211 216 221 227 232 237 242 247 252 257 263 268 273 278 283 288 293 298 304 309 314 319 324 329 334 340 </table>
 		<table name="#magicLvl"> 40 43 46 49 52 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 18 19 22 23 24 25 28 28 29 30 32 33 33 34 35 </table>
 		<set name="mpConsume" val="#mpConsume" />
-		<table name="#ench1Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 94 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
@@ -581,7 +589,12 @@
 		<set name="isDebuff" val="true" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant3 name="skillType" val="PDAM" />
+		<enchant3 name="power" val="#ench3Attack" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<effect name="Debuff" time="30" val="0" stackOrder="0.77" stackType="pDefDown">
 				<mul order="0x30" stat="pDef" val="0.77" />
@@ -592,6 +605,11 @@
 				<mul order="0x30" stat="pDef" val="0.77" />
 			</effect>
 		</enchant2for>
+		<enchant3for>
+			<effect name="Debuff" time="30" val="0" stackOrder="0.77" stackType="pDefDown" effectPower="80" effectType="DEBUFF">
+				<mul order="0x30" stat="pDef" val="0.77" />
+			</effect>
+		</enchant3for>
 	</skill>
 	<skill id="123" levels="3" name="Spirit Barrier" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
