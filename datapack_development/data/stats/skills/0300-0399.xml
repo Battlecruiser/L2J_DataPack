@@ -1877,9 +1877,6 @@
 		<table name="#ench2hpConsume"> 491 476 461 446 430 415 400 385 369 354 339 324 308 293 278 </table>
 		<table name="#ench2mpConsume"> 51 49 48 46 45 43 41 40 38 37 35 33 32 30 29 </table>
 		<table name="#ench3effectPower"> 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 </table>
-		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<set name="baseCritRate" val="15" />
 		<set name="weaponsAllowed" val="64" /> <!-- Pole -->
 		<set name="magicLvl" val="77" />
@@ -1899,9 +1896,12 @@
 		<set name="overHit" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="lvlDepend" val="1" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="hpConsume" val="#ench2hpConsume" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<effect name="Stun" time="8" val="0" effectPower="40" effectType="STUN" stackOrder="2" stackType="Stun">
 				<mul order="0x30" stat="pDef" val="0.7" />
@@ -1914,7 +1914,7 @@
 				<mul order="0x30" stat="pDef" val="0.7" />
 				<mul order="0x30" stat="mDef" val="0.7" />
 			</effect>
-			<effect name="RemoveTarget" noicon="1" val="0" />
+			<effect name="RemoveTarget" noicon="1" val="0" effectPower="#ench3effectPower" effectType="DEBUFF" />
 		</enchant3for>
 	</skill>
 	<skill id="362" levels="1" name="Armor Crush" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
