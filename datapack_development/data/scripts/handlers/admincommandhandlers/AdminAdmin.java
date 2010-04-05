@@ -24,6 +24,7 @@ import com.l2jserver.gameserver.GmListTable;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.AccessLevels;
 import com.l2jserver.gameserver.datatables.AdminCommandAccessRights;
+import com.l2jserver.gameserver.datatables.DoorTable;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.datatables.NpcWalkerRoutesTable;
@@ -285,6 +286,11 @@ public class AdminAdmin implements IAdminCommandHandler
 				{
 					QuestManager.getInstance().reloadAllQuests();
 					activeChar.sendMessage("All Quests have been reloaded");
+				}
+				else if (type.startsWith("door"))
+				{
+					DoorTable.getInstance().reloadAll();
+					activeChar.sendMessage("All Doors have been reloaded");
 				}
 				
 				activeChar.sendMessage("WARNING: There are several known issues regarding this feature. Reloading server data during runtime is STRONGLY NOT RECOMMENDED for live servers, just for developing environments.");
