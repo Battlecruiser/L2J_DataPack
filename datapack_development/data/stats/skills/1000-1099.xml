@@ -777,13 +777,14 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="1042" levels="12" name="Hold Undead" enchantGroup1="1" enchantGroup2="1">
+	<skill id="1042" levels="12" name="Hold Undead" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#mpInitialConsume"> 26 28 31 32 33 35 36 37 38 39 40 41 </table>
 		<table name="#mpConsume"> 103 112 122 127 132 137 142 147 151 155 159 163 </table>
 		<table name="#magicLvl"> 48 52 56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#ench1power"> 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 38 39 40 41 42 43 44 45 46 47 48 </table>
 		<table name="#ench2mpConsume"> 201 200 198 196 195 192 191 188 187 185 183 181 180 177 176 175 172 171 168 167 165 163 161 160 157 156 153 152 151 148 </table>
+		<table name="#ench3Attack"> 30 31 32 32 33 34 34 35 36 36 37 38 38 39 40 40 41 42 42 43 44 44 45 46 46 47 48 48 49 50 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -802,9 +803,17 @@
 		<enchant1 name="power" val="#ench1power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant3 name="skillType" val="MDAM" />
+		<enchant3 name="power" val="#ench3Attack" />
+		<enchant3 name="elementPower" val="20" />
+		<enchant3 name="element" val="4" /> <!-- Holy -->
 		<for>
 			<effect name="Paralyze" time="30" val="0" />
 		</for>
+		<enchant3for>
+			<effect name="Paralyze" time="30" val="0" effectPower="40" effectType="PARALYZE" />
+		</enchant3for>
 	</skill>
 	<skill id="1043" levels="1" name="Holy Weapon" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
