@@ -28,6 +28,7 @@ public class AdminRide implements IAdminCommandHandler
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_ride_horse",
+		"admin_ride_bike",
 		"admin_ride_wyvern",
 		"admin_ride_strider",
 		"admin_unride_wyvern",
@@ -40,6 +41,8 @@ public class AdminRide implements IAdminCommandHandler
 	
 	private static final int PURPLE_MANED_HORSE_TRANSFORMATION_ID = 106;
 	
+	private static final int JET_BIKE_TRANSFORMATION_ID = 20001;
+
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		
@@ -71,6 +74,15 @@ public class AdminRide implements IAdminCommandHandler
 				
 				return true;
 			}
+			else if (command.startsWith("admin_ride_bike")) // handled using transformation
+			{
+				if (activeChar.isTransformed() || activeChar.isInStance())
+					activeChar.sendPacket(new SystemMessage (SystemMessageId.YOU_CANNOT_MOUNT_A_STEED_WHILE_TRANSFORMED));
+				else
+					TransformationManager.getInstance().transformPlayer(JET_BIKE_TRANSFORMATION_ID, activeChar);
+
+				return true;
+			}
 			else
 			{
 				activeChar.sendMessage("Command '" + command + "' not recognized");
@@ -84,6 +96,9 @@ public class AdminRide implements IAdminCommandHandler
 		else if (command.startsWith("admin_unride"))
 		{
 			if (activeChar.getTransformationId() == PURPLE_MANED_HORSE_TRANSFORMATION_ID)
+				activeChar.untransform();
+
+			if (activeChar.getTransformationId() == JET_BIKE_TRANSFORMATION_ID)
 				activeChar.untransform();
 			else
 				activeChar.dismount();
