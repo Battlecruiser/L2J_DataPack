@@ -2430,7 +2430,7 @@
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="20000" /> <!-- guess -->
+		<set name="reuseDelay" val="180000" />
 		<set name="absorbPart" val="0.4" /> <!-- absorbs 40% of damage -->
 		<for>
 			<effect name="Debuff" time="30" val="0" effectPower="40" effectType="DEBUFF"> <!-- Guess effectPower -->

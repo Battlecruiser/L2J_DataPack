@@ -1098,7 +1098,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
 		<set name="power" val="5750" />
-		<set name="reuseDelay" val="60000" /> <!-- Guess -->
+		<set name="reuseDelay" val="75000" />
 		<set name="skillRadius" val="80" /> <!-- Guess -->
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
@@ -1115,7 +1115,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
 		<set name="power" val="4312" />
-		<set name="reuseDelay" val="45000" /> <!-- Guess -->
+		<set name="reuseDelay" val="75000" />
 		<set name="skillType" val="PDAM" />
 		<set name="skillRadius" val="100" />
 		<set name="SSBoost" val="2.0" />
@@ -1133,7 +1133,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
 		<set name="power" val="6037" />
-		<set name="reuseDelay" val="75000" /> <!-- Guess -->
+		<set name="reuseDelay" val="75000" />
 		<set name="skillRadius" val="80" /> <!-- Guess -->
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
@@ -1204,7 +1204,7 @@
 		</for>
 	</skill>
 	<skill id="777" levels="1" name="Demolition Impact">
-		<!-- TODO: Reuse & Radius needs to be verified -->
+		<!-- TODO: Radius needs to be verified -->
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="baseCritRate" val="15" />
@@ -1214,7 +1214,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
 		<set name="power" val="5750" />
-		<set name="reuseDelay" val="21000" />
+		<set name="reuseDelay" val="75000" />
 		<set name="skillRadius" val="150" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
@@ -1495,7 +1495,7 @@
 		<set name="mpConsume" val="52" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="1510" />
-		<set name="reuseDelay" val="6000" />
+		<set name="reuseDelay" val="5000" />
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="PDAM" />
 		<set name="soulMaxConsumeCount" val="5" />
