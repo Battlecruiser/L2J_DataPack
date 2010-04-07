@@ -488,4 +488,18 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
+	<skill id="21171" levels="1" name="Riding Jet Bike">
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="transformId" val="20001" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" time="1800" val="0">
+				<mul order="0x30" stat="runSpd" val="1.5" />
+			</effect>
+		</for>
+	</skill>
 </list>

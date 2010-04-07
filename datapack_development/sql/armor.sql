@@ -2965,6 +2965,8 @@ INSERT INTO `armor` VALUES
 (20897,'Purple Paper Mask','Blessed Soul - 7 day limited period','face','false','none',10,'wood','none',0,-1,10080,0,0,0,0,0,'false','false','true','false','false','0-0','0-0;'),
 (20900,'Santa Hat','14 day limited period','hairall','false','none',10,'wood','none',0,-1,20160,0,0,0,0,0,'false','false','true','false','false','0-0','0-0;'),
 (20922,'Adventurer Hat','','hairall','false','none',10,'wood','none',0,-1,-1,0,0,0,0,0,'false','false','true','false','false','0-0','0-0;'),
+(20938,'Jet Bike Mounting Bracelet','7-day Limited Period','lbracelet','false','none',30,'wood','none',0,-1,10080,0,0,0,0,0,'false','false','true','false','true','0-0','21171-1;'),
+(20939,'Jet Bike Mounting Bracelet','30 day limited period','lbracelet','false','none',150,'wood','none',0,-1,43200,0,0,0,0,0,'false','false','true','false','true','0-0','21171-1;'),
 (22154,'Shadow Weapon - Wolf Hat','Blessed Escape','hairall','false','none',10,'wood','none',0,1440,-1,0,0,0,0,0,'true','true','true','true','true','0-0','0-0;'),
 (22155,'Shadow Weapon - Wolf Hat','Blessed Resurrection','hairall','false','none',10,'wood','none',0,1440,-1,0,0,0,0,0,'true','true','true','true','true','0-0','0-0;'),
 (22156,'Daisy Hairpin','','hair','false','none',10,'wood','none',0,-1,-1,0,0,0,0,0,'false','false','true','false','true','0-0','0-0;'),

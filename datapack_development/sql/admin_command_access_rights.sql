@@ -434,6 +434,7 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 
 -- RIDE
 ('admin_ride_horse','1'),
+('admin_ride_bike','1'),
 ('admin_ride_wyvern','1'),
 ('admin_ride_strider','1'),
 ('admin_unride_wyvern','1'),
