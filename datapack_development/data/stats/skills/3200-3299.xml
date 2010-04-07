@@ -9,7 +9,6 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="600000" />
 		<set name="staticReuse" val="true" />
-		<set name="equipDelay" val="30000" />
 		<set name="statichitTime" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -30,7 +29,6 @@
 		<set name="reuseDelay" val="600000" />
 		<set name="staticReuse" val="true" />
 		<set name="statichitTime" val="true" />
-		<set name="equipDelay" val="30000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -50,7 +48,6 @@
 		<set name="reuseDelay" val="600000" />
 		<set name="staticReuse" val="true" />
 		<set name="statichitTime" val="true" />
-		<set name="equipDelay" val="30000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -68,7 +65,6 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="equipDelay" val="30000" />
 		<for>
 			<effect name="BigHead" time="120" val="0" abnormal="bighead" stackOrder="120" stackType="big_head" />
 		</for>
@@ -82,7 +78,6 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
-		<set name="equipDelay" val="30000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="REFLECT" />
 		<set name="isMagic" val="true" />
@@ -102,7 +97,6 @@
 		<set name="target" val="TARGET_PARTY" />
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="300000" />
-		<set name="equipDelay" val="30000" />
 		<set name="hitTime" val="#hitTime" />
 		<set name="skillType" val="RECALL" />
 		<set name="isMagic" val="true" />
@@ -110,9 +104,12 @@
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="3206" levels="10" name="Item Skill: Music">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="3207" levels="10" name="Item Skill: Heal">
 		<table name="#chance"> 1 1 2 2 3 3 4 4 5 5 </table>
