@@ -37,7 +37,7 @@ class Quest (JQuest) :
        r1 = silver * 300
        r2 = black * 1200
        reward = r1 + r2
-       st.giveItems(57,reward)
+       st.rewardItems(57,reward)
        st.takeItems(Silver_Ice,silver)
        st.takeItems(Black_Ice,black)
     elif event == "32020-09.htm" :

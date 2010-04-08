@@ -1,5 +1,6 @@
 # Made by mtrix
 import sys
+from com.l2jserver import Config
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
@@ -50,18 +51,19 @@ class Quest (JQuest) :
          st.takeItems(BLADE_STAKATO_FANG,-1)
          st.playSound("ItemSound.quest_middle")
      return htmltext
-    
+
  def onKill(self,npc,player,isPet):
      partyMember = self.getRandomPartyMemberState(player,State.STARTED)
      if not partyMember : return
      st = partyMember.getQuestState(qn)
-   
-     npcId = npc.getNpcId()
-     random = st.getRandom(100)
-     chance = CHANCE + npcId - 20794
-     if random<=chance :
-         st.giveItems(BLADE_STAKATO_FANG,1)
-         st.playSound("ItemSound.quest_itemget")
+
+     chance = CHANCE + npc.getNpcId() - 20794
+     numItems, chance = divmod(chance * Config.RATE_QUEST_DROP,100)
+     if st.getRandom(100) < chance :
+        numItems += 1
+        if numItems :
+           st.giveItems(BLADE_STAKATO_FANG,1)
+           st.playSound("ItemSound.quest_itemget")
      return
 
 QUEST       = Quest(368,qn,"Trespassing Into The Sacred Area")

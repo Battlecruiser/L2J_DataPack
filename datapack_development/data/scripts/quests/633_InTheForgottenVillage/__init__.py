@@ -71,7 +71,7 @@ class Quest (JQuest):
             if st.getInt("cond") == 2:
                 if st.getQuestItemsCount(RIB_BONE) >= 200:
                     st.takeItems(RIB_BONE, 200)
-                    st.giveItems(57, 25000)
+                    st.rewardItems(57, 25000)
                     st.addExpAndSp(305235, 0)
                     st.playSound("ItemSound.quest_finish")
                     st.set("cond","1")
