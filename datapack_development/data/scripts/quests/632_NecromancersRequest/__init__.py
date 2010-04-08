@@ -40,7 +40,7 @@ class Quest (JQuest):
            if st.getInt("cond") == 2:
               if st.getQuestItemsCount(V_HEART) == 200:
                  st.takeItems(V_HEART, 200)
-                 st.giveItems(ADENA, ADENA_AMOUNT)
+                 st.rewardItems(ADENA, ADENA_AMOUNT)
                  st.playSound("ItemSound.quest_finish")
                  st.set("cond","1")
                  htmltext = "31522-1.htm"

@@ -1,6 +1,5 @@
 #Made by Kerb
 import sys
-
 from com.l2jserver import Config
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
@@ -47,7 +46,7 @@ class Quest (JQuest) :
    elif event in REWARDS.keys() :
        item, amount = REWARDS[event]
        st.takeItems(ORC_GOODS,-1)
-       st.giveItems(item, amount)
+       st.rewardItems(item, amount)
        st.playSound("ItemSound.quest_finish")
        st.exitQuest(1)
        return

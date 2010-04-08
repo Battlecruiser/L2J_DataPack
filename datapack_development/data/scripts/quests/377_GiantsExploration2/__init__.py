@@ -15,7 +15,7 @@ TITAN_ANCIENT_BOOK = 14847
 BOOK1,BOOK2,BOOK3,BOOK4,BOOK5 = [14842,14843,14844,14845,14846]
 
 # Drop Chance
-DROP_CHANCE = 20
+DROP_CHANCE = 50
 
 # Mobs
 MOBS = [22661,22662,22663,22664,22665,22666,22667,22668,22669]
@@ -27,6 +27,19 @@ class Quest (JQuest) :
 		JQuest.__init__(self,id,name,descr)
 		self.questItemIds = [TITAN_ANCIENT_BOOK]
 
+	def onExchangeRequest(self,event,st,qty,rem) :
+		if st.getQuestItemsCount(BOOK1) >= rem and st.getQuestItemsCount(BOOK2) >= rem and st.getQuestItemsCount(BOOK3) >= rem and st.getQuestItemsCount(BOOK4) >= rem and st.getQuestItemsCount(BOOK5) >= rem :
+			st.takeItems(BOOK1,rem)
+			st.takeItems(BOOK2,rem)
+			st.takeItems(BOOK3,rem)
+			st.takeItems(BOOK4,rem)
+			st.takeItems(BOOK5,rem)
+			st.giveItems(int(event),qty)
+			st.playSound("ItemSound.quest_finish")
+			return "31147-ok.htm"
+		else:
+			return "31147-no.htm"
+
 	def onAdvEvent (self,event,npc,player) :
 		htmltext = event
 		st = player.getQuestState(qn)
@@ -35,6 +48,22 @@ class Quest (JQuest) :
 			st.set("cond","1")
 			st.setState(State.STARTED)
 			st.playSound("ItemSound.quest_accept")
+		elif event == "31147-quit.htm" :
+			st.unset("cond")
+			st.exitQuest(1)
+			st.playSound("ItemSound.quest_finish")
+		elif event.isdigit() :
+			if int(event) == 9625 :											# Giant's Codex - Oblivion
+				htmltext = self.onExchangeRequest(event,st,1,5)
+			elif int(event) == 9626 :										# Giant's Codex - Discipline
+				htmltext = self.onExchangeRequest(event,st,1,5)
+			elif int(event) == 9628 :										# Leonard
+				htmltext = self.onExchangeRequest(event,st,6,1)
+			elif int(event) == 9629 :										# Adamantine
+				htmltext = self.onExchangeRequest(event,st,3,1)
+			elif int(event) == 9630 :										# Orichalcum
+				htmltext = self.onExchangeRequest(event,st,4,1)
+
 		return htmltext
 
 	def onTalk (self,npc,player) :
@@ -48,7 +77,6 @@ class Quest (JQuest) :
 		if npcId == SOBLING:
 			if st.getState() == State.STARTED :
 				if st.getQuestItemsCount(BOOK1) > 0 and st.getQuestItemsCount(BOOK2) > 0 and st.getQuestItemsCount(BOOK3) > 0 and st.getQuestItemsCount(BOOK4) > 0 and st.getQuestItemsCount(BOOK5) > 0 :
-					# To do
 					htmltext = "31147-03.htm"
 				else:
 					htmltext = "31147-02a.htm"

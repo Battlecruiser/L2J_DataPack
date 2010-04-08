@@ -25,10 +25,7 @@ Bl_Anvil_Coin = 3871
 
 # second Part
 G_Let_Balthazar = 3867
-Recipe_Power_Stone = 3838
-Power_Stones = 3846
-Nebulite_Crystals = 3844
-Broke_Power_Stone = 3845
+Spiteful_Soul_Energy = 14855
 
 # third part
 G_Let_Rodemai = 3868
@@ -45,19 +42,18 @@ EggList = [Mi_Drake_Eggs,Bl_Wyrm_Eggs,Drake_Eggs,Th_Wyrm_Eggs]
 NPC=[30645,30758,30759,30760,30761,30762,30763,30512,30764,30868,30765,30766]
 STATS=["cond","Fritz","Lutz","Kurtz","ImpGraveKeeper"]
 
-# DROPLIST = step,chance,maxcount,item 
+# DROPLIST = step,chance,maxcount,item
 # condition,maxcount,chance,itemList = DROPLIST[npcId]
 DROPLIST = {
-20282: [2,10,20,[Th_Wyrm_Eggs]],                     # Thunder Wyrm 1
-20243: [2,10,15,[Th_Wyrm_Eggs]],                     # Thunder Wyrm 2
-20137: [2,10,20,[Drake_Eggs]],                     # Drake 1
-20285: [2,10,25,[Drake_Eggs]],                     # Drake 2
+20282: [2,10,20,[Th_Wyrm_Eggs]],                    # Thunder Wyrm 1
+20243: [2,10,15,[Th_Wyrm_Eggs]],                    # Thunder Wyrm 2
+20137: [2,10,20,[Drake_Eggs]],                      # Drake 1
+20285: [2,10,25,[Drake_Eggs]],                      # Drake 2
 27178:[2,10,100,[Bl_Wyrm_Eggs]],                    # Blitz Wyrm
-20654: [5,10,25,[Broke_Power_Stone,Power_Stones,Nebulite_Crystals]],  # Giant Soldier
-20656: [5,10,35,[Broke_Power_Stone,Power_Stones,Nebulite_Crystals]],  # Giant Scouts
-20668: [10,0,15,[]],                          # Grave Guard
-27179:[10,6,80,[Imp_Keys]],                       # GraveKeyKeeper
-27181:[10,0,100,[]]                          # Imperial Gravekeeper
+20974: [5,10,20,[Spiteful_Soul_Energy]],            # Spiteful Soul Leader
+20668: [10,0,15,[]],                                # Grave Guard
+27179:[10,6,80,[Imp_Keys]],                         # GraveKeyKeeper
+27181:[10,0,100,[]]                                 # Imperial Gravekeeper
 }
 
 def suscribe_members(st) :
@@ -101,7 +97,7 @@ def offlineMemberExit(st) :
 # returns leaders quest cond, if he is offline will read out of database :)
 def getLeaderVar(st, var) :
   try :
-    clan = st.getPlayer().getClan()  
+    clan = st.getPlayer().getClan()
     if clan == None:
       return -1
     leader=clan.getLeader().getPlayerInstance()
@@ -133,8 +129,8 @@ def getLeaderVar(st, var) :
 # for now, if the leader is not logged in, this assumes that the variable
 # has already been inserted once (initialized, in some sense).
 def setLeaderVar(st, var, value) :
-  clan = st.getPlayer().getClan()  
-  if clan == None: return   
+  clan = st.getPlayer().getClan()
+  if clan == None: return
   leader=clan.getLeader().getPlayerInstance()
   if leader != None :
     leader.getQuestState(qn).set(var,value)
@@ -152,7 +148,7 @@ def setLeaderVar(st, var, value) :
       con.close()
     except :
       try : con.close()
-      except : pass 
+      except : pass
   return
 
 def checkEggs(st):
@@ -225,7 +221,7 @@ class Quest (JQuest) :
     elif event == "30645-03.htm":
       st.takeItems(G_Let_Martien,-1)
       st.set("cond","2")
-      suscribe_members(st) 
+      suscribe_members(st)
       try:
         members = st.getPlayer().getClan().getOnlineMembers(0)[0]
         for i in members:
@@ -275,7 +271,6 @@ class Quest (JQuest) :
     elif event == "30764-06.htm":
       st.takeItems(Bl_Anvil_Coin,-1)
       st.set("Kurtz","4")
-      st.giveItems(Recipe_Power_Stone,1)
 # Events Rodemai
     elif event == "30868-04.htm":
       st.takeItems(G_Let_Rodemai,-1)
@@ -344,7 +339,7 @@ class Quest (JQuest) :
         kurtz  = st.getInt("Kurtz")
         lutz  = st.getInt("Lutz")
         fritz  = st.getInt("Fritz")
-        
+
         if npcId == Gustaf :
           if cond == 1:
             htmltext = "30760-09.htm"
@@ -403,10 +398,9 @@ class Quest (JQuest) :
             else:
               htmltext = "30764-02.htm"
           elif cond == 5:
-            if st.getQuestItemsCount(Power_Stones) > 9 and st.getQuestItemsCount(Nebulite_Crystals) > 9:
+            if st.getQuestItemsCount(Spiteful_Soul_Energy) >= 10 :
               htmltext = "30764-08.htm"
-              st.takeItems(Power_Stones,-1)
-              st.takeItems(Nebulite_Crystals,-1)
+              st.takeItems(Spiteful_Soul_Energy,-1)
               st.takeItems(Brooch,-1)
               st.set("cond","6")
             else:
@@ -488,7 +482,7 @@ class Quest (JQuest) :
       if Rnd.get(100) < 4:
         if self.ImpGraveKepperStat == 1:
           for j in range(2):
-            for k in range(2): 
+            for k in range(2):
               self.addSpawn(27180,npc.getX()+70*pow(-1,j%2),npc.getY()+70*pow(-1,k%2),npc.getZ(),0,False,0)
           self.ImpGraveKepperStat = 2
         else:
