@@ -25,9 +25,10 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
+import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 
 /**
- * @author Gnat
+ * @author Gnacik
  * 
  */
 
@@ -63,8 +64,9 @@ public class CharacterBirthday extends Quest
 
 		if (event.equalsIgnoreCase("despawn_npc"))
 		{
+			npc.doDie(player);
 			is_spawned = false;
-			npc.deleteMe();
+
 			htmltext = null;
 		}
 		if (event.equalsIgnoreCase("receive_reward"))
@@ -81,7 +83,7 @@ public class CharacterBirthday extends Quest
 			npc.broadcastPacket(new MagicSkillUse(player, 5950, 1, 1000, 0));
 
 			// Despawn npc
-			npc.deleteMe();
+			npc.doDie(player);
 			is_spawned = false;
 
 			// Update for next year
@@ -107,8 +109,9 @@ public class CharacterBirthday extends Quest
 		}
 		if (st != null && player.checkBirthDay() == 0)
 		{
+			player.sendPacket(new PlaySound(1, "HB01", 0, 0, 0, 0, 0));
+			L2Npc spawned = st.addSpawn(32600, player.getX()+10, player.getY()+10, player.getZ()+10, 0, false, 0, true);
 			st.setState(State.STARTED);
-			L2Npc spawned = st.addSpawn(32600, player);
 			st.startQuestTimer("despawn_npc", 60000, spawned);
 			is_spawned = true;
 		}
