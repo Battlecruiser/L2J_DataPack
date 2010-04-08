@@ -20,7 +20,6 @@
 		<table name="#mpConsume"> 20 27 39 48 55 64 </table>
 		<table name="#cancel"> 18 25 36 42 48 53 </table>
 		<table name="#aggro"> 204 285 418 495 566 624 </table>
-		<table name="#effect"> 1 2 3 4 5 6 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_OWNER_PET" />
 		<set name="reuseDelay" val="6000" />
@@ -32,7 +31,7 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="#aggro" />
 		<for>
-			<effect name="Buff" time="120" val="0" stackOrder="#effect" stackType="Concentration">
+			<effect name="Buff" time="120" val="0" stackOrder="#cancel" stackType="Concentration">
 				<sub order="0x40" stat="cancel" val="#cancel" />
 			</effect>
 		</for>
