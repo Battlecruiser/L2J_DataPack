@@ -551,9 +551,9 @@
 				<add order="0x40" stat="accCombat" val="#accCombat">
 					<using kind="Pole" />
 				</add>
-				<add order="0x40" stat="atkCountMax" val="1">
+				<set order="0x40" stat="atkCountMax" val="1">
 					<using kind="Pole" />
-				</add>
+				</set>
 			</effect>
 		</for>
 	</skill>
