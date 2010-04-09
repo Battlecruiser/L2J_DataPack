@@ -567,11 +567,20 @@
 		</for>
 	</skill>
 	<skill id="836" levels="3" name="Oblivion Trap">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- CT2.2 retail confirmed -->
+		<table name="#triggerSkillLvl"> 1 2 3 </table>
+		<set name="mpConsume" val="50" />
 		<set name="hitTime" val="3000" />
+		<set name="summonTotalLifeTime" val="30000" />
 		<set name="reuseDelay" val="45000" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="SUMMON_TRAP" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="350" />
+		<set name="triggerSkillId" val="5679" />
+		<set name="triggerSkillLvl" val="#triggerSkillLvl" />
+		<set name="trapNpcId" val="13037" />
 	</skill>
 	<skill id="837" levels="1" name="Painkiller">
 		<!-- CT2.2 retail confirmed -->
