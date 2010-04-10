@@ -30,7 +30,7 @@ public class SummonMinions extends L2AttackableAIScript
 {
 	private static int HasSpawned;
 	private static TIntHashSet myTrackingSet = new TIntHashSet(); //Used to track instances of npcs
-	private FastMap<Integer, FastList<L2PcInstance>> _attackersList = new FastMap<Integer, FastList<L2PcInstance>>().setShared(true);
+	private FastMap<Integer, FastList<L2PcInstance>> _attackersList = new FastMap<Integer, FastList<L2PcInstance>>().shared();
 	private static final TIntObjectHashMap<int[]> MINIONS = new TIntObjectHashMap<int[]>();
 	
 	static
