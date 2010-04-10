@@ -612,7 +612,11 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
 			<effect name="Buff" time="15" val="0">
-				<mul order="0x30" stat="pAtkSpd" val="1.33" />
+				<mul order="0x30" stat="pAtkSpd" val="1.33" >
+					<not>
+						<using kind="Bow,Crossbow" />
+					</not>
+				</mul>
 			</effect>
 		</for>
 	</skill>
