@@ -457,7 +457,7 @@ public class Disablers implements ISkillHandler
 				{
 					L2Effect[] effects = target.getAllEffects();
 					
-					if (effects.length == 0 || effects == null)
+					if (effects == null || effects.length == 0)
 						break;
 					
 					int count = (skill.getMaxNegatedEffects() > 0) ? 0 : -2;

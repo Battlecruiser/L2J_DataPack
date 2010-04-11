@@ -203,7 +203,7 @@ public class Valakas extends L2AttackableAIScript
 				int lvl = 0;
 				int sk_4691 = 0;
 				L2Effect[] effects = npc.getAllEffects();
-				if (effects.length != 0 || effects != null)
+				if (effects != null && effects.length != 0)
 				{
 					for (L2Effect e : effects)
 					{
@@ -261,7 +261,7 @@ public class Valakas extends L2AttackableAIScript
 					npc.doCast(SkillTable.getInstance().getInfo(4691, 1));
 				}
 			}
-			else if (event.equalsIgnoreCase("1003") && npc != null)
+			else if (event.equalsIgnoreCase("1003"))
 			{
 				if (!npc.isInvul())
 					getRandomSkill(npc);
@@ -396,7 +396,7 @@ public class Valakas extends L2AttackableAIScript
 		{
 			int sk_4258 = 0;
 			L2Effect[] effects = attacker.getAllEffects();
-			if (effects.length != 0 || effects != null)
+			if (effects != null && effects.length != 0)
 			{
 				for (L2Effect e : effects)
 				{
@@ -1246,17 +1246,18 @@ public class Valakas extends L2AttackableAIScript
 
 	public void callSkillAI(L2Npc npc, L2Character c2, L2Skill skill)
 	{
-		if (npc.isInvul())
-			return;
 		QuestTimer timer = getQuestTimer("1003", npc, null);
-
+		
 		if (npc == null)
 		{
 			if (timer != null)
 				timer.cancel();
 			return;
 		}
-
+		
+		if (npc.isInvul())
+			return;
+		
 		if (c2 == null || c2.isDead() || timer == null)
 		{
 			c2 = getRandomTarget(npc); // just in case if hate AI fail
@@ -1266,18 +1267,17 @@ public class Valakas extends L2AttackableAIScript
 				return;
 			}
 		}
+		
 		L2Character target = c2;
 		if (target == null || target.isDead())
 		{
-			if (timer == null)
-				startQuestTimer("1003", 500, npc, null, true);
+			startQuestTimer("1003", 500, npc, null, true);
 			return;
 		}
 
 		if (Util.checkIfInRange(skill.getCastRange(), npc, target, true))
 		{
-			if (timer != null)
-				timer.cancel();
+			timer.cancel();
 			npc.getAI().setIntention(AI_INTENTION_IDLE);
 			npc.setIsCastingNow(true);
 			npc.setTarget(target);
@@ -1286,8 +1286,7 @@ public class Valakas extends L2AttackableAIScript
 		}
 		else
 		{
-			if (timer == null)
-				startQuestTimer("1003", 500, npc, null, true);
+			startQuestTimer("1003", 500, npc, null, true);
 			npc.getAI().setIntention(AI_INTENTION_FOLLOW, target, null);
 			npc.setIsCastingNow(false);
 		}
