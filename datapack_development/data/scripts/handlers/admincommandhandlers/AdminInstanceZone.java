@@ -107,35 +107,33 @@ public class AdminInstanceZone implements IAdminCommandHandler
 				"<tr><td width=150>Name</td><td width=50>Time</td><td width=70>Action</td></tr>"
 		);
 
-		if (instanceTimes != null)
+
+		for (int id : instanceTimes.keySet())
 		{
-			for (int id : instanceTimes.keySet())
+			int hours = 0;
+			int minutes = 0;
+			long remainingTime = (instanceTimes.get(id) - System.currentTimeMillis()) / 1000;
+			if (remainingTime > 0)
 			{
-				int hours = 0;
-				int minutes = 0;
-				long remainingTime = (instanceTimes.get(id) - System.currentTimeMillis()) / 1000;
-				if (remainingTime > 0)
-				{
-					hours = (int) (remainingTime / 3600);
-					minutes = (int) ((remainingTime%3600) / 60);
-				}
-
-				StringUtil.append(html,
-						"<tr><td>",
-						InstanceManager.getInstance().getInstanceIdName(id),
-						"</td><td>",
-						String.valueOf(hours),
-						":",
-						String.valueOf(minutes),
-						"</td><td><button value=\"Clear\" action=\"bypass -h admin_instancezone_clear ",
-						player.getName(),
-						" ",
-						String.valueOf(id),
-						"\" width=60 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>"
-				);
+				hours = (int) (remainingTime / 3600);
+				minutes = (int) ((remainingTime % 3600) / 60);
 			}
-		}
 
+			StringUtil.append(html,
+					"<tr><td>",
+					InstanceManager.getInstance().getInstanceIdName(id),
+					"</td><td>",
+					String.valueOf(hours),
+					":",
+					String.valueOf(minutes),
+					"</td><td><button value=\"Clear\" action=\"bypass -h admin_instancezone_clear ",
+					player.getName(),
+					" ",
+					String.valueOf(id),
+					"\" width=60 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>"
+			);
+		}
+		
 		StringUtil.append(html, "</table></html>");
 		
 		NpcHtmlMessage ms = new NpcHtmlMessage(1);

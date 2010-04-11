@@ -609,14 +609,14 @@ public class CrystalCaverns extends Quest
 	protected void runEmerald(CCWorld world)
 	{
 		world.status = 1;
-		runFirst((CCWorld)world);
+		runFirst(world);
 		openDoor(DOOR1, world.instanceId);
 	}
 
 	protected void runCoral(CCWorld world)
 	{
 		world.status = 1;
-		runHall((CCWorld)world);
+		runHall(world);
 		openDoor(DOOR2, world.instanceId);
 		openDoor(DOOR5, world.instanceId);
 	}
@@ -1044,13 +1044,13 @@ public class CrystalCaverns extends Quest
 			}
 			else if (event.equalsIgnoreCase("EmeraldSteam"))
 			{
-				runEmerald((CCWorld)world);
+				runEmerald(world);
 				for(L2Npc oracle: world.oracle)
 					oracle.decayMe();
 			}
 			else if (event.equalsIgnoreCase("CoralGarden"))
 			{
-				runCoral((CCWorld)world);
+				runCoral(world);
 				for(L2Npc oracle: world.oracle)
 					oracle.decayMe();
 			}

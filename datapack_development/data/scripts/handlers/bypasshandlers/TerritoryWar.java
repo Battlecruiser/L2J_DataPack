@@ -131,7 +131,7 @@ public class TerritoryWar implements IBypassHandler
 								_log.warning("TerritoryWar buy: not handled type: " + type);
 								return false;
 						}
-						activeChar.destroyItemByItemId("QUEST", itemId, (long) count, mercman, true);
+						activeChar.destroyItemByItemId("QUEST", itemId, count, mercman, true);
 						activeChar.addItem("QUEST", boughtId, 1, mercman, false);
 						mercman.showChatWindow(activeChar, 7);
 						return true;
