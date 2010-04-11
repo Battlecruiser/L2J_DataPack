@@ -2,33 +2,72 @@
 <list>
 	<skill id="21100" levels="1" name="Great Wizard's Soul Power: Brilliance">
 		<!-- For five minutes, the Great Spirit increases M.Atk. by 20%, M.Def. by 20% and casting speed by 20%. Decreases MP cost of skills by 5%. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000"/> <!-- Guess -->
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="mAtk" val="1.2" />
+				<mul order="0x30" stat="mDef" val="1.2" />		
+				<mul order="0x30" stat="mAtkSpd" val="1.2" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21101" levels="1" name="Blessed Escape">
 		<!-- Can use the ability of Blessed Return. Reuse Delay 12 hours. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="reuseDelay" val="43200000" />
+		<set name="hitTime" val="200" />
+		<set name="skillType" val="RECALL" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="200" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="21102" levels="1" name="Blessed Resurrection">
 		<!-- Can use the ability of Blessed Resurrection. Reuse Delay 12 hours. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="power" val="100" />
+		<set name="target" val="TARGET_CORPSE_PLAYER" />
+		<set name="reuseDelay" val="43200000" />
+		<set name="hitTime" val="3000" />
+		<set name="skillType" val="RESURRECT" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="21103" levels="1" name="Great Adventurer's Soul Power : Endless">
 		<!-- For five minutes, the Great Spirit increases maximum HP by 20%, maximum MP by 20%, moving speed by 20%, and resistance against debuff by 10%. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="14400000"/> <!-- Guess -->
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="maxHp" val="1.2" />
+				<mul order="0x30" stat="maxMp" val="1.2" />		
+				<mul order="0x30" stat="runSpd" val="1.2" />
+				<mul order="0x30" stat="debuffVuln" val="0.9" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21104" levels="1" name="Instinct of Destruction">
 		<!-- For 30 seconds, awakens destruction instinct and increases P.Atk./Critical rate/Critical damage by 50%. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="2500" />
 	</skill>
 	<skill id="21105" levels="1" name="Agathion Seal Cancel - Chon-chon">
 		<set name="target" val="TARGET_SELF" />
@@ -80,57 +119,167 @@
 	</skill>
 	<skill id="21111" levels="1" name="Great Adventurer's Soul Power: Resilience">
 		<!-- Increase max HP 20%, max MP 20%, Spd. 20% with help of a spirit for 5 minutes. Increase resistance by 10% against debuff. Reuse Delay 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000"/>
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="maxHp" val="1.2" />
+				<mul order="0x30" stat="maxMp" val="1.2" />		
+				<mul order="0x30" stat="runSpd" val="1.2" />
+				<mul order="0x30" stat="debuffVuln" val="0.9" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21112" levels="1" name="Great Warrior's Soul Power: Strength">
 		<!-- Increase attack speed by 20%, P. Atk by 10%, P. Def. by 20% with help of a spirit for 5 minutes.  Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy. Reuse Delay 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000"/>
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.2" />
+				<mul order="0x30" stat="pAtk" val="1.1" />		
+				<mul order="0x30" stat="pDef" val="1.2" />
+				<add order="0x40" stat="absorbDam" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21113" levels="1" name="Great Wizard's Soul Power: Acuity">
 		<!-- Increase Casting Speed by 20%, Magic Power by 20%, Magic Def. by 20% with help of a spirit for 5 minutes.  Reduce consumed MP for skill usage by 5%. Reuse Delay 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000"/>
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.2" />
+				<mul order="0x30" stat="mAtk" val="1.2" />		
+				<mul order="0x30" stat="mDef" val="1.2" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21114" levels="1" name="Great Adventurer's Soul Power: Resilience">
 		<!-- Increase max HP 20%, max MP 20%, Spd. 20% with help of a spirit for 5 minutes. Increase resistance by 10% against debuff. Reuse Delay 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000"/>
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="maxHp" val="1.2" />
+				<mul order="0x30" stat="maxMp" val="1.2" />
+				<mul order="0x30" stat="runSpd" val="1.2" />
+				<mul order="0x30" stat="debuffVuln" val="0.9" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21115" levels="1" name="Great Warrior's Soul Power: Strength">
 		<!-- Increase attack speed by 20%, P. Atk by 10%, P. Def. by 20% with help of a spirit for 5 minutes.  Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy. Reuse Delay 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000"/>
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.2" />
+				<mul order="0x30" stat="pAtk" val="1.2" />
+				<mul order="0x30" stat="pDef" val="1.2" />
+				<add order="0x40" stat="absorbDam" val="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21116" levels="1" name="Great Wizard's Soul Power: Acuity">
 		<!-- Increase Casting Speed by 20%, Magic Power by 20%, Magic Def. by 20% with help of a spirit for 5 minutes.  Reduce consumed MP for skill usage by 5%. Reuse Delay 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000"/>
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.2" />
+				<mul order="0x30" stat="mAtk" val="1.2" />
+				<mul order="0x30" stat="mDef" val="1.2" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21117" levels="1" name="Great Adventurer's Soul Power : Immortality">
 		<!-- Increase max HP 20%, max MP 20%, Spd. 20% with help of a spirit for 5 minutes. Increase HP recovery bonus by 20%, MP recovery bonus by 20%. Reuse Delay 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000"/>
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="maxHp" val="1.2" />
+				<mul order="0x30" stat="maxMp" val="1.2" />
+				<mul order="0x30" stat="runSpd" val="1.2" />
+				<mul order="0x30" stat="gainHp" val="1.2" />
+				<mul order="0x30" stat="gainMp" val="1.2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21118" levels="1" name="Great Warrior's Soul Power: Destruction">
 		<!-- Increase attack speed by 20%, P. Atk by 10%, P. Def. by 20% with help of a spirit for 5 minutes.  Increase power of Critical Attack by 20%, Chance of Critical Attack by 20%.  Reuse Delay 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000"/>
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.2" />
+				<mul order="0x30" stat="pAtk" val="1.1" />
+				<mul order="0x30" stat="pDef" val="1.2" />
+				<mul order="0x30" stat="cAtk" val="1.2" />
+				<basemul order="0x30" stat="rCrit" val="0.2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21119" levels="1" name="Great Wizard's Soul Power: Brilliance">
 		<!-- Increase Casting Speed by 20%, Magic Power by 20%, Magic Def. by 20% with help of a spirit for 5 minutes.  Increase power of Prominent Damage caused with damage magic by 20%, chance of Prominent Damage caused with damage magic by 2. Reuse Delay 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000"/>
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.2" />
+				<mul order="0x30" stat="mAtk" val="1.2" />
+				<mul order="0x30" stat="mDef" val="1.2" />
+				<basemul order="0x30" stat="mCritRate" val="0.2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21120" levels="1" name="Jack O'Lantern Card">
 		<set name="target" val="TARGET_NONE" />
@@ -144,69 +293,221 @@
 	</skill>
 	<skill id="21122" levels="1" name="Blessing of Skooldy : Protection of Darkness">
 		<!-- Increase max HP by 20%, max MP by 20%, physical Def. by 20%, magic Def. by 20% for 1 hour. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000"/>
+		<set name="isMagic" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="maxHp" val="1.2" />
+				<mul order="0x30" stat="maxMp" val="1.2" />		
+				<mul order="0x30" stat="pDef" val="1.2" />
+				<mul order="0x30" stat="mDef" val="1.2" />
+				<add order="0x40" stat="darkRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21123" levels="1" name="Blessing of Skooldy : Protection of Darkness">
 		<!-- Increase max HP by 20%, max MP by 20%, physical Def. by 20%, magic Def. by 20% for 1 hour. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000"/>
+		<set name="isMagic" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="maxHp" val="1.2" />
+				<mul order="0x30" stat="maxMp" val="1.2" />		
+				<mul order="0x30" stat="pDef" val="1.2" />
+				<mul order="0x30" stat="mDef" val="1.2" />
+				<add order="0x40" stat="darkRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21124" levels="1" name="Blessing of Skooldy : Protection of Darkness">
 		<!-- Increase max HP by 20%, max MP by 20%, physical Def. by 20%, magic Def. by 20% for 1 hour. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000"/>
+		<set name="isMagic" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="maxHp" val="1.2" />
+				<mul order="0x30" stat="maxMp" val="1.2" />		
+				<mul order="0x30" stat="pDef" val="1.2" />
+				<mul order="0x30" stat="mDef" val="1.2" />
+				<add order="0x40" stat="darkRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21125" levels="1" name="Blessing of Skooldy : Protection of Darkness">
 		<!-- Increase max HP by 20%, max MP by 20%, physical Def. by 20%, magic Def. by 20% for 1 hour. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000"/>
+		<set name="isMagic" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="maxHp" val="1.2" />
+				<mul order="0x30" stat="maxMp" val="1.2" />		
+				<mul order="0x30" stat="pDef" val="1.2" />
+				<mul order="0x30" stat="mDef" val="1.2" />
+				<add order="0x40" stat="darkRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21126" levels="1" name="Blessing of Skooldy : Protection of Darkness">
 		<!-- Increase max HP by 20%, max MP by 20%, physical Def. by 20%, magic Def. by 20% for 1 hour. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000"/>
+		<set name="isMagic" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="maxHp" val="1.2" />
+				<mul order="0x30" stat="maxMp" val="1.2" />		
+				<mul order="0x30" stat="pDef" val="1.2" />
+				<mul order="0x30" stat="mDef" val="1.2" />
+				<add order="0x40" stat="darkRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21127" levels="1" name="Blessing of Halloween">
 		<!-- Increase max HP by 40%, max MP by 40%, attack speed by 20%, attack power by 10% for 1 hour.Increase dark attack resistance by 20. Reuse Delay 2 hours. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="7200000"/>
+		<set name="isMagic" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="maxHp" val="1.4" />
+				<mul order="0x30" stat="maxMp" val="1.4" />		
+				<mul order="0x30" stat="pAtkSpd" val="1.2" />
+				<mul order="0x30" stat="pAtk" val="1.1" />
+				<add order="0x40" stat="darkRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21128" levels="1" name="Blessing of Halloween">
 		<!-- Increase max HP by 40%, max MP by 40%, chance of critical by 10%, critical damage by 10% for 1 hour. Increase dark attack resistance by 20. Reuse Delay 2 hours. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="7200000"/>
+		<set name="isMagic" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="maxHp" val="1.4" />
+				<mul order="0x30" stat="maxMp" val="1.4" />		
+				<mul order="0x30" stat="rCrit" val="1.1" />
+				<mul order="0x30" stat="cAtk" val="1.1" />
+				<add order="0x40" stat="darkRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21129" levels="1" name="Blessing of Halloween">
 		<!-- Increase max HP by 40%, max MP by 40%, speed by 10% for 1 hour. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy. Increase dark attack resistance by 20. Reuse Delay 2 hours. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="7200000"/>
+		<set name="isMagic" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="maxHp" val="1.4" />
+				<mul order="0x30" stat="maxMp" val="1.4" />		
+				<mul order="0x30" stat="runSpd" val="1.1" />
+				<add order="0x40" stat="absorbDam" val="5" />
+				<add order="0x40" stat="darkRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21130" levels="1" name="Blessing of Halloween">
 		<!-- Increase max HP by 40%, max MP by 40%, speed by 20% for 1 hour. Reduce consumed MP for skill usage by 5%. Increase dark attack resistance by 20. Reuse Delay 2 hours. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="7200000"/>
+		<set name="isMagic" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="maxHp" val="1.4" />
+				<mul order="0x30" stat="maxMp" val="1.4" />		
+				<mul order="0x30" stat="runSpd" val="1.2" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.95" />
+				<add order="0x40" stat="darkRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21131" levels="1" name="Blessing of Halloween">
 		<!-- Increase max HP by 40%, max MP by 40%, casting speed by 20% for 1 hour. Increases chance of prominent damage by Damage Magic by 2. Increase dark attack resistance by 20. Reuse Delay 2 hours. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="7200000"/>
+		<set name="isMagic" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="maxHp" val="1.4" />
+				<mul order="0x30" stat="maxMp" val="1.4" />		
+				<mul order="0x30" stat="mAtkSpd" val="1.2" />
+				<basemul order="0x30" stat="mCritRate" val="0.2" />
+				<add order="0x40" stat="darkRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21132" levels="1" name="Ability of Shadow">
 		<!-- Decrease own speed by 30% and will not receive monster's preemptive attack for 2 minutes. Reuse Delay 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="2500" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000"/>
+		<set name="isMagic" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="SilentMove" abnormal="stealth" time="120" val="0">
+				<mul order="0x30" stat="runSpd" val="0.7" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21133" levels="1" name="Agathion Seal Cancel - Zombie">
 		<set name="target" val="TARGET_SELF" />
@@ -234,39 +535,125 @@
 	</skill>
 	<skill id="21136" levels="1" name="Authority of Golden Jack O'Lantern Mask">
 		<!-- Increase max HP 40%, max MP 40%, max CP 40%, Physical Def. 30%, Magic Def. 30%, Spd. 30% of party members for 10 minutes. Reuse Delay 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_PARTY" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="3000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000"/>
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="600" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="maxHp" val="1.4" />
+				<mul order="0x30" stat="maxMp" val="1.4" />		
+				<mul order="0x30" stat="maxCp" val="1.4" />
+				<mul order="0x30" stat="pDef" val="1.3" />
+				<mul order="0x30" stat="mDef" val="1.3" />
+				<mul order="0x30" stat="runSpd" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21137" levels="1" name="Blessing of Halloween">
 		<!-- Increase max HP by 40%, max MP by 40%, attack speed by 20%, attack power by 10% for 10 minutes.Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000"/>
+		<set name="isMagic" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="600" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="maxHp" val="1.4" />
+				<mul order="0x30" stat="maxMp" val="1.4" />		
+				<mul order="0x30" stat="pAtkSpd" val="1.2" />
+				<mul order="0x30" stat="pAtk" val="1.1" />
+				<add order="0x40" stat="darkRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21138" levels="1" name="Blessing of Halloween">
 		<!-- Increase max HP by 40%, max MP by 40%, chance of critical by 10%, critical damage by 10% for 10 minutes. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000"/>
+		<set name="isMagic" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="600" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="maxHp" val="1.4" />
+				<mul order="0x30" stat="maxMp" val="1.4" />		
+				<baemul order="0x30" stat="rCrit" val="0.1" />
+				<mul order="0x30" stat="cAtk" val="1.1" />
+				<add order="0x40" stat="darkRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21139" levels="1" name="Blessing of Halloween">
 		<!-- Increase max HP by 40%, max MP by 40%, speed by 10% for 10 minutes. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000"/>
+		<set name="isMagic" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="600" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="maxHp" val="1.4" />
+				<mul order="0x30" stat="maxMp" val="1.4" />		
+				<mul order="0x30" stat="runSpd" val="1.1" />
+				<add order="0x40" stat="absorbDam" val="5" />
+				<add order="0x40" stat="darkRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21140" levels="1" name="Blessing of Halloween">
 		<!-- Increase max HP by 40%, max MP by 40%, speed by 20% for 10 minutes. Reduce consumed MP for skill usage by 5%. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000"/>
+		<set name="isMagic" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="600" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="maxHp" val="1.4" />
+				<mul order="0x30" stat="maxMp" val="1.4" />		
+				<mul order="0x30" stat="runSpd" val="1.2" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.95" />
+				<add order="0x40" stat="darkRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21141" levels="1" name="Blessing of Halloween">
 		<!-- Increase max HP by 40%, max MP by 40%, speed by 20% for 10 minutes. Increases chance of prominent damage by Damage Magic by 2. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000"/>
+		<set name="isMagic" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="600" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="maxHp" val="1.4" />
+				<mul order="0x30" stat="maxMp" val="1.4" />		
+				<mul order="0x30" stat="runSpd" val="1.2" />
+				<basemul order="0x30" stat="mCritRate" val="0.2" />
+				<add order="0x40" stat="darkRes" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21142" levels="1" name="Agathion Seal Cancel - Gwangong">
 		<set name="target" val="TARGET_SELF" />
@@ -355,27 +742,70 @@
 	</skill>
 	<skill id="21153" levels="1" name="Blessed Body">
 		<!-- Increases Max HP by 25% for 20 minutes. Reuse Delay 1 hours. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000"/>
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="1.25" stackType="max_hp_up">
+				<mul order="0x30" stat="maxHp" val="1.25" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21154" levels="1" name="Blessed Soul">
 		<!-- Increases Max MP by 25% for 20 minutes. Reuse Delay 1 hours. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000"/>
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="1.25" stackType="max_hp_up">
+				<mul order="0x30" stat="maxMp" val="1.25" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21155" levels="1" name="Scent of Flavorful Cheese">
 		<!-- For 5 minutes, receives the soul's help to raise Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. Increases Critical attack power by 20% and Critical attack rate by 20%. Reuse delay is 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000"/>
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.2" />
+				<mul order="0x30" stat="pAtk" val="1.1" />		
+				<mul order="0x30" stat="pDef" val="1.3" />
+				<mul order="0x30" stat="cAtk" val="1.2" />
+				<basemul order="0x30" stat="rCrit" val="0.2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21156" levels="1" name="Scent of Sweet Cheese">
 		<!-- For 5 minutes, receives the soul's help to raise Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Raises Prominent Damage power via damage magic by 20% and the chance of Prominent Damage occurring via damage magic by 2. Reuse delay is 1 hour. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000"/>
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.2" />
+				<mul order="0x30" stat="mAtk" val="1.1" />		
+				<mul order="0x30" stat="mDef" val="1.2" />
+				<basemul order="0x30" stat="mCritRate" val="0.2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21157" levels="1" name="Agathion Seal Cancel - Iken">
 		<set name="target" val="TARGET_SELF" />
@@ -484,9 +914,18 @@
 	</skill>
 	<skill id="21170" levels="1" name="Blessed Soul">
 		<!-- Increases Max MP by 25% for 20 minutes. Reuse delay is 1 hours. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000"/>
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" time="1200" val="0" stackOrder="1.25" stackType="max_mp_up">
+				<mul order="0x30" stat="maxMp" val="1.25" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21171" levels="1" name="Riding Jet Bike">
 		<set name="operateType" val="OP_ACTIVE" />
