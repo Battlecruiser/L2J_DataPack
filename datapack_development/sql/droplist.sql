@@ -30502,7 +30502,7 @@ INSERT INTO `droplist` VALUES
 (22450,4042,1,1,-1,28068),-- Enria
 (22450,960,1,1,-1,674); -- Scroll: Enchant Armor (S)
 
--- RimKamaloka
+-- Rim Kamaloka
 INSERT INTO `droplist` VALUES
 (22452,956,1,1,1,9200), -- Scroll: Enchant Armor (D)
 (22453,956,1,1,1,11100), -- Scroll: Enchant Armor (D)
@@ -35269,7 +35269,85 @@ INSERT INTO `droplist` VALUES
 (29117,6687,1,1,2,13876),-- Sealed Major Arcana Circlet
 (29117,6577,1,1,1,10715); -- Blessed Scroll: Enchant Weapon (S)
 
-INSERT INTO `droplist` VALUES 
+-- Kamaloka
+INSERT INTO `droplist` VALUES
+(29129,2040,12,36,2,419277), -- Strengthened Long Bow Shaft
+(29129,6576,3,9,2,375874), -- Blessed Scroll: Enchant Armor (D)
+(29129,395,1,1,1,337100), -- Manticore Skin Shirt
+(29129,279,1,1,1,161959), -- Strengthened Long Bow
+(29129,1942,53,157,2,140832), -- Manticore Skin Shirt Texture
+(29129,417,4,12,1,67295), -- Manticore Skin Gaiters
+(29129,1943,216,648,2,53302), -- Manticore Skin Gaiters Pattern
+(29132,2059,8,22,2,289288), -- Flamberge Blade
+(29132,6574,1,1,2,288485), --Blessed Scroll: Enchant Armor (C)
+(29132,439,1,1,1,267666), -- Karmian Tunic
+(29132,4589,4,12,2,210353), -- Greater Dye of STR
+(29132,1962,53,157,2,118691), -- Karmian Tunic Pattern
+(29132,4590,8,22,2,112189), -- Greater Dye of STR
+(29132,2060,24,72,2,96636), -- Stormbringer Blade
+(29132,71,1,1,1,66275), -- Flamberge
+(29132,72,1,1,1,66275), -- Stormbringer
+(29132,1954,192,576,2,53918), -- Karmian Stocking Design
+(29132,471,5,13,1,47527), -- Karmian Stockings
+(29135,4608,2,4,2,35583), -- Greater Dye of INT
+(29135,2121,16,36,2,315949), -- Eminence Bow Shaft
+(29135,4609,2,6,2,296872), -- Greater Dye of MEN
+(29135,855,1,1,1,224938), -- Nassen's Earring
+(29135,119,1,1,1,168704), -- Necklace of Binding
+(29135,4607,5,15,2,118749), -- Greater Dye of INT
+(29135,1918,81,243,2,97959), -- Nassen's Earring Gemstone
+(29135,286,1,1,1,69966), -- Eminence Bow
+(29135,1920,140,420,2,44779), -- Necklace of Binding Chain
+(29135,6573,1,1,2,35625), -- Blessed Scroll: Enchant Weapon (C)
+(29135,886,6,16,1,30673), -- Ring of Binding
+(29135,2917,480,1440,2,21924), -- Ring of Binding Gemstone
+(29138,4617,2,4,2,332469), -- Greater Dye of DEX
+(29138,4116,5,15,2,325017), -- Deadman's Glory Stone
+(29138,4618,2,6,2,249352), -- Greater Dye of DEX
+(29138,895,1,1,1,209220), -- Ring of Black Ore
+(29138,6572,1,1,2,192833), -- Blessed Scroll: Enchant Armor (B)
+(29138,4117,9,27,2,180565), -- Art of Battle Axe Blade
+(29138,864,1,1,1,139480), -- Earring of Black Ore
+(29138,4118,14,42,2,109977), -- Evil Spirit Head
+(29138,4052,81,243,2,108367), -- Earring of Black Ore Piece
+(29138,926,1,1,1,104610), -- Necklace of Black Ore
+(29138,4616,5,15,2,99740), -- Greater Dye of CON
+(29138,4053,280,840,2,37953), -- Ring of Black Ore Gemstone
+(29138,4054,220,660,2,22197), -- Necklace of Black Ore Beads
+(29138,171,1,1,1,14741), -- Necklace of Black Ore Beads
+(29138,175,1,1,1,14741), -- Art of Battle Axe
+(29138,210,1,1,1,14741), -- Staff of Evil Spirits
+(29141,730,1,1,2,779950), -- Scroll: Enchant Armor (A)
+(29141,5487,4,12,2,406413), -- Sealed Nightmare Robe Fabric
+(29141,5534,12,36,2,247774), -- Soul Bow Stave
+(29141,5488,8,22,2,216754), -- Sealed Majestic Robe Fabric
+(29141,729,1,1,2,103993), -- Scroll: Enchant Weapon (A)
+(29141,5326,1,1,1,21869), -- Sealed Nightmare Robe
+(29141,5329,1,1,1,21869), -- Sealed Majestic Robe
+(29141,289,1,1,1,20887), -- Soul Bow
+(29141,6569,1,1,2,12479), -- Blessed Scroll: Enchant Weapon (A)
+(29144,960,1,1,2,667596), -- Scroll: Enchant Armor (S)
+(29144,6707,12,36,2,531611), -- Sealed Draconic Leather Armor Part
+(29144,7579,12,36,2,351886), -- Draconic Bow Shaft
+(29144,959,1,1,2,66759), -- Scroll: Enchant Weapon (S)
+(29144,6680,1,1,1,33062), -- Sealed Draconic Leather Armor
+(29144,7575,1,1,1,18066), -- Draconic Bow
+(29144,6577,1,1,2,11127), -- Blessed Scroll: Enchant Weapon (S)
+(29147,960,1,1,2,635274), -- Scroll: Enchant Armor (S)
+(29147,6695,12,36,2,324786), -- Demon Splinter Blade
+(29147,6714,16,48,2,310540), -- Sealed Major Arcana Circlet Pattern
+(29147,6705,23,67,2,189847), -- Sealed Imperial Crusader Shield Part
+(29147,6706,60,180,2,82810), -- Sealed Imperial Crusader Helmet Pattern
+(29147,959,1,1,2,63527), -- Scroll: Enchant Weapon (S)
+(29147,6710,116,346,2,43019), -- Sealed Draconic Leather Helmet Pattern
+(29147,6678,1,1,1,36518), -- Sealed Imperial Crusader Shield
+(29147,6679,1,1,1,25562), -- Sealed Imperial Crusader Helmet
+(29147,6683,1,1,1,25562), -- Sealed Draconic Leather Helmet
+(29147,6687,1,1,1,25562), -- Sealed Major Arcana Circlet
+(29147,6371,1,1,1,17192), -- Demon Splinter
+(29147,6577,1,1,2,10588); -- Blessed Scroll: Enchant Weapon (S)
+
+INSERT INTO `droplist` VALUES
 -- RB drops for clan skill items (25% chance drop until chances are confirmed)
 -- admins who have drop multipliers might want to edit chances
 -- Memento Mori
