@@ -117,7 +117,7 @@ public class SummonMinions extends L2AttackableAIScript
 					case 22266:
 					{
 						if (isPet)
-							attacker = ((L2PcInstance)attacker).getPet().getOwner();
+							attacker = (attacker).getPet().getOwner();
 						if (attacker.getParty() != null)
 						{
 							for (L2PcInstance member : attacker.getParty().getPartyMembers())
@@ -143,7 +143,7 @@ public class SummonMinions extends L2AttackableAIScript
 							else if (!_attackersList.get(npcObjId).contains(attacker))
 								_attackersList.get(npcObjId).add(attacker);
 						}
-						if (attacker != null && ((attacker.getParty() != null && attacker.getParty().getMemberCount() > 2)||_attackersList.get(npcObjId).size() > 2)) //Just to make sure..
+						if ((attacker.getParty() != null && attacker.getParty().getMemberCount() > 2)||_attackersList.get(npcObjId).size() > 2) //Just to make sure..
 						{
 							HasSpawned = 0;
 							for (int val : MINIONS.get(npcId))

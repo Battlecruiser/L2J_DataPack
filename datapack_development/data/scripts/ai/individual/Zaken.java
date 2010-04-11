@@ -207,7 +207,7 @@ public class Zaken extends L2AttackableAIScript
 			int sk_4223 = 0;
 			int sk_4227 = 0;
 			L2Effect[] effects = npc.getAllEffects();
-			if (effects.length != 0 || effects != null)
+			if (effects != null && effects.length != 0)
 			{
 				for (L2Effect e : effects)
 				{
@@ -680,7 +680,7 @@ public class Zaken extends L2AttackableAIScript
 			{
 				int sk_4258 = 0;
 				L2Effect[] effects = attacker.getAllEffects();
-				if (effects.length != 0 || effects != null)
+				if (effects != null && effects.length != 0)
 				{
 					for (L2Effect e : effects)
 					{

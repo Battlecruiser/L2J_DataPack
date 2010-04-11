@@ -110,7 +110,7 @@ public class HealPercent implements ISkillHandler
 				if (full)
 					amount = target.getMaxCp();
 				else
-					amount = (double)target.getMaxCp() * skill.getPower() / 100.0;
+					amount = target.getMaxCp() * skill.getPower() / 100.0;
 
 				amount = Math.min(amount, target.getMaxCp() - target.getCurrentCp());
 				target.setCurrentCp(amount + target.getCurrentCp());
@@ -126,7 +126,7 @@ public class HealPercent implements ISkillHandler
 				if (full)
 					amount = target.getMaxHp();
 				else
-					amount = (double)target.getMaxHp() * skill.getPower() / 100.0;
+					amount = target.getMaxHp() * skill.getPower() / 100.0;
 
 				amount = Math.min(amount, target.getMaxHp() - target.getCurrentHp());
 				target.setCurrentHp(amount + target.getCurrentHp());
@@ -152,7 +152,7 @@ public class HealPercent implements ISkillHandler
 				if (full)
 					amount = target.getMaxMp();
 				else
-					amount = (double)target.getMaxMp() * skill.getPower() / 100.0;
+					amount = target.getMaxMp() * skill.getPower() / 100.0;
 
 				amount = Math.min(amount, target.getMaxMp() - target.getCurrentMp());
 				target.setCurrentMp(amount + target.getCurrentMp());
