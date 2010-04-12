@@ -205,7 +205,7 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
 		<cond msgId="2292">
-			<player agathionId="16031"/>
+			<player agathionId="16031" />
 		</cond>
 	</skill>
 	<skill id="5536" levels="1" name="Little Devil Cuteness Trick">
@@ -215,7 +215,7 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
 		<cond msgId="2292">
-			<player agathionId="16032"/>
+			<player agathionId="16032" />
 		</cond>
 	</skill>
 	<skill id="5537" levels="1" name="Rudolph Cuteness Trick">
@@ -225,7 +225,7 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
 		<cond msgId="2292">
-			<player agathionId="16033"/>
+			<player agathionId="16033" />
 		</cond>
 	</skill>
 	<skill id="5538" levels="1" name="Little Angel Agathion Special Skill - Firecrackers">
@@ -235,17 +235,17 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
 		<cond msgId="2292">
-			<player agathionId="16031"/>
+			<player agathionId="16031" />
 		</cond>
 	</skill>
 	<skill id="5539" levels="1" name="Little Angel Agathion Special Skill - Mysterious Power">
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />		
+		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
 		<cond msgId="2292">
-			<player agathionId="16031"/>
+			<player agathionId="16031" />
 		</cond>
 		<for>
 			<effect name="BigHead" time="120" val="0" abnormal="bighead" stackOrder="120" stackType="big_head" />
@@ -260,7 +260,7 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
 		<cond msgId="2292">
-			<player agathionId="16031"/>
+			<player agathionId="16031" />
 		</cond>
 	</skill>
 	<skill id="5541" levels="1" name="Little Angel Agathion Special Skill - Power of Blessed Resurrection">
@@ -275,7 +275,7 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
 		<cond msgId="2292">
-			<player agathionId="16031"/>
+			<player agathionId="16031" />
 		</cond>
 	</skill>
 	<skill id="5542" levels="1" name="Little Devil Agathion Special Skill - Firecrackers">
@@ -285,17 +285,17 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
 		<cond msgId="2292">
-			<player agathionId="16032"/>
+			<player agathionId="16032" />
 		</cond>
 	</skill>
 	<skill id="5543" levels="1" name="Little Devil Agathion Special Skill - Mysterious Power">
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />		
+		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
 		<cond msgId="2292">
-			<player agathionId="16032"/>
+			<player agathionId="16032" />
 		</cond>
 		<for>
 			<effect name="BigHead" time="120" val="0" abnormal="bighead" stackOrder="120" stackType="big_head" />
@@ -310,7 +310,7 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
 		<cond msgId="2292">
-			<player agathionId="16032"/>
+			<player agathionId="16032" />
 		</cond>
 	</skill>
 	<skill id="5545" levels="1" name="Little Devil Agathion Special Skill - Power of Blessed Resurrection">
@@ -325,7 +325,7 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
 		<cond msgId="2292">
-			<player agathionId="16032"/>
+			<player agathionId="16032" />
 		</cond>
 	</skill>
 	<skill id="5546" levels="1" name="Alert">
@@ -612,7 +612,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
 			<effect name="Buff" time="15" val="0">
-				<mul order="0x30" stat="pAtkSpd" val="1.33" >
+				<mul order="0x30" stat="pAtkSpd" val="1.33">
 					<not>
 						<using kind="Bow,Crossbow" />
 					</not>

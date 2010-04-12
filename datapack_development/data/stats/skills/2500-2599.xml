@@ -100,8 +100,8 @@
 		</cond>
 	</skill>
 	<skill id="2508" levels="1" name="Squash Seed">
-		<set name="itemConsumeCount" val="1"/>
-		<set name="target" val="TARGET_SELF"/>
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPAWN" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="1500" />
@@ -110,8 +110,8 @@
 		<set name="despawnDelay" val="120000" />
 	</skill>
 	<skill id="2509" levels="1" name="Large Squash Seed">
-		<set name="itemConsumeCount" val="1"/>
-		<set name="target" val="TARGET_SELF"/>
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPAWN" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="1500" />
@@ -330,25 +330,25 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
-			<cond msgId="129">
-				<and>
-					<player invSize="10" />
-					<player weight="80" />
-				</and>
-			</cond>
-		</skill>
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+	</skill>
 	<skill id="2533" levels="1" name="Pathfinder Supplies">
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
-			<cond msgId="129">
-				<and>
-					<player invSize="10" />
-					<player weight="80" />
-				</and>
-			</cond>
-		</skill>
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+	</skill>
 	<skill id="2534" levels="1" name="Pathfinder Supplies">
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
@@ -704,8 +704,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<cond msgId="129">
 			<and>
-			<player invSize="10" />
-			<player weight="80" />
+				<player invSize="10" />
+				<player weight="80" />
 			</and>
 		</cond>
 	</skill>
