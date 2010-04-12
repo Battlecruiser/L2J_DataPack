@@ -1166,7 +1166,7 @@
 			<effect name="Mute" time="60" val="0" stackOrder="1" stackType="silence" />
 		</for>
 		<enchant2for>
-			<effect name="Mute" time="#ench2time" val="0" stackOrder="1" stackType="silence" />	
+			<effect name="Mute" time="#ench2time" val="0" stackOrder="1" stackType="silence" />
 		</enchant2for>
 	</skill>
 	<skill id="1068" levels="3" name="Might" enchantGroup1="1" enchantGroup2="1">
@@ -1280,7 +1280,7 @@
 			<effect name="Debuff" time="#ench2time" val="0" stackOrder="2" stackType="AquaAtr">
 				<sub order="0x40" stat="waterRes" val="20" />
 				<add order="0x40" stat="fireRes" val="10" />
-		</effect>
+			</effect>
 		</enchant2for>
 		<enchant3for>
 			<effect name="Debuff" time="30" val="0" stackOrder="2" stackType="AquaAtr">

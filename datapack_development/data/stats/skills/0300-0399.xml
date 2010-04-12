@@ -995,7 +995,7 @@
 		<enchant1for>
 			<effect count="0x7fffffff" name="DamOverTime" time="3" val="150">
 				<mul order="0x30" stat="mAtkSpd" val="#ench1mAtkSpd" />
-				<mul order="0x30" stat="mReuse" val="0.9"/>
+				<mul order="0x30" stat="mReuse" val="0.9" />
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="1.1" />
 			</effect>
 		</enchant1for>
@@ -1083,7 +1083,7 @@
 			<effect count="40" name="HealOverTime" time="3" val="#ench1hpHeal" stackOrder="3" stackType="touch">
 				<mul order="0x30" stat="cancelVuln" val="0" />
 				<mul order="0x30" stat="debuffVuln" val="0.7" />
-			<mul order="0x30" stat="gainHp" val="1.3" />
+				<mul order="0x30" stat="gainHp" val="1.3" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
@@ -1137,8 +1137,8 @@
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant6 name="magicLvl" val="#enchantMagicLvl" /> 
-		<enchant7 name="magicLvl" val="#enchantMagicLvl" /> 
+		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant7 name="magicLvl" val="#enchantMagicLvl" />
 		<set name="mpConsume" val="153" />
 		<set name="weaponsAllowed" val="32" /> <!-- Bow -->
 		<set name="magicLvl" val="76" />
@@ -1177,8 +1177,8 @@
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant6 name="magicLvl" val="#enchantMagicLvl" /> 
-		<enchant7 name="magicLvl" val="#enchantMagicLvl" /> 
+		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant7 name="magicLvl" val="#enchantMagicLvl" />
 		<set name="mpConsume" val="77" />
 		<set name="nextActionAttack" val="true" />
 		<set name="weaponsAllowed" val="262160" /> <!-- Dagger/Dual Daggers -->
@@ -1196,7 +1196,7 @@
 		<set name="hitTime" val="1800" />
 		<set name="baseCritRate" val="15" />
 		<enchant1 name="power" val="#ench1Power" />
-		<enchant2 name="baseCritRate" val="#ench2CritRate"/>
+		<enchant2 name="baseCritRate" val="#ench2CritRate" />
 		<enchant3 name="element" val="0" />
 		<enchant3 name="elementPower" val="#enchelementPower" />
 		<enchant4 name="element" val="1" />
@@ -1272,7 +1272,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="1800" />
-		<enchant1 name="power" val="#ench1Power"/>
+		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="hpConsume" val="#ench2hpConsume" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant3 name="element" val="3" />
@@ -2147,9 +2147,9 @@
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant6 name="magicLvl" val="#enchantMagicLvl" /> 
-		<enchant7 name="magicLvl" val="#enchantMagicLvl" /> 
-		<enchant8 name="magicLvl" val="#enchantMagicLvl" /> 
+		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant7 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant8 name="magicLvl" val="#enchantMagicLvl" />
 		<set name="weaponsAllowed" val="32" /> <!-- Bow -->
 		<set name="mpConsume" val="114" />
 		<set name="power" val="2020" />
