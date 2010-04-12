@@ -35279,7 +35279,7 @@ INSERT INTO `droplist` VALUES
 (29129,417,4,12,1,67295), -- Manticore Skin Gaiters
 (29129,1943,216,648,2,53302), -- Manticore Skin Gaiters Pattern
 (29132,2059,8,22,2,289288), -- Flamberge Blade
-(29132,6574,1,1,2,288485), --Blessed Scroll: Enchant Armor (C)
+(29132,6574,1,1,2,288485), -- Blessed Scroll: Enchant Armor (C)
 (29132,439,1,1,1,267666), -- Karmian Tunic
 (29132,4589,4,12,2,210353), -- Greater Dye of STR
 (29132,1962,53,157,2,118691), -- Karmian Tunic Pattern
