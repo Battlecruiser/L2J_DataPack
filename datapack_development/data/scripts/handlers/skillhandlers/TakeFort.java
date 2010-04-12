@@ -53,7 +53,7 @@ public class TakeFort implements ISkillHandler
 		
 		try
 		{
-			fort.EndOfSiege(player.getClan());
+			fort.endOfSiege(player.getClan());
 		}
 		catch (Exception e)
 		{
