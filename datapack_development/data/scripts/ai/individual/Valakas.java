@@ -1247,7 +1247,7 @@ public class Valakas extends L2AttackableAIScript
 	public void callSkillAI(L2Npc npc, L2Character c2, L2Skill skill)
 	{
 		QuestTimer timer = getQuestTimer("1003", npc, null);
-		
+
 		if (npc == null)
 		{
 			if (timer != null)
@@ -1257,7 +1257,7 @@ public class Valakas extends L2AttackableAIScript
 		
 		if (npc.isInvul())
 			return;
-		
+
 		if (c2 == null || c2.isDead() || timer == null)
 		{
 			c2 = getRandomTarget(npc); // just in case if hate AI fail
@@ -1267,11 +1267,9 @@ public class Valakas extends L2AttackableAIScript
 				return;
 			}
 		}
-		
 		L2Character target = c2;
 		if (target == null || target.isDead())
 		{
-			startQuestTimer("1003", 500, npc, null, true);
 			return;
 		}
 
@@ -1286,7 +1284,6 @@ public class Valakas extends L2AttackableAIScript
 		}
 		else
 		{
-			startQuestTimer("1003", 500, npc, null, true);
 			npc.getAI().setIntention(AI_INTENTION_FOLLOW, target, null);
 			npc.setIsCastingNow(false);
 		}
