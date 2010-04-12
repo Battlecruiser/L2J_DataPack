@@ -54,7 +54,7 @@ public class TakeCastle implements ISkillHandler
 		
 		try
 		{
-			castle.Engrave(player.getClan(), targets[0]);
+			castle.engrave(player.getClan(), targets[0]);
 		}
 		catch (Exception e)
 		{
