@@ -205,7 +205,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="pAtk" val="#pAtk" /> 
+			<add order="0x40" stat="pAtk" val="#pAtk" />
 		</for>
 	</skill>
 	<skill id="3826" levels="2" name="Sword of Boost HP">
@@ -237,23 +237,23 @@
 		</for>
 	</skill>
 	<skill id="3829" levels="1" name="Sword of Stun">
-		<set name="activationChance" val="5"/>
-		<set name="chanceType" val="ON_HIT"/>
-		<set name="magicLvl" val="80"/>
-		<set name="operateType" val="OP_PASSIVE"/>
-		<set name="skillType" val="BUFF"/>
-		<set name="target" val="TARGET_SELF"/>
-		<set name="triggeredId" val="5665"/>
-		<set name="triggeredLevel" val="1"/>
+		<set name="activationChance" val="5" />
+		<set name="chanceType" val="ON_HIT" />
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5665" />
+		<set name="triggeredLevel" val="1" />
 	</skill>
-	<skill id="3830" levels="3" name="Rapier of Might">		
+	<skill id="3830" levels="3" name="Rapier of Might">
 		<!-- Increases P.Atk of Masterwork Rapier Weapon. -->
 		<table name="#pAtk"> 60 70 80 </table> <!-- Guess -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="pAtk" val="#pAtk" /> 
+			<add order="0x40" stat="pAtk" val="#pAtk" />
 		</for>
 	</skill>
 	<skill id="3831" levels="2" name="Rapier of Boost HP">
@@ -285,14 +285,14 @@
 		</for>
 	</skill>
 	<skill id="3834" levels="1" name="Rapier of Stun">
-		<set name="activationChance" val="5"/>
-		<set name="chanceType" val="ON_HIT"/>
-		<set name="magicLvl" val="80"/>
-		<set name="operateType" val="OP_PASSIVE"/>
-		<set name="skillType" val="BUFF"/>
-		<set name="target" val="TARGET_SELF"/>
-		<set name="triggeredId" val="5666"/>
-		<set name="triggeredLevel" val="1"/>
+		<set name="activationChance" val="5" />
+		<set name="chanceType" val="ON_HIT" />
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5666" />
+		<set name="triggeredLevel" val="1" />
 	</skill>
 	<skill id="3835" levels="3" name="Dual-Blade Weapon of Might">
 		<!-- Increases P.Atk of Masterwork Dual-Blade Weapon. -->
@@ -333,14 +333,14 @@
 		</for>
 	</skill>
 	<skill id="3839" levels="1" name="Dual-Blade Weapon of Stun">
-		<set name="activationChance" val="5"/>
-		<set name="chanceType" val="ON_HIT"/>
-		<set name="magicLvl" val="80"/>
-		<set name="operateType" val="OP_PASSIVE"/>
-		<set name="skillType" val="BUFF"/>
-		<set name="target" val="TARGET_SELF"/>
-		<set name="triggeredId" val="5667"/>
-		<set name="triggeredLevel" val="1"/>
+		<set name="activationChance" val="5" />
+		<set name="chanceType" val="ON_HIT" />
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5667" />
+		<set name="triggeredLevel" val="1" />
 	</skill>
 	<skill id="3840" levels="2" name="Two-handed Sword of Haste">
 		<set name="target" val="TARGET_NONE" />
@@ -399,7 +399,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-		<add order="0x40" stat="accCombat" val="2" />
+			<add order="0x40" stat="accCombat" val="2" />
 		</for>
 	</skill>
 	<skill id="3848" levels="1" name="Ancient Sword of Vampiric Rage">
@@ -459,7 +459,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="mAtk" val="100" /> 
+			<add order="0x40" stat="mAtk" val="100" />
 		</for>
 	</skill>
 	<skill id="3855" levels="1" name="not_used">
@@ -505,14 +505,14 @@
 		</for>
 	</skill>
 	<skill id="3861" levels="1" name="Dagger of Poison">
-		<set name="activationChance" val="5"/>
-		<set name="chanceType" val="ON_HIT"/>
-		<set name="magicLvl" val="80"/>
-		<set name="operateType" val="OP_PASSIVE"/>
-		<set name="skillType" val="BUFF"/>
-		<set name="target" val="TARGET_SELF"/>
-		<set name="triggeredId" val="5668"/>
-		<set name="triggeredLevel" val="1"/>
+		<set name="activationChance" val="5" />
+		<set name="chanceType" val="ON_HIT" />
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5668" />
+		<set name="triggeredLevel" val="1" />
 	</skill>
 	<skill id="3862" levels="1" name="Dagger of Guidance">
 		<!-- Increases Accuracy of Masterwork Dagger Weapon. -->
@@ -629,14 +629,14 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="3876" levels="1" name="Polearm of Stun">
-		<set name="activationChance" val="5"/>
-		<set name="chanceType" val="ON_HIT"/>
-		<set name="magicLvl" val="80"/>
-		<set name="operateType" val="OP_PASSIVE"/>
-		<set name="skillType" val="BUFF"/>
-		<set name="target" val="TARGET_SELF"/>
-		<set name="triggeredId" val="5669"/>
-		<set name="triggeredLevel" val="1"/>
+		<set name="activationChance" val="5" />
+		<set name="chanceType" val="ON_HIT" />
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5669" />
+		<set name="triggeredLevel" val="1" />
 	</skill>
 	<skill id="3877" levels="2" name="Polearm of Boost HP">
 		<!-- Increases Max HP of Masterwork Polearm Weapon. -->
@@ -664,7 +664,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="pAtk" val="#pAtk" /> 
+			<add order="0x40" stat="pAtk" val="#pAtk" />
 		</for>
 	</skill>
 	<skill id="3880" levels="2" name="Fist Weapon of Haste">
@@ -682,14 +682,14 @@
 		</for>
 	</skill>
 	<skill id="3882" levels="1" name="Fist Weapon of Stun">
-		<set name="activationChance" val="5"/>
-		<set name="chanceType" val="ON_HIT"/>
-		<set name="magicLvl" val="80"/>
-		<set name="operateType" val="OP_PASSIVE"/>
-		<set name="skillType" val="BUFF"/>
-		<set name="target" val="TARGET_SELF"/>
-		<set name="triggeredId" val="5670"/>
-		<set name="triggeredLevel" val="1"/>
+		<set name="activationChance" val="5" />
+		<set name="chanceType" val="ON_HIT" />
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5670" />
+		<set name="triggeredLevel" val="1" />
 	</skill>
 	<skill id="3883" levels="1" name="Fist Weapon of Critical Power">
 		<!-- Increases Critical Power Damage of Masterwork Fist Weapon. -->
@@ -712,14 +712,14 @@
 	</skill>
 	<skill id="3885" levels="2" name="Blunt Weapon of Stun">
 		<table name="#triggeredId"> 5671 5672 </table>
-		<set name="activationChance" val="5"/>
-		<set name="chanceType" val="ON_HIT"/>
-		<set name="magicLvl" val="80"/>
-		<set name="operateType" val="OP_PASSIVE"/>
-		<set name="skillType" val="BUFF"/>
-		<set name="target" val="TARGET_SELF"/>
-		<set name="triggeredId" val="#triggeredId"/>
-		<set name="triggeredLevel" val="1"/>
+		<set name="activationChance" val="5" />
+		<set name="chanceType" val="ON_HIT" />
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="#triggeredId" />
+		<set name="triggeredLevel" val="1" />
 	</skill>
 	<skill id="3886" levels="1" name="Blunt Weapon of Haste">
 		<!-- Increases Atk. Speed of Masterwork Blunt Weapon. -->
@@ -736,7 +736,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-		<mul order="0x30" stat="regHp" val="1.1" />
+			<mul order="0x30" stat="regHp" val="1.1" />
 		</for>
 	</skill>
 	<skill id="3888" levels="1" name="Blunt Weapon of Guidance">
@@ -755,7 +755,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="mAtk" val="#mAtk" /> 
+			<add order="0x40" stat="mAtk" val="#mAtk" />
 		</for>
 	</skill>
 	<skill id="3890" levels="1" name="Blunt Weapon of Mana Boost">
@@ -835,7 +835,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="mAtk" val="#mAtk" /> 
+			<add order="0x40" stat="mAtk" val="#mAtk" />
 		</for>
 	</skill>
 </list>

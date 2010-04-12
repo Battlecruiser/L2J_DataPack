@@ -1625,7 +1625,7 @@
 				<mul order="0x30" stat="mDef" val="1.2" />
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
 				<mul order="0x30" stat="debuffVuln" val="0.9" />
-				<mul order="0x30" stat="runSpd" val="#ench3Spd"/>
+				<mul order="0x30" stat="runSpd" val="#ench3Spd" />
 				<add order="0x40" stat="absorbDam" val="5" />
 			</effect>
 		</enchant3for>
@@ -1764,7 +1764,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1362" levels="1" name="Chant of Spirit" enchantGroup1="5" enchantGroup2="5" >
+	<skill id="1362" levels="1" name="Chant of Spirit" enchantGroup1="5" enchantGroup2="5">
 		<table name="#ench1Time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 </table>
 		<table name="#ench2mpInitialConsume"> 54 52 51 49 47 45 43 41 39 37 35 34 32 30 28 </table>
 		<table name="#ench2mpConsume"> 218 210 202 194 188 180 172 165 157 150 142 134 126 120 112 </table>
@@ -1793,7 +1793,7 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="1363" levels="1" name="Chant of Victory" enchantGroup1="5" enchantGroup2="5" enchantGroup3="5" >
+	<skill id="1363" levels="1" name="Chant of Victory" enchantGroup1="5" enchantGroup2="5" enchantGroup3="5">
 		<table name="#enchantMagicLvl"> 78 79 79 80 80 81 81 82 82 83 83 84 84 85 85 </table>
 		<table name="#ench1Time"> 320 340 360 380 400 420 440 460 480 500 520 540 560 580 600 </table>
 		<table name="#ench2mpInitialConsume"> 55 53 51 49 47 45 43 41 40 38 36 34 32 30 28 </table>
@@ -2263,12 +2263,12 @@
 				<add order="0x40" stat="waterRes" val="15" />
 			</effect>
 		</for>
-		  <enchant1for>
+		<enchant1for>
 			<effect name="Debuff" time="30" val="0" stackOrder="2" stackType="surrender">
 				<sub order="0x40" stat="fireRes" val="#ench1fireRes" />
 				<add order="0x40" stat="waterRes" val="15" />
 			</effect>
-  		</enchant1for>
+		</enchant1for>
 	</skill>
 	<skill id="1384" levels="5" name="Mass Surrender to Water" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -2311,7 +2311,7 @@
 				<sub order="0x40" stat="waterRes" val="#ench1waterRes" />
 				<add order="0x40" stat="fireRes" val="15" />
 			</effect>
-  		</enchant1for>
+		</enchant1for>
 	</skill>
 	<skill id="1385" levels="5" name="Mass Surrender to Wind" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -2354,7 +2354,7 @@
 				<sub order="0x40" stat="windRes" val="#ench1windRes" />
 				<add order="0x40" stat="earthRes" val="15" />
 			</effect>
-  		</enchant1for>
+		</enchant1for>
 	</skill>
 	<skill id="1386" levels="10" name="Arcane Disruption" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -2391,12 +2391,12 @@
 			<effect name="Debuff" time="30" val="0">
 				<mul order="0x30" stat="mAtkSpd" val="#ench1mAtkSpd" />
 			</effect>
-  		</enchant1for>
+		</enchant1for>
 		<enchant2for>
 			<effect name="Debuff" time="#ench2Time" val="0">
 				<mul order="0x30" stat="mAtkSpd" val="0.77" />
 			</effect>
-  		</enchant2for>
+		</enchant2for>
 	</skill>
 	<skill id="1387" levels="3" name="Summon Cursed Bones">
 		<table name="#mpConsume"> 318 366 407 </table>
@@ -2442,7 +2442,7 @@
 			<effect name="Buff" time="#ench2Time" val="0" stackOrder="1" stackType="Great">
 				<mul order="0x30" stat="pAtk" val="1.1" />
 			</effect>
-  		</enchant2for>
+		</enchant2for>
 	</skill>
 	<skill id="1389" levels="3" name="Greater Shield" enchantGroup1="1" enchantGroup2="1">
 		<table name="#ench1MpConsume"> 68 67 65 64 63 62 60 59 58 57 55 54 53 52 50 49 49 48 47 45 44 43 42 40 39 38 37 35 34 33 </table>
@@ -2471,7 +2471,7 @@
 			<effect name="Buff" time="#ench2Time" val="0" stackOrder="1" stackType="Great">
 				<mul order="0x30" stat="pDef" val="1.15" />
 			</effect>
-  		</enchant2for>
+		</enchant2for>
 	</skill>
 	<skill id="1390" levels="3" name="War Chant" enchantGroup1="1" enchantGroup2="1">
 		<table name="#ench1MpConsume"> 269 265 263 259 257 254 250 248 244 242 238 235 232 229 225 223 219 217 213 210 207 204 202 198 195 192 189 185 183 179 </table>
@@ -2499,7 +2499,7 @@
 			<effect name="Buff" time="#ench2Time" val="0" stackOrder="1" stackType="Great">
 				<mul order="0x30" stat="pAtk" val="1.1" />
 			</effect>
-  		</enchant2for>
+		</enchant2for>
 	</skill>
 	<skill id="1391" levels="3" name="Earth Chant" enchantGroup1="1" enchantGroup2="1">
 		<table name="#ench1MpConsume"> 269 265 263 259 257 254 250 248 244 242 238 235 232 229 225 223 219 217 213 210 207 204 202 198 195 192 189 185 183 179 </table>
@@ -2527,7 +2527,7 @@
 			<effect name="Buff" time="#ench2Time" val="0" stackOrder="1" stackType="Great">
 				<mul order="0x30" stat="pDef" val="1.15" />
 			</effect>
-  		</enchant2for>
+		</enchant2for>
 	</skill>
 	<skill id="1392" levels="3" name="Holy Resistance" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -2702,7 +2702,7 @@
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 0.79 0.79 0.79 0.79 0.79 0.79 0.79 0.78 0.78 0.78 0.78 0.78 0.78 0.78 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.76 0.76 0.76 0.76 0.76 0.76 0.76 0.75 </table>
 		<table name="#ench2Power"> 0.9 0.9 0.9 0.9 0.9 0.89 0.89 0.89 0.89 0.89 0.89 0.88 0.88 0.88 0.88 0.88 0.88 0.87 0.87 0.87 0.87 0.87 0.87 0.86 0.86 0.86 0.86 0.86 0.86 0.85 </table>
-		<table name="#ench4Time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>		
+		<table name="#ench4Time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
 		<table name="#magicLvl"> 58 66 74 </table>
 		<table name="#mpConsume"> 54 62 69 </table>
 		<table name="#itemConsumeCount"> 1 2 3 </table>
