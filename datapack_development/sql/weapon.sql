@@ -3504,7 +3504,7 @@ INSERT INTO `weapon` VALUES
 (16957,'Dismantler of Friendship','90 day limited period','none','true',1930,1,1,'wood','none',210,15,'none',8,2.00000,0,0,0,350,0,99,-1,129600,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'0-0;'),
 (16958,'Saber Tooth of Friendship','90 day limited period','none','true',1950,3,3,'wood','none',169,15,'none',8,2.00000,0,0,0,350,0,83,-1,129600,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'0-0;'),
 (16959,'General\'s Katzbalger of Friendship','90 day limited period','none','true',2010,3,3,'wood','none',100,15,'none',8,2.00000,0,0,0,350,0,54,-1,129600,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'0-0;'),
-(16960,'Ã‰clair Bijou of Friendship','90 day limited period','none','true',1300,1,1,'wood','none',228,40,'none',10,-1.00000,0,0,0,406,0,121,-1,129600,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'0-0;'),
+(16960,'Eclair Bijou of Friendship','90 day limited period','none','true',1300,1,1,'wood','none',228,40,'none',10,-1.00000,0,0,0,406,0,121,-1,129600,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'0-0;'),
 (16961,'Colichemarde of Friendship','90 day limited period','none','true',1350,1,1,'wood','none',176,40,'none',10,-1.00000,0,0,0,406,0,99,-1,129600,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'0-0;'),
 (16962,'Admiral\'s Estoc of Friendship','90 day limited period','none','true',1380,3,3,'wood','none',141,40,'none',10,-1.00000,0,0,0,406,0,83,-1,129600,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'0-0;'),
 (16963,'Grand Epee of Friendship','90 day limited period','none','true',1440,3,3,'wood','none',83,40,'none',10,-1.00000,0,0,0,406,0,54,-1,129600,0,0,'false','false','false','false','false',0,0,0,0,0,0,0,0,0,'0-0;'),
@@ -3616,6 +3616,7 @@ UPDATE `weapon` SET time = "14400" WHERE (additionalname LIKE '%10 Day%') or (ad
 UPDATE `weapon` SET time = "20160" WHERE (additionalname LIKE '%14 Day%') or (additionalname LIKE '%14-Day%');
 UPDATE `weapon` SET time = "43200" WHERE (additionalname LIKE '%30 Day%') or (additionalname LIKE '%30-Day%');
 UPDATE `weapon` SET time = "86400" WHERE (additionalname LIKE '%60 Day%') or (additionalname LIKE '%60-Day%');
+UPDATE `weapon` SET time = "129600" WHERE (additionalname LIKE '%90 Day%') or (additionalname LIKE '%90-Day%');
 
 -- Ensures that all rapiers have the rapier skill, then sets the Infinity Rapier one to 0 (since it's called via the Infinity SA)
 UPDATE `weapon` SET enchant4_skill_id = "3426", enchant4_skill_lvl = "1" WHERE weaponType = "rapier";
