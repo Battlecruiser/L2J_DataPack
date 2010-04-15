@@ -12419,7 +12419,7 @@ INSERT INTO `droplist` VALUES
 (21087,8751,1,1,200,85),-- High-Grade Life Stone: level 70
 (21087,8761,1,1,200,17),-- Top-Grade Life Stone: level 70
 (21088,4042,1,1,-1,165717),-- Enria
-(21088,5230,1,1,-1,12863),-- Recipe: Sealed Majestic Leather Armor(60%)
+(21088,5338,1,1,-1,12863),-- Recipe: Sealed Majestic Leather Armor(60%)
 (21088,5485,1,1,-1,83611),-- Sealed Tallum Tunic Texture
 (21088,57,4907,10001,0,700000),-- Adena
 (21088,5304,1,1,1,46),-- Sealed Tallum Tunic
