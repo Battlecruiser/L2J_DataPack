@@ -134,7 +134,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="magicDamVul" val="0.98" />
+			<mul order="0x30" stat="magicSuccRes" val="1.02" />
 			<sub order="0x40" stat="cancel" val="13" />
 		</for>
 	</skill>
@@ -143,7 +143,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="magicDamVul" val="0.98" />
+			<mul order="0x30" stat="magicSuccRes" val="1.02" />
 			<add order="0x40" stat="darkRes" val="2" />
 		</for>
 	</skill>
