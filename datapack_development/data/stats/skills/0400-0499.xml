@@ -1924,17 +1924,17 @@
 	<skill id="466" levels="55" name="Magic Immunity" enchantGroup1="1">
 		<table name="#mDef"> 11 12 13 15 17 19 20 22 24 26 27 28 30 31 32 35 36 37 40 42 43 44 46 47 49 51 52 54 56 57 59 61 63 64 66 68 70 72 74 76 78 80 82 84 86 88 91 93 95 97 99 102 104 106 108 </table>
 		<table name="#ench1mDef"> 113 114 115 115 116 117 117 118 119 119 120 121 121 122 123 123 124 125 125 126 127 127 128 129 129 130 131 131 132 133 </table>
-		<table name="#magicSuccRes"> 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05 1.05 1.05 1.05 1.05 1.05 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.2 1.2 1.2 1.2 1.2 1.2 1.25 1.25 1.25 1.25 1.25 1.25 </table>
+		<table name="#magicDamVul"> 1 1 1 1 1 1 1 1 1 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.8 0.8 0.8 0.8 0.8 0.8 0.75 0.75 0.75 0.75 0.75 0.75 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<add order="0x40" stat="mDef" val="#mDef" />
-			<mul order="0x30" stat="magicSuccRes" val="#magicSuccRes" />
+			<mul order="0x30" stat="magicDamVul" val="#magicDamVul" />
 		</for>
 		<enchant1for>
 			<add order="0x40" stat="mDef" val="#ench1mDef" />
-			<mul order="0x30" stat="magicSuccRes" val="0.75" />
+			<mul order="0x30" stat="magicDamVul" val="0.75" />
 		</enchant1for>
 	</skill>
 	<skill id="467" levels="23" name="Soul Mastery">
