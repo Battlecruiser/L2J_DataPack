@@ -554,8 +554,6 @@
 		</for>
 	</skill>
 	<skill id="5568" levels="1" name="Frost Armor">
-		<!-- Based in "Diamond Dust" skill -->
-		<!-- TODO: Duration & Decreased stats needs to be verified -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isDebuff" val="true" />
@@ -565,8 +563,8 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Debuff" time="15" val="0" stackOrder="0.7" stackType="RunSpeedDown">
-				<mul order="0x30" stat="runSpd" val="0.6" />
+			<effect name="Debuff" time="60" val="0" stackOrder="0.7" stackType="RunSpeedDown">
+				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
 	</skill>
