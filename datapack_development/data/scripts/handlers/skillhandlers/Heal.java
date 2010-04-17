@@ -30,6 +30,7 @@ import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.skills.Formulas;
 import com.l2jserver.gameserver.skills.Stats;
+import com.l2jserver.gameserver.templates.item.L2Item;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
 
 /**
@@ -64,90 +65,114 @@ public class Heal implements ISkillHandler
 		{
 		}
 
-		L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
-		
-		L2PcInstance player = null;
-		if (activeChar instanceof L2PcInstance)
-			player = (L2PcInstance) activeChar;
-		boolean clearSpiritShot = false;
-		
+		double power = skill.getPower();
+
+		switch (skill.getSkillType())
+		{
+		case HEAL_STATIC:
+			break;
+		default:
+			final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
+			double staticShotBonus = 0;
+			int mAtkMul = 1; // mAtk multiplier
+			if (weaponInst != null
+					&& weaponInst.getChargedSpiritshot() != L2ItemInstance.CHARGED_NONE)
+			{
+				if (activeChar instanceof L2PcInstance && ((L2PcInstance)activeChar).isMageClass())
+				{
+					staticShotBonus = skill.getMpConsume(); // static bonus for spiritshots
+
+					if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
+					{
+						mAtkMul = 4;
+						staticShotBonus *= 2.4; // static bonus for blessed spiritshots
+					}
+					else
+						mAtkMul = 2;
+				}
+				else
+				{
+					// no static bonus
+					// grade dynamic bonus
+					switch (weaponInst.getItem().getItemGrade())
+					{
+						case L2Item.CRYSTAL_S84:
+							mAtkMul = 4;
+							break;
+						case L2Item.CRYSTAL_S80:
+							mAtkMul = 2;
+							break;
+					}
+					// shot dynamic bonus
+					if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
+						mAtkMul *= 4; // 16x/8x/4x s84/s80/other
+					else
+						mAtkMul += 1; // 5x/3x/1x s84/s80/other
+				}
+
+				weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
+			}
+			// If there is no weapon equipped, check for an active summon.
+			else if (activeChar instanceof L2Summon
+					&& ((L2Summon)activeChar).getChargedSpiritShot() != L2ItemInstance.CHARGED_NONE)
+			{
+				staticShotBonus = skill.getMpConsume(); // static bonus for spiritshots
+
+				if (((L2Summon)activeChar).getChargedSpiritShot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
+				{
+					staticShotBonus *= 2.4; // static bonus for blessed spiritshots
+					mAtkMul = 4;
+				}
+				else
+					mAtkMul = 2;
+
+				((L2Summon)activeChar).setChargedSpiritShot(L2ItemInstance.CHARGED_NONE);
+			}
+			else if (activeChar instanceof L2Npc && ((L2Npc)activeChar)._spiritshotcharged)
+			{
+				staticShotBonus = 2.4 * skill.getMpConsume(); // always blessed spiritshots
+				mAtkMul = 4;
+
+				((L2Npc)activeChar)._spiritshotcharged = false;
+			}
+				
+			power += staticShotBonus + Math.sqrt(mAtkMul * activeChar.getMAtk(activeChar, null));
+		}
+
+		double hp;
 		for (L2Character target: (L2Character[]) targets)
 		{
 			// We should not heal if char is dead
 			if (target == null || target.isDead())
 				continue;
 			
-			// Player holding a cursed weapon can't be healed and can't heal
+			if (target instanceof L2DoorInstance || target instanceof L2SiegeFlagInstance)
+				continue;
+
+				// Player holding a cursed weapon can't be healed and can't heal
 			if (target != activeChar)
 			{
 				if (target instanceof L2PcInstance && ((L2PcInstance) target).isCursedWeaponEquipped())
 					continue;
-				else if (player != null && player.isCursedWeaponEquipped())
+				else if (activeChar instanceof L2PcInstance && ((L2PcInstance)activeChar).isCursedWeaponEquipped())
 					continue;
 			}
-			
-			double hp = skill.getPower();
-			
-			if (skill.getSkillType() == L2SkillType.HEAL_PERCENT)
+
+			switch (skill.getSkillType())
 			{
-				hp = target.getMaxHp() * hp / 100.0;
+				case HEAL_PERCENT:
+					hp = target.getMaxHp() * power / 100.0;
+					break;
+				default:
+					hp = power;
+					hp *= target.calcStat(Stats.HEAL_EFFECTIVNESS, 100, null, null) / 100;
 			}
-			else
-			{
-				//Added effect of SpS and Bsps
-				if (weaponInst != null)
-				{
-					if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
-					{
-						hp *= 1.5;
-						clearSpiritShot = true;
-					}
-					else if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_SPIRITSHOT)
-					{
-						hp *= 1.3;
-						clearSpiritShot = true;
-					}
-				}
-				// If there is no weapon equipped, check for an active summon.
-				else if (activeChar instanceof L2Summon)
-				{
-					L2Summon activeSummon = (L2Summon) activeChar;
-					
-					if (activeSummon.getChargedSpiritShot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
-					{
-						hp *= 1.5;
-						clearSpiritShot = true;
-					}
-					else if (activeSummon.getChargedSpiritShot() == L2ItemInstance.CHARGED_SPIRITSHOT)
-					{
-						hp *= 1.3;
-						clearSpiritShot = true;
-					}
-				}
-				else if (activeChar instanceof L2Npc)
-				{
-					 if(((L2Npc)activeChar)._spiritshotcharged)
-					      hp *= 1.5;       
-					 ((L2Npc)activeChar)._spiritshotcharged = false;
-						
-				}
-			}
-			
-			//int cLev = activeChar.getLevel();
-			//hp += skill.getPower()/*+(Math.sqrt(cLev)*cLev)+cLev*/;
-			if (skill.getSkillType() == L2SkillType.HEAL_STATIC)
-				hp = skill.getPower();
-			else
-				hp *= target.calcStat(Stats.HEAL_EFFECTIVNESS, 100, null, null) / 100;
-			
+
 			// Healer proficiency (since CT1)
 			hp *= activeChar.calcStat(Stats.HEAL_PROFICIENCY, 100, null, null) / 100;
 			// Extra bonus (since CT1.5)
 			if (!skill.isPotion())
 				hp += target.calcStat(Stats.HEAL_STATIC_BONUS, 0, null, null);
-
-			if (target instanceof L2DoorInstance || target instanceof L2SiegeFlagInstance)
-				hp = 0;
 
 			// Heal critic, since CT2.3 Gracia Final
 			if(skill.getSkillType() == L2SkillType.HEAL && !skill.isPotion()
@@ -156,14 +181,11 @@ public class Heal implements ISkillHandler
 
 			//from CT2 u will receive exact HP, u can't go over it, if u have full HP and u get HP buff, u will receive 0HP restored message
 			if ((target.getCurrentHp() + hp) >= target.getMaxHp())
-			{
 				hp = target.getMaxHp() - target.getCurrentHp();
-			}
 			
 			if (hp < 0)
-			{
 				hp = 0;
-			}
+
 			target.setCurrentHp(hp + target.getCurrentHp());
 			target.setLastHealAmount((int) hp);
 			StatusUpdate su = new StatusUpdate(target.getObjectId());
@@ -193,19 +215,6 @@ public class Heal implements ISkillHandler
 						target.sendPacket(sm);
 					}
 				}
-			}
-		}
-		if (clearSpiritShot)
-		{
-			if (activeChar instanceof L2Summon)
-			{
-				L2Summon activeSummon = (L2Summon) activeChar;
-				activeSummon.setChargedSpiritShot(L2ItemInstance.CHARGED_NONE);
-			}
-			else
-			{
-				if (weaponInst != null)
-					weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
 			}
 		}
 	}
