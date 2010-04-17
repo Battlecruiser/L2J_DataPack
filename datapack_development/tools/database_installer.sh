@@ -325,7 +325,7 @@ if [ "$1" == "I" ]; then
 $MYG < ../cb_sql/clan_introductions.sql &> /dev/null
 $MYG < ../cb_sql/comments.sql &> /dev/null
 $MYG < ../cb_sql/forums.sql &> /dev/null
-$MYG < ../cb_sql/gameservers.sql &> /dev/null
+$MYG < ../cb_sql/registered_gameservers.sql &> /dev/null
 $MYG < ../cb_sql/posts.sql &> /dev/null
 $MYG < ../cb_sql/topics.sql &> /dev/null
 fi
