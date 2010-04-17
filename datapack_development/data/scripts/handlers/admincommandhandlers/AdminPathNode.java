@@ -38,7 +38,12 @@ public class AdminPathNode implements IAdminCommandHandler
 	{
 		if (command.equals("admin_pn_info"))
 		{
-			
+			final String[] info = PathFinding.getInstance().getStat();
+			if (info == null)
+				activeChar.sendMessage("Not supported");
+			else
+				for (String msg : info)
+					activeChar.sendMessage(msg);
 		}
 		else if (command.equals("admin_show_path"))
 		{
@@ -61,7 +66,7 @@ public class AdminPathNode implements IAdminCommandHandler
 			}
 			if (activeChar.getTarget() != null)
 			{
-				List<AbstractNodeLoc> path = PathFinding.getInstance().findPath(activeChar.getX(), activeChar.getY(), (short) activeChar.getZ(), activeChar.getTarget().getX(), activeChar.getTarget().getY(), (short) activeChar.getTarget().getZ(), activeChar.getInstanceId());
+				List<AbstractNodeLoc> path = PathFinding.getInstance().findPath(activeChar.getX(), activeChar.getY(), (short) activeChar.getZ(), activeChar.getTarget().getX(), activeChar.getTarget().getY(), (short) activeChar.getTarget().getZ(), activeChar.getInstanceId(), true);
 				if (path == null)
 				{
 					activeChar.sendMessage("No Route!");
