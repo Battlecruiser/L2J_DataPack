@@ -1796,12 +1796,16 @@
 		<enchant4 name="mpConsume" val="#ench34MpConsume" />
 		<enchant3 name="negateStats" val="POISON" />
 		<enchant3 name="negateLvl" val="9" />
-		<enchant3 name="effectType" val="NEGATE" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="negateStats" val="BLEED" />
 		<enchant4 name="negateLvl" val="9" />
-		<enchant4 name="effectType" val="NEGATE" />
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant3for>
+			<!-- <effect name="Negate" val="0" effectType="NEGATE" /> TODO: Needs Core-Side Support -->
+		</enchant3for>
+		<enchant4for>
+			<!-- <effect name="Negate" val="0" effectType="NEGATE" /> TODO: Needs Core-Side Support -->
+		</enchant4for>
 	</skill>
 	<skill id="263" levels="37" name="Deadly Blow" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
