@@ -88,11 +88,15 @@
 		<enchant3 name="power" val="#ench34Power" />
 		<enchant3 name="negateStats" val="POISON" />
 		<enchant3 name="negateLvl" val="9" />
-		<enchant3 name="effectType" val="NEGATE" />
 		<enchant4 name="power" val="#ench34Power" />
 		<enchant4 name="negateStats" val="BLEED" />
 		<enchant4 name="negateLvl" val="9" />
-		<enchant4 name="effectType" val="NEGATE" />
+		<enchant3for>
+			<!-- <effect name="Negate" val="0" effectType="NEGATE" /> TODO: Needs Core-Side Support -->
+		</enchant3for>
+		<enchant4for>
+			<!-- <effect name="Negate" val="0" effectType="NEGATE" /> TODO: Needs Core-Side Support -->
+		</enchant4for>
 	</skill>
 	<skill id="1403" levels="1" name="Summon Friend">
 		<set name="target" val="TARGET_PARTY_MEMBER" />
