@@ -547,7 +547,7 @@ for %%i in (
 clan_introductions.sql
 comments.sql
 forums.sql
-gameservers.sql
+registered_gameservers.sql
 posts.sql
 topics.sql
 ) do call :dump %%i
