@@ -194,7 +194,7 @@ public class ItemSkills implements IItemHandler
     		final long remainingTime = player.getReuseTimeStamp().get(skill.getReuseHashCode()).getRemaining();
     		final int hours = (int)(remainingTime / 3600000L);
     		final int minutes = (int)(remainingTime % 3600000L) / 60000;
-    		final int seconds = (int)(remainingTime / 1000);
+    		final int seconds = (int)(remainingTime / 1000 % 60);
     		if (hours > 0)
     		{
     			sm = new SystemMessage(SystemMessageId.S2_HOURS_S3_MINUTES_S4_SECONDS_REMAINING_FOR_REUSE_S1);
