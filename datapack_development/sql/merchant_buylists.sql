@@ -23703,7 +23703,9 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (20448,0,10005,12), -- Light Purple Maned Horse Mounting Bracelet 7 day limited period
 (20449,0,10005,13), -- Steam Beatle Mounting Bracelet 7 day limited period
 (20535,0,10005,14), -- Steam Sledge Mounting Bracelet 30 day limited period
-(20536,0,10005,15); -- Tawny Maned Lion Mounting Bracelet 30 day limited period
+(20536,0,10005,15), -- Tawny Maned Lion Mounting Bracelet 30 day limited period
+(20938,0,10005,16), -- Jet Bike Mounting Bracelet 7 day Limited Period
+(20939,0,10005,17); -- Jet Bike Mounting Bracelet 30 day limited period
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Masks
