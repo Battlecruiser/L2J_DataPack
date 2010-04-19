@@ -782,7 +782,15 @@ INSERT INTO `teleport` VALUES
 ('Tanor Fort -> Windawood Manor', 12136, -28327, 155125, -3496, 500, 0),
 ('Tanor Fort -> Dragon Valley', 12137, 73024, 118485, -3688, 500, 0),
 ('Tanor Fort -> Tanor Canyon', 12138, 60374, 164301, -2856, 500, 0),
-('Handys Block -> Fantasy Isle', 12139, -59157, -56906, -2032, 0, 0);
+('Handys Block -> Fantasy Isle', 12139, -59157, -56906, -2032, 0, 0),
+('Monastic Fort -> Fortress North Gate', 12140, 72388, -96770, -1424, 0, 0),
+('Monastic Fort -> Fortress South Gate', 12141, 71937, -92600, -1416, 0, 0),
+('Monastic Fort -> Rune Town Square', 12142, 43889, -49101, -792, 0, 0),
+('Monastic Fort -> Schuttgart Town Square', 12143, 87379, -142322, -1336, 0, 0),
+('Monastic Fort -> Swamp of Screams', 12144, 69340, -50203, -3288, 500, 0),
+('Monastic Fort -> Valley of Saints', 12145, 65307, -71445, -3688, 500, 0),
+('Monastic Fort -> Den of Evil', 12146, 68693, -110438, -1904, 500, 0),
+('Monastic Fort -> Frozen Labyrinth', 12147, 113910, -108732, -848, 500, 0);
 
 -- Castle teleports
 INSERT INTO `teleport` VALUES
