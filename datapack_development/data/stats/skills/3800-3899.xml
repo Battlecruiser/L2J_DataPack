@@ -439,9 +439,14 @@
 		</for>
 	</skill>
 	<skill id="3852" levels="3" name="Sword of Mana Boost">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Increases Max MP of Masterwork Sword Weapon. (b-a-s grade sword) -->
+		<table name="#maxMp"> 100 200 300 </table> <!-- Guess -->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="maxMp" val="#maxMp" />
+		</for>
 	</skill>
 	<skill id="3853" levels="2" name="Sword of Mana Regeneration">
 		<!-- Increases MP regeneration of Masterwork Sword Weapon. -->
@@ -759,7 +764,7 @@
 		</for>
 	</skill>
 	<skill id="3890" levels="1" name="Blunt Weapon of Mana Boost">
-		<!-- Increases Max MP of Masterwork Blunt Weapon. (skill used also for 2-hand Blunt)-->
+		<!-- Increases Max MP of Masterwork Blunt Weapon. (s-grade blunt) -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
