@@ -1059,8 +1059,6 @@
 		<table name="#ench1hpConsume"> 1184 1154 1123 1093 1062 1032 1001 971 940 910 879 849 818 788 757 </table>
 		<table name="#ench1hpHeal"> 150 153 156 159 162 165 168 171 174 177 180 183 186 189 192 </table>
 		<table name="#ench2count"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 </table>
-		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="hpConsume" val="1215" />
 		<set name="power" val="50" />
@@ -1073,7 +1071,9 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="1800" />
 		<set name="aggroPoints" val="811" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="hpConsume" val="#ench1hpConsume" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<effect count="40" name="HealOverTime" time="3" val="150" stackOrder="2" stackType="touch">
 				<mul order="0x30" stat="cancelVuln" val="0" />
@@ -1094,7 +1094,6 @@
 				<mul order="0x30" stat="debuffVuln" val="0.7" />
 				<mul order="0x30" stat="gainHp" val="1.3" />
 			</effect>
-			<effect count="40" name="HealOverTime" time="3" noicon="1" val="150" />
 		</enchant2for>
 	</skill>
 	<skill id="342" levels="1" name="Touch of Death" enchantGroup1="6" enchantGroup2="6">
