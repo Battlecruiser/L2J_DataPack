@@ -159,7 +159,7 @@ public class Disablers implements ISkillHandler
 		
 		for (L2Character target: (L2Character[]) targets)
 		{
-			if (target == null || target.isDead() || target.isInvul()) //bypass if target is null, invul or dead
+			if (target == null || target.isDead() || (target.isInvul() && !target.isParalyzed())) // bypass if target is null, dead or invul (excluding invul from Petrification)
 				continue;
 			
 			shld = Formulas.calcShldUse(activeChar, target, skill);
