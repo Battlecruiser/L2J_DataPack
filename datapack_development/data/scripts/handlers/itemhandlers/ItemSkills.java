@@ -97,14 +97,19 @@ public class ItemSkills implements IItemHandler
 				if (itemSkill != null)
 				{
 					if (!itemSkill.checkCondition(playable, playable.getTarget(), false))
-					       return;
-
+						return;
+					
 					if (playable.isSkillDisabled(itemSkill))
 					{
 						reuse(activeChar,itemSkill, item);
 						return ;
 					}
-
+					
+					if (!itemSkill.isPotion() && playable.isCastingNow())
+					{
+						return;
+					}
+					
 					if (itemSkill.getItemConsumeId() == 0 && itemSkill.getItemConsume() > 0)
 					{
 						if (!playable.destroyItem("Consume", item.getObjectId(), itemSkill.getItemConsume(), null, false))
@@ -113,7 +118,7 @@ public class ItemSkills implements IItemHandler
 							return;
 						}
 					}
-
+					
 					// send message to owner
 					if (isPet)
 					{
@@ -161,8 +166,7 @@ public class ItemSkills implements IItemHandler
 					else
 					{
 						playable.stopMove(null);
-						if (!playable.isCastingNow())
-							playable.doCast(itemSkill);
+						playable.doCast(itemSkill);
 					}
 
 					if (itemSkill.getReuseDelay() > 0)
@@ -187,58 +191,58 @@ public class ItemSkills implements IItemHandler
 	private void reuse(L2PcInstance player,L2Skill skill, L2ItemInstance item)
 	{
 		SystemMessage sm = null;
-    	final FastMap<Integer, TimeStamp> timeStamp = player.getReuseTimeStamp();
+		final FastMap<Integer, TimeStamp> timeStamp = player.getReuseTimeStamp();
 
-    	if (timeStamp != null && timeStamp.containsKey(skill.getReuseHashCode()))
-    	{
-    		final long remainingTime = player.getReuseTimeStamp().get(skill.getReuseHashCode()).getRemaining();
-    		final int hours = (int)(remainingTime / 3600000L);
-    		final int minutes = (int)(remainingTime % 3600000L) / 60000;
-    		final int seconds = (int)(remainingTime / 1000 % 60);
-    		if (hours > 0)
-    		{
-    			sm = new SystemMessage(SystemMessageId.S2_HOURS_S3_MINUTES_S4_SECONDS_REMAINING_FOR_REUSE_S1);
-    			if (skill.isPotion())
-        			sm.addItemName(item);
-    			else
-    				sm.addSkillName(skill);
-    			sm.addNumber(hours);
-    			sm.addNumber(minutes);
-    		}
-    		else if (minutes > 0)
-    		{
-    			sm = new SystemMessage(SystemMessageId.S2_MINUTES_S3_SECONDS_REMAINING_FOR_REUSE_S1);
-    			if (skill.isPotion())
-        			sm.addItemName(item);
-    			else
-    				sm.addSkillName(skill);
-    			sm.addNumber(minutes);
-    		}
-    		else
-    		{
-    			sm = new SystemMessage(SystemMessageId.S2_SECONDS_REMAINING_FOR_REUSE_S1);
-    			if (skill.isPotion())
-        			sm.addItemName(item);
-    			else
-    				sm.addSkillName(skill);
-    		}
-    		sm.addNumber(seconds);
+		if (timeStamp != null && timeStamp.containsKey(skill.getReuseHashCode()))
+		{
+			final long remainingTime = player.getReuseTimeStamp().get(skill.getReuseHashCode()).getRemaining();
+			final int hours = (int)(remainingTime / 3600000L);
+			final int minutes = (int)(remainingTime % 3600000L) / 60000;
+			final int seconds = (int)(remainingTime / 1000 % 60);
+			if (hours > 0)
+			{
+				sm = new SystemMessage(SystemMessageId.S2_HOURS_S3_MINUTES_S4_SECONDS_REMAINING_FOR_REUSE_S1);
+				if (skill.isPotion())
+					sm.addItemName(item);
+				else
+					sm.addSkillName(skill);
+				sm.addNumber(hours);
+				sm.addNumber(minutes);
+			}
+			else if (minutes > 0)
+			{
+				sm = new SystemMessage(SystemMessageId.S2_MINUTES_S3_SECONDS_REMAINING_FOR_REUSE_S1);
+				if (skill.isPotion())
+					sm.addItemName(item);
+				else
+					sm.addSkillName(skill);
+				sm.addNumber(minutes);
+			}
+			else
+			{
+				sm = new SystemMessage(SystemMessageId.S2_SECONDS_REMAINING_FOR_REUSE_S1);
+				if (skill.isPotion())
+					sm.addItemName(item);
+				else
+					sm.addSkillName(skill);
+			}
+			sm.addNumber(seconds);
 
-    		if (item.isEtcItem())
-    		{
+			if (item.isEtcItem())
+			{
 				final int group = item.getEtcItem().getSharedReuseGroup();
-    			if (group >= 0)
-    				player.sendPacket(new ExUseSharedGroupItem(item.getItemId(),
-    						group,
-    						(int)remainingTime,
-    						skill.getReuseDelay()));
-    		}
-    	}
-    	else
-    	{
-    		sm = new SystemMessage(SystemMessageId.S1_PREPARED_FOR_REUSE);
-    		sm.addItemName(item);
-    	}
-    	player.sendPacket(sm);
+				if (group >= 0)
+					player.sendPacket(new ExUseSharedGroupItem(item.getItemId(),
+							group,
+							(int)remainingTime,
+							skill.getReuseDelay()));
+			}
+		}
+		else
+		{
+			sm = new SystemMessage(SystemMessageId.S1_PREPARED_FOR_REUSE);
+			sm.addItemName(item);
+		}
+		player.sendPacket(sm);
 	}
 }
