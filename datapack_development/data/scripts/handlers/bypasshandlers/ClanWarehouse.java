@@ -124,9 +124,9 @@ public class ClanWarehouse implements IBypassHandler
 		}
 
 		if (itemtype != null)
-			player.sendPacket(new SortedWareHouseWithdrawalList(player, WareHouseWithdrawalList.PRIVATE, itemtype, sortorder));
+			player.sendPacket(new SortedWareHouseWithdrawalList(player, WareHouseWithdrawalList.CLAN, itemtype, sortorder));
 		else
-			player.sendPacket(new WareHouseWithdrawalList(player, WareHouseWithdrawalList.PRIVATE));
+			player.sendPacket(new WareHouseWithdrawalList(player, WareHouseWithdrawalList.CLAN));
 
 		if (Config.DEBUG)
 			_log.fine("Source: L2WarehouseInstance.java; Player: "+player.getName()+"; Command: showRetrieveWindowClan; Message: Showing stored items.");
