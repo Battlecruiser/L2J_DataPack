@@ -790,7 +790,15 @@ INSERT INTO `teleport` VALUES
 ('Monastic Fort -> Swamp of Screams', 12144, 69340, -50203, -3288, 500, 0),
 ('Monastic Fort -> Valley of Saints', 12145, 65307, -71445, -3688, 500, 0),
 ('Monastic Fort -> Den of Evil', 12146, 68693, -110438, -1904, 500, 0),
-('Monastic Fort -> Frozen Labyrinth', 12147, 113910, -108732, -848, 500, 0);
+('Monastic Fort -> Frozen Labyrinth', 12147, 113910, -108732, -848, 500, 0),
+('Narsell Fortress -> Fortress West Gate', 12148, 153112, 56872, -3256, 0, 0),
+('Narsell Fortress -> Fortress East Gate', 12149, 156730, 53921, -3256, 0, 0),
+('Narsell Fortress -> Aden Town Square', 12150, 147450, 28081, -2264, 0, 0),
+('Narsell Fortress -> Front of the Aden Castle Gate', 12151, 147428, 20161, -2008, 0, 0),
+('Narsell Fortress -> Ancient Battleground', 12152, 118509, -4779, -4000, 500, 0),
+('Narsell Fortress -> Enchanted Valley, Southern Region', 12153, 124904, 61992, -3920, 500, 0),
+('Narsell Fortress -> Enchanted Valley, Northern Region', 12154, 104426, 33746, -3800, 500, 0),
+('Narsell Fortress -> Blazing Swamp', 12155, 155310, -16339, -3320, 500, 0);
 
 -- Castle teleports
 INSERT INTO `teleport` VALUES
