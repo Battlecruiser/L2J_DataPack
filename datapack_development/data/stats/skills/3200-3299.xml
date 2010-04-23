@@ -922,47 +922,66 @@
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="3293" levels="1" name="Yellow Talisman of Power">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-	</skill>
-	<skill id="3294" levels="1" name="Yellow Talisman of Arcane Power">
+		<!-- CT 2.3 Confirmed, P. Atk. +20 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="mAtk" val="12" /> <!-- increase M. Atk. +12 -->
+			<add order="0x40" stat="pAtk" val="20" />
+		</for>
+	</skill>
+	<skill id="3294" levels="1" name="Yellow Talisman of Arcane Power">
+		<!-- CT 2.3 Confirmed, M. Atk. +25 -->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="mAtk" val="25" />
 		</for>
 	</skill>
 	<skill id="3295" levels="1" name="Yellow Talisman of Defense">
+		<!-- CT 2.3 Confirmed, P. Def. +32 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="pDef" val="18" /> <!-- increase P. Def. +18 -->
+			<add order="0x40" stat="pDef" val="32" />
 		</for>
 	</skill>
 	<skill id="3296" levels="1" name="Yellow Talisman - Magic Resistance">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-	</skill>
-	<skill id="3297" levels="1" name="Yellow Talisman of Accuracy">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-	</skill>
-	<skill id="3298" levels="1" name="Yellow Talisman of Evasion">
+		<!-- CT 2.3 Confirmed, M. Def. +25 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="rEvas" val="1" /> <!-- increase Evasion +1 -->
+			<add order="0x40" stat="mDef" val="25" />
+		</for>
+	</skill>
+	<skill id="3297" levels="1" name="Yellow Talisman of Accuracy">
+		<!-- CT 2.3 Confirmed, Accuracy +2 -->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="accCombat" val="2" />
+		</for>
+	</skill>
+	<skill id="3298" levels="1" name="Yellow Talisman of Evasion">
+		<!-- CT 2.3 Confirmed, Evasion +2 -->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="rEvas" val="2" />
 		</for>
 	</skill>
 	<skill id="3299" levels="1" name="Yellow Talisman of Critical Power">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Guessing : Critical Damage +50 -->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="cAtkAdd" val="50" />
+		</for>
 	</skill>
 </list>

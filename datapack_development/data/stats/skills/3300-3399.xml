@@ -1,22 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="3300" levels="1" name="Yellow Talisman of Speed">
+		<!-- CT 2.3 Confirmed, Run Spd. +5 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="runSpd" val="3" /> <!-- increase Run Speed +3 -->
+			<add order="0x40" stat="runSpd" val="5" />
 		</for>
 	</skill>
 	<skill id="3301" levels="1" name="Yellow Talisman of Violent Haste">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- CT 2.3 Confirmed, P. Atk. Spd. +10 -->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="pAtkSpd" val="10" />
+		</for>
 	</skill>
 	<skill id="3302" levels="1" name="Yellow Talisman of Arcane Haste">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- CT 2.3 Confirmed, C. Spd. +8 -->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="mAtkSpd" val="8" />
+		</for>
 	</skill>
 	<skill id="3303" levels="1" name="White Talisman of Bandages">
 		<set name="target" val="TARGET_NONE" />
@@ -54,14 +63,22 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="3310" levels="1" name="Yellow Talisman of Physical Regeneration">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Guessing, based on 593 -->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="regHp" val="1.09" />
+		</for>
 	</skill>
 	<skill id="3311" levels="1" name="Yellow Talisman of CP Regeneration">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Guessing based on 594 -->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="regCp" val="1.09" />
+		</for>
 	</skill>
 	<skill id="3312" levels="1" name="Yellow Talisman of Healing">
 		<set name="target" val="TARGET_SELF" />
@@ -72,9 +89,15 @@
 		</for>
 	</skill>
 	<skill id="3313" levels="1" name="Yellow Talisman of Alacrity">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- CT 2.3 Confirmed, RunSpeed +3, Cast Speed +4, Atk Spd +5 -->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="runSpd" val="3" />
+			<add order="0x40" stat="mAtkSpd" val="4" />
+			<add order="0x40" stat="pAtkSpd" val="5" />
+		</for>
 	</skill>
 	<skill id="3314" levels="1" name="Grey Talisman of Weight Training">
 		<set name="target" val="TARGET_NONE" />
@@ -109,9 +132,13 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="3320" levels="1" name="Yellow Talisman of Mental Regeneration">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Guessing based on 595 -->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="regMp" val="0.47" />
+		</for>
 	</skill>
 	<skill id="3321" levels="1" name="Blue Talisman of Evasion">
 		<set name="target" val="TARGET_NONE" />
