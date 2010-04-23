@@ -3,8 +3,8 @@
 	<skill id="4700" levels="13" name="Gift of Queen">
 		<table name="#magicLvl"> 57 66 75 77 78 79 80 81 82 83 84 85 86 </table>
 		<table name="#mpConsume"> 122 157 194 202 207 212 215 220 224 229 233 237 242 </table>
-		<table name="#Tab-pAtk"> 1.06 1.08 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 </table>
-		<table name="#Tab-accCombat"> 2 2 3 3 3 3 3 3 3 3 3 3 3 </table>
+		<table name="#pAtk"> 1.06 1.08 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 </table>
+		<table name="#accCombat"> 2 2 3 3 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#time"> 120 120 120 150 165 180 195 210 225 240 255 270 285 </table>
 		<table name="#power"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -19,8 +19,8 @@
 		<set name="aggroPoints" val="#power" />
 		<for>
 			<effect name="Buff" time="#time" val="0" stackOrder="1" stackType="QueenBuff">
-				<mul order="0x30" stat="pAtk" val="#Tab-pAtk" />
-				<add order="0x40" stat="accCombat" val="#Tab-accCombat" />
+				<mul order="0x30" stat="pAtk" val="#pAtk" />
+				<add order="0x40" stat="accCombat" val="#accCombat" />
 			</effect>
 		</for>
 	</skill>
@@ -45,7 +45,7 @@
 	<skill id="4702" levels="13" name="Blessing of Seraphim">
 		<table name="#magicLvl"> 57 66 75 77 78 79 80 81 82 83 84 85 86 </table>
 		<table name="#mpConsume"> 122 157 194 202 207 212 215 220 224 229 233 237 242 </table>
-		<table name="#Tab-regMp"> 1.3 1.32 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 </table>
+		<table name="#regMp"> 1.3 1.32 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 </table>
 		<table name="#time"> 120 120 120 150 165 180 195 210 225 240 255 270 285 </table>
 		<table name="#power"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -60,14 +60,14 @@
 		<set name="aggroPoints" val="#power" />
 		<for>
 			<effect name="Buff" time="#time" val="0" stackOrder="1" stackType="SeraphimBuff">
-				<mul order="0x30" stat="regMp" val="#Tab-regMp" />
+				<mul order="0x30" stat="regMp" val="#regMp" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="4703" levels="13" name="Gift of Seraphim">
 		<table name="#magicLvl"> 57 66 75 77 78 79 80 81 82 83 84 85 86 </table>
 		<table name="#mpConsume"> 122 157 194 202 207 212 215 220 224 229 233 237 242 </table>
-		<table name="#Tab-mReuse"> 0.7 0.68 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 </table>
+		<table name="#mReuse"> 0.7 0.68 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 </table>
 		<table name="#time"> 120 120 120 150 165 180 195 210 225 240 255 270 285 </table>
 		<table name="#power"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -82,7 +82,7 @@
 		<set name="aggroPoints" val="#power" />
 		<for>
 			<effect name="Buff" time="#time" val="0" stackOrder="1" stackType="SeraphimBuff">
-				<mul order="0x30" stat="mReuse" val="#Tab-mReuse" />
+				<mul order="0x30" stat="mReuse" val="#mReuse" />
 			</effect>
 		</for>
 	</skill>
@@ -106,8 +106,8 @@
 	</skill>
 	<skill id="4705" levels="13" name="Curse of Shade">
 		<table name="#mpConsume"> 53 62 69 70 72 73 73 73 74 74 75 75 75 </table>
-		<table name="#Tab-pDef"> 0.94 0.92 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 </table>
-		<table name="#Tab-mDef"> 0.95 0.92 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 </table>
+		<table name="#pDef"> 0.94 0.92 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 </table>
+		<table name="#mDef"> 0.95 0.92 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 </table>
 		<table name="#power"> 40 40 40 41 42 43 44 45 46 47 48 49 50 </table> <!-- Base Land Rate -->
 		<table name="#stackOrder"> 1 2 3 3 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#magicLvl"> 57 66 75 77 78 79 80 81 82 83 84 85 86 </table>
@@ -127,16 +127,16 @@
 		<set name="effectRange" val="900" />
 		<for>
 			<effect name="Debuff" time="30" val="0" stackOrder="#stackOrder" stackType="debuff_nightshade">
-				<mul order="0x30" stat="mDef" val="#Tab-mDef" />
-				<mul order="0x30" stat="pDef" val="#Tab-pDef" />
+				<mul order="0x30" stat="mDef" val="#mDef" />
+				<mul order="0x30" stat="pDef" val="#pDef" />
 			</effect>
 			<effect name="TargetMe" val="0" />
 		</for>
 	</skill>
 	<skill id="4706" levels="13" name="Mass Curse of Shade">
 		<table name="#mpConsume"> 79 93 104 105 107 108 109 109 110 112 112 113 113 </table>
-		<table name="#Tab-pDef"> 0.94 0.92 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 </table>
-		<table name="#Tab-mDef"> 0.95 0.92 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 </table>
+		<table name="#pDef"> 0.94 0.92 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 </table>
+		<table name="#mDef"> 0.95 0.92 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 </table>
 		<table name="#power"> 40 40 40 41 42 43 44 45 46 47 48 49 50 </table> <!-- Base Land Rate -->
 		<table name="#stackOrder"> 1 2 3 3 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#magicLvl"> 57 66 75 77 78 79 80 81 82 83 84 85 86 </table>
@@ -155,8 +155,8 @@
 		<set name="isMagic" val="true" />
 		<for>
 			<effect name="Debuff" time="30" val="0" stackOrder="#stackOrder" stackType="debuff_nightshade">
-				<mul order="0x30" stat="mDef" val="#Tab-mDef" />
-				<mul order="0x30" stat="pDef" val="#Tab-pDef" />
+				<mul order="0x30" stat="mDef" val="#mDef" />
+				<mul order="0x30" stat="pDef" val="#pDef" />
 			</effect>
 			<effect name="TargetMe" val="0" />
 		</for>

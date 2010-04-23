@@ -775,7 +775,7 @@
 		</for>
 	</skill>
 	<skill id="5589" levels="3" name="Pet Death Wisper">
-		<table name="#Tab-cAtk"> 1.25 1.3 1.35 </table>
+		<table name="#cAtk"> 1.25 1.3 1.35 </table>
 		<table name="#aggro"> 379 457 532 </table>
 		<table name="#mpConsume"> 35 44 52 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -789,8 +789,8 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="#aggro" />
 		<for>
-			<effect name="Buff" time="120" val="0" stackOrder="#Tab-cAtk" stackType="critical_dmg_up">
-				<mul order="0x30" stat="cAtk" val="#Tab-cAtk" />
+			<effect name="Buff" time="120" val="0" stackOrder="#cAtk" stackType="critical_dmg_up">
+				<mul order="0x30" stat="cAtk" val="#cAtk" />
 			</effect>
 		</for>
 	</skill>
