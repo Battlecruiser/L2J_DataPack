@@ -77,7 +77,7 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_cache_crest_reload','1'),
 ('admin_cache_crest_fix','1'),
 
--- SPECIAL CAMERA TEST
+-- CAMERA
 ('admin_camera','1'),
 
 -- CHANGE ACCESS LEVEL
@@ -530,6 +530,12 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_tele','1'),
 ('admin_teleto','1'),
 ('admin_instant_move','1'),
+
+-- TERRITORY WAR
+('admin_territory_war','1'),
+('admin_territory_war_time','1'),
+('admin_territory_war_start','1'),
+('admin_territory_war_end','1'),
 
 -- TEST
 ('admin_test','1'),
