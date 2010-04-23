@@ -1068,7 +1068,7 @@
 	</skill>
 	<skill id="4577" levels="12" name="Decrease Accuracy">
 		<table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
-		<table name="#Tab-accCombat"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
+		<table name="#accCombat"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -1085,8 +1085,8 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Debuff" time="#time" val="0" stackOrder="#Tab-accCombat" stackType="accuracyDown">
-				<sub order="0x40" stat="accCombat" val="#Tab-accCombat" />
+			<effect name="Debuff" time="#time" val="0" stackOrder="#accCombat" stackType="accuracyDown">
+				<sub order="0x40" stat="accCombat" val="#accCombat" />
 			</effect>
 		</for>
 	</skill>
@@ -1132,7 +1132,7 @@
 		</for>
 	</skill>
 	<skill id="4580" levels="12" name="Decrease P. Atk.">
-		<table name="#Tab-pAtk"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+		<table name="#pAtk"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#mpConsume"> 24 39 54 73 94 116 136 144 152 158 161 163 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
@@ -1150,8 +1150,8 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
 		<for>
-			<effect name="Debuff" time="#time" val="0" stackOrder="#Tab-pAtk" stackType="pAtkDown">
-				<mul order="0x30" stat="pAtk" val="#Tab-pAtk" />
+			<effect name="Debuff" time="#time" val="0" stackOrder="#pAtk" stackType="pAtkDown">
+				<mul order="0x30" stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
 	</skill>
@@ -1200,7 +1200,7 @@
 	</skill>
 	<skill id="4583" levels="12" name="Decrease Speed">
 		<table name="#mpConsume"> 36 59 82 111 143 176 206 220 231 239 244 247 </table>
-		<table name="#Tab-runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+		<table name="#runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
@@ -1216,8 +1216,8 @@
 		<set name="isDebuff" val="true" />
 		<set name="effectRange" val="1200" />
 		<for>
-			<effect name="Debuff" time="30" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
-				<mul order="0x30" stat="runSpd" val="#Tab-runSpd" />
+			<effect name="Debuff" time="30" val="0" stackOrder="#runSpd" stackType="RunSpeedDown">
+				<mul order="0x30" stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
 	</skill>
@@ -1278,7 +1278,7 @@
 	</skill>
 	<skill id="4586" levels="12" name="Decrease Evasion">
 		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 77 78 83 </table>
-		<table name="#Tab-rEvas"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
+		<table name="#rEvas"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
@@ -1295,14 +1295,14 @@
 		<set name="effectRange" val="900" />
 		<for>
 			<effect name="Debuff" time="30" val="0">
-				<sub order="0x40" stat="rEvas" val="#Tab-rEvas" />
+				<sub order="0x40" stat="rEvas" val="#rEvas" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="4587" levels="12" name="Decrease P. Atk.">
 		<table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#Tab-pAtk"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+		<table name="#pAtk"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />
@@ -1318,8 +1318,8 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Debuff" time="#time" val="0" stackOrder="#Tab-pAtk" stackType="pAtkDown">
-				<mul order="0x30" stat="pAtk" val="#Tab-pAtk" />
+			<effect name="Debuff" time="#time" val="0" stackOrder="#pAtk" stackType="pAtkDown">
+				<mul order="0x30" stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
 	</skill>
@@ -1359,7 +1359,7 @@
 	</skill>
 	<skill id="4589" levels="12" name="Decrease Speed">
 		<table name="#mpConsume"> 35 58 79 105 135 165 194 207 217 224 229 233 </table>
-		<table name="#Tab-runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+		<table name="#runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />
@@ -1375,14 +1375,14 @@
 		<set name="isDebuff" val="true" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Debuff" time="30" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
-				<mul order="0x30" stat="runSpd" val="#Tab-runSpd" />
+			<effect name="Debuff" time="30" val="0" stackOrder="#runSpd" stackType="RunSpeedDown">
+				<mul order="0x30" stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="4590" levels="12" name="Decrease Speed">
 		<table name="#mpConsume"> 35 58 79 105 135 165 194 207 217 224 229 233 </table>
-		<table name="#Tab-runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+		<table name="#runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />
@@ -1398,14 +1398,14 @@
 		<set name="isDebuff" val="true" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Debuff" time="30" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
-				<mul order="0x30" stat="runSpd" val="#Tab-runSpd" />
+			<effect name="Debuff" time="30" val="0" stackOrder="#runSpd" stackType="RunSpeedDown">
+				<mul order="0x30" stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="4591" levels="12" name="Decrease Speed">
 		<table name="#mpConsume"> 35 58 79 105 135 165 194 207 217 224 229 233 </table>
-		<table name="#Tab-runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+		<table name="#runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />
@@ -1421,14 +1421,14 @@
 		<set name="isDebuff" val="true" />
 		<set name="effectRange" val="1300" />
 		<for>
-			<effect name="Debuff" time="30" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
-				<mul order="0x30" stat="runSpd" val="#Tab-runSpd" />
+			<effect name="Debuff" time="30" val="0" stackOrder="#runSpd" stackType="RunSpeedDown">
+				<mul order="0x30" stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="4592" levels="12" name="Decrease P. Def.">
 		<table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
-		<table name="#Tab-pDef"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+		<table name="#pDef"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -1445,14 +1445,14 @@
 		<set name="isDebuff" val="true" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Debuff" time="#time" val="0" stackOrder="#Tab-pDef" stackType="pDefDown">
-				<mul order="0x30" stat="pDef" val="#Tab-pDef" />
+			<effect name="Debuff" time="#time" val="0" stackOrder="#pDef" stackType="pDefDown">
+				<mul order="0x30" stat="pDef" val="#pDef" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="4593" levels="12" name="Decrease P. Def.">
 		<table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
-		<table name="#Tab-pDef"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+		<table name="#pDef"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -1469,14 +1469,14 @@
 		<set name="isDebuff" val="true" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Debuff" time="#time" val="0" stackOrder="#Tab-pDef" stackType="pDefDown">
-				<mul order="0x30" stat="pDef" val="#Tab-pDef" />
+			<effect name="Debuff" time="#time" val="0" stackOrder="#pDef" stackType="pDefDown">
+				<mul order="0x30" stat="pDef" val="#pDef" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="4594" levels="12" name="Decrease P. Def.">
 		<table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
-		<table name="#Tab-pDef"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+		<table name="#pDef"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -1493,8 +1493,8 @@
 		<set name="isDebuff" val="true" />
 		<set name="effectRange" val="1300" />
 		<for>
-			<effect name="Debuff" time="#time" val="0" stackOrder="#Tab-pDef" stackType="pDefDown">
-				<mul order="0x30" stat="pDef" val="#Tab-pDef" />
+			<effect name="Debuff" time="#time" val="0" stackOrder="#pDef" stackType="pDefDown">
+				<mul order="0x30" stat="pDef" val="#pDef" />
 			</effect>
 		</for>
 	</skill>
@@ -1598,7 +1598,7 @@
 	</skill>
 	<skill id="4599" levels="12" name="Decrease Speed">
 		<table name="#mpConsume"> 35 58 81 109 141 174 203 216 227 235 241 244 </table>
-		<table name="#Tab-runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+		<table name="#runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />
@@ -1614,8 +1614,8 @@
 		<set name="isDebuff" val="true" />
 		<set name="effectRange" val="200" />
 		<for>
-			<effect name="Debuff" time="30" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
-				<mul order="0x30" stat="runSpd" val="#Tab-runSpd" />
+			<effect name="Debuff" time="30" val="0" stackOrder="#runSpd" stackType="RunSpeedDown">
+				<mul order="0x30" stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
 	</skill>

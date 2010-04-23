@@ -187,7 +187,7 @@
 		<set name="absorbPart" val="0.4" /> <!-- absorbs 40% of damage -->
 	</skill>
 	<skill id="4317" levels="5" name="Increase Rage Might">
-		<table name="#Tab-pAtk"> 1.15 1.2 1.25 1.3 1.35 </table>
+		<table name="#pAtk"> 1.15 1.2 1.25 1.3 1.35 </table>
 		<set name="magicLvl" val="60" />
 		<set name="mpConsume" val="50" />
 		<set name="target" val="TARGET_SELF" />
@@ -196,8 +196,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="100" />
 		<for>
-			<effect name="Buff" time="120" val="0" stackOrder="#Tab-pAtk" stackType="pa_up">
-				<mul order="0x30" stat="pAtk" val="#Tab-pAtk" />
+			<effect name="Buff" time="120" val="0" stackOrder="#pAtk" stackType="pa_up">
+				<mul order="0x30" stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
 	</skill>
@@ -431,13 +431,13 @@
 		</for>
 	</skill>
 	<skill id="4333" levels="6" name="Resist Dark Attack">
-		<table name="#Tab-darkRes"> 15 30 50 70 90 100 </table>
+		<table name="#darkRes"> 15 30 50 70 90 100 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="darkRes" val="#Tab-darkRes" />
+			<add order="0x40" stat="darkRes" val="#darkRes" />
 		</for>
 	</skill>
 	<skill id="4334" levels="1" name="SSQ Cancel">
@@ -461,23 +461,23 @@
 		</for>
 	</skill>
 	<skill id="4336" levels="5" name="Dark Attack Weak Point">
-		<table name="#Tab-darkRes"> 10 15 20 30 50 </table>
+		<table name="#darkRes"> 10 15 20 30 50 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<sub order="0x40" stat="darkRes" val="#Tab-darkRes" />
+			<sub order="0x40" stat="darkRes" val="#darkRes" />
 		</for>
 	</skill>
 	<skill id="4337" levels="6" name="Resist Sacred Attack">
-		<table name="#Tab-holyRes"> 15 30 50 70 90 100 </table>
+		<table name="#holyRes"> 15 30 50 70 90 100 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="holyRes" val="#Tab-holyRes" />
+			<add order="0x40" stat="holyRes" val="#holyRes" />
 		</for>
 	</skill>
 	<skill id="4338" levels="1" name="Adventurer's Life Cubic">
@@ -529,7 +529,7 @@
 		</for>
 	</skill>
 	<skill id="4342" levels="2" name="Clan Hall: Wind Walk">
-		<table name="#Tab-runSpd"> 20 33 </table>
+		<table name="#runSpd"> 20 33 </table>
 		<table name="#mpConsume"> 50 100 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
@@ -540,8 +540,8 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="#Tab-runSpd" stackType="speed_up">
-				<add order="0x40" stat="runSpd" val="#Tab-runSpd" />
+			<effect name="Buff" time="1200" val="0" stackOrder="#runSpd" stackType="speed_up">
+				<add order="0x40" stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
 	</skill>
@@ -618,7 +618,7 @@
 		</for>
 	</skill>
 	<skill id="4347" levels="6" name="Clan Hall: Blessed Body">
-		<table name="#Tab-maxHp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
+		<table name="#maxHp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
 		<table name="#mpConsume"> 0 150 0 0 0 300 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
@@ -629,13 +629,13 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="#Tab-maxHp" stackType="max_hp_up">
-				<mul order="0x30" stat="maxHp" val="#Tab-maxHp" />
+			<effect name="Buff" time="1200" val="0" stackOrder="#maxHp" stackType="max_hp_up">
+				<mul order="0x30" stat="maxHp" val="#maxHp" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="4348" levels="6" name="Clan Hall: Blessed Soul">
-		<table name="#Tab-maxMp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
+		<table name="#maxMp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
 		<table name="#mpConsume"> 0 150 0 0 0 300 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
@@ -646,13 +646,13 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="#Tab-maxMp" stackType="max_mp_up">
-				<mul order="0x30" stat="maxMp" val="#Tab-maxMp" />
+			<effect name="Buff" time="1200" val="0" stackOrder="#maxMp" stackType="max_mp_up">
+				<mul order="0x30" stat="maxMp" val="#maxMp" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="4349" levels="2" name="Clan Hall: Magic Barrier">
-		<table name="#Tab-mDef"> 1.23 1.3 </table>
+		<table name="#mDef"> 1.23 1.3 </table>
 		<table name="#mpConsume"> 150 300 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
@@ -663,8 +663,8 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="#Tab-mDef" stackType="MagicDefUp">
-				<mul order="0x30" stat="mDef" val="#Tab-mDef" />
+			<effect name="Buff" time="1200" val="0" stackOrder="#mDef" stackType="MagicDefUp">
+				<mul order="0x30" stat="mDef" val="#mDef" />
 			</effect>
 		</for>
 	</skill>
@@ -704,14 +704,14 @@
 		</for>
 	</skill>
 	<skill id="4352" levels="2" name="Clan Hall: Berserker Spirit">
-		<table name="#Tab-mAtk"> 1.1 1.16 </table>
-		<table name="#Tab-pAtk"> 1.05 1.08 </table>
-		<table name="#Tab-mDef"> 0.9 0.84 </table>
-		<table name="#Tab-pDef"> 0.95 0.92 </table>
-		<table name="#Tab-mAtkSpd"> 1.05 1.08 </table>
-		<table name="#Tab-pAtkSpd"> 1.05 1.08 </table>
-		<table name="#Tab-runSpd"> 5 8 </table>
-		<table name="#Tab-rEvas"> 2 4 </table>
+		<table name="#mAtk"> 1.1 1.16 </table>
+		<table name="#pAtk"> 1.05 1.08 </table>
+		<table name="#mDef"> 0.9 0.84 </table>
+		<table name="#pDef"> 0.95 0.92 </table>
+		<table name="#mAtkSpd"> 1.05 1.08 </table>
+		<table name="#pAtkSpd"> 1.05 1.08 </table>
+		<table name="#runSpd"> 5 8 </table>
+		<table name="#rEvas"> 2 4 </table>
 		<table name="#mpConsume"> 200 400 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
@@ -723,14 +723,14 @@
 		<set name="effectRange" val="900" />
 		<for>
 			<effect name="Buff" time="1200" val="0" stackOrder="1" stackType="berserk">
-				<mul order="0x30" stat="mAtk" val="#Tab-mAtk" />
-				<mul order="0x30" stat="pAtk" val="#Tab-pAtk" />
-				<mul order="0x30" stat="mDef" val="#Tab-mDef" />
-				<mul order="0x30" stat="pDef" val="#Tab-pDef" />
-				<mul order="0x30" stat="mAtkSpd" val="#Tab-mAtkSpd" />
-				<mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd" />
-				<add order="0x40" stat="runSpd" val="#Tab-runSpd" />
-				<sub order="0x40" stat="rEvas" val="#Tab-rEvas" />
+				<mul order="0x30" stat="mAtk" val="#mAtk" />
+				<mul order="0x30" stat="pAtk" val="#pAtk" />
+				<mul order="0x30" stat="mDef" val="#mDef" />
+				<mul order="0x30" stat="pDef" val="#pDef" />
+				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
+				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+				<add order="0x40" stat="runSpd" val="#runSpd" />
+				<sub order="0x40" stat="rEvas" val="#rEvas" />
 			</effect>
 		</for>
 	</skill>
@@ -769,7 +769,7 @@
 		</for>
 	</skill>
 	<skill id="4355" levels="3" name="Clan Hall: Acumen">
-		<table name="#Tab-mAtkSpd"> 1.15 1.23 1.3 </table>
+		<table name="#mAtkSpd"> 1.15 1.23 1.3 </table>
 		<table name="#mpConsume"> 300 0 600 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
@@ -780,13 +780,13 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="#Tab-mAtkSpd" stackType="casting_time_down">
-				<mul order="0x30" stat="mAtkSpd" val="#Tab-mAtkSpd" />
+			<effect name="Buff" time="1200" val="0" stackOrder="#mAtkSpd" stackType="casting_time_down">
+				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="4356" levels="3" name="Clan Hall: Empower">
-		<table name="#Tab-mAtk"> 1.55 1.65 1.75 </table>
+		<table name="#mAtk"> 1.55 1.65 1.75 </table>
 		<table name="#mpConsume"> 300 0 600 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
@@ -797,13 +797,13 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="#Tab-mAtk" stackType="ma_up">
-				<mul order="0x30" stat="mAtk" val="#Tab-mAtk" />
+			<effect name="Buff" time="1200" val="0" stackOrder="#mAtk" stackType="ma_up">
+				<mul order="0x30" stat="mAtk" val="#mAtk" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="4357" levels="2" name="Clan Hall: Haste">
-		<table name="#Tab-pAtkSpd"> 1.15 1.33 </table>
+		<table name="#pAtkSpd"> 1.15 1.33 </table>
 		<table name="#mpConsume"> 300 600 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
@@ -814,14 +814,14 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="#Tab-pAtkSpd" stackType="attack_time_down">
-				<mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd" />
+			<effect name="Buff" time="1200" val="0" stackOrder="#pAtkSpd" stackType="attack_time_down">
+				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="4358" levels="3" name="Clan Hall: Guidance">
 		<table name="#mpConsume"> 200 0 400 </table>
-		<table name="#Tab-accCombat"> 2 3 4 </table>
+		<table name="#accCombat"> 2 3 4 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
@@ -831,8 +831,8 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="#Tab-accCombat" stackType="hit_up">
-				<add order="0x40" stat="accCombat" val="#Tab-accCombat" />
+			<effect name="Buff" time="1200" val="0" stackOrder="#accCombat" stackType="hit_up">
+				<add order="0x40" stat="accCombat" val="#accCombat" />
 			</effect>
 		</for>
 	</skill>
@@ -854,7 +854,7 @@
 		</for>
 	</skill>
 	<skill id="4360" levels="3" name="Clan Hall: Death Whisper">
-		<table name="#Tab-cAtk"> 1.25 1.3 1.35 </table>
+		<table name="#cAtk"> 1.25 1.3 1.35 </table>
 		<table name="#mpConsume"> 300 0 600 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
@@ -865,8 +865,8 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="#Tab-cAtk" stackType="critical_dmg_up">
-				<mul order="0x30" stat="cAtk" val="#Tab-cAtk" />
+			<effect name="Buff" time="1200" val="0" stackOrder="#cAtk" stackType="critical_dmg_up">
+				<mul order="0x30" stat="cAtk" val="#cAtk" />
 			</effect>
 		</for>
 	</skill>
@@ -1120,13 +1120,13 @@
 		</for>
 	</skill>
 	<skill id="4379" levels="6" name="Resist Spear Weapons">
-		<table name="#Tab-poleVuln"> 0.85 0.7 0.5 0.3 0.1 0 </table>
+		<table name="#poleVuln"> 0.85 0.7 0.5 0.3 0.1 0 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="poleWpnVuln" val="#Tab-poleVuln" />
+			<mul order="0x30" stat="poleWpnVuln" val="#poleVuln" />
 		</for>
 	</skill>
 	<skill id="4380" levels="1" name="Arena: CP Recovery">
@@ -1256,7 +1256,7 @@
 		</for>
 	</skill>
 	<skill id="4391" levels="2" name="Wind Walk">
-		<table name="#Tab-runSpd"> 20 33 </table>
+		<table name="#runSpd"> 20 33 </table>
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="100" />
 		<set name="skillType" val="BUFF" />
@@ -1266,8 +1266,8 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="#Tab-runSpd" stackType="speed_up">
-				<add order="0x40" stat="runSpd" val="#Tab-runSpd" />
+			<effect name="Buff" time="3600" val="0" stackOrder="#runSpd" stackType="speed_up">
+				<add order="0x40" stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
 	</skill>
@@ -1303,7 +1303,7 @@
 		</for>
 	</skill>
 	<skill id="4394" levels="6" name="Blessed Body">
-		<table name="#Tab-maxHp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
+		<table name="#maxHp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="100" />
 		<set name="skillType" val="BUFF" />
@@ -1313,13 +1313,13 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="#Tab-maxHp" stackType="max_hp_up">
-				<mul order="0x30" stat="maxHp" val="#Tab-maxHp" />
+			<effect name="Buff" time="3600" val="0" stackOrder="#maxHp" stackType="max_hp_up">
+				<mul order="0x30" stat="maxHp" val="#maxHp" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="4395" levels="6" name="Blessed Soul">
-		<table name="#Tab-maxMp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
+		<table name="#maxMp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="100" />
 		<set name="skillType" val="BUFF" />
@@ -1329,13 +1329,13 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="#Tab-maxMp" stackType="max_mp_up">
-				<mul order="0x30" stat="maxMp" val="#Tab-maxMp" />
+			<effect name="Buff" time="3600" val="0" stackOrder="#maxMp" stackType="max_mp_up">
+				<mul order="0x30" stat="maxMp" val="#maxMp" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="4396" levels="2" name="Magic Barrier">
-		<table name="#Tab-mDef"> 1.23 1.3 </table>
+		<table name="#mDef"> 1.23 1.3 </table>
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="100" />
 		<set name="skillType" val="BUFF" />
@@ -1345,8 +1345,8 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="#Tab-mDef" stackType="MagicDefUp">
-				<mul order="0x30" stat="mDef" val="#Tab-mDef" />
+			<effect name="Buff" time="3600" val="0" stackOrder="#mDef" stackType="MagicDefUp">
+				<mul order="0x30" stat="mDef" val="#mDef" />
 			</effect>
 		</for>
 	</skill>
