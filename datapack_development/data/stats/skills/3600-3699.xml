@@ -883,14 +883,22 @@
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="3666" levels="1" name="Yellow Talisman - Increase Force">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="triggeredId" val="5695" />
+		<set name="triggeredLevel" val="1" />
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED" />
 	</skill>
 	<skill id="3667" levels="1" name="Yellow Talisman - Damage Transition">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Guessing, based on 1st lvl Transfer Pain -->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="transDam" val="10" />
+		</for>
 	</skill>
 	<skill id="3668" levels="1" name="Zubei's Leather Gaiters">
 		<set name="target" val="TARGET_SELF" />
