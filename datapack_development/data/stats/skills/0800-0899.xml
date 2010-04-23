@@ -293,6 +293,7 @@
 	<skill id="822" levels="3" name="Repair Golem">
 		<table name="#mpConsume"> 61 78 88 </table>
 		<table name="#power"> 8 12 15 </table>
+		<set name="aggroPoints" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_SUMMON" />
@@ -521,6 +522,7 @@
 		</for>
 	</skill>
 	<skill id="833" levels="1" name="Body Reconstruction">
+		<set name="aggroPoints" val="100" />
 		<set name="hitTime" val="1500" />
 		<set name="mpConsume" val="94" />
 		<set name="operateType" val="OP_ACTIVE" />
