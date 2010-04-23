@@ -7377,7 +7377,7 @@ INSERT INTO `etcitem` VALUES
 (10163,'Wolf Collar','','false','pet_collar',10,'normal','wood','none',-1,-1,0,0,'true','true','true','true','true','SummonItems','0-0;'),
 (10164,'Animal Slayer\'s List','','false','quest',0,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
 (10165,'Bloody Red Claw','','false','quest',0,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
-(10166,'Spring CP Potion','','false','none',25,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
+(10166,'Spring CP Potion','','false','potion',25,'stackable','liquid','none',-1,-1,0,0,'true','true','true','true','true','ItemSkills','2403-1;'),
 (10171,'Seed: Dark Coda','','false','seed',1,'stackable','wood','none',-1,-1,5,0,'true','true','true','true','true','Seed','2097-1;'),
 (10172,'Seed: Red Coda','','false','seed',1,'stackable','wood','none',-1,-1,5,0,'true','true','true','true','true','Seed','2097-1;'),
 (10173,'Seed: Chilly Coda','','false','seed',1,'stackable','wood','none',-1,-1,5,0,'true','true','true','true','true','Seed','2097-1;'),
