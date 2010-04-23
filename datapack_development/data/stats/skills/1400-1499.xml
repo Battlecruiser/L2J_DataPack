@@ -2050,12 +2050,12 @@
 				<add order="0x40" stat="mDef" val="#mDef" />
 			</effect>
 		</for>
-		<for>
+		<enchant2for>
 			<effect name="Buff" time="#ench2Time" val="0" stackOrder="1" stackType="pd_up_special">
 				<add order="0x40" stat="pDef" val="1800" />
 				<add order="0x40" stat="mDef" val="1350" />
 			</effect>
-		</for>
+		</enchant2for>
 	</skill>
 	<skill id="1479" levels="3" name="Magic Impulse" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
