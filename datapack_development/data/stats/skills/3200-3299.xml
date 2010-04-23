@@ -806,10 +806,18 @@
 		</for>
 	</skill>
 	<skill id="3273" levels="1" name="Red Talisman of Recovery">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="hitTime" val="4000" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
+		<set name="equipDelay" val="30000" />
+		<for>
+			<effect name="HealOverTime" noicon="1" val="400" />
+			<effect name="CombatPointHealOverTime" noicon="1" val="200" />
+		</for>
 	</skill>
 	<skill id="3274" levels="1" name="Blue Talisman of Protection">
 		<!-- Guessing, based on 603 -->
@@ -880,16 +888,35 @@
 		</for>
 	</skill>
 	<skill id="3278" levels="1" name="Red Talisman of Mental Regeneration">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="mpConsume" val="50" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="360000" />
+		<set name="staticReuse" val="true" />
+		<set name="equipDelay" val="30000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman_red">
+				<mul order="0x30" stat="regMp" val="1.05" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3279" levels="1" name="Red Talisman of Meditation">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="mpConsume" val="50" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="900000" />
+		<set name="staticReuse" val="true" />
+		<set name="equipDelay" val="30000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect count="10" name="ManaHealOverTime" time="3" noicon="1" val="50" />
+			<effect name="ImmobileUntilAttacked" time="30" val="0" />
+		</for>
 	</skill>
 	<skill id="3280" levels="1" name="Blue Talisman of Invisibility">
 		<set name="mpConsume" val="50" />
@@ -906,16 +933,42 @@
 		</for>
 	</skill>
 	<skill id="3281" levels="1" name="Red Talisman of Minimum Clarity">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Guessing, based on 1397-1 -->
+		<set name="mpConsume" val="50" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="360000" />
+		<set name="staticReuse" val="true" />
+		<set name="equipDelay" val="30000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="talisman_red">
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.96" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.9" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.9" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3282" levels="1" name="Red Talisman of Maximum Clarity">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Guessing, based on 1397-3 -->
+		<set name="mpConsume" val="50" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="900000" />
+		<set name="staticReuse" val="true" />
+		<set name="equipDelay" val="30000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="Buff" time="90" val="0" stackOrder="1" stackType="talisman_red">
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.9" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.8" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.8" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3283" levels="1" name="Blue Talisman of Healing">
 		<set name="mpConsume" val="50" />
