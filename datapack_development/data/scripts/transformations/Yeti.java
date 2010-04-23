@@ -6,7 +6,7 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class Yeti extends L2Transformation
 {
-	private static final int[] SKILLS = {5491,619};
+	private static final int[] SKILLS = {5437,619};
 	public Yeti()
 	{
 		// id, colRadius, colHeight
@@ -23,8 +23,8 @@ public class Yeti extends L2Transformation
 
 	public void transformedSkills()
 	{
-		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		// Dissonance
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(5437, 1), false);
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
@@ -38,8 +38,8 @@ public class Yeti extends L2Transformation
 
 	public void removeSkills()
 	{
-		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		// Dissonance
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5437, 1), false);
 		// Transform Dispel
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 
