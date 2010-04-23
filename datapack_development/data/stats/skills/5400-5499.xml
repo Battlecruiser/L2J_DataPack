@@ -306,40 +306,78 @@
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="5442" levels="4" name="Bite Attack">
-		<!-- Bite ferociously with sharp teeth. -->
+		<!-- TODO: Power & Reuse needs to be verified -->
 		<table name="#mpConsume"> 55 61 66 71 </table>
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="overHit" val="true" />
-		<set name="power" val="700" /> <!-- Guess -->
+		<set name="power" val="700" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="5443" levels="4" name="Cry of the Wolf">
-		<!--  Dominate nearby enemies with a mighty roar. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<table name="#mpConsume"> 55 61 66 71 </table>
 		<set name="hitTime" val="1200" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="2" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="8000" />
+		<set name="skillRadius" val="100" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Debuff" time="30" val="0" stackOrder="0.77" stackType="attack_time_up">
+				<mul order="0x30" stat="pAtkSpd" val="0.77" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5444" levels="2" name="Maul">
-		<!-- Attacks with fore-claws to create wound. Power 1. Effect 3. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<table name="#mpConsume"> 66 71 </table>
+		<set name="abnormalLvl" val="3" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="1" />
+		<set name="reuseDelay" val="11000" />
+		<set name="skillType" val="PDAM" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect count="7" name="DamOverTime" time="3" val="25" abnormal="bleed" effectPower="50" effectType="BLEED" />
+		</for>
 	</skill>
 	<skill id="5445" levels="1" name="Awakening">
-		<!-- Brings out the instinct of the wolf. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- TODO: Duration needs to be verified -->
+		<set name="aggroPoints" val="495" />
 		<set name="hitTime" val="1500" />
+		<set name="mpConsume" val="71" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="600000" />
+		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_PARTY" />
+		<for>
+			<effect name="Buff" time="90" val="0" stackOrder="1" stackType="berserk">
+				<mul order="0x30" stat="mAtk" val="1.16" />
+				<mul order="0x30" stat="pAtk" val="1.08" />
+				<mul order="0x30" stat="mDef" val="0.84" />
+				<mul order="0x30" stat="pDef" val="0.92" />
+				<mul order="0x30" stat="mAtkSpd" val="1.08" />
+				<mul order="0x30" stat="pAtkSpd" val="1.08" />
+				<add order="0x40" stat="runSpd" val="8" />
+				<sub order="0x40" stat="rEvas" val="4" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5446" levels="45" name="Soul Expansion">
 		<table name="#num_souls"> 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 </table>
