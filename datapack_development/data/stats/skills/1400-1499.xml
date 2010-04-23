@@ -1067,7 +1067,7 @@
 		<!-- CT2.2 retail confirmed -->
 		<table name="#mpConsume_Init"> 5 8 </table>
 		<table name="#mpConsume"> 33 42 </table>
-		<table name="#Tab-mAtk"> 1.55 1.65 </table>
+		<table name="#mAtk"> 1.55 1.65 </table>
 		<set name="mpInitialConsume" val="#mpConsume_Init" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_SELF" />
@@ -1077,8 +1077,8 @@
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="true" />
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="#Tab-mAtk" stackType="ma_up">
-				<mul order="0x30" stat="mAtk" val="#Tab-mAtk" />
+			<effect name="Buff" time="1200" val="0" stackOrder="#mAtk" stackType="ma_up">
+				<mul order="0x30" stat="mAtk" val="#mAtk" />
 			</effect>
 		</for>
 	</skill>

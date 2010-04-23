@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="4200" levels="12" name="Decrease Atk. Spd.">
-		<table name="#Tab-pAtkSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
+		<table name="#pAtkSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
@@ -16,8 +16,8 @@
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
 		<for>
-			<effect name="Debuff" time="#time" val="0" stackOrder="#Tab-pAtkSpd" stackType="attack_time_up">
-				<mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd" />
+			<effect name="Debuff" time="#time" val="0" stackOrder="#pAtkSpd" stackType="attack_time_up">
+				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>
 		</for>
 	</skill>
@@ -56,7 +56,7 @@
 		</for>
 	</skill>
 	<skill id="4203" levels="12" name="Decrease Speed">
-		<table name="#Tab-runSpd"> 0.85 0.7 0.7 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 </table>
+		<table name="#runSpd"> 0.85 0.7 0.7 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 </table>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -70,8 +70,8 @@
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
 		<for>
-			<effect name="Debuff" time="30" val="0" stackOrder="#Tab-runSpd" stackType="RunSpeedDown">
-				<mul order="0x30" stat="runSpd" val="#Tab-runSpd" />
+			<effect name="Debuff" time="30" val="0" stackOrder="#runSpd" stackType="RunSpeedDown">
+				<mul order="0x30" stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
 	</skill>
@@ -115,7 +115,7 @@
 		</for>
 	</skill>
 	<skill id="4206" levels="12" name="Decrease MP">
-		<table name="#Tab-maxMp"> 2 2 2 2 2 4 5 7 8 10 12 12 </table>
+		<table name="#maxMp"> 2 2 2 2 2 4 5 7 8 10 12 12 </table>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -129,7 +129,7 @@
 		<set name="effectRange" val="1250" />
 		<for>
 			<effect name="Buff" time="30" val="0">
-				<sub order="0x40" stat="maxMp" val="#Tab-maxMp" />
+				<sub order="0x40" stat="maxMp" val="#maxMp" />
 			</effect>
 		</for>
 	</skill>
@@ -1064,55 +1064,55 @@
 		</for>
 	</skill>
 	<skill id="4273" levels="6" name="Resist Daggers/Rapier Weapon">
-		<table name="#Tab-daggerVuln"> 0.85 0.7 0.5 0.3 0.1 0 </table>
+		<table name="#daggerVuln"> 0.85 0.7 0.5 0.3 0.1 0 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="daggerWpnVuln" val="#Tab-daggerVuln" />
-			<mul order="0x30" stat="rapierWpnVuln" val="#Tab-daggerVuln" />
+			<mul order="0x30" stat="daggerWpnVuln" val="#daggerVuln" />
+			<mul order="0x30" stat="rapierWpnVuln" val="#daggerVuln" />
 		</for>
 	</skill>
 	<skill id="4274" levels="5" name="Blunt Weapon Weak Point">
-		<table name="#Tab-bluntVuln"> 1.1 1.15 1.2 1.3 1.5 </table>
+		<table name="#bluntVuln"> 1.1 1.15 1.2 1.3 1.5 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="bluntWpnVuln" val="#Tab-bluntVuln" />
+			<mul order="0x30" stat="bluntWpnVuln" val="#bluntVuln" />
 		</for>
 	</skill>
 	<skill id="4275" levels="5" name="Sacred Attack Weak Point">
-		<table name="#Tab-holyRes"> 10 15 20 30 50 </table>
+		<table name="#holyRes"> 10 15 20 30 50 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<sub order="0x40" stat="holyRes" val="#Tab-holyRes" />
+			<sub order="0x40" stat="holyRes" val="#holyRes" />
 		</for>
 	</skill>
 	<skill id="4276" levels="5" name="Weak Point against Bow/Crossbow Weapons">
-		<table name="#Tab-bowVuln"> 1.1 1.15 1.2 1.3 1.5 </table>
+		<table name="#bowVuln"> 1.1 1.15 1.2 1.3 1.5 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="bowWpnVuln" val="#Tab-bowVuln" />
-			<mul order="0x30" stat="crossbowWpnVuln" val="#Tab-bowVuln" />
+			<mul order="0x30" stat="bowWpnVuln" val="#bowVuln" />
+			<mul order="0x30" stat="crossbowWpnVuln" val="#bowVuln" />
 		</for>
 	</skill>
 	<skill id="4277" levels="6" name="Resist Poison Attacks">
-		<table name="#Tab-poisonVuln"> 0.85 0.7 0.5 0.3 0.1 0 </table>
+		<table name="#poisonVuln"> 0.85 0.7 0.5 0.3 0.1 0 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="poisonVuln" val="#Tab-poisonVuln" />
+			<mul order="0x30" stat="poisonVuln" val="#poisonVuln" />
 		</for>
 	</skill>
 	<skill id="4278" levels="1" name="Dark Attack">
@@ -1126,43 +1126,43 @@
 		</for>
 	</skill>
 	<skill id="4279" levels="5" name="Fire Attack Weak Point">
-		<table name="#Tab-fireRes"> 10 15 20 30 50 </table>
+		<table name="#fireRes"> 10 15 20 30 50 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<sub order="0x40" stat="fireRes" val="#Tab-fireRes" />
+			<sub order="0x40" stat="fireRes" val="#fireRes" />
 		</for>
 	</skill>
 	<skill id="4280" levels="5" name="Water Attack Weak Point">
-		<table name="#Tab-waterRes"> 10 15 20 30 50 </table>
+		<table name="#waterRes"> 10 15 20 30 50 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<sub order="0x40" stat="waterRes" val="#Tab-waterRes" />
+			<sub order="0x40" stat="waterRes" val="#waterRes" />
 		</for>
 	</skill>
 	<skill id="4281" levels="5" name="Wind Attack Weak Point">
-		<table name="#Tab-windRes"> 10 15 20 30 50 </table>
+		<table name="#windRes"> 10 15 20 30 50 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<sub order="0x40" stat="windRes" val="#Tab-windRes" />
+			<sub order="0x40" stat="windRes" val="#windRes" />
 		</for>
 	</skill>
 	<skill id="4282" levels="5" name="Earth Attack Weak Point">
-		<table name="#Tab-earthRes"> 10 15 20 30 50 </table>
+		<table name="#earthRes"> 10 15 20 30 50 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<sub order="0x40" stat="earthRes" val="#Tab-earthRes" />
+			<sub order="0x40" stat="earthRes" val="#earthRes" />
 		</for>
 	</skill>
 	<skill id="4283" levels="1" name="Greater Resist Magic Attack">
@@ -1175,23 +1175,23 @@
 		</for>
 	</skill>
 	<skill id="4284" levels="6" name="Resist Bleed Attacks">
-		<table name="#Tab-bleedVuln"> 0.85 0.7 0.5 0.3 0.1 0 </table>
+		<table name="#bleedVuln"> 0.85 0.7 0.5 0.3 0.1 0 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="bleedVuln" val="#Tab-bleedVuln" />
+			<mul order="0x30" stat="bleedVuln" val="#bleedVuln" />
 		</for>
 	</skill>
 	<skill id="4285" levels="6" name="Resist Sleep Attacks">
-		<table name="#Tab-sleepVuln"> 0.85 0.7 0.5 0.3 0.1 0 </table>
+		<table name="#sleepVuln"> 0.85 0.7 0.5 0.3 0.1 0 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="sleepVuln" val="#Tab-sleepVuln" />
+			<mul order="0x30" stat="sleepVuln" val="#sleepVuln" />
 		</for>
 	</skill>
 	<skill id="4286" levels="1" name="Greater Resist Sleep">
@@ -1204,13 +1204,13 @@
 		</for>
 	</skill>
 	<skill id="4287" levels="6" name="Resist Hold Attacks">
-		<table name="#Tab-rootVuln"> 0.85 0.7 0.5 0.3 0.1 0 </table>
+		<table name="#rootVuln"> 0.85 0.7 0.5 0.3 0.1 0 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="rootVuln" val="#Tab-rootVuln" />
+			<mul order="0x30" stat="rootVuln" val="#rootVuln" />
 		</for>
 	</skill>
 	<skill id="4288" levels="1" name="Greater Resist Hold">

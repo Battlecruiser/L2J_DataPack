@@ -495,7 +495,7 @@
 		</for>
 	</skill>
 	<skill id="4626" levels="12" name="NPC Buff - Physical Barrier">
-		<table name="#Tab-pDef"> 1.05 1.11 1.17 1.25 1.33 1.43 1.67 2 2.33 2.67 3 3.33 </table>
+		<table name="#pDef"> 1.05 1.11 1.17 1.25 1.33 1.43 1.67 2 2.33 2.67 3 3.33 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 7 10 14 18 23 28 33 35 37 38 39 39 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -507,8 +507,8 @@
 		<set name="isMagic" val="true" />
 		<set name="aggroPoints" val="100" />
 		<for>
-			<effect name="Buff" time="5" val="0" stackOrder="#Tab-pDef" stackType="pd_up">
-				<mul order="0x30" stat="pDef" val="#Tab-pDef" />
+			<effect name="Buff" time="5" val="0" stackOrder="#pDef" stackType="pd_up">
+				<mul order="0x30" stat="pDef" val="#pDef" />
 			</effect>
 		</for>
 	</skill>
