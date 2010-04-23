@@ -145,10 +145,22 @@
 		</for>
 	</skill>
 	<skill id="3321" levels="1" name="Blue Talisman of Evasion">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- CT 2.3 Confirmed, Evasion +2 -->
+		<set name="mpConsume" val="50" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="360000" />
+		<set name="staticReuse" val="true" />
+		<set name="equipDelay" val="30000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman_blue">
+				<add order="0x40" stat="rEvas" val="2" />
+				<mul order="0x30" stat="rCrit" val="0.8"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="3322" levels="1" name="Brass Bracelet">
 		<set name="target" val="TARGET_NONE" />
