@@ -254,12 +254,21 @@
 		</for>
 	</skill>
 	<skill id="1412" levels="1" name="Spell Turning">
-		<!-- Cancels a nearby target's magic casting. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="150" />
+		<set name="castRange" val="650" />
 		<set name="hitTime" val="500" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="79" />
+		<set name="mpConsume" val="27" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="30000" />
+		<set name="skillRadius" val="80" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_MULTIFACE" />
+		<for>
+			<effect name="AbortCast" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1413" levels="1" name="Magnus' Chant" enchantGroup1="5" enchantGroup2="5">
 		<table name="#ench1Time"> 320 340 360 380 400 420 440 460 480 500 520 540 560 580 600 </table>
