@@ -772,21 +772,37 @@
 		<set name="npcId" val="16026" />
 	</skill>
 	<skill id="3271" levels="1" name="Blue Talisman of Power">
+		<!-- CT 2.3 Confirmed, P. Atk. +60 -->
+		<set name="mpConsume" val="50" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="4000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="360000" />
+		<set name="staticReuse" val="true" />
+		<set name="equipDelay" val="30000" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<add order="0x40" stat="pAtk" val="10" /> <!-- increase P. Atk. +10 -->
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman_blue">
+				<add order="0x40" stat="pAtk" val="60" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3272" levels="1" name="Blue Talisman of Defense">
+		<!-- CT 2.3 Confirmed, P. Def. +70 -->
+		<set name="mpConsume" val="50" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="4000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="360000" />
+		<set name="staticReuse" val="true" />
+		<set name="equipDelay" val="30000" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<add order="0x40" stat="pDef" val="18" /> <!-- increase P. Def. +18 -->
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman_blue">
+				<add order="0x40" stat="pDef" val="70" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3273" levels="1" name="Red Talisman of Recovery">
@@ -796,30 +812,72 @@
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="3274" levels="1" name="Blue Talisman of Protection">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Guessing, based on 603 -->
+		<set name="mpConsume" val="50" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
-	</skill>
-	<skill id="3275" levels="1" name="Blue Talisman of Protection">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="hitTime" val="4000" />
+		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="360000" />
 		<set name="staticReuse" val="true" />
+		<set name="equipDelay" val="30000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman_blue">
+				<add order="0x40" stat="sDef" val="225" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="3275" levels="1" name="Blue Talisman of Protection">
+		<!-- Guessing, based on 602 -->
+		<set name="mpConsume" val="50" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="hitTime" val="4000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="360000" />
+		<set name="staticReuse" val="true" />
+		<set name="equipDelay" val="30000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman_blue">
+				<add order="0x40" stat="rShld" val="54.7" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3276" levels="1" name="Blue Talisman - Magic Resistance">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- CT 2.3 Confirmed, M. Def. +100 -->
+		<set name="mpConsume" val="50" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="360000" />
+		<set name="staticReuse" val="true" />
+		<set name="equipDelay" val="30000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman_blue">
+				<add order="0x40" stat="mDef" val="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3277" levels="1" name="Blue Talisman of Wild Magic">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Guessing, based on 3142-1 -->
+		<set name="mpConsume" val="50" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="360000" />
+		<set name="staticReuse" val="true" />
+		<set name="equipDelay" val="30000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman_blue">
+				<basemul order="0x30" stat="mCritRate" val="0.1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3278" levels="1" name="Red Talisman of Mental Regeneration">
 		<set name="target" val="TARGET_NONE" />
@@ -834,10 +892,18 @@
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="3280" levels="1" name="Blue Talisman of Invisibility">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="mpConsume" val="50" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="240000" />
+		<set name="staticReuse" val="true" />
+		<set name="equipDelay" val="30000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="SilentMove" time="120" abnormal="stealth" val="0" stackOrder="1" stackType="talisman_blue" />
+		</for>
 	</skill>
 	<skill id="3281" levels="1" name="Red Talisman of Minimum Clarity">
 		<set name="target" val="TARGET_NONE" />
@@ -852,10 +918,19 @@
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="3283" levels="1" name="Blue Talisman of Healing">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="mpConsume" val="50" />
 		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman_blue">
+				<mul order="0x30" stat="gainHp" val="1.1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3284" levels="1" name="Blue Talisman - Divine Protection">
 		<set name="mpConsume" val="50" />
@@ -867,7 +942,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" time="10" val="0">
+			<effect name="Buff" time="10" val="0" stackOrder="1" stackType="talisman_blue">
 				<add order="0x40" stat="pDef" val="3600" />
 				<add order="0x40" stat="mDef" val="2700" />
 			</effect>
