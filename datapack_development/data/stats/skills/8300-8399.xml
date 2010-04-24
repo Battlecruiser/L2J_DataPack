@@ -273,9 +273,25 @@
 	</skill>
 	<skill id="8335" levels="1" name="White Talisman - Attribute Resistance">
 		<!-- For 10 seconds, increases resistance to all attributes by 15 using the power of the talisman. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="4000" />
+		<set name="staticHitTime" val="true" />
+		<set name="mpConsume" val="50" />
+		<set name="reuseDelay" val="600000" />
+		<set name="staticReuse" val="true" />
+		<set name="equipDelay" val="30000" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" time="10" val="0" stackOrder="1" stackType="talismanElementRes">
+				<add order="0x40" stat="fireRes" val="15" />
+				<add order="0x40" stat="windRes" val="15" />
+				<add order="0x40" stat="waterRes" val="15" />
+				<add order="0x40" stat="earthRes" val="15" />
+				<add order="0x40" stat="holyRes" val="15" />
+				<add order="0x40" stat="darkRes" val="15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8336" levels="1" name="Guardian's Strider Mount">
 		<set name="target" val="TARGET_NONE" />
