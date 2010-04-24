@@ -28,39 +28,60 @@
 		</for>
 	</skill>
 	<skill id="3303" levels="1" name="White Talisman of Bandages">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="bleedVuln" val="0.95" />
+		</for>
 	</skill>
 	<skill id="3304" levels="1" name="White Talisman of Attention">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="sleepVuln" val="0.95" />
+		</for>
 	</skill>
 	<skill id="3305" levels="1" name="White Talisman of Grounding">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="stunVuln" val="0.95" />
+		</for>
 	</skill>
 	<skill id="3306" levels="1" name="White Talisman of Bravery">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="derangementVuln" val="0.95" />
+		</for>
 	</skill>
 	<skill id="3307" levels="1" name="White Talisman of Motion">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="paralyzeVuln" val="0.95" />
+		</for>
 	</skill>
 	<skill id="3308" levels="1" name="White Talisman of Freedom">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="rootVuln" val="0.95" />
+		</for>
 	</skill>
 	<skill id="3309" levels="1" name="White Talisman of Protection">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="cancelVuln" val="0.95" />
+		</for>
 	</skill>
 	<skill id="3310" levels="1" name="Yellow Talisman of Physical Regeneration">
 		<!-- Guessing, based on 593 -->
