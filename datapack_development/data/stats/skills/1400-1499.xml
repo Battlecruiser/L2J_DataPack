@@ -2400,7 +2400,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="2000" />
 		<for>
-			<effect name="ChanceSkillTrigger" time="1200" val="0" triggeredId="5567" chanceType="ON_ATTACKED" activationChance="30">
+			<effect name="ChanceSkillTrigger" time="1200" val="0" triggeredId="5567" chanceType="ON_ATTACKED" activationChance="10">
 				<add order="0x40" stat="fireRes" val="10" />
 			</effect>
 		</for>
@@ -2415,7 +2415,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="2000" />
 		<for>
-			<effect name="ChanceSkillTrigger" time="1200" val="0" triggeredId="5568" chanceType="ON_ATTACKED" activationChance="30">
+			<effect name="ChanceSkillTrigger" time="1200" val="0" triggeredId="5568" chanceType="ON_ATTACKED" activationChance="10">
 				<add order="0x40" stat="waterRes" val="10" />
 			</effect>
 		</for>
@@ -2430,7 +2430,7 @@
 		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="2000" />
 		<for>
-			<effect name="ChanceSkillTrigger" time="1200" val="0" triggeredId="5569" chanceType="ON_ATTACKED" activationChance="30">
+			<effect name="ChanceSkillTrigger" time="1200" val="0" triggeredId="5569" chanceType="ON_ATTACKED" activationChance="10">
 				<add order="0x40" stat="windRes" val="10" />
 			</effect>
 		</for>
