@@ -716,13 +716,13 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" />
-		<set name="skillType" val="CONFUSION" /> <!-- Only for Temp Fix: Needs Core Support for Randomize Aggro/Target Effect -->
+		<set name="skillType" val="CONFUSION" /> <!-- TEMP FIX: Needs Core Support for Randomize Aggro/Target Effect -->
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect count="2" name="Confusion" time="4" val="0"> <!-- Only for Temp Fix: Needs Core Support for Randomize Aggro/Target Effect -->
+			<effect count="2" name="Confusion" time="4" val="0"> <!-- TEMP FIX: Needs Core Support for Randomize Aggro/Target Effect -->
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 			</effect>
 		</for>
