@@ -1197,7 +1197,7 @@
 		</for>
 	</skill>
 	<skill id="776" levels="1" name="Force of Destruction">
-		<!-- TODO: Reuse & effecPower needs to be verified -->
+		<!-- TODO: effecPower needs to be verified -->
 		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
@@ -1208,7 +1208,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
 		<set name="power" val="2516" />
-		<set name="reuseDelay" val="20000" />
+		<set name="reuseDelay" val="15000" />
 		<set name="skillType" val="CHARGEDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />

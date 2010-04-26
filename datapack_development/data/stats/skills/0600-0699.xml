@@ -279,7 +279,9 @@
 		<set name="reuseDelay" val="900000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<!-- TODO: skill can't be used while mounted on pet, also effect removed when mounted -->
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 		<for>
 			<effect name="Buff" time="20" val="0">
 				<add order="0x40" stat="rEvas" val="#rEvas" />
