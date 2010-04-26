@@ -1402,8 +1402,7 @@
 		</for>
 	</skill>
 	<skill id="444" levels="1" name="Festive Sweeper">
-		<!-- When used on nearby corpses that are in a Spoil state, extra items may be obtained. -->
-		<!-- Needs Core Support -->
+		<!-- TODO: Needs Core Support When used on nearby corpses that are in a Spoil state, extra items may be obtained. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -2066,7 +2065,6 @@
 		</enchant2for>
 	</skill>
 	<skill id="475" levels="1" name="Strike Back">
-		<!-- Needs to be verified -->
 		<set name="operateType" val="OP_TOGGLE" />
 		<set name="skillType" val="CONT" />
 		<set name="target" val="TARGET_SELF" />

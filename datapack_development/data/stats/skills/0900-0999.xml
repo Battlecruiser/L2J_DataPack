@@ -261,7 +261,7 @@
 			<effect name="Buff" time="120" val="0">
 				<mul order="0x30" stat="debuffVuln" val="0.7" />
 				<mul order="0x30" stat="gainHp" val="1.3" />
-				<!-- Missing: Provides an 80% chance of removing a party member's de-buffs. (When Used) -->
+				<!-- TODO: Provides an 80% chance of removing a party member's de-buffs. (When Used) -->
 			</effect>
 		</for>
 	</skill>
