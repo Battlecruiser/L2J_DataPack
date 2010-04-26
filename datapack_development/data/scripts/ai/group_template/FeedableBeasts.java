@@ -44,13 +44,7 @@ public class FeedableBeasts extends L2AttackableAIScript
 	private static final int SKILL_GOLDEN_SPICE = 2188;
 	private static final int SKILL_CRYSTAL_SPICE = 2189;
     private static final int[] TAMED_BEASTS = {16013, 16014, 16015, 16016, 16017, 16018};
-    
-	private static final Map<Integer,Integer> FOODSKILL = new FastMap<Integer,Integer>();
-	static
-	{
-		FOODSKILL.put(GOLDEN_SPICE,SKILL_GOLDEN_SPICE);
-		FOODSKILL.put(CRYSTAL_SPICE,SKILL_CRYSTAL_SPICE);
-	}
+    private static final int FOODSKILLDIFF = GOLDEN_SPICE - SKILL_GOLDEN_SPICE;
     
     // all mobs that can eat...
     private static final int[] FEEDABLE_BEASTS = {
@@ -394,11 +388,11 @@ public class FeedableBeasts extends L2AttackableAIScript
             L2TamedBeastInstance oldTrained = player.getTrainedBeast();
             if (oldTrained != null)
             {
-                oldTrained.doDespawn();
+                oldTrained.deleteMe();
             }
                 
             L2NpcTemplate template = NpcTable.getInstance().getTemplate(nextNpcId);
-            L2TamedBeastInstance nextNpc = new L2TamedBeastInstance(IdFactory.getInstance().getNextId(), template, player, FOODSKILL.get(food), npc.getX(), npc.getY(), npc.getZ());
+            L2TamedBeastInstance nextNpc = new L2TamedBeastInstance(IdFactory.getInstance().getNextId(), template, player, food - FOODSKILLDIFF, npc.getX(), npc.getY(), npc.getZ());
             nextNpc.setRunning();
 
             int objectId = nextNpc.getObjectId();
