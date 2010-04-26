@@ -1,11 +1,11 @@
 package instances.DarkCloudMansion;
 
+import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager.InstanceWorld;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
@@ -255,15 +255,9 @@ public class DarkCloudMansion extends Quest
 
 	private void teleportplayer(L2PcInstance player, teleCoord teleto)
 	{
+		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		player.setInstanceId(teleto.instanceId);
 		player.teleToLocation(teleto.x, teleto.y, teleto.z);
-		L2Summon pet = player.getPet();
-		if (pet != null)
-		{
-			pet.setInstanceId(teleto.instanceId);
-			pet.teleToLocation(teleto.x, teleto.y, teleto.z);
-		}
-
 		return;
 	}
 
@@ -321,14 +315,9 @@ public class DarkCloudMansion extends Quest
 
 	protected void exitInstance(L2PcInstance player, teleCoord tele)
 	{
+		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		player.setInstanceId(0);
 		player.teleToLocation(tele.x, tele.y, tele.z);
-		L2Summon pet = player.getPet();
-		if (pet != null)
-		{
-			pet.setInstanceId(0);
-			pet.teleToLocation(tele.x, tele.y, tele.z);
-		}
 	}
 
 	protected void runStartRoom(DMCWorld world)

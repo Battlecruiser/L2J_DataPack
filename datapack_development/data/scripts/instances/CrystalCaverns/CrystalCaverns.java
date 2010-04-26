@@ -503,14 +503,9 @@ public class CrystalCaverns extends Quest
 
 	private void teleportplayer(L2PcInstance player, teleCoord teleto)
 	{
+		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		player.setInstanceId(teleto.instanceId);
 		player.teleToLocation(teleto.x, teleto.y, teleto.z);
-		L2Summon pet = player.getPet();
-		if (pet != null)
-		{
-			pet.setInstanceId(teleto.instanceId);
-			pet.teleToLocation(teleto.x, teleto.y, teleto.z);
-		}
 		return;
 	}
 
@@ -569,14 +564,9 @@ public class CrystalCaverns extends Quest
 
 	protected void exitInstance(L2PcInstance player, teleCoord tele)
 	{
+		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		player.setInstanceId(0);
 		player.teleToLocation(tele.x, tele.y, tele.z);
-		L2Summon pet = player.getPet();
-		if (pet != null)
-		{
-			pet.setInstanceId(0);
-			pet.teleToLocation(tele.x, tele.y, tele.z);
-		}
 	}
 
 	protected void stopAttack(L2PcInstance player)
