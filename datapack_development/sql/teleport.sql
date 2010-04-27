@@ -798,7 +798,31 @@ INSERT INTO `teleport` VALUES
 ('Narsell Fortress -> Ancient Battleground', 12152, 118509, -4779, -4000, 500, 0),
 ('Narsell Fortress -> Enchanted Valley, Southern Region', 12153, 124904, 61992, -3920, 500, 0),
 ('Narsell Fortress -> Enchanted Valley, Northern Region', 12154, 104426, 33746, -3800, 500, 0),
-('Narsell Fortress -> Blazing Swamp', 12155, 155310, -16339, -3320, 500, 0);
+('Narsell Fortress -> Blazing Swamp', 12155, 155310, -16339, -3320, 500, 0),
+('Hive Fortress -> Fortress North Gate', 12156, 15383, 186025, -2920, 0, 0),
+('Hive Fortress -> Fortress South Gate', 12157, 18046, 190017, -2920, 0, 0),
+('Hive Fortress -> Dion Town Square', 12158, 19025, 145245, -3120, 0, 0),
+('Hive Fortress -> Front of the Dion Castle Gate', 12159, 19888, 153395, -3144, 0, 0),
+('Hive Fortress -> Cruma Marshlands', 12160, 5106, 126916, -3664, 500, 0),
+('Hive Fortress -> Fortress of Resistance', 12161, 47382, 111278, -2104, 500, 0),
+('Hive Fortress -> Plains of Dion', 12162, 630, 179184, -3720, 500, 0),
+('Hive Fortress -> Tanor Canyon', 12163, 60374, 164301, -2856, 500, 0),
+('White Sands Fortress -> Fortress West Gate', 12164, 116336, 203775, -3336, 0, 0),
+('White Sands Fortress -> Fortress East Gate', 12165, 120487, 206093, -3336, 0, 0),
+('White Sands Fortress -> Heine Town Square', 12166, 111455, 219400, -3544, 0, 0),
+('White Sands Fortress -> Front of the Innadril Castle Gate', 12167, 117608, 241660, -1408, 0, 0),
+('White Sands Fortress -> Field of Silence (Western Section)', 12168, 75387, 195263, -3000, 500, 0),
+('White Sands Fortress -> Field of Whispers (Eastern Section)', 12169, 47382, 111278, -2104, 500, 0),
+('White Sands Fortress -> The Center of Alligator Island', 12170, 113708, 178387, -3232, 500, 0),
+('White Sands Fortress -> Inside the Garden of Eva', 12171, 82693, 242220, -6712, 500, 0),
+('Archaic Fortress -> Fortress West Gate', 12172, 107248, -140450, -2960, 0, 0),
+('Archaic Fortress -> Fortress East Gate', 12173, 111769, -141775, -2920, 0, 0),
+('Archaic Fortress -> Schuttgart Town Square', 12174, 87379, -142322, -1336, 0, 0),
+('Archaic Fortress -> Front of the Schuttgart Castle Gate', 12175, 76358, -145548, -1176, 0, 0),
+('Archaic Fortress -> Crypts of Disgrace', 12176, 47692, -115745, -3744, 500, 0),
+('Archaic Fortress -> Plunderous Plains', 12177, 111965, -154172, -1528, 500, 0),
+('Archaic Fortress -> Den of Evil', 12178, 68693, -110438, -1904, 500, 0),
+('Archaic Fortress -> Frozen Labyrinth', 12179, 113903, -108752, -848, 500, 0);
 
 -- Castle teleports
 INSERT INTO `teleport` VALUES
