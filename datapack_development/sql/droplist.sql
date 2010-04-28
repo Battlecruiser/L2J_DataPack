@@ -23697,7 +23697,7 @@ INSERT INTO `droplist` VALUES
 (21772,212,1,1,1,8),-- Dasparion\'s Staff
 (21772,2504,1,1,1,8),-- Meteor Shower
 (21772,8346,1,1,1,1894),-- Hammer Piece of Destroyer
-(21772,78998,1,1,1,8),-- Destroyer Hammer
+(21772,7899,1,1,1,8),-- Destroyer Hammer
 (21772,8341,1,1,1,1892),-- Spiritual Eye Piece
 (21772,7894,1,1,1,8),-- Spiritual Eye
 (21772,5532,1,1,1,1894),-- Meteor Shower Head
@@ -30482,7 +30482,7 @@ INSERT INTO `droplist` VALUES
 (22449,9628,1,1,2,22659),-- Leonard
 (22449,9630,1,1,2,15205),-- Orichalcum
 (22449,9551,1,1,200,23112),-- Divine Stone
-(22449,55382,1,1,1,23773),-- Dragon Grinder Edge
+(22449,5538,1,1,1,23773),-- Dragon Grinder Edge
 (22449,270,1,1,1,84),-- Dragon Grinder
 (22449,6901,1,1,2,2889),-- Recipe: Shining Arrow (100%)
 (22449,6689,1,1,-1,74624),-- Basalt Battlehammer Head
