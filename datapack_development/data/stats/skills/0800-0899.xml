@@ -542,7 +542,7 @@
 		<for>
 			<effect name="Buff" time="120" val="0">
 				<mul order="0x30" stat="maxHp" val="1.1" />
-				<mul order="0x30" stat="regHp" val="1.1" />
+				<add order="0x40" stat="regHp" val="10" />
 			</effect>
 		</for>
 	</skill>
