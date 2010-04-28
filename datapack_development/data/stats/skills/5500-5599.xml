@@ -564,8 +564,6 @@
 		</for>
 	</skill>
 	<skill id="5569" levels="1" name="Hurricane Armor">
-		<!-- Based in "Wind Shackle" skill -->
-		<!-- TODO: Duration & Decreased stats needs to be verified -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isDebuff" val="true" />
@@ -575,7 +573,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Debuff" time="15" val="0" stackOrder="0.77" stackType="attack_time_up">
+			<effect name="Debuff" time="30" val="0" stackOrder="0.77" stackType="attack_time_up">
 				<mul order="0x30" stat="pAtkSpd" val="0.77" />
 			</effect>
 		</for>
