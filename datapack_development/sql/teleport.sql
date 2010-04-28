@@ -909,4 +909,5 @@ INSERT INTO `teleport` VALUES
 ('Aden GK -> The Giant\'s Cave',200922,174491,50942,-4360,7400,0),
 ('FoG Entrance -> FoG Upper Level',200923,173492,-112272,-5192,0,0),
 ('Krun -> Enter Mines ',200924,173462,-174011,3480,0,0),
-('Tarum -> Enter Mines ',200925,179299,-182831,-224,0,0);
+('Tarum -> Enter Mines ',200925,179299,-182831,-224,0,0),
+('Goddard -> Forge of the Gods',200926,169018,-116303,-2432,10000,0);
