@@ -20,7 +20,6 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.IBypassHandler;
-import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2WyvernManagerInstance;
@@ -36,7 +35,7 @@ public class RideWyvern implements IBypassHandler
 
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
-		if (!target.isInstanceType(InstanceType.L2WyvernManagerInstance))
+		if (!(target instanceof L2WyvernManagerInstance))
 			return false;
 
 		L2WyvernManagerInstance npc = (L2WyvernManagerInstance)target;

@@ -17,7 +17,6 @@ package handlers.bypasshandlers;
 import java.util.StringTokenizer;
 
 import com.l2jserver.gameserver.handler.IBypassHandler;
-import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2MerchantInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -31,7 +30,7 @@ public class Buy implements IBypassHandler
 
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
-		if (!target.isInstanceType(InstanceType.L2MerchantInstance))
+		if (!(target instanceof L2MerchantInstance))
 			return false;
 
 		try

@@ -15,9 +15,9 @@
 package handlers.bypasshandlers;
 
 import com.l2jserver.gameserver.handler.IBypassHandler;
-import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.instance.L2MerchantInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 
@@ -30,7 +30,7 @@ public class BuyShadowItem implements IBypassHandler
 
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
-		if (!target.isInstanceType(InstanceType.L2MerchantInstance))
+		if (!(target instanceof L2MerchantInstance))
 			return false;
 
 		NpcHtmlMessage html = new NpcHtmlMessage(((L2Npc)target).getObjectId());

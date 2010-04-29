@@ -16,9 +16,9 @@ package handlers.bypasshandlers;
 
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.L2HennaInstance;
-import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2SymbolMakerInstance;
 import com.l2jserver.gameserver.network.serverpackets.HennaRemoveList;
 
 public class RemoveHennaList implements IBypassHandler
@@ -30,7 +30,7 @@ public class RemoveHennaList implements IBypassHandler
 
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
-		if (!target.isInstanceType(InstanceType.L2SymbolMakerInstance))
+		if (!(target instanceof L2SymbolMakerInstance))
 			return false;
 
 		boolean hasHennas = false;
