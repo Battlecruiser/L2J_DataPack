@@ -36,6 +36,6 @@ public class SevenSignsRecord implements IItemHandler
 		if (!(playable instanceof L2PcInstance))
 			return;
 		
-		playable.sendPacket(new SSQStatus((L2PcInstance) playable, 1));
+		playable.sendPacket(new SSQStatus(playable.getObjectId(), 1));
 	}
 }
