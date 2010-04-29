@@ -17,10 +17,11 @@ package handlers.bypasshandlers;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.L2Clan;
-import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.instance.L2ClanHallManagerInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2WarehouseInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -34,14 +35,14 @@ public class ClanWarehouse implements IBypassHandler
 {
 	private static final String[] COMMANDS =
 	{
-		"WithdrawC",
-		"WithdrawSortedC",
-		"DepositC"
+		"withdrawc",
+		"withdrawsortedc",
+		"depositc"
 	};
 
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
-		if (!target.isInstanceTypes(InstanceType.L2WarehouseInstance, InstanceType.L2ClanHallManagerInstance))
+		if (!(target instanceof L2WarehouseInstance) && !(target instanceof L2ClanHallManagerInstance))
 			return false;
 
 		if (activeChar.isEnchanting())
@@ -61,7 +62,7 @@ public class ClanWarehouse implements IBypassHandler
 
 		try
 		{
-			if (command.startsWith(COMMANDS[0])) // WithdrawC
+			if (command.toLowerCase().startsWith(COMMANDS[0])) // WithdrawC
 			{
 				if (Config.L2JMOD_ENABLE_WAREHOUSESORTING_CLAN)
 				{
@@ -72,8 +73,9 @@ public class ClanWarehouse implements IBypassHandler
 				}
 				else
 					showWithdrawWindow(activeChar, null, (byte) 0);
+				return true;
 			}
-			else if (command.startsWith(COMMANDS[1])) // WithdrawSortedC
+			else if (command.toLowerCase().startsWith(COMMANDS[1])) // WithdrawSortedC
 			{
 				final String param[] = command.split(" ");
 
@@ -83,8 +85,9 @@ public class ClanWarehouse implements IBypassHandler
 					showWithdrawWindow(activeChar, WarehouseListType.valueOf(param[1]), SortedWareHouseWithdrawalList.A2Z);
 				else
 					showWithdrawWindow(activeChar, WarehouseListType.ALL, SortedWareHouseWithdrawalList.A2Z);
+				return true;
 			}
-			else // DepositC
+			else if (command.toLowerCase().startsWith(COMMANDS[2])) // DepositC
 			{
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 				activeChar.setActiveWarehouse(activeChar.getClan().getWarehouse());
@@ -94,9 +97,10 @@ public class ClanWarehouse implements IBypassHandler
 					_log.fine("Source: L2WarehouseInstance.java; Player: "+activeChar.getName()+"; Command: showDepositWindowClan; Message: Showing items to deposit.");
 
 				activeChar.sendPacket(new WareHouseDepositList(activeChar, WareHouseDepositList.CLAN));
+				return true;
 			}
 
-			return true;
+			return false;
 		}
 		catch (Exception e)
 		{

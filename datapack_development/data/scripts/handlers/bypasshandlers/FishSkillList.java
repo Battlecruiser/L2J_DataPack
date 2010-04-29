@@ -15,7 +15,6 @@
 package handlers.bypasshandlers;
 
 import com.l2jserver.gameserver.handler.IBypassHandler;
-import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2FishermanInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -29,7 +28,7 @@ public class FishSkillList implements IBypassHandler
 
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
-		if (!target.isInstanceType(InstanceType.L2FishermanInstance))
+		if (!(target instanceof L2FishermanInstance))
 			return false;
 
 		activeChar.setSkillLearningClassId(activeChar.getClassId());

@@ -21,7 +21,6 @@ import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.instancemanager.games.Lottery;
 import com.l2jserver.gameserver.model.L2ItemInstance;
-import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -40,7 +39,7 @@ public class Loto implements IBypassHandler
 
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
-		if (!target.isInstanceType(InstanceType.L2Npc))
+		if (!(target instanceof L2Npc))
 			return false;
 
 		int val = 0;

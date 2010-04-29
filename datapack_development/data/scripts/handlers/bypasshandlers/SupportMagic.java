@@ -18,7 +18,6 @@ import com.l2jserver.gameserver.datatables.HelperBuffTable;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.L2Skill;
-import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -30,19 +29,19 @@ public class SupportMagic implements IBypassHandler
 {
 	private static final String[] COMMANDS =
 	{
-		"SupportMagicServitor",
-		"SupportMagic"
+		"supportmagicservitor",
+		"supportmagic"
 	};
 
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
-		if (!target.isInstanceType(InstanceType.L2Npc))
+		if (!(target instanceof L2Npc))
 			return false;
 
-		boolean result;
-		if (command.startsWith(COMMANDS[0]))
+		boolean result = false;
+		if (command.toLowerCase().startsWith(COMMANDS[0]))
 			result = makeSupportMagic(activeChar, (L2Npc)target, true);
-		else
+		else if (command.toLowerCase().startsWith(COMMANDS[1]))
 			result = makeSupportMagic(activeChar, (L2Npc)target, false);
 
 		return result;
