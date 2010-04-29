@@ -34,7 +34,7 @@ public class GatekeeperSpirit extends Quest
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
-		int playerCabal = SevenSigns.getInstance().getPlayerCabal(player);
+		int playerCabal = SevenSigns.getInstance().getPlayerCabal(player.getObjectId());
 		int sealAvariceOwner = SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_AVARICE);
 		int compWinner = SevenSigns.getInstance().getCabalHighestScore();
 

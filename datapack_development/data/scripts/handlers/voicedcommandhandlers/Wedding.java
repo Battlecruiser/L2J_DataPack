@@ -331,7 +331,7 @@ public class Wedding implements IVoicedCommandHandler
 		}
 		else if (partner.isIn7sDungeon() && !activeChar.isIn7sDungeon())
 		{
-			int playerCabal = SevenSigns.getInstance().getPlayerCabal(activeChar);
+			int playerCabal = SevenSigns.getInstance().getPlayerCabal(activeChar.getObjectId());
 			boolean isSealValidationPeriod = SevenSigns.getInstance().isSealValidationPeriod();
 			int compWinner = SevenSigns.getInstance().getCabalHighestScore();
 			
