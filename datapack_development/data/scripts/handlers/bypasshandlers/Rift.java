@@ -16,7 +16,6 @@ package handlers.bypasshandlers;
 
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.instancemanager.DimensionalRiftManager;
-import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -25,17 +24,17 @@ public class Rift implements IBypassHandler
 {
 	private static final String[] COMMANDS =
 	{
-		"EnterRift",
-		"ChangeRiftRoom",
-		"ExitRift"
+		"enterrift",
+		"changeriftroom",
+		"exitrift"
 	};
 
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
-		if (!target.isInstanceType(InstanceType.L2Npc))
+		if (!(target instanceof L2Npc))
 			return false;
 
-		if (command.startsWith(COMMANDS[0])) // EnterRift
+		if (command.toLowerCase().startsWith(COMMANDS[0])) // EnterRift
 		{
 			try
 			{
@@ -52,7 +51,7 @@ public class Rift implements IBypassHandler
 		{
 			final boolean inRift = activeChar.isInParty() && activeChar.getParty().isInDimensionalRift();
 
-			if (command.startsWith(COMMANDS[1])) //ChangeRiftRoom
+			if (command.toLowerCase().startsWith(COMMANDS[1])) //ChangeRiftRoom
 			{
 				if (inRift)
 					activeChar.getParty().getDimensionalRift().manualTeleport(activeChar, (L2Npc)target);
@@ -61,7 +60,7 @@ public class Rift implements IBypassHandler
 
 				return true;
 			}
-			else // ExitRift
+			else if (command.toLowerCase().startsWith(COMMANDS[2])) // ExitRift
 			{
 				if (inRift)
 					activeChar.getParty().getDimensionalRift().manualExitRift(activeChar, (L2Npc)target);

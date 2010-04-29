@@ -16,7 +16,6 @@ package handlers.bypasshandlers;
 
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.L2Multisell;
-import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -29,16 +28,16 @@ public class Transform implements IBypassHandler
 {
 	private static final String[] COMMANDS =
 	{
-		"TransformSkillList",
-		"BuyTransform"
+		"transformskilllist",
+		"buytransform"
 	};
 
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
-		if (!target.isInstanceType(InstanceType.L2TransformManagerInstance))
+		if (!(target instanceof L2Npc))
 			return false;
 
-		if (command.startsWith(COMMANDS[0])) // skills list
+		if (command.toLowerCase().startsWith(COMMANDS[0])) // skills list
 		{
 			if (canTransform(activeChar))
 			{
@@ -53,7 +52,7 @@ public class Transform implements IBypassHandler
 				activeChar.sendPacket(html);
 			}
 		}
-		else
+		else if (command.toLowerCase().startsWith(COMMANDS[1])) 
 		{
 			if (canTransform(activeChar))
 			{				

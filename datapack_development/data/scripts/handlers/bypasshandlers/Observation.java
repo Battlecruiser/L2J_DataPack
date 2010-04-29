@@ -18,7 +18,6 @@ import java.util.StringTokenizer;
 
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.instancemanager.SiegeManager;
-import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -31,19 +30,19 @@ public class Observation implements IBypassHandler
 {
 	private static final String[] COMMANDS =
 	{
-		"observeSiege",
-		"observeOracle",
+		"observesiege",
+		"observeoracle",
 		"observe"
 	};
 
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
-		if (!target.isInstanceType(InstanceType.L2ObservationInstance))
+		if (!(target instanceof L2Npc))
 			return false;
 
 		try
 		{
-			if (command.startsWith(COMMANDS[0])) // siege
+			if (command.toLowerCase().startsWith(COMMANDS[0])) // siege
 			{
 				String val = command.substring(13);
 				StringTokenizer st = new StringTokenizer(val);
@@ -53,19 +52,23 @@ public class Observation implements IBypassHandler
 					doObserve(activeChar, (L2Npc)target, val);
 				else
 					activeChar.sendPacket(new SystemMessage(SystemMessageId.ONLY_VIEW_SIEGE));
+				return true;
 			}
-			else if (command.startsWith(COMMANDS[1])) // oracle
+			else if (command.toLowerCase().startsWith(COMMANDS[1])) // oracle
 			{
 				String val = command.substring(13);
 				StringTokenizer st = new StringTokenizer(val);
 				st.nextToken(); // Bypass cost
-
 				doObserve(activeChar, (L2Npc)target, val);
+				return true;
 			}
-			else
+			else if (command.toLowerCase().startsWith(COMMANDS[2])) // observe
+			{
 				doObserve(activeChar, (L2Npc)target, command.substring(8));
+				return true;
+			}
 
-			return true;
+			return false;
 		}
 		catch (Exception e)
 		{
