@@ -75,7 +75,7 @@
 	</skill>
 	<skill id="502" levels="5" name="Life to Soul" enchantGroup1="1" enchantGroup2="1">
 		<!-- CT2.2 retail confirmed -->
-		<table name="#ench1num_souls"> 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 </table>
+		<table name="#ench1num_souls"> 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15 15 16 16 17 17 18 18 19 19 20 20 21 </table>
 		<table name="#ench2hpConsume"> 323 318 312 307 301 296 290 285 279 274 268 263 257 252 247 241 236 230 225 219 214 208 203 197 192 186 181 175 170 165 </table>
 		<table name="#hpConsume"> 193 237 279 311 328 </table>
 		<table name="#num_souls"> 1 2 3 4 5 </table>
@@ -861,7 +861,6 @@
 		<set name="mpConsume" val="43" />
 		<set name="hitTime" val="1500" />
 		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="79" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="8000" />
@@ -1726,7 +1725,7 @@
 	<skill id="586" levels="2" name="Rolling Attack">
 		<!-- CT2.2 retail confirmed -->
 		<table name="#mpConsume"> 54 58 </table>
-		<table name="#power"> 864 984 </table>
+		<table name="#power"> 840 984 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_AURA" />
