@@ -7084,7 +7084,7 @@ INSERT INTO `etcitem` VALUES
 (9699,'Red Coral Key','','false','none',10,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','true','PaganKeys','2367-1;'),
 (9700,'Water Dragon Claw','','false','none',20,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','true','ItemSkills','2360-1;'),
 (9701,'Sealed Magic Field Key','','false','none',10,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
-(9702,'Caravaner\'s Remedy','','false','potion',5,'stackable','liquid','none',-1,-1,0,0,'true','true','true','false','true','ItemSkills','2341-1;'),
+(9702,'Caravaner\'s Remedy','','false','potion',5,'stackable','liquid','none',-1,-1,0,0,'true','false','true','false','true','ItemSkills','2341-1;'),
 (9703,'Gate Key: Kamael','','false','none',10,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
 (9704,'Gate Key: Archives','','false','none',10,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
 (9705,'Gate Key: Observation','','false','none',10,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
