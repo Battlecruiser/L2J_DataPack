@@ -2812,12 +2812,8 @@
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd">
 					<using kind="Dual Sword" />
 				</mul>
-				<mul order="0x30" stat="pvpPhysDmg" val="#pvp">
-					<using kind="Dual Sword" />
-				</mul>
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvp">
-					<using kind="Dual Sword" />
-				</mul>
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvp" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvp" />
 			</effect>
 		</for>
 		<enchant1for>
@@ -2825,12 +2821,8 @@
 				<mul order="0x30" stat="pAtkSpd" val="#ench1pAtkSpd">
 					<using kind="Dual Sword" />
 				</mul>
-				<mul order="0x30" stat="pvpPhysDmg" val="1.1">
-					<using kind="Dual Sword" />
-				</mul>
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1">
-					<using kind="Dual Sword" />
-				</mul>
+				<mul order="0x30" stat="pvpPhysDmg" val="1.1" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
@@ -2838,12 +2830,8 @@
 				<mul order="0x30" stat="pAtkSpd" val="1.12">
 					<using kind="Dual Sword" />
 				</mul>
-				<mul order="0x30" stat="pvpPhysDmg" val="#ench2pvpDmg">
-					<using kind="Dual Sword" />
-				</mul>
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#ench2pvpDmg">
-					<using kind="Dual Sword" />
-				</mul>
+				<mul order="0x30" stat="pvpPhysDmg" val="#ench2pvpDmg" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#ench2pvpDmg" />
 			</effect>
 		</enchant2for>
 	</skill>
