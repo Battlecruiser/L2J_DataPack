@@ -587,7 +587,7 @@
 			<effect name="Buff" time="20" val="0">
 				<mul order="0x30" stat="pAtk" val="1.15" />
 				<mul order="0x30" stat="mAtk" val="1.75" />
-				<mul order="0x30" stat="rCrit" val="1.30" />
+				<basemul order="0x30" stat="rCrit" val="0.3" />
 			</effect>
 		</for>
 	</skill>
@@ -617,8 +617,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
 			<effect name="Buff" time="15" val="0">
-				<mul order="0x30" stat="pDef" val="1.20" />
-				<mul order="0x30" stat="mDef" val="1.20" />
+				<mul order="0x30" stat="pDef" val="1.2" />
+				<mul order="0x30" stat="mDef" val="1.2" />
 			</effect>
 		</for>
 	</skill>
@@ -628,7 +628,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
 			<effect name="Buff" time="15" val="0">
-				<mul order="0x30" stat="rCrit" val="1.30" />
+				<basemul order="0x30" stat="rCrit" val="0.3" />
 			</effect>
 		</for>
 	</skill>

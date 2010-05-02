@@ -425,7 +425,7 @@
 			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="multi_buff">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
-				<mul order="0x30" stat="rCrit" val="1.1" />
+				<basemul order="0x30" stat="rCrit" val="0.1" />
 				<mul order="0x30" stat="cAtk" val="1.1" />
 				<add order="0x40" stat="darkRes" val="20" />
 			</effect>
