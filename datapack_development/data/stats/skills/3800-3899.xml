@@ -83,7 +83,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="darkRes" val="0.40" />
+			<add order="0x40" stat="darkRes" val="40" />
 		</for>
 	</skill>
 	<skill id="3811" levels="1" name="Necklace of Black Ore">
@@ -430,7 +430,7 @@
 		</for>
 	</skill>
 	<skill id="3851" levels="2" name="Ancient Sword of Critical Chance">
-		<table name="#rCrit">10 30</table>
+		<table name="#rCrit"> 10 30 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
