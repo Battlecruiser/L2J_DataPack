@@ -1071,7 +1071,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant4 name="elementPower" val="#ench4elementPower" />
-		<set name="absorbPart" val="0.8" /> <!-- Dark Vortex: Power is reduced but drain percentage is increased - so I changed 0.7 -> 0.8 -->
+		<set name="absorbPart" val="0.4" /> <!-- absorbs 40% of inflicted damage as HP -->
 		<for>
 			<!-- Retail Values CT2.3: 12MP * 3 Sec -->
 			<effect count="10" name="ManaDamOverTime" time="3" val="36" effectPower="80" effectType="MDOT">
