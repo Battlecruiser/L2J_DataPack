@@ -725,7 +725,7 @@
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="60000" />
 		<for>
-			<effect count="5" name="Fear" time="2" val="0" stackOrder="1" stackType="Fear" />
+			<effect count="5" name="Fear" time="2" val="0" stackOrder="1" stackType="Fear" effectPower="60" effectType="FEAR" />
 		</for>
 	</skill>
 	<skill id="748" levels="1" name="Saber Tooth Tiger Sprint">
