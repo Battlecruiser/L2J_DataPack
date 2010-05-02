@@ -1286,7 +1286,7 @@
 		</for>
 		<enchant1for>
 			<effect name="Buff" time="#ench1Time" val="0" stackOrder="1" stackType="multi_buff">
-				<mul order="0x30" stat="rCrit" val="1.2" />
+				<basemul order="0x30" stat="rCrit" val="0.2" />
 				<mul order="0x30" stat="pAtk" val="1.1" />
 				<mul order="0x30" stat="cAtk" val="1.2" />
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
