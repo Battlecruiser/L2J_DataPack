@@ -953,7 +953,7 @@
 		<set name="isMagic" val="true" />
 		<set name="removedOnAnyActionExceptMove" val="true" />
 		<for>
-			<effect name="Invincible" time="10" val="0" stackOrder="1" stackType="item_skill" />
+			<effect name="Invincible" time="10" val="0" special="invincible" stackOrder="1" stackType="item_skill" />
 		</for>
 	</skill>
 	<skill id="3159" levels="3" name="Item Skill: Stealth">
