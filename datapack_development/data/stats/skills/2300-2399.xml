@@ -1016,9 +1016,14 @@
 		</cond>
 	</skill>
 	<skill id="2395" levels="1" name="Lesser Battlefield Healing Potion">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="power" val="2000" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="HEAL" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="180000" />
+		<set name="staticReuse" val="true" />
+		<set name="isPotion" val="true" />
 		<cond msgId="113" addName="1">
 			<player SiegeZone="126" />
 		</cond>
