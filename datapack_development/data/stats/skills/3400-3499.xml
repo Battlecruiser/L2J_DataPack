@@ -6,19 +6,28 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="3401" levels="1" name="Dynasty Resistance Necklace">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="derangementVuln" val="0.91" /> <!-- Fear Resistance +9 -->
+		</for>
 	</skill>
 	<skill id="3402" levels="1" name="Dynasty Resistance Ring">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="derangementVuln" val="0.96" /> <!-- Fear Resistance +4 -->
+		</for>
 	</skill>
 	<skill id="3403" levels="1" name="Dynasty Resistance Earring">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="derangementVuln" val="0.94" /> <!-- Fear Resistance +6 -->
+		</for>
 	</skill>
 	<skill id="3404" levels="1" name="Mystery Effect">
 		<set name="target" val="TARGET_NONE" />
