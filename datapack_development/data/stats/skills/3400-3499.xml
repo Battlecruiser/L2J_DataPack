@@ -926,11 +926,15 @@
 	<skill id="3496" levels="1" name="Red Talisman of Recovery">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
+		<set name="equipDelay" val="30000" />
 		<for>
-			<mul order="0x30" stat="regCp" val="1.01" />
-			<mul order="0x30" stat="regHp" val="1.01" />
+			<effect name="HealOverTime" noicon="1" val="111" />
+			<effect name="CombatPointHealOverTime" noicon="1" val="100" />
 		</for>
 	</skill>
 	<skill id="3497" levels="1" name="Yellow Talisman of MP Regeneration">
