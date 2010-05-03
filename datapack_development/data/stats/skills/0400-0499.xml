@@ -1375,7 +1375,7 @@
 			<player Charges="5" /> <!-- Requires a dualsword weapon. Requires 5th stage Sword Energy. -->
 		</cond>
 		<for>
-			<effect name="Invincible" time="10" val="0" stackOrder="1" stackType="Instant_Shield" />
+			<effect name="Invincible" time="10" val="0" special="invincible" stackOrder="1" stackType="Instant_Shield" />
 		</for>
 	</skill>
 	<skill id="443" levels="1" name="Force Barrier">
@@ -1392,7 +1392,7 @@
 			<player Charges="4" /> <!-- Requires a hand-to-hand weapon. Requires 4th stage Energy. -->
 		</cond>
 		<for>
-			<effect name="Invincible" time="10" val="0" stackOrder="1" stackType="Instant_Shield" />
+			<effect name="Invincible" time="10" val="0" special="invincible" stackOrder="1" stackType="Instant_Shield" />
 		</for>
 	</skill>
 	<skill id="444" levels="1" name="Festive Sweeper">

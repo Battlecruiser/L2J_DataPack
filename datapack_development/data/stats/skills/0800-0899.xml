@@ -596,7 +596,7 @@
 		<set name="castRange" val="400" />
 		<set name="removedOnAnyActionExceptMove" val="true" />
 		<for>
-			<effect name="Invincible" time="8" val="0" stackOrder="1" stackType="Instant_Shield" special="invincible" />
+			<effect name="Invincible" time="8" val="0" special="invincible" stackOrder="1" stackType="Instant_Shield" />
 		</for>
 	</skill>
 	<skill id="838" levels="1" name="Switch Stance">

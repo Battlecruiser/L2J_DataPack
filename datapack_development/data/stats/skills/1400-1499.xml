@@ -526,7 +526,7 @@
 		<set name="isMagic" val="true" />
 		<set name="removedOnAnyActionExceptMove" val="true" />
 		<for>
-			<effect name="Invincible" time="10" val="0" stackOrder="1" stackType="Instant_Shield" />
+			<effect name="Invincible" time="10" val="0" special="invincible" stackOrder="1" stackType="Instant_Shield" />
 		</for>
 	</skill>
 	<skill id="1419" levels="1" name="Volcano">
@@ -736,7 +736,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Invincible" time="30" val="0" stackOrder="1" stackType="Instant_Shield" special="invincible" />
+			<effect name="Invincible" time="30" val="0" special="invincible" stackOrder="1" stackType="Instant_Shield" />
 		</for>
 	</skill>
 	<skill id="1428" levels="1" name="Mass Recharge">
@@ -2477,7 +2477,7 @@
 		<set name="effectRange" val="900" />
 		<set name="removedOnAnyActionExceptMove" val="true" />
 		<for>
-			<effect name="Invincible" time="30" val="0" stackOrder="1" stackType="Instant_Shield" special="invincible" />
+			<effect name="Invincible" time="30" val="0" special="invincible" stackOrder="1" stackType="Instant_Shield" />
 		</for>
 	</skill>
 	<skill id="1497" levels="1" name="Excessive Royalty">
