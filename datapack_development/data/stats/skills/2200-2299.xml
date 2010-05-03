@@ -414,11 +414,16 @@
 		</cond>
 	</skill>
 	<skill id="2238" levels="1" name="Room of Splendor Key">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_UNLOCKABLE" />
+		<set name="skillType" val="UNLOCK_SPECIAL" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
+		<set name="power" val="35" />
+		<cond msgId="113" addName="1">
+			<target npcId="268436041" />
+		</cond>
 	</skill>
 	<skill id="2239" levels="1" name="Petrification Scroll">
 		<set name="target" val="TARGET_NONE" />

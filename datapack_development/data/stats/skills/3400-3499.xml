@@ -409,8 +409,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
 			<effect name="Buff" time="10" val="0" stackOrder="1" stackType="talisman_blue">
-				<mul order="0x30" stat="mAtk" val="1.15"/>
-				<mul order="0x30" stat="mCritRate" val="1.15"/>
+				<mul order="0x30" stat="mAtk" val="1.15" />
+				<mul order="0x30" stat="mCritRate" val="1.15" />
 			</effect>
 		</for>
 	</skill>
