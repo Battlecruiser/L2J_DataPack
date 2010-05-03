@@ -508,6 +508,7 @@
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+			<mul order="0x30" stat="stunVuln" val="0.95" /> <!-- Stun resistance -->
 			<mul order="0x30" stat="mAtk" val="1.054" /> <!-- Increase M. Atk +5.4% -->
 			<add order="0x10" stat="cloak" val="1" />
 		</for>
