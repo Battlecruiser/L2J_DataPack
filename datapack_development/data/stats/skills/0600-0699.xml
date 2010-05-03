@@ -361,7 +361,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="overHit" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -374,15 +373,15 @@
 		<set name="isDebuff" val="true" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="effectRange" val="200" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant1 name="power" val="#ench1Power" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="mpConsume" val="#ench2MpConsume" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<effect count="3" name="Fear" val="0" effectPower="40" effectType="FEAR" />
 		</for>
-		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant1 name="power" val="#ench1Power" />
-		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant3for>
 			<effect count="#ench3Time" name="Fear" val="0" effectPower="40" effectType="FEAR" />
 		</enchant3for>
@@ -1258,11 +1257,13 @@
 		<set name="reuseDelay" val="900000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<effect name="ImmobileBuff" time="30" val="0" stackOrder="1" stackType="pd_up_special">
-			<add order="0x40" stat="pDef" val="3600" />
-			<add order="0x40" stat="mDef" val="2700" />
-			<mul order="0x30" stat="cancelVuln" val="0.2" />
-		</effect>
+		<for>
+			<effect name="ImmobileBuff" time="30" val="0" stackOrder="1" stackType="pd_up_special">
+				<add order="0x40" stat="pDef" val="3600" />
+				<add order="0x40" stat="mDef" val="2700" />
+				<mul order="0x30" stat="cancelVuln" val="0.2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="685" levels="1" name="Sacrifice Knight">
 		<set name="target" val="TARGET_NONE" />
