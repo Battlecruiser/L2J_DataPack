@@ -324,127 +324,143 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5135" levels="1" name="Slash">
-		<set name="magicLvl" val="80" />
-		<set name="mpConsume" val="214" />
-		<set name="power" val="5000" /> <!-- Guess -->
-		<set name="target" val="TARGET_ONE" />
-		<set name="hitTime" val="1080" />
-		<set name="reuseDelay" val="8000" />
-		<set name="coolTime" val="167" />
-		<set name="skillType" val="PDAM" />
-		<set name="overHit" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Summon Feline King Skill -->
+		<!-- TODO: power needs to be verified -->
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1080" />
+		<set name="magicLvl" val="79" />
+		<set name="mpConsume" val="214" />
+		<set name="nextActionAttack" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="5000" />
+		<set name="reuseDelay" val="8000" />
+		<set name="skillType" val="PDAM" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="5136" levels="1" name="Spin Slash">
-		<set name="magicLvl" val="80" />
-		<set name="mpConsume" val="322" />
-		<set name="power" val="2500" /> <!-- Guess -->
-		<set name="target" val="TARGET_AURA" />
+		<!-- Summon Feline King Skill -->
+		<!-- TODO: power needs to be verified -->
 		<set name="hitTime" val="1070" />
-		<set name="skillRadius" val="230" />
-		<set name="reuseDelay" val="8000" />
-		<set name="coolTime" val="230" />
-		<set name="skillType" val="PDAM" />
-		<set name="overHit" val="true" />
+		<set name="magicLvl" val="79" />
+		<set name="mpConsume" val="322" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="effectRange" val="500" />
+		<set name="power" val="2500" />
+		<set name="reuseDelay" val="17000" />
+		<set name="skillRadius" val="100" />
+		<set name="skillType" val="PDAM" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_MULTIFACE" />
 	</skill>
 	<skill id="5137" levels="1" name="Hold of King">
-		<set name="mpConsume" val="322" />
-		<set name="magicLvl" val="80" />
-		<set name="power" val="80" />
-		<set name="lvlDepend" val="2" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="230" />
-		<set name="hitTime" val="2500" />
-		<set name="reuseDelay" val="8000" />
-		<set name="skillTime" val="4000" />
-		<set name="skillType" val="ROOT" />
-		<set name="isMagic" val="true" />
+		<!-- Summon Feline King Skill -->
 		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="true" />
+		<set name="lvlDepend" val="2" />
+		<set name="magicLvl" val="79" />
+		<set name="mpConsume" val="322" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="effectRange" val="500" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="20000" />
+		<set name="skillRadius" val="100" />
+		<set name="skillType" val="ROOT" />
+		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="Root" time="30" val="0" stackOrder="1" stackType="Root" />
 		</for>
 	</skill>
 	<skill id="5138" levels="1" name="Whiplash">
-		<set name="magicLvl" val="80" />
-		<set name="mpConsume" val="214" />
-		<set name="power" val="4000" /> <!-- Guess -->
-		<set name="target" val="TARGET_ONE" />
-		<set name="hitTime" val="1080" />
-		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isDebuff" val="true" />
+		<!-- Summon Magnus the Unicorn Skill -->
+		<!-- TODO: power needs to be verified -->
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1080" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="79" />
+		<set name="mpConsume" val="214" />
+		<set name="nextActionAttack" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="4000" />
+		<set name="reuseDelay" val="8000" />
+		<set name="skillType" val="PDAM" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" stackOrder="1" stackType="Stun" />
+			<effect name="Stun" time="9" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="Stun" />
 		</for>
 	</skill>
 	<skill id="5139" levels="1" name="Tidal Wave">
-		<set name="magicLvl" val="80" />
-		<set name="mpConsume" val="322" />
+		<!-- Summon Magnus the Unicorn Skill -->
+                <!-- TODO: power needs to be verified -->
+		<set name="castRange" val="500" />
+		<set name="effectRange" val="1000" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
-		<set name="power" val="250" />
-		<set name="target" val="TARGET_AREA" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="true" />
-		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="MDAM" />
+		<set name="magicLvl" val="79" />
+		<set name="mpConsume" val="322" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="500" />
-		<set name="effectRange" val="900" />
+		<set name="power" val="100" />
+		<set name="reuseDelay" val="8000" />
+		<set name="skillRadius" val="100" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="5140" levels="1" name="Dark Curse">
-		<set name="mpConsume" val="322" />
-		<set name="magicLvl" val="80" />
-		<set name="lvlDepend" val="1" />
-		<set name="target" val="TARGET_AREA" />
+		<!-- Summon Spectral Lord Skill -->
 		<set name="hitTime" val="1500" />
-		<set name="reuseDelay" val="8000" />
-		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="79" />
+		<set name="mpConsume" val="322" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
+		<set name="power" val="70" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="8000" />
+		<set name="skillRadius" val="150" />
 		<set name="skillType" val="POISON" />
+		<set name="target" val="TARGET_AURA" />
 		<for>
-			<effect count="10" name="DamOverTime" time="3" val="96" abnormal="poison" effectPower="35" effectType="POISON">
-				<mul order="0x30" stat="pAtkSpd" val="0.7" />
+			<effect count="10" name="DamOverTime" time="3" val="343" abnormal="poison">
+				<mul order="0x30" stat="pAtkSpd" val="0.77" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="5141" levels="1" name="Dicing Death">
-		<set name="magicLvl" val="80" />
-		<set name="mpConsume" val="214" />
-		<set name="power" val="4000" /> <!-- Guess -->
-		<set name="target" val="TARGET_ONE" />
-		<set name="hitTime" val="1080" />
-		<set name="reuseDelay" val="8000" />
-		<set name="coolTime" val="180" />
-		<set name="skillType" val="PDAM" />
-		<set name="overHit" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Summon Spectral Lord Skill -->
+		<!-- TODO: power needs to be verified -->
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1080" />
+		<set name="magicLvl" val="79" />
+		<set name="mpConsume" val="214" />
+		<set name="nextActionAttack" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="4000" /> <!-- Guess -->
+		<set name="reuseDelay" val="8000" />
+		<set name="skillType" val="PDAM" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="5142" levels="1" name="Corpse Kaboom">
-		<set name="magicLvl" val="80" />
-		<set name="mpConsume" val="322" />
-		<set name="power" val="54" /> <!-- Guess -->
-		<set name="target" val="TARGET_AREA_CORPSE_MOB" />
-		<set name="hitTime" val="1500" />
-		<set name="reuseDelay" val="20000" />
-		<set name="skillType" val="MDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="500" />
+		<!-- Summon Spectral Lord Skill -->
+		<!-- TODO: power needs to be verified -->
+		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="79" />
+		<set name="mpConsume" val="322" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="108" />
+		<set name="reuseDelay" val="20000" />
+		<set name="skillRadius" val="100" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_AREA_CORPSE_MOB" />
 	</skill>
 	<skill id="5143" levels="1" name="Sailren Use Blow">
 		<set name="target" val="TARGET_NONE" />
