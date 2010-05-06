@@ -930,16 +930,16 @@
 		<for>
 			<!-- Retail Values CT2.3: 12MP * 3 Sec -->
 			<effect count="10" name="ManaDamOverTime" time="3" val="36" effectPower="80" effectType="MDOT">
-				<mul order="0x30" stat="runSpd" val="0.9" />
-				<mul order="0x30" stat="pAtkSpd" val="0.7" />
+				<mul order="0x30" stat="runSpd" val="0.7" />
+				<mul order="0x30" stat="pAtkSpd" val="0.9" />
 				<mul order="0x30" stat="mAtkSpd" val="0.9" />
 				<sub order="0x40" stat="waterRes" val="20" />
 			</effect>
 		</for>
 		<enchant3for>
 			<effect count="10" name="ManaDamOverTime" time="3" val="36" effectPower="#ench3effectPower" effectType="MDOT">
-				<mul order="0x30" stat="runSpd" val="0.9" />
-				<mul order="0x30" stat="pAtkSpd" val="0.7" />
+				<mul order="0x30" stat="runSpd" val="0.7" />
+				<mul order="0x30" stat="pAtkSpd" val="0.9" />
 				<mul order="0x30" stat="mAtkSpd" val="0.9" />
 				<sub order="0x40" stat="waterRes" val="20" />
 			</effect>
@@ -981,16 +981,16 @@
 			<!-- Retail Values CT2.3: 12MP * 3 Sec -->
 			<effect count="10" name="ManaDamOverTime" time="3" val="36" effectPower="80" effectType="MDOT">
 				<mul order="0x30" stat="runSpd" val="0.9" />
-				<mul order="0x30" stat="pAtkSpd" val="0.7" />
-				<mul order="0x30" stat="mAtkSpd" val="0.9" />
+				<mul order="0x30" stat="pAtkSpd" val="0.9" />
+				<mul order="0x30" stat="mAtkSpd" val="0.7" />
 				<sub order="0x40" stat="windRes" val="20" />
 			</effect>
 		</for>
 		<enchant3for>
 			<effect count="10" name="ManaDamOverTime" time="3" val="36" effectPower="#ench3effectPower" effectType="MDOT">
 				<mul order="0x30" stat="runSpd" val="0.9" />
-				<mul order="0x30" stat="pAtkSpd" val="0.7" />
-				<mul order="0x30" stat="mAtkSpd" val="0.9" />
+				<mul order="0x30" stat="pAtkSpd" val="0.9" />
+				<mul order="0x30" stat="mAtkSpd" val="0.7" />
 				<sub order="0x40" stat="windRes" val="20" />
 			</effect>
 		</enchant3for>
