@@ -101,15 +101,20 @@
 		</for>
 	</skill>
 	<skill id="1505" levels="1" name="Sublime Self-Sacrifice">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="magicLvl" val="83" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="isMagic" val="true" />
 		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="mpConsume" val="218" />
 		<set name="hpConsume" val="4000" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="83" />
+		<set name="mpConsume" val="218" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="HPMPCPHEAL_PERCENT" />
+		<set name="target" val="TARGET_PARTY_NOTME" />
+		<for>
+			<effect name="Invincible" time="15" val="0" stackOrder="2" stackType="Instant_Shield" />
+		</for>
 	</skill>
 	<skill id="1506" levels="1" name="Blessing of Eva">
 		<set name="castRange" val="400" />
