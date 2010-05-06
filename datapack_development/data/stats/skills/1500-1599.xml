@@ -113,7 +113,7 @@
 		<set name="skillType" val="HPMPCPHEAL_PERCENT" />
 		<set name="target" val="TARGET_PARTY_NOTME" />
 		<for>
-			<effect name="Invincible" time="15" val="0" stackOrder="2" stackType="Instant_Shield" />
+			<effect name="Invincible" time="15" val="0" special="invincible" stackOrder="2" stackType="Instant_Shield" />
 		</for>
 	</skill>
 	<skill id="1506" levels="1" name="Blessing of Eva">
