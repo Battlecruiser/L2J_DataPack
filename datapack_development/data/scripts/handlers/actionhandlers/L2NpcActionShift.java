@@ -111,7 +111,7 @@ public class L2NpcActionShift implements IActionHandler
 				StringUtil.append(html1,
 						"<br1>Mob Group: ",
 						String.valueOf(MobGroupTable.getInstance().getGroupForMob((L2ControllableMobInstance) target).getGroupId()),
-						"<br>"
+						"<br1>"
 				);
 			}
 			else
@@ -119,7 +119,16 @@ public class L2NpcActionShift implements IActionHandler
 				StringUtil.append(html1,
 						"<br1>Respawn Time: ",
 						(((L2Npc)target).getSpawn() != null ? String.valueOf(((L2Npc)target).getSpawn().getRespawnDelay() / 1000) : "?"),
-						"  Seconds<br>"
+						"  Seconds<br1>"
+				);
+			}
+			
+			if (target.hasAI())
+			{
+				StringUtil.append(html1,
+						"<br1>AI Type: ",
+						target.getAI().getClass().getSimpleName(),
+						"  <br1>"
 				);
 			}
 
