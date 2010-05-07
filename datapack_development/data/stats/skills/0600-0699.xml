@@ -299,6 +299,7 @@
 		<set name="skillType" val="DETECT_TRAP" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillRadius" val="400" />
+		<set name="neutral" val="true" />
 	</skill>
 	<skill id="624" levels="1" name="Remove Trap">
 		<set name="mpConsume" val="17" />
@@ -310,6 +311,9 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
+		<cond msgId="109">
+			<target npcType="L2Trap" />
+		</cond>
 	</skill>
 	<skill id="625" levels="1" name="Soul Gathering" enchantGroup1="1" enchantGroup2="1">
 		<table name="#ench1hpConsume"> 196 193 190 186 183 180 176 173 170 166 163 160 156 153 150 146 143 140 136 133 130 126 123 120 116 113 110 106 103 100 </table>
