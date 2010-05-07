@@ -431,9 +431,11 @@
 		<set name="create_item_count" val="1" />
 		<set name="soulConsumeCount" val="1" />
 	</skill>
-	<skill id="514" levels="9" name="Fire Trap">
+	<skill id="514" levels="9" name="Fire Trap" enchantGroup1="2" enchantGroup2="2">
 		<!-- CT2.2 retail confirmed -->
 		<table name="#triggerSkillLvl"> 1 2 3 4 5 6 7 8 9 </table>
+		<table name="#ench1trigger"> 10 10 11 11 11 12 12 12 13 13 13 14 14 14 15 15 15 16 16 16 17 17 17 18 18 18 19 19 19 20 </table>
+		<table name="#ench2reuse"> 44000 43000 42000 41000 40000 39000 38000 37000 36000 35000 34000 33000 32000 31000 30000 29000 28000 27000 26000 25000 24000 23000 22000 21000 20000 19000 18000 17000 16000 15000 </table>
 		<set name="mpConsume" val="50" />
 		<set name="hitTime" val="3000" />
 		<set name="summonTotalLifeTime" val="30000" />
@@ -446,10 +448,14 @@
 		<set name="triggerSkillId" val="5267" />
 		<set name="triggerSkillLvl" val="#triggerSkillLvl" />
 		<set name="trapNpcId" val="13037" />
+		<enchant1 name="triggerSkillLvl" val="#ench1trigger" />
+		<enchant2 name="reuseDelay" val="#ench2reuse" />
 	</skill>
-	<skill id="515" levels="6" name="Poison Trap">
+	<skill id="515" levels="6" name="Poison Trap" enchantGroup1="2" enchantGroup2="2">
 		<!-- Needs retail value corrections -->
 		<table name="#triggerSkillLvl"> 1 2 3 4 5 6 </table>
+		<table name="#ench1trigger"> 7 7 8 8 8 9 9 9 10 10 10 11 11 11 12 12 12 13 13 13 14 14 14 15 15 15 16 16 16 17 </table>
+		<table name="#ench2reuse"> 44000 43000 42000 41000 40000 39000 38000 37000 36000 35000 34000 33000 32000 31000 30000 29000 28000 27000 26000 25000 24000 23000 22000 21000 20000 19000 18000 17000 16000 15000 </table>
 		<set name="mpConsume" val="50" />
 		<set name="hitTime" val="3000" />
 		<set name="summonTotalLifeTime" val="30000" />
@@ -462,10 +468,14 @@
 		<set name="triggerSkillId" val="5268" />
 		<set name="triggerSkillLvl" val="#triggerSkillLvl" />
 		<set name="trapNpcId" val="13037" />
+		<enchant1 name="triggerSkillLvl" val="#ench1trigger" />
+		<enchant2 name="reuseDelay" val="#ench2reuse" />
 	</skill>
-	<skill id="516" levels="6" name="Slow Trap">
+	<skill id="516" levels="6" name="Slow Trap" enchantGroup1="2" enchantGroup2="2">
 		<!-- Needs retail value corrections -->
 		<table name="#triggerSkillLvl"> 1 2 3 4 5 6 </table>
+		<table name="#ench1trigger"> 7 7 8 8 8 9 9 9 10 10 10 11 11 11 12 12 12 13 13 13 14 14 14 15 15 15 16 16 16 17 </table>
+		<table name="#ench2reuse"> 44000 43000 42000 41000 40000 39000 38000 37000 36000 35000 34000 33000 32000 31000 30000 29000 28000 27000 26000 25000 24000 23000 22000 21000 20000 19000 18000 17000 16000 15000 </table>
 		<set name="mpConsume" val="50" />
 		<set name="hitTime" val="3000" />
 		<set name="summonTotalLifeTime" val="30000" />
@@ -478,10 +488,14 @@
 		<set name="triggerSkillId" val="5269" />
 		<set name="triggerSkillLvl" val="#triggerSkillLvl" />
 		<set name="trapNpcId" val="13037" />
+		<enchant1 name="triggerSkillLvl" val="#ench1trigger" />
+		<enchant2 name="reuseDelay" val="#ench2reuse" />
 	</skill>
-	<skill id="517" levels="5" name="Flash Trap">
+	<skill id="517" levels="5" name="Flash Trap" enchantGroup1="2" enchantGroup2="2">
 		<!-- Needs retail value corrections -->
 		<table name="#triggerSkillLvl"> 1 2 3 4 5 </table>
+		<table name="#ench1trigger"> 6 6 7 7 7 8 8 8 9 9 9 10 10 10 11 11 11 12 12 12 13 13 13 14 14 14 15 15 15 16 </table>
+		<table name="#ench2reuse"> 44000 43000 42000 41000 40000 39000 38000 37000 36000 35000 34000 33000 32000 31000 30000 29000 28000 27000 26000 25000 24000 23000 22000 21000 20000 19000 18000 17000 16000 15000 </table>
 		<set name="mpConsume" val="50" />
 		<set name="hitTime" val="3000" />
 		<set name="summonTotalLifeTime" val="30000" />
@@ -494,10 +508,14 @@
 		<set name="triggerSkillId" val="5270" />
 		<set name="triggerSkillLvl" val="#triggerSkillLvl" />
 		<set name="trapNpcId" val="13037" />
+		<enchant1 name="triggerSkillLvl" val="#ench1trigger" />
+		<enchant2 name="reuseDelay" val="#ench2reuse" />
 	</skill>
-	<skill id="518" levels="8" name="Binding Trap">
+	<skill id="518" levels="8" name="Binding Trap" enchantGroup1="2" enchantGroup2="2">
 		<!-- Needs retail value corrections -->
 		<table name="#triggerSkillLvl"> 1 2 3 4 5 6 7 8 </table>
+		<table name="#ench1trigger"> 9 9 10 10 10 11 11 11 12 12 12 13 13 13 14 14 14 15 15 15 16 16 16 17 17 17 18 18 18 19 </table>
+		<table name="#ench2reuse"> 44000 43000 42000 41000 40000 39000 38000 37000 36000 35000 34000 33000 32000 31000 30000 29000 28000 27000 26000 25000 24000 23000 22000 21000 20000 19000 18000 17000 16000 15000 </table>
 		<set name="mpConsume" val="50" />
 		<set name="hitTime" val="3000" />
 		<set name="summonTotalLifeTime" val="30000" />
@@ -510,6 +528,8 @@
 		<set name="triggerSkillId" val="5271" />
 		<set name="triggerSkillLvl" val="#triggerSkillLvl" />
 		<set name="trapNpcId" val="13037" />
+		<enchant1 name="triggerSkillLvl" val="#ench1trigger" />
+		<enchant2 name="reuseDelay" val="#ench2reuse" />
 	</skill>
 	<skill id="519" levels="1" name="Quiver of Bolts: A-Grade">
 		<set name="mpConsume" val="366" />
