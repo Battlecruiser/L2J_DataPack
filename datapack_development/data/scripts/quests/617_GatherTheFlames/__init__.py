@@ -131,6 +131,7 @@ QUEST.addStartNpc(HILDA)
 
 QUEST.addTalkId(VULCAN)
 QUEST.addTalkId(ROONEY)
+QUEST.addTalkId(HILDA)
 
 for mob in DROPLIST.keys() :
   QUEST.addKillId(mob)
