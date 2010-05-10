@@ -48,7 +48,7 @@ public class ShiftTarget implements ISkillHandler
 			L2Attackable hater = ((L2Attackable) obj);
 			if (hater.getHating(activeChar) == 0)
 				continue;
-			hater.addDamageHate(target, hater.getHating(activeChar), hater.getHating(activeChar));
+			hater.addDamageHate(target, 0, hater.getHating(activeChar));
 			
 		}
 	}
