@@ -788,8 +788,8 @@ public class AdminEditNpc implements IAdminCommandHandler
 			adminReply.replace("%serverSideName%", npc.serverSideName == true ? "1" : "0");
 			adminReply.replace("%title%", npc.title);
 			adminReply.replace("%serverSideTitle%", npc.serverSideTitle == true ? "1" : "0");
-			adminReply.replace("%collisionRadius%", String.valueOf(npc.collisionRadius));
-			adminReply.replace("%collisionHeight%", String.valueOf(npc.collisionHeight));
+			adminReply.replace("%collisionRadius%", String.valueOf(npc.fCollisionRadius));
+			adminReply.replace("%collisionHeight%", String.valueOf(npc.fCollisionHeight));
 			adminReply.replace("%level%", String.valueOf(npc.level));
 			adminReply.replace("%sex%", String.valueOf(npc.sex));
 			adminReply.replace("%type%", String.valueOf(npc.type));
