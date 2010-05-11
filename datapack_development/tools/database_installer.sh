@@ -344,7 +344,6 @@ else
 echo "Upgrading gameserver content"
 fi
 if [ "$1" == "I" ]; then
-$MYG < ../sql/access_levels.sql &> /dev/null
 $MYG < ../sql/auction.sql &> /dev/null
 $MYG < ../sql/castle.sql &> /dev/null
 $MYG < ../sql/clanhall.sql &> /dev/null
@@ -353,6 +352,7 @@ $MYG < ../sql/forums.sql &> /dev/null
 $MYG < ../sql/seven_signs_festival.sql &> /dev/null
 $MYG < ../sql/seven_signs_status.sql &> /dev/null
 fi
+$MYG < ../sql/access_levels.sql &> /dev/null
 $MYG < ../sql/admin_command_access_rights.sql &> /dev/null
 $MYG < ../sql/armor.sql &> /dev/null
 $MYG < ../sql/armorsets.sql &> /dev/null
