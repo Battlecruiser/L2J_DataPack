@@ -698,6 +698,7 @@ gameservers.sql
 ) do call :dump %%i
 set dest=gs
 for %%i in (
+access_levels.sql
 admin_command_access_rights.sql
 armor.sql
 armorsets.sql
@@ -812,7 +813,6 @@ zone_vertices.sql
 
 if %full% == 1 (
 for %%i in (
-access_levels.sql
 auction.sql
 castle.sql
 clanhall.sql
