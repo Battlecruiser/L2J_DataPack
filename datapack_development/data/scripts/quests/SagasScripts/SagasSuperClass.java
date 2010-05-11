@@ -183,7 +183,10 @@ public class SagasSuperClass extends QuestJython
 	{
 		if (player.getClassId().getId() == 0x81)
 		{
-			return prevclass[1];
+			if (prevclass.length == 1)
+				return -1;
+			else
+				return prevclass[1];
 		}
 		return prevclass[0];
 	}
