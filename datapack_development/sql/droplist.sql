@@ -37,7 +37,7 @@ CREATE TABLE `droplist` (
 --    2 is almost all of the other items except:
 --    3 and 4 are used for the other two seal stones (1 category each).
 
-INSERT INTO `droplist` VALUES 
+INSERT INTO `droplist` VALUES
 (18001,1806,1,1,-1,10868),-- Recipe: Soulshot: B-Grade
 (18001,57,765,1528,0,700000),-- Adena
 (18001,4069,1,1,1,2102),-- Tunic of Zubei Fabric
@@ -34915,6 +34915,15 @@ INSERT INTO `droplist` VALUES
 (29056,8180,1,1,3,200000),-- Circlet of Ice Fairy Sirra
 (29057,1344,20,60,2,928000),-- Mithril Arrow
 (29058,1539,1,1,2,227733),-- Greater Healing Potion
+(29062,8921,1,1,1,320095), -- Demon Circlet
+-- Andreas Van Halter
+(29062,960,1,1,2,320095), -- Scroll: Enchant Armor (S)
+(29062,6711,12,36,2,306342), -- Sealed Major Arcana Robe Part
+(29062,7579,1,1,2,233504), -- Draconic Bow Shaft
+(29062,959,1,1,2,32009), -- Scroll: Enchant Weapon (S)
+(29062,6684,1,1,1,17056), -- Sealed Major Arcana Robe
+(29062,7575,1,1,1,10504), -- Draconic Bow
+(29062,6577,1,1,2,5335), -- Blessed Scroll: Enchant Weapon (S)
 (29065,6367,1,1,1,4497),-- Angel Slayer
 (29065,6691,3,9,1,395312),-- Angel Slayer Blade
 (29065,959,1,1,2,18273),-- Scroll: Enchant Weapon (Grade S)
