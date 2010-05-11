@@ -24,7 +24,7 @@ public class SagaOfThePhoenixKnight extends SagasSuperClass
 {
 	public static String qn1 = "70_SagaOfThePhoenixKnight";
 	public static int qnu = 70;
-	public static String qna = "Saga of the Pheonix Knight";
+	public static String qna = "Saga of the Phoenix Knight";
 
 	public SagaOfThePhoenixKnight()
 	{
