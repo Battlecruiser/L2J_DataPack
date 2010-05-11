@@ -34915,8 +34915,8 @@ INSERT INTO `droplist` VALUES
 (29056,8180,1,1,3,200000),-- Circlet of Ice Fairy Sirra
 (29057,1344,20,60,2,928000),-- Mithril Arrow
 (29058,1539,1,1,2,227733),-- Greater Healing Potion
-(29062,8921,1,1,1,320095), -- Demon Circlet
 -- Andreas Van Halter
+(29062,8921,1,1,1,320095), -- Demon Circlet
 (29062,960,1,1,2,320095), -- Scroll: Enchant Armor (S)
 (29062,6711,12,36,2,306342), -- Sealed Major Arcana Robe Part
 (29062,7579,1,1,2,233504), -- Draconic Bow Shaft
