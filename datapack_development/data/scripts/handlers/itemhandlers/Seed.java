@@ -37,10 +37,6 @@ import com.l2jserver.gameserver.skills.SkillHolder;
  */
 public class Seed implements IItemHandler
 {	
-	private int _seedId;
-	private L2MonsterInstance _target;
-	private L2PcInstance _activeChar;
-	
 	/**
 	 * 
 	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.L2ItemInstance)
@@ -49,47 +45,42 @@ public class Seed implements IItemHandler
 	{
 		if (!(playable instanceof L2PcInstance))
 			return;
-		
+
 		if (CastleManorManager.getInstance().isDisabled())
 			return;
-		
-		_activeChar = (L2PcInstance) playable;
-		L2Object target_ = _activeChar.getTarget();
-		
-		if (!(target_ instanceof L2Npc))
+
+		final L2Object tgt = playable.getTarget();
+		if (!(tgt instanceof L2Npc))
 		{
-			_activeChar.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
-			_activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			playable.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
+			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		L2Character target = ((L2Character)target_);
-		if (!(target instanceof L2MonsterInstance) || target instanceof L2ChestInstance || target.isRaid())
+		if (!(tgt instanceof L2MonsterInstance) || tgt instanceof L2ChestInstance || ((L2Character)tgt).isRaid())
 		{
-			_activeChar.sendPacket(new SystemMessage(SystemMessageId.THE_TARGET_IS_UNAVAILABLE_FOR_SEEDING));
-			_activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			playable.sendPacket(new SystemMessage(SystemMessageId.THE_TARGET_IS_UNAVAILABLE_FOR_SEEDING));
+			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		
-		_target = (L2MonsterInstance) target;
-		
-		if (_target == null || _target.isDead())
+
+		final L2MonsterInstance target = (L2MonsterInstance)tgt;		
+		if (target.isDead())
 		{
-			_activeChar.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
-			_activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			playable.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
+			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		
-		if (_target.isSeeded())
+
+		if (target.isSeeded())
 		{
-			_activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		
-		_seedId = item.getItemId();
-		
-		if (areaValid(MapRegionTable.getInstance().getAreaCastle(_activeChar)))
+
+		final int seedId = item.getItemId();
+		if (areaValid(seedId, MapRegionTable.getInstance().getAreaCastle(playable)))
 		{
-			_target.setSeeded(_seedId, _activeChar);
+			target.setSeeded(seedId, (L2PcInstance)playable);
 			final SkillHolder[] skills = item.getEtcItem().getSkills();
 			if (skills != null)
 			{
@@ -97,23 +88,22 @@ public class Seed implements IItemHandler
 					return;
 				
 				L2Skill itemskill = skills[0].getSkill();
-				_activeChar.useMagic(itemskill, false, false);
+				((L2PcInstance)playable).useMagic(itemskill, false, false);
 			}
 			
 		}
 		else
-		{
-			_activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_SEED_MAY_NOT_BE_SOWN_HERE));
-		}
+			playable.sendPacket(new SystemMessage(SystemMessageId.THIS_SEED_MAY_NOT_BE_SOWN_HERE));
 	}
 	
 	/**
 	 * 
+	 * @param seedId
 	 * @param castleId
 	 * @return
 	 */
-	private boolean areaValid(int castleId)
+	private boolean areaValid(int seedId, int castleId)
 	{
-		return (L2Manor.getInstance().getCastleIdForSeed(_seedId) == castleId);
+		return (L2Manor.getInstance().getCastleIdForSeed(seedId) == castleId);
 	}
 }
