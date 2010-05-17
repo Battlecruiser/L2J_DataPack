@@ -21,6 +21,8 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import javolution.util.FastList;
+
 import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.ai.L2AttackableAI;
@@ -47,8 +49,6 @@ import com.l2jserver.gameserver.skills.effects.EffectBuff;
 import com.l2jserver.gameserver.templates.skills.L2EffectType;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
 import com.l2jserver.util.Rnd;
-
-import javolution.util.FastList;
 
 /**
  * This Handles Disabler skills
@@ -319,7 +319,7 @@ public class Disablers implements ISkillHandler
 						{
 							L2Attackable targ = (L2Attackable) target;
 							targ.stopHating(activeChar);
-							if (targ.getMostHated() == null)
+							if (targ.getMostHated() == null && targ.hasAI() && targ.getAI() instanceof L2AttackableAI)
 							{
 								((L2AttackableAI) targ.getAI()).setGlobalAggro(-25);
 								targ.clearAggroList();
