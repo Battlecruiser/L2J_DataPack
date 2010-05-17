@@ -35,7 +35,6 @@ import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeSummonInstance;
@@ -98,16 +97,6 @@ public class Disablers implements ISkillHandler
 		boolean bss = false;
 		
 		L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
-		
-		if (activeChar instanceof L2PcInstance)
-		{
-			if (weaponInst == null && skill.isOffensive())
-			{
-				activeChar.sendMessage("You must equip a weapon before casting a spell.");
-				return;
-			}
-		}
-		
 		if (weaponInst != null)
 		{
 			if (skill.isMagic())
@@ -482,7 +471,7 @@ public class Disablers implements ISkillHandler
 				}
 				case STEAL_BUFF:
 				{
-					if (!(target instanceof L2Playable))
+					if (!(target instanceof L2PcInstance))
 						return;
 							
 					L2Effect[] effects = target.getAllEffects();
