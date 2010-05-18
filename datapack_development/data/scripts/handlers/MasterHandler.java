@@ -180,6 +180,7 @@ public class MasterHandler
 		ChatHandler.getInstance().registerChatHandler(new ChatClan());
 		ChatHandler.getInstance().registerChatHandler(new ChatHeroVoice());
 		ChatHandler.getInstance().registerChatHandler(new ChatParty());
+		ChatHandler.getInstance().registerChatHandler(new ChatPartyMatchRoom());
 		ChatHandler.getInstance().registerChatHandler(new ChatPartyRoomAll());
 		ChatHandler.getInstance().registerChatHandler(new ChatPartyRoomCommander());
 		ChatHandler.getInstance().registerChatHandler(new ChatPetition());
