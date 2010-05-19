@@ -184,7 +184,7 @@ public class AdminPForge implements IAdminCommandHandler
 		replyMSG.setLength(0);
                 
 		for (int i = 0; i < format.length(); i++)
-			replyMSG.append(" \\$v" + i);
+			replyMSG.append(" $v" + i);
 		adminReply.replace("%send%", replyMSG.toString());
 		activeChar.sendPacket(adminReply);
 	}
