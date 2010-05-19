@@ -768,6 +768,7 @@ helper_buff_list.sql
 henna.sql
 henna_trees.sql
 heroes.sql
+heroes_diary.sql
 item_attributes.sql
 items.sql
 itemsonground.sql
@@ -786,6 +787,7 @@ npc_buffer.sql
 npcAIData.sql
 npcskills.sql
 olympiad_data.sql
+olympiad_fights.sql
 olympiad_nobles.sql
 olympiad_nobles_eom.sql
 pets.sql

@@ -413,6 +413,7 @@ $MYG < ../sql/helper_buff_list.sql &> /dev/null
 $MYG < ../sql/henna.sql &> /dev/null
 $MYG < ../sql/henna_trees.sql &> /dev/null
 $MYG < ../sql/heroes.sql &> /dev/null
+$MYG < ../sql/heroes_diary.sql &> /dev/null
 $MYG < ../sql/item_attributes.sql &> /dev/null
 $MYG < ../sql/items.sql &> /dev/null
 $MYG < ../sql/itemsonground.sql &> /dev/null
@@ -431,6 +432,7 @@ $MYG < ../sql/npc_buffer.sql &> /dev/null
 $MYG < ../sql/npcAIData.sql &> /dev/null
 $MYG < ../sql/npcskills.sql &> /dev/null
 $MYG < ../sql/olympiad_data.sql &> /dev/null
+$MYG < ../sql/olympiad_fights.sql &> /dev/null
 $MYG < ../sql/olympiad_nobles.sql&> /dev/null
 $MYG < ../sql/olympiad_nobles_eom.sql&> /dev/null
 $MYG < ../sql/pets.sql &> /dev/null
