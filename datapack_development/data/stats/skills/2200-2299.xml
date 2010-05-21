@@ -537,7 +537,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="600" val="0" stackOrder="2" stackType="ElementPwr">
+			<effect name="Buff" time="600" val="0" stackOrder="1" stackType="element_attack">
 				<add order="0x40" stat="firePower" val="20" />
 			</effect>
 		</for>
@@ -556,7 +556,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="600" val="0" stackOrder="2" stackType="ElementPwr">
+			<effect name="Buff" time="600" val="0" stackOrder="1" stackType="element_attack">
 				<add order="0x40" stat="waterPower" val="20" />
 			</effect>
 		</for>
@@ -575,7 +575,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="600" val="0" stackOrder="2" stackType="ElementPwr">
+			<effect name="Buff" time="600" val="0" stackOrder="1" stackType="element_attack">
 				<add order="0x40" stat="windPower" val="20" />
 			</effect>
 		</for>
@@ -594,7 +594,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="600" val="0" stackOrder="2" stackType="ElementPwr">
+			<effect name="Buff" time="600" val="0" stackOrder="1" stackType="element_attack">
 				<add order="0x40" stat="earthPower" val="20" />
 			</effect>
 		</for>
@@ -613,7 +613,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="600" val="0" stackOrder="2" stackType="ElementPwr">
+			<effect name="Buff" time="600" val="0" stackOrder="1" stackType="element_attack">
 				<add order="0x40" stat="darkPower" val="20" />
 			</effect>
 		</for>
@@ -632,7 +632,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="600" val="0" stackOrder="2" stackType="ElementPwr">
+			<effect name="Buff" time="600" val="0" stackOrder="1" stackType="element_attack">
 				<add order="0x40" stat="holyPower" val="20" />
 			</effect>
 		</for>

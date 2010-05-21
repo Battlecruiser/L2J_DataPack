@@ -836,12 +836,12 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="1" stackType="ElementPwr">
+			<effect name="Buff" time="1200" val="0" stackOrder="1" stackType="element_attack">
 				<add order="0x40" stat="holyPower" val="20" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" stackOrder="1" stackType="ElementPwr">
+			<effect name="Buff" time="#ench1time" val="0" stackOrder="1" stackType="element_attack">
 				<add order="0x40" stat="holyPower" val="20" />
 			</effect>
 		</enchant1for>

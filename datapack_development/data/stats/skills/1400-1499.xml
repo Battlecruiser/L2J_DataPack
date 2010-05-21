@@ -1131,17 +1131,17 @@
 		<set name="effectRange" val="900" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="1" stackType="ElementPwr">
+			<effect name="Buff" time="1200" val="0" stackOrder="1" stackType="element_attack">
 				<add order="0x40" stat="darkPower" val="20" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="1200" val="0" stackOrder="1" stackType="ElementPwr">
+			<effect name="Buff" time="1200" val="0" stackOrder="1" stackType="element_attack">
 				<add order="0x40" stat="darkPower" val="#ench1Power" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="Buff" time="#ench2Time" val="0" stackOrder="1" stackType="ElementPwr">
+			<effect name="Buff" time="#ench2Time" val="0" stackOrder="1" stackType="element_attack">
 				<add order="0x40" stat="darkPower" val="20" />
 			</effect>
 		</enchant2for>
@@ -1742,7 +1742,7 @@
 		<set name="effectRange" val="900" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="2" stackType="ElementPwr">
+			<effect name="Buff" time="1200" val="0" stackOrder="1" stackType="element_attack">
 				<add order="0x40" stat="firePower" val="20" />
 			</effect>
 		</for>
@@ -1760,7 +1760,7 @@
 		<set name="effectRange" val="900" />
 		<set name="element" val="1" /> <!-- Water -->
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="2" stackType="ElementPwr">
+			<effect name="Buff" time="1200" val="0" stackOrder="1" stackType="element_attack">
 				<add order="0x40" stat="waterPower" val="20" />
 			</effect>
 		</for>
@@ -1778,7 +1778,7 @@
 		<set name="effectRange" val="900" />
 		<set name="element" val="2" /> <!-- Wind -->
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="2" stackType="ElementPwr">
+			<effect name="Buff" time="1200" val="0" stackOrder="1" stackType="element_attack">
 				<add order="0x40" stat="windPower" val="20" />
 			</effect>
 		</for>
@@ -1796,7 +1796,7 @@
 		<set name="effectRange" val="900" />
 		<set name="element" val="3" /> <!-- Earth -->
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="2" stackType="ElementPwr">
+			<effect name="Buff" time="1200" val="0" stackOrder="1" stackType="element_attack">
 				<add order="0x40" stat="earthPower" val="20" />
 			</effect>
 		</for>
@@ -2346,7 +2346,7 @@
 		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1200" />
-		<set name="reuseDelay" val="360000" /> <!-- Need retail -->
+		<set name="reuseDelay" val="15000" />
 		<set name="negateId" val="1487" />
 		<enchant1 name="power" val="#ench1Power" />
 		<cond msgId="109">
