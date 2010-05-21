@@ -873,7 +873,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<for>
-			<effect name="Buff" time="300" val="0" abnormal="flame">
+			<effect name="Buff" time="300" val="0" abnormal="flame" stackOrder="1" stackType="element_attack">
 				<add order="0x40" stat="firePower" val="#firePower" />
 				<add order="0x40" stat="fireRes" val="#vuln" />
 			</effect>
