@@ -229,6 +229,7 @@
 		<table name="#magicLvl"> 20 40 70 </table>
 		<table name="#rCrit"> 0.2 0.25 0.3 </table>
 		<table name="#mpConsume"> 15 27 49 </table>
+		<table name="#stackOrder"> 20 25 30 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_CLAN" />
 		<set name="skillRadius" val="900" />
@@ -239,7 +240,7 @@
 		<set name="isMagic" val="true" />
 		<set name="aggroPoints" val="100" />
 		<for>
-			<effect name="Buff" time="120" val="0" stackOrder="#rCrit" stackType="critical_prob_up">
+			<effect name="Buff" time="120" val="0" stackOrder="#stackOrder" stackType="critical_prob_up">
 				<basemul order="0x30" stat="rCrit" val="#rCrit" />
 			</effect>
 		</for>
@@ -893,13 +894,14 @@
 		<!-- Zone Skill -->
 		<table name="#magicLvl"> 20 40 60 </table>
 		<table name="#rCrit"> 0.15 0.25 0.3 </table>
+		<table name="#stackOrder"> 15 25 30 </table>
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="100" />
 		<for>
-			<effect name="Buff" time="5" val="0" stackOrder="#rCrit" stackType="critical_prob_up">
+			<effect name="Buff" time="5" val="0" stackOrder="#stackOrder" stackType="critical_prob_up">
 				<basemul order="0x30" stat="rCrit" val="#rCrit" />
 			</effect>
 		</for>

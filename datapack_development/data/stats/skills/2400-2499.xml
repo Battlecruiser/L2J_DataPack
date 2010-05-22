@@ -97,7 +97,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="0.26" stackType="critical_prob_up">
+			<effect name="Buff" time="3600" val="0" stackOrder="25" stackType="critical_prob_up">
 				<basemul order="0x30" stat="rCrit" val="0.25" />
 			</effect>
 		</for>
@@ -441,7 +441,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="1.5" stackType="critical_prob_up">
+			<effect name="Buff" time="3600" val="0" stackOrder="30" stackType="critical_prob_up">
 				<basemul order="0x30" stat="rCrit" val="0.3" />
 			</effect>
 		</for>
