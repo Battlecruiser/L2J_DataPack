@@ -833,9 +833,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="rCrit" val="#rCrit">
-				<and>
-					<player hp="60" />
-				</and>
+				<player hp="60" />
 			</add>
 		</for>
 	</skill>
@@ -857,9 +855,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="rEvas" val="#rEvas">
-				<and>
-					<player hp="60" />
-				</and>
+				<player hp="60" />
 			</add>
 		</for>
 	</skill>
@@ -876,9 +872,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="rEvas" val="#rEvas">
-				<and>
-					<player hp="60" />
-				</and>
+				<player hp="60" />
 			</add>
 		</for>
 	</skill>
@@ -903,9 +897,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="rEvas" val="#rEvas">
-				<and>
-					<player hp="60" />
-				</and>
+				<player hp="60" />
 			</add>
 		</for>
 	</skill>
@@ -924,9 +916,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="rEvas" val="#rEvas">
-				<and>
-					<player hp="60" />
-				</and>
+				<player hp="60" />
 			</add>
 		</for>
 	</skill>
@@ -948,9 +938,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd">
-				<and>
-					<player hp="60" />
-				</and>
+				<player hp="60" />
 			</mul>
 		</for>
 	</skill>
@@ -969,9 +957,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd">
-				<and>
-					<player hp="60" />
-				</and>
+				<player hp="60" />
 			</mul>
 		</for>
 	</skill>
@@ -998,9 +984,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd">
-				<and>
-					<player hp="60" />
-				</and>
+				<player hp="60" />
 			</mul>
 		</for>
 	</skill>
@@ -1689,9 +1673,7 @@
 		<set name="magicLvl" val="64" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.1">
-				<and>
-					<player hp="60" />
-				</and>
+				<player hp="60" />
 			</mul>
 			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
 			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
@@ -2044,9 +2026,7 @@
 		<set name="magicLvl" val="1" />
 		<for>
 			<add order="0x40" stat="rEvas" val="6.8">
-				<and>
-					<player hp="60" />
-				</and>
+				<player hp="60" />
 			</add>
 			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
@@ -2106,9 +2086,7 @@
 		<set name="magicLvl" val="64" />
 		<for>
 			<add order="0x40" stat="rCrit" val="130">
-				<and>
-					<player hp="60" />
-				</and>
+				<player hp="60" />
 			</add>
 			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
 			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
