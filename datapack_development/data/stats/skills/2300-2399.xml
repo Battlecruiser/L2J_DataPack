@@ -155,7 +155,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="1.3" stackType="critical_prob_up">
+			<effect name="Buff" time="3600" val="0" stackOrder="30" stackType="critical_prob_up">
 				<basemul order="0x30" stat="rCrit" val="0.3" />
 			</effect>
 		</for>
@@ -932,7 +932,7 @@
 			<player SiegeZone="126" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="0.25" stackType="critical_prob_up">
+			<effect name="Buff" time="3600" val="0" stackOrder="20" stackType="critical_prob_up">
 				<basemul order="0x30" stat="rCrit" val="0.2" />
 			</effect>
 		</for>

@@ -549,6 +549,7 @@
 		<table name="#aggro"> 418 495 </table>
 		<table name="#mpConsume"> 39 48 </table>
 		<table name="#rCrit"> 0.25 0.3 </table>
+		<table name="#stackOrder"> 25 30 </table>
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -560,7 +561,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="#rCrit" stackType="critical_prob_up">
+			<effect name="Buff" time="1200" val="0" stackOrder="#stackOrder" stackType="critical_prob_up">
 				<basemul order="0x30" stat="rCrit" val="#rCrit" />
 			</effect>
 		</for>
