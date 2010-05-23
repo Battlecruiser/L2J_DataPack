@@ -2518,23 +2518,24 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="numCharges" val="2" /> <!-- 2 Charges are consumed -->
-		<enchant1 name="power" val="#ench1Power" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2MpConsume" />
+		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant3 name="element" val="0" /> <!-- Fire -->
+		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant3 name="elementPower" val="#enchElementPower" />
+		<enchant3 name="element" val="0" /> <!-- Fire -->
+		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="elementPower" val="#enchElementPower" />
 		<enchant4 name="element" val="1" /> <!-- Water -->
-		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant5 name="elementPower" val="#enchElementPower" />
 		<enchant5 name="element" val="2" /> <!-- Wind -->
-		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="element" val="3" /> <!-- Earth -->
-		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant7 name="pvpPower" val="#enchDuel" />
 		<enchant7 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant7 name="pvpPower" val="#enchDuel" />
 		<cond msgId="113" addName="1">
 			<player Charges="2" /> <!-- Requires a hand-to-hand weapon recharged to its 2nd energy stage. -->
 		</cond>
