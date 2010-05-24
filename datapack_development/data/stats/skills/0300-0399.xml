@@ -2145,6 +2145,7 @@
 		<table name="#ench2rEvas"> 7 7 7 7 8 8 8 8 8 9 9 9 9 9 10 </table>
 		<table name="#ench3MpConsume"> 110 106 102 98 95 91 87 83 80 76 72 68 65 61 57 </table>
 		<table name="#enchelementPower"> 3 6 10 13 16 20 23 26 30 33 36 40 43 46 50 </table>
+		<table name="#enchDuel"> 2077 2134 2191 2248 2305 2362 2419 2476 2533 2590 2647 2704 2761 2818 2875 </table>
 		<set name="weaponsAllowed" val="32" /> <!-- Bow -->
 		<set name="mpConsume" val="114" />
 		<set name="power" val="2020" />
@@ -2176,6 +2177,7 @@
 		<enchant7 name="element" val="3" /> <!-- Earth -->
 		<enchant7 name="elementPower" val="#enchelementPower" />
 		<enchant8 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant8 name="pvpPower" val="#enchDuel" />
 		<for>
 			<effect self="1" name="Buff" time="30" val="0" stackOrder="6" stackType="avoid_up_special">
 				<add order="0x40" stat="rEvas" val="6" />
