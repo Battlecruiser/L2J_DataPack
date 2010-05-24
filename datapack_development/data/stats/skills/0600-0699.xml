@@ -605,11 +605,6 @@
 		<set name="triggeredLevel" val="1" />
 		<set name="activationChance" val="1" />
 		<set name="chanceType" val="ON_HIT" />
-		<cond>
-			<not>
-				<using kind="Bow,Crossbow" />
-			</not>
-		</cond>
 	</skill>
 	<skill id="652" levels="1" name="Knight Ability - Defense">
 		<set name="operateType" val="OP_PASSIVE" />
