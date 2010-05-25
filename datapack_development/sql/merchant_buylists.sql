@@ -16574,6 +16574,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (7011,29000,335445,32,1,1),
 (7012,29000,335445,33,1,1),
 (7013,29000,335445,34,1,1),
+(8650,2880,335445,35,1,1), -- Recipe: Elixir of Mental Strength (A-Grade) (100%)
+(8644,2500,335445,36,1,1), -- Recipe: Elixir of Life (A-Grade) (100%)
 (6902,12900,135453,1,-1,0),
 (1829,500,135453,2,5,1),
 (5169,300,135453,3,5,1),
@@ -16616,6 +16618,9 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (7011,29000,335453,31,1,1),
 (7012,29000,335453,32,1,1),
 (7013,29000,335453,33,1,1),
+(8643,2000,335453,34,1,1), -- Recipe: Elixir of Life (B-Grade) (100%)
+(8649,2320,335453,35,1,1), -- Recipe: Elixir of Mental Strength (B-Grade) (100%)
+(8647,640,335453,36,1,1), -- Recipe: Elixir of Mental Strength (D-Grade) (100%)
 (6902,12900,135455,1,-1,0),
 (1829,500,135455,2,5,1),
 (5169,300,135455,3,5,1),
@@ -16658,6 +16663,9 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (7011,29000,335455,31,1,1),
 (7012,29000,335455,32,1,1),
 (7013,29000,335455,33,1,1),
+(8643,2000,335455,34,1,1), -- Recipe: Elixir of Life (B-Grade) (100%)
+(8649,2320,335455,35,1,1), -- Recipe: Elixir of Mental Strength (B-Grade) (100%)
+(8647,640,335455,36,1,1), -- Recipe: Elixir of Mental Strength (D-Grade) (100%)
 (6902,12900,135451,1,-1,0),
 (1829,500,135451,2,5,1),
 (5169,300,135451,3,5,1),
@@ -16700,6 +16708,9 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (7011,29000,335451,31,1,1),
 (7012,29000,335451,32,1,1),
 (7013,29000,335451,33,1,1),
+(8643,2000,335451,34,1,1), -- Recipe: Elixir of Life (B-Grade) (100%)
+(8649,2320,335451,35,1,1), -- Recipe: Elixir of Mental Strength (B-Grade) (100%)
+(8647,640,335451,36,1,1), -- Recipe: Elixir of Mental Strength (D-Grade) (100%)
 (6902,12900,135457,1,-1,0),
 (1829,500,135457,2,5,1),
 (5169,300,135457,3,5,1),
@@ -16742,6 +16753,9 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (7011,29000,335457,31,1,1),
 (7012,29000,335457,32,1,1),
 (7013,29000,335457,33,1,1),
+(8643,2000,335457,34,1,1), -- Recipe: Elixir of Life (B-Grade) (100%)
+(8649,2320,335457,35,1,1), -- Recipe: Elixir of Mental Strength (B-Grade) (100%)
+(8647,640,335457,36,1,1), -- Recipe: Elixir of Mental Strength (D-Grade) (100%)
 (6902,12900,135459,1,-1,0),
 (1829,500,135459,2,5,1),
 (5169,300,135459,3,5,1),
@@ -16784,6 +16798,9 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (7011,29000,335459,31,1,1),
 (7012,29000,335459,32,1,1),
 (7013,29000,335459,33,1,1),
+(8643,2000,335459,34,1,1), -- Recipe: Elixir of Life (B-Grade) (100%)
+(8649,2320,335459,35,1,1), -- Recipe: Elixir of Mental Strength (B-Grade) (100%)
+(8647,640,335459,36,1,1), -- Recipe: Elixir of Mental Strength (D-Grade) (100%)
 (6902,12900,135383,1,-1,0),
 (1829,500,135383,2,5,1),
 (5169,300,135383,3,5,1),
@@ -16862,6 +16879,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (6975,10000,335398,30,1,1),
 (6976,10000,335398,31,1,1),
 (6977,10000,335398,32,1,1),
+(8643,2000,335398,33,1,1), -- Recipe: Elixir of Life (B-Grade) (100%)
+(8648,1760,335398,34,1,1), -- Recipe: Elixir of Mental Strength (C-Grade) (100%)
 (6902,12900,135400,1,-1,0),
 (1829,500,135400,2,5,1),
 (5169,300,135400,3,5,1),
@@ -16903,6 +16922,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (6975,10000,335400,30,1,1),
 (6976,10000,335400,31,1,1),
 (6977,10000,335400,32,1,1),
+(8643,2000,335400,33,1,1), -- Recipe: Elixir of Life (B-Grade) (100%)
+(8648,1760,335400,34,1,1), -- Recipe: Elixir of Mental Strength (C-Grade) (100%)
 (6902,12900,135392,1,-1,0),
 (1829,500,135392,2,5,1),
 (5169,300,135392,3,5,1),
@@ -16944,6 +16965,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (6975,10000,335392,30,1,1),
 (6976,10000,335392,31,1,1),
 (6977,10000,335392,32,1,1),
+(8643,2000,335392,33,1,1), -- Recipe: Elixir of Life (B-Grade) (100%)
+(8648,1760,335392,34,1,1), -- Recipe: Elixir of Mental Strength (C-Grade) (100%)
 (6902,12900,135394,1,-1,0),
 (1829,500,135394,2,5,1),
 (5169,300,135394,3,5,1),
@@ -16985,6 +17008,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (6975,10000,335394,30,1,1),
 (6976,10000,335394,31,1,1),
 (6977,10000,335394,32,1,1),
+(8643,2000,335394,33,1,1), -- Recipe: Elixir of Life (B-Grade) (100%)
+(8648,1760,335394,34,1,1), -- Recipe: Elixir of Mental Strength (C-Grade) (100%)
 (6902,12900,135396,1,-1,0),
 (1829,500,135396,2,5,1),
 (5169,300,135396,3,5,1),
@@ -17026,6 +17051,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (6975,10000,335396,30,1,1),
 (6976,10000,335396,31,1,1),
 (6977,10000,335396,32,1,1),
+(8643,2000,335396,33,1,1), -- Recipe: Elixir of Life (B-Grade) (100%)
+(8648,1760,335396,34,1,1), -- Recipe: Elixir of Mental Strength (C-Grade) (100%)
 (6902,12900,135384,1,-1,0),
 (1829,500,135384,2,5,1),
 (5169,300,135384,3,5,1),
@@ -17067,6 +17094,9 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (6975,10000,335384,30,1,1),
 (6976,10000,335384,31,1,1),
 (6977,10000,335384,32,1,1),
+(8643,2000,335384,33,1,1), -- Recipe: Elixir of Life (B-Grade) (100%)
+(8649,1760,335384,34,1,1), -- Recipe: Elixir of Mental Strength (B-Grade) (100%)
+(8647,640,335384,35,1,1), -- Recipe: Elixir of Mental Strength (D-Grade) (100%)
 (6902,12900,135390,1,-1,0),
 (1829,500,135390,2,5,1),
 (5169,300,135390,3,5,1),
@@ -17108,6 +17138,9 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (6975,10000,335390,30,1,1),
 (6976,10000,335390,31,1,1),
 (6977,10000,335390,32,1,1),
+(8643,2000,335390,33,1,1), -- Recipe: Elixir of Life (B-Grade) (100%)
+(8649,1760,335390,34,1,1), -- Recipe: Elixir of Mental Strength (B-Grade) (100%)
+(8647,640,335390,35,1,1), -- Recipe: Elixir of Mental Strength (D-Grade) (100%)
 (6902,12900,135386,1,-1,0),
 (1829,500,135386,2,5,1),
 (5169,300,135386,3,5,1),
@@ -17149,6 +17182,9 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (6975,10000,335386,30,1,1),
 (6976,10000,335386,31,1,1),
 (6977,10000,335386,32,1,1),
+(8643,2000,335386,33,1,1), -- Recipe: Elixir of Life (B-Grade) (100%)
+(8649,1760,335386,34,1,1), -- Recipe: Elixir of Mental Strength (B-Grade) (100%)
+(8647,640,335386,35,1,1), -- Recipe: Elixir of Mental Strength (D-Grade) (100%)
 (6902,12900,135388,1,-1,0),
 (1829,500,135388,2,5,1),
 (5169,300,135388,3,5,1),
@@ -17190,6 +17226,9 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (6975,10000,335388,30,1,1),
 (6976,10000,335388,31,1,1),
 (6977,10000,335388,32,1,1),
+(8643,2000,335388,33,1,1), -- Recipe: Elixir of Life (B-Grade) (100%)
+(8649,1760,335388,34,1,1), -- Recipe: Elixir of Mental Strength (B-Grade) (100%)
+(8647,640,335388,35,1,1), -- Recipe: Elixir of Mental Strength (D-Grade) (100%)
 (6902,12900,135407,1,-1,0),
 (1829,500,135407,2,5,1),
 (5169,300,135407,3,5,1),
@@ -17227,6 +17266,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (6963,7000,335407,26,1,1),
 (6964,7000,335407,27,1,1),
 (6965,7000,335407,28,1,1),
+(8643,2000,335407,29,1,1), -- Recipe: Elixir of Life (B-Grade) (100%)
+(8648,1760,335407,30,1,1), -- Recipe: Elixir of Mental Strength (C-Grade) (100%)
 (6902,12900,135403,1,-1,0),
 (1829,500,135403,2,5,1),
 (5169,300,135403,3,5,1),
@@ -17264,6 +17305,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (6963,7000,335403,26,1,1),
 (6964,7000,335403,27,1,1),
 (6965,7000,335403,28,1,1),
+(8643,2000,335403,29,1,1), -- Recipe: Elixir of Life (B-Grade) (100%)
+(8648,1760,335403,30,1,1), -- Recipe: Elixir of Mental Strength (C-Grade) (100%)
 (6902,12900,135405,1,-1,0),
 (1829,500,135405,2,5,1),
 (5169,300,135405,3,5,1),
@@ -17301,6 +17344,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (6963,7000,335405,26,1,1),
 (6964,7000,335405,27,1,1),
 (6965,7000,335405,28,1,1),
+(8643,2000,335405,29,1,1), -- Recipe: Elixir of Life (B-Grade) (100%)
+(8648,1760,335405,30,1,1), -- Recipe: Elixir of Mental Strength (C-Grade) (100%)
 (6902,12900,135421,1,-1,0),
 (6316,300,135421,2,-1,0),
 (1829,500,135421,3,5,1),
@@ -17352,6 +17397,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (7011,29000,335421,35,1,1),
 (7012,29000,335421,36,1,1),
 (7013,29000,335421,37,1,1),
+(8645,3000,335421,38,1,1), -- Recipe: Elixir of Life (S-Grade) (100%)
+(8651,3360,335421,39,1,1), -- Recipe: Elixir of Mental Strength (S-Grade) (100%)
 (6902,12900,135439,1,-1,0),
 (6316,300,135439,2,-1,0),
 (1829,500,135439,3,5,1),
@@ -17397,6 +17444,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (7011,29000,335439,32,1,1),
 (7012,29000,335439,33,1,1),
 (7013,29000,335439,34,1,1),
+(8650,2880,335439,35,1,1), -- Recipe: Elixir of Mental Strength (A-Grade) (100%)
+(8644,2500,335439,36,1,1), -- Recipe: Elixir of Life (A-Grade) (100%)
 (6902,12900,135441,1,-1,0),
 (6316,300,135441,2,-1,0),
 (1829,500,135441,3,5,1),
@@ -17442,6 +17491,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (7011,29000,335441,32,1,1),
 (7012,29000,335441,33,1,1),
 (7013,29000,335441,34,1,1),
+(8650,2880,335441,35,1,1), -- Recipe: Elixir of Mental Strength (A-Grade) (100%)
+(8644,2500,335441,36,1,1), -- Recipe: Elixir of Life (A-Grade) (100%)
 (6902,12900,135443,1,-1,0),
 (6316,300,135443,2,-1,0),
 (1829,500,135443,3,5,1),
@@ -17487,6 +17538,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (7011,29000,335443,32,1,1),
 (7012,29000,335443,33,1,1),
 (7013,29000,335443,34,1,1),
+(8650,2880,335443,35,1,1), -- Recipe: Elixir of Mental Strength (A-Grade) (100%)
+(8644,2500,335443,36,1,1), -- Recipe: Elixir of Life (A-Grade) (100%)
 (6902,12900,135447,1,-1,0),
 (6316,300,135447,2,-1,0),
 (1829,500,135447,3,5,1),
@@ -17532,6 +17585,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (7011,29000,335447,32,1,1),
 (7012,29000,335447,33,1,1),
 (7013,29000,335447,34,1,1),
+(8650,2880,335447,35,1,1), -- Recipe: Elixir of Mental Strength (A-Grade) (100%)
+(8644,2500,335447,36,1,1), -- Recipe: Elixir of Life (A-Grade) (100%)
 (6902,12900,135449,1,-1,0),
 (6316,300,135449,2,-1,0),
 (1829,500,135449,3,5,1),
@@ -17577,6 +17632,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (7011,29000,335449,32,1,1),
 (7012,29000,335449,33,1,1),
 (7013,29000,335449,34,1,1),
+(8650,2880,335449,35,1,1), -- Recipe: Elixir of Mental Strength (A-Grade) (100%)
+(8644,2500,335449,36,1,1), -- Recipe: Elixir of Life (A-Grade) (100%)
 (6902,12900,135467,1,-1,0),
 (1829,500,135467,2,5,1),
 (5169,300,135467,3,5,1),
@@ -17619,6 +17676,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (7011,29000,335467,31,1,1),
 (7012,29000,335467,32,1,1),
 (7013,29000,335467,33,1,1),
+(8643,2000,335467,34,1,1), -- Recipe: Elixir of Life (B-Grade) (100%)
+(8649,2320,335467,35,1,1), -- Recipe: Elixir of Mental Strength (B-Grade) (100%)
 (6902,12900,135465,1,-1,0),
 (1829,500,135465,2,5,1),
 (5169,300,135465,3,5,1),
@@ -17661,6 +17720,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (7011,29000,335465,31,1,1),
 (7012,29000,335465,32,1,1),
 (7013,29000,335465,33,1,1),
+(8643,2000,335465,34,1,1), -- Recipe: Elixir of Life (B-Grade) (100%)
+(8649,2320,335465,35,1,1), -- Recipe: Elixir of Mental Strength (B-Grade) (100%)
 (6902,12900,135463,1,-1,0),
 (1829,500,135463,2,5,1),
 (5169,300,135463,3,5,1),
@@ -17703,6 +17764,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (7011,29000,335463,31,1,1),
 (7012,29000,335463,32,1,1),
 (7013,29000,335463,33,1,1),
+(8643,2000,335463,34,1,1), -- Recipe: Elixir of Life (B-Grade) (100%)
+(8649,2320,335463,35,1,1), -- Recipe: Elixir of Mental Strength (B-Grade) (100%)
 (6902,12900,135461,1,-1,0),
 (1829,500,135461,2,5,1),
 (5169,300,135461,3,5,1),
@@ -17745,6 +17808,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (7011,29000,335461,31,1,1),
 (7012,29000,335461,32,1,1),
 (7013,29000,335461,33,1,1),
+(8643,2000,335461,34,1,1), -- Recipe: Elixir of Life (B-Grade) (100%)
+(8649,2320,335461,35,1,1), -- Recipe: Elixir of Mental Strength (B-Grade) (100%)
 (6902,12900,135566,1,-1,0),
 (1829,500,135566,2,5,1),
 (5169,300,135566,3,5,1),
@@ -17871,6 +17936,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (7011,29000,335570,31,1,1),
 (7012,29000,335570,32,1,1),
 (7013,29000,335570,33,1,1),
+(8650,2880,335570,34,1,1), -- Recipe: Elixir of Mental Strength (A-Grade) (100%)
+(8644,2500,335570,35,1,1), -- Recipe: Elixir of Life (A-Grade) (100%)
 (6902,12900,135572,1,-1,0),
 (1829,500,135572,2,5,1),
 (5169,300,135572,3,5,1),
@@ -17913,6 +17980,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (7011,29000,335572,31,1,1),
 (7012,29000,335572,32,1,1),
 (7013,29000,335572,33,1,1),
+(8650,2880,335572,34,1,1), -- Recipe: Elixir of Mental Strength (A-Grade) (100%)
+(8644,2500,335572,35,1,1), -- Recipe: Elixir of Life (A-Grade) (100%)
 (6902,12900,135574,1,-1,0),
 (1829,500,135574,2,5,1),
 (5169,300,135574,3,5,1),
@@ -17955,6 +18024,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (7011,29000,335574,31,1,1),
 (7012,29000,335574,32,1,1),
 (7013,29000,335574,33,1,1),
+(8650,2880,335574,34,1,1), -- Recipe: Elixir of Mental Strength (A-Grade) (100%)
+(8644,2500,335574,35,1,1), -- Recipe: Elixir of Life (A-Grade) (100%)
 (6902,12900,135576,1,-1,0),
 (1829,500,135576,2,5,1),
 (5169,300,135576,3,5,1),
@@ -17997,6 +18068,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (7011,29000,335576,31,1,1),
 (7012,29000,335576,32,1,1),
 (7013,29000,335576,33,1,1),
+(8650,2880,335576,34,1,1), -- Recipe: Elixir of Mental Strength (A-Grade) (100%)
+(8644,2500,335576,35,1,1), -- Recipe: Elixir of Life (A-Grade) (100%)
 (6902,12900,135578,1,-1,0),
 (1829,500,135578,2,5,1),
 (5169,300,135578,3,5,1),
@@ -18039,6 +18112,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (7011,29000,335578,31,1,1),
 (7012,29000,335578,32,1,1),
 (7013,29000,335578,33,1,1),
+(8650,2880,335578,34,1,1), -- Recipe: Elixir of Mental Strength (A-Grade) (100%)
+(8644,2500,335578,35,1,1), -- Recipe: Elixir of Life (A-Grade) (100%)
 (6902,12900,135580,1,-1,0),
 (1829,500,135580,2,5,1),
 (5169,300,135580,3,5,1),
@@ -18081,6 +18156,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (7011,29000,335580,31,1,1),
 (7012,29000,335580,32,1,1),
 (7013,29000,335580,33,1,1),
+(8643,2000,335580,34,1,1), -- Recipe: Elixir of Life (B-Grade) (100%)
+(8648,1760,335580,35,1,1), -- Recipe: Elixir of Mental Strength (C-Grade) (100%)
 (6902,12900,135582,1,-1,0),
 (1829,500,135582,2,5,1),
 (5169,300,135582,3,5,1),
@@ -18123,6 +18200,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (7011,29000,335582,31,1,1),
 (7012,29000,335582,32,1,1),
 (7013,29000,335582,33,1,1),
+(8643,2000,335582,34,1,1), -- Recipe: Elixir of Life (B-Grade) (100%)
+(8648,1760,335582,35,1,1), -- Recipe: Elixir of Mental Strength (C-Grade) (100%)
 (6902,12900,135584,1,-1,0),
 (1829,500,135584,2,5,1),
 (5169,300,135584,3,5,1),
@@ -18165,6 +18244,8 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (7011,29000,335584,31,1,1),
 (7012,29000,335584,32,1,1),
 (7013,29000,335584,33,1,1),
+(8643,2000,335584,34,1,1), -- Recipe: Elixir of Life (B-Grade) (100%)
+(8648,1760,335584,35,1,1), -- Recipe: Elixir of Mental Strength (C-Grade) (100%)
 (6902,12900,135586,1,-1,0),
 (1829,500,135586,2,5,1),
 (5169,300,135586,3,5,1),
@@ -18206,7 +18287,9 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (7010,29000,335586,30,1,1),
 (7011,29000,335586,31,1,1),
 (7012,29000,335586,32,1,1),
-(7013,29000,335586,33,1,1);
+(7013,29000,335586,33,1,1),
+(8643,2000,335586,34,1,1), -- Recipe: Elixir of Life (B-Grade) (100%)
+(8648,1760,335586,35,1,1); -- Recipe: Elixir of Mental Strength (C-Grade) (100%)
 
 -- Castles Item Creation
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
