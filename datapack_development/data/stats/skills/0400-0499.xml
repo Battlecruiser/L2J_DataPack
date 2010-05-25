@@ -1051,8 +1051,9 @@
 		</enchant1for>
 	</skill>
 	<skill id="432" levels="1" name="Assassination" enchantGroup1="5" enchantGroup2="5">
+		<!-- NOTE: Description says critical attack rate, but appears to be a client typo -->
 		<table name="#ench1pAtk"> 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
-		<table name="#ench2rCrit"> 0.032 0.034 0.036 0.038 0.04 0.042 0.044 0.046 0.048 0.05 0.052 0.054 0.056 0.058 0.06 </table>
+		<table name="#ench2lethalRate"> 1.032 1.034 1.036 1.038 1.04 1.042 1.044 1.046 1.048 1.05 1.052 1.054 1.056 1.058 1.06 </table>
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -1060,25 +1061,25 @@
 			<add order="0x40" stat="pAtk" val="70">
 				<using kind="Dagger,Dual Dagger" />
 			</add>
-			<basemul order="0x30" stat="rCrit" val="0.03">
+			<mul order="0x30" stat="lethalRate" val="1.03">
 				<using kind="Dagger,Dual Dagger" />
-			</basemul>
+			</mul>
 		</for>
 		<enchant1for>
 			<add order="0x40" stat="pAtk" val="#ench1pAtk">
 				<using kind="Dagger,Dual Dagger" />
 			</add>
-			<basemul order="0x30" stat="rCrit" val="0.03">
+			<mul order="0x30" stat="lethalRate" val="1.03">
 				<using kind="Dagger,Dual Dagger" />
-			</basemul>
+			</mul>
 		</enchant1for>
 		<enchant2for>
 			<add order="0x40" stat="pAtk" val="70">
 				<using kind="Dagger,Dual Dagger" />
 			</add>
-			<basemul order="0x30" stat="rCrit" val="#ench2rCrit">
+			<mul order="0x30" stat="lethalRate" val="#ench2lethalRate">
 				<using kind="Dagger,Dual Dagger" />
-			</basemul>
+			</mul>
 		</enchant2for>
 	</skill>
 	<skill id="433" levels="1" name="Arcane Roar" enchantGroup1="5" enchantGroup2="5">
