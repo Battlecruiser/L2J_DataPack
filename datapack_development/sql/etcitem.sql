@@ -8579,7 +8579,7 @@ INSERT INTO `etcitem` VALUES
 (13738,'Rune Blessed Scroll of Escape','','false','scroll',120,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','true','ItemSkills','2649-8;'),
 (13739,'Schuttgart Blessed Scroll of Escape','','false','scroll',120,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','true','ItemSkills','2649-9;'),
 (13749,'Emery Piece','','false','none',1,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
-(13750,'Warrior\'s Temporary Healing Potion','','false','potion',180,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
+(13750,'Warrior\'s Temporary Healing Potion','','false','potion',180,'stackable','paper','none',-1,-1,0,0,'true','false','true','false','true','ItemSkills','2592-1;'),
 (13757,'Gludio Territory Badge','','false','quest',0,'stackable','paper','none',-1,-1,0,0,'false','false','true','false','false','none','0-0;'),
 (13758,'Dion Territory Badge','','false','quest',0,'stackable','paper','none',-1,-1,0,0,'false','false','true','false','false','none','0-0;'),
 (13759,'Giran Territory Badge','','false','quest',0,'stackable','paper','none',-1,-1,0,0,'false','false','true','false','false','none','0-0;'),
