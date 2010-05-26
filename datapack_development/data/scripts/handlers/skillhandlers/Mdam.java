@@ -133,7 +133,10 @@ public class Mdam implements ISkillHandler
 						damage *= 1.20;
 						break;
 				}
-			}			
+			}
+
+			// Possibility of a lethal strike
+			Formulas.calcLethalHit(activeChar, target, skill);			
 			
 			if (damage > 0)
 			{
@@ -189,8 +192,6 @@ public class Mdam implements ISkillHandler
 					_logDamage.log(record);
 				}
 			}
-			// Possibility of a lethal strike
-			Formulas.calcLethalHit(activeChar, target, skill);
 		}
 		// self Effect :]
 		L2Effect effect = activeChar.getFirstEffect(skill.getId());
