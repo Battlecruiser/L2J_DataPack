@@ -106,7 +106,7 @@ public class L2NpcActionShift implements IActionHandler
                                     String.valueOf((int)Math.sqrt(target.getDistanceSq(((L2Npc)target).getSpawn().getLocx(), ((L2Npc)target).getSpawn().getLocy(), ((L2Npc)target).getSpawn().getLocz())))
                             );
 
-			if (target.isInstanceType(InstanceType.L2ControllableMobInstance))
+			if (target instanceof L2ControllableMobInstance)
 			{
 				StringUtil.append(html1,
 						"<br1>Mob Group: ",
@@ -140,7 +140,7 @@ public class L2NpcActionShift implements IActionHandler
 					String.valueOf(((L2Npc)target).getTemplate().npcId),
 					"</td></tr>" +
 					"<tr><td>Aggro</td><td>" +
-					String.valueOf((target.isInstanceType(InstanceType.L2Attackable)) ? ((L2Attackable) target).getAggroRange() : 0),
+					String.valueOf((target instanceof L2Attackable) ? ((L2Attackable) target).getAggroRange() : 0),
 					"</td><td>    </td><td>Object ID</td><td>",
 					String.valueOf(target.getObjectId()),
 					"</td></tr>" +

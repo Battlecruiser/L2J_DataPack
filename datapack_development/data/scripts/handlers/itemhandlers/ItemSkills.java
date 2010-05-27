@@ -22,6 +22,7 @@ import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2SummonInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance.TimeStamp;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -43,10 +44,10 @@ public class ItemSkills implements IItemHandler
 	public void useItem(L2Playable playable, L2ItemInstance item)
 	{
 		L2PcInstance activeChar;
-		boolean isPet = playable.isInstanceType(InstanceType.L2PetInstance);
+		boolean isPet = playable instanceof L2PetInstance;
 		if (isPet)
 			activeChar = ((L2PetInstance) playable).getOwner();
-		else if (playable.isInstanceType(InstanceType.L2PcInstance))
+		else if (playable instanceof L2PcInstance)
 			activeChar = (L2PcInstance) playable;
 		else
 			return;
@@ -160,7 +161,7 @@ public class ItemSkills implements IItemHandler
 						if (!isPet
 								&& item.getItemType() == L2EtcItemType.HERB
 								&& activeChar.getPet() != null
-								&& activeChar.getPet().isInstanceType(InstanceType.L2SummonInstance))
+								&& activeChar.getPet() instanceof L2SummonInstance)
 							activeChar.getPet().doSimultaneousCast(itemSkill);
 					}
 					else
