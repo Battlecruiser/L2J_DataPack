@@ -128,9 +128,16 @@
 		</cond>
 	</skill>
 	<skill id="6125" levels="1" name="Paralysis">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Cubic Skill Effect -->
+		<set name="ignoreResists" val="true" />
+		<set name="isDebuff" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="skillType" val="PARALYZE" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Paralyze" time="10" val="0" />
+		</for>
 	</skill>
 	<skill id="6126" levels="1" name="Paralysis">
 		<set name="target" val="TARGET_NONE" />
