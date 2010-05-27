@@ -20,7 +20,6 @@ import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager;
 import com.l2jserver.gameserver.model.L2Multisell;
-import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MercenaryManagerInstance;
