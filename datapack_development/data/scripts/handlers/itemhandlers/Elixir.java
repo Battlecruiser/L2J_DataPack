@@ -17,6 +17,7 @@ package handlers.itemhandlers;
 import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Playable;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
@@ -28,7 +29,7 @@ public class Elixir extends ItemSkills
 	 */
 	public void useItem(L2Playable playable, L2ItemInstance item)
 	{
-		if (!(playable.isInstanceType(InstanceType.L2PcInstance)))
+		if (!(playable instanceof L2PcInstance))
 		{
 			playable.sendPacket(new SystemMessage(SystemMessageId.ITEM_NOT_FOR_PETS));
 			return;
