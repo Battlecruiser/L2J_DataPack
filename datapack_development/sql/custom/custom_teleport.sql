@@ -6,5 +6,6 @@ CREATE TABLE IF NOT EXISTS `custom_teleport` (
   `loc_z` decimal(9,0) default NULL,
   `price` decimal(6,0) default NULL,
   `fornoble` int(1) NOT NULL default '0',
+  `itemId` decimal(11,0) NOT NULL default '57',
   PRIMARY KEY  (`id`)
 );
