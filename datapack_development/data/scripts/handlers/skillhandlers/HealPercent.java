@@ -34,6 +34,7 @@ public class HealPercent implements ISkillHandler
 		L2SkillType.HEAL_PERCENT,
 		L2SkillType.MANAHEAL_PERCENT,
 		L2SkillType.CPHEAL_PERCENT,
+		L2SkillType.HPMPHEAL_PERCENT,
 		L2SkillType.HPMPCPHEAL_PERCENT
 	};
 
@@ -68,6 +69,10 @@ public class HealPercent implements ISkillHandler
 				break;
 			case MANAHEAL_PERCENT:
 				mp = true;
+				break;
+			case HPMPHEAL_PERCENT:
+				mp = true;
+				hp = true;
 				break;
 			case HPMPCPHEAL_PERCENT:
 				cp = true;
