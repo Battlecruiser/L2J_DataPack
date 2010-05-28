@@ -120,7 +120,7 @@ public class TerritoryWarSuperClass extends Quest
 				else
 				{
 					ward.unSpawnMe();
-					ward.setNpc(TerritoryWarManager.getInstance().addTerritoryWard(ward.getTerritoryId(), caster.getSiegeSide() - 80, ward.getOwnerCastleId()));
+					ward.setNpc(TerritoryWarManager.getInstance().addTerritoryWard(ward.getTerritoryId(), caster.getSiegeSide() - 80, ward.getOwnerCastleId(), true));
 					ward.setOwnerCastleId(caster.getSiegeSide() - 80);
 					TerritoryWarManager.getInstance().getTerritory(caster.getSiegeSide() - 80).getQuestDone()[1]++;
 				}
