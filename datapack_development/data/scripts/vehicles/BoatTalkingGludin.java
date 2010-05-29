@@ -70,7 +70,7 @@ public class BoatTalkingGludin implements Runnable
 
 	private static final VehiclePathPoint[] TALKING_DOCK =
 	{
-		new VehiclePathPoint(-95622, 261660, -3610, 150, 1800)
+		new VehiclePathPoint(-96622, 261660, -3610, 150, 1800)
 	};
 
 	private final L2BoatInstance _boat;
