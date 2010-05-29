@@ -503,7 +503,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x10" stat="INT" val="2" /> <!-- Int +2 -->
+			<add order="0x10" stat="INT" val="1" /> <!-- Int +1 -->
 			<add order="0x10" stat="WIT" val="1" /> <!-- Wit +1 -->
 			<sub order="0x10" stat="MEN" val="2" /> <!-- Men -2 -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
