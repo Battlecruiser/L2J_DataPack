@@ -393,7 +393,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<sub order="0x10" stat="CON" val="2" /> <!-- Con -2 -->
-			<add order="0x10" stat="STR" val="2" /> <!-- Str +2 -->
+			<add order="0x10" stat="STR" val="2" /> <!-- Str +1 -->
 			<add order="0x10" stat="DEX" val="1" /> <!-- Dex +1 -->
 			<mul order="0x30" stat="pAtk" val="1.066" /> <!-- P. Atk. +6.6% -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max. HP +492 -->
