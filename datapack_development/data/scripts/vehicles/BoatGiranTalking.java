@@ -50,7 +50,7 @@ public class BoatGiranTalking implements Runnable
 		new VehiclePathPoint(-1808, 228280, -3610, 300, 800),
 		new VehiclePathPoint(-22165, 230542, -3610, 300, 800),
 		new VehiclePathPoint(-42523, 235205, -3610, 300, 800),
-		new VehiclePathPoint(-68451, 259960, -3610, 250, 800),
+		new VehiclePathPoint(-68451, 259560, -3610, 250, 800),
 		new VehiclePathPoint(-70848, 261696, -3610, 200, 800),
 		new VehiclePathPoint(-83344, 261610, -3610, 200, 800),
 		new VehiclePathPoint(-88344, 261660, -3610, 180, 800),
