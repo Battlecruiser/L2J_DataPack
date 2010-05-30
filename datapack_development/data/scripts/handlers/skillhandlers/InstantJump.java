@@ -14,12 +14,12 @@
  */
 package handlers.skillhandlers;
 
-
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.FlyToLocation;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -37,8 +37,7 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class InstantJump implements ISkillHandler
 {
-	
-	
+		
 	private static final L2SkillType[] SKILL_IDS =
 	{
 		L2SkillType.INSTANT_JUMP
@@ -46,18 +45,35 @@ public class InstantJump implements ISkillHandler
 	
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
+		L2Character target = (L2Character) targets[0];
+
+		if (Formulas.calcPhysicalSkillEvasion(target, skill))
+		{	
+			if (activeChar instanceof L2PcInstance)
+			{
+				   SystemMessage sm = new SystemMessage(SystemMessageId.C1_DODGES_ATTACK);
+				   sm.addString(target.getName());
+				   ((L2PcInstance) activeChar).sendPacket(sm);
+			}
+			if (target instanceof L2PcInstance)
+			{
+				   SystemMessage sm = new SystemMessage(SystemMessageId.AVOIDED_C1_ATTACK);
+				   sm.addString(activeChar.getName());
+				   ((L2PcInstance) target).sendPacket(sm);
+			}
+			return;
+		}	
 		
-		L2Character target = (L2Character)targets[0];
-		int x=0,y=0,z=0;
+		int x = 0, y = 0, z = 0;
 		
 		int px = target.getX();
 		int py = target.getY();
 		double ph = Util.convertHeadingToDegree(target.getHeading());
 		
-		ph+=180;
+		ph += 180;
 		
-		if(ph>360)
-			ph-=360;
+		if (ph > 360)
+			  ph -= 360;
 		
 		ph = (Math.PI * ph) / 180;
 		
@@ -66,8 +82,6 @@ public class InstantJump implements ISkillHandler
 		z = target.getZ();
 		
 
-		
-		
 		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		activeChar.broadcastPacket(new FlyToLocation(activeChar, x, y, z, FlyType.DUMMY));
 		activeChar.abortAttack();
@@ -82,6 +96,7 @@ public class InstantJump implements ISkillHandler
 			{
 				activeChar.stopSkillEffects(skill.getId());
 				skill.getEffects(target, activeChar);
+				
 				//SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
 				//sm.addSkillName(skill);
 				//activeChar.sendPacket(sm);
@@ -109,12 +124,9 @@ public class InstantJump implements ISkillHandler
 				}
 			}
 		}
-		
-		
+				
 	}
-	
-	
-	
+		
 	/**
 	 * 
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
