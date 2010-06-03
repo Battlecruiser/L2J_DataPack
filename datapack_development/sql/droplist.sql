@@ -35668,12 +35668,14 @@ INSERT INTO `droplist` VALUES
 (29068,8761,1,2,200,100000),-- Top-Grade Life Stone: level 70
 (29068,8752,2,4,200,400000),-- High-Grade Life Stone: level 76
 (29068,8762,1,2,200,50000),-- Top-Grade Life Stone: level 76
-(29095,6711,15,29,2,700000),-- Sealed Major Arcane Robe Part
-(29095,6684,1,1,2,71428),-- Sealed Major Arcane Robe
-(29095,6695,3,9,3,930000),-- Demon Splinter Blade
-(29095,6371,1,1,3,23810),-- Demon Splinter
+(29095,6711,12,36,2,236814),-- Sealed Major Arcane Robe Part
+(29095,6684,1,1,2,13185),-- Sealed Major Arcane Robe
+(29095,6695,3,9,3,700327),-- Demon Splinter Blade
+(29095,6371,1,1,3,8120),-- Demon Splinter
 (29095,10298,1,1,5,50000),-- Transform Sealbook - Gordon
-(29095,960,1,1,4,450000),-- Scroll: Enchant Armor (Grade S)
+(29095,960,1,1,4,329928),-- Scroll: Enchant Armor (Grade S)
+(29095,959,1,1,4,32993),-- Scroll: Enchant Weapon (S)
+(29095,6577,1,1,4,5499),-- Blessed Scroll: Enchant Weapon (S)
 (29096,6674,1,1,0,8022),-- Sealed Imperial Crusader Breastplate
 (29096,6675,1,1,0,12803),-- Sealed Imperial Crusader Gaiters
 (29096,6701,8,22,0,203579),-- Sealed Imperial Crusader Breastplate Part
