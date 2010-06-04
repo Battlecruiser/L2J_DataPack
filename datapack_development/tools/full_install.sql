@@ -29,6 +29,8 @@ DROP TABLE IF EXISTS character_hennas;
 DROP TABLE IF EXISTS character_instance_time;
 DROP TABLE IF EXISTS character_macroses;
 DROP TABLE IF EXISTS character_quest_global_data;
+DROP TABLE IF EXISTS character_offline_trade_items;
+DROP TABLE IF EXISTS character_offline_trade;
 DROP TABLE IF EXISTS character_quests;
 DROP TABLE IF EXISTS character_raid_points;
 DROP TABLE IF EXISTS character_recipebook;

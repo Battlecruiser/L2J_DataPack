@@ -722,6 +722,8 @@ character_hennas.sql
 character_instance_time.sql
 character_macroses.sql
 character_quest_global_data.sql
+character_offline_trade_items.sql
+character_offline_trade.sql
 character_quests.sql
 character_raid_points.sql
 character_recipebook.sql
