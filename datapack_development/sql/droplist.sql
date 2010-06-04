@@ -34849,7 +34849,40 @@ INSERT INTO `droplist` VALUES
 (25593,6578,1,1,2,13744), -- Blessed Scroll: Enchant Armor (Grade S)
 (25593,9587,1,1,4,70279), -- Striped Scale Shirt
 (25593,9591,1,1,4,54061), -- Steel Bracelet
-(25593,9626,1,1,3,41230); -- Giant's Codex - Discipline
+(25593,9626,1,1,3,41230), -- Giant's Codex - Discipline
+(25665,960,1,1,2,489799), -- Scroll: Enchant Armor (S)
+(25665,6700,14,42,0,269254), -- Sealed Tateossian Necklace Chain
+(25665,6695,12,36,1,250412), -- Demon Splinter Blade
+(25665,6699,40,120,0,171573), -- Sealed Tateossian Ring Gem
+(25665,6698,81,243,0,76356), -- Sealed Tateossian Earring Part
+(25665,6725,1,1,0,57775), -- Sealed Tateossian Ring
+(25665,959,1,1,2,48980), -- Scroll: Enchant Weapon (S)
+(25665,6724,1,1,0,38516), -- Sealed Tateossian Earring
+(25665,6726,1,1,0,28881), -- Sealed Tateossian Necklace
+(25665,6371,1,1,1,13255), -- Demon Splinter
+(25665,6577,1,1,2,8164), -- Blessed Scroll: Enchant Weapon (S)
+(25666,3936,1,3,2,459188), -- Blessed Scroll of Resurrection
+(25666,6697,3,7,1,300476), -- Arcana Mace Head
+(25666,6704,14,40,0,166040), -- Sealed Imperial Crusader Boots Design
+(25666,6693,6,18,1,129915), -- Dragon Hunter Axe Blade
+(25666,6708,20,60,0,112077), -- Sealed Draconic Leather Gloves Fabric
+(25666,6578,1,1,2,81633), -- Blessed Scroll: Enchant Armor (S)
+(25666,6709,28,82,0,81510), -- Sealed Draconic Leather Boots Design
+(25666,6690,11,31,1,73055), -- Imperial Staff Head
+(25666,6712,36,108,0,62265), -- Sealed Major Arcana Gloves Fabric
+(25666,6713,46,136,0,49264), -- Sealed Major Arcana Boots Design
+(25666,6689,16,48,1,46949), -- Basalt Battlehammer Head
+(25666,6703,112,336,0,20014), -- Sealed Imperial Crusader Gauntlets Design
+(25666,6676,1,1,0,19710), -- Sealed Imperial Crusader Gauntlet
+(25666,6677,1,1,0,19710), -- Sealed Imperial Crusader Boots
+(25666,6681,1,1,0,19710), -- Sealed Draconic Leather Glove
+(25666,6682,1,1,0,19710), -- Sealed Draconic Leather Boots
+(25666,6685,1,1,0,19710), -- Sealed Major Arcana Glove
+(25666,6686,1,1,0,19710), -- Sealed Major Arcana Boots
+(25666,6365,1,1,1,3314), -- Basalt Battlehammer
+(25666,6366,1,1,1,3314), -- Imperial Staff
+(25666,6369,1,1,1,3314), -- Dragon Hunter Axe
+(25666,6579,1,1,1,3314); -- Arcana Mace
 
 INSERT INTO `droplist` VALUES
 (18342,57,7,13,0,1000000); -- Adena
