@@ -367,6 +367,8 @@ $MYG < ../sql/character_hennas.sql &> /dev/null
 $MYG < ../sql/character_instance_time.sql &> /dev/null
 $MYG < ../sql/character_macroses.sql &> /dev/null
 $MYG < ../sql/character_quest_global_data.sql &> /dev/null 
+$MYG < ../sql/character_offline_trade_items.sql &> /dev/null
+$MYG < ../sql/character_offline_trade.sql &> /dev/null
 $MYG < ../sql/character_quests.sql &> /dev/null
 $MYG < ../sql/character_raid_points.sql &> /dev/null
 $MYG < ../sql/character_recipebook.sql &> /dev/null
