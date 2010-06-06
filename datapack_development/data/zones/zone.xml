@@ -2867,4 +2867,7 @@
 
 	<!-- Dimensional Rift (Peace Zone) -->
 	<zone id="50500" type="PeaceZone" shape="NPoly" minZ="-6964" maxZ="-6064" /> <!-- [16_12] space_of_dimension_peace1 -->
+
+	<zone id="60000" type="PeaceZone" shape="Cylinder" minZ="-12960" maxZ="-12600" rad="800" /> <!-- Death Gate -->
+	<zone id="60001" type="NoSummonZone" shape="Cylinder" minZ="-12960" maxZ="-12600" rad="800" /> <!-- Death Gate (No Summon Friend zone) -->
 </list>
