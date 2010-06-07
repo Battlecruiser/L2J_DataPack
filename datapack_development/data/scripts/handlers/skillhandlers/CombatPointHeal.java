@@ -44,16 +44,10 @@ public class CombatPointHeal implements ISkillHandler
 	public void useSkill(L2Character actChar, L2Skill skill, L2Object[] targets)
 	{
 		//check for other effects
-		try
-		{
-			ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(L2SkillType.BUFF);
+		ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(L2SkillType.BUFF);
 			
-			if (handler != null)
-				handler.useSkill(actChar, skill, targets);
-		}
-		catch (Exception e)
-		{
-		}
+		if (handler != null)
+			handler.useSkill(actChar, skill, targets);
 		
 		for (L2Character target: (L2Character[]) targets)
 		{

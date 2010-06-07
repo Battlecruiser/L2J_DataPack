@@ -45,17 +45,11 @@ public class HealPercent implements ISkillHandler
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		//check for other effects
-		try
-		{
-			ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(L2SkillType.BUFF);
+		ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(L2SkillType.BUFF);
 
-			if (handler != null)
-				handler.useSkill(activeChar, skill, targets);
-		}
-		catch (Exception e)
-		{
-		}
-
+		if (handler != null)
+			handler.useSkill(activeChar, skill, targets);
+		
 		boolean cp = false;
 		boolean hp = false;
 		boolean mp = false;

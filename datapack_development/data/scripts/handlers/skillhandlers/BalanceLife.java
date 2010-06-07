@@ -46,16 +46,10 @@ public class BalanceLife implements ISkillHandler
 	{
 		// L2Character activeChar = activeChar;
 		// check for other effects
-		try
-		{
-			ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(L2SkillType.BUFF);
+		ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(L2SkillType.BUFF);
 			
-			if (handler != null)
-				handler.useSkill(activeChar, skill, targets);
-		}
-		catch (Exception e)
-		{
-		}
+		if (handler != null)
+			handler.useSkill(activeChar, skill, targets);
 		
 		L2PcInstance player = null;
 		if (activeChar instanceof L2PcInstance)
