@@ -754,7 +754,7 @@ public class Disablers implements ISkillHandler
 									Healhandler.useSkill(activeChar, skill, tgts);
 									break;
 								default:
-									removedBuffs += negateEffect(target, skillType, -1, skill.getMaxNegatedEffects());
+									removedBuffs += negateEffect(target, skillType, skill.getNegateLvl(), skill.getMaxNegatedEffects());
 									break;
 							}//end switch
 						}//end for
@@ -791,9 +791,9 @@ public class Disablers implements ISkillHandler
 	 * @param maxRemoved
 	 * @return
 	 */
-	private int negateEffect(L2Character target, L2SkillType type, double power, int maxRemoved)
+	private int negateEffect(L2Character target, L2SkillType type, int negateLvl, int maxRemoved)
 	{
-		return negateEffect(target, type, power, 0, maxRemoved);
+		return negateEffect(target, type, negateLvl, 0, maxRemoved);
 	}
 	
 	/**
@@ -805,7 +805,7 @@ public class Disablers implements ISkillHandler
 	 * @param maxRemoved
 	 * @return
 	 */
-	private int negateEffect(L2Character target, L2SkillType type, double negateLvl, int skillId, int maxRemoved)
+	private int negateEffect(L2Character target, L2SkillType type, int negateLvl, int skillId, int maxRemoved)
 	{
 		L2Effect[] effects = target.getAllEffects();
 		int count = (maxRemoved <= 0) ? -2 : 0;
