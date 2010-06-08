@@ -30695,7 +30695,7 @@ INSERT INTO `droplist` VALUES
 (22518,5534,1,1,-1,27300),-- Soul Bow Stave
 (22518,5162,1,1,-1,4420),-- Recipe: Spiritshot (S)
 (22519,57,6468,12974,0,700000),-- Adena
-(22519,55382,1,1,1,7468),-- Dragon Grinder Edge
+(22519,5538,1,1,1,7468),-- Dragon Grinder Edge
 (22519,270,1,1,1,26),-- Dragon Grinder
 (22519,1895,1,1,2,311146),-- Metallic Fiber
 (22519,4040,1,1,2,21780),-- Mold Lubricant
@@ -30840,7 +30840,7 @@ INSERT INTO `droplist` VALUES
 (22540,5487,1,1,-1,541770),-- Sealed Nightmare Robe Fabric
 (22540,5162,1,1,-1,5346),-- Recipe: Spiritshot (S)
 (22541,57,8283,16910,0,700000),-- Adena
-(22541,55382,1,1,1,8342),-- Dragon Grinder Edge
+(22541,5538,1,1,1,8342),-- Dragon Grinder Edge
 (22541,270,1,1,1,29),-- Dragon Grinder
 (22541,1345,60,180,2,96538),-- Shining Arrow
 (22541,1879,1,1,2,144808),-- Cokes
