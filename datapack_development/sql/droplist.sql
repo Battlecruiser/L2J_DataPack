@@ -30921,6 +30921,24 @@ INSERT INTO `droplist` VALUES
 (22547,5487,1,1,-1,39526),-- Sealed Robe of Nightmare Fabric
 (22547,5481,1,1,-1,39387),-- Sealed Majestic Leather Armor Fabric
 (22547,5277,1,1,-1,3901),-- Recipe: Greater Spiritshot (S) Compressed Package(100%)
+(22548,57,9493,19381,0,700000),-- Adena
+(22548,1879,1,1,2,165966),-- Cokes
+(22548,1345,60,180,2,110643),-- Shining Arrow
+(22548,1885,1,1,2,82983),-- High Grade Suede
+(22548,5503,1,1,1,14715),-- Sealed Majestic Boots Lining
+(22548,5515,1,1,1,14715),-- Sealed Majestic Gauntlets Design
+(22548,5514,1,1,1,14715),-- Sealed Gauntlets of Nightmare Design
+(22548,5502,1,1,1,14715),-- Sealed Boots of Nightmare Lining
+(22548,9628,1,1,2,7810),-- Leonard
+(22548,9630,1,1,2,5241),-- Orichalcum
+(22548,9629,1,1,2,4330),-- Adamantine
+(22548,6877,1,1,2,1854),-- Recipe: Sealed Major Arcana Boots (60%)
+(22548,5319,1,1,1,129),-- Sealed Majestic Boots
+(22548,5318,1,1,1,129),-- Sealed Majestic Gauntlets
+(22548,5314,1,1,1,129),-- Sealed Boots of Nightmare
+(22548,5313,1,1,1,129),-- Sealed Gauntlets of Nightmare
+(22548,1894,1,1,-1,496499),-- Crafted Leather
+(22548,5488,1,1,-1,63720),-- Sealed Majestic Robe Fabric
 (22549,57,9493,19381,0,700000),-- Adena
 (22549,5495,1,1,1,17641),-- Sealed Shield of Nightmare Fragment
 (22549,5527,1,1,1,13890),-- Sealed Helm of Nightmare Design
@@ -30937,6 +30955,20 @@ INSERT INTO `droplist` VALUES
 (22549,5495,1,1,-1,214869),-- Sealed Shield of Nightmare Fragment
 (22549,1808,1,1,-1,6289),-- Recipe: Soulshot: S Grade
 (22549,5282,1,1,-1,6289),-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%)
+(22550,57,8218,16827,0,700000),-- Adena
+(22550,1894,1,1,2,42430),-- Crafted Leather
+(22550,4039,1,1,2,40308),-- Mold Glue
+(22550,4044,1,1,2,40308),-- Thons
+(22550,4041,1,1,2,10515),-- Mold Hardener
+(22550,8331,1,1,1,3438),-- Infernal Master Blade
+(22550,5548,1,1,1,3428),-- Tallum Blade Edge
+(22550,5547,1,1,1,3428),-- Elemental Sword Edge
+(22550,1808,1,1,2,537),-- Recipe: Soulshot: S Grade
+(22550,7884,1,1,1,14),-- Infernal Master
+(22550,150,1,1,1,14),-- Elemental Sword
+(22550,80,1,1,1,14),-- Tallum Blade
+(22550,1894,1,1,-1,574568),-- Crafted Leather
+(22550,5502,1,1,-1,276561),-- Sealed Boots of Nightmare Lining
 (22551,57,7866,16108,0,700000),-- Adena
 (22551,5543,1,1,1,2463),-- Dasparion\'s Staff Edge
 (22551,5532,1,1,1,2440),-- Meteor Shower Head
@@ -30983,7 +31015,44 @@ INSERT INTO `droplist` VALUES
 (22581,6851,1,1,2,2731),-- Recipe: Sealed Tateossian Necklace(70%)
 (22581,1894,1,1,-1,864895),-- Crafted Leather
 (22581,5527,1,1,-1,294709),-- Sealed Helm of Nightmare Design
-(22581,5277,1,1,-1,10955);-- Recipe: Greater Spiritshot (S) Compressed Package(100%)
+(22581,5277,1,1,-1,10955),-- Recipe: Greater Spiritshot (S) Compressed Package(100%)
+(22593,57,8705,17772,0,700000),-- Adena
+(22593,1895,1,1,2,365240),-- Metallic Fiber
+(22593,4040,1,1,2,25567),-- Mold Lubricant
+(22593,5495,1,1,1,16176),-- Sealed Shield of Nightmare Fragment
+(22593,5527,1,1,1,12736),-- Sealed Helm of Nightmare Design
+(22593,5528,1,1,1,12736),-- Sealed Majestic Circlet Design
+(22593,9628,1,1,2,10026),-- Leonard
+(22593,9630,1,1,2,6728),-- Orichalcum
+(22593,6901,1,1,2,1278),-- Recipe: Shining Arrow (100%)
+(22593,5315,1,1,1,150),-- Sealed Shield of Nightmare
+(22593,5317,1,1,1,105),-- Sealed Majestic Circlet
+(22593,5312,1,1,1,105),-- Sealed Helm of Nightmare
+(22593,1894,1,1,-1,455270),-- Crafted Leather
+(22593,5488,1,1,-1,58428),-- Sealed Majestic Robe Fabric
+(22593,3036,1,1,-1,5767),-- Recipe: Spiritshot S
+(22596,57,8654,17721,0,700000),-- Adena
+(22596,1895,1,1,2,363809),-- Metallic Fiber
+(22596,4040,1,1,2,25467),-- Mold Lubricant
+(22596,9628,1,1,2,9987),-- Leonard
+(22596,5538,1,1,1,8732),-- Dragon Grinder Edge
+(22596,9630,1,1,2,6702),-- Orichalcum
+(22596,6851,1,1,2,1718),-- Recipe: Sealed Tateossian Necklace(70%)
+(22596,270,1,1,1,31),-- Dragon Grinder
+(22596,1894,1,1,-1,453485),-- Crafted Leather
+(22596,5487,1,1,-1,58199),-- Sealed Nightmare Robe Fabric
+(22597,57,8894,18157,0,700000),-- Adena
+(22597,1895,1,1,2,310967),-- Metallic Fiber
+(22597,1345,60,180,2,120931),-- Shining Arrow
+(22597,4040,1,1,2,21768),-- Mold Lubricant
+(22597,5534,1,1,2,8965),-- Soul Bow Stave
+(22597,9628,1,1,2,8536),-- Leonard
+(22597,9630,1,1,2,5729),-- Orichalcum
+(22597,6853,1,1,2,507),-- Recipe: Sealed Imperial Crusader Breastplate (60%)
+(22597,289,1,1,1,31),-- Soul Bow
+(22597,5488,1,1,-1,59695),-- Sealed Majestic Robe Fabric
+(22597,3957,1,1,-1,5892),-- Recipe: Blessed Spiritshot S
+(22597,3036,1,1,-1,5892);-- Recipe: Spiritshot S
 
 -- Gracia Epilog : Field of Silence and Field of Whispers
 INSERT INTO `droplist` VALUES 
