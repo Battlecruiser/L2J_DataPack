@@ -144,9 +144,12 @@ public class Disablers implements ISkillHandler
           ((L2Npc) activeChar)._spiritshotcharged = false;
 		}
 		
-		for (L2Character target: (L2Character[]) targets)
+		for (L2Object obj: targets)
 		{
-			if (target == null || target.isDead() || (target.isInvul() && !target.isParalyzed())) // bypass if target is null, dead or invul (excluding invul from Petrification)
+			if (!(obj instanceof L2Character))
+				continue;
+			L2Character target = (L2Character) obj;
+			if (target.isDead() || (target.isInvul() && !target.isParalyzed())) // bypass if target is null, dead or invul (excluding invul from Petrification)
 				continue;
 			
 			shld = Formulas.calcShldUse(activeChar, target, skill);
