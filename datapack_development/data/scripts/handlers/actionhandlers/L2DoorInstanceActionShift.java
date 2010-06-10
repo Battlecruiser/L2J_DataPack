@@ -15,6 +15,7 @@
 package handlers.actionhandlers;
 
 import com.l2jserver.gameserver.handler.IActionHandler;
+import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
@@ -26,7 +27,7 @@ import com.l2jserver.util.StringUtil;
 
 public class L2DoorInstanceActionShift implements IActionHandler
 {
-	public boolean action(L2PcInstance activeChar, L2Character target, boolean interact)
+	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
 		if (activeChar.getAccessLevel().isGm())
 		{
@@ -50,9 +51,9 @@ public class L2DoorInstanceActionShift implements IActionHandler
 			NpcHtmlMessage html = new NpcHtmlMessage(target.getObjectId());
                         final String html1 = StringUtil.concat(
                                 "<html><body><center><font color=\"LEVEL\">Door Info</font></center><br><table border=0><tr><td>HP: </td><td>",
-                                String.valueOf(target.getCurrentHp()),
+                                String.valueOf(((L2Character)target).getCurrentHp()),
                                 " / ",
-                                String.valueOf(target.getMaxHp()),
+                                String.valueOf(((L2Character)target).getMaxHp()),
                                 "</td></tr><tr><td>Max X,Y,Z: </td><td>",
                                 String.valueOf(((L2DoorInstance)target).getXMax()),
                                 ", ",

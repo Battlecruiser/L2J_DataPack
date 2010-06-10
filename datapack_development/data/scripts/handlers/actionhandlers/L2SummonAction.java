@@ -18,6 +18,7 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.handler.IActionHandler;
+import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Summon;
@@ -32,7 +33,7 @@ import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 
 public class L2SummonAction implements IActionHandler
 {
-	public boolean action(L2PcInstance activeChar, L2Character target, boolean interact)
+	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
 		// Aggression target lock effect
 		if (activeChar.isLockedTarget() && activeChar.getLockedTarget() != target)
@@ -53,19 +54,19 @@ public class L2SummonAction implements IActionHandler
 				_log.fine("new target selected:"+target.getObjectId());
 
 			activeChar.setTarget(target);
-			activeChar.sendPacket(new ValidateLocation(target));
-			MyTargetSelected my = new MyTargetSelected(target.getObjectId(), activeChar.getLevel() - target.getLevel());
+			activeChar.sendPacket(new ValidateLocation((L2Character)target));
+			MyTargetSelected my = new MyTargetSelected(target.getObjectId(), activeChar.getLevel() - ((L2Character)target).getLevel());
 			activeChar.sendPacket(my);
 
 			//sends HP/MP status of the summon to other characters
 			StatusUpdate su = new StatusUpdate(target.getObjectId());
-			su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
-			su.addAttribute(StatusUpdate.MAX_HP, target.getMaxHp());
+			su.addAttribute(StatusUpdate.CUR_HP, (int) ((L2Character)target).getCurrentHp());
+			su.addAttribute(StatusUpdate.MAX_HP, ((L2Character)target).getMaxHp());
 			activeChar.sendPacket(su);
 		}
 		else if (interact)
 		{
-			activeChar.sendPacket(new ValidateLocation(target));
+			activeChar.sendPacket(new ValidateLocation((L2Character)target));
 			if (target.isAutoAttackable(activeChar))
 			{
 				if (Config.GEODATA > 0)

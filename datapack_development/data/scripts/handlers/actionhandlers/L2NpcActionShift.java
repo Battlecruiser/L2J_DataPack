@@ -19,6 +19,7 @@ import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.handler.IActionHandler;
 import com.l2jserver.gameserver.model.L2DropCategory;
 import com.l2jserver.gameserver.model.L2DropData;
+import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.MobGroupTable;
 import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
@@ -50,7 +51,7 @@ public class L2NpcActionShift implements IActionHandler
 	 * <B><U> Example of use </U> :</B><BR><BR>
 	 * <li> Client packet : Action</li><BR><BR>
 	 */
-	public boolean action(L2PcInstance activeChar, L2Character target, boolean interact)
+	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
 		// Check if the L2PcInstance is a GM
 		if (activeChar.getAccessLevel().isGm())
@@ -60,7 +61,7 @@ public class L2NpcActionShift implements IActionHandler
 
 			// Send a Server->Client packet MyTargetSelected to the L2PcInstance activeChar
 			// The activeChar.getLevel() - getLevel() permit to display the correct color in the select window
-			MyTargetSelected my = new MyTargetSelected(target.getObjectId(), activeChar.getLevel() - target.getLevel());
+			MyTargetSelected my = new MyTargetSelected(target.getObjectId(), activeChar.getLevel() - ((L2Character)target).getLevel());
 			activeChar.sendPacket(my);
 
 			// Check if the activeChar is attackable (without a forced attack)
@@ -68,8 +69,8 @@ public class L2NpcActionShift implements IActionHandler
 			{
 				// Send a Server->Client packet StatusUpdate of the L2NpcInstance to the L2PcInstance to update its HP bar
 				StatusUpdate su = new StatusUpdate(target.getObjectId());
-				su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
-				su.addAttribute(StatusUpdate.MAX_HP, target.getMaxHp());
+				su.addAttribute(StatusUpdate.CUR_HP, (int)((L2Character)target).getCurrentHp());
+				su.addAttribute(StatusUpdate.MAX_HP, ((L2Character)target).getMaxHp());
 				activeChar.sendPacket(su);
 			}
 
@@ -101,9 +102,9 @@ public class L2NpcActionShift implements IActionHandler
                                     " ; Loc ID: ",
                                     String.valueOf(((L2Npc)target).getSpawn().getLocation()),
                                     "<br1>Distance from spawn 2D: ",
-                                    String.valueOf((int)Math.sqrt(target.getPlanDistanceSq(((L2Npc)target).getSpawn().getLocx(), ((L2Npc)target).getSpawn().getLocy()))),
+                                    String.valueOf((int)Math.sqrt(((L2Character)target).getPlanDistanceSq(((L2Npc)target).getSpawn().getLocx(), ((L2Npc)target).getSpawn().getLocy()))),
                                     " ; 3D: ",
-                                    String.valueOf((int)Math.sqrt(target.getDistanceSq(((L2Npc)target).getSpawn().getLocx(), ((L2Npc)target).getSpawn().getLocy(), ((L2Npc)target).getSpawn().getLocz())))
+                                    String.valueOf((int)Math.sqrt(((L2Character)target).getDistanceSq(((L2Npc)target).getSpawn().getLocx(), ((L2Npc)target).getSpawn().getLocy(), ((L2Npc)target).getSpawn().getLocz())))
                             );
 
 			if (target instanceof L2ControllableMobInstance)
@@ -123,11 +124,11 @@ public class L2NpcActionShift implements IActionHandler
 				);
 			}
 			
-			if (target.hasAI())
+			if (((L2Character)target).hasAI())
 			{
 				StringUtil.append(html1,
 						"<br1>AI Type: ",
-						target.getAI().getClass().getSimpleName(),
+						((L2Character)target).getAI().getClass().getSimpleName(),
 						"  <br1>"
 				);
 			}
@@ -135,7 +136,7 @@ public class L2NpcActionShift implements IActionHandler
 			StringUtil.append(html1,
 					"<table border=\"0\" width=\"100%\">" +
 					"<tr><td>Level</td><td>",
-					String.valueOf(target.getLevel()),
+					String.valueOf(((L2Character)target).getLevel()),
 					"</td><td>    </td><td>NPC ID</td><td>",
 					String.valueOf(((L2Npc)target).getTemplate().npcId),
 					"</td></tr>" +
@@ -147,64 +148,64 @@ public class L2NpcActionShift implements IActionHandler
 					"<tr><td>Castle</td><td>",
 					String.valueOf(((L2Npc)target).getCastle().getCastleId()),
 					"</td><td>    </td><td>AI </td><td>",
-					(target.hasAI() ? String.valueOf(target.getAI().getIntention().name()) : "NULL"),
+					(((L2Character)target).hasAI() ? String.valueOf(((L2Character)target).getAI().getIntention().name()) : "NULL"),
 					"</td></tr>" +
 					"</table><br>" +
 					"<font color=\"LEVEL\">Combat</font>" +
 					"<table border=\"0\" width=\"100%\">" +
 					"<tr><td>Current HP</td><td>",
-					String.valueOf(target.getCurrentHp()),
+					String.valueOf(((L2Character)target).getCurrentHp()),
 					"</td><td>Current MP</td><td>",
-					String.valueOf(target.getCurrentMp()),
+					String.valueOf(((L2Character)target).getCurrentMp()),
 					"</td></tr>" +
 					"<tr><td>Max.HP</td><td>",
-					String.valueOf((int) (target.getMaxHp() / target.getStat().calcStat(Stats.MAX_HP, 1, target, null))),
+					String.valueOf((int) (((L2Character)target).getMaxHp() / ((L2Character)target).getStat().calcStat(Stats.MAX_HP, 1, (L2Character)target, null))),
 					"*",
-					String.valueOf((int) (target.getStat().calcStat(Stats.MAX_HP, 1, target, null))),
+					String.valueOf((int) (((L2Character)target).getStat().calcStat(Stats.MAX_HP, 1, (L2Character)target, null))),
 					"</td><td>Max.MP</td><td>",
-					String.valueOf(target.getMaxMp()),
+					String.valueOf(((L2Character)target).getMaxMp()),
 					"</td></tr>" +
 					"<tr><td>P.Atk.</td><td>",
-					String.valueOf(target.getPAtk(null)),
+					String.valueOf(((L2Character)target).getPAtk(null)),
 					"</td><td>M.Atk.</td><td>",
-					String.valueOf(target.getMAtk(null, null)),
+					String.valueOf(((L2Character)target).getMAtk(null, null)),
 					"</td></tr>" +
 					"<tr><td>P.Def.</td><td>",
-					String.valueOf(target.getPDef(null)),
+					String.valueOf(((L2Character)target).getPDef(null)),
 					"</td><td>M.Def.</td><td>",
-					String.valueOf(target.getMDef(null, null)),
+					String.valueOf(((L2Character)target).getMDef(null, null)),
 					"</td></tr>" +
 					"<tr><td>Accuracy</td><td>" +
-					String.valueOf(target.getAccuracy()),
+					String.valueOf(((L2Character)target).getAccuracy()),
 					"</td><td>Evasion</td><td>",
-					String.valueOf(target.getEvasionRate(null)),
+					String.valueOf(((L2Character)target).getEvasionRate(null)),
 					"</td></tr>" +
 					"<tr><td>Critical</td><td>",
-					String.valueOf(target.getCriticalHit(null, null)),
+					String.valueOf(((L2Character)target).getCriticalHit(null, null)),
 					"</td><td>Speed</td><td>",
-					String.valueOf(target.getRunSpeed()),
+					String.valueOf(((L2Character)target).getRunSpeed()),
 					"</td></tr>" +
 					"<tr><td>Atk.Speed</td><td>",
-					String.valueOf(target.getPAtkSpd()),
+					String.valueOf(((L2Character)target).getPAtkSpd()),
 					"</td><td>Cast.Speed</td><td>",
-					String.valueOf(target.getMAtkSpd()),
+					String.valueOf(((L2Character)target).getMAtkSpd()),
 					"</td></tr>" +
 					"</table><br>" +
 					"<font color=\"LEVEL\">Basic Stats</font>" +
 					"<table border=\"0\" width=\"100%\">" +
 					"<tr><td>STR</td><td>",
-					String.valueOf(target.getSTR()),
+					String.valueOf(((L2Character)target).getSTR()),
 					"</td><td>DEX</td><td>",
-					String.valueOf(target.getDEX()),
+					String.valueOf(((L2Character)target).getDEX()),
 					"</td><td>CON</td><td>",
-					String.valueOf(target.getCON()),
+					String.valueOf(((L2Character)target).getCON()),
 					"</td></tr>" +
 					"<tr><td>INT</td><td>",
-					String.valueOf(target.getINT()),
+					String.valueOf(((L2Character)target).getINT()),
 					"</td><td>WIT</td><td>",
-					String.valueOf(target.getWIT()),
+					String.valueOf(((L2Character)target).getWIT()),
 					"</td><td>MEN</td><td>",
-					String.valueOf(target.getMEN()),
+					String.valueOf(((L2Character)target).getMEN()),
 					"</td></tr>" +
 					"</table>" +
 					"<br><center><table><tr><td><button value=\"Edit NPC\" action=\"bypass -h admin_edit_npc ",
@@ -230,7 +231,7 @@ public class L2NpcActionShift implements IActionHandler
 
 			// Send a Server->Client packet MyTargetSelected to the L2PcInstance activeChar
 			// The activeChar.getLevel() - getLevel() permit to display the correct color in the select window
-			MyTargetSelected my = new MyTargetSelected(target.getObjectId(), activeChar.getLevel() - target.getLevel());
+			MyTargetSelected my = new MyTargetSelected(target.getObjectId(), activeChar.getLevel() - ((L2Character)target).getLevel());
 			activeChar.sendPacket(my);
 
 			// Check if the activeChar is attackable (without a forced attack)
@@ -238,8 +239,8 @@ public class L2NpcActionShift implements IActionHandler
 			{
 				// Send a Server->Client packet StatusUpdate of the L2NpcInstance to the L2PcInstance to update its HP bar
 				StatusUpdate su = new StatusUpdate(target.getObjectId());
-				su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
-				su.addAttribute(StatusUpdate.MAX_HP, target.getMaxHp());
+				su.addAttribute(StatusUpdate.CUR_HP, (int) ((L2Character)target).getCurrentHp());
+				su.addAttribute(StatusUpdate.MAX_HP, ((L2Character)target).getMaxHp());
 				activeChar.sendPacket(su);
 			}
 
@@ -250,36 +251,36 @@ public class L2NpcActionShift implements IActionHandler
 					"<br><center><font color=\"LEVEL\">[Combat Stats]</font></center>" +
 					"<table border=0 width=\"100%\">" +
 					"<tr><td>Max.HP</td><td>",
-					String.valueOf((int) (target.getMaxHp() / target.getStat().calcStat(Stats.MAX_HP, 1, target, null))),
+					String.valueOf((int) (((L2Character)target).getMaxHp() / ((L2Character)target).getStat().calcStat(Stats.MAX_HP, 1, (L2Character)target, null))),
 					"*",
-					String.valueOf((int) target.getStat().calcStat(Stats.MAX_HP, 1, target, null)),
+					String.valueOf((int) ((L2Character)target).getStat().calcStat(Stats.MAX_HP, 1, (L2Character)target, null)),
 					"</td><td>Max.MP</td><td>",
-					String.valueOf(target.getMaxMp()),
+					String.valueOf(((L2Character)target).getMaxMp()),
 					"</td></tr>" +
 					"<tr><td>P.Atk.</td><td>",
-					String.valueOf(target.getPAtk(null)),
+					String.valueOf(((L2Character)target).getPAtk(null)),
 					"</td><td>M.Atk.</td><td>",
-					String.valueOf(target.getMAtk(null, null)),
+					String.valueOf(((L2Character)target).getMAtk(null, null)),
 					"</td></tr>" +
 					"<tr><td>P.Def.</td><td>",
-					String.valueOf(target.getPDef(null)),
+					String.valueOf(((L2Character)target).getPDef(null)),
 					"</td><td>M.Def.</td><td>",
-					String.valueOf(target.getMDef(null, null)),
+					String.valueOf(((L2Character)target).getMDef(null, null)),
 					"</td></tr>" +
 					"<tr><td>Accuracy</td><td>",
-					String.valueOf(target.getAccuracy()),
+					String.valueOf(((L2Character)target).getAccuracy()),
 					"</td><td>Evasion</td><td>",
-					String.valueOf(target.getEvasionRate(null)),
+					String.valueOf(((L2Character)target).getEvasionRate(null)),
 					"</td></tr>" +
 					"<tr><td>Critical</td><td>",
-					String.valueOf(target.getCriticalHit(null, null)),
+					String.valueOf(((L2Character)target).getCriticalHit(null, null)),
 					"</td><td>Speed</td><td>",
-					String.valueOf(target.getRunSpeed()),
+					String.valueOf(((L2Character)target).getRunSpeed()),
 					"</td></tr>" +
 					"<tr><td>Atk.Speed</td><td>",
-					String.valueOf(target.getPAtkSpd()),
+					String.valueOf(((L2Character)target).getPAtkSpd()),
 					"</td><td>Cast.Speed</td><td>",
-					String.valueOf(target.getMAtkSpd()),
+					String.valueOf(((L2Character)target).getMAtkSpd()),
 					"</td></tr>" +
 					"<tr><td>Race</td><td>",
 					((L2Npc)target).getTemplate().getRace().toString(),
@@ -288,18 +289,18 @@ public class L2NpcActionShift implements IActionHandler
 					"<br><center><font color=\"LEVEL\">[Basic Stats]</font></center>" +
 					"<table border=0 width=\"100%\">" +
 					"<tr><td>STR</td><td>",
-					String.valueOf(target.getSTR()),
+					String.valueOf(((L2Character)target).getSTR()),
 					"</td><td>DEX</td><td>",
-					String.valueOf(target.getDEX()),
+					String.valueOf(((L2Character)target).getDEX()),
 					"</td><td>CON</td><td>",
-					String.valueOf(target.getCON()),
+					String.valueOf(((L2Character)target).getCON()),
 					"</td></tr>" +
 					"<tr><td>INT</td><td>",
-					String.valueOf(target.getINT()),
+					String.valueOf(((L2Character)target).getINT()),
 					"</td><td>WIT</td><td>",
-					String.valueOf(target.getWIT()),
+					String.valueOf(((L2Character)target).getWIT()),
 					"</td><td>MEN</td><td>",
-					String.valueOf(target.getMEN()),
+					String.valueOf(((L2Character)target).getMEN()),
 					"</td></tr>" +
 					"</table>"
 					);

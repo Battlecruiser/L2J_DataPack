@@ -17,6 +17,7 @@ package handlers.actionhandlers;
 import com.l2jserver.gameserver.handler.AdminCommandHandler;
 import com.l2jserver.gameserver.handler.IActionHandler;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -25,7 +26,7 @@ import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 
 public class L2PcInstanceActionShift implements IActionHandler
 {
-	public boolean action(L2PcInstance activeChar, L2Character target, boolean interact)
+	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
 		if (activeChar.isGM())
 		{
@@ -41,7 +42,7 @@ public class L2PcInstanceActionShift implements IActionHandler
 
 			// Send a Server->Client packet ValidateLocation to correct the L2PcInstance position and heading on the client
 			if (activeChar != target)
-				activeChar.sendPacket(new ValidateLocation(target));
+				activeChar.sendPacket(new ValidateLocation((L2Character)target));
 
 			IAdminCommandHandler ach = AdminCommandHandler.getInstance().getAdminCommandHandler("admin_character_info");
 			if (ach != null)

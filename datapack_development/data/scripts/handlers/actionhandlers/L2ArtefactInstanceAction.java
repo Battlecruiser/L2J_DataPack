@@ -16,6 +16,7 @@ package handlers.actionhandlers;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.handler.IActionHandler;
+import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -43,7 +44,7 @@ public class L2ArtefactInstanceAction implements IActionHandler
 	 * <li>Client packet : Action, AttackRequest</li><BR>
 	 * <BR>
 	 */
-	public boolean action(L2PcInstance activeChar, L2Character target, boolean interact)
+	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
 		if (!((L2Npc)target).canTarget(activeChar))
 			return false;
@@ -58,7 +59,7 @@ public class L2ArtefactInstanceAction implements IActionHandler
 			activeChar.sendPacket(my);
 
 			// Send a Server->Client packet ValidateLocation to correct the L2ArtefactInstance position and heading on the client
-			activeChar.sendPacket(new ValidateLocation(target));
+			activeChar.sendPacket(new ValidateLocation((L2Character)target));
 		}
 		else if (interact)
 		{

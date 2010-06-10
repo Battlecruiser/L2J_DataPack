@@ -15,41 +15,30 @@
 package handlers.actionhandlers;
 
 import com.l2jserver.gameserver.handler.IActionHandler;
+import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2StaticObjectInstance;
-import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.network.serverpackets.StaticObject;
 import com.l2jserver.util.StringUtil;
 
-public class L2StaticObjectInstanceActionShift implements IActionHandler
+public class L2ItemInstanceActionShift implements IActionHandler
 {
 	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
 		if (activeChar.getAccessLevel().isGm())
 		{
-			activeChar.setTarget(target);
-			activeChar.sendPacket(new MyTargetSelected(target.getObjectId(), activeChar.getLevel()));
-
-			StaticObject su = new StaticObject((L2StaticObjectInstance)target);
-			activeChar.sendPacket(su);
-
 			NpcHtmlMessage html = new NpcHtmlMessage(target.getObjectId());
 			final String html1 = StringUtil.concat(
-					"<html><body><center><font color=\"LEVEL\">Static Object Info</font></center><br><table border=0><tr><td>Coords X,Y,Z: </td><td>",
-					String.valueOf(target.getX()),
-					", ",
-					String.valueOf(target.getY()),
-					", ",
-					String.valueOf(target.getZ()),
-					"</td></tr><tr><td>Object ID: </td><td>",
+					"<html><body><center><font color=\"LEVEL\">Item Info</font></center><br><table border=0>",
+					"<tr><td>Object ID: </td><td>",
 					String.valueOf(target.getObjectId()),
-					"</td></tr><tr><td>Static Object ID: </td><td>",
-					String.valueOf(((L2StaticObjectInstance)target).getStaticObjectId()),
-					"</td></tr><tr><td>Mesh Index: </td><td>",
-					String.valueOf(((L2StaticObjectInstance)target).getMeshIndex()),
+					"</td></tr><tr><td>Item ID: </td><td>",
+					String.valueOf(((L2ItemInstance)target).getItemId()),
+					"</td></tr><tr><td>Owner ID: </td><td>",
+					String.valueOf(((L2ItemInstance)target).getOwnerId()),
+					"</td></tr><tr><td>Location: </td><td>",
+					String.valueOf(((L2ItemInstance)target).getLocation()),
 					"</td></tr><tr><td><br></td></tr><tr><td>Class: </td><td>",
 					target.getClass().getSimpleName(),
 					"</td></tr></table></body></html>"
@@ -62,6 +51,6 @@ public class L2StaticObjectInstanceActionShift implements IActionHandler
 
 	public InstanceType getInstanceType()
 	{
-		return InstanceType.L2StaticObjectInstance;
+		return InstanceType.L2ItemInstance;
 	}
 }
