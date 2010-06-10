@@ -14,16 +14,13 @@
  */
 package handlers.itemhandlers;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
-/**
- * Item skills not allowed on olympiad
- */
-public class ItemSkills extends ItemSkillsTemplate
+public class ManaPotion extends ItemSkills
 {
 	/**
 	 * 
@@ -32,13 +29,11 @@ public class ItemSkills extends ItemSkillsTemplate
 	@Override
 	public void useItem(L2Playable playable, L2ItemInstance item)
 	{
-		final L2PcInstance activeChar = playable.getActingPlayer();
-		if (activeChar != null && activeChar.isInOlympiadMode())
+		if (!Config.L2JMOD_ENABLE_MANA_POTIONS_SUPPORT)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT));
+			playable.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
 			return;
 		}
-
 		super.useItem(playable, item);
 	}
 }
