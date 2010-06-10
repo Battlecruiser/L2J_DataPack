@@ -211,6 +211,7 @@ public class MasterHandler
 		ItemHandler.getInstance().registerItemHandler(new SoulCrystals());
 		ItemHandler.getInstance().registerItemHandler(new SevenSignsRecord());
 		ItemHandler.getInstance().registerItemHandler(new ItemSkills());
+		ItemHandler.getInstance().registerItemHandler(new ItemSkillsTemplate());
 		ItemHandler.getInstance().registerItemHandler(new Seed());
 		ItemHandler.getInstance().registerItemHandler(new Harvester());
 		ItemHandler.getInstance().registerItemHandler(new MercTicket());
@@ -222,6 +223,7 @@ public class MasterHandler
 		ItemHandler.getInstance().registerItemHandler(new TeleportBookmark());
 		ItemHandler.getInstance().registerItemHandler(new Elixir());
 		ItemHandler.getInstance().registerItemHandler(new Disguise());
+		ItemHandler.getInstance().registerItemHandler(new ManaPotion());
 		_log.config("Loaded " + ItemHandler.getInstance().size() + " ItemHandlers");
 	}
 	
