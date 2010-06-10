@@ -49,6 +49,7 @@ public class MasterHandler
 		ActionHandler.getInstance().registerActionHandler(new L2ArtefactInstanceAction());
 		ActionHandler.getInstance().registerActionHandler(new L2DecoyAction());
 		ActionHandler.getInstance().registerActionHandler(new L2DoorInstanceAction());
+		ActionHandler.getInstance().registerActionHandler(new L2ItemInstanceAction());
 		ActionHandler.getInstance().registerActionHandler(new L2NpcAction());
 		ActionHandler.getInstance().registerActionHandler(new L2PcInstanceAction());
 		ActionHandler.getInstance().registerActionHandler(new L2PetInstanceAction());
@@ -61,6 +62,7 @@ public class MasterHandler
 	private static void loadActionShiftHandlers()
 	{
 		ActionHandler.getInstance().registerActionShiftHandler(new L2DoorInstanceActionShift());
+		ActionHandler.getInstance().registerActionShiftHandler(new L2ItemInstanceActionShift());
 		ActionHandler.getInstance().registerActionShiftHandler(new L2MerchantInstanceActionShift());
 		ActionHandler.getInstance().registerActionShiftHandler(new L2NpcActionShift());
 		ActionHandler.getInstance().registerActionShiftHandler(new L2PcInstanceActionShift());
