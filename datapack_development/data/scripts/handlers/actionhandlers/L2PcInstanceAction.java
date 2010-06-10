@@ -18,6 +18,7 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.handler.IActionHandler;
+import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -49,7 +50,7 @@ public class L2PcInstanceAction implements IActionHandler
 	 * @param activeChar The player that start an action on target L2PcInstance
 	 *
 	 */
-	public boolean action(L2PcInstance activeChar, L2Character target, boolean interact)
+	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
 		// See description in TvTEvent.java
 		if (!TvTEvent.onAction( activeChar, target.getObjectId()))
@@ -75,11 +76,11 @@ public class L2PcInstanceAction implements IActionHandler
 			// Send a Server->Client packet MyTargetSelected to the activeChar
 			// The color to display in the select window is White
 			activeChar.sendPacket(new MyTargetSelected(target.getObjectId(), 0));
-			if (activeChar != target) activeChar.sendPacket(new ValidateLocation(target));
+			if (activeChar != target) activeChar.sendPacket(new ValidateLocation((L2Character)target));
 		}
 		else if (interact)
 		{
-			if (activeChar != target) activeChar.sendPacket(new ValidateLocation(target));
+			if (activeChar != target) activeChar.sendPacket(new ValidateLocation((L2Character)target));
 			// Check if this L2PcInstance has a Private Store
 			if (((L2PcInstance)target).getPrivateStoreType() != 0)
             {
@@ -93,7 +94,7 @@ public class L2PcInstanceAction implements IActionHandler
 					// activeChar with lvl < 21 can't attack a cursed weapon holder
 					// And a cursed weapon holder  can't attack activeChars with lvl < 21
 					if ((((L2PcInstance)target).isCursedWeaponEquipped() && activeChar.getLevel() < 21)
-							|| (activeChar.isCursedWeaponEquipped() && target.getLevel() < 21))
+							|| (activeChar.isCursedWeaponEquipped() && ((L2Character)target).getLevel() < 21))
 					{
 						activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 					}

@@ -16,6 +16,7 @@ package handlers.actionhandlers;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.handler.IActionHandler;
+import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -28,7 +29,7 @@ import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 
 public class L2DoorInstanceAction implements IActionHandler
 {
-	public boolean action(L2PcInstance activeChar, L2Character target, boolean interact)
+	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
 		// Check if the L2PcInstance already target the L2NpcInstance
 		if (activeChar.getTarget() != target)
@@ -54,7 +55,7 @@ public class L2DoorInstanceAction implements IActionHandler
 			activeChar.sendPacket(su);
 			
 			// Send a Server->Client packet ValidateLocation to correct the L2NpcInstance position and heading on the client
-			activeChar.sendPacket(new ValidateLocation(target));
+			activeChar.sendPacket(new ValidateLocation((L2Character)target));
 		}
 		else if (interact)
 		{
@@ -69,7 +70,7 @@ public class L2DoorInstanceAction implements IActionHandler
 					&& ((L2DoorInstance)target).getClanHall() != null
 					&& activeChar.getClanId() == ((L2DoorInstance)target).getClanHall().getOwnerId())
 			{
-				if (!target.isInsideRadius(activeChar, L2Npc.INTERACTION_DISTANCE, false, false))
+				if (!((L2Character)target).isInsideRadius(activeChar, L2Npc.INTERACTION_DISTANCE, false, false))
 				{
 					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
 				}
@@ -88,7 +89,7 @@ public class L2DoorInstanceAction implements IActionHandler
 					&& ((L2DoorInstance)target).isUnlockable()
 					&& !((L2DoorInstance)target).getFort().getSiege().getIsInProgress())
 			{
-				if (!target.isInsideRadius(activeChar, L2Npc.INTERACTION_DISTANCE, false, false))
+				if (!((L2Character)target).isInsideRadius(activeChar, L2Npc.INTERACTION_DISTANCE, false, false))
 				{
 					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
 				}

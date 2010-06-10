@@ -17,8 +17,8 @@ package handlers.actionhandlers;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.handler.IActionHandler;
+import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Object.InstanceType;
-import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2StaticObjectInstance;
@@ -27,7 +27,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 
 public class L2StaticObjectInstanceAction implements IActionHandler
 {
-	public boolean action(L2PcInstance activeChar, L2Character target, boolean interact)
+	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
 		if(((L2StaticObjectInstance)target).getType() < 0)
 			_log.info("L2StaticObjectInstance: StaticObject with invalid type! StaticObjectId: "+((L2StaticObjectInstance)target).getStaticObjectId());

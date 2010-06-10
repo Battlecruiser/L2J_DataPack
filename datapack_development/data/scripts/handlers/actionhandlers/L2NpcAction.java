@@ -16,6 +16,7 @@ package handlers.actionhandlers;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.handler.IActionHandler;
+import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -53,7 +54,7 @@ public class L2NpcAction implements IActionHandler
 	 * @param activeChar The L2PcInstance that start an action on the L2NpcInstance
 	 *
 	 */
-	public boolean action(L2PcInstance activeChar, L2Character target, boolean interact)
+	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
 		if (!((L2Npc)target).canTarget(activeChar))
 			return false;
@@ -71,13 +72,13 @@ public class L2NpcAction implements IActionHandler
 			{
 				// Send a Server->Client packet MyTargetSelected to the L2PcInstance activeChar
 				// The activeChar.getLevel() - getLevel() permit to display the correct color in the select window
-				MyTargetSelected my = new MyTargetSelected(target.getObjectId(), activeChar.getLevel() - target.getLevel());
+				MyTargetSelected my = new MyTargetSelected(target.getObjectId(), activeChar.getLevel() - ((L2Character)target).getLevel());
 				activeChar.sendPacket(my);
 
 				// Send a Server->Client packet StatusUpdate of the L2NpcInstance to the L2PcInstance to update its HP bar
 				StatusUpdate su = new StatusUpdate(target.getObjectId());
-				su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
-				su.addAttribute(StatusUpdate.MAX_HP, target.getMaxHp());
+				su.addAttribute(StatusUpdate.CUR_HP, (int) ((L2Character)target).getCurrentHp());
+				su.addAttribute(StatusUpdate.MAX_HP, ((L2Character)target).getMaxHp());
 				activeChar.sendPacket(su);
 			}
 			else
@@ -88,13 +89,13 @@ public class L2NpcAction implements IActionHandler
 			}
 
 			// Send a Server->Client packet ValidateLocation to correct the L2NpcInstance position and heading on the client
-			activeChar.sendPacket(new ValidateLocation(target));
+			activeChar.sendPacket(new ValidateLocation((L2Character)target));
 		}
 		else if (interact)
 		{
-			activeChar.sendPacket(new ValidateLocation(target));
+			activeChar.sendPacket(new ValidateLocation((L2Character)target));
 			// Check if the activeChar is attackable (without a forced attack) and isn't dead
-			if (target.isAutoAttackable(activeChar) && !target.isAlikeDead())
+			if (target.isAutoAttackable(activeChar) && !((L2Character)target).isAlikeDead())
 			{
 				// Check the height difference
 				if (Math.abs(activeChar.getZ() - target.getZ()) < 400) // this max heigth difference might need some tweaking

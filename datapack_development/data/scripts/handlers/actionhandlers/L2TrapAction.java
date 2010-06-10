@@ -15,6 +15,7 @@
 package handlers.actionhandlers;
 
 import com.l2jserver.gameserver.handler.IActionHandler;
+import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -24,7 +25,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 public class L2TrapAction implements IActionHandler
 {
-	public boolean action(L2PcInstance activeChar, L2Character target, boolean interact)
+	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
 		// Aggression target lock effect
 		if (activeChar.isLockedTarget() && activeChar.getLockedTarget() != target)
@@ -34,7 +35,7 @@ public class L2TrapAction implements IActionHandler
 		}
 
 		activeChar.setTarget(target);
-		MyTargetSelected my = new MyTargetSelected(target.getObjectId(), activeChar.getLevel()- target.getLevel());
+		MyTargetSelected my = new MyTargetSelected(target.getObjectId(), activeChar.getLevel()- ((L2Character)target).getLevel());
 		activeChar.sendPacket(my);
 		return true;
 	}
