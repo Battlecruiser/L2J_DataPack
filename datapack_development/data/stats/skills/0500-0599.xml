@@ -335,6 +335,7 @@
 		<table name="#power"> 530 562 595 630 666 703 742 782 823 866 910 955 1002 1050 1100 1150 1202 1255 1309 1364 1420 1476 1534 1592 1651 1710 1770 1830 1891 1951 2012 2072 2132 2192 </table>
 		<table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 </table>
 		<table name="#mpConsume"> 56 58 59 61 63 65 66 68 70 72 72 74 76 78 80 81 83 85 87 88 89 91 92 94 96 97 99 100 102 103 105 106 108 109 </table>
+		<set name="effectAbnormalLvl" val="0" />
 		<set name="weaponsAllowed" val="65536" /> <!-- Crossbow -->
 		<set name="itemConsumeId" val="10113" />
 		<set name="itemConsumeCount" val="1" />
@@ -349,6 +350,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="380" />
 		<set name="skillType" val="PDAM" />
+		<set name="effectType" val="BLEED" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="900" />
@@ -1687,7 +1689,7 @@
 		<table name="#power"> 875 984 1098 1213 </table>
 		<table name="#dot"> 102 123 155 198 </table>
 		<table name="#abnormalLvl"> 6 6 7 7 </table>
-		<set name="abnormalLvl" val="#abnormalLvl" />
+		<set name="effectAbnormalLvl" val="#abnormalLvl" />
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_FRONT_AREA" />
@@ -1696,6 +1698,7 @@
 		<set name="overHit" val="true" />
 		<set name="hitTime" val="1080" />
 		<set name="skillType" val="PDAM" />
+		<set name="effectType" val="BLEED" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
 		<set name="castRange" val="40" />

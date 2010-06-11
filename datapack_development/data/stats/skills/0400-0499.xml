@@ -2512,7 +2512,7 @@
 		<table name="#effectRange"> 1000 1000 1000 1000 1000 1000 1100 1100 1100 1100 </table>
 		<table name="#magicLvl"> 55 57 59 61 63 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 65 70 73 75 77 80 83 85 88 90 </table>
-		<set name="abnormalLvl" val="#abnormalLvl" />
+		<set name="effectAbnormalLvl" val="#abnormalLvl" />
 		<set name="castRange" val="#castRange" />
 		<set name="effectRange" val="#effectRange" />
 		<set name="flyType" val="CHARGE" />
@@ -2528,6 +2528,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="skillRadius" val="#castRange" />
 		<set name="skillType" val="PDAM" />
+		<set name="effectType" val="BLEED" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_FRONT_AREA" />
