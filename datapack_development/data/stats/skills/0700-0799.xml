@@ -1650,7 +1650,7 @@
 		<set name="target" val="TARGET_MULTIFACE" />
 	</skill>
 	<skill id="798" levels="1" name="Divine Warrior Assault Attack">
-		<set name="abnormalLvl" val="8" />
+		<set name="effectAbnormalLvl" val="8" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
@@ -1661,6 +1661,7 @@
 		<set name="power" val="1689" />
 		<set name="reuseDelay" val="20000" />
 		<set name="skillType" val="PDAM" />
+		<set name="effectType" val="POISON" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<for>

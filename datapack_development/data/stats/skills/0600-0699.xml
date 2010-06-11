@@ -1304,6 +1304,7 @@
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="688" levels="1" name="Divine Rogue Bleed Attack">
+		<set name="effectAbnormalLvl" val="0" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
@@ -1315,6 +1316,7 @@
 		<set name="power" val="1549" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
+		<set name="effectType" val="BLEED" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<for>

@@ -1215,10 +1215,10 @@
 		<enchant4 name="negateLvl" val="9" />
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3for>
-			<!-- <effect name="Negate" val="0" effectType="NEGATE" /> TODO: Needs Core-Side Support -->
+			<effect name="Negate" val="0" noicon="1" effectType="NEGATE" />
 		</enchant3for>
 		<enchant4for>
-			<!-- <effect name="Negate" val="0" effectType="NEGATE" /> TODO: Needs Core-Side Support -->
+			<effect name="Negate" val="0" noicon="1" effectType="NEGATE" />
 		</enchant4for>
 	</skill>
 	<skill id="60" levels="1" name="Fake Death">
@@ -1328,10 +1328,10 @@
 		<enchant4 name="negateStats" val="BLEED" />
 		<enchant4 name="negateLvl" val="9" />
 		<enchant3for>
-			<!-- <effect name="Negate" val="0" effectType="NEGATE" /> TODO: Needs Core-Side Support -->
+			<effect name="Negate" val="0" noicon="1" effectType="NEGATE" />
 		</enchant3for>
 		<enchant4for>
-			<!-- <effect name="Negate" val="0" effectType="NEGATE" /> TODO: Needs Core-Side Support -->
+			<effect name="Negate" val="0" noicon="1" effectType="NEGATE" />
 		</enchant4for>
 	</skill>
 	<skill id="70" levels="53" name="Drain Health" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
@@ -1592,7 +1592,7 @@
 		<table name="#mpConsume"> 38 42 50 </table>
 		<table name="#dot"> 114 132 144 </table>
 		<table name="#abnormalLvl"> 6 7 8 </table>
-		<set name="abnormalLvl" val="#abnormalLvl" />
+		<set name="effectAbnormalLvl" val="#abnormalLvl" />
 		<set name="weaponsAllowed" val="512" /> <!-- Dual Sword -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1605,6 +1605,7 @@
 		<set name="hitTime" val="1830" />
 		<set name="coolTime" val="167" />
 		<set name="skillType" val="PDAM" />
+		<set name="effectType" val="POISON" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
