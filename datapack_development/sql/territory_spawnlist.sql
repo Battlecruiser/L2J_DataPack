@@ -11,6 +11,7 @@ CREATE TABLE `territory_spawnlist` (
   PRIMARY KEY (`id`),
   KEY `id` (`castleId`)
 );
+
 INSERT INTO `territory_spawnlist` VALUES
 (1,null,36481,-15094,124113,-3119,50948,0),
 (1,null,36490,-15162,124230,-3119,36991,0),

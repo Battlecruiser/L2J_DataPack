@@ -14,7 +14,6 @@ CREATE TABLE IF NOT EXISTS `fort_siege_guards` (
 );
 
 INSERT INTO `fort_siege_guards` VALUES
-
 -- Shanty Guards
 (101,null,35682,-53815,155646,-2024,56240,600,0),
 (101,null,35681,-53824,155264,-2024,14952,600,0),

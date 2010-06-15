@@ -12,7 +12,6 @@ CREATE TABLE `merchant_buylists` (
 );
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
-
 -- golem shop
 (1835,-1,13128001,0),
 (2509,-1,13128001,1),
@@ -23815,7 +23814,4 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (20750,0,10006,21),	-- Shiny Spirit of Wrath Mask 7 day Pack
 (20751,0,10006,22),	-- Shiny Undecaying Corpse Mask 7Day Pack
 (20752,0,10006,23);	-- Shiny Planet X235 Alien Mask 7 day Pack
-
-
-
 -- GM SHOP END --

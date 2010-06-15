@@ -6,7 +6,6 @@ CREATE TABLE `merchant_shopids` (
 );
 
 INSERT INTO `merchant_shopids` VALUES
-
 -- Golem shop
 (13128001,'13128'),
 

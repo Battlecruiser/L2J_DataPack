@@ -7,7 +7,6 @@ CREATE TABLE `npcskills` (
 );
 
 INSERT INTO `npcskills` VALUES
-
 -- SUMMON WOLF PASSIVE SKILLS
 (12077,4121,1),
 (12077,4416,4),

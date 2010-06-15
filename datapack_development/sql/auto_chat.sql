@@ -7,7 +7,6 @@ CREATE TABLE `auto_chat` (
 );
 
 INSERT INTO `auto_chat` VALUES 
-
 -- Preacher of Doom
 (1,31093,-1),
 (2,31172,-1),
