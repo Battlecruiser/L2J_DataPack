@@ -8,7 +8,6 @@ CREATE TABLE IF NOT EXISTS `admin_command_access_rights` (
 );
 
 INSERT IGNORE INTO `admin_command_access_rights` VALUES
-
 -- ADMIN
 ('admin_admin','1'),
 ('admin_admin1','1'),

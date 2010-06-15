@@ -9,4 +9,3 @@ CREATE TABLE IF NOT EXISTS `character_tpbookmark` (
   `name` varchar(20) NOT NULL,
   PRIMARY KEY (`charId`,`Id`)
 );
-

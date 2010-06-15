@@ -11,7 +11,6 @@ CREATE TABLE `transform_skill_trees` (
 );
 
 INSERT INTO `transform_skill_trees` VALUES
-
 -- Human
 (0, 541, 9650, 1, 'Transform Grail Apostle', 0, 60),
 (0, 545, 9651, 1, 'Transform Unicorn', 0, 60),
