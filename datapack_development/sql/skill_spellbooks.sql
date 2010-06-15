@@ -1,6 +1,3 @@
---
--- Table structure for table `skill_spellbooks`
---
 DROP TABLE IF EXISTS `skill_spellbooks`;
 CREATE TABLE `skill_spellbooks` (
   `skill_id` int(11) NOT NULL default '-1',
@@ -8,14 +5,11 @@ CREATE TABLE `skill_spellbooks` (
   KEY `skill_id` (`skill_id`,`item_id`)
 );
 
---
--- Dumping data for table `skill_spellbooks`
---
-
 -- NOTES:
 -- (0,1393),
 -- Spellbook: Quickness unable to find a matching skill_id possibly never used
-INSERT INTO `skill_spellbooks` VALUES 
+
+INSERT INTO `skill_spellbooks` VALUES
 (2,1512), -- Spellbook: Confusion
 (10,3039), -- Spellbook: Summon Storm Cubic
 (13,3940), -- Blueprint: Summon Siege Golem
