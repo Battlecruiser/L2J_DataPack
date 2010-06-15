@@ -157,7 +157,7 @@ INSERT INTO `npc` VALUES
 (4303,4303,'Skooldy',0,'Halloween Children',0,'LineageMonster5.br_scooldie',23.00,23.00,70,'male','L2Npc',40,3862,1494,0.00,0.00,40,43,30,21,20,20,0,0,1303,471,607,382,253,0,333,0,0,0,0,60,120,0,0,'LAST_HIT','false'),
 (4304,4304,'Santa',0,'Merry Christmas',0,'LineageNPC2.br_xmas08_santa',9.00,16.00,70,'male','L2Npc',40,3862,1494,0.00,0.00,40,43,30,21,20,20,0,0,1303,471,607,382,253,0,333,0,0,0,0,60,120,0,0,'LAST_HIT','false'),
 (4305,4305,'Rosalia',0,'Hopeless Romantic',0,'LineageNPC2.message_event_master',10.00,20.00,70,'female','L2Npc',40,3862,1494,0.00,0.00,40,43,30,21,20,20,0,0,1303,471,607,382,253,0,333,0,0,0,0,60,180,0,0,'LAST_HIT','false'),
-(4306,4306,'Steve Shyagel',0,'Eva\'s High Priest',0,'LineageNPC2.br_archbishop_of_eva',8.00,26.50,70,'male','L2Npc',40,3862,1494,0.00,0.00,40,43,30,21,20,20,0,0,1303,471,607,382,253,0,333,0,0,0,0,60,180,0,0,'LAST_HIT','false');
+(4306,4306,'Jack Sage',0,'Eva\'s High Priest',0,'LineageNPC2.br_archbishop_of_eva',8.00,26.50,70,'male','L2Npc',40,3862,1494,0.00,0.00,40,43,30,21,20,20,0,0,1303,471,607,382,253,0,333,0,0,0,0,60,180,0,0,'LAST_HIT','false');
 
 INSERT INTO `npc` VALUES
 (12077,12077,'Wolf',0,'',0,'LineageMonster.pet_wolf',13.00,11.50,15,'male','L2Pet',40,195,164,3.95,1.21,40,43,30,21,20,25,0,0,9,19,3,17,304,0,333,3907,0,0,0,24,125,0,0,'LAST_HIT','false'),

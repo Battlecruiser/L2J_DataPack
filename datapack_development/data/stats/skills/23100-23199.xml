@@ -636,13 +636,22 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="23179" levels="1" name="Blessing of Energy">
-		<!-- Vitality level is maintained for 2 hours thanks to a new magic sealing effect developed by the Magic Research Institute. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+	<skill id="23179" levels="1" name="Gift of Vitality">
+		<!-- Your Vitality level is maintained for 2 hours thanks to an old magic unsealed by the Magic Research Institute. -->
+		<set name="target" val="TARGET_ONE" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="GIVE_VITALITY" />
+		<set name="power" val="20000" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="7210" val="0" abnormal="vitality" stackOrder="300">
+				<mul order="0x30" stat="vitalityConsumeRate" val="0.00" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="23180" levels="1" name="Joy of Energy">
+	<skill id="23180" levels="1" name="Joy of Vitality">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
