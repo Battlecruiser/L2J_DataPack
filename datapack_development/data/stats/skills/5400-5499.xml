@@ -399,25 +399,36 @@
 			<effect name="Paralyze" time="10" val="0" />
 		</for>
 	</skill>
-	<skill id="5448" levels="1" name="Obilivion">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGGREDUCE" />
+	<skill id="5448" levels="1" name="Oblivion">
+		<set name="isDebuff" val="true" />
+		<set name="ignoreResists" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="1000" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="RemoveTarget" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5449" levels="1" name="Weak Constitution">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="isDebuff" val="true" />
+		<set name="ignoreResists" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="skillType" val="STUN" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="StunSelf" time="3" val="0" stackOrder="1" stackType="Stun" effectPower="100" effectType="STUN" />
+			<effect name="StunSelf" time="5" val="0" stackOrder="1" stackType="Stun" />
 		</for>
 	</skill>
 	<skill id="5450" levels="7" name="Thin Skin">
 		<table name="#dot"> 75 102 132 156 186 201 230 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BLEED" />
+		<set name="isDebuff" val="true" />
+		<set name="ignoreResists" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="skillType" val="BLEED" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect count="2" name="DamOverTime" time="3" val="#dot" abnormal="bleed">
 				<mul order="0x30" stat="runSpd" val="0.8" />
@@ -425,21 +436,40 @@
 		</for>
 	</skill>
 	<skill id="5451" levels="1" name="Enervation">
-		<!-- Decreases attack and magic speed. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="isDebuff" val="true" />
+		<set name="ignoreResists" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Debuff" time="5" val="0">
+				<mul order="0x30" stat="pAtkSpd" val="0.77" />
+				<mul order="0x30" stat="runSpd" val="0.77" />
+				<mul order="0x30" stat="mAtkSpd" val="0.7" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5452" levels="3" name="Spite">
-		<!-- Greatly increases the amount of critical damage received. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- TODO: Missing levels 1-2 -->
+		<set name="isDebuff" val="true" />
+		<set name="ignoreResists" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Debuff" time="10" val="0">
+				<mul order="0x30" stat="critVuln" val="1.6" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5453" levels="4" name="Mental Impoverish">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- TODO: Missing levels 1-3 -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="1000" />
+		<set name="skillType" val="MANADAM" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="5454" levels="1" name="Shadow Bind">
 		<!-- Immobilized. -->
