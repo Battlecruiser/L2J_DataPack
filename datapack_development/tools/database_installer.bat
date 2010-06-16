@@ -700,6 +700,7 @@ set dest=gs
 for %%i in (
 access_levels.sql
 admin_command_access_rights.sql
+airships.sql
 armor.sql
 armorsets.sql
 auction.sql

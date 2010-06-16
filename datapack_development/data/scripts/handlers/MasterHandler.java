@@ -226,6 +226,7 @@ public class MasterHandler
 		ItemHandler.getInstance().registerItemHandler(new Elixir());
 		ItemHandler.getInstance().registerItemHandler(new Disguise());
 		ItemHandler.getInstance().registerItemHandler(new ManaPotion());
+		ItemHandler.getInstance().registerItemHandler(new EnergyStarStone());
 		_log.config("Loaded " + ItemHandler.getInstance().size() + " ItemHandlers");
 	}
 	
@@ -274,6 +275,7 @@ public class MasterHandler
 		SkillHandler.getInstance().registerSkillHandler(new InstantJump());
 		SkillHandler.getInstance().registerSkillHandler(new Dummy());
 		SkillHandler.getInstance().registerSkillHandler(new Extractable());
+		SkillHandler.getInstance().registerSkillHandler(new RefuelAirShip());
 		_log.config("Loaded " + SkillHandler.getInstance().size() + " SkillHandlers");
 	}
 	
