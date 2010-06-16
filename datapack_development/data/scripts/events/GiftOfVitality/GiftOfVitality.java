@@ -31,7 +31,30 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public class GiftOfVitality extends Quest
 {
+	// Reuse between buffs
+	private static final int _hours = 5;
+	
 	private static final int _jack = 4306;
+	
+	private static final int[][] _spawns = 
+	{
+		{  82766,  149438, -3464, 33865 },
+		{  82286,   53291, -1488, 15250 },
+		{ 147060,   25943, -2008, 18774 },
+		{ 148096,  -55466, -2728, 40541 },
+		{  87116, -141332, -1336, 52193 },
+		{  43521,  -47542,  -792, 31655 },
+		{  17203,  144949, -3024, 18166 },
+		{ 111164,  221062, -3544,  2714 },
+		{ -13869,  122063, -2984, 18270 },
+		{ -83161,  150915, -3120, 17311 },
+		{  45402,   48355, -3056, 49153 },
+		{ 115616, -177941,  -896, 30708 },
+		{ -44928, -113608,  -192, 30212 },
+		{ -84037,  243194, -3728,  8992 },
+		{-119690,   44583,   360, 29289 },
+		{  12084,   16576, -4584, 57345 }
+	};
 	
 	public GiftOfVitality(int questId, String name, String descr)
 	{
@@ -39,6 +62,8 @@ public class GiftOfVitality extends Quest
 		addStartNpc(_jack);
 		addFirstTalkId(_jack);
 		addTalkId(_jack);
+		for(int[] _spawn : _spawns)
+			addSpawn(_jack, _spawn[0], _spawn[1], _spawn[2], _spawn[3], false, 0);
 	}
 	
 	@Override
@@ -70,7 +95,7 @@ public class GiftOfVitality extends Quest
 			{
 				npc.setTarget(player);
 				npc.doCast(SkillTable.getInstance().getInfo(23179,1));	// Gift of Vitality
-				st.set("reuse", String.valueOf(System.currentTimeMillis() + 60*60*5*1000));
+				st.set("reuse", String.valueOf(System.currentTimeMillis() + _hours*60*60*1000));
 				htmltext = "4306-okvitality.htm";
 			}
 		}
