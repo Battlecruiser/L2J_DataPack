@@ -4351,6 +4351,25 @@ INSERT INTO `zone_vertices` VALUES
 (50500,2,-114106,-178021),
 (50500,3,-115476,-178021);
 
+-- AirShips dock zones
+INSERT INTO zone_vertices VALUES
+-- Seed of Infinity
+(50600, 0, -212855, 209819),
+-- Seed of Destruction
+(50601, 0, -249460, 249282),
+-- Keucereus Base North
+(50602, 0, -193315, 240184),
+(50602, 1, -188053, 235278),
+(50602, 2, -179811, 238353),
+(50602, 3, -178407, 242454),
+(50602, 4, -178685, 244665),
+-- Keucereus Base South
+(50603, 0, -178685, 244664),
+(50603, 1, -180120, 246779),
+(50603, 2, -185598, 249572),
+(50603, 3, -193009, 245647),
+(50603, 4, -193315, 240185);
+
 -- Castle NoHq Zones
 -- Gludio Castle
 INSERT INTO `zone_vertices` VALUES
