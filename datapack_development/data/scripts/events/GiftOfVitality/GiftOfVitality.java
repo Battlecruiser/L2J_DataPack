@@ -27,7 +27,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 /**
  ** @author Gnacik
  **
- ** Event : 'Gift of Vitality'
+ ** Retail Event : 'Gift of Vitality'
  */
 public class GiftOfVitality extends Quest
 {
