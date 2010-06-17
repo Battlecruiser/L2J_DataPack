@@ -277,6 +277,7 @@
 		<set name="chanceType" val="ON_EVADED_HIT" />
 	</skill>
 	<skill id="821" levels="1" name="Shadow Step">
+		<!-- NOTE: Retail hitTime is 100 but changed to 500 to match retail animation -->
 		<set name="magicLvl" val="72" />
 		<set name="mpConsume" val="50" />
 		<set name="operateType" val="OP_ACTIVE" />
