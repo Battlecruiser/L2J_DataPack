@@ -1079,7 +1079,7 @@ public class AdminEditChar implements IAdminCommandHandler
                 } else {
 			replyMSG2 = "s.";
                 }
-		adminReply.replace("%ip%", ip);
+		adminReply.replace("%ip%", IpAdress);
 		adminReply.replace("%number%", String.valueOf(CharactersFound));
 		adminReply.replace("%end%", replyMSG2);
 		activeChar.sendPacket(adminReply);
