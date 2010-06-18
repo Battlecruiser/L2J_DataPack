@@ -50,7 +50,7 @@ public class BlessedSpiritShot implements IItemHandler
 		// Check if Blessed SpiritShot can be used
 		if (weaponInst == null || weaponItem.getSpiritShotCount() == 0)
 		{
-			if (!activeChar.getAutoSoulShot().containsKey(itemId))
+			if (!activeChar.getAutoSoulShot().contains(itemId))
 				activeChar.sendPacket(new SystemMessage(SystemMessageId.CANNOT_USE_SPIRITSHOTS));
 			return;
 		}
@@ -96,7 +96,7 @@ public class BlessedSpiritShot implements IItemHandler
 		
 		if (!gradeCheck)
 		{
-			if (!activeChar.getAutoSoulShot().containsKey(itemId))
+			if (!activeChar.getAutoSoulShot().contains(itemId))
 				activeChar.sendPacket(new SystemMessage(SystemMessageId.SPIRITSHOTS_GRADE_MISMATCH));
 			
 			return;
