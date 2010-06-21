@@ -288,7 +288,7 @@ public abstract class AirShipController extends Quest
 		}
 		if (_arrivalPath == null)
 		{
-			if (!ZoneManager.getInstance().getZoneById(_dockZone).isInsideZone(_shipSpawnX, _shipSpawnY, _shipSpawnZ));
+			if (!ZoneManager.getInstance().getZoneById(_dockZone).isInsideZone(_shipSpawnX, _shipSpawnY, _shipSpawnZ))
 			{
 				_log.log(Level.WARNING, getName()+": Arrival path is null and spawn point not in zone "+_dockZone+", controller disabled");
 				_isBusy = true;

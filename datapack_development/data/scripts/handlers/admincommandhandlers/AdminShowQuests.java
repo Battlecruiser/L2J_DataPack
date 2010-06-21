@@ -148,9 +148,9 @@ public class AdminShowQuests implements IAdminCommandHandler
 
 	private void showquestmenu(L2PcInstance target, L2PcInstance actor, String[] val) throws SQLException
 	{
+		Connection con = null;
 		try
 		{
-			Connection con = null;
 			ResultSet rs;
 			PreparedStatement req;
 			int ID = target.getObjectId();
@@ -276,6 +276,10 @@ public class AdminShowQuests implements IAdminCommandHandler
 		{
 			actor.sendMessage("Error!");
 			//e.printStackTrace();
+		}
+		finally
+		{
+			L2DatabaseFactory.close(con);
 		}
 	}
 
