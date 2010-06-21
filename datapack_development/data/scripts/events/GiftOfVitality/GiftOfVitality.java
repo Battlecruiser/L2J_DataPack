@@ -21,6 +21,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SummonInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
@@ -95,6 +96,7 @@ public class GiftOfVitality extends Quest
 			{
 				npc.setTarget(player);
 				npc.doCast(SkillTable.getInstance().getInfo(23179,1));	// Gift of Vitality
+				st.setState(State.STARTED);
 				st.set("reuse", String.valueOf(System.currentTimeMillis() + _hours*60*60*1000));
 				htmltext = "4306-okvitality.htm";
 			}
