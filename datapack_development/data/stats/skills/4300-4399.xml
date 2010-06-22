@@ -135,19 +135,20 @@
 		</for>
 	</skill>
 	<skill id="4314" levels="12" name="BOSS Holy Light Burst">
-		<table name="#power"> 21 31 43 58 75 92 108 115 121 125 129 132 </table>
-		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
+		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
-		<set name="target" val="TARGET_AREA" />
-		<set name="skillRadius" val="200" />
-		<set name="hitTime" val="2000" />
-		<set name="skillType" val="MDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
+		<table name="#power"> 21 31 43 58 75 92 108 115 121 125 129 132 </table>
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
+		<set name="hitTime" val="2000" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#power" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="4315" levels="12" name="Hold">
 		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
@@ -168,23 +169,24 @@
 		</for>
 	</skill>
 	<skill id="4316" levels="12" name="Boss Lilim Drain">
-		<table name="#power"> 6 8 11 15 19 23 27 29 31 32 33 33 </table>
-		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
+		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_AREA" />
-		<set name="skillRadius" val="150" />
+		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
+		<table name="#power"> 6 8 11 15 19 23 27 29 31 32 33 33 </table>
+		<set name="absorbPart" val="0.4" /> <!-- absorbs 40% of damage -->
+		<set name="castRange" val="750" />
+		<set name="effectRange" val="1250" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="2500" />
-		<set name="skillType" val="DRAIN" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isMagic" val="true" />
-		<set name="castRange" val="750" />
-		<set name="effectRange" val="1250" />
-		<set name="absorbPart" val="0.4" /> <!-- absorbs 40% of damage -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#power" />
+		<set name="skillRadius" val="150" />
+		<set name="skillType" val="DRAIN" />
+		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="4317" levels="5" name="Increase Rage Might">
 		<table name="#pAtk"> 1.15 1.2 1.25 1.3 1.35 </table>
