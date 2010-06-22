@@ -1242,18 +1242,19 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4495" levels="12" name="BOSS Power Shot">
+		<!-- Boss Skill -->
+		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790 </table>
-		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="hitTime" val="4500" />
-		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
+		<set name="hitTime" val="4500" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="4496" levels="12" name="Stun">
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
