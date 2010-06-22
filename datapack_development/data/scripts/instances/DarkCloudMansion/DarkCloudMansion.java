@@ -784,7 +784,7 @@ public class DarkCloudMansion extends Quest
 				}
 			}
 			if (decayedSamples == 7)
-				spawnFifthRoom(world);
+				startQuestTimer("respawnFifth", 6000, npc, null);
 		}
 		else
 		{
@@ -888,6 +888,10 @@ public class DarkCloudMansion extends Quest
 					if (mob.status == 1)
 						mob.npc.broadcastPacket(new NpcSay(mob.npc.getObjectId(), 0, mob.npc.getNpcId(), _decayChat[Rnd.get(_decayChat.length)]));
 				}
+			}
+			else if (event.equalsIgnoreCase("respawnFifth"))
+			{
+				spawnFifthRoom(world);
 			}
 		}
 
