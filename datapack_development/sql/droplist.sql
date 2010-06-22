@@ -34866,7 +34866,7 @@ INSERT INTO `droplist` VALUES
 (25579,9625,1,1,3,54666), -- Giant's Codex - Oblivion
 (25582,6323,1,1,0,71551), -- Sealed Phoenix Necklace
 (25582,6324,1,1,0,95401), -- Sealed Phoenix Earring
-(25582,6325,6,18,0,143101), -- Sealed Phoenix Ring
+(25582,6325,1,1,0,143101), -- Sealed Phoenix Ring
 (25582,6341,81,243,0,81848), -- Sealed Phoenix Earring Gemstone
 (25582,6343,140,420,0,36607), -- Sealed Phoenix Necklace Beads
 (25582,6345,40,120,0,229241), -- Sealed Phoenix Ring Gemstone
