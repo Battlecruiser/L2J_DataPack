@@ -134,18 +134,19 @@
 		</for>
 	</skill>
 	<skill id="4207" levels="12" name="BOSS Power Shot">
+		<!-- Boss Skill -->
+		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790 </table>
-		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="hitTime" val="4500" />
-		<set name="skillType" val="MDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
+		<set name="hitTime" val="4500" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="4208" levels="12" name="Stun">
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
@@ -166,52 +167,54 @@
 		</for>
 	</skill>
 	<skill id="4209" levels="12" name="BOSS Heal">
-		<!-- SHOULD BUFF MINIONS -->
-		<table name="#power"> 1768 3037 4819 7103 9754 12035 13182 13501 13624 13544 13303 13157 </table>
-		<table name="#mpConsume"> 21 34 50 67 86 104 119 125 129 131 131 132 </table>
+		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
+		<table name="#mpConsume"> 21 34 50 67 86 104 119 125 129 131 131 132 </table>
+		<table name="#power"> 1768 3037 4819 7103 9754 12035 13182 13501 13624 13544 13303 13157 </table>
+		<set name="aggroPoints" val="100" />
+		<set name="castRange" val="700" />
+		<set name="effectRange" val="1200" />
+		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="HEAL" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="700" />
-		<set name="effectRange" val="1200" />
-		<set name="aggroPoints" val="100" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="4210" levels="12" name="BOSS Chant of Life">
-		<!-- SHOULD BUFF MINIONS -->
-		<table name="#hot"> 127 217 345 508 697 860 942 965 974 968 951 940 </table>
-		<table name="#mpConsume"> 43 49 99 134 173 207 139 250 258 262 262 263 </table>
+		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="8000" />
-		<set name="hitTime" val="2000" />
-		<set name="skillType" val="HOT" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<table name="#mpConsume"> 43 49 99 134 173 207 139 250 258 262 262 263 </table>
+		<table name="#hot"> 127 217 345 508 697 860 942 965 974 968 951 940 </table>
+		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
-		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="8000" />
+		<set name="skillType" val="HOT" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect count="5" name="HealOverTime" time="3" val="#hot" stackOrder="#hot" stackType="LifeForce" />
 		</for>
 	</skill>
 	<skill id="4211" levels="12" name="BOSS Might">
-		<!-- SHOULD BUFF MINIONS -->
-		<table name="#mpConsume"> 6 10 13 18 23 28 33 35 36 38 39 39 </table>
+		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
+		<table name="#mpConsume"> 6 10 13 18 23 28 33 35 36 38 39 39 </table>
+		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="hitTime" val="1500" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="aggroPoints" val="100" />
+		<set name="skillRadius" val="400" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_CLAN" />
 		<for>
 			<effect name="Buff" time="60" val="0" stackOrder="99" stackType="pa_up">
 				<mul order="0x30" stat="pAtk" val="1.5" />
@@ -219,16 +222,17 @@
 		</for>
 	</skill>
 	<skill id="4212" levels="12" name="BOSS Shield">
-		<!-- SHOULD BUFF MINIONS -->
-		<table name="#mpConsume"> 6 10 13 18 23 28 33 35 36 38 39 39 </table>
+		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
+		<table name="#mpConsume"> 6 10 13 18 23 28 33 35 36 38 39 39 </table>
+		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="hitTime" val="1500" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="aggroPoints" val="100" />
+		<set name="skillRadius" val="400" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_CLAN" />
 		<for>
 			<effect name="Buff" time="60" val="0" stackOrder="1" stackType="pd_up">
 				<mul order="0x30" stat="pDef" val="1.5" />
@@ -236,16 +240,17 @@
 		</for>
 	</skill>
 	<skill id="4213" levels="12" name="BOSS Haste">
-		<!-- SHOULD BUFF MINIONS -->
-		<table name="#mpConsume"> 6 10 13 18 23 28 33 35 36 38 39 39 </table>
+		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
+		<table name="#mpConsume"> 6 10 13 18 23 28 33 35 36 38 39 39 </table>
+		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="hitTime" val="1500" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="aggroPoints" val="100" />
+		<set name="skillRadius" val="400" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_CLAN" />
 		<for>
 			<effect name="Buff" time="60" val="0" stackOrder="99" stackType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="1.5" />
@@ -253,16 +258,17 @@
 		</for>
 	</skill>
 	<skill id="4214" levels="12" name="BOSS Reflect Damage">
-		<!-- SHOULD BUFF MINIONS -->
-		<table name="#mpConsume"> 6 10 13 18 23 28 33 35 36 38 39 39 </table>
+		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
+		<table name="#mpConsume"> 6 10 13 18 23 28 33 35 36 38 39 39 </table>
+		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="hitTime" val="1500" />
-		<set name="skillType" val="REFLECT" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="aggroPoints" val="100" />
+		<set name="skillRadius" val="400" />
+		<set name="skillType" val="REFLECT" />
+		<set name="target" val="TARGET_CLAN" />
 		<for>
 			<effect name="Buff" time="60" val="0" stackOrder="99" stackType="DmgShield">
 				<add order="0x40" stat="reflectDam" val="20" />
@@ -502,6 +508,7 @@
 		</for>
 	</skill>
 	<skill id="4234" levels="12" name="BOSS Spear Attack">
+		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 36 50 69 93 118 143 166 175 182 186 189 192 </table>
 		<table name="#power"> 352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790 </table>
