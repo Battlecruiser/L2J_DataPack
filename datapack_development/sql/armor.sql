@@ -3004,7 +3004,7 @@ INSERT INTO `armor` VALUES
 (20785,'Agathion Seal Bracelet - Nepal Snow','Snow\'s Haste - 7 day limited period','lbracelet','false','none',150,'wood','none',0,-1,10080,0,0,0,0,0,'false','false','true','false','false','0-0','3267-1;21149-1;23135-1;23136-1;'),
 (20786,'Agathion Seal Bracelet - Round Ball Snow','Snow\'s Acumen - 7 day limited period','lbracelet','false','none',150,'wood','none',0,-1,10080,0,0,0,0,0,'false','false','true','false','false','0-0','3267-1;21150-1;23137-1;23138-1;'),
 (20787,'Agathion Seal Bracelet - Ladder Snow','Snow\'s Wind Walk - 7 day limited period','lbracelet','false','none',150,'wood','none',0,-1,10080,0,0,0,0,0,'false','false','true','false','false','0-0','3267-1;21151-1;23139-1;23140-1;'),
-(20789,'Rocket Gun Hat','Continuous Fireworks','hairall','false','none',10,'wood','none',0,-1,-1,0,0,0,0,0,'false','false','true','false','false','0-0','0-0;'),
+(20789,'Rocket Gun Hat','Continuous Fireworks','hairall','false','none',10,'wood','none',0,-1,-1,0,0,0,0,0,'false','false','true','false','false','0-0','21152-1;'),
 (20790,'Yellow Paper Hat','Blessed Body - 7 day limited period','hairall','false','none',10,'wood','none',0,-1,10080,0,0,0,0,0,'false','false','true','false','false','0-0','0-0;'),
 (20791,'Pink Paper Mask Set','Blessed Soul - 7 day limited period','hairall','false','none',10,'wood','none',0,-1,10080,0,0,0,0,0,'false','false','true','false','false','0-0','0-0;'),
 (20792,'Flavorful Cheese Hat','','hairall','false','none',10,'wood','none',0,-1,-1,0,0,0,0,0,'false','false','true','false','false','0-0','0-0;'),

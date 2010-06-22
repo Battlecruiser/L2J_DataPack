@@ -9980,7 +9980,7 @@ INSERT INTO `etcitem` VALUES
 (20808,'Round Ball Snow Agathion 7-Day Pack','Snow\'s Acumen','false','none',100,'normal','wood','none',-1,-1,0,0,'false','false','false','false','false','none','0-0;'),
 (20809,'Ladder Snow Agathion 7-Day Pack','Snow\'s Wind Walk','false','none',100,'normal','wood','none',-1,-1,0,0,'false','false','false','false','false','none','0-0;'),
 (20810,'Flame Box Pack','','false','none',100,'normal','wood','none',-1,-1,0,0,'false','false','false','false','false','none','0-0;'),
-(20811,'Rocket Gun Hat Pack','Continuous Fireworks','false','none',100,'normal','wood','none',-1,-1,0,0,'false','false','false','false','false','none','0-0;'),
+(20811,'Rocket Gun Hat Pack','Continuous Fireworks','false','none',100,'normal','wood','none',-1,-1,0,0,'false','false','false','false','false','ExtractableItems','0-0;'),
 (20812,'Yellow Paper Hat 7-Day Pack','Bless the Body','false','none',100,'normal','wood','none',-1,-1,0,0,'false','false','false','false','false','none','0-0;'),
 (20813,'Pink Paper Mask Set 7-Day Pack','Bless the Soul','false','none',100,'normal','wood','none',-1,-1,0,0,'false','false','false','false','false','none','0-0;'),
 (20814,'Flavorful Cheese Hat Pack','','false','none',100,'normal','wood','none',-1,-1,0,0,'false','false','false','false','false','none','0-0;'),
