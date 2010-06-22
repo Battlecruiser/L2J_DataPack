@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS `character_tpbookmark` (
   `y` int(20) NOT NULL,
   `z` int(20) NOT NULL,
   `icon` int(20) NOT NULL,
-  `tag` varchar(20) DEFAULT NULL,
-  `name` varchar(20) NOT NULL,
+  `tag` varchar(50) DEFAULT NULL,
+  `name` varchar(50) NOT NULL,
   PRIMARY KEY (`charId`,`Id`)
 );
