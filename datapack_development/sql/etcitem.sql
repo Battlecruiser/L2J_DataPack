@@ -9222,7 +9222,7 @@ INSERT INTO `etcitem` VALUES
 (14878,'Discharged Power Bead','','false','quest',0,'stackable','wood','none',-1,-1,0,0,'false','false','false','false','false','none','0-0;'),
 (14879,'Stakato Fang','','false','quest',0,'stackable','wood','none',-1,-1,0,0,'false','false','false','false','false','none','0-0;'),
 (14880,'Dirty Bead','','false','none',0,'normal','wood','none',-1,-1,0,0,'false','false','false','false','false','none','0-0;'),
-(14881,'Soul Core Containing Evil Spirit','','false','none',0,'stackable','wood','none',-1,-1,0,0,'false','false','false','false','false','none','0-0;'),
+(14881,'Soul Core Containing Evil Spirit','','false','none',0,'stackable','wood','none',-1,-1,0,0,'false','false','true','false','false','none','0-0;'),
 (14882,'Ragna Orc\'s Amulet','','false','quest',0,'stackable','wood','none',-1,-1,0,0,'false','false','false','false','false','none','0-0;'),
 (14883,'Hisilrome\'s Heart','','false','none',0,'normal','wood','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
 (14884,'Gludio Supply Box - Magic Rune Clip','Grade S,A','false','none',100,'stackable','wood','none',-1,-1,0,0,'true','true','true','true','true','ItemSkills','2975-1;'),
