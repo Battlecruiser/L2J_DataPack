@@ -168,7 +168,8 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				String type = st.nextToken();
 				String state = st.nextToken();
-				adminAtmosphere(type, state, activeChar);
+				int duration = Integer.parseInt(st.nextToken());
+				adminAtmosphere(type, state, duration, activeChar);
 			}
 			catch (Exception ex)
 			{
@@ -748,8 +749,9 @@ public class AdminEffects implements IAdminCommandHandler
 	 *
 	 * @param type - atmosphere type (signssky,sky)
 	 * @param state - atmosphere state(night,day)
+	 * @param duration 
 	 */
-	private void adminAtmosphere(String type, String state, L2PcInstance activeChar)
+	private void adminAtmosphere(String type, String state, int duration, L2PcInstance activeChar)
 	{
 		L2GameServerPacket packet = null;
 		
@@ -767,7 +769,10 @@ public class AdminEffects implements IAdminCommandHandler
 			else if (state.equals("day"))
 				packet = new SunRise();
 			else if (state.equals("red"))
-				packet = new ExRedSky(10);
+				if (duration != 0)
+					packet = new ExRedSky(duration);
+				else
+					packet = new ExRedSky(10);
 		}
 		else
 			activeChar.sendMessage("Usage: //atmosphere <signsky dawn|dusk>|<sky day|night|red>");
