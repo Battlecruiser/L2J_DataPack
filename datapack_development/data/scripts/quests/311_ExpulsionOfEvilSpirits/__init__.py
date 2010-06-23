@@ -11,6 +11,7 @@ qn = "311_ExpulsionOfEvilSpirits"
 CHAIREN	= 32655
 
 SOUL_CORE = 14881
+SOUL_PENDANT = 14848
 RAGNA_ORCS_AMULET = 14882
 
 DROP_CHANCE = 20
@@ -75,10 +76,9 @@ class Quest (JQuest) :
 			else :
 				htmltext = "32655-13no.htm"
 		elif event == "32655-14.htm" :
-			if st.getQuestItemsCount(SOUL_CORE) == 10 :
-				# TODO
-				# htmltext = "32655-14ok.htm"
-				htmltext = ""
+			if st.getQuestItemsCount(SOUL_CORE) >= 10 :
+				st.takeItems(SOUL_CORE,10)
+				st.giveItems(SOUL_PENDANT,1)
 			else:
 				htmltext = "32655-14no.htm"
 		elif event == "32655-quit.htm" :
@@ -117,7 +117,11 @@ class Quest (JQuest) :
 		npcId = npc.getNpcId()
 		cond = st.getInt("cond")
 		if cond == 1 and npcId in MOBS :
-			if st.getRandom(100) < DROP_CHANCE :
+			rand = st.getRandom(100)
+			if rand == 1 :
+				st.giveItems(SOUL_CORE,1)
+				st.playSound("ItemSound.quest_itemget")
+			elif rand < DROP_CHANCE :
 				st.giveItems(RAGNA_ORCS_AMULET,1)
 				st.playSound("ItemSound.quest_itemget")
 		return
