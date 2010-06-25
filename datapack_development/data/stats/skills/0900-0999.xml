@@ -862,21 +862,42 @@
 	</skill>
 	<skill id="959" levels="1" name="Frog Jump">
 		<!-- Increases one's own moving speed by 33 for 15 seconds. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="hitTime" val="4500" />
+		<set name="reuseDelay" val="30000" />
+		<for>
+			<effect name="Buff" time="15" val="0">
+				<add order="0x40" stat="runSpd" val="33" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="960" levels="1" name="Race Running">
 		<!-- Increases one's own moving speed by 33 for 15 seconds. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="hitTime" val="4500" />
+		<set name="reuseDelay" val="30000" />
+		<for>
+			<effect name="Buff" time="15" val="0">
+				<add order="0x40" stat="runSpd" val="33" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="961" levels="1" name="Swift Dash">
 		<!-- Increases one's own moving speed by 33 for 15 seconds. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="hitTime" val="4500" />
+		<set name="reuseDelay" val="30000" />
+		<for>
+			<effect name="Buff" time="15" val="0">
+				<add order="0x40" stat="runSpd" val="33" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="962" levels="1" name="Guard's March">
 		<!-- Increases one's own moving speed by 33 for 5 seconds. -->
