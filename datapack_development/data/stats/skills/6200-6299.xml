@@ -1,24 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="6200" levels="1" name="NPC Transform Dispel">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="TRANSFORMDISPEL" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="500" />
 	</skill>
 	<skill id="6201" levels="1" name="Transformation Condition - Frog">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="transformId" val="111" />
+		<for>
+			<!-- speed_up here is for block speed buffs on target -->
+			<effect name="Transformation" time="520" val="0" stackOrder="99" stackType="speed_up">
+				<set order="0x08" stat="STR" val="40" />
+				<set order="0x08" stat="DEX" val="30" />
+				<set order="0x08" stat="CON" val="43" />
+				<set order="0x08" stat="INT" val="21" />
+				<set order="0x08" stat="WIT" val="13" />
+				<set order="0x08" stat="MEN" val="23" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6202" levels="1" name="Transformation Condition - Young Child">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="transformId" val="112" />
+		<for>
+			<!-- speed_up here is for block speed buffs on target -->
+			<effect name="Transformation" time="460" val="0" stackOrder="99" stackType="speed_up">
+				<set order="0x08" stat="STR" val="40" />
+				<set order="0x08" stat="DEX" val="30" />
+				<set order="0x08" stat="CON" val="43" />
+				<set order="0x08" stat="INT" val="21" />
+				<set order="0x08" stat="WIT" val="13" />
+				<set order="0x08" stat="MEN" val="23" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6203" levels="1" name="Transformed Condition - Native">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="transformId" val="124" />
+		<for>
+			<!-- speed_up here is for block speed buffs on target -->
+			<effect name="Transformation" time="220" val="0" stackOrder="99" stackType="speed_up">
+				<set order="0x08" stat="STR" val="40" />
+				<set order="0x08" stat="DEX" val="30" />
+				<set order="0x08" stat="CON" val="43" />
+				<set order="0x08" stat="INT" val="21" />
+				<set order="0x08" stat="WIT" val="13" />
+				<set order="0x08" stat="MEN" val="23" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6204" levels="1" name="Transformed Condition - Guards of the Dawn">
 		<set name="target" val="TARGET_NONE" />
