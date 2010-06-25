@@ -406,17 +406,19 @@ public class AdminEditChar implements IAdminCommandHandler
 				L2Object target = activeChar.getTarget();
 				L2PcInstance player = null;
 				if (target instanceof L2PcInstance)
-				{
 					player = (L2PcInstance) target;
-				}
 				else
+					return false;
+				if (CharNameTable.getInstance().getIdByName(val) > 0)
 				{
+					activeChar.sendMessage("Warning, player "+val+" already exists");
 					return false;
 				}
 				player.setName(val);
 				player.store();
 				CharNameTable.getInstance().addName(player);
 				
+				activeChar.sendMessage("Changed name to "+val);
 				player.sendMessage("Your name has been changed by a GM.");
 				player.broadcastUserInfo();
 				CommunityServerThread.getInstance().sendPacket(new WorldInfo(player, null, WorldInfo.TYPE_UPDATE_PLAYER_DATA));
