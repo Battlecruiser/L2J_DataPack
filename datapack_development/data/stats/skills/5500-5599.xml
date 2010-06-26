@@ -430,7 +430,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" time="10" val="0">
-				<!-- <mul order="0x30" stat="physicalSkillPower" val="1.2" /> TODO: Needs Core-Side Support -->
+				<mul order="0x30" stat="physicalSkillPower" val="1.2" />
 				<basemul order="0x30" stat="rCrit" val="0.2" />
 			</effect>
 		</for>
