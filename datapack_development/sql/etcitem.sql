@@ -8679,7 +8679,7 @@ INSERT INTO `etcitem` VALUES
 (13868,'Yehan Klodekus\' Badge','','false','none',0,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
 (13869,'Yehan Klanikus\' Badge','','false','none',0,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
 (13870,'Lich Crystal','','false','none',0,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
-(13871,'Vulture\'s Golden Feather','','false','none',0,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
+(13871,'Vulture\'s Golden Feather','','false','quest',0,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
 (13872,'Swallowed Skull','','false','none',0,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
 (13873,'Swallowed Sternum','','false','none',0,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
 (13874,'Swallowed Bones','','false','none',0,'stackable','paper','none',-1,-1,0,0,'true','true','true','true','true','none','0-0;'),
