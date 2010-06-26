@@ -92,7 +92,6 @@ INSERT INTO `teleport` VALUES
 ('Lair end -> Antharas Nest',61,173826,115333,-7708,0,0,57),
 ('Antharas Nest - > Giran castle town',62,83400,147943,-3404,0,0,57),
 ('Giran Harbor -> Giran Town',63,83400,147943,-3404,6300,0,57),
-('Giran Harbor -> Dion Town',64,15670,142983,-2705,6500,0,57),
 ('Giran Harbor -> Heine',107,111409,219364,-3545,8500,0,57),
 ('Heine -> The Town of Dion',65,15670,142983,-2705,12000,0,57),
 ('Heine -> Field of Silence',66,87691,162835,-3520,2500,0,57),
