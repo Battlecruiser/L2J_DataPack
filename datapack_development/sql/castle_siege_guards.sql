@@ -4111,7 +4111,7 @@ REPLACE INTO `castle_siege_guards` (`castleId`,`id`,`npcId`,`x`,`y`,`z`,`heading
 /*
 (id,3252,35368,44525,108867,-2020,0,10800,0), -- Bloody Lord Nurka 1
 (id,3253,35369,44545,108867,-2020,0,60,0), -- Partisan Healer 1
-(id,3254,35369,44505,108867,-2020,60,0), -- Partisan Healer 1
+(id,3254,35369,44505,108867,-2020,0,60,0), -- Partisan Healer 1
 (id,3255,35371,44535,108884,-2020,0,60,0), -- Partisan Court Guard (Archer) 1
 (id,3256,35371,44515,108884,-2020,0,60,0), -- Partisan Court Guard (Archer) 1
 (id,3257,35371,44515,108850,-2020,0,60,0), -- Partisan Court Guard (Archer) 1
