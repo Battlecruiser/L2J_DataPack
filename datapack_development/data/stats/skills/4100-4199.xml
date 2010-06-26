@@ -1253,6 +1253,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="negateStats" val="BUFF DEBUFF" />
+		<set name="reuseDelay" val="60000" /> <!-- TEMP FIX until AI is fixed -->
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="NEGATE" /> <!-- Needs core support for "CANCEL_ALL" without exceptions -->
 		<set name="target" val="TARGET_AURA" />
