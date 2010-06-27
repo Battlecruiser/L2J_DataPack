@@ -916,7 +916,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="ChanceSkillTrigger" time="1200" val="0" triggeredId="6059" chanceType="ON_ATTACKED_CRIT" activationChance="10" stackOrder="1" stackType="critVuln">
+			<effect name="ChanceSkillTrigger" time="1200" val="0" triggeredId="6059" chanceType="ON_ATTACKED_CRIT" activationChance="10" stackOrder="1" stackType="critVuln_special">
 				<mul order="0x30" stat="critVuln" val="0.7" />
 			</effect>
 		</for>
