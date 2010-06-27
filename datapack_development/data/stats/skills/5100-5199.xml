@@ -273,8 +273,9 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
 			<effect name="Buff" time="8" val="0">
-				<mul order="0x30" stat="pAtk" val="1.1" /> <!-- Guess -->
+				<mul order="0x30" stat="pAtk" val="1.1" />
 			</effect>
+			<effect count="7" name="IncreaseCharges" val="1" />
 		</for>
 	</skill>
 	<skill id="5128" levels="1" name="Maximize long-range weapon use">
