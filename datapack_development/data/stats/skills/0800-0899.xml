@@ -1067,7 +1067,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
-			<effect name="Stun" time="2" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="Stun" />
+			<effect name="Stun" time="2" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="Stun" special="airstun" />
 			<effect self="1" name="Warp" noicon="1" val="0" />
 		</for>
 	</skill>
@@ -1088,7 +1088,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1500" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="Stun" />
+			<effect name="Stun" time="9" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="Stun" special="airstun" />
 		</for>
 	</skill>
 	<skill id="887" levels="11" name="Sky Clutch">
@@ -1109,7 +1109,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1800" />
 		<for>
-			<effect name="Root" time="9" val="0" effectPower="50" effectType="ROOT" stackOrder="1" stackType="Root" />
+			<effect name="Root" time="9" val="0" effectPower="50" effectType="ROOT" stackOrder="1" stackType="Root" special="airroot" />
 		</for>
 	</skill>
 	<skill id="888" levels="11" name="Energy Storm">
