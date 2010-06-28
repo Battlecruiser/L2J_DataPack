@@ -855,9 +855,9 @@
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="5089" levels="1" name="Representation - Enter the Sailren Nest Quest">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="5090" levels="1" name="Sailren Production">
