@@ -12,16 +12,16 @@ from com.l2jserver.gameserver.network.serverpackets import NpcSay
 qn = "193_SevenSignDyingMessage"
 
 # NPCs
-HOLLINT		= 30191
-CAIN			= 32569
-ERIC			= 32570
-ATHEBALDT	= 30760
-SHILENSEVIL	= 27343
+HOLLINT     = 30191
+CAIN        = 32569
+ERIC        = 32570
+ATHEBALDT   = 30760
+SHILENSEVIL = 27343
 
 # ITEMS
-JACOB_NECK		= 13814
-DEADMANS_HERB	= 13816
-SCULPTURE		= 14353
+JACOB_NECK    = 13814
+DEADMANS_HERB = 13816
+SCULPTURE     = 14353
 
 class Quest (JQuest) :
 	def __init__(self,id,name,descr):
@@ -79,14 +79,16 @@ class Quest (JQuest) :
 
 		npcId = npc.getNpcId()
 		cond = st.getInt("cond")
-		id = st.getState()
+
 		if npcId == HOLLINT :
 			first = player.getQuestState("192_SevenSignSeriesOfDoubt")
-			if first and first.getState() == State.COMPLETED and id == State.CREATED and player.getLevel() >= 79 :
+			if st.getState() == State.COMPLETED :
+				htmltext = "<html><head><body>This quest has already been completed.<br></body></html>"
+			elif first and first.getState() == State.COMPLETED and st.getState() == State.CREATED and player.getLevel() >= 79 :
 				htmltext = "30191-01.htm"
 			elif cond == 1 :
 				htmltext = "30191-03.htm"
-			elif cond == 0 :
+			else :
 				htmltext = "30191-00.htm"
 				st.exitQuest(True)
 		elif npcId == CAIN :
