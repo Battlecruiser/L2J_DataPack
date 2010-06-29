@@ -3,9 +3,9 @@ from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
 from com.l2jserver import Config
- 
+
 qn = "255_Tutorial"
- 
+
 # table for Quest Timer ( Ex == -2 ) [voice, html]
 QTEXMTWO = {
     0  : ["tutorial_voice_001a","tutorial_human_fighter001.htm"],
@@ -124,10 +124,10 @@ TCLc = {
     50 : "tutorial_22kb.htm"
     }
 class Quest (JQuest) :
- 
+
     def __init__(self,id,name,descr):
           JQuest.__init__(self,id,name,descr)
- 
+
     def onAdvEvent(self,event,npc,player):
         if Config.DISABLE_TUTORIAL :
             return
@@ -135,8 +135,8 @@ class Quest (JQuest) :
         classId = int(st.getPlayer().getClassId().getId())
         string = event[0:2]
         htmltext = ""
+
         # USER CONNECTED #
- 
         if string == "UC" :
             playerLevel = player.getLevel()
             if playerLevel < 6 and st.getInt("onlyone") == 0 :
@@ -163,10 +163,26 @@ class Quest (JQuest) :
                     st.onTutorialClientEvent(0)
                 else :
                     return
- 
- 
+            elif playerLevel == 18 and not player.getQuestState("10276_MutatedKaneusGludio") :
+                st.showQuestionMark(33)
+                st.playSound("ItemSound.quest_tutorial")
+            elif playerLevel == 28 and not player.getQuestState("10277_MutatedKaneusDion") :
+                st.showQuestionMark(33)
+                st.playSound("ItemSound.quest_tutorial")
+            elif playerLevel == 28 and not player.getQuestState("10278_MutatedKaneusHeine") :
+                st.showQuestionMark(33)
+                st.playSound("ItemSound.quest_tutorial")
+            elif playerLevel == 28 and not player.getQuestState("10279_MutatedKaneusOren") :
+                st.showQuestionMark(33)
+                st.playSound("ItemSound.quest_tutorial")
+            elif playerLevel == 28 and not player.getQuestState("10280_MutatedKaneusSchuttgart") :
+                st.showQuestionMark(33)
+                st.playSound("ItemSound.quest_tutorial")
+            elif playerLevel == 28 and not player.getQuestState("10281_MutatedKaneusRune") :
+                st.showQuestionMark(33)
+                st.playSound("ItemSound.quest_tutorial")
         # QUEST TIMER #
- 
+
         elif string == "QT" :
             Ex = st.getInt("Ex")
             if Ex == -2 :
@@ -183,9 +199,9 @@ class Quest (JQuest) :
             elif Ex == -4 :
                 st.playTutorialVoice("tutorial_voice_008")
                 st.set("Ex","-5")
- 
+
         # TUTORIAL CLOSE [N] #
- 
+
         elif string == "TE" :
           if event[2:].isdigit() :
             event_id = int(event[2:])
@@ -235,8 +251,9 @@ class Quest (JQuest) :
                 htmltext = "tutorial_29.htm"
             elif event_id == 28 :
                 htmltext = "tutorial_28.htm"
+
         # CLIENT EVENT ENABLE [N] #
- 
+
         elif string == "CE" :
           if event[2:].isdigit() :
             event_id = int(event[2:])
@@ -263,7 +280,7 @@ class Quest (JQuest) :
                        st.set("ucMemo","1")
                        st.set("Ex","-5")
             elif event_id == 30 :
-                if playerLevel < 6 and st.getInt("Die") == 0:
+                if playerLevel < 10 and st.getInt("Die") == 0:
                     st.playTutorialVoice("tutorial_voice_016")
                     st.playSound("ItemSound.quest_tutorial")
                     st.set("Die","1")
@@ -306,6 +323,11 @@ class Quest (JQuest) :
                       st.playSound("ItemSound.quest_tutorial")
                       st.set("lvl","15")
                       st.showQuestionMark(17)
+                elif playerLevel == 18 :
+                   if st.getInt("lvl") < 18:
+                      st.playSound("ItemSound.quest_tutorial")
+                      st.set("lvl","18")
+                      st.showQuestionMark(33)
                 elif playerLevel == 19 :
                    if st.getInt("lvl") < 19:
                       race = st.getPlayer().getRace().ordinal()
@@ -315,6 +337,11 @@ class Quest (JQuest) :
                            st.playSound("ItemSound.quest_tutorial")
                            st.set("lvl","19")
                            st.showQuestionMark(35)
+                elif playerLevel == 28 :
+                   if st.getInt("lvl") < 28:
+                      st.playSound("ItemSound.quest_tutorial")
+                      st.set("lvl","28")
+                      st.showQuestionMark(33)
                 elif playerLevel == 35 :
                    if st.getInt("lvl") < 35:
                       race = st.getPlayer().getRace().ordinal()
@@ -324,8 +351,28 @@ class Quest (JQuest) :
                            st.playSound("ItemSound.quest_tutorial")
                            st.set("lvl","35")
                            st.showQuestionMark(34)
+                elif playerLevel == 38 :
+                   if st.getInt("lvl") < 38:
+                      st.playSound("ItemSound.quest_tutorial")
+                      st.set("lvl","38")
+                      st.showQuestionMark(33)
+                elif playerLevel == 48 :
+                   if st.getInt("lvl") < 48:
+                      st.playSound("ItemSound.quest_tutorial")
+                      st.set("lvl","48")
+                      st.showQuestionMark(33)
+                elif playerLevel == 58 :
+                   if st.getInt("lvl") < 58:
+                      st.playSound("ItemSound.quest_tutorial")
+                      st.set("lvl","58")
+                      st.showQuestionMark(33)
+                elif playerLevel == 68 :
+                   if st.getInt("lvl") < 68:
+                      st.playSound("ItemSound.quest_tutorial")
+                      st.set("lvl","68")
+                      st.showQuestionMark(33)
             elif event_id == 45 :
-                if playerLevel < 6 :
+                if playerLevel < 10 :
                    if st.getInt("HP") == 0:
                     st.playTutorialVoice("tutorial_voice_017")
                     st.playSound("ItemSound.quest_tutorial")
@@ -345,9 +392,9 @@ class Quest (JQuest) :
                     st.set("Gemstone","1")
                     st.showQuestionMark(5)
 
- 
+
         # QUESTION MARK CLICKED [N] #
- 
+
         elif string == "QM" :
           if event[2:].isdigit() :
             MarkId = int(event[2:])
@@ -398,6 +445,20 @@ class Quest (JQuest) :
                     htmltext = "tutorial_newbie004a.htm"
             elif MarkId == 27 :
                 htmltext = "tutorial_20.htm"
+            elif MarkId == 33 :
+                lvl = player.getLevel()
+                if lvl == 18 :
+                    htmltext = "tutorial_kama_18.htm"
+                elif lvl == 28 :
+                    htmltext = "tutorial_kama_28.htm"
+                elif lvl == 38 :
+                    htmltext = "tutorial_kama_38.htm"
+                elif lvl == 48 :
+                    htmltext = "tutorial_kama_48.htm"
+                elif lvl == 58 :
+                    htmltext = "tutorial_kama_58.htm"
+                elif lvl == 68 :
+                    htmltext = "tutorial_kama_68.htm"
             elif MarkId == 34 :
                 htmltext = "tutorial_28.htm"
             elif MarkId == 35 :
@@ -406,5 +467,5 @@ class Quest (JQuest) :
         if htmltext == "": return
         st.showTutorialHTML(str(htmltext))
         return
- 
+
 QUEST = Quest(255,qn,"Tutorial")
