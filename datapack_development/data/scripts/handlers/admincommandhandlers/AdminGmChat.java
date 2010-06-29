@@ -17,6 +17,7 @@ package handlers.admincommandhandlers;
 import com.l2jserver.gameserver.GmListTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
@@ -57,7 +58,14 @@ public class AdminGmChat implements IAdminCommandHandler
 	 */
 	private void snoop(String command, L2PcInstance activeChar)
 	{
-		L2Object target = activeChar.getTarget();
+		L2Object target = null;
+		if (command.length() > 12)
+		{
+			target = L2World.getInstance().getPlayer(command.substring(12));
+		}
+		if (target == null)
+			target = activeChar.getTarget();
+		
 		if (target == null)
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessageId.YOU_MUST_SELECT_A_TARGET));
