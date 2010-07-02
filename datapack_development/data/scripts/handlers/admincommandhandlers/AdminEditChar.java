@@ -616,7 +616,10 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				L2PcInstance pl = (L2PcInstance) target;
 				if (pl.getClient() == null)
+				{
 					activeChar.sendMessage("Client is null.");
+					return false;
+				}
 				String ip;
 				int[][] trace = pl.getClient().getTrace();
 				for (int i = 0 ; i < trace.length; i++)
@@ -1305,7 +1308,6 @@ public class AdminEditChar implements IAdminCommandHandler
 			result = prime * result + ((ip == null) ? 0 : ip.hashCode());
 			for (int[] array: tracert)
 				result = prime * result + Arrays.hashCode(array);
-			System.out.println(result);
 			return result;
 		}
 
