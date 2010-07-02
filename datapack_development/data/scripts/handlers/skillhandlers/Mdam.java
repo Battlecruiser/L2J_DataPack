@@ -147,8 +147,17 @@ public class Mdam implements ISkillHandler
 					target.breakCast();
 				}
 				
-				activeChar.sendDamageMessage(target, damage, mcrit, false, false);
-				
+				// vengeance reflected damage
+				// DS: because only skill using vengeanceMdam is Shield Deflect Magic
+				// and for this skill no damage should pass to target, just hardcode it for now
+				if ((reflect & Formulas.SKILL_REFLECT_VENGEANCE) != 0)
+					activeChar.reduceCurrentHp(damage, target, skill);
+				else
+				{
+					activeChar.sendDamageMessage(target, damage, mcrit, false, false);
+					target.reduceCurrentHp(damage, activeChar, skill);				
+				}
+
 				if (skill.hasEffects())
 				{
 					if ((reflect & Formulas.SKILL_REFLECT_SUCCEED) != 0) // reflect skill effects
@@ -174,12 +183,6 @@ public class Mdam implements ISkillHandler
 						}
 					}
 				}
-				
-				target.reduceCurrentHp(damage, activeChar, skill);				
-				
-				// vengeance reflected damage
-				if ((reflect & Formulas.SKILL_REFLECT_VENGEANCE) != 0)
-					activeChar.reduceCurrentHp(damage, target, skill);
 				
 				// Logging damage
 				if (Config.LOG_GAME_DAMAGE
