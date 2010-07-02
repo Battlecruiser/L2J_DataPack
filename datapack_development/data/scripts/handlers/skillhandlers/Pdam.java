@@ -28,6 +28,7 @@ import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Playable;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -70,7 +71,18 @@ public class Pdam implements ISkillHandler
 		}
 		
 		L2ItemInstance weapon = activeChar.getActiveWeaponInstance();
-		final boolean soul = (weapon != null && weapon.getChargedSoulshot() == L2ItemInstance.CHARGED_SOULSHOT && weapon.getItemType() != L2WeaponType.DAGGER);
+		boolean soul = (weapon != null && weapon.getChargedSoulshot() == L2ItemInstance.CHARGED_SOULSHOT && weapon.getItemType() != L2WeaponType.DAGGER);
+		
+		// If there is no weapon equipped, check for an active summon.
+		if (weapon == null && activeChar instanceof L2Summon)
+		{
+			L2Summon activeSummon = (L2Summon) activeChar;
+			if (activeSummon.getChargedSoulShot() == L2ItemInstance.CHARGED_SOULSHOT)
+			{
+				soul = true;
+				activeSummon.setChargedSoulShot(L2ItemInstance.CHARGED_NONE);
+			}
+		}
 		
 		for (L2Character target: (L2Character[]) targets)
 		{
