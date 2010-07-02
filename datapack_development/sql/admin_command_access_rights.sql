@@ -125,6 +125,8 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_find_ip','1'),
 ('admin_find_account','1'),
 ('admin_find_dualbox','1'),
+('admin_strict_find_dualbox','1'),
+('admin_tracert','1'),
 ('admin_save_modifications','1'),
 ('admin_rec','1'),
 ('admin_settitle','1'),
