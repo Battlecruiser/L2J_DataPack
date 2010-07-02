@@ -17,6 +17,7 @@ package handlers.admincommandhandlers;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
@@ -95,6 +96,8 @@ public class AdminEditChar implements IAdminCommandHandler
 		"admin_find_ip", // find all the player connections from a given IPv4 number
 		"admin_find_account", //list all the characters from an account (useful for GMs w/o DB access)
 		"admin_find_dualbox", //list all the IPs with more than 1 char logged in (dualbox)
+		"admin_strict_find_dualbox",
+		"admin_tracert",
 		"admin_save_modifications", //consider it deprecated...
 		"admin_rec", // gives recommendation points
 		"admin_settitle", // changes char title
@@ -587,6 +590,49 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 			}
 			findDualbox(activeChar, multibox);
+		}
+		else if (command.startsWith("admin_strict_find_dualbox"))
+		{
+			int multibox = 2;
+			try
+			{
+				String val = command.substring(26);
+				multibox = Integer.parseInt(val);
+				if (multibox < 1)
+				{
+					activeChar.sendMessage("Usage: //strict_find_dualbox [number > 0]");
+					return false;
+				}
+			}
+			catch (Exception e)
+			{
+			}
+			findDualboxStrict(activeChar, multibox);
+		}
+		else if (command.startsWith("admin_tracert"))
+		{
+			L2Object target = activeChar.getTarget();
+			if (target instanceof L2PcInstance)
+			{
+				L2PcInstance pl = (L2PcInstance) target;
+				if (pl.getClient() == null)
+					activeChar.sendMessage("Client is null.");
+				String ip;
+				int[][] trace = pl.getClient().getTrace();
+				for (int i = 0 ; i < trace.length; i++)
+				{
+					ip = "";
+					for (int o = 0; o < trace[0].length; o++)
+					{
+						ip = ip + trace[i][o];
+						if (o != trace[0].length -1)
+							ip = ip+".";
+					}
+					activeChar.sendMessage("Hop"+i+": "+ip);
+				}
+			}
+			else
+				activeChar.sendMessage("Invalid target.");
 		}
 		else if (command.startsWith("admin_summon_info"))
 		{
@@ -1124,9 +1170,8 @@ public class AdminEditChar implements IAdminCommandHandler
 	
 	/**
 	* @param activeChar
-	* @throws IllegalArgumentException
 	*/
-	private void findDualbox(L2PcInstance activeChar, int multibox) throws IllegalArgumentException
+	private void findDualbox(L2PcInstance activeChar, int multibox)
 	{
 		Collection<L2PcInstance> allPlayers = L2World.getInstance().getAllPlayers().values();
 		L2PcInstance[] players = allPlayers.toArray(new L2PcInstance[allPlayers.size()]);
@@ -1180,7 +1225,120 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/dualbox.htm");
 		adminReply.replace("%multibox%", String.valueOf(multibox));
 		adminReply.replace("%results%", results.toString());
+		adminReply.replace("%strict%", "");
 		activeChar.sendPacket(adminReply);
+	}
+	
+	private void findDualboxStrict(L2PcInstance activeChar, int multibox)
+	{
+		Collection<L2PcInstance> allPlayers = L2World.getInstance().getAllPlayers().values();
+		L2PcInstance[] players = allPlayers.toArray(new L2PcInstance[allPlayers.size()]);
+		
+		Map<IpPack, List<L2PcInstance>> ipMap = new HashMap<IpPack, List<L2PcInstance>>();
+		
+		L2GameClient client;
+		
+		final Map<IpPack, Integer> dualboxIPs = new HashMap<IpPack, Integer>();
+		
+		for (L2PcInstance player : players)
+		{
+			client = player.getClient();
+			if (client == null || client.isDetached())
+				continue;
+			else
+			{
+				IpPack pack = new IpPack(client.getConnection().getInetAddress().getHostAddress(), client.getTrace());
+				if (ipMap.get(pack) == null)
+					ipMap.put(pack, new ArrayList<L2PcInstance>());
+				ipMap.get(pack).add(player);
+				
+				if (ipMap.get(pack).size() >= multibox)
+				{
+					Integer count = dualboxIPs.get(pack);
+					if (count == null)
+						dualboxIPs.put(pack, multibox);
+					else
+						dualboxIPs.put(pack, count + 1);
+				}
+			}
+		}
+		
+		List<IpPack> keys = new ArrayList<IpPack>(dualboxIPs.keySet());
+		Collections.sort(keys, new Comparator<IpPack>() {
+			public int compare(IpPack left, IpPack right)
+			{
+				return dualboxIPs.get(left).compareTo(dualboxIPs.get(right));
+			}
+		});
+		Collections.reverse(keys);
+		
+		final StringBuilder results = new StringBuilder();
+		for (IpPack dualboxIP : keys)
+		{
+			StringUtil.append(results, "<a action=\"bypass -h admin_find_ip " + dualboxIP.ip + "\">" + dualboxIP.ip + " (" + dualboxIPs.get(dualboxIP) + ")</a><br1>");
+		}
+		
+		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/dualbox.htm");
+		adminReply.replace("%multibox%", String.valueOf(multibox));
+		adminReply.replace("%results%", results.toString());
+		adminReply.replace("%strict%", "strict_");
+		activeChar.sendPacket(adminReply);
+	}
+	
+	private final class IpPack
+	{
+		String ip;
+		int[][] tracert;
+		
+		public IpPack(String ip, int[][] tracert)
+		{
+			this.ip = ip;
+			this.tracert = tracert;
+		}
+
+		@Override
+		public int hashCode()
+		{
+			final int prime = 31;
+			int result = 1;
+			result = prime * result + ((ip == null) ? 0 : ip.hashCode());
+			for (int[] array: tracert)
+				result = prime * result + Arrays.hashCode(array);
+			System.out.println(result);
+			return result;
+		}
+
+		@Override
+		public boolean equals(Object obj)
+		{
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			IpPack other = (IpPack) obj;
+			if (!getOuterType().equals(other.getOuterType()))
+				return false;
+			if (ip == null)
+			{
+				if (other.ip != null)
+					return false;
+			}
+			else if (!ip.equals(other.ip))
+				return false;
+			for (int i = 0 ; i < tracert.length; i++)
+				for (int o = 0; o < tracert[0].length; o++)
+					if (tracert[i][o] != other.tracert[i][o])
+						return false;
+			return true;
+		}
+
+		private AdminEditChar getOuterType()
+		{
+			return AdminEditChar.this;
+		}
 	}
 	
 	private void gatherSummonInfo(L2Summon target, L2PcInstance activeChar)
