@@ -1038,13 +1038,13 @@
 	</skill>
 	<skill id="173" levels="2" name="Acrobatics">
 		<table name="#magicLvl"> 20 55 </table>
-		<table name="#fallVuln"> 0.4 0 </table>
+		<table name="#fall"> 60 100 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<!-- <mul order="0x30" stat="fallVuln" val="#fallVuln" /> Needs Core Support -->
+			<sub order="0x40" stat="fall" val="#fall" />>
 		</for>
 	</skill>
 	<skill id="176" levels="3" name="Frenzy">
