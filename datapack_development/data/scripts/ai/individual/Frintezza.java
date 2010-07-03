@@ -450,21 +450,21 @@ public class Frintezza extends L2AttackableAIScript
 			_frintezzaDummy.setIsInvul(true);
 			_frintezzaDummy.setIsImmobilized(true);
 
-			_overheadDummy = addSpawn(29052,174232,-88020,-5116,16384,false,0);
+			_overheadDummy = addSpawn(29052,174232,-88020,-5110,16384,false,0);
 			_overheadDummy.setIsInvul(true);
 			_overheadDummy.setIsImmobilized(true);
 			_overheadDummy.setCollisionHeight(600);
 			_Zone.broadcastPacket(new NpcInfo(_overheadDummy, null));
 
-			_portraitDummy1 = addSpawn(29052, 172450, -87890, -5089, 16048,false,0);
+			_portraitDummy1 = addSpawn(29052, 172450, -87890, -5100, 16048,false,0);
 			_portraitDummy1.setIsImmobilized(true);
 			_portraitDummy1.setIsInvul(true);
 
-			_portraitDummy3 = addSpawn(29052, 176012, -87890, -5089, 16048,false,0);
+			_portraitDummy3 = addSpawn(29052, 176012, -87890, -5100, 16048,false,0);
 			_portraitDummy3.setIsImmobilized(true);
 			_portraitDummy3.setIsInvul(true);
 
-			_scarletDummy = addSpawn(29053,174232,-88020,-5116,16384,false,0);
+			_scarletDummy = addSpawn(29053,174232,-88020,-5110,16384,false,0);
 			_scarletDummy.setIsInvul(true);
 			_scarletDummy.setIsImmobilized(true);
 
@@ -492,22 +492,22 @@ public class Frintezza extends L2AttackableAIScript
 			frintezza.disableAllSkills();
 			_Zone.updateKnownList(frintezza);
 
-			demon2 = (L2MonsterInstance) addSpawn(29051, 175876, -88713, -4972, 28205,false,0);
+			demon2 = (L2MonsterInstance) addSpawn(29051, 175876, -88713, -5100, 28205,false,0);
 			demon2.setIsImmobilized(true);
 			demon2.disableAllSkills();
 			_Zone.updateKnownList(demon2);
 
-			demon3 = (L2MonsterInstance) addSpawn(29051, 172608, -88702, -4972, 64817,false,0);
+			demon3 = (L2MonsterInstance) addSpawn(29051, 172608, -88702, -5100, 64817,false,0);
 			demon3.setIsImmobilized(true);
 			demon3.disableAllSkills();
 			_Zone.updateKnownList(demon3);
 
-			demon1 = (L2MonsterInstance) addSpawn(29050, 175833, -87165, -4972, 35048,false,0);
+			demon1 = (L2MonsterInstance) addSpawn(29050, 175833, -87165, -5100, 35048,false,0);
 			demon1.setIsImmobilized(true);
 			demon1.disableAllSkills();
 			_Zone.updateKnownList(demon1);
 
-			demon4 = (L2MonsterInstance) addSpawn(29050, 172634, -87165, -4972, 57730,false,0);
+			demon4 = (L2MonsterInstance) addSpawn(29050, 172634, -87165, -5100, 57730,false,0);
 			demon4.setIsImmobilized(true);
 			demon4.disableAllSkills();
 			_Zone.updateKnownList(demon4);
@@ -631,28 +631,27 @@ public class Frintezza extends L2AttackableAIScript
 		}
 		else if (event.equalsIgnoreCase("camera_18b"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(_overheadDummy.getObjectId(),930, 160, -20, 0, 10000));
+			_Zone.broadcastPacket(new SpecialCamera(_overheadDummy.getObjectId(), 600, 180, -25, 0, 10000));
+			_Zone.broadcastPacket(new MagicSkillUse(_scarletDummy,_overheadDummy, 5004, 1, 5800, 0));
 
-			weakScarlet = (L2GrandBossInstance) addSpawn(29046,174232,-88020,-5116,16384,false,0);
+			weakScarlet = (L2GrandBossInstance) addSpawn(29046, 174232, -88020, -5110, 16384, false, 0, true);
 			weakScarlet.setIsInvul(true);
 			weakScarlet.setIsImmobilized(true);
 			weakScarlet.disableAllSkills();
 			_Zone.updateKnownList(weakScarlet);
 			activeScarlet = weakScarlet;
 
-			_Zone.broadcastPacket(new MagicSkillUse(_scarletDummy,_overheadDummy, 5004, 1, 5800, 0));
-
-			startQuestTimer("camera_19", 5500, _scarletDummy, null);
-			startQuestTimer("camera_19b", 5400, weakScarlet, null);
+			startQuestTimer("camera_19",  2400, _scarletDummy, null);
+			startQuestTimer("camera_19b", 5000, _scarletDummy, null);
 		}
 		else if (event.equalsIgnoreCase("camera_19"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(weakScarlet.getObjectId(),800, 160, 5, 1000, 10000));
-			startQuestTimer("camera_20", 2100, weakScarlet, null);
+			weakScarlet.teleToLocation(174232, -88020, -5110);
 		}
 		else if (event.equalsIgnoreCase("camera_19b"))
 		{
-			_Zone.broadcastPacket(new SocialAction(weakScarlet.getObjectId(),3));
+			_Zone.broadcastPacket(new SpecialCamera(_scarletDummy.getObjectId(), 800, 180, 10, 1000, 10000));
+			startQuestTimer("camera_20", 2100, _scarletDummy, null);
 		}
 		else if (event.equalsIgnoreCase("camera_20"))
 		{
@@ -666,22 +665,22 @@ public class Frintezza extends L2AttackableAIScript
 		}
 		else if (event.equalsIgnoreCase("camera_22"))
 		{
-			portrait2 = (L2MonsterInstance) addSpawn(29049, 175876, -88713, -4972, 28205,false,0);
+			portrait2 = (L2MonsterInstance) addSpawn(29049, 175876, -88713, -5000, 28205,false,0);
 			portrait2.setIsImmobilized(true);
 			portrait2.disableAllSkills();
 			_Zone.updateKnownList(portrait2);
 
-			portrait3 = (L2MonsterInstance) addSpawn(29049, 172608, -88702, -4972, 64817,false,0);
+			portrait3 = (L2MonsterInstance) addSpawn(29049, 172608, -88702, -5000, 64817,false,0);
 			portrait3.setIsImmobilized(true);
 			portrait3.disableAllSkills();
 			_Zone.updateKnownList(portrait3);
 
-			portrait1 = (L2MonsterInstance) addSpawn(29048, 175833, -87165, -4972, 35048,false,0);
+			portrait1 = (L2MonsterInstance) addSpawn(29048, 175833, -87165, -5000, 35048,false,0);
 			portrait1.setIsImmobilized(true);
 			portrait1.disableAllSkills();
 			_Zone.updateKnownList(portrait1);
 
-			portrait4 = (L2MonsterInstance) addSpawn(29048, 172634, -87165, -4972, 57730,false,0);
+			portrait4 = (L2MonsterInstance) addSpawn(29048, 172634, -87165, -5000, 57730,false,0);
 			portrait4.setIsImmobilized(true);
 			portrait4.disableAllSkills();
 			_Zone.updateKnownList(portrait4);
