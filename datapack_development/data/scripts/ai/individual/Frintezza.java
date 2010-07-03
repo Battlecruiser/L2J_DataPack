@@ -248,8 +248,6 @@ public class Frintezza extends L2AttackableAIScript
 	private static int _Scarlet_y = 0;
 	private static int _Scarlet_z = 0;
 	private static int _Scarlet_h = 0;
-	private static double _Scarlet_hp = 0;
-	private static double _Scarlet_mp = 0;
 	private static int _SecondMorph = 0;
 	private static int _ThirdMorph = 0;
 	private static int _KillHallAlarmDevice = 0;
@@ -815,8 +813,6 @@ public class Frintezza extends L2AttackableAIScript
 			_Scarlet_y = weakScarlet.getY();
 			_Scarlet_z = weakScarlet.getZ();
 			_Scarlet_h = weakScarlet.getHeading();
-			_Scarlet_hp = weakScarlet.getCurrentHp();
-			_Scarlet_mp = weakScarlet.getCurrentMp();
 			weakScarlet.deleteMe();
 			weakScarlet = null;
 			activeScarlet = null;
@@ -869,7 +865,6 @@ public class Frintezza extends L2AttackableAIScript
 			strongScarlet.setIsInvul(true);
 			strongScarlet.setIsImmobilized(true);
 			strongScarlet.disableAllSkills();
-			strongScarlet.setCurrentHpMp(_Scarlet_hp, _Scarlet_mp);
 			_Zone.updateKnownList(strongScarlet);
 			activeScarlet = strongScarlet;
 
@@ -1238,9 +1233,17 @@ public class Frintezza extends L2AttackableAIScript
 			if ((!player.isInParty() || !player.getParty().isLeader(player))
 				|| (player.getParty().getCommandChannel() == null)
 				|| (player.getParty().getCommandChannel().getChannelLeader() != player))
+			{
 				htmltext = "<html><body>No reaction. Contact must be initiated by the Command Channel Leader.</body></html>";
+			}
+			else if (player.getParty().getCommandChannel().getPartys().size() < 4 || player.getParty().getCommandChannel().getPartys().size() > 5)
+			{
+				htmltext = "<html><body>Your command channel needs to have at least 4 parties and a maximum of 5.</html></body>";
+			}
 			else if (player.getInventory().getItemByItemId(8073) == null)
+			{
 				htmltext = "<html><body>You dont have required item.</body></html>";
+			}
 			else
 			{
 				player.destroyItemByItemId("Quest", 8073, 1, player, true);
