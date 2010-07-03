@@ -329,14 +329,12 @@
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<for>
 			<effect name="Buff" time="120" val="0">
-				<add order="0x40" stat="earthRes" val="30" /> <!-- TEMP FIX -->
-				<!-- add order="0x40" stat="areaDamageRes" val="30" / TODO: Needs Core-Side Support -->
+				<mul order="0x30" stat="fall" val="0.7" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff" time="#ench1time" val="0">
-				<add order="0x40" stat="earthRes" val="30" /> <!-- TEMP FIX -->
-				<!-- add order="0x40" stat="areaDamageRes" val="30" / TODO: Needs Core-Side Support -->
+				<mul order="0x30" stat="fall" val="0.7" />
 			</effect>
 		</enchant1for>
 	</skill>
