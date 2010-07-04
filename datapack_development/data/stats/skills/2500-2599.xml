@@ -64,6 +64,9 @@
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
 			<and>
+				<not>
+					<player active_skill_id="1517"/>
+				</not>
 				<player class_id_restriction="52, 116" />
 				<player level="70" />
 			</and>
@@ -79,6 +82,9 @@
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
 			<and>
+				<not>
+					<player active_skill_id="1518"/>
+				</not>
 				<player class_id_restriction="52, 116" />
 				<player level="72" />
 			</and>
@@ -94,6 +100,9 @@
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
 			<and>
+				<not>
+					<player active_skill_id="1519"/>
+				</not>
 				<player class_id_restriction="52, 116" />
 				<player level="74" />
 			</and>
@@ -262,6 +271,9 @@
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
 			<and>
+				<not>
+					<player active_skill_id="818"/>
+				</not>
 				<player class_id_restriction="36, 108" />
 				<player level="74" />
 			</and>
@@ -277,6 +289,9 @@
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
 			<and>
+				<not>
+					<player active_skill_id="819"/>
+				</not>
 				<player class_id_restriction="23, 101" />
 				<player level="74" />
 			</and>
@@ -292,6 +307,9 @@
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
 			<and>
+				<not>
+					<player active_skill_id="820"/>
+				</not>
 				<player class_id_restriction="8, 93" />
 				<player level="74" />
 			</and>
@@ -307,6 +325,9 @@
 		<set name="staticHitTime" val="true" />
 		<cond msgId="113" addName="1">
 			<and>
+				<not>
+					<player active_skill_id="821"/>
+				</not>
 				<player class_id_restriction="8, 93, 23, 101, 36, 108" />
 				<player level="72" />
 			</and>
