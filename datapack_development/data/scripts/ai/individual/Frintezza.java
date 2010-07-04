@@ -292,6 +292,7 @@ public class Frintezza extends L2AttackableAIScript
 			DoorTable.getInstance().getDoor(25150051+i).setRange(0, 0, 0, 0, 0, 0);
 	}
 
+	@Override
 	public String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
 	{
 		long temp = 0;
@@ -1216,6 +1217,7 @@ public class Frintezza extends L2AttackableAIScript
 		return super.onAdvEvent(event, npc, player);
 	}
 
+	@Override
 	public String onTalk (L2Npc npc, L2PcInstance player)
 	{
 		if (npc.getNpcId() == CUBE)
@@ -1289,6 +1291,7 @@ public class Frintezza extends L2AttackableAIScript
 		return htmltext;
 	}
 
+	@Override
 	public String onAttack (L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
 	{
 		_LastAction = System.currentTimeMillis();
@@ -1344,6 +1347,7 @@ public class Frintezza extends L2AttackableAIScript
 		return super.onAttack(npc, attacker, damage, isPet);
 	}
 
+	@Override
 	public String onKill (L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
 		if (npc.getNpcId() == FRINTEZZA)
