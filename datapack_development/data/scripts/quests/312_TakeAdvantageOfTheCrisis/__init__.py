@@ -54,8 +54,10 @@ class Quest (JQuest) :
 				htmltext = self.onExchangeRequest(event,st,667)
 			elif int(event) == 9626 and f >= 1000 :
 				htmltext = self.onExchangeRequest(event,st,1000)
-			elif int(event) == 9628 and f >= 24 or int(event) == 9629 and f >= 24 :
+			elif int(event) == 9628 and f >= 24 :
 				htmltext = self.onExchangeRequest(event,st,24)
+			elif int(event) == 9629 and f >= 43 :
+				htmltext = self.onExchangeRequest(event,st,43)
 			elif int(event) == 9630 and f >= 36 :
 				htmltext = self.onExchangeRequest(event,st,36)
 			else : 
