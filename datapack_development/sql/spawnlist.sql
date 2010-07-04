@@ -39583,7 +39583,8 @@ INSERT INTO spawnlist VALUES
 (null,'Epic Quest Npc',1,32574,142807,46493,-3380,0,0,24576,60,0,0),
 (null,'Primeval Isle Npc',1,32119,23710,-19107,-2794,0,0,4836,60,0,0),
 (null,'Primeval Isle Npc',1,32120,27718,-11684,-2275,0,0,34826,60,0,0),
-(null,'Primeval Isle Npc',1,32121,18710,-9635,-2767,0,0,49151,60,0,0);
+(null,'Primeval Isle Npc',1,32121,18710,-9635,-2767,0,0,49151,60,0,0),
+(null,'Aden Npc',1,32321,147257,28611,-2264,0,0,56124,60,0,0);
 
 -- Gracia Epilogue Mithril Mines
 INSERT INTO `spawnlist` VALUES
