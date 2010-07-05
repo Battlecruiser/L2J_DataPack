@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.StaticObject;
-import com.l2jserver.util.StringUtil;
 
 public class L2DoorInstanceActionShift implements IActionHandler
 {
@@ -47,38 +46,24 @@ public class L2DoorInstanceActionShift implements IActionHandler
 				su  = new StaticObject((L2DoorInstance)target, false);
 			
 			activeChar.sendPacket(su);
+
+			NpcHtmlMessage html = new NpcHtmlMessage(0);
+			html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/doorinfo.htm");
+			html.replace("%class%", target.getClass().getSimpleName());
+			html.replace("%hp%",    String.valueOf((int)((L2Character)target).getCurrentHp()));
+			html.replace("%hpmax%", String.valueOf(((L2Character)target).getMaxHp()));
+			html.replace("%objid%", String.valueOf(target.getObjectId()));
+			html.replace("%doorid%",  String.valueOf(((L2DoorInstance)target).getDoorId()));
+
+			html.replace("%minx%", String.valueOf(((L2DoorInstance)target).getXMin()));
+			html.replace("%miny%", String.valueOf(((L2DoorInstance)target).getYMin()));
+			html.replace("%minz%", String.valueOf(((L2DoorInstance)target).getZMin()));
+
+			html.replace("%maxx%", String.valueOf(((L2DoorInstance)target).getXMax()));
+			html.replace("%maxy%", String.valueOf(((L2DoorInstance)target).getYMax()));
+			html.replace("%maxz%", String.valueOf(((L2DoorInstance)target).getZMax()));
+			html.replace("%unlock%", ((L2DoorInstance)target).isUnlockable() ? "<font color=00FF00>YES<font>" : "<font color=FF0000>NO</font>");
 			
-			NpcHtmlMessage html = new NpcHtmlMessage(target.getObjectId());
-                        final String html1 = StringUtil.concat(
-                                "<html><body><center><font color=\"LEVEL\">Door Info</font></center><br><table border=0><tr><td>HP: </td><td>",
-                                String.valueOf(((L2Character)target).getCurrentHp()),
-                                " / ",
-                                String.valueOf(((L2Character)target).getMaxHp()),
-                                "</td></tr><tr><td>Max X,Y,Z: </td><td>",
-                                String.valueOf(((L2DoorInstance)target).getXMax()),
-                                ", ",
-                                String.valueOf(((L2DoorInstance)target).getYMax()),
-                                ", ",
-                                String.valueOf(((L2DoorInstance)target).getZMax()),
-                                "</td></tr><tr><td>Min X,Y,Z: </td><td>",
-                                String.valueOf(((L2DoorInstance)target).getXMin()),
-                                ", ",
-                                String.valueOf(((L2DoorInstance)target).getYMin()),
-                                ", ",
-                                String.valueOf(((L2DoorInstance)target).getZMin()),
-                                "</td></tr><tr><td>Object ID: </td><td>",
-                                String.valueOf(target.getObjectId()),
-                                "</td></tr><tr><td>Door ID: </td><td>",
-                                String.valueOf(((L2DoorInstance)target).getDoorId()),
-                                "</td></tr><tr><td><br></td></tr><tr><td>Class: </td><td>",
-                                target.getClass().getSimpleName(),
-                                "</td></tr></table><br><table><tr><td><button value=\"Open\" action=\"bypass -h admin_open ",
-                                String.valueOf(((L2DoorInstance)target).getDoorId()),
-                                "\" width=40 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><button value=\"Close\" action=\"bypass -h admin_close ",
-                                String.valueOf(((L2DoorInstance)target).getDoorId()),
-                                "\" width=40 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><button value=\"Kill\" action=\"bypass -h admin_kill\" width=40 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><button value=\"Delete\" action=\"bypass -h admin_delete\" width=40 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table></body></html>"
-                                );
-			html.setHtml(html1);
 			activeChar.sendPacket(html);
 		}
 		return true;
