@@ -875,12 +875,12 @@
 				<add order="0x40" stat="holyRes" val="30" />
 			</effect>
 		</for>
-		<enchant2for>
+		<enchant1for>
 			<effect name="Buff" time="#ench1Time" val="0">
 				<add order="0x40" stat="darkRes" val="30" />
 				<add order="0x40" stat="holyRes" val="30" />
 			</effect>
-		</enchant2for>
+		</enchant1for>
 	</skill>
 	<skill id="531" levels="1" name="Critical Wound">
 		<set name="castRange" val="40" />
