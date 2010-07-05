@@ -181,6 +181,9 @@ class Quest (JQuest) :
             elif playerLevel == 28 and not player.getQuestState("10281_MutatedKaneusRune") :
                 st.showQuestionMark(33)
                 st.playSound("ItemSound.quest_tutorial")
+            elif playerLevel == 79 and not player.getQuestState("192_SevenSignSeriesOfDoubt") :
+                st.showQuestionMark(33)
+                st.playSound("ItemSound.quest_tutorial")
         # QUEST TIMER #
 
         elif string == "QT" :
@@ -371,6 +374,11 @@ class Quest (JQuest) :
                       st.playSound("ItemSound.quest_tutorial")
                       st.set("lvl","68")
                       st.showQuestionMark(33)
+                elif playerLevel == 79 :
+                   if st.getInt("lvl") < 79:
+                      st.playSound("ItemSound.quest_tutorial")
+                      st.set("lvl","79")
+                      st.showQuestionMark(33)
             elif event_id == 45 :
                 if playerLevel < 10 :
                    if st.getInt("HP") == 0:
@@ -459,6 +467,8 @@ class Quest (JQuest) :
                     htmltext = "tutorial_kama_58.htm"
                 elif lvl == 68 :
                     htmltext = "tutorial_kama_68.htm"
+                elif lvl == 79 :
+                    htmltext = "tutorial_epic_quest.htm"
             elif MarkId == 34 :
                 htmltext = "tutorial_28.htm"
             elif MarkId == 35 :
