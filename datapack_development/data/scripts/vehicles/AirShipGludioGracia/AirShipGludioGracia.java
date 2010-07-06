@@ -150,13 +150,13 @@ public class AirShipGludioGracia extends Quest implements Runnable
 					_ship.executePath(WARPGATE_TO_GRACIA);
 					break;
 				case 3:
-					broadcastInGracia("The regurarly scheduled airship has arrived. It will depart for the Aden continent in 1 minute.");
+					broadcastInGracia("The regularly scheduled airship has arrived. It will depart for the Aden continent in 1 minute.");
 					_ship.setInDock(GRACIA_DOCK_ID);
 					_ship.oustPlayers();
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 60000);
 					break;
 				case 4:
-					broadcastInGracia("The regurarly scheduled airship that flies to the Aden continent has departed.");
+					broadcastInGracia("The regularly scheduled airship that flies to the Aden continent has departed.");
 					_ship.setInDock(0);
 					_ship.executePath(GRACIA_TO_WARPGATE);
 					break;
