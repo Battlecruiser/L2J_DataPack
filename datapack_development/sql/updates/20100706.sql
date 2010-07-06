@@ -1,0 +1,1 @@
+ALTER TABLE `character_macroses` CHANGE `commands` `commands` VARCHAR( 500 ) NULL DEFAULT NULL;
