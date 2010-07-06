@@ -43,6 +43,10 @@ import com.l2jserver.gameserver.skills.Env;
 import com.l2jserver.gameserver.skills.Formulas;
 import com.l2jserver.gameserver.skills.Stats;
 import com.l2jserver.gameserver.skills.effects.EffectBuff;
+import com.l2jserver.gameserver.skills.effects.EffectChanceSkillTrigger;
+import com.l2jserver.gameserver.skills.effects.EffectHealOverTime;
+import com.l2jserver.gameserver.skills.effects.EffectNoblesseBless;
+import com.l2jserver.gameserver.skills.effects.EffectSilentMove;
 import com.l2jserver.gameserver.templates.skills.L2EffectType;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
 import com.l2jserver.util.Rnd;
@@ -491,12 +495,15 @@ public class Disablers implements ISkillHandler
 						
 						for (L2Effect e : effects)
 						{
-							if (e == null || !(e instanceof EffectBuff && e.getEffectType() != L2EffectType.TRANSFORMATION)
-									|| e.getSkill().getSkillType() == L2SkillType.HEAL
+							if (e == null 
+									|| !(e instanceof EffectBuff || e instanceof EffectHealOverTime || e instanceof EffectSilentMove || e instanceof EffectNoblesseBless || e instanceof EffectChanceSkillTrigger)
+									|| e.getEffectType() == L2EffectType.TRANSFORMATION
+									|| e.getSkill().isPassive()
 									|| e.getSkill().isToggle()
 									|| e.getSkill().isDebuff()
 									|| e.getSkill().isHeroSkill()
-									|| e.getSkill().isPotion()
+									|| e.getSkill().isGMSkill()
+									|| (e.getSkill().isPotion() && (e.getSkill().getId() != 2274 && e.getSkill().getId() != 2341)) // Hardcode for now :<
 									|| e.isHerbEffect())
 								continue;
 							
