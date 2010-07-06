@@ -5,6 +5,6 @@ CREATE TABLE IF NOT EXISTS `character_macroses` (
   `name` VARCHAR(40) ,
   `descr` VARCHAR(80) ,
   `acronym` VARCHAR(4) ,
-  `commands` VARCHAR(255) ,
+  `commands` VARCHAR(500) ,
   PRIMARY KEY (`charId`,`id`)
 );
