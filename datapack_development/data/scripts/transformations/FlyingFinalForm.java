@@ -13,6 +13,7 @@ public class FlyingFinalForm extends L2Transformation
 		super(260, 9, 38);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 260 || getPlayer().isCursedWeaponEquipped())
@@ -47,6 +48,7 @@ public class FlyingFinalForm extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		getPlayer().setIsFlyingMounted(false);

@@ -13,6 +13,7 @@ public class Gordon extends L2Transformation
 		super(308, 43, 46.6);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 308 || getPlayer().isCursedWeaponEquipped())
@@ -37,6 +38,7 @@ public class Gordon extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

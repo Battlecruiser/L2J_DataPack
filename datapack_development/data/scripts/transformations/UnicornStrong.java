@@ -13,6 +13,7 @@ public class UnicornStrong extends L2Transformation
 		super(204, 15, 28);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 204 || getPlayer().isCursedWeaponEquipped())
@@ -39,6 +40,7 @@ public class UnicornStrong extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

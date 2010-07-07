@@ -13,6 +13,7 @@ public class Heretic extends L2Transformation
 		super(3, 7.7, 28.4);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 3 || getPlayer().isCursedWeaponEquipped())
@@ -64,6 +65,7 @@ public class Heretic extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

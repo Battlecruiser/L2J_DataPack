@@ -13,6 +13,7 @@ public class OnyxBeast extends L2Transformation
 		super(1, 14, 14.5);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 1 || getPlayer().isCursedWeaponEquipped())
@@ -35,6 +36,7 @@ public class OnyxBeast extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

@@ -13,6 +13,7 @@ public class DivineWizard extends L2Transformation
 		super(256, 10, 26);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 256 || getPlayer().isCursedWeaponEquipped())
@@ -43,6 +44,7 @@ public class DivineWizard extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

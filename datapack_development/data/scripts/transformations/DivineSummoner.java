@@ -13,6 +13,7 @@ public class DivineSummoner extends L2Transformation
 		super(258, 10, 25);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 258 || getPlayer().isCursedWeaponEquipped())
@@ -44,6 +45,7 @@ public class DivineSummoner extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		if (getPlayer().getPet() != null)

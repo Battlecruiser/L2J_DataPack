@@ -13,6 +13,7 @@ public class Kadomas extends L2Transformation
 		super(20000, 24, 14);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 20000 || getPlayer().isCursedWeaponEquipped())
@@ -31,6 +32,7 @@ public class Kadomas extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

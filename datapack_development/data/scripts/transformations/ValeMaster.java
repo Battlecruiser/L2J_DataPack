@@ -13,6 +13,7 @@ public class ValeMaster extends L2Transformation
 		super(4, 12, 40);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 4 || getPlayer().isCursedWeaponEquipped())
@@ -64,6 +65,7 @@ public class ValeMaster extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

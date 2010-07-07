@@ -13,6 +13,7 @@ public class DivineHealer extends L2Transformation
 		super(255, 10, 25);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 255 || getPlayer().isCursedWeaponEquipped())
@@ -43,6 +44,7 @@ public class DivineHealer extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

@@ -13,6 +13,7 @@ public class SaberToothTiger extends L2Transformation
 		super(5, 34, 28);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 5 || getPlayer().isCursedWeaponEquipped())
@@ -54,6 +55,7 @@ public class SaberToothTiger extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

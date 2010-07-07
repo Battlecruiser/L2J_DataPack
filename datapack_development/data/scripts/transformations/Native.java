@@ -13,6 +13,7 @@ public class Native extends L2Transformation
 		super(101, 8, 23.5);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 101 || getPlayer().isCursedWeaponEquipped())
@@ -31,6 +32,7 @@ public class Native extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

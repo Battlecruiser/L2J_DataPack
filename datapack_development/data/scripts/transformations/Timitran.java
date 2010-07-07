@@ -13,6 +13,7 @@ public class Timitran extends L2Transformation
 		super(321, 23, 90);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 321 || getPlayer().isCursedWeaponEquipped())
@@ -31,6 +32,7 @@ public class Timitran extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

@@ -13,6 +13,7 @@ public class DragonBomberWeak extends L2Transformation
 		super(218, 16, 24);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 218 || getPlayer().isCursedWeaponEquipped())
@@ -39,6 +40,7 @@ public class DragonBomberWeak extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

@@ -13,6 +13,7 @@ public class ElfMercenary extends L2Transformation
 		super(11, 8, 23.5);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 11 || getPlayer().isCursedWeaponEquipped())
@@ -31,6 +32,7 @@ public class ElfMercenary extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

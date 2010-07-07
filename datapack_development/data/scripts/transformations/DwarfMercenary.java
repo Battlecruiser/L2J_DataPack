@@ -13,6 +13,7 @@ public class DwarfMercenary extends L2Transformation
 		super(14, 8, 19);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 14 || getPlayer().isCursedWeaponEquipped())
@@ -31,6 +32,7 @@ public class DwarfMercenary extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

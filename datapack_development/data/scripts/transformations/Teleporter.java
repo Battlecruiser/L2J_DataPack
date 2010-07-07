@@ -13,6 +13,7 @@ public class Teleporter extends L2Transformation
 		super(319, 8, 24);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 319 || getPlayer().isCursedWeaponEquipped())
@@ -45,6 +46,7 @@ public class Teleporter extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

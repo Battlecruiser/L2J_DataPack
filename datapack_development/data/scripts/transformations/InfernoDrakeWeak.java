@@ -13,6 +13,7 @@ public class InfernoDrakeWeak extends L2Transformation
 		super(215, 15, 24);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 215 || getPlayer().isCursedWeaponEquipped())
@@ -39,6 +40,7 @@ public class InfernoDrakeWeak extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

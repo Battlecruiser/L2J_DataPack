@@ -14,6 +14,7 @@ public class Benom extends L2Transformation
 		super(307, 20, 56);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 307 || getPlayer().isCursedWeaponEquipped())
@@ -38,6 +39,7 @@ public class Benom extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

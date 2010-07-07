@@ -13,6 +13,7 @@ public class Kamael extends L2Transformation
 		super(251, 10, 32.76);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 251 || getPlayer().isCursedWeaponEquipped())
@@ -39,6 +40,7 @@ public class Kamael extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

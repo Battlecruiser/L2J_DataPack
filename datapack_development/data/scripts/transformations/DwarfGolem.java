@@ -13,6 +13,7 @@ public class DwarfGolem extends L2Transformation
 		super(259, 31, 51.8);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 259 || getPlayer().isCursedWeaponEquipped())
@@ -39,6 +40,7 @@ public class DwarfGolem extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

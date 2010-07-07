@@ -13,6 +13,7 @@ public class FortressCaptain extends L2Transformation
 		super(21, 14, 27);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 21 || getPlayer().isCursedWeaponEquipped())
@@ -31,6 +32,7 @@ public class FortressCaptain extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

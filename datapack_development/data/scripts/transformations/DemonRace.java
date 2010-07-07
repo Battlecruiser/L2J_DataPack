@@ -16,6 +16,7 @@ public class DemonRace extends L2Transformation
 		super(221, 11, 27);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 221 || getPlayer().isCursedWeaponEquipped())
@@ -47,6 +48,7 @@ public class DemonRace extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();
