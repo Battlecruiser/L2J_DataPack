@@ -16,6 +16,7 @@ public class MyoRace extends L2Transformation
 		super(219, 10, 23);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 219 || getPlayer().isCursedWeaponEquipped())
@@ -47,6 +48,7 @@ public class MyoRace extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

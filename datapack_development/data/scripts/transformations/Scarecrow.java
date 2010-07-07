@@ -13,6 +13,7 @@ public class Scarecrow extends L2Transformation
 		super(115, 13, 30);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 115 || getPlayer().isCursedWeaponEquipped())
@@ -35,6 +36,7 @@ public class Scarecrow extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

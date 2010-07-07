@@ -13,6 +13,7 @@ public class GuardianStrider extends L2Transformation
 		super(123, 13, 40);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 123 || getPlayer().isCursedWeaponEquipped())
@@ -29,6 +30,7 @@ public class GuardianStrider extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

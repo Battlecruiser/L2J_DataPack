@@ -23,6 +23,7 @@ public class ScrollRed extends L2Transformation
 		super(121, 12, 28);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 121 || getPlayer().isCursedWeaponEquipped())
@@ -43,6 +44,7 @@ public class ScrollRed extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

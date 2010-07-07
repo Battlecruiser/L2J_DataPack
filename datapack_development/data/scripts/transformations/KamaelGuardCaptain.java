@@ -13,6 +13,7 @@ public class KamaelGuardCaptain extends L2Transformation
 		super(19, 13, 25);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 19 || getPlayer().isCursedWeaponEquipped())
@@ -31,6 +32,7 @@ public class KamaelGuardCaptain extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

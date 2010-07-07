@@ -14,6 +14,7 @@ public class DarkElfMercenary extends L2Transformation
 		super(12, 8, 25);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 12 || getPlayer().isCursedWeaponEquipped())
@@ -32,6 +33,7 @@ public class DarkElfMercenary extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

@@ -12,6 +12,7 @@ public class VanguardPaladin extends L2Transformation
 		super(312);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 312 || getPlayer().isCursedWeaponEquipped())
@@ -22,26 +23,27 @@ public class VanguardPaladin extends L2Transformation
 
 	public void transformedSkills()
 	{
-		if (getPlayer().getLevel() > 43)
-		{
-			// Two handed mastery
-			getPlayer().addSkill(SkillTable.getInstance().getInfo(293, getPlayer().getLevel() - 43), false);
-			// Full Swing
-			getPlayer().addSkill(SkillTable.getInstance().getInfo(814, getPlayer().getLevel() - 43), false);
-			// Power Divide
-			getPlayer().addSkill(SkillTable.getInstance().getInfo(816, getPlayer().getLevel() - 43), false);
-			// Boost Morale
-			getPlayer().addSkill(SkillTable.getInstance().getInfo(956, getPlayer().getLevel() - 43), false);
-			// Guillotine Attack
-			getPlayer().addSkill(SkillTable.getInstance().getInfo(957, getPlayer().getLevel() - 43), false);
-			getPlayer().setTransformAllowedSkills(new int[]{18,28,196,197,293,400,406,814,816,838,956,957});
-		}
-		else
-			getPlayer().setTransformAllowedSkills(new int[]{18,28,196,197,400,406,838});
-			// Switch Stance
-			getPlayer().addSkill(SkillTable.getInstance().getInfo(838, 1), false);
+		int lvl = 1;
+		if (getPlayer().getLevel() > 42)
+			lvl = (getPlayer().getLevel() - 42);
+
+		// Two handed mastery
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(293, lvl), false);
+		// Full Swing
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(814, lvl), false);
+		// Power Divide
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(816, lvl), false);
+		// Boost Morale
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(956, lvl), false);
+		// Guillotine Attack
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(957, lvl), false);
+		// Switch Stance
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(838, 1), false);
+		// Set allowed skills
+		getPlayer().setTransformAllowedSkills(new int[]{18,28,196,197,293,400,406,814,816,838,956,957});
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();
@@ -49,18 +51,22 @@ public class VanguardPaladin extends L2Transformation
 
 	public void removeSkills()
 	{
+		int lvl = 1;
+		if (getPlayer().getLevel() > 42)
+			lvl = (getPlayer().getLevel() - 42);
+
 		// Two handed mastery
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(293, getPlayer().getLevel() - 43), false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(293, lvl), false);
 		// Full Swing
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(814, getPlayer().getLevel() - 43), false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(814, lvl), false);
 		// Power Divide
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(816, getPlayer().getLevel() - 43), false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(816, lvl), false);
+		// Boost Morale
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(956, lvl), false, false);
+		// Guillotine Attack
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(957, lvl), false);
 		// Switch Stance
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(838, 1), false);
-		// Boost Morale
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(956, getPlayer().getLevel() - 43), false, false);
-		// Guillotine Attack
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(957, getPlayer().getLevel() - 43), false);
 
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}

@@ -13,6 +13,7 @@ public class OlMahum extends L2Transformation
 		super(6, 23, 61);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 6 || getPlayer().isCursedWeaponEquipped())
@@ -58,6 +59,7 @@ public class OlMahum extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

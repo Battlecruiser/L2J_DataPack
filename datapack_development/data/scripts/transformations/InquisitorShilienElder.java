@@ -12,6 +12,7 @@ public class InquisitorShilienElder extends L2Transformation
 		super(318);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 318 || getPlayer().isCursedWeaponEquipped())
@@ -42,6 +43,7 @@ public class InquisitorShilienElder extends L2Transformation
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(838, 1), false);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

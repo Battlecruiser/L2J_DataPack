@@ -13,6 +13,7 @@ public class Pig extends L2Transformation
 		super(104, 15, 18.3);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 104 || getPlayer().isCursedWeaponEquipped())
@@ -31,6 +32,7 @@ public class Pig extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

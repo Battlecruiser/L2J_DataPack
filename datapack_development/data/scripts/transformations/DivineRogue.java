@@ -13,6 +13,7 @@ public class DivineRogue extends L2Transformation
 		super(254, 10, 28);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 254 || getPlayer().isCursedWeaponEquipped())
@@ -45,6 +46,7 @@ public class DivineRogue extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

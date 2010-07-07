@@ -14,6 +14,7 @@ public class EpicQuestFrog extends L2Transformation
 		super(111, 20, 9);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 111 || getPlayer().isCursedWeaponEquipped())
@@ -32,6 +33,7 @@ public class EpicQuestFrog extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

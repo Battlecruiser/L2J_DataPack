@@ -13,6 +13,7 @@ public class Zombie extends L2Transformation
 		super(303, 11, 24.6);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 303 || getPlayer().isCursedWeaponEquipped())
@@ -31,6 +32,7 @@ public class Zombie extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

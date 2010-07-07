@@ -14,6 +14,7 @@ public class AquaElf extends L2Transformation
 		super(125, 12, 27.50);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 125 || getPlayer().isCursedWeaponEquipped())
@@ -30,6 +31,7 @@ public class AquaElf extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

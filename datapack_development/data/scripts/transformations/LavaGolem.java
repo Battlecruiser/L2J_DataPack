@@ -13,6 +13,7 @@ public class LavaGolem extends L2Transformation
 		super(322, 45, 45);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 322 || getPlayer().isCursedWeaponEquipped())
@@ -31,6 +32,7 @@ public class LavaGolem extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

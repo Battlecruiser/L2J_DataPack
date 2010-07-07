@@ -13,6 +13,7 @@ public class HumanMercenary extends L2Transformation
 		super(10, 8, 24);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 10 || getPlayer().isCursedWeaponEquipped())
@@ -31,6 +32,7 @@ public class HumanMercenary extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

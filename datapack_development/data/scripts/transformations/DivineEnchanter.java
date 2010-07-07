@@ -13,6 +13,7 @@ public class DivineEnchanter extends L2Transformation
 		super(257, 8, 18.25);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 257 || getPlayer().isCursedWeaponEquipped())
@@ -43,6 +44,7 @@ public class DivineEnchanter extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

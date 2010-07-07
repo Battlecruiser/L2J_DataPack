@@ -13,6 +13,7 @@ public class SteamBeatle extends L2Transformation
 		super(110, 40, 27.5);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 110 || getPlayer().isCursedWeaponEquipped())
@@ -31,6 +32,7 @@ public class SteamBeatle extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

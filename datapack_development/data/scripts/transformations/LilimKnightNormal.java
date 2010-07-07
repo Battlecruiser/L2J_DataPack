@@ -13,6 +13,7 @@ public class LilimKnightNormal extends L2Transformation
 		super(208, 12, 25.5);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 208 || getPlayer().isCursedWeaponEquipped())
@@ -39,6 +40,7 @@ public class LilimKnightNormal extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

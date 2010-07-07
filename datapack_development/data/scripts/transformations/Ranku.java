@@ -13,6 +13,7 @@ public class Ranku extends L2Transformation
 		super(309, 13, 29);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 309 || getPlayer().isCursedWeaponEquipped())
@@ -35,6 +36,7 @@ public class Ranku extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

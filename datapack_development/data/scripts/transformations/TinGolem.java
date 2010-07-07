@@ -13,6 +13,7 @@ public class TinGolem extends L2Transformation
 		super(116, 13, 18.5);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 116 || getPlayer().isCursedWeaponEquipped())
@@ -35,6 +36,7 @@ public class TinGolem extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

@@ -13,6 +13,7 @@ public class KnightofDawn extends L2Transformation
 		super(20, 12, 24);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 20 || getPlayer().isCursedWeaponEquipped())
@@ -31,6 +32,7 @@ public class KnightofDawn extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

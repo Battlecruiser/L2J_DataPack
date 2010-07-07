@@ -13,6 +13,7 @@ public class RoyalGuardCaptain extends L2Transformation
 		super(16, 12, 24);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 16 || getPlayer().isCursedWeaponEquipped())
@@ -31,6 +32,7 @@ public class RoyalGuardCaptain extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

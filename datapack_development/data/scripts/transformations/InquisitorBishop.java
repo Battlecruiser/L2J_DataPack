@@ -12,6 +12,7 @@ public class InquisitorBishop extends L2Transformation
 		super(316);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 316 || getPlayer().isCursedWeaponEquipped())
@@ -40,6 +41,7 @@ public class InquisitorBishop extends L2Transformation
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(838, 1), false);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();
