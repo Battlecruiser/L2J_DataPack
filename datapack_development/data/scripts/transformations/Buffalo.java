@@ -14,6 +14,7 @@ public class Buffalo extends L2Transformation
 		super(103, 22, 31);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 103 || getPlayer().isCursedWeaponEquipped())
@@ -32,6 +33,7 @@ public class Buffalo extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

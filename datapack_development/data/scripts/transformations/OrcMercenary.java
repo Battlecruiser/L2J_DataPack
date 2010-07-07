@@ -13,6 +13,7 @@ public class OrcMercenary extends L2Transformation
 		super(13, 8, 27);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 13 || getPlayer().isCursedWeaponEquipped())
@@ -31,6 +32,7 @@ public class OrcMercenary extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

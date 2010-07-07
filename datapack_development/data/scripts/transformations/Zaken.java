@@ -13,6 +13,7 @@ public class Zaken extends L2Transformation
 		super(305, 16, 32);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 305 || getPlayer().isCursedWeaponEquipped())
@@ -41,6 +42,7 @@ public class Zaken extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

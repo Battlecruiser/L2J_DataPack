@@ -13,6 +13,7 @@ public class HeavyTow extends L2Transformation
 		super(119, 4.4, 8.25);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 119 || getPlayer().isCursedWeaponEquipped())
@@ -31,6 +32,7 @@ public class HeavyTow extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

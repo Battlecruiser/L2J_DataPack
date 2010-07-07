@@ -13,6 +13,7 @@ public class GrailApostleWeak extends L2Transformation
 		super(203, 8, 30);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 203 || getPlayer().isCursedWeaponEquipped())
@@ -39,6 +40,7 @@ public class GrailApostleWeak extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

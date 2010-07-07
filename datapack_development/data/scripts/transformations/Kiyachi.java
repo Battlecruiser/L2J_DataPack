@@ -13,6 +13,7 @@ public class Kiyachi extends L2Transformation
 		super(310, 12, 29);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 310 || getPlayer().isCursedWeaponEquipped())
@@ -35,6 +36,7 @@ public class Kiyachi extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

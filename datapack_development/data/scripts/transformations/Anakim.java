@@ -14,6 +14,7 @@ public class Anakim extends L2Transformation
 		super(306, 15.5, 29);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 306 || getPlayer().isCursedWeaponEquipped())
@@ -42,6 +43,7 @@ public class Anakim extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

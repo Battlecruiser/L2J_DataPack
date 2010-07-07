@@ -14,6 +14,7 @@ public class EpicQuestNative extends L2Transformation
 		super(124, 8, 23.5);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 124 || getPlayer().isCursedWeaponEquipped())
@@ -32,6 +33,7 @@ public class EpicQuestNative extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

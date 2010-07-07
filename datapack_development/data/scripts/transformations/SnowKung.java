@@ -13,6 +13,7 @@ public class SnowKung extends L2Transformation
 		super(114, 28, 30);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 114 || getPlayer().isCursedWeaponEquipped())
@@ -35,6 +36,7 @@ public class SnowKung extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

@@ -13,6 +13,7 @@ public class TawnyManedLion extends L2Transformation
 		super(109, 25, 22.5);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 109 || getPlayer().isCursedWeaponEquipped())
@@ -31,6 +32,7 @@ public class TawnyManedLion extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

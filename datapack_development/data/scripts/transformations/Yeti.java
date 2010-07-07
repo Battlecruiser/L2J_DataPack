@@ -13,6 +13,7 @@ public class Yeti extends L2Transformation
 		super(102, 15, 27.5);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 102 || getPlayer().isCursedWeaponEquipped())
@@ -31,6 +32,7 @@ public class Yeti extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

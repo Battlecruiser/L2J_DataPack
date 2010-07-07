@@ -14,6 +14,7 @@ public class ArcherCaptain extends L2Transformation
 		super(17, 10, 23.5);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 17 || getPlayer().isCursedWeaponEquipped())
@@ -32,6 +33,7 @@ public class ArcherCaptain extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

@@ -13,6 +13,7 @@ public class MagicLeader extends L2Transformation
 		super(18, 9, 23.5);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 18 || getPlayer().isCursedWeaponEquipped())
@@ -31,6 +32,7 @@ public class MagicLeader extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

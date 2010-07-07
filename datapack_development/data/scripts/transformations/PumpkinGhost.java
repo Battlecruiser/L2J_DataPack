@@ -13,6 +13,7 @@ public class PumpkinGhost extends L2Transformation
 		super(108, 12, 18);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 108 || getPlayer().isCursedWeaponEquipped())
@@ -31,6 +32,7 @@ public class PumpkinGhost extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

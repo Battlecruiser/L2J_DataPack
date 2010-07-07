@@ -13,6 +13,7 @@ public class JetBike extends L2Transformation
 		super(20001, 21.5, 27);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 20001 || getPlayer().isCursedWeaponEquipped())
@@ -31,6 +32,7 @@ public class JetBike extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

@@ -13,6 +13,7 @@ public class GrizzlyBear extends L2Transformation
 		super(320, 21, 40);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 320 || getPlayer().isCursedWeaponEquipped())
@@ -31,6 +32,7 @@ public class GrizzlyBear extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

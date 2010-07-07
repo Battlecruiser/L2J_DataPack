@@ -13,6 +13,7 @@ public class DemonPrince extends L2Transformation
 		super(311, 33, 49);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 311 || getPlayer().isCursedWeaponEquipped())
@@ -37,6 +38,7 @@ public class DemonPrince extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();

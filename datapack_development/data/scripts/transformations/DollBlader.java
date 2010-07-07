@@ -13,6 +13,7 @@ public class DollBlader extends L2Transformation
 		super(7, 6, 12);
 	}
 
+	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 7 || getPlayer().isCursedWeaponEquipped())
@@ -55,6 +56,7 @@ public class DollBlader extends L2Transformation
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 
+	@Override
 	public void onUntransform()
 	{
 		removeSkills();
