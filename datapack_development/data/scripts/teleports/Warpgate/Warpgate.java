@@ -57,6 +57,7 @@ public class Warpgate extends Quest
 		return false;
 	}
 
+	@Override
 	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		if (!canEnter(player))
@@ -68,6 +69,7 @@ public class Warpgate extends Quest
 		return npc.getNpcId() + ".htm";
 	}
 
+	@Override
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		if (!canEnter(player))
@@ -77,6 +79,7 @@ public class Warpgate extends Quest
 		return null;
 	}
 
+	@Override
 	public final String onEnterZone(L2Character character, L2ZoneType zone)
 	{
 		if (character instanceof L2PcInstance)

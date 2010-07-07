@@ -64,7 +64,8 @@ public class PolymorphingOnAttack extends L2AttackableAIScript
             super.addAttackId(id);
     }
  
-    public String onAttack (L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+    @Override
+	public String onAttack (L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
     {
         if (MOBSPAWNS.containsKey(npc.getNpcId()))
         {

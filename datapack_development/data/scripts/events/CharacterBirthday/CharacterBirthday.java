@@ -56,6 +56,7 @@ public class CharacterBirthday extends Quest
 		}
 	}
 
+	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
@@ -96,6 +97,7 @@ public class CharacterBirthday extends Quest
 		return htmltext;
 	}
 
+	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		if(is_spawned)
@@ -121,6 +123,7 @@ public class CharacterBirthday extends Quest
 		return null;
 	}
 
+	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";

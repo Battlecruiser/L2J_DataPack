@@ -34,6 +34,7 @@ public class SeeThroughSilentMove extends L2AttackableAIScript
 			this.addSpawnId(npcId);
 	}
 
+	@Override
 	public String onSpawn(L2Npc npc)
 	{
 		if (npc instanceof L2Attackable)

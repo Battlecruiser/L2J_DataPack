@@ -174,6 +174,7 @@ public class Valakas extends L2AttackableAIScript
 		}
 	}
 
+	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		if (npc != null)
@@ -381,6 +382,7 @@ public class Valakas extends L2AttackableAIScript
 		return super.onAdvEvent(event, npc, player);
 	}
 
+	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet, L2Skill skill)
 	{
 		if (npc.isInvul())
@@ -958,6 +960,7 @@ public class Valakas extends L2AttackableAIScript
 		return super.onAttack(npc, attacker, damage, isPet);
 	}
 
+	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
 		startQuestTimer("1111", 500, npc, null);
@@ -1330,6 +1333,7 @@ public class Valakas extends L2AttackableAIScript
 		return null;
 	}
 
+	@Override
 	public String onSpellFinished(L2Npc npc, L2PcInstance player, L2Skill skill)
 	{
 		if (npc.isInvul())
@@ -1343,6 +1347,7 @@ public class Valakas extends L2AttackableAIScript
 		return super.onSpellFinished(npc, player, skill);
 	}
 
+	@Override
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
 		int i1 = 0;
@@ -1862,6 +1867,7 @@ public class Valakas extends L2AttackableAIScript
 		return super.onAggroRangeEnter(npc, player, isPet);
 	}
 
+	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
 	{
 		if (npc.isInvul())

@@ -167,6 +167,7 @@ public class PailakaSongOfIceAndFire extends Quest
 		
 	}
 
+	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(qn);
@@ -245,11 +246,13 @@ public class PailakaSongOfIceAndFire extends Quest
 		return event;
 	}
 
+	@Override
 	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		return npc.getNpcId() + ".htm";
 	}
 
+	@Override
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(qn);
@@ -309,6 +312,7 @@ public class PailakaSongOfIceAndFire extends Quest
 		return EMPTY;
 	}
 
+	@Override
 	public final String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
 	{
 		if (!npc.isDead())
@@ -317,6 +321,7 @@ public class PailakaSongOfIceAndFire extends Quest
 		return super.onAttack(npc, attacker, damage, isPet);
 	}
 
+	@Override
 	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
 		QuestState st = player.getQuestState(qn);
@@ -391,6 +396,7 @@ public class PailakaSongOfIceAndFire extends Quest
 		return super.onKill(npc, player, isPet);
 	}
 
+	@Override
 	public String onExitZone(L2Character character, L2ZoneType zone)
 	{
 		if (character instanceof L2PcInstance

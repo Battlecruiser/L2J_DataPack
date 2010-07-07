@@ -65,6 +65,7 @@ public class PinsAndPouchUnseal extends Quest
 		}
 	}
 
+	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
@@ -129,6 +130,7 @@ public class PinsAndPouchUnseal extends Quest
 		return htmltext;
 	}
 
+	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";

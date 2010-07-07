@@ -230,6 +230,7 @@ public class MC_Show extends Quest
 		npc.broadcastPacket(new NpcSay(npc.getObjectId(), type, npc.getNpcId(), text));
 	}
 	
+	@Override
 	public String onSpawn(L2Npc npc)
 	{
 		if (isStarted)
@@ -269,6 +270,7 @@ public class MC_Show extends Quest
 		}
 		return super.onSpawn(npc);
 	}
+	@Override
 	public String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
 	{
 		if (event.equalsIgnoreCase("Start"))

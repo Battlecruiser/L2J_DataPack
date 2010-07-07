@@ -592,6 +592,7 @@ public class Antharas extends L2AttackableAIScript
 		}
 	}
 	
+	@Override
 	public String onAggroRangeEnter (L2Npc npc, L2PcInstance player, boolean isPet) 
 	{
 		switch (npc.getNpcId())
@@ -644,6 +645,7 @@ public class Antharas extends L2AttackableAIScript
 		}
 	}
 	
+	@Override
 	public String onSpellFinished(L2Npc npc, L2PcInstance player, L2Skill skill)
 	{
 		if (npc.isInvul())
@@ -835,6 +837,7 @@ public class Antharas extends L2AttackableAIScript
 		}
 	}
 	
+	@Override
 	public String onAttack (L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
 	{
 		if (npc.getNpcId() == 29019 || npc.getNpcId() == 29066 || npc.getNpcId() == 29067 || npc.getNpcId() == 29068)
@@ -872,6 +875,7 @@ public class Antharas extends L2AttackableAIScript
 		return super.onAttack(npc, attacker, damage, isPet);
 	}
 
+	@Override
 	public String onKill (L2Npc npc, L2PcInstance killer, boolean isPet) 
 	{
 		if (npc.getNpcId() == 29019 || npc.getNpcId() == 29066 || npc.getNpcId() == 29067 || npc.getNpcId() == 29068)
