@@ -66,6 +66,7 @@ public class GeneralDilios extends L2AttackableAIScript
 					_guards.add(spawn.getLastSpawn());				
 	}
 
+	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		if (event.startsWith("command_"))

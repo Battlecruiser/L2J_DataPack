@@ -450,6 +450,7 @@ public class FeedableBeasts extends L2AttackableAIScript
         }
     }
 
+	@Override
 	public String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
 	{
         if (event.equalsIgnoreCase("polymorph Mad Cow") && npc != null && player != null)
@@ -476,6 +477,7 @@ public class FeedableBeasts extends L2AttackableAIScript
 		return super.onAdvEvent(event,npc,player);
 	}
 
+	@Override
 	public String onSkillSee (L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
 	{
         // this behavior is only run when the target of skill is the passed npc (chest)
@@ -565,6 +567,7 @@ public class FeedableBeasts extends L2AttackableAIScript
         return super.onSkillSee(npc,caster,skill,targets,isPet);
 	}
 
+	@Override
 	public String onKill (L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
         // remove the feedinfo of the mob that got killed, if any

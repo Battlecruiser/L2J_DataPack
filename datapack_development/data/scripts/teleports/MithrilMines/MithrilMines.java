@@ -41,6 +41,7 @@ public class MithrilMines extends Quest
 		addTalkId(npcId);
 	}
 	
+	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
@@ -60,6 +61,7 @@ public class MithrilMines extends Quest
 		return htmltext;
 	}
 
+	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";

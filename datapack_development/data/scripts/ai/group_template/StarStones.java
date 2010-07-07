@@ -33,6 +33,7 @@ public class StarStones extends L2AttackableAIScript
 		this.registerMobs(mobs);
 	}
 
+	@Override
 	public String onSkillSee (L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
 	{
 		if (targets[0] == npc && skill.getId() == 932)

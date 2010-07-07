@@ -100,6 +100,7 @@ public class Core extends L2AttackableAIScript
 		}
 	}
 
+	@Override
 	public void saveGlobalData()
 	{
 		String val = "" + _FirstAttacked;
@@ -135,6 +136,7 @@ public class Core extends L2AttackableAIScript
 		}
 	}
 
+	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		if (event.equalsIgnoreCase("core_unlock"))
@@ -162,6 +164,7 @@ public class Core extends L2AttackableAIScript
 		return super.onAdvEvent(event, npc, player);
 	}
 
+	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
 	{
 		if (npc.getNpcId() == CORE)
@@ -181,6 +184,7 @@ public class Core extends L2AttackableAIScript
 		return super.onAttack(npc, attacker, damage, isPet);
 	}
 
+	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
 		int npcId = npc.getNpcId();

@@ -191,6 +191,7 @@ public class Zaken extends L2AttackableAIScript
 		startQuestTimer("1001", 1000, npc, null, true); //buffs,random teleports
 	}
 
+	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		int status = GrandBossManager.getInstance().getBossStatus(ZAKEN);
@@ -529,6 +530,7 @@ public class Zaken extends L2AttackableAIScript
 		return super.onAdvEvent(event, npc, player);
 	}
 
+	@Override
 	public String onFactionCall(L2Npc npc, L2Npc caller, L2PcInstance attacker, boolean isPet)
 	{
 		if (caller == null || npc == null)
@@ -551,6 +553,7 @@ public class Zaken extends L2AttackableAIScript
 		return super.onFactionCall(npc, caller, attacker, isPet);
 	}
 
+	@Override
 	public String onSpellFinished(L2Npc npc, L2PcInstance player, L2Skill skill)
 	{
 		if (npc.getNpcId() == ZAKEN)
@@ -671,6 +674,7 @@ public class Zaken extends L2AttackableAIScript
 		return super.onSpellFinished(npc, player, skill);
 	}
 
+	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
 	{
 		int npcId = npc.getNpcId();
@@ -760,6 +764,7 @@ public class Zaken extends L2AttackableAIScript
 		return super.onAttack(npc, attacker, damage, isPet);
 	}
 
+	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
 		int npcId = npc.getNpcId();
@@ -787,6 +792,7 @@ public class Zaken extends L2AttackableAIScript
 		return super.onKill(npc, killer, isPet);
 	}
 
+	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
 	{
 		int npcId = npc.getNpcId();
@@ -845,6 +851,7 @@ public class Zaken extends L2AttackableAIScript
 		return super.onSkillSee(npc, caster, skill, targets, isPet);
 	}
 
+	@Override
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
 		int npcId = npc.getNpcId();

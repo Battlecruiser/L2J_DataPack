@@ -131,6 +131,7 @@ public class QueenAnt extends L2AttackableAIScript
 		startQuestTimer("check_royal__Zone", 120000, npc, null, true);
 	}
 
+	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		if (event.equalsIgnoreCase("action") && npc != null)
@@ -189,6 +190,7 @@ public class QueenAnt extends L2AttackableAIScript
 		return super.onAdvEvent(event, npc, player);
 	}
 
+	@Override
 	public String onFactionCall(L2Npc npc, L2Npc caller, L2PcInstance attacker, boolean isPet)
 	{
 		if (caller == null || npc == null)
@@ -221,6 +223,7 @@ public class QueenAnt extends L2AttackableAIScript
 		return super.onFactionCall(npc, caller, attacker, isPet);
 	}
 
+	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
 	{
 		int npcId = npc.getNpcId();
@@ -232,6 +235,7 @@ public class QueenAnt extends L2AttackableAIScript
 		return super.onAttack(npc, attacker, damage, isPet);
 	}
 
+	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
 		int npcId = npc.getNpcId();

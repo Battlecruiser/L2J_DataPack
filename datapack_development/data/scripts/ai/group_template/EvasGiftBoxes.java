@@ -40,12 +40,14 @@ public class EvasGiftBoxes extends Quest
 		addSpawnId(GIFTBOX);
 	}
 	
+	@Override
 	public String onSpawn(L2Npc npc)
 	{
 		npc.setIsNoRndWalk(true);
 		return super.onSpawn(npc);
 	}
 
+	@Override
 	public String onKill (L2Npc npc, L2PcInstance killer, boolean isPet) 
 	{
 		if (npc.getNpcId() == GIFTBOX)

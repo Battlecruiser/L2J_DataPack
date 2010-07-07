@@ -51,7 +51,8 @@ public class Monastery extends L2AttackableAIScript
         registerMobs(mobs2);
     }
  
-    public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
+    @Override
+	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
     {
     	if (contains(mobs1,npc.getNpcId()) && !npc.isInCombat() && npc.getTarget() == null)
     	{
@@ -83,7 +84,8 @@ public class Monastery extends L2AttackableAIScript
         return super.onAggroRangeEnter(npc, player, isPet);
     }
 
-    public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
+    @Override
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
 	{
     	if (contains(mobs2,npc.getNpcId()))
     	{
@@ -104,7 +106,8 @@ public class Monastery extends L2AttackableAIScript
 		return super.onSkillSee(npc, caster, skill, targets, isPet);
 	}
     
-    public String onSpawn(L2Npc npc)
+    @Override
+	public String onSpawn(L2Npc npc)
 	{
     	if (contains(mobs1,npc.getNpcId()))
     	{
@@ -153,7 +156,8 @@ public class Monastery extends L2AttackableAIScript
 		return super.onSpawn(npc);
 	}
     
-    public String onSpellFinished(L2Npc npc, L2PcInstance player, L2Skill skill)
+    @Override
+	public String onSpellFinished(L2Npc npc, L2PcInstance player, L2Skill skill)
     {
     	if (contains(mobs1,npc.getNpcId()) && skill.getId() == 4589)
     	{

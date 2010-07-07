@@ -842,6 +842,7 @@ public class DarkCloudMansion extends Quest
 		}
 	}
 
+	@Override
 	public String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
 	{
 		if (npc == null)
@@ -898,6 +899,7 @@ public class DarkCloudMansion extends Quest
 		return "";
 	}
 
+	@Override
 	public String onKill( L2Npc npc, L2PcInstance player, boolean isPet)
 	{
 		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
@@ -958,6 +960,7 @@ public class DarkCloudMansion extends Quest
 		return "";
 	}
 
+	@Override
 	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isPet, L2Skill skill)
 	{
 		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
@@ -988,6 +991,7 @@ public class DarkCloudMansion extends Quest
 		return "";
 	}
 
+	@Override
 	public String onFirstTalk (L2Npc npc, L2PcInstance player)
 	{
 		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
@@ -1026,6 +1030,7 @@ public class DarkCloudMansion extends Quest
 		return "";
 	}
 
+	@Override
 	public String onTalk (L2Npc npc, L2PcInstance player)
 	{
 		int npcId = npc.getNpcId();

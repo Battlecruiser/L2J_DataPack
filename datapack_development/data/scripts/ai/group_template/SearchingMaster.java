@@ -34,6 +34,7 @@ public class SearchingMaster extends L2AttackableAIScript
 			addAttackId(id);
 	}
 
+	@Override
 	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isPet)
 	{
 		if (player == null)

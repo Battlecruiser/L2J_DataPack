@@ -41,6 +41,7 @@ public class HeroWeapon extends Quest
 		}
 	}
 
+	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		QuestState st = player.getQuestState(getName());
@@ -53,6 +54,7 @@ public class HeroWeapon extends Quest
 		return null;
 	}
 
+	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
