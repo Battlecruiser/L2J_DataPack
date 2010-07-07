@@ -191,6 +191,7 @@ public class SagasSuperClass extends QuestJython
 		return prevclass[0];
 	}
 	
+	@Override
 	public String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
 	{
 		QuestState st = player.getQuestState(qn);
@@ -496,6 +497,7 @@ public class SagasSuperClass extends QuestJython
 		return htmltext;
 	}
     
+	@Override
 	public String onTalk(L2Npc npc,L2PcInstance player)
 	{
 		String htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>";
@@ -672,6 +674,7 @@ public class SagasSuperClass extends QuestJython
 		return htmltext;
 	}
 	
+	@Override
 	public String onFirstTalk(L2Npc npc,L2PcInstance player)
 	{
 		String htmltext = "";
@@ -731,6 +734,7 @@ public class SagasSuperClass extends QuestJython
 		return htmltext;
 	}
 	
+	@Override
 	public String onAttack(L2Npc npc,L2PcInstance player, int damage, boolean isPet)
 	{
 		QuestState st2 = findRightState(npc);
@@ -765,6 +769,7 @@ public class SagasSuperClass extends QuestJython
 		return super.onAttack(npc, player, damage, isPet);
 	}
 	
+	@Override
 	public String onSkillSee(L2Npc npc,L2PcInstance player, L2Skill skill, L2Object[] targets, boolean isPet)
 	{
 		if (_SpawnList.containsKey(npc) && _SpawnList.get(npc) != player.getObjectId())
@@ -791,6 +796,7 @@ public class SagasSuperClass extends QuestJython
 		return super.onSkillSee(npc, player, skill, targets, isPet);
 	}
 	
+	@Override
 	public String onKill(L2Npc npc,L2PcInstance player, boolean isPet)
 	{
 		int npcId = npc.getNpcId();

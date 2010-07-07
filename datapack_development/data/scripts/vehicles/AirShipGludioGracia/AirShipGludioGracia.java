@@ -99,6 +99,7 @@ public class AirShipGludioGracia extends Quest implements Runnable
 	private boolean _foundAtcGracia = false;
 	private L2Npc _atcGracia = null;
 
+	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		if (_ship.isInDock() && _ship.isInsideRadius(player, 600, true, false))
@@ -107,6 +108,7 @@ public class AirShipGludioGracia extends Quest implements Runnable
 		return null;
 	}
 
+	@Override
 	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		if (player.getQuestState(getName()) == null)

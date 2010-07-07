@@ -308,6 +308,7 @@ public class IceFairySirra extends L2AttackableAIScript
 		player.sendPacket( ActionFailed.STATIC_PACKET );
 	}
 
+	@Override
 	public String onFirstTalk (L2Npc npc, L2PcInstance player)
 	{
 		if (player.getQuestState("IceFairySirra") == null)
@@ -322,6 +323,7 @@ public class IceFairySirra extends L2AttackableAIScript
 		return null;
 	}
 
+	@Override
 	public String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
 	{
 		if (event.equalsIgnoreCase("check_condition"))
@@ -401,6 +403,7 @@ public class IceFairySirra extends L2AttackableAIScript
 		return super.onAdvEvent(event, npc, player);
 	}
 
+	@Override
 	public String onKill (L2Npc npc, L2PcInstance killer, boolean isPet) 
 	{
 		if (npc.getNpcId() == 29056)

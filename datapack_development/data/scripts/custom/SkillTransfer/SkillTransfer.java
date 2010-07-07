@@ -144,6 +144,7 @@ public class SkillTransfer extends Quest
 		}
 	};
 
+	@Override
 	public final String onAcquireSkillList(L2Npc npc, L2PcInstance player)
 	{
 		if (player == null)
@@ -177,6 +178,7 @@ public class SkillTransfer extends Quest
 		return null;
 	}
 
+	@Override
 	public final String onAcquireSkill(L2Npc npc, L2PcInstance player, L2Skill skill)
 	{
 		if (player == null || skill == null)
@@ -208,6 +210,7 @@ public class SkillTransfer extends Quest
 		return "false";
 	}
 
+	@Override
 	public final String onAcquireSkillInfo(L2Npc npc, L2PcInstance player, L2Skill skill)
 	{
 		if (player == null || skill == null)
@@ -233,6 +236,7 @@ public class SkillTransfer extends Quest
 		return null;
 	}
 
+	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
@@ -308,6 +312,7 @@ public class SkillTransfer extends Quest
 		return htmltext;
 	}
 
+	@Override
 	public final String onEnterWorld(L2PcInstance player)
 	{
 		givePormanders(null, player);
@@ -336,6 +341,7 @@ public class SkillTransfer extends Quest
 		}
 	}
 
+	@Override
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		return "main.htm";

@@ -161,6 +161,7 @@ public class Baium extends L2AttackableAIScript
             addSpawn(STONE_BAIUM,116033,17447,10104,40188,false,0);
 	}
 
+	@Override
 	public String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
 	{
         if (event.equalsIgnoreCase("baium_unlock"))
@@ -236,7 +237,8 @@ public class Baium extends L2AttackableAIScript
         return super.onAdvEvent(event, npc, player);
 	}
 
-    public String onTalk(L2Npc npc,L2PcInstance player)
+    @Override
+	public String onTalk(L2Npc npc,L2PcInstance player)
     {
         int npcId = npc.getNpcId();
         String htmltext = "";
@@ -297,7 +299,8 @@ public class Baium extends L2AttackableAIScript
         return htmltext;
     }
     
-    public String onSpellFinished(L2Npc npc, L2PcInstance player, L2Skill skill)
+    @Override
+	public String onSpellFinished(L2Npc npc, L2PcInstance player, L2Skill skill)
     {
 		if (npc.isInvul())
 		{
@@ -310,7 +313,8 @@ public class Baium extends L2AttackableAIScript
     	}
     	return super.onSpellFinished(npc, player, skill);
     }
-    public String onAttack (L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+    @Override
+	public String onAttack (L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
     {
     	if (!_Zone.isInsideZone(attacker))
     	{
@@ -349,7 +353,8 @@ public class Baium extends L2AttackableAIScript
 		return super.onAttack(npc, attacker, damage, isPet);
     }
     
-    public String onKill (L2Npc npc, L2PcInstance killer, boolean isPet) 
+    @Override
+	public String onKill (L2Npc npc, L2PcInstance killer, boolean isPet) 
     { 
         cancelQuestTimer("baium_despawn", npc, null);
         npc.broadcastPacket(new PlaySound(1, "BS01_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
@@ -495,6 +500,7 @@ public class Baium extends L2AttackableAIScript
 		return skill;
 	}
 
+	@Override
 	public String onSkillSee (L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
 	{
 		if (npc.isInvul())

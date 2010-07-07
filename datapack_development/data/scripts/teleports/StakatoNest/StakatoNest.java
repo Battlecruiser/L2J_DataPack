@@ -40,6 +40,7 @@ public class StakatoNest extends Quest
 		addTalkId(npcId);
 	}
 
+	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
@@ -70,6 +71,7 @@ public class StakatoNest extends Quest
 		return htmltext;
 	}
 
+	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";

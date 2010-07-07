@@ -31,6 +31,7 @@ public class GatekeeperSpirit extends Quest
 		addTalkId(npcId);
 	}
 
+	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";

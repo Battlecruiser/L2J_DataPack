@@ -725,6 +725,7 @@ public class Kamaloka extends Quest
 	/**
 	 * Handles only player's enter, single parameter - integer kamaloka index
 	 */
+	@Override
 	public final String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
 	{
 		if (npc == null)
@@ -743,6 +744,7 @@ public class Kamaloka extends Quest
 	/**
 	 * Talk with captains and using of the escape teleporter
 	 */
+	@Override
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		QuestState st = player.getQuestState(qn);
@@ -781,6 +783,7 @@ public class Kamaloka extends Quest
 	/**
 	 * Only escape teleporters first talk handled
 	 */
+	@Override
 	public final String onFirstTalk (L2Npc npc, L2PcInstance player)
 	{
 		if (npc.getNpcId() == TELEPORTER)
@@ -794,6 +797,7 @@ public class Kamaloka extends Quest
 		return "";
 	}
 
+	@Override
 	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
 		final InstanceWorld tmpWorld = InstanceManager.getInstance().getWorld(npc.getInstanceId());

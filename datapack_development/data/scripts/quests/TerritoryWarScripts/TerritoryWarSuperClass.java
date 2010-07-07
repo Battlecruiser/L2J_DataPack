@@ -85,6 +85,7 @@ public class TerritoryWarSuperClass extends Quest
 			addAttackId(mobid);
 	}
 	
+	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
 	{
 		if (targets[0] == npc)

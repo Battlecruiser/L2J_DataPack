@@ -91,16 +91,19 @@ public class L2AttackableAIScript extends QuestJython
 		super(questId, name, descr);
 	}
 	
+	@Override
 	public String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
 	{
 		return null;
 	}
 	
+	@Override
 	public String onSpellFinished(L2Npc npc, L2PcInstance player, L2Skill skill)
 	{
 		return null;
 	}
 
+	@Override
 	public String onSkillSee (L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet) 
     { 
     	if (caster == null) 
@@ -141,7 +144,8 @@ public class L2AttackableAIScript extends QuestJython
     	return null;
     }
     
-    public String onFactionCall (L2Npc npc, L2Npc caller, L2PcInstance attacker, boolean isPet) 
+    @Override
+	public String onFactionCall (L2Npc npc, L2Npc caller, L2PcInstance attacker, boolean isPet) 
     { 
     	L2Character originalAttackTarget = (isPet? attacker.getPet(): attacker);
 		if ( attacker.isInParty()
@@ -164,7 +168,8 @@ public class L2AttackableAIScript extends QuestJython
     	return null;
     }
     
-    public String onAggroRangeEnter (L2Npc npc, L2PcInstance player, boolean isPet) 
+    @Override
+	public String onAggroRangeEnter (L2Npc npc, L2PcInstance player, boolean isPet) 
     { 
     	L2Character target = isPet ? player.getPet() : player;
     	
@@ -176,12 +181,14 @@ public class L2AttackableAIScript extends QuestJython
     	return null; 
     }
 
-    public String onSpawn (L2Npc npc) 
+    @Override
+	public String onSpawn (L2Npc npc) 
     { 
     	return null; 
     }
     
-    public String onAttack (L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+    @Override
+	public String onAttack (L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
     {	
     	if ((attacker != null) && (npc instanceof L2Attackable))
     	{
@@ -194,7 +201,8 @@ public class L2AttackableAIScript extends QuestJython
     	return null;
     }
 
-    public String onKill (L2Npc npc, L2PcInstance killer, boolean isPet) 
+    @Override
+	public String onKill (L2Npc npc, L2PcInstance killer, boolean isPet) 
     { 
     	return null; 
     }

@@ -46,7 +46,8 @@ public class DarkWaterDragon extends L2AttackableAIScript
         myTrackingSet.clear();
         secondSpawn.clear();
     }
-    public String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
+    @Override
+	public String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
     {
         if (npc != null)
         {
@@ -119,7 +120,8 @@ public class DarkWaterDragon extends L2AttackableAIScript
         return super.onAdvEvent(event,npc,player);
     }
     
-    public String onAttack (L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+    @Override
+	public String onAttack (L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
     {    
         int npcId = npc.getNpcId();
         int npcObjId = npc.getObjectId();
@@ -151,7 +153,8 @@ public class DarkWaterDragon extends L2AttackableAIScript
         return super.onAttack(npc, attacker, damage, isPet);
     }
 
-    public String onKill (L2Npc npc, L2PcInstance killer, boolean isPet) 
+    @Override
+	public String onKill (L2Npc npc, L2PcInstance killer, boolean isPet) 
     { 
         int npcId = npc.getNpcId();
         int npcObjId = npc.getObjectId();
@@ -180,7 +183,8 @@ public class DarkWaterDragon extends L2AttackableAIScript
         return super.onKill(npc,killer,isPet);
     }
     
-    public String onSpawn (L2Npc npc) 
+    @Override
+	public String onSpawn (L2Npc npc) 
     {
         int npcId = npc.getNpcId();
         int npcObjId = npc.getObjectId();
