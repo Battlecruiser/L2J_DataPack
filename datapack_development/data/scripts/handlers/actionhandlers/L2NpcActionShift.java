@@ -24,6 +24,7 @@ import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.instance.L2MerchantInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -75,6 +76,7 @@ public class L2NpcActionShift implements IActionHandler
 			NpcHtmlMessage html = new NpcHtmlMessage(0);
 			html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/npcinfo.htm");
 			
+			html.replace("%objid%", String.valueOf(target.getObjectId()));
 			html.replace("%class%", target.getClass().getSimpleName());
 			html.replace("%id%",    String.valueOf(((L2Npc)target).getTemplate().npcId));
 			html.replace("%lvl%",   String.valueOf(((L2Npc)target).getTemplate().level));
@@ -103,6 +105,7 @@ public class L2NpcActionShift implements IActionHandler
 			html.replace("%wit%",  String.valueOf(((L2Character)target).getWIT()));
 			html.replace("%men%",  String.valueOf(((L2Character)target).getMEN()));
 			html.replace("%loc%",  String.valueOf(target.getX()+" "+target.getY()+" "+target.getZ()));
+			
 			if (((L2Npc)target).getSpawn() != null)
 			{
 				html.replace("%spawn%", ((L2Npc)target).getSpawn().getLocx()+" "+((L2Npc)target).getSpawn().getLocy()+" "+((L2Npc)target).getSpawn().getLocz());
@@ -118,7 +121,7 @@ public class L2NpcActionShift implements IActionHandler
 				html.replace("%resp%",  "<font color=FF0000>--</font>");
 			}
 			
-			if(((L2Character)target).hasAI())
+			if (((L2Character)target).hasAI())
 			{
 				html.replace("%ai%",   "<tr><td><table width=270 border=0><tr><td width=100><font color=FFAA00>AI</font></td><td align=right width=170>"+((L2Character)target).getAI().getClass().getSimpleName()+"</td></tr></table></td></tr>");
 				html.replace("%aint%", "<tr><td><table width=270 border=0 bgcolor=131210><tr><td width=100><font color=FFAA00>Intention:</font></td><td align=right width=170>"+String.valueOf(((L2Character)target).getAI().getIntention().name())+"</td></tr></table></td></tr>");
@@ -128,6 +131,16 @@ public class L2NpcActionShift implements IActionHandler
 				html.replace("%ai%",   "");
 				html.replace("%aint%", "");
 			}
+			
+			if (target instanceof L2MerchantInstance)
+			{
+				html.replace("%butt%","<button value=\"Shop\" action=\"bypass -h admin_showShop "+String.valueOf(((L2Npc)target).getTemplate().npcId)+"\" width=60 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
+			}
+			else
+			{
+				html.replace("%butt%","");
+			}
+			
 			activeChar.sendPacket(html);			
 		}
 		else if (Config.ALT_GAME_VIEWNPC)
