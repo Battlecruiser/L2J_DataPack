@@ -259,14 +259,15 @@
 		<set name="magicLvl" val="60" />
 		<set name="mpConsume" val="50" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="BUFF" />
+		<set name="skillType" val="DEBUFF" />
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="castRange" val="1500" />
 		<set name="effectRange" val="2000" />
 		<for>
-			<effect name="Buff" time="30" val="0" stackOrder="0.34" stackType="pDefDown">
+			<effect name="Debuff" time="30" val="0" stackOrder="0.34" stackType="pDefDown">
 				<mul order="0x30" stat="pDef" val="0.34" />
 			</effect>
 		</for>
