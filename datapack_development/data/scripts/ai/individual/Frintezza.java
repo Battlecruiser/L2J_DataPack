@@ -1054,7 +1054,10 @@ public class Frintezza extends L2AttackableAIScript
 				int i = Rnd.get(0,1);
 				L2Skill skill = SkillTable.getInstance().getInfo(_skill[i][0],_skill[i][1]);
 				if (skill != null)
+				{
+					weakScarlet.setIsCastingNow(true);
 					weakScarlet.doCast(skill);
+				}
 
 				startQuestTimer("skill01", _skill[i][2] + 5000 + Rnd.get(10000), npc, null);
 			}
@@ -1071,7 +1074,10 @@ public class Frintezza extends L2AttackableAIScript
 
 				L2Skill skill = SkillTable.getInstance().getInfo(_skill[i][0],_skill[i][1]);
 				if (skill != null)
+				{
+					weakScarlet.setIsCastingNow(true);
 					weakScarlet.doCast(skill);
+				}
 
 				startQuestTimer("skill02", _skill[i][2] + 5000 + Rnd.get(10000), npc, null);
 
@@ -1094,7 +1100,10 @@ public class Frintezza extends L2AttackableAIScript
 
 				L2Skill skill = SkillTable.getInstance().getInfo(_skill[i][0],_skill[i][1]);
 				if (skill != null)
+				{
+					strongScarlet.setIsCastingNow(true);
 					strongScarlet.doCast(skill);
+				}
 
 				startQuestTimer("skill03", _skill[i][2] + 5000 + Rnd.get(10000), npc, null);
 
@@ -1339,7 +1348,10 @@ public class Frintezza extends L2AttackableAIScript
 
 					L2Skill skill = SkillTable.getInstance().getInfo(5011,1);
 					if (skill != null)
+					{
+						npc.setIsCastingNow(true);
 						npc.doCast(skill);
+					}
 				}
 			}
 		}
