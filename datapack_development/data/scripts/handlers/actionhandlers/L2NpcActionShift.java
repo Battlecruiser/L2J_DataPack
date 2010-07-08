@@ -74,155 +74,63 @@ public class L2NpcActionShift implements IActionHandler
 				activeChar.sendPacket(su);
 			}
 
-			// Send a Server->Client NpcHtmlMessage() containing the GM console about this L2NpcInstance
 			NpcHtmlMessage html = new NpcHtmlMessage(0);
-                        final StringBuilder html1 = StringUtil.startAppend(500,
-                                "<html><body><center><font color=\"LEVEL\">NPC Info</font></center><br>" +
-                                "Instance Type: ",
-                                target.getClass().getSimpleName(),
-                                "<br1>Faction: ",
-                                ((L2Npc)target).getFactionId() != null ? ((L2Npc)target).getFactionId() : "null"
-                                );
-                        StringUtil.append(html1,
-                        		"<br1>Coords: ",
-                        		String.valueOf(target.getX()),
-                        		", ",
-                        		String.valueOf(target.getY()),
-                        		", ",
-                        		String.valueOf(target.getZ())
-                        		);
-                        if (((L2Npc)target).getSpawn() != null)
-                        	StringUtil.append(html1,
-                        			"<br1>Spawn: ",
-                        			String.valueOf(((L2Npc)target).getSpawn().getLocx()),
-                        			", ",
-                        			String.valueOf(((L2Npc)target).getSpawn().getLocy()),
-                        			", ",
-                        			String.valueOf(((L2Npc)target).getSpawn().getLocz()),
-                                    " ; Loc ID: ",
-                                    String.valueOf(((L2Npc)target).getSpawn().getLocation()),
-                                    "<br1>Distance from spawn 2D: ",
-                                    String.valueOf((int)Math.sqrt(((L2Character)target).getPlanDistanceSq(((L2Npc)target).getSpawn().getLocx(), ((L2Npc)target).getSpawn().getLocy()))),
-                                    " ; 3D: ",
-                                    String.valueOf((int)Math.sqrt(((L2Character)target).getDistanceSq(((L2Npc)target).getSpawn().getLocx(), ((L2Npc)target).getSpawn().getLocy(), ((L2Npc)target).getSpawn().getLocz())))
-                            );
-
-			if (target instanceof L2ControllableMobInstance)
+			html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/npcinfo.htm");
+			
+			html.replace("%class%", target.getClass().getSimpleName());
+			html.replace("%id%",    String.valueOf(((L2Npc)target).getTemplate().npcId));
+			html.replace("%lvl%",   String.valueOf(((L2Npc)target).getTemplate().level));
+			html.replace("%name%",  String.valueOf(((L2Npc)target).getTemplate().name));
+			html.replace("%tmplid%",String.valueOf(((L2Npc)target).getTemplate().npcId));
+			html.replace("%aggro%", String.valueOf((target instanceof L2Attackable) ? ((L2Attackable) target).getAggroRange() : 0));
+			html.replace("%hp%",    String.valueOf((int)((L2Character)target).getCurrentHp()));
+			html.replace("%hpmax%", String.valueOf(((L2Character)target).getMaxHp()));
+			html.replace("%mp%",    String.valueOf((int)((L2Character)target).getCurrentMp()));
+			html.replace("%mpmax%", String.valueOf(((L2Character)target).getMaxMp()));
+			
+			html.replace("%patk%", String.valueOf(((L2Character)target).getPAtk(null)));
+			html.replace("%matk%", String.valueOf(((L2Character)target).getMAtk(null, null)));
+			html.replace("%pdef%", String.valueOf(((L2Character)target).getPDef(null)));
+			html.replace("%mdef%", String.valueOf(((L2Character)target).getMDef(null, null)));
+			html.replace("%accu%", String.valueOf(((L2Character)target).getAccuracy()));
+			html.replace("%evas%", String.valueOf(((L2Character)target).getEvasionRate(null)));
+			html.replace("%crit%", String.valueOf(((L2Character)target).getCriticalHit(null, null)));
+			html.replace("%rspd%", String.valueOf(((L2Character)target).getRunSpeed()));
+			html.replace("%aspd%", String.valueOf(((L2Character)target).getPAtkSpd()));
+			html.replace("%cspd%", String.valueOf(((L2Character)target).getMAtkSpd()));			
+			html.replace("%str%",  String.valueOf(((L2Character)target).getSTR()));
+			html.replace("%dex%",  String.valueOf(((L2Character)target).getDEX()));
+			html.replace("%con%",  String.valueOf(((L2Character)target).getCON()));
+			html.replace("%int%",  String.valueOf(((L2Character)target).getINT()));
+			html.replace("%wit%",  String.valueOf(((L2Character)target).getWIT()));
+			html.replace("%men%",  String.valueOf(((L2Character)target).getMEN()));
+			html.replace("%loc%",  String.valueOf(target.getX()+" "+target.getY()+" "+target.getZ()));
+			if (((L2Npc)target).getSpawn() != null)
 			{
-				StringUtil.append(html1,
-						"<br1>Mob Group: ",
-						String.valueOf(MobGroupTable.getInstance().getGroupForMob((L2ControllableMobInstance) target).getGroupId()),
-						"<br1>"
-				);
+				html.replace("%spawn%", ((L2Npc)target).getSpawn().getLocx()+" "+((L2Npc)target).getSpawn().getLocy()+" "+((L2Npc)target).getSpawn().getLocz());
+				html.replace("%loc2d%", String.valueOf((int)Math.sqrt(((L2Character)target).getPlanDistanceSq(((L2Npc)target).getSpawn().getLocx(), ((L2Npc)target).getSpawn().getLocy()))));
+				html.replace("%loc3d%", String.valueOf((int)Math.sqrt(((L2Character)target).getDistanceSq(((L2Npc)target).getSpawn().getLocx(), ((L2Npc)target).getSpawn().getLocy(), ((L2Npc)target).getSpawn().getLocz()))));
+				html.replace("%resp%",  String.valueOf(((L2Npc)target).getSpawn().getRespawnDelay() / 1000));
 			}
 			else
 			{
-				StringUtil.append(html1,
-						"<br1>Respawn Time: ",
-						(((L2Npc)target).getSpawn() != null ? String.valueOf(((L2Npc)target).getSpawn().getRespawnDelay() / 1000) : "?"),
-						"  Seconds<br1>"
-				);
+				html.replace("%spawn%", "<font color=FF0000>null</font>");
+				html.replace("%loc2d%", "<font color=FF0000>--</font>");
+				html.replace("%loc3d%", "<font color=FF0000>--</font>");
+				html.replace("%resp%",  "<font color=FF0000>--</font>");
 			}
 			
-			if (((L2Character)target).hasAI())
+			if(((L2Character)target).hasAI())
 			{
-				StringUtil.append(html1,
-						"<br1>AI Type: ",
-						((L2Character)target).getAI().getClass().getSimpleName(),
-						"  <br1>"
-				);
+				html.replace("%ai%",   "<tr><td><table width=270 border=0><tr><td width=100><font color=FFAA00>AI</font></td><td align=right width=170>"+((L2Character)target).getAI().getClass().getSimpleName()+"</td></tr></table></td></tr>");
+				html.replace("%aint%", "<tr><td><table width=270 border=0 bgcolor=131210><tr><td width=100><font color=FFAA00>Intention:</font></td><td align=right width=170>"+String.valueOf(((L2Character)target).getAI().getIntention().name())+"</td></tr></table></td></tr>");
 			}
-
-			StringUtil.append(html1,
-					"<table border=\"0\" width=\"100%\">" +
-					"<tr><td>Level</td><td>",
-					String.valueOf(((L2Character)target).getLevel()),
-					"</td><td>    </td><td>NPC ID</td><td>",
-					String.valueOf(((L2Npc)target).getTemplate().npcId),
-					"</td></tr>" +
-					"<tr><td>Aggro</td><td>" +
-					String.valueOf((target instanceof L2Attackable) ? ((L2Attackable) target).getAggroRange() : 0),
-					"</td><td>    </td><td>Object ID</td><td>",
-					String.valueOf(target.getObjectId()),
-					"</td></tr>" +
-					"<tr><td>Castle</td><td>",
-					String.valueOf(((L2Npc)target).getCastle().getCastleId()),
-					"</td><td>    </td><td>AI </td><td>",
-					(((L2Character)target).hasAI() ? String.valueOf(((L2Character)target).getAI().getIntention().name()) : "NULL"),
-					"</td></tr>" +
-					"</table><br>" +
-					"<font color=\"LEVEL\">Combat</font>" +
-					"<table border=\"0\" width=\"100%\">" +
-					"<tr><td>Current HP</td><td>",
-					String.valueOf(((L2Character)target).getCurrentHp()),
-					"</td><td>Current MP</td><td>",
-					String.valueOf(((L2Character)target).getCurrentMp()),
-					"</td></tr>" +
-					"<tr><td>Max.HP</td><td>",
-					String.valueOf((int) (((L2Character)target).getMaxHp() / ((L2Character)target).getStat().calcStat(Stats.MAX_HP, 1, (L2Character)target, null))),
-					"*",
-					String.valueOf((int) (((L2Character)target).getStat().calcStat(Stats.MAX_HP, 1, (L2Character)target, null))),
-					"</td><td>Max.MP</td><td>",
-					String.valueOf(((L2Character)target).getMaxMp()),
-					"</td></tr>" +
-					"<tr><td>P.Atk.</td><td>",
-					String.valueOf(((L2Character)target).getPAtk(null)),
-					"</td><td>M.Atk.</td><td>",
-					String.valueOf(((L2Character)target).getMAtk(null, null)),
-					"</td></tr>" +
-					"<tr><td>P.Def.</td><td>",
-					String.valueOf(((L2Character)target).getPDef(null)),
-					"</td><td>M.Def.</td><td>",
-					String.valueOf(((L2Character)target).getMDef(null, null)),
-					"</td></tr>" +
-					"<tr><td>Accuracy</td><td>" +
-					String.valueOf(((L2Character)target).getAccuracy()),
-					"</td><td>Evasion</td><td>",
-					String.valueOf(((L2Character)target).getEvasionRate(null)),
-					"</td></tr>" +
-					"<tr><td>Critical</td><td>",
-					String.valueOf(((L2Character)target).getCriticalHit(null, null)),
-					"</td><td>Speed</td><td>",
-					String.valueOf(((L2Character)target).getRunSpeed()),
-					"</td></tr>" +
-					"<tr><td>Atk.Speed</td><td>",
-					String.valueOf(((L2Character)target).getPAtkSpd()),
-					"</td><td>Cast.Speed</td><td>",
-					String.valueOf(((L2Character)target).getMAtkSpd()),
-					"</td></tr>" +
-					"</table><br>" +
-					"<font color=\"LEVEL\">Basic Stats</font>" +
-					"<table border=\"0\" width=\"100%\">" +
-					"<tr><td>STR</td><td>",
-					String.valueOf(((L2Character)target).getSTR()),
-					"</td><td>DEX</td><td>",
-					String.valueOf(((L2Character)target).getDEX()),
-					"</td><td>CON</td><td>",
-					String.valueOf(((L2Character)target).getCON()),
-					"</td></tr>" +
-					"<tr><td>INT</td><td>",
-					String.valueOf(((L2Character)target).getINT()),
-					"</td><td>WIT</td><td>",
-					String.valueOf(((L2Character)target).getWIT()),
-					"</td><td>MEN</td><td>",
-					String.valueOf(((L2Character)target).getMEN()),
-					"</td></tr>" +
-					"</table>" +
-					"<br><center><table><tr><td><button value=\"Edit NPC\" action=\"bypass -h admin_edit_npc ",
-					String.valueOf(((L2Npc)target).getTemplate().npcId),
-					"\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><br1></td>" +
-					"<td><button value=\"Kill\" action=\"bypass -h admin_kill\" width=40 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><br1></tr>" +
-					"<tr><td><button value=\"Show DropList\" action=\"bypass -h admin_show_droplist ",
-					String.valueOf(((L2Npc)target).getTemplate().npcId),
-					"\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>" +
-					"<td><button value=\"Delete\" action=\"bypass -h admin_delete\" width=40 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>" +
-					"<tr><td><button value=\"Show SkillList\" action=\"bypass -h admin_show_skilllist_npc ",
-					String.valueOf(((L2Npc)target).getTemplate().npcId),
-				 	"\" width=100 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td></td></tr></table></center><br></body></html>"
-					);
-
-			html.setHtml(html1.toString());
-			activeChar.sendPacket(html);
+			else
+			{
+				html.replace("%ai%",   "");
+				html.replace("%aint%", "");
+			}
+			activeChar.sendPacket(html);			
 		}
 		else if (Config.ALT_GAME_VIEWNPC)
 		{
