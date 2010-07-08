@@ -1034,8 +1034,8 @@
 		<set name="hitTime" val="1200" />
 		<set name="reuseDelay" val="4000" />
 		<set name="coolTime" val="320" />
-		<set name="skillType" val="MDAM" /> <!-- TODO: Missing core support for additional damage based on target buffs count -->
-		<set name="dependOnTargetBuff" val=".5"/>
+		<set name="skillType" val="MDAM" />
+		<set name="dependOnTargetBuff" val="0.1"/>
 		<set name="lvlDepend" val="2" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
