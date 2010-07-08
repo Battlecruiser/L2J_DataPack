@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS `clanhall` (
 );
 
 INSERT IGNORE INTO `clanhall` VALUES
-('21','Fortress of Resistance','0','0','Ol Mahum Fortress of Resistance','Dion','0','0','0'),
+('21','Fortress of Resistance','0','0','Contestable Clan Hall','Dion','0','0','0'),
 ('22','Moonstone Hall','0','500000','Clan hall located in the Town of Gludio','Gludio','0','2','0'),
 ('23','Onyx Hall','0','500000','Clan hall located in the Town of Gludio','Gludio','0','2','0'),
 ('24','Topaz Hall','0','500000','Clan hall located in the Town of Gludio','Gludio','0','2','0'),
@@ -53,6 +53,6 @@ INSERT IGNORE INTO `clanhall` VALUES
 ('59','Heavy Metal Hall','0','500000','Clan hall located in the Town of Schuttgart','Schuttgart','0','2','0'),
 ('60','Molten Ore Hall','0','500000','Clan hall located in the Town of Schuttgart','Schuttgart','0','2','0'),
 ('61','Titan Hall','0','500000','Clan hall located in the Town of Schuttgart','Schuttgart','0','2','0'),
-('62','Rainbow Springs','0','0','','Goddard','0','0','0'),
-('63','Beast Farm','0','0','','Rune','0','0','0'),
-('64','Fortress of the Dead','0','0','','Rune','0','0','0');
+('62','Rainbow Springs','0','0','Contestable Clan Hall','Goddard','0','0','0'),
+('63','Beast Farm','0','0','Contestable Clan Hall','Rune','0','0','0'),
+('64','Fortress of the Dead','0','0','Contestable Clan Hall','Rune','0','0','0');
