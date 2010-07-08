@@ -2,8 +2,9 @@
 # 2010-02-17 based on official Franz server
 
 import sys
-from com.l2jserver.gameserver.model.quest				import State
-from com.l2jserver.gameserver.model.quest				import QuestState
+from com.l2jserver					import Config
+from com.l2jserver.gameserver.model.quest		import State
+from com.l2jserver.gameserver.model.quest		import QuestState
 from com.l2jserver.gameserver.model.quest.jython	import QuestJython as JQuest
 
 qn = "376_GiantsExploration1"
@@ -13,7 +14,7 @@ SOBLING	= 31147
 
 # Items
 ANCIENT_PARCHMENT = 14841
-BOOK1,BOOK2,BOOK3,BOOK4,BOOK5 = [14836,14837,14838,14839,14840]
+BOOK1,BOOK2,BOOK3,BOOK4,BOOK5 = range(14836,14841)
 
 # Drop Chance
 DROP_CHANCE = 20
@@ -54,31 +55,14 @@ class Quest (JQuest) :
 			st.exitQuest(1)
 			st.playSound("ItemSound.quest_finish")
 		elif event.isdigit() :
-			if int(event) == 9967 :											# Recipe - Dynasty Sword (60%)
-				htmltext = self.onExchangeRequest(event,st,1,10)
-			elif int(event) == 9968 :										# Recipe - Dynasty Blade (60%)
-				htmltext = self.onExchangeRequest(event,st,1,10)
-			elif int(event) == 9969 :										# Recipe - Dynasty Phantom (60%)
-				htmltext = self.onExchangeRequest(event,st,1,10)
-			elif int(event) == 9970 :										# Recipe - Dynasty Bow (60%)
-				htmltext = self.onExchangeRequest(event,st,1,10)
-			elif int(event) == 9971 :										# Recipe - Dynasty Knife (60%)
-				htmltext = self.onExchangeRequest(event,st,1,10)
-			elif int(event) == 9972 :										# Recipe - Dynasty Halberd (60%)
-				htmltext = self.onExchangeRequest(event,st,1,10)
-			elif int(event) == 9973 :										# Recipe - Dynasty Cudgel (60%)
-				htmltext = self.onExchangeRequest(event,st,1,10)
-			elif int(event) == 9974 :										# Recipe - Dynasty Mace (60%)
-				htmltext = self.onExchangeRequest(event,st,1,10)
-			elif int(event) == 9975 :										# Recipe - Dynasty Bagh-Nakh (60%)
-				htmltext = self.onExchangeRequest(event,st,1,10)
-			elif int(event) == 9628 :										# Leonard
-				htmltext = self.onExchangeRequest(event,st,6,1)
-			elif int(event) == 9629 :										# Adamantine
-				htmltext = self.onExchangeRequest(event,st,3,1)
-			elif int(event) == 9630 :										# Orichalcum
-				htmltext = self.onExchangeRequest(event,st,4,1)
-
+			if int(event) in range(9967,9976) :	# 60% Recipes: Dynasty Sword,Dynasty Phantom,Dynasty Blade,Dynasty Bow,Dynasty Knife,Dynasty Halberd,Dynasty Cudgel,Dynasty Mace,Dynasty Bagh-Nakh
+				htmltext = self.onExchangeRequest(event,st,int(Config.RATE_QUEST_REWARD_RECIPE),10)
+			elif int(event) == 9628 :		# Leonard
+				htmltext = self.onExchangeRequest(event,st,int(Config.RATE_QUEST_REWARD_RECIPE)*6,1)
+			elif int(event) == 9629 :		# Adamantine
+				htmltext = self.onExchangeRequest(event,st,int(Config.RATE_QUEST_REWARD_RECIPE)*3,1)
+			elif int(event) == 9630 :		# Orichalcum
+				htmltext = self.onExchangeRequest(event,st,int(Config.RATE_QUEST_REWARD_RECIPE)*4,1)
 		return htmltext
 
 	def onTalk (self,npc,player) :
@@ -111,8 +95,12 @@ class Quest (JQuest) :
 		npcId = npc.getNpcId()
 		cond = st.getInt("cond")
 		if cond == 1 and npcId in MOBS :
-			if st.getRandom(100) < DROP_CHANCE :
-				st.giveItems(ANCIENT_PARCHMENT,1)
+			chance = DROP_CHANCE*Config.RATE_QUEST_DROP
+			numItems, chance = divmod(chance,100)
+			if st.getRandom(100) < chance :
+				numItems += 1
+			if numItems > 0 :
+				st.giveItems(ANCIENT_PARCHMENT,int(numItems))
 				st.playSound("ItemSound.quest_itemget")
 		return
 
