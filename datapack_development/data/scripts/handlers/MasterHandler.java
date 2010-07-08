@@ -63,7 +63,6 @@ public class MasterHandler
 	{
 		ActionHandler.getInstance().registerActionShiftHandler(new L2DoorInstanceActionShift());
 		ActionHandler.getInstance().registerActionShiftHandler(new L2ItemInstanceActionShift());
-		ActionHandler.getInstance().registerActionShiftHandler(new L2MerchantInstanceActionShift());
 		ActionHandler.getInstance().registerActionShiftHandler(new L2NpcActionShift());
 		ActionHandler.getInstance().registerActionShiftHandler(new L2PcInstanceActionShift());
 		ActionHandler.getInstance().registerActionShiftHandler(new L2StaticObjectInstanceActionShift());
