@@ -181,7 +181,6 @@ public class Heal implements ISkillHandler
 				hp = 0;
 
 			target.setCurrentHp(hp + target.getCurrentHp());
-			target.setLastHealAmount((int) hp);
 			StatusUpdate su = new StatusUpdate(target.getObjectId());
 			su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
 			target.sendPacket(su);
