@@ -57,7 +57,6 @@ public class ManaHeal implements ISkillHandler
 			}
 			//int cLev = activeChar.getLevel();
 			//hp += skill.getPower()/*+(Math.sqrt(cLev)*cLev)+cLev*/;
-			target.setLastHealAmount((int) mp);
 			target.setCurrentMp(mp + target.getCurrentMp());
 			StatusUpdate sump = new StatusUpdate(target.getObjectId());
 			sump.addAttribute(StatusUpdate.CUR_MP, (int) target.getCurrentMp());
