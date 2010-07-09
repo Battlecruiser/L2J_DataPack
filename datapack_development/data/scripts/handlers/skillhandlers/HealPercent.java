@@ -129,7 +129,6 @@ public class HealPercent implements ISkillHandler
 
 				amount = Math.min(amount, target.getMaxHp() - target.getCurrentHp());
 				target.setCurrentHp(amount + target.getCurrentHp());
-				target.setLastHealAmount((int)amount);
 
 				if (targetPlayer)
 				{
