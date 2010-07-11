@@ -592,10 +592,16 @@
 		</for>
 	</skill>
 	<skill id="5571" levels="1" name="Mutual Response">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="600" />
 		<set name="magicLvl" val="81" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="10" />
+		<set name="skillType" val="HPMPHEAL_PERCENT" /> <!-- TEMP FIX -->
+		<set name="target" val="TARGET_SUMMON" />
+		<for>
+			<!-- effect name="ManaHealPercent" val="0" effectPower="5" effectType="MANAHEAL_PERCENT"/ TODO: Needs Core-Side Support -->
+		</for>
 	</skill>
 	<skill id="5572" levels="1" name="Warrior Ability - Haste">
 		<!-- NOTE: Description says "Excludes damage caused by a skill or ranged attack" but is client typo -->
