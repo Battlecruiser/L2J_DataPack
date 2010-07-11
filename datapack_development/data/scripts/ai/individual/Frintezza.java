@@ -1238,7 +1238,11 @@ public class Frintezza extends L2AttackableAIScript
 		}
 
 		String htmltext = "";
-		if (GrandBossManager.getInstance().getBossStatus(FRINTEZZA) == DORMANT)
+		if (GrandBossManager.getInstance().getBossStatus(FRINTEZZA) == DEAD)
+		{
+			htmltext = "<html><body>There is nothing beyond the Magic Force Field. Come back later.<br>(You may not enter because Frintezza is not inside the Imperial Tomb.)</body></html>";
+		}
+		else if (GrandBossManager.getInstance().getBossStatus(FRINTEZZA) == DORMANT)
 		{
 			if ((!player.isInParty() || !player.getParty().isLeader(player))
 				|| (player.getParty().getCommandChannel() == null)
@@ -1248,7 +1252,7 @@ public class Frintezza extends L2AttackableAIScript
 			}
 			else if (player.getParty().getCommandChannel().getPartys().size() < 4 || player.getParty().getCommandChannel().getPartys().size() > 5)
 			{
-				htmltext = "<html><body>Your command channel needs to have at least 4 parties and a maximum of 5.</html></body>";
+				htmltext = "<html><body>Your command channel needs to have at least 4 parties and a maximum of 5.</body></html>";
 			}
 			else if (player.getInventory().getItemByItemId(8073) == null)
 			{
