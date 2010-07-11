@@ -49,7 +49,7 @@ public class HealPercent implements ISkillHandler
 
 		if (handler != null)
 			handler.useSkill(activeChar, skill, targets);
-		
+
 		boolean cp = false;
 		boolean hp = false;
 		boolean mp = false;
@@ -82,7 +82,7 @@ public class HealPercent implements ISkillHandler
 
 		for (L2Character target: (L2Character[]) targets)
 		{
-			if (target == null || target.isDead())
+			if (target == null || target.isDead() || target.isInvul())
 				continue;
 
 			targetPlayer = target instanceof L2PcInstance;
