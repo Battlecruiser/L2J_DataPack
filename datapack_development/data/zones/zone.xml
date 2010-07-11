@@ -690,7 +690,7 @@
 	<!-- No landing -->
 	<zone id="11060" type="NoLandingZone" shape="Cuboid" minZ="-5150" maxZ="10100" />
 
-	<!-- Clan Hall Zones -->
+	<!-- Clan Hall/Siegable Clan Hall Zones -->
 	<zone id="11100" type="ClanHallZone" shape="NPoly" minZ="-2104" maxZ="-1104"> <!-- partisan_agit001 -->
 		<stat name="clanHallId" val="21" />
 		<spawn X="43370" Y="108839" Z="-1980" />
@@ -888,233 +888,431 @@
 		<spawn X="57970" Y="-28572" Z="569" />
 	</zone>
 
+	<!-- Castle Zones -->
+	<zone id="11200" type="CastleZone" shape="NPoly" minZ="-4452" maxZ="3547"> <!-- gludio_castle -->
+		<stat name="castleId" val="1" />
+		<spawn X="-16554" Y="109382" Z="-1799" />
+		<spawn X="-16869" Y="109375" Z="-1799" />
+		<spawn X="-16659" Y="109261" Z="-1799" />
+		<spawn X="-16618" Y="109485" Z="-1799" />
+		<spawn X="-81616" Y="157104" Z="-3150" isChaotic="true" />
+		<spawn X="-80688" Y="157216" Z="-3150" isChaotic="true" />
+		<spawn X="-79568" Y="156960" Z="-3150" isChaotic="true" />
+		<spawn X="-78800" Y="157744" Z="-3150" isChaotic="true" />
+		<spawn X="-80448" Y="157968" Z="-3130" isChaotic="true" />
+		<spawn X="-81712" Y="159536" Z="-3230" isChaotic="true" />
+		<spawn X="-79744" Y="160592" Z="-3330" isChaotic="true" />
+		<spawn X="-79584" Y="159408" Z="-3180" isChaotic="true" />
+		<spawn X="-74016" Y="150656" Z="-2800" isChaotic="true" />
+		<spawn X="-72720" Y="149632" Z="-2780" isChaotic="true" />
+		<spawn X="-75904" Y="162000" Z="-3300" isChaotic="true" />
+		<spawn X="-75488" Y="161472" Z="-3250" isChaotic="true" />
+		<spawn X="-74688" Y="160736" Z="-3200" isChaotic="true" />
+		<spawn X="-74352" Y="161488" Z="-3250" isChaotic="true" />
+		<spawn X="-76656" Y="160768" Z="-3280" isChaotic="true" />
+		<spawn X="-77472" Y="160960" Z="-3470" isChaotic="true" />
+		<spawn X="-77776" Y="158752" Z="-3270" isChaotic="true" />
+		<spawn X="-80448" Y="161488" Z="-3420" isChaotic="true" />
+		<spawn X="-75440" Y="162672" Z="-3350" isChaotic="true" />
+		<spawn X="-81760" Y="161248" Z="-3200" isChaotic="true" />
+	</zone>
+	<zone id="11201" type="CastleZone" shape="NPoly" minZ="-4646" maxZ="4000"> <!-- dion_castle -->
+		<stat name="castleId" val="2" />
+		<spawn X="20514" Y="160368" Z="-1993" />
+		<spawn X="20829" Y="160375" Z="-1993" />
+		<spawn X="20619" Y="160489" Z="-1993" />
+		<spawn X="20578" Y="160265" Z="-1993" />
+		<spawn X="-81616" Y="157104" Z="-3150" isChaotic="true" />
+		<spawn X="-80688" Y="157216" Z="-3150" isChaotic="true" />
+		<spawn X="-79568" Y="156960" Z="-3150" isChaotic="true" />
+		<spawn X="-78800" Y="157744" Z="-3150" isChaotic="true" />
+		<spawn X="-80448" Y="157968" Z="-3130" isChaotic="true" />
+		<spawn X="-81712" Y="159536" Z="-3230" isChaotic="true" />
+		<spawn X="-79744" Y="160592" Z="-3330" isChaotic="true" />
+		<spawn X="-79584" Y="159408" Z="-3180" isChaotic="true" />
+		<spawn X="-74016" Y="150656" Z="-2800" isChaotic="true" />
+		<spawn X="-72720" Y="149632" Z="-2780" isChaotic="true" />
+		<spawn X="-75904" Y="162000" Z="-3300" isChaotic="true" />
+		<spawn X="-75488" Y="161472" Z="-3250" isChaotic="true" />
+		<spawn X="-74688" Y="160736" Z="-3200" isChaotic="true" />
+		<spawn X="-74352" Y="161488" Z="-3250" isChaotic="true" />
+		<spawn X="-76656" Y="160768" Z="-3280" isChaotic="true" />
+		<spawn X="-77472" Y="160960" Z="-3470" isChaotic="true" />
+		<spawn X="-77776" Y="158752" Z="-3270" isChaotic="true" />
+		<spawn X="-80448" Y="161488" Z="-3420" isChaotic="true" />
+		<spawn X="-75440" Y="162672" Z="-3350" isChaotic="true" />
+		<spawn X="-81760" Y="161248" Z="-3200" isChaotic="true" />
+	</zone>
+	<zone id="11202" type="CastleZone" shape="NPoly" minZ="-4519" maxZ="19931"> <!-- giran_castle -->
+		<stat name="castleId" val="3" />
+		<spawn X="116540" Y="146655" Z="-1866" />
+		<spawn X="116547" Y="146340" Z="-1866" />
+		<spawn X="116661" Y="146550" Z="-1866" />
+		<spawn X="116437" Y="146591" Z="-1866" />
+		<spawn X="122098" Y="70373" Z="-2864" isChaotic="true" />
+		<spawn X="118674" Y="71218" Z="-2743" isChaotic="true" />
+		<spawn X="118040" Y="67175" Z="-2905" isChaotic="true" />
+		<spawn X="119300" Y="70660" Z="-2850" isChaotic="true" />
+		<spawn X="118851" Y="70566" Z="-2800" isChaotic="true" />
+		<spawn X="112655" Y="70976" Z="-3122" isChaotic="true" />
+		<spawn X="119712" Y="66376" Z="-2960" isChaotic="true" />
+		<spawn X="107511" Y="82890" Z="-2515" isChaotic="true" />
+		<spawn X="105702" Y="82773" Z="-2803" isChaotic="true" />
+		<spawn X="104257" Y="82194" Z="-2581" isChaotic="true" />
+		<spawn X="104474" Y="81109" Z="-2651" isChaotic="true" />
+	</zone>
+	<zone id="11203" type="CastleZone" shape="NPoly" minZ="-4246" maxZ="19931"> <!-- oren_castle -->
+		<stat name="castleId" val="4" />
+		<spawn X="82616" Y="38750" Z="-1593" />
+		<spawn X="82623" Y="38435" Z="-1593" />
+		<spawn X="82737" Y="38645" Z="-1593" />
+		<spawn X="82513" Y="38686" Z="-1593" />
+		<spawn X="122098" Y="70373" Z="-2864" isChaotic="true" />
+		<spawn X="118674" Y="71218" Z="-2743" isChaotic="true" />
+		<spawn X="118040" Y="67175" Z="-2905" isChaotic="true" />
+		<spawn X="119300" Y="70660" Z="-2850" isChaotic="true" />
+		<spawn X="118851" Y="70566" Z="-2800" isChaotic="true" />
+		<spawn X="112655" Y="70976" Z="-3122" isChaotic="true" />
+		<spawn X="119712" Y="66376" Z="-2960" isChaotic="true" />
+		<spawn X="107511" Y="82890" Z="-2515" isChaotic="true" />
+		<spawn X="105702" Y="82773" Z="-2803" isChaotic="true" />
+		<spawn X="104257" Y="82194" Z="-2581" isChaotic="true" />
+		<spawn X="104474" Y="81109" Z="-2651" isChaotic="true" />
+	</zone>
+	<zone id="11204" type="CastleZone" shape="NPoly" minZ="-3328" maxZ="6672"> <!-- aden_castle -->
+		<stat name="castleId" val="5" />
+		<spawn X="147700" Y="4608" Z="-2784" />
+		<spawn X="147705" Y="4865" Z="-2784" />
+		<spawn X="147200" Y="4865" Z="-2784" />
+		<spawn X="147200" Y="4350" Z="-2784" />
+		<spawn X="147705" Y="4350" Z="-2784" />
+		<spawn X="122098" Y="70373" Z="-2864" isChaotic="true" />
+		<spawn X="118674" Y="71218" Z="-2743" isChaotic="true" />
+		<spawn X="118040" Y="67175" Z="-2905" isChaotic="true" />
+		<spawn X="119300" Y="70660" Z="-2850" isChaotic="true" />
+		<spawn X="118851" Y="70566" Z="-2800" isChaotic="true" />
+		<spawn X="112655" Y="70976" Z="-3122" isChaotic="true" />
+		<spawn X="119712" Y="66376" Z="-2960" isChaotic="true" />
+		<spawn X="107511" Y="82890" Z="-2515" isChaotic="true" />
+		<spawn X="105702" Y="82773" Z="-2803" isChaotic="true" />
+		<spawn X="104257" Y="82194" Z="-2581" isChaotic="true" />
+		<spawn X="104474" Y="81109" Z="-2651" isChaotic="true" />
+	</zone>
+	<zone id="11205" type="CastleZone" shape="NPoly" minZ="-2742" maxZ="4000"> <!-- innadrile_castle -->
+		<stat name="castleId" val="6" />
+		<spawn X="114465" Y="249147" Z="-89" />
+		<spawn X="114780" Y="249154" Z="-89" />
+		<spawn X="114570" Y="249268" Z="-89" />
+		<spawn X="114529" Y="249044" Z="-89" />
+		<spawn X="122098" Y="70373" Z="-2864" isChaotic="true" />
+		<spawn X="118674" Y="71218" Z="-2743" isChaotic="true" />
+		<spawn X="118040" Y="67175" Z="-2905" isChaotic="true" />
+		<spawn X="119300" Y="70660" Z="-2850" isChaotic="true" />
+		<spawn X="118851" Y="70566" Z="-2800" isChaotic="true" />
+		<spawn X="112655" Y="70976" Z="-3122" isChaotic="true" />
+		<spawn X="119712" Y="66376" Z="-2960" isChaotic="true" />
+		<spawn X="107511" Y="82890" Z="-2515" isChaotic="true" />
+		<spawn X="105702" Y="82773" Z="-2803" isChaotic="true" />
+		<spawn X="104257" Y="82194" Z="-2581" isChaotic="true" />
+		<spawn X="104474" Y="81109" Z="-2651" isChaotic="true" />
+	</zone>
+	<zone id="11206" type="CastleZone" shape="NPoly" minZ="-3670" maxZ="1830"> <!-- godad_castle -->
+		<stat name="castleId" val="7" />
+		<spawn X="147408" Y="-46448" Z="-963" />
+		<spawn X="147520" Y="-46432" Z="-963" />
+		<spawn X="147408" Y="-46896" Z="-963" />
+		<spawn X="147536" Y="-46896" Z="-963" />
+		<spawn X="42640" Y="-54496" Z="-2310" isChaotic="true" />
+		<spawn X="38304" Y="-55440" Z="-1136" isChaotic="true" />
+		<spawn X="40192" Y="-57600" Z="-2343" isChaotic="true" />
+		<spawn X="38400" Y="-56832" Z="-992" isChaotic="true" />
+		<spawn X="35632" Y="-54800" Z="-1744" isChaotic="true" />
+		<spawn X="36407" Y="-54245" Z="-1224" isChaotic="true" />
+		<spawn X="43936" Y="-56480" Z="-3627" isChaotic="true" />
+		<spawn X="39440" Y="-60080" Z="-2870" isChaotic="true" />
+		<spawn X="41376" Y="-55376" Z="-1488" isChaotic="true" />
+		<spawn X="41920" Y="-57760" Z="-2392" isChaotic="true" />
+		<spawn X="41409" Y="-58699" Z="-2848" isChaotic="true" />
+		<spawn X="40784" Y="-59888" Z="-2600" isChaotic="true" />
+	</zone>
+	<zone id="11207" type="CastleZone" shape="Cuboid" minZ="-2200" maxZ="6000"> <!-- rune_castle -->
+		<stat name="castleId" val="8" />
+		<spawn X="11224" Y="-49176" Z="3864" />
+		<spawn X="11048" Y="-49256" Z="3864" />
+		<spawn X="11048" Y="-49080" Z="3864" />
+		<spawn X="142656" Y="-55008" Z="-3024" isChaotic="true" />
+		<spawn X="142832" Y="-55680" Z="-3462" isChaotic="true" />
+		<spawn X="143152" Y="-56368" Z="-3456" isChaotic="true" />
+		<spawn X="145344" Y="-59472" Z="-3344" isChaotic="true" />
+	</zone>
+	<zone id="11208" type="CastleZone" shape="Cuboid" minZ="-1934" maxZ="3566"> <!-- schutt_castle -->
+		<stat name="castleId" val="9" />
+		<spawn X="77641" Y="-150494" Z="776" />
+		<spawn X="77460" Y="-150505" Z="776" />
+		<spawn X="77467" Y="-150854" Z="776" />
+		<spawn X="77640" Y="-150869" Z="776" />
+		<spawn X="42640" Y="-54496" Z="-2310" isChaotic="true" />
+		<spawn X="38304" Y="-55440" Z="-1136" isChaotic="true" />
+		<spawn X="40192" Y="-57600" Z="-2343" isChaotic="true" />
+		<spawn X="38400" Y="-56832" Z="-992" isChaotic="true" />
+		<spawn X="35632" Y="-54800" Z="-1744" isChaotic="true" />
+		<spawn X="36407" Y="-54245" Z="-1224" isChaotic="true" />
+		<spawn X="142656" Y="-55008" Z="-3024" isChaotic="true" />
+		<spawn X="142832" Y="-55680" Z="-3462" isChaotic="true" />
+		<spawn X="143152" Y="-56368" Z="-3456" isChaotic="true" />
+		<spawn X="145344" Y="-59472" Z="-3344" isChaotic="true" />
+		<spawn X="145872" Y="-59744" Z="-3328" isChaotic="true" />
+		<spawn X="150304" Y="-59800" Z="-3504" isChaotic="true" />
+	</zone>
+
+	<!-- Castle Siege Zones -->
+	<zone id="11220" type="SiegeZone" shape="NPoly" minZ="-4448" maxZ="3551"> <!-- gludio_castle_battlefield_territory -->
+		<stat name="castleId" val="1" />
+	</zone>
+	<zone id="11221" type="SiegeZone" shape="NPoly" minZ="-4642" maxZ="4000"> <!-- dion_castle_battlefield_territory -->
+		<stat name="castleId" val="2" />
+	</zone>
+	<zone id="11222" type="SiegeZone" shape="NPoly" minZ="-4515" maxZ="19935"> <!-- giran_castle_battlefield_territory -->
+		<stat name="castleId" val="3" />
+	</zone>
+	<zone id="11223" type="SiegeZone" shape="NPoly" minZ="-4242" maxZ="19935"> <!-- oren_castle_battlefield_territory -->
+		<stat name="castleId" val="4" />
+	</zone>
+	<zone id="11224" type="SiegeZone" shape="NPoly" minZ="-3184" maxZ="6816"> <!-- aden_castle_battlefield_territory -->
+		<stat name="castleId" val="5" />
+	</zone>
+	<zone id="11225" type="SiegeZone" shape="NPoly" minZ="-2738" maxZ="4000"> <!-- innadrile_castle_battlefield_territory -->
+		<stat name="castleId" val="6" />
+	</zone>
+	<zone id="11226" type="SiegeZone" shape="NPoly" minZ="-3397" maxZ="2103"> <!-- godad_castle_battlefield_territory -->
+		<stat name="castleId" val="7" />
+	</zone>
+	<zone id="11227" type="SiegeZone" shape="NPoly" minZ="-5000" maxZ="6000"> <!-- rune_castle_battlefield_territory -->
+		<stat name="castleId" val="8" />
+	</zone>
+	<zone id="11228" type="SiegeZone" shape="NPoly" minZ="-1200" maxZ="2811"> <!-- schutt_castle_battlefield_territory -->
+		<stat name="castleId" val="9" />
+	</zone>
+
+	<!-- Siegable Clan Hall Siege Zones -->
+	<zone id="11300" type="SiegeZone" shape="NPoly" minZ="-2344" maxZ="-1544"> <!-- partisan_agit001_battlefield_territory -->
+		<stat name="clanHallId" val="21" />
+	</zone>
+	<zone id="11301" type="SiegeZone" shape="NPoly" minZ="-2634" maxZ="366"> <!-- devastated_castle_battlefield_territory -->
+		<stat name="clanHallId" val="34" />
+	</zone>
+	<zone id="11302" type="SiegeZone" shape="NPoly" minZ="-2920" maxZ="80"> <!-- bandits'_stronghold_battlefield_territory -->
+		<stat name="clanHallId" val="35" />
+	</zone>
+
+	<!-- Fishing Zones -->
+	<zone id="11400" type="FishingZone" shape="NPoly" minZ="-3991" maxZ="-3759" /> <!-- fishing_place_1 (Not Verified) -->
+	<zone id="11401" type="FishingZone" shape="NPoly" minZ="-3634" maxZ="-3434" /> <!-- fishing_place_2 -->
+	<zone id="11402" type="FishingZone" shape="NPoly" minZ="-3668" maxZ="-3468" /> <!-- fishing_place_3 -->
+	<zone id="11403" type="FishingZone" shape="NPoly" minZ="-3724" maxZ="-3524" /> <!-- fishing_place_4 -->
+	<zone id="11404" type="FishingZone" shape="NPoly" minZ="-2871" maxZ="-2671" /> <!-- fishing_place_5 -->
+	<zone id="11405" type="FishingZone" shape="NPoly" minZ="-2787" maxZ="-2587" /> <!-- fishing_place_6 -->
+	<zone id="11406" type="FishingZone" shape="NPoly" minZ="-2717" maxZ="-2517" /> <!-- fishing_place_7 -->
+	<zone id="11407" type="FishingZone" shape="NPoly" minZ="-1609" maxZ="-1409" /> <!-- fishing_place_8 -->
+	<zone id="11408" type="FishingZone" shape="NPoly" minZ="-1694" maxZ="-1494" /> <!-- fishing_place_9 -->
+	<zone id="11419" type="FishingZone" shape="NPoly" minZ="-1979" maxZ="-1779" /> <!-- fishing_place_10 -->
+	<zone id="11410" type="FishingZone" shape="NPoly" minZ="-2152" maxZ="-1952" /> <!-- fishing_place_11 -->
+	<zone id="11411" type="FishingZone" shape="NPoly" minZ="-4388" maxZ="-1388" /> <!-- fishing_place_12 -->
+	<zone id="11412" type="FishingZone" shape="NPoly" minZ="-4916" maxZ="-1916" /> <!-- fishing_place_13 -->
+	<zone id="11413" type="FishingZone" shape="NPoly" minZ="-4640" maxZ="-1640" /> <!-- fishing_place_14 -->
+	<zone id="11414" type="FishingZone" shape="NPoly" minZ="-4216" maxZ="-1216" /> <!-- fishing_place_15 -->
+	<zone id="11415" type="FishingZone" shape="NPoly" minZ="-2568" maxZ="1432" /> <!-- fishing_place_16 -->
+	<zone id="11416" type="FishingZone" shape="NPoly" minZ="-7356" maxZ="-1356" /> <!-- fishing_place_17 -->
+	<zone id="11417" type="FishingZone" shape="NPoly" minZ="-3892" maxZ="-892" /> <!-- fishing_place_18 -->
+	<zone id="11418" type="FishingZone" shape="NPoly" minZ="-4684" maxZ="-1684" /> <!-- fishing_place_19 -->
+	<zone id="11419" type="FishingZone" shape="NPoly" minZ="-4874" maxZ="-1874" /> <!-- fishing_place_20 -->
+	<zone id="11420" type="FishingZone" shape="NPoly" minZ="-4372" maxZ="-1372" /> <!-- fishing_place_21 -->
+	<zone id="11421" type="FishingZone" shape="NPoly" minZ="-4328" maxZ="-1328" /> <!-- fishing_place_22 -->
+	<zone id="11422" type="FishingZone" shape="NPoly" minZ="-4096" maxZ="-1096" /> <!-- fishing_place_23 -->
+	<zone id="11423" type="FishingZone" shape="NPoly" minZ="-4724" maxZ="-1724" /> <!-- fishing_place_24 -->
+	<zone id="11424" type="FishingZone" shape="NPoly" minZ="-4764" maxZ="-1764" /> <!-- fishing_place_25 -->
+	<zone id="11425" type="FishingZone" shape="NPoly" minZ="-3900" maxZ="-900" /> <!-- fishing_place_26 -->
+	<zone id="11426" type="FishingZone" shape="NPoly" minZ="-4004" maxZ="-1004" /> <!-- fishing_place_27 -->
+	<zone id="11427" type="FishingZone" shape="NPoly" minZ="-3856" maxZ="-856" /> <!-- fishing_place_28 -->
+	<zone id="11428" type="FishingZone" shape="NPoly" minZ="-4848" maxZ="-1848" /> <!-- fishing_place_29 -->
+	<zone id="11429" type="FishingZone" shape="NPoly" minZ="-4044" maxZ="-1044" /> <!-- fishing_place_30 -->
+	<zone id="11430" type="FishingZone" shape="NPoly" minZ="-4084" maxZ="-1084" /> <!-- fishing_place_31 -->
+	<zone id="11431" type="FishingZone" shape="NPoly" minZ="-4880" maxZ="-1880" /> <!-- fishing_place_32 -->
+	<zone id="11432" type="FishingZone" shape="NPoly" minZ="-4828" maxZ="-1828" /> <!-- fishing_place_33 -->
+	<zone id="11433" type="FishingZone" shape="NPoly" minZ="-3772" maxZ="-772" /> <!-- fishing_place_34 -->
+	<zone id="11434" type="FishingZone" shape="NPoly" minZ="-4892" maxZ="-1892" /> <!-- fishing_place_35 -->
+	<zone id="11435" type="FishingZone" shape="NPoly" minZ="-3600" maxZ="-3346" /> <!-- fishing_place_36 (Not Verified) -->
+
 	<!-- Fortress Zones -->
-	<zone id="11501" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
-		<!-- Shanty Fortress -->
+	<zone id="11450" type="FortZone" shape="NPoly" minZ="-2100" maxZ="600"> <!-- Shanty Fortress -->
 		<stat name="fortId" val="101" />
 		<spawn X="-52667" Y="156933" Z="-1727" />
 	</zone>
-	<zone id="11502" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
-		<!-- Southern Fortress -->
+	<zone id="11451" type="FortZone" shape="NPoly" minZ="-3300" maxZ="-1800"> <!-- Southern Fortress -->
 		<stat name="fortId" val="102" />
 		<spawn X="-22672" Y="219354" Z="-2910" />
 	</zone>
-	<zone id="11503" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
-		<!-- Hive Fortress -->
+	<zone id="11452" type="FortZone" shape="NPoly" minZ="-3000" maxZ="-1500"> <!-- Hive Fortress -->
 		<stat name="fortId" val="103" />
 		<spawn X="16917" Y="187773" Z="-2596" />
 	</zone>
-	<zone id="11504" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
-		<!-- Valley Fortress -->
+	<zone id="11453" type="FortZone" shape="NPoly" minZ="-2600" maxZ="-1100"> <!-- Valley Fortress -->
 		<stat name="fortId" val="104" />
 		<spawn X="126520" Y="123318" Z="-2257" />
 	</zone>
-	<zone id="11505" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
-		<!-- Ivory Fortress -->
+	<zone id="11454" type="FortZone" shape="NPoly" minZ="-3100" maxZ="-1600"> <!-- Ivory Fortress -->
 		<stat name="fortId" val="105" />
 		<spawn X="73206" Y="4544" Z="-2717" />
 	</zone>
-	<zone id="11506" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
-		<!-- Narsell Fortress -->
+	<zone id="11455" type="FortZone" shape="NPoly" minZ="-3300" maxZ="-1800"> <!-- Narsell Fortress -->
 		<stat name="fortId" val="106" />
 		<spawn X="155178" Y="55625" Z="-2926" />
 	</zone>
-	<zone id="11507" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
-		<!-- Bayou Fortress -->
+	<zone id="11456" type="FortZone" shape="NPoly" minZ="-3500" maxZ="-2000"> <!-- Bayou Fortress -->
 		<stat name="fortId" val="107" />
 		<spawn X="190365" Y="39690" Z="-3082" />
 	</zone>
-	<zone id="11508" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
-		<!-- White Sands Fortress -->
+	<zone id="11457" type="FortZone" shape="NPoly" minZ="-3400" maxZ="-1900"> <!-- White Sands Fortress -->
 		<stat name="fortId" val="108" />
 		<spawn X="118653" Y="204543" Z="-3006" />
 	</zone>
-	<zone id="11509" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
-		<!-- Borderland Fortress -->
+	<zone id="11458" type="FortZone" shape="NPoly" minZ="-2900" maxZ="-1400"> <!-- Borderland Fortress -->
 		<stat name="fortId" val="109" />
 		<spawn X="159414" Y="-69964" Z="-2536" />
 	</zone>
-	<zone id="11510" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
-		<!-- Swamp Fortress -->
+	<zone id="11459" type="FortZone" shape="NPoly" minZ="-2800" maxZ="-1300"> <!-- Swamp Fortress -->
 		<stat name="fortId" val="110" />
 		<spawn X="70262" Y="-61571" Z="-2460" />
 	</zone>
-	<zone id="11511" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
-		<!-- Archaic Fortress -->
+	<zone id="11460" type="FortZone" shape="NPoly" minZ="-3000" maxZ="-1500"> <!-- Archaic Fortress -->
 		<stat name="fortId" val="111" />
 		<spawn X="109644" Y="-140807" Z="-2629" />
 	</zone>
-	<zone id="11512" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
-		<!-- Floran Fortress - Border -->
+	<zone id="11461" type="FortZone" shape="NPoly" minZ="-3000" maxZ="-1500"> <!-- Floran Fortress - Border -->
 		<stat name="fortId" val="112" />
 		<spawn X="5578" Y="150206" Z="-2563" />
 	</zone>
-	<zone id="11513" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
-		<!-- Cloud Mountain Fortress - Border -->
+	<zone id="11462" type="FortZone" shape="NPoly" minZ="-2900" maxZ="-1400"> <!-- Cloud Mountain Fortress - Border -->
 		<stat name="fortId" val="113" />
 		<spawn X="-52803" Y="91164" Z="-2493" />
 	</zone>
-	<zone id="11514" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
-		<!-- Tanor Fortress - Border -->
+	<zone id="11463" type="FortZone" shape="NPoly" minZ="-1800" maxZ="-300"> <!-- Tanor Fortress - Border -->
 		<stat name="fortId" val="114" />
 		<spawn X="60692" Y="139337" Z="-1426" />
 	</zone>
-	<zone id="11515" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
-		<!-- Dragonspine Fortress - Border -->
+	<zone id="11464" type="FortZone" shape="NPoly" minZ="-3500" maxZ="-2000"> <!-- Dragonspine Fortress - Border -->
 		<stat name="fortId" val="115" />
 		<spawn X="11983" Y="95021" Z="-3100" />
 	</zone>
-	<zone id="11516" type="FortZone" shape="NPoly" minZ="-3800" maxZ="3200">
-		<!-- Antharas Fortress - Border -->
+	<zone id="11465" type="FortZone" shape="NPoly" minZ="-2900" maxZ="-1400"> <!-- Antharas Fortress - Border -->
 		<stat name="fortId" val="116" />
 		<spawn X="79479" Y="90670" Z="-2558" />
 	</zone>
-	<zone id="11517" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
-		<!-- Western Fortress - Border -->
+	<zone id="11466" type="FortZone" shape="NPoly" minZ="-1100" maxZ="400"> <!-- Western Fortress - Border -->
 		<stat name="fortId" val="117" />
 		<spawn X="111820" Y="-15115" Z="-669" />
 	</zone>
-	<zone id="11518" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
-		<!-- Hunters Fortress - Border -->
+	<zone id="11467" type="FortZone" shape="NPoly" minZ="-2200" maxZ="-700"> <!-- Hunters Fortress - Border -->
 		<stat name="fortId" val="118" />
 		<spawn X="125685" Y="95145" Z="-1812" />
 	</zone>
-	<zone id="11519" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
-		<!-- Aaru Fortress - Border -->
+	<zone id="11468" type="FortZone" shape="NPoly" minZ="-2600" maxZ="-1100"> <!-- Aaru Fortress - Border -->
 		<stat name="fortId" val="119" />
 		<spawn X="73459" Y="186257" Z="-2255" />
 	</zone>
-	<zone id="11520" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
-		<!-- Demon Fortress - Border -->
+	<zone id="11469" type="FortZone" shape="NPoly" minZ="-700" maxZ="800"> <!-- Demon Fortress - Border -->
 		<stat name="fortId" val="120" />
 		<spawn X="100686" Y="-54872" Z="-319" />
 	</zone>
-	<zone id="11521" type="FortZone" shape="Cuboid" minZ="-3800" maxZ="3200">
-		<!-- Monastic Fortress - Border -->
+	<zone id="11470" type="FortZone" shape="NPoly" minZ="-1500" maxZ="0"> <!-- Monastic Fortress - Border -->
 		<stat name="fortId" val="121" />
 		<spawn X="72598" Y="-94905" Z="-1102" />
 	</zone>
 
-	<!-- Castle Zones -->
-	<!-- maxZ="30000" use for TEMP FIX until "CoordSynchronize = 2" is fixed -->
-	<zone id="112000" type="NoHqZone" shape="NPoly" minZ="-4448" maxZ="30000" />
-	<zone id="11200" type="CastleZone" shape="NPoly" minZ="-4448" maxZ="30000">
-		<stat name="castleId" val="1" />
-		<spawn X="-16770" Y="109356" Z="-1798" />
+	<!-- Fortress Siege Zones -->
+	<zone id="11501" type="SiegeZone" shape="Cuboid" minZ="-3800" maxZ="3200">
+		<!-- Shanty Fortress -->
+		<stat name="fortId" val="101" />
 	</zone>
-	<zone id="112010" type="NoHqZone" shape="NPoly" minZ="-4642" maxZ="30000" />
-	<zone id="11201" type="CastleZone" shape="NPoly" minZ="-4642" maxZ="30000">
-		<stat name="castleId" val="2" />
-		<spawn X="20515" Y="160384" Z="-1992" />
+	<zone id="11502" type="SiegeZone" shape="Cuboid" minZ="-3800" maxZ="3200">
+		<!-- Southern Fortress -->
+		<stat name="fortId" val="102" />
 	</zone>
-	<zone id="112020" type="NoHqZone" shape="NPoly" minZ="-4515" maxZ="30000" />
-	<zone id="11202" type="CastleZone" shape="NPoly" minZ="-4515" maxZ="30000">
-		<stat name="castleId" val="3" />
-		<spawn X="116553" Y="146396" Z="-1868" />
+	<zone id="11503" type="SiegeZone" shape="Cuboid" minZ="-3800" maxZ="3200">
+		<!-- Hive Fortress -->
+		<stat name="fortId" val="103" />
 	</zone>
-	<zone id="112030" type="NoHqZone" shape="NPoly" minZ="-4242" maxZ="30000" />
-	<zone id="11203" type="CastleZone" shape="NPoly" minZ="-4242" maxZ="30000">
-		<stat name="castleId" val="4" />
-		<spawn X="82644" Y="38542" Z="-1592" />
+	<zone id="11504" type="SiegeZone" shape="Cuboid" minZ="-3800" maxZ="3200">
+		<!-- Valley Fortress -->
+		<stat name="fortId" val="104" />
 	</zone>
-	<zone id="112040" type="NoHqZone" shape="NPoly" minZ="-3184" maxZ="30000" />
-	<zone id="11204" type="CastleZone" shape="NPoly" minZ="-3184" maxZ="30000">
-		<stat name="castleId" val="5" />
-		<spawn X="147726" Y="4611" Z="-2788" />
+	<zone id="11505" type="SiegeZone" shape="Cuboid" minZ="-3800" maxZ="3200">
+		<!-- Ivory Fortress -->
+		<stat name="fortId" val="105" />
 	</zone>
-	<zone id="112050" type="NoHqZone" shape="NPoly" minZ="-2738" maxZ="30000" />
-	<zone id="11205" type="CastleZone" shape="NPoly" minZ="-2738" maxZ="30000">
-		<stat name="castleId" val="6" />
-		<spawn X="114796" Y="249159" Z="-88" />
+	<zone id="11506" type="SiegeZone" shape="Cuboid" minZ="-3800" maxZ="3200">
+		<!-- Narsell Fortress -->
+		<stat name="fortId" val="106" />
 	</zone>
-	<zone id="112060" type="NoHqZone" shape="NPoly" minZ="-3397" maxZ="30000" />
-	<zone id="11206" type="CastleZone" shape="NPoly" minZ="-3397" maxZ="30000">
-		<stat name="castleId" val="7" />
-		<spawn X="147451" Y="-46878" Z="-961" />
+	<zone id="11507" type="SiegeZone" shape="Cuboid" minZ="-3800" maxZ="3200">
+		<!-- Bayou Fortress -->
+		<stat name="fortId" val="107" />
 	</zone>
-	<zone id="112070" type="NoHqZone" shape="NPoly" minZ="-3000" maxZ="30000" />
-	<zone id="11207" type="CastleZone" shape="Cuboid" minZ="-3000" maxZ="30000">
-		<stat name="castleId" val="8" />
-		<spawn X="10558" Y="-49160" Z="3856" />
+	<zone id="11508" type="SiegeZone" shape="Cuboid" minZ="-3800" maxZ="3200">
+		<!-- White Sands Fortress -->
+		<stat name="fortId" val="108" />
 	</zone>
-	<zone id="112080" type="NoHqZone" shape="NPoly" minZ="-3800" maxZ="30000" />
-	<zone id="11208" type="CastleZone" shape="Cuboid" minZ="-3800" maxZ="30000">
-		<stat name="castleId" val="9" />
-		<spawn X="77555" Y="-150903" Z="769" />
+	<zone id="11509" type="SiegeZone" shape="Cuboid" minZ="-3800" maxZ="3200">
+		<!-- Borderland Fortress -->
+		<stat name="fortId" val="109" />
 	</zone>
-
-	<!-- Castle Teleport Zones -->
-	<zone id="11209" type="CastleTeleportZone" shape="Cuboid" minZ="-1827" maxZ="-1682">
-		<stat name="castleId" val="1" />
-		<stat name="spawnMinX" val="-17727" />
-		<stat name="spawnMaxX" val="-18482" />
-		<stat name="spawnMinY" val="109041" />
-		<stat name="spawnMaxY" val="109383" />
-		<stat name="spawnZ" val="-2496" />
+	<zone id="11510" type="SiegeZone" shape="Cuboid" minZ="-3800" maxZ="3200">
+		<!-- Swamp Fortress -->
+		<stat name="fortId" val="110" />
 	</zone>
-	<zone id="11210" type="CastleTeleportZone" shape="Cuboid" minZ="-2021" maxZ="-1877">
-		<stat name="castleId" val="2" />
-		<stat name="spawnMinX" val="21709" />
-		<stat name="spawnMaxX" val="22456" />
-		<stat name="spawnMinY" val="160392" />
-		<stat name="spawnMaxY" val="160706" />
-		<stat name="spawnZ" val="-2690" />
+	<zone id="11511" type="SiegeZone" shape="Cuboid" minZ="-3800" maxZ="3200">
+		<!-- Archaic Fortress -->
+		<stat name="fortId" val="111" />
 	</zone>
-	<zone id="11211" type="CastleTeleportZone" shape="Cuboid" minZ="-1891" maxZ="-1750">
-		<stat name="castleId" val="3" />
-		<stat name="spawnMinX" val="116555" />
-		<stat name="spawnMaxX" val="116894" />
-		<stat name="spawnMinY" val="144729" />
-		<stat name="spawnMaxY" val="145470" />
-		<stat name="spawnZ" val="-2566" />
+	<zone id="11512" type="SiegeZone" shape="Cuboid" minZ="-3800" maxZ="3200">
+		<!-- Floran Fortress - Border -->
+		<stat name="fortId" val="112" />
 	</zone>
-	<zone id="11212" type="CastleTeleportZone" shape="Cuboid" minZ="-1621" maxZ="-1477">
-		<stat name="castleId" val="4" />
-		<stat name="spawnMinX" val="82633" />
-		<stat name="spawnMaxX" val="82957" />
-		<stat name="spawnMinY" val="36787" />
-		<stat name="spawnMaxY" val="37599" />
-		<stat name="spawnZ" val="-2288" />
+	<zone id="11513" type="SiegeZone" shape="Cuboid" minZ="-3800" maxZ="3200">
+		<!-- Cloud Mountain Fortress - Border -->
+		<stat name="fortId" val="113" />
 	</zone>
-	<zone id="11213" type="CastleTeleportZone" shape="Cuboid" minZ="-2811" maxZ="-2641">
-		<stat name="castleId" val="5" />
-		<stat name="spawnMinX" val="147208" />
-		<stat name="spawnMaxX" val="147718" />
-		<stat name="spawnMinY" val="4359" />
-		<stat name="spawnMaxY" val="4806" />
-		<stat name="spawnZ" val="-343" />
+	<zone id="11514" type="SiegeZone" shape="Cuboid" minZ="-3800" maxZ="3200">
+		<!-- Tanor Fortress - Border -->
+		<stat name="fortId" val="114" />
 	</zone>
-	<zone id="11214" type="CastleTeleportZone" shape="Cuboid" minZ="-117" maxZ="26">
-		<stat name="castleId" val="6" />
-		<stat name="spawnMinX" val="115666" />
-		<stat name="spawnMaxX" val="116390" />
-		<stat name="spawnMinY" val="249161" />
-		<stat name="spawnMaxY" val="249488" />
-		<stat name="spawnZ" val="-786" />
+	<zone id="11515" type="SiegeZone" shape="Cuboid" minZ="-3800" maxZ="3200">
+		<!-- Dragonspine Fortress - Border -->
+		<stat name="fortId" val="115" />
 	</zone>
-	<zone id="11215" type="CastleTeleportZone" shape="Cuboid" minZ="-989" maxZ="-573">
-		<stat name="castleId" val="7" />
-		<stat name="spawnMinX" val="147061" />
-		<stat name="spawnMaxX" val="147809" />
-		<stat name="spawnMinY" val="-48198" />
-		<stat name="spawnMaxY" val="-48779" />
-		<stat name="spawnZ" val="-2276" />
+	<zone id="11516" type="SiegeZone" shape="NPoly" minZ="-3800" maxZ="3200">
+		<!-- Antharas Fortress - Border -->
+		<stat name="fortId" val="116" />
 	</zone>
-	<zone id="11216" type="CastleTeleportZone" shape="NPoly" minZ="3800" maxZ="4250">
-		<stat name="castleId" val="8" />
-		<stat name="spawnMinX" val="10985" />
-		<stat name="spawnMaxX" val="11997" />
-		<stat name="spawnMinY" val="-48780" />
-		<stat name="spawnMaxY" val="-49498" />
-		<stat name="spawnZ" val="-546" />
+	<zone id="11517" type="SiegeZone" shape="Cuboid" minZ="-3800" maxZ="3200">
+		<!-- Western Fortress - Border -->
+		<stat name="fortId" val="117" />
 	</zone>
-	<zone id="11217" type="CastleTeleportZone" shape="Cuboid" minZ="746" maxZ="1136">
-		<stat name="castleId" val="9" />
-		<stat name="spawnMinX" val="77144" />
-		<stat name="spawnMaxX" val="77927" />
-		<stat name="spawnMinY" val="-152272" />
-		<stat name="spawnMaxY" val="-152843" />
-		<stat name="spawnZ" val="-544" />
+	<zone id="11518" type="SiegeZone" shape="Cuboid" minZ="-3800" maxZ="3200">
+		<!-- Hunters Fortress - Border -->
+		<stat name="fortId" val="118" />
+	</zone>
+	<zone id="11519" type="SiegeZone" shape="Cuboid" minZ="-3800" maxZ="3200">
+		<!-- Aaru Fortress - Border -->
+		<stat name="fortId" val="119" />
+	</zone>
+	<zone id="11520" type="SiegeZone" shape="Cuboid" minZ="-3800" maxZ="3200">
+		<!-- Demon Fortress - Border -->
+		<stat name="fortId" val="120" />
+	</zone>
+	<zone id="11521" type="SiegeZone" shape="Cuboid" minZ="-3800" maxZ="3200">
+		<!-- Monastic Fortress - Border -->
+		<stat name="fortId" val="121" />
 	</zone>
 
 	<!-- Boss Zones (No Restart Zones) -->
@@ -1211,44 +1409,6 @@
 	<zone id="14009" type="LandingZone" shape="NPoly" minZ="1735" maxZ="1892" />
 	<zone id="14010" type="LandingZone" shape="NPoly" minZ="4200" maxZ="4350" />
 	<zone id="14011" type="LandingZone" shape="NPoly" minZ="4320" maxZ="4470" />
-
-	<!-- Fishing Zones -->
-	<zone id="11400" type="FishingZone" shape="NPoly" minZ="-3991" maxZ="-3759" /> <!-- fishing_place_1 (Not Verified) -->
-	<zone id="11401" type="FishingZone" shape="NPoly" minZ="-3634" maxZ="-3434" /> <!-- fishing_place_2 -->
-	<zone id="11402" type="FishingZone" shape="NPoly" minZ="-3668" maxZ="-3468" /> <!-- fishing_place_3 -->
-	<zone id="11403" type="FishingZone" shape="NPoly" minZ="-3724" maxZ="-3524" /> <!-- fishing_place_4 -->
-	<zone id="11404" type="FishingZone" shape="NPoly" minZ="-2871" maxZ="-2671" /> <!-- fishing_place_5 -->
-	<zone id="11405" type="FishingZone" shape="NPoly" minZ="-2787" maxZ="-2587" /> <!-- fishing_place_6 -->
-	<zone id="11406" type="FishingZone" shape="NPoly" minZ="-2717" maxZ="-2517" /> <!-- fishing_place_7 -->
-	<zone id="11407" type="FishingZone" shape="NPoly" minZ="-1609" maxZ="-1409" /> <!-- fishing_place_8 -->
-	<zone id="11408" type="FishingZone" shape="NPoly" minZ="-1694" maxZ="-1494" /> <!-- fishing_place_9 -->
-	<zone id="11419" type="FishingZone" shape="NPoly" minZ="-1979" maxZ="-1779" /> <!-- fishing_place_10 -->
-	<zone id="11410" type="FishingZone" shape="NPoly" minZ="-2152" maxZ="-1952" /> <!-- fishing_place_11 -->
-	<zone id="11411" type="FishingZone" shape="NPoly" minZ="-4388" maxZ="-1388" /> <!-- fishing_place_12 -->
-	<zone id="11412" type="FishingZone" shape="NPoly" minZ="-4916" maxZ="-1916" /> <!-- fishing_place_13 -->
-	<zone id="11413" type="FishingZone" shape="NPoly" minZ="-4640" maxZ="-1640" /> <!-- fishing_place_14 -->
-	<zone id="11414" type="FishingZone" shape="NPoly" minZ="-4216" maxZ="-1216" /> <!-- fishing_place_15 -->
-	<zone id="11415" type="FishingZone" shape="NPoly" minZ="-2568" maxZ="1432" /> <!-- fishing_place_16 -->
-	<zone id="11416" type="FishingZone" shape="NPoly" minZ="-7356" maxZ="-1356" /> <!-- fishing_place_17 -->
-	<zone id="11417" type="FishingZone" shape="NPoly" minZ="-3892" maxZ="-892" /> <!-- fishing_place_18 -->
-	<zone id="11418" type="FishingZone" shape="NPoly" minZ="-4684" maxZ="-1684" /> <!-- fishing_place_19 -->
-	<zone id="11419" type="FishingZone" shape="NPoly" minZ="-4874" maxZ="-1874" /> <!-- fishing_place_20 -->
-	<zone id="11420" type="FishingZone" shape="NPoly" minZ="-4372" maxZ="-1372" /> <!-- fishing_place_21 -->
-	<zone id="11421" type="FishingZone" shape="NPoly" minZ="-4328" maxZ="-1328" /> <!-- fishing_place_22 -->
-	<zone id="11422" type="FishingZone" shape="NPoly" minZ="-4096" maxZ="-1096" /> <!-- fishing_place_23 -->
-	<zone id="11423" type="FishingZone" shape="NPoly" minZ="-4724" maxZ="-1724" /> <!-- fishing_place_24 -->
-	<zone id="11424" type="FishingZone" shape="NPoly" minZ="-4764" maxZ="-1764" /> <!-- fishing_place_25 -->
-	<zone id="11425" type="FishingZone" shape="NPoly" minZ="-3900" maxZ="-900" /> <!-- fishing_place_26 -->
-	<zone id="11426" type="FishingZone" shape="NPoly" minZ="-4004" maxZ="-1004" /> <!-- fishing_place_27 -->
-	<zone id="11427" type="FishingZone" shape="NPoly" minZ="-3856" maxZ="-856" /> <!-- fishing_place_28 -->
-	<zone id="11428" type="FishingZone" shape="NPoly" minZ="-4848" maxZ="-1848" /> <!-- fishing_place_29 -->
-	<zone id="11429" type="FishingZone" shape="NPoly" minZ="-4044" maxZ="-1044" /> <!-- fishing_place_30 -->
-	<zone id="11430" type="FishingZone" shape="NPoly" minZ="-4084" maxZ="-1084" /> <!-- fishing_place_31 -->
-	<zone id="11431" type="FishingZone" shape="NPoly" minZ="-4880" maxZ="-1880" /> <!-- fishing_place_32 -->
-	<zone id="11432" type="FishingZone" shape="NPoly" minZ="-4828" maxZ="-1828" /> <!-- fishing_place_33 -->
-	<zone id="11433" type="FishingZone" shape="NPoly" minZ="-3772" maxZ="-772" /> <!-- fishing_place_34 -->
-	<zone id="11434" type="FishingZone" shape="NPoly" minZ="-4892" maxZ="-1892" /> <!-- fishing_place_35 -->
-	<zone id="11435" type="FishingZone" shape="NPoly" minZ="-3600" maxZ="-3346" /> <!-- fishing_place_36 (Not Verified) -->
 
 	<!-- Water Zones -->
 	<zone id="15000" type="WaterZone" shape="Cuboid" minZ="-4780" maxZ="-3780" /> <!-- [16_21] 16_21_water1 -->
@@ -1932,6 +2092,14 @@
 		<stat name="chance" val="70" />
 		<stat name="reuse" val="6000" />
 	</zone>
+
+	<!-- Emerald Square zone -->
+	<zone id="20105" type="ScriptZone" shape="Cuboid" minZ="-11900" maxZ="-11800" />
+	<zone id="20106" type="ScriptZone" shape="Cuboid" minZ="-12250" maxZ="-12150" />
+	<zone id="20107" type="ScriptZone" shape="Cuboid" minZ="-12150" maxZ="-12000" />
+
+	<!-- Pailaka (Forgotten Temple) -->
+	<zone id="20108" type="ScriptZone" shape="NPoly" minZ="-5050" maxZ="-3900" />
 
 	<!-- Hot Springs Zones -->
 	<!-- Hot Springs Illusion -->
@@ -2766,14 +2934,6 @@
 		<stat name="reuse" val="6000" />
 	</zone>
 
-	<!-- Emerald Square zone -->
-	<zone id="20105" type="ScriptZone" shape="Cuboid" minZ="-11900" maxZ="-11800" />
-	<zone id="20106" type="ScriptZone" shape="Cuboid" minZ="-12250" maxZ="-12150" />
-	<zone id="20107" type="ScriptZone" shape="Cuboid" minZ="-12150" maxZ="-12000" />
-
-	<!-- Pailaka (Forgotten Temple) -->
-	<zone id="20108" type="ScriptZone" shape="NPoly" minZ="-5050" maxZ="-3900" />
-
 	<!-- Pagans mark -->
 	<zone id="30100" type="PaganZone" shape="NPoly" minZ="-10735" maxZ="-10720" />
 
@@ -2898,4 +3058,15 @@
 
 	<zone id="60000" type="PeaceZone" shape="Cylinder" minZ="-12960" maxZ="-12600" rad="800" /> <!-- Death Gate -->
 	<zone id="60001" type="NoSummonZone" shape="Cylinder" minZ="-12960" maxZ="-12600" rad="800" /> <!-- Death Gate (No Summon Friend zone) -->
+
+	<!-- Castle No HQ Zones -->
+	<zone id="112000" type="NoHqZone" shape="NPoly" minZ="-4448" maxZ="30000" />
+	<zone id="112010" type="NoHqZone" shape="NPoly" minZ="-4642" maxZ="30000" />
+	<zone id="112020" type="NoHqZone" shape="NPoly" minZ="-4515" maxZ="30000" />
+	<zone id="112030" type="NoHqZone" shape="NPoly" minZ="-4242" maxZ="30000" />
+	<zone id="112040" type="NoHqZone" shape="NPoly" minZ="-3184" maxZ="30000" />
+	<zone id="112050" type="NoHqZone" shape="NPoly" minZ="-2738" maxZ="30000" />
+	<zone id="112060" type="NoHqZone" shape="NPoly" minZ="-3397" maxZ="30000" />
+	<zone id="112070" type="NoHqZone" shape="NPoly" minZ="-3000" maxZ="30000" />
+	<zone id="112080" type="NoHqZone" shape="NPoly" minZ="-3800" maxZ="30000" />
 </list>
