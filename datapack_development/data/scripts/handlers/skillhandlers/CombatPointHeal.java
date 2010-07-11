@@ -45,18 +45,20 @@ public class CombatPointHeal implements ISkillHandler
 	{
 		//check for other effects
 		ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(L2SkillType.BUFF);
-			
+		
 		if (handler != null)
 			handler.useSkill(actChar, skill, targets);
 		
 		for (L2Character target: (L2Character[]) targets)
 		{
+			if (target.isInvul())
+				continue;
+			
 			double cp = skill.getPower();
 			
 			if ((target.getCurrentCp() + cp) >= target.getMaxCp())
-			{
 				cp = target.getMaxCp() - target.getCurrentCp();
-			}
+			
 			SystemMessage sm = new SystemMessage(SystemMessageId.S1_CP_WILL_BE_RESTORED);
 			sm.addNumber((int) cp);
 			target.sendPacket(sm);

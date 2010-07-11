@@ -47,7 +47,7 @@ public class BalanceLife implements ISkillHandler
 		// L2Character activeChar = activeChar;
 		// check for other effects
 		ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(L2SkillType.BUFF);
-			
+		
 		if (handler != null)
 			handler.useSkill(activeChar, skill, targets);
 		
@@ -60,7 +60,7 @@ public class BalanceLife implements ISkillHandler
 		
 		for (L2Character target: (L2Character[]) targets)
 		{
-			// We should not heal if char is dead
+			// We should not heal if char is dead/invul
 			if (target == null || target.isDead())
 				continue;
 			
@@ -81,6 +81,9 @@ public class BalanceLife implements ISkillHandler
 		
 		for (L2Character target: (L2Character[]) targets)
 		{
+			if (target.isInvul())
+				continue;
+			
 			double newHP = target.getMaxHp() * percentHP;
 			
 			target.setCurrentHp(newHP);
@@ -88,8 +91,6 @@ public class BalanceLife implements ISkillHandler
 			StatusUpdate su = new StatusUpdate(target.getObjectId());
 			su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
 			target.sendPacket(su);
-			
-			target.sendMessage("HP of the party has been balanced.");
 		}
 	}
 	

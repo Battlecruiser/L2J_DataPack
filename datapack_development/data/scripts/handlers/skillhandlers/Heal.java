@@ -55,10 +55,10 @@ public class Heal implements ISkillHandler
 	{
 		//check for other effects
 		ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(L2SkillType.BUFF);
-			
+
 		if (handler != null)
-				handler.useSkill(activeChar, skill, targets);
-		
+			handler.useSkill(activeChar, skill, targets);
+
 		double power = skill.getPower();
 
 		switch (skill.getSkillType())
@@ -129,21 +129,21 @@ public class Heal implements ISkillHandler
 
 				((L2Npc)activeChar)._spiritshotcharged = false;
 			}
-				
+
 			power += staticShotBonus + Math.sqrt(mAtkMul * activeChar.getMAtk(activeChar, null));
 		}
 
 		double hp;
 		for (L2Character target: (L2Character[]) targets)
 		{
-			// We should not heal if char is dead
-			if (target == null || target.isDead())
+			// We should not heal if char is dead/invul
+			if (target == null || target.isDead() || target.isInvul())
 				continue;
-			
+
 			if (target instanceof L2DoorInstance || target instanceof L2SiegeFlagInstance)
 				continue;
 
-				// Player holding a cursed weapon can't be healed and can't heal
+			// Player holding a cursed weapon can't be healed and can't heal
 			if (target != activeChar)
 			{
 				if (target instanceof L2PcInstance && ((L2PcInstance) target).isCursedWeaponEquipped())
@@ -176,7 +176,7 @@ public class Heal implements ISkillHandler
 			//from CT2 u will receive exact HP, u can't go over it, if u have full HP and u get HP buff, u will receive 0HP restored message
 			if ((target.getCurrentHp() + hp) >= target.getMaxHp())
 				hp = target.getMaxHp() - target.getCurrentHp();
-			
+
 			if (hp < 0)
 				hp = 0;
 
