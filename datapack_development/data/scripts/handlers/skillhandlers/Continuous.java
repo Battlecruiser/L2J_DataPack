@@ -111,6 +111,16 @@ public class Continuous implements ISkillHandler
 					((L2PcInstance) activeChar).setCharmOfLuck(true);
 			}
 			
+			switch (skill.getSkillType())
+			{
+				case HOT:
+				case CPHOT:
+				case MPHOT:
+					if (activeChar.isInvul())
+						continue;
+					break;
+			}
+			
 			if (skill.isOffensive() || skill.isDebuff())
 			{
 				L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
