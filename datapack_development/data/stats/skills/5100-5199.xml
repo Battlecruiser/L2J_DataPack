@@ -284,7 +284,15 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
 			<effect name="Buff" time="8" val="0">
-				<add order="0x40" stat="accCombat" val="40" />
+				<mul order="0x30" stat="pAtkSpd" val="1.1">
+					<using kind="Bow,Crossbow" />
+				</mul>
+				<add order="0x40" stat="accCombat" val="10">
+					<using kind="Bow,Crossbow" />
+				</add>
+				<add order="0x40" stat="pAtkRange" val="50">
+					<using kind="Bow,Crossbow" />
+				</add>
 			</effect>
 		</for>
 	</skill>
