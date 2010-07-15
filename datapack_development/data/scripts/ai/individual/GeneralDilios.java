@@ -63,7 +63,7 @@ public class GeneralDilios extends L2AttackableAIScript
 				if (spawn.getNpcid() == generalId)
 					_general = spawn.getLastSpawn();
 				else if (spawn.getNpcid() == guardId)
-					_guards.add(spawn.getLastSpawn());				
+					_guards.add(spawn.getLastSpawn());
 	}
 
 	@Override
