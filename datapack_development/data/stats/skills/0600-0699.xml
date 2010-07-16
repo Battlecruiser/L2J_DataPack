@@ -1270,17 +1270,18 @@
 		</for>
 	</skill>
 	<skill id="687" levels="1" name="Divine Rogue Double Shot">
-		<!-- TODO: Needs Core-Side Support for "Shoots 2 arrows continuously" -->
 		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="3000" />
+		<set name="hitTimings" val="90,15" />
 		<set name="mpConsume" val="159" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
 		<set name="power" val="6195" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
+		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="688" levels="1" name="Divine Rogue Bleed Attack">
