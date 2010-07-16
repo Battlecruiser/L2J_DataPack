@@ -522,7 +522,6 @@
 		</enchant3for>
 	</skill>
 	<skill id="19" levels="37" name="Double Shot" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
-		<!-- TODO: Needs Core-Side Support for "Shoots 2 arrows continuously" -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#ench2MpConsume"> 148 145 143 140 138 135 133 130 128 125 122 120 118 115 112 110 108 105 102 100 98 95 93 90 88 85 83 80 78 75 </table>
 		<table name="#mpConsume"> 72 74 76 76 79 81 83 86 88 91 93 96 99 99 101 104 106 109 111 114 116 119 121 122 124 126 129 131 133 135 138 140 142 144 146 148 150 </table>
@@ -540,8 +539,10 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="3000" />
+		<set name="hitTimings" val="90,15" />
 		<set name="coolTime" val="1000" />
 		<set name="skillType" val="PDAM" />
+		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />

@@ -410,10 +410,10 @@
 		</for>
 	</skill>
 	<skill id="924" levels="1" name="Seven Arrow">
-		<!-- TODO: Needs Core-Side Support for "consecutive arrows" -->
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="15000" />
+		<set name="hitTimings" val="35,11,17,10,12,10,10" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="37" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -421,6 +421,7 @@
 		<set name="reuseDelay" val="600000" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
+		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="weaponsAllowed" val="32" /> <!-- Bow -->
 	</skill>
