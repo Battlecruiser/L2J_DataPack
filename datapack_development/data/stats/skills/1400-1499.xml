@@ -1801,35 +1801,37 @@
 		</for>
 	</skill>
 	<skill id="1467" levels="1" name="Meteor">
-		<!-- TODO: Needs Core-Side Support for "continuous fire damage" -->
 		<set name="castRange" val="600" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 		<set name="effectRange" val="1100" />
-		<set name="reuseDelay" val="900000" />
 		<set name="hitTime" val="11000" />
+		<set name="hitTimings" val="18,18,18,18,18" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="109" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="117" />
+		<set name="reuseDelay" val="900000" />
 		<set name="skillRadius" val="150" />
 		<set name="skillType" val="MDAM" />
+		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="1468" levels="1" name="Star Fall">
-		<!-- TODO: Needs Core-Side Support for "continuous non-attribute damage" -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="11000" />
-		<set name="reuseDelay" val="900000" />
+		<set name="hitTimings" val="18,18,18,18,18" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="109" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="117" />
+		<set name="reuseDelay" val="900000" />
 		<set name="skillRadius" val="150" />
 		<set name="skillType" val="MDAM" />
+		<set name="staticHitTime" val="true" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="1469" levels="1" name="Leopold" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
