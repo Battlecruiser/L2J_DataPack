@@ -2,6 +2,7 @@ package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.L2World;
@@ -259,8 +260,9 @@ public class AdminBuffs implements IAdminCommandHandler
 		NpcHtmlMessage ms = new NpcHtmlMessage(1);
 		ms.setHtml(html.toString());
 		activeChar.sendPacket(ms);
-		
-		GMAudit.auditGMAction(activeChar.getName(), "getbuffs", target.getName() + " (" + Integer.toString(target.getObjectId()) + ")", "");
+
+		if (Config.GMAUDIT)
+			GMAudit.auditGMAction(activeChar.getName()+" ["+activeChar.getObjectId()+"]", "getbuffs", target.getName() + " (" + Integer.toString(target.getObjectId()) + ")", "");
 	}
 	
 	private void removeBuff(L2PcInstance activeChar, int objId, int skillId)
@@ -287,7 +289,8 @@ public class AdminBuffs implements IAdminCommandHandler
 				}
 			}
 			showBuffs(activeChar, target, 1);
-			GMAudit.auditGMAction(activeChar.getName(), "stopbuff", target.getName() + " (" + objId + ")", Integer.toString(skillId));
+			if (Config.GMAUDIT)
+				GMAudit.auditGMAction(activeChar.getName()+" ["+activeChar.getObjectId()+"]", "stopbuff", target.getName() + " (" + objId + ")", Integer.toString(skillId));
 		}
 	}
 	
@@ -306,8 +309,9 @@ public class AdminBuffs implements IAdminCommandHandler
 		{
 			target.stopAllEffects();
 			activeChar.sendMessage("Removed all effects from " + target.getName() + " (" + objId + ")");
-			GMAudit.auditGMAction(activeChar.getName(), "stopallbuffs", target.getName() + " (" + objId + ")", "");
 			showBuffs(activeChar, target, 1);
+			if (Config.GMAUDIT)
+				GMAudit.auditGMAction(activeChar.getName()+" ["+activeChar.getObjectId()+"]", "stopallbuffs", target.getName() + " (" + objId + ")", "");
 		}
 	}
 }
