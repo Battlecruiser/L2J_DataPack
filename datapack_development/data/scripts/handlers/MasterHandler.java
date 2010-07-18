@@ -153,6 +153,7 @@ public class MasterHandler
 		BypassHandler.getInstance().registerBypassHandler(new FortSiege());
 		BypassHandler.getInstance().registerBypassHandler(new Link());
 		BypassHandler.getInstance().registerBypassHandler(new Loto());
+		BypassHandler.getInstance().registerBypassHandler(new ManorManager());
 		BypassHandler.getInstance().registerBypassHandler(new Multisell());
 		BypassHandler.getInstance().registerBypassHandler(new Observation());
 		BypassHandler.getInstance().registerBypassHandler(new QuestLink());
