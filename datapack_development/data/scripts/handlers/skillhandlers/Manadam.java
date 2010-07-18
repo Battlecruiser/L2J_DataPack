@@ -118,7 +118,7 @@ public class Manadam implements ISkillHandler
 				
 				if (target instanceof L2PcInstance)
 				{
-					StatusUpdate sump = new StatusUpdate(target.getObjectId());
+					StatusUpdate sump = new StatusUpdate(target);
 					sump.addAttribute(StatusUpdate.CUR_MP, (int) target.getCurrentMp());
 					// [L2J_JP EDIT START - TSL]
 					target.sendPacket(sump);

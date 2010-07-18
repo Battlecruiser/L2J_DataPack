@@ -102,7 +102,7 @@ public class HealPercent implements ISkillHandler
 				continue;
 
 			if (targetPlayer)
-				su = new StatusUpdate(target.getObjectId());
+				su = new StatusUpdate(target);
 
 			// Only players have CP
 			if (cp && targetPlayer)

@@ -59,7 +59,7 @@ public class L2SummonAction implements IActionHandler
 			activeChar.sendPacket(my);
 
 			//sends HP/MP status of the summon to other characters
-			StatusUpdate su = new StatusUpdate(target.getObjectId());
+			StatusUpdate su = new StatusUpdate(target);
 			su.addAttribute(StatusUpdate.CUR_HP, (int) ((L2Character)target).getCurrentHp());
 			su.addAttribute(StatusUpdate.MAX_HP, ((L2Character)target).getMaxHp());
 			activeChar.sendPacket(su);
