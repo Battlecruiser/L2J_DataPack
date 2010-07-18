@@ -954,7 +954,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		// Save the changed parameters to the database.
 		player.store();
 		
-		StatusUpdate su = new StatusUpdate(player.getObjectId());
+		StatusUpdate su = new StatusUpdate(player);
 		su.addAttribute(StatusUpdate.CUR_HP, hpval);
 		su.addAttribute(StatusUpdate.MAX_HP, player.getMaxHp());
 		su.addAttribute(StatusUpdate.CUR_MP, mpval);

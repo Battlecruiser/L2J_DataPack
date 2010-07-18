@@ -58,7 +58,7 @@ public class ManaHeal implements ISkillHandler
 				mp = target.getMaxMp() - target.getCurrentMp();
 
 			target.setCurrentMp(mp + target.getCurrentMp());
-			StatusUpdate sump = new StatusUpdate(target.getObjectId());
+			StatusUpdate sump = new StatusUpdate(target);
 			sump.addAttribute(StatusUpdate.CUR_MP, (int) target.getCurrentMp());
 			target.sendPacket(sump);
 

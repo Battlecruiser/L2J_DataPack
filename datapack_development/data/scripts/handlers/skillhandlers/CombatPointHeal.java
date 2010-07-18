@@ -63,7 +63,7 @@ public class CombatPointHeal implements ISkillHandler
 			sm.addNumber((int) cp);
 			target.sendPacket(sm);
 			target.setCurrentCp(cp + target.getCurrentCp());
-			StatusUpdate sump = new StatusUpdate(target.getObjectId());
+			StatusUpdate sump = new StatusUpdate(target);
 			sump.addAttribute(StatusUpdate.CUR_CP, (int) target.getCurrentCp());
 			target.sendPacket(sump);
 		}

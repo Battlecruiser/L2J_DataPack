@@ -57,7 +57,7 @@ public class L2PetInstanceAction implements IActionHandler
 			activeChar.sendPacket(new MyTargetSelected(target.getObjectId(), activeChar.getLevel() - ((L2Character)target).getLevel()));
 			
 			// Send a Server->Client packet StatusUpdate of the L2PetInstance to the L2PcInstance to update its HP bar
-			StatusUpdate su = new StatusUpdate(target.getObjectId());
+			StatusUpdate su = new StatusUpdate(target);
 			su.addAttribute(StatusUpdate.CUR_HP, (int) ((L2Character)target).getCurrentHp());
 			su.addAttribute(StatusUpdate.MAX_HP, ((L2Character)target).getMaxHp());
 			activeChar.sendPacket(su);
