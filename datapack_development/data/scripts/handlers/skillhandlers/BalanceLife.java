@@ -88,7 +88,7 @@ public class BalanceLife implements ISkillHandler
 			
 			target.setCurrentHp(newHP);
 			
-			StatusUpdate su = new StatusUpdate(target.getObjectId());
+			StatusUpdate su = new StatusUpdate(target);
 			su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
 			target.sendPacket(su);
 		}

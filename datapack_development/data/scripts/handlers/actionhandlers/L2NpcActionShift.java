@@ -67,7 +67,7 @@ public class L2NpcActionShift implements IActionHandler
 			if (target.isAutoAttackable(activeChar))
 			{
 				// Send a Server->Client packet StatusUpdate of the L2NpcInstance to the L2PcInstance to update its HP bar
-				StatusUpdate su = new StatusUpdate(target.getObjectId());
+				StatusUpdate su = new StatusUpdate(target);
 				su.addAttribute(StatusUpdate.CUR_HP, (int)((L2Character)target).getCurrentHp());
 				su.addAttribute(StatusUpdate.MAX_HP, ((L2Character)target).getMaxHp());
 				activeChar.sendPacket(su);
@@ -157,7 +157,7 @@ public class L2NpcActionShift implements IActionHandler
 			if (target.isAutoAttackable(activeChar))
 			{
 				// Send a Server->Client packet StatusUpdate of the L2NpcInstance to the L2PcInstance to update its HP bar
-				StatusUpdate su = new StatusUpdate(target.getObjectId());
+				StatusUpdate su = new StatusUpdate(target);
 				su.addAttribute(StatusUpdate.CUR_HP, (int) ((L2Character)target).getCurrentHp());
 				su.addAttribute(StatusUpdate.MAX_HP, ((L2Character)target).getMaxHp());
 				activeChar.sendPacket(su);
