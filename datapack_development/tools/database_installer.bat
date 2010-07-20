@@ -778,11 +778,9 @@ itemsonground.sql
 locations.sql
 lvlupgain.sql
 mapregion.sql
-merchant_areas_list.sql
 merchant_buylists.sql
 merchant_lease.sql
 merchant_shopids.sql
-merchants.sql
 messages.sql
 minions.sql
 npc.sql
