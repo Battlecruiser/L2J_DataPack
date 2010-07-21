@@ -10,7 +10,7 @@ public class Kadomas extends L2Transformation
 	public Kadomas()
 	{
 		// id, colRadius, colHeight
-		super(20000, 24, 14);
+		super(20000, 24.5, 14);
 	}
 
 	@Override

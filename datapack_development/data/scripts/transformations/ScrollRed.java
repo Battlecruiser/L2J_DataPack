@@ -20,7 +20,7 @@ public class ScrollRed extends L2Transformation
 	public ScrollRed()
 	{
 		// id, colRadius, colHeight
-		super(121, 12, 28);
+		super(121, 9, 28.3);
 	}
 
 	@Override
