@@ -10,7 +10,7 @@ public class LavaGolem extends L2Transformation
 	public LavaGolem()
 	{
 		// id, colRadius, colHeight
-		super(322, 45, 45);
+		super(322, 22, 45);
 	}
 
 	@Override

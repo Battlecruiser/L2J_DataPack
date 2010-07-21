@@ -10,7 +10,7 @@ public class GrailApostleWeak extends L2Transformation
 	public GrailApostleWeak()
 	{
 		// id, colRadius, colHeight
-		super(203, 8, 30);
+		super(203, 10, 35);
 	}
 
 	@Override

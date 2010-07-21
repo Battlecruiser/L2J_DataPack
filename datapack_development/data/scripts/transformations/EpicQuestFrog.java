@@ -11,7 +11,7 @@ public class EpicQuestFrog extends L2Transformation
 	public EpicQuestFrog()
 	{
 		// id, colRadius, colHeight
-		super(111, 20, 9);
+		super(111, 20, 10);
 	}
 
 	@Override
