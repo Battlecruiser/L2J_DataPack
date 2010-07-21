@@ -474,17 +474,17 @@ public class Frintezza extends L2AttackableAIScript
 		}
 		else if (event.equalsIgnoreCase("camera_2"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(_overheadDummy.getObjectId(),0, 75, -89, 0, 100));
+			_Zone.broadcastPacket(new SpecialCamera(_overheadDummy.getObjectId(),0, 75, -89, 0, 100,0,0,1,0));
 			startQuestTimer("camera_2b", 0, _overheadDummy, null);
 		}
 		else if (event.equalsIgnoreCase("camera_2b"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(_overheadDummy.getObjectId(),0, 75, -89, 0, 100));
+			_Zone.broadcastPacket(new SpecialCamera(_overheadDummy.getObjectId(),0, 75, -89, 0, 100,0,0,1,0));
 			startQuestTimer("camera_3", 0, _overheadDummy, null);
 		}
 		else if (event.equalsIgnoreCase("camera_3"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(_overheadDummy.getObjectId(),300, 90, -10, 6500, 7000));
+			_Zone.broadcastPacket(new SpecialCamera(_overheadDummy.getObjectId(),300, 90, -10, 6500, 7000,0,0,1,0));
 
 			frintezza = (L2GrandBossInstance) addSpawn(FRINTEZZA,174240,-89805,-5022,16048,false,0);
 			GrandBossManager.getInstance().addBoss(frintezza);
@@ -517,22 +517,22 @@ public class Frintezza extends L2AttackableAIScript
 		}
 		else if (event.equalsIgnoreCase("camera_4"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(_frintezzaDummy.getObjectId(),1800, 90, 8, 6500, 7000));
+			_Zone.broadcastPacket(new SpecialCamera(_frintezzaDummy.getObjectId(),1800, 90, 8, 6500, 7000,0,0,1,0));
 			startQuestTimer("camera_5", 900, _frintezzaDummy, null);
 		}
 		else if (event.equalsIgnoreCase("camera_5"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(_frintezzaDummy.getObjectId(),140, 90, 10, 2500, 4500));
+			_Zone.broadcastPacket(new SpecialCamera(_frintezzaDummy.getObjectId(),140, 90, 10, 2500, 4500,0,0,1,0));
 			startQuestTimer("camera_5b", 4000, _frintezzaDummy, null);
 		}
 		else if (event.equalsIgnoreCase("camera_5b"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),40, 75, -10, 0, 1000));
+			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),40, 75, -10, 0, 1000,0,0,1,0));
 			startQuestTimer("camera_6", 0, frintezza, null);
 		}
 		else if (event.equalsIgnoreCase("camera_6"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),40, 75, -10, 0, 12000));
+			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),40, 75, -10, 0, 12000,0,0,1,0));
 			startQuestTimer("camera_7", 1350, frintezza, null);
 		}
 		else if (event.equalsIgnoreCase("camera_7"))
@@ -562,9 +562,9 @@ public class Frintezza extends L2AttackableAIScript
 				if (pc instanceof L2PcInstance)
 				{
 					if (pc.getX() < 174232)
-						pc.broadcastPacket(new SpecialCamera(_portraitDummy1.getObjectId(),1000, 118, 0, 0, 1000));
+						pc.broadcastPacket(new SpecialCamera(_portraitDummy1.getObjectId(),1000, 118, 0, 0, 1000,0,0,1,0));
 					else
-						pc.broadcastPacket(new SpecialCamera(_portraitDummy3.getObjectId(),1000, 62, 0, 0, 1000));
+						pc.broadcastPacket(new SpecialCamera(_portraitDummy3.getObjectId(),1000, 62, 0, 0, 1000,0,0,1,0));
 				}
 			}
 			startQuestTimer("camera_9c", 0, frintezza, null);
@@ -576,21 +576,21 @@ public class Frintezza extends L2AttackableAIScript
 				if (pc instanceof L2PcInstance)
 				{
 					if (pc.getX() < 174232)
-						pc.broadcastPacket(new SpecialCamera(_portraitDummy1.getObjectId(),1000, 118, 0, 0, 10000));
+						pc.broadcastPacket(new SpecialCamera(_portraitDummy1.getObjectId(),1000, 118, 0, 0, 10000,0,0,1,0));
 					else
-						pc.broadcastPacket(new SpecialCamera(_portraitDummy3.getObjectId(),1000, 62, 0, 0, 10000));
+						pc.broadcastPacket(new SpecialCamera(_portraitDummy3.getObjectId(),1000, 62, 0, 0, 10000,0,0,1,0));
 				}
 			}
 			startQuestTimer("camera_10", 2000, frintezza, null);
 		}
 		else if (event.equalsIgnoreCase("camera_10"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),240, 90, 0, 0, 1000));
+			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),240, 90, 0, 0, 1000,0,0,1,0));
 			startQuestTimer("camera_11", 0, frintezza, null);
 		}
 		else if (event.equalsIgnoreCase("camera_11"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),240, 90, 25, 5500, 10000));
+			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),240, 90, 25, 5500, 10000,0,0,1,0));
 			_Zone.broadcastPacket(new SocialAction(frintezza.getObjectId(),3));
 			_portraitDummy1.deleteMe();
 			_portraitDummy3.deleteMe();
@@ -601,38 +601,38 @@ public class Frintezza extends L2AttackableAIScript
 		}
 		else if (event.equalsIgnoreCase("camera_12"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),100, 195, 35, 0, 10000));
+			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),100, 195, 35, 0, 10000,0,0,1,0));
 			startQuestTimer("camera_13", 700, frintezza, null);
 		}
 		else if (event.equalsIgnoreCase("camera_13"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),100, 195, 35, 0, 10000));
+			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),100, 195, 35, 0, 10000,0,0,1,0));
 			startQuestTimer("camera_14", 1300, frintezza, null);
 		}
 		else if (event.equalsIgnoreCase("camera_14"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),120, 180, 45, 1500, 10000));
+			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),120, 180, 45, 1500, 10000,0,0,1,0));
 			_Zone.broadcastPacket(new MagicSkillUse(frintezza, frintezza, 5006, 1, 34000, 0));
 			startQuestTimer("camera_16", 1500, frintezza, null);
 		}
 		else if (event.equalsIgnoreCase("camera_16"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),520, 135, 45, 8000, 10000));
+			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),520, 135, 45, 8000, 10000,0,0,1,0));
 			startQuestTimer("camera_17", 7500, frintezza, null);
 		}
 		else if (event.equalsIgnoreCase("camera_17"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),1500, 110, 25, 10000, 13000));
+			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),1500, 110, 25, 10000, 13000,0,0,1,0));
 			startQuestTimer("camera_18", 9500, frintezza, null);
 		}
 		else if (event.equalsIgnoreCase("camera_18"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(_overheadDummy.getObjectId(),930, 160, -20, 0, 1000));
+			_Zone.broadcastPacket(new SpecialCamera(_overheadDummy.getObjectId(),930, 160, -20, 0, 1000,0,0,1,0));
 			startQuestTimer("camera_18b", 0, _overheadDummy, null);
 		}
 		else if (event.equalsIgnoreCase("camera_18b"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(_overheadDummy.getObjectId(), 600, 180, -25, 0, 10000));
+			_Zone.broadcastPacket(new SpecialCamera(_overheadDummy.getObjectId(), 600, 180, -25, 0, 10000,0,0,1,0));
 			_Zone.broadcastPacket(new MagicSkillUse(_scarletDummy,_overheadDummy, 5004, 1, 5800, 0));
 
 			weakScarlet = (L2GrandBossInstance) addSpawn(29046, 174232, -88020, -5110, 16384, false, 0, true);
@@ -651,17 +651,17 @@ public class Frintezza extends L2AttackableAIScript
 		}
 		else if (event.equalsIgnoreCase("camera_19b"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(_scarletDummy.getObjectId(), 800, 180, 10, 1000, 10000));
+			_Zone.broadcastPacket(new SpecialCamera(_scarletDummy.getObjectId(), 800, 180, 10, 1000, 10000,0,0,1,0));
 			startQuestTimer("camera_20", 2100, _scarletDummy, null);
 		}
 		else if (event.equalsIgnoreCase("camera_20"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(weakScarlet.getObjectId(),300, 60, 8, 0, 10000));
+			_Zone.broadcastPacket(new SpecialCamera(weakScarlet.getObjectId(),300, 60, 8, 0, 10000,0,0,1,0));
 			startQuestTimer("camera_21", 2000, weakScarlet, null);
 		}
 		else if (event.equalsIgnoreCase("camera_21"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(weakScarlet.getObjectId(),500, 90, 10, 3000, 5000));
+			_Zone.broadcastPacket(new SpecialCamera(weakScarlet.getObjectId(),500, 90, 10, 3000, 5000,0,0,1,0));
 			startQuestTimer("camera_22", 3000, weakScarlet, null);
 		}
 		else if (event.equalsIgnoreCase("camera_22"))
@@ -768,7 +768,7 @@ public class Frintezza extends L2AttackableAIScript
 		}
 		else if (event.equalsIgnoreCase("morph_01"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(weakScarlet.getObjectId(),250, _Angle, 12, 2000, 15000));
+			_Zone.broadcastPacket(new SpecialCamera(weakScarlet.getObjectId(),250, _Angle, 12, 2000, 15000,0,0,1,0));
 			startQuestTimer("morph_02", 3000, weakScarlet, null);
 		}
 		else if (event.equalsIgnoreCase("morph_02"))
@@ -800,12 +800,12 @@ public class Frintezza extends L2AttackableAIScript
 		}
 		else if (event.equalsIgnoreCase("morph_05"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),250, 120, 15, 0, 1000));
+			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),250, 120, 15, 0, 1000,0,0,1,0));
 			startQuestTimer("morph_06", 0, frintezza, null);
 		}
 		else if (event.equalsIgnoreCase("morph_06"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),250, 120, 15, 0, 10000));
+			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),250, 120, 15, 0, 10000,0,0,1,0));
 
 			cancelQuestTimers("loc_check");
 
@@ -828,28 +828,28 @@ public class Frintezza extends L2AttackableAIScript
 		else if (event.equalsIgnoreCase("morph_07"))
 		{
 			_Zone.broadcastPacket(new MagicSkillUse(frintezza, frintezza, 5006, 1, 34000, 0));
-			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),500, 70, 15, 3000, 10000));
+			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),500, 70, 15, 3000, 10000,0,0,1,0));
 			startQuestTimer("morph_08", 3000, frintezza, null);
 		}
 		else if (event.equalsIgnoreCase("morph_08"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),2500, 90, 12, 6000, 10000));
+			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),2500, 90, 12, 6000, 10000,0,0,1,0));
 			startQuestTimer("morph_09", 3000, frintezza, null);
 		}
 		else if (event.equalsIgnoreCase("morph_09"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(weakScarlet.getObjectId(),250, _Angle, 12, 0, 1000));
+			_Zone.broadcastPacket(new SpecialCamera(weakScarlet.getObjectId(),250, _Angle, 12, 0, 1000,0,0,1,0));
 			startQuestTimer("morph_10", 0, weakScarlet, null);
 		}
 		else if (event.equalsIgnoreCase("morph_10"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(weakScarlet.getObjectId(),250, _Angle, 12, 0, 10000));
+			_Zone.broadcastPacket(new SpecialCamera(weakScarlet.getObjectId(),250, _Angle, 12, 0, 10000,0,0,1,0));
 			startQuestTimer("morph_11", 500, weakScarlet, null);
 		}
 		else if (event.equalsIgnoreCase("morph_11"))
 		{
 			weakScarlet.doDie(weakScarlet);
-			_Zone.broadcastPacket(new SpecialCamera(weakScarlet.getObjectId(),450, _Angle, 14, 8000, 8000));
+			_Zone.broadcastPacket(new SpecialCamera(weakScarlet.getObjectId(),450, _Angle, 14, 8000, 8000,0,0,1,0));
 
 			startQuestTimer("morph_12", 6250, weakScarlet, null);
 			startQuestTimer("morph_13", 7200, weakScarlet, null);
@@ -868,7 +868,7 @@ public class Frintezza extends L2AttackableAIScript
 			_Zone.updateKnownList(strongScarlet);
 			activeScarlet = strongScarlet;
 
-			_Zone.broadcastPacket(new SpecialCamera(strongScarlet.getObjectId(),450, _Angle, 12, 500, 14000));
+			_Zone.broadcastPacket(new SpecialCamera(strongScarlet.getObjectId(),450, _Angle, 12, 500, 14000,0,0,1,0));
 
 			startQuestTimer("morph_14", 3000, strongScarlet, null);
 			startQuestTimer("loc_check", 60000, strongScarlet, null, true);
@@ -892,12 +892,12 @@ public class Frintezza extends L2AttackableAIScript
 		}
 		else if (event.equalsIgnoreCase("morph_16"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(strongScarlet.getObjectId(),300, _Angle - 180 , 5, 0, 7000));
+			_Zone.broadcastPacket(new SpecialCamera(strongScarlet.getObjectId(),300, _Angle - 180 , 5, 0, 7000,0,0,1,0));
 			startQuestTimer("morph_17", 0, strongScarlet, null);
 		}
 		else if (event.equalsIgnoreCase("morph_17"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(strongScarlet.getObjectId(),200, _Angle, 85, 4000, 10000));
+			_Zone.broadcastPacket(new SpecialCamera(strongScarlet.getObjectId(),200, _Angle, 85, 4000, 10000,0,0,1,0));
 			startQuestTimer("morph_17b", 7400, frintezza, null);
 			startQuestTimer("morph_18", 7500, frintezza, null);
 		}
@@ -907,18 +907,18 @@ public class Frintezza extends L2AttackableAIScript
 		}
 		else if (event.equalsIgnoreCase("morph_18"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),100, 120, 5, 0, 7000));
+			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),100, 120, 5, 0, 7000,0,0,1,0));
 			startQuestTimer("morph_19", 0, frintezza, null);
 		}
 		else if (event.equalsIgnoreCase("morph_19"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),100, 90, 5, 5000, 15000));
+			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),100, 90, 5, 5000, 15000,0,0,1,0));
 			startQuestTimer("morph_20", 7000, frintezza, null);
 			startQuestTimer("spawn_cubes", 7000, frintezza, null);
 		}
 		else if (event.equalsIgnoreCase("morph_20"))
 		{
-			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),900, 90, 25, 7000, 10000));
+			_Zone.broadcastPacket(new SpecialCamera(frintezza.getObjectId(),900, 90, 25, 7000, 10000,0,0,1,0));
 			startQuestTimer("start_pc", 7000, frintezza, null);
 		}
 		else if (event.equalsIgnoreCase("songs_play"))
