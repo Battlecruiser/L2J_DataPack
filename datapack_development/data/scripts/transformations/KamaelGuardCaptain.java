@@ -10,7 +10,7 @@ public class KamaelGuardCaptain extends L2Transformation
 	public KamaelGuardCaptain()
 	{
 		// id, colRadius, colHeight
-		super(19, 13, 25);
+		super(19, 13, 22.5);
 	}
 
 	@Override

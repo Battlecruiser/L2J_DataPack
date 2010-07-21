@@ -9,7 +9,7 @@ public class Zariche extends L2Transformation
 	{
 		// TODO: Unhardcode Akamanah and Zariche transformations as much as we can
 		// id, colRadius, colHeight
-		super(301, 12, 31.58);
+		super(301, 12, 31.57);
 	}
 
 	@Override

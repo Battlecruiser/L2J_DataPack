@@ -20,7 +20,7 @@ public class ScrollBlue extends L2Transformation
 	public ScrollBlue()
 	{
 		// id, colRadius, colHeight
-		super(122, 12, 28);
+		super(122, 9, 28.3);
 	}
 
 	@Override

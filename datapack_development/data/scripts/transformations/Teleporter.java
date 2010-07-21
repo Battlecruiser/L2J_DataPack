@@ -10,7 +10,7 @@ public class Teleporter extends L2Transformation
 	public Teleporter()
 	{
 		// id, colRadius, colHeight
-		super(319, 8, 24);
+		super(319, 8, 25);
 	}
 
 	@Override

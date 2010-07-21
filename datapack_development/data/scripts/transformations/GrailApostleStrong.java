@@ -10,7 +10,7 @@ public class GrailApostleStrong extends L2Transformation
 	public GrailApostleStrong()
 	{
 		// id, colRadius, colHeight
-		super(201, 8, 30);
+		super(201, 10, 35);
 	}
 
 	@Override
