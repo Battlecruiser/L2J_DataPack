@@ -4,6 +4,9 @@
 		<for>
 			<add order="0x10" stat="pDef" val="26" />
 			<enchant order="0x0C" stat="pDef" val="0" />
+			<!-- Bonus -->
+			<add order="0x40" stat="maxMp" val="35" />
+			<mul order="0x30" stat="magicSuccRes" val="1.15" /> <!-- Guess -->
 		</for>
 	</item>
 	<item id="10208" name="Enhanced Striped Mithril Shirt">
@@ -11,10 +14,13 @@
 			<add order="0x10" stat="pDef" val="30" />
 			<add order="0x40" stat="maxMp" val="70" />
 			<enchant order="0x0C" stat="pDef" val="0" />
+			<!-- Bonus -->
+			<mul order="0x30" stat="magicSuccRes" val="1.5" />
 		</for>
 	</item>
 	<item id="10209" name="Enhanced Steel Bracelet">
 		<for>
+			<add order="0x40" stat="maxMp" val="60" />
 			<set order="0x50" stat="talisman" val="3" />
 		</for>
 	</item>
