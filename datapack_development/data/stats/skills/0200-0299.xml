@@ -216,8 +216,8 @@
 	<skill id="216" levels="45" name="Polearm Mastery" enchantGroup1="1" enchantGroup2="1">
 		<table name="#pAtk"> 4.5 7.3 8.9 10.7 12.8 15.1 17.7 20.5 23.7 25.4 27.1 29 30.9 32.9 35 37.1 39.4 41.7 44.1 46.6 49.2 51.9 54.6 57.5 60.4 63.3 66.4 69.5 72.7 76 79.3 82.7 86.1 89.6 93.1 96.6 100.2 103.8 107.5 111.1 114.8 118.4 122.1 125.7 129.3 </table>
 		<table name="#ench1pAtk"> 137 138 139 140 141 142 143 144 145 146 147 148 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 </table>
-		<table name="#atkCountMax"> 5 5 5 5 5 5 5 5 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 </table>
-		<table name="#ench2countMax"> 11 11 11 11 11 11 11 12 12 12 12 12 12 12 13 13 13 13 13 13 13 13 14 14 14 14 14 14 14 15 </table>
+		<table name="#atkCountMax"> 10 10 10 10 10 10 10 10 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 </table>
+		<table name="#ench2countMax"> 16 16 16 16 16 16 16 17 17 17 17 17 17 17 18 18 18 18 18 18 18 18 19 19 19 19 19 19 19 20 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -233,7 +233,7 @@
 			<add order="0x40" stat="pAtk" val="#ench1pAtk">
 				<using kind="Pole" />
 			</add>
-			<add order="0x40" stat="atkCountMax" val="10">
+			<add order="0x40" stat="atkCountMax" val="15">
 				<using kind="Pole" />
 			</add>
 		</enchant1for>
