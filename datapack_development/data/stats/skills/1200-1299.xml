@@ -1588,6 +1588,11 @@
 		<enchant1 name="power" val="#ench1power" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
+		<cond>
+			<not>
+				<target npcType="L2Monster L2RaidBoss L2Minion L2GrandBoss" /> <!-- TEMP FIX -->
+			</not>
+		</cond>
 	</skill>
 	<skill id="1259" levels="4" name="Resist Shock" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#ench1time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
