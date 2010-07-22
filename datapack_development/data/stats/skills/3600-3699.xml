@@ -32,7 +32,7 @@
 		<for>
 			<add order="0x40" stat="pAtk" val="#pAtk" />
 			<mul order="0x30" stat="maxHp" val="0.85" />
-			<add order="0x40" stat="atkCountMax" val="4" />
+			<add order="0x40" stat="atkCountMax" val="5" />
 			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
 			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
 			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
@@ -53,7 +53,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
-			<add order="0x40" stat="atkCountMax" val="4" />
+			<add order="0x40" stat="atkCountMax" val="5" />
 			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
 			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
 			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
@@ -83,7 +83,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
 			<add order="0x40" stat="accCombat" val="#accCombat" />
-			<add order="0x40" stat="atkCountMax" val="4" />
+			<add order="0x40" stat="atkCountMax" val="5" />
 			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
 			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
 			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
