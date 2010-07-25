@@ -139,8 +139,8 @@
 	<skill id="1406" levels="1" name="Summon Feline King" enchantGroup1="5">
 		<!-- Needs to be verified -->
 		<table name="#ench1npcId"> 14871 14872 14873 14874 14875 14876 14877 14878 14879 14880 14881 14882 14883 14884 14885 </table>
-		<set name="mpInitialConsume" val="30" /> <!-- Guess -->
-		<set name="mpConsume" val="114" /> <!-- Guess -->
+		<set name="mpInitialConsume" val="28" />
+		<set name="mpConsume" val="116" />
 		<set name="itemConsumeId" val="1461" />
 		<set name="itemConsumeCount" val="2" />
 		<set name="itemConsumeIdOT" val="1461" />
@@ -158,12 +158,14 @@
 		<!-- Summon-specific -->
 		<set name="npcId" val="14836" />
 		<enchant1 name="npcId" val="#ench1npcId" />
+		<enchant1 name="mpInitialConsume" val="29" />
+		<enchant1 name="mpConsume" val="116" />
 	</skill>
 	<skill id="1407" levels="1" name="Summon Magnus the Unicorn" enchantGroup1="5">
 		<!-- Needs to be verified -->
 		<table name="#ench1npcId"> 14886 14887 14888 14889 14890 14891 14892 14893 14894 14895 14896 14897 14898 14899 14900 </table>
-		<set name="mpInitialConsume" val="30" /> <!-- Guess -->
-		<set name="mpConsume" val="114" /> <!-- Guess -->
+		<set name="mpInitialConsume" val="28" />
+		<set name="mpConsume" val="116" />
 		<set name="itemConsumeId" val="1461" />
 		<set name="itemConsumeCount" val="2" />
 		<set name="itemConsumeIdOT" val="1461" />
@@ -181,12 +183,14 @@
 		<!-- Summon-specific -->
 		<set name="npcId" val="14837" />
 		<enchant1 name="npcId" val="#ench1npcId" />
+		<enchant1 name="mpInitialConsume" val="29" />
+		<enchant1 name="mpConsume" val="116" />
 	</skill>
 	<skill id="1408" levels="1" name="Summon Spectral Lord" enchantGroup1="5">
 		<!-- Needs to be verified -->
 		<table name="#ench1npcId"> 14901 14902 14903 14904 14905 14906 14907 14908 14909 14910 14911 14912 14913 14914 14915 </table>
-		<set name="mpInitialConsume" val="30" /> <!-- Guess -->
-		<set name="mpConsume" val="114" /> <!-- Guess -->
+		<set name="mpInitialConsume" val="28" />
+		<set name="mpConsume" val="116" />
 		<set name="itemConsumeId" val="1461" />
 		<set name="itemConsumeCount" val="2" />
 		<set name="itemConsumeIdOT" val="1461" />
@@ -204,6 +208,8 @@
 		<!-- Summon-specific -->
 		<set name="npcId" val="14838" />
 		<enchant1 name="npcId" val="#ench1npcId" />
+		<enchant1 name="mpInitialConsume" val="29" />
+		<enchant1 name="mpConsume" val="116" />
 	</skill>
 	<skill id="1409" levels="1" name="Cleanse">
 		<set name="itemConsumeId" val="8874" />
@@ -276,11 +282,11 @@
 	</skill>
 	<skill id="1413" levels="1" name="Magnus' Chant" enchantGroup1="5" enchantGroup2="5">
 		<table name="#ench1Time"> 320 340 360 380 400 420 440 460 480 500 520 540 560 580 600 </table>
-		<table name="#ench2mpInitialConsume"> 56 55 54 53 52 51 50 49 49 48 47 46 45 44 43 </table>
-		<table name="#ench2mpConsume"> 225 221 218 214 210 206 202 198 194 190 186 182 178 176 172 </table>
+		<table name="#ench2mpInitialConsume"> 56 55 54 53 52 51 50 49 48 47 46 45 44 44 43 </table>
+		<table name="#ench2mpConsume"> 225 221 218 214 210 206 202 198 195 191 187 183 179 176 172 </table>
 		<set name="itemConsumeId" val="3031" />
 		<set name="itemConsumeCount" val="40" />
-		<set name="mpInitialConsume" val="57" /> <!-- Guess -->
+		<set name="mpInitialConsume" val="57" />
 		<set name="mpConsume" val="230" />
 		<set name="target" val="TARGET_PARTY" />
 		<set name="skillRadius" val="1000" />
@@ -455,10 +461,10 @@
 	</skill>
 	<skill id="1416" levels="1" name="Pa'agrio's Fist" enchantGroup1="5" enchantGroup2="5">
 		<table name="#enchPower"> 800 810 820 830 840 850 860 870 880 890 900 910 920 930 940 950 </table>
-		<table name="#ench2mpInitialConsume"> 55 53 51 49 47 45 43 41 40 38 36 34 32 30 28 </table>
-		<table name="#ench2mpConsume"> 218 212 204 196 189 181 174 166 158 150 142 136 128 121 113 </table>
-		<set name="mpInitialConsume" val="57" /> <!-- Guess -->
-		<set name="mpConsume" val="227" />
+		<table name="#ench2mpInitialConsume"> 54 53 51 49 47 45 43 41 39 37 35 34 32 30 28 </table>
+		<table name="#ench2mpConsume"> 219 212 205 196 189 181 174 166 159 151 143 136 128 121 113 </table>
+		<set name="mpInitialConsume" val="56" />
+		<set name="mpConsume" val="228" />
 		<set name="itemConsumeId" val="3031" />
 		<set name="itemConsumeCount" val="20" />
 		<set name="power" val="800" />
