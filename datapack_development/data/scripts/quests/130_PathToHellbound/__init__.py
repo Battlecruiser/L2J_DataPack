@@ -1,5 +1,6 @@
 # Made by Cromir Version 0.1
 import sys
+from com.l2jserver.gameserver.instancemanager import HellboundManager
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
@@ -52,10 +53,14 @@ class Quest (JQuest) :
 
    elif npcId == CASIAN :
      if cond == 0 :
-       if player.getLevel() >= 78 :
-         htmltext = "30612-01.htm"
+       if not HellboundManager.getInstance().isLocked() :
+         if player.getLevel() >= 78 :
+           htmltext = "30612-01.htm"
+         else :
+           htmltext = "30612-00.htm"
+           st.exitQuest(1)
        else :
-         htmltext = "30612-00.htm"
+         htmltext = "30612-hellbound-locked.htm"
          st.exitQuest(1)
      elif cond == 1 :
        htmltext = "30612-03a.htm"
