@@ -48,7 +48,7 @@ public class BlessedSpiritShot implements IItemHandler
 		int itemId = item.getItemId();
 		
 		// Check if Blessed SpiritShot can be used
-		if (weaponInst == null || weaponItem.getSpiritShotCount() == 0)
+		if (weaponInst == null || weaponItem == null || weaponItem.getSpiritShotCount() == 0)
 		{
 			if (!activeChar.getAutoSoulShot().contains(itemId))
 				activeChar.sendPacket(new SystemMessage(SystemMessageId.CANNOT_USE_SPIRITSHOTS));

@@ -68,7 +68,7 @@ public class AdminGmChat implements IAdminCommandHandler
 		
 		if (target == null)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.YOU_MUST_SELECT_A_TARGET));
+			activeChar.sendPacket(new SystemMessage(SystemMessageId.SELECT_TARGET));
 			return;
 		}
 		if (!(target instanceof L2PcInstance))
