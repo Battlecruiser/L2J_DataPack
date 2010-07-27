@@ -99,7 +99,11 @@ public class ManorManager implements IBypassHandler
 					if (isCastle)
 						break;
 					if (castleId != castle.getCastleId())
-						activeChar.sendPacket(new SystemMessage(SystemMessageId.HERE_YOU_CAN_BUY_ONLY_SEEDS_OF_S1_MANOR));
+					{
+						SystemMessage sm = new SystemMessage(SystemMessageId.HERE_YOU_CAN_BUY_ONLY_SEEDS_OF_S1_MANOR);
+						sm.addString(manager.getCastle().getName());
+						activeChar.sendPacket(sm);
+					}
 					else
 						activeChar.sendPacket(new BuyListSeed(activeChar.getAdena(), castleId, castle.getSeedProduction(CastleManorManager.PERIOD_CURRENT)));
 					break;

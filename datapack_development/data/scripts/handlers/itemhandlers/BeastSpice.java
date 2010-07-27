@@ -17,6 +17,7 @@ package handlers.itemhandlers;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.L2ItemInstance;
+import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2FeedableBeastInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -38,18 +39,22 @@ public class BeastSpice implements IItemHandler
 		
 		if (!(activeChar.getTarget() instanceof L2FeedableBeastInstance))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+			activeChar.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
 			return;
 		}
 		
-		int itemId = item.getItemId();
-		if (itemId == 6643)
-		{ // Golden Spice
-			activeChar.useMagic(SkillTable.getInstance().getInfo(2188, 1), false, false);
+		int skillId = 0;
+		switch (item.getItemId())
+		{
+			case 6643:
+				skillId = 2188;
+				break;
+			case 6644:
+				skillId = 2189;
+				break;
 		}
-		else if (itemId == 6644)
-		{ // Crystal Spice
-			activeChar.useMagic(SkillTable.getInstance().getInfo(2189, 1), false, false);
-		}
+		L2Skill skill = SkillTable.getInstance().getInfo(skillId, 1);
+		if (skill != null)
+			activeChar.useMagic(skill, false, false);
 	}
 }
