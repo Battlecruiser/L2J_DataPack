@@ -951,6 +951,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isMagic" val="true" />
+		<set name="removedOnAnyActionExceptMove" val="true" />
 		<for>
 			<effect name="Invincible" time="10" val="0" special="invincible" stackOrder="1" stackType="item_skill" />
 		</for>
