@@ -1370,7 +1370,7 @@
 		<enchant1 name="lvlDepend" val="1" />
 		<enchant1 name="isDebuff" val="true" />
 		<enchant1 name="element" val="3" /> <!-- Earth -->
-		<enchant1 name="power" val="100" />
+		<enchant1 name="power" val="#ench123Power" />
 		<enchant1 name="skillType" val="DEBUFF" />
 		<enchant1 name="ignoreResists" val="true" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -1378,14 +1378,14 @@
 		<enchant2 name="isDebuff" val="true" />
 		<enchant2 name="elementPower" val="20" />
 		<enchant2 name="element" val="3" /> <!-- Earth -->
-		<enchant2 name="power" val="100" />
-		<enchant2 name="skillType" val="DEBUFF" />
+		<enchant2 name="power" val="#ench123Power" />
+		<enchant2 name="skillType" val="DOT" />
 		<enchant2 name="ignoreResists" val="true" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="lvlDepend" val="1" />
 		<enchant3 name="isDebuff" val="true" />
 		<enchant3 name="element" val="3" /> <!-- Earth -->
-		<enchant3 name="power" val="100" />
+		<enchant3 name="power" val="#ench123Power" />
 		<enchant3 name="skillType" val="DEBUFF" />
 		<enchant3 name="ignoreResists" val="true" />
 		<for>
@@ -1393,18 +1393,18 @@
 		</for>
 		<enchant1for>
 			<effect name="Spoil" noicon="1" val="0" />
-			<effect name="Debuff" time="15" val="0" effectPower="#ench123Power" effectType="DEBUFF" stackOrder="23" stackType="attack_time_up">
+			<effect name="Debuff" time="15" val="0" stackOrder="23" stackType="attack_time_up">
 				<mul order="0x30" stat="pAtkSpd" val="0.77" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
 			<effect name="Spoil" noicon="1" val="0" />
 			<!-- Retail Values CT2.3: 118HP * 3 Sec -->
-			<effect count="5" name="DamOverTime" time="3" val="354" effectPower="#ench123Power" effectType="DOT" />
+			<effect count="5" name="DamOverTime" time="3" val="354" />
 		</enchant2for>
 		<enchant3for>
 			<effect name="Spoil" noicon="1" val="0" />
-			<effect name="Debuff" time="15" val="0" effectPower="#ench123Power" effectType="DEBUFF">
+			<effect name="Debuff" time="15" val="0">
 				<sub order="0x40" stat="earthRes" val="#ench3EarthVuln" />
 			</effect>
 		</enchant3for>
