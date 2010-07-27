@@ -1359,7 +1359,6 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1800" />
-		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="nextActionAttack" val="true" />
@@ -1368,11 +1367,27 @@
 		<set name="skillType" val="SPOIL" />
 		<set name="target" val="TARGET_ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant1 name="lvlDepend" val="1" />
 		<enchant1 name="isDebuff" val="true" />
+		<enchant1 name="element" val="3" /> <!-- Earth -->
+		<enchant1 name="power" val="100" />
+		<enchant1 name="skillType" val="DEBUFF" />
+		<enchant1 name="ignoreResists" val="true" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="lvlDepend" val="1" />
 		<enchant2 name="isDebuff" val="true" />
+		<enchant2 name="elementPower" val="20" />
+		<enchant2 name="element" val="3" /> <!-- Earth -->
+		<enchant2 name="power" val="100" />
+		<enchant2 name="skillType" val="DEBUFF" />
+		<enchant2 name="ignoreResists" val="true" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant3 name="lvlDepend" val="1" />
 		<enchant3 name="isDebuff" val="true" />
+		<enchant3 name="element" val="3" /> <!-- Earth -->
+		<enchant3 name="power" val="100" />
+		<enchant3 name="skillType" val="DEBUFF" />
+		<enchant3 name="ignoreResists" val="true" />
 		<for>
 			<effect name="Spoil" noicon="1" val="0" />
 		</for>

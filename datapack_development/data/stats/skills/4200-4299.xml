@@ -1244,7 +1244,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
-		<cond msgId="113" addName="1"> <!-- This skill really have condition ? -->
+		<cond msgId="113" addName="1"> <!-- TODO: This skill really have condition ? -->
 			<player flying="true" />
 		</cond>
 	</skill>
