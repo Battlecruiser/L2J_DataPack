@@ -99,6 +99,25 @@ public class Blow implements ISkillHandler
 						sm.addSkillName(skill);
 						activeChar.sendPacket(sm);
 					}
+					else
+					{
+						final byte shld = Formulas.calcShldUse(activeChar, target, skill);
+						target.stopSkillEffects(skill.getId());
+						if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, false, false, true))
+						{
+							skill.getEffects(activeChar, target, new Env(shld, false, false, false));
+							SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
+							sm.addSkillName(skill);
+							target.sendPacket(sm);
+						}
+						else
+						{
+							SystemMessage sm = new SystemMessage(SystemMessageId.C1_RESISTED_YOUR_S2);
+							sm.addCharName(target);
+							sm.addSkillName(skill);
+							activeChar.sendPacket(sm);
+						}
+					}
 				}
 				L2ItemInstance weapon = activeChar.getActiveWeaponInstance();
 				boolean soul = (weapon != null && weapon.getChargedSoulshot() == L2ItemInstance.CHARGED_SOULSHOT && (weapon.getItemType() == L2WeaponType.DAGGER || weapon.getItemType() == L2WeaponType.DUAL_DAGGER || weapon.getItemType() == L2WeaponType.RAPIER));
