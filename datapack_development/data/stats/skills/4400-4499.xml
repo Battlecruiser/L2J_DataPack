@@ -419,112 +419,105 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4418" levels="5" name="Fire Attacks">
-		<!-- Needs to be verified -->
-		<table name="#pwr"> 5 10 15 20 25 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#fireRes"> 15 30 50 70 90 </table>
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="element" val="0" /> <!-- Fire -->
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="firePower" val="#pwr" />
+			<add order="0x40" stat="fireRes" val="#fireRes" />
 		</for>
 	</skill>
 	<skill id="4419" levels="5" name="Water Attacks">
-		<!-- Needs to be verified -->
-		<table name="#pwr"> 5 10 15 20 25 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#waterRes"> 15 30 50 70 90 </table>
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="element" val="1" /> <!-- Water -->
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="waterPower" val="#pwr" />
+			<add order="0x40" stat="waterRes" val="#waterRes" />
 		</for>
 	</skill>
 	<skill id="4420" levels="5" name="Wind Attacks">
-		<!-- Needs to be verified -->
-		<table name="#pwr"> 5 10 15 20 25 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#windRes"> 15 30 50 70 90 </table>
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="element" val="2" /> <!-- Wind -->
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="windPower" val="#pwr" />
+			<add order="0x40" stat="windRes" val="#windRes" />
 		</for>
 	</skill>
 	<skill id="4421" levels="5" name="Earth Attacks">
-		<!-- Needs to be verified -->
-		<table name="#pwr"> 5 10 15 20 25 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#earthRes"> 15 30 50 70 90 </table>
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="element" val="3" /> <!-- Earth -->
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="earthPower" val="#pwr" />
+			<add order="0x40" stat="earthRes" val="#earthRes" />
 		</for>
 	</skill>
 	<skill id="4422" levels="5" name="Dark Attacks">
-		<!-- Needs to be verified -->
-		<table name="#pwr"> 5 10 15 20 25 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#darkRes"> 15 30 50 70 90 </table>
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="element" val="5" /> <!-- Dark -->
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="darkPower" val="#pwr" />
+			<add order="0x40" stat="darkRes" val="#darkRes" />
 		</for>
 	</skill>
 	<skill id="4423" levels="5" name="Sacred Attacks">
-		<!-- Needs to be verified -->
-		<table name="#pwr"> 5 10 15 20 25 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#holyRes"> 15 30 50 70 90 </table>
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="element" val="4" /> <!-- Holy -->
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="holyPower" val="#pwr" />
+			<add order="0x40" stat="holyRes" val="#holyRes" />
 		</for>
 	</skill>
 	<skill id="4424" levels="5" name="Resist Hand-to-hand Weapons">
-		<table name="#vuln"> 0.85 0.7 0.5 0.3 0.1 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#dualFistWpnVuln"> 0.9 0.85 0.8 0.7 0.5 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="dualFistWpnVuln" val="#vuln" />
+			<mul order="0x30" stat="dualFistWpnVuln" val="#dualFistWpnVuln" />
 		</for>
 	</skill>
 	<skill id="4425" levels="5" name="Resist Blunt Weapons">
-		<table name="#vuln"> 0.85 0.7 0.5 0.3 0.1 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#bluntWpnVuln"> 0.9 0.85 0.8 0.7 0.5 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="bluntWpnVuln" val="#vuln" />
+			<mul order="0x30" stat="bluntWpnVuln" val="#bluntWpnVuln" />
 		</for>
 	</skill>
 	<skill id="4426" levels="5" name="Resist Dual-Sword Weapons">
-		<table name="#vuln"> 0.85 0.7 0.5 0.3 0.1 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#dualWpnVuln"> 0.9 0.85 0.8 0.7 0.5 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="dualWpnVuln" val="#vuln" />
+			<mul order="0x30" stat="dualWpnVuln" val="#dualWpnVuln" />
 		</for>
 	</skill>
 	<skill id="4427" levels="5" name="Resist Swords">
-		<table name="#vuln"> 0.85 0.7 0.5 0.3 0.1 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#swordWpnVuln"> 0.9 0.85 0.8 0.7 0.5 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="swordWpnVuln" val="#vuln" />
+			<mul order="0x30" stat="swordWpnVuln" val="#swordWpnVuln" />
 		</for>
 	</skill>
 	<skill id="4428" levels="5" name="Resist Two-handed Weapons">
-		<table name="#vuln"> 0.85 0.7 0.5 0.3 0.1 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#vuln"> 0.9 0.85 0.8 0.7 0.5 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="bigSwordWpnVuln" val="#vuln" />
 			<mul order="0x30" stat="bigBluntWpnVuln" val="#vuln" />
@@ -532,189 +525,210 @@
 		</for>
 	</skill>
 	<skill id="4429" levels="5" name="Greater Resist Fire Attacks">
-		<table name="#vuln"> 50 60 70 80 90 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#fireRes"> 60 70 80 90 100 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="fireRes" val="#vuln" />
+			<add order="0x40" stat="fireRes" val="#fireRes" />
 		</for>
 	</skill>
 	<skill id="4430" levels="5" name="Greater Resist Water Attacks">
-		<table name="#vuln"> 50 60 70 80 90 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#waterRes"> 60 70 80 90 100 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="waterRes" val="#vuln" />
+			<add order="0x40" stat="waterRes" val="#waterRes" />
 		</for>
 	</skill>
 	<skill id="4431" levels="5" name="Greater Resist Wind Attacks">
-		<table name="#vuln"> 50 60 70 80 90 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#windRes"> 60 70 80 90 100 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="windRes" val="#vuln" />
+			<add order="0x40" stat="windRes" val="#windRes" />
 		</for>
 	</skill>
 	<skill id="4432" levels="5" name="Greater Resist Earth Attacks">
-		<table name="#vuln"> 50 60 70 80 90 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#earthRes"> 60 70 80 90 100 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="earthRes" val="#vuln" />
+			<add order="0x40" stat="earthRes" val="#earthRes" />
 		</for>
 	</skill>
 	<skill id="4433" levels="5" name="Greater Resist Sacred Attacks">
-		<table name="#vuln"> 50 60 70 80 90 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#holyRes"> 60 70 80 90 100 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="holyRes" val="#vuln" />
+			<add order="0x40" stat="holyRes" val="#holyRes" />
 		</for>
 	</skill>
 	<skill id="4434" levels="5" name="Greater Resist Dark Attacks">
-		<table name="#vuln"> 50 60 70 80 90 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#darkRes"> 60 70 80 90 100 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="darkRes" val="#vuln" />
+			<add order="0x40" stat="darkRes" val="#darkRes" />
 		</for>
 	</skill>
 	<skill id="4435" levels="5" name="Greater Resist Stun">
-		<table name="#vuln"> 0.5 0.4 0.3 0.2 0.1 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#stunVuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="stunVuln" val="#vuln" />
+			<mul order="0x30" stat="stunVuln" val="#stunVuln" />
 		</for>
 	</skill>
 	<skill id="4436" levels="5" name="Greater Resist Poison">
-		<table name="#vuln"> 0.5 0.4 0.3 0.2 0.1 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#poisonVuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="poisonVuln" val="#vuln" />
+			<mul order="0x30" stat="poisonVuln" val="#poisonVuln" />
 		</for>
 	</skill>
 	<skill id="4437" levels="5" name="Greater Resist Bleeding">
-		<table name="#vuln"> 0.5 0.4 0.3 0.2 0.1 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#bleedVuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="bleedVuln" val="#vuln" />
+			<mul order="0x30" stat="bleedVuln" val="#bleedVuln" />
 		</for>
 	</skill>
 	<skill id="4438" levels="5" name="Greater Resist Sleep">
-		<table name="#vuln"> 0.5 0.4 0.3 0.2 0.1 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#sleepVuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="sleepVuln" val="#vuln" />
+			<mul order="0x30" stat="sleepVuln" val="#sleepVuln" />
 		</for>
 	</skill>
 	<skill id="4439" levels="5" name="Greater Resist Hold">
-		<table name="#vuln"> 0.5 0.4 0.3 0.2 0.1 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#rootVuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="rootVuln" val="#vuln" />
+			<mul order="0x30" stat="rootVuln" val="#rootVuln" />
 		</for>
 	</skill>
 	<skill id="4440" levels="5" name="Greater Resist Paralysis">
-		<table name="#vuln"> 0.5 0.4 0.3 0.2 0.1 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#paralyzeVuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="paralyzeVuln" val="#vuln" />
+			<mul order="0x30" stat="paralyzeVuln" val="#paralyzeVuln" />
 		</for>
 	</skill>
 	<skill id="4441" levels="5" name="Greater Resist Mental Derangement">
-		<table name="#vuln"> 0.5 0.4 0.3 0.2 0.1 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#derangementVuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="derangementVuln" val="#vuln" />
+			<mul order="0x30" stat="derangementVuln" val="#derangementVuln" />
 		</for>
 	</skill>
 	<skill id="4442" levels="5" name="Greater Resist Hand-to-hand Weapons">
-		<table name="#vuln"> 0.5 0.4 0.3 0.2 0.1 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#dualFistWpnVuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="dualFistWpnVuln" val="#vuln" />
+			<mul order="0x30" stat="dualFistWpnVuln" val="#dualFistWpnVuln" />
 		</for>
 	</skill>
 	<skill id="4443" levels="5" name="Greater Resist Blunt Weapons">
-		<table name="#vuln"> 0.5 0.4 0.3 0.2 0.1 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#bluntWpnVuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="bluntWpnVuln" val="#vuln" />
+			<mul order="0x30" stat="bluntWpnVuln" val="#bluntWpnVuln" />
 		</for>
 	</skill>
 	<skill id="4444" levels="5" name="Higher Resist Bow/Crossbow Weapons">
-		<table name="#vuln"> 0.5 0.4 0.3 0.2 0.1 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#vuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="bowWpnVuln" val="#vuln" />
 			<mul order="0x30" stat="crossbowWpnVuln" val="#vuln" />
 		</for>
 	</skill>
 	<skill id="4445" levels="5" name="Greater Resist Spear Weapons">
-		<table name="#vuln"> 0.5 0.4 0.3 0.2 0.1 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#poleWpnVuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="poleWpnVuln" val="#vuln" />
+			<mul order="0x30" stat="poleWpnVuln" val="#poleWpnVuln" />
 		</for>
 	</skill>
 	<skill id="4446" levels="5" name="Greater Resist Dual-Sword Weapons">
-		<table name="#vuln"> 0.5 0.4 0.3 0.2 0.1 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#dualWpnVuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="dualWpnVuln" val="#vuln" />
+			<mul order="0x30" stat="dualWpnVuln" val="#dualWpnVuln" />
 		</for>
 	</skill>
 	<skill id="4447" levels="5" name="Greater Resist Swords">
-		<table name="#vuln"> 0.5 0.4 0.3 0.2 0.1 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#swordWpnVuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="swordWpnVuln" val="#vuln" />
+			<mul order="0x30" stat="swordWpnVuln" val="#swordWpnVuln" />
 		</for>
 	</skill>
 	<skill id="4448" levels="5" name="Higher resist Daggers/Rapier Weapon">
-		<table name="#vuln"> 0.5 0.4 0.3 0.2 0.1 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#vuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="daggerWpnVuln" val="#vuln" />
 			<mul order="0x30" stat="rapierWpnVuln" val="#vuln" />
 		</for>
 	</skill>
 	<skill id="4449" levels="5" name="Greater Resist Two-handed Weapons">
-		<table name="#vuln"> 0.5 0.4 0.3 0.2 0.1 </table>
+		<table name="#vuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -725,118 +739,131 @@
 		</for>
 	</skill>
 	<skill id="4450" levels="5" name="Stun Attack Weak Point">
-		<table name="#vuln"> 1.1 1.15 1.2 1.3 1.5 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#stunVuln"> 1.15 1.2 1.25 1.3 1.35 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="stunVuln" val="#vuln" />
+			<mul order="0x30" stat="stunVuln" val="#stunVuln" />
 		</for>
 	</skill>
 	<skill id="4451" levels="5" name="Poison Attack Weak Point">
-		<table name="#vuln"> 1.1 1.15 1.2 1.3 1.5 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#poisonVuln"> 1.15 1.2 1.25 1.3 1.35 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="poisonVuln" val="#vuln" />
+			<mul order="0x30" stat="poisonVuln" val="#poisonVuln" />
 		</for>
 	</skill>
 	<skill id="4452" levels="5" name="Bleed Attack Weak Point">
-		<table name="#vuln"> 1.1 1.15 1.2 1.3 1.5 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#bleedVuln"> 1.15 1.2 1.25 1.3 1.35 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="bleedVuln" val="#vuln" />
+			<mul order="0x30" stat="bleedVuln" val="#bleedVuln" />
 		</for>
 	</skill>
 	<skill id="4453" levels="5" name="Sleep Attack Weak Point">
-		<table name="#vuln"> 1.1 1.15 1.2 1.3 1.5 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#sleepVuln"> 1.15 1.2 1.25 1.3 1.35 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="sleepVuln" val="#vuln" />
+			<mul order="0x30" stat="sleepVuln" val="#sleepVuln" />
 		</for>
 	</skill>
 	<skill id="4454" levels="5" name="Hold Attack Weak Point">
-		<table name="#vuln"> 1.1 1.15 1.2 1.3 1.5 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#rootVuln"> 1.15 1.2 1.25 1.3 1.35 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="rootVuln" val="#vuln" />
+			<mul order="0x30" stat="rootVuln" val="#rootVuln" />
 		</for>
 	</skill>
 	<skill id="4455" levels="5" name="Paralysis Attack Weak Point">
-		<table name="#vuln"> 1.1 1.15 1.2 1.3 1.5 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#paralyzeVuln"> 1.15 1.2 1.25 1.3 1.35 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="paralyzeVuln" val="#vuln" />
+			<mul order="0x30" stat="paralyzeVuln" val="#paralyzeVuln" />
 		</for>
 	</skill>
 	<skill id="4456" levels="5" name="Mental Attack Weak Point">
-		<table name="#vuln"> 1.1 1.15 1.2 1.3 1.5 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#derangementVuln"> 1.15 1.2 1.25 1.3 1.35 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="derangementVuln" val="#vuln" />
+			<mul order="0x30" stat="derangementVuln" val="#derangementVuln" />
 		</for>
 	</skill>
 	<skill id="4457" levels="5" name="Hand-to-hand Weapon Weak Point">
-		<table name="#vuln"> 1.1 1.15 1.2 1.3 1.5 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#dualFistWpnVuln"> 1.5 1.6 1.7 1.8 1.9 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="dualFistWpnVuln" val="#vuln" />
+			<mul order="0x30" stat="dualFistWpnVuln" val="#dualFistWpnVuln" />
 		</for>
 	</skill>
 	<skill id="4458" levels="5" name="Spear Weapon Weak Point">
-		<table name="#vuln"> 1.1 1.15 1.2 1.3 1.5 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#poleWpnVuln"> 1.5 1.6 1.7 1.8 1.9 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="poleWpnVuln" val="#vuln" />
+			<mul order="0x30" stat="poleWpnVuln" val="#poleWpnVuln" />
 		</for>
 	</skill>
 	<skill id="4459" levels="5" name="Dual-Sword Weapon Weak Point">
-		<table name="#vuln"> 1.1 1.15 1.2 1.3 1.5 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#dualWpnVuln"> 1.1 1.15 1.2 1.3 1.5 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="dualWpnVuln" val="#vuln" />
+			<mul order="0x30" stat="dualWpnVuln" val="#dualWpnVuln" />
 		</for>
 	</skill>
 	<skill id="4460" levels="5" name="Sword Weak Point">
-		<table name="#vuln"> 1.1 1.15 1.2 1.3 1.5 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#swordWpnVuln"> 1.5 1.6 1.7 1.8 1.9 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="swordWpnVuln" val="#vuln" />
+			<mul order="0x30" stat="swordWpnVuln" val="#swordWpnVuln" />
 		</for>
 	</skill>
 	<skill id="4461" levels="5" name="Dagger Weak Point">
-		<table name="#vuln"> 1.1 1.15 1.2 1.3 1.5 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#daggerWpnVuln"> 1.5 1.6 1.7 1.8 1.9 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="daggerWpnVuln" val="#vuln" />
+			<mul order="0x30" stat="daggerWpnVuln" val="#daggerWpnVuln" />
 		</for>
 	</skill>
 	<skill id="4462" levels="5" name="Two-handed Weapon Weak Point">
 		<table name="#vuln"> 1.1 1.15 1.2 1.3 1.5 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="bigSwordWpnVuln" val="#vuln" />
 			<mul order="0x30" stat="bigBluntWpnVuln" val="#vuln" />
@@ -844,8 +871,7 @@
 		</for>
 	</skill>
 	<skill id="4463" levels="3" name="Surrender To Water">
-		<table name="#water"> 20 30 40 </table>
-		<table name="#fire"> 20 30 40 </table>
+		<table name="#res"> 20 30 40 </table>
 		<table name="#mpConsume"> 20 35 65 </table>
 		<set name="magicLvl" val="80" />
 		<set name="lvlDepend" val="1" /> <!-- Guess -->
@@ -862,14 +888,13 @@
 		<set name="effectRange" val="1100" />
 		<for>
 			<effect name="Debuff" time="120" val="0" stackOrder="2" stackType="surrender">
-				<add order="0x40" stat="fireRes" val="#fire" />
-				<sub order="0x40" stat="waterRes" val="#water" />
+				<add order="0x40" stat="fireRes" val="#res" />
+				<sub order="0x40" stat="waterRes" val="#res" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="4464" levels="3" name="Surrender To Wind">
-		<table name="#wind"> 20 30 40 </table>
-		<table name="#earth"> 20 30 40 </table>
+		<table name="#res"> 20 30 40 </table>
 		<table name="#mpConsume"> 20 35 65 </table>
 		<set name="magicLvl" val="80" />
 		<set name="lvlDepend" val="1" /> <!-- Guess -->
@@ -886,14 +911,13 @@
 		<set name="effectRange" val="1100" />
 		<for>
 			<effect name="Debuff" time="120" val="0" stackOrder="2" stackType="surrender">
-				<sub order="0x40" stat="windRes" val="#wind" />
-				<add order="0x40" stat="earthRes" val="#earth" />
+				<sub order="0x40" stat="windRes" val="#res" />
+				<add order="0x40" stat="earthRes" val="#res" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="4465" levels="3" name="Surrender To Earth">
-		<table name="#earth"> 20 30 40 </table>
-		<table name="#wind"> 20 30 40 </table>
+		<table name="#res"> 20 30 40 </table>
 		<table name="#mpConsume"> 20 35 65 </table>
 		<set name="magicLvl" val="80" />
 		<set name="lvlDepend" val="1" /> <!-- Guess -->
@@ -910,14 +934,13 @@
 		<set name="effectRange" val="1100" />
 		<for>
 			<effect name="Debuff" time="120" val="0" stackOrder="2" stackType="surrender">
-				<sub order="0x40" stat="earthRes" val="#earth" />
-				<add order="0x40" stat="windRes" val="#wind" />
+				<sub order="0x40" stat="earthRes" val="#res" />
+				<add order="0x40" stat="windRes" val="#res" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="4466" levels="3" name="Surrender To Darkness">
-		<table name="#dark"> 20 30 40 </table>
-		<table name="#holy"> 20 30 40 </table>
+		<table name="#res"> 20 30 40 </table>
 		<table name="#mpConsume"> 20 35 65 </table>
 		<set name="magicLvl" val="80" />
 		<set name="lvlDepend" val="1" /> <!-- Guess -->
@@ -934,14 +957,13 @@
 		<set name="effectRange" val="1100" />
 		<for>
 			<effect name="Debuff" time="120" val="0" stackOrder="2" stackType="surrender">
-				<sub order="0x40" stat="darkRes" val="#dark" />
-				<add order="0x40" stat="holyRes" val="#holy" />
+				<sub order="0x40" stat="darkRes" val="#res" />
+				<add order="0x40" stat="holyRes" val="#res" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="4467" levels="3" name="Surrender To Light">
-		<table name="#holy"> 20 30 40 </table>
-		<table name="#dark"> 20 30 40 </table>
+		<table name="#res"> 20 30 40 </table>
 		<table name="#mpConsume"> 20 35 65 </table>
 		<set name="magicLvl" val="80" />
 		<set name="lvlDepend" val="1" /> <!-- Guess -->
@@ -958,8 +980,8 @@
 		<set name="effectRange" val="1100" />
 		<for>
 			<effect name="Debuff" time="120" val="0" stackOrder="2" stackType="surrender">
-				<sub order="0x40" stat="holyRes" val="#holy" />
-				<add order="0x40" stat="darkRes" val="#dark" />
+				<sub order="0x40" stat="holyRes" val="#res" />
+				<add order="0x40" stat="darkRes" val="#res" />
 			</effect>
 		</for>
 	</skill>
