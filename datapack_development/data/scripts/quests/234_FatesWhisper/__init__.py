@@ -22,7 +22,7 @@ CRYSTAL_B = 1460
 BLOOD_STAINED_CLOTH = 14361
 WHITE_CLOTH = 14362
 
-#Leorin, Cliff, Ferris, Zenkin, Kaspar, Kernon's Chest, Golkonda's Chest, Hallate's Chest, Cabrio's "Coffer of the Dead"
+#Reorin, Cliff, Ferris, Zenkin, Kaspar, Kernon's Chest, Golkonda's Chest, Hallate's Chest, Cabrio's "Coffer of the Dead"
 NPC=[31002,30182,30847,30178,30833,31028,31029,31030,31027]
 
 CHEST_SPAWNS = {
@@ -182,7 +182,7 @@ class Quest (JQuest) :
           st.takeItems(INFERNIUM_VARNISH,1)
           htmltext = "31002-07.htm"
           st.set("cond","4")
-        # waiting for Leorin's Hammer
+        # waiting for Reorin's Hammer
         elif cond == 4 and not st.getQuestItemsCount(REORINS_HAMMER) :
           htmltext = "31002-07b.htm"
         elif cond == 4 :  # got Reorin's Hammer!  Go to the next step (Reorin's Mold)
@@ -244,7 +244,7 @@ class Quest (JQuest) :
           htmltext = "30833-01.htm"  # go to Magister Hanellin,etc. Get Baium's Blood with the pipette
         #revisit after you've gotten the mold: What are you still doing here?
         if cond > 9 :
-          htmltext = "30833-04.htm"  # Have you given the mold to Leorin, yet?
+          htmltext = "30833-04.htm"  # Have you given the mold to Reorin, yet?
         # revisit before getting the blood: remind "go get the blood"
         if cond==7 and st.getQuestItemsCount(PIPETTE_KNIFE) and not st.getQuestItemsCount(RED_PIPETTE_KNIFE) :
           htmltext = "30833-02.htm"  # go to Magister Hanellin,etc. Get Baium's Blood with the pipette
