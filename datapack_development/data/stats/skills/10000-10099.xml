@@ -29,4 +29,13 @@
 			<player flyMounted="False" />
 		</cond>
 	</skill>
+	<skill id="10010" levels="1" name="Touch of Death">
+		<!-- TEMP FIX for CANCEL effect -->
+		<set name="ignoreResists" val="true" />
+		<set name="maxNegated" val="5" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="skillType" val="CANCEL" />
+		<set name="target" val="TARGET_ONE" />
+	</skill>
 </list>

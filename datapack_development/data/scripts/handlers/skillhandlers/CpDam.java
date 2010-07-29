@@ -106,10 +106,9 @@ public class CpDam implements ISkillHandler
 			}
 			
 			byte shld = Formulas.calcShldUse(activeChar, target, skill);
-			if (!Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
-				return;
+
 			int damage = (int) (target.getCurrentCp() - (target.getCurrentCp() - skill.getPower()));
-			
+
 			// Manage attack or cast break of the target (calculating rate, sending message...)
 			if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
 			{

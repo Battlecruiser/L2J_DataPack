@@ -106,8 +106,7 @@ public class CpDamPercent implements ISkillHandler
 			}
 			
 			byte shld = Formulas.calcShldUse(activeChar, target, skill);
-			if (!Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
-				return;
+
 			int damage = (int) (target.getCurrentCp() * (skill.getPower() / 100));
 			
 			// Manage attack or cast break of the target (calculating rate, sending message...)
