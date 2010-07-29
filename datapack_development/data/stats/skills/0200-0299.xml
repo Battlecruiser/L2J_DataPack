@@ -1404,7 +1404,7 @@
 		</enchant2for>
 		<enchant3for>
 			<effect name="Spoil" noicon="1" val="0" />
-			<effect name="Debuff" time="15" val="0">
+			<effect name="Debuff" time="15" val="0" stackOrder="1" stackType="element_debuff">
 				<sub order="0x40" stat="earthRes" val="#ench3EarthVuln" />
 			</effect>
 		</enchant3for>
