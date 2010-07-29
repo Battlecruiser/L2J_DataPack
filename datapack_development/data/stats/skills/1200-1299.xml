@@ -655,7 +655,7 @@
 		<enchant4 name="elementPower" val="#enchElementPower" />
 		<enchant4 name="element" val="0" /> <!-- Fire -->
 		<enchant3for>
-			<effect name="Debuff" time="30" val="0" stackOrder="1" stackType="element_defense">
+			<effect name="Debuff" time="30" val="0" stackOrder="1" stackType="element_debuff">
 				<sub order="0x40" stat="fireRes" val="#enchFireVuln" />
 			</effect>
 		</enchant3for>
@@ -839,7 +839,7 @@
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="elementPower" val="#enchElementPower" />
 		<enchant3for>
-			<effect name="Debuff" time="30" val="0" stackOrder="1" stackType="element_defense">
+			<effect name="Debuff" time="30" val="0" stackOrder="1" stackType="element_debuff">
 				<sub order="0x40" stat="waterRes" val="#enchWaterVuln" />
 			</effect>
 		</enchant3for>
@@ -1026,7 +1026,7 @@
 		<enchant2 name="elementPower" val="#ench2elementPower" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3for>
-			<effect name="Debuff" time="30" val="0" stackOrder="1" stackType="element_defense">
+			<effect name="Debuff" time="30" val="0" stackOrder="1" stackType="element_debuff">
 				<sub order="0x40" stat="windRes" val="#enchWindVuln" />
 			</effect>
 		</enchant3for>
