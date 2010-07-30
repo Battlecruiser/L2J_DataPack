@@ -85,6 +85,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="hitTime" val="830" />
 		<set name="coolTime" val="700" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -563,6 +564,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="15000" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MDOT" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -1064,6 +1066,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="23000" />
+		<set name="saveVs" val="CON" />
 		<set name="skillRadius" val="150" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AURA" />
@@ -1084,6 +1087,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="castRange" val="600" />
@@ -1105,6 +1109,7 @@
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3000" />
+		<set name="saveVs" val="WIT" />
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="castRange" val="900" />
@@ -1307,6 +1312,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="hitTime" val="4000" />
 		<set name="coolTime" val="1000" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="isMagic" val="true" />

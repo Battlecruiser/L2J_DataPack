@@ -15,6 +15,7 @@
 		<set name="ignoreResists" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" />
+		<set name="saveVs" val="WIT" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -719,6 +720,7 @@
 		<table name="#accCombat"> 0.949 0.898 0.847 0.796 0.745 </table>
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -771,6 +773,7 @@
 	<skill id="5665" levels="1" name="Stun">
 		<!-- Masterwork Sword of Stun (3829) -->
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="80" />
@@ -784,6 +787,7 @@
 	<skill id="5666" levels="1" name="Stun">
 		<!-- Masterwork Rapier of Stun (3834) -->
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="80" />
@@ -797,6 +801,7 @@
 	<skill id="5667" levels="1" name="Stun">
 		<!-- Masterwork Dual-Blade of Stun (3839) -->
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="80" />
@@ -810,6 +815,7 @@
 	<skill id="5668" levels="1" name="Poison">
 		<!-- Masterwork Dagger of Poison (3861) -->
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="50" />
@@ -823,6 +829,7 @@
 	<skill id="5669" levels="1" name="Stun">
 		<!-- Masterwork Pole of Stun (3876) -->
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="80" />
@@ -836,6 +843,7 @@
 	<skill id="5670" levels="1" name="Stun">
 		<!-- Masterwork Fist of Stun (3882) -->
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="80" />
@@ -849,6 +857,7 @@
 	<skill id="5671" levels="1" name="Stun">
 		<!-- Masterwork Blunt of Stun (3885-1) -->
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="80" />
@@ -862,6 +871,7 @@
 	<skill id="5672" levels="1" name="Stun">
 		<!-- Masterwork Blunt of Stun (3885-2) -->
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="80" />
@@ -877,6 +887,7 @@
 		<set name="power" val="50" />
 		<set name="lvlDepend" val="1" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
@@ -928,6 +939,7 @@
 		<set name="hitTime" val="500" />
 		<set name="power" val="80" />
 		<set name="target" val="TARGET_AURA" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isDebuff" val="true" />
@@ -939,8 +951,12 @@
 	<skill id="5680" levels="1" name="Oblivion Trap">
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
+		<set name="isDebuff" val="true" />
+		<set name="ignoreResists" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="skillType" val="BUFF" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="6000" />
 		<for>
@@ -975,6 +991,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -1023,6 +1040,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -1081,6 +1099,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -1099,6 +1118,7 @@
 		<set name="ignoreResists" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
