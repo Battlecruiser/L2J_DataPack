@@ -50,6 +50,7 @@
 		<enchant1 name="power" val="#ench123Power" />
 		<enchant1 name="skillType" val="DEBUFF" />
 		<enchant1 name="ignoreResists" val="true" />
+		<enchant1 name="saveVs" val="WIT" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="lvlDepend" val="1" />
 		<enchant2 name="isDebuff" val="true" />
@@ -58,6 +59,7 @@
 		<enchant2 name="power" val="#ench123Power" />
 		<enchant2 name="skillType" val="DOT" />
 		<enchant2 name="ignoreResists" val="true" />
+		<enchant2 name="saveVs" val="WIT" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="lvlDepend" val="1" />
 		<enchant3 name="isDebuff" val="true" />
@@ -65,6 +67,7 @@
 		<enchant3 name="power" val="#ench123Power" />
 		<enchant3 name="skillType" val="WEAKNESS" />
 		<enchant3 name="ignoreResists" val="true" />
+		<enchant3 name="saveVs" val="WIT" />
 		<for>
 			<effect name="Spoil" noicon="1" val="0" />
 		</for>
@@ -1124,6 +1127,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="90" /> <!-- Consumes 90% CP -->
 		<set name="reuseDelay" val="150000" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="CPDAMPERCENT" />
 		<set name="target" val="TARGET_ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
@@ -1409,6 +1413,7 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="mpConsume" val="18" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1462,6 +1467,7 @@
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="mpConsume" val="35" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="WIT" />
 		<set name="skillType" val="MUTE" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
@@ -1503,6 +1509,7 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="reuseDelay" val="15000" />
 		<set name="hitTime" val="4000" />
+		<set name="saveVs" val="WIT" />
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="900" />
@@ -1811,6 +1818,7 @@
 		<set name="mpConsume" val="35" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="AGGREDUCE_CHAR" />
 		<set name="lvlDepend" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1909,6 +1917,7 @@
 		<set name="power" val="2486" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="ignoreShld" val="true" />
+		<set name="saveVs" val="CON" />
 		<set name="skillRadius" val="150" />
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1961,6 +1970,7 @@
 		<set name="hitTime" val="1900" />
 		<set name="ignoreShld" val="true" />
 		<set name="overHit" val="true" />
+		<set name="saveVs" val="CON" />
 		<set name="SSBoost" val="2.0" />
 		<set name="castRange" val="40" />
 		<set name="isDebuff" val="true" />
@@ -2105,6 +2115,7 @@
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="skillRadius" val="150" />
 		<set name="target" val="TARGET_AURA" />
+		<set name="saveVs" val="WIT" />
 		<set name="skillType" val="PARALYZE" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
