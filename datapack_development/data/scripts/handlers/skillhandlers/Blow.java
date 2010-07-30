@@ -32,6 +32,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SummonInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.skills.BaseStats;
 import com.l2jserver.gameserver.skills.Env;
 import com.l2jserver.gameserver.skills.Formulas;
 import com.l2jserver.gameserver.skills.Stats;
@@ -125,7 +126,7 @@ public class Blow implements ISkillHandler
 				
 				// Crit rate base crit rate for skill, modified with STR bonus
 				boolean crit = false;
-				if (Formulas.calcCrit(skill.getBaseCritRate() * 10 * Formulas.getSTRBonus(activeChar), target))
+				if (Formulas.calcCrit(skill.getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), target))
 					crit = true;
 				double damage = (int) Formulas.calcBlowDamage(activeChar, target, skill, shld, soul);
 				if (skill.getMaxSoulConsumeCount() > 0 && activeChar instanceof L2PcInstance)

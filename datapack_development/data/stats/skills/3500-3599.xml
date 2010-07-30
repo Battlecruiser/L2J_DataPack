@@ -1000,6 +1000,7 @@
 			14492 Vesper Fighter {PvP} - Critical Stun 3571 1; Has a 43% chance of casting Stun on a critical attack. Increases damage inflicted during PvP.
 		-->
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="80" />
@@ -1085,6 +1086,7 @@
 		-->
 		<table name="#magicLvl"> 75 80 80 </table> <!-- Guessing Level 2/3 -->
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="WIT" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1188,6 +1190,7 @@
 			14507 Vesper Singer {PvP} - Magic Hold 3577-1; 20% +pvp
 		-->
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="WIT" />
 		<set name="skillType" val="ROOT" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="75" />
@@ -1222,6 +1225,7 @@
 	<skill id="3579" levels="1" name="Decrease P. Def.">
 		<!-- Infinity Blade/Rapier Skill -->
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="WIT" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="85" />
@@ -1306,6 +1310,7 @@
 	<skill id="3584" levels="1" name="Shock">
 		<!-- Infinity Crusher Skill -->
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="85" />
@@ -1339,6 +1344,7 @@
 	<skill id="3586" levels="1" name="Physical Skill Restraint">
 		<!-- Infinity Wing Skill -->
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="WIT" />
 		<set name="skillType" val="MUTE" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="85" />
@@ -1373,6 +1379,7 @@
 	<skill id="3588" levels="1" name="Shock">
 		<!-- Infinity Fang Skill -->
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="85" />
@@ -1409,6 +1416,7 @@
 	<skill id="3590" levels="1" name="Silence">
 		<!-- Infinity Stinger Skill -->
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="WIT" />
 		<set name="skillType" val="MUTE" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="85" />
@@ -1471,6 +1479,7 @@
 	<skill id="3594" levels="1" name="Slow">
 		<!-- Infinity Bow/Shooter Skill -->
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="WIT" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="85" />
