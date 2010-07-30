@@ -569,6 +569,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="120000" />
 		<set name="hitTime" val="1500" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1539,6 +1540,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
 		<set name="isDebuff" val="true" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1560,6 +1562,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="reuseDelay" val="30000" />
 		<set name="staticReuse" val="true" />
@@ -1589,6 +1592,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="720" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="40" />
@@ -1612,6 +1616,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
+		<set name="saveVs" val="WIT" />
 		<set name="skillType" val="ROOT" />
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
@@ -1732,6 +1737,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="hitTime" val="4000" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1758,6 +1764,7 @@
 		<set name="hitTime" val="1500" />
 		<set name="isDebuff" val="true" />
 		<set name="coolTime" val="720" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="40" />
