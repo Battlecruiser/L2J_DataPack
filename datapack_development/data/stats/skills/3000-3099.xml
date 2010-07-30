@@ -27,6 +27,7 @@
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -303,7 +304,7 @@
 			8132 Star Buster - Health 3013-1; 
 			8135 Doom Crusher - Health 3013-3; 
 			8789 Sirra's Blade - Health 3013-3; 
-			8793 Sword of Ipos - Health 3013-3; 
+			8793 Sword of Ipos - Health 3013-3;
 			8794 Barakiel's Axe - Health 3013-3; 
 			8798 Behemoth's Tuning Fork - Health 3013-3; 
 			9286 Immortal Edge - Health 3013-1; 
@@ -542,6 +543,7 @@
 		-->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -623,6 +625,7 @@
 		<table name="#abnormalLvl"> 5 5 6 6 6 7 </table>
 		<table name="#dot"> 66 66 81 81 81 93 </table>
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -651,6 +654,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#dot"> 66 66 81 81 81 93 </table>
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1555,6 +1559,7 @@
 		-->
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1583,6 +1588,7 @@
 		-->
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1608,6 +1614,7 @@
 		-->
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1639,6 +1646,7 @@
 		-->
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -2062,6 +2070,7 @@
 		-->
 		<table name="#magicLvl"> 64 67 80 80 </table>
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
@@ -2164,6 +2173,7 @@
 		-->
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="WIT" />
 		<set name="skillType" val="MUTE" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -2186,6 +2196,7 @@
 		-->
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="WIT" />
 		<set name="skillType" val="PARALYZE" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -2257,6 +2268,7 @@
 		-->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="WIT" />
 		<set name="skillType" val="MUTE" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -2276,6 +2288,7 @@
 		-->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="WIT" />
 		<set name="skillType" val="PARALYZE" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="#magicLvl" />

@@ -325,6 +325,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="1080" />
 		<set name="coolTime" val="720" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="effectType" val="BLEED" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1373,6 +1374,7 @@
 		<enchant1 name="power" val="#ench123Power" />
 		<enchant1 name="skillType" val="DEBUFF" />
 		<enchant1 name="ignoreResists" val="true" />
+		<enchant1 name="saveVs" val="WIT" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="lvlDepend" val="1" />
 		<enchant2 name="isDebuff" val="true" />
@@ -1381,6 +1383,7 @@
 		<enchant2 name="power" val="#ench123Power" />
 		<enchant2 name="skillType" val="DOT" />
 		<enchant2 name="ignoreResists" val="true" />
+		<enchant2 name="saveVs" val="WIT" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="lvlDepend" val="1" />
 		<enchant3 name="isDebuff" val="true" />
@@ -1388,6 +1391,7 @@
 		<enchant3 name="power" val="#ench123Power" />
 		<enchant3 name="skillType" val="WEAKNESS" />
 		<enchant3 name="ignoreResists" val="true" />
+		<enchant3 name="saveVs" val="WIT" />
 		<for>
 			<effect name="Spoil" noicon="1" val="0" />
 		</for>
@@ -1705,6 +1709,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="1080" />
 		<set name="coolTime" val="720" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="40" />
@@ -2349,6 +2354,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="15000" />
+		<set name="saveVs" val="WIT" />
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
@@ -2430,6 +2436,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="#hitTime" />
 		<set name="coolTime" val="#coolTime" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
