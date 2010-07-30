@@ -46,7 +46,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2000" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="WEAKNESS" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -129,6 +129,7 @@
 		<set name="coolTime" val="2000" />
 		<set name="hitTime" val="6000" />
 		<set name="isDebuff" val="true" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
@@ -147,6 +148,7 @@
 		<set name="coolTime" val="3000" />
 		<set name="hitTime" val="3000" />
 		<set name="isDebuff" val="true" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
@@ -183,7 +185,7 @@
 		<set name="coolTime" val="1200" />
 		<set name="isDebuff" val="true" />
 		<set name="hitTime" val="2800" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
@@ -361,7 +363,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2000" />
 		<set name="isDebuff" val="true" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -655,6 +657,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="8000" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="MDOT" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -721,7 +724,7 @@
 		<set name="power" val="10" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="isDebuff" val="true" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="lvlDepend" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -739,7 +742,7 @@
 		<set name="power" val="10" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="isDebuff" val="true" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="lvlDepend" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -865,7 +868,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="3100" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MDAM" />
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
@@ -1011,7 +1014,7 @@
 		<set name="power" val="10" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="isDebuff" val="true" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
@@ -1093,6 +1096,7 @@
 	<skill id="4167" levels="1" name="Curse of Fairy Mimyu">
 		<set name="power" val="100" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="isDebuff" val="true" />
@@ -1180,9 +1184,9 @@
 		<set name="power" val="50" /> <!-- Base Land Rate -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_AURA" />
-		<set name="saveVs" val="CON" />
 		<set name="skillRadius" val="200" />
 		<set name="hitTime" val="830" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
@@ -1360,10 +1364,10 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="90" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_AURA" />
-		<set name="saveVs" val="CON" />
 		<set name="skillRadius" val="200" />
 		<set name="hitTime" val="3300" />
 		<set name="isDebuff" val="true" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1379,7 +1383,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="90" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_AURA" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillRadius" val="200" />
 		<set name="isDebuff" val="true" />
 		<set name="hitTime" val="3300" />
@@ -1399,7 +1403,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="90" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_AURA" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillRadius" val="200" />
 		<set name="hitTime" val="3300" />
 		<set name="isDebuff" val="true" />
@@ -1453,7 +1457,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="50" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_AURA" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillRadius" val="200" />
 		<set name="hitTime" val="3300" />
 		<set name="skillType" val="DEBUFF" />
@@ -1475,10 +1479,10 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="90" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_AURA" />
-		<set name="saveVs" val="CON" />
 		<set name="skillRadius" val="200" />
 		<set name="isDebuff" val="true" />
 		<set name="hitTime" val="3300" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
@@ -1512,7 +1516,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="90" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_AURA" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillRadius" val="200" />
 		<set name="hitTime" val="3300" />
 		<set name="skillType" val="DEBUFF" />
@@ -1617,7 +1621,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="2300" />
-		<set name="saveVs" val="CON" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="750" />
@@ -1678,7 +1682,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="isDebuff" val="true" />
 		<set name="hitTime" val="2500" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="750" />

@@ -160,6 +160,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="8000" />
+		<set name="saveVs" val="WIT" />
 		<set name="skillRadius" val="200" /> <!-- Guess -->
 		<set name="skillType" val="ROOT" />
 		<set name="target" val="TARGET_AURA" />
@@ -177,6 +178,7 @@
 		<set name="skillRadius" val="200" />
 		<set name="reuseDelay" val="2000" />
 		<set name="hitTime" val="1500" />
+		<set name="saveVs" val="WIT" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
@@ -220,6 +222,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="power" val="70" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -254,6 +257,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="15000" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isMagic" val="true" />
@@ -534,6 +538,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="2000" />
 		<set name="hitTime" val="1500" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="WEAKNESS" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -565,6 +570,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="70" /> <!-- Base Land Rate --> <!-- Guess -->
 		<set name="reuseDelay" val="4000" />
+		<set name="saveVs" val="WIT" />
 		<set name="skillType" val="DOT" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -627,6 +633,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="power" val="60" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -849,6 +856,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="3000" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="WEAKNESS" />
 		<set name="target" val="TARGET_ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />

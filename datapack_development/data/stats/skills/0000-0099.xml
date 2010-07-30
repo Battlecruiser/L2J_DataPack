@@ -368,6 +368,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="1200" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="DEBUFF" /> <!-- TEMP FIX: Needs Core Support for Randomize Aggro/Target Effect -->
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
@@ -1845,7 +1846,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="hitTime" val="1600" />
 		<set name="coolTime" val="296" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="40" />
@@ -1925,7 +1926,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="2000" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_AREA_UNDEAD" />

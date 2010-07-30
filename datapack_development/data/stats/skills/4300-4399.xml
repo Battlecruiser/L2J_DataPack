@@ -246,6 +246,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="POISON" />
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
@@ -260,6 +261,7 @@
 		<set name="magicLvl" val="60" />
 		<set name="mpConsume" val="50" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
@@ -879,6 +881,7 @@
 		<!-- Fighter -->
 		<set name="power" val="100" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -899,6 +902,7 @@
 		<!-- Mage -->
 		<set name="power" val="100" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
@@ -918,6 +922,7 @@
 	<skill id="4363" levels="1" name="Curse of Destruction">
 		<set name="power" val="100" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
@@ -1158,6 +1163,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="isDebuff" val="true" />
 		<set name="hitTime" val="1000" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="40" />

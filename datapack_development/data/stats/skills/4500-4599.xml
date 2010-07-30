@@ -341,6 +341,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
 		<set name="power" val="100" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -358,6 +359,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" />
 		<set name="isDebuff" val="true" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -375,6 +377,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
 		<set name="power" val="100" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -392,6 +395,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
 		<set name="power" val="100" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -408,6 +412,7 @@
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isDebuff" val="true" />
 		<set name="target" val="TARGET_ONE" />
@@ -426,6 +431,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
 		<set name="power" val="100" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -443,6 +449,7 @@
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isDebuff" val="true" />
 		<set name="target" val="TARGET_ONE" />
@@ -462,6 +469,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
 		<set name="power" val="100" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -480,6 +488,7 @@
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -554,6 +563,7 @@
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -592,6 +602,7 @@
 		<set name="magicLvl" val="75" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="isDebuff" val="true" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -614,6 +625,7 @@
 		<set name="magicLvl" val="75" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="isDebuff" val="true" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -635,6 +647,7 @@
 		<set name="power" val="100" />
 		<set name="magicLvl" val="75" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
@@ -658,6 +671,7 @@
 		<set name="magicLvl" val="75" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="isDebuff" val="true" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -736,6 +750,7 @@
 		<!-- Zone Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
@@ -1079,7 +1094,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="1500" />
 		<set name="isDebuff" val="true" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1145,7 +1160,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="1800" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
@@ -1214,7 +1229,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="4000" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1295,7 +1310,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="1500" />
 		<set name="isDebuff" val="true" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1319,7 +1334,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="1500" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
@@ -1377,7 +1392,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="4000" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1401,7 +1416,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="4000" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1425,7 +1440,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2000" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1450,7 +1465,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="4000" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1475,7 +1490,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="4000" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1500,7 +1515,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2000" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1625,7 +1640,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="1800" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
