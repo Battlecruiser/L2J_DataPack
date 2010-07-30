@@ -1160,10 +1160,23 @@
 		</for>
 	</skill>
 	<skill id="679" levels="1" name="Sacrifice Warrior">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="hitTime" val="2500" />
+		<set name="hitTime" val="2500"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="1800000" />
+		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="BUFF"/>
+		<set name="target" val="TARGET_PARTY" />
+		<cond msgId="113" addName="1">
+			<player hp="30" />
+		</cond>
+		<for>
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_EXIT">
+				<mul order="0x50" stat="limitHp" val="0.1" />
+			</effect>
+			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="transform_sacrifice" >
+				<mul order="0x30" stat="pAtk" val="1.2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="680" levels="1" name="Divine Knight Hate">
 		<set name="castRange" val="400" />
@@ -1247,10 +1260,23 @@
 		</for>
 	</skill>
 	<skill id="685" levels="1" name="Sacrifice Knight">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="hitTime" val="2500" />
+		<set name="hitTime" val="2500"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="1800000" />
+		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="BUFF"/>
+		<set name="target" val="TARGET_PARTY" />
+		<cond msgId="113" addName="1">
+			<player hp="30" />
+		</cond>
+		<for>
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_EXIT">
+				<mul order="0x50" stat="limitHp" val="0.1" />
+			</effect>
+			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="transform_sacrifice" >
+				<mul order="0x30" stat="pDef" val="1.2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="686" levels="1" name="Divine Rogue Stun Shot">
 		<set name="castRange" val="900" />
@@ -1339,10 +1365,23 @@
 		</for>
 	</skill>
 	<skill id="691" levels="1" name="Sacrifice Rogue">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="hitTime" val="2500" />
+		<set name="hitTime" val="2500"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="1800000" />
+		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="BUFF"/>
+		<set name="target" val="TARGET_PARTY" />
+		<cond msgId="113" addName="1">
+			<player hp="30" />
+		</cond>
+		<for>
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_EXIT">
+				<mul order="0x50" stat="limitHp" val="0.1" />
+			</effect>
+			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="transform_sacrifice" >
+				<mul order="0x30" stat="rEvas" val="1.2" /> <!-- Guess -->
+			</effect>
+		</for>
 	</skill>
 	<skill id="692" levels="1" name="Divine Wizard Holy Flare">
 		<set name="castRange" val="150" />
@@ -1430,10 +1469,23 @@
 		</for>
 	</skill>
 	<skill id="697" levels="1" name="Sacrifice Wizard">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="hitTime" val="2500" />
+		<set name="hitTime" val="2500"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="1800000" />
+		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="BUFF"/>
+		<set name="target" val="TARGET_PARTY" />
+		<cond msgId="113" addName="1">
+			<player mp="10" />
+		</cond>
+		<for>
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_EXIT">
+				<mul order="0x50" stat="limitHp" val="0.1" />
+			</effect>
+			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="transform_sacrifice" >
+				<mul order="0x30" stat="mAtk" val="1.2" /> <!-- Guess -->
+			</effect>
+		</for>
 	</skill>
 	<skill id="698" levels="1" name="Divine Healer Major Heal">
 		<set name="aggroPoints" val="630" />
