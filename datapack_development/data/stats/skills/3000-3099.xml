@@ -750,6 +750,7 @@
 		<table name="#abnormalLvl"> 5 5 6 6 6 7 </table>
 		<table name="#DamOverTime"> 123 123 153 153 153 177 </table>
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1133,6 +1134,7 @@
 		<table name="#abnormalLvl"> 5 5 6 6 6 7 </table>
 		<table name="#DamOverTime"> 123 123 153 153 153 177 </table>
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
@@ -1163,6 +1165,7 @@
 		<table name="#abnormalLvl"> 5 5 6 6 6 7 </table>
 		<table name="#DamOverTime"> 123 123 153 153 153 177 </table>
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
@@ -1829,6 +1832,7 @@
 		-->
 		<table name="#magicLvl"> 64 67 78 </table> <!-- Guessing Level 3 -->
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
@@ -1856,6 +1860,7 @@
 		-->
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
