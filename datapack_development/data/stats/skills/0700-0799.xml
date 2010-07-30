@@ -981,13 +981,13 @@
 		<set name="ignoreShld" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
-		<set name="maxNegated" val="5" />
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
 		<set name="power" val="6468" />
 		<set name="reuseDelay" val="45000" />
+		<set name="saveVs" val="CON" />
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
@@ -997,12 +997,13 @@
 			<player active_effect_id_lvl="5561,3" />
 		</cond>
 		<for>
-			<effect name="Debuff" time="120" val="0" effectPower="40" effectType="DEBUFF">
+			<effect name="Debuff" time="120" val="0" effectPower="80" effectType="DEBUFF">
 				<mul order="0x30" stat="maxCp" val="0.1" />
 				<mul order="0x30" stat="debuffVuln" val="1.3" />
 				<mul order="0x30" stat="gainHp" val="0.7" />
 			</effect>
 			<!-- <effect name="Cancel" val="0" effectPower="25" effectType="CANCEL" /> TODO: Needs Core-Side Support -->
+			<effect name="ChanceSkillTrigger" time="1" noicon="1" val="0" triggeredId="10010" triggeredLevel="1" chanceType="ON_START" activationChance="25" /> <!-- TEMP FIX -->
 		</for>
 	</skill>
 	<skill id="763" levels="1" name="Hell Scream">
