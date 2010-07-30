@@ -40,10 +40,21 @@
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="703" levels="1" name="Sacrifice Healer">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="hitTime" val="4000" />
+		<set name="hitTime" val="4000"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="power" val="100" />
+		<set name="reuseDelay" val="1800000" />
+		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="HPMPHEAL_PERCENT"/>
+		<set name="target" val="TARGET_PARTY" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player mp="10" />
+			</not>
+		</cond>
+		<for>
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_EXIT" />
+		</for>
 	</skill>
 	<skill id="704" levels="1" name="Divine Enchanter Water Spirit">
 		<set name="aggroPoints" val="669" />
@@ -181,10 +192,31 @@
 		</for>
 	</skill>
 	<skill id="709" levels="1" name="Sacrifice Enchanter">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="hitTime" val="2500" />
+		<set name="hitTime" val="2500"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="1800000" />
+		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="BUFF"/>
+		<set name="target" val="TARGET_PARTY" />
+		<cond msgId="113" addName="1">
+			<player mp="10" />
+		</cond>
+		<for>
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_EXIT">
+				<mul order="0x50" stat="limitHp" val="0.1" />
+			</effect>
+			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="transform_sacrifice" >
+				<mul order="0x30" stat="pAtk" val="1.2" /> <!-- Guess -->
+				<mul order="0x30" stat="mAtk" val="1.2" /> <!-- Guess -->
+				<mul order="0x30" stat="pDef" val="1.2" /> <!-- Guess -->
+				<mul order="0x30" stat="mDef" val="1.2" /> <!-- Guess -->
+				<add order="0x40" stat="accCombat" val="2" />
+				<basemul order="0x30" stat="rCrit" val="0.2" /> <!-- Guess -->
+				<mul order="0x30" stat="runSpd" val="1.2" /> <!-- Guess -->
+				<mul order="0x30" stat="pAtkSpd" val="1.2" /> <!-- Guess -->
+				<mul order="0x30" stat="mAtkSpd" val="1.15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="710" levels="1" name="Divine Summoner Summon Divine Beast">
 		<set name="hitTime" val="15000" />
@@ -262,10 +294,24 @@
 		<set name="target" val="TARGET_PET" />
 	</skill>
 	<skill id="714" levels="1" name="Sacrifice Summoner">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="hitTime" val="2500" />
+		<set name="hitTime" val="2500"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="1800000" />
+		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="BUFF"/>
+		<set name="target" val="TARGET_PARTY" />
+		<cond msgId="113" addName="1">
+			<player mp="10" />
+		</cond>
+		<for>
+			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_EXIT">
+				<mul order="0x50" stat="limitHp" val="0.1" />
+			</effect>
+			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="transform_sacrifice" >
+				<basemul order="0x30" stat="rCrit" val="0.2" /> <!-- Guess -->
+				<mul order="0x30" stat="cAtk" val="1.2" /> <!-- Guess -->
+			</effect>
+		</for>
 	</skill>
 	<skill id="715" levels="4" name="Zaken Energy Drain">
 		<table name="#mpConsume"> 60 65 69 72 </table>
