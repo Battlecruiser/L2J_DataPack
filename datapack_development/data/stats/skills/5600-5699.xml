@@ -11,9 +11,18 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5602" levels="1" name="Transform Sacrifice">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="canBeDispeled" val="false" />
+		<set name="ignoreResists" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Debuff" time="300" val="0">
+				<mul order="0x50" stat="limitHp" val="0.1" />
+				<mul order="0x50" stat="regHp" val="0.01" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5603" levels="1" name="Dagger Mastery">
 		<set name="operateType" val="OP_ACTIVE" />
