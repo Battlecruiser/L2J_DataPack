@@ -38,20 +38,20 @@ public class TvTVoicedInfo implements IVoicedCommandHandler
 	 */
 	private static final boolean USE_STATIC_HTML = true;
 	private static final String HTML = HtmCache.getInstance().getHtm(null, "data/html/mods/TvTEvent/Status.htm");
-
+	
 	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String target)
 	{
 		if (command.equalsIgnoreCase("tvt"))
 		{
 			if (TvTEvent.isStarting() || TvTEvent.isStarted())
 			{
-				String htmContent = (USE_STATIC_HTML && !HTML.isEmpty()) ? HTML : 
+				String htmContent = (USE_STATIC_HTML && !HTML.isEmpty()) ? HTML :
 					HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/mods/TvTEvent/Status.htm");
 				
 				try
 				{
 					NpcHtmlMessage npcHtmlMessage = new NpcHtmlMessage(5);
-
+					
 					npcHtmlMessage.setHtml(htmContent);
 					// npcHtmlMessage.replace("%objectId%",
 					// String.valueOf(getObjectId()));
@@ -67,7 +67,7 @@ public class TvTVoicedInfo implements IVoicedCommandHandler
 				{
 					_log.warning("wrong TvT voiced: " + e);
 				}
-
+				
 			}
 			else
 			{
@@ -76,7 +76,7 @@ public class TvTVoicedInfo implements IVoicedCommandHandler
 		}
 		return true;
 	}
-
+	
 	public String[] getVoicedCommandList()
 	{
 		return _voicedCommands;

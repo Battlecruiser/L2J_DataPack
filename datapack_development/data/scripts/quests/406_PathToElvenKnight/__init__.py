@@ -15,8 +15,6 @@ ELVEN_KNIGHT_BROOCH = 1204
 TOPAZ_PIECE = 1205
 EMERALD_PIECE = 1206
 KLUTO_MEMO = 1276
-#messages
-default="<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>" 
 
 class Quest (JQuest) :
 
@@ -52,13 +50,13 @@ class Quest (JQuest) :
              st.giveItems(KLUTO_MEMO,1)
              st.set("cond","4")
           else :
-             htmltext = default
+             htmltext = Quest.getNoQuestMsg(player)
        else :
-          htmltext = default
+          htmltext = Quest.getNoQuestMsg(player)
     return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+   htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st : return htmltext
 

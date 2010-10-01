@@ -67,7 +67,7 @@ public class Extractable implements ISkillHandler
 				for (int i = 0; i < expi.getId().length; i++)
 				{
 					createItemID[i] = expi.getId()[i];
-
+					
 					if (skill.getSkillType() == L2SkillType.EXTRACTABLE_FISH)
 						createAmount[i] = (int)(expi.getAmmount()[i]* Config.RATE_EXTR_FISH);
 					else
@@ -96,14 +96,14 @@ public class Extractable implements ISkillHandler
 			{
 				if (createItemID[i] <= 0)
 					return;
-						
+				
 				if (ItemTable.getInstance().createDummyItem(createItemID[i]) == null)
 				{
 					_log.warning("createItemID " + createItemID[i] + " doesn't have template!");
 					player.sendPacket(new SystemMessage(SystemMessageId.NOTHING_INSIDE_THAT));
 					return;
 				}
-
+				
 				if (ItemTable.getInstance().createDummyItem(createItemID[i]).isStackable())
 					player.addItem("Extract", createItemID[i], createAmount[i], targets[0], false);
 				else

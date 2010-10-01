@@ -1,9 +1,9 @@
 DROP TABLE IF EXISTS `pets_skills`;
 CREATE TABLE `pets_skills` (
-  `templateId` int(6) NOT NULL default '0',
-  `minLvl` int(2) NOT NULL default '0',
-  `skillId` int(5) NOT NULL default '0',
-  `skillLvl` int(2) NOT NULL default '0',
+  `templateId` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `minLvl` tinyint(2) unsigned NOT NULL DEFAULT '0',
+  `skillId` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `skillLvl` tinyint(2) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`templateId`,`skillId`,`skillLvl`)
 );
 

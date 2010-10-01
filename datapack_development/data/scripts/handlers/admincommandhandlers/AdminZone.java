@@ -9,7 +9,7 @@
  * Added copyright notice
  *
  *
-* This program is free software: you can redistribute it and/or modify it under
+ * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
  * Foundation, either version 3 of the License, or (at your option) any later
  * version.
@@ -26,13 +26,17 @@ package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.MapRegionTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
+import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.L2WorldRegion;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 
 
@@ -63,7 +67,7 @@ public class AdminZone implements IAdminCommandHandler
 		{
 			final String htmContent = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/zone.htm");
 			NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-			adminReply.setHtml(htmContent);			
+			adminReply.setHtml(htmContent);
 			adminReply.replace("%PEACE%", (activeChar.isInsideZone(L2Character.ZONE_PEACE) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
 			adminReply.replace("%PVP%", (activeChar.isInsideZone(L2Character.ZONE_PVP) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
 			adminReply.replace("%SIEGE%", (activeChar.isInsideZone(L2Character.ZONE_SIEGE) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
@@ -80,10 +84,20 @@ public class AdminZone implements IAdminCommandHandler
 			adminReply.replace("%DANGER%", (activeChar.isInsideZone(L2Character.ZONE_DANGERAREA) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
 			adminReply.replace("%NOSTORE%", (activeChar.isInsideZone(L2Character.ZONE_NOSTORE) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
 			adminReply.replace("%SCRIPT%", (activeChar.isInsideZone(L2Character.ZONE_SCRIPT) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
+			String _zones = "";
+			L2WorldRegion region = L2World.getInstance().getRegion(activeChar.getX(), activeChar.getY());
+			for (L2ZoneType zone : region.getZones())
+			{
+				if(zone.isCharacterInZone(activeChar))
+				{
+					_zones = _zones + zone.getId() + " ";
+				}
+			}
+			adminReply.replace("%ZLIST%", _zones);
 			activeChar.sendPacket(adminReply);
 			
-			activeChar.sendMessage("MapRegion: x:" + MapRegionTable.getInstance().getMapRegionX(activeChar.getX()) + " y:" + MapRegionTable.getInstance().getMapRegionX(activeChar.getY()));
-			
+			activeChar.sendMessage("MapRegion: x:" + MapRegionTable.getInstance().getMapRegionX(activeChar.getX()) + " y:" + MapRegionTable.getInstance().getMapRegionX(activeChar.getY()) + " ("+MapRegionTable.getInstance().getMapRegion(activeChar.getX(),activeChar.getY())+")");
+			activeChar.sendMessage("GeoRegion: " + getGeoOffset(activeChar.getX(),activeChar.getY()) );
 			activeChar.sendMessage("Closest Town: " + MapRegionTable.getInstance().getClosestTownName(activeChar));
 			
 			Location loc;
@@ -108,6 +122,12 @@ public class AdminZone implements IAdminCommandHandler
 		return true;
 	}
 	
+	public short getGeoOffset(int x, int y)
+	{
+		int rx = x >> 11; // =/(256 * 8)
+		int ry = y >> 11;
+		return (short) (((rx + Config.WORLD_X_MIN) << 5) + (ry + Config.WORLD_Y_MIN));
+	}
 	/**
 	 * 
 	 * @see com.l2jserver.gameserver.handler.IAdminCommandHandler#getAdminCommandList()

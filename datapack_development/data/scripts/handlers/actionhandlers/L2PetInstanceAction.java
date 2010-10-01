@@ -40,9 +40,9 @@ public class L2PetInstanceAction implements IActionHandler
 			activeChar.sendPacket(new SystemMessage(SystemMessageId.FAILED_CHANGE_TARGET));
 			return false;
 		}
-
+		
 		boolean isOwner = activeChar.getObjectId() == ((L2PetInstance)target).getOwner().getObjectId();
-
+		
 		activeChar.sendPacket(new ValidateLocation((L2Character)target));
 		if(isOwner && activeChar != ((L2PetInstance)target).getOwner())
 			((L2PetInstance)target).updateRefOwner(activeChar);
@@ -98,7 +98,7 @@ public class L2PetInstanceAction implements IActionHandler
 					activeChar.onActionRequest();
 				}
 			}
-			else 
+			else
 			{
 				if (isOwner)
 					activeChar.sendPacket(new PetStatusShow((L2PetInstance)target));
@@ -106,7 +106,7 @@ public class L2PetInstanceAction implements IActionHandler
 		}
 		return true;
 	}
-
+	
 	public InstanceType getInstanceType()
 	{
 		return InstanceType.L2PetInstance;

@@ -57,7 +57,7 @@ class Quest (JQuest) :
 
  def onTalk (self,npc,player): 
    npcId = npc.getNpcId() 
-   htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>" 
+   htmltext = Quest.getNoQuestMsg(player) 
    st = player.getQuestState(qn) 
    if not st: return htmltext 
    id = st.getState() 
@@ -94,6 +94,7 @@ class Quest (JQuest) :
         st.giveItems(WAND_OF_ADEPT,1)
         for item in range(4412,4417) :
             st.rewardItems(item,10)   # Echo crystals
+        st.giveItems(57,16866)
         st.addExpAndSp(39750,3407)
         htmltext = "30017-05.htm" 
         st.unset("cond") 

@@ -16,16 +16,16 @@ package quests.TerritoryWarScripts;
 
 
 /**
-*
-* @author Gigiikun
-*/
+ *
+ * @author Gigiikun
+ */
 
 public class TheTerritoryGiran extends TerritoryWarSuperClass
 {
 	public static String qn1 = "719_FortheSakeoftheTerritoryGiran";
 	public static int qnu = 719;
 	public static String qna = "For the Sake of the Territory - Giran";
-
+	
 	public TheTerritoryGiran()
 	{
 		super(qnu,qn1,qna);

@@ -31,12 +31,12 @@ public class SkillList implements IBypassHandler
 	{
 		"SkillList"
 	};
-
+	
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2NpcInstance))
 			return false;
-
+		
 		if (Config.ALT_GAME_SKILL_LEARN)
 		{
 			try
@@ -50,7 +50,7 @@ public class SkillList implements IBypassHandler
 				else
 				{
 					boolean own_class = false;
-
+					
 					ClassId[] classesToTeach = ((L2NpcInstance)target).getClassesToTeach();
 					if (classesToTeach != null)
 					{
@@ -63,9 +63,9 @@ public class SkillList implements IBypassHandler
 							}
 						}
 					}
-
+					
 					String text = "<html><body><center>Skill learning:</center><br>";
-
+					
 					if (!own_class)
 					{
 						String charType = activeChar.getClassId().isMage() ? "fighter" : "mage";
@@ -75,23 +75,23 @@ public class SkillList implements IBypassHandler
 							"Skills for classes of another race are extremely difficult.<br>"+
 							"But the hardest of all to learn are the  "+ charType +"skills!<br>";
 					}
-
+					
 					// make a list of classes
 					if (classesToTeach != null)
 					{
 						int count = 0;
 						ClassId classCheck = activeChar.getClassId();
-
+						
 						while ((count == 0) && (classCheck != null))
 						{
 							for (ClassId cid : classesToTeach)
 							{
-								if (cid.level() > classCheck.level()) 
+								if (cid.level() > classCheck.level())
 									continue;
-
+								
 								if (SkillTreeTable.getInstance().getAvailableSkills(activeChar, cid).length == 0)
 									continue;
-
+								
 								text += "<a action=\"bypass -h npc_%objectId%_SkillList "+cid.getId()+"\">Learn "+cid+"'s class Skills</a><br>\n";
 								count++;
 							}
@@ -101,14 +101,14 @@ public class SkillList implements IBypassHandler
 					}
 					else
 						text += "No Skills.<br>";
-
+					
 					text += "</body></html>";
-
+					
 					NpcHtmlMessage html = new NpcHtmlMessage(((L2Npc)target).getObjectId());
 					html.setHtml(text);
 					html.replace("%objectId%", String.valueOf(((L2Npc)target).getObjectId()));
 					activeChar.sendPacket(html);
-
+					
 					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 				}
 			}
@@ -124,7 +124,7 @@ public class SkillList implements IBypassHandler
 		}
 		return true;
 	}
-
+	
 	public String[] getBypassList()
 	{
 		return COMMANDS;

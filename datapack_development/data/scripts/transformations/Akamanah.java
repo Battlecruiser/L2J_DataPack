@@ -11,7 +11,7 @@ public class Akamanah extends L2Transformation
 		// id, colRadius, colHeight
 		super(302, 10, 32.73);
 	}
-
+	
 	@Override
 	public void onTransform()
 	{
@@ -19,7 +19,7 @@ public class Akamanah extends L2Transformation
 		getPlayer().getAppearance().setVisibleName("Akamanah");
 		getPlayer().getAppearance().setVisibleTitle("");
 	}
-
+	
 	@Override
 	public void onUntransform()
 	{
@@ -27,7 +27,7 @@ public class Akamanah extends L2Transformation
 		getPlayer().getAppearance().setVisibleName(null);
 		getPlayer().getAppearance().setVisibleTitle(null);
 	}
-
+	
 	public static void main(String[] args)
 	{
 		TransformationManager.getInstance().registerTransformation(new Akamanah());

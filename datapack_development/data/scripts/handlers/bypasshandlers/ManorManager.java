@@ -45,17 +45,17 @@ public class ManorManager implements IBypassHandler
 	{
 		"manor_menu_select"
 	};
-
+	
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		final L2Npc manager = activeChar.getLastFolkNPC();
 		final boolean isCastle = manager instanceof L2CastleChamberlainInstance;
 		if (!(manager instanceof L2ManorManagerInstance || isCastle))
 			return false;
-
+		
 		if (!activeChar.isInsideRadius(manager, L2Npc.INTERACTION_DISTANCE, true, false))
 			return false;
-
+		
 		try
 		{
 			final Castle castle = manager.getCastle();
@@ -74,25 +74,25 @@ public class ManorManager implements IBypassHandler
 					return false;
 				}
 			}
-
-			if (CastleManorManager.getInstance().isUnderMaintenance()) 
+			
+			if (CastleManorManager.getInstance().isUnderMaintenance())
 			{
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 				activeChar.sendPacket(new SystemMessage(SystemMessageId.THE_MANOR_SYSTEM_IS_CURRENTLY_UNDER_MAINTENANCE));
 				return true;
 			}
-
+			
 			final StringTokenizer st = new StringTokenizer(command, "&");
 			final int ask = Integer.parseInt(st.nextToken().split("=")[1]);
 			final int state = Integer.parseInt(st.nextToken().split("=")[1]);
 			final int time = Integer.parseInt(st.nextToken().split("=")[1]);
-
+			
 			final int castleId;
 			if (state < 0)
 				castleId = castle.getCastleId(); // info for current manor
-			else 
+			else
 				castleId = state; // info for requested manor
-
+			
 			switch (ask)
 			{
 				case 1: // Seed purchase
@@ -163,7 +163,7 @@ public class ManorManager implements IBypassHandler
 		}
 		return false;
 	}
-
+	
 	public String[] getBypassList()
 	{
 		return COMMANDS;

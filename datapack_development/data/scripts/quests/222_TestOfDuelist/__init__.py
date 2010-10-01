@@ -87,7 +87,7 @@ class Quest (JQuest) :
 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+   htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -127,7 +127,8 @@ class Quest (JQuest) :
             st.takeItems(GRANDIS_SKIN,-1)
             st.takeItems(TIMAK_ORCS_BELT,-1)
             st.takeItems(RAKINS_MACE,-1)
-            st.addExpAndSp(47015,20000)
+            st.addExpAndSp(4474444,30704)
+            st.giveItems(57,80903)
             st.giveItems(MARK_OF_DUELIST,1)
             st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
             st.takeItems(FINAL_ORDER,1)

@@ -15,6 +15,7 @@
 package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
@@ -105,6 +106,7 @@ public class AdminMenu implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
+				_log.log(Level.WARNING, "", e);
 			}
 		}
 		else if (command.startsWith("admin_recall_clan_menu"))
@@ -140,7 +142,7 @@ public class AdminMenu implements IAdminCommandHandler
 			{
 				String targetName = command.substring(21);
 				L2PcInstance player = L2World.getInstance().getPlayer(targetName);
-				activeChar.setInstanceId(player.getInstanceId()); 
+				activeChar.setInstanceId(player.getInstanceId());
 				teleportToCharacter(activeChar, player);
 			}
 			catch (StringIndexOutOfBoundsException e)

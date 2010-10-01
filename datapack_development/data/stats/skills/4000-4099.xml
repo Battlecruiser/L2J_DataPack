@@ -75,7 +75,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<sub order="0x40" stat="fireRes" val="15" />
-			<mul order="0x30" stat="poisonVuln" val="0.5" />
+			<sub order="0x40" stat="poisonVuln" val="50" />
 		</for>
 	</skill>
 	<skill id="4007" levels="1" name="Immortal Life">
@@ -381,7 +381,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_CLAN" />
+		<set name="target" val="TARGET_CLAN_MEMBER" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2500" />
 		<set name="skillType" val="BUFF" />
@@ -404,7 +404,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_CLAN" />
+		<set name="target" val="TARGET_CLAN_MEMBER" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2500" />
 		<set name="skillType" val="BUFF" />
@@ -675,12 +675,12 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="rootVuln" val="0.1" />
-			<mul order="0x30" stat="sleepVuln" val="0.1" />
-			<mul order="0x30" stat="stunVuln" val="0.1" />
-			<mul order="0x30" stat="confusionVuln" val="0" />
-			<mul order="0x30" stat="paralyzeVuln" val="0.1" />
-			<mul order="0x30" stat="derangementVuln" val="0" />
+			<sub order="0x40" stat="rootVuln" val="90" />
+			<sub order="0x40" stat="sleepVuln" val="90" />
+			<sub order="0x40" stat="stunVuln" val="90" />
+			<sub order="0x40" stat="confusionVuln" val="100" />
+			<sub order="0x40" stat="paralyzeVuln" val="90" />
+			<sub order="0x40" stat="derangementVuln" val="100" />
 		</for>
 	</skill>
 	<skill id="4046" levels="12" name="Sleep">
@@ -740,73 +740,71 @@
 		</for>
 	</skill>
 	<skill id="4049" levels="16" name="Cubic Drain">
-		<!-- Cubic Skill -->
+		<!-- Storm Cubic Skill -->
 		<table name="#power"> 26 31 36 41 45 48 51 54 57 61 64 67 71 74 77 81 </table>
 		<table name="#magicLvl"> 40 46 52 58 62 66 70 74 76 78 80 81 82 83 84 85 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="element" val="2" /> <!-- Wind -->
-		<set name="elementPower" val="20" />
-		<set name="skillType" val="MDAM" />
 		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="4050" levels="16" name="Cubic Drain">
-		<!-- Cubic Skill -->
+		<!-- Summon Vampiric Cubic Skill -->
 		<table name="#power"> 29 33 39 43 46 50 53 56 59 62 65 68 71 74 77 80 </table>
 		<table name="#magicLvl"> 43 49 55 60 64 68 72 74 76 78 80 81 82 83 84 85 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="DRAIN" />
-		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<set name="absorbPart" val="0.4" /> <!-- absorbs 40% of damage -->
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="DRAIN" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="4051" levels="16" name="Cubic Heal">
-		<!-- Cubic Skill -->
-		<table name="#power"> 201 241 281 314 339 361 382 400 420 440 460 480 500 520 540 560 </table>
+		<!-- Summon Life Cubic Skill -->
 		<table name="#magicLvl"> 43 49 55 60 64 68 72 74 76 78 80 81 82 83 84 85 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="HEAL" />
+		<table name="#power"> 201 241 281 314 339 361 382 400 420 440 460 480 500 520 540 560 </table>
 		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="HEAL" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="4052" levels="15" name="Poison">
-		<!-- Cubic Skill -->
-		<table name="#dmg"> 93 114 132 132 132 144 144 144 156 156 156 162 162 171 171 </table>
-		<table name="#magicLvl"> 49 55 60 64 68 72 74 76 78 80 81 82 83 84 85 </table>
+		<!-- Summon Viper Cubic Skill -->
 		<table name="#abnormalLvl"> 5 6 7 7 7 8 8 8 8 8 8 8 8 8 8 </table>
+		<table name="#dot"> 93 114 132 132 132 144 144 144 156 156 156 162 162 171 171 </table>
+		<table name="#magicLvl"> 49 55 60 64 68 72 74 76 78 80 81 82 83 84 85 </table>
 		<set name="abnormalLvl" val="#abnormalLvl" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="lvlDepend" val="1" />
-		<set name="power" val="70" /> <!-- Base Land Rate -->
-		<set name="target" val="TARGET_ONE" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="POISON" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="70" /> <!-- Base Land Rate -->
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="POISON" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
 			<!-- retail value: 31 38 44 44 44 48/sec; stat update every 3 sec -->
-			<effect count="10" name="DamOverTime" time="3" val="#dmg" abnormal="poison" />
+			<effect count="10" name="DamOverTime" time="3" val="#dot" abnormal="poison" />
 		</for>
 	</skill>
 	<skill id="4053" levels="16" name="Decrease P. Atk.">
-		<!-- Cubic Skill -->
+		<!-- Summon Phantom Cubic Skill -->
 		<table name="#magicLvl"> 40 46 52 58 62 66 70 74 76 78 80 81 82 83 84 85 </table>
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="true" />
 		<set name="lvlDepend" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
-		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
-		<set name="isMagic" val="true" />
-		<set name="isDebuff" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" time="30" val="0" stackOrder="0.77" stackType="pAtkDown">
 				<mul order="0x30" stat="pAtk" val="0.77" />
@@ -814,17 +812,17 @@
 		</for>
 	</skill>
 	<skill id="4054" levels="16" name="Decrease P. Def.">
-		<!-- Cubic Skill -->
+		<!-- Summon Phantom Cubic Skill -->
 		<table name="#magicLvl"> 40 46 52 58 62 66 70 74 76 78 80 81 82 83 84 85 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="lvlDepend" val="2" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
-		<set name="target" val="TARGET_ONE" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
+		<set name="lvlDepend" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" time="30" val="0" stackOrder="0.77" stackType="pDefDown">
 				<mul order="0x30" stat="pDef" val="0.77" />
@@ -832,17 +830,17 @@
 		</for>
 	</skill>
 	<skill id="4055" levels="16" name="Decrease Atk. Spd.">
-		<!-- Cubic Skill -->
+		<!-- Summon Phantom Cubic Skill -->
 		<table name="#magicLvl"> 40 46 52 58 62 66 70 74 76 78 80 81 82 83 84 85 </table>
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="true" />
 		<set name="lvlDepend" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
-		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
-		<set name="isMagic" val="true" />
-		<set name="isDebuff" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" time="30" val="0" stackOrder="0.77" stackType="attack_time_up">
 				<mul order="0x30" stat="pAtkSpd" val="0.77" />
@@ -1506,6 +1504,7 @@
 		<table name="#runSpd"> 5 8 </table>
 		<table name="#pDef"> 0.95 0.92 </table>
 		<table name="#mDef"> 0.9 0.84 </table>
+		<table name="#stackOrder"> 1 2 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1519,7 +1518,7 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="100" />
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="1" stackType="berserk">
+			<effect name="Buff" time="1200" val="0" stackOrder="#stackOrder" stackType="berserk">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 				<mul order="0x30" stat="mAtk" val="#mAtk" />

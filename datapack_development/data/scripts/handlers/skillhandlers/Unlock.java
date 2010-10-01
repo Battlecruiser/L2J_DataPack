@@ -81,7 +81,7 @@ public class Unlock implements ISkillHandler
 						return;
 					}
 				}
-
+				
 				if ((!door.isUnlockable() && skill.getSkillType() != L2SkillType.UNLOCK_SPECIAL)
 						|| door.getFort() != null)
 				{
@@ -102,7 +102,7 @@ public class Unlock implements ISkillHandler
 			{
 				L2ChestInstance chest = (L2ChestInstance) target;
 				if (chest.getCurrentHp() <= 0
-						|| chest.isInteracted() 
+						|| chest.isInteracted()
 						|| activeChar.getInstanceId() != chest.getInstanceId())
 				{
 					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
@@ -130,12 +130,12 @@ public class Unlock implements ISkillHandler
 			}
 		}
 	}
-
+	
 	private static final boolean doorUnlock(L2Skill skill)
 	{
 		if (skill.getSkillType() == L2SkillType.UNLOCK_SPECIAL)
 			return Rnd.get(100) < skill.getPower();
-
+		
 		switch (skill.getLevel())
 		{
 			case 0:
@@ -150,7 +150,7 @@ public class Unlock implements ISkillHandler
 				return Rnd.get(120) < 100;
 		}
 	}
-
+	
 	private static final boolean chestUnlock(L2Skill skill, L2Character chest)
 	{
 		int chance = 0;
@@ -158,14 +158,14 @@ public class Unlock implements ISkillHandler
 		{
 			if (skill.getLevel() < 10)
 				return false;
-
+			
 			chance = (skill.getLevel() - 10) * 5 + 30;
 		}
 		else if (chest.getLevel() > 40)
 		{
 			if (skill.getLevel() < 6)
 				return false;
-
+			
 			chance = (skill.getLevel() - 6) * 5 + 10;
 		}
 		else if (chest.getLevel() > 30)
@@ -174,21 +174,21 @@ public class Unlock implements ISkillHandler
 				return false;
 			if (skill.getLevel() > 12)
 				return true;
-
+			
 			chance = (skill.getLevel() - 3) * 5 + 30;
 		}
 		else
 		{
 			if (skill.getLevel() > 10)
 				return true;
-
+			
 			chance = skill.getLevel() * 5 + 35;
 		}
-
+		
 		chance = Math.min(chance, 50);
 		return Rnd.get(100) < chance;
 	}
-
+	
 	private static final boolean chestTrap(L2Character chest)
 	{
 		if (chest.getLevel() > 60)
@@ -199,7 +199,7 @@ public class Unlock implements ISkillHandler
 			return Rnd.get(100) < 30;
 		return Rnd.get(100) < 10;
 	}
-
+	
 	/**
 	 * 
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()

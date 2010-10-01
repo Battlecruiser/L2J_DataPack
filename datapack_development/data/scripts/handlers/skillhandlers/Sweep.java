@@ -25,7 +25,9 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.network.serverpackets.ItemList;
+import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.skills.l2skills.L2SkillSweeper;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
 
 /**
@@ -112,6 +114,42 @@ public class Sweep implements ISkillHandler
 					player.sendPacket(iu);
 				else
 					player.sendPacket(new ItemList(player, false));
+			}
+			
+			L2SkillSweeper sweep = (L2SkillSweeper) skill;
+			if (sweep.getAbsorbAbs() != -1)
+			{
+				if (sweep.isAbsorbHp())
+				{
+					int hpAdd = sweep.getAbsorbAbs();
+					double hp = ((activeChar.getCurrentHp() + hpAdd) > activeChar.getMaxHp() ? activeChar.getMaxHp() : (activeChar.getCurrentHp() + hpAdd));
+					int restored = (int) (hp - activeChar.getCurrentHp());
+					activeChar.setCurrentHp(hp);
+					
+					StatusUpdate suhp = new StatusUpdate(activeChar);
+					suhp.addAttribute(StatusUpdate.CUR_HP, (int)hp);
+					activeChar.sendPacket(suhp);
+					
+					SystemMessage sm = new SystemMessage(SystemMessageId.S1_HP_RESTORED);
+					sm.addNumber(restored);
+					activeChar.sendPacket(sm);
+				}
+				else
+				{
+					int mpAdd = sweep.getAbsorbAbs();
+					double mp = ((activeChar.getCurrentMp() + mpAdd) > activeChar.getMaxMp() ? activeChar.getMaxMp() : (activeChar.getCurrentMp() + mpAdd));
+					int restored = (int) (mp - activeChar.getCurrentMp());
+					activeChar.setCurrentMp(mp);
+					
+					StatusUpdate suhp = new StatusUpdate(activeChar);
+					suhp.addAttribute(StatusUpdate.CUR_MP, (int)mp);
+					activeChar.sendPacket(suhp);
+					
+					SystemMessage sm = new SystemMessage(SystemMessageId.S1_MP_RESTORED);
+					sm.addNumber(restored);
+					activeChar.sendPacket(sm);
+				}
+				
 			}
 		}
 	}

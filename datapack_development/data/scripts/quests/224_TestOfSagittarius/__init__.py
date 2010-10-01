@@ -126,7 +126,7 @@ class Quest (JQuest) :
 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+   htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -181,7 +181,8 @@ class Quest (JQuest) :
       st.takeItems(CRESCENT_MOON_BOW,1)
       st.takeItems(TALISMAN_OF_KADESH,1)
       st.takeItems(BLOOD_OF_LIZARDMAN,st.getQuestItemsCount(BLOOD_OF_LIZARDMAN))
-      st.addExpAndSp(54726,20250)
+      st.addExpAndSp(447444,30704)
+      st.giveItems(57,80903)
       st.unset("step")
       st.set("cond","0")
       st.exitQuest(False)

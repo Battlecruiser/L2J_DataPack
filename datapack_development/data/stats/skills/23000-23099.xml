@@ -917,9 +917,9 @@
 		</cond>
 		<for>
 			<effect name="Buff" time="600" val="0" stackOrder="50" stackType="MentalShield">
-				<mul order="0x30" stat="rootVuln" val="0.5" />
-				<mul order="0x30" stat="sleepVuln" val="0.5" />
-				<mul order="0x30" stat="derangementVuln" val="0.5" />
+				<sub order="0x40" stat="rootVuln" val="50" />
+				<sub order="0x40" stat="sleepVuln" val="50" />
+				<sub order="0x40" stat="derangementVuln" val="50" />
 			</effect>
 		</for>
 	</skill>

@@ -28,12 +28,12 @@ public class Rift implements IBypassHandler
 		"changeriftroom",
 		"exitrift"
 	};
-
+	
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2Npc))
 			return false;
-
+		
 		if (command.toLowerCase().startsWith(COMMANDS[0])) // EnterRift
 		{
 			try
@@ -50,14 +50,14 @@ public class Rift implements IBypassHandler
 		else
 		{
 			final boolean inRift = activeChar.isInParty() && activeChar.getParty().isInDimensionalRift();
-
+			
 			if (command.toLowerCase().startsWith(COMMANDS[1])) //ChangeRiftRoom
 			{
 				if (inRift)
 					activeChar.getParty().getDimensionalRift().manualTeleport(activeChar, (L2Npc)target);
 				else
 					DimensionalRiftManager.getInstance().handleCheat(activeChar, (L2Npc)target);
-
+				
 				return true;
 			}
 			else if (command.toLowerCase().startsWith(COMMANDS[2])) // ExitRift
@@ -66,13 +66,13 @@ public class Rift implements IBypassHandler
 					activeChar.getParty().getDimensionalRift().manualExitRift(activeChar, (L2Npc)target);
 				else
 					DimensionalRiftManager.getInstance().handleCheat(activeChar, (L2Npc)target);
-
+				
 			}
 			return true;
 		}
 		return false;
 	}
-
+	
 	public String[] getBypassList()
 	{
 		return COMMANDS;

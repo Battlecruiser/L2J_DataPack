@@ -32,7 +32,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="bleedVuln" val="0.95" />
+			<sub order="0x40" stat="bleedVuln" val="5" />
 		</for>
 	</skill>
 	<skill id="3304" levels="1" name="White Talisman of Attention">
@@ -40,7 +40,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="sleepVuln" val="0.95" />
+			<sub order="0x40" stat="sleepVuln" val="5" />
 		</for>
 	</skill>
 	<skill id="3305" levels="1" name="White Talisman of Grounding">
@@ -48,7 +48,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="stunVuln" val="0.95" />
+			<sub order="0x40" stat="stunVuln" val="5" />
 		</for>
 	</skill>
 	<skill id="3306" levels="1" name="White Talisman of Bravery">
@@ -56,7 +56,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="derangementVuln" val="0.95" />
+			<sub order="0x40" stat="derangementVuln" val="5" />
 		</for>
 	</skill>
 	<skill id="3307" levels="1" name="White Talisman of Motion">
@@ -64,7 +64,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="paralyzeVuln" val="0.95" />
+			<sub order="0x40" stat="paralyzeVuln" val="5" />
 		</for>
 	</skill>
 	<skill id="3308" levels="1" name="White Talisman of Freedom">
@@ -72,7 +72,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="rootVuln" val="0.95" />
+			<sub order="0x40" stat="rootVuln" val="5" />
 		</for>
 	</skill>
 	<skill id="3309" levels="1" name="White Talisman of Protection">
@@ -80,7 +80,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="cancelVuln" val="0.95" />
+			<sub order="0x40" stat="cancelVuln" val="5" />
 		</for>
 	</skill>
 	<skill id="3310" levels="1" name="Yellow Talisman of Physical Regeneration">
@@ -204,7 +204,7 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="3326" levels="1" name="Jewerly Bracelet">
+	<skill id="3326" levels="1" name="Jewelry Bracelet">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -375,7 +375,7 @@
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 effect -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Darkness resistance is increased +8 -->
 			<mul order="0x30" stat="gainHp" val="1.03" /> <!-- Received Increased Heal +3% -->
-			<mul order="0x30" stat="stunVuln" val="0.5" /> <!-- Shock resistance is increased +50% -->
+			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Shock resistance is increased +50% -->
 			<add order="0x10" stat="cloak" val="1" />
 		</for>
 	</skill>
@@ -433,7 +433,7 @@
 			<add order="0x40" stat="rEvas" val="4.3" /> <!-- Evasion +4.3 -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 Effect -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
-			<mul order="0x30" stat="rootVuln" val="0.87" /> <!-- Hold resistance are increased +13 -->
+			<sub order="0x40" stat="rootVuln" val="13" /> <!-- Hold resistance are increased +13 -->
 			<mul order="0x30" stat="pAtkSpd" val="1.0266" /> <!-- Atk. Spd. are increased +2.66% -->
 			<add order="0x10" stat="cloak" val="1" />
 		</for>
@@ -561,7 +561,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="stunVuln" val="0.82" /> <!-- Stun Resistance +18 -->
+			<sub order="0x40" stat="stunVuln" val="18" /> <!-- Stun Resistance +18 -->
 		</for>
 	</skill>
 	<skill id="3366" levels="1" name="Dynasty Resistance Ring">
@@ -569,7 +569,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="stunVuln" val="0.92" /> <!-- Stun Resistance +8 -->
+			<sub order="0x40" stat="stunVuln" val="8" /> <!-- Stun Resistance +8 -->
 		</for>
 	</skill>
 	<skill id="3367" levels="1" name="Dynasty Resistance Earring">
@@ -577,7 +577,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="stunVuln" val="0.88" /> <!-- Stun Resistance +12 -->
+			<sub order="0x40" stat="stunVuln" val="12" /> <!-- Stun Resistance +12 -->
 		</for>
 	</skill>
 	<skill id="3368" levels="1" name="Traits Strengthen Necklace">
@@ -600,7 +600,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="bleedVuln" val="0.89" /> <!-- Bleed Resistance +11 -->
+			<sub order="0x40" stat="bleedVuln" val="11" /> <!-- Bleed Resistance +11 -->
 		</for>
 	</skill>
 	<skill id="3372" levels="1" name="Dynasty Resistance Ring">
@@ -608,7 +608,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="bleedVuln" val="0.95" /> <!-- Bleed Resistance +5 -->
+			<sub order="0x40" stat="bleedVuln" val="5" /> <!-- Bleed Resistance +5 -->
 		</for>
 	</skill>
 	<skill id="3373" levels="1" name="Dynasty Resistance Earring">
@@ -616,7 +616,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="bleedVuln" val="0.92" /> <!-- Bleed Resistance +8 -->
+			<sub order="0x40" stat="bleedVuln" val="8" /> <!-- Bleed Resistance +8 -->
 		</for>
 	</skill>
 	<skill id="3374" levels="1" name="Traits Strengthen Necklace">
@@ -639,7 +639,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="poisonVuln" val="0.84" /> <!-- Poison Resistance +16 -->
+			<sub order="0x40" stat="poisonVuln" val="16" /> <!-- Poison Resistance +16 -->
 		</for>
 	</skill>
 	<skill id="3378" levels="1" name="Dynasty Resistance Ring">
@@ -647,7 +647,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="poisonVuln" val="0.93" /> <!-- Poison Resistance +7 -->
+			<sub order="0x40" stat="poisonVuln" val="7" /> <!-- Poison Resistance +7 -->
 		</for>
 	</skill>
 	<skill id="3379" levels="1" name="Dynasty Resistance Earring">
@@ -655,7 +655,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="poisonVuln" val="0.89" /> <!-- Poison Resistance +11 -->
+			<sub order="0x40" stat="poisonVuln" val="11" /> <!-- Poison Resistance +11 -->
 		</for>
 	</skill>
 	<skill id="3380" levels="1" name="Traits Strengthen Necklace">
@@ -678,7 +678,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="paralyzeVuln" val="0.91" /> <!-- Paralysis Resistance +9 -->
+			<sub order="0x40" stat="paralyzeVuln" val="9" /> <!-- Paralysis Resistance +9 -->
 		</for>
 	</skill>
 	<skill id="3384" levels="1" name="Dynasty Resistance Ring">
@@ -686,7 +686,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="paralyzeVuln" val="0.96" /> <!-- Paralysis Resistance +4 -->
+			<sub order="0x40" stat="paralyzeVuln" val="4" /> <!-- Paralysis Resistance +4 -->
 		</for>
 	</skill>
 	<skill id="3385" levels="1" name="Dynasty Resistance Earring">
@@ -694,7 +694,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="paralyzeVuln" val="0.94" /> <!-- Paralysis Resistance +6 -->
+			<sub order="0x40" stat="paralyzeVuln" val="6" /> <!-- Paralysis Resistance +6 -->
 		</for>
 	</skill>
 	<skill id="3386" levels="1" name="Traits Strengthen Necklace">
@@ -717,7 +717,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="rootVuln" val="0.82" /> <!-- Hold Resistance +18 -->
+			<sub order="0x40" stat="rootVuln" val="18" /> <!-- Hold Resistance +18 -->
 		</for>
 	</skill>
 	<skill id="3390" levels="1" name="Dynasty Resistance Ring">
@@ -725,7 +725,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="rootVuln" val="0.92" /> <!-- Hold Resistance +8 -->
+			<sub order="0x40" stat="rootVuln" val="8" /> <!-- Hold Resistance +8 -->
 		</for>
 	</skill>
 	<skill id="3391" levels="1" name="Dynasty Resistance Earring">
@@ -733,7 +733,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="rootVuln" val="0.88" /> <!-- Hold Resistance +12 -->
+			<sub order="0x40" stat="rootVuln" val="12" /> <!-- Hold Resistance +12 -->
 		</for>
 	</skill>
 	<skill id="3392" levels="1" name="Traits Strengthen Necklace">
@@ -756,7 +756,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="sleepVuln" val="0.82" /> <!-- Sleep Resistance +18 -->
+			<sub order="0x40" stat="sleepVuln" val="18" /> <!-- Sleep Resistance +18 -->
 		</for>
 	</skill>
 	<skill id="3396" levels="1" name="Dynasty Resistance Ring">
@@ -764,7 +764,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="sleepVuln" val="0.92" /> <!-- Sleep Resistance +8 -->
+			<sub order="0x40" stat="sleepVuln" val="8" /> <!-- Sleep Resistance +8 -->
 		</for>
 	</skill>
 	<skill id="3397" levels="1" name="Dynasty Resistance Earring">
@@ -772,7 +772,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="sleepVuln" val="0.88" /> <!-- Sleep Resistance +12 -->
+			<sub order="0x40" stat="sleepVuln" val="12" /> <!-- Sleep Resistance +12 -->
 		</for>
 	</skill>
 	<skill id="3398" levels="1" name="Traits Strengthen Necklace">

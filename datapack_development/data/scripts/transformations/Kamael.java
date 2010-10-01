@@ -12,16 +12,16 @@ public class Kamael extends L2Transformation
 		// id, duration (secs), colRadius, colHeight
 		super(251, 9, 38);
 	}
-
+	
 	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 251 || getPlayer().isCursedWeaponEquipped())
 			return;
-
+		
 		transformedSkills();
 	}
-
+	
 	public void transformedSkills()
 	{
 		// Nail Attack
@@ -36,16 +36,16 @@ public class Kamael extends L2Transformation
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
-
+		
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
-
+	
 	@Override
 	public void onUntransform()
 	{
 		removeSkills();
 	}
-
+	
 	public void removeSkills()
 	{
 		// Nail Attack
@@ -60,10 +60,10 @@ public class Kamael extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false);
 		// Transform Dispel
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
-
+		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
-
+	
 	public static void main(String[] args)
 	{
 		TransformationManager.getInstance().registerTransformation(new Kamael());

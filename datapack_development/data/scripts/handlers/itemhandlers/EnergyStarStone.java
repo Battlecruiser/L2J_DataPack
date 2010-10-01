@@ -27,14 +27,14 @@ public class EnergyStarStone extends ItemSkills
 {
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.L2ItemInstance)
+	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.L2ItemInstance, boolean)
 	 */
 	@Override
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!(playable instanceof L2PcInstance))
 			return;
-
+		
 		final L2AirShipInstance ship = ((L2PcInstance)playable).getAirShip();
 		if (ship == null
 				|| !(ship instanceof L2ControllableAirShipInstance)
@@ -44,6 +44,6 @@ public class EnergyStarStone extends ItemSkills
 			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		super.useItem(playable, item);
+		super.useItem(playable, item, forceUse);
 	}
 }

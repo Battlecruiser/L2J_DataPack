@@ -15,8 +15,8 @@
 			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
 			<mul order="0x30" stat="pDef" val="1.0557" /> <!-- P. Def. +5.57% -->
 			<add order="0x40" stat="maxHp" val="531" /> <!-- Max HP +531 -->
-			<mul order="0x30" stat="sleepVuln" val="0.3" /> <!-- resistance to sleep by 70% -->
-			<mul order="0x30" stat="rootVuln" val="0.3" /> <!-- resistance to hold by 70% -->
+			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- resistance to sleep by 70% -->
+			<sub order="0x40" stat="rootVuln" val="70" /> <!-- resistance to hold by 70% -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
@@ -32,8 +32,8 @@
 			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
 			<mul order="0x30" stat="pDef" val="1.0557" /> <!-- P. Def. +5.57% -->
 			<add order="0x40" stat="maxHp" val="540" /> <!-- Max HP +540 -->
-			<mul order="0x30" stat="sleepVuln" val="0.3" /> <!-- resistance to sleep by 70% -->
-			<mul order="0x30" stat="rootVuln" val="0.3" /> <!-- resistance to hold by 70% -->
+			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- resistance to sleep by 70% -->
+			<sub order="0x40" stat="rootVuln" val="70" /> <!-- resistance to hold by 70% -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
@@ -86,7 +86,7 @@
 			<mul order="0x30" stat="mAtk" val="1.0847" /> <!-- M. Atk. 8.47% -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Speed 15% -->
 			<mul order="0x30" stat="regMp" val="1.0557" /> <!-- MP Recovery Rate by 5.57% -->
-			<mul order="0x30" stat="stunVuln" val="0.5" /> <!-- resistance to Stun Attacks by 50% -->
+			<sub order="0x40" stat="stunVuln" val="50" /> <!-- resistance to Stun Attacks by 50% -->
 			<sub order="0x40" stat="cancel" val="30" /> <!-- decreases the damage to be cancelled by magic by 30 -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
@@ -104,7 +104,7 @@
 			<mul order="0x30" stat="mAtk" val="1.0847" /> <!-- M. Atk. 8.47% -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Speed 15% -->
 			<mul order="0x30" stat="regMp" val="1.0557" /> <!-- MP Recovery Rate by 5.57% -->
-			<mul order="0x30" stat="stunVuln" val="0.5" /> <!-- resistance to Stun Attacks by 50% -->
+			<sub order="0x40" stat="stunVuln" val="50" /> <!-- resistance to Stun Attacks by 50% -->
 			<sub order="0x40" stat="cancel" val="30" /> <!-- decreases the damage to be cancelled by magic by 30 -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
@@ -415,8 +415,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="stunProf" val="1.15" />
-			<mul order="0x30" stat="bleedVuln" val="0.85" />
+			<add order="0x40" stat="stunProf" val="15" />
+			<sub order="0x40" stat="bleedVuln" val="15" />
 			<mul order="0x30" stat="maxCp" val="#maxCp" />
 		</for>
 	</skill>
@@ -426,8 +426,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="rootProf" val="1.15" />
-			<mul order="0x30" stat="poisonVuln" val="0.85" />
+			<add order="0x40" stat="rootProf" val="15" />
+			<sub order="0x40" stat="poisonVuln" val="15" />
 			<mul order="0x30" stat="maxCp" val="#maxCp" />
 		</for>
 	</skill>
@@ -437,8 +437,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="bleedProf" val="1.15" />
-			<mul order="0x30" stat="paralyzeVuln" val="0.85" />
+			<add order="0x40" stat="bleedProf" val="15" />
+			<sub order="0x40" stat="paralyzeVuln" val="15" />
 			<mul order="0x30" stat="maxCp" val="#maxCp" />
 		</for>
 	</skill>
@@ -448,8 +448,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="paralyzeProf" val="1.15" />
-			<mul order="0x30" stat="rootVuln" val="0.85" />
+			<add order="0x40" stat="paralyzeProf" val="15" />
+			<sub order="0x40" stat="rootVuln" val="15" />
 			<mul order="0x30" stat="maxCp" val="#maxCp" />
 		</for>
 	</skill>
@@ -459,8 +459,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="derangementProf" val="1.15" />
-			<mul order="0x30" stat="stunVuln" val="0.85" />
+			<add order="0x40" stat="derangementProf" val="15" />
+			<sub order="0x40" stat="stunVuln" val="15" />
 			<mul order="0x30" stat="maxCp" val="#maxCp" />
 		</for>
 	</skill>
@@ -470,8 +470,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="sleepProf" val="1.15" />
-			<mul order="0x30" stat="stunVuln" val="0.85" />
+			<add order="0x40" stat="sleepProf" val="15" />
+			<sub order="0x40" stat="stunVuln" val="15" />
 			<mul order="0x30" stat="maxCp" val="#maxCp" />
 		</for>
 	</skill>
@@ -481,8 +481,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="stunProf" val="1.15" />
-			<mul order="0x30" stat="sleepVuln" val="0.85" />
+			<add order="0x40" stat="stunProf" val="15" />
+			<sub order="0x40" stat="sleepVuln" val="15" />
 			<mul order="0x30" stat="maxCp" val="#maxCp" />
 		</for>
 	</skill>
@@ -492,8 +492,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="poisonProf" val="1.15" />
-			<mul order="0x30" stat="rootVuln" val="0.85" />
+			<add order="0x40" stat="poisonProf" val="15" />
+			<sub order="0x40" stat="rootVuln" val="15" />
 			<mul order="0x30" stat="maxCp" val="#maxCp" />
 		</for>
 	</skill>
@@ -503,8 +503,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="rootProf" val="1.15" />
-			<mul order="0x30" stat="derangementVuln" val="0.85" />
+			<add order="0x40" stat="rootProf" val="15" />
+			<sub order="0x40" stat="derangementVuln" val="15" />
 			<mul order="0x30" stat="maxCp" val="#maxCp" />
 		</for>
 	</skill>
@@ -534,6 +534,39 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8362" levels="1" name="Beast Training - Release">
+		<set name="target" val="TARGET_ONE" />
+		<set name="staticHitTime" val="true" />
+		<set name="skillType" val="BEAST_RELEASE" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="neutral" val="true" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="reuseDelay" val="1000" />
+		<set name="hitTime" val="500" />
+	</skill>
+	<skill id="8363" levels="1" name="Beast Training - Accompany">
+		<set name="target" val="TARGET_ONE" />
+		<set name="staticHitTime" val="true" />
+		<set name="skillType" val="BEAST_ACCOMPANY" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="neutral" val="true" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="reuseDelay" val="1000" />
+		<set name="hitTime" val="500" />
+	</skill>
+	<skill id="8364" levels="1" name="Beast Training - Use Special Ability">
+		<set name="target" val="TARGET_ONE" />
+		<set name="staticHitTime" val="true" />
+		<set name="skillType" val="BEAST_SKILL" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="neutral" val="true" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="reuseDelay" val="1000" />
+		<set name="hitTime" val="500" />
 	</skill>
 	<skill id="8365" levels="1" name="Dynasty Tunic">
 		<set name="target" val="TARGET_NONE" />
@@ -605,6 +638,17 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="8378" levels="1" name="Beast Training - Release All">
+		<set name="target" val="TARGET_SELF" />
+		<set name="staticHitTime" val="true" />
+		<set name="skillType" val="BEAST_RELEASE_ALL" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="neutral" val="true" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="reuseDelay" val="1000" />
+		<set name="hitTime" val="500" />
 	</skill>
 	<skill id="8379" levels="2" name="Royal Guard Ring - Gludio">
 		<table name="#earthRes"> 12 15 </table>
@@ -766,6 +810,62 @@
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="windRes" val="#windRes" />
+		</for>
+	</skill>
+	<skill id="8397" levels="1" name="Moirai Armor Set">
+		<!-- Increases P. Atk. by 4.26%, Atk. Spd. by 4%, resistance to damage magic by 2%, resistance to Stun Atk. by 50% and resistance to Fire/Water/Wind/Earth attack by 3. Cloak equip possible. STR+2. CON-2 -->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<sub order="0x10" stat="CON" val="2" /> <!-- Con -2 -->
+			<add order="0x10" stat="STR" val="2" /> <!-- Str +2 -->
+			<mul order="0x30" stat="pAtk" val="1.0426" /> <!-- P. Atk. +4.26% -->
+			<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
+			<sub order="0x40" stat="stunVuln" val="50" /> <!-- resistance to Stun Attacks by 50% -->
+			<mul order="0x30" stat="magicDamVul" val="0.98" /> <!-- resistance to damage magic by 2% -->
+			<add order="0x40" stat="waterRes" val="3" />
+			<add order="0x40" stat="fireRes" val="3" />
+			<add order="0x40" stat="windRes" val="3" />
+			<add order="0x40" stat="earthRes" val="3" />
+			<add order="0x10" stat="cloak" val="1" />
+		</for>
+	</skill>
+	<skill id="8398" levels="1" name="Moirai Leather Armor Set">
+		<!-- Increases P. Atk. by 4.26%, Atk. Spd. by 4%, Moving Spd. by 3%, resistance to Hold Atk. by 50% and resistance to Fire/Water/Wind/Earth attack by 3. Cloak equip possible. DEX+2, CON-2 -->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<sub order="0x10" stat="CON" val="2" /> <!-- Con -2 -->
+			<add order="0x10" stat="DEX" val="2" /> <!-- Dex +2 -->
+			<mul order="0x30" stat="pAtk" val="1.0426" /> <!-- P. Atk. +4.26% -->
+			<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
+			<sub order="0x40" stat="rootVuln" val="50" /> <!-- resistance to Hold Attacks by 50% -->
+			<mul order="0x30" stat="runSpd" val="1.03" /> <!-- Moving Spd. by 3% -->
+			<add order="0x40" stat="waterRes" val="3" />
+			<add order="0x40" stat="fireRes" val="3" />
+			<add order="0x40" stat="windRes" val="3" />
+			<add order="0x40" stat="earthRes" val="3" />
+			<add order="0x10" stat="cloak" val="1" />
+		</for>
+	</skill>
+	<skill id="8399" levels="1" name="Moirai Robe Set">
+		<!-- Increases M. Atk. by 8.11%, Casting Spd. by 15%, resistance to Paralysis Atk. by 50% and resistance to Fire/Water/Wind/Earth attack by 5. Cloak equip possible. WIT+2, MEN-2 -->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<sub order="0x10" stat="MEN" val="2" /> <!-- MEN -2 -->
+			<add order="0x10" stat="WIT" val="2" /> <!-- WIT +2 -->
+			<mul order="0x30" stat="mAtk" val="1.0811" /> <!-- M. Atk. +8.11% -->
+			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Cast. Spd. +15% -->
+			<sub order="0x40" stat="paralyzeVuln" val="50" /> <!-- resistance to Paralysis Attacks by 50% -->
+			<add order="0x40" stat="waterRes" val="5" />
+			<add order="0x40" stat="fireRes" val="5" />
+			<add order="0x40" stat="windRes" val="5" />
+			<add order="0x40" stat="earthRes" val="5" />
+			<add order="0x10" stat="cloak" val="1" />
 		</for>
 	</skill>
 </list>

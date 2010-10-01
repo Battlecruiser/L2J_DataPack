@@ -125,7 +125,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 					activeChar.sendMessage("Invalid target.");
 					return false;
 				}
-
+				
 				String val = command.substring(22);
 				StringTokenizer st = new StringTokenizer(val);
 				if (st.countTokens() == 2)
@@ -188,7 +188,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 			{
 				for (L2PcInstance onlinePlayer : pls)
 				{
-					if (activeChar != onlinePlayer && onlinePlayer.isOnline() == 1 && (onlinePlayer.getClient() != null && !onlinePlayer.getClient().isDetached()))
+					if (activeChar != onlinePlayer && onlinePlayer.isOnline() && (onlinePlayer.getClient() != null && !onlinePlayer.getClient().isDetached()))
 					{
 						onlinePlayer.getInventory().addItem("Admin", idval, numval, onlinePlayer, activeChar);
 						onlinePlayer.sendMessage("Admin spawned "+numval+" "+template.getName()+" in your inventory.");
@@ -221,7 +221,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 		}
 		
 		target.getInventory().addItem("Admin", id, num, activeChar, null);
-
+		
 		if (activeChar != target)
 			target.sendMessage("Admin spawned " + num + " "+template.getName()+" in your inventory.");
 		activeChar.sendMessage("You have spawned " + num + " "+template.getName()+"(" + id + ") in "+target.getName()+" inventory.");

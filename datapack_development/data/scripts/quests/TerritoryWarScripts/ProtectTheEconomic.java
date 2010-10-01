@@ -16,16 +16,16 @@ package quests.TerritoryWarScripts;
 
 
 /**
-*
-* @author Gigiikun
-*/
+ *
+ * @author Gigiikun
+ */
 
 public class ProtectTheEconomic extends TerritoryWarSuperClass
 {
 	public static String qn1 = "733_ProtecttheEconomicAssociationLeader";
 	public static int qnu = 733;
 	public static String qna = "Protect the Economic Association Leader";
-
+	
 	public ProtectTheEconomic()
 	{
 		super(qnu,qn1,qna);

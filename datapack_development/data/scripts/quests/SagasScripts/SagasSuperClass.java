@@ -99,7 +99,7 @@ public class SagasSuperClass extends QuestJython
 	public L2Npc FindSpawn (L2PcInstance player,L2Npc npc)
 	{
 		if (_SpawnList.containsKey(npc) && _SpawnList.get(npc) == player.getObjectId())
-			return npc;	
+			return npc;
 		return null;
 	}
 	
@@ -118,8 +118,8 @@ public class SagasSuperClass extends QuestJython
 		QuestState st = null;
 		if (_SpawnList.containsKey(npc))
 		{
-			player = (L2PcInstance) L2World.getInstance().findObject(_SpawnList.get(npc));
-			if (player != null) 
+			player = L2World.getInstance().getPlayer(_SpawnList.get(npc));
+			if (player != null)
 				st = player.getQuestState(qn);
 		}
 		return st;
@@ -147,7 +147,7 @@ public class SagasSuperClass extends QuestJython
 				st2.giveItems(Items[3],1);
 		}
 	}
-
+	
 	public QuestState findQuest(L2PcInstance player)
 	{
 		QuestState st = player.getQuestState(qn);
@@ -227,7 +227,7 @@ public class SagasSuperClass extends QuestJython
 					st.set("cond","0");
 					htmltext = "0-07.htm";
 					st.takeItems(Items[10],-1);
-					st.addExpAndSp(2299404,0);
+					st.addExpAndSp(2586527,0);
 					st.giveItems(57,5000000);
 					st.giveItems(6622,1);
 					int Class = getClassId(player);
@@ -237,7 +237,7 @@ public class SagasSuperClass extends QuestJython
 						player.setBaseClass(Class);
 					player.broadcastUserInfo();
 					Cast(npc,player,4339,1);
-
+					
 					Quest q = QuestManager.getInstance().getQuest("SkillTransfer");
 					if (q != null)
 						q.startQuestTimer("givePormanders", 1, npc, player);
@@ -496,11 +496,11 @@ public class SagasSuperClass extends QuestJython
 			return null;
 		return htmltext;
 	}
-    
+	
 	@Override
 	public String onTalk(L2Npc npc,L2PcInstance player)
 	{
-		String htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>";
+		String htmltext = getNoQuestMsg(player);
 		QuestState st = player.getQuestState(qn);
 		if (st != null)
 		{
@@ -659,7 +659,7 @@ public class SagasSuperClass extends QuestJython
 									player.setBaseClass(Class);
 								player.broadcastUserInfo();
 								Cast(npc,player,4339,1);
-
+								
 								Quest q = QuestManager.getInstance().getQuest("SkillTransfer");
 								if (q != null)
 									q.startQuestTimer("givePormanders", 1, npc, player);
@@ -703,7 +703,7 @@ public class SagasSuperClass extends QuestJython
 							else
 							{
 								if (st.getInt("Quest0") == 0)
-									 htmltext = "4-01.htm";
+									htmltext = "4-01.htm";
 								else if (st.getInt("Quest0") == 1)
 									htmltext = "4-03.htm";
 							}
@@ -720,7 +720,7 @@ public class SagasSuperClass extends QuestJython
 							else
 							{
 								if (st.getInt("Quest0") == 0)
-									 htmltext = "4-02.htm";
+									htmltext = "4-02.htm";
 							}
 						}
 					}
@@ -775,7 +775,7 @@ public class SagasSuperClass extends QuestJython
 		if (_SpawnList.containsKey(npc) && _SpawnList.get(npc) != player.getObjectId())
 		{
 			L2PcInstance quest_player = (L2PcInstance) L2World.getInstance().findObject(_SpawnList.get(npc));
-			if (quest_player == null) 
+			if (quest_player == null)
 				return null;
 			else
 			{
@@ -850,11 +850,11 @@ public class SagasSuperClass extends QuestJython
 						//This is just a guess....not really sure what it actually says, if anything
 						AutoChat(npc,Text[4].replace("PLAYERNAME",st1.getPlayer().getName()));
 						st1.giveItems(Items[8],1);
-	                    st1.takeItems(Items[3],-1);
-	                    st1.set("cond","16");
-	                    st1.playSound("ItemSound.quest_middle");
+						st1.takeItems(Items[3],-1);
+						st1.set("cond","16");
+						st1.playSound("ItemSound.quest_middle");
 					}
-						
+					
 				}
 				return super.onKill(npc, player, isPet);
 			}
@@ -873,12 +873,12 @@ public class SagasSuperClass extends QuestJython
 							st1.set("kills",String.valueOf(st1.getInt("kills")+1));
 						else
 						{
-	                        st1.playSound("ItemSound.quest_middle");
-	                        st1.giveItems(Items[5],1);
-	                        st1.set("cond","7");
+							st1.playSound("ItemSound.quest_middle");
+							st1.giveItems(Items[5],1);
+							st1.set("cond","7");
 						}
 					}
-						
+					
 				}
 				return super.onKill(npc, player, isPet);
 			}
@@ -912,41 +912,41 @@ public class SagasSuperClass extends QuestJython
 					{
 						AutoChat(npc,Text[4].replace("PLAYERNAME",player.getName()));
 						st.giveItems(Items[8],1);
-	                    st.takeItems(Items[3],-1);
-	                    st.set("cond","16");
-	                    st.playSound("ItemSound.quest_middle");
+						st.takeItems(Items[3],-1);
+						st.set("cond","16");
+						st.playSound("ItemSound.quest_middle");
 					}
-					else 
-	                    AutoChat(npc,Text[5].replace("PLAYERNAME",player.getName()));
+					else
+						AutoChat(npc,Text[5].replace("PLAYERNAME",player.getName()));
 				}
 				cancelQuestTimer("Archon Hellisha has despawned",npc,st2.getPlayer());
-	            st2.set("spawned","0");
-	            DeleteSpawn(st2,npc);
+				st2.set("spawned","0");
+				DeleteSpawn(st2,npc);
 			}
 		}
 		else
 		{
 			if (npcId == Mob[0])
 			{
-	            st = findRightState(npc);
-	            if (st!= null)
-	            {
-	                cancelQuestTimer("Mob_1 has despawned",npc,st.getPlayer());
-	                st.set("spawned","0");
-	                DeleteSpawn(st,npc);
-	            }
+				st = findRightState(npc);
+				if (st!= null)
+				{
+					cancelQuestTimer("Mob_1 has despawned",npc,st.getPlayer());
+					st.set("spawned","0");
+					DeleteSpawn(st,npc);
+				}
 			}
 			else if (npcId == Mob[1])
 			{
-	            st = findRightState(npc);
-	            if (st!=null)
-	            {
-	                cancelQuestTimer("Archon Hellisha has despawned",npc,st.getPlayer());
-	                st.set("spawned","0");
-	                DeleteSpawn(st,npc);
-	            }
+				st = findRightState(npc);
+				if (st!=null)
+				{
+					cancelQuestTimer("Archon Hellisha has despawned",npc,st.getPlayer());
+					st.set("spawned","0");
+					DeleteSpawn(st,npc);
+				}
 			}
-	    }
+		}
 		return super.onKill(npc, player, isPet);
 	}
 	

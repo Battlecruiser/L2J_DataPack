@@ -44,7 +44,7 @@ class Quest (JQuest) :
 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+   htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st : return htmltext 
 
@@ -101,7 +101,7 @@ class Quest (JQuest) :
               st.playSound("ItemSound.quest_finish")
               st.set("onlyone","1")
               st.giveItems(RING_ID,1)
-              st.giveItems(RING_ID,1)
+              st.giveItems(1835,3)
               st.takeItems(DELIVERY_LIST_ID,-1)
               st.takeItems(JACKSONS_RECEIPT_ID,-1)
               st.takeItems(SILVIAS_RECEIPT_ID,-1)

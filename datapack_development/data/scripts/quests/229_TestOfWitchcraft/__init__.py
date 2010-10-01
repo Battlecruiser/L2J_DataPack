@@ -120,7 +120,8 @@ class Quest (JQuest) :
       st.takeItems(SWORD_OF_BINDING,1)
       st.takeItems(IKERS_AMULET,1)
       st.takeItems(ORIMS_INSTRUCTIONS,1)
-      st.addExpAndSp(139796,40000)
+      st.addExpAndSp(1029122,70620)
+      st.giveItems(57,186077)
       st.giveItems(MARK_OF_WITCHCRAFT,1)
       st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
       htmltext = "30630-22.htm"
@@ -189,7 +190,7 @@ class Quest (JQuest) :
 
 
   def onTalk (self,npc,player):
-    htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+    htmltext = Quest.getNoQuestMsg(player)
     
     st = player.getQuestState(qn)
     if not st : return htmltext

@@ -45,11 +45,11 @@ public class AdminElement implements IAdminCommandHandler
 		"admin_setlw",
 		"admin_setls"
 	};
-
+	
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		int armorType = -1;
-
+		
 		if (command.startsWith("admin_setlh"))
 			armorType = Inventory.PAPERDOLL_HEAD;
 		else if (command.startsWith("admin_setlc"))
@@ -64,13 +64,13 @@ public class AdminElement implements IAdminCommandHandler
 			armorType = Inventory.PAPERDOLL_RHAND;
 		else if (command.startsWith("admin_setls"))
 			armorType = Inventory.PAPERDOLL_LHAND;
-
+		
 		if (armorType != -1)
 		{
 			try
 			{
 				String[] args = command.split(" ");
-
+				
 				byte element = Elementals.getElementId(args[1]);
 				int value = Integer.parseInt(args[2]);
 				if (element < -1 || element > 5 || value < 0 || value > 450)
@@ -78,7 +78,7 @@ public class AdminElement implements IAdminCommandHandler
 					activeChar.sendMessage("Usage: //setlh/setlc/setlg/setlb/setll/setlw/setls <element> <value>[0-450]");
 					return false;
 				}
-
+				
 				setElement(activeChar, element, value, armorType);
 			}
 			catch (Exception e)
@@ -87,15 +87,15 @@ public class AdminElement implements IAdminCommandHandler
 				return false;
 			}
 		}
-
+		
 		return true;
 	}
-
+	
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;
 	}
-
+	
 	private void setElement(L2PcInstance activeChar, byte type, int value, int armorType)
 	{
 		// get the target
@@ -112,9 +112,9 @@ public class AdminElement implements IAdminCommandHandler
 			activeChar.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
 			return;
 		}
-
+		
 		L2ItemInstance itemInstance = null;
-
+		
 		// only attempt to enchant if there is a weapon equipped
 		L2ItemInstance parmorInstance = player.getInventory().getPaperdollItem(armorType);
 		if (parmorInstance != null && parmorInstance.getLocationSlot() == armorType)
@@ -128,41 +128,43 @@ public class AdminElement implements IAdminCommandHandler
 			if (parmorInstance != null && parmorInstance.getLocationSlot() == Inventory.PAPERDOLL_LRHAND)
 				itemInstance = parmorInstance;
 		}
-
+		
 		if (itemInstance != null)
 		{
 			String old, current;
-			Elementals element = itemInstance.getElementals();
+			Elementals element = itemInstance.getElemental(type);
 			if (element == null)
 				old = "None";
 			else
+			{
 				old = element.toString();
-
+			}
+			
 			// set enchant value
 			player.getInventory().unEquipItemInSlotAndRecord(armorType);
 			if (type == -1)
-				itemInstance.clearElementAttr();
+				itemInstance.clearElementAttr(type);
 			else
 				itemInstance.setElementAttr(type, value);
 			player.getInventory().equipItemAndRecord(itemInstance);
-
+			
 			if (itemInstance.getElementals() == null)
 				current = "None";
 			else
-				current = itemInstance.getElementals().toString();
-
+				current = itemInstance.getElemental(type).toString();
+			
 			// send packets
 			InventoryUpdate iu = new InventoryUpdate();
 			iu.addModifiedItem(itemInstance);
 			player.sendPacket(iu);
-
+			
 			// informations
 			activeChar.sendMessage("Changed elemental power of " + player.getName() + "'s "
-				+ itemInstance.getItem().getName() + " from " + old + " to " + current + ".");
+					+ itemInstance.getItem().getName() + " from " + old + " to " + current + ".");
 			if (player != activeChar)
 			{
 				player.sendMessage(activeChar.getName()+" has changed the elemental power of your "
-					+ itemInstance.getItem().getName() + " from " + old + " to " + current + ".");
+						+ itemInstance.getItem().getName() + " from " + old + " to " + current + ".");
 			}
 		}
 	}

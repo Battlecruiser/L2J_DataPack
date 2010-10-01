@@ -12,7 +12,6 @@ FORGOTTEN_MONUMENT_1,FORGOTTEN_MONUMENT_2,FORGOTTEN_MONUMENT_3,FORGOTTEN_MONUMEN
 #ITEMS
 KRORINS_JOURNAL = 7252
 #MESSAGES
-default = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
@@ -49,11 +48,11 @@ class Quest (JQuest) :
      st.playSound("ItemSound.quest_finish")
      st.exitQuest(False)
    elif event != "31663-0a.htm":
-     htmltext = default
+     htmltext = Quest.getNoQuestMsg(player)
    return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = default
+   htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st : return htmltext
    

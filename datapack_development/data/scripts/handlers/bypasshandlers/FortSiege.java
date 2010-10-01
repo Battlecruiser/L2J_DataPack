@@ -31,12 +31,12 @@ public class FortSiege implements IBypassHandler
 		"fort_register",
 		"fort_unregister"
 	};
-
+	
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2FortSiegeNpcInstance))
 			return false;
-
+		
 		if (activeChar.getClanId() > 0
 				&& (activeChar.getClanPrivileges() & L2Clan.CP_CS_MANAGE_SIEGE) == L2Clan.CP_CS_MANAGE_SIEGE)
 		{
@@ -73,10 +73,10 @@ public class FortSiege implements IBypassHandler
 		}
 		else
 			((L2Npc)target).showChatWindow(activeChar, 10);
-
+		
 		return true;
 	}
-
+	
 	public String[] getBypassList()
 	{
 		return COMMANDS;

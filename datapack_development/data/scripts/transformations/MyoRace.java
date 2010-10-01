@@ -15,7 +15,7 @@ public class MyoRace extends L2Transformation
 		// id, colRadius, colHeight
 		super(219, 10, 23);
 	}
-
+	
 	@Override
 	public void onTransform()
 	{
@@ -24,10 +24,10 @@ public class MyoRace extends L2Transformation
 		
 		if (getPlayer().getPet() != null)
 			getPlayer().getPet().unSummon(getPlayer());
-
+		
 		transformedSkills();
 	}
-
+	
 	public void transformedSkills()
 	{
 		// Rolling Step (up to 6 levels)
@@ -44,16 +44,16 @@ public class MyoRace extends L2Transformation
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
-
+		
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
-
+	
 	@Override
 	public void onUntransform()
 	{
 		removeSkills();
 	}
-
+	
 	public void removeSkills()
 	{
 		// Rolling Step (up to 6 levels)
@@ -70,10 +70,10 @@ public class MyoRace extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false);
 		// Transform Dispel
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
-
+		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
-
+	
 	public static void main(String[] args)
 	{
 		TransformationManager.getInstance().registerTransformation(new MyoRace());

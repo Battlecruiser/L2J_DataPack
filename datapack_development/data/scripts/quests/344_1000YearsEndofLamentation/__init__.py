@@ -23,8 +23,6 @@ ORVEN = 30857
 KAIEN = 30623
 GARVARENTZ = 30704
 
-default = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
-
 def rewards(st,npcId):
     state=False
     chance=st.getRandom(100)
@@ -89,7 +87,7 @@ class Quest (JQuest) :
           st.set("cond","1")
           st.playSound("ItemSound.quest_accept")
         else :
-          htmltext = default
+          htmltext = Quest.getNoQuestMsg(player)
           st.exitQuest(1)
      elif event == "30754-08.htm" :     
          st.exitQuest(1)
@@ -123,7 +121,7 @@ class Quest (JQuest) :
      return htmltext
 
  def onTalk (self,npc,player):
-     htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+     htmltext = Quest.getNoQuestMsg(player)
      st = player.getQuestState(qn)
      if not st : return htmltext
 

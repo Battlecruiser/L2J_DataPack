@@ -12,16 +12,16 @@ public class DivineWarrior extends L2Transformation
 		// id, colRadius, colHeight
 		super(253, 14.5, 29);
 	}
-
+	
 	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 253 || getPlayer().isCursedWeaponEquipped())
 			return;
-
+		
 		transformedSkills();
 	}
-
+	
 	public void transformedSkills()
 	{
 		// Cross Slash
@@ -40,16 +40,16 @@ public class DivineWarrior extends L2Transformation
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
-
+		
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
-
+	
 	@Override
 	public void onUntransform()
 	{
 		removeSkills();
 	}
-
+	
 	public void removeSkills()
 	{
 		// Cross Slash
@@ -59,19 +59,19 @@ public class DivineWarrior extends L2Transformation
 		// Transfixition of Earth
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(677, 1), false);
 		// Divine Warrior War Cry
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(678, 1), false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(678, 1), false, false);
 		// Sacrifice Warrior
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(679, 1), false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(679, 1), false, false);
 		// Divine Warrior Assault Attack
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(798, 1), false);
 		// Decrease Bow/Crossbow Attack Speed
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false);
 		// Transform Dispel
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
-
+		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
-
+	
 	public static void main(String[] args)
 	{
 		TransformationManager.getInstance().registerTransformation(new DivineWarrior());

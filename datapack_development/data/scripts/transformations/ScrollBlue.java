@@ -22,16 +22,16 @@ public class ScrollBlue extends L2Transformation
 		// id, colRadius, colHeight
 		super(122, 9, 28.3);
 	}
-
+	
 	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 122 || getPlayer().isCursedWeaponEquipped())
 			return;
-
+		
 		transformedSkills();
 	}
-
+	
 	public void transformedSkills()
 	{
 		// Flip Block
@@ -40,16 +40,16 @@ public class ScrollBlue extends L2Transformation
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
-
+		
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
-
+	
 	@Override
 	public void onUntransform()
 	{
 		removeSkills();
 	}
-
+	
 	public void removeSkills()
 	{
 		// Flip Block
@@ -58,10 +58,10 @@ public class ScrollBlue extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false);
 		// Transform Dispel
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
-
+		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
-
+	
 	public static void main(String[] args)
 	{
 		TransformationManager.getInstance().registerTransformation(new ScrollBlue());

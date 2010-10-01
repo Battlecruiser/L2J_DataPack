@@ -90,7 +90,7 @@ public class FishingSkill implements ISkillHandler
 			fish.useRealing(dmg, pen);
 		}
 		else
-		//Pumping
+			//Pumping
 		{
 			fish.usePomping(dmg, pen);
 		}

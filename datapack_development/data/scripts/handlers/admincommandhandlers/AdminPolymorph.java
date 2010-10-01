@@ -59,7 +59,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 			L2Object obj = activeChar.getTarget();
 			if (obj instanceof L2Character)
 			{
-				((L2Character) obj).stopTransformation(null);
+				((L2Character) obj).stopTransformation(true);
 			}
 			else
 			{

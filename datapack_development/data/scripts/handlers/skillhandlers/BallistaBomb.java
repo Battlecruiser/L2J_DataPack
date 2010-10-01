@@ -29,14 +29,14 @@ public class BallistaBomb implements ISkillHandler
 	{
 		L2SkillType.BALLISTA
 	};
-
+	
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		if (!(activeChar instanceof L2PcInstance))
 			return;
-
+		
 		L2Object[] targetList = skill.getTargetList(activeChar);
-
+		
 		if (targetList == null || targetList.length == 0)
 		{
 			return;
@@ -51,7 +51,7 @@ public class BallistaBomb implements ISkillHandler
 			}
 		}
 	}
-
+	
 	/**
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
 	 */

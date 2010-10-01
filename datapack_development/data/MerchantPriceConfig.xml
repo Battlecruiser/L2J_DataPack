@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Documentation: -->
+<!-- defaultPriceConfig -> ID of one of the price configs defined to be used when NPC has no price config. Can be ANY of the defined priceConfigs. Cannot be ommited, althrough you can emulate this by creating a dummy priceConfig. -->
+<!-- id -> Defines the ID for relational references. -->
+<!-- name -> Name of the area, for human-friendlyness and debugging, cannot be ommited. -->
+<!-- baseTax -> Used on merchant item price calculation (see formula in the end), cannot be ommited. -->
+<!-- castleId -> ID of the castle that controls merchants of this config, castle tax will apply to merchants price. Can be ommited (causes it to assume that no castle controls this config). -->
+<!-- zoneId -> Attaches a given Town Zone to this priceConfig for convenience. -->
+<!-- Merchant NPCs that dont explicit define an priceConfig will check if they are inside of the zone of an priceConfig, if yes that priceConfig is used for that npc. Can be ommited, then no NPC will be added based on zone (ie priceConfig direct assigned to NPCs through config or when used as the default priceConfig). -->
+<!-- Merchant Price Formula price = baseItemPrice * (1 + baseTax/100 + castleTax/100) -->
 <merchantPriceConfig defaultPriceConfig="18">
 	<priceConfig id="0" name="Giran Town" baseTax="10" castleId="3" zoneId="11020" />
 	<priceConfig id="1" name="DE Village" baseTax="15" castleId="4" zoneId="11021" />
@@ -29,12 +38,3 @@
 	<priceConfig id="26" name="Rune Castle" baseTax="10" castleId="8" zoneId="11207" />
 	<priceConfig id="27" name="Schuttgart Castle" baseTax="10" castleId="9" zoneId="11208" />
 </merchantPriceConfig>
-	<!-- Documentation: -->
-	<!-- defaultPriceConfig -> ID of one of the price configs defined to be used when NPC has no price config. Can be ANY of the defined priceConfigs. Cannot be ommited, althrough you can emulate this by creating a dummy priceConfig. -->
-	<!-- id -> Defines the ID for relational references. -->
-	<!-- name -> Name of the area, for human-friendlyness and debugging, cannot be ommited. -->
-	<!-- baseTax -> Used on merchant item price calculation (see formula in the end), cannot be ommited. -->
-	<!-- castleId -> ID of the castle that controls merchants of this config, castle tax will apply to merchants price. Can be ommited (causes it to assume that no castle controls this config). -->
-	<!-- zoneId -> Attaches a given Town Zone to this priceConfig for convenience. -->
-	<!-- Merchant NPCs that dont explicit define an priceConfig will check if they are inside of the zone of an priceConfig, if yes that priceConfig is used for that npc. Can be ommited, then no NPC will be added based on zone (ie priceConfig direct assigned to NPCs through config or when used as the default priceConfig). -->
-	<!-- Merchant Price Formula price = baseItemPrice * (1 + baseTax/100 + castleTax/100) -->

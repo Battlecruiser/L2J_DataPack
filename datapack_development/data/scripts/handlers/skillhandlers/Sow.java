@@ -39,12 +39,12 @@ import com.l2jserver.util.Rnd;
 public class Sow implements ISkillHandler
 {
 	private static Logger _log = Logger.getLogger(Sow.class.getName());
-
+	
 	private static final L2SkillType[] SKILL_IDS =
 	{
 		L2SkillType.SOW
 	};
-
+	
 	/**
 	 * 
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
@@ -53,21 +53,21 @@ public class Sow implements ISkillHandler
 	{
 		if (!(activeChar instanceof L2PcInstance))
 			return;
-
+		
 		final L2Object[] targetList = skill.getTargetList(activeChar);
 		if (targetList == null || targetList.length == 0)
 			return;
-
+		
 		if (Config.DEBUG)
 			_log.info("Casting sow");
-
+		
 		L2MonsterInstance target;
-
+		
 		for (L2Object tgt: targetList)
 		{
 			if (!(tgt instanceof L2MonsterInstance))
 				continue;
-
+			
 			target = (L2MonsterInstance) tgt;
 			if (target.isDead()
 					|| target.isSeeded()
@@ -76,21 +76,21 @@ public class Sow implements ISkillHandler
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 				continue;
 			}
-
+			
 			final int seedId = target.getSeedType();
 			if (seedId == 0)
 			{
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 				continue;
 			}
-
+			
 			//Consuming used seed
 			if (!activeChar.destroyItemByItemId("Consume", seedId, 1, target, false))
 			{
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
-
+			
 			SystemMessage sm;
 			if (calcSuccess(activeChar, target, seedId))
 			{
@@ -100,12 +100,12 @@ public class Sow implements ISkillHandler
 			}
 			else
 				sm = new SystemMessage(SystemMessageId.THE_SEED_WAS_NOT_SOWN);
-
+			
 			if (activeChar.getParty() == null)
 				activeChar.sendPacket(sm);
 			else
 				activeChar.getParty().broadcastToPartyMembers(sm);
-
+			
 			//TODO: Mob should not aggro on player, this way doesn't work really nice
 			target.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		}
@@ -119,13 +119,13 @@ public class Sow implements ISkillHandler
 		final int maxlevelSeed = L2Manor.getInstance().getSeedMaxLevel(seedId);
 		final int levelPlayer = activeChar.getLevel(); // Attacker Level
 		final int levelTarget = target.getLevel(); // target Level
-
+		
 		// seed level
 		if (levelTarget < minlevelSeed)
 			basicSuccess -= 5 * (minlevelSeed - levelTarget);
 		if (levelTarget > maxlevelSeed)
 			basicSuccess -= 5 * (levelTarget - maxlevelSeed);
-
+		
 		// 5% decrease in chance if player level
 		// is more than +/- 5 levels to _target's_ level
 		int diff = (levelPlayer - levelTarget);
@@ -133,14 +133,14 @@ public class Sow implements ISkillHandler
 			diff = -diff;
 		if (diff > 5)
 			basicSuccess -= 5 * (diff - 5);
-
+		
 		//chance can't be less than 1%
 		if (basicSuccess < 1)
 			basicSuccess = 1;
-
+		
 		return Rnd.nextInt(99) < basicSuccess;
 	}
-
+	
 	/**
 	 * 
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()

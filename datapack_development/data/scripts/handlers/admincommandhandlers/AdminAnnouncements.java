@@ -213,7 +213,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 			replyMSG.append("<table width=260><tr><td width=220>");
 			replyMSG.append(memo2.toString().trim());
 			replyMSG.append("</td><td width=40><button value=\"Delete\" action=\"bypass -h admin_del_autoann ");
-			replyMSG.append(i); 
+			replyMSG.append(i);
 			replyMSG.append("\" width=60 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table>");
 		}
 		adminReply.replace("%announces%", replyMSG.toString());

@@ -83,7 +83,14 @@
 		<for />
 	</item>
 	<item id="14796" name="Baguette's Sigil">
-		<for />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
+		<for>
+			<sub order="0x10" stat="rEvas" val="8" />
+		</for>
 	</item>
 	<item id="14798" name="Afro Perm Wig - Black">
 		<for />

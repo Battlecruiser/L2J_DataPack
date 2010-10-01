@@ -25,7 +25,10 @@ import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.AccessLevels;
 import com.l2jserver.gameserver.datatables.AdminCommandAccessRights;
 import com.l2jserver.gameserver.datatables.DoorTable;
+import com.l2jserver.gameserver.datatables.ExtractableItemsData;
+import com.l2jserver.gameserver.datatables.ExtractableSkillsData;
 import com.l2jserver.gameserver.datatables.ItemTable;
+import com.l2jserver.gameserver.datatables.MultiSell;
 import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.datatables.NpcWalkerRoutesTable;
 import com.l2jserver.gameserver.datatables.SkillTable;
@@ -33,7 +36,6 @@ import com.l2jserver.gameserver.datatables.TeleportLocationTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.Manager;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
-import com.l2jserver.gameserver.model.L2Multisell;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.olympiad.Olympiad;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -232,7 +234,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				type = st.nextToken();
 				if (type.equals("multisell"))
 				{
-					L2Multisell.getInstance().reload();
+					MultiSell.getInstance().reload();
 					activeChar.sendMessage("All Multisells have been reloaded");
 				}
 				else if (type.startsWith("teleport"))
@@ -291,6 +293,12 @@ public class AdminAdmin implements IAdminCommandHandler
 				{
 					DoorTable.getInstance().reloadAll();
 					activeChar.sendMessage("All Doors have been reloaded");
+				}
+				else if (type.startsWith("extractables"))
+				{
+					ExtractableItemsData.getInstance().reload();
+					ExtractableSkillsData.getInstance().reload();
+					activeChar.sendMessage("Extractable Items and Skills have been reloaded");
 				}
 				
 				activeChar.sendMessage("WARNING: There are several known issues regarding this feature. Reloading server data during runtime is STRONGLY NOT RECOMMENDED for live servers, just for developing environments.");
@@ -406,9 +414,9 @@ public class AdminAdmin implements IAdminCommandHandler
 		}
 		AdminHelpPage.showHelpPage(activeChar, filename + "_menu.htm");
 	}
-
+	
 	public void showConfigPage(L2PcInstance activeChar)
-	{		
+	{
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		TextBuilder replyMSG = new TextBuilder("<html><title>L2J :: Config</title><body>");
 		replyMSG.append("<center><table width=270><tr><td width=60><button value=\"Main\" action=\"bypass -h admin_admin\" width=60 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=150>Config Server Panel</td><td width=60><button value=\"Back\" action=\"bypass -h admin_admin4\" width=60 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table></center><br>");
@@ -437,7 +445,7 @@ public class AdminAdmin implements IAdminCommandHandler
 		replyMSG.append("<tr><td><font color=\"LEVEL\">Enchant Element</font> = "
 				+ Config.ENCHANT_CHANCE_ELEMENT
 				+ "</td><td><edit var=\"param8\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig EnchantChanceElement $param8\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
-
+		
 		replyMSG.append("</table></body></html>");
 		adminReply.setHtml(replyMSG.toString());
 		activeChar.sendPacket(adminReply);

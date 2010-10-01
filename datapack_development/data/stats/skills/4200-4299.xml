@@ -190,7 +190,7 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="HEAL" />
-		<set name="target" val="TARGET_CLAN" />
+		<set name="target" val="TARGET_CLAN_MEMBER" />
 	</skill>
 	<skill id="4210" levels="12" name="BOSS Chant of Life">
 		<!-- Boss Skill -->
@@ -207,7 +207,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="HOT" />
-		<set name="target" val="TARGET_CLAN" />
+		<set name="target" val="TARGET_CLAN_MEMBER" />
 		<for>
 			<effect count="5" name="HealOverTime" time="3" val="#hot" stackOrder="#hot" stackType="LifeForce" />
 		</for>
@@ -406,13 +406,13 @@
 		<set name="negateId" val="4223" />
 	</skill>
 	<skill id="4225" levels="6" name="Resist Stun Attacks">
-		<table name="#stunVuln"> 0.85 0.7 0.5 0.3 0.1 0 </table>
+		<table name="#stunVuln"> 15 30 50 70 90 100 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="stunVuln" val="#stunVuln" />
+			<sub order="0x40" stat="stunVuln" val="#stunVuln" />
 		</for>
 	</skill>
 	<skill id="4226" levels="1" name="Ban Heal">
@@ -691,7 +691,7 @@
 		<for>
 			<mul order="0x30" stat="bowWpnVuln" val="0.5" />
 			<mul order="0x30" stat="mDef" val="2" />
-			<mul order="0x30" stat="bleedVuln" val="0.5" />
+			<sub order="0x40" stat="bleedVuln" val="50" />
 		</for>
 	</skill>
 	<skill id="4247" levels="12" name="NPC Windstrike - Slow">
@@ -854,7 +854,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="stunVuln" val="0" />
+			<sub order="0x40" stat="stunVuln" val="100" />
 		</for>
 	</skill>
 	<skill id="4257" levels="12" name="NPC Hydroblast - Magic">
@@ -1130,13 +1130,13 @@
 		</for>
 	</skill>
 	<skill id="4277" levels="6" name="Resist Poison Attacks">
-		<table name="#poisonVuln"> 0.85 0.7 0.5 0.3 0.1 0 </table>
+		<table name="#poisonVuln"> 15 30 50 70 90 100 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="poisonVuln" val="#poisonVuln" />
+			<sub order="0x40" stat="poisonVuln" val="#poisonVuln" />
 		</for>
 	</skill>
 	<skill id="4278" levels="1" name="Dark Attack">
@@ -1199,23 +1199,23 @@
 		</for>
 	</skill>
 	<skill id="4284" levels="6" name="Resist Bleed Attacks">
-		<table name="#bleedVuln"> 0.85 0.7 0.5 0.3 0.1 0 </table>
+		<table name="#bleedVuln"> 15 30 50 70 90 100 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="bleedVuln" val="#bleedVuln" />
+			<sub order="0x40" stat="bleedVuln" val="#bleedVuln" />
 		</for>
 	</skill>
 	<skill id="4285" levels="6" name="Resist Sleep Attacks">
-		<table name="#sleepVuln"> 0.85 0.7 0.5 0.3 0.1 0 </table>
+		<table name="#sleepVuln"> 15 30 50 70 90 100 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="sleepVuln" val="#sleepVuln" />
+			<sub order="0x40" stat="sleepVuln" val="#sleepVuln" />
 		</for>
 	</skill>
 	<skill id="4286" levels="1" name="Greater Resist Sleep">
@@ -1224,17 +1224,17 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="sleepVuln" val="0.5" />
+			<sub order="0x40" stat="sleepVuln" val="50" />
 		</for>
 	</skill>
 	<skill id="4287" levels="6" name="Resist Hold Attacks">
-		<table name="#rootVuln"> 0.85 0.7 0.5 0.3 0.1 0 </table>
+		<table name="#rootVuln"> 15 30 50 70 90 100 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="rootVuln" val="#rootVuln" />
+			<sub order="0x40" stat="rootVuln" val="#rootVuln" />
 		</for>
 	</skill>
 	<skill id="4288" levels="1" name="Greater Resist Hold">
@@ -1243,7 +1243,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="rootVuln" val="0.5" />
+			<sub order="0x40" stat="rootVuln" val="50" />
 		</for>
 	</skill>
 	<skill id="4289" levels="1" name="Wyvern Breath">

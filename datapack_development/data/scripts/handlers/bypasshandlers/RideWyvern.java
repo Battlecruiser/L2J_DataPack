@@ -14,8 +14,6 @@
  */
 package handlers.bypasshandlers;
 
-import java.util.Arrays;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.datatables.SkillTable;
@@ -23,6 +21,7 @@ import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2WyvernManagerInstance;
+import com.l2jserver.gameserver.util.Util;
 
 public class RideWyvern implements IBypassHandler
 {
@@ -30,42 +29,38 @@ public class RideWyvern implements IBypassHandler
 	{
 		"RideWyvern"
 	};
-
-	private static final int[] STRIDERS = { 12526, 12527, 12528, 16038, 16039, 16040 };
-
+	
+	private static final int[] STRIDERS = { 12526, 12527, 12528, 16038, 16039, 16040, 16068, 13197 };
+	
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2WyvernManagerInstance))
 			return false;
-
+		
 		L2WyvernManagerInstance npc = (L2WyvernManagerInstance)target;
 		if (!npc.isOwnerClan(activeChar))
 			return false;
 		
-		if(!Config.ALLOW_WYVERN_DURING_SIEGE && npc.isInSiege())
+		if(!Config.ALLOW_WYVERN_DURING_SIEGE && (npc.isInSiege() || activeChar.isInSiege()))
 		{
 			activeChar.sendMessage("You cannot ride wyvern during siege.");
 			return false;
 		}
-
+		
 		if ((SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_STRIFE) == SevenSigns.CABAL_DUSK) && SevenSigns.getInstance().isSealValidationPeriod())
 		{
 			activeChar.sendMessage("You cannot ride wyvern while Seal of Strife controlled by Dusk.");
 			return false;
 		}
-
+		
 		if(activeChar.getPet() == null)
 		{
 			if(activeChar.isMounted())
-			{
 				activeChar.sendMessage("You already have a pet.");
-			}
 			else
-			{
 				activeChar.sendMessage("Summon your Strider first.");
-			}
 		}
-		else if (Arrays.binarySearch(STRIDERS, activeChar.getPet().getNpcId()) >= 0 )
+		else if (Util.contains(STRIDERS, activeChar.getPet().getNpcId()))
 		{
 			if (activeChar.getInventory().getItemByItemId(1460) != null && activeChar.getInventory().getItemByItemId(1460).getCount() >= 25)
 			{
@@ -94,10 +89,10 @@ public class RideWyvern implements IBypassHandler
 		{
 			activeChar.sendMessage("Unsummon your pet.");
 		}
-
+		
 		return false;
 	}
-
+	
 	public String[] getBypassList()
 	{
 		return COMMANDS;

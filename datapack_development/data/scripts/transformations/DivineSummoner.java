@@ -12,7 +12,7 @@ public class DivineSummoner extends L2Transformation
 		// id, colRadius, colHeight
 		super(258, 10, 25);
 	}
-
+	
 	@Override
 	public void onTransform()
 	{
@@ -21,10 +21,10 @@ public class DivineSummoner extends L2Transformation
 		
 		if (getPlayer().getPet() != null)
 			getPlayer().getPet().unSummon(getPlayer());
-
+		
 		transformedSkills();
 	}
-
+	
 	public void transformedSkills()
 	{
 		// Divine Summoner Summon Divine Beast
@@ -41,10 +41,10 @@ public class DivineSummoner extends L2Transformation
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
-
+		
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
-
+	
 	@Override
 	public void onUntransform()
 	{
@@ -53,7 +53,7 @@ public class DivineSummoner extends L2Transformation
 		
 		removeSkills();
 	}
-
+	
 	public void removeSkills()
 	{
 		// Divine Summoner Summon Divine Beast
@@ -65,15 +65,15 @@ public class DivineSummoner extends L2Transformation
 		// Divine Summoner Servitor Hill
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(713, 1), false);
 		// Sacrifice Summoner
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(714, 1), false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(714, 1), false, false);
 		// Decrease Bow/Crossbow Attack Speed
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false);
 		// Transform Dispel
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
-
+		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
-
+	
 	public static void main(String[] args)
 	{
 		TransformationManager.getInstance().registerTransformation(new DivineSummoner());

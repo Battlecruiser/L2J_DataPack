@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
- * This class provides handling for items that should display a map 
+ * This class provides handling for items that should display a map
  * when double clicked.
  * 
  * @version $Revision: 1.1.4.3 $ $Date: 2005/03/27 15:30:07 $
@@ -32,9 +32,9 @@ public class Disguise implements IItemHandler
 {
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.L2ItemInstance)
+	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.L2ItemInstance, boolean)
 	 */
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!(playable instanceof L2PcInstance))
 			return;

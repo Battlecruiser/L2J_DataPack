@@ -163,12 +163,12 @@ public class AdminSiege implements IAdminCommandHandler
 				{
 					Calendar newAdminSiegeDate = castle.getSiegeDate();
 					if (val.equalsIgnoreCase("day"))
-						newAdminSiegeDate.set(Calendar.DAY_OF_YEAR, Integer.parseInt(st.nextToken()));						
+						newAdminSiegeDate.set(Calendar.DAY_OF_YEAR, Integer.parseInt(st.nextToken()));
 					else if (val.equalsIgnoreCase("hour"))
 						newAdminSiegeDate.set(Calendar.HOUR_OF_DAY, Integer.parseInt(st.nextToken()));
 					else if (val.equalsIgnoreCase("min"))
 						newAdminSiegeDate.set(Calendar.MINUTE, Integer.parseInt(st.nextToken()));
-
+					
 					if (newAdminSiegeDate.getTimeInMillis() < Calendar.getInstance().getTimeInMillis())
 					{
 						activeChar.sendMessage("Unable to change Siege Date");
@@ -244,16 +244,16 @@ public class AdminSiege implements IAdminCommandHandler
 		int i = 0;
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/castles.htm");
-                final StringBuilder cList = new StringBuilder(500);
+		final StringBuilder cList = new StringBuilder(500);
 		for (Castle castle : CastleManager.getInstance().getCastles()) {
 			if (castle != null) {
 				String name = castle.getName();
-                                StringUtil.append(cList,
-                                        "<td fixwidth=90><a action=\"bypass -h admin_siege ",
-                                        name,
-                                        "\">",
-                                        name,
-                                        "</a></td>");
+				StringUtil.append(cList,
+						"<td fixwidth=90><a action=\"bypass -h admin_siege ",
+						name,
+						"\">",
+						name,
+				"</a></td>");
 				i++;
 			}
 			if (i > 2) {
@@ -266,12 +266,12 @@ public class AdminSiege implements IAdminCommandHandler
 		i = 0;
 		for (ClanHall clanhall : ClanHallManager.getInstance().getClanHalls().values()) {
 			if (clanhall != null) {
-                            StringUtil.append(cList,
-                                    "<td fixwidth=134><a action=\"bypass -h admin_clanhall ",
-                                    String.valueOf(clanhall.getId()),
-                                    "\">",
-                                    clanhall.getName(),
-                                    "</a></td>");
+				StringUtil.append(cList,
+						"<td fixwidth=134><a action=\"bypass -h admin_clanhall ",
+						String.valueOf(clanhall.getId()),
+						"\">",
+						clanhall.getName(),
+				"</a></td>");
 				i++;
 			}
 			if (i > 1) {
@@ -284,12 +284,12 @@ public class AdminSiege implements IAdminCommandHandler
 		i = 0;
 		for (ClanHall clanhall : ClanHallManager.getInstance().getFreeClanHalls().values()) {
 			if (clanhall != null) {
-                            StringUtil.append(cList,
-                                    "<td fixwidth=134><a action=\"bypass -h admin_clanhall ",
-                                    String.valueOf(clanhall.getId()),
-                                    "\">",
-                                    clanhall.getName(),
-                                    "</a></td>");
+				StringUtil.append(cList,
+						"<td fixwidth=134><a action=\"bypass -h admin_clanhall ",
+						String.valueOf(clanhall.getId()),
+						"\">",
+						clanhall.getName(),
+				"</a></td>");
 				i++;
 			}
 			if (i > 1) {
@@ -335,14 +335,14 @@ public class AdminSiege implements IAdminCommandHandler
 		else
 		{
 			adminReply.replace("%saturdaylink%", String.valueOf(newDay.get(Calendar.DAY_OF_YEAR)));
-			adminReply.replace("%saturday%", String.valueOf(newDay.get(Calendar.MONTH) + "/" + String.valueOf(newDay.get(Calendar.DAY_OF_MONTH))));			
+			adminReply.replace("%saturday%", String.valueOf(newDay.get(Calendar.MONTH) + "/" + String.valueOf(newDay.get(Calendar.DAY_OF_MONTH))));
 			newDay.add(Calendar.DAY_OF_MONTH, 1);
 			adminReply.replace("%sundaylink%", String.valueOf(newDay.get(Calendar.DAY_OF_YEAR)));
 			adminReply.replace("%sunday%", String.valueOf(newDay.get(Calendar.MONTH) + "/" + String.valueOf(newDay.get(Calendar.DAY_OF_MONTH))));
 		}
 		activeChar.sendPacket(adminReply);
 	}
-
+	
 	private void showClanHallPage(L2PcInstance activeChar, ClanHall clanhall)
 	{
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);

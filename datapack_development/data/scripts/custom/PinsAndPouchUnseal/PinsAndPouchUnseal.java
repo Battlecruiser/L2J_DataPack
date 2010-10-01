@@ -31,21 +31,21 @@ public class PinsAndPouchUnseal extends Quest
 	private final static int[] UNSEALPRICE = {3200,11800,26500,136600};
 	// failed, low, mid, high, top
 	private final static int[] CHANCES = {49,78,95,99,100};
-
+	
 	// sealdId, lowId, midId, highId, topId
 	private final static int[][] PINS = {{13898,13902,13903,13904,13905},
 		{13899,13906,13907,13908,13909},
 		{13900,13910,13911,13912,13913},
 		{13901,13914,13915,13916,13917}
 	};
-
+	
 	// sealdId, lowId, midId, highId, topId
 	private final static int[][] POUCHS = {{13918,13922,13923,13924,13925},
 		{13919,13926,13927,13928,13929},
 		{13920,13930,13931,13932,13933},
 		{13921,13934,13935,13936,13937}
 	};
-
+	
 	// "B,C grade" is the Magic Clip
 	// "A,S grade" is the Magic Ornament
 	// sealdId, lowId, midId, highId, topId
@@ -54,7 +54,7 @@ public class PinsAndPouchUnseal extends Quest
 		{14904,14914,14915,14916,14917},
 		{14905,14918,14919,14920,14921}
 	};
-
+	
 	public PinsAndPouchUnseal(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
@@ -64,13 +64,13 @@ public class PinsAndPouchUnseal extends Quest
 			addTalkId(id);
 		}
 	}
-
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
 		QuestState st = player.getQuestState(getName());
-
+		
 		htmltext = event;
 		if (event.contains("_grade_"))
 		{
@@ -104,12 +104,12 @@ public class PinsAndPouchUnseal extends Quest
 			{
 				if (st.getQuestItemsCount(57) > price)
 				{
-					htmltext = "";	
+					htmltext = "";
 					st.takeItems(57, price);
 					st.takeItems(itemIds[0], 1);
 					int rand = Rnd.get(100);
 					if (rand < CHANCES[0])
-						npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "What a predicament... my attempts were unsuccessful."));
+						npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), 1300162));
 					else if (rand < CHANCES[1])
 						st.giveItems(itemIds[1], 1);
 					else if (rand < CHANCES[2])
@@ -126,19 +126,19 @@ public class PinsAndPouchUnseal extends Quest
 				htmltext = npc.getNpcId() + "-no.htm";
 			st.exitQuest(true);
 		}
-
+		
 		return htmltext;
 	}
-
+	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
 		htmltext = npc.getNpcId() + "-1.htm";
-
+		
 		return htmltext;
 	}
-
+	
 	public static void main(String[] args)
 	{
 		new PinsAndPouchUnseal(-1, "PinsAndPouchUnseal", "custom");

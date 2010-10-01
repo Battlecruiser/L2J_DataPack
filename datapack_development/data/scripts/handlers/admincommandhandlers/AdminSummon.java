@@ -78,7 +78,7 @@ public class AdminSummon implements IAdminCommandHandler
 			IAdminCommandHandler ach = AdminCommandHandler.getInstance().getAdminCommandHandler(subCommand);
 			ach.useAdminCommand(subCommand + " " + id + " " + count, activeChar);
 		}
-		else 
+		else
 		{
 			subCommand = "admin_spawn_once";
 			if (!AdminCommandAccessRights.getInstance().hasAccess(subCommand, activeChar.getAccessLevel()))

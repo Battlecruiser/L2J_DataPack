@@ -32,7 +32,7 @@ public class Birthday implements IUserCommandHandler
 	{
 		126
 	};
-
+	
 	public boolean useUserCommand(int id, L2PcInstance activeChar)
 	{
 		if (id != COMMAND_IDS[0])
@@ -40,7 +40,7 @@ public class Birthday implements IUserCommandHandler
 		
 		Calendar cal = Calendar.getInstance();
 		cal.setTimeInMillis(activeChar.getCreateTime());
-
+		
 		SystemMessage sm = new SystemMessage(SystemMessageId.C1_BIRTHDAY_IS_S3_S4_S2);
 		sm.addPcName(activeChar);
 		sm.addString(Integer.toString(cal.get(Calendar.YEAR)));
@@ -51,7 +51,7 @@ public class Birthday implements IUserCommandHandler
 		activeChar.sendPacket(sm);
 		return true;
 	}
-
+	
 	public int[] getUserCommandList()
 	{
 		return COMMAND_IDS;

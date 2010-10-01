@@ -55,24 +55,24 @@ public class L2PcInstanceAction implements IActionHandler
 		// See description in TvTEvent.java
 		if (!TvTEvent.onAction( activeChar, target.getObjectId()))
 			return false;
-
+		
 		// Check if the L2PcInstance is confused
 		if (activeChar.isOutOfControl())
 			return false;
-
+		
 		// Aggression target lock effect
 		if (activeChar.isLockedTarget() && activeChar.getLockedTarget() != target)
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessageId.FAILED_CHANGE_TARGET));
 			return false;
 		}
-
+		
 		// Check if the activeChar already target this L2PcInstance
 		if (activeChar.getTarget() != target)
 		{
 			// Set the target of the activeChar
 			activeChar.setTarget(target);
-
+			
 			// Send a Server->Client packet MyTargetSelected to the activeChar
 			// The color to display in the select window is White
 			activeChar.sendPacket(new MyTargetSelected(target.getObjectId(), 0));
@@ -83,9 +83,9 @@ public class L2PcInstanceAction implements IActionHandler
 			if (activeChar != target) activeChar.sendPacket(new ValidateLocation((L2Character)target));
 			// Check if this L2PcInstance has a Private Store
 			if (((L2PcInstance)target).getPrivateStoreType() != 0)
-            {
+			{
 				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
-            }
+			}
 			else
 			{
 				// Check if this L2PcInstance is autoAttackable
@@ -130,7 +130,7 @@ public class L2PcInstanceAction implements IActionHandler
 		}
 		return true;
 	}
-
+	
 	public InstanceType getInstanceType()
 	{
 		return InstanceType.L2PcInstance;

@@ -41,7 +41,7 @@ class Quest (JQuest) :
         return htmltext
 
     def onTalk (self,npc,player):
-        htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+        htmltext = Quest.getNoQuestMsg(player)
         st = player.getQuestState(qn)
         if st :
             npcId = npc.getNpcId()
@@ -75,8 +75,8 @@ class Quest (JQuest) :
                         htmltext = "<html><body>Mercenary Captain Pierce:<br>Thanks for your help. See Kahman for your reward!</body></html>"#custom
                 elif npcId == Kahman and cond == 3 :
                     htmltext = "31554-01.htm"
-                    st.giveItems(57,25461)
-                    st.addExpAndSp(146113,13723)
+                    st.giveItems(57,161500)
+                    st.addExpAndSp(701500,50000)
                     st.unset("cond")
                     st.exitQuest(False)
                     st.playSound("ItemSound.quest_finish")

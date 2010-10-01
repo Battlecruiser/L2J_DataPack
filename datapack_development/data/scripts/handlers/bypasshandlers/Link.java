@@ -26,12 +26,12 @@ public class Link implements IBypassHandler
 	{
 		"Link"
 	};
-
+	
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2Npc))
 			return false;
-
+		
 		try
 		{
 			String path = command.substring(5).trim();
@@ -50,7 +50,7 @@ public class Link implements IBypassHandler
 		}
 		return false;
 	}
-
+	
 	public String[] getBypassList()
 	{
 		return COMMANDS;

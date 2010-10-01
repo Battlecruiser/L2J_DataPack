@@ -1,1 +1,1 @@
-ALTER TABLE `items` CHANGE `mana_left` `mana_left` decimal(5) NOT NULL default 0;
+ALTER TABLE `items` MODIFY `mana_left` decimal(5) NOT NULL default 0;

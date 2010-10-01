@@ -431,9 +431,9 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="rootVuln" val="0" />
-			<mul order="0x30" stat="sleepVuln" val="0" />
-			<mul order="0x30" stat="confusionVuln" val="0" />
+			<sub order="0x40" stat="rootVuln" val="100" />
+			<sub order="0x40" stat="sleepVuln" val="100" />
+			<sub order="0x40" stat="confusionVuln" val="100" />
 		</for>
 	</skill>
 	<skill id="4333" levels="6" name="Resist Dark Attack">
@@ -488,17 +488,22 @@
 	</skill>
 	<skill id="4338" levels="1" name="Adventurer's Life Cubic">
 		<!-- Newbie Guide Buff -->
-		<set name="magicLvl" val="18" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="18" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="SUMMON" />
+		<set name="target" val="TARGET_SELF" />
 		<!-- Summon-specific -->
-		<set name="npcId" val="3" />
-		<set name="activationtime" val="15" />
-		<set name="activationchance" val="20" />
-		<set name="summonTotalLifeTime" val="3600000" />
+		<set name="activationchance" val="0" /> <!-- this is hard coded in core, because of hp check -->
+		<!-- set name="activationchance1" val="13" / TODO: this require Core-Side support -->
+		<!-- set name="activationchance2" val="33" / TODO: this require Core-Side support -->
+		<!-- set name="activationchance3" val="53" / TODO: this require Core-Side support -->
+  		<!-- set name="activationchancecicle" val="10" / TODO: this require Core-Side support -->
+		<set name="activationtime" val="13" />
+  		<!-- set name="attacksnumberlimit" val="20" / TODO: this require Core-Side support -->
 		<set name="isCubic" val="true" />
+		<set name="npcId" val="3" /> <!-- Cubic Id --> <!-- TODO: Cubic Id is not 20 ? -->
+		<set name="summonTotalLifeTime" val="3600000" />
 	</skill>
 	<skill id="4339" levels="1" name="Mimir's Elixir">
 		<set name="target" val="TARGET_ONE" />
@@ -604,7 +609,7 @@
 	</skill>
 	<skill id="4346" levels="4" name="Clan Hall: Mental Shield">
 		<table name="#mpConsume"> 50 0 0 100 </table>
-		<table name="#vuln"> 0.8 0.7 0.6 0.5 </table>
+		<table name="#vuln"> 20 30 40 50 </table>
 		<table name="#stack"> 20 30 40 50 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
@@ -616,10 +621,10 @@
 		<set name="effectRange" val="900" />
 		<for>
 			<effect name="Buff" time="1200" val="0" stackOrder="#stack" stackType="MentalShield">
-				<mul order="0x30" stat="rootVuln" val="#vuln" />
-				<mul order="0x30" stat="sleepVuln" val="#vuln" />
-				<mul order="0x30" stat="confusionVuln" val="#vuln" />
-				<mul order="0x30" stat="derangementVuln" val="#vuln" />
+				<sub order="0x40" stat="rootVuln" val="#vuln" />
+				<sub order="0x40" stat="sleepVuln" val="#vuln" />
+				<sub order="0x40" stat="confusionVuln" val="#vuln" />
+				<sub order="0x40" stat="derangementVuln" val="#vuln" />
 			</effect>
 		</for>
 	</skill>
@@ -676,7 +681,7 @@
 	</skill>
 	<skill id="4350" levels="4" name="Clan Hall: Resist Shock">
 		<table name="#mpConsume"> 150 0 0 300 </table>
-		<table name="#vuln"> 0.85 0.8 0.7 0.6 </table>
+		<table name="#vuln"> 15 20 30 40 </table>
 		<table name="#stack"> 15 20 30 40 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
@@ -688,7 +693,7 @@
 		<set name="effectRange" val="900" />
 		<for>
 			<effect name="Buff" time="1200" val="0" stackOrder="#stack" stackType="ShockVuln">
-				<mul order="0x30" stat="stunVuln" val="#vuln" />
+				<sub order="0x40" stat="stunVuln" val="#vuln" />
 			</effect>
 		</for>
 	</skill>
@@ -719,6 +724,7 @@
 		<table name="#runSpd"> 5 8 </table>
 		<table name="#rEvas"> 2 4 </table>
 		<table name="#mpConsume"> 200 400 </table>
+		<table name="#stackOrder"> 1 2 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
@@ -728,7 +734,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="1" stackType="berserk">
+			<effect name="Buff" time="1200" val="0" stackOrder="#stackOrder" stackType="berserk">
 				<mul order="0x30" stat="mAtk" val="#mAtk" />
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 				<mul order="0x30" stat="mDef" val="#mDef" />
@@ -892,9 +898,9 @@
 		<for>
 			<effect name="Debuff" time="1200" val="0">
 				<sub order="0x40" stat="accCombat" val="10" />
-				<mul order="0x30" stat="sleepVuln" val="1.5" />
-				<mul order="0x30" stat="rootVuln" val="1.5" />
-				<mul order="0x30" stat="stunVuln" val="1.5" />
+				<add order="0x40" stat="sleepVuln" val="50" />
+				<add order="0x40" stat="rootVuln" val="50" />
+				<add order="0x40" stat="stunVuln" val="50" />
 			</effect>
 		</for>
 	</skill>
@@ -913,9 +919,9 @@
 		<for>
 			<effect name="Debuff" time="1200" val="0">
 				<mul order="0x30" stat="mAtkSpd" val="0.7" />
-				<mul order="0x30" stat="sleepVuln" val="1.5" />
-				<mul order="0x30" stat="rootVuln" val="1.5" />
-				<mul order="0x30" stat="stunVuln" val="1.5" />
+				<add order="0x40" stat="sleepVuln" val="50" />
+				<add order="0x40" stat="rootVuln" val="50" />
+				<add order="0x40" stat="stunVuln" val="50" />
 			</effect>
 		</for>
 	</skill>
@@ -937,7 +943,7 @@
 	</skill>
 	<skill id="4364" levels="2" name="Blessing of Revelations">
 		<!-- Fighter -->
-		<table name="#vuln"> 1 0.75 </table>
+		<table name="#vuln"> 0 25 </table>
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="true" />
@@ -948,17 +954,17 @@
 		<for>
 			<effect name="Buff" time="1200" val="0">
 				<mul order="0x30" stat="maxLoad" val="1.25" />
-				<mul order="0x30" stat="poisonVuln" val="0.75" />
-				<mul order="0x30" stat="bleedVuln" val="0.75" />
-				<mul order="0x30" stat="rootVuln" val="#vuln" />
-				<mul order="0x30" stat="stunVuln" val="#vuln" />
-				<mul order="0x30" stat="paralyzeVuln" val="#vuln" />
+				<sub order="0x40" stat="poisonVuln" val="25" />
+				<sub order="0x40" stat="bleedVuln" val="25" />
+				<sub order="0x40" stat="rootVuln" val="#vuln" />
+				<sub order="0x40" stat="stunVuln" val="#vuln" />
+				<sub order="0x40" stat="paralyzeVuln" val="#vuln" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="4365" levels="2" name="Blessing of Revelations">
 		<!-- Mage -->
-		<table name="#vuln"> 1 0.75 </table>
+		<table name="#vuln"> 0 25 </table>
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="true" />
@@ -969,10 +975,10 @@
 		<for>
 			<effect name="Buff" time="1200" val="0">
 				<sub order="0x40" stat="cancel" val="25" />
-				<mul order="0x30" stat="rootVuln" val="0.75" />
-				<mul order="0x30" stat="derangementVuln" val="0.75" />
-				<mul order="0x30" stat="stunVuln" val="#vuln" />
-				<mul order="0x30" stat="paralyzeVuln" val="#vuln" />
+				<sub order="0x40" stat="rootVuln" val="25" />
+				<sub order="0x40" stat="derangementVuln" val="25" />
+				<sub order="0x40" stat="stunVuln" val="#vuln" />
+				<sub order="0x40" stat="paralyzeVuln" val="#vuln" />
 			</effect>
 		</for>
 	</skill>
@@ -987,8 +993,8 @@
 		<for>
 			<effect name="Buff" time="1200" val="0" stackOrder="1.5" stackType="Weight">
 				<mul order="0x30" stat="maxLoad" val="1.25" />
-				<mul order="0x30" stat="poisonVuln" val="0.75" />
-				<mul order="0x30" stat="bleedVuln" val="0.75" />
+				<sub order="0x40" stat="poisonVuln" val="25" />
+				<sub order="0x40" stat="bleedVuln" val="25" />
 			</effect>
 		</for>
 	</skill>
@@ -1237,23 +1243,23 @@
 		</for>
 	</skill>
 	<skill id="4388" levels="6" name="Resist Paralysis Attacks">
-		<table name="#power"> 0.85 0.7 0.5 0.3 0.1 0 </table>
+		<table name="#power"> 15 30 50 70 90 100 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="paralyzeVuln" val="#power" />
+			<sub order="0x40" stat="paralyzeVuln" val="#power" />
 		</for>
 	</skill>
 	<skill id="4389" levels="6" name="Resist Mental Attacks">
-		<table name="#power"> 0.85 0.7 0.5 0.3 0.1 0 </table>
+		<table name="#power"> 15 30 50 70 90 100 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="confusionVuln" val="#power" />
+			<sub order="0x40" stat="confusionVuln" val="#power" />
 		</for>
 	</skill>
 	<skill id="4390" levels="1" name="NPC Abnormal Immunity">
@@ -1379,7 +1385,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="berserk">
+			<effect name="Buff" time="3600" val="0" stackOrder="3" stackType="berserk">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 				<mul order="0x30" stat="mAtk" val="#mAtk" />

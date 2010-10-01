@@ -14,8 +14,8 @@
  */
 package handlers.bypasshandlers;
 
+import com.l2jserver.gameserver.datatables.MultiSell;
 import com.l2jserver.gameserver.handler.IBypassHandler;
-import com.l2jserver.gameserver.model.L2Multisell;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -31,12 +31,12 @@ public class Transform implements IBypassHandler
 		"transformskilllist",
 		"buytransform"
 	};
-
+	
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2Npc))
 			return false;
-
+		
 		if (command.toLowerCase().startsWith(COMMANDS[0])) // skills list
 		{
 			if (canTransform(activeChar))
@@ -52,11 +52,11 @@ public class Transform implements IBypassHandler
 				activeChar.sendPacket(html);
 			}
 		}
-		else if (command.toLowerCase().startsWith(COMMANDS[1])) 
+		else if (command.toLowerCase().startsWith(COMMANDS[1]))
 		{
 			if (canTransform(activeChar))
-			{				
-				L2Multisell.getInstance().separateAndSend(32323001, activeChar, ((L2Npc)target).getNpcId(), false, ((L2Npc)target).getCastle().getTaxRate());
+			{
+				MultiSell.getInstance().separateAndSend(32323001, activeChar, (L2Npc)target, false);
 				return true;
 			}
 			else
@@ -68,16 +68,16 @@ public class Transform implements IBypassHandler
 		}
 		return false;
 	}
-
+	
 	private static boolean canTransform(L2PcInstance player)
 	{
 		QuestState st = player.getQuestState("136_MoreThanMeetsTheEye");
 		if (st != null && st.getState() == State.COMPLETED)
 			return true;
-
+		
 		return false;
 	}
-
+	
 	public String[] getBypassList()
 	{
 		return COMMANDS;

@@ -16,16 +16,16 @@ package quests.TerritoryWarScripts;
 
 
 /**
-*
-* @author Gigiikun
-*/
+ *
+ * @author Gigiikun
+ */
 
 public class ProtectTheReligious extends TerritoryWarSuperClass
 {
 	public static String qn1 = "732_ProtecttheReligiousAssociationLeader";
 	public static int qnu = 732;
 	public static String qna = "Protect the Religious Association Leader";
-
+	
 	public ProtectTheReligious()
 	{
 		super(qnu,qn1,qna);

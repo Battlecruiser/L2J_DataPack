@@ -1,24 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="2900" levels="1" name="Ancient Herb - Slayer">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="staticHitTime" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="isPotion" val="true" />
+		<set name="buffDuration" val="60000" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="60" val="0" />
+		</for>
 	</skill>
 	<skill id="2901" levels="1" name="Ancient Herb - Immortal">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="staticHitTime" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="isPotion" val="true" />
+		<set name="buffDuration" val="60000" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="60" val="0" />
+		</for>
 	</skill>
 	<skill id="2902" levels="1" name="Ancient Herb - Terminator">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="staticHitTime" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="isPotion" val="true" />
+		<set name="buffDuration" val="60000" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="60" val="0">
+				<add order="0x40" stat="mAtkSpd" val="449" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2903" levels="1" name="Ancient Herb - Guide">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="staticHitTime" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="isPotion" val="true" />
+		<set name="buffDuration" val="60000" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="60" val="0">
+				<add order="0x40" stat="runSpd" val="250" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2904" levels="1" name="Guardian Spirit's Divine Protection">
 		<set name="target" val="TARGET_NONE" />
@@ -26,9 +66,23 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="2905" levels="1" name="Growth Accelerator">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="isDebuff" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="4000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="2000" />
+		<set name="staticReuse" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<target mindistance="200" />
+				</not>
+				<target npcId="18793,18794,18795,18796,18797,18798" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="2906" levels="1" name="Incubation Accelerator">
 		<set name="target" val="TARGET_NONE" />
@@ -76,9 +130,12 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="2915" levels="1" name="Clear Five-Colored Crystal">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="hitTime" val="20000" />
+		<set name="skillType" val="TELEPORT" />
+		<set name="teleCoords" val="89417,-44506,-2126" />
+		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2916" levels="1" name="Feed for Enriched Enhanced Pets">
 		<set name="target" val="TARGET_NONE" />
@@ -86,14 +143,28 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="2917" levels="1" name="Big Staccato Silk Cocoon">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="2918" levels="1" name="Small Staccato Silk Cocoon">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="2919" levels="1" name="Ancient Parchment">
 		<set name="target" val="TARGET_NONE" />

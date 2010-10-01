@@ -11,8 +11,16 @@ qn = "643_RiseandFalloftheElrokiTribe"
 DROP_CHANCE = 75
 
 BONES_OF_A_PLAINS_DINOSAUR = 8776
-PLAIN_DINOSAURS = [22208,22209,22210,22211,22212,22213,22221,22222,22226,22227]
+PLAIN_DINOSAURS = [22201,22202,22204,22205,22209,22210,22212,22213,22219,22220,22221,22222,22224,22225,22742,22743,22744,22745]
 REWARDS = range(8712,8723)
+REWARDS_DYNA = {
+    "1" : [9492 , 400], #Recipe: Sealed Dynasty Tunic (60%)
+    "2" : [9493 , 250], #Recipe: Sealed Dynasty Stockings (60%)
+    "3" : [9494 , 200], #Recipe: Sealed Dynasty Circlet (60%)
+    "4" : [9495 , 134], #Recipe: Sealed Dynasty Gloves (60%)
+    "5" : [9496 , 134], #Recipe: Sealed Dynasty Shoes (60%)
+    "6" : [10115, 287], #Recipe: Sealed Dynasty Sigil (60%)
+    }
 
 class Quest (JQuest) :
 
@@ -37,6 +45,13 @@ class Quest (JQuest) :
           st.rewardItems(REWARDS[st.getRandom(len(REWARDS))],5)
        else :
           htmltext = "32117-04.htm"
+    elif event in REWARDS_DYNA.keys() :
+       if count >= REWARDS_DYNA[event][1] :
+          st.takeItems(BONES_OF_A_PLAINS_DINOSAUR,REWARDS_DYNA[event][1])
+          st.rewardItems(REWARDS_DYNA[event][0],1)
+          htmltext = "32117-06.htm"
+       else :
+          htmltext = "32117-07.htm"
     elif event == "Quit" :
        st.playSound("ItemSound.quest_finish")
        st.exitQuest(1)
@@ -45,7 +60,7 @@ class Quest (JQuest) :
 
  def onTalk (self, npc, player):
     st = player.getQuestState(qn)
-    htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+    htmltext = Quest.getNoQuestMsg(player)
     if st :
        npcId = npc.getNpcId()
        cond = st.getInt("cond")

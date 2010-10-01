@@ -35,22 +35,22 @@ public class L2PcInstanceActionShift implements IActionHandler
 			{
 				// Set the target of the L2PcInstance activeChar
 				activeChar.setTarget(target);
-
+				
 				// Send a Server->Client packet MyTargetSelected to the L2PcInstance activeChar
 				activeChar.sendPacket(new MyTargetSelected(target.getObjectId(), 0));
 			}
-
+			
 			// Send a Server->Client packet ValidateLocation to correct the L2PcInstance position and heading on the client
 			if (activeChar != target)
 				activeChar.sendPacket(new ValidateLocation((L2Character)target));
-
+			
 			IAdminCommandHandler ach = AdminCommandHandler.getInstance().getAdminCommandHandler("admin_character_info");
 			if (ach != null)
 				ach.useAdminCommand("admin_character_info " + target.getName(), activeChar);
 		}
 		return true;
 	}
-
+	
 	public InstanceType getInstanceType()
 	{
 		return InstanceType.L2PcInstance;

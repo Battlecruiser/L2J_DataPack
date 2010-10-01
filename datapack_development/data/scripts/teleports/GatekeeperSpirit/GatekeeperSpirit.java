@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.model.quest.Quest;
 public class GatekeeperSpirit extends Quest
 {
 	private final static int npcId = 31111;
-
+	
 	public GatekeeperSpirit(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
@@ -30,7 +30,7 @@ public class GatekeeperSpirit extends Quest
 		addFirstTalkId(npcId);
 		addTalkId(npcId);
 	}
-
+	
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
@@ -38,28 +38,28 @@ public class GatekeeperSpirit extends Quest
 		int playerCabal = SevenSigns.getInstance().getPlayerCabal(player.getObjectId());
 		int sealAvariceOwner = SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_AVARICE);
 		int compWinner = SevenSigns.getInstance().getCabalHighestScore();
-
+		
 		if (playerCabal == sealAvariceOwner && playerCabal == compWinner)
 		{
 			switch (sealAvariceOwner)
 			{
-			case SevenSigns.CABAL_DAWN:
-				htmltext = "dawn.htm";
-				break;
-			case SevenSigns.CABAL_DUSK:
-				htmltext = "dusk.htm";
-				break;
-			case SevenSigns.CABAL_NULL:
-				npc.showChatWindow(player);
-				break;
+				case SevenSigns.CABAL_DAWN:
+					htmltext = "dawn.htm";
+					break;
+				case SevenSigns.CABAL_DUSK:
+					htmltext = "dusk.htm";
+					break;
+				case SevenSigns.CABAL_NULL:
+					npc.showChatWindow(player);
+					break;
 			}
 		}
 		else
 			npc.showChatWindow(player);
-
+		
 		return htmltext;
 	}
-
+	
 	public static void main(String[] args)
 	{
 		new GatekeeperSpirit(-1, "GatekeeperSpirit", "teleports");

@@ -30,7 +30,7 @@ public class GiveVitality implements ISkillHandler
 	{
 		L2SkillType.GIVE_VITALITY
 	};
-
+	
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		for (L2Object target : targets)
@@ -50,7 +50,7 @@ public class GiveVitality implements ISkillHandler
 			}
 		}
 	}
-
+	
 	public L2SkillType[] getSkillIds()
 	{
 		return SKILL_IDS;

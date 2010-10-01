@@ -64,7 +64,7 @@ public class Mdam implements ISkillHandler
 		boolean bss = false;
 		
 		L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
-
+		
 		if (weaponInst != null)
 		{
 			if (weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
@@ -94,12 +94,12 @@ public class Mdam implements ISkillHandler
 				activeSummon.setChargedSpiritShot(L2ItemInstance.CHARGED_NONE);
 			}
 		}
-
+		
 		for (L2Character target: (L2Character[]) targets)
 		{
 			if (activeChar instanceof L2PcInstance && target instanceof L2PcInstance && ((L2PcInstance)target).isFakeDeath())
 			{
-				target.stopFakeDeath(null);
+				target.stopFakeDeath(true);
 			}
 			else if (target.isDead())
 			{
@@ -138,9 +138,9 @@ public class Mdam implements ISkillHandler
 						break;
 				}
 			}
-
+			
 			// Possibility of a lethal strike
-			Formulas.calcLethalHit(activeChar, target, skill);			
+			Formulas.calcLethalHit(activeChar, target, skill);
 			
 			if (damage > 0)
 			{
@@ -159,9 +159,9 @@ public class Mdam implements ISkillHandler
 				else
 				{
 					activeChar.sendDamageMessage(target, damage, mcrit, false, false);
-					target.reduceCurrentHp(damage, activeChar, skill);				
+					target.reduceCurrentHp(damage, activeChar, skill);
 				}
-
+				
 				if (skill.hasEffects())
 				{
 					if ((reflect & Formulas.SKILL_REFLECT_SUCCEED) != 0) // reflect skill effects
@@ -200,14 +200,18 @@ public class Mdam implements ISkillHandler
 				}
 			}
 		}
+		
 		// self Effect :]
-		L2Effect effect = activeChar.getFirstEffect(skill.getId());
-		if (effect != null && effect.isSelfEffect())
+		if (skill.hasSelfEffects())
 		{
-			//Replace old effect with new one.
-			effect.exit();
+			final L2Effect effect = activeChar.getFirstEffect(skill.getId());
+			if (effect != null && effect.isSelfEffect())
+			{
+				//Replace old effect with new one.
+				effect.exit();
+			}
+			skill.getEffectsSelf(activeChar);
 		}
-		skill.getEffectsSelf(activeChar);
 		
 		if (skill.isSuicideAttack())
 			activeChar.doDie(activeChar);

@@ -105,7 +105,9 @@ public class AdminEffects implements IAdminCommandHandler
 		"admin_play_sounds",
 		"admin_play_sound",
 		"admin_atmosphere",
-		"admin_atmosphere_menu"
+		"admin_atmosphere_menu",
+		"admin_set_displayeffect",
+		"admin_set_displayeffect_menu"
 	};
 	
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
@@ -505,7 +507,7 @@ public class AdminEffects implements IAdminCommandHandler
 					int social = Integer.parseInt(st.nextToken());
 					if (obj == null)
 						obj = activeChar;
-
+					
 					if (performSocial(social, obj, activeChar))
 						activeChar.sendMessage(obj.getName() + " was affected by your request.");
 					else
@@ -629,7 +631,7 @@ public class AdminEffects implements IAdminCommandHandler
 					int special = Integer.decode("0x" + st.nextToken());
 					if (obj == null)
 						obj = activeChar;
-
+					
 					if (performSpecial(special, obj))
 						activeChar.sendMessage(obj.getName() + "'s special status was affected by your request.");
 					else
@@ -665,11 +667,31 @@ public class AdminEffects implements IAdminCommandHandler
 					target.broadcastPacket(new MagicSkillUse(target, activeChar, skill, level, hittime, 0));
 					activeChar.sendMessage(obj.getName() + " performs MSU " + skill + "/" + level + " by your request.");
 				}
-
+				
 			}
 			catch (Exception e)
 			{
 				activeChar.sendMessage("Usage: //effect skill [level | level hittime]");
+			}
+		}
+		else if (command.startsWith("admin_set_displayeffect"))
+		{
+			L2Object target = activeChar.getTarget();
+			if (!(target instanceof L2Npc))
+			{
+				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+				return false;
+			}
+			L2Npc npc = (L2Npc) target;
+			try
+			{
+				String type = st.nextToken();
+				int diplayeffect = Integer.parseInt(type);
+				npc.setDisplayEffect(diplayeffect);
+			}
+			catch (Exception e)
+			{
+				activeChar.sendMessage("Usage: //set_displayeffect <id>");
 			}
 		}
 		if (command.contains("menu"))
@@ -749,7 +771,7 @@ public class AdminEffects implements IAdminCommandHandler
 	 *
 	 * @param type - atmosphere type (signssky,sky)
 	 * @param state - atmosphere state(night,day)
-	 * @param duration 
+	 * @param duration
 	 */
 	private void adminAtmosphere(String type, String state, int duration, L2PcInstance activeChar)
 	{

@@ -403,7 +403,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="derangementVuln" val="0.5" /> <!-- TEMP FIX: Changed from 0 to 0.5 due to formulas are not retail like -->
+			<sub order="0x40" stat="derangementVuln" val="100" />
 		</for>
 	</skill>
 	<skill id="4122" levels="1" name="Antharas">
@@ -1040,17 +1040,17 @@
 		</for>
 	</skill>
 	<skill id="4164" levels="18" name="Paralysis">
-		<!-- Cubic Skill -->
-		<table name="#magicLvl"> 40 44 48 52 56 60 64 68 72 73 74 75 76 77 78 79 80 81 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="lvlDepend" val="1" />
-		<set name="power" val="20" /> <!-- Base Land Rate -->
-		<set name="target" val="TARGET_ONE" />
-		<set name="saveVs" val="WIT" />
-		<set name="skillType" val="PARALYZE" />
+		<!-- Summon Binding Cubic Skill -->
+		<table name="#magicLvl"> 40 44 48 52 56 60 64 68 72 74 76 77 78 80 82 83 84 85 </table>
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="20" /> <!-- Base Land Rate -->
+		<set name="saveVs" val="WIT" />
+		<set name="skillType" val="PARALYZE" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="ChanceSkillTrigger" time="15" val="0" triggeredId="6125" triggeredLevel="1" chanceType="ON_EXIT">
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
@@ -1060,35 +1060,35 @@
 		</for>
 	</skill>
 	<skill id="4165" levels="17" name="Icy Air">
-		<!-- Cubic Skill -->
+		<!-- Aqua Cubic Skill -->
 		<table name="#dot"> 77 77 77 94 94 108 108 118 118 120 122 128 132 135 140 145 150 </table> <!-- TODO: damage from Lvl 10 upto 17 unconfirmed -->
-		<table name="#magicLvl"> 40 44 48 52 56 62 66 70 74 75 76 77 78 79 80 81 82 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="lvlDepend" val="1" />
-		<set name="power" val="70" /> <!-- Base Land Rate -->
-		<set name="target" val="TARGET_ONE" />
-		<set name="saveVs" val="WIT" />
-		<set name="skillType" val="DOT" />
+		<table name="#magicLvl"> 40 44 48 52 56 60 64 68 72 74 76 78 80 82 83 84 85 </table>
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="70" /> <!-- Base Land Rate -->
+		<set name="saveVs" val="WIT" />
+		<set name="skillType" val="DOT" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
 			<!-- Retail Values CT2.3: 77 77 77 94 94 108 108 118 118HP * 1 Sec -->
 			<effect count="15" name="DamOverTime" val="#dot" />
 		</for>
 	</skill>
 	<skill id="4166" levels="18" name="Stun">
-		<!-- Cubic Skill -->
-		<table name="#magicLvl"> 40 44 48 52 56 60 64 68 72 74 75 76 77 78 79 80 81 82 </table>
-		<set name="magicLvl" val="#magicLvl" />
+		<!-- Spark Cubic Skill -->
+		<table name="#magicLvl"> 40 44 48 52 56 60 64 68 72 74 76 77 78 80 82 83 84 85 </table>
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
-		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
-		<set name="isMagic" val="true" />
-		<set name="isDebuff" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Stun" time="9" val="0" stackOrder="1" stackType="Stun" />
 		</for>
@@ -1206,7 +1206,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_CLAN" />
+		<set name="target" val="TARGET_CLAN_MEMBER" />
 		<for>
 			<effect name="Buff" time="60" val="0" stackOrder="99" stackType="pa_up">
 				<mul order="0x30" stat="pAtk" val="1.5" />
@@ -1225,7 +1225,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_CLAN" />
+		<set name="target" val="TARGET_CLAN_MEMBER" />
 		<for>
 			<effect name="Buff" time="60" val="0" stackOrder="1" stackType="pd_up">
 				<mul order="0x30" stat="pDef" val="1.5" />
@@ -1244,7 +1244,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_CLAN" />
+		<set name="target" val="TARGET_CLAN_MEMBER" />
 		<for>
 			<effect name="Buff" time="60" val="0" stackOrder="99" stackType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="1.5" />
@@ -1263,7 +1263,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="REFLECT" />
-		<set name="target" val="TARGET_CLAN" />
+		<set name="target" val="TARGET_CLAN_MEMBER" />
 		<for>
 			<effect name="Buff" time="60" val="0" stackOrder="99" stackType="DmgShield">
 				<add order="0x40" stat="reflectDam" val="20" />

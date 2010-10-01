@@ -1,11 +1,11 @@
 DROP TABLE IF EXISTS `locations`;
 CREATE TABLE `locations` (
-  `loc_id` int(9) NOT NULL default '0',
-  `loc_x` int(9) NOT NULL default '0',
-  `loc_y` int(9) NOT NULL default '0',
-  `loc_zmin` int(9) NOT NULL default '0',
-  `loc_zmax` int(9) NOT NULL default '0',
-  `proc` int(3) NOT NULL default '0',
+  `loc_id` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `loc_x` mediumint(6) NOT NULL DEFAULT '0',
+  `loc_y` mediumint(6) NOT NULL DEFAULT '0',
+  `loc_zmin` mediumint(6) NOT NULL DEFAULT '0',
+  `loc_zmax` mediumint(6) NOT NULL DEFAULT '0',
+  `proc` tinyint(2) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`loc_id`,`loc_x`,`loc_y`),
   KEY `proc` (`proc`)
 );

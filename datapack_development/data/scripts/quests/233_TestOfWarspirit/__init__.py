@@ -129,6 +129,7 @@ class Quest (JQuest) :
       st.takeItems(HERMODTS_REMAINS2,-1)
       st.takeItems(KIRUNAS_REMAINS2,-1)
       st.addExpAndSp(447444,30704)
+      st.giveItems(57,80903)
       st.takeItems(TONARS_REMAINS2,-1)
       st.giveItems(MARK_OF_WARSPIRIT,1)
       st.getPlayer().sendPacket(SocialAction(st.getPlayer().getObjectId(),3))
@@ -141,7 +142,7 @@ class Quest (JQuest) :
     return htmltext
 
   def onTalk (self,npc,player):
-    htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+    htmltext = Quest.getNoQuestMsg(player)
     st = player.getQuestState(qn)
     if not st : return htmltext
 

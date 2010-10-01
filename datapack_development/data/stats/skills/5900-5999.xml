@@ -19,16 +19,30 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5903" levels="1" name="Burst of Misplace">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="2000" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="33" /> <!-- Base Land Rate -->
+		<set name="ignoreResists" val="true" />
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="reuseDelay" val="10000" />
+		<set name="skillType" val="DISARM" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Disarm" time="5" val="0" />
+		</for>
 	</skill>
-	<skill id="5904" levels="3" name="Mist of Souliter">
+	<skill id="5904" levels="3" name="Mist of Souleater">
 		<table name="#hitTime"> 2000 22940 22940 </table>
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="power" val="3000" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="PDAM" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="150" />
+		<set name="effectRange" val="650" />
+		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="#hitTime" />
 	</skill>
 	<skill id="5905" levels="1" name="Confusing Nuph">
@@ -58,15 +72,23 @@
 		<set name="hitTime" val="#hitTime" />
 	</skill>
 	<skill id="5909" levels="1" name="Stronghold Attack">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="power" val="3000" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="PDAM" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="150" />
+		<set name="effectRange" val="650" />
+		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="5910" levels="1" name="Stronghold Attack">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="power" val="5000" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="PDAM" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="150" />
+		<set name="effectRange" val="650" />
+		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="5911" levels="1" name="Pestilence Cleanse">
@@ -79,12 +101,12 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="5913" levels="1" name="Putrifection Cleanse">
+	<skill id="5913" levels="1" name="Putrefection Cleanse">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="5914" levels="1" name="Putrifection Cleanse">
+	<skill id="5914" levels="1" name="Putrefaction Cleanse">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -183,15 +205,23 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5932" levels="1" name="Dark Blade">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="power" val="3000" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="PDAM" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="150" />
+		<set name="effectRange" val="650" />
+		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="1500" />
 	</skill>
 	<skill id="5933" levels="1" name="Dark Blade">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="power" val="3000" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="PDAM" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="150" />
+		<set name="effectRange" val="650" />
+		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="1500" />
 	</skill>
 	<skill id="5934" levels="1" name="Meet the soul of darkness and fight against it.">
@@ -200,15 +230,23 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5935" levels="1" name="Dark Ring">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="power" val="3000" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="PDAM" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="150" />
+		<set name="effectRange" val="650" />
+		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="1500" />
 	</skill>
 	<skill id="5936" levels="1" name="Earth Ring">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="power" val="3000" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="PDAM" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="150" />
+		<set name="effectRange" val="650" />
+		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="1500" />
 	</skill>
 	<skill id="5937" levels="1" name="Self Stun">

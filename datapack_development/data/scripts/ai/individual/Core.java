@@ -16,6 +16,9 @@ package ai.individual;
 
 import java.util.List;
 
+import javolution.util.FastList;
+import ai.group_template.L2AttackableAIScript;
+
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
@@ -26,9 +29,6 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 import com.l2jserver.gameserver.templates.StatsSet;
 import com.l2jserver.util.Rnd;
-
-import javolution.util.FastList;
-import ai.group_template.L2AttackableAIScript;
 
 /**
  * Core AI
@@ -45,25 +45,25 @@ public class Core extends L2AttackableAIScript
 	private static final int SUSCEPTOR = 29011;
 	//private static final int PERUM = 29012;
 	//private static final int PREMO = 29013;
-
+	
 	//CORE Status Tracking :
 	private static final byte ALIVE = 0; //Core is spawned.
 	private static final byte DEAD = 1; //Core has been killed.
-
+	
 	private static boolean _FirstAttacked;
-
+	
 	List<L2Attackable> Minions = new FastList<L2Attackable>();
-
+	
 	public Core(int id, String name, String descr)
 	{
 		super(id, name, descr);
-
+		
 		int[] mobs =
 		{
 				CORE, DEATH_KNIGHT, DOOM_WRAITH, SUSCEPTOR
 		};
 		registerMobs(mobs);
-
+		
 		_FirstAttacked = false;
 		StatsSet info = GrandBossManager.getInstance().getStatsSet(CORE);
 		int status = GrandBossManager.getInstance().getBossStatus(CORE);
@@ -99,14 +99,14 @@ public class Core extends L2AttackableAIScript
 			this.spawnBoss(core);
 		}
 	}
-
+	
 	@Override
 	public void saveGlobalData()
 	{
 		String val = "" + _FirstAttacked;
 		saveGlobalQuestVar("Core_Attacked", val);
 	}
-
+	
 	public void spawnBoss(L2GrandBossInstance npc)
 	{
 		GrandBossManager.getInstance().addBoss(npc);
@@ -135,7 +135,7 @@ public class Core extends L2AttackableAIScript
 			Minions.add((L2Attackable) mob);
 		}
 	}
-
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -163,7 +163,7 @@ public class Core extends L2AttackableAIScript
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
-
+	
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
 	{
@@ -183,7 +183,7 @@ public class Core extends L2AttackableAIScript
 		}
 		return super.onAttack(npc, attacker, damage, isPet);
 	}
-
+	
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
@@ -216,7 +216,7 @@ public class Core extends L2AttackableAIScript
 		}
 		return super.onKill(npc, killer, isPet);
 	}
-
+	
 	public static void main(String[] args)
 	{
 		// now call the constructor (starts up the ai)

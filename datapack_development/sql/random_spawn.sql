@@ -6,8 +6,8 @@ CREATE TABLE `random_spawn` (
   `initialDelay` BIGINT NOT NULL default -1,
   `respawnDelay` BIGINT NOT NULL default -1,
   `despawnDelay` BIGINT NOT NULL default -1,
-  `broadcastSpawn` VARCHAR(5) NOT NULL default 'false',
-  `randomSpawn` VARCHAR(5) NOT NULL default 'true',
+  `broadcastSpawn` enum('true','false') NOT NULL default 'false',
+  `randomSpawn` enum('true','false') NOT NULL default 'true',
   PRIMARY KEY (`groupId`)
 );
 

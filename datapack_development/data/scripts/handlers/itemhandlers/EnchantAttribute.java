@@ -24,22 +24,22 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 public class EnchantAttribute implements IItemHandler
 {
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!(playable instanceof L2PcInstance))
 			return;
-
+		
 		final L2PcInstance activeChar = (L2PcInstance) playable;
 		if (activeChar.isCastingNow())
 			return;
-
+		
 		if (activeChar.isEnchanting())
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessageId.ENCHANTMENT_ALREADY_IN_PROGRESS));
 			return;
 		}
-
+		
 		activeChar.setActiveEnchantAttrItem(item);
-		activeChar.sendPacket(new ExChooseInventoryAttributeItem(item.getItemId()));
+		activeChar.sendPacket(new ExChooseInventoryAttributeItem(item));
 	}
 }

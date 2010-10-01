@@ -312,7 +312,6 @@
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="700" />
 		<set name="reuseDelay" val="10000" />
@@ -371,7 +370,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_PARTY" />
 		<for>
-			<effect name="Buff" time="90" val="0" stackOrder="1" stackType="berserk">
+			<effect name="Buff" time="90" val="0" stackOrder="2" stackType="berserk">
 				<mul order="0x30" stat="mAtk" val="1.16" />
 				<mul order="0x30" stat="pAtk" val="1.08" />
 				<mul order="0x30" stat="mDef" val="0.84" />

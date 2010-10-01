@@ -1,16 +1,16 @@
 DROP TABLE IF EXISTS `henna`;
 CREATE TABLE `henna` (
-  `symbol_id` int(11) NOT NULL default '0',
-  `symbol_name` varchar(45) default NULL,
-  `dye_id` int(11) default NULL,
-  `dye_amount` int(11) default NULL,
-  `price` int(11) default NULL,
-  `stat_INT` decimal(11,0) default NULL,
-  `stat_STR` decimal(11,0) default NULL,
-  `stat_CON` decimal(11,0) default NULL,
-  `stat_MEM` decimal(11,0) default NULL,
-  `stat_DEX` decimal(11,0) default NULL,
-  `stat_WIT` decimal(11,0) default NULL,
+  `symbol_id` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `symbol_name` varchar(45) DEFAULT NULL,
+  `dye_id` smallint(4) unsigned DEFAULT NULL,
+  `dye_amount` tinyint(2) unsigned DEFAULT NULL,
+  `price` int(10) unsigned DEFAULT NULL,
+  `stat_INT` tinyint(1) DEFAULT NULL,
+  `stat_STR` tinyint(1) DEFAULT NULL,
+  `stat_CON` tinyint(1) DEFAULT NULL,
+  `stat_MEM` tinyint(1) DEFAULT NULL,
+  `stat_DEX` tinyint(1) DEFAULT NULL,
+  `stat_WIT` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`symbol_id`)
 );
 

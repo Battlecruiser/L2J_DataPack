@@ -14,10 +14,17 @@
  */
 package handlers.admincommandhandlers;
 
+import java.math.BigInteger;
+import java.nio.ByteBuffer;
 import java.util.StringTokenizer;
 
+import org.mmocore.network.NioNetStringBuffer;
+
+import com.l2jserver.gameserver.GameServer;
+import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.clientpackets.L2GameClientPacket;
 import com.l2jserver.gameserver.network.serverpackets.AdminForgePacket;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.util.StringUtil;
@@ -67,10 +74,18 @@ public class AdminPForge implements IAdminCommandHandler
 				st.nextToken();
 				String format = st.nextToken();
 				boolean broadcast = false;
+				boolean client = false;
+				ByteBuffer buf = null;
 				if (format.toLowerCase().equals("broadcast"))
 				{
 					format = st.nextToken();
 					broadcast = true;
+				}
+				else if (format.toLowerCase().equals("client"))
+				{
+					format = st.nextToken();
+					client = true;
+					buf = ByteBuffer.allocate(65533);
 				}
 				AdminForgePacket sp = new AdminForgePacket();
 				for (int i = 0; i < format.length(); i++)
@@ -140,11 +155,25 @@ public class AdminPForge implements IAdminCommandHandler
 						val = String.valueOf(((L2PcInstance) activeChar.getTarget()).getHeading());
 					}
 					
-					sp.addPart(format.getBytes()[i], val);
+					if (!client)
+						sp.addPart(format.getBytes()[i], val);
+					else
+						write(format.getBytes()[i], val, buf);
 				}
-				if (broadcast == true)
+				if (broadcast)
 				{
 					activeChar.broadcastPacket(sp);
+				}
+				else if (client)
+				{
+					buf.flip();
+					L2GameClientPacket p = (L2GameClientPacket) GameServer.gameServer.getL2GamePacketHandler().handlePacket(buf, activeChar.getClient());
+					if (p != null)
+					{
+						p.setBuffers(buf, activeChar.getClient(), new NioNetStringBuffer(2000));
+						if (p.read())
+							ThreadPoolManager.getInstance().executePacket(p);
+					}
 				}
 				else
 				{
@@ -170,19 +199,19 @@ public class AdminPForge implements IAdminCommandHandler
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/pforge2.htm");
 		adminReply.replace("%format%", format);
-
-                final StringBuilder replyMSG =
-                        new StringBuilder(format.length() * 40);
-
+		
+		final StringBuilder replyMSG =
+			new StringBuilder(format.length() * 40);
+		
 		for (int i = 0; i < format.length(); i++)
-                    StringUtil.append(replyMSG,
-                            String.valueOf(format.charAt(i)),
-                            " : <edit var=\"v",
-                            String.valueOf(i),
-                            "\" width=100><br1>");
+			StringUtil.append(replyMSG,
+					String.valueOf(format.charAt(i)),
+					" : <edit var=\"v",
+					String.valueOf(i),
+			"\" width=100><br1>");
 		adminReply.replace("%valueditors%", replyMSG.toString());
 		replyMSG.setLength(0);
-                
+		
 		for (int i = 0; i < format.length(); i++)
 			replyMSG.append(" $v" + i);
 		adminReply.replace("%send%", replyMSG.toString());
@@ -196,6 +225,52 @@ public class AdminPForge implements IAdminCommandHandler
 		adminReply.replace("%format%", format);
 		adminReply.replace("%command%", command);
 		activeChar.sendPacket(adminReply);
+	}
+	
+	
+	private boolean write(byte b, String string, ByteBuffer buf)
+	{
+		if((b == 'C')||(b == 'c'))
+		{
+			buf.put(Byte.decode(string));
+			return true;
+		}
+		else if((b == 'D')||(b == 'd'))
+		{
+			buf.putInt(Integer.decode(string));
+			return true;
+		}
+		else if((b == 'H')||(b == 'h'))
+		{
+			buf.putShort(Short.decode(string));
+			return true;
+		}
+		else if((b == 'F')||(b == 'f'))
+		{
+			buf.putDouble(Double.parseDouble(string));
+			return true;
+		}
+		else if((b == 'S')||(b == 's'))
+		{
+			final int len = string.length();
+			for (int i = 0; i < len; i++)
+			{
+				buf.putChar(string.charAt(i));
+			}
+			buf.putChar('\000');
+			return true;
+		}
+		else if((b == 'B')||(b == 'b')||(b == 'X')||(b == 'x'))
+		{
+			buf.put(new BigInteger(string).toByteArray());
+			return true;
+		}
+		else if ((b == 'Q') || (b == 'q'))
+		{
+			buf.putLong(Long.decode(string));
+			return true;
+		}
+		return false;
 	}
 	
 	public String[] getAdminCommandList()

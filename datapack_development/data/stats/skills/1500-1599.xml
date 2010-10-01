@@ -129,6 +129,11 @@
 		<set name="reuseDelay" val="1800000" />
 		<set name="skillType" val="HPMPCPHEAL_PERCENT" />
 		<set name="target" val="TARGET_ONE" />
+		<cond>
+			<not>
+				<target npcType="L2Attackable" />
+			</not>
+		</cond>
 		<for>
 			<!-- effect name="CancelDebuff" val="0" effectPower="25" effectType="CANCEL_DEBUFF"/ TODO: Needs Core-Side Support -->
 		</for>
@@ -914,6 +919,7 @@
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="1542" levels="1" name="Counter Critical">
+		<set name="activationMinDamage" val="300" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
@@ -925,7 +931,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="ChanceSkillTrigger" time="1200" val="0" triggeredId="6059" chanceType="ON_ATTACKED_CRIT" activationChance="10" stackOrder="1" stackType="critVuln_special">
+			<effect name="ChanceSkillTrigger" time="1200" val="0" triggeredId="6059" chanceType="ON_ATTACKED_HIT" activationChance="10" stackOrder="1" stackType="critVuln_special">
 				<mul order="0x30" stat="critVuln" val="0.7" />
 			</effect>
 		</for>
@@ -944,18 +950,53 @@
 		</cond>
 	</skill>
 	<skill id="1544" levels="7" name="Death Beam">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Kamael Final Form Skill -->
+		<!-- TODO: Related with Quest "Long live the Pa'agrio Lord! -->
+		<table name="#power"> 138 139 141 142 144 145 146 </table>
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="true" />
+		<set name="mpConsume" val="73" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="20000" /> <!-- Guess -->
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
 	<skill id="1545" levels="1" name="Soul Sucking">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Kamael Final Form Skill -->
+		<!-- TODO: Related with Quest "Long live the Pa'agrio Lord! -->
+		<!-- TODO: This skill require retail check -->
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1400" />
+		<set name="hitTime" val="15000" />
+		<set name="isMagic" val="true" />
+		<set name="mpConsume" val="36" />
+		<set name="num_souls" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="60000" /> <!-- Guess -->
+		<set name="saveVs" val="WIT" />
+		<set name="skillType" val="DOT" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect count="15" name="DamOverTime" val="1" />
+		</for>
 	</skill>
 	<skill id="1546" levels="1" name="Strider Fear">
 		<!-- Frightens the enemy and causes him to flee for 10 seconds. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="1547" levels="3" name="Spirit Sharing">
+		<!--
+			Increases your P. Atk. by 3%, M.Atk. by 3% and Skill P.Atk. by 5% for 20 minutes. These bonuses will also be applied to your servitor.
+			Increases your P. Atk. by 4%, M.Atk. by 4% and Skill P.Atk. by 7% for 20 minutes. These bonuses will also be applied to your servitor.
+			Increases your P. Atk. by 5%, M.Atk. by 5% and Skill P.Atk. by 10% for 20 minutes. These bonuses will also be applied to your servitor.
+		-->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
