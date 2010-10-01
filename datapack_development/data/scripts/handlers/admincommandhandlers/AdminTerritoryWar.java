@@ -63,7 +63,7 @@ public class AdminTerritoryWar implements IAdminCommandHandler
 					newAdminTWDate.set(Calendar.HOUR_OF_DAY, Integer.parseInt(st.nextToken()));
 				else if (val.equalsIgnoreCase("min"))
 					newAdminTWDate.set(Calendar.MINUTE, Integer.parseInt(st.nextToken()));
-
+				
 				if (newAdminTWDate.getTimeInMillis() < Calendar.getInstance().getTimeInMillis())
 				{
 					activeChar.sendMessage("Unable to change TW Date!");

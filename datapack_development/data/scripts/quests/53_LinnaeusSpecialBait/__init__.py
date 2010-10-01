@@ -23,10 +23,9 @@ def fishing_level(player):
        level=20
     else :
        level = player.getSkillLevel(1315)
-       for effect in player.getAllEffects():
-          if effect.getSkill().getId() == 2274:
-            level = int(effect.getSkill().getPower(player))
-            break
+       effect = player.getFirstEffect(2274)
+       if effect:
+            level = int(effect.getSkill().getPower())
     return level
 
 class Quest (JQuest):
@@ -55,7 +54,7 @@ class Quest (JQuest):
 
  def onTalk (self,npc,player):
      st = player.getQuestState(qn)
-     htmltext="<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+     htmltext = Quest.getNoQuestMsg(player)
      if not st: return htmltext
      id = st.getState()
      if id == State.COMPLETED:

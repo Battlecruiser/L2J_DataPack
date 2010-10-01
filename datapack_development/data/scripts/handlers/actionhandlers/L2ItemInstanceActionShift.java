@@ -48,7 +48,7 @@ public class L2ItemInstanceActionShift implements IActionHandler
 		}
 		return true;
 	}
-
+	
 	public InstanceType getInstanceType()
 	{
 		return InstanceType.L2ItemInstance;

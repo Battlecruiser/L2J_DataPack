@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 public class TeleportBookmark implements IItemHandler
 {
 	
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (playable == null || item == null || !(playable instanceof L2PcInstance))
 			return;

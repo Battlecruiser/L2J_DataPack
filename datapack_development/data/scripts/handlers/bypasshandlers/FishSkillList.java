@@ -25,17 +25,17 @@ public class FishSkillList implements IBypassHandler
 	{
 		"FishSkillList"
 	};
-
+	
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2FishermanInstance))
 			return false;
-
+		
 		activeChar.setSkillLearningClassId(activeChar.getClassId());
 		L2FishermanInstance.showFishSkillList(activeChar);
 		return true;
 	}
-
+	
 	public String[] getBypassList()
 	{
 		return COMMANDS;

@@ -29,9 +29,9 @@ import com.l2jserver.gameserver.util.Util;
 public class SkillTransfer extends Quest
 {
 	private static String qn = "SkillTransfer";
-
+	
 	private static final int RESET_ADENA_COST = 10000000;
-
+	
 	private static final int NPCs[] =
 	{
 		30022,30030,30032,30036,30067,30068,30116,30117,30118,30119,
@@ -40,7 +40,7 @@ public class SkillTransfer extends Quest
 		30906,30908,30912,31280,31281,31287,31329,31330,31335,31969,
 		31970,31976,32155,32162
 	};
-
+	
 	/*
 	 * Item ID, count
 	 */
@@ -50,7 +50,7 @@ public class SkillTransfer extends Quest
 		{ 15308, 1 }, // Eva's Saint (105)
 		{ 15309, 4 } // Shillen Saint (112)
 	};
-
+	
 	/*
 	 * Skill ID, Skill Level
 	 */
@@ -143,27 +143,27 @@ public class SkillTransfer extends Quest
 			{1418,1}
 		}
 	};
-
+	
 	@Override
 	public final String onAcquireSkillList(L2Npc npc, L2PcInstance player)
 	{
 		if (player == null)
 			return null;
-
+		
 		final int index = getTransferClassIndex(player);
 		if (index >= 0)
 		{
 			boolean found = false;
 			AcquireSkillList asl = new AcquireSkillList(AcquireSkillList.SkillType.unk4);
 			int[][] skillsList = SKILL_TRANSFER_TREE[index];
-
+			
 			for (int i = 0; i < skillsList.length; i++)
 			{
 				int skillId = skillsList[i][0];
 				int skillLevel = skillsList[i][1];
 				if (player.getSkillLevel(skillId) >= skillLevel)
 					continue;
-
+				
 				asl.addSkill(skillId, skillLevel, skillLevel, 0, 0);
 				found = true;
 			}
@@ -173,17 +173,17 @@ public class SkillTransfer extends Quest
 				return null;
 			}
 		}
-
+		
 		player.sendPacket(new SystemMessage(SystemMessageId.NO_MORE_SKILLS_TO_LEARN));
 		return null;
 	}
-
+	
 	@Override
 	public final String onAcquireSkill(L2Npc npc, L2PcInstance player, L2Skill skill)
 	{
 		if (player == null || skill == null)
 			return null;
-
+		
 		final int index = getTransferClassIndex(player);
 		if (index >= 0)
 		{
@@ -206,16 +206,16 @@ public class SkillTransfer extends Quest
 		}
 		Util.handleIllegalPlayerAction(player, "Player " + player.getName()
 				+ " tried to learn skill that he can't!!!", Config.DEFAULT_PUNISH);
-
+		
 		return "false";
 	}
-
+	
 	@Override
 	public final String onAcquireSkillInfo(L2Npc npc, L2PcInstance player, L2Skill skill)
 	{
 		if (player == null || skill == null)
 			return null;
-
+		
 		final int index = getTransferClassIndex(player);
 		if (index >= 0)
 		{
@@ -232,18 +232,18 @@ public class SkillTransfer extends Quest
 				}
 			}
 		}
-
+		
 		return null;
 	}
-
+	
 	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
-
+		
 		if (player == null)
 			return htmltext;
-
+		
 		if (event.equalsIgnoreCase("learn"))
 		{
 			if (!npc.getTemplate().canTeach(player.getClassId()))
@@ -270,7 +270,7 @@ public class SkillTransfer extends Quest
 				player.sendPacket(new SystemMessage(SystemMessageId.CANNOT_RESET_SKILL_LINK_BECAUSE_NOT_ENOUGH_ADENA));
 				return htmltext;
 			}
-
+			
 			final int index = getTransferClassIndex(player);
 			if (index >= 0)
 			{
@@ -280,7 +280,7 @@ public class SkillTransfer extends Quest
 				{
 					int[][] skillsList = SKILL_TRANSFER_TREE[index];
 					boolean found = false;
-
+					
 					for (L2Skill skill : player.getAllSkills())
 					{
 						for (int i = 0; i < skillsList.length; i++)
@@ -308,17 +308,17 @@ public class SkillTransfer extends Quest
 		}
 		else if (event.equalsIgnoreCase("givePormanders"))
 			givePormanders(npc, player);
-
+		
 		return htmltext;
 	}
-
+	
 	@Override
 	public final String onEnterWorld(L2PcInstance player)
 	{
 		givePormanders(null, player);
 		return null;
 	}
-
+	
 	private final synchronized void givePormanders(L2Npc npc, L2PcInstance player)
 	{
 		final int index = getTransferClassIndex(player);
@@ -327,7 +327,7 @@ public class SkillTransfer extends Quest
 			QuestState st = player.getQuestState(qn);
 			if (st == null)
 				st = newQuestState(player);
-
+			
 			final String name = qn + String.valueOf(player.getClassId().getId());
 			if (st.getInt(name) == 0)
 			{
@@ -338,15 +338,43 @@ public class SkillTransfer extends Quest
 					player.addItem(qn, PORMANDERS[index][0], PORMANDERS[index][1], npc, true);
 				}
 			}
+			
+			if (Config.SKILL_CHECK_ENABLE && (!player.isGM() || Config.SKILL_CHECK_GM))
+			{
+				int count = PORMANDERS[index][1] - (int)player.getInventory().getInventoryItemCount(PORMANDERS[index][0], -1, false);
+				for (L2Skill s : player.getAllSkills())
+				{
+					for (int i = SKILL_TRANSFER_TREE[index].length; --i >= 0;)
+					{
+						if (SKILL_TRANSFER_TREE[index][i][0] == s.getId())
+						{
+							// Holy Weapon allowed for Shilien Saint/Inquisitor stance
+							if (s.getId() == 1043 && index == 2 && player.isInStance())
+								continue;
+							
+							count--;
+							if (count < 0)
+							{
+								Util.handleIllegalPlayerAction(player, "Player " + player.getName() +
+										" has too many transfered skills or items, skill:" + s.getName() +
+										" ("+s.getId() + "/" + s.getLevel() + "), class:" +
+										player.getTemplate().className, 1);
+								if (Config.SKILL_CHECK_REMOVE)
+									player.removeSkill(s);
+							}
+						}
+					}
+				}
+			}
 		}
 	}
-
+	
 	@Override
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		return "main.htm";
 	}
-
+	
 	private final int getTransferClassIndex(L2PcInstance player)
 	{
 		switch (player.getClassId().getId())
@@ -361,7 +389,7 @@ public class SkillTransfer extends Quest
 				return -1;
 		}
 	}
-
+	
 	public SkillTransfer(int id, String name, String descr)
 	{
 		super(id, name, descr);
@@ -373,7 +401,7 @@ public class SkillTransfer extends Quest
 			addAcquireSkillId(i);
 		}
 	}
-
+	
 	public static void main(String[] args)
 	{
 		new SkillTransfer(-1, qn, "custom");

@@ -21,7 +21,7 @@ import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.stat.PcStat;
 
-/** 
+/**
  * @author Psychokiller1888
  */
 
@@ -29,19 +29,19 @@ public class AdminVitality implements IAdminCommandHandler
 {
 	
 	private static final String[]	ADMIN_COMMANDS	=
-	{ 
+	{
 		"admin_set_vitality",
 		"admin_set_vitality_level",
 		"admin_full_vitality",
 		"admin_empty_vitality",
 		"admin_get_vitality"
 	};
-
+	
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (activeChar == null)
 			return false;
-
+		
 		if (!Config.ENABLE_VITALITY)
 		{
 			activeChar.sendMessage("Vitality is not enabled on the server!");
@@ -50,15 +50,15 @@ public class AdminVitality implements IAdminCommandHandler
 		
 		int level = 0;
 		int vitality = 0;
-
+		
 		StringTokenizer st = new StringTokenizer(command, " ");
 		String cmd = st.nextToken();
-
+		
 		if (activeChar.getTarget() instanceof L2PcInstance)
 		{
 			L2PcInstance target;
 			target = (L2PcInstance) activeChar.getTarget();
-		
+			
 			if (cmd.equals("admin_set_vitality"))
 			{
 				try
@@ -83,13 +83,13 @@ public class AdminVitality implements IAdminCommandHandler
 				{
 					activeChar.sendMessage("Incorrect vitality level (0-4)");
 				}
-
+				
 				if (level >= 0 && level <= 4)
 				{
 					if (level == 0)
 						vitality = PcStat.MIN_VITALITY_POINTS;
 					else
-						vitality = PcStat.VITALITY_LEVELS[level-1]; 
+						vitality = PcStat.VITALITY_LEVELS[level-1];
 					target.setVitalityPoints(vitality, true);
 					target.sendMessage("Admin set your Vitality level to "  + level);
 				}
@@ -122,7 +122,7 @@ public class AdminVitality implements IAdminCommandHandler
 			return false;
 		}
 	}
-
+	
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;

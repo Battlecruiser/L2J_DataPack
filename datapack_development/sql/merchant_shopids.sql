@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS `merchant_shopids`;
 CREATE TABLE `merchant_shopids` (
-  `shop_id` decimal(9,0) NOT NULL default '0',
-  `npc_id` varchar(9) default NULL,
+  `shop_id` mediumint(7) unsigned NOT NULL DEFAULT '0',
+  `npc_id` varchar(5) DEFAULT NULL,
   PRIMARY KEY (`shop_id`)
 );
 
@@ -71,6 +71,7 @@ INSERT INTO `merchant_shopids` VALUES
 (3016400,'30164'),
 (3016500,'30165'),
 (3016501,'30165'),
+(3016502,'30165'),
 (3016600,'30166'),
 (3016601,'30166'),
 (3017800,'30178'),
@@ -162,6 +163,7 @@ INSERT INTO `merchant_shopids` VALUES
 (3084000,'30840'),
 (3084100,'30841'),
 (3084101,'30841'),
+(3084102,'30841'),
 (3084200,'30842'),
 (3084201,'30842'),
 (3086900,'30869'),
@@ -191,7 +193,9 @@ INSERT INTO `merchant_shopids` VALUES
 (3125900,'31259'),
 (3125901,'31259'),
 (3126000,'31260'),
+(3126001,'31260'),
 (3126100,'31261'),
+(3126101,'31261'),
 (3126200,'31262'),
 (3126300,'31263'),
 (3126301,'31263'),
@@ -584,8 +588,8 @@ INSERT INTO `merchant_shopids` VALUES
 ('9904', 'gm'), -- Codex Books
 ('9905', 'gm'), -- Divine Inspiration Books
 ('9906', 'gm'), -- Transform Sealbooks
-('9907', 'gm'), -- S84 Vesper Weapons
-('9908', 'gm'), -- S84 Vesper Jewels
+('9907', 'gm'), -- S84 Grade Weapons
+('9908', 'gm'), -- S84 Jewels
 ('9909', 'gm'), -- Cloaks
 ('9910', 'gm'), -- Belts
 ('9911', 'gm'), -- Magic Pins
@@ -658,7 +662,7 @@ INSERT INTO `merchant_shopids` VALUES
 ('9978', 'gm'), -- Misc Consumables
 ('9979', 'gm'), -- Arrows
 ('9980', 'gm'), -- Infinity Weapons
-('9981', 'gm'), -- Vesper PVP Weapons
+('9981', 'gm'), -- S84 Grade PVP Weapons
 ('9982', 'gm'), -- Dynasty PVP Weapons
 ('9983', 'gm'), -- Icarus PVP Weapons
 ('9984', 'gm'), -- S PVP Weapons
@@ -684,3 +688,24 @@ INSERT INTO `merchant_shopids` VALUES
 ('10004', 'gm'), -- Agathions
 ('10005', 'gm'), -- Mounts
 ('10006', 'gm'); -- Event Masks
+
+-- Test Server Helpers Shops
+INSERT INTO `merchant_shopids` VALUES
+-- Mr Cat
+(3175601,'31756'), -- Soulshot, shared item or other supplies.
+(3175602,'31756'), -- No-grade recipe.
+(3175603,'31756'), -- D-grade recipe.
+(3175604,'31756'), -- C-grade recipe.
+(3175605,'31756'), -- B-grade recipe.
+(3175606,'31756'), -- A-grade recipe.
+(3175607,'31756'), -- S-grade recipe.
+(3175608,'31756'), -- Ordinary manufacturing recipe.
+-- Miss Queen
+(3175701,'31757'), -- Essential item - Grade D or lower
+(3175702,'31757'), -- Essential item - Grade C
+(3175703,'31757'), -- Essential item - Grade B
+(3175704,'31757'), -- Essential item - Grade A
+(3175705,'31757'), -- Essential item - Grade S and General Production Material Item
+(3175706,'31757'), -- Speelbook (1)
+(3175707,'31757'), -- Speelbook (2)
+(3175708,'31757'); -- Speelbook (3)

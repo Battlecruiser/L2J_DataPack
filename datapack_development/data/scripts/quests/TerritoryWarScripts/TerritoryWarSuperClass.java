@@ -40,7 +40,7 @@ public class TerritoryWarSuperClass extends Quest
 	private static L2FastMap<Integer, TerritoryWarSuperClass> _forTheSakeScripts = new L2FastMap<Integer, TerritoryWarSuperClass>();
 	private static L2FastMap<Integer, TerritoryWarSuperClass> _protectTheScripts = new L2FastMap<Integer, TerritoryWarSuperClass>();
 	private static L2FastMap<Integer, TerritoryWarSuperClass> _killTheScripts = new L2FastMap<Integer, TerritoryWarSuperClass>();
-
+	
 	public static String qn = "TerritoryWarSuperClass";
 	
 	// "For the Sake of the Territory ..." quests variables
@@ -55,18 +55,6 @@ public class TerritoryWarSuperClass extends Quest
 	public int[] CLASS_IDS;
 	public int RANDOM_MIN;
 	public int RANDOM_MAX;
-	
-	public static boolean contains(int[] array, int obj)
-	{
-		for (int i = 0; i < array.length; i++)
-		{
-			if (array[i] == obj)
-			{
-				return true;
-			}
-		}
-		return false;
-	}
 	
 	// Used to register NPCs "For the Sake of the Territory ..." quests
 	public void registerKillIds()
@@ -88,7 +76,7 @@ public class TerritoryWarSuperClass extends Quest
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
 	{
-		if (targets[0] == npc)
+		if (Util.contains(targets, npc))
 		{
 			if (skill.getId() == 845)
 			{
@@ -138,7 +126,7 @@ public class TerritoryWarSuperClass extends Quest
 	@Override
 	public String onAttack(L2Npc npc,L2PcInstance player, int damage, boolean isPet)
 	{
-		if (npc.getCurrentHp() == npc.getMaxHp() && contains(NPC_IDS, npc.getNpcId()))
+		if (npc.getCurrentHp() == npc.getMaxHp() && Util.contains(NPC_IDS, npc.getNpcId()))
 		{
 			int territoryId = getTerritoryIdForThisNPCId(npc.getNpcId());
 			if (territoryId >= 81 && territoryId <= 89)
@@ -166,10 +154,11 @@ public class TerritoryWarSuperClass extends Quest
 			TerritoryWarManager.getInstance().territoryCatapultDestroyed(TERRITORY_ID - 80);
 			TerritoryWarManager.getInstance().giveTWPoint(killer, TERRITORY_ID, 4);
 			TerritoryWarManager.getInstance().announceToParticipants(new ExShowScreenMessage(Text[0],10000), 135000, 13500);
+			handleBecomeMercenaryQuest(killer,true);
 		}
-		else if (contains(LEADER_IDS, npc.getNpcId()))
+		else if (Util.contains(LEADER_IDS, npc.getNpcId()))
 			TerritoryWarManager.getInstance().giveTWPoint(killer, TERRITORY_ID, 3);
-
+		
 		if (killer.getSiegeSide() != TERRITORY_ID
 				&& TerritoryWarManager.getInstance().getTerritory(killer.getSiegeSide() - 80) != null)
 			TerritoryWarManager.getInstance().getTerritory(killer.getSiegeSide() - 80).getQuestDone()[0]++;
@@ -267,6 +256,84 @@ public class TerritoryWarSuperClass extends Quest
 		}
 	}
 	
+	private void handleBecomeMercenaryQuest(L2PcInstance player, boolean catapult)
+	{
+		QuestState _state = player.getQuestState("147_PathtoBecominganEliteMercenary");
+		if(_state != null && _state.getState() == State.STARTED)
+		{
+			int _cond = _state.getInt("cond");
+			if (catapult)
+			{
+				if (_cond == 2)
+					_state.set("cond", "4");
+				else if (_cond == 1)
+					_state.set("cond", "3");
+			}
+			else
+			{
+				if (_cond == 1 || _cond == 3)
+				{
+					// Get
+					int _kills = _state.getInt("kills");
+					// Increase
+					_kills++;
+					// Save
+					_state.set("kills", String.valueOf(_kills));
+					// Check
+					if (_kills >= 10)
+					{
+						if (_cond == 1)
+							_state.set("cond", "2");
+						else if (_cond == 3)
+							_state.set("cond", "4");
+					}
+				}
+			}
+		}
+	}
+	
+	private void handleStepsForHonor(L2PcInstance player)
+	{
+		int kills = 0;
+		int cond = 0;
+		// Additional Handle for Quest
+		QuestState _sfh = player.getQuestState("176_StepsForHonor");
+		if (_sfh != null && _sfh.getState() == State.STARTED)
+		{
+			cond = _sfh.getInt("cond");
+			if ( cond == 1 || cond == 3 || cond == 5 || cond == 7)
+			{
+				// Get kills
+				kills = _sfh.getInt("kills");
+				// Increase
+				kills++;
+				// Save
+				_sfh.set("kills", String.valueOf(kills));
+				// Check
+				if (cond == 1 && kills >= 9)
+				{
+					_sfh.set("cond", "2");
+					_sfh.set("kills", "0");
+				}
+				else if (cond == 3 && kills >= 18)
+				{
+					_sfh.set("cond", "4");
+					_sfh.set("kills", "0");
+				}
+				else if (cond == 5 && kills >= 27)
+				{
+					_sfh.set("cond", "6");
+					_sfh.set("kills", "0");
+				}
+				else if (cond == 7 && kills >= 36)
+				{
+					_sfh.set("cond", "8");
+					_sfh.unset("kills");
+				}
+			}
+		}
+	}
+	
 	@Override
 	public String onDeath(L2Character killer, L2Character victim, QuestState qs)
 	{
@@ -276,14 +343,25 @@ public class TerritoryWarSuperClass extends Quest
 		if (actingPlayer != null && qs.getPlayer() != null)
 		{
 			if (actingPlayer.getParty() != null)
+			{
 				for(L2PcInstance pl : actingPlayer.getParty().getPartyMembers())
 				{
 					if (pl.getSiegeSide() == qs.getPlayer().getSiegeSide() || pl.getSiegeSide() == 0 || !Util.checkIfInRange(2000, killer, pl, false))
 						continue;
+					if (pl == actingPlayer)
+					{
+						handleStepsForHonor(actingPlayer);
+						handleBecomeMercenaryQuest(actingPlayer, false);
+					}
 					handleKillTheQuest(pl);
 				}
+			}
 			else if (actingPlayer.getSiegeSide() != qs.getPlayer().getSiegeSide() && actingPlayer.getSiegeSide() > 0)
+			{
 				handleKillTheQuest(actingPlayer);
+				handleStepsForHonor(actingPlayer);
+				handleBecomeMercenaryQuest(actingPlayer, false);
+			}
 			TerritoryWarManager.getInstance().giveTWPoint(actingPlayer, qs.getPlayer().getSiegeSide(), 1);
 		}
 		return "";
@@ -325,7 +403,7 @@ public class TerritoryWarSuperClass extends Quest
 	public void setOnEnterWorld(boolean val)
 	{
 		super.setOnEnterWorld(val);
-
+		
 		for(L2PcInstance player: L2World.getInstance().getAllPlayers().values())
 			if (player.getSiegeSide() > 0)
 			{
@@ -426,7 +504,7 @@ public class TerritoryWarSuperClass extends Quest
 	{
 		// initialize superclass
 		new TerritoryWarSuperClass(-1,qn,"Territory_War");
-
+		
 		// initialize subclasses
 		// "For The Sake" quests
 		TerritoryWarSuperClass gludio = new TheTerritoryGludio();

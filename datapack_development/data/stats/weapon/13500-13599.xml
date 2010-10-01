@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<item id="13524" name="Gracia Soldier One-handed Sword">
+	<item id="13524" name="Gracian Soldier One-handed Sword">
 		<for>
 			<set val="24" order="0x08" stat="pAtk" />
 			<set val="17" order="0x08" stat="mAtk" />
@@ -8,7 +8,7 @@
 			<set val="379" order="0x08" stat="pAtkSpd" />
 		</for>
 	</item>
-	<item id="13525" name="Gracia Soldier Shield">
+	<item id="13525" name="Gracian Soldier Shield">
 		<for>
 			<set val="101" order="0x08" stat="sDef" />
 			<set val="20" order="0x08" stat="rShld" />
@@ -16,7 +16,10 @@
 	</item>
 	<item id="13528" name="Test Dual Daggers">
 		<cond msgId="1518">
-			<player active_skill_id="923" />
+			<and>
+				<player class_id_restriction="93, 101, 108" />
+				<player subclass="false" />
+			</and>
 		</cond>
 		<for>
 			<set val="200" order="0x08" stat="pAtk" />

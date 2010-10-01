@@ -15,7 +15,7 @@ BROOCH   = 7262     #Antique Brooch
 
 #REWARD
 ADENA    = 57       #Adena
-AMOUNT   = 68787    #Amount
+AMOUNT   = 150292    #Amount
 
 class Quest (JQuest) :
 
@@ -36,6 +36,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_middle")
     elif event == "31453-7.htm" :
        st.giveItems(ADENA,AMOUNT)
+       st.addExpAndSp(902439,90067)
        st.setState(State.COMPLETED)
        st.playSound("ItemSound.quest_finish")
        st.exitQuest(1)
@@ -43,7 +44,7 @@ class Quest (JQuest) :
 
   def onTalk (Self,npc,player):
     st = player.getQuestState(qn)
-    htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+    htmltext = Quest.getNoQuestMsg(player)
     if not st: return htmltext
     cond = st.getInt("cond")
     npcId = npc.getNpcId()

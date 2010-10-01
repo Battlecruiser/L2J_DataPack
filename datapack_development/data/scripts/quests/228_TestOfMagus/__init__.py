@@ -109,7 +109,7 @@ class Quest (JQuest) :
 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+   htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -147,7 +147,8 @@ class Quest (JQuest) :
             st.takeItems(TONE_OF_EARTH,1)
             st.giveItems(MARK_OF_MAGUS,1)
             st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
-            st.addExpAndSp(139039,40000)
+            st.addExpAndSp(1029122,70620)
+            st.giveItems(57,186077)
             htmltext = "30629-12.htm"
             st.set("cond","0")
             st.set("onlyone","1")

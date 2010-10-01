@@ -16,16 +16,16 @@ package quests.TerritoryWarScripts;
 
 
 /**
-*
-* @author Gigiikun
-*/
+ *
+ * @author Gigiikun
+ */
 
 public class KillTheKnights extends TerritoryWarSuperClass
 {
 	public static String qn1 = "734_Piercethroughashield";
 	public static int qnu = 734;
 	public static String qna = "Pierce through a shield";
-
+	
 	public KillTheKnights()
 	{
 		super(qnu,qn1,qna);

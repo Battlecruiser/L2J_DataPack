@@ -12,16 +12,16 @@ public class DivineKnight extends L2Transformation
 		// id, colRadius, colHeight
 		super(252, 16, 30);
 	}
-
+	
 	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 252 || getPlayer().isCursedWeaponEquipped())
 			return;
-
+		
 		transformedSkills();
 	}
-
+	
 	public void transformedSkills()
 	{
 		// Divine Knight Hate
@@ -44,16 +44,16 @@ public class DivineKnight extends L2Transformation
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
-
+		
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
-
+	
 	@Override
 	public void onUntransform()
 	{
 		removeSkills();
 	}
-
+	
 	public void removeSkills()
 	{
 		// Divine Knight Hate
@@ -67,7 +67,7 @@ public class DivineKnight extends L2Transformation
 		// Divine Knight Ultimate Defense
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(684, 1), false, false);
 		// Sacrifice Knight
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(685, 1), false);
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(685, 1), false, false);
 		// Divine Knight Brandish
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(795, 1), false);
 		// Divine Knight Explosion
@@ -76,10 +76,10 @@ public class DivineKnight extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false);
 		// Transform Dispel
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
-
+		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
-
+	
 	public static void main(String[] args)
 	{
 		TransformationManager.getInstance().registerTransformation(new DivineKnight());

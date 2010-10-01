@@ -46,28 +46,28 @@ public class stats implements IVoicedCommandHandler
 			if (pc != null)
 			{
 				NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-                                final StringBuilder replyMSG = StringUtil.startAppend(
-                                        300 + pc.kills.size() * 50,
-                                        "<html><body>" +
-                                        "<center><font color=\"LEVEL\">[ L2J EVENT ENGINE ]</font></center><br>" +
-                                        "<br>Statistics for player <font color=\"LEVEL\">",
-                                        pc.getName(),
-                                        "</font><br>" +
-                                        "Total kills <font color=\"FF0000\">",
-                                        String.valueOf(pc.kills.size()),
-                                        "</font><br>" +
-                                        "<br>Detailed list: <br>"
-                                        );
+				final StringBuilder replyMSG = StringUtil.startAppend(
+						300 + pc.kills.size() * 50,
+						"<html><body>" +
+						"<center><font color=\"LEVEL\">[ L2J EVENT ENGINE ]</font></center><br>" +
+						"<br>Statistics for player <font color=\"LEVEL\">",
+						pc.getName(),
+						"</font><br>" +
+						"Total kills <font color=\"FF0000\">",
+						String.valueOf(pc.kills.size()),
+						"</font><br>" +
+						"<br>Detailed list: <br>"
+				);
 				
 				Iterator<String> it = pc.kills.iterator();
-
-                                while (it.hasNext()) {
-                                    StringUtil.append(replyMSG,
-                                            "<font color=\"FF0000\">",
-                                            it.next(),
-                                            "</font><br>");
+				
+				while (it.hasNext()) {
+					StringUtil.append(replyMSG,
+							"<font color=\"FF0000\">",
+							it.next(),
+					"</font><br>");
 				}
-                                
+				
 				replyMSG.append("</body></html>");
 				
 				adminReply.setHtml(replyMSG.toString());

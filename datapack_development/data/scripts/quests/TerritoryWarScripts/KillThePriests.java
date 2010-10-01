@@ -16,16 +16,16 @@ package quests.TerritoryWarScripts;
 
 
 /**
-*
-* @author Gigiikun
-*/
+ *
+ * @author Gigiikun
+ */
 
 public class KillThePriests extends TerritoryWarSuperClass
 {
 	public static String qn1 = "737_DenyBlessings";
 	public static int qnu = 737;
 	public static String qna = "Deny Blessings";
-
+	
 	public KillThePriests()
 	{
 		super(qnu,qn1,qna);

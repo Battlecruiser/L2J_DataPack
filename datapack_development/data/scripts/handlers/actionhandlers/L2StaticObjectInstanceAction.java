@@ -31,7 +31,7 @@ public class L2StaticObjectInstanceAction implements IActionHandler
 	{
 		if(((L2StaticObjectInstance)target).getType() < 0)
 			_log.info("L2StaticObjectInstance: StaticObject with invalid type! StaticObjectId: "+((L2StaticObjectInstance)target).getStaticObjectId());
-
+		
 		// Check if the L2PcInstance already target the L2NpcInstance
 		if (activeChar.getTarget() != target)
 		{
@@ -42,7 +42,7 @@ public class L2StaticObjectInstanceAction implements IActionHandler
 		else if (interact)
 		{
 			activeChar.sendPacket(new MyTargetSelected(target.getObjectId(), 0));
-
+			
 			// Calculate the distance between the L2PcInstance and the L2NpcInstance
 			if (!activeChar.isInsideRadius(target, L2Npc.INTERACTION_DISTANCE, false, false))
 			{
@@ -56,12 +56,12 @@ public class L2StaticObjectInstanceAction implements IActionHandler
 					String filename = "data/html/signboard.htm";
 					String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), filename);
 					NpcHtmlMessage html = new NpcHtmlMessage(target.getObjectId());
-
+					
 					if (content == null)
 						html.setHtml("<html><body>Signboard is missing:<br>"+filename+"</body></html>");
 					else
 						html.setHtml(content);
-
+					
 					activeChar.sendPacket(html);
 				}
 				else if(((L2StaticObjectInstance)target).getType() == 0)
@@ -70,7 +70,7 @@ public class L2StaticObjectInstanceAction implements IActionHandler
 		}
 		return true;
 	}
-
+	
 	public InstanceType getInstanceType()
 	{
 		return InstanceType.L2StaticObjectInstance;

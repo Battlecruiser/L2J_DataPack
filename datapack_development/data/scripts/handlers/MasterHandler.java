@@ -14,14 +14,231 @@
  */
 package handlers;
 
-import handlers.actionhandlers.*;
-import handlers.admincommandhandlers.*;
-import handlers.bypasshandlers.*;
-import handlers.chathandlers.*;
-import handlers.itemhandlers.*;
-import handlers.skillhandlers.*;
-import handlers.usercommandhandlers.*;
-import handlers.voicedcommandhandlers.*;
+import handlers.actionhandlers.L2ArtefactInstanceAction;
+import handlers.actionhandlers.L2DecoyAction;
+import handlers.actionhandlers.L2DoorInstanceAction;
+import handlers.actionhandlers.L2DoorInstanceActionShift;
+import handlers.actionhandlers.L2ItemInstanceAction;
+import handlers.actionhandlers.L2ItemInstanceActionShift;
+import handlers.actionhandlers.L2NpcAction;
+import handlers.actionhandlers.L2NpcActionShift;
+import handlers.actionhandlers.L2PcInstanceAction;
+import handlers.actionhandlers.L2PcInstanceActionShift;
+import handlers.actionhandlers.L2PetInstanceAction;
+import handlers.actionhandlers.L2StaticObjectInstanceAction;
+import handlers.actionhandlers.L2StaticObjectInstanceActionShift;
+import handlers.actionhandlers.L2SummonAction;
+import handlers.actionhandlers.L2SummonActionShift;
+import handlers.actionhandlers.L2TrapAction;
+import handlers.admincommandhandlers.AdminAdmin;
+import handlers.admincommandhandlers.AdminAnnouncements;
+import handlers.admincommandhandlers.AdminBBS;
+import handlers.admincommandhandlers.AdminBan;
+import handlers.admincommandhandlers.AdminBuffs;
+import handlers.admincommandhandlers.AdminCache;
+import handlers.admincommandhandlers.AdminCamera;
+import handlers.admincommandhandlers.AdminChangeAccessLevel;
+import handlers.admincommandhandlers.AdminCreateItem;
+import handlers.admincommandhandlers.AdminCursedWeapons;
+import handlers.admincommandhandlers.AdminDebug;
+import handlers.admincommandhandlers.AdminDelete;
+import handlers.admincommandhandlers.AdminDisconnect;
+import handlers.admincommandhandlers.AdminDoorControl;
+import handlers.admincommandhandlers.AdminEditChar;
+import handlers.admincommandhandlers.AdminEditNpc;
+import handlers.admincommandhandlers.AdminEffects;
+import handlers.admincommandhandlers.AdminElement;
+import handlers.admincommandhandlers.AdminEnchant;
+import handlers.admincommandhandlers.AdminEventEngine;
+import handlers.admincommandhandlers.AdminEvents;
+import handlers.admincommandhandlers.AdminExpSp;
+import handlers.admincommandhandlers.AdminFightCalculator;
+import handlers.admincommandhandlers.AdminFortSiege;
+import handlers.admincommandhandlers.AdminGeoEditor;
+import handlers.admincommandhandlers.AdminGeodata;
+import handlers.admincommandhandlers.AdminGm;
+import handlers.admincommandhandlers.AdminGmChat;
+import handlers.admincommandhandlers.AdminHeal;
+import handlers.admincommandhandlers.AdminHelpPage;
+import handlers.admincommandhandlers.AdminInstance;
+import handlers.admincommandhandlers.AdminInstanceZone;
+import handlers.admincommandhandlers.AdminInvul;
+import handlers.admincommandhandlers.AdminKick;
+import handlers.admincommandhandlers.AdminKill;
+import handlers.admincommandhandlers.AdminLevel;
+import handlers.admincommandhandlers.AdminLogin;
+import handlers.admincommandhandlers.AdminMammon;
+import handlers.admincommandhandlers.AdminManor;
+import handlers.admincommandhandlers.AdminMenu;
+import handlers.admincommandhandlers.AdminMobGroup;
+import handlers.admincommandhandlers.AdminMonsterRace;
+import handlers.admincommandhandlers.AdminPForge;
+import handlers.admincommandhandlers.AdminPathNode;
+import handlers.admincommandhandlers.AdminPetition;
+import handlers.admincommandhandlers.AdminPledge;
+import handlers.admincommandhandlers.AdminPolymorph;
+import handlers.admincommandhandlers.AdminQuest;
+import handlers.admincommandhandlers.AdminRepairChar;
+import handlers.admincommandhandlers.AdminRes;
+import handlers.admincommandhandlers.AdminRide;
+import handlers.admincommandhandlers.AdminShop;
+import handlers.admincommandhandlers.AdminShowQuests;
+import handlers.admincommandhandlers.AdminShutdown;
+import handlers.admincommandhandlers.AdminSiege;
+import handlers.admincommandhandlers.AdminSkill;
+import handlers.admincommandhandlers.AdminSpawn;
+import handlers.admincommandhandlers.AdminSummon;
+import handlers.admincommandhandlers.AdminTarget;
+import handlers.admincommandhandlers.AdminTeleport;
+import handlers.admincommandhandlers.AdminTerritoryWar;
+import handlers.admincommandhandlers.AdminTest;
+import handlers.admincommandhandlers.AdminTvTEvent;
+import handlers.admincommandhandlers.AdminUnblockIp;
+import handlers.admincommandhandlers.AdminVitality;
+import handlers.admincommandhandlers.AdminZone;
+import handlers.bypasshandlers.Augment;
+import handlers.bypasshandlers.Buy;
+import handlers.bypasshandlers.BuyShadowItem;
+import handlers.bypasshandlers.CPRecovery;
+import handlers.bypasshandlers.ChatLink;
+import handlers.bypasshandlers.ClanWarehouse;
+import handlers.bypasshandlers.DrawHenna;
+import handlers.bypasshandlers.Festival;
+import handlers.bypasshandlers.FishSkillList;
+import handlers.bypasshandlers.FortSiege;
+import handlers.bypasshandlers.ItemAuctionLink;
+import handlers.bypasshandlers.Link;
+import handlers.bypasshandlers.Loto;
+import handlers.bypasshandlers.ManorManager;
+import handlers.bypasshandlers.Multisell;
+import handlers.bypasshandlers.Observation;
+import handlers.bypasshandlers.PrivateWarehouse;
+import handlers.bypasshandlers.QuestLink;
+import handlers.bypasshandlers.QuestList;
+import handlers.bypasshandlers.ReceivePremium;
+import handlers.bypasshandlers.ReleaseAttribute;
+import handlers.bypasshandlers.RemoveDeathPenalty;
+import handlers.bypasshandlers.RemoveHennaList;
+import handlers.bypasshandlers.RentPet;
+import handlers.bypasshandlers.RideWyvern;
+import handlers.bypasshandlers.Rift;
+import handlers.bypasshandlers.SkillList;
+import handlers.bypasshandlers.SupportBlessing;
+import handlers.bypasshandlers.SupportMagic;
+import handlers.bypasshandlers.TerritoryStatus;
+import handlers.bypasshandlers.TerritoryWar;
+import handlers.bypasshandlers.Transform;
+import handlers.bypasshandlers.Wear;
+import handlers.chathandlers.ChatAll;
+import handlers.chathandlers.ChatAlliance;
+import handlers.chathandlers.ChatBattlefield;
+import handlers.chathandlers.ChatClan;
+import handlers.chathandlers.ChatHeroVoice;
+import handlers.chathandlers.ChatParty;
+import handlers.chathandlers.ChatPartyMatchRoom;
+import handlers.chathandlers.ChatPartyRoomAll;
+import handlers.chathandlers.ChatPartyRoomCommander;
+import handlers.chathandlers.ChatPetition;
+import handlers.chathandlers.ChatShout;
+import handlers.chathandlers.ChatTell;
+import handlers.chathandlers.ChatTrade;
+import handlers.itemhandlers.BeastSoulShot;
+import handlers.itemhandlers.BeastSpice;
+import handlers.itemhandlers.BeastSpiritShot;
+import handlers.itemhandlers.BlessedSpiritShot;
+import handlers.itemhandlers.Book;
+import handlers.itemhandlers.Disguise;
+import handlers.itemhandlers.Elixir;
+import handlers.itemhandlers.EnchantAttribute;
+import handlers.itemhandlers.EnchantScrolls;
+import handlers.itemhandlers.EnergyStarStone;
+import handlers.itemhandlers.ExtractableItems;
+import handlers.itemhandlers.FishShots;
+import handlers.itemhandlers.Harvester;
+import handlers.itemhandlers.ItemSkills;
+import handlers.itemhandlers.ItemSkillsTemplate;
+import handlers.itemhandlers.ManaPotion;
+import handlers.itemhandlers.Maps;
+import handlers.itemhandlers.MercTicket;
+import handlers.itemhandlers.NicknameColor;
+import handlers.itemhandlers.PaganKeys;
+import handlers.itemhandlers.PetFood;
+import handlers.itemhandlers.Recipes;
+import handlers.itemhandlers.RollingDice;
+import handlers.itemhandlers.ScrollOfResurrection;
+import handlers.itemhandlers.Seed;
+import handlers.itemhandlers.SevenSignsRecord;
+import handlers.itemhandlers.SoulShots;
+import handlers.itemhandlers.SpecialXMas;
+import handlers.itemhandlers.SpiritShot;
+import handlers.itemhandlers.SummonItems;
+import handlers.itemhandlers.TeleportBookmark;
+import handlers.skillhandlers.BalanceLife;
+import handlers.skillhandlers.BallistaBomb;
+import handlers.skillhandlers.BeastSkills;
+import handlers.skillhandlers.Blow;
+import handlers.skillhandlers.Cancel;
+import handlers.skillhandlers.Charge;
+import handlers.skillhandlers.CombatPointHeal;
+import handlers.skillhandlers.Continuous;
+import handlers.skillhandlers.CpDam;
+import handlers.skillhandlers.CpDamPercent;
+import handlers.skillhandlers.Craft;
+import handlers.skillhandlers.DeluxeKey;
+import handlers.skillhandlers.Detection;
+import handlers.skillhandlers.Disablers;
+import handlers.skillhandlers.Dummy;
+import handlers.skillhandlers.Extractable;
+import handlers.skillhandlers.Fishing;
+import handlers.skillhandlers.FishingSkill;
+import handlers.skillhandlers.GetPlayer;
+import handlers.skillhandlers.GiveSp;
+import handlers.skillhandlers.GiveVitality;
+import handlers.skillhandlers.Harvest;
+import handlers.skillhandlers.Heal;
+import handlers.skillhandlers.HealPercent;
+import handlers.skillhandlers.InstantJump;
+import handlers.skillhandlers.ManaHeal;
+import handlers.skillhandlers.Manadam;
+import handlers.skillhandlers.Mdam;
+import handlers.skillhandlers.Pdam;
+import handlers.skillhandlers.RefuelAirShip;
+import handlers.skillhandlers.Resurrect;
+import handlers.skillhandlers.ShiftTarget;
+import handlers.skillhandlers.Soul;
+import handlers.skillhandlers.Sow;
+import handlers.skillhandlers.Spoil;
+import handlers.skillhandlers.StealBuffs;
+import handlers.skillhandlers.StrSiegeAssault;
+import handlers.skillhandlers.SummonFriend;
+import handlers.skillhandlers.SummonTreasureKey;
+import handlers.skillhandlers.Sweep;
+import handlers.skillhandlers.TakeCastle;
+import handlers.skillhandlers.TakeFort;
+import handlers.skillhandlers.TransformDispel;
+import handlers.skillhandlers.Trap;
+import handlers.skillhandlers.Unlock;
+import handlers.usercommandhandlers.Birthday;
+import handlers.usercommandhandlers.ChannelDelete;
+import handlers.usercommandhandlers.ChannelLeave;
+import handlers.usercommandhandlers.ChannelListUpdate;
+import handlers.usercommandhandlers.ClanPenalty;
+import handlers.usercommandhandlers.ClanWarsList;
+import handlers.usercommandhandlers.DisMount;
+import handlers.usercommandhandlers.Escape;
+import handlers.usercommandhandlers.InstanceZone;
+import handlers.usercommandhandlers.Loc;
+import handlers.usercommandhandlers.Mount;
+import handlers.usercommandhandlers.OlympiadStat;
+import handlers.usercommandhandlers.PartyInfo;
+import handlers.usercommandhandlers.Time;
+import handlers.voicedcommandhandlers.Banking;
+import handlers.voicedcommandhandlers.ChatAdmin;
+import handlers.voicedcommandhandlers.Debug;
+import handlers.voicedcommandhandlers.Lang;
+import handlers.voicedcommandhandlers.TvTVoicedInfo;
+import handlers.voicedcommandhandlers.Wedding;
+import handlers.voicedcommandhandlers.stats;
 
 import java.util.logging.Logger;
 
@@ -43,7 +260,7 @@ import com.l2jserver.gameserver.handler.VoicedCommandHandler;
 public class MasterHandler
 {
 	private static Logger _log = Logger.getLogger(MasterHandler.class.getName());
-
+	
 	private static void loadActionHandlers()
 	{
 		ActionHandler.getInstance().registerActionHandler(new L2ArtefactInstanceAction());
@@ -58,7 +275,7 @@ public class MasterHandler
 		ActionHandler.getInstance().registerActionHandler(new L2TrapAction());
 		_log.config("Loaded " + ActionHandler.getInstance().size() + "  ActionHandlers");
 	}
-
+	
 	private static void loadActionShiftHandlers()
 	{
 		ActionHandler.getInstance().registerActionShiftHandler(new L2DoorInstanceActionShift());
@@ -69,7 +286,7 @@ public class MasterHandler
 		ActionHandler.getInstance().registerActionShiftHandler(new L2SummonActionShift());
 		_log.config("Loaded " + ActionHandler.getInstance().sizeShift() + " ActionShiftHandlers");
 	}
-
+	
 	private static void loadAdminHandlers()
 	{
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminAdmin());
@@ -82,6 +299,7 @@ public class MasterHandler
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminChangeAccessLevel());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminCreateItem());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminCursedWeapons());
+		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminDebug());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminDelete());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminDisconnect());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminDoorControl());
@@ -91,6 +309,7 @@ public class MasterHandler
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminElement());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminEnchant());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminEventEngine());
+		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminEvents());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminExpSp());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminFightCalculator());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminFortSiege());
@@ -138,7 +357,7 @@ public class MasterHandler
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminZone());
 		_log.config("Loaded " + AdminCommandHandler.getInstance().size() + "  AdminCommandHandlers");
 	}
-
+	
 	private static void loadBypassHandlers()
 	{
 		BypassHandler.getInstance().registerBypassHandler(new Augment());
@@ -151,6 +370,7 @@ public class MasterHandler
 		BypassHandler.getInstance().registerBypassHandler(new Festival());
 		BypassHandler.getInstance().registerBypassHandler(new FishSkillList());
 		BypassHandler.getInstance().registerBypassHandler(new FortSiege());
+		BypassHandler.getInstance().registerBypassHandler(new ItemAuctionLink());
 		BypassHandler.getInstance().registerBypassHandler(new Link());
 		BypassHandler.getInstance().registerBypassHandler(new Loto());
 		BypassHandler.getInstance().registerBypassHandler(new ManorManager());
@@ -159,6 +379,7 @@ public class MasterHandler
 		BypassHandler.getInstance().registerBypassHandler(new QuestLink());
 		BypassHandler.getInstance().registerBypassHandler(new PrivateWarehouse());
 		BypassHandler.getInstance().registerBypassHandler(new QuestList());
+		BypassHandler.getInstance().registerBypassHandler(new ReceivePremium());
 		BypassHandler.getInstance().registerBypassHandler(new ReleaseAttribute());
 		BypassHandler.getInstance().registerBypassHandler(new RemoveDeathPenalty());
 		BypassHandler.getInstance().registerBypassHandler(new RemoveHennaList());
@@ -174,7 +395,7 @@ public class MasterHandler
 		BypassHandler.getInstance().registerBypassHandler(new Wear());
 		_log.config("Loaded " + BypassHandler.getInstance().size() + "  BypassHandlers");
 	}
-
+	
 	private static void loadChatHandlers()
 	{
 		ChatHandler.getInstance().registerChatHandler(new ChatAll());
@@ -210,7 +431,6 @@ public class MasterHandler
 		ItemHandler.getInstance().registerItemHandler(new EnchantScrolls());
 		ItemHandler.getInstance().registerItemHandler(new ExtractableItems());
 		ItemHandler.getInstance().registerItemHandler(new Book());
-		ItemHandler.getInstance().registerItemHandler(new SoulCrystals());
 		ItemHandler.getInstance().registerItemHandler(new SevenSignsRecord());
 		ItemHandler.getInstance().registerItemHandler(new ItemSkills());
 		ItemHandler.getInstance().registerItemHandler(new ItemSkillsTemplate());
@@ -254,15 +474,16 @@ public class MasterHandler
 		SkillHandler.getInstance().registerSkillHandler(new SummonFriend());
 		SkillHandler.getInstance().registerSkillHandler(new SummonTreasureKey());
 		SkillHandler.getInstance().registerSkillHandler(new Disablers());
+		SkillHandler.getInstance().registerSkillHandler(new Cancel());
+		SkillHandler.getInstance().registerSkillHandler(new StealBuffs());
 		SkillHandler.getInstance().registerSkillHandler(new BallistaBomb());
 		SkillHandler.getInstance().registerSkillHandler(new TakeCastle());
 		SkillHandler.getInstance().registerSkillHandler(new TakeFort());
 		SkillHandler.getInstance().registerSkillHandler(new Unlock());
-		SkillHandler.getInstance().registerSkillHandler(new DrainSoul());
 		SkillHandler.getInstance().registerSkillHandler(new Craft());
 		SkillHandler.getInstance().registerSkillHandler(new Fishing());
 		SkillHandler.getInstance().registerSkillHandler(new FishingSkill());
-		SkillHandler.getInstance().registerSkillHandler(new BeastFeed());
+		SkillHandler.getInstance().registerSkillHandler(new BeastSkills());
 		SkillHandler.getInstance().registerSkillHandler(new DeluxeKey());
 		SkillHandler.getInstance().registerSkillHandler(new Sow());
 		SkillHandler.getInstance().registerSkillHandler(new Soul());
@@ -311,6 +532,8 @@ public class MasterHandler
 			VoicedCommandHandler.getInstance().registerVoicedCommandHandler(new ChatAdmin());
 		if (Config.L2JMOD_MULTILANG_ENABLE && Config.L2JMOD_MULTILANG_VOICED_ALLOW)
 			VoicedCommandHandler.getInstance().registerVoicedCommandHandler(new Lang());
+		if (Config.L2JMOD_DEBUG_VOICE_COMMAND)
+			VoicedCommandHandler.getInstance().registerVoicedCommandHandler(new Debug());
 		_log.config("Loaded " + VoicedCommandHandler.getInstance().size() + " VoicedHandlers");
 	}
 	

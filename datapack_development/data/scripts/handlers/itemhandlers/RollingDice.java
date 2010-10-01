@@ -35,9 +35,9 @@ public class RollingDice implements IItemHandler
 {
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.L2ItemInstance)
+	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.L2ItemInstance, boolean)
 	 */
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!(playable instanceof L2PcInstance))
 			return;
@@ -59,7 +59,7 @@ public class RollingDice implements IItemHandler
 				activeChar.sendPacket(new SystemMessage(SystemMessageId.YOU_MAY_NOT_THROW_THE_DICE_AT_THIS_TIME_TRY_AGAIN_LATER));
 				return;
 			}
-
+			
 			Broadcast.toSelfAndKnownPlayers(activeChar, new Dice(activeChar.getObjectId(), item.getItemId(), number, activeChar.getX() - 30, activeChar.getY() - 30, activeChar.getZ()));
 			
 			SystemMessage sm = new SystemMessage(SystemMessageId.C1_ROLLED_S2);
@@ -83,10 +83,10 @@ public class RollingDice implements IItemHandler
 	{
 		// Check if the dice is ready
 		if (!player.getFloodProtectors().getRollDice().
-                        tryPerformAction("roll dice"))
-                {
-                    return 0;
-                }
+				tryPerformAction("roll dice"))
+		{
+			return 0;
+		}
 		return Rnd.get(1, 6);
 	}
 }

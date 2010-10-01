@@ -37,13 +37,14 @@ class Quest (JQuest) :
      if cond == 2 :
        st.set("cond","0")
        st.getPlayer().setNoble(True)
+       st.addExpAndSp(93836,0)
        st.giveItems(NOBLESS_TIARA,1)
        st.playSound("ItemSound.quest_finish")
        st.exitQuest(False)
    return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+   htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st : return htmltext
    npcId = npc.getNpcId()

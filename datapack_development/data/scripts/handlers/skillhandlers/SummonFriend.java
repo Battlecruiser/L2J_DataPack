@@ -39,7 +39,7 @@ public class SummonFriend implements ISkillHandler
 	{
 		L2SkillType.SUMMON_FRIEND
 	};
-
+	
 	/**
 	 * 
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
@@ -66,7 +66,7 @@ public class SummonFriend implements ISkillHandler
 					
 					if (!L2PcInstance.checkSummonTargetStatus(targetPlayer, activePlayer))
 						continue;
-										
+					
 					if (!Util.checkIfInRange(0, activeChar, target, false))
 					{
 						if(!targetPlayer.teleportRequest(activePlayer, skill))

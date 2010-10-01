@@ -107,7 +107,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_middle")
     elif event == "32046-06.htm" :
        st.exitQuest(False)
-       st.addExpAndSp(410358,32060)
+       st.addExpAndSp(1846611,144270)
        st.playSound("ItemSound.quest_finish")
     elif event == "32047-01.htm" :
        if st.getInt("talk") + st.getInt("talk1") == 2:
@@ -212,7 +212,7 @@ class Quest (JQuest) :
     return None
 
  def onTalk (self,npc,player):
-    htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+    htmltext = Quest.getNoQuestMsg(player)
     st = player.getQuestState(qn)
     if not st : return htmltext
     state = st.getState()
@@ -226,7 +226,7 @@ class Quest (JQuest) :
        if state == State.CREATED :
           Pavel = player.getQuestState("121_PavelTheGiants")
           if Pavel:
-             if st.getPlayer().getLevel() >= 49 and Pavel.getState() == State.COMPLETED :
+             if st.getPlayer().getLevel() >= 70 and Pavel.getState() == State.COMPLETED :
                 htmltext = "32041-01.htm"
              else :
                 htmltext = "32041-00.htm"

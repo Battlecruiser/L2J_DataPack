@@ -63,12 +63,13 @@ class Quest (JQuest) :
        item,adena=REWARDS[st.getRandom(len(REWARDS))]
        st.giveItems(item,1)
        st.giveItems(57,adena)
+       st.addExpAndSp(435117,23977)
        st.exitQuest(False)
     return htmltext
 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+   htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st : return htmltext
    npcId = npc.getNpcId()

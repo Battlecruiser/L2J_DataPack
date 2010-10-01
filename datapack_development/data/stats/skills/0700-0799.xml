@@ -40,12 +40,12 @@
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="703" levels="1" name="Sacrifice Healer">
-		<set name="hitTime" val="4000"/>
-		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4000" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="skillRadius" val="1000" />
-		<set name="skillType" val="HPMPHEAL_PERCENT"/>
+		<set name="skillType" val="HPMPHEAL_PERCENT" />
 		<set name="target" val="TARGET_PARTY" />
 		<cond msgId="113" addName="1">
 			<not>
@@ -79,7 +79,7 @@
 				<mul order="0x30" stat="mAtk" val="1.2" />
 				<mul order="0x30" stat="mDef" val="1.2" />
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
-				<mul order="0x30" stat="debuffVuln" val="0.9" />
+				<sub order="0x40" stat="debuffVuln" val="10" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
 			</effect>
@@ -111,7 +111,7 @@
 				<mul order="0x30" stat="mDef" val="1.2" />
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
 				<add order="0x40" stat="accCombat" val="4" />
-				<mul order="0x30" stat="debuffVuln" val="0.9" />
+				<sub order="0x40" stat="debuffVuln" val="10" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
@@ -140,7 +140,7 @@
 				<mul order="0x30" stat="mAtk" val="1.2" />
 				<mul order="0x30" stat="mDef" val="1.2" />
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
-				<mul order="0x30" stat="debuffVuln" val="0.9" />
+				<sub order="0x40" stat="debuffVuln" val="10" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 				<add order="0x40" stat="absorbDam" val="5" /> <!-- absorb 5% HP from damage inflicted on enemies -->
 			</effect>
@@ -170,7 +170,7 @@
 				<mul order="0x30" stat="mAtk" val="1.2" />
 				<mul order="0x30" stat="mDef" val="1.2" />
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
-				<mul order="0x30" stat="debuffVuln" val="0.9" />
+				<sub order="0x40" stat="debuffVuln" val="10" />
 				<add order="0x40" stat="accCombat" val="4" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
@@ -193,11 +193,11 @@
 		</for>
 	</skill>
 	<skill id="709" levels="1" name="Sacrifice Enchanter">
-		<set name="hitTime" val="2500"/>
-		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="2500" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="skillRadius" val="1000" />
-		<set name="skillType" val="BUFF"/>
+		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_PARTY" />
 		<cond msgId="113" addName="1">
 			<player mp="10" />
@@ -206,7 +206,7 @@
 			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_EXIT">
 				<mul order="0x50" stat="limitHp" val="0.1" />
 			</effect>
-			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="transform_sacrifice" >
+			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="transform_sacrifice">
 				<mul order="0x30" stat="pAtk" val="1.2" /> <!-- Guess -->
 				<mul order="0x30" stat="mAtk" val="1.2" /> <!-- Guess -->
 				<mul order="0x30" stat="pDef" val="1.2" /> <!-- Guess -->
@@ -277,7 +277,7 @@
 				<mul order="0x30" stat="mDef" val="1.2" />
 				<mul order="0x30" stat="mAtk" val="1.2" />
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
-				<mul order="0x30" stat="debuffVuln" val="0.8" />
+				<sub order="0x40" stat="debuffVuln" val="20" />
 			</effect>
 		</for>
 	</skill>
@@ -295,11 +295,11 @@
 		<set name="target" val="TARGET_PET" />
 	</skill>
 	<skill id="714" levels="1" name="Sacrifice Summoner">
-		<set name="hitTime" val="2500"/>
-		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="2500" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="skillRadius" val="1000" />
-		<set name="skillType" val="BUFF"/>
+		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_PARTY" />
 		<cond msgId="113" addName="1">
 			<player mp="10" />
@@ -308,7 +308,7 @@
 			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_EXIT">
 				<mul order="0x50" stat="limitHp" val="0.1" />
 			</effect>
-			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="transform_sacrifice" >
+			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="transform_sacrifice">
 				<basemul order="0x30" stat="rCrit" val="0.2" /> <!-- Guess -->
 				<mul order="0x30" stat="cAtk" val="1.2" /> <!-- Guess -->
 			</effect>
@@ -649,7 +649,7 @@
 			<effect name="ImmobileBuff" time="30" val="0" stackOrder="1" stackType="pd_up_special">
 				<add order="0x40" stat="pDef" val="3600" />
 				<add order="0x40" stat="mDef" val="2700" />
-				<mul order="0x30" stat="cancelVuln" val="0.2" />
+				<sub order="0x40" stat="cancelVuln" val="80" />
 			</effect>
 		</for>
 	</skill>
@@ -827,7 +827,7 @@
 			<effect name="ImmobileBuff" time="30" val="0" stackOrder="1" stackType="pd_up_special">
 				<add order="0x40" stat="pDef" val="3600" />
 				<add order="0x40" stat="mDef" val="2700" />
-				<mul order="0x30" stat="cancelVuln" val="0.2" />
+				<sub order="0x40" stat="cancelVuln" val="80" />
 			</effect>
 		</for>
 	</skill>
@@ -972,6 +972,7 @@
 		<set name="magicLvl" val="83" />
 		<set name="hitTime" val="2500" />
 		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="15000" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -988,6 +989,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="83" />
+		<set name="maxNegated" val="5" />
 		<set name="mpConsume" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
@@ -1003,13 +1005,12 @@
 			<player active_effect_id_lvl="5561,3" />
 		</cond>
 		<for>
-			<effect name="Debuff" time="120" val="0" effectPower="80" effectType="DEBUFF">
+			<effect name="Debuff" time="120" val="0" effectPower="80" effectType="DEBUFF" stackOrder="1" stackType="touch_of_death">
 				<mul order="0x30" stat="maxCp" val="0.1" />
-				<mul order="0x30" stat="debuffVuln" val="1.3" />
+				<add order="0x40" stat="debuffVuln" val="30" />
 				<mul order="0x30" stat="gainHp" val="0.7" />
 			</effect>
-			<!-- <effect name="Cancel" val="0" effectPower="25" effectType="CANCEL" /> TODO: Needs Core-Side Support -->
-			<effect name="ChanceSkillTrigger" time="1" noicon="1" val="0" triggeredId="10010" triggeredLevel="1" chanceType="ON_START" activationChance="25" /> <!-- TEMP FIX -->
+			<effect name="Cancel" noicon="1" val="0" effectPower="25" effectType="CANCEL" />
 		</for>
 	</skill>
 	<skill id="763" levels="1" name="Hell Scream">
@@ -1119,7 +1120,7 @@
 				<add order="0x40" stat="runSpd" val="20" />
 				<add order="0x40" stat="rEvas" val="15" />
 				<mul order="0x30" stat="blowRate" val="1.3" />
-				<mul order="0x30" stat="cancelVuln" val="0.1" />
+				<sub order="0x40" stat="cancelVuln" val="90" />
 				<add order="0x40" stat="pSkillEvas" val="40" />
 			</effect>
 		</for>
@@ -1137,7 +1138,7 @@
 				<add order="0x40" stat="runSpd" val="50" />
 				<add order="0x40" stat="rEvas" val="20" />
 				<mul order="0x30" stat="blowRate" val="1.2" />
-				<mul order="0x30" stat="cancelVuln" val="0.2" />
+				<sub order="0x40" stat="cancelVuln" val="80" />
 				<add order="0x40" stat="pSkillEvas" val="75" />
 			</effect>
 		</for>
@@ -1155,7 +1156,7 @@
 				<add order="0x40" stat="runSpd" val="33" />
 				<add order="0x40" stat="rEvas" val="15" />
 				<mul order="0x30" stat="blowRate" val="1.4" />
-				<mul order="0x30" stat="cancelVuln" val="0.1" />
+				<sub order="0x40" stat="cancelVuln" val="90" />
 				<add order="0x40" stat="pSkillEvas" val="60" />
 			</effect>
 		</for>
@@ -1316,109 +1317,115 @@
 	</skill>
 	<skill id="779" levels="1" name="Summon Smart Cubic">
 		<!-- Eva Templar's Smart Cubic -->
-		<set name="mpInitialConsume" val="14" />
-		<set name="mpConsume" val="59" />
-		<set name="itemConsumeId" val="1461" />
-		<set name="itemConsumeCount" val="2" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="6000" />
-		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
+		<set name="itemConsumeCount" val="38" />
+		<set name="itemConsumeId" val="3031" />
+		<set name="magicLvl" val="80" />
+		<set name="mpConsume" val="59" />
+		<set name="mpInitialConsume" val="14" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="5000" />
+		<set name="skillType" val="SUMMON" />
+		<set name="target" val="TARGET_SELF" />
 		<!-- Summon-specific -->
-		<set name="power" val="1975" /> <!-- Guess -->
-		<set name="npcId" val="10" />
-		<set name="activationtime" val="5" />
-		<set name="activationchance" val="30" /> <!-- Guess -->
-		<set name="summonTotalLifeTime" val="900000" /> <!-- Guess -->
+		<set name="activationchance" val="30" />
+		<set name="activationtime" val="13" />
+		<!-- set name="attacksnumberlimit" val="30" / TODO: this require Core-Side support -->
 		<set name="isCubic" val="true" />
+		<set name="npcId" val="10" /> <!-- Cubic Id -->
+		<set name="summonTotalLifeTime" val="900000" /> <!-- Guess -->
 	</skill>
 	<skill id="780" levels="1" name="Summon Smart Cubic">
 		<!-- Shillien Templar's Smart Cubic -->
-		<set name="mpInitialConsume" val="14" />
-		<set name="mpConsume" val="59" />
-		<set name="itemConsumeId" val="1461" />
-		<set name="itemConsumeCount" val="2" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="6000" />
-		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
+		<set name="itemConsumeCount" val="38" />
+		<set name="itemConsumeId" val="3031" />
+		<set name="magicLvl" val="80" />
+		<set name="mpConsume" val="59" />
+		<set name="mpInitialConsume" val="14" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="5000" />
+		<set name="skillType" val="SUMMON" />
+		<set name="target" val="TARGET_SELF" />
 		<!-- Summon-specific -->
-		<set name="power" val="1975" /> <!-- Guess -->
-		<set name="npcId" val="11" />
-		<set name="activationtime" val="5" />
-		<set name="activationchance" val="30" /> <!-- Guess -->
-		<set name="summonTotalLifeTime" val="900000" /> <!-- Guess -->
+		<set name="activationchance" val="30" />
+		<set name="activationtime" val="13" />
+		<!-- set name="attacksnumberlimit" val="30" / TODO: this require Core-Side support -->
 		<set name="isCubic" val="true" />
+		<set name="npcId" val="11" /> <!-- Cubic Id -->
+		<set name="summonTotalLifeTime" val="900000" /> <!-- Guess -->
 	</skill>
 	<skill id="781" levels="1" name="Summon Smart Cubic">
 		<!-- Arcana Lord's Smart Cubic -->
-		<set name="mpInitialConsume" val="14" />
-		<set name="mpConsume" val="59" />
-		<set name="itemConsumeId" val="1461" />
-		<set name="itemConsumeCount" val="2" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="6000" />
-		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
+		<set name="itemConsumeCount" val="38" />
+		<set name="itemConsumeId" val="3031" />
+		<set name="magicLvl" val="80" />
+		<set name="mpConsume" val="59" />
+		<set name="mpInitialConsume" val="14" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="5000" />
+		<set name="skillType" val="SUMMON" />
+		<set name="target" val="TARGET_SELF" />
 		<!-- Summon-specific -->
-		<set name="power" val="1975" /> <!-- Guess -->
-		<set name="npcId" val="12" />
-		<set name="activationtime" val="5" />
-		<set name="activationchance" val="30" /> <!-- Guess -->
-		<set name="summonTotalLifeTime" val="900000" /> <!-- Guess -->
+		<set name="activationchance" val="30" />
+		<set name="activationtime" val="13" />
+		<!-- set name="attacksnumberlimit" val="30" / TODO: this require Core-Side support -->
 		<set name="isCubic" val="true" />
+		<set name="npcId" val="12" /> <!-- Cubic Id -->
+		<set name="summonTotalLifeTime" val="900000" /> <!-- Guess -->
 	</skill>
 	<skill id="782" levels="1" name="Summon Smart Cubic">
 		<!-- Elemental Master's Smart Cubic -->
-		<set name="mpInitialConsume" val="14" />
-		<set name="mpConsume" val="59" />
-		<set name="itemConsumeId" val="1461" />
-		<set name="itemConsumeCount" val="2" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="6000" />
-		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
+		<set name="itemConsumeCount" val="38" />
+		<set name="itemConsumeId" val="3031" />
+		<set name="magicLvl" val="80" />
+		<set name="mpConsume" val="59" />
+		<set name="mpInitialConsume" val="14" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="5000" />
+		<set name="skillType" val="SUMMON" />
+		<set name="target" val="TARGET_SELF" />
 		<!-- Summon-specific -->
-		<set name="power" val="1975" /> <!-- Guess -->
-		<set name="npcId" val="13" />
-		<set name="activationtime" val="5" />
-		<set name="activationchance" val="30" /> <!-- Guess -->
-		<set name="summonTotalLifeTime" val="900000" /> <!-- Guess -->
+		<set name="activationchance" val="30" />
+		<set name="activationtime" val="13" />
+		<!-- set name="attacksnumberlimit" val="30" / TODO: this require Core-Side support -->
 		<set name="isCubic" val="true" />
+		<set name="npcId" val="13" /> <!-- Cubic Id -->
+		<set name="summonTotalLifeTime" val="900000" /> <!-- Guess -->
 	</skill>
 	<skill id="783" levels="1" name="Summon Smart Cubic">
 		<!-- Spectral Master's Smart Cubic -->
-		<set name="mpInitialConsume" val="14" />
-		<set name="mpConsume" val="59" />
-		<set name="itemConsumeId" val="1461" />
-		<set name="itemConsumeCount" val="2" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="6000" />
-		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="true" />
+		<set name="itemConsumeCount" val="38" />
+		<set name="itemConsumeId" val="3031" />
+		<set name="magicLvl" val="80" />
+		<set name="mpConsume" val="59" />
+		<set name="mpInitialConsume" val="14" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="5000" />
+		<set name="skillType" val="SUMMON" />
+		<set name="target" val="TARGET_SELF" />
 		<!-- Summon-specific -->
-		<set name="power" val="1975" /> <!-- Guess -->
-		<set name="npcId" val="14" />
-		<set name="activationtime" val="5" />
-		<set name="activationchance" val="30" /> <!-- Guess -->
-		<set name="summonTotalLifeTime" val="900000" /> <!-- Guess -->
+		<set name="activationchance" val="30" />
+		<set name="activationtime" val="13" />
+		<!-- set name="attacksnumberlimit" val="30" / TODO: this require Core-Side support -->
 		<set name="isCubic" val="true" />
+		<set name="npcId" val="14" /> <!-- Cubic Id -->
+		<set name="summonTotalLifeTime" val="900000" /> <!-- Guess -->
 	</skill>
 	<skill id="784" levels="1" name="Spirit of Phoenix">
 		<set name="mpConsume" val="37" />
 		<set name="magicLvl" val="83" />
 		<set name="hitTime" val="2500" />
 		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="15000" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1441,8 +1448,8 @@
 			<player active_effect_id_lvl="5562,3" />
 		</cond>
 		<for>
-			<effect name="Buff" time="60" val="0" stackOrder="3" stackType="icon_buff">
-				<mul order="0x30" stat="debuffVuln" val="0.6" />
+			<effect name="Buff" time="60" val="0" stackOrder="4" stackType="tank_multi_buff">
+				<sub order="0x40" stat="debuffVuln" val="40" />
 				<mul order="0x30" stat="pDef" val="1.5" />
 				<mul order="0x30" stat="mDef" val="1.5" />
 				<add order="0x40" stat="accCombat" val="6">
@@ -1458,7 +1465,7 @@
 				<mul order="0x30" stat="cAtk" val="2">
 					<using kind="Blunt,Big Blunt" />
 				</mul>
-				<mul order="0x30" stat="cancelVuln" val="0.6" />
+				<sub order="0x40" stat="cancelVuln" val="40" />
 				<mul order="0x30" stat="gainHp" val="0.2" />
 			</effect>
 		</for>
@@ -1469,6 +1476,7 @@
 		<set name="hitTime" val="2500" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="15000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
@@ -1493,8 +1501,8 @@
 		</cond>
 		<for>
 			<effect count="20" name="HealOverTime" time="3" val="150" stackOrder="1" stackType="touch">
-				<mul order="0x30" stat="cancelVuln" val="0.4" />
-				<mul order="0x30" stat="debuffVuln" val="0.7" />
+				<sub order="0x40" stat="cancelVuln" val="60" />
+				<sub order="0x40" stat="debuffVuln" val="30" />
 				<mul order="0x30" stat="gainHp" val="1.3" />
 			</effect>
 		</for>
@@ -1505,6 +1513,7 @@
 		<set name="hitTime" val="2500" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="15000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
@@ -1526,7 +1535,7 @@
 			<player active_effect_id_lvl="5564,3" />
 		</cond>
 		<for>
-			<effect name="Buff" time="60" val="0">
+			<effect name="Buff" time="60" val="0" stackOrder="4" stackType="tank_multi_buff">
 				<mul order="0x30" stat="pAtk" val="1.3" />
 				<add order="0x40" stat="runSpd" val="30" />
 				<mul order="0x30" stat="pAtkSpd" val="1.3" />
@@ -1577,13 +1586,21 @@
 		</for>
 	</skill>
 	<skill id="792" levels="1" name="Betrayal Mark">
-		<!-- duration is 30 seconds -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="power" val="70" /> <!-- Base Land Rate -->
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1200" />
+		<set name="isMagic" val="true" />
+		<set name="mpConsume" val="37" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="70" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="11000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<!-- TODO: abnormal effect guessed, using abnormal deathmark for now until confirmation -->
+			<effect name="ChanceSkillTrigger" time="30" val="0" abnormal="deathmark" triggeredId="5600" activationChance="30" chanceType="ON_ATTACKED" />
+		</for>
 	</skill>
 	<skill id="793" levels="1" name="Rush Impact" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6" enchantGroup5="6" enchantGroup6="6" enchantGroup7="6" enchantGroup8="6">
 		<table name="#enchantMagicLvl"> 78 79 79 80 80 81 81 82 82 83 83 84 84 85 85 </table>
@@ -1729,6 +1746,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<add order="0x40" stat="pDef" val="#pDef" />
 		</for>

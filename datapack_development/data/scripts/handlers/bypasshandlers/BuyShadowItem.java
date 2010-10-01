@@ -27,12 +27,12 @@ public class BuyShadowItem implements IBypassHandler
 	{
 		"BuyShadowItem"
 	};
-
+	
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2MerchantInstance))
 			return false;
-
+		
 		NpcHtmlMessage html = new NpcHtmlMessage(((L2Npc)target).getObjectId());
 		if (activeChar.getLevel() >= 40)
 			html.setFile(activeChar.getHtmlPrefix(), "data/html/merchant/shadow_item.htm");
@@ -40,10 +40,10 @@ public class BuyShadowItem implements IBypassHandler
 			html.setFile(activeChar.getHtmlPrefix(), "data/html/merchant/shadow_item-lowlevel.htm");
 		html.replace("%objectId%", String.valueOf(((L2Npc)target).getObjectId()));
 		activeChar.sendPacket(html);
-
+		
 		return true;
 	}
-
+	
 	public String[] getBypassList()
 	{
 		return COMMANDS;

@@ -34,9 +34,9 @@ public class BeastSoulShot implements IItemHandler
 {
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.L2ItemInstance)
+	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.L2ItemInstance, boolean)
 	 */
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (playable == null)
 			return;
@@ -82,7 +82,7 @@ public class BeastSoulShot implements IItemHandler
 		L2ItemInstance weaponInst = null;
 		
 		if (activePet instanceof L2PetInstance)
-			weaponInst = ((L2PetInstance) activePet).getActiveWeaponInstance();	
+			weaponInst = ((L2PetInstance) activePet).getActiveWeaponInstance();
 		
 		if (weaponInst == null)
 		{

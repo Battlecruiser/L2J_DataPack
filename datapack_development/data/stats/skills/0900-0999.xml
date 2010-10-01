@@ -260,7 +260,7 @@
 		<set name="aggroPoints" val="666" />
 		<for>
 			<effect name="Buff" time="120" val="0">
-				<mul order="0x30" stat="debuffVuln" val="0.7" />
+				<sub order="0x40" stat="debuffVuln" val="30" />
 				<mul order="0x30" stat="gainHp" val="1.3" />
 				<!-- TODO: Provides an 80% chance of removing a party member's de-buffs. (When Used) -->
 			</effect>
@@ -390,8 +390,9 @@
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="removedOnAnyActionExceptMove" val="true" />
+		<set name="removedOnDamage" val="true" />
 		<for>
-			<effect count="1" name="Hide" time="30" val="0">
+			<effect name="Hide" time="30" val="0">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
@@ -759,16 +760,39 @@
 		</for>
 	</skill>
 	<skill id="950" levels="7" name="Nail Attack">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Kamael Final Form Skill -->
+		<table name="#power"> 2583 2640 2695 2749 2802 2852 2900 </table>
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
+		<set name="mpConsume" val="71" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="13000" /> <!-- Guess -->
+		<set name="SSBoost" val="2.0" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="951" levels="7" name="Wing Assault">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Kamael Final Form Skill -->
+		<table name="#power"> 2067 2112 2156 2200 2241 2282 2320 </table>
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="flyType" val="CHARGE" />
 		<set name="hitTime" val="800" />
+		<set name="magicLvl" val="76" />
+		<set name="mpConsume" val="71" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="overHit" val="true" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="13000" /> <!-- Guess -->
+		<set name="skillRadius" val="600" />
+		<set name="skillType" val="PDAM" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_FRONT_AREA" />
+		<cond msgId="113" addName="1">
+			<target mindistance="200" />
+		</cond>
 	</skill>
 	<skill id="952" levels="5" name="Collector's Experience">
 		<table name="#pAtk"> 72.7 86.1 100.2 114.8 129.3 </table>
@@ -814,7 +838,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" time="120" val="0">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="tank_multi_buff">
 				<add order="0x40" stat="accCombat" val="#accCombat">
 					<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword" />
 				</add>
@@ -935,5 +959,193 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="967" levels="1" name="Cursed Body">
+		<!-- Cursed body. Recovery is not possible. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="968" levels="1" name="Treykan Claw">
+		<!-- Attack targets with 6960 Power added to P. Atk. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="969" levels="1" name="Treykan Dash">
+		<!-- Increases your Moving Spd. by 100% for 5 seconds. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="970" levels="1" name="Dash">
+		<!-- Increases your Moving Spd. by 66 for 15 seconds. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="971" levels="1" name="Acumen">
+		<!-- Increases Casting Spd. by 30% for 20 minutes. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="972" levels="1" name="Snipe">
+		<!-- For 2 minutes, increases accuracy by 6, P. Atk. by 199, bow's range by 200 and critical attack rate by 20% when using bow. The player cannot move while the effect lasts. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="973" levels="8" name="Stun Attack">
+		<!--
+			Attack targets with Power 455 added to P. Atk. Stuns an enemy for 9 seconds.
+			Attack targets with 651 Power added to P. Atk. Stuns an enemy for 9 seconds.
+			Attack targets with 845 Power added to P. Atk. Stuns an enemy for 9 seconds.
+			Attack targets with 863 Power added to P. Atk. Stuns an enemy for 9 seconds.
+			Attack targets with 880 Power added to P. Atk. Stuns an enemy for 9 seconds.
+			Attack targets with 897 Power added to P. Atk. Stuns an enemy for 9 seconds.
+			Attack targets with 913 Power added to P. Atk. Stuns an enemy for 9 seconds.
+			Attack targets with 928 Power added to P. Atk. Stuns an enemy for 9 seconds.
+		-->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="974" levels="7" name="Stun Shot">
+		<!--
+			Shoots an arrow with 1951 Power added to P. Atk. Causes shock for 9 seconds. Also cancels target.
+			Shoots an arrow with 2534 Power added to P. Atk. Causes shock for 9 seconds. Also cancels target.
+			Shoots an arrow with 2588 Power added to P. Atk. Causes shock for 9 seconds. Also cancels target.
+			Shoots an arrow with 2639 Power added to P. Atk. Causes shock for 9 seconds. Also cancels target.
+			Shoots an arrow with 2690 Power added to P. Atk. Causes shock for 9 seconds. Also cancels target.
+			Shoots an arrow with 2738 Power added to P. Atk. Causes shock for 9 seconds. Also cancels target.
+			Shoots an arrow with 2784 Power added to P. Atk. Causes shock for 9 seconds. Also cancels target.
+		-->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="975" levels="7" name="Aqua Swirl">
+		<!--
+			Supplements user's M. Atk. with 102 Power to create a powerful vortex of water that inflicts water damage on an enemy.\0	a,none\0	a,none\0
+			Supplements user's M. Atk. with 116 Power to create a powerful vortex of water that inflicts water damage on an enemy.\0	a,none\0	a,none\0
+			Supplements user's M. Atk. with 117 Power to create a powerful vortex of water that inflicts water damage on an enemy.\0	a,none\0	a,none\0
+			Supplements user's M. Atk. with 119 Power to create a powerful vortex of water that inflicts water damage on an enemy.\0	a,none\0	a,none\0
+			Supplements user's M. Atk. with 120 Power to create a powerful vortex of water that inflicts water damage on an enemy.\0	a,none\0	a,none\0
+			Supplements user's M. Atk. with 121 Power to create a powerful vortex of water that inflicts water damage on an enemy.\0	a,none\0	a,none\0
+			Supplements user's M. Atk. with 122 Power to create a powerful vortex of water that inflicts water damage on an enemy.\0	a,none\0	a,none\0
+		-->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="976" levels="7" name="Wind Strike">
+		<!--
+			Supplements user's M. Atk. with 102 Power to create a powerful hurricane that inflicts wind damage on an enemy.
+			Supplements user's M. Atk. with 116 Power to create a powerful hurricane that inflicts wind damage on an enemy.
+			Supplements user's M. Atk. with 117 Power to create a powerful hurricane that inflicts wind damage on an enemy.
+			Supplements user's M. Atk. with 119 Power to create a powerful hurricane that inflicts wind damage on an enemy.
+			Supplements user's M. Atk. with 120 Power to create a powerful hurricane that inflicts wind damage on an enemy.
+			Supplements user's M. Atk. with 121 Power to create a powerful hurricane that inflicts wind damage on an enemy.
+			Supplements user's M. Atk. with 122 Power to create a powerful hurricane that inflicts wind damage on an enemy.
+		-->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="977" levels="6" name="Ice Bolt">
+		<!--
+			Supplements user's M. Atk. with 93 Power to temporarily freeze the surrounding air, inflicting water damage on an enemy and decreasing their movement speed by 20% for 1 minute.
+			Supplements user's M. Atk. with 94 Power to temporarily freeze the surrounding air, inflicting water damage on an enemy and decreasing their movement speed by 20% for 1 minute.
+			Supplements user's M. Atk. with 95 Power to temporarily freeze the surrounding air, inflicting water damage on an enemy and decreasing their movement speed by 20% for 1 minute.
+			Supplements user's M. Atk. with 96 Power to temporarily freeze the surrounding air, inflicting water damage on an enemy and decreasing their movement speed by 20% for 1 minute.
+			Supplements user's M. Atk. with 97 Power to temporarily freeze the surrounding air, inflicting water damage on an enemy and decreasing their movement speed by 20% for 1 minute.
+			Supplements user's M. Atk. with 97 Power to temporarily freeze the surrounding air, inflicting water damage on an enemy and decreasing their movement speed by 20% for 1 minute.
+		-->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="978" levels="7" name="Shoulder Charge">
+		<!--
+			Disrupts an enemy with a sudden and powerful shoulder charge, stunning them for 9 seconds. Power is increased upon consumption of up to 5 souls. Requires an ancient sword. Over-hit is possible.
+			Disrupts an enemy with a sudden and powerful shoulder charge, stunning them for 9 seconds. Power is increased upon consumption of up to 5 souls. Requires an ancient sword. Over-hit is possible.
+			Disrupts an enemy with a sudden and powerful shoulder charge, stunning them for 9 seconds. Power is increased upon consumption of up to 5 souls. Requires an ancient sword. Over-hit is possible.
+			Disrupts an enemy with a sudden and powerful shoulder charge, stunning them for 9 seconds. Power is increased upon consumption of up to 5 souls. Requires an ancient sword. Over-hit is possible.
+			Disrupts an enemy with a sudden and powerful shoulder charge, stunning them for 9 seconds. Power is increased upon consumption of up to 5 souls. Requires an ancient sword. Over-hit is possible.
+			Disrupts an enemy with a sudden and powerful shoulder charge, stunning them for 9 seconds. Power is increased upon consumption of up to 5 souls. Requires an ancient sword. Over-hit is possible.
+			Disrupts an enemy with a sudden and powerful shoulder charge, stunning them for 9 seconds. Power is increased upon consumption of up to 5 souls. Requires an ancient sword. Over-hit is possible.
+		-->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="979" levels="6" name="Aggression">
+		<!--
+			Stimulates the attacking desire of your target with 7427 power.
+			Stimulates the attacking desire of your target with 8137 power.
+			Stimulates the attacking desire of your target with 8851 power.
+			Stimulates the attacking desire of your target with 9570 power.
+			Stimulates the attacking desire of your target with 10292 power.
+			Stimulates the attacking desire of your target with 11018 power.
+		-->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="980" levels="6" name="Hate Aura">
+		<!--
+			Stimulates the attacking desire of nearby enemies with 6752 power.
+			Stimulates the attacking desire of nearby enemies with 7459 power.
+			Stimulates the attacking desire of nearby enemies with 8170 power.
+			Stimulates the attacking desire of nearby enemies with 8886 power.
+			Stimulates the attacking desire of nearby enemies with 9606 power.
+			Stimulates the attacking desire of nearby enemies with 10330 power.
+		-->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="981" levels="6" name="Sleep">
+		<!--
+			Causes the enemy to sleep for 30 seconds.
+			Causes the enemy to sleep for 30 seconds.
+			Causes the enemy to sleep for 30 seconds.
+			Causes the enemy to sleep for 30 seconds.
+			Causes the enemy to sleep for 30 seconds.
+			Causes the enemy to sleep for 30 seconds.
+		-->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="982" levels="3" name="Combat Aura">
+		<table name="#amount"> 1.03 1.04 1.05 </table>
+		<table name="#magicLvl"> 52 64 70 </table>
+		<table name="#mpConsume"> 38 48 52 </table>
+		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="skillRadius" val="1000" />
+		<set name="target" val="TARGET_PARTY" />
+		<for>
+			<effect name="Buff" time="1200" val="0">
+				<mul order="0x30" stat="pAtk" val="#amount" />
+				<mul order="0x30" stat="pAtkSpd" val="#amount" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="983" levels="1" name="Patience">
+		<set name="activationChance" val="5" />
+		<set name="chanceType" val="ON_ATTACKED" />
+		<set name="magicLvl" val="60" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="6687" />
+		<set name="triggeredLevel" val="1" />
 	</skill>
 </list>

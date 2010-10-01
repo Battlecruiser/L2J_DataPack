@@ -33,13 +33,13 @@ public class L2TrapAction implements IActionHandler
 			activeChar.sendPacket(new SystemMessage(SystemMessageId.FAILED_CHANGE_TARGET));
 			return false;
 		}
-
+		
 		activeChar.setTarget(target);
 		MyTargetSelected my = new MyTargetSelected(target.getObjectId(), activeChar.getLevel()- ((L2Character)target).getLevel());
 		activeChar.sendPacket(my);
 		return true;
 	}
-
+	
 	public InstanceType getInstanceType()
 	{
 		return InstanceType.L2Trap;

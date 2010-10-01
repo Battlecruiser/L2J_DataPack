@@ -50,7 +50,7 @@ public class InstanceZone implements IUserCommandHandler
 	{
 		if (id != COMMAND_IDS[0])
 			return false;
-
+		
 		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(activeChar);
 		if (world != null && world.templateId >= 0)
 		{
@@ -58,7 +58,7 @@ public class InstanceZone implements IUserCommandHandler
 			sm.addString(InstanceManager.getInstance().getInstanceIdName(world.templateId));
 			activeChar.sendPacket(sm);
 		}
-
+		
 		Map<Integer, Long> instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(activeChar.getObjectId());
 		boolean firstMessage = true;
 		if (instanceTimes != null)

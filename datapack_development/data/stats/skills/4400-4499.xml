@@ -121,197 +121,77 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4408" levels="20" name="HP Modifiers">
-		<!--
-			Lvl 1 Name - HP Increase (1x) 
-			Lvl 2 Name - HP Medium-High 
-			Lvl 3 Name - HP Medium-High 
-			Lvl 4 Name - HP High 
-			Lvl 5 Name - HP High 
-			Lvl 6 Name - HP Very High 
-			Lvl 7 Name - HP Very High 
-			Lvl 8 Name - HP Increase (1/4x) 
-			Lvl 9 Name - HP Increase (1/2x) 
-			Lvl 10 Name - HP Increase (2x) 
-			Lvl 11 Name - HP Increase (3x) 
-			Lvl 12 Name - HP Increase (4x) 
-			Lvl 13 Name - HP Increase (5x) 
-			Lvl 14 Name - HP Increase (6x) 
-			Lvl 15 Name - HP Increase (7x) 
-			Lvl 16 Name - HP Increase (8x) 
-			Lvl 17 Name - HP Increase (9x) 
-			Lvl 18 Name - HP Increase (10x) 
-			Lvl 19 Name - HP Increase (11x) 
-			Lvl 20 Name - HP Increase (12x)
-		-->
-		<table name="#maxhp"> 1 1.2 1.3 2 2 4 4 0.25 0.5 2 3 4 5 6 7 8 9 10 11 12 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#maxHp"> 1 1.1 1.15 1.2 1.25 1.3 1.35 0.25 0.5 2 3 4 5 6 7 8 9 10 11 12 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="maxHp" val="#maxhp" />
+			<mul order="0x30" stat="maxHp" val="#maxHp" />
 		</for>
 	</skill>
 	<skill id="4409" levels="20" name="MP Modifiers">
-		<!--
-			Lvl 1 Name - MP Increase (1x) 
-			Lvl 2 Name - MP Medium-High 
-			Lvl 3 Name - MP Medium-High 
-			Lvl 4 Name - MP High 
-			Lvl 5 Name - MP High 
-			Lvl 6 Name - MP Very High 
-			Lvl 7 Name - MP Very High 
-			Lvl 8 Name - MP Increase (1/4x) 
-			Lvl 9 Name - MP Increase (1/2x) 
-			Lvl 10 Name - MP Increase (2x) 
-			Lvl 11 Name - MP Increase (3x) 
-			Lvl 12 Name - MP Increase (4x) 
-			Lvl 13 Name - MP Increase (5x) 
-			Lvl 14 Name - MP Increase (6x) 
-			Lvl 15 Name - MP Increase (7x) 
-			Lvl 16 Name - MP Increase (8x) 
-			Lvl 17 Name - MP Increase (9x) 
-			Lvl 18 Name - MP Increase (10x) 
-			Lvl 19 Name - MP Increase (11x) 
-			Lvl 20 Name - MP Increase (12x)
-		-->
-		<table name="#maxmp"> 1 1.2 1.3 2 2 4 4 0.25 0.5 2 3 4 5 6 7 8 9 10 11 12 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#maxMp"> 1 1.1 1.15 1.2 1.25 1.3 1.35 0.25 0.5 2 3 4 5 6 7 8 9 10 11 12 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="maxMp" val="#maxmp" />
+			<mul order="0x30" stat="maxMp" val="#maxMp" />
 		</for>
 	</skill>
 	<skill id="4410" levels="22" name="P. Atk. Modifiers">
-		<!--
-			Lvl 1 Name - Extremely Weak P. Atk. 
-			Lvl 2 Name - Extremely Weak P. Atk. 
-			Lvl 3 Name - Extremely Weak P. Atk. 
-			Lvl 4 Name - Extremely Weak P. Atk. 
-			Lvl 5 Name - Very Weak P. Atk. 
-			Lvl 6 Name - Very Weak P. Atk. 
-			Lvl 7 Name - Weak P. Atk. 
-			Lvl 8 Name - Weak P. Atk. 
-			Lvl 9 Name - Slightly Weak P. Atk. 
-			Lvl 10 Name - Slightly Weak P. Atk. 
-			Lvl 11 Name - Average P. Atk. 
-			Lvl 12 Name - Slightly Strong P. Atk. 
-			Lvl 13 Name - Slightly Strong P. Atk. 
-			Lvl 14 Name - Strong P. Atk. 
-			Lvl 15 Name - Strong P. Atk. 
-			Lvl 16 Name - Very Strong P. Atk. 
-			Lvl 17 Name - Very Strong P. Atk. 
-			Lvl 18 Name - Extremely Strong P. Atk. 
-			Lvl 19 Name - Extremely Strong P. Atk. 
-			Lvl 20 Name - Extremely Strong P. Atk. 
-			Lvl 21 Name - Extremely Strong P. Atk.
-			Lvl 22 Name - Ultra Strong P. Atk.
-		-->
-		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
+		<table name="#pAtk"> 0.75 0.77 0.8 0.83 0.85 0.88 0.9 0.93 0.95 0.98 1 1.02 1.05 1.07 1.1 1.12 1.15 1.17 1.2 1.23 1.25 1.27 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<mul order="0x30" stat="pAtk" val="#pAtk" />
+		</for>
 	</skill>
 	<skill id="4411" levels="22" name="M. Atk. Modifiers">
-		<!--
-			Lvl 1 Name - Extremely Weak M. Atk. 
-			Lvl 2 Name - Extremely Weak M. Atk. 
-			Lvl 3 Name - Extremely Weak M. Atk. 
-			Lvl 4 Name - Extremely Weak M. Atk. 
-			Lvl 5 Name - Very Weak M. Atk. 
-			Lvl 6 Name - Very Weak M. Atk. 
-			Lvl 7 Name - Weak M. Atk. 
-			Lvl 8 Name - Weak M. Atk. 
-			Lvl 9 Name - Slightly Weak M. Atk. 
-			Lvl 10 Name - Slightly Weak M. Atk. 
-			Lvl 11 Name - Average M. Atk. 
-			Lvl 12 Name - Slightly Strong M. Atk. 
-			Lvl 13 Name - Slightly Strong M. Atk. 
-			Lvl 14 Name - Strong M. Atk. 
-			Lvl 15 Name - Strong M. Atk. 
-			Lvl 16 Name - Very Strong M. Atk. 
-			Lvl 17 Name - Very Strong M. Atk. 
-			Lvl 18 Name - Extremely Strong M. Atk. 
-			Lvl 19 Name - Extremely Strong M. Atk. 
-			Lvl 20 Name - Extremely Strong M. Atk. 
-			Lvl 21 Name - Extremely Strong M. Atk.
-			Lvl 22 Name - Ultra Strong M. Atk.
-		-->
-		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
+		<table name="#mAtk"> 0.835 0.85 0.865 0.88 0.92 0.93 0.94 0.96 0.97 0.985 1 1.05 1.03 1.045 1.06 1.075 1.09 1.105 1.12 1.135 1.15 1.165 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<mul order="0x30" stat="mAtk" val="#mAtk" />
+		</for>
 	</skill>
 	<skill id="4412" levels="22" name="P. Def. Modifiers">
-		<!--
-			Lvl 1 Name - Extremely Weak P. Def. 
-			Lvl 2 Name - Extremely Weak P. Def. 
-			Lvl 3 Name - Extremely Weak P. Def. 
-			Lvl 4 Name - Extremely Weak P. Def. 
-			Lvl 5 Name - Very Weak P. Def. 
-			Lvl 6 Name - Very Weak P. Def. 
-			Lvl 7 Name - Weak P. Def. 
-			Lvl 8 Name - Weak P. Def. 
-			Lvl 9 Name - Slightly Weak P. Def. 
-			Lvl 10 Name - Slightly Weak P. Def. 
-			Lvl 11 Name - Average P. Def. 
-			Lvl 12 Name - Slightly Strong P. Def. 
-			Lvl 13 Name - Slightly Strong P. Def. 
-			Lvl 14 Name - Strong P. Def. 
-			Lvl 15 Name - Strong P. Def. 
-			Lvl 16 Name - Very Strong P. Def. 
-			Lvl 17 Name - Very Strong P. Def. 
-			Lvl 18 Name - Extremely Strong P. Def. 
-			Lvl 19 Name - Extremely Strong P. Def. 
-			Lvl 20 Name - Extremely Strong P. Def. 
-			Lvl 21 Name - Extremely Strong P. Def.
-			Lvl 22 Name - Ultra Strong P. Def.
-		-->
-		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
+		<table name="#pDef"> 0.75 0.775 0.8 0.825 0.85 0.875 0.9 0.925 0.95 0.975 1 1.025 1.05 1.075 1.1 1.125 1.15 1.175 1.2 1.225 1.25 1.275 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<mul order="0x30" stat="pDef" val="#pDef" />
+		</for>
 	</skill>
 	<skill id="4413" levels="22" name="M. Def. Modifiers">
-		<!--
-			Lvl 1 Name - Extremely Weak M. Def. 
-			Lvl 2 Name - Extremely Weak M. Def. 
-			Lvl 3 Name - Extremely Weak M. Def. 
-			Lvl 4 Name - Extremely Weak M. Def. 
-			Lvl 5 Name - Very Weak M. Def. 
-			Lvl 6 Name - Very Weak M. Def. 
-			Lvl 7 Name - Weak M. Def. 
-			Lvl 8 Name - Weak M. Def. 
-			Lvl 9 Name - Slightly Weak M. Def. 
-			Lvl 10 Name - Slightly Weak M. Def. 
-			Lvl 11 Name - Average M. Def. 
-			Lvl 12 Name - Slightly Strong M. Def. 
-			Lvl 13 Name - Slightly Strong M. Def. 
-			Lvl 14 Name - Strong M. Def. 
-			Lvl 15 Name - Strong M. Def. 
-			Lvl 16 Name - Very Strong M. Def. 
-			Lvl 17 Name - Very Strong M. Def. 
-			Lvl 18 Name - Extremely Strong M. Def. 
-			Lvl 19 Name - Extremely Strong M. Def. 
-			Lvl 20 Name - Extremely Strong M. Def. 
-			Lvl 21 Name - Extremely Strong M. Def.
-			Lvl 22 Name - Ultra Strong M. Def.
-		-->
-		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
+		<table name="#mDef"> 0.85 0.865 0.88 0.9 0.92 0.93 0.94 0.96 0.97 0.985 1 1.015 1.03 1.04 1.06 1.07 1.08 1.1 1.12 1.135 1.15 1.165 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<mul order="0x30" stat="mDef" val="#mDef" />
+		</for>
 	</skill>
 	<skill id="4414" levels="3" name="Light Armor Type">
-		<!-- Needs to be verified -->
-		<table name="#pdef"> 1.3 1 0.7 </table>
-		<table name="#evasion"> 0.95 1 1.05 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#pDef"> 1.1 1 0.9 </table>
+		<table name="#rEvas1"> 5 0 0 </table>
+		<table name="#rEvas2"> 0 0 5 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="#pdef" />
-			<mul order="0x30" stat="rEvas" val="#evasion" />
+			<mul order="0x30" stat="pDef" val="#pDef" />
+			<add order="0x40" stat="rEvas" val="#rEvas1" />
+			<sub order="0x40" stat="rEvas" val="#rEvas2" />
 		</for>
 	</skill>
 	<skill id="4415" levels="20" name="Weapon Type">
@@ -419,57 +299,57 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4418" levels="5" name="Fire Attacks">
-		<table name="#fireRes"> 15 30 50 70 90 </table>
+		<table name="#vuln"> 15 30 50 70 90 </table>
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="fireRes" val="#fireRes" />
+			<sub order="0x40" stat="fireRes" val="#vuln" />
 		</for>
 	</skill>
 	<skill id="4419" levels="5" name="Water Attacks">
-		<table name="#waterRes"> 15 30 50 70 90 </table>
+		<table name="#vuln"> 15 30 50 70 90 </table>
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="waterRes" val="#waterRes" />
+			<sub order="0x40" stat="waterRes" val="#vuln" />
 		</for>
 	</skill>
 	<skill id="4420" levels="5" name="Wind Attacks">
-		<table name="#windRes"> 15 30 50 70 90 </table>
+		<table name="#vuln"> 15 30 50 70 90 </table>
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="windRes" val="#windRes" />
+			<sub order="0x40" stat="windRes" val="#vuln" />
 		</for>
 	</skill>
 	<skill id="4421" levels="5" name="Earth Attacks">
-		<table name="#earthRes"> 15 30 50 70 90 </table>
+		<table name="#vuln"> 15 30 50 70 90 </table>
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="earthRes" val="#earthRes" />
+			<sub order="0x40" stat="earthRes" val="#vuln" />
 		</for>
 	</skill>
 	<skill id="4422" levels="5" name="Dark Attacks">
-		<table name="#darkRes"> 15 30 50 70 90 </table>
+		<table name="#vuln"> 15 30 50 70 90 </table>
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="darkRes" val="#darkRes" />
+			<sub order="0x40" stat="darkRes" val="#vuln" />
 		</for>
 	</skill>
 	<skill id="4423" levels="5" name="Sacred Attacks">
-		<table name="#holyRes"> 15 30 50 70 90 </table>
+		<table name="#vuln"> 15 30 50 70 90 </table>
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="holyRes" val="#holyRes" />
+			<sub order="0x40" stat="holyRes" val="#vuln" />
 		</for>
 	</skill>
 	<skill id="4424" levels="5" name="Resist Hand-to-hand Weapons">
@@ -585,77 +465,77 @@
 		</for>
 	</skill>
 	<skill id="4435" levels="5" name="Greater Resist Stun">
-		<table name="#stunVuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<table name="#stunVuln"> 60 70 80 90 100 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="stunVuln" val="#stunVuln" />
+			<sub order="0x40" stat="stunVuln" val="#stunVuln" />
 		</for>
 	</skill>
 	<skill id="4436" levels="5" name="Greater Resist Poison">
-		<table name="#poisonVuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<table name="#poisonVuln"> 60 70 80 90 100 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="poisonVuln" val="#poisonVuln" />
+			<sub order="0x40" stat="poisonVuln" val="#poisonVuln" />
 		</for>
 	</skill>
 	<skill id="4437" levels="5" name="Greater Resist Bleeding">
-		<table name="#bleedVuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<table name="#bleedVuln"> 60 70 80 90 100 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="bleedVuln" val="#bleedVuln" />
+			<sub order="0x40" stat="bleedVuln" val="#bleedVuln" />
 		</for>
 	</skill>
 	<skill id="4438" levels="5" name="Greater Resist Sleep">
-		<table name="#sleepVuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<table name="#sleepVuln"> 60 70 80 90 100 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="sleepVuln" val="#sleepVuln" />
+			<sub order="0x40" stat="sleepVuln" val="#sleepVuln" />
 		</for>
 	</skill>
 	<skill id="4439" levels="5" name="Greater Resist Hold">
-		<table name="#rootVuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<table name="#rootVuln"> 60 70 80 90 100 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="rootVuln" val="#rootVuln" />
+			<sub order="0x40" stat="rootVuln" val="#rootVuln" />
 		</for>
 	</skill>
 	<skill id="4440" levels="5" name="Greater Resist Paralysis">
-		<table name="#paralyzeVuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<table name="#paralyzeVuln"> 60 70 80 90 100 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="paralyzeVuln" val="#paralyzeVuln" />
+			<sub order="0x40" stat="paralyzeVuln" val="#paralyzeVuln" />
 		</for>
 	</skill>
 	<skill id="4441" levels="5" name="Greater Resist Mental Derangement">
-		<table name="#derangementVuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<table name="#derangementVuln"> 60 70 80 90 100 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="derangementVuln" val="#derangementVuln" />
+			<sub order="0x40" stat="derangementVuln" val="#derangementVuln" />
 		</for>
 	</skill>
 	<skill id="4442" levels="5" name="Greater Resist Hand-to-hand Weapons">
-		<table name="#dualFistWpnVuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<table name="#dualFistWpnVuln"> 0.5 0.4 0.3 0.2 0.1 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
@@ -665,7 +545,7 @@
 		</for>
 	</skill>
 	<skill id="4443" levels="5" name="Greater Resist Blunt Weapons">
-		<table name="#bluntWpnVuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<table name="#bluntWpnVuln"> 0.5 0.4 0.3 0.2 0.1 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
@@ -675,7 +555,7 @@
 		</for>
 	</skill>
 	<skill id="4444" levels="5" name="Higher Resist Bow/Crossbow Weapons">
-		<table name="#vuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<table name="#vuln"> 0.5 0.4 0.3 0.2 0.1 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
@@ -686,7 +566,7 @@
 		</for>
 	</skill>
 	<skill id="4445" levels="5" name="Greater Resist Spear Weapons">
-		<table name="#poleWpnVuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<table name="#poleWpnVuln"> 0.5 0.4 0.3 0.2 0.1 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
@@ -696,7 +576,7 @@
 		</for>
 	</skill>
 	<skill id="4446" levels="5" name="Greater Resist Dual-Sword Weapons">
-		<table name="#dualWpnVuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<table name="#dualWpnVuln"> 0.5 0.4 0.3 0.2 0.1 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
@@ -706,7 +586,7 @@
 		</for>
 	</skill>
 	<skill id="4447" levels="5" name="Greater Resist Swords">
-		<table name="#swordWpnVuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<table name="#swordWpnVuln"> 0.5 0.4 0.3 0.2 0.1 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
@@ -716,7 +596,7 @@
 		</for>
 	</skill>
 	<skill id="4448" levels="5" name="Higher resist Daggers/Rapier Weapon">
-		<table name="#vuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<table name="#vuln"> 0.5 0.4 0.3 0.2 0.1 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
@@ -727,7 +607,7 @@
 		</for>
 	</skill>
 	<skill id="4449" levels="5" name="Greater Resist Two-handed Weapons">
-		<table name="#vuln"> 0.4 0.3 0.2 0.1 0 </table>
+		<table name="#vuln"> 0.5 0.4 0.3 0.2 0.1 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
@@ -739,73 +619,73 @@
 		</for>
 	</skill>
 	<skill id="4450" levels="5" name="Stun Attack Weak Point">
-		<table name="#stunVuln"> 1.15 1.2 1.25 1.3 1.35 </table>
+		<table name="#stunVuln"> 15 20 25 30 35 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="stunVuln" val="#stunVuln" />
+			<add order="0x40" stat="stunVuln" val="#stunVuln" />
 		</for>
 	</skill>
 	<skill id="4451" levels="5" name="Poison Attack Weak Point">
-		<table name="#poisonVuln"> 1.15 1.2 1.25 1.3 1.35 </table>
+		<table name="#poisonVuln"> 15 20 25 30 35 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="poisonVuln" val="#poisonVuln" />
+			<add order="0x40" stat="poisonVuln" val="#poisonVuln" />
 		</for>
 	</skill>
 	<skill id="4452" levels="5" name="Bleed Attack Weak Point">
-		<table name="#bleedVuln"> 1.15 1.2 1.25 1.3 1.35 </table>
+		<table name="#bleedVuln"> 15 20 25 30 35 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="bleedVuln" val="#bleedVuln" />
+			<add order="0x40" stat="bleedVuln" val="#bleedVuln" />
 		</for>
 	</skill>
 	<skill id="4453" levels="5" name="Sleep Attack Weak Point">
-		<table name="#sleepVuln"> 1.15 1.2 1.25 1.3 1.35 </table>
+		<table name="#sleepVuln"> 15 20 25 30 35 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="sleepVuln" val="#sleepVuln" />
+			<add order="0x40" stat="sleepVuln" val="#sleepVuln" />
 		</for>
 	</skill>
 	<skill id="4454" levels="5" name="Hold Attack Weak Point">
-		<table name="#rootVuln"> 1.15 1.2 1.25 1.3 1.35 </table>
+		<table name="#rootVuln"> 15 20 25 30 35 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="rootVuln" val="#rootVuln" />
+			<add order="0x40" stat="rootVuln" val="#rootVuln" />
 		</for>
 	</skill>
 	<skill id="4455" levels="5" name="Paralysis Attack Weak Point">
-		<table name="#paralyzeVuln"> 1.15 1.2 1.25 1.3 1.35 </table>
+		<table name="#paralyzeVuln"> 15 20 25 30 35 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="paralyzeVuln" val="#paralyzeVuln" />
+			<add order="0x40" stat="paralyzeVuln" val="#paralyzeVuln" />
 		</for>
 	</skill>
 	<skill id="4456" levels="5" name="Mental Attack Weak Point">
-		<table name="#derangementVuln"> 1.15 1.2 1.25 1.3 1.35 </table>
+		<table name="#derangementVuln"> 15 20 25 30 35 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="derangementVuln" val="#derangementVuln" />
+			<add order="0x40" stat="derangementVuln" val="#derangementVuln" />
 		</for>
 	</skill>
 	<skill id="4457" levels="5" name="Hand-to-hand Weapon Weak Point">
@@ -1067,7 +947,7 @@
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1000" />
 		<for>
-			<mul order="0x30" stat="bleedVuln" val="0" />
+			<sub order="0x40" stat="bleedVuln" val="100" />
 		</for>
 	</skill>
 	<skill id="4476" levels="5" name="Silent Move">

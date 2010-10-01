@@ -29,8 +29,6 @@ ADENA_X=int(Config.RATE_DROP_ITEMS_ID.get(57))
  
 #Quest items
 CB_TOOTH, DW_LIGHT, SEALD_MSTONE, MSTONE = range(5884,5888)
-#Messages
-default   = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
  
 #NPCs
 MANAKIA,TORAI = 30515, 30557
@@ -96,7 +94,7 @@ class Quest (JQuest) :
     return htmltext
  
  def onTalk (self,npc,player):
-   htmltext = default
+   htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st : return htmltext
 

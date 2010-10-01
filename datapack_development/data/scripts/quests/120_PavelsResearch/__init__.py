@@ -57,6 +57,8 @@ class Quest (JQuest) :
     elif event == "32041-32.htm" :
        st.takeItems(Necklace,1)
        st.giveItems(EarBinding,1)
+       st.giveItems(57,783720)
+       st.addExpAndSp(3447315,272615)
        st.exitQuest(False)
        st.playSound("ItemSound.quest_finish")
     elif event == "32042-06.htm" :
@@ -210,7 +212,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onTalk (self,npc,player):
-    htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+    htmltext = Quest.getNoQuestMsg(player)
     st = player.getQuestState(qn)
     if not st : return htmltext
     state = st.getState()

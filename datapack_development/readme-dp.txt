@@ -20,11 +20,11 @@ L2J-Datapack SVN Build:
 
 Project Website: http://www.l2jdp.com
 Project Forum: http://www.l2jdp.com/forum
-Wiki: http://www.l2jdp.com/trac/wiki
+Wiki: http://trac.l2jdp.com/wiki
 Download: Our wiki contain directives for you to get the latest datapack 
 revision either from nightly builds or via Subversion.
 
-IRC: irc.freenode.net #l2j #l2j-datapack
+IRC: irc.freenode.net #l2j
 
 L2J-Datapack is *NOT* L2J. L2J is *NOT* L2J-Datapack. Comments, questions, 
 suggestions etc. should be directed to the appropriate forums.

@@ -26,10 +26,10 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.SortedWareHouseWithdrawalList;
+import com.l2jserver.gameserver.network.serverpackets.SortedWareHouseWithdrawalList.WarehouseListType;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.network.serverpackets.WareHouseDepositList;
 import com.l2jserver.gameserver.network.serverpackets.WareHouseWithdrawalList;
-import com.l2jserver.gameserver.network.serverpackets.SortedWareHouseWithdrawalList.WarehouseListType;
 
 public class ClanWarehouse implements IBypassHandler
 {
@@ -39,27 +39,27 @@ public class ClanWarehouse implements IBypassHandler
 		"withdrawsortedc",
 		"depositc"
 	};
-
+	
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2WarehouseInstance) && !(target instanceof L2ClanHallManagerInstance))
 			return false;
-
+		
 		if (activeChar.isEnchanting())
 			return false;
-
+		
 		if (activeChar.getClan() == null)
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_USE_CLAN_WAREHOUSE));
 			return false;
 		}
-
+		
 		if (activeChar.getClan().getLevel() == 0)
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessageId.ONLY_LEVEL_1_CLAN_OR_HIGHER_CAN_USE_WAREHOUSE));
 			return false;
 		}
-
+		
 		try
 		{
 			if (command.toLowerCase().startsWith(COMMANDS[0])) // WithdrawC
@@ -78,7 +78,7 @@ public class ClanWarehouse implements IBypassHandler
 			else if (command.toLowerCase().startsWith(COMMANDS[1])) // WithdrawSortedC
 			{
 				final String param[] = command.split(" ");
-
+				
 				if (param.length > 2)
 					showWithdrawWindow(activeChar, WarehouseListType.valueOf(param[1]), SortedWareHouseWithdrawalList.getOrder(param[2]));
 				else if (param.length > 1)
@@ -92,14 +92,14 @@ public class ClanWarehouse implements IBypassHandler
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 				activeChar.setActiveWarehouse(activeChar.getClan().getWarehouse());
 				activeChar.tempInventoryDisable();
-
+				
 				if (Config.DEBUG)
 					_log.fine("Source: L2WarehouseInstance.java; Player: "+activeChar.getName()+"; Command: showDepositWindowClan; Message: Showing items to deposit.");
-
+				
 				activeChar.sendPacket(new WareHouseDepositList(activeChar, WareHouseDepositList.CLAN));
 				return true;
 			}
-
+			
 			return false;
 		}
 		catch (Exception e)
@@ -108,34 +108,34 @@ public class ClanWarehouse implements IBypassHandler
 		}
 		return false;
 	}
-
+	
 	private static final void showWithdrawWindow(L2PcInstance player, WarehouseListType itemtype, byte sortorder)
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
-
+		
 		if ((player.getClanPrivileges() & L2Clan.CP_CL_VIEW_WAREHOUSE) != L2Clan.CP_CL_VIEW_WAREHOUSE)
 		{
 			player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_USE_CLAN_WAREHOUSE));
 			return;
 		}
-
+		
 		player.setActiveWarehouse(player.getClan().getWarehouse());
-
+		
 		if (player.getActiveWarehouse().getSize() == 0)
 		{
 			player.sendPacket(new SystemMessage(SystemMessageId.NO_ITEM_DEPOSITED_IN_WH));
 			return;
 		}
-
+		
 		if (itemtype != null)
 			player.sendPacket(new SortedWareHouseWithdrawalList(player, WareHouseWithdrawalList.CLAN, itemtype, sortorder));
 		else
 			player.sendPacket(new WareHouseWithdrawalList(player, WareHouseWithdrawalList.CLAN));
-
+		
 		if (Config.DEBUG)
 			_log.fine("Source: L2WarehouseInstance.java; Player: "+player.getName()+"; Command: showRetrieveWindowClan; Message: Showing stored items.");
 	}
-
+	
 	public String[] getBypassList()
 	{
 		return COMMANDS;

@@ -669,7 +669,10 @@
 	</item>
 	<item id="14461" name="Icarus Dual Daggers {PvP}">
 		<cond msgId="1518">
-			<player active_skill_id="923" />
+			<and>
+				<player class_id_restriction="93, 101, 108" />
+				<player subclass="false" />
+			</and>
 		</cond>
 		<for>
 			<set val="332" order="0x08" stat="pAtk" />
@@ -844,7 +847,10 @@
 	</item>
 	<item id="14477" name="Vesper Dual Daggers {PvP}">
 		<cond msgId="1518">
-			<player active_skill_id="923" />
+			<and>
+				<player class_id_restriction="93, 101, 108" />
+				<player subclass="false" />
+			</and>
 		</cond>
 		<for>
 			<set val="360" order="0x08" stat="pAtk" />

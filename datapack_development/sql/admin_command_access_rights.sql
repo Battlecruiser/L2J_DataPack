@@ -339,7 +339,8 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_server_gm_only','1'),
 ('admin_server_all','1'),
 ('admin_server_max_player','1'),
-('admin_server_list_clock','1'),
+('admin_server_list_type','1'),
+('admin_server_list_age','1'),
 ('admin_server_login','1'),
 
 -- MAMMON
@@ -489,6 +490,7 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_give_all_skills','1'),
 ('admin_remove_all_skills','1'),
 ('admin_add_clan_skill','1'),
+('admin_setskill','1'),
 
 -- SPAWN
 ('admin_show_spawns','1'),
@@ -570,4 +572,5 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 
 -- voice commands
 ('banchat','7'),
-('unbanchat','7');
+('unbanchat','7'),
+('debug','1');

@@ -29,7 +29,7 @@ public class RefuelAirShip implements ISkillHandler
 	{
 		L2SkillType.REFUEL
 	};
-
+	
 	/**
 	 * 
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
@@ -38,17 +38,17 @@ public class RefuelAirShip implements ISkillHandler
 	{
 		if (!(activeChar instanceof L2PcInstance))
 			return;
-
+		
 		final L2AirShipInstance ship = ((L2PcInstance)activeChar).getAirShip();
 		if (ship == null
 				|| !(ship instanceof L2ControllableAirShipInstance)
 				|| ship.getFuel() >= ship.getMaxFuel())
 			return;
-
-			ship.setFuel(ship.getFuel() + (int)skill.getPower());
-			ship.updateAbnormalEffect(); // broadcast new fuel
+		
+		ship.setFuel(ship.getFuel() + (int)skill.getPower());
+		ship.updateAbnormalEffect(); // broadcast new fuel
 	}
-
+	
 	/**
 	 * 
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()

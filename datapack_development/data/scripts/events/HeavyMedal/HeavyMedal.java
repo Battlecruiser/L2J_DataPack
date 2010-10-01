@@ -22,7 +22,7 @@ public class HeavyMedal extends Quest
 	
 	private final static int[] MEDALS = { 5,10,20,40 };
 	private final static int[] BADGES = { 6399,6400,6401,6402 };
-
+	
 	public HeavyMedal(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
@@ -33,7 +33,7 @@ public class HeavyMedal extends Quest
 		addFirstTalkId(CAT_ROY);
 		addFirstTalkId(CAT_WINNIE);
 	}
-
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -73,11 +73,11 @@ public class HeavyMedal extends Quest
 		}
 		else if (event.equalsIgnoreCase("talk"))
 		{
-			return String.valueOf(npc.getNpcId())+ "-lvl-"+String.valueOf(level)+".htm";			
+			return String.valueOf(npc.getNpcId())+ "-lvl-"+String.valueOf(level)+".htm";
 		}
 		return htmltext;
 	}
-
+	
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
@@ -89,7 +89,7 @@ public class HeavyMedal extends Quest
 		}
 		return npc.getNpcId()+".htm";
 	}
-
+	
 	public int checkLevel(QuestState st)
 	{
 		int _lev = 0;

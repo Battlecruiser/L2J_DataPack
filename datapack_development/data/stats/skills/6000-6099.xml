@@ -180,7 +180,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="3500" />
 	</skill>
-	<skill id="6035" levels="1" name="Transform Red Team">
+	<skill id="6035" levels="1" name="Red Team Transformation">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -192,7 +192,7 @@
 			<effect name="Transformation" time="3600" val="0" />
 		</for>
 	</skill>
-	<skill id="6036" levels="1" name="Transform Blue Team">
+	<skill id="6036" levels="1" name="Blue Team Transformation">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />

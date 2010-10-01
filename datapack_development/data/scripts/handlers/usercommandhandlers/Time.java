@@ -29,9 +29,9 @@ public class Time implements IUserCommandHandler
 	{
 		77
 	};
-
+	
 	private static final SimpleDateFormat fmt = new SimpleDateFormat("H:mm.");
-
+	
 	/**
 	 * 
 	 * @see com.l2jserver.gameserver.handler.IUserCommandHandler#useUserCommand(int, com.l2jserver.gameserver.model.actor.instance.L2PcInstance)

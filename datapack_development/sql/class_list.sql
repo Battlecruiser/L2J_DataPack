@@ -1,8 +1,8 @@
 DROP TABLE IF EXISTS `class_list`;
 CREATE TABLE `class_list` (
-  `class_name` varchar(20) NOT NULL default '',
-  `id` int(10) unsigned NOT NULL default '0',
-  `parent_id` int(11) NOT NULL default '0',
+  `class_name` varchar(20) NOT NULL DEFAULT '',
+  `id` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `parent_id` smallint(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 );
 
@@ -102,14 +102,11 @@ INSERT INTO `class_list` VALUES
 ('K_Male_Doombringer', 131, 127),
 ('K_Male_Soulbreaker', 128, 125),
 ('K_Male_Soulhound', 132, 128),
-('K_Male_Inspector', 135, 125),
-('K_Male_Judicator', 136, 135),
 ('K_Female_Soldier', 124, -1),
 ('K_Female_Warder', 126, 124),
 ('K_Female_Soulbreaker', 129, 126),
 ('K_Female_Soulhound', 133, 129),
 ('K_Female_Arbalester', 130, 126),
-('K_Female_Trickster', 134, 130);
--- Temporarily disabled coz of duplicated classes >.<
--- ('K_Female_Inspector', 135, 126),
--- ('K_Female_Judicator', 136, 135);
+('K_Female_Trickster', 134, 130),
+('K_Inspector', 135, 126),
+('K_Judicator', 136, 135);

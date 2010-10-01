@@ -36,10 +36,10 @@ class Quest (JQuest) :
 		JQuest.__init__(self, id, name, descr)
 		self.questItemIds = [SGOODS]
 		
-        def onAdvEvent (self,event,npc, player) :
-                htmltext = event
-                st = player.getQuestState(qn)
-                if not st : return
+	def onAdvEvent (self,event,npc, player) :
+		htmltext = event
+		st = player.getQuestState(qn)
+		if not st : return
 		id = st.getState()
 		cond = st.getInt("cond")
 		if st.getPlayer().getClassId().getId() not in [0x35, 0x36, 0x37, 0x38, 0x39, 0x75, 0x76] :
@@ -71,11 +71,11 @@ class Quest (JQuest) :
 			st.playSound("ItemSound.quest_finish")
 			st.exitQuest(False)
 		else :
-			htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+			htmltext = Quest.getNoQuestMsg(player)
 		return htmltext
 		
 	def onTalk (self, npc, player) :
-		htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+		htmltext = Quest.getNoQuestMsg(player)
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 		

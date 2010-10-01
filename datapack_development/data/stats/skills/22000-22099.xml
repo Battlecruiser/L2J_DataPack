@@ -758,7 +758,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="berserk">
+			<effect name="Buff" time="3600" val="0" stackOrder="3" stackType="berserk">
 				<mul order="0x30" stat="pDef" val="0.92" />
 				<mul order="0x30" stat="mDef" val="0.84" />
 				<sub order="0x40" stat="rEvas" val="4" />

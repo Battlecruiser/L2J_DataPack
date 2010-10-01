@@ -36,19 +36,19 @@ import com.l2jserver.gameserver.skills.SkillHolder;
  * @author  l3x
  */
 public class Seed implements IItemHandler
-{	
+{
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.L2ItemInstance)
+	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.L2ItemInstance, boolean)
 	 */
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!(playable instanceof L2PcInstance))
 			return;
-
+		
 		if (CastleManorManager.getInstance().isDisabled())
 			return;
-
+		
 		final L2Object tgt = playable.getTarget();
 		if (!(tgt instanceof L2Npc))
 		{
@@ -62,21 +62,21 @@ public class Seed implements IItemHandler
 			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-
-		final L2MonsterInstance target = (L2MonsterInstance)tgt;		
+		
+		final L2MonsterInstance target = (L2MonsterInstance)tgt;
 		if (target.isDead())
 		{
 			playable.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
 			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-
+		
 		if (target.isSeeded())
 		{
 			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-
+		
 		final int seedId = item.getItemId();
 		if (areaValid(seedId, MapRegionTable.getInstance().getAreaCastle(playable)))
 		{

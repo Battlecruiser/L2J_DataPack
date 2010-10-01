@@ -46,7 +46,7 @@ public class L2DoorInstanceActionShift implements IActionHandler
 				su  = new StaticObject((L2DoorInstance)target, false);
 			
 			activeChar.sendPacket(su);
-
+			
 			NpcHtmlMessage html = new NpcHtmlMessage(0);
 			html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/doorinfo.htm");
 			html.replace("%class%", target.getClass().getSimpleName());
@@ -54,11 +54,11 @@ public class L2DoorInstanceActionShift implements IActionHandler
 			html.replace("%hpmax%", String.valueOf(((L2Character)target).getMaxHp()));
 			html.replace("%objid%", String.valueOf(target.getObjectId()));
 			html.replace("%doorid%",  String.valueOf(((L2DoorInstance)target).getDoorId()));
-
+			
 			html.replace("%minx%", String.valueOf(((L2DoorInstance)target).getXMin()));
 			html.replace("%miny%", String.valueOf(((L2DoorInstance)target).getYMin()));
 			html.replace("%minz%", String.valueOf(((L2DoorInstance)target).getZMin()));
-
+			
 			html.replace("%maxx%", String.valueOf(((L2DoorInstance)target).getXMax()));
 			html.replace("%maxy%", String.valueOf(((L2DoorInstance)target).getYMax()));
 			html.replace("%maxz%", String.valueOf(((L2DoorInstance)target).getZMax()));
@@ -68,7 +68,7 @@ public class L2DoorInstanceActionShift implements IActionHandler
 		}
 		return true;
 	}
-
+	
 	public InstanceType getInstanceType()
 	{
 		return InstanceType.L2DoorInstance;

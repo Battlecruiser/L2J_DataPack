@@ -11,22 +11,22 @@ public class VanguardShilienKnight extends L2Transformation
 		// id
 		super(315);
 	}
-
+	
 	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 315 || getPlayer().isCursedWeaponEquipped())
 			return;
-
+		
 		transformedSkills();
 	}
-
+	
 	public void transformedSkills()
 	{
 		int lvl = 1;
 		if (getPlayer().getLevel() > 42)
 			lvl = (getPlayer().getLevel() - 42);
-
+		
 		// Dual Weapon Mastery
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(144, lvl), false);
 		// Blade Hurricane
@@ -42,13 +42,13 @@ public class VanguardShilienKnight extends L2Transformation
 		// Set allowed skills
 		getPlayer().setTransformAllowedSkills(new int[]{18,22,28,33,144,278,279,289,401,815,817,838,956,958});
 	}
-
+	
 	@Override
 	public void onUntransform()
 	{
 		removeSkills();
 	}
-
+	
 	public void removeSkills()
 	{
 		int lvl = 1;
@@ -67,10 +67,10 @@ public class VanguardShilienKnight extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(958, lvl), false);
 		// Switch Stance
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(838, 1), false);
-
+		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
-
+	
 	public static void main(String[] args)
 	{
 		TransformationManager.getInstance().registerTransformation(new VanguardShilienKnight());

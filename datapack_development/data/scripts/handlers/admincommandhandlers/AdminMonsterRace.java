@@ -65,21 +65,21 @@ public class AdminMonsterRace implements IAdminCommandHandler
 		 *
 		 * 8003 to 8027
 		 */
-
+		
 		int[][] codes =
 		{
-			{
-				-1, 0
-			},
-			{
-				0, 15322
-			},
-			{
-				13765, -1
-			},
-			{
-				-1, 0
-			}
+				{
+					-1, 0
+				},
+				{
+					0, 15322
+				},
+				{
+					13765, -1
+				},
+				{
+					-1, 0
+				}
 		};
 		MonsterRace race = MonsterRace.getInstance();
 		
@@ -141,7 +141,7 @@ public class AdminMonsterRace implements IAdminCommandHandler
 			 }
 			 _log.info("Total speed for "+(i+1)+" = "+speed[i]);
 			 }*/
-
+			
 			MonRaceInfo spk = new MonRaceInfo(codes[2][0], codes[2][1], MonsterRace.getInstance().getMonsters(), MonsterRace.getInstance().getSpeeds());
 			activeChar.sendPacket(spk);
 			activeChar.broadcastPacket(spk);

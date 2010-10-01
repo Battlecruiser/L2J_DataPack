@@ -14,17 +14,17 @@
  */
 package ai.group_template;
 
+import gnu.trove.TIntHashSet;
+import gnu.trove.TIntObjectHashMap;
+import javolution.util.FastList;
+import javolution.util.FastMap;
+
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.util.Rnd;
-
-import gnu.trove.TIntHashSet;
-import gnu.trove.TIntObjectHashMap;
-import javolution.util.FastList;
-import javolution.util.FastMap;
 
 public class SummonMinions extends L2AttackableAIScript
 {
@@ -34,34 +34,35 @@ public class SummonMinions extends L2AttackableAIScript
 	private static final TIntObjectHashMap<int[]> MINIONS = new TIntObjectHashMap<int[]>();
 	
 	static
-    {
-            MINIONS.put(20767,new int[]{20768,20769,20770}); //Timak Orc Troop
-            //MINIONS.put(22030,new Integer[]{22045,22047,22048}); //Ragna Orc Shaman
-            //MINIONS.put(22032,new Integer[]{22036}); //Ragna Orc Warrior - summons shaman but not 22030 ><
-            //MINIONS.put(22038,new Integer[]{22037}); //Ragna Orc Hero
-            MINIONS.put(21524,new int[]{21525}); //Blade of Splendor
-            MINIONS.put(21531,new int[]{21658}); //Punishment of Splendor
-            MINIONS.put(21539,new int[]{21540}); //Wailing of Splendor
-            MINIONS.put(22257,new int[]{18364,18364}); //Island Guardian
-            MINIONS.put(22258,new int[]{18364,18364}); //White Sand Mirage
-            MINIONS.put(22259,new int[]{18364,18364}); //Muddy Coral
-            MINIONS.put(22260,new int[]{18364,18364}); //Kleopora
-            MINIONS.put(22261,new int[]{18365,18365}); //Seychelles
-            MINIONS.put(22262,new int[]{18365,18365}); //Naiad
-            MINIONS.put(22263,new int[]{18365,18365}); //Sonneratia
-            MINIONS.put(22264,new int[]{18366,18366}); //Castalia
-            MINIONS.put(22265,new int[]{18366,18366}); //Chrysocolla
-            MINIONS.put(22266,new int[]{18366,18366}); //Pythia
-    }
+	{
+		MINIONS.put(20767,new int[]{20768,20769,20770}); //Timak Orc Troop
+		//MINIONS.put(22030,new Integer[]{22045,22047,22048}); //Ragna Orc Shaman
+		//MINIONS.put(22032,new Integer[]{22036}); //Ragna Orc Warrior - summons shaman but not 22030 ><
+		//MINIONS.put(22038,new Integer[]{22037}); //Ragna Orc Hero
+		MINIONS.put(21524,new int[]{21525}); //Blade of Splendor
+		MINIONS.put(21531,new int[]{21658}); //Punishment of Splendor
+		MINIONS.put(21539,new int[]{21540}); //Wailing of Splendor
+		MINIONS.put(22257,new int[]{18364,18364}); //Island Guardian
+		MINIONS.put(22258,new int[]{18364,18364}); //White Sand Mirage
+		MINIONS.put(22259,new int[]{18364,18364}); //Muddy Coral
+		MINIONS.put(22260,new int[]{18364,18364}); //Kleopora
+		MINIONS.put(22261,new int[]{18365,18365}); //Seychelles
+		MINIONS.put(22262,new int[]{18365,18365}); //Naiad
+		MINIONS.put(22263,new int[]{18365,18365}); //Sonneratia
+		MINIONS.put(22264,new int[]{18366,18366}); //Castalia
+		MINIONS.put(22265,new int[]{18366,18366}); //Chrysocolla
+		MINIONS.put(22266,new int[]{18366,18366}); //Pythia
+		MINIONS.put(22774,new int[]{22768,22768}); // Tanta Lizardman Summoner
+	}
 	
 	public SummonMinions(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
 		int[] temp =
 		{
-			20767,  21524, 21531, 21539, 22257, 22258, 22259, 22260, 22261, 22262, 22263, 22264, 22265, 22266
+				20767,  21524, 21531, 21539, 22257, 22258, 22259, 22260, 22261, 22262, 22263, 22264, 22265, 22266, 22774
 		};
-		this.registerMobs(temp);
+		this.registerMobs(temp, QuestEventType.ON_ATTACK, QuestEventType.ON_KILL);
 	}
 	
 	@Override

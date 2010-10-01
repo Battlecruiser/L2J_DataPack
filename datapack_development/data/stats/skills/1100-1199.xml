@@ -194,16 +194,14 @@
 		<table name="#mpInitialConsume"> 8 9 11 12 14 16 18 19 21 22 22 23 24 25 26 26 27 28 </table>
 		<table name="#mpConsume"> 31 35 42 48 56 62 69 75 82 85 88 92 95 98 101 104 106 109 </table>
 		<table name="#reuseDelay"> 5400000 5400000 5400000 5400000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 </table>
-		<table name="#itemConsumeCount"> 3 4 1 3 5 3 4 4 5 6 6 7 5 6 7 9 7 8 </table>
-		<table name="#itemConsumeCountOT"> 0 0 1 1 1 2 2 3 3 3 4 4 5 5 5 5 6 6 </table>
-		<table name="#itemConsumeSteps"> 0 0 4 4 14 14 14 14 14 14 14 14 14 14 14 14 14 14 </table>
+		<table name="#itemConsumeCount"> 1 1 2 2 7 1 1 4 5 6 11 12 2 3 4 4 9 10 </table>
+		<table name="#itemConsumeCountOT"> 0 0 0 0 0 1 1 1 1 1 1 1 2 2 2 2 2 2  </table>
+		<table name="#itemConsumeSteps"> 0 0 0 0 0 14 14 14 14 14 14 14 14 14 14 14 14 14 </table>
 		<table name="#npcIds"> 14111 14116 14112 14117 14113 14118 14114 14119 14115 14120 14121 14122 14123 14124 14125 14126 14127 14128 </table>
 		<table name="#enchantNpcId"> 14129 14130 14131 14132 14133 14134 14135 14136 14137 14138 14139 14140 14141 14142 14143 14144 14145 14146 14147 14148 14149 14150 14151 14152 14153 14154 14155 14156 14157 14158 </table>
-		<table name="#expPenalty"> 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.29 0.28 0.27 0.26 0.25 0.24 0.23 0.22 0.21 0.2 0.18 </table>
-		<table name="#enchantExpPenalty"> 0.16 0.14 0.12 0.1 0.08 0.06 0.04 0.02 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </table>
-		<set name="itemConsumeId" val="1458" />
+		<set name="itemConsumeId" val="3031" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeIdOT" val="1458" />
+		<set name="itemConsumeIdOT" val="3031" />
 		<set name="itemConsumeCountOT" val="#itemConsumeCountOT" />
 		<set name="itemConsumeSteps" val="#itemConsumeSteps" />
 		<set name="summonTotalLifeTime" val="3600000" />
@@ -219,9 +217,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<!-- Summon-specific -->
 		<set name="npcId" val="#npcIds" />
-		<set name="expPenalty" val="#expPenalty" /> <!-- percent of earned Exp will be consumed." -->
 		<enchant1 name="npcId" val="#enchantNpcId" />
-		<enchant1 name="expPenalty" val="#enchantExpPenalty" />
 	</skill>
 	<skill id="1126" levels="34" name="Servitor Recharge" enchantGroup1="2" enchantGroup2="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -256,8 +252,8 @@
 		<table name="#ench2mpInitialConsume"> 23 23 23 23 22 22 22 22 22 21 21 21 21 20 20 20 20 20 19 19 19 19 19 18 18 18 18 17 17 17 </table>
 		<table name="#mpInitialConsume"> 5 6 6 7 7 8 9 9 9 10 10 11 12 12 13 13 13 14 15 15 16 16 16 17 18 18 18 19 19 20 20 20 20 21 21 21 22 22 23 23 23 23 24 24 24 </table>
 		<table name="#mpConsume"> 19 21 24 26 28 29 33 35 35 38 40 41 46 48 49 51 52 54 57 59 61 64 64 66 69 71 72 74 76 77 78 78 80 81 83 84 86 87 89 90 91 92 93 95 96 </table>
-		<table name="#power"> 145 162 181 212 222 234 269 281 294 333 347 361 404 419 434 465 481 496 528 544 561 593 609 626 658 674 690 706 722 737 753 768 783 798 812 826 840 854 867 879 892 904 915 926 936 </table>
-		<table name="#ench1Power"> 942 947 952 957 962 968 973 978 983 989 994 999 1004 1010 1015 1020 1025 1031 1036 1041 1046 1051 1057 1062 1067 1072 1078 1083 1088 1093 </table>
+		<table name="#power"> 169 189 211 247 259 272 313 328 343 389 405 421 472 489 507 542 561 579 616 635 654 692 711 730 768 786 805 824 842 860 878 896 913 931 947 964 980 996 1011 1026 1040 1054 1067 1080 1092 </table>
+		<table name="#ench1Power"> 1096 1110 1104 1108 1112 1116 1120 1124 1128 1132 1136 1140 1144 1148 1153 1157 1161 1165 1169 1173 1177 1181 1185 1189 1193 1197 1201 1205 1209 1214 </table>
 		<table name="#aggroPoints"> 121 135 151 176 185 195 224 234 245 278 289 301 337 349 362 388 401 414 440 454 467 494 508 521 548 562 575 588 602 615 627 640 653 665 677 689 700 711 722 733 743 753 763 772 780 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -282,17 +278,15 @@
 		<table name="#mpInitialConsume"> 8 9 11 12 14 16 18 19 21 22 22 23 24 25 26 26 27 28 </table>
 		<table name="#mpConsume"> 31 35 42 48 56 62 69 75 82 85 88 92 95 98 101 104 106 109 </table>
 		<table name="#reuseDelay"> 5400000 5400000 5400000 5400000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 </table>
-		<table name="#itemConsumeCount"> 3 4 1 3 5 3 4 4 5 6 6 7 5 6 7 9 7 8 </table>
-		<table name="#itemConsumeCountOT"> 0 0 1 1 1 2 2 3 3 3 4 4 5 5 5 5 6 6 </table>
-		<table name="#itemConsumeSteps"> 0 0 4 4 14 14 14 14 14 14 14 14 14 14 14 14 14 14 </table>
+		<table name="#itemConsumeCount"> 1 1 2 2 7 1 1 4 5 6 11 12 2 3 4 4 9 10 </table>
+		<table name="#itemConsumeCountOT"> 0 0 0 0 0 1 1 1 1 1 1 1 2 2 2 2 2 2 </table>
+		<table name="#itemConsumeSteps"> 0 0 0 0 0 14 14 14 14 14 14 14 14 14 14 14 14 14 </table>
 		<table name="#npcIds"> 14479 14484 14480 14485 14481 14486 14482 14487 14483 14488 14489 14490 14491 14492 14493 14494 14495 14496 </table>
-		<table name="#expPenalty"> 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.29 0.28 0.27 0.26 0.25 0.24 0.23 0.22 0.21 0.2 0.18 </table>
-		<table name="#ench1expPenalty"> 0.16 0.14 0.12 0.1 0.08 0.06 0.04 0.02 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="itemConsumeId" val="1458" />
+		<set name="itemConsumeId" val="3031" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeIdOT" val="1458" />
+		<set name="itemConsumeIdOT" val="3031" />
 		<set name="itemConsumeCountOT" val="#itemConsumeCountOT" />
 		<set name="itemConsumeSteps" val="#itemConsumeSteps" />
 		<set name="summonTotalLifeTime" val="3600000" />
@@ -306,25 +300,23 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<!-- Summon-specific -->
 		<set name="npcId" val="#npcIds" />
-		<set name="expPenalty" val="#expPenalty" /> <!-- percent of acquired Exp will be consumed. -->
 		<enchant1 name="npcId" val="#enchantNpcId" />
-		<enchant1 name="expPenalty" val="#ench1expPenalty" />
 	</skill>
 	<skill id="1129" levels="7" name="Summon Reanimated Man" enchantGroup1="1">
 		<table name="#enchantNpcId"> 14008 14009 14010 14011 14012 14013 14014 14015 14016 14017 14018 14019 14020 14021 14022 14023 14024 14025 14026 14027 14028 14029 14030 14031 14032 14033 14034 14035 14036 14037 </table>
 		<table name="#mpInitialConsume"> 16 19 22 24 26 27 28 </table>
 		<table name="#mpConsume"> 62 75 88 95 101 106 109 </table>
-		<table name="#itemConsumeCount"> 2 3 3 2 4 2 4 </table>
-		<table name="#itemConsumeCountOT"> 1 1 2 3 3 4 4 </table>
+		<table name="#itemConsumeCount"> 11 13 6 9 9 6 9 </table>
+		<table name="#itemConsumeCountOT"> 0 0 1 1 1 2 2 </table>
+		<table name="#itemConsumeSteps"> 0 0 14 14 14 14 14 </table>
 		<table name="#npcIds"> 14001 14002 14003 14004 14005 14006 14007 </table>
-		<table name="#ench1expPenalty"> 0.14 0.13 0.12 0.11 0.1 0.09 0.08 0.07 0.06 0.05 0.04 0.03 0.02 0.01 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="itemConsumeId" val="1459" />
+		<set name="itemConsumeId" val="3031" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeIdOT" val="1459" />
+		<set name="itemConsumeIdOT" val="3031" />
 		<set name="itemConsumeCountOT" val="#itemConsumeCountOT" />
-		<set name="itemConsumeSteps" val="4" />
+		<set name="itemConsumeSteps" val="#itemConsumeSteps" />
 		<set name="summonTotalLifeTime" val="1200000" />
 		<set name="summonTimeLostIdle" val="500" />
 		<set name="summonTimeLostActive" val="1000" />
@@ -338,9 +330,7 @@
 		<set name="effectRange" val="400" />
 		<!-- Summon-specific -->
 		<set name="npcId" val="#npcIds" />
-		<set name="expPenalty" val="0.15" /> <!-- 15 percent of earned Exp will be consumed -->
 		<enchant1 name="npcId" val="#enchantNpcId" />
-		<enchant1 name="expPenalty" val="#ench1expPenalty" />
 	</skill>
 	<skill id="1139" levels="2" name="Servitor Magic Shield" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
@@ -613,7 +603,8 @@
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#ench2mpConsume"> 26 26 26 26 26 26 26 25 25 25 25 24 24 24 24 22 22 22 22 22 22 22 21 21 21 21 20 20 20 20 </table>
 		<table name="#ench2mpInitialConsume"> 7 7 7 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 5 5 5 5 5 5 5 5 5 5 5 </table>
-		<table name="#drain"> 260 299 347 384 426 467 509 541 570 592 625 647 673 701 729 758 </table>
+		<table name="#ench2Bravery"> 29 38 48 57 66 76 85 94 104 113 122 132 141 150 160 169 178 188 197 206 216 225 234 244 253 262 272 281 290 300 </table>
+		<table name="#drain"> 260 299 347 384 426 467 509 529 550 571 590 609 628 645 662 678 </table>
 		<table name="#mpInitialConsume"> 3 3 4 4 5 5 6 6 6 6 6 7 7 7 7 7 </table>
 		<table name="#mpConsume"> 11 12 14 16 18 19 21 22 22 23 24 25 26 26 27 28 </table>
 		<table name="#magicLvl"> 30 35 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
@@ -638,6 +629,9 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
+		<enchant2for>
+			<effect self="1" count="1" name="CombatPointHealOverTime" noicon="1" val="#ench2Bravery" />
+		</enchant2for>
 	</skill>
 	<skill id="1154" levels="6" name="Summon Corrupted Man" enchantGroup1="1">
 		<table name="#enchantNpcId"> 14044 14045 14046 14047 14048 14049 14050 14051 14052 14053 14054 14055 14056 14057 14058 14059 14060 14061 14062 14063 14064 14065 14066 14067 14068 14069 14070 14071 14072 14073 </table>
@@ -647,8 +641,8 @@
 		<table name="#npcIds"> 14038 14039 14040 14041 14042 14043 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="itemConsumeCount" val="3" />
-		<set name="itemConsumeId" val="1458" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="3031" />
 		<set name="itemConsumeSteps" val="0" />
 		<set name="summonTotalLifeTime" val="1200000" />
 		<set name="summonTimeLostIdle" val="500" />
@@ -713,11 +707,12 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 	</skill>
-	<skill id="1157" levels="5" name="Body To Mind" enchantGroup1="1" enchantGroup2="1">
+	<skill id="1157" levels="5" name="Body To Mind" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#hpConsume"> 131 209 280 318 366 </table>
 		<table name="#power"> 22 35 47 53 61 </table>
 		<table name="#ench1power"> 70 70 70 70 71 71 71 71 71 71 72 72 72 72 72 72 72 73 73 73 73 73 73 74 74 74 74 74 74 75 </table>
 		<table name="#ench2hpConsume"> 359 353 347 341 335 328 322 316 310 304 297 291 285 279 273 266 260 254 248 242 235 229 223 217 211 204 198 192 186 180 </table>
+		<table name="#ench3Bravery"> 29 38 48 57 66 76 85 94 104 113 122 132 141 150 160 169 178 188 197 206 216 225 234 244 253 262 272 281 290 300 </table>
 		<table name="#aggroPoints"> 243 379 495 549 611 </table>
 		<set name="hpConsume" val="#hpConsume" />
 		<set name="power" val="#power" />
@@ -730,6 +725,9 @@
 		<set name="aggroPoints" val="#aggroPoints" />
 		<enchant1 name="power" val="#ench1power" />
 		<enchant2 name="hpConsume" val="#ench2hpConsume" />
+		<enchant3for>
+			<effect count="1" name="CombatPointHealOverTime" noicon="1" val="#ench3Bravery" />
+		</enchant3for>
 	</skill>
 	<skill id="1159" levels="22" name="Curse Death Link" enchantGroup1="2" enchantGroup2="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>

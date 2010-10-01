@@ -39,12 +39,12 @@ import com.l2jserver.util.Rnd;
 public class Harvest implements ISkillHandler
 {
 	private static Logger _log = Logger.getLogger(Harvest.class.getName());
-
+	
 	private static final L2SkillType[] SKILL_IDS =
 	{
 		L2SkillType.HARVEST
 	};
-
+	
 	/**
 	 * 
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
@@ -53,36 +53,36 @@ public class Harvest implements ISkillHandler
 	{
 		if (!(activeChar instanceof L2PcInstance))
 			return;
-
+		
 		final L2Object[] targetList = skill.getTargetList(activeChar);
-
+		
 		if (targetList == null || targetList.length == 0)
 			return;
-
+		
 		if (Config.DEBUG)
 			_log.info("Casting harvest");
-
+		
 		L2MonsterInstance target;
 		InventoryUpdate iu = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
-
+		
 		for (L2Object tgt: targetList)
 		{
 			if (!(tgt instanceof L2MonsterInstance))
 				continue;
-
+			
 			target = (L2MonsterInstance) tgt;
-
+			
 			if (activeChar.getObjectId() != target.getSeederId())
 			{
 				SystemMessage sm = new SystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_HARVEST);
 				activeChar.sendPacket(sm);
 				continue;
 			}
-
+			
 			boolean send = false;
 			int total = 0;
 			int cropId = 0;
-
+			
 			// TODO: check items and amount of items player harvest
 			if (target.isSeeded())
 			{
@@ -119,7 +119,7 @@ public class Harvest implements ISkillHandler
 								smsg.addItemName(cropId);
 								activeChar.getParty().broadcastToPartyMembers((L2PcInstance)activeChar, smsg);
 							}
-
+							
 							if (iu != null)
 								activeChar.sendPacket(iu);
 							else
@@ -145,23 +145,23 @@ public class Harvest implements ISkillHandler
 		int basicSuccess = 100;
 		final int levelPlayer = activeChar.getLevel();
 		final int levelTarget = target.getLevel();
-
+		
 		int diff = (levelPlayer - levelTarget);
 		if (diff < 0)
 			diff = -diff;
-
+		
 		// apply penalty, target <=> player levels
 		// 5% penalty for each level
 		if (diff > 5)
 			basicSuccess -= (diff - 5) * 5;
-
+		
 		// success rate cant be less than 1%
 		if (basicSuccess < 1)
 			basicSuccess = 1;
-
+		
 		return Rnd.nextInt(99) < basicSuccess;
 	}
-
+	
 	/**
 	 * 
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()

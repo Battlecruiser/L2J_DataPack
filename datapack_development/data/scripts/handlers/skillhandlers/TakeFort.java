@@ -70,7 +70,7 @@ public class TakeFort implements ISkillHandler
 		return SKILL_IDS;
 	}
 	
-
+	
 	public static void main(String[] args)
 	{
 		new TakeFort();

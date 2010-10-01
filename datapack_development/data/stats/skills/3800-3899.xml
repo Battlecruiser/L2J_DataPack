@@ -67,7 +67,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="stunVuln" val="0.98" />
+			<sub order="0x40" stat="stunVuln" val="2" />
 		</for>
 	</skill>
 	<skill id="3809" levels="1" name="Adamantite Ring">
@@ -91,7 +91,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="stunVuln" val="0.96" />
+			<sub order="0x40" stat="stunVuln" val="4" />
 		</for>
 	</skill>
 	<skill id="3812" levels="1" name="Ring of Black Ore">
@@ -147,7 +147,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="poisonVuln" val="0.9429" />
+			<sub order="0x40" stat="poisonVuln" val="6" />
 		</for>
 	</skill>
 	<skill id="3819" levels="1" name="Tateossian Necklace">
@@ -155,7 +155,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="bleedVuln" val="0.9239" />
+			<sub order="0x40" stat="bleedVuln" val="8" />
 		</for>
 	</skill>
 	<skill id="3820" levels="1" name="Tateossian Ring">
@@ -195,7 +195,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="sleepVuln" val="0.95" />
+			<sub order="0x40" stat="sleepVuln" val="5" />
 		</for>
 	</skill>
 	<skill id="3825" levels="3" name="Sword of Might">
@@ -224,7 +224,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="100" /> <!-- Guess -->
+			<add order="0x40" stat="cAtkAdd" val="54" />
 		</for>
 	</skill>
 	<skill id="3828" levels="1" name="Sword of Critical Chance">
@@ -343,9 +343,12 @@
 		<set name="triggeredLevel" val="1" />
 	</skill>
 	<skill id="3840" levels="2" name="Two-handed Sword of Haste">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="pAtkSpd" val="19" />
+		</for>
 	</skill>
 	<skill id="3841" levels="1" name="Two-handed Sword of Guidance">
 		<!-- Increases Accuracy of Masterwork Two-handed Sword Weapon. -->

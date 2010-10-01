@@ -71,7 +71,7 @@ class Quest (JQuest) :
  def onTalk (self,npc,player): 
 
    npcId = npc.getNpcId() 
-   htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>" 
+   htmltext = Quest.getNoQuestMsg(player) 
    st = player.getQuestState(qn) 
    if not st : return htmltext 
 

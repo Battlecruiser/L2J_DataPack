@@ -18,6 +18,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.util.Util;
 
 public class HeroWeapon extends Quest
 {
@@ -25,12 +26,12 @@ public class HeroWeapon extends Quest
 	{
 		31690,31769,31770,31771,31772
 	};
-
+	
 	private final static int[] weaponIds =
 	{
 		6611,6612,6613,6614,6615,6616,6617,6618,6619,6620,6621,9388,9389,9390
 	};
-
+	
 	public HeroWeapon(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
@@ -40,20 +41,20 @@ public class HeroWeapon extends Quest
 			addTalkId(i);
 		}
 	}
-
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		QuestState st = player.getQuestState(getName());
-
+		
 		int weaponId = Integer.valueOf(event);
-		if (contains(weaponIds, weaponId))
+		if (Util.contains(weaponIds, weaponId))
 			st.giveItems(weaponId, 1);
-
+		
 		st.exitQuest(true);
 		return null;
 	}
-
+	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
@@ -61,7 +62,7 @@ public class HeroWeapon extends Quest
 		QuestState st = player.getQuestState(getName());
 		if (st == null)
 			newQuestState(player);
-
+		
 		if (player.isHero())
 		{
 			if (hasHeroWeapon(player))
@@ -77,10 +78,10 @@ public class HeroWeapon extends Quest
 			htmltext = "no_hero.htm";
 			st.exitQuest(true);
 		}
-
+		
 		return htmltext;
 	}
-
+	
 	private boolean hasHeroWeapon(L2PcInstance player)
 	{
 		for (int i : weaponIds)
@@ -88,21 +89,10 @@ public class HeroWeapon extends Quest
 			if (player.getInventory().getItemByItemId(i) != null)
 				return true;
 		}
-
+		
 		return false;
 	}
-
-	private static boolean contains(int[] array, int obj)
-	{
-		for (int i = 0; i < array.length; i++)
-		{
-			if (array[i] == obj)
-				return true;
-		}
-
-		return false;
-	}
-
+	
 	public static void main(String[] args)
 	{
 		new HeroWeapon(-1, "HeroWeapon", "custom");

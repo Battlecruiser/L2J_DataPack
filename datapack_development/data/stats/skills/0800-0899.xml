@@ -5,6 +5,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<add order="0x40" stat="mDef" val="#mDef" />
 		</for>
@@ -14,6 +15,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="isMagic" val="true" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<add order="0x40" stat="maxCp" val="738" />
 		</for>
@@ -23,6 +25,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="isMagic" val="true" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<mul order="0x30" stat="magicDamVul" val="0.95" />
 		</for>
@@ -32,6 +35,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="isMagic" val="true" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<add order="0x40" stat="darkRes" val="5" />
 			<add order="0x40" stat="holyRes" val="5" />
@@ -41,6 +45,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<mul order="0x30" stat="critVuln" val="0.97" />
 		</for>
@@ -383,9 +388,9 @@
 				<mul order="0x30" stat="pAtk" val="1.05">
 					<using kind="Blunt,Big Blunt" />
 				</mul>
-				<mul order="0x30" stat="stunProf" val="1.08">
+				<add order="0x40" stat="stunProf" val="8">
 					<using kind="Blunt,Big Blunt" />
-				</mul>
+				</add>
 			</effect>
 		</for>
 	</skill>
@@ -948,91 +953,201 @@
 			<effect name="Transformation" time="3600" val="0" /> <!-- Guess -->
 		</for>
 	</skill>
-	<skill id="869" levels="1" name="Mercenary Power Strike">
+	<skill id="869" levels="9" name="Mercenary Power Strike">
+		<!--
+			Delivers a powerful blow that strikes the target with 2272 Power added to P. Atk.
+			Delivers a powerful blow that strikes the target with 3252 Power added to P. Atk.
+			Delivers a powerful blow that strikes the target with 4224 Power added to P. Atk.
+			Delivers a powerful blow that strikes the target with 4312 Power added to P. Atk.
+			Delivers a powerful blow that strikes the target with 4399 Power added to P. Atk.
+			Delivers a powerful blow that strikes the target with 4482 Power added to P. Atk.
+			Delivers a powerful blow that strikes the target with 4563 Power added to P. Atk.
+			Delivers a powerful blow that strikes the target with 4640 Power added to P. Atk.
+			Delivers a powerful blow that strikes the target with 4715 Power added to P. Atk.
+		-->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="1080" />
 	</skill>
-	<skill id="870" levels="1" name="Royal Guard Captain Power Strike">
+	<skill id="870" levels="8" name="Knight Mercenary Power Strike">
+		<!--
+			Delivers a strong, crushing attack on your opponent with 3252 Power added to P. Atk.
+			Delivers a strong, crushing attack on your opponent with 4224 Power added to P. Atk.
+			Delivers a strong, crushing attack on your opponent with 4312 Power added to P. Atk.
+			Delivers a strong, crushing attack on your opponent with 4399 Power added to P. Atk.
+			Delivers a strong, crushing attack on your opponent with 4482 Power added to P. Atk.
+			Delivers a strong, crushing attack on your opponent with 4563 Power added to P. Atk.
+			Delivers a strong, crushing attack on your opponent with 4640 Power added to P. Atk.
+			Delivers a strong, crushing attack on your opponent with 4715 Power added to P. Atk.
+		-->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="1080" />
 	</skill>
-	<skill id="871" levels="1" name="Royal Guard Captain Might">
+	<skill id="871" levels="1" name="Might">
+		<!-- Increases attack power by 15% for 20 minutes -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="4000" />
 	</skill>
-	<skill id="872" levels="1" name="Archer Captain Power Shot">
+	<skill id="872" levels="8" name="Archer Mercenary Power Shot">
+		<!--
+			Uses a bow to attack a distant opponent with 4336 Power added to P. Atk. Over-hit is possible.
+			Uses a bow to attack a distant opponent with 5632 Power added to P. Atk. Over-hit is possible.
+			Uses a bow to attack a distant opponent with 5750 Power added to P. Atk. Over-hit is possible.
+			Uses a bow to attack a distant opponent with 5865 Power added to P. Atk. Over-hit is possible.
+			Uses a bow to attack a distant opponent with 5976 Power added to P. Atk. Over-hit is possible.
+			Uses a bow to attack a distant opponent with 6084 Power added to P. Atk. Over-hit is possible.
+			Uses a bow to attack a distant opponent with 6187 Power added to P. Atk. Over-hit is possible.
+			Uses a bow to attack a distant opponent with 6286 Power added to P. Atk. Over-hit is possible.
+		-->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="3200" />
 	</skill>
-	<skill id="873" levels="1" name="Archer Captain Rapid Shot">
+	<skill id="873" levels="1" name="Rapid Shot">
+		<!-- Increases your own bow Atk. Spd by 12% for 20 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="1500" />
 	</skill>
-	<skill id="874" levels="1" name="Magic Leader Flame Strike">
+	<skill id="874" levels="8" name="Wizard Mercenary Flame Strike">
+		<!--
+			Launches a flaming swath of energy that inflicts fire damage on an enemy with 68 Power.
+			Launches a flaming swath of energy that inflicts fire damage on an enemy with 78 Power.
+			Launches a flaming swath of energy that inflicts fire damage on an enemy with 78 Power.
+			Launches a flaming swath of energy that inflicts fire damage on an enemy with 79 Power.
+			Launches a flaming swath of energy that inflicts fire damage on an enemy with 80 Power.
+			Launches a flaming swath of energy that inflicts fire damage on an enemy with 81 Power.
+			Launches a flaming swath of energy that inflicts fire damage on an enemy with 81 Power.
+			Launches a flaming swath of energy that inflicts fire damage on an enemy with 82 Power.
+		-->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="4000" />
 	</skill>
-	<skill id="875" levels="1" name="Magic Leader Empower">
+	<skill id="875" levels="1" name="Empower">
+		<!-- Increases M. Atk. power by 75% for 20 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="4000" />
 	</skill>
-	<skill id="876" levels="1" name="Kamael Guard Captain Enuma Elish">
+	<skill id="876" levels="8" name="Kamael Captain Mercenary Enuma Elish">
+		<!--
+			With 4878 Power, attacks opponent using the mighty Sword of Creation.
+			With 6335 Power, attacks opponent using the mighty Sword of Creation.
+			With 6468 Power, attacks opponent using the mighty Sword of Creation.
+			With 6598 Power, attacks opponent using the mighty Sword of Creation.
+			With 6723 Power, attacks opponent using the mighty Sword of Creation.
+			With 6844 Power, attacks opponent using the mighty Sword of Creation.
+			With 6960 Power, attacks opponent using the mighty Sword of Creation.
+			With 7072 Power, attacks opponent using the mighty Sword of Creation.
+		-->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="1080" />
 	</skill>
-	<skill id="877" levels="1" name="Kamael Guard Captain Disarm">
+	<skill id="877" levels="8" name="Kamael Captain Mercenary Disarm">
+		<!--
+			Disarms the opponent for 5 seconds. Opponent will be unable to use a weapon while the effect lasts.
+			Disarms the opponent for 5 seconds. Opponent will be unable to use a weapon while the effect lasts.
+			Disarms the opponent for 5 seconds. Opponent will be unable to use a weapon while the effect lasts.
+			Disarms the opponent for 5 seconds. Opponent will be unable to use a weapon while the effect lasts.
+			Disarms the opponent for 5 seconds. Opponent will be unable to use a weapon while the effect lasts.
+			Disarms the opponent for 5 seconds. Opponent will be unable to use a weapon while the effect lasts.
+			Disarms the opponent for 5 seconds. Opponent will be unable to use a weapon while the effect lasts.
+			Disarms the opponent for 5 seconds. Opponent will be unable to use a weapon while the effect lasts.
+		-->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="1500" />
 	</skill>
-	<skill id="878" levels="1" name="Knight of Dawn Power Strike">
+	<skill id="878" levels="7" name="Knight Captain Mercenary Power Strike">
+		<!--
+			Inflicts a pounding attack on your enemy with 5068 Power added to P. Atk.
+			Inflicts a pounding attack on your enemy with 5175 Power added to P. Atk.
+			Inflicts a pounding attack on your enemy with 5278 Power added to P. Atk.
+			Inflicts a pounding attack on your enemy with 5379 Power added to P. Atk.
+			Inflicts a pounding attack on your enemy with 5475 Power added to P. Atk.
+			Inflicts a pounding attack on your enemy with 5568 Power added to P. Atk.
+			Inflicts a pounding attack on your enemy with 5658 Power added to P. Atk.
+		-->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="1080" />
 	</skill>
-	<skill id="879" levels="1" name="Knight of Dawn Curse Fear">
+	<skill id="879" levels="7" name="Knight Captain Mercenary Curse Fear">
+		<!--
+			Causes your enemy to flee in fear.
+			Causes your enemy to flee in fear.
+			Causes your enemy to flee in fear.
+			Causes your enemy to flee in fear.
+			Causes your enemy to flee in fear.
+			Causes your enemy to flee in fear.
+			Causes your enemy to flee in fear.
+		-->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="4000" />
 	</skill>
-	<skill id="880" levels="1" name="Knight of Dawn Ultimate Defense">
+	<skill id="880" levels="1" name="Knight Captain Mercenary Ultimate Defense">
+		<!-- Increases P. Def. by 3600, M. Def. by 2700 and buff cancelling attacks by 18%. The player cannot move while the effect lasts. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="1000" />
 	</skill>
-	<skill id="881" levels="1" name="Fortress Captain Twister">
+	<skill id="881" levels="7" name="Commander Mercenary Twister">
+		<!--
+			Supplements user's M. Atk. with 116 Power to create a powerful cyclone that inflicts wind damage on an enemy.
+			Supplements user's M. Atk. with 117 Power to create a powerful cyclone that inflicts wind damage on an enemy.
+			Supplements user's M. Atk. with 119 Power to create a powerful cyclone that inflicts wind damage on an enemy.
+			Supplements user's M. Atk. with 120 Power to create a powerful cyclone that inflicts wind damage on an enemy.
+			Supplements user's M. Atk. with 121 Power to create a powerful cyclone that inflicts wind damage on an enemy.
+			Supplements user's M. Atk. with 122 Power to create a powerful cyclone that inflicts wind damage on an enemy.
+			Supplements user's M. Atk. with 123 Power to create a powerful cyclone that inflicts wind damage on an enemy.
+		-->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="4000" />
 	</skill>
-	<skill id="882" levels="1" name="Fortress Captain Blaze">
+	<skill id="882" levels="7" name="Commander Mercenary Blaze">
+		<!--
+			Flames erupt from your body. Power 116.
+			Flames erupt from your body. Power 117.
+			Flames erupt from your body. Power 119.
+			Flames erupt from your body. Power 120.
+			Flames erupt from your body. Power 121.
+			Flames erupt from your body. Power 122.
+			Flames erupt from your body. Power 123.
+		-->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="4000" />
 	</skill>
-	<skill id="883" levels="1" name="Fortress Captain Seal of Binding">
+	<skill id="883" levels="7" name="Commander Mercenary Seal of Binding">
+		<!--
+			Holds nearby enemies for 30 seconds.
+			Holds nearby enemies for 30 seconds.
+			Holds nearby enemies for 30 seconds.
+			Holds nearby enemies for 30 seconds.
+			Holds nearby enemies for 30 seconds.
+			Holds nearby enemies for 30 seconds.
+			Holds nearby enemies for 30 seconds.
+		-->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -1057,7 +1172,6 @@
 	</skill>
 	<skill id="885" levels="1" name="Air Blink">
 		<!-- Aurabird Falcon & Owl -->
-		<set name="coolTime" val="200" />
 		<set name="flyCourse" val="0" /> <!-- Teleport to Back -->
 		<set name="flyRadius" val="500" />
 		<set name="hitTime" val="100" />
@@ -1067,7 +1181,7 @@
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="23000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillRadius" val="150" />
+		<set name="skillRadius" val="100" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AURA" />
 		<for>

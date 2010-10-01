@@ -22,7 +22,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="poisonVuln" val="0.8" /> <!-- Poison Resistance +20% -->
+			<sub order="0x40" stat="poisonVuln" val="20" /> <!-- Poison Resistance +20% -->
 		</for>
 	</skill>
 	<skill id="3503" levels="1" name="Reinforced Leather Set">
@@ -254,7 +254,7 @@
 			<sub order="0x10" stat="STR" val="1" /> <!-- STR -1 -->
 			<sub order="0x10" stat="CON" val="2" /> <!-- CON -2 -->
 			<add order="0x10" stat="DEX" val="3" /> <!-- DEX +3 -->
-			<mul order="0x30" stat="poisonVuln" val="0.8" /> <!-- Poision Resistance +20% -->
+			<sub order="0x40" stat="poisonVuln" val="20" /> <!-- Poision Resistance +20% -->
 		</for>
 	</skill>
 	<skill id="3528" levels="1" name="Blue Wolf Robe Set">
@@ -288,7 +288,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="gainHp" val="1.04" /> <!-- Heal +4% -->
-			<mul order="0x30" stat="paralyzeVuln" val="0.5" /> <!-- Paralysis Resistance +50% -->
+			<sub order="0x40" stat="paralyzeVuln" val="50" /> <!-- Paralysis Resistance +50% -->
 			<sub order="0x10" stat="STR" val="2" /> <!-- STR -2 -->
 			<add order="0x10" stat="CON" val="2" /> <!-- CON +2 -->
 		</for>
@@ -300,8 +300,8 @@
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.08" /> <!-- Atk. Spd. +8% -->
 			<add order="0x40" stat="maxLoad" val="5759" /> <!-- Weight increased plus the point at which a weight penalty is applied +5759 -->
-			<mul order="0x30" stat="poisonVuln" val="0.2" /> <!-- Poison Resistance +80% -->
-			<mul order="0x30" stat="bleedVuln" val="0.2" /> <!-- Bleed Resistance +80% -->
+			<sub order="0x40" stat="poisonVuln" val="80" /> <!-- Poison Resistance +80% -->
+			<sub order="0x40" stat="bleedVuln" val="80" /> <!-- Bleed Resistance +80% -->
 			<add order="0x10" stat="STR" val="2" /> <!-- STR +2 -->
 			<sub order="0x10" stat="CON" val="2" /> <!-- CON -2 -->
 		</for>
@@ -313,7 +313,7 @@
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
 			<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
-			<mul order="0x30" stat="paralyzeVuln" val="0.5" /> <!-- Paralysis Resistance +50% -->
+			<sub order="0x40" stat="paralyzeVuln" val="50" /> <!-- Paralysis Resistance +50% -->
 			<add order="0x10" stat="STR" val="1" /> <!-- STR +1 -->
 			<sub order="0x10" stat="CON" val="1" /> <!-- CON -1 -->
 		</for>
@@ -325,8 +325,8 @@
 		<for>
 			<mul order="0x30" stat="regMp" val="1.08" /> <!-- MP Regeneration +8% -->
 			<add order="0x40" stat="maxMp" val="222" /> <!-- MP +222 -->
-			<mul order="0x30" stat="poisonVuln" val="0.2" /> <!-- Poison Resistance +80% -->
-			<mul order="0x30" stat="bleedVuln" val="0.2" /> <!-- Bleed Resistance +80% -->
+			<sub order="0x40" stat="poisonVuln" val="80" /> <!-- Poison Resistance +80% -->
+			<sub order="0x40" stat="bleedVuln" val="80" /> <!-- Bleed Resistance +80% -->
 			<add order="0x10" stat="MEN" val="2" /> <!-- MEN +2 -->
 			<sub order="0x10" stat="WIT" val="2" /> <!-- WIT -2 -->
 		</for>
@@ -338,8 +338,8 @@
 		<for>
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<mul order="0x30" stat="mDef" val="1.08" /> <!-- M. Def. +8% -->
-			<mul order="0x30" stat="poisonVuln" val="0.2" /> <!-- Poison Resistance +80% -->
-			<mul order="0x30" stat="bleedVuln" val="0.2" /> <!-- Bleed Resistance +80% -->
+			<sub order="0x40" stat="poisonVuln" val="80" /> <!-- Poison Resistance +80% -->
+			<sub order="0x40" stat="bleedVuln" val="80" /> <!-- Bleed Resistance +80% -->
 			<sub order="0x10" stat="INT" val="2" /> <!-- INT -2 -->
 			<add order="0x10" stat="WIT" val="2" /> <!-- WIT +2 -->
 		</for>
@@ -353,7 +353,7 @@
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<add order="0x40" stat="runSpd" val="7" /> <!-- Speed +7 -->
 			<sub order="0x40" stat="cancel" val="50" /> <!-- Small decrease in chance of spell interruption -->
-			<mul order="0x30" stat="paralyzeVuln" val="0.5" /> <!-- Paralysis Resistance +50% -->
+			<sub order="0x40" stat="paralyzeVuln" val="50" /> <!-- Paralysis Resistance +50% -->
 			<add order="0x10" stat="WIT" val="2" /> <!-- WIT +2 -->
 			<sub order="0x10" stat="MEN" val="2" /> <!-- MEN -2 -->
 		</for>
@@ -364,8 +364,8 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
-			<mul order="0x30" stat="sleepVuln" val="0.3" /> <!-- Sleep Resistance +70% -->
-			<mul order="0x30" stat="rootVuln" val="0.3" /> <!-- Hold Resistance +70% -->
+			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- Sleep Resistance +70% -->
+			<sub order="0x40" stat="rootVuln" val="70" /> <!-- Hold Resistance +70% -->
 			<add order="0x10" stat="CON" val="2" /> <!-- CON +2 -->
 			<sub order="0x10" stat="DEX" val="2" /> <!-- DEX -2 -->
 		</for>
@@ -377,7 +377,7 @@
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
 			<add order="0x40" stat="accCombat" val="3" /> <!-- Accuracy +3 -->
-			<mul order="0x30" stat="stunVuln" val="0.5" /> <!-- Stun Resistance +50% -->
+			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Stun Resistance +50% -->
 			<add order="0x10" stat="STR" val="2" /> <!-- STR +2 -->
 			<sub order="0x10" stat="CON" val="2" /> <!-- CON -2 -->
 		</for>
@@ -388,8 +388,8 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.04" /> <!-- M. Def. +4% -->
-			<mul order="0x30" stat="sleepVuln" val="0.3" /> <!-- Sleep Resistance +70% -->
-			<mul order="0x30" stat="rootVuln" val="0.3" /> <!-- Hold Resistance +70% -->
+			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- Sleep Resistance +70% -->
+			<sub order="0x40" stat="rootVuln" val="70" /> <!-- Hold Resistance +70% -->
 			<add order="0x40" stat="absorbDam" val="3" /> <!-- Restores 3% of melee damage inflicted on the enemy to oneself -->
 			<add order="0x10" stat="DEX" val="1" /> <!-- DEX +1 -->
 			<sub order="0x10" stat="CON" val="1" /> <!-- CON -1 -->
@@ -405,7 +405,7 @@
 			</mul>
 			<add order="0x40" stat="maxMp" val="240" /> <!-- MP +240 -->
 			<add order="0x40" stat="maxLoad" val="5759" /> <!-- Weight increased plus the point at which a weight penalty is applied +5759 -->
-			<mul order="0x30" stat="stunVuln" val="0.5" /> <!-- Stun Resistance +50% -->
+			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Stun Resistance +50% -->
 			<add order="0x10" stat="DEX" val="1" /> <!-- DEX +1 -->
 			<sub order="0x10" stat="CON" val="1" /> <!-- CON -1 -->
 		</for>
@@ -417,8 +417,8 @@
 		<for>
 			<mul order="0x30" stat="regMp" val="1.04" /> <!-- MP Regeneration +4% -->
 			<mul order="0x30" stat="mAtk" val="1.08" /> <!-- M. Atk. +8% -->
-			<mul order="0x30" stat="sleepVuln" val="0.3" /> <!-- Sleep Resistance +70% -->
-			<mul order="0x30" stat="rootVuln" val="0.3" /> <!-- Hold Resistance +70% -->
+			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- Sleep Resistance +70% -->
+			<sub order="0x40" stat="rootVuln" val="70" /> <!-- Hold Resistance +70% -->
 			<add order="0x10" stat="INT" val="2" /> <!-- INT +2 -->
 			<sub order="0x10" stat="WIT" val="2" /> <!-- WIT -2 -->
 		</for>
@@ -431,7 +431,7 @@
 			<add order="0x40" stat="maxMp" val="240" /> <!-- MP +240 -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<mul order="0x30" stat="regMp" val="1.08" /> <!-- MP Regeneration +8% -->
-			<mul order="0x30" stat="stunVuln" val="0.5" /> <!-- Stun Resistance +50% -->
+			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Stun Resistance +50% -->
 			<add order="0x10" stat="MEN" val="1" /> <!-- MEN +1 -->
 			<sub order="0x10" stat="INT" val="1" /> <!-- INT -1 -->
 		</for>
@@ -556,8 +556,8 @@
 		<for>
 			<mul order="0x30" stat="pDef" val="1.08" /> <!-- P Def. +8% -->
 			<add order="0x40" stat="maxHp" val="445" /> <!-- Maximum HP +445 -->
-			<mul order="0x30" stat="sleepVuln" val="0.3" /> <!-- Sleep Probability -70% -->
-			<mul order="0x30" stat="rootVuln" val="0.3" /> <!-- Hold Probability -70% -->
+			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- Sleep Probability -70% -->
+			<sub order="0x40" stat="rootVuln" val="70" /> <!-- Hold Probability -70% -->
 			<sub order="0x10" stat="DEX" val="2" /> <!-- DEX -2 -->
 			<add order="0x10" stat="STR" val="2" /> <!-- STR +2 -->
 		</for>
@@ -568,8 +568,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="poisonVuln" val="0.2" />
-			<mul order="0x30" stat="bleedVuln" val="0.2" />
+			<sub order="0x40" stat="poisonVuln" val="80" />
+			<sub order="0x40" stat="bleedVuln" val="80" />
 		</for>
 	</skill>
 	<skill id="3555" levels="1" name="Draconic Light Armor Set">
@@ -598,7 +598,7 @@
 			<add order="0x10" stat="WIT" val="1" /> <!-- WIT +1 -->
 			<add order="0x10" stat="INT" val="1" /> <!-- INT +1 -->
 			<sub order="0x10" stat="MEN" val="2" /> <!-- MEN -2 -->
-			<mul order="0x30" stat="stunVuln" val="0.5" /> <!-- Stun resistance +50% -->
+			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Stun resistance +50% -->
 		</for>
 	</skill>
 	<skill id="3557" levels="1" name="Necklace of Valakas">
@@ -611,8 +611,8 @@
 			<mul order="0x30" stat="mAtk" val="1.08" />
 			<basemul order="0x30" stat="mCritRate" val="0.2" /> <!-- Guess -->
 			<add order="0x40" stat="fireRes" val="15" />
-			<mul order="0x30" stat="sleepVuln" val="0.6" />
-			<mul order="0x30" stat="sleepProf" val="1.4" />
+			<sub order="0x40" stat="sleepVuln" val="40" />
+			<add order="0x40" stat="sleepProf" val="40" />
 			<mul order="0x30" stat="mReuse" val="0.9" />
 			<mul order="0x30" stat="pReuse" val="0.9" />
 			<add order="0x40" stat="reflectDam" val="5" />
@@ -623,13 +623,13 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="bleedVuln" val="0.6" />
+			<sub order="0x40" stat="bleedVuln" val="40" />
 			<add order="0x40" stat="earthRes" val="15" />
-			<mul order="0x30" stat="stunVuln" val="0.7" />
-			<mul order="0x30" stat="derangementVuln" val="0.7" />
-			<mul order="0x30" stat="bleedProf" val="1.4" />
-			<mul order="0x30" stat="stunProf" val="1.3" />
-			<mul order="0x30" stat="derangementProf" val="1.3" />
+			<sub order="0x40" stat="stunVuln" val="30" />
+			<sub order="0x40" stat="derangementVuln" val="30" />
+			<add order="0x40" stat="bleedProf" val="40" />
+			<add order="0x40" stat="stunProf" val="30" />
+			<add order="0x40" stat="derangementProf" val="30" />
 			<mul order="0x30" stat="gainHp" val="1.1" />
 			<add order="0x40" stat="absorbDam" val="4" /> <!-- absorb 4% HP from damage inflicted on enemies -->
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
@@ -641,12 +641,12 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="stunVuln" val="0.8" />
-			<mul order="0x30" stat="derangementVuln" val="0.8" />
-			<mul order="0x30" stat="bleedVuln" val="0.7" />
-			<mul order="0x30" stat="bleedProf" val="1.3" />
-			<mul order="0x30" stat="stunProf" val="1.2" />
-			<mul order="0x30" stat="derangementProf" val="1.2" />
+			<sub order="0x40" stat="stunVuln" val="20" />
+			<sub order="0x40" stat="derangementVuln" val="20" />
+			<sub order="0x40" stat="bleedVuln" val="30" />
+			<add order="0x40" stat="bleedProf" val="30" />
+			<add order="0x40" stat="stunProf" val="20" />
+			<add order="0x40" stat="derangementProf" val="20" />
 			<mul order="0x30" stat="gainHp" val="1.1" />
 			<add order="0x40" stat="absorbDam" val="4" /> <!-- absorb 4% HP from damage inflicted on enemies -->
 		</for>
@@ -656,8 +656,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="bleedVuln" val="0.8" />
-			<mul order="0x30" stat="bleedProf" val="1.2" />
+			<sub order="0x40" stat="bleedVuln" val="20" />
+			<add order="0x40" stat="bleedProf" val="20" />
 			<mul order="0x30" stat="gainHp" val="1.06" />
 		</for>
 	</skill>
@@ -666,10 +666,10 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="rootVuln" val="0.7" />
-			<mul order="0x30" stat="poisonVuln" val="0.6" />
-			<mul order="0x30" stat="poisonProf" val="1.4" />
-			<mul order="0x30" stat="rootProf" val="1.3" />
+			<sub order="0x40" stat="rootVuln" val="30" />
+			<sub order="0x40" stat="poisonVuln" val="40" />
+			<add order="0x40" stat="poisonProf" val="40" />
+			<add order="0x40" stat="rootProf" val="30" />
 			<add order="0x40" stat="accCombat" val="2" />
 			<mul order="0x30" stat="cAtk" val="1.15" />
 			<mul order="0x30" stat="pAtkSpd" val="1.04" />
@@ -681,10 +681,10 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="poisonVuln" val="0.7" />
-			<mul order="0x30" stat="rootVuln" val="0.8" />
-			<mul order="0x30" stat="poisonProf" val="1.3" />
-			<mul order="0x30" stat="rootProf" val="1.2" />
+			<sub order="0x40" stat="poisonVuln" val="30" />
+			<sub order="0x40" stat="rootVuln" val="20" />
+			<add order="0x40" stat="poisonProf" val="30" />
+			<add order="0x40" stat="rootProf" val="20" />
 			<add order="0x40" stat="accCombat" val="2" />
 			<mul order="0x30" stat="cAtk" val="1.15" />
 		</for>
@@ -694,12 +694,12 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="poisonVuln" val="0.8" />
-			<mul order="0x30" stat="poisonProf" val="1.2" />
+			<sub order="0x40" stat="poisonVuln" val="20" />
+			<add order="0x40" stat="poisonProf" val="20" />
 			<add order="0x40" stat="accCombat" val="1" />
 		</for>
 	</skill>
-	<skill id="3564" levels="2" name="Special Ability: Haste">
+	<skill id="3564" levels="3" name="Special Ability: Haste">
 		<!-- s_opt_haste75 -->
 		<!--
 			6581 Forgotten Blade - Haste sword 3564-1; Increases Atk. Spd. by about 7%. Increases damage inflicted during PvP. 
@@ -720,7 +720,7 @@
 			9365 Laevateinn - Haste rapier 3564-1; Kamael Exclusive Weapon: Forgotten Blade Conversion Increases Atk. Spd. by about 7%. Increases damage inflicted during PvP. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members. 
 			9369 Gram - Haste ancient 3564-1; Kamael Exclusive Weapon: Heavens Divider Conversion Increases Atk. Spd. by about 7%. Enhances damage to a target during PvP.
 		-->
-		<table name="#pAtkSpd"> 1.07 1.06 </table> <!-- Guessing Level 2 -->
+		<table name="#pAtkSpd"> 1.07 1.06 1.09 </table> <!-- Guessing Level 2 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -732,7 +732,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
 		</for>
 	</skill>
-	<skill id="3565" levels="2" name="Special Ability: Focus">
+	<skill id="3565" levels="5" name="Special Ability: Focus">
 		<!-- s_opt_focus_low_cri75 -->
 		<!--
 			Note: In C4 official files, 3565, 3566, and 3567 have 1 skill level. In our current datapack/client, they go up to 2. 
@@ -755,8 +755,8 @@
 			14401 Icarus Hand {PvP} - Focus 3565-2; 
 			14451 Icarus Hand - Destruction {PvP} - Focus 3565-2;
 		-->
-		<table name="#rCrit"> 80.6 106 </table> <!-- Guessing Level 2, see notes. -->
-		<table name="#magicLvl"> 75 80 </table> <!-- Guessing Level 2, see notes. -->
+		<table name="#rCrit"> 80.6 106 106 134 134 </table> <!-- Guessing Level 2-3, see notes. -->
+		<table name="#magicLvl"> 75 80 84 84 84 </table> <!-- Guessing Level 2-5, see notes. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -768,7 +768,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
 		</for>
 	</skill>
-	<skill id="3566" levels="2" name="Special Ability: Focus">
+	<skill id="3566" levels="5" name="Special Ability: Focus">
 		<!-- s_opt_focus_medium_cri75 -->
 		<!--
 			Note: In C4 official files, 3565, 3566, and 3567 have 1 skill level. In our current datapack/client, they go up to 2. 
@@ -827,8 +827,8 @@
 			14438 Icarus Wingblade - Lightning {PvP} - Focus 3566-2; 
 			14454 Icarus Heavy Arms - Lightning {PvP} - Focus 3566-2;
 		-->
-		<table name="#rCrit"> 84.3 111 </table> <!-- Guessing Level 2, see notes. -->
-		<table name="#magicLvl"> 75 80 </table> <!-- Guessing Level 2, see notes. -->
+		<table name="#rCrit"> 84.3 111 134 134 134 </table> <!-- Guessing Level 2-3, see notes. -->
+		<table name="#magicLvl"> 75 80 84 84 84 </table> <!-- Guessing Level 2-5, see notes. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -840,7 +840,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
 		</for>
 	</skill>
-	<skill id="3567" levels="2" name="Special Ability: Focus">
+	<skill id="3567" levels="5" name="Special Ability: Focus">
 		<!-- s_opt_focus_high_cri75 -->
 		<!--
 			Note: In C4 official files, 3565, 3566, and 3567 have 1 skill level. In our current datapack/client, they go up to 2. 
@@ -884,8 +884,8 @@
 			14424 Icarus Shooter - Concentration {PvP} - Focus 3567-2; 
 			14436 Icarus Spitter - Concentration {PvP} - Focus 3567-2;
 		-->
-		<table name="#rCrit"> 88.1 116 </table> <!-- Guessing Level 2, see notes. -->
-		<table name="#magicLvl"> 75 80 </table> <!-- Guessing Level 2, see notes. -->
+		<table name="#rCrit"> 88.1 116 116 139 139 </table> <!-- Guessing Level 2, see notes. -->
+		<table name="#magicLvl"> 75 80 84 84 84 </table> <!-- Guessing Level 2, see notes. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -897,7 +897,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
 		</for>
 	</skill>
-	<skill id="3568" levels="1" name="Special Ability: HP Drain">
+	<skill id="3568" levels="2" name="Special Ability: HP Drain">
 		<!-- s_opt_hp_drain75 -->
 		<!--
 			6584 Basalt Battlehammer - HP Drain 3568 1 Restores 3% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP. 
@@ -922,17 +922,18 @@
 			14496 Vesper Avenger {PvP} - HP Drain 3568 1 
 			14501 Vesper Retributer {PvP} - HP Drain 3568 1
 		-->
+		<table name="#absorbDam"> 3 4 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="absorbDam" val="3" /> <!-- 3% Vampiric Rage Effect -->
+			<add order="0x40" stat="absorbDam" val="#absorbDam" />
 			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
 		</for>
 	</skill>
-	<skill id="3569" levels="1" name="Special Ability: HP Regeneration">
+	<skill id="3569" levels="4" name="Special Ability: HP Regeneration">
 		<!-- s_opt_hp_regeneration75 -->
 		<!--
 			6586 Basalt Battlehammer - HP Regeneration 3569-1; 
@@ -951,12 +952,13 @@
 			14498 Vesper Avenger {PvP} - HP Regeneration 3569-1; 
 			14499 Vesper Retributer {PvP} - HP Regeneration 3569-1;
 		-->
+		<table name="#regHp"> 2.04 2.04 2.04 2.04 </table> <!-- Guess -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="magicLvl" val="75" />
 		<for>
-			<add order="0x40" stat="regHp" val="2.04" />
+			<add order="0x40" stat="regHp" val="#regHp" />
 			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
@@ -1011,7 +1013,7 @@
 			<effect name="Stun" time="9" val="0" stackOrder="1" stackType="Stun" />
 		</for>
 	</skill>
-	<skill id="3572" levels="2" name="Special Ability: Critical Damage">
+	<skill id="3572" levels="4" name="Special Ability: Critical Damage">
 		<!-- s_opt_crt_damage75 -->
 		<!--
 			6590 Angel Slayer - Critical Damage 3572-1; Increases P. Atk. by 265 on a critical attack. Increases damage inflicted during PvP. 
@@ -1020,8 +1022,8 @@
 			14127 Vesper Shaper - Critical Damage 3572-2; 
 			14487 Vesper Shaper {PvP} - Critical Damage 3572-2;
 		-->
-		<table name="#cAtkAdd"> 265 665 </table>
-		<table name="#magicLvl"> 75 84 </table>
+		<table name="#cAtkAdd"> 265 665 1000 1000 </table> <!-- TODO: 4 lvl is Guess -->
+		<table name="#magicLvl"> 75 84 84 84 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -1099,7 +1101,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3575" levels="2" name="Special Ability: Empower">
+	<skill id="3575" levels="4" name="Special Ability: Empower">
 		<!-- s_opt_empower75 -->
 		<!-- 6587 Imperial Staff - Empower 3575-1; -->
 		<!--
@@ -1110,8 +1112,8 @@
 			14145 Vesper Singer - Empower 3575-2;
 			14505 Vesper Singer {PvP} - Empower 3575-2;
 		-->
-		<table name="#magicLvl"> 75 80 </table> <!-- Guessing Level 2 -->
-		<table name="#mAtk"> 60.09 117 </table> <!-- Guessing Level 2 -->
+		<table name="#magicLvl"> 75 80 84 84 </table> <!-- Guessing Level 2 -->
+		<table name="#mAtk"> 60.09 117 167 177 </table> <!-- Guessing Level 2 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -1123,7 +1125,7 @@
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
 		</for>
 	</skill>
-	<skill id="3576" levels="2" name="Special Ability: MP Regeneration">
+	<skill id="3576" levels="4" name="Special Ability: MP Regeneration">
 		<!-- s_opt_mp_regeneration75 -->
 		<!--
 			6588 Imperial Staff - MP Regeneration 3576-1; 
@@ -1142,8 +1144,8 @@
 			14503 Vesper Caster {PvP} - MP Regeneration 3576-2; 
 			14506 Vesper Singer {PvP} - MP Regeneration 3576-2;
 		-->
-		<table name="#magicLvl"> 75 80 </table> <!-- Guessing Level 2 -->
-		<table name="#regMp"> 0.54 0.72 </table> <!-- Guessing Level 2 -->
+		<table name="#magicLvl"> 75 80 84 84 </table> <!-- Guessing Level 2-4 -->
+		<table name="#regMp"> 0.54 0.72 0.76 0.8 </table> <!-- Guessing Level 2-4 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />

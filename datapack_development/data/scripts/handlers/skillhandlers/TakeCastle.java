@@ -70,8 +70,8 @@ public class TakeCastle implements ISkillHandler
 	{
 		return SKILL_IDS;
 	}
-
-
+	
+	
 	
 	public static void main(String[] args)
 	{

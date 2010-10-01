@@ -16,6 +16,9 @@ package ai.individual;
 
 import java.util.List;
 
+import javolution.util.FastList;
+import ai.group_template.L2AttackableAIScript;
+
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SkillTable;
@@ -30,9 +33,6 @@ import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 import com.l2jserver.gameserver.templates.StatsSet;
 import com.l2jserver.util.Rnd;
 
-import javolution.util.FastList;
-import ai.group_template.L2AttackableAIScript;
-
 /**
  * Queen Ant AI
  * 
@@ -41,20 +41,20 @@ import ai.group_template.L2AttackableAIScript;
  */
 public class QueenAnt extends L2AttackableAIScript
 {
-
+	
 	private static final int QUEEN = 29001;
 	private static final int LARVA = 29002;
 	private static final int NURSE = 29003;
 	private static final int GUARD = 29004;
 	private static final int ROYAL = 29005;
-
+	
 	//QUEEN Status Tracking :
 	private static final byte ALIVE = 0; //Queen Ant is spawned.
 	private static final byte DEAD = 1; //Queen Ant has been killed.
-
+	
 	private static L2BossZone _Zone;
 	private static List<L2Attackable> _Minions = new FastList<L2Attackable>();
-
+	
 	public QueenAnt(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
@@ -64,7 +64,7 @@ public class QueenAnt extends L2AttackableAIScript
 		};
 		registerMobs(mobs);
 		_Zone = GrandBossManager.getInstance().getZone(-21610, 181594, -5734);
-
+		
 		StatsSet info = GrandBossManager.getInstance().getStatsSet(QUEEN);
 		int status = GrandBossManager.getInstance().getBossStatus(QUEEN);
 		if (status == DEAD)
@@ -96,7 +96,7 @@ public class QueenAnt extends L2AttackableAIScript
 			spawnBoss(queen);
 		}
 	}
-
+	
 	public void spawnBoss(L2GrandBossInstance npc)
 	{
 		GrandBossManager.getInstance().addBoss(npc);
@@ -130,7 +130,7 @@ public class QueenAnt extends L2AttackableAIScript
 		}
 		startQuestTimer("check_royal__Zone", 120000, npc, null, true);
 	}
-
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -189,7 +189,7 @@ public class QueenAnt extends L2AttackableAIScript
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
-
+	
 	@Override
 	public String onFactionCall(L2Npc npc, L2Npc caller, L2PcInstance attacker, boolean isPet)
 	{
@@ -222,7 +222,7 @@ public class QueenAnt extends L2AttackableAIScript
 		}
 		return super.onFactionCall(npc, caller, attacker, isPet);
 	}
-
+	
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
 	{
@@ -234,7 +234,7 @@ public class QueenAnt extends L2AttackableAIScript
 		}
 		return super.onAttack(npc, attacker, damage, isPet);
 	}
-
+	
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
@@ -268,7 +268,7 @@ public class QueenAnt extends L2AttackableAIScript
 		}
 		return super.onKill(npc, killer, isPet);
 	}
-
+	
 	public static void main(String[] args)
 	{
 		// now call the constructor (starts up the ai)

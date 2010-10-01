@@ -1,42 +1,44 @@
 #Made by Kerb
+#Rewrited to Epilogue by Gigiikun
 import sys
 
 from com.l2jserver import Config
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
-from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest 
+from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.util import Rnd
 
-qn = "645_GhostsOfBatur" 
+qn = "645_GhostsOfBatur"
 
 #Drop rate
-DROP_CHANCE = 75
+DROP_CHANCE = 5
+DROP_CHANCE_GHOST_COMMANDER = 33
 #Npc
 KARUDA = 32017
 #Items
-GRAVE_GOODS = 8089
+CURSED_BURIAL = 14861
 #Rewards
 REWARDS={
-    "BDH":[1878,18],
-    "CKS":[1879, 7],
-    "STL":[1880, 4],
-    "CBP":[1881, 6],
-    "LTR":[1882,10],
-    "STM":[1883, 2]
+    "S80":[500,[9967,9968,9969,9970,9971,9972,9973,9974,9975,10544,10545]],
+    "ORI":[12,[9630]],
+    "LEO":[8,[9628]],
+    "ADA":[15,[9629]]
     }
 #Mobs
-MOBS = [ 22007,22009,22010,22011,22012,22013,22014,22015,22016 ]
+MOBS = [ 22703, 22704, 22705, 22706 ]
+GHOST_COMMANDER = 22707
 
 class Quest (JQuest) :
  def __init__(self,id,name,descr):
     JQuest.__init__(self,id,name,descr)
-    self.questItemIds = [GRAVE_GOODS]
+    self.questItemIds = [CURSED_BURIAL]
 
  def onAdvEvent (self,event,npc, player) :
    htmltext = event
    st = player.getQuestState(qn)
    if not st : return
    if event == "32017-03.htm" :
-      if st.getPlayer().getLevel() < 23 : 
+      if st.getPlayer().getLevel() < 80 :
          htmltext = "32017-02.htm"
          st.exitQuest(1)
       else :
@@ -44,19 +46,23 @@ class Quest (JQuest) :
          st.setState(State.STARTED)
          st.playSound("ItemSound.quest_accept")
    elif event in REWARDS.keys() :
-      if st.getQuestItemsCount(GRAVE_GOODS) == 180 :
-         item,qty = REWARDS[event]
-         st.takeItems(GRAVE_GOODS,-1)
-         st.rewardItems(item,qty)
-         st.playSound("ItemSound.quest_finish")
-         st.exitQuest(1)
-         htmltext = "32017-07.htm"
+      qty,item = REWARDS[event]
+      if st.getQuestItemsCount(CURSED_BURIAL) >= qty :
+         st.takeItems(CURSED_BURIAL,qty)
+         if len(item) > 1 :
+            itemId = item[Rnd.get(len(item))]
+         else :
+            itemId = item[0]
+         st.rewardItems(itemId,1)
+         htmltext = "32017-05c.htm"
       else :
-         htmltext = "32017-04.htm"
+         htmltext = "32017-07.htm"
+   elif event == "32017-08.htm" :
+      st.exitQuest(1)
    return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+   htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st : return htmltext
    npcId = npc.getNpcId()
@@ -65,12 +71,13 @@ class Quest (JQuest) :
    if cond == 0 :
       htmltext = "32017-01.htm"
    elif cond == 1 :
-      htmltext = "32017-04.htm"
-   elif cond == 2 :
-      if st.getQuestItemsCount(GRAVE_GOODS) == 180 : 
-         htmltext = "32017-05.htm"
+      if st.getQuestItemsCount(CURSED_BURIAL) > 0 :
+         htmltext = "32017-05b.htm"
       else :
-         htmltext = "32017-01.htm"
+         htmltext = "32017-05a.htm"
+   else :
+      htmltext = "32017-02.htm"
+      st.exitQuest(1)
    return htmltext
 
  def onKill(self,npc,player,isPet):
@@ -78,26 +85,26 @@ class Quest (JQuest) :
   if not partyMember: return
   st = partyMember.getQuestState(qn)
   if st :
-    count = st.getQuestItemsCount(GRAVE_GOODS)
-    if st.getInt("cond") == 1 and count < 180 :
-      chance = DROP_CHANCE * Config.RATE_QUEST_DROP
+    count = st.getQuestItemsCount(CURSED_BURIAL)
+    if st.getInt("cond") == 1 :
+      chance = DROP_CHANCE
+      if npc.getNpcId() == GHOST_COMMANDER:
+        chance = DROP_CHANCE_GHOST_COMMANDER
       numItems, chance = divmod(chance,100)
-      if st.getRandom(100) < chance : 
+      if st.getRandom(100) < chance :
          numItems += 1
       if numItems :
-         if count + numItems >= 180 :
-            numItems = 180 - count
+         if int(count + numItems)/500 > int(count)/500 :
             st.playSound("ItemSound.quest_middle")
-            st.set("cond","2")
          else:
-            st.playSound("ItemSound.quest_itemget")   
-         st.giveItems(GRAVE_GOODS,int(numItems))       
+            st.playSound("ItemSound.quest_itemget")
+         st.giveItems(CURSED_BURIAL,int(numItems))
   return
 
 QUEST       = Quest(645, qn, "Ghosts of Batur")
 
 QUEST.addStartNpc(KARUDA)
-QUEST.addTalkId(KARUDA) 
+QUEST.addTalkId(KARUDA)
 
 for i in MOBS :
   QUEST.addKillId(i)

@@ -22,6 +22,7 @@ import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2TradeList;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
+import com.l2jserver.gameserver.network.serverpackets.BuyList;
 import com.l2jserver.gameserver.network.serverpackets.ExBuySellListPacket;
 
 
@@ -82,6 +83,7 @@ public class AdminShop implements IAdminCommandHandler
 		
 		if (list != null)
 		{
+			activeChar.sendPacket(new BuyList(list, activeChar.getAdena(), 0));
 			activeChar.sendPacket(new ExBuySellListPacket(activeChar, list, 0, false));
 			if (Config.DEBUG)
 				_log.fine("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") opened GM shop id " + val);

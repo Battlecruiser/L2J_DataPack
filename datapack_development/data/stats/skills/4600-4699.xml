@@ -1366,7 +1366,7 @@
 		<set name="effectRange" val="2000" />
 		<set name="reuseDelay" val="60000" />
 		<for>
-			<effect name="TargetMe" time="0" val="0" />
+			<effect name="TargetMe" val="0" />
 		</for>
 	</skill>
 	<skill id="4672" levels="1" name="NPC Corpse Remove">
@@ -1391,6 +1391,7 @@
 		<set name="isMagic" val="true" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="maxNegated" val="-1" />
 	</skill>
 	<skill id="4674" levels="12" name="NPC Dispel Defensive Buff">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 75 90 95 </table>
@@ -1406,6 +1407,7 @@
 		<set name="isMagic" val="true" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="maxNegated" val="-1" />
 	</skill>
 	<skill id="4675" levels="12" name="NPC Dispel Fighter Buff">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 75 90 95 </table>
@@ -1421,6 +1423,7 @@
 		<set name="isMagic" val="true" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="maxNegated" val="-1" />
 	</skill>
 	<skill id="4676" levels="12" name="NPC Dispel Mage Offensive Buff">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 75 90 95 </table>
@@ -1436,6 +1439,7 @@
 		<set name="isMagic" val="true" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="maxNegated" val="-1" />
 	</skill>
 	<skill id="4677" levels="12" name="NPC Dispel Fighter Defensive Buff">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 75 90 95 </table>
@@ -1451,6 +1455,7 @@
 		<set name="isMagic" val="true" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="maxNegated" val="-1" />
 	</skill>
 	<skill id="4678" levels="12" name="NPC Dispel Mage Defensive Buff">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 75 90 95 </table>
@@ -1466,6 +1471,7 @@
 		<set name="isMagic" val="true" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="maxNegated" val="-1" />
 	</skill>
 	<skill id="4679" levels="1" name="Valakas">
 		<!-- Valakas Skills -->

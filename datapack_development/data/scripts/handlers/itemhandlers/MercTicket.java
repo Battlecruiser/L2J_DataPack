@@ -39,7 +39,7 @@ public class MercTicket implements IItemHandler
 	 * 2) If allowed, call the MercTicketManager to add the item and spawn in the world
 	 * 3) Remove the item from the person's inventory
 	 */
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		int itemId = item.getItemId();
 		L2PcInstance activeChar = (L2PcInstance) playable;
@@ -47,7 +47,7 @@ public class MercTicket implements IItemHandler
 		int castleId = -1;
 		if (castle != null)
 			castleId = castle.getCastleId();
-
+		
 		//add check that certain tickets can only be placed in certain castles
 		if (MercTicketManager.getInstance().getTicketCastleId(itemId) != castleId)
 		{
@@ -65,41 +65,41 @@ public class MercTicket implements IItemHandler
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE));
 			return;
-         }
- 
-        //Checking Seven Signs Quest Period
-        if (SevenSigns.getInstance().getCurrentPeriod() != SevenSigns.PERIOD_SEAL_VALIDATION) 
-        {
-        	//_log.warning("Someone has tried to spawn a guardian during Quest Event Period of The Seven Signs.");       	
-        	activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE));
-        	return;
-        }
-        //Checking the Seal of Strife status
-        switch (SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_STRIFE))
-        {
-        	case SevenSigns.CABAL_NULL:
-        		if (SevenSigns.getInstance().checkIsDawnPostingTicket(itemId))
-        		{
-                	//_log.warning("Someone has tried to spawn a Dawn Mercenary though the Seal of Strife is not controlled by anyone.");       	
-        			activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE));        		
-        			return;
-        		}        			
-        		break;
-        	case SevenSigns.CABAL_DUSK:
-        		if (!SevenSigns.getInstance().checkIsRookiePostingTicket(itemId))
-        		{
-                	//_log.warning("Someone has tried to spawn a non-Rookie Mercenary though the Seal of Strife is controlled by Revolutionaries of Dusk.");       	
-        			activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE));
-        			return;
-        		}          		
-        		break;
-        	case SevenSigns.CABAL_DAWN:        	
-        		break;
-        }                
-        
-        if(MercTicketManager.getInstance().isAtCasleLimit(item.getItemId()))
-        {
-        	activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE));
+		}
+		
+		//Checking Seven Signs Quest Period
+		if (SevenSigns.getInstance().getCurrentPeriod() != SevenSigns.PERIOD_SEAL_VALIDATION)
+		{
+			//_log.warning("Someone has tried to spawn a guardian during Quest Event Period of The Seven Signs.");
+			activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE));
+			return;
+		}
+		//Checking the Seal of Strife status
+		switch (SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_STRIFE))
+		{
+			case SevenSigns.CABAL_NULL:
+				if (SevenSigns.getInstance().checkIsDawnPostingTicket(itemId))
+				{
+					//_log.warning("Someone has tried to spawn a Dawn Mercenary though the Seal of Strife is not controlled by anyone.");
+					activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE));
+					return;
+				}
+				break;
+			case SevenSigns.CABAL_DUSK:
+				if (!SevenSigns.getInstance().checkIsRookiePostingTicket(itemId))
+				{
+					//_log.warning("Someone has tried to spawn a non-Rookie Mercenary though the Seal of Strife is controlled by Revolutionaries of Dusk.");
+					activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE));
+					return;
+				}
+				break;
+			case SevenSigns.CABAL_DAWN:
+				break;
+		}
+		
+		if(MercTicketManager.getInstance().isAtCasleLimit(item.getItemId()))
+		{
+			activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE));
 			return;
 		}
 		

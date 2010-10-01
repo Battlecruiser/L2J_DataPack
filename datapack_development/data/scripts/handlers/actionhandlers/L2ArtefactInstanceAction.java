@@ -48,16 +48,16 @@ public class L2ArtefactInstanceAction implements IActionHandler
 	{
 		if (!((L2Npc)target).canTarget(activeChar))
 			return false;
-
+		
 		if (activeChar.getTarget() != target)
 		{
 			// Set the target of the L2PcInstance activeChar
 			activeChar.setTarget(target);
-
+			
 			// Send a Server->Client packet MyTargetSelected to the L2PcInstance activeChar
 			MyTargetSelected my = new MyTargetSelected(target.getObjectId(), 0);
 			activeChar.sendPacket(my);
-
+			
 			// Send a Server->Client packet ValidateLocation to correct the L2ArtefactInstance position and heading on the client
 			activeChar.sendPacket(new ValidateLocation((L2Character)target));
 		}
@@ -72,7 +72,7 @@ public class L2ArtefactInstanceAction implements IActionHandler
 		}
 		return true;
 	}
-
+	
 	public InstanceType getInstanceType()
 	{
 		return InstanceType.L2ArtefactInstance;

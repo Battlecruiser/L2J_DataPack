@@ -30,6 +30,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2RiftInvaderInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.jython.QuestJython;
 import com.l2jserver.gameserver.templates.chars.L2NpcTemplate;
+import com.l2jserver.gameserver.util.Util;
 
 /**
  * 
@@ -41,49 +42,41 @@ public class L2AttackableAIScript extends QuestJython
 {
 	
 	/**
-	 * This is used to register all monsters contained in mobs for a particular script
+	 * This is used to register all monsters contained in mobs for a particular script<BR>
+	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method register ID for all QuestEventTypes<BR>
+	 * Do not use for group_template AIs</B></FONT><BR>
 	 * @param mobs
+	 * @see #registerMobs(int[], QuestEventType...)
 	 */
-	public void registerMobs (int[] mobs)
+	public void registerMobs(int[] mobs)
 	{
 		for (int id : mobs)
 		{
-			this.addEventId(id, Quest.QuestEventType.ON_ATTACK);
-			this.addEventId(id, Quest.QuestEventType.ON_KILL);
-			this.addEventId(id, Quest.QuestEventType.ON_SPAWN);
-			this.addEventId(id, Quest.QuestEventType.ON_SPELL_FINISHED);
-			this.addEventId(id, Quest.QuestEventType.ON_SKILL_SEE);
-			this.addEventId(id, Quest.QuestEventType.ON_FACTION_CALL);
-			this.addEventId(id, Quest.QuestEventType.ON_AGGRO_RANGE_ENTER);			
+			addEventId(id, QuestEventType.ON_ATTACK);
+			addEventId(id, QuestEventType.ON_KILL);
+			addEventId(id, QuestEventType.ON_SPAWN);
+			addEventId(id, QuestEventType.ON_SPELL_FINISHED);
+			addEventId(id, QuestEventType.ON_SKILL_SEE);
+			addEventId(id, QuestEventType.ON_FACTION_CALL);
+			addEventId(id, QuestEventType.ON_AGGRO_RANGE_ENTER);
 		}
 	}
 	
 	/**
-	 * This is used simply for convenience of replacing
-	 * jython 'element in list' boolean method.
+	 * This is used to register all monsters contained in mobs for a particular script
+	 * event types defined in types.
+	 * @param mobs
+	 * @param types
 	 */
-	public static <T> boolean contains(T[] array, T obj)
+	public void registerMobs(int[] mobs, QuestEventType... types)
 	{
-		for (int i = 0; i < array.length; i++)
+		for (int id : mobs)
 		{
-			if (array[i] == obj)
+			for (QuestEventType type : types)
 			{
-				return true;
+				addEventId(id, type);
 			}
 		}
-		return false;
-	}
-
-	public static boolean contains(int[] array, int obj)
-	{
-		for (int i = 0; i < array.length; i++)
-		{
-			if (array[i] == obj)
-			{
-				return true;
-			}
-		}
-		return false;
 	}
 	
 	public L2AttackableAIScript (int questId, String name, String descr)
@@ -102,29 +95,29 @@ public class L2AttackableAIScript extends QuestJython
 	{
 		return null;
 	}
-
+	
 	@Override
-	public String onSkillSee (L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet) 
-    { 
-    	if (caster == null) 
-    	{
-    		return null;
-    	}
-    	if (!(npc instanceof L2Attackable))
-    	{
-    		return null;
-    	}
-    	
-    	L2Attackable attackable = (L2Attackable)npc; 
-    	
-    	int skillAggroPoints = skill.getAggroPoints();
-    	
-    	if (caster.getPet() != null)
-    	{
-    		if (targets.length == 1 && contains(targets, caster.getPet()))
-    			skillAggroPoints = 0;
-    	}
-    	
+	public String onSkillSee (L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
+	{
+		if (caster == null)
+		{
+			return null;
+		}
+		if (!(npc instanceof L2Attackable))
+		{
+			return null;
+		}
+		
+		L2Attackable attackable = (L2Attackable)npc;
+		
+		int skillAggroPoints = skill.getAggroPoints();
+		
+		if (caster.getPet() != null)
+		{
+			if (targets.length == 1 && Util.contains(targets, caster.getPet()))
+				skillAggroPoints = 0;
+		}
+		
 		if (skillAggroPoints > 0)
 		{
 			if ( attackable.hasAI() && (attackable.getAI().getIntention() == AI_INTENTION_ATTACK))
@@ -140,76 +133,82 @@ public class L2AttackableAIScript extends QuestJython
 				}
 			}
 		}
-    	
-    	return null;
-    }
-    
-    @Override
-	public String onFactionCall (L2Npc npc, L2Npc caller, L2PcInstance attacker, boolean isPet) 
-    { 
-    	L2Character originalAttackTarget = (isPet? attacker.getPet(): attacker);
+		
+		return null;
+	}
+	
+	@Override
+	public String onFactionCall (L2Npc npc, L2Npc caller, L2PcInstance attacker, boolean isPet)
+	{
+		if(attacker == null)
+			return null;
+		
+		L2Character originalAttackTarget = (isPet? attacker.getPet(): attacker);
 		if ( attacker.isInParty()
 				&& attacker.getParty().isInDimensionalRift())
 		{
 			byte riftType = attacker.getParty().getDimensionalRift().getType();
 			byte riftRoom = attacker.getParty().getDimensionalRift().getCurrentRoom();
-
+			
 			if (caller instanceof L2RiftInvaderInstance
 					&& !DimensionalRiftManager.getInstance().getRoom(riftType, riftRoom).checkIfInZone(npc.getX(), npc.getY(), npc.getZ()))
 			{
 				return null;
 			}
-		}    	
-    	
+		}
+		
 		// By default, when a faction member calls for help, attack the caller's attacker.
-    	// Notify the AI with EVT_AGGRESSION
+		// Notify the AI with EVT_AGGRESSION
 		npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, originalAttackTarget, 1);
-    	
-    	return null;
-    }
-    
-    @Override
-	public String onAggroRangeEnter (L2Npc npc, L2PcInstance player, boolean isPet) 
-    { 
-    	L2Character target = isPet ? player.getPet() : player;
-    	
-    	((L2Attackable) npc).addDamageHate(target, 0, 1);
-
+		
+		return null;
+	}
+	
+	@Override
+	public String onAggroRangeEnter (L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		if (player == null)
+			return null;
+		
+		L2Character target = isPet ? player.getPet() : player;
+		
+		((L2Attackable) npc).addDamageHate(target, 0, 1);
+		
 		// Set the intention to the L2Attackable to AI_INTENTION_ACTIVE
 		if (npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE)
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-    	return null; 
-    }
-
-    @Override
-	public String onSpawn (L2Npc npc) 
-    { 
-    	return null; 
-    }
-    
-    @Override
-	public String onAttack (L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
-    {	
-    	if ((attacker != null) && (npc instanceof L2Attackable))
-    	{
-	    	L2Attackable attackable = (L2Attackable)npc; 
+		return null;
+	}
 	
-	    	L2Character originalAttacker = isPet? attacker.getPet(): attacker;
-	    	attackable.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, originalAttacker);
-	    	attackable.addDamageHate(originalAttacker, damage, (damage*100)/(attackable.getLevel()+7));
-    	}
-    	return null;
-    }
-
-    @Override
-	public String onKill (L2Npc npc, L2PcInstance killer, boolean isPet) 
-    { 
-    	return null; 
-    }
-    
-    public static void main(String[] args)
-    {
-    	L2AttackableAIScript ai = new L2AttackableAIScript(-1,"L2AttackableAIScript","L2AttackableAIScript");
+	@Override
+	public String onSpawn (L2Npc npc)
+	{
+		return null;
+	}
+	
+	@Override
+	public String onAttack (L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	{
+		if ((attacker != null) && (npc instanceof L2Attackable))
+		{
+			L2Attackable attackable = (L2Attackable)npc;
+			
+			L2Character originalAttacker = isPet? attacker.getPet(): attacker;
+			attackable.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, originalAttacker);
+			attackable.addDamageHate(originalAttacker, damage, (damage*100)/(attackable.getLevel()+7));
+		}
+		return null;
+	}
+	
+	@Override
+	public String onKill (L2Npc npc, L2PcInstance killer, boolean isPet)
+	{
+		return null;
+	}
+	
+	public static void main(String[] args)
+	{
+		L2AttackableAIScript ai = new L2AttackableAIScript(-1,"L2AttackableAIScript","L2AttackableAIScript");
 		// register all mobs here...
 		for (int level =1; level<100; level++)
 		{
@@ -237,5 +236,5 @@ public class L2AttackableAIScript extends QuestJython
 				}
 			}
 		}
-    }
+	}
 }

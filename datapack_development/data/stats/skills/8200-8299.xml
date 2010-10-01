@@ -29,7 +29,7 @@
 			<add order="0x10" stat="WIT" val="1" /> <!-- WIT +1 -->
 			<add order="0x10" stat="INT" val="1" /> <!-- INT +1 -->
 			<sub order="0x10" stat="MEN" val="2" /> <!-- MEN -2 -->
-			<mul order="0x30" stat="stunVuln" val="0.5" /> <!-- Stun resistance +50% -->
+			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Stun resistance +50% -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
@@ -48,6 +48,7 @@
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8203" levels="1" name="Dynasty Breastplate - PvP Shield Master">
@@ -61,7 +62,7 @@
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 effect -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Darkness resistance is increased +8 -->
 			<mul order="0x30" stat="gainHp" val="1.03" /> <!-- Received Increased Heal +3% -->
-			<mul order="0x30" stat="stunVuln" val="0.5" /> <!-- Shock resistance is increased +50% -->
+			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Shock resistance is increased +50% -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
@@ -135,6 +136,7 @@
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8208" levels="1" name="Dynasty Leather Armor - PvP Dagger Master">
@@ -147,7 +149,7 @@
 			<add order="0x40" stat="rEvas" val="4.3" /> <!-- Evasion +4.3 -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 Effect -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
-			<mul order="0x30" stat="rootVuln" val="0.87" /> <!-- Hold resistance are increased +13% -->
+			<sub order="0x40" stat="rootVuln" val="13" /> <!-- Hold resistance are increased +13% -->
 			<mul order="0x30" stat="pAtkSpd" val="1.0266" /> <!-- Atk. Spd. are increased +2.66% -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
@@ -186,6 +188,7 @@
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8211" levels="1" name="Dynasty Tunic - PvP Healer">
@@ -345,7 +348,7 @@
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
 			<mul order="0x30" stat="gainHp" val="1.04" /> <!-- Heal Capacity +4% -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<mul order="0x30" stat="stunVuln" val="0.85" /> <!-- Stun Resistance +15 -->
+			<sub order="0x40" stat="stunVuln" val="15" /> <!-- Stun Resistance +15 -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
@@ -415,7 +418,7 @@
 			<add order="0x40" stat="rEvas" val="5.3" /> <!-- Evasion +5.3 -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<mul order="0x30" stat="rootVuln" val="0.85" /> <!-- Hold Resistance +15% -->
+			<sub order="0x40" stat="rootVuln" val="15" /> <!-- Hold Resistance +15% -->
 			<mul order="0x30" stat="pAtkSpd" val="1.0324" /> <!-- Atk. Spd. +3.24% -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
@@ -609,8 +612,8 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.0067" />
-			<mul order="0x30" stat="sleepVuln" val="0.8833" />
-			<mul order="0x30" stat="rootVuln" val="0.8833" />
+			<sub order="0x40" stat="sleepVuln" val="12" />
+			<sub order="0x40" stat="rootVuln" val="12" />
 		</for>
 	</skill>
 	<skill id="8236" levels="1" name="Nightmare Helm">
@@ -620,8 +623,8 @@
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0067" />
 			<mul order="0x30" stat="mAtk" val="1.0133" />
-			<mul order="0x30" stat="sleepVuln" val="0.8833" />
-			<mul order="0x30" stat="rootVuln" val="0.8833" />
+			<sub order="0x40" stat="sleepVuln" val="12" />
+			<sub order="0x40" stat="rootVuln" val="12" />
 		</for>
 	</skill>
 	<skill id="8237" levels="1" name="Shalin Heal">
@@ -1013,8 +1016,8 @@
 			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
 			<mul order="0x30" stat="pDef" val="1.0557" /> <!-- P. Def. +5.57% -->
 			<add order="0x40" stat="maxHp" val="531" /> <!-- Max HP by 531 -->
-			<mul order="0x30" stat="sleepVuln" val="0.3" /> <!-- resistance to sleep by 70% -->
-			<mul order="0x30" stat="rootVuln" val="0.3" /> <!-- resistance to hold by 70% -->
+			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- resistance to sleep by 70% -->
+			<sub order="0x40" stat="rootVuln" val="70" /> <!-- resistance to hold by 70% -->
 		</for>
 	</skill>
 	<skill id="8284" levels="1" name="Vesper Noble Heavy Armor Set">
@@ -1027,8 +1030,8 @@
 			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
 			<mul order="0x30" stat="pDef" val="1.0557" /> <!-- P. Def. +5.57% -->
 			<add order="0x40" stat="maxHp" val="541" /> <!-- Max HP 541 -->
-			<mul order="0x30" stat="sleepVuln" val="0.3" /> <!-- resistance to sleep by 70% -->
-			<mul order="0x30" stat="rootVuln" val="0.3" /> <!-- resistance to hold by 70% -->
+			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- resistance to sleep by 70% -->
+			<sub order="0x40" stat="rootVuln" val="70" /> <!-- resistance to hold by 70% -->
 			<add order="0x10" stat="cloak" val="1" />
 		</for>
 	</skill>
@@ -1072,7 +1075,7 @@
 			<mul order="0x30" stat="mAtk" val="1.0847" /> <!-- M. Atk. 8.47% -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Speed 15% -->
 			<mul order="0x30" stat="regMp" val="1.0557" /> <!-- MP Recovery Rate by 5.57% -->
-			<mul order="0x30" stat="stunVuln" val="0.5" /> <!-- resistance to Stun Attacks by 50% -->
+			<sub order="0x40" stat="stunVuln" val="50" /> <!-- resistance to Stun Attacks by 50% -->
 			<sub order="0x40" stat="cancel" val="30" /> <!-- decreases the damage to be cancelled by magic by 30 -->
 		</for>
 	</skill>
@@ -1087,12 +1090,12 @@
 			<mul order="0x30" stat="mAtk" val="1.0847" /> <!-- M. Atk. 8.47% -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Speed 15% -->
 			<mul order="0x30" stat="regMp" val="1.0557" /> <!-- MP Recovery Rate by 5.57% -->
-			<mul order="0x30" stat="stunVuln" val="0.5" /> <!-- resistance to Stun Attacks by 50% -->
+			<sub order="0x40" stat="stunVuln" val="50" /> <!-- resistance to Stun Attacks by 50% -->
 			<sub order="0x40" stat="cancel" val="30" /> <!-- decreases the damage to be cancelled by magic by 30 -->
 			<add order="0x10" stat="cloak" val="1" />
 		</for>
 	</skill>
-	<skill id="8289" levels="1" name="Special Ability Focus">
+	<skill id="8289" levels="3" name="Special Ability Focus">
 		<!--
 			Note: With Gracia Final there are 4 new SA Focus skills and 4 levels of focus for the new Vesper weapons. 
 			Not too hard to figure out what goes where...
@@ -1102,12 +1105,14 @@
 			14130 Vesper Fighter - Focus 8289 1 
 			14490 Vesper Fighter {PvP} - Focus 8289 1
 		-->
+		<table name="#rCrit"> 96 139 139 </table>
+		<table name="#magicLvl"> 84 84 84 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="magicLvl" val="84" /> <!-- Guessing -->
+		<set name="magicLvl" val="#magicLvl" /> <!-- Guessing -->
 		<for>
-			<add order="0x40" stat="rCrit" val="96" />
+			<add order="0x40" stat="rCrit" val="#rCrit" />
 			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
@@ -1136,8 +1141,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="rootVuln" val="0.7" /> <!-- Increases resistance to hold attacks by 30% -->
-			<mul order="0x30" stat="rootProf" val="1.3" /> <!-- Increases hold attack bonus by 30% -->
+			<sub order="0x40" stat="rootVuln" val="30" /> <!-- Increases resistance to hold attacks by 30% -->
+			<add order="0x40" stat="rootProf" val="30" /> <!-- Increases hold attack bonus by 30% -->
 			<mul order="0x30" stat="cAtk" val="1.15" /> <!-- Increases critical attack power by 15% -->
 			<add order="0x40" stat="accCombat" val="2" /> <!-- Increases accuracy by 2 -->
 		</for>
@@ -1147,10 +1152,10 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="stunVuln" val="0.8" /> <!-- Increases resistance to shock attack by 20% -->
-			<mul order="0x30" stat="derangementVuln" val="0.8" /> <!-- Increases resistance to mind attack by 20% -->
-			<mul order="0x30" stat="stunProf" val="1.2" /> <!-- Increases shock attack bonus by 20% -->
-			<mul order="0x30" stat="derangementProf" val="1.2" /> <!-- Increases mind attack bonus by 20% -->
+			<sub order="0x40" stat="stunVuln" val="20" /> <!-- Increases resistance to shock attack by 20% -->
+			<sub order="0x40" stat="derangementVuln" val="20" /> <!-- Increases resistance to mind attack by 20% -->
+			<add order="0x40" stat="stunProf" val="20" /> <!-- Increases shock attack bonus by 20% -->
+			<add order="0x40" stat="derangementProf" val="20" /> <!-- Increases mind attack bonus by 20% -->
 			<add order="0x40" stat="absorbDam" val="4" /> <!-- Recovers 4% of the damage to the enemy as your HP -->
 		</for>
 	</skill>
@@ -1159,12 +1164,12 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="paralyzeVuln" val="0.85" /> <!-- Increases resistance to paralysis attacks by 15% -->
-			<mul order="0x30" stat="stunVuln" val="0.85" /> <!-- Increases resistance to shock attacks by 15% -->
-			<mul order="0x30" stat="sleepVuln" val="0.85" /> <!-- Increases resistance to sleep attacks by 15% -->
-			<mul order="0x30" stat="paralyzeProf" val="1.15" /> <!-- Increases paralysis attack bonus by 15% -->
-			<mul order="0x30" stat="stunProf" val="1.15" /> <!-- Increases shock attack bonus by 15% -->
-			<mul order="0x30" stat="sleepProf" val="1.15" /> <!-- Increases sleep attack bonus by 15% -->
+			<sub order="0x40" stat="paralyzeVuln" val="15" /> <!-- Increases resistance to paralysis attacks by 15% -->
+			<sub order="0x40" stat="stunVuln" val="15" /> <!-- Increases resistance to shock attacks by 15% -->
+			<sub order="0x40" stat="sleepVuln" val="15" /> <!-- Increases resistance to sleep attacks by 15% -->
+			<add order="0x40" stat="paralyzeProf" val="15" /> <!-- Increases paralysis attack bonus by 15% -->
+			<add order="0x40" stat="stunProf" val="15" /> <!-- Increases shock attack bonus by 15% -->
+			<add order="0x40" stat="sleepProf" val="15" /> <!-- Increases sleep attack bonus by 15% -->
 			<mul order="0x30" stat="pReuse" val="0.95" /> <!-- Decreases the skill's reuse time by 5% -->
 			<mul order="0x30" stat="mReuse" val="0.95" /> <!-- Decreases the skill's reuse time by 5% -->
 			<add order="0x40" stat="reflectDam" val="4" /> <!-- Reflects 4% of the damage received back to the enemy -->

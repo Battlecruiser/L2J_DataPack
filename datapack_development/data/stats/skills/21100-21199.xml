@@ -57,7 +57,7 @@
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="runSpd" val="1.2" />
-				<mul order="0x30" stat="debuffVuln" val="0.9" />
+				<sub order="0x40" stat="debuffVuln" val="10" />
 			</effect>
 		</for>
 	</skill>
@@ -130,7 +130,7 @@
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="runSpd" val="1.2" />
-				<mul order="0x30" stat="debuffVuln" val="0.9" />
+				<sub order="0x40" stat="debuffVuln" val="10" />
 			</effect>
 		</for>
 	</skill>
@@ -184,7 +184,7 @@
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="runSpd" val="1.2" />
-				<mul order="0x30" stat="debuffVuln" val="0.9" />
+				<sub order="0x40" stat="debuffVuln" val="10" />
 			</effect>
 		</for>
 	</skill>
@@ -1057,9 +1057,12 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="21191" levels="1" name="Agathion Seal Cancel - Phoenix">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="AGATHION" />
+		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="npcId" val="1574" />
 	</skill>
 	<skill id="21192" levels="1" name="Silent Move">
 		<!-- Will not receive preemptive attacks from the monsters for 2 minutes. Movement Speed is decreased by 40%. Cooldown takes 4 hours. -->
@@ -1069,6 +1072,44 @@
 	</skill>
 	<skill id="21193" levels="1" name="Power of Guardian Deity">
 		<!-- Increases Critical attack power by 35% for 10 minutes. Cooldown takes 1 hour. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="21194" levels="1" name="Agathion Seal Cancel - Three-headed Dragon">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="AGATHION" />
+		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="npcId" val="1575" />
+	</skill>
+	<skill id="21195" levels="1" name="Blessed Child Transformation Skill - Trejuo">
+		<!-- Transforms into the Blessed Child Trejuo. When transformed into Trejuo, recovers energy upon acquiring Exp. points. Reuse delay is 4 hours. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="21196" levels="1" name="Blessed Child Transformation Skill - Sujin">
+		<!-- Transforms into the Blessed Child Sujin. When transformed into Sujin, recovers energy upon acquiring Exp. points. Reuse delay is 4 hours. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="21197" levels="1" name="Buff of Virtue">
+		<!-- Recovers all HP, MP, and CP with the power of virtue. Reuse delay 30 minutes. It can only be used when HP, MP, and CP are all below 30%. When you use the skill, 1 Proof of a Warrior is consumed. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="21198" levels="1" name="Silence of Fidelity">
+		<!-- Through the power of loyalty, raises party members' physical P. Def., M. Def. by 30%, physical P. Atk. by 20%, M. Atk. by 45%, and moving speed by 30 for 5 minutes. Reuse delay 30 minutes. Consumes 1 Proof of a Warrior upon skill use. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="21199" levels="1" name="Vitality of Courage">
+		<!-- Recovers all energy with the power of courage, and maintains the energy stage for 5 minutes. Reuse delay 30 minutes. When you use the skill, 1 Proof of a Warrior is consumed. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />

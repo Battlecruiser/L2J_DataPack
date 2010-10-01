@@ -29,23 +29,23 @@ public class L2ItemInstanceAction implements IActionHandler
 		// this causes the validate position handler to do the pickup if the location is reached.
 		// mercenary tickets can only be picked up by the castle owner.
 		final int castleId = MercTicketManager.getInstance().getTicketCastleId(((L2ItemInstance)target).getItemId());
-
+		
 		if (castleId > 0 &&  (!activeChar.isCastleLord(castleId) || activeChar.isInParty()))
 		{
 			if (activeChar.isInParty())    //do not allow owner who is in party to pick tickets up
 				activeChar.sendMessage("You cannot pickup mercenaries while in a party.");
 			else
 				activeChar.sendMessage("Only the castle lord can pickup mercenaries.");
-
+			
 			activeChar.setTarget(target);
 			activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		}
 		else if (!activeChar.isFlying()) // cannot pickup
 			activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_PICK_UP, target);
-
+		
 		return true;
 	}
-
+	
 	public InstanceType getInstanceType()
 	{
 		return InstanceType.L2ItemInstance;

@@ -9,9 +9,12 @@ of this directory a little bit.
 
 101.xml  -> Tickets for pet collars Exchange
 102.xml  -> Noblesse Gate Pass for items
+201.xml  -> Test server helper - Purchase wearable items
+202.xml  -> Test server helper - Purchase quest items and rare spellbooks
 382.xml  -> Quest 382: Head Blacksmith Vergara
 426.xml  -> Quest 426: Fishing Shots
 500.xml  -> Seven Signs - Purchase consumable items
+620.xml  -> Blacksmith Pinter - Shadow academy items
 631.xml  -> Warehouse Freightman - enchants
 648.xml  -> Quest 648: An Ice Merchants Dream
 
@@ -73,6 +76,8 @@ of this directory a little bit.
 311262514.xml -> Seven Signs - Blacksmith of Mammon - Unseal S80-Grade Armor
 311262515.xml -> Seven Signs - Blacksmith of Mammon - Unseal S80-grade Accesories
 311262516.xml -> Seven Signs - Blacksmith of Mammon - Exchange rare armor for superior armor.
+311262517.xml -> Seven Signs - Blacksmith of Mammon - Unseal S84-Grade Armor
+311262518.xml -> Seven Signs - Blacksmith of Mammon - Unseal S84-grade Accesories
 
 306893001.xml -> Shadow weaponry system. D-grade coupons exchange
 306893002.xml -> Shadow weaponry system. C-grade coupons exchange
@@ -152,7 +157,8 @@ of this directory a little bit.
 326150003.xml -> Maestro Ishuma - Remove Dynasty, Icarus, Vesper Weapon SA
 326150004.xml -> Maestro Ishuma - Unseal Dynasty, Vesper Armor
 326150005.xml -> Maestro Ishuma - Unseal Dynasty, Vesper Accesories
-326150005.xml -> Maestro Ishuma - Upgrade Vesper Armor to Vesper Noble Armor
+326150006.xml -> Maestro Ishuma - Upgrade Vesper Armor to Vesper Noble Armor
+326150008.xml -> Maestro Ishuma - Change the class of Dynasty High Grade Armor
 
 323470001.xml -> Shadai - Cursed Soul Crystals
 323470002.xml -> Shadai - Shoulder Ornament and Forgotten Scrolls

@@ -41,8 +41,8 @@ public class L2SummonAction implements IActionHandler
 			activeChar.sendPacket(new SystemMessage(SystemMessageId.FAILED_CHANGE_TARGET));
 			return false;
 		}
-
-
+		
+		
 		if (activeChar == ((L2Summon)target).getOwner() && activeChar.getTarget() == target)
 		{
 			activeChar.sendPacket(new PetStatusShow((L2Summon)target));
@@ -52,12 +52,12 @@ public class L2SummonAction implements IActionHandler
 		{
 			if (Config.DEBUG)
 				_log.fine("new target selected:"+target.getObjectId());
-
+			
 			activeChar.setTarget(target);
 			activeChar.sendPacket(new ValidateLocation((L2Character)target));
 			MyTargetSelected my = new MyTargetSelected(target.getObjectId(), activeChar.getLevel() - ((L2Character)target).getLevel());
 			activeChar.sendPacket(my);
-
+			
 			//sends HP/MP status of the summon to other characters
 			StatusUpdate su = new StatusUpdate(target);
 			su.addAttribute(StatusUpdate.CUR_HP, (int) ((L2Character)target).getCurrentHp());
@@ -98,7 +98,7 @@ public class L2SummonAction implements IActionHandler
 		}
 		return true;
 	}
-
+	
 	public InstanceType getInstanceType()
 	{
 		return InstanceType.L2Summon;

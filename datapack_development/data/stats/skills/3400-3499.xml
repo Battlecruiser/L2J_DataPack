@@ -10,7 +10,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="derangementVuln" val="0.91" /> <!-- Fear Resistance +9 -->
+			<sub order="0x40" stat="derangementVuln" val="9" /> <!-- Fear Resistance +9 -->
 		</for>
 	</skill>
 	<skill id="3402" levels="1" name="Dynasty Resistance Ring">
@@ -18,7 +18,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="derangementVuln" val="0.96" /> <!-- Fear Resistance +4 -->
+			<sub order="0x40" stat="derangementVuln" val="4" /> <!-- Fear Resistance +4 -->
 		</for>
 	</skill>
 	<skill id="3403" levels="1" name="Dynasty Resistance Earring">
@@ -26,7 +26,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="derangementVuln" val="0.94" /> <!-- Fear Resistance +6 -->
+			<sub order="0x40" stat="derangementVuln" val="6" /> <!-- Fear Resistance +6 -->
 		</for>
 	</skill>
 	<skill id="3404" levels="1" name="Mystery Effect">
@@ -35,10 +35,9 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="3405" levels="1" name="Large Firecracker Effect">
-		<!-- HOT ??? this a temp hack to make it work? -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="3406" levels="1" name="Weight Decrease Ring">
 		<set name="target" val="TARGET_NONE" />
@@ -113,6 +112,7 @@
 			<mul order="0x30" stat="pDef" val="1.046" /> <!-- P. Def +4.6% -->
 			<add order="0x40" stat="maxHp" val="418" /> <!-- MaxHP +418 -->
 			<add order="0x40" stat="darkRes" val="6" /> <!-- Darkness Resistance +6 -->
+			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="3413" levels="1" name="Dynasty Leather Armor">
@@ -126,6 +126,7 @@
 			<add order="0x40" stat="rEvas" val="1.72" /> <!-- Evacion +1.72 -->
 			<add order="0x40" stat="maxHp" val="418" /> <!-- MaxHP +418 -->
 			<add order="0x40" stat="darkRes" val="6" /> <!-- Darkness Resistance +6 -->
+			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="3414" levels="1" name="Dynasty Leather Armor - Force Master">
@@ -169,6 +170,7 @@
 			<mul order="0x30" stat="mAtkSpd" val="1.12" /> <!-- Casting Spd. +12% -->
 			<add order="0x40" stat="maxMp" val="257" /> <!-- Max MP +257 -->
 			<add order="0x40" stat="darkRes" val="6" /> <!-- Darkness Resistance +6 -->
+			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="3417" levels="1" name="Equipped with Shield">

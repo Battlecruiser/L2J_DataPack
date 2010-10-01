@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="23200" levels="1" name="Ball Trapping Penalty Kick Agathion Special Skill - Soccer Ball of Cheers">
+		<!-- Provides a soccer ball containing mysterious energy with the power of cheers. When you use the soccer ball, you can receive a random gift. Reuse Delay 10 seconds. Consumes 500 energy. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23201" levels="1" name="Ball Trapping Gnocian Agathion Cute Trick">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
+		<cond msgId="2292">
+			<player agathionId="1576" />
+		</cond>
+	</skill>
+	<skill id="23202" levels="1" name="Ball Trapping Orodriel Agathion Cute Trick">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
+		<cond msgId="2292">
+			<player agathionId="1577" />
+		</cond>
+	</skill>
+	<skill id="23203" levels="1" name="Penalty Kick Agathion Cute Trick">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
+		<cond msgId="2292">
+			<player agathionId="1578" />
+		</cond>
+	</skill>
+	<skill id="23204" levels="1" name="Ball Trapping Gnocian Agathion Cute Trick">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
+		<cond msgId="2292">
+			<player agathionId="1579" />
+		</cond>
+	</skill>
+	<skill id="23205" levels="1" name="Ball Trapping Orodriel Agathion Cute Trick">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
+		<cond msgId="2292">
+			<player agathionId="1580" />
+		</cond>
+	</skill>
+	<skill id="23206" levels="1" name="Penalty Kick Agathion Cute Trick">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
+		<cond msgId="2292">
+			<player agathionId="1581" />
+		</cond>
+	</skill>
+	<skill id="23207" levels="1" name="Ball Trapping Gnocian Agathion Cute Trick">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
+		<cond msgId="2292">
+			<player agathionId="1582" />
+		</cond>
+	</skill>
+	<skill id="23208" levels="1" name="Ball Trapping Orodriel Agathion Cute Trick">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
+		<cond msgId="2292">
+			<player agathionId="1583" />
+		</cond>
+	</skill>
+	<skill id="23209" levels="1" name="Penalty Kick Agathion Cute Trick">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
+		<cond msgId="2292">
+			<player agathionId="1584" />
+		</cond>
+	</skill>
+	<skill id="23210" levels="85" name="Aura Flare">
+		<!--
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 60.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 64.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 68.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 73.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 77.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 82.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 87.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 93.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 98.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 104.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 110.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 116.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 122.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 129.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 136.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 142.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 150.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 157.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 165.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 173.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 181.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 189.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 197.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 206.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 215.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 224.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 233.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 243.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 253.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 263.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 273.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 283.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 294.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 305.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 316.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 327.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 338.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 350.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 361.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 373.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 385.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 397.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 410.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 422.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 435.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 447.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 460.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 473.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 486.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 499.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 512.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 525.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 539.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 552.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 565.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 579.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 592.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 605.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 619.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 632.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 645.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 658.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 672.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 685.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 697.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 710.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 723.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 735.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 748.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 760.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 772.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 784.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 795.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 806.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 817.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 830.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 845.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 862.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 884.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 906.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 929.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 952.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 976.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 1001.
+			Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 1024.
+		-->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23211" levels="85" name="Prominence">
+		<!--
+			Condenses air to burst flames. Power 75.
+			Condenses air to burst flames. Power 80.
+			Condenses air to burst flames. Power 85.
+			Condenses air to burst flames. Power 91.
+			Condenses air to burst flames. Power 97.
+			Condenses air to burst flames. Power 103.
+			Condenses air to burst flames. Power 109.
+			Condenses air to burst flames. Power 116.
+			Condenses air to burst flames. Power 123.
+			Condenses air to burst flames. Power 130.
+			Condenses air to burst flames. Power 137.
+			Condenses air to burst flames. Power 145.
+			Condenses air to burst flames. Power 153.
+			Condenses air to burst flames. Power 161.
+			Condenses air to burst flames. Power 169.
+			Condenses air to burst flames. Power 178.
+			Condenses air to burst flames. Power 187.
+			Condenses air to burst flames. Power 196.
+			Condenses air to burst flames. Power 206.
+			Condenses air to burst flames. Power 216.
+			Condenses air to burst flames. Power 226.
+			Condenses air to burst flames. Power 236.
+			Condenses air to burst flames. Power 247.
+			Condenses air to burst flames. Power 257.
+			Condenses air to burst flames. Power 269.
+			Condenses air to burst flames. Power 280.
+			Condenses air to burst flames. Power 292.
+			Condenses air to burst flames. Power 304.
+			Condenses air to burst flames. Power 316.
+			Condenses air to burst flames. Power 328.
+			Condenses air to burst flames. Power 341.
+			Condenses air to burst flames. Power 354.
+			Condenses air to burst flames. Power 367.
+			Condenses air to burst flames. Power 381.
+			Condenses air to burst flames. Power 394.
+			Condenses air to burst flames. Power 408.
+			Condenses air to burst flames. Power 423.
+			Condenses air to burst flames. Power 437.
+			Condenses air to burst flames. Power 451.
+			Condenses air to burst flames. Power 466.
+			Condenses air to burst flames. Power 481.
+			Condenses air to burst flames. Power 496.
+			Condenses air to burst flames. Power 512.
+			Condenses air to burst flames. Power 527.
+			Condenses air to burst flames. Power 543.
+			Condenses air to burst flames. Power 559.
+			Condenses air to burst flames. Power 575.
+			Condenses air to burst flames. Power 591.
+			Condenses air to burst flames. Power 607.
+			Condenses air to burst flames. Power 624.
+			Condenses air to burst flames. Power 640.
+			Condenses air to burst flames. Power 657.
+			Condenses air to burst flames. Power 673.
+			Condenses air to burst flames. Power 690.
+			Condenses air to burst flames. Power 707.
+			Condenses air to burst flames. Power 723.
+			Condenses air to burst flames. Power 740.
+			Condenses air to burst flames. Power 757.
+			Condenses air to burst flames. Power 773.
+			Condenses air to burst flames. Power 790.
+			Condenses air to burst flames. Power 806.
+			Condenses air to burst flames. Power 823.
+			Condenses air to burst flames. Power 839.
+			Condenses air to burst flames. Power 856.
+			Condenses air to burst flames. Power 872.
+			Condenses air to burst flames. Power 888.
+			Condenses air to burst flames. Power 903.
+			Condenses air to burst flames. Power 919.
+			Condenses air to burst flames. Power 935.
+			Condenses air to burst flames. Power 950.
+			Condenses air to burst flames. Power 965.
+			Condenses air to burst flames. Power 979.
+			Condenses air to burst flames. Power 994.
+			Condenses air to burst flames. Power 1008.
+			Condenses air to burst flames. Power 1022.
+			Condenses air to burst flames. Power 1037.
+			Condenses air to burst flames. Power 1056.
+			Condenses air to burst flames. Power 1077.
+			Condenses air to burst flames. Power 1104.
+			Condenses air to burst flames. Power 1132.
+			Condenses air to burst flames. Power 1161.
+			Condenses air to burst flames. Power 1190.
+			Condenses air to burst flames. Power 1220.
+			Condenses air to burst flames. Power 1251.
+			Condenses air to burst flames. Power 1279.
+		-->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23212" levels="85" name="Flame Strike">
+		<!--
+			Hurls a fireball with a wide range that causes a burning trail. Power 38.
+			Hurls a fireball with a wide range that causes a burning trail. Power 40.
+			Hurls a fireball with a wide range that causes a burning trail. Power 43.
+			Hurls a fireball with a wide range that causes a burning trail. Power 46.
+			Hurls a fireball with a wide range that causes a burning trail. Power 49.
+			Hurls a fireball with a wide range that causes a burning trail. Power 52.
+			Hurls a fireball with a wide range that causes a burning trail. Power 55.
+			Hurls a fireball with a wide range that causes a burning trail. Power 58.
+			Hurls a fireball with a wide range that causes a burning trail. Power 62.
+			Hurls a fireball with a wide range that causes a burning trail. Power 65.
+			Hurls a fireball with a wide range that causes a burning trail. Power 69.
+			Hurls a fireball with a wide range that causes a burning trail. Power 73.
+			Hurls a fireball with a wide range that causes a burning trail. Power 77.
+			Hurls a fireball with a wide range that causes a burning trail. Power 81.
+			Hurls a fireball with a wide range that causes a burning trail. Power 85.
+			Hurls a fireball with a wide range that causes a burning trail. Power 89.
+			Hurls a fireball with a wide range that causes a burning trail. Power 94.
+			Hurls a fireball with a wide range that causes a burning trail. Power 98.
+			Hurls a fireball with a wide range that causes a burning trail. Power 103.
+			Hurls a fireball with a wide range that causes a burning trail. Power 108.
+			Hurls a fireball with a wide range that causes a burning trail. Power 113.
+			Hurls a fireball with a wide range that causes a burning trail. Power 118.
+			Hurls a fireball with a wide range that causes a burning trail. Power 124.
+			Hurls a fireball with a wide range that causes a burning trail. Power 129.
+			Hurls a fireball with a wide range that causes a burning trail. Power 135.
+			Hurls a fireball with a wide range that causes a burning trail. Power 140.
+			Hurls a fireball with a wide range that causes a burning trail. Power 146.
+			Hurls a fireball with a wide range that causes a burning trail. Power 152.
+			Hurls a fireball with a wide range that causes a burning trail. Power 158.
+			Hurls a fireball with a wide range that causes a burning trail. Power 164.
+			Hurls a fireball with a wide range that causes a burning trail. Power 171.
+			Hurls a fireball with a wide range that causes a burning trail. Power 177.
+			Hurls a fireball with a wide range that causes a burning trail. Power 184.
+			Hurls a fireball with a wide range that causes a burning trail. Power 191.
+			Hurls a fireball with a wide range that causes a burning trail. Power 197.
+			Hurls a fireball with a wide range that causes a burning trail. Power 204.
+			Hurls a fireball with a wide range that causes a burning trail. Power 212.
+			Hurls a fireball with a wide range that causes a burning trail. Power 219.
+			Hurls a fireball with a wide range that causes a burning trail. Power 226.
+			Hurls a fireball with a wide range that causes a burning trail. Power 233.
+			Hurls a fireball with a wide range that causes a burning trail. Power 241.
+			Hurls a fireball with a wide range that causes a burning trail. Power 248.
+			Hurls a fireball with a wide range that causes a burning trail. Power 256.
+			Hurls a fireball with a wide range that causes a burning trail. Power 264.
+			Hurls a fireball with a wide range that causes a burning trail. Power 272.
+			Hurls a fireball with a wide range that causes a burning trail. Power 280.
+			Hurls a fireball with a wide range that causes a burning trail. Power 288.
+			Hurls a fireball with a wide range that causes a burning trail. Power 296.
+			Hurls a fireball with a wide range that causes a burning trail. Power 304.
+			Hurls a fireball with a wide range that causes a burning trail. Power 312.
+			Hurls a fireball with a wide range that causes a burning trail. Power 320.
+			Hurls a fireball with a wide range that causes a burning trail. Power 329.
+			Hurls a fireball with a wide range that causes a burning trail. Power 337.
+			Hurls a fireball with a wide range that causes a burning trail. Power 345.
+			Hurls a fireball with a wide range that causes a burning trail. Power 354.
+			Hurls a fireball with a wide range that causes a burning trail. Power 362.
+			Hurls a fireball with a wide range that causes a burning trail. Power 370.
+			Hurls a fireball with a wide range that causes a burning trail. Power 379.
+			Hurls a fireball with a wide range that causes a burning trail. Power 387.
+			Hurls a fireball with a wide range that causes a burning trail. Power 395.
+			Hurls a fireball with a wide range that causes a burning trail. Power 403.
+			Hurls a fireball with a wide range that causes a burning trail. Power 412.
+			Hurls a fireball with a wide range that causes a burning trail. Power 420.
+			Hurls a fireball with a wide range that causes a burning trail. Power 428.
+			Hurls a fireball with a wide range that causes a burning trail. Power 436.
+			Hurls a fireball with a wide range that causes a burning trail. Power 444.
+			Hurls a fireball with a wide range that causes a burning trail. Power 452.
+			Hurls a fireball with a wide range that causes a burning trail. Power 460.
+			Hurls a fireball with a wide range that causes a burning trail. Power 468.
+			Hurls a fireball with a wide range that causes a burning trail. Power 475.
+			Hurls a fireball with a wide range that causes a burning trail. Power 483.
+			Hurls a fireball with a wide range that causes a burning trail. Power 490.
+			Hurls a fireball with a wide range that causes a burning trail. Power 497.
+			Hurls a fireball with a wide range that causes a burning trail. Power 504.
+			Hurls a fireball with a wide range that causes a burning trail. Power 511.
+			Hurls a fireball with a wide range that causes a burning trail. Power 519.
+			Hurls a fireball with a wide range that causes a burning trail. Power 528.
+			Hurls a fireball with a wide range that causes a burning trail. Power 539.
+			Hurls a fireball with a wide range that causes a burning trail. Power 552.
+			Hurls a fireball with a wide range that causes a burning trail. Power 566.
+			Hurls a fireball with a wide range that causes a burning trail. Power 581.
+			Hurls a fireball with a wide range that causes a burning trail. Power 595.
+			Hurls a fireball with a wide range that causes a burning trail. Power 610.
+			Hurls a fireball with a wide range that causes a burning trail. Power 626.
+			Hurls a fireball with a wide range that causes a burning trail. Power 640.
+		-->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23213" levels="2" name="Berserker Spirit">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23214" levels="1" name="Good/Bad of Life">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23215" levels="1" name="Good/Bad of Mind">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23216" levels="1" name="Granny Tiger Agathion Cute Trick">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23217" levels="1" name="Granny Tiger Agathion Special Skill - Fundamentals">
+		<!-- For 1 minute(s), 50% of the standard short-range physical damage inflicted on the enemy is recovered as HP. Reuse delay is 1 hours. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23218" levels="1" name="Flower Fairy Spirit Agathion Cute Trick">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23219" levels="1" name="Flower Fairy Spirit Agathion Special Skill - Fairy's Blessing">
+		<!-- For 5 minutes, increases Atk. Spd. by 30% and all attribute defense by 10. Reuse delay is 1 hours. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23220" levels="1" name="Cheerleader Orodriel Agathion Cute Trick">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23221" levels="1" name="Cheerleader Orodriel Agathion Special Skill - Joy of Cheering">
+		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23222" levels="1" name="Cheerleader Lana Agathion Cute Trick">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23223" levels="1" name="Cheerleader Lana Agathion Special Skill - Joy of Cheering">
+		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23224" levels="1" name="Cheerleader Naonin Agathion Cute Trick">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23225" levels="1" name="Cheerleader Naonin Agathion Special Skill - Joy of Cheering">
+		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23226" levels="1" name="Cheerleader Mortia Agathion Cute Trick">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23227" levels="1" name="Cheerleader Mortia Agathion Special Skill - Joy of Cheering">
+		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23228" levels="1" name="Cheerleader Kaurin Agathion Cute Trick">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23229" levels="1" name="Cheerleader Kaurin Agathion Special Skill - Joy of Cheering">
+		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23230" levels="1" name="Cheerleader Meruril Agathion Cute Trick">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23231" levels="1" name="Cheerleader Meruril Agathion Special Skill - Joy of Cheering">
+		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23232" levels="1" name="Handy Agathion Cute Trick">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23233" levels="1" name="Handy Agathion Special Skill - Halloween's Blessing">
+		<!-- For 1 hour, increases Max HP by 40% and Max MP by 40%. Increases Atk. Spd. by 20% and P. Atk. by 10%. Increases resistance to darkness by 20. Reuse delay is 2 hours. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+</list>

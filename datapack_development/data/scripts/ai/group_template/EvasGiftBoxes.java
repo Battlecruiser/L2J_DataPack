@@ -23,16 +23,16 @@ import com.l2jserver.util.Rnd;
 public class EvasGiftBoxes extends Quest
 {
 	final private static int GIFTBOX = 32342;
-
+	
 	final private static int KISSOFEVA = 1073;
-
+	
 	// index 0: without kiss of eva
 	// index 1: with kiss of eva
 	// chance,itemId,...
 	final private static int[][] CHANCES = {{2,9692,1,9693},{100,9692,50,9693}};
-
+	
 	final private static String qn = "EvasGiftBoxes";
-
+	
 	public EvasGiftBoxes(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
@@ -46,9 +46,9 @@ public class EvasGiftBoxes extends Quest
 		npc.setIsNoRndWalk(true);
 		return super.onSpawn(npc);
 	}
-
+	
 	@Override
-	public String onKill (L2Npc npc, L2PcInstance killer, boolean isPet) 
+	public String onKill (L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
 		if (npc.getNpcId() == GIFTBOX)
 		{
@@ -64,7 +64,7 @@ public class EvasGiftBoxes extends Quest
 		}
 		return super.onKill(npc,killer,isPet);
 	}
-
+	
 	public static void main(String[] args)
 	{
 		new EvasGiftBoxes(-1,qn,"ai");

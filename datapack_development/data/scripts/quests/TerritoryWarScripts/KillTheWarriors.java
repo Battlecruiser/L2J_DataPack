@@ -16,16 +16,16 @@ package quests.TerritoryWarScripts;
 
 
 /**
-*
-* @author Gigiikun
-*/
+ *
+ * @author Gigiikun
+ */
 
 public class KillTheWarriors extends TerritoryWarSuperClass
 {
 	public static String qn1 = "735_Makespearsdull";
 	public static int qnu = 735;
 	public static String qna = "Make spears dull";
-
+	
 	public KillTheWarriors()
 	{
 		super(qnu,qn1,qna);

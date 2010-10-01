@@ -32,23 +32,23 @@ public class Wear implements IBypassHandler
 	{
 		"Wear"
 	};
-
+	
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2Npc))
 			return false;
-
+		
 		if (!Config.ALLOW_WEAR)
 			return false;
-
+		
 		try
 		{
 			StringTokenizer st = new StringTokenizer(command, " ");
 			st.nextToken();
-
+			
 			if (st.countTokens() < 1)
 				return false;
-
+			
 			showWearWindow(activeChar, Integer.parseInt(st.nextToken()));
 			return true;
 		}
@@ -58,16 +58,16 @@ public class Wear implements IBypassHandler
 		}
 		return false;
 	}
-
+	
 	private static final void showWearWindow(L2PcInstance player, int val)
 	{
 		player.tempInventoryDisable();
-
+		
 		if (Config.DEBUG)
 			_log.fine("Showing wearlist");
-
+		
 		L2TradeList list = TradeController.getInstance().getBuyList(val);
-
+		
 		if (list != null)
 		{
 			ShopPreviewList bl = new ShopPreviewList(list, player.getAdena(), player.getExpertiseIndex());
@@ -79,7 +79,7 @@ public class Wear implements IBypassHandler
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 		}
 	}
-
+	
 	public String[] getBypassList()
 	{
 		return COMMANDS;

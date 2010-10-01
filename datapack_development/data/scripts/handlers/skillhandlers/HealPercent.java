@@ -37,7 +37,7 @@ public class HealPercent implements ISkillHandler
 		L2SkillType.HPMPHEAL_PERCENT,
 		L2SkillType.HPMPCPHEAL_PERCENT
 	};
-
+	
 	/**
 	 * 
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
@@ -46,10 +46,10 @@ public class HealPercent implements ISkillHandler
 	{
 		//check for other effects
 		ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(L2SkillType.BUFF);
-
+		
 		if (handler != null)
 			handler.useSkill(activeChar, skill, targets);
-
+		
 		boolean cp = false;
 		boolean hp = false;
 		boolean mp = false;
@@ -73,21 +73,21 @@ public class HealPercent implements ISkillHandler
 				hp = true;
 				mp = true;
 		}
-
+		
 		StatusUpdate su = null;
 		SystemMessage sm;
 		double amount = 0;
 		boolean full = skill.getPower() == 100.0;
 		boolean targetPlayer = false;
-
+		
 		for (L2Character target: (L2Character[]) targets)
 		{
 			//1505 - sublime self sacrifice
 			if ((target == null || target.isDead() || target.isInvul()) && skill.getId() != 1505)
 				continue;
-
+			
 			targetPlayer = target instanceof L2PcInstance;
-
+			
 			// Cursed weapon owner can't heal or be healed
 			if (target != activeChar)
 			{
@@ -96,14 +96,14 @@ public class HealPercent implements ISkillHandler
 				if (targetPlayer && ((L2PcInstance)target).isCursedWeaponEquipped())
 					continue;
 			}
-
+			
 			// Doors and flags can't be healed in any way
 			if (hp && (target instanceof L2DoorInstance || target instanceof L2SiegeFlagInstance))
 				continue;
-
+			
 			if (targetPlayer)
 				su = new StatusUpdate(target);
-
+			
 			// Only players have CP
 			if (cp && targetPlayer)
 			{
@@ -111,26 +111,26 @@ public class HealPercent implements ISkillHandler
 					amount = target.getMaxCp();
 				else
 					amount = target.getMaxCp() * skill.getPower() / 100.0;
-
+				
 				amount = Math.min(amount, target.getMaxCp() - target.getCurrentCp());
 				target.setCurrentCp(amount + target.getCurrentCp());
-
+				
 				sm = new SystemMessage(SystemMessageId.S1_CP_WILL_BE_RESTORED);
 				sm.addNumber((int)amount);
 				target.sendPacket(sm);
 				su.addAttribute(StatusUpdate.CUR_CP, (int) target.getCurrentCp());
 			}
-
+			
 			if (hp)
 			{
 				if (full)
 					amount = target.getMaxHp();
 				else
 					amount = target.getMaxHp() * skill.getPower() / 100.0;
-
+				
 				amount = Math.min(amount, target.getMaxHp() - target.getCurrentHp());
 				target.setCurrentHp(amount + target.getCurrentHp());
-
+				
 				if (targetPlayer)
 				{
 					if (activeChar != target)
@@ -145,17 +145,17 @@ public class HealPercent implements ISkillHandler
 					su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
 				}
 			}
-
+			
 			if (mp)
 			{
 				if (full)
 					amount = target.getMaxMp();
 				else
 					amount = target.getMaxMp() * skill.getPower() / 100.0;
-
+				
 				amount = Math.min(amount, target.getMaxMp() - target.getCurrentMp());
 				target.setCurrentMp(amount + target.getCurrentMp());
-
+				
 				if (targetPlayer)
 				{
 					if (activeChar != target)
@@ -170,12 +170,12 @@ public class HealPercent implements ISkillHandler
 					su.addAttribute(StatusUpdate.CUR_MP, (int) target.getCurrentMp());
 				}
 			}
-
+			
 			if (targetPlayer)
 				target.sendPacket(su);
 		}
 	}
-
+	
 	/**
 	 * 
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()

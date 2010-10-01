@@ -72,10 +72,10 @@ public class AdminTeleport implements IAdminCommandHandler
 		"admin_explore",
 		"teleportto",
 		"recall",
-		"admin_recall_npc", 
+		"admin_recall_npc",
 		"admin_gonorth",
 		"admin_gosouth",
-		"admin_goeast", 
+		"admin_goeast",
 		"admin_gowest",
 		"admin_goup",
 		"admin_godown",
@@ -91,9 +91,9 @@ public class AdminTeleport implements IAdminCommandHandler
 			activeChar.setTeleMode(1);
 		}
 		if (command.equals("admin_instant_move"))
-        {
-            activeChar.setTeleMode(1);
-        }
+		{
+			activeChar.setTeleMode(1);
+		}
 		if (command.equals("admin_teleto r"))
 		{
 			activeChar.setTeleMode(2);
@@ -300,31 +300,31 @@ public class AdminTeleport implements IAdminCommandHandler
 			return;
 		}
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-
-                final String replyMSG = StringUtil.concat(
-                        "<html><title>Teleport Character</title>" +
-                        "<body>" +
-                        "The character you will teleport is ",
-                        player.getName(),
-                        "." +
-                        "<br>" +
-                        "Co-ordinate x" +
-                        "<edit var=\"char_cord_x\" width=110>" +
-                        "Co-ordinate y" +
-                        "<edit var=\"char_cord_y\" width=110>" +
-                        "Co-ordinate z" +
-                        "<edit var=\"char_cord_z\" width=110>" +
-                        "<button value=\"Teleport\" action=\"bypass -h admin_teleport_character $char_cord_x $char_cord_y $char_cord_z\" width=60 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">" +
-                        "<button value=\"Teleport near you\" action=\"bypass -h admin_teleport_character ",
-                        String.valueOf(activeChar.getX()),
-                        " ",
-                        String.valueOf(activeChar.getY()),
-                        " ",
-                        String.valueOf(activeChar.getZ()),
-                        "\" width=115 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">" +
-                        "<center><button value=\"Back\" action=\"bypass -h admin_current_player\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></center>" +
-                        "</body></html>"
-                        );
+		
+		final String replyMSG = StringUtil.concat(
+				"<html><title>Teleport Character</title>" +
+				"<body>" +
+				"The character you will teleport is ",
+				player.getName(),
+				"." +
+				"<br>" +
+				"Co-ordinate x" +
+				"<edit var=\"char_cord_x\" width=110>" +
+				"Co-ordinate y" +
+				"<edit var=\"char_cord_y\" width=110>" +
+				"Co-ordinate z" +
+				"<edit var=\"char_cord_z\" width=110>" +
+				"<button value=\"Teleport\" action=\"bypass -h admin_teleport_character $char_cord_x $char_cord_y $char_cord_z\" width=60 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">" +
+				"<button value=\"Teleport near you\" action=\"bypass -h admin_teleport_character ",
+				String.valueOf(activeChar.getX()),
+				" ",
+				String.valueOf(activeChar.getY()),
+				" ",
+				String.valueOf(activeChar.getZ()),
+				"\" width=115 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">" +
+				"<center><button value=\"Back\" action=\"bypass -h admin_current_player\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></center>" +
+				"</body></html>"
+		);
 		adminReply.setHtml(replyMSG);
 		activeChar.sendPacket(adminReply);
 	}
@@ -392,7 +392,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				// Information
 				activeChar.sendMessage("You have recalled " + player.getName());
 				player.sendMessage("Admin is teleporting you.");
-			
+				
 				player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 				player.teleToLocation(x, y, z, true);
 			}
@@ -449,13 +449,13 @@ public class AdminTeleport implements IAdminCommandHandler
 			statement.setInt(2, activeChar.getY());
 			statement.setInt(3, activeChar.getZ());
 			statement.setString(4, name);
-			statement.execute();			
+			statement.execute();
 			int count = statement.getUpdateCount();
 			statement.close();
 			if (count == 0)
 				activeChar.sendMessage("Character not found or position unaltered.");
 			else
-				activeChar.sendMessage("Player's ["+name+"] position is now set to (" + activeChar.getX() + "," + activeChar.getY() + "," + activeChar.getZ() + ")"); 
+				activeChar.sendMessage("Player's ["+name+"] position is now set to (" + activeChar.getX() + "," + activeChar.getY() + "," + activeChar.getZ() + ")");
 		}
 		catch (SQLException se)
 		{

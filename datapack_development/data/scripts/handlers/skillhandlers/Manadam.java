@@ -15,6 +15,7 @@
 package handlers.skillhandlers;
 
 import com.l2jserver.gameserver.handler.ISkillHandler;
+import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
@@ -24,6 +25,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.skills.Env;
 import com.l2jserver.gameserver.skills.Formulas;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
 
@@ -94,27 +96,33 @@ public class Manadam implements ISkillHandler
 			}
 			else
 			{
+				if (skill.hasEffects())
+				{
+					byte shld = Formulas.calcShldUse(activeChar, target, skill);
+					target.stopSkillEffects(skill.getId());
+					if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, false, ss, bss))
+						skill.getEffects(activeChar, target, new Env(shld, ss, false, bss));
+					else
+					{
+						SystemMessage sm = new SystemMessage(SystemMessageId.C1_RESISTED_YOUR_S2);
+						sm.addCharName(target);
+						sm.addSkillName(skill);
+						activeChar.sendPacket(sm);
+					}
+				}
+				
 				double damage = Formulas.calcManaDam(activeChar, target, skill, ss, bss);
-
-			if (Formulas.calcMCrit(activeChar.getMCriticalHit(target, skill)))
-			{
-				damage *= 3.;
-				activeChar.sendPacket(new SystemMessage(SystemMessageId.CRITICAL_HIT_MAGIC));
-			}
-
+				
+				if (Formulas.calcMCrit(activeChar.getMCriticalHit(target, skill)))
+				{
+					damage *= 3.;
+					activeChar.sendPacket(new SystemMessage(SystemMessageId.CRITICAL_HIT_MAGIC));
+				}
+				
 				double mp = (damage > target.getCurrentMp() ? target.getCurrentMp() : damage);
 				target.reduceCurrentMp(mp);
 				if (damage > 0)
-				{
-					if (target.isSleeping())
-					{
-						target.stopSleeping(null);
-					}
-					else if (target.isImmobileUntilAttacked())
-					{
-						target.stopImmobileUntilAttacked(null);
-					}
-				}
+					target.stopEffectsOnDamage(true);
 				
 				if (target instanceof L2PcInstance)
 				{
@@ -137,6 +145,18 @@ public class Manadam implements ISkillHandler
 				}
 				// [L2J_JP EDIT END - TSL]
 			}
+		}
+		
+		if (skill.hasSelfEffects())
+		{
+			L2Effect effect = activeChar.getFirstEffect(skill.getId());
+			if (effect != null && effect.isSelfEffect())
+			{
+				//Replace old effect with new one.
+				effect.exit();
+			}
+			// cast self effect if any
+			skill.getEffectsSelf(activeChar);
 		}
 	}
 	

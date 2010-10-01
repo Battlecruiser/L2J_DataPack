@@ -22,7 +22,7 @@
 			<add order="0x40" stat="breath" val="33.33" />
 			<mul order="0x30" stat="pAtk" val="1.0045" />
 			<mul order="0x30" stat="regMp" val="1.004167" />
-			<mul order="0x30" stat="poisonVuln" val="0.9667" />
+			<sub order="0x40" stat="poisonVuln" val="3" />
 		</for>
 	</skill>
 	<skill id="3703" levels="1" name="Doom Boots">
@@ -33,7 +33,7 @@
 			<add order="0x40" stat="breath" val="33.33" />
 			<mul order="0x30" stat="pAtk" val="1.0045" />
 			<mul order="0x30" stat="regMp" val="1.004167" />
-			<mul order="0x30" stat="poisonVuln" val="0.9667" />
+			<sub order="0x40" stat="poisonVuln" val="3" />
 		</for>
 	</skill>
 	<skill id="3704" levels="1" name="Doom Helmet">
@@ -44,7 +44,7 @@
 			<add order="0x40" stat="breath" val="33.33" />
 			<mul order="0x30" stat="pAtk" val="1.0045" />
 			<mul order="0x30" stat="regMp" val="1.004167" />
-			<mul order="0x30" stat="poisonVuln" val="0.9667" />
+			<sub order="0x40" stat="poisonVuln" val="3" />
 		</for>
 	</skill>
 	<skill id="3705" levels="1" name="Doom Gloves">
@@ -213,7 +213,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="gainHp" val="1.005" />
-			<mul order="0x30" stat="paralyzeVuln" val="0.9375" />
+			<sub order="0x40" stat="paralyzeVuln" val="6" />
 		</for>
 	</skill>
 	<skill id="3725" levels="1" name="Dark Crystal Breastplate">
@@ -228,7 +228,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="gainHp" val="1.005" />
-			<mul order="0x30" stat="paralyzeVuln" val="0.9375" />
+			<sub order="0x40" stat="paralyzeVuln" val="6" />
 		</for>
 	</skill>
 	<skill id="3727" levels="1" name="Dark Crystal Gloves">
@@ -237,7 +237,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="gainHp" val="1.005" />
-			<mul order="0x30" stat="paralyzeVuln" val="0.9375" />
+			<sub order="0x40" stat="paralyzeVuln" val="6" />
 		</for>
 	</skill>
 	<skill id="3728" levels="1" name="Dark Crystal Boots">
@@ -246,7 +246,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="gainHp" val="1.005" />
-			<mul order="0x30" stat="paralyzeVuln" val="0.9375" />
+			<sub order="0x40" stat="paralyzeVuln" val="6" />
 		</for>
 	</skill>
 	<skill id="3729" levels="1" name="Dark Crystal Shield">
@@ -270,7 +270,7 @@
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.005" />
 			<mul order="0x30" stat="pAtk" val="1.005" />
-			<mul order="0x30" stat="paralyzeVuln" val="0.9375" />
+			<sub order="0x40" stat="paralyzeVuln" val="6" />
 		</for>
 	</skill>
 	<skill id="3732" levels="1" name="Dark Crystal Boots">
@@ -280,7 +280,7 @@
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.005" />
 			<mul order="0x30" stat="pAtk" val="1.005" />
-			<mul order="0x30" stat="paralyzeVuln" val="0.9375" />
+			<sub order="0x40" stat="paralyzeVuln" val="6" />
 		</for>
 	</skill>
 	<skill id="3733" levels="1" name="Dark Crystal Helmet">
@@ -290,7 +290,7 @@
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.005" />
 			<mul order="0x30" stat="pAtk" val="1.005" />
-			<mul order="0x30" stat="paralyzeVuln" val="0.9375" />
+			<sub order="0x40" stat="paralyzeVuln" val="6" />
 		</for>
 	</skill>
 	<skill id="3734" levels="1" name="Dark Crystal Leggings">
@@ -300,7 +300,7 @@
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.005" />
 			<mul order="0x30" stat="pAtk" val="1.005" />
-			<mul order="0x30" stat="paralyzeVuln" val="0.9375" />
+			<sub order="0x40" stat="paralyzeVuln" val="6" />
 		</for>
 	</skill>
 	<skill id="3735" levels="1" name="Dark Crystal Gloves">
@@ -311,7 +311,7 @@
 			<mul order="0x30" stat="pDef" val="1.0133" />
 			<add order="0x40" stat="runSpd" val="1.167" />
 			<sub order="0x40" stat="cancel" val="8.33" />
-			<mul order="0x30" stat="paralyzeVuln" val="0.9167" />
+			<sub order="0x40" stat="paralyzeVuln" val="6" />
 		</for>
 	</skill>
 	<skill id="3736" levels="1" name="Dark Crystal Robe">
@@ -328,7 +328,7 @@
 			<mul order="0x30" stat="pDef" val="1.0133" />
 			<add order="0x40" stat="runSpd" val="1.167" />
 			<sub order="0x40" stat="cancel" val="8.33" />
-			<mul order="0x30" stat="paralyzeVuln" val="0.9167" />
+			<sub order="0x40" stat="paralyzeVuln" val="10" />
 		</for>
 	</skill>
 	<skill id="3738" levels="1" name="Dark Crystal Helmet">
@@ -339,7 +339,7 @@
 			<mul order="0x30" stat="pDef" val="1.0133" />
 			<add order="0x40" stat="runSpd" val="1.167" />
 			<sub order="0x40" stat="cancel" val="8.33" />
-			<mul order="0x30" stat="paralyzeVuln" val="0.9167" />
+			<sub order="0x40" stat="paralyzeVuln" val="10" />
 		</for>
 	</skill>
 	<skill id="3739" levels="1" name="Tallum Gloves">
@@ -349,8 +349,8 @@
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0133" />
 			<add order="0x40" stat="maxLoad" val="959.83" />
-			<mul order="0x30" stat="poisonVuln" val="0.8667" />
-			<mul order="0x30" stat="bleedVuln" val="0.8667" />
+			<sub order="0x40" stat="poisonVuln" val="13" />
+			<sub order="0x40" stat="bleedVuln" val="13" />
 		</for>
 	</skill>
 	<skill id="3740" levels="1" name="Tallum Boots">
@@ -360,8 +360,8 @@
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0133" />
 			<add order="0x40" stat="maxLoad" val="959.83" />
-			<mul order="0x30" stat="poisonVuln" val="0.8667" />
-			<mul order="0x30" stat="bleedVuln" val="0.8667" />
+			<sub order="0x40" stat="poisonVuln" val="13" />
+			<sub order="0x40" stat="bleedVuln" val="13" />
 		</for>
 	</skill>
 	<skill id="3741" levels="1" name="Tallum Plate Armor">
@@ -377,8 +377,8 @@
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0133" />
 			<add order="0x40" stat="maxLoad" val="959.83" />
-			<mul order="0x30" stat="poisonVuln" val="0.8667" />
-			<mul order="0x30" stat="bleedVuln" val="0.8667" />
+			<sub order="0x40" stat="poisonVuln" val="13" />
+			<sub order="0x40" stat="bleedVuln" val="13" />
 		</for>
 	</skill>
 	<skill id="3743" levels="1" name="Tallum Leather Armor">
@@ -394,8 +394,8 @@
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0133" />
 			<add order="0x40" stat="maxMp" val="37" />
-			<mul order="0x30" stat="poisonVuln" val="0.8667" />
-			<mul order="0x30" stat="bleedVuln" val="0.8667" />
+			<sub order="0x40" stat="poisonVuln" val="13" />
+			<sub order="0x40" stat="bleedVuln" val="13" />
 		</for>
 	</skill>
 	<skill id="3745" levels="1" name="Tallum Boots">
@@ -405,8 +405,8 @@
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0133" />
 			<add order="0x40" stat="maxMp" val="37" />
-			<mul order="0x30" stat="poisonVuln" val="0.8667" />
-			<mul order="0x30" stat="bleedVuln" val="0.8667" />
+			<sub order="0x40" stat="poisonVuln" val="13" />
+			<sub order="0x40" stat="bleedVuln" val="13" />
 		</for>
 	</skill>
 	<skill id="3746" levels="1" name="Tallum Helmet">
@@ -416,8 +416,8 @@
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0133" />
 			<add order="0x40" stat="maxMp" val="37" />
-			<mul order="0x30" stat="poisonVuln" val="0.8667" />
-			<mul order="0x30" stat="bleedVuln" val="0.8667" />
+			<sub order="0x40" stat="poisonVuln" val="13" />
+			<sub order="0x40" stat="bleedVuln" val="13" />
 		</for>
 	</skill>
 	<skill id="3747" levels="1" name="Tallum Gloves">
@@ -426,8 +426,8 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.01" />
-			<mul order="0x30" stat="poisonVuln" val="0.9" />
-			<mul order="0x30" stat="bleedVuln" val="0.9" />
+			<sub order="0x40" stat="poisonVuln" val="10" />
+			<sub order="0x40" stat="bleedVuln" val="10" />
 		</for>
 	</skill>
 	<skill id="3748" levels="1" name="Tallum Boots">
@@ -436,8 +436,8 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.01" />
-			<mul order="0x30" stat="poisonVuln" val="0.9" />
-			<mul order="0x30" stat="bleedVuln" val="0.9" />
+			<sub order="0x40" stat="poisonVuln" val="10" />
+			<sub order="0x40" stat="bleedVuln" val="10" />
 		</for>
 	</skill>
 	<skill id="3749" levels="1" name="Tallum Tunic">
@@ -452,8 +452,8 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.01" />
-			<mul order="0x30" stat="poisonVuln" val="0.9" />
-			<mul order="0x30" stat="bleedVuln" val="0.9" />
+			<sub order="0x40" stat="poisonVuln" val="10" />
+			<sub order="0x40" stat="bleedVuln" val="10" />
 		</for>
 	</skill>
 	<skill id="3751" levels="1" name="Tallum Helmet">
@@ -462,8 +462,8 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.01" />
-			<mul order="0x30" stat="poisonVuln" val="0.9" />
-			<mul order="0x30" stat="bleedVuln" val="0.9" />
+			<sub order="0x40" stat="poisonVuln" val="10" />
+			<sub order="0x40" stat="bleedVuln" val="10" />
 		</for>
 	</skill>
 	<skill id="3752" levels="1" name="Majestic Gauntlet">
@@ -473,7 +473,7 @@
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0067" />
 			<add order="0x40" stat="accCombat" val="0.5" />
-			<mul order="0x30" stat="stunVuln" val="0.9167" />
+			<sub order="0x40" stat="stunVuln" val="9" />
 		</for>
 	</skill>
 	<skill id="3753" levels="1" name="Majestic Circlet">
@@ -483,7 +483,7 @@
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0067" />
 			<add order="0x40" stat="accCombat" val="0.5" />
-			<mul order="0x30" stat="stunVuln" val="0.9167" />
+			<sub order="0x40" stat="stunVuln" val="9" />
 		</for>
 	</skill>
 	<skill id="3754" levels="1" name="Majestic Plate Armor">
@@ -499,7 +499,7 @@
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0067" />
 			<add order="0x40" stat="accCombat" val="0.5" />
-			<mul order="0x30" stat="stunVuln" val="0.9167" />
+			<sub order="0x40" stat="stunVuln" val="9" />
 		</for>
 	</skill>
 	<skill id="3756" levels="1" name="Majestic Gauntlet">
@@ -512,7 +512,7 @@
 			</mul>
 			<add order="0x40" stat="maxMp" val="40" />
 			<add order="0x40" stat="maxLoad" val="959.83" />
-			<mul order="0x30" stat="stunVuln" val="0.9167" />
+			<sub order="0x40" stat="stunVuln" val="9" />
 		</for>
 	</skill>
 	<skill id="3757" levels="1" name="Majestic Leather Armor">
@@ -531,7 +531,7 @@
 			</mul>
 			<add order="0x40" stat="maxMp" val="40" />
 			<add order="0x40" stat="maxLoad" val="959.83" />
-			<mul order="0x30" stat="stunVuln" val="0.9167" />
+			<sub order="0x40" stat="stunVuln" val="9" />
 		</for>
 	</skill>
 	<skill id="3759" levels="1" name="Majestic Circlet">
@@ -544,7 +544,7 @@
 			</mul>
 			<add order="0x40" stat="maxMp" val="40" />
 			<add order="0x40" stat="maxLoad" val="959.83" />
-			<mul order="0x30" stat="stunVuln" val="0.9167" />
+			<sub order="0x40" stat="stunVuln" val="9" />
 		</for>
 	</skill>
 	<skill id="3760" levels="1" name="Majestic Gauntlet">
@@ -554,7 +554,7 @@
 		<for>
 			<add order="0x40" stat="maxMp" val="40" />
 			<mul order="0x30" stat="regMp" val="1.0133" />
-			<mul order="0x30" stat="stunVuln" val="0.9167" />
+			<sub order="0x40" stat="stunVuln" val="9" />
 		</for>
 	</skill>
 	<skill id="3761" levels="1" name="Majestic Robe">
@@ -570,7 +570,7 @@
 		<for>
 			<add order="0x40" stat="maxMp" val="40" />
 			<mul order="0x30" stat="regMp" val="1.0133" />
-			<mul order="0x30" stat="stunVuln" val="0.9167" />
+			<sub order="0x40" stat="stunVuln" val="9" />
 		</for>
 	</skill>
 	<skill id="3763" levels="1" name="Majestic Circlet">
@@ -580,7 +580,7 @@
 		<for>
 			<add order="0x40" stat="maxMp" val="40" />
 			<mul order="0x30" stat="regMp" val="1.0133" />
-			<mul order="0x30" stat="stunVuln" val="0.9167" />
+			<sub order="0x40" stat="stunVuln" val="9" />
 		</for>
 	</skill>
 	<skill id="3764" levels="1" name="Armor of Nightmare">
@@ -595,8 +595,8 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0067" />
-			<mul order="0x30" stat="sleepVuln" val="0.8833" />
-			<mul order="0x30" stat="rootVuln" val="0.8833" />
+			<sub order="0x40" stat="sleepVuln" val="12" />
+			<sub order="0x40" stat="rootVuln" val="12" />
 		</for>
 	</skill>
 	<skill id="3766" levels="1" name="Boots of Nightmare">
@@ -605,8 +605,8 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0067" />
-			<mul order="0x30" stat="sleepVuln" val="0.8833" />
-			<mul order="0x30" stat="rootVuln" val="0.8833" />
+			<sub order="0x40" stat="sleepVuln" val="12" />
+			<sub order="0x40" stat="rootVuln" val="12" />
 		</for>
 	</skill>
 	<skill id="3767" levels="1" name="Helm of Nightmare">
@@ -615,8 +615,8 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0067" />
-			<mul order="0x30" stat="sleepVuln" val="0.8833" />
-			<mul order="0x30" stat="rootVuln" val="0.8833" />
+			<sub order="0x40" stat="sleepVuln" val="12" />
+			<sub order="0x40" stat="rootVuln" val="12" />
 		</for>
 	</skill>
 	<skill id="3768" levels="1" name="Nightmarish Leather Armor">
@@ -631,8 +631,8 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0067" />
-			<mul order="0x30" stat="sleepVuln" val="0.8833" />
-			<mul order="0x30" stat="rootVuln" val="0.8833" />
+			<sub order="0x40" stat="sleepVuln" val="12" />
+			<sub order="0x40" stat="rootVuln" val="12" />
 		</for>
 	</skill>
 	<skill id="3770" levels="1" name="Boots of Nightmare">
@@ -641,8 +641,8 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0067" />
-			<mul order="0x30" stat="sleepVuln" val="0.8833" />
-			<mul order="0x30" stat="rootVuln" val="0.8833" />
+			<sub order="0x40" stat="sleepVuln" val="12" />
+			<sub order="0x40" stat="rootVuln" val="12" />
 		</for>
 	</skill>
 	<skill id="3771" levels="1" name="Gauntlet of Nightmare">
@@ -652,8 +652,8 @@
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0067" />
 			<mul order="0x30" stat="mAtk" val="1.0133" />
-			<mul order="0x30" stat="sleepVuln" val="0.8833" />
-			<mul order="0x30" stat="rootVuln" val="0.8833" />
+			<sub order="0x40" stat="sleepVuln" val="12" />
+			<sub order="0x40" stat="rootVuln" val="12" />
 		</for>
 	</skill>
 	<skill id="3772" levels="1" name="Nightmare Robe">
@@ -669,8 +669,8 @@
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0067" />
 			<mul order="0x30" stat="mAtk" val="1.0133" />
-			<mul order="0x30" stat="sleepVuln" val="0.8833" />
-			<mul order="0x30" stat="rootVuln" val="0.8833" />
+			<sub order="0x40" stat="sleepVuln" val="12" />
+			<sub order="0x40" stat="rootVuln" val="12" />
 		</for>
 	</skill>
 	<skill id="3774" levels="1" name="Shield of Nightmare">
@@ -729,7 +729,7 @@
 			<add order="0x40" stat="runSpd" val="1.167" />
 			<sub order="0x40" stat="cancel" val="8.33" />
 			<add order="0x40" stat="maxLoad" val="959.83" />
-			<mul order="0x30" stat="stunVuln" val="0.9167" />
+			<sub order="0x40" stat="stunVuln" val="9" />
 		</for>
 	</skill>
 	<skill id="3780" levels="1" name="Major Arcana Robe">
@@ -747,7 +747,7 @@
 			<add order="0x40" stat="runSpd" val="1.167" />
 			<sub order="0x40" stat="cancel" val="8.33" />
 			<add order="0x40" stat="maxLoad" val="959.83" />
-			<mul order="0x30" stat="stunVuln" val="0.9167" />
+			<sub order="0x40" stat="stunVuln" val="9" />
 		</for>
 	</skill>
 	<skill id="3782" levels="1" name="Major Arcana Circlet">
@@ -759,7 +759,7 @@
 			<add order="0x40" stat="runSpd" val="1.167" />
 			<sub order="0x40" stat="cancel" val="8.33" />
 			<add order="0x40" stat="maxLoad" val="959.83" />
-			<mul order="0x30" stat="stunVuln" val="0.9167" />
+			<sub order="0x40" stat="stunVuln" val="9" />
 		</for>
 	</skill>
 	<skill id="3783" levels="1" name="Imperial Crusader Gaiters">
@@ -769,8 +769,8 @@
 		<for>
 			<mul order="0x30" stat="pDef" val="1.01" />
 			<add order="0x40" stat="maxHp" val="55.63" />
-			<mul order="0x30" stat="sleepVuln" val="0.9125" />
-			<mul order="0x30" stat="rootVuln" val="0.9125" />
+			<sub order="0x40" stat="sleepVuln" val="9" />
+			<sub order="0x40" stat="rootVuln" val="9" />
 		</for>
 	</skill>
 	<skill id="3784" levels="1" name="Imperial Crusader Gauntlet">
@@ -780,8 +780,8 @@
 		<for>
 			<mul order="0x30" stat="pDef" val="1.01" />
 			<add order="0x40" stat="maxHp" val="55.63" />
-			<mul order="0x30" stat="sleepVuln" val="0.9125" />
-			<mul order="0x30" stat="rootVuln" val="0.9125" />
+			<sub order="0x40" stat="sleepVuln" val="9" />
+			<sub order="0x40" stat="rootVuln" val="9" />
 		</for>
 	</skill>
 	<skill id="3785" levels="1" name="Imperial Crusader Boots">
@@ -791,8 +791,8 @@
 		<for>
 			<mul order="0x30" stat="pDef" val="1.01" />
 			<add order="0x40" stat="maxHp" val="55.63" />
-			<mul order="0x30" stat="sleepVuln" val="0.9125" />
-			<mul order="0x30" stat="rootVuln" val="0.9125" />
+			<sub order="0x40" stat="sleepVuln" val="9" />
+			<sub order="0x40" stat="rootVuln" val="9" />
 		</for>
 	</skill>
 	<skill id="3786" levels="1" name="Imperial Crusader Shield">
@@ -810,8 +810,8 @@
 		<for>
 			<mul order="0x30" stat="pDef" val="1.01" />
 			<add order="0x40" stat="maxHp" val="55.63" />
-			<mul order="0x30" stat="sleepVuln" val="0.9125" />
-			<mul order="0x30" stat="rootVuln" val="0.9125" />
+			<sub order="0x40" stat="sleepVuln" val="9" />
+			<sub order="0x40" stat="rootVuln" val="9" />
 		</for>
 	</skill>
 	<skill id="3788" levels="1" name="Imperial Crusader Breastplate">

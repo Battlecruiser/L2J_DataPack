@@ -5,8 +5,6 @@ qn = "336_CoinOfMagic"
 QUEST_NUMBER      = 336
 QUEST_NAME        = "CoinOfMagic"
 QUEST_DESCRIPTION = "Coins of Magic"
-#Messages
-default = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
 
 #Quest items
 COIN_DIAGRAM,KALDIS_COIN,MEMBERSHIP_1,MEMBERSHIP_2,MEMBERSHIP_3 = range(3811,3816)
@@ -293,7 +291,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = default
+   htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st : return htmltext
 

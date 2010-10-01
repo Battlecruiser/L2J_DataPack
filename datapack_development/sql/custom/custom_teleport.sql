@@ -1,11 +1,11 @@
 CREATE TABLE IF NOT EXISTS `custom_teleport` (
-  `Description` varchar(75) default NULL,
-  `id` decimal(11,0) NOT NULL default '0',
-  `loc_x` decimal(9,0) default NULL,
-  `loc_y` decimal(9,0) default NULL,
-  `loc_z` decimal(9,0) default NULL,
-  `price` decimal(6,0) default NULL,
-  `fornoble` int(1) NOT NULL default '0',
-  `itemId` decimal(11,0) NOT NULL default '57',
-  PRIMARY KEY  (`id`)
+  `Description` varchar(75) DEFAULT NULL,
+  `id` mediumint(7) unsigned NOT NULL DEFAULT '0',
+  `loc_x` mediumint(6) DEFAULT NULL,
+  `loc_y` mediumint(6) DEFAULT NULL,
+  `loc_z` mediumint(6) DEFAULT NULL,
+  `price` int(10) unsigned DEFAULT NULL,
+  `fornoble` tinyint(1) NOT NULL DEFAULT '0',
+  `itemId` smallint(5) unsigned NOT NULL DEFAULT '57',
+  PRIMARY KEY (`id`)
 );

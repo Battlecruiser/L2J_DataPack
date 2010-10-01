@@ -23,10 +23,10 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.SortedWareHouseWithdrawalList;
+import com.l2jserver.gameserver.network.serverpackets.SortedWareHouseWithdrawalList.WarehouseListType;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.network.serverpackets.WareHouseDepositList;
 import com.l2jserver.gameserver.network.serverpackets.WareHouseWithdrawalList;
-import com.l2jserver.gameserver.network.serverpackets.SortedWareHouseWithdrawalList.WarehouseListType;
 
 public class PrivateWarehouse implements IBypassHandler
 {
@@ -36,15 +36,15 @@ public class PrivateWarehouse implements IBypassHandler
 		"withdrawsortedp",
 		"depositp"
 	};
-
+	
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2Npc))
 			return false;
-
+		
 		if (activeChar.isEnchanting())
 			return false;
-
+		
 		try
 		{
 			if (command.toLowerCase().startsWith(COMMANDS[0])) // WithdrawP
@@ -63,7 +63,7 @@ public class PrivateWarehouse implements IBypassHandler
 			else if (command.toLowerCase().startsWith(COMMANDS[1])) // WithdrawSortedP
 			{
 				final String param[] = command.split(" ");
-
+				
 				if (param.length > 2)
 					showWithdrawWindow(activeChar, WarehouseListType.valueOf(param[1]), SortedWareHouseWithdrawalList.getOrder(param[2]));
 				else if (param.length > 1)
@@ -77,14 +77,14 @@ public class PrivateWarehouse implements IBypassHandler
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 				activeChar.setActiveWarehouse(activeChar.getWarehouse());
 				activeChar.tempInventoryDisable();
-
+				
 				if (Config.DEBUG)
 					_log.fine("Source: L2WarehouseInstance.java; Player: "+activeChar.getName()+"; Command: showDepositWindow; Message: Showing items to deposit.");
-
+				
 				activeChar.sendPacket(new WareHouseDepositList(activeChar, WareHouseDepositList.PRIVATE));
 				return true;
 			}
-
+			
 			return false;
 		}
 		catch (Exception e)
@@ -93,27 +93,27 @@ public class PrivateWarehouse implements IBypassHandler
 		}
 		return false;
 	}
-
+	
 	private static final void showWithdrawWindow(L2PcInstance player, WarehouseListType itemtype, byte sortorder)
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		player.setActiveWarehouse(player.getWarehouse());
-
+		
 		if (player.getActiveWarehouse().getSize() == 0)
 		{
 			player.sendPacket(new SystemMessage(SystemMessageId.NO_ITEM_DEPOSITED_IN_WH));
 			return;
 		}
-
+		
 		if (itemtype != null)
 			player.sendPacket(new SortedWareHouseWithdrawalList(player, WareHouseWithdrawalList.PRIVATE, itemtype, sortorder));
 		else
 			player.sendPacket(new WareHouseWithdrawalList(player, WareHouseWithdrawalList.PRIVATE));
-
+		
 		if (Config.DEBUG)
 			_log.fine("Source: L2WarehouseInstance.java; Player: "+player.getName()+"; Command: showRetrieveWindow; Message: Showing stored items.");
 	}
-
+	
 	public String[] getBypassList()
 	{
 		return COMMANDS;

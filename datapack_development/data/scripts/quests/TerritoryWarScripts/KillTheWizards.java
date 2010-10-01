@@ -16,16 +16,16 @@ package quests.TerritoryWarScripts;
 
 
 /**
-*
-* @author Gigiikun
-*/
+ *
+ * @author Gigiikun
+ */
 
 public class KillTheWizards extends TerritoryWarSuperClass
 {
 	public static String qn1 = "736_Weakenmagic";
 	public static int qnu = 736;
 	public static String qna = "Weaken magic";
-
+	
 	public KillTheWizards()
 	{
 		super(qnu,qn1,qna);

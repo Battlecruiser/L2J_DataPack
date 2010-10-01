@@ -3,12 +3,12 @@
  * the terms of the GNU General Public License as published by the Free Software
  * Foundation, either version 3 of the License, or (at your option) any later
  * version.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
  * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
  * details.
- * 
+ *
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
@@ -17,6 +17,7 @@ package handlers.actionhandlers;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.handler.IActionHandler;
+import com.l2jserver.gameserver.model.Elementals;
 import com.l2jserver.gameserver.model.L2DropCategory;
 import com.l2jserver.gameserver.model.L2DropData;
 import com.l2jserver.gameserver.model.L2Object;
@@ -29,6 +30,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
+import com.l2jserver.gameserver.skills.BaseStats;
 import com.l2jserver.gameserver.skills.Stats;
 import com.l2jserver.gameserver.templates.item.L2Item;
 import com.l2jserver.util.StringUtil;
@@ -37,16 +39,16 @@ public class L2NpcActionShift implements IActionHandler
 {
 	/**
 	 * Manage and Display the GM console to modify the L2NpcInstance (GM only).<BR><BR>
-	 * 
+	 *
 	 * <B><U> Actions (If the L2PcInstance is a GM only)</U> :</B><BR><BR>
 	 * <li>Set the L2NpcInstance as target of the L2PcInstance player (if necessary)</li>
 	 * <li>Send a Server->Client packet MyTargetSelected to the L2PcInstance player (display the select window)</li>
 	 * <li>If L2NpcInstance is autoAttackable, send a Server->Client packet StatusUpdate to the L2PcInstance in order to update L2NpcInstance HP bar </li>
 	 * <li>Send a Server->Client NpcHtmlMessage() containing the GM console about this L2NpcInstance </li><BR><BR>
-	 * 
+	 *
 	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : Each group of Server->Client packet must be terminated by a ActionFailed packet in order to avoid
 	 * that client wait an other packet</B></FONT><BR><BR>
-	 * 
+	 *
 	 * <B><U> Example of use </U> :</B><BR><BR>
 	 * <li> Client packet : Action</li><BR><BR>
 	 */
@@ -57,12 +59,12 @@ public class L2NpcActionShift implements IActionHandler
 		{
 			// Set the target of the L2PcInstance activeChar
 			activeChar.setTarget(target);
-
+			
 			// Send a Server->Client packet MyTargetSelected to the L2PcInstance activeChar
 			// The activeChar.getLevel() - getLevel() permit to display the correct color in the select window
 			MyTargetSelected my = new MyTargetSelected(target.getObjectId(), activeChar.getLevel() - ((L2Character)target).getLevel());
 			activeChar.sendPacket(my);
-
+			
 			// Check if the activeChar is attackable (without a forced attack)
 			if (target.isAutoAttackable(activeChar))
 			{
@@ -72,7 +74,7 @@ public class L2NpcActionShift implements IActionHandler
 				su.addAttribute(StatusUpdate.MAX_HP, ((L2Character)target).getMaxHp());
 				activeChar.sendPacket(su);
 			}
-
+			
 			NpcHtmlMessage html = new NpcHtmlMessage(0);
 			html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/npcinfo.htm");
 			
@@ -97,7 +99,7 @@ public class L2NpcActionShift implements IActionHandler
 			html.replace("%crit%", String.valueOf(((L2Character)target).getCriticalHit(null, null)));
 			html.replace("%rspd%", String.valueOf(((L2Character)target).getRunSpeed()));
 			html.replace("%aspd%", String.valueOf(((L2Character)target).getPAtkSpd()));
-			html.replace("%cspd%", String.valueOf(((L2Character)target).getMAtkSpd()));			
+			html.replace("%cspd%", String.valueOf(((L2Character)target).getMAtkSpd()));
 			html.replace("%str%",  String.valueOf(((L2Character)target).getSTR()));
 			html.replace("%dex%",  String.valueOf(((L2Character)target).getDEX()));
 			html.replace("%con%",  String.valueOf(((L2Character)target).getCON()));
@@ -105,6 +107,17 @@ public class L2NpcActionShift implements IActionHandler
 			html.replace("%wit%",  String.valueOf(((L2Character)target).getWIT()));
 			html.replace("%men%",  String.valueOf(((L2Character)target).getMEN()));
 			html.replace("%loc%",  String.valueOf(target.getX()+" "+target.getY()+" "+target.getZ()));
+			html.replace("%dist%", String.valueOf((int)Math.sqrt(activeChar.getDistanceSq(target))));
+			
+			byte attackAttribute = ((L2Character)target).getAttackElement();
+			html.replace("%ele_atk%", Elementals.getElementName(attackAttribute));
+			html.replace("%ele_atk_value%", String.valueOf(((L2Character)target).getAttackElementValue(attackAttribute)));
+			html.replace("%ele_dfire%", String.valueOf(((L2Character)target).getDefenseElementValue(Elementals.FIRE)));
+			html.replace("%ele_dwater%", String.valueOf(((L2Character)target).getDefenseElementValue(Elementals.WATER)));
+			html.replace("%ele_dwind%", String.valueOf(((L2Character)target).getDefenseElementValue(Elementals.WIND)));
+			html.replace("%ele_dearth%", String.valueOf(((L2Character)target).getDefenseElementValue(Elementals.EARTH)));
+			html.replace("%ele_dholy%", String.valueOf(((L2Character)target).getDefenseElementValue(Elementals.HOLY)));
+			html.replace("%ele_ddark%", String.valueOf(((L2Character)target).getDefenseElementValue(Elementals.DARK)));
 			
 			if (((L2Npc)target).getSpawn() != null)
 			{
@@ -121,15 +134,21 @@ public class L2NpcActionShift implements IActionHandler
 				html.replace("%resp%",  "<font color=FF0000>--</font>");
 			}
 			
-			if (((L2Character)target).hasAI())
+			if (((L2Npc)target).hasAI())
 			{
-				html.replace("%ai%",   "<tr><td><table width=270 border=0><tr><td width=100><font color=FFAA00>AI</font></td><td align=right width=170>"+((L2Character)target).getAI().getClass().getSimpleName()+"</td></tr></table></td></tr>");
-				html.replace("%aint%", "<tr><td><table width=270 border=0 bgcolor=131210><tr><td width=100><font color=FFAA00>Intention:</font></td><td align=right width=170>"+String.valueOf(((L2Character)target).getAI().getIntention().name())+"</td></tr></table></td></tr>");
+				html.replace("%ai_intention%",  "<tr><td><table width=270 border=0 bgcolor=131210><tr><td width=100><font color=FFAA00>Intention:</font></td><td align=right width=170>"+String.valueOf(((L2Npc)target).getAI().getIntention().name())+"</td></tr></table></td></tr>");
+				html.replace("%ai%",            "<tr><td><table width=270 border=0><tr><td width=100><font color=FFAA00>AI</font></td><td align=right width=170>"+((L2Npc)target).getAI().getClass().getSimpleName()+"</td></tr></table></td></tr>");
+				html.replace("%ai_type%",       "<tr><td><table width=270 border=0 bgcolor=131210><tr><td width=100><font color=FFAA00>AIType</font></td><td align=right width=170>"+String.valueOf(((L2Npc)target).getAiType())+"</td></tr></table></td></tr>");
+				html.replace("%ai_clan%",       "<tr><td><table width=270 border=0><tr><td width=100><font color=FFAA00>Clan & Range:</font></td><td align=right width=170>"+String.valueOf(((L2Npc)target).getTemplate().getAIDataStatic().getClan())+" "+String.valueOf(((L2Npc)target).getTemplate().getAIDataStatic().getClanRange())+"</td></tr></table></td></tr>");
+				html.replace("%ai_enemy_clan%", "<tr><td><table width=270 border=0 bgcolor=131210><tr><td width=100><font color=FFAA00>Enemy & Range:</font></td><td align=right width=170>"+String.valueOf(((L2Npc)target).getTemplate().getAIDataStatic().getEnemyClan())+" "+String.valueOf(((L2Npc)target).getTemplate().getAIDataStatic().getEnemyRange())+"</td></tr></table></td></tr>");
 			}
 			else
 			{
-				html.replace("%ai%",   "");
-				html.replace("%aint%", "");
+				html.replace("%ai_intention%",  "");
+				html.replace("%ai%",            "");
+				html.replace("%ai_type%",       "");
+				html.replace("%ai_clan%",       "");
+				html.replace("%ai_enemy_clan%", "");
 			}
 			
 			if (target instanceof L2MerchantInstance)
@@ -141,18 +160,18 @@ public class L2NpcActionShift implements IActionHandler
 				html.replace("%butt%","");
 			}
 			
-			activeChar.sendPacket(html);			
+			activeChar.sendPacket(html);
 		}
 		else if (Config.ALT_GAME_VIEWNPC)
 		{
 			// Set the target of the L2PcInstance activeChar
 			activeChar.setTarget(target);
-
+			
 			// Send a Server->Client packet MyTargetSelected to the L2PcInstance activeChar
 			// The activeChar.getLevel() - getLevel() permit to display the correct color in the select window
 			MyTargetSelected my = new MyTargetSelected(target.getObjectId(), activeChar.getLevel() - ((L2Character)target).getLevel());
 			activeChar.sendPacket(my);
-
+			
 			// Check if the activeChar is attackable (without a forced attack)
 			if (target.isAutoAttackable(activeChar))
 			{
@@ -162,17 +181,18 @@ public class L2NpcActionShift implements IActionHandler
 				su.addAttribute(StatusUpdate.MAX_HP, ((L2Character)target).getMaxHp());
 				activeChar.sendPacket(su);
 			}
-
+			
 			NpcHtmlMessage html = new NpcHtmlMessage(0);
+			final int hpMul = Math.round((float)(((L2Character)target).getStat().calcStat(Stats.MAX_HP, 1, (L2Character)target, null) / BaseStats.CON.calcBonus((L2Character)target)));
 			final StringBuilder html1 = StringUtil.startAppend(
 					1000,
 					"<html><body>" +
 					"<br><center><font color=\"LEVEL\">[Combat Stats]</font></center>" +
 					"<table border=0 width=\"100%\">" +
 					"<tr><td>Max.HP</td><td>",
-					String.valueOf((int) (((L2Character)target).getMaxHp() / ((L2Character)target).getStat().calcStat(Stats.MAX_HP, 1, (L2Character)target, null))),
+					String.valueOf(((L2Character)target).getMaxHp() / hpMul),
 					"*",
-					String.valueOf((int) ((L2Character)target).getStat().calcStat(Stats.MAX_HP, 1, (L2Character)target, null)),
+					String.valueOf(hpMul),
 					"</td><td>Max.MP</td><td>",
 					String.valueOf(((L2Character)target).getMaxMp()),
 					"</td></tr>" +
@@ -222,15 +242,15 @@ public class L2NpcActionShift implements IActionHandler
 					String.valueOf(((L2Character)target).getMEN()),
 					"</td></tr>" +
 					"</table>"
-					);
-
+			);
+			
 			if (((L2Npc)target).getTemplate().getDropData() != null)
 			{
 				StringUtil.append(html1,
 						"<br><center><font color=\"LEVEL\">[Drop Info]</font></center>" +
 						"<br>Rates legend: <font color=\"ff0000\">50%+</font> <font color=\"00ff00\">30%+</font> <font color=\"0000ff\">less than 30%</font>" +
 						"<table border=0 width=\"100%\">"
-						);
+				);
 				for (L2DropCategory cat : ((L2Npc)target).getTemplate().getDropData())
 				{
 					for (L2DropData drop : cat.getAllDrops())
@@ -238,16 +258,16 @@ public class L2NpcActionShift implements IActionHandler
 						final L2Item item = ItemTable.getInstance().getTemplate(drop.getItemId());
 						if (item == null)
 							continue;
-
+						
 						final String color;
-
+						
 						if (drop.getChance() >= 500000)
 							color = "ff0000";
 						else if (drop.getChance() >= 300000)
 							color = "00ff00";
 						else
 							color = "0000ff";
-
+						
 						StringUtil.append(html1,
 								"<tr><td><font color=\"",
 								color,
@@ -256,19 +276,19 @@ public class L2NpcActionShift implements IActionHandler
 								"</font></td><td>",
 								(drop.isQuestDrop() ? "Quest" : (cat.isSweep() ? "Sweep" : "Drop")),
 								"</td></tr>"
-								);
+						);
 					}
 				}
 				html1.append("</table>");
 			}
 			html1.append("</body></html>");
-
+			
 			html.setHtml(html1.toString());
 			activeChar.sendPacket(html);
 		}
 		return true;
 	}
-
+	
 	public InstanceType getInstanceType()
 	{
 		return InstanceType.L2Npc;

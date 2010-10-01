@@ -31,15 +31,15 @@ class Quest (JQuest) :
       st.setState(State.STARTED)
       st.playSound("ItemSound.quest_accept")
     elif event == "32016-02.htm" :
-      st.giveItems(57,21578)
-      st.addExpAndSp(76665,5333)
+      st.giveItems(57,154800)
+      st.addExpAndSp(619300,44200)
       st.takeItems(Box,1)
       st.playSound("ItemSound.quest_finish")
       st.exitQuest(False)
     return htmltext
 
  def onTalk (self,npc,player):        
-    htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+    htmltext = Quest.getNoQuestMsg(player)
     st = player.getQuestState(qn)
     if not st : return htmltext
     state = st.getState()
