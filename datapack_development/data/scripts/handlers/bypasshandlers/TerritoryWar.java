@@ -16,10 +16,10 @@ package handlers.bypasshandlers;
 
 import java.util.StringTokenizer;
 
+import com.l2jserver.gameserver.datatables.MultiSell;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager;
-import com.l2jserver.gameserver.model.L2Multisell;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MercenaryManagerInstance;
@@ -38,15 +38,16 @@ public class TerritoryWar implements IBypassHandler
 		"TW_Multisell",
 		"TW_Buy_List",
 		"TW_Buy",
+		"TW_Buy_Elite",
 		"CalcRewards",
 		"ReceiveRewards"
 	};
-
+	
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2Npc))
 			return false;
-
+		
 		try
 		{
 			StringTokenizer st = new StringTokenizer(command, " ");
@@ -56,13 +57,13 @@ public class TerritoryWar implements IBypassHandler
 			{
 				if (st.countTokens() < 1)
 					return false;
-
+				
 				int castleId = Integer.parseInt(st.nextToken());
 				activeChar.sendPacket(new ExShowDominionRegistry(castleId, activeChar));
 			}
 			else if (!(target instanceof L2MercenaryManagerInstance))
 				return false;
-
+			
 			L2MercenaryManagerInstance mercman = ((L2MercenaryManagerInstance)target);
 			if (actualCommand.equalsIgnoreCase("TW_Multisell"))
 			{
@@ -76,13 +77,13 @@ public class TerritoryWar implements IBypassHandler
 				}
 				
 				int val = Integer.parseInt(st.nextToken());
-				L2Multisell.getInstance().separateAndSend(val, activeChar, mercman.getNpcId(), false, mercman.getCastle().getTaxRate());
+				MultiSell.getInstance().separateAndSend(val, activeChar, mercman, false);
 			}
 			else if (actualCommand.equalsIgnoreCase("TW_Buy_List"))
 			{
 				if (st.countTokens() < 1)
 					return false;
-
+				
 				String itemId = st.nextToken();
 				NpcHtmlMessage html = new NpcHtmlMessage(mercman.getObjectId());
 				html.setFile(activeChar.getHtmlPrefix(), "data/html/mercmanager/" + st.nextToken());
@@ -138,6 +139,22 @@ public class TerritoryWar implements IBypassHandler
 					}
 				}
 				mercman.showChatWindow(activeChar, 6);
+			}
+			else if (actualCommand.equalsIgnoreCase("TW_Buy_Elite"))
+			{
+				if(activeChar.getInventory().getItemByItemId(13767) != null)
+				{
+					int _castleid = mercman.getCastle().getCastleId();
+					if (_castleid > 0)
+						MultiSell.getInstance().separateAndSend(_castleid+676, activeChar, mercman, false);
+				}
+				else
+				{
+					NpcHtmlMessage html = new NpcHtmlMessage(mercman.getObjectId());
+					html.setFile(activeChar.getHtmlPrefix(), "data/html/mercmanager/nocert.htm");
+					activeChar.sendPacket(html);
+					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+				}
 			}
 			else if (actualCommand.equalsIgnoreCase("CalcRewards"))
 			{
@@ -202,7 +219,7 @@ public class TerritoryWar implements IBypassHandler
 		}
 		return false;
 	}
-
+	
 	public String[] getBypassList()
 	{
 		return COMMANDS;

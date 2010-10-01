@@ -10,14 +10,14 @@ qn = "122_OminousNews"
 MOIRA = 31979
 KARUDA = 32017
 
-default="<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
-
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
- def onEvent (self,event,st) :
-   htmltext = default
+ def onAdvEvent (self,event,npc,player) :
+   st = player.getQuestState(qn)
+   if not st : return
+   htmltext = Quest.getNoQuestMsg(player)
    id = st.getState()
    cond = st.getInt("cond")
    if id != State.COMPLETED :
@@ -28,18 +28,19 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_accept")
      elif htmltext == "32017-02.htm" :
        if cond == 1 and st.getInt("ok") :
-         st.giveItems(57,1695)
+         st.giveItems(57,8923)
+         st.addExpAndSp(45151,2310)
          st.unset("cond")
          st.unset("ok")
          st.exitQuest(False)
          st.playSound("ItemSound.quest_finish")
        else :
-         htmltext=default
+         htmltext = Quest.getNoQuestMsg(player)
    return htmltext
 
  def onTalk (self,npc,player):
    npcId = npc.getNpcId()
-   htmltext = default
+   htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st : return htmltext
 

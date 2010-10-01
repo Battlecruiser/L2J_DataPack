@@ -921,9 +921,10 @@
 		<set name="staticReuse" val="true" />
 		<set name="equipDelay" val="30000" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="removedOnDamage" val="true" />
 		<for>
 			<effect count="10" name="ManaHealOverTime" time="3" noicon="1" val="50" />
-			<effect name="ImmobileUntilAttacked" time="30" val="0" />
+			<effect name="Paralyze" time="30" val="0" />
 		</for>
 	</skill>
 	<skill id="3280" levels="1" name="Blue Talisman of Invisibility">

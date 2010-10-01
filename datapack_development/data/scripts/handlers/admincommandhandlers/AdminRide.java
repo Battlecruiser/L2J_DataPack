@@ -21,7 +21,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * @author 
+ * @author
  */
 public class AdminRide implements IAdminCommandHandler
 {
@@ -42,7 +42,7 @@ public class AdminRide implements IAdminCommandHandler
 	private static final int PURPLE_MANED_HORSE_TRANSFORMATION_ID = 106;
 	
 	private static final int JET_BIKE_TRANSFORMATION_ID = 20001;
-
+	
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		
@@ -80,7 +80,7 @@ public class AdminRide implements IAdminCommandHandler
 					activeChar.sendPacket(new SystemMessage (SystemMessageId.YOU_CANNOT_MOUNT_A_STEED_WHILE_TRANSFORMED));
 				else
 					TransformationManager.getInstance().transformPlayer(JET_BIKE_TRANSFORMATION_ID, activeChar);
-
+				
 				return true;
 			}
 			else
@@ -97,7 +97,7 @@ public class AdminRide implements IAdminCommandHandler
 		{
 			if (activeChar.getTransformationId() == PURPLE_MANED_HORSE_TRANSFORMATION_ID)
 				activeChar.untransform();
-
+			
 			if (activeChar.getTransformationId() == JET_BIKE_TRANSFORMATION_ID)
 				activeChar.untransform();
 			else

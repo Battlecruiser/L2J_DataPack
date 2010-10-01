@@ -322,28 +322,28 @@
 			<effect name="ImmobileBuff" time="30" val="0" abnormal="invulnerable" stackOrder="1" stackType="pd_up_special">
 				<add order="0x40" stat="pDef" val="#pDef" />
 				<add order="0x40" stat="mDef" val="#mDef" />
-				<mul order="0x30" stat="cancelVuln" val="0.2" />
+				<sub order="0x40" stat="cancelVuln" val="80" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="ImmobileBuff" time="#ench1time" val="0" abnormal="invulnerable" stackOrder="1" stackType="pd_up_special">
 				<add order="0x40" stat="pDef" val="#enchpDef" />
 				<add order="0x40" stat="mDef" val="#enchmDef" />
-				<mul order="0x30" stat="cancelVuln" val="0.2" />
+				<sub order="0x40" stat="cancelVuln" val="80" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
 			<effect name="ImmobileBuff" time="30" val="0" abnormal="invulnerable" stackOrder="1" stackType="pd_up_special">
 				<add order="0x40" stat="pDef" val="#enchpDef" />
 				<add order="0x40" stat="mDef" val="#enchmDef" />
-				<mul order="0x30" stat="cancelVuln" val="0.2" />
+				<sub order="0x40" stat="cancelVuln" val="80" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
 			<effect name="Buff" time="30" val="0" abnormal="invulnerable" stackOrder="1" stackType="pd_up_special">
 				<add order="0x40" stat="pDef" val="#enchpDef" />
 				<add order="0x40" stat="mDef" val="#enchmDef" />
-				<mul order="0x30" stat="cancelVuln" val="0.2" />
+				<sub order="0x40" stat="cancelVuln" val="80" />
 				<mul order="0x30" stat="runSpd" val="#ench3decreasePenalty" />
 			</effect>
 		</enchant3for>
@@ -370,14 +370,14 @@
 			<effect name="Buff" time="30" val="0" stackOrder="#rEvas" stackType="avoid_up_special">
 				<add order="0x40" stat="pSkillEvas" val="#pSkillEvas" />
 				<add order="0x40" stat="rEvas" val="#rEvas" />
-				<mul order="0x30" stat="cancelVuln" val="0.2" />
+				<sub order="0x40" stat="cancelVuln" val="80" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff" time="#ench1time" val="0" stackOrder="25" stackType="avoid_up_special">
 				<add order="0x40" stat="pSkillEvas" val="40" />
 				<add order="0x40" stat="rEvas" val="25" />
-				<mul order="0x30" stat="cancelVuln" val="0.2" />
+				<sub order="0x40" stat="cancelVuln" val="80" />
 			</effect>
 		</enchant1for>
 	</skill>
@@ -770,19 +770,19 @@
 		</enchant1for>
 	</skill>
 	<skill id="134" levels="1" name="Toughness" enchantGroup1="1">
-		<table name="#ench1vuln"> 0.79 0.79 0.79 0.78 0.78 0.78 0.77 0.77 0.77 0.76 0.76 0.76 0.76 0.75 0.75 0.75 0.74 0.74 0.74 0.73 0.73 0.73 0.73 0.72 0.72 0.72 0.71 0.71 0.71 0.7 </table>
+		<table name="#ench1vuln"> 21 21 21 22 22 22 23 23 23 24 24 24 24 25 25 25 26 26 26 27 27 27 27 28 28 28 29 29 29 30 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<mul order="0x30" stat="rootVuln" val="0.8" />
-			<mul order="0x30" stat="sleepVuln" val="0.8" />
-			<mul order="0x30" stat="poisonVuln" val="0.8" />
+			<sub order="0x40" stat="rootVuln" val="20" />
+			<sub order="0x40" stat="sleepVuln" val="20" />
+			<sub order="0x40" stat="poisonVuln" val="20" />
 		</for>
 		<enchant1for>
-			<mul order="0x30" stat="rootVuln" val="#ench1vuln" />
-			<mul order="0x30" stat="sleepVuln" val="#ench1vuln" />
-			<mul order="0x30" stat="poisonVuln" val="#ench1vuln" />
+			<sub order="0x40" stat="rootVuln" val="#ench1vuln" />
+			<sub order="0x40" stat="sleepVuln" val="#ench1vuln" />
+			<sub order="0x40" stat="poisonVuln" val="#ench1vuln" />
 		</enchant1for>
 	</skill>
 	<skill id="137" levels="4" name="Critical Chance" enchantGroup1="1">
@@ -894,9 +894,9 @@
 		</enchant1for>
 	</skill>
 	<skill id="147" levels="51" name="Magic Resistance" enchantGroup1="1">
-		<table name="#mDef"> 19 20 22 23 24 26 27 28 30 31 32 35 36 37 40 42 43 44 46 47 49 51 52 54 56 57 59 61 63 64 66 68 70 72 74 76 78 80 82 84 86 88 91 93 95 97 99 102 104 106 108 </table>
+		<table name="#mDef"> 22 24 26 28 29 31 32 33 36 37 39 42 43 45 48 50 51 53 55 57 59 61 62 64 67 69 71 73 75 77 79 82 84 86 89 91 94 96 98 101 103 106 109 111 114 116 119 122 124 127 130 </table>
 		<table name="#magicDamVul"> 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.85 0.85 0.85 0.85 0.85 0.85 0.8 0.8 0.8 0.8 0.8 0.8 </table>
-		<table name="#ench1mDef"> 113 114 115 115 116 117 117 118 119 119 120 121 121 122 123 123 124 125 125 126 127 127 128 129 129 130 131 131 132 133 </table>
+		<table name="#ench1mDef"> 131 132 133 133 134 135 135 136 137 137 138 139 139 140 141 141 142 143 143 144 145 145 146 147 147 148 149 149 150 151 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -1044,7 +1044,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="172" levels="9" name="Create Item">
+	<skill id="172" levels="10" name="Create Item">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="COREDONE" />
 		<set name="operateType" val="OP_PASSIVE" />

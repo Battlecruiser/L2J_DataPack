@@ -29,9 +29,6 @@ RPCHANCE=10
 #Change this value to 1 if you wish 100% recipes, default 70%
 ALT_RP100=0
 
-#MESSAGES
-default="<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
-
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
@@ -48,7 +45,7 @@ class Quest (JQuest) :
        st.giveItems(SPECIAL_DRINK,5)
        st.playSound("ItemSound.quest_accept")
      else:
-       htmltext=default
+       htmltext = Quest.getNoQuestMsg(player)
    elif event == "31547-1.htm" :
      if st.getQuestItemsCount(SPECIAL_DRINK):
        if cond==1:
@@ -56,7 +53,7 @@ class Quest (JQuest) :
          st.giveItems(FEE_OF_DRINK,1)
          st.set("cond","2")
        else:
-         htmltext=default
+         htmltext = Quest.getNoQuestMsg(player)
      else:
        htmltext="LMFAO!"
        st.exitQuest(1)
@@ -67,7 +64,7 @@ class Quest (JQuest) :
          st.giveItems(FEE_OF_DRINK,1)
          st.set("cond","3")
        else:
-         htmltext=default
+         htmltext = Quest.getNoQuestMsg(player)
      else:
        htmltext="LMFAO!"
        st.exitQuest(1)
@@ -78,7 +75,7 @@ class Quest (JQuest) :
          st.giveItems(FEE_OF_DRINK,1)
          st.set("cond","4")
        else:
-         htmltext=default
+         htmltext = Quest.getNoQuestMsg(player)
      else:
        htmltext="LMFAO!"
        st.exitQuest(1)
@@ -89,7 +86,7 @@ class Quest (JQuest) :
          st.giveItems(FEE_OF_DRINK,1)
          st.set("cond","5")
        else:
-         htmltext=default
+         htmltext = Quest.getNoQuestMsg(player)
      else:
        htmltext="LMFAO!"
        st.exitQuest(1)
@@ -100,7 +97,7 @@ class Quest (JQuest) :
          st.giveItems(FEE_OF_DRINK,1)
          st.set("cond","6")
        else:
-         htmltext=default
+         htmltext = Quest.getNoQuestMsg(player)
      else:
        htmltext="LMFAO!"
        st.exitQuest(1)
@@ -122,11 +119,11 @@ class Quest (JQuest) :
         st.playSound("ItemSound.quest_finish")
         st.exitQuest(1)
      else:
-        htmltext=default
+        htmltext = Quest.getNoQuestMsg(player)
    return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = default
+   htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if st :
         npcId = npc.getNpcId()

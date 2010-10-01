@@ -58,14 +58,15 @@ class Quest (JQuest) :
             st.exitQuest(False)
             st.playSound("ItemSound.quest_finish")
             st.giveItems(Orkurus_Rec,1)
-            st.addExpAndSp(73590,8344)
+            st.giveItems(57,31552)
+            st.addExpAndSp(174503,11974)
             st.unset("cond")
             st.unset("kills")
             st.unset("spawned")
         return htmltext
 
     def onTalk (self,npc,player):
-        htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+        htmltext = Quest.getNoQuestMsg(player)
         st = player.getQuestState(qn)
         if not st : return htmltext
         npcId = npc.getNpcId()

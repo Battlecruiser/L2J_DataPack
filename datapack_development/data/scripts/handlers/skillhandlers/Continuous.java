@@ -65,7 +65,7 @@ public class Continuous implements ISkillHandler
 		L2SkillType.AGGDEBUFF,
 		L2SkillType.FUSION
 	};
-
+	
 	/**
 	 * 
 	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
@@ -172,10 +172,10 @@ public class Continuous implements ISkillHandler
 				}
 				else if (activeChar instanceof L2Npc)
 				{
-          ss = ((L2Npc) activeChar)._soulshotcharged;
-          ((L2Npc) activeChar)._soulshotcharged = false;
-          bss = ((L2Npc) activeChar)._spiritshotcharged;
-          ((L2Npc) activeChar)._spiritshotcharged = false;
+					ss = ((L2Npc) activeChar)._soulshotcharged;
+					((L2Npc) activeChar)._soulshotcharged = false;
+					bss = ((L2Npc) activeChar)._spiritshotcharged;
+					((L2Npc) activeChar)._spiritshotcharged = false;
 				}
 				
 				shld = Formulas.calcShldUse(activeChar, target, skill);
@@ -215,7 +215,14 @@ public class Continuous implements ISkillHandler
 							dm.onBuff(((L2PcInstance) target), buff);
 				}
 				else
-					skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss));
+				{
+					L2Effect[] effects = skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss));
+					if (target.getPet() != null && effects.length > 0)
+					{
+						if (effects[0].canBeStolen())
+							skill.getEffects(activeChar, target.getPet(), new Env(shld, ss, sps, bss));
+					}
+				}
 				
 				if (skill.getSkillType() == L2SkillType.AGGDEBUFF)
 				{
@@ -238,14 +245,18 @@ public class Continuous implements ISkillHandler
 			// Possibility of a lethal strike
 			Formulas.calcLethalHit(activeChar, target, skill);
 		}
+		
 		// self Effect :]
-		L2Effect effect = activeChar.getFirstEffect(skill.getId());
-		if (effect != null && effect.isSelfEffect())
+		if (skill.hasSelfEffects())
 		{
-			//Replace old effect with new one.
-			effect.exit();
+			final L2Effect effect = activeChar.getFirstEffect(skill.getId());
+			if (effect != null && effect.isSelfEffect())
+			{
+				//Replace old effect with new one.
+				effect.exit();
+			}
+			skill.getEffectsSelf(activeChar);
 		}
-		skill.getEffectsSelf(activeChar);
 	}
 	
 	/**

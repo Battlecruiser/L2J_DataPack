@@ -88,27 +88,27 @@ public class CpDam implements ISkillHandler
 		}
 		else if (activeChar instanceof L2Npc)
 		{
-          ss = ((L2Npc) activeChar)._soulshotcharged;
-          ((L2Npc) activeChar)._soulshotcharged = false;
-          bss = ((L2Npc) activeChar)._spiritshotcharged;
-          ((L2Npc) activeChar)._spiritshotcharged = false;
+			ss = ((L2Npc) activeChar)._soulshotcharged;
+			((L2Npc) activeChar)._soulshotcharged = false;
+			bss = ((L2Npc) activeChar)._spiritshotcharged;
+			((L2Npc) activeChar)._spiritshotcharged = false;
 		}
 		
 		for (L2Character target: (L2Character[]) targets)
 		{
 			if (activeChar instanceof L2PcInstance && target instanceof L2PcInstance && ((L2PcInstance)target).isFakeDeath())
 			{
-				target.stopFakeDeath(null);
+				target.stopFakeDeath(true);
 			}
-			else if (target.isDead())
+			else if (target.isDead() || target.isInvul())
 			{
 				continue;
 			}
 			
 			byte shld = Formulas.calcShldUse(activeChar, target, skill);
-
+			
 			int damage = (int) (target.getCurrentCp() - (target.getCurrentCp() - skill.getPower()));
-
+			
 			// Manage attack or cast break of the target (calculating rate, sending message...)
 			if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
 			{

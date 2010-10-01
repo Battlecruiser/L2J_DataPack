@@ -16,6 +16,9 @@ package ai.individual;
 
 import java.util.List;
 
+import javolution.util.FastList;
+import ai.group_template.L2AttackableAIScript;
+
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SkillTable;
@@ -34,9 +37,6 @@ import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 import com.l2jserver.gameserver.templates.StatsSet;
 import com.l2jserver.util.Rnd;
 
-import javolution.util.FastList;
-import ai.group_template.L2AttackableAIScript;
-
 /**
  * Orfen AI
  * 
@@ -45,42 +45,43 @@ import ai.group_template.L2AttackableAIScript;
  */
 public class Orfen extends L2AttackableAIScript
 {
-
+	
 	private static final int[][] Pos =
 	{
-			{
-					43728, 17220, -4342
-			},
-			{
-					55024, 17368, -5412
-			},
-			{
-					53504, 21248, -5486
-			},
-			{
-					53248, 24576, -5262
-			}
+		{
+			43728, 17220, -4342
+		},
+		{
+			55024, 17368, -5412
+		},
+		{
+			53504, 21248, -5486
+		},
+		{
+			53248, 24576, -5262
+		}
 	};
-
+	
+	//TODO: npcstring
 	private static final String[] Text =
 	{
-			"PLAYERNAME, stop kidding yourthis about your own powerlessness!", "PLAYERNAME, I�ll make you feel what true fear is!",
-			"You�re really stupid to have challenged me. PLAYERNAME! Get ready!", "PLAYERNAME, do you think that�s going to work?!"
+		"PLAYERNAME, stop kidding yourthis about your own powerlessness!", "PLAYERNAME, I'll make you feel what true fear is!",
+		"You're really stupid to have challenged me. PLAYERNAME! Get ready!", "PLAYERNAME, do you think that's going to work?!"
 	};
-
+	
 	private static final int ORFEN = 29014;
 	//private static final int RAIKEL = 29015;
 	private static final int RAIKEL_LEOS = 29016;
 	//private static final int RIBA = 29017;
 	private static final int RIBA_IREN = 29018;
-
+	
 	private static boolean _IsTeleported;
 	private static List<L2Attackable> _Minions = new FastList<L2Attackable>();
 	private static L2BossZone _Zone;
-
+	
 	private static final byte ALIVE = 0;
 	private static final byte DEAD = 1;
-
+	
 	public Orfen(int id, String name, String descr)
 	{
 		super(id, name, descr);
@@ -144,7 +145,7 @@ public class Orfen extends L2AttackableAIScript
 			this.spawnBoss(orfen);
 		}
 	}
-
+	
 	public void setSpawnPoint(L2Npc npc, int index)
 	{
 		((L2Attackable) npc).clearAggroList();
@@ -155,7 +156,7 @@ public class Orfen extends L2AttackableAIScript
 		spawn.setLocz(Pos[index][2]);
 		npc.teleToLocation(Pos[index][0], Pos[index][1], Pos[index][2]);
 	}
-
+	
 	public void spawnBoss(L2GrandBossInstance npc)
 	{
 		GrandBossManager.getInstance().addBoss(npc);
@@ -179,7 +180,7 @@ public class Orfen extends L2AttackableAIScript
 		_Minions.add((L2Attackable) mob);
 		this.startQuestTimer("check_minion_loc", 10000, npc, null, true);
 	}
-
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -252,7 +253,7 @@ public class Orfen extends L2AttackableAIScript
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
-
+	
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
 	{
@@ -269,7 +270,7 @@ public class Orfen extends L2AttackableAIScript
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isPet);
 	}
-
+	
 	@Override
 	public String onFactionCall(L2Npc npc, L2Npc caller, L2PcInstance attacker, boolean isPet)
 	{
@@ -296,7 +297,7 @@ public class Orfen extends L2AttackableAIScript
 		}
 		return super.onFactionCall(npc, caller, attacker, isPet);
 	}
-
+	
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
 	{
@@ -326,7 +327,7 @@ public class Orfen extends L2AttackableAIScript
 		}
 		return super.onAttack(npc, attacker, damage, isPet);
 	}
-
+	
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
@@ -353,7 +354,7 @@ public class Orfen extends L2AttackableAIScript
 		}
 		return super.onKill(npc, killer, isPet);
 	}
-
+	
 	public static void main(String[] args)
 	{
 		// Quest class and state definition

@@ -11,7 +11,7 @@ public class Zariche extends L2Transformation
 		// id, colRadius, colHeight
 		super(301, 12, 31.57);
 	}
-
+	
 	@Override
 	public void onTransform()
 	{
@@ -19,15 +19,15 @@ public class Zariche extends L2Transformation
 		getPlayer().getAppearance().setVisibleName("Zariche");
 		getPlayer().getAppearance().setVisibleTitle("");
 	}
-
+	
 	@Override
 	public void onUntransform()
 	{
-	// set character back to true name.
+		// set character back to true name.
 		getPlayer().getAppearance().setVisibleName(null);
 		getPlayer().getAppearance().setVisibleTitle(null);
 	}
-
+	
 	public static void main(String[] args)
 	{
 		TransformationManager.getInstance().registerTransformation(new Zariche());

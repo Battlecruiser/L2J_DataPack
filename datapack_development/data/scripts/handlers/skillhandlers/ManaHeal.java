@@ -15,6 +15,7 @@
 package handlers.skillhandlers;
 
 import com.l2jserver.gameserver.handler.ISkillHandler;
+import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -49,32 +50,54 @@ public class ManaHeal implements ISkillHandler
 		{
 			if (target.isInvul())
 				continue;
-
+			
 			double mp = skill.getPower();
 			mp = (skill.getSkillType() == L2SkillType.MANARECHARGE) ? target.calcStat(Stats.RECHARGE_MP_RATE, mp, null, null) : mp;
-
+			
 			//from CT2 u will receive exact MP, u can't go over it, if u have full MP and u get MP buff, u will receive 0MP restored message
 			if ((target.getCurrentMp() + mp) >= target.getMaxMp())
 				mp = target.getMaxMp() - target.getCurrentMp();
-
+			
 			target.setCurrentMp(mp + target.getCurrentMp());
 			StatusUpdate sump = new StatusUpdate(target);
 			sump.addAttribute(StatusUpdate.CUR_MP, (int) target.getCurrentMp());
 			target.sendPacket(sump);
-
+			
+			SystemMessage sm;
 			if (actChar instanceof L2PcInstance && actChar != target)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.S2_MP_RESTORED_BY_C1);
+				sm = new SystemMessage(SystemMessageId.S2_MP_RESTORED_BY_C1);
 				sm.addString(actChar.getName());
 				sm.addNumber((int) mp);
 				target.sendPacket(sm);
 			}
 			else
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.S1_MP_RESTORED);
+				sm = new SystemMessage(SystemMessageId.S1_MP_RESTORED);
 				sm.addNumber((int) mp);
 				target.sendPacket(sm);
 			}
+			
+			if (skill.hasEffects())
+			{
+				target.stopSkillEffects(skill.getId());
+				skill.getEffects(actChar, target);
+				sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
+				sm.addSkillName(skill);
+				target.sendPacket(sm);
+			}
+		}
+		
+		if (skill.hasSelfEffects())
+		{
+			L2Effect effect = actChar.getFirstEffect(skill.getId());
+			if (effect != null && effect.isSelfEffect())
+			{
+				//Replace old effect with new one.
+				effect.exit();
+			}
+			// cast self effect if any
+			skill.getEffectsSelf(actChar);
 		}
 	}
 	

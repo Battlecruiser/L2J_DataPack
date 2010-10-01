@@ -128,7 +128,7 @@
 		</cond>
 	</skill>
 	<skill id="6125" levels="1" name="Paralysis">
-		<!-- Cubic Skill Effect -->
+		<!-- Summon Binding Cubic Skill Effect -->
 		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -277,14 +277,45 @@
 	</skill>
 	<skill id="6149" levels="1" name="Kasha's Betrayal">
 		<!-- Kasha's Betrayal. For 15 minutes, decreases P. Atk./P. Def./moving speed by 50%. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Only when a eye explode -->
+		<set name="canBeDispeled" val="false" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="85" /> <!-- Guess -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Debuff" time="900" val="0">
+				<mul order="0x30" stat="pAtk" val="0.5" />
+				<mul order="0x30" stat="pDef" val="0.5" />
+				<mul order="0x30" stat="runSpd" val="0.5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6150" levels="4" name="Kasha's Curse">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Zone Skill -->
+		<!-- Lvl 1 Only if 1 red eye is present inside the zone -->
+		<!-- Lvl 2 Only if 2 red eyes are present inside the zone -->
+		<!-- Lvl 3 Only if 3 red eyes are present inside the zone -->
+		<!-- Lvl 4 Only if 4 red eyes are present inside the zone -->
+		<table name="#pAtkSpd"> 1.02 1.04 1.06 1.08 </table>
+		<set name="canBeDispeled" val="false" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="85" /> <!-- Guess -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" /> <!-- Base Land Rate --> <!-- Guess -->
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Debuff" time="10" val="0">
+				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6151" levels="4" name="Kasha's Curse">
 		<set name="target" val="TARGET_NONE" />
@@ -292,9 +323,26 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6152" levels="4" name="Kasha's Yearning">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Zone Skill -->
+		<!-- Lvl 1 Only if 1 green eye is present inside the zone -->
+		<!-- Lvl 2 Only if 2 green eyes are present inside the zone -->
+		<!-- Lvl 3 Only if 3 green eyes are present inside the zone -->
+		<!-- Lvl 4 Only if 4 green eyes are present inside the zone -->
+		<table name="#pAtk"> 1.02 1.04 1.06 1.08 </table>
+		<set name="canBeDispeled" val="false" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="85" /> <!-- Guess -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" /> <!-- Base Land Rate --> <!-- Guess -->
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Debuff" time="10" val="0">
+				<mul order="0x30" stat="pAtk" val="#pAtk" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6153" levels="4" name="Kasha's Yearning">
 		<set name="target" val="TARGET_NONE" />
@@ -302,9 +350,26 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6154" levels="4" name="Kasha's Despair">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Zone Skill -->
+		<!-- Lvl 1 Only if 1 blue eye is present inside the zone -->
+		<!-- Lvl 2 Only if 2 blue eyes are present inside the zone -->
+		<!-- Lvl 3 Only if 3 blue eyes are present inside the zone -->
+		<!-- Lvl 4 Only if 4 blue eyes are present inside the zone -->
+		<table name="#rCrit"> 200 300 400 500 </table>
+		<set name="canBeDispeled" val="false" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="85" /> <!-- Guess -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" /> <!-- Base Land Rate --> <!-- Guess -->
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Debuff" time="10" val="0" abnormal="bleed">
+				<add order="0x40" stat="rCrit" val="#rCrit" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6155" levels="4" name="Kasha's Despair">
 		<set name="target" val="TARGET_NONE" />
@@ -337,9 +402,17 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6171" levels="1" name="Full Authority">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="Buff" time="60" val="0" stackType="stakato_buff" stackOrder="1">
+				<mul order="0x30" stat="pAtk" val="1.05" />
+				<mul order="0x30" stat="mAtk" val="1.05" />
+				<mul order="0x30" stat="pAtkSpd" val="1.05" />
+				<mul order="0x30" stat="mAtkSpd" val="1.05" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6172" levels="1" name="Presentation - Tyranno">
 		<set name="target" val="TARGET_NONE" />

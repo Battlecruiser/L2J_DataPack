@@ -123,7 +123,8 @@ class Quest (JQuest) :
     elif st.getInt("phase")==2:
       if event == "30565_2":
         htmltext = "30565-12.htm"
-        st.addExpAndSp(92955,16250)
+        st.addExpAndSp(447444,30704)
+        st.giveItems(57,80903)
         st.giveItems(MARK_OF_LORD,1)
         st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
         st.takeItems(IMMORTAL_FLAME,1)
@@ -153,7 +154,7 @@ class Quest (JQuest) :
     return htmltext
     
   def onTalk (self,npc,player):
-    htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+    htmltext = Quest.getNoQuestMsg(player)
     st = player.getQuestState(qn)
     if not st : return htmltext
 

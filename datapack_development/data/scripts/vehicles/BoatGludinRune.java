@@ -33,7 +33,7 @@ import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 public class BoatGludinRune implements Runnable
 {
 	private static final Logger _log = Logger.getLogger(BoatGludinRune.class.getName());
-
+	
 	// Time: 1151s
 	private static final VehiclePathPoint[] GLUDIN_TO_RUNE =
 	{
@@ -65,12 +65,12 @@ public class BoatGludinRune implements Runnable
 		new VehiclePathPoint(40576, -31616, -3610, 250, 800),
 		new VehiclePathPoint(36819, -35315, -3610, 220, 800)
 	};
-
+	
 	private static final VehiclePathPoint[] RUNE_DOCK =
 	{
 		new VehiclePathPoint(34381, -37680, -3610, 200, 800)
 	};
-
+	
 	// Time: 967s
 	private static final VehiclePathPoint[] RUNE_TO_GLUDIN =
 	{
@@ -97,16 +97,16 @@ public class BoatGludinRune implements Runnable
 		new VehiclePathPoint(-95686, 147717, -3610, 250, 800),
 		new VehiclePathPoint(-95686, 148218, -3610, 200, 800)
 	};
-
+	
 	private static final VehiclePathPoint[] GLUDIN_DOCK =
 	{
 		new VehiclePathPoint(-95686, 150514, -3610, 150, 800)
 	};
-
+	
 	private final L2BoatInstance _boat;
 	private int _cycle = 0;
 	private int _shoutCount = 0;
-
+	
 	private final CreatureSay ARRIVED_AT_GLUDIN;
 	private final CreatureSay ARRIVED_AT_GLUDIN_2;
 	private final CreatureSay LEAVE_GLUDIN5;
@@ -121,7 +121,7 @@ public class BoatGludinRune implements Runnable
 	private final CreatureSay LEAVING_RUNE;
 	private final CreatureSay BUSY_GLUDIN;
 	private final CreatureSay BUSY_RUNE;
-
+	
 	private final CreatureSay ARRIVAL_RUNE15;
 	private final CreatureSay ARRIVAL_RUNE10;
 	private final CreatureSay ARRIVAL_RUNE5;
@@ -130,14 +130,14 @@ public class BoatGludinRune implements Runnable
 	private final CreatureSay ARRIVAL_GLUDIN10;
 	private final CreatureSay ARRIVAL_GLUDIN5;
 	private final CreatureSay ARRIVAL_GLUDIN1;
-
+	
 	private final PlaySound GLUDIN_SOUND;
 	private final PlaySound RUNE_SOUND;
-
+	
 	public BoatGludinRune(L2BoatInstance boat)
 	{
 		_boat = boat;
-
+		
 		ARRIVED_AT_GLUDIN = new CreatureSay(0, Say2.BOAT, 801, 986);
 		ARRIVED_AT_GLUDIN_2 = new CreatureSay(0, Say2.BOAT, 801, 1625);
 		LEAVE_GLUDIN5 = new CreatureSay(0, Say2.BOAT, 801, 1626);
@@ -152,7 +152,7 @@ public class BoatGludinRune implements Runnable
 		LEAVING_RUNE = new CreatureSay(0, Say2.BOAT, 801, 1624);
 		BUSY_GLUDIN = new CreatureSay(0, Say2.BOAT, 801, 1618);
 		BUSY_RUNE = new CreatureSay(0, Say2.BOAT, 801, 1619);
-
+		
 		ARRIVAL_RUNE15 = new CreatureSay(0, Say2.BOAT, 801, 1634);
 		ARRIVAL_RUNE10 = new CreatureSay(0, Say2.BOAT, 801, 1635);
 		ARRIVAL_RUNE5 = new CreatureSay(0, Say2.BOAT, 801, 1636);
@@ -161,11 +161,11 @@ public class BoatGludinRune implements Runnable
 		ARRIVAL_GLUDIN10 = new CreatureSay(0, Say2.BOAT, 801, 1631);
 		ARRIVAL_GLUDIN5 = new CreatureSay(0, Say2.BOAT, 801, 1632);
 		ARRIVAL_GLUDIN1 = new CreatureSay(0, Say2.BOAT, 801, 1633);
-
+		
 		GLUDIN_SOUND = new PlaySound(0, "itemsound.ship_arrival_departure", 1, _boat.getObjectId(), GLUDIN_DOCK[0].x, GLUDIN_DOCK[0].y, GLUDIN_DOCK[0].z);
 		RUNE_SOUND = new PlaySound(0, "itemsound.ship_arrival_departure", 1, _boat.getObjectId(), RUNE_DOCK[0].x, RUNE_DOCK[0].y, RUNE_DOCK[0].z);
 	}
-
+	
 	public void run()
 	{
 		try
@@ -212,11 +212,11 @@ public class BoatGludinRune implements Runnable
 					{
 						if (_shoutCount == 0)
 							BoatManager.getInstance().broadcastPacket(RUNE_DOCK[0], GLUDIN_DOCK[0], BUSY_RUNE);
-
+						
 						_shoutCount++;
 						if (_shoutCount > 35)
 							_shoutCount = 0;
-
+						
 						ThreadPoolManager.getInstance().scheduleGeneral(this, 5000);
 						return;
 					}
@@ -268,11 +268,11 @@ public class BoatGludinRune implements Runnable
 					{
 						if (_shoutCount == 0)
 							BoatManager.getInstance().broadcastPacket(GLUDIN_DOCK[0], RUNE_DOCK[0], BUSY_GLUDIN);
-
+						
 						_shoutCount++;
 						if (_shoutCount > 35)
 							_shoutCount = 0;
-
+						
 						ThreadPoolManager.getInstance().scheduleGeneral(this, 5000);
 						return;
 					}
@@ -295,7 +295,7 @@ public class BoatGludinRune implements Runnable
 			_log.log(Level.WARNING, e.getMessage());
 		}
 	}
-
+	
 	public static void main(String[] args)
 	{
 		final L2BoatInstance boat = BoatManager.getInstance().getNewBoat(3, -95686, 150514, -3610, 16723);

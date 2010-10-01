@@ -49,7 +49,7 @@ import com.l2jserver.gameserver.util.Util;
 public class Blow implements ISkillHandler
 {
 	private static final Logger _logDamage = Logger.getLogger("damage");
-
+	
 	private static final L2SkillType[] SKILL_IDS =
 	{
 		L2SkillType.BLOW
@@ -175,7 +175,7 @@ public class Blow implements ISkillHandler
 				
 				if (soul)
 					weapon.setChargedSoulshot(L2ItemInstance.CHARGED_NONE);
-
+				
 				if (Config.LOG_GAME_DAMAGE
 						&& activeChar instanceof L2Playable
 						&& damage > Config.LOG_GAME_DAMAGE_THRESHOLD)
@@ -185,7 +185,7 @@ public class Blow implements ISkillHandler
 					record.setLoggerName("pdam");
 					_logDamage.log(record);
 				}
-
+				
 				if (skill.getDmgDirectlyToHP() && target instanceof L2PcInstance)
 				{
 					final L2Character[] ts = {target, activeChar};
@@ -203,7 +203,7 @@ public class Blow implements ISkillHandler
 							if (summon instanceof L2SummonInstance && Util.checkIfInRange(900, player, summon, true))
 							{
 								int tDmg = (int) damage * (int) player.getStat().calcStat(Stats.TRANSFER_DAMAGE_PERCENT, 0, null, null) / 100;
-
+								
 								// Only transfer dmg up to current HP, it should
 								// not be killed
 								if (summon.getCurrentHp() < tDmg)
@@ -243,30 +243,30 @@ public class Blow implements ISkillHandler
 						smsg.addCharName(activeChar);
 						smsg.addNumber((int) damage);
 						player.sendPacket(smsg);
-
+						
 						// stop if no vengeance, so only target will be effected
-						if ((reflect & Formulas.SKILL_REFLECT_VENGEANCE) == 0) 
+						if ((reflect & Formulas.SKILL_REFLECT_VENGEANCE) == 0)
 							break;
 					} // end for
-	        	} // end skill directlyToHp check
-	        	else
-	        	{
-	        		target.reduceCurrentHp(damage, activeChar, skill);
-	        		
-	        		// vengeance reflected damage
+				} // end skill directlyToHp check
+				else
+				{
+					target.reduceCurrentHp(damage, activeChar, skill);
+					
+					// vengeance reflected damage
 					if ((reflect & Formulas.SKILL_REFLECT_VENGEANCE) != 0)
 						activeChar.reduceCurrentHp(damage, target, skill);
-	        	}
+				}
 				
 				// Manage attack or cast break of the target (calculating rate, sending message...)
-                if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
-                {
-                	target.breakAttack();
-                	target.breakCast();
-                }
+				if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
+				{
+					target.breakAttack();
+					target.breakCast();
+				}
 				if(activeChar instanceof L2PcInstance)
 				{
-					L2PcInstance activePlayer = (L2PcInstance) activeChar; 
+					L2PcInstance activePlayer = (L2PcInstance) activeChar;
 					
 					activePlayer.sendDamageMessage(target, (int)damage, false, true, false);
 				}
@@ -292,11 +292,14 @@ public class Blow implements ISkillHandler
 			//Possibility of a lethal strike
 			Formulas.calcLethalHit(activeChar, target, skill);
 			
-			L2Effect effect = activeChar.getFirstEffect(skill.getId());
 			//Self Effect
-			if (effect != null && effect.isSelfEffect())
-				effect.exit();
-			skill.getEffectsSelf(activeChar);
+			if (skill.hasSelfEffects())
+			{
+				final L2Effect effect = activeChar.getFirstEffect(skill.getId());
+				if (effect != null && effect.isSelfEffect())
+					effect.exit();
+				skill.getEffectsSelf(activeChar);
+			}
 		}
 	}
 	

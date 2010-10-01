@@ -39,7 +39,7 @@ public class L2DoorInstanceAction implements IActionHandler
 			
 			// Send a Server->Client packet MyTargetSelected to the L2PcInstance activeChar
 			activeChar.sendPacket(new MyTargetSelected(target.getObjectId(), 0));
-
+			
 			StaticObject su;
 			// send HP amount if doors are inside castle/fortress zone
 			// TODO: needed to be added here doors from conquerable clanhalls
@@ -51,7 +51,7 @@ public class L2DoorInstanceAction implements IActionHandler
 				su = new StaticObject((L2DoorInstance)target, true);
 			else
 				su = new StaticObject((L2DoorInstance)target, false);
-
+			
 			activeChar.sendPacket(su);
 			
 			// Send a Server->Client packet ValidateLocation to correct the L2NpcInstance position and heading on the client
@@ -105,7 +105,7 @@ public class L2DoorInstanceAction implements IActionHandler
 		}
 		return true;
 	}
-
+	
 	public InstanceType getInstanceType()
 	{
 		return InstanceType.L2DoorInstance;

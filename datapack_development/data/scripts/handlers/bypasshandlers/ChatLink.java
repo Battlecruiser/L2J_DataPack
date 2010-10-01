@@ -25,12 +25,12 @@ public class ChatLink implements IBypassHandler
 	{
 		"Chat"
 	};
-
+	
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2Npc))
 			return false;
-
+		
 		int val = 0;
 		try
 		{
@@ -43,10 +43,10 @@ public class ChatLink implements IBypassHandler
 		{
 		}
 		((L2Npc)target).showChatWindow(activeChar, val);
-
+		
 		return false;
 	}
-
+	
 	public String[] getBypassList()
 	{
 		return COMMANDS;

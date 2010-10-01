@@ -41,7 +41,7 @@ public class ExtractableItems implements IItemHandler
 {
 	private static Logger _log = Logger.getLogger(ItemTable.class.getName());
 	
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!(playable instanceof L2PcInstance))
 			return;
@@ -66,14 +66,14 @@ public class ExtractableItems implements IItemHandler
 			if (rndNum >= chanceFrom && rndNum <= chance + chanceFrom)
 			{
 				createItemID = expi.getId();
-
+				
 				for (int i = 0; i < expi.getId().length; i++)
 				{
 					createItemID[i] = expi.getId()[i];
-
-					if ((itemID >= 6411 && itemID <= 6518) || (itemID >= 7726 && itemID <= 7860) || (itemID >= 8403 && itemID <= 8483)) 
+					
+					if ((itemID >= 6411 && itemID <= 6518) || (itemID >= 7726 && itemID <= 7860) || (itemID >= 8403 && itemID <= 8483))
 						createAmount[i] = (int)(expi.getAmmount()[i]* Config.RATE_EXTR_FISH);
-					else 
+					else
 						createAmount[i] = expi.getAmmount()[i];
 				}
 				break;
@@ -93,14 +93,14 @@ public class ExtractableItems implements IItemHandler
 			{
 				if (createItemID[i] <= 0)
 					continue;
-						
+				
 				if (ItemTable.getInstance().createDummyItem(createItemID[i]) == null)
 				{
 					_log.warning("createItemID " + createItemID[i] + " doesn't have template!");
 					activeChar.sendPacket(new SystemMessage(SystemMessageId.NOTHING_INSIDE_THAT));
 					continue;
 				}
-
+				
 				if (ItemTable.getInstance().createDummyItem(createItemID[i]).isStackable())
 					activeChar.addItem("Extract", createItemID[i], createAmount[i], activeChar, false);
 				else

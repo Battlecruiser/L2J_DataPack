@@ -15,7 +15,7 @@
 ## Based on Tiago Tagliaferri's script    ##
 ## E-mail: tiago_tagliaferri@msn.com      ##
 ## From "L2J-DataPack"                    ##
-## Bug reports: http://l2jdp.com/trac     ##
+## Bug reports: http://trac.l2jdp.com/    ##
 ############################################
 trap finish 2
 
@@ -312,7 +312,7 @@ esac
 
 fullcbinstall(){
 echo "Deleting all communityserver tables for new content."
-$MYG < community_install.sql &> /dev/null
+$MYC < community_install.sql &> /dev/null
 }
 
 upgradecbinstall(){
@@ -322,12 +322,12 @@ else
 echo "Upgrading communityserver content"
 fi
 if [ "$1" == "I" ]; then
-$MYG < ../cb_sql/clan_introductions.sql &> /dev/null
-$MYG < ../cb_sql/comments.sql &> /dev/null
-$MYG < ../cb_sql/forums.sql &> /dev/null
-$MYG < ../cb_sql/registered_gameservers.sql &> /dev/null
-$MYG < ../cb_sql/posts.sql &> /dev/null
-$MYG < ../cb_sql/topics.sql &> /dev/null
+$MYC < ../cb_sql/clan_introductions.sql &> /dev/null
+$MYC < ../cb_sql/comments.sql &> /dev/null
+$MYC < ../cb_sql/forums.sql &> /dev/null
+$MYC < ../cb_sql/registered_gameservers.sql &> /dev/null
+$MYC < ../cb_sql/posts.sql &> /dev/null
+$MYC < ../cb_sql/topics.sql &> /dev/null
 fi
 newbie_helper_cb
 }
@@ -367,6 +367,7 @@ $MYG < ../sql/character_friends.sql &> /dev/null
 $MYG < ../sql/character_hennas.sql &> /dev/null
 $MYG < ../sql/character_instance_time.sql &> /dev/null
 $MYG < ../sql/character_macroses.sql &> /dev/null
+$MYG < ../sql/character_premium_items.sql &> /dev/null
 $MYG < ../sql/character_quest_global_data.sql &> /dev/null 
 $MYG < ../sql/character_offline_trade_items.sql &> /dev/null
 $MYG < ../sql/character_offline_trade.sql &> /dev/null
@@ -391,6 +392,7 @@ $MYG < ../sql/clan_subpledges.sql &> /dev/null
 $MYG < ../sql/clan_wars.sql &> /dev/null
 $MYG < ../sql/clanhall.sql &> /dev/null
 $MYG < ../sql/clanhall_functions.sql &> /dev/null
+$MYG < ../sql/clanhall_siege_guards.sql &> /dev/null
 $MYG < ../sql/class_list.sql &> /dev/null
 $MYG < ../sql/cursed_weapons.sql &> /dev/null
 $MYG < ../sql/dimensional_rift.sql &> /dev/null
@@ -415,9 +417,13 @@ $MYG < ../sql/grandboss_list.sql &> /dev/null
 $MYG < ../sql/helper_buff_list.sql &> /dev/null
 $MYG < ../sql/henna.sql &> /dev/null
 $MYG < ../sql/henna_trees.sql &> /dev/null
+$MYG < ../sql/herb_droplist_groups.sql &> /dev/null
 $MYG < ../sql/heroes.sql &> /dev/null
 $MYG < ../sql/heroes_diary.sql &> /dev/null
 $MYG < ../sql/item_attributes.sql &> /dev/null
+$MYG < ../sql/item_auction_bid.sql &> /dev/null
+$MYG < ../sql/item_auction.sql &> /dev/null
+$MYG < ../sql/item_elementals.sql &> /dev/null
 $MYG < ../sql/items.sql &> /dev/null
 $MYG < ../sql/itemsonground.sql &> /dev/null
 $MYG < ../sql/locations.sql &> /dev/null
@@ -430,7 +436,8 @@ $MYG < ../sql/messages.sql &> /dev/null
 $MYG < ../sql/minions.sql &> /dev/null
 $MYG < ../sql/npc.sql &> /dev/null
 $MYG < ../sql/npc_buffer.sql &> /dev/null
-$MYG < ../sql/npcAIData.sql &> /dev/null
+$MYG < ../sql/npcaidata.sql &> /dev/null
+$MYG < ../sql/npc_elementals.sql &> /dev/null
 $MYG < ../sql/npcskills.sql &> /dev/null
 $MYG < ../sql/olympiad_data.sql &> /dev/null
 $MYG < ../sql/olympiad_fights.sql &> /dev/null
@@ -562,7 +569,7 @@ while :
      echo "updates parser results. Last run: "`date` >cb_database_installer.log
      for file in $(ls ../cb_sql/updates/*sql);do
         echo $file|cut -d/ -f4 >> cb_database_installer.log
-        $MYG < $file 2>> cb_database_installer.log
+        $MYC < $file 2>> cb_database_installer.log
         if [ $? -eq 0 ];then
             echo "no errors">> cb_database_installer.log
         fi
@@ -581,5 +588,6 @@ clear
 load_config $1
 MYL="$MYSQLPATH -h $LSDBHOST -u $LSUSER --password=$LSPASS -D $LSDB"
 MYG="$MYSQLPATH -h $GSDBHOST -u $GSUSER --password=$GSPASS -D $GSDB"
+MYC="$MYSQLPATH -h $CBDBHOST -u $CBUSER --password=$CBPASS -D $CBDB"
 lsbackup
 asklogin

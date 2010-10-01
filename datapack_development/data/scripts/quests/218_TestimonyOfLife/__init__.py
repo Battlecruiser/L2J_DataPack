@@ -142,7 +142,7 @@ class Quest(JQuest):
 		return htmltext
 
 	def onTalk (self,npc,player):
-		htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+		htmltext = Quest.getNoQuestMsg(player)
 		st = player.getQuestState(qn)
 		if not st: return htmltext
 		npcId = npc.getNpcId()
@@ -168,7 +168,8 @@ class Quest(JQuest):
 			elif st.getQuestItemsCount(CAMOMILE_CHARM_ID):
 				if st.getGameTicks() != st.getInt("id"):
 					st.set("id",str(st.getGameTicks()))
-					st.addExpAndSp(104591,11250)
+					st.addExpAndSp(943416,62959)
+					st.giveItems(57,171144)
 					st.giveItems(7562,16)
 					st.giveItems(MARK_OF_LIFE_ID,1)
 					st.takeItems(CAMOMILE_CHARM_ID,1)

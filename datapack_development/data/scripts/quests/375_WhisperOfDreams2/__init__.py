@@ -20,9 +20,6 @@ MSTONE,K_HORN,CH_SKULL=range(5887,5890)
 #Quest collections
 REWARDS = [5348,5350,5352]
  
-#Messages
-default   = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
- 
 #NPCs
 MANAKIA = 30515
  
@@ -50,7 +47,7 @@ class Quest (JQuest) :
          st.set("cond","1")
          st.playSound("ItemSound.quest_accept")
        else:
-         htmltext=default
+         htmltext = Quest.getNoQuestMsg(player)
     elif event == "30515-7.htm" :
        st.playSound("ItemSound.quest_finish")
        st.exitQuest(1)
@@ -60,7 +57,7 @@ class Quest (JQuest) :
     return htmltext
  
  def onTalk (self,npc,player):
-   htmltext = default
+   htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st : return htmltext
 

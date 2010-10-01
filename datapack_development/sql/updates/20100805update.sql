@@ -1,0 +1,1 @@
+ALTER TABLE `fort` ADD COLUMN `supplyLvL` int(2) NOT NULL default 0;

@@ -482,7 +482,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="castRange" val="150" />
 		<cond msgId="113" addName="1">
-			<target npcType="L2FortBallista" />
+			<target npcType="L2FortBallistaInstance" />
 		</cond>
 	</skill>
 	<skill id="2343" levels="1" name="Gate Key of Kamael">
@@ -963,7 +963,7 @@
 			<player SiegeZone="126" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="berserk">
+			<effect name="Buff" time="3600" val="0" stackOrder="3" stackType="berserk">
 				<mul order="0x30" stat="mAtk" val="1.16" />
 				<mul order="0x30" stat="pAtk" val="1.08" />
 				<mul order="0x30" stat="mDef" val="0.84" />
@@ -1023,7 +1023,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="power" val="2000" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="HEAL" />
+		<set name="skillType" val="HEAL_STATIC" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="180000" />
 		<set name="staticReuse" val="true" />
@@ -1044,10 +1044,10 @@
 		</cond>
 		<for>
 			<effect name="Buff" time="1200" val="0" stackOrder="30" stackType="MentalShield">
-				<mul order="0x30" stat="rootVuln" val="0.7" />
-				<mul order="0x30" stat="sleepVuln" val="0.7" />
-				<mul order="0x30" stat="confusionVuln" val="0.7" />
-				<mul order="0x30" stat="derangementVuln" val="0.7" />
+				<sub order="0x40" stat="rootVuln" val="30" />
+				<sub order="0x40" stat="sleepVuln" val="30" />
+				<sub order="0x40" stat="confusionVuln" val="30" />
+				<sub order="0x40" stat="derangementVuln" val="30" />
 			</effect>
 		</for>
 	</skill>

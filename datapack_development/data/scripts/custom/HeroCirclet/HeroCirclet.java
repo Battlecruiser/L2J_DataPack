@@ -25,7 +25,7 @@ public class HeroCirclet extends Quest
 	{
 		31690,31769,31770,31771,31772
 	};
-
+	
 	public HeroCirclet(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
@@ -35,15 +35,15 @@ public class HeroCirclet extends Quest
 			addTalkId(i);
 		}
 	}
-
+	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
 		QuestState st = player.getQuestState(getName());
 		if (st == null)
-			newQuestState(player);
-
+			st = newQuestState(player);
+		
 		if (player.isHero())
 		{
 			if (player.getInventory().getItemByItemId(6842) == null)
@@ -53,11 +53,11 @@ public class HeroCirclet extends Quest
 		}
 		else
 			htmltext = "no_hero.htm";
-
+		
 		st.exitQuest(true);
 		return htmltext;
 	}
-
+	
 	public static void main(String[] args)
 	{
 		new HeroCirclet(-1, "HeroCirclet", "custom");

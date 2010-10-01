@@ -54,7 +54,7 @@ class Quest (JQuest) :
 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+   htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st : return htmltext
    cond=st.getInt("cond")
@@ -79,7 +79,8 @@ class Quest (JQuest) :
       htmltext = "<html><body>This quest has already been completed.</body></html>"
 
    elif npcId == 30109 and cond == 18  and st.getQuestItemsCount(LETTER_OF_DUSTIN):
-      st.addExpAndSp(79832,3750)
+      st.addExpAndSp(381288,24729)
+      st.giveItems(57,69484)
       st.giveItems(7562,8)
       htmltext = "30109-05.htm"
       st.takeItems(LETTER_OF_DUSTIN,1)

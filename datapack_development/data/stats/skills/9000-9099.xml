@@ -261,6 +261,148 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
+	<skill id="9049" levels="1" name="Golden Spice">
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="hitTime" val="1000" />
+		<set name="reuseDelay" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="neutral" val="true" />
+		<cond msgId="109">
+			<target npcId="18873,18874,18875,18876,18877,18878,18879,18880,18881,18882,18883,18884,18885,18886,18887,18888,18889,18890,18891,18892,18893,18894,18895,18896,18897,18898,18899,18900" />
+		</cond>
+	</skill>
+	<skill id="9050" levels="1" name="Crystal Spice">
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="hitTime" val="1000" />
+		<set name="reuseDelay" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="neutral" val="true" />
+		<cond msgId="109">
+			<target npcId="18873,18874,18875,18876,18877,18878,18879,18880,18881,18882,18883,18884,18885,18886,18887,18888,18889,18890,18891,18892,18893,18894,18895,18896,18897,18898,18899,18900" />
+		</cond>
+	</skill>
+	<skill id="9051" levels="1" name="Blessed Golden Spice">
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="hitTime" val="1000" />
+		<set name="reuseDelay" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="neutral" val="true" />
+		<cond msgId="109">
+			<target npcId="18873,18880,18887,18894" />
+		</cond>
+	</skill>
+	<skill id="9052" levels="1" name="Blessed Crystal Spice">
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="hitTime" val="1000" />
+		<set name="reuseDelay" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="neutral" val="true" />
+		<cond msgId="109">
+			<target npcId="18873,18880,18887,18894" />
+		</cond>
+	</skill>
+	<skill id="9053" levels="1" name="S Grade Golden Spice">
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="hitTime" val="1000" />
+		<set name="reuseDelay" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="neutral" val="true" />
+		<cond msgId="109">
+			<target npcId="18873,18880,18887,18894" />
+		</cond>
+	</skill>
+	<skill id="9054" levels="1" name="S Grade Crystal Spice">
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="hitTime" val="1000" />
+		<set name="reuseDelay" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="neutral" val="true" />
+		<cond msgId="109">
+			<target npcId="18873,18880,18887,18894" />
+		</cond>
+	</skill>
+	<skill id="9055" levels="1" name="Golden Spice Capsule">
+		<set name="itemConsumeCount" val="1" />
+		<set name="reuseDelay" val="1000" />
+		<set name="hitTime" val="500" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="9056" levels="1" name="Crystal Spice Capsule">
+		<set name="itemConsumeCount" val="1" />
+		<set name="reuseDelay" val="1000" />
+		<set name="hitTime" val="500" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="9057" levels="1" name="Freezing Core">
+		<!-- Prevents user from being affected by Freya's Eternal Blizzard. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="9058" levels="1" name="Black Freezing Core">
+		<!-- Prevents user from being affected by Freya's Eternal Blizzard. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="9059" levels="1" name="Torch Light">
+		<!-- Lights the Torch -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="9060" levels="1" name="Maguen Machine">
+		<!-- Skill that allows you to collect Plasma -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
 	<skill id="9061" levels="1" name="Uldie Summon Scroll">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -291,17 +433,43 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="9067" levels="1" name="Potion of Energy Maintenance">
+	<skill id="9067" levels="1" name="Potion of Vitality Maintenance">
 		<!-- Energy is maintained for 10 minutes. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="1800000" />
+		<set name="staticReuse" val="true" />
+		<set name="isPotion" val="true" />
+		<set name="buffDuration" val="600000" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="600" val="0">
+				<mul order="0x30" stat="vitalityConsumeRate" val="0.00" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="9068" levels="1" name="Potion of Energy Maintenance">
+	<skill id="9068" levels="2" name="Potion of Vitality Maintenance">
 		<!-- Energy is maintained for 30 minutes. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="staticReuse" val="true" />
+		<set name="isPotion" val="true" />
+		<set name="buffDuration" val="1800000" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="1800" val="0">
+				<mul order="0x30" stat="vitalityConsumeRate" val="0.00" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9069" levels="1" name="10,000 SP scroll">
 		<set name="target" val="TARGET_NONE" />
@@ -319,6 +487,38 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="9072" levels="1" name="Small Halloween Pumpkin">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="9073" levels="1" name="Energy of Vampiric Rage">
+		<!-- Converts 9% of inflicted physical-damage to HP for 20 minutes. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="9074" levels="1" name="Salmon Soup">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="9075" levels="1" name="Awful Soup">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="9076" levels="1" name="Secret Door Key">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="9077" levels="1" name="Open Packaged Book">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="9078" levels="1" name="Rainbow Springs Potion">
+		<!-- Increases the regen rate of HP/MP/CP by 30%. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -362,6 +562,86 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="9086" levels="1" name="Santa - Potion of Will">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="9087" levels="1" name="Create Item">
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="172" />
+		<set name="learnSkillLvl" val="10" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id_lvl="172,10" />
+				</not>
+				<player active_skill_id_lvl="172,9" />
+				<player class_id_restriction="118" />
+				<player level="82" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="9088" levels="1" name="Cupid's Arrow">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="9089" levels="1" name="Cupid's Major Cure">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="9090" levels="1" name="Fighter's Will">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="9091" levels="1" name="Archer's Will">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="9092" levels="1" name="Magician's Will">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="9093" levels="1" name="Protection of Rune">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="9094" levels="1" name="Protection of Elemental">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="9095" levels="1" name="Protection of Alignment">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="9096" levels="1" name="Event - White Baby Tiger Scroll">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="9097" levels="1" name="Event - White Baby King-Tiger Scroll">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="9098" levels="1" name="Event - Sad White Baby Tiger Scroll">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="9099" levels="1" name="Event - Sad White Baby King-Tiger Scroll">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />

@@ -589,22 +589,82 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="23171" levels="1" name="Phoenix Agathion Cute Trick">
+	<skill id="23166" levels="1" name="Energized Rose Spirit">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23167" levels="1" name="Rosy Seduction">
+		<!-- Increases Max HP by 20%, Max MP by 20%, and the moving speed by 20% for 5 minutes. Increases the resistance to de-buffs by 10%. Reuse delay 10 minutes. Consumes 3 Rose Essence during skill use. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23168" levels="1" name="Critical Seduction">
+		<!-- Increases party members' Max HP by 30%, Max MP by 30%, Max CP by 30%, physical P. Def. by 30%, magic M. Def. by 30%, moving speed by 20%, and physical P. Atk. by 10%, and decreases MP consumption during skill use by 15% for 20 minutes. Reuse delay 40 minutes. Consumes 10 Rose Essence during skill use. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23169" levels="1" name="Mesmerized">
+		<!-- Critical Seduction has left you mesmerized. You cannot be buffed with Critical Seduction again during the next 40 minutes. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23170" levels="1" name="Mesmerized">
+		<!-- Rosy Seduction has left you mesmerized. You cannot be buffed with Rosy Seduction again during the next 10 minutes. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23171" levels="1" name="Phoenix Agathion Cute Trick">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
+		<cond msgId="2292">
+			<player agathionId="1574" />
+		</cond>
 	</skill>
 	<skill id="23172" levels="1" name="Phoenix Agathion Special Skill - Nirvana Rebirth">
 		<!-- All HP, MP, CP are recovered, and becomes invincible for 5 seconds with the power of Phoenix. Possible to use under HP 30% only. Cooldown of 12 hours. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="HPMPCPHEAL_PERCENT" />
+		<set name="power" val="100" />
+		<set name="hitTime" val="2000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="43200000" />
+		<set name="staticReuse" val="true" />
+		<set name="removedOnAnyActionExceptMove" val="true" />
+		<for>
+			<effect name="Invincible" time="5" val="0" special="invincible" stackOrder="2" stackType="Instant_Shield" />
+		</for>
+		<cond msgId="113" addName="1">
+			<and>
+				<player agathionId="1574" />
+				<player hp="30" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="23173" levels="1" name="Phoenix Agathion Special Skill - Oriental Phoenix">
 		<!-- All Debuff is canceled with the power of Phoenix. Cooldown of 4 hours. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="NEGATE" />
+		<set name="negateStats" val="ROOT PARALYZE DEBUFF POISON BLEED" />
+		<set name="power" val="100" />
+		<set name="hitTime" val="2000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="staticReuse" val="true" />
+		<cond msgId="2292">
+			<player agathionId="1574" />
+		</cond>
 	</skill>
 	<skill id="23174" levels="1" name="Narrow Escape from Death">
 		<!-- Revives from death with completely recovered status. Buff/de-buff doesn't disappear at death but is maintained, though the Blessing of Noblesse and the Amulet of Luck will both be lost. Cooldown of 12 hours. -->
@@ -636,7 +696,7 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="23179" levels="1" name="Gift of Vitality">
+	<skill id="23179" levels="1" name="Blessing of Vitality">
 		<!-- Your Vitality level is maintained for 2 hours thanks to an old magic unsealed by the Magic Research Institute. -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -652,6 +712,138 @@
 		</for>
 	</skill>
 	<skill id="23180" levels="1" name="Joy of Vitality">
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23181" levels="1" name="Three-headed Dragon Agathion Cute Trick">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
+		<cond msgId="2292">
+			<player agathionId="1575" />
+		</cond>
+	</skill>
+	<skill id="23182" levels="1" name="Three-headed Dragon Agathion Special Skill - Wind Walk">
+		<!-- Increases moving speed by 20 for 20 minutes. Reuse delay is 1 hours. -->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="staticReuse" val="true" />
+		<cond msgId="2292">
+			<player agathionId="1575" />
+		</cond>
+		<for>
+			<effect name="Buff" time="1200" val="0" stackOrder="20" stackType="speed_up">
+				<add order="0x40" stat="runSpd" val="20" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="23183" levels="1" name="Ball Trapping Gnosian Agathion Special Skill - Buff of Cheers">
+		<!-- With the power of cheers, for 1 hour, increases Max MP, MP Recovery Bonus, HP Recovery Bonus, Critical Attack Power, P. Def., Atk. Spd., M. Atk., M. Def., Casting Spd. by 20%, the occurrence rate of Prominent Damage through damage magic by 2, P. Atk. by 10%, and resistance to de-buffs by 10%. Also decreases MP consumption needed for skill use by 5% and moving speed by 20%. Reuse Delay 1 hour. Consumes 30 energy. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23184" levels="1" name="Ball Trapping Gnosian Agathion Special Skill - Soccer Ball of Cheers">
+		<!-- Provides a soccer ball containing mysterious energy with the power of cheers. When you use the soccer ball, you can receive a random gift. Reuse Delay 10 seconds. Consumes 500 energy. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23185" levels="1" name="Ball Trapping Orodriel Agathion Special Skill - Buff of Cheers">
+		<!-- With the power of cheers, for 1 hour, increases Max MP, MP Recovery Bonus, HP Recovery Bonus, Critical Attack Power, P. Def., Atk. Spd., M. Atk., M. Def., Casting Spd. by 20%, the occurrence rate of Prominent Damage through damage magic by 2, P. Atk. by 10%, and resistance to de-buffs by 10%. Also decreases MP consumption needed for skill use by 5% and moving speed by 20%. Reuse Delay 1 hour. Consumes 250 energy. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23186" levels="1" name="Ball Trapping Orodriel Agathion Special Skill - Soccer Ball of Cheers">
+		<!-- Provides a soccer ball containing mysterious energy with the power of cheers. When you use the soccer ball, you can receive a random gift. Reuse Delay 10 seconds. Consumes 500 energy. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23187" levels="1" name="Ball Trapping Penalty Kick Agathion Special Skill - Buff of Cheers">
+		<!-- With the power of cheers, for 1 hour, increases Max MP, MP Recovery Bonus, HP Recovery Bonus, Critical Attack Power, P. Def., Atk. Spd., M. Atk., M. Def., Casting Spd. by 20%, the occurrence rate of Prominent Damage through damage magic by 2, P. Atk. by 10%, and resistance to de-buffs by 10%. Also decreases MP consumption needed for skill use by 5% and moving speed by 20%. Reuse Delay 1 hour. Consumes 250 energy. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23188" levels="1" name="Ball Trapping Penalty Kick Agathion Special Skill - Soccer Ball of Cheers">
+		<!-- Provides a soccer ball containing mysterious energy with the power of cheers. When you use the soccer ball, you can receive a random gift. Reuse Delay 10 seconds. Consumes 500 energy. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23189" levels="1" name="Ball Trapping Gnosian Agathion Special Skill - Buff of Cheers">
+		<!-- With the power of cheers, for 1 hour, increases Max MP, MP Recovery Bonus, HP Recovery Bonus, Critical Attack Power, P. Def., Atk. Spd., M. Atk., M. Def., Casting Spd. by 20%, the occurrence rate of Prominent Damage through damage magic by 2, P. Atk. by 10%, and resistance to de-buffs by 10%. Also decreases MP consumption needed for skill use by 5% and moving speed by 20%. Reuse Delay 1 hour. Consumes 250 energy. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23190" levels="1" name="Ball Trapping Gnosian Agathion Special Skill - Soccer Ball of Cheers">
+		<!-- Provides a soccer ball containing mysterious energy with the power of cheers. When you use the soccer ball, you can receive a random gift. Reuse Delay 10 seconds. Consumes 500 energy. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23191" levels="1" name="Ball Trapping Orodriel Agathion Special Skill - Buff of Cheers">
+		<!-- With the power of cheers, for 1 hour, increases Max MP, MP Recovery Bonus, HP Recovery Bonus, Critical Attack Power, P. Def., Atk. Spd., M. Atk., M. Def., Casting Spd. by 20%, the occurrence rate of Prominent Damage through damage magic by 2, P. Atk. by 10%, and resistance to de-buffs by 10%. Also decreases MP consumption needed for skill use by 5% and moving speed by 20%. Reuse Delay 1 hour. Consumes 250 energy. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23192" levels="1" name="Ball Trapping Orodriel Agathion Special Skill - Soccer Ball of Cheers">
+		<!-- Provides a soccer ball containing mysterious energy with the power of cheers. When you use the soccer ball, you can receive a random gift. Reuse Delay 10 seconds. Consumes 500 energy. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23193" levels="1" name="Ball Trapping Penalty Kick Agathion Special Skill - Buff of Cheers">
+		<!-- With the power of cheers, for 1 hour, increases Max MP, MP Recovery Bonus, HP Recovery Bonus, Critical Attack Power, P. Def., Atk. Spd., M. Atk., M. Def., Casting Spd. by 20%, the occurrence rate of Prominent Damage through damage magic by 2, P. Atk. by 10%, and resistance to de-buffs by 10%. Also decreases MP consumption needed for skill use by 5% and moving speed by 20%. Reuse Delay 1 hour. Consumes 250 energy. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23194" levels="1" name="Ball Trapping Penalty Kick Agathion Special Skill - Soccer Ball of Cheers">
+		<!-- Provides a soccer ball containing mysterious energy with the power of cheers. When you use the soccer ball, you can receive a random gift. Reuse Delay 10 seconds. Consumes 500 energy. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23195" levels="1" name="Ball Trapping Gnosian Agathion Special Skill - Buff of Cheers">
+		<!-- With the power of cheers, for 1 hour, increases Max MP, MP Recovery Bonus, HP Recovery Bonus, Critical Attack Power, P. Def., Atk. Spd., M. Atk., M. Def., Casting Spd. by 20%, the occurrence rate of Prominent Damage through damage magic by 2, P. Atk. by 10%, and resistance to de-buffs by 10%. Also decreases MP consumption needed for skill use by 5% and moving speed by 20%. Reuse Delay 1 hour. Consumes 250 energy. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23196" levels="1" name="Ball Trapping Gnosian Agathion Special Skill - Soccer Ball of Cheers">
+		<!-- Provides a soccer ball containing mysterious energy with the power of cheers. When you use the soccer ball, you can receive a random gift. Reuse Delay 10 seconds. Consumes 500 energy. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23197" levels="1" name="Ball Trapping Orodriel Agathion Special Skill - Buff of Cheers">
+		<!-- With the power of cheers, for 1 hour, increases Max MP, MP Recovery Bonus, HP Recovery Bonus, Critical Attack Power, P. Def., Atk. Spd., M. Atk., M. Def., Casting Spd. by 20%, the occurrence rate of Prominent Damage through damage magic by 2, P. Atk. by 10%, and resistance to de-buffs by 10%. Also decreases MP consumption needed for skill use by 5% and moving speed by 20%. Reuse Delay 1 hour. Consumes 250 energy. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23198" levels="1" name="Ball Trapping Orodriel Agathion Special Skill - Soccer Ball of Cheers">
+		<!-- Provides a soccer ball containing mysterious energy with the power of cheers. When you use the soccer ball, you can receive a random gift. Reuse Delay 10 seconds. Consumes 500 energy. -->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="operateType" val="OP_PASSIVE" />
+	</skill>
+	<skill id="23199" levels="1" name="Ball Trapping Penalty Kick Agathion Special Skill - Buff of Cheers">
+		<!-- With the power of cheers, for 1 hour, increases Max MP, MP Recovery Bonus, HP Recovery Bonus, Critical Attack Power, P. Def., Atk. Spd., M. Atk., M. Def., Casting Spd. by 20%, the occurrence rate of Prominent Damage through damage magic by 2, P. Atk. by 10%, and resistance to de-buffs by 10%. Also decreases MP consumption needed for skill use by 5% and moving speed by 20%. Reuse Delay 1 hour. Consumes 250 energy. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />

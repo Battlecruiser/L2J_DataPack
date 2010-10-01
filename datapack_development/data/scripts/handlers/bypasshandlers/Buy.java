@@ -27,20 +27,20 @@ public class Buy implements IBypassHandler
 	{
 		"Buy"
 	};
-
+	
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2MerchantInstance))
 			return false;
-
+		
 		try
 		{
 			StringTokenizer st = new StringTokenizer(command, " ");
 			st.nextToken();
-
+			
 			if (st.countTokens() < 1)
 				return false;
-
+			
 			((L2MerchantInstance)target).showBuyWindow(activeChar, Integer.parseInt(st.nextToken()));
 			return true;
 		}
@@ -50,7 +50,7 @@ public class Buy implements IBypassHandler
 		}
 		return false;
 	}
-
+	
 	public String[] getBypassList()
 	{
 		return COMMANDS;

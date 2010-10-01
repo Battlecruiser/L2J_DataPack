@@ -87,7 +87,7 @@ class Quest (JQuest) :
           else:
             st.addExpAndSp(118304,26250)
           st.giveItems(MARK_OF_HEALER,1)
-          st.giveItems(ADENA,233490)
+          st.giveItems(ADENA,133490)
           st.giveItems(7562,60)
           st.giveItems(SHADOW_WEAPON_COUPON_CGRADE,15)
           st.takeItems(GOLDEN_STATUE,1)
@@ -139,7 +139,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+   htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st : return htmltext
 

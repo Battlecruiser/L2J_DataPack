@@ -28,27 +28,27 @@ public class CPRecovery implements IBypassHandler
 	{
 		"CPRecovery"
 	};
-
+	
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2Npc))
 			return false;
-
-		final L2Npc npc = (L2Npc) target; 
-
+		
+		final L2Npc npc = (L2Npc) target;
+		
 		if (npc.getNpcId() != 31225 && npc.getNpcId() != 31226)
 			return false;
-
+		
 		if (activeChar.isCursedWeaponEquipped())
 		{
 			activeChar.sendMessage("Go away, you're not welcome here.");
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return true;
 		}
-
+		
 		if (!activeChar.reduceAdena("RestoreCP", 100, activeChar.getLastFolkNPC(), true))
 			return false;
-
+		
 		L2Skill skill = SkillTable.getInstance().getInfo(4380, 1);
 		if (skill != null)
 		{
@@ -58,7 +58,7 @@ public class CPRecovery implements IBypassHandler
 		activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 		return true;
 	}
-
+	
 	public String[] getBypassList()
 	{
 		return COMMANDS;

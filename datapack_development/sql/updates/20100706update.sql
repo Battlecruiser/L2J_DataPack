@@ -1,1 +1,1 @@
-ALTER TABLE `character_macroses` CHANGE `commands` `commands` VARCHAR( 500 ) NULL DEFAULT NULL;
+ALTER TABLE `character_macroses` MODIFY `commands` VARCHAR( 500 ) NULL DEFAULT NULL;

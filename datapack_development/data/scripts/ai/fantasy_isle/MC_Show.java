@@ -17,6 +17,8 @@ package ai.fantasy_isle;
 import java.text.SimpleDateFormat;
 import java.util.Map;
 
+import javolution.util.FastMap;
+
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -28,8 +30,6 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 import com.l2jserver.gameserver.network.serverpackets.SocialAction;
-
-import javolution.util.FastMap;
 
 
 /**
@@ -68,131 +68,131 @@ public class MC_Show extends Quest
 	private void load()
 	{
 		talks.put("1", new Object[]{text[1],"2",1000});
-        talks.put("2", new Object[]{text[2],"3",6000});
-        talks.put("3", new Object[]{text[3],"4",4000});
-        talks.put("4", new Object[]{text[4],"5",5000});
-        talks.put("5", new Object[]{text[5],"6",3000});
-        talks.put("8", new Object[]{text[8],"9",5000});
-        talks.put("9", new Object[]{text[9],"10",5000});
-        talks.put("12", new Object[]{text[11],"13",5000});
-        talks.put("13", new Object[]{text[12],"14",5000});
-        talks.put("15", new Object[]{text[13],"16",5000});
-        talks.put("16", new Object[]{text[14],"17",5000});
-        talks.put("18", new Object[]{text[16],"19",5000});
-        talks.put("19", new Object[]{text[17],"20",5000});
-        talks.put("21", new Object[]{text[18],"22",5000});
-        talks.put("22", new Object[]{text[19],"23",400});
-        talks.put("25", new Object[]{text[20],"26",5000});
-        talks.put("26", new Object[]{text[21],"27",5400});
-        
-        walks.put("npc1_1" , new Object[]{-56546,-56384,-2008,"npc1_2",1200});
-        walks.put("npc1_2" , new Object[]{-56597,-56384,-2008,"npc1_3",1200});
-     	walks.put("npc1_3" , new Object[]{-56596,-56428,-2008,"npc1_4",1200});
-     	walks.put("npc1_4" , new Object[]{-56593,-56474,-2008,"npc1_5",1000});
-     	walks.put("npc1_5" , new Object[]{-56542,-56474,-2008,"npc1_6",1000});
-     	walks.put("npc1_6" , new Object[]{-56493,-56473,-2008,"npc1_7",2000});
-     	walks.put("npc1_7" , new Object[]{-56495,-56425,-2008,"npc1_1",4000});
-     	walks.put("npc2_1" , new Object[]{-56550,-56291,-2008,"npc2_2",1200});
-     	walks.put("npc2_2" , new Object[]{-56601,-56293,-2008,"npc2_3",1200});
-     	walks.put("npc2_3" , new Object[]{-56603,-56247,-2008,"npc2_4",1200});
-     	walks.put("npc2_4" , new Object[]{-56605,-56203,-2008,"npc2_5",1000});
-     	walks.put("npc2_5" , new Object[]{-56553,-56202,-2008,"npc2_6",1100});
-     	walks.put("npc2_6" , new Object[]{-56504,-56200,-2008,"npc2_7",2000});
-     	walks.put("npc2_7" , new Object[]{-56503,-56243,-2008,"npc2_1",4000});
-     	walks.put("npc3_1" , new Object[]{-56500,-56290,-2008,"npc3_2",1200});
-     	walks.put("npc3_2" , new Object[]{-56551,-56313,-2008,"npc3_3",1200});
-     	walks.put("npc3_3" , new Object[]{-56601,-56293,-2008,"npc3_4",1200});
-     	walks.put("npc3_4" , new Object[]{-56651,-56294,-2008,"npc3_5",1200});
-     	walks.put("npc3_5" , new Object[]{-56653,-56250,-2008,"npc3_6",1200});
-     	walks.put("npc3_6" , new Object[]{-56654,-56204,-2008,"npc3_7",1200});
-     	walks.put("npc3_7" , new Object[]{-56605,-56203,-2008,"npc3_8",1200});
-     	walks.put("npc3_8" , new Object[]{-56554,-56202,-2008,"npc3_9",1200});
-     	walks.put("npc3_9" , new Object[]{-56503,-56200,-2008,"npc3_10",1200});
-     	walks.put("npc3_10", new Object[]{-56502,-56244,-2008,"npc3_1",900});
-     	walks.put("npc4_1" , new Object[]{-56495,-56381,-2008,"npc4_2",1200});
-     	walks.put("npc4_2" , new Object[]{-56548,-56383,-2008,"npc4_3",1200});
-     	walks.put("npc4_3" , new Object[]{-56597,-56383,-2008,"npc4_4",1200});
-     	walks.put("npc4_4" , new Object[]{-56643,-56385,-2008,"npc4_5",1200});
-     	walks.put("npc4_5" , new Object[]{-56639,-56436,-2008,"npc4_6",1200});
-     	walks.put("npc4_6" , new Object[]{-56639,-56473,-2008,"npc4_7",1200});
-     	walks.put("npc4_7" , new Object[]{-56589,-56473,-2008,"npc4_8",1200});
-     	walks.put("npc4_8" , new Object[]{-56541,-56473,-2008,"npc4_9",1200});
-     	walks.put("npc4_9" , new Object[]{-56496,-56473,-2008,"npc4_10",1200});
-     	walks.put("npc4_10", new Object[]{-56496,-56429,-2008,"npc4_1",900});
-     	walks.put("npc5_1" , new Object[]{-56549,-56335,-2008,"npc5_2",1000});
-     	walks.put("npc5_2" , new Object[]{-56599,-56337,-2008,"npc5_3",2000});
-     	walks.put("npc5_3" , new Object[]{-56649,-56341,-2008,"npc5_4",26000});
-     	walks.put("npc5_4" , new Object[]{-56600,-56341,-2008,"npc5_5",1000});
-     	walks.put("npc5_5" , new Object[]{-56553,-56341,-2008,"npc5_6",1000});
-     	walks.put("npc5_6" , new Object[]{-56508,-56331,-2008,"npc5_2",8000});
-     	walks.put("npc6_1" , new Object[]{-56595,-56428,-2008,"npc6_2",1000});
-     	walks.put("npc6_2" , new Object[]{-56596,-56383,-2008,"npc6_3",1000});
-     	walks.put("npc6_3" , new Object[]{-56648,-56384,-2008,"npc6_4",1000});
-     	walks.put("npc6_4" , new Object[]{-56645,-56429,-2008,"npc6_5",1000});
-     	walks.put("npc6_5" , new Object[]{-56644,-56475,-2008,"npc6_6",1000});
-     	walks.put("npc6_6" , new Object[]{-56595,-56473,-2008,"npc6_7",1000});
-     	walks.put("npc6_7" , new Object[]{-56542,-56473,-2008,"npc6_8",1000});
-     	walks.put("npc6_8" , new Object[]{-56492,-56472,-2008,"npc6_9",1200});
-     	walks.put("npc6_9" , new Object[]{-56495,-56426,-2008,"npc6_10",2000});
-     	walks.put("npc6_10", new Object[]{-56540,-56426,-2008,"npc6_1",3000});
-     	walks.put("npc7_1" , new Object[]{-56603,-56249,-2008,"npc7_2",1000});
-     	walks.put("npc7_2" , new Object[]{-56601,-56294,-2008,"npc7_3",1000});
-     	walks.put("npc7_3" , new Object[]{-56651,-56295,-2008,"npc7_4",1000});
-     	walks.put("npc7_4" , new Object[]{-56653,-56248,-2008,"npc7_5",1000});
-     	walks.put("npc7_5" , new Object[]{-56605,-56203,-2008,"npc7_6",1000});
-     	walks.put("npc7_6" , new Object[]{-56554,-56202,-2008,"npc7_7",1000});
-     	walks.put("npc7_7" , new Object[]{-56504,-56201,-2008,"npc7_8",1000});
-     	walks.put("npc7_8" , new Object[]{-56502,-56247,-2008,"npc7_9",1200});
-     	walks.put("npc7_9" , new Object[]{-56549,-56248,-2008,"npc7_10",2000});
-     	walks.put("npc7_10", new Object[]{-56549,-56248,-2008,"npc7_1",3000});
-     	walks.put("npc8_1" , new Object[]{-56493,-56426,-2008,"npc8_2",1000});
-     	walks.put("npc8_2" , new Object[]{-56497,-56381,-2008,"npc8_3",1200});
-     	walks.put("npc8_3" , new Object[]{-56544,-56381,-2008,"npc8_4",1200});
-     	walks.put("npc8_4" , new Object[]{-56596,-56383,-2008,"npc8_5",1200});
-     	walks.put("npc8_5" , new Object[]{-56594,-56428,-2008,"npc8_6",900});
-     	walks.put("npc8_6" , new Object[]{-56645,-56429,-2008,"npc8_7",1200});
-     	walks.put("npc8_7" , new Object[]{-56647,-56384,-2008,"npc8_8",1200});
-     	walks.put("npc8_8" , new Object[]{-56649,-56362,-2008,"npc8_9",9200});
-     	walks.put("npc8_9" , new Object[]{-56654,-56429,-2008,"npc8_10",1200});
-     	walks.put("npc8_10", new Object[]{-56644,-56474,-2008,"npc8_11",900});
-     	walks.put("npc8_11", new Object[]{-56593,-56473,-2008,"npc8_12",1100});
-     	walks.put("npc8_12", new Object[]{-56543,-56472,-2008,"npc8_13",1200});
-     	walks.put("npc8_13", new Object[]{-56491,-56471,-2008,"npc8_1",1200});
-     	walks.put("npc9_1" , new Object[]{-56505,-56246,-2008,"npc9_2",1000});
-     	walks.put("npc9_2" , new Object[]{-56504,-56291,-2008,"npc9_3",1200});
-     	walks.put("npc9_3" , new Object[]{-56550,-56291,-2008,"npc9_4",1200});
-     	walks.put("npc9_4" , new Object[]{-56600,-56292,-2008,"npc9_5",1200});
-     	walks.put("npc9_5" , new Object[]{-56603,-56248,-2008,"npc9_6",900});
-     	walks.put("npc9_6" , new Object[]{-56653,-56249,-2008,"npc9_7",1200});
-     	walks.put("npc9_7" , new Object[]{-56651,-56294,-2008,"npc9_8",1200});
-     	walks.put("npc9_8" , new Object[]{-56650,-56316,-2008,"npc9_9",9200});
-     	walks.put("npc9_9" , new Object[]{-56660,-56250,-2008,"npc9_10",1200});
-     	walks.put("npc9_10", new Object[]{-56656,-56205,-2008,"npc9_11",900});
-     	walks.put("npc9_11", new Object[]{-56606,-56204,-2008,"npc9_12",1100});
-     	walks.put("npc9_12", new Object[]{-56554,-56203,-2008,"npc9_13",1200});
-     	walks.put("npc9_13", new Object[]{-56506,-56203,-2008,"npc9_1",1200});
-     	walks.put("24"     , new Object[]{-56730,-56340,-2008,"25",1800});
-     	walks.put("27"     , new Object[]{-56702,-56340,-2008,"29",1800});
+		talks.put("2", new Object[]{text[2],"3",6000});
+		talks.put("3", new Object[]{text[3],"4",4000});
+		talks.put("4", new Object[]{text[4],"5",5000});
+		talks.put("5", new Object[]{text[5],"6",3000});
+		talks.put("8", new Object[]{text[8],"9",5000});
+		talks.put("9", new Object[]{text[9],"10",5000});
+		talks.put("12", new Object[]{text[11],"13",5000});
+		talks.put("13", new Object[]{text[12],"14",5000});
+		talks.put("15", new Object[]{text[13],"16",5000});
+		talks.put("16", new Object[]{text[14],"17",5000});
+		talks.put("18", new Object[]{text[16],"19",5000});
+		talks.put("19", new Object[]{text[17],"20",5000});
+		talks.put("21", new Object[]{text[18],"22",5000});
+		talks.put("22", new Object[]{text[19],"23",400});
+		talks.put("25", new Object[]{text[20],"26",5000});
+		talks.put("26", new Object[]{text[21],"27",5400});
+		
+		walks.put("npc1_1" , new Object[]{-56546,-56384,-2008,"npc1_2",1200});
+		walks.put("npc1_2" , new Object[]{-56597,-56384,-2008,"npc1_3",1200});
+		walks.put("npc1_3" , new Object[]{-56596,-56428,-2008,"npc1_4",1200});
+		walks.put("npc1_4" , new Object[]{-56593,-56474,-2008,"npc1_5",1000});
+		walks.put("npc1_5" , new Object[]{-56542,-56474,-2008,"npc1_6",1000});
+		walks.put("npc1_6" , new Object[]{-56493,-56473,-2008,"npc1_7",2000});
+		walks.put("npc1_7" , new Object[]{-56495,-56425,-2008,"npc1_1",4000});
+		walks.put("npc2_1" , new Object[]{-56550,-56291,-2008,"npc2_2",1200});
+		walks.put("npc2_2" , new Object[]{-56601,-56293,-2008,"npc2_3",1200});
+		walks.put("npc2_3" , new Object[]{-56603,-56247,-2008,"npc2_4",1200});
+		walks.put("npc2_4" , new Object[]{-56605,-56203,-2008,"npc2_5",1000});
+		walks.put("npc2_5" , new Object[]{-56553,-56202,-2008,"npc2_6",1100});
+		walks.put("npc2_6" , new Object[]{-56504,-56200,-2008,"npc2_7",2000});
+		walks.put("npc2_7" , new Object[]{-56503,-56243,-2008,"npc2_1",4000});
+		walks.put("npc3_1" , new Object[]{-56500,-56290,-2008,"npc3_2",1200});
+		walks.put("npc3_2" , new Object[]{-56551,-56313,-2008,"npc3_3",1200});
+		walks.put("npc3_3" , new Object[]{-56601,-56293,-2008,"npc3_4",1200});
+		walks.put("npc3_4" , new Object[]{-56651,-56294,-2008,"npc3_5",1200});
+		walks.put("npc3_5" , new Object[]{-56653,-56250,-2008,"npc3_6",1200});
+		walks.put("npc3_6" , new Object[]{-56654,-56204,-2008,"npc3_7",1200});
+		walks.put("npc3_7" , new Object[]{-56605,-56203,-2008,"npc3_8",1200});
+		walks.put("npc3_8" , new Object[]{-56554,-56202,-2008,"npc3_9",1200});
+		walks.put("npc3_9" , new Object[]{-56503,-56200,-2008,"npc3_10",1200});
+		walks.put("npc3_10", new Object[]{-56502,-56244,-2008,"npc3_1",900});
+		walks.put("npc4_1" , new Object[]{-56495,-56381,-2008,"npc4_2",1200});
+		walks.put("npc4_2" , new Object[]{-56548,-56383,-2008,"npc4_3",1200});
+		walks.put("npc4_3" , new Object[]{-56597,-56383,-2008,"npc4_4",1200});
+		walks.put("npc4_4" , new Object[]{-56643,-56385,-2008,"npc4_5",1200});
+		walks.put("npc4_5" , new Object[]{-56639,-56436,-2008,"npc4_6",1200});
+		walks.put("npc4_6" , new Object[]{-56639,-56473,-2008,"npc4_7",1200});
+		walks.put("npc4_7" , new Object[]{-56589,-56473,-2008,"npc4_8",1200});
+		walks.put("npc4_8" , new Object[]{-56541,-56473,-2008,"npc4_9",1200});
+		walks.put("npc4_9" , new Object[]{-56496,-56473,-2008,"npc4_10",1200});
+		walks.put("npc4_10", new Object[]{-56496,-56429,-2008,"npc4_1",900});
+		walks.put("npc5_1" , new Object[]{-56549,-56335,-2008,"npc5_2",1000});
+		walks.put("npc5_2" , new Object[]{-56599,-56337,-2008,"npc5_3",2000});
+		walks.put("npc5_3" , new Object[]{-56649,-56341,-2008,"npc5_4",26000});
+		walks.put("npc5_4" , new Object[]{-56600,-56341,-2008,"npc5_5",1000});
+		walks.put("npc5_5" , new Object[]{-56553,-56341,-2008,"npc5_6",1000});
+		walks.put("npc5_6" , new Object[]{-56508,-56331,-2008,"npc5_2",8000});
+		walks.put("npc6_1" , new Object[]{-56595,-56428,-2008,"npc6_2",1000});
+		walks.put("npc6_2" , new Object[]{-56596,-56383,-2008,"npc6_3",1000});
+		walks.put("npc6_3" , new Object[]{-56648,-56384,-2008,"npc6_4",1000});
+		walks.put("npc6_4" , new Object[]{-56645,-56429,-2008,"npc6_5",1000});
+		walks.put("npc6_5" , new Object[]{-56644,-56475,-2008,"npc6_6",1000});
+		walks.put("npc6_6" , new Object[]{-56595,-56473,-2008,"npc6_7",1000});
+		walks.put("npc6_7" , new Object[]{-56542,-56473,-2008,"npc6_8",1000});
+		walks.put("npc6_8" , new Object[]{-56492,-56472,-2008,"npc6_9",1200});
+		walks.put("npc6_9" , new Object[]{-56495,-56426,-2008,"npc6_10",2000});
+		walks.put("npc6_10", new Object[]{-56540,-56426,-2008,"npc6_1",3000});
+		walks.put("npc7_1" , new Object[]{-56603,-56249,-2008,"npc7_2",1000});
+		walks.put("npc7_2" , new Object[]{-56601,-56294,-2008,"npc7_3",1000});
+		walks.put("npc7_3" , new Object[]{-56651,-56295,-2008,"npc7_4",1000});
+		walks.put("npc7_4" , new Object[]{-56653,-56248,-2008,"npc7_5",1000});
+		walks.put("npc7_5" , new Object[]{-56605,-56203,-2008,"npc7_6",1000});
+		walks.put("npc7_6" , new Object[]{-56554,-56202,-2008,"npc7_7",1000});
+		walks.put("npc7_7" , new Object[]{-56504,-56201,-2008,"npc7_8",1000});
+		walks.put("npc7_8" , new Object[]{-56502,-56247,-2008,"npc7_9",1200});
+		walks.put("npc7_9" , new Object[]{-56549,-56248,-2008,"npc7_10",2000});
+		walks.put("npc7_10", new Object[]{-56549,-56248,-2008,"npc7_1",3000});
+		walks.put("npc8_1" , new Object[]{-56493,-56426,-2008,"npc8_2",1000});
+		walks.put("npc8_2" , new Object[]{-56497,-56381,-2008,"npc8_3",1200});
+		walks.put("npc8_3" , new Object[]{-56544,-56381,-2008,"npc8_4",1200});
+		walks.put("npc8_4" , new Object[]{-56596,-56383,-2008,"npc8_5",1200});
+		walks.put("npc8_5" , new Object[]{-56594,-56428,-2008,"npc8_6",900});
+		walks.put("npc8_6" , new Object[]{-56645,-56429,-2008,"npc8_7",1200});
+		walks.put("npc8_7" , new Object[]{-56647,-56384,-2008,"npc8_8",1200});
+		walks.put("npc8_8" , new Object[]{-56649,-56362,-2008,"npc8_9",9200});
+		walks.put("npc8_9" , new Object[]{-56654,-56429,-2008,"npc8_10",1200});
+		walks.put("npc8_10", new Object[]{-56644,-56474,-2008,"npc8_11",900});
+		walks.put("npc8_11", new Object[]{-56593,-56473,-2008,"npc8_12",1100});
+		walks.put("npc8_12", new Object[]{-56543,-56472,-2008,"npc8_13",1200});
+		walks.put("npc8_13", new Object[]{-56491,-56471,-2008,"npc8_1",1200});
+		walks.put("npc9_1" , new Object[]{-56505,-56246,-2008,"npc9_2",1000});
+		walks.put("npc9_2" , new Object[]{-56504,-56291,-2008,"npc9_3",1200});
+		walks.put("npc9_3" , new Object[]{-56550,-56291,-2008,"npc9_4",1200});
+		walks.put("npc9_4" , new Object[]{-56600,-56292,-2008,"npc9_5",1200});
+		walks.put("npc9_5" , new Object[]{-56603,-56248,-2008,"npc9_6",900});
+		walks.put("npc9_6" , new Object[]{-56653,-56249,-2008,"npc9_7",1200});
+		walks.put("npc9_7" , new Object[]{-56651,-56294,-2008,"npc9_8",1200});
+		walks.put("npc9_8" , new Object[]{-56650,-56316,-2008,"npc9_9",9200});
+		walks.put("npc9_9" , new Object[]{-56660,-56250,-2008,"npc9_10",1200});
+		walks.put("npc9_10", new Object[]{-56656,-56205,-2008,"npc9_11",900});
+		walks.put("npc9_11", new Object[]{-56606,-56204,-2008,"npc9_12",1100});
+		walks.put("npc9_12", new Object[]{-56554,-56203,-2008,"npc9_13",1200});
+		walks.put("npc9_13", new Object[]{-56506,-56203,-2008,"npc9_1",1200});
+		walks.put("24"     , new Object[]{-56730,-56340,-2008,"25",1800});
+		walks.put("27"     , new Object[]{-56702,-56340,-2008,"29",1800});
 	}
 	
 	public MC_Show(int id,String name,String descr)
 	{
-        super(id,name,descr);
-        addEventId(32433, Quest.QuestEventType.ON_SPAWN);
-        addEventId(32431, Quest.QuestEventType.ON_SPAWN);
-        addEventId(32432, Quest.QuestEventType.ON_SPAWN);
-        addEventId(32442, Quest.QuestEventType.ON_SPAWN);
-        addEventId(32443, Quest.QuestEventType.ON_SPAWN);
-        addEventId(32444, Quest.QuestEventType.ON_SPAWN);
-        addEventId(32445, Quest.QuestEventType.ON_SPAWN);
-        addEventId(32446, Quest.QuestEventType.ON_SPAWN);
-        addEventId(32424, Quest.QuestEventType.ON_SPAWN);
-        addEventId(32425, Quest.QuestEventType.ON_SPAWN);
-        addEventId(32426, Quest.QuestEventType.ON_SPAWN);
-        addEventId(32427, Quest.QuestEventType.ON_SPAWN);
-        addEventId(32428, Quest.QuestEventType.ON_SPAWN);
-        load();
-        scheduleTimer();
+		super(id,name,descr);
+		addEventId(32433, Quest.QuestEventType.ON_SPAWN);
+		addEventId(32431, Quest.QuestEventType.ON_SPAWN);
+		addEventId(32432, Quest.QuestEventType.ON_SPAWN);
+		addEventId(32442, Quest.QuestEventType.ON_SPAWN);
+		addEventId(32443, Quest.QuestEventType.ON_SPAWN);
+		addEventId(32444, Quest.QuestEventType.ON_SPAWN);
+		addEventId(32445, Quest.QuestEventType.ON_SPAWN);
+		addEventId(32446, Quest.QuestEventType.ON_SPAWN);
+		addEventId(32424, Quest.QuestEventType.ON_SPAWN);
+		addEventId(32425, Quest.QuestEventType.ON_SPAWN);
+		addEventId(32426, Quest.QuestEventType.ON_SPAWN);
+		addEventId(32427, Quest.QuestEventType.ON_SPAWN);
+		addEventId(32428, Quest.QuestEventType.ON_SPAWN);
+		load();
+		scheduleTimer();
 	}
 	
 	private int getGameTime()
@@ -359,10 +359,10 @@ public class MC_Show extends Quest
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO,new  L2CharPosition(-56702,-56340,-2008,32768));
 				startQuestTimer("24",2800, npc, null);
 				addSpawn(showstuff[0],-56672,-56406,-2000,32768,false,20900);
-			    addSpawn(showstuff[1],-56648,-56368,-2000,32768,false,20900);
-			    addSpawn(showstuff[2],-56608,-56338,-2000,32768,false,20900);
-			    addSpawn(showstuff[3],-56652,-56307,-2000,32768,false,20900);
-			    addSpawn(showstuff[4],-56672,-56272,-2000,32768,false,20900);
+				addSpawn(showstuff[1],-56648,-56368,-2000,32768,false,20900);
+				addSpawn(showstuff[2],-56608,-56338,-2000,32768,false,20900);
+				addSpawn(showstuff[3],-56652,-56307,-2000,32768,false,20900);
+				addSpawn(showstuff[4],-56672,-56272,-2000,32768,false,20900);
 			}
 			else if (event.equalsIgnoreCase("28"))
 			{
@@ -407,9 +407,9 @@ public class MC_Show extends Quest
 		return null;
 	}
 	
-    public static void main(String[] args)
-    {
-    	// now call the constructor (starts up the ai)
-    	new MC_Show(-1,"MC_Show","fantasy_isle");
-    }
+	public static void main(String[] args)
+	{
+		// now call the constructor (starts up the ai)
+		new MC_Show(-1,"MC_Show","fantasy_isle");
+	}
 }

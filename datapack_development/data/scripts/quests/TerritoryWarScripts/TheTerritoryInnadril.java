@@ -16,16 +16,16 @@ package quests.TerritoryWarScripts;
 
 
 /**
-*
-* @author Gigiikun
-*/
+ *
+ * @author Gigiikun
+ */
 
 public class TheTerritoryInnadril extends TerritoryWarSuperClass
 {
 	public static String qn1 = "722_FortheSakeoftheTerritoryInnadril";
 	public static int qnu = 722;
 	public static String qna = "For the Sake of the Territory - Innadril";
-
+	
 	public TheTerritoryInnadril()
 	{
 		super(qnu,qn1,qna);

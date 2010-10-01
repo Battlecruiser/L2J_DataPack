@@ -9,7 +9,7 @@
  * Added copyright notice
  *
  *
-* This program is free software: you can redistribute it and/or modify it under
+ * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
  * Foundation, either version 3 of the License, or (at your option) any later
  * version.
@@ -54,7 +54,7 @@ public class AdminQuest implements IAdminCommandHandler
 		// syntax will either be:
 		//                           //quest_reload <id>
 		//                           //quest_reload <questName>
-		// The questName MUST start with a non-numeric character for this to work, 
+		// The questName MUST start with a non-numeric character for this to work,
 		// regardless which of the two formats is used.
 		// Example:  //quest_reload orc_occupation_change_1
 		// Example:  //quest_reload chests
@@ -97,7 +97,7 @@ public class AdminQuest implements IAdminCommandHandler
 		}
 		// script load should NOT be used in place of reload.  If a script is already loaded
 		// successfully, quest_reload ought to be used.  The script_load command should only
-		// be used for scripts that failed to load altogether (eg. due to errors) or that 
+		// be used for scripts that failed to load altogether (eg. due to errors) or that
 		// did not at all exist during server boot.  Using script_load to re-load a previously
 		// loaded script may cause unpredictable script flow, minor loss of data, and more.
 		// This provides a way to load new scripts without having to reboot the server.

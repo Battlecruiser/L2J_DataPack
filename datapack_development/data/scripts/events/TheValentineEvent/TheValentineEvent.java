@@ -37,15 +37,15 @@ public class TheValentineEvent extends Quest
 		super(questId, name, descr);
 		addStartNpc(_npc);
 		addFirstTalkId(_npc);
-		addTalkId(_npc);		
+		addTalkId(_npc);
 	}
-
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
 		QuestState st = player.getQuestState(getName());
-
+		
 		htmltext = event;
 		if(event.equalsIgnoreCase("4301-3.htm"))
 		{
@@ -76,7 +76,7 @@ public class TheValentineEvent extends Quest
 		htmltext = npc.getNpcId() + ".htm";
 		return htmltext;
 	}
-
+	
 	public static void main(String[] args)
 	{
 		new TheValentineEvent(-1, "TheValentineEvent", "events");

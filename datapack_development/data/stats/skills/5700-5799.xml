@@ -76,19 +76,19 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="5708" levels="1" name="Water Cannon">
+	<skill id="5708" levels="2" name="Water Cannon">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="1500" />
 	</skill>
-	<skill id="5709" levels="1" name="Whirlpool">
+	<skill id="5709" levels="2" name="Whirlpool">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="1200" />
 	</skill>
-	<skill id="5710" levels="1" name="Triple Sword">
+	<skill id="5710" levels="2" name="Triple Sword">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -497,10 +497,25 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5780" levels="9" name="Agathion Collection">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="DUMMY" />
+		<set name="magicLvl" val="83" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="6000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="10000" />
+		<set name="staticReuse" val="true" />
+		<set name="castRange" val="100" />
+		<set name="effectRange" val="600" />
+		<cond msgId="2292">
+			<player agathionId="16061" />
+		</cond>
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<cond msgId="109">
+			<target npcId="18678, 18679, 18680, 18681, 18682, 18683" />
+		</cond>
 	</skill>
 	<skill id="5781" levels="1" name="Presentation - Lindvior Approach">
 		<set name="target" val="TARGET_NONE" />

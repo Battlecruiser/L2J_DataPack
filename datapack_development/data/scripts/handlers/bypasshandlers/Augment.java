@@ -27,12 +27,12 @@ public class Augment implements IBypassHandler
 	{
 		"Augment"
 	};
-
+	
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2Npc))
 			return false;
-
+		
 		try
 		{
 			switch(Integer.parseInt(command.substring(8, 9).trim()))
@@ -51,7 +51,7 @@ public class Augment implements IBypassHandler
 		}
 		return false;
 	}
-
+	
 	public String[] getBypassList()
 	{
 		return COMMANDS;

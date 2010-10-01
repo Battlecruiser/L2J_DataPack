@@ -19,15 +19,18 @@
 <tr><td colspan="4"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color="LEVEL">Npc Info</font> : %name% (<font color="LEVEL">%id%</font>) [<font color=00FF00>%lvl%</font> lvl]</td></tr></table></td></tr>
 <tr><td><table width=270 border=0><tr><td width=100><font color="LEVEL">ObjectId</font></td><td align=right width=170>%objid%</td></tr></table></td></tr>
 <tr><td><table width=270 border=0 bgcolor=131210><tr><td width=100><font color="LEVEL">Type:</font></td><td align=right width=170><font color=999999>%class%</font></td></tr></table></td></tr>
-%ai%
-%aint%
 <tr><td><table width=270 border=0><tr><td width=100><font color="LEVEL">Spawn</font></td><td align=right width=170>%spawn%</td></tr></table></td></tr>
 <tr><td><table width=270 border=0 bgcolor=131210><tr><td width=100><font color="LEVEL">Location:</font></td><td align=right width=170>%loc%</td></tr></table></td></tr>
-<tr><td><table width=270 border=0><tr><td width=100><font color="LEVEL">Distance:</font></td><td align=right width=170>2D: %loc2d%, 3D: %loc3d%</td></tr></table></td></tr>
+<tr><td><table width=270 border=0><tr><td width=100><font color="LEVEL">Distance:</font></td><td align=right width=170>2D: %loc2d%, 3D: %loc3d%, You: %dist%</td></tr></table></td></tr>
 <tr><td><table width=270 border=0 bgcolor=131210><tr><td width=100><font color="LEVEL">Respawn:</font></td><td align=right width=170>%resp% sec</td></tr></table></td></tr>
 <tr><td><table width=270 border=0><tr><td width=100><font color="LEVEL">Aggro:</font></td><td align=right width=170><font color=999999>%aggro%</font></td></tr></table></td></tr>
 <tr><td><table width=270 border=0 bgcolor=131210><tr><td width=100><font color="LEVEL">HP:</font></td><td align=right width=170><font color=FF4040>%hp%/%hpmax%</font></td></tr></table></td></tr>
 <tr><td><table width=270 border=0><tr><td width=100><font color="LEVEL">MP:</font></td><td align=right width=170><font color=6161FF>%mp%/%mpmax%</font></td></tr></table></td></tr>
+%ai_intention%
+%ai%
+%ai_type%
+%ai_clan%
+%ai_enemy_clan%
 </table><br>
 
 <font color="LEVEL">Combat</font>
@@ -50,6 +53,26 @@
 <td>INT</td><td>%int%</td>
 <td>WIT</td><td>%wit%</td>
 <td>MEN</td><td>%men%</td>
+</tr>
+</table><br>
+
+<font color="LEVEL">Elements</font>
+<table border="0" width="100%">
+<tr>
+<td>Atk Ele</td><td>%ele_atk%</td>
+<td>Value</td><td>%ele_atk_value%</td>
+</tr>
+<tr>
+<td>Fire</td><td>%ele_dfire%</td>
+<td>Water</td><td>%ele_dwater%</td>
+</tr>
+<tr>
+<td>Wind</td><td>%ele_dwind%</td>
+<td>Earth</td><td>%ele_dearth%</td>
+</tr>
+<tr>
+<td>Holy</td><td>%ele_dholy%</td>
+<td>Dark</td><td>%ele_ddark%</td>
 </tr>
 </table><br>
 <br><img src="L2UI.SquareWhite" width=260 height=1><br>

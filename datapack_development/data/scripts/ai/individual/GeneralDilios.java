@@ -17,6 +17,8 @@ package ai.individual;
 import java.util.ArrayList;
 import java.util.List;
 
+import ai.group_template.L2AttackableAIScript;
+
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -24,8 +26,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 import com.l2jserver.util.Rnd;
-
-import ai.group_template.L2AttackableAIScript;
 
 /**
  * Dilios AI
@@ -36,7 +36,7 @@ public class GeneralDilios extends L2AttackableAIScript
 {
 	private static final int generalId = 32549;
 	private static final int guardId = 32619;
-
+	
 	private L2Npc _general;
 	private List<L2Npc> _guards = new ArrayList<L2Npc>();
 	
@@ -46,7 +46,7 @@ public class GeneralDilios extends L2AttackableAIScript
 		"Messenger, inform the patrons of the Keucereus Alliance Base! We're gathering brave adventurers to attack Tiat's Mounted Troop that's rooted in the Seed of Destruction.",
 		"Messenger, inform the brothers in Kucereu's clan outpost! Brave adventurers are currently eradicating Undead that are widespread in Seed of Immortality's Hall of Suffering and Hall of Erosion!"
 	};
-
+	
 	public GeneralDilios(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
@@ -55,7 +55,7 @@ public class GeneralDilios extends L2AttackableAIScript
 			throw new NullPointerException("Cannot find npcs!");
 		startQuestTimer("command_0", 60000, null, null);
 	}
-
+	
 	public void findNpcs()
 	{
 		for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable().values())
@@ -65,7 +65,7 @@ public class GeneralDilios extends L2AttackableAIScript
 				else if (spawn.getNpcid() == guardId)
 					_guards.add(spawn.getLastSpawn());
 	}
-
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -76,7 +76,7 @@ public class GeneralDilios extends L2AttackableAIScript
 			{
 				_general.broadcastPacket(new NpcSay(_general.getObjectId(), 0, generalId, "Stabbing three times!"));
 				startQuestTimer("guard_animation_0", 3400, null, null);
-			}	
+			}
 			else
 			{
 				value = -1;
@@ -96,7 +96,7 @@ public class GeneralDilios extends L2AttackableAIScript
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
-
+	
 	public static void main(String[] args)
 	{
 		new GeneralDilios(-1, "GeneralDilios", "ai");

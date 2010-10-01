@@ -1,9 +1,9 @@
 DROP TABLE IF EXISTS `minions`;
 CREATE TABLE `minions` (
-  `boss_id` int(11) NOT NULL default '0',
-  `minion_id` int(11) NOT NULL default '0',
-  `amount_min` int(4) NOT NULL default '0',
-  `amount_max` int(4) NOT NULL default '0',
+  `boss_id` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `minion_id` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `amount_min` tinyint(2) unsigned NOT NULL DEFAULT '0',
+  `amount_max` tinyint(2) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`boss_id`,`minion_id`)
 );
 
@@ -428,28 +428,17 @@ INSERT INTO `minions` VALUES
 (29056,29057,2,2),
 (29056,29058,2,2);
 
--- Primeval Isle temp mob groups.
+-- Primeval Isle
 INSERT INTO `minions` VALUES
-(22196,22197,0,1),
-(22196,22198,0,1),
-(22196,22218,0,1),
-(22196,22223,0,1),
-(22200,22201,0,1),
-(22200,22202,0,1),
-(22200,22219,0,1),
-(22200,22224,0,1),
-(22203,22204,0,1),
-(22203,22205,0,1),
-(22203,22220,0,1),
-(22203,22225,0,1),
-(22208,22209,0,1),
-(22208,22210,0,1),
-(22208,22221,0,1),
-(22208,22226,0,1),
-(22211,22212,0,1),
-(22211,22213,0,1),
-(22211,22222,0,1),
-(22211,22227,0,1);
+(22742,22744,3,3),
+(22743,22745,3,4),
+(22202,22201,2,3),
+(22205,22204,4,4),
+(22213,22209,1,1),
+(22213,22210,1,1),
+(22213,22212,2,2),
+(22198,22197,4,4),
+(22223,22197,1,1);
 
 -- ToI - Binder group
 INSERT INTO `minions` VALUES 
@@ -523,7 +512,9 @@ INSERT INTO `minions` VALUES
 (29144, 29145, 2, 2),
 (29144, 29146, 2, 2),
 (29147, 29148, 2, 2),
-(29147, 29149, 2, 2);
+(29147, 29149, 2, 2),
+(25710, 25711, 2, 2),
+(25710, 25712, 2, 2);
 
 -- Mithril Mines Minions (Temporary)
 INSERT INTO `minions` VALUES
@@ -536,3 +527,9 @@ INSERT INTO `minions` VALUES
 (22666, 22667, 1, 4),
 (22670, 22671, 1, 2),
 (22670, 22672, 1, 3);
+
+-- Stakato Nest
+INSERT INTO `minions` VALUES
+(22625, 22624, 1, 1),
+(22630, 22632, 1, 1),
+(22621, 22620, 1, 1);

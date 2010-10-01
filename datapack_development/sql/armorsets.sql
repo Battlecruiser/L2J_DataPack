@@ -1,21 +1,21 @@
 DROP TABLE IF EXISTS `armorsets`;
 CREATE TABLE `armorsets` (
- `id` SMALLINT UNSIGNED NOT NULL auto_increment,
- `chest` SMALLINT UNSIGNED NOT NULL default 0,
- `legs` SMALLINT UNSIGNED NOT NULL default 0,
- `head` SMALLINT UNSIGNED NOT NULL default 0,
- `gloves` SMALLINT UNSIGNED NOT NULL default 0,
- `feet` SMALLINT UNSIGNED NOT NULL default 0,
- `skill` varchar(70) NOT NULL DEFAULT '0-0;',
- `shield` SMALLINT UNSIGNED NOT NULL default 0,
- `shield_skill_id` SMALLINT UNSIGNED NOT NULL default 0,
- `enchant6skill` SMALLINT UNSIGNED NOT NULL default 0,
- `mw_legs` SMALLINT UNSIGNED NOT NULL DEFAULT '0',
- `mw_head` SMALLINT UNSIGNED NOT NULL DEFAULT '0',
- `mw_gloves` SMALLINT UNSIGNED NOT NULL DEFAULT '0',
- `mw_feet` SMALLINT UNSIGNED NOT NULL DEFAULT '0',
- `mw_shield` SMALLINT UNSIGNED NOT NULL DEFAULT '0',
- PRIMARY KEY (`id`,`chest`)
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `chest` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `legs` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `head` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `gloves` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `feet` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `skill` varchar(70) NOT NULL DEFAULT '0-0;',
+  `shield` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `shield_skill_id` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `enchant6skill` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `mw_legs` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `mw_head` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `mw_gloves` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `mw_feet` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `mw_shield` smallint(5) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`,`chest`)
 );
 
 INSERT INTO `armorsets` VALUES
@@ -159,13 +159,13 @@ INSERT INTO `armorsets` VALUES
 
 -- S84 Vesper Armor Sets
 -- id   chest  legs  head  glov  feet  skill                           shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
-  (92,  13432, 13438,13137,13439,13440,'3006-1;8283-1;',               13471,3417, 3623,     0,       0,       0,         0,       0),     -- Vesper Breastplate
-  (93,  13433, 13441,13138,13442,13443,'3006-1;8285-1;',               0,    0,    3624,     0,       0,       0,         0,       0),     -- Vesper Leather Breastplate
-  (94,  13434, 13444,13139,13445,13446,'3006-1;8287-1;',               0,    0,    3625,     0,       0,       0,         0,       0),     -- Vesper Tunic
+  (92,  13432, 13438,13137,13439,13440,'3006-1;8283-1;',               13471,3417, 3623,     16312,   16306,   16315,     16318,   16321), -- Vesper Breastplate
+  (93,  13433, 13441,13138,13442,13443,'3006-1;8285-1;',               0,    0,    3624,     16313,   16307,   16316,     16319,   0),     -- Vesper Leather Breastplate
+  (94,  13434, 13444,13139,13445,13446,'3006-1;8287-1;',               0,    0,    3625,     16314,   16308,   16317,     16320,   0),     -- Vesper Tunic
 
-  (95,  13435, 13448,13140,13449,13450,'3006-1;8284-1;',               13471,3417, 3623,     0,       0,       0,         0,       0),     -- Vesper Noble Breastplate
-  (96,  13436, 13451,13141,13452,13453,'3006-1;8286-1;',               0,    0,    3624,     0,       0,       0,         0,       0),     -- Vesper Noble Leather Breastplate
-  (97,  13437, 13454,13142,13455,13456,'3006-1;8288-1;',               0,    0,    3625,     0,       0,       0,         0,       0),     -- Vesper Noble Tunic
+  (95,  13435, 13448,13140,13449,13450,'3006-1;8284-1;',               13471,3417, 3623,     16843,   16837,   16846,     16849,   16321), -- Vesper Noble Breastplate
+  (96,  13436, 13451,13141,13452,13453,'3006-1;8286-1;',               0,    0,    3624,     16844,   16838,   16847,     16850,   0),     -- Vesper Noble Leather Breastplate
+  (97,  13437, 13454,13142,13455,13456,'3006-1;8288-1;',               0,    0,    3625,     16845,   16839,   16848,     16851,   0),     -- Vesper Noble Tunic
 
 -- A GRADE PVP Armor Sets
 -- id   chest  legs  head  glov  feet  skill		               shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
@@ -225,15 +225,51 @@ INSERT INTO `armorsets` VALUES
 
 -- S84 Vesper PVP Armor Sets
 -- id   chest  legs  head  glov  feet  skill                           shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
-  (138, 14520, 13438,13137,13439,13440,'3006-1;8301-1;3659-1;3662-1;', 13471,3417, 3623,     0,       0,       0,         0,       0),     -- Vesper Breastplate {PvP}
-  (139, 14521, 13441,13138,13442,13443,'3006-1;8303-1;3663-1;',        0,    0,    3624,     0,       0,       0,         0,       0),     -- Vesper Leather Breastplate {PvP}
-  (140, 14522, 13444,13139,13445,13446,'3006-1;8305-1;3660-1;',        0,    0,    3625,     0,       0,       0,         0,       0),     -- Vesper Tunic {PvP}
+  (138, 14520, 13438,13137,13439,13440,'3006-1;8301-1;3659-1;3662-1;', 13471,3417, 3623,     16312,   16306,   16315,     16318,   16321), -- Vesper Breastplate {PvP}
+  (139, 14521, 13441,13138,13442,13443,'3006-1;8303-1;3663-1;',        0,    0,    3624,     16313,   16307,   16316,     16319,   0),     -- Vesper Leather Breastplate {PvP}
+  (140, 14522, 13444,13139,13445,13446,'3006-1;8305-1;3660-1;',        0,    0,    3625,     16314,   16308,   16317,     16320,   0),     -- Vesper Tunic {PvP}
 
-  (141, 14523, 13448,13140,13449,13450,'3006-1;8302-1;3659-1;3662-1;', 13471,3417, 3623,     0,       0,       0,         0,       0),     -- Vesper Noble Breastplate {PvP}
-  (142, 14524, 13451,13141,13452,13453,'3006-1;8304-1;3663-1;',        0,    0,    3624,     0,       0,       0,         0,       0),     -- Vesper Noble Leather Breastplate {PvP}
-  (143, 14525, 13454,13142,13455,13456,'3006-1;8306-1;3660-1;',        0,    0,    3625,     0,       0,       0,         0,       0),     -- Vesper Noble Tunic {PvP}
+  (141, 14523, 13448,13140,13449,13450,'3006-1;8302-1;3659-1;3662-1;', 13471,3417, 3623,     16843,   16837,   16846,     16849,   16321), -- Vesper Noble Breastplate {PvP}
+  (142, 14524, 13451,13141,13452,13453,'3006-1;8304-1;3663-1;',        0,    0,    3624,     16844,   16838,   16847,     16850,   0),     -- Vesper Noble Leather Breastplate {PvP}
+  (143, 14525, 13454,13142,13455,13456,'3006-1;8306-1;3660-1;',        0,    0,    3625,     16845,   16839,   16848,     16851,   0),     -- Vesper Noble Tunic {PvP}
+
+-- S84 Elegia Armor Sets
+-- id   chest  legs  head  glov  feet  skill                           shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
+  (144, 15575, 15578,15572,15581,15584,'3006-1;8403-1;',               15587,8496, 3623,     0,       0,       0,         0,       0),     -- Elegia Cuirass
+  (145, 15576, 15579,15573,15582,15585,'3006-1;8404-1;',               0,    0,    3624,     0,       0,       0,         0,       0),     -- Elegia Houberk
+  (146, 15577, 15580,15574,15583,15586,'3006-1;8405-1;',               0,    0,    3625,     0,       0,       0,         0,       0),     -- Elegia Tunic
+
+-- S84 Vorpal Armor Sets
+-- id   chest  legs  head  glov  feet  skill                           shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
+  (147, 15592, 15595,15589,15598,15601,'3006-1;8400-1;',               15604,8495, 3623,     0,       0,       0,         0,       0),     -- Vorpal Cuirass
+  (148, 15593, 15596,15590,15599,15602,'3006-1;8401-1;',               0,    0,    3624,     0,       0,       0,         0,       0),     -- Vorpal Houberk
+  (149, 15594, 15597,15591,15600,15603,'3006-1;8402-1;',               0,    0,    3625,     0,       0,       0,         0,       0),     -- Vorpal Tunic
+
+-- S80 Moirai Armor Sets
+-- id   chest  legs  head  glov  feet  skill                           shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
+  (150, 15609, 15612,15606,15615,15618,'3006-1;8397-1;',               15621,8493, 3623,     16295,   16289,   16298,     16301,   16304), -- Moirai Cuirass
+  (151, 15610, 15613,15607,15616,15619,'3006-1;8398-1;',               0,    0,    3624,     16296,   16290,   16299,     16302,   0),     -- Moirai Houberk
+  (152, 15611, 15614,15608,15617,15620,'3006-1;8399-1;',               0,    0,    3625,     16297,   16291,   16300,     16303,   0),     -- Moirai Tunic
+
+-- S84 Elegia PVP Armor Sets
+-- id   chest  legs  head  glov  feet  skill                           shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
+  (153, 16168, 15578,15572,15581,15584,'3006-1;8412-1;3659-1;3662-1;', 15587,8496, 3623,     0,       0,       0,         0,       0),     -- Elegia Cuirass {PvP}
+  (154, 16169, 15579,15573,15582,15585,'3006-1;8413-1;3663-1;',        0,    0,    3624,     0,       0,       0,         0,       0),     -- Elegia Hourberk {PvP}
+  (155, 16170, 15580,15574,15583,15586,'3006-1;8414-1;3660-1;',        0,    0,    3625,     0,       0,       0,         0,       0),     -- Elegia Tunic {PvP}
+
+-- S84 Vorpal PVP Armor Sets
+-- id   chest  legs  head  glov  feet  skill                           shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
+  (156, 16171, 15595,15589,15598,15601,'3006-1;8409-1;3659-1;3662-1;', 15604,8495, 3623,     0,       0,       0,         0,       0),     -- Vorpal Cuirass {PvP}
+  (157, 16172, 15596,15590,15599,15602,'3006-1;8410-1;3663-1;',        0,    0,    3624,     0,       0,       0,         0,       0),     -- Vorpal Houberk {PvP}
+  (158, 16173, 15597,15591,15600,15603,'3006-1;8411-1;3660-1;',        0,    0,    3625,     0,       0,       0,         0,       0),     -- Vorpal Tunic {PvP}
+
+-- S80 Moirai PVP Armor Sets
+-- id   chest  legs  head  glov  feet  skill                           shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
+  (159, 16174, 15612,15606,15615,15618,'3006-1;8406-1;3659-1;3662-1;', 15621,8493, 3623,     16295,   16289,   16298,     16301,   16304), -- Moirai Cuirass {PvP}
+  (160, 16175, 15613,15607,15616,15619,'3006-1;8407-1;3663-1;',        0,    0,    3624,     16296,   16290,   16299,     16302,   0),     -- Moirai Houberk {PvP}
+  (161, 16176, 15614,15608,15617,15620,'3006-1;8408-1;3660-1;',        0,    0,    3625,     16297,   16291,   16300,     16303,   0),     -- Moirai Tunic {PvP}
 
 -- Special Sets
 -- id   chest  legs  head  glov  feet  skill                           shld  shsk  enchant6  mw_legs  mw_head  mw_gloves  mw_feet  mw_shield
-  (144,  9670,  9671, 9669,0,    0,    '8277-1;',                      0,    0,    0,        0,       0,       0,         0,       0),     -- Natives Set (bestows Native transform skill when all are worn together)
-  (145, 13806, 13807,13805,0,    0,    '8278-1;',                      0,    0,    0,        0,       0,       0,         0,       0);     -- Guard of Dawns Set (bestows Guard transform skill when all are worn together)
+  (162,  9670,  9671, 9669,0,    0,    '8277-1;',                      0,    0,    0,        0,       0,       0,         0,       0),     -- Natives Set (bestows Native transform skill when all are worn together)
+  (163, 13806, 13807,13805,0,    0,    '8278-1;',                      0,    0,    0,        0,       0,       0,         0,       0);     -- Guard of Dawns Set (bestows Guard transform skill when all are worn together)

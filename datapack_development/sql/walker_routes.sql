@@ -1,14 +1,14 @@
 DROP TABLE IF EXISTS `walker_routes`;
 CREATE TABLE `walker_routes` (
-  `route_id` int(11) NOT NULL default '0',
-  `npc_id` int(11) NOT NULL default '0',
-  `move_point` int(9) NOT NULL,
-  `chatText` varchar(255) default NULL,
-  `move_x` int(9) NOT NULL default '0',
-  `move_y` int(9) NOT NULL default '0',
-  `move_z` int(9) NOT NULL default '0',
-  `delay`  int(9) NOT NULL default '0',
-  `running`  tinyint(1) NOT NULL default '0',
+  `route_id` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `npc_id` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `move_point` tinyint(2) unsigned NOT NULL,
+  `chatText` varchar(255) DEFAULT NULL,
+  `move_x` mediumint(6) NOT NULL DEFAULT '0',
+  `move_y` mediumint(6) NOT NULL DEFAULT '0',
+  `move_z` mediumint(6) NOT NULL DEFAULT '0',
+  `delay` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `running` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`route_id`,`npc_id`,`move_point`)
 );
 

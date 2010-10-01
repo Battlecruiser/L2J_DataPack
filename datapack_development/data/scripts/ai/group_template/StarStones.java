@@ -20,49 +20,50 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
 public class StarStones extends L2AttackableAIScript
 {
 	private static final int[] mobs = {18684, 18685, 18686, 18687, 18688, 18689, 18690, 18691, 18692};
 	private static final int RATE = 1;
-
+	
 	public StarStones(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		this.registerMobs(mobs);
+		this.registerMobs(mobs, QuestEventType.ON_SKILL_SEE);
 	}
-
+	
 	@Override
 	public String onSkillSee (L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
 	{
-		if (targets[0] == npc && skill.getId() == 932)
+		if (Util.contains(targets, npc) && skill.getId() == 932)
 		{
 			int itemId = 0;
 			
 			switch(npc.getNpcId())
 			{
-			case 18684:
-			case 18685:
-			case 18686:
-				// give Red item
-				itemId = 14009;
-				break;
-			case 18687:
-			case 18688:
-			case 18689:
-				// give Blue item
-				itemId = 14010;
-				break;
-			case 18690:
-			case 18691:
-			case 18692:
-				// give Green item
-				itemId = 14011;
-				break;
-			default:
-				// unknown npc!
-				return super.onSkillSee(npc, caster, skill, targets, isPet);
+				case 18684:
+				case 18685:
+				case 18686:
+					// give Red item
+					itemId = 14009;
+					break;
+				case 18687:
+				case 18688:
+				case 18689:
+					// give Blue item
+					itemId = 14010;
+					break;
+				case 18690:
+				case 18691:
+				case 18692:
+					// give Green item
+					itemId = 14011;
+					break;
+				default:
+					// unknown npc!
+					return super.onSkillSee(npc, caster, skill, targets, isPet);
 			}
 			if (Rnd.get(100) < 33)
 			{
@@ -78,12 +79,11 @@ public class StarStones extends L2AttackableAIScript
 			}
 			else
 				caster.sendPacket(new SystemMessage(SystemMessageId.THE_COLLECTION_HAS_FAILED));
-			npc.getSpawn().decreaseCount(npc);
 			npc.deleteMe();
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isPet);
 	}
-
+	
 	public static void main(String[] args)
 	{
 		new StarStones(-1, "starstones", "ai");

@@ -13,17 +13,17 @@ public class AurabirdFalcon extends L2Transformation
 		// id, colRadius, colHeight
 		super(8, 38, 14.25);
 	}
-
+	
 	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 8 || getPlayer().isCursedWeaponEquipped())
 			return;
 		getPlayer().setIsFlyingMounted(true);
-
+		
 		transformedSkills();
 	}
-
+	
 	public void transformedSkills()
 	{
 		// Air Blink
@@ -33,9 +33,9 @@ public class AurabirdFalcon extends L2Transformation
 		// Exhilarate
 		if (getPlayer().getLevel() >= 83)
 			getPlayer().addSkill(SkillTable.getInstance().getInfo(894, 1), false);
-
+		
 		int lvl = getPlayer().getLevel() -74;
-
+		
 		if (lvl > 0)
 		{
 			// Air Assault (up to 11 levels)
@@ -53,18 +53,18 @@ public class AurabirdFalcon extends L2Transformation
 		}
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
-
+		
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
-
+	
 	@Override
 	public void onUntransform()
 	{
 		getPlayer().setIsFlyingMounted(false);
-
+		
 		removeSkills();
 	}
-
+	
 	public void removeSkills()
 	{
 		// Air Blink
@@ -72,9 +72,9 @@ public class AurabirdFalcon extends L2Transformation
 		
 		// Exhilarate
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(894, 1), false);
-
+		
 		int lvl = getPlayer().getLevel() -74;
-
+		
 		if (lvl > 0)
 		{
 			// Air Assault (up to 11 levels)
@@ -92,10 +92,10 @@ public class AurabirdFalcon extends L2Transformation
 		}
 		// Transform Dispel
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
-
+		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
-
+	
 	public static void main(String[] args)
 	{
 		TransformationManager.getInstance().registerTransformation(new AurabirdFalcon());

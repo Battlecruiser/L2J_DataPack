@@ -100,7 +100,7 @@ public class AdminEnchant implements IAdminCommandHandler
 				armorType = Inventory.PAPERDOLL_BACK;
 			else if (command.startsWith("admin_setbe"))
 				armorType = Inventory.PAPERDOLL_BELT;
-
+			
 			if (armorType != -1)
 			{
 				try

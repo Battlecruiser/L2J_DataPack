@@ -112,7 +112,7 @@ class Quest (JQuest) :
         return None
 
     def onTalk (self,npc,player):
-        htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+        htmltext = Quest.getNoQuestMsg(player)
         st = player.getQuestState(qn)
         if not st : return htmltext
         npcId = npc.getNpcId()
@@ -137,7 +137,8 @@ class Quest (JQuest) :
                 st.giveItems(certificate,1)
                 st.exitQuest(False)
                 st.playSound("ItemSound.quest_finish")
-                st.addExpAndSp(189831,21526)
+                st.giveItems(57,35597)
+                st.addExpAndSp(196875,13510)
         elif npcId == Kekropus :
             if cond == 1 :
                 htmltext = "32138-00.htm"

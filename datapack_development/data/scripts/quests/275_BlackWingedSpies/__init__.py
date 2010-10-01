@@ -27,7 +27,7 @@ class Quest (JQuest) :
     return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+   htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st : return htmltext
 
@@ -51,7 +51,7 @@ class Quest (JQuest) :
        htmltext = "30567-05.htm"
        st.exitQuest(1)
        st.playSound("ItemSound.quest_finish")
-       st.giveItems(ADENA,4200)
+       st.giveItems(ADENA,4550)
        st.takeItems(DARKWING_BAT_FANG,-1)
        st.takeItems(VARANGKAS_PARASITE,-1)
    return htmltext

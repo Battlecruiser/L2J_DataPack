@@ -34,12 +34,12 @@ public class Observation implements IBypassHandler
 		"observeoracle",
 		"observe"
 	};
-
+	
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2Npc))
 			return false;
-
+		
 		try
 		{
 			if (command.toLowerCase().startsWith(COMMANDS[0])) // siege
@@ -47,7 +47,7 @@ public class Observation implements IBypassHandler
 				String val = command.substring(13);
 				StringTokenizer st = new StringTokenizer(val);
 				st.nextToken(); // Bypass cost
-
+				
 				if (SiegeManager.getInstance().getSiege(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken())) != null)
 					doObserve(activeChar, (L2Npc)target, val);
 				else
@@ -67,7 +67,7 @@ public class Observation implements IBypassHandler
 				doObserve(activeChar, (L2Npc)target, command.substring(8));
 				return true;
 			}
-
+			
 			return false;
 		}
 		catch (Exception e)
@@ -76,7 +76,7 @@ public class Observation implements IBypassHandler
 		}
 		return false;
 	}
-
+	
 	private static final void doObserve(L2PcInstance player, L2Npc npc, String val)
 	{
 		StringTokenizer st = new StringTokenizer(val);
@@ -84,7 +84,7 @@ public class Observation implements IBypassHandler
 		int x = Integer.parseInt(st.nextToken());
 		int y = Integer.parseInt(st.nextToken());
 		int z = Integer.parseInt(st.nextToken());
-
+		
 		if (player.reduceAdena("Broadcast", cost, npc, true))
 		{
 			// enter mode
@@ -93,7 +93,7 @@ public class Observation implements IBypassHandler
 		}
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
-
+	
 	public String[] getBypassList()
 	{
 		return COMMANDS;

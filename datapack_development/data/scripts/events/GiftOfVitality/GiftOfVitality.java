@@ -37,7 +37,7 @@ public class GiftOfVitality extends Quest
 	
 	private static final int _jack = 4306;
 	
-	private static final int[][] _spawns = 
+	private static final int[][] _spawns =
 	{
 		{  82766,  149438, -3464, 33865 },
 		{  82286,   53291, -1488, 15250 },
@@ -73,7 +73,7 @@ public class GiftOfVitality extends Quest
 		String htmltext = "";
 		QuestState st = player.getQuestState(getName());
 		htmltext = event;
-
+		
 		if (event.equalsIgnoreCase("vitality"))
 		{
 			long _reuse = 0;
@@ -108,7 +108,7 @@ public class GiftOfVitality extends Quest
 				htmltext = "4306-nolevel.htm";
 			}
 			else
-			{				
+			{
 				if (player.isMageClass())
 				{
 					npc.setTarget(player);

@@ -99,9 +99,9 @@ public class AdminPetition implements IAdminCommandHandler
 					return false;
 				}
 				L2PcInstance targetPlayer = (L2PcInstance) targetChar;
-
+				
 				String val = command.substring(15);
-
+				
 				petitionId = PetitionManager.getInstance().submitPetition(targetPlayer, val, 9);
 				PetitionManager.getInstance().acceptPetition(activeChar, petitionId);
 			}

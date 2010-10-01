@@ -19,7 +19,7 @@ REM You should have received a copy of the GNU General Public License along
 REM with this program; if not, write to the Free Software Foundation, Inc., 
 REM 675 Mass Ave, Cambridge, MA 02139, USA. Or contact the Official L2J
 REM DataPack Project at http://www.l2jdp.com, http://www.l2jdp.com/forum or
-REM #l2j-datapack @ irc://irc.freenode.net
+REM #l2j @ irc://irc.freenode.net
 
 set config_file=vars.txt
 set config_version=0
@@ -722,6 +722,7 @@ character_friends.sql
 character_hennas.sql
 character_instance_time.sql
 character_macroses.sql
+character_premium_items.sql
 character_quest_global_data.sql
 character_offline_trade_items.sql
 character_offline_trade.sql
@@ -746,6 +747,7 @@ clan_subpledges.sql
 clan_wars.sql
 clanhall.sql
 clanhall_functions.sql
+clanhall_siege_guards.sql
 class_list.sql
 cursed_weapons.sql
 dimensional_rift.sql
@@ -770,9 +772,13 @@ grandboss_list.sql
 helper_buff_list.sql
 henna.sql
 henna_trees.sql
+herb_droplist_groups.sql
 heroes.sql
 heroes_diary.sql
 item_attributes.sql
+item_auction_bid.sql
+item_auction.sql
+item_elementals.sql
 items.sql
 itemsonground.sql
 locations.sql
@@ -785,7 +791,8 @@ messages.sql
 minions.sql
 npc.sql
 npc_buffer.sql
-npcAIData.sql
+npcaidata.sql
+npc_elementals.sql
 npcskills.sql
 olympiad_data.sql
 olympiad_fights.sql

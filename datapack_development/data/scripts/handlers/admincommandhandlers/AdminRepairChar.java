@@ -35,7 +35,7 @@ public class AdminRepairChar implements IAdminCommandHandler
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
-		"admin_restore", 
+		"admin_restore",
 		"admin_repair"
 	};
 	

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="2200" levels="3" name="Item - Jade Treasue Box">
+	<skill id="2200" levels="3" name="Item - Jade Treasure Box">
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="EXTRACTABLE_FISH" />
@@ -12,7 +12,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2201" levels="3" name="Item - Blue Treasue Box">
+	<skill id="2201" levels="3" name="Item - Blue Treasure Box">
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="EXTRACTABLE_FISH" />
@@ -24,7 +24,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2202" levels="3" name="Item - Yellow Treasue Box">
+	<skill id="2202" levels="3" name="Item - Yellow Treasure Box">
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="EXTRACTABLE_FISH" />
@@ -36,7 +36,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2203" levels="3" name="Item - Orange Treasue Box">
+	<skill id="2203" levels="3" name="Item - Orange Treasure Box">
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="EXTRACTABLE_FISH" />
@@ -48,7 +48,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2204" levels="3" name="Item - Violet Treasue Box">
+	<skill id="2204" levels="3" name="Item - Violet Treasure Box">
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="EXTRACTABLE_FISH" />
@@ -60,7 +60,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2205" levels="3" name="Item - Red Treasue Box">
+	<skill id="2205" levels="3" name="Item - Red Treasure Box">
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="EXTRACTABLE_FISH" />
@@ -72,7 +72,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2206" levels="3" name="Item - White Treasue Box">
+	<skill id="2206" levels="3" name="Item - White Treasure Box">
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="EXTRACTABLE_FISH" />
@@ -84,7 +84,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2207" levels="3" name="Item - Black Treasue Box">
+	<skill id="2207" levels="3" name="Item - Black Treasure Box">
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="EXTRACTABLE_FISH" />
@@ -307,7 +307,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<cond msgId="109">
-			<target npcType="L2Chest" />
+			<target npcType="L2ChestInstance" />
 		</cond>
 	</skill>
 	<skill id="2230" levels="1" name="Item - Theme Sound Crystal">
@@ -1037,12 +1037,13 @@
 		</for>
 	</skill>
 	<skill id="2287" levels="6" name="Elixir of Life">
+		<table name="#power"> 800 1000 1200 1600 2000 2300 </table>
 		<table name="#minLvl"> 0 20 40 52 61 76 </table>
 		<table name="#maxLvl"> 20 40 52 61 76 86 </table>
 		<set name="itemConsumeCount" val="1" />
-		<set name="power" val="50" />
+		<set name="power" val="#power" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="skillType" val="HEAL_STATIC" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />

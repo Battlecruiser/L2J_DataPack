@@ -25,7 +25,7 @@ Letter2 = 8080
 Tablet = 8081
 Report = 8082
 
-class Quest (JQuest) : 
+class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
     JQuest.__init__(self,id,name,descr)
@@ -103,7 +103,7 @@ class Quest (JQuest) :
 
 
  def onTalk (self,npc,player):
-    htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+    htmltext = Quest.getNoQuestMsg(player)
     st = player.getQuestState(qn)
     if not st : return htmltext
     state = st.getState()
@@ -133,6 +133,8 @@ class Quest (JQuest) :
           st.set("cond","6")
        elif cond == 6:
           htmltext = "32020-14.htm"
+       elif cond == 7:
+          htmltext = "32020-14a.htm"
        elif cond == 9:
           htmltext = "32020-15.htm"
        elif cond == 10:
@@ -141,9 +143,10 @@ class Quest (JQuest) :
           htmltext = "32020-20.htm"
        elif cond == 12:
           htmltext = "32020-18.htm"
-          st.exitQuest(0)
           st.playSound("ItemSound.quest_finish")
-          st.giveItems(57,60044)
+          st.giveItems(57,115673)
+          st.addExpAndSp(493595,40442)
+          st.exitQuest(0)
     elif npcId == Misa :
        if cond == 1:
           htmltext = "32018-01.htm"

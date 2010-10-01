@@ -13,16 +13,14 @@ DROP_CHANCE=30
 #Set this to non-zero to use 100% recipes as reward instead of default 60%
 ALT_RP_100=0
 
-DESTROYED_GOLEM_SHARD = 8100
-RECIPES_60= [4963,4964,4965,4966,4967,4968,4969,4970,4971,4972,5000,5001,5002,5003,5004,5005,5006,5007]+[8298, 8306, 8310, 8312, 8322, 8324]
-RECIPES_100= range(4181,4200)+[8297, 8305, 8309, 8311, 8321, 8323]
-
+BROKEN_GOLEM_FRAGMENT = 15521
+RECIPES = [6887, 6881, 6897, 7580, 6883, 6899, 6891, 6885, 6893, 6895]
 
 class Quest (JQuest) :
 
  def __init__(self,id,name,descr):
      JQuest.__init__(self,id,name,descr)
-     self.questItemIds = [DESTROYED_GOLEM_SHARD]
+     self.questItemIds = [BROKEN_GOLEM_FRAGMENT]
 
  def onEvent (self,event,st) :
     htmltext = event
@@ -31,12 +29,12 @@ class Quest (JQuest) :
        st.setState(State.STARTED)
        st.playSound("ItemSound.quest_accept")
     elif event == "32069-06.htm" :
-       if st.getQuestItemsCount(DESTROYED_GOLEM_SHARD) >= 500:
-          st.takeItems(DESTROYED_GOLEM_SHARD,500)
+       if st.getQuestItemsCount(BROKEN_GOLEM_FRAGMENT) >= 500:
+          st.takeItems(BROKEN_GOLEM_FRAGMENT,500)
           if ALT_RP_100 == 0 :
-            item = RECIPES_60[st.getRandom(len(RECIPES_60))]
+            item = RECIPES[st.getRandom(len(RECIPES))]
           else :
-            item = RECIPES_100[st.getRandom(len(RECIPES_100))]
+            item = RECIPES[st.getRandom(len(RECIPES))]+1
           st.giveItems(item,1)
           st.playSound("ItemSound.quest_finish")
           st.exitQuest(1)
@@ -46,13 +44,13 @@ class Quest (JQuest) :
 
  def onTalk (self, npc, player):
     st = player.getQuestState(qn)
-    htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+    htmltext = Quest.getNoQuestMsg(player)
     if st :
         npcId = npc.getNpcId()
         cond = st.getInt("cond")
-        count = st.getQuestItemsCount(DESTROYED_GOLEM_SHARD)
+        count = st.getQuestItemsCount(BROKEN_GOLEM_FRAGMENT)
         if cond == 0 :
-            if player.getLevel() >= 46 :
+            if player.getLevel() >= 70 :
                 htmltext = "32069-01.htm"
             else:
                 htmltext = "32069-03.htm"
@@ -72,7 +70,7 @@ class Quest (JQuest) :
         if st.getState() == State.STARTED :
             npcId = npc.getNpcId()
             cond = st.getInt("cond")
-            count = st.getQuestItemsCount(DESTROYED_GOLEM_SHARD)
+            count = st.getQuestItemsCount(BROKEN_GOLEM_FRAGMENT)
             if cond == 1 and count < 500:
                 chance = DROP_CHANCE*Config.RATE_QUEST_DROP
                 numItems, chance = divmod(chance,100)
@@ -85,14 +83,13 @@ class Quest (JQuest) :
                         st.set("cond","2")
                     else:
                         st.playSound("ItemSound.quest_itemget")
-                    st.giveItems(DESTROYED_GOLEM_SHARD,int(numItems))
+                    st.giveItems(BROKEN_GOLEM_FRAGMENT,int(numItems))
     return
 
 QUEST       = Quest(647,qn,"Influx of Machines")
 
 QUEST.addStartNpc(32069)
-
 QUEST.addTalkId(32069)
 
-for i in range(22052,22079):
+for i in range(22801,22812):
    QUEST.addKillId(i)

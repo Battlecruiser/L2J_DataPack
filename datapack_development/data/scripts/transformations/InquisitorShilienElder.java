@@ -11,16 +11,16 @@ public class InquisitorShilienElder extends L2Transformation
 		// id
 		super(318);
 	}
-
+	
 	@Override
 	public void onTransform()
 	{
 		if (getPlayer().getTransformationId() != 318 || getPlayer().isCursedWeaponEquipped())
 			return;
-
+		
 		transformedSkills();
 	}
-
+	
 	public void transformedSkills()
 	{
 		if (getPlayer().getLevel() > 43)
@@ -39,16 +39,16 @@ public class InquisitorShilienElder extends L2Transformation
 		}
 		else
 			getPlayer().setTransformAllowedSkills(new int[]{838,1430,1303,1059});
-			// Switch Stance
-			getPlayer().addSkill(SkillTable.getInstance().getInfo(838, 1), false);
+		// Switch Stance
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(838, 1), false);
 	}
-
+	
 	@Override
 	public void onUntransform()
 	{
 		removeSkills();
 	}
-
+	
 	public void removeSkills()
 	{
 		// Divine Punishment
@@ -63,10 +63,10 @@ public class InquisitorShilienElder extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1525, getPlayer().getLevel() - 43), false);
 		// Switch Stance
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(838, 1), false);
-
+		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
-
+	
 	public static void main(String[] args)
 	{
 		TransformationManager.getInstance().registerTransformation(new InquisitorShilienElder());

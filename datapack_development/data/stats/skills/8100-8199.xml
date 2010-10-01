@@ -471,8 +471,8 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
-			<mul order="0x30" stat="sleepVuln" val="0.3" /> <!-- Sleep Resistance +70% -->
-			<mul order="0x30" stat="rootVuln" val="0.3" /> <!-- Hold Resistance +70% -->
+			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- Sleep Resistance +70% -->
+			<sub order="0x40" stat="rootVuln" val="70" /> <!-- Hold Resistance +70% -->
 			<add order="0x10" stat="CON" val="2" /> <!-- CON +2 -->
 			<sub order="0x10" stat="DEX" val="2" /> <!-- DEX -2 -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
@@ -487,7 +487,7 @@
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
 			<add order="0x40" stat="accCombat" val="3" /> <!-- Accuracy +3 -->
-			<mul order="0x30" stat="stunVuln" val="0.5" /> <!-- Stun Resistance +50% -->
+			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Stun Resistance +50% -->
 			<add order="0x10" stat="STR" val="2" /> <!-- STR +2 -->
 			<sub order="0x10" stat="CON" val="2" /> <!-- CON -2 -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
@@ -501,8 +501,8 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.04" /> <!-- M. Def. +4% -->
-			<mul order="0x30" stat="sleepVuln" val="0.3" /> <!-- Sleep Resistance +70% -->
-			<mul order="0x30" stat="rootVuln" val="0.3" /> <!-- Hold Resistance +70% -->
+			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- Sleep Resistance +70% -->
+			<sub order="0x40" stat="rootVuln" val="70" /> <!-- Hold Resistance +70% -->
 			<add order="0x40" stat="absorbDam" val="3" /> <!-- absorb 3% HP from damage inflicted on enemies -->
 			<add order="0x10" stat="DEX" val="1" /> <!-- DEX +1 -->
 			<sub order="0x10" stat="CON" val="1" /> <!-- CON -1 -->
@@ -521,7 +521,7 @@
 			</mul>
 			<add order="0x40" stat="maxMp" val="240" /> <!-- MP +240 -->
 			<add order="0x40" stat="maxLoad" val="5759" /> <!-- Weight increased plus the point at which a weight penalty is applied +5759 -->
-			<mul order="0x30" stat="stunVuln" val="0.5" /> <!-- Stun Resistance +50% -->
+			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Stun Resistance +50% -->
 			<add order="0x10" stat="DEX" val="1" /> <!-- DEX +1 -->
 			<sub order="0x10" stat="CON" val="1" /> <!-- CON -1 -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
@@ -536,8 +536,8 @@
 		<for>
 			<mul order="0x30" stat="regMp" val="1.04" /> <!-- MP Regeneration +4% -->
 			<mul order="0x30" stat="mAtk" val="1.08" /> <!-- M. Atk. +8% -->
-			<mul order="0x30" stat="sleepVuln" val="0.3" /> <!-- Sleep Resistance +70% -->
-			<mul order="0x30" stat="rootVuln" val="0.3" /> <!-- Hold Resistance +70% -->
+			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- Sleep Resistance +70% -->
+			<sub order="0x40" stat="rootVuln" val="70" /> <!-- Hold Resistance +70% -->
 			<add order="0x10" stat="INT" val="2" /> <!-- INT +2 -->
 			<sub order="0x10" stat="WIT" val="2" /> <!-- WIT -2 -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
@@ -553,7 +553,7 @@
 			<add order="0x40" stat="maxMp" val="240" /> <!-- MP +240 -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<mul order="0x30" stat="regMp" val="1.08" /> <!-- MP Regeneration +8% -->
-			<mul order="0x30" stat="stunVuln" val="0.5" /> <!-- Stun Resistance +50% -->
+			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Stun Resistance +50% -->
 			<add order="0x10" stat="MEN" val="1" /> <!-- MEN +1 -->
 			<sub order="0x10" stat="INT" val="1" /> <!-- INT -1 -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
@@ -568,8 +568,8 @@
 		<for>
 			<mul order="0x30" stat="pDef" val="1.08" /> <!-- P Def. +8% -->
 			<add order="0x40" stat="maxHp" val="445" /> <!-- Maximum HP +445 -->
-			<mul order="0x30" stat="sleepVuln" val="0.3" /> <!-- Sleep Probability -70% -->
-			<mul order="0x30" stat="rootVuln" val="0.3" /> <!-- Hold Probability -70% -->
+			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- Sleep Probability -70% -->
+			<sub order="0x40" stat="rootVuln" val="70" /> <!-- Hold Probability -70% -->
 			<sub order="0x10" stat="DEX" val="2" /> <!-- DEX -2 -->
 			<add order="0x10" stat="STR" val="2" /> <!-- STR +2 -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />

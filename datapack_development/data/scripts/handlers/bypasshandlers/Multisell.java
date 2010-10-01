@@ -14,8 +14,8 @@
  */
 package handlers.bypasshandlers;
 
+import com.l2jserver.gameserver.datatables.MultiSell;
 import com.l2jserver.gameserver.handler.IBypassHandler;
-import com.l2jserver.gameserver.model.L2Multisell;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -27,25 +27,25 @@ public class Multisell implements IBypassHandler
 		"multisell",
 		"exc_multisell"
 	};
-
+	
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2Npc))
 			return false;
-
+		
 		try
 		{
 			int listId;
 			if (command.toLowerCase().startsWith(COMMANDS[0])) // multisell
 			{
 				listId = Integer.parseInt(command.substring(9).trim());
-				L2Multisell.getInstance().separateAndSend(listId, activeChar, ((L2Npc)target).getNpcId(), false, ((L2Npc)target).getCastle().getTaxRate());
+				MultiSell.getInstance().separateAndSend(listId, activeChar, (L2Npc)target, false);
 				return true;
 			}
 			else if (command.toLowerCase().startsWith(COMMANDS[1])) // exc_multisell
 			{
 				listId = Integer.parseInt(command.substring(13).trim());
-				L2Multisell.getInstance().separateAndSend(listId, activeChar, ((L2Npc)target).getNpcId(), true, ((L2Npc)target).getCastle().getTaxRate());
+				MultiSell.getInstance().separateAndSend(listId, activeChar, (L2Npc)target, true);
 				return true;
 			}
 			return false;
@@ -56,7 +56,7 @@ public class Multisell implements IBypassHandler
 		}
 		return false;
 	}
-
+	
 	public String[] getBypassList()
 	{
 		return COMMANDS;

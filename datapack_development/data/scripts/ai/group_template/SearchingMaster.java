@@ -16,7 +16,6 @@ package ai.group_template;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
-import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
@@ -26,29 +25,27 @@ public class SearchingMaster extends L2AttackableAIScript
 	{
 		20965,20966,20967,20968,20969,20970,20971,20972,20973
 	};
-
+	
 	public SearchingMaster(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
 		for (int id : mobs)
 			addAttackId(id);
 	}
-
+	
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isPet)
 	{
 		if (player == null)
 			return null;
 		
-		L2Character attacker = isPet ? player.getPet().getOwner() : player;
-
 		npc.setIsRunning(true);
-		((L2Attackable) npc).addDamageHate(attacker, 0, 999);
-		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
-
+		((L2Attackable) npc).addDamageHate(player, 0, 999);
+		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
+		
 		return super.onAttack(npc, player, damage, isPet);
 	}
-
+	
 	public static void main(String[] args)
 	{
 		new SearchingMaster(-1, "SearchingMaster", "ai");

@@ -26,16 +26,16 @@ public class ReleaseAttribute implements IBypassHandler
 	{
 		"ReleaseAttribute"
 	};
-
+	
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2Npc))
 			return false;
-
+		
 		activeChar.sendPacket(new ExShowBaseAttributeCancelWindow(activeChar));
 		return true;
 	}
-
+	
 	public String[] getBypassList()
 	{
 		return COMMANDS;

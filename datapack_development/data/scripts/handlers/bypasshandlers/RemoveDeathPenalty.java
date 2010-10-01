@@ -30,17 +30,17 @@ public class RemoveDeathPenalty implements IBypassHandler
 	{
 		"remove_dp"
 	};
-
+	
 	static final int[] pen_clear_price =
 	{
 		3600, 8640, 25200, 50400, 86400, 144000, 144000, 144000
 	};
-
+	
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2Npc))
 			return false;
-
+		
 		try
 		{
 			final int cmdChoice = Integer.parseInt(command.substring(10, 11).trim());
@@ -57,10 +57,10 @@ public class RemoveDeathPenalty implements IBypassHandler
 					break;
 				case 2:
 					NpcHtmlMessage Reply = new NpcHtmlMessage(npc.getObjectId());
-                                            final StringBuilder replyMSG = StringUtil.startAppend(400,
-                                                    "<html><body>Black Judge:<br>"
-                                                    );
-
+					final StringBuilder replyMSG = StringUtil.startAppend(400,
+							"<html><body>Black Judge:<br>"
+					);
+					
 					if (activeChar.getDeathPenaltyBuffLevel() > 0)
 					{
 						if (activeChar.getAdena() >= pen_clear_price[activeChar.getExpertiseIndex()])
@@ -77,10 +77,10 @@ public class RemoveDeathPenalty implements IBypassHandler
 							replyMSG.append("The wound you have received from death's touch is too deep to be healed for the money you have to give me. Find more money if you wish death's mark to be fully removed from you.");
 						}
 					}
-					else 
+					else
 					{
 						replyMSG.append("You have no more death wounds that require healing.<br>" +
-                                                            "Go forth and fight, both for this world and your own glory.");
+						"Go forth and fight, both for this world and your own glory.");
 					}
 					
 					replyMSG.append("</body></html>");
@@ -96,7 +96,7 @@ public class RemoveDeathPenalty implements IBypassHandler
 		}
 		return false;
 	}
-
+	
 	public String[] getBypassList()
 	{
 		return COMMANDS;

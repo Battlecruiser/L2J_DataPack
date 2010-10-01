@@ -21,7 +21,6 @@ SI_ORE = 6363
 REWARDS=[5529]+range(5532,5540)+range(5541,5549)+[8331]+range(8341,8343)+[8346]+[8349]+range(8712,8723)
  
 #Messages
-default   = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
 error_1   = "Low_level.htm"
 start     = "Start.htm"
 starting  = "Starting.htm"
@@ -171,11 +170,11 @@ class Quest (JQuest) :
                   else :
                       htmltext = header+"Select your "+number[8-chosen.count("?")]+partial(st)
             else:
-              htmltext=default
+              htmltext = Quest.getNoQuestMsg(player)
     return htmltext
 
  def onTalk (self,npc,player):
-   htmltext = default
+   htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st : return htmltext
 

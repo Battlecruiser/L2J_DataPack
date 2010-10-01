@@ -36,12 +36,12 @@ public class Loto implements IBypassHandler
 	{
 		"Loto"
 	};
-
+	
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
 		if (!(target instanceof L2Npc))
 			return false;
-
+		
 		int val = 0;
 		try
 		{
@@ -60,10 +60,10 @@ public class Loto implements IBypassHandler
 				activeChar.setLoto(i, 0);
 		}
 		showLotoWindow(activeChar, (L2Npc)target, val);
-
+		
 		return false;
 	}
-
+	
 	/**
 	 * Open a Loto window on client with the text of the L2NpcInstance.<BR><BR>
 	 * 
@@ -90,7 +90,7 @@ public class Loto implements IBypassHandler
 		String filename;
 		SystemMessage sm;
 		NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
-
+		
 		if (val == 0) // 0 - first buy lottery ticket window
 		{
 			filename = (npc.getHtmlPath(npcId, 1));
@@ -110,10 +110,10 @@ public class Loto implements IBypassHandler
 				player.sendPacket(new SystemMessage(SystemMessageId.NO_LOTTERY_TICKETS_AVAILABLE));
 				return;
 			}
-
+			
 			filename = (npc.getHtmlPath(npcId, 5));
 			html.setFile(player.getHtmlPrefix(), filename);
-
+			
 			int count = 0;
 			int found = 0;
 			// counting buttons and unsetting button if found
@@ -130,7 +130,7 @@ public class Loto implements IBypassHandler
 					count++;
 				}
 			}
-
+			
 			//if not rearched limit 5 and not unseted value
 			if (count < 5 && found == 0 && val <= 20)
 				for (int i = 0; i < 5; i++)
@@ -139,7 +139,7 @@ public class Loto implements IBypassHandler
 						player.setLoto(i, val);
 						break;
 					}
-
+			
 			//setting pusshed buttons
 			count = 0;
 			for (int i = 0; i < 5; i++)
@@ -153,7 +153,7 @@ public class Loto implements IBypassHandler
 					String replace = "fore=\"L2UI.lottoNum" + button + "a_check\" back=\"L2UI.lottoNum" + button + "\"";
 					html.replace(search, replace);
 				}
-
+			
 			if (count == 5)
 			{
 				String search = "0\">Return";
@@ -175,12 +175,12 @@ public class Loto implements IBypassHandler
 				player.sendPacket(new SystemMessage(SystemMessageId.NO_LOTTERY_TICKETS_AVAILABLE));
 				return;
 			}
-
+			
 			long price = Config.ALT_LOTTERY_TICKET_PRICE;
 			int lotonumber = Lottery.getInstance().getId();
 			int enchant = 0;
 			int type2 = 0;
-
+			
 			for (int i = 0; i < 5; i++)
 			{
 				if (player.getLoto(i) == 0)
@@ -200,25 +200,25 @@ public class Loto implements IBypassHandler
 			if (!player.reduceAdena("Loto", price, npc, true))
 				return;
 			Lottery.getInstance().increasePrize(price);
-
+			
 			sm = new SystemMessage(SystemMessageId.ACQUIRED_S1_S2);
 			sm.addNumber(lotonumber);
 			sm.addItemName(4442);
 			player.sendPacket(sm);
-
+			
 			L2ItemInstance item = new L2ItemInstance(IdFactory.getInstance().getNextId(), 4442);
 			item.setCount(1);
 			item.setCustomType1(lotonumber);
 			item.setEnchantLevel(enchant);
 			item.setCustomType2(type2);
 			player.getInventory().addItem("Loto", item, player, npc);
-
+			
 			InventoryUpdate iu = new InventoryUpdate();
 			iu.addItem(item);
 			L2ItemInstance adenaupdate = player.getInventory().getItemByItemId(57);
 			iu.addModifiedItem(adenaupdate);
 			player.sendPacket(iu);
-
+			
 			filename = (npc.getHtmlPath(npcId, 3));
 			html.setFile(player.getHtmlPrefix(), filename);
 		}
@@ -231,7 +231,7 @@ public class Loto implements IBypassHandler
 		{
 			filename = (npc.getHtmlPath(npcId, 4));
 			html.setFile(player.getHtmlPrefix(), filename);
-
+			
 			int lotonumber = Lottery.getInstance().getId();
 			String message = "";
 			for (L2ItemInstance item : player.getInventory().getItems())
@@ -282,12 +282,12 @@ public class Loto implements IBypassHandler
 			if (item == null || item.getItemId() != 4442 || item.getCustomType1() >= lotonumber)
 				return;
 			long[] check = Lottery.getInstance().checkTicket(item);
-
+			
 			sm = new SystemMessage(SystemMessageId.S2_S1_DISAPPEARED);
 			sm.addItemName(4442);
 			sm.addItemNumber(1);
 			player.sendPacket(sm);
-
+			
 			long adena = check[1];
 			if (adena > 0)
 				player.addAdena("Loto", adena, npc, true);
@@ -304,11 +304,11 @@ public class Loto implements IBypassHandler
 		html.replace("%prize2%", "" + Config.ALT_LOTTERY_2_AND_1_NUMBER_PRIZE);
 		html.replace("%enddate%", "" + DateFormat.getDateInstance().format(Lottery.getInstance().getEndDate()));
 		player.sendPacket(html);
-
+		
 		// Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
-
+	
 	public String[] getBypassList()
 	{
 		return COMMANDS;

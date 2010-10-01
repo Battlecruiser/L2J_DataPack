@@ -69,7 +69,7 @@
 		<set name="isMagic" val="true" />
 		<set name="isClanSkill" val="true" />
 		<for>
-			<mul order="0x30" stat="stunVuln" val="0.9" />
+			<sub order="0x40" stat="stunVuln" val="10" />
 		</for>
 	</skill>
 	<skill id="607" levels="1" name="Residence Freedom">
@@ -79,7 +79,7 @@
 		<set name="isMagic" val="true" />
 		<set name="isClanSkill" val="true" />
 		<for>
-			<mul order="0x30" stat="rootVuln" val="0.9" />
+			<sub order="0x40" stat="rootVuln" val="10" />
 		</for>
 	</skill>
 	<skill id="608" levels="1" name="Residence Vigilance">
@@ -89,7 +89,7 @@
 		<set name="isMagic" val="true" />
 		<set name="isClanSkill" val="true" />
 		<for>
-			<mul order="0x30" stat="sleepVuln" val="0.9" />
+			<sub order="0x40" stat="sleepVuln" val="10" />
 		</for>
 	</skill>
 	<skill id="609" levels="1" name="Residence Movement">
@@ -394,20 +394,18 @@
 		</enchant4for>
 	</skill>
 	<skill id="628" levels="1" name="Warp">
-		<!-- CT2.2 retail confirmed -->
-		<set name="coolTime" val="200" />
 		<set name="flyCourse" val="180" /> <!-- Teleport to Front -->
 		<set name="flyRadius" val="500" />
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="32" />
 		<set name="mpConsume" val="30" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillRadius" val="150" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect self="1" name="Warp" noicon="1" val="0" />
+			<effect name="Warp" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="629" levels="1" name="Rabbit Magic Eye">
@@ -435,7 +433,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<cond msgId="109">
-			<target npcId="13098" />
+			<target npcId="13098,900102" />
 		</cond>
 	</skill>
 	<skill id="631" levels="6" name="Emergent Ability - Attack">
@@ -443,6 +441,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<add order="0x40" stat="pAtk" val="#patk" />
 		</for>
@@ -452,6 +451,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<add order="0x40" stat="pDef" val="#pdef" />
 		</for>
@@ -461,6 +461,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<add order="0x40" stat="mAtk" val="#matk" />
 		</for>
@@ -470,6 +471,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<add order="0x40" stat="mDef" val="#mdef" />
 		</for>
@@ -488,6 +490,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<add order="0x40" stat="pAtk" val="35" /> <!-- guessed -->
 		</for>
@@ -496,6 +499,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<add order="0x40" stat="mAtk" val="29" />
 		</for>
@@ -504,6 +508,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<add order="0x40" stat="mAtkSpd" val="11" />
 		</for>
@@ -512,6 +517,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<add order="0x40" stat="rCrit" val="30" />
 		</for>
@@ -520,6 +526,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<mul order="0x30" stat="maxHp" val="1.06" />
 		</for>
@@ -528,6 +535,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<add order="0x40" stat="maxMp" val="148" />
 		</for>
@@ -536,6 +544,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<add order="0x40" stat="maxHp" val="147" />
 			<add order="0x40" stat="maxMp" val="74" />
@@ -545,6 +554,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<add order="0x40" stat="rEvas" val="4" />
 		</for>
@@ -553,6 +563,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<add order="0x40" stat="pAtkRange" val="200">
 				<using kind="Bow" />
@@ -563,6 +574,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<add order="0x40" stat="gainMp" val="20" />
 		</for>
@@ -572,6 +584,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="isMagic" val="true" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<add order="0x40" stat="regMp" val="0.5" />
 		</for>
@@ -580,6 +593,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<add order="0x40" stat="gainHp" val="19" />
 		</for>
@@ -588,13 +602,14 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<!-- these are just guessed values -->
-			<mul order="0x30" stat="cancelVuln" val="0.97" />
-			<mul order="0x30" stat="stunVuln" val="0.97" />
-			<mul order="0x30" stat="rootVuln" val="0.97" />
-			<mul order="0x30" stat="sleepVuln" val="0.97" />
-			<mul order="0x30" stat="paralyzeVuln" val="0.97" />
+			<sub order="0x40" stat="cancelVuln" val="3" />
+			<sub order="0x40" stat="stunVuln" val="3" />
+			<sub order="0x40" stat="rootVuln" val="3" />
+			<sub order="0x40" stat="sleepVuln" val="3" />
+			<sub order="0x40" stat="paralyzeVuln" val="3" />
 		</for>
 	</skill>
 	<skill id="651" levels="1" name="Warrior Ability - Haste">
@@ -602,28 +617,34 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="reuseDelay" val="15000" />
 		<set name="triggeredId" val="5572" />
 		<set name="triggeredLevel" val="1" />
 		<set name="activationChance" val="1" />
 		<set name="chanceType" val="ON_HIT" />
+		<set name="excludedFromCheck" val="true" />
 	</skill>
 	<skill id="652" levels="1" name="Knight Ability - Defense">
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="reuseDelay" val="15000" />
 		<set name="triggeredId" val="5573" />
 		<set name="triggeredLevel" val="1" />
 		<set name="activationChance" val="3" />
 		<set name="chanceType" val="ON_ATTACKED" />
+		<set name="excludedFromCheck" val="true" />
 	</skill>
 	<skill id="653" levels="1" name="Rogue Ability - Critical Chance">
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="reuseDelay" val="15000" />
 		<set name="triggeredId" val="5574" />
 		<set name="triggeredLevel" val="1" />
 		<set name="activationChance" val="1" />
 		<set name="chanceType" val="ON_HIT" />
+		<set name="excludedFromCheck" val="true" />
 	</skill>
 	<skill id="654" levels="1" name="Wizard Ability - Mana Steal">
 		<set name="operateType" val="OP_PASSIVE" />
@@ -633,15 +654,18 @@
 		<set name="triggeredLevel" val="1" />
 		<set name="activationChance" val="1" />
 		<set name="chanceType" val="ON_HIT" />
+		<set name="excludedFromCheck" val="true" />
 	</skill>
 	<skill id="655" levels="1" name="Enchanter Ability - Barrier">
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="reuseDelay" val="5000" />
 		<set name="triggeredId" val="5576" />
 		<set name="triggeredLevel" val="1" />
 		<set name="activationChance" val="3" />
 		<set name="chanceType" val="ON_ATTACKED" />
+		<set name="excludedFromCheck" val="true" />
 	</skill>
 	<skill id="656" levels="3" name="Transform Divine Warrior">
 		<table name="#reuseDelay"> 14400000 7200000 3600000 </table>
@@ -655,6 +679,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="253" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<effect name="Transformation" time="1800" val="0"> <!-- Transformation lasts 30 minutes -->
 				<set order="0x08" stat="STR" val="40" />
@@ -678,6 +703,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="252" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<effect name="Transformation" time="1800" val="0"> <!-- Transformation lasts 30 minutes -->
 				<set order="0x08" stat="STR" val="40" />
@@ -701,6 +727,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="254" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<effect name="Transformation" time="1800" val="0"> <!-- Transformation lasts 30 minutes -->
 				<set order="0x08" stat="STR" val="40" />
@@ -724,6 +751,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="256" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<effect name="Transformation" time="1800" val="0"> <!-- Transformation lasts 30 minutes -->
 				<set order="0x08" stat="STR" val="22" />
@@ -747,6 +775,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="258" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<effect name="Transformation" time="1800" val="0"> <!-- Transformation lasts 30 minutes -->
 				<set order="0x08" stat="STR" val="22" />
@@ -770,6 +799,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="255" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<effect name="Transformation" time="1800" val="0"> <!-- Transformation lasts 30 minutes -->
 				<set order="0x08" stat="STR" val="22" />
@@ -793,6 +823,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="staticHitTime" val="true" />
 		<set name="transformId" val="257" />
+		<set name="excludedFromCheck" val="true" />
 		<for>
 			<effect name="Transformation" time="1800" val="0"> <!-- Transformation lasts 30 minutes -->
 				<set order="0x08" stat="STR" val="22" />
@@ -1160,11 +1191,11 @@
 		</for>
 	</skill>
 	<skill id="679" levels="1" name="Sacrifice Warrior">
-		<set name="hitTime" val="2500"/>
-		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="2500" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="skillRadius" val="1000" />
-		<set name="skillType" val="BUFF"/>
+		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_PARTY" />
 		<cond msgId="113" addName="1">
 			<player hp="30" />
@@ -1173,7 +1204,7 @@
 			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_EXIT">
 				<mul order="0x50" stat="limitHp" val="0.1" />
 			</effect>
-			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="transform_sacrifice" >
+			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="transform_sacrifice">
 				<mul order="0x30" stat="pAtk" val="1.2" />
 			</effect>
 		</for>
@@ -1257,16 +1288,16 @@
 			<effect name="ImmobileBuff" time="30" val="0" stackOrder="1" stackType="pd_up_special">
 				<add order="0x40" stat="pDef" val="3600" />
 				<add order="0x40" stat="mDef" val="2700" />
-				<mul order="0x30" stat="cancelVuln" val="0.2" />
+				<sub order="0x40" stat="cancelVuln" val="80" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="685" levels="1" name="Sacrifice Knight">
-		<set name="hitTime" val="2500"/>
-		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="2500" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="skillRadius" val="1000" />
-		<set name="skillType" val="BUFF"/>
+		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_PARTY" />
 		<cond msgId="113" addName="1">
 			<player hp="30" />
@@ -1275,7 +1306,7 @@
 			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_EXIT">
 				<mul order="0x50" stat="limitHp" val="0.1" />
 			</effect>
-			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="transform_sacrifice" >
+			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="transform_sacrifice">
 				<mul order="0x30" stat="pDef" val="1.2" />
 			</effect>
 		</for>
@@ -1368,11 +1399,11 @@
 		</for>
 	</skill>
 	<skill id="691" levels="1" name="Sacrifice Rogue">
-		<set name="hitTime" val="2500"/>
-		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="2500" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="skillRadius" val="1000" />
-		<set name="skillType" val="BUFF"/>
+		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_PARTY" />
 		<cond msgId="113" addName="1">
 			<player hp="30" />
@@ -1381,7 +1412,7 @@
 			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_EXIT">
 				<mul order="0x50" stat="limitHp" val="0.1" />
 			</effect>
-			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="transform_sacrifice" >
+			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="transform_sacrifice">
 				<mul order="0x30" stat="rEvas" val="1.2" /> <!-- Guess -->
 			</effect>
 		</for>
@@ -1444,6 +1475,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="10000" />
+                <set name="saveVs" val="WIT" />
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="SLEEP" />
 		<set name="target" val="TARGET_AREA" />
@@ -1473,11 +1505,11 @@
 		</for>
 	</skill>
 	<skill id="697" levels="1" name="Sacrifice Wizard">
-		<set name="hitTime" val="2500"/>
-		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="2500" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="skillRadius" val="1000" />
-		<set name="skillType" val="BUFF"/>
+		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_PARTY" />
 		<cond msgId="113" addName="1">
 			<player mp="10" />
@@ -1486,7 +1518,7 @@
 			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5602" triggeredLevel="1" chanceType="ON_EXIT">
 				<mul order="0x50" stat="limitHp" val="0.1" />
 			</effect>
-			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="transform_sacrifice" >
+			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="transform_sacrifice">
 				<mul order="0x30" stat="mAtk" val="1.2" /> <!-- Guess -->
 			</effect>
 		</for>

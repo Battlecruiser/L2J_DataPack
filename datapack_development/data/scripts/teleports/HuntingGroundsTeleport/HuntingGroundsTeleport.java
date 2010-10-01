@@ -19,6 +19,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.util.Util;
 
 public class HuntingGroundsTeleport extends Quest
 {
@@ -27,12 +28,12 @@ public class HuntingGroundsTeleport extends Quest
 		31078,31079,31080,31081,31082,31083,31084,31085,31086,31087,31088,
 		31089,31090,31091,31168,31169,31692,31693,31694,31695,31997,31998
 	};
-
+	
 	private static final int[] DAWN_NPCs =
 	{
 		31078,31079,31080,31081,31082,31083,31084,31168,31692,31694,31997
 	};
-
+	
 	public HuntingGroundsTeleport(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
@@ -42,7 +43,7 @@ public class HuntingGroundsTeleport extends Quest
 			addTalkId(id);
 		}
 	}
-
+	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
@@ -53,10 +54,10 @@ public class HuntingGroundsTeleport extends Quest
 		int playerSeal = SevenSigns.getInstance().getPlayerSeal(player.getObjectId());
 		int sealOwnerGnosis = SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_GNOSIS);
 		boolean periodValidate = SevenSigns.getInstance().isSealValidationPeriod();
-
+		
 		if (playerCabal == SevenSigns.CABAL_NULL)
 		{
-			if (contains(DAWN_NPCs, npcId))
+			if (Util.contains(DAWN_NPCs, npcId))
 				htmltext = "dawn_tele-no.htm";
 			else
 				htmltext = "dusk_tele-no.htm";
@@ -138,22 +139,11 @@ public class HuntingGroundsTeleport extends Quest
 			else
 				htmltext = "hg_schuttgart.htm";
 		}
-
+		
 		st.exitQuest(true);
 		return htmltext;
 	}
-
-	private static boolean contains(int[] array, int obj)
-	{
-		for (int i = 0; i < array.length; i++)
-		{
-			if (array[i] == obj)
-				return true;
-		}
-
-		return false;
-	}
-
+	
 	public static void main(String[] args)
 	{
 		new HuntingGroundsTeleport(-1, "HuntingGroundsTeleport", "teleports");

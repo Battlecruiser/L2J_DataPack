@@ -45,7 +45,7 @@ import com.l2jserver.gameserver.util.GMAudit;
  * @version $Revision: 1.1.6.3 $ $Date: 2005/04/11 10:06:06 $
  */
 public class AdminBan implements IAdminCommandHandler {
-	private static final String[] ADMIN_COMMANDS = 
+	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_ban", // returns ban commands
 		"admin_ban_acc",
@@ -58,7 +58,7 @@ public class AdminBan implements IAdminCommandHandler {
 		"admin_jail",
 		"admin_unjail"
 	};
-
+	
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		StringTokenizer st = new StringTokenizer(command);
@@ -66,24 +66,24 @@ public class AdminBan implements IAdminCommandHandler {
 		String player = "";
 		int duration = -1;
 		L2PcInstance targetPlayer = null;
-
+		
 		if (st.hasMoreTokens())
 		{
 			player = st.nextToken();
 			targetPlayer = L2World.getInstance().getPlayer(player);
-
-	        if (st.hasMoreTokens())
-	        {
-	            try
-	            {
-	                duration = Integer.parseInt(st.nextToken());
-	            }
-	            catch (NumberFormatException nfe)
-	            {
-	            	activeChar.sendMessage("Invalid number format used: " + nfe);
-	            	return false;
-	            }
-	        }
+			
+			if (st.hasMoreTokens())
+			{
+				try
+				{
+					duration = Integer.parseInt(st.nextToken());
+				}
+				catch (NumberFormatException nfe)
+				{
+					activeChar.sendMessage("Invalid number format used: " + nfe);
+					return false;
+				}
+			}
 		}
 		else
 		{
@@ -154,18 +154,18 @@ public class AdminBan implements IAdminCommandHandler {
 					return false;
 				}
 				String banLengthStr = "";
-
+				
 				targetPlayer.setPunishLevel(L2PcInstance.PunishLevel.CHAT, duration);
 				if (duration > 0)
 					banLengthStr = " for " + duration + " minutes";
-	            activeChar.sendMessage(targetPlayer.getName() + " is now chat banned" + banLengthStr + ".");
-	            auditAction(command, activeChar, targetPlayer.getName());
+				activeChar.sendMessage(targetPlayer.getName() + " is now chat banned" + banLengthStr + ".");
+				auditAction(command, activeChar, targetPlayer.getName());
 			}
 			else
 			{
 				banChatOfflinePlayer(activeChar, player, duration, true);
 				auditAction(command, activeChar, player);
-			}			
+			}
 		}
 		else if (command.startsWith("admin_unban_chat"))
 		{
@@ -175,7 +175,7 @@ public class AdminBan implements IAdminCommandHandler {
 				return false;
 			}
 			if (targetPlayer != null)
-			{			
+			{
 				if (targetPlayer.isChatBanned())
 				{
 					targetPlayer.setPunishLevel(L2PcInstance.PunishLevel.NONE, 0);
@@ -307,9 +307,9 @@ public class AdminBan implements IAdminCommandHandler {
 		}
 		
 		try
-		{				
+		{
 			con = L2DatabaseFactory.getInstance().getConnection();
-
+			
 			PreparedStatement statement = con.prepareStatement("UPDATE characters SET punish_level=?, punish_timer=? WHERE char_name=?");
 			statement.setInt(1, level);
 			statement.setLong(2, value);
@@ -353,7 +353,7 @@ public class AdminBan implements IAdminCommandHandler {
 		try
 		{
 			con = L2DatabaseFactory.getInstance().getConnection();
-
+			
 			PreparedStatement statement = con.prepareStatement("UPDATE characters SET x=?, y=?, z=?, punish_level=?, punish_timer=? WHERE char_name=?");
 			statement.setInt(1, -114356);
 			statement.setInt(2, -249645);
@@ -471,16 +471,12 @@ public class AdminBan implements IAdminCommandHandler {
 			}
 			finally
 			{
-				try
-				{
-					con.close();
-				}
-				catch (Exception e) {}
+				L2DatabaseFactory.close(con);
 			}
 		}
 		return true;
 	}
-
+	
 	public String[] getAdminCommandList() {
 		return ADMIN_COMMANDS;
 	}

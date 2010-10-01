@@ -16,6 +16,8 @@ package handlers.usercommandhandlers;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.handler.IUserCommandHandler;
@@ -31,6 +33,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public class ClanWarsList implements IUserCommandHandler
 {
+	private static final Logger _log = Logger.getLogger(ClanWarsList.class.getName());
 	private static final int[] COMMAND_IDS =
 	{
 		88, 89, 90
@@ -78,7 +81,7 @@ public class ClanWarsList implements IUserCommandHandler
 				statement.setInt(2, clan.getClanId());
 			}
 			else
-			// ID = 90
+				// ID = 90
 			{
 				// War List
 				activeChar.sendPacket(new SystemMessage(SystemMessageId.WAR_LIST));
@@ -118,16 +121,11 @@ public class ClanWarsList implements IUserCommandHandler
 		}
 		catch (Exception e)
 		{
+			_log.log(Level.WARNING, "", e);
 		}
 		finally
 		{
-			try
-			{
-				con.close();
-			}
-			catch (Exception e)
-			{
-			}
+			L2DatabaseFactory.close(con);
 		}
 		
 		return true;

@@ -20,6 +20,8 @@ import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Trap;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.quest.Quest;
+import com.l2jserver.gameserver.model.quest.Quest.TrapAction;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
@@ -52,9 +54,9 @@ public class Trap implements ISkillHandler
 					
 					if (target.isAlikeDead())
 						continue;
-
+					
 					final L2Trap trap = (L2Trap)target;
-
+					
 					if (trap.getLevel() <= skill.getPower())
 						trap.setDetected(activeChar);
 				}
@@ -69,18 +71,22 @@ public class Trap implements ISkillHandler
 					
 					if (target.isAlikeDead())
 						continue;
-
+					
 					final L2Trap trap = (L2Trap)target;
-
-					if (trap.canSee(activeChar))
+					
+					if (!trap.canSee(activeChar))
 					{
 						if (activeChar instanceof L2PcInstance)
 							((L2PcInstance) activeChar).sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
 						continue;
 					}
-
+					
 					if (trap.getLevel() > skill.getPower())
 						continue;
+					
+					if (trap.getTemplate().getEventQuests(Quest.QuestEventType.ON_TRAP_ACTION) != null)
+						for (Quest quest : trap.getTemplate().getEventQuests(Quest.QuestEventType.ON_TRAP_ACTION))
+							quest.notifyTrapAction(trap, activeChar, TrapAction.TRAP_DISARMED);
 					
 					trap.unSummon();
 					if (activeChar instanceof L2PcInstance)

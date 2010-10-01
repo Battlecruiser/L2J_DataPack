@@ -42,7 +42,7 @@ public class CharacterBirthday extends Quest
 		30006,30059,30080,30134,30146,30177,30233,30256,30320,30540,
 		30576,30836,30848,30878,30899,31275,31320,31964,32163
 	};
-
+	
 	public CharacterBirthday(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
@@ -55,54 +55,54 @@ public class CharacterBirthday extends Quest
 			addTalkId(id);
 		}
 	}
-
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
 		QuestState st = player.getQuestState(getName());
 		htmltext = event;
-
+		
 		if (event.equalsIgnoreCase("despawn_npc"))
 		{
 			npc.doDie(player);
 			is_spawned = false;
-
+			
 			htmltext = null;
 		}
 		if (event.equalsIgnoreCase("receive_reward"))
 		{
 			// Give Adventurer Hat (Event)
 			st.giveItems(10250, 1);
-
-			// Give Buff			
+			
+			// Give Buff
 			L2Skill skill;
 			skill = SkillTable.getInstance().getInfo(5950, 1);
 			if (skill != null)
 				skill.getEffects(npc, player);
 			npc.setTarget(player);
 			npc.broadcastPacket(new MagicSkillUse(player, 5950, 1, 1000, 0));
-
+			
 			// Despawn npc
 			npc.doDie(player);
 			is_spawned = false;
-
+			
 			// Update for next year
 			Calendar now = Calendar.getInstance();
 			now.setTimeInMillis(System.currentTimeMillis());
 			st.set("Birthday", String.valueOf(now.get(Calendar.YEAR)+1));
-
+			
 			htmltext = "32600-ok.htm";
 		}
 		return htmltext;
 	}
-
+	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		if(is_spawned)
 			return null;
-
+		
 		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
@@ -119,10 +119,10 @@ public class CharacterBirthday extends Quest
 		}
 		else
 			return "32600-no.htm";
-
+		
 		return null;
 	}
-
+	
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
@@ -139,7 +139,7 @@ public class CharacterBirthday extends Quest
 			htmltext = "32600-no.htm";
 		return htmltext;
 	}
-
+	
 	public static void main(String[] args)
 	{
 		new CharacterBirthday(-1, "CharacterBirthday", "events");

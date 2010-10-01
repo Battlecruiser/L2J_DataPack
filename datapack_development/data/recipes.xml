@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<!--
-		Information:
-		- statUse can have HP/MP, but you can use both
-		- altStatChange and productionRare is optional
-		- in altStatChange you can use XP/SP/GIM(this works only if AltGameCreation = True)
-		XP: base XP value
-		SP: base SP value
-		GIM: the old function used only the skilllevel to determine how many item is grabbed in each step with this stat changer you can multiple this
-	-->
+<!-- Documentation: -->
+<!-- - statUse can have HP/MP, but you can use both -->
+<!-- - altStatChange and productionRare is optional -->
+<!-- - in altStatChange you can use XP/SP/GIM(this works only if AltGameCreation = True) -->
+<!-- XP: base XP value -->
+<!-- SP: base SP value -->
+<!-- GIM: the old function used only the skilllevel to determine how many item is grabbed in each step with this stat changer you can multiple this -->
 <list>
 	<item id="1" recipeId="1666" name="mk_wooden_arrow" craftLevel="1" type="dwarven" successRate="100">
 		<statUse name="MP" value="30" />
@@ -10108,6 +10106,815 @@
 		<statUse name="MP" value="240" />
 		<production id="9557" count="1" />
 		<ingredient id="14020" count="20" />
+	</item>
+	<item id="936" recipeId="14854" name="mk_soul_energy" craftLevel="2" type="common" successRate="100">
+		<statUse name="MP" value="100" />
+		<production id="14855" count="1" />
+		<ingredient id="14856" count="1" />
+	</item>
+	<item id="937" recipeId="15775" name="mk_sealed_destino_helmet" craftLevel="9" type="dwarven" successRate="60">
+		<statUse name="MP" value="246" />
+		<production id="15694" count="1" />
+		<productionRare id="16221" count="1" rarity="15" />
+		<ingredient id="15775" count="1" />
+		<ingredient id="15645" count="18" />
+		<ingredient id="5551" count="1" />
+		<ingredient id="1894" count="360" />
+		<ingredient id="4043" count="36" />
+		<ingredient id="9630" count="18" />
+		<ingredient id="1462" count="54" />
+		<ingredient id="2134" count="9" />
+	</item>
+	<item id="938" recipeId="15776" name="mk_sealed_destino_leather_helmet" craftLevel="9" type="dwarven" successRate="60">
+		<statUse name="MP" value="246" />
+		<production id="15695" count="1" />
+		<productionRare id="16222" count="1" rarity="15" />
+		<ingredient id="15776" count="1" />
+		<ingredient id="15646" count="18" />
+		<ingredient id="5551" count="1" />
+		<ingredient id="1894" count="360" />
+		<ingredient id="4043" count="36" />
+		<ingredient id="9630" count="18" />
+		<ingredient id="1462" count="54" />
+		<ingredient id="2134" count="9" />
+	</item>
+	<item id="939" recipeId="15777" name="mk_sealed_destino_circlet" craftLevel="9" type="dwarven" successRate="60">
+		<statUse name="MP" value="246" />
+		<production id="15696" count="1" />
+		<productionRare id="16223" count="1" rarity="15" />
+		<ingredient id="15777" count="1" />
+		<ingredient id="15647" count="18" />
+		<ingredient id="5551" count="1" />
+		<ingredient id="1894" count="360" />
+		<ingredient id="4043" count="36" />
+		<ingredient id="9630" count="18" />
+		<ingredient id="1462" count="54" />
+		<ingredient id="2134" count="9" />
+	</item>
+	<item id="940" recipeId="15778" name="mk_sealed_destino_cuirass" craftLevel="9" type="dwarven" successRate="60">
+		<statUse name="MP" value="246" />
+		<production id="15697" count="1" />
+		<ingredient id="15778" count="1" />
+		<ingredient id="15648" count="18" />
+		<ingredient id="5553" count="3" />
+		<ingredient id="1890" count="294" />
+		<ingredient id="4043" count="196" />
+		<ingredient id="9630" count="49" />
+		<ingredient id="1462" count="145" />
+		<ingredient id="2134" count="25" />
+	</item>
+	<item id="941" recipeId="15779" name="mk_sealed_destino_houberk" craftLevel="9" type="dwarven" successRate="60">
+		<statUse name="MP" value="246" />
+		<production id="15698" count="1" />
+		<ingredient id="15779" count="1" />
+		<ingredient id="15649" count="18" />
+		<ingredient id="5551" count="1" />
+		<ingredient id="1894" count="550" />
+		<ingredient id="1895" count="330" />
+		<ingredient id="9630" count="55" />
+		<ingredient id="4043" count="110" />
+		<ingredient id="1462" count="110" />
+		<ingredient id="2134" count="19" />
+	</item>
+	<item id="942" recipeId="15780" name="mk_sealed_destino_jaket" craftLevel="9" type="dwarven" successRate="60">
+		<statUse name="MP" value="246" />
+		<production id="15699" count="1" />
+		<ingredient id="15780" count="1" />
+		<ingredient id="15650" count="18" />
+		<ingredient id="5551" count="1" />
+		<ingredient id="1894" count="550" />
+		<ingredient id="1895" count="330" />
+		<ingredient id="9630" count="55" />
+		<ingredient id="4043" count="110" />
+		<ingredient id="1462" count="110" />
+		<ingredient id="2134" count="19" />
+	</item>
+	<item id="943" recipeId="15781" name="mk_sealed_destino_gaiter" craftLevel="9" type="dwarven" successRate="60">
+		<statUse name="MP" value="246" />
+		<production id="15700" count="1" />
+		<productionRare id="16227" count="1" rarity="15" />
+		<ingredient id="15781" count="1" />
+		<ingredient id="15651" count="18" />
+		<ingredient id="5553" count="2" />
+		<ingredient id="1890" count="180" />
+		<ingredient id="4043" count="120" />
+		<ingredient id="9630" count="30" />
+		<ingredient id="1462" count="92" />
+		<ingredient id="2134" count="16" />
+	</item>
+	<item id="944" recipeId="15782" name="mk_sealed_destino_leather_legging" craftLevel="9" type="dwarven" successRate="60">
+		<statUse name="MP" value="246" />
+		<production id="15701" count="1" />
+		<productionRare id="16228" count="1" rarity="15" />
+		<ingredient id="15782" count="1" />
+		<ingredient id="15652" count="18" />
+		<ingredient id="5551" count="1" />
+		<ingredient id="1894" count="330" />
+		<ingredient id="1895" count="198" />
+		<ingredient id="4043" count="66" />
+		<ingredient id="9630" count="33" />
+		<ingredient id="1462" count="70" />
+		<ingredient id="2134" count="12" />
+	</item>
+	<item id="945" recipeId="15783" name="mk_sealed_destino_hose" craftLevel="9" type="dwarven" successRate="60">
+		<statUse name="MP" value="246" />
+		<production id="15702" count="1" />
+		<productionRare id="16229" count="1" rarity="15" />
+		<ingredient id="15783" count="1" />
+		<ingredient id="15653" count="18" />
+		<ingredient id="5551" count="1" />
+		<ingredient id="1894" count="330" />
+		<ingredient id="1895" count="198" />
+		<ingredient id="4043" count="66" />
+		<ingredient id="9630" count="33" />
+		<ingredient id="1462" count="70" />
+		<ingredient id="2134" count="12" />
+	</item>
+	<item id="946" recipeId="15784" name="mk_sealed_destino_gauntlet" craftLevel="9" type="dwarven" successRate="60">
+		<statUse name="MP" value="246" />
+		<production id="15703" count="1" />
+		<productionRare id="16230" count="1" rarity="15" />
+		<ingredient id="15784" count="1" />
+		<ingredient id="15654" count="18" />
+		<ingredient id="5552" count="1" />
+		<ingredient id="1894" count="140" />
+		<ingredient id="1885" count="84" />
+		<ingredient id="4043" count="28" />
+		<ingredient id="9630" count="14" />
+		<ingredient id="1462" count="37" />
+		<ingredient id="2134" count="6" />
+	</item>
+	<item id="947" recipeId="15785" name="mk_sealed_destino_leather_gloves" craftLevel="9" type="dwarven" successRate="60">
+		<statUse name="MP" value="246" />
+		<production id="15704" count="1" />
+		<productionRare id="16231" count="1" rarity="15" />
+		<ingredient id="15785" count="1" />
+		<ingredient id="15655" count="18" />
+		<ingredient id="5552" count="1" />
+		<ingredient id="1894" count="140" />
+		<ingredient id="1885" count="84" />
+		<ingredient id="4043" count="28" />
+		<ingredient id="9630" count="14" />
+		<ingredient id="1462" count="37" />
+		<ingredient id="2134" count="6" />
+	</item>
+	<item id="948" recipeId="15786" name="mk_sealed_destino_gloves" craftLevel="9" type="dwarven" successRate="60">
+		<statUse name="MP" value="246" />
+		<production id="15705" count="1" />
+		<productionRare id="16232" count="1" rarity="15" />
+		<ingredient id="15786" count="1" />
+		<ingredient id="15656" count="18" />
+		<ingredient id="5552" count="1" />
+		<ingredient id="1894" count="140" />
+		<ingredient id="1885" count="84" />
+		<ingredient id="4043" count="28" />
+		<ingredient id="9630" count="14" />
+		<ingredient id="1462" count="37" />
+		<ingredient id="2134" count="6" />
+	</item>
+	<item id="949" recipeId="15787" name="mk_sealed_destino_boots" craftLevel="9" type="dwarven" successRate="60">
+		<statUse name="MP" value="246" />
+		<production id="15706" count="1" />
+		<productionRare id="16233" count="1" rarity="15" />
+		<ingredient id="15787" count="1" />
+		<ingredient id="15657" count="18" />
+		<ingredient id="5552" count="1" />
+		<ingredient id="1894" count="140" />
+		<ingredient id="1885" count="84" />
+		<ingredient id="4043" count="28" />
+		<ingredient id="9630" count="14" />
+		<ingredient id="1462" count="37" />
+		<ingredient id="2134" count="6" />
+	</item>
+	<item id="950" recipeId="15788" name="mk_sealed_destino_leather_boots" craftLevel="9" type="dwarven" successRate="60">
+		<statUse name="MP" value="246" />
+		<production id="15707" count="1" />
+		<productionRare id="16234" count="1" rarity="15" />
+		<ingredient id="15788" count="1" />
+		<ingredient id="15658" count="18" />
+		<ingredient id="5552" count="1" />
+		<ingredient id="1894" count="140" />
+		<ingredient id="1885" count="84" />
+		<ingredient id="4043" count="28" />
+		<ingredient id="9630" count="14" />
+		<ingredient id="1462" count="37" />
+		<ingredient id="2134" count="6" />
+	</item>
+	<item id="951" recipeId="15789" name="mk_sealed_destino_shoes" craftLevel="9" type="dwarven" successRate="60">
+		<statUse name="MP" value="246" />
+		<production id="15708" count="1" />
+		<productionRare id="16235" count="1" rarity="15" />
+		<ingredient id="15789" count="1" />
+		<ingredient id="15659" count="18" />
+		<ingredient id="5552" count="1" />
+		<ingredient id="1894" count="140" />
+		<ingredient id="1885" count="84" />
+		<ingredient id="4043" count="28" />
+		<ingredient id="9630" count="14" />
+		<ingredient id="1462" count="37" />
+		<ingredient id="2134" count="6" />
+	</item>
+	<item id="952" recipeId="15790" name="mk_sealed_destino_sigil" craftLevel="9" type="dwarven" successRate="60">
+		<statUse name="MP" value="246" />
+		<production id="15709" count="1" />
+		<productionRare id="16237" count="1" rarity="15" />
+		<ingredient id="15790" count="1" />
+		<ingredient id="15692" count="18" />
+		<ingredient id="5551" count="1" />
+		<ingredient id="1890" count="78" />
+		<ingredient id="1894" count="26" />
+		<ingredient id="1888" count="26" />
+		<ingredient id="9630" count="13" />
+		<ingredient id="4043" count="26" />
+		<ingredient id="1462" count="38" />
+		<ingredient id="2134" count="7" />
+	</item>
+	<item id="953" recipeId="15791" name="mk_sealed_destino_shield" craftLevel="9" type="dwarven" successRate="60">
+		<statUse name="MP" value="246" />
+		<production id="15710" count="1" />
+		<productionRare id="16236" count="1" rarity="15" />
+		<ingredient id="15791" count="1" />
+		<ingredient id="15693" count="18" />
+		<ingredient id="5551" count="1" />
+		<ingredient id="1890" count="78" />
+		<ingredient id="1894" count="26" />
+		<ingredient id="1888" count="26" />
+		<ingredient id="9630" count="13" />
+		<ingredient id="4043" count="26" />
+		<ingredient id="1462" count="38" />
+		<ingredient id="2134" count="7" />
+	</item>
+	<item id="954" recipeId="15792" name="mk_sealed_vesper_helmet" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="13143" count="1" />
+		<productionRare id="16238" count="1" rarity="15" />
+		<ingredient id="15792" count="1" />
+		<ingredient id="15660" count="19" />
+		<ingredient id="5551" count="1" />
+		<ingredient id="1894" count="510" />
+		<ingredient id="4043" count="51" />
+		<ingredient id="9630" count="26" />
+		<ingredient id="1462" count="76" />
+		<ingredient id="2134" count="13" />
+	</item>
+	<item id="955" recipeId="15793" name="mk_sealed_vesper_leather_helmet" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="13144" count="1" />
+		<productionRare id="16239" count="1" rarity="15" />
+		<ingredient id="15793" count="1" />
+		<ingredient id="15661" count="19" />
+		<ingredient id="5551" count="1" />
+		<ingredient id="1894" count="510" />
+		<ingredient id="4043" count="51" />
+		<ingredient id="9630" count="26" />
+		<ingredient id="1462" count="76" />
+		<ingredient id="2134" count="13" />
+	</item>
+	<item id="956" recipeId="15794" name="mk_sealed_vesper_circlet" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="13145" count="1" />
+		<productionRare id="16240" count="1" rarity="15" />
+		<ingredient id="15794" count="1" />
+		<ingredient id="15662" count="19" />
+		<ingredient id="5551" count="1" />
+		<ingredient id="1894" count="510" />
+		<ingredient id="4043" count="51" />
+		<ingredient id="9630" count="26" />
+		<ingredient id="1462" count="76" />
+		<ingredient id="2134" count="13" />
+	</item>
+	<item id="957" recipeId="15795" name="mk_sealed_vesper_cuirass" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="14105" count="1" />
+		<ingredient id="15795" count="1" />
+		<ingredient id="15663" count="19" />
+		<ingredient id="5553" count="3" />
+		<ingredient id="1890" count="435" />
+		<ingredient id="4043" count="290" />
+		<ingredient id="9630" count="73" />
+		<ingredient id="1462" count="201" />
+		<ingredient id="2134" count="35" />
+	</item>
+	<item id="958" recipeId="15796" name="mk_sealed_vesper_houberk" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="14106" count="1" />
+		<ingredient id="15796" count="1" />
+		<ingredient id="15664" count="19" />
+		<ingredient id="5551" count="1" />
+		<ingredient id="1894" count="770" />
+		<ingredient id="1895" count="462" />
+		<ingredient id="9630" count="77" />
+		<ingredient id="4043" count="154" />
+		<ingredient id="1462" count="152" />
+		<ingredient id="2134" count="26" />
+	</item>
+	<item id="959" recipeId="15797" name="mk_sealed_vesper_jaket" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="14107" count="1" />
+		<ingredient id="15797" count="1" />
+		<ingredient id="15665" count="19" />
+		<ingredient id="5551" count="1" />
+		<ingredient id="1894" count="770" />
+		<ingredient id="1895" count="462" />
+		<ingredient id="9630" count="77" />
+		<ingredient id="4043" count="154" />
+		<ingredient id="1462" count="152" />
+		<ingredient id="2134" count="26" />
+	</item>
+	<item id="960" recipeId="15798" name="mk_sealed_vesper_gaiter" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="14108" count="1" />
+		<productionRare id="16244" count="1" rarity="15" />
+		<ingredient id="15798" count="1" />
+		<ingredient id="15666" count="19" />
+		<ingredient id="5553" count="2" />
+		<ingredient id="1890" count="270" />
+		<ingredient id="4043" count="180" />
+		<ingredient id="9630" count="45" />
+		<ingredient id="1462" count="125" />
+		<ingredient id="2134" count="22" />
+	</item>
+	<item id="961" recipeId="15799" name="mk_sealed_vesper_leather_legging" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="14112" count="1" />
+		<productionRare id="16245" count="1" rarity="15" />
+		<ingredient id="15799" count="1" />
+		<ingredient id="15670" count="19" />
+		<ingredient id="5551" count="1" />
+		<ingredient id="1894" count="470" />
+		<ingredient id="1895" count="282" />
+		<ingredient id="4043" count="94" />
+		<ingredient id="9630" count="47" />
+		<ingredient id="1462" count="96" />
+		<ingredient id="2134" count="16" />
+	</item>
+	<item id="962" recipeId="15800" name="mk_sealed_vesper_hose" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="14115" count="1" />
+		<productionRare id="16246" count="1" rarity="15" />
+		<ingredient id="15800" count="1" />
+		<ingredient id="15673" count="19" />
+		<ingredient id="5551" count="1" />
+		<ingredient id="1894" count="470" />
+		<ingredient id="1895" count="282" />
+		<ingredient id="4043" count="94" />
+		<ingredient id="9630" count="47" />
+		<ingredient id="1462" count="96" />
+		<ingredient id="2134" count="16" />
+	</item>
+	<item id="963" recipeId="15801" name="mk_sealed_vesper_gauntlet" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="14109" count="1" />
+		<productionRare id="16247" count="1" rarity="15" />
+		<ingredient id="15801" count="1" />
+		<ingredient id="15667" count="19" />
+		<ingredient id="5552" count="1" />
+		<ingredient id="1894" count="210" />
+		<ingredient id="1885" count="126" />
+		<ingredient id="4043" count="42" />
+		<ingredient id="9630" count="21" />
+		<ingredient id="1462" count="50" />
+		<ingredient id="2134" count="9" />
+	</item>
+	<item id="964" recipeId="15802" name="mk_sealed_vesper_leather_gloves" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="14113" count="1" />
+		<productionRare id="16248" count="1" rarity="15" />
+		<ingredient id="15802" count="1" />
+		<ingredient id="15671" count="19" />
+		<ingredient id="5552" count="1" />
+		<ingredient id="1894" count="210" />
+		<ingredient id="1885" count="126" />
+		<ingredient id="4043" count="42" />
+		<ingredient id="9630" count="21" />
+		<ingredient id="1462" count="50" />
+		<ingredient id="2134" count="9" />
+	</item>
+	<item id="965" recipeId="15803" name="mk_sealed_vesper_gloves" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="14116" count="1" />
+		<productionRare id="16249" count="1" rarity="15" />
+		<ingredient id="15803" count="1" />
+		<ingredient id="15674" count="19" />
+		<ingredient id="5552" count="1" />
+		<ingredient id="1894" count="210" />
+		<ingredient id="1885" count="126" />
+		<ingredient id="4043" count="42" />
+		<ingredient id="9630" count="21" />
+		<ingredient id="1462" count="50" />
+		<ingredient id="2134" count="9" />
+	</item>
+	<item id="966" recipeId="15804" name="mk_sealed_vesper_boots" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="14110" count="1" />
+		<productionRare id="16250" count="1" rarity="15" />
+		<ingredient id="15804" count="1" />
+		<ingredient id="15668" count="19" />
+		<ingredient id="5552" count="1" />
+		<ingredient id="1894" count="210" />
+		<ingredient id="1885" count="126" />
+		<ingredient id="4043" count="42" />
+		<ingredient id="9630" count="21" />
+		<ingredient id="1462" count="50" />
+		<ingredient id="2134" count="9" />
+	</item>
+	<item id="967" recipeId="15805" name="mk_sealed_vesper_leather_boots" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="14114" count="1" />
+		<productionRare id="16251" count="1" rarity="15" />
+		<ingredient id="15805" count="1" />
+		<ingredient id="15672" count="19" />
+		<ingredient id="5552" count="1" />
+		<ingredient id="1894" count="210" />
+		<ingredient id="1885" count="126" />
+		<ingredient id="4043" count="42" />
+		<ingredient id="9630" count="21" />
+		<ingredient id="1462" count="50" />
+		<ingredient id="2134" count="9" />
+	</item>
+	<item id="968" recipeId="15806" name="mk_sealed_vesper_shoes" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="14117" count="1" />
+		<productionRare id="16252" count="1" rarity="15" />
+		<ingredient id="15806" count="1" />
+		<ingredient id="15675" count="19" />
+		<ingredient id="5552" count="1" />
+		<ingredient id="1894" count="210" />
+		<ingredient id="1885" count="126" />
+		<ingredient id="4043" count="42" />
+		<ingredient id="9630" count="21" />
+		<ingredient id="1462" count="50" />
+		<ingredient id="2134" count="9" />
+	</item>
+	<item id="969" recipeId="15807" name="mk_sealed_vesper_sigil" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="13887" count="1" />
+		<productionRare id="16254" count="1" rarity="15" />
+		<ingredient id="15807" count="1" />
+		<ingredient id="15691" count="19" />
+		<ingredient id="5551" count="1" />
+		<ingredient id="1890" count="114" />
+		<ingredient id="1894" count="38" />
+		<ingredient id="1888" count="38" />
+		<ingredient id="4043" count="38" />
+		<ingredient id="9630" count="19" />
+		<ingredient id="1462" count="50" />
+		<ingredient id="2134" count="9" />
+	</item>
+	<item id="970" recipeId="15808" name="mk_sealed_vesper_verteidiger" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="14111" count="1" />
+		<productionRare id="16253" count="1" rarity="15" />
+		<ingredient id="15808" count="1" />
+		<ingredient id="15669" count="19" />
+		<ingredient id="5551" count="1" />
+		<ingredient id="1890" count="114" />
+		<ingredient id="1894" count="38" />
+		<ingredient id="1888" count="38" />
+		<ingredient id="4043" count="38" />
+		<ingredient id="9630" count="19" />
+		<ingredient id="1462" count="50" />
+		<ingredient id="2134" count="9" />
+	</item>
+	<item id="971" recipeId="15809" name="mk_sealed_vesper_ring" craftLevel="9" type="dwarven" successRate="70">
+		<statUse name="MP" value="252" />
+		<production id="14162" count="1" />
+		<productionRare id="16357" count="1" rarity="15" />
+		<ingredient id="15809" count="1" />
+		<ingredient id="15769" count="19" />
+		<ingredient id="4048" count="1" />
+		<ingredient id="1895" count="220" />
+		<ingredient id="1887" count="132" />
+		<ingredient id="4044" count="44" />
+		<ingredient id="9628" count="22" />
+		<ingredient id="1462" count="40" />
+		<ingredient id="2134" count="7" />
+	</item>
+	<item id="972" recipeId="15810" name="mk_sealed_vesper_earring" craftLevel="9" type="dwarven" successRate="70">
+		<statUse name="MP" value="252" />
+		<production id="14160" count="1" />
+		<productionRare id="16358" count="1" rarity="15" />
+		<ingredient id="15810" count="1" />
+		<ingredient id="15770" count="19" />
+		<ingredient id="5552" count="1" />
+		<ingredient id="1895" count="320" />
+		<ingredient id="1887" count="192" />
+		<ingredient id="4044" count="64" />
+		<ingredient id="9628" count="32" />
+		<ingredient id="1462" count="57" />
+		<ingredient id="2134" count="10" />
+	</item>
+	<item id="973" recipeId="15811" name="mk_sealed_vesper_necklace" craftLevel="9" type="dwarven" successRate="70">
+		<statUse name="MP" value="252" />
+		<production id="14161" count="1" />
+		<productionRare id="16359" count="1" rarity="15" />
+		<ingredient id="15811" count="1" />
+		<ingredient id="15771" count="19" />
+		<ingredient id="5552" count="1" />
+		<ingredient id="1895" count="440" />
+		<ingredient id="1887" count="264" />
+		<ingredient id="4044" count="88" />
+		<ingredient id="9628" count="44" />
+		<ingredient id="1462" count="76" />
+		<ingredient id="2134" count="13" />
+	</item>
+	<item id="974" recipeId="15812" name="mk_sealed_destino_ring" craftLevel="9" type="dwarven" successRate="70">
+		<statUse name="MP" value="246" />
+		<production id="15766" count="1" />
+		<productionRare id="16360" count="1" rarity="15" />
+		<ingredient id="15812" count="1" />
+		<ingredient id="15772" count="18" />
+		<ingredient id="4048" count="1" />
+		<ingredient id="1895" count="160" />
+		<ingredient id="1887" count="96" />
+		<ingredient id="4044" count="32" />
+		<ingredient id="9628" count="16" />
+		<ingredient id="1462" count="26" />
+		<ingredient id="2134" count="5" />
+	</item>
+	<item id="975" recipeId="15813" name="mk_sealed_destino_earring" craftLevel="9" type="dwarven" successRate="70">
+		<statUse name="MP" value="246" />
+		<production id="15767" count="1" />
+		<productionRare id="16361" count="1" rarity="15" />
+		<ingredient id="15813" count="1" />
+		<ingredient id="15773" count="18" />
+		<ingredient id="5552" count="1" />
+		<ingredient id="1895" count="220" />
+		<ingredient id="1887" count="132" />
+		<ingredient id="4044" count="44" />
+		<ingredient id="9628" count="22" />
+		<ingredient id="1462" count="41" />
+		<ingredient id="2134" count="7" />
+	</item>
+	<item id="976" recipeId="15814" name="mk_sealed_destino_necklace" craftLevel="9" type="dwarven" successRate="70">
+		<statUse name="MP" value="246" />
+		<production id="15768" count="1" />
+		<productionRare id="16362" count="1" rarity="15" />
+		<ingredient id="15814" count="1" />
+		<ingredient id="15774" count="18" />
+		<ingredient id="5552" count="1" />
+		<ingredient id="1895" count="310" />
+		<ingredient id="1887" count="186" />
+		<ingredient id="4044" count="62" />
+		<ingredient id="9628" count="31" />
+		<ingredient id="1462" count="53" />
+		<ingredient id="2134" count="10" />
+	</item>
+	<item id="977" recipeId="15815" name="mk_vesper_cutter" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="13457" count="1" />
+		<productionRare id="16028" count="1" rarity="15" />
+		<ingredient id="15815" count="1" />
+		<ingredient id="15634" count="19" />
+		<ingredient id="5554" count="4" />
+		<ingredient id="1890" count="728" />
+		<ingredient id="1888" count="728" />
+		<ingredient id="5550" count="364" />
+		<ingredient id="4042" count="364" />
+		<ingredient id="9629" count="182" />
+		<ingredient id="1462" count="621" />
+		<ingredient id="2134" count="108" />
+	</item>
+	<item id="978" recipeId="15816" name="mk_vesper_slasher" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="13458" count="1" />
+		<productionRare id="16029" count="1" rarity="15" />
+		<ingredient id="15816" count="1" />
+		<ingredient id="15635" count="19" />
+		<ingredient id="5554" count="4" />
+		<ingredient id="1890" count="786" />
+		<ingredient id="1888" count="393" />
+		<ingredient id="5550" count="393" />
+		<ingredient id="4042" count="393" />
+		<ingredient id="9629" count="197" />
+		<ingredient id="1462" count="621" />
+		<ingredient id="2134" count="108" />
+	</item>
+	<item id="979" recipeId="15817" name="mk_vesper_burster" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="13459" count="1" />
+		<productionRare id="16030" count="1" rarity="15" />
+		<ingredient id="15817" count="1" />
+		<ingredient id="15636" count="19" />
+		<ingredient id="5554" count="4" />
+		<ingredient id="1890" count="728" />
+		<ingredient id="1888" count="728" />
+		<ingredient id="5550" count="364" />
+		<ingredient id="4042" count="364" />
+		<ingredient id="9629" count="182" />
+		<ingredient id="1462" count="621" />
+		<ingredient id="2134" count="108" />
+	</item>
+	<item id="980" recipeId="15818" name="mk_vesper_shaper" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="13460" count="1" />
+		<productionRare id="16031" count="1" rarity="15" />
+		<ingredient id="15818" count="1" />
+		<ingredient id="15637" count="19" />
+		<ingredient id="5554" count="4" />
+		<ingredient id="1890" count="728" />
+		<ingredient id="1888" count="728" />
+		<ingredient id="5550" count="364" />
+		<ingredient id="4042" count="364" />
+		<ingredient id="9629" count="182" />
+		<ingredient id="1462" count="621" />
+		<ingredient id="2134" count="108" />
+	</item>
+	<item id="981" recipeId="15819" name="mk_vesper_fighter" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="13461" count="1" />
+		<productionRare id="16032" count="1" rarity="15" />
+		<ingredient id="15819" count="1" />
+		<ingredient id="15638" count="19" />
+		<ingredient id="5554" count="4" />
+		<ingredient id="1890" count="476" />
+		<ingredient id="1888" count="476" />
+		<ingredient id="5550" count="952" />
+		<ingredient id="1885" count="238" />
+		<ingredient id="4042" count="238" />
+		<ingredient id="9629" count="119" />
+		<ingredient id="1462" count="621" />
+		<ingredient id="2134" count="108" />
+	</item>
+	<item id="982" recipeId="15820" name="mk_vesper_stormer" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="13462" count="1" />
+		<productionRare id="16033" count="1" rarity="15" />
+		<ingredient id="15820" count="1" />
+		<ingredient id="15639" count="19" />
+		<ingredient id="5554" count="4" />
+		<ingredient id="1890" count="800" />
+		<ingredient id="1888" count="400" />
+		<ingredient id="5550" count="800" />
+		<ingredient id="1885" count="200" />
+		<ingredient id="4042" count="200" />
+		<ingredient id="9629" count="100" />
+		<ingredient id="1462" count="619" />
+		<ingredient id="2134" count="108" />
+	</item>
+	<item id="983" recipeId="15821" name="mk_vesper_avenger" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="13463" count="1" />
+		<productionRare id="16034" count="1" rarity="15" />
+		<ingredient id="15821" count="1" />
+		<ingredient id="15640" count="19" />
+		<ingredient id="5554" count="4" />
+		<ingredient id="1890" count="476" />
+		<ingredient id="1888" count="476" />
+		<ingredient id="5550" count="952" />
+		<ingredient id="1885" count="238" />
+		<ingredient id="4042" count="238" />
+		<ingredient id="9629" count="119" />
+		<ingredient id="1462" count="621" />
+		<ingredient id="2134" count="108" />
+	</item>
+	<item id="984" recipeId="15822" name="mk_vesper_retributer" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="13464" count="1" />
+		<productionRare id="16035" count="1" rarity="15" />
+		<ingredient id="15822" count="1" />
+		<ingredient id="15641" count="19" />
+		<ingredient id="5554" count="4" />
+		<ingredient id="1890" count="800" />
+		<ingredient id="1888" count="400" />
+		<ingredient id="5550" count="800" />
+		<ingredient id="1885" count="200" />
+		<ingredient id="4042" count="200" />
+		<ingredient id="9629" count="100" />
+		<ingredient id="1462" count="619" />
+		<ingredient id="2134" count="108" />
+	</item>
+	<item id="985" recipeId="15823" name="mk_vesper_caster" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="13465" count="1" />
+		<productionRare id="16036" count="1" rarity="15" />
+		<ingredient id="15823" count="1" />
+		<ingredient id="15642" count="19" />
+		<ingredient id="5554" count="4" />
+		<ingredient id="1890" count="476" />
+		<ingredient id="1888" count="476" />
+		<ingredient id="5550" count="952" />
+		<ingredient id="1885" count="238" />
+		<ingredient id="4042" count="238" />
+		<ingredient id="9629" count="119" />
+		<ingredient id="1462" count="621" />
+		<ingredient id="2134" count="108" />
+	</item>
+	<item id="986" recipeId="15824" name="mk_vesper_singer" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="13466" count="1" />
+		<productionRare id="16037" count="1" rarity="15" />
+		<ingredient id="15824" count="1" />
+		<ingredient id="15643" count="19" />
+		<ingredient id="5554" count="4" />
+		<ingredient id="1893" count="340" />
+		<ingredient id="5550" count="680" />
+		<ingredient id="1889" count="340" />
+		<ingredient id="1881" count="680" />
+		<ingredient id="4042" count="340" />
+		<ingredient id="9629" count="170" />
+		<ingredient id="1462" count="622" />
+		<ingredient id="2134" count="108" />
+	</item>
+	<item id="987" recipeId="15825" name="mk_vesper_thrower" craftLevel="10" type="dwarven" successRate="60">
+		<statUse name="MP" value="252" />
+		<production id="13467" count="1" />
+		<productionRare id="16038" count="1" rarity="15" />
+		<ingredient id="15825" count="1" />
+		<ingredient id="15644" count="19" />
+		<ingredient id="5554" count="4" />
+		<ingredient id="1890" count="1200" />
+		<ingredient id="5550" count="480" />
+		<ingredient id="1885" count="240" />
+		<ingredient id="1889" count="240" />
+		<ingredient id="4042" count="240" />
+		<ingredient id="9629" count="120" />
+		<ingredient id="1462" count="618" />
+		<ingredient id="2134" count="108" />
+	</item>
+	<item id="988" recipeId="16110" name="mk_black_skeleton_circlet" craftLevel="6" type="common" successRate="10">
+		<statUse name="MP" value="168" />
+		<production id="16098" count="1" />
+		<ingredient id="16110" count="1" />
+		<ingredient id="16122" count="10" />
+		<ingredient id="1462" count="10" />
+	</item>
+	<item id="989" recipeId="16111" name="mk_oldgold_skeleton_circlet" craftLevel="6" type="common" successRate="10">
+		<statUse name="MP" value="168" />
+		<production id="16099" count="1" />
+		<ingredient id="16111" count="1" />
+		<ingredient id="16123" count="10" />
+		<ingredient id="1462" count="10" />
+	</item>
+	<item id="990" recipeId="16112" name="mk_green_skeleton_circlet" craftLevel="6" type="common" successRate="10">
+		<statUse name="MP" value="168" />
+		<production id="16100" count="1" />
+		<ingredient id="16112" count="1" />
+		<ingredient id="16124" count="10" />
+		<ingredient id="1462" count="10" />
+	</item>
+	<item id="991" recipeId="16113" name="mk_brown_skeleton_circlet" craftLevel="6" type="common" successRate="10">
+		<statUse name="MP" value="168" />
+		<production id="16101" count="1" />
+		<ingredient id="16113" count="1" />
+		<ingredient id="16125" count="10" />
+		<ingredient id="1462" count="10" />
+	</item>
+	<item id="992" recipeId="16114" name="mk_shark_of_cap" craftLevel="6" type="common" successRate="10">
+		<statUse name="MP" value="168" />
+		<production id="16102" count="1" />
+		<ingredient id="16114" count="1" />
+		<ingredient id="16126" count="10" />
+		<ingredient id="1462" count="10" />
+	</item>
+	<item id="993" recipeId="16115" name="mk_gold_horn_cap" craftLevel="6" type="common" successRate="10">
+		<statUse name="MP" value="168" />
+		<production id="16103" count="1" />
+		<ingredient id="16115" count="1" />
+		<ingredient id="16127" count="10" />
+		<ingredient id="1462" count="10" />
+	</item>
+	<item id="994" recipeId="16116" name="mk_silver_horn_cap" craftLevel="6" type="common" successRate="10">
+		<statUse name="MP" value="168" />
+		<production id="16104" count="1" />
+		<ingredient id="16116" count="1" />
+		<ingredient id="16128" count="10" />
+		<ingredient id="1462" count="10" />
+	</item>
+	<item id="995" recipeId="16117" name="mk_penguin_of_cap" craftLevel="6" type="common" successRate="10">
+		<statUse name="MP" value="168" />
+		<production id="16105" count="1" />
+		<ingredient id="16117" count="1" />
+		<ingredient id="16129" count="10" />
+		<ingredient id="1462" count="10" />
+	</item>
+	<item id="996" recipeId="16118" name="mk_turban_brown_hat" craftLevel="6" type="common" successRate="10">
+		<statUse name="MP" value="168" />
+		<production id="16106" count="1" />
+		<ingredient id="16118" count="1" />
+		<ingredient id="16130" count="10" />
+		<ingredient id="1462" count="10" />
+	</item>
+	<item id="997" recipeId="16119" name="mk_turban_yellow_hat" craftLevel="6" type="common" successRate="10">
+		<statUse name="MP" value="168" />
+		<production id="16107" count="1" />
+		<ingredient id="16119" count="1" />
+		<ingredient id="16131" count="10" />
+		<ingredient id="1462" count="10" />
+	</item>
+	<item id="998" recipeId="16120" name="mk_turtle_of_cap" craftLevel="6" type="common" successRate="10">
+		<statUse name="MP" value="168" />
+		<production id="16108" count="1" />
+		<ingredient id="16120" count="1" />
+		<ingredient id="16132" count="10" />
+		<ingredient id="1462" count="10" />
+	</item>
+	<item id="999" recipeId="16121" name="mk_cow_of_cap" craftLevel="6" type="common" successRate="10">
+		<statUse name="MP" value="168" />
+		<production id="16109" count="1" />
+		<ingredient id="16121" count="1" />
+		<ingredient id="16133" count="10" />
+		<ingredient id="1462" count="10" />
 	</item>
 	<item id="3000" recipeId="20191" name="mk_br_valen_dark_chocolate" craftLevel="1" type="common" successRate="95">
 		<statUse name="MP" value="50" />

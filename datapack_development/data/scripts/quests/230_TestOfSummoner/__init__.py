@@ -194,7 +194,7 @@ class Quest (JQuest) :
       return htmltext
 
    def onTalk (self,npc,player):
-      htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+      htmltext = Quest.getNoQuestMsg(player)
       st = player.getQuestState(qn)
       if not st : return htmltext
 
@@ -202,7 +202,6 @@ class Quest (JQuest) :
       id = st.getState()
       if npcId != NPC[1] and id != State.STARTED : return htmltext
       
-      htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>" 
       id = st.getState()
       npcId = npc.getNpcId()
       Lara, Galatea, Almors, Camoniell, Belthus, Basilla, Celestiel, Brynthea = NPC
@@ -232,7 +231,8 @@ class Quest (JQuest) :
             elif step == 2 :              # step 2 means already talkd with lara
                if Arcanas == 6:           # finished all battles... the player is able to earn the marks
                   htmltext = "30634-12.htm"
-                  st.addExpAndSp(148409,30000)
+                  st.addExpAndSp(832247,57110)
+                  st.giveItems(57,150480)
                   for var in STATS:
                      st.unset(var)
                   st.exitQuest(False)

@@ -16,16 +16,16 @@ package quests.TerritoryWarScripts;
 
 
 /**
-*
-* @author Gigiikun
-*/
+ *
+ * @author Gigiikun
+ */
 
 public class KillTheKeyTargets extends TerritoryWarSuperClass
 {
 	public static String qn1 = "738_DestroyKeyTargets";
 	public static int qnu = 738;
 	public static String qna = "Destroy Key Targets";
-
+	
 	public KillTheKeyTargets()
 	{
 		super(qnu,qn1,qna);

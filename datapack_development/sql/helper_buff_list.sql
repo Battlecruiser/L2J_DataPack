@@ -1,13 +1,13 @@
 DROP TABLE IF EXISTS `helper_buff_list`;
 CREATE TABLE `helper_buff_list` (
-  `id` int(11) NOT NULL default '0',
-  `skill_id` int(10) unsigned NOT NULL default '0',
-  `name` varchar(25) NOT NULL default '',
-  `skill_level` int(10) unsigned NOT NULL default '0',
-  `lower_level` int(10) unsigned NOT NULL default '0',
-  `upper_level` int(10) unsigned NOT NULL default '0',
-  `is_magic_class` varchar(5) default NULL,
-  `forSummon` varchar(5) default NULL,
+  `id` tinyint(2) unsigned NOT NULL DEFAULT '0',
+  `skill_id` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `name` varchar(25) NOT NULL DEFAULT '',
+  `skill_level` tinyint(2) unsigned NOT NULL DEFAULT '0',
+  `lower_level` tinyint(2) unsigned NOT NULL DEFAULT '0',
+  `upper_level` tinyint(2) unsigned NOT NULL DEFAULT '0',
+  `is_magic_class` varchar(5) DEFAULT NULL,
+  `forSummon` varchar(5) DEFAULT NULL,
   PRIMARY KEY (`id`)
 );
 

@@ -21,9 +21,8 @@ import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2SummonInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance.TimeStamp;
+import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
@@ -40,9 +39,9 @@ public class ItemSkillsTemplate implements IItemHandler
 {
 	/**
 	 * 
-	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.L2ItemInstance)
+	 * @see com.l2jserver.gameserver.handler.IItemHandler#useItem(com.l2jserver.gameserver.model.actor.L2Playable, com.l2jserver.gameserver.model.L2ItemInstance, boolean)
 	 */
-	public void useItem(L2Playable playable, L2ItemInstance item)
+	public void useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		L2PcInstance activeChar;
 		boolean isPet = playable instanceof L2PetInstance;
@@ -52,20 +51,20 @@ public class ItemSkillsTemplate implements IItemHandler
 			activeChar = (L2PcInstance) playable;
 		else
 			return;
-
+		
 		if (!TvTEvent.onScrollUse(playable.getObjectId()))
 		{
 			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-
+		
 		// pets can use items only when they are tradeable
 		if (isPet && !item.isTradeable())
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessageId.ITEM_NOT_FOR_PETS));
 			return;
 		}
-
+		
 		int skillId;
 		int skillLvl;
 		
@@ -117,49 +116,46 @@ public class ItemSkillsTemplate implements IItemHandler
 					{
 						switch (skillId)
 						{
-						// short buff icon for healing potions
-						case 2031:
-						case 2032:
-						case 2037:
-						case 26025:
-						case 26026:
-							int buffId = activeChar._shortBuffTaskSkillId;
-							// greater healing potions
-							if (skillId == 2037 || skillId == 26025)
-								activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration()/1000);
-							// healing potions
-							else if ((skillId == 2032 || skillId == 26026) && buffId !=2037 && buffId != 26025)
-								activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration()/1000);
-							// lesser healing potions
-							else
-							{
-								if (buffId != 2037 && buffId != 26025 && buffId != 2032 && buffId != 26026)
+							// short buff icon for healing potions
+							case 2031:
+							case 2032:
+							case 2037:
+							case 26025:
+							case 26026:
+								int buffId = activeChar._shortBuffTaskSkillId;
+								// greater healing potions
+								if (skillId == 2037 || skillId == 26025)
 									activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration()/1000);
-							}
-							break;
+								// healing potions
+								else if ((skillId == 2032 || skillId == 26026) && buffId !=2037 && buffId != 26025)
+									activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration()/1000);
+								// lesser healing potions
+								else
+								{
+									if (buffId != 2037 && buffId != 26025 && buffId != 2032 && buffId != 26026)
+										activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration()/1000);
+								}
+								break;
 						}
 					}
-
+					
 					if (itemSkill.isPotion())
 					{
-						playable.doSimultaneousCast(itemSkill);
+						if (!isPet)
+							playable.doSimultaneousCast(itemSkill);
 						// Summons should be affected by herbs too, self time effect is handled at L2Effect constructor
-						if (!isPet
-								&& item.getItemType() == L2EtcItemType.HERB
+						if (isPet && item.getItemType() == L2EtcItemType.HERB
 								&& activeChar.getPet() != null
-								&& activeChar.getPet() instanceof L2SummonInstance)
+								&& activeChar.getPet() instanceof L2PetInstance)
 							activeChar.getPet().doSimultaneousCast(itemSkill);
 					}
 					else
-					{
-						playable.stopMove(null);
-						playable.doCast(itemSkill);
-					}
-
+						playable.useMagic(itemSkill, forceUse, false);
+					
 					if (itemSkill.getReuseDelay() > 0)
 					{
 						activeChar.addTimeStamp(itemSkill, itemSkill.getReuseDelay());
-						activeChar.disableSkill(itemSkill, itemSkill.getReuseDelay());
+						//activeChar.disableSkill(itemSkill, itemSkill.getReuseDelay());
 						if (item.isEtcItem())
 						{
 							final int group = item.getEtcItem().getSharedReuseGroup();
@@ -174,12 +170,12 @@ public class ItemSkillsTemplate implements IItemHandler
 			}
 		}
 	}
-
+	
 	private void reuse(L2PcInstance player,L2Skill skill, L2ItemInstance item)
 	{
 		SystemMessage sm = null;
 		final FastMap<Integer, TimeStamp> timeStamp = player.getReuseTimeStamp();
-
+		
 		if (timeStamp != null && timeStamp.containsKey(skill.getReuseHashCode()))
 		{
 			final long remainingTime = player.getReuseTimeStamp().get(skill.getReuseHashCode()).getRemaining();
@@ -214,7 +210,7 @@ public class ItemSkillsTemplate implements IItemHandler
 					sm.addSkillName(skill);
 			}
 			sm.addNumber(seconds);
-
+			
 			if (item.isEtcItem())
 			{
 				final int group = item.getEtcItem().getSharedReuseGroup();

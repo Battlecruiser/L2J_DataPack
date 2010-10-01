@@ -28,7 +28,7 @@ public class Lang implements IVoicedCommandHandler
 	{
 		"lang"
 	};
-
+	
 	/**
 	 * 
 	 * @see com.l2jserver.gameserver.handler.IVoicedCommandHandler#useVoicedCommand(java.lang.String, com.l2jserver.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
@@ -38,9 +38,9 @@ public class Lang implements IVoicedCommandHandler
 		if (!Config.L2JMOD_MULTILANG_ENABLE
 				|| !Config.L2JMOD_MULTILANG_VOICED_ALLOW)
 			return false;
-
+		
 		NpcHtmlMessage msg = new NpcHtmlMessage(1);
-
+		
 		if (params == null)
 		{
 			final StringBuilder html = StringUtil.startAppend(100);
@@ -52,15 +52,15 @@ public class Lang implements IVoicedCommandHandler
 						"\" action=\"bypass -h voice .lang ",
 						lang,
 						"\" width=60 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><br>"
-						);
+				);
 			}
-
+			
 			msg.setFile(activeChar.getHtmlPrefix(), "data/html/mods/Lang/LanguageSelect.htm");
 			msg.replace("%list%", html.toString());
 			activeChar.sendPacket(msg);
 			return true;
 		}
-
+		
 		StringTokenizer st = new StringTokenizer(params);
 		if (st.hasMoreTokens())
 		{
@@ -77,10 +77,10 @@ public class Lang implements IVoicedCommandHandler
 				activeChar.sendPacket(msg);
 			}
 		}
-
+		
 		return false;
 	}
-
+	
 	/**
 	 * 
 	 * @see com.l2jserver.gameserver.handler.IVoicedCommandHandler#getVoicedCommandList()

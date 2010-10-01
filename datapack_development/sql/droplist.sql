@@ -36,12 +36,12 @@
 
 DROP TABLE IF EXISTS `droplist`;
 CREATE TABLE `droplist` (
-  `mobId` INT NOT NULL DEFAULT '0',
-  `itemId` INT NOT NULL DEFAULT '0',
-  `min` INT NOT NULL DEFAULT '0',
-  `max` INT NOT NULL DEFAULT '0',
-  `category` INT NOT NULL DEFAULT '0',
-  `chance` INT NOT NULL DEFAULT '0',
+  `mobId` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `itemId` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `min` int(8) unsigned NOT NULL DEFAULT '0',
+  `max` int(8) unsigned NOT NULL DEFAULT '0',
+  `category` smallint(3) NOT NULL DEFAULT '0',
+  `chance` mediumint(7) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`mobId`,`itemId`,`category`),
   KEY `key_mobId` (`mobId`)
 );
@@ -531,6 +531,7 @@ INSERT INTO `droplist` VALUES
 (18577,6341,9,27,3,185028),-- Sealed Phoenix Earring Gemstone
 (18577,6343,14,42,3,91950),-- Sealed Phoenix Necklace Beads
 (18577,6345,40,120,3,57581),-- Sealed Phoenix Ring Gemstone
+(18693,13799,1,1,1,1000000),-- Treasure Sack of the Ancient Giants
 (20003,116,1,1,-1,452932),-- Magic Ring
 (20003,1786,1,1,-1,45293),-- Recipe: Broad Sword
 (20003,1871,1,1,-1,56617),-- Charcoal
@@ -10902,7 +10903,7 @@ INSERT INTO `droplist` VALUES
 (20983,1882,1,1,2,49550),-- Leather
 (20983,1894,1,1,2,7824),-- Crafted Leather
 (20983,4042,1,1,2,3716),-- Enria
-(20983,4199,1,1,2,217019),-- Recipe: Bow of Peril
+(20983,4199,1,1,2,170),-- Recipe: Bow of Peril
 (20983,8731,1,1,200,2065),-- Life Stone: level 70
 (20983,8741,1,1,200,516),-- Mid-Grade Life Stone: level 70
 (20983,8751,1,1,200,52),-- High-Grade Life Stone: level 70
@@ -11678,7 +11679,7 @@ INSERT INTO `droplist` VALUES
 (21023,1866,1,1,-1,294716),-- Suede
 (21023,2019,1,1,-1,9507),-- Trident Edge
 (21023,2263,1,1,-1,6865),-- Recipe: Dwarven Trident
-(21023,57,1923,367,0,700000),-- Adena
+(21023,57,192,367,0,700000),-- Adena
 (21023,156,1,1,1,53),-- Hand Axe
 (21023,167,1,1,1,53),-- Scalpel
 (21023,178,1,1,1,53),-- Bone Staff
@@ -12428,7 +12429,7 @@ INSERT INTO `droplist` VALUES
 (21087,8751,1,1,200,85),-- High-Grade Life Stone: level 70
 (21087,8761,1,1,200,17),-- Top-Grade Life Stone: level 70
 (21088,4042,1,1,-1,165717),-- Enria
-(21088,5338,1,1,-1,12863),-- Recipe: Sealed Majestic Leather Armor(60%)
+(21088,5230,1,1,-1,12863),-- Recipe: Sealed Majestic Leather Armor(60%)
 (21088,5485,1,1,-1,83611),-- Sealed Tallum Tunic Texture
 (21088,57,4907,10001,0,700000),-- Adena
 (21088,5304,1,1,1,46),-- Sealed Tallum Tunic
@@ -20845,7 +20846,7 @@ INSERT INTO `droplist` VALUES
 (21606,1874,1,1,-1,154734),-- Oriharukon Ore
 (21606,1875,1,1,-1,154734),-- Stone of Purity
 (21606,1905,1,1,-1,225779),-- Omen Beast\'s Eye Earring Gemstone
-(21606,57,9143,1872,0,700000),-- Adena
+(21606,57,914,1872,0,700000),-- Adena
 (21606,281,1,1,1,62),-- Crystallized Ice Bow
 (21606,2074,1,1,1,3885),-- Crystallized Ice Bow Shaft
 (21606,1867,1,1,2,132963),-- Animal Skin
@@ -21104,7 +21105,7 @@ INSERT INTO `droplist` VALUES
 (21619,1912,1,1,-1,456727),-- Ring of Protection Gemstone
 (21619,2166,1,1,-1,143676),-- Recipe: Earrings of Binding (100%)
 (21619,2167,1,1,-1,216246),-- Recipe: Ring of Ages
-(21619,57,6763,3407,0,700000),-- Adena
+(21619,57,1676,3407,0,700000),-- Adena
 (21619,282,1,1,1,42),-- Elemental Bow
 (21619,285,1,1,1,42),-- Noble Elven Bow
 (21619,2085,1,1,1,3248),-- Crossbow Shaft
@@ -27710,7 +27711,7 @@ INSERT INTO `droplist` VALUES
 (22189,6901,1,1,-1,8422),-- Recipe: Shining Arrow (100%)
 (22190,57,7411,7610,0,700000),-- Adena
 (22190,1895,1,1,2,350000),-- Metallic Fiber
-(22196,57,13330,27213,0,700000),-- Adena
+(22196,57,3530,7213,0,700000),-- Adena
 (22196,1879,1,1,2,184884),-- Cokes
 (22196,1885,1,1,2,92442),-- High Grade Suede
 (22196,9628,1,1,2,8700),-- Leonard
@@ -27723,13 +27724,13 @@ INSERT INTO `droplist` VALUES
 (22196,5529,1,1,1,4563),-- Dragon Slayer Edge
 (22196,5545,1,1,1,4563),-- Dark Legion\'s Edge Blade
 (22196,5546,1,1,1,5012),-- Sword of Miracles Edge
-(22196,81,1,1,1,16),-- Dragon Slayer
-(22196,151,1,1,1,16),-- Sword of Miracles 
-(22196,2500,1,1,1,16),-- Dark Legion\'s Edge
+(22196,81,1,1,1,5),-- Dragon Slayer
+(22196,151,1,1,1,5),-- Sword of Miracles 
+(22196,2500,1,1,1,5),-- Dark Legion\'s Edge
 (22196,13099,1,1,-1,377090),-- Sealed Arcana Sickle Piece
 (22196,6688,1,1,-1,58445),-- Forgotten Blade Edge
 (22196,6901,1,1,-1,27039),-- Recipe: Shining Arrow (100%)
-(22197,57,5813,11868,0,700000),-- Adena
+(22197,57,3513,7268,0,700000),-- Adena
 (22197,1879,1,1,2,80628),-- Cokes
 (22197,1885,1,1,2,40314),-- High Grade Suede
 (22197,9628,1,1,2,3794),-- Leonard
@@ -27739,16 +27740,14 @@ INSERT INTO `droplist` VALUES
 (22197,9574,1,1,200,840),-- Mid-Grade Life Stone: level 80
 (22197,9575,1,1,200,84),-- High-Grade Life Stone: level 80
 (22197,9576,1,1,200,17),-- Top-Grade Life Stone: level 80
-(22197,5546,1,1,1,2186),-- Sword of Miracles Edge
-(22197,5529,1,1,1,1990),-- Dragon Slayer Edge
-(22197,5545,1,1,1,1990),-- Dark Legion\'s Edge Blade
-(22197,81,1,1,1,7),-- Dragon Slayer
-(22197,151,1,1,1,7),-- Sword of Miracles 
-(22197,2500,1,1,1,7),-- Dark Legion\'s Edge
+(22197,6364,1,1,1,4),-- Forgotten Blade
+(22197,6372,1,1,1,4),-- Heaven\'s Divider
+(22197,6688,1,1,1,4000),-- Forgotten Blade Edge
+(22197,6696,1,1,1,4000),-- Heavens Divider Edge
 (22197,6690,1,1,-1,25536),-- Imperial Staff Head
 (22197,6689,1,1,-1,25008),-- Basalt Battlehammer Head
 (22197,6901,1,1,-1,11792),-- Recipe: Shining Arrow (100%)
-(22198,57,13330,27213,0,700000),-- Adena
+(22198,57,3530,7213,0,700000),-- Adena
 (22198,1879,1,1,2,184884),-- Cokes
 (22198,1885,1,1,2,92442),-- High Grade Suede
 (22198,9628,1,1,2,8700),-- Leonard
@@ -27758,30 +27757,28 @@ INSERT INTO `droplist` VALUES
 (22198,9574,1,1,200,1926),-- Mid-Grade Life Stone: level 80
 (22198,9575,1,1,200,193),-- High-Grade Life Stone: level 80
 (22198,9576,1,1,200,39),-- Top-Grade Life Stone: level 80
-(22198,5529,1,1,1,4563),-- Dragon Slayer Edge
-(22198,5546,1,1,1,5012),-- Sword of Miracles Edge
-(22198,5545,1,1,1,4563),-- Dark Legion\'s Edge Blade
-(22198,81,1,1,1,16),-- Dragon Slayer
-(22198,151,1,1,1,16),-- Sword of Miracles 
-(22198,2500,1,1,1,16),-- Dark Legion\'s Edge
+(22198,6364,1,1,1,4),-- Forgotten Blade
+(22198,6372,1,1,1,4),-- Heaven\'s Divider
+(22198,6688,1,1,1,4000),-- Forgotten Blade Edge
+(22198,6696,1,1,1,4000),-- Heavens Divider Edge
 (22198,13099,1,1,-1,565534),-- Sealed Arcana Sickle Piece
 (22198,959,1,1,-1,1622),-- Scroll: Enchant Weapon (Grade S)
-(22199,57,22768,46483,0,700000),-- Adena
-(22199,6346,1,1,1,92524),-- Sealed Majestic Ring Gemstone
-(22199,6342,1,1,1,64376),-- Sealed Majestic Earring Gemstone
-(22199,6344,1,1,1,41661),-- Sealed Majestic Necklace Beads
-(22199,1879,1,3,2,157901),-- Cokes
-(22199,1885,1,1,2,157901),-- High Grade Suede
+(22199,57,3768,8483,0,700000),-- Adena
+(22199,6698,1,1,1,6000),-- Sealed Tateossian Earring Part
+(22199,6699,1,1,1,8000),-- Sealed Tateossian Ring Gem
+(22199,6700,1,1,1,4000),-- Sealed Tateossian Ring Wire
+(22199,6724,1,1,1,30),-- Sealed Tateossian Earring 
+(22199,6725,1,1,1,40),-- Sealed Tateossian Ring
+(22199,6726,1,1,1,20),-- Sealed Tateossian Necklace
+(22199,1879,1,1,2,197901),-- Cokes
+(22199,1885,1,1,2,87901),-- High Grade Suede
 (22199,9628,1,1,2,14861),-- Leonard
 (22199,9630,1,1,2,9973),-- Orichalcum
 (22199,9629,1,1,2,8238),-- Adamantine
-(22199,9573,1,1,200,13159),-- Life Stone: level 80
-(22199,9574,1,1,200,3290),-- Mid-Grade Life Stone: level 80
-(22199,9575,1,1,200,329),-- High-Grade Life Stone: level 80
-(22199,9576,1,1,200,66),-- Top-Grade Life Stone: level 80
-(22199,6328,1,1,1,569),-- Sealed Majestic Ring
-(22199,6327,1,1,1,379),-- Sealed Majestic Earring
-(22199,6326,1,1,1,285),-- Sealed Majestic Necklace
+(22199,9573,1,1,200,3559),-- Life Stone: level 80
+(22199,9574,1,1,200,890),-- Mid-Grade Life Stone: level 80
+(22199,9575,1,1,200,89),-- High-Grade Life Stone: level 80
+(22199,9576,1,1,200,18),-- Top-Grade Life Stone: level 80
 (22199,6693,1,1,-1,101640),-- Dragon Hunter Axe Blade
 (22199,6691,1,1,-1,99831),-- Angel Slayer Blade
 (22199,6901,1,1,-1,46186),-- Recipe: Shining Arrow (100%)
@@ -27806,7 +27803,7 @@ INSERT INTO `droplist` VALUES
 (22200,6694,1,1,-1,26933),-- Saint Spear Blade
 (22200,6901,1,1,-1,12238),-- Recipe: Shining Arrow (100%)
 (22200,960,1,1,-1,4895),-- Scroll: Enchant Armor (Grade S)
-(22201,57,6033,12317,0,700000),-- Adena
+(22201,57,3033,6317,0,700000),-- Adena
 (22201,1879,1,1,2,83682),-- Cokes
 (22201,1885,1,1,2,41841),-- High Grade Suede
 (22201,9628,1,1,2,3938),-- Leonard
@@ -27816,18 +27813,16 @@ INSERT INTO `droplist` VALUES
 (22201,9574,1,1,200,872),-- Mid-Grade Life Stone: level 80
 (22201,9575,1,1,200,87),-- High-Grade Life Stone: level 80
 (22201,9576,1,1,200,17),-- Top-Grade Life Stone: level 80
-(22201,5544,1,1,1,1548),-- Branch of The Mother Tree Head
-(22201,8342,1,1,1,1550),-- Flaming Dragon Skull Piece
-(22201,5533,1,1,1,1550),-- Elysian Head
-(22201,8349,1,1,1,1549),-- Doom Crusher Head
-(22201,164,1,1,1,5),-- Elysian
-(22201,213,1,1,1,5),-- Branch of The Mother Tree
-(22201,7895,1,1,1,5),-- Flaming Dragon Skull
-(22201,7902,1,1,1,5),-- Doom Crusher
+(22201,6689,1,1,1,3000),-- Basalt Battlehammer Head
+(22201,6693,1,1,1,3000),-- Dragon Hunter Axe Blade
+(22201,6690,1,1,1,3000),-- Imperial Staff Head
+(22201,6365,1,1,1,3),-- Basalt Battlehammer
+(22201,6366,1,1,1,3),-- Imperial Staff
+(22201,6369,1,1,1,3),-- Dragon Hunter Axe
 (22201,1895,1,7,-1,874174),-- Metallic Fiber
 (22201,13099,1,1,-1,170678),-- Sealed Arcana Sickle Piece
 (22201,4040,1,1,-1,244769),-- Mold Lubricant
-(22202,57,6033,12317,0,700000),-- Adena
+(22202,57,3033,6317,0,700000),-- Adena
 (22202,1879,1,1,2,83682),-- Cokes
 (22202,1885,1,1,2,41841),-- High Grade Suede
 (22202,9628,1,1,2,3938),-- Leonard
@@ -27837,14 +27832,12 @@ INSERT INTO `droplist` VALUES
 (22202,9574,1,1,200,872),-- Mid-Grade Life Stone: level 80
 (22202,9575,1,1,200,87),-- High-Grade Life Stone: level 80
 (22202,9576,1,1,200,17),-- Top-Grade Life Stone: level 80
-(22202,8342,1,1,1,1550),-- Flaming Dragon Skull Piece
-(22202,5533,1,1,1,1550),-- Elysian Head
-(22202,5544,1,1,1,1548),-- Branch of The Mother Tree Head
-(22202,8349,1,1,1,1549),-- Doom Crusher Head
-(22202,164,1,1,1,5),-- Elysian
-(22202,213,1,1,1,5),-- Branch of The Mother Tree
-(22202,7895,1,1,1,5),-- Flaming Dragon Skull
-(22202,7902,1,1,1,5),-- Doom Crusher
+(22202,6689,1,1,1,3000),-- Basalt Battlehammer Head
+(22202,6693,1,1,1,3000),-- Dragon Hunter Axe Blade
+(22202,6690,1,1,1,3000),-- Imperial Staff Head
+(22202,6365,1,1,1,3),-- Basalt Battlehammer
+(22202,6366,1,1,1,3),-- Imperial Staff
+(22202,6369,1,1,1,3),-- Dragon Hunter Axe
 (22202,6696,1,1,-1,26873),-- Heavens Divider Edge
 (22202,6901,1,1,-1,12238),-- Recipe: Shining Arrow (100%)
 (22203,57,5934,12114,0,700000),-- Adena
@@ -27862,7 +27855,7 @@ INSERT INTO `droplist` VALUES
 (22203,1875,1,1,-1,802440),-- Stone of Purity
 (22203,6697,1,1,-1,25527),-- Arcana Mace Head
 (22203,959,1,1,-1,481),-- Scroll: Enchant Weapon (Grade S)
-(22204,57,5786,11812,0,700000),-- Adena
+(22204,57,3786,6812,0,700000),-- Adena
 (22204,1879,1,1,2,80251),-- Cokes
 (22204,1885,1,1,2,40126),-- High Grade Suede
 (22204,9628,1,1,2,3777),-- Leonard
@@ -27872,12 +27865,12 @@ INSERT INTO `droplist` VALUES
 (22204,9574,1,1,200,836),-- Mid-Grade Life Stone: level 80
 (22204,9575,1,1,200,84),-- High-Grade Life Stone: level 80
 (22204,9576,1,1,200,17),-- Top-Grade Life Stone: level 80
-(22204,5534,1,1,1,5949),-- Soul Bow Stave
-(22204,289,1,1,1,21),-- Soul Bow
+(22204,7575,1,1,1,9),-- Draconic Bow
+(22204,7579,1,1,1,9000),-- Draconic Bow Shaft
 (22204,1885,1,3,-1,489029),-- High Grade Suede
 (22204,6698,1,1,-1,230538),-- Sealed Tateossian Earring Part
 (22204,6901,1,1,-1,11737),-- Recipe: Shining Arrow (100%)
-(22205,57,5934,12114,0,700000),-- Adena
+(22205,57,2934,6114,0,700000),-- Adena
 (22205,1879,1,1,2,82302),-- Cokes
 (22205,1885,1,1,2,41151),-- High Grade Suede
 (22205,9628,1,1,2,3873),-- Leonard
@@ -27887,8 +27880,8 @@ INSERT INTO `droplist` VALUES
 (22205,9574,1,1,200,857),-- Mid-Grade Life Stone: level 80
 (22205,9575,1,1,200,86),-- High-Grade Life Stone: level 80
 (22205,9576,1,1,200,17),-- Top-Grade Life Stone: level 80
-(22205,5534,1,1,1,6101),-- Soul Bow Stave
-(22205,289,1,1,1,21),-- Soul Bow
+(22205,7575,1,1,1,9),-- Draconic Bow
+(22205,7579,1,1,1,9000),-- Draconic Bow Shaft
 (22205,13099,1,1,-1,167863),-- Sealed Arcana Sickle Piece
 (22205,6699,1,1,-1,262349),-- Sealed Tateossian Ring Gem
 (22205,6901,1,1,-1,12037),-- Recipe: Shining Arrow (100%)
@@ -27905,9 +27898,9 @@ INSERT INTO `droplist` VALUES
 (22208,6703,1,1,-1,189953),-- Sealed Imperial Crusader Gauntlets Design
 (22208,6901,1,1,-1,13341),-- Recipe: Shining Arrow (100%)
 (22208,959,1,1,-1,534),-- Scroll: Enchant Weapon (Grade S)
-(22209,57,6047,12344,0,700000),-- Adena
-(22209,5537,1,1,1,6213),-- Soul Separator Head
-(22209,236,1,1,1,22),-- Soul Separator
+(22209,57,3047,6344,0,700000),-- Adena
+(22209,6367,1,1,1,9),-- Angel Slayer
+(22209,6691,1,1,1,9000),-- Angel Slayer Blade
 (22209,8954,1,1,2,2588),-- Blue Primeval Crystal
 (22209,8955,1,1,2,1294),-- Green Primeval Crystal
 (22209,8956,1,1,2,647),-- Red Primeval Crystal
@@ -27918,9 +27911,9 @@ INSERT INTO `droplist` VALUES
 (22209,1894,1,1,-1,430376),-- Crafted Leather
 (22209,4042,1,1,-1,204429),-- Enria
 (22209,6704,1,1,-1,174638),-- Sealed Imperial Crusader Boots Design
-(22210,57,6577,13427,0,700000),-- Adena
-(22210,5537,1,1,1,6758),-- Soul Separator Head
-(22210,236,1,1,1,24),-- Soul Separator
+(22210,57,3577,7027,0,700000),-- Adena
+(22210,6367,1,1,1,9),-- Angel Slayer
+(22210,6691,1,1,1,9000),-- Angel Slayer Blade
 (22210,8954,1,1,2,2815),-- Blue Primeval Crystal
 (22210,8955,1,1,2,1408),-- Green Primeval Crystal
 (22210,8956,1,1,2,704),-- Red Primeval Crystal
@@ -27941,9 +27934,9 @@ INSERT INTO `droplist` VALUES
 (22211,13099,1,1,-1,175157),-- Sealed Arcana Sickle Piece
 (22211,6706,1,1,-1,203741),-- Sealed Imperial Crusader Helmet Pattern
 (22211,960,1,1,-1,5024),-- Scroll: Enchant Armor (Grade S)
-(22212,57,5939,12126,0,700000),-- Adena
-(22212,5538,1,1,1,6102),-- Dragon Grinder Edge
-(22212,270,1,1,1,21),-- Dragon Grinder
+(22212,57,3339,7126,0,700000),-- Adena
+(22212,6371,1,1,1,9),-- Demon Splinter
+(22212,6695,1,1,1,9000),-- Demon Splinter Blade
 (22212,8954,1,1,2,3559),-- Blue Primeval Crystal
 (22212,8955,1,1,2,1779),-- Green Primeval Crystal
 (22212,8956,1,1,2,890),-- Red Primeval Crystal
@@ -27952,9 +27945,9 @@ INSERT INTO `droplist` VALUES
 (22212,4041,1,1,-1,104767),-- Mold Hardener
 (22212,6707,1,1,-1,59697),-- Sealed Draconic Leather Armor Part
 (22212,6901,1,1,-1,12048),-- Recipe: Shining Arrow (100%)
-(22213,57,6191,12640,0,700000),-- Adena
-(22213,5538,1,1,1,6361),-- Dragon Grinder Edge
-(22213,270,1,1,1,22),-- Dragon Grinder
+(22213,57,3191,6640,0,700000),-- Adena
+(22213,6371,1,1,1,9),-- Demon Splinter
+(22213,6695,1,1,1,9000),-- Demon Splinter Blade
 (22213,8954,1,1,2,3710),-- Blue Primeval Crystal
 (22213,8955,1,1,2,1855),-- Green Primeval Crystal
 (22213,8956,1,1,2,927),-- Red Primeval Crystal
@@ -27963,15 +27956,19 @@ INSERT INTO `droplist` VALUES
 (22213,6708,1,1,-1,178823),-- Sealed Draconic Leather Gloves Fabric
 (22213,6709,1,1,-1,178823),-- Sealed Draconic Leather Boots Design
 (22213,6901,1,1,-1,12560),-- Recipe: Shining Arrow (100%)
-(22214,57,5863,11970,0,700000),-- Adena
-(22214,5514,1,1,1,9271),-- Sealed Gauntlets of Nightmare Design
-(22214,5502,1,1,1,9271),-- Sealed Boots of Nightmare Lining
-(22214,5515,1,1,1,9271),-- Sealed Majestic Gauntlets Design
-(22214,5503,1,1,1,9271),-- Sealed Majestic Boots Lining
-(22214,5313,1,1,1,81),-- Sealed Gloves of Nightmare
-(22214,5314,1,1,1,81),-- Sealed Boots of Nightmare
-(22214,5318,1,1,1,81),-- Sealed Majestic Gloves
-(22214,5319,1,1,1,81),-- Sealed Majestic Boots
+(22214,57,3563,6970,0,700000),-- Adena
+(22214,6676,1,1,1,3),-- Sealed Imperial Crusader Gauntlet
+(22214,6677,1,1,1,3),-- Sealed Imperial Crusader Boots
+(22214,6681,1,1,1,3),-- Sealed Draconic Leather Glove
+(22214,6682,1,1,1,3),-- Sealed Draconic Leather Boots
+(22214,6685,1,1,1,3),-- Sealed Major Arcana Glove
+(22214,6686,1,1,1,3),-- Sealed Major Arcana Boots
+(22214,6703,1,1,1,3000),-- Sealed Imperial Crusader Gauntlets Design
+(22214,6704,1,1,1,3000),-- Sealed Imperial Crusader Boots Design
+(22214,6708,1,1,1,3000),-- Sealed Draconic Leather Gloves Fabric
+(22214,6709,1,1,1,3000),-- Sealed Draconic Leather Boots Design
+(22214,6712,1,1,1,3000),-- Sealed Major Arcana Gloves fabric
+(22214,6713,1,1,1,3000),-- Sealed Major Arcana Boots Design
 (22214,8954,1,1,2,3513),-- Blue Primeval Crystal
 (22214,8955,1,1,2,1757),-- Green Primeval Crystal
 (22214,8956,1,1,2,878),-- Red Primeval Crystal
@@ -28025,7 +28022,7 @@ INSERT INTO `droplist` VALUES
 (22217,4043,1,9,-1,923722),-- Asofe
 (22217,4042,1,5,-1,769768),-- Enria
 (22217,6713,1,5,-1,657594),-- Sealed Major Arcana Boots Design
-(22218,57,5469,11164,0,700000),-- Adena
+(22218,57,3569,7164,0,700000),-- Adena
 (22218,1879,1,1,2,75850),-- Cokes
 (22218,1885,1,1,2,37925),-- High Grade Suede
 (22218,9628,1,1,2,3569),-- Leonard
@@ -28038,13 +28035,13 @@ INSERT INTO `droplist` VALUES
 (22218,5529,1,1,1,1872),-- Dragon Slayer Edge
 (22218,5546,1,1,1,2056),-- Sword of Miracles Edge
 (22218,5545,1,1,1,1872),-- Dark Legion\'s Edge Blade
-(22218,81,1,1,1,7),-- Dragon Slayer
-(22218,151,1,1,1,7),-- Sword of Miracles 
-(22218,2500,1,1,1,7),-- Dark Legion\'s Edge
+(22218,81,1,1,1,5),-- Dragon Slayer
+(22218,151,1,1,1,5),-- Sword of Miracles 
+(22218,2500,1,1,1,5),-- Dark Legion\'s Edge
 (22218,13099,1,1,-1,154703),-- Sealed Arcana Sickle Piece
 (22218,6688,1,1,-1,23977),-- Forgotten Blade Edge
 (22218,6901,1,1,-1,11093),-- Recipe: Shining Arrow (100%)
-(22219,57,5492,11212,0,700000),-- Adena
+(22219,57,3492,6812,0,700000),-- Adena
 (22219,1879,1,1,2,76173),-- Cokes
 (22219,1885,1,1,2,38087),-- High Grade Suede
 (22219,9628,1,1,2,3585),-- Leonard
@@ -28054,18 +28051,16 @@ INSERT INTO `droplist` VALUES
 (22219,9574,1,1,200,793),-- Mid-Grade Life Stone: level 80
 (22219,9575,1,1,200,79),-- High-Grade Life Stone: level 80
 (22219,9576,1,1,200,16),-- Top-Grade Life Stone: level 80
-(22219,8342,1,1,1,1410),-- Flaming Dragon Skull Piece
-(22219,5533,1,1,1,1410),-- Elysian Head
-(22219,5544,1,1,1,1409),-- Branch of The Mother Tree Head
-(22219,8349,1,1,1,1410),-- Doom Crusher Head
-(22219,164,1,1,1,5),-- Elysian
-(22219,213,1,1,1,5),-- Branch of The Mother Tree
-(22219,7895,1,1,1,5),-- Flaming Dragon Skull
-(22219,7902,1,1,1,5),-- Doom Crusher
+(22219,6689,1,1,1,3000),-- Basalt Battlehammer Head
+(22219,6693,1,1,1,3000),-- Dragon Hunter Axe Blade
+(22219,6690,1,1,1,3000),-- Imperial Staff Head
+(22219,6365,1,1,1,3),-- Basalt Battlehammer
+(22219,6366,1,1,1,3),-- Imperial Staff
+(22219,6369,1,1,1,3),-- Dragon Hunter Axe
 (22219,6694,1,1,-1,24516),-- Saint Spear Blade
 (22219,6901,1,1,-1,11140),-- Recipe: Shining Arrow (100%)
 (22219,960,1,1,-1,4456),-- Scroll: Enchant Armor (Grade S)
-(22220,57,4894,9982,0,700000),-- Adena
+(22220,57,3394,6982,0,700000),-- Adena
 (22220,1879,1,1,2,67866),-- Cokes
 (22220,1885,1,1,2,33933),-- High Grade Suede
 (22220,9628,1,1,2,3194),-- Leonard
@@ -28075,12 +28070,12 @@ INSERT INTO `droplist` VALUES
 (22220,9574,1,1,200,707),-- Mid-Grade Life Stone: level 80
 (22220,9575,1,1,200,71),-- High-Grade Life Stone: level 80
 (22220,9576,1,1,200,14),-- Top-Grade Life Stone: level 80
-(22220,5534,1,1,1,5030),-- Soul Bow Stave
-(22220,289,1,1,1,18),-- Soul Bow
+(22220,7575,1,1,1,9),-- Draconic Bow
+(22220,7579,1,1,1,9000),-- Draconic Bow Shaft
 (22220,1875,1,1,-1,661693),-- Stone of Purity
 (22220,6697,1,1,-1,21049),-- Arcana Mace Head
 (22220,959,1,1,-1,397),-- Scroll: Enchant Weapon (Grade S)
-(22221,57,5310,10842,0,700000),-- Adena
+(22221,57,3310,6842,0,700000),-- Adena
 (22221,1879,1,1,2,73657),-- Cokes
 (22221,1885,1,1,2,36829),-- High Grade Suede
 (22221,9628,1,1,2,3466),-- Leonard
@@ -28090,14 +28085,14 @@ INSERT INTO `droplist` VALUES
 (22221,9574,1,1,200,767),-- Mid-Grade Life Stone: level 80
 (22221,9575,1,1,200,77),-- High-Grade Life Stone: level 80
 (22221,9576,1,1,200,15),-- Top-Grade Life Stone: level 80
-(22221,5537,1,1,1,5457),-- Soul Separator Head
-(22221,236,1,1,1,19),-- Soul Separator
+(22221,6367,1,1,1,9),-- Angel Slayer
+(22221,6691,1,1,1,9000),-- Angel Slayer Blade
 (22221,6703,1,1,-1,153376),-- Sealed Imperial Crusader Gauntlets Design
 (22221,6901,1,1,-1,10772),-- Recipe: Shining Arrow (100%)
 (22221,959,1,1,-1,431),-- Scroll: Enchant Weapon (Grade S)
-(22222,57,5157,10528,0,700000),-- Adena
-(22222,5538,1,1,1,5297),-- Dragon Grinder Edge
-(22222,270,1,1,1,19),-- Dragon Grinder
+(22222,57,3157,6528,0,700000),-- Adena
+(22222,6371,1,1,1,9),-- Demon Splinter
+(22222,6695,1,1,1,9000),-- Demon Splinter Blade
 (22222,8954,1,1,2,2207),-- Blue Primeval Crystal
 (22222,8955,1,1,2,1104),-- Green Primeval Crystal
 (22222,8956,1,1,2,552),-- Red Primeval Crystal
@@ -28108,34 +28103,32 @@ INSERT INTO `droplist` VALUES
 (22222,1875,1,1,-1,697420),-- Stone of Purity
 (22222,6706,1,1,-1,169702),-- Sealed Imperial Crusader Helmet Pattern
 (22222,960,1,1,-1,4185),-- Scroll: Enchant Armor (Grade S)
-(22223,57,5707,11651,0,700000),-- Adena
+(22223,57,3507,7251,0,700000),-- Adena
 (22223,5529,1,1,1,1872),-- Dragon Slayer Edge
 (22223,5546,1,1,1,2056),-- Sword of Miracles Edge
 (22223,5545,1,1,1,1872),-- Dark Legion\'s Edge Blade
-(22223,81,1,1,1,7),-- Dragon Slayer
-(22223,151,1,1,1,7),-- Sword of Miracles 
-(22223,2500,1,1,1,7),-- Dark Legion\'s Edge
+(22223,81,1,1,1,5),-- Dragon Slayer
+(22223,151,1,1,1,5),-- Sword of Miracles 
+(22223,2500,1,1,1,5),-- Dark Legion\'s Edge
 (22223,13099,1,1,-1,161444),-- Sealed Arcana Sickle Piece
 (22223,6688,1,1,-1,25022),-- Forgotten Blade Edge
 (22223,6901,1,1,-1,11576),-- Recipe: Shining Arrow (100%)
-(22224,57,5638,11511,0,700000),-- Adena
+(22224,57,3638,6911,0,700000),-- Adena
 (22224,959,1,1,2,34),-- Scroll: Enchant Weapon (Grade S)
 (22224,960,1,1,1,338),-- Scroll: Enchant Armor (Grade S)
 (22224,8955,1,1,2,1689),-- Green Primeval Crystal
 (22224,8954,1,1,2,3378),-- Blue Primeval Crystal
 (22224,8956,1,1,2,845),-- Red Primeval Crystal
-(22224,8342,1,1,1,1448),-- Flaming Dragon Skull Piece
-(22224,5533,1,1,1,1448),-- Elysian Head
-(22224,5544,1,1,1,1447),-- Branch of The Mother Tree Head
-(22224,8349,1,1,1,1448),-- Doom Crusher Head
-(22224,164,1,1,1,5),-- Elysian
-(22224,213,1,1,1,5),-- Branch of The Mother Tree
-(22224,7895,1,1,1,5),-- Flaming Dragon Skull
-(22224,7902,1,1,1,5),-- Doom Crusher
+(22224,6689,1,1,1,3000),-- Basalt Battlehammer Head
+(22224,6693,1,1,1,3000),-- Dragon Hunter Axe Blade
+(22224,6690,1,1,1,3000),-- Imperial Staff Head
+(22224,6365,1,1,1,3),-- Basalt Battlehammer
+(22224,6366,1,1,1,3),-- Imperial Staff
+(22224,6369,1,1,1,3),-- Dragon Hunter Axe
 (22224,6694,1,1,-1,25169),-- Saint Spear Blade
 (22224,6901,1,1,-1,11437),-- Recipe: Shining Arrow (100%)
 (22224,960,1,1,-1,4575),-- Scroll: Enchant Armor (Grade S)
-(22225,57,5357,10937,0,700000),-- Adena
+(22225,57,3357,6937,0,700000),-- Adena
 (22225,1879,1,1,2,74304),-- Cokes
 (22225,1885,1,1,2,37152),-- High Grade Suede
 (22225,9628,1,1,2,3497),-- Leonard
@@ -28145,8 +28138,8 @@ INSERT INTO `droplist` VALUES
 (22225,9574,1,1,200,774),-- Mid-Grade Life Stone: level 80
 (22225,9575,1,1,200,77),-- High-Grade Life Stone: level 80
 (22225,9576,1,1,200,16),-- Top-Grade Life Stone: level 80
-(22225,5534,1,1,1,5508),-- Soul Bow Stave
-(22225,289,1,1,1,19),-- Soul Bow
+(22225,7575,1,1,1,9),-- Draconic Bow
+(22225,7579,1,1,1,9000),-- Draconic Bow Shaft
 (22225,1875,1,1,-1,724469),-- Stone of Purity
 (22225,6697,1,1,-1,23046),-- Arcana Mace Head
 (22225,959,1,1,-1,435),-- Scroll: Enchant Weapon (Grade S)
@@ -30201,7 +30194,7 @@ INSERT INTO `droplist` VALUES
 (22366,6709,1,1,-1,518094),-- Sealed Draconic Leather Boots Design
 (22366,6901,1,1,-1,36388),-- Recipe: Shining Arrow (100%)
 (22367,57,7242,14504,0,700000),-- Adena
-(22367,1345,10,30,0,312342),-- Shining Arrow
+(22367,1345,10,30,2,312342),-- Shining Arrow
 (22367,1879,1,1,2,78085),-- Cokes
 (22367,1885,1,1,2,39043),-- High Grade Suede
 (22367,9628,1,1,2,3675),-- Leonard
@@ -30424,7 +30417,214 @@ INSERT INTO `droplist` VALUES
 (22378,9630,1,1,2,25519),-- Orichalcum
 (22378,6901,1,1,2,4849),-- Recipe: Shining Arrow (100%)
 (22378,9551,1,1,200,38789),-- Divine Stone
-(22378,959,1,1,2,2362),-- Scroll: Enchant Weapon (S)
+(22378,1895,1,35,-1,937406),-- Metallic Fiber
+(22378,4040,1,3,-1,590566),-- Mold Lubricant
+(22378,959,1,1,-1,2362),-- Scroll: Enchant Weapon (S)
+(22379,57,16002,32048,0,700000),-- Adena
+(22379,9599,1,4,100,560500),-- Ancient Tome of the Demon
+(22379,5480,1,1,1,15092),-- Sealed Leather Armor of Nightmare Fabric
+(22379,5481,1,1,1,15092),-- Sealed Majestic Leather Armor Fabric
+(22379,5320,1,1,1,102),-- Sealed Leather Armor of Nightmare
+(22379,5323,1,1,1,102),-- Sealed Majestic Leather Armor
+(22379,1871,4,12,2,240210),-- Charcoal
+(22379,1866,7,21,2,85408),-- Suede
+(22379,1877,1,1,2,76867),-- Adamantite Nugget
+(22379,4040,1,1,2,38433),-- Mold Lubricant
+(22379,4041,1,1,2,16710),-- Mold Hardener
+(22379,9551,1,1,200,15374),-- Divine Stone
+(22379,959,1,1,2,77),-- Scroll: Enchant Weapon (S)
+(22379,8719,1,1,-1,66279),-- Sobekk's Hurricane Edge
+(22379,8720,1,1,-1,66279),-- Themis' Tongue Piece
+(22379,6901,1,1,-1,27307),-- Recipe: Shining Arrow (100%)
+(22380,57,164496,329441,0,700000),-- Adena
+(22380,1345,450,1350,0,157583),-- Shining Arrow
+(22380,9599,9,27,100,800200),-- Ancient Tome of the Demon
+(22380,5487,1,1,1,155655), -- Sealed Robe of Nightmare Fabric
+(22380,5488,1,1,1,155655), -- Sealed Majestic Robe Fabric
+(22380,5326,1,1,1,1047), -- Sealed Robe of Nightmare
+(22380,5329,1,1,1,1047), -- Sealed Majestic Robe
+(22380,4042,7,21,2,12663),-- Enria
+(22380,1867,416,1248,2,17046),-- Animal Skin
+(22380,1872,90,270,2,78791),-- Animal Bone
+(22380,1882,42,126,2,28140),-- Leather
+(22380,1894,5,15,2,33930),-- Crafted Leather
+(22380,9551,1,1,200,85095),-- Divine Stone
+(22380,960,1,1,2,4255),-- Scroll: Enchant Armor (S)
+(22380,6899,1,1,2,1090),-- Recipe: Arcana Mace (60%)
+(22380,14166,1,1,200,51386),-- Life Stone - level 84
+(22380,14167,1,1,200,12831),-- Mid-Grade Life Stone - level 84
+(22380,14168,1,1,200,1283),-- High-Grade Life Stone - level 84
+(22380,14169,1,1,200,257),-- Top-Grade Life Stone - level 84
+(22380,8721,1,1,-1,681322),-- Cabrio's Hand Head
+(22380,6901,1,1,-1,280705),-- Recipe: Shining Arrow (100%)
+(22380,960,1,1,-1,112282),-- Scroll: Enchant Armor (S)
+(22381,57,27967,56010,0,700000),-- Adena
+(22381,9599,2,6,100,612200),-- Ancient Tome of the Demon
+(22381,5514,1,1,1,49630),-- Sealed Gloves of Nightmare Design
+(22381,5503,1,1,1,49630),-- Sealed Majestic Boots Lining
+(22381,5515,1,1,1,49630),-- Sealed Majestic Gloves Design
+(22381,5502,1,1,1,49630),-- Sealed Boots of Nightmare Lining
+(22381,5318,1,1,1,434),-- Sealed Majestic Gloves
+(22381,5314,1,1,1,434),-- Sealed Boots of Nightmare
+(22381,5313,1,1,1,434),-- Sealed Gloves of Nightmare
+(22381,5319,1,1,1,434),-- Sealed Majestic Boots
+(22381,9551,1,1,200,31346),-- Divine Stone
+(22381,960,1,1,2,1567),-- Scroll: Enchant Armor (S)
+(22381,14166,1,1,200,18929),-- Life Stone - level 84
+(22381,14167,1,1,200,4727),-- Mid-Grade Life Stone - level 84
+(22381,14168,1,1,200,473),-- High-Grade Life Stone - level 84
+(22381,14169,1,1,200,95),-- Top-Grade Life Stone - level 84
+(22381,1895,1,29,-1,909037),-- Metallic Fiber
+(22381,4043,1,3,-1,795407), -- Asofe
+(22381,8722,1,1,-1,115836),-- Daimon Crystal Fragment
+(22382,57,27570,55215,0,700000),-- Adena
+(22382,9599,2,6,100,603500),-- Ancient Tome of the Demon
+(22382,5546,1,1,1,11635),-- Sword of Miracles Edge
+(22382,5529,1,1,1,10593),-- Dragon Slayer Edge
+(22382,5545,1,1,1,10593),-- Dark Legion's Edge Blade
+(22382,81,1,1,1,37),-- Dragon Slayer
+(22382,151,1,1,1,37),-- Sword of Miracles 
+(22382,2500,1,1,1,37),-- Dark Legion\'s Edge
+(22382,959,1,1,2,154),-- Scroll: Enchant Weapon (S)
+(22382,1876,3,9,2,110362),-- Mithril Ore
+(22382,4042,1,1,2,64377),-- Enria
+(22382,1895,3,9,2,183936),-- Metallic Fiber
+(22382,1873,16,48,2,48823),-- Silver Nugget
+(22382,1868,135,405,2,28612),-- Thread
+(22382,6901,1,1,-1,47047),-- Recipe: Shining Arrow (100%)
+(22382,6688,1,1,-1,101692),-- Forgotten Blade Edge
+(22383,57,5276,10566,0,700000),-- Adena
+(22383,9599,1,1,100,462000),-- Ancient Tome of the Demon
+(22383,8349,1,1,1,1520),-- Doom Crusher Head
+(22383,5533,1,1,1,1521),-- Elysian Head
+(22383,5544,1,1,1,1519),-- Branch Of The Mother Tree Head
+(22383,8342,1,1,1,1521),-- Flaming Dragon Skull Piece
+(22383,164,1,1,1,5),-- Elysian
+(22383,213,1,1,1,5),-- Branch of The Mother Tree
+(22383,7895,1,1,1,5),-- Flaming Dragon Skull
+(22383,7902,1,1,1,5),-- Doom Crusher
+(22383,1894,1,1,2,15561),-- Crafted Leather
+(22383,4044,1,1,2,14783),-- Thons
+(22383,4041,1,1,2,3856),-- Mold Hardener
+(22383,4039,1,1,2,3548),-- Mold Glue
+(22383,9551,1,1,200,21008),-- Divine Stone
+(22383,960,1,1,2,177),-- Scroll: Enchant Armor (S)
+(22383,14166,1,1,200,2142),-- Life Stone - level 84
+(22383,14167,1,1,200,535),-- Mid-Grade Life Stone - level 84
+(22383,14168,1,1,200,54),-- High-Grade Life Stone - level 84
+(22383,14169,1,1,200,11),-- Top-Grade Life Stone - level 84
+(22383,4039,1,1,-1,300100),-- Mold Glue
+(22383,6689,1,1,-1,19093), -- Basalt Battlehammer Head
+(22383,959,1,1,-1,360),-- Scroll: Enchant Weapon (S)
+(22385,57,39604,79317,0,700000),-- Adena
+(22385,9599,2,6,100,867000),-- Ancient Tome of the Demon
+(22385,5534,1,1,1,45700),-- Soul Bow Stave
+(22385,289,1,1,1,161),-- Soul Bow
+(22385,1345,300,900,0,92478),-- Shining Arrow
+(22385,1879,2,6,2,173396),-- Cokes
+(22385,1885,3,9,2,57799),-- High Grade Suede
+(22385,9628,1,1,2,32639),-- Leonard
+(22385,9630,1,1,2,21903),-- Orichalcum
+(22385,9629,1,1,2,18094),-- Adamantine
+(22385,9551,1,1,200,33292),-- Divine Stone
+(22385,959,1,1,2,166),-- Scroll: Enchant Weapon (S)
+(22385,6693,1,1,-1,148727),-- Dragon Hunter Axe Blade
+(22385,6691,1,1,-1,146079),-- Angel Slayer Blade
+(22385,6901,1,1,-1,67583),-- Recipe: Shining Arrow (100%)
+(22386,57,25304,50678,0,700000),-- Adena
+(22386,9599,2,6,100,553900),-- Ancient Tome of the Demon
+(22386,8349,1,1,1,7292),-- Doom Crusher Head
+(22386,5533,1,1,1,7294),-- Elysian Head
+(22386,5544,1,1,1,7286),-- Branch Of The Mother Tree Head
+(22386,8342,1,1,1,8294),-- Flaming Dragon Skull Piece
+(22386,164,1,1,1,26),-- Elysian
+(22386,213,1,1,1,26),-- Branch of The Mother Tree
+(22386,7895,1,1,1,26),-- Flaming Dragon Skull
+(22386,7902,1,1,1,26),-- Doom Crusher
+(22386,1871,24,72,2,55394),-- Charcoal
+(22386,1866,7,21,2,118174),-- Suede
+(22386,5220,1,1,2,106356),-- Metal Hardener
+(22386,1885,3,9,2,31654),-- High Grade Suede
+(22386,4041,1,1,2,23121),-- Mold Hardener
+(22386,9551,1,1,200,15374),-- Divine Stone
+(22386,960,1,1,2,1064),-- Scroll: Enchant Armor (S)
+(22386,6887,1,1,2,272),-- Recipe: Angel Slayer (60%)
+(22386,1885,1,7,-1,899596),-- High Grade Suede
+(22386,5220,1,3,-1,863612),-- Metal Hardener
+(22386,960,1,1,-1,17272),-- Scroll: Enchant Armor (S)
+(22387,57,25304,50678,0,700000),-- Adena
+(22387,9599,2,6,100,553900),-- Ancient Tome of the Demon
+(22387,5538,1,1,1,29174),-- Dragon Grinder Edge
+(22387,270,1,1,1,103),-- Dragon Grinder
+(22387,1879,3,9,2,84410),-- Cokes
+(22387,1885,1,1,2,253229),-- High Grade Suede
+(22387,9628,1,1,2,23833),-- Leonard
+(22387,9630,1,1,2,15993),-- Orichalcum
+(22387,9629,1,1,2,13212),-- Adamantine
+(22387,9551,1,1,200,24310),-- Divine Stone
+(22387,6901,1,1,2,3039),-- Recipe: Shining Arrow (100%)
+(22387,6695,1,1,-1,91575),-- Demon Splinter Blade
+(22387,6694,1,1,-1,95026),-- Saint Spear Blade
+(22387,6901,1,1,-1,43181),-- Recipe: Shining Arrow (100%)
+(22388,57,53163,106471,0,700000),-- Adena
+(22388,9599,3,9,100,775900),-- Ancient Tome of the Demon
+(22388,5534,1,1,1,61346),-- Soul Bow Stave
+(22388,289,1,1,1,215),-- Soul Bow
+(22388,1895,3,9,2,212808),-- Metallic Fiber
+(22388,4040,1,1,2,89376),-- Mold Lubricant
+(22388,9628,1,1,2,35051),-- Leonard
+(22388,9630,1,1,2,23521),-- Orichalcum
+(22388,959,1,1,2,179),-- Scroll: Enchant Weapon (S)
+(22388,9551,1,1,200,35752),-- Divine Stone
+(22388,14166,1,1,200,21589),-- Life Stone - level 84
+(22388,14167,1,1,200,5391),-- Mid-Grade Life Stone - level 84
+(22388,14168,1,1,200,539),-- High-Grade Life Stone - level 84
+(22388,14169,1,1,200,108),-- Top-Grade Life Stone - level 84
+(22388,6696,1,1,-1,199205), -- Heavens Divider Edge
+(22388,6901,1,1,-1,90720),-- Recipe: Shining Arrow (100%)
+(22388,959,1,1,-1,3629),-- Scroll: Enchant Weapon (S)
+(22389,57,53163,106471,0,700000),-- Adena
+(22389,9599,3,9,100,775900),-- Ancient Tome of the Demon
+(22389,5537,1,1,1,61311), -- Soul Separator Head
+(22389,236,1,1,1,215), -- Soul Separator
+(22389,1879,3,9,2,155172),-- Cokes
+(22389,1885,2,6,2,116379),-- High Grade Suede
+(22389,9628,1,1,2,43813),-- Leonard
+(22389,9630,1,1,2,29401),-- Orichalcum
+(22389,9629,1,1,2,24288),-- Adamantine
+(22389,9551,1,1,200,44690),-- Divine Stone
+(22389,960,1,1,2,2234),-- Scroll: Enchant Armor (S)
+(22389,6891,1,1,2,572),-- Recipe: Dragon Hunter Axe (60%)
+(22389,5549,1,19,-1,907200),-- Metallic Thread
+(22389,1889,1,13,-1,864000),-- Compound Braid
+(22389,6697,1,1,-1,192395),-- Arcana Mace Head
+(22390,57,162563,325570,0,700000),-- Adena
+(22390,9599,9,27,100,790800),-- Ancient Tome of the Demon
+(22390,5537,1,1,1,187478), -- Soul Separator Head
+(22390,236,1,1,1,659), -- Soul Separator
+(22390,1873,52,156,2,65699),-- Silver Nugget
+(22390,1868,126,378,2,135569),-- Thread
+(22390,1864,504,1512,2,33892),-- Stem
+(22390,1866,528,1584,2,10784),-- Suede
+(22390,1865,375,1125,2,22776),-- Varnish
+(22390,9551,1,1,200,136653),-- Divine Stone
+(22390,6901,1,1,2,17082),-- Recipe: Shining Arrow (100%)
+(22390,6895,1,1,2,1750),-- Recipe: Demon Splinter (60%)
+(22390,6698,1,11,-1,908160), -- Sealed Tateossian Earring  Part
+(22390,6901,1,2,-1,277406),-- Recipe: Shining Arrow (100%)
+(22391,57,9065,18155,0,700000),-- Adena
+(22391,9599,1,1,100,793800),-- Ancient Tome of the Demon
+(22391,5541,1,1,1,10448), -- Tallum Glaive Edge
+(22391,305,1,1,1,37), -- Tallum Glaive
+(22391,1895,1,1,2,362878),-- Metallic Fiber
+(22391,4040,1,1,2,25401),-- Mold Lubricant
+(22391,9628,1,1,2,9961),-- Leonard
+(22391,9630,1,1,2,6685),-- Orichalcum
+(22391,959,1,1,2,51),-- Scroll: Enchant Weapon (S)
+(22391,9551,1,1,200,10161),-- Divine Stone
+(22391,1895,1,9,-1,883971),-- Metallic Fiber
+(22391,6699,1,1,-1,337173), -- Sealed Tateossian Ring Gem
+(22391,960,1,1,-1,6188),-- Scroll: Enchant Armor (S)
 (22418,57,3655,7487,0,700000),-- Adena
 (22418,1873,1,1,2,153680),-- Silver Nugget
 (22418,1868,3,9,2,128067),-- Thread
@@ -30484,6 +30684,310 @@ INSERT INTO `droplist` VALUES
 (22420,1895,1,3,-1,799855),-- Metallic Fiber
 (22420,5503,1,1,-1,94561),-- Sealed Majestic Boots Lining
 (22420,4042,1,1,-1,93316),-- Enria
+(22423,57,21420,42899,0,700000),-- Adena
+(22423,9599,2,6,100,468900),-- Ancient Tome of the Demon
+(22423,8342,1,1,1,6174),-- Flaming Dragon Skull Piece
+(22423,8349,1,1,1,6173),-- Doom Crusher Head
+(22423,5533,1,1,1,6174),-- Elysian Head
+(22423,5544,1,1,1,6168),-- Branch of the Mother Tree Head
+(22423,7902,1,1,1,22),-- Doom Crusher
+(22423,7895,1,1,1,22),-- Flaming Dragon Skull
+(22423,213,1,1,1,22),-- Branch of the Mother Tree
+(22423,164,1,1,1,22),-- Elysian
+(22423,1345,300,900,2,57162),-- Shining Arrow
+(22423,1895,2,6,2,183736),-- Metallic Fiber
+(22423,4040,1,1,2,51446),-- Mold Lubricant
+(22423,9628,1,1,2,20175),-- Leonard
+(22423,9630,1,1,2,13538),-- Orichalcum
+(22423,960,1,1,2,1029),-- Scroll: Enchant Armor (S)
+(22423,9551,1,1,200,20578),-- Divine Stone
+(22423,6901,1,1,-1,36552),-- Recipe: Shining Arrow (100%)
+(22423,6690,1,1,-1,79158),-- Imperial Staff Head
+(22423,960,1,1,-1,14621),-- Scroll: Enchant Armor (S)
+(22424,57,6360,12737,0,700000),-- Adena
+(22424,9599,1,1,100,556900),-- Ancient Tome of the Demon
+(22424,5495,1,1,1,13530),-- Sealed Shield of Nightmare Fragment
+(22424,5527,1,1,1,10653),-- Sealed Helm of Nightmare Design
+(22424,5528,1,1,1,10653),-- Sealed Majestic Circlet Design
+(22424,5317,1,1,1,88),-- Sealed Majestic Circlet
+(22424,5312,1,1,1,88),-- Sealed Helm of Nightmare
+(22424,5315,1,1,1,125),-- Sealed Shield of Nightmare
+(22424,1345,20,60,2,222761),-- Shining Arrow
+(22424,1895,1,1,2,190938),-- Metallic Fiber
+(22424,4040,1,1,2,13366),-- Mold Lubricant
+(22424,4043,1,1,2,22276), -- Asofe
+(22424,4042,1,1,2,11138), -- Enria
+(22424,6901,1,1,2,668),-- Recipe: Shining Arrow (100%)
+(22424,8698,1,1,2,95),-- Recipe: Naga Storm (60%)
+(22424,9551,1,1,200,5346),-- Divine Stone
+(22424,1895,1,7,-1,775208),-- Metallic Fiber
+(22424,4043,1,1,-1,361764), -- Asofe
+(22424,6691,1,1,-1,23458),-- Angel Slayer Blade
+(22425,57,6360,12737,0,700000),-- Adena
+(22425,9599,1,1,100,556900),-- Ancient Tome of the Demon
+(22425,5480,1,1,1,5998),-- Sealed Leather Armor of Nightmare Fabric
+(22425,5481,1,1,1,5998),-- Sealed Majestic Leather Armor Fabric
+(22425,5320,1,1,1,40),-- Sealed Leather Armor of Nightmare
+(22425,5323,1,1,1,40),-- Sealed Majestic Leather Armor
+(22425,1895,1,1,2,138864),-- Metallic Fiber
+(22425,4040,1,1,2,9720),-- Mold Lubricant
+(22425,9628,1,1,2,3812),-- Leonard
+(22425,9630,1,1,2,2558),-- Orichalcum
+(22425,959,1,1,2,19),-- Scroll: Enchant Weapon (S)
+(22425,6885,1,1,2,50),-- Recipe: Imperial Staff (60%)
+(22425,9551,1,1,200,3888),-- Divine Stone
+(22425,14166,1,1,200,2348),-- Life Stone - level 84
+(22425,14167,1,1,200,586),-- Mid-Grade Life Stone - level 84
+(22425,14168,1,1,200,59),-- High-Grade Life Stone - level 84
+(22425,14169,1,1,200,12),-- Top-Grade Life Stone - level 84
+(22425,6693,1,1,-1,23884),-- Dragon Hunter Axe Blade
+(22425,6901,1,1,-1,10853),-- Recipe: Shining Arrow (100%)
+(22426,57,6360,12737,0,700000),-- Adena
+(22426,9599,1,1,100,556900),-- Ancient Tome of the Demon
+(22426,5546,1,1,1,2684),-- Sword of Miracles Edge
+(22426,5529,1,1,1,2444),-- Dragon Slayer Edge
+(22426,5545,1,1,1,2444),-- Dark Legion\'s Edge Blade
+(22426,151,1,1,1,9),-- Sword of Miracles
+(22426,2500,1,1,1,9),-- Dark Legion\'s Edge
+(22426,81,1,1,1,9),-- Dragon Slayer
+(22426,1345,10,30,2,297015),-- Shining Arrow
+(22426,1895,1,1,2,127292),-- Metallic Fiber
+(22426,4040,1,1,2,8911),-- Mold Lubricant
+(22426,9628,1,1,2,3494),-- Leonard
+(22426,9630,1,1,2,2345),-- Orichalcum
+(22426,960,1,1,2,178),-- Scroll: Enchant Armor (S)
+(22426,8704,1,1,2,63),-- Recipe: Sobekk's Hurricane (60%)
+(22426,9551,1,1,200,3564),-- Divine Stone
+(22426,14166,1,1,200,2152),-- Life Stone - level 84
+(22426,14167,1,1,200,537),-- Mid-Grade Life Stone - level 84
+(22426,14168,1,1,200,54),-- High-Grade Life Stone - level 84
+(22426,14169,1,1,200,11),-- Top-Grade Life Stone - level 84
+(22426,4040,1,1,-1,217058),-- Mold Lubricant
+(22426,6694,1,1,-1,23884),-- Saint Spear Blade
+(22426,959,1,1,-1,434),-- Scroll: Enchant Weapon (S)
+(22427,57,6360,12737,0,700000),-- Adena
+(22427,9599,1,1,100,556900),-- Ancient Tome of the Demon
+(22427,5480,1,1,1,5998),-- Sealed Leather Armor of Nightmare Fabric
+(22427,5481,1,1,1,5998),-- Sealed Majestic Leather Armor Fabric
+(22427,5320,1,1,1,40),-- Sealed Leather Armor of Nightmare
+(22427,5323,1,1,1,40),-- Sealed Majestic Leather Armor
+(22427,4042,1,1,2,8100),-- Enria
+(22427,1867,4,12,2,81004),-- Animal Skin
+(22427,1872,1,3,2,216010),-- Animal Bone
+(22427,1882,1,1,2,108005),-- Leather
+(22427,1894,1,1,2,17054),-- Crafted Leather
+(22427,9551,1,1,200,3888),-- Divine Stone
+(22427,6901,1,1,2,486),-- Recipe: Shining Arrow (100%)
+(22427,14166,1,1,200,2348),-- Life Stone - level 84
+(22427,14167,1,1,200,586),-- Mid-Grade Life Stone - level 84
+(22427,14168,1,1,200,59),-- High-Grade Life Stone - level 84
+(22427,14169,1,1,200,11),-- Top-Grade Life Stone - level 84
+(22427,4042,1,1,-1,180882),-- Enria
+(22427,6695,1,1,-1,23016),-- Demon Splinter Blade
+(22427,6901,1,1,-1,10853),-- Recipe: Shining Arrow (100%)
+(22428,57,6360,12737,0,700000),-- Adena
+(22428,9599,1,1,100,556900),-- Ancient Tome of the Demon
+(22428,5503,1,1,1,11286),-- Sealed Majestic Boots Lining
+(22428,5515,1,1,1,11286),-- Sealed Majestic Gauntlets Design
+(22428,5514,1,1,1,11286),-- Sealed Gauntlets of Nightmare Design
+(22428,5502,1,1,1,11286),-- Sealed Boots of Nightmare Lining
+(22428,5318,1,1,1,99),-- Sealed Majestic Gauntlets
+(22428,5314,1,1,1,99),-- Sealed Boots of Nightmare
+(22428,5313,1,1,1,99),-- Sealed Gauntlets of Nightmare
+(22428,5319,1,1,1,99),-- Sealed Majestic Boots
+(22428,1345,20,60,2,222761),-- Shining Arrow
+(22428,1895,1,1,2,190938),-- Metallic Fiber
+(22428,4040,1,1,2,13365),-- Mold Lubricant
+(22428,4043,1,1,2,22276), -- Asofe
+(22428,4042,1,1,2,11138), -- Enria
+(22428,9551,1,1,200,5346),-- Divine Stone
+(22428,959,1,1,2,27),-- Scroll: Enchant Weapon (S)
+(22428,6859,1,1,2,1244),-- Recipe: Sealed Imperial Crusader Boots (60%)
+(22428,6696,1,1,-1,23831),-- Heavens Divider Edge
+(22428,6697,1,1,-1,23016),-- Arcana Mace Head
+(22428,6901,1,1,-1,10853),-- Recipe: Shining Arrow (100%)
+(22429,57,6360,12737,0,700000),-- Adena
+(22429,9599,1,1,100,556900),-- Ancient Tome of the Demon
+(22429,8342,1,1,1,1833),-- Flaming Dragon Skull Piece
+(22429,8349,1,1,1,1833),-- Doom Crusher Head
+(22429,5533,1,1,1,1833),-- Elysian Head
+(22429,5544,1,1,1,1831),-- Branch of the Mother Tree Head
+(22429,7902,1,1,1,6),-- Doom Crusher
+(22429,7895,1,1,1,6),-- Flaming Dragon Skull
+(22429,213,1,1,1,6),-- Branch of the Mother Tree
+(22429,164,1,1,1,6),-- Elysian
+(22429,1873,2,6,2,47522),-- Silver Nugget
+(22429,1868,18,54,2,33002),-- Thread
+(22429,1895,1,1,2,169723),-- Metallic Fiber
+(22429,1876,1,1,2,118807),-- Mithril Ore
+(22429,1345,40,120,2,99006),-- Shining Arrow
+(22429,4042,1,1,2,9901),-- Enria
+(22429,9551,1,1,200,4752),-- Divine Stone
+(22429,960,1,1,2,238),-- Scroll: Enchant Armor (S)
+(22429,8710,1,1,2,84),-- Recipe: Daimon Crystal (60%)
+(22429,1895,1,7,-1,775208),-- Metallic Fiber
+(22429,4042,1,1,-1,180882),-- Enria
+(22429,960,1,1,-1,4341), -- Scroll: Enchant Armor (S)
+(22430,57,6360,12737,0,700000),-- Adena
+(22430,9599,1,1,100,556900),-- Ancient Tome of the Demon
+(22430,6346,1,1,1,29007), -- Sealed Majestic Ring Gemstone
+(22430,6342,1,1,1,20182), -- Sealed Majestic Earring Gemstone
+(22430,6344,1,1,1,13061), -- Sealed Majestic Necklace Beads
+(22430,6328,1,1,1,178), -- Sealed Majestic Ring
+(22430,6327,1,1,1,119), -- Sealed Majestic Earring
+(22430,6326,1,1,1,89), -- Sealed Majestic Necklace
+(22430,1879,1,1,2,127292),-- Cokes
+(22430,1885,1,1,2,63646),-- High Grade Suede
+(22430,9628,1,1,2,5990),-- Leonard
+(22430,9630,1,1,2,4020),-- Orichalcum
+(22430,9629,1,1,2,3321),-- Adamantine
+(22430,9551,1,1,200,4469),-- Divine Stone
+(22430,6901,1,1,2,764),-- Recipe: Shining Arrow (100%)
+(22430,6869,1,1,2,1422),-- Recipe: Draconic Leather Boots (60%)
+(22430,6699,1,1,-1,236550), -- Sealed Tateossian Ring Gem
+(22430,6698,1,1,-1,213178), -- Sealed Tateossian Earring  Part
+(22430,6901,1,1,-1,10853),-- Recipe: Shining Arrow (100%)
+(22431,57,36725,73551,0,700000),-- Adena
+(22431,9599,3,9,100,536000),-- Ancient Tome of the Demon
+(22431,5541,1,1,1,42329), -- Tallum Glaive Edge
+(22431,305,1,1,1,149), -- Tallum Glaive
+(22431,1866,52,156,2,24502),-- Suede
+(22431,1871,24,72,2,80396),-- Charcoal
+(22431,1877,1,1,2,154360),-- Adamantite Nugget
+(22431,4040,1,1,2,77180),-- Mold Lubricant
+(22431,4041,1,1,2,33556),-- Mold Hardener
+(22431,9551,1,1,200,30872),-- Divine Stone
+(22431,959,1,1,2,154),-- Scroll: Enchant Weapon (S)
+(22431,8708,1,1,2,547),-- Recipe: Cabrio's Hand (60%)
+(22431,6700,1,1,-1,750268), -- Sealed Tateossian Necklace Chain
+(22431,6901,1,1,1,62670),-- Recipe: Shining Arrow (100%)
+(22431,959,1,1,-1,2507),-- Scroll: Enchant Weapon (S)
+(22432,57,5529,11073,0,700000),-- Adena
+(22432,9599,1,1,100,484100),-- Ancient Tome of the Demon
+(22432,5537,1,1,1,6377), -- Soul Separator Head
+(22432,236,1,1,1,22), -- Soul Separator
+(22432,1870,1,3,2,140843), -- Coal
+(22432,1879,1,1,2,70421), -- Cokes
+(22432,1865,1,3,2,211264), -- Varnish
+(22432,1875,1,1,2,28168), -- Stone of Purity
+(22432,4040,1,1,2,8450), -- Mold Lubricant
+(22432,960,1,1,2,169),-- Scroll: Enchant Armor (S)
+(22432,9551,1,1,200,3380),-- Divine Stone
+(22432,14166,1,1,200,2041),-- Life Stone - level 84
+(22432,14167,1,1,200,510),-- Mid-Grade Life Stone - level 84
+(22432,14168,1,1,200,51),-- High-Grade Life Stone - level 84
+(22432,14169,1,1,200,11),-- Top-Grade Life Stone - level 84
+(22432,1875,1,1,-1,629004), -- Stone of Purity
+(22432,4040,1,1,-1,188701), -- Mold Lubricant
+(22432,6701,1,1,-1,50233), -- Sealed Imperial Crusader Breastplate Part
+(22433,57,5529,11073,0,700000),-- Adena
+(22433,9599,1,1,100,484100),-- Ancient Tome of the Demon
+(22433,5480,1,1,1,5215),-- Sealed Leather Armor of Nightmare Fabric
+(22433,5481,1,1,1,5215),-- Sealed Majestic Leather Armor Fabric
+(22433,5320,1,1,1,35),-- Sealed Leather Armor of Nightmare
+(22433,5323,1,1,1,35),-- Sealed Majestic Leather Armor
+(22433,1866,1,3,2,129106),-- Suede
+(22433,1885,1,1,2,48415),-- High Grade Suede
+(22433,1871,4,12,2,72622),-- Charcoal
+(22433,4041,1,1,2,5052),-- Mold Hardener
+(22433,5220,1,1,2,23239),-- Metal Hardener
+(22433,9551,1,1,200,4648),-- Divine Stone
+(22433,6901,1,1,2,581),-- Recipe: Shining Arrow (100%)
+(22433,6867,1,1,2,1082),-- Recipe: Draconic Leather Gloves (60%)
+(22433,6901,1,1,-1,9435),-- Recipe: Shining Arrow (100%)
+(22433,6702,1,1,-1,64664),-- Sealed Imperial Crusader Gaiters Pattern
+(22434,57,5529,11073,0,700000),-- Adena
+(22434,9599,1,1,100,484100),-- Ancient Tome of the Demon
+(22434,5487,1,1,1,5232), -- Sealed Robe of Nightmare Fabric
+(22434,5488,1,1,1,5232), -- Sealed Majestic Robe Fabric
+(22434,5326,1,1,1,35), -- Sealed Robe of Nightmare
+(22434,5329,1,1,1,35), -- Sealed Majestic Robe
+(22434,1345,50,150,2,77464),-- Shining Arrow
+(22434,1869,9,27,2,32276),-- Iron Ore
+(22434,1864,4,12,2,145244),-- Stem
+(22434,4043,1,1,2,19366),-- Asofe
+(22434,1880,1,1,2,58098),-- Steel
+(22434,5550,1,1,2,7746),-- Durable Metal Plate
+(22434,9551,1,1,200,4648),-- Divine Stone
+(22434,959,1,1,2,23),-- Scroll: Enchant Weapon (S)
+(22434,8694,1,1,2,82),-- Recipe: Barakiel's Axe (60%)
+(22434,4043,1,1,-1,314502),-- Asofe
+(22434,6703,1,1,-1,134336),-- Sealed Imperial Crusader Gauntlets Design
+(22434,960,1,1,-1,3774),-- Scroll: Enchant Armor (S)
+(22435,57,5529,11073,0,700000),-- Adena
+(22435,9599,1,1,100,484100),-- Ancient Tome of the Demon
+(22435,5503,1,1,1,9812),-- Sealed Majestic Boots Lining
+(22435,5515,1,1,1,9812),-- Sealed Majestic Gauntlets Design
+(22435,5514,1,1,1,9812),-- Sealed Gauntlets of Nightmare Design
+(22435,5502,1,1,1,9812),-- Sealed Boots of Nightmare Lining
+(22435,5318,1,1,1,86),-- Sealed Majestic Gauntlets
+(22435,5314,1,1,1,86),-- Sealed Boots of Nightmare
+(22435,5313,1,1,1,86),-- Sealed Gauntlets of Nightmare
+(22435,5319,1,1,1,86),-- Sealed Majestic Boots
+(22435,1895,1,1,2,189707),-- Metallic Fiber
+(22435,4040,1,1,2,13279),-- Mold Lubricant
+(22435,9628,1,1,2,5208),-- Leonard
+(22435,9630,1,1,2,3494),-- Orichalcum
+(22435,9551,1,1,200,5312),-- Divine Stone
+(22435,960,1,1,2,266),-- Scroll: Enchant Armor (S)
+(22435,8696,1,1,2,94),-- Recipe: Behemoth's Tuning Fork (60%)
+(22435,1895,1,5,-1,898577),-- Metallic Fiber
+(22435,6704,1,1,-1,134336), -- Sealed Imperial Crusader Boots Design
+(22435,6901,1,1,-1,9435),-- Recipe: Shining Arrow (100%)
+(22436,57,5529,11073,0,700000),-- Adena
+(22436,9599,1,1,100,484100),-- Ancient Tome of the Demon
+(22436,5546,1,1,1,2333),-- Sword of Miracles Edge
+(22436,5529,1,1,1,2124),-- Dragon Slayer Edge
+(22436,5545,1,1,1,2124),-- Dark Legion\'s Edge Blade
+(22436,151,1,1,1,7),-- Sword of Miracles
+(22436,2500,1,1,1,7),-- Dark Legion\'s Edge
+(22436,81,1,1,1,7),-- Dragon Slayer
+(22436,1873,2,6,2,58098),-- Silver Nugget
+(22436,5549,1,1,2,58098),-- Metallic Thread
+(22436,1889,1,1,2,38732),-- Compound Braid
+(22436,1868,3,9,2,193659),-- Thread
+(22436,4044,1,1,2,19366),-- Thons
+(22436,9551,1,1,200,4648),-- Divine Stone
+(22436,6901,1,1,2,581),-- Recipe: Shining Arrow (100%)
+(22436,6875,1,1,2,1082),-- Recipe: Sealed Major Arcana Gloves (60%)
+(22436,6706,1,1,-1,153055),-- Sealed Imperial Crusader Helmet Pattern
+(22436,6705,1,1,-1,131582),-- Sealed Imperial Crusader Shield Part
+(22436,6901,1,1,-1,9435),-- Recipe: Shining Arrow (100%)
+(22437,57,5529,11073,0,700000),-- Adena
+(22437,9599,1,1,100,484100),-- Ancient Tome of the Demon
+(22437,8342,1,1,1,1594),-- Flaming Dragon Skull Piece
+(22437,8349,1,1,1,1593),-- Doom Crusher Head
+(22437,5533,1,1,1,1594),-- Elysian Head
+(22437,5544,1,1,1,1592),-- Branch of the Mother Tree Head
+(22437,7902,1,1,1,6),-- Doom Crusher
+(22437,7895,1,1,1,6),-- Flaming Dragon Skull
+(22437,213,1,1,1,6),-- Branch of the Mother Tree
+(22437,164,1,1,1,6),-- Elysian
+(22437,1345,20,60,2,221324),-- Shining Arrow
+(22437,1895,1,1,2,189706),-- Metallic Fiber
+(22437,4040,1,1,2,13279),-- Mold Lubricant
+(22437,9628,1,1,2,5208),-- Leonard
+(22437,9630,1,1,2,3495),-- Orichalcum
+(22437,9551,1,1,200,5312),-- Divine Stone
+(22437,959,1,1,2,27),-- Scroll: Enchant Weapon (S)
+(22437,13099,1,1,-1,197372),-- Sealed Arcana Sickle Piece
+(22437,959,1,1,-1,566),-- Scroll: Enchant Weapon (Grade S)
+(22438,57,5529,11073,0,700000),-- Adena
+(22438,9599,1,1,100,484100),-- Ancient Tome of the Demon
+(22438,5522,1,1,1,3957),-- Sealed Armor of Nightmare Pattern
+(22438,5523,1,1,1,3957),-- Sealed Majestic Plate Armor Pattern
+(22438,5311,1,1,1,26),-- Sealed Armor of Nightmare
+(22438,5316,1,1,1,26),-- Sealed Majestic Plate Armor
+(22438,1895,1,1,2,189707),-- Metallic Fiber
+(22438,4040,1,1,2,13279),-- Mold Lubricant
+(22438,9628,1,1,2,5208),-- Leonard
+(22438,9630,1,1,2,3494),-- Orichalcum
+(22438,9551,1,1,200,5312),-- Divine Stone
+(22438,960,1,1,2,266),-- Scroll: Enchant Armor (S)
+(22438,8706,1,1,2,94),-- Recipe: Themis' Tongue (60%)
+(22438,6707,1,1,-1,46749),-- Sealed Draconic Leather Armor Part
+(22438,6708,1,1,-1,134336),-- Sealed Draconic Leather Gloves Fabric
+(22438,6901,1,1,-1,9435),-- Recipe: Shining Arrow (100%)
 (22449,57,20620,41297,0,700000),-- Adena
 (22449,9599,2,4,100,601900),-- Ancient Tome of the Demon
 (22449,1895,3,9,2,137570),-- Metallic Fiber
@@ -30511,7 +31015,8 @@ INSERT INTO `droplist` VALUES
 (22450,4042,1,1,-1,28068),-- Enria
 (22450,960,1,1,-1,674); -- Scroll: Enchant Armor (S)
 
--- Rim Kamaloka
+
+-- RimKamaloka
 INSERT INTO `droplist` VALUES
 (22452,956,1,1,1,9200), -- Scroll: Enchant Armor (D)
 (22453,956,1,1,1,11100), -- Scroll: Enchant Armor (D)
@@ -30922,22 +31427,22 @@ INSERT INTO `droplist` VALUES
 (22547,5481,1,1,-1,39387),-- Sealed Majestic Leather Armor Fabric
 (22547,5277,1,1,-1,3901),-- Recipe: Greater Spiritshot (S) Compressed Package(100%)
 (22548,57,9493,19381,0,700000),-- Adena
-(22548,1879,1,1,2,165966),-- Cokes
-(22548,1345,60,180,2,110643),-- Shining Arrow
-(22548,1885,1,1,2,82983),-- High Grade Suede
+(22548,5514,1,1,1,14715),-- Sealed Gloves of Nightmare Design
 (22548,5503,1,1,1,14715),-- Sealed Majestic Boots Lining
-(22548,5515,1,1,1,14715),-- Sealed Majestic Gauntlets Design
-(22548,5514,1,1,1,14715),-- Sealed Gauntlets of Nightmare Design
+(22548,5515,1,1,1,14715),-- Sealed Majestic Gloves Design
 (22548,5502,1,1,1,14715),-- Sealed Boots of Nightmare Lining
+(22548,5318,1,1,1,129),-- Sealed Majestic Gloves
+(22548,5314,1,1,1,129),-- Sealed Boots of Nightmare
+(22548,5313,1,1,1,129),-- Sealed Gloves of Nightmare
+(22548,5319,1,1,1,129),-- Sealed Majestic Boots
+(22548,1345,60,180,2,110643),-- Shining Arrow
+(22548,1879,1,1,2,165966),-- Cokes
+(22548,1885,1,1,2,82983),-- High Grade Suede
 (22548,9628,1,1,2,7810),-- Leonard
 (22548,9630,1,1,2,5241),-- Orichalcum
 (22548,9629,1,1,2,4330),-- Adamantine
 (22548,6877,1,1,2,1854),-- Recipe: Sealed Major Arcana Boots (60%)
-(22548,5319,1,1,1,129),-- Sealed Majestic Boots
-(22548,5318,1,1,1,129),-- Sealed Majestic Gauntlets
-(22548,5314,1,1,1,129),-- Sealed Boots of Nightmare
-(22548,5313,1,1,1,129),-- Sealed Gauntlets of Nightmare
-(22548,1894,1,1,-1,496499),-- Crafted Leather
+(22548,1894,1,2,-1,496499),-- Crafted Leather
 (22548,5488,1,1,-1,63720),-- Sealed Majestic Robe Fabric
 (22549,57,9493,19381,0,700000),-- Adena
 (22549,5495,1,1,1,17641),-- Sealed Shield of Nightmare Fragment
@@ -30956,18 +31461,18 @@ INSERT INTO `droplist` VALUES
 (22549,1808,1,1,-1,6289),-- Recipe: Soulshot: S Grade
 (22549,5282,1,1,-1,6289),-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%)
 (22550,57,8218,16827,0,700000),-- Adena
-(22550,1894,1,1,2,42430),-- Crafted Leather
-(22550,4039,1,1,2,40308),-- Mold Glue
-(22550,4044,1,1,2,40308),-- Thons
-(22550,4041,1,1,2,10515),-- Mold Hardener
 (22550,8331,1,1,1,3438),-- Infernal Master Blade
 (22550,5548,1,1,1,3428),-- Tallum Blade Edge
-(22550,5547,1,1,1,3428),-- Elemental Sword Edge
-(22550,1808,1,1,2,537),-- Recipe: Soulshot: S Grade
-(22550,7884,1,1,1,14),-- Infernal Master
-(22550,150,1,1,1,14),-- Elemental Sword
+(22550,5547,1,1,2,3428),-- Elemental Sword Edge
 (22550,80,1,1,1,14),-- Tallum Blade
-(22550,1894,1,1,-1,574568),-- Crafted Leather
+(22550,150,1,1,1,14),-- Elemental Sword
+(22550,7884,1,1,1,14),-- Infernal Master
+(22550,4039,1,1,2,40308),-- Mold Glue
+(22550,1894,1,1,2,42430),-- Crafted Leather
+(22550,4044,1,1,2,40308),-- Thons
+(22550,4041,1,1,2,10515),-- Mold Hardener
+(22550,1808,1,1,2,537),-- Recipe: Soulshot: S Grade
+(22550,1894,1,2,-1,574568),-- Crafted Leather
 (22550,5502,1,1,-1,276561),-- Sealed Boots of Nightmare Lining
 (22551,57,7866,16108,0,700000),-- Adena
 (22551,5543,1,1,1,2463),-- Dasparion\'s Staff Edge
@@ -31017,42 +31522,638 @@ INSERT INTO `droplist` VALUES
 (22581,5527,1,1,-1,294709),-- Sealed Helm of Nightmare Design
 (22581,5277,1,1,-1,10955),-- Recipe: Greater Spiritshot (S) Compressed Package(100%)
 (22593,57,8705,17772,0,700000),-- Adena
-(22593,1895,1,1,2,365240),-- Metallic Fiber
-(22593,4040,1,1,2,25567),-- Mold Lubricant
 (22593,5495,1,1,1,16176),-- Sealed Shield of Nightmare Fragment
 (22593,5527,1,1,1,12736),-- Sealed Helm of Nightmare Design
 (22593,5528,1,1,1,12736),-- Sealed Majestic Circlet Design
+(22593,5317,1,1,1,105),-- Sealed Majestic Circlet
+(22593,5312,1,1,1,105),-- Sealed Helm of Nightmare
+(22593,5315,1,1,1,150),-- Sealed Shield of Nightmare
+(22593,1895,1,1,2,365240),-- Metallic Fiber
+(22593,4040,1,1,2,25567),-- Mold Lubricant
 (22593,9628,1,1,2,10026),-- Leonard
 (22593,9630,1,1,2,6728),-- Orichalcum
 (22593,6901,1,1,2,1278),-- Recipe: Shining Arrow (100%)
-(22593,5315,1,1,1,150),-- Sealed Shield of Nightmare
-(22593,5317,1,1,1,105),-- Sealed Majestic Circlet
-(22593,5312,1,1,1,105),-- Sealed Helm of Nightmare
 (22593,1894,1,1,-1,455270),-- Crafted Leather
 (22593,5488,1,1,-1,58428),-- Sealed Majestic Robe Fabric
-(22593,3036,1,1,-1,5767),-- Recipe: Spiritshot S
+(22593,5162,1,1,-1,5767),-- Recipe: Spiritshot (S)
 (22596,57,8654,17721,0,700000),-- Adena
+(22596,5538,1,1,1,8732),-- Dragon Grinder Edge
+(22596,270,1,1,1,31),-- Dragon Grinder
 (22596,1895,1,1,2,363809),-- Metallic Fiber
 (22596,4040,1,1,2,25467),-- Mold Lubricant
 (22596,9628,1,1,2,9987),-- Leonard
-(22596,5538,1,1,1,8732),-- Dragon Grinder Edge
 (22596,9630,1,1,2,6702),-- Orichalcum
 (22596,6851,1,1,2,1718),-- Recipe: Sealed Tateossian Necklace(70%)
-(22596,270,1,1,1,31),-- Dragon Grinder
-(22596,1894,1,1,-1,453485),-- Crafted Leather
-(22596,5487,1,1,-1,58199),-- Sealed Nightmare Robe Fabric
+(22596,1894,1,2,-1,453485),-- Crafted Leather
+(22596,5487,1,1,-1,58199),-- Sealed Robe of Nightmare Fabric
 (22597,57,8894,18157,0,700000),-- Adena
-(22597,1895,1,1,2,310967),-- Metallic Fiber
+(22597,5534,1,1,1,8965),-- Soul Bow Stave
+(22597,289,1,1,1,31),-- Soul Bow
 (22597,1345,60,180,2,120931),-- Shining Arrow
+(22597,1895,1,1,2,310967),-- Metallic Fiber
 (22597,4040,1,1,2,21768),-- Mold Lubricant
-(22597,5534,1,1,2,8965),-- Soul Bow Stave
 (22597,9628,1,1,2,8536),-- Leonard
 (22597,9630,1,1,2,5729),-- Orichalcum
 (22597,6853,1,1,2,507),-- Recipe: Sealed Imperial Crusader Breastplate (60%)
-(22597,289,1,1,1,31),-- Soul Bow
 (22597,5488,1,1,-1,59695),-- Sealed Majestic Robe Fabric
-(22597,3957,1,1,-1,5892),-- Recipe: Blessed Spiritshot S
-(22597,3036,1,1,-1,5892);-- Recipe: Spiritshot S
+(22557,3957,1,1,-1,5892),-- Recipe: Blessed Spiritshot S
+(22597,5162,1,1,-1,5892);-- Recipe: Spiritshot (S)
+
+-- Gracia Epilog : Stakato Nest (unknown amounts of adena and mats)
+INSERT INTO `droplist` VALUES 
+-- Spiked Stakato
+(22617,57,4600,7000,0,700000),-- Adena
+(22617,9443,1,1,1,4),-- Dynasty Blade
+(22617,9442,1,1,1,4),-- Dynasty Sword
+(22617,9444,1,1,1,4),-- Dynasty Phantom
+(22617,9618,1,1,1,800),-- Dynasty Phantom Piece
+(22617,9616,1,1,1,800),-- Dynasty Sword Piece
+(22617,9617,1,1,1,800),-- Dynasty Blade Piece
+(22617,1345,60,180,2,100000),-- Shining Arrow
+(22617,1879,1,1,2,160000),-- Cokes
+(22617,1885,1,1,2,80000),-- High Grade Suede
+(22617,9628,1,1,2,8000),-- Leonard
+(22617,9629,1,1,2,4000),-- Adamantine
+(22617,9630,1,1,2,5000),-- Orichalcum
+(22617,9573,1,1,200,6000),-- Life Stone: level 80
+(22617,9574,1,1,200,2000),-- Mid-Grade Life Stone: level 80
+(22617,9575,1,1,200,300),-- High-Grade Life Stone: level 80
+(22617,9537,1,1,-1,70000),-- Sealed Dynasty Leather Helmet Piece
+(22617,9617,1,1,-1,30000),-- Dynasty Blade Piece
+(22617,9630,1,1,-1,60000),-- Orichalcum
+-- Spiked Stakato Worker
+(22618,57,4700,7200,0,700000),-- Adena
+(22618,10547,1,1,1,600),-- Dynasty Crusher Fragment
+(22618,10546,1,1,1,600),-- Dynasty Staff Fragment
+(22618,9623,1,1,1,600),-- Dynasty Mace Piece
+(22618,9622,1,1,1,600),-- Dynasty Cudgel Piece
+(22618,10253,1,1,1,3),-- Dynasty Crusher
+(22618,10252,1,1,1,3),-- Dynasty Staff
+(22618,9449,1,1,1,3),-- Dynasty Mace
+(22618,9448,1,1,1,3),-- Dynasty Cudgel
+(22618,1879,1,1,2,160000),-- Cokes
+(22618,1885,1,1,2,80000),-- High Grade Suede
+(22618,9628,1,1,2,8000),-- Leonard
+(22618,9629,1,1,2,5000),-- Adamantine
+(22618,9630,1,1,2,5000),-- Orichalcum
+(22618,9625,1,1,100,50), -- Giant's Codex - Oblivion
+(22618,9573,1,1,200,7000),-- Life Stone: level 80
+(22618,9574,1,1,200,1000),-- Mid-Grade Life Stone: level 80
+(22618,9575,1,1,200,200),-- High-Grade Life Stone: level 80
+(22618,5162,1,1,-1,5000),-- Recipe: Spiritshot (S)
+(22618,9623,1,1,-1,30000),-- Dynasty Mace Piece
+(22618,1808,1,1,-1,5000),-- Recipe: Soulshot: S Grade
+-- Spiked Stakato Guard
+(22619,57,4600,7600,0,700000),-- Adena
+(22619,9624,1,1,1,2000),-- Dynasty Bagh-Nakh Piece
+(22619,9450,1,1,1,12),-- Dynasty Bagh-Nakh
+(22619,1879,1,1,2,160000),-- Cokes
+(22619,1885,1,1,2,80000),-- High Grade Suede
+(22619,9628,1,1,2,8000),-- Leonard
+(22619,9629,1,1,2,4000),-- Adamantine
+(22619,9630,1,1,2,5000),-- Orichalcum
+(22619,9626,1,1,100,40),-- Giant's Codex - Discipline
+(22619,9573,1,1,200,7000),-- Life Stone: level 80
+(22619,9574,1,1,200,2000),-- Mid-Grade Life Stone: level 80
+(22619,9575,1,1,200,200),-- High-Grade Life Stone: level 80
+(22619,9624,1,1,-1,30000),-- Dynasty Bagh-Nakh Piece
+(22619,9628,1,1,-1,90000),-- Leonard
+(22619,9630,1,1,-1,60000),-- Orichalcum
+-- Female Spiked Stakato
+(22620,57,4600,7600,0,700000),-- Adena
+(22620,9619,1,1,1,2000),-- Dynasty Bow Piece
+(22620,9445,1,1,1,12),-- Dynasty Bow
+(22620,1895,1,1,2,320000),-- Metallic Fiber
+(22620,4040,1,1,2,20000),-- Mold Lubricant
+(22620,4043,1,1,2,40000),-- Asofe
+(22620,4042,1,1,2,20000),-- Enria
+(22620,9546,1,1,200,6000),-- Fire Stone
+(22620,9573,1,1,200,8000),-- Life Stone: level 80
+(22620,9574,1,1,200,2000),-- Mid-Grade Life Stone: level 80
+(22620,9575,1,1,200,200),-- High-Grade Life Stone: level 80
+(22620,9992,1,1,-1,80000),-- Sealed Dynasty Necklace Gemstone
+(22620,9537,1,1,-1,70000),-- Sealed Dynasty Leather Helmet Piece
+(22620,3957,1,1,-1,5000),-- Recipe: Blessed Spiritshot S
+-- Male Spiked Stakato
+(22621,57,4600,7600,0,700000),-- Adena
+(22621,9620,1,1,1,2000),-- Dynasty Knife Piece
+(22621,9446,1,1,1,12),-- Dynasty Knife
+(22621,1895,1,1,2,300000),-- Metallic Fiber
+(22621,4040,1,1,2,20000),-- Mold Lubricant
+(22621,4043,1,1,2,30000),-- Asofe
+(22621,4042,1,1,2,20000),-- Enria
+(22621,9547,1,1,200,6000),-- Water Stone
+(22621,9573,1,1,200,7000),-- Life Stone: level 80
+(22621,9574,1,1,200,2000),-- Mid-Grade Life Stone: level 80
+(22621,9575,1,1,200,100),-- High-Grade Life Stone: level 80
+(22621,9622,1,1,-1,30000),-- Dynasty Cudgel Piece
+(22621,5157,1,1,-1,5000),-- Recipe: Soulshot (S) Compressed Package (100%)
+(22621,9628,1,1,-1,90000),-- Leonard
+-- Male Spiked Stakato
+(22622,57,4600,7600,0,700000),-- Adena
+(22622,9621,1,1,1,3000),-- Dynasty Halberd Piece
+(22622,9447,1,1,1,12),-- Dynasty Halberd
+(22622,1895,1,1,2,220000),-- Metallic Fiber
+(22622,4040,1,1,2,30000),-- Mold Lubricant
+(22622,9628,1,1,2,10000),-- Leonard
+(22622,9630,1,1,2,9000),-- Orichalcum
+(22622,9548,1,1,200,9000),-- Earth Stone
+(22622,9573,1,1,200,10000),-- Life Stone: level 80
+(22622,9574,1,1,200,3000),-- Mid-Grade Life Stone: level 80
+(22622,9575,1,1,200,500),-- High-Grade Life Stone: level 80
+(22622,1894,1,1,-1,600000),-- Crafted Leather
+(22622,5162,1,1,-1,5000),-- Recipe: Spiritshot (S) Compressed Package (100%)
+(22622,9993,1,1,-1,150000),-- Sealed Dynasty Ring Gemstone
+-- Spiked Stakato Sorcerer
+(22623,57,4600,7600,0,700000),-- Adena
+(22623,9515,1,1,1,20),-- Sealed Dynasty Gaiter
+(22623,9514,1,1,1,12),-- Sealed Dynasty Breast Plate
+(22623,9531,1,1,1,7000),-- Sealed Dynasty Gaiter Piece
+(22623,9530,1,1,1,3000),-- Sealed Dynasty Breast Plate Piece
+(22623,1879,1,1,2,150000),-- Cokes
+(22623,1885,1,1,2,80000),-- High Grade Suede
+(22623,9628,1,1,2,8000),-- Leonard
+(22623,9629,1,1,2,5000),-- Adamantine
+(22623,9630,1,1,2,4000),-- Orichalcum
+(22623,9549,1,1,200,8000),-- Wind Stone
+(22623,9573,1,1,200,8000),-- Life Stone: level 80
+(22623,9574,1,1,200,2000),-- Mid-Grade Life Stone: level 80
+(22623,9575,1,1,200,200),-- High-Grade Life Stone: level 80
+(22623,5167,1,1,-1,5000),-- Recipe: Blessed Spiritshot (S) Compressed Package (100%)
+(22623,9530,1,1,-1,60000),-- Sealed Dynasty Breast Plate Piece
+(22623,9992,1,1,-1,80000),-- Sealed Dynasty Necklace Gemstone
+-- Cannibalistic Stakato Follower
+(22624,57,4600,7600,0,700000),-- Adena
+(22624,9520,1,1,1,20),-- Sealed Dynasty Leather Leggings
+(22624,9519,1,1,1,12),-- Sealed Dynasty Leather Armor
+(22624,9536,1,1,1,5000),-- Sealed Dynasty Leather Leggings Piece
+(22624,9535,1,1,1,4000),-- Sealed Dynasty Leather Armor Piece
+(22624,4039,1,1,2,40000),-- Mold Glue
+(22624,1894,1,1,2,40000),-- Crafted Leather
+(22624,4044,1,1,2,40000),-- Thons
+(22624,4041,1,1,2,9000),-- Mold Hardener
+(22624,9550,1,1,200,3000),-- Dark Stone
+(22624,9573,1,1,200,7000),-- Life Stone: level 80
+(22624,9574,1,1,200,1000),-- Mid-Grade Life Stone: level 80
+(22624,9575,1,1,200,300),-- High-Grade Life Stone: level 80
+(22624,9535,1,1,-1,60000),-- Sealed Dynasty Leather Armor Piece
+(22624,1894,1,1,-1,600000),-- Crafted Leather
+-- Cannibalistic Stakato Leader
+(22625,57,6000,9000,0,700000),-- Adena
+(22625,9524,1,1,1,12),-- Sealed Dynasty Tunic
+(22625,9525,1,1,1,20),-- Sealed Dynasty Stocking
+(22625,9541,1,1,1,6000),-- Sealed Dynasty Stocking Piece
+(22625,9540,1,1,1,4000),-- Sealed Dynasty Tunic Piece
+(22625,1895,1,1,2,320000),-- Metallic Fiber
+(22625,4040,1,1,2,20000),-- Mold Lubricant
+(22625,4043,1,1,2,40000),-- Asofe
+(22625,4042,1,1,2,20000),-- Enria
+(22625,9551,1,1,200,3000),-- Divine Stone
+(22625,9573,1,1,200,9000),-- Life Stone: level 80
+(22625,9574,1,1,200,2000),-- Mid-Grade Life Stone: level 80
+(22625,9575,1,1,200,300),-- High-Grade Life Stone: level 80
+(22625,9619,1,1,-1,30000),-- Dynasty Bow Piece
+(22625,5277,1,1,-1,5000),-- Recipe: Greater Spiritshot (S) Compressed Package(100%)
+(22625,5272,1,1,-1,5000),-- Recipe: Greater Soulshot (S) Compressed Package(100%)
+-- Cannibalistic Stakato Leader - missing sniffs
+(22626,57,6000,9000,0,700000),-- Adena
+(22626,9454,1,1,1,36),-- Sealed Dynasty Ring
+(22626,9452,1,1,1,28),-- Sealed Dynasty Earring
+(22626,9453,1,1,1,20),-- Sealed Dynasty Necklace
+(22626,9993,1,1,1,5000),-- Sealed Dynasty Ring Gemstone
+(22626,9991,1,1,1,4000),-- Sealed Dynasty Earring Gemstone
+(22626,9992,1,1,1,3000),-- Sealed Dynasty Necklace Gemstone
+(22626,1879,1,1,2,150000),-- Cokes
+(22626,1885,1,1,2,80000),-- High Grade Suede
+(22626,9628,1,1,2,8000),-- Leonard
+(22626,9629,1,1,2,5000),-- Adamantine
+(22626,9630,1,1,2,4000),-- Orichalcum
+(22626,9573,1,1,200,9000),-- Life Stone: level 80
+(22626,9574,1,1,200,2000),-- Mid-Grade Life Stone: level 80
+(22626,9575,1,1,200,300),-- High-Grade Life Stone: level 80
+(22626,959,1,1,2,40),-- Scroll: Enchant Weapon (S)
+(22626,9624,1,1,-1,30000),-- Dynasty Bagh-Nakh Piece
+(22626,960,1,1,-1,5000),-- Scroll: Enchant Armor (S)
+(22626,9630,1,1,-1,60000),-- Orichalcum
+-- Spiked Stakato Sorcerer
+(22627,57,4600,7600,0,700000),-- Adena
+(22627,9543,1,1,1,4000),-- Sealed Dynasty Glove Piece
+(22627,9534,1,1,1,4000),-- Sealed Dynasty Boot Piece
+(22627,9539,1,1,1,4000),-- Sealed Dynasty Leather Boots Piece
+(22627,9544,1,1,1,4000),-- Sealed Dynasty Shoes Piece
+(22627,9538,1,1,1,4000),-- Sealed Dynasty Leather Glove Piece
+(22627,9533,1,1,1,4000),-- Sealed Dynasty Gauntlet Piece
+(22627,9527,1,1,1,16),-- Sealed Dynasty Gloves
+(22627,9518,1,1,1,16),-- Sealed Dynasty Boots
+(22627,9523,1,1,1,16),-- Sealed Dynasty Leather Boots
+(22627,9528,1,1,1,16),-- Sealed Dynasty Shoes
+(22627,9522,1,1,1,16),-- Sealed Dynasty Leather Glove
+(22627,9517,1,1,1,16),-- Sealed Dynasty Gauntlet
+(22627,4039,1,1,2,30000),-- Mold Glue
+(22627,1894,1,1,2,40000),-- Crafted Leather
+(22627,4044,1,1,2,40000),-- Thons
+(22627,4041,1,1,2,9000),-- Mold Hardener
+(22627,960,1,1,2,300),-- Scroll: Enchant Armor (S)
+(22627,9573,1,1,200,7000),-- Life Stone: level 80
+(22627,9574,1,1,200,2000),-- Mid-Grade Life Stone: level 80
+(22627,9575,1,1,200,200),-- High-Grade Life Stone: level 80
+(22627,1894,1,1,-1,600000),-- Crafted Leather
+(22627,9624,1,1,-1,30000),-- Dynasty Bagh-Nakh Piece
+(22627,6901,1,1,-1,5000),-- Recipe: Shining Arrow (100%)
+-- Spiked Stakato Drone
+(22628,57,4600,7600,0,700000),-- Adena
+(22628,9545,1,1,1,3000),-- Sealed Dynasty Shield Piece
+(22628,9537,1,1,1,3000),-- Sealed Dynasty Leather Helmet Piece
+(22628,9542,1,1,1,3000),-- Sealed Dynasty Circlet Piece
+(22628,9532,1,1,1,3000),-- Sealed Dynasty Helmet Piece
+(22628,10114,1,1,1,3000),-- Sealed Dynasty Sigil Piece
+(22628,9516,1,1,1,13),-- Sealed Dynasty Helmet
+(22628,9529,1,1,1,20),-- Sealed Dynasty Shield
+(22628,9521,1,1,1,13),-- Sealed Dynasty Leather Helmet
+(22628,13886,1,1,1,20),-- Sealed Dynasty Sigil
+(22628,9526,1,1,1,13),-- Sealed Dynasty Circlet
+(22628,4039,1,1,2,40000),-- Mold Glue
+(22628,1894,1,1,2,40000),-- Crafted Leather
+(22628,4044,1,1,2,40000),-- Thons
+(22628,4041,1,1,2,9000),-- Mold Hardener
+(22628,5272,1,1,2,400),-- Recipe: Greater Soulshot (S) Compressed Package(100%)
+(22628,9573,1,1,200,7000),-- Life Stone: level 80
+(22628,9574,1,1,200,2000),-- Mid-Grade Life Stone: level 80
+(22628,9575,1,1,200,100),-- High-Grade Life Stone: level 80
+(22628,9624,1,1,-1,30000),-- Dynasty Bagh-Nakh Piece
+(22628,9530,1,1,-1,60000),-- Sealed Dynasty Breast Plate Piece
+(22628,9992,1,1,-1,80000),-- Sealed Dynasty Necklace Gemstone
+-- Spiked Stakato Captain - missing sniffs
+(22629,57,4600,7600,0,700000),-- Adena
+(22629,9624,1,1,1,2000),-- Dynasty Bagh-Nakh Piece
+(22629,9450,1,1,1,12),-- Dynasty Bagh-Nakh
+(22629,4039,1,1,2,40000),-- Mold Glue
+(22629,1894,1,1,2,40000),-- Crafted Leather
+(22629,4044,1,1,2,40000),-- Thons
+(22629,4041,1,1,2,9000),-- Mold Hardener
+(22629,5277,1,1,2,300),-- Recipe: Greater Spiritshot (S) Compressed Package(100%)
+(22629,9573,1,1,200,7000),-- Life Stone: level 80
+(22629,9574,1,1,200,2000),-- Mid-Grade Life Stone: level 80
+(22629,9575,1,1,200,100),-- High-Grade Life Stone: level 80
+(22629,1894,1,1,-1,600000),-- Crafted Leather
+(22629,959,1,1,-1,500),-- Scroll: Enchant Weapon (S)
+-- Spiked Stakato Nurse - missing sniffs
+(22630,57,4600,7600,0,700000),-- Adena
+(22630,9617,1,1,1,800), -- Dynasty Blade Piece
+(22630,9616,1,1,1,800), -- Dynasty Sword Piece
+(22630,9618,1,1,1,800), -- Dynasty Phantom Piece
+(22630,9442,1,1,1,4),-- Dynasty Sword
+(22630,9443,1,1,1,4),-- Dynasty Blade
+(22630,9444,1,1,1,4),-- Dynasty Phantom
+(22630,1879,1,1,2,150000),-- Cokes
+(22630,1885,1,1,2,80000),-- High Grade Suede
+(22630,9628,1,1,2,8000),-- Leonard
+(22630,9629,1,1,2,5000),-- Adamantine
+(22630,9630,1,1,2,4000),-- Orichalcum
+(22630,9573,1,1,200,8000),-- Life Stone: level 80
+(22630,9574,1,1,200,2000),-- Mid-Grade Life Stone: level 80
+(22630,9575,1,1,200,200),-- High-Grade Life Stone: level 80
+(22630,5282,1,1,2,300),-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%)
+(22630,9530,1,1,-1,60000),-- Sealed Dynasty Breast Plate Piece
+(22630,9622,1,1,-1,30000),-- Dynasty Cudgel Piece
+(22630,1808,1,1,-1,5000),-- Recipe: Soulshot: S Grade
+-- Spiked Stakato Nurse - missing sniffs
+(22631,57,4600,7600,0,700000),-- Adena
+(22631,9617,1,1,1,800), -- Dynasty Blade Piece
+(22631,9616,1,1,1,800), -- Dynasty Sword Piece
+(22631,9618,1,1,1,800), -- Dynasty Phantom Piece
+(22631,9442,1,1,1,4),-- Dynasty Sword
+(22631,9443,1,1,1,4),-- Dynasty Blade
+(22631,9444,1,1,1,4),-- Dynasty Phantom
+(22631,1879,1,1,2,150000),-- Cokes
+(22631,1885,1,1,2,80000),-- High Grade Suede
+(22631,9628,1,1,2,8000),-- Leonard
+(22631,9629,1,1,2,5000),-- Adamantine
+(22631,9630,1,1,2,4000),-- Orichalcum
+(22631,9573,1,1,200,8000),-- Life Stone: level 80
+(22631,9574,1,1,200,2000),-- Mid-Grade Life Stone: level 80
+(22631,9575,1,1,200,200),-- High-Grade Life Stone: level 80
+(22631,6901,1,1,2,400),-- Recipe: Shining Arrow (100%)
+(22631,1894,1,1,-1,600000),-- Crafted Leather
+(22631,9624,1,1,-1,30000),-- Dynasty Bagh-Nakh Piece
+(22631,5162,1,1,-1,5000),-- Recipe: Spiritshot (S)
+-- Spiked Stakato Baby - missing sniffs
+(22632,57,4600,7600,0,700000),-- Adena
+(22632,10547,1,1,1,600),-- Dynasty Crusher Fragment
+(22632,10546,1,1,1,600),-- Dynasty Staff Fragment
+(22632,9623,1,1,1,600),-- Dynasty Mace Piece
+(22632,9622,1,1,1,600),-- Dynasty Cudgel Piece
+(22632,10253,1,1,1,3),-- Dynasty Crusher
+(22632,10252,1,1,1,3),-- Dynasty Staff
+(22632,9449,1,1,1,3),-- Dynasty Mace
+(22632,9448,1,1,1,3),-- Dynasty Cudgel
+(22632,1895,1,1,2,220000),-- Metallic Fiber
+(22632,4040,1,1,2,30000),-- Mold Lubricant
+(22632,9628,1,1,2,10000),-- Leonard
+(22632,9630,1,1,2,9000),-- Orichalcum
+(22632,5157,1,1,2,400),-- Recipe: Soulshot (S) Compressed Package (100%)
+(22632,9573,1,1,200,8000),-- Life Stone: level 80
+(22632,9574,1,1,200,2000),-- Mid-Grade Life Stone: level 80
+(22632,9575,1,1,200,200),-- High-Grade Life Stone: level 80
+(22632,1894,1,1,-1,600000),-- Crafted Leather
+(22632,3957,1,1,-1,5000),-- Recipe: Blessed Spiritshot S
+(22632,9623,1,1,-1,30000),-- Dynasty Mace Piece
+-- Spiked Stakato Shaman
+(22633,57,4600,7600,0,700000),-- Adena
+(22633,10547,1,1,1,600),-- Dynasty Crusher Fragment
+(22633,10546,1,1,1,600),-- Dynasty Staff Fragment
+(22633,9623,1,1,1,600),-- Dynasty Mace Piece
+(22633,9622,1,1,1,600),-- Dynasty Cudgel Piece
+(22633,10253,1,1,1,3),-- Dynasty Crusher
+(22633,10252,1,1,1,3),-- Dynasty Staff
+(22633,9449,1,1,1,3),-- Dynasty Mace
+(22633,9448,1,1,1,3),-- Dynasty Cudgel
+(22633,1879,1,1,2,160000),-- Cokes
+(22633,1885,1,1,2,80000),-- High Grade Suede
+(22633,9628,1,1,2,6000),-- Leonard
+(22633,9629,1,1,2,4000),-- Adamantine
+(22633,9630,1,1,2,5000),-- Orichalcum
+(22633,9573,1,1,200,8000),-- Life Stone: level 80
+(22633,9574,1,1,200,3000),-- Mid-Grade Life Stone: level 80
+(22633,9575,1,1,200,100),-- High-Grade Life Stone: level 80
+(22633,5162,1,1,2,500),-- Recipe: Spiritshot (S) Compressed Package (100%)
+(22633,9623,1,1,-1,30000),-- Dynasty Mace Piece
+(22633,9992,1,1,-1,80000),-- Sealed Dynasty Necklace Gemstone
+(22633,5157,1,1,-1,5000);-- Recipe: Soulshot (S) Compressed Package (100%)
+
+-- Gracia Epilog : Forge of Gods
+INSERT INTO `droplist` VALUES 
+-- Scarlet Stakato Worker
+(22634,57,2500,4000,0,700000),-- Adena
+(22634,6371,1,1,1,8),-- Demon Splinter
+(22634,6695,1,1,1,4000),-- Demon Splinter Blade
+(22634,1895,1,1,2,210000),-- Metallic Fiber
+(22634,4040,1,1,2,10000),-- Mold Lubricant
+(22634,9628,1,1,2,5000),-- Leonard
+(22634,9630,1,1,2,4000),-- Orichalcum
+(22634,5162,1,1,2,300),-- Recipe: Spiritshot (S) Compressed Package (100%)
+(22634,1894,1,1,-1,600000),-- Crafted Leather
+(22634,9992,1,1,-1,50000),-- Sealed Dynasty Necklace Gemstone
+-- Scarlet Stakato Soldier
+(22635,57,2500,4000,0,700000),-- Adena
+(22635,6364,1,1,1,4),-- Forgotten Blade
+(22635,6372,1,1,1,4),-- Heaven\'s Divider
+(22635,6688,1,1,1,2000),-- Forgotten Blade Edge
+(22635,6696,1,1,1,2000),-- Heavens Divider Edge
+(22635,1895,1,1,2,200000),-- Metallic Fiber
+(22635,4040,1,1,2,10000),-- Mold Lubricant
+(22635,9628,1,1,2,5000),-- Leonard
+(22635,9630,1,1,2,4000),-- Orichalcum
+(22635,9625,1,1,100,50), -- Giant's Codex - Oblivion
+(22635,5162,1,1,-1,3000),-- Recipe: Spiritshot (S) Compressed Package (100%)
+(22635,6701,1,1,-1,150000),-- Sealed Imperial Crusader Breastplate Part
+(22635,6702,1,1,-1,220000),-- Sealed Imperial Crusader Gaiters Pattern
+-- Scarlet Stakato Noble
+(22636,57,2500,4000,0,700000),-- Adena
+(22636,6676,1,1,1,30),-- Sealed Imperial Crusader Gauntlet
+(22636,6677,1,1,1,30),-- Sealed Imperial Crusader Boots
+(22636,6681,1,1,1,30),-- Sealed Draconic Leather Glove
+(22636,6682,1,1,1,30),-- Sealed Draconic Leather Boots
+(22636,6685,1,1,1,30),-- Sealed Major Arcana Glove
+(22636,6686,1,1,1,30),-- Sealed Major Arcana Boots
+(22636,6703,1,1,1,5000),-- Sealed Imperial Crusader Gauntlets Design
+(22636,1879,1,1,2,100000),-- Cokes
+(22636,1885,1,1,2,40000),-- High Grade Suede
+(22636,9628,1,1,2,5000),-- Leonard
+(22636,9629,1,1,2,4000),-- Adamantine
+(22636,9630,1,1,2,2000),-- Orichalcum
+(22636,9626,1,1,100,40),-- Giant's Codex - Discipline
+(22636,6711,1,1,-1,150000), -- Sealed Major Arcana Robe Part
+(22636,6688,1,1,-1,40000),-- Forgotten Blade Edge
+(22636,6696,1,1,-1,40000),-- Heavens Divider Edge
+-- Tepra Scorpion
+(22637,57,2600,4200,0,700000),-- Adena
+(22637,7575,1,1,1,8),-- Draconic Bow
+(22637,7579,1,1,1,4000),-- Draconic Bow Shaft
+(22637,1895,1,1,2,210000),-- Metallic Fiber
+(22637,4040,1,1,2,10000),-- Mold Lubricant
+(22637,9628,1,1,2,6000),-- Leonard
+(22637,9630,1,1,2,4000),-- Orichalcum
+(22637,9546,1,1,200,300),-- Fire Stone 
+(22637,5272,1,1,-1,3000),-- Recipe: Greater Soulshot (S) Compressed Package(100%)
+(22637,6694,1,1,-1,40000),-- Saint Spear Blade
+(22637,6691,1,1,-1,40000),-- Angel Slayer Blade
+-- Tepra Scarab
+(22638,57,2600,4200,0,700000),-- Adena
+(22638,6367,1,1,1,8),-- Angel Slayer
+(22638,6691,1,1,1,4000),-- Angel Slayer Blade
+(22638,1879,1,1,2,100000),-- Cokes
+(22638,1885,1,1,2,50000),-- High Grade Suede
+(22638,9628,1,1,2,5000),-- Leonard
+(22638,9629,1,1,2,3000),-- Adamantine
+(22638,9630,1,1,2,3000),-- Orichalcum
+(22638,9547,1,1,200,300),-- Water Stone
+(22638,5277,1,1,-1,3000),-- Recipe: Greater Spiritshot (S) Compressed Package(100%)
+(22638,6689,1,1,-1,40000),-- Basalt Battlehammer Head
+(22638,6690,1,1,-1,40000),-- Imperial Staff Head
+-- Assassin Beetle
+(22639,57,2600,4200,0,700000),-- Adena
+(22639,6710,1,1,1,9000),-- Sealed Draconic Leather Helmet Pattern
+(22639,6705,1,1,1,9000),-- Sealed Imperial Crusader Shield Part
+(22639,13885,1,1,1,30),-- Sealed Arcana Sigil
+(22639,6678,1,1,1,30),-- Sealed Imperial Crusader Shield
+(22639,6679,1,1,1,20),-- Sealed Imperial Crusader Helmet
+(22639,6683,1,1,1,20),-- Sealed Draconic Leather Helmet
+(22639,6687,1,1,1,20),-- Sealed Major Arcana Circlet
+(22639,1895,1,1,2,210000),-- Metallic Fiber
+(22639,4043,1,1,2,20000),-- Asofe
+(22639,4040,1,1,2,20000),-- Mold Lubricant
+(22639,4042,1,1,2,10000),-- Enria
+(22639,9548,1,1,200,300),-- Earth Stone
+(22639,7579,1,1,-1,40000),-- Draconic Bow Shaft
+(22639,6695,1,1,-1,40000),-- Demon Splinter Blade
+(22639,5282,1,1,-1,3000),-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%)
+-- Mercenary of Destruction
+(22640,57,2700,4400,0,700000),-- Adena
+(22640,6371,1,1,1,8),-- Demon Splinter
+(22640,6695,1,1,1,4000),-- Demon Splinter Blade
+(22640,1895,1,1,2,210000),-- Metallic Fiber
+(22640,4040,1,1,2,10000),-- Mold Lubricant
+(22640,9628,1,1,2,6000),-- Leonard
+(22640,9630,1,1,2,3000),-- Orichalcum
+(22640,9549,1,1,200,200),-- Wind Stone
+(22640,5529,1,1,-1,80000),-- Dragon Slayer Edge
+(22640,5533,1,1,-1,80000),-- Elysian Head
+(22640,1808,1,1,-1,3000),-- Recipe: Soulshot: S Grade
+-- Knight of Destruction
+(22641,57,2700,4400,0,700000),-- Adena
+(22641,6364,1,1,1,4),-- Forgotten Blade
+(22641,6372,1,1,1,4),-- Heaven\'s Divider
+(22641,6688,1,1,1,3000),-- Forgotten Blade Edge
+(22641,6696,1,1,1,3000),-- Heavens Divider Edge
+(22641,1879,1,1,2,100000),-- Cokes
+(22641,1885,1,1,2,60000),-- High Grade Suede
+(22641,9628,1,1,2,4000),-- Leonard
+(22641,9629,1,1,2,4000),-- Adamantine
+(22641,9630,1,1,2,3000),-- Orichalcum
+(22641,9550,1,1,200,2000),-- Dark Stone
+(22641,6703,1,1,-1,180000),-- Sealed Imperial Crusader Gauntlets Design
+(22641,6704,1,1,-1,180000),-- Sealed Imperial Crusader Boots Design
+(22641,5277,1,1,-1,3000),-- Recipe: Greater Spiritshot (S) Compressed Package(100%)
+-- Lavastone Golem
+(22642,57,2900,4800,0,700000),-- Adena
+(22642,6370,1,1,1,8), -- Saint Spear
+(22642,6694,1,1,1,5000), -- Saint Spear Blade
+(22642,4039,1,1,2,30000),-- Mold Glue
+(22642,1894,1,1,2,30000),-- Crafted Leather
+(22642,4044,1,1,2,30000),-- Thons
+(22642,4041,1,1,2,8000),-- Mold Hardener
+(22642,9551,1,1,200,5000),-- Divine Stone
+(22642,5162,1,1,-1,5000),-- Recipe: Spiritshot (S)
+(22642,959,1,1,-1,500),-- Scroll: Enchant Weapon (S)
+(22642,3957,1,1,-1,5000),-- Recipe: Blessed Spiritshot S
+-- Magma Golem
+(22643,57,2900,4800,0,700000),-- Adena
+(22643,6684,1,1,0,20), -- Sealed Major Arcana Robe
+(22643,6711,1,1,0,10000), -- Sealed Major Arcana Robe Part
+(22643,1345,20,60,2,90000),-- Shining Arrow
+(22643,1895,1,1,2,240000),-- Metallic Fiber
+(22643,4043,1,1,2,30000),-- Asofe
+(22643,4040,1,1,2,20000),-- Mold Lubricant
+(22643,4042,1,1,2,10000),-- Enria
+(22643,959,1,1,2,30),-- Scroll: Enchant Weapon (S)
+(22643,1894,1,1,-1,700000),-- Crafted Leather
+(22643,960,1,1,-1,3000),-- Scroll: Enchant Armor (S)
+(22643,6688,1,1,-1,80000),-- Forgotten Blade Edge
+-- Arimanes of Destruction
+(22644,57,2800,4600,0,700000),-- Adena
+(22644,6689,1,1,1,2000),-- Basalt Battlehammer Head
+(22644,6693,1,1,1,2000),-- Dragon Hunter Axe Blade
+(22644,6690,1,1,1,2000),-- Imperial Staff Head
+(22644,6365,1,1,1,4),-- Basalt Battlehammer
+(22644,6366,1,1,1,4),-- Imperial Staff
+(22644,6369,1,1,1,4),-- Dragon Hunter Axe
+(22644,1895,1,1,2,290000),-- Metallic Fiber
+(22644,4040,1,1,2,20000),-- Mold Lubricant
+(22644,9628,1,1,2,8000),-- Leonard
+(22644,9630,1,1,2,5000),-- Orichalcum
+(22644,960,1,1,2,300),-- Scroll: Enchant Armor (S)
+(22644,5157,1,1,-1,3000),-- Recipe: Soulshot (S) Compressed Package (100%)
+(22644,6708,1,1,-1,180000),-- Sealed Draconic Leather Gloves Fabric
+(22644,6709,1,1,-1,180000),-- Sealed Draconic Leather Boots Design
+-- Balrog of Destruction
+(22645,57,2800,4600,0,700000),-- Adena
+(22645,6371,1,1,1,8),-- Demon Splinter
+(22645,6695,1,1,1,5000),-- Demon Splinter Blade
+(22645,4039,1,1,2,30000),-- Mold Glue
+(22645,1894,1,1,2,30000),-- Crafted Leather
+(22645,4044,1,1,2,30000),-- Thons
+(22645,4041,1,1,2,9000),-- Mold Hardener
+(22645,5272,1,1,2,400),-- Recipe: Greater Soulshot (S) Compressed Package(100%)
+(22645,6713,1,1,-1,180000),-- Sealed Major Arcana Boots Design
+(22645,6712,1,1,-1,180000),-- Sealed Major Arcana Gloves fabric
+(22645,5162,1,1,-1,3000),-- Recipe: Spiritshot (S) Compressed Package (100%)
+-- Ashuras of Destruction
+(22646,57,2800,4600,0,700000),-- Adena
+(22646,6707,1,1,1,10000),-- Sealed Draconic Leather Armor Part
+(22646,6680,1,1,1,30),-- Sealed Draconic Leather Armor
+(22646,1895,1,1,2,290000),-- Metallic Fiber
+(22646,4043,1,1,2,30000),-- Asofe
+(22646,4040,1,1,2,20000),-- Mold Lubricant
+(22646,4042,1,1,2,20000),-- Enria
+(22646,5277,1,1,2,500),-- Recipe: Greater Spiritshot (S) Compressed Package(100%)
+(22646,6710,1,1,-1,160000),-- Sealed Draconic Leather Helmet Pattern
+(22646,6706,1,1,-1,160000),-- Sealed Imperial Crusader Helmet Pattern
+-- Lavasilisk
+(22647,57,3000,5000,0,700000),-- Adena
+(22647,6674,1,1,1,8),-- Sealed Imperial Crusader Breastplate
+(22647,6675,1,1,1,12),-- Sealed Imperial Crusader Gaiters
+(22647,6701,1,1,1,7000),-- Sealed Imperial Crusader Breastplate Part
+(22647,6702,1,1,1,7000),-- Sealed Imperial Crusader Gaiters Pattern
+(22647,1879,1,1,2,150000),-- Cokes
+(22647,1885,1,1,2,80000),-- High Grade Suede
+(22647,9628,1,1,2,8000),-- Leonard
+(22647,9629,1,1,2,4000),-- Adamantine
+(22647,9630,1,1,2,5000),-- Orichalcum
+(22647,5282,1,1,2,500),-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%)
+(22647,6710,1,1,-1,160000),-- Sealed Draconic Leather Helmet Pattern
+(22647,6706,1,1,-1,160000),-- Sealed Imperial Crusader Helmet Pattern
+-- Blazing Ifrit
+(22648,57,3000,5000,0,700000),-- Adena
+(22648,6370,1,1,1,8), -- Saint Spear
+(22648,6694,1,1,1,5000), -- Saint Spear Blade
+(22648,1895,1,1,2,280000),-- Metallic Fiber
+(22648,4040,1,1,2,20000),-- Mold Lubricant
+(22648,9628,1,1,2,8000),-- Leonard
+(22648,9630,1,1,2,6000),-- Orichalcum
+(22648,6901,1,1,2,1000),-- Recipe: Shining Arrow (100%)
+(22648,5529,1,1,-1,80000),-- Dragon Slayer Edge
+(22648,1808,1,1,-1,3000),-- Recipe: Soulshot: S Grade
+(22648,5282,1,1,-1,3000),-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%)
+-- Magma Drake
+(22649,57,3000,5000,0,700000),-- Adena
+(22649,6698,1,1,1,20000),-- Sealed Tateossian Earring Part
+(22649,6699,1,1,1,20000),-- Sealed Tateossian Ring Gem
+(22649,6700,1,1,1,10000),-- Sealed Tateossian Ring Wire
+(22649,6724,1,1,1,40),-- Sealed Tateossian Earring 
+(22649,6725,1,1,1,50),-- Sealed Tateossian Ring
+(22649,6726,1,1,1,30),-- Sealed Tateossian Necklace
+(22649,1895,1,1,2,310000),-- Metallic Fiber
+(22649,4043,1,1,2,30000),-- Asofe
+(22649,4040,1,1,2,20000),-- Mold Lubricant
+(22649,4042,1,1,2,10000),-- Enria
+(22649,5157,1,1,2,700),-- Recipe: Soulshot (S) Compressed Package (100%)
+(22649,1894,1,1,-1,800000),-- Crafted Leather
+(22649,5533,1,1,-1,80000),-- Elysian Head
+-- Newborn Lavasaurus
+(18799,57,2500,4000,0,700000),-- Adena
+(18799,6371,1,1,1,8),-- Demon Splinter
+(18799,6695,1,1,1,5000),-- Demon Splinter Blade
+(18799,9628,1,1,2,10000),-- Leonard
+(18799,9629,1,1,2,7000),-- Adamantine
+(18799,9630,1,1,2,9000),-- Orichalcum
+(18799,1894,1,1,-1,600000),-- Crafted Leather
+(18799,960,1,1,-1,2800),-- Scroll: Enchant Armor (S)
+(18799,9540,1,1,-1,20000),-- Sealed Dynasty Tunic Piece
+-- Fledgling Lavasaurus
+(18800,57,2600,4200,0,700000),-- Adena
+(18800,6707,1,1,1,10000),-- Sealed Draconic Leather Armor Part
+(18800,6680,1,1,1,30),-- Sealed Draconic Leather Armor
+(18800,9628,1,1,2,10000),-- Leonard
+(18800,9629,1,1,2,8000),-- Adamantine
+(18800,9630,1,1,2,7000),-- Orichalcum
+(18800,1894,1,1,-1,700000),-- Crafted Leather
+(18800,960,1,1,-1,3000),-- Scroll: Enchant Armor (S)
+(18800,9540,1,1,-1,25000),-- Sealed Dynasty Tunic Piece
+-- Mature Lavasaurus
+(18801,57,2700,4400,0,700000),-- Adena
+(18801,6370,1,1,1,8), -- Saint Spear
+(18801,6694,1,1,1,5000), -- Saint Spear Blade
+(18801,9628,1,1,2,10000),-- Leonard
+(18801,9629,1,1,2,9000),-- Adamantine
+(18801,9630,1,1,2,7000),-- Orichalcum
+(18801,1894,1,1,-1,800000),-- Crafted Leather
+(18801,960,1,1,-1,3200),-- Scroll: Enchant Armor (S)
+(18801,9540,1,1,-1,30000),-- Sealed Dynasty Tunic Piece
+-- Elder Lavasaurus
+(18802,57,2800,4600,0,700000),-- Adena
+(18802,6674,1,1,1,8),-- Sealed Imperial Crusader Breastplate
+(18802,6675,1,1,1,12),-- Sealed Imperial Crusader Gaiters
+(18802,6701,1,1,1,6000),-- Sealed Imperial Crusader Breastplate Part
+(18802,6702,1,1,1,10000),-- Sealed Imperial Crusader Gaiters Pattern
+(18802,9628,1,1,2,10000),-- Leonard
+(18802,9629,1,1,2,10000),-- Adamantine
+(18802,9630,1,1,2,10000),-- Orichalcum
+(18802,1894,1,2,-1,600000),-- Crafted Leather
+(18802,960,1,1,-1,3400),-- Scroll: Enchant Armor (S)
+(18802,9540,1,1,-1,35000),-- Sealed Dynasty Tunic Piece
+-- Ancient Lavasaurus
+(18803,57,2900,4800,0,700000),-- Adena
+(18803,6674,1,1,1,8),-- Sealed Imperial Crusader Breastplate
+(18803,6675,1,1,1,12),-- Sealed Imperial Crusader Gaiters
+(18803,6701,1,1,1,6000),-- Sealed Imperial Crusader Breastplate Part
+(18803,6702,1,1,1,10000),-- Sealed Imperial Crusader Gaiters Pattern
+(18803,9628,1,1,2,10000),-- Leonard
+(18803,9629,1,1,2,10000),-- Adamantine
+(18803,9630,1,1,2,10000),-- Orichalcum
+(18803,1894,1,2,-1,700000),-- Crafted Leather
+(18803,960,1,1,-1,3600),-- Scroll: Enchant Armor (S)
+(18803,9540,1,1,-1,40000);-- Sealed Dynasty Tunic Piece
 
 -- Gracia Epilog : Field of Silence and Field of Whispers
 INSERT INTO `droplist` VALUES 
@@ -31131,7 +32232,7 @@ INSERT INTO `droplist` VALUES
 (22654,9628,1,1,2,2100),-- Leonard
 (22654,9629,1,1,2,1200),-- Adamantine
 (22654,9630,1,1,2,1600),-- Orichalcum
-(22654,9546,1,1,200,1700),-- Fire Stone 
+(22654,9546,1,1,200,700),-- Fire Stone 
 (22654,9573,1,1,200,2000),-- Life Stone: level 80
 (22654,9574,1,1,200,400),-- Mid-Grade Life Stone: level 80
 (22654,9575,1,1,200,80),-- High-Grade Life Stone: level 80
@@ -31146,7 +32247,7 @@ INSERT INTO `droplist` VALUES
 (22655,4039,1,1,2,30600),-- Mold Glue
 (22655,4044,1,1,2,27000),-- Thons
 (22655,4041,1,1,2,2500),-- Mold Hardener
-(22655,9547,1,1,200,12300),-- Water Stone
+(22655,9547,1,1,200,4000),-- Water Stone
 (22655,9573,1,1,200,6100),-- Life Stone: level 80
 (22655,9574,1,1,200,3700),-- Mid-Grade Life Stone: level 80
 (22655,9575,1,1,200,600),-- High-Grade Life Stone: level 80
@@ -31164,7 +32265,7 @@ INSERT INTO `droplist` VALUES
 (22656,9628,1,1,2,4200),-- Leonard
 (22656,9629,1,1,2,4200),-- Adamantine
 (22656,9630,1,1,2,2600),-- Orichalcum
-(22656,9548,1,1,200,4200),-- Earth Stone
+(22656,9548,1,1,200,2000),-- Earth Stone
 (22656,9573,1,1,200,5800),-- Life Stone: level 80
 (22656,9574,1,1,200,600),-- Mid-Grade Life Stone: level 80
 (22656,9575,1,1,200,120),-- High-Grade Life Stone: level 80
@@ -31182,7 +32283,7 @@ INSERT INTO `droplist` VALUES
 (22657,9628,1,1,2,4500),-- Leonard
 (22657,9629,1,1,2,2600),-- Adamantine
 (22657,9630,1,1,2,2300),-- Orichalcum
-(22657,9549,1,1,200,9400),-- Wind Stone
+(22657,9549,1,1,200,1000),-- Wind Stone
 (22657,9573,1,1,200,3400),-- Life Stone: level 80
 (22657,9574,1,1,200,1000),-- Mid-Grade Life Stone: level 80
 (22657,9575,1,1,200,200),-- High-Grade Life Stone: level 80
@@ -31199,7 +32300,7 @@ INSERT INTO `droplist` VALUES
 (22658,4039,1,1,2,20500),-- Mold Glue
 (22658,4044,1,1,2,18900),-- Thons
 (22658,4041,1,1,2,4700),-- Mold Hardener
-(22658,9550,1,1,200,6300),-- Dark Stone
+(22658,9550,1,1,200,2000),-- Dark Stone
 (22658,9573,1,1,200,1600),-- Life Stone: level 80
 (22658,9574,1,1,200,400),-- Mid-Grade Life Stone: level 80
 (22658,9575,1,1,200,80),-- High-Grade Life Stone: level 80
@@ -31219,7 +32320,7 @@ INSERT INTO `droplist` VALUES
 (22659,9628,1,1,2,6000),-- Leonard
 (22659,9629,1,1,2,3600),-- Adamantine
 (22659,9630,1,1,2,3300),-- Orichalcum
-(22659,9551,1,1,200,9900),-- Divine Stone
+(22659,9551,1,1,200,3000),-- Divine Stone
 (22659,9573,1,1,200,4000),-- Life Stone: level 80
 (22659,9574,1,1,200,2000),-- Mid-Grade Life Stone: level 80
 (22659,9575,1,1,200,500),-- High-Grade Life Stone: level 80
@@ -31422,7 +32523,7 @@ INSERT INTO `droplist` VALUES
 (22671,4039,1,1,2,30900),-- Mold Glue
 (22671,4044,1,1,2,30900),-- Thons
 (22671,4041,1,1,2,7700),-- Mold Hardener
-(22671,9546,1,1,200,7900),-- Fire Stone
+(22671,9546,1,1,200,2000),-- Fire Stone
 (22671,9620,1,1,-1,10000),-- Dynasty Knife Piece
 (22671,1808,1,1,-1,5000),-- Recipe: Soulshot: S Grade
 (22671,9541,1,1,-1,35000),-- Sealed Dynasty Stocking Piece
@@ -31445,7 +32546,7 @@ INSERT INTO `droplist` VALUES
 (22672,9629,1,1,2,8500),-- Leonard
 (22672,9630,1,1,2,5800),-- Orichalcum
 (22672,9628,1,1,2,4600),-- Adamantine
-(22672,9547,1,1,200,7300),-- Water Stone
+(22672,9547,1,1,200,3000),-- Water Stone
 (22672,9629,1,1,-1,80000),-- Leonard
 (22672,3036,1,1,-1,5000),-- Recipe: Spiritshot S
 (22672,9992,1,1,-1,50000),-- Sealed Dynasty Necklace Gemstone
@@ -31465,7 +32566,7 @@ INSERT INTO `droplist` VALUES
 (22673,9629,1,1,2,6700),-- Leonard
 (22673,9630,1,1,2,4500),-- Orichalcum
 (22673,9628,1,1,2,3400),-- Adamantine
-(22673,9548,1,1,200,6400),-- Earth Stone
+(22673,9548,1,1,200,2000),-- Earth Stone
 (22673,1894,1,1,-1,250000),-- Crafted Leather
 (22673,3957,1,1,-1,5000),-- Recipe: Blessed Spiritshot S
 (22673,9535,1,1,-1,30000),-- Sealed Dynasty Leather Armor Piece
@@ -31481,7 +32582,7 @@ INSERT INTO `droplist` VALUES
 (22674,4043,1,1,2,32300),-- Asofe
 (22674,4040,1,1,2,19800),-- Mold Lubricant
 (22674,4042,1,1,2,16100),-- Enria
-(22674,9549,1,1,200,8300),-- Wind Stone
+(22674,9549,1,1,200,3000),-- Wind Stone
 (22674,5157,1,1,-1,5000),-- Recipe: Soulshot (S) Compressed Package (100%)
 (22674,9537,1,1,-1,40000),-- Sealed Dynasty Leather Helmet Piece
 (22674,9992,1,1,-1,50000),-- Sealed Dynasty Necklace Gemstone
@@ -31499,7 +32600,7 @@ INSERT INTO `droplist` VALUES
 (22675,4044,1,1,2,35000),-- Thons
 (22675,4039,1,1,2,34100),-- Mold Glue
 (22675,4041,1,1,2,8900),-- Mold Hardener
-(22675,9550,1,1,200,8100),-- Dark Stone
+(22675,9550,1,1,200,3000),-- Dark Stone
 (22675,1894,1,1,-1,250000),-- Crafted Leather
 (22675,9629,1,1,-1,80000),-- Leonard
 (22675,9536,1,1,-1,35000),-- Sealed Dynasty Leather Leggings Piece
@@ -31512,7 +32613,7 @@ INSERT INTO `droplist` VALUES
 (22676,9629,1,1,2,6800),-- Leonard
 (22676,9630,1,1,2,4100),-- Orichalcum
 (22676,9628,1,1,2,3800),-- Adamantine
-(22676,9551,1,1,200,6800),-- Divine Stone
+(22676,9551,1,1,200,2000),-- Divine Stone
 (22676,9622,1,1,-1,10000),-- Dynasty Cudgel Piece
 (22676,5162,1,1,-1,5000),-- Recipe: Spiritshot (S) Compressed Package (100%)
 (22676,5167,1,1,-1,5000),-- Recipe: Blessed Spiritshot (S) Compressed Package (100%)
@@ -31721,7 +32822,7 @@ INSERT INTO `droplist` VALUES
 (22690,9628,1,1,2,3800),-- Leonard
 (22690,9629,1,1,2,2400),-- Adamanitne
 (22690,9630,1,1,2,1100),-- Orichalcum
-(22690,9546,1,1,200,2700),-- Fire Stone
+(22690,9546,1,1,200,800),-- Fire Stone
 (22690,9573,1,1,200,2700),-- Life Stone: level 80
 (22690,9574,1,1,200,800),-- Mid-Grade Life Stone: level 80
 (22690,9575,1,1,200,80),-- High-Grade Life Stone: level 80
@@ -31734,13 +32835,13 @@ INSERT INTO `droplist` VALUES
 -- Ragna Orc
 (22691,57,829,1666,0,700000), -- Adena
 (22691,9447,1,1,1,2),-- Dynasty Halberd
-(22691,9621,1,1,1,400), -- Dynasty Halberd Piece
+(22691,9621,1,1,1,500), -- Dynasty Halberd Piece
 (22691,9629,1,1,2,700), -- Adamantine
 (22691,9628,1,1,2,1000), -- Leonard
 (22691,9630,1,1,2,900), -- Orichalcum
-(22691,1885,1,1,2,10000), -- High Grade Suede
+(22691,1885,1,1,2,20000), -- High Grade Suede
 (22691,1879,1,1,2,30000), -- Cokes
-(22691,9547,1,1,200,300),-- Water Stone
+(22691,9547,1,1,200,600),-- Water Stone
 (22691,9573,1,1,200,1000), -- Life Stone: level 80
 (22691,9574,1,1,200,300), -- Mid-Grade Life Stone: level 80
 (22691,9575,1,1,200,30), -- High-Grade Life Stone: level 80
@@ -31751,13 +32852,13 @@ INSERT INTO `droplist` VALUES
 (22692,57,829,1666,0,700000), -- Adena
 (22692,9531,1,1,1,2000), -- Sealed Dynasty Gaiter Piece
 (22692,9530,1,1,1,700), -- Sealed Dynasty Breast Plate Piece
-(22692,9515,1,1,1,4), -- Sealed Dynasty Gaiter
-(22692,9514,1,1,1,6), -- Sealed Dynasty Breast Plate
+(22692,9515,1,1,1,6), -- Sealed Dynasty Gaiter
+(22692,9514,1,1,1,4), -- Sealed Dynasty Breast Plate
 (22692,4044,1,1,2,7000), -- Thons
 (22692,4041,1,1,2,2000), -- Mold Hardener
 (22692,4039,1,1,2,7000), -- Mold Glue
 (22692,1894,1,1,2,8000), -- Crafted Leather
-(22692,9548,1,1,200,400),-- Earth Stone
+(22692,9548,1,1,200,1000),-- Earth Stone
 (22692,9573,1,1,200,2000), -- Life Stone: level 80
 (22692,9574,1,1,200,400), -- Mid-Grade Life Stone: level 80
 (22692,9575,1,1,200,50), -- High-Grade Life Stone: level 80
@@ -31775,7 +32876,7 @@ INSERT INTO `droplist` VALUES
 (22693,9628,1,1,2,1000), -- Leonard
 (22693,9629,1,1,2,1000), -- Adamantine
 (22693,9630,1,1,2,1000), -- Orichalcum
-(22693,9549,1,1,200,400),-- Wind Stone
+(22693,9549,1,1,200,800),-- Wind Stone
 (22693,9573,1,1,200,1000), -- Life Stone: level 80
 (22693,9574,1,1,200,400), -- Mid-Grade Life Stone: level 80
 (22693,9575,1,1,200,50), -- High-Grade Life Stone: level 80
@@ -31813,7 +32914,7 @@ INSERT INTO `droplist` VALUES
 (22695,4041,1,1,2,2000), -- Mold Hardener
 (22695,4039,1,1,2,6000), -- Mold Glue
 (22695,1894,1,1,2,6000), -- Crafted Leather
-(22695,9551,1,1,200,400),-- Divine Stone
+(22695,9551,1,1,200,900),-- Divine Stone
 (22695,9573,1,1,200,1000), -- Life Stone: level 80
 (22695,9574,1,1,200,400), -- Mid-Grade Life Stone: level 80
 (22695,9575,1,1,200,30), -- High-Grade Life Stone: level 80
@@ -31860,7 +32961,7 @@ INSERT INTO `droplist` VALUES
 (22697,9629,1,1,2,900), -- Adamantine
 (22697,9628,1,1,2,1000), -- Leonard
 (22697,1885,1,1,2,20000), -- High Grade Suede
-(22697,960,1,1,2,100), -- Scroll: Enchant Armor (S)
+(22697,960,1,1,2,80), -- Scroll: Enchant Armor (S)
 (22697,1879,1,1,2,30000), -- Cokes
 (22697,9574,1,1,200,200), -- Mid-Grade Life Stone: level 80
 (22697,9573,1,1,200,1000), -- Life Stone: level 80
@@ -31916,7 +33017,7 @@ INSERT INTO `droplist` VALUES
 (22701,4040,1,1,2,4000), -- Mold Lubricant
 (22701,9628,1,1,2,2000), -- Leonard
 (22701,9630,1,1,2,1000), -- Orichalcum
-(22701,6901,1,1,2,50),-- Recipe: Shining Arrow (100%)
+(22701,6901,1,1,2,200),-- Recipe: Shining Arrow (100%)
 (22701,9573,1,1,200,1000), -- Life Stone: level 80
 (22701,9574,1,1,200,200), -- Mid-Grade Life Stone: level 80
 (22701,9575,1,1,200,100), -- High-Grade Life Stone: level 80
@@ -31931,13 +33032,1514 @@ INSERT INTO `droplist` VALUES
 (22702,4040,1,1,2,4000), -- Mold Lubricant
 (22702,9628,1,1,2,2000), -- Leonard
 (22702,9630,1,1,2,1000), -- Orichalcum
-(22702,5157,1,1,2,50),-- Recipe: Soulshot (S) Compressed Package (100%)
+(22702,5157,1,1,2,100),-- Recipe: Soulshot (S) Compressed Package (100%)
 (22702,9573,1,1,200,1000), -- Life Stone: level 80
 (22702,9574,1,1,200,300), -- Mid-Grade Life Stone: level 80
 (22702,9575,1,1,200,80), -- High-Grade Life Stone: level 80
 (22702,1808,1,1,-1,5000),-- Recipe: Soulshot: S Grade
 (22702,9530,1,1,-1,6000), -- Sealed Dynasty Breast Plate Piece
 (22702,9621,1,1,-1,3000); -- Dynasty Halberd Piece
+
+-- Crypts of Disgrace
+INSERT INTO `droplist` VALUES
+(22703,57,2700,4285,0,700000), -- Adena
+(22703,4040,1,1,2,15591), -- Mold Lubricant
+(22703,9621,1,1,1,1234), -- Dynasty Halberd Piece
+(22703,1895,1,1,2,45673), -- Metallic Fiber
+(22703,5162,1,1,2,1813), -- Recipe: Spiritshot (S) Compressed Package (100%)
+(22703,9628,1,1,2,4220), -- Leonard
+(22703,9573,1,1,200,4721), -- Life Stone: level 80
+(22703,9575,1,1,200,189), -- High-Grade Life Stone: level 80
+(22703,9574,1,1,200,2110), -- Mid-Grade Life Stone: level 80
+(22703,9630,1,1,2,1725), -- Orichalcum
+(22703,9630,1,1,-1,50000), -- Orichalcum
+(22703,9537,1,1,-1,16667), -- Sealed Dynasty Leather Helmet Piece
+(22703,9617,1,1,-1,5000), -- Dynasty Blade Piece
+(22704,57,2800,4500,0,700000), -- Adena
+(22704,9530,1,1,1,1650), -- Sealed Dynasty Breast Plate Piece
+(22704,9531,1,1,1,1715), -- Sealed Dynasty Gaiter Piece
+(22704,4040,1,1,2,16890), -- Mold Lubricant
+(22704,1895,1,1,2,38271), -- Metallic Fiber
+(22704,5162,1,1,2,1913), -- Recipe: Spiritshot (S) Compressed Package (100%)
+(22704,9628,1,1,2,4420), -- Leonard
+(22704,9573,1,1,200,4321), -- Life Stone: level 80
+(22704,9575,1,1,200,219), -- High-Grade Life Stone: level 80
+(22704,9574,1,1,200,2630), -- Mid-Grade Life Stone: level 80
+(22704,9630,1,1,2,1950), -- Orichalcum
+(22704,10546,1,1,-1,5000), -- Recipe - Dynasty Staff Fragment
+(22704,3036,1,1,-1,7111), -- Recipe: Spiritshot S
+(22704,1808,1,1,-1,6900), -- Recipe: Soulshot: S Grade 
+(22705,57,2900,4600,0,700000), -- Adena
+(22705,9536,1,1,1,3490), -- Sealed Dynasty Leather Leggings Piece
+(22705,9535,1,1,1,3170), -- Sealed Dynasty Leather Armor Piece
+(22705,4040,1,1,2,18150), -- Mold Lubricant
+(22705,1895,1,1,2,72215), -- Metallic Fiber
+(22705,9573,1,1,200,4921), -- Life Stone: level 80
+(22705,9575,1,1,200,226), -- High-Grade Life Stone: level 80
+(22705,9574,1,1,200,2530), -- Mid-Grade Life Stone: level 80
+(22705,9625,1,1,200,1500), -- Giants Codex - Oblivion
+(22705,4042,1,1,2,26432), -- Enria
+(22705,4043,1,1,2,33120), -- Asofe
+(22705,10547,1,1,-1,5000), -- Dynasty Crusher Fragment
+(22705,9630,1,1,-1,50000), -- Orichalcum
+(22705,9628,1,1,-1,75000), -- Leonard
+(22706,57,3000,4800,0,700000), -- Adena
+(22706,9541,1,1,1,2978), -- Sealed Dynasty Stocking Piece
+(22706,9540,1,1,1,2437), -- Sealed Dynasty Tunic Piece
+(22706,4040,1,1,2,19180), -- Mold Lubricant
+(22706,1895,1,1,2,73295), -- Metallic Fiber
+(22706,9573,1,1,200,5221), -- Life Stone: level 80
+(22706,9575,1,1,200,232), -- High-Grade Life Stone: level 80
+(22706,9574,1,1,200,2755), -- Mid-Grade Life Stone: level 80
+(22706,9626,1,1,200,1500), -- Giants Codex - Oblivion
+(22706,4042,1,1,2,29567), -- Enria
+(22706,4043,1,1,2,37330), -- Asofe
+(22706,5272,1,1,-1,10789), -- Recipe: Soulshot (S) Compressed Package (100%)
+(22706,10546,1,1,-1,5000), -- Recipe - Dynasty Staff Fragment
+(22706,1894,1,1,-1,683560), -- Crafted Leather
+(22707,57,4500,6000,0,700000), -- Adena
+(22707,9993,1,1,1,3280), -- Sealed Dynasty Ring Gemstone 
+(22707,9991,1,1,1,2870), -- Sealed Dynasty Earring Gemstone 
+(22707,9992,1,1,1,1990), -- Sealed Dynasty Necklace Gemstone
+(22707,4040,1,1,2,28233), -- Mold Lubricant
+(22707,1895,1,1,2,95235), -- Metallic Fiber
+(22707,9546,1,1,200,13530), -- Fire Stone
+(22707,4042,1,1,2,38500), -- Enria
+(22707,4043,1,1,2,47030), -- Asofe
+(22707,9622,1,1,-1,7000), -- Halberd Cudgel Piece
+(22707,9624,1,1,-1,7000), -- Dynasty Bagh-Nakh Piece
+(22707,5162,1,1,-1,7910); -- Recipe: Spiritshot (S) Compressed Package (100%)
+
+-- Gracia Epilog : Primeval Isle
+INSERT INTO `droplist` VALUES
+(22742,57,477,1127,0,700000),-- Adena
+(22742,10546,1,1,1,200),-- Dynasty Staff Fragment
+(22742,10547,1,1,1,200),-- Dynasty Crusher Fragment
+(22742,9622,1,1,1,200),-- Halberd Cudgel Piece
+(22742,9623,1,1,1,200),-- Dynasty Mace Piece
+(22742,10253,1,1,1,1),-- Dynasty Crusher
+(22742,10252,1,1,1,1),-- Dynasty Staff
+(22742,9449,1,1,1,1),-- Dynasty Mace
+(22742,9448,1,1,1,1),-- Dynasty Cudgel
+(22742,8954,1,1,2,815),-- Blue Primeval Crystal
+(22742,8955,1,1,2,408),-- Green Primeval Crystal
+(22742,8956,1,1,2,104),-- Red Primeval Crystal
+(22742,960,1,1,2,40),-- Scroll: Enchant Armor (Grade S)
+(22742,959,1,1,2,4),-- Scroll: Enchant Weapon (Grade S)
+(22742,960,1,1,-1,1000),-- Scroll: Enchant Armor (Grade S)
+(22742,9531,1,1,-1,8000), -- Sealed Dynasty Gaiter Piece
+(22742,9536,1,1,-1,8000), -- Sealed Dynasty Leather Leggings Piece
+(22743,57,477,1127,0,700000),-- Adena
+(22743,9619,1,1,1,400), -- Dynasty Bow Piece
+(22743,9445,1,1,1,2),-- Dynasty Bow
+(22743,959,1,1,-1,400),-- Scroll: Enchant Weapon (Grade S)
+(22743,9531,1,1,-1,8000), -- Sealed Dynasty Gaiter Piece
+(22743,1875,1,1,-1,50000),-- Stone of Purity
+(22744,57,477,1127,0,700000),-- Adena
+(22744,10546,1,1,1,200),-- Dynasty Staff Fragment
+(22744,10547,1,1,1,200),-- Dynasty Crusher Fragment
+(22744,9622,1,1,1,200),-- Halberd Cudgel Piece
+(22744,9623,1,1,1,200),-- Dynasty Mace Piece
+(22744,10253,1,1,1,1),-- Dynasty Crusher
+(22744,10252,1,1,1,1),-- Dynasty Staff
+(22744,9449,1,1,1,1),-- Dynasty Mace
+(22744,9448,1,1,1,1),-- Dynasty Cudgel
+(22744,8954,1,1,2,815),-- Blue Primeval Crystal
+(22744,8955,1,1,2,408),-- Green Primeval Crystal
+(22744,8956,1,1,2,104),-- Red Primeval Crystal
+(22744,960,1,1,2,40),-- Scroll: Enchant Armor (Grade S)
+(22744,959,1,1,2,4),-- Scroll: Enchant Weapon (Grade S)
+(22744,960,1,1,-1,1000),-- Scroll: Enchant Armor (Grade S)
+(22744,6901,1,1,-1,5000),-- Recipe: Shining Arrow (100%)
+(22744,9630,1,1,2,10000), -- Orichalcum
+(22745,57,477,1127,0,700000),-- Adena
+(22745,9619,1,1,1,400), -- Dynasty Bow Piece
+(22745,9445,1,1,1,2),-- Dynasty Bow
+(22745,959,1,1,-1,400),-- Scroll: Enchant Weapon (Grade S)
+(22745,9628,1,1,-1,20000), -- Leonard
+(22745,9630,1,1,-1,10000); -- Orichalcum
+
+-- Freya Plains of Lizarmen
+INSERT INTO `droplist` VALUES
+-- Tanta Lizardman Scout
+(22768,57,686,1305,0,700000),-- Adena
+(22768,10403,1,1,1,1000),-- Icarus Hand Piece
+(22768,10398,1,1,1,1000),-- Icarus Disperser Piece
+(22768,10221,1,1,1,1),-- Icarus Hand
+(22768,10216,1,1,1,1),-- Icarus Disperser
+(22768,1345,10,30,2,100000),-- Shining Arrow
+(22768,1895,1,1,2,51200),-- Metallic Fiber
+(22768,4043,1,1,2,6200),-- Asofe
+(22768,4040,1,1,2,4200),-- Mold Lubricant
+(22768,4042,1,1,2,3500),-- Enria
+(22768,959,1,1,2,20),-- Scroll: Enchant Weapon (S)
+(22768,10379,1,1,2,50),-- Recipe - Icarus Hand (60%)
+(22768,10483,1,1,200,3300),-- Life Stone: level 82
+(22768,10484,1,1,200,800),-- Mid-Grade Life Stone: level 82
+(22768,10485,1,1,200,80),-- High-Grade Life Stone: level 82
+(22768,1894,1,1,-1,50000),-- Crafted Leather
+(22768,10379,1,1,-1,300),-- Recipe - Icarus Hand (60%)
+(22768,10374,1,1,-1,300),-- Recipe - Icarus Disperser (60%)
+(22768,959,1,1,-1,100),-- Scroll: Enchant Weapon (S)
+(22768,10403,1,1,-1,3000),-- Icarus Hand Piece
+(22768,10398,1,1,-1,3000),-- Icarus Disperser Piece
+-- Tanta Lizardman Warrior
+(22769,57,952,1756,0,700000),-- Adena
+(22769,10397,1,1,1,1000),-- Icarus Sawsword Piece
+(22769,10399,1,1,1,1000),-- Icarus Spirit Piece
+(22769,10400,1,1,1,1000),-- Icarus Heavy Arms Piece
+(22769,10215,1,1,1,2),-- Icarus Sawsword
+(22769,10217,1,1,1,2),-- Icarus Spirit
+(22769,10218,1,1,1,2),-- Icarus Heavy Arms
+(22769,1895,1,1,2,81200),-- Metallic Fiber
+(22769,4040,1,1,2,5200),-- Mold Lubricant
+(22769,9628,1,1,2,3400),-- Leonard
+(22769,9630,1,1,2,1500),-- Orichalcum
+(22769,960,1,1,2,200),-- Scroll: Enchant Armor (S)
+(22769,10483,1,1,200,4500),-- Life Stone: level 82
+(22769,10484,1,1,200,1100),-- Mid-Grade Life Stone: level 82
+(22769,10485,1,1,200,110),-- High-Grade Life Stone: level 82
+(22769,9628,1,1,-1,70000),-- Leonard
+(22769,10397,1,1,-1,4000),-- Icarus Sawsword Piece
+(22769,10399,1,1,-1,4000),-- Icarus Spirit Piece
+(22769,10400,1,1,-1,4000),-- Icarus Heavy Arms Piece
+(22769,10373,1,1,-1,400),-- Recipe - Icarus Sawsword (60%)
+(22769,10375,1,1,-1,400),-- Recipe - Icarus Spirit (60%)
+(22769,10376,1,1,-1,400),-- Recipe - Icarus Heavy Arms (60%)
+-- Tanta Lizardman Soldier
+(22770,57,1567,2838,0,700000),-- Adena
+(22770,15645,1,1,1,5000),-- Sealed Moirai Helmet Piece
+(22770,15646,1,1,1,5000),-- Sealed Moirai Leather Helmet Piece
+(22770,15647,1,1,1,5000),-- Sealed Moirai Circlet Piece
+(22770,15693,1,1,1,5000),-- Sealed Moirai Shield Piece
+(22770,15692,1,1,1,5000),-- Sealed Moirai Sigil Piece
+(22770,15694,1,1,1,5),-- Sealed Moirai Helmet
+(22770,15695,1,1,1,5),-- Sealed Moirai Leather Helmet
+(22770,15696,1,1,1,5),-- Sealed Moirai Circlet
+(22770,15710,1,1,1,5),-- Sealed Moirai Shield
+(22770,15709,1,1,1,5),-- Sealed Moirai Sigil
+(22770,15775,1,1,2,50),-- Recipe - Sealed Moirai Helmet (60%)
+(22770,15776,1,1,2,50),-- Recipe - Sealed Moirai Leather Helmet (60%)
+(22770,15777,1,1,2,50),-- Recipe - Sealed Moirai Circlet (60%)
+(22770,15791,1,1,2,50),-- Recipe - Sealed Moirai Shield (60%)
+(22770,15790,1,1,2,50),-- Recipe - Sealed Moirai Sigil (60%)
+(22770,1879,1,1,2,58200),-- Cokes
+(22770,1885,1,1,2,26200),-- High Grade Suede
+(22770,9628,1,1,2,3200),-- Leonard
+(22770,9629,1,1,2,1400),-- Adamantine
+(22770,9630,1,1,2,1600),-- Orichalcum
+(22770,9554,1,1,2,400),-- Earth Crystal
+(22770,10483,1,1,200,4500),-- Life Stone: level 82
+(22770,10484,1,1,200,1100),-- Mid-Grade Life Stone: level 82
+(22770,10485,1,1,200,110),-- High-Grade Life Stone: level 82
+(22770,15645,1,1,-1,25000),-- Sealed Moirai Helmet Piece
+(22770,15646,1,1,-1,25000),-- Sealed Moirai Leather Helmet Piece
+(22770,15647,1,1,-1,25000),-- Sealed Moirai Circlet Piece
+(22770,15693,1,1,-1,25000),-- Sealed Moirai Shield Piece
+(22770,15692,1,1,-1,25000),-- Sealed Moirai Sigil Piece
+(22770,15775,1,1,-1,1000),-- Recipe - Sealed Moirai Helmet (60%)
+(22770,15776,1,1,-1,1000),-- Recipe - Sealed Moirai Leather Helmet (60%)
+(22770,15777,1,1,-1,1000),-- Recipe - Sealed Moirai Circlet (60%)
+(22770,15791,1,1,-1,1000),-- Recipe - Sealed Moirai Shield (60%)
+(22770,15790,1,1,-1,1000),-- Recipe - Sealed Moirai Sigil (60%)
+-- Tanta Lizardman Berserker
+(22771,57,1576,2738,0,700000),-- Adena
+(22771,15648,1,1,1,2500),-- Sealed Moirai Cuirass Piece
+(22771,15651,1,1,1,4000),-- Sealed Moirai Gaiter Piece
+(22771,10402,1,1,1,1000),-- Icarus Hammer Piece
+(22771,10404,1,1,1,1000),-- Icarus Hall Piece
+(22771,10220,1,1,1,2),-- Icarus Hammer
+(22771,10222,1,1,1,2),-- Icarus Hall
+(22771,15697,1,1,1,3),-- Sealed Moirai Cuirass
+(22771,15700,1,1,1,4),-- Sealed Moirai Gaiter
+(22771,1879,1,1,2,58200),-- Cokes
+(22771,1885,1,1,2,26200),-- High Grade Suede
+(22771,9628,1,1,2,3200),-- Leonard
+(22771,9629,1,1,2,1400),-- Adamantine
+(22771,9630,1,1,2,1600),-- Orichalcum
+(22771,9554,1,1,2,400),-- Earth Crystal
+(22771,10483,1,1,200,4500),-- Life Stone: level 82
+(22771,10484,1,1,200,1100),-- Mid-Grade Life Stone: level 82
+(22771,10485,1,1,200,110),-- High-Grade Life Stone: level 82
+(22771,15778,1,1,2,50),-- Recipe - Sealed Moirai Cuirass (60%)
+(22771,15781,1,1,2,50),-- Recipe - Sealed Moirai Gaiter (60%)
+(22771,9630,1,1,-1,50000),-- Orichalcum
+(22771,10378,1,1,-1,400),-- Recipe - Icarus Hammer (60%)
+(22771,10380,1,1,-1,400),-- Recipe - Icarus Hall (60%)
+(22771,10402,1,1,-1,4000),-- Icarus Hammer Piece
+(22771,10404,1,1,-1,4000),-- Icarus Hall Piece
+-- Tanta Lizardman Archer
+(22772,57,1061,1879,0,700000),-- Adena
+(22772,15772,1,1,1,8000),-- Sealed Moirai Ring Gem
+(22772,15773,1,1,1,7000),-- Sealed Moirai Earring Gem
+(22772,15774,1,1,1,6000),-- Sealed Moirai Necklace Gem
+(22772,10405,1,1,1,2000),-- Icarus Spitter Piece
+(22772,10223,1,1,1,4),-- Icarus Spitter
+(22772,15766,1,1,1,20),-- Sealed Moirai Ring
+(22772,15767,1,1,1,16),-- Sealed Moirai Earring
+(22772,15768,1,1,1,12),-- Sealed Moirai Necklace
+(22772,1345,10,30,2,200000),-- Shining Arrow
+(22772,1895,1,1,2,81200),-- Metallic Fiber
+(22772,4040,1,1,2,5200),-- Mold Lubricant
+(22772,9628,1,1,2,3400),-- Leonard
+(22772,9630,1,1,2,1500),-- Orichalcum
+(22772,10483,1,1,200,4500),-- Life Stone: level 82
+(22772,10484,1,1,200,1100),-- Mid-Grade Life Stone: level 82
+(22772,10485,1,1,200,110),-- High-Grade Life Stone: level 82
+(22772,15812,1,1,2,100),-- Recipe - Sealed Moirai Ring (70%)
+(22772,15813,1,1,2,100),-- Recipe - Sealed Moirai Earring (70%)
+(22772,15814,1,1,2,100),-- Recipe - Sealed Moirai Necklace (70%)
+(22772,1894,1,1,-1,70000),-- Crafted Leather
+(22772,959,1,1,-1,100),-- Scroll: Enchant Weapon (S)
+(22772,15812,1,1,-1,1500),-- Recipe - Sealed Moirai Ring (70%)
+(22772,15813,1,1,-1,1500),-- Recipe - Sealed Moirai Earring (70%)
+(22772,15814,1,1,-1,1500),-- Recipe - Sealed Moirai Necklace (70%)
+(22772,15772,1,1,-1,30000),-- Sealed Moirai Ring Gem
+(22772,15773,1,1,-1,28000),-- Sealed Moirai Earring Gem
+(22772,15774,1,1,-1,25000),-- Sealed Moirai Necklace Gem
+(22772,10405,1,1,-1,4000),-- Icarus Spitter Piece
+(22772,10381,1,1,-1,400),-- Recipe - Icarus Spitter (60%)
+-- Tanta Lizardman Magician
+(22773,57,1157,1736,0,700000),-- Adena
+(22773,15654,1,1,1,6000),-- Sealed Moirai Gauntlet Piece
+(22773,15655,1,1,1,6000),-- Sealed Moirai Leather Gloves Piece
+(22773,15656,1,1,1,6000),-- Sealed Moirai Gloves Piece
+(22773,15657,1,1,1,6000),-- Sealed Moirai Boots Piece
+(22773,15658,1,1,1,6000),-- Sealed Moirai Leather Boots Piece
+(22773,15659,1,1,1,6000),-- Sealed Moirai Shoes Piece
+(22773,15703,1,1,1,6),-- Sealed Moirai Gauntlet
+(22773,15704,1,1,1,6),-- Sealed Moirai Leather Gloves
+(22773,15705,1,1,1,6),-- Sealed Moirai Gloves
+(22773,15706,1,1,1,6),-- Sealed Moirai Boots
+(22773,15707,1,1,1,6),-- Sealed Moirai Leather Boots
+(22773,15708,1,1,1,6),-- Sealed Moirai Shoes
+(22773,1345,10,30,2,150000),-- Shining Arrow
+(22773,1895,1,1,2,81200),-- Metallic Fiber
+(22773,4043,1,1,2,8200),-- Asofe
+(22773,4040,1,1,2,5200),-- Mold Lubricant
+(22773,4042,1,1,2,4500),-- Enria
+(22773,10483,1,1,200,4500),-- Life Stone: level 82
+(22773,10484,1,1,200,1100),-- Mid-Grade Life Stone: level 82
+(22773,10485,1,1,200,110),-- High-Grade Life Stone: level 82
+(22773,15784,1,1,2,50),-- Recipe - Sealed Moirai Gauntlet (60%)
+(22773,15785,1,1,2,50),-- Recipe - Sealed Moirai Leather Gloves (60%)
+(22773,15786,1,1,2,50),-- Recipe - Sealed Moirai Gloves (60%)
+(22773,15787,1,1,2,50),-- Recipe - Sealed Moirai Boots (60%)
+(22773,15788,1,1,2,50),-- Recipe - Sealed Moirai Leather Boots (60%)
+(22773,15789,1,1,2,50),-- Recipe - Sealed Moirai Shoes (60%)
+(22773,15654,1,1,-1,30000),-- Sealed Moirai Gauntlet Piece
+(22773,15655,1,1,-1,30000),-- Sealed Moirai Leather Gloves Piece
+(22773,15656,1,1,-1,30000),-- Sealed Moirai Gloves Piece
+(22773,15657,1,1,-1,30000),-- Sealed Moirai Boots Piece
+(22773,15658,1,1,-1,30000),-- Sealed Moirai Leather Boots Piece
+(22773,15659,1,1,-1,30000),-- Sealed Moirai Shoes Piece
+(22773,15784,1,1,-1,1200),-- Recipe - Sealed Moirai Gauntlet (60%)
+(22773,15785,1,1,-1,1200),-- Recipe - Sealed Moirai Leather Gloves (60%)
+(22773,15786,1,1,-1,1200),-- Recipe - Sealed Moirai Gloves (60%)
+(22773,15787,1,1,-1,1200),-- Recipe - Sealed Moirai Boots (60%)
+(22773,15788,1,1,-1,1200),-- Recipe - Sealed Moirai Leather Boots (60%)
+(22773,15789,1,1,-1,1200),-- Recipe - Sealed Moirai Shoes (60%)
+-- Tanta Lizardman Summoner
+(22774,57,1757,3243,0,700000),-- Adena
+(22774,15649,1,1,1,3500),-- Sealed Moirai Houberk Piece
+(22774,15650,1,1,1,3500),-- Sealed Moirai Tunic Piece
+(22774,15652,1,1,1,5000),-- Sealed Moirai Leather Leggins Piece
+(22774,15653,1,1,1,5000),-- Sealed Moirai Hose Piece
+(22774,15698,1,1,1,3),-- Sealed Moirai Houberk
+(22774,15699,1,1,1,3),-- Sealed Moirai Tunic
+(22774,15701,1,1,1,4),-- Sealed Moirai Leather Leggins
+(22774,15702,1,1,1,4),-- Sealed Moirai Hose
+(22774,1879,1,1,2,58200),-- Cokes
+(22774,1885,1,1,2,26200),-- High Grade Suede
+(22774,9628,1,1,2,3200),-- Leonard
+(22774,9629,1,1,2,1400),-- Adamantine
+(22774,9630,1,1,2,1600),-- Orichalcum
+(22774,10483,1,1,200,4500),-- Life Stone: level 82
+(22774,10484,1,1,200,1100),-- Mid-Grade Life Stone: level 82
+(22774,10485,1,1,200,110),-- High-Grade Life Stone: level 82
+(22774,15779,1,1,2,50),-- Recipe - Sealed Moirai Houberk (60%)
+(22774,15780,1,1,2,50),-- Recipe - Sealed Moirai Tunic (60%)
+(22774,15782,1,1,2,50),-- Recipe - Sealed Moirai Leather Leggins (60%)
+(22774,15783,1,1,2,50),-- Recipe - Sealed Moirai Hose (60%)
+(22774,9630,1,1,-1,50000),-- Orichalcum
+(22774,15779,1,1,-1,700),-- Recipe - Sealed Moirai Houberk (60%)
+(22774,15780,1,1,-1,700),-- Recipe - Sealed Moirai Tunic (60%)
+(22774,15782,1,1,-1,700),-- Recipe - Sealed Moirai Leather Leggins (60%)
+(22774,15783,1,1,-1,700),-- Recipe - Sealed Moirai Hose (60%)
+(22774,15649,1,1,-1,10000),-- Sealed Moirai Houberk Piece
+(22774,15652,1,1,-1,13000),-- Sealed Moirai Leather Leggins Piece
+-- Freya Monastery of Silence
+-- Guide Solina
+(22789,57,1068,1764,0,700000),-- Adena
+(22789,15634,1,1,1,500),-- Vesper Cutter Piece
+(22789,15635,1,1,1,500),-- Vesper Slasher Piece
+(22789,15636,1,1,1,500),-- Vesper Buster Piece
+(22789,13457,1,1,1,1),-- Vesper Cutter
+(22789,13458,1,1,1,1),-- Vesper Slasher
+(22789,13459,1,1,1,1),-- Vesper Buster
+(22789,1895,1,1,2,81200),-- Metallic Fiber
+(22789,4040,1,1,2,5200),-- Mold Lubricant
+(22789,9628,1,1,2,3400),-- Leonard
+(22789,9630,1,1,2,1500),-- Orichalcum
+(22789,9557,1,1,200,100),-- Divine Crystal
+(22789,9573,1,1,200,4500),-- Life Stone: level 80
+(22789,9574,1,1,200,1100),-- Mid-Grade Life Stone: level 80
+(22789,9575,1,1,200,110),-- High-Grade Life Stone: level 80
+(22789,15815,1,1,-1,200),-- Recipe - Vesper Cutter (60%)
+(22789,15816,1,1,-1,200),-- Recipe - Vesper Slasher (60%)
+(22789,15817,1,1,-1,200),-- Recipe - Vesper Buster (60%)
+(22789,15634,1,1,-1,2000),-- Vesper Cutter Piece
+(22789,15635,1,1,-1,2000),-- Vesper Slasher Piece
+(22789,15636,1,1,-1,2000),-- Vesper Buster Piece
+(22789,1894,1,1,-1,70000),-- Crafted Leather
+-- Seeker Solina
+(22790,57,1104,2018,0,700000),-- Adena
+(22790,15638,1,1,1,1500),-- Vesper Figter Piece
+(22790,13461,1,1,1,3),-- Vesper Figter
+(22790,1895,1,1,2,81200),-- Metallic Fiber
+(22790,4043,1,1,2,8200),-- Asofe
+(22790,4040,1,1,2,5200),-- Mold Lubricant
+(22790,4042,1,1,2,4500),-- Enria
+(22790,959,1,1,2,20),-- Scroll: Enchant Weapon (S)
+(22790,9573,1,1,200,4500),-- Life Stone: level 80
+(22790,9574,1,1,200,1100),-- Mid-Grade Life Stone: level 80
+(22790,9575,1,1,200,110),-- High-Grade Life Stone: level 80
+(22790,15819,1,1,-1,200),-- Recipe - Vesper Fighter (60%)
+(22790,959,1,1,-1,100),-- Scroll: Enchant Weapon (S)
+(22790,15638,1,1,-1,2000),-- Vesper Figter Piece
+(22790,960,1,1,-1,1000),-- Scroll: Enchant Armor (S)
+-- Savior Solina
+(22791,57,1055,2009,0,700000),-- Adena
+(22791,15640,1,1,1,400),-- Vesper Avenger Piece
+(22791,15641,1,1,1,400),-- Vesper Retributer Piece
+(22791,15642,1,1,1,400),-- Vesper Caster Piece
+(22791,15643,1,1,1,400),-- Vesper Singer Piece
+(22791,13463,1,1,1,1),-- Vesper Avenger
+(22791,13464,1,1,1,1),-- Vesper Retributer
+(22791,13465,1,1,1,1),-- Vesper Caster
+(22791,13466,1,1,1,1),-- Vesper Singer
+(22791,1895,1,1,2,81200),-- Metallic Fiber
+(22791,4040,1,1,2,5200),-- Mold Lubricant
+(22791,9628,1,1,2,3400),-- Leonard
+(22791,9630,1,1,2,1500),-- Orichalcum
+(22791,9557,1,1,200,100),-- Divine Crystal
+(22791,9573,1,1,200,4500),-- Life Stone: level 80
+(22791,9574,1,1,200,1100),-- Mid-Grade Life Stone: level 80
+(22791,9575,1,1,200,110),-- High-Grade Life Stone: level 80
+(22791,15821,1,1,-1,200),-- Recipe - Vesper Avenger (60%)
+(22791,15822,1,1,-1,200),-- Recipe - Vesper Retributer (60%)
+(22791,15823,1,1,-1,200),-- Recipe - Vesper Caster (60%)
+(22791,15824,1,1,-1,200),-- Recipe - Vesper Singer (60%)
+(22791,15640,1,1,-1,2000),-- Vesper Avenger Piece
+(22791,15641,1,1,-1,2000),-- Vesper Retributer Piece
+(22791,15642,1,1,-1,2000),-- Vesper Caster Piece
+(22791,15643,1,1,-1,2000),-- Vesper Singer Piece
+-- Ascetic Solina
+(22793,57,1085,2116,0,700000),-- Adena
+(22793,15644,1,1,1,1500),-- Vesper Thrower Piece
+(22793,13467,1,1,1,3),-- Vesper Thrower
+(22793,1895,1,1,2,81200),-- Metallic Fiber
+(22793,4043,1,1,2,8200),-- Asofe
+(22793,4040,1,1,2,5200),-- Mold Lubricant
+(22793,4042,1,1,2,4500),-- Enria
+(22793,959,1,1,2,20),-- Scroll: Enchant Weapon (S)
+(22793,9573,1,1,200,4500),-- Life Stone: level 80
+(22793,9574,1,1,200,1100),-- Mid-Grade Life Stone: level 80
+(22793,9575,1,1,200,110),-- High-Grade Life Stone: level 80
+(22793,15825,1,1,-1,200),-- Recipe - Vesper Thrower (60%)
+(22793,15644,1,1,-1,2000),-- Vesper Thrower Piece
+(22793,9628,1,1,-1,60000),-- Leonard
+-- Solina Knights
+(18809,57,1300,2268,0,700000),-- Adena
+(18809,15667,1,1,1,2000),-- Sealed Vesper Gauntlet Piece
+(18809,15671,1,1,1,2000),-- Sealed Vesper Leather Gloves Piece
+(18809,15674,1,1,1,2000),-- Sealed Vesper Gloves Piece
+(18809,15668,1,1,1,2000),-- Sealed Vesper Boots Piece
+(18809,15672,1,1,1,2000),-- Sealed Vesper Leather Boots Piece
+(18809,15675,1,1,1,2000),-- Sealed Vesper Shoes Piece
+(18809,14109,1,1,1,6),-- Sealed Vesper Gauntlet
+(18809,14113,1,1,1,6),-- Sealed Vesper Leather Gloves
+(18809,14116,1,1,1,6),-- Sealed Vesper Gloves
+(18809,14110,1,1,1,6),-- Sealed Vesper Boots
+(18809,14114,1,1,1,6),-- Sealed Vesper Leather Boots
+(18809,14117,1,1,1,6),-- Sealed Vesper Shoes
+(18809,15801,1,1,2,60),-- Recipe - Sealed Vesper Gauntlet (60%)
+(18809,15802,1,1,2,60),-- Recipe - Sealed Vesper Leather Gloves (60%)
+(18809,15803,1,1,2,60),-- Recipe - Sealed Vesper Gloves (60%)
+(18809,15804,1,1,2,60),-- Recipe - Sealed Vesper Boots (60%)
+(18809,15805,1,1,2,60),-- Recipe - Sealed Vesper Leather Boots (60%)
+(18809,15806,1,1,2,60),-- Recipe - Sealed Vesper Shoes (60%)
+(18809,1879,1,1,2,58200),-- Cokes
+(18809,1885,1,1,2,26200),-- High Grade Suede
+(18809,9628,1,1,2,3200),-- Leonard
+(18809,9629,1,1,2,1400),-- Adamantine
+(18809,9630,1,1,2,1600),-- Orichalcum
+(18809,9573,1,1,200,4500),-- Life Stone: level 80
+(18809,9574,1,1,200,1100),-- Mid-Grade Life Stone: level 80
+(18809,9575,1,1,200,110),-- High-Grade Life Stone: level 80
+(18809,15801,1,1,-1,600),-- Recipe - Sealed Vesper Gauntlet (60%)
+(18809,15802,1,1,-1,600),-- Recipe - Sealed Vesper Leather Gloves (60%)
+(18809,15803,1,1,-1,600),-- Recipe - Sealed Vesper Gloves (60%)
+(18809,15804,1,1,-1,600),-- Recipe - Sealed Vesper Boots (60%)
+(18809,15805,1,1,-1,600),-- Recipe - Sealed Vesper Leather Boots (60%)
+(18809,15806,1,1,-1,600),-- Recipe - Sealed Vesper Shoes (60%)
+(18809,15667,1,1,-1,6000),-- Sealed Vesper Gauntlet Piece
+(18809,15671,1,1,-1,6000),-- Sealed Vesper Leather Gloves Piece
+(18809,15674,1,1,-1,6000),-- Sealed Vesper Gloves Piece
+(18809,15668,1,1,-1,6000),-- Sealed Vesper Boots Piece
+(18809,15672,1,1,-1,6000),-- Sealed Vesper Leather Boots Piece
+(18809,15675,1,1,-1,6000),-- Sealed Vesper Shoes Piece
+(18809,9630,1,1,-1,40000),-- Orichalcum
+-- Solina Knight Captain
+(18810,57,1809,3358,0,700000),-- Adena
+(18810,15667,1,1,1,2500),-- Sealed Vesper Gauntlet Piece
+(18810,15671,1,1,1,2500),-- Sealed Vesper Leather Gloves Piece
+(18810,15674,1,1,1,2500),-- Sealed Vesper Gloves Piece
+(18810,15668,1,1,1,2500),-- Sealed Vesper Boots Piece
+(18810,15672,1,1,1,2500),-- Sealed Vesper Leather Boots Piece
+(18810,15675,1,1,1,2500),-- Sealed Vesper Shoes Piece
+(18810,14109,1,1,1,8),-- Sealed Vesper Gauntlet
+(18810,14113,1,1,1,8),-- Sealed Vesper Leather Gloves
+(18810,14116,1,1,1,8),-- Sealed Vesper Gloves
+(18810,14110,1,1,1,8),-- Sealed Vesper Boots
+(18810,14114,1,1,1,8),-- Sealed Vesper Leather Boots
+(18810,14117,1,1,1,8),-- Sealed Vesper Shoes
+(18810,1895,1,1,2,81200),-- Metallic Fiber
+(18810,4043,1,1,2,8200),-- Asofe
+(18810,4040,1,1,2,5200),-- Mold Lubricant
+(18810,4042,1,1,2,4500),-- Enria
+(18810,10483,1,1,200,4500),-- Life Stone: level 82
+(18810,10484,1,1,200,1100),-- Mid-Grade Life Stone: level 82
+(18810,10485,1,1,200,110),-- High-Grade Life Stone: level 82
+(18810,15801,1,1,-1,600),-- Recipe - Sealed Vesper Gauntlet (60%)
+(18810,15802,1,1,-1,600),-- Recipe - Sealed Vesper Leather Gloves (60%)
+(18810,15803,1,1,-1,600),-- Recipe - Sealed Vesper Gloves (60%)
+(18810,15804,1,1,-1,600),-- Recipe - Sealed Vesper Boots (60%)
+(18810,15805,1,1,-1,600),-- Recipe - Sealed Vesper Leather Boots (60%)
+(18810,15806,1,1,-1,600),-- Recipe - Sealed Vesper Shoes (60%)
+(18810,15667,1,1,-1,6000),-- Sealed Vesper Gauntlet Piece
+(18810,15671,1,1,-1,6000),-- Sealed Vesper Leather Gloves Piece
+(18810,15674,1,1,-1,6000),-- Sealed Vesper Gloves Piece
+(18810,15668,1,1,-1,6000),-- Sealed Vesper Boots Piece
+(18810,15672,1,1,-1,6000),-- Sealed Vesper Leather Boots Piece
+(18810,15675,1,1,-1,6000),-- Sealed Vesper Shoes Piece
+-- Divinity Judge
+(22794,57,5731,11245,0,700000),-- Adena
+(22794,15639,1,1,1,6000),-- Vesper Stormer Piece
+(22794,13462,1,1,1,12),-- Vesper Stormer
+(22794,1895,1,1,2,321200),-- Metallic Fiber
+(22794,4040,1,1,2,20200),-- Mold Lubricant
+(22794,9628,1,1,2,12400),-- Leonard
+(22794,9630,1,1,2,6000),-- Orichalcum
+(22794,960,1,1,2,500),-- Scroll: Enchant Armor (S)
+(22794,9573,1,1,200,18000),-- Life Stone: level 80
+(22794,9574,1,1,200,4400),-- Mid-Grade Life Stone: level 80
+(22794,9575,1,1,200,440),-- High-Grade Life Stone: level 80
+(22794,15820,1,1,-1,800),-- Recipe - Vesper Stormer (60%)
+(22794,15639,1,1,-1,8000),-- Vesper Stormer Piece
+(22794,959,1,1,-1,400),-- Scroll: Enchant Weapon (S)
+-- Divinity Manager
+(22795,57,9560,11749,0,700000),-- Adena
+(22795,15663,1,1,1,4000),-- Sealed Vesper Cuirass Piece
+(22795,15666,1,1,1,5500),-- Sealed Vesper Gaiter Piece
+(22795,14105,1,1,1,7),-- Sealed Vesper Cuirass
+(22795,14108,1,1,1,10),-- Sealed Vesper Gaiter
+(22795,1879,1,1,2,230200),-- Cokes
+(22795,1885,1,1,2,100200),-- High Grade Suede
+(22795,9628,1,1,2,12200),-- Leonard
+(22795,9629,1,1,2,6000),-- Adamantine
+(22795,9630,1,1,2,7000),-- Orichalcum
+(22795,15795,1,1,2,60),-- Recipe - Sealed Vesper Cuirass (60%)
+(22795,15798,1,1,2,70),-- Recipe - Sealed Vesper Gaiter (60%)
+(22795,9573,1,1,200,18000),-- Life Stone: level 80
+(22795,9574,1,1,200,4400),-- Mid-Grade Life Stone: level 80
+(22795,9575,1,1,200,440),-- High-Grade Life Stone: level 80
+(22795,15795,1,1,-1,1600),-- Recipe - Sealed Vesper Cuirass (60%)
+(22795,15798,1,1,-1,2000),-- Recipe - Sealed Vesper Gaiter (60%)
+(22795,15663,1,1,-1,16000),-- Sealed Vesper Cuirass Piece
+(22795,15666,1,1,-1,22000),-- Sealed Vesper Gaiter Piece
+(22795,9628,1,1,-1,250000),-- Leonard
+-- Divinity Supervisor
+(22796,57,8405,12071,0,700000),-- Adena
+(22796,15664,1,1,1,4000),-- Sealed Vesper Houberk Piece
+(22796,15670,1,1,1,5500),-- Sealed Vesper Leather Leggins Piece
+(22796,14106,1,1,1,7),-- Sealed Vesper Houberk
+(22796,14112,1,1,1,10),-- Sealed Vesper Leather Leggins
+(22796,1879,1,1,2,230200),-- Cokes
+(22796,1885,1,1,2,100200),-- High Grade Suede
+(22796,9628,1,1,2,12200),-- Leonard
+(22796,9629,1,1,2,6000),-- Adamantine
+(22796,9630,1,1,2,7000),-- Orichalcum
+(22796,15796,1,1,2,60),-- Recipe - Sealed Vesper Houberk (60%)
+(22796,15799,1,1,2,70),-- Recipe - Sealed Vesper Leather Leggins (60%)
+(22796,9573,1,1,200,18000),-- Life Stone: level 80
+(22796,9574,1,1,200,4400),-- Mid-Grade Life Stone: level 80
+(22796,9575,1,1,200,440),-- High-Grade Life Stone: level 80
+(22796,15796,1,1,-1,1600),-- Recipe - Sealed Vesper Houberk (60%)
+(22796,15799,1,1,-1,2000),-- Recipe - Sealed Vesper Leather Leggins (60%)
+(22796,15664,1,1,-1,16000),-- Sealed Vesper Houberk Piece
+(22796,15670,1,1,-1,22000),-- Sealed Vesper Leather Leggins Piece
+(22796,9630,1,1,-1,200000),-- Orichalcum
+-- Divinity Worshipper
+(22797,57,6727,12273,0,700000),-- Adena
+(22797,15665,1,1,1,4000),-- Sealed Vesper Tunic Piece
+(22797,15673,1,1,1,5500),-- Sealed Vesper Hose Piece
+(22797,14107,1,1,1,7),-- Sealed Vesper Tunic
+(22797,14115,1,1,1,10),-- Sealed Vesper Hose 
+(22797,1895,1,1,2,321200),-- Metallic Fiber
+(22797,4040,1,1,2,20200),-- Mold Lubricant
+(22797,9628,1,1,2,12400),-- Leonard
+(22797,9630,1,1,2,6000),-- Orichalcum
+(22797,15797,1,1,2,60),-- Recipe - Sealed Vesper Tunic (60%)
+(22797,15800,1,1,2,70),-- Recipe - Sealed Vesper Hose (60%)
+(22797,9573,1,1,200,18000),-- Life Stone: level 80
+(22797,9574,1,1,200,4400),-- Mid-Grade Life Stone: level 80
+(22797,9575,1,1,200,440),-- High-Grade Life Stone: level 80
+(22797,15797,1,1,-1,1600),-- Recipe - Sealed Vesper Tunic (60%)
+(22797,15800,1,1,-1,2000),-- Recipe - Sealed Vesper Hose (60%)
+(22797,15665,1,1,-1,16000),-- Sealed Vesper Tunic Piece
+(22797,15673,1,1,-1,22000),-- Sealed Vesper Hose Piece
+(22797,9628,1,1,-1,250000),-- Leonard
+-- Divinity Protector
+(22798,57,19734,21529,0,700000),-- Adena
+(22798,15769,1,1,1,15000),-- Sealed Vesper Ring Gem
+(22798,15770,1,1,1,12000),-- Sealed Vesper Earring Gem
+(22798,15771,1,1,1,10000),-- Sealed Vesper Necklace Gem
+(22798,14162,1,1,1,30),-- Sealed Vesper Ring
+(22798,14160,1,1,1,24),-- Sealed Vesper Earring
+(22798,14161,1,1,1,18),-- Sealed Vesper Necklace
+(22798,1879,1,3,2,230200),-- Cokes
+(22798,1885,1,1,2,200200),-- High Grade Suede
+(22798,9628,1,1,2,24200),-- Leonard
+(22798,9629,1,1,2,12000),-- Adamantine
+(22798,9630,1,1,2,14000),-- Orichalcum
+(22798,15809,1,1,2,300),-- Recipe - Sealed Vesper Ring (70%)
+(22798,15810,1,1,2,240),-- Recipe - Sealed Vesper Earring (70%)
+(22798,15811,1,1,2,180),-- Recipe - Sealed Vesper Necklace (70%)
+(22798,9573,1,1,200,36000),-- Life Stone: level 80
+(22798,9574,1,1,200,8800),-- Mid-Grade Life Stone: level 80
+(22798,9575,1,1,200,880),-- High-Grade Life Stone: level 80
+(22798,15809,1,1,-1,5000),-- Recipe - Sealed Vesper Ring (70%)
+(22798,15810,1,1,-1,4000),-- Recipe - Sealed Vesper Earring (70%)
+(22798,15811,1,1,-1,3000),-- Recipe - Sealed Vesper Necklace (70%)
+(22798,15769,1,1,-1,60000),-- Sealed Vesper Ring Gem
+(22798,15770,1,1,-1,48000),-- Sealed Vesper Earring Gem
+(22798,15771,1,1,-1,36000),-- Sealed Vesper Necklace Gem
+-- Divinity Fighter
+(22799,57,12253,22034,0,700000),-- Adena
+(22799,15667,1,1,1,10000),-- Sealed Vesper Gauntlet Piece
+(22799,15671,1,1,1,10000),-- Sealed Vesper Leather Gloves Piece
+(22799,15674,1,1,1,10000),-- Sealed Vesper Gloves Piece
+(22799,15668,1,1,1,10000),-- Sealed Vesper Boots Piece
+(22799,15672,1,1,1,10000),-- Sealed Vesper Leather Boots Piece
+(22799,15675,1,1,1,10000),-- Sealed Vesper Shoes Piece
+(22799,14109,1,1,1,90),-- Sealed Vesper Gauntlet
+(22799,14113,1,1,1,90),-- Sealed Vesper Leather Gloves
+(22799,14116,1,1,1,90),-- Sealed Vesper Gloves
+(22799,14110,1,1,1,90),-- Sealed Vesper Boots
+(22799,14114,1,1,1,90),-- Sealed Vesper Leather Boots
+(22799,14117,1,1,1,90),-- Sealed Vesper Shoes
+(22799,1879,1,3,2,230200),-- Cokes
+(22799,1885,1,1,2,200200),-- High Grade Suede
+(22799,9628,1,1,2,24200),-- Leonard
+(22799,9629,1,1,2,12000),-- Adamantine
+(22799,9630,1,1,2,14000),-- Orichalcum
+(22799,15801,1,1,2,200),-- Recipe - Sealed Vesper Gauntlet (60%)
+(22799,15802,1,1,2,200),-- Recipe - Sealed Vesper Leather Gloves (60%)
+(22799,15803,1,1,2,200),-- Recipe - Sealed Vesper Gloves (60%)
+(22799,15804,1,1,2,200),-- Recipe - Sealed Vesper Boots (60%)
+(22799,15805,1,1,2,200),-- Recipe - Sealed Vesper Leather Boots (60%)
+(22799,15806,1,1,2,200),-- Recipe - Sealed Vesper Shoes (60%)
+(22799,9573,1,1,200,36000),-- Life Stone: level 80
+(22799,9574,1,1,200,8800),-- Mid-Grade Life Stone: level 80
+(22799,9575,1,1,200,880),-- High-Grade Life Stone: level 80
+(22799,15801,1,1,-1,3500),-- Recipe - Sealed Vesper Gauntlet (60%)
+(22799,15802,1,1,-1,3500),-- Recipe - Sealed Vesper Leather Gloves (60%)
+(22799,15803,1,1,-1,3500),-- Recipe - Sealed Vesper Gloves (60%)
+(22799,15804,1,1,-1,3500),-- Recipe - Sealed Vesper Boots (60%)
+(22799,15805,1,1,-1,3500),-- Recipe - Sealed Vesper Leather Boots (60%)
+(22799,15806,1,1,-1,3500),-- Recipe - Sealed Vesper Shoes (60%)
+(22799,15667,1,1,-1,40000),-- Sealed Vesper Gauntlet Piece
+(22799,15671,1,1,-1,40000),-- Sealed Vesper Leather Gloves Piece
+(22799,15674,1,1,-1,40000),-- Sealed Vesper Gloves Piece
+(22799,15668,1,1,-1,40000),-- Sealed Vesper Boots Piece
+(22799,15672,1,1,-1,40000),-- Sealed Vesper Leather Boots Piece
+(22799,15675,1,1,-1,40000),-- Sealed Vesper Shoes Piece
+(22799,9630,1,1,-1,400000),-- Orichalcum
+-- Divinity Magus
+(22800,57,14473,20877,0,700000),-- Adena
+(22800,15660,1,1,1,8000),-- Sealed Vesper Helmet Piece
+(22800,15661,1,1,1,8000),-- Sealed Vesper Leather Helmet Piece
+(22800,15662,1,1,1,8000),-- Sealed Vesper Circlet Piece
+(22800,15669,1,1,1,10000),-- Sealed Vesper Verteidiger Piece
+(22800,15691,1,1,1,10000),-- Sealed Vesper Sigil Piece
+(22800,13143,1,1,1,70),-- Sealed Vesper Helmet
+(22800,13144,1,1,1,70),-- Sealed Vesper Leather Helmet
+(22800,13145,1,1,1,70),-- Sealed Vesper Circlet
+(22800,13887,1,1,1,90),-- Sealed Vesper Sigil
+(22800,14111,1,1,1,90),-- Sealed Vesper Shield
+(22800,1879,1,3,2,230200),-- Cokes
+(22800,1885,1,1,2,200200),-- High Grade Suede
+(22800,9628,1,1,2,24200),-- Leonard
+(22800,9629,1,1,2,12000),-- Adamantine
+(22800,9630,1,1,2,14000),-- Orichalcum
+(22800,15792,1,1,2,160),-- Recipe - Sealed Vesper Helmet (60%)
+(22800,15793,1,1,2,160),-- Recipe - Sealed Vesper Leather Helmet (60%)
+(22800,15794,1,1,2,160),-- Recipe - Sealed Vesper Circlet (60%)
+(22800,15807,1,1,2,200),-- Recipe - Sealed Vesper Sigil (60%)
+(22800,15808,1,1,2,200),-- Recipe - Sealed Vesper Shield (60%)
+(22800,9573,1,1,200,36000),-- Life Stone: level 80
+(22800,9574,1,1,200,8800),-- Mid-Grade Life Stone: level 80
+(22800,9575,1,1,200,880),-- High-Grade Life Stone: level 80
+(22800,15792,1,1,-1,3000),-- Recipe - Sealed Vesper Helmet (60%)
+(22800,15793,1,1,-1,3000),-- Recipe - Sealed Vesper Leather Helmet (60%)
+(22800,15794,1,1,-1,3000),-- Recipe - Sealed Vesper Circlet (60%)
+(22800,15807,1,1,-1,3500),-- Recipe - Sealed Vesper Sigil (60%)
+(22800,15808,1,1,-1,3500),-- Recipe - Sealed Vesper Shield (60%)
+(22800,15660,1,1,-1,36000),-- Sealed Vesper Helmet Piece
+(22800,15661,1,1,-1,36000),-- Sealed Vesper Leather Helmet Piece
+(22800,15662,1,1,-1,36000),-- Sealed Vesper Circlet Piece
+(22800,15669,1,1,-1,40000),-- Sealed Vesper Verteidiger Piece
+(22800,15691,1,1,-1,40000),-- Sealed Vesper Sigil Piece
+-- Freya Pavel Ruins + Archaic Laboratory
+-- Cruel Pincer Golem
+(22801,57,1500,3000,0,700000),-- Adena
+(22801,6364,1,1,1,2),-- Forgotten Blade
+(22801,6372,1,1,1,2),-- Heaven\'s Divider
+(22801,1895,1,1,2,100000),-- Metallic Fiber
+(22801,4040,1,1,2,10000),-- Mold Lubricant
+(22801,4043,1,1,2,5000),-- Asofe
+(22801,4042,1,1,2,2500),-- Enria
+(22801,5162,1,1,-1,3000),-- Recipe: Spiritshot (S) Compressed Package (100%)
+(22801,6701,1,1,-1,50000),-- Sealed Imperial Crusader Breastplate Part
+(22801,6702,1,1,-1,70000),-- Sealed Imperial Crusader Gaiters Pattern
+(22801,9630,1,1,-1,40000),-- Orichalcum
+-- Cruel Pincer Golem
+(22802,57,1500,3000,0,700000),-- Adena
+(22802,6579,1,1,1,1),-- Arcana Mace
+(22802,6365,1,1,1,1),-- Basalt Battlehammer
+(22802,6366,1,1,1,1),-- Imperial Staff
+(22802,6369,1,1,1,1),-- Dragon Hunter Axe
+(22802,4039,1,1,2,10000),-- Mold Glue
+(22802,1894,1,1,2,10000),-- Crafted Leather
+(22802,4044,1,1,2,8000),-- Thons
+(22802,4041,1,1,2,3000),-- Mold Hardener
+(22802,6711,1,1,-1,50000), -- Sealed Major Arcana Robe Part
+(22802,6688,1,1,-1,20000),-- Forgotten Blade Edge
+(22802,6696,1,1,-1,20000),-- Heavens Divider Edge
+-- Drill Golem of Terror
+(22804,57,1500,3000,0,700000),-- Adena
+(22804,7575,1,1,1,4),-- Draconic Bow
+(22804,1895,1,1,2,100000),-- Metallic Fiber
+(22804,4040,1,1,2,10000),-- Mold Lubricant
+(22804,4043,1,1,2,5000),-- Asofe
+(22804,4042,1,1,2,2500),-- Enria
+(22804,959,1,1,2,30),-- Scroll: Enchant Weapon (S)
+(22804,5277,1,1,-1,3000),-- Recipe: Greater Spiritshot (S) Compressed Package(100%)
+(22804,6689,1,1,-1,20000),-- Basalt Battlehammer Head
+(22804,6690,1,1,-1,20000),-- Imperial Staff Head
+-- Drill Golem of Terror
+(22805,57,1500,3000,0,700000),-- Adena
+(22805,6367,1,1,1,4),-- Angel Slayer
+(22805,4039,1,1,2,10000),-- Mold Glue
+(22805,1894,1,1,2,10000),-- Crafted Leather
+(22805,4044,1,1,2,8000),-- Thons
+(22805,4041,1,1,2,3000),-- Mold Hardener
+(22805,7579,1,1,-1,20000),-- Draconic Bow Shaft
+(22805,6695,1,1,-1,20000),-- Demon Splinter Blade
+(22805,5282,1,1,-1,3000),-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%)
+-- Scout-type Golem No. 28
+(22807,57,1500,3000,0,700000),-- Adena
+(22807,6674,1,1,1,3),-- Sealed Imperial Crusader Breastplate
+(22807,6675,1,1,1,5),-- Sealed Imperial Crusader Gaiters
+(22807,1895,1,1,2,100000),-- Metallic Fiber
+(22807,4040,1,1,2,10000),-- Mold Lubricant
+(22807,4043,1,1,2,5000),-- Asofe
+(22807,4042,1,1,2,2500),-- Enria
+(22807,6703,1,1,-1,80000),-- Sealed Imperial Crusader Gauntlets Design
+(22807,6704,1,1,-1,80000),-- Sealed Imperial Crusader Boots Design
+(22807,5277,1,1,-1,3000),-- Recipe: Greater Spiritshot (S) Compressed Package(100%)
+-- Guard Golem
+(22809,57,2000,4000,0,700000),-- Adena
+(22809,6684,1,1,0,8), -- Sealed Major Arcana Robe
+(22809,1895,1,1,2,150000),-- Metallic Fiber
+(22809,4040,1,1,2,15000),-- Mold Lubricant
+(22809,9628,1,1,2,5000),-- Leonard
+(22809,9630,1,1,2,4000),-- Orichalcum
+(22809,960,1,1,2,300),-- Scroll: Enchant Armor (S)
+(22809,1894,1,1,-1,200000),-- Crafted Leather
+(22809,960,1,1,-1,1000),-- Scroll: Enchant Armor (S)
+(22809,6688,1,1,-1,20000),-- Forgotten Blade Edge
+-- Micro Scout Golem
+(22810,57,2000,4000,0,700000),-- Adena
+(22810,6724,1,1,1,8),-- Sealed Tateossian Earring 
+(22810,6725,1,1,1,10),-- Sealed Tateossian Ring
+(22810,6726,1,1,1,6),-- Sealed Tateossian Necklace
+(22810,1895,1,1,2,150000),-- Metallic Fiber
+(22810,4040,1,1,2,15000),-- Mold Lubricant
+(22810,9628,1,1,2,5000),-- Leonard
+(22810,9630,1,1,2,4000),-- Orichalcum
+(22810,5157,1,1,-1,3000),-- Recipe: Soulshot (S) Compressed Package (100%)
+(22810,6708,1,1,-1,80000),-- Sealed Draconic Leather Gloves Fabric
+(22810,6709,1,1,-1,80000),-- Sealed Draconic Leather Boots Design
+-- Great Chaos Golem
+(22811,57,2000,4000,0,700000),-- Adena
+(22811,6676,1,1,1,6),-- Sealed Imperial Crusader Gauntlet
+(22811,6677,1,1,1,6),-- Sealed Imperial Crusader Boots
+(22811,6681,1,1,1,6),-- Sealed Draconic Leather Glove
+(22811,6682,1,1,1,6),-- Sealed Draconic Leather Boots
+(22811,6685,1,1,1,6),-- Sealed Major Arcana Glove
+(22811,6686,1,1,1,6),-- Sealed Major Arcana Boots
+(22811,1895,1,1,2,150000),-- Metallic Fiber
+(22811,4040,1,1,2,15000),-- Mold Lubricant
+(22811,4043,1,1,2,7500),-- Asofe
+(22811,4042,1,1,2,4000),-- Enria
+(22811,960,1,1,2,300),-- Scroll: Enchant Armor (S)
+(22811,6713,1,1,-1,80000),-- Sealed Major Arcana Boots Design
+(22811,6712,1,1,-1,80000),-- Sealed Major Arcana Gloves fabric
+(22811,5162,1,1,-1,3000),-- Recipe: Spiritshot (S) Compressed Package (100%)
+-- Boom Golem
+(22812,57,2000,4000,0,700000),-- Adena
+(22812,13885,1,1,1,6),-- Sealed Arcana Sigil
+(22812,6678,1,1,1,6),-- Sealed Imperial Crusader Shield
+(22812,6679,1,1,1,5),-- Sealed Imperial Crusader Helmet
+(22812,6683,1,1,1,5),-- Sealed Draconic Leather Helmet
+(22812,6687,1,1,1,5),-- Sealed Major Arcana Circlet
+(22812,1895,1,1,2,150000),-- Metallic Fiber
+(22812,4040,1,1,2,15000),-- Mold Lubricant
+(22812,4043,1,1,2,7500),-- Asofe
+(22812,4042,1,1,2,4000),-- Enria
+(22812,6710,1,1,-1,70000),-- Sealed Draconic Leather Helmet Pattern
+(22812,6706,1,1,-1,70000),-- Sealed Imperial Crusader Helmet Pattern
+-- Pavel Safety Device
+(18917,9546,1,1,200,300),-- Fire Stone
+(18917,9547,1,1,200,300),-- Water Stone
+(18917,9548,1,1,200,300),-- Earth Stone
+(18917,9549,1,1,200,300),-- Wind Stone
+(18917,9550,1,1,200,300),-- Dark Stone
+(18917,9551,1,1,200,300),-- Divine Stone
+-- Freya Beast Farm
+-- Baby Alpine Kookaburra
+(18873,57,475,959,0,700000),-- Adena
+(18873,9573,1,1,200,2000),-- Life Stone: level 80
+(18873,9574,1,1,200,700),-- Mid-Grade Life Stone: level 80
+(18873,15772,1,1,1,2000),-- Sealed Moirai Ring Gem
+(18873,15773,1,1,1,900),-- Sealed Moirai Earring Gem
+(18873,15774,1,1,1,1000),-- Sealed Moirai Necklace Gem
+(18873,15812,1,1,-1,6000),-- Recipe - Sealed Moirai Ring (70%)
+(18873,15813,1,1,-1,3000),-- Recipe - Sealed Moirai Earring (70%)
+(18873,15814,1,1,-1,4000),-- Recipe - Sealed Moirai Necklace (70%)
+(18873,15772,1,1,-1,27000),-- Sealed Moirai Ring Gem
+(18873,15773,1,1,-1,12000),-- Sealed Moirai Earring Gem
+(18873,15774,1,1,-1,18000),-- Sealed Moirai Necklace Gem
+-- Young Kookaburra
+(18874,57,1494,3014,0,700000),-- Adena
+(18874,9573,1,1,200,3000),-- Life Stone: level 80
+(18874,9575,1,1,200,100),-- High-Grade Life Stone: level 80
+(18874,9574,1,1,200,1000),-- Mid-Grade Life Stone: level 80
+(18874,9628,1,1,2,3000),-- Leonard
+(18874,1895,1,1,2,110000),-- Metallic Fiber
+(18874,4040,1,1,2,7000),-- Mold Lubricant
+(18874,9630,1,1,2,2000),-- Orichalcum
+(18874,960,1,1,2,200),-- Scroll: Enchant Armor (S)
+(18874,15703,1,1,1,80),-- Sealed Moirai Gauntlet
+(18874,15654,1,1,1,5000),-- Sealed Moirai Gauntlet Piece
+(18874,15655,1,1,1,5000),-- Sealed Moirai Leather Gloves Piece
+(18874,15656,1,1,1,5000),-- Sealed Moirai Gloves Piece
+(18874,15787,1,1,-1,1000),-- Recipe - Sealed Moirai Boots (60%)
+(18874,15784,1,1,-1,1000),-- Recipe - Sealed Moirai Gauntlet (60%)
+(18874,15786,1,1,-1,1000),-- Recipe - Sealed Moirai Gloves (60%)
+(18874,15788,1,1,-1,1000),-- Recipe - Sealed Moirai Leather Boots (60%)
+(18874,15785,1,1,-1,1000),-- Recipe - Sealed Moirai Leather Gloves (60%)
+(18874,15789,1,1,-1,1000),-- Recipe - Sealed Moirai Shoes (60%)
+(18874,15657,1,1,-1,6000),-- Sealed Moirai Boots Piece
+(18874,15654,1,1,-1,6000),-- Sealed Moirai Gauntlet Piece
+(18874,15656,1,1,-1,6000),-- Sealed Moirai Gloves Piece
+(18874,15658,1,1,-1,6000),-- Sealed Moirai Leather Boots Piece
+(18874,15655,1,1,-1,6000),-- Sealed Moirai Leather Gloves Piece
+(18874,15659,1,1,-1,6000),-- Sealed Moirai Shoes Piece
+-- Adult Kookaburra
+(18876,57,4202,8477,0,700000),-- Adena
+(18876,9629,1,1,2,2000),-- Adamantine
+(18876,1879,1,1,2,100000),-- Cokes
+(18876,5550,1,1,2,8000),-- Durable Metal Plate
+(18876,17030,1,1,2,1000),-- Forgotten Scroll - Create Item Lv 10
+(18876,1885,1,1,2,50000),-- High Grade Suede
+(18876,9628,1,1,2,5000),-- Leonard
+(18876,10485,1,1,200,80),-- High-Grade Life Stone - level 82
+(18876,10483,1,1,200,4000),-- Life Stone - level 82
+(18876,10484,1,1,200,800),-- Mid-Grade Life Stone - level 82
+(18876,9630,1,1,2,3000),-- Orichalcum
+(18876,15779,1,1,2,200),-- Recipe - Sealed Moirai Houberk (60%)
+(18876,15649,1,1,1,6000),-- Sealed Moirai Houberk Piece
+(18876,9555,1,1,1,100),-- Wind Crystal
+(18876,1894,1,1,-1,940000),-- Crafted Leather
+(18876,15782,1,1,-1,2000),-- Recipe - Sealed Moirai Leather Legging (60%)
+(18876,15649,1,1,-1,8000),-- Sealed Moirai Houberk Piece
+-- Full Grown Kookaburra
+(18878,57,4416,8901,0,700000),-- Adena
+(18878,9629,1,1,2,4000),-- Adamantine
+(18878,1879,1,1,2,110000),-- Cokes
+(18878,5550,1,1,2,8000),-- Durable Metal Plate
+(18878,1885,1,1,2,60000),-- High Grade Suede
+(18878,10485,1,1,200,70),-- High-Grade Life Stone - level 82
+(18878,10483,1,1,200,5000),-- Life Stone - level 82
+(18878,10484,1,1,200,1000),-- Mid-Grade Life Stone - level 82
+(18878,10397,1,1,1,800),-- Icarus Sawsword Piece
+(18878,10399,1,1,1,300),-- Icarus Spirit Piece
+(18878,9628,1,1,2,5000),-- Leonard
+(18878,9630,1,1,2,3000),-- Orichalcum
+(18878,15667,1,1,1,700),-- Sealed Vesper Gauntlet Piece
+(18878,15674,1,1,1,6000),-- Sealed Vesper Gloves Piece
+(18878,15671,1,1,1,7000),-- Sealed Vesper Leather Gloves Piece
+(18878,10400,1,1,-1,2000),-- Icarus Heavy Arms Piece
+(18878,10397,1,1,-1,2000),-- Icarus Sawsword Piece
+(18878,10399,1,1,-1,2000),-- Icarus Spirit Piece
+(18878,9628,1,1,-1,650000),-- Leonard
+(18878,10376,1,1,-1,400),-- Recipe - Icarus Heavy Arms (60%)
+(18878,10373,1,1,-1,400),-- Recipe - Icarus Sawsword (60%)
+(18878,10375,1,1,-1,400),-- Recipe - Icarus Spirit (60%)
+(18878,15801,1,1,-1,600),-- Recipe - Sealed Vesper Gauntlet (60%)
+(18878,15803,1,1,-1,600),-- Recipe - Sealed Vesper Gloves (60%)
+(18878,15802,1,1,-1,600),-- Recipe - Sealed Vesper Leather Gloves (60%)
+-- Baby Alpine Cougar
+(18880,57,475,959,0,700000),-- Adena
+(18880,9575,1,1,200,80),-- High-Grade Life Stone: level 80
+(18880,9573,1,1,200,3000),-- Life Stone: level 80
+(18880,9574,1,1,200,600),-- Mid-Grade Life Stone: level 80
+(18880,15773,1,1,1,2000),-- Sealed Moirai Earring Gem
+(18880,15774,1,1,1,1000),-- Sealed Moirai Necklace Gem
+(18880,15772,1,1,1,2000),-- Sealed Moirai Ring Gem
+(18880,15813,1,1,-1,1400),-- Recipe - Sealed Moirai Earring (70%)
+(18880,15814,1,1,-1,1400),-- Recipe - Sealed Moirai Necklace (70%)
+(18880,15812,1,1,-1,1400),-- Recipe - Sealed Moirai Ring (70%)
+(18880,15773,1,1,-1,14000),-- Sealed Moirai Earring Gem
+(18880,15774,1,1,-1,14000),-- Sealed Moirai Necklace Gem
+(18880,15772,1,1,-1,14000),-- Sealed Moirai Ring Gem
+-- Young Cougar
+(18881,57,1494,3015,0,700000),-- Adena
+(18881,9575,1,1,200,200),-- High-Grade Life Stone: level 80
+(18881,9573,1,1,200,2000),-- Life Stone: level 80
+(18881,9574,1,1,200,400),-- Mid-Grade Life Stone: level 80
+(18881,9628,1,1,2,3000),-- Leonard
+(18881,1895,1,1,2,100000),-- Metallic Fiber
+(18881,4040,1,1,2,7000),-- Mold Lubricant
+(18881,9630,1,1,2,2000),-- Orichalcum
+(18881,960,1,1,2,300),-- Scroll: Enchant Armor (S)
+(18881,15657,1,1,1,2000),-- Sealed Moirai Boots Piece
+(18881,15707,1,1,1,6),-- Sealed Moirai Leather Boots
+(18881,15658,1,1,1,2000),-- Sealed Moirai Leather Boots Piece
+(18881,15659,1,1,1,2000),-- Sealed Moirai Shoes Piece
+(18881,15787,1,1,-1,2000),-- Recipe - Sealed Moirai Boots (60%)
+(18881,15784,1,1,-1,2000),-- Recipe - Sealed Moirai Gauntlet (60%)
+(18881,15786,1,1,-1,2000),-- Recipe - Sealed Moirai Gloves (60%)
+(18881,15788,1,1,-1,2000),-- Recipe - Sealed Moirai Leather Boots (60%)
+(18881,15785,1,1,-1,2000),-- Recipe - Sealed Moirai Leather Gloves (60%)
+(18881,15789,1,1,-1,2000),-- Recipe - Sealed Moirai Shoes (60%)
+(18881,960,1,1,-1,3000),-- Scroll: Enchant Armor (S)
+(18881,15657,1,1,-1,9000),-- Sealed Moirai Boots Piece
+(18881,15654,1,1,-1,9000),-- Sealed Moirai Gauntlet Piece
+(18881,15656,1,1,-1,9000),-- Sealed Moirai Gloves Piece
+(18881,15658,1,1,-1,9000),-- Sealed Moirai Leather Boots Piece
+(18881,15655,1,1,-1,9000),-- Sealed Moirai Leather Gloves Piece
+(18881,15659,1,1,-1,9000),-- Sealed Moirai Shoes Piece
+-- Adult Cougar
+(18883,57,4200,8477,0,700000),-- Adena
+(18883,9629,1,1,2,3000),-- Adamantine
+(18883,1879,1,1,2,100000),-- Cokes
+(18883,5550,1,1,2,8000),-- Durable Metal Plate
+(18883,17030,1,1,2,1000),-- Forgotten Scroll - Create Item Lv 10
+(18883,1885,1,1,2,50000),-- High Grade Suede
+(18883,10485,1,1,200,100),-- High-Grade Life Stone - level 82
+(18883,9628,1,1,2,5000),-- Leonard
+(18883,10483,1,1,200,4000),-- Life Stone - level 82
+(18883,10484,1,1,200,1000),-- Mid-Grade Life Stone - level 82
+(18883,9630,1,1,2,3000),-- Orichalcum
+(18883,15778,1,1,2,40),-- Recipe - Sealed Moirai Cuirass (60%)
+(18883,15648,1,1,1,2000),-- Sealed Moirai Cuirass Piece
+(18883,15651,1,1,1,2000),-- Sealed Moirai Gaiter Piece
+(18883,9555,1,1,1,100),-- Wind Crystal
+(18883,1894,1,1,-1,400),-- Crafted Leather
+(18883,9628,1,1,-1,200),-- Leonard
+(18883,9630,1,1,-1,420000),-- Orichalcum
+(18883,15778,1,1,-1,8000),-- Recipe - Sealed Moirai Cuirass (60%)
+(18883,15781,1,1,-1,8000),-- Recipe - Sealed Moirai Gaiter (60%)
+(18883,959,1,1,-1,200),-- Scroll: Enchant Weapon (S)
+(18883,15648,1,1,-1,200),-- Sealed Moirai Cuirass Piece
+(18883,15651,1,1,-1,500),-- Sealed Moirai Gaiter Piece
+-- Full Grown Cougar
+(18885,57,4200,8477,0,700000),-- Adena
+(18885,9629,1,1,2,3000),-- Adamantine
+(18885,1879,1,1,2,110000),-- Cokes
+(18885,5550,1,1,2,9000),-- Durable Metal Plate
+(18885,1885,1,1,2,60000),-- High Grade Suede
+(18885,10485,1,1,200,100),-- High-Grade Life Stone - level 82
+(18885,10404,1,1,1,400),-- Icarus Hall Piece
+(18885,9628,1,1,2,4000),-- Leonard
+(18885,10483,1,1,200,6000),-- Life Stone - level 82
+(18885,10484,1,1,200,1000),-- Mid-Grade Life Stone - level 82
+(18885,9630,1,1,2,3000),-- Orichalcum
+(18885,15804,1,1,2,400),-- Recipe - Sealed Vesper Boots (60%)
+(18885,15805,1,1,2,400),-- Recipe - Sealed Vesper Leather Boots (60%)
+(18885,15806,1,1,2,500),-- Recipe - Sealed Vesper Shoes (60%)
+(18885,15668,1,1,1,3000),-- Sealed Vesper Boots Piece
+(18885,15672,1,1,1,3000),-- Sealed Vesper Leather Boots Piece
+(18885,15675,1,1,1,3000),-- Sealed Vesper Shoes Piece
+(18885,9553,1,1,1,200),-- Water Crystal
+(18885,10404,1,1,-1,5000),-- Icarus Hall Piece
+(18885,10402,1,1,-1,3000),-- Icarus Hammer Piece
+(18885,9628,1,1,-1,660000),-- Leonard
+(18885,10380,1,1,-1,400),-- Recipe - Icarus Hall (60%)
+(18885,10378,1,1,-1,400),-- Recipe - Icarus Hammer (60%)
+-- Baby Alpine Buffalo
+(18887,57,511,1045,0,700000),-- Adena
+(18887,9575,1,1,200,70),-- High-Grade Life Stone: level 80
+(18887,9573,1,1,200,1000),-- Life Stone: level 80
+(18887,9574,1,1,200,200),-- Mid-Grade Life Stone: level 80
+(18887,15813,1,1,2,200),-- Recipe - Sealed Moirai Earring (70%)
+(18887,15814,1,1,2,300),-- Recipe - Sealed Moirai Necklace (70%)
+(18887,15812,1,1,2,400),-- Recipe - Sealed Moirai Ring (70%)
+(18887,15773,1,1,1,1000),-- Sealed Moirai Earring Gem
+(18887,15774,1,1,1,1000),-- Sealed Moirai Necklace Gem
+(18887,15766,1,1,1,20),-- Sealed Moirai Ring
+(18887,15772,1,1,1,3000),-- Sealed Moirai Ring Gem
+(18887,15813,1,1,-1,2000),-- Recipe - Sealed Moirai Earring (70%)
+(18887,15812,1,1,-1,2000),-- Recipe - Sealed Moirai Ring (70%)
+(18887,15773,1,1,-1,20000),-- Sealed Moirai Earring Gem
+(18887,15774,1,1,-1,20000),-- Sealed Moirai Necklace Gem
+(18887,15772,1,1,-1,20000),-- Sealed Moirai Ring Gem
+-- Young Buffalo
+(18888,57,1586,3235,0,700000),-- Adena
+(18888,9628,1,1,2,2000),-- Leonard
+(18888,9573,1,1,200,3000),-- Life Stone: level 80
+(18888,1895,1,1,2,80000),-- Metallic Fiber
+(18888,4040,1,1,2,6000),-- Mold Lubricant
+(18888,9630,1,1,2,2000),-- Orichalcum
+(18888,15787,1,1,2,300),-- Recipe - Sealed Moirai Boots (60%)
+(18888,15784,1,1,2,300),-- Recipe - Sealed Moirai Gauntlet (60%)
+(18888,15786,1,1,2,300),-- Recipe - Sealed Moirai Gloves (60%)
+(18888,15654,1,1,1,4000),-- Sealed Moirai Gauntlet Piece
+(18888,15656,1,1,1,4000),-- Sealed Moirai Gloves Piece
+(18888,15655,1,1,1,6000),-- Sealed Moirai Leather Gloves Piece
+(18888,15787,1,1,-1,1200),-- Recipe - Sealed Moirai Boots (60%)
+(18888,15784,1,1,-1,1200),-- Recipe - Sealed Moirai Gauntlet (60%)
+(18888,15788,1,1,-1,1200),-- Recipe - Sealed Moirai Leather Boots (60%)
+(18888,15785,1,1,-1,1200),-- Recipe - Sealed Moirai Leather Gloves (60%)
+(18888,15789,1,1,-1,1200),-- Recipe - Sealed Moirai Shoes (60%)
+(18888,15657,1,1,-1,22000),-- Sealed Moirai Boots Piece
+(18888,15654,1,1,-1,22000),-- Sealed Moirai Gauntlet Piece
+(18888,15656,1,1,-1,22000),-- Sealed Moirai Gloves Piece
+(18888,15658,1,1,-1,22000),-- Sealed Moirai Leather Boots Piece
+(18888,15655,1,1,-1,22000),-- Sealed Moirai Leather Gloves Piece
+(18888,15659,1,1,-1,22000),-- Sealed Moirai Shoes Piece
+-- Adult Buffalo
+(18890,57,4476,9135,0,700000),-- Adena
+(18890,9629,1,1,2,3000),-- Adamantine
+(18890,1879,1,1,2,110000),-- Cokes
+(18890,9556,1,1,2,60),-- Dark Crystal
+(18890,5550,1,1,2,8000),-- Durable Metal Plate
+(18890,17030,1,1,2,2000),-- Forgotten Scroll - Create Item Lv 10
+(18890,1885,1,1,2,50000),-- High Grade Suede
+(18890,10485,1,1,200,60),-- High-Grade Life Stone - level 82
+(18890,9628,1,1,2,5000),-- Leonard
+(18890,10483,1,1,200,4000),-- Life Stone - level 82
+(18890,10484,1,1,200,1000),-- Mid-Grade Life Stone - level 82
+(18890,9630,1,1,2,3000),-- Orichalcum
+(18890,15780,1,1,2,400),-- Recipe - Sealed Moirai Tunic (60%)
+(18890,15650,1,1,1,10000),-- Sealed Moirai Tunic Piece
+(18890,15783,1,1,-1,1000),-- Recipe - Sealed Moirai Hose (60%)
+(18890,15653,1,1,-1,10000),-- Sealed Moirai Hose Piece
+-- Full Grown Buffalo
+(18892,57,4476,9135,0,700000),-- Adena
+(18892,9629,1,1,2,3000),-- Adamantine
+(18892,1879,1,1,2,130000),-- Cokes
+(18892,5550,1,1,2,10000),-- Durable Metal Plate
+(18892,1885,1,1,2,70000),-- High Grade Suede
+(18892,10403,1,1,1,1000),-- Icarus Hand Piece
+(18892,9628,1,1,2,7000),-- Leonard
+(18892,10483,1,1,200,6000),-- Life Stone - level 82
+(18892,10484,1,1,200,2000),-- Mid-Grade Life Stone - level 82
+(18892,9630,1,1,2,3000),-- Orichalcum
+(18892,15638,1,1,2,1000),-- Vesper Fighter Piece
+(18892,1894,1,1,-1,990000),-- Crafted Leather
+(18892,10403,1,1,-1,2000),-- Icarus Hand Piece
+(18892,10379,1,1,-1,400),-- Recipe - Icarus Hand (60%)
+(18892,15819,1,1,-1,400),-- Recipe - Vesper Fighter (60%)
+-- Baby Alpine Grendel
+(18894,57,4476,9135,0,700000),-- Adena
+(18894,9575,1,1,200,40),-- High-Grade Life Stone: level 80
+(18894,9573,1,1,200,1000),-- Life Stone: level 80
+(18894,9574,1,1,200,200),-- Mid-Grade Life Stone: level 80
+(18894,15813,1,1,2,200),-- Recipe - Sealed Moirai Earring (70%)
+(18894,15814,1,1,2,100),-- Recipe - Sealed Moirai Necklace (70%)
+(18894,15812,1,1,2,400),-- Recipe - Sealed Moirai Ring (70%)
+(18894,15773,1,1,1,1000),-- Sealed Moirai Earring Gem
+(18894,15768,1,1,1,9),-- Sealed Moirai Necklace
+(18894,15774,1,1,1,1000),-- Sealed Moirai Necklace Gem
+(18894,15766,1,1,1,9),-- Sealed Moirai Ring
+(18894,15772,1,1,1,2000),-- Sealed Moirai Ring Gem
+(18894,1894,1,1,-1,1000),-- Crafted Leather
+(18894,15813,1,1,-1,1500),-- Recipe - Sealed Moirai Earring (70%)
+(18894,15814,1,1,-1,1500),-- Recipe - Sealed Moirai Necklace (70%)
+(18894,15812,1,1,-1,1500),-- Recipe - Sealed Moirai Ring (70%)
+(18894,15773,1,1,-1,12000),-- Sealed Moirai Earring Gem
+(18894,15774,1,1,-1,12000),-- Sealed Moirai Necklace Gem
+(18894,15772,1,1,-1,12000),-- Sealed Moirai Ring Gem
+-- Young Grendel
+(18895,57,1586,3238,0,700000),-- Adena
+(18895,9628,1,1,2,1000),-- Leonard
+(18895,9573,1,1,200,2000),-- Life Stone: level 80
+(18895,1895,1,1,2,70000),-- Metallic Fiber
+(18895,9574,1,1,200,400),-- Mid-Grade Life Stone: level 80
+(18895,4040,1,1,2,5000),-- Mold Lubricant
+(18895,9630,1,1,2,1000),-- Orichalcum
+(18895,15787,1,1,2,50),-- Recipe - Sealed Moirai Boots (60%)
+(18895,15784,1,1,2,50),-- Recipe - Sealed Moirai Gauntlet (60%)
+(18895,15786,1,1,2,50),-- Recipe - Sealed Moirai Gloves (60%)
+(18895,15788,1,1,2,50),-- Recipe - Sealed Moirai Leather Boots (60%)
+(18895,15785,1,1,2,50),-- Recipe - Sealed Moirai Leather Gloves (60%)
+(18895,15789,1,1,2,50),-- Recipe - Sealed Moirai Shoes (60%)
+(18895,15706,1,1,1,5),-- Sealed Moirai Boots
+(18895,15657,1,1,1,500),-- Sealed Moirai Boots Piece
+(18895,15707,1,1,1,3),-- Sealed Moirai Leather Boots
+(18895,15658,1,1,1,500),-- Sealed Moirai Leather Boots Piece
+(18895,15708,1,1,1,3),-- Sealed Moirai Shoes
+(18895,15659,1,1,1,6000),-- Sealed Moirai Shoes Piece
+(18895,15787,1,1,-1,1500),-- Recipe - Sealed Moirai Boots (60%)
+(18895,15784,1,1,-1,1500),-- Recipe - Sealed Moirai Gauntlet (60%)
+(18895,15786,1,1,-1,1500),-- Recipe - Sealed Moirai Gloves (60%)
+(18895,15788,1,1,-1,1500),-- Recipe - Sealed Moirai Leather Boots (60%)
+(18895,15785,1,1,-1,1500),-- Recipe - Sealed Moirai Leather Gloves (60%)
+(18895,15789,1,1,-1,1500),-- Recipe - Sealed Moirai Shoes (60%)
+(18895,960,1,1,-1,2000),-- Scroll: Enchant Armor (S)
+(18895,15657,1,1,-1,13000),-- Sealed Moirai Boots Piece
+(18895,15654,1,1,-1,13000),-- Sealed Moirai Gauntlet Piece
+(18895,15656,1,1,-1,13000),-- Sealed Moirai Gloves Piece
+(18895,15658,1,1,-1,13000),-- Sealed Moirai Leather Boots Piece
+(18895,15655,1,1,-1,13000),-- Sealed Moirai Leather Gloves Piece
+(18895,15659,1,1,-1,13000),-- Sealed Moirai Shoes Piece
+-- Adult Grendel
+(18897,57,4473,9139,0,700000),-- Adena
+(18897,9629,1,1,2,3000),-- Adamantine
+(18897,1879,1,1,2,110000),-- Cokes
+(18897,9556,1,1,2,200),-- Dark Crystal
+(18897,5550,1,1,2,9000),-- Durable Metal Plate
+(18897,17030,1,1,2,1000),-- Forgotten Scroll - Create Item Lv 10
+(18897,1885,1,1,2,60000),-- High Grade Suede
+(18897,10485,1,1,200,50),-- High-Grade Life Stone - level 82
+(18897,10398,1,1,1,2000),-- Icarus Disperser Piece
+(18897,9628,1,1,2,5000),-- Leonard
+(18897,10483,1,1,200,5000),-- Life Stone - level 82
+(18897,10484,1,1,200,1000),-- Mid-Grade Life Stone - level 82
+(18897,9630,1,1,2,3000),-- Orichalcum
+(18897,10374,1,1,2,50),-- Recipe - Icarus Disperser (60%)
+(18897,10398,1,1,-1,1100),-- Icarus Disperser Piece
+(18897,9628,1,1,-1,10000),-- Leonard
+(18897,9630,1,1,-1,10000),-- Orichalcum
+(18897,10374,1,1,-1,200),-- Recipe - Icarus Disperser (60%)
+(18897,959,1,1,-1,200),-- Scroll: Enchant Weapon (S)
+-- Full Grown Grendel
+(18899,57,4693,9588,0,700000),-- Adena
+(18899,9629,1,1,2,3000),-- Adamantine
+(18899,1879,1,1,2,130000),-- Cokes
+(18899,5550,1,1,2,10000),-- Durable Metal Plate
+(18899,1885,1,1,2,70000),-- High Grade Suede
+(18899,10485,1,1,200,50),-- High-Grade Life Stone - level 82
+(18899,10405,1,1,1,1000),-- Icarus Spitter Piece
+(18899,9628,1,1,2,6000),-- Leonard
+(18899,10483,1,1,200,6000),-- Life Stone - level 82
+(18899,10484,1,1,200,2000),-- Mid-Grade Life Stone - level 82
+(18899,9630,1,1,2,5000),-- Orichalcum
+(18899,15825,1,1,2,30),-- Recipe - Vesper Thrower (60%)
+(18899,15644,1,1,1,100),-- Vesper Thrower Piece
+(18899,1894,1,1,-1,790000),-- Crafted Leather
+(18899,10405,1,1,-1,3000),-- Icarus Spitter Piece
+(18899,9628,1,1,-1,170000),-- Leonard
+(18899,9630,1,1,-1,200),-- Orichalcum
+(18899,10381,1,1,-1,200),-- Recipe - Icarus Spitter (60%)
+-- Kookaburra
+(18901,57,50387,148692,0,1000000),-- Adena
+-- Cougar
+(18902,57,50141,149664,0,1000000),-- Adena
+-- Buffalo
+(18903,57,51697,149227,0,1000000),-- Adena
+-- Grendel
+(18904,57,50133,149985,0,1000000),-- Adena
+-- Farm Ravager
+(18905,57,8580,10562,0,700000),-- Adena
+-- Farm Bandit
+(18906,57,686,1402,0,700000),-- Adena
+(18906,9629,1,1,2,800),-- Adamantine
+(18906,1879,1,1,2,30000),-- Cokes
+(18906,1885,1,1,2,10000),-- High Grade Suede
+(18906,10485,1,1,200,40),-- High-Grade Life Stone - level 82
+(18906,9628,1,1,2,1000),-- Leonard
+(18906,10483,1,1,200,1000),-- Life Stone - level 82
+(18906,10484,1,1,200,300),-- Mid-Grade Life Stone - level 82
+(18906,9630,1,1,2,1000),-- Orichalcum
+(18906,15657,1,1,1,1000),-- Sealed Moirai Boots Piece
+(18906,15703,1,1,1,7),-- Sealed Moirai Gauntlet
+(18906,15654,1,1,1,900),-- Sealed Moirai Gauntlet Piece
+(18906,15705,1,1,1,10),-- Sealed Moirai Gloves
+(18906,15656,1,1,1,900),-- Sealed Moirai Gloves Piece
+(18906,15658,1,1,1,1000),-- Sealed Moirai Leather Boots Piece
+(18906,15704,1,1,1,20),-- Sealed Moirai Leather Gloves
+(18906,15655,1,1,1,900),-- Sealed Moirai Leather Gloves Piece
+(18906,15659,1,1,1,1000),-- Sealed Moirai Shoes Piece 
+(18906,1894,1,1,-1,3000),-- Crafted Leather
+(18906,9628,1,1,-1,300),-- Leonard
+(18906,9630,1,1,-1,70000),-- Orichalcum
+(18906,15787,1,1,-1,1200),-- Recipe - Sealed Moirai Boots (60%)
+(18906,15784,1,1,-1,1200),-- Recipe - Sealed Moirai Gauntlet (60%)
+(18906,15786,1,1,-1,1200),-- Recipe - Sealed Moirai Gloves (60%)
+(18906,15788,1,1,-1,1200),-- Recipe - Sealed Moirai Leather Boots (60%)
+(18906,15785,1,1,-1,1200),-- Recipe - Sealed Moirai Leather Gloves (60%)
+(18906,15789,1,1,-1,1200),-- Recipe - Sealed Moirai Shoes (60%)
+(18906,15657,1,1,-1,9000),-- Sealed Moirai Boots Piece
+(18906,15647,1,1,-1,9000),-- Sealed Moirai Circlet Piece
+(18906,15651,1,1,-1,9000),-- Sealed Moirai Gaiter Piece
+(18906,15654,1,1,-1,9000),-- Sealed Moirai Gauntlet Piece
+(18906,15656,1,1,-1,9000),-- Sealed Moirai Gloves Piece
+(18906,15658,1,1,-1,9000),-- Sealed Moirai Leather Boots Piece
+(18906,15655,1,1,-1,9000),-- Sealed Moirai Leather Gloves Piece
+(18906,15693,1,1,-1,9000),-- Sealed Moirai Shield Piece
+(18906,15659,1,1,-1,9000),-- Sealed Moirai Shoes Piece
+-- Beast Devourer
+(18907,57,725,1481,0,700000),-- Adena
+(18907,9629,1,1,2,900),-- Adamantine
+(18907,1879,1,1,2,30000),-- Cokes
+(18907,1885,1,1,2,20000),-- High Grade Suede
+(18907,10485,1,1,200,70),-- High-Grade Life Stone - level 82
+(18907,9628,1,1,2,2000),-- Leonard
+(18907,10483,1,1,200,1000),-- Life Stone - level 82
+(18907,10484,1,1,200,300),-- Mid-Grade Life Stone - level 82
+(18907,9630,1,1,2,1000),-- Orichalcum
+(18907,15647,1,1,1,800),-- Sealed Moirai Circlet Piece
+(18907,15645,1,1,1,900),-- Sealed Moirai Helmet Piece
+(18907,15646,1,1,1,700),-- Sealed Moirai Leather Helmet Piece
+(18907,15710,1,1,1,10),-- Sealed Moirai Shield
+(18907,15693,1,1,1,2000),-- Sealed Moirai Shield Piece
+(18907,15709,1,1,1,10),-- Sealed Moirai Sigil
+(18907,15692,1,1,1,2000),-- Sealed Moirai Sigil Piece
+(18907,1894,1,1,-1,7000),-- Crafted Leather
+(18907,9628,1,1,-1,2000),-- Leonard
+(18907,9630,1,1,-1,600),-- Orichalcum
+(18907,15777,1,1,-1,1000),-- Recipe - Sealed Moirai Circlet (60%)
+(18907,15775,1,1,-1,1000),-- Recipe - Sealed Moirai Helmet (60%)
+(18907,15776,1,1,-1,1000),-- Recipe - Sealed Moirai Leather Helmet (60%)
+(18907,15791,1,1,-1,1000),-- Recipe - Sealed Moirai Shield (60%)
+(18907,15790,1,1,-1,1000),-- Recipe - Sealed Moirai Sigil (60%)
+(18907,15647,1,1,-1,8000),-- Sealed Moirai Circlet Piece
+(18907,15645,1,1,-1,8000),-- Sealed Moirai Helmet Piece
+(18907,15646,1,1,-1,8000),-- Sealed Moirai Leather Helmet Piece
+(18907,15693,1,1,-1,8000),-- Sealed Moirai Shield Piece
+(18907,15692,1,1,-1,8000),-- Sealed Moirai Sigil Piece
+
+-- Freya Seed of Annihilation
+-- Bgurent
+(22746,57,41896,80319,0,700000),-- Adena
+(22746,1885,3,9,2,220300),-- High Grade Suede
+(22746,9628,1,1,2,124000),-- Leonard
+(22746,15666,1,1,1,17000),-- Sealed Vesper Gaiter Piece
+(22746,9630,1,1,2,86700),-- Orichalcum
+(22746,14166,1,1,200,75500),-- Life Stone - level 84
+(22746,1879,14,42,2,83400),-- Cokes
+(22746,15663,1,1,1,17000),-- Sealed Vesper Cuirass Piece
+(22746,9629,1,1,2,69500),-- Adamantine
+(22746,14167,1,1,200,16000),-- Mid-Grade Life Stone: level 84
+(22746,14168,1,1,200,2700),-- High-Grade Life Stone: level 84
+(22746,14108,1,1,1,600),-- Sealed Vesper Gaiter
+-- Brakian
+(22747,57,39164,80317,0,700000),-- Adena
+(22747,1885,2,6,2,220300),-- High Grade Suede
+(22747,15670,1,1,1,16400),-- Sealed Vesper Leather Legging Piece
+(22747,9628,1,1,2,137500),-- Leonard
+(22747,1879,15,45,2,87600),-- Cokes
+(22747,15664,1,1,1,17000),-- Sealed Vesper Hauberk Piece
+(22747,14166,1,1,200,86700),-- Life Stone - level 84
+(22747,9630,1,1,2,84300),-- Orichalcum
+(22747,9629,1,1,2,71000),-- Adamantine
+(22747,14167,1,1,200,22100),-- Mid-Grade Life Stone: level 84
+(22747,14112,1,1,1,20),-- Sealed Vesper Leather Leggings
+(22747,14168,1,1,200,600),-- High-Grade Life Stone: level 84
+-- Groikan
+(22748,57,39715,80337,0,700000),-- Adena
+(22748,1885,3,9,2,193100),-- High Grade Suede
+(22748,15673,1,1,1,16400),-- Sealed Vesper Hose Piece
+(22748,9628,1,1,2,109400),-- Leonard
+(22748,15665,1,1,1,16400),-- Sealed Vesper Tunic Piece
+(22748,1879,14,42,2,88300),-- Cokes
+(22748,14166,1,1,200,80700),-- Life Stone - level 84
+(22748,9630,1,1,2,69600),-- Orichalcum
+(22748,9629,1,1,2,56300),-- Adamantine
+(22748,14167,1,1,200,17800),-- Mid-Grade Life Stone: level 84
+(22748,14168,1,1,200,2100),-- High-Grade Life Stone: level 84
+(22748,959,1,1,2,900),-- Scroll: Enchant Weapon (S)
+(22748,14107,1,1,1,20),-- Sealed Vesper Tunic
+-- Treykan
+(22749,57,40035,80782,0,700000),-- Adena
+(22749,1885,2,6,2,325100),-- High Grade Suede
+(22749,9628,1,1,2,134300),-- Leonard
+(22749,15672,1,1,1,15500),-- Sealed Vesper Leather Boots Piece
+(22749,15674,1,1,1,15500),-- Sealed Vesper Gloves Piece
+(22749,15671,1,1,1,15500),-- Sealed Vesper Leather Gloves Piece
+(22749,15668,1,1,1,15500),-- Sealed Vesper Boots Piece
+(22749,15667,1,1,1,15500),-- Sealed Vesper Gauntlet Piece
+(22749,15675,1,1,1,15500),-- Sealed Vesper Shoes Piece
+(22749,1879,15,45,2,83000),-- Cokes
+(22749,9630,1,1,2,77600),-- Orichalcum
+(22749,9629,1,1,2,68700),-- Adamantine
+(22749,14166,1,1,200,67300),-- Life Stone - level 84
+(22749,14167,1,1,200,16000),-- Mid-Grade Life Stone: level 84
+(22749,960,1,1,2,200),-- Scroll: Enchant Armor (S)
+(22749,14168,1,1,200,2500),-- High-Grade Life Stone: level 84
+(22749,14114,1,1,1,70),-- Sealed Vesper Leather Boots
+(22749,14109,1,1,1,40),-- Sealed Vesper Gauntlet
+-- Elite Bgurent
+(22750,57,84507,170369,0,700000),-- Adena
+(22750,9628,1,1,2,241100),-- Leonard
+(22750,9630,1,1,2,156600),-- Orichalcum
+(22750,4040,2,6,2,153400),-- Mold Lubricant
+(22750,16160,1,1,200,83400),-- Life Stone - level 85
+(22750,1895,76,214,2,50300),-- Metallic Fiber
+(22750,15634,1,1,1,13600),-- Vesper Cutter Piece
+(22750,15636,1,1,1,13600),-- Vesper Buster Piece
+(22750,16161,1,1,200,18600),-- Mid-Grade Life Stone: level 85
+(22750,15635,1,1,1,13600),-- Vesper Slasher Piece
+(22750,9554,1,1,2,6900),-- Earth Crystal
+(22750,15817,1,1,2,1300),-- Recipe - Vesper Buster (60%)
+(22750,15815,1,1,2,1300),-- Recipe - Vesper Cutter (60%)
+(22750,15816,1,1,2,1300),-- Recipe - Vesper Slasher (60%)
+-- Elite Brakian
+(22751,57,87637,170369,0,700000),-- Adena
+(22751,9628,1,1,2,215800),-- Leonard
+(22751,9630,1,1,2,156400),-- Orichalcum
+(22751,16160,1,1,200,91600),-- Life Stone - level 85
+(22751,4040,2,6,2,108400),-- Mold Lubricant
+(22751,1895,75,215,2,47900),-- Metallic Fiber
+(22751,15641,1,1,1,16500),-- Vesper Retributer Piece
+(22751,15643,1,1,1,30800),-- Vesper Singer Piece
+(22751,16161,1,1,200,16300),-- Mid-Grade Life Stone: level 85
+(22751,15640,1,1,1,16000),-- Vesper Avenger Piece
+(22751,15642,1,1,1,16000),-- Vesper Caster Piece
+(22751,9554,1,1,2,12600),-- Earth Crystal
+(22751,15822,1,1,2,2700),-- Recipe - Vesper Retributer (60%)
+(22751,15824,1,1,2,2400),-- Recipe - Vesper Singer (60%)
+(22751,15823,1,1,2,2300),-- Recipe - Vesper Caster (60%)
+(22751,15821,1,1,2,2300),-- Recipe - Vesper Avenger (60%)
+-- Elite Groikan
+(22752,57,86370,170182,0,700000),-- Adena
+(22752,9630,1,1,2,203400),-- Orichalcum
+(22752,16160,1,1,200,76400),-- Life Stone - level 85
+(22752,4040,2,6,2,148900),-- Mold Lubricant
+(22752,15638,1,1,1,20700),-- Vesper Fighter Piece
+(22752,1895,73,215,2,79500),-- Metallic Fiber
+(22752,16161,1,1,200,18900),-- Mid-Grade Life Stone: level 85
+(22752,9628,1,1,2,37500),-- Leonard
+(22752,9554,1,1,2,8000),-- Earth Crystal
+(22752,15819,1,1,2,2100),-- Recipe - Vesper Fighter (60%)
+-- Elite Treykan
+(22753,57,86370,170182,0,700000),-- Adena
+(22753,9630,1,1,2,223800),-- Orichalcum
+(22753,16160,1,1,200,79200),-- Life Stone - level 85
+(22753,4040,2,6,2,150500),-- Mold Lubricant
+(22753,15644,1,1,1,7830),-- Vesper Thrower Piece
+(22753,1895,75,215,2,75900),-- Metallic Fiber
+(22753,16161,1,1,200,10800),-- Mid-Grade Life Stone: level 85
+(22753,9628,1,1,2,46900),-- Leonard
+(22753,15825,1,1,2,1000),-- Recipe - Vesper Thrower (60%)
+-- Turtlelian
+(22754,57,39560,80294,0,700000),-- Adena
+(22754,1885,3,9,2,220600),-- High Grade Suede
+(22754,9628,1,1,2,119200),-- Leonard
+(22754,15668,1,1,1,16100),-- Sealed Vesper Boots Piece
+(22754,15667,1,1,1,16100),-- Sealed Vesper Gauntlet Piece
+(22754,15671,1,1,1,16100),-- Sealed Vesper Leather Gloves Piece
+(22754,15674,1,1,1,16100),-- Sealed Vesper Gloves Piece
+(22754,15675,1,1,1,16100),-- Sealed Vesper Shoes Piece
+(22754,1879,14,42,2,98300),-- Cokes
+(22754,15672,1,1,1,16100),-- Sealed Vesper Leather Boots Piece
+(22754,9630,1,1,2,87500),-- Orichalcum
+(22754,14166,1,1,200,71100),-- Life Stone - level 84
+(22754,9629,1,1,2,56800),-- Adamantine
+(22754,14167,1,1,200,20000),-- Mid-Grade Life Stone: level 84
+(22754,14168,1,1,200,1500),-- High-Grade Life Stone: level 84
+(22754,14117,1,1,1,10),-- Sealed Vesper Shoes
+-- Krajian
+(22755,57,47254,80327,0,700000),-- Adena
+(22755,1885,2,6,2,381200),-- High Grade Suede
+(22755,9628,1,1,2,147200),-- Leonard
+(22755,15691,1,1,1,17000),-- Sealed Vesper Sigil Piece
+(22755,15669,1,1,1,17000),-- Sealed Vesper Verteidiger Piece
+(22755,1879,15,45,2,95600),-- Cokes
+(22755,14166,1,1,200,84800),-- Life Stone - level 84
+(22755,15660,1,1,1,17000),-- Sealed Vesper Helmet Piece
+(22755,9630,1,1,2,78200),-- Orichalcum
+(22755,15662,1,1,1,17000),-- Sealed Vesper Circlet Piece
+(22755,15661,1,1,1,17000),-- Sealed Vesper Leather Helmet Piece
+(22755,9629,1,1,2,70500),-- Adamantine
+(22755,14167,1,1,200,16900),-- Mid-Grade Life Stone: level 84
+(22755,14168,1,1,200,1000),-- High-Grade Life Stone: level 84
+(22755,13145,1,1,1,20),-- Sealed Vesper Circlet
+-- Tardyon
+(22756,57,39390,80237,0,700000),-- Adena
+(22756,15769,1,1,1,13900),-- Sealed Vesper Ring Gem
+(22756,15770,1,1,1,13900),-- Sealed Vesper Earring Gem
+(22756,1885,3,9,2,151100),-- High Grade Suede
+(22756,15771,1,1,1,13900),-- Sealed Vesper Necklace Gem
+(22756,9628,1,1,2,89700),-- Leonard
+(22756,1879,14,42,2,72200),-- Cokes
+(22756,14166,1,1,200,60500),-- Life Stone - level 84
+(22756,9630,1,1,2,54300),-- Orichalcum
+(22756,9629,1,1,2,48700),-- Adamantine
+(22756,15809,1,1,2,7900),-- Recipe - Sealed Vesper Ring (70%)
+(22756,14167,1,1,200,14300),-- Mid-Grade Life Stone: level 84
+(22756,15810,1,1,2,7900),-- Recipe - Sealed Vesper Earring (70%)
+(22756,15811,1,1,2,7900),-- Recipe - Sealed Vesper Necklace (70%)
+(22756,14160,1,1,1,10),-- Sealed Vesper Earring
+(22756,14168,1,1,200,1000),-- High-Grade Life Stone: level 84
+(22756,14162,1,1,1,10),-- Sealed Vesper Ring
+(22756,14161,1,1,1,10),-- Sealed Vesper Necklace
+(22756,959,1,1,2,200),-- Scroll: Enchant Weapon (S)
+-- Elite Turtlelian
+(22757,57,91773,170209,0,700000),-- Adena
+(22757,9630,1,1,2,224300),-- Orichalcum
+(22757,16160,1,1,200,87400),-- Life Stone - level 85
+(22757,4040,2,6,2,150800),-- Mold Lubricant
+(22757,15637,1,1,1,13000),-- Vesper Shaper Piece
+(22757,1895,75,215,2,72200),-- Metallic Fiber
+(22757,16161,1,1,200,26900),-- Mid-Grade Life Stone: level 85
+(22757,9628,1,1,2,21500),-- Leonard
+(22757,9554,1,1,2,2100),-- Earth Crystal
+(22757,15818,1,1,2,1500),-- Recipe - Vesper Shaper (60%)
+-- Elite Krajian
+(22758,57,114671,169536,0,700000),-- Adena
+(22758,9630,1,1,2,206700),-- Orichalcum
+(22758,16160,1,1,200,88000),-- Life Stone - level 85
+(22758,4040,2,6,2,129200),-- Mold Lubricant
+(22758,15639,1,1,1,11100),-- Vesper Stormer Piece
+(22758,1895,73,208,2,103400),-- Metallic Fiber
+(22758,9628,4,8,2,23300),-- Leonard
+(22758,16161,1,1,200,18100),-- Mid-Grade Life Stone: level 85
+(22758,9554,1,1,2,2300),-- Earth Crystal
+-- Elite Tardyon
+(22759,57,85640,170045,0,700000),-- Adena
+(22759,9630,1,1,2,206000),-- Orichalcum
+(22759,16160,1,1,200,90200),-- Life Stone - level 85
+(22759,4040,2,6,2,159900),-- Mold Lubricant
+(22759,15638,1,1,1,12600),-- Vesper Fighter Piece
+(22759,16161,1,1,200,23700),-- Mid-Grade Life Stone: level 85
+(22759,1895,74,214,2,63700),-- Metallic Fiber
+(22759,9628,3,9,2,44700),-- Leonard
+(22759,15819,1,1,2,3100),-- Recipe - Vesper Fighter (60%)
+(22759,9554,1,1,2,2400),-- Earth Crystal
+-- Kanibi
+(22760,57,41144,80316,0,700000),-- Adena
+(22760,1885,2,6,2,328700),-- High Grade Suede
+(22760,9628,1,1,2,120500),-- Leonard
+(22760,15671,1,1,1,11200),-- Sealed Vesper Leather Gloves Piece
+(22760,15667,1,1,1,11200),-- Sealed Vesper Gauntlet Piece
+(22760,15675,1,1,1,11200),-- Sealed Vesper Shoes Piece
+(22760,15674,1,1,1,11200),-- Sealed Vesper Gloves Piece
+(22760,15668,1,1,1,11200),-- Sealed Vesper Boots Piece
+(22760,14166,1,1,200,90100),-- Life Stone - level 84
+(22760,15672,1,1,1,12000),-- Sealed Vesper Leather Boots Piece
+(22760,1879,14,42,2,80300),-- Cokes
+(22760,9630,1,1,2,76300),-- Orichalcum
+(22760,9629,1,1,2,64300),-- Adamantine
+(22760,14167,1,1,200,16600),-- Mid-Grade Life Stone: level 84
+(22760,960,1,1,2,2300),-- Scroll: Enchant Armor (S)
+(22760,14168,1,1,200,2900),-- High-Grade Life Stone: level 84
+(22760,14117,1,1,1,60),-- Sealed Vesper Shoes
+(22760,14113,1,1,1,60),-- Sealed Vesper Leather Gloves
+-- Kiriona
+(22761,57,39003,80316,0,700000),-- Adena
+(22761,1885,3,9,2,201500),-- High Grade Suede
+(22761,15691,1,1,1,9500),-- Sealed Vesper Sigil Piece
+(22761,9628,1,1,2,108900),-- Leonard
+(22761,15669,1,1,1,9500),-- Sealed Vesper Verteidiger Piece
+(22761,1879,15,42,2,84400),-- Cokes
+(22761,15660,1,1,1,12500),-- Sealed Vesper Helmet Piece
+(22761,15661,1,1,1,12500),-- Sealed Vesper Leather Helmet Piece
+(22761,14166,1,1,200,74500),-- Life Stone - level 84
+(22761,9630,1,1,2,68700),-- Orichalcum
+(22761,9629,1,1,2,65200),-- Adamantine
+(22761,15662,1,1,1,12500),-- Sealed Vesper Circlet Piece
+(22761,14167,1,1,200,14000),-- Mid-Grade Life Stone: level 84
+(22761,14168,1,1,200,2300),-- High-Grade Life Stone: level 84
+(22761,13144,1,1,1,60),-- Sealed Vesper Leather Helmet
+(22761,13143,1,1,1,60),-- Sealed Vesper Helmet
+(22761,959,1,1,2,600),-- Scroll: Enchant Weapon (S)
+-- Kaiona
+(22762,57,39202,80305,0,700000),-- Adena
+(22762,1879,3,9,2,326300),-- Cokes
+(22762,15769,1,1,1,173700),-- Sealed Vesper Ring Gem
+(22762,1885,2,6,2,258000),-- High Grade Suede
+(22762,15770,1,1,1,173700),-- Sealed Vesper Earring Gem
+(22762,15771,1,1,1,173700),-- Sealed Vesper Necklace Gem
+(22762,9628,1,1,2,88200),-- Leonard
+(22762,9630,1,1,2,67700),-- Orichalcum
+(22762,14166,1,1,200,59200),-- Life Stone - level 84
+(22762,9629,1,1,2,58000),-- Adamantine
+(22762,15809,1,1,2,6300),-- Recipe - Sealed Vesper Ring (70%)
+(22762,14167,1,1,200,14500),-- Mid-Grade Life Stone: level 84
+(22762,15810,1,1,2,6300),-- Recipe - Sealed Vesper Earring (70%)
+(22762,960,1,1,2,9100),-- Scroll: Enchant Armor (S)
+(22762,15811,1,1,2,7900),-- Recipe - Sealed Vesper Necklace (70%)
+(22762,14160,1,1,1,60),-- Sealed Vesper Earring
+(22762,14162,1,1,1,60),-- Sealed Vesper Ring
+(22762,14161,1,1,1,60),-- Sealed Vesper Necklace
+(22762,14168,1,1,200,600),-- High-Grade Life Stone: level 84
+-- Elite Kanibi
+(22763,57,86043,170245,0,700000),-- Adena
+(22763,9628,1,1,2,252200),-- Leonard
+(22763,9630,1,1,2,164600),-- Orichalcum
+(22763,16160,1,1,200,81300),-- Life Stone - level 85
+(22763,4040,2,6,2,119100),-- Mold Lubricant
+(22763,1895,77,211,2,57800),-- Metallic Fiber
+(22763,16161,1,1,200,20300),-- Mid-Grade Life Stone: level 85
+(22763,15636,1,1,1,9000),-- Vesper Buster Piece
+(22763,15635,1,1,1,9000),-- Vesper Slasher Piece
+(22763,15634,1,1,1,9000),-- Vesper Cutter Piece
+(22763,9554,1,1,2,8800),-- Earth Crystal
+(22763,15817,1,1,2,1500),-- Recipe - Vesper Buster (60%)
+(22763,15815,1,1,2,1500),-- Recipe - Vesper Cutter (60%)
+(22763,15816,1,1,2,1500),-- Recipe - Vesper Slasher (60%)
+-- Elite Kiriona
+(22764,57,85337,169987,0,700000),-- Adena
+(22764,9628,1,1,2,228100),-- Leonard
+(22764,16160,1,1,200,87700),-- Life Stone - level 85
+(22764,9630,1,1,2,122300),-- Orichalcum
+(22764,4040,2,6,2,115000),-- Mold Lubricant
+(22764,1895,75,215,2,62000),-- Metallic Fiber
+(22764,16161,1,1,200,24700),-- Mid-Grade Life Stone: level 85
+(22764,15641,1,1,1,9000),-- Vesper Retributer Piece
+(22764,15642,1,1,1,9000),-- Vesper Caster Piece
+(22764,15640,1,1,1,9000),-- Vesper Avenger Piece
+(22764,15643,1,1,1,9000),-- Vesper Singer Piece
+(22764,15824,1,1,2,1200),-- Recipe - Vesper Singer (60%)
+(22764,9554,1,1,2,2300),-- Earth Crystal
+(22764,15822,1,1,2,1200),-- Recipe - Vesper Retributer (60%)
+(22764,15823,1,1,2,1200),-- Recipe - Vesper Caster (60%)
+(22764,15821,1,1,2,1200),-- Recipe - Vesper Avenger (60%)
+-- Elite Kaiona
+(22765,57,84623,170184,0,700000),-- Adena
+(22765,16160,1,1,200,81600),-- Life Stone - level 85
+(22765,9630,1,1,2,204000),-- Orichalcum
+(22765,4040,2,6,2,159900),-- Mold Lubricant
+(22765,15644,1,1,1,9000),-- Vesper Thrower Piece
+(22765,1895,79,202,2,79000),-- Metallic Fiber
+(22765,16161,1,1,200,25100),-- Mid-Grade Life Stone: level 85
+(22765,9628,3,9,2,53300),-- Leonard
+(22765,15825,1,1,2,2500),-- Recipe - Vesper Thrower (60%)
+-- Freya Kamaloka 83
+-- Lost Captain
+(25710,960,1,1,3,216000),-- Scroll: Enchant Armor (Grade S)
+(25710,15766,1,2,1,30000),-- Sealed Moirai Ring
+(25710,959,1,1,3,90000),-- Scroll: Enchant Weapon (Grade S)
+(25710,15768,1,2,1,10000),-- Sealed Moirai Necklace
+(25710,15767,1,2,1,20000),-- Sealed Moirai Earring
+(25710,10219,1,1,0,1000); -- Icarus Trident 
 
 INSERT INTO `droplist` VALUES
 (25001,348,1,1,0,272694),-- Scale Mail
@@ -34770,6 +37372,10 @@ INSERT INTO `droplist` VALUES
 (25542,6688,8,22,1,144699),-- Forgotten Blade Edge
 (25542,6696,4,12,1,275620),-- Heavens Divider Edge
 (25542,10299,1,1,0,50000),-- Transform Sealbook - Ranku (custom chance)
+(25544,6680,1,1,2,46044),-- Sealed Draconic Leather Armor
+(25544,6707,12,36,2,740368),-- Sealed Draconic Leather Armor Part
+(25544,7579,12,36,1,217808),-- Draconic Bow Shaft
+(25544,7575,1,1,1,11182), -- Draconic Bow
 (25546,5320,1,1,0,24504), -- Sealed Leather Armor of Nightmare
 (25546,5323,1,1,0,24504), -- Sealed Majestic Leather Armor
 (25546,5480,4,12,0,453771), -- Sealed Leather Armor of Nightmare Fabric
@@ -34919,6 +37525,74 @@ INSERT INTO `droplist` VALUES
 (25593,9587,1,1,4,70279), -- Striped Scale Shirt
 (25593,9591,1,1,4,54061), -- Steel Bracelet
 (25593,9626,1,1,3,41230), -- Giant's Codex - Discipline
+(25603,6680,1,1,2,31112),-- Sealed Draconic Leather Armor
+(25603,6707,12,36,2,500255),-- Sealed Draconic Leather Armor Part
+(25603,6367,1,1,1,7556), -- Angel Slayer
+(25603,6691,3,9,1,583961), -- Angel Slayer Blade
+(25653,959,1,1,2,18699), -- Scroll: Enchant Weapon (Grade S)
+(25653,960,1,1,2,186990), -- Scroll: Enchant Armor (Grade S)
+(25653,6577,1,1,2,3117), -- Blessed Scroll: Enchant Weapon (Grade S)
+(25653,9592,1,1,4,60848), -- Mithril Bracelet
+(25653,9582,1,1,4,120208), -- Mithril Shirt
+(25653,7575,1,1,1,3374), -- Draconic Bow
+(25653,7579,1,3,1,788531), -- Draconic Bow Shaft
+(25654,959,1,1,2,19645), -- Scroll: Enchant Weapon (Grade S)
+(25654,960,1,1,2,196446), -- Scroll: Enchant Armor (Grade S)
+(25654,6577,1,1,2,3274), -- Blessed Scroll: Enchant Weapon (Grade S)
+(25654,9592,1,1,4,63925), -- Mithril Bracelet
+(25654,9582,1,1,4,126286), -- Mithril Shirt
+(25654,6710,11,31,1,146331),-- Sealed Draconic Leather Helmet Pattern
+(25654,6714,16,48,1,96030),-- Sealed Major Arcana Circlet Pattern
+(25654,6705,23,67,1,58707),-- Sealed Imperial Crusader Shield Part
+(25654,6706,6,18,1,256079),-- Sealed Imperial Crusader Helmet Pattern
+(25654,6678,1,1,1,11292),-- Sealed Imperial Crusader Shield
+(25654,6679,1,1,1,7905),-- Sealed Imperial Crusader Helmet
+(25654,6683,1,1,1,7905),-- Sealed Draconic Leather Helmet
+(25654,6687,1,1,1,7905),-- Sealed Major Arcana Circlet
+(25655,959,1,1,2,20546), -- Scroll: Enchant Weapon (Grade S)
+(25655,960,1,1,2,205465), -- Scroll: Enchant Armor (Grade S)
+(25655,6577,1,1,2,3425), -- Blessed Scroll: Enchant Weapon (Grade S)
+(25655,9592,1,1,4,66860), -- Mithril Bracelet
+(25655,9582,1,1,4,132084), -- Mithril Shirt
+(25655,6364,1,1,1,1853),-- Forgotten Blade
+(25655,6372,1,1,1,1853),-- Heaven\'s Divider
+(25655,6688,2,4,1,285504),-- Forgotten Blade Edge
+(25655,6696,1,3,1,435060),-- Heavens Divider Edge
+(25659,729,1,1,2,67403), -- Scroll: Enchant Weapon (Grade A)
+(25659,6570,1,1,2,67403), -- Blessed Scroll: Enchant Armor (Grade A)
+(25659,9591,1,1,4,163626), -- Steel Bracelet
+(25659,9581,1,1,4,318347), -- Scale Shirt
+(25659,81,1,1,1,2006), -- Dragon Slayer
+(25659,151,1,1,1,2006), -- Sword of Miracles 
+(25659,2500,1,1,1,2006), -- Dark Legion\'s Edge
+(25659,5529,2,4,1,190192), -- Dragon Slayer Edge
+(25659,5545,2,6,1,142644), -- Dark Legion\'s Edge Blade
+(25659,5546,1,3,1,313362), -- Sword of Miracles Edge
+(25660,729,1,1,2,71144), -- Scroll: Enchant Weapon (Grade A)
+(25660,6570,1,1,2,71144), -- Blessed Scroll: Enchant Armor (Grade A)
+(25660,9591,1,1,4,172708), -- Steel Bracelet
+(25660,9581,1,1,4,336016), -- Scale Shirt
+(25660,5320,1,1,1,9974), -- Sealed Leather Armor of Nightmare
+(25660,5323,1,1,1,9974), -- Sealed Majestic Leather Armor
+(25660,5480,4,12,1,184705), -- Sealed Leather Armor of Nightmare Fabric
+(25660,5481,2,4,1,492546), -- Sealed Majestic Leather Armor Fabric
+(25661,959,1,1,3,17968), -- Scroll: Enchant Weapon (Grade S)
+(25661,960,1,1,3,179675), -- Scroll: Enchant Armor (Grade S)
+(25661,6577,1,1,3,2995), -- Blessed Scroll: Enchant Weapon (Grade S)
+(25661,9592,1,1,4,58468), -- Mithril Bracelet
+(25661,9582,1,1,4,115507), -- Mithril Shirt
+(25661,6713,4,10,2,234935),-- Sealed Major Arcana Boots Design
+(25661,6703,8,24,2,102784),-- Sealed Imperial Crusader Gauntlets Design
+(25661,6704,14,40,2,60910),-- Sealed Imperial Crusader Boots Design
+(25661,6708,20,60,2,41114),-- Sealed Draconic Leather Gloves Fabric
+(25661,6709,28,82,2,29901),-- Sealed Draconic Leather Boots Design
+(25661,6712,3,9,2,274092),-- Sealed Major Arcana Gloves fabric
+(25661,6676,1,1,2,7230),-- Sealed Imperial Crusader Gauntlet
+(25661,6677,1,1,2,7230),-- Sealed Imperial Crusader Boots
+(25661,6681,1,1,2,7230),-- Sealed Draconic Leather Glove
+(25661,6682,1,1,2,7230),-- Sealed Draconic Leather Boots
+(25661,6685,1,1,2,7230),-- Sealed Major Arcana Glove
+(25661,6686,1,1,2,7230),-- Sealed Major Arcana Boots
 (25665,960,1,1,2,489799), -- Scroll: Enchant Armor (S)
 (25665,6700,14,42,0,269254), -- Sealed Tateossian Necklace Chain
 (25665,6695,12,36,1,250412), -- Demon Splinter Blade
@@ -35437,6 +38111,15 @@ INSERT INTO `droplist` VALUES
 (29047,10550,1,1,20,333333),-- Forgotten Scroll - Protection of Elemental
 (29047,10551,1,1,20,333333),-- Forgotten Scroll - Protection of Alignment
 (29047,13893,1,2,21,700000),-- Sealed Holy Spirit's Cloak
+(29054,6364,1,1,1,7859),-- Forgotten Blade
+(29054,6372,1,1,1,7859),-- Heaven\'s Divider
+(29054,6688,8,22,1,276329),-- Forgotten Blade Edge
+(29054,6696,24,72,1,87725),-- Heavens Divider Edge
+(29054,6674,1,1,0,17880),-- Sealed Imperial Crusader Breastplate
+(29054,6675,1,1,0,28535),-- Sealed Imperial Crusader Gaiters
+(29054,6701,8,22,0,453748),-- Sealed Imperial Crusader Breastplate Part
+(29054,6702,24,72,0,182529),-- Sealed Imperial Crusader Gaiters Pattern
+(29054,10297,1,1,2,50000),-- Transform Sealbook - Benom (custom chance)
 (29056,1343,100,200,2,350689),-- Silver Arrow
 (29056,110,1,1,0,35857),-- Doom Shield
 (29056,2416,1,1,0,25041),-- Blue Wolf Helmet
@@ -35820,85 +38503,82 @@ INSERT INTO `droplist` VALUES
 (29117,6679,1,1,2,13876),-- Sealed Imperial Crusader Helmet
 (29117,6683,1,1,2,13876),-- Sealed Draconic Leather Helmet
 (29117,6687,1,1,2,13876),-- Sealed Major Arcana Circlet
-(29117,6577,1,1,1,10715); -- Blessed Scroll: Enchant Weapon (S)
-
--- Kamaloka
-INSERT INTO `droplist` VALUES
-(29129,2040,12,36,2,419277), -- Strengthened Long Bow Shaft
-(29129,6576,3,9,2,375874), -- Blessed Scroll: Enchant Armor (D)
-(29129,395,1,1,1,337100), -- Manticore Skin Shirt
-(29129,279,1,1,1,161959), -- Strengthened Long Bow
-(29129,1942,53,157,2,140832), -- Manticore Skin Shirt Texture
-(29129,417,4,12,1,67295), -- Manticore Skin Gaiters
-(29129,1943,216,648,2,53302), -- Manticore Skin Gaiters Pattern
-(29132,2059,8,22,2,289288), -- Flamberge Blade
-(29132,6574,1,1,2,288485), -- Blessed Scroll: Enchant Armor (C)
-(29132,439,1,1,1,267666), -- Karmian Tunic
-(29132,4589,4,12,2,210353), -- Greater Dye of STR
-(29132,1962,53,157,2,118691), -- Karmian Tunic Pattern
-(29132,4590,8,22,2,112189), -- Greater Dye of STR
-(29132,2060,24,72,2,96636), -- Stormbringer Blade
-(29132,71,1,1,1,66275), -- Flamberge
-(29132,72,1,1,1,66275), -- Stormbringer
-(29132,1954,192,576,2,53918), -- Karmian Stocking Design
-(29132,471,5,13,1,47527), -- Karmian Stockings
-(29135,4608,2,4,2,35583), -- Greater Dye of INT
-(29135,2121,16,36,2,315949), -- Eminence Bow Shaft
-(29135,4609,2,6,2,296872), -- Greater Dye of MEN
-(29135,855,1,1,1,224938), -- Nassen's Earring
-(29135,119,1,1,1,168704), -- Necklace of Binding
-(29135,4607,5,15,2,118749), -- Greater Dye of INT
-(29135,1918,81,243,2,97959), -- Nassen's Earring Gemstone
-(29135,286,1,1,1,69966), -- Eminence Bow
-(29135,1920,140,420,2,44779), -- Necklace of Binding Chain
-(29135,6573,1,1,2,35625), -- Blessed Scroll: Enchant Weapon (C)
-(29135,886,6,16,1,30673), -- Ring of Binding
-(29135,2917,480,1440,2,21924), -- Ring of Binding Gemstone
-(29138,4617,2,4,2,332469), -- Greater Dye of DEX
-(29138,4116,5,15,2,325017), -- Deadman's Glory Stone
-(29138,4618,2,6,2,249352), -- Greater Dye of DEX
-(29138,895,1,1,1,209220), -- Ring of Black Ore
-(29138,6572,1,1,2,192833), -- Blessed Scroll: Enchant Armor (B)
-(29138,4117,9,27,2,180565), -- Art of Battle Axe Blade
-(29138,864,1,1,1,139480), -- Earring of Black Ore
-(29138,4118,14,42,2,109977), -- Evil Spirit Head
-(29138,4052,81,243,2,108367), -- Earring of Black Ore Piece
-(29138,926,1,1,1,104610), -- Necklace of Black Ore
-(29138,4616,5,15,2,99740), -- Greater Dye of CON
-(29138,4053,280,840,2,37953), -- Ring of Black Ore Gemstone
-(29138,4054,220,660,2,22197), -- Necklace of Black Ore Beads
-(29138,171,1,1,1,14741), -- Necklace of Black Ore Beads
-(29138,175,1,1,1,14741), -- Art of Battle Axe
-(29138,210,1,1,1,14741), -- Staff of Evil Spirits
-(29141,730,1,1,2,779950), -- Scroll: Enchant Armor (A)
-(29141,5487,4,12,2,406413), -- Sealed Nightmare Robe Fabric
-(29141,5534,12,36,2,247774), -- Soul Bow Stave
-(29141,5488,8,22,2,216754), -- Sealed Majestic Robe Fabric
-(29141,729,1,1,2,103993), -- Scroll: Enchant Weapon (A)
-(29141,5326,1,1,1,21869), -- Sealed Nightmare Robe
-(29141,5329,1,1,1,21869), -- Sealed Majestic Robe
-(29141,289,1,1,1,20887), -- Soul Bow
-(29141,6569,1,1,2,12479), -- Blessed Scroll: Enchant Weapon (A)
-(29144,960,1,1,2,667596), -- Scroll: Enchant Armor (S)
-(29144,6707,12,36,2,531611), -- Sealed Draconic Leather Armor Part
-(29144,7579,12,36,2,351886), -- Draconic Bow Shaft
-(29144,959,1,1,2,66759), -- Scroll: Enchant Weapon (S)
-(29144,6680,1,1,1,33062), -- Sealed Draconic Leather Armor
-(29144,7575,1,1,1,18066), -- Draconic Bow
-(29144,6577,1,1,2,11127), -- Blessed Scroll: Enchant Weapon (S)
-(29147,960,1,1,2,635274), -- Scroll: Enchant Armor (S)
-(29147,6695,12,36,2,324786), -- Demon Splinter Blade
-(29147,6714,16,48,2,310540), -- Sealed Major Arcana Circlet Pattern
-(29147,6705,23,67,2,189847), -- Sealed Imperial Crusader Shield Part
-(29147,6706,60,180,2,82810), -- Sealed Imperial Crusader Helmet Pattern
-(29147,959,1,1,2,63527), -- Scroll: Enchant Weapon (S)
-(29147,6710,116,346,2,43019), -- Sealed Draconic Leather Helmet Pattern
-(29147,6678,1,1,1,36518), -- Sealed Imperial Crusader Shield
-(29147,6679,1,1,1,25562), -- Sealed Imperial Crusader Helmet
-(29147,6683,1,1,1,25562), -- Sealed Draconic Leather Helmet
-(29147,6687,1,1,1,25562), -- Sealed Major Arcana Circlet
-(29147,6371,1,1,1,17192), -- Demon Splinter
-(29147,6577,1,1,2,10588), -- Blessed Scroll: Enchant Weapon (S)
+(29117,6577,1,1,1,10715), -- Blessed Scroll: Enchant Weapon (S)
+(29129,395,1,1,0,337100),-- Manticore Skin Shirt
+(29129,417,4,12,0,67295),-- Manticore Skin Gaiters
+(29129,1942,53,157,0,140832),-- Manticore Skin Shirt Texture
+(29129,1943,216,648,0,53302),-- Manticore Skin Gaiters Pattern
+(29129,6576,3,9,2,375804),-- Blessed Scroll: Enchant Armor (Grade D)
+(29129,279,1,1,1,161959),-- Strengthened Long Bow
+(29129,2040,12,36,1,419277),-- Strengthened Long Bow Shaft
+(29132,439,1,1,0,267666),-- Karmian Tunic
+(29132,471,5,13,0,47527),-- Karmian Stockings
+(29132,1954,192,576,0,53918),-- Karmian Stocking Design
+(29132,1962,53,157,0,118691),-- Karmian Tunic Pattern
+(29132,71,1,1,1,66275),-- Flamberge
+(29132,72,1,1,1,66275),-- Stormbringer
+(29132,2059,8,22,1,289288),-- Flamberge Blade
+(29132,2060,24,72,1,96636),-- Stormbringer Blade
+(29132,4589,4,12,2,210353),-- Greater Dye of STR
+(29132,4590,8,22,2,112189),-- Greater Dye of STR
+(29132,6574,1,1,2,288485),-- Blessed Scroll: Enchant Armor (Grade C)
+(29135,119,1,1,0,168704),-- Necklace of Binding
+(29135,855,1,1,0,224938),-- Nassen\'s Earring
+(29135,886,6,16,0,30673),-- Ring of Binding
+(29135,1918,81,243,0,97959),-- Nassen\'s Earring Gemstone
+(29135,1920,140,420,0,44779),-- Necklace of Binding Chain
+(29135,2917,480,1440,0,21924),-- Ring of Binding Gemstone
+(29135,286,1,1,1,69966),-- Eminence Bow
+(29135,2121,12,36,1,315949),-- Eminence Bow Shaft
+(29135,4607,5,15,2,118749),-- Greater Dye of Intelligence <Int+3 Men-3>
+(29135,4608,2,4,2,395830),-- Greater Dye of Intelligence <Int+3 Wit-3>
+(29135,4609,2,6,2,296872),-- Greater Dye of Mental Strength <Men+3 Int-3>
+(29135,6573,1,1,2,35625),-- Blessed Scroll: Enchant Weapon (Grade C)
+(29138,864,1,1,0,139480),-- Earring of Black Ore
+(29138,895,1,1,0,209220),-- Ring of Black Ore
+(29138,926,1,1,0,104610),-- Necklace of Black Ore
+(29138,4052,81,243,0,108367),-- Earring of Black Ore Piece
+(29138,4053,280,840,0,37953),-- Ring of Black Ore Gemstone
+(29138,4054,220,660,0,22197),-- Necklace of Black Ore Beads
+(29138,171,1,1,1,14741),-- Deadman\'s Glory
+(29138,175,1,1,1,14741),-- Art of Battle Axe
+(29138,210,1,1,1,14741),-- Staff of Evil Spirits
+(29138,4116,5,15,1,325017),-- Deadman\'s Glory Stone
+(29138,4117,9,27,1,180565),-- Art of Battle Axe Blade
+(29138,4118,14,42,1,109977),-- Evil Spirit Head
+(29138,4616,5,15,2,99740),-- Greater Dye of Constitution <Con+4 Dex-4>
+(29138,4617,2,4,2,332469),-- Greater Dye of Dexterity <Dex+4 Str-4>
+(29138,4618,2,6,2,249352),-- Greater Dye of Dexterity <Dex+4 Con-4>
+(29138,6572,1,1,2,192833),-- Blessed Scroll: Enchant Armor (Grade B)
+(29141,5326,1,1,0,21869),-- Sealed Robe of Nightmare
+(29141,5329,1,1,0,21869),-- Sealed Majestic Robe
+(29141,5487,4,12,0,406413),-- Sealed Robe of Nightmare Fabric
+(29141,5488,8,22,0,216754),-- Sealed Majestic Robe Fabric
+(29141,289,1,1,1,20887),-- Soul Bow
+(29141,5534,12,36,1,247774),-- Soul Bow Stave
+(29141,729,1,1,2,103993),-- Scroll: Enchant Weapon (Grade A)
+(29141,730,1,1,2,779950),-- Scroll: Enchant Armor (Grade A)
+(29141,6569,1,1,2,12479),-- Blessed Scroll: Enchant Weapon (Grade A)
+(29144,6680,1,1,0,33062),-- Sealed Draconic Leather Armor
+(29144,6707,12,36,0,531611),-- Sealed Draconic Leather Armor Part
+(29144,7575,1,1,1,18066),-- Draconic Bow
+(29144,7579,12,36,1,351886),-- Draconic Bow Shaft
+(29144,959,1,1,2,66759),-- Scroll: Enchant Weapon (Grade S)
+(29144,960,1,1,2,667596),-- Scroll: Enchant Armor (Grade S)
+(29144,6577,1,1,2,11127),-- Blessed Scroll: Enchant Weapon (Grade S)
+(29147,6371,1,1,1,17192),-- Demon Splinter
+(29147,6695,12,36,1,324786),-- Demon Splinter Blade
+(29147,959,1,1,2,63527),-- Scroll: Enchant Weapon (Grade S)
+(29147,960,1,1,2,635274),-- Scroll: Enchant Armor (Grade S)
+(29147,6577,1,1,2,10588),-- Blessed Scroll: Enchant Weapon (Grade S)
+(29147,6678,1,1,0,36518),-- Sealed Imperial Crusader Shield
+(29147,6679,1,1,0,25562),-- Sealed Imperial Crusader Helmet
+(29147,6683,1,1,0,25562),-- Sealed Draconic Leather Helmet
+(29147,6687,1,1,0,25562),-- Sealed Major Arcana Circlet
+(29147,6705,23,67,0,189847),-- Sealed Imperial Crusader Shield Part
+(29147,6706,60,180,0,82810),-- Sealed Imperial Crusader Helmet Pattern
+(29147,6710,116,346,0,43019),-- Sealed Draconic Leather Helmet Pattern
+(29147,6714,16,48,0,310540),-- Sealed Major Arcana Circlet Pattern
 (29163,10215,1,1,0,65632), -- Icarus Sawsword
 (29163,10216,1,1,0,65046), -- Icarus Disperser
 (29163,10217,1,1,0,65046), -- Icarus Spirit
@@ -35925,266 +38605,266 @@ INSERT INTO `droplist` VALUES
 (29163,14219,1,1,5,300000), -- Forgotten Scroll - Magician's Will
 (29163,13893,1,1,6,200000); -- Sealed Holy Spirit's Cloak
 
-INSERT INTO `droplist` VALUES
--- RB drops for clan skill items (25% chance drop until chances are confirmed)
+INSERT INTO `droplist` VALUES 
+-- RB drops for clan skill items
 -- admins who have drop multipliers might want to edit chances
 -- Memento Mori
-(25026,9814,1,3,100,250000),-- Katu Van Leader Atui (49)
-(25044,9814,1,3,100,250000),-- Barion (47)
-(25047,9814,1,3,100,250000),-- Karte (49)
-(25155,9814,1,4,100,250000),-- Shaman King Selu (40)
-(25335,9814,1,2,100,250000),-- Anakazel (48)
-(25410,9814,1,2,100,250000),-- Road Scavenger Leader (40)
-(25412,9814,1,3,100,250000),-- Necrosentinel Royal Guard (47)
-(25418,9814,1,3,100,250000),-- Dread Avenger Kraven (44)
-(25437,9814,1,3,100,250000),-- Timak Orc Gosmos (45)
-(25438,9814,1,3,100,250000),-- Thief Kelbar (44)
-(25013,9814,2,5,100,250000),-- Ghost of Peasant Leader (50)
-(25050,9814,1,3,100,250000),-- Verfa (51)
-(25106,9814,1,4,100,250000),-- Ghost of the Well Lidia (60)
-(25131,9814,1,3,100,250000),-- Carnage Lord Gato (50)
-(25137,9814,1,4,100,250000),-- Beleth's Seer Sephia (55)
-(25176,9814,1,4,100,250000),-- Black Lily (55)
-(25256,9814,1,4,100,250000),-- Taik High Prefect Arak (60)
-(25336,9814,1,3,100,250000),-- Anakazel (58)
-(25407,9814,1,4,100,250000),-- Lord Ishka (60)
-(25434,9814,1,4,100,250000),-- Bandit Leader Barda (55)
-(25460,9814,1,3,100,250000),-- Deadman Ereve (51)
-(25475,9814,1,4,100,250000),-- Ghost Knight Kabed (55)
-(25035,9814,3,8,100,250000),-- Shilen's Messenger Cabrio (70)
-(25051,9814,3,7,100,250000),-- Rahha (65)
-(25073,9814,2,8,100,250000),-- Bloody Priest Rudelto (69)
-(25092,9814,3,7,100,250000),-- Korim (70)
-(25109,9814,3,7,100,250000),-- Antharas Priest Cloe (74)
-(25220,9814,3,7,100,250000),-- Death Lord Hallate (73)
-(25233,9814,2,4,100,250000),-- Spirit of Andras,the Betrayer (69)
-(25235,9814,3,7,100,250000),-- Vanor Chief Kandra (72)
-(25248,9814,3,7,100,250000),-- Doom Blade Tanatos (72)
-(25281,9814,3,7,100,250000),-- Anakim's Nemesis Zakaron (70)
-(25322,9814,3,7,100,250000),-- Demon's Agent Falston (66)
-(25328,9814,3,7,100,250000),-- Eilhalder von Hellmann (71)
-(25337,9814,1,3,100,250000),-- Anakazel (68)
-(25444,9814,1,4,100,250000),-- Enmity Ghost Ramdal (65)
-(25447,9814,2,4,100,250000),-- Immortal Savior Mardil (71)
-(25481,9814,1,3,100,250000),-- Magus Kenishee (53)
-(25484,9814,1,3,100,250000),-- Zaken Chief Mate Tillion (50)
-(25182,9814,1,4,100,250000),-- Demon Kurikups (59)
-(25032,9814,2,6,100,250000),-- Evas Guardian Millenu (58)
-(25277,9814,2,5,100,250000),-- Liliths Witch Marilion (50)
+(25026,9814,1,3,100,870000),-- Katu Van Leader Atui (49)
+(25044,9814,1,3,100,810000),-- Barion (47)
+(25047,9814,1,3,100,870000),-- Karte (49)
+(25155,9814,1,4,100,810000),-- Shaman King Selu (40)
+(25335,9814,1,2,100,790000),-- Anakazel (48)
+(25410,9814,1,2,100,850000),-- Road Scavenger Leader (40)
+(25412,9814,1,3,100,810000),-- Necrosentinel Royal Guard (47)
+(25418,9814,1,3,100,720000),-- Dread Avenger Kraven (44)
+(25437,9814,1,3,100,750000),-- Timak Orc Gosmos (45)
+(25438,9814,1,3,100,720000),-- Thief Kelbar (44)
+(25013,9814,2,5,100,770000),-- Ghost of Peasant Leader (50)
+(25050,9814,1,3,100,850000),-- Verfa (51)
+(25106,9814,1,4,100,840000),-- Ghost of the Well Lidia (60)
+(25131,9814,1,3,100,850000),-- Carnage Lord Gato (50)
+(25137,9814,1,4,100,750000),-- Beleth's Seer Sephia (55)
+(25176,9814,1,4,100,750000),-- Black Lily (55)
+(25256,9814,1,4,100,850000),-- Taik High Prefect Arak (60)
+(25336,9814,1,3,100,710000),-- Anakazel (58)
+(25407,9814,1,4,100,850000),-- Lord Ishka (60)
+(25434,9814,1,4,100,750000),-- Bandit Leader Barda (55)
+(25460,9814,1,3,100,850000),-- Deadman Ereve (51)
+(25475,9814,1,4,100,750000),-- Ghost Knight Kabed (55)
+(25035,9814,3,8,100,740000),-- Shilen's Messenger Cabrio (70)
+(25051,9814,3,7,100,800000),-- Rahha (65)
+(25073,9814,2,8,100,760000),-- Bloody Priest Rudelto (69)
+(25092,9814,3,7,100,810000),-- Korim (70)
+(25109,9814,3,7,100,820000),-- Antharas Priest Cloe (74)
+(25220,9814,3,7,100,820000),-- Death Lord Hallate (73)
+(25233,9814,2,4,100,820000),-- Spirit of Andras, the Betrayer (69)
+(25235,9814,3,7,100,820000),-- Vanor Chief Kandra (72)
+(25248,9814,3,7,100,820000),-- Doom Blade Tanatos (72)
+(25281,9814,3,7,100,820000),-- Anakim's Nemesis Zakaron (70)
+(25322,9814,3,7,100,800000),-- Demon's Agent Falston (66)
+(25328,9814,3,7,100,820000),-- Eilhalder von Hellmann (71)
+(25337,9814,1,3,100,850000),-- Anakazel (68)
+(25444,9814,1,4,100,890000),-- Enmity Ghost Ramdal (65)
+(25447,9814,2,4,100,840000),-- Immortal Savior Mardil (71)
+(25481,9814,1,3,100,880000),-- Magus Kenishee (53)
+(25484,9814,1,3,100,850000),-- Zaken Chief Mate Tillion (50)
+(25182,9814,1,4,100,830000),-- Demon Kurikups (59)
+(25032,9814,2,6,100,820000),-- Eva's Guardian Millenu (58)
+(25277,9814,2,5,100,770000),-- Liliths Witch Marilion (50)
 
 -- Dragon's Heart
-(25415,9815,1,2,100,250000),-- Nakondas (40)
-(25441,9815,1,3,100,250000),-- Evil Spirit Cyrion (45)
-(25234,9815,1,4,100,250000),-- Ancient Weird Drake (65)
-(25238,9815,1,4,100,250000),-- Abyss Brukunt (67)
-(25163,9815,3,7,100,250000),-- Roaring Skylancer (70)
-(25198,9815,3,7,100,250000),-- Fafurion's Herald Lokness (70)
-(25453,9815,3,7,100,250000),-- Meanas Anor (70)
-(25241,9815,2,6,100,250000),-- Harit Hero Tamash (55)
+(25415,9815,1,2,100,850000),-- Nakondas (40)
+(25441,9815,1,3,100,750000),-- Evil Spirit Cyrion (45)
+(25234,9815,1,4,100,850000),-- Ancient Weird Drake (65)
+(25238,9815,1,4,100,840000),-- Abyss Brukunt (67)
+(25163,9815,3,7,100,810000),-- Roaring Skylancer (70)
+(25198,9815,3,7,100,820000),-- Fafurion's Herald Lokness (70)
+(25453,9815,3,7,100,810000),-- Meanas Anor (70)
+(25241,9815,2,6,100,810000),-- Harit Hero Tamash (55)
 
 -- Earth Egg
-(25057,9816,1,3,100,250000),-- Biconne of Blue Sky (45)
-(25085,9816,2,4,100,250000),-- Timak Orc Chief Ranger (44)
-(25099,9816,1,3,100,250000),-- Rotten Tree Repiro (44)
-(25134,9816,1,2,100,250000),-- Leto Chief Talkin (40)
-(25192,9816,1,2,100,250000),-- Earth Protector Panathen (43)
-(25208,9816,1,2,100,250000),-- Water Couatle Ateka (40)
-(25420,9816,1,3,100,250000),-- Orfen's Handmaiden (48)
-(25490,9816,1,2,100,250000),-- Gwindorr (40)
-(25498,9816,1,3,100,250000),-- Fafurion's Henchman Istary (45)
-(25067,9816,2,6,100,250000),-- Captain of Red Flag Shaka (52)
-(25089,9816,1,4,100,250000),-- Soulless Wild Boar (59)
-(25103,9816,2,3,100,250000),-- Sorcerer Isirr (55)
-(25122,9816,1,4,100,250000),-- Refugee Hopeful Leo (56)
-(25217,9816,1,3,100,250000),-- Cursed Clara (50)
-(25230,9816,1,4,100,250000),-- Timak Seer Ragoth (57)
-(25463,9816,1,4,100,250000),-- Harit Guardian Garangky (56)
-(25473,9816,1,3,100,250000),-- Grave Robber Kim (52)
-(25493,9816,1,4,100,250000),-- Eva's Spirit Niniel (55)
-(25125,9816,3,7,100,250000),-- Fierce Tiger King Angel (65)
-(25199,9816,3,7,100,250000),-- Water Dragon Seer Sheshark (72)
-(25202,9816,3,7,100,250000),-- Krokian Padisha Sobekk (74)
-(25226,9816,3,7,100,250000),-- Roaring Lord Kastor (62)
-(25252,9816,3,7,100,250000),-- Palibati Queen Themis (70)
-(25263,9816,3,7,100,250000),-- Kernon's Faithful Servant Kelone (67)
-(25478,9816,1,5,100,250000),-- Shilen's Priest Hisilrome (65)
-(25496,9816,1,3,100,250000),-- Fafurion's Envoy Pingolpin (52)
-(25102,9816,1,3,100,250000),-- Shacram (45)
-(25173,9816,1,3,100,250000),-- Tiger King Karuta (45)
-(25007,9816,1,5,100,250000),-- Retreat Spider Cletu (42)
+(25057,9816,1,3,100,750000),-- Biconne of Blue Sky (45)
+(25085,9816,2,4,100,750000),-- Timak Orc Chief Ranger (44)
+(25099,9816,1,3,100,720000),-- Rotten Tree Repiro (44)
+(25134,9816,1,2,100,850000),-- Leto Chief Talkin (40)
+(25192,9816,1,2,100,890000),-- Earth Protector Panathen (43)
+(25208,9816,1,2,100,850000),-- Water Couatle Ateka (40)
+(25420,9816,1,3,100,840000),-- Orfen's Handmaiden (48)
+(25490,9816,1,2,100,850000),-- Gwindorr (40)
+(25498,9816,1,3,100,750000),-- Fafurion's Henchman Istary (45)
+(25067,9816,2,6,100,790000),-- Captain of Red Flag Shaka (52)
+(25089,9816,1,4,100,830000),-- Soulless Wild Boar (59)
+(25103,9816,2,3,100,750000),-- Sorcerer Isirr (55)
+(25122,9816,1,4,100,770000),-- Refugee Hopeful Leo (56)
+(25217,9816,1,3,100,850000),-- Cursed Clara (50)
+(25230,9816,1,4,100,800000),-- Timak Seer Ragoth (57)
+(25463,9816,1,4,100,770000),-- Harit Guardian Garangky (56)
+(25473,9816,1,3,100,850000),-- Grave Robber Kim (52)
+(25493,9816,1,4,100,750000),-- Eva's Spirit Niniel (55)
+(25125,9816,3,7,100,800000),-- Fierce Tiger King Angel (65)
+(25199,9816,3,7,100,820000),-- Water Dragon Seer Sheshark (72)
+(25202,9816,3,7,100,820000),-- Krokian Padisha Sobekk (74)
+(25226,9816,3,7,100,790000),-- Roaring Lord Kastor (62)
+(25252,9816,3,7,100,820000),-- Palibati Queen Themis (70)
+(25263,9816,3,7,100,810000),-- Kernon's Faithful Servant Kelone (67)
+(25478,9816,1,5,100,760000),-- Shilen's Priest Hisilrome (65)
+(25496,9816,1,3,100,850000),-- Fafurion's Envoy Pingolpin (52)
+(25102,9816,1,3,100,750000),-- Shacram (45)
+(25173,9816,1,3,100,750000),-- Tiger King Karuta (45)
+(25007,9816,1,5,100,730000),-- Retreat Spider Cletu (42)
 
 -- Nonliving Nucleus
-(25115,9817,1,4,100,250000),-- Icarus Sample 1 (40)
-(25158,9817,2,4,100,250000),-- King Tarlk (48)
-(25214,9817,1,2,100,250000),-- Fafurion's Page Sika (40)
-(25260,9817,2,4,100,250000),-- Iron Giant Totem (45)
-(25162,9817,2,6,100,250000),-- Giant Marpanak (60)
-(25179,9817,1,4,100,250000),-- Guardian of the Statue of Giant Karum (60)
-(25140,9817,3,7,100,250000),-- Hekaton Prime (65)
-(25255,9817,3,7,100,250000),-- Gargoyle Lord Tiphon (65)
-(25269,9817,3,7,100,250000),-- Beast Lord Behemoth (70)
-(25296,9817,3,7,100,250000),-- Icicle Emperor Bumbalump (74)
-(25467,9817,1,2,100,250000),-- Gorgolos (64)
-(25470,9817,1,5,100,250000),-- Last Titan Utenus (66)
-(25523,9817,3,7,100,250000),-- Plague Golem (73)
-(25259,9817,2,6,100,250000),-- Zaken Butcher Krantz (55)
-(25029,9817,2,6,100,250000),-- Atraiban (53)
-(25273,9817,2,5,100,250000),-- Carnamakos (50)
-(25395,9817,1,3,100,250000),-- Archon Suscepter (45)
-(25016,9817,2,7,100,250000),-- The 3rd Underwater Guardian (60)
-(25088,9817,2,4,100,250000),-- Crazy Mechanic Golem (43)
-(25431,9817,1,3,100,250000),-- Flamestone Golem (44)
+(25115,9817,1,4,100,810000),-- Icarus Sample 1 (40)
+(25158,9817,2,4,100,760000),-- King Tarlk (48)
+(25214,9817,1,2,100,850000),-- Fafurion's Page Sika (40)
+(25260,9817,2,4,100,760000),-- Iron Giant Totem (45)
+(25162,9817,2,6,100,830000),-- Giant Marpanak (60)
+(25179,9817,1,4,100,850000),-- Guardian of the Statue of Giant Karum (60)
+(25140,9817,3,7,100,800000),-- Hekaton Prime (65)
+(25255,9817,3,7,100,800000),-- Gargoyle Lord Tiphon (65)
+(25269,9817,3,7,100,810000),-- Beast Lord Behemoth (70)
+(25296,9817,3,7,100,830000),-- Icicle Emperor Bumbalump (74)
+(25467,9817,1,5,100,740000),-- Gorgolos (64)
+(25470,9817,1,5,100,770000),-- Last Titan Utenus (66)
+(25523,9817,3,7,100,830000),-- Plague Golem (73)
+(25259,9817,2,6,100,800000),-- Zaken's Butcher Krantz (55)
+(25029,9817,2,6,100,790000),-- Atraiban (53)
+(25273,9817,2,5,100,770000),-- Carnamakos (50)
+(25395,9817,1,3,100,750000),-- Archon Suscepter (45)
+(25016,9817,2,7,100,740000),-- The 3rd Underwater Guardian (60)
+(25088,9817,2,4,100,740000),-- Crazy Mechanic Golem (43)
+(25431,9817,1,3,100,720000),-- Flamestone Golem (44)
 
 -- Angelic Essence
-(25064,9818,1,3,100,250000),-- Wizard of Storm Teruk (40)
-(25487,9818,1,2,100,250000),-- Water Spirit Lian (40)
-(25010,9818,2,7,100,250000),-- Furious Thieles (55)
-(25070,9818,1,4,100,250000),-- Enchanted Forest Watcher Ruell (55)
-(25159,9818,1,3,100,250000),-- Paniel The Unicorn (54)
-(25280,9818,2,6,100,250000),-- Pagan Watcher Cerberon (55)
-(25325,9818,3,7,100,250000),-- Flame of Splendor Barakiel (70)
-(25423,9818,1,4,100,250000),-- Fairy Queen Timiniel (56)
-(25119,9818,2,5,100,250000),-- Messenger of Fairy Queen Berun (50)
-(25456,9818,1,4,100,250000),-- Mirror of Oblivion (49)
+(25064,9818,1,3,100,640000),-- Wizard of Storm Teruk (40)
+(25487,9818,1,2,100,850000),-- Water Spirit Lian (40)
+(25010,9818,2,7,100,720000),-- Furious Thieles (55)
+(25070,9818,1,4,100,750000),-- Enchanted Forest Watcher Ruell (55)
+(25159,9818,1,3,100,900000),-- Paniel The Unicorn (54)
+(25280,9818,2,6,100,800000),-- Pagan Watcher Cerberon (55)
+(25325,9818,3,7,100,810000),-- Flame of Splendor Barakiel (70)
+(25423,9818,1,4,100,830000),-- Fairy Queen Timiniel (56)
+(25119,9818,2,5,100,770000),-- Messenger of Fairy Queen Berun (50)
+(25456,9818,1,4,100,700000),-- Mirror of Oblivion (49)
 
 -- Destruction Tombstone
-(25010,8176,1,3,101,250000),-- Furious Thieles (55)
-(25013,8176,1,3,101,250000),-- Ghost of Peasant Leader (50)
-(25016,8176,1,3,101,250000),-- The 3rd Underwater Guardian (60)
-(25026,8176,1,1,101,250000),-- Katu Van Leader Atui (49)
-(25035,8176,2,3,101,250000),-- Shilen's Messenger Cabrio (70)
-(25044,8176,1,1,101,250000),-- Barion (47)
-(25050,8176,1,1,101,250000),-- Verfa (51)
-(25051,8176,2,3,101,250000),-- Rahha (65)
-(25057,8176,1,1,101,250000),-- Biconne of Blue sky (45)
-(25064,8176,1,1,101,250000),-- Wizard of Storm Teruk (40)
-(25067,8176,1,3,101,250000),-- Captain of Red Flag Shaka (52)
-(25070,8176,1,1,101,250000),-- Enchanted Forest Watcher Ruell (55)
-(25073,8176,1,4,101,250000),-- Bloody Priest Rudelto (69)
-(25088,8176,1,2,101,250000),-- Crazy Mechanic Golem (43)
-(25089,8176,1,2,101,250000),-- Soulless Wild Boar (59) 
-(25092,8176,1,4,101,250000),-- Korim (70)
-(25102,8176,1,1,101,250000),-- Shacram (45) 
-(25103,8176,1,1,101,250000),-- Sorcerer Isirr (55)
-(25106,8176,1,2,101,250000),-- Ghost of the Well Lidia (60)
-(25109,8176,1,4,101,250000),-- Antharas Priest Cloe (74)
-(25115,8176,1,2,101,250000),-- Icarus Sample 1 (40) 
-(25122,8176,1,2,101,250000),-- Refugee Hopeful Leo (56)
-(25125,8176,1,4,101,250000),-- Fierce Tiger King Angel (65)
-(25131,8176,1,1,101,250000),-- Carnage Lord Gato (50)
-(25134,8176,1,1,101,250000),-- Leto Chief Talkin (40) 
-(25140,8176,1,4,101,250000),-- Hekaton Prime (65)
-(25155,8176,1,2,101,250000),-- Shaman King Selu (55) 
-(25158,8176,1,2,101,250000),-- King Tarlk (48)
-(25159,8176,1,1,101,250000),-- Paniel the Unicorn (54)
-(25162,8176,1,3,101,250000),-- Giant Marpanak (60)
-(25163,8176,1,4,101,250000),-- Roaring Skylancer (70)
-(25176,8176,1,1,101,250000),-- Black Lily (55)
-(25179,8176,1,1,101,250000),-- Guardian of the Statue of Giant Karum (60)
-(25192,8176,1,1,101,250000),-- Earth Protector Panathen (43) 
-(25198,8176,1,4,101,250000),-- Fafurion''s Herald Lokness (70)
-(25199,8176,1,4,101,250000),-- Water Dragon Seer Sheshark (72)
-(25202,8176,1,4,101,250000),-- Krokian Padisha Sobekk (74)
-(25208,8176,1,1,101,250000),-- Water Couatle Ateka (40)
-(25217,8176,1,1,101,250000),-- Cursed Clara (50)
-(25220,8176,1,4,101,250000),-- Death Lord Hallate (73)
-(25226,8176,1,4,101,250000),-- Roaring Lord Kastor (62)
-(25230,8176,1,2,101,250000),-- Timak Seer Ragoth (57)
-(25233,8176,1,2,101,250000),-- Spirit of Andras,the Betrayer (69)
-(25234,8176,1,2,101,250000),-- Ancient Weird Drake (60)
-(25235,8176,1,4,101,250000),-- Vanor Chief Kandra (72)
-(25238,8176,1,2,101,250000),-- Abyss Brukunt (59)
-(25248,8176,1,4,101,250000),-- Doom Blade tanatos (72)
-(25252,8176,1,4,101,250000),-- Palibati Queen Themis (70)
-(25255,8176,1,4,101,250000),-- Gargoyle Lord Tiphon (65)
-(25256,8176,1,2,101,250000),-- Taik High Prefect Arak (60)
-(25263,8176,1,4,101,250000),-- Kernon's Faithful Servant Kelone (67)
-(25269,8176,1,4,101,250000),-- Beast Lord Behemoth (70)
-(25281,8176,1,4,101,250000),-- Anakim's Nemesis Zakaron (70)
-(25296,8176,1,4,101,250000),-- Icicle Emperor Bumbalump (74)
-(25322,8176,1,4,101,250000),-- Demon's Agent Falston (66)
-(25325,8176,1,4,101,250000),-- Flame of Splendor Barakiel (70)
-(25328,8176,1,4,101,250000),-- Eilhalder von Hellmann (71)
-(25335,8176,1,1,101,250000),-- Anakazel (48) 
-(25336,8176,1,1,101,250000),-- Anakazel (58)
-(25337,8176,1,1,101,250000),-- Anakazel (68)
-(25407,8176,1,2,101,250000),-- Lord Ishka (60)
-(25410,8176,1,1,101,250000),-- Road Scavenger Leader (40) 
-(25412,8176,1,1,101,250000),-- Necrosentinel Royal Guard (47) 
-(25415,8176,1,1,101,250000),-- Nakondas (40) 
-(25418,8176,1,1,101,250000),-- Dread Avenger Kraven (44)
-(25420,8176,1,1,101,250000),-- Orfen's Handmaiden (48)
-(25423,8176,1,2,101,250000),-- Fairy Queen Timiniel (56)
-(25434,8176,1,2,101,250000),-- Bandit Leader Barda (55)
-(25437,8176,1,1,101,250000),-- Timak Orc Gosmos (45)
-(25438,8176,1,1,101,250000),-- Thief Kelbar (44)
-(25441,8176,1,1,101,250000),-- Evil Spirit Cyrion (45)
-(25444,8176,1,2,101,250000),-- Enmity Ghost Ramdal (65)
-(25447,8176,1,2,101,250000),-- Immortal Savior Mardil (71)
-(25453,8176,1,4,101,250000),-- Meanas Anor (70)
-(25456,8176,1,2,101,250000),-- Mirror of Oblivion (49)
-(25460,8176,1,1,101,250000),-- Deadman Ereve (51)
-(25467,8176,1,2,101,250000),-- Gorgolos (64)
-(25470,8176,1,2,101,250000),-- Last Titan utenus (66)
-(25473,8176,1,1,101,250000),-- Grave Rober kim (52)
-(25475,8176,1,1,101,250000),-- Ghost Knight Kabed (55)
-(25478,8176,1,2,101,250000),-- Shilen's Priest Hisilrome (65)
-(25487,8176,1,1,101,250000),-- Water Spirit Lian (40) 
-(25490,8176,1,1,101,250000),-- Gwindorr (40) 
-(25493,8176,1,2,101,250000),-- Eva's Spirit Niniel (55)
-(25498,8176,1,1,101,250000),-- Fafurion's Henchman Istary (45)
-(25523,8176,1,4,101,250000),-- Plague Golem (73)
-(25395,8176,1,1,101,250000),-- Archon Suscepter (45)
-(25029,8176,1,3,101,250000),-- Atraiban (53)
-(25137,8176,1,4,101,250000),-- Beleth Seer Sephia (55)
-(25273,8176,1,3,101,250000),-- Carnamakos (50)
-(25182,8176,1,2,101,250000),-- Demon Kurikupss (59)
-(25032,8176,1,3,101,250000),-- Eva's Guardian Millenu (58)
-(25496,8176,1,1,101,250000),-- Fafurion's Envoy Pingolpin (52)
-(25214,8176,1,1,101,250000),-- Fafurion's Page Sika (40)
-(25431,8176,1,1,101,250000),-- Flamestone Golem (44)
-(25463,8176,1,2,101,250000),-- Harit Guardian Garanky (56)
-(25241,8176,1,3,101,250000),-- Harit Hero Tamash (55)
-(25260,8176,1,2,101,250000),-- Iron Giant Totem (45)
-(25047,8176,1,1,101,250000),-- Karte (49)
-(25277,8176,1,3,101,250000),-- Lilith Witch Marilion (50)
-(25481,8176,1,1,101,250000),-- Magus Kenishee (53)
-(25119,8176,1,2,101,250000),-- Messenger of Fairy Queen Berun (50)
-(25280,8176,1,3,101,250000),-- Pagan Watcher Cerberon (55)
-(25007,8176,1,2,101,250000),-- Retreat Spider Cletu (42)
-(25099,8176,1,2,101,250000),-- Rotten Tree Repiro (44)
-(25173,8176,1,1,101,250000),-- Tiger King Karuta (45)
-(25085,8176,1,2,101,250000),-- Timak Orc Chief Ranger (44)
-(25259,8176,1,3,101,250000),-- Zaken Butcher Krantz (55)
-(25484,8176,1,1,101,250000),-- Zaken Chief Mate Tillion (50)
+(25010,8176,1,3,101,800000),-- Furious Thieles (55)
+(25013,8176,1,3,101,670000),-- Ghost of Peasant Leader (50)
+(25016,8176,1,3,101,830000),-- The 3rd Underwater Guardian (60)
+(25026,8176,1,1,101,870000),-- Katu Van Leader Atui (49)
+(25035,8176,2,3,101,820000),-- Shilen's Messenger Cabrio (70)
+(25044,8176,1,1,101,810000),-- Barion (47)
+(25050,8176,1,1,101,850000),-- Verfa (51)
+(25051,8176,2,3,101,800000),-- Rahha (65)
+(25057,8176,1,1,101,750000),-- Biconne of Blue sky (45)
+(25064,8176,1,1,101,640000),-- Wizard of Storm Teruk (40)
+(25067,8176,1,3,101,790000),-- Captain of Red Flag Shaka (52)
+(25070,8176,1,1,101,900000),-- Enchanted Forest Watcher Ruell (55)
+(25073,8176,1,4,101,810000),-- Bloody Priest Rudelto (69)
+(25088,8176,1,2,101,740000),-- Crazy Mechanic Golem (43)
+(25089,8176,1,2,101,700000),-- Soulless Wild Boar (59)
+(25092,8176,1,4,101,810000),-- Korim (70)
+(25102,8176,1,1,101,750000),-- Shacram (45)
+(25103,8176,1,1,101,900000),-- Sorcerer Isirr (55)
+(25106,8176,1,2,101,720000),-- Ghost of the Well Lidia (60)
+(25109,8176,1,4,101,820000),-- Antharas Priest Cloe (74)
+(25115,8176,1,2,101,680000),-- Icarus Sample 1 (40)
+(25122,8176,1,2,101,650000),-- Refugee Hopeful Leo (56)
+(25125,8176,1,4,101,800000),-- Fierce Tiger King Angel (65)
+(25131,8176,1,1,101,850000),-- Carnage Lord Gato (50)
+(25134,8176,1,1,101,650000),-- Leto Chief Talkin (40)
+(25140,8176,1,4,101,800000),-- Hekaton Prime (65)
+(25155,8176,1,2,101,680000),-- Shaman King Selu (40)
+(25158,8176,1,2,101,770000),-- King Tarlk (48)
+(25159,8176,1,1,101,900000),-- Paniel the Unicorn (54)
+(25162,8176,1,3,101,830000),-- Giant Marpanak (60)
+(25163,8176,1,4,101,810000),-- Roaring Skylancer (70)
+(25176,8176,1,1,101,900000),-- Black Lily (55)
+(25179,8176,1,1,101,950000),-- Guardian of the Statue of Giant Karum (60)
+(25192,8176,1,1,101,700000),-- Earth Protector Panathen (43)
+(25198,8176,1,4,101,820000),-- Fafurion's Herald Lokness (70)
+(25199,8176,1,4,101,820000),-- Water Dragon Seer Sheshark (72)
+(25202,8176,1,4,101,820000),-- Krokian Padisha Sobekk (74)
+(25208,8176,1,1,101,650000),-- Water Couatle Ateka (40)
+(25217,8176,1,1,101,850000),-- Cursed Clara (50)
+(25220,8176,1,4,101,820000),-- Death Lord Hallate (73)
+(25226,8176,1,4,101,790000),-- Roaring Lord Kastor (62)
+(25230,8176,1,2,101,670000),-- Timak Seer Ragoth (57)
+(25233,8176,1,2,101,820000),-- Spirit of Andras, the Betrayer (69)
+(25234,8176,1,2,101,720000),-- Ancient Weird Drake (60)
+(25235,8176,1,4,101,820000),-- Vanor Chief Kandra (72)
+(25238,8176,1,2,101,700000),-- Abyss Brukunt (59)
+(25248,8176,1,4,101,820000),-- Doom Blade Tanatos (72)
+(25252,8176,1,4,101,820000),-- Palibati Queen Themis (70)
+(25255,8176,1,4,101,800000),-- Gargoyle Lord Tiphon (65)
+(25256,8176,1,2,101,720000),-- Taik High Prefect Arak (60)
+(25263,8176,1,4,101,810000),-- Kernon's Faithful Servant Kelone (67)
+(25269,8176,1,4,101,810000),-- Beast Lord Behemoth (70)
+(25281,8176,1,4,101,820000),-- Anakim's Nemesis Zakaron (70)
+(25296,8176,1,4,101,830000),-- Icicle Emperor Bumbalump (74)
+(25322,8176,1,4,101,800000),-- Demon's Agent Falston (66)
+(25325,8176,1,4,101,810000),-- Flame of Splendor Barakiel (70)
+(25328,8176,1,4,101,820000),-- Eilhalder von Hellmann (71)
+(25335,8176,1,1,101,590000),-- Anakazel (48)
+(25336,8176,1,1,101,710000),-- Anakazel (58)
+(25337,8176,1,1,101,850000),-- Anakazel (68)
+(25407,8176,1,2,101,730000),-- Lord Ishka (60)
+(25410,8176,1,1,101,640000),-- Road Scavenger Leader (40)
+(25412,8176,1,1,101,810000),-- Necrosentinel Royal Guard (47)
+(25415,8176,1,1,101,640000),-- Nakondas (40)
+(25418,8176,1,1,101,720000),-- Dread Avenger Kraven (44)
+(25420,8176,1,1,101,840000),-- Orfen's Handmaiden (48)
+(25423,8176,1,2,101,690000),-- Fairy Queen Timiniel (56)
+(25434,8176,1,2,101,620000),-- Bandit Leader Barda (55)
+(25437,8176,1,1,101,750000),-- Timak Orc Gosmos (45)
+(25438,8176,1,1,101,720000),-- Thief Kelbar (44)
+(25441,8176,1,1,101,750000),-- Evil Spirit Cyrion (45)
+(25444,8176,1,2,101,760000),-- Enmity Ghost Ramdal (65)
+(25447,8176,1,2,101,850000),-- Immortal Savior Mardil (71)
+(25453,8176,1,4,101,820000),-- Meanas Anor (70)
+(25456,8176,1,2,101,580000),-- Mirror of Oblivion (49)
+(25460,8176,1,1,101,850000),-- Deadman Ereve (51)
+(25467,8176,1,2,101,740000),-- Gorgolos (64)
+(25470,8176,1,2,101,770000),-- Last Titan Utenus (66)
+(25473,8176,1,1,101,850000),-- Grave Robber Kim (52)
+(25475,8176,1,1,101,920000),-- Ghost Knight Kabed (55)
+(25478,8176,1,2,101,760000),-- Shilen's Priest Hisilrome (65)
+(25487,8176,1,1,101,640000),-- Water Spirit Lian (40)
+(25490,8176,1,1,101,650000),-- Gwindorr (40)
+(25493,8176,1,2,101,630000),-- Eva's Spirit Niniel (55)
+(25498,8176,1,1,101,750000),-- Fafurion's Henchman Istary (45)
+(25523,8176,1,4,101,830000),-- Plague Golem (73)
+(25395,8176,1,1,101,750000),-- Archon Suscepter (45)
+(25029,8176,1,3,101,790000),-- Atraiban (53)
+(25137,8176,1,4,101,750000),-- Beleth's Seer Sephia (55)
+(25273,8176,1,3,101,680000),-- Carnamakos (50)
+(25182,8176,1,2,101,700000),-- Demon Kurikupss (59)
+(25032,8176,1,3,101,820000),-- Eva's Guardian Millenu (58)
+(25496,8176,1,1,101,850000),-- Fafurion's Envoy Pingolpin (52)
+(25214,8176,1,1,101,640000),-- Fafurion's Page Sika (40)
+(25431,8176,1,1,101,720000),-- Flamestone Golem (44)
+(25463,8176,1,2,101,650000),-- Harit Guardian Garangky (56)
+(25241,8176,1,3,101,810000),-- Harit Hero Tamash (55)
+(25260,8176,1,2,101,760000),-- Iron Giant Totem (45)
+(25047,8176,1,1,101,870000),-- Karte (49)
+(25277,8176,1,3,101,670000),-- Lilith Witch Marilion (50)
+(25481,8176,1,1,101,880000),-- Magus Kenishee (53)
+(25119,8176,1,2,101,900000),-- Messenger of Fairy Queen Berun (50)
+(25280,8176,1,3,101,800000),-- Pagan Watcher Cerberon (55)
+(25007,8176,1,2,101,730000),-- Retreat Spider Cletu (42)
+(25099,8176,1,1,101,720000),-- Rotten Tree Repiro (44)
+(25173,8176,1,1,101,750000),-- Tiger King Karuta (45)
+(25085,8176,1,2,101,750000),-- Timak Orc Chief Ranger (44)
+(25259,8176,1,3,101,800000),-- Zaken's Butcher Krantz (55)
+(25484,8176,1,1,101,850000),-- Zaken Chief Mate Tillion (50)
 
 -- Ancient Book - Divine Inspiration (Original Language Version)
-(25453,8619,1,1,102,250000),-- Meanas Anor (70)
-(25198,8619,1,1,102,250000),-- Fafurion's Herald Lokness (70)
-(25163,8619,1,1,102,250000),-- Roaring Skylancer (70)
-(25220,8619,1,1,102,250000),-- Death Lord Hallate (73)
-(25035,8619,1,1,102,250000),-- Shilen's Messenger Cabrio (70)
-(25248,8619,1,1,102,250000),-- Doom Blade Tanatos (72)
-(25092,8619,1,1,102,250000),-- Korim (70)
-(25109,8619,1,1,102,250000),-- Antharas Priest Cloe (74)
-(25233,8619,1,1,102,250000),-- Spirit of Andras\, the Betrayer (69)
-(25073,8619,1,1,102,250000),-- Bloody Priest Rudelto (69)
-(25337,8619,1,1,102,250000),-- Anakazel (68)
-(25235,8619,1,1,102,250000),-- Vanor Chief Kandra (72)
-(25328,8619,1,1,102,250000),-- Eilhalder von Hellmann (71)
-(25447,8619,1,1,102,250000),-- Immortal Savior Mardil (71)
-(25252,8619,1,1,102,250000),-- Palibati Queen Themis (70)
-(25199,8619,1,1,102,250000),-- Water Dragon Seer Sheshark (72)
-(25202,8619,1,1,102,250000),-- Krokian Padisha Sobekk (74)
-(25269,8619,1,1,102,250000),-- Beast Lord Behemoth (70)
-(25325,8619,1,1,102,250000),-- Flame of Splendor Barakiel (70)
-(25470,8619,1,1,102,250000),-- Last Titan Utenus (66)
-(25296,8619,1,1,102,250000),-- Icicle Emperor Bumbalump (74)
+(25453,8619,1,1,102,520000),-- Meanas Anor (70)
+(25198,8619,1,1,102,520000),-- Fafurion's Herald Lokness (70)
+(25163,8619,1,1,102,520000),-- Roaring Skylancer (70)
+(25220,8619,1,1,102,560000),-- Death Lord Hallate (73)
+(25035,8619,1,1,102,520000),-- Shilen's Messenger Cabrio (70)
+(25248,8619,1,1,102,540000),-- Doom Blade Tanatos (72)
+(25092,8619,1,1,102,520000),-- Korim (70)
+(25109,8619,1,1,102,560000),-- Antharas Priest Cloe (74)
+(25233,8619,1,1,102,520000),-- Spirit of Andras\, the Betrayer (69)
+(25073,8619,1,1,102,520000),-- Bloody Priest Rudelto (69)
+(25337,8619,1,1,102,500000),-- Anakazel (68)
+(25235,8619,1,1,102,540000),-- Vanor Chief Kandra (72)
+(25328,8619,1,1,102,520000),-- Eilhalder von Hellmann (71)
+(25447,8619,1,1,102,520000),-- Immortal Savior Mardil (71)
+(25252,8619,1,1,102,520000),-- Palibati Queen Themis (70)
+(25199,8619,1,1,102,540000),-- Water Dragon Seer Sheshark (72)
+(25202,8619,1,1,102,560000),-- Krokian Padisha Sobekk (74)
+(25269,8619,1,1,102,520000),-- Beast Lord Behemoth (70)
+(25325,8619,1,1,102,520000),-- Flame of Splendor Barakiel (70)
+(25470,8619,1,1,102,500000),-- Last Titan Utenus (66)
+(25296,8619,1,1,102,560000),-- Icicle Emperor Bumbalump (74)
 
 -- Ancient Book - Divine Inspiration (Manuscript)
 (29019,8620,12,29,102,1000000),-- Antharas (79)
-(29020,8620,5,15,102,800000),-- Baium (75)
-(29028,8620,12,19,102,1000000),-- Valakas (85)
+(29020,8620,5,15,102,1000000),-- Baium (75)
+(29028,8620,10,30,102,1000000),-- Valakas (85)
 (29047,8620,6,25,102,1000000), -- Scarlet Van Halisha (90)
 (29066,8620,12,29,102,1000000),-- Antharas (79)
 (29067,8620,12,29,102,1000000),-- Antharas (79)
@@ -36572,4 +39252,23 @@ INSERT INTO `droplist` VALUES
 (36385,9912,70,150,1,842235),-- Knight's Epaulette
 (36386,9912,2,8,1,710000),-- Knight's Epaulette
 (36387,9912,20,77,1,704766),-- Knight's Epaulette
-(36388,9912,20,77,1,704766); -- Knight's Epaulette
+(36388,9912,20,77,1,704766), -- Knight's Epaulette
+-- Supply Box
+(35665,9912,20,40,0,1000000),-- Knight's Epaulette
+(35665,9579,1,1,1,56706),-- Silk Shirt
+(35665,1538,1,1,2,30244),-- Blessed Scroll of Escape
+(35697,9912,40,80,0,1000000),-- Knight's Epaulette
+(35697,1538,1,1,2,64499),-- Blessed Scroll of Escape
+(35697,9589,1,1,1,44791),-- Iron Bracelet
+(35734,9912,60,120,0,1000000),-- Knight's Epaulette
+(35734,1538,1,1,2,92802),-- Blessed Scroll of Escape
+(35734,9580,1,1,1,53538),-- Thin Leather Shirt
+(35766,9912,80,160,0,1000000),-- Knight's Epaulette
+(35766,1538,1,1,2,123735),-- Blessed Scroll of Escape
+(35766,9580,1,1,1,71385),-- Thin Leather Shirt
+(35803,9912,100,200,0,1000000),-- Knight's Epaulette
+(35803,3936,1,1,2,61887),-- Blessed Scroll of Resurrection
+(35803,9590,1,1,1,51572),-- Bronze Bracelet
+(35834,9912,120,240,0,1000000),-- Knight's Epaulette
+(35834,3936,1,1,2,74378),-- Blessed Scroll of Resurrection
+(35834,9590,1,1,1,61981);-- Bronze Bracelet

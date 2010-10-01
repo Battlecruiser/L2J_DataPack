@@ -33,7 +33,7 @@ public class Detection implements ISkillHandler
 	{
 		L2SkillType.DETECTION
 	};
-
+	
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		final boolean hasParty;
@@ -52,7 +52,7 @@ public class Detection implements ISkillHandler
 			hasClan = false;
 			hasAlly = false;
 		}
-
+		
 		for (L2PcInstance target : activeChar.getKnownList().getKnownPlayersInRadius(skill.getSkillRadius()))
 		{
 			if (target != null && target.getAppearance().getInvisible())
@@ -63,14 +63,14 @@ public class Detection implements ISkillHandler
 					continue;
 				if (hasAlly && player.getAllyId() == target.getAllyId())
 					continue;
-
+				
 				L2Effect eHide = target.getFirstEffect(L2EffectType.HIDE);
 				if (eHide != null)
 					eHide.exit();
 			}
 		}
 	}
-
+	
 	public L2SkillType[] getSkillIds()
 	{
 		return SKILL_IDS;

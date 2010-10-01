@@ -13,8 +13,6 @@ SWORD_OF_RITUAL,COIN_OF_LORDS1,COIN_OF_LORDS2,COIN_OF_LORDS3,COIN_OF_LORDS4,COIN
 BUGBEAR_NECKLACE,EINHASAD_CHURCH_MARK1,EINHASAD_CRUCIFIX,GLUDIO_GUARDS_MARK2,POISON_SPIDER_LEG1,EINHASAD_CHURCH_MARK2,LIZARDMAN_TOTEM,\
 GLUDIO_GUARDS_MARK3,GIANT_SPIDER_HUSK,EINHASAD_CHURCH_MARK3,HORRIBLE_SKULL = range(1161,1180)
 
-default = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>" 
-
 DROPLIST={
    20775:[GLUDIO_GUARDS_MARK1,BUGBEAR_NECKLACE,10,100],
    27024:[EINHASAD_CHURCH_MARK1,EINHASAD_CRUCIFIX,12,100],
@@ -65,37 +63,37 @@ class Quest (JQuest) :
            st.playSound("ItemSound.quest_accept")
            st.giveItems(MARK_OF_ESQUIRE,1)
         else:
-           htmltext = default
+           htmltext = Quest.getNoQuestMsg(player)
     elif event == "30332-02.htm" :
         if squire and not guards_mark1 and not coin1:
           st.giveItems(GLUDIO_GUARDS_MARK1,1)
         else:
-          htmltext=default
+          htmltext = Quest.getNoQuestMsg(player)
     elif event == "30289-03.htm" :
         if squire and not church_mark1 and not coin2:
           st.giveItems(EINHASAD_CHURCH_MARK1,1)
         else:
-          htmltext=default
+          htmltext = Quest.getNoQuestMsg(player)
     elif event == "30379-02.htm" :
         if squire and not guards_mark2 and not coin3:
           st.giveItems(GLUDIO_GUARDS_MARK2,1)
         else:
-          htmltext=default
+          htmltext = Quest.getNoQuestMsg(player)
     elif event == "30037-02.htm" :
         if squire and not church_mark2 and not coin4:
           st.giveItems(EINHASAD_CHURCH_MARK2,1)
         else:
-          htmltext=default
+          htmltext = Quest.getNoQuestMsg(player)
     elif event == "30039-02.htm" :
         if squire and not guards_mark3 and not coin5:
           st.giveItems(GLUDIO_GUARDS_MARK3,1)
         else:
-          htmltext=default
+          htmltext = Quest.getNoQuestMsg(player)
     elif event == "30031-02.htm" :
         if squire and not church_mark3 and not coin6:
           st.giveItems(EINHASAD_CHURCH_MARK3,1)
         else:
-          htmltext=default
+          htmltext = Quest.getNoQuestMsg(player)
     elif event == "30417-13.htm" :
         if squire and (coin1+coin2+coin3+coin4+coin5+coin6)>=3 :
           for item in range(1162,1180) :
@@ -107,7 +105,7 @@ class Quest (JQuest) :
           st.saveGlobalQuestVar("1ClassQuestFinished","1")
           st.playSound("ItemSound.quest_finish")
         else:
-          htmltext=default
+          htmltext = Quest.getNoQuestMsg(player)
     elif event == "30417-14.htm" :
         if squire and (coin1+coin2+coin3+coin4+coin5+coin6)>=3 :
           for item in range(1162,1180) :
@@ -118,12 +116,12 @@ class Quest (JQuest) :
           st.exitQuest(False)
           st.playSound("ItemSound.quest_finish")
         else:
-          htmltext=default
+          htmltext = Quest.getNoQuestMsg(player)
     return htmltext
 
 
  def onTalk (self,npc,player):
-   htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>"
+   htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st : return htmltext
 

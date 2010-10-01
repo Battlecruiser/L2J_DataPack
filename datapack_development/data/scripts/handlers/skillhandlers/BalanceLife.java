@@ -60,7 +60,7 @@ public class BalanceLife implements ISkillHandler
 		
 		for (L2Character target: (L2Character[]) targets)
 		{
-			// We should not heal if char is dead/invul
+			// We should not heal if char is dead/
 			if (target == null || target.isDead())
 				continue;
 			
@@ -81,8 +81,17 @@ public class BalanceLife implements ISkillHandler
 		
 		for (L2Character target: (L2Character[]) targets)
 		{
-			if (target.isInvul())
+			if (target == null || target.isDead())
 				continue;
+			
+			// Player holding a cursed weapon can't be healed and can't heal
+			if (target != activeChar)
+			{
+				if (target instanceof L2PcInstance && ((L2PcInstance) target).isCursedWeaponEquipped())
+					continue;
+				else if (player != null && player.isCursedWeaponEquipped())
+					continue;
+			}
 			
 			double newHP = target.getMaxHp() * percentHP;
 			
