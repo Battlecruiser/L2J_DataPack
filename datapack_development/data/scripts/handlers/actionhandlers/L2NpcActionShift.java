@@ -183,7 +183,9 @@ public class L2NpcActionShift implements IActionHandler
 			}
 			
 			NpcHtmlMessage html = new NpcHtmlMessage(0);
-			final int hpMul = Math.round((float)(((L2Character)target).getStat().calcStat(Stats.MAX_HP, 1, (L2Character)target, null) / BaseStats.CON.calcBonus((L2Character)target)));
+			int hpMul = Math.round((float)(((L2Character)target).getStat().calcStat(Stats.MAX_HP, 1, (L2Character)target, null) / BaseStats.CON.calcBonus((L2Character)target)));
+			if (hpMul == 0)
+				hpMul = 1;
 			final StringBuilder html1 = StringUtil.startAppend(
 					1000,
 					"<html><body>" +
