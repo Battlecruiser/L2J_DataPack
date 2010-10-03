@@ -23,6 +23,7 @@ import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance.TimeStamp;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2SummonInstance;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
@@ -141,12 +142,11 @@ public class ItemSkillsTemplate implements IItemHandler
 					
 					if (itemSkill.isPotion())
 					{
-						if (!isPet)
-							playable.doSimultaneousCast(itemSkill);
+						playable.doSimultaneousCast(itemSkill);
 						// Summons should be affected by herbs too, self time effect is handled at L2Effect constructor
-						if (isPet && item.getItemType() == L2EtcItemType.HERB
+						if (!isPet && item.getItemType() == L2EtcItemType.HERB
 								&& activeChar.getPet() != null
-								&& activeChar.getPet() instanceof L2PetInstance)
+								&& activeChar.getPet() instanceof L2SummonInstance)
 							activeChar.getPet().doSimultaneousCast(itemSkill);
 					}
 					else
