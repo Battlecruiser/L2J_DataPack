@@ -486,80 +486,150 @@
 		</cond>
 	</skill>
 	<skill id="2343" levels="1" name="Gate Key of Kamael">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_UNLOCKABLE" />
+		<set name="skillType" val="UNLOCK_SPECIAL" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
+		<set name="power" val="100" />
+		<set name="castRange" val="200" />
+		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
+		<cond msgId="113" addName="1">
+			<target npcId="16200002" />
+		</cond>
 	</skill>
 	<skill id="2344" levels="1" name="Gate Key of Records">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_UNLOCKABLE" />
+		<set name="skillType" val="UNLOCK_SPECIAL" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
+		<set name="power" val="100" />
+		<set name="castRange" val="200" />
+		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
+		<cond msgId="113" addName="1">
+			<target npcId="16200005" />
+		</cond>
 	</skill>
 	<skill id="2345" levels="1" name="Gate Key of Observation">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_UNLOCKABLE" />
+		<set name="skillType" val="UNLOCK_SPECIAL" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
+		<set name="power" val="100" />
+		<set name="castRange" val="200" />
+		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
+		<cond msgId="113" addName="1">
+			<target npcId="16200009" />
+		</cond>
 	</skill>
 	<skill id="2346" levels="1" name="Gate Key of Specula">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_UNLOCKABLE" />
+		<set name="skillType" val="UNLOCK_SPECIAL" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
+		<set name="power" val="100" />
+		<set name="castRange" val="200" />
+		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
+		<cond msgId="113" addName="1">
+			<target npcId="16200003" />
+		</cond>
 	</skill>
 	<skill id="2347" levels="1" name="Enuma Elish Key">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_UNLOCKABLE" />
+		<set name="skillType" val="UNLOCK_SPECIAL" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
+		<set name="power" val="100" />
+		<set name="castRange" val="200" />
+		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
+		<cond msgId="113" addName="1">
+			<target npcId="16200007" />
+		</cond>
 	</skill>
 	<skill id="2348" levels="1" name="Prahnah Key">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_UNLOCKABLE" />
+		<set name="skillType" val="UNLOCK_SPECIAL" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
+		<set name="power" val="100" />
+		<set name="castRange" val="200" />
+		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
+		<cond msgId="113" addName="1">
+			<target npcId="16200008" />
+		</cond>
 	</skill>
 	<skill id="2349" levels="1" name="Gate Key of Arvitaire">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_UNLOCKABLE" />
+		<set name="skillType" val="UNLOCK_SPECIAL" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
+		<set name="power" val="100" />
+		<set name="castRange" val="200" />
+		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
+		<cond msgId="113" addName="1">
+			<target npcId="16200010" />
+		</cond>
 	</skill>
 	<skill id="2350" levels="1" name="Leopold Key">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_UNLOCKABLE" />
+		<set name="skillType" val="UNLOCK_SPECIAL" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
+		<set name="power" val="100" />
+		<set name="castRange" val="200" />
+		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
+		<cond msgId="113" addName="1">
+			<target npcId="16200006" />
+		</cond>
 	</skill>
 	<skill id="2351" levels="1" name="Gate Key of Prediction">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_UNLOCKABLE" />
+		<set name="skillType" val="UNLOCK_SPECIAL" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
+		<set name="power" val="100" />
+		<set name="castRange" val="200" />
+		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
+		<cond msgId="113" addName="1">
+			<target npcId="16200011" />
+		</cond>
 	</skill>
 	<skill id="2352" levels="1" name="Gate Key of Nornil">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_UNLOCKABLE" />
+		<set name="skillType" val="UNLOCK_SPECIAL" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
+		<set name="power" val="100" />
+		<set name="castRange" val="200" />
+		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
+		<cond msgId="113" addName="1">
+			<target npcId="16200012" />
+		</cond>
 	</skill>
 	<skill id="2353" levels="1" name="Nornil's Power">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="hitTime" val="1000" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="NORNILS_POWER" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="200" />
 		<set name="staticHitTime" val="true" />
 	</skill>
 	<skill id="2354" levels="1" name="Gate Key of Darkness">
@@ -610,7 +680,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
-		<set name="reuseDelay" val="8000" /> <!-- guess -->
+		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -629,7 +699,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
-		<set name="reuseDelay" val="8000" /> <!-- guess -->
+		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -648,7 +718,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
-		<set name="reuseDelay" val="8000" /> <!-- guess -->
+		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -721,9 +791,10 @@
 		<set name="power" val="10000" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="8000" />
+		<set name="isMagic" val="true" />
 		<set name="staticReuse" val="true" />
 		<set name="staticHitTime" val="true" />
-		<set name="reuseDelay" val="8000" /> <!-- unknown -->
+		<set name="reuseDelay" val="1500" />
 		<set name="skillType" val="AGGREDUCE" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
@@ -744,7 +815,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="500" />
 		<set name="staticHitTime" val="true" />
-		<set name="reuseDelay" val="8000" /> <!-- guess -->
+		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="operateType" val="OP_ACTIVE" />

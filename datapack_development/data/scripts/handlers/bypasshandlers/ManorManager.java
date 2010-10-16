@@ -147,6 +147,7 @@ public class ManorManager implements IBypassHandler
 						activeChar.sendPacket(new SystemMessage(SystemMessageId.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_6_AM_AND_8_PM));
 					else
 						activeChar.sendPacket(new ExShowCropSetting(castle.getCastleId()));
+					break;
 				case 9: // Edit sales (Crop sales)
 					if (isCastle)
 						break;

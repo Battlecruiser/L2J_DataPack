@@ -76,7 +76,7 @@ class Quest (JQuest) :
             if npcId == Gobie:
                htmltext = "32198-16.htm"
             else:
-               htmltext = "<html><body>This quest has already been completed.</body></html>"
+               htmltext = Quest.getAlreadyCompletedMsg(player)
 
         elif npcId == Sione :
             if player.getClassId().getId() != 124 or player.getLevel() < 18:

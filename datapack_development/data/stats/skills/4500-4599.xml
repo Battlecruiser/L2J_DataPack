@@ -105,6 +105,7 @@
 	</skill>
 	<skill id="4515" levels="1" name="Raid Curse">
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="PARALYZE" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1117,6 +1118,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
 		<set name="power" val="100" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="PARALYZE" />
 		<set name="target" val="TARGET_ONE" />
 		<for>

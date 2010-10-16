@@ -316,6 +316,7 @@
 		</cond>
 	</skill>
 	<skill id="10" levels="8" name="Summon Storm Cubic" enchantGroup1="2">
+		<table name="#cubicHp"> 282 434 644 919 1141 1394 1673 1975 </table>
 		<table name="#itemConsumeCount"> 4 5 7 7 8 10 11 11 </table>
 		<table name="#magicLvl"> 40 46 52 58 62 66 70 74 </table>
 		<table name="#mpConsume"> 28 33 38 43 46 49 52 55 </table>
@@ -336,6 +337,7 @@
 		<set name="activationchance" val="12" />
 		<set name="activationtime" val="10" />
 		<!-- set name="attacksnumberlimit" val="30" / TODO: this require Core-Side support -->
+		<set name="cubicHp" val="#cubicHp" />
 		<set name="isCubic" val="true" />
 		<set name="npcId" val="1" /> <!-- Cubic Id -->
 		<set name="summonTotalLifeTime" val="900000" />
@@ -586,6 +588,7 @@
 		<set name="aggroPoints" val="#aggro" />
 	</skill>
 	<skill id="22" levels="7" name="Summon Vampiric Cubic" enchantGroup1="2">
+		<table name="#cubicHp"> 351 531 773 1026 1264 1530 1822 </table>
 		<table name="#itemConsumeCount"> 5 6 7 7 9 10 11 </table>
 		<table name="#magicLvl"> 43 49 55 60 64 68 72 </table>
 		<table name="#mpConsume"> 30 35 40 44 48 51 53 </table>
@@ -606,8 +609,9 @@
 		<set name="activationchance" val="8" />
 		<set name="activationtime" val="15" />
 		<!-- set name="attacksnumberlimit" val="20" / TODO: this require Core-Side support -->
+		<set name="cubicHp" val="#cubicHp" />
 		<set name="isCubic" val="true" />
-		<set name="npcId" val="2" />
+		<set name="npcId" val="2" /> <!-- Cubic Id -->
 		<set name="summonTotalLifeTime" val="900000" />
 		<enchant1 name="magicLvl" val="#ench1Power" />
 	</skill>
@@ -793,6 +797,7 @@
 		<enchant7 name="pvpPower" val="#enchDuel" />
 	</skill>
 	<skill id="33" levels="8" name="Summon Phantom Cubic" enchantGroup1="2">
+		<table name="#cubicHp"> 282 434 644 919 1141 1394 1673 1975 </table>
 		<table name="#itemConsumeCount"> 2 2 3 3 4 5 5 6 </table>
 		<table name="#magicLvl"> 40 46 52 58 62 66 70 74 </table>
 		<table name="#mpConsume"> 28 33 38 43 46 49 52 55 </table>
@@ -813,6 +818,7 @@
 		<set name="activationchance" val="30" />
 		<set name="activationtime" val="8" />
 		<!-- set name="attacksnumberlimit" val="30" / TODO: this require Core-Side support -->
+		<set name="cubicHp" val="#cubicHp" />
 		<set name="isCubic" val="true" />
 		<set name="npcId" val="5" /> <!-- Cubic Id -->
 		<set name="summonTotalLifeTime" val="900000" />

@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS `skill_spellbooks`;
 CREATE TABLE `skill_spellbooks` (
-  `skill_id` smallint(5) NOT NULL DEFAULT '-1',
-  `item_id` smallint(5) NOT NULL DEFAULT '-1',
+  `skill_id` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `item_id` smallint(5) unsigned NOT NULL DEFAULT '0',
   KEY `skill_id` (`skill_id`,`item_id`)
 );
 

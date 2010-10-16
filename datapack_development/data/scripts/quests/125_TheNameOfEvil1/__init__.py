@@ -111,7 +111,7 @@ class Quest (JQuest) :
 		if npcId == MUSHIKA :
 			first = player.getQuestState("124_MeetingTheElroki")
 			if st.getState() == State.COMPLETED :
-				htmltext = "<html><head><body>This quest has already been completed.<br></body></html>"
+				htmltext = Quest.getAlreadyCompletedMsg(player)
 			elif first and first.getState() == State.COMPLETED and st.getState() == State.CREATED and player.getLevel() >= 76 :
 				htmltext = "32114-01.htm"
 			elif cond == 0 :

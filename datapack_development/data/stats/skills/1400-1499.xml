@@ -379,7 +379,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="300" val="0" stackOrder="2" stackType="multi_buff">
 				<mul order="0x30" stat="maxCp" val="1.2" />
 				<mul order="0x30" stat="regCp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
@@ -396,7 +396,7 @@
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1Time" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="#ench1Time" val="0" stackOrder="2" stackType="multi_buff">
 				<mul order="0x30" stat="maxCp" val="1.2" />
 				<mul order="0x30" stat="regCp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
@@ -413,7 +413,7 @@
 			</effect>
 		</enchant1for>
 		<enchant3for>
-			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="300" val="0" stackOrder="2" stackType="multi_buff">
 				<mul order="0x30" stat="maxCp" val="1.2" />
 				<mul order="0x30" stat="regCp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
@@ -495,6 +495,7 @@
 		<table name="#magicLvl"> 58 62 66 70 74 </table>
 		<table name="#mpConsume"> 54 58 62 65 69 </table>
 		<table name="#power"> 49 53 58 61 65 </table>
+		<table name="#effectPower"> 20 25 30 35 40 </table>
 		<table name="#ench1Power"> 65 66 67 67 68 69 69 70 71 71 72 73 73 74 75 75 76 77 77 78 79 79 80 81 81 82 83 83 84 85 </table>
 		<table name="#ench2Chance"> 40 41 42 42 43 44 44 45 46 46 47 48 48 49 50 50 51 52 52 53 54 54 55 56 56 57 58 58 59 60 </table>
 		<set name="hitTime" val="1000" />
@@ -515,10 +516,10 @@
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
-			<effect name="RemoveTarget" noicon="1" val="0" effectPower="40" effectType="DEBUFF" /> <!-- Guess effectPower -->
+			<effect name="RemoveTarget" noicon="1" val="0" effectPower="#effectPower" effectType="DEBUFF" />
 		</for>
 		<enchant2for>
-			<effect name="RemoveTarget" noicon="1" val="0" effectPower="#ench2Chance" effectType="DEBUFF" /> <!-- Guess effectPower -->
+			<effect name="RemoveTarget" noicon="1" val="0" effectPower="#ench2Chance" effectType="DEBUFF" />
 		</enchant2for>
 	</skill>
 	<skill id="1418" levels="1" name="Celestial Shield">
@@ -530,6 +531,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
 		<set name="isMagic" val="true" />
 		<set name="removedOnAnyActionExceptMove" val="true" />
 		<for>
@@ -1334,7 +1336,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="8000" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MUTE" />
 		<set name="target" val="TARGET_ONE" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -1349,7 +1351,8 @@
 	</skill>
 	<skill id="1448" levels="1" name="Blink" enchantGroup1="2" enchantGroup2="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
-		<table name="#ench1MpConsume"> 98 96 94 92 90 90 88 86 84 82 80 80 78 76 74 72 70 70 68 66 64 62 60 60 58 56 54 52 50 50 </table>
+		<table name="#ench1mpInitialConsume"> 20 19 19 18 18 18 18 17 17 16 16 16 16 15 15 14 14 14 14 13 13 12 12 12 12 11 11 10 10 10 </table>
+		<table name="#ench1MpConsume"> 78 77 75 74 72 72 70 69 67 66 64 64 62 61 59 58 56 56 54 53 51 50 48 48 46 45 43 42 40 40 </table>
 		<table name="#ench2Radius"> 513 526 540 553 566 580 593 606 620 633 646 660 673 686 700 713 726 740 753 766 780 793 806 820 833 846 860 873 886 900 </table>
 		<set name="flyCourse" val="0" /> <!-- Teleport to Back -->
 		<set name="flyRadius" val="500" />
@@ -1357,8 +1360,8 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="60" />
-		<set name="mpInitialConsume" val="30" />
-		<set name="mpConsume" val="100" />
+		<set name="mpInitialConsume" val="20" />
+		<set name="mpConsume" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="15000" />
@@ -1368,6 +1371,7 @@
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="target" val="TARGET_AURA" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant1 name="mpInitialConsume" val="#ench1mpInitialConsume" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="flyRadius" val="#ench2Radius" />
@@ -1845,7 +1849,7 @@
 		<set name="hitTimings" val="18,18,18,18,18" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="81" />
-		<set name="mpConsume" val="109" />
+		<set name="mpConsume" val="72" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="117" />
 		<set name="reuseDelay" val="900000" />
@@ -1861,7 +1865,7 @@
 		<set name="hitTimings" val="18,18,18,18,18" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="81" />
-		<set name="mpConsume" val="109" />
+		<set name="mpConsume" val="72" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="117" />
 		<set name="reuseDelay" val="900000" />
@@ -1942,7 +1946,7 @@
 		<set name="mpConsume" val="73" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="138" />
-		<set name="reuseDelay" val="20000" /> <!-- Guess -->
+		<set name="reuseDelay" val="4000" />
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_FRONT_AREA" />
@@ -1958,7 +1962,7 @@
 		<set name="num_souls" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
-		<set name="reuseDelay" val="60000" /> <!-- Guess -->
+		<set name="reuseDelay" val="300000" />
 		<set name="saveVs" val="WIT" />
 		<set name="skillType" val="DOT" />
 		<set name="target" val="TARGET_ONE" />
@@ -2509,7 +2513,7 @@
 		<set name="reuseDelay" val="180000" />
 		<set name="absorbPart" val="0.4" /> <!-- absorbs 40% of damage -->
 		<for>
-			<effect name="Debuff" time="30" val="0" effectPower="40" effectType="DEBUFF"> <!-- Guess effectPower -->
+			<effect name="Debuff" time="30" val="0" effectPower="80" effectType="DEBUFF">
 				<mul order="0x30" stat="pAtk" val="0.5" />
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="runSpd" val="0.5" />

@@ -1,18 +1,18 @@
 DROP TABLE IF EXISTS `four_sepulchers_spawnlist`;
 CREATE TABLE `four_sepulchers_spawnlist` (
-  `id` int(11) NOT NULL auto_increment,
-  `location` varchar(19) NOT NULL DEFAULT '',
-  `count` int(9) NOT NULL DEFAULT '0',
-  `npc_templateid` int(11) NOT NULL DEFAULT '0',
-  `locx` int(9) NOT NULL DEFAULT '0',
-  `locy` int(9) NOT NULL DEFAULT '0',
-  `locz` int(9) NOT NULL DEFAULT '0',
-  `randomx` int(9) NOT NULL DEFAULT '0',
-  `randomy` int(9) NOT NULL DEFAULT '0',
-  `heading` int(9) NOT NULL DEFAULT '0',
-  `respawn_delay` int(9) NOT NULL DEFAULT '0',
-  `key_npc_id` int(9) NOT NULL DEFAULT '0',
-  `spawntype` int(9) NOT NULL DEFAULT '0',
+  `id` smallint(4) unsigned NOT NULL AUTO_INCREMENT,
+  `location` varchar(19) NOT NULL DEFAULT '', -- TODO: Unused ? please remove if not used
+  `count` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `npc_templateid` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `locx` mediumint(6) NOT NULL DEFAULT '0',
+  `locy` mediumint(6) NOT NULL DEFAULT '0',
+  `locz` mediumint(6) NOT NULL DEFAULT '0',
+  `randomx` mediumint(6) NOT NULL DEFAULT '0',
+  `randomy` mediumint(6) NOT NULL DEFAULT '0',
+  `heading` mediumint(6) NOT NULL DEFAULT '0',
+  `respawn_delay` mediumint(5) NOT NULL DEFAULT '0',
+  `key_npc_id` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `spawntype` tinyint(1) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 );
 

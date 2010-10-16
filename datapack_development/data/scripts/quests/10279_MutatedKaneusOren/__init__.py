@@ -61,7 +61,7 @@ class Quest (JQuest) :
 				htmltext = "30196-04.htm"
 		elif npcId == ROVIA :
 				if st.getState() == State.COMPLETED :
-					htmltext = "<html><head><body>This quest has already been completed.<br></body></html>"
+					htmltext = Quest.getAlreadyCompletedMsg(player)
 				elif st.getQuestItemsCount(TISSUE_KA) > 0 and st.getQuestItemsCount(TISSUE_KM) > 0 :
 					htmltext = "30189-02.htm"
 				else :

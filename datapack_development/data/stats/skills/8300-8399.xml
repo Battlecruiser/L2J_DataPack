@@ -283,7 +283,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" time="10" val="0" stackOrder="1" stackType="talismanElementRes">
+			<effect name="Buff" time="10" val="0" stackOrder="1" stackType="ab_talisman">
 				<add order="0x40" stat="fireRes" val="15" />
 				<add order="0x40" stat="windRes" val="15" />
 				<add order="0x40" stat="waterRes" val="15" />

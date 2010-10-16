@@ -38,9 +38,11 @@ import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2DropCategory;
 import com.l2jserver.gameserver.model.L2DropData;
+import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.L2TradeList;
 import com.l2jserver.gameserver.model.L2TradeList.L2TradeItem;
+import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MerchantInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -75,7 +77,8 @@ public class AdminEditNpc implements IAdminCommandHandler
 		"admin_show_skilllist_npc",
 		"admin_add_skill_npc",
 		"admin_edit_skill_npc",
-		"admin_del_skill_npc"
+		"admin_del_skill_npc",
+		"admin_log_npc_spawn"
 	};
 	
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
@@ -86,6 +89,15 @@ public class AdminEditNpc implements IAdminCommandHandler
 			String[] args = command.split(" ");
 			if (args.length > 1)
 				showShop(activeChar, Integer.parseInt(command.split(" ")[1]));
+		}
+		else if (command.startsWith("admin_log_npc_spawn"))
+		{
+			L2Object target = activeChar.getTarget();
+			if (target instanceof L2Npc)
+			{
+				L2Npc npc = (L2Npc) target;
+				_log.info("('',1,"+npc.getNpcId()+","+npc.getX()+","+npc.getY()+","+npc.getZ()+",0,0,"+npc.getHeading()+",60,0,0),");
+			}
 		}
 		else if (command.startsWith("admin_showShopList "))
 		{
@@ -817,14 +829,11 @@ public class AdminEditNpc implements IAdminCommandHandler
 			adminReply.replace("%mAtkSpd%", String.valueOf(npc.baseMAtkSpd));
 			adminReply.replace("%rHand%", String.valueOf(npc.rhand));
 			adminReply.replace("%lHand%", String.valueOf(npc.lhand));
-			adminReply.replace("%armor%", String.valueOf(npc.armor));
 			adminReply.replace("%enchant%", String.valueOf(npc.enchantEffect));
 			adminReply.replace("%walkSpd%", String.valueOf(npc.baseWalkSpd));
 			adminReply.replace("%runSpd%", String.valueOf(npc.baseRunSpd));
 			adminReply.replace("%factionId%", npc.getAIDataStatic().getClan() == null ? "" : npc.getAIDataStatic().getClan());
 			adminReply.replace("%factionRange%", String.valueOf(npc.getAIDataStatic().getClanRange()));
-			adminReply.replace("%isUndead%", npc.isUndead ? "1" : "0");
-			// adminReply.replace("%absorbLevel%", String.valueOf(npc.absorbLevel));
 		}
 		else
 			adminReply.setHtml("<html><head><body>File not found: data/html/admin/editnpc.htm</body></html>");

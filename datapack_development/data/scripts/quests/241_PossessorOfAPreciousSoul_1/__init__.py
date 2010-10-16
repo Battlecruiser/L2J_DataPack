@@ -158,7 +158,7 @@ class Quest (JQuest) :
    if npcId == TALIEN :
        if cond == 0 :
          if id == State.COMPLETED :
-           htmltext = "<html><body>This quest has already been completed.</body></html>"
+           htmltext = Quest.getAlreadyCompletedMsg(player)
          elif player.getLevel() >= 50 and player.isSubClassActive():
            htmltext = "31739-1.htm"
          else : 

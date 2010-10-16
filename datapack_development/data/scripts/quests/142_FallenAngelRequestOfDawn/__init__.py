@@ -66,7 +66,7 @@ class Quest (JQuest) :
     cond = st.getInt("cond")
     if id == State.CREATED : return htmltext
     if id == State.COMPLETED :
-       htmltext = "<html><body>This quest has already been completed.</body></html>"
+       htmltext = Quest.getAlreadyCompletedMsg(player)
     elif npcId == NATOOLS :
        if cond == 1 :
           htmltext = "30894-01.htm"

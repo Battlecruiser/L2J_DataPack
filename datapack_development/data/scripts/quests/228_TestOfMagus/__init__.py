@@ -128,7 +128,7 @@ class Quest (JQuest) :
             htmltext = "30629-01.htm"
             st.exitQuest(1)
      elif st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+      htmltext = Quest.getAlreadyCompletedMsg(player)
 
      elif st.getInt("cond")==1:
         htmltext = "30629-05.htm"

@@ -166,7 +166,7 @@
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="8000" />
 		<set name="saveVs" val="WIT" />
-		<set name="skillRadius" val="200" /> <!-- Guess -->
+		<set name="skillRadius" val="200" />
 		<set name="skillType" val="ROOT" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
@@ -341,21 +341,21 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" time="10" val="0">
+			<effect name="Buff" time="10" val="0" stackOrder="1" stackType="ab_pd_up_bow">
 				<mul order="0x30" stat="bowWpnVuln" val="0.4" />
 				<mul order="0x30" stat="crossbowWpnVuln" val="0.4" />
 				<mul order="0x30" stat="mDef" val="2" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0">
+			<effect name="Buff" time="#ench1time" val="0" stackOrder="1" stackType="ab_pd_up_bow">
 				<mul order="0x30" stat="bowWpnVuln" val="0.4" />
 				<mul order="0x30" stat="crossbowWpnVuln" val="0.4" />
 				<mul order="0x30" stat="mDef" val="2" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="Buff" time="10" val="0">
+			<effect name="Buff" time="10" val="0" stackOrder="1" stackType="ab_pd_up_bow">
 				<mul order="0x30" stat="bowWpnVuln" val="0.4" />
 				<mul order="0x30" stat="crossbowWpnVuln" val="0.4" />
 				<mul order="0x30" stat="mDef" val="2" />
@@ -477,6 +477,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="5000" />
+		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="30000" />
 		<set name="transformId" val="316" />
 		<for>
@@ -491,6 +492,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="5000" />
+		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="30000" />
 		<set name="transformId" val="317" />
 		<for>
@@ -505,6 +507,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="5000" />
+		<set name="isMagic" val="true" />
 		<set name="reuseDelay" val="30000" />
 		<set name="transformId" val="318" />
 		<for>
@@ -535,7 +538,7 @@
 	<skill id="1524" levels="42" name="Surrender to the Holy">
 		<!-- Inquisitor Stance Skill -->
 		<table name="#mpConsume"> 39 39 41 42 43 44 44 46 47 48 49 49 51 52 53 54 55 56 57 58 59 60 61 62 63 64 64 66 67 67 68 69 69 70 71 72 73 73 73 74 74 75 </table>
-		<table name="#magicLvl"> 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table> <!-- Guesssing -->
+		<table name="#magicLvl"> 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="80" />
@@ -573,7 +576,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="70" /> <!-- Base Land Rate --> <!-- Guess -->
+		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="4000" />
 		<set name="saveVs" val="WIT" />
 		<set name="skillType" val="DOT" />
@@ -645,6 +648,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1200" />
 		<set name="isMagic" val="true" />
+		<set name="isDebuff" val="true" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1mpConsume" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -693,11 +697,13 @@
 		<enchant3 name="pvpPower" val="#enchDuel" />
 	</skill>
 	<skill id="1531" levels="7" name="Bless the Blood" enchantGroup1="1" enchantGroup2="1">
-		<table name="#mpConsume"> 35 44 52 55 60 64 67 </table>
+		<table name="#mpConsume"> 28 35 41 44 48 51 53 </table>
+		<table name="#mpInitialConsume"> 7 9 11 11 12 13 14 </table>
 		<table name="#lvl"> 1 2 3 4 5 6 7 </table>
 		<table name="#ench1lvl"> 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 </table>
 		<table name="#ench2time"> 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 </table>
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="target" val="TARGET_PARTY_MEMBER" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="true" />
@@ -705,7 +711,7 @@
 		<set name="reuseDelay" val="20000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
-		<set name="effectRange" val="1500" />
+		<set name="effectRange" val="1100" />
 		<for>
 			<effect name="ChanceSkillTrigger" time="15" val="0" triggeredId="5698" triggeredLevel="#lvl" chanceType="ON_ATTACKED" activationChance="45" />
 		</for>
@@ -854,6 +860,7 @@
 		<set name="castRange" val="#castRange" />
 		<set name="effectRange" val="#effectRange" />
 		<set name="hitTime" val="1500" />
+		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -960,7 +967,7 @@
 		<set name="mpConsume" val="73" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="#power" />
-		<set name="reuseDelay" val="20000" /> <!-- Guess -->
+		<set name="reuseDelay" val="4000" />
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_FRONT_AREA" />
@@ -977,7 +984,7 @@
 		<set name="num_souls" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
-		<set name="reuseDelay" val="60000" /> <!-- Guess -->
+		<set name="reuseDelay" val="300000" />
 		<set name="saveVs" val="WIT" />
 		<set name="skillType" val="DOT" />
 		<set name="target" val="TARGET_ONE" />
@@ -992,13 +999,26 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="1547" levels="3" name="Spirit Sharing">
-		<!--
-			Increases your P. Atk. by 3%, M.Atk. by 3% and Skill P.Atk. by 5% for 20 minutes. These bonuses will also be applied to your servitor.
-			Increases your P. Atk. by 4%, M.Atk. by 4% and Skill P.Atk. by 7% for 20 minutes. These bonuses will also be applied to your servitor.
-			Increases your P. Atk. by 5%, M.Atk. by 5% and Skill P.Atk. by 10% for 20 minutes. These bonuses will also be applied to your servitor.
-		-->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<table name="#magicLvl"> 44 62 70 </table>
+		<table name="#mpInitialConsume"> 8 12 13 </table>
+		<table name="#mpConsume"> 31 46 52 </table>
+		<table name="#amount"> 1.03 1.04 1.05 </table>
+		<table name="#physicalSkillPower"> 1.05 1.07 1.1 </table>
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" time="1200" val="0">
+				<mul order="0x30" stat="pAtk" val="#amount" />
+				<mul order="0x30" stat="mAtk" val="#amount" />
+				<mul order="0x30" stat="physicalSkillPower" val="#physicalSkillPower" />
+			</effect>
+		</for>
 	</skill>
 </list>

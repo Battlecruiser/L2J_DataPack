@@ -70,7 +70,7 @@ class Quest (JQuest) :
    blood = st.getQuestItemsCount(BLOOD_OF_SAINT)
    id = st.getState()
    if id == State.COMPLETED :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+      htmltext = Quest.getAlreadyCompletedMsg(player)
    if id == State.CREATED :
       st2 = player.getQuestState("15_SweetWhisper")
       if st2 and st2.getState() == State.COMPLETED:

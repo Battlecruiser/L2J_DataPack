@@ -33436,8 +33436,8 @@ INSERT INTO `droplist` VALUES
 (22791,15643,1,1,-1,2000),-- Vesper Singer Piece
 -- Ascetic Solina
 (22793,57,1085,2116,0,700000),-- Adena
-(22793,15644,1,1,1,1500),-- Vesper Thrower Piece
-(22793,13467,1,1,1,3),-- Vesper Thrower
+(22793,15637,1,1,1,1500),-- Vesper Shaper Piece
+(22793,13460,1,1,1,3),-- Vesper Shaper
 (22793,1895,1,1,2,81200),-- Metallic Fiber
 (22793,4043,1,1,2,8200),-- Asofe
 (22793,4040,1,1,2,5200),-- Mold Lubricant
@@ -33446,8 +33446,8 @@ INSERT INTO `droplist` VALUES
 (22793,9573,1,1,200,4500),-- Life Stone: level 80
 (22793,9574,1,1,200,1100),-- Mid-Grade Life Stone: level 80
 (22793,9575,1,1,200,110),-- High-Grade Life Stone: level 80
-(22793,15825,1,1,-1,200),-- Recipe - Vesper Thrower (60%)
-(22793,15644,1,1,-1,2000),-- Vesper Thrower Piece
+(22793,15818,1,1,-1,200),-- Recipe - Vesper Shaper (60%)
+(22793,15637,1,1,-1,2000),-- Vesper Shaper Piece
 (22793,9628,1,1,-1,60000),-- Leonard
 -- Solina Knights
 (18809,57,1300,2268,0,700000),-- Adena

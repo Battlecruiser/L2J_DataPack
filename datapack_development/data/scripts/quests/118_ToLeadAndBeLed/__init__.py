@@ -97,7 +97,7 @@ class Quest (JQuest) :
      st.exitQuest(1)
    elif player.getPledgeType() == -1 :
      if id==State.COMPLETED:
-       htmltext = "<html><body>This quest has already been completed.</body></html>" 
+       htmltext = Quest.getAlreadyCompletedMsg(player) 
      elif player.getLevel() < 19 or not player.getSponsor() :
        htmltext = "30517-00.htm"
        st.exitQuest(1)

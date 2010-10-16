@@ -62,14 +62,14 @@ class Quest (JQuest) :
         cond = st.getInt("cond")
         if id == State.COMPLETED :
             if npcId == Kusto :
-                htmltext = "<html><body>This quest has already been completed.</body></html>"
+                htmltext = Quest.getAlreadyCompletedMsg(player)
             elif npcId == Nikola :
                 qs1 = player.getQuestState("184_Nikolas_Cooperation_Contract")
                 qs2 = player.getQuestState("185_Nikolas_Cooperation_Consideration")
                 if not qs1 and not qs2 :
                     htmltext = "30621-03.htm"
                 else :
-                    htmltext = "<html><body>This quest has already been completed.</body></html>"
+                    htmltext = Quest.getAlreadyCompletedMsg(player)
         elif npcId == Kusto :
             if id == State.CREATED :
                 if player.getLevel() < 40 :

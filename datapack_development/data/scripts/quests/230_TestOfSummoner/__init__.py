@@ -218,7 +218,7 @@ class Quest (JQuest) :
             htmltext = "30634-01.htm"
             st.exitQuest(1)
       elif id == State.COMPLETED:                     # quest already done, not repeatable
-         htmltext = "<html><body>This quest has already been completed.</body></html>"
+         htmltext = Quest.getAlreadyCompletedMsg(player)
 
       elif id == State.STARTED:
          step = st.getInt("step")             # stats as short vars if the player has state <Started>

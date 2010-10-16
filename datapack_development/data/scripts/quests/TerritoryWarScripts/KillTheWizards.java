@@ -29,7 +29,7 @@ public class KillTheWizards extends TerritoryWarSuperClass
 	public KillTheWizards()
 	{
 		super(qnu,qn1,qna);
-		CLASS_IDS = new int[]{12, 14, 27, 28, 40, 41, 94, 96, 103, 104, 110, 111};
+		CLASS_IDS = new int[] { 40, 110, 27, 103, 13, 95, 12, 94, 41, 111, 28, 104, 14, 96 };
 		qn = qn1;
 		RANDOM_MIN = 10;
 		RANDOM_MAX = 15;

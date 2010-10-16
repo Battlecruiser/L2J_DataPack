@@ -52,7 +52,7 @@ class Quest (JQuest) :
    cond = st.getInt("cond")
    id = st.getState()
    if id == State.COMPLETED:
-     htmltext = "<html><body>This quest has already been completed.</body></html>"
+     htmltext = Quest.getAlreadyCompletedMsg(player)
    elif npcId == 30091 and cond == 0 and st.getQuestItemsCount(JEWEL_BOX) == 0 :
      fwear=player.getQuestState("37_PleaseMakeMeFormalWear")
      if fwear :

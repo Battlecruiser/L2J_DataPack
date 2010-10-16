@@ -170,7 +170,7 @@ public class eventmodRace extends Event
 		{
 			if (player != null && player.isOnline())
 			{
-				if (player.isInsideRadius(_npc, 1000, false, false))
+				if (player.isInsideRadius(_npc, 500, false, false))
 				{
 					sendMessage(player, "Race started! Go find Finish NPC as fast as you can... He is located near "+_locations[location]);
 					transformPlayer(player);
@@ -375,6 +375,10 @@ public class eventmodRace extends Event
 		for (L2Effect e : player.getAllEffects())
 		{
 			if (e.getStackType().equalsIgnoreCase("speed_up"))
+				e.exit();
+			if (e.getSkill() != null && (
+					e.getSkill().getId() == 268 ||	// Song of Wind
+					e.getSkill().getId() == 298)) 	// Rabbit Spirit Totem
 				e.exit();
 		}
 		

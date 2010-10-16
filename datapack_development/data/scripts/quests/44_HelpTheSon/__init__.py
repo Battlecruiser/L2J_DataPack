@@ -84,7 +84,7 @@ class Quest (JQuest) :
         elif cond==5:
           htmltext="30505-06a.htm"
     elif id==State.COMPLETED:
-      htmltext="<html><body>This quest has already been completed.</body></html>"
+      htmltext=Quest.getAlreadyCompletedMsg(player)
     return htmltext
 
   def onKill(self,npc,player,isPet):

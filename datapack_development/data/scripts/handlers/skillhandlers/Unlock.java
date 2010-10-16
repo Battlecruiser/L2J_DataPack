@@ -93,7 +93,8 @@ public class Unlock implements ISkillHandler
 				if (doorUnlock(skill) && (!door.getOpen()))
 				{
 					door.openMe();
-					door.onOpen();
+					if(skill.getAfterEffectId() == 0)
+						door.onOpen();
 				}
 				else
 					activeChar.sendPacket(new SystemMessage(SystemMessageId.FAILED_TO_UNLOCK_DOOR));

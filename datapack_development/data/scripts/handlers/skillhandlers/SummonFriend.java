@@ -83,7 +83,7 @@ public class SummonFriend implements ISkillHandler
 							confirm.addCharName(activeChar);
 							confirm.addZoneName(activeChar.getX(), activeChar.getY(), activeChar.getZ());
 							confirm.addTime(30000);
-							confirm.addRequesterId(activePlayer.getCharId());
+							confirm.addRequesterId(activePlayer.getObjectId());
 							target.sendPacket(confirm);
 						}
 						else

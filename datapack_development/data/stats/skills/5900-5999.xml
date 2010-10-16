@@ -19,6 +19,7 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5903" levels="1" name="Burst of Misplace">
+		<set name="mpConsume" val="74" />
 		<set name="hitTime" val="2000" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="80" />
@@ -30,20 +31,24 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="DISARM" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="isMagic" val="true" />
 		<for>
 			<effect name="Disarm" time="5" val="0" />
 		</for>
 	</skill>
 	<skill id="5904" levels="3" name="Mist of Souleater">
 		<table name="#hitTime"> 2000 22940 22940 </table>
-		<set name="power" val="3000" />
+		<table name="#mpConsume"> 183 188 192 </table>
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="power" val="3000" /> <!-- Guess -->
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="PDAM" />
+		<set name="skillType" val="PDAM" /> <!-- Guess -->
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="150" />
-		<set name="effectRange" val="650" />
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1400" />
 		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="#hitTime" />
+		<set name="isMagic" val="true" />
 	</skill>
 	<skill id="5905" levels="1" name="Confusing Nuph">
 		<set name="target" val="TARGET_NONE" />
@@ -72,24 +77,26 @@
 		<set name="hitTime" val="#hitTime" />
 	</skill>
 	<skill id="5909" levels="1" name="Stronghold Attack">
-		<set name="power" val="3000" />
+		<set name="power" val="3000" /> <!-- Guess -->
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="PDAM" />
+		<set name="skillType" val="PDAM" /> <!-- Guess -->
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="150" />
-		<set name="effectRange" val="650" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="true" />
 	</skill>
 	<skill id="5910" levels="1" name="Stronghold Attack">
-		<set name="power" val="5000" />
+		<set name="power" val="5000" /> <!-- Guess -->
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="PDAM" />
+		<set name="skillType" val="PDAM" /> <!-- Guess -->
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="150" />
-		<set name="effectRange" val="650" />
+		<set name="castRange" val="300" />
+		<set name="effectRange" val="500" />
 		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="true" />
 	</skill>
 	<skill id="5911" levels="1" name="Pestilence Cleanse">
 		<set name="target" val="TARGET_NONE" />
@@ -209,8 +216,8 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="150" />
-		<set name="effectRange" val="650" />
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1400" />
 		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="1500" />
 	</skill>
@@ -219,8 +226,8 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="150" />
-		<set name="effectRange" val="650" />
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1400" />
 		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="1500" />
 	</skill>
@@ -234,8 +241,8 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="150" />
-		<set name="effectRange" val="650" />
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1400" />
 		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="1500" />
 	</skill>
@@ -244,8 +251,8 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="150" />
-		<set name="effectRange" val="650" />
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1400" />
 		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="1500" />
 	</skill>
@@ -355,6 +362,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
 		<cond msgId="2292">
@@ -365,6 +373,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
 		<cond msgId="2292">
@@ -375,6 +384,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
 		<cond msgId="2292">
@@ -385,7 +395,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="hitTime" val="1000" />
+		<set name="hitTime" val="3000" />
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
@@ -397,7 +407,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="DUMMY" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="hitTime" val="1000" />
+		<set name="hitTime" val="3000" />
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />

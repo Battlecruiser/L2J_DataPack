@@ -93,7 +93,7 @@ class Quest (JQuest) :
    if npcId != 30690 and id != State.STARTED : return htmltext
 
    if id == State.COMPLETED :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+      htmltext = Quest.getAlreadyCompletedMsg(player)
 
    elif id == State.CREATED :
      st.set("cond","0")

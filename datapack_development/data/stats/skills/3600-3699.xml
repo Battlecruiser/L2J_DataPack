@@ -447,9 +447,9 @@
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="mpConsume" val="140" />
-		<set name="power" val="2500" /> <!-- Guess -->
+		<set name="power" val="11500" />
 		<set name="hitTime" val="2000" />
-		<set name="reuseDelay" val="10000" /> <!-- Guess -->
+		<set name="reuseDelay" val="60000" />
 		<set name="skillRadius" val="200" />
 	</skill>
 	<skill id="3631" levels="1" name="Void Flow">
@@ -457,9 +457,9 @@
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="mpConsume" val="140" />
-		<set name="power" val="1000" /> <!-- Guess -->
+		<set name="power" val="15000" />
 		<set name="hitTime" val="1900" />
-		<set name="reuseDelay" val="4000" /> <!-- Guess -->
+		<set name="reuseDelay" val="60000" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 	</skill>
@@ -525,8 +525,6 @@
 			<mul order="0x30" stat="pvpPhysDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
 			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" /> <!-- PVP Damage Bonus +5% -->
-			<mul order="0x30" stat="atkReuse" val="0.81" /> <!-- 19% Quick Recovery -->
-			<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.88" /> <!-- MP Consumption -12% --> <!-- Guessing -->
 		</for>
 	</skill>
 	<skill id="3636" levels="1" name="Dynasty Platinum Plate - Shield Master">
@@ -881,7 +879,7 @@
 		<set name="equipDelay" val="30000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman_red">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="ab_talisman">
 				<add order="0x40" stat="maxCp" val="500" />
 			</effect>
 		</for>
@@ -897,7 +895,7 @@
 		<set name="equipDelay" val="30000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman_red">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="ab_talisman">
 				<mul order="0x30" stat="regCp" val="1.2" />
 			</effect>
 		</for>
@@ -912,7 +910,6 @@
 		<set name="chanceType" val="ON_ATTACKED" />
 	</skill>
 	<skill id="3667" levels="1" name="Yellow Talisman - Damage Transition">
-		<!-- Guessing, based on 1st lvl Transfer Pain -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />

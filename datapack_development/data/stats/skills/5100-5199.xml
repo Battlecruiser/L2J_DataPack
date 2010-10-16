@@ -337,48 +337,51 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5135" levels="1" name="Slash">
+		<!-- CT2.5 retail confirmed -->
 		<!-- Summon Feline King Skill -->
-		<!-- TODO: power needs to be verified -->
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
-		<set name="magicLvl" val="79" />
+		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="214" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="5000" />
+		<set name="power" val="8264" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="overHit" val="true" />
+		<set name="nextActionAttack" val="true" />
 	</skill>
 	<skill id="5136" levels="1" name="Spin Slash">
+		<!-- CT2.5 retail confirmed -->
 		<!-- Summon Feline King Skill -->
-		<!-- TODO: power needs to be verified -->
 		<set name="hitTime" val="1070" />
-		<set name="magicLvl" val="79" />
+		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="322" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="2500" />
+		<set name="power" val="4132" />
 		<set name="reuseDelay" val="17000" />
-		<set name="skillRadius" val="100" />
+		<set name="skillRadius" val="150" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_MULTIFACE" />
 	</skill>
 	<skill id="5137" levels="1" name="Hold of King">
+		<!-- CT2.5 retail confirmed -->
 		<!-- Summon Feline King Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
 		<set name="lvlDepend" val="2" />
-		<set name="magicLvl" val="79" />
-		<set name="mpConsume" val="322" />
+		<set name="magicLvl" val="80" />
+		<set name="mpInitialConsume" val="64" />
+		<set name="mpConsume" val="258" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="20000" />
-		<set name="saveVs" val="WIT" />
-		<set name="skillRadius" val="100" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillRadius" val="200" />
 		<set name="skillType" val="ROOT" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
@@ -386,76 +389,80 @@
 		</for>
 	</skill>
 	<skill id="5138" levels="1" name="Whiplash">
+		<!-- CT2.5 retail confirmed -->
 		<!-- Summon Magnus the Unicorn Skill -->
-		<!-- TODO: power needs to be verified -->
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
-		<set name="magicLvl" val="79" />
+		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="214" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="4000" />
+		<set name="power" val="6198" />
 		<set name="reuseDelay" val="8000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="overHit" val="true" />
+		<set name="nextActionAttack" val="true" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="Stun" />
+			<effect name="Stun" time="9" val="0" effectPower="60" effectType="STUN" stackOrder="1" stackType="Stun" />
 		</for>
 	</skill>
 	<skill id="5139" levels="1" name="Tidal Wave">
+		<!-- CT2.5 retail confirmed -->
 		<!-- Summon Magnus the Unicorn Skill -->
-		<!-- TODO: power needs to be verified -->
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="true" />
-		<set name="magicLvl" val="79" />
-		<set name="mpConsume" val="322" />
+		<set name="magicLvl" val="80" />
+		<set name="mpInitialConsume" val="64" />
+		<set name="mpConsume" val="258" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="100" />
+		<set name="power" val="228" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillRadius" val="100" />
+		<set name="skillRadius" val="200" />
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="5140" levels="1" name="Dark Curse">
+		<!-- CT2.5 retail confirmed -->
 		<!-- Summon Spectral Lord Skill -->
 		<set name="hitTime" val="1500" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
 		<set name="lvlDepend" val="1" />
-		<set name="magicLvl" val="79" />
-		<set name="mpConsume" val="322" />
+		<set name="magicLvl" val="80" />
+		<set name="mpInitialConsume" val="64" />
+		<set name="mpConsume" val="258" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="70" /> <!-- Base Land Rate -->
+		<set name="power" val="60" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="8000" />
-		<set name="skillRadius" val="150" />
-		<set name="saveVs" val="CON" />
+		<set name="skillRadius" val="200" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="POISON" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
-			<effect count="10" name="DamOverTime" time="3" val="343" abnormal="poison">
+			<effect count="10" name="DamOverTime" time="3" val="327" abnormal="poison">
 				<mul order="0x30" stat="pAtkSpd" val="0.77" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="5141" levels="1" name="Dicing Death">
+		<!-- CT2.5 retail confirmed -->
 		<!-- Summon Spectral Lord Skill -->
-		<!-- TODO: power needs to be verified -->
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
-		<set name="magicLvl" val="79" />
+		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="214" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="4000" /> <!-- Guess -->
+		<set name="power" val="8264" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
@@ -463,18 +470,19 @@
 		<set name="overHit" val="true" />
 	</skill>
 	<skill id="5142" levels="1" name="Corpse Kaboom">
+		<!-- CT2.5 retail confirmed -->
 		<!-- Summon Spectral Lord Skill -->
-		<!-- TODO: power needs to be verified -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="true" />
-		<set name="magicLvl" val="79" />
-		<set name="mpConsume" val="322" />
+		<set name="magicLvl" val="80" />
+		<set name="mpInitialConsume" val="64" />
+		<set name="mpConsume" val="258" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="108" />
+		<set name="power" val="228" />
 		<set name="reuseDelay" val="20000" />
-		<set name="skillRadius" val="100" />
+		<set name="skillRadius" val="150" />
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AREA_CORPSE_MOB" />
 	</skill>
@@ -858,6 +866,7 @@
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="SLEEP" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isMagic" val="true" />
@@ -872,6 +881,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="WIT" />
 		<set name="skillType" val="PARALYZE" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isMagic" val="true" />
@@ -885,6 +895,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="40" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="WIT" />
 		<set name="skillType" val="PARALYZE" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
@@ -941,7 +952,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MUTE" />
 		<set name="power" val="40" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -955,7 +966,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 76 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MUTE" />
 		<set name="power" val="40" />
 		<set name="operateType" val="OP_ACTIVE" />

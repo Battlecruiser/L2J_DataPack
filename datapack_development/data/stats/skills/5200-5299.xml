@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="5200" levels="8" name="Pet Recharge">
-		<table name="#aggroPoints"> 268 285 313 331 360 379 399 418 </table> <!-- Using the first levels from skill Recharge 1013 -->
-		<table name="#mpConsume"> 39 42 45 48 53 56 59 62 </table>
-		<table name="#power"> 49 52 57 60 66 70 73 77 </table> <!-- Using the first levels from skill Recharge 1013 -->
+		<table name="#magicLvl"> 65 67 69 75 80 85 90 95 </table>
+		<table name="#aggroPoints"> 268 285 313 331 360 379 399 418 </table>
+		<table name="#mpInitialConsume"> 24 25 26 28 29 30 31 31 </table>
+		<table name="#mpConsume"> 96 99 102 110 116 120 122 124 </table>
+		<table name="#power"> 120 124 128 138 144 149 153 155 </table>
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="6000" />
 		<set name="isMagic" val="true" />
-		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="#power" />
-		<set name="reuseDelay" val="3000" />
+		<set name="reuseDelay" val="12000" />
 		<set name="skillType" val="MANARECHARGE" />
 		<set name="target" val="TARGET_OWNER_PET" />
 	</skill>
@@ -559,10 +563,24 @@
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5260" levels="12" name="Disarm">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- NPC Skill -->
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="200" />
 		<set name="hitTime" val="1500" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="70" /> <!-- Base Land Rate -->
+		<set name="saveVs" val="STR" />
+		<set name="skillType" val="DISARM" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Disarm" time="5" val="0" abnormal="bleed" stackOrder="1" stackType="disarm" />
+		</for>
 	</skill>
 	<skill id="5261" levels="1" name="Zombie">
 		<set name="target" val="TARGET_NONE" />
@@ -571,28 +589,87 @@
 		<set name="hitTime" val="1500" />
 	</skill>
 	<skill id="5262" levels="12" name="NPC - Rise Shot">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- NPC Skill -->
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
+		<table name="#power"> 31 70 146 278 481 758 1084 1251 1408 1521 1658 1728 </table>
+		<set name="castRange" val="500" />
+		<set name="coolTime" val="800" />
+		<set name="effectRange" val="1000" />
 		<set name="hitTime" val="3200" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="25000" />
+		<set name="skillRadius" val="150" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="5263" levels="12" name="NPC _ Chain Lightning">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- NPC Skill -->
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#mpConsume"> 14 23 32 42 54 66 78 83 87 90 92 93 </table>
+		<table name="#mpInitialConsume"> 4 6 8 11 14 17 20 21 22 23 23 24 </table>
+		<table name="#power"> 21 31 43 58 75 92 108 115 121 125 129 132 </table>
+		<set name="castRange" val="500" />
+		<set name="effectRange" val="1000" />
 		<set name="hitTime" val="5000" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="20000" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="5264" levels="12" name="Death Mark">
-		<!-- Not Used Anymore -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- NPC Skill -->
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#mpConsume"> 14 23 32 42 54 66 78 83 87 90 92 93 </table>
+		<table name="#mpInitialConsume"> 4 6 8 11 14 17 20 21 22 23 23 24 </table>
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="3000" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="70" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="9000" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="DOT" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect count="10" name="DamOverTime" time="3" val="0" abnormal="deathmark" stackOrder="3" stackType="death_mark" />
+		</for>
 	</skill>
 	<skill id="5265" levels="12" name="NPC - Soul Emission">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- NPC Skill -->
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#mpConsume"> 14 23 32 42 54 66 78 83 87 90 92 93 </table>
+		<table name="#mpInitialConsume"> 4 6 8 11 14 17 20 21 22 23 23 24 </table>
+		<table name="#power"> 21 31 43 58 75 92 108 115 121 125 129 132 </table>
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="20" />
 		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#power" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_MULTIFACE" />
 	</skill>
 	<skill id="5266" levels="12" name="Magical Backfire">
 		<set name="target" val="TARGET_NONE" />

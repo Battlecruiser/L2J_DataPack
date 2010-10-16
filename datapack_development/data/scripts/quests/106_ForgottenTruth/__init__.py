@@ -47,7 +47,7 @@ class Quest (JQuest) :
 
    id = st.getState()
    if id == State.COMPLETED :                                  # Check if the quest is already made
-     htmltext = "<html><body>This quest has already been completed.</body></html>"
+     htmltext = Quest.getAlreadyCompletedMsg(player)
    elif id == State.CREATED :                                      # Check if is starting the quest
      if player.getRace().ordinal() == 2 :
        if player.getLevel() >= 10 :

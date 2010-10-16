@@ -1216,7 +1216,7 @@
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="lvlDepend" val="1" />
 		<set name="target" val="TARGET_AURA" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillRadius" val="200" />
 		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="4000" />
@@ -2172,6 +2172,7 @@
 		<enchant1 name="npcId" val="#enchantNpcId" />
 	</skill>
 	<skill id="1279" levels="9" name="Summon Binding Cubic" enchantGroup1="2">
+		<table name="#cubicHp"> 282 377 497 644 820 1026 1264 1530 1822 </table>
 		<table name="#itemConsumeCount"> 4 5 6 7 7 7 9 10 11 </table>
 		<table name="#magicLvl"> 40 44 48 52 56 60 64 68 72 </table>
 		<table name="#mpConsume"> 28 31 35 38 41 44 48 51 53 </table>
@@ -2192,12 +2193,14 @@
 		<set name="activationchance" val="12" />
 		<set name="activationtime" val="10" />
 		<!-- set name="attacksnumberlimit" val="30" / TODO: this require Core-Side support -->
+		<set name="cubicHp" val="#cubicHp" />
 		<set name="isCubic" val="true" />
 		<set name="npcId" val="6" /> <!-- Cubic Id -->
 		<set name="summonTotalLifeTime" val="900000" />
 		<enchant1 name="magicLvl" val="#ench1Power" />
 	</skill>
 	<skill id="1280" levels="9" name="Summon Aqua Cubic" enchantGroup1="2">
+		<table name="#cubicHp"> 282 377 497 644 820 1141 1394 1673 1975 </table>
 		<table name="#itemConsumeCount"> 2 2 2 3 3 4 5 5 6 </table>
 		<table name="#magicLvl"> 40 44 48 52 56 60 64 68 72 </table>
 		<table name="#mpConsume"> 28 31 35 38 41 46 49 52 55 </table>
@@ -2218,12 +2221,14 @@
 		<set name="activationchance" val="20" />
 		<set name="activationtime" val="30" />
 		<!-- set name="attacksnumberlimit" val="10" / TODO: this require Core-Side support -->
+		<set name="cubicHp" val="#cubicHp" />
 		<set name="isCubic" val="true" />
 		<set name="npcId" val="7" /> <!-- Cubic Id -->
 		<set name="summonTotalLifeTime" val="900000" />
 		<enchant1 name="magicLvl" val="#ench1Power" />
 	</skill>
 	<skill id="1281" levels="9" name="Summon Spark Cubic" enchantGroup1="2">
+		<table name="#cubicHp"> 282 377 497 644 820 1026 1264 1530 1822 </table>
 		<table name="#itemConsumeCount"> 4 5 6 7 7 7 9 10 11 </table>
 		<table name="#magicLvl"> 40 44 48 52 56 60 64 68 72 </table>
 		<table name="#mpConsume"> 28 31 35 38 41 44 48 51 53 </table>
@@ -2244,6 +2249,7 @@
 		<set name="activationchance" val="12" />
 		<set name="activationtime" val="10" />
 		<!-- set name="attacksnumberlimit" val="30" / TODO: this require Core-Side support -->
+		<set name="cubicHp" val="#cubicHp" />
 		<set name="isCubic" val="true" />
 		<set name="npcId" val="8" /> <!-- Cubic Id -->
 		<set name="summonTotalLifeTime" val="900000" />
@@ -2446,7 +2452,7 @@
 		<enchant3 name="elementPower" val="#enchElementPower" />
 		<for>
 			<!-- Retail Values CT2.3: 60 HP * 1 Sec -->
-			<effect count="15" name="DamOverTime" val="60" effectPower="80" effectType="DOT" /> <!-- Guess effectPower -->
+			<effect count="15" name="DamOverTime" val="60" effectPower="80" effectType="DOT" />
 		</for>
 	</skill>
 	<skill id="1290" levels="1" name="Blizzard" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
@@ -2695,9 +2701,9 @@
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#magicLvl"> 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#hpConsume"> 505 514 522 531 540 548 557 565 573 581 589 596 603 610 </table>
-		<table name="#ench1power"> 40 40 40 40 40 41 41 41 41 41 42 42 42 42 42 43 43 43 43 43 44 44 44 44 44 45 45 45 45 55 </table>
+		<table name="#ench1power"> 40 40 40 40 40 41 41 41 41 41 42 42 42 42 42 43 43 43 43 43 44 44 44 44 44 45 45 45 45 45 </table>
 		<table name="#ench2power"> 40 40 41 41 41 42 42 42 43 43 43 44 44 44 45 45 45 46 46 46 47 47 47 48 48 48 49 49 49 50 </table>
-		<table name="#ench2hpConsume"> 603 596 589 582 575 568 561 554 546 539 532 525 518 511 504 497 489 482 475 468 461 454 447 440 433 425 418 411 404 397 </table>
+		<table name="#ench2hpConsume"> 600 590 580 570 559 549 539 529 519 508 498 488 478 468 457 447 437 427 417 406 396 386 376 366 355 345 335 325 315 305 </table>
 		<set name="hpConsume" val="#hpConsume" />
 		<set name="lvlDepend" val="1" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
