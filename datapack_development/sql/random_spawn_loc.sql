@@ -1,10 +1,10 @@
 DROP TABLE IF EXISTS `random_spawn_loc`;
 CREATE TABLE `random_spawn_loc` (
-  `groupId` int(11) NOT NULL default '0',
-  `x` int(11) NOT NULL default '0',
-  `y` int(11) NOT NULL default '0',
-  `z` int(11) NOT NULL default '0',
-  `heading` int(11) NOT NULL default '-1',
+  `groupId` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `x` mediumint(6) NOT NULL DEFAULT '0',
+  `y` mediumint(6) NOT NULL DEFAULT '0',
+  `z` mediumint(6) NOT NULL DEFAULT '0',
+  `heading` mediumint(6) NOT NULL DEFAULT '-1',
   PRIMARY KEY (`groupId`,`x`,`y`,`z`,`heading`)
 );
 

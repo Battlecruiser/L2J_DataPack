@@ -173,10 +173,10 @@
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect count="10" name="DamOverTime" time="3" val="#dot"> <!-- Value Guess -->
-				<mul order="0x30" stat="runSpd" val="0.85" />
-				<mul order="0x30" stat="pAtkSpd" val="0.85" />
-				<mul order="0x30" stat="mAtkSpd" val="0.85" />
+			<effect count="10" name="DamOverTime" time="3" val="#dot">
+				<mul order="0x30" stat="runSpd" val="0.30" />
+				<mul order="0x30" stat="pAtkSpd" val="0.80" />
+				<mul order="0x30" stat="mAtkSpd" val="0.80" />
 			</effect>
 		</for>
 	</skill>
@@ -586,7 +586,7 @@
 		<set name="mpConsume" val="67" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2500" />
-		<set name="skillRadius" val="300" /> <!-- Guess -->
+		<set name="skillRadius" val="300" />
 	</skill>
 	<skill id="934" levels="1" name="Sigil Mastery">
 		<set name="operateType" val="OP_PASSIVE" />
@@ -761,31 +761,32 @@
 	</skill>
 	<skill id="950" levels="7" name="Nail Attack">
 		<!-- Kamael Final Form Skill -->
+		<table name="#mpConsume"> 71 72 72 73 74 74 74 </table>
 		<table name="#power"> 2583 2640 2695 2749 2802 2852 2900 </table>
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
-		<set name="mpConsume" val="71" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="#power" />
-		<set name="reuseDelay" val="13000" /> <!-- Guess -->
+		<set name="reuseDelay" val="3000" />
 		<set name="SSBoost" val="2.0" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="951" levels="7" name="Wing Assault">
 		<!-- Kamael Final Form Skill -->
+		<table name="#mpConsume"> 71 71 72 72 73 74 74 </table>
 		<table name="#power"> 2067 2112 2156 2200 2241 2282 2320 </table>
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="flyType" val="CHARGE" />
 		<set name="hitTime" val="800" />
 		<set name="magicLvl" val="76" />
-		<set name="mpConsume" val="71" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
-		<set name="reuseDelay" val="13000" /> <!-- Guess -->
 		<set name="skillRadius" val="600" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
@@ -834,7 +835,7 @@
 		<set name="hitTime" val="2000" />
 		<set name="mpConsume" val="133" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="reuseDelay" val="300000" /> <!-- Guess -->
+		<set name="reuseDelay" val="300000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -863,7 +864,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
-		<set name="reuseDelay" val="75000" /> <!-- Guess -->
+		<set name="reuseDelay" val="7000" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
@@ -881,7 +882,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
-		<set name="reuseDelay" val="75000" /> <!-- Guess -->
+		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
@@ -890,10 +891,12 @@
 	</skill>
 	<skill id="959" levels="1" name="Frog Jump">
 		<!-- Increases one's own moving speed by 33 for 15 seconds. -->
+		<set name="mpConsume" val="24" />
+		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="hitTime" val="4500" />
+		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="30000" />
 		<for>
 			<effect name="Buff" time="15" val="0">
@@ -903,10 +906,12 @@
 	</skill>
 	<skill id="960" levels="1" name="Race Running">
 		<!-- Increases one's own moving speed by 33 for 15 seconds. -->
+		<set name="mpConsume" val="24" />
+		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="hitTime" val="4500" />
+		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="30000" />
 		<for>
 			<effect name="Buff" time="15" val="0">
@@ -916,10 +921,12 @@
 	</skill>
 	<skill id="961" levels="1" name="Swift Dash">
 		<!-- Increases one's own moving speed by 33 for 15 seconds. -->
+		<set name="mpConsume" val="24" />
+		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="hitTime" val="4500" />
+		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="30000" />
 		<for>
 			<effect name="Buff" time="15" val="0">

@@ -46,7 +46,7 @@ class Quest (JQuest) :
     npcId = npc.getNpcId()
     cond = st.getInt("cond")
     if state == State.COMPLETED :
-       htmltext = "<html><body>This quest has already been completed.</body></html>"
+       htmltext = Quest.getAlreadyCompletedMsg(player)
     elif npcId == Moira :
        if state == State.CREATED:
           if st.getPlayer().getLevel() >= 40 :

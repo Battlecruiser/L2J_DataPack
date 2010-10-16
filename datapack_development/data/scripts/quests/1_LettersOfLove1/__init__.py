@@ -52,7 +52,7 @@ class Quest (JQuest) :
    ItemsCount_DR = st.getQuestItemsCount(DARINGS_RECEIPT) 
    ItemsCount_BP = st.getQuestItemsCount(BAULS_POTION) 
    if id == State.COMPLETED :
-     htmltext = "<html><body>This quest has already been completed.</body></html>" 
+     htmltext = Quest.getAlreadyCompletedMsg(player) 
    elif npcId == DARIN and id == State.CREATED: 
      if player.getLevel() >= 2 : 
        if cond < 15 : 

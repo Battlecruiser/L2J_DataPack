@@ -78,7 +78,7 @@ class Quest (JQuest) :
        htmltext = "30223-01.htm" 
        st.exitQuest(1) 
    elif npcId == ARUJIEN and id == State.COMPLETED : 
-     htmltext = "<html><body>This quest has already been completed.</body></html>"
+     htmltext = Quest.getAlreadyCompletedMsg(player)
  
    elif npcId == ARUJIEN and cond >= 1 : 
      if st.getQuestItemsCount(ARUJIENS_LETTER1) : 

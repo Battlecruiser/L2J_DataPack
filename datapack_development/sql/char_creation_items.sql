@@ -5,12 +5,11 @@
 -- A value of -1 in the classId field means "Any class"
 
 DROP TABLE IF EXISTS `char_creation_items`;
-
 CREATE TABLE IF NOT EXISTS `char_creation_items` (
-  `classId` smallint(6) NOT NULL,
-  `itemId` smallint(6) unsigned NOT NULL,
-  `amount` int(10) unsigned NOT NULL default '1',
-  `equipped` enum('true','false') NOT NULL default 'false',
+  `classId` tinyint(3) NOT NULL,
+  `itemId` smallint(5) unsigned NOT NULL,
+  `amount` int(10) unsigned NOT NULL DEFAULT '1',
+  `equipped` enum('true','false') NOT NULL DEFAULT 'false',
   PRIMARY KEY (`classId`,`itemId`)
 );
 

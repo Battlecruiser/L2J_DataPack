@@ -29,7 +29,7 @@ public class KillTheKeyTargets extends TerritoryWarSuperClass
 	public KillTheKeyTargets()
 	{
 		super(qnu,qn1,qna);
-		CLASS_IDS = new int[]{13, 21, 34, 51, 57, 95, 100, 107, 115, 118, 135, 136};
+		CLASS_IDS = new int[] { 51, 115, 57, 118 };
 		qn = qn1;
 		RANDOM_MIN = 3;
 		RANDOM_MAX = 8;

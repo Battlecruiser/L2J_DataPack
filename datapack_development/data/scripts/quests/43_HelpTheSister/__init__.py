@@ -83,7 +83,7 @@ class Quest (JQuest) :
           htmltext="30097-05.htm"
     elif id==State.COMPLETED:
       st.exitQuest(0)
-      htmltext="<html><body>This quest has already been completed.</body></html>"
+      htmltext=Quest.getAlreadyCompletedMsg(player)
 
     return htmltext
 

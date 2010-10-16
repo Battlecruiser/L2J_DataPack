@@ -1349,6 +1349,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		html.replace("%hp%", (int)target.getStatus().getCurrentHp()+"/"+target.getStat().getMaxHp());
 		html.replace("%mp%", (int)target.getStatus().getCurrentMp()+"/"+target.getStat().getMaxMp());
 		html.replace("%karma%", Integer.toString(target.getKarma()));
+		html.replace("%undead%", target.isUndead() ? "yes" : "no");
 		if (target instanceof L2PetInstance)
 		{
 			int objId = target.getActingPlayer().getObjectId();

@@ -207,15 +207,16 @@
 				<mul order="0x50" stat="limitHp" val="0.1" />
 			</effect>
 			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="transform_sacrifice">
-				<mul order="0x30" stat="pAtk" val="1.2" /> <!-- Guess -->
-				<mul order="0x30" stat="mAtk" val="1.2" /> <!-- Guess -->
-				<mul order="0x30" stat="pDef" val="1.2" /> <!-- Guess -->
-				<mul order="0x30" stat="mDef" val="1.2" /> <!-- Guess -->
+				<add order="0x40" stat="runSpd" val="10" />
 				<add order="0x40" stat="accCombat" val="2" />
-				<basemul order="0x30" stat="rCrit" val="0.2" /> <!-- Guess -->
-				<mul order="0x30" stat="runSpd" val="1.2" /> <!-- Guess -->
-				<mul order="0x30" stat="pAtkSpd" val="1.2" /> <!-- Guess -->
-				<mul order="0x30" stat="mAtkSpd" val="1.15" />
+				<mul order="0x30" stat="pDef" val="1.1" />
+				<mul order="0x30" stat="pAtk" val="1.1" />
+				<mul order="0x30" stat="pAtkSpd" val="1.1" />
+				<basemul order="0x30" stat="rCrit" val="0.1" />
+				<mul order="0x30" stat="cAtk" val="1.1" />
+				<mul order="0x30" stat="mDef" val="1.1" />
+				<mul order="0x30" stat="mAtk" val="1.1" />
+				<mul order="0x30" stat="mAtkSpd" val="1.1" />
 			</effect>
 		</for>
 	</skill>
@@ -309,8 +310,8 @@
 				<mul order="0x50" stat="limitHp" val="0.1" />
 			</effect>
 			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="transform_sacrifice">
-				<basemul order="0x30" stat="rCrit" val="0.2" /> <!-- Guess -->
-				<mul order="0x30" stat="cAtk" val="1.2" /> <!-- Guess -->
+				<basemul order="0x30" stat="rCrit" val="0.2" />
+				<mul order="0x30" stat="cAtk" val="1.2" />
 			</effect>
 		</for>
 	</skill>
@@ -624,6 +625,7 @@
 		<!-- This skill is wrong, needs core support! -->
 		<set name="mpConsume" val="82" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="saveVs" val="WIT" />
 		<set name="skillType" val="DOT" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -1014,7 +1016,7 @@
 		</for>
 	</skill>
 	<skill id="763" levels="1" name="Hell Scream">
-		<set name="power" val="40" /> <!-- Guess -->
+		<set name="power" val="80" />
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="87" />
 		<set name="target" val="TARGET_AURA" />
@@ -1218,7 +1220,7 @@
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="87" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="40" /> <!-- Guess -->
+		<set name="power" val="70" />
 		<set name="reuseDelay" val="75000" />
 		<set name="skillRadius" val="100" />
 		<set name="skillType" val="FEAR" />
@@ -1332,9 +1334,10 @@
 		<set name="activationchance" val="30" />
 		<set name="activationtime" val="13" />
 		<!-- set name="attacksnumberlimit" val="30" / TODO: this require Core-Side support -->
+		<set name="cubicHp" val="700" />
 		<set name="isCubic" val="true" />
 		<set name="npcId" val="10" /> <!-- Cubic Id -->
-		<set name="summonTotalLifeTime" val="900000" /> <!-- Guess -->
+		<set name="summonTotalLifeTime" val="900000" />
 	</skill>
 	<skill id="780" levels="1" name="Summon Smart Cubic">
 		<!-- Shillien Templar's Smart Cubic -->
@@ -1353,9 +1356,10 @@
 		<set name="activationchance" val="30" />
 		<set name="activationtime" val="13" />
 		<!-- set name="attacksnumberlimit" val="30" / TODO: this require Core-Side support -->
+		<set name="cubicHp" val="700" />
 		<set name="isCubic" val="true" />
 		<set name="npcId" val="11" /> <!-- Cubic Id -->
-		<set name="summonTotalLifeTime" val="900000" /> <!-- Guess -->
+		<set name="summonTotalLifeTime" val="900000" />
 	</skill>
 	<skill id="781" levels="1" name="Summon Smart Cubic">
 		<!-- Arcana Lord's Smart Cubic -->
@@ -1374,9 +1378,10 @@
 		<set name="activationchance" val="30" />
 		<set name="activationtime" val="13" />
 		<!-- set name="attacksnumberlimit" val="30" / TODO: this require Core-Side support -->
+		<set name="cubicHp" val="700" />
 		<set name="isCubic" val="true" />
 		<set name="npcId" val="12" /> <!-- Cubic Id -->
-		<set name="summonTotalLifeTime" val="900000" /> <!-- Guess -->
+		<set name="summonTotalLifeTime" val="900000" />
 	</skill>
 	<skill id="782" levels="1" name="Summon Smart Cubic">
 		<!-- Elemental Master's Smart Cubic -->
@@ -1395,9 +1400,10 @@
 		<set name="activationchance" val="30" />
 		<set name="activationtime" val="13" />
 		<!-- set name="attacksnumberlimit" val="30" / TODO: this require Core-Side support -->
+		<set name="cubicHp" val="700" />
 		<set name="isCubic" val="true" />
 		<set name="npcId" val="13" /> <!-- Cubic Id -->
-		<set name="summonTotalLifeTime" val="900000" /> <!-- Guess -->
+		<set name="summonTotalLifeTime" val="900000" />
 	</skill>
 	<skill id="783" levels="1" name="Summon Smart Cubic">
 		<!-- Spectral Master's Smart Cubic -->
@@ -1416,9 +1422,10 @@
 		<set name="activationchance" val="30" />
 		<set name="activationtime" val="13" />
 		<!-- set name="attacksnumberlimit" val="30" / TODO: this require Core-Side support -->
+		<set name="cubicHp" val="700" />
 		<set name="isCubic" val="true" />
 		<set name="npcId" val="14" /> <!-- Cubic Id -->
-		<set name="summonTotalLifeTime" val="900000" /> <!-- Guess -->
+		<set name="summonTotalLifeTime" val="900000" />
 	</skill>
 	<skill id="784" levels="1" name="Spirit of Phoenix">
 		<set name="mpConsume" val="37" />
@@ -1598,8 +1605,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<!-- TODO: abnormal effect guessed, using abnormal deathmark for now until confirmation -->
-			<effect name="ChanceSkillTrigger" time="30" val="0" abnormal="deathmark" triggeredId="5600" activationChance="30" chanceType="ON_ATTACKED" />
+			<effect name="ChanceSkillTrigger" time="30" val="0" abnormal="poison" triggeredId="5600" activationChance="30" chanceType="ON_ATTACKED" />
 		</for>
 	</skill>
 	<skill id="793" levels="1" name="Rush Impact" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6" enchantGroup5="6" enchantGroup6="6" enchantGroup7="6" enchantGroup8="6">
@@ -1670,6 +1676,7 @@
 		<set name="mpConsume" val="58" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="70" /> <!-- Base Land Rate -->
+		<set name="saveVs" val="STR" />
 		<set name="reuseDelay" val="150000" />
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="DISARM" />

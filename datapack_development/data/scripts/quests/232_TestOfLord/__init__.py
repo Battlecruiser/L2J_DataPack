@@ -181,7 +181,7 @@ class Quest (JQuest) :
               else:
                 htmltext = "30565-04.htm"
     elif id == State.COMPLETED:
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+      htmltext = Quest.getAlreadyCompletedMsg(player)
 
     else:
       if st.getInt("phase") == 1:

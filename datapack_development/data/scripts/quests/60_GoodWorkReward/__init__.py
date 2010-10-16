@@ -157,7 +157,7 @@ class Quest (JQuest) :
    id = st.getState()
    if id == State.COMPLETED :
      if npcId == 31435 :
-        htmltext = "<html><body>This quest has already been completed.</body></html>"
+        htmltext = Quest.getAlreadyCompletedMsg(player)
      elif npcId == 31092 :
         if player.getClassId().level() == 1 and not st.getInt("onlyone"):
            htmltext = "31092-04.htm"

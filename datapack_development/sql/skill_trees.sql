@@ -3546,6 +3546,7 @@ INSERT INTO `skill_trees` VALUES
 (14,1262,1,'Transfer Pain',32000,40,'true','false'),
 (14,1300,1,'Servitor Cure',32000,40,'true','false'),
 (14,1328,1,'Mass Summon Storm Cubic',32000,40,'true','false'),
+(14,1547,1,'Spirit Sharing',37000,44,'true','false'),
 (14,1328,2,'Mass Summon Storm Cubic',41000,44,'true','false'),
 (14,1279,2,'Summon Binding Cubic',41000,44,'true','false'),
 (14,1276,2,'Summon Kai the Cat',41000,44,'true','false'),
@@ -3704,6 +3705,7 @@ INSERT INTO `skill_trees` VALUES
 (14,1276,7,'Summon Kai the Cat',188000,60,'true','false'),
 (14,1279,6,'Summon Binding Cubic',188000,60,'true','false'),
 (14,1300,3,'Servitor Cure',188000,60,'true','false'),
+(14,1547,2,'Spirit Sharing',220000,62,'true','false'),
 (14,1301,1,'Servitor Blessing',250000,62,'true','false'),
 (14,1328,5,'Mass Summon Storm Cubic',250000,62,'true','false'),
 (14,1276,8,'Summon Kai the Cat',250000,62,'true','false'),
@@ -3788,6 +3790,7 @@ INSERT INTO `skill_trees` VALUES
 (14,1225,15,'Summon Mew the Cat',550000,68,'true','false'),
 (14,1276,11,'Summon Kai the Cat',550000,68,'true','false'),
 (14,1279,8,'Summon Binding Cubic',550000,68,'true','false'),
+(14,1547,3,'Spirit Sharing',520000,70,'true','false'),
 (14,1276,12,'Summon Kai the Cat',550000,70,'true','false'),
 (14,1328,7,'Mass Summon Storm Cubic',550000,70,'true','false'),
 (14,1262,5,'Transfer Pain',550000,70,'true','false'),
@@ -6943,6 +6946,7 @@ INSERT INTO `skill_trees` VALUES
 (28,1280,1,'Summon Aqua Cubic',30000,40,'true','false'),
 (28,1329,1,'Mass Summon Aqua Cubic',30000,40,'true','false'),
 (28,1300,1,'Servitor Cure',30000,40,'true','false'),
+(28,1547,1,'Spirit Sharing',37000,44,'true','false'),
 (28,1329,2,'Mass Summon Aqua Cubic',41000,44,'true','false'),
 (28,1280,2,'Summon Aqua Cubic',41000,44,'true','false'),
 (28,1277,2,'Summon Merrow the Unicorn',41000,44,'true','false'),
@@ -7105,6 +7109,7 @@ INSERT INTO `skill_trees` VALUES
 (28,1300,3,'Servitor Cure',188000,60,'true','false'),
 (28,1332,3,'Summon Unicorn Seraphim',188000,60,'true','false'),
 (28,1380,3,'Betray',188000,60,'true','false'),
+(28,1547,2,'Spirit Sharing',220000,62,'true','false'),
 (28,1380,4,'Betray',250000,62,'true','false'),
 (28,1332,4,'Summon Unicorn Seraphim',250000,62,'true','false'),
 (28,1301,1,'Servitor Blessing',250000,62,'true','false'),
@@ -7189,6 +7194,7 @@ INSERT INTO `skill_trees` VALUES
 (28,1277,11,'Summon Merrow the Unicorn',550000,68,'true','false'),
 (28,1332,7,'Summon Unicorn Seraphim',550000,68,'true','false'),
 (28,1380,7,'Betray',550000,68,'true','false'),
+(28,1547,3,'Spirit Sharing',630000,70,'true','false'),
 (28,1380,8,'Betray',550000,70,'true','false'),
 (28,1332,8,'Summon Unicorn Seraphim',550000,70,'true','false'),
 (28,1384,4,'Mass Surrender to Water',550000,70,'true','false'),
@@ -10202,6 +10208,7 @@ INSERT INTO `skill_trees` VALUES
 (41,1262,1,'Transfer Pain',30000,40,'true','false'),
 (41,1300,1,'Servitor Cure',30000,40,'true','false'),
 (41,1330,1,'Mass Summon Phantom Cubic',30000,40,'true','false'),
+(41,1547,1,'Spirit Sharing',32000,44,'true','false'),
 (41,1168,4,'Curse: Poison',35000,44,'true','false'),
 (41,1530,1,'Death Spike',35000,44,'true','false'),
 (41,1330,2,'Mass Summon Phantom Cubic',35000,44,'true','false'),
@@ -10373,6 +10380,7 @@ INSERT INTO `skill_trees` VALUES
 (41,1281,6,'Summon Spark Cubic',176000,60,'true','false'),
 (41,1333,3,'Summon Nightshade',176000,60,'true','false'),
 (41,1380,3,'Betray',176000,60,'true','false'),
+(41,1547,2,'Spirit Sharing',200000,62,'true','false'),
 (41,1168,6,'Curse: Poison',220000,62,'true','false'),
 (41,1530,7,'Death Spike',220000,62,'true','false'),
 (41,1380,4,'Betray',220000,62,'true','false'),
@@ -10463,6 +10471,7 @@ INSERT INTO `skill_trees` VALUES
 (41,1281,8,'Summon Spark Cubic',510000,68,'true','false'),
 (41,1333,7,'Summon Nightshade',510000,68,'true','false'),
 (41,1380,7,'Betray',510000,68,'true','false'),
+(41,1547,3,'Spirit Sharing',500000,70,'true','false'),
 (41,1530,11,'Death Spike',520000,70,'true','false'),
 (41,1380,8,'Betray',520000,70,'true','false'),
 (41,1385,4,'Mass Surrender to Wind',520000,70,'true','false'),
@@ -13918,6 +13927,7 @@ INSERT INTO `skill_trees` VALUES
 (93,755,1,'Protection of Rune',0,82,'false','true'),
 (93,756,1,'Protection of Elemental',0,82,'false','true'),
 (93,757,1,'Protection of Alignment',0,82,'false','true');
+-- (93,928,1,'Dual Blow',0,81,'false','true'); -- Not Used in Freya.
 
 -- Archmage
 INSERT INTO `skill_trees` VALUES
@@ -13961,6 +13971,7 @@ INSERT INTO `skill_trees` VALUES
 (95,755,1,'Protection of Rune',0,82,'false','true'),
 (95,756,1,'Protection of Elemental',0,82,'false','true'),
 (95,757,1,'Protection of Alignment',0,82,'false','true');
+-- (95,1541,1,'Curse of Desparion',0,83,'false','true'); -- Not Used in Freya.
 
 -- Arcana Lord
 INSERT INTO `skill_trees` VALUES
@@ -14101,6 +14112,7 @@ INSERT INTO `skill_trees` VALUES
 (101,755,1,'Protection of Rune',0,82,'false','true'),
 (101,756,1,'Protection of Elemental',0,82,'false','true'),
 (101,757,1,'Protection of Alignment',0,82,'false','true');
+-- (101,928,1,'Dual Blow',0,81,'false','true'); -- Not Used in Freya.
 
 -- Moonlight Sentinel
 INSERT INTO `skill_trees` VALUES
@@ -14257,6 +14269,7 @@ INSERT INTO `skill_trees` VALUES
 (108,755,1,'Protection of Rune',0,82,'false','true'),
 (108,756,1,'Protection of Elemental',0,82,'false','true'),
 (108,757,1,'Protection of Alignment',0,82,'false','true');
+-- (108,928,1,'Dual Blow',0,81,'false','true'); -- Not Used in Freya.
 
 -- Ghost Sentinel
 INSERT INTO `skill_trees` VALUES

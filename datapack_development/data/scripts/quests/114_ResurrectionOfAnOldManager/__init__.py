@@ -221,7 +221,7 @@ class Quest (JQuest) :
     talk = st.getInt("talk")
     talk1 = st.getInt("talk1")
     if state == State.COMPLETED :
-       htmltext = "<html><body>This quest has already been completed.</body></html>"
+       htmltext = Quest.getAlreadyCompletedMsg(player)
     elif npcId == Yumi :
        if state == State.CREATED :
           Pavel = player.getQuestState("121_PavelTheGiants")

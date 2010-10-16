@@ -48,8 +48,6 @@ public class Q10283_RequestOfIceMerchant extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		player.sendMessage("OnEVENT " + event + " " + npc.getNpcId());
-		
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
 		
@@ -89,8 +87,6 @@ public class Q10283_RequestOfIceMerchant extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		player.sendMessage("OnTalk");
-		
 		String htmltext = getNoQuestMsg(player);
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
@@ -132,8 +128,6 @@ public class Q10283_RequestOfIceMerchant extends Quest
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		player.sendMessage("OnFirst");
-		
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
 			return null;

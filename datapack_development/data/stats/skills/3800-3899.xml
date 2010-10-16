@@ -200,7 +200,7 @@
 	</skill>
 	<skill id="3825" levels="3" name="Sword of Might">
 		<!-- Increases P.Atk of Masterwork Sword Weapon. -->
-		<table name="#pAtk"> 60 70 80 </table> <!-- Guess -->
+		<table name="#pAtk"> 17.42 22.1 42.12 </table> <!-- Guess -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -248,7 +248,7 @@
 	</skill>
 	<skill id="3830" levels="3" name="Rapier of Might">
 		<!-- Increases P.Atk of Masterwork Rapier Weapon. -->
-		<table name="#pAtk"> 60 70 80 </table> <!-- Guess -->
+		<table name="#pAtk"> 16.25 20.62 39.3 </table> 
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -272,7 +272,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="100" /> <!-- Guess -->
+			<add order="0x40" stat="cAtkAdd" val="169" /> 
 		</for>
 	</skill>
 	<skill id="3833" levels="1" name="Rapier of Critical Chance">
@@ -296,7 +296,7 @@
 	</skill>
 	<skill id="3835" levels="3" name="Dual-Blade Weapon of Might">
 		<!-- Increases P.Atk of Masterwork Dual-Blade Weapon. -->
-		<table name="#pAtk"> 60 70 80 </table> <!-- Guess -->
+		<table name="#pAtk"> 21.2 26.9 51.26 </table> 
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -320,7 +320,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="100" /> <!-- Guess -->
+			<add order="0x40" stat="cAtkAdd" val="268" /> 
 		</for>
 	</skill>
 	<skill id="3838" levels="1" name="Dual-Blade Weapon of Critical Chance">
@@ -365,7 +365,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="absorbDam" val="2" /> <!-- Guess -->
+			<add order="0x40" stat="absorbDam" val="3" /> 
 		</for>
 	</skill>
 	<skill id="3843" levels="1" name="Two-handed Sword of Boost HP">
@@ -383,18 +383,28 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="200" /> <!-- Guess -->
+			<add order="0x40" stat="cAtkAdd" val="340" /> 
 		</for>
 	</skill>
 	<skill id="3845" levels="2" name="Two-handed Sword of Critical Chance">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<table name="#magicLvl"> 58 82 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="rCrit" val="5.44" />
+		</for>
 	</skill>
 	<skill id="3846" levels="2" name="Ancient Sword of Haste">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<table name="#magicLvl"> 61 80 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="pAtkSpd" val="1.05" />
+		</for>
 	</skill>
 	<skill id="3847" levels="1" name="Ancient Sword of Guidance">
 		<!-- Increases Accuracy of Masterwork Ancient Sword Weapon. -->
@@ -411,7 +421,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="absorbDam" val="2" /> <!-- Guess -->
+			<add order="0x40" stat="absorbDam" val="3" /> 
 		</for>
 	</skill>
 	<skill id="3849" levels="1" name="Ancient Sword of Boost HP">
@@ -429,7 +439,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="200" /> <!-- Guess -->
+			<add order="0x40" stat="cAtkAdd" val="303" /> 
 		</for>
 	</skill>
 	<skill id="3851" levels="2" name="Ancient Sword of Critical Chance">
@@ -443,7 +453,7 @@
 	</skill>
 	<skill id="3852" levels="3" name="Sword of Mana Boost">
 		<!-- Increases Max MP of Masterwork Sword Weapon. (b-a-s grade sword) -->
-		<table name="#maxMp"> 100 200 300 </table> <!-- Guess -->
+		<table name="#maxMp"> 187 289 334 </table> 
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -484,9 +494,15 @@
 		</for>
 	</skill>
 	<skill id="3857" levels="1" name="Sword of Clarity">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="magicLvl" val="80" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
+			<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" />
+			<mul order="0x30" stat="DanceMpConsumeRate" val="0.95" />
+		</for>
 	</skill>
 	<skill id="3858" levels="3" name="Dagger of Avoid">
 		<!-- Increases Evasion of Masterwork Dagger Weapon. -->
@@ -499,9 +515,14 @@
 		</for>
 	</skill>
 	<skill id="3859" levels="2" name="Dagger of Haste">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<table name="#magicLvl"> 61 80 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="pAtkSpd" val="1.05" />
+		</for>
 	</skill>
 	<skill id="3860" levels="1" name="Dagger of Regeneration">
 		<!-- Increases HP regeneration of Masterwork Dagger Weapon. -->
@@ -542,9 +563,14 @@
 		</for>
 	</skill>
 	<skill id="3864" levels="2" name="Bow of Haste">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<table name="#magicLvl"> 61 80 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="pAtkSpd" val="1.05" />
+		</for>
 	</skill>
 	<skill id="3865" levels="1" name="Bow of Long Shot">
 		<!-- Increases Atk. Range of Masterwork Bow Weapon. -->
@@ -588,9 +614,14 @@
 		</for>
 	</skill>
 	<skill id="3869" levels="2" name="Crossbow of Haste">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<table name="#magicLvl"> 61 80 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="pAtkSpd" val="1.05" />
+		</for>
 	</skill>
 	<skill id="3870" levels="1" name="Crossbow of Long Shot">
 		<!-- Increases Atk. Range of Masterwork Crossbow Weapon. -->
@@ -618,9 +649,15 @@
 		</for>
 	</skill>
 	<skill id="3873" levels="2" name="Polearm of Critical Power">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<table name="#magicLvl"> 58 82 </table>
+		<table name="#cAtkAdd"> 156 377 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
+		</for>
 	</skill>
 	<skill id="3874" levels="1" name="Polearm of Critical Chance">
 		<!-- Increases Crit. Rate of Masterwork Two-handed Blunt Weapon. -->
@@ -632,9 +669,13 @@
 		</for>
 	</skill>
 	<skill id="3875" levels="1" name="Polearm of Regeneration">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="magicLvl" val="67" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="regHp" val="0.05" />
+		</for>
 	</skill>
 	<skill id="3876" levels="1" name="Polearm of Stun">
 		<set name="activationChance" val="5" />
@@ -662,12 +703,12 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="pAtk" val="75" /> <!-- Guess -->
+			<add order="0x40" stat="pAtk" val="31.25" /> 
 		</for>
 	</skill>
 	<skill id="3879" levels="3" name="Fist Weapon of Might">
 		<!-- Increases P.Atk of Masterwork Fist Weapon. -->
-		<table name="#pAtk"> 60 70 80 </table> <!-- Guess -->
+		<table name="#pAtk"> 21.2 26.9 51.26 </table> 
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -676,9 +717,14 @@
 		</for>
 	</skill>
 	<skill id="3880" levels="2" name="Fist Weapon of Haste">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<table name="#magicLvl"> 61 80 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="pAtkSpd" val="1.05" />
+		</for>
 	</skill>
 	<skill id="3881" levels="1" name="Fist Weapon of Boost HP">
 		<!-- Increases Max HP of Masterwork Fist Weapon. -->
@@ -705,7 +751,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="75" /> <!-- Guess -->
+			<add order="0x40" stat="cAtkAdd" val="528" /> 
 		</for>
 	</skill>
 	<skill id="3884" levels="3" name="Blunt Weapon of Boost HP">
@@ -735,7 +781,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="pAtkSpd" val="60" /> <!-- Guess -->
+			<mul order="0x30" stat="pAtkSpd" val="1.05" />
 		</for>
 	</skill>
 	<skill id="3887" levels="1" name="Blunt Weapon of Regeneration">
@@ -758,7 +804,7 @@
 	</skill>
 	<skill id="3889" levels="3" name="Blunt Weapon of Empower">
 		<!-- Increases M.Atk of Masterwork Blunt Weapon. -->
-		<table name="#mAtk"> 100 120 140 </table> <!-- Guess -->
+		<table name="#mAtk"> 21.77 27.63 45.81 </table> 
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -772,13 +818,19 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="maxMp" val="300" /> <!-- Guess -->
+			<add order="0x40" stat="maxMp" val="289" />
 		</for>
 	</skill>
 	<skill id="3891" levels="2" name="Blunt Weapon of Boost HP">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<table name="#magicLvl"> 61 80 </table>
+		<table name="#maxHp"> 319 492 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="maxHp" val="#maxHp" />
+		</for>
 	</skill>
 	<skill id="3892" levels="1" name="Blunt Weapon of Clarity">
 		<!-- Decreases skills MP consumption of Masterwork Blunt Weapon. -->
@@ -808,19 +860,23 @@
 		</for>
 	</skill>
 	<skill id="3895" levels="3" name="Two-handed Blunt Weapon of Critical Chance">
-		<!-- Increases Crit. Rate of Masterwork Two-handed Blunt Weapon. -->
-		<table name="#rCrit"> 35 45 55 </table> <!-- Guess -->
+		<!-- Increases Crit. Rate of Masterwork Two-handed Blunt Weapon. --> 
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="rCrit" val="#rCrit" />
+			<add order="0x40" stat="rCrit" val="5.22" />
 		</for>
 	</skill>
 	<skill id="3896" levels="2" name="Two-handed Blunt Weapon of Haste">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<table name="#magicLvl"> 61 80 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="pAtkSpd" val="1.05" />
+		</for>
 	</skill>
 	<skill id="3897" levels="1" name="Two-handed Blunt Weapon of Might">
 		<!-- Increases P.Atk of Masterwork Two-handed Blunt Weapon. -->
@@ -828,17 +884,21 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="pAtk" val="60" /> <!-- Guess -->
+			<add order="0x40" stat="pAtk" val="32.97" /> 
 		</for>
 	</skill>
 	<skill id="3898" levels="1" name="Two-handed Blunt Weapon of Guidance">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="magicLvl" val="75" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="accCombat" val="4.2" />
+		</for>
 	</skill>
 	<skill id="3899" levels="3" name="Staff of Empower">
 		<!-- Increases M.Atk of Masterwork Two-handed Blunt Weapon. -->
-		<table name="#mAtk"> 100 120 140 </table> <!-- Guess -->
+		<table name="#mAtk"> 21.77 27.63 45.81 </table> 
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />

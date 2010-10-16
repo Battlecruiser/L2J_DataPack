@@ -37,7 +37,7 @@ class Quest (JQuest) :
    med = st.getQuestItemsCount(FEVER_MEDICINE)
    if npcId == 30050 :
       if id == State.COMPLETED :
-        htmltext = "<html><body>This quest has already been completed.</body></html>"
+        htmltext = Quest.getAlreadyCompletedMsg(player)
       elif cond == 0 :
         if player.getLevel() >= 15 :
           htmltext = "30050-02.htm"

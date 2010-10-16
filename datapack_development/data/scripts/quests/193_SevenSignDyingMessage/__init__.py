@@ -83,7 +83,7 @@ class Quest (JQuest) :
 		if npcId == HOLLINT :
 			first = player.getQuestState("192_SevenSignSeriesOfDoubt")
 			if st.getState() == State.COMPLETED :
-				htmltext = "<html><head><body>This quest has already been completed.<br></body></html>"
+				htmltext = Quest.getAlreadyCompletedMsg(player)
 			elif first and first.getState() == State.COMPLETED and st.getState() == State.CREATED and player.getLevel() >= 79 :
 				htmltext = "30191-01.htm"
 			elif cond == 1 :

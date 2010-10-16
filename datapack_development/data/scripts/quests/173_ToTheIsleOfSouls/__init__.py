@@ -54,7 +54,7 @@ class Quest (JQuest) :
      id = st.getState()
      cond = st.getInt("cond")
      if id == State.COMPLETED :
-       htmltext = "<html><body>This quest has already been completed.</body></html>"
+       htmltext = Quest.getAlreadyCompletedMsg(player)
      elif id == State.CREATED and npcId == GALLADUCCI :
        if st.getQuestItemsCount(MARK_OF_TRAVELER) > 0 and player.getRace().ordinal() == 5 :
          htmltext = "30097-02.htm"

@@ -135,7 +135,7 @@ class Quest (JQuest) :
    church_mark1,church_mark2,church_mark3=st.getQuestItemsCount(EINHASAD_CHURCH_MARK1),st.getQuestItemsCount(EINHASAD_CHURCH_MARK2),st.getQuestItemsCount(EINHASAD_CHURCH_MARK3)
    cond = st.getInt("cond")
    if id == State.COMPLETED:
-      htmltext="<html><body>This quest has already been completed.</body></html>"
+      htmltext=Quest.getAlreadyCompletedMsg(player)
 
    elif npcId == 30417 :
       if cond==0 :

@@ -643,11 +643,11 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 		<set name="hitTime" val="2500" />
-		<set name="magicLvl" val="1" /> <!-- Guess -->
+		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="0" />
-		<set name="reuseDelay" val="10000" /> <!-- Guess -->
+		<set name="reuseDelay" val="3000" />
 		<set name="staticReuse" val="true" />
 		<set name="equipDelay" val="30000" />
 		<set name="skillType" val="PDAM" />
@@ -658,11 +658,11 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 		<set name="hitTime" val="2500" />
-		<set name="magicLvl" val="1" /> <!-- Guess -->
+		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="0" />
-		<set name="reuseDelay" val="10000" /> <!-- Guess -->
+		<set name="reuseDelay" val="3000" />
 		<set name="staticReuse" val="true" />
 		<set name="equipDelay" val="30000" />
 		<set name="skillType" val="PDAM" />
@@ -673,11 +673,11 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 		<set name="hitTime" val="3200" />
-		<set name="magicLvl" val="1" /> <!-- Guess -->
+		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="0" />
-		<set name="reuseDelay" val="25000" /> <!-- Guess -->
+		<set name="reuseDelay" val="40000" />
 		<set name="staticReuse" val="true" />
 		<set name="equipDelay" val="30000" />
 		<set name="skillType" val="PDAM" />
@@ -783,7 +783,7 @@
 		<set name="equipDelay" val="30000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman_blue">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="ab_talisman">
 				<add order="0x40" stat="pAtk" val="60" />
 			</effect>
 		</for>
@@ -801,7 +801,7 @@
 		<set name="equipDelay" val="30000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman_blue">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="ab_talisman">
 				<add order="0x40" stat="pDef" val="70" />
 			</effect>
 		</for>
@@ -822,8 +822,10 @@
 		</for>
 	</skill>
 	<skill id="3274" levels="1" name="Blue Talisman of Protection">
-		<!-- Guessing, based on 603 -->
-		<set name="mpConsume" val="50" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="magicLvl" val="55" />
+		<set name="isMagic" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
@@ -834,14 +836,16 @@
 		<set name="equipDelay" val="30000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman_blue">
-				<add order="0x40" stat="sDef" val="225" />
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="ab_talisman">
+				<add order="0x40" stat="sDef" val="220" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="3275" levels="1" name="Blue Talisman of Protection">
-		<!-- Guessing, based on 602 -->
-		<set name="mpConsume" val="50" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="magicLvl" val="55" />
+		<set name="isMagic" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
@@ -852,8 +856,8 @@
 		<set name="equipDelay" val="30000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman_blue">
-				<add order="0x40" stat="rShld" val="54.7" />
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="ab_talisman">
+				<mul order="0x30" stat="rShld" val="1.3" />
 			</effect>
 		</for>
 	</skill>
@@ -870,14 +874,16 @@
 		<set name="equipDelay" val="30000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman_blue">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="ab_talisman">
 				<add order="0x40" stat="mDef" val="100" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="3277" levels="1" name="Blue Talisman of Wild Magic">
-		<!-- Guessing, based on 3142-1 -->
-		<set name="mpConsume" val="50" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="magicLvl" val="55" />
+		<set name="isMagic" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
@@ -888,8 +894,8 @@
 		<set name="equipDelay" val="30000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman_blue">
-				<basemul order="0x30" stat="mCritRate" val="0.1" />
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="ab_talisman">
+				<add order="0x40" stat="mCritRate" val="2" />
 			</effect>
 		</for>
 	</skill>
@@ -905,7 +911,7 @@
 		<set name="equipDelay" val="30000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman_red">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="ab_talisman">
 				<mul order="0x30" stat="regMp" val="1.05" />
 			</effect>
 		</for>
@@ -923,7 +929,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="removedOnDamage" val="true" />
 		<for>
-			<effect count="10" name="ManaHealOverTime" time="3" noicon="1" val="50" />
+			<effect count="10" name="ManaHealOverTime" time="3" noicon="1" val="50" stackOrder="1" stackType="ab_talisman" />
 			<effect name="Paralyze" time="30" val="0" />
 		</for>
 	</skill>
@@ -939,12 +945,14 @@
 		<set name="equipDelay" val="30000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="SilentMove" time="120" abnormal="stealth" val="0" stackOrder="1" stackType="talisman_blue" />
+			<effect name="SilentMove" time="120" abnormal="stealth" val="0" stackOrder="1" stackType="ab_talisman" />
 		</for>
 	</skill>
 	<skill id="3281" levels="1" name="Red Talisman of Minimum Clarity">
-		<!-- Guessing, based on 1397-1 -->
-		<set name="mpConsume" val="50" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="magicLvl" val="55" />
+		<set name="isMagic" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
@@ -955,7 +963,7 @@
 		<set name="equipDelay" val="30000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="talisman_red">
+			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="ab_talisman">
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.96" />
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.9" />
 				<mul order="0x30" stat="DanceMpConsumeRate" val="0.9" />
@@ -963,7 +971,10 @@
 		</for>
 	</skill>
 	<skill id="3282" levels="1" name="Red Talisman of Maximum Clarity">
-		<set name="mpConsume" val="50" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="magicLvl" val="55" />
+		<set name="isMagic" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
@@ -974,10 +985,10 @@
 		<set name="equipDelay" val="30000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" time="90" val="0" stackOrder="1" stackType="talisman_red">
-				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.5" />
+			<effect name="Buff" time="90" val="0" stackOrder="1" stackType="ab_talisman">
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0" />
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0" />
-				<mul order="0x30" stat="DanceMpConsumeRate" val="0.8" /> <!-- Guess -->
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0" />
 			</effect>
 		</for>
 	</skill>
@@ -993,7 +1004,7 @@
 		<set name="equipDelay" val="30000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman_blue">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="ab_talisman">
 				<mul order="0x30" stat="gainHp" val="1.1" />
 			</effect>
 		</for>
@@ -1010,7 +1021,7 @@
 		<set name="equipDelay" val="30000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" time="10" val="0" stackOrder="1" stackType="talisman_blue">
+			<effect name="Buff" time="10" val="0" stackOrder="1" stackType="ab_talisman">
 				<add order="0x40" stat="pDef" val="3600" />
 				<add order="0x40" stat="mDef" val="2700" />
 			</effect>
@@ -1029,8 +1040,10 @@
 		<set name="equipDelay" val="30000" />
 	</skill>
 	<skill id="3286" levels="1" name="Black Talisman - Mending">
-		<!-- Guessing, based on 34-3 -->
-		<set name="mpConsume" val="50" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="magicLvl" val="55" />
+		<set name="isMagic" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NEGATE" />
 		<set name="negateStats" val="BLEED" />
@@ -1140,12 +1153,11 @@
 		</for>
 	</skill>
 	<skill id="3299" levels="1" name="Yellow Talisman of Critical Power">
-		<!-- Guessing : Critical Damage +50 -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="50" />
+			<add order="0x40" stat="cAtkAdd" val="30" />
 		</for>
 	</skill>
 </list>

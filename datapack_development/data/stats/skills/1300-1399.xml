@@ -505,6 +505,7 @@
 		</for>
 	</skill>
 	<skill id="1328" levels="8" name="Mass Summon Storm Cubic" enchantGroup1="2">
+		<table name="#cubicHp"> 282 434 644 919 1141 1394 1673 1975 </table>
 		<table name="#itemConsumeCount"> 16 20 26 29 36 39 42 46 </table>
 		<table name="#magicLvl"> 40 46 52 58 62 66 70 74 </table>
 		<table name="#mpConsume"> 111 130 150 170 183 195 207 217 </table>
@@ -526,12 +527,14 @@
 		<set name="activationchance" val="12" />
 		<set name="activationtime" val="10" />
 		<!-- set name="attacksnumberlimit" val="30" / TODO: this require Core-Side support -->
+		<set name="cubicHp" val="#cubicHp" />
 		<set name="isCubic" val="true" />
 		<set name="npcId" val="1" /> <!-- Cubic Id -->
 		<set name="summonTotalLifeTime" val="900000" />
 		<enchant1 name="power" val="#ench1Power" />
 	</skill>
 	<skill id="1329" levels="9" name="Mass Summon Aqua Cubic" enchantGroup1="2">
+		<table name="#cubicHp"> 282 377 497 644 820 1141 1394 1673 1975 </table>
 		<table name="#itemConsumeCount"> 7 10 10 13 13 16 20 20 23 </table>
 		<table name="#magicLvl"> 40 44 48 52 56 60 64 68 72 </table>
 		<table name="#mpConsume"> 111 123 137 150 163 183 195 207 217 </table>
@@ -553,12 +556,14 @@
 		<set name="activationchance" val="20" />
 		<set name="activationtime" val="30" />
 		<!-- set name="attacksnumberlimit" val="10" / TODO: this require Core-Side support -->
+		<set name="cubicHp" val="#cubicHp" />
 		<set name="isCubic" val="true" />
 		<set name="npcId" val="7" /> <!-- Cubic Id -->
 		<set name="summonTotalLifeTime" val="900000" />
 		<enchant1 name="magicLvl" val="#ench1Power" />
 	</skill>
 	<skill id="1330" levels="8" name="Mass Summon Phantom Cubic" enchantGroup1="2">
+		<table name="#cubicHp"> 282 434 644 919 1141 1394 1673 1975 </table>
 		<table name="#itemConsumeCount"> 7 10 10 13 13 16 20 20 23 </table>
 		<table name="#magicLvl"> 40 46 52 58 62 66 70 74 </table>
 		<table name="#mpInitialConsume"> 28 33 38 43 46 49 52 55 </table>
@@ -580,6 +585,7 @@
 		<set name="activationchance" val="30" />
 		<set name="activationtime" val="8" />
 		<!-- set name="attacksnumberlimit" val="30" / TODO: this require Core-Side support -->
+		<set name="cubicHp" val="#cubicHp" />
 		<set name="isCubic" val="true" />
 		<set name="npcId" val="5" /> <!-- Cubic Id -->
 		<set name="summonTotalLifeTime" val="900000" />
@@ -726,7 +732,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="30000" />
 		<set name="hitTime" val="4000" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MUTE" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="true" />
@@ -1823,7 +1829,7 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="300" val="0" stackOrder="2" stackType="multi_buff">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<!-- TODO: Needs core-side support for... "damage magic critical attack power by 2" -->
 				<mul order="0x30" stat="cAtk" val="1.2" />
@@ -1839,7 +1845,7 @@
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1Time" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="#ench1Time" val="0" stackOrder="2" stackType="multi_buff">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<!-- TODO: Needs core-side support for... "damage magic critical attack power by 2" -->
 				<mul order="0x30" stat="cAtk" val="1.2" />
@@ -1855,7 +1861,7 @@
 			</effect>
 		</enchant1for>
 		<enchant3for>
-			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="300" val="0" stackOrder="2" stackType="multi_buff">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<!-- TODO: Needs core-side support for... "damage magic critical attack power by 2" -->
 				<mul order="0x30" stat="cAtk" val="1.2" />
@@ -2078,7 +2084,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isMagic" val="true" />
 		<for>
-			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="hero">
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="ab_hero_buff">
 				<add order="0x40" stat="pAtk" val="250" />
 				<add order="0x40" stat="pDef" val="500" />
 				<sub order="0x40" stat="cancelVuln" val="40" />
@@ -2096,7 +2102,7 @@
 		<set name="reuseDelay" val="1200000" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="isDebuff" val="true" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="MUTE" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -2104,7 +2110,7 @@
 		<set name="canBeReflected" val="false" />
 		<set name="canBeDispeled" val="false" />
 		<for>
-			<effect name="SilenceMagicPhysical" time="60" val="0">
+			<effect name="SilenceMagicPhysical" time="60" val="0" stackOrder="2" stackType="ab_hero_debuff">
 				<mul order="0x30" stat="mDef" val="0.5" />
 				<mul order="0x30" stat="pDef" val="0.5" />
 				<sub order="0x40" stat="rEvas" val="16" />
@@ -2131,7 +2137,7 @@
 		<set name="canBeReflected" val="false" />
 		<set name="canBeDispeled" val="false" />
 		<for>
-			<effect count="15" name="Fear" time="2" val="0">
+			<effect count="15" name="Fear" time="2" val="0" stackOrder="1" stackType="ab_hero_debuff">
 				<add order="0x40" stat="runSpd" val="66" />
 			</effect>
 		</for>
@@ -2175,8 +2181,8 @@
 	</skill>
 	<skill id="1381" levels="5" name="Mass Fear" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
-		<table name="#ench1Power"> 30 30 31 31 31 32 32 32 33 33 33 34 34 34 35 35 35 36 36 36 37 37 37 38 38 38 39 39 39 40 </table> <!-- Guess -->
-		<table name="#ench2Power"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 </table> <!-- Guess -->
+		<table name="#ench1Power"> 31 32 32 33 34 34 35 36 36 37 37 38 39 39 40 41 41 42 43 43 44 44 45 46 46 47 48 48 49 50 </table>
+		<table name="#ench2Power"> 31 32 34 35 36 38 39 40 42 43 44 46 47 48 50 51 52 54 55 56 58 59 60 62 63 64 66 67 68 70 </table>
 		<table name="#ench1MpConsume"> 100 97 96 95 92 91 90 87 86 85 82 81 78 77 76 73 72 71 68 67 66 63 62 60 58 57 55 53 52 50 </table>
 		<table name="#magicLvl"> 58 62 66 70 74 </table>
 		<table name="#mpConsume"> 80 87 93 98 103 </table>
@@ -2205,7 +2211,7 @@
 	<skill id="1382" levels="5" name="Mass Gloom" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 40 40 41 41 41 42 42 42 43 43 43 44 44 44 45 45 45 46 46 46 47 47 47 48 48 48 49 49 49 50 </table>
-		<table name="#ench2Power"> 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 </table> <!-- Guess -->
+		<table name="#ench2Power"> 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 </table>
 		<table name="#ench1MpConsume"> 100 97 96 95 92 91 90 87 86 85 82 81 78 77 76 73 72 71 68 67 66 63 62 60 58 57 55 53 52 50 </table>
 		<table name="#magicLvl"> 58 62 66 70 74 </table>
 		<table name="#mpConsume"> 80 87 93 98 103 </table>
@@ -2420,6 +2426,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="10000" />
+		<set name="isMagic" val="true" />
 		<set name="skillType" val="CREATE_ITEM" />
 		<set name="reuseDelay" val="600000" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -2641,7 +2648,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="isDebuff" val="true" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="SLEEP" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
@@ -2793,6 +2800,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="isMagic" val="true" />
+		<set name="canBeReflected" val="false" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />

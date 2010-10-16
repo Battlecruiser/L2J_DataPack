@@ -100,7 +100,7 @@ class Quest (JQuest) :
    onlyone = st.getInt("onlyone")
    state = st.getState()
    if state == State.COMPLETED :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+      htmltext = Quest.getAlreadyCompletedMsg(player)
    elif npcId == 31522:
      if state == State.CREATED :
         if st.getPlayer().getLevel() >= 63 :

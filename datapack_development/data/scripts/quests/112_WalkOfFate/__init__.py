@@ -44,7 +44,7 @@ class Quest (JQuest) :
     npcId = npc.getNpcId()
     cond = st.getInt("cond")
     if state == State.COMPLETED :
-        htmltext = "<html><body>This quest has already been completed.</body></html>"
+        htmltext = Quest.getAlreadyCompletedMsg(player)
     elif state == State.CREATED :
         if npcId == Livina :
             if player.getLevel() >= 20 :

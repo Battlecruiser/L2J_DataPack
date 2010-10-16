@@ -48,7 +48,7 @@ class Quest (JQuest) :
        htmltext = "30220-02.htm"
        st.exitQuest(1)
    elif npcId == 30220 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+      htmltext = Quest.getAlreadyCompletedMsg(player)
 
    elif npcId == 30220 and st.getInt("cond") :
       if st.getQuestItemsCount(RUMIELS_POEM_1_ID) == 1 and st.getQuestItemsCount(RUMIELS_POEM_3_ID) == 1 and st.getQuestItemsCount(RUMIELS_POEM_4_ID) == 1 and st.getQuestItemsCount(RUMIELS_POEM_5_ID) == 1 and st.getInt("onlyone") == 0 :
