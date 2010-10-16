@@ -48,7 +48,7 @@ class Quest (JQuest) :
    if npcId == VLADIMIR :
      if cond == 0 :
        if id == State.COMPLETED :
-         htmltext = "<html><body>This quest has already been completed.</body></html>"
+         htmltext = Quest.getAlreadyCompletedMsg(player)
 
        elif player.getLevel() >= 63 :
          htmltext = "31302-0.htm"

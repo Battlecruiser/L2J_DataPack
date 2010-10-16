@@ -795,32 +795,24 @@
 		</for>
 	</skill>
 	<skill id="5076" levels="15" name="Death Penalty">
-		<table name="#power"> 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 </table>
-		<table name="#pAtk"> 1 0.958 0.907 0.856 0.805 0.754 0.703 0.652 0.601 0.550 0.499 0.448 0.397 0.356 0.305 0.254 </table>
-		<table name="#mAtk"> 1 0.949 0.898 0.847 0.796 0.745 0.694 0.643 0.592 0.591 0.540 0.489 0.438 0.387 0.336 0.285 </table>
-		<table name="#pDef"> 1 0.969 0.942 0.915 0.888 0.861 0.834 0.807 0.780 0.753 0.726 0.699 0.672 0.645 0.618 0.591 </table>
-		<table name="#mDef"> 1 0.965 0.929 0.893 0.857 0.821 0.785 0.749 0.713 0.677 0.641 0.605 0.569 0.553 0.497 0.461 </table>
-		<table name="#pAtkSpd"> 1 0.949 0.898 0.847 0.796 0.745 0.694 0.643 0.592 0.591 0.540 0.489 0.438 0.387 0.336 0.285 </table>
-		<table name="#mAtkSpd"> 1 0.949 0.898 0.847 0.796 0.745 0.694 0.643 0.592 0.591 0.540 0.489 0.438 0.387 0.336 0.285 </table>
-		<table name="#runSpd"> 1 0.949 0.898 0.847 0.796 0.745 0.694 0.643 0.592 0.591 0.540 0.489 0.438 0.387 0.336 0.285 </table>
-		<table name="#rEvas"> 1 0.949 0.898 0.847 0.796 0.745 0.694 0.643 0.592 0.591 0.540 0.489 0.438 0.387 0.336 0.285 </table>
-		<table name="#cAtk"> 1 0.949 0.898 0.847 0.796 0.745 0.694 0.643 0.592 0.591 0.540 0.489 0.438 0.387 0.336 0.285 </table>
-		<table name="#accCombat"> 1 0.949 0.898 0.847 0.796 0.745 0.694 0.643 0.592 0.591 0.540 0.489 0.438 0.387 0.336 0.285 </table>
-		<set name="power" val="#power" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<table name="#pAtkpAtkSpdmAtkmAtkSpd"> 0.9 0.81 0.73 0.66 0.6 0.55 0.51 0.47 0.44 0.41 0.38 0.35 0.32 0.28 0.25 </table>
+		<table name="#accCombatrEvas"> 5 9 13 17 21 25 29 33 37 40 42 44 46 48 50 </table>
+		<table name="#pDefmDef"> 0.91 0.83 0.77 0.72 0.68 0.65 0.62 0.59 0.56 0.53 0.5 0.47 0.44 0.42 0.4 </table>
+		<table name="#runSpd"> 0.95 0.9 0.87 0.83 0.8 0.77 0.74 0.71 0.68 0.66 0.64 0.63 0.62 0.61 0.6 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="#pAtk" />
-			<mul order="0x30" stat="mAtk" val="#mAtk" />
-			<mul order="0x30" stat="pDef" val="#pDef" />
-			<mul order="0x30" stat="mDef" val="#mDef" />
-			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
-			<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
+			<mul order="0x30" stat="pAtk" val="#pAtkpAtkSpdmAtkmAtkSpd" />
+			<mul order="0x30" stat="pAtkSpd" val="#pAtkpAtkSpdmAtkmAtkSpd" />
+			<mul order="0x30" stat="mAtk" val="#pAtkpAtkSpdmAtkmAtkSpd" />
+			<mul order="0x30" stat="mAtkSpd" val="#pAtkpAtkSpdmAtkmAtkSpd" />
+			<sub order="0x40" stat="accCombat" val="#accCombatrEvas" />
+			<sub order="0x40" stat="rEvas" val="#accCombatrEvas" />
+			<mul order="0x30" stat="pDef" val="#pDefmDef" />
+			<mul order="0x30" stat="mDef" val="#pDefmDef" />
 			<mul order="0x30" stat="runSpd" val="#runSpd" />
-			<mul order="0x30" stat="rEvas" val="#rEvas" />
-			<mul order="0x30" stat="cAtk" val="#cAtk" />
-			<mul order="0x30" stat="accCombat" val="#accCombat" />
 		</for>
 	</skill>
 	<skill id="5077" levels="1" name="NPC Remove Death Penalty">

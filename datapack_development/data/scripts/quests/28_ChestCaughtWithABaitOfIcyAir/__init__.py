@@ -79,7 +79,7 @@ class Quest (JQuest) :
             elif cond==2 :
                 htmltext="31572-09.htm"
             elif cond==0 and id==State.COMPLETED :
-                htmltext="<html><body>This quest has already been completed.</body></html>"
+                htmltext=Quest.getAlreadyCompletedMsg(player)
 
         elif npcId==Kiki :
             if cond==2 :

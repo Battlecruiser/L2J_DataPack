@@ -390,6 +390,7 @@
 		<table name="#ench2mpConsume"> 21 21 20 20 19 19 18 18 17 17 16 16 16 15 15 14 14 14 13 13 12 12 12 11 11 10 10 10 9 9 </table>
 		<table name="#ench2sDef"> 1.01 1.01 1.01 1.02 1.02 1.02 1.03 1.03 1.03 1.04 1.04 1.04 1.04 1.05 1.05 1.05 1.06 1.06 1.06 1.07 1.07 1.07 1.07 1.08 1.08 1.08 1.09 1.09 1.09 1.1 </table>
 		<table name="#aggro"> 10 20 30 40 </table>
+		<table name="#stackOrder"> 1 2 3 4 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="3000" />
@@ -401,19 +402,19 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0">
+			<effect name="Buff" time="1200" val="0" stackOrder="#stackOrder" stackType="ab_pd_up_bow">
 				<mul order="0x30" stat="bowWpnVuln" val="#bowWpnVuln" />
 				<mul order="0x30" stat="crossbowWpnVuln" val="#crossbowWpnVuln" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0">
+			<effect name="Buff" time="#ench1time" val="0" stackOrder="4" stackType="ab_pd_up_bow">
 				<mul order="0x30" stat="bowWpnVuln" val="0.6" />
 				<mul order="0x30" stat="crossbowWpnVuln" val="0.8" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="Buff" time="1200" val="0">
+			<effect name="Buff" time="1200" val="0" stackOrder="4" stackType="ab_pd_up_bow">
 				<mul order="0x30" stat="bowWpnVuln" val="0.6" />
 				<mul order="0x30" stat="crossbowWpnVuln" val="0.8" />
 				<mul order="0x30" stat="sDef" val="#ench2sDef" />

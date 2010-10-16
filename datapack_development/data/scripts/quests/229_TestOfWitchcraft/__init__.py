@@ -218,7 +218,7 @@ class Quest (JQuest) :
       return htmltext
     # already done
     elif id == State.COMPLETED:
-      return "<html><body>This quest has already been completed.</body></html>"
+      return Quest.getAlreadyCompletedMsg(player)
 
     # in progress, player is working on the quest
     else:

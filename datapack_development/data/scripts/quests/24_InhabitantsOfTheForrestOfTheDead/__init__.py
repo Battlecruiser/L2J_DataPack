@@ -99,7 +99,7 @@ class Quest (JQuest) :
             if npcId == Wizard :
                 htmltext = "31522-20.htm"
             else:
-                htmltext = "<html><body>This quest has already been completed.</body></html>"
+                htmltext = Quest.getAlreadyCompletedMsg(player)
         cond = st.getInt("cond")
         if npcId == Dorian :
             if state == State.CREATED :

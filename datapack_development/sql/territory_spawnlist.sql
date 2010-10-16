@@ -1,13 +1,13 @@
 DROP TABLE IF EXISTS `territory_spawnlist`;
 CREATE TABLE `territory_spawnlist` (
-  `castleId` INT NOT NULL default 0,
-  `id` int(11) NOT NULL auto_increment,
-  `npcId` INT NOT NULL default 0,
-  `x` INT NOT NULL default 0,
-  `y` INT NOT NULL default 0,
-  `z` INT NOT NULL default 0,
-  `heading` INT NOT NULL default 0,
-  `spawnType` INT NOT NULL default 0, -- 0-spawned when castle have owner, 1-fortress spawns in TW time, 2-Castle spawns in TW time, 3-Ward spawn places
+  `castleId` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `id` smallint(3) unsigned NOT NULL AUTO_INCREMENT,
+  `npcId` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `x` mediumint(6) NOT NULL DEFAULT '0',
+  `y` mediumint(6) NOT NULL DEFAULT '0',
+  `z` mediumint(6) NOT NULL DEFAULT '0',
+  `heading` mediumint(6) NOT NULL DEFAULT '0',
+  `spawnType` tinyint(1) unsigned NOT NULL DEFAULT '0', -- 0-spawned when castle have owner, 1-fortress spawns in TW time, 2-Castle spawns in TW time, 3-Ward spawn places
   PRIMARY KEY (`id`),
   KEY `id` (`castleId`)
 );

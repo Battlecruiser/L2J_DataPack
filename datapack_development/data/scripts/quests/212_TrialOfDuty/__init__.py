@@ -76,7 +76,7 @@ class Quest (JQuest) :
          htmltext = "30109-02.htm"
          st.exitQuest(1)
    elif npcId == 30109 and cond == 0 and st.getInt("onlyone")==1 :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+      htmltext = Quest.getAlreadyCompletedMsg(player)
 
    elif npcId == 30109 and cond == 18  and st.getQuestItemsCount(LETTER_OF_DUSTIN):
       st.addExpAndSp(381288,24729)

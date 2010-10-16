@@ -48,7 +48,7 @@ class Quest (JQuest) :
             cond = st.getInt("cond")
             state = st.getState()
             if state == State.COMPLETED :
-                htmltext = "<html><body>This quest has already been completed.</body></html>"
+                htmltext = Quest.getAlreadyCompletedMsg(player)
             elif state == State.CREATED :
                 if st.getPlayer().getLevel() >= 66 and npcId == Pierce and (st.getQuestItemsCount(Golden_Badge_Recruit) > 0 or st.getQuestItemsCount(Golden_Badge_Soldier) > 0) :
                     st.setState(State.STARTED)

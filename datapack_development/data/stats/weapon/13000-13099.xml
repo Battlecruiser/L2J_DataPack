@@ -46,6 +46,11 @@
 		</for>
 	</item>
 	<item id="13042" name="Ancient Legacy Sword">
+		<cond msgId="1518">
+			<and>
+				<player instanceId="44" />
+			</and>
+		</cond>
 		<for>
 			<set val="259" order="0x08" stat="pAtk" />
 			<set val="143" order="0x08" stat="mAtk" />
@@ -56,6 +61,11 @@
 		</for>
 	</item>
 	<item id="13043" name="Enhanced Ancient Legacy Sword">
+		<cond msgId="1518">
+			<and>
+				<player instanceId="44" />
+			</and>
+		</cond>
 		<for>
 			<set val="279" order="0x08" stat="pAtk" />
 			<set val="153" order="0x08" stat="mAtk" />
@@ -66,6 +76,11 @@
 		</for>
 	</item>
 	<item id="13044" name="Complete Ancient Legacy Sword">
+		<cond msgId="1518">
+			<and>
+				<player instanceId="44" />
+			</and>
+		</cond>
 		<for>
 			<set val="299" order="0x08" stat="pAtk" />
 			<set val="163" order="0x08" stat="mAtk" />

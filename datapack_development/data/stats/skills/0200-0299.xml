@@ -3,9 +3,9 @@
 	<skill id="205" levels="45" name="Blunt Weapon Mastery" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#pAtk"> 4.5 7.3 8.9 10.7 12.8 15.1 17.7 20.5 23.7 25.4 27.1 29 30.9 32.9 35 37.1 39.4 41.7 44.1 46.6 49.2 51.9 54.6 57.5 60.4 63.3 66.4 69.5 72.7 76 79.3 82.7 86.1 89.6 93.1 96.6 100.2 103.8 107.5 111.1 114.8 118.4 122.1 125.7 129.3 </table>
-		<table name="#ench1runSpd"> 0 1 2 2 3 4 4 5 6 6 7 8 8 9 10 10 11 12 12 13 14 14 15 16 16 17 18 18 19 20 </table>
-		<table name="#ench2cAtk"> 113 127 141 155 169 183 196 210 224 238 252 266 279 293 307 321 335 349 362 376 390 404 418 432 445 459 473 487 501 515 </table>
-		<table name="#ench3pAtkSpd"> 1.01 1.01 1.01 1.01 1.01 1.01 1.01 1.02 1.02 1.02 1.02 1.02 1.02 1.02 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.04 1.04 1.04 1.04 1.04 1.04 1.04 1.05 </table>
+		<table name="#ench1runSpd"> 1 2 2 3 4 4 5 6 6 7 7 8 9 9 10 11 11 12 13 13 14 14 15 16 16 17 18 18 19 20 </table>
+		<table name="#ench2cAtk"> 65 81 96 112 127 143 158 174 189 205 220 236 251 267 282 298 313 329 344 360 375 391 406 422 437 453 468 484 499 515 </table>
+		<table name="#ench3pAtkSpd"> 1 1 1 1 1 1 1 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 4 4 4 4 4 4 4 5 </table>
 		<table name="#triggeredId"> 0 0 0 0 0 0 0 0 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
@@ -2307,6 +2307,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="278" levels="6" name="Summon Viper Cubic" enchantGroup1="2">
+		<table name="#cubicHp"> 531 773 1026 1264 1530 1822 </table>
 		<table name="#itemConsumeCount"> 2 3 4 5 5 5 </table>
 		<table name="#magicLvl"> 49 55 60 64 68 72 </table>
 		<table name="#mpConsume"> 35 40 44 48 51 53 </table>
@@ -2327,6 +2328,7 @@
 		<set name="activationchance" val="30" />
 		<set name="activationtime" val="20" />
 		<!-- set name="attacksnumberlimit" val="15" / TODO: this require Core-Side support -->
+		<set name="cubicHp" val="#cubicHp" />
 		<set name="isCubic" val="true" />
 		<set name="npcId" val="4" /> <!-- Cubic Id -->
 		<set name="summonTotalLifeTime" val="900000" />
@@ -2585,6 +2587,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="500" />
 		<set name="target" val="TARGET_AURA" />
+		<set name="ignoreResists" val="true" />
 		<set name="skillRadius" val="#skillRadius" />
 		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="1500" />
@@ -2592,7 +2595,7 @@
 		<set name="skillType" val="AGGDAMAGE" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Debuff" time="10" val="0" effectPower="40" effectType="WEAKNESS"> <!-- Guess effectPower -->
+			<effect name="Debuff" time="10" val="0" effectPower="100" effectType="WEAKNESS">
 				<mul order="0x30" stat="poleWpnVuln" val="#vuln" />
 			</effect>
 		</for>

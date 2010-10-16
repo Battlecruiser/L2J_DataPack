@@ -207,7 +207,10 @@
 	</item>
 	<item id="16152" name="Skull Edge Dagger Dual Sword">
 		<cond msgId="1518">
-			<player active_skill_id="923" />
+			<and>
+				<player class_id_restriction="93, 101, 108" />
+				<player subclass="false" />
+			</and>
 		</cond>
 		<for>
 			<set val="415" order="0x08" stat="pAtk" />

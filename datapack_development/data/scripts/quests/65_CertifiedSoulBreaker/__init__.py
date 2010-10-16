@@ -119,7 +119,7 @@ class Quest (JQuest) :
         id = st.getState()
         cond = st.getInt("cond")
         if id == State.COMPLETED :
-            htmltext = "<html><body>This quest has already been completed.</body></html>"
+            htmltext = Quest.getAlreadyCompletedMsg(player)
         elif npcId == Vitus :
             if player.getClassId().getId() not in [125,126] or player.getLevel() < 39:
                 htmltext = "<html><body>Only Troopers or Warders are allowed to take this quest! Go away before I get angry!<br>You must be level 39 or higher to undertake this quest.</body></html>"

@@ -23,6 +23,7 @@ import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 
@@ -65,19 +66,23 @@ public class PlainsOfLizardman extends L2AttackableAIScript
 	{
 		if (player != null && !player.isAlikeDead())
 		{
-			if (event.equalsIgnoreCase("rainbow_frog"))
+			boolean isPet = false;
+			if (event.endsWith("_pet") && player.getPet() != null && !player.getPet().isDead())
+				isPet = true;
+			
+			if (event.startsWith("rainbow_frog"))
 			{
-				triggerSkill(player, RAINBOW_FROG_SKILL, 1);
+				triggerSkill(isPet ? player.getPet() : player, RAINBOW_FROG_SKILL, 1);
 			}
-			else if (event.equalsIgnoreCase("energy_plant"))
+			else if (event.startsWith("energy_plant"))
 			{
-				triggerSkill(player, ENERGY_PLANT_SKILL, 1);
+				triggerSkill(isPet ? player.getPet() : player, ENERGY_PLANT_SKILL, 1);
 			}
-			else if (event.equalsIgnoreCase("sticky_mushroom"))
+			else if (event.startsWith("sticky_mushroom"))
 			{
-				triggerSkill(player, STICKY_MUSHROOM_SKILL, 1);
+				triggerSkill(isPet ? player.getPet() : player, STICKY_MUSHROOM_SKILL, 1);
 			}
-			else if (event.equalsIgnoreCase("fantasy_mushroom"))
+			else if (event.startsWith("fantasy_mushroom"))
 			{
 				L2Skill skill = SkillTable.getInstance().getInfo(FANTASY_MUSHROOM_SKILL, 1);
 				npc.doCast(skill);
@@ -86,7 +91,7 @@ public class PlainsOfLizardman extends L2AttackableAIScript
 					if (target != null && target instanceof L2Attackable && target.getAI() != null)
 					{
 						skill.getEffects(npc, target);
-						attackPlayer((L2Attackable) target, player);
+						attackPlayer((L2Attackable) target, isPet ? player.getPet() : player);
 					}
 				}
 				npc.doDie(player);
@@ -103,17 +108,26 @@ public class PlainsOfLizardman extends L2AttackableAIScript
 		
 		if (npc.getNpcId() == RAINBOW_FROG)
 		{
-			startQuestTimer("rainbow_frog", 2000, npc, attacker);
+			if (isPet)
+				startQuestTimer("rainbow_frog_pet", 2000, npc, attacker);
+			else
+				startQuestTimer("rainbow_frog", 2000, npc, attacker);
 			npc.doDie(attacker);
 		}
 		else if (npc.getNpcId() == STICKY_MUSHROOM)
 		{
-			startQuestTimer("sticky_mushroom", 2000, npc, attacker);
+			if (isPet)
+				startQuestTimer("sticky_mushroom_pet", 2000, npc, attacker);
+			else
+				startQuestTimer("sticky_mushroom", 2000, npc, attacker);
 			npc.doDie(attacker);
 		}
 		else if (npc.getNpcId() == ENERGY_PLANT)
 		{
-			startQuestTimer("energy_plant", 2000, npc, attacker);
+			if (isPet)
+				startQuestTimer("energy_plant_pet", 2000, npc, attacker);
+			else
+				startQuestTimer("energy_plant", 2000, npc, attacker);
 			npc.doDie(attacker);
 		}
 		else if (npc.getNpcId() == ABYSS_WEED)
@@ -130,34 +144,37 @@ public class PlainsOfLizardman extends L2AttackableAIScript
 					target.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(npc.getX(),npc.getY(), npc.getZ(), 0 ));
 				}
 			}
-			startQuestTimer("fantasy_mushroom", 3000, npc, attacker);
+			if (isPet)
+				startQuestTimer("fantasy_mushroom_pet", 3000, npc, attacker);
+			else
+				startQuestTimer("fantasy_mushroom", 3000, npc, attacker);
 		}
 		return super.onAttack(npc, attacker, damage, isPet);
 	}
 	
-	private void triggerSkill(L2PcInstance player, int skill_id, int skill_level)
+	private void triggerSkill(L2Playable playable, int skill_id, int skill_level)
 	{
 		L2Character[] targets = new L2Character[1];
-		targets[0] = player;
+		targets[0] = playable;
 		
 		L2Skill trigger = SkillTable.getInstance().getInfo(skill_id, skill_level);
 		
 		if (trigger != null)
 		{
-			player.broadcastPacket(new MagicSkillUse(player, player, skill_id, skill_level, 0, 0));
+			playable.broadcastPacket(new MagicSkillUse(playable, playable, skill_id, skill_level, 0, 0));
 			
 			ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(trigger.getSkillType());
 			if (handler != null)
-				handler.useSkill(player, trigger, targets);
+				handler.useSkill(playable, trigger, targets);
 			else
-				trigger.useSkill(player, targets);
+				trigger.useSkill(playable, targets);
 		}
 	}
 	
-	private void attackPlayer(L2Attackable npc, L2PcInstance player)
+	private void attackPlayer(L2Attackable npc, L2Playable playable)
 	{
 		npc.setIsRunning(true);
-		npc.addDamageHate(player, 0, 999);
-		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
+		npc.addDamageHate(playable, 0, 999);
+		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, playable);
 	}
 }

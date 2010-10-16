@@ -174,7 +174,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" time="60" val="0">
+			<effect name="Buff" time="60" val="0" stackOrder="1" stackType="ab_iron_shield_i">
 				<mul order="0x30" stat="sDef" val="1.3">
 					<using kind="Shield" />
 				</mul>
@@ -186,7 +186,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" time="60" val="0">
+			<effect name="Buff" time="60" val="0" stackOrder="1" stackType="ab_archer_special">
 				<mul order="0x30" stat="pReuse" val="0.85">
 					<using kind="Bow" />
 				</mul>
@@ -202,7 +202,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillRadius" val="1000" />
 		<for>
-			<effect name="Buff" time="60" val="0">
+			<effect name="Buff" time="60" val="0" stackOrder="1" stackType="ab_archer_special">
 				<mul order="0x30" stat="pAtkSpd" val="1.15">
 					<using kind="Bow,Crossbow" />
 				</mul>
@@ -215,7 +215,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillRadius" val="1000" />
 		<for>
-			<effect name="Buff" time="60" val="0">
+			<effect name="Buff" time="60" val="0" stackOrder="1" stackType="ab_archer_special_i">
 				<add order="0x40" stat="runSpd" val="40" />
 			</effect>
 		</for>
@@ -395,6 +395,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="saveVs" val="WIT" />
 		<set name="skillType" val="PARALYZE" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -491,10 +492,20 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5456" levels="1" name="Stubborn Resistance">
-		<!-- Condition causing target to instantly slow down Atk. Speed and Speed due to stubborn resistance. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="magicLvl" val="90" />
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1400" />
+		<set name="negateStats" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="NEGATE" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Debuff" time="30" val="0" effectPower="80" effectType="DEBUFF">
+				<mul order="0x30" stat="pAtkSpd" val="0.7" />
+				<mul order="0x30" stat="runSpd" val="0.7" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5457" levels="1" name="NPC Full Recover">
 		<set name="target" val="TARGET_NONE" />
@@ -757,10 +768,20 @@
 		</for>
 	</skill>
 	<skill id="5492" levels="12" name="NPC CrossBow Attack">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- NPC Skill -->
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#mpConsume"> 25 40 56 76 99 121 142 151 159 165 168 170 </table>
+		<table name="#power"> 122 279 584 1110 1923 3030 4336 5002 5632 6187 6632 6978 </table>
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="17000" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="5493" levels="1" name="Naia Production">
 		<set name="target" val="TARGET_NONE" />

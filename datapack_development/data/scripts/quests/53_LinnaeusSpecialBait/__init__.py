@@ -58,7 +58,7 @@ class Quest (JQuest):
      if not st: return htmltext
      id = st.getState()
      if id == State.COMPLETED:
-        htmltext = "<html><body>This quest has already been completed.</body></html>"
+        htmltext = Quest.getAlreadyCompletedMsg(player)
            
      elif id == State.CREATED :
         if player.getLevel() > 59 and fishing_level(player) > 19 :

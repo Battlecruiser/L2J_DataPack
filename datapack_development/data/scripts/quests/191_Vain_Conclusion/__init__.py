@@ -55,7 +55,7 @@ class Quest (JQuest) :
         id = st.getState()
         cond = st.getInt("cond")
         if id == State.COMPLETED:
-            htmltext = "<html><body>This quest has already been completed.</body></html>"
+            htmltext = Quest.getAlreadyCompletedMsg(player)
         elif id == State.STARTED:
             if npcId == Dorothy:
                 if not cond :

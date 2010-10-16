@@ -239,7 +239,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="4" stackType="pd_up">
+			<effect name="Buff" time="3600" val="0" stackOrder="1.15" stackType="pd_up">
 				<mul order="0x30" stat="pDef" val="1.15" />
 			</effect>
 		</for>
@@ -323,7 +323,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="4" stackType="casting_time_down">
+			<effect name="Buff" time="3600" val="0" stackOrder="1.3" stackType="casting_time_down">
 				<mul order="0x30" stat="mAtkSpd" val="1.3" />
 			</effect>
 		</for>
@@ -473,7 +473,7 @@
 	</skill>
 	<skill id="5646" levels="2" name="Unicorn Seraphim - Wild Magic">
 		<table name="#aggro"> 582 635 </table>
-		<table name="#mCrit"> 0.3 0.4 </table>
+		<table name="#mCritRate"> 1 2 </table>
 		<table name="#mpConsume"> 58 65 </table>
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
@@ -486,8 +486,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="#mCrit" stackType="magic_critical_up">
-				<basemul order="0x30" stat="mCritRate" val="#mCrit" />
+			<effect name="Buff" time="1200" val="0" stackOrder="#mCritRate" stackType="magic_critical_up">
+				<basemul order="0x30" stat="mCritRate" val="#mCritRate" />
 			</effect>
 		</for>
 	</skill>
@@ -616,6 +616,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="true" />
+		<set name="mpConsume" val="31" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="10000" />
@@ -632,18 +633,17 @@
 		</for>
 	</skill>
 	<skill id="5656" levels="85" name="Gatekeeper Aura Flare">
-		<!-- TODO MP Cost for each level -->
 		<table name="#magicLvl"> 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
+		<table name="#mpConsume"> 9 9 9 9 10 10 10 12 12 13 14 15 15 15 17 17 18 19 19 20 20 20 22 22 23 24 24 25 27 27 28 28 29 30 30 32 33 34 34 35 37 38 38 39 40 42 43 44 44 45 47 48 49 49 50 52 53 54 55 55 57 58 59 60 60 62 63 64 64 65 67 67 68 69 69 70 70 72 73 73 73 74 74 75 75 </table>
 		<table name="#power"> 60 64 68 73 77 82 87 93 98 104 110 116 112 129 136 142 150 157 165 173 181 189 197 206 215 224 233 243 253 263 273 283 294 305 316 327 338 350 361 373 385 397 410 422 435 447 460 473 486 499 512 525 539 552 565 579 592 605 619 632 645 658 672 685 697 710 723 735 748 760 772 784 795 806 817 830 845 862 884 906 929 952 976 1001 1024 </table>
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="1" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="hitTime" val="1000" />
 		<set name="reuseDelay" val="2500" />
-		<set name="isMagic" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="650" />
@@ -654,36 +654,34 @@
 		</for>
 	</skill>
 	<skill id="5657" levels="85" name="Gatekeeper Prominence">
-		<!-- TODO MP Cost for each level -->
 		<table name="#magicLvl"> 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
+		<table name="#mpConsume"> 9 9 9 9 10 10 10 12 12 13 14 15 15 15 17 17 18 19 19 20 20 20 22 22 23 24 24 25 27 27 28 28 29 30 30 32 33 34 34 35 37 38 38 39 40 42 43 44 44 45 47 48 49 49 50 52 53 54 55 55 57 58 59 60 60 62 63 64 64 65 67 67 68 69 69 70 70 72 73 73 73 74 74 75 75 </table>
 		<table name="#power"> 75 80 85 91 97 103 109 116 123 130 137 145 153 161 169 178 187 196 206 216 226 236 247 257 269 280 292 304 316 328 341 354 367 381 394 408 423 437 451 466 481 496 512 527 543 559 575 591 607 624 640 657 673 690 707 723 740 757 773 790 806 823 839 856 872 888 903 919 935 950 965 979 994 1008 1022 1037 1056 1077 1104 1132 1161 1190 1220 1251 1279 </table>
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="1" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="hitTime" val="1500" />
 		<set name="reuseDelay" val="6000" />
-		<set name="isMagic" val="true" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 	</skill>
 	<skill id="5658" levels="85" name="Gatekeeper Flame Strike">
-		<!-- TODO MP Cost for each level -->
 		<table name="#magicLvl"> 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
+		<table name="#mpConsume"> 13 13 13 14 14 15 15 17 17 18 20 22 23 23 24 25 27 28 28 29 29 30 32 33 34 35 37 38 39 40 40 42 43 44 45 47 49 50 52 53 54 55 57 59 60 62 63 65 67 68 69 70 73 74 75 77 79 80 82 83 85 87 88 89 90 93 94 95 97 98 99 100 102 103 104 105 105 107 108 109 109 110 112 112 113 </table>
 		<table name="#power"> 38 40 43 46 49 52 55 58 62 65 69 73 77 81 85 89 94 98 103 108 113 118 124 129 135 140 146 152 158 164 171 177 184 191 197 204 212 219 226 233 241 248 256 264 272 280 288 296 304 312 320 329 337 345 354 362 370 379 387 395 403 412 420 428 436 444 452 460 468 475 483 490 497 504 511 519 528 539 552 566 581 595 610 626 640 </table>
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="MDAM" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="1" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="15000" />
-		<set name="isMagic" val="true" />
 		<set name="castRange" val="500" />
-		<set name="effectRange" val="1600" />
+		<set name="effectRange" val="1000" />
 		<set name="skillRadius" val="200" />
 	</skill>
 	<skill id="5659" levels="2" name="Gatekeeper Berserker Spirit">
@@ -837,6 +835,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="50" />
 		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="abnormalLvl" val="7" />
 		<for>

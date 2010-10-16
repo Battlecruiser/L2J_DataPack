@@ -437,27 +437,109 @@
 		</cond>
 	</skill>
 	<skill id="631" levels="6" name="Emergent Ability - Attack">
-		<table name="#patk"> 22 42 60 75 89 99 </table>
+		<!-- CT2.5 retail confirmed -->
+		<table name="#pAtkSBP"> 8.4 16 22.9 29 34.4 38.2 </table>
+		<table name="#pAtkDual"> 10.2 19.5 27.9 35.3 41.8 46.5 </table>
+		<table name="#pAtkDagger"> 7.4 14 20.1 25.4 30.1 33.4 </table>
+		<table name="#pAtkBow"> 21.7 41.4 59.2 75 88.8 98.7 </table>
+		<table name="#pAtkCBow"> 13.3 25.4 36.3 46 54.4 60.5 </table>
+		<table name="#pAtkDSword"> 1.8 3.5 5 6.3 7.4 8.3 </table>
+		<table name="#pAtkDBlunt"> 1.8 3.5 5 6.3 7.4 8.3 </table>
+		<table name="#pAtkRapier"> 7.8 15 21.4 27.1 32.1 35.6 </table>
+		<table name="#pAtkAncient"> 9.1 17.4 24.8 31.4 37.2 41.4 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="excludedFromCheck" val="true" />
 		<for>
-			<add order="0x40" stat="pAtk" val="#patk" />
+			<add order="0x40" stat="pAtk" val="#pAtkSBP">
+				<using kind="Sword,Big Sword,Blunt,Big Blunt,Pole" />
+			</add>
+		</for>
+		<for>
+			<add order="0x40" stat="pAtk" val="#pAtkDual">
+				<using kind="Dual Sword,Dual Fist" />
+			</add>
+		</for>
+		<for>
+			<add order="0x40" stat="pAtk" val="#pAtkDagger">
+				<using kind="Dagger,Dual Dagger" />
+			</add>
+		</for>
+		<for>
+			<add order="0x40" stat="pAtk" val="#pAtkBow">
+				<using kind="Bow" />
+			</add>
+		</for>
+		<for>
+			<add order="0x40" stat="pAtk" val="#pAtkCBow">
+				<using kind="Crossbow" />
+			</add>
+		</for>
+		<for>
+			<add order="0x40" stat="pAtk" val="#pAtkDSword">
+				<using kind="Big Sword" />
+			</add>
+		</for>
+		<for>
+			<add order="0x40" stat="pAtk" val="#pAtkDBlunt">
+				<using kind="Big Sword" />
+			</add>
+		</for>
+		<for>
+			<add order="0x40" stat="pAtk" val="#pAtkRapier">
+				<using kind="Rapier" />
+			</add>
+		</for>
+		<for>
+			<add order="0x40" stat="pAtk" val="#pAtkAncient">
+				<using kind="Ancient" />
+			</add>
 		</for>
 	</skill>
 	<skill id="632" levels="6" name="Emergent Ability - Defense">
-		<table name="#pdef"> 9 18 26 35 44 53 </table>
+		<!-- CT2.5 retail confirmed -->
+		<table name="#pDefHeavy"> 17.9 35.7 53.6 71.4 89.3 107.1 </table>
+		<table name="#pDefLight"> 13.4 26.8 40.2 53.6 67 80.3 </table>
+		<table name="#pDefRobe"> 9 17.9 26.8 35.7 44.7 53.6 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="excludedFromCheck" val="true" />
 		<for>
-			<add order="0x40" stat="pDef" val="#pdef" />
+			<add order="0x40" stat="pDef" val="#pDefHeavy">
+				<and>
+					<using kind="Magic" />
+					<not>
+						<using kind="Light,Heavy" />
+					</not>
+				</and>
+			</add>
+		</for>
+		<for>
+			<add order="0x40" stat="pDef" val="#pDefRobe">
+				<and>
+					<using kind="Heavy" />
+					<not>
+						<using kind="Magic,Light" />
+					</not>
+				</and>
+			</add>
+		</for>
+		<for>
+			<add order="0x40" stat="pDef" val="#pDefLight">
+				<and>
+					<using kind="Light" />
+					<not>
+						<using kind="Magic,Heavy" />
+					</not>
+				</and>
+			</add>
 		</for>
 	</skill>
 	<skill id="633" levels="6" name="Emergent Ability - Empower">
-		<table name="#matk"> 11 20 29 37 43 48 </table>
+		<!-- CT2.5 retail confirmed -->
+		<table name="#matk"> 10.5 20.1 28.7 36.3 43 47.8 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -467,7 +549,8 @@
 		</for>
 	</skill>
 	<skill id="634" levels="6" name="Emergent Ability - Magic Defense">
-		<table name="#mdef"> 15 30 45 61 79 91 </table>
+		<!-- CT2.5 retail confirmed -->
+		<table name="#mdef"> 15.1 30.2 45.4 60.5 75.6 90.7 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -487,24 +570,69 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="637" levels="1" name="Master Ability - Attack">
+		<!-- CT2.5 retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="excludedFromCheck" val="true" />
 		<for>
-			<add order="0x40" stat="pAtk" val="35" /> <!-- guessed -->
+			<add order="0x40" stat="pAtk" val="22.9">
+				<using kind="Sword,Big Sword,Blunt,Big Blunt,Pole" />
+			</add>
+		</for>
+		<for>
+			<add order="0x40" stat="pAtk" val="27.9">
+				<using kind="Dual Sword,Dual Fist" />
+			</add>
+		</for>
+		<for>
+			<add order="0x40" stat="pAtk" val="20.1">
+				<using kind="Dagger,Dual Dagger" />
+			</add>
+		</for>
+		<for>
+			<add order="0x40" stat="pAtk" val="59.2">
+				<using kind="Bow" />
+			</add>
+		</for>
+		<for>
+			<add order="0x40" stat="pAtk" val="36.3">
+				<using kind="Crossbow" />
+			</add>
+		</for>
+		<for>
+			<add order="0x40" stat="pAtk" val="5">
+				<using kind="Big Sword" />
+			</add>
+		</for>
+		<for>
+			<add order="0x40" stat="pAtk" val="5">
+				<using kind="Big Sword" />
+			</add>
+		</for>
+		<for>
+			<add order="0x40" stat="pAtk" val="21.4">
+				<using kind="Rapier" />
+			</add>
+		</for>
+		<for>
+			<add order="0x40" stat="pAtk" val="24.8">
+				<using kind="Ancient" />
+			</add>
 		</for>
 	</skill>
 	<skill id="638" levels="1" name="Master Ability - Empower">
+		<!-- CT2.5 retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="excludedFromCheck" val="true" />
 		<for>
-			<add order="0x40" stat="mAtk" val="29" />
+			<add order="0x40" stat="mAtk" val="28.65" />
 		</for>
 	</skill>
 	<skill id="639" levels="1" name="Master Ability - Casting">
+		<!-- CT2.5 retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -514,6 +642,7 @@
 		</for>
 	</skill>
 	<skill id="640" levels="1" name="Master Ability - Focus">
+		<!-- CT2.5 retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -523,34 +652,38 @@
 		</for>
 	</skill>
 	<skill id="641" levels="1" name="Knight Ability - Boost HP">
+		<!-- CT2.5 retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="excludedFromCheck" val="true" />
 		<for>
-			<mul order="0x30" stat="maxHp" val="1.06" />
+			<add order="0x40" stat="maxHp" val="295.32" />
 		</for>
 	</skill>
 	<skill id="642" levels="1" name="Enchanter Ability - Boost Mana">
+		<!-- CT2.5 retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="excludedFromCheck" val="true" />
 		<for>
-			<add order="0x40" stat="maxMp" val="148" />
+			<add order="0x40" stat="maxMp" val="148.2" />
 		</for>
 	</skill>
 	<skill id="643" levels="1" name="Summoner Ability - Boost HP/MP">
+		<!-- CT2.5 retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="excludedFromCheck" val="true" />
 		<for>
-			<add order="0x40" stat="maxHp" val="147" />
-			<add order="0x40" stat="maxMp" val="74" />
+			<add order="0x40" stat="maxHp" val="147.66" />
+			<add order="0x40" stat="maxMp" val="74.1" />
 		</for>
 	</skill>
 	<skill id="644" levels="1" name="Rogue Ability - Evasion">
+		<!-- CT2.5 retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -560,17 +693,19 @@
 		</for>
 	</skill>
 	<skill id="645" levels="1" name="Rogue Ability - Long Shot">
+		<!-- CT2.5 retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="excludedFromCheck" val="true" />
 		<for>
-			<add order="0x40" stat="pAtkRange" val="200">
+			<add order="0x40" stat="pAtkRange" val="100">
 				<using kind="Bow" />
 			</add>
 		</for>
 	</skill>
 	<skill id="646" levels="1" name="Wizard Ability - Mana Gain">
+		<!-- CT2.5 retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -580,36 +715,38 @@
 		</for>
 	</skill>
 	<skill id="647" levels="1" name="Enchanter Ability - Mana Recovery">
+		<!-- CT2.5 retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="isMagic" val="true" />
 		<set name="excludedFromCheck" val="true" />
 		<for>
-			<add order="0x40" stat="regMp" val="0.5" />
+			<mul order="0x30" stat="regMp" val="1.1" />
 		</for>
 	</skill>
 	<skill id="648" levels="1" name="Healer Ability - Prayer">
+		<!-- CT2.5 retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="excludedFromCheck" val="true" />
 		<for>
-			<add order="0x40" stat="gainHp" val="19" />
+			<mul order="0x30" stat="gainHp" val="1.06" />
 		</for>
 	</skill>
 	<skill id="650" levels="1" name="Warrior Ability - Resist Trait">
+		<!-- CT2.5 retail confirmed -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="excludedFromCheck" val="true" />
 		<for>
-			<!-- these are just guessed values -->
-			<sub order="0x40" stat="cancelVuln" val="3" />
-			<sub order="0x40" stat="stunVuln" val="3" />
-			<sub order="0x40" stat="rootVuln" val="3" />
-			<sub order="0x40" stat="sleepVuln" val="3" />
-			<sub order="0x40" stat="paralyzeVuln" val="3" />
+			<sub order="0x40" stat="cancelVuln" val="5" />
+			<sub order="0x40" stat="stunVuln" val="5" />
+			<sub order="0x40" stat="rootVuln" val="5" />
+			<sub order="0x40" stat="sleepVuln" val="5" />
+			<sub order="0x40" stat="paralyzeVuln" val="5" />
 		</for>
 	</skill>
 	<skill id="651" levels="1" name="Warrior Ability - Haste">
@@ -1413,7 +1550,7 @@
 				<mul order="0x50" stat="limitHp" val="0.1" />
 			</effect>
 			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="transform_sacrifice">
-				<mul order="0x30" stat="rEvas" val="1.2" /> <!-- Guess -->
+				<add order="0x40" stat="rEvas" val="10" />
 			</effect>
 		</for>
 	</skill>
@@ -1475,7 +1612,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="10000" />
-                <set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="SLEEP" />
 		<set name="target" val="TARGET_AREA" />
@@ -1519,7 +1656,7 @@
 				<mul order="0x50" stat="limitHp" val="0.1" />
 			</effect>
 			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="transform_sacrifice">
-				<mul order="0x30" stat="mAtk" val="1.2" /> <!-- Guess -->
+				<mul order="0x30" stat="mAtk" val="1.2" />
 			</effect>
 		</for>
 	</skill>

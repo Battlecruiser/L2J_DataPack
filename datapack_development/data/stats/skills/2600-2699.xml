@@ -50,10 +50,16 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="2607" levels="1" name="Pailaka Door Key">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_UNLOCKABLE" />
+		<set name="skillType" val="UNLOCK_SPECIAL" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="500" />
+		<set name="staticHitTime" val="true" />
+		<set name="power" val="100" />
+		<cond msgId="113" addName="1">
+			<target npcId="22110100,22110101,22110102,22110103,22110104,22110105" />
+		</cond>
 	</skill>
 	<skill id="2608" levels="3" name="Crystal of Fantasy">
 		<!--
@@ -221,7 +227,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="600" val="0" /> <!-- Guess -->
+			<effect name="Transformation" time="1800" val="0" />
 		</for>
 	</skill>
 	<skill id="2632" levels="1" name="Scroll of Transformation - Young Child">
@@ -233,7 +239,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="600" val="0" /> <!-- Guess -->
+			<effect name="Transformation" time="1800" val="0" />
 		</for>
 	</skill>
 	<skill id="2633" levels="1" name="Elmore-Aden's Holy Water">

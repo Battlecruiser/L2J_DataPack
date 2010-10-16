@@ -104,7 +104,7 @@ class Quest (JQuest) :
    progress = st.getInt("progress")
    if npcId == 30531:
      if id == State.COMPLETED :
-       htmltext = "<html><body>This quest has already been completed.</body></html>"
+       htmltext = Quest.getAlreadyCompletedMsg(player)
 
      elif progress==0 :
         if player.getClassId().getId() == 0x38 and player.getLevel() > 38 :

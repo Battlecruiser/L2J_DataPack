@@ -219,7 +219,7 @@ class Quest (JQuest) :
     npcId = npc.getNpcId()
     cond = st.getInt("cond")
     if state == State.COMPLETED :
-       htmltext = "<html><body>This quest has already been completed.</body></html>"
+       htmltext = Quest.getAlreadyCompletedMsg(player)
     elif npcId == Stones :
        if state == State.CREATED :
           Pavel = player.getQuestState("114_ResurrectionOfAnOldManager")

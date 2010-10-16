@@ -351,6 +351,7 @@
 		<set name="mpConsume" val="58" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" />
+		<set name="saveVs" val="NULL" />
 		<set name="skillType" val="PARALYZE" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
@@ -827,7 +828,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_ONE" />
-		<set name="saveVs" val="WIT" />
+		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="SLEEP" />
 		<set name="isDebuff" val="true" />
 		<set name="hitTime" val="2500" />

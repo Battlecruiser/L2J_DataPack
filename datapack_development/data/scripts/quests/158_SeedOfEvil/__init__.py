@@ -43,7 +43,7 @@ class Quest (JQuest) :
         htmltext = "30031-02.htm"
         st.exitQuest(1)
    elif npcId == 30031 and st.getInt("cond")==0 and st.getInt("onlyone")==1 :
-      htmltext = "<html><body>This quest has already been completed.</body></html>"
+      htmltext = Quest.getAlreadyCompletedMsg(player)
 
    elif npcId == 30031 and st.getInt("cond")!=0 and st.getQuestItemsCount(CLAY_TABLET_ID)==0 :
         htmltext = "30031-05.htm"

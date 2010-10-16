@@ -757,12 +757,21 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
-	<skill id="8250" levels="2" name="Summon Tigress">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="hitTime" val="15000" />
-	</skill>
+ 	<skill id="8250" levels="2" name="Summon Tigress">
+		<set name="mpConsume" val="117" />
+		<set name="summonTotalLifeTime" val="1200000" />
+		<set name="summonTimeLostIdle" val="500" />
+		<set name="summonTimeLostActive" val="1000" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="reuseDelay" val="20000" />
+ 		<set name="hitTime" val="15000" />
+		<set name="skillType" val="SUMMON" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Summon-specific -->
+		<table name="#npcIds"> 14916 14917 </table>
+		<set name="npcId" val="#npcIds" />
+ 	</skill>
 	<skill id="8251" levels="1" name="Collection Agathion Release Seal">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="AGATHION" />

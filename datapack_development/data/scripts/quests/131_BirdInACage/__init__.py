@@ -58,7 +58,7 @@ class Quest (JQuest) :
    npcId = npc.getNpcId()
    cond = st.getInt("cond")
    if st.getState() == State.COMPLETED :
-     htmltext = "<html><body>This quest has already been completed.</body></html>"
+     htmltext = Quest.getAlreadyCompletedMsg(player)
    elif npcId == KANIS :
      if cond == 0 :
        if player.getLevel() >= 78 :

@@ -1,8 +1,8 @@
 DROP TABLE IF EXISTS `skill_residential`;
 CREATE TABLE `skill_residential` (
-  `entityId` int(11) NOT NULL,
-  `skillId` int(11) NOT NULL DEFAULT '0',
-  `skillLevel` int(11) NOT NULL DEFAULT '0',
+  `entityId` tinyint(3) unsigned NOT NULL,
+  `skillId` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `skillLevel` tinyint(2) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`entityId`,`skillId`)
 );
 
