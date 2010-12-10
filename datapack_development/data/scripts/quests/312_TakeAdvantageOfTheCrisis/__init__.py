@@ -1,5 +1,6 @@
 #Created by Bloodshed
 import sys
+from com.l2jserver import Config
 from com.l2jserver.gameserver.model.quest			import State
 from com.l2jserver.gameserver.model.quest			import QuestState
 from com.l2jserver.gameserver.model.quest.jython	import QuestJython as JQuest
@@ -24,7 +25,7 @@ class Quest (JQuest) :
 		self.questItemIds = [MINERAL_FRAGMENT]
 
 	def onExchangeRequest (self,event,st,fragamount) :
-		st.giveItems(int(event),1)
+		st.rewardItems(int(event),1)
 		st.takeItems(MINERAL_FRAGMENT,fragamount)
 		st.playSound("ItemSound.quest_finish")
 		return "30535-16.htm"
@@ -87,7 +88,7 @@ class Quest (JQuest) :
 				if st.getQuestItemsCount(MINERAL_FRAGMENT) >= 1 :
 					htmltext = "30535-10.htm"
 				else :
-					htmltext = "30535-07.htm"				
+					htmltext = "30535-07.htm"
 		return htmltext
 
 	def onKill(self,npc,player,isPet) :
@@ -98,8 +99,12 @@ class Quest (JQuest) :
 		npcId = npc.getNpcId()
 		cond = st.getInt("cond")
 		if cond == 1 and npcId in MINE_MOBS :
-			if st.getRandom(100) < DROP_CHANCE :
-				st.giveItems(MINERAL_FRAGMENT,1)
+			chance = DROP_CHANCE*Config.RATE_QUEST_DROP
+			numItems, chance = divmod(chance,100)
+			if st.getRandom(100) < chance : 
+				numItems += 1
+			if numItems :
+				st.giveItems(MINERAL_FRAGMENT,int(numItems))
 				st.playSound("ItemSound.quest_itemget")
 		return
 

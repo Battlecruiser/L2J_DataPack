@@ -165,19 +165,19 @@ public class Orfen extends L2AttackableAIScript
 		//Spawn minions
 		int x = npc.getX();
 		int y = npc.getY();
-		L2Npc mob;
-		mob = addSpawn(RAIKEL_LEOS, x + 100, y + 100, npc.getZ(), 0, false, 0);
+		L2Attackable mob;
+		mob = (L2Attackable)addSpawn(RAIKEL_LEOS, x + 100, y + 100, npc.getZ(), 0, false, 0);
 		mob.setIsRaidMinion(true);
-		_Minions.add((L2Attackable) mob);
-		mob = addSpawn(RAIKEL_LEOS, x + 100, y - 100, npc.getZ(), 0, false, 0);
+		_Minions.add(mob);
+		mob = (L2Attackable)addSpawn(RAIKEL_LEOS, x + 100, y - 100, npc.getZ(), 0, false, 0);
 		mob.setIsRaidMinion(true);
-		_Minions.add((L2Attackable) mob);
-		mob = addSpawn(RAIKEL_LEOS, x - 100, y + 100, npc.getZ(), 0, false, 0);
+		_Minions.add(mob);
+		mob = (L2Attackable)addSpawn(RAIKEL_LEOS, x - 100, y + 100, npc.getZ(), 0, false, 0);
 		mob.setIsRaidMinion(true);
-		_Minions.add((L2Attackable) mob);
-		mob = addSpawn(RAIKEL_LEOS, x - 100, y - 100, npc.getZ(), 0, false, 0);
+		_Minions.add(mob);
+		mob = (L2Attackable)addSpawn(RAIKEL_LEOS, x - 100, y - 100, npc.getZ(), 0, false, 0);
 		mob.setIsRaidMinion(true);
-		_Minions.add((L2Attackable) mob);
+		_Minions.add(mob);
 		this.startQuestTimer("check_minion_loc", 10000, npc, null, true);
 	}
 	
@@ -247,9 +247,9 @@ public class Orfen extends L2AttackableAIScript
 		}
 		else if (event.equalsIgnoreCase("spawn_minion"))
 		{
-			L2Npc mob = addSpawn(RAIKEL_LEOS, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0);
+			L2Attackable mob = (L2Attackable)addSpawn(RAIKEL_LEOS, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0);
 			mob.setIsRaidMinion(true);
-			_Minions.add((L2Attackable) mob);
+			_Minions.add(mob);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -274,7 +274,7 @@ public class Orfen extends L2AttackableAIScript
 	@Override
 	public String onFactionCall(L2Npc npc, L2Npc caller, L2PcInstance attacker, boolean isPet)
 	{
-		if (caller == null || npc == null)
+		if (caller == null || npc == null || npc.isCastingNow())
 			return super.onFactionCall(npc, caller, attacker, isPet);
 		int npcId = npc.getNpcId();
 		int callerId = caller.getNpcId();
@@ -304,10 +304,10 @@ public class Orfen extends L2AttackableAIScript
 		int npcId = npc.getNpcId();
 		if (npcId == ORFEN)
 		{
-			if ((npc.getCurrentHp() - damage) < (npc.getMaxHp() / 2) && !_IsTeleported)
+			if (!_IsTeleported && (npc.getCurrentHp() - damage) < (npc.getMaxHp() / 2))
 			{
-				setSpawnPoint(npc, 0);
 				_IsTeleported = true;
+				setSpawnPoint(npc, 0);
 			}
 			else if (npc.isInsideRadius(attacker, 1000, false, false) && !npc.isInsideRadius(attacker, 300, false, false) && Rnd.get(10) == 0)
 			{
@@ -319,7 +319,7 @@ public class Orfen extends L2AttackableAIScript
 		}
 		else if (npcId == RIBA_IREN)
 		{
-			if ((npc.getCurrentHp() - damage) < (npc.getMaxHp() / 2.0))
+			if (!npc.isCastingNow() && (npc.getCurrentHp() - damage) < (npc.getMaxHp() / 2.0))
 			{
 				npc.setTarget(attacker);
 				npc.doCast(SkillTable.getInstance().getInfo(4516, 1));

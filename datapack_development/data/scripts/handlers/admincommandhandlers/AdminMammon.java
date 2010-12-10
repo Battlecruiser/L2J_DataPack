@@ -14,12 +14,7 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import com.l2jserver.gameserver.SevenSigns;
-import com.l2jserver.gameserver.datatables.NpcTable;
-import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.AutoSpawnHandler;
 import com.l2jserver.gameserver.model.AutoSpawnHandler.AutoSpawnInstance;
@@ -40,7 +35,6 @@ public class AdminMammon implements IAdminCommandHandler
 	{
 		"admin_mammon_find",
 		"admin_mammon_respawn",
-		"admin_list_spawns",
 		"admin_msg"
 	};
 	
@@ -48,7 +42,6 @@ public class AdminMammon implements IAdminCommandHandler
 	
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		int npcId = 0;
 		int teleportIndex = -1;
 		AutoSpawnInstance blackSpawnInst = AutoSpawnHandler.getInstance().getAutoSpawnInstance(SevenSigns.MAMMON_BLACKSMITH_ID, false);
 		AutoSpawnInstance merchSpawnInst = AutoSpawnHandler.getInstance().getAutoSpawnInstance(SevenSigns.MAMMON_MERCHANT_ID, false);
@@ -120,32 +113,6 @@ public class AdminMammon implements IAdminCommandHandler
 			else
 				activeChar.sendMessage("Blacksmith of Mammon isn't registered for spawn.");
 		}
-		
-		else if (command.startsWith("admin_list_spawns"))
-		{
-			try
-			{ // admin_list_spawns x[xxxx] x[xx]
-				String[] params = command.split(" ");
-				Pattern pattern = Pattern.compile("[0-9]*");
-				Matcher regexp = pattern.matcher(params[1]);
-				if (regexp.matches())
-					npcId = Integer.parseInt(params[1]);
-				else
-				{
-					params[1] = params[1].replace('_', ' ');
-					npcId = NpcTable.getInstance().getTemplateByName(params[1]).npcId;
-				}
-				if (params.length > 2)
-					teleportIndex = Integer.parseInt(params[2]);
-			}
-			catch (Exception e)
-			{
-				activeChar.sendMessage("Command format is //list_spawns <npcId|npc_name> [tele_index]");
-			}
-			
-			SpawnTable.getInstance().findNPCInstances(activeChar, npcId, teleportIndex);
-		}
-		
 		// Used for testing SystemMessage IDs	- Use //msg <ID>
 		else if (command.startsWith("admin_msg"))
 		{

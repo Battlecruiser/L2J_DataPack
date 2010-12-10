@@ -16,14 +16,15 @@ package handlers.itemhandlers;
 
 import javolution.util.FastMap;
 
+import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2SummonInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance.TimeStamp;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2SummonInstance;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
@@ -140,7 +141,7 @@ public class ItemSkillsTemplate implements IItemHandler
 						}
 					}
 					
-					if (itemSkill.isPotion())
+					if (itemSkill.isPotion() || itemSkill.isSimultaneousCast())
 					{
 						playable.doSimultaneousCast(itemSkill);
 						// Summons should be affected by herbs too, self time effect is handled at L2Effect constructor
@@ -150,7 +151,10 @@ public class ItemSkillsTemplate implements IItemHandler
 							activeChar.getPet().doSimultaneousCast(itemSkill);
 					}
 					else
+					{
+						playable.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 						playable.useMagic(itemSkill, forceUse, false);
+					}
 					
 					if (itemSkill.getReuseDelay() > 0)
 					{
@@ -169,6 +173,8 @@ public class ItemSkillsTemplate implements IItemHandler
 				}
 			}
 		}
+		else
+			_log.info("Item "+ item + " does not have registered any skill for handler.");
 	}
 	
 	private void reuse(L2PcInstance player,L2Skill skill, L2ItemInstance item)

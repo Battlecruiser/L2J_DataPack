@@ -46,27 +46,31 @@ public class Soul implements ISkillHandler
 			return;
 		
 		L2PcInstance player = (L2PcInstance) activeChar;
-		
-		L2Skill soulmastery = SkillTable.getInstance().getInfo(467, player.getSkillLevel(467));
-		
-		if (soulmastery != null)
+
+		int level = player.getSkillLevel(467);
+		if (level > 0)
 		{
-			if (player.getSouls() < soulmastery.getNumSouls())
+			L2Skill soulmastery = SkillTable.getInstance().getInfo(467, level);
+			
+			if (soulmastery != null)
 			{
-				int count = 0;
-				
-				if (player.getSouls() + skill.getNumSouls() <= soulmastery.getNumSouls())
-					count = skill.getNumSouls();
+				if (player.getSouls() < soulmastery.getNumSouls())
+				{
+					int count = 0;
+					
+					if (player.getSouls() + skill.getNumSouls() <= soulmastery.getNumSouls())
+						count = skill.getNumSouls();
+					else
+						count = soulmastery.getNumSouls() - player.getSouls();
+					
+					player.increaseSouls(count);
+				}
 				else
-					count = soulmastery.getNumSouls() - player.getSouls();
-				
-				player.increaseSouls(count);
-			}
-			else
-			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.SOUL_CANNOT_BE_INCREASED_ANYMORE);
-				player.sendPacket(sm);
-				return;
+				{
+					SystemMessage sm = new SystemMessage(SystemMessageId.SOUL_CANNOT_BE_INCREASED_ANYMORE);
+					player.sendPacket(sm);
+					return;
+				}
 			}
 		}
 	}

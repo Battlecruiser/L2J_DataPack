@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Quest 632: Necromancer's Request -->
-<list>
-	<!-- Mold Lubricant (27 Brains) -->
+<list xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance" ns0:noNamespaceSchemaLocation="multisell.xsd">
 	<item id="1">
-		<ingredient id="7543" count="27" />
-		<production id="4040" count="1" />
+		<!-- Zombie's Brain -->
+		<ingredient count="27" id="7543" />
+		<!-- Mold Lubricant -->
+		<production count="1" id="4040" />
 	</item>
-	<!-- Enria (32 Brains) -->
 	<item id="2">
-		<ingredient id="7543" count="32" />
-		<production id="4042" count="1" />
+		<!-- Zombie's Brain -->
+		<ingredient count="32" id="7543" />
+		<!-- Enria -->
+		<production count="1" id="4042" />
 	</item>
-	<!-- Mold Hardener (62 Brains) -->
 	<item id="3">
-		<ingredient id="7543" count="62" />
-		<production id="4041" count="1" />
+		<!-- Zombie's Brain -->
+		<ingredient count="62" id="7543" />
+		<!-- Mold Hardener -->
+		<production count="1" id="4041" />
 	</item>
-	<!-- Adamanite Nugget (13 Brains) -->
 	<item id="4">
-		<ingredient id="7543" count="13" />
-		<production id="1877" count="1" />
+		<!-- Zombie's Brain -->
+		<ingredient count="13" id="7543" />
+		<!-- Adamantite Nugget -->
+		<production count="1" id="1877" />
 	</item>
 </list>

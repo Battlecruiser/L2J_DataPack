@@ -1207,9 +1207,9 @@ public class Frintezza extends L2AttackableAIScript
 		{
 			if (npc != null && !npc.isDead() && frintezza != null && !frintezza.isDead())
 			{
-				L2Npc mob = addSpawn(npc.getNpcId()+2,npc.getX(),npc.getY(),npc.getZ(),npc.getHeading(),false,0);
+				L2Attackable mob = (L2Attackable)addSpawn(npc.getNpcId()+2,npc.getX(),npc.getY(),npc.getZ(),npc.getHeading(),false,0);
 				mob.setIsRaidMinion(true);
-				Minions.add((L2Attackable)mob);
+				Minions.add(mob);
 				
 				startQuestTimer("action", 200, mob, null);
 				startQuestTimer("spawn_minion", 18000, npc, null);

@@ -59,7 +59,7 @@ INSERT INTO `teleport` VALUES
 ('Ivory Tower Ground Floor -> Oren Castle Town',36,82956,53162,-1495,3700,0,57),
 ('Ivory Tower Ground Floor -> Hunter\'s Village',37,116819,76994,-2714,6800,0,57),
 ('Ivory Tower Ground Floor -> Aden Castle Town',38,146331,25762,-2018,6200,0,57),
-('Aden -> Oren Town',40,82971,53207,-1488,6900,0,57),
+('Aden -> Oren Town',40,82971,53207,-1470,6900,0,57), -- retail
 ('Aden -> Hunter\'s Village',41,117088,76931,-2688,5900,0,57),
 ('Hunters -> Oren Town',43,82971,53207,-1488,4100,0,57),
 ('Hunters -> Hardin\'s Private Academy',45,105918,109759,-3192,3400,0,57),
@@ -81,8 +81,8 @@ INSERT INTO `teleport` VALUES
 ('Giran Harbor -> Giran Town',63,83551,147942,-3400,6300,0,57),
 ('Giran Harbor -> Heine',107,111455,219400,-3544,8500,0,57),
 ('Heine -> The Town of Dion',65,15472,142880,-2688,12000,0,57),
-('Heine -> Field of Silence',66,87691,162835,-3520,12000,0,57),
-('Heine -> Field of Whispers',67,82192,226128,-3656,5900,0,57),
+('Heine -> Field of Silence',66,87691,162835,-3563,12000,0,57), -- retail
+('Heine -> Field of Whispers',67,82192,226128,-3664,5900,0,57), -- retail
 ('Heine -> Entrance to Alligator Islands',68,115583,192261,-3488,2100,0,57),
 ('Giran -> Dragon Valley',69,73024,118485,-3688,1800,0,57),
 ('Giran -> Heine',70,111455,219400,-3544,7600,0,57),
@@ -110,15 +110,15 @@ INSERT INTO `teleport` VALUES
 ('Goddard -> Rune Township',108,43835,-47749,-792,10000,0,57),
 ('Goddard -> Varka Silenos Stronghold',109,125740,-40864,-3736,4200,0,57),
 ('Goddard -> Ketra Orc Outpost',110,146990,-67128,-3640,1800,0,57),
-('Rune -> Goddard Castle Village',119,148024,-55281,-2728,10000,0,57),
-('Rune -> The Town of Giran',120,83551,147945,-3400,59000,0,57),
+('Rune Township -> Town of Goddard',119,148024,-55281,-2728,10000,0,57), -- retail
+('Rune Township -> The Town of Giran',120,83551,147945,-3400,59000,0,57), -- retail
 ('Rune -> Aden Castle Town',121,146783,25808,-2008,37000,0,57),
 ('Rune -> Rune Castle Town Guild',122,38316,-48216,-1152,150,0,57),
 ('Rune -> Rune Castle Town Temple',123,38303,-48040,896,150,0,57),
 ('Rune -> Forest of the Dead',124,52107,-54328,-3152,1200,0,57),
 ('Rune -> Swamp of Screams',125,69340,-50203,-3288,3000,0,57),
 ('Aden -> Rune',134,43835,-47749,-792,37000,0,57),
-('Aden -> Goddard',135,148024,-55281,-2728,8100,0,57),
+('Aden -> Goddard',135,148024,-55281,-2728,8100,0,57), -- retail
 ('Giran -> Giran Harbor',136,47938,186864,-3480,5200,0,57),
 
 ('TOI - 1st Floor',201,115168,16022,-5100,100000,0,57),
@@ -306,16 +306,16 @@ INSERT INTO `teleport` VALUES
 ('Oren -> Dion',1073,15472,142880,-2688,11000,0,57),
 ('Oren -> Schuttgart',1074,87126,-143520,-1288,19000,0,57),
 ('Oren -> Gludio',1075,-12787,122779,-3112,11000,0,57),
-('Aden -> Giran',1078,83551,147945,-3400,13000,0,57),
-('Aden -> Heine',1079,111455,219400,-3544,59000,0,57),
-('Aden -> Schuttgart',1080,87126,-143520,-1288,53000,0,57),
+('Aden -> Giran',1078,83551,147945,-3400,13000,0,57), -- retail
+('Aden -> Heine',1079,111455,219400,-3546,59000,0,57), -- retail
+('Aden -> Schuttgart',1080,87126,-143520,-1288,53000,0,57), -- retail
 ('Aden -> Dion',1081,15472,142880,-2688,52000,0,57),
 ('Aden -> Gludio',1082,-12787,122779,-3112,56000,0,57),
 ('Aden -> Seal of Shilen',1083,184742,19745,-3168,3000,0,57),
 ('Aden -> Forest of Mirrors',1084,142065,81300,-3000,4400,0,57),
 ('Aden -> Fields of Massacre',1085,183543,-14974,-2776,6500,0,57),
 ('Aden -> Ancient Battleground',1086,106517,-2871,-3416,5900,0,57),
-('Aden -> Silent Valley',1087,170838,55776,-5280,6100,0,57),
+('Aden -> Silent Valley',1087,170838,55776,-5280,6100,0,57), -- retail
 ('Aden -> ToI',1088,114649,11115,-5120,4200,0,57),
 ('Goddard -> Gludio',1089,-12787,122779,-3112,71000,0,57),
 ('Goddard -> Giran',1090,83551,147945,-3400,63000,0,57),
@@ -327,7 +327,7 @@ INSERT INTO `teleport` VALUES
 ('Goddard -> Wall of Argos',1096,165054,-47861,-3560,2200,0,57),
 ('Goddard -> Monastery of silence',1097,106414,-87799,-2920,10000,0,57),
 ('Rune -> Dion',1098,15472,142880,-2688,57000,0,57),
-('Rune -> Gludio',1099,-12787,122779,-3112,53000,0,57),
+('Rune Township -> The Town of Gludio',1099,-12787,122779,-3114,53000,0,57), -- retail
 ('Rune -> Heine',1100,111455,219400,-3544,82000,0,57),
 ('Rune -> Schuttgart',1101,87126,-143520,-1288,10000,0,57),
 ('Rune -> Oren',1102,82971,53207,-1488,10000,0,57),
@@ -372,268 +372,237 @@ INSERT INTO `teleport` VALUES
 ('Pagan Chapel - > exit',11998,-16359,-43803,-10725,0,0,57);
 
 INSERT INTO `teleport` VALUES
-('Clan Hall -> Execution Grounds',502,51055,141959,-2869,500,0,57),
-('Clan Hall -> Fortress of Resistance',503,47382,111278,-104,500,0,57),
-('Clan Hall -> Cruma Marshlands',504,5106,126916,-3664,500,0,57),
-('Clan Hall -> Cruma Tower Entrance',505,17192,114178,-3439,500,0,57),
- -- ('Clan Hall -> Mandragora Farm',506,17192,114178,-3439,500,0,57),-- dunno coords !
-('Clan Hall -> Town of Dion',507,15670,142983,-2705,500,0,57),
-('Clan Hall -> Floran Village',508,17430,170103,-3496,500,0,57),
- -- 509
-('Clan Hall -> Tanor Canyon',510,60374,164301,-2856,500,0,57),
-('Clan Hall -> Bee Hive',511,20505,189036,-3344,500,0,57),
- -- ('Clan Hall -> Dion Hills',512,20505,189036,-3344,500,0,57),-- dunno coords !
-('Clan Hall -> Floran Agricultural Area',513,26810,172787,-3376,500,0,57),-- needs confirming
-('Clan Hall -> Plains of Dion',514,630,179184,-3720,500,0,57),-- needs confirming
- -- 515
- -- 516
-('Clan Hall -> Hardin\'s Academy',517,105918,109759,-3207,500,0,57),
-('Clan Hall -> Dragon Valley',518,122824,110836,-3720,500,0,57),
- -- 519
- -- 520
-('Clan Hall -> Death Pass',521,70000,126636,-3804,500,0,57),
-('Clan Hall -> Pirate Tunnel',522,41298,200350,-4583,500,0,57),
- -- 523
-('Clan Hall -> Giran Harbor',524,47942,186764,-3485,500,0,57),
-('Clan Hall -> Giran Castle Town',525,83400,147943,-3404,500,0,57),
-('Clan Hall -> Giran Arena',526,73890,142656,-3778,500,0,57),
- -- 527
-('Clan Hall -> Breka\'s Stronghold',528,79798,130624,-3677,500,0,57),
-('Clan Hall -> Gorgon Flower Garden',529,113553,134813,-3640,500,0,57), -- needs confirming
- -- -----------------
-('Clan Hall -> Ivory Tower',581,85348,16142,-3699,500,0,57),
-('Clan Hall -> Town of Oren',582,82956,53162,-1495,500,0,57),
- -- 583
-('Clan Hall -> Plains of Lizardmen',584,87252,85514,-3056,500,0,57),
-('Clan Hall -> Skyshadow Meadow',585,82764,61145,-3502,500,0,57),
- -- ('Clan Hall -> Shilen\'s Garden',586,82764,61145,-3502,500,0,57), -- dunno coords !
- -- ('Clan Hall -> Black Rock Hill',587,82764,61145,-3502,500,0,57), -- dunno coords !
-('Clan Hall -> Spider Nest',588,-56532,78321,-2960,500,0,57),
-('Clan Hall -> Timak Outpost',589,67097,68815,-3648,500,0,57),-- needs confirming
- -- ('Clan Hall -> Ivory Tower Crater',590,-56532,78321,-2960,500,0,57),-- dunno coords !
-('Clan Hall -> Forest of Evil',591,93218,16969,-3904,500,0,57),-- needs confirming
-('Clan Hall -> Outlaw Forest',592,85995,-2433,-3528,500,0,57),
- -- ('Clan Hall -> Misty Mountains',593,85995,-2433,-3528,500,0,57),-- dunno coords !
- -- ('Clan Hall -> Starlight Waterfall',594,85995,-2433,-3528,500,0,57),-- dunno coords !
- -- ('Clan Hall -> Undine Waterfall',595,85995,-2433,-3528,500,0,57),-- dunno coords !
- -- ('Clan Hall -> The Gods\' Falls',596,85995,-2433,-3528,500,0,57), -- dunno coords !
- -- 597
-('Clan Hall -> Tower of Insolence',598,114649,11115,-5120,500,0,57),
-('Clan Hall -> The Blazing Swamp',599,146828,-12859,-4455,500,0,57),
- -- 600
-('Clan Hall -> The Forbidden Gateway',601,185395,20359,-3270,500,0,57),
-('Clan Hall -> The Giants Cave',602,174528,52683,-4369,500,0,57),
-('Clan Hall -> Northern Pathway of Enchanted Valley',603,104426,33746,-3800,500,0,57),
-('Clan Hall -> The Cemetery',604,172136,20325,-3326,500,0,57),
-('Clan Hall -> The Forest of Mirrors',605,150477,85907,-2753,500,0,57),
-('Clan Hall -> Anghel Waterfall',606,165584,85997,-2338,500,0,57),
-('Clan Hall -> Aden Castle Town',607,146331,25762,-2018,500,0,57),
-('Clan Hall -> Hunters Village',608,117110,76883,-2695,500,0,57),
-('Clan Hall -> Border Outpost(Aden Side)',609,109699,-7908,-2902,500,0,57),
-('Clan Hall -> Coliseum',610,150086,46733,-3412,500,0,57),
--- ('Clan Hall -> Narsell Lake',611,150086,46733,-3412,500,0,57),-- dunno coords !
- -- 612 
-('Clan Hall -> Ancient Battleground',613,106517,-2871,-3416,500,0,57),
-('Clan Hall -> Forsaken Plains',614,168217,37990,-4072,500,0,57),
-('Clan Hall -> Silent Valley',615,177318,48447,-3835,500,0,57),
-('Clan Hall -> Hunters Valley',616,114306,86573,-3112,500,0,57),-- needs confirming
-('Clan Hall -> Plains of Glory',617,135756,19557,-3424,500,0,57),-- needs confirming
-('Clan Hall -> Fields of Massacre',618,181726,-7524,-3464,500,0,57),
-('Clan Hall -> War-Torn Plains',619,156898,11217,-4032,500,0,57),-- needs confirming
-('Clan Hall -> Border Outpost(Unknown Side)',620,114172,-18034,-1875,500,0,57),
-('Clan Hall -> Rune Castle Town - Shopping Area',621,43835,-47749,-796,0,0,57),
-('Clan Hall -> Rune Castle Town - Temple',622,38303,-48044,897,0,0,57),
-('Clan Hall -> Rune Castle Town - North Gate',623,38956,-53648,-1343,0,0,57),
-('Clan Hall -> Rune Castle Town - Harbor',624,38025,-38359,-3608,0,0,57),
-('Clan Hall -> Beast Farm',625,42598,-88832,-3124,500,0,57),
-('Clan Hall -> Forest of the Dead - East Entrance',626,61868,-48890,-3128,500,0,57),
-('Clan Hall -> Forest of the Dead - West Entrance',627,45555,-56081,-3667,500,0,57),
-('Clan Hall -> Swamp of Screams - East Entrance',628,94152,-58694,-2832,500,0,57),
-('Clan Hall -> Swamp of Screams - West Entrance',629,69999,-49929,-3253,500,0,57),
-('Clan Hall -> Valley of the Saints',630,65800,-71526,-3747,500,0,57),
-('Clan Hall -> Village Square',631,147728,-56331,-2776,0,0,57),
-('Clan Hall -> North Gate Entrance',632,147731,-58930,-2976,0,0,57),
-('Clan Hall -> East Gate Entrance',633,150561,-57489,-2976,0,0,57),
-('Clan Hall -> West Gate Entrance',634,144866,-57464,-2976,0,0,57),
-('Clan Hall -> Forge of the Gods',635,168902,-116703,-2417,0,0,57),
-('Clan Hall -> Garden of Beasts',636,129138,-60864,-3576,500,0,57),
-('Clan Hall -> Swamp of Screams',637,70006,-49902,-3251,500,0,57),
-('Clan Hall -> Valley of Saints',638,67992,-72012,-3748,500,0,57),
-('Clan Hall -> Monastery of Silence',639,123743,-75032,-2902,500,0,57),
-('Clan Hall -> Wall of Argos',640,164564,-48145,-3536,500,0,57),
-('Clan Hall -> Hot Springs',641,144880,-113468,-2560,500,0,57),
-('Clan Hall -> Ketra Orc Outpost',642,146990,-67128,-3640,500,0,57),
-('Clan Hall -> Goddard Border Checkpoint',643,157560,-33269,-3320,500,0,57),
-('Clan Hall -> Aden Border Checkpoint',644,125381,-33536,-3848,500,0,57),
-('Clan Hall -> Garden of Beasts',645,129138,-60864,-3576,500,0,57),
-('Clan Hall -> Devil\'s Pass',646,106849,-62061,-2968,500,0,57),
-('Clan Hall -> Varka Silenos Outpost',647,125740,-40864,-3736,500,0,57),
-('Clan Hall -> Village Square',648,-82445,150788,-3129,0,0,57),
-('Clan Hall -> North Gate Entrance',649,-83331,148563,-3148,0,0,57),
-('Clan Hall -> East Gate Entrance',650,-78405,152723,-3181,0,0,57),
-('Clan Hall -> Nanmen Entrance',651,-77460,155995,-3194,0,0,57),
-('Clan Hall -> West Gate Entrance',652,-85138,152749,-3160,0,0,57),
-('Clan Hall -> Neutral Zone',653,-10612,75881,-3592,500,0,57),
-('Clan Hall -> Langk Lizardmen Dwellings',654,-36961,201895,-2760,500,0,57),
-('Clan Hall -> Windy Hill',655,-88539,83389,-2864,500,0,57),
-('Clan Hall -> Orc Barracks',656,-85329,106369,-3603,500,0,57),
-('Clan Hall -> Fellmere Harvesting Ground',657,-63736,101522,-3552,500,0,57),
-('Clan Hall -> Ruins of Agony',658,-41055,122647,-2889,500,0,57),
-('Clan Hall -> Abandoned Camp',659,-49853,147089,-2784,500,0,57),
-('Clan Hall -> Forgotten Temple',660,-52369,191259,-3610,500,0,57),
-('Clan Hall -> The Ant Nest',661,-14913,170017,-2893,500,0,57),
-('Clan Hall -> Wasteland',662,-47506,179572,-3669,500,0,57),
-('Clan Hall -> Ol Mahum Checkpoint',663,-17279,208954,-3664,500,0,57),
-('Clan Hall -> Ant Cave South Entrance',664,-16019,193365,-4488,500,0,57),
-('Clan Hall -> Ant Cave East Entrance',665,-10875,175962,-4152,500,0,57),
-('Clan Hall -> Ant Cave West Entrance',666,-25899,172857,-4186,500,0,57),
-('Clan Hall -> Altar of Rites',667,-44311,78617,-3744,500,0,57),
-('Clan Hall -> Windmill Hill',668,-75347,168800,-3632,500,0,57),
-('Clan Hall -> Giants Cave Upper Layer',669,183985,61424,-3992,500,0,57),
-('Clan Hall -> Giants Cave Lower Layer',670,191754,56760,-7624,500,0,57);
+-- Gludio
+('Clan Hall -> Village Square',500,-14393,123671,-3144,0,0,57),
+('Clan Hall -> East Gate Entrance',501,-11817,123652,-3079,0,0,57),
+('Clan Hall -> West Gate Entrance',502,-16796,124108,-3127,0,0,57),
+('Clan Hall -> South Gate Entrance',503,-14207,126547,-3151,0,0,57),
+('Clan Hall -> North Gate Entrance',504,-14591,121024,-2990,0,0,57),
+('Clan Hall -> Ruins of Agony',505,-41248,122848,-2912,500,0,57),
+('Clan Hall -> Ruins of Despair',506,-19120,136816,-3762,500,0,57),
+('Clan Hall -> The Ant Nest',507,-9959,176184,-4160,500,0,57),
+('Clan Hall -> Windawood Manor',508,-28327,155125,-3496,500,0,57),
+-- Gludin
+('Clan Hall -> Village Square',509,-82445,150788,-3129,0,0,57),
+('Clan Hall -> North Gate Entrance',510,-83331,148563,-3148,0,0,57),
+('Clan Hall -> East Gate Entrance',511,-78405,152723,-3181,0,0,57),
+('Clan Hall -> South Gate Entrance',512,-77460,155995,-3194,0,0,57),
+('Clan Hall -> West Gate Entrance',513,-85138,152749,-3160,0,0,57),
+('Clan Hall -> Windmill Hill',514,-75437,168800,-3632,500,0,57),
+('Clan Hall -> Fellmere Harvesting Grounds',515,-63736,101522,-3552,500,0,57),
+('Clan Hall -> Windy Hill',516,-88539,83389,-2864,500,0,57),
+('Clan Hall -> Abandoned Camp',517,-49853,147089,-2784,500,0,57),
+('Clan Hall -> Wastelands',518,-16526,208032,-3664,500,0,57),
+-- Dion
+('Clan Hall -> Village Square',519,19025,145245,-3107,0,0,57),
+('Clan Hall -> North Gate Entrance',520,21511,145866,-3153,0,0,57),
+('Clan Hall -> East Gate Entrance',521,18891,142365,-3051,0,0,57),
+('Clan Hall -> South Gate Entrance',522,17394,147593,-3129,0,0,57),
+('Clan Hall -> West Gate Entrance',523,16582,144130,-2960,0,0,57),
+('Clan Hall -> Cruma Marshlands',524,5106,126916,-3664,500,0,57),
+('Clan Hall -> Fortress of Resistance',525,47382,111278,-2104,500,0,57),
+('Clan Hall -> Plains of Dion',526,630,179184,-3720,500,0,57),
+('Clan Hall -> Tanor Canyon',527,60374,164301,-2856,500,0,57),
+('Clan Hall -> Entrance to Floran Village',528,17430,170103,-3506,500,0,57),
+-- Aden
+('Clan Hall -> Village Square',529,147450,28081,-2294,0,0,57),
+('Clan Hall -> East Gate Entrance',530,151950,25094,-2172,0,0,57),
+('Clan Hall -> West Gate Entrance',531,142593,26344,-2425,0,0,57),
+('Clan Hall -> South Gate Entrance',532,147503,32299,-2501,0,0,57),
+('Clan Hall -> North Gate Entrance',533,147465,20737,-2130,0,0,57),
+('Clan Hall -> Ancient Battleground',534,106517,-2871,-3454,500,0,57),
+('Clan Hall -> Enchanted Valley, Southern Region',535,124904,61992,-3973,500,0,57),
+('Clan Hall -> Enchanted Valley, Northern Region',536,104426,33746,-3825,500,0,57),
+('Clan Hall -> Blazing Swamp',537,155310,-16339,-3320,500,0,57),
+('Clan Hall -> Forest of Mirrors',538,142065,81300,-3000,500,0,57),
+('Clan Hall -> Anghel Waterfall',539,166182,91560,-3168,500,0,57),
+('Clan Hall -> South Entrance of Devastated Castle',540,181726,-7524,-3464,500,0,57),
+('Clan Hall -> West Area of the Devastated Castle',541,168779,-18790,-3184,500,0,57),
+('Clan Hall -> Seal of Shilen',542,184742,19745,-3168,500,0,57),
+('Clan Hall -> Forsaken Plains',543,168217,37990,-4072,500,0,57),
+('Clan Hall -> Tower of Insolence',544,114649,11115,-5120,500,0,57),
+('Clan Hall -> The Giants Cave Upper Layer',545,183985,61424,-3992,500,0,57),
+('Clan Hall -> The Giants Cave Lower Layer',546,191754,56760,-7624,500,0,57),
+-- Giran
+('Clan Hall -> Village Square',547,81749,149171,-3464,0,0,57),
+('Clan Hall -> North Gate Entrance',548,81525,143821,-3528,0,0,57),
+('Clan Hall -> East Gate Entrance',549,88342,147329,-3400,0,0,57),
+('Clan Hall -> South Gate Entrance',550,81548,152633,-3528,0,0,57),
+('Clan Hall -> West Gate Entrance',551,77305,148636,-3592,0,0,57),
+('Clan Hall -> Brekas Stronghold',552,85546,131328,-3672,500,0,57),
+('Clan Hall -> Devils Isle',553,43408,206881,-3752,500,0,57),
+('Clan Hall -> Dragon Valley',554,73024,118485,-3720,500,0,57),
+('Clan Hall -> Tanor Canyon',555,60374,164301,-2856,500,0,57),
+-- Goddard
+('Clan Hall -> Village Square',556,147728,-56331,-2776,0,0,57),
+('Clan Hall -> North Gate Entrance',557,147731,-58930,-2976,0,0,57),
+('Clan Hall -> East Gate Entrance',558,150561,-57489,-2976,0,0,57),
+('Clan Hall -> West Gate Entrance',559,144866,-57464,-2976,0,0,57),
+('Clan Hall -> Varka Silenos Stronghold',560,125740,-40864,-3736,500,0,57),
+('Clan Hall -> Ketra Orc Outpost',561,146990,-67128,-3640,500,0,57),
+('Clan Hall -> Entrance to the Forge of the Gods',562,169018,-116303,-2432,500,0,57),
+('Clan Hall -> Wall of Argos',563,165054,-47861,-3560,500,0,57),
+('Clan Hall -> Hot Springs',564,144880,-113468,-2560,500,0,57),
+-- Rune
+('Clan Hall -> Village Square',565,43889,-49101,-792,0,0,57),
+('Clan Hall -> South Gate Entrance',566,43307,-46563,-816,0,0,57),
+('Clan Hall -> North Gate Entrance',567,40909,-52670,-896,0,0,57),
+('Clan Hall -> Forest of the Dea',568,52107,-54328,-3158,500,0,57),
+('Clan Hall -> Wild Beast Pastures',569,43805,-88010,-2780,500,0,57),
+('Clan Hall -> Swamp of Screams',570,69340,-50203,-3314,500,0,57),
+('Clan Hall -> Valley of Saints',571,65307,-71445,-3696,500,0,57),
+('Clan Hall -> Monastery of Silence',572,106414,-87799,-2949,500,0,57),
+('Clan Hall -> Shyeeds Cavern',573,76911,-55295,-5824,500,0,57),
+-- Schuttgart
+('Clan Hall -> Village Square',574,87379,-142322,-1336,0,0,57),
+('Clan Hall -> West Gate Entrance',575,84753,-141051,-1536,0,0,57),
+('Clan Hall -> South Gate Entrance',576,87347,-139802,-1536,0,0,57),
+('Clan Hall -> East Gate Entrance',577,89959,-141034,-1536,0,0,57),
+('Clan Hall -> Crypts of Disgrace',578,47692,-115745,-3744,500,0,57),
+('Clan Hall -> Plunderous Plains',579,111965,-154172,-1528,500,0,57),
+('Clan Hall -> Den of Evil',580,68693,-110438,-1946,500,0,57),
+('Clan Hall -> Ice Merchant Cabin',581,113903,-108752,-860,500,0,57);
 
 -- Noblesse Teleport
 INSERT INTO `teleport` VALUES
 -- 1000 adena
-('Gludin Arena - 1000 adena',9000,-87328,142266,-3640,1000,1,57),
-('Coliseum - 1000 adena',9001,146440,46723,-3432,1000,1,57),
-('Giran Arena - 1000 adena',9002,73579,142709,-3768,1000,1,57),
-('Forgotten Temple - 1000 adena',9010,-54026,179504,-4640,1000,1,57),
-('Wasteland  - 1000 adena',9011,-47506,179572,-3632,1000,1,57),
-('The Giants Cave Upper Layer - 1000 adena',9020,183985,61424,-3992,1000,1,57),
-('Plains of Glory - 1000 adena',9021,135756,19557,-3424,1000,1,57),
-('War-Torn Plains - 1000 adena',9022,156898,11217,-4032,1000,1,57),
-('Tower of Insolence,3rd Floor - 1000 adena',9023,110848,16154,-2120,1000,1,57),
-('Tower of Insolence,5th Floor - 1000 adena',9024,118404,15988,832,1000,1,57),
-('Tower of Insolence,7th Floor - 1000 adena',9025,115064,12181,2960,1000,1,57),
-('Tower of Insolence,10th Floor - 1000 adena',9026,118525,16455,5984,1000,1,57),
-('Tower of Insolence,13th Floor - 1000 adena',9027,115384,16820,9000,1000,1,57),
-('Hunters Valley - 1000 adena',9028,114306,86573,-3112,1000,1,57),
-('Angel Waterfall - 1000 adena',9029,166182,91560,-3168,1000,1,57),
-('Forest of Mirrors - 1000 adena',9030,166080,75574,-2992,1000,1,57),
-('Enchanted Valley - 1000 adena',9031,114674,44150,-3376,1000,1,57),
-('Hunters Valley - 1000 adena',9032,114306,86573,-3112,1000,1,57),
-('The Giants Cave Lower Layer - 1000 adena',9033,191754,56760,-7624,1000,1,57),
-('Gorgon Flower Garden - 1000 adena',9040,113553,134813,-3640,1000,1,57),
-('Antharas Lair 1 - 1000 adena',9041,147071,120156,-4520,1000,1,57),
-('Antharas Lair 2 - 1000 adena',9042,151689,112615,-5520,1000,1,57),
-('Antharas Lair,Magic Force Field Bridge - 1000 adena',9043,146494,109285,-3448,1000,1,57),
-('Antharas Lair,Heart of Warding - 1000 adena',9044,154396,121235,-3808,1000,1,57),
-('Dragon Valley,Traders Post - 1000 adena',9045,122824,110836,-3720,1000,1,57),
-('Private Hardin\'s Academy - 1000 adena',9046,105918,109759,-3192,1000,1,57),
-('Forest of the Dead - 1000 adena',9050,54425,-41692,-3072,1000,1,57),
-('Valley of Saints - 1000 adena',9051,84092,-80084,-3504,1000,1,57),
-('Cursed Village - 1000 adena',9052,57670,-41672,-3144,1000,1,57),
-('Shyeed\'s Cavern - 1000 adena',9053,76911,-55295,-5824,1000,1,57),
-('Monastery of Silence - 1000 adena',9054,106414,-87799,-2920,1000,1,57),
-('Varka Silenos Village - 1000 adena',9060,107929,-52248,-2408,1000,1,57),
-('Ketra Orc Village - 1000 adena',9061,149817,-80053,-5576,1000,1,57),
-('Devil\'s Pass - 1000 adena',9062,106349,-61870,-2904,1000,1,57),
-('Garden of Beasts - 1000 adena',9063,132997,-60608,-2960,1000,1,57),
-('Hot Springs - 1000 adena',9064,144625,-101291,-3384,1000,1,57),
-('Wall of Argos - 1000 adena',9065,183140,-53307,-1896,1000,1,57),
-('Wall of Argos - 1000 adena',9066,183140,-53307,-1896,1000,1,57),
-('Four Sepulchers - 1000 adena',9067,178127,-84435,-7216,1000,1,57),
-('Imperial Tomb - 1000 adena',9068,186699,-75915,-2824,1000,1,57),
-('Forge of the Gods,entrance - 1000 adena',9069,169018,-116303,-2432,1000,1,57),
-('Forge of the Gods,entrance - 1000 adena',9070,169018,-116303,-2432,1000,1,57),
-('Forge of the Gods,lower level - 1000 adena',9071,179887,-111241,-5824,1000,1,57),
-('Execution Grounds - 1000 adena',9080,50568,152408,-2656,1000,1,57),
-('Floran Agricultural Area - 1000 adena',9081,26810,172787,-3376,1000,1,57),
-('Cruma Marshlands - 1000 adena',9082,5941,125455,-3640,1000,1,57),
-('Cruma Tower,1st Floor - 1000 adena',9083,17718,117315,-12064,1000,1,57),
-('Cruma Tower,2nd Floor - 1000 adena',9084,17728,110325,-9312,1000,1,57),
-('Frost Lake - 1000 adena',9090,107577,-122392,-3632,1000,1,57),
-('Crypts of Disgrace - 1000 adena',9091,44221,-114232,-2784,1000,1,57),
-('Sky Wagon Relic - 1000 adena',9092,121618,-141554,-1496,1000,1,57),
-('Evil Hunting Grounds - 1000 adena',9100,-6989,109503,-3040,1000,1,57),
-('Neutral Zone - 1000 adena',9101,-18415,85624,-3680,1000,1,57),
-('Dark Forest - 1000 adena',9102,-14129,27094,-3680,1000,1,57),
-('School of Dark Arts - 1000 adena',9103,-49185,49441,-5912,1000,1,57),
-('Elven Ruins - 1000 adena',9104,49315,248452,-5960,1000,1,57),
-('Immortal Plateau - 1000 adena',9105,-25309,-131569,-680,1000,1,57),
-('Mithril Mines - 1000 adena',9106,175499,-181586,-904,1000,1,57),
-('Abandoned Coal Mines - 1000 adena',9107,144706,-173223,-1520,1000,1,57),
-('Forest of Evil - 1000 adena',9110,93218,16969,-3904,1000,1,57),
-('Timak Outpost - 1000 adena',9111,67097,68815,-3648,1000,1,57),
-('Altar of Rites - 1000 adena',9112,-44566,77508,-3736,1000,1,57),
-('Fields of Silence - 1000 adena',9120,69748,186111,-2872,1000,1,57),
-('Field of Whispers - 1000 adena',9121,97786,209303,-3040,1000,1,57),
-('Alligator Island - 1000 adena',9122,113708,178387,-3232,1000,1,57),
-('Garden of Eva,entrance - 1000 adena',9123,82693,242220,-6712,1000,1,57),
-('Garden of Eva,2nd level - 1000 adena',9124,79248,247390,-8816,1000,1,57),
-('Garden of Eva,3rd level - 1000 adena',9125,77868,250400,-9328,1000,1,57),
-('Garden of Eva,4th level - 1000 adena',9126,78721,253309,-9840,1000,1,57),
-('Garden of Eva,5th level - 1000 adena',9127,82951,252354,-10592,1000,1,57),
+('Gludin Arena - 1000 adena',9000,-87328,142266,-3640,1000,1,57), -- retail
+('Coliseum - 1000 adena',9001,146440,46723,-3400,1000,1,57), -- retail
+('Giran Arena - 1000 adena',9002,73579,142709,-3768,1000,1,57), -- retail
+('Center of the Forgotten Temple - 1000 adena',9010,-54026,179504,-4650,1000,1,57), -- retail
+('Wastelands, Western Region  - 1000 adena',9011,-47506,179572,-3669,1000,1,57), -- retail
+('The Giant\'s Cave Upper Layer - 1000 adena',9020,183985,61424,-3992,1000,1,57), -- retail
+('Plains of Glory - 1000 adena',9021,135580,19467,-3424,1000,1,57), -- retail
+('War-Torn Plains - 1000 adena',9022,156898,11217,-4032,1000,1,57), -- retail
+('Tower of Insolence, 3rd Floor - 1000 adena',9023,110848,16154,-2120,1000,1,57), -- retail
+('Tower of Insolence, 5th Floor - 1000 adena',9024,118404,15988,832,1000,1,57), -- retail
+('Tower of Insolence, 7th Floor - 1000 adena',9025,115064,12181,2960,1000,1,57), -- retail
+('Tower of Insolence. 10th Floor - 1000 adena',9026,118525,16455,5984,1000,1,57), -- retail
+('Tower of Insolence. 13th Floor - 1000 adena',9027,115384,16820,9000,1000,1,57), -- retail
+('Hunters Valley - 1000 adena',9028,114306,86573,-3112,1000,1,57), -- retail
+('Anghel Waterfall - 1000 adena',9029,166182,91560,-3168,1000,1,57), -- retail
+('The Center of the Forest of Mirrors - 1000 adena',9030,166080,75574,-2992,1000,1,57), -- retail
+('The Center of the Enchanted Valley - 1000 adena',9031,114674,44150,-3376,1000,1,57), -- retail
+('Hunters Valley - 1000 adena',9032,114306,86573,-3112,1000,1,57), -- retail
+('The Giant\'s Cave Lower Layer - 1000 adena',9033,191754,56760,-7624,1000,1,57), -- retail
+('Gorgon Flower Garden - 1000 adena',9040,113553,134813,-3540,1000,1,57), -- retail
+('Antharas\' Lair - 1st Level - 1000 adena',9041,147071,120156,-4520,1000,1,57), -- retail
+('Antharas\' Lair - 2nd Level - 1000 adena',9042,151835,112977,-5520,1000,1,57), -- retail
+('Antharas\' Lair -  Magic Force Field Bridge - 1000 adena',9043,146494,109285,-3448,1000,1,57), -- retail
+('The Heart of Antharas\' Lair - 1000 adena',9044,154396,121235,-3808,1000,1,57), -- retail
+('The Center of Dragon Valley - 1000 adena',9045,122824,110836,-3808,1000,1,57), -- retail
+('Hardin\'s Private Academy - 1000 adena',9046,105918,109759,-3170,1000,1,57), -- retail
+('The Center of the Forest of the Dead - 1000 adena',9050,54425,-41692,-3072,1000,1,57), -- retail
+('The Center of the Valley of Saints - 1000 adena',9051,84092,-80084,-3504,1000,1,57), -- retail
+('Cursed Village - 1000 adena',9052,62084,-40935,-2802,1000,1,57), -- retail
+('Shyeed\'s Cavern - 1000 adena',9053,76911,-55295,-5824,1000,1,57), -- retail
+('Monastery of Silence - 1000 adena',9054,106414,-87799,-2949,1000,1,57), -- retail
+('Varka Silenos Village - 1000 adena',9060,107929,-52248,-2408,1000,1,57), -- retail
+('Ketra Orc Village - 1000 adena',9061,149817,-80053,-5576,1000,1,57), -- retail
+('Devil\'s Pass - 1000 adena',9062,106349,-61870,-2904,1000,1,57), -- retail
+('Garden of Wild Beasts - 1000 adena',9063,132997,-60608,-2960,1000,1,57), -- retail
+('The Center of the Hot Springs - 1000 adena',9064,144625,-101291,-3384,1000,1,57), -- retail
+('The Center of the Wall of Argos - 1000 adena',9065,183140,-53307,-1896,1000,1,57), -- retail
+('Shrine of Loyalty - 1000 adena',9066,191257,-59388,-2898,1000,1,57), -- retail
+('Four Sepulchers - 1000 adena',9067,178127,-84435,-7215,1000,1,57), -- retail
+('Imperial Tomb - 1000 adena',9068,186699,-75915,-2826,1000,1,57), -- retail
+('Forge of the Gods - Top Level - 1000 adena',9070,173436,-112725,-3680,1000,1,57), -- retail
+('Forge of the Gods - Lower Level - 1000 adena',9071,180260,-111913,-5851,1000,1,57), -- retail
+('Execution Grounds - 1000 adena',9080,50568,152408,-2656,1000,1,57), -- retail
+('Floran Agricultural Area - 1000 adena',9081,26810,172787,-3376,1000,1,57), -- retail
+('The Center of the Cruma Marshlands - 1000 adena',9082,5941,125455,-3400,1000,1,57), -- retail
+('Frost Lake - 1000 adena',9090,107577,-122392,-3632,1000,1,57), -- retail
+('Grave Robber Hideout - 1000 adena',9091,44221,-114232,-2784,1000,1,57), -- retail
+('Sky Wagon Relic - 1000 adena',9092,121618,-141554,-1496,1000,1,57), -- retail
+('Evil Hunting Grounds - 1000 adena',9100,-6989,109503,-3040,1000,1,57), -- retail
+('The Center of the Neutral Zone - 1000 adena',9101,-18415,85624,-3680,1000,1,57), -- retail
+('The Center of the Dark Forest - 1000 adena',9102,-14129,27094,-3680,1000,1,57), -- retail
+('Center of the School of Dark Arts - 1000 adena',9103,-49185,49441,-5912,1000,1,57), -- retail
+('Center of the Elven Ruins - 1000 adena',9104,49315,248452,-5960,1000,1,57), -- retail
+('Immortal Plateau, Northern Region - 1000 adena',9105,-25309,-131569,-680,1000,1,57), -- retail
+('The Center of the Mithril Mines - 1000 adena',9106,175499,-181586,-904,1000,1,57), -- retail
+('The Center of the Abandoned Coal Mines - 1000 adena',9107,144706,-173223,-1520,1000,1,57), -- retail
+('Forest of Evil - 1000 adena',9110,93218,16969,-3904,1000,1,57), -- retail
+('Timak Outpost - 1000 adena',9111,67097,68815,-3648,1000,1,57), -- retail
+('Altar of Rites - 1000 adena',9112,-44566,77508,-3736,1000,1,57), -- retail
+('Field of Silence (Western Section) - 1000 adena',9120,75387,195263,-3000,1000,1,57), -- retail
+('Field of Whispers (Eastern Section) - 1000 adena',9121,97786,209303,-3040,1000,1,57), -- retail
+('The Center of Alligator Island - 1000 adena',9122,113708,178387,-3232,1000,1,57), -- retail
+('Inside the Garden of Eva - 1000 adena',9123,82693,242220,-6712,1000,1,57), -- retail
+('Garden of Eva - 2nd Level - 1000 adena',9124,79248,247390,-8816,1000,1,57), -- retail
+('Garden of Eva - 3rd Level - 1000 adena',9125,77868,250400,-9328,1000,1,57), -- retail
+('Garden of Eva - 4th Level - 1000 adena',9126,78721,253309,-9840,1000,1,57), -- retail
+('Garden of Eva - 5th Level - 1000 adena',9127,82951,252354,-10592,1000,1,57), -- retail
+('Field of Silence Center - 1000 adena',9128,80987,182423,-3504,1000,1,57), -- retail
+('Field of Whispers Center - 1000 adena',9129,86147,218268,-3592,1000,1,57), -- retail
 -- Olympiad Token
-('Gludin Arena - 1 Noble Gate Pass',9900,-87328,142266,-3640,1,1,13722),
-('Coliseum - 1 Noble Gate Pass',9901,146440,46723,-3432,1,1,13722),
-('Giran Arena - 1 Noble Gate Pass',9902,73579,142709,-3768,1,1,13722),
-('Forgotten Temple - 1 Noble Gate Pass',9910,-54026,179504,-4640,1,1,13722),
-('Wasteland  - 1 Noble Gate Pass',9911,-47506,179572,-3632,1,1,13722),
-('The Giants Cave Upper Layer - 1 Noble Gate Pass',9920,183985,61424,-3992,1,1,13722),
-('Plains of Glory - 1 Noble Gate Pass',9921,135756,19557,-3424,1,1,13722),
-('War-Torn Plains - 1 Noble Gate Pass',9922,156898,11217,-4032,1,1,13722),
-('Tower of Insolence,3rd Floor - 1 Noble Gate Pass',9923,110848,16154,-2120,1,1,13722),
-('Tower of Insolence,5th Floor - 1 Noble Gate Pass',9924,118404,15988,832,1,1,13722),
-('Tower of Insolence,7th Floor - 1 Noble Gate Pass',9925,115064,12181,2960,1,1,13722),
-('Tower of Insolence,10th Floor - 1 Noble Gate Pass',9926,118525,16455,5984,1,1,13722),
-('Tower of Insolence,13th Floor - 1 Noble Gate Pass',9927,115384,16820,9000,1,1,13722),
-('Hunters Valley - 1 Noble Gate Pass',9928,114306,86573,-3112,1,1,13722),
-('Angel Waterfall - 1 Noble Gate Pass',9929,166182,91560,-3168,1,1,13722),
-('Forest of Mirrors - 1 Noble Gate Pass',9930,166080,75574,-2992,1,1,13722),
-('Enchanted Valley - 1 Noble Gate Pass',9931,114674,44150,-3376,1,1,13722),
-('Hunters Valley - 1 Noble Gate Pass',9932,114306,86573,-3112,1,1,13722),
-('The Giants Cave Lower Layer - 1 Noble Gate Pass',9933,191754,56760,-7624,1,1,13722),
-('Gorgon Flower Garden - 1 Noble Gate Pass',9940,113553,134813,-3640,1,1,13722),
-('Antharas Lair 1 - 1 Noble Gate Pass',9941,147071,120156,-4520,1,1,13722),
-('Antharas Lair 2 - 1 Noble Gate Pass',9942,151689,112615,-5520,1,1,13722),
-('Antharas Lair, Magic Force Field Bridge - 1 Noble Gate Pass',9943,146494,109285,-3448,1,1,13722),
-('Antharas Lair,Heart of Warding - 1 Noble Gate Pass',9944,154396,121235,-3808,1,1,13722),
-('Dragon Valley,Traders Post - 1 Noble Gate Pass',9945,122824,110836,-3720,1,1,13722),
-('Private Hardin\'s Academy - 1 Noble Gate Pass',9946,105918,109759,-3192,1,1,13722),
-('Forest of the Dead - 1 Noble Gate Pass',9950,54425,-41692,-3072,1,1,13722),
-('Valley of Saints - 1 Noble Gate Pass',9951,84092,-80084,-3504,1,1,13722),
-('Cursed Village - 1 Noble Gate Pass',9952,57670,-41672,-3144,1,1,13722),
-('Shyeed\'s Cavern - 1 Noble Gate Pass',9953,76911,-55295,-5824,1,1,13722),
-('Monastery of Silence - 1 Noble Gate Pass',9954,106414,-87799,-2920,1,1,13722),
-('Varka Silenos Village - 1 Noble Gate Pass',9960,107929,-52248,-2408,1,1,13722),
-('Ketra Orc Village - 1 Noble Gate Pass',9961,149817,-80053,-5576,1,1,13722),
-('Devil\'s Pass - 1 Noble Gate Pass',9962,106349,-61870,-2904,1,1,13722),
-('Garden of Beasts - 1 Noble Gate Pass',9963,132997,-60608,-2960,1,1,13722),
-('Hot Springs - 1 Noble Gate Pass',9964,144625,-101291,-3384,1,1,13722),
-('Wall of Argos - 1 Noble Gate Pass',9965,183140,-53307,-1896,1,1,13722),
-('Four Sepulchers - 1 Noble Gate Pass',9967,178127,-84435,-7216,1,1,13722),
-('Imperial Tomb - 1 Noble Gate Pass',9968,186699,-75915,-2824,1,1,13722),
-('Forge of the Gods,entrance - 1 Noble Gate Pass',9970,169018,-116303,-2432,1,1,13722),
-('Forge of the Gods,lower level - 1 Noble Gate Pass',9971,179887,-111241,-5824,1,1,13722),
-('Execution Grounds - 1 Noble Gate Pass',9980,50568,152408,-2656,1,1,13722),
-('Floran Agricultural Area - 1 Noble Gate Pass',9981,26810,172787,-3376,1,1,13722),
-('Cruma Marshlands - 1 Noble Gate Pass',9982,5941,125455,-3640,1,1,13722),
-('Cruma Tower,1st Floor - 1 Noble Gate Pass',9983,17718,117315,-12064,1,1,13722),
-('Cruma Tower,2nd Floor - 1 Noble Gate Pass',9984,17728,110325,-9312,1,1,13722),
-('Frost Lake - 1 Noble Gate Pass',9990,107577,-122392,-3632,1,1,13722),
-('Crypts of Disgrace - 1 Noble Gate Pass',9991,44221,-114232,-2784,1,1,13722),
-('Sky Wagon Relic - 1 Noble Gate Pass',9992,121618,-141554,-1496,1,1,13722),
-('Evil Hunting Grounds - 1 Noble Gate Pass',10000,-6989,109503,-3040,1,1,13722),
-('Neutral Zone - 1 Noble Gate Pass',10001,-18415,85624,-3680,1,1,13722),
-('Dark Forest - 1 Noble Gate Pass',10002,-14129,27094,-3680,1,1,13722),
-('School of Dark Arts - 1 Noble Gate Pass',10003,-49185,49441,-5912,1,1,13722),
-('Elven Ruins - 1 Noble Gate Pass',10004,49315,248452,-5960,1,1,13722),
-('Immortal Plateau - 1 Noble Gate Pass',10005,-25309,-131569,-680,1,1,13722),
-('Mithril Mines - 1 Noble Gate Pass',10006,175499,-181586,-904,1,1,13722),
-('Abandoned Coal Mines - 1 Noble Gate Pass',10007,144706,-173223,-1520,1,1,13722),
-('Forest of Evil - 1 Noble Gate Pass',10010,93218,16969,-3904,1,1,13722),
-('Timak Outpost - 1 Noble Gate Pass',10011,67097,68815,-3648,1,1,13722),
-('Altar of Rites - 1 Noble Gate Pass',10012,-44566,77508,-3736,1,1,13722),
-('Field of Silence - 1 Noble Gate Pass',10020,69748,186111,-2872,1,1,13722),
-('Field of Whispers - 1 Noble Gate Pass',10021,97786,209303,-3040,1,1,13722),
-('Alligator Island - 1 Noble Gate Pass',10022,113708,178387,-3232,1,1,13722),
-('Garden of Eva,entrance - 1 Noble Gate Pass',10023,82693,242220,-6712,1,1,13722),
-('Garden of Eva,2nd ring - 1 Noble Gate Pass',10024,79248,247390,-8816,1,1,13722),
-('Garden of Eva,3rd ring - 1 Noble Gate Pass',10025,77868,250400,-9328,1,1,13722),
-('Garden of Eva,4th ring - 1 Noble Gate Pass',10026,78721,253309,-9840,1,1,13722),
-('Garden of Eva,5th level - 1 Noble Gate Pass',10027,82951,252354,-10592,1,1,13722),
+('Gludin Arena - 1 Olympiad Token',9900,-87328,142266,-3640,1,1,13722), -- retail
+('Coliseum - 1 Olympiad Token',9901,146440,46723,-3400,1,1,13722), -- retail
+('Giran Arena - 1 Olympiad Token',9902,73579,142709,-3768,1,1,13722), -- retail
+('Center of the Forgotten Temple - 1 Olympiad Token',9910,-54026,179504,-4650,1,1,13722), -- retail
+('Wastelands, Western Region  - 1 Olympiad Token',9911,-47506,179572,-3669,1,1,13722), -- retail
+('The Giant\'s Cave Upper Layer - 1 Olympiad Token',9920,183985,61424,-3992,1,1,13722), -- retail
+('Plains of Glory - 1 Olympiad Token',9921,135580,19467,-3424,1,1,13722), -- retail
+('War-Torn Plains - 1 Olympiad Token',9922,156898,11217,-4032,1,1,13722), -- retail
+('Tower of Insolence, 3rd Floor - 1 Olympiad Token',9923,110848,16154,-2120,1,1,13722), -- retail
+('Tower of Insolence, 5th Floor - 1 Olympiad Token',9924,118404,15988,832,1,1,13722), -- retail
+('Tower of Insolence, 7th Floor - 1 Olympiad Token',9925,115064,12181,2960,1,1,13722), -- retail
+('Tower of Insolence. 10th Floor - 1 Olympiad Token',9926,118525,16455,5984,1,1,13722), -- retail
+('Tower of Insolence. 13th Floor - 1 Olympiad Token',9927,115384,16820,9000,1,1,13722), -- retail
+('Hunters Valley - 1 Olympiad Token',9928,114306,86573,-3112,1,1,13722), -- retail
+('Anghel Waterfall - 1 Olympiad Token',9929,166182,91560,-3168,1,1,13722), -- retail
+('The Center of the Forest of Mirrors - 1 Olympiad Token',9930,166080,75574,-2992,1,1,13722), -- retail
+('The Center of the Enchanted Valley - 1 Olympiad Token',9931,114674,44150,-3376,1,1,13722), -- retail
+('Hunters Valley - 1 Olympiad Token',9932,114306,86573,-3112,1,1,13722), -- retail
+('The Giant\'s Cave Lower Layer - 1 Olympiad Token',9933,191754,56760,-7624,1,1,13722), -- retail
+('Gorgon Flower Garden - 1 Olympiad Token',9940,113553,134813,-3540,1,1,13722), -- retail
+('Antharas\' Lair - 1st Level - 1 Olympiad Token',9941,147071,120156,-4520,1,1,13722), -- retail
+('Antharas\' Lair - 2nd Level - 1 Olympiad Token',9942,151835,112977,-5520,1,1,13722), -- retail
+('Antharas Lair, Magic Force Field Bridge - 1 Olympiad Token',9943,146494,109285,-3448,1,1,13722), -- retail
+('The Heart of Antharas\' Lair - 1 Olympiad Token',9944,154396,121235,-3808,1,1,13722), -- retail
+('The Center of Dragon Valley - 1 Olympiad Token',9945,122824,110836,-3720,1,1,13722), -- retail
+('Hardin\'s Private Academy - 1 Olympiad Token',9946,105918,109759,-3170,1,1,13722), -- retail
+('The Center of the Forest of the Dead - 1 Olympiad Token',9950,54425,-41692,-3072,1,1,13722), -- retail
+('The Center of the Valley of Saints - 1 Olympiad Token',9951,84092,-80084,-3504,1,1,13722), -- retail
+('Cursed Village - 1 Olympiad Token',9952,62084,-40935,-2802,1,1,13722), -- retail
+('Shyeed\'s Cavern - 1 Olympiad Token',9953,76911,-55295,-5824,1,1,13722), -- retail
+('Monastery of Silence - 1 Olympiad Token',9954,106414,-87799,-2949,1,1,13722), -- retail
+('Varka Silenos Village - 1000 adena',9960,107929,-52248,-2408,1,1,13722), -- retail
+('Ketra Orc Village - 1000 adena',9961,149817,-80053,-5576,1,1,13722), -- retail
+('Devil\'s Pass - 1000 adena',9962,106349,-61870,-2904,1,1,13722), -- retail
+('Garden of Wild Beasts - 1000 adena',9963,132997,-60608,-2960,1,1,13722), -- retail
+('The Center of the Hot Springs - 1000 adena',9964,144625,-101291,-3384,1,1,13722), -- retail
+('The Center of the Wall of Argos - 1000 adena',9965,183140,-53307,-1896,1,1,13722), -- retail
+('Shrine of Loyalty - 1000 adena',9966,191257,-59388,-2898,1,1,13722), -- retail
+('Four Sepulchers - 1000 adena',9967,178127,-84435,-7215,1,1,13722), -- retail
+('Imperial Tomb - 1000 adena',9968,186699,-75915,-2826,1,1,13722), -- retail
+('Forge of the Gods - Top Level - 1000 adena',9970,173436,-112725,-3680,1,1,13722), -- retail
+('Forge of the Gods - Lower Level - 1000 adena',9971,180260,-111913,-5851,1,1,13722), -- retail
+('Execution Grounds - 1 Olympiad Token',9980,50568,152408,-2656,1,1,13722), -- retail
+('Floran Agricultural Area - 1 Olympiad Token',9981,26810,172787,-3376,1,1,13722), -- retail
+('The Center of the Cruma Marshlands - 1 Olympiad Token',9982,5941,125455,-3400,1,1,13722), -- retail
+('Frost Lake - 1 Olympiad Token',9990,107577,-122392,-3632,1,1,13722), -- retail
+('Grave Robber Hideout - 1 Olympiad Token',9991,44221,-114232,-2784,1,1,13722), -- retail
+('Sky Wagon Relic - 1 Olympiad Token',9992,121618,-141554,-1496,1,1,13722), -- retail
+('Evil Hunting Grounds - 1 Olympiad Token',10000,-6989,109503,-3040,1,1,13722), -- retail
+('The Center of the Neutral Zone - 1 Olympiad Token',10001,-18415,85624,-3680,1,1,13722), -- retail
+('The Center of the Dark Forest - 1 Olympiad Token',10002,-14129,27094,-3680,1,1,13722), -- retail
+('Center of the School of Dark Arts - 1 Olympiad Token',10003,-49185,49441,-5912,1,1,13722), -- retail
+('Center of the Elven Ruins - 1 Olympiad Token',10004,49315,248452,-5960,1,1,13722), -- retail
+('Immortal Plateau, Northern Region - 1 Olympiad Token',10005,-25309,-131569,-680,1,1,13722), -- retail
+('The Center of the Mithril Mines - 1 Olympiad Token',10006,175499,-181586,-904,1,1,13722), -- retail
+('The Center of the Abandoned Coal Mines - 1 Olympiad Token',10007,144706,-173223,-1520,1,1,13722), -- retail
+('Forest of Evil - 1 Olympiad Token',10010,93218,16969,-3904,1,1,13722), -- retail
+('Timak Outpost - 1 Olympiad Token',10011,67097,68815,-3648,1,1,13722), -- retail
+('Altar of Rites - 1 Olympiad Token',10012,-44566,77508,-3736,1,1,13722), -- retail
+('Field of Silence (Western Section) - 1 Olympiad Token',10020,75387,195263,-3000,1,1,13722), -- retail
+('Field of Whispers (Eastern Section) - 1 Olympiad Token',10021,97786,209303,-3040,1,1,13722), -- retail
+('The Center of Alligator Island - 1 Olympiad Token',10022,113708,178387,-3232,1,1,13722), -- retail
+('Inside the Garden of Eva - 1 Olympiad Token',10023,82693,242220,-6712,1,1,13722), -- retail
+('Garden of Eva - 2nd Level - 1 Olympiad Token',10024,79248,247390,-8816,1,1,13722), -- retail
+('Garden of Eva - 3rd Level - 1 Olympiad Token',10025,77868,250400,-9328,1,1,13722), -- retail
+('Garden of Eva - 4th Level - 1 Olympiad Token',10026,78721,253309,-9840,1,1,13722), -- retail
+('Garden of Eva - 5th Level - 1 Olympiad Token',10027,82951,252354,-10592,1,1,13722), -- retail
 ('Ketra teleport - Goddard Castle Town',10028,147978,-55408,-2728,4900,0,57),
 ('Ketra teleport - Rune Castle Town',10029,43849,-47877,-792,22000,0,57),
 ('Ketra teleport - Aden Castle Town',10030,146705,25840,-2000,21000,0,57),
@@ -643,58 +612,11 @@ INSERT INTO `teleport` VALUES
 ('Varka teleport - Rune Castle Town',10034,43849,-47877,-792,12000,0,57),
 ('Varka teleport - Aden Castle Town',10035,146705,25840,-2000,17000,0,57),
 ('Varka teleport - Wall of Argos',10036,164564,-48145,-3536,11000,0,57),
-('Varka teleport - Hot Springs',10037,144880,-113468,-2560,14000,0,57);
+('Varka teleport - Hot Springs',10037,144880,-113468,-2560,14000,0,57),
+('Field of Silence Center - 1000 adena',10038,80987,182423,-3504,1,1,13722), -- retail
+('Field of Whispers Center - 1000 adena',10039,86147,218268,-3592,1,1,13722); -- retail
 
 INSERT INTO `teleport` VALUES
-('Clan Hall -> Center Town of Aden',12000,147450,28081,-2294,0,0,57),
-('Clan Hall -> North Town of Aden',12001,151950,25094,-2172,0,0,57),
-('Clan Hall -> East Town of Aden',12002,142593,26344,-2425,0,0,57),
-('Clan Hall -> South Town of Aden',12003,147503,32299,-2501,0,0,57),
-('Clan Hall -> West Town of Aden',12004,147465,20737,-2130,0,0,57),
-('Clan Hall -> Southern Pathway of Enchanted Valley',12005,124904,61992,-3920,500,0,57),
-('Clan Hall -> Blazing Swamp',12006,155310,-16339,-3320,500,0,57),
-('Clan Hall -> Plains of Glory',12007,133164,14036,-3888,500,0,57),
-('Clan Hall -> Plains of Fierce Battle',12008,153757,8905,-4024,500,0,57),
-('Clan Hall -> Path to Forest of Wirrors',12009,142065,81300,-3000,500,0,57),
-('Clan Hall -> Anghel Waterfall',12010,166182,91560,-3168,500,0,57),
-('Clan Hall -> West Area of Devastated Castle',12011,168779,-18790,-3184,500,0,57),
-('Clan Hall -> North Path to The Cementery',12012,175191,4082,-2863,500,0,57),
-('Clan Hall -> South Path to The Cementery',12013,175432,30299,-3773,500,0,57),
-('Clan Hall -> Seal of Shilen',12014,184742,19745,-3168,500,0,57),
-('Clan Hall -> Center of Giran Castle Town',12015,81749,149171,-3464,0,0,57),
-('Clan Hall -> North of Giran Castle Town',12016,81525,143821,-3528,0,0,57),
-('Clan Hall -> East of Giran Castle Town',12017,88342,147329,-3400,0,0,57),
-('Clan Hall -> South of Giran Castle Town',12018,81548,152633,-3528,0,0,57),
-('Clan Hall -> West of Giran Castle Town',12019,77305,148636,-3592,0,0,57),
-('Clan Hall -> Devils Isle',12020,43408,206881,-3752,500,0,57),
-('Clan Hall -> Center of Gludin Village',12021,-82445,150788,-3120,0,0,57),
-('Clan Hall -> North of Gludin Village',12022,-83331,148563,-3144,0,0,57),
-('Clan Hall -> East of Gludin Village',12023,-78405,152723,-3168,0,0,57),
-('Clan Hall -> South of Gludin Village',12024,-77460,155995,-3194,0,0,57),
-('Clan Hall -> West of Gludin Village',12025,-85138,152749,-3160,0,0,57),
-('Clan Hall -> Necropolis of Sacrifice',12026,-36961,201895,-2760,500,0,57),
-('Clan Hall -> Oracle Dusk',12027,-93453,89814,-3240,500,0,57),
-('Clan Hall -> Oracle of Dawn',12028,-85329,106369,-3603,500,0,57),
-('Clan Hall -> South Pathway to the Wasterland',12029,-17279,208954,-3664,500,0,57),
-('Clan Hall -> Wasterland',12030,-16526,208032,-3664,500,0,57),
-('Clan Hall -> North of Dion Castle Town',12041,21511,145866,-3153,0,0,57),
-('Clan Hall -> Center of Dion Castle Town',12040,19025,145245,-3107,0,0,57),
-('Clan Hall -> Center of Gludio Castle Town',12033,-14393,123671,-3144,0,0,57),
-('Clan Hall -> North of Gludio Castle Town',12035,-11817,123652,-3079,0,0,57),
-('Clan Hall -> East of Gludio Castle Town',12034,-16796,124108,-3127,0,0,57),
-('Clan Hall -> West of Gludio Castle Town',13037,-14591,121024,-2990,0,0,57),
-('Clan Hall -> Ruins of Despair',12038,-20767,136437,-3923,500,0,57),
-('Clan Hall -> The Ruins Bend',12039,-32664,148626,-3956,500,0,57),
-('Clan Hall -> East of Dion Castle Town',12042,18891,142365,-3051,0,0,57),
-('Clan Hall -> South of Dion Castle Town',12043,17394,147593,-3129,0,0,57),
-('Clan Hall -> West of Dion Castle Town',12044,16582,144130,-2960,0,0,57),
-('Clan Hall -> Plains of Dion',12031,9980,173167,-3734,500,0,57),
-('Clan Hall -> Piligrims Necropolis',12032,46428,127157,-3745,500,0,57),
-('Clan Hall -> Giran Territory',12045,69373,155208,-3746,500,0,57),
-('Clan Hall -> Center of Goddard Castle Town',12046,147728,-56331,-2776,0,0,57),
-('Clan Hall -> North of Goddard Castle Town',12047,147731,-58930,-2976,0,0,57),
-('Clan Hall -> East of Goddard Castle Town',12048,150561,-57489,-2976,0,0,57),
-('Clan Hall -> West of Goddard Castle Town',12049,144866,-57464,-2976,0,0,57),
 ('Gludio -> Kamael Village',12050,-117251,46771,360,12000,0,57),
 ('Dark Elf Village -> Kamael Village',12051,-117251,46771,360,13000,0,57),
 ('Orc Village -> Kamael Village',12052,-117251,46771,360,17000,0,57),
@@ -706,30 +628,22 @@ INSERT INTO `teleport` VALUES
 ('Nornil\'s Garden -> Soul Harbor',12058,-73494,53507,-3680,0,0,57),
 ('Underground Coliseum -> Fantasy Isle',12059,-59224,-56837,-2032,0,0,57),
 ('Fantasy Isle -> Underground Coliseum',12060,-81490,-49167,-10352,0,0,57),
-('Clan Hall Schuttgart -> Village Square',12061,87379,-142322,-1336,0,0,57),
-('Clan Hall Schuttgart -> West Gate Entrance',12062,84753,-141051,-1536,0,0,57),
-('Clan Hall Schuttgart -> South Gate Entrance',12063,87343,-139802,-1536,0,0,57),
-('Clan Hall Schuttgart -> East Gate Entrance',12064,89959,-141034,-1536,0,0,57),
-('Clan Hall Schuttgart -> Crypt of Disgrace',12065,47692,-115745,-3744,500,0,57),
-('Clan Hall Schuttgart -> Plunderous Plains',12066,111965,-154172,-1528,500,0,57),
-('Clan Hall Schuttgart -> Den of Evil',12067,68693,-110438,-1904,500,0,57),
-('Clan Hall Schuttgart -> Frozen Labyrinth',12068,113903,-108752,-848,500,0,57),
-('Dragonspine Fort -> Fort North Gate', 12100, 12497, 93855, -3425, 0, 0, 57),
-('Dragonspine Fort -> Fort South Gate', 12101, 10486, 96307, -3425, 0, 0, 57),
-('Dragonspine Fort -> Dion Town Square', 12102, 18748, 145437, -3127, 0, 0, 57),
-('Dragonspine Fort -> Oren Town Square', 12103, 82321, 55139, -1524, 0, 0, 57),
-('Dragonspine Fort -> The Ant Nest', 12104, -25832, 173118, -4154, 500, 0, 57),
-('Dragonspine Fort -> Windawood Manor', 12105, -25791, 162013, -2528, 500, 0, 57),
-('Dragonspine Fort -> Sea of Spores', 12106, 62425, 30856, -3774, 500, 0, 57),
-('Dragonspine Fort -> Ancient Battleground', 12107, 108264, -2846, -3428, 500, 0, 57),
+('Dragonspine Fort -> Fort North Gate', 12100, 12468, 93196, -3424, 0, 0, 57),
+('Dragonspine Fort -> Fort South Gate', 12101, 10494, 96881, -3424, 0, 0, 57),
+('Dragonspine Fort -> Dion Town Square', 12102, 19025, 145245, -3107, 0, 0, 57),
+('Dragonspine Fort -> Oren Town Square', 12103, 82323, 55466, -1480, 0, 0, 57),
+('Dragonspine Fort -> The Ant Nest', 12104, -9959, 176184, -4160, 500, 0, 57),
+('Dragonspine Fort -> Windawood Manor', 12105, -28327, 155125, -3496, 500, 0, 57),
+('Dragonspine Fort -> Sea of Spores', 12106, 64328, 26803, -3768, 500, 0, 57),
+('Dragonspine Fort -> Ancient Battleground', 12107, 118509, -4779, -4000, 500, 0, 57),
 ('Fantasy Isle -> Krateis Cube', 12108, -70293, -71029, -1416, 0, 0, 57),
 ('Krateis Cube -> Fantasy Isle', 12109, -59224, -56837, -2032, 0, 0, 57),
 ('Demon Fort -> Fortress West Gate', 12110, 98920, -56423, -624, 0, 0, 57),
 ('Demon Fort -> Fortress East Gate', 12111, 102390, -54320, -632, 0, 0, 57),
 ('Demon Fort -> Rune Town Square', 12112, 43889, -49101, -792, 0, 0, 57),
 ('Demon Fort -> Goddard Town Square', 12113, 147728, -56331, -2776, 0, 0, 57),
-('Demon Fort -> Swamp of Screams', 12114, 69340, -50203, -3288, 500, 0, 57),
-('Demon Fort -> Valley of Saints', 12115, 65307, -71445, -3688, 500, 0, 57),
+('Demon Fort -> Swamp of Screams', 12114, 69340, -50203, -3314, 500, 0, 57),
+('Demon Fort -> Valley of Saints', 12115, 65307, -71445, -3696, 500, 0, 57),
 ('Demon Fort -> Entrance to the Forge of the Gods', 12116, 169018, -116303, -2432, 500, 0, 57),
 ('Demon Fort -> Wall of Argos', 12117, 165054, -47861, -3560, 500, 0, 57),
 ('Gludio -> Airship dock', 12118, -149406, 255247, -80, 0, 0, 57),
@@ -745,36 +659,36 @@ INSERT INTO `teleport` VALUES
 ('Valley Fort -> Front of the Giran Castle Gate', 12126, 107954, 145841, -3224, 0, 0, 57),
 ('Valley Fort -> Brekas Stronghold', 12127, 85546, 131328, -3672, 500, 0, 57),
 ('Valley Fort -> Devils Isle', 12128, 43408, 206811, -3752, 500, 0, 57),
-('Valley Fort -> Dragon Valley', 12129, 73024, 118485, -3688, 500, 0, 57),
+('Valley Fort -> Dragon Valley', 12129, 73024, 118485, -3720, 500, 0, 57),
 ('Valley Fort -> Tanor Canyon', 12130, 60374, 164301, -2856, 500, 0, 57),
 ('Tanor Fort -> Fortress North Gate', 12131, 58923, 137789, -1752, 0, 0, 57),
 ('Tanor Fort -> Fortress South Gate', 12132, 61551, 141036, -1752, 0, 0, 57),
-('Tanor Fort -> Dion Town Square', 12133, 19025, 145245, -3120, 0, 0, 57),
+('Tanor Fort -> Dion Town Square', 12133, 19025, 145245, -3107, 0, 0, 57),
 ('Tanor Fort -> Giran Town Square', 12134, 81749, 149171, -3464, 0, 0, 57),
 ('Tanor Fort -> The Ant Nest', 12135, -9959, 176184, -4160, 500, 0, 57),
 ('Tanor Fort -> Windawood Manor', 12136, -28327, 155125, -3496, 500, 0, 57),
-('Tanor Fort -> Dragon Valley', 12137, 73024, 118485, -3688, 500, 0, 57),
+('Tanor Fort -> Dragon Valley', 12137, 73024, 118485, -3720, 500, 0, 57),
 ('Tanor Fort -> Tanor Canyon', 12138, 60374, 164301, -2856, 500, 0, 57),
 ('Handys Block -> Fantasy Isle', 12139, -59157, -56906, -2032, 0, 0, 57),
 ('Monastic Fort -> Fortress North Gate', 12140, 72388, -96770, -1424, 0, 0, 57),
 ('Monastic Fort -> Fortress South Gate', 12141, 71937, -92600, -1416, 0, 0, 57),
 ('Monastic Fort -> Rune Town Square', 12142, 43889, -49101, -792, 0, 0, 57),
 ('Monastic Fort -> Schuttgart Town Square', 12143, 87379, -142322, -1336, 0, 0, 57),
-('Monastic Fort -> Swamp of Screams', 12144, 69340, -50203, -3288, 500, 0, 57),
-('Monastic Fort -> Valley of Saints', 12145, 65307, -71445, -3688, 500, 0, 57),
-('Monastic Fort -> Den of Evil', 12146, 68693, -110438, -1904, 500, 0, 57),
-('Monastic Fort -> Frozen Labyrinth', 12147, 113910, -108732, -848, 500, 0, 57),
+('Monastic Fort -> Swamp of Screams', 12144, 69340, -50203, -3314, 500, 0, 57),
+('Monastic Fort -> Valley of Saints', 12145, 65307, -71445, -3696, 500, 0, 57),
+('Monastic Fort -> Den of Evil', 12146, 68693, -110438, -1946, 500, 0, 57),
+('Monastic Fort -> Ice Merchant Cabin', 12147, 113903, -108752, -860, 500, 0, 57),
 ('Narsell Fortress -> Fortress West Gate', 12148, 153112, 56872, -3256, 0, 0, 57),
 ('Narsell Fortress -> Fortress East Gate', 12149, 156730, 53921, -3256, 0, 0, 57),
-('Narsell Fortress -> Aden Town Square', 12150, 147450, 28081, -2264, 0, 0, 57),
+('Narsell Fortress -> Aden Town Square', 12150, 147450, 28081, -2294, 0, 0, 57),
 ('Narsell Fortress -> Front of the Aden Castle Gate', 12151, 147428, 20161, -2008, 0, 0, 57),
 ('Narsell Fortress -> Ancient Battleground', 12152, 118509, -4779, -4000, 500, 0, 57),
-('Narsell Fortress -> Enchanted Valley, Southern Region', 12153, 124904, 61992, -3920, 500, 0, 57),
-('Narsell Fortress -> Enchanted Valley, Northern Region', 12154, 104426, 33746, -3800, 500, 0, 57),
+('Narsell Fortress -> Enchanted Valley, Southern Region', 12153, 124904, 61992, -3973, 500, 0, 57),
+('Narsell Fortress -> Enchanted Valley, Northern Region', 12154, 104426, 33746, -3825, 500, 0, 57),
 ('Narsell Fortress -> Blazing Swamp', 12155, 155310, -16339, -3320, 500, 0, 57),
 ('Hive Fortress -> Fortress North Gate', 12156, 15383, 186025, -2920, 0, 0, 57),
 ('Hive Fortress -> Fortress South Gate', 12157, 18046, 190017, -2920, 0, 0, 57),
-('Hive Fortress -> Dion Town Square', 12158, 19025, 145245, -3120, 0, 0, 57),
+('Hive Fortress -> Dion Town Square', 12158, 19025, 145245, -3107, 0, 0, 57),
 ('Hive Fortress -> Front of the Dion Castle Gate', 12159, 19888, 153395, -3144, 0, 0, 57),
 ('Hive Fortress -> Cruma Marshlands', 12160, 5106, 126916, -3664, 500, 0, 57),
 ('Hive Fortress -> Fortress of Resistance', 12161, 47382, 111278, -2104, 500, 0, 57),
@@ -782,10 +696,10 @@ INSERT INTO `teleport` VALUES
 ('Hive Fortress -> Tanor Canyon', 12163, 60374, 164301, -2856, 500, 0, 57),
 ('White Sands Fortress -> Fortress West Gate', 12164, 116336, 203775, -3336, 0, 0, 57),
 ('White Sands Fortress -> Fortress East Gate', 12165, 120487, 206093, -3336, 0, 0, 57),
-('White Sands Fortress -> Heine Town Square', 12166, 111455, 219400, -3544, 0, 0, 57),
+('White Sands Fortress -> Heine Town Square', 12166, 111455, 219400, -3546, 0, 0, 57),
 ('White Sands Fortress -> Front of the Innadril Castle Gate', 12167, 117608, 241660, -1408, 0, 0, 57),
-('White Sands Fortress -> Field of Silence (Western Section)', 12168, 75387, 195263, -3000, 500, 0, 57),
-('White Sands Fortress -> Field of Whispers (Eastern Section)', 12169, 47382, 111278, -2104, 500, 0, 57),
+('White Sands Fortress -> Field of Silence (Western Section)', 12168, 80987, 182423, -3504, 500, 0, 57),
+('White Sands Fortress -> Field of Whispers (Eastern Section)', 12169, 86147, 218268, -3592, 500, 0, 57),
 ('White Sands Fortress -> The Center of Alligator Island', 12170, 113708, 178387, -3232, 500, 0, 57),
 ('White Sands Fortress -> Inside the Garden of Eva', 12171, 82693, 242220, -6712, 500, 0, 57),
 ('Archaic Fortress -> Fortress West Gate', 12172, 107248, -140450, -2960, 0, 0, 57),
@@ -794,104 +708,169 @@ INSERT INTO `teleport` VALUES
 ('Archaic Fortress -> Front of the Schuttgart Castle Gate', 12175, 76358, -145548, -1176, 0, 0, 57),
 ('Archaic Fortress -> Crypts of Disgrace', 12176, 47692, -115745, -3744, 500, 0, 57),
 ('Archaic Fortress -> Plunderous Plains', 12177, 111965, -154172, -1528, 500, 0, 57),
-('Archaic Fortress -> Den of Evil', 12178, 68693, -110438, -1904, 500, 0, 57),
-('Archaic Fortress -> Frozen Labyrinth', 12179, 113903, -108752, -848, 500, 0,57),
+('Archaic Fortress -> Den of Evil', 12178, 68693, -110438, -1946, 500, 0, 57),
+('Archaic Fortress -> Ice Merchant Cabin', 12179, 113903, -108752, -860, 500, 0,57),
 ('Shanty Fortress -> Fortress West Gate', 12180, -55240, 157193, -2048, 0, 0, 57),
 ('Shanty Fortress -> Fortress East Gate', 12181, -50296, 155793, -2056, 0, 0, 57),
-('Shanty Fortress -> Gludio Town Square', 12182, -14393, 123671, -3112, 0, 0, 57),
+('Shanty Fortress -> Gludio Town Square', 12182, -14393, 123671, -3144, 0, 0, 57),
 ('Shanty Fortress -> Front of the Gludio Castle Gate', 12183, -15043, 116596, -3208, 0, 0, 57),
-('Shanty Fortress -> Ruins of Agony', 12184, -41248, 122848, -2904, 500, 0, 57),
-('Shanty Fortress -> Ruins of Despair', 12185, -19120, 136816, -3752, 500, 0, 57),
+('Shanty Fortress -> Ruins of Agony', 12184, -41248, 122848, -2912, 500, 0, 57),
+('Shanty Fortress -> Ruins of Despair', 12185, -19120, 136816, -3762, 500, 0, 57),
 ('Shanty Fortress -> The Ant Nest', 12186, -9959, 176184, -4160, 500, 0, 57),
 ('Shanty Fortress -> Windawood Manor', 12187, -28327, 155125, -3496, 500, 0,57),
+('Ivory Fortress -> Fortress North Gate', 12188, 74367, 2533, -3040, 0, 0, 57),
+('Ivory Fortress -> Fortress South Gate', 12189, 71388, 6235, -3032, 0, 0, 57),
+('Ivory Fortress -> Oren Town Square', 12190, 82323, 55466, -1480, 0, 0, 57),
+('Ivory Fortress -> Front of the Oren Castle Gate', 12191, 75648, 39380, -2952, 0, 0, 57),
+('Ivory Fortress -> Sea of Spores', 12192, 64328, 26803, -3768, 500, 0, 57),
+('Ivory Fortress -> Enchanted Valley, Southern Region', 12193, 124904, 61992, -3973, 500, 0, 57),
+('Ivory Fortress -> Enchanted Valley, Northern Region', 12194, 104426, 33746, -3825, 500, 0, 57),
+('Ivory Fortress -> Ancient Battleground', 12195, 118509, -4779, -4000, 500, 0,57),
 ('Gludio Castle -> Front of the Gludio Castle',13000,-15043,116596,-3208,0,0,57),
-('Gludio Castle -> Gludio Town Square',13001,-14393,123671,-3112,0,0,57),
-('Gludio Castle -> Front of the Shanty Fortress',13002,-58761,154663,-2664,0,0,57),
+('Gludio Castle -> Gludio Town Square',13001,-14393,123671,-3144,0,0,57),
+('Gludio Castle -> Front of the Shanty Fortress',13002,-58761,154663,-2701,0,0,57),
 ('Gludio Castle -> Front of the Southern Fortress',13003,-29856,214275,-3680,0,0,57),
-('Gludio Castle -> Ruins of Agony',13004,-41248,122848,-2904,500,0,57),
-('Gludio Castle -> Ruins of Despair',13005,-19120,136816,-3752,500,0,57),
+('Gludio Castle -> Ruins of Agony',13004,-41248,122848,-2912,500,0,57),
+('Gludio Castle -> Ruins of Despair',13005,-19120,136816,-3762,500,0,57),
 ('Gludio Castle -> The Ant Nest',13006,-9959,176184,-4160,500,0,57),
 ('Gludio Castle -> Windawood Manor',13007,-28327,155125,-3496,500,0,57),
-('Dion Castle -> Front Of Dion Castle',13008,17433,147442,-3147,0,0,57),
-('Dion Castle -> Dion Town Square',13009,18643,145420,-3152,0,0,57),
-('Dion Castle -> Front of the Hive Fortress',13010,15384,182932,-3593,0,0,57),
-('Dion Castle -> Front of the Dragonspine Fortress',13011,14480,90563,-3734,0,0,57),
-('Dion Castle -> Cruma Tower',13012,17225,114173,-3440,500,0,57),
-('Dion Castle -> Plains of Dion',13013,630,179184,-3720,500,0,57),
-('Dion Castle -> Bee Hive',13014,34475,188095,-2976,500,0,57),
-('Dion Castle -> Tanor Canyon',13015,58316,163851,-2816,500,0,57),
-('Giran Castle -> Front Of Giran Castle',13016,88415,147363,-3431,0,0,57),
-('Giran Castle -> Giran Town Square',13017,81925,149104,-3495,0,0,57),
-('Giran Castle -> Front of the Valley Fortress',13018,125041,128644,-3118,0,0,57),
-('Giran Castle -> Front of the Tanor Fortress',13019,63269,141424,-2415,0,0,57),
-('Giran Castle -> Dragon Valley',13020,73024,118485,-3688,500,0,57),
-('Giran Castle -> Antharas Lair',13021,131557,114509,-3712,500,0,57),
-('Giran Castle -> Devils Isle',13022,43408,206881,-3752,500,0,57),
-('Giran Castle -> Brekas Stronghold',13023,85546,131328,-3672,500,0,57),
-('Oren Castle -> Front Of Oren Castle',13024,81030,52096,-1752,0,0,57),
-('Oren Castle -> Oren Town Square',13025,82402,53568,-1522,0,0,57),
-('Oren Castle -> Front of the Ivory Fortress',13026,77376,941,-3708,0,0,57),
-('Oren Castle -> Front of the Antharas Fortress',13027,84942,89019,-3367,0,0,57),
-('Oren Castle -> Skyshadow Meadow',13028,89914,46276,-3616,500,0,57),
-('Oren Castle -> Plains of the Lizardmen',13029,87252,85514,-3056,500,0,57),
-('Oren Castle -> Outlaw Forest',13030,91539,-12204,-2440,500,0,57),
-('Oren Castle -> Sea of Spores',13031,64328,26803,-3768,500,0,57),
-('Aden Castle -> Front Of Aden Castle',13032,147428,20161,-2008,0,0,57),
-('Aden Castle -> Aden Town Square',13033,147450,28081,-2264,0,0,57),
+('Dion Castle -> Front of Dion Castle',13008,19888,19888,-3144,0,0,57),
+('Dion Castle -> Dion Town Square',13009,19025,145245,-3107,0,0,57),
+('Dion Castle -> Front of the Hive Fortress',13010,20126,188254,-3392,0,0,57),
+('Dion Castle -> Entrance to Floran Village',13011,17430,170103,-3506,0,0,57),
+('Dion Castle -> Cruma Marshlands',13012,5106,126916,-3664,500,0,57),
+('Dion Castle -> Fortress of Resistance',13013,47382,111278,-2104,500,0,57),
+('Dion Castle -> Plains of Dion',13014,630,179184,-3720,500,0,57),
+('Dion Castle -> Tanor Canyon',13015,60374,164301,-2856,500,0,57),
+('Giran Castle -> Front of Giran Castle',13016,107954,145841,-3224,0,0,57),
+('Giran Castle -> Giran Town Square',13017,81749,149171,-3464,0,0,57),
+('Giran Castle -> Front of the Valley Fortress',13018,125934,118277,-3080,0,0,57),
+('Giran Castle -> Giran Harbor',13019,47938,186864,-3420,0,0,57),
+('Giran Castle -> Brekas Stronghold',13020,85546,131328,-3672,500,0,57),
+('Giran Castle -> Devils Isle',13021,43408,206881,-3752,500,0,57),
+('Giran Castle -> Dragon Valley',13022,73024,118485,-3720,500,0,57),
+('Giran Castle -> Tanor Canyon',13023,60374,164301,-2856,500,0,57),
+('Oren Castle -> Front of Oren Castle',13024,75648,39380,-2952,0,0,57),
+('Oren Castle -> Oren Town Square',13025,82323,55466,-1480,0,0,57),
+('Oren Castle -> Front of the Ivory Fortress',13026,77023,1591,-3608,0,0,57),
+('Oren Castle -> Ivory Tower',13027,85391,16228,-3640,500,0,57),
+('Oren Castle -> Near the frontier post',13028,109721,7394,-2800,500,0,57),
+('Oren Castle -> Sea of Spores',13029,64328,26803,-3768,500,0,57),
+('Oren Castle -> Enchanted Valley, Southern Region',13030,124904,61992,-3973,500,0,57),
+('Oren Castle -> Ancient Battleground',13031,118509,4779,-4000,500,0,57),
+('Aden Castle -> Front of Aden Castle',13032,147428,20161,-2008,0,0,57),
+('Aden Castle -> Aden Town Square',13033,147450,28081,-2294,0,0,57),
 ('Aden Castle -> Front of the Narsell Fortress',13034,160702,51661,-3512,0,0,57),
-('Aden Castle -> Front of the Bayou Fortress',13035,189664,46042,-4264,0,0,57),
-('Aden Castle -> Enchanted Valley, Northen Region',13036,104426,33746,-3800,500,0,57),
-('Aden Castle -> Blazing Swamp',13071,159676,-13544,-2832,500,0,57),
+('Aden Castle -> Front of the Basin Fortress',13035,189664,46042,-4264,0,0,57),
+('Aden Castle -> Enchanted Valley, Northen Region',13036,104426,33746,-3825,500,0,57),
+('Aden Castle -> Blazing Swamp',13071,155310,-16339,-3320,500,0,57),
 ('Aden Castle -> Forest of Mirrors',13038,142065,81300,-3000,500,0,57),
-('Aden Castle -> Anghel Waterfall',13039,166182,91560,-3160,500,0,57),
-('Innadril Castle -> Front Of Innadril Castle',13040,118795,219276,-3611,0,0,57),
-('Innadril Castle -> Innadril Town Square',13041,110788,220506,-3697,0,0,57),
-('Innadril Castle -> Front of the White Sands Fortress',13042,124542,207762,-3240,0,0,57),
+('Aden Castle -> Anghel Waterfall',13039,166182,91560,-3168,500,0,57),
+('Aden Castle -> The Giants Cave Upper Layer',13072,183985,61424,-3992,500,0,57),
+('Aden Castle -> The Giants Cave Lower Layer',13073,191754,56760,-7624,500,0,57),
+('Innadril Castle -> Front of Innadril Castle',13040,117608,241660,-1408,0,0,57),
+('Innadril Castle -> Innadril Town Square',13041,111455,219400,-3546,0,0,57),
+('Innadril Castle -> Front of the White Sands Fortress',13042,124651,207877,-3184,0,0,57),
 ('Innadril Castle -> The Center of Alligator Island',13043,113708,178387,-3232,500,0,57),
-('Innadril Castle -> Field of Silence',13044,75387,195263,-3000,500,0,57),
-('Innadril Castle -> Field of Whispers',13045,97786,209303,-3040,500,0,57),
+('Innadril Castle -> Field of Silence',13044,80987,182423,-3504,500,0,57),
+('Innadril Castle -> Field of Whispers',13045,86147,218268,-3592,500,0,57),
 ('Innadril Castle -> Inside the Garden of Eva',13046,82693,242220,-6712,500,0,57),
-('Goddard Castle -> Front Of Goddard Castle',13047,144253,-57895,-3032,0,0,57),
-('Goddard Castle -> Goddard Town Square',13048,147699,-56530,-2807,0,0,57),
-('Goddard Castle -> Front of the Borderland Fortress',13049,161963,-74544,-3078,0,0,57),
-('Goddard Castle -> Front of the Demon Fortress',13050,105983,-59121,-1328,0,0,57),
-('Goddard Castle -> Varka Silenos Stronghold',13051,125740,-40864,-3726,500,0,57),
+('Goddard Castle -> Front of Goddard Castle',13047,153996,-50182,-2992,0,0,57),
+('Goddard Castle -> Goddard Town Square',13048,147728,-56331,-2776,0,0,57),
+('Goddard Castle -> Front of the Borderland Fortress',13049,153460,-70055,-3312,0,0,57),
+('Goddard Castle -> Hot Springs',13050,144880,-113468,-2560,500,0,57),
+('Goddard Castle -> Varka Silenos Stronghold',13051,125740,-40864,-3736,500,0,57),
 ('Goddard Castle -> Ketra Orc Outpost',13052,146990,-67128,-3640,500,0,57),
-('Goddard Castle -> Hot Springs',13053,144880,-113468,-2560,500,0,57),
+('Goddard Castle -> Entrance to the Forge of the Gods',13053,169018,-116303,-2432,500,0,57),
 ('Goddard Castle -> Wall of Argos',13054,165054,-47861,-3560,500,0,57),
-('Rune Castle -> Front Of Rune Castle',13055,27400,-49180,-1320,0,0,57),
+('Rune Castle -> Front of Rune Castle',13055,27400,-49180,-1320,0,0,57),
 ('Rune Castle -> Rune Town Square',13056,43889,-49101,-792,0,0,57),
 ('Rune Castle -> Front of the Swamp Fortress',13057,71814,-57054,-3088,0,0,57),
-('Rune Castle -> Forest of the Dead',13058,52107,-54328,-3152,500,0,57),
-('Rune Castle -> Wild Beast Pastures',13059,43805,-88010,-2752,500,0,57),
-('Rune Castle -> Swamp of Screams',13060,69340,-50203,-3288,500,0,57),
-('Rune Castle -> Valley of Saints',13061,65307,-71445,-3688,500,0,57),
-('Rune Castle -> Monastery of Silence',13062,106414,-87799,-2920,500,0,57),
+('Rune Castle -> Forest of the Dead',13058,52107,-54328,-3158,500,0,57),
+('Rune Castle -> Wild Beast Pastures',13059,43805,-88010,-2780,500,0,57),
+('Rune Castle -> Swamp of Screams',13060,69340,-50203,-3314,500,0,57),
+('Rune Castle -> Valley of Saints',13061,65307,-71445,-3696,500,0,57),
+('Rune Castle -> Monastery of Silence',13062,106414,-87799,-2949,500,0,57),
 ('Rune Castle -> Shyeeds Cavern',14063,76911,-55295,-5824,500,0,57),
-('Schuttgart Castle -> Front Of Schuttgart Castle',13063,84233,-140659,-1638,0,0,57),
-('Schuttgart Castle -> Schuttgart Town Square',13064,87379,-142049,-1367,0,0,57),
-('Schuttgart Castle -> Front of the Archaic Fortress',13065,105039,-140416,-3300,0,0,57),
-('Schuttgart Castle -> Front of the Monastic Fortress',13066,70539,-90311,-2039,0,0,57),
+('Schuttgart Castle -> Front of Schuttgart Castle',13063,76358,-145548,-1176,0,0,57),
+('Schuttgart Castle -> Schuttgart Town Square',13064,87379,-142322,-1336,0,0,57),
+('Schuttgart Castle -> Front of the Archaic Fortress',13065,105007,-140874,-3360,0,0,57),
+('Schuttgart Castle -> The Center of the Abandoned Coal Mines',13066,144706,-173223,-1520,500,0,57),
 ('Schuttgart Castle -> Plunderous Plains',13067,111965,-154172,-1528,500,0,57),
-('Schuttgart Castle -> Frozen Labyrinth',13068,113903,-108752,-848,500,0,57),
-('Schuttgart Castle -> Crypts of Disgrace',13069,47692,-115745,-3744,500,0,57),
-('Schuttgart Castle -> Pavel Ruins',13070,91280,-117152,-3928,500,0,57),
-('Borderland Fort -> Fortress North Gate', 14071,156997,-68857,-2866,0,0,57),
-('Borderland Fort -> Fortress South Gate', 14064,161574,-71979,-2866,0,0,57),
-('Borderland Fort -> Goddard Town Square', 14065,147682,-56426,-2781,0,0,57),
-('Borderland Fort -> Front of Goddard Castle',14066,154660,-51605,-3012,500,0,57),
-('Borderland Fort -> Varkas Outpost', 14067,125894,-40853,-3771,500,0,57),
-('Borderland Fort -> Ketra Barracks',14068,130498,-72324,-3533,500,0,57),
+('Schuttgart Castle -> Den of Evil',13068,68693,-110438,-1946,500,0,57),
+('Schuttgart Castle -> Ice Merchant Cabin',13069,113903,-108752,-860,500,0,57),
+('Schuttgart Castle -> Crypts of Disgrace',13070,47692,-115745,-3744,500,0,57),
+('Borderland Fort -> Fortress West Gate', 14071,157017,-68977,-2864,0,0,57),
+('Borderland Fort -> Fortress East Gate', 14064,161618,-72057,-2864,0,0,57),
+('Borderland Fort -> Goddard Town Square', 14065,147728,-56331,-2776,0,0,57),
+('Borderland Fort -> Front of Goddard Castle',14066,153996,-50182,-2992,500,0,57),
+('Borderland Fort -> Varka Silenos Stronghold', 14067,125740,-40864,-3736,500,0,57),
+('Borderland Fort -> Ketra Orc Outpost',14068,146990,-67128,-3640,500,0,57),
 ('Borderland Fort -> Forge of the Gods Entrance',14069,169018,-116303,-2432,500,0,57),
 ('Borderland Fort -> Wall of Argos', 14070,165054,-47861,-3560,500,0,57),
 ('Floran Fort -> Fortress West Gate',14072,3798,148797,-2888,0,0,57),
 ('Floran Fort -> Fortress East Gate',14073,7693,150682,-2888,0,0,57),
-('Floran Fort -> Gludio Town Square',14074,-14393,123671,-3112,0,0,57),
-('Floran Fort -> Dion Town Square',14075,19025,145245,-3120,0,0,57),
+('Floran Fort -> Gludio Town Square',14074,-14393,123671,-3144,0,0,57),
+('Floran Fort -> Dion Town Square',14075,19025,145245,-3107,0,0,57),
 ('Floran Fort -> The Ant Nest',14076,-9959,176184,-4160,500,0,57),
 ('Floran Fort -> Windawood Manor',14077,-28327,155125,-3496,500,0,57),
 ('Floran Fort -> Plains of Dion',14078,630,179184,-3720,500,0,57),
-('Floran Fort -> Tanor Canyon',14079,60374,164301,-2856,500,0,57);
+('Floran Fort -> Tanor Canyon',14079,60374,164301,-2856,500,0,57),
+('Swamp Fortress -> Fortress North Gate',14080,68692,-63928,-2784,0,0,57),
+('Swamp Fortress -> Fortress South Gate',14081,70820,-58862,-2784,0,0,57),
+('Swamp Fortress -> Rune Town Square',14082,43889,-49101,-792,0,0,57),
+('Swamp Fortress -> Front of the Rune Castle Gate',14083,27400,-49180,-1320,0,0,57),
+('Swamp Fortress -> Forest of the Dead',14084,52107,-54328,-3158,500,0,57),
+('Swamp Fortress -> Wild Beast Pastures',14085,43805,-88010,-2780,500,0,57),
+('Swamp Fortress -> Swamp of Screams',14086,69340,-50203,-3314,500,0,57),
+('Swamp Fortress -> Valley of Saints',14087,65307,-71445,-3696,500,0,57),
+('Swamp Fortress -> Shyeeds Cavern',14088,76911,-55295,-5824,500,0,57),
+('Cloud Mountain -> Fortress North Gate',14089,-54275,89255,-2824,0,0,57),
+('Cloud Mountain -> Fortress South Gate',14090,-52274,93334,-2816,0,0,57),
+('Cloud Mountain -> Gludio Town Square',14091,-14393,123671,-3144,0,0,57),
+('Cloud Mountain -> Oren Town Square',14092,82323,55466,-1480,0,0,57),
+('Cloud Mountain -> The Ant Nest',14093,-9959,176184,-4160,500,0,57),
+('Cloud Mountain -> Windawood Manor',14094,-28327,155125,-3496,500,0,57),
+('Cloud Mountain -> Sea of Spores',14095,64328,26803,-3768,500,0,57),
+('Cloud Mountain -> Ancient Battleground',14096,118509,-4779,-4000,500,0,57),
+('Antharas Fortress -> Fortress West Gate',14097,77834,89176,-2880,0,0,57),
+('Antharas Fortress -> Fortress East Gate',14098,80441,92831,-2880,0,0,57),
+('Antharas Fortress -> Oren Town Square',14099,82323,55466,-1480,0,0,57),
+('Antharas Fortress -> Giran Town Square',14100,81749,149171,-3464,0,0,57),
+('Antharas Fortress -> Sea of Spores',14101,64328,26803,-3768,500,0,57),
+('Antharas Fortress -> Ancient Battleground',14102,118509,-4779,-4000,500,0,57),
+('Antharas Fortress -> Dragon Valley',14103,73024,118485,-3720,500,0,57),
+('Antharas Fortress -> Tanor Canyon',14104,60374,164301,-2856,500,0,57),
+('Western Fortress -> Fortress North Gate',14105,112356,-17243,-992,0,0,57),
+('Western Fortress -> Fortress South Gate',14106,110349,-13288,-922,0,0,57),
+('Western Fortress -> Aden Town Square',14107,147450,28081,-2294,0,0,57),
+('Western Fortress -> Oren Town Square',14108,82323,55466,-1480,0,0,57),
+('Western Fortress -> Goddard Town Square',14109,147728,-56331,-2776,0,0,57),
+('Western Fortress -> Enchanted Valley, Northern Region',14110,104426,33746,-3825,500,0,57),
+('Western Fortress -> Blazing Swamp',14111,155310,-16339,-3320,500,0,57),
+('Western Fortress -> Ancient Battleground',14112,118509,4779,-4000,500,0,57),
+('Western Fortress -> Entrance to the Forge of the Gods',14113,169018,-116303,-2432,500,0,57),
+('Western Fortress -> Wall of Argos',14114,165054,-47861,-3560,500,0,57),
+('Western Fortress -> The Giants Cave Upper Layer',14115,183985,61424,-3992,500,0,57),
+('Western Fortress -> The Giants Cave Lower Layer',14116,191754,56760,-7624,500,0,57),
+('Hunters Fortress -> Fortress North Gate',14117,124180,93249,-2144,0,0,57),
+('Hunters Fortress -> Fortress South Gate',14118,126155,97124,-2144,0,0,57),
+('Hunters Fortress -> Aden Town Square',14119,147450,28081,-2294,0,0,57),
+('Hunters Fortress -> Giran Town Square',14120,81749,149171,-3464,0,0,57),
+('Hunters Fortress -> Enchanted Valley, Northern Region',14121,104426,33746,-3825,500,0,57),
+('Hunters Fortress -> Blazing Swamp',14122,155310,-16339,-3320,500,0,57),
+('Hunters Fortress -> Dragon Valley',14123,73024,118485,-3720,500,0,57),
+('Hunters Fortress -> Tanor Canyon',14124,60374,164301,-2856,500,0,57),
+('Hunters Fortress -> The Giants Cave Upper Layer',14125,183985,61424,-3992,500,0,57),
+('Hunters Fortress -> The Giants Cave Lower Layer',14126,191754,56760,-7624,500,0,57),
+('Aaru Fortress -> Fortress North Gate',14127,73205,183893,-2584,0,0,57),
+('Aaru Fortress -> Fortress South Gate',14128,72822,188128,-2584,0,0,57),
+('Aaru Fortress -> Heine Town Square',14129,111455,219400,-3546,0,0,57),
+('Aaru Fortress -> Giran Town Square',14130,81749,149171,-3464,0,0,57),
+('Aaru Fortress -> Inside the Garden of Eva',14131,82693,242220,-6712,500,0,57),
+('Aaru Fortress -> The Center of Alligator Island',14132,113708,178387,-3232,500,0,57),
+('Aaru Fortress -> Dragon Valley',14133,73024,118485,-3720,500,0,57),
+('Aaru Fortress -> Tanor Canyon',14134,60374,164301,-2856,500,0,57);
 
 -- Castle teleports
 INSERT INTO `teleport` VALUES
@@ -975,7 +954,7 @@ INSERT INTO `teleport` VALUES
 ('Giant\'s Cave -> Lower',200919,191754,56760,-7624,0,0,57),
 ('Giant\'s Cave -> Upper',200920,183985,61424,-3992,0,0,57),
 ('Giran Harbor -> Pirate\'s Palace',200921,52241,218775,-3224,0,0,57),
-('Aden GK -> The Giant\'s Cave',200922,174491,50942,-4360,7400,0,57),
+('Aden GK -> The Giant\'s Cave',200922,174491,50942,-4360,7400,0,57), -- retail
 ('FoG Entrance -> FoG Upper Level',200923,173492,-112272,-5192,0,0,57),
 ('Krun -> Enter Mines ',200924,173462,-174011,3480,0,0,57),
 ('Tarum -> Enter Mines ',200925,179299,-182831,-224,0,0,57),
@@ -990,6 +969,6 @@ INSERT INTO `teleport` VALUES
 ('Schuttgart -> Mithril Mines',15003,171946,-173352,3440,5300,0,57),
 ('Entrance SOA -> Enter the Seed of Annihilation',15004,-180218,185923,-10576,0,0,57),
 ('Enter the Seed of Annihilation -> Entrance SOA',15005,-178262,153430,2472,0,0,57),
-('Keucereus Alliance Base -> Seed of Infinity Dock',15006,-212843,209695,4280,150000,0,57),
-('Keucereus Alliance Base -> Seed of Destruction Dock',15007,-248535,250273,4336,150000,0,57),
-('Keucereus Alliance Base -> Seed of Annihilation Dock',15008,-175520,154505,2712,150000,0,57);
+('Seed of Infinity Dock',15006,-212843,209695,4280,150000,0,57), -- retail
+('Seed of Destruction Dock',15007,-248535,250273,4336,150000,0,57), -- retail
+('Seed of Annihilation Dock',15008,-175520,154505,2712,150000,0,57); -- retail

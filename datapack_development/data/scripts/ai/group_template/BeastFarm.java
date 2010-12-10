@@ -71,7 +71,7 @@ public class BeastFarm extends L2AttackableAIScript
 	private static Map<String, SkillHolder[]> _TamedBeastsData = new FastMap<String, SkillHolder[]>();
 	
 	// all mobs that grow by eating
-	private class GrowthCapableMob
+	private static class GrowthCapableMob
 	{
 		private int _chance;
 		private int _growthLevel;
@@ -274,15 +274,15 @@ public class BeastFarm extends L2AttackableAIScript
 				_FeedInfo.remove(npc.getObjectId());
 		}
 		// despawn the old mob
-		//TODO: same code?
-		if (_GrowthCapableMobs.get(npc.getNpcId()).getGrowthLevel() == 0)
+		//TODO: same code? FIXED?
+		/*if (_GrowthCapableMobs.get(npc.getNpcId()).getGrowthLevel() == 0)
 		{
 			npc.deleteMe();
 		}
 		else
-		{
+		{*/
 			npc.deleteMe();
-		}
+		//}
 		
 		// if this is finally a trained mob, then despawn any other trained mobs that the
 		// player might have and initialize the Tamed Beast.
@@ -315,7 +315,7 @@ public class BeastFarm extends L2AttackableAIScript
 			nextNpc.setRunning();
 			
 			QuestState st = player.getQuestState("20_BringUpWithLove");
-			if (st != null && st.getQuestItemsCount(7185) == 0)
+			if (st != null && st.getInt("cond") == 1 && st.getQuestItemsCount(7185) == 0 && Rnd.get(10) == 1)
 			{
 				//if player has quest 20 going, give quest item
 				//it's easier to hardcode it in here than to try and repeat this stuff in the quest

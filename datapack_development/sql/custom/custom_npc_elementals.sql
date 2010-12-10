@@ -5,8 +5,8 @@ CREATE TABLE IF NOT EXISTS `custom_npc_elementals` (
   `elemAtkValue` int(3) NOT NULL default 0,
   `fireDefValue` int(3) NOT NULL default 0,
   `waterDefValue` int(3) NOT NULL default 0,
-  `earthDefValue` int(3) NOT NULL default 0,
   `windDefValue` int(3) NOT NULL default 0,
+  `earthDefValue` int(3) NOT NULL default 0,
   `holyDefValue` int(3) NOT NULL default 0,
   `darkDefValue` int(3) NOT NULL default 0,
   PRIMARY KEY (`npc_id`)

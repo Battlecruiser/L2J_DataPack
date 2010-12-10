@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2RiftInvaderInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -203,6 +204,15 @@ public class L2AttackableAIScript extends QuestJython
 	@Override
 	public String onKill (L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
+		if (npc instanceof L2MonsterInstance)
+		{
+			final L2MonsterInstance mob = (L2MonsterInstance)npc;
+			if (mob.getLeader() != null)
+				mob.getLeader().getMinionList().onMinionDie(mob, -1);
+
+			if (mob.hasMinions())
+				mob.getMinionList().onMasterDie(false);
+		}
 		return null;
 	}
 	
@@ -231,7 +241,7 @@ public class L2AttackableAIScript extends QuestJython
 					}
 					catch(ClassNotFoundException ex)
 					{
-						System.out.println("Class not found "+t.type+"Instance");
+						_log.info("Class not found "+t.type+"Instance");
 					}
 				}
 			}

@@ -42,7 +42,7 @@ public class DarkCloudMansion extends Quest
 			addKillId(mob);
 	}
 	
-	private class DMCNpc
+	private static class DMCNpc
 	{
 		public L2Npc npc;
 		public boolean isDead = false;
@@ -52,7 +52,7 @@ public class DarkCloudMansion extends Quest
 		public int count = 0;
 	}
 	
-	private class DMCRoom
+	private static class DMCRoom
 	{
 		public FastList<DMCNpc> npcList = new FastList<DMCNpc>();
 		public int counter = 0;
@@ -76,7 +76,7 @@ public class DarkCloudMansion extends Quest
 	private static String qn = "DarkCloudMansion";
 	private static final int INSTANCEID = 9;
 	
-	private class teleCoord {int instanceId; int x; int y; int z;}
+	private static class teleCoord {int instanceId; int x; int y; int z;}
 	
 	//Items
 	private static int CC = 9690; //Contaminated Crystal

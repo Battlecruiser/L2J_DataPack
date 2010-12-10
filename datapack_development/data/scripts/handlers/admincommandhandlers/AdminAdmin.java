@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.AccessLevels;
 import com.l2jserver.gameserver.datatables.AdminCommandAccessRights;
 import com.l2jserver.gameserver.datatables.DoorTable;
-import com.l2jserver.gameserver.datatables.ExtractableItemsData;
 import com.l2jserver.gameserver.datatables.ExtractableSkillsData;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.datatables.MultiSell;
@@ -296,7 +295,6 @@ public class AdminAdmin implements IAdminCommandHandler
 				}
 				else if (type.startsWith("extractables"))
 				{
-					ExtractableItemsData.getInstance().reload();
 					ExtractableSkillsData.getInstance().reload();
 					activeChar.sendMessage("Extractable Items and Skills have been reloaded");
 				}
@@ -442,9 +440,18 @@ public class AdminAdmin implements IAdminCommandHandler
 		replyMSG.append("<tr><td><font color=\"LEVEL\">Enchant Jewelry</font> = "
 				+ Config.ENCHANT_CHANCE_JEWELRY
 				+ "</td><td><edit var=\"param7\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig EnchantChanceJewelry $param7\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
-		replyMSG.append("<tr><td><font color=\"LEVEL\">Enchant Element</font> = "
-				+ Config.ENCHANT_CHANCE_ELEMENT
-				+ "</td><td><edit var=\"param8\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig EnchantChanceElement $param8\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
+		replyMSG.append("<tr><td><font color=\"LEVEL\">Enchant Element Stone</font> = "
+				+ Config.ENCHANT_CHANCE_ELEMENT_STONE
+				+ "</td><td><edit var=\"param8\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig EnchantChanceElementStone $param8\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
+		replyMSG.append("<tr><td><font color=\"LEVEL\">Enchant Element Crystal</font> = "
+				+ Config.ENCHANT_CHANCE_ELEMENT_CRYSTAL
+				+ "</td><td><edit var=\"param9\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig EnchantChanceElementCrystal $param9\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
+		replyMSG.append("<tr><td><font color=\"LEVEL\">Enchant Element Jewel</font> = "
+				+ Config.ENCHANT_CHANCE_ELEMENT_JEWEL
+				+ "</td><td><edit var=\"param10\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig EnchantChanceElementJewel $param10\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
+		replyMSG.append("<tr><td><font color=\"LEVEL\">Enchant Element Energy</font> = "
+				+ Config.ENCHANT_CHANCE_ELEMENT_ENERGY
+				+ "</td><td><edit var=\"param11\" width=40 height=15></td><td><button value=\"Set\" action=\"bypass -h admin_setconfig EnchantChanceElementEnergy $param11\" width=40 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
 		
 		replyMSG.append("</table></body></html>");
 		adminReply.setHtml(replyMSG.toString());

@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Castle Merchant : Bracelets -->
-<list>
-	<!-- Iron Bracelet -->
+<list xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance" ns0:noNamespaceSchemaLocation="multisell.xsd">
 	<item id="1">
-		<ingredient id="9912" count="216" />
-		<production id="9589" count="1" />
+		<!-- Knight's Epaulette -->
+		<ingredient count="216" id="9912" />
+		<!-- Iron Bracelet -->
+		<production count="1" id="9589" />
 	</item>
-	<!-- Bronze Bracelet -->
 	<item id="2">
-		<ingredient id="9912" count="480" />
-		<production id="9590" count="1" />
+		<!-- Knight's Epaulette -->
+		<ingredient count="480" id="9912" />
+		<!-- Bronze Bracelet -->
+		<production count="1" id="9590" />
 	</item>
-	<!-- Steel Bracelet -->
 	<item id="3">
-		<ingredient id="9912" count="1144" />
-		<production id="9591" count="1" />
+		<!-- Knight's Epaulette -->
+		<ingredient count="1144" id="9912" />
+		<!-- Steel Bracelet -->
+		<production count="1" id="9591" />
+	</item>
+	<item id="4">
+		<!-- Knight's Epaulette -->
+		<ingredient count="3556" id="9912" />
+		<!-- Mithril Bracelet -->
+		<production count="1" id="9592" />
 	</item>
 </list>

@@ -107,7 +107,7 @@ public class FeedableBeasts extends L2AttackableAIScript
 	private static Map<Integer,GrowthCapableMob> _GrowthCapableMobs = new FastMap<Integer,GrowthCapableMob>();
 	
 	// all mobs that grow by eating
-	private class GrowthCapableMob
+	private static class GrowthCapableMob
 	{
 		private int _growthLevel;
 		private int _chance;
@@ -373,15 +373,15 @@ public class FeedableBeasts extends L2AttackableAIScript
 				_FeedInfo.remove(npc.getObjectId());
 		}
 		// despawn the old mob
-		//TODO: same code?
-		if (_GrowthCapableMobs.get(npcId).getGrowthLevel() == 0)
+		//TODO: same code? FIXED?
+		/*if (_GrowthCapableMobs.get(npcId).getGrowthLevel() == 0)
 		{
 			npc.deleteMe();
 		}
 		else
-		{
+		{*/
 			npc.deleteMe();
-		}
+		//}
 		
 		// if this is finally a trained mob, then despawn any other trained mobs that the
 		// player might have and initialize the Tamed Beast.

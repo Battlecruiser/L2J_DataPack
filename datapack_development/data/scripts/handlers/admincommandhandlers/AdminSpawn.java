@@ -17,6 +17,8 @@ package handlers.admincommandhandlers;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GmListTable;
@@ -26,6 +28,7 @@ import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.datatables.TeleportLocationTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.DayNightSpawnManager;
+import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.instancemanager.RaidBossSpawnManager;
 import com.l2jserver.gameserver.model.AutoChatHandler;
@@ -33,7 +36,9 @@ import com.l2jserver.gameserver.model.AutoSpawnHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -66,7 +71,10 @@ public class AdminSpawn implements IAdminCommandHandler
 		"admin_show_npcs",
 		"admin_teleport_reload",
 		"admin_spawnnight",
-		"admin_spawnday"
+		"admin_spawnday",
+		"admin_instance_spawns",
+		"admin_list_spawns",
+		"admin_list_positions"
 	};
 	public static Logger _log = Logger.getLogger(AdminSpawn.class.getName());
 	
@@ -122,6 +130,57 @@ public class AdminSpawn implements IAdminCommandHandler
 			catch (Exception e)
 			{
 				AdminHelpPage.showHelpPage(activeChar, "npcs.htm");
+			}
+		}
+		else if (command.startsWith("admin_instance_spawns"))
+		{
+			StringTokenizer st = new StringTokenizer(command, " ");
+			try
+			{
+				st.nextToken();
+				int instance = Integer.parseInt(st.nextToken());
+				if(instance >= 300000)
+				{
+					final StringBuilder html = StringUtil.startAppend(500 + 1000,
+							"<html><table width=\"100%\"><tr><td width=45><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=180><center>",
+							"<font color=\"LEVEL\">Spawns for "+String.valueOf(instance)+"</font>",
+							"</td><td width=45><button value=\"Back\" action=\"bypass -h admin_current_player\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table><br>",
+							"<table width=\"100%\"><tr><td width=200>NpcName</td><td width=70>Action</td></tr>");
+					int counter = 0;
+					int skiped = 0;
+					Instance inst = InstanceManager.getInstance().getInstance(instance);
+					if(inst != null)
+					{
+						for(L2Npc npc : inst.getNpcs())
+						{
+							if(!npc.isDead())
+							{
+								// Only 50 because of client html limitation
+								if(counter < 50)
+								{
+									StringUtil.append(html,"<tr><td>"+npc.getName()+"</td><td>",
+									"<a action=\"bypass -h admin_move_to "+npc.getX()+" "+npc.getY()+" "+npc.getZ()+"\">Go</a>",
+									"</td></tr>");
+									counter++;								
+								}
+								else
+									skiped++;
+							}
+						}
+						StringUtil.append(html, "<tr><td>Skipped:</td><td>"+String.valueOf(skiped)+"</td></tr></table></body></html>");
+						NpcHtmlMessage ms = new NpcHtmlMessage(1);
+						ms.setHtml(html.toString());
+						activeChar.sendPacket(ms);
+					}
+					else
+						activeChar.sendMessage("Cannot find instance "+instance);
+				}
+				else
+					activeChar.sendMessage("Invalid instance number.");
+			}
+			catch (Exception e)
+			{
+				activeChar.sendMessage("Usage //instance_spawns <instance_number>");
 			}
 		}
 		else if (command.startsWith("admin_unspawnall"))
@@ -183,6 +242,34 @@ public class AdminSpawn implements IAdminCommandHandler
 			{ // Case of wrong or missing monster data
 				AdminHelpPage.showHelpPage(activeChar, "spawns.htm");
 			}
+		}
+		else if (command.startsWith("admin_list_spawns") || command.startsWith("admin_list_positions"))
+		{
+			int npcId = 0;
+			int teleportIndex = -1;
+			try
+			{ // admin_list_spawns x[xxxx] x[xx]
+				String[] params = command.split(" ");
+				Pattern pattern = Pattern.compile("[0-9]*");
+				Matcher regexp = pattern.matcher(params[1]);
+				if (regexp.matches())
+					npcId = Integer.parseInt(params[1]);
+				else
+				{
+					params[1] = params[1].replace('_', ' ');
+					npcId = NpcTable.getInstance().getTemplateByName(params[1]).npcId;
+				}
+				if (params.length > 2)
+					teleportIndex = Integer.parseInt(params[2]);
+			}
+			catch (Exception e)
+			{
+				activeChar.sendMessage("Command format is //list_spawns <npcId|npc_name> [tele_index]");
+			}
+			if(command.startsWith("admin_list_positions"))
+				SpawnTable.getInstance().findNPCInstances(activeChar, npcId, teleportIndex, true);
+			else
+				SpawnTable.getInstance().findNPCInstances(activeChar, npcId, teleportIndex, false);
 		}
 		return true;
 	}

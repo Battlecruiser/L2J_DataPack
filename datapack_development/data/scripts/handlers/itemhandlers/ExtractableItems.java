@@ -15,19 +15,19 @@
 
 package handlers.itemhandlers;
 
+import java.util.List;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.ExtractableItemsData;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.handler.IItemHandler;
-import com.l2jserver.gameserver.model.L2ExtractableItem;
-import com.l2jserver.gameserver.model.L2ExtractableProductItem;
+import com.l2jserver.gameserver.model.L2ExtractableProduct;
 import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.templates.item.L2EtcItem;
 import com.l2jserver.util.Rnd;
 
 
@@ -49,77 +49,49 @@ public class ExtractableItems implements IItemHandler
 		L2PcInstance activeChar = (L2PcInstance) playable;
 		
 		int itemID = item.getItemId();
-		L2ExtractableItem exitem = ExtractableItemsData.getInstance().getExtractableItem(itemID);
+		L2EtcItem etcitem = (L2EtcItem) item.getItem();
+		List<L2ExtractableProduct> exitem = etcitem.getExtractableItems();
 		
 		if (exitem == null)
-			return;
-		
-		int rndNum = Rnd.get(100), chanceFrom = 0;
-		int[] createItemID = new int[20];
-		int[] createAmount = new int[20];
-		
-		// calculate extraction
-		for (L2ExtractableProductItem expi : exitem.getProductItemsArray())
 		{
-			int chance = expi.getChance();
-			
-			if (rndNum >= chanceFrom && rndNum <= chance + chanceFrom)
-			{
-				createItemID = expi.getId();
-				
-				for (int i = 0; i < expi.getId().length; i++)
-				{
-					createItemID[i] = expi.getId()[i];
-					
-					if ((itemID >= 6411 && itemID <= 6518) || (itemID >= 7726 && itemID <= 7860) || (itemID >= 8403 && itemID <= 8483))
-						createAmount[i] = (int)(expi.getAmmount()[i]* Config.RATE_EXTR_FISH);
-					else
-						createAmount[i] = expi.getAmmount()[i];
-				}
-				break;
-			}
-			
-			chanceFrom += chance;
+			_log.info("No extractable data defined for "+etcitem);
+			return;
 		}
 		
-		if (createItemID[0] <= 0 || createItemID.length == 0 )
+		//destroy item
+		if (!activeChar.destroyItem("Extract", item.getObjectId(), 1, activeChar, true))
+			return;
+		
+		boolean created= false;
+		
+		// calculate extraction
+		for (L2ExtractableProduct expi : exitem)
+		{
+			if (Rnd.get(100000) <= expi.getChance())
+			{
+				int min = expi.getMin();
+				int max = expi.getMax();
+				int createItemID = expi.getId();
+				
+				if ((itemID >= 6411 && itemID <= 6518) || (itemID >= 7726 && itemID <= 7860) || (itemID >= 8403 && itemID <= 8483))
+				{
+					min *= Config.RATE_EXTR_FISH;
+					max *= Config.RATE_EXTR_FISH;
+				}
+				
+				int createitemAmount = 0;
+				if (max == min)
+					createitemAmount = min;
+				else
+					createitemAmount = Rnd.get(max-min+1) + min;
+				activeChar.addItem("Extract", createItemID, createitemAmount, activeChar, true);
+				created = true;
+			}
+		}
+		
+		if (!created)
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessageId.NOTHING_INSIDE_THAT));
 		}
-		
-		else
-		{
-			for (int i = 0; i < createItemID.length; i++)
-			{
-				if (createItemID[i] <= 0)
-					continue;
-				
-				if (ItemTable.getInstance().createDummyItem(createItemID[i]) == null)
-				{
-					_log.warning("createItemID " + createItemID[i] + " doesn't have template!");
-					activeChar.sendPacket(new SystemMessage(SystemMessageId.NOTHING_INSIDE_THAT));
-					continue;
-				}
-				
-				if (ItemTable.getInstance().createDummyItem(createItemID[i]).isStackable())
-					activeChar.addItem("Extract", createItemID[i], createAmount[i], activeChar, false);
-				else
-				{
-					for (int j = 0; j < createAmount[i]; j++)
-						activeChar.addItem("Extract", createItemID[i], 1, activeChar, false);
-				}
-				SystemMessage sm;
-				if (createItemID[i] == 57)
-					sm = new SystemMessage(SystemMessageId.EARNED_ADENA);
-				else
-				{
-					sm = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);
-					sm.addItemName(createItemID[i]);
-				}
-				sm.addNumber(createAmount[i]);
-				activeChar.sendPacket(sm);
-			}
-		}
-		activeChar.destroyItemByItemId("Extract", itemID, 1, activeChar.getTarget(), true);
 	}
 }

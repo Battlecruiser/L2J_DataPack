@@ -3,6 +3,7 @@
 # Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
 # Visit http://www.l2jdp.com/forum/ for more details
 import sys
+from com.l2jserver.gameserver.model.itemcontainer import Inventory
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
@@ -247,7 +248,7 @@ class Quest (JQuest) :
      else:
       giveNormal(st,itemid)
     elif dropcondition == 3 :
-     if st.getItemEquipped(16)==CRESCENT_MOON_BOW:
+     if st.getItemEquipped(Inventory.PAPERDOLL_RHAND)==CRESCENT_MOON_BOW:
       giveMiddle(st,itemid,step)
      else:
       st.addSpawn(27090,npc,True,0)

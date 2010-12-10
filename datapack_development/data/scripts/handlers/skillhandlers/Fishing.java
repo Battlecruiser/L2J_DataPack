@@ -75,7 +75,7 @@ public class Fishing implements ISkillHandler
 			return;
 		}
 		L2Weapon weaponItem = player.getActiveWeaponItem();
-		if ((weaponItem == null || weaponItem.getItemType() != L2WeaponType.ROD))
+		if ((weaponItem == null || weaponItem.getItemType() != L2WeaponType.FISHINGROD))
 		{
 			// Fishing poles are not installed
 			player.sendPacket(new SystemMessage(SystemMessageId.FISHING_POLE_NOT_EQUIPPED));

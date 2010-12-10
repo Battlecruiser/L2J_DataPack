@@ -163,9 +163,12 @@ public class Q250_WatchWhatYouEat extends Quest
 	{
 		super(questId, name, descr);
 		
+		questItemIds = new int[]{15493,15494,15495};
+
 		addStartNpc(_sally);
 		addFirstTalkId(_sally);
 		addTalkId(_sally);
+		
 		for(int i[] : _mobs)
 			addKillId(i[0]);
 	}

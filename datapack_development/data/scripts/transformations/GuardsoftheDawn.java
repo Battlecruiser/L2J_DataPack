@@ -6,7 +6,7 @@ import com.l2jserver.gameserver.model.L2Transformation;
 
 public class GuardsoftheDawn extends L2Transformation
 {
-	private static final int[] SKILLS = {5491,619};
+	private static final int[] SKILLS = {5491,619,963};
 	public GuardsoftheDawn()
 	{
 		// id, colRadius, colHeight
@@ -28,6 +28,8 @@ public class GuardsoftheDawn extends L2Transformation
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
 		// Transform Dispel
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		// Guard Ambush
+               getPlayer().addSkill(SkillTable.getInstance().getInfo(963, 1), false);
 		
 		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
@@ -44,6 +46,8 @@ public class GuardsoftheDawn extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5491, 1), false);
 		// Transform Dispel
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		// Guard's Ambush
+               getPlayer().removeSkill(SkillTable.getInstance().getInfo(963, 1), false);
 		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}

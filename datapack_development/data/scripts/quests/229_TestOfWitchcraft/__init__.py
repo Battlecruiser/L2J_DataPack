@@ -3,6 +3,7 @@
 # Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
 # Visit http://www.l2jdp.com/forum/ for more details
 import sys
+from com.l2jserver.gameserver.model.itemcontainer import Inventory
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
@@ -385,7 +386,7 @@ class Quest (JQuest) :
     if int(st.get(var)) in value and random<chance:
       if takeList:
         if npcId == 27101 :
-          if st.getItemEquipped(9) == SWORD_OF_BINDING:
+          if st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == SWORD_OF_BINDING:
             for give in giveList:
               st.giveItems(give,1)
             for take in takeList:

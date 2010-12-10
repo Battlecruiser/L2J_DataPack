@@ -17,8 +17,6 @@ package handlers.admincommandhandlers;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.TransformationManager;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author
@@ -68,7 +66,8 @@ public class AdminRide implements IAdminCommandHandler
 			else if (command.startsWith("admin_ride_horse")) // handled using transformation
 			{
 				if (activeChar.isTransformed() || activeChar.isInStance())
-					activeChar.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_MOUNT_A_STEED_WHILE_TRANSFORMED));
+					//FIXME: Wrong Message
+					activeChar.sendMessage("You cannot mount a steed while transformed.");
 				else
 					TransformationManager.getInstance().transformPlayer(PURPLE_MANED_HORSE_TRANSFORMATION_ID, activeChar);
 				
@@ -77,7 +76,8 @@ public class AdminRide implements IAdminCommandHandler
 			else if (command.startsWith("admin_ride_bike")) // handled using transformation
 			{
 				if (activeChar.isTransformed() || activeChar.isInStance())
-					activeChar.sendPacket(new SystemMessage (SystemMessageId.YOU_CANNOT_MOUNT_A_STEED_WHILE_TRANSFORMED));
+					//FIXME: Wrong Message
+					activeChar.sendMessage("You cannot mount a steed while transformed.");
 				else
 					TransformationManager.getInstance().transformPlayer(JET_BIKE_TRANSFORMATION_ID, activeChar);
 				

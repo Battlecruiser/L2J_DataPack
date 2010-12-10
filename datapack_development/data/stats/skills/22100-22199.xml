@@ -5,6 +5,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="1500" />
 	</skill>
 	<skill id="22101" levels="1" name="Fortune of Love Box">
@@ -16,6 +17,8 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="86400000" />
+		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="22103" levels="1" name="Blessed Scroll of Escape - event">
 		<set name="target" val="TARGET_NONE" />
@@ -33,16 +36,19 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="12000" />
 	</skill>
 	<skill id="22106" levels="1" name="Verdandi Summon Scroll - Event">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="12000" />
 	</skill>
 	<skill id="22107" levels="1" name="Skooldy Summon Scroll - Event">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="12000" />
 	</skill>
 	<skill id="22108" levels="1" name="Halloween Toy Box">
 		<set name="target" val="TARGET_NONE" />
@@ -146,11 +152,14 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="22127" levels="1" name="Summon Warm Kotatz">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="600000" />
+		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="22128" levels="3" name="Rudolph's Joy">
 		<!-- Lvl 1: For 5 minutes, raises Atk. Spd. by 10% and Magic Casting Spd. by 10%. -->
@@ -159,11 +168,13 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="22129" levels="1" name="Red Dimensional Stone">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="18000000" />
 	</skill>
 	<skill id="22130" levels="1" name="Food of Doubt's Effect">
 		<!-- Food of Doubt's effect.For 20 minutes, energy is recovered when Exp. is acquired. -->
@@ -336,6 +347,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="22159" levels="1" name="Vesper Super Power">
 		<!-- Increases P. Atk. by 15%, M. Atk. by 20% and Speed by 10 for 10 minutes. -->
@@ -344,12 +356,13 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
+		<set name="reuseDelay" val="2000" />
 		<set name="buffDuration" val="600000" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" event="vesper1" time="600" val="0" stackOrder="1" stackType="event_herb">
+			<effect name="Buff" event="vesper1" time="600" val="0" stackOrder="1" stackType="br_event_buf1">
 				<mul order="0x30" stat="pAtk" val="1.15" />
 				<mul order="0x30" stat="mAtk" val="1.15" />
 				<add order="0x40" stat="runSpd" val="10" />
@@ -363,12 +376,13 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
+		<set name="reuseDelay" val="2000" />
 		<set name="buffDuration" val="600000" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" event="vesper2" time="600" val="0" stackOrder="1" stackType="event_herb">
+			<effect name="Buff" event="vesper2" time="600" val="0" stackOrder="1" stackType="br_event_buf1">
 				<add order="0x40" stat="rCrit" val="15" />
 				<add order="0x40" stat="mCritRate" val="2" />
 				<add order="0x40" stat="runSpd" val="10" />
@@ -383,12 +397,13 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isPotion" val="true" />
+		<set name="reuseDelay" val="2000" />
 		<set name="buffDuration" val="600000" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" event="vesper3" time="600" val="0" stackOrder="1" stackType="event_herb">
+			<effect name="Buff" event="vesper3" time="600" val="0" stackOrder="1" stackType="br_event_buf1">
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
 				<add order="0x40" stat="runSpd" val="20" />
@@ -400,18 +415,21 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="22163" levels="1" name="Hawk Herb">
 		<!-- Physical Atk Speed is increased by 15% and physical Critical Atk rate is increased by 10% for 10 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="22164" levels="1" name="Eggplant Herb">
 		<!-- Magic Atk Speed is increased by 10% and magic Critical Rate is increased by 2 for 10 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="22165" levels="1" name="Energy Replenish">
 		<!-- 5000 Soul Avatar Energy is replenished. -->
@@ -447,30 +465,35 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="900000" />
 	</skill>
 	<skill id="22171" levels="1" name="Hardin's Blessing">
 		<!-- Maximies M. Def. for 10 seconds. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="900000" />
 	</skill>
 	<skill id="22172" levels="1" name="Sylphide's Wings">
 		<!-- Increases one's own moving speed by 300 for 15 seconds. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="900000" />
 	</skill>
 	<skill id="22173" levels="1" name="Sylphide's Blessing">
 		<!-- Increases the moving speed of yourself and friendly nearby targets by 300 for 15 seconds. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="900000" />
 	</skill>
 	<skill id="22174" levels="1" name="Yibein's Recovery Scroll">
 		<!-- Recovers HP of yourself and friendly nearby targets by 500. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="1800000" />
 	</skill>
 	<skill id="22175" levels="1" name="Rune of Life">
 		<!-- When HP falls below 30%, it is restored by 500. -->
@@ -493,6 +516,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="60000" />
 	</skill>
 	<skill id="22179" levels="1" name="Fortuna of Chaos">
 		<set name="target" val="TARGET_NONE" />

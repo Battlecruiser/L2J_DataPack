@@ -8,9 +8,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="300" val="0" stackOrder="26" stackType="multi_buff">
 				<mul order="0x30" stat="mAtk" val="1.2" />
 				<mul order="0x30" stat="mDef" val="1.2" />
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
@@ -27,7 +26,6 @@
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="21102" levels="1" name="Blessed Resurrection">
 		<!-- Can use the ability of Blessed Resurrection. Reuse Delay 12 hours. -->
@@ -41,7 +39,6 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="21103" levels="1" name="Great Adventurer's Soul Power : Endless">
 		<!-- For five minutes, the Great Spirit increases maximum HP by 20%, maximum MP by 20%, moving speed by 20%, and resistance against debuff by 10%. -->
@@ -51,9 +48,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="300" val="0" stackOrder="26" stackType="multi_buff">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="runSpd" val="1.2" />
@@ -66,6 +62,8 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="2500" />
 	</skill>
 	<skill id="21105" levels="1" name="Agathion Seal Cancel - Chon-chon">
@@ -124,9 +122,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="300" val="0" stackOrder="26" stackType="multi_buff">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="runSpd" val="1.2" />
@@ -142,9 +139,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="300" val="0" stackOrder="26" stackType="multi_buff">
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.1" />
 				<mul order="0x30" stat="pDef" val="1.2" />
@@ -160,9 +156,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="300" val="0" stackOrder="26" stackType="multi_buff">
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
 				<mul order="0x30" stat="mAtk" val="1.2" />
 				<mul order="0x30" stat="mDef" val="1.2" />
@@ -178,9 +173,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="300" val="0" stackOrder="26" stackType="multi_buff">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="runSpd" val="1.2" />
@@ -196,9 +190,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="300" val="0" stackOrder="26" stackType="multi_buff">
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.2" />
 				<mul order="0x30" stat="pDef" val="1.2" />
@@ -214,9 +207,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="300" val="0" stackOrder="26" stackType="multi_buff">
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
 				<mul order="0x30" stat="mAtk" val="1.2" />
 				<mul order="0x30" stat="mDef" val="1.2" />
@@ -232,9 +224,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="300" val="0" stackOrder="26" stackType="multi_buff">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="runSpd" val="1.2" />
@@ -251,9 +242,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="300" val="0" stackOrder="26" stackType="multi_buff">
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.1" />
 				<mul order="0x30" stat="pDef" val="1.2" />
@@ -270,9 +260,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="300" val="0" stackOrder="26" stackType="multi_buff">
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
 				<mul order="0x30" stat="mAtk" val="1.2" />
 				<mul order="0x30" stat="mDef" val="1.2" />
@@ -284,11 +273,13 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="21121" levels="1" name="Rotten Jack O'Lantern Card">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="21122" levels="1" name="Blessing of Skooldy : Protection of Darkness">
 		<!-- Increase max HP by 20%, max MP by 20%, physical Def. by 20%, magic Def. by 20% for 1 hour. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
@@ -299,9 +290,8 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="isMagic" val="true" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="br_event_buf1">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="pDef" val="1.2" />
@@ -319,9 +309,8 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="isMagic" val="true" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="br_event_buf1">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="pDef" val="1.2" />
@@ -339,9 +328,8 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="isMagic" val="true" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="br_event_buf1">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="pDef" val="1.2" />
@@ -359,9 +347,8 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="isMagic" val="true" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="br_event_buf1">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="pDef" val="1.2" />
@@ -379,9 +366,8 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="isMagic" val="true" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="br_event_buf1">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="pDef" val="1.2" />
@@ -399,9 +385,8 @@
 		<set name="reuseDelay" val="7200000" />
 		<set name="isMagic" val="true" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="br_event_buf1">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
@@ -419,9 +404,8 @@
 		<set name="reuseDelay" val="7200000" />
 		<set name="isMagic" val="true" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="br_event_buf1">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
 				<basemul order="0x30" stat="rCrit" val="0.1" />
@@ -439,9 +423,8 @@
 		<set name="reuseDelay" val="7200000" />
 		<set name="isMagic" val="true" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="br_event_buf1">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
 				<mul order="0x30" stat="runSpd" val="1.1" />
@@ -459,9 +442,8 @@
 		<set name="reuseDelay" val="7200000" />
 		<set name="isMagic" val="true" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="br_event_buf1">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
 				<mul order="0x30" stat="runSpd" val="1.2" />
@@ -481,9 +463,8 @@
 		<set name="reuseDelay" val="7200000" />
 		<set name="isMagic" val="true" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="br_event_buf1">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
@@ -501,9 +482,8 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="isMagic" val="true" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="SilentMove" abnormal="stealth" time="120" val="0">
+			<effect name="SilentMove" abnormal="stealth" time="120" val="0" stackOrder="26" stackType="stealth">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
@@ -540,9 +520,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="600" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="600" val="0" stackOrder="26" stackType="br_event_buf1">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
 				<mul order="0x30" stat="maxCp" val="1.4" />
@@ -561,9 +540,8 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="isMagic" val="true" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="600" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="600" val="0" stackOrder="26" stackType="multi_buff">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
@@ -581,12 +559,11 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="isMagic" val="true" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="600" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="600" val="0" stackOrder="26" stackType="multi_buff">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
-				<baemul order="0x30" stat="rCrit" val="0.1" />
+				<basemul order="0x30" stat="rCrit" val="0.1" />
 				<mul order="0x30" stat="cAtk" val="1.1" />
 				<add order="0x40" stat="darkRes" val="20" />
 			</effect>
@@ -601,9 +578,8 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="isMagic" val="true" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="600" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="600" val="0" stackOrder="26" stackType="multi_buff">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
 				<mul order="0x30" stat="runSpd" val="1.1" />
@@ -621,9 +597,8 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="isMagic" val="true" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="600" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="600" val="0" stackOrder="26" stackType="multi_buff">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
 				<mul order="0x30" stat="runSpd" val="1.2" />
@@ -643,9 +618,8 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="isMagic" val="true" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="600" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="600" val="0" stackOrder="26" stackType="multi_buff">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
 				<mul order="0x30" stat="runSpd" val="1.2" />
@@ -748,10 +722,10 @@
 		<set name="hitTime" val="4000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="1.25" stackType="max_hp_up">
+			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="max_hp_up">
 				<mul order="0x30" stat="maxHp" val="1.25" />
 			</effect>
 		</for>
@@ -763,10 +737,10 @@
 		<set name="hitTime" val="4000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="1.25" stackType="max_hp_up">
+			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="max_hp_up">
 				<mul order="0x30" stat="maxMp" val="1.25" />
 			</effect>
 		</for>
@@ -779,9 +753,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="300" val="0" stackOrder="26" stackType="multi_buff">
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.1" />
 				<mul order="0x30" stat="pDef" val="1.3" />
@@ -798,9 +771,8 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="staticHitTime" val="true" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="300" val="0" stackOrder="26" stackType="multi_buff">
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
 				<mul order="0x30" stat="mAtk" val="1.1" />
 				<mul order="0x30" stat="mDef" val="1.2" />
@@ -910,7 +882,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="transformId" val="20000" />
 		<for>
-			<effect name="Transformation" time="3600" val="0" />
+			<effect name="Transformation" time="3600" val="0" stackOrder="1" stackType="transform" />
 		</for>
 	</skill>
 	<skill id="21170" levels="1" name="Blessed Soul">
@@ -920,10 +892,10 @@
 		<set name="hitTime" val="4000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="1.25" stackType="max_mp_up">
+			<effect name="Buff" time="1200" val="0" stackOrder="26" stackType="max_mp_up">
 				<mul order="0x30" stat="maxMp" val="1.25" />
 			</effect>
 		</for>
@@ -937,7 +909,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="1800" val="0">
+			<effect name="Transformation" time="1800" val="0" stackOrder="1" stackType="transform">
 				<mul order="0x30" stat="runSpd" val="1.5" />
 			</effect>
 		</for>
@@ -947,24 +919,32 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="180000" />
+		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="21173" levels="1" name="Enhanced Authority - WIT+1 INT+1">
 		<!-- Enhanced authority grants WIT+1 / INT+1 for 2 minutes. Consumes 240 energy. Reuse delay 3 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="180000" />
+		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="21174" levels="1" name="Enhanced Authority - WIT+1 MEN+1">
 		<!-- Enhanced authority grants WIT+1 / MEN+1 for 2 minutes. Consumes 240 energy. Reuse delay 3 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="180000" />
+		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="21175" levels="1" name="Enhanced Authority - CON+1 DEX+1">
 		<!-- Enhanced authority grants CON+1 / DEX+1 for 2 minutes. Consumes 240 energy. Reuse delay 3 minutes. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="180000" />
+		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="21176" levels="1" name="Divine Protection - Divinity">
 		<!-- Increases divinity type P. Atk. and P. Def. by 10 each. Continuously consumes energy. -->
@@ -1055,6 +1035,8 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="1200000" />
+		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="21191" levels="1" name="Agathion Seal Cancel - Phoenix">
 		<set name="target" val="TARGET_SELF" />
@@ -1065,16 +1047,27 @@
 		<set name="npcId" val="1574" />
 	</skill>
 	<skill id="21192" levels="1" name="Silent Move">
-		<!-- Will not receive preemptive attacks from the monsters for 2 minutes. Movement Speed is decreased by 40%. Cooldown takes 4 hours. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="hitTime" val="2000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="SilentMove" time="120" val="0" stackOrder="26" stackType="stealth" abnormal="stealth">
+				<mul order="0x30" stat="runSpd" val="0.6" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21193" levels="1" name="Power of Guardian Deity">
 		<!-- Increases Critical attack power by 35% for 10 minutes. Cooldown takes 1 hour. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="21194" levels="1" name="Agathion Seal Cancel - Three-headed Dragon">
 		<set name="target" val="TARGET_SELF" />
@@ -1089,29 +1082,45 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="staticReuse" val="true" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
 	</skill>
 	<skill id="21196" levels="1" name="Blessed Child Transformation Skill - Sujin">
 		<!-- Transforms into the Blessed Child Sujin. When transformed into Sujin, recovers energy upon acquiring Exp. points. Reuse delay is 4 hours. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="staticReuse" val="true" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
 	</skill>
 	<skill id="21197" levels="1" name="Buff of Virtue">
 		<!-- Recovers all HP, MP, and CP with the power of virtue. Reuse delay 30 minutes. It can only be used when HP, MP, and CP are all below 30%. When you use the skill, 1 Proof of a Warrior is consumed. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="1800000" />
+		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="21198" levels="1" name="Silence of Fidelity">
 		<!-- Through the power of loyalty, raises party members' physical P. Def., M. Def. by 30%, physical P. Atk. by 20%, M. Atk. by 45%, and moving speed by 30 for 5 minutes. Reuse delay 30 minutes. Consumes 1 Proof of a Warrior upon skill use. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="1800000" />
+		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="21199" levels="1" name="Vitality of Courage">
 		<!-- Recovers all energy with the power of courage, and maintains the energy stage for 5 minutes. Reuse delay 30 minutes. When you use the skill, 1 Proof of a Warrior is consumed. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="1800000" />
+		<set name="staticReuse" val="true" />
 	</skill>
 </list>
