@@ -54,18 +54,7 @@
 			</fileset>
 		</sync>
 		<sync todir="${build.dist.game}/data" includeemptydirs="true">
-			<fileset dir="${basedir}/data">
-				<exclude name=".project" />
-				<exclude name="log/**" />
-				<exclude name="cachedir/**" />
-				<exclude name="clans/**" />
-				<exclude name="crests/**" />
-				<exclude name="**.svn**" />
-				<exclude name="**/*.class" />
-				<exclude name="**/*.jar" />
-				<exclude name="geodata/**" />
-				<exclude name="pathnode/**" />
-			</fileset>
+			<fileset dir="${basedir}/data" />
 		</sync>
 		<sync todir="${build.dist.cb}/data">
 			<fileset dir="${basedir}/cb_data" />
@@ -77,12 +66,7 @@
 			<fileset dir="${basedir}/sql" />
 		</sync>
 		<sync todir="${build.dist.tools}">
-			<fileset dir="${basedir}/tools">
-				<exclude name="database_installer.rc" />
-				<exclude name="*.txt" />
-				<exclude name="*.log" />
-				<exclude name="*backup.sql" />
-			</fileset>
+			<fileset dir="${basedir}/tools" />
 		</sync>
 		<sync todir="${build.dist.lang}">
 			<fileset dir="${basedir}/data/lang" />

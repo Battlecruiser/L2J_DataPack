@@ -1,6 +1,7 @@
 # 2010-08-11 by Gnacik
 # Based on Freya PTS
 import sys
+from com.l2jserver import Config
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
@@ -72,9 +73,14 @@ class Quest (JQuest) :
 		st = partyMember.getQuestState(qn)
 		if not st : return
 
-		if st.getInt("cond") == 1 and npc.getNpcId() in MOBS and st.getRandom(100) < DROP_CHANCE :
-			st.giveItems(DIRTY_BEAD, 1)
-			st.playSound("ItemSound.quest_itemget")
+		if st.getInt("cond") == 1 and npc.getNpcId() in MOBS :
+			chance = DROP_CHANCE*Config.RATE_QUEST_DROP
+			numItems, chance = divmod(chance,100)
+			if st.getRandom(100) < chance : 
+				numItems += 1
+			if numItems :
+				st.giveItems(DIRTY_BEAD, int(numItems))
+				st.playSound("ItemSound.quest_itemget")
 		return
 
 QUEST	= Quest(310,qn,"Only What Remains")

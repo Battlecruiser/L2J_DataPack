@@ -26,6 +26,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.util.Util;
 
 /**
  * @author  Kerberos
@@ -80,7 +81,7 @@ public class PetFood implements IItemHandler
 					activeChar.broadcastPacket(new MagicSkillUse(activeChar, activeChar, magicId, 1, 0, 0));
 					((L2PetInstance)activeChar).setCurrentFed(((L2PetInstance)activeChar).getCurrentFed() + (skill.getFeed() * Config.PET_FOOD_RATE));
 					((L2PetInstance)activeChar).broadcastStatusUpdate();
-					if (((L2PetInstance)activeChar).getCurrentFed() < (0.55 * ((L2PetInstance)activeChar).getPetData().getPetMaxFeed()))
+					if (((L2PetInstance)activeChar).getCurrentFed() < (((L2PetInstance)activeChar).getPetData().getHungry_limit() / 100f * ((L2PetInstance)activeChar).getPetLevelData().getPetMaxFeed()))
 						((L2PetInstance)activeChar).getOwner().sendPacket(new SystemMessage(SystemMessageId.YOUR_PET_ATE_A_LITTLE_BUT_IS_STILL_HUNGRY));
 					return true;
 				}
@@ -89,28 +90,10 @@ public class PetFood implements IItemHandler
 			{
 				L2PcInstance player = ((L2PcInstance)activeChar);
 				int itemId = item.getItemId();
-				boolean canUse = false;
 				if (player.isMounted())
 				{
-					int petId = player.getMountNpcId();
-					if (PetDataTable.isWolf(petId) && PetDataTable.isWolfFood(itemId))
-						canUse = true;
-					else if (PetDataTable.isEvolvedWolf(petId) && PetDataTable.isEvolvedWolfFood(itemId))
-						canUse = true;
-					else if (PetDataTable.isSinEater(petId) && PetDataTable.isSinEaterFood(itemId))
-						canUse = true;
-					else if (PetDataTable.isHatchling(petId) && PetDataTable.isHatchlingFood(itemId))
-						canUse = true;
-					else if (PetDataTable.isStrider(petId) && PetDataTable.isStriderFood(itemId))
-						canUse = true;
-					else if (PetDataTable.isWyvern(petId) && PetDataTable.isWyvernFood(itemId))
-						canUse = true;
-					else if (PetDataTable.isBaby(petId) && PetDataTable.isBabyFood(itemId))
-						canUse = true;
-					else if (PetDataTable.isImprovedBaby(petId) && PetDataTable.isImprovedBabyFood(itemId))
-						canUse = true;
-					
-					if (canUse)
+					int food[] = PetDataTable.getInstance().getPetData(player.getMountNpcId()).getFood();
+					if (Util.contains(food, itemId))
 					{
 						if (player.destroyItem("Consume", item.getObjectId(), 1, null, false))
 						{

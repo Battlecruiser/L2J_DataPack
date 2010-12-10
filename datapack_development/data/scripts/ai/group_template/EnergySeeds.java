@@ -21,14 +21,20 @@ import javolution.util.FastMap;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.datatables.DoorTable;
 import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.idfactory.IdFactory;
+import com.l2jserver.gameserver.instancemanager.GraciaSeedsManager;
+import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
+import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -39,7 +45,7 @@ import com.l2jserver.util.Rnd;
 public class EnergySeeds extends L2AttackableAIScript
 {
 	private static final String qn = "EnergySeeds";
-	private static final String HOWTOOPPOSEEVIL = "692_HowtoOpposeEvil";
+	private static final String HOWTOOPPOSEEVIL = "Q692_HowtoOpposeEvil";
 	private static final int HOWTOOPPOSEEVIL_CHANCE = 60;
 	private static final int RATE = 1;
 	private static final int RESPAWN = 480000;
@@ -52,6 +58,17 @@ public class EnergySeeds extends L2AttackableAIScript
 	private static final int[][] ANNIHILATION_SUPRISE_MOB_IDS = { {22746,22747,22748,22749},
 		{22754,22755,22756}, {22760,22761,22762}
 	};
+	
+	private static int[] SEED_OF_DESTRUCTION_DOORS = 
+	{
+		12240003,12240004,12240005,12240006,12240007,12240008,
+		12240009,12240010,12240011,12240012,12240013,12240014,
+		12240015,12240016,12240017,12240018,12240019,12240020,
+		12240021,12240022,12240023,12240024,12240025,12240026,
+		12240027,12240028,12240029,12240030,12240031
+	};
+	private static final int SOD_ZONE = 60009;
+	private static final int[] SOD_EXIT_POINT = { -248717, 250260, 4337 };
 	
 	private enum GraciaSeeds
 	{
@@ -101,6 +118,8 @@ public class EnergySeeds extends L2AttackableAIScript
 		registerMobs(SEEDIDS);
 		for(int i : SEEDIDS)
 			addFirstTalkId(i);
+		addFirstTalkId(TEMPORARY_TELEPORTER);
+		addEnterZoneId(SOD_ZONE);
 		addSpawnsToList();
 		startAI();
 	}
@@ -112,7 +131,7 @@ public class EnergySeeds extends L2AttackableAIScript
 			case INFINITY:
 				return false;
 			case DESTRUCTION:
-				return false;
+				return GraciaSeedsManager.getInstance().getSoDState() == 2;
 			case ANNIHILATION_BISTAKON:
 			case ANNIHILATION_REPTILIKON:
 			case ANNIHILATION_COKRAKON:
@@ -181,10 +200,33 @@ public class EnergySeeds extends L2AttackableAIScript
 	@Override
 	public String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equalsIgnoreCase("DeSpawnTask"))
+		if (event.equalsIgnoreCase("StartSoDAi"))
+		{
+			for (int doorId : SEED_OF_DESTRUCTION_DOORS)
+			{
+				L2DoorInstance doorInstance = DoorTable.getInstance().getDoor(doorId);
+				if (doorInstance != null)
+					doorInstance.openMe();
+			}
+			startAI(GraciaSeeds.DESTRUCTION);
+		}
+		else if (event.equalsIgnoreCase("StopSoDAi"))
+		{
+			for (int doorId : SEED_OF_DESTRUCTION_DOORS)
+			{
+				L2DoorInstance doorInstance = DoorTable.getInstance().getDoor(doorId);
+				if (doorInstance != null)
+					doorInstance.closeMe();
+			}
+			for(L2Character chars : ZoneManager.getInstance().getZoneById(SOD_ZONE).getCharactersInside().values())
+				if (chars instanceof L2PcInstance)
+					chars.teleToLocation(SOD_EXIT_POINT[0], SOD_EXIT_POINT[1], SOD_EXIT_POINT[2]);
+			stopAI(GraciaSeeds.DESTRUCTION);
+		}
+		else if (event.equalsIgnoreCase("DeSpawnTask"))
 		{
 			if (npc.isInCombat())
-				startQuestTimer("DeSpawnTask", 1000, npc, null);
+				startQuestTimer("DeSpawnTask", 30000, npc, null);
 			else
 				npc.deleteMe();
 		}
@@ -194,6 +236,8 @@ public class EnergySeeds extends L2AttackableAIScript
 	@Override
 	public String onFirstTalk (L2Npc npc, L2PcInstance player)
 	{
+		if (npc.getNpcId() == TEMPORARY_TELEPORTER)
+			player.teleToLocation(SOD_EXIT_POINT[0], SOD_EXIT_POINT[1], SOD_EXIT_POINT[2]);
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		return null;
 	}
@@ -209,12 +253,46 @@ public class EnergySeeds extends L2AttackableAIScript
 		return super.onKill(npc, player, isPet);
 	}
 	
+	@Override
+	public String onEnterZone(L2Character character, L2ZoneType zone)
+	{
+		if (character.getInstanceId() != 0)
+			return super.onEnterZone(character,zone);
+		
+		if (character instanceof L2PcInstance)
+		{
+			switch(zone.getId())
+			{
+				case SOD_ZONE:
+					if (!isSeedActive(GraciaSeeds.DESTRUCTION) && !character.isGM())
+						character.teleToLocation(SOD_EXIT_POINT[0], SOD_EXIT_POINT[1], SOD_EXIT_POINT[2]);
+					break;
+			}
+		}
+		return super.onEnterZone(character,zone);
+	}
+	
 	public void startAI()
 	{
 		// spawn all NPCs
 		for (ESSpawn spawn : _spawns.values())
 			if (isSeedActive(spawn._seedId))
 				spawn.scheduleRespawn(0);
+	}
+	
+	public void startAI(GraciaSeeds type)
+	{
+		// spawn all NPCs
+		for (ESSpawn spawn : _spawns.values())
+			if (spawn._seedId == type)
+				spawn.scheduleRespawn(0);
+	}
+	
+	public void stopAI(GraciaSeeds type)
+	{
+		for (L2Npc seed : _spawnedNpcs.keySet())
+			if (type == _spawns.get(_spawnedNpcs.get(seed))._seedId)
+				seed.deleteMe();
 	}
 	
 	public void seedCollectEvent(L2PcInstance player, L2Npc seedEnergy, GraciaSeeds seedType)
@@ -287,7 +365,7 @@ public class EnergySeeds extends L2AttackableAIScript
 		
 		monster.spawnMe(energy.getX(), energy.getY(), energy.getZ());
 		
-		startQuestTimer("DeSpawnTask", 3000, monster, null);
+		startQuestTimer("DeSpawnTask", 30000, monster, null);
 		
 		return monster;
 	}

@@ -1,148 +1,195 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Exchange the equipment from hatchling to strider and vice versa -->
-<list>
-	<!-- Mithril Panzer Coat -->
+<list xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance" ns0:noNamespaceSchemaLocation="multisell.xsd">
 	<item id="1">
-		<ingredient id="57" count="80000" />
-		<ingredient id="3918" count="1" />
-		<production id="5170" count="1" />
+		<!-- Adena -->
+		<ingredient count="80000" id="57" />
+		<!-- Hatchling's Mithril Coat -->
+		<ingredient count="1" id="3918" />
+		<!-- Mithril Panzer Coat -->
+		<production count="1" id="5170" />
 	</item>
-	<!-- Hatchling's Mithril Coat -->
 	<item id="2">
-		<ingredient id="57" count="80000" />
-		<ingredient id="5170" count="1" />
-		<production id="3918" count="1" />
+		<!-- Adena -->
+		<ingredient count="80000" id="57" />
+		<!-- Mithril Panzer Coat -->
+		<ingredient count="1" id="5170" />
+		<!-- Hatchling's Mithril Coat -->
+		<production count="1" id="3918" />
 	</item>
-	<!-- Brigadine Panzer Coat -->
 	<item id="3">
-		<ingredient id="57" count="115000" />
-		<ingredient id="5182" count="1" />
-		<production id="5171" count="1" />
+		<!-- Adena -->
+		<ingredient count="115000" id="57" />
+		<!-- Hatchling's Gorgon Coat -->
+		<ingredient count="1" id="5182" />
+		<!-- Brigadine Panzer Coat -->
+		<production count="1" id="5171" />
 	</item>
-	<!-- Hatchling's Gorgon Coat -->
 	<item id="4">
-		<ingredient id="57" count="115000" />
-		<ingredient id="5171" count="1" />
-		<production id="5182" count="1" />
+		<!-- Adena -->
+		<ingredient count="115000" id="57" />
+		<!-- Brigadine Panzer Coat -->
+		<ingredient count="1" id="5171" />
+		<!-- Hatchling's Gorgon Coat -->
+		<production count="1" id="5182" />
 	</item>
-	<!-- Draconic Panzer Coat -->
 	<item id="5">
-		<ingredient id="57" count="170000" />
-		<ingredient id="5183" count="1" />
-		<production id="5172" count="1" />
+		<!-- Adena -->
+		<ingredient count="170000" id="57" />
+		<!-- Hatchling's Ophidian Plate -->
+		<ingredient count="1" id="5183" />
+		<!-- Draconic Panzer Coat -->
+		<production count="1" id="5172" />
 	</item>
-	<!-- Hatchling's Ophidian Plate -->
 	<item id="6">
-		<ingredient id="57" count="170000" />
-		<ingredient id="5172" count="1" />
-		<production id="5183" count="1" />
+		<!-- Adena -->
+		<ingredient count="170000" id="57" />
+		<!-- Draconic Panzer Coat -->
+		<ingredient count="1" id="5172" />
+		<!-- Hatchling's Ophidian Plate -->
+		<production count="1" id="5183" />
 	</item>
-	<!-- Blood Panze Coat -->
 	<item id="7">
-		<ingredient id="57" count="245000" />
-		<ingredient id="5184" count="1" />
-		<production id="5173" count="1" />
+		<!-- Adena -->
+		<ingredient count="245000" id="57" />
+		<!-- Hatchling's Crimson Plate -->
+		<ingredient count="1" id="5184" />
+		<!-- Blood Panzer Coat -->
+		<production count="1" id="5173" />
 	</item>
-	<!-- Hatchling's Crimson Plate -->
 	<item id="8">
-		<ingredient id="57" count="245000" />
-		<ingredient id="5173" count="1" />
-		<production id="5184" count="1" />
+		<!-- Adena -->
+		<ingredient count="245000" id="57" />
+		<!-- Blood Panzer Coat -->
+		<ingredient count="1" id="5173" />
+		<!-- Hatchling's Crimson Plate -->
+		<production count="1" id="5184" />
 	</item>
-	<!-- Ophidian Panzer Coat -->
 	<item id="9">
-		<ingredient id="57" count="365000" />
-		<ingredient id="5185" count="1" />
-		<production id="5174" count="1" />
+		<!-- Adena -->
+		<ingredient count="365000" id="57" />
+		<!-- Hatchling's Draconic Plate -->
+		<ingredient count="1" id="5185" />
+		<!-- Ophidian Panzer Coat -->
+		<production count="1" id="5174" />
 	</item>
-	<!-- Hatchling`s Draconic Plate -->
 	<item id="10">
-		<ingredient id="57" count="365000" />
-		<ingredient id="5174" count="1" />
-		<production id="5185" count="1" />
+		<!-- Adena -->
+		<ingredient count="365000" id="57" />
+		<!-- Ophidian Panzer Coat -->
+		<ingredient count="1" id="5174" />
+		<!-- Hatchling's Draconic Plate -->
+		<production count="1" id="5185" />
 	</item>
-	<!-- Inferno Panzer Coat -->
 	<item id="11">
-		<ingredient id="57" count="500000" />
-		<ingredient id="5186" count="1" />
-		<production id="5175" count="1" />
+		<!-- Adena -->
+		<ingredient count="500000" id="57" />
+		<!-- Hatchling's Inferno Plate -->
+		<ingredient count="1" id="5186" />
+		<!-- Inferno Panzer Coat -->
+		<production count="1" id="5175" />
 	</item>
-	<!-- Hatchling`s Inferno Plate -->
 	<item id="12">
-		<ingredient id="57" count="500000" />
-		<ingredient id="5175" count="1" />
-		<production id="5186" count="1" />
+		<!-- Adena -->
+		<ingredient count="500000" id="57" />
+		<!-- Inferno Panzer Coat -->
+		<ingredient count="1" id="5175" />
+		<!-- Hatchling's Inferno Plate -->
+		<production count="1" id="5186" />
 	</item>
-	<!-- Serpentine Spike -->
 	<item id="13">
-		<ingredient id="57" count="80000" />
-		<ingredient id="3925" count="1" />
-		<production id="5176" count="1" />
+		<!-- Adena -->
+		<ingredient count="80000" id="57" />
+		<!-- Antiplague -->
+		<ingredient count="1" id="3925" />
+		<!-- Serpentine Spike -->
+		<production count="1" id="5176" />
 	</item>
-	<!-- Antiplague -->
 	<item id="14">
-		<ingredient id="57" count="80000" />
-		<ingredient id="5176" count="1" />
-		<production id="3925" count="1" />
+		<!-- Adena -->
+		<ingredient count="80000" id="57" />
+		<!-- Serpentine Spike -->
+		<ingredient count="1" id="5176" />
+		<!-- Antiplague -->
+		<production count="1" id="3925" />
 	</item>
-	<!-- Drake Horn -->
 	<item id="15">
-		<ingredient id="57" count="115000" />
-		<ingredient id="5187" count="1" />
-		<production id="5177" count="1" />
+		<!-- Adena -->
+		<ingredient count="115000" id="57" />
+		<!-- Serpentine Grinder -->
+		<ingredient count="1" id="5187" />
+		<!-- Drake Horn -->
+		<production count="1" id="5177" />
 	</item>
-	<!-- Serpentine Grinder -->
 	<item id="16">
-		<ingredient id="57" count="115000" />
-		<ingredient id="5177" count="1" />
-		<production id="5187" count="1" />
+		<!-- Adena -->
+		<ingredient count="115000" id="57" />
+		<!-- Drake Horn -->
+		<ingredient count="1" id="5177" />
+		<!-- Serpentine Grinder -->
+		<production count="1" id="5187" />
 	</item>
-	<!-- Assult Alcorn -->
 	<item id="17">
-		<ingredient id="57" count="170000" />
-		<ingredient id="5188" count="1" />
-		<production id="5178" count="1" />
+		<!-- Adena -->
+		<ingredient count="170000" id="57" />
+		<!-- Fang of Dahak -->
+		<ingredient count="1" id="5188" />
+		<!-- Assault Alicorn -->
+		<production count="1" id="5178" />
 	</item>
-	<!-- Fang of Dahak -->
 	<item id="18">
-		<ingredient id="57" count="170000" />
-		<ingredient id="5178" count="1" />
-		<production id="5188" count="1" />
+		<!-- Adena -->
+		<ingredient count="170000" id="57" />
+		<!-- Assault Alicorn -->
+		<ingredient count="1" id="5178" />
+		<!-- Fang of Dahak -->
+		<production count="1" id="5188" />
 	</item>
-	<!-- Draconic Slicer -->
 	<item id="19">
-		<ingredient id="57" count="245000" />
-		<ingredient id="5189" count="1" />
-		<production id="5179" count="1" />
+		<!-- Adena -->
+		<ingredient count="245000" id="57" />
+		<!-- Crimson Blood Fang -->
+		<ingredient count="1" id="5189" />
+		<!-- Draconic Slicer -->
+		<production count="1" id="5179" />
 	</item>
-	<!-- Crimson Blood Fang -->
 	<item id="20">
-		<ingredient id="57" count="245000" />
-		<ingredient id="5179" count="1" />
-		<production id="5189" count="1" />
+		<!-- Adena -->
+		<ingredient count="245000" id="57" />
+		<!-- Draconic Slicer -->
+		<ingredient count="1" id="5179" />
+		<!-- Crimson Blood Fang -->
+		<production count="1" id="5189" />
 	</item>
-	<!-- Ohpdian Lance -->
 	<item id="21">
-		<ingredient id="57" count="365000" />
-		<ingredient id="5190" count="1" />
-		<production id="5180" count="1" />
+		<!-- Adena -->
+		<ingredient count="365000" id="57" />
+		<!-- Draconic Chopper -->
+		<ingredient count="1" id="5190" />
+		<!-- Ohpdian Lance -->
+		<production count="1" id="5180" />
 	</item>
-	<!-- Draconic Chopper -->
 	<item id="22">
-		<ingredient id="57" count="365000" />
-		<ingredient id="5180" count="1" />
-		<production id="5190" count="1" />
+		<!-- Adena -->
+		<ingredient count="365000" id="57" />
+		<!-- Ohpdian Lance -->
+		<ingredient count="1" id="5180" />
+		<!-- Draconic Chopper -->
+		<production count="1" id="5190" />
 	</item>
-	<!-- Diamond Drill -->
 	<item id="23">
-		<ingredient id="57" count="500000" />
-		<ingredient id="5191" count="1" />
-		<production id="5181" count="1" />
+		<!-- Adena -->
+		<ingredient count="500000" id="57" />
+		<!-- Diabolic Grinder -->
+		<ingredient count="1" id="5191" />
+		<!-- Diamond Drill -->
+		<production count="1" id="5181" />
 	</item>
-	<!-- Diabolic Grinder -->
 	<item id="24">
-		<ingredient id="57" count="500000" />
-		<ingredient id="5181" count="1" />
-		<production id="5191" count="1" />
+		<!-- Adena -->
+		<ingredient count="500000" id="57" />
+		<!-- Diamond Drill -->
+		<ingredient count="1" id="5181" />
+		<!-- Diabolic Grinder -->
+		<production count="1" id="5191" />
 	</item>
 </list>

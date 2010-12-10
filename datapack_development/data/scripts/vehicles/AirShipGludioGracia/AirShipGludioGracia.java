@@ -24,6 +24,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2AirShipInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
+import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
@@ -102,6 +103,62 @@ public class AirShipGludioGracia extends Quest implements Runnable
 	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
+		if (player.isTransformed())
+		{
+			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_TRANSFORMED);
+			return null;
+		}
+		if (player.isParalyzed())
+		{
+			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_PETRIFIED);
+			return null;
+		}
+		if (player.isDead())
+		{
+			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_DEAD);	
+			return null;
+		}
+		if (player.isFishing())
+		{
+			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_FISHING);
+			return null;
+		}
+		if (player.getPvpFlag() != 0)
+		{
+			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_IN_BATTLE);
+			return null;
+		}
+		if (player.isInDuel())
+		{
+			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_IN_A_DUEL);
+			return null;
+		}
+		if (player.isSitting())
+		{
+			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_SITTING);
+			return null;
+		}
+		if (player.isCastingNow())
+		{
+			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_CASTING);
+			return null;
+		}
+		if (player.isCursedWeaponEquipped())
+		{
+			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_A_CURSED_WEAPON_IS_EQUIPPED);
+			return null;
+		}
+		if (player.isCombatFlagEquipped())
+		{
+			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_HOLDING_A_FLAG);
+			return null;
+		}
+		if (player.getPet() != null)
+		{
+			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_A_PET_OR_A_SERVITOR_IS_SUMMONED);
+			return null;
+		}
+		
 		if (_ship.isInDock() && _ship.isInsideRadius(player, 600, true, false))
 			_ship.addPassenger(player);
 		
@@ -144,7 +201,7 @@ public class AirShipGludioGracia extends Quest implements Runnable
 					_ship.executePath(GLUDIO_TO_WARPGATE);
 					break;
 				case 1:
-					//					_ship.teleToLocation(-167874, 256731, -509, 41035, false);
+					//_ship.teleToLocation(-167874, 256731, -509, 41035, false);
 					_ship.setOustLoc(OUST_GRACIA);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 5000);
 					break;

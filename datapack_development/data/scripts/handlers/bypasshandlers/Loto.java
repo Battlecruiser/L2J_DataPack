@@ -283,9 +283,8 @@ public class Loto implements IBypassHandler
 				return;
 			long[] check = Lottery.getInstance().checkTicket(item);
 			
-			sm = new SystemMessage(SystemMessageId.S2_S1_DISAPPEARED);
+			sm = new SystemMessage(SystemMessageId.S1_DISAPPEARED);
 			sm.addItemName(4442);
-			sm.addItemNumber(1);
 			player.sendPacket(sm);
 			
 			long adena = check[1];

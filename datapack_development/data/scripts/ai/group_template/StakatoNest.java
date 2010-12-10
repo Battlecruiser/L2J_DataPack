@@ -22,7 +22,6 @@ import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2MinionInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
@@ -98,7 +97,7 @@ public class StakatoNest extends L2AttackableAIScript
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
-		L2MinionInstance _minion = checkMinion(npc);
+		L2MonsterInstance _minion = checkMinion(npc);
 		
 		if (npc.getNpcId() == _stakato_nurse && _minion != null)
 		{
@@ -111,7 +110,7 @@ public class StakatoNest extends L2AttackableAIScript
 		}
 		else if (npc.getNpcId() == _stakato_baby)
 		{
-			L2MonsterInstance _leader = ((L2MinionInstance) npc).getLeader();
+			L2MonsterInstance _leader = ((L2MonsterInstance) npc).getLeader();
 			if(_leader != null && !_leader.isDead())
 			{
 				startQuestTimer("nurse_change", 5000, _leader, killer);
@@ -128,7 +127,7 @@ public class StakatoNest extends L2AttackableAIScript
 		}
 		else if (npc.getNpcId() == _stakato_female)
 		{
-			L2MonsterInstance _leader = ((L2MinionInstance) npc).getLeader();
+			L2MonsterInstance _leader = ((L2MonsterInstance) npc).getLeader();
 			if(_leader != null && !_leader.isDead())
 			{
 				startQuestTimer("male_change", 5000, _leader, killer);
@@ -197,12 +196,15 @@ public class StakatoNest extends L2AttackableAIScript
 		new StakatoNest(-1, "StakatoNestAI", "ai");
 	}
 	
-	private L2MinionInstance checkMinion(L2Npc npc)
+	private L2MonsterInstance checkMinion(L2Npc npc)
 	{
-		L2MonsterInstance _mob = (L2MonsterInstance) npc;
-		List<L2MinionInstance> _minion = _mob.getSpawnedMinions();
-		if ((_minion != null) && !_minion.isEmpty() && (_minion.get(0) != null) && !_minion.get(0).isDead())
-			return _minion.get(0);
+		L2MonsterInstance mob = (L2MonsterInstance) npc;
+		if (mob.hasMinions())
+		{
+			List<L2MonsterInstance> _minion = mob.getMinionList().getSpawnedMinions();
+			if ((_minion != null) && !_minion.isEmpty() && (_minion.get(0) != null) && !_minion.get(0).isDead())
+				return _minion.get(0);
+		}
 		
 		return null;
 	}

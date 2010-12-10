@@ -38,6 +38,7 @@ import handlers.admincommandhandlers.AdminBuffs;
 import handlers.admincommandhandlers.AdminCache;
 import handlers.admincommandhandlers.AdminCamera;
 import handlers.admincommandhandlers.AdminChangeAccessLevel;
+import handlers.admincommandhandlers.AdminClan;
 import handlers.admincommandhandlers.AdminCreateItem;
 import handlers.admincommandhandlers.AdminCursedWeapons;
 import handlers.admincommandhandlers.AdminDebug;
@@ -112,6 +113,9 @@ import handlers.bypasshandlers.Loto;
 import handlers.bypasshandlers.ManorManager;
 import handlers.bypasshandlers.Multisell;
 import handlers.bypasshandlers.Observation;
+import handlers.bypasshandlers.OlympiadObservation;
+import handlers.bypasshandlers.OlympiadManagerLink;
+import handlers.bypasshandlers.PlayerHelp;
 import handlers.bypasshandlers.PrivateWarehouse;
 import handlers.bypasshandlers.QuestLink;
 import handlers.bypasshandlers.QuestList;
@@ -128,6 +132,7 @@ import handlers.bypasshandlers.SupportMagic;
 import handlers.bypasshandlers.TerritoryStatus;
 import handlers.bypasshandlers.TerritoryWar;
 import handlers.bypasshandlers.Transform;
+import handlers.bypasshandlers.VoiceCommand;
 import handlers.bypasshandlers.Wear;
 import handlers.chathandlers.ChatAll;
 import handlers.chathandlers.ChatAlliance;
@@ -152,6 +157,7 @@ import handlers.itemhandlers.Elixir;
 import handlers.itemhandlers.EnchantAttribute;
 import handlers.itemhandlers.EnchantScrolls;
 import handlers.itemhandlers.EnergyStarStone;
+import handlers.itemhandlers.EventItem;
 import handlers.itemhandlers.ExtractableItems;
 import handlers.itemhandlers.FishShots;
 import handlers.itemhandlers.Harvester;
@@ -192,6 +198,7 @@ import handlers.skillhandlers.Extractable;
 import handlers.skillhandlers.Fishing;
 import handlers.skillhandlers.FishingSkill;
 import handlers.skillhandlers.GetPlayer;
+import handlers.skillhandlers.GiveReco;
 import handlers.skillhandlers.GiveSp;
 import handlers.skillhandlers.GiveVitality;
 import handlers.skillhandlers.Harvest;
@@ -298,6 +305,7 @@ public class MasterHandler
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminCache());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminCamera());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminChangeAccessLevel());
+		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminClan());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminCreateItem());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminCursedWeapons());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminDebug());
@@ -377,7 +385,10 @@ public class MasterHandler
 		BypassHandler.getInstance().registerBypassHandler(new ManorManager());
 		BypassHandler.getInstance().registerBypassHandler(new Multisell());
 		BypassHandler.getInstance().registerBypassHandler(new Observation());
+		BypassHandler.getInstance().registerBypassHandler(new OlympiadObservation());
+		BypassHandler.getInstance().registerBypassHandler(new OlympiadManagerLink());
 		BypassHandler.getInstance().registerBypassHandler(new QuestLink());
+		BypassHandler.getInstance().registerBypassHandler(new PlayerHelp());
 		BypassHandler.getInstance().registerBypassHandler(new PrivateWarehouse());
 		BypassHandler.getInstance().registerBypassHandler(new QuestList());
 		BypassHandler.getInstance().registerBypassHandler(new ReceivePremium());
@@ -393,6 +404,7 @@ public class MasterHandler
 		BypassHandler.getInstance().registerBypassHandler(new TerritoryStatus());
 		BypassHandler.getInstance().registerBypassHandler(new TerritoryWar());
 		BypassHandler.getInstance().registerBypassHandler(new Transform());
+		BypassHandler.getInstance().registerBypassHandler(new VoiceCommand());
 		BypassHandler.getInstance().registerBypassHandler(new Wear());
 		_log.config("Loaded " + BypassHandler.getInstance().size() + "  BypassHandlers");
 	}
@@ -448,6 +460,7 @@ public class MasterHandler
 		ItemHandler.getInstance().registerItemHandler(new Disguise());
 		ItemHandler.getInstance().registerItemHandler(new ManaPotion());
 		ItemHandler.getInstance().registerItemHandler(new EnergyStarStone());
+		ItemHandler.getInstance().registerItemHandler(new EventItem());
 		_log.config("Loaded " + ItemHandler.getInstance().size() + " ItemHandlers");
 	}
 	
@@ -493,6 +506,7 @@ public class MasterHandler
 		SkillHandler.getInstance().registerSkillHandler(new TransformDispel());
 		SkillHandler.getInstance().registerSkillHandler(new Trap());
 		SkillHandler.getInstance().registerSkillHandler(new GiveSp());
+		SkillHandler.getInstance().registerSkillHandler(new GiveReco());
 		SkillHandler.getInstance().registerSkillHandler(new GiveVitality());
 		SkillHandler.getInstance().registerSkillHandler(new InstantJump());
 		SkillHandler.getInstance().registerSkillHandler(new Dummy());

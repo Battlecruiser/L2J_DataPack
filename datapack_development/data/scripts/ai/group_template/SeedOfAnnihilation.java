@@ -19,22 +19,17 @@ import java.util.Map;
 
 import javolution.util.FastMap;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.datatables.SpawnTable;
-import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2MinionInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.model.zone.type.L2EffectZone;
-import com.l2jserver.gameserver.templates.chars.L2NpcTemplate;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
@@ -51,7 +46,7 @@ public class SeedOfAnnihilation extends Quest
 	private SeedRegion[] _regionsData = new SeedRegion[3];
 	private Long _seedsNextStatusChange;
 	
-	private class SeedRegion
+	private static class SeedRegion
 	{
 		public int[] elite_mob_ids;
 		public int[][] minion_lists;
@@ -173,51 +168,10 @@ public class SeedOfAnnihilation extends Quest
 		}
 	}
 	
-	private void spawnSingleMinion(L2MonsterInstance master, int minionId)
-	{
-		// Get the template of the Minion to spawn
-		L2NpcTemplate minionTemplate = NpcTable.getInstance().getTemplate(minionId);
-		
-		// Create and Init the Minion and generate its Identifier
-		L2MinionInstance monster = new L2MinionInstance(IdFactory.getInstance().getNextId(), minionTemplate);
-		
-		// Set the Minion HP, MP and Heading
-		monster.setCurrentHpMp(monster.getMaxHp(), monster.getMaxMp());
-		monster.setHeading(master.getHeading());
-		
-		// Set the Minion leader to this RaidBoss
-		monster.setLeader(master);
-		
-		//move monster to masters instance
-		monster.setInstanceId(master.getInstanceId());
-		
-		// Init the position of the Minion and add it in the world as a visible object
-		final int offset = 200;
-		final int minRadius = 30;
-		
-		int newX = Rnd.get(minRadius * 2, offset * 2); // x
-		int newY = Rnd.get(newX, offset * 2); // distance
-		newY = (int)Math.sqrt(newY*newY - newX*newX); // y
-		if (newX > offset + minRadius)
-			newX = master.getX() + newX - offset;
-		else
-			newX = master.getX() - newX + minRadius;
-		if (newY > offset + minRadius)
-			newY = master.getY() + newY - offset;
-		else
-			newY = master.getY() - newY + minRadius;
-		
-		monster.spawnMe(newX, newY, master.getZ());
-		
-		if (Config.DEBUG)
-			_log.fine("Spawned minion template " + minionTemplate.npcId + " with objid: " + monster.getObjectId() + " to boss " + master.getObjectId() + " ,at: " + monster.getX() + " x, " + monster.getY() + " y, " + monster.getZ() + " z");
-	}
-	
 	private void spawnGroupOfMinion(L2MonsterInstance npc, int[] mobIds)
 	{
-		npc.enableDynamicMinions(true);
 		for (int i = 0; i < mobIds.length; i++)
-			spawnSingleMinion(npc, mobIds[i]);
+			addMinion(npc, mobIds[i]);
 	}
 	
 	@Override
@@ -247,7 +201,9 @@ public class SeedOfAnnihilation extends Quest
 				for(L2Npc af : _regionsData[i].af_npcs)
 					af.setDisplayEffect(_regionsData[i].activeBuff);
 				
-				ZoneManager.getInstance().getZoneById(_regionsData[i].buff_zone, L2EffectZone.class).addSkill(ZONE_BUFFS[_regionsData[i].activeBuff], 1);
+				L2EffectZone zone = ZoneManager.getInstance().getZoneById(_regionsData[i].buff_zone, L2EffectZone.class);
+				zone.clearSkills();
+				zone.addSkill(ZONE_BUFFS[_regionsData[i].activeBuff], 1);
 			}
 			startQuestTimer("ChangeSeedsStatus", _seedsNextStatusChange - System.currentTimeMillis(), null, null);
 		}

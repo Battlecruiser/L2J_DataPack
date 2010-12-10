@@ -2,6 +2,7 @@
 # Shadow Weapon Coupons contributed by BiTi for the Official L2J Datapack Project
 # Visit http://www.l2jdp.com/forum/ for more details
 import sys
+from com.l2jserver.gameserver.model.itemcontainer import Inventory
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
@@ -140,7 +141,7 @@ class Quest (JQuest) :
    if st.getState() != State.STARTED : return 
    
    npcId = npc.getNpcId()
-   if st.getItemEquipped(16) == NETIS_BOW or st.getItemEquipped(9) == NETIS_DAGGER :
+   if st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == NETIS_BOW or st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == NETIS_DAGGER :
      if npcId in (20035, 20042, 20045, 20051, 20054, 20060) :
         st.set("id","0")
         if st.getInt("cond") and st.getQuestItemsCount(SPATOIS_BONES)<10 and st.getRandom(10)<DROP_CHANCE[npcId] :

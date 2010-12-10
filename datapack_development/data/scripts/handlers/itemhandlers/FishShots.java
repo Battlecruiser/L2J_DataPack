@@ -51,7 +51,7 @@ public class FishShots implements IItemHandler
 		L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
 		L2Weapon weaponItem = activeChar.getActiveWeaponItem();
 		
-		if (weaponInst == null || weaponItem.getItemType() != L2WeaponType.ROD)
+		if (weaponInst == null || weaponItem.getItemType() != L2WeaponType.FISHINGROD)
 			return;
 		
 		if (weaponInst.getChargedFishshot())

@@ -137,8 +137,7 @@ public class QuestLink implements IBypassHandler
 			{
 				if (q.getQuestIntId() >= 1 && q.getQuestIntId() < 20000)
 				{
-					Quest[] questList = player.getAllActiveQuests();
-					if (questList.length >= 40) // if too many ongoing quests, don't show window and send message
+					if (player.getAllActiveQuests().length > 40) // if too many ongoing quests, don't show window and send message
 					{
 						player.sendPacket(new SystemMessage(SystemMessageId.TOO_MANY_QUESTS));
 						return;

@@ -31,7 +31,6 @@ import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.L2SummonItem;
-import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Playable;
@@ -73,6 +72,9 @@ public class SummonItems implements IItemHandler
 			return;
 		}
 		
+		if(activeChar.getBlockCheckerArena() != -1)
+			return;
+
 		if (activeChar.inObserverMode())
 			return;
 		
@@ -247,7 +249,8 @@ public class SummonItems implements IItemHandler
 				
 				_activeChar.setPet(petSummon);
 				
-				L2World.getInstance().storeObject(petSummon);
+				//JIV remove - done on spawn
+				//L2World.getInstance().storeObject(petSummon);
 				petSummon.spawnMe(_activeChar.getX() + 50, _activeChar.getY() + 100, _activeChar.getZ());
 				petSummon.startFeed();
 				_item.setEnchantLevel(petSummon.getLevel());
@@ -258,53 +261,6 @@ public class SummonItems implements IItemHandler
 					petSummon.startFeed();
 				
 				petSummon.setFollowStatus(true);
-				final int weaponId = petSummon.getWeapon();
-				final int armorId = petSummon.getArmor();
-				final int jewelId = petSummon.getJewel();
-				if (weaponId > 0 && petSummon.getOwner().getInventory().getItemByItemId(weaponId) != null)
-				{
-					final L2ItemInstance item = petSummon.getOwner().getInventory().getItemByItemId(weaponId);
-					final L2ItemInstance newItem = petSummon.getOwner().transferItem("Transfer", item.getObjectId(), 1, petSummon.getInventory(), petSummon);
-					if (newItem == null)
-					{
-						_log.warning("Invalid item transfer request: " + petSummon.getName() + "(pet) --> " + petSummon.getOwner().getName());
-						petSummon.setWeapon(0);
-					}
-					else
-						petSummon.getInventory().equipItem(newItem);
-				}
-				else
-					petSummon.setWeapon(0);
-				
-				if (armorId > 0 && petSummon.getOwner().getInventory().getItemByItemId(armorId) != null)
-				{
-					final L2ItemInstance item = petSummon.getOwner().getInventory().getItemByItemId(armorId);
-					final L2ItemInstance newItem = petSummon.getOwner().transferItem("Transfer", item.getObjectId(), 1, petSummon.getInventory(), petSummon);
-					if (newItem == null)
-					{
-						_log.warning("Invalid item transfer request: " + petSummon.getName() + "(pet) --> " + petSummon.getOwner().getName());
-						petSummon.setArmor(0);
-					}
-					else
-						petSummon.getInventory().equipItem(newItem);
-				}
-				else
-					petSummon.setArmor(0);
-				
-				if (jewelId > 0 && petSummon.getOwner().getInventory().getItemByItemId(jewelId) != null)
-				{
-					final L2ItemInstance item = petSummon.getOwner().getInventory().getItemByItemId(jewelId);
-					final L2ItemInstance newItem = petSummon.getOwner().transferItem("Transfer", item.getObjectId(), 1, petSummon.getInventory(), petSummon);
-					if (newItem == null)
-					{
-						_log.warning("Invalid item transfer request: " + petSummon.getName() + "(pet) --> " + petSummon.getOwner().getName());
-						petSummon.setJewel(0);
-					}
-					else
-						petSummon.getInventory().equipItem(newItem);
-				}
-				else
-					petSummon.setJewel(0);
 				
 				petSummon.getOwner().sendPacket(new PetItemList(petSummon));
 				petSummon.broadcastStatusUpdate();

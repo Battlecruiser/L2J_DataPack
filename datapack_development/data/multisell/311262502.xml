@@ -1,116 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Seven Signs - Blacksmith of Mammons - A-grade duals -->
-<list>
-	<!-- Keshanberk*Keshanberk -->
+<list xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance" ns0:noNamespaceSchemaLocation="multisell.xsd">
 	<item id="1">
-		<ingredient id="142" count="1" />
-		<ingredient id="142" count="1" />
-		<ingredient id="5126" count="1" />
-		<ingredient id="5575" count="1757700" />
-		<production id="5233" count="1" />
+		<!-- Keshanberk -->
+		<ingredient count="1" id="142" />
+		<!-- Keshanberk -->
+		<ingredient count="1" id="142" />
+		<!-- Dualsword Craft Stamp -->
+		<ingredient count="1" id="5126" />
+		<!-- Ancient Adena -->
+		<ingredient count="1757700" id="5575" />
+		<!-- Keshanberk*Keshanberk -->
+		<production count="1" id="5233" />
 	</item>
-	<!-- Keshanberk*Damascus -->
 	<item id="2">
-		<ingredient id="142" count="1" />
-		<ingredient id="79" count="1" />
-		<ingredient id="5126" count="1" />
-		<ingredient id="5575" count="3590100" />
-		<production id="5705" count="1" />
+		<!-- Keshanberk -->
+		<ingredient count="1" id="142" />
+		<!-- Sword of Damascus -->
+		<ingredient count="1" id="79" />
+		<!-- Dualsword Craft Stamp -->
+		<ingredient count="1" id="5126" />
+		<!-- Ancient Adena -->
+		<ingredient count="3590100" id="5575" />
+		<!-- Keshanberk*Damascus -->
+		<production count="1" id="5705" />
 	</item>
-	<!-- Damascus*Damascus -->
 	<item id="3">
-		<ingredient id="79" count="1" />
-		<ingredient id="79" count="1" />
-		<ingredient id="5126" count="1" />
-		<ingredient id="5575" count="2079000" />
-		<production id="5706" count="1" />
+		<!-- Sword of Damascus -->
+		<ingredient count="1" id="79" />
+		<!-- Sword of Damascus -->
+		<ingredient count="1" id="79" />
+		<!-- Dualsword Craft Stamp -->
+		<ingredient count="1" id="5126" />
+		<!-- Ancient Adena -->
+		<ingredient count="2079000" id="5575" />
+		<!-- Damascus*Damascus -->
+		<production count="1" id="5706" />
 	</item>
-	<!-- Damascus*Tallum Blade -->
 	<item id="4">
-		<ingredient id="80" count="1" />
-		<ingredient id="79" count="1" />
-		<ingredient id="5126" count="1" />
-		<ingredient id="5575" count="3510000" />
-		<production id="8938" count="1" />
+		<!-- Tallum Blade -->
+		<ingredient count="1" id="80" />
+		<!-- Sword of Damascus -->
+		<ingredient count="1" id="79" />
+		<!-- Dualsword Craft Stamp -->
+		<ingredient count="1" id="5126" />
+		<!-- Ancient Adena -->
+		<ingredient count="3510000" id="5575" />
+		<!-- Damascus * Tallum Blade -->
+		<production count="1" id="8938" />
 	</item>
-	<!-- Standard Item - Keshanberk*Keshanberk -->
 	<item id="5">
-		<ingredient id="11916" count="1" />
-		<ingredient id="11916" count="1" />
-		<ingredient id="5126" count="1" />
-		<ingredient id="5575" count="195300" />
-		<production id="11956" count="1" />
+		<!-- Common Item - Keshanberk -->
+		<ingredient count="1" id="11916" />
+		<!-- Common Item - Keshanberk -->
+		<ingredient count="1" id="11916" />
+		<!-- Dualsword Craft Stamp -->
+		<ingredient count="1" id="5126" />
+		<!-- Ancient Adena -->
+		<ingredient count="195300" id="5575" />
+		<!-- Common Item - Keshanberk*Keshanberk -->
+		<production count="1" id="11956" />
 	</item>
-	<!-- Standard Item - Keshanberk*Damascus -->
 	<item id="6">
-		<ingredient id="11916" count="1" />
-		<ingredient id="11930" count="1" />
-		<ingredient id="5126" count="1" />
-		<ingredient id="5575" count="398900" />
-		<production id="11961" count="1" />
+		<!-- Common Item - Keshanberk -->
+		<ingredient count="1" id="11916" />
+		<!-- Common Item - Sword of Damascus -->
+		<ingredient count="1" id="11930" />
+		<!-- Dualsword Craft Stamp -->
+		<ingredient count="1" id="5126" />
+		<!-- Ancient Adena -->
+		<ingredient count="398900" id="5575" />
+		<!-- Common Item - Keshanberk*Damascus -->
+		<production count="1" id="11961" />
 	</item>
-	<!-- Standard Item - Damascus*Damascus -->
 	<item id="7">
-		<ingredient id="11930" count="1" />
-		<ingredient id="11930" count="1" />
-		<ingredient id="5126" count="1" />
-		<ingredient id="5575" count="231000" />
-		<production id="11963" count="1" />
+		<!-- Common Item - Sword of Damascus -->
+		<ingredient count="1" id="11930" />
+		<!-- Common Item - Sword of Damascus -->
+		<ingredient count="1" id="11930" />
+		<!-- Dualsword Craft Stamp -->
+		<ingredient count="1" id="5126" />
+		<!-- Ancient Adena -->
+		<ingredient count="231000" id="5575" />
+		<!-- Common Item - Damascus*Damascus -->
+		<production count="1" id="11963" />
 	</item>
-	<!-- Standard Item - Tallum Blade*Damascus -->
 	<item id="8">
-		<ingredient id="11957" count="1" />
-		<ingredient id="11930" count="1" />
-		<ingredient id="5126" count="1" />
-		<ingredient id="5575" count="390000" />
-		<production id="11989" count="1" />
+		<!-- Common Item - Tallum Blade -->
+		<ingredient count="1" id="11957" />
+		<!-- Common Item - Sword of Damascus -->
+		<ingredient count="1" id="11930" />
+		<!-- Dualsword Craft Stamp -->
+		<ingredient count="1" id="5126" />
+		<!-- Ancient Adena -->
+		<ingredient count="390000" id="5575" />
+		<!-- Common Item - Tallum Blade*Damascus -->
+		<production count="1" id="11989" />
 	</item>
-	<!-- Keshanberk*Keshanberk - Destruction -->
 	<item id="9">
-		<ingredient id="10930" count="1" />
-		<ingredient id="142" count="1" />
-		<ingredient id="5126" count="1" />
-		<ingredient id="5575" count="1757700" />
-		<production id="11057" count="1" />
+		<!-- Keshanberk - Destruction -->
+		<ingredient count="1" id="10930" />
+		<!-- Keshanberk -->
+		<ingredient count="1" id="142" />
+		<!-- Dualsword Craft Stamp -->
+		<ingredient count="1" id="5126" />
+		<!-- Ancient Adena -->
+		<ingredient count="1757700" id="5575" />
+		<!-- Keshanberk*Keshanberk - Destruction -->
+		<production count="1" id="11057" />
 	</item>
-	<!-- Keshanberk*Damascus - Destruction -->
 	<item id="10">
-		<ingredient id="10930" count="1" />
-		<ingredient id="79" count="1" />
-		<ingredient id="5126" count="1" />
-		<ingredient id="5575" count="3590100" />
-		<production id="11074" count="1" />
+		<!-- Keshanberk - Destruction -->
+		<ingredient count="1" id="10930" />
+		<!-- Sword of Damascus -->
+		<ingredient count="1" id="79" />
+		<!-- Dualsword Craft Stamp -->
+		<ingredient count="1" id="5126" />
+		<!-- Ancient Adena -->
+		<ingredient count="3590100" id="5575" />
+		<!-- Keshanberk*Damascus - Destruction -->
+		<production count="1" id="11074" />
 	</item>
-	<!-- Keshanberk*Damascus - Destruction -->
 	<item id="11">
-		<ingredient id="142" count="1" />
-		<ingredient id="10959" count="1" />
-		<ingredient id="5126" count="1" />
-		<ingredient id="5575" count="3590100" />
-		<production id="11074" count="1" />
+		<!-- Keshanberk -->
+		<ingredient count="1" id="142" />
+		<!-- Sword of Damascus - Earth -->
+		<ingredient count="1" id="10959" />
+		<!-- Dualsword Craft Stamp -->
+		<ingredient count="1" id="5126" />
+		<!-- Ancient Adena -->
+		<ingredient count="3590100" id="5575" />
+		<!-- Keshanberk*Damascus - Destruction -->
+		<production count="1" id="11074" />
 	</item>
-	<!-- Damascus*Damascus - Lightning -->
 	<item id="12">
-		<ingredient id="10959" count="1" />
-		<ingredient id="79" count="1" />
-		<ingredient id="5126" count="1" />
-		<ingredient id="5575" count="2079000" />
-		<production id="11079" count="1" />
+		<!-- Sword of Damascus - Earth -->
+		<ingredient count="1" id="10959" />
+		<!-- Sword of Damascus -->
+		<ingredient count="1" id="79" />
+		<!-- Dualsword Craft Stamp -->
+		<ingredient count="1" id="5126" />
+		<!-- Ancient Adena -->
+		<ingredient count="2079000" id="5575" />
+		<!-- Damascus*Damascus - Thunder -->
+		<production count="1" id="11079" />
 	</item>
-	<!-- Tallum Blade*Damascus - Landslide -->
 	<item id="13">
-		<ingredient id="11058" count="1" />
-		<ingredient id="79" count="1" />
-		<ingredient id="5126" count="1" />
-		<ingredient id="5575" count="3510000" />
-		<production id="11181" count="1" />
+		<!-- Tallum Blade - Destruction -->
+		<ingredient count="1" id="11058" />
+		<!-- Sword of Damascus -->
+		<ingredient count="1" id="79" />
+		<!-- Dualsword Craft Stamp -->
+		<ingredient count="1" id="5126" />
+		<!-- Ancient Adena -->
+		<ingredient count="3510000" id="5575" />
+		<!-- Tallum Blade*Damascus - Landslide -->
+		<production count="1" id="11181" />
 	</item>
-	<!-- Tallum Blade*Damascus - Landslide -->
 	<item id="14">
-		<ingredient id="80" count="1" />
-		<ingredient id="10959" count="1" />
-		<ingredient id="5126" count="1" />
-		<ingredient id="5575" count="3510000" />
-		<production id="11181" count="1" />
+		<!-- Tallum Blade -->
+		<ingredient count="1" id="80" />
+		<!-- Sword of Damascus - Earth -->
+		<ingredient count="1" id="10959" />
+		<!-- Dualsword Craft Stamp -->
+		<ingredient count="1" id="5126" />
+		<!-- Ancient Adena -->
+		<ingredient count="3510000" id="5575" />
+		<!-- Tallum Blade*Damascus - Landslide -->
+		<production count="1" id="11181" />
 	</item>
 </list>

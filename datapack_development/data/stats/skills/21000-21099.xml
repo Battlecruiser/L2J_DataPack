@@ -33,28 +33,44 @@
 		<set name="npcId" val="1504" />
 	</skill>
 	<skill id="21004" levels="1" name="Wind Walk">
-		<!-- Increases moving speed by 20 for 2 minutes. Reuse delay 18 minutes -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
 		<set name="hitTime" val="4000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="1080000" />
+		<for>
+			<effect name="Buff" time="120" val="0" stackOrder="26" stackType="speed_up">
+				<add order="0x40" stat="runSpd" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21005" levels="3" name="Agility">
-		<!-- Increases evasion rate by 4 for 1 hour. Reuse Delay 24 hours -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
 		<set name="hitTime" val="4000" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="86400000" />
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="avoid_up">
+				<add order="0x40" stat="rEvas" val="4" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21006" levels="1" name="Large Firework Effect">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="3600000" />
 	</skill>
 	<skill id="21007" levels="1" name="Ability of Doubt">
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="3600000" />
 	</skill>
 	<skill id="21008" levels="1" name="Release Seal on Agathion - Baby Panda">
 		<set name="target" val="TARGET_SELF" />
@@ -89,7 +105,7 @@
 		<set name="reuseDelay" val="43200000" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormal="vitality">
+			<effect name="Buff" time="1200" val="0" stackOrder="26" stackType="vp_up" abnormal="vitality">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -103,7 +119,7 @@
 		<set name="reuseDelay" val="43200000" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormal="vitality">
+			<effect name="Buff" time="1200" val="0" stackOrder="26" stackType="vp_up" abnormal="vitality">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -117,7 +133,7 @@
 		<set name="reuseDelay" val="43200000" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormal="vitality">
+			<effect name="Buff" time="1200" val="0" stackOrder="26" stackType="vp_up" abnormal="vitality">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -128,10 +144,11 @@
 		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2000" />
-		<set name="reuseDelay" val="10000" />
+		<set name="coolTime" val="500" />
 		<set name="equipDelay" val="30000" />
-		<set name="castRange" val="400" />
 		<set name="staticReuse" val="true" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="500" />
 		<cond msgId="109">
 			<target npcId="13183" />
 		</cond>
@@ -142,10 +159,10 @@
 		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2000" />
-		<set name="reuseDelay" val="10000" />
+		<set name="coolTime" val="500" />
 		<set name="equipDelay" val="30000" />
-		<set name="castRange" val="400" />
 		<set name="staticReuse" val="true" />
+		<set name="castRange" val="400" />
 		<cond msgId="109">
 			<target npcId="13183" />
 		</cond>
@@ -156,10 +173,10 @@
 		<set name="staticHitTime" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="2000" />
-		<set name="reuseDelay" val="10000" />
+		<set name="coolTime" val="500" />
 		<set name="equipDelay" val="30000" />
-		<set name="castRange" val="400" />
 		<set name="staticReuse" val="true" />
+		<set name="castRange" val="400" />
 		<cond msgId="109">
 			<target npcId="13183" />
 		</cond>
@@ -168,116 +185,109 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLvl" val="1" />
 		<for>
-			<mul order="0x30" stat="maxCp" val="1.1" />
-			<add order="0x40" stat="rCrit" val="15" />
-			<add order="0x40" stat="absorbDam" val="5" />
+			<mul order="0x30" stat="maxCp" val="1.3" />
+			<add order="0x40" stat="rCrit" val="10" />
+			<add order="0x40" stat="absorbDam" val="10" />
 		</for>
 	</skill>
 	<skill id="21018" levels="1" name="Holiday Dream Weapon">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLvl" val="1" />
 		<for>
-			<mul order="0x30" stat="maxCp" val="1.1" />
+			<mul order="0x30" stat="maxCp" val="1.3" />
 			<add order="0x40" stat="rCrit" val="10" />
-			<mul order="0x30" stat="cAtkAdd" val="1.1" />
+			<mul order="0x30" stat="cAtk" val="1.25" />
 		</for>
 	</skill>
 	<skill id="21019" levels="1" name="Holiday Dream Weapon">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLvl" val="1" />
 		<for>
-			<mul order="0x30" stat="maxCp" val="1.1" />
-			<mul order="0x30" stat="lethalRate" val="1.05" />
-			<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.85" />
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.85" />
-			<mul order="0x30" stat="DanceMpConsumeRate" val="0.85" />
+			<mul order="0x30" stat="maxCp" val="1.3" />
+			<mul order="0x30" stat="lethalRate" val="1.25" />
+			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.8" />
 		</for>
 	</skill>
 	<skill id="21020" levels="1" name="Holiday Dream Weapon">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLvl" val="1" />
 		<for>
-			<mul order="0x30" stat="maxCp" val="1.1" />
-			<add order="0x40" stat="rCrit" val="15" />
-			<add order="0x40" stat="absorbDam" val="5" />
+			<mul order="0x30" stat="maxCp" val="1.3" />
+			<add order="0x40" stat="rCrit" val="10" />
+			<add order="0x40" stat="absorbDam" val="10" />
 		</for>
 	</skill>
 	<skill id="21021" levels="1" name="Holiday Dream Weapon">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLvl" val="1" />
 		<for>
-			<mul order="0x30" stat="maxCp" val="1.1" />
+			<mul order="0x30" stat="maxCp" val="1.3" />
 			<add order="0x40" stat="rCrit" val="10" />
-			<mul order="0x30" stat="cAtkAdd" val="1.1" />
+			<mul order="0x30" stat="cAtk" val="1.25" />
 		</for>
 	</skill>
 	<skill id="21022" levels="1" name="Holiday Dream Weapon">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLvl" val="1" />
 		<for>
-			<mul order="0x30" stat="maxCp" val="1.1" />
-			<mul order="0x30" stat="mAtkSpd" val="1.07" />
-			<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.85" />
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.85" />
-			<mul order="0x30" stat="DanceMpConsumeRate" val="0.85" />
+			<mul order="0x30" stat="maxCp" val="1.3" />
+			<mul order="0x30" stat="mAtkSpd" val="1.25" />
+			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.8" />
 		</for>
 	</skill>
 	<skill id="21023" levels="1" name="Holiday Dream Weapon">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLvl" val="1" />
 		<for>
-			<mul order="0x30" stat="maxCp" val="1.1" />
-			<mul order="0x30" stat="mAtk" val="1.1" />
-			<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.85" />
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.85" />
-			<mul order="0x30" stat="DanceMpConsumeRate" val="0.85" />
+			<mul order="0x30" stat="maxCp" val="1.3" />
+			<mul order="0x30" stat="mAtk" val="1.5" />
+			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.8" />
 		</for>
 	</skill>
 	<skill id="21024" levels="1" name="Holiday Dream Weapon">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLvl" val="1" />
 		<for>
-			<mul order="0x30" stat="maxCp" val="1.1" />
-			<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.85" />
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.85" />
-			<mul order="0x30" stat="DanceMpConsumeRate" val="0.85" />
-			<add order="0x40" stat="absorbDam" val="5" />
+			<mul order="0x30" stat="maxCp" val="1.3" />
+			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.8" />
+			<add order="0x40" stat="absorbDam" val="10" />
 		</for>
 	</skill>
 	<skill id="21025" levels="1" name="Holiday Dream Weapon">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLvl" val="1" />
 		<for>
-			<mul order="0x30" stat="maxCp" val="1.1" />
-			<add order="0x40" stat="rCrit" val="30" />
+			<mul order="0x30" stat="maxCp" val="1.3" />
+			<mul order="0x30" stat="pAtkRange" val="1.25" />
+			<basemul order="0x30" stat="rCrit" val="0.25" />
 		</for>
 	</skill>
 	<skill id="21026" levels="1" name="Holiday Dream Weapon">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLvl" val="1" />
 		<for>
-			<mul order="0x30" stat="maxCp" val="1.1" />
-			<add order="0x40" stat="atkCountMax" val="3" />
+			<mul order="0x30" stat="maxCp" val="1.3" />
+			<add order="0x40" stat="atkCountMax" val="10" />
 			<add order="0x40" stat="absorbDam" val="10" />
 		</for>
 	</skill>
@@ -285,47 +295,45 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLvl" val="1" />
 		<for>
-			<mul order="0x30" stat="maxCp" val="1.1" />
-			<mul order="0x30" stat="pAtkSpd" val="1.07" />
-			<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.85" />
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.85" />
-			<mul order="0x30" stat="DanceMpConsumeRate" val="0.85" />
+			<mul order="0x30" stat="maxCp" val="1.3" />
+			<mul order="0x30" stat="pAtkSpd" val="1.25" />
+			<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.8" />
+			<mul order="0x30" stat="DanceMpConsumeRate" val="0.8" />
 		</for>
 	</skill>
 	<skill id="21028" levels="1" name="Holiday Dream Weapon">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLvl" val="1" />
 		<for>
-			<mul order="0x30" stat="maxCp" val="1.1" />
-			<add order="0x40" stat="rCrit" val="15" />
-			<add order="0x40" stat="absorbDam" val="5" />
+			<mul order="0x30" stat="maxCp" val="1.3" />
+			<add order="0x40" stat="rCrit" val="10" />
+			<add order="0x40" stat="absorbDam" val="10" />
 		</for>
 	</skill>
 	<skill id="21029" levels="1" name="Holiday Dream Weapon">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLvl" val="1" />
 		<for>
-			<mul order="0x30" stat="maxCp" val="1.1" />
+			<mul order="0x30" stat="maxCp" val="1.3" />
 			<add order="0x40" stat="rCrit" val="10" />
-			<mul order="0x30" stat="cAtkAdd" val="1.1" />
+			<mul order="0x30" stat="cAtk" val="1.25" />
 		</for>
 	</skill>
 	<skill id="21030" levels="1" name="Holiday Dream Weapon">
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLvl" val="1" />
 		<for>
-			<mul order="0x30" stat="maxCp" val="1.1" />
-			<add order="0x40" stat="pSkillEvas" val="10" />
-			<add order="0x40" stat="rEvas" val="3" />
-			<add order="0x40" stat="accCombat" val="3" />
+			<mul order="0x30" stat="maxCp" val="1.3" />
+			<add order="0x40" stat="rEvas" val="5" />
+			<add order="0x40" stat="accCombat" val="5" />
 		</for>
 	</skill>
 	<skill id="21031" levels="1" name="Agathion Seal Release - Charming Cupid">
@@ -420,6 +428,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="1800000" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="21043" levels="1" name="Agathion Seal Cancel - Red Sumo Wrestler">
@@ -487,15 +496,21 @@
 		<set name="npcId" val="1526" />
 	</skill>
 	<skill id="21051" levels="1" name="Steam Beatle Mount">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="isMagic" val="true" />
+		<set name="transformId" val="110" />
+		<for>
+			<effect name="Transformation" time="3600" val="0" stackOrder="26" stackType="transform" />
+		</for>
 	</skill>
 	<skill id="21052" levels="1" name="Bless the Body">
 		<!-- Increases Max HP by 25% for 30 minutes -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="14400000" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="21053" levels="1" name="Bless the Soul">
@@ -503,6 +518,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="14400000" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="21054" levels="1" name="Blessed Resurrection Ability">
@@ -510,6 +526,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="43200000" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="21055" levels="1" name="Wind Walk">
@@ -517,6 +534,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="1080000" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="21056" levels="1" name="Agility">
@@ -524,6 +542,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="86400000" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="21057" levels="1" name="Reflect">
@@ -531,6 +550,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="3600000" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="21058" levels="1" name="Mana Regeneration">
@@ -538,6 +558,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="3600000" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="21059" levels="1" name="Greater Heal">
@@ -545,6 +566,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="14400000" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="21060" levels="1" name="Death Whisper">
@@ -552,6 +574,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="3600000" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="21061" levels="1" name="Agility">
@@ -559,6 +582,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="86400000" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="21062" levels="1" name="Wild Magic">
@@ -566,6 +590,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="3600000" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="21063" levels="1" name="Wind Walk">
@@ -573,6 +598,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="1080000" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="21064" levels="1" name="Mana Regeneration">
@@ -580,6 +606,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="3600000" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="21065" levels="1" name="Reflect">
@@ -587,6 +614,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="3600000" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="21066" levels="1" name="Energy Recovery">
@@ -596,9 +624,8 @@
 		<set name="hitTime" val="3000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="300" val="0" abnormal="vitality">
+			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="vp_up" abnormal="vitality">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -608,6 +635,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="43200000" />
 		<set name="hitTime" val="200" />
 	</skill>
 	<skill id="21068" levels="1" name="Resist Unholy">
@@ -615,6 +643,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="3600000" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="21069" levels="1" name="Wind Walk">
@@ -622,6 +651,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="1080000" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="21070" levels="1" name="Death Whisper">
@@ -629,6 +659,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="3600000" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="21071" levels="1" name="Agility">
@@ -636,6 +667,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="86400000" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="21072" levels="1" name="Wild Magic">
@@ -643,6 +675,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="3600000" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="21073" levels="1" name="Mana Regeneration">
@@ -650,6 +683,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="3600000" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="21074" levels="1" name="Reflect">
@@ -657,6 +691,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="3600000" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="21075" levels="1" name="Greater Heal">
@@ -664,6 +699,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="14400000" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="21076" levels="1" name="Resist Unholy">
@@ -671,6 +707,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="3600000" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="21077" levels="1" name="Wind Walk">
@@ -678,6 +715,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="1080000" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="21078" levels="1" name="Death Whisper">
@@ -685,6 +723,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="3600000" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="21079" levels="1" name="Agility">
@@ -692,6 +731,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="86400000" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="21080" levels="1" name="Wild Magic">
@@ -699,6 +739,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="3600000" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="21081" levels="1" name="Mana Regeneration">
@@ -706,6 +747,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="3600000" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="21082" levels="1" name="Reflect">
@@ -713,6 +755,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="3600000" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="21083" levels="1" name="Greater Heal">
@@ -720,6 +763,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="14400000" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="21084" levels="1" name="Energy Recovery">
@@ -729,9 +773,8 @@
 		<set name="hitTime" val="3000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="300" val="0" abnormal="vitality">
+			<effect name="Buff" time="300" val="0" stackOrder="26" stackType="vp_up" abnormal="vitality">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -749,6 +792,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="14400000" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="21087" levels="1" name="Berserker Spirit">
@@ -756,6 +800,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="3600000" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="21088" levels="1" name="Summon Friend">
@@ -763,6 +808,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="3600000" />
 		<set name="hitTime" val="10000" />
 	</skill>
 	<skill id="21089" levels="1" name="Dance of Shadows">
@@ -770,6 +816,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="3600000" />
 		<set name="hitTime" val="2500" />
 	</skill>
 	<skill id="21090" levels="1" name="Soul of Phoenix">
@@ -777,6 +824,8 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="86400000" />
+		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="21091" levels="1" name="Agathion Seal Cancel - Weaver">
@@ -808,6 +857,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="43200000" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="21096" levels="1" name="Ability of Cool Watermelon">
@@ -815,6 +865,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="14400000" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="21097" levels="1" name="Summon Friend">
@@ -822,6 +873,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="3600000" />
 		<set name="hitTime" val="10000" />
 	</skill>
 	<skill id="21098" levels="1" name="Great Adventurer's Soul Power : Endless">
@@ -829,11 +881,13 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="3600000" />
 	</skill>
 	<skill id="21099" levels="1" name="Great Warrior's Soul Power: Strength">
 		<!-- For five minutes, the Great Spirit increases Atk.Spd. by 20%, damage by 10% and P.Def. by 20%. You recover HP equal to 5% of the melee damage. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="3600000" />
 	</skill>
 </list>

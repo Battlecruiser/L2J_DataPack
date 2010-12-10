@@ -1,5 +1,6 @@
 # Made by Mr. Have fun! - Version 0.5 updated by Censor for www.l2jdp.com 
 import sys 
+from com.l2jserver.gameserver.model.itemcontainer import Inventory
 from com.l2jserver.gameserver.model.quest import State 
 from com.l2jserver.gameserver.model.quest import QuestState 
 from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest 
@@ -119,7 +120,7 @@ class Quest (JQuest) :
    if not st: return 
    if st.getState() != State.STARTED : return 
    npcId = npc.getNpcId() 
-   if st.getInt("cond") >= 1 and st.getItemEquipped(9) == GALLINS_OAK_WAND and not st.getQuestItemsCount(DROPLIST[npcId]) : # (7) means weapon slot 
+   if st.getInt("cond") >= 1 and st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == GALLINS_OAK_WAND and not st.getQuestItemsCount(DROPLIST[npcId]) : # (7) means weapon slot 
      st.takeItems(GALLINS_OAK_WAND,1) 
      st.giveItems(DROPLIST[npcId],1) 
      if HaveAllQuestItems(st) : 

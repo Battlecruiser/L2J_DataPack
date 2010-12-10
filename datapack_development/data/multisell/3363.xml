@@ -1,36 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Quest 336: Coins of Magic, Rewards level 3 -->
-<list>
-	<!-- Moonstone Earring -->
+<list xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance" ns0:noNamespaceSchemaLocation="multisell.xsd">
 	<item id="1">
-		<ingredient id="3480" count="2" />
-		<ingredient id="3475" count="2" />
-		<ingredient id="3485" count="2" />
-		<ingredient id="3483" count="3" />
-		<production id="852" count="1" />
+		<!-- Nia's Blood Medusa -->
+		<ingredient count="2" id="3480" />
+		<!-- Blood Drevanul -->
+		<ingredient count="2" id="3475" />
+		<!-- Gold Drake -->
+		<ingredient count="2" id="3485" />
+		<!-- Gold Knight -->
+		<ingredient count="3" id="3483" />
+		<!-- Moonstone Earring -->
+		<production count="1" id="852" />
 	</item>
-	<!-- Nassens Earring -->
 	<item id="2">
-		<ingredient id="3480" count="7" />
-		<ingredient id="3475" count="5" />
-		<ingredient id="3494" count="5" />
-		<ingredient id="3483" count="5" />
-		<production id="855" count="1" />
+		<!-- Nia's Blood Medusa -->
+		<ingredient count="7" id="3480" />
+		<!-- Blood Drevanul -->
+		<ingredient count="5" id="3475" />
+		<!-- Silver Golem -->
+		<ingredient count="5" id="3494" />
+		<!-- Gold Knight -->
+		<ingredient count="5" id="3483" />
+		<!-- Nassen's Earring -->
+		<production count="1" id="855" />
 	</item>
-	<!-- Ring of Binding -->
 	<item id="3">
-		<ingredient id="3489" count="5" />
-		<ingredient id="3485" count="4" />
-		<ingredient id="3494" count="4" />
-		<ingredient id="3475" count="4" />
-		<production id="886" count="1" />
+		<!-- Nia's Gold Wyvern -->
+		<ingredient count="5" id="3489" />
+		<!-- Gold Drake -->
+		<ingredient count="4" id="3485" />
+		<!-- Silver Golem -->
+		<ingredient count="4" id="3494" />
+		<!-- Blood Drevanul -->
+		<ingredient count="4" id="3475" />
+		<!-- Ring of Binding -->
+		<production count="1" id="886" />
 	</item>
-	<!-- Necklace of Protection -->
 	<item id="4">
-		<ingredient id="3498" count="5" />
-		<ingredient id="3491" count="3" />
-		<ingredient id="3483" count="3" />
-		<ingredient id="3475" count="3" />
-		<production id="916" count="1" />
+		<!-- Nia's Silver Fairy -->
+		<ingredient count="5" id="3498" />
+		<!-- Silver Fairy -->
+		<ingredient count="3" id="3491" />
+		<!-- Gold Knight -->
+		<ingredient count="3" id="3483" />
+		<!-- Blood Drevanul -->
+		<ingredient count="3" id="3475" />
+		<!-- Necklace of Protection -->
+		<production count="1" id="916" />
 	</item>
 </list>

@@ -33,7 +33,7 @@ import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
  */
 public class PlainsOfLizardman extends L2AttackableAIScript
 {
-	private static final int[] _MOBS = { 18864, 18865, 18866, 18867, 18868 };
+	private static final int[] _MOBS = { 18864, 18865, 18866, 18868 };
 	
 	private static final int FANTASY_MUSHROOM = 18864;
 	private static final int FANTASY_MUSHROOM_SKILL = 6427;
@@ -46,8 +46,6 @@ public class PlainsOfLizardman extends L2AttackableAIScript
 	
 	private static final int ENERGY_PLANT = 18868;
 	private static final int ENERGY_PLANT_SKILL = 6430;
-	
-	private static final int ABYSS_WEED = 18867;
 	
 	public PlainsOfLizardman(int questId, String name, String descr)
 	{
@@ -128,10 +126,6 @@ public class PlainsOfLizardman extends L2AttackableAIScript
 				startQuestTimer("energy_plant_pet", 2000, npc, attacker);
 			else
 				startQuestTimer("energy_plant", 2000, npc, attacker);
-			npc.doDie(attacker);
-		}
-		else if (npc.getNpcId() == ABYSS_WEED)
-		{
 			npc.doDie(attacker);
 		}
 		else if (npc.getNpcId() == FANTASY_MUSHROOM)

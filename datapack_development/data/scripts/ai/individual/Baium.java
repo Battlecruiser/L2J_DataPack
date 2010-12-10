@@ -104,9 +104,9 @@ public class Baium extends L2AttackableAIScript
 		{ 115792, 16608, 10080, 0 },
 	};
 	
-	private static long _LastAttackVsBaiumTime = 0;
-	private static List<L2Npc> _Minions = new ArrayList<L2Npc>(5);
-	private static L2BossZone _Zone;
+	private long _LastAttackVsBaiumTime = 0;
+	private List<L2Npc> _Minions = new ArrayList<L2Npc>(5);
+	private L2BossZone _Zone;
 	
 	public Baium (int questId, String name, String descr)
 	{
@@ -345,6 +345,14 @@ public class Baium extends L2AttackableAIScript
 		}
 		return super.onSpellFinished(npc, player, skill);
 	}
+
+	@Override
+	public String onSpawn(L2Npc npc)
+	{
+		npc.disableCoreAI(true);
+		return super.onSpawn(npc);
+	}
+
 	@Override
 	public String onAttack (L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
 	{

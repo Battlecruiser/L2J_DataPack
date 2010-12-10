@@ -84,9 +84,6 @@ public abstract class AirShipController extends Quest
 	private static final SystemMessage SM_LICENSE_ALREADY_ACQUIRED = new SystemMessage(SystemMessageId.THE_AIRSHIP_SUMMON_LICENSE_ALREADY_ACQUIRED);
 	private static final SystemMessage SM_LICENSE_ENTERED = new SystemMessage(SystemMessageId.THE_AIRSHIP_SUMMON_LICENSE_ENTERED);
 	private static final SystemMessage SM_NEED_MORE = new SystemMessage(SystemMessageId.THE_AIRSHIP_NEED_MORE_S1).addItemName(STARSTONE);
-	private static final SystemMessage SM_PET = new SystemMessage(SystemMessageId.RELEASE_PET_ON_BOAT);
-	private static final SystemMessage SM_TRANS = new SystemMessage(SystemMessageId.CANT_POLYMORPH_ON_BOAT);
-	private static final SystemMessage SM_FLYING = new SystemMessage(SystemMessageId.YOU_CANNOT_MOUNT_NOT_MEET_REQUEIREMENTS);
 	
 	private static final String ARRIVAL_MSG = "The airship has been summoned. It will automatically depart in 5 minutes";
 	
@@ -137,7 +134,7 @@ public abstract class AirShipController extends Quest
 				
 				if (_arrivalMessage == null)
 					_arrivalMessage = new NpcSay(npc.getObjectId(), Say2.SHOUT, npc.getNpcId(), ARRIVAL_MSG);
-				
+					
 				npc.broadcastPacket(_arrivalMessage);
 			}
 			else
@@ -147,19 +144,64 @@ public abstract class AirShipController extends Quest
 		}
 		else if ("board".equalsIgnoreCase(event))
 		{
-			if (player.getPet() != null)
-			{
-				player.sendPacket(SM_PET);
-				return null;
-			}
 			if (player.isTransformed())
 			{
-				player.sendPacket(SM_TRANS);
+				player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_TRANSFORMED);
 				return null;
 			}
-			if (player.isFlyingMounted())
+			else if (player.isParalyzed())
 			{
-				player.sendPacket(SM_FLYING);
+				player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_PETRIFIED);
+				return null;
+			}
+			else if (player.isDead())
+			{
+				player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_DEAD);	
+				return null;
+			}
+			else if (player.isFishing())
+			{
+				player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_FISHING);
+				return null;
+			}
+			else if (player.getPvpFlag() != 0)
+			{
+				player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_IN_BATTLE);
+				return null;
+			}
+			else if (player.isInDuel())
+			{
+				player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_IN_A_DUEL);
+				return null;
+			}
+			else if (player.isSitting())
+			{
+				player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_SITTING);
+				return null;
+			}
+			else if (player.isCastingNow())
+			{
+				player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_CASTING);
+				return null;
+			}
+			else if (player.isCursedWeaponEquipped())
+			{
+				player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_A_CURSED_WEAPON_IS_EQUIPPED);
+				return null;
+			}
+			else if (player.isCombatFlagEquipped())
+			{
+				player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_HOLDING_A_FLAG);
+				return null;
+			}
+			else if (player.getPet() != null)
+			{
+				player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_A_PET_OR_A_SERVITOR_IS_SUMMONED);
+				return null;
+			}
+			else if (player.isFlyingMounted())
+			{
+				player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_NOT_MEET_REQUEIREMENTS);
 				return null;
 			}
 			

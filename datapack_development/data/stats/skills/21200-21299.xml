@@ -5,12 +5,16 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="7200000" />
+		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="21201" levels="1" name="Haste">
 		<!-- Increases Atk. Spd. by 33% for 20 minutes. Reuse delay is 1 hours. -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="21202" levels="1" name="Agathion Seal Cancel - Ball Trapping Gnocian">
 		<set name="target" val="TARGET_SELF" />
@@ -140,5 +144,6 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="reuseDelay" val="43200000" />
 	</skill>
 </list>

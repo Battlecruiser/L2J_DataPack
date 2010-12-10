@@ -19,7 +19,6 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Effect;
@@ -139,124 +138,59 @@ public class Pdam implements ISkillHandler
 			
 			if (!skillIsEvaded)
 			{
-				if (damage > 0)
+				if (skill.hasEffects())
 				{
-					activeChar.sendDamageMessage(target, damage, false, crit, false);
-					
-					if (skill.hasEffects())
+					L2Effect[] effects;
+					if ((reflect & Formulas.SKILL_REFLECT_SUCCEED) != 0)
 					{
-						if ((reflect & Formulas.SKILL_REFLECT_SUCCEED) != 0)
+						activeChar.stopSkillEffects(skill.getId());
+						effects = skill.getEffects(target, activeChar);
+						if (effects != null && effects.length > 0)
 						{
-							activeChar.stopSkillEffects(skill.getId());
-							skill.getEffects(target, activeChar);
 							SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
 							sm.addSkillName(skill);
 							activeChar.sendPacket(sm);
 						}
-						else
-						{
-							// activate attacked effects, if any
-							target.stopSkillEffects(skill.getId());
-							if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, false, false, true))
-							{
-								skill.getEffects(activeChar, target, new Env(shld, false, false, false));
-								
-								SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
-								sm.addSkillName(skill);
-								target.sendPacket(sm);
-							}
-							else
-							{
-								SystemMessage sm = new SystemMessage(SystemMessageId.C1_RESISTED_YOUR_S2);
-								sm.addCharName(target);
-								sm.addSkillName(skill);
-								activeChar.sendPacket(sm);
-							}
-						}
-						
-						if (Config.LOG_GAME_DAMAGE
-								&& activeChar instanceof L2Playable
-								&& damage > Config.LOG_GAME_DAMAGE_THRESHOLD)
-						{
-							LogRecord record = new LogRecord(Level.INFO, "");
-							record.setParameters(new Object[]{activeChar, " did damage ", damage, skill, " to ", target});
-							record.setLoggerName("pdam");
-							_logDamage.log(record);
-						}
-					}
-					
-					// Possibility of a lethal strike
-					final boolean lethal = Formulas.calcLethalHit(activeChar, target, skill);
-					
-					// Make damage directly to HP
-					if (!lethal && skill.getDmgDirectlyToHP())
-					{
-						final L2Character[] ts = {target, activeChar};
-						
-						/*
-						 * This loop iterates over previous array but, if skill damage is not reflected
-						 * it stops on first iteration (target) and misses activeChar
-						 */
-						for (L2Character targ : ts)
-						{
-							if (targ instanceof L2PcInstance)
-							{
-								L2PcInstance player = (L2PcInstance) targ;
-								if (!player.isInvul())
-								{
-									if (damage >= player.getCurrentHp())
-									{
-										if (player.isInDuel())
-											player.setCurrentHp(1);
-										else
-										{
-											player.setCurrentHp(0);
-											if (player.isInOlympiadMode())
-											{
-												player.abortAttack();
-												player.abortCast();
-												player.getStatus().stopHpMpRegeneration();
-												player.setIsDead(true);
-												player.setIsPendingRevive(true);
-												if (player.getPet() != null)
-													player.getPet().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE,null);
-											}
-											else
-												player.doDie(activeChar);
-										}
-									}
-									else
-										player.setCurrentHp(player.getCurrentHp()- damage);
-								}
-								
-								SystemMessage smsg = new SystemMessage(SystemMessageId.C1_RECEIVED_DAMAGE_OF_S3_FROM_C2);
-								smsg.addPcName(player);
-								smsg.addCharName(activeChar);
-								smsg.addNumber(damage);
-								player.sendPacket(smsg);
-								
-							}
-							else
-								target.reduceCurrentHp(damage, activeChar, skill);
-							
-							if ((reflect & Formulas.SKILL_REFLECT_VENGEANCE) == 0) // stop if no vengeance, so only target will be effected
-								break;
-						}
 					}
 					else
 					{
-						target.reduceCurrentHp(damage, activeChar, skill);
-						
-						// vengeance reflected damage
-						if ((reflect & Formulas.SKILL_REFLECT_VENGEANCE) != 0)
-							activeChar.reduceCurrentHp(damage, target, skill);
+						// activate attacked effects, if any
+						target.stopSkillEffects(skill.getId());
+						effects = skill.getEffects(activeChar, target, new Env(shld, false, false, false));
+						if (effects != null && effects.length > 0)
+						{
+							SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
+							sm.addSkillName(skill);
+							target.sendPacket(sm);
+						}
 					}
-					
 				}
-				else // No - damage
+
+				if (damage > 0)
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessageId.ATTACK_FAILED));
+					activeChar.sendDamageMessage(target, damage, false, crit, false);
+					
+					if (Config.LOG_GAME_DAMAGE
+							&& activeChar instanceof L2Playable
+							&& damage > Config.LOG_GAME_DAMAGE_THRESHOLD)
+					{
+						LogRecord record = new LogRecord(Level.INFO, "");
+						record.setParameters(new Object[]{activeChar, " did damage ", damage, skill, " to ", target});
+						record.setLoggerName("pdam");
+						_logDamage.log(record);
+					}
+
+					// Possibility of a lethal strike
+					Formulas.calcLethalHit(activeChar, target, skill);
+
+					target.reduceCurrentHp(damage, activeChar, skill);
+
+					// vengeance reflected damage
+					if ((reflect & Formulas.SKILL_REFLECT_VENGEANCE) != 0)
+						activeChar.reduceCurrentHp(damage, target, skill);
 				}
+				else // No damage
+					activeChar.sendPacket(new SystemMessage(SystemMessageId.ATTACK_FAILED));
 			}
 			else
 			{
@@ -279,23 +213,27 @@ public class Pdam implements ISkillHandler
 			
 			if (activeChar instanceof L2PcInstance)
 			{
-				L2Skill soulmastery = SkillTable.getInstance().getInfo(467, ((L2PcInstance) activeChar).getSkillLevel(467));
-				if (soulmastery != null)
+				int soulMasteryLevel = activeChar.getSkillLevel(467);
+				if (soulMasteryLevel > 0)
 				{
-					if (((L2PcInstance) activeChar).getSouls() < soulmastery.getNumSouls())
+					L2Skill soulmastery = SkillTable.getInstance().getInfo(467, soulMasteryLevel);
+					if (soulmastery != null)
 					{
-						int count = 0;
-						
-						if (((L2PcInstance) activeChar).getSouls() + skill.getNumSouls() <= soulmastery.getNumSouls())
-							count = skill.getNumSouls();
+						if (((L2PcInstance) activeChar).getSouls() < soulmastery.getNumSouls())
+						{
+							int count = 0;
+							
+							if (((L2PcInstance) activeChar).getSouls() + skill.getNumSouls() <= soulmastery.getNumSouls())
+								count = skill.getNumSouls();
+							else
+								count = soulmastery.getNumSouls() - ((L2PcInstance) activeChar).getSouls();
+							((L2PcInstance) activeChar).increaseSouls(count);
+						}
 						else
-							count = soulmastery.getNumSouls() - ((L2PcInstance) activeChar).getSouls();
-						((L2PcInstance) activeChar).increaseSouls(count);
-					}
-					else
-					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.SOUL_CANNOT_BE_INCREASED_ANYMORE);
-						((L2PcInstance) activeChar).sendPacket(sm);
+						{
+							SystemMessage sm = new SystemMessage(SystemMessageId.SOUL_CANNOT_BE_INCREASED_ANYMORE);
+							((L2PcInstance) activeChar).sendPacket(sm);
+						}
 					}
 				}
 			}

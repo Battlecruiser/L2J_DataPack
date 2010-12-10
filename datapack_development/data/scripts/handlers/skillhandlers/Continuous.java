@@ -101,14 +101,18 @@ public class Continuous implements ISkillHandler
 			{
 				if (target != activeChar)
 				{
-					if (target instanceof L2PcInstance && ((L2PcInstance) target).isCursedWeaponEquipped())
-						continue;
+					if (target instanceof L2PcInstance)
+					{
+						L2PcInstance trg = (L2PcInstance)target;
+						if(trg.isCursedWeaponEquipped())
+							continue;
+						// Avoiding block checker players get buffed from outside
+						else if(trg.getBlockCheckerArena() != -1)
+							continue;
+					}
 					else if (player != null && player.isCursedWeaponEquipped())
 						continue;
 				}
-				// TODO: boolean isn't good idea, could cause bugs
-				else if (skill.getId() == 2168 && activeChar instanceof L2PcInstance)
-					((L2PcInstance) activeChar).setCharmOfLuck(true);
 			}
 			
 			switch (skill.getSkillType())
@@ -217,7 +221,7 @@ public class Continuous implements ISkillHandler
 				else
 				{
 					L2Effect[] effects = skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss));
-					if (target.getPet() != null && effects.length > 0)
+					if (target.getPet() != null && target.getPet() != activeChar && effects.length > 0)
 					{
 						if (effects[0].canBeStolen())
 							skill.getEffects(activeChar, target.getPet(), new Env(shld, ss, sps, bss));
