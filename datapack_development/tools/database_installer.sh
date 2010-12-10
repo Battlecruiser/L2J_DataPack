@@ -346,7 +346,6 @@ fi
 $MYG < ../sql/access_levels.sql &> /dev/null
 $MYG < ../sql/admin_command_access_rights.sql &> /dev/null
 $MYG < ../sql/airships.sql &> /dev/null
-$MYG < ../sql/armor.sql &> /dev/null
 $MYG < ../sql/armorsets.sql &> /dev/null
 $MYG < ../sql/auction.sql &> /dev/null
 $MYG < ../sql/auction_bid.sql &> /dev/null
@@ -375,7 +374,7 @@ $MYG < ../sql/character_quests.sql &> /dev/null
 $MYG < ../sql/character_raid_points.sql &> /dev/null
 $MYG < ../sql/character_recipebook.sql &> /dev/null
 $MYG < ../sql/character_recipeshoplist.sql &> /dev/null
-$MYG < ../sql/character_recommends.sql &> /dev/null
+$MYG < ../sql/character_reco_bonus.sql &> /dev/null
 $MYG < ../sql/character_shortcuts.sql &> /dev/null
 $MYG < ../sql/character_skills.sql &> /dev/null
 $MYG < ../sql/character_skills_save.sql &> /dev/null
@@ -398,7 +397,6 @@ $MYG < ../sql/cursed_weapons.sql &> /dev/null
 $MYG < ../sql/dimensional_rift.sql &> /dev/null
 $MYG < ../sql/droplist.sql &> /dev/null
 $MYG < ../sql/enchant_skill_groups.sql &> /dev/null
-$MYG < ../sql/etcitem.sql &> /dev/null
 $MYG < ../sql/fish.sql &> /dev/null
 $MYG < ../sql/fishing_skill_trees.sql &> /dev/null
 $MYG < ../sql/fort.sql &> /dev/null
@@ -412,6 +410,7 @@ $MYG < ../sql/forums.sql &> /dev/null
 $MYG < ../sql/four_sepulchers_spawnlist.sql &> /dev/null
 $MYG < ../sql/games.sql &> /dev/null
 $MYG < ../sql/global_tasks.sql &> /dev/null
+$MYG < ../sql/global_variables.sql &> /dev/null
 $MYG < ../sql/grandboss_data.sql &> /dev/null
 $MYG < ../sql/grandboss_list.sql &> /dev/null
 $MYG < ../sql/helper_buff_list.sql &> /dev/null
@@ -445,7 +444,6 @@ $MYG < ../sql/olympiad_nobles.sql&> /dev/null
 $MYG < ../sql/olympiad_nobles_eom.sql&> /dev/null
 $MYG < ../sql/pets.sql &> /dev/null
 $MYG < ../sql/pets_skills.sql &> /dev/null
-$MYG < ../sql/pets_stats.sql &> /dev/null
 $MYG < ../sql/pledge_skill_trees.sql &> /dev/null
 $MYG < ../sql/posts.sql &> /dev/null
 $MYG < ../sql/quest_global_data.sql &> /dev/null
@@ -468,8 +466,6 @@ $MYG < ../sql/territories.sql &> /dev/null
 $MYG < ../sql/territory_registrations.sql &> /dev/null
 $MYG < ../sql/territory_spawnlist.sql &> /dev/null
 $MYG < ../sql/transform_skill_trees.sql &> /dev/null
-$MYG < ../sql/walker_routes.sql &> /dev/null
-$MYG < ../sql/weapon.sql &> /dev/null
 $MYG < ../sql/zone_vertices.sql &> /dev/null
 newbie_helper
 }

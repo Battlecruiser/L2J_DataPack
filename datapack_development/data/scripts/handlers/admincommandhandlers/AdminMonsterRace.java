@@ -149,7 +149,7 @@ public class AdminMonsterRace implements IAdminCommandHandler
 		}
 	}
 	
-	class RunEnd implements Runnable
+	private static class RunEnd implements Runnable
 	{
 		private L2PcInstance activeChar;
 		

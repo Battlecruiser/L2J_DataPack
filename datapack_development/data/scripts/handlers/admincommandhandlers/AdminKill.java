@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
-
 /**
  * This class handles following admin commands:
  * - kill = kills target L2Character
@@ -134,8 +133,19 @@ public class AdminKill implements IAdminCommandHandler
 			target.reduceCurrentHp(target.getMaxHp() * Config.L2JMOD_CHAMPION_HP + 1, activeChar, null);
 		else
 		{
-			if(target.isInvul()) target.setIsInvul(false);
+			boolean targetIsInvul = false;
+			if (target.isInvul())
+			{
+				targetIsInvul = true;
+				target.setIsInvul(false);
+			}
+			
 			target.reduceCurrentHp(target.getMaxHp() + 1, activeChar, null);
+			
+			if (targetIsInvul)
+			{
+				target.setIsInvul(true);
+			}
 		}
 		if (Config.DEBUG)
 			_log.fine("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ")" + " killed character " + target.getObjectId());

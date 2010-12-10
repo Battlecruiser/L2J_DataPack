@@ -30,8 +30,10 @@ import java.util.StringTokenizer;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.Universe;
+import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
@@ -74,7 +76,10 @@ public class AdminTest implements IAdminCommandHandler
 				StringTokenizer st = new StringTokenizer(command);
 				st.nextToken();
 				int id = Integer.parseInt(st.nextToken());
-				adminTestSkill(activeChar, id);
+				if(command.startsWith("admin_skill_test"))
+					adminTestSkill(activeChar, id, true);
+				else
+					adminTestSkill(activeChar, id, false);
 			}
 			catch (NumberFormatException e)
 			{
@@ -124,16 +129,24 @@ public class AdminTest implements IAdminCommandHandler
 	 * @param activeChar
 	 * @param id
 	 */
-	private void adminTestSkill(L2PcInstance activeChar, int id)
+	private void adminTestSkill(L2PcInstance activeChar, int id, boolean msu)
 	{
-		L2Character player;
+		L2Character caster;
 		L2Object target = activeChar.getTarget();
 		if (!(target instanceof L2Character))
-			player = activeChar;
+			caster = activeChar;
 		else
-			player = (L2Character) target;
-		player.broadcastPacket(new MagicSkillUse(activeChar, player, id, 1, 1, 1));
-		
+			caster = (L2Character) target;
+
+		L2Skill _skill = SkillTable.getInstance().getInfo(id, 1);
+		if(_skill != null)
+		{
+			caster.setTarget(activeChar);
+			if(msu)
+				caster.broadcastPacket(new MagicSkillUse(caster, activeChar, id, 1, _skill.getHitTime(), _skill.getReuseDelay()));
+			else
+				caster.doCast(_skill);
+		}
 	}
 	
 	/* (non-Javadoc)

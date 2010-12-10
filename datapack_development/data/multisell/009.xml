@@ -1,98 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Proof of Catching a Fish Multisell -->
-<list>
-	<!-- PoCaF (1) -->
+<list xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance" ns0:noNamespaceSchemaLocation="multisell.xsd">
 	<item id="1">
-		<ingredient id="6908" count="1" />
-		<production id="7609" count="1" />
+		<!-- Fish Oil -->
+		<ingredient count="1" id="6908" />
+		<!-- Proof of Catching a Fish -->
+		<production count="1" id="7609" />
 	</item>
-	<!-- PoCaF (5) -->
 	<item id="2">
-		<ingredient id="6909" count="1" />
-		<production id="7609" count="5" />
+		<!-- Greater Fish Oil -->
+		<ingredient count="1" id="6909" />
+		<!-- Proof of Catching a Fish -->
+		<production count="5" id="7609" />
 	</item>
-	<!-- PoCaF (25) -->
 	<item id="3">
-		<ingredient id="6910" count="1" />
-		<production id="7609" count="25" />
+		<!-- Premium Fish Oil -->
+		<ingredient count="1" id="6910" />
+		<!-- Proof of Catching a Fish -->
+		<production count="25" id="7609" />
 	</item>
-	<!-- PoCaF (4) -->
 	<item id="4">
-		<ingredient id="6911" count="1" />
-		<production id="7609" count="4" />
+		<!-- Fish Scale -->
+		<ingredient count="1" id="6911" />
+		<!-- Proof of Catching a Fish -->
+		<production count="4" id="7609" />
 	</item>
-	<!-- PoCaF (6) -->
 	<item id="5">
-		<ingredient id="6912" count="1" />
-		<production id="7609" count="6" />
+		<!-- Shiny Fish Scale -->
+		<ingredient count="1" id="6912" />
+		<!-- Proof of Catching a Fish -->
+		<production count="6" id="7609" />
 	</item>
-	<!-- PoCaF (10) -->
 	<item id="6">
-		<ingredient id="6913" count="1" />
-		<production id="7609" count="10" />
+		<!-- Fish Gem -->
+		<ingredient count="1" id="6913" />
+		<!-- Proof of Catching a Fish -->
+		<production count="10" id="7609" />
 	</item>
-	<!-- PoCaF (20) -->
 	<item id="7">
-		<ingredient id="6914" count="1" />
-		<production id="7609" count="20" />
+		<!-- Shiny Fish Gem -->
+		<ingredient count="1" id="6914" />
+		<!-- Proof of Catching a Fish -->
+		<production count="20" id="7609" />
 	</item>
-	<!-- PoCaF (6) -->
 	<item id="8">
-		<ingredient id="6915" count="1" />
-		<production id="7609" count="6" />
+		<!-- Thin Fish Bone -->
+		<ingredient count="1" id="6915" />
+		<!-- Proof of Catching a Fish -->
+		<production count="6" id="7609" />
 	</item>
-	<!-- PoCaF (9) -->
 	<item id="9">
-		<ingredient id="6916" count="1" />
-		<production id="7609" count="9" />
+		<!-- Thick Fish Bone -->
+		<ingredient count="1" id="6916" />
+		<!-- Proof of Catching a Fish -->
+		<production count="9" id="7609" />
 	</item>
-	<!-- Recipe: Pirate's Eye Patch -->
 	<item id="10">
-		<ingredient id="8356" count="150" />
-		<ingredient id="8357" count="120" />
-		<ingredient id="8359" count="100" />
-		<production id="6924" count="1" />
+		<!-- White Colored Fish Scale -->
+		<ingredient count="150" id="8356" />
+		<!-- Orange Colored Fish Scale -->
+		<ingredient count="120" id="8357" />
+		<!-- Jade Colored Fish Scale -->
+		<ingredient count="100" id="8359" />
+		<!-- Recipe: Pirate's Eye Patch (100%) -->
+		<production count="1" id="6924" />
 	</item>
-	<!-- Recipe: Lady's Hairpin -->
 	<item id="11">
-		<ingredient id="8352" count="130" />
-		<ingredient id="8354" count="120" />
-		<ingredient id="8353" count="110" />
-		<production id="6923" count="1" />
+		<!-- Red Colored Fish Scale -->
+		<ingredient count="130" id="8352" />
+		<!-- Yellow Colored Fish Scale -->
+		<ingredient count="120" id="8354" />
+		<!-- Green Colored Fish Scale -->
+		<ingredient count="110" id="8353" />
+		<!-- Recipe: Lady's Hair Pin (100%) -->
+		<production count="1" id="6923" />
 	</item>
-	<!-- Recipe: Monocle -->
 	<item id="12">
-		<ingredient id="8352" count="130" />
-		<ingredient id="8354" count="120" />
-		<ingredient id="8353" count="110" />
-		<production id="6925" count="1" />
+		<!-- Red Colored Fish Scale -->
+		<ingredient count="130" id="8352" />
+		<!-- Yellow Colored Fish Scale -->
+		<ingredient count="120" id="8354" />
+		<!-- Green Colored Fish Scale -->
+		<ingredient count="110" id="8353" />
+		<!-- Recipe: Monocle (100%) -->
+		<production count="1" id="6925" />
 	</item>
-	<!-- Recipe: Outlaw Eye Patch -->
 	<item id="13">
-		<ingredient id="8352" count="130" />
-		<ingredient id="8354" count="120" />
-		<ingredient id="8353" count="110" />
-		<production id="7690" count="1" />
+		<!-- Red Colored Fish Scale -->
+		<ingredient count="130" id="8352" />
+		<!-- Yellow Colored Fish Scale -->
+		<ingredient count="120" id="8354" />
+		<!-- Green Colored Fish Scale -->
+		<ingredient count="110" id="8353" />
+		<!-- Recipe - Outlaw's Eyepatch (100%) -->
+		<production count="1" id="7690" />
 	</item>
-	<!-- Recipe: Maiden's Hairpin -->
 	<item id="14">
-		<ingredient id="8352" count="130" />
-		<ingredient id="8354" count="120" />
-		<ingredient id="8353" count="110" />
-		<production id="7691" count="1" />
+		<!-- Red Colored Fish Scale -->
+		<ingredient count="130" id="8352" />
+		<!-- Yellow Colored Fish Scale -->
+		<ingredient count="120" id="8354" />
+		<!-- Green Colored Fish Scale -->
+		<ingredient count="110" id="8353" />
+		<!-- Recipe - Maiden's Hairpin (100%) -->
+		<production count="1" id="7691" />
 	</item>
-	<!-- Recipe: Forget-me-not Hairpin -->
 	<item id="15">
-		<ingredient id="8352" count="130" />
-		<ingredient id="8354" count="120" />
-		<ingredient id="8353" count="110" />
-		<production id="7699" count="1" />
+		<!-- Red Colored Fish Scale -->
+		<ingredient count="130" id="8352" />
+		<!-- Yellow Colored Fish Scale -->
+		<ingredient count="120" id="8354" />
+		<!-- Green Colored Fish Scale -->
+		<ingredient count="110" id="8353" />
+		<!-- Recipe: Forget-me-not Hairpin (100%) -->
+		<production count="1" id="7699" />
 	</item>
-	<!-- Recipe: Daisy Hairpin -->
 	<item id="16">
-		<ingredient id="8352" count="130" />
-		<ingredient id="8354" count="120" />
-		<ingredient id="8353" count="110" />
-		<production id="7700" count="1" />
+		<!-- Red Colored Fish Scale -->
+		<ingredient count="130" id="8352" />
+		<!-- Yellow Colored Fish Scale -->
+		<ingredient count="120" id="8354" />
+		<!-- Green Colored Fish Scale -->
+		<ingredient count="110" id="8353" />
+		<!-- Recipe: Daisy Hairpin (100%) -->
+		<production count="1" id="7700" />
 	</item>
 </list>

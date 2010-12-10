@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="augmentation_skillmap.xsd">
 	<augmentation id="14561"> <!-- Active: Temporarily increases the size of your head. -->
 		<skillId val="3203" /> <!-- Item Skill: Mystery Skill: Active: Increases your head size. -->
 		<skillLevel val="1" />
@@ -211,7 +211,7 @@
 		<type val="purple" />
 	</augmentation>
 	<augmentation id="14603"> <!-- Active: Unleashes a general attack and temporarily decreases your magic attack power during PvP. -->
-		<skillId val="0" /> <!-- DONT KNOW -->
+		<skillId val="3172" /> <!-- Item Skill: Aura Flare -->
 		<skillLevel val="1" />
 		<type val="purple" />
 	</augmentation>
@@ -252,7 +252,7 @@
 	</augmentation>
 	<augmentation id="14611"> <!-- Active: Resurrects a corpse. -->
 		<skillId val="3160" /> <!-- Item Skill: Resurrection: Active: Resurrects a corpse. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="purple" />
 	</augmentation>
 	<augmentation id="14612"> <!-- Active: Emits an area of effect earth attack. -->
@@ -890,8 +890,8 @@
 		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
-	<augmentation id="14739"> <!-- Passive: Increases your MP recharge recovery rate. -->
-		<skillId val="3239" /> <!-- Item Skill: Mana Gain: Passive: Increases the recharge recovery rate of MP when equipped. -->
+	<augmentation id="14739"> <!-- Active: Temporarily increases the size of your head. -->
+		<skillId val="3203" /> <!-- Item Skill: Mystery Skill: Active: Increases your head size. -->
 		<skillLevel val="1" />
 		<type val="blue" />
 	</augmentation>
@@ -1101,7 +1101,7 @@
 		<type val="purple" />
 	</augmentation>
 	<augmentation id="14781"> <!-- Active: Unleashes a general attack and temporarily decreases your magic attack power during PvP. -->
-		<skillId val="0" /> <!-- DONT KNOW -->
+		<skillId val="3172" /> <!-- Item Skill: Aura Flare -->
 		<skillLevel val="2" />
 		<type val="purple" />
 	</augmentation>
@@ -1142,7 +1142,7 @@
 	</augmentation>
 	<augmentation id="14789"> <!-- Active: Resurrects a corpse. -->
 		<skillId val="3160" /> <!-- Item Skill: Resurrection: Active: Resurrects a corpse. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="purple" />
 	</augmentation>
 	<augmentation id="14790"> <!-- Active: Emits an area of effect earth attack. -->
@@ -1780,9 +1780,9 @@
 		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
-	<augmentation id="14917"> <!-- Passive: Increases your MP recharge recovery rate. -->
-		<skillId val="3239" /> <!-- Item Skill: Mana Gain: Passive: Increases the recharge recovery rate of MP when equipped. -->
-		<skillLevel val="2" />
+	<augmentation id="14917"> <!-- Active: Temporarily increases the size of your head. -->
+		<skillId val="3203" /> <!-- Item Skill: Mystery Skill: Active: Increases your head size. -->
+		<skillLevel val="1" />
 		<type val="blue" />
 	</augmentation>
 	<augmentation id="14918"> <!-- Active: Temporarily increases your lung capacity. -->
@@ -1991,7 +1991,7 @@
 		<type val="purple" />
 	</augmentation>
 	<augmentation id="14959"> <!-- Active: Unleashes a general attack and temporarily decreases your magic attack power during PvP. -->
-		<skillId val="0" /> <!-- DONT KNOW -->
+		<skillId val="3172" /> <!-- Item Skill: Aura Flare -->
 		<skillLevel val="3" />
 		<type val="purple" />
 	</augmentation>
@@ -2032,7 +2032,7 @@
 	</augmentation>
 	<augmentation id="14967"> <!-- Active: Resurrects a corpse. -->
 		<skillId val="3160" /> <!-- Item Skill: Resurrection: Active: Resurrects a corpse. Restores about 20% of additional Exp. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="3" />
 		<type val="purple" />
 	</augmentation>
 	<augmentation id="14968"> <!-- Active: Emits an area of effect earth attack. -->
@@ -2670,9 +2670,9 @@
 		<skillLevel val="3" />
 		<type val="red" />
 	</augmentation>
-	<augmentation id="15095"> <!-- Passive: Increases your MP recharge recovery rate. -->
-		<skillId val="3239" /> <!-- Item Skill: Mana Gain: Passive: Increases the recharge recovery rate of MP when equipped. -->
-		<skillLevel val="3" />
+	<augmentation id="15095"> <!-- Active: Temporarily increases the size of your head. -->
+		<skillId val="3203" /> <!-- Item Skill: Mystery Skill: Active: Increases your head size. -->
+		<skillLevel val="1" />
 		<type val="blue" />
 	</augmentation>
 	<augmentation id="15096"> <!-- Active: Temporarily increases your lung capacity. -->
@@ -2881,7 +2881,7 @@
 		<type val="purple" />
 	</augmentation>
 	<augmentation id="15137"> <!-- Active: Unleashes a general attack and temporarily decreases your magic attack power during PvP. -->
-		<skillId val="0" /> <!-- DONT KNOW -->
+		<skillId val="3172" /> <!-- Item Skill: Aura Flare -->
 		<skillLevel val="4" />
 		<type val="purple" />
 	</augmentation>
@@ -2922,7 +2922,7 @@
 	</augmentation>
 	<augmentation id="15145"> <!-- Active: Resurrects a corpse. -->
 		<skillId val="3160" /> <!-- Item Skill: Resurrection: Active: Resurrects a corpse. Restores about 30% of additional Exp. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="4" />
 		<type val="purple" />
 	</augmentation>
 	<augmentation id="15146"> <!-- Active: Emits an area of effect earth attack. -->
@@ -3292,12 +3292,12 @@
 	</augmentation>
 	<augmentation id="15219"> <!-- Active: Temporarily decreases all skill re-use times. -->
 		<skillId val="3202" /> <!-- Item Skill: Refresh: Active: Temporarily decreases the re-use times for all skills. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15220"> <!-- Active: Temporarily decreases MP consumption rates for all skills. -->
 		<skillId val="3164" /> <!-- Item Skill: Clarity: Active: Temporarily decreases the MP consumption rates for all skills. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15221"> <!-- Active: Temporarily increases your critical attack rate. -->
@@ -3307,7 +3307,7 @@
 	</augmentation>
 	<augmentation id="15222"> <!-- Active: Temporarily reflects some of the damage you receive back to the enemy. Excludes damage from skills or ranged attacks. -->
 		<skillId val="3204" /> <!-- Item Skill: Reflect Damage: Active: Allows you to reflect some of the damage you incurred back to the enemy for a certain amount of time. Excludes damage from skill or remote attacks. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15223"> <!-- Active: Temporarily blocks all of your target's physical/magic skills. -->
@@ -3342,37 +3342,37 @@
 	</augmentation>
 	<augmentation id="15229"> <!-- Active: Temporarily decreases the skill re-use time. -->
 		<skillId val="3199" /> <!-- Item Skill: Skill Refresh: Active: Temporarily decreases the re-use time for physical skills. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15230"> <!-- Active: Temporarily decreases the skill MP consumption rate. -->
 		<skillId val="3161" /> <!-- Item Skill: Skill Clarity: Active: Temporarily decreases the MP consumption rate for physical skills. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15231"> <!-- Active: Temporarily decreases the re-use time for singing and dancing skills. -->
 		<skillId val="3201" /> <!-- Item Skill: Music Refresh: Active: Temporarily decreases the re-use time for song/dance skills. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15232"> <!-- Active: Temporarily decreases the MP consumption rate for singing and dancing skills. -->
 		<skillId val="3163" /> <!-- Item Skill: Music Clarity: Active: Temporarily decreases the MP consumption rate for song/dance skills. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15233"> <!-- Active: Temporarily decreases the magic re-use time. -->
 		<skillId val="3200" /> <!-- Item Skill: Spell Refresh: Active: Temporarily decreases the re-use time for magic skills. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15234"> <!-- Active: Temporarily decreases the magic MP consumption rate. -->
 		<skillId val="3162" /> <!-- Item Skill: Spell Clarity: Active: Temporarily decreases the MP consumption rate for magical skills. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15235"> <!-- Active: Temporarily decreases the magic MP consumption rate. -->
 		<skillId val="3162" /> <!-- Item Skill: Spell Clarity: Active: Temporarily decreases the MP consumption rate for magical skills. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15236"> <!-- Active: Temporarily increases the amount of HP absorbed from damage done to your target. Excludes damage by skill or ranged attacks. -->
@@ -3512,7 +3512,7 @@
 	</augmentation>
 	<augmentation id="15263"> <!-- Passive: Decreases the MP consumption rate for all skills. -->
 		<skillId val="3258" /> <!-- Item Skill: Clarity: Passive: Decreases the MP consumption rate for all skills when equipped. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15264"> <!-- Passive: Increases your Evasion. -->
@@ -3527,7 +3527,7 @@
 	</augmentation>
 	<augmentation id="15266"> <!-- Passive: Increases the ability to reflect some of the damage you incurred back to the enemy. Excludes damage by skill or ranged attacks. -->
 		<skillId val="3259" /> <!-- Item Skill: Reflect Damage: Passive: Increases the ability to reflect some of the damage you incur back to the enemy when equipped. Excludes damage by skill or long-range attacks. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15267"> <!-- Passive: Increases your Accuracy. -->
@@ -3547,22 +3547,22 @@
 	</augmentation>
 	<augmentation id="15270"> <!-- Passive: Decreases the skill MP consumption rate. -->
 		<skillId val="3255" /> <!-- Item Skill: Skill Clarity: Passive: Decreases the MP consumption rate for physical skills when equipped. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15271"> <!-- Passive: Decreases the song/dance skill MP consumption rate. -->
 		<skillId val="3257" /> <!-- Item Skill: Music Clarity: Passive: Decreases the MP consumption rate for song/dance skills when equipped. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15272"> <!-- Passive: Decreases the magic MP consumption rate. -->
 		<skillId val="3256" /> <!-- Item Skill: Spell Clarity: Passive: Decreases the MP consumption rate for magic skills when equipped. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
-	<augmentation id="15273"> <!-- Passive: Decreases the magic MP consumption rate. -->
-		<skillId val="3256" /> <!-- Item Skill: Spell Clarity: Passive: Decreases the MP consumption rate for magic skills when equipped. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+	<augmentation id="15273"> <!-- Active: Temporarily increases the size of your head. -->
+		<skillId val="3203" /> <!-- Item Skill: Mystery Skill: Active: Increases your head size. -->
+		<skillLevel val="1" />
 		<type val="blue" />
 	</augmentation>
 	<augmentation id="15274"> <!-- Active: Temporarily increases your lung capacity. -->
@@ -3771,7 +3771,7 @@
 		<type val="purple" />
 	</augmentation>
 	<augmentation id="15315"> <!-- Active: Unleashes a general attack and temporarily decreases your magic attack power during PvP. -->
-		<skillId val="0" /> <!-- DONT KNOW -->
+		<skillId val="3172" /> <!-- Item Skill: Aura Flare -->
 		<skillLevel val="5" />
 		<type val="purple" />
 	</augmentation>
@@ -3812,7 +3812,7 @@
 	</augmentation>
 	<augmentation id="15323"> <!-- Active: Resurrects a corpse. -->
 		<skillId val="3160" /> <!-- Item Skill: Resurrection: Active: Resurrects a corpse. Restores about 40% of additional Exp. -->
-		<skillLevel val="4" /> <!-- guessed lvl -->
+		<skillLevel val="5" />
 		<type val="purple" />
 	</augmentation>
 	<augmentation id="15324"> <!-- Active: Emits an area of effect earth attack. -->
@@ -4182,12 +4182,12 @@
 	</augmentation>
 	<augmentation id="15397"> <!-- Active: Temporarily decreases all skill re-use times. -->
 		<skillId val="3202" /> <!-- Item Skill: Refresh: Active: Temporarily decreases the re-use times for all skills. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15398"> <!-- Active: Temporarily decreases MP consumption rates for all skills. -->
 		<skillId val="3164" /> <!-- Item Skill: Clarity: Active: Temporarily decreases the MP consumption rates for all skills. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15399"> <!-- Active: Temporarily increases your critical attack rate. -->
@@ -4197,7 +4197,7 @@
 	</augmentation>
 	<augmentation id="15400"> <!-- Active: Temporarily reflects some of the damage you receive back to the enemy. Excludes damage from skills or ranged attacks. -->
 		<skillId val="3204" /> <!-- Item Skill: Reflect Damage: Active: Allows you to reflect some of the damage you incurred back to the enemy for a certain amount of time. Excludes damage from skill or remote attacks. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15401"> <!-- Active: Temporarily blocks all of your target's physical/magic skills. -->
@@ -4232,32 +4232,32 @@
 	</augmentation>
 	<augmentation id="15407"> <!-- Active: Temporarily decreases the skill re-use time. -->
 		<skillId val="3199" /> <!-- Item Skill: Skill Refresh: Active: Temporarily decreases the re-use time for physical skills. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15408"> <!-- Active: Temporarily decreases the skill MP consumption rate. -->
 		<skillId val="3161" /> <!-- Item Skill: Skill Clarity: Active: Temporarily decreases the MP consumption rate for physical skills. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15409"> <!-- Active: Temporarily decreases the re-use time for singing and dancing skills. -->
 		<skillId val="3201" /> <!-- Item Skill: Music Refresh: Active: Temporarily decreases the re-use time for song/dance skills. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15410"> <!-- Active: Temporarily decreases the MP consumption rate for singing and dancing skills. -->
 		<skillId val="3163" /> <!-- Item Skill: Music Clarity: Active: Temporarily decreases the MP consumption rate for song/dance skills. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15411"> <!-- Active: Temporarily decreases the magic re-use time. -->
 		<skillId val="3200" /> <!-- Item Skill: Spell Refresh: Active: Temporarily decreases the re-use time for magic skills. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15412"> <!-- Active: Temporarily decreases the magic MP consumption rate. -->
 		<skillId val="3162" /> <!-- Item Skill: Spell Clarity: Active: Temporarily decreases the MP consumption rate for magical skills. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15413"> <!-- Active: Temporarily blocks a monster's pre-emptive attack. Fighting ability significantly decreases while in effect. -->
@@ -4402,7 +4402,7 @@
 	</augmentation>
 	<augmentation id="15441"> <!-- Passive: Decreases the MP consumption rate for all skills. -->
 		<skillId val="3258" /> <!-- Item Skill: Clarity: Passive: Decreases the MP consumption rate for all skills when equipped. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15442"> <!-- Passive: Increases your Evasion. -->
@@ -4417,7 +4417,7 @@
 	</augmentation>
 	<augmentation id="15444"> <!-- Passive: Increases the ability to reflect some of the damage you incurred back to the enemy. Excludes damage by skill or ranged attacks. -->
 		<skillId val="3259" /> <!-- Item Skill: Reflect Damage: Passive: Increases the ability to reflect some of the damage you incur back to the enemy when equipped. Excludes damage by skill or long-range attacks. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15445"> <!-- Passive: Increases your Accuracy. -->
@@ -4437,22 +4437,22 @@
 	</augmentation>
 	<augmentation id="15448"> <!-- Passive: Decreases the skill MP consumption rate. -->
 		<skillId val="3255" /> <!-- Item Skill: Skill Clarity: Passive: Decreases the MP consumption rate for physical skills when equipped. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15449"> <!-- Passive: Decreases the song/dance skill MP consumption rate. -->
 		<skillId val="3257" /> <!-- Item Skill: Music Clarity: Passive: Decreases the MP consumption rate for song/dance skills when equipped. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15450"> <!-- Passive: Decreases the magic MP consumption rate. -->
 		<skillId val="3256" /> <!-- Item Skill: Spell Clarity: Passive: Decreases the MP consumption rate for magic skills when equipped. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
-	<augmentation id="15451"> <!-- Passive: Decreases the magic MP consumption rate. -->
-		<skillId val="3256" /> <!-- Item Skill: Spell Clarity: Passive: Decreases the MP consumption rate for magic skills when equipped. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+	<augmentation id="15451"> <!-- Active: Temporarily increases the size of your head. -->
+		<skillId val="3203" /> <!-- Item Skill: Mystery Skill: Active: Increases your head size. -->
+		<skillLevel val="1" />
 		<type val="blue" />
 	</augmentation>
 	<augmentation id="15452"> <!-- Active: Temporarily increases your lung capacity. -->
@@ -4661,7 +4661,7 @@
 		<type val="purple" />
 	</augmentation>
 	<augmentation id="15493"> <!-- Active: Unleashes a general attack and temporarily decreases your magic attack power during PvP. -->
-		<skillId val="0" /> <!-- DONT KNOW -->
+		<skillId val="3172" /> <!-- Item Skill: Aura Flare -->
 		<skillLevel val="6" />
 		<type val="purple" />
 	</augmentation>
@@ -4702,7 +4702,7 @@
 	</augmentation>
 	<augmentation id="15501"> <!-- Active: Resurrects a corpse. -->
 		<skillId val="3160" /> <!-- Item Skill: Resurrection: Active: Resurrects a corpse. Restores about 50% of additional Exp. -->
-		<skillLevel val="5" /> <!-- guessed lvl -->
+		<skillLevel val="6" />
 		<type val="purple" />
 	</augmentation>
 	<augmentation id="15502"> <!-- Active: Emits an area of effect earth attack. -->
@@ -5072,12 +5072,12 @@
 	</augmentation>
 	<augmentation id="15575"> <!-- Active: Temporarily decreases all skill re-use times. -->
 		<skillId val="3202" /> <!-- Item Skill: Refresh: Active: Temporarily decreases the re-use times for all skills. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15576"> <!-- Active: Temporarily decreases MP consumption rates for all skills. -->
 		<skillId val="3164" /> <!-- Item Skill: Clarity: Active: Temporarily decreases the MP consumption rates for all skills. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15577"> <!-- Active: Temporarily increases your critical attack rate. -->
@@ -5087,7 +5087,7 @@
 	</augmentation>
 	<augmentation id="15578"> <!-- Active: Temporarily reflects some of the damage you receive back to the enemy. Excludes damage from skills or ranged attacks. -->
 		<skillId val="3204" /> <!-- Item Skill: Reflect Damage: Active: Allows you to reflect some of the damage you incurred back to the enemy for a certain amount of time. Excludes damage from skill or remote attacks. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15579"> <!-- Active: Temporarily blocks all of your target's physical/magic skills. -->
@@ -5122,32 +5122,32 @@
 	</augmentation>
 	<augmentation id="15585"> <!-- Active: Temporarily decreases the skill re-use time. -->
 		<skillId val="3199" /> <!-- Item Skill: Skill Refresh: Active: Temporarily decreases the re-use time for physical skills. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15586"> <!-- Active: Temporarily decreases the skill MP consumption rate. -->
 		<skillId val="3161" /> <!-- Item Skill: Skill Clarity: Active: Temporarily decreases the MP consumption rate for physical skills. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15587"> <!-- Active: Temporarily decreases the re-use time for singing and dancing skills. -->
 		<skillId val="3201" /> <!-- Item Skill: Music Refresh: Active: Temporarily decreases the re-use time for song/dance skills. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15588"> <!-- Active: Temporarily decreases the MP consumption rate for singing and dancing skills. -->
 		<skillId val="3163" /> <!-- Item Skill: Music Clarity: Active: Temporarily decreases the MP consumption rate for song/dance skills. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15589"> <!-- Active: Temporarily decreases the magic re-use time. -->
 		<skillId val="3200" /> <!-- Item Skill: Spell Refresh: Active: Temporarily decreases the re-use time for magic skills. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15590"> <!-- Active: Temporarily decreases the magic MP consumption rate. -->
 		<skillId val="3162" /> <!-- Item Skill: Spell Clarity: Active: Temporarily decreases the MP consumption rate for magical skills. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15591"> <!-- Active: Temporarily blocks a monster's pre-emptive attack. Fighting ability significantly decreases while in effect. -->
@@ -5292,7 +5292,7 @@
 	</augmentation>
 	<augmentation id="15619"> <!-- Passive: Decreases the MP consumption rate for all skills. -->
 		<skillId val="3258" /> <!-- Item Skill: Clarity: Passive: Decreases the MP consumption rate for all skills when equipped. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15620"> <!-- Passive: Increases your Evasion. -->
@@ -5307,7 +5307,7 @@
 	</augmentation>
 	<augmentation id="15622"> <!-- Passive: Increases the ability to reflect some of the damage you incurred back to the enemy. Excludes damage by skill or ranged attacks. -->
 		<skillId val="3259" /> <!-- Item Skill: Reflect Damage: Passive: Increases the ability to reflect some of the damage you incur back to the enemy when equipped. Excludes damage by skill or long-range attacks. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15623"> <!-- Passive: Increases your Accuracy. -->
@@ -5327,22 +5327,22 @@
 	</augmentation>
 	<augmentation id="15626"> <!-- Passive: Decreases the skill MP consumption rate. -->
 		<skillId val="3255" /> <!-- Item Skill: Skill Clarity: Passive: Decreases the MP consumption rate for physical skills when equipped. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15627"> <!-- Passive: Decreases the song/dance skill MP consumption rate. -->
 		<skillId val="3257" /> <!-- Item Skill: Music Clarity: Passive: Decreases the MP consumption rate for song/dance skills when equipped. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15628"> <!-- Passive: Decreases the magic MP consumption rate. -->
 		<skillId val="3256" /> <!-- Item Skill: Spell Clarity: Passive: Decreases the MP consumption rate for magic skills when equipped. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
-	<augmentation id="15629"> <!-- Passive: Decreases the magic MP consumption rate. -->
-		<skillId val="3256" /> <!-- Item Skill: Spell Clarity: Passive: Decreases the MP consumption rate for magic skills when equipped. -->
-		<skillLevel val="1" /> <!-- guessed lvl -->
+	<augmentation id="15629"> <!-- Active: Temporarily increases the size of your head. -->
+		<skillId val="3203" /> <!-- Item Skill: Mystery Skill: Active: Increases your head size. -->
+		<skillLevel val="1" />
 		<type val="blue" />
 	</augmentation>
 	<augmentation id="15630"> <!-- Active: Temporarily increases your lung capacity. -->
@@ -5551,7 +5551,7 @@
 		<type val="purple" />
 	</augmentation>
 	<augmentation id="15671"> <!-- Active: Unleashes a general attack and temporarily decreases your magic attack power during PvP. -->
-		<skillId val="0" /> <!-- DONT KNOW -->
+		<skillId val="3172" /> <!-- Item Skill: Aura Flare -->
 		<skillLevel val="7" />
 		<type val="purple" />
 	</augmentation>
@@ -5592,7 +5592,7 @@
 	</augmentation>
 	<augmentation id="15679"> <!-- Active: Resurrects a corpse. -->
 		<skillId val="3160" /> <!-- Item Skill: Resurrection: Active: Resurrects a corpse. Restores about 55% of additional Exp. -->
-		<skillLevel val="6" /> <!-- guessed lvl -->
+		<skillLevel val="7" />
 		<type val="purple" />
 	</augmentation>
 	<augmentation id="15680"> <!-- Active: Emits an area of effect earth attack. -->
@@ -5962,12 +5962,12 @@
 	</augmentation>
 	<augmentation id="15753"> <!-- Active: Temporarily decreases all skill re-use times. -->
 		<skillId val="3202" /> <!-- Item Skill: Refresh: Active: Temporarily decreases the re-use times for all skills. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15754"> <!-- Active: Temporarily decreases MP consumption rates for all skills. -->
 		<skillId val="3164" /> <!-- Item Skill: Clarity: Active: Temporarily decreases the MP consumption rates for all skills. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15755"> <!-- Active: Temporarily increases your critical attack rate. -->
@@ -5977,7 +5977,7 @@
 	</augmentation>
 	<augmentation id="15756"> <!-- Active: Temporarily reflects some of the damage you receive back to the enemy. Excludes damage from skills or ranged attacks. -->
 		<skillId val="3204" /> <!-- Item Skill: Reflect Damage: Active: Allows you to reflect some of the damage you incurred back to the enemy for a certain amount of time. Excludes damage from skill or remote attacks. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15757"> <!-- Active: Temporarily blocks all of your target's physical/magic skills. -->
@@ -6012,37 +6012,37 @@
 	</augmentation>
 	<augmentation id="15763"> <!-- Active: Temporarily decreases the skill re-use time. -->
 		<skillId val="3199" /> <!-- Item Skill: Skill Refresh: Active: Temporarily decreases the re-use time for physical skills. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15764"> <!-- Active: Temporarily decreases the skill MP consumption rate. -->
 		<skillId val="3161" /> <!-- Item Skill: Skill Clarity: Active: Temporarily decreases the MP consumption rate for physical skills. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15765"> <!-- Active: Temporarily decreases the re-use time for singing and dancing skills. -->
 		<skillId val="3201" /> <!-- Item Skill: Music Refresh: Active: Temporarily decreases the re-use time for song/dance skills. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15766"> <!-- Active: Temporarily decreases the MP consumption rate for singing and dancing skills. -->
 		<skillId val="3163" /> <!-- Item Skill: Music Clarity: Active: Temporarily decreases the MP consumption rate for song/dance skills. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15767"> <!-- Active: Temporarily decreases the magic re-use time. -->
 		<skillId val="3200" /> <!-- Item Skill: Spell Refresh: Active: Temporarily decreases the re-use time for magic skills. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15768"> <!-- Active: Temporarily decreases the magic MP consumption rate. -->
 		<skillId val="3162" /> <!-- Item Skill: Spell Clarity: Active: Temporarily decreases the MP consumption rate for magical skills. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15769"> <!-- Active: Temporarily blocks a monster's pre-emptive attack. Fighting ability significantly decreases while in effect. -->
 		<skillId val="3159" /> <!-- Item Skill: Stealth: Active: Temporarily blocks a monster's pre-emptive attack. Fighting ability significantly decreases while in effect. -->
-		<skillLevel val="2" />
+		<skillLevel val="1" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15770"> <!-- Active: Temporarily increases the amount of HP absorbed from damage done to your target. Excludes damage by skill or ranged attacks. -->
@@ -6182,7 +6182,7 @@
 	</augmentation>
 	<augmentation id="15797"> <!-- Passive: Decreases the MP consumption rate for all skills. -->
 		<skillId val="3258" /> <!-- Item Skill: Clarity: Passive: Decreases the MP consumption rate for all skills when equipped. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15798"> <!-- Passive: Increases your Evasion. -->
@@ -6197,7 +6197,7 @@
 	</augmentation>
 	<augmentation id="15800"> <!-- Passive: Increases the ability to reflect some of the damage you incurred back to the enemy. Excludes damage by skill or ranged attacks. -->
 		<skillId val="3259" /> <!-- Item Skill: Reflect Damage: Passive: Increases the ability to reflect some of the damage you incur back to the enemy when equipped. Excludes damage by skill or long-range attacks. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15801"> <!-- Passive: Increases your Accuracy. -->
@@ -6217,22 +6217,22 @@
 	</augmentation>
 	<augmentation id="15804"> <!-- Passive: Decreases the skill MP consumption rate. -->
 		<skillId val="3255" /> <!-- Item Skill: Skill Clarity: Passive: Decreases the MP consumption rate for physical skills when equipped. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15805"> <!-- Passive: Decreases the song/dance skill MP consumption rate. -->
 		<skillId val="3257" /> <!-- Item Skill: Music Clarity: Passive: Decreases the MP consumption rate for song/dance skills when equipped. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15806"> <!-- Passive: Decreases the magic MP consumption rate. -->
 		<skillId val="3256" /> <!-- Item Skill: Spell Clarity: Passive: Decreases the MP consumption rate for magic skills when equipped. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
-	<augmentation id="15807"> <!-- Passive: Decreases the magic MP consumption rate. -->
-		<skillId val="3256" /> <!-- Item Skill: Spell Clarity: Passive: Decreases the MP consumption rate for magic skills when equipped. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+	<augmentation id="15807"> <!-- Active: Temporarily increases the size of your head. -->
+		<skillId val="3203" /> <!-- Item Skill: Mystery Skill: Active: Increases your head size. -->
+		<skillLevel val="1" />
 		<type val="blue" />
 	</augmentation>
 	<augmentation id="15808"> <!-- Active: Temporarily increases your lung capacity. -->
@@ -6441,7 +6441,7 @@
 		<type val="purple" />
 	</augmentation>
 	<augmentation id="15849"> <!-- Active: Unleashes a general attack and temporarily decreases your magic attack power during PvP. -->
-		<skillId val="0" /> <!-- DONT KNOW -->
+		<skillId val="3172" /> <!-- Item Skill: Aura Flare -->
 		<skillLevel val="8" />
 		<type val="purple" />
 	</augmentation>
@@ -6482,7 +6482,7 @@
 	</augmentation>
 	<augmentation id="15857"> <!-- Active: Resurrects a corpse. -->
 		<skillId val="3160" /> <!-- Item Skill: Resurrection: Active: Resurrects a corpse. Restores about 60% of additional Exp. -->
-		<skillLevel val="7" /> <!-- guessed lvl -->
+		<skillLevel val="8" />
 		<type val="purple" />
 	</augmentation>
 	<augmentation id="15858"> <!-- Active: Emits an area of effect earth attack. -->
@@ -6852,12 +6852,12 @@
 	</augmentation>
 	<augmentation id="15931"> <!-- Active: Temporarily decreases all skill re-use times. -->
 		<skillId val="3202" /> <!-- Item Skill: Refresh: Active: Temporarily decreases the re-use times for all skills. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15932"> <!-- Active: Temporarily decreases MP consumption rates for all skills. -->
 		<skillId val="3164" /> <!-- Item Skill: Clarity: Active: Temporarily decreases the MP consumption rates for all skills. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15933"> <!-- Active: Temporarily increases your critical attack rate. -->
@@ -6867,7 +6867,7 @@
 	</augmentation>
 	<augmentation id="15934"> <!-- Active: Temporarily reflects some of the damage you receive back to the enemy. Excludes damage from skills or ranged attacks. -->
 		<skillId val="3204" /> <!-- Item Skill: Reflect Damage: Active: Allows you to reflect some of the damage you incurred back to the enemy for a certain amount of time. Excludes damage from skill or remote attacks. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15935"> <!-- Active: Temporarily blocks all of your target's physical/magic skills. -->
@@ -6902,32 +6902,32 @@
 	</augmentation>
 	<augmentation id="15941"> <!-- Active: Temporarily decreases the skill re-use time. -->
 		<skillId val="3199" /> <!-- Item Skill: Skill Refresh: Active: Temporarily decreases the re-use time for physical skills. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15942"> <!-- Active: Temporarily decreases the skill MP consumption rate. -->
 		<skillId val="3161" /> <!-- Item Skill: Skill Clarity: Active: Temporarily decreases the MP consumption rate for physical skills. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15943"> <!-- Active: Temporarily decreases the re-use time for singing and dancing skills. -->
 		<skillId val="3201" /> <!-- Item Skill: Music Refresh: Active: Temporarily decreases the re-use time for song/dance skills. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15944"> <!-- Active: Temporarily decreases the MP consumption rate for singing and dancing skills. -->
 		<skillId val="3163" /> <!-- Item Skill: Music Clarity: Active: Temporarily decreases the MP consumption rate for song/dance skills. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15945"> <!-- Active: Temporarily decreases the magic re-use time. -->
 		<skillId val="3200" /> <!-- Item Skill: Spell Refresh: Active: Temporarily decreases the re-use time for magic skills. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15946"> <!-- Active: Temporarily decreases the magic MP consumption rate. -->
 		<skillId val="3162" /> <!-- Item Skill: Spell Clarity: Active: Temporarily decreases the MP consumption rate for magical skills. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15947"> <!-- Active: Temporarily blocks a monster's pre-emptive attack. Fighting ability significantly decreases while in effect. -->
@@ -7072,7 +7072,7 @@
 	</augmentation>
 	<augmentation id="15975"> <!-- Passive: Decreases the MP consumption rate for all skills. -->
 		<skillId val="3258" /> <!-- Item Skill: Clarity: Passive: Decreases the MP consumption rate for all skills when equipped. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15976"> <!-- Passive: Increases your Evasion. -->
@@ -7087,7 +7087,7 @@
 	</augmentation>
 	<augmentation id="15978"> <!-- Passive: Increases the ability to reflect some of the damage you incurred back to the enemy. Excludes damage by skill or ranged attacks. -->
 		<skillId val="3259" /> <!-- Item Skill: Reflect Damage: Passive: Increases the ability to reflect some of the damage you incur back to the enemy when equipped. Excludes damage by skill or long-range attacks. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15979"> <!-- Passive: Increases your Accuracy. -->
@@ -7107,22 +7107,22 @@
 	</augmentation>
 	<augmentation id="15982"> <!-- Passive: Decreases the skill MP consumption rate. -->
 		<skillId val="3255" /> <!-- Item Skill: Skill Clarity: Passive: Decreases the MP consumption rate for physical skills when equipped. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15983"> <!-- Passive: Decreases the song/dance skill MP consumption rate. -->
 		<skillId val="3257" /> <!-- Item Skill: Music Clarity: Passive: Decreases the MP consumption rate for song/dance skills when equipped. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="15984"> <!-- Passive: Decreases the magic MP consumption rate. -->
 		<skillId val="3256" /> <!-- Item Skill: Spell Clarity: Passive: Decreases the MP consumption rate for magic skills when equipped. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
-	<augmentation id="15985"> <!-- Passive: Decreases the magic MP consumption rate. -->
-		<skillId val="3256" /> <!-- Item Skill: Spell Clarity: Passive: Decreases the MP consumption rate for magic skills when equipped. -->
-		<skillLevel val="2" /> <!-- guessed lvl -->
+	<augmentation id="15985"> <!-- Active: Temporarily increases the size of your head. -->
+		<skillId val="3203" /> <!-- Item Skill: Mystery Skill: Active: Increases your head size. -->
+		<skillLevel val="1" />
 		<type val="blue" />
 	</augmentation>
 	<augmentation id="15986"> <!-- Active: Temporarily increases your lung capacity. -->
@@ -7331,7 +7331,7 @@
 		<type val="purple" />
 	</augmentation>
 	<augmentation id="16027"> <!-- Active: Unleashes a general attack and temporarily decreases your magic attack power during PvP. -->
-		<skillId val="0" /> <!-- DONT KNOW -->
+		<skillId val="3172" /> <!-- Item Skill: Aura Flare -->
 		<skillLevel val="9" />
 		<type val="purple" />
 	</augmentation>
@@ -7372,7 +7372,7 @@
 	</augmentation>
 	<augmentation id="16035"> <!-- Active: Resurrects a corpse. -->
 		<skillId val="3160" /> <!-- Item Skill: Resurrection: Active: Resurrects a corpse. Restores about 65% of additional Exp. -->
-		<skillLevel val="8" /> <!-- guessed lvl -->
+		<skillLevel val="9" />
 		<type val="purple" />
 	</augmentation>
 	<augmentation id="16036"> <!-- Active: Emits an area of effect earth attack. -->
@@ -7742,12 +7742,12 @@
 	</augmentation>
 	<augmentation id="16109"> <!-- Active: Temporarily decreases all skill re-use times. -->
 		<skillId val="3202" /> <!-- Item Skill: Refresh: Active: Temporarily decreases the re-use times for all skills. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="16110"> <!-- Active: Temporarily decreases MP consumption rates for all skills. -->
 		<skillId val="3164" /> <!-- Item Skill: Clarity: Active: Temporarily decreases the MP consumption rates for all skills. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="16111"> <!-- Active: Temporarily increases your critical attack rate. -->
@@ -7757,7 +7757,7 @@
 	</augmentation>
 	<augmentation id="16112"> <!-- Active: Temporarily reflects some of the damage you receive back to the enemy. Excludes damage from skills or ranged attacks. -->
 		<skillId val="3204" /> <!-- Item Skill: Reflect Damage: Active: Allows you to reflect some of the damage you incurred back to the enemy for a certain amount of time. Excludes damage from skill or remote attacks. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="16113"> <!-- Active: Temporarily blocks all of your target's physical/magic skills. -->
@@ -7792,37 +7792,37 @@
 	</augmentation>
 	<augmentation id="16119"> <!-- Active: Temporarily decreases the skill re-use time. -->
 		<skillId val="3199" /> <!-- Item Skill: Skill Refresh: Active: Temporarily decreases the re-use time for physical skills. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="16120"> <!-- Active: Temporarily decreases the skill MP consumption rate. -->
 		<skillId val="3161" /> <!-- Item Skill: Skill Clarity: Active: Temporarily decreases the MP consumption rate for physical skills. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="16121"> <!-- Active: Temporarily decreases the re-use time for singing and dancing skills. -->
 		<skillId val="3201" /> <!-- Item Skill: Music Refresh: Active: Temporarily decreases the re-use time for song/dance skills. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="16122"> <!-- Active: Temporarily decreases the MP consumption rate for singing and dancing skills. -->
 		<skillId val="3163" /> <!-- Item Skill: Music Clarity: Active: Temporarily decreases the MP consumption rate for song/dance skills. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="16123"> <!-- Active: Temporarily decreases the magic re-use time. -->
 		<skillId val="3200" /> <!-- Item Skill: Spell Refresh: Active: Temporarily decreases the re-use time for magic skills. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="16124"> <!-- Active: Temporarily decreases the magic MP consumption rate. -->
 		<skillId val="3162" /> <!-- Item Skill: Spell Clarity: Active: Temporarily decreases the MP consumption rate for magical skills. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="16125"> <!-- Active: Temporarily blocks a monster's pre-emptive attack. Fighting ability significantly decreases while in effect. -->
 		<skillId val="3159" /> <!-- Item Skill: Stealth: Active: Temporarily blocks a monster's pre-emptive attack. Fighting ability significantly decreases while in effect. -->
-		<skillLevel val="3" />
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="16126"> <!-- Active: Temporarily increases the amount of HP absorbed from damage done to your target. Excludes damage by skill or ranged attacks. -->
@@ -7962,7 +7962,7 @@
 	</augmentation>
 	<augmentation id="16153"> <!-- Passive: Decreases the MP consumption rate for all skills. -->
 		<skillId val="3258" /> <!-- Item Skill: Clarity: Passive: Decreases the MP consumption rate for all skills when equipped. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="16154"> <!-- Passive: Increases your Evasion. -->
@@ -7977,7 +7977,7 @@
 	</augmentation>
 	<augmentation id="16156"> <!-- Passive: Increases the ability to reflect some of the damage you incurred back to the enemy. Excludes damage by skill or ranged attacks. -->
 		<skillId val="3259" /> <!-- Item Skill: Reflect Damage: Passive: Increases the ability to reflect some of the damage you incur back to the enemy when equipped. Excludes damage by skill or long-range attacks. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="16157"> <!-- Passive: Increases your Accuracy. -->
@@ -7997,22 +7997,22 @@
 	</augmentation>
 	<augmentation id="16160"> <!-- Passive: Decreases the skill MP consumption rate. -->
 		<skillId val="3255" /> <!-- Item Skill: Skill Clarity: Passive: Decreases the MP consumption rate for physical skills when equipped. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="16161"> <!-- Passive: Decreases the song/dance skill MP consumption rate. -->
 		<skillId val="3257" /> <!-- Item Skill: Music Clarity: Passive: Decreases the MP consumption rate for song/dance skills when equipped. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="16162"> <!-- Passive: Decreases the magic MP consumption rate. -->
 		<skillId val="3256" /> <!-- Item Skill: Spell Clarity: Passive: Decreases the MP consumption rate for magic skills when equipped. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="2" />
 		<type val="red" />
 	</augmentation>
-	<augmentation id="16163"> <!-- Passive: Decreases the magic MP consumption rate. -->
-		<skillId val="3256" /> <!-- Item Skill: Spell Clarity: Passive: Decreases the MP consumption rate for magic skills when equipped. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+	<augmentation id="16163"> <!-- Active: Temporarily increases the size of your head. -->
+		<skillId val="3203" /> <!-- Item Skill: Mystery Skill: Active: Increases your head size. -->
+		<skillLevel val="1" />
 		<type val="blue" />
 	</augmentation>
 	<augmentation id="16164"> <!-- Active: Temporarily increases your lung capacity. -->
@@ -8221,7 +8221,7 @@
 		<type val="purple" />
 	</augmentation>
 	<augmentation id="16205"> <!-- Active: Unleashes a general attack and temporarily decreases your magic attack power during PvP. -->
-		<skillId val="0" /> <!-- DONT KNOW -->
+		<skillId val="3172" /> <!-- Item Skill: Aura Flare -->
 		<skillLevel val="10" />
 		<type val="purple" />
 	</augmentation>
@@ -8262,7 +8262,7 @@
 	</augmentation>
 	<augmentation id="16213"> <!-- Active: Resurrects a corpse. -->
 		<skillId val="3160" /> <!-- Item Skill: Resurrection: Active: Resurrects a corpse. Restores about 70% of additional Exp. -->
-		<skillLevel val="9" /> <!-- guessed lvl -->
+		<skillLevel val="9" />
 		<type val="purple" />
 	</augmentation>
 	<augmentation id="16214"> <!-- Active: Emits an area of effect earth attack. -->
@@ -8632,12 +8632,12 @@
 	</augmentation>
 	<augmentation id="16287"> <!-- Active: Temporarily decreases all skill re-use times. -->
 		<skillId val="3202" /> <!-- Item Skill: Refresh: Active: Temporarily decreases the re-use times for all skills. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="3" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="16288"> <!-- Active: Temporarily decreases MP consumption rates for all skills. -->
 		<skillId val="3164" /> <!-- Item Skill: Clarity: Active: Temporarily decreases the MP consumption rates for all skills. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="3" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="16289"> <!-- Active: Temporarily increases your critical attack rate. -->
@@ -8647,7 +8647,7 @@
 	</augmentation>
 	<augmentation id="16290"> <!-- Active: Temporarily reflects some of the damage you receive back to the enemy. Excludes damage from skills or ranged attacks. -->
 		<skillId val="3204" /> <!-- Item Skill: Reflect Damage: Active: Allows you to reflect some of the damage you incurred back to the enemy for a certain amount of time. Excludes damage from skill or remote attacks. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="3" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="16291"> <!-- Active: Temporarily blocks all of your target's physical/magic skills. -->
@@ -8682,32 +8682,32 @@
 	</augmentation>
 	<augmentation id="16297"> <!-- Active: Temporarily decreases the skill re-use time. -->
 		<skillId val="3199" /> <!-- Item Skill: Skill Refresh: Active: Temporarily decreases the re-use time for physical skills. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="3" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="16298"> <!-- Active: Temporarily decreases the skill MP consumption rate. -->
 		<skillId val="3161" /> <!-- Item Skill: Skill Clarity: Active: Temporarily decreases the MP consumption rate for physical skills. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="3" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="16299"> <!-- Active: Temporarily decreases the re-use time for singing and dancing skills. -->
 		<skillId val="3201" /> <!-- Item Skill: Music Refresh: Active: Temporarily decreases the re-use time for song/dance skills. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="3" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="16300"> <!-- Active: Temporarily decreases the MP consumption rate for singing and dancing skills. -->
 		<skillId val="3163" /> <!-- Item Skill: Music Clarity: Active: Temporarily decreases the MP consumption rate for song/dance skills. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="3" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="16301"> <!-- Active: Temporarily decreases the magic re-use time. -->
 		<skillId val="3200" /> <!-- Item Skill: Spell Refresh: Active: Temporarily decreases the re-use time for magic skills. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="3" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="16302"> <!-- Active: Temporarily decreases the magic MP consumption rate. -->
 		<skillId val="3162" /> <!-- Item Skill: Spell Clarity: Active: Temporarily decreases the MP consumption rate for magical skills. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="3" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="16303"> <!-- Active: Temporarily blocks a monster's pre-emptive attack. Fighting ability significantly decreases while in effect. -->
@@ -8852,7 +8852,7 @@
 	</augmentation>
 	<augmentation id="16331"> <!-- Passive: Decreases the MP consumption rate for all skills. -->
 		<skillId val="3258" /> <!-- Item Skill: Clarity: Passive: Decreases the MP consumption rate for all skills when equipped. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="3" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="16332"> <!-- Passive: Increases your Evasion. -->
@@ -8867,7 +8867,7 @@
 	</augmentation>
 	<augmentation id="16334"> <!-- Passive: Increases the ability to reflect some of the damage you incurred back to the enemy. Excludes damage by skill or ranged attacks. -->
 		<skillId val="3259" /> <!-- Item Skill: Reflect Damage: Passive: Increases the ability to reflect some of the damage you incur back to the enemy when equipped. Excludes damage by skill or long-range attacks. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="3" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="16335"> <!-- Passive: Increases your Accuracy. -->
@@ -8887,17 +8887,17 @@
 	</augmentation>
 	<augmentation id="16338"> <!-- Passive: Decreases the skill MP consumption rate. -->
 		<skillId val="3255" /> <!-- Item Skill: Skill Clarity: Passive: Decreases the MP consumption rate for physical skills when equipped. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="3" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="16339"> <!-- Passive: Decreases the song/dance skill MP consumption rate. -->
 		<skillId val="3257" /> <!-- Item Skill: Music Clarity: Passive: Decreases the MP consumption rate for song/dance skills when equipped. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="3" />
 		<type val="red" />
 	</augmentation>
 	<augmentation id="16340"> <!-- Passive: Decreases the magic MP consumption rate. -->
 		<skillId val="3256" /> <!-- Item Skill: Spell Clarity: Passive: Decreases the MP consumption rate for magic skills when equipped. -->
-		<skillLevel val="3" /> <!-- guessed lvl -->
+		<skillLevel val="3" />
 		<type val="red" />
 	</augmentation>
 </list>

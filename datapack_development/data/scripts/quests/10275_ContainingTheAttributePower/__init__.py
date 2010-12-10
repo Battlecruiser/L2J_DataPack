@@ -6,6 +6,7 @@ import sys
 
 from com.l2jserver.gameserver.datatables import SkillTable
 from com.l2jserver.gameserver.model						import Elementals
+from com.l2jserver.gameserver.model.itemcontainer import Inventory
 from com.l2jserver.gameserver.model.quest        			import State
 from com.l2jserver.gameserver.model.quest        			import QuestState
 from com.l2jserver.gameserver.model.quest.jython 			import QuestJython as JQuest
@@ -146,7 +147,7 @@ class Quest (JQuest) :
         if st.getState() != State.STARTED : return
         npcId = npc.getNpcId()
         if npcId == Air :
-            if st.getItemEquipped(9) == YangSword and st.getInt("cond") in [8,10] and st.getQuestItemsCount(SoulPieceAir) < 6 and st.getRandom(100) < 30:
+            if st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == YangSword and st.getInt("cond") in [8,10] and st.getQuestItemsCount(SoulPieceAir) < 6 and st.getRandom(100) < 30:
                 st.giveItems(SoulPieceAir,1)
                 if st.getQuestItemsCount(SoulPieceAir) >= 6 :
                     st.set("cond",str(st.getInt("cond")+1))
@@ -154,7 +155,7 @@ class Quest (JQuest) :
                 else:
                     st.playSound("ItemSound.quest_itemget")
         elif npcId == Water :
-            if st.getItemEquipped(9) == YinSword and st.getInt("cond") in [3,5] and st.getQuestItemsCount(SoulPieceWater) < 6 and st.getRandom(100) < 30:
+            if st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == YinSword and st.getInt("cond") in [3,5] and st.getQuestItemsCount(SoulPieceWater) < 6 and st.getRandom(100) < 30:
                 st.giveItems(SoulPieceWater,1)
                 if st.getQuestItemsCount(SoulPieceWater) >= 6 :
                     st.set("cond",str(st.getInt("cond")+1))

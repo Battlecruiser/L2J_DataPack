@@ -97,7 +97,7 @@ public class AdminEnchant implements IAdminCommandHandler
 			else if (command.startsWith("admin_setun"))
 				armorType = Inventory.PAPERDOLL_UNDER;
 			else if (command.startsWith("admin_setba"))
-				armorType = Inventory.PAPERDOLL_BACK;
+				armorType = Inventory.PAPERDOLL_CLOAK;
 			else if (command.startsWith("admin_setbe"))
 				armorType = Inventory.PAPERDOLL_BELT;
 			
@@ -161,22 +161,15 @@ public class AdminEnchant implements IAdminCommandHandler
 		{
 			itemInstance = parmorInstance;
 		}
-		else
-		{
-			// for bows/crossbows and double handed weapons
-			parmorInstance = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LRHAND);
-			if (parmorInstance != null && parmorInstance.getLocationSlot() == Inventory.PAPERDOLL_LRHAND)
-				itemInstance = parmorInstance;
-		}
 		
 		if (itemInstance != null)
 		{
 			curEnchant = itemInstance.getEnchantLevel();
 			
 			// set enchant value
-			player.getInventory().unEquipItemInSlotAndRecord(armorType);
+			player.getInventory().unEquipItemInSlot(armorType);
 			itemInstance.setEnchantLevel(ench);
-			player.getInventory().equipItemAndRecord(itemInstance);
+			player.getInventory().equipItem(itemInstance);
 			
 			// send packets
 			InventoryUpdate iu = new InventoryUpdate();

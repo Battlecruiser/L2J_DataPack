@@ -7,8 +7,5 @@ CREATE TABLE IF NOT EXISTS `pets` (
   `exp` decimal(20, 0) ,
   `sp` decimal(11) ,
   `fed` decimal(11) ,
-  `weapon` int(5) ,
-  `armor` int(5) ,
-  `jewel` int(5) ,
   PRIMARY KEY (`item_obj_id`)
 );

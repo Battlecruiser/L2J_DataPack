@@ -2,6 +2,7 @@
 # 2010-02-16 based on official Franz server
 
 import sys
+from com.l2jserver import Config
 from com.l2jserver.gameserver.model.quest				import State
 from com.l2jserver.gameserver.model.quest				import QuestState
 from com.l2jserver.gameserver.model.quest.jython	import QuestJython as JQuest
@@ -26,7 +27,7 @@ class Quest (JQuest) :
 		self.questItemIds = [SOUL_CORE,RAGNA_ORCS_AMULET]
 
 	def onExchangeRequest (self,event,st,qty) :
-		st.giveItems(int(event),1)
+		st.rewardItems(int(event),1)
 		st.takeItems(RAGNA_ORCS_AMULET,qty)
 		st.playSound("ItemSound.quest_finish")
 		return "32655-13ok.htm"
@@ -121,9 +122,14 @@ class Quest (JQuest) :
 			if rand == 1 :
 				st.giveItems(SOUL_CORE,1)
 				st.playSound("ItemSound.quest_itemget")
-			elif rand < DROP_CHANCE :
-				st.giveItems(RAGNA_ORCS_AMULET,1)
-				st.playSound("ItemSound.quest_itemget")
+			else :
+				chance = DROP_CHANCE*Config.RATE_QUEST_DROP
+				numItems, chance = divmod(chance,100)
+				if rand < chance : 
+					numItems += 1
+				if numItems :
+					st.giveItems(RAGNA_ORCS_AMULET,int(numItems))
+					st.playSound("ItemSound.quest_itemget")
 		return
 
 QUEST		= Quest(311,qn,"Expulsion of Evil Spirits")

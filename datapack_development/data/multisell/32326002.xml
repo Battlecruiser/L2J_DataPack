@@ -1,34 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Elemental stones exchange -->
-<list>
-	<!-- Fire stone -->
+<list xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance" ns0:noNamespaceSchemaLocation="multisell.xsd">
 	<item id="1">
-		<ingredient id="9547" count="1" />
-		<production id="9546" count="1" />
+		<!-- Water Stone -->
+		<ingredient count="1" id="9547" />
+		<!-- Fire Stone -->
+		<production count="1" id="9546" />
 	</item>
-	<!-- Water stone -->
 	<item id="2">
-		<ingredient id="9546" count="1" />
-		<production id="9547" count="1" />
+		<!-- Fire Stone -->
+		<ingredient count="1" id="9546" />
+		<!-- Water Stone -->
+		<production count="1" id="9547" />
 	</item>
-	<!-- Earth stone -->
 	<item id="3">
-		<ingredient id="9549" count="1" />
-		<production id="9548" count="1" />
+		<!-- Wind Stone -->
+		<ingredient count="1" id="9549" />
+		<!-- Earth Stone -->
+		<production count="1" id="9548" />
 	</item>
-	<!-- Wind stone -->
 	<item id="4">
-		<ingredient id="9548" count="1" />
-		<production id="9549" count="1" />
+		<!-- Earth Stone -->
+		<ingredient count="1" id="9548" />
+		<!-- Wind Stone -->
+		<production count="1" id="9549" />
 	</item>
-	<!-- Divine stone -->
 	<item id="5">
-		<ingredient id="9550" count="1" />
-		<production id="9551" count="1" />
+		<!-- Dark Stone -->
+		<ingredient count="1" id="9550" />
+		<!-- Divine Stone -->
+		<production count="1" id="9551" />
 	</item>
-	<!-- Dark stone -->
 	<item id="6">
-		<ingredient id="9551" count="1" />
-		<production id="9550" count="1" />
+		<!-- Divine Stone -->
+		<ingredient count="1" id="9551" />
+		<!-- Dark Stone -->
+		<production count="1" id="9550" />
 	</item>
 </list>

@@ -1,1 +1,0 @@
-alter table custom_armor add `enchant4_skill` varchar(8) NOT NULL default '0-0' after tradeable;

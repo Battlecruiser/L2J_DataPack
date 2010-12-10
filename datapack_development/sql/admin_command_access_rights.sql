@@ -4,10 +4,11 @@
 CREATE TABLE IF NOT EXISTS `admin_command_access_rights` (
   `adminCommand` varchar(255) NOT NULL default 'admin_',
   `accessLevels` varchar(255) NOT NULL,
+  `confirmDlg` enum('true','false') NOT NULL DEFAULT 'false',
   PRIMARY KEY (`adminCommand`)
 );
 
-INSERT IGNORE INTO `admin_command_access_rights` VALUES
+INSERT IGNORE INTO `admin_command_access_rights` (`adminCommand`,`accessLevels`) VALUES
 -- ADMIN
 ('admin_admin','1'),
 ('admin_admin1','1'),
@@ -32,6 +33,10 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_endolympiad','1'),
 ('admin_setconfig','1'),
 ('admin_config_server','1'),
+
+-- ADMIN CLAN
+('admin_clan_info','1'),
+('admin_clan_changeleader','127'),
 
 -- ANNOUNCEMENTS
 ('admin_list_announcements','1'),
@@ -256,6 +261,14 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_event_control_chatban','1'),
 ('admin_event_control_finish','1'),
 
+-- EVENTS
+('admin_event_menu','1'),
+('admin_event_start','1'),
+('admin_event_stop','1'),
+('admin_event_start_menu','1'),
+('admin_event_stop_menu','1'),
+('admin_event_bypass','1'),
+
 -- EX & SP
 ('admin_add_exp_sp_to_character','1'),
 ('admin_add_exp_sp','1'),
@@ -346,7 +359,6 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 -- MAMMON
 ('admin_mammon_find','1'),
 ('admin_mammon_respawn','1'),
-('admin_list_spawns','1'),
 ('admin_msg','1'),
 
 -- MANOR
@@ -506,6 +518,9 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_teleport_reload','1'),
 ('admin_spawnnight','1'),
 ('admin_spawnday','1'),
+('admin_instance_spawns','1'),
+('admin_list_spawns','1'),
+('admin_list_positions','1'),
 
 -- SUMMON
 ('admin_summon','1'),
@@ -577,6 +592,9 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 -- ZONE
 ('admin_zone_check','1'),
 ('admin_zone_reload','1'),
+('admin_zone_reload','1'),
+('admin_zone_visual','1'),
+('admin_zone_visual_clear','1'),
 
 -- voice commands
 ('banchat','7'),

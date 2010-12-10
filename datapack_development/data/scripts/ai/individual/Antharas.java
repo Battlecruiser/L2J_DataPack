@@ -764,21 +764,15 @@ public class Antharas extends L2AttackableAIScript
 			if (_type == 0)
 			{
 				spawnCube();
-				_cubeSpawnTask.cancel(false);
-				_cubeSpawnTask = null;
 				_cubeSpawnTask = ThreadPoolManager.getInstance().scheduleGeneral(new CubeSpawn(1), 1800000);
 			}
 			else
-			{
 				setUnspawn();
-				_cubeSpawnTask.cancel(false);
-				_cubeSpawnTask = null;
-			}
 		}
 	}
 	
 	// UnLock Antharas.
-	private class UnlockAntharas implements Runnable
+	private static class UnlockAntharas implements Runnable
 	{
 		private int _bossId;
 		
@@ -820,7 +814,7 @@ public class Antharas extends L2AttackableAIScript
 	}
 	
 	// Move at random on after Antharas appears.
-	private class MoveAtRandom implements Runnable
+	private static class MoveAtRandom implements Runnable
 	{
 		private L2Npc _npc;
 		private L2CharPosition _pos;

@@ -551,3 +551,9 @@ INSERT INTO `minions` VALUES
 -- Nornil's Garden
 (25528, 25529, 2, 2),
 (25528, 25530, 2, 4);
+
+-- Larva and Queen Ant
+INSERT INTO `minions` VALUES
+(29001, 29003, 5, 5),
+(29001, 29005, 7, 7),
+(29002, 29003, 2, 2);

@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<instance name="Pailaka (Devil's Isle)">
+<instance name="Pailaka (Devil's Isle)" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="instance.xsd">
 	<activityTime val="60" />
-	<emptyDestroyTime val="3000" />
 	<allowSummon val="false" />
+	<emptyDestroyTime val="3000" />
 	<spawnPoint spawnX="85039" spawnY="147543" spawnZ="-3400" />
+	<doorlist>
+		<door doorId="22110100" />
+		<door doorId="22110101" />
+		<door doorId="22110102" />
+		<door doorId="22110103" />
+		<door doorId="22110104" />
+		<door doorId="22110105" />
+	</doorlist>
 	<spawnlist>
 		<!-- Devil's Isle Supporter -->
 		<spawn npcId="32501" x="76958" y="-218983" z="-3752" heading="32768" respawn="0" />
@@ -202,12 +210,4 @@
 		<spawn npcId="18627" x="86115" y="-216700" z="-2464" heading="0" respawn="0" />
 		<spawn npcId="18627" x="86259" y="-216616" z="-2464" heading="56967" respawn="0" />
 	</spawnlist>
-	<doorlist>
-		<door doorId="22110100" />
-		<door doorId="22110101" />
-		<door doorId="22110102" />
-		<door doorId="22110103" />
-		<door doorId="22110104" />
-		<door doorId="22110105" />
-	</doorlist>
 </instance>

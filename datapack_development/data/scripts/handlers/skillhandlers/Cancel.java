@@ -14,6 +14,7 @@
  */
 package handlers.skillhandlers;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Effect;
 import com.l2jserver.gameserver.model.L2ItemInstance;
@@ -25,6 +26,7 @@ import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.skills.Formulas;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
 import com.l2jserver.util.Rnd;
+import com.l2jserver.util.StringUtil;
 
 /**
  * 
@@ -104,10 +106,43 @@ public class Cancel implements ISkillHandler
 			
 			int lastCanceledSkillId = 0;
 			int count = skill.getMaxNegatedEffects();
-			double baseRate = skill.getPower();
-			baseRate += Formulas.calcSkillProficiency(skill, activeChar, target);
-			baseRate += Formulas.calcSkillVulnerability(activeChar, target, skill);
+			double rate = skill.getPower();
+			final double vulnModifier = Formulas.calcSkillTypeVulnerability(0, target, skill.getSkillType());
+			final double profModifier = Formulas.calcSkillTypeProficiency(0, activeChar, target, skill.getSkillType());
+			double res = vulnModifier + profModifier;
+			double resMod = 1;
+			if (res != 0)
+			{
+				if (res < 0)
+				{
+					resMod = 1 - 0.075 * res;
+					resMod = 1 / resMod;
+				}
+				else
+					resMod = 1 + 0.02 * res;
+				
+				rate *= resMod;
+			}
 			
+			if (activeChar.isDebug())
+			{
+				final StringBuilder stat = new StringBuilder(100);
+				StringUtil.append(stat,
+						skill.getName(),
+						" power:", String.valueOf((int)skill.getPower()),
+						" lvl:", String.valueOf(cancelLvl),
+						" res:", String.format("%1.2f", resMod), "(",
+						String.format("%1.2f", profModifier), "/",
+						String.format("%1.2f", vulnModifier),
+						") total:", String.valueOf(rate)
+				);
+				final String result = stat.toString();
+				if (activeChar.isDebug())
+					activeChar.sendDebugMessage(result);
+				if (Config.DEVELOPER)
+					_log.info(result);
+			}
+
 			final L2Effect[] effects = target.getAllEffects();
 			for (int i = effects.length; --i >= 0;)
 			{
@@ -149,7 +184,7 @@ public class Cancel implements ISkillHandler
 					continue;
 				}
 				
-				if (!calcCancelSuccess(effect, cancelLvl, (int)baseRate, minRate, maxRate))
+				if (!calcCancelSuccess(effect, cancelLvl, (int)rate, minRate, maxRate))
 					continue;
 				
 				lastCanceledSkillId = effect.getSkill().getId();
@@ -179,7 +214,7 @@ public class Cancel implements ISkillHandler
 						continue;
 					}
 					
-					if (!calcCancelSuccess(effect, cancelLvl, (int)baseRate, minRate, maxRate))
+					if (!calcCancelSuccess(effect, cancelLvl, (int)rate, minRate, maxRate))
 						continue;
 					
 					lastCanceledSkillId = effect.getSkill().getId();
@@ -211,7 +246,7 @@ public class Cancel implements ISkillHandler
 	private boolean calcCancelSuccess(L2Effect effect, int cancelLvl, int baseRate, int minRate, int maxRate)
 	{
 		int rate = 2 * (cancelLvl - effect.getSkill().getMagicLevel());
-		rate += (effect.getPeriod() - effect.getTime()) / 1200;
+		rate += effect.getPeriod()/120;
 		rate += baseRate;
 		
 		if (rate < minRate)

@@ -92,7 +92,7 @@ public class Kamaloka extends Quest
 	 * CAUTION: array must be sorted in ascension order !
 	 */
 	private static final int[] BUFFS_WHITELIST =
-	{ 5627, 5628, 5629, 5630, 5631, 5632, 5633, 5634, 5635, 5636, 5637 };
+	{ 5627, 5628, 5629, 5630, 5631, 5632, 5633, 5634, 5635, 5636, 5637, 5950 };
 	
 	/*
 	 * Teleport points into instances

@@ -112,27 +112,27 @@ public class Core extends L2AttackableAIScript
 		GrandBossManager.getInstance().addBoss(npc);
 		npc.broadcastPacket(new PlaySound(1, "BS01_A", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 		//Spawn minions
-		L2Npc mob;
+		L2Attackable mob;
 		for (int i = 0; i < 5; i++)
 		{
 			int x = 16800 + i * 360;
-			mob = addSpawn(DEATH_KNIGHT, x, 110000, npc.getZ(), 280 + Rnd.get(40), false, 0);
+			mob = (L2Attackable)addSpawn(DEATH_KNIGHT, x, 110000, npc.getZ(), 280 + Rnd.get(40), false, 0);
 			mob.setIsRaidMinion(true);
-			Minions.add((L2Attackable) mob);
-			mob = addSpawn(DEATH_KNIGHT, x, 109000, npc.getZ(), 280 + Rnd.get(40), false, 0);
+			Minions.add(mob);
+			mob = (L2Attackable)addSpawn(DEATH_KNIGHT, x, 109000, npc.getZ(), 280 + Rnd.get(40), false, 0);
 			mob.setIsRaidMinion(true);
-			Minions.add((L2Attackable) mob);
+			Minions.add(mob);
 			int x2 = 16800 + i * 600;
-			mob = addSpawn(DOOM_WRAITH, x2, 109300, npc.getZ(), 280 + Rnd.get(40), false, 0);
+			mob = (L2Attackable)addSpawn(DOOM_WRAITH, x2, 109300, npc.getZ(), 280 + Rnd.get(40), false, 0);
 			mob.setIsRaidMinion(true);
-			Minions.add((L2Attackable) mob);
+			Minions.add(mob);
 		}
 		for (int i = 0; i < 4; i++)
 		{
 			int x = 16800 + i * 450;
-			mob = addSpawn(SUSCEPTOR, x, 110300, npc.getZ(), 280 + Rnd.get(40), false, 0);
+			mob = (L2Attackable)addSpawn(SUSCEPTOR, x, 110300, npc.getZ(), 280 + Rnd.get(40), false, 0);
 			mob.setIsRaidMinion(true);
-			Minions.add((L2Attackable) mob);
+			Minions.add(mob);
 		}
 	}
 	
@@ -147,9 +147,9 @@ public class Core extends L2AttackableAIScript
 		}
 		else if (event.equalsIgnoreCase("spawn_minion"))
 		{
-			L2Npc mob = addSpawn(npc.getNpcId(), npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
+			L2Attackable mob = (L2Attackable)addSpawn(npc.getNpcId(), npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 			mob.setIsRaidMinion(true);
-			Minions.add((L2Attackable) mob);
+			Minions.add(mob);
 		}
 		else if (event.equalsIgnoreCase("despawn_minions"))
 		{

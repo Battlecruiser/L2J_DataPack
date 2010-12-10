@@ -134,6 +134,7 @@ public class AdminMenu implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
+				_log.log(Level.WARNING, "", e);
 			}
 		}
 		else if (command.startsWith("admin_goto_char_menu"))

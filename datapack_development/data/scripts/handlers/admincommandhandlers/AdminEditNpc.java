@@ -49,6 +49,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.templates.StatsSet;
 import com.l2jserver.gameserver.templates.chars.L2NpcTemplate;
 import com.l2jserver.gameserver.templates.item.L2Item;
+import com.l2jserver.gameserver.templates.skills.L2SkillType;
 import com.l2jserver.util.StringUtil;
 
 /**
@@ -1512,7 +1513,10 @@ public class AdminEditNpc implements IAdminCommandHandler
 			replyMSG.append(" ");
 			replyMSG.append(skills.get(skillobj).getId());
 			replyMSG.append("\">");
-			replyMSG.append(skills.get(skillobj).getName());
+			if (skills.get(skillobj).getSkillType() == L2SkillType.NOTDONE)
+				replyMSG.append("<font color=\"777777\">"+skills.get(skillobj).getName()+"</font>");
+			else
+				replyMSG.append(skills.get(skillobj).getName());
 			replyMSG.append(" [");
 			replyMSG.append(skills.get(skillobj).getId());
 			replyMSG.append("-");

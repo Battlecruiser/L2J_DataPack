@@ -121,13 +121,6 @@ public class AdminElement implements IAdminCommandHandler
 		{
 			itemInstance = parmorInstance;
 		}
-		else
-		{
-			// for bows and double handed weapons
-			parmorInstance = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LRHAND);
-			if (parmorInstance != null && parmorInstance.getLocationSlot() == Inventory.PAPERDOLL_LRHAND)
-				itemInstance = parmorInstance;
-		}
 		
 		if (itemInstance != null)
 		{
@@ -141,12 +134,12 @@ public class AdminElement implements IAdminCommandHandler
 			}
 			
 			// set enchant value
-			player.getInventory().unEquipItemInSlotAndRecord(armorType);
+			player.getInventory().unEquipItemInSlot(armorType);
 			if (type == -1)
 				itemInstance.clearElementAttr(type);
 			else
 				itemInstance.setElementAttr(type, value);
-			player.getInventory().equipItemAndRecord(itemInstance);
+			player.getInventory().equipItem(itemInstance);
 			
 			if (itemInstance.getElementals() == null)
 				current = "None";

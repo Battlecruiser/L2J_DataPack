@@ -381,7 +381,14 @@ public class Valakas extends L2AttackableAIScript
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
-	
+
+	@Override
+	public String onSpawn(L2Npc npc)
+	{
+		npc.disableCoreAI(true);
+		return super.onSpawn(npc);
+	}
+
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet, L2Skill skill)
 	{

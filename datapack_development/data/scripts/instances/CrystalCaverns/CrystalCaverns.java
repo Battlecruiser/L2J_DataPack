@@ -62,7 +62,7 @@ import com.l2jserver.util.Rnd;
 public class CrystalCaverns extends Quest
 {
 	
-	private class CrystalGolem
+	private static class CrystalGolem
 	{
 		public         L2ItemInstance foodItem = null;
 		public boolean isAtDestination         = false;
@@ -313,7 +313,7 @@ public class CrystalCaverns extends Quest
 	private static final int DRAGONSCALETIME = 3000;
 	private static final int DRAGONCLAWTIME = 3000;
 	
-	private class teleCoord {int instanceId; int x; int y; int z;}
+	private static class teleCoord {int instanceId; int x; int y; int z;}
 	
 	protected void openDoor(int doorId,int instanceId)
 	{
@@ -901,8 +901,7 @@ public class CrystalCaverns extends Quest
 							|| skill.getTargetType() == SkillTargetType.TARGET_BEHIND_AREA
 							|| skill.getTargetType() == SkillTargetType.TARGET_AURA
 							|| skill.getTargetType() == SkillTargetType.TARGET_FRONT_AURA
-							|| skill.getTargetType() == SkillTargetType.TARGET_BEHIND_AURA
-							|| skill.getTargetType() == SkillTargetType.TARGET_MULTIFACE))
+							|| skill.getTargetType() == SkillTargetType.TARGET_BEHIND_AURA))
 						notAOE = false;
 					if (notAOE)
 					{
