@@ -221,7 +221,7 @@ public class NornilsGarden extends Quest
 		if (inst instanceof NornilsWorld)
 		{
 			NornilsWorld world = ((NornilsWorld) inst);
-			world.allowed.remove(player);
+			world.allowed.remove(Integer.valueOf(player.getObjectId()));
 			player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			player.setInstanceId(0);
 			player.teleToLocation(EXIT_PPL[0], EXIT_PPL[1], EXIT_PPL[2], true);

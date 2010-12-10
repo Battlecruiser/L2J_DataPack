@@ -74,7 +74,10 @@ public class AdminSpawn implements IAdminCommandHandler
 		"admin_spawnday",
 		"admin_instance_spawns",
 		"admin_list_spawns",
-		"admin_list_positions"
+		"admin_list_positions",
+		"admin_spawn_debug_menu",
+		"admin_spawn_debug_print",
+		"admin_spawn_debug_print_menu"
 	};
 	public static Logger _log = Logger.getLogger(AdminSpawn.class.getName());
 	
@@ -83,6 +86,31 @@ public class AdminSpawn implements IAdminCommandHandler
 		if (command.equals("admin_show_spawns"))
 		{
 			AdminHelpPage.showHelpPage(activeChar, "spawns.htm");
+		}
+		else if (command.equalsIgnoreCase("admin_spawn_debug_menu"))
+		{
+			AdminHelpPage.showHelpPage(activeChar, "spawns_debug.htm");
+		}
+		else if (command.startsWith("admin_spawn_debug_print"))
+		{
+			StringTokenizer st = new StringTokenizer(command, " ");
+			L2Object target = activeChar.getTarget();
+			if(target instanceof L2Npc)
+			{
+				try
+				{
+					st.nextToken();
+					int type = Integer.parseInt(st.nextToken());
+					printSpawn((L2Npc) target, type);
+					if(command.contains("_menu"))
+						AdminHelpPage.showHelpPage(activeChar, "spawns_debug.htm");	
+				}
+				catch (Exception e)
+				{
+				}
+			}
+			else
+				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 		}
 		else if (command.startsWith("admin_spawn_index"))
 		{
@@ -277,6 +305,28 @@ public class AdminSpawn implements IAdminCommandHandler
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;
+	}
+	
+	private void printSpawn(L2Npc target, int type)
+	{
+		int i = target.getNpcId();
+		int x = target.getSpawn().getLocx();
+		int y = target.getSpawn().getLocy();
+		int z = target.getSpawn().getLocz();
+		int h = target.getSpawn().getHeading();
+		switch(type)
+		{
+			default:
+			case 0:
+				_log.info("('',1,"+i+","+x+","+y+","+z+",0,0,"+h+",60,0,0),");
+			break;
+			case 1:
+				_log.info("<spawn npcId=\""+i+"\" x=\""+x+"\" y=\""+y+"\" z=\""+z+"\" heading=\""+h+"\" respawn=\"0\" />");
+			break;
+			case 2:
+				_log.info("{ "+i+", "+x+", "+y+", "+z+", "+h+" },");
+			break;
+		}
 	}
 	
 	private void spawnMonster(L2PcInstance activeChar, String monsterId, int respawnTime, int mobCount, boolean permanent)
