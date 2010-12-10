@@ -1,11 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?> 
-<instance name="Nornils Garden"> 
-	<activityTime val="60"/>
-	<emptyDestroyTime val="3000" />
+<?xml version="1.0" encoding="UTF-8"?>
+<instance name="Nornils Garden" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="instance.xsd">
+	<activityTime val="60" />
 	<allowSummon val="false" />
-	<spawnPoint spawnX="-84757" spawnY="60009" spawnZ="-2581"/>
+	<emptyDestroyTime val="3000" />
+	<spawnPoint spawnX="-84757" spawnY="60009" spawnZ="-2581" />
+	<doorlist>
+		<door doorId="16200001" />
+		<door doorId="16200002" />
+		<door doorId="16200003" />
+		<door doorId="16200004" />
+		<door doorId="16200005" />
+		<door doorId="16200006" />
+		<door doorId="16200007" />
+		<door doorId="16200008" />
+		<door doorId="16200009" />
+		<door doorId="16200010" />
+		<door doorId="16200011" />
+		<door doorId="16200012" />
+		<door doorId="16200013" />
+		<door doorId="16200014" />
+		<door doorId="16200015" />
+		<door doorId="16200016" />
+		<door doorId="16200023" />
+		<door doorId="16200024" />
+		<door doorId="16200025" />
+	</doorlist>
 	<spawnlist>
-	    <spawn npcId="32258" x="-120080" y="87176" z="-12592" heading="0" respawn="0" />
+		<spawn npcId="32258" x="-120080" y="87176" z="-12592" heading="0" respawn="0" />
 		<spawn npcId="18358" x="-109248" y="76365" z="-12624" heading="0" respawn="0" />
 		<spawn npcId="18352" x="-109708" y="78521" z="-12720" heading="0" respawn="0" />
 		<spawn npcId="18353" x="-111039" y="75296" z="-12720" heading="0" respawn="0" />
@@ -218,25 +239,4 @@
 		<spawn npcId="32261" x="-115030" y="87097" z="-12776" heading="0" respawn="0" />
 		<spawn npcId="32262" x="-116926" y="87097" z="-12680" heading="0" respawn="0" />
 	</spawnlist>
-	<doorlist>
-		<door doorId="16200001"/>
-		<door doorId="16200002"/>
-		<door doorId="16200003"/>
-		<door doorId="16200004"/>
-		<door doorId="16200005"/>
-		<door doorId="16200006"/>
-		<door doorId="16200007"/>
-		<door doorId="16200008"/>
-		<door doorId="16200009"/>
-		<door doorId="16200010"/>
-		<door doorId="16200011"/>
-		<door doorId="16200012"/>
-		<door doorId="16200013"/>
-		<door doorId="16200014"/>
-		<door doorId="16200015"/>
-		<door doorId="16200016"/>
-		<door doorId="16200023"/>
-		<door doorId="16200024"/>
-		<door doorId="16200025"/>
-	</doorlist>
 </instance>
