@@ -521,6 +521,9 @@ INSERT IGNORE INTO `admin_command_access_rights` (`adminCommand`,`accessLevels`)
 ('admin_instance_spawns','1'),
 ('admin_list_spawns','1'),
 ('admin_list_positions','1'),
+('admin_spawn_debug_menu','1'),
+('admin_spawn_debug_print','1'),
+('admin_spawn_debug_print_menu','1'),
 
 -- SUMMON
 ('admin_summon','1'),
@@ -570,14 +573,6 @@ INSERT IGNORE INTO `admin_command_access_rights` (`adminCommand`,`accessLevels`)
 ('admin_tvt_add','1'),
 ('admin_tvt_remove','1'),
 ('admin_tvt_advance','1'),
-
--- Mod Events
-('admin_event_menu','1'),
-('admin_event_start','1'),
-('admin_event_start_menu','1'),
-('admin_event_stop','1'),
-('admin_event_stop_menu','1'),
-('admin_event_bypass','1'),
 
 -- UNBLOCK IP
 ('admin_unblockip','1'),
