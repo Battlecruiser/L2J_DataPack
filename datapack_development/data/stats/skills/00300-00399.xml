@@ -808,10 +808,15 @@
 		</for>
 	</skill>
 	<skill id="328" levels="1" name="Wisdom" enchantGroup1="5" enchantGroup2="5" enchantGroup3="5">
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#enchVuln"> 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 </table>
+		<set name="magicLvl" val="76" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<sub order="0x40" stat="rootVuln" val="20" />
 			<sub order="0x40" stat="sleepVuln" val="20" />
@@ -834,10 +839,14 @@
 		</enchant3for>
 	</skill>
 	<skill id="329" levels="1" name="Health" enchantGroup1="5" enchantGroup2="5">
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#enchVuln"> 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 </table>
+		<set name="magicLvl" val="76" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<sub order="0x40" stat="bleedVuln" val="20" />
 			<sub order="0x40" stat="poisonVuln" val="20" />
@@ -853,6 +862,7 @@
 	</skill>
 	<skill id="330" levels="1" name="Skill Mastery">
 		<!-- Masters excellence in skills. Low possibility of being able to re-use skills without delay or doubles the duration. Influenced by STR. -->
+		<set name="magicLvl" val="77" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -862,6 +872,7 @@
 	</skill>
 	<skill id="331" levels="1" name="Skill Mastery">
 		<!-- Masters excellence in skills. Low possibility of being able to re-use skills without delay or doubles the duration. Influenced by INT. -->
+		<set name="magicLvl" val="77" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
@@ -871,18 +882,21 @@
 	</skill>
 	<skill id="332" levels="1" name="Extra Inventory">
 		<!-- Increases size of inventory. -->
+		<set name="magicLvl" val="76" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="333" levels="1" name="Extra Sales Slots">
 		<!-- Increases private store sales slots. -->
+		<set name="magicLvl" val="76" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="334" levels="1" name="Focus Skill Mastery">
 		<!-- Skill for Daggers & Archers -->
+		<set name="magicLvl" val="78" />
 		<set name="mpConsume" val="36" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="CONT" />
@@ -894,7 +908,7 @@
 		</for>
 	</skill>
 	<skill id="335" levels="1" name="Fortitude" enchantGroup1="5" enchantGroup2="5">
-		<table name="#enchantMagicLvl"> 76 76 77 78 78 79 80 80 81 82 82 83 84 85 85 </table>
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#enchVuln"> 31 31 31 32 32 32 32 33 33 33 33 34 34 34 35 </table>
 		<set name="magicLvl" val="76" />
 		<set name="target" val="TARGET_SELF" />
@@ -923,7 +937,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="336" levels="1" name="Arcane Wisdom" enchantGroup1="5">
-		<table name="#enchantMagicLvl"> 78 79 79 80 80 81 81 82 82 83 83 84 84 85 85 </table>
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1mpConsume"> 0.7 0.7 0.69 0.69 0.69 0.68 0.68 0.68 0.67 0.67 0.67 0.66 0.66 0.66 0.65 </table>
 		<set name="magicLvl" val="78" />
 		<set name="mpConsume" val="36" />
@@ -946,7 +960,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="337" levels="1" name="Arcane Power" enchantGroup1="5">
-		<table name="#enchantMagicLvl"> 78 79 79 80 80 81 81 82 82 83 83 84 84 85 85 </table>
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1mAtk"> 1.303 1.306 1.31 1.313 1.316 1.32 1.323 1.326 1.33 1.333 1.336 1.34 1.343 1.346 1.35 </table>
 		<set name="magicLvl" val="78" />
 		<set name="mpConsume" val="36" />
@@ -969,7 +983,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="338" levels="1" name="Arcane Agility" enchantGroup1="5" enchantGroup2="5">
-		<table name="#enchantMagicLvl"> 78 79 79 80 80 81 81 82 82 83 83 84 84 85 85 </table>
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1mAtkSpd"> 1.201 1.202 1.204 1.205 1.206 1.208 1.209 1.21 1.212 1.213 1.214 1.216 1.217 1.218 1.22 </table>
 		<table name="#ench2mReuse"> 0.89 0.89 0.89 0.89 0.89 0.89 0.89 0.89 0.89 0.89 0.89 0.89 0.89 0.89 0.88 </table>
 		<set name="magicLvl" val="78" />
@@ -1003,7 +1017,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="339" levels="1" name="Parry Stance" enchantGroup1="5">
-		<table name="#enchantMagicLvl"> 78 79 79 80 80 81 81 82 82 83 83 84 84 85 85 </table>
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#enchDef"> 1.251 1.252 1.254 1.255 1.256 1.258 1.259 1.26 1.262 1.263 1.264 1.266 1.267 1.268 1.27 </table>
 		<set name="magicLvl" val="78" />
 		<set name="mpConsume" val="36" />
@@ -1048,11 +1062,11 @@
 		</for>
 	</skill>
 	<skill id="341" levels="1" name="Touch of Life" enchantGroup1="6" enchantGroup2="6">
-		<table name="#enchantMagicLvl"> 78 79 79 80 80 81 81 82 82 83 83 84 84 85 85 </table>
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1hpConsume"> 1184 1154 1123 1093 1062 1032 1001 971 940 910 879 849 818 788 757 </table>
-		<table name="#ench1hpHeal"> 150 153 156 159 162 165 168 171 174 177 180 183 186 189 192 </table>
-		<table name="#ench2count"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 </table>
+		<table name="#ench2count"> 124 128 132 136 140 144 148 152 156 160 164 168 172 176 180 </table>
 		<set name="element" val="4" /> <!-- Holy -->
+		<set name="elementPower" val="20" />
 		<set name="hpConsume" val="1215" />
 		<set name="power" val="50" />
 		<set name="target" val="TARGET_ONE" />
@@ -1063,7 +1077,7 @@
 		<set name="effectRange" val="400" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="1800" />
-		<set name="aggroPoints" val="811" />
+		<set name="aggroPoints" val="810" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="hpConsume" val="#ench1hpConsume" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -1073,21 +1087,21 @@
 			</not>
 		</cond>
 		<for>
-			<effect count="40" name="HealOverTime" time="3" val="150" stackOrder="1" stackType="touch_of_life">
+			<effect count="120" name="HealOverTime" time="1" val="50" stackOrder="1" stackType="touch_of_life">
 				<sub order="0x40" stat="cancelVuln" val="100" />
 				<sub order="0x40" stat="debuffVuln" val="30" />
 				<mul order="0x30" stat="gainHp" val="1.3" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect count="40" name="HealOverTime" time="3" val="#ench1hpHeal" stackOrder="1" stackType="touch_of_life">
+			<effect count="120" name="HealOverTime" time="1" val="50" stackOrder="1" stackType="touch_of_life">
 				<sub order="0x40" stat="cancelVuln" val="100" />
 				<sub order="0x40" stat="debuffVuln" val="30" />
 				<mul order="0x30" stat="gainHp" val="1.3" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect count="#ench2count" name="HealOverTime" time="3" val="150" stackOrder="1" stackType="touch_of_life">
+			<effect count="#ench2count" name="HealOverTime" time="1" val="50" stackOrder="1" stackType="touch_of_life">
 				<sub order="0x40" stat="cancelVuln" val="100" />
 				<sub order="0x40" stat="debuffVuln" val="30" />
 				<mul order="0x30" stat="gainHp" val="1.3" />
@@ -1095,7 +1109,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="342" levels="1" name="Touch of Death" enchantGroup1="6" enchantGroup2="6">
-		<table name="#enchantMagicLvl"> 78 79 79 80 80 81 81 82 82 83 83 84 84 85 85 </table>
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1hpConsume"> 647 625 603 581 559 537 515 492 470 448 426 404 382 360 338 </table>
 		<table name="#ench2effectPower"> 81 82 82 83 84 84 85 86 86 87 87 88 89 89 90 </table>
 		<set name="castRange" val="40" />
@@ -1134,7 +1148,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="343" levels="1" name="Lethal Shot" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6" enchantGroup5="6" enchantGroup6="6" enchantGroup7="6">
-		<table name="#enchantMagicLvl"> 76 76 77 78 78 79 80 80 81 82 82 83 84 85 85 </table>
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 5779 5809 5838 5867 5897 5926 5956 5985 6015 6044 6073 6103 6132 6162 6191 </table>
 		<table name="#ench2mpConsume"> 148 143 138 133 128 123 118 113 108 103 98 93 88 83 79 </table>
 		<table name="#enchelementPower"> 3 6 10 13 16 20 23 26 30 33 36 40 43 46 50 </table>
@@ -1152,7 +1166,7 @@
 		<set name="overHit" val="true" />
 		<set name="baseCritRate" val="15" />
 		<set name="SSBoost" val="2.0" />
-		<set name="lethal1" val="5" />
+		<set name="lethal1" val="10" />
 		<set name="hitTime" val="4000" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -1174,7 +1188,7 @@
 		<enchant7 name="pvpPower" val="#ench7Duel" />
 	</skill>
 	<skill id="344" levels="1" name="Lethal Blow" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6" enchantGroup5="6" enchantGroup6="6" enchantGroup7="6">
-		<table name="#enchantMagicLvl"> 76 76 77 78 78 79 80 80 81 82 82 83 84 85 85 </table>
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 6502 6535 6568 6601 6634 6667 6700 6733 6766 6799 6833 6866 6899 6932 6965 </table>
 		<table name="#ench2CritRate"> 16 16 16 16 16 16 16 17 17 17 17 17 17 17 18 </table>
 		<table name="#enchelementPower"> 3 6 10 13 16 20 23 26 30 33 36 40 43 46 50 </table>
@@ -1194,7 +1208,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="overHit" val="true" />
 		<set name="condition" val="16" /> <!-- Crit -->
-		<set name="lethal1" val="5" />
+		<set name="lethal1" val="15" />
 		<set name="hitTime" val="1800" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -1254,12 +1268,12 @@
 		<set name="maxCharges" val="7" />
 	</skill>
 	<skill id="347" levels="1" name="Earthquake" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
-		<table name="#enchantMagicLvl"> 78 79 79 80 80 81 81 82 82 83 83 84 84 85 85 </table>
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 5201 5228 5254 5281 5307 5334 5360 5387 5413 5440 5466 5693 5519 5546 5572 </table>
 		<table name="#ench2hpConsume"> 328 317 306 294 283 272 260 249 238 227 215 204 193 181 170 </table>
 		<table name="#ench2mpConsume"> 75 72 70 67 65 62 60 57 54 52 49 47 44 42 39 </table>
 		<table name="#ench3elementPower"> 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 </table>
-		<set name="baseCritRate" val="15" />
+		<set name="baseCritRate" val="20" />
 		<set name="hpConsume" val="340" />
 		<set name="mpConsume" val="78" />
 		<set name="weaponsAllowed" val="Pole" /> <!-- Pole -->
@@ -1290,7 +1304,7 @@
 		</for>
 	</skill>
 	<skill id="348" levels="1" name="Spoil Crush">
-		<set name="baseCritRate" val="15" />
+		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1700" />
@@ -1307,14 +1321,14 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="weaponsAllowed" val="Blunt, Big Blunt" /> <!-- Blunt/Big Blunt -->
 		<for>
-			<effect name="Spoil" val="0">
-				<mul order="0x30" stat="pAtkSpd" val="0.95" />
-			</effect>
+			<effect name="Spoil" val="0" />
 		</for>
 	</skill>
 	<skill id="349" levels="1" name="Song of Renewal" enchantGroup1="5" enchantGroup2="5">
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Time"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
 		<table name="#ench2mpConsume"> 58 56 54 52 50 48 46 44 42 40 38 36 34 32 30 </table>
+		<set name="magicLvl" val="77" />
 		<set name="mpConsume" val="60" />
 		<set name="nextDanceCost" val="30" />
 		<set name="target" val="TARGET_PARTY" />
@@ -1325,6 +1339,8 @@
 		<set name="isDance" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="666" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<for>
 			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="song_of_renewal">
@@ -1386,7 +1402,7 @@
 		</for>
 	</skill>
 	<skill id="352" levels="1" name="Shield Bash" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6" enchantGroup5="6">
-		<table name="#enchantMagicLvl"> 77 78 78 79 79 80 80 81 81 82 82 83 84 85 85 </table>
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 81 82 82 83 84 84 85 86 86 87 87 88 89 89 90 </table>
 		<table name="#ench-Res"> 7 10 13 15 18 21 23 26 29 31 34 37 39 42 45 </table>
 		<set name="magicLvl" val="77" />
@@ -1440,7 +1456,7 @@
 		</enchant5for>
 	</skill>
 	<skill id="353" levels="1" name="Shield Slam" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
-		<table name="#enchantMagicLvl"> 77 78 78 79 79 80 80 81 81 82 82 83 84 85 85 </table>
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 42 44 46 48 50 52 54 56 58 60 62 64 66 68 70 </table>
 		<table name="#ench-Res"> 7 10 13 15 18 21 23 26 29 31 34 37 39 42 45 </table>
 		<set name="magicLvl" val="77" />
@@ -1480,7 +1496,7 @@
 		</enchant3for>
 	</skill>
 	<skill id="354" levels="1" name="Hamstring Shot" enchantGroup1="6" enchantGroup2="6">
-		<table name="#enchantMagicLvl"> 77 78 78 79 79 80 80 81 81 82 82 83 84 85 85 </table>
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 2168 2179 2190 2201 2212 2223 2234 2245 2256 2267 2278 2289 2300 2311 2322 </table>
 		<table name="#ench2effectPower"> 42 44 46 48 50 52 54 56 58 60 62 64 66 68 70 </table>
 		<set name="magicLvl" val="77" />
@@ -1515,7 +1531,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="355" levels="1" name="Focus Death" enchantGroup1="5" enchantGroup2="5">
-		<table name="#enchantMagicLvl"> 78 79 79 80 80 81 81 82 82 83 83 84 84 85 85 </table>
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1blowRate"> 1.606 1.613 1.62 1.626 1.633 1.64 1.646 1.653 1.66 1.666 1.673 1.68 1.686 1.693 1.7 </table>
 		<table name="#ench2cAtk"> 1.91 1.91 1.91 1.92 1.92 1.92 1.92 1.93 1.93 1.93 1.93 1.94 1.94 1.94 1.95 </table>
 		<set name="mpConsume" val="36" />
@@ -1535,16 +1551,10 @@
 				<basemul order="0x30" stat="rCrit" val="-0.3" /> <!-- Decreases critical attack rate by 30% -->
 				<mul order="0x30" stat="blowRate" val="1.6" /> <!-- Increases blow land rate by 60% -->
 				<mul order="0x30" stat="cAtk" val="0.7"> <!-- Decreases frontal critical damage by 30% -->
-					<and>
-						<player front="True" />
-						<using kind="Dagger,Dual Dagger" />
-					</and>
+					<player front="True" />
 				</mul>
 				<mul order="0x30" stat="cAtk" val="1.9"> <!-- Increases rear critical damage by 90% -->
-					<and>
-						<player behind="True" />
-						<using kind="Dagger,Dual Dagger" />
-					</and>
+					<player behind="True" />
 				</mul>
 			</effect>
 		</for>
@@ -1553,16 +1563,10 @@
 				<basemul order="0x30" stat="rCrit" val="-0.3" />
 				<mul order="0x30" stat="blowRate" val="#ench1blowRate" />
 				<mul order="0x30" stat="cAtk" val="0.7">
-					<and>
-						<player front="True" />
-						<using kind="Dagger,Dual Dagger" />
-					</and>
+					<player front="True" />
 				</mul>
 				<mul order="0x30" stat="cAtk" val="1.9">
-					<and>
-						<player behind="True" />
-						<using kind="Dagger,Dual Dagger" />
-					</and>
+					<player behind="True" />
 				</mul>
 			</effect>
 		</enchant1for>
@@ -1571,24 +1575,18 @@
 				<basemul order="0x30" stat="rCrit" val="-0.3" />
 				<mul order="0x30" stat="blowRate" val="1.6" />
 				<mul order="0x30" stat="cAtk" val="0.7">
-					<and>
-						<player front="True" />
-						<using kind="Dagger,Dual Dagger" />
-					</and>
+					<player front="True" />
 				</mul>
 				<mul order="0x30" stat="cAtk" val="#ench2cAtk">
-					<and>
-						<player behind="True" />
-						<using kind="Dagger,Dual Dagger" />
-					</and>
+					<player behind="True" />
 				</mul>
 			</effect>
 		</enchant2for>
 	</skill>
 	<skill id="356" levels="1" name="Focus Chance" enchantGroup1="5" enchantGroup2="5">
-		<table name="#enchantMagicLvl"> 78 79 79 80 80 81 81 82 82 83 83 84 84 85 85 </table>
-		<table name="#ench1blowRate"> 1.603 1.606 1.609 1.613 1.616 1.619 1.623 1.626 1.629 1.633 1.636 1.639 1.642 1.646 1.649 </table>
-		<table name="#ench2blowRate"> 1.303 1.306 1.31 1.313 1.316 1.32 1.323 1.326 1.33 1.333 1.336 1.34 1.343 1.346 1.35 </table>
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<table name="#ench1rCrit"> 0.903 0.906 0.909 0.913 0.916 0.919 0.923 0.926 0.929 0.933 0.936 0.939 0.942 0.946 0.949 </table>
+		<table name="#ench2rCrit"> 0.303 0.306 0.31 0.313 0.316 0.32 0.323 0.326 0.33 0.333 0.336 0.34 0.343 0.346 0.35 </table>
 		<set name="mpConsume" val="36" />
 		<set name="effectPoint" val="669" />
 		<set name="magicLvl" val="78" />
@@ -1604,111 +1602,54 @@
 		<for>
 			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="focus_dagger">
 				<basemul order="0x30" stat="rCrit" val="-0.3"> <!-- Decreases frontal critical attack rate by 30% -->
-					<and>
-						<player front="True" />
-						<using kind="Dagger,Dual Dagger" />
-					</and>
-				</basemul>
-				<mul order="0x30" stat="blowRate" val="0.7"> <!-- Decreases frontal blow land rate by 30% -->
 					<player front="True" />
-				</mul>
+				</basemul>
 				<basemul order="0x30" stat="rCrit" val="0.3"> <!-- Increase side critical attack rate by 30% -->
 					<and>
 						<player front="False" />
 						<player behind="False" />
-						<using kind="Dagger,Dual Dagger" />
 					</and>
 				</basemul>
-				<mul order="0x30" stat="blowRate" val="1.3"> <!-- Increase side blow land rate by 30% -->
-					<and>
-						<player front="False" />
-						<player behind="False" />
-					</and>
-				</mul>
 				<basemul order="0x30" stat="rCrit" val="0.6"> <!-- Increase rear critical attack rate by 60% -->
-					<and>
-						<player behind="True" />
-						<using kind="Dagger,Dual Dagger" />
-					</and>
-				</basemul>
-				<mul order="0x30" stat="blowRate" val="1.6"> <!-- Increase rear blow land rate by 60% -->
 					<player behind="True" />
-				</mul>
+				</basemul>
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="focus_dagger">
 				<basemul order="0x30" stat="rCrit" val="-0.3"> <!-- Critical Chance from front -30% -->
-					<and>
-						<player front="True" />
-						<using kind="Dagger,Dual Dagger" />
-					</and>
-				</basemul>
-				<mul order="0x30" stat="blowRate" val="0.7"> <!-- Blow land rate from front -30% -->
 					<player front="True" />
-				</mul>
+				</basemul>
 				<basemul order="0x30" stat="rCrit" val="0.3"> <!-- Critical Chance from side +30% -->
 					<and>
 						<player front="False" />
 						<player behind="False" />
-						<using kind="Dagger,Dual Dagger" />
 					</and>
 				</basemul>
-				<mul order="0x30" stat="blowRate" val="1.3"> <!-- Blow land rate from side +30% -->
-					<and>
-						<player front="False" />
-						<player behind="False" />
-					</and>
-				</mul>
-				<basemul order="0x30" stat="rCrit" val="0.6"> <!-- Critical Chance from back +60% -->
-					<and>
-						<player behind="True" />
-						<using kind="Dagger,Dual Dagger" />
-					</and>
-				</basemul>
-				<mul order="0x30" stat="blowRate" val="#ench1blowRate"> <!-- Blow land rate from back + enchant% -->
+				<basemul order="0x30" stat="rCrit" val="#ench1rCrit"> <!-- Critical Chance from back +60% -->
 					<player behind="True" />
-				</mul>
+				</basemul>
 			</effect>
 		</enchant1for>
 		<enchant2for>
 			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="focus_dagger">
 				<basemul order="0x30" stat="rCrit" val="-0.3"> <!-- Critical Chance from front -30% -->
-					<and>
-						<player front="True" />
-						<using kind="Dagger,Dual Dagger" />
-					</and>
-				</basemul>
-				<mul order="0x30" stat="blowRate" val="0.7"> <!-- Blow land rate from front -30% -->
 					<player front="True" />
-				</mul>
-				<basemul order="0x30" stat="rCrit" val="0.3"> <!-- Critical Chance from side +30% -->
+				</basemul>
+				<basemul order="0x30" stat="rCrit" val="#ench2rCrit"> <!-- Critical Chance from side +30% -->
 					<and>
 						<player front="False" />
 						<player behind="False" />
-						<using kind="Dagger,Dual Dagger" />
 					</and>
 				</basemul>
-				<mul order="0x30" stat="blowRate" val="#ench2blowRate"> <!-- Blow land rate from side + enchant % -->
-					<and>
-						<player front="False" />
-						<player behind="False" />
-					</and>
-				</mul>
 				<basemul order="0x30" stat="rCrit" val="0.6"> <!-- Critical Chance from back +60% -->
-					<and>
-						<player behind="True" />
-						<using kind="Dagger,Dual Dagger" />
-					</and>
-				</basemul>
-				<mul order="0x30" stat="blowRate" val="1.6"> <!-- Blow land rate from back +60% -->
 					<player behind="True" />
-				</mul>
+				</basemul>
 			</effect>
 		</enchant2for>
 	</skill>
 	<skill id="357" levels="1" name="Focus Power" enchantGroup1="5" enchantGroup2="5">
-		<table name="#enchantMagicLvl"> 78 79 79 80 80 81 81 82 82 83 83 84 84 85 85 </table>
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1cAtk"> 1.61 1.62 1.62 1.63 1.64 1.64 1.65 1.65 1.66 1.67 1.67 1.68 1.69 1.69 1.7 </table>
 		<table name="#ench2cAtk"> 1.31 1.32 1.32 1.33 1.34 1.34 1.35 1.36 1.36 1.37 1.37 1.38 1.39 1.39 1.4 </table>
 		<set name="mpConsume" val="36" />
@@ -1726,75 +1667,54 @@
 		<for>
 			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="focus_dagger">
 				<mul order="0x30" stat="cAtk" val="0.7"> <!-- Decreases frontal critical attack damage by 30% -->
-					<and>
-						<player front="True" />
-						<using kind="Dagger,Dual Dagger" />
-					</and>
+					<player front="True" />
 				</mul>
 				<mul order="0x30" stat="cAtk" val="1.3"> <!-- Increases side critical attack damage by 30% -->
 					<and>
 						<player front="False" />
 						<player behind="False" />
-						<using kind="Dagger,Dual Dagger" />
 					</and>
 				</mul>
 				<mul order="0x30" stat="cAtk" val="1.6"> <!-- Increases rear critical attack damage by 60% -->
-					<and>
-						<player behind="True" />
-						<using kind="Dagger,Dual Dagger" />
-					</and>
+					<player behind="True" />
 				</mul>
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="focus_dagger">
 				<mul order="0x30" stat="cAtk" val="0.7"> <!-- Critical Damage from front -30% -->
-					<and>
-						<player front="True" />
-						<using kind="Dagger,Dual Dagger" />
-					</and>
+					<player front="True" />
 				</mul>
 				<mul order="0x30" stat="cAtk" val="1.3"> <!-- Critical Damage from side +30% -->
 					<and>
 						<player front="False" />
 						<player behind="False" />
-						<using kind="Dagger,Dual Dagger" />
 					</and>
 				</mul>
 				<mul order="0x30" stat="cAtk" val="#ench1cAtk"> <!-- Critical Damage from back + enchant % -->
-					<and>
-						<player behind="True" />
-						<using kind="Dagger,Dual Dagger" />
-					</and>
+					<player behind="True" />
 				</mul>
 			</effect>
 		</enchant1for>
 		<enchant2for>
 			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="focus_dagger">
 				<mul order="0x30" stat="cAtk" val="0.7"> <!-- Critical Damage from front -30% -->
-					<and>
-						<player front="True" />
-						<using kind="Dagger,Dual Dagger" />
-					</and>
+					<player front="True" />
 				</mul>
 				<mul order="0x30" stat="cAtk" val="#ench2cAtk"> <!-- Critical Damage from side + enchant % -->
 					<and>
 						<player front="False" />
 						<player behind="False" />
-						<using kind="Dagger,Dual Dagger" />
 					</and>
 				</mul>
 				<mul order="0x30" stat="cAtk" val="1.6"> <!-- Critical Damage from back +60% -->
-					<and>
-						<player behind="True" />
-						<using kind="Dagger,Dual Dagger" />
-					</and>
+					<player behind="True" />
 				</mul>
 			</effect>
 		</enchant2for>
 	</skill>
 	<skill id="358" levels="1" name="Bluff" enchantGroup1="6">
-		<table name="#enchantMagicLvl"> 77 78 78 79 79 80 80 81 81 82 82 83 84 85 85 </table>
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 42 44 46 48 50 52 54 56 58 60 62 64 66 68 70 </table>
 		<set name="weaponsAllowed" val="Dagger, Dual Dagger" /> <!-- Dagger/Dual Daggers -->
 		<set name="magicLvl" val="77" />
@@ -1815,13 +1735,15 @@
 		<for>
 			<effect name="Stun" time="9" val="0" stackOrder="1" stackType="stun" effectPower="40" effectType="STUN" />
 			<effect name="Bluff" noicon="1" val="0" />
-			<effect name="RemoveTarget" noicon="1" val="0" />
+			<effect name="RemoveTarget" noicon="1" val="0" effectPower="80" effectType="DEBUFF" />
 		</for>
 	</skill>
 	<skill id="359" levels="1" name="Eye of Hunter" enchantGroup1="5" enchantGroup2="5">
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 1.31 1.32 1.33 1.34 1.35 1.36 1.37 1.38 1.39 1.4 1.41 1.42 1.43 1.44 1.45 </table>
 		<table name="#ench2Power"> 1.31 1.31 1.31 1.32 1.32 1.32 1.33 1.33 1.33 1.34 1.34 1.34 1.35 1.35 1.35 </table>
 		<table name="#ench2Time"> 640 680 720 760 800 840 880 920 960 1000 1040 1080 1120 1160 1200 </table>
+		<set name="magicLvl" val="77" />
 		<set name="mpConsume" val="70" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="3000" />
@@ -1829,6 +1751,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="666" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<effect name="Buff" time="600" val="0" stackOrder="2" stackType="detect_weakness">
 				<mul order="0x30" stat="pAtk-insects" val="1.3" />
@@ -1852,8 +1776,10 @@
 		</enchant2for>
 	</skill>
 	<skill id="360" levels="1" name="Eye of Slayer" enchantGroup1="5" enchantGroup2="5">
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 1.31 1.32 1.33 1.34 1.35 1.36 1.37 1.38 1.39 1.4 1.41 1.42 1.43 1.44 1.45 </table>
 		<table name="#ench2Time"> 640 680 720 760 800 840 880 920 960 1000 1040 1080 1120 1160 1200 </table>
+		<set name="magicLvl" val="77" />
 		<set name="mpConsume" val="71" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="3000" />
@@ -1861,6 +1787,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="669" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<effect name="Buff" time="600" val="0" stackOrder="2" stackType="detect_weakness">
 				<mul order="0x30" stat="pAtk-monsters" val="1.3" />
@@ -1887,12 +1815,12 @@
 		</enchant2for>
 	</skill>
 	<skill id="361" levels="1" name="Shock Blast" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
-		<table name="#enchantMagicLvl"> 77 78 78 79 79 80 80 81 81 82 82 83 84 85 85 </table>
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 2731 2745 2759 2773 2787 2800 2814 2828 2842 2856 2870 2884 2898 2912 2926 </table>
 		<table name="#ench2hpConsume"> 491 476 461 446 430 415 400 385 369 354 339 324 308 293 278 </table>
 		<table name="#ench2mpConsume"> 51 49 48 46 45 43 41 40 38 37 35 33 32 30 29 </table>
 		<table name="#ench3effectPower"> 42 45 48 50 53 56 58 61 64 66 69 72 74 77 80 </table>
-		<set name="baseCritRate" val="15" />
+		<set name="baseCritRate" val="20" />
 		<set name="weaponsAllowed" val="Pole" /> <!-- Pole -->
 		<set name="magicLvl" val="77" />
 		<set name="mpConsume" val="53" />
@@ -1923,23 +1851,23 @@
 				<mul order="0x30" stat="pDef" val="0.7" />
 				<mul order="0x30" stat="mDef" val="0.7" />
 			</effect>
-			<effect name="RemoveTarget" noicon="1" val="0" effectPower="40" effectType="DEBUFF" />
+			<effect name="RemoveTarget" noicon="1" val="0" effectPower="60" effectType="DEBUFF" />
 		</for>
 		<enchant3for>
 			<effect name="Stun" time="8" val="0" effectPower="#ench3effectPower" effectType="STUN" stackOrder="2" stackType="stun">
 				<mul order="0x30" stat="pDef" val="0.7" />
 				<mul order="0x30" stat="mDef" val="0.7" />
 			</effect>
-			<effect name="RemoveTarget" noicon="1" val="0" effectPower="#ench3effectPower" effectType="DEBUFF" />
+			<effect name="RemoveTarget" noicon="1" val="0" effectPower="60" effectType="DEBUFF" />
 		</enchant3for>
 	</skill>
 	<skill id="362" levels="1" name="Armor Crush" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
-		<table name="#enchantMagicLvl"> 77 78 78 79 79 80 80 81 81 82 82 83 84 85 85 </table>
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 3420 3476 3532 3588 3644 3700 3756 3812 3868 3924 3980 4036 4092 4148 4204 </table>
 		<table name="#ench2hpConsume"> 327 317 307 297 287 277 267 256 246 236 226 216 206 196 185 </table>
 		<table name="#ench2mpConsume"> 33 32 31 30 29 28 27 26 25 24 23 22 21 20 19 </table>
 		<table name="#ench3effectPower"> 42 45 48 50 53 56 58 61 64 66 69 72 74 77 80 </table>
-		<set name="baseCritRate" val="15" />
+		<set name="baseCritRate" val="20" />
 		<set name="magicLvl" val="77" />
 		<set name="weaponsAllowed" val="Sword, Blunt, Big Blunt, Big Sword" /> <!-- Sword/Big Sword/Blunt/Big Blunt -->
 		<set name="mpConsume" val="35" />
@@ -1980,8 +1908,10 @@
 		</enchant3for>
 	</skill>
 	<skill id="363" levels="1" name="Song of Meditation" enchantGroup1="5" enchantGroup2="5">
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Time"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
 		<table name="#ench2mpConsume"> 58 56 54 52 50 48 46 44 42 40 38 36 34 32 30 </table>
+		<set name="magicLvl" val="77" />
 		<set name="mpConsume" val="60" />
 		<set name="nextDanceCost" val="30" />
 		<set name="target" val="TARGET_PARTY" />
@@ -1992,6 +1922,8 @@
 		<set name="isDance" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="666" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<for>
 			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="song_of_meditation">
@@ -2007,8 +1939,10 @@
 		</enchant1for>
 	</skill>
 	<skill id="364" levels="1" name="Song of Champion" enchantGroup1="5" enchantGroup2="5">
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Time"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
 		<table name="#ench2mpConsume"> 59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 </table>
+		<set name="magicLvl" val="78" />
 		<set name="mpConsume" val="60" />
 		<set name="nextDanceCost" val="30" />
 		<set name="target" val="TARGET_PARTY" />
@@ -2019,6 +1953,8 @@
 		<set name="isDance" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="669" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<for>
 			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="song_of_champion">
@@ -2036,9 +1972,11 @@
 		</enchant1for>
 	</skill>
 	<skill id="365" levels="1" name="Siren's Dance" enchantGroup1="5" enchantGroup2="5">
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Time"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
 		<table name="#ench2mpConsume"> 58 56 54 52 50 48 46 44 42 40 38 36 34 32 30 </table>
 		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
+		<set name="magicLvl" val="78" />
 		<set name="mpConsume" val="60" />
 		<set name="nextDanceCost" val="30" />
 		<set name="target" val="TARGET_PARTY" />
@@ -2049,6 +1987,8 @@
 		<set name="isDance" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="669" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<for>
 			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="dance_of_siren">
@@ -2062,9 +2002,11 @@
 		</enchant1for>
 	</skill>
 	<skill id="366" levels="1" name="Dance of Shadows" enchantGroup1="5" enchantGroup2="5">
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Time"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
 		<table name="#ench2mpConsume"> 58 56 54 52 50 48 46 44 42 40 38 36 34 32 30 </table>
 		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
+		<set name="magicLvl" val="77" />
 		<set name="mpConsume" val="60" />
 		<set name="nextDanceCost" val="30" />
 		<set name="target" val="TARGET_PARTY" />
@@ -2075,6 +2017,8 @@
 		<set name="isDance" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="666" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<for>
 			<effect name="SilentMove" time="120" abnormal="stealth" val="0" stackOrder="1" stackType="dance_of_shadow">
@@ -2088,7 +2032,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="367" levels="1" name="Dance of Medusa" enchantGroup1="5" enchantGroup2="5">
-		<table name="#enchantMagicLvl"> 77 78 78 79 79 80 80 81 81 82 82 83 84 85 85 </table>
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 42 45 48 50 53 56 58 61 64 66 69 72 74 77 80 </table>
 		<table name="#ench2Power"> 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 </table>
 		<table name="#ench2Time"> 36 42 48 54 60 66 72 78 84 90 96 102 108 114 120 </table>
@@ -2118,7 +2062,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="368" levels="1" name="Vengeance" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
-		<table name="#enchantMagicLvl"> 77 78 78 79 79 80 80 81 81 82 82 83 84 85 85 </table>
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 8454 8770 9087 9403 9720 10036 10353 10669 10985 11302 11618 11935 12251 12568 12884 </table>
 		<table name="#ench2decreasePenalty"> 0.1 0.12 0.13 0.15 0.16 0.17 0.19 0.2 0.21 0.23 0.24 0.26 0.27 0.28 0.3 </table>
 		<table name="#ench3Reuse"> 870000 840000 811000 781000 751000 722000 692000 662000 633000 603000 573000 544000 514000 484000 455000 </table>
@@ -2156,7 +2100,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="369" levels="1" name="Evade Shot" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6" enchantGroup5="6" enchantGroup6="6" enchantGroup7="6" enchantGroup8="6">
-		<table name="#enchantMagicLvl"> 78 79 79 80 80 81 81 82 82 83 83 84 84 85 85 </table>
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 2168 2179 2190 2201 2212 2223 2234 2245 2256 2267 2278 2289 2300 2311 2322 </table>
 		<table name="#ench2rEvas"> 7 7 7 7 8 8 8 8 8 9 9 9 9 9 10 </table>
 		<table name="#ench3MpConsume"> 110 106 102 98 95 91 87 83 80 76 72 68 65 61 57 </table>
@@ -2205,7 +2149,6 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<!-- CLAN SKILLS - temp addition until proper implementation is done - see http://l2p.l2wh.com/passives.html for partial data -->
 	<skill id="370" levels="3" name="Clan Body">
 		<table name="#maxHp"> 1.03 1.05 1.06 </table>
 		<set name="target" val="TARGET_SELF" />
@@ -2500,7 +2443,7 @@
 				<sub order="0x40" stat="debuffVuln" val="100" />
 				<sub order="0x40" stat="rEvas" val="8" />
 				<mul order="0x30" stat="pDef" val="0.75" />
-				<mul order="0x30" stat="mDef" val="0.75" />
+				<sub order="0x40" stat="mDef" val="25" />
 			</effect>
 		</for>
 	</skill>
