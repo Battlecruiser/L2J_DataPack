@@ -1435,9 +1435,16 @@
 		</cond>
 	</skill>
 	<skill id="2490" levels="1" name="Magic Defense Toolkit for beginners">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="2491" levels="1" name="Transform Zaken">
 		<set name="target" val="TARGET_NONE" />
