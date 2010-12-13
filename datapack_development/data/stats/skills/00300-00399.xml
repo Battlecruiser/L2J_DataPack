@@ -1093,13 +1093,6 @@
 				<mul order="0x30" stat="gainHp" val="1.3" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect count="120" name="HealOverTime" time="1" val="50" stackOrder="1" stackType="touch_of_life">
-				<sub order="0x40" stat="cancelVuln" val="100" />
-				<sub order="0x40" stat="debuffVuln" val="30" />
-				<mul order="0x30" stat="gainHp" val="1.3" />
-			</effect>
-		</enchant1for>
 		<enchant2for>
 			<effect count="#ench2count" name="HealOverTime" time="1" val="50" stackOrder="1" stackType="touch_of_life">
 				<sub order="0x40" stat="cancelVuln" val="100" />
