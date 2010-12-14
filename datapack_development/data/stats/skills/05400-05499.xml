@@ -431,31 +431,35 @@
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="5442" levels="4" name="Bite Attack">
-		<!-- TODO: Power & Reuse needs to be verified -->
+		<table name="#magicLvl"> 55 60 65 70 </table>
 		<table name="#mpConsume"> 55 61 66 71 </table>
+		<table name="#power"> 916 1136 1376 1626 </table>
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
 		<set name="coolTime" val="720" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="700" />
+		<set name="power" val="#power" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="5443" levels="4" name="Cry of the Wolf">
+		<table name="#magicLvl"> 55 60 65 70 </table>
 		<table name="#mpConsume"> 55 61 66 71 </table>
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="hitTime" val="1200" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="2" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="8000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillRadius" val="100" />
+		<set name="skillRadius" val="200" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
@@ -465,7 +469,11 @@
 		</for>
 	</skill>
 	<skill id="5444" levels="2" name="Maul">
+		<table name="#magicLvl"> 65 70 </table>
 		<table name="#mpConsume"> 66 71 </table>
+		<table name="#power"> 917 1084 </table>
+		<table name="#val"> 325 335 </table>
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="effectAbnormalLvl" val="3" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
@@ -476,7 +484,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="1" />
+		<set name="power" val="#power" />
 		<set name="reuseDelay" val="11000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
@@ -484,27 +492,28 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect count="7" name="DamOverTime" time="3" val="25" stackOrder="3" stackType="bleeding" abnormal="bleed" effectPower="50" effectType="BLEED" />
+			<effect count="4" name="DamOverTime" time="5" val="#val" stackOrder="3" stackType="bleeding" abnormal="bleed" effectPower="50" effectType="BLEED" />
 		</for>
 	</skill>
 	<skill id="5445" levels="1" name="Awakening">
-		<set name="aggroPoints" val="495" />
+		<set name="magicLvl" val="70" />
+		<set name="aggroPoints" val="303" />
 		<set name="hitTime" val="1500" />
 		<set name="mpConsume" val="71" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="600000" />
 		<set name="skillRadius" val="1000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" time="90" val="0" stackOrder="1" stackType="pinch">
-				<mul order="0x30" stat="mAtk" val="1.16" />
 				<mul order="0x30" stat="pAtk" val="1.08" />
-				<mul order="0x30" stat="mDef" val="0.84" />
-				<mul order="0x30" stat="pDef" val="0.92" />
-				<mul order="0x30" stat="mAtkSpd" val="1.08" />
 				<mul order="0x30" stat="pAtkSpd" val="1.08" />
+				<mul order="0x30" stat="mAtk" val="1.16" />
+				<mul order="0x30" stat="mAtkSpd" val="1.08" />
 				<add order="0x40" stat="runSpd" val="8" />
+				<mul order="0x30" stat="pDef" val="0.92" />
+				<mul order="0x30" stat="mDef" val="0.84" />
 				<sub order="0x40" stat="rEvas" val="4" />
 			</effect>
 		</for>
