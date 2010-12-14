@@ -878,22 +878,47 @@
 		</for>
 	</skill>
 	<skill id="8461" levels="1" name="Heavy Set">
-		<!-- P. Def and MP Recovery Bonus increase when a set item is enchanted. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="magicLvl" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="pDef" val="70">
+				<using kind="Heavy" />
+			</add>
+			<add order="0x40" stat="regMp" val="32">
+				<and>
+					<player resting="true" />
+					<player moving="false" />
+				</and>
+			</add>
+		</for>
 	</skill>
 	<skill id="8462" levels="1" name="Light Set">
-		<!-- M. Def and Evasion increase when a set item is enchanted. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="magicLvl" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="rEvas" val="2">
+				<using kind="Light" />
+			</add>
+			<add order="0x40" stat="mDef" val="39">
+				<using kind="Light" />
+			</add>
+		</for>
 	</skill>
 	<skill id="8463" levels="1" name="Magic Set">
-		<!-- P. Def and weight limit increase when a set item is enchanted. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="magicLvl" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="pDef" val="45">
+				<using kind="Magic" />
+			</add>
+			<mul order="0x30" stat="maxLoad" val="1.3" />
+		</for>
 	</skill>
 	<skill id="8464" levels="1" name="Release the Seal on Agathion - Kid Rudolph">
 		<set name="target" val="TARGET_NONE" />
