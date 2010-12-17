@@ -113,7 +113,7 @@ public class BeastSpiritShot implements IItemHandler
 		}
 		
 		// Pet uses the power of spirit.
-		activeOwner.sendPacket(new SystemMessage(SystemMessageId.PET_USE_THE_POWER_OF_SPIRIT));
+		activeOwner.sendPacket(new SystemMessage(SystemMessageId.PET_USE_SPIRITSHOT));
 		int skillId = 0;
 		switch (itemId)
 		{
