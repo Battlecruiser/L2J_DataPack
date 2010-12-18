@@ -1047,87 +1047,92 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="5092" levels="1" name="Antharas Terror">
+		<!-- Confirmed CT2.5 -->
 		<!-- Antharas Skills -->
-		<set name="magicLvl" val="70" />
-		<set name="lvlDepend" val="1" />
-		<set name="power" val="90" />
-		<set name="target" val="TARGET_AREA" />
-		<set name="skillRadius" val="900" />
+		<set name="castRange" val="600" />
 		<set name="coolTime" val="2700" />
+		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2300" />
 		<set name="isDebuff" val="true" />
-		<set name="skillType" val="FEAR" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="600" />
-		<set name="effectRange" val="1100" />
+		<set name="power" val="90" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
+		<set name="skillRadius" val="400" />
+		<set name="skillType" val="FEAR" />
+		<set name="target" val="TARGET_AREA" />
 		<for>
-			<effect count="15" name="Fear" time="2" val="0" stackOrder="1" stackType="turn_flee" />
+			<effect count="7" name="Fear" time="3" val="0" stackOrder="1" stackType="turn_flee" />
 		</for>
 	</skill>
 	<skill id="5093" levels="1" name="Antharas Meteor">
+		<!-- Confirmed CT2.5 -->
 		<!-- Antharas Skills -->
-		<set name="magicLvl" val="85" />
-		<set name="target" val="TARGET_AREA" />
-		<set name="power" val="1084" />
-		<set name="skillType" val="MDAM" />
-		<set name="reuseDelay" val="6000" />
-		<set name="hitTime" val="8000" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="element" val="3" /> <!-- Earth -->
+		<set name="elementPower" val="180" />
+		<set name="hitTime" val="8000" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="1084" />
+		<set name="reuseDelay" val="6000" />
+		<set name="skillRadius" val="150" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="5094" levels="1" name="Antharas Subordinate Suicide ">
-		<set name="power" val="1000" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="600" />
-		<set name="skillType" val="MDAM" />
-		<set name="magicLvl" val="78" />
+		<!-- Confirmed CT2.5 -->
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="180" />
+		<set name="hitTime" val="100" />
 		<set name="isMagic" val="false" /> <!-- This skill is MDAM but not magic (casting can't be cancelled) -->
 		<set name="isSuicideAttack" val="true" />
-		<set name="element" val="0" /> <!-- Fire -->
-		<set name="elementPower" val="20" />
+		<set name="magicLvl" val="85" />
+		<set name="power" val="473" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="hitTime" val="100" />
+		<set name="skillRadius" val="250" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="5095" levels="1" name="Antharas Subordinate Melee Attack">
-		<set name="magicLvl" val="78" />
-		<set name="mpConsume" val="83" />
-		<set name="power" val="11000" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="hitTime" val="1500" />
-		<set name="element" val="3" /> <!-- Earth -->
-		<set name="elementPower" val="20" />
-		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
+		<set name="effectRange" val="200" />
+		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="83" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="30215" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="PDAM" />
 	</skill>
 	<skill id="5096" levels="1" name="Antharas Subordinate Remote Attack">
-		<set name="magicLvl" val="70" />
-		<set name="mpConsume" val="83" />
-		<set name="power" val="17000" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="hitTime" val="3000" />
-		<set name="element" val="3" /> <!-- Earth -->
-		<set name="elementPower" val="20" />
-		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="3000" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="83" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="88254" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="5097" levels="1" name="Antharas Subordinate Suicide (Narrow Range)">
-		<set name="power" val="1000" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="200" />
-		<set name="skillType" val="MDAM" />
-		<set name="magicLvl" val="78" />
-		<set name="isMagic" val="false" /> <!-- This skill is MDAM but not magic (casting can't be cancelled) -->
-		<set name="isSuicideAttack" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="100" />
+		<set name="isMagic" val="false" /> <!-- This skill is MDAM but not magic (casting can't be cancelled) -->
+		<set name="isSuicideAttack" val="true" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="473" />
+		<set name="skillRadius" val="150" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="5098" levels="2" name="Capture Penalty">
 		<set name="target" val="TARGET_NONE" />
