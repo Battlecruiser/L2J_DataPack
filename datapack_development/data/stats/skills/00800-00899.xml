@@ -302,7 +302,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5674" />
 		<set name="triggeredLevel" val="1" />
-		<set name="activationChance" val="5" />
+		<set name="activationChance" val="10" />
 		<set name="chanceType" val="ON_EVADED_HIT" />
 	</skill>
 	<skill id="820" levels="1" name="Evasion Haste">
@@ -312,11 +312,10 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5675" />
 		<set name="triggeredLevel" val="1" />
-		<set name="activationChance" val="5" />
+		<set name="activationChance" val="10" />
 		<set name="chanceType" val="ON_EVADED_HIT" />
 	</skill>
 	<skill id="821" levels="1" name="Shadow Step">
-		<!-- NOTE: Retail hitTime is 100 but changed to 500 to match retail animation -->
 		<set name="magicLvl" val="72" />
 		<set name="mpConsume" val="50" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -325,10 +324,10 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="reuseDelay" val="75000" />
-		<set name="hitTime" val="500" />
+		<set name="hitTime" val="100" />
 		<set name="coolTime" val="200" />
 		<for>
-			<effect name="RemoveTarget" noicon="1" val="0" />
+			<effect name="RemoveTarget" effectPower="100" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="822" levels="3" name="Repair Golem">
