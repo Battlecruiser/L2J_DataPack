@@ -1547,205 +1547,226 @@
 		<set name="maxNegated" val="-1" />
 	</skill>
 	<skill id="4679" levels="1" name="Valakas">
+		<!-- Confirmed CT2.5 -->
 		<!-- Valakas Skills -->
 		<set name="magicLvl" val="75" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<sub order="0x40" stat="waterRes" val="30" />
-			<add order="0x40" stat="fireRes" val="30" />
 			<sub order="0x40" stat="valakasRes" val="8" />
+			<sub order="0x40" stat="debuffVuln" val="100" />
 		</for>
 	</skill>
 	<skill id="4680" levels="1" name="Valakas Lava Skin">
+		<!-- Confirmed CT2.5 -->
 		<!-- Valakas Skills -->
-		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="3300" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="pd_up_special">
-				<mul order="0x30" stat="pDef" val="900" />
-				<mul order="0x30" stat="mDef" val="900" />
+				<mul order="0x30" stat="pDef" val="10" />
+				<mul order="0x30" stat="mDef" val="10" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="4681" levels="1" name="Valakas Trample">
+		<!-- Confirmed CT2.5 -->
 		<!-- Valakas Skills -->
 		<!-- Valakas Trample Left -->
-		<set name="magicLvl" val="75" />
-		<set name="power" val="23397" />
-		<set name="target" val="TARGET_FRONT_AREA" />
-		<set name="skillScope" val="square;250;160" />
-		<set name="skillRadius" val="250" />
-		<set name="coolTime" val="1500" />
-		<set name="hitTime" val="1000" />
-		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="50" />
-		<set name="effectRange" val="400" />
 		<set name="attribute" val="valakas" />
+		<set name="baseCritRate" val="10" />
+		<set name="castRange" val="50" />
+		<set name="coolTime" val="1500" />
+		<set name="effectRange" val="400" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="180" />
+		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="30416" />
+		<set name="skillRadius" val="250" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
 	<skill id="4682" levels="1" name="Valakas Trample">
+		<!-- Confirmed CT2.5 -->
 		<!-- Valakas Skills -->
 		<!-- Valakas Trample Right -->
-		<set name="magicLvl" val="75" />
-		<set name="power" val="23397" />
-		<set name="target" val="TARGET_FRONT_AREA" />
-		<set name="skillScope" val="square;250;160" />
-		<set name="skillRadius" val="250" />
-		<set name="coolTime" val="1500" />
-		<set name="hitTime" val="1000" />
-		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="50" />
-		<set name="effectRange" val="400" />
 		<set name="attribute" val="valakas" />
+		<set name="baseCritRate" val="10" />
+		<set name="castRange" val="50" />
+		<set name="coolTime" val="1500" />
+		<set name="effectRange" val="400" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="180" />
+		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="30416" />
+		<set name="skillRadius" val="250" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
 	<skill id="4683" levels="1" name="Valakas Dragon Breath">
+		<!-- Confirmed CT2.5 -->
 		<!-- Valakas Skills -->
 		<!-- Valakas Dragon Breath Low -->
-		<set name="magicLvl" val="75" />
-		<set name="power" val="499" />
-		<set name="isDebuff" val="true" />
-		<set name="target" val="TARGET_FRONT_AREA" />
-		<set name="skillScope" val="fan;1200;35" />
-		<set name="skillRadius" val="1200" />
-		<set name="coolTime" val="2000" />
-		<set name="hitTime" val="3000" />
-		<set name="lvlDepend" val="2" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="MDAM" />
-		<set name="element" val="0" /> <!-- Fire -->
-		<set name="elementPower" val="20" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
+		<set name="coolTime" val="2000" />
 		<set name="effectRange" val="1100" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="180" />
+		<set name="hitTime" val="3000" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="2" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="648" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillRadius" val="1200" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<for>
-			<!-- Retail Value C4: 72HP * 3 Sec -->
-			<effect count="3" name="DamOverTime" time="3" val="216" abnormal="flame" effectPower="80" effectType="DOT" stackOrder="1" stackType="dragon_breath" />
+			<!-- 216HP * 5 during 10 seconds -->
+			<effect count="2" name="DamOverTime" time="5" val="1080" abnormal="flame" effectPower="80" effectType="DOT" stackOrder="1" stackType="dragon_breath" />
 		</for>
 	</skill>
 	<skill id="4684" levels="1" name="Valakas Dragon Breath">
+		<!-- Confirmed CT2.5 -->
 		<!-- Valakas Skills -->
 		<!-- Valakas Dragon Breath High -->
-		<set name="magicLvl" val="75" />
-		<set name="power" val="499" />
-		<set name="target" val="TARGET_FRONT_AREA" />
-		<set name="skillScope" val="fan;1700;160" />
+		<set name="castRange" val="900" />
+		<set name="coolTime" val="2000" />
+		<set name="effectRange" val="1400" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="180" />
+		<set name="hitTime" val="3000" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="2" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="648" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillRadius" val="1700" />
-		<set name="isDebuff" val="true" />
-		<set name="coolTime" val="2000" />
-		<set name="hitTime" val="3000" />
-		<set name="lvlDepend" val="2" />
 		<set name="skillType" val="MDAM" />
-		<set name="element" val="0" /> <!-- Fire -->
-		<set name="elementPower" val="20" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="900" />
-		<set name="effectRange" val="1400" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<for>
-			<!-- Retail Value C4: 72HP * 3 Sec -->
-			<effect count="3" name="DamOverTime" time="3" val="216" abnormal="flame" effectPower="80" effectType="DOT" stackOrder="1" stackType="dragon_breath" />
+			<!-- 216HP * 5 during 10 seconds -->
+			<effect count="2" name="DamOverTime" time="5" val="1080" abnormal="flame" effectPower="80" effectType="DOT" stackOrder="1" stackType="dragon_breath" />
 		</for>
 	</skill>
 	<skill id="4685" levels="1" name="Valakas Tail Stomp">
+		<!-- Confirmed CT2.5 -->
 		<!-- Valakas Skills -->
 		<!-- Valakas Tail Stomp A from Behind -->
-		<set name="magicLvl" val="75" />
-		<set name="power" val="37224" />
-		<set name="target" val="TARGET_BEHIND_AURA" />
-		<set name="skillScope" val="square;1000;120" />
-		<set name="skillRadius" val="1000" />
+		<set name="baseCritRate" val="10" />
 		<set name="coolTime" val="1000" />
-		<set name="hitTime" val="3000" />
 		<set name="element" val="0" /> <!-- Fire -->
-		<set name="elementPower" val="20" />
-		<set name="skillType" val="PDAM" />
+		<set name="elementPower" val="180" />
+		<set name="hitTime" val="3000" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="48391" />
+		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_BEHIND_AURA" />
 	</skill>
 	<skill id="4686" levels="1" name="Valakas Tail Stomp">
+		<!-- Confirmed CT2.5 -->
 		<!-- Valakas Skills -->
 		<!-- Valakas Tail Stomp B from Behind -->
-		<set name="magicLvl" val="75" />
-		<set name="power" val="121" />
-		<set name="target" val="TARGET_BEHIND_AURA" />
-		<set name="skillScope" val="square;500;120" />
-		<set name="skillRadius" val="500" />
 		<set name="element" val="0" /> <!-- Fire -->
-		<set name="elementPower" val="20" />
-		<set name="skillType" val="MDAM" />
+		<set name="elementPower" val="180" />
+		<set name="isMagic" val="false" /> <!-- This skill is MDAM but not magic (casting can't be cancelled) -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="157" />
+		<set name="skillRadius" val="500" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_BEHIND_AURA" />
 	</skill>
 	<skill id="4687" levels="1" name="Valakas Tail Stomp">
+		<!-- Confirmed CT2.5 -->
 		<!-- Valakas Skills -->
 		<!-- Valakas Tail Stomp Visual -->
-		<set name="magicLvl" val="75" />
-		<set name="target" val="TARGET_SELF" />
 		<set name="hitTime" val="3000" />
-		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="4688" levels="1" name="Valakas Stun">
+		<!-- Confirmed CT2.5 -->
 		<!-- Valakas Skills -->
-		<!-- "Valakas Tail Lash" from Behind -->
-		<set name="magicLvl" val="75" />
-		<set name="power" val="21423" />
-		<set name="target" val="TARGET_BEHIND_AURA" />
-		<set name="skillScope" val="square;250;500" />
-		<set name="flyRadius" val="500" />
-		<set name="flyType" val="THROW_UP" />
-		<set name="skillRadius" val="250" />
+		<!-- Valakas Tail Lash from Behind -->
+		<set name="baseCritRate" val="10" />
 		<set name="coolTime" val="3000" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="180" />
+		<set name="flyRadius" val="600" />
+		<set name="flyType" val="THROW_UP" />
 		<set name="hitTime" val="3000" />
 		<set name="isDebuff" val="true" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="27849" />
+		<set name="saveVs" val="CON" />
+		<set name="skillRadius" val="250" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_BEHIND_AURA" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" />
 			<effect name="ThrowUp" noicon="1" val="0" stackOrder="1" stackType="fly_away" />
+			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" />
 		</for>
 	</skill>
 	<skill id="4689" levels="2" name="Valakas Fear">
+		<!-- Confirmed CT2.5 -->
 		<!-- Valakas Skills -->
 		<!-- Lvl 1: Valakas Fear from Front -->
 		<!-- Lvl 2: Valakas Fear Visual -->
 		<table name="#coolTime"> 2000 0 </table>
 		<table name="#hitTime"> 3000 0 </table>
 		<table name="#lvlDepend"> 1 0 </table>
-		<set name="magicLvl" val="75" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
-		<set name="target" val="TARGET_FRONT_AURA" />
-		<set name="skillRadius" val="1000" />
 		<set name="coolTime" val="#coolTime" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="180" />
 		<set name="hitTime" val="#hitTime" />
-		<set name="skillType" val="FEAR" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="#lvlDepend" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="saveVs" val="MEN" />
+		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="FEAR" />
+		<set name="target" val="TARGET_FRONT_AURA" />
 		<for>
 			<effect count="15" name="Fear" time="2" val="0" stackOrder="1" stackType="turn_flee" />
 		</for>
 	</skill>
 	<skill id="4690" levels="1" name="Valakas Meteor Storm">
+		<!-- Confirmed CT2.5 -->
 		<!-- Valakas Skills -->
-		<set name="magicLvl" val="75" />
-		<set name="power" val="834" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="300" />
 		<set name="coolTime" val="2000" />
-		<set name="hitTime" val="8000" />
 		<set name="element" val="0" /> <!-- Fire -->
-		<set name="elementPower" val="20" />
-		<set name="skillType" val="MDAM" />
+		<set name="elementPower" val="180" />
+		<set name="hitTime" val="8000" />
+		<set name="isMagic" val="false" /> <!-- This skill is MDAM but not magic (casting can't be cancelled) -->
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="1084" />
+		<set name="skillRadius" val="300" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="4691" levels="5" name="Valakas Regeneration">
-		<table name="#regHp"> 0.15 0.5 0.8 1 1.2 </table>
+		<!-- Confirmed CT2.5 -->
+		<!-- Valakas Skills -->
+		<table name="#regHp"> 0.15 0.3 0.5 0.8 1 </table>
 		<table name="#stackOrder"> 11 12 13 14 15 </table>
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />

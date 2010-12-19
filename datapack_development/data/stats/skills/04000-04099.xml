@@ -163,114 +163,112 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="4017" levels="1" name="Queen Ant Brandish">
-		<!-- Freya retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<!-- Queen Ant Skills -->
-		<set name="magicLvl" val="40" />
-		<set name="power" val="271" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="250" />
-		<set name="hitTime" val="1300" />
 		<set name="coolTime" val="500" />
-		<set name="skillType" val="PDAM" />
+		<set name="hitTime" val="1300" />
+		<set name="magicLvl" val="40" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="271" />
+		<set name="skillRadius" val="250" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="4018" levels="1" name="Decrease Speed">
-		<!-- Freya retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<!-- Queen Ant Skills -->
-		<set name="magicLvl" val="40" />
-		<set name="power" val="542" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="castRange" val="500" />
 		<set name="coolTime" val="500" />
+		<set name="effectRange" val="1000" />
 		<set name="hitTime" val="2200" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="3" />
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="542" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="500" />
-		<set name="isDebuff" val="true" />
-		<set name="effectRange" val="1000" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Debuff" time="60" val="0" effectPower="70" effectType="DEBUFF" stackOrder="3" stackType="speed_down">
+			<effect name="Debuff" time="60" val="0" effectType="DEBUFF" effectPower="70" stackOrder="3" stackType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="4019" levels="1" name="Decrease Speed">
-		<!-- Freya retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<!-- Queen Ant Skills -->
+		<set name="castRange" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="effectRange" val="1500" />
+		<set name="hitTime" val="1700" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="3" />
 		<set name="magicLvl" val="40" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
-		<set name="target" val="TARGET_AREA" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillRadius" val="200" />
-		<set name="coolTime" val="500" />
-		<set name="hitTime" val="1700" />
-		<set name="lvlDepend" val="3" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="effectType" val="POISON" />
-		<set name="effectAbnormalLvl" val="3" />
-		<set name="isDebuff" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="1000" />
-		<set name="effectRange" val="1500" />
+		<set name="skillType" val="DOT" />
+		<set name="target" val="TARGET_AREA" />
 		<for>
-			<effect count="60" name="DamOverTime" val="30" abnormal="poison" stackOrder="3" stackType="speed_down">
+			<effect count="12" name="DamOverTime" time="5" val="150" stackOrder="3" stackType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="4020" levels="1" name="Heal Queen Ant1">
-		<!-- Freya retail confirmed -->
-		<set name="magicLvl" val="35" />
-		<set name="power" val="10845" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="hitTime" val="3000" />
-		<set name="skillType" val="HEAL" />
-		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
-		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="35" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="10846" />
+		<set name="skillType" val="HEAL" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="4021" levels="1" name="Queen Ant">
-		<!-- Freya retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<!-- Queen Ant Skills -->
 		<set name="magicLvl" val="40" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul stat="bowWpnVuln" val="0.2" order="0x30" />
+			<mul order="0x30" stat="bowWpnVuln" val="0.2" />
 		</for>
 	</skill>
 	<skill id="4022" levels="1" name="Body Of Nurse Ant">
-		<!-- Freya retail confirmed -->
+		<!-- Confirmer CT2.5 -->
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="magicLvl" val="35" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="4023" levels="1" name="Body Of Royal Guard Ant">
-		<!-- Freya retail confirmed -->
+		<!-- Confirmer CT2.5 -->
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="PASSIVE" />
 		<set name="magicLvl" val="35" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="4024" levels="1" name="Heal Queen Ant2">
-		<!-- Freya retail confirmed -->
-		<set name="power" val="10846" />
-		<set name="target" val="TARGET_ONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="100" />
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="3000" />
-		<set name="skillType" val="HEAL" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="35" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="600" />
-		<set name="effectRange" val="1100" />
-		<set name="aggroPoints" val="100" />
+		<set name="power" val="10846" />
+		<set name="skillType" val="HEAL" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="4025" levels="12" name="Master Recharge">
 		<!-- Freya retail confirmed -->
@@ -918,47 +916,47 @@
 		</for>
 	</skill>
 	<skill id="4062" levels="1" name="Orfen">
-		<!-- Freya retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<!-- Orfen Skills -->
 		<set name="magicLvl" val="50" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="bowWpnVuln" val="0.2" />
 		</for>
 	</skill>
 	<skill id="4063" levels="1" name="Paralysis">
-		<!-- Freya retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<!-- Orfen Skills -->
-		<set name="magicLvl" val="50" />
-		<set name="power" val="916" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="hitTime" val="3600" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="PDAM" />
-		<set name="isDebuff" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="50" />
 		<set name="effectRange" val="200" />
+		<set name="hitTime" val="3600" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="50" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="916" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Paralyze" time="120" val="0" effectPower="90" effectType="PARALYZE" stackOrder="1" stackType="paralyze" />
 		</for>
 	</skill>
 	<skill id="4064" levels="1" name="Paralysis">
-		<!-- Freya retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<!-- Orfen Skills -->
-		<set name="magicLvl" val="50" />
-		<set name="power" val="30" />
-		<set name="target" val="TARGET_AREA" />
-		<set name="skillRadius" val="200" />
-		<set name="hitTime" val="4000" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="PARALYZE" />
-		<set name="isDebuff" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="800" />
 		<set name="effectRange" val="1300" />
+		<set name="hitTime" val="4000" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="50" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="30" /> <!-- Base Land Rate -->
+		<set name="saveVs" val="MEN" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="PARALYZE" />
+		<set name="target" val="TARGET_AREA" />
 		<for>
 			<effect name="Paralyze" time="120" val="0" stackOrder="1" stackType="paralyze" />
 		</for>
