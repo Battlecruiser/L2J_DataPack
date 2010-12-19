@@ -212,6 +212,7 @@
 		<set name="skillType" val="DOT" />
 		<set name="target" val="TARGET_AREA" />
 		<for>
+			<!-- 30HP * 5 during 60 seconds -->
 			<effect count="12" name="DamOverTime" time="5" val="150" stackOrder="3" stackType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
