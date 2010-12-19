@@ -443,7 +443,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Debuff" time="11" val="0" abnormal="bleed">
+			<effect name="Debuff" time="11" val="0" abnormal="bleed" stackOrder="4" stackType="max_hp_down">
 				<add order="0x40" stat="rCrit" val="#rCrit" />
 			</effect>
 		</for>
