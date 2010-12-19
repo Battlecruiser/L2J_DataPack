@@ -2434,12 +2434,11 @@
 	</skill>
 	<skill id="1489" levels="1" name="Summoner Ability - Resist Attribute">
 		<!-- CT2.5 retail confirmed -->
-		<set name="magicLvl" val="75" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="isMagic" val="true" />
 		<set name="excludedFromCheck" val="true" />
+		<set name="magicLvl" val="75" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="fireRes" val="5" />
 			<add order="0x40" stat="earthRes" val="5" />
@@ -2449,27 +2448,29 @@
 	</skill>
 	<skill id="1490" levels="1" name="Healer Ability - Heal">
 		<!-- CT2.5 retail confirmed -->
+		<set name="activationChance" val="2" />
+		<set name="activationMinDamage" val="1" />
+		<set name="chanceType" val="ON_ATTACKED" />
+		<set name="excludedFromCheck" val="true" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5577" />
 		<set name="triggeredLevel" val="1" />
-		<set name="activationChance" val="2" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="excludedFromCheck" val="true" />
 	</skill>
 	<skill id="1491" levels="1" name="Summoner Ability - Spirit">
 		<!-- CT2.5 retail confirmed -->
+		<set name="activationChance" val="2" />
+		<set name="activationMinDamage" val="1" />
+		<set name="chanceType" val="ON_ATTACKED" />
+		<set name="excludedFromCheck" val="true" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5578" />
 		<set name="triggeredLevel" val="1" />
-		<set name="activationChance" val="2" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="excludedFromCheck" val="true" />
 	</skill>
 	<skill id="1492" levels="1" name="Flame Armor">
 		<!-- CT2.5 retail confirmed -->

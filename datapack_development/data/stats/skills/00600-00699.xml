@@ -441,6 +441,7 @@
 	</skill>
 	<skill id="631" levels="6" name="Emergent Ability - Attack">
 		<!-- CT2.5 retail confirmed -->
+		<table name="#magicLvl"> 60 75 80 80 80 80 </table>
 		<table name="#pAtkSBP"> 8.4 16 22.9 29 34.4 38.2 </table>
 		<table name="#pAtkDual"> 10.2 19.5 27.9 35.3 41.8 46.5 </table>
 		<table name="#pAtkDagger"> 7.4 14 20.1 25.4 30.1 33.4 </table>
@@ -450,10 +451,11 @@
 		<table name="#pAtkDBlunt"> 1.8 3.5 5 6.3 7.4 8.3 </table>
 		<table name="#pAtkRapier"> 7.8 15 21.4 27.1 32.1 35.6 </table>
 		<table name="#pAtkAncient"> 9.1 17.4 24.8 31.4 37.2 41.4 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<set name="excludedFromCheck" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pAtk" val="#pAtkSBP">
 				<using kind="Sword,Big Sword,Blunt,Big Blunt,Pole" />
@@ -502,13 +504,15 @@
 	</skill>
 	<skill id="632" levels="6" name="Emergent Ability - Defense">
 		<!-- CT2.5 retail confirmed -->
+		<table name="#magicLvl"> 60 75 80 80 80 80 </table>
 		<table name="#pDefHeavy"> 17.9 35.7 53.6 71.4 89.3 107.1 </table>
 		<table name="#pDefLight"> 13.4 26.8 40.2 53.6 67 80.3 </table>
 		<table name="#pDefRobe"> 9 17.9 26.8 35.7 44.7 53.6 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<set name="excludedFromCheck" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pDef" val="#pDefHeavy">
 				<using kind="Magic" />
@@ -527,22 +531,26 @@
 	</skill>
 	<skill id="633" levels="6" name="Emergent Ability - Empower">
 		<!-- CT2.5 retail confirmed -->
+		<table name="#magicLvl"> 60 75 80 80 80 80 </table>
 		<table name="#matk"> 10.5 20.1 28.7 36.3 43 47.8 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<set name="excludedFromCheck" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="mAtk" val="#matk" />
 		</for>
 	</skill>
 	<skill id="634" levels="6" name="Emergent Ability - Magic Defense">
 		<!-- CT2.5 retail confirmed -->
+		<table name="#magicLvl"> 60 75 80 80 80 80 </table>
 		<table name="#mdef"> 15.1 30.2 45.4 60.5 75.6 90.7 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<set name="excludedFromCheck" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="mDef" val="#mdef" />
 		</for>
@@ -559,10 +567,11 @@
 	</skill>
 	<skill id="637" levels="1" name="Master Ability - Attack">
 		<!-- CT2.5 retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<set name="excludedFromCheck" val="true" />
+		<set name="magicLvl" val="60" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pAtk" val="22.9">
 				<using kind="Sword,Big Sword,Blunt,Big Blunt,Pole" />
@@ -592,60 +601,66 @@
 	</skill>
 	<skill id="638" levels="1" name="Master Ability - Empower">
 		<!-- CT2.5 retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<set name="excludedFromCheck" val="true" />
+		<set name="magicLvl" val="60" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="mAtk" val="28.65" />
 		</for>
 	</skill>
 	<skill id="639" levels="1" name="Master Ability - Casting">
 		<!-- CT2.5 retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<set name="excludedFromCheck" val="true" />
+		<set name="magicLvl" val="75" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="mAtkSpd" val="11" />
 		</for>
 	</skill>
 	<skill id="640" levels="1" name="Master Ability - Focus">
 		<!-- CT2.5 retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<set name="excludedFromCheck" val="true" />
+		<set name="magicLvl" val="75" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="30" />
+			<add order="0x40" stat="rCrit" val="3" />
 		</for>
 	</skill>
 	<skill id="641" levels="1" name="Knight Ability - Boost HP">
 		<!-- CT2.5 retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<set name="excludedFromCheck" val="true" />
+		<set name="magicLvl" val="75" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="295.32" />
 		</for>
 	</skill>
 	<skill id="642" levels="1" name="Enchanter Ability - Boost Mana">
 		<!-- CT2.5 retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<set name="excludedFromCheck" val="true" />
+		<set name="magicLvl" val="75" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="maxMp" val="148.2" />
 		</for>
 	</skill>
 	<skill id="643" levels="1" name="Summoner Ability - Boost HP/MP">
 		<!-- CT2.5 retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<set name="excludedFromCheck" val="true" />
+		<set name="magicLvl" val="75" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="147.66" />
 			<add order="0x40" stat="maxMp" val="74.1" />
@@ -653,20 +668,22 @@
 	</skill>
 	<skill id="644" levels="1" name="Rogue Ability - Evasion">
 		<!-- CT2.5 retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<set name="excludedFromCheck" val="true" />
+		<set name="magicLvl" val="75" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="rEvas" val="4" />
 		</for>
 	</skill>
 	<skill id="645" levels="1" name="Rogue Ability - Long Shot">
 		<!-- CT2.5 retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<set name="excludedFromCheck" val="true" />
+		<set name="magicLvl" val="75" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pAtkRange" val="100">
 				<using kind="Bow" />
@@ -675,41 +692,44 @@
 	</skill>
 	<skill id="646" levels="1" name="Wizard Ability - Mana Gain">
 		<!-- CT2.5 retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<set name="excludedFromCheck" val="true" />
+		<set name="magicLvl" val="75" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="gainMp" val="20" />
 		</for>
 	</skill>
 	<skill id="647" levels="1" name="Enchanter Ability - Mana Recovery">
 		<!-- CT2.5 retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="isMagic" val="true" />
 		<set name="excludedFromCheck" val="true" />
+		<set name="magicLvl" val="75" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="regMp" val="1.1" />
 		</for>
 	</skill>
 	<skill id="648" levels="1" name="Healer Ability - Prayer">
 		<!-- CT2.5 retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<set name="excludedFromCheck" val="true" />
+		<set name="magicLvl" val="75" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="gainHp" val="1.06" />
 		</for>
 	</skill>
 	<skill id="650" levels="1" name="Warrior Ability - Resist Trait">
 		<!-- CT2.5 retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<set name="excludedFromCheck" val="true" />
+		<set name="magicLvl" val="75" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x40" stat="cancelVuln" val="5" />
 			<sub order="0x40" stat="stunVuln" val="5" />
@@ -721,58 +741,63 @@
 	<skill id="651" levels="1" name="Warrior Ability - Haste">
 		<!-- CT2.5 retail confirmed -->
 		<!-- NOTE: Description says "Excludes damage caused by a skill or ranged attack" but is client typo -->
+		<set name="activationChance" val="2" />
+		<set name="chanceType" val="ON_HIT" />
+		<set name="excludedFromCheck" val="true" />
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5572" />
 		<set name="triggeredLevel" val="1" />
-		<set name="activationChance" val="2" />
-		<set name="chanceType" val="ON_HIT" />
-		<set name="excludedFromCheck" val="true" />
 	</skill>
 	<skill id="652" levels="1" name="Knight Ability - Defense">
 		<!-- CT2.5 retail confirmed -->
+		<set name="activationChance" val="2" />
+		<set name="chanceType" val="ON_ATTACKED" />
+		<set name="excludedFromCheck" val="true" />
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5573" />
 		<set name="triggeredLevel" val="1" />
-		<set name="activationChance" val="2" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="excludedFromCheck" val="true" />
 	</skill>
 	<skill id="653" levels="1" name="Rogue Ability - Critical Chance">
 		<!-- CT2.5 retail confirmed -->
+		<set name="activationChance" val="2" />
+		<set name="chanceType" val="ON_HIT" />
+		<set name="excludedFromCheck" val="true" />
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5574" />
 		<set name="triggeredLevel" val="1" />
-		<set name="activationChance" val="2" />
-		<set name="chanceType" val="ON_HIT" />
-		<set name="excludedFromCheck" val="true" />
 	</skill>
 	<skill id="654" levels="1" name="Wizard Ability - Mana Steal">
 		<!-- CT2.5 retail confirmed -->
+		<set name="activationChance" val="2" />
+		<set name="chanceType" val="ON_HIT" />
+		<set name="excludedFromCheck" val="true" />
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5575" />
 		<set name="triggeredLevel" val="1" />
-		<set name="activationChance" val="2" />
-		<set name="chanceType" val="ON_HIT" />
-		<set name="excludedFromCheck" val="true" />
 	</skill>
 	<skill id="655" levels="1" name="Enchanter Ability - Barrier">
 		<!-- CT2.5 retail confirmed -->
+		<set name="activationChance" val="2" />
+		<set name="chanceType" val="ON_ATTACKED" />
+		<set name="excludedFromCheck" val="true" />
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5576" />
 		<set name="triggeredLevel" val="1" />
-		<set name="activationChance" val="2" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="excludedFromCheck" val="true" />
 	</skill>
 	<skill id="656" levels="3" name="Transform Divine Warrior">
 		<table name="#reuseDelay"> 14400000 7200000 3600000 </table>
