@@ -1,5 +1,4 @@
 CREATE TABLE IF NOT EXISTS `custom_spawnlist` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `location` varchar(40) NOT NULL DEFAULT '',
   `count` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `npc_templateid` mediumint(7) unsigned NOT NULL DEFAULT '0',
@@ -12,6 +11,4 @@ CREATE TABLE IF NOT EXISTS `custom_spawnlist` (
   `respawn_delay` mediumint(5) NOT NULL DEFAULT '0',
   `loc_id` int(9) NOT NULL DEFAULT '0',
   `periodOfDay` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
-  KEY `key_npc_templateid` (`npc_templateid`)
 );
