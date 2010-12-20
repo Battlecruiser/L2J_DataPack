@@ -1,6 +1,5 @@
 DROP TABLE IF EXISTS `spawnlist`;
 CREATE TABLE `spawnlist` (
-  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `location` varchar(40) NOT NULL DEFAULT '',
   `count` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `npc_templateid` smallint(5) unsigned NOT NULL DEFAULT '0',
@@ -13,8 +12,6 @@ CREATE TABLE `spawnlist` (
   `respawn_delay` mediumint(5) NOT NULL DEFAULT '0',
   `loc_id` int(9) NOT NULL DEFAULT '0',
   `periodOfDay` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
-  KEY `key_npc_templateid` (`npc_templateid`)
 );
 
 INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES 

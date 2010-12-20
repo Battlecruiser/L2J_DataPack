@@ -152,7 +152,7 @@ public class SeedOfAnnihilation extends Quest
 	
 	private void initialMinionsSpawn()
 	{
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable().values())
+		for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable())
 		{
 			if (spawn == null)
 				continue;
