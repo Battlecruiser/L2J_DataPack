@@ -84,7 +84,7 @@ public class Gordon extends L2AttackableAIScript
 	public L2Npc findTemplate(int npcId)
 	{
 		L2Npc npc = null;
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable().values())
+		for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable())
 		{
 			if (spawn != null && spawn.getNpcid() == npcId)
 			{

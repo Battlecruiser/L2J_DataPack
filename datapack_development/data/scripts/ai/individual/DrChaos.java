@@ -14,8 +14,6 @@
  */
 package ai.individual;
 
-import java.util.Map;
-
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.model.L2CharPosition;
@@ -51,19 +49,14 @@ public class DrChaos extends Quest
 	
 	public L2Npc findTemplate(int npcId)
 	{
-		L2Npc npcInstance = null;
-		L2Spawn spawn;
-		Map<Integer,L2Spawn> values = SpawnTable.getInstance().getSpawnTable();
-		for(int i = 0;i<values.size();i++)
+		for(L2Spawn spawn : SpawnTable.getInstance().getSpawnTable())
 		{
-			spawn = values.get(i);
 			if (spawn != null && spawn.getNpcid() == npcId)
 			{
-				npcInstance = spawn.getLastSpawn();
-				break;
+				return spawn.getLastSpawn();
 			}
 		}
-		return npcInstance;
+		return null;
 	}
 	
 	@Override

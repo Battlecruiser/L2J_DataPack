@@ -489,7 +489,7 @@ public class Stage1 extends Quest
 							if (_spawnZoneList.contains(spw.zone))
 							{
 								int[] point = _spawnZoneList.get(spw.zone).getRandomPoint();
-								spawn(world, spw.npcId, point[0], point[1], GeoData.getInstance().getSpawnHeight(point[0], point[1], point[2], point[3],0), Rnd.get(65535), spw.isNeededNextFlag);
+								spawn(world, spw.npcId, point[0], point[1], GeoData.getInstance().getSpawnHeight(point[0], point[1], point[2], point[3],null), Rnd.get(65535), spw.isNeededNextFlag);
 							}
 							else
 								_log.info("[Seed of Destruction] Missing zone: " + spw.zone);

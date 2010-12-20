@@ -58,7 +58,7 @@ public class GeneralDilios extends L2AttackableAIScript
 	
 	public void findNpcs()
 	{
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable().values())
+		for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable())
 			if (spawn != null)
 				if (spawn.getNpcid() == generalId)
 					_general = spawn.getLastSpawn();

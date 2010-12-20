@@ -16,7 +16,6 @@ package handlers.itemhandlers;
 
 import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.handler.IItemHandler;
-import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.model.L2ItemInstance;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Spawn;
@@ -55,7 +54,6 @@ public class ChristmasTree implements IItemHandler
 		try
 		{
 			L2Spawn spawn = new L2Spawn(template1);
-			spawn.setId(IdFactory.getInstance().getNextId());
 			spawn.setLocx(target.getX());
 			spawn.setLocy(target.getY());
 			spawn.setLocz(target.getZ());
