@@ -490,90 +490,95 @@
 		</for>
 	</skill>
 	<skill id="1520" levels="1" name="Inquisitor">
-		<set name="mpConsume" val="39" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="5000" />
 		<set name="isMagic" val="true" />
+		<set name="mpConsume" val="39" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="30000" />
+		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="316" />
 		<for>
-			<effect name="Transformation" time="21600" val="0" stackOrder="1" stackType="transform">
-				<mul order="0x30" stat="pvpMagicalDmg" val="0.4" />
-			</effect>
+			<effect name="Transformation" time="21600" val="0" stackOrder="1" stackType="transform" />
 		</for>
 	</skill>
 	<skill id="1521" levels="1" name="Inquisitor">
-		<set name="mpConsume" val="39" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="5000" />
 		<set name="isMagic" val="true" />
+		<set name="mpConsume" val="39" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="30000" />
+		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="317" />
 		<for>
-			<effect name="Transformation" time="21600" val="0" stackOrder="1" stackType="transform">
-				<mul order="0x30" stat="pvpMagicalDmg" val="0.4" />
-			</effect>
+			<effect name="Transformation" time="21600" val="0" stackOrder="1" stackType="transform" />
 		</for>
 	</skill>
 	<skill id="1522" levels="1" name="Inquisitor">
-		<set name="mpConsume" val="39" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="5000" />
 		<set name="isMagic" val="true" />
+		<set name="mpConsume" val="39" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="30000" />
+		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="318" />
 		<for>
-			<effect name="Transformation" time="21600" val="0" stackOrder="1" stackType="transform">
-				<mul order="0x30" stat="pvpMagicalDmg" val="0.4" />
-			</effect>
+			<effect name="Transformation" time="21600" val="0" stackOrder="1" stackType="transform" />
 		</for>
 	</skill>
 	<skill id="1523" levels="42" name="Divine Punishment">
+		<!-- Confirmed CT2.5 -->
 		<!-- Inquisitor Stance Skill -->
-		<table name="#mpConsume"> 35 37 38 38 39 40 42 42 43 44 45 45 47 48 49 49 50 52 53 53 54 55 55 57 58 58 59 60 60 62 62 63 63 64 64 65 65 67 67 67 68 68 </table>
 		<table name="#magicLvl"> 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
+		<table name="#mpConsume"> 28 29 30 30 31 32 33 33 34 35 36 36 37 38 39 39 40 41 42 42 43 44 44 45 46 46 47 48 48 49 49 50 50 51 51 52 52 53 53 53 54 54 </table>
+		<table name="#mpInitialConsume"> 7 8 8 8 8 8 9 9 9 9 9 9 10 10 10 10 10 11 11 11 11 11 11 12 12 12 12 12 12 13 13 13 13 13 13 13 13 14 14 14 14 14 </table>
 		<table name="#power"> 51 52 54 55 57 58 60 61 63 64 66 68 69 71 72 74 75 77 78 80 81 83 85 86 88 89 90 92 93 95 96 97 99 100 101 102 103 105 106 107 108 109 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<table name="#pvpPower"> 31 32 33 33 34 35 36 37 38 39 40 41 42 43 44 44 45 46 47 48 49 50 51 52 53 54 54 55 56 57 58 59 59 60 61 62 62 63 64 64 65 65 </table>
+		<set name="castRange" val="750" />
+		<set name="effectRange" val="1250" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="4000" />
-		<set name="skillType" val="MDAM" />
-		<set name="reuseDelay" val="1000" />
 		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="750" />
-		<set name="effectRange" val="1250" />
+		<set name="power" val="#power" />
+		<set name="pvpPower" val="#pvpPower" />
+		<set name="reuseDelay" val="1000" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="1524" levels="42" name="Surrender to the Holy">
+		<!-- Confirmed CT2.5 -->
 		<!-- Inquisitor Stance Skill -->
-		<table name="#mpConsume"> 39 39 41 42 43 44 44 46 47 48 49 49 51 52 53 54 55 56 57 58 59 60 61 62 63 64 64 66 67 67 68 69 69 70 71 72 73 73 73 74 74 75 </table>
 		<table name="#magicLvl"> 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="80" />
-		<set name="lvlDepend" val="2" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="1500" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="WEAKNESS" />
-		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<table name="#mpConsume"> 31 31 32 33 34 35 35 36 37 38 39 39 40 41 42 43 44 44 45 46 47 48 48 49 50 51 51 52 53 53 54 55 55 56 56 57 58 58 58 59 59 60 </table>
+		<table name="#mpInitialConsume"> 8 8 9 9 9 9 9 10 10 10 10 10 11 11 11 11 11 12 12 12 12 12 13 13 13 13 13 14 14 14 14 14 14 14 15 15 15 15 15 15 15 15 </table>
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
+		<set name="hitTime" val="1500" />
 		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="true" />
+		<set name="lvlDepend" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="80" />
+		<set name="reuseDelay" val="2000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="WEAKNESS" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" time="30" val="0" stackOrder="3" stackType="armor_holy">
 				<sub order="0x40" stat="holyRes" val="25" />
@@ -582,10 +587,12 @@
 		</for>
 	</skill>
 	<skill id="1525" levels="42" name="Divine Curse">
+		<!-- Confirmed CT2.5 -->
 		<!-- Inquisitor Stance Skill -->
 		<table name="#dot"> 9 9 9 9 9 9 11 11 11 11 11 11 11 11 11 11 13 13 13 13 13 13 13 13 13 13 14 14 14 14 14 14 14 14 14 14 15 15 15 15 15 15 </table>
 		<table name="#magicLvl"> 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
-		<table name="#mpConsume"> 39 40 42 43 44 44 45 47 48 49 49 50 52 53 54 55 55 57 58 59 60 60 62 63 64 64 65 67 67 68 69 69 70 70 72 73 73 73 74 74 75 75 </table>
+		<table name="#mpConsume"> 31 31 32 33 34 35 35 36 37 38 39 39 40 41 42 43 44 44 45 46 47 48 48 49 50 51 51 52 53 53 54 55 55 56 56 57 58 58 58 59 59 60 </table>
+		<table name="#mpInitialConsume"> 8 8 9 9 9 9 9 10 10 10 10 10 11 11 11 11 11 12 12 12 12 12 13 13 13 13 13 14 14 14 14 14 14 14 15 15 15 15 15 15 15 15 </table>
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
 		<set name="element" val="4" /> <!-- Holy -->
@@ -596,6 +603,7 @@
 		<set name="lvlDepend" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="4000" />
@@ -603,7 +611,6 @@
 		<set name="skillType" val="DOT" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<!-- Retail Values CT2.3: 9 9 9 9 9 9 11 11 11 11 11 11 11 11 11 11 13 13 13 13 13 13 13 13 13 13 14 14 14 14 14 14 14 14 14 14 15 15 15 15 15 15HP * 1 Sec -->
 			<effect count="120" name="DamOverTime" val="#dot" stackOrder="1" stackType="heal_effect_down">
 				<mul order="0x30" stat="gainHp" val="0.5" />
 			</effect>
@@ -630,24 +637,29 @@
 		</for>
 	</skill>
 	<skill id="1528" levels="42" name="Divine Flash">
+		<!-- Confirmed CT2.5 -->
 		<!-- Inquisitor Stance Skill -->
-		<table name="#mpConsume"> 57 59 60 62 63 65 67 68 69 70 73 74 75 77 79 80 82 83 85 87 88 89 90 93 94 95 97 98 99 100 102 103 104 105 105 107 108 109 109 110 112 112 </table>
+		<table name="#mpConsume"> 45 47 48 49 50 52 53 54 55 56 58 59 60 61 63 64 65 66 68 69 70 71 72 74 75 76 77 78 79 80 81 82 83 84 84 85 86 87 87 88 89 89 </table>
+		<table name="#mpInitialConsume"> 12 12 12 13 13 13 14 14 14 14 15 15 15 16 16 16 17 17 17 18 18 18 18 19 19 19 20 20 20 20 21 21 21 21 21 22 22 22 22 22 23 23 </table>
 		<table name="#magicLvl"> 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#power"> 29 29 30 31 32 33 33 34 35 36 37 38 39 39 40 41 42 43 44 45 45 46 47 48 49 50 50 51 52 53 54 54 55 56 56 57 58 58 59 60 60 61 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="target" val="TARGET_AREA" />
-		<set name="skillRadius" val="250" />
-		<set name="element" val="4" /> <!-- Holy -->
-		<set name="elementPower" val="20" />
-		<set name="reuseDelay" val="4000" />
-		<set name="hitTime" val="4000" />
-		<set name="skillType" val="MDAM" />
-		<set name="isMagic" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<table name="#pvpPower"> 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 25 25 26 26 27 27 28 29 29 30 30 30 31 31 32 32 33 33 34 34 34 35 35 36 36 36 37 </table>
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
+		<set name="element" val="4" /> <!-- Holy -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#power" />
+		<set name="pvpPower" val="#pvpPower" />
+		<set name="reuseDelay" val="4000" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="1529" levels="7" name="Soul Web" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>

@@ -14,7 +14,7 @@ CREATE TABLE `spawnlist` (
   `periodOfDay` tinyint(1) unsigned NOT NULL DEFAULT '0'
 );
 
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES 
+INSERT INTO `spawnlist` VALUES
 ('partisan_agit_2121_01',1,35372,44368,107440,-2032,0,0,0,60,0,0),
 ('partisan_agit_2121_01',1,35372,44768,108604,-2034,0,0,44231,60,0,0),
 ('partisan_agit_2121_01',1,35372,44378,108474,-2034,0,0,39438,60,0,0),
@@ -614,7 +614,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ('dion15_2022_05',1,20062,22710,133083,-2306,0,0,43748,24,0,0),
 ('dion15_2022_05',1,20062,25015,132152,-1584,0,0,49872,24,0,0);
 
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES  
+INSERT INTO `spawnlist` VALUES  
 ('dion15_2022_05',1,20062,20240,132797,-2500,0,0,36396,24,0,0),
 ('dion15_2022_05',1,20062,24749,135050,-2877,0,0,22806,24,0,0),
 ('dion15_2022_05',1,20062,26334,132690,-1790,0,0,8724,24,0,0),
@@ -4579,7 +4579,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ('gludio03_1821_07',1,20054,-58169,112033,-3087,0,0,25717,30,0,0),
 ('gludio03_1821_07',1,20054,-55769,111196,-3460,0,0,0,30,0,0);
 
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES  
+INSERT INTO `spawnlist` VALUES  
 ('gludio03_1821_01',1,20029,-53698,118081,-3011,0,0,59830,30,0,0),
 ('gludio03_1821_01',1,20029,-58549,123052,-3008,0,0,43206,30,0,0),
 ('gludio03_1821_01',1,20029,-57654,120538,-3103,0,0,53836,30,0,0),
@@ -16073,7 +16073,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ('giran05_tb2421_10',1,18279,114400,16859,-641,0,0,37063,360,0,0),
 ('giran05_tb2421_10',1,18279,115444,17444,-676,0,0,0,360,0,0);
 
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES  
+INSERT INTO `spawnlist` VALUES  
 ('giran05_tb2421_10',1,18279,115788,16344,-684,0,0,0,360,0,0),
 ('giran05_tb2421_10',1,18279,116037,16649,-641,0,0,32045,360,0,0),
 ('giran05_tb2421_10',1,18279,115894,15624,-692,0,0,0,360,0,0),
@@ -20145,7 +20145,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ('aden05agit_2517_06',1,35415,179279,-16219,-2256,0,0,25000,7200,0,0),
 ('aden05agit_2517_06',1,35415,179370,-16196,-2256,0,0,25000,7200,0,0);
 
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES  
+INSERT INTO `spawnlist` VALUES  
 ('aden05agit_2517_06',1,35415,179408,-16158,-2256,0,0,25000,7200,0,0),
 ('aden05agit_2517_06',1,35415,179562,-15984,-2256,0,0,25000,7200,0,0),
 ('aden05agit_2517_06',1,35415,179599,-15943,-2256,0,0,25000,7200,0,0),
@@ -22329,7 +22329,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ('23_17_NPC_031201_10',1,30882,112668,-17960,-1793,0,0,20480,60,0,0),
 ('23_17_NPC_031201_11',1,30886,111468,-12224,-1781,0,0,20480,60,0,0);
 
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES 
+INSERT INTO `spawnlist` VALUES 
 -- Test Server Helpers
 ('Town of Aden',1,31756,147728,27408,-2198,0,0,16500,60,0,0),
 ('Town of Aden',1,31757,147761,27408,-2198,0,0,16500,60,0,0),
@@ -22385,7 +22385,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ('Kamael Village',1,31756,-116948,46841,360,0,0,3355,60,0,0);
 
 
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES 
+INSERT INTO `spawnlist` VALUES 
 ('forest_of_the_dead',1,21547,48536,-55831,-2607,0,0,0,240,0,1),
 ('forest_of_the_dead',1,31389,60161,-42086,-3000,0,0,0,240,0,1),
 ('forest_of_the_dead',1,31388,59626,-41684,-3000,0,0,0,240,0,1),
@@ -26976,7 +26976,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ('Nornil Garden',1,32239,-120080,87176,-12608,0,0,0,240,0,0);
 
 -- Miss_Queen Spawns - Disabled by default
--- INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES 
+-- INSERT INTO `spawnlist` VALUES 
 -- ('Miss_Queen',1,31760,-118971,46999,360,0,0,37504,60,0,0),
 -- ('Miss_Queen',1,31760,116224,-181728,-1378,0,0,0,60,0,'0'),
 -- ('Miss_Queen',1,31761,114885,-178092,-832,0,0,0,60,0,'0'),
@@ -26990,7 +26990,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 -- ('Miss_Queen',1,31765,-84336,242156,-3730,0,0,24500,60,0,'0'),
 -- ('Miss_Queen',1,31766,-82032,150160,-3127,0,0,16500,60,0,'0');
 
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES 
+INSERT INTO `spawnlist` VALUES 
 ('IvoryTower2ndFloor',1,32323,85333,15779,-2809,0,0,19030,60,0,0),
 ('hellbound',1,22324,-13532,235663,-3264,0,0,21503,60,0,0),
 ('hellbound',1,22325,-14355,234970,-3136,0,0,50489,60,0,0),
@@ -27931,7 +27931,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ('rune_mass_gatekeeper',1,35502,11127,-49148,3843,0,0,18512,60,0,0);
 
 -- Talking Island spawnlist
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES 
+INSERT INTO `spawnlist` VALUES 
 -- Gremlin
 ('Talking_Island',1,18342,-71438,258005,-3104,0,0,2077,15,0,0),
 ('Talking_Island',1,18342,-71355,257928,-3104,0,0,44930,15,0,0),
@@ -34765,7 +34765,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ('Breka_Str_Gorg_Garden',1,32252,73339,133935,-3528,0,0,20960,60,0,0);
 
 -- Castle Artefacts
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES 
+INSERT INTO `spawnlist` VALUES 
 ('GludioArtefact1',1,35063,-18120,107984,-2483,0,0,16384,60,0,0),
 ('GiranArtefact1',1,35147,117939,145090,-2550,0,0,32768,60,0,0),
 ('DionArtefact1',1,35105,22081,161771,-2677,0,0,49017,60,0,0),
@@ -34778,7 +34778,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ('SchuttgartArtefact1',1,35515,76668,-154520,226,0,0,0,60,0,0),
 ('SchuttgartArtefact2',1,35514,78446,-154524,227,0,0,0,60,0,0);
 -- Underground Warden Castle
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES  
+INSERT INTO `spawnlist` VALUES  
 ('Gludio_castle',1,36403,-17962,109067,-2657,0,0,8388,60,0,0),
 ('Dion_castle',1,36404,22114,160675,-2851,0,0,48698,60,0,0),
 ('Giran_castle',1,36405,116858,145045,-2724,0,0,31728,60,0,0),
@@ -34790,7 +34790,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ('Schuttgart_castle',1,36411,77554,-152972,-904,0,0,16384,60,0,0);
 
 -- temp spawns
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES  
+INSERT INTO `spawnlist` VALUES  
 ('TEMP Divine Emissary',1,27323,96199,76801,-3574,0,0,275,60,0,0),
 ('TEMP Divine Emissary',1,27323,96199,76601,-3574,0,0,275,60,0,0),
 ('TEMP Divine Emissary',1,27323,96199,77001,-3574,0,0,275,60,0,0),
@@ -34803,11 +34803,11 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ('gludio29_2125_10',1,20100,42698,247710,-6456,0,0,13353,60,0,0);
 
 -- Random Spawns (previously missing in certain areas)
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES 
+INSERT INTO `spawnlist` VALUES 
 ('PavelRuins/ArchaicL',1,32045,96352,-110320,-3305,0,0,0,60,0,0);
 
 -- Kamael Island - by Vice
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES 
+INSERT INTO `spawnlist` VALUES 
 ('Kamael Island',1,18342,-125478,38195,1176,0,0,21472,60,0,0),
 ('Kamael Island',1,18342,-125039,37647,1144,0,0,28655,60,0,0),
 ('Kamael Island',1,18342,-125192,37532,1144,0,0,26820,60,0,0),
@@ -36551,7 +36551,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ('Giran Pailaka NPC',1,32498,85104,147616,-3400,0,0,53248,60,0,0);
 
 -- Silent_Valley
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES 
+INSERT INTO `spawnlist` VALUES 
 -- Chimera Piece
 ('Silent_Valley',1,20965,173437,54698,-5976,0,0,62650,60,0,0),
 ('Silent_Valley',1,20965,172594,54097,-5920,0,0,11574,60,0,0),
@@ -36766,7 +36766,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ('unset',1,31593,45184,-48624,-800,0,0,49000,5,0,0);
 
 -- Gracia Epilogue NPCs
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES 
+INSERT INTO `spawnlist` VALUES 
 ('Gludio',1,32575,-12491,122331,-2984,0,0,32768,60,0,0),
 ('Aden',1,32571,147569,29362,-2264,0,0,24576,60,0,0),
 ('Goddard',1,32594,147558,-55157,-2728,0,0,53248,60,0,0),
@@ -36810,7 +36810,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ('Aden Npc',1,32321,147257,28611,-2264,0,0,56124,60,0,0);
 
 -- Gracia Epilogue Mithril Mines
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES 
+INSERT INTO `spawnlist` VALUES 
 ( 'Mithril Mines',1,22678,179190,-181544,107,0,0,20975,60,0,'0'),
 ( 'Mithril Mines',1,22680,179354,-181552,104,0,0,70,60,0,'0'),
 ( 'Mithril Mines',1,22678,179370,-180937,251,0,0,14400,60,0,'0'),
@@ -37125,7 +37125,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ( 'Mithril Mines',1,22690,178626,-174806,-2422,0,0,12104,60,0,'0');
 
 -- Gracia Epilogue Field of Silence / Whispers (Reedfield)
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES 
+INSERT INTO `spawnlist` VALUES 
 ('Reedfield',1,18805,87705,172706,-3544,0,0,0,60,0,0),
 ('Reedfield',1,18805,87854,172990,-3560,0,0,0,60,0,0),
 ('Reedfield',1,18805,86662,172990,-3760,0,0,0,60,0,0),
@@ -38305,7 +38305,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ('Reedfield',1,22659,82320,225497,-3760,0,0,35952,60,0,0);
 
 -- Forsaken Plains
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES 
+INSERT INTO `spawnlist` VALUES 
 -- Yintzu
 ( 'forsaken_plains',1,20647,171496,42104,-4944,0,0,50034,60,0,0),
 ( 'forsaken_plains',1,20647,173152,43404,-4928,0,0,0,60,0,0),
@@ -38352,7 +38352,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ( 'forsaken_plains',1,20650,173512,43558,-4936,0,0,0,60,0,0);
 
 -- Giants Cave
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES 
+INSERT INTO `spawnlist` VALUES 
 ( 'giants_cave',1,22661,184035,59407,-3992,0,0,21362,60,0,0),
 ( 'giants_cave',1,22661,185554,56397,-4568,0,0,51333,60,0,0),
 ( 'giants_cave',1,22661,185593,55807,-4568,0,0,52606,60,0,0),
@@ -38826,7 +38826,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ( 'giants_cave',1,22665,186340,57517,-7237,0,0,55142,60,0,0),
 ( 'giants_cave',1,22665,185901,57389,-7237,0,0,54650,60,0,0);
 
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES 
+INSERT INTO `spawnlist` VALUES 
 ( 'alligator_beach',1,21639,104760,201950,-3640,0,0,58276,60,0,0),
 ( 'alligator_beach',1,21639,105887,204277,-3240,0,0,35078,60,0,0),
 ( 'alligator_beach',1,21639,101062,200934,-3720,0,0,31628,60,0,0),
@@ -38895,7 +38895,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ( 'alligator_beach',1,20793,117888,199501,-3688,0,0,10202,60,0,0),
 ( 'alligator_beach',1,20793,114027,201939,-3464,0,0,51518,60,0,0);
 
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES  
+INSERT INTO `spawnlist` VALUES  
 ( 'heine_plains',1,20786,123481,223132,-2544,0,0,34828,60,0,0),
 ( 'heine_plains',1,20786,125616,218982,-3192,0,0,34189,60,0,0),
 ( 'heine_plains',1,20786,118947,211146,-3408,0,0,56971,60,0,0),
@@ -38944,7 +38944,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ( 'Gludio',1,32576,-13976,121399,-2984,0,0,32768,60,0,0);
 
 -- Den Of Evil
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES 
+INSERT INTO `spawnlist` VALUES 
 -- Ragna Orc
 ( 'den_of_evil',1,22691,62541,-116848,-3064,0,0,30291,60,0,0),
 ( 'den_of_evil',1,22691,62558,-116676,-3064,0,0,65298,60,0,0),
@@ -39217,7 +39217,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ( 'den_of_evil',1,32656,70821,-125606,-3016,0,0,0,60,0,0);
 
 -- Crypts of Disgrace
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES 
+INSERT INTO `spawnlist` VALUES 
 -- Contaminated Morek Warrior
 ( 'crypts_of_disgrace',1,22703,52551,-124402,-3886,0,0,58574,60,0,0),
 ( 'crypts_of_disgrace',1,22703,49028,-126313,-3845,0,0,34991,60,0,0),
@@ -39399,7 +39399,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ( 'crypts_of_disgrace',1,22705,46085,-124838,-3329,0,0,41581,60,0,0),
 ( 'crypts_of_disgrace',1,22705,53651,-125011,-3203,0,0,48489,60,0,0);
 
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES 
+INSERT INTO `spawnlist` VALUES 
 -- Bizarre Cocoon
 ( 'stakato_nest',1,18793,80955,-51686,-5640,0,0,0,60,0,0),
 ( 'stakato_nest',1,18793,80400,-51558,-5640,0,0,0,60,0,0),
@@ -39588,7 +39588,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ( 'stakato_nest',1,22633,84964,-53850,-5128,0,0,19739,60,0,0),
 ( 'stakato_nest',1,22633,84459,-53763,-5128,0,0,2394,60,0,0);
 
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES 
+INSERT INTO `spawnlist` VALUES 
 -- Ancient Egg
 ('primeval_isle',1,18344,14166,-17484,-3080,0,0,0,60,0,0),
 ('primeval_isle',1,18344,16736,-16956,-3224,0,0,0,60,0,0),
@@ -40184,7 +40184,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ('primeval_isle',1,32714,11504,-23344,-3640,0,0,39000,60,0,0);
 
 -- Freya NPC's
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES 
+INSERT INTO `spawnlist` VALUES 
 ( 'Schuttgart',1,32071,84470,-144042,-1528,0,0,0,60,0,0),
 -- Archaic & Pavel npc
 ( 'pavel_ruins_npc',1,32069,91316,-116927,-3928,0,0,55000,60,0,0),
@@ -40498,7 +40498,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ('SOA',1,32772,-219733,182869,-12600,0,0,0,1800,0,0),
 ('SOA',1,32772,-218650,180024,-12584,0,0,0,1800,0,0);
 
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES 
+INSERT INTO `spawnlist` VALUES 
 -- Fantasy Mushroom
 ( 'plains_of_lizardmen',1,18864,92135,83982,-3680,0,0,0,60,0,0),
 ( 'plains_of_lizardmen',1,18864,91045,87849,-3424,0,0,0,60,0,0),
@@ -41031,7 +41031,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ('plains_of_lizardmen_old', 1, 20582, 98014, 76639, -3536, 0, 0, 18442, 60, 0, 0),
 ('plains_of_lizardmen_old', 1, 20582, 95425, 78724, -3504, 0, 0, 22665, 60, 0, 0);
 
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES 
+INSERT INTO `spawnlist` VALUES 
 -- Solina Knights
 ( 'monastery_of_silence',1,18909,111546,-80544,-3520,0,0,65520,60,0,0),
 ( 'monastery_of_silence',1,18909,111069,-80255,-3520,0,0,33844,60,0,0),
@@ -41356,7 +41356,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ( 'monastery_of_silence',1,22800,113997,-73252,-592,0,0,59645,60,0,0),
 ( 'monastery_of_silence',1,22800,114578,-73396,-592,0,0,0,60,0,0);
 
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES 
+INSERT INTO `spawnlist` VALUES 
 -- Pavel Safety Device
 ( 'pavel_ruins',1,18917,94443,-120252,-4552,0,0,61134,60,0,0),
 ( 'pavel_ruins',1,18917,92688,-119558,-4528,0,0,32679,60,0,0),
@@ -41776,7 +41776,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ( 'pavel_ruins',1,22812,84224,-104021,-3320,0,0,0,60,0,0),
 ( 'pavel_ruins',1,22812,84201,-107208,-3320,0,0,0,60,0,0);
 
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES 
+INSERT INTO `spawnlist` VALUES 
 -- Beast Farm
 ('Beast_Farm_Mobs',1,16019,55973,-91534,-1360,0,0,0,60,0,0),
 ('Beast_Farm_Mobs',1,16019,56099,-91534,-1360,0,0,0,60,0,0),
@@ -42163,7 +42163,7 @@ INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,ra
 ('Beast_Farm_NPC',1,35627,53508,-93776,-1584,0,0,36000,60,0,0);
 
 -- Olympiad Buffers
-INSERT INTO `spawnlist` (location,count,npc_templateid,locx,locy,locz,randomx,randomy,heading,respawn_delay,loc_id,periodOfDay) VALUES
+INSERT INTO `spawnlist` VALUES
 ('1710_olympiad1',1,36402,-89145,-252643,-3320,0,0,0,60,0,0),
 ('1710_olympiad1',1,36402,-86851,-252633,-3320,0,0,0,60,0,0),
 ('1710_olympiad2',1,36402,-84922,-252640,-3320,0,0,0,60,0,0),
