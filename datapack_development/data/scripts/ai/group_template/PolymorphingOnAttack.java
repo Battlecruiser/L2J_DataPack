@@ -14,9 +14,7 @@
  */
 package ai.group_template;
 
-import java.util.Map;
-
-import javolution.util.FastMap;
+import gnu.trove.TIntObjectHashMap;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
@@ -32,7 +30,7 @@ import com.l2jserver.util.Rnd;
  */
 public class PolymorphingOnAttack extends L2AttackableAIScript
 {
-	private static final Map<Integer,Integer[]> MOBSPAWNS = new FastMap<Integer,Integer[]>();
+	private static final TIntObjectHashMap<Integer[]> MOBSPAWNS = new TIntObjectHashMap<Integer[]>();
 	static
 	{
 		MOBSPAWNS.put(21258,new Integer[]{21259,100,100,-1}); //Fallen Orc Shaman -> Sharp Talon Tiger (always polymorphs)
@@ -59,29 +57,32 @@ public class PolymorphingOnAttack extends L2AttackableAIScript
 	public PolymorphingOnAttack(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		for (int id : MOBSPAWNS.keySet())
+		for (int id : MOBSPAWNS.keys())
 			super.addAttackId(id);
 	}
 	
 	@Override
 	public String onAttack (L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
 	{
-		if (MOBSPAWNS.containsKey(npc.getNpcId()))
+		if (npc.isVisible() && !npc.isDead())
 		{
-			Integer[] tmp = MOBSPAWNS.get(npc.getNpcId());
-			if (npc.getCurrentHp() <= (npc.getMaxHp() * tmp[1]/100.0)&& Rnd.get(100) < tmp[2])
+			final Integer[] tmp = MOBSPAWNS.get(npc.getNpcId());
+			if (tmp != null)
 			{
-				if (tmp[3] >= 0)
+				if (npc.getCurrentHp() <= (npc.getMaxHp() * tmp[1]/100.0)&& Rnd.get(100) < tmp[2])
 				{
-					String text = MOBTEXTS[tmp[3]][Rnd.get(MOBTEXTS[tmp[3]].length)];
-					npc.broadcastPacket(new CreatureSay(npc.getObjectId(),Say2.ALL,npc.getName(),text));
+					if (tmp[3] >= 0)
+					{
+						String text = MOBTEXTS[tmp[3]][Rnd.get(MOBTEXTS[tmp[3]].length)];
+						npc.broadcastPacket(new CreatureSay(npc.getObjectId(),Say2.ALL,npc.getName(),text));
+					}
+					npc.deleteMe();
+					L2Attackable newNpc = (L2Attackable) addSpawn(tmp[0], npc.getX(), npc.getY(), npc.getZ()+10, npc.getHeading(), false, 0, true);
+					L2Character originalAttacker = isPet? attacker.getPet(): attacker;
+					newNpc.setRunning();
+					newNpc.addDamageHate(originalAttacker,0,500);
+					newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, originalAttacker);
 				}
-				npc.deleteMe();
-				L2Attackable newNpc = (L2Attackable) addSpawn(tmp[0], npc.getX(), npc.getY(), npc.getZ()+10, npc.getHeading(), false, 0, true);
-				L2Character originalAttacker = isPet? attacker.getPet(): attacker;
-				newNpc.setRunning();
-				newNpc.addDamageHate(originalAttacker,0,500);
-				newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, originalAttacker);
 			}
 		}
 		return super.onAttack (npc, attacker, damage, isPet);
