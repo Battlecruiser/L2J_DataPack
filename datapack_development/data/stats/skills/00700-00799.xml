@@ -1432,16 +1432,17 @@
 		<set name="weaponsAllowed" val="Bow" /> <!-- Bow -->
 	</skill>
 	<skill id="774" levels="1" name="Dread Pool">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1000" />
-		<set name="lvlDepend" val="1" />
 		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="81" />
-		<set name="saveVs" val="MEN" />
 		<set name="mpConsume" val="87" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="70" />
 		<set name="reuseDelay" val="75000" />
-		<set name="skillRadius" val="100" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillRadius" val="200" />
 		<set name="skillType" val="FEAR" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
@@ -1475,12 +1476,12 @@
 		</for>
 	</skill>
 	<skill id="776" levels="1" name="Force of Destruction">
-		<!-- TODO: effecPower needs to be verified -->
-		<set name="baseCritRate" val="15" />
-		<set name="lvlDepend" val="1" />
+		<!-- Confirmed CT2.5 -->
+		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
+		<set name="effectRange" val="200" />
 		<set name="hitTime" val="1200" />
+		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="37" />
 		<set name="numCharges" val="2" /> <!-- 2 Charges are consumed -->
@@ -1497,14 +1498,14 @@
 			<player Charges="2" /> <!-- Chi Energy Stage 2 Recharge needed. -->
 		</cond>
 		<for>
-			<effect count="8" name="DamOverTime" val="240" stackOrder="10" stackType="force_of_destruction" effectPower="70" effectType="DOT" />
+			<effect count="20" name="DamOverTime" time="1" val="80" stackOrder="10" stackType="force_of_destruction" effectPower="70" effectType="DOT" />
 		</for>
 	</skill>
 	<skill id="777" levels="1" name="Demolition Impact">
-		<!-- TODO: Radius needs to be verified -->
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
+		<!-- Confirmed CT2.5 -->
 		<set name="baseCritRate" val="15" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="200" />
 		<set name="hitTime" val="1200" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="160" />
@@ -1512,7 +1513,7 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="5750" />
 		<set name="reuseDelay" val="75000" />
-		<set name="skillRadius" val="150" />
+		<set name="skillRadius" val="500" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_FRONT_AREA" />
