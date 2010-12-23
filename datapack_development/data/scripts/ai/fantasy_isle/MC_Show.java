@@ -44,22 +44,31 @@ public class MC_Show extends Quest
 	private static int[] individuals = {32439,32440,32441};
 	private static int[] showstuff = {32424,32425,32426,32427,32428};
 	private static boolean isStarted = false;
-	private static String[] text = {
-		"How come people are not here... We are about to start the show.. Hmm",
-		"Ugh, I have butterflies in my stomach.. The show starts soon...",
-		"Thank you all for coming here tonight.","It is an honor to have the special show today.",
-		"Our Fantasy Isle is fully committed to your happiness.",
-		"Now I'd like to introduce the most beautiful singer in Aden. Please welcome Leyla Mira!",
-		"Here she comes!","Thank you very much, Leyla. Next is",
-		"It was very difficult to invite this first group that just came back from their world tour. Let's welcome the Fantasy Isle Circus!",
-		"Come on ~ everyone","Did you like it? That was so amazing.",
-		"Now we also invited individuals with special talents.","Let's welcome the first person here!",
-		";;;;;;Oh","Okay, now here comes the next person. Come on up please.",
-		"Oh, it looks like something great is going to happen, right?", "Oh, my ;;;;",
-		"That's g- .. great. Now, here comes the last person.","Now this is the end of today's show.",
-		"How was it? I am not sure if you really enjoyed it.",
-		"Please remember that Fantasy Isle is always planning a lot of great shows for you.",
-		"Well, I wish I could continue all night long, but this is it for today. Thank you."
+	private static int[] messages = {
+		1800105, // How come people are not here... We are about to start the show.. Hmm
+		1800082, // Ugh, I have butterflies in my stomach.. The show starts soon...
+		1800083, // Thank you all for coming here tonight.
+		1800084, // It is an honor to have the special show today.
+		1800085, // Our Fantasy Isle is fully committed to your happiness.
+		1800086, // Now I'd like to introduce the most beautiful singer in Aden. Please welcome Leyla Mira!
+		1800087, // Here she comes!
+		1800088, // Thank you very much, Leyla!
+		// 1800089 Now we're in for a real treat.
+		1800090, // Just back from their world tour≈put your hands together for the Fantasy Isle Circus!
+		1800091, // Come on ~ everyone
+		1800092, // Did you like it? That was so amazing.
+		1800093, // Now we also invited individuals with special talents.
+		1800094, // Let's welcome the first person here!
+		1800095, // ;;;;;;Oh
+		1800096, // Okay, now here comes the next person. Come on up please.
+		1800097, // Oh, it looks like something great is going to happen, right?
+		1800098, // Oh, my ;;;;
+		1800099, // That's g- .. great. Now, here comes the last person.
+		1800100, // Now this is the end of today's show.
+		1800101, // How was it? I am not sure if you really enjoyed it.
+		1800102, // Please remember that Fantasy Isle is always planning a lot of great shows for you.
+		1800103, // Well, I wish I could continue all night long, but this is it for today. Thank you.
+		1800104 // We love you
 	};
 	
 	private static Map<String, Object[]> talks = new FastMap<String, Object[]>();
@@ -67,23 +76,23 @@ public class MC_Show extends Quest
 	
 	private void load()
 	{
-		talks.put("1", new Object[]{text[1],"2",1000});
-		talks.put("2", new Object[]{text[2],"3",6000});
-		talks.put("3", new Object[]{text[3],"4",4000});
-		talks.put("4", new Object[]{text[4],"5",5000});
-		talks.put("5", new Object[]{text[5],"6",3000});
-		talks.put("8", new Object[]{text[8],"9",5000});
-		talks.put("9", new Object[]{text[9],"10",5000});
-		talks.put("12", new Object[]{text[11],"13",5000});
-		talks.put("13", new Object[]{text[12],"14",5000});
-		talks.put("15", new Object[]{text[13],"16",5000});
-		talks.put("16", new Object[]{text[14],"17",5000});
-		talks.put("18", new Object[]{text[16],"19",5000});
-		talks.put("19", new Object[]{text[17],"20",5000});
-		talks.put("21", new Object[]{text[18],"22",5000});
-		talks.put("22", new Object[]{text[19],"23",400});
-		talks.put("25", new Object[]{text[20],"26",5000});
-		talks.put("26", new Object[]{text[21],"27",5400});
+		talks.put("1", new Object[]{messages[1],"2",1000});
+		talks.put("2", new Object[]{messages[2],"3",6000});
+		talks.put("3", new Object[]{messages[3],"4",4000});
+		talks.put("4", new Object[]{messages[4],"5",5000});
+		talks.put("5", new Object[]{messages[5],"6",3000});
+		talks.put("8", new Object[]{messages[8],"9",5000});
+		talks.put("9", new Object[]{messages[9],"10",5000});
+		talks.put("12", new Object[]{messages[11],"13",5000});
+		talks.put("13", new Object[]{messages[12],"14",5000});
+		talks.put("15", new Object[]{messages[13],"16",5000});
+		talks.put("16", new Object[]{messages[14],"17",5000});
+		talks.put("18", new Object[]{messages[16],"19",5000});
+		talks.put("19", new Object[]{messages[17],"20",5000});
+		talks.put("21", new Object[]{messages[18],"22",5000});
+		talks.put("22", new Object[]{messages[19],"23",400});
+		talks.put("25", new Object[]{messages[20],"26",5000});
+		talks.put("26", new Object[]{messages[21],"27",5400});
 		
 		walks.put("npc1_1" , new Object[]{-56546,-56384,-2008,"npc1_2",1200});
 		walks.put("npc1_2" , new Object[]{-56597,-56384,-2008,"npc1_3",1200});
@@ -225,9 +234,9 @@ public class MC_Show extends Quest
 		
 	}
 	
-	private void autoChat(L2Npc npc, String text, int type)
+	 private void autoChat(L2Npc npc, int stringId, int type)
 	{
-		npc.broadcastPacket(new NpcSay(npc.getObjectId(), type, npc.getNpcId(), text));
+		 npc.broadcastPacket(new NpcSay(npc.getObjectId(), type, npc.getNpcId(), stringId));
 	}
 	
 	@Override
@@ -238,7 +247,7 @@ public class MC_Show extends Quest
 			switch (npc.getNpcId())
 			{
 				case 32433:
-					autoChat(npc,text[0],1);
+					autoChat(npc,messages[0],1);
 					startQuestTimer("1",30000, npc, null);
 					break;
 				case 32431:
@@ -282,7 +291,7 @@ public class MC_Show extends Quest
 		{
 			if (event.equalsIgnoreCase("6"))
 			{
-				autoChat(npc,text[6],1);
+				autoChat(npc,messages[6],1);
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(-56511,-56647,-2008,36863));
 				npc.broadcastPacket(new PlaySound(1, "NS22_F", 0, 0, 0, 0, 0));
 				addSpawn(singers[0],-56344,-56328,-2008,32768,false,224000);
@@ -299,7 +308,7 @@ public class MC_Show extends Quest
 				switch (npc.getNpcId())
 				{
 					case 32433:
-						autoChat(npc,text[7],1);
+						autoChat(npc,messages[7],1);
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO,new L2CharPosition(-56698,-56430,-2008,32768));
 						startQuestTimer("8",12000, npc, null);
 						break;
@@ -329,7 +338,7 @@ public class MC_Show extends Quest
 				switch (npc.getNpcId())
 				{
 					case 32433:
-						autoChat(npc,text[10],1);
+						autoChat(npc,messages[10],1);
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO,new L2CharPosition(-56698,-56430,-2008,32768));
 						startQuestTimer("12",5000, npc, null);
 						break;
@@ -345,7 +354,7 @@ public class MC_Show extends Quest
 			}
 			else if (event.equalsIgnoreCase("17"))
 			{
-				autoChat(npc,text[15],1);
+				autoChat(npc,messages[15],1);
 				startQuestTimer("social1",2000,addSpawn(individuals[1],-56700,-56340,-2008,32768,false,32000), null);
 				startQuestTimer("18",9000, npc, null);
 			}
@@ -366,7 +375,7 @@ public class MC_Show extends Quest
 			}
 			else if (event.equalsIgnoreCase("28"))
 			{
-				autoChat(npc,"We love you.",0);
+				autoChat(npc,messages[22],0);
 				startQuestTimer("social1",1, npc, null);
 			}
 			else if (event.equalsIgnoreCase("29"))
@@ -386,10 +395,10 @@ public class MC_Show extends Quest
 			{
 				if (talks.containsKey(event))
 				{
-					String text = (String) talks.get(event)[0];
+					int stringId = (Integer) talks.get(event)[0];
 					String nextEvent = (String) talks.get(event)[1];
 					int time = (Integer) talks.get(event)[2];
-					autoChat(npc,text,1);
+					autoChat(npc,stringId,1);
 					startQuestTimer(nextEvent,time, npc, null);
 				}
 				else if (walks.containsKey(event))
