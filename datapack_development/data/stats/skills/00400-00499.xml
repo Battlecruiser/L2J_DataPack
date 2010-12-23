@@ -1271,6 +1271,7 @@
 		</for>
 	</skill>
 	<skill id="439" levels="1" name="Shield of Revenge">
+		<set name="magicLvl" val="79" />
 		<set name="hitTime" val="4000" />
 		<set name="mpConsume" val="78" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1279,7 +1280,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="counter_skill">
-				<add order="0x40" stat="vengeancePdam" val="40" />
+				<add order="0x40" stat="vengeancePdam" val="20" />
 			</effect>
 		</for>
 	</skill>
@@ -1381,6 +1382,7 @@
 		</for>
 	</skill>
 	<skill id="447" levels="1" name="Counterattack">
+		<set name="magicLvl" val="79" />
 		<set name="hitTime" val="500" />
 		<set name="mpConsume" val="29" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1984,12 +1986,13 @@
 		</enchant2for>
 	</skill>
 	<skill id="475" levels="1" name="Strike Back">
+		<set name="magicLvl" val="20" />
 		<set name="operateType" val="OP_TOGGLE" />
 		<set name="skillType" val="CONT" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect count="0x7fffffff" name="MpConsumePerLevel" time="3" val="0.2">
-				<add order="0x40" stat="vengeancePdam" val="10" />
+				<add order="0x40" stat="vengeancePdam" val="3" />
 			</effect>
 		</for>
 	</skill>
