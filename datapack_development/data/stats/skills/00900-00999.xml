@@ -592,7 +592,7 @@
 	<skill id="932" levels="9" name="Star Stone Gathering">
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DUMMY" />
-		<set name="magicLvl" val="83" />
+		<set name="magicLvl" val="81" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="hitTime" val="6000" />
 		<set name="staticHitTime" val="true" />
@@ -759,7 +759,8 @@
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" time="10" val="0" stackOrder="1" stackType="counter_skill">
-				<add order="0x40" stat="vengeancePdam" val="100" />
+				<add order="0x40" stat="vengeancePdam" val="90" />
+				<add order="0x40" stat="reflectDam" val="90" />
 			</effect>
 		</for>
 	</skill>
