@@ -185,7 +185,23 @@ public class Blow implements ISkillHandler
 				
 				// vengeance reflected damage
 				if ((reflect & Formulas.SKILL_REFLECT_VENGEANCE) != 0)
-					activeChar.reduceCurrentHp(damage, target, skill);
+				{
+					if (target instanceof L2PcInstance)
+					{
+						SystemMessage sm = new SystemMessage(SystemMessageId.COUNTERED_C1_ATTACK);
+						sm.addCharName(activeChar);
+						target.sendPacket(sm);
+					}
+					if (activeChar instanceof L2PcInstance)
+					{
+						SystemMessage sm = new SystemMessage(SystemMessageId.C1_PERFORMING_COUNTERATTACK);
+						sm.addCharName(target);
+						activeChar.sendPacket(sm);
+					}
+					// Formula from Diego post, 700 from rpg tests
+					double vegdamage = (700 * target.getPAtk(activeChar) / activeChar.getPDef(target));
+					activeChar.reduceCurrentHp(vegdamage, target, skill);
+				}
 				
 				// Manage attack or cast break of the target (calculating rate, sending message...)
 				if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
