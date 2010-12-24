@@ -76,7 +76,7 @@
 	</skill>
 	<skill id="5605" levels="2" name="Power of Apella">
 		<!-- Apella Heavy -->
-		<table name="#rCrit"> 0 0.02621 </table>
+		<table name="#rCrit"> 0 30 </table>
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="BUFF" />
@@ -84,7 +84,7 @@
 		<for>
 			<effect name="Buff" time="10" val="0" stackOrder="1" stackType="apella">
 				<mul order="0x30" stat="mDef" val="1.05" /> <!-- magic defense power is increased by 5% -->
-				<basemul order="0x30" stat="rCrit" val="#rCrit" />
+				<add order="0x40" stat="rCrit" val="#rCrit" />
 				<sub order="0x40" stat="cAtkAdd" val="3" /> <!-- critical damage is decreased by 3 -->
 			</effect>
 		</for>
