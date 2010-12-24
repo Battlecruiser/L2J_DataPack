@@ -79,7 +79,7 @@
 			<mul order="0x30" stat="pAtk" val="1.054" /> <!-- P. Atk +5.4% -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- MaxHP +492 -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<basemul order="0x30" stat="rCrit" val="0.0246" /> <!-- Critical Damage Chance +2.46% -->
+			<add order="0x40" stat="rCrit" val="24.6" /> <!-- Critical Damage Chance +24.6 -->
 			<add order="0x40" stat="cAtkAdd" val="234" /> <!-- Critical Damage +234 -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
@@ -293,7 +293,7 @@
 			<add order="0x40" stat="maxHp" val="492" /> <!-- MaxHP +492 -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
 			<add order="0x40" stat="cAtkAdd" val="234" /> <!-- Critical Damage +234 -->
-			<basemul order="0x30" stat="rCrit" val="0.0246" /> <!-- Critical Damage Chance +2.46% -->
+			<add order="0x40" stat="rCrit" val="24.6" /> <!-- Critical Damage Chance +24.6 -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
@@ -366,7 +366,7 @@
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Darkness Resistance +8 -->
 			<add order="0x40" stat="cAtkAdd" val="282" /> <!-- Critical Damage +282 -->
-			<basemul order="0x30" stat="rCrit" val="0.0295" /> <!-- Critical Rate +2.95% Increase -->
+			<add order="0x40" stat="rCrit" val="29.5" /> <!-- Critical Rate +29.5 Increase -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
@@ -474,7 +474,7 @@
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Maximum HP +492 effect -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Darkness Resistance +8 -->
 			<add order="0x40" stat="cAtkAdd" val="282" /> <!-- Critical Damage +282 -->
-			<basemul order="0x30" stat="rCrit" val="0.0295" /> <!-- Critical Rate +2.95% Increase -->
+			<add order="0x40" stat="rCrit" val="29.5" /> <!-- Critical Rate +29.5 Increase -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />

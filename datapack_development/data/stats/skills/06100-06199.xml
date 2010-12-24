@@ -101,7 +101,7 @@
 				<add order="0x40" stat="runSpd" val="15" />
 				<mul order="0x30" stat="pAtk" val="1.1" />
 				<mul order="0x30" stat="mAtk" val="1.15" />
-				<add order="0x40" stat="rCrit" val="5" />
+				<add order="0x40" stat="rCrit" val="50" />
 				<mul order="0x30" stat="cAtk" val="1.15" />
 				<add order="0x40" stat="mCritRate" val="2" />
 			</effect>
@@ -435,7 +435,7 @@
 		<!-- Lvl 2 Only if 2 blue eyes are present inside the zone -->
 		<!-- Lvl 3 Only if 3 blue eyes are present inside the zone -->
 		<!-- Lvl 4 Only if 4 blue eyes are present inside the zone -->
-		<table name="#rCrit"> 15 20 52 75 </table>
+		<table name="#rCrit"> 150 200 520 750 </table>
 		<set name="canBeDispeled" val="false" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />

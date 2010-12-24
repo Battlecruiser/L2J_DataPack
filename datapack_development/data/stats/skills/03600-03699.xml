@@ -623,7 +623,7 @@
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Darkness Resistance +8 -->
 			<add order="0x40" stat="cAtkAdd" val="282" /> <!-- Critical Damage +282 -->
-			<basemul order="0x30" stat="rCrit" val="0.0295" /> <!-- Critical Rate +2.95% Increase -->
+			<add order="0x40" stat="rCrit" val="29.5" /> <!-- Critical Rate +29.5 Increase -->
 			<add order="0x10" stat="cloak" val="1" />
 		</for>
 	</skill>
@@ -713,7 +713,7 @@
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Maximum HP +492 effect -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Darkness Resistance +8 -->
 			<add order="0x40" stat="cAtkAdd" val="282" /> <!-- Critical Damage +282 -->
-			<basemul order="0x30" stat="rCrit" val="0.0295" /> <!-- Critical Rate +2.95% Increase -->
+			<add order="0x40" stat="rCrit" val="29.5" /> <!-- Critical Rate +29.5 Increase -->
 			<add order="0x10" stat="cloak" val="1" />
 		</for>
 	</skill>
