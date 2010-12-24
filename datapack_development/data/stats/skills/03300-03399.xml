@@ -421,7 +421,7 @@
 			<mul order="0x30" stat="pAtk" val="1.054" /> <!-- P. Atk +5.4% -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- MaxHP +492 -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<basemul order="0x30" stat="rCrit" val="0.0246" /> <!-- Critical Damage Chance +2.46% -->
+			<add order="0x40" stat="rCrit" val="24.6" /> <!-- Critical Damage Chance +24.6 -->
 			<add order="0x40" stat="cAtkAdd" val="234" /> <!-- Critical Damage +234 -->
 			<add order="0x10" stat="cloak" val="1" />
 		</for>
