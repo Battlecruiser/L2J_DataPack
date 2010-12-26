@@ -693,34 +693,50 @@
 		</for>
 	</skill>
 	<skill id="6093" levels="1" name="Panther Hide">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="staticReuse" val="true" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="679" />
+		<set name="magicLvl" val="78" />
+		<set name="mpConsume" val="42" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="removedOnAnyActionExceptMove" val="true" />
+		<set name="removedOnDamage" val="true" />
 		<set name="reuseDelay" val="180000" />
+		<set name="skillType" val="BUFF" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Hide" time="30" val="0" stackOrder="1" stackType="hide">
+				<mul order="0x30" stat="runSpd" val="0.9" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6094" levels="11" name="Panther Cancel">
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 68 72 76 78 79 80 81 82 83 84 85 </table>
-		<set name="magicLvl" val="#magicLvl" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="maxNegated" val="2" />
 		<set name="mpConsume" val="42" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="power" val="25" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="60000" />
 		<set name="skillType" val="CANCEL" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6095" levels="15" name="Panther Dark Claw">
-		<table name="#power"> 469 758 1136 1327 1525 1727 1925 2020 2067 2112 2156 2200 2241 2282 2320 </table>
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 42 51 60 64 68 72 76 78 79 80 81 82 83 84 85 </table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#power"> 469 758 1136 1327 1525 1727 1925 2020 2067 2112 2156 2200 2241 2282 2320 </table>
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="20" />
 		<set name="hitTime" val="1500" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="42" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="#power" />
@@ -736,13 +752,14 @@
 		</for>
 	</skill>
 	<skill id="6096" levels="13" name="Panther Fatal Claw">
-		<table name="#power"> 3408 3980 4575 5180 5773 6060 6199 6335 6468 6598 6723 6844 6960 </table>
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 60 64 68 72 76 78 79 80 81 82 83 84 85 </table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#power"> 3408 3980 4575 5180 5773 6060 6199 6335 6468 6598 6723 6844 6960 </table>
 		<set name="castRange" val="40" />
+		<set name="coolTime" val="720" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
-		<set name="coolTime" val="720" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="42" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="#power" />
