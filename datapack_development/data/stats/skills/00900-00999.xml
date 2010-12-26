@@ -1299,9 +1299,6 @@
 		<set name="coolTime" val="200" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="800" />
-		<cond msgId="113" addName="1">
-			<target mindistance="200" />
-		</cond>
 		<for>
 			<effect name="EnemyCharge" noicon="1" val="0" />
 			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" stackOrder="1" stackType="stun" />
