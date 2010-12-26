@@ -165,7 +165,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_BEHIND_AURA" />
 		<for>
-			<effect name="ThrowUp" val="0" stackOrder="1" stackType="fly_away" />
+			<effect name="ThrowUp" noicon="1" val="0" stackOrder="1" stackType="fly_away" />
 			<effect name="Stun" time="9" val="0" effectPower="100" effectType="STUN" />
 		</for>
 	</skill>
