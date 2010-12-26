@@ -391,16 +391,21 @@
 		</for>
 	</skill>
 	<skill id="5638" levels="4" name="Feline Queen - Bless the Body">
+		<!-- Confirmed CT2.5 -->
 		<table name="#aggro"> 495 532 597 646 </table>
-		<table name="#stackOrder"> 3 4 5 6 </table>
+		<table name="#magicLvl"> 52 56 64 72 </table>
 		<table name="#maxHp"> 1.2 1.25 1.3 1.35 </table>
-		<table name="#mpConsume"> 48 52 60 67 </table>
+		<table name="#mpConsume"> 38 41 48 53 </table>
+		<table name="#mpInitialConsume"> 10 11 12 14 </table>
+		<table name="#stackOrder"> 3 4 5 6 </table>
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="BUFF" />
@@ -412,16 +417,21 @@
 		</for>
 	</skill>
 	<skill id="5639" levels="4" name="Feline Queen - Bless the Soul">
+		<!-- Confirmed CT2.5 -->
 		<table name="#aggro"> 495 532 582 635 </table>
+		<table name="#magicLvl"> 52 56 62 70 </table>
 		<table name="#stackOrder"> 3 4 5 6 </table>
 		<table name="#maxMp"> 1.2 1.25 1.3 1.35 </table>
-		<table name="#mpConsume"> 48 52 58 65 </table>
+		<table name="#mpConsume"> 38 41 46 52 </table>
+		<table name="#mpInitialConsume"> 10 11 12 13 </table>
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="BUFF" />
@@ -433,16 +443,21 @@
 		</for>
 	</skill>
 	<skill id="5640" levels="2" name="Feline Queen - Haste">
+		<!-- Confirmed CT2.5 -->
 		<table name="#aggro"> 418 495 </table>
 		<table name="#stackOrder"> 1 2 </table>
-		<table name="#mpConsume"> 39 48 </table>
+		<table name="#magicLvl"> 44 52 </table>
+		<table name="#mpConsume"> 31 38 </table>
+		<table name="#mpInitialConsume"> 8 10 </table>
 		<table name="#pAtkSpd"> 1.15 1.33 </table>
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="BUFF" />
@@ -466,12 +481,15 @@
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5643" levels="1" name="Unicorn Seraphim - Acumen">
-		<set name="aggroPoints" val="457" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="true" />
-		<set name="mpConsume" val="44" />
+		<set name="magicLvl" val="48" />
+		<set name="mpConsume" val="35" />
+		<set name="mpInitialConsume" val="9" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="BUFF" />
@@ -495,19 +513,22 @@
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5646" levels="2" name="Unicorn Seraphim - Wild Magic">
+		<!-- Confirmed CT2.5 -->
 		<!-- 3 lvl not_used, don't add it on skill -->
-		<table name="#magicLvl"> 64 72 </table>
 		<table name="#aggro"> 582 635 </table>
 		<table name="#mCritRate"> 2 3 </table>
 		<table name="#stackOrder"> 1 2 </table>
-		<table name="#mpConsume"> 58 65 </table>
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#magicLvl"> 64 72 </table>
+		<table name="#mpConsume"> 46 52 </table>
+		<table name="#mpInitialConsume"> 12 13 </table>
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="BUFF" />
@@ -519,38 +540,52 @@
 		</for>
 	</skill>
 	<skill id="5647" levels="3" name="Unicorn Seraphim - Clarity">
-		<table name="#MpConsumeRate"> 0.96 0.92 0.9 </table>
-		<table name="#mpConsume"> 54 62 69 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#aggro"> 549 611 655 </table>
+		<table name="#MagicalMpConsumeRate"> 0.9 0.85 0.8 </table>
+		<table name="#magicLvl"> 58 66 74 </table>
+		<table name="#mpConsume"> 43 49 55 </table>
+		<table name="#MpConsumeRate"> 0.96 0.93 0.9 </table>
+		<table name="#mpInitialConsume"> 11 13 14 </table>
 		<table name="#SpiritOre"> 1 2 3 </table>
+		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="true" />
 		<set name="itemConsumeCount" val="#SpiritOre" />
 		<set name="itemConsumeId" val="3031" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Buff" time="1200" val="0" stackOrder="#SpiritOre" stackType="cheap_magic">
-				<mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRate" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate" />
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="#MpConsumeRate" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="#MpConsumeRate" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="5648" levels="2" name="Unicorn Seraphim - Empower">
+		<!-- Confirmed CT2.5 -->
 		<table name="#aggro"> 418 495 </table>
+		<table name="#magicLvl"> 44 52 </table>
 		<table name="#mAtk"> 1.65 1.75 </table>
+		<table name="#mpConsume"> 31 38 </table>
+		<table name="#mpInitialConsume"> 8 10 </table>
 		<table name="#stackOrder"> 2 3 </table>
-		<table name="#mpConsume"> 39 48 </table>
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="BUFF" />
@@ -580,16 +615,21 @@
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5652" levels="3" name="Nightshade - Death Whisper">
+		<!-- Confirmed CT2.5 -->
 		<table name="#aggro"> 379 457 532 </table>
 		<table name="#cAtk"> 1.25 1.3 1.35 </table>
+		<table name="#magicLvl"> 40 48 56 </table>
+		<table name="#mpConsume"> 28 35 41 </table>
+		<table name="#mpInitialConsume"> 7 9 11 </table>
 		<table name="#stackOrder"> 1 2 3 </table>
-		<table name="#mpConsume"> 35 44 52 </table>
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="BUFF" />
@@ -601,8 +641,11 @@
 		</for>
 	</skill>
 	<skill id="5653" levels="2" name="Nightshade - Focus">
+		<!-- Confirmed CT2.5 -->
 		<table name="#aggro"> 418 495 </table>
-		<table name="#mpConsume"> 39 48 </table>
+		<table name="#magicLvl"> 44 52 </table>
+		<table name="#mpConsume"> 31 38 </table>
+		<table name="#mpInitialConsume"> 8 10 </table>
 		<table name="#rCrit"> 0.25 0.3 </table>
 		<table name="#stackOrder"> 2 3 </table>
 		<set name="aggroPoints" val="#aggro" />
@@ -610,7 +653,9 @@
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="BUFF" />
@@ -622,16 +667,21 @@
 		</for>
 	</skill>
 	<skill id="5654" levels="3" name="Nightshade - Guidance">
+		<!-- Confirmed CT2.5 -->
 		<table name="#accCombat"> 2 3 4 </table>
-		<table name="#stackOrder"> 1 2 3 </table>
 		<table name="#aggro"> 379 457 532 </table>
-		<table name="#mpConsume"> 35 44 52 </table>
+		<table name="#magicLvl"> 56 62 64 </table>
+		<table name="#mpConsume"> 28 35 41 </table>
+		<table name="#mpInitialConsume"> 7 9 11 </table>
+		<table name="#stackOrder"> 1 2 3 </table>
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="BUFF" />
@@ -786,19 +836,23 @@
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="5663" levels="5" name="Resistance to Ancient Sword">
-		<table name="#vuln"> 0.5 0.4 0.3 0.2 0.1 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#vuln"> 0.9 0.8 0.7 0.6 0.5 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="ancientWpnVuln" val="#vuln" />
 		</for>
 	</skill>
 	<skill id="5664" levels="5" name="Weakness to Ancient Sword">
-		<table name="#vuln"> 1.1 1.15 1.2 1.3 1.5 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#vuln"> 1.11 1.25 1.43 1.67 2 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="ancientWpnVuln" val="#vuln" />
 		</for>
