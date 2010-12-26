@@ -239,12 +239,13 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6041" levels="1" name="Phoenix Rush">
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
+		<set name="coolTime" val="200" />
+		<set name="effectRange" val="600" />
 		<set name="flyType" val="CHARGE" />
 		<set name="hitTime" val="800" />
-		<set name="coolTime" val="200" />
-		<set name="magicLvl" val="83" />
+		<set name="magicLvl" val="81" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="2372" />
@@ -252,29 +253,38 @@
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
+		<cond msgId="113" addName="1">
+			<target mindistance="200" />
+		</cond>
 		<for>
 			<effect name="EnemyCharge" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="6042" levels="1" name="Phoenix Cleanse">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="679" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="true" />
-		<set name="magicLvl" val="83" />
-		<set name="mpConsume" val="59" />
+		<set name="magicLvl" val="81" />
+		<set name="maxNegated" val="5" />
+		<set name="mpConsume" val="47" />
+		<set name="mpInitialConsume" val="12" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="180000" />
 		<set name="skillType" val="CANCEL_DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6043" levels="1" name="Phoenix Flame Feather">
+		<!-- Confirmed CT2.5 -->
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="true" />
 		<set name="magicLvl" val="83" />
-		<set name="mpConsume" val="109" />
+		<set name="mpConsume" val="87" />
+		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="70" />
 		<set name="reuseDelay" val="15000" />
@@ -283,6 +293,7 @@
 		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="6044" levels="1" name="Phoenix Flame Beak">
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="0" /> <!-- Fire -->
@@ -290,7 +301,7 @@
 		<set name="hitTime" val="1080" />
 		<set name="coolTime" val="720" />
 		<set name="nextActionAttack" val="true" />
-		<set name="magicLvl" val="83" />
+		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="80" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="2156" />
