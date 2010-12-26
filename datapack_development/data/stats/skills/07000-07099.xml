@@ -781,6 +781,9 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="800" />
 		<set name="coolTime" val="200" />
+		<cond msgId="113" addName="1">
+			<target mindistance="200" />
+		</cond>
 	</skill>
 	<skill id="7066" levels="1" name="Test Stun Charge">
 		<set name="target" val="TARGET_NONE" />
@@ -791,6 +794,9 @@
 		<set name="hitTime" val="800" />
 		<set name="saveVs" val="CON" />
 		<set name="coolTime" val="200" />
+		<cond msgId="113" addName="1">
+			<target mindistance="200" />
+		</cond>
 	</skill>
 	<skill id="7067" levels="1" name="Test Range Charge">
 		<set name="target" val="TARGET_NONE" />
@@ -801,6 +807,9 @@
 		<set name="coolTime" val="200" />
 		<set name="lvlDepend" val="2" />
 		<set name="saveVs" val="CON" />
+		<cond msgId="113" addName="1">
+			<target mindistance="200" />
+		</cond>
 	</skill>
 	<skill id="7068" levels="1" name="Test Steal Abnormal State">
 		<set name="target" val="TARGET_NONE" />
@@ -809,6 +818,9 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="200" />
+		<cond msgId="113" addName="1">
+			<target mindistance="200" />
+		</cond>
 	</skill>
 	<skill id="7069" levels="1" name="Test Abnormal State DD">
 		<set name="target" val="TARGET_NONE" />
@@ -817,6 +829,9 @@
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="200" />
+		<cond msgId="113" addName="1">
+			<target mindistance="200" />
+		</cond>
 	</skill>
 	<skill id="7070" levels="1" name="Test - Soul Eating Passive">
 		<set name="target" val="TARGET_NONE" />

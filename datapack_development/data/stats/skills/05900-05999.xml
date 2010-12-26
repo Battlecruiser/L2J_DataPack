@@ -206,6 +206,9 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="hitTime" val="800" />
+		<cond msgId="113" addName="1">
+			<target mindistance="200" />
+		</cond>
 	</skill>
 	<skill id="5926" levels="1" name="Breath Corruption">
 		<set name="target" val="TARGET_NONE" />

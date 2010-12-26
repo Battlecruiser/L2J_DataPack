@@ -1316,6 +1316,9 @@
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillRadius" val="100" />
 		<set name="castRange" val="2500" />
+		<cond msgId="113" addName="1">
+			<target mindistance="200" />
+		</cond>
 	</skill>
 	<skill id="885" levels="1" name="Air Blink">
 		<!-- Aurabird Falcon & Owl -->
@@ -1329,6 +1332,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="23000" />
+		<set name="simultaneousCast" val="true" />
 		<set name="skillRadius" val="100" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AURA" />
