@@ -799,10 +799,18 @@
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5480" levels="1" name="Balor Invincible Removal">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Baylor Skills -->
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="85" />
+		<set name="maxNegated" val="9" />
+		<!-- set name="negateStats" val="INVINCIBILITY" / -- TODO: Require Support -->
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="NEGATE" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="5481" levels="1" name="Transform Penalty">
 		<!-- You cannot be transformed while under this effect. -->
