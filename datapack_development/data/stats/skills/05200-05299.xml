@@ -352,13 +352,14 @@
 		</for>
 	</skill>
 	<skill id="5221" levels="1" name="Balor - Physical Close Range Weak Point">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
+		<!-- Baylor Skills -->
 		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_TOGGLE" />
+		<set name="skillType" val="CONT" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<effect name="Buff" time="1200" val="0">
+			<effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="0">
 				<mul order="0x30" stat="bluntWpnVuln" val="1.7" />
 				<mul order="0x30" stat="daggerWpnVuln" val="1.7" />
 				<mul order="0x30" stat="swordWpnVuln" val="1.7" />
@@ -370,114 +371,123 @@
 		</for>
 	</skill>
 	<skill id="5222" levels="1" name="Balor - Physical Long Range Weak Point">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
+		<!-- Baylor Skills -->
 		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_TOGGLE" />
+		<set name="skillType" val="CONT" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<effect name="Buff" time="1200" val="0">
+			<effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="0">
 				<mul order="0x30" stat="bowWpnVuln" val="1.7" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="5223" levels="1" name="Balor - Magic Weak Point">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
+		<!-- Baylor Skills -->
 		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_TOGGLE" />
+		<set name="skillType" val="CONT" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
 		<for>
-			<effect name="Buff" time="1200" val="0">
+			<effect count="0x7fffffff" name="ManaDamOverTime" time="3" val="0">
 				<mul order="0x30" stat="mDef" val="0.3" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="5224" levels="1" name="Berserk">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
+		<!-- Baylor Skills -->
+		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="75" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="6000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="berserker">
-				<add order="0x40" stat="pAtk" val="50" />
-				<add order="0x40" stat="pDef" val="50" />
+				<mul order="0x30" stat="pAtk" val="1.5" />
+				<mul order="0x30" stat="pDef" val="1.5" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="5225" levels="1" name="Invincible">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
+		<!-- Baylor Skills -->
+		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="3500" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="60" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="hitTime" val="3500" />
 		<set name="reuseDelay" val="6000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Invincible" time="5400" val="0" stackOrder="1" stackType="pd_up_special" special="invincible" />
+			<effect name="Invincible" time="30" val="0" special="invincible" stackOrder="1" stackType="pd_up_special" />
 		</for>
 	</skill>
 	<skill id="5226" levels="1" name="Imprison">
-		<!-- CT2.5 retail confirmed -->
-		<set name="magicLvl" val="85" />
-		<set name="isMagic" val="true" />
-		<set name="mpInitialConsume" val="15" />
-		<set name="mpConsume" val="60" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="DUMMY" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="hitTime" val="4000" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Baylor Skills -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="60" />
+		<set name="mpInitialConsume" val="15" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="5227" levels="1" name="Ground Strike">
-		<!-- CT2.5 retail confirmed -->
-		<set name="magicLvl" val="85" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Baylor Skills -->
 		<set name="baseCritRate" val="20" />
-		<set name="power" val="5800" />
-		<set name="mpConsume" val="187" />
-		<set name="target" val="TARGET_AREA" />
-		<set name="skillRadius" val="200" />
 		<set name="hitTime" val="2500" />
-		<set name="skillType" val="PDAM" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="187" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="150" />
-		<set name="effectRange" val="400" />
+		<set name="power" val="5800" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="5228" levels="1" name="Jump Attack">
-		<!-- CT2.5 retail confirmed -->
-		<set name="magicLvl" val="85" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Baylor Skills -->
 		<set name="baseCritRate" val="20" />
-		<set name="power" val="11786" />
-		<set name="mpConsume" val="373" />
-		<set name="target" val="TARGET_AREA" />
-		<set name="reuseDelay" val="1000" />
-		<set name="skillRadius" val="250" />
 		<set name="hitTime" val="2500" />
-		<set name="skillType" val="PDAM" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="373" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="11786" />
+		<set name="reuseDelay" val="1000" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="5229" levels="1" name="Strong Punch">
-		<!-- CT2.5 retail confirmed -->
-		<set name="magicLvl" val="85" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Baylor Skills -->
 		<set name="baseCritRate" val="20" />
-		<set name="lvlDepend" val="2" />
-		<set name="power" val="4640" />
-		<set name="mpConsume" val="75" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="flyRadius" val="500" />
-		<set name="flyType" val="THROW_UP" />
-		<set name="hitTime" val="2800" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="flyRadius" val="300" />
+		<set name="flyType" val="THROW_UP" />
+		<set name="hitTime" val="2800" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlDepend" val="2" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="75" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="4640" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Stun" time="3" val="0" effectPower="80" effectType="STUN" stackOrder="1" stackType="stun" />
 			<effect name="ThrowUp" noicon="1" val="0" />
