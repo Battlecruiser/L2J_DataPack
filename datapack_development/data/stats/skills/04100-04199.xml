@@ -443,9 +443,9 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Antharas Skills -->
 		<set name="magicLvl" val="70" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x40" stat="stunVuln" val="80" />
 			<sub order="0x40" stat="debuffVuln" val="100" />

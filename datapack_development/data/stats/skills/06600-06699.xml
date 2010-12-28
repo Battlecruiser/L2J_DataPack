@@ -322,31 +322,70 @@
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="6641" levels="1" name="Holy Ball">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="reuseDelay" val="5000" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Jinia Skills -->
+		<set name="castRange" val="650" />
 		<set name="coolTime" val="500" />
+		<set name="effectRange" val="900" />
+		<set name="element" val="4" /> <!-- Holy -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="88" />
+		<set name="mpInitialConsume" val="22" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="122" />
+		<set name="reuseDelay" val="5000" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6642" levels="1" name="Dash">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Kegor Skills -->
+		<set name="castRange" val="650" />
+		<set name="effectRange" val="900" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="20" />
+		<set name="flyType" val="CHARGE" />
+		<set name="hitTime" val="500" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="83" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="2319" />
 		<set name="reuseDelay" val="5000" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_ONE" />
 		<cond msgId="113" addName="1">
 			<target mindistance="200" />
 		</cond>
+		<for>
+			<effect name="EnemyCharge" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6643" levels="1" name="Holy Strike">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Kegor Skills -->
+		<set name="castRange" val="150" />
+		<set name="effectRange" val="400" />
+		<set name="element" val="4" /> <!-- Holy -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="2500" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="83" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="2319" />
 		<set name="reuseDelay" val="5000" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6644" levels="1" name="Ice Queen Freya">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Skills -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="6645" levels="1" name="Cooker Invincibility On">
 		<set name="target" val="TARGET_NONE" />
@@ -446,13 +485,29 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6662" levels="2" name="Pillar of Frozen">
-		<!-- All actions are prohibited for 7 seconds, and you lose 115 HP per second. -->
-		<!-- All actions are prohibited for 15 seconds, and you lose 115 HP per second. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Skills -->
+		<table name="#count"> 7 3 </table>
+		<table name="#dot"> 115 575 </table>
+		<table name="#ignoreResists"> false true </table>
+		<table name="#power"> 70 100 </table>
+		<table name="#stackOrder"> 1 2 </table>
+		<table name="#time"> 1 5 </table>
+		<set name="aggroPoints" val="100" />
+		<set name="ignoreResists" val="#ignoreResists" />
 		<set name="lvlDepend" val="1" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
+		<set name="skillType" val="DOT" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<!-- Level 1: 115HP * 1 during 7 seconds -->
+			<!-- Level 2: 115HP * 5 during 15 seconds -->
+			<effect count="#count" name="DamOverTime" time="#time" val="#dot" abnormal="ice" stackOrder="#stackOrder" stackType="freezing" />
+			<effect name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="6302" triggeredLevel="1" chanceType="ON_START" />
+		</for>
 	</skill>
 	<skill id="6663" levels="1" name="Level 76 Raid Boss">
 		<set name="target" val="TARGET_NONE" />

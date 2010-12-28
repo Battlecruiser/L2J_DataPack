@@ -1,20 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="6300" levels="1" name="Self-Destruction">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Skills -->
+		<set name="element" val="1" /> <!-- Water -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="5000" />
+		<set name="isSuicideAttack" val="true" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="123" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="3194" />
+		<set name="skillRadius" val="350" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="ChanceSkillTrigger" val="0" triggeredId="6662" triggeredLevel="1" chanceType="ON_START" />
+		</for>
 	</skill>
 	<skill id="6301" levels="2" name="Cold Mana's Fragment">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Skills -->
+		<table name="#mdot"> 300 150 </table>
+		<table name="#stackOrder"> 1 2 </table>
+		<set name="aggroPoints" val="1" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="66" />
+		<set name="mpInitialConsume" val="17" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="350" />
+		<set name="skillType" val="MDOT" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<!-- Level 1: 60MP * 5 during 10 seconds -->
+			<!-- Level 2: 30MP * 5 during 10 seconds -->
+			<effect count="2" name="ManaDamOverTime" time="5" val="#mdot" stackOrder="#stackOrder" stackType="force_meditation" />
+		</for>
 	</skill>
 	<skill id="6302" levels="1" name="Cold Air">
-		<!-- Increase P. Def. and M. Def by 15%. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Skills -->
+		<set name="aggroPoints" val="1" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="84" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" time="20" val="0" stackOrder="3" stackType="pd_up">
+				<mul order="0x30" stat="pDef" val="1.15" />
+				<mul order="0x30" stat="mDef" val="1.15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6303" levels="1" name="Trial of the Coup">
 		<set name="target" val="TARGET_ONE" />

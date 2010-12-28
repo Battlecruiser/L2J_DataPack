@@ -480,166 +480,435 @@
 		<set name="reuseDelay" val="1000" />
 	</skill>
 	<skill id="6274" levels="1" name="Eternal Blizzard">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="reuseDelay" val="10000" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Skills -->
 		<set name="coolTime" val="500" />
+		<set name="element" val="1" /> <!-- Water -->
+		<set name="elementPower" val="180" />
+		<set name="hitTime" val="10000" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="165" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="38976" />
+		<set name="reuseDelay" val="10000" />
+		<set name="skillRadius" val="3000" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="ChanceSkillTrigger" val="0" triggeredId="6662" triggeredLevel="2" chanceType="ON_START" />
+		</for>
 	</skill>
 	<skill id="6275" levels="1" name="Eternal Blizzard">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="reuseDelay" val="10000" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Skills -->
 		<set name="coolTime" val="500" />
+		<set name="element" val="1" /> <!-- Water -->
+		<set name="elementPower" val="180" />
+		<set name="hitTime" val="7000" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="166" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="45256" />
+		<set name="reuseDelay" val="10000" />
+		<set name="skillRadius" val="3000" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="ChanceSkillTrigger" val="0" triggeredId="6662" triggeredLevel="2" chanceType="ON_START" />
+		</for>
 	</skill>
 	<skill id="6276" levels="1" name="Eternal Blizzard">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="reuseDelay" val="10000" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Skills -->
 		<set name="coolTime" val="500" />
+		<set name="element" val="1" /> <!-- Water -->
+		<set name="elementPower" val="180" />
+		<set name="hitTime" val="10000" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="10000" />
+		<set name="skillRadius" val="3000" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="6277" levels="1" name="Summon Spirits">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="reuseDelay" val="10000" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Skills -->
+		<set name="castRange" val="800" />
 		<set name="coolTime" val="500" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="10000" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6278" levels="1" name="Ice Ball">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Skills -->
+		<set name="castRange" val="800" />
 		<set name="coolTime" val="500" />
+		<set name="effectRange" val="1100" />
+		<set name="element" val="1" /> <!-- Water -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="3000" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="168" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="18560" />
+		<set name="skillRadius" val="250" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="6279" levels="1" name="Attack Nearby Range">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Skills -->
 		<set name="coolTime" val="500" />
+		<set name="element" val="1" /> <!-- Water -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="5000" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="168" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="18560" />
+		<set name="skillRadius" val="450" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="6280" levels="1" name="Death Clack">
-		<!-- Freya's Cruel Sentence. Verdict will be made after 10 seconds. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="saveVs" val="CON" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Skills -->
+		<set name="castRange" val="1500" />
 		<set name="coolTime" val="800" />
+		<set name="effectRange" val="1100" />
+		<set name="ignoreResists" val="true" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="ChanceSkillTrigger" time="10" val="0" abnormal="bleed" triggeredId="6281" triggeredLevel="1" chanceType="ON_EXIT" stackOrder="1" stackType="death_clack" />
+		</for>
 	</skill>
 	<skill id="6281" levels="1" name="Cold Judgement">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Skills -->
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="18560" />
+		<set name="skillRadius" val="300" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="6282" levels="1" name="Reflect Magic">
-		<!-- Reflects Damage Magic back to the enemy for 10 seconds. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Skills -->
+		<set name="aggroPoints" val="204" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="45000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" time="10" val="0" stackOrder="1" stackType="reflect_magic_dd">
+				<add order="0x40" stat="vengeanceMdam" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6283" levels="1" name="Ice Storm">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Skills -->
+		<set name="castRange" val="1100" />
 		<set name="coolTime" val="500" />
+		<set name="effectRange" val="1200" />
+		<set name="element" val="1" /> <!-- Water -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="3500" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="18560" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6284" levels="1" name="Freya's Bless">
-		<!-- Increase P.Atk, P.Def. and Atk. Spd. by 15%. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Skills -->
+		<set name="aggroPoints" val="1" />
 		<set name="coolTime" val="500" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" time="300" val="0" stackOrder="3" stackType="pa_up">
+				<mul order="0x30" stat="pDef" val="1.15" />
+				<mul order="0x30" stat="pAtk" val="1.15" />
+				<mul order="0x30" stat="runSpd" val="1.15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6285" levels="1" name="Rage of Ice">
-		<!-- Increases Casting Spd. by 15% for 20 minutes. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Skills -->
+		<set name="aggroPoints" val="1" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" time="1800" val="0" stackOrder="1" stackType="casting_time_down">
+				<mul order="0x30" stat="mAtkSpd" val="1.15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6286" levels="1" name="Bless of Sword">
-		<!-- Increase HP Recovery Bonus by 15% and P. Def by 10% for 20 minutes. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Jinia Skills -->
+		<set name="aggroPoints" val="1" />
+		<set name="castRange" val="650" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Buff" time="300" val="0" stackOrder="2" stackType="pd_up">
+				<mul order="0x30" stat="pDef" val="1.1" />
+				<mul order="0x30" stat="regHp" val="1.15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6287" levels="1" name="Bless of Sword">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Kegor Skills -->
+		<set name="castRange" val="650" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" />
+		<set name="skillRadius" val="1100" />
+		<set name="skillType" val="HPMPCPHEAL_PERCENT" />
+		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="6288" levels="1" name="Jinia's Prayer">
-		<!-- Increase P.Def. and M.Def. by 300%. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Jinia Skills -->
+		<set name="aggroPoints" val="1" />
+		<set name="hitTime" val="5000" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="signal_a">
+				<mul order="0x30" stat="pDef" val="4" />
+				<mul order="0x30" stat="mDef" val="4" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6289" levels="1" name="Kegor's Courage">
-		<!-- Increase P.Atk. by 300%, M. Atk. by 300%, Atk. Spd. by 25% and Casting Spd. by 25%. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Kegor Skills -->
+		<set name="aggroPoints" val="1" />
+		<set name="hitTime" val="5000" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="signal_b">
+				<mul order="0x30" stat="pAtk" val="3" />
+				<mul order="0x30" stat="mAtk" val="3" />
+				<mul order="0x30" stat="pAtkSpd" val="1.25" />
+				<mul order="0x30" stat="mAtkSpd" val="1.25" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6290" levels="1" name="Power Strike">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Ice Knight Skills -->
+		<set name="castRange" val="150" />
+		<set name="effectRange" val="400" />
+		<set name="element" val="1" /> <!-- Water -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="2500" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="123" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="4563" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6291" levels="1" name="Power Strike">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Ice Knight Skills -->
+		<set name="element" val="1" /> <!-- Water -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="3500" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="123" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="4563" />
+		<set name="skillRadius" val="300" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="6292" levels="1" name="Rush">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="nextActionAttack" val="true" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Ice Knight Skills -->
+		<set name="castRange" val="900" />
 		<set name="coolTime" val="200" />
+		<set name="effectRange" val="1100" />
+		<set name="element" val="1" /> <!-- Water -->
+		<set name="elementPower" val="20" />
+		<set name="flyType" val="CHARGE" />
+		<set name="hitTime" val="500" />
+		<set name="magicLvl" val="85" />
+		<set name="mpInitialConsume" val="20" />
+		<set name="nextActionAttack" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="4563" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_ONE" />
+		<cond msgId="113" addName="1">
+			<target mindistance="250" />
+		</cond>
+		<for>
+			<effect name="EnemyCharge" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6293" levels="1" name="Power Strike">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Ice Knight Skills -->
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="element" val="1" /> <!-- Water -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="2500" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="123" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="4563" />
+		<set name="skillRadius" val="250" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
 	<skill id="6294" levels="1" name="Leader's Roar">
-		<!-- Increase P.Atk. by 15%. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Ice Knight Skills -->
+		<set name="aggroPoints" val="1" />
+		<set name="hitTime" val="34400" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="66" />
+		<set name="mpInitialConsume" val="17" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="500" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_CLAN" />
+		<for>
+			<effect name="Buff" time="300" val="0" stackOrder="3" stackType="pa_up">
+				<mul order="0x30" stat="pAtk" val="1.15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6295" levels="1" name="Point Target">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Ice Knight Skills -->
+		<set name="castRange" val="800" />
 		<set name="coolTime" val="500" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="2500" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6296" levels="1" name="Rush">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="nextActionAttack" val="true" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Ice Knight Skills -->
+		<set name="castRange" val="900" />
 		<set name="coolTime" val="200" />
+		<set name="effectRange" val="1100" />
+		<set name="element" val="1" /> <!-- Water -->
+		<set name="elementPower" val="20" />
+		<set name="flyType" val="CHARGE" />
+		<set name="hitTime" val="500" />
+		<set name="magicLvl" val="85" />
+		<set name="mpInitialConsume" val="20" />
+		<set name="nextActionAttack" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="4563" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_ONE" />
+		<cond msgId="113" addName="1">
+			<target mindistance="250" />
+		</cond>
+		<for>
+			<effect name="EnemyCharge" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6297" levels="1" name="Cylinder Throw">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Ice Knight Skills -->
+		<set name="castRange" val="1100" />
 		<set name="coolTime" val="500" />
+		<set name="effectRange" val="1400" />
+		<set name="element" val="1" /> <!-- Water -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="2500" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="123" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="4563" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6298" levels="1" name="Summon Follower Knight">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Ice Knight Skills -->
+		<set name="aggroPoints" val="1" />
+		<set name="castRange" val="900" />
 		<set name="coolTime" val="500" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6299" levels="1" name="Breath of Ice Palace - Ice Storm">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="reuseDelay" val="15000" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Skills -->
 		<set name="coolTime" val="500" />
+		<set name="element" val="1" /> <!-- Water -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="3000" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="1547" />
+		<set name="reuseDelay" val="15000" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="ChanceSkillTrigger" val="0" triggeredId="6662" triggeredLevel="1" chanceType="ON_START" />
+		</for>
 	</skill>
 </list>
