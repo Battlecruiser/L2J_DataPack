@@ -493,8 +493,10 @@
 		<table name="#power"> 70 100 </table>
 		<table name="#stackOrder"> 1 2 </table>
 		<table name="#time"> 1 5 </table>
+		<table name="#time2"> 7 15 </table>
 		<set name="aggroPoints" val="100" />
 		<set name="ignoreResists" val="#ignoreResists" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -505,7 +507,8 @@
 		<for>
 			<!-- Level 1: 115HP * 1 during 7 seconds -->
 			<!-- Level 2: 115HP * 5 during 15 seconds -->
-			<effect count="#count" name="DamOverTime" time="#time" val="#dot" abnormal="ice" stackOrder="#stackOrder" stackType="freezing" />
+			<effect name="ImmobileBuff" time="#time2" val="0" abnormal="ice" stackOrder="#stackOrder" stackType="freezing" />
+			<effect count="#count" name="DamOverTime" time="#time" noicon="1" val="#dot" />
 			<effect name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="6302" triggeredLevel="1" chanceType="ON_START" />
 		</for>
 	</skill>
@@ -858,18 +861,44 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6697" levels="1" name="Eternal Blizzard">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="reuseDelay" val="7000" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Skills -->
 		<set name="coolTime" val="500" />
+		<set name="element" val="1" /> <!-- Water -->
+		<set name="elementPower" val="180" />
+		<set name="hitTime" val="7000" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="45257" />
+		<set name="reuseDelay" val="7000" />
+		<set name="skillRadius" val="3000" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="ChanceSkillTrigger" val="0" triggeredId="6698" triggeredLevel="1" chanceType="ON_START" />
+		</for>
 	</skill>
 	<skill id="6698" levels="1" name="Pillar of Frozen - Eternal Ice">
-		<!-- Actions prohibited for 15 seconds. HP decreases by 115 and MP decreases by 5% per second. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="saveVs" val="CON" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Freya Skills -->
+		<set name="aggroPoints" val="100" />
+		<set name="ignoreResists" val="true" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="DOT" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="ImmobileBuff" time="15" val="0" abnormal="ice" stackOrder="3" stackType="freezing" />
+			<!-- 115HP * 5 during 15 seconds -->
+			<effect count="3" name="DamOverTime" time="5" noicon="1" val="575" />
+			<!-- 5MP * 5 during 15 seconds -->
+			<effect count="3" name="ManaDamOverTime" time="5" noicon="1" val="25" />
+			<effect name="ChanceSkillTrigger" time="15" noicon="1" val="0" triggeredId="6302" triggeredLevel="1" chanceType="ON_EXIT" />
+		</for>
 	</skill>
 </list>
