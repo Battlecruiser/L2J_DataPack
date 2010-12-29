@@ -219,7 +219,7 @@ public class Loto implements IBypassHandler
 			iu.addModifiedItem(adenaupdate);
 			player.sendPacket(iu);
 			
-			filename = (npc.getHtmlPath(npcId, 3));
+			filename = (npc.getHtmlPath(npcId, 6));
 			html.setFile(player.getHtmlPrefix(), filename);
 		}
 		else if (val == 23) //23 - current lottery jackpot
