@@ -157,7 +157,7 @@ public class Loto implements IBypassHandler
 			if (count == 5)
 			{
 				String search = "0\">Return";
-				String replace = "22\">The winner selected the numbers above.";
+				String replace = "22\">Your lucky numbers have been selected above.";
 				html.replace(search, replace);
 			}
 		}
@@ -271,11 +271,16 @@ public class Loto implements IBypassHandler
 			}
 			if (message.isEmpty())
 			{
-				message += "There is no winning lottery ticket...<br>";
+				message += "There has been no winning lottery ticket.<br>";
 			}
 			html.replace("%result%", message);
 		}
-		else if (val > 24) // >24 - check lottery ticket by item object id
+		else if (val == 25) //25 - lottery instructions
+		{
+			filename = (npc.getHtmlPath(npcId, 2));
+			html.setFile(player.getHtmlPrefix(), filename);
+		}
+		else if (val > 25) // >25 - check lottery ticket by item object id
 		{
 			int lotonumber = Lottery.getInstance().getId();
 			L2ItemInstance item = player.getInventory().getItemByObjectId(val);
