@@ -42,7 +42,8 @@ public class PartyInfo implements IUserCommandHandler
 		
 		if (!activeChar.isInParty())
 		{
-			activeChar.sendMessage("You are not in a party.");
+			activeChar.sendPacket(new SystemMessage(SystemMessageId.PARTY_INFORMATION));
+			activeChar.sendPacket(new SystemMessage(SystemMessageId.FRIEND_LIST_FOOTER));
 			return false;
 		}
 		
@@ -78,7 +79,7 @@ public class PartyInfo implements IUserCommandHandler
 		
 		activeChar.sendMessage("Members: " + memberCount + "/9");
 		
-		activeChar.sendPacket(new SystemMessage(SystemMessageId.WAR_LIST));
+		activeChar.sendPacket(new SystemMessage(SystemMessageId.FRIEND_LIST_FOOTER));
 		return true;
 	}
 	
