@@ -31,7 +31,7 @@ public class ManaPotion extends ItemSkills
 	{
 		if (!Config.L2JMOD_ENABLE_MANA_POTIONS_SUPPORT)
 		{
-			playable.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
+			playable.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOTHING_HAPPENED));
 			return;
 		}
 		super.useItem(playable, item, forceUse);

@@ -78,7 +78,7 @@ public class ManorManager implements IBypassHandler
 			if (CastleManorManager.getInstance().isUnderMaintenance())
 			{
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-				activeChar.sendPacket(new SystemMessage(SystemMessageId.THE_MANOR_SYSTEM_IS_CURRENTLY_UNDER_MAINTENANCE));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MANOR_SYSTEM_IS_CURRENTLY_UNDER_MAINTENANCE));
 				return true;
 			}
 			
@@ -100,7 +100,7 @@ public class ManorManager implements IBypassHandler
 						break;
 					if (castleId != castle.getCastleId())
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.HERE_YOU_CAN_BUY_ONLY_SEEDS_OF_S1_MANOR);
+						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.HERE_YOU_CAN_BUY_ONLY_SEEDS_OF_S1_MANOR);
 						sm.addString(manager.getCastle().getName());
 						activeChar.sendPacket(sm);
 					}
@@ -136,7 +136,7 @@ public class ManorManager implements IBypassHandler
 					if (!isCastle)
 						break;
 					if (castle.isNextPeriodApproved())
-						activeChar.sendPacket(new SystemMessage(SystemMessageId.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_6_AM_AND_8_PM));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_6_AM_AND_8_PM));
 					else
 						activeChar.sendPacket(new ExShowSeedSetting(castle.getCastleId()));
 					break;
@@ -144,7 +144,7 @@ public class ManorManager implements IBypassHandler
 					if (!isCastle)
 						break;
 					if (castle.isNextPeriodApproved())
-						activeChar.sendPacket(new SystemMessage(SystemMessageId.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_6_AM_AND_8_PM));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_6_AM_AND_8_PM));
 					else
 						activeChar.sendPacket(new ExShowCropSetting(castle.getCastleId()));
 					break;

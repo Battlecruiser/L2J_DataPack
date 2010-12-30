@@ -71,7 +71,7 @@ public class SummonFriend implements ISkillHandler
 					{
 						if(!targetPlayer.teleportRequest(activePlayer, skill))
 						{
-							SystemMessage sm = new SystemMessage(SystemMessageId.C1_ALREADY_SUMMONED);
+							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_ALREADY_SUMMONED);
 							sm.addString(target.getName());
 							activePlayer.sendPacket(sm);
 							continue;

@@ -85,7 +85,7 @@ public class Unlock implements ISkillHandler
 				if ((!door.isUnlockable() && skill.getSkillType() != L2SkillType.UNLOCK_SPECIAL)
 						|| door.getFort() != null)
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessageId.UNABLE_TO_UNLOCK_DOOR));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.UNABLE_TO_UNLOCK_DOOR));
 					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
@@ -97,7 +97,7 @@ public class Unlock implements ISkillHandler
 						door.onOpen();
 				}
 				else
-					activeChar.sendPacket(new SystemMessage(SystemMessageId.FAILED_TO_UNLOCK_DOOR));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FAILED_TO_UNLOCK_DOOR));
 			}
 			else if (target instanceof L2ChestInstance)
 			{

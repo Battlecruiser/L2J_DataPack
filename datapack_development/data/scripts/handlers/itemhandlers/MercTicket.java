@@ -51,19 +51,19 @@ public class MercTicket implements IItemHandler
 		//add check that certain tickets can only be placed in certain castles
 		if (MercTicketManager.getInstance().getTicketCastleId(itemId) != castleId)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.MERCENARIES_CANNOT_BE_POSITIONED_HERE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.MERCENARIES_CANNOT_BE_POSITIONED_HERE));
 			return;
 		}
 		
 		if (!activeChar.isCastleLord(castleId))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_AUTHORITY_TO_POSITION_MERCENARIES));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_AUTHORITY_TO_POSITION_MERCENARIES));
 			return;
 		}
 		
 		if (castle.getSiege().getIsInProgress())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE));
 			return;
 		}
 		
@@ -71,7 +71,7 @@ public class MercTicket implements IItemHandler
 		if (SevenSigns.getInstance().getCurrentPeriod() != SevenSigns.PERIOD_SEAL_VALIDATION)
 		{
 			//_log.warning("Someone has tried to spawn a guardian during Quest Event Period of The Seven Signs.");
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE));
 			return;
 		}
 		//Checking the Seal of Strife status
@@ -81,7 +81,7 @@ public class MercTicket implements IItemHandler
 				if (SevenSigns.getInstance().checkIsDawnPostingTicket(itemId))
 				{
 					//_log.warning("Someone has tried to spawn a Dawn Mercenary though the Seal of Strife is not controlled by anyone.");
-					activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE));
 					return;
 				}
 				break;
@@ -89,7 +89,7 @@ public class MercTicket implements IItemHandler
 				if (!SevenSigns.getInstance().checkIsRookiePostingTicket(itemId))
 				{
 					//_log.warning("Someone has tried to spawn a non-Rookie Mercenary though the Seal of Strife is controlled by Revolutionaries of Dusk.");
-					activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE));
 					return;
 				}
 				break;
@@ -99,23 +99,23 @@ public class MercTicket implements IItemHandler
 		
 		if(MercTicketManager.getInstance().isAtCasleLimit(item.getItemId()))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE));
 			return;
 		}
 		
 		if (MercTicketManager.getInstance().isAtTypeLimit(item.getItemId()))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE));
 			return;
 		}
 		if (MercTicketManager.getInstance().isTooCloseToAnotherTicket(activeChar.getX(), activeChar.getY(), activeChar.getZ()))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.POSITIONING_CANNOT_BE_DONE_BECAUSE_DISTANCE_BETWEEN_MERCENARIES_TOO_SHORT));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.POSITIONING_CANNOT_BE_DONE_BECAUSE_DISTANCE_BETWEEN_MERCENARIES_TOO_SHORT));
 			return;
 		}
 		
 		MercTicketManager.getInstance().addTicket(item.getItemId(), activeChar, null);
 		activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false); // Remove item from char's inventory
-		activeChar.sendPacket(new SystemMessage(SystemMessageId.PLACE_CURRENT_LOCATION_DIRECTION).addItemName(item));
+		activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PLACE_CURRENT_LOCATION_DIRECTION).addItemName(item));
 	}
 }

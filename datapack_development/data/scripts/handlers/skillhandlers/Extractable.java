@@ -81,13 +81,13 @@ public class Extractable implements ISkillHandler
 		if (player.isSubClassActive() && skill.getReuseDelay() > 0)
 		{
 			// TODO: remove this once skill reuse will be global for main/subclass
-			player.sendPacket(new SystemMessage(SystemMessageId.MAIN_CLASS_SKILL_ONLY));
-			player.sendPacket(new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED).addSkillName(skill));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.MAIN_CLASS_SKILL_ONLY));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED).addSkillName(skill));
 			return;
 		}
 		if (createItemID[0] <= 0 || createItemID.length == 0 )
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.NOTHING_INSIDE_THAT));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOTHING_INSIDE_THAT));
 			return;
 		}
 		else
@@ -100,7 +100,7 @@ public class Extractable implements ISkillHandler
 				if (ItemTable.getInstance().createDummyItem(createItemID[i]) == null)
 				{
 					_log.warning("createItemID " + createItemID[i] + " doesn't have template!");
-					player.sendPacket(new SystemMessage(SystemMessageId.NOTHING_INSIDE_THAT));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOTHING_INSIDE_THAT));
 					return;
 				}
 				
@@ -111,8 +111,8 @@ public class Extractable implements ISkillHandler
 					for (int j = 0; j < createAmount[i]; j++)
 						player.addItem("Extract", createItemID[i], 1, targets[0], false);
 				}
-				SystemMessage sm = new SystemMessage(SystemMessageId.EARNED_S2_S1_S);;
-				SystemMessage sm2 = new SystemMessage(SystemMessageId.EARNED_ADENA);;
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.EARNED_S2_S1_S);;
+				SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.EARNED_ADENA);;
 				if (createItemID[i] == 57)
 				{
 					sm2.addNumber(createAmount[i]);

@@ -50,13 +50,13 @@ public class ClanWarehouse implements IBypassHandler
 		
 		if (activeChar.getClan() == null)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_USE_CLAN_WAREHOUSE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_USE_CLAN_WAREHOUSE));
 			return false;
 		}
 		
 		if (activeChar.getClan().getLevel() == 0)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.ONLY_LEVEL_1_CLAN_OR_HIGHER_CAN_USE_WAREHOUSE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_LEVEL_1_CLAN_OR_HIGHER_CAN_USE_WAREHOUSE));
 			return false;
 		}
 		
@@ -115,7 +115,7 @@ public class ClanWarehouse implements IBypassHandler
 		
 		if ((player.getClanPrivileges() & L2Clan.CP_CL_VIEW_WAREHOUSE) != L2Clan.CP_CL_VIEW_WAREHOUSE)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_USE_CLAN_WAREHOUSE));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_THE_RIGHT_TO_USE_CLAN_WAREHOUSE));
 			return;
 		}
 		
@@ -123,7 +123,7 @@ public class ClanWarehouse implements IBypassHandler
 		
 		if (player.getActiveWarehouse().getSize() == 0)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.NO_ITEM_DEPOSITED_IN_WH));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NO_ITEM_DEPOSITED_IN_WH));
 			return;
 		}
 		

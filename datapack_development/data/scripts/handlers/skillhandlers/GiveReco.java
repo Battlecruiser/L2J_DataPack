@@ -57,7 +57,7 @@ public class GiveReco implements ISkillHandler
 				{
 					target.setRecomHave(reco+power);
 
-					SystemMessage sm = new SystemMessage(SystemMessageId.YOU_OBTAINED_S1_RECOMMENDATIONS);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_OBTAINED_S1_RECOMMENDATIONS);
 					sm.addNumber(power);
 					
 					target.sendPacket(sm);
@@ -65,7 +65,7 @@ public class GiveReco implements ISkillHandler
 					target.sendPacket(new ExVoteSystemInfo(target));
 				}
 				else
-					target.sendPacket(new SystemMessage(SystemMessageId.NOTHING_HAPPENED));
+					target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOTHING_HAPPENED));
 			}
 		}
 	}

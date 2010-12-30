@@ -95,7 +95,7 @@ public class AdminBan implements IAdminCommandHandler {
 		
 		if (targetPlayer != null && targetPlayer.equals(activeChar))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.CANNOT_USE_ON_YOURSELF));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_USE_ON_YOURSELF));
 			return false;
 		}
 		

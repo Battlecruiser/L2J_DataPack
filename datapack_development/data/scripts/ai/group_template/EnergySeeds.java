@@ -182,12 +182,12 @@ public class EnergySeeds extends L2AttackableAIScript
 				}
 				if (Rnd.get(100) < 33)
 				{
-					caster.sendPacket(new SystemMessage(SystemMessageId.THE_COLLECTION_HAS_SUCCEEDED));
+					caster.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_COLLECTION_HAS_SUCCEEDED));
 					caster.addItem("Loot", itemId, Rnd.get(RATE + 1, 2 * RATE), null, true);
 				}
 				else
 				{
-					caster.sendPacket(new SystemMessage(SystemMessageId.THE_COLLECTION_HAS_SUCCEEDED));
+					caster.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_COLLECTION_HAS_SUCCEEDED));
 					caster.addItem("Loot", itemId, Rnd.get(1, RATE), null, true);
 				}
 				seedCollectEvent(caster, npc, spawn._seedId);

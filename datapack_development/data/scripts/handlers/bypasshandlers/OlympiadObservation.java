@@ -225,7 +225,7 @@ public class OlympiadObservation implements IBypassHandler
 				{
 					if (OlympiadManager.getInstance().isRegisteredInComp(activeChar))
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessageId.WHILE_YOU_ARE_ON_THE_WAITING_LIST_YOU_ARE_NOT_ALLOWED_TO_WATCH_THE_GAME));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WHILE_YOU_ARE_ON_THE_WAITING_LIST_YOU_ARE_NOT_ALLOWED_TO_WATCH_THE_GAME));
 						return false;
 					}
 					if (!TvTEvent.isInactive() && TvTEvent.isPlayerParticipant(activeChar.getObjectId()))

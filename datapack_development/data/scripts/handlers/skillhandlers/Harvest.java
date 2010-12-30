@@ -74,7 +74,7 @@ public class Harvest implements ISkillHandler
 			
 			if (activeChar.getObjectId() != target.getSeederId())
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_HARVEST);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_HARVEST);
 				activeChar.sendPacket(sm);
 				continue;
 			}
@@ -107,13 +107,13 @@ public class Harvest implements ISkillHandler
 						}
 						if (send)
 						{
-							SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_PICKED_UP_S1_S2);
+							SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_PICKED_UP_S1_S2);
 							smsg.addNumber(total);
 							smsg.addItemName(cropId);
 							activeChar.sendPacket(smsg);
 							if (activeChar.getParty() != null)
 							{
-								smsg = new SystemMessage(SystemMessageId.C1_HARVESTED_S3_S2S);
+								smsg = SystemMessage.getSystemMessage(SystemMessageId.C1_HARVESTED_S3_S2S);
 								smsg.addString(activeChar.getName());
 								smsg.addNumber(total);
 								smsg.addItemName(cropId);
@@ -128,10 +128,10 @@ public class Harvest implements ISkillHandler
 					}
 				}
 				else
-					activeChar.sendPacket(new SystemMessage(SystemMessageId.THE_HARVEST_HAS_FAILED));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_HARVEST_HAS_FAILED));
 			}
 			else
-				activeChar.sendPacket(new SystemMessage(SystemMessageId.THE_HARVEST_FAILED_BECAUSE_THE_SEED_WAS_NOT_SOWN));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_HARVEST_FAILED_BECAUSE_THE_SEED_WAS_NOT_SOWN));
 		}
 		
 	}

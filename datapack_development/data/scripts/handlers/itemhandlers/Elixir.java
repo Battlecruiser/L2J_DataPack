@@ -31,7 +31,7 @@ public class Elixir extends ItemSkills
 	{
 		if (!(playable instanceof L2PcInstance))
 		{
-			playable.sendPacket(new SystemMessage(SystemMessageId.ITEM_NOT_FOR_PETS));
+			playable.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ITEM_NOT_FOR_PETS));
 			return;
 		}
 		super.useItem(playable, item, forceUse);

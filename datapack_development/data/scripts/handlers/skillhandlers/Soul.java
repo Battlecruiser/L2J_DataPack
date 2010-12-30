@@ -67,7 +67,7 @@ public class Soul implements ISkillHandler
 				}
 				else
 				{
-					SystemMessage sm = new SystemMessage(SystemMessageId.SOUL_CANNOT_BE_INCREASED_ANYMORE);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SOUL_CANNOT_BE_INCREASED_ANYMORE);
 					player.sendPacket(sm);
 					return;
 				}

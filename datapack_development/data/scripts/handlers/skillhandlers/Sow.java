@@ -96,10 +96,10 @@ public class Sow implements ISkillHandler
 			{
 				activeChar.sendPacket(new PlaySound("Itemsound.quest_itemget"));
 				target.setSeeded((L2PcInstance)activeChar);
-				sm = new SystemMessage(SystemMessageId.THE_SEED_WAS_SUCCESSFULLY_SOWN);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_SEED_WAS_SUCCESSFULLY_SOWN);
 			}
 			else
-				sm = new SystemMessage(SystemMessageId.THE_SEED_WAS_NOT_SOWN);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_SEED_WAS_NOT_SOWN);
 			
 			if (activeChar.getParty() == null)
 				activeChar.sendPacket(sm);

@@ -91,7 +91,7 @@ public class ExtractableItems implements IItemHandler
 		
 		if (!created)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.NOTHING_INSIDE_THAT));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOTHING_INSIDE_THAT));
 		}
 	}
 }

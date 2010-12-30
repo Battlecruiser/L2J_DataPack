@@ -46,7 +46,7 @@ public class ChannelDelete implements IUserCommandHandler
 			{
 				L2CommandChannel channel = activeChar.getParty().getCommandChannel();
 				
-				SystemMessage sm = new SystemMessage(SystemMessageId.COMMAND_CHANNEL_DISBANDED);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.COMMAND_CHANNEL_DISBANDED);
 				channel.broadcastToChannelMembers(sm);
 				
 				channel.disbandChannel();

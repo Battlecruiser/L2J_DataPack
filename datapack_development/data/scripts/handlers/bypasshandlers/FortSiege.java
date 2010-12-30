@@ -45,18 +45,18 @@ public class FortSiege implements IBypassHandler
 				if (System.currentTimeMillis() < TerritoryWarManager.getInstance().getTWStartTimeInMillis()
 						&& TerritoryWarManager.getInstance().getIsRegistrationOver())
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessageId.NOT_SIEGE_REGISTRATION_TIME2));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_SIEGE_REGISTRATION_TIME2));
 					return false;
 				}
 				else if (System.currentTimeMillis() > TerritoryWarManager.getInstance().getTWStartTimeInMillis()
 						&& TerritoryWarManager.getInstance().isTWChannelOpen())
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessageId.NOT_SIEGE_REGISTRATION_TIME2));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_SIEGE_REGISTRATION_TIME2));
 					return false;
 				}
 				else if (((L2Npc)target).getFort().getSiege().registerAttacker(activeChar, false))
 				{
-					SystemMessage sm = new SystemMessage(SystemMessageId.REGISTERED_TO_S1_FORTRESS_BATTLE);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.REGISTERED_TO_S1_FORTRESS_BATTLE);
 					sm.addString(((L2Npc)target).getFort().getName());
 					activeChar.sendPacket(sm);
 					((L2Npc)target).showChatWindow(activeChar, 7);

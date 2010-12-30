@@ -39,7 +39,7 @@ public class BeastSpice implements IItemHandler
 		
 		if (!(activeChar.getTarget() instanceof L2FeedableBeastInstance))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
 			return;
 		}
 		

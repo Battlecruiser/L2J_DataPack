@@ -362,37 +362,37 @@ public class Stage1 extends Quest
 		L2Party party = player.getParty();
 		if (party == null)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.NOT_IN_PARTY_CANT_ENTER));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_IN_PARTY_CANT_ENTER));
 			return false;
 		}
 		L2CommandChannel channel = player.getParty().getCommandChannel();
 		if (channel == null)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.NOT_IN_COMMAND_CHANNEL_CANT_ENTER));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_IN_COMMAND_CHANNEL_CANT_ENTER));
 			return false;
 		}
 		else if (channel.getChannelLeader() != player)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER));
 			return false;
 		}
 		else if (channel.getMemberCount() < MIN_PLAYERS || channel.getMemberCount() > MAX_PLAYERS)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.PARTY_EXCEEDED_THE_LIMIT_CANT_ENTER));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PARTY_EXCEEDED_THE_LIMIT_CANT_ENTER));
 			return false;
 		}
 		for (L2PcInstance partyMember : party.getPartyMembers())
 		{
 			if (partyMember.getLevel() < 75)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
 				sm.addPcName(partyMember);
 				party.broadcastToPartyMembers(sm);
 				return false;
 			}
 			if (!Util.checkIfInRange(1000, player, partyMember, true))
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
 				sm.addPcName(partyMember);
 				party.broadcastToPartyMembers(sm);
 				return false;
@@ -400,7 +400,7 @@ public class Stage1 extends Quest
 			Long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), INSTANCEID);
 			if (System.currentTimeMillis() < reentertime)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.C1_MAY_NOT_REENTER_YET);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_REENTER_YET);
 				sm.addPcName(partyMember);
 				party.broadcastToPartyMembers(sm);
 				return false;
@@ -425,7 +425,7 @@ public class Stage1 extends Quest
 		{
 			if (!(world instanceof SOD1World))
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER));
 				return 0;
 			}
 			teleportPlayer(player, coords, world.instanceId);
@@ -622,7 +622,7 @@ public class Stage1 extends Quest
 			while(reenter.get(Calendar.DAY_OF_WEEK) != RESET_DAY_2)
 				reenter.add(Calendar.DAY_OF_MONTH, 1);
 
-		SystemMessage sm = new SystemMessage(SystemMessageId.INSTANT_ZONE_RESTRICTED);
+		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_RESTRICTED);
 		sm.addString(InstanceManager.getInstance().getInstanceIdName(INSTANCEID));
 
 		// set instance reenter time for all allowed players
