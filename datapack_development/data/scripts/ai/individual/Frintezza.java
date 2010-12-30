@@ -977,7 +977,7 @@ public class Frintezza extends L2AttackableAIScript
 					if (cha instanceof L2PcInstance && Rnd.get(100) < 80)
 					{
 						skill.getEffects(frintezza, cha);
-						cha.sendPacket(new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT).addSkillName(5008, 4));
+						cha.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT).addSkillName(5008, 4));
 					}
 				}
 			}
@@ -996,7 +996,7 @@ public class Frintezza extends L2AttackableAIScript
 						cha.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 						skill.getEffects(frintezza, cha);
 						cha.startAbnormalEffect(AbnormalEffect.DANCE_STUNNED);
-						cha.sendPacket(new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT).addSkillName(5008, 5));
+						cha.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT).addSkillName(5008, 5));
 					}
 				}
 				startQuestTimer("stop_effect", 25000, frintezza, null);

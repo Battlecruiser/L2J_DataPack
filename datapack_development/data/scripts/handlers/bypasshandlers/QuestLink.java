@@ -129,7 +129,7 @@ public class QuestLink implements IBypassHandler
 		{
 			if ((q.getQuestIntId() >= 1 && q.getQuestIntId() < 20000) && (player.getWeightPenalty() >= 3 || !player.isInventoryUnder80(true)))
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.INVENTORY_LESS_THAN_80_PERCENT));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVENTORY_LESS_THAN_80_PERCENT));
 				return;
 			}
 			
@@ -139,7 +139,7 @@ public class QuestLink implements IBypassHandler
 				{
 					if (player.getAllActiveQuests().length > 40) // if too many ongoing quests, don't show window and send message
 					{
-						player.sendPacket(new SystemMessage(SystemMessageId.TOO_MANY_QUESTS));
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TOO_MANY_QUESTS));
 						return;
 					}
 				}

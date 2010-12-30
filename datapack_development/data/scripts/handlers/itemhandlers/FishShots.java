@@ -66,7 +66,7 @@ public class FishShots implements IItemHandler
 				|| (grade == L2Item.CRYSTAL_A && FishshotId != 6539) || (FishshotId != 6540 && grade == L2Item.CRYSTAL_S ))
 		{
 			//1479 - This fishing shot is not fit for the fishing pole crystal.
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.WRONG_FISHINGSHOT_GRADE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WRONG_FISHINGSHOT_GRADE));
 			return;
 		}
 		

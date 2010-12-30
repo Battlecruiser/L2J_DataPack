@@ -115,7 +115,7 @@ public class HealPercent implements ISkillHandler
 				amount = Math.min(amount, target.getMaxCp() - target.getCurrentCp());
 				target.setCurrentCp(amount + target.getCurrentCp());
 				
-				sm = new SystemMessage(SystemMessageId.S1_CP_WILL_BE_RESTORED);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_WILL_BE_RESTORED);
 				sm.addNumber((int)amount);
 				target.sendPacket(sm);
 				su.addAttribute(StatusUpdate.CUR_CP, (int) target.getCurrentCp());
@@ -135,11 +135,11 @@ public class HealPercent implements ISkillHandler
 				{
 					if (activeChar != target)
 					{
-						sm = new SystemMessage(SystemMessageId.S2_HP_RESTORED_BY_C1);
+						sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HP_RESTORED_BY_C1);
 						sm.addCharName(activeChar);
 					}
 					else
-						sm = new SystemMessage(SystemMessageId.S1_HP_RESTORED);
+						sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_RESTORED);
 					sm.addNumber((int)amount);
 					target.sendPacket(sm);
 					su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
@@ -160,11 +160,11 @@ public class HealPercent implements ISkillHandler
 				{
 					if (activeChar != target)
 					{
-						sm = new SystemMessage(SystemMessageId.S2_MP_RESTORED_BY_C1);
+						sm = SystemMessage.getSystemMessage(SystemMessageId.S2_MP_RESTORED_BY_C1);
 						sm.addCharName(activeChar);
 					}
 					else
-						sm = new SystemMessage(SystemMessageId.S1_MP_RESTORED);
+						sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MP_RESTORED);
 					sm.addNumber((int)amount);
 					target.sendPacket(sm);
 					su.addAttribute(StatusUpdate.CUR_MP, (int) target.getCurrentMp());

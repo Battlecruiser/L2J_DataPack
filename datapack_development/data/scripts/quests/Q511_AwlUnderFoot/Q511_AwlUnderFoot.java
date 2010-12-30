@@ -127,7 +127,7 @@ public final class Q511_AwlUnderFoot extends Quest
 		{
 			if (!(world instanceof FAUWorld))
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER));
 				return "";
 			}
 			teleportPlayer(player, coords, world.instanceId);

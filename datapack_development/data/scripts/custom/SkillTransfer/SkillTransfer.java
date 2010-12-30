@@ -174,7 +174,7 @@ public class SkillTransfer extends Quest
 			}
 		}
 		
-		player.sendPacket(new SystemMessage(SystemMessageId.NO_MORE_SKILLS_TO_LEARN));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NO_MORE_SKILLS_TO_LEARN));
 		return null;
 	}
 	
@@ -199,7 +199,7 @@ public class SkillTransfer extends Quest
 						if (player.destroyItemByItemId(qn, itemId, 1, npc, true))
 							return "true";
 					}
-					player.sendPacket(new SystemMessage(SystemMessageId.ITEM_MISSING_TO_LEARN_SKILL));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ITEM_MISSING_TO_LEARN_SKILL));
 					return "false";
 				}
 			}
@@ -267,7 +267,7 @@ public class SkillTransfer extends Quest
 			}
 			else if (player.getAdena() < RESET_ADENA_COST)
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.CANNOT_RESET_SKILL_LINK_BECAUSE_NOT_ENOUGH_ADENA));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_RESET_SKILL_LINK_BECAUSE_NOT_ENOUGH_ADENA));
 				return htmltext;
 			}
 			

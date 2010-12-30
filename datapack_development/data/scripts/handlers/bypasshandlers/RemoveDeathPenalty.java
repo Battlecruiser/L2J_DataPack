@@ -68,7 +68,7 @@ public class RemoveDeathPenalty implements IBypassHandler
 							if (!activeChar.reduceAdena("DeathPenality", pen_clear_price[activeChar.getExpertiseIndex()], npc, true))
 								return false;
 							activeChar.setDeathPenaltyBuffLevel(activeChar.getDeathPenaltyBuffLevel() - 1);
-							activeChar.sendPacket(new SystemMessage(SystemMessageId.DEATH_PENALTY_LIFTED));
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.DEATH_PENALTY_LIFTED));
 							activeChar.sendPacket(new EtcStatusUpdate(activeChar));
 							return true;
 						}

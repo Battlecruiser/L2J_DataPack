@@ -113,7 +113,7 @@ public class FreyaCelebration extends Quest
 					long remainingTime = (_reuse_time - System.currentTimeMillis()) / 1000;
 					int hours = (int) (remainingTime / 3600);
 					int minutes = (int) ((remainingTime % 3600) / 60);
-					SystemMessage sm = new SystemMessage(SystemMessageId.AVAILABLE_AFTER_S1_S2_HOURS_S3_MINUTES);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.AVAILABLE_AFTER_S1_S2_HOURS_S3_MINUTES);
 					sm.addItemName(_freya_potion);
 					sm.addNumber(hours);
 					sm.addNumber(minutes);
@@ -122,7 +122,7 @@ public class FreyaCelebration extends Quest
 			}
 			else
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.S2_UNIT_OF_THE_ITEM_S1_REQUIRED);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_UNIT_OF_THE_ITEM_S1_REQUIRED);
 				sm.addItemName(57);
 				sm.addNumber(1);
 				player.sendPacket(sm);

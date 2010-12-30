@@ -235,13 +235,13 @@ public class NornilsGarden extends Quest
 		{
 			if (!(world instanceof NornilsWorld) || world.templateId != INSTANCE_ID)
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER));
 				return null;
 			}
 			// check for level difference again on reenter
 			if (player.getLevel() > INSTANCE_LVL_MAX || player.getLevel() < INSTANCE_LVL_MIN)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
 				sm.addPcName(player);
 				player.sendPacket(sm);
 				return null;
@@ -394,13 +394,13 @@ public class NornilsGarden extends Quest
 		// player must be in party
 		if (party == null)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.NOT_IN_PARTY_CANT_ENTER));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_IN_PARTY_CANT_ENTER));
 			return "32330-05.html";
 		}
 		// ...and be party leader
 		if (party.getLeader() != player)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER));
 			return "32330-08.html";
 		}
 		boolean _kamael = false;
@@ -410,21 +410,21 @@ public class NornilsGarden extends Quest
 			// player level must be in range
 			if (partyMember.getLevel() > INSTANCE_LVL_MAX)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
 				sm.addPcName(partyMember);
 				player.sendPacket(sm);
 				return "32330-06.html";
 			}
 			if (partyMember.getLevel() < INSTANCE_LVL_MIN)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
 				sm.addPcName(partyMember);
 				player.sendPacket(sm);
 				return "32330-07.html";
 			}
 			if ( partyMember.getClassId().level() != 0)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
 				sm.addPcName(partyMember);
 				player.sendPacket(sm);
 				return "32330-06.html";
@@ -432,7 +432,7 @@ public class NornilsGarden extends Quest
 			// player must be near party leader
 			if (!partyMember.isInsideRadius(player, 500, true, true))
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
 				sm.addPcName(partyMember);
 				player.sendPacket(sm);
 				return "32330-08.html";
@@ -446,7 +446,7 @@ public class NornilsGarden extends Quest
 				}
 				else
 				{
-					SystemMessage sm = new SystemMessage(SystemMessageId.C1_QUEST_REQUIREMENT_NOT_SUFFICIENT);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_QUEST_REQUIREMENT_NOT_SUFFICIENT);
 					sm.addPcName(partyMember);
 					player.sendPacket(sm);
 					return "32330-08.html";

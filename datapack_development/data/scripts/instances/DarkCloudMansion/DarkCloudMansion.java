@@ -217,31 +217,31 @@ public class DarkCloudMansion extends Quest
 			L2Party party = player.getParty();
 			if (party == null)
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.NOT_IN_PARTY_CANT_ENTER));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_IN_PARTY_CANT_ENTER));
 				return false;
 			}
 			if (party.getLeader() != player)
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER));
 				return false;
 			}
 			if (party.getMemberCount() > 2)
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.PARTY_EXCEEDED_THE_LIMIT_CANT_ENTER));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PARTY_EXCEEDED_THE_LIMIT_CANT_ENTER));
 				return false;
 			}
 			for (L2PcInstance partyMember : party.getPartyMembers())
 			{
 				if (partyMember.getLevel() < 78)
 				{
-					SystemMessage sm = new SystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
 					sm.addPcName(partyMember);
 					player.sendPacket(sm);
 					return false;
 				}
 				if (!partyMember.isInsideRadius(player, 1000, true, true))
 				{
-					SystemMessage sm = new SystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
 					sm.addPcName(partyMember);
 					player.sendPacket(sm);
 					return false;
@@ -270,7 +270,7 @@ public class DarkCloudMansion extends Quest
 		{
 			if (!(world instanceof DMCWorld))
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER));
 				return 0;
 			}
 			teleto.instanceId = world.instanceId;

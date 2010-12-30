@@ -53,7 +53,7 @@ public class TransformDispel implements ISkillHandler
 		if (pc.isTransformed() || pc.isInStance())
 		{
 			if (pc.isFlyingMounted() && !pc.isInsideZone(L2Character.ZONE_LANDING))
-				pc.sendPacket(new SystemMessage(SystemMessageId.BOARD_OR_CANCEL_NOT_POSSIBLE_HERE));
+				pc.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.BOARD_OR_CANCEL_NOT_POSSIBLE_HERE));
 			else
 				pc.stopTransformation(true);
 		}

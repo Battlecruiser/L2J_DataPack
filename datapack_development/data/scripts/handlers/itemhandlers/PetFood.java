@@ -82,7 +82,7 @@ public class PetFood implements IItemHandler
 					((L2PetInstance)activeChar).setCurrentFed(((L2PetInstance)activeChar).getCurrentFed() + (skill.getFeed() * Config.PET_FOOD_RATE));
 					((L2PetInstance)activeChar).broadcastStatusUpdate();
 					if (((L2PetInstance)activeChar).getCurrentFed() < (((L2PetInstance)activeChar).getPetData().getHungry_limit() / 100f * ((L2PetInstance)activeChar).getPetLevelData().getPetMaxFeed()))
-						((L2PetInstance)activeChar).getOwner().sendPacket(new SystemMessage(SystemMessageId.YOUR_PET_ATE_A_LITTLE_BUT_IS_STILL_HUNGRY));
+						((L2PetInstance)activeChar).getOwner().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_ATE_A_LITTLE_BUT_IS_STILL_HUNGRY));
 					return true;
 				}
 			}
@@ -104,7 +104,7 @@ public class PetFood implements IItemHandler
 					}
 					else
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
 						sm.addItemName(item);
 						activeChar.sendPacket(sm);
 						return false;
@@ -112,7 +112,7 @@ public class PetFood implements IItemHandler
 				}
 				else
 				{
-					SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
 					sm.addItemName(item);
 					activeChar.sendPacket(sm);
 				}

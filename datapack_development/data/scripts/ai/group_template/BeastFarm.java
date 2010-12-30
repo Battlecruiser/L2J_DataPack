@@ -423,7 +423,7 @@ public class BeastFarm extends L2AttackableAIScript
 		}
 		else
 		{
-			caster.sendPacket(new SystemMessage(SystemMessageId.S1).addString("The beast spit out the feed instead of eating it."));
+			caster.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1).addString("The beast spit out the feed instead of eating it."));
 			((L2Attackable)npc).dropItem(caster, food, 1);
 		}
 		return super.onSkillSee(npc,caster,skill,targets,isPet);

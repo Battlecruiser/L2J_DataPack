@@ -68,7 +68,7 @@ public class SummonItems implements IItemHandler
 		
 		if (activeChar.isSitting())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.CANT_MOVE_SITTING));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANT_MOVE_SITTING));
 			return;
 		}
 		
@@ -80,7 +80,7 @@ public class SummonItems implements IItemHandler
 		
 		if (activeChar.isInOlympiadMode())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT));
 			return;
 		}
 		if (activeChar.isAllSkillsDisabled() || activeChar.isCastingNow())
@@ -90,19 +90,19 @@ public class SummonItems implements IItemHandler
 		
 		if ((activeChar.getPet() != null || activeChar.isMounted()) && sitem.isPetSummon())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.YOU_ALREADY_HAVE_A_PET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ALREADY_HAVE_A_PET));
 			return;
 		}
 		
 		if (activeChar.isAttackingNow())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_SUMMON_IN_COMBAT));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_SUMMON_IN_COMBAT));
 			return;
 		}
 		
 		if (activeChar.isCursedWeaponEquipped() && sitem.isPetSummon())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_IN_BATTLE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.STRIDER_CANT_BE_RIDDEN_WHILE_IN_BATTLE));
 			return;
 		}
 		
@@ -126,7 +126,7 @@ public class SummonItems implements IItemHandler
 					{
 						if (ch instanceof L2XmassTreeInstance && npcTemplate.isSpecialTree())
 						{
-							SystemMessage sm = new SystemMessage(SystemMessageId.CANNOT_SUMMON_S1_AGAIN);
+							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CANNOT_SUMMON_S1_AGAIN);
 							sm.addCharName(ch);
 							activeChar.sendPacket(sm);
 							return;
@@ -150,7 +150,7 @@ public class SummonItems implements IItemHandler
 				}
 				catch (Exception e)
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessageId.TARGET_CANT_FOUND));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_CANT_FOUND));
 				}
 				break;
 			case 1: // pet summons
@@ -159,7 +159,7 @@ public class SummonItems implements IItemHandler
 				Broadcast.toSelfAndKnownPlayers(activeChar, new MagicSkillUse(activeChar, 2046, 1, 5000, 0));
 				activeChar.setTarget(oldTarget);
 				activeChar.sendPacket(new SetupGauge(0, 5000));
-				activeChar.sendPacket(new SystemMessage(SystemMessageId.SUMMON_A_PET));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SUMMON_A_PET));
 				activeChar.setIsCastingNow(true);
 				
 				ThreadPoolManager.getInstance().scheduleGeneral(new PetSummonFinalizer(activeChar, npcTemplate, item), 5000);

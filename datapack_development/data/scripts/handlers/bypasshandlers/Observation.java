@@ -51,7 +51,7 @@ public class Observation implements IBypassHandler
 				if (SiegeManager.getInstance().getSiege(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken())) != null)
 					doObserve(activeChar, (L2Npc)target, val);
 				else
-					activeChar.sendPacket(new SystemMessage(SystemMessageId.ONLY_VIEW_SIEGE));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_VIEW_SIEGE));
 				return true;
 			}
 			else if (command.toLowerCase().startsWith(COMMANDS[1])) // oracle

@@ -63,7 +63,7 @@ public class ItemSkillsTemplate implements IItemHandler
 		// pets can use items only when they are tradeable
 		if (isPet && !item.isTradeable())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.ITEM_NOT_FOR_PETS));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ITEM_NOT_FOR_PETS));
 			return;
 		}
 		
@@ -102,7 +102,7 @@ public class ItemSkillsTemplate implements IItemHandler
 					{
 						if (!playable.destroyItem("Consume", item.getObjectId(), itemSkill.getItemConsume(), null, false))
 						{
-							activeChar.sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_ITEMS));
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_ENOUGH_ITEMS));
 							return;
 						}
 					}
@@ -110,7 +110,7 @@ public class ItemSkillsTemplate implements IItemHandler
 					// send message to owner
 					if (isPet)
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.PET_USES_S1);
+						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PET_USES_S1);
 						sm.addString(itemSkill.getName());
 						activeChar.sendPacket(sm);
 					}
@@ -190,7 +190,7 @@ public class ItemSkillsTemplate implements IItemHandler
 			final int seconds = (int)(remainingTime / 1000 % 60);
 			if (hours > 0)
 			{
-				sm = new SystemMessage(SystemMessageId.S2_HOURS_S3_MINUTES_S4_SECONDS_REMAINING_FOR_REUSE_S1);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HOURS_S3_MINUTES_S4_SECONDS_REMAINING_FOR_REUSE_S1);
 				if (skill.isPotion())
 					sm.addItemName(item);
 				else
@@ -200,7 +200,7 @@ public class ItemSkillsTemplate implements IItemHandler
 			}
 			else if (minutes > 0)
 			{
-				sm = new SystemMessage(SystemMessageId.S2_MINUTES_S3_SECONDS_REMAINING_FOR_REUSE_S1);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.S2_MINUTES_S3_SECONDS_REMAINING_FOR_REUSE_S1);
 				if (skill.isPotion())
 					sm.addItemName(item);
 				else
@@ -209,7 +209,7 @@ public class ItemSkillsTemplate implements IItemHandler
 			}
 			else
 			{
-				sm = new SystemMessage(SystemMessageId.S2_SECONDS_REMAINING_FOR_REUSE_S1);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.S2_SECONDS_REMAINING_FOR_REUSE_S1);
 				if (skill.isPotion())
 					sm.addItemName(item);
 				else
@@ -229,7 +229,7 @@ public class ItemSkillsTemplate implements IItemHandler
 		}
 		else
 		{
-			sm = new SystemMessage(SystemMessageId.S1_PREPARED_FOR_REUSE);
+			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_PREPARED_FOR_REUSE);
 			sm.addItemName(item);
 		}
 		player.sendPacket(sm);

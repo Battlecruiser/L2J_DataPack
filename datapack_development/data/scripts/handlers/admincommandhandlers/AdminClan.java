@@ -155,7 +155,7 @@ public class AdminClan implements IAdminCommandHandler
 							
 							clan.broadcastClanStatus();
 							
-							SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_LEADER_PRIVILEGES_HAVE_BEEN_TRANSFERRED_TO_C1);
+							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_LEADER_PRIVILEGES_HAVE_BEEN_TRANSFERRED_TO_C1);
 							sm.addString(newLeader.getName());
 							clan.broadcastToOnlineMembers(sm);
 							activeChar.sendMessage("Clan leader has been changed!");

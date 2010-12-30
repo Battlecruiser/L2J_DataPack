@@ -93,13 +93,13 @@ public class Sweep implements ISkillHandler
 						SystemMessage smsg;
 						if (ritem.getCount() > 1)
 						{
-							smsg = new SystemMessage(SystemMessageId.EARNED_S2_S1_S); // earned $s2$s1
+							smsg = SystemMessage.getSystemMessage(SystemMessageId.EARNED_S2_S1_S); // earned $s2$s1
 							smsg.addItemName(ritem.getItemId());
 							smsg.addNumber(ritem.getCount());
 						}
 						else
 						{
-							smsg = new SystemMessage(SystemMessageId.EARNED_ITEM); // earned $s1
+							smsg = SystemMessage.getSystemMessage(SystemMessageId.EARNED_ITEM); // earned $s1
 							smsg.addItemName(ritem.getItemId());
 						}
 						player.sendPacket(smsg);
@@ -130,7 +130,7 @@ public class Sweep implements ISkillHandler
 					suhp.addAttribute(StatusUpdate.CUR_HP, (int)hp);
 					activeChar.sendPacket(suhp);
 					
-					SystemMessage sm = new SystemMessage(SystemMessageId.S1_HP_RESTORED);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_RESTORED);
 					sm.addNumber(restored);
 					activeChar.sendPacket(sm);
 				}
@@ -145,7 +145,7 @@ public class Sweep implements ISkillHandler
 					suhp.addAttribute(StatusUpdate.CUR_MP, (int)mp);
 					activeChar.sendPacket(suhp);
 					
-					SystemMessage sm = new SystemMessage(SystemMessageId.S1_MP_RESTORED);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MP_RESTORED);
 					sm.addNumber(restored);
 					activeChar.sendPacket(sm);
 				}

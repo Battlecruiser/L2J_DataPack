@@ -129,10 +129,10 @@ public class DenOfEvil extends L2AttackableAIScript
 			if (skillLevel == 3) // 3+1=4
 			{
 				ThreadPoolManager.getInstance().scheduleAi(new KashaDestruction(zone), 2*60*1000l);
-				zone.broadcastPacket(new SystemMessage(SystemMessageId.KASHA_EYE_PITCHES_TOSSES_EXPLODE));
+				zone.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.KASHA_EYE_PITCHES_TOSSES_EXPLODE));
 			}
 			else if (skillLevel == 2) // 2+1=3
-				zone.broadcastPacket(new SystemMessage(SystemMessageId.I_CAN_FEEL_ENERGY_KASHA_EYE_GETTING_STRONGER_RAPIDLY));
+				zone.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.I_CAN_FEEL_ENERGY_KASHA_EYE_GETTING_STRONGER_RAPIDLY));
 		}
 		return null;
 	}

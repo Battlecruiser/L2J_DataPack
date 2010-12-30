@@ -101,7 +101,7 @@ public class PrivateWarehouse implements IBypassHandler
 		
 		if (player.getActiveWarehouse().getSize() == 0)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.NO_ITEM_DEPOSITED_IN_WH));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NO_ITEM_DEPOSITED_IN_WH));
 			return;
 		}
 		

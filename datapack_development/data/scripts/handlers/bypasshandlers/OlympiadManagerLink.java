@@ -167,7 +167,7 @@ public class OlympiadManagerLink implements IBypassHandler
 							iu.addModifiedItem(item);
 							activeChar.sendPacket(iu);
 							
-							SystemMessage sm = new SystemMessage(SystemMessageId.EARNED_ITEM);
+							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.EARNED_ITEM);
 							sm.addItemNumber(passes);
 							sm.addItemName(item);
 							activeChar.sendPacket(sm);

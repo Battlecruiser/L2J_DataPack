@@ -50,7 +50,7 @@ public class Harvester implements IItemHandler
 		
 		if (!(_activeChar.getTarget() instanceof L2MonsterInstance))
 		{
-			_activeChar.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
+			_activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
 			_activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

@@ -54,7 +54,7 @@ public class InstanceZone implements IUserCommandHandler
 		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(activeChar);
 		if (world != null && world.templateId >= 0)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessageId.INSTANT_ZONE_CURRENTLY_INUSE);
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_CURRENTLY_INUSE);
 			sm.addString(InstanceManager.getInstance().getInstanceIdName(world.templateId));
 			activeChar.sendPacket(sm);
 		}
@@ -70,11 +70,11 @@ public class InstanceZone implements IUserCommandHandler
 					if (firstMessage)
 					{
 						firstMessage = false;
-						activeChar.sendPacket(new SystemMessage(SystemMessageId.INSTANCE_ZONE_TIME_LIMIT));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INSTANCE_ZONE_TIME_LIMIT));
 					}
 					int hours = (int) (remainingTime / 3600);
 					int minutes = (int) ((remainingTime%3600) / 60);
-					SystemMessage sm = new SystemMessage(SystemMessageId.AVAILABLE_AFTER_S1_S2_HOURS_S3_MINUTES);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.AVAILABLE_AFTER_S1_S2_HOURS_S3_MINUTES);
 					sm.addString(InstanceManager.getInstance().getInstanceIdName(instanceId));
 					sm.addNumber(hours);
 					sm.addNumber(minutes);
@@ -84,7 +84,7 @@ public class InstanceZone implements IUserCommandHandler
 					InstanceManager.getInstance().deleteInstanceTime(activeChar.getObjectId(), instanceId);
 			}
 		if (firstMessage)
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.NO_INSTANCEZONE_TIME_LIMIT));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NO_INSTANCEZONE_TIME_LIMIT));
 		return true;
 	}
 }

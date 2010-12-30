@@ -63,7 +63,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
 			}
 		}
 		else if (command.startsWith("admin_transform"))
@@ -98,7 +98,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
 			}
 		}
 		if (command.startsWith("admin_polymorph"))
@@ -165,7 +165,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 			activeChar.sendMessage("Polymorph succeed");
 		}
 		else
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
 	}
 	
 	/**
@@ -182,7 +182,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 			activeChar.sendMessage("Unpolymorph succeed");
 		}
 		else
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
 	}
 	
 	private void showMainPage(L2PcInstance activeChar, String command)
