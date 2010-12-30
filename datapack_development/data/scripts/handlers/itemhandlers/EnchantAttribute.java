@@ -35,7 +35,7 @@ public class EnchantAttribute implements IItemHandler
 		
 		if (activeChar.isEnchanting())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.ENCHANTMENT_ALREADY_IN_PROGRESS));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ENCHANTMENT_ALREADY_IN_PROGRESS));
 			return;
 		}
 		

@@ -51,7 +51,7 @@ public class BlessedSpiritShot implements IItemHandler
 		if (weaponInst == null || weaponItem == null || weaponItem.getSpiritShotCount() == 0)
 		{
 			if (!activeChar.getAutoSoulShot().contains(itemId))
-				activeChar.sendPacket(new SystemMessage(SystemMessageId.CANNOT_USE_SPIRITSHOTS));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_USE_SPIRITSHOTS));
 			return;
 		}
 		
@@ -97,7 +97,7 @@ public class BlessedSpiritShot implements IItemHandler
 		if (!gradeCheck)
 		{
 			if (!activeChar.getAutoSoulShot().contains(itemId))
-				activeChar.sendPacket(new SystemMessage(SystemMessageId.SPIRITSHOTS_GRADE_MISMATCH));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SPIRITSHOTS_GRADE_MISMATCH));
 			
 			return;
 		}
@@ -107,7 +107,7 @@ public class BlessedSpiritShot implements IItemHandler
 		if (!activeChar.destroyItemWithoutTrace("Consume", item.getObjectId(), weaponItem.getSpiritShotCount(), null, false))
 		{
 			if (!activeChar.disableAutoShot(itemId))
-				activeChar.sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_SPIRITSHOTS));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_ENOUGH_SPIRITSHOTS));
 			return;
 		}
 		
@@ -115,7 +115,7 @@ public class BlessedSpiritShot implements IItemHandler
 		weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT);
 		
 		// Send message to client
-		activeChar.sendPacket(new SystemMessage(SystemMessageId.ENABLED_SPIRITSHOT));
+		activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ENABLED_SPIRITSHOT));
 		int skillId = 0;
 		switch (itemId)
 		{

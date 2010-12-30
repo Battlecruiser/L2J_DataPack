@@ -148,7 +148,7 @@ public class Loc implements IUserCommandHandler
 			default:
 				msg = SystemMessageId.LOC_ADEN_S1_S2_S3;
 		}
-		SystemMessage sm = new SystemMessage(msg);
+		SystemMessage sm = SystemMessage.getSystemMessage(msg);
 		sm.addNumber(activeChar.getX());
 		sm.addNumber(activeChar.getY());
 		sm.addNumber(activeChar.getZ());

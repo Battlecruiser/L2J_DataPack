@@ -102,7 +102,7 @@ public class MasterOfEnchanting extends Quest
 				int minutes = ((int) _remaining_time % 3600) / 60;
 				if (hours > 0)
 				{
-					SystemMessage sm = new SystemMessage(SystemMessageId.ITEM_PURCHASABLE_IN_S1_HOURS_S2_MINUTES);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ITEM_PURCHASABLE_IN_S1_HOURS_S2_MINUTES);
 					sm.addNumber(hours);
 					sm.addNumber(minutes);
 					player.sendPacket(sm);
@@ -110,7 +110,7 @@ public class MasterOfEnchanting extends Quest
 				}
 				else if (minutes > 0)
 				{
-					SystemMessage sm = new SystemMessage(SystemMessageId.ITEM_PURCHASABLE_IN_S1_MINUTES);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ITEM_PURCHASABLE_IN_S1_MINUTES);
 					sm.addNumber(minutes);
 					player.sendPacket(sm);
 					htmltext = "32599-scroll24.htm";

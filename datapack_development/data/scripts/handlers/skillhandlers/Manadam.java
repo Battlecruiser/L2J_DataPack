@@ -92,7 +92,7 @@ public class Manadam implements ISkillHandler
 			boolean acted = Formulas.calcMagicAffected(activeChar, target, skill);
 			if (target.isInvul() || !acted)
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessageId.MISSED_TARGET));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.MISSED_TARGET));
 			}
 			else
 			{
@@ -104,7 +104,7 @@ public class Manadam implements ISkillHandler
 						skill.getEffects(activeChar, target, new Env(shld, ss, false, bss));
 					else
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.C1_RESISTED_YOUR_S2);
+						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_YOUR_S2);
 						sm.addCharName(target);
 						sm.addSkillName(skill);
 						activeChar.sendPacket(sm);
@@ -116,7 +116,7 @@ public class Manadam implements ISkillHandler
 				if (Formulas.calcMCrit(activeChar.getMCriticalHit(target, skill)))
 				{
 					damage *= 3.;
-					activeChar.sendPacket(new SystemMessage(SystemMessageId.CRITICAL_HIT_MAGIC));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CRITICAL_HIT_MAGIC));
 				}
 				
 				double mp = (damage > target.getCurrentMp() ? target.getCurrentMp() : damage);
@@ -131,7 +131,7 @@ public class Manadam implements ISkillHandler
 					// [L2J_JP EDIT START - TSL]
 					target.sendPacket(sump);
 					
-					SystemMessage sm = new SystemMessage(SystemMessageId.S2_MP_HAS_BEEN_DRAINED_BY_C1);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_MP_HAS_BEEN_DRAINED_BY_C1);
 					sm.addCharName(activeChar);
 					sm.addNumber((int) mp);
 					target.sendPacket(sm);
@@ -139,7 +139,7 @@ public class Manadam implements ISkillHandler
 				
 				if (activeChar instanceof L2PcInstance)
 				{
-					SystemMessage sm2 = new SystemMessage(SystemMessageId.YOUR_OPPONENTS_MP_WAS_REDUCED_BY_S1);
+					SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.YOUR_OPPONENTS_MP_WAS_REDUCED_BY_S1);
 					sm2.addNumber((int) mp);
 					activeChar.sendPacket(sm2);
 				}

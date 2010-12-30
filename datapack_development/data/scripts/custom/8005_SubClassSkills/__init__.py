@@ -64,7 +64,7 @@ class Quest (JQuest) :
          asl.addSkill(j, minLevel+1, maxLevel, 0, 0)
    player.sendPacket(asl)
    if count == 0:
-     player.sendPacket(SystemMessage(SystemMessageId.NO_MORE_SKILLS_TO_LEARN))
+     player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NO_MORE_SKILLS_TO_LEARN))
    return ""
    
  def onAcquireSkill (self, npc, player, skill) :
@@ -85,7 +85,7 @@ class Quest (JQuest) :
                  player.destroyItem(qn,int(qvar), 1, player, 0)
                  st.saveGlobalQuestVar(var+str(j+1),str(skill.getId())+";")
                  return "true"
-   player.sendPacket(SystemMessage(SystemMessageId.ITEM_MISSING_TO_LEARN_SKILL))
+   player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ITEM_MISSING_TO_LEARN_SKILL))
    return "false"
 
  def onAcquireSkillInfo (self, npc, player, skill) :

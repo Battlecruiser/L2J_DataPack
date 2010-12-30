@@ -47,7 +47,7 @@ public class RollingDice implements IItemHandler
 		
 		if (activeChar.isInOlympiadMode())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT));
 			return;
 		}
 		
@@ -56,13 +56,13 @@ public class RollingDice implements IItemHandler
 			int number = rollDice(activeChar);
 			if (number == 0)
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessageId.YOU_MAY_NOT_THROW_THE_DICE_AT_THIS_TIME_TRY_AGAIN_LATER));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_NOT_THROW_THE_DICE_AT_THIS_TIME_TRY_AGAIN_LATER));
 				return;
 			}
 			
 			Broadcast.toSelfAndKnownPlayers(activeChar, new Dice(activeChar.getObjectId(), item.getItemId(), number, activeChar.getX() - 30, activeChar.getY() - 30, activeChar.getZ()));
 			
-			SystemMessage sm = new SystemMessage(SystemMessageId.C1_ROLLED_S2);
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_ROLLED_S2);
 			sm.addString(activeChar.getName());
 			sm.addNumber(number);
 			

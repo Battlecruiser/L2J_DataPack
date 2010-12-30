@@ -243,7 +243,7 @@ public class Continuous implements ISkillHandler
 			}
 			else
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessageId.ATTACK_FAILED));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ATTACK_FAILED));
 			}
 			
 			// Possibility of a lethal strike

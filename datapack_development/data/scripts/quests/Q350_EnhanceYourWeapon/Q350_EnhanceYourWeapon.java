@@ -540,14 +540,14 @@ public class Q350_EnhanceYourWeapon extends Quest
 		// If the crystal level is way too high for this mob, say that we can't increase it
 		if (!_npcLevelingInfos.get(mob.getNpcId()).containsKey(sc.getLevel()))
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.SOUL_CRYSTAL_ABSORBING_REFUSED));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SOUL_CRYSTAL_ABSORBING_REFUSED));
 			return;
 		}
 		
 		if (Rnd.get(100) <= _npcLevelingInfos.get(mob.getNpcId()).get(sc.getLevel()).getChance())
 			exchangeCrystal(player, mob, sc.getItemId(), sc.getLeveledItemId(), false);
 		else
-			player.sendPacket(new SystemMessage(SystemMessageId.SOUL_CRYSTAL_ABSORBING_FAILED));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SOUL_CRYSTAL_ABSORBING_FAILED));
 	}
 	
 	private void exchangeCrystal(L2PcInstance player, L2Attackable mob, int takeid, int giveid, boolean broke)
@@ -566,13 +566,13 @@ public class Q350_EnhanceYourWeapon extends Quest
 			
 			// Send a sound event and text message to the player
 			if (broke)
-				player.sendPacket(new SystemMessage(SystemMessageId.SOUL_CRYSTAL_BROKE));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SOUL_CRYSTAL_BROKE));
 			
 			else
-				player.sendPacket(new SystemMessage(SystemMessageId.SOUL_CRYSTAL_ABSORBING_SUCCEEDED));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SOUL_CRYSTAL_ABSORBING_SUCCEEDED));
 			
 			// Send system message
-			SystemMessage sms = new SystemMessage(SystemMessageId.EARNED_ITEM);
+			SystemMessage sms = SystemMessage.getSystemMessage(SystemMessageId.EARNED_ITEM);
 			sms.addItemName(giveid);
 			player.sendPacket(sms);
 			

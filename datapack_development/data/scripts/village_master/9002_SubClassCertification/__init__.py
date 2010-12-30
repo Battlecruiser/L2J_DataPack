@@ -74,7 +74,7 @@ def getCertified(player, itemId, var):
     return ""
   item = player.getInventory().addItem("Quest", itemId, 1, player, player.getTarget())
   st.saveGlobalQuestVar(var,str(item.getObjectId()))
-  smsg = SystemMessage(SystemMessageId.EARNED_ITEM)
+  smsg = SystemMessage.getSystemMessage(SystemMessageId.EARNED_ITEM)
   smsg.addItemName(item)
   player.sendPacket(smsg)
   return

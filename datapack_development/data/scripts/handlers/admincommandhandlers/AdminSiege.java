@@ -102,14 +102,14 @@ public class AdminSiege implements IAdminCommandHandler
 			if (command.equalsIgnoreCase("admin_add_attacker"))
 			{
 				if (player == null)
-					activeChar.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
 				else
 					castle.getSiege().registerAttacker(player, true);
 			}
 			else if (command.equalsIgnoreCase("admin_add_defender"))
 			{
 				if (player == null)
-					activeChar.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
 				else
 					castle.getSiege().registerDefender(player, true);
 			}
@@ -145,7 +145,7 @@ public class AdminSiege implements IAdminCommandHandler
 			else if (command.equalsIgnoreCase("admin_setcastle"))
 			{
 				if (player == null || player.getClan() == null)
-					activeChar.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
 				else
 					castle.setOwner(player.getClan());
 			}
@@ -185,7 +185,7 @@ public class AdminSiege implements IAdminCommandHandler
 			else if (command.equalsIgnoreCase("admin_clanhallset"))
 			{
 				if (player == null || player.getClan() == null)
-					activeChar.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
 				else if (!ClanHallManager.getInstance().isFree(clanhall.getId()))
 					activeChar.sendMessage("This ClanHall isn't free!");
 				else if (player.getClan().getHasHideout() == 0)

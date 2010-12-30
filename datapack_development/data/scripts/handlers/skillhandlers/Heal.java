@@ -189,21 +189,21 @@ public class Heal implements ISkillHandler
 			{
 				if (skill.getId() == 4051)
 				{
-					SystemMessage sm = new SystemMessage(SystemMessageId.REJUVENATING_HP);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.REJUVENATING_HP);
 					target.sendPacket(sm);
 				}
 				else
 				{
 					if (activeChar instanceof L2PcInstance && activeChar != target)
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.S2_HP_RESTORED_BY_C1);
+						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HP_RESTORED_BY_C1);
 						sm.addString(activeChar.getName());
 						sm.addNumber((int) hp);
 						target.sendPacket(sm);
 					}
 					else
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.S1_HP_RESTORED);
+						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_RESTORED);
 						sm.addNumber((int) hp);
 						target.sendPacket(sm);
 					}

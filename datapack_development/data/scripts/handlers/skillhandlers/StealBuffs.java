@@ -171,7 +171,7 @@ public class StealBuffs implements ISkillHandler
 						effect.scheduleEffect();
 						if (effect.getShowIcon() && activeChar instanceof L2PcInstance)
 						{
-							SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
+							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
 							sm.addSkillName(effect);
 							activeChar.sendPacket(sm);
 						}

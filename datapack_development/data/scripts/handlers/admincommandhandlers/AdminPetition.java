@@ -59,30 +59,30 @@ public class AdminPetition implements IAdminCommandHandler
 		{
 			if (PetitionManager.getInstance().isPlayerInConsultation(activeChar))
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessageId.ONLY_ONE_ACTIVE_PETITION_AT_TIME));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_ONE_ACTIVE_PETITION_AT_TIME));
 				return true;
 			}
 			
 			if (PetitionManager.getInstance().isPetitionInProcess(petitionId))
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessageId.PETITION_UNDER_PROCESS));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PETITION_UNDER_PROCESS));
 				return true;
 			}
 			
 			if (!PetitionManager.getInstance().acceptPetition(activeChar, petitionId))
-				activeChar.sendPacket(new SystemMessage(SystemMessageId.NOT_UNDER_PETITION_CONSULTATION));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_UNDER_PETITION_CONSULTATION));
 		}
 		else if (command.startsWith("admin_reject_petition"))
 		{
 			if (!PetitionManager.getInstance().rejectPetition(activeChar, petitionId))
-				activeChar.sendPacket(new SystemMessage(SystemMessageId.FAILED_CANCEL_PETITION_TRY_LATER));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FAILED_CANCEL_PETITION_TRY_LATER));
 			PetitionManager.getInstance().sendPendingPetitionList(activeChar);
 		}
 		else if (command.equals("admin_reset_petitions"))
 		{
 			if (PetitionManager.getInstance().isPetitionInProcess())
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessageId.PETITION_UNDER_PROCESS));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PETITION_UNDER_PROCESS));
 				return false;
 			}
 			PetitionManager.getInstance().clearPendingPetitions();
@@ -95,7 +95,7 @@ public class AdminPetition implements IAdminCommandHandler
 				L2Object targetChar = activeChar.getTarget();
 				if (targetChar == null || !(targetChar instanceof L2PcInstance))
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
 					return false;
 				}
 				L2PcInstance targetPlayer = (L2PcInstance) targetChar;

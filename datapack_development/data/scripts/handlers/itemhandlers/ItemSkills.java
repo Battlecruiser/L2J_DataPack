@@ -35,7 +35,7 @@ public class ItemSkills extends ItemSkillsTemplate
 		final L2PcInstance activeChar = playable.getActingPlayer();
 		if (activeChar != null && activeChar.isInOlympiadMode())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT));
 			return;
 		}
 		

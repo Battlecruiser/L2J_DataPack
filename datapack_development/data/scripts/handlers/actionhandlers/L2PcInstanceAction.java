@@ -63,7 +63,7 @@ public class L2PcInstanceAction implements IActionHandler
 		// Aggression target lock effect
 		if (activeChar.isLockedTarget() && activeChar.getLockedTarget() != target)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.FAILED_CHANGE_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FAILED_CHANGE_TARGET));
 			return false;
 		}
 		

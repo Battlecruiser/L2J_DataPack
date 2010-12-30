@@ -79,7 +79,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 			if (command.equalsIgnoreCase("admin_add_fortattacker"))
 			{
 				if (player == null)
-					activeChar.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
 				else
 				{
 					if (fort.getSiege().checkIfCanRegister(player))
@@ -101,7 +101,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 			else if (command.equalsIgnoreCase("admin_setfort"))
 			{
 				if (player == null || player.getClan() == null)
-					activeChar.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
 				else
 					fort.setOwner(player.getClan(), false);
 			}

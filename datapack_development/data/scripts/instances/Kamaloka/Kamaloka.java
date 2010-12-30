@@ -425,19 +425,19 @@ public class Kamaloka extends Quest
 		// player must be in party
 		if (party == null)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.NOT_IN_PARTY_CANT_ENTER));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_IN_PARTY_CANT_ENTER));
 			return false;
 		}
 		// ...and be party leader
 		if (party.getLeader() != player)
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER));
 			return false;
 		}
 		// party must not exceed max size for selected instance
 		if (party.getMemberCount() > MAX_PARTY_SIZE[index])
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.PARTY_EXCEEDED_THE_LIMIT_CANT_ENTER));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PARTY_EXCEEDED_THE_LIMIT_CANT_ENTER));
 			return false;
 		}
 		
@@ -453,7 +453,7 @@ public class Kamaloka extends Quest
 			// player level must be in range
 			if (Math.abs(partyMember.getLevel() - level) > MAX_LEVEL_DIFFERENCE)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
 				sm.addPcName(partyMember);
 				player.sendPacket(sm);
 				return false;
@@ -461,7 +461,7 @@ public class Kamaloka extends Quest
 			// player must be near party leader
 			if (!partyMember.isInsideRadius(player, 1000, true, true))
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
 				sm.addPcName(partyMember);
 				player.sendPacket(sm);
 				return false;
@@ -478,7 +478,7 @@ public class Kamaloka extends Quest
 					// if found instance still can't be reentered - exit
 					if (System.currentTimeMillis() < instanceTimes.get(id))
 					{
-						SystemMessage sm = new SystemMessage(SystemMessageId.C1_MAY_NOT_REENTER_YET);
+						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_REENTER_YET);
 						sm.addPcName(partyMember);
 						player.sendPacket(sm);
 						return false;
@@ -564,13 +564,13 @@ public class Kamaloka extends Quest
 			if (!(world instanceof KamaWorld)
 					|| world.templateId != templateId)
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER));
 				return;
 			}
 			// check for level difference again on reenter
 			if (Math.abs(player.getLevel() - LEVEL[((KamaWorld)world).index]) > MAX_LEVEL_DIFFERENCE)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
 				sm.addPcName(player);
 				player.sendPacket(sm);
 				return;
@@ -645,7 +645,7 @@ public class Kamaloka extends Quest
 				reenter.add(Calendar.DATE, 1);
 			reenter.set(Calendar.HOUR_OF_DAY, RESET_HOUR);
 			
-			SystemMessage sm = new SystemMessage(SystemMessageId.INSTANT_ZONE_RESTRICTED);
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_RESTRICTED);
 			sm.addString(InstanceManager.getInstance().getInstanceIdName(world.templateId));
 			
 			// set instance reenter time for all allowed players

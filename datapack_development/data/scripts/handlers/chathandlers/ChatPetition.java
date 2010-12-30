@@ -41,7 +41,7 @@ public class ChatPetition implements IChatHandler
 	{
 		if (!PetitionManager.getInstance().isPlayerInConsultation(activeChar))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.YOU_ARE_NOT_IN_PETITION_CHAT));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_IN_PETITION_CHAT));
 			return;
 		}
 		

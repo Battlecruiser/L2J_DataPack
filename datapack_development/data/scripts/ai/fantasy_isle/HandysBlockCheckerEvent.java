@@ -20,7 +20,7 @@ import com.l2jserver.gameserver.instancemanager.HandysBlockCheckerManager.ArenaP
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.network.SystemMessageId2;
+import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExCubeGameChangeTimeToStart;
 import com.l2jserver.gameserver.network.serverpackets.ExCubeGameRequestReady;
 import com.l2jserver.gameserver.network.serverpackets.ExCubeGameTeamList;
@@ -67,12 +67,12 @@ public class HandysBlockCheckerEvent extends Quest
 		{
 			if (eventIsFull(arena))
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId2.CANNOT_REGISTER_CAUSE_QUEUE_FULL));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_REGISTER_CAUSE_QUEUE_FULL));
 				return null;
 			}
 			if (HandysBlockCheckerManager.getInstance().arenaIsBeingUsed(arena))
 			{
-				player.sendPacket(new SystemMessage(SystemMessageId2.MATCH_BEING_PREPARED_TRY_LATER));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.MATCH_BEING_PREPARED_TRY_LATER));
 				return null;
 			}
 			if(HandysBlockCheckerManager.getInstance().addPlayerToArena(player, arena))

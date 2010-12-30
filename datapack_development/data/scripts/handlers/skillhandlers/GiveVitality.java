@@ -41,7 +41,7 @@ public class GiveVitality implements ISkillHandler
 				{
 					((L2PcInstance) target).stopSkillEffects(skill.getId());
 					skill.getEffects(activeChar, ((L2PcInstance)target));
-					SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
 					sm.addSkillName(skill);
 					target.sendPacket(sm);
 				}

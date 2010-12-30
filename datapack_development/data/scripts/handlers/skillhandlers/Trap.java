@@ -77,7 +77,7 @@ public class Trap implements ISkillHandler
 					if (!trap.canSee(activeChar))
 					{
 						if (activeChar instanceof L2PcInstance)
-							((L2PcInstance) activeChar).sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
+							((L2PcInstance) activeChar).sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
 						continue;
 					}
 					
@@ -90,7 +90,7 @@ public class Trap implements ISkillHandler
 					
 					trap.unSummon();
 					if (activeChar instanceof L2PcInstance)
-						((L2PcInstance) activeChar).sendPacket(new SystemMessage(SystemMessageId.A_TRAP_DEVICE_HAS_BEEN_STOPPED));
+						((L2PcInstance) activeChar).sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_TRAP_DEVICE_HAS_BEEN_STOPPED));
 				}
 			}
 		}

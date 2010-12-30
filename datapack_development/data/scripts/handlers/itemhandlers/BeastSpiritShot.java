@@ -45,7 +45,7 @@ public class BeastSpiritShot implements IItemHandler
 		
 		if (playable instanceof L2Summon)
 		{
-			activeOwner.sendPacket(new SystemMessage(SystemMessageId.PET_CANNOT_USE_ITEM));
+			activeOwner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PET_CANNOT_USE_ITEM));
 			return;
 		}
 		
@@ -53,13 +53,13 @@ public class BeastSpiritShot implements IItemHandler
 		
 		if (activePet == null)
 		{
-			activeOwner.sendPacket(new SystemMessage(SystemMessageId.PETS_ARE_NOT_AVAILABLE_AT_THIS_TIME));
+			activeOwner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PETS_ARE_NOT_AVAILABLE_AT_THIS_TIME));
 			return;
 		}
 		
 		if (activePet.isDead())
 		{
-			activeOwner.sendPacket(new SystemMessage(SystemMessageId.SOULSHOTS_AND_SPIRITSHOTS_ARE_NOT_AVAILABLE_FOR_A_DEAD_PET));
+			activeOwner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SOULSHOTS_AND_SPIRITSHOTS_ARE_NOT_AVAILABLE_FOR_A_DEAD_PET));
 			return;
 		}
 		
@@ -72,7 +72,7 @@ public class BeastSpiritShot implements IItemHandler
 		{
 			// Not enough SpiritShots to use.
 			if (!activeOwner.disableAutoShot(itemId))
-				activeOwner.sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_SPIRITHOTS_FOR_PET));
+				activeOwner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_ENOUGH_SPIRITHOTS_FOR_PET));
 			return;
 		}
 		
@@ -108,12 +108,12 @@ public class BeastSpiritShot implements IItemHandler
 		if (!activeOwner.destroyItemWithoutTrace("Consume", item.getObjectId(), shotConsumption, null, false))
 		{
 			if (!activeOwner.disableAutoShot(itemId))
-				activeOwner.sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_SPIRITHOTS_FOR_PET));
+				activeOwner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_ENOUGH_SPIRITHOTS_FOR_PET));
 			return;
 		}
 		
 		// Pet uses the power of spirit.
-		activeOwner.sendPacket(new SystemMessage(SystemMessageId.PET_USE_SPIRITSHOT));
+		activeOwner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PET_USE_SPIRITSHOT));
 		int skillId = 0;
 		switch (itemId)
 		{

@@ -39,7 +39,7 @@ public class OlympiadStat implements IUserCommandHandler
 	{
 		if (id != COMMAND_IDS[0])
 			return false;
-		SystemMessage sm = new SystemMessage(SystemMessageId.THE_CURRENT_RECORD_FOR_THIS_OLYMPIAD_SESSION_IS_S1_MATCHES_S2_WINS_S3_DEFEATS_YOU_HAVE_EARNED_S4_OLYMPIAD_POINTS);
+		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_CURRENT_RECORD_FOR_THIS_OLYMPIAD_SESSION_IS_S1_MATCHES_S2_WINS_S3_DEFEATS_YOU_HAVE_EARNED_S4_OLYMPIAD_POINTS);
 		sm.addNumber(Olympiad.getInstance().getCompetitionDone(activeChar.getObjectId()));
 		sm.addNumber(Olympiad.getInstance().getCompetitionWon(activeChar.getObjectId()));
 		sm.addNumber(Olympiad.getInstance().getCompetitionLost(activeChar.getObjectId()));

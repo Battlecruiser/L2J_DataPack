@@ -40,7 +40,7 @@ public class EnergyStarStone extends ItemSkills
 				|| !(ship instanceof L2ControllableAirShipInstance)
 				|| ship.getFuel() >= ship.getMaxFuel())
 		{
-			playable.sendPacket(new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED).addItemName(item));
+			playable.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED).addItemName(item));
 			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

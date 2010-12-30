@@ -295,7 +295,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
 			return;
 		}
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
@@ -338,13 +338,13 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
 			return;
 		}
 		
 		if (player.getObjectId() == activeChar.getObjectId())
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.CANNOT_USE_ON_YOURSELF));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_USE_ON_YOURSELF));
 		}
 		else
 		{
@@ -402,7 +402,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	{
 		if (target == null)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
 			return;
 		}
 		
@@ -413,13 +413,13 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
 			return;
 		}
 		
 		if (player.getObjectId() == activeChar.getObjectId())
 		{
-			player.sendPacket(new SystemMessage(SystemMessageId.CANNOT_USE_ON_YOURSELF));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_USE_ON_YOURSELF));
 		}
 		else
 		{
@@ -568,12 +568,12 @@ public class AdminTeleport implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessageId.TARGET_CANT_FOUND));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TARGET_CANT_FOUND));
 			}
 		}
 		else
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
 		}
 	}
 	
