@@ -572,7 +572,7 @@ public class Q350_EnhanceYourWeapon extends Quest
 				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SOUL_CRYSTAL_ABSORBING_SUCCEEDED));
 			
 			// Send system message
-			SystemMessage sms = SystemMessage.getSystemMessage(SystemMessageId.EARNED_ITEM);
+			SystemMessage sms = SystemMessage.getSystemMessage(SystemMessageId.EARNED_ITEM_S1);
 			sms.addItemName(giveid);
 			player.sendPacket(sms);
 			
