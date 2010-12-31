@@ -99,7 +99,7 @@ public class Sweep implements ISkillHandler
 						}
 						else
 						{
-							smsg = SystemMessage.getSystemMessage(SystemMessageId.EARNED_ITEM); // earned $s1
+							smsg = SystemMessage.getSystemMessage(SystemMessageId.EARNED_ITEM_S1); // earned $s1
 							smsg.addItemName(ritem.getItemId());
 						}
 						player.sendPacket(smsg);
