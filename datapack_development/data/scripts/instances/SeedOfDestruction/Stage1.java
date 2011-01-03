@@ -622,7 +622,7 @@ public class Stage1 extends Quest
 			while(reenter.get(Calendar.DAY_OF_WEEK) != RESET_DAY_2)
 				reenter.add(Calendar.DAY_OF_MONTH, 1);
 
-		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_RESTRICTED);
+		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_RESTRICTED);
 		sm.addString(InstanceManager.getInstance().getInstanceIdName(INSTANCEID));
 
 		// set instance reenter time for all allowed players

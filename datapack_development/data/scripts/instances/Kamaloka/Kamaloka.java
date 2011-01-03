@@ -645,7 +645,7 @@ public class Kamaloka extends Quest
 				reenter.add(Calendar.DATE, 1);
 			reenter.set(Calendar.HOUR_OF_DAY, RESET_HOUR);
 			
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_RESTRICTED);
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_RESTRICTED);
 			sm.addString(InstanceManager.getInstance().getInstanceIdName(world.templateId));
 			
 			// set instance reenter time for all allowed players

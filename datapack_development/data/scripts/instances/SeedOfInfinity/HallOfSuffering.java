@@ -466,7 +466,7 @@ public class HallOfSuffering extends Quest
 				Calendar reenter = Calendar.getInstance();
 				reenter.add(Calendar.HOUR, INSTANCEPENALTY);
 				
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_RESTRICTED);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_RESTRICTED);
 				sm.addString(InstanceManager.getInstance().getInstanceIdName(tmpworld.templateId));
 				
 				// set instance reenter time for all allowed players
