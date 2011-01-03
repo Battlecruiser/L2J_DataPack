@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS `grandboss_data` (
   `loc_z` INTEGER NOT NULL DEFAULT 0,
   `heading` INTEGER NOT NULL DEFAULT 0,
   `respawn_time` BIGINT NOT NULL DEFAULT 0,
-  `currentHP` DECIMAL(8,0) DEFAULT NULL,
+  `currentHP` DECIMAL(12,0) DEFAULT NULL,
   `currentMP` DECIMAL(8,0) DEFAULT NULL,
   `status` TINYINT NOT NULL DEFAULT 0,
   PRIMARY KEY (`boss_id`)
