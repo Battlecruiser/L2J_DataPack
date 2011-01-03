@@ -98,7 +98,7 @@ public class ItemSkillsTemplate implements IItemHandler
 						return;
 					}
 					
-					if (itemSkill.getItemConsumeId() == 0 && itemSkill.getItemConsume() > 0)
+					if (itemSkill.getItemConsumeId() == 0 && itemSkill.getItemConsume() > 0 && (itemSkill.isPotion() || itemSkill.isSimultaneousCast()))
 					{
 						if (!playable.destroyItem("Consume", item.getObjectId(), itemSkill.getItemConsume(), null, false))
 						{
@@ -153,7 +153,18 @@ public class ItemSkillsTemplate implements IItemHandler
 					else
 					{
 						playable.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-						playable.useMagic(itemSkill, forceUse, false);
+						if (!playable.useMagic(itemSkill, forceUse, false))
+							return;
+						
+						//consume
+						if (itemSkill.getItemConsumeId() == 0 && itemSkill.getItemConsume() > 0)
+						{
+							if (!playable.destroyItem("Consume", item.getObjectId(), itemSkill.getItemConsume(), null, false))
+							{
+								activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_ENOUGH_ITEMS));
+								return;
+							}
+						}
 					}
 					
 					if (itemSkill.getReuseDelay() > 0)
@@ -164,10 +175,7 @@ public class ItemSkillsTemplate implements IItemHandler
 						{
 							final int group = item.getEtcItem().getSharedReuseGroup();
 							if (group >= 0)
-								activeChar.sendPacket(new ExUseSharedGroupItem(item.getItemId(),
-										group,
-										itemSkill.getReuseDelay(),
-										itemSkill.getReuseDelay()));
+								activeChar.sendPacket(new ExUseSharedGroupItem(item.getItemId(), group, itemSkill.getReuseDelay(), itemSkill.getReuseDelay()));
 						}
 					}
 				}
@@ -221,10 +229,7 @@ public class ItemSkillsTemplate implements IItemHandler
 			{
 				final int group = item.getEtcItem().getSharedReuseGroup();
 				if (group >= 0)
-					player.sendPacket(new ExUseSharedGroupItem(item.getItemId(),
-							group,
-							(int)remainingTime,
-							skill.getReuseDelay()));
+					player.sendPacket(new ExUseSharedGroupItem(item.getItemId(), group, (int)remainingTime, skill.getReuseDelay()));
 			}
 		}
 		else
