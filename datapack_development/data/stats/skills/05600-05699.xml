@@ -1147,7 +1147,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" time="10" val="0" stackOrder="1" stackType="pvp_weapon_buff">
-				<add order="0x40" stat="pAtkSpd" val="1.15" />
+				<mul order="0x30" stat="pAtkSpd" val="1.15" />
 			</effect>
 		</for>
 	</skill>
