@@ -29,7 +29,6 @@ import java.util.StringTokenizer;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.Universe;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
@@ -49,11 +48,8 @@ public class AdminTest implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
 	{
-		"admin_test",
 		"admin_stats",
 		"admin_skill_test",
-		"admin_st",
-		"admin_mp",
 		"admin_known"
 	};
 	
@@ -89,30 +85,6 @@ public class AdminTest implements IAdminCommandHandler
 			{
 				activeChar.sendMessage("Command format is //skill_test <ID>");
 			}
-		}
-		else if (command.startsWith("admin_test uni flush"))
-		{
-			Universe.getInstance().flush();
-			activeChar.sendMessage("Universe Map Saved.");
-		}
-		else if (command.startsWith("admin_test uni"))
-		{
-			activeChar.sendMessage("Universe Map Size is: " + Universe.getInstance().size());
-		}
-		else if (command.equals("admin_mp on"))
-		{
-			//.startPacketMonitor();
-			activeChar.sendMessage("command not working");
-		}
-		else if (command.equals("admin_mp off"))
-		{
-			//.stopPacketMonitor();
-			activeChar.sendMessage("command not working");
-		}
-		else if (command.equals("admin_mp dump"))
-		{
-			//.dumpPacketHistory();
-			activeChar.sendMessage("command not working");
 		}
 		else if (command.equals("admin_known on"))
 		{
