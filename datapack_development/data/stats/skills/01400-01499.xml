@@ -1377,10 +1377,21 @@
 		</for>
 	</skill>
 	<skill id="1449" levels="1" name="Transfer Soul">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="150" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
 		<set name="hitTime" val="2500" />
+		<set name="hpConsume" val="20" />
+		<set name="mpConsume" val="5" />
+		<set name="num_souls" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="soulConsumeCount" val="1" />
+		<set name="skillType" val="CHARGESOUL" />
+		<set name="target" val="TARGET_ONE" />
+		<cond msgId="113" addName="1">
+			<target race="Kamael" />
+		</cond>
 	</skill>
 	<skill id="1450" levels="1" name="Chain Lightning">
 		<set name="target" val="TARGET_NONE" />
