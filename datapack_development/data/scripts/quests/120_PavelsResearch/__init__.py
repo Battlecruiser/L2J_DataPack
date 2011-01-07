@@ -19,7 +19,7 @@ Stones = 32046
 Wendy = 32047
 
 #Items
-EarBinding = 854
+PhoenixEarring = 6324
 Report = 8058
 Report2 = 8059
 Enigma = 8060
@@ -56,7 +56,7 @@ class Quest (JQuest) :
        st.playSound("ItemSound.quest_middle")
     elif event == "32041-32.htm" :
        st.takeItems(Necklace,1)
-       st.giveItems(EarBinding,1)
+       st.giveItems(PhoenixEarring,1)
        st.giveItems(57,783720)
        st.addExpAndSp(3447315,272615)
        st.exitQuest(False)
