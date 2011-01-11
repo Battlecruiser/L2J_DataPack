@@ -14,6 +14,7 @@
  */
 package handlers.admincommandhandlers;
 
+import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
 import com.l2jserver.gameserver.cache.HtmCache;
@@ -51,7 +52,15 @@ public class AdminClan implements IAdminCommandHandler
 		{
 			try
 			{
-				int objectId = Integer.parseInt(st.nextToken());
+               int objectId = 0;
+               try
+               {
+                   objectId = Integer.parseInt(st.nextToken());
+               }
+               catch (NoSuchElementException NSEE)
+               {
+                   objectId = activeChar.getTargetId();
+               }
 				L2PcInstance player = L2World.getInstance().getPlayer(objectId);
 				if (player != null)
 				{
