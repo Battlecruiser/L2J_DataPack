@@ -986,15 +986,19 @@
 		<set name="lvlDepend" val="1" />
 	</skill>
 	<skill id="8277" levels="1" name="Transform Native">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="1" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="56" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="101" />
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="-1" val="0" stackOrder="1" stackType="transform" />
+			<effect name="Transformation" time="1800" val="0" stackOrder="1" stackType="transform" />
 		</for>
 	</skill>
 	<skill id="8278" levels="1" name="Transform Guard of Dawn">
