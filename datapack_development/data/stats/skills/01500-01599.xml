@@ -137,7 +137,7 @@
 		<set name="reuseDelay" val="1800000" />
 		<set name="skillType" val="HPMPHEAL_PERCENT" />
 		<set name="target" val="TARGET_ONE" />
-		<cond>
+		<cond msgId="113" addName="1">
 			<not>
 				<target npcType="L2Attackable" />
 			</not>
