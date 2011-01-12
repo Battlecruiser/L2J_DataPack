@@ -5,7 +5,7 @@
 			<xs:sequence minOccurs="1" maxOccurs="1">
 				<xs:element name="STR" minOccurs="1" maxOccurs="1">
 					<xs:complexType>
-						<xs:sequence>
+						<xs:sequence minOccurs="1" maxOccurs="1">
 							<xs:element name="stat" minOccurs="1" maxOccurs="100">
 								<xs:complexType>
 									<xs:attribute name="bonus" type="xs:decimal" use="required" />
@@ -17,7 +17,7 @@
 				</xs:element>
 				<xs:element name="INT" minOccurs="1" maxOccurs="1">
 					<xs:complexType>
-						<xs:sequence>
+						<xs:sequence minOccurs="1" maxOccurs="1">
 							<xs:element name="stat" minOccurs="1" maxOccurs="100">
 								<xs:complexType>
 									<xs:attribute name="bonus" type="xs:decimal" use="required" />
@@ -29,7 +29,7 @@
 				</xs:element>
 				<xs:element name="CON" minOccurs="1" maxOccurs="1">
 					<xs:complexType>
-						<xs:sequence>
+						<xs:sequence minOccurs="1" maxOccurs="1">
 							<xs:element name="stat" minOccurs="1" maxOccurs="100">
 								<xs:complexType>
 									<xs:attribute name="bonus" type="xs:decimal" use="required" />
@@ -41,7 +41,7 @@
 				</xs:element>
 				<xs:element name="MEN" minOccurs="1" maxOccurs="1">
 					<xs:complexType>
-						<xs:sequence>
+						<xs:sequence minOccurs="1" maxOccurs="1">
 							<xs:element name="stat" minOccurs="1" maxOccurs="100">
 								<xs:complexType>
 									<xs:attribute name="bonus" type="xs:decimal" use="required" />
@@ -53,7 +53,7 @@
 				</xs:element>
 				<xs:element name="DEX" minOccurs="1" maxOccurs="1">
 					<xs:complexType>
-						<xs:sequence>
+						<xs:sequence minOccurs="1" maxOccurs="1">
 							<xs:element name="stat" minOccurs="1" maxOccurs="100">
 								<xs:complexType>
 									<xs:attribute name="bonus" type="xs:decimal" use="required" />
@@ -65,7 +65,7 @@
 				</xs:element>
 				<xs:element name="WIT" minOccurs="1" maxOccurs="1">
 					<xs:complexType>
-						<xs:sequence>
+						<xs:sequence minOccurs="1" maxOccurs="1">
 							<xs:element name="stat" minOccurs="1" maxOccurs="100">
 								<xs:complexType>
 									<xs:attribute name="bonus" type="xs:decimal" use="required" />
