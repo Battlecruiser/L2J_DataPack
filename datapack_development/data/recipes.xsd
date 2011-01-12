@@ -64,7 +64,18 @@
 						<xs:attribute name="id" type="xs:positiveInteger" use="required" />
 						<xs:attribute name="name" type="xs:normalizedString" use="required" />
 						<xs:attribute name="recipeId" type="xs:positiveInteger" use="required" />
-						<xs:attribute name="successRate" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="successRate" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:integer">
+									<xs:enumeration value="10" />
+									<xs:enumeration value="25" />
+									<xs:enumeration value="60" />
+									<xs:enumeration value="70" />
+									<xs:enumeration value="95" />
+									<xs:enumeration value="100" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
 						<xs:attribute name="type" use="required">
 							<xs:simpleType>
 								<xs:restriction base="xs:token">
