@@ -3,7 +3,7 @@
 	<xs:element name="list">
 		<xs:complexType>
 			<xs:sequence minOccurs="1" maxOccurs="1">
-				<xs:element name="item" maxOccurs="2" minOccurs="2">
+				<xs:element name="item" minOccurs="2" maxOccurs="2">
 					<xs:complexType>
 						<xs:sequence minOccurs="1" maxOccurs="1">
 							<xs:element name="disapearChance" minOccurs="1" maxOccurs="1">
@@ -18,7 +18,7 @@
 									</xs:attribute>
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="dropRate" maxOccurs="1" minOccurs="1">
+							<xs:element name="dropRate" minOccurs="1" maxOccurs="1">
 								<xs:complexType>
 									<xs:attribute name="val" use="required">
 										<xs:simpleType>
@@ -30,23 +30,23 @@
 									</xs:attribute>
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="duration" maxOccurs="1" minOccurs="1">
+							<xs:element name="duration" minOccurs="1" maxOccurs="1">
 								<xs:complexType>
 									<xs:attribute name="val" type="xs:positiveInteger" use="required" />
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="durationLost" maxOccurs="1" minOccurs="1">
+							<xs:element name="durationLost" minOccurs="1" maxOccurs="1">
 								<xs:complexType>
 									<xs:attribute name="val" type="xs:positiveInteger" use="required" />
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="stageKills" maxOccurs="1" minOccurs="1">
+							<xs:element name="stageKills" minOccurs="1" maxOccurs="1">
 								<xs:complexType>
 									<xs:attribute name="val" use="required">
 										<xs:simpleType>
 											<xs:restriction base="xs:integer">
-												<xs:minInclusive value="1"></xs:minInclusive>
-												<xs:maxInclusive value="10"></xs:maxInclusive>
+												<xs:minInclusive value="1" />
+												<xs:maxInclusive value="10" />
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:attribute>

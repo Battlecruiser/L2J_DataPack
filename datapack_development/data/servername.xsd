@@ -5,7 +5,14 @@
 			<xs:sequence minOccurs="1" maxOccurs="1">
 				<xs:element name="server" minOccurs="127" maxOccurs="127">
 					<xs:complexType>
-						<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="id" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:integer">
+									<xs:minInclusive value="1" />
+									<xs:maxInclusive value="127" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
 						<xs:attribute name="name" type="xs:normalizedString" use="required" />
 					</xs:complexType>
 				</xs:element>
