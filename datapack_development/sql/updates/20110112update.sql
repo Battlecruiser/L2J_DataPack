@@ -1,6 +1,6 @@
 ALTER TABLE `character_offline_trade_items`
-MODIFY COLUMN `charId`  int(10) UNSIGNED NOT NULL DEFAULT 0 FIRST ,
-MODIFY COLUMN `item`  int(10) UNSIGNED NOT NULL DEFAULT 0 AFTER `charId`,
-MODIFY COLUMN `count`  bigint(20) UNSIGNED NOT NULL DEFAULT 0 AFTER `item`,
-MODIFY COLUMN `price`  bigint(20) UNSIGNED NOT NULL DEFAULT 0 AFTER `count`,
+MODIFY `charId` int(10) unsigned NOT NULL DEFAULT '0',
+MODIFY `item` smallint(5) unsigned NOT NULL DEFAULT '0',
+MODIFY `count` bigint(20) unsigned NOT NULL DEFAULT '0',
+MODIFY `price` bigint(20) unsigned NOT NULL DEFAULT '0',
 DROP PRIMARY KEY;

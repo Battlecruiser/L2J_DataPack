@@ -953,13 +953,30 @@
 		</for>
 	</skill>
 	<skill id="1541" levels="1" name="Curse of Desparion">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="magicLvl" val="81" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="lvlDepend" val="2" />
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="true" />
+		<set name="lvlDepend" val="2" />
+		<set name="magicLvl" val="81" />
+		<set name="mpConsume" val="58" />
+		<set name="mpInitialConsume" val="15" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Debuff" time="30" val="0" stackOrder="1" stackType="ultimate_debuff">
+				<mul order="0x30" stat="pAtk" val="0.5" />
+				<mul order="0x30" stat="pAtkSpd" val="0.5" />
+				<mul order="0x30" stat="runSpd" val="0.5" />
+				<sub order="0x40" stat="accCombat" val="12" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1542" levels="1" name="Counter Critical">
 		<!-- Confirmed CT2.5 -->

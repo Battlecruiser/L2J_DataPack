@@ -496,14 +496,25 @@
 			<effect count="10" name="DamOverTime" val="#dot" stackOrder="#stackOrder" stackType="dot_attr" abnormal="flame" effectPower="50" effectType="DOT" />
 		</for>
 	</skill>
-	<skill id="928" levels="1" name="Duel Blow">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="nextActionAttack" val="true" />
-		<set name="overHit" val="true" />
-		<set name="magicLvl" val="81" />
-		<set name="operateType" val="OP_PASSIVE" />
+	<skill id="928" levels="1" name="Dual Blow">
+		<!-- Confirmed CT2.5 -->
+		<!-- High Five Skill -->
+		<set name="baseCritRate" val="10" />
+		<set name="castRange" val="40" />
+		<set name="condition" val="16" /> <!-- Crit -->
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1800" />
+		<set name="lethal1" val="10" />
+		<set name="magicLvl" val="81" />
+		<set name="mpConsume" val="77" />
+		<set name="nextActionAttack" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="overHit" val="true" />
+		<set name="power" val="7546" />
+		<set name="reuseDelay" val="4000" />
+		<set name="skillType" val="BLOW" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="weaponsAllowed" val="Dual Dagger" /> <!-- Dual Daggers -->
 	</skill>
 	<skill id="929" levels="1" name="Spirit of the Cat">
 		<set name="castRange" val="600" />
