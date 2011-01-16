@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.network.serverpackets.FlyToLocation;
 import com.l2jserver.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
-import com.l2jserver.gameserver.skills.Env;
 import com.l2jserver.gameserver.skills.Formulas;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
 import com.l2jserver.gameserver.util.Util;
@@ -105,23 +104,7 @@ public class InstantJump implements ISkillHandler
 			{
 				// activate attacked effects, if any
 				target.stopSkillEffects(skill.getId());
-				
-				byte shld = Formulas.calcShldUse(activeChar, target, skill);
-				if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, false, false, false))
-				{
-					skill.getEffects(activeChar, target, new Env(shld, false, false, false));
-					
-					//SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
-					//sm.addSkillName(skill);
-					//target.sendPacket(sm);
-				}
-				else
-				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_YOUR_S2);
-					sm.addCharName(target);
-					sm.addSkillName(skill);
-					activeChar.sendPacket(sm);
-				}
+				skill.getEffects(activeChar, target);
 			}
 		}
 		
