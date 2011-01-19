@@ -628,15 +628,17 @@
 		</for>
 	</skill>
 	<skill id="3866" levels="1" name="Dynasty Leather Gloves">
-		<!-- CT2.5 retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="0.215" />
-			<add order="0x40" stat="rEvas" val="0.215" />
-			<add order="0x40" stat="maxHp" val="52.25" />
-			<add order="0x40" stat="darkRes" val="0.75" />
+			<add order="0x40" stat="rEvas" val="0.31" />
+			<add order="0x40" stat="accCombat" val="0.31" />
+			<add order="0x40" stat="maxHp" val="82" />
+			<mul order="0x30" stat="pAtkSpd" val="1.0027" />
+			<add order="0x40" stat="darkRes" val="0.8" />
 		</for>
 	</skill>
 	<skill id="3867" levels="1" name="Bow of Boost HP">
