@@ -1,40 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="5500" levels="1" name="Black Dragon Claw">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Darion Skills -->
+		<set name="castRange" val="40" />
+		<set name="effectAbnormalLvl" val="10" />
+		<set name="effectRange" val="600" />
+		<set name="effectType" val="BLEED" />
+		<set name="element" val="5" /> <!-- Dark -->
 		<set name="hitTime" val="1500" />
-		<set name="saveVs" val="CON" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="2616" />
+		<set name="saveVs" val="CON" />
+		<set name="skillRadius" val="600" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_FRONT_AREA" />
+		<for>
+			<!-- 52HP * 5 during 20 seconds -->
+			<effect count="4" name="DamOverTime" time="5" val="260" abnormal="bleed" effectPower="90" effectType="BLEED" stackOrder="10" stackType="bleeding" />
+		</for>
 	</skill>
 	<skill id="5501" levels="1" name="Stuns">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Darion Skills -->
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="200" />
 		<set name="hitTime" val="1000" />
-		<set name="saveVs" val="CON" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="saveVs" val="CON" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="STUN" />
+		<set name="target" val="TARGET_FRONT_AREA" />
+		<for>
+			<effect name="Stun" time="9" val="0" stackOrder="1" stackType="stun" />
+			<effect name="RemoveTarget" noicon="1" val="0" effectPower="80" />
+		</for>
 	</skill>
 	<skill id="5502" levels="1" name="Stuns">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Darion Skills -->
 		<set name="hitTime" val="1500" />
-		<set name="saveVs" val="CON" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="saveVs" val="CON" />
+		<set name="skillRadius" val="600" />
+		<set name="skillType" val="STUN" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Stun" time="9" val="0" stackOrder="1" stackType="stun" />
+			<effect name="RemoveTarget" noicon="1" val="0" effectPower="80" />
+		</for>
 	</skill>
 	<skill id="5503" levels="1" name="Ultimate Guard">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="reuseDelay" val="300000" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Darion Skills -->
+		<set name="aggroPoints" val="100" />
 		<set name="hitTime" val="2000" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="ImmobileBuff" time="30" val="0" abnormal="invulnerable" stackOrder="1" stackType="pd_up_special">
+				<add order="0x40" stat="pDef" val="1800" />
+				<add order="0x40" stat="mDef" val="1350" />
+				<sub order="0x40" stat="cancelVuln" val="80" />
+				<mul order="0x30" stat="regHp" val="1.8" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5504" levels="1" name="Shield Defense">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Darion Skills -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<mul order="0x30" stat="rShld" val="1.9" />
+		</for>
 	</skill>
 	<skill id="5505" levels="1" name="Fire Blossom">
 		<set name="target" val="TARGET_NONE" />
@@ -971,11 +1026,24 @@
 		</for>
 	</skill>
 	<skill id="5593" levels="1" name="Vampiric Mana Burn">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="reuseDelay" val="10000" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Darion Skills -->
+		<set name="absorbPart" val="0.8" />
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="119" />
+		<set name="mpInitialConsume" val="29" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="122" />
+		<set name="reuseDelay" val="10000" />
+		<set name="skillType" val="DRAIN" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="ManaDamOverTime" noicon="1" val="182" />
+		</for>
 	</skill>
 	<skill id="5594" levels="1" name="Poison">
 		<set name="target" val="TARGET_NONE" />
