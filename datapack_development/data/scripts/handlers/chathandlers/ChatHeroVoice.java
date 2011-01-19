@@ -17,6 +17,7 @@ package handlers.chathandlers;
 import java.util.Collection;
 
 import com.l2jserver.gameserver.handler.IChatHandler;
+import com.l2jserver.gameserver.model.BlockList;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
@@ -51,7 +52,10 @@ public class ChatHeroVoice implements IChatHandler
 			
 			Collection<L2PcInstance> pls = L2World.getInstance().getAllPlayers().values();
 			for (L2PcInstance player : pls)
-				player.sendPacket(cs);
+			{
+				if (player != null && !BlockList.isBlocked(player, activeChar))
+					player.sendPacket(cs);
+			}
 		}
 	}
 	
