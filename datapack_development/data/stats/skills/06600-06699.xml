@@ -486,7 +486,7 @@
 	</skill>
 	<skill id="6662" levels="2" name="Pillar of Frozen">
 		<!-- Confirmed CT2.5 -->
-		<!-- Freya Skills -->
+		<!-- Freya Skills (Triggered from 6274, 6275, 6299, 6300) -->
 		<table name="#count"> 7 3 </table>
 		<table name="#dot"> 115 575 </table>
 		<table name="#ignoreResists"> false true </table>
@@ -505,9 +505,10 @@
 		<set name="skillType" val="DOT" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
+			<!-- TODO: Missing abnormal effect "ave_frozen_pillar" -->
+			<effect name="Paralyze" time="#time2" val="0" abnormal="ice" stackOrder="#stackOrder" stackType="freezing" />
 			<!-- Level 1: 115HP * 1 during 7 seconds -->
 			<!-- Level 2: 115HP * 5 during 15 seconds -->
-			<effect name="ImmobileBuff" time="#time2" val="0" abnormal="ice" stackOrder="#stackOrder" stackType="freezing" />
 			<effect count="#count" name="DamOverTime" time="#time" noicon="1" val="#dot" />
 			<effect name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="6302" triggeredLevel="1" chanceType="ON_START" />
 		</for>
@@ -881,7 +882,7 @@
 	</skill>
 	<skill id="6698" levels="1" name="Pillar of Frozen - Eternal Ice">
 		<!-- Confirmed CT2.5 -->
-		<!-- Freya Skills -->
+		<!-- Freya Skills (Triggered from 6698) -->
 		<set name="aggroPoints" val="100" />
 		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
@@ -893,7 +894,8 @@
 		<set name="skillType" val="DOT" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
-			<effect name="ImmobileBuff" time="15" val="0" abnormal="ice" stackOrder="3" stackType="freezing" />
+			<!-- TODO: Missing abnormal effect "ave_frozen_pillar" -->
+			<effect name="Paralyze" time="15" val="0" abnormal="ice" stackOrder="3" stackType="freezing" />
 			<!-- 115HP * 5 during 15 seconds -->
 			<effect count="3" name="DamOverTime" time="5" noicon="1" val="575" />
 			<!-- 5MP * 5 during 15 seconds -->
