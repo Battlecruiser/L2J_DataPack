@@ -99,24 +99,27 @@
 		</for>
 	</skill>
 	<skill id="3604" levels="1" name="Frintezza's Necklace">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Boss Jewel Skill -->
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<sub order="0x40" stat="sleepVuln" val="15" />
+			<add order="0x40" stat="darkRes" val="15" />
 			<sub order="0x40" stat="poisonVuln" val="25" />
 			<sub order="0x40" stat="bleedVuln" val="25" />
 			<sub order="0x40" stat="paralyzeVuln" val="15" />
 			<sub order="0x40" stat="stunVuln" val="15" />
-			<add order="0x40" stat="darkRes" val="15" />
-			<add order="0x40" stat="bleedProf" val="25" />
+			<sub order="0x40" stat="sleepVuln" val="15" />
 			<add order="0x40" stat="poisonProf" val="25" />
-			<add order="0x40" stat="sleepProf" val="15" />
+			<add order="0x40" stat="bleedProf" val="25" />
 			<add order="0x40" stat="paralyzeProf" val="15" />
 			<add order="0x40" stat="stunProf" val="15" />
-			<add order="0x40" stat="reflectDam" val="4" />
+			<add order="0x40" stat="sleepProf" val="15" />
 			<mul order="0x30" stat="mReuse" val="0.95" />
 			<mul order="0x30" stat="pReuse" val="0.95" />
+			<add order="0x40" stat="reflectDam" val="4" />
 		</for>
 	</skill>
 	<skill id="3605" levels="1" name="Clan Oath Heavy Armor Set">
@@ -793,17 +796,20 @@
 		</for>
 	</skill>
 	<skill id="3649" levels="1" name="Beleth's Ring">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Boss Jewel Skill -->
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="magicSuccRes" val="1.12" />
-			<add order="0x40" stat="maxHp" val="105" />
-			<add order="0x40" stat="derangementProf" val="10" />
+			<mul order="0x30" stat="mDef" val="1.12" />
 			<sub order="0x40" stat="derangementVuln" val="10" />
+			<add order="0x40" stat="derangementProf" val="10" />
 			<add order="0x40" stat="maxMp" val="38" />
-			<add order="0x40" stat="regMp" val="0.23" />
 			<add order="0x40" stat="darkRes" val="30" />
+			<add order="0x40" stat="maxHp" val="105" />
+			<add order="0x40" stat="regMp" val="0.23" />
 		</for>
 	</skill>
 	<skill id="3650" levels="1" name="PvP Weapon - CP Drain">
