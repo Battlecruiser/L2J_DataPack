@@ -1205,13 +1205,23 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="8498" levels="1" name="Pink Talisman - STR">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x10" stat="STR" val="2" />
+		</for>
 	</skill>
 	<skill id="8499" levels="1" name="Pink Talisman - DEX">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x10" stat="DEX" val="2" />
+		</for>
 	</skill>
 </list>
