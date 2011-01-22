@@ -278,43 +278,46 @@
 		</for>
 	</skill>
 	<skill id="915" levels="1" name="Dance of Berserker">
-		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="679" />
+		<set name="hitTime" val="2500" />
+		<set name="isDance" val="true" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="60" />
 		<set name="nextDanceCost" val="30" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="240000" />
 		<set name="skillRadius" val="1000" />
 		<set name="skillType" val="BUFF" />
-		<set name="isDance" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="hitTime" val="2500" />
-		<set name="reuseDelay" val="240000" />
-		<set name="aggroPoints" val="523" />
+		<set name="target" val="TARGET_PARTY" />
+		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
 		<for>
 			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="dance_of_berserker">
-				<mul order="0x30" stat="mAtk" val="1.16" />
 				<mul order="0x30" stat="pAtk" val="1.08" />
-				<mul order="0x30" stat="mDef" val="0.84" />
-				<mul order="0x30" stat="pDef" val="0.92" />
-				<mul order="0x30" stat="mAtkSpd" val="1.08" />
 				<mul order="0x30" stat="pAtkSpd" val="1.08" />
+				<mul order="0x30" stat="mAtk" val="1.16" />
+				<mul order="0x30" stat="mAtkSpd" val="1.08" />
 				<add order="0x40" stat="runSpd" val="8" />
+				<mul order="0x30" stat="pDef" val="0.92" />
+				<mul order="0x30" stat="mDef" val="0.84" />
 				<sub order="0x40" stat="rEvas" val="4" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="916" levels="4" name="Shield Deflect Magic">
-		<table name="#mpConsume"> 28 29 29 29 </table>
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 60 64 68 72 </table>
-		<table name="#vengeanceMdam"> 35 40 45 50 </table>
-		<set name="weaponsAllowed" val="Shield" /> <!-- Shield -->
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#mpConsume"> 28 29 29 29 </table>
+		<table name="#vengeanceMdam"> 20 30 40 50 </table>
+		<set name="aggroPoints" val="204" />
 		<set name="hitTime" val="500" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="45000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
+		<set name="weaponsAllowed" val="Shield" /> <!-- Shield -->
 		<for>
 			<effect name="Buff" time="8" val="0" stackOrder="1" stackType="reflect_magic_dd">
 				<add order="0x40" stat="vengeanceMdam" val="#vengeanceMdam" />
@@ -322,6 +325,8 @@
 		</for>
 	</skill>
 	<skill id="917" levels="1" name="Final Secret">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="597" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="37" />
@@ -332,7 +337,7 @@
 		<for>
 			<effect name="Buff" time="30" val="0" stackOrder="1" stackType="final_secret">
 				<mul order="0x30" stat="pvpPhysDmg" val="1.3" />
-				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.3" />
+				<mul order="0x30" stat="physicalSkillPower" val="1.3" />
 			</effect>
 		</for>
 	</skill>
@@ -361,53 +366,58 @@
 		<set name="reuseDelay" val="75000" />
 	</skill>
 	<skill id="920" levels="37" name="Power Crush">
-		<table name="#magicLvl"> 40 40 40 43 43 43 46 46 46 49 49 49 52 52 52 55 55 55 58 58 58 60 60 62 62 64 64 66 66 68 68 70 70 72 72 74 74 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#mpConsume"> 38 38 40 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 </table>
 		<table name="#power"> 664 706 750 795 843 893 945 998 1054 1112 1172 1234 1298 1365 1433 1503 1575 1649 1725 1803 1882 1963 2045 2129 2214 2301 2388 2476 2565 2655 2745 2836 2927 3018 3108 3198 3288 </table>
 		<set name="baseCritRate" val="15" />
-		<set name="power" val="#power" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="hitTime" val="1080" />
+		<set name="castRange" val="80" />
 		<set name="coolTime" val="720" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1080" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="nextActionAttack" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="overHit" val="true" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
-		<set name="nextActionAttack" val="true" />
-		<set name="overHit" val="true" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="reuseDelay" val="3000" />
-		<set name="castRange" val="80" />
-		<set name="effectRange" val="440" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="weaponsAllowed" val="Pole" /> <!-- Pole -->
 	</skill>
 	<skill id="921" levels="1" name="Cursed Pierce">
-		<set name="weaponsAllowed" val="Pole" /> <!-- Pole -->
-		<set name="power" val="3849" />
-		<set name="mpConsume" val="77" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="hitTime" val="1080" />
-		<set name="coolTime" val="720" />
-		<set name="skillType" val="PDAM" />
-		<set name="nextActionAttack" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="baseCritRate" val="30" />
-		<set name="SSBoost" val="2.0" />
+		<set name="castRange" val="80" />
+		<set name="coolTime" val="720" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1080" />
 		<set name="ignoreShld" val="true" />
 		<set name="magicLvl" val="76" />
-		<set name="overHit" val="true" />
+		<set name="mpConsume" val="77" />
+		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="overHit" val="true" />
+		<set name="power" val="3849" />
 		<set name="reuseDelay" val="3000" />
-		<set name="castRange" val="80" />
-		<set name="effectRange" val="400" />
+		<set name="skillType" val="PDAM" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="weaponsAllowed" val="Pole" /> <!-- Pole -->
 	</skill>
 	<skill id="922" levels="1" name="Hide">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="reuseDelay" val="180000" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="679" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="staticReuse" val="true" />
 		<set name="removedOnAnyActionExceptMove" val="true" />
 		<set name="removedOnDamage" val="true" />
+		<set name="reuseDelay" val="180000" />
+		<set name="skillType" val="BUFF" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Hide" time="30" val="0" stackOrder="1" stackType="hide">
 				<mul order="0x30" stat="runSpd" val="0.7" />
@@ -415,6 +425,7 @@
 		</for>
 	</skill>
 	<skill id="923" levels="1" name="Dual Dagger Mastery">
+		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
@@ -444,11 +455,13 @@
 		<set name="weaponsAllowed" val="Bow" /> <!-- Bow -->
 	</skill>
 	<skill id="925" levels="1" name="Sigil Mastery">
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="76" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.04">
+			<mul order="0x30" stat="mAtk" val="1.05">
 				<using kind="Sigil" />
 			</mul>
 			<mul order="0x30" stat="regMp" val="1.17">
@@ -457,6 +470,8 @@
 		</for>
 	</skill>
 	<skill id="926" levels="1" name="Sigil Mastery">
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="76" />
 		<set name="operateType" val="OP_PASSIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
@@ -470,28 +485,29 @@
 		</for>
 	</skill>
 	<skill id="927" levels="14" name="Burning Chop">
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#power"> 167 210 261 319 384 419 455 492 531 570 610 651 691 731 </table>
 		<table name="#dot"> 43 43 43 53 53 53 61 61 61 61 61 66 66 66 </table>
 		<table name="#stackOrder"> 5 5 5 6 6 6 7 7 7 7 7 8 8 8 </table>
 		<set name="baseCritRate" val="10" />
-		<set name="lvlDepend" val="1" />
-		<set name="power" val="#power" />
-		<set name="weaponsAllowed" val="Blunt, Big Blunt" /> <!-- Blunt/Big Blunt -->
-		<set name="mpConsume" val="19" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="hitTime" val="1080" />
+		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1080" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="19" />
+		<set name="nextActionAttack" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="overHit" val="true" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="nextActionAttack" val="true" />
-		<set name="overHit" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="reuseDelay" val="3000" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="weaponsAllowed" val="Blunt, Big Blunt" /> <!-- Blunt/Big Blunt -->
 		<for>
 			<effect count="10" name="DamOverTime" val="#dot" stackOrder="#stackOrder" stackType="dot_attr" abnormal="flame" effectPower="50" effectType="DOT" />
 		</for>
@@ -905,11 +921,15 @@
 		</for>
 	</skill>
 	<skill id="956" levels="3" name="Boost Morale">
+		<!-- Confirmed CT2.5 -->
 		<!-- Vanguard Stance Skill -->
 		<table name="#accCombat"> 4 6 8 </table>
-		<table name="#rCrit"> 50 100 150 </table>
 		<table name="#cAtk"> 1.1 1.2 1.3 </table>
+		<table name="#magicLvl"> 43 55 66 </table>
+		<table name="#rCrit"> 50 100 150 </table>
+		<set name="aggroPoints" val="408" />
 		<set name="hitTime" val="2000" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="133" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="300000" />
@@ -930,19 +950,23 @@
 		</for>
 	</skill>
 	<skill id="957" levels="37" name="Guillotine Attack">
+		<!-- Confirmed CT2.5 -->
 		<!-- Vanguard Stance Skill -->
+		<table name="#magicLvl"> 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 58 59 59 61 62 64 65 67 69 70 71 73 73 75 76 77 79 80 81 83 84 85 86 88 89 90 91 92 93 94 95 96 96 97 98 99 99 </table>
 		<table name="#power"> 2057 2164 2274 2388 2505 2625 2748 2875 3004 3136 3271 3408 3548 3690 3834 3980 4127 4275 4425 4575 4726 4878 5029 5180 5330 5479 5627 5773 5918 6060 6199 6335 6468 6598 6723 6844 6960 </table>
+		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="40" />
+		<set name="coolTime" val="1080" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1620" />
-		<set name="coolTime" val="1080" />
 		<set name="ignoreShld" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
-		<set name="nextActionAttack" val="true" />
 		<set name="reuseDelay" val="7000" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
@@ -950,15 +974,20 @@
 		<set name="weaponsAllowed" val="Big Blunt, Big Sword" /> <!-- Big Sword/Big Blunt -->
 	</skill>
 	<skill id="958" levels="37" name="Triple Blade Slash">
+		<!-- Confirmed CT2.5 -->
 		<!-- Vanguard Stance Skill -->
+		<table name="#magicLvl"> 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 58 59 59 61 62 64 65 67 69 70 71 73 73 75 76 77 79 80 81 83 84 85 86 88 89 90 91 92 93 94 95 96 96 97 98 99 99 </table>
 		<table name="#power"> 2057 2164 2274 2388 2505 2625 2748 2875 3004 3136 3271 3408 3548 3690 3834 3980 4127 4275 4425 4575 4726 4878 5029 5180 5330 5479 5627 5773 5918 6060 6199 6335 6468 6598 6723 6844 6960 </table>
+		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="40" />
+		<set name="coolTime" val="167" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1733" />
-		<set name="coolTime" val="167" />
 		<set name="ignoreShld" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
@@ -967,7 +996,6 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="weaponsAllowed" val="Dual Sword" /> <!-- Dual Sword -->
-		<set name="nextActionAttack" val="true" />
 	</skill>
 	<skill id="959" levels="1" name="Frog Jump">
 		<!-- Increases one's own moving speed by 33 for 15 seconds. -->
