@@ -1,49 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="8500" levels="1" name="Pink Talisman - CON">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x10" stat="CON" val="2" />
+		</for>
 	</skill>
 	<skill id="8501" levels="1" name="Pink Talisman - INT">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x10" stat="INT" val="2" />
+		</for>
 	</skill>
 	<skill id="8502" levels="1" name="Pink Talisman - WIT">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x10" stat="WIT" val="2" />
+		</for>
 	</skill>
 	<skill id="8503" levels="1" name="Pink Talisman - MEN">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x10" stat="MEN" val="2" />
+		</for>
 	</skill>
 	<skill id="8504" levels="1" name="Pink Talisman - Stun Resist">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<sub order="0x40" stat="stunVuln" val="15" /> <!-- resistance to Stun Attacks by 15% -->
+		</for>
 	</skill>
 	<skill id="8505" levels="1" name="Pink Talisman - Sleep Resist">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<sub order="0x40" stat="sleepVuln" val="15" /> <!-- Increases resistance to sleep attacks by 15% -->
+		</for>
 	</skill>
 	<skill id="8506" levels="1" name="Pink Talisman - Hold Resist">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<sub order="0x40" stat="rootVuln" val="15" /> <!-- Hold resistance are increased +15% -->
+		</for>
 	</skill>
 	<skill id="8507" levels="1" name="Pink Talisman - Paralyze Resist">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<sub order="0x40" stat="paralyzeVuln" val="15" /> <!-- Increases resistance to paralysis attacks by 15% -->
+		</for>
 	</skill>
 	<skill id="8508" levels="1" name="Pink Talisman - All STAT">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x10" stat="STR" val="1" /> <!-- STR +1 -->
+			<add order="0x10" stat="DEX" val="1" /> <!-- DEX +1 -->
+			<add order="0x10" stat="CON" val="1" /> <!-- Con +1 -->
+			<add order="0x10" stat="INT" val="1" /> <!-- Int +1 -->
+			<add order="0x10" stat="WIT" val="1" /> <!-- Wit +1 -->
+			<add order="0x10" stat="MEN" val="1" /> <!-- Men +1 -->
+		</for>
 	</skill>
 	<skill id="8509" levels="1" name="High Angel Circlet">
 		<set name="target" val="TARGET_NONE" />
