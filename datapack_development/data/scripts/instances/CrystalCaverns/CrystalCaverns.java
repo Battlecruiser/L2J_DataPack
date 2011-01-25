@@ -1234,6 +1234,7 @@ public class CrystalCaverns extends Quest
 					cancelQuestTimers("backFood");
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null);
 					world.crystalGolems.get(npc).foodItem = null;
+					startQuestTimer("autoFood",2000,npc,null);
 				}
 			}
 			else if (event.equalsIgnoreCase("reachFood"))
