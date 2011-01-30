@@ -203,6 +203,7 @@
 		<enchant7 name="pvpPower" val="#enchDuel" />
 	</skill>
 	<skill id="506" levels="4" name="Checkmate" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
+		<!-- Confirmed CT2.5 -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 5813 5852 5892 5932 5971 6011 6050 6090 6129 6169 6209 6248 6288 6327 6367 6406 6446 6486 6525 6565 6604 6644 6683 6723 6763 6802 6842 6881 6921 6960 </table>
 		<table name="#ench2Power"> 5359 5388 5417 5446 5475 5504 5533 5562 5591 5620 5649 5678 5707 5735 5764 5793 5822 5851 5880 5909 5938 5967 5996 6025 6054 6083 6112 6141 6170 6199 </table>
@@ -212,23 +213,23 @@
 		<table name="#magicLvl"> 52 60 66 72 </table>
 		<table name="#mpConsume"> 36 43 47 51 </table>
 		<table name="#power"> 2388 3408 4275 5180 </table>
-		<set name="weaponsAllowed" val="Rapier" /> <!-- Rapier -->
+		<set name="baseCritRate" val="5" />
+		<set name="castRange" val="40" />
+		<set name="coolTime" val="300" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1500" />
+		<set name="ignoreShld" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="nextActionAttack" val="true" />
-		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="hitTime" val="1500" />
-		<set name="coolTime" val="300" />
-		<set name="reuseDelay" val="3000" />
-		<set name="ignoreShld" val="true" />
-		<set name="skillType" val="PDAM" />
-		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="200" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="PDAM" />
 		<set name="soulMaxConsumeCount" val="5" />
-		<set name="baseCritRate" val="15" />
 		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="weaponsAllowed" val="Rapier" /> <!-- Rapier -->
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -762,29 +763,30 @@
 		<enchant3 name="npcId" val="#ench3npcId" />
 	</skill>
 	<skill id="526" levels="1" name="Enuma Elish" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
-		<!-- Needs retail accuracy check -->
-		<table name="#enchantMagicLvl"> 78 79 79 80 80 81 81 82 82 83 83 84 84 85 85 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 6502 6535 6568 6601 6634 6667 6700 6733 6766 6799 6833 6866 6899 6932 6965 </table>
 		<table name="#ench2Power"> 6090 6120 6150 6180 6210 6240 6270 6300 6330 6360 6390 6420 6450 6480 6510 </table>
 		<table name="#enchmpConsume"> 77 74 72 69 67 64 61 59 56 53 51 48 45 43 40 </table>
 		<table name="#ench3elementPower"> 3 6 10 13 16 20 23 26 30 33 36 40 43 46 46 </table>
 		<table name="#ench4Duel"> 6157 6253 6350 6446 6543 6639 6736 6832 6929 7025 7122 7218 7315 7411 7508 </table>
-		<set name="mpConsume" val="78" />
-		<set name="power" val="6060" />
-		<set name="hitTime" val="1080" />
-		<set name="coolTime" val="720" />
-		<set name="SSBoost" val="2.0" />
-		<set name="overHit" val="true" />
-		<set name="magicLvl" val="78" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="target" val="TARGET_FRONT_AREA" />
-		<set name="nextActionAttack" val="true" />
-		<set name="skillRadius" val="310" />
-		<set name="skillType" val="PDAM" />
 		<set name="castRange" val="40" />
+		<set name="coolTime" val="720" />
 		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1080" />
+		<set name="magicLvl" val="78" />
+		<set name="mpConsume" val="78" />
+		<set name="nextActionAttack" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="overHit" val="true" />
+		<set name="power" val="6060" />
 		<set name="reuseDelay" val="75000" />
+		<set name="skillRadius" val="400" />
+		<set name="skillScope" val="fan;400;90" />
+		<set name="skillType" val="PDAM" />
 		<set name="soulMaxConsumeCount" val="5" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />

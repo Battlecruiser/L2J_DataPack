@@ -19618,7 +19618,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (6662,0,9917,6), -- Ring of Core
 (8191,0,9917,7), -- Frintezza's Necklace
 (10170,0,9917,8), -- Baylor's Earring
-(10314,0,9917,9), -- Beleth 's Ring
+(10314,0,9917,9), -- Beleth's Ring
 (16025,0,9917,10), -- Freya Necklace
 (16026,0,9917,11); -- Blessed Freya Necklace
 
