@@ -1,121 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="600" levels="1" name="Residence Guidance">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="isMagic" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="2" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="accCombat" val="4" />
 		</for>
 	</skill>
 	<skill id="601" levels="1" name="Residence Agility">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="isMagic" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="2" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="rEvas" val="4" />
 		</for>
 	</skill>
 	<skill id="602" levels="1" name="Residence Shield Block">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="isMagic" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="2" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="rShld" val="54.7" />
+			<add order="0x40" stat="rShld" val="20" />
 		</for>
 	</skill>
 	<skill id="603" levels="1" name="Residence Shield Defense">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="isMagic" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="2" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="sDef" val="225" />
 		</for>
 	</skill>
 	<skill id="604" levels="1" name="Residence Resist Typhoon">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="isMagic" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="2" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="windRes" val="10" />
 			<add order="0x40" stat="waterRes" val="10" />
+			<add order="0x40" stat="windRes" val="10" />
 		</for>
 	</skill>
 	<skill id="605" levels="1" name="Residence Resist Lava">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="isMagic" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="2" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="fireRes" val="10" />
 			<add order="0x40" stat="earthRes" val="10" />
 		</for>
 	</skill>
 	<skill id="606" levels="1" name="Residence Fortitude">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="isMagic" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="2" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x40" stat="stunVuln" val="10" />
 		</for>
 	</skill>
 	<skill id="607" levels="1" name="Residence Freedom">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="isMagic" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="2" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x40" stat="rootVuln" val="10" />
 		</for>
 	</skill>
 	<skill id="608" levels="1" name="Residence Vigilance">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="isMagic" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="2" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x40" stat="sleepVuln" val="10" />
 		</for>
 	</skill>
 	<skill id="609" levels="1" name="Residence Movement">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="isMagic" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="2" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="runSpd" val="6" />
 		</for>
 	</skill>
 	<skill id="610" levels="1" name="Residence Death Fortune">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- TODO: Still missing info about other penalties than exp. loss -->
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="2" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="COREDONE" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="611" levels="3" name="Fire Squad">
+		<!-- Confirmed CT2.5 -->
 		<table name="#rCrit"> 0 15 15 </table>
 		<table name="#cAtkAdd"> 0 0 100 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="isMagic" val="true" />
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="4" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pAtk" val="17.3" />
 			<add order="0x40" stat="rCrit" val="#rCrit" />
@@ -123,13 +149,15 @@
 		</for>
 	</skill>
 	<skill id="612" levels="3" name="Water Squad">
+		<!-- Confirmed CT2.5 -->
 		<table name="#mDef"> 0 17.6 17.6 </table>
 		<table name="#sDef"> 1 1 1.06 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="isMagic" val="true" />
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="4" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pDef" val="27.3" />
 			<add order="0x40" stat="mDef" val="#mDef" />
@@ -137,13 +165,15 @@
 		</for>
 	</skill>
 	<skill id="613" levels="3" name="Wind Squad">
+		<!-- Confirmed CT2.5 -->
 		<table name="#rEvas"> 0 2 2 </table>
 		<table name="#runSpd"> 0 0 3 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="isMagic" val="true" />
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="4" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="accCombat" val="2" />
 			<add order="0x40" stat="rEvas" val="#rEvas" />
@@ -151,39 +181,46 @@
 		</for>
 	</skill>
 	<skill id="614" levels="3" name="Earth Squad">
+		<!-- Confirmed CT2.5 -->
 		<table name="#mDef"> 17 31.1 44 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="isMagic" val="true" />
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="4" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="mDef" val="#mDef" />
 		</for>
 	</skill>
 	<skill id="615" levels="3" name="Holy Squad">
+		<!-- Confirmed CT2.5 -->
 		<table name="#maxMp"> 1 1.3 1.3 </table>
 		<table name="#MpConsumeRate"> 1 1 0.95 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="isMagic" val="true" />
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="4" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="bonusHp" val="20" />
 			<mul order="0x30" stat="maxMp" val="#maxMp" />
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRate" />
 			<mul order="0x30" stat="PhysicalMpConsumeRate" val="#MpConsumeRate" />
+			<mul order="0x30" stat="DanceMpConsumeRate" val="#MpConsumeRate" />
 		</for>
 	</skill>
 	<skill id="616" levels="3" name="Dark Squad">
+		<!-- Confirmed CT2.5 -->
 		<table name="#mAtk"> 7.17 19.32 19.32 </table>
 		<table name="#mCritRate"> 0 0 0.01 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="isMagic" val="true" />
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="4" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="mAtk" val="#mAtk" />
 			<basemul order="0x30" stat="mCritRate" val="#mCritRate" />
