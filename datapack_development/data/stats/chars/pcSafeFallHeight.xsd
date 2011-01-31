@@ -22,6 +22,14 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
+						<xs:attribute name="sex" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="female" />
+									<xs:enumeration value="male" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
 						<xs:attribute name="val" type="xs:integer" use="required" />
 					</xs:complexType>
 				</xs:element>
