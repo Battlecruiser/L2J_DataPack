@@ -2152,241 +2152,285 @@
 		</enchant2for>
 	</skill>
 	<skill id="370" levels="3" name="Clan Body">
+		<!-- Confirmed CT2.5 -->
 		<table name="#maxHp"> 1.03 1.05 1.06 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="minPledgeClass" val="2" />
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="2" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="maxHp" val="#maxHp" />
 		</for>
 	</skill>
 	<skill id="371" levels="3" name="Clan Spirituality">
+		<!-- Confirmed CT2.5 -->
 		<table name="#maxCp"> 1.06 1.1 1.12 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="minPledgeClass" val="5" />
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="5" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="maxCp" val="#maxCp" />
 		</for>
 	</skill>
 	<skill id="372" levels="3" name="Clan Soul">
+		<!-- Confirmed CT2.5 -->
 		<table name="#maxMp"> 1.03 1.05 1.06 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="minPledgeClass" val="6" />
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="6" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="maxMp" val="#maxMp" />
 		</for>
 	</skill>
 	<skill id="373" levels="3" name="Clan Regeneration">
+		<!-- Confirmed CT2.5 -->
 		<table name="#regHp"> 1.03 1.05 1.06 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="minPledgeClass" val="2" />
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="2" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="regHp" val="#regHp" />
 		</for>
 	</skill>
 	<skill id="374" levels="3" name="Clan Morale">
+		<!-- Confirmed CT2.5 -->
 		<table name="#regCp"> 1.06 1.1 1.12 </table>
+		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="4" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="minPledgeClass" val="4" />
-		<set name="isClanSkill" val="true" />
 		<for>
 			<mul order="0x30" stat="regCp" val="#regCp" />
 		</for>
 	</skill>
 	<skill id="375" levels="3" name="Clan Clarity">
+		<!-- Confirmed CT2.5 -->
 		<table name="#regMp"> 1.03 1.05 1.06 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="minPledgeClass" val="6" />
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="6" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="regMp" val="#regMp" />
 		</for>
 	</skill>
 	<skill id="376" levels="3" name="Clan Might">
+		<!-- Confirmed CT2.5 -->
 		<table name="#pAtk"> 1.03 1.05 1.06 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="minPledgeClass" val="3" />
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="3" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="#pAtk" />
 		</for>
 	</skill>
 	<skill id="377" levels="3" name="Clan Shield">
+		<!-- Confirmed CT2.5 -->
 		<table name="#pDef"> 1.03 1.05 1.06 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="minPledgeClass" val="3" />
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="3" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pDef" val="#pDef" />
 		</for>
 	</skill>
-	<skill id="378" levels="3" name="Clan Empowerment">
+	<skill id="378" levels="3" name="Clan Empower">
+		<!-- Confirmed CT2.5 -->
 		<table name="#mAtk"> 1.06 1.1 1.12 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="minPledgeClass" val="6" />
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="6" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="mAtk" val="#mAtk" />
 		</for>
 	</skill>
 	<skill id="379" levels="3" name="Clan Magic Resistance">
+		<!-- Confirmed CT2.5 -->
 		<table name="#mDef"> 1.06 1.1 1.12 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="minPledgeClass" val="2" />
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="2" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="#mDef" />
 		</for>
 	</skill>
 	<skill id="380" levels="3" name="Clan Guidance">
+		<!-- Confirmed CT2.5 -->
 		<table name="#accCombat"> 1 2 3 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="minPledgeClass" val="5" />
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="5" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="accCombat" val="#accCombat" />
 		</for>
 	</skill>
 	<skill id="381" levels="3" name="Clan Agility">
+		<!-- Confirmed CT2.5 -->
 		<table name="#rEvas"> 1 2 3 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="minPledgeClass" val="5" />
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="5" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="rEvas" val="#rEvas" />
 		</for>
 	</skill>
 	<skill id="382" levels="3" name="Clan Shield Defence">
+		<!-- Confirmed CT2.5 -->
 		<table name="#rShld"> 1.12 1.2 1.24 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="minPledgeClass" val="6" />
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="6" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="rShld" val="#rShld" />
 		</for>
 	</skill>
 	<skill id="383" levels="3" name="Clan Shield Block">
+		<!-- Confirmed CT2.5 -->
 		<table name="#sDef"> 1.24 1.4 1.48 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="minPledgeClass" val="5" />
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="5" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="sDef" val="#sDef" />
 		</for>
 	</skill>
 	<skill id="384" levels="3" name="Clan Cyclonic Resistance">
-		<table name="#vuln"> 3 5 6 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#res"> 3 5 6 </table>
+		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="6" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="minPledgeClass" val="6" />
-		<set name="isClanSkill" val="true" />
 		<for>
-			<add order="0x40" stat="windRes" val="#vuln" />
-			<add order="0x40" stat="waterRes" val="#vuln" />
+			<add order="0x40" stat="windRes" val="#res" />
+			<add order="0x40" stat="waterRes" val="#res" />
 		</for>
 	</skill>
 	<skill id="385" levels="3" name="Clan Magmatic Resistance">
-		<table name="#vuln"> 3 5 6 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="minPledgeClass" val="6" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#res"> 3 5 6 </table>
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="6" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="fireRes" val="#vuln" />
-			<add order="0x40" stat="earthRes" val="#vuln" />
+			<add order="0x40" stat="fireRes" val="#res" />
+			<add order="0x40" stat="earthRes" val="#res" />
 		</for>
 	</skill>
 	<skill id="386" levels="3" name="Clan Resist Shock">
+		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 12 20 24 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="minPledgeClass" val="6" />
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="6" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x40" stat="stunVuln" val="#vuln" />
 		</for>
 	</skill>
 	<skill id="387" levels="3" name="Clan Resist Hold">
+		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 12 20 24 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="minPledgeClass" val="6" />
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="6" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x40" stat="rootVuln" val="#vuln" />
 		</for>
 	</skill>
 	<skill id="388" levels="3" name="Clan Resist Sleep">
+		<!-- Confirmed CT2.5 -->
 		<table name="#vuln"> 12 20 24 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="minPledgeClass" val="6" />
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="6" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x40" stat="sleepVuln" val="#vuln" />
 		</for>
 	</skill>
 	<skill id="389" levels="3" name="Clan Wind Walk">
+		<!-- Confirmed CT2.5 -->
 		<table name="#runSpd"> 3 5 6 </table>
+		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="7" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="minPledgeClass" val="7" />
-		<set name="isClanSkill" val="true" />
 		<for>
 			<add order="0x40" stat="runSpd" val="#runSpd" />
 		</for>
 	</skill>
 	<skill id="390" levels="3" name="Clan Luck">
+		<!-- Confirmed CT2.5 -->
 		<!-- TODO: Still missing info about other penalties than exp. loss -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="COREDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="minPledgeClass" val="2" />
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="2" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="COREDONE" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="391" levels="1" name="Clan Imperium">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="minPledgeClass" val="4" />
+		<!-- Confirmed CT2.5 -->
 		<set name="isClanSkill" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="minPledgeClass" val="4" /> <!-- FIXME: this condition should be in skill trees -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="COREDONE" />
+		<set name="target" val="TARGET_SELF />
 	</skill>
 	<skill id="392" levels="1" name="none">
 		<set name="target" val="TARGET_NONE" />
