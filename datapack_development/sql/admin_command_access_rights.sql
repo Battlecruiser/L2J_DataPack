@@ -316,6 +316,11 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_snoop',1,'false'),
 ('admin_gmchat_menu',1,'false'),
 
+-- ADMIN GRACIA SEEDS
+('admin_gracia_seeds',1,'false'),
+('admin_kill_tiat',1,'false'),
+('admin_set_sodstate',1,'false'),
+
 -- ADMIN HEAL
 ('admin_heal',1,'false'),
 
