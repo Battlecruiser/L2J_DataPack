@@ -122,24 +122,26 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2213" levels="22" name="Escape - to X Town">
-		<table name="#teleCoords"> -84318,244579,-3730 46934,51467,-2977 9745,15606,-4574 -44836,-112524,-235 115113,-178212,-901 -80826,149775,-3043 -12678,122776,-3116 15670,142983,-2705 17836,170178,-3507 83400,147943,-3404 105918,109759,-3207 111409,219364,-3545 82956,53162,-1495 85348,16142,-3699 116819,76994,-2714 146331,25762,-2018 147928,-55273,-2734 43799,-47727,-798 87331,-142842,-1317 149864,-81062,-5618 108275,-53785,-2524 -117251,46771,360 </table>
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#teleCoords"> -84200,244566,-3728 46915,51441,-2976 9723,15576,-4568 -45208,-112502,-240 115158,-178170,-880 -80831,149808,-3040 -12728,122726,-3112 15633,142962,-2696 17860,170191,-3496 83378,147999,-3400 105760,113064,-3176 111388,219331,-3544 82916,53210,-1488 85289,16225,-3672 117052,76884,-2688 146818,25807,-2008 147922,-55316,-2728 43840,-47779,-792 87326,-143370,-1319 149800,-79999,-5568 107946,-52280,-2408 -118092,46955,342 </table>
 		<set name="hitTime" val="20000" />
-		<set name="staticHitTime" val="true" />
-		<set name="skillType" val="TELEPORT" />
-		<set name="teleCoords" val="#teleCoords" />
+		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="TELEPORT" />
+		<set name="staticHitTime" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="teleCoords" val="#teleCoords" />
 	</skill>
 	<skill id="2214" levels="10" name="Scroll of Escape to Talking Island">
-		<table name="#teleCoords"> -84318,244579,-3730 46934,51467,-2977 9745,15606,-4574 -44836,-112524,-235 115113,-178212,-901 -117251,46771,360 0,0,0 0,0,0 0,0,0 83400,147943,-3404 </table>
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#teleCoords"> -84200,244566,-3728 46915,51441,-2976 9723,15576,-4568 -45208,-112502,-240 115158,-178170,-880 -118092,46955,342 0,0,0 0,0,0 0,0,0 83378,147999,-3400 </table>
 		<set name="hitTime" val="20000" />
-		<set name="staticHitTime" val="true" />
-		<set name="skillType" val="TELEPORT" />
-		<set name="teleCoords" val="#teleCoords" />
+		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="TELEPORT" />
+		<set name="staticHitTime" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="teleCoords" val="#teleCoords" />
 	</skill>
 	<skill id="2215" levels="4" name="Item - Quest Special Box">
 		<set name="target" val="TARGET_NONE" />
