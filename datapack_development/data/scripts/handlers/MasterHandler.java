@@ -59,6 +59,7 @@ import handlers.admincommandhandlers.AdminGeoEditor;
 import handlers.admincommandhandlers.AdminGeodata;
 import handlers.admincommandhandlers.AdminGm;
 import handlers.admincommandhandlers.AdminGmChat;
+import handlers.admincommandhandlers.AdminGraciaSeeds;
 import handlers.admincommandhandlers.AdminHeal;
 import handlers.admincommandhandlers.AdminHelpPage;
 import handlers.admincommandhandlers.AdminInstance;
@@ -326,6 +327,7 @@ public class MasterHandler
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminGeoEditor());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminGm());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminGmChat());
+		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminGraciaSeeds());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminHeal());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminHelpPage());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminInstance());
