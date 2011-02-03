@@ -70,15 +70,15 @@ public class PlainsOfLizardman extends L2AttackableAIScript
 			
 			if (event.startsWith("rainbow_frog"))
 			{
-				triggerSkill(isPet ? player.getPet() : player, RAINBOW_FROG_SKILL, 1);
+				triggerSkill(npc, isPet ? player.getPet() : player, RAINBOW_FROG_SKILL, 1);
 			}
 			else if (event.startsWith("energy_plant"))
 			{
-				triggerSkill(isPet ? player.getPet() : player, ENERGY_PLANT_SKILL, 1);
+				triggerSkill(npc, isPet ? player.getPet() : player, ENERGY_PLANT_SKILL, 1);
 			}
 			else if (event.startsWith("sticky_mushroom"))
 			{
-				triggerSkill(isPet ? player.getPet() : player, STICKY_MUSHROOM_SKILL, 1);
+				triggerSkill(npc, isPet ? player.getPet() : player, STICKY_MUSHROOM_SKILL, 1);
 			}
 			else if (event.startsWith("fantasy_mushroom"))
 			{
@@ -146,14 +146,16 @@ public class PlainsOfLizardman extends L2AttackableAIScript
 		return super.onAttack(npc, attacker, damage, isPet);
 	}
 	
-	private void triggerSkill(L2Playable playable, int skill_id, int skill_level)
+	private void triggerSkill(L2Character caster, L2Playable playable, int skill_id, int skill_level)
 	{
 		L2Character[] targets = new L2Character[1];
 		targets[0] = playable;
 		
 		L2Skill trigger = SkillTable.getInstance().getInfo(skill_id, skill_level);
 		
-		if (trigger != null)
+		if (trigger != null
+				&& playable.isInsideRadius(caster, trigger.getCastRange(), true, false)
+				&& playable.getInstanceId() == caster.getInstanceId())
 		{
 			playable.broadcastPacket(new MagicSkillUse(playable, playable, skill_id, skill_level, 0, 0));
 			
