@@ -48,7 +48,7 @@ class Quest (JQuest) :
    Thief_Key = st.getQuestItemsCount(Key)
    htmltext = event
    if event == "31371-04.htm" :
-       if st.getPlayer().getLevel() >= 74 and st.getPlayer().getAllianceWithVarkaKetra() >= 2 :
+       if st.getPlayer().getLevel() >= 74 and st.getPlayer().getAllianceWithVarkaKetra() >= 1 :
             st.set("cond","1")
             st.set("id","2")
             st.set("aggro","0")
@@ -97,7 +97,7 @@ class Quest (JQuest) :
                 if id == 2 :
                     htmltext = "31371-05.htm"
             elif npcId == Asefa :
-                if player.getAllianceWithVarkaKetra() >= 2 :
+                if player.getAllianceWithVarkaKetra() >= 1 :
                     if id == 2 :
                         htmltext = "31372-01.htm"
                         st.set("cond","2")
@@ -120,7 +120,7 @@ class Quest (JQuest) :
                         st.playSound("ItemSound.quest_middle")
                         st.exitQuest(1)
             elif npcId == Udan_Box :
-                if player.getAllianceWithVarkaKetra() >= 2 :
+                if player.getAllianceWithVarkaKetra() >= 1 :
                     if id == 3 :
                         htmltext = "31561-01.htm"
     return htmltext
