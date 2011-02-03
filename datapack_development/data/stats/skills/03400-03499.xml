@@ -97,9 +97,11 @@
 		</for>
 	</skill>
 	<skill id="3412" levels="1" name="Dynasty Breast Plate">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x10" stat="CON" val="1" /> <!-- Con -1 -->
 			<add order="0x10" stat="STR" val="1" /> <!-- Str +1 -->
@@ -110,23 +112,27 @@
 		</for>
 	</skill>
 	<skill id="3413" levels="1" name="Dynasty Leather Armor">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x10" stat="CON" val="1" /> <!-- Con -1 -->
 			<add order="0x10" stat="DEX" val="1" /> <!-- Dex +1 -->
-			<add order="0x40" stat="accCombat" val="1.72" /> <!-- Accuracy +1.72 -->
 			<add order="0x40" stat="rEvas" val="1.72" /> <!-- Evacion +1.72 -->
+			<add order="0x40" stat="accCombat" val="1.72" /> <!-- Accuracy +1.72 -->
 			<add order="0x40" stat="maxHp" val="418" /> <!-- MaxHP +418 -->
 			<add order="0x40" stat="darkRes" val="6" /> <!-- Darkness Resistance +6 -->
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="3414" levels="1" name="Dynasty Leather Armor - Force Master">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x10" stat="STR" val="1" /> <!-- Str +1 -->
 			<add order="0x10" stat="DEX" val="1" /> <!-- Dex +1 -->
@@ -135,29 +141,33 @@
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 Effect -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
 			<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" /> <!-- MP consumption of the active skill is decreased -5% -->
-			<add order="0x10" stat="cloak" val="1" />
+			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="3415" levels="1" name="Dynasty Leather Armor - Weapon Master">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x10" stat="CON" val="2" /> <!-- Con -2 -->
 			<add order="0x10" stat="STR" val="1" /> <!-- Str +1 -->
 			<add order="0x10" stat="DEX" val="1" /> <!-- Dex +1 -->
 			<mul order="0x30" stat="pAtk" val="1.054" /> <!-- P. Atk +5.4% -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- MaxHP +492 -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<add order="0x40" stat="cAtkAdd" val="234" /> <!-- Critical Damage +234 -->
 			<add order="0x40" stat="rCrit" val="24.6" /> <!-- Critical Damage Chance +24.6 -->
-			<add order="0x10" stat="cloak" val="1" />
+			<add order="0x40" stat="cAtkAdd" val="234" /> <!-- Critical Damage +234 -->
+			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="3416" levels="1" name="Dynasty Tunic">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x10" stat="INT" val="1" /> <!-- Int -1 -->
 			<add order="0x10" stat="MEN" val="1" /> <!-- Men +1 -->
@@ -168,10 +178,12 @@
 		</for>
 	</skill>
 	<skill id="3417" levels="1" name="Equipped with Shield">
+		<!-- Confirmed CT2.5 -->
 		<!-- Dynasty Shield Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="sDef" val="1.05" />
 		</for>
@@ -195,18 +207,20 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="3420" levels="1" name="Dynasty Leather Armor - Summoner">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<sub order="0x10" stat="STR" val="2" /> <!-- Str -2 -->
 			<add order="0x10" stat="CON" val="2" /> <!-- Con +2 -->
 			<mul order="0x30" stat="pAtkSpd" val="1.054" /> <!-- increase Atk. Spd. +5.4% -->
-			<add order="0x40" stat="maxHp" val="492" /> <!-- MaxHP +492 -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
 			<mul order="0x30" stat="pAtk" val="1.0266" /> <!-- Increase P. Atk. +2.66% -->
 			<mul order="0x30" stat="pDef" val="1.0266" /> <!-- Increase P. Def. +2.66% -->
-			<add order="0x10" stat="cloak" val="1" />
+			<add order="0x40" stat="maxHp" val="492" /> <!-- MaxHP +492 -->
+			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="3421" levels="1" name="Wolf Mount">
