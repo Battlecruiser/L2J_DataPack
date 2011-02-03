@@ -437,6 +437,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="power" val="90" />
+		<set name="castRange" val="2000" />
 		<set name="hitTime" val="500" />
 		<set name="saveVs" val="MEN" />
 		<set name="lvlDepend" val="2" />
@@ -448,6 +449,7 @@
 		<!-- Rainbow Frog -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
+		<set name="castRange" val="2000" />
 		<set name="hitTime" val="500" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
@@ -465,6 +467,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="power" val="30" />
+		<set name="castRange" val="2000" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="true" />
 	</skill>
