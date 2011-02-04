@@ -5,37 +5,37 @@
 			<xs:sequence minOccurs="1" maxOccurs="1">
 				<xs:element name="back" minOccurs="1" maxOccurs="1">
 					<xs:complexType>
-						<xs:attribute name="val" type="xs:decimal" use="required" />
+						<xs:attribute name="val" type="xs:integer" use="required" />
 					</xs:complexType>
 				</xs:element>
 				<xs:element name="dark" minOccurs="1" maxOccurs="1">
 					<xs:complexType>
-						<xs:attribute name="val" type="xs:decimal" use="required" />
+						<xs:attribute name="val" type="xs:integer" use="required" />
 					</xs:complexType>
 				</xs:element>
 				<xs:element name="front" minOccurs="1" maxOccurs="1">
 					<xs:complexType>
-						<xs:attribute name="val" type="xs:decimal" use="required" />
+						<xs:attribute name="val" type="xs:integer" use="required" />
 					</xs:complexType>
 				</xs:element>
 				<xs:element name="high" minOccurs="1" maxOccurs="1">
 					<xs:complexType>
-						<xs:attribute name="val" type="xs:decimal" use="required" />
+						<xs:attribute name="val" type="xs:integer" use="required" />
 					</xs:complexType>
 				</xs:element>
 				<xs:element name="low" minOccurs="1" maxOccurs="1">
 					<xs:complexType>
-						<xs:attribute name="val" type="xs:decimal" use="required" />
+						<xs:attribute name="val" type="xs:integer" use="required" />
 					</xs:complexType>
 				</xs:element>
 				<xs:element name="rain" minOccurs="1" maxOccurs="1">
 					<xs:complexType>
-						<xs:attribute name="val" type="xs:decimal" use="required" />
+						<xs:attribute name="val" type="xs:integer" use="required" />
 					</xs:complexType>
 				</xs:element>
 				<xs:element name="side" minOccurs="1" maxOccurs="1">
 					<xs:complexType>
-						<xs:attribute name="val" type="xs:decimal" use="required" />
+						<xs:attribute name="val" type="xs:integer" use="required" />
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>
