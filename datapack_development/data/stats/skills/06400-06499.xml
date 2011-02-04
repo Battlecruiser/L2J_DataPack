@@ -590,11 +590,21 @@
 		</for>
 	</skill>
 	<skill id="6437" levels="7" name="Area of Freezing Core">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<table name="#dot"> 30 60 90 150 250 350 500 </table>
+		<set name="target" val="TARGET_ONE" />
+		<set name="skillType" val="POISON" />
+		<set name="magicLvl" val="84" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="element" val="1" /> <!-- Water -->
+		<set name="elementPower" val="20" />
+		<set name="abnormalLvl" val="10" />
+		<set name="isDebuff" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="saveVs" val="CON" />
 		<set name="lvlDepend" val="1" />
+		<for>
+			<effect count="15" name="DamOverTime" time="5" val="#dot" stackOrder="10" stackType="poison" abnormal="poison" />
+		</for>
 	</skill>
 	<skill id="6438" levels="1" name="Penalty Area">
 		<set name="target" val="TARGET_NONE" />
