@@ -897,12 +897,16 @@
 		<set name="lvlDepend" val="2" />
 	</skill>
 	<skill id="5586" levels="3" name="Pet Might">
-		<table name="#mpConsume"> 5 10 18 </table>
+		<table name="#mpConsume"> 4 8 14 </table>
+		<table name="#mpInitialConsume"> 1 2 4 </table>
+		<table name="#magicLvl"> 7 20 40 </table>
 		<table name="#rate"> 1.08 1.12 1.15 </table>
 		<table name="#stackOrder"> 1 2 3 </table>
 		<table name="#aggro"> 121 204 379 </table>
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="target" val="TARGET_OWNER_PET" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -918,15 +922,19 @@
 		</for>
 	</skill>
 	<skill id="5587" levels="3" name="Pet Shield">
-		<table name="#mpConsume"> 5 12 20 </table>
+		<table name="#mpConsume"> 4 9 16 </table>
+		<table name="#mpInitialConsume"> 1 3 4 </table>
+		<table name="#magicLvl"> 7 25 44 </table>
 		<table name="#rate"> 1.08 1.12 1.15 </table>
 		<table name="#stackOrder"> 1 2 3 </table>
 		<table name="#aggro"> 121 243 418 </table>
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="target" val="TARGET_OWNER_PET" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="castRange" val="400" />
@@ -939,11 +947,15 @@
 		</for>
 	</skill>
 	<skill id="5588" levels="3" name="Pet Focus">
-		<table name="#mpConsume"> 12 20 24 </table>
+		<table name="#mpConsume"> 9 16 19 </table>
+		<table name="#mpInitialConsume"> 3 4 5 </table>
+		<table name="#magicLvl"> 25 44 52 </table>
 		<table name="#rCrit"> 0.2 0.25 0.3 </table>
 		<table name="#aggro"> 243 418 495 </table>
 		<table name="#stackOrder"> 1 2 3 </table>
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_OWNER_PET" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="4000" />
@@ -961,11 +973,15 @@
 	</skill>
 	<skill id="5589" levels="3" name="Pet Death Whisper">
 		<table name="#cAtk"> 1.25 1.3 1.35 </table>
+		<table name="#mpInitialConsume"> 4 5 6 </table>
+		<table name="#magicLvl"> 40 48 56 </table>
 		<table name="#aggro"> 379 457 532 </table>
 		<table name="#stackOrder"> 1 2 3 </table>
-		<table name="#mpConsume"> 18 23 27 </table>
+		<table name="#mpConsume"> 14 18 21 </table>
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="target" val="TARGET_OWNER_PET" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -981,10 +997,14 @@
 		</for>
 	</skill>
 	<skill id="5590" levels="12" name="Pet Battle Heal">
-		<table name="#mpConsume"> 13 23 34 47 60 74 85 92 95 98 99 99 </table>
+		<table name="#mpConsume"> 10 18 27 37 48 59 68 73 76 78 79 79 </table>
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#mpInitialConsume"> 3 5 7 10 12 15 17 19 19 20 20 20 </table>
 		<table name="#power"> 91 166 269 398 544 690 817 867 909 954 985 1005 </table>
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="power" val="#power" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_OWNER_PET" />
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="2000" />
