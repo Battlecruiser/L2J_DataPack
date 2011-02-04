@@ -9,3 +9,5 @@ DELETE FROM character_shortcuts WHERE shortcut_id = 1148 AND class_index = 0 AND
 DELETE FROM character_shortcuts WHERE shortcut_id = 1148 AND class_index = 1 AND charid IN ( SELECT charid FROM character_subclasses WHERE class_id IN (41, 111) AND class_index = 1);
 DELETE FROM character_shortcuts WHERE shortcut_id = 1148 AND class_index = 2 AND charid IN ( SELECT charid FROM character_subclasses WHERE class_id IN (41, 111) AND class_index = 2);
 DELETE FROM character_shortcuts WHERE shortcut_id = 1148 AND class_index = 3 AND charid IN ( SELECT charid FROM character_subclasses WHERE class_id IN (41, 111) AND class_index = 3);
+
+update `character_quests` set `value`='Start' WHERE `name`='637_ThroughOnceMore' AND `var`='<state>' AND `value`='Completed';
