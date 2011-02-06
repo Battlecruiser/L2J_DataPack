@@ -1,78 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="3300" levels="1" name="Yellow Talisman of Speed">
-		<!-- CT 2.3 Confirmed, Run Spd. +5 -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="runSpd" val="5" />
 		</for>
 	</skill>
 	<skill id="3301" levels="1" name="Yellow Talisman of Violent Haste">
-		<!-- CT 2.3 Confirmed, P. Atk. Spd. +10 -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pAtkSpd" val="10" />
 		</for>
 	</skill>
 	<skill id="3302" levels="1" name="Yellow Talisman of Arcane Haste">
-		<!-- CT 2.3 Confirmed, C. Spd. +8 -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="mAtkSpd" val="8" />
 		</for>
 	</skill>
 	<skill id="3303" levels="1" name="White Talisman of Bandages">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<sub order="0x40" stat="bleedVuln" val="5" />
+			<sub order="0x40" stat="bleedVuln" val="10" />
 		</for>
 	</skill>
 	<skill id="3304" levels="1" name="White Talisman of Attention">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<sub order="0x40" stat="sleepVuln" val="5" />
+			<sub order="0x40" stat="sleepVuln" val="10" />
 		</for>
 	</skill>
 	<skill id="3305" levels="1" name="White Talisman of Grounding">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<sub order="0x40" stat="stunVuln" val="5" />
+			<sub order="0x40" stat="stunVuln" val="10" />
 		</for>
 	</skill>
 	<skill id="3306" levels="1" name="White Talisman of Bravery">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<sub order="0x40" stat="derangementVuln" val="5" />
+			<sub order="0x40" stat="derangementVuln" val="10" />
 		</for>
 	</skill>
 	<skill id="3307" levels="1" name="White Talisman of Motion">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<sub order="0x40" stat="paralyzeVuln" val="5" />
+			<sub order="0x40" stat="paralyzeVuln" val="10" />
 		</for>
 	</skill>
 	<skill id="3308" levels="1" name="White Talisman of Freedom">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<sub order="0x40" stat="rootVuln" val="5" />
+			<sub order="0x40" stat="rootVuln" val="10" />
 		</for>
 	</skill>
 	<skill id="3309" levels="1" name="White Talisman of Protection">
@@ -84,34 +99,41 @@
 		</for>
 	</skill>
 	<skill id="3310" levels="1" name="Yellow Talisman of Physical Regeneration">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="regHp" val="1.03" />
 		</for>
 	</skill>
 	<skill id="3311" levels="1" name="Yellow Talisman of CP Regeneration">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="regCp" val="1.03" />
 		</for>
 	</skill>
 	<skill id="3312" levels="1" name="Yellow Talisman of Healing">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="gainHp" val="8" /> <!-- increase Healing Power +8 -->
+			<add order="0x40" stat="giveHp" val="40" />
 		</for>
 	</skill>
 	<skill id="3313" levels="1" name="Yellow Talisman of Alacrity">
-		<!-- CT 2.3 Confirmed, RunSpeed +3, Cast Speed +4, Atk Spd +5 -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="runSpd" val="3" />
 			<add order="0x40" stat="mAtkSpd" val="4" />
@@ -119,12 +141,13 @@
 		</for>
 	</skill>
 	<skill id="3314" levels="1" name="Grey Talisman of Weight Training">
-		<!-- CT 2.3 Confirmed, Weight 6210 -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<add order="0x40" stat="maxLoad" val="6210" />
+			<mul order="0x30" stat="maxLoad" val="1.1" />
 		</for>
 	</skill>
 	<skill id="3315" levels="1" name="Grey Talisman of Fishing">
@@ -133,14 +156,24 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="3316" levels="1" name="Yellow Talisman of Critical Dodging">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<mul order="0x30" stat="critDamEvas" val="1.03" />
+		</for>
 	</skill>
 	<skill id="3317" levels="1" name="Yellow Talisman of Critical Reduction">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<sub order="0x40" stat="critVuln" val="100" />
+		</for>
 	</skill>
 	<skill id="3318" levels="1" name="Flag Display">
 		<set name="target" val="TARGET_FLAGPOLE" />
@@ -156,25 +189,30 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="3320" levels="1" name="Yellow Talisman of Mental Regeneration">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="regMp" val="1.03" />
 		</for>
 	</skill>
 	<skill id="3321" levels="1" name="Blue Talisman of Evasion">
-		<!-- CT 2.3 Confirmed, Evasion +2 -->
-		<set name="mpConsume" val="50" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="379" />
+		<set name="equipDelay" val="30000" />
 		<set name="hitTime" val="4000" />
-		<set name="staticHitTime" val="true" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="40" />
+		<set name="mpConsume" val="14" />
+		<set name="mpInitialConsume" val="4" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="referenceId" val="9930" />
 		<set name="reuseDelay" val="360000" />
+		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
-		<set name="equipDelay" val="30000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman">
 				<add order="0x40" stat="rEvas" val="2" />
