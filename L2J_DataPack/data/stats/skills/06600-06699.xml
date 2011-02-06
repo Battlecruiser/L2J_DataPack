@@ -505,8 +505,7 @@
 		<set name="skillType" val="DOT" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<!-- TODO: Missing abnormal effect "ave_frozen_pillar" -->
-			<effect name="Paralyze" time="#time2" val="0" abnormal="ice" stackOrder="#stackOrder" stackType="freezing" />
+			<effect name="Paralyze" time="#time2" val="0" special="freezing" stackOrder="#stackOrder" stackType="freezing" />
 			<!-- Level 1: 115HP * 1 during 7 seconds -->
 			<!-- Level 2: 115HP * 5 during 15 seconds -->
 			<effect count="#count" name="DamOverTime" time="#time" noicon="1" val="#dot" />
@@ -894,8 +893,7 @@
 		<set name="skillType" val="DOT" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
-			<!-- TODO: Missing abnormal effect "ave_frozen_pillar" -->
-			<effect name="Paralyze" time="15" val="0" abnormal="ice" stackOrder="3" stackType="freezing" />
+			<effect name="Paralyze" time="15" val="0" special="freezing" stackOrder="3" stackType="freezing" />
 			<!-- 115HP * 5 during 15 seconds -->
 			<effect count="3" name="DamOverTime" time="5" noicon="1" val="575" />
 			<!-- 5MP * 5 during 15 seconds -->
