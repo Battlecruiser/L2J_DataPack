@@ -1050,30 +1050,33 @@
 		</for>
 	</skill>
 	<skill id="176" levels="3" name="Frenzy">
-		<table name="#swordbluntpole"> 1.54 1.92 2.31 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 32 46 55 </table>
+		<table name="#swordblunt"> 1.54 1.92 2.31 </table>
 		<table name="#twohand"> 1.25 1.2 1.16 </table>
 		<table name="#all"> 1.3 1.3 1.5 </table>
 		<table name="#accCombat"> 2 4 6 </table>
 		<table name="#mpConsume"> 14 21 25 </table>
 		<table name="#stackOrder"> 1 2 3 </table>
 		<table name="#aggro"> 303 438 523 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="600000" />
-		<set name="hitTime" val="1500" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="#aggro" />
+		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player hp="30" />
 		</cond>
 		<for>
 			<effect name="Buff" time="90" val="0" stackOrder="#stackOrder" stackType="pinch">
 				<mul order="0x30" stat="pAtk" val="#all" />
-				<mul order="0x30" stat="pAtk" val="#swordbluntpole">
+				<mul order="0x30" stat="pAtk" val="#swordblunt">
 					<and>
 						<player hp="30" />
-						<using kind="Sword,Big Sword,Blunt,Big Blunt,Pole" />
+						<using kind="Sword,Big Sword,Blunt,Big Blunt" />
 					</and>
 				</mul>
 				<mul order="0x30" stat="pAtk" val="#twohand">
