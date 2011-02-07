@@ -793,13 +793,14 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="6687" levels="1" name="Patience">
+		<!-- Confirmed CT2.5 -->
 		<!-- Note: Description says pAtk but is a typo, this increase skill pAtk -->
 		<set name="magicLvl" val="60" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" time="8" val="0" stackOrder="1" stackType="patience">
+			<effect name="Buff" time="7" val="0" stackOrder="1" stackType="patience">
 				<mul order="0x30" stat="physicalSkillPower" val="1.2" />
 			</effect>
 		</for>
