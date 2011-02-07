@@ -1430,7 +1430,8 @@
 		</for>
 	</skill>
 	<skill id="983" levels="1" name="Patience">
-		<set name="activationChance" val="5" />
+		<!-- Confirmed CT2.5 -->
+		<set name="activationChance" val="10" />
 		<set name="chanceType" val="ON_ATTACKED" />
 		<set name="magicLvl" val="60" />
 		<set name="operateType" val="OP_PASSIVE" />

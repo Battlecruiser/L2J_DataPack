@@ -398,102 +398,129 @@
 		</for>
 	</skill>
 	<skill id="8338" levels="4" name="Low-grade Magic Rune Clip Iron Belt">
-		<table name="#hp"> 1.01 1.02 1.03 1.04 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#hp"> 0.4 1 1.4 2 </table>
+		<table name="#hpsit"> 0.3 0.75 1.05 1.5 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="regHp" val="#hp">
+			<add order="0x40" stat="regHp" val="#hp" />
+			<add order="0x40" stat="regHp" val="#hpsit">
 				<player resting="true" />
-			</mul>
+			</add>
 		</for>
 	</skill>
 	<skill id="8339" levels="4" name="Low-grade Magic Rune Clip Mithril Belt">
-		<table name="#hp"> 1.02 1.03 1.04 1.05 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#hp"> 0.78 1.95 2.73 3.9 </table>
+		<table name="#hpsit"> 0.6 1.5 2.1 3 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="regHp" val="#hp">
+			<add order="0x40" stat="regHp" val="#hp" />
+			<add order="0x40" stat="regHp" val="#hpsit">
 				<player resting="true" />
-			</mul>
+			</add>
 		</for>
 	</skill>
 	<skill id="8340" levels="4" name="Low-grade Magic Rune Clip Iron Belt">
-		<table name="#mp"> 1.01 1.02 1.03 1.04 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#mp"> 0.14 0.35 0.49 0.7 </table>
+		<table name="#mpsit"> 0.16 0.4 0.56 0.8 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="regMp" val="#mp">
+			<add order="0x40" stat="regMp" val="#mp" />
+			<add order="0x40" stat="regMp" val="#mpsit">
 				<player resting="true" />
-			</mul>
+			</add>
 		</for>
 	</skill>
 	<skill id="8341" levels="4" name="Low-grade Magic Rune Clip Mithril Belt">
-		<table name="#mp"> 1.02 1.03 1.04 1.05 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#amount"> 0.3 0.75 1.05 1.5 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
-			<mul order="0x30" stat="regMp" val="#mp">
+			<add order="0x40" stat="regMp" val="#amount" />
+			<add order="0x40" stat="regMp" val="#amount">
 				<player resting="true" />
-			</mul>
+			</add>
 		</for>
 	</skill>
 	<skill id="8342" levels="4" name="Low-grade Magic Ornament Iron Belt">
+		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.006 1.015 1.021 1.03 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pvpPhysDmg" val="#pvp" />
 		</for>
 	</skill>
 	<skill id="8343" levels="4" name="Low-grade Magic Ornament Iron Belt">
+		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.006 1.015 1.021 1.03 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvp" />
 			<mul order="0x30" stat="pvpMagicalDmg" val="#pvp" />
 		</for>
 	</skill>
 	<skill id="8344" levels="4" name="Low-grade Magic Ornament Iron Belt">
+		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.006 1.015 1.021 1.03 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pvpPhysDef" val="#pvp" />
 			<mul order="0x30" stat="pvpMagicalDef" val="#pvp" />
 		</for>
 	</skill>
 	<skill id="8345" levels="4" name="Low-grade Magic Ornament Mithril Belt">
+		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.01 1.025 1.035 1.05 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pvpPhysDmg" val="#pvp" />
 		</for>
 	</skill>
 	<skill id="8346" levels="4" name="Low-grade Magic Ornament Mithril Belt">
+		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.01 1.025 1.035 1.05 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvp" />
 			<mul order="0x30" stat="pvpMagicalDmg" val="#pvp" />
 		</for>
 	</skill>
 	<skill id="8347" levels="4" name="Low-grade Magic Ornament Mithril Belt">
+		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.012 1.03 1.042 1.06 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pvpPhysDef" val="#pvp" />
 			<mul order="0x30" stat="pvpMagicalDef" val="#pvp" />

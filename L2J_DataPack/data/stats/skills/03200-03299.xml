@@ -119,345 +119,404 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="3207" levels="10" name="Item Skill: Heal">
-		<table name="#chance"> 1 1 2 2 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="2" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_HIT" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5146" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3208" levels="10" name="Item Skill: Blessed Body">
-		<table name="#chance"> 1 1 2 2 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_HIT" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5147" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3209" levels="10" name="Item Skill: Prayer">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_HIT" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5148" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3210" levels="10" name="Item Skill: Recharge">
-		<table name="#chance"> 1 1 2 2 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_HIT" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5149" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3211" levels="10" name="Item Skill: Blessed Soul">
-		<table name="#chance"> 1 1 2 2 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5150" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3212" levels="10" name="Item Skill: Mana Gain">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="2" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5151" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3213" levels="10" name="Item Skill: Ritual">
-		<table name="#chance"> 1 1 2 2 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="2" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5152" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3214" levels="10" name="Item Skill: Cheer">
-		<table name="#chance"> 1 1 2 2 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="2" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5153" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3215" levels="10" name="Item Skill: Might">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5154" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3216" levels="10" name="Item Skill: Empower">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="activationChance" val="#chance" />
-		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5156" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3217" levels="10" name="Item Skill: Duel Might">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5157" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3218" levels="10" name="Item Skill: Shield">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5158" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3219" levels="10" name="Item Skill: Magic Barrier">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" /> 
 		<set name="triggeredId" val="5159" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3220" levels="10" name="Item Skill: Duel Weakness">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="power" val="40" /> <!-- Guess -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="activationChance" val="#chance" />
-		<set name="isDebuff" val="true" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5160" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3221" levels="10" name="Item Skill: Agility">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5161" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3222" levels="10" name="Item Skill: Guidance">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5162" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3223" levels="10" name="Item Skill: Focus">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5163" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3224" levels="10" name="Item Skill: Wild Magic">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5164" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3225" levels="10" name="Item Skill: Charm">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5165" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3226" levels="10" name="Item Skill: Slow">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="2" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5166" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3227" levels="10" name="Item Skill: Winter">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="4" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5167" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3228" levels="10" name="Item Skill: Stun">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="4" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5168" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3229" levels="10" name="Item Skill: Hold">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="4" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5169" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3230" levels="10" name="Item Skill: Sleep">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="4" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5170" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3231" levels="10" name="Item Skill: Paralyze">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="4" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5171" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3232" levels="10" name="Item Skill: Medusa">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="4" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5172" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3233" levels="10" name="Item Skill: Fear">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="4" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5173" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3234" levels="10" name="Item Skill: Poison">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="4" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5174" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3235" levels="10" name="Item Skill: Bleed">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="4" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5175" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3236" levels="10" name="Item Skill: Silence">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="4" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5176" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
 	<skill id="3237" levels="10" name="Item Skill: Doom">
-		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="activationChance" val="4" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
-		<set name="chanceType" val="ON_ATTACKED" />
-		<set name="activationChance" val="#chance" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="triggeredId" val="5177" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 	</skill>
@@ -465,9 +524,9 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="gainHp" val="1.01" />
 		</for>
@@ -476,9 +535,9 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="gainMp" val="1.01" />
 		</for>
@@ -488,9 +547,9 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#pAtk"> 10.26 11.22 11.94 12.94 13.55 14.44 14.85 15.92 16.68 17.84 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pAtk" val="#pAtk" />
 		</for>
@@ -499,9 +558,9 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="mAtk" val="55" />
 		</for>
@@ -510,9 +569,9 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
@@ -523,9 +582,9 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#pDef"> 12.78 13.73 14.14 15.13 16.46 17.43 17.69 18.63 19.77 20.3 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pDef" val="#pDef" />
 		</for>
@@ -535,9 +594,9 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mDef"> 10.8 11.62 11.96 12.66 13.01 13.08 14 14.99 15.88 16.32 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="mDef" val="#mDef" />
 		</for>
@@ -547,9 +606,9 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#giveHp"> 10 11 12 13 14 16 17 18 19 20 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="giveHp" val="#giveHp" />
 		</for>
@@ -558,9 +617,9 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="rEvas" val="2" />
 		</for>
@@ -569,9 +628,9 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="accCombat" val="2" />
 		</for>
@@ -580,9 +639,9 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<basemul order="0x30" stat="rCrit" val="0.2" />
 		</for>
@@ -591,9 +650,9 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<basemul order="0x30" stat="mCritRate" val="0.04" />
 		</for>
@@ -602,9 +661,9 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="maxLoad" val="2" />
 		</for>
@@ -613,9 +672,9 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="breath" val="6" />
 		</for>
@@ -637,9 +696,9 @@
 		<table name="#magicLvl"> 55 64 75 </table>
 		<table name="#PhysicalMpConsumeRate"> 0.96 0.93 0.9 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="PhysicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
 		</for>
@@ -649,9 +708,9 @@
 		<table name="#magicLvl"> 55 64 75 </table>
 		<table name="#MagicalMpConsumeRate"> 0.9 0.85 0.8 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate" />
 		</for>
@@ -661,9 +720,9 @@
 		<table name="#magicLvl"> 55 64 75 </table>
 		<table name="#DanceMpConsumeRate"> 0.96 0.93 0.9 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="DanceMpConsumeRate" val="#DanceMpConsumeRate" />
 		</for>
@@ -674,9 +733,9 @@
 		<table name="#PhysicalMpConsumeRate"> 0.9 0.85 0.8 </table>
 		<table name="#MagicalMpConsumeRate"> 0.96 0.93 0.9 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate" />
 			<mul order="0x30" stat="PhysicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
@@ -688,9 +747,9 @@
 		<table name="#magicLvl"> 55 64 75 </table>
 		<table name="#reflectDam"> 10 15 20 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="reflectDam" val="#reflectDam" />
 		</for>
