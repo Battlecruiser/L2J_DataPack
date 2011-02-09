@@ -175,18 +175,24 @@
 		</for>
 	</skill>
 	<skill id="2513" levels="1" name="Herb of Doubt">
-		<set name="staticHitTime" val="true" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="reuseDelay" val="2000" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="300000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="BigHead" time="300" val="0" abnormal="bighead" stackOrder="0.9" stackType="big_head" />
+			<effect name="BigHead" time="300" val="0" abnormal="bighead" stackOrder="1" stackType="big_head">
+				<mul order="0x30" stat="regHp" val="2" />
+				<mul order="0x30" stat="regMp" val="2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2514" levels="1" name="Herb of Critical Attack - Power">
