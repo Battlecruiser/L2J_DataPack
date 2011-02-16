@@ -8,44 +8,58 @@
 		<set name="hitTime" val="500" />
 	</skill>
 	<skill id="2401" levels="1" name="Lesser Battlefield Mana Potion">
-		<set name="itemConsumeCount" val="1" />
-		<set name="power" val="500" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="MANAHEAL" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="reuseDelay" val="600000" />
+		<!-- Confirmed CT2.5 -->
 		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="360" />
+		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="MANAHEAL" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
-			<player SiegeZone="126" />
+			<and>
+				<player SiegeZone="126" />
+				<player level="52" />
+			</and>
 		</cond>
 	</skill>
 	<skill id="2402" levels="1" name="Lesser Battlefield CP Potion">
-		<set name="itemConsumeCount" val="1" />
-		<set name="power" val="1000" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COMBATPOINTHEAL" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="reuseDelay" val="600000" />
+		<!-- Confirmed CT2.5 -->
 		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="1000" />
+		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="COMBATPOINTHEAL" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
-			<player SiegeZone="126" />
+			<and>
+				<player SiegeZone="126" />
+				<player level="52" />
+			</and>
 		</cond>
 	</skill>
 	<skill id="2403" levels="1" name="Spring CP Potion">
-		<set name="itemConsumeCount" val="1" />
-		<set name="power" val="1000" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COMBATPOINTHEAL" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="reuseDelay" val="600000" />
+		<!-- Confirmed CT2.5 -->
 		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="1000" />
+		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="COMBATPOINTHEAL" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2404" levels="1" name="Might">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -56,11 +70,13 @@
 		</for>
 	</skill>
 	<skill id="2405" levels="1" name="Shield">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="25" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -71,11 +87,13 @@
 		</for>
 	</skill>
 	<skill id="2406" levels="1" name="Wind Walk">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="30" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -86,11 +104,13 @@
 		</for>
 	</skill>
 	<skill id="2407" levels="1" name="Focus">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="44" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -101,11 +121,13 @@
 		</for>
 	</skill>
 	<skill id="2408" levels="1" name="Death Whisper">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="48" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -116,11 +138,13 @@
 		</for>
 	</skill>
 	<skill id="2409" levels="1" name="Guidance">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="48" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -131,26 +155,30 @@
 		</for>
 	</skill>
 	<skill id="2410" levels="1" name="Bless Shield">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="48" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
 		<for>
 			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="shield_prob_up">
-				<mul order="0x30" stat="rShld" val="1.4" />
+				<mul order="0x30" stat="rShld" val="1.1" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="2411" levels="1" name="Blessed Body">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="52" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -161,11 +189,13 @@
 		</for>
 	</skill>
 	<skill id="2412" levels="1" name="Haste">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="44" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -176,11 +206,13 @@
 		</for>
 	</skill>
 	<skill id="2413" levels="1" name="Vampiric Rage">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="44" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -191,11 +223,13 @@
 		</for>
 	</skill>
 	<skill id="2414" levels="1" name="Berserker Spirit">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="35" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -213,11 +247,13 @@
 		</for>
 	</skill>
 	<skill id="2415" levels="1" name="Magic Barrier">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="44" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -228,11 +264,13 @@
 		</for>
 	</skill>
 	<skill id="2416" levels="1" name="Blessed Soul">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="52" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -243,11 +281,13 @@
 		</for>
 	</skill>
 	<skill id="2417" levels="1" name="Empower">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="44" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -258,11 +298,13 @@
 		</for>
 	</skill>
 	<skill id="2418" levels="1" name="Acumen">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="35" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -273,15 +315,21 @@
 		</for>
 	</skill>
 	<skill id="2419" levels="1" name="Clarity">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="58" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
 		<for>
 			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="cheap_magic">
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.9" />
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.96" />
-				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.96" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.9" />
 			</effect>
 		</for>
 	</skill>
@@ -381,12 +429,14 @@
 		</for>
 	</skill>
 	<skill id="2429" levels="1" name="Haste Juice">
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -397,12 +447,14 @@
 		</for>
 	</skill>
 	<skill id="2430" levels="1" name="Accuracy Juice">
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -413,12 +465,14 @@
 		</for>
 	</skill>
 	<skill id="2431" levels="1" name="Critical Power Juice">
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -429,12 +483,14 @@
 		</for>
 	</skill>
 	<skill id="2432" levels="1" name="Critical Attack Juice">
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -445,12 +501,14 @@
 		</for>
 	</skill>
 	<skill id="2433" levels="1" name="Casting Speed Juice">
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -461,12 +519,14 @@
 		</for>
 	</skill>
 	<skill id="2434" levels="1" name="Evasion Juice">
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="buffDuration" val="3600000" />
 		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="1200000" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -477,12 +537,14 @@
 		</for>
 	</skill>
 	<skill id="2435" levels="1" name="Magic Power Juice">
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -493,12 +555,14 @@
 		</for>
 	</skill>
 	<skill id="2436" levels="1" name="Power Juice">
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -509,12 +573,14 @@
 		</for>
 	</skill>
 	<skill id="2437" levels="1" name="Speed Juice">
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -525,12 +591,14 @@
 		</for>
 	</skill>
 	<skill id="2438" levels="1" name="Defense Juice">
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -541,20 +609,22 @@
 		</for>
 	</skill>
 	<skill id="2439" levels="1" name="MP Consumption Juice">
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
 		<for>
 			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="cheap_magic">
-				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.8" />
-				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.9" />
-				<mul order="0x30" stat="DanceMpConsumeRate" val="0.8" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.9" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.96" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.9" />
 			</effect>
 		</for>
 	</skill>

@@ -758,20 +758,23 @@
 		</for>
 	</skill>
 	<skill id="947" levels="1" name="Lucky Strike">
+		<!-- Confirmed CT2.5 -->
+		<set name="baseCritRate" val="5" />
 		<set name="castRange" val="40" />
+		<set name="coolTime" val="100" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1700" />
-		<set name="coolTime" val="100" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="70" />
+		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="4312" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillRadius" val="100" />
-		<set name="nextActionAttack" val="true" />
+		<set name="skillRadius" val="150" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_AREA" />
+		<set name="weaponsAllowed" val="Blunt, Big Blunt" /> <!-- Blunt/Big Blunt -->
 		<for>
 			<effect name="Spoil" val="0" />
 		</for>

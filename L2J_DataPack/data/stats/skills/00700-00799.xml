@@ -1520,23 +1520,25 @@
 		<set name="weaponsAllowed" val="Big Blunt, Big Sword" /> <!-- Big Sword/Big Blunt -->
 	</skill>
 	<skill id="778" levels="1" name="Golem Armor">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="true" />
-		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="44" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="staticReuse" val="true" />
 		<set name="skillType" val="BUFF" />
 		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="259" />
 		<for>
 			<effect name="Transformation" time="300" val="0" stackOrder="1" stackType="transform">
-				<mul order="0x30" stat="maxHp" val="1.1" />
-				<mul order="0x30" stat="maxMp" val="1.1" />
-				<mul order="0x30" stat="maxCp" val="0.72" />
-				<add order="0x40" stat="runSpd" val="11" />
+				<set order="0x08" stat="STR" val="39" />
+				<set order="0x08" stat="INT" val="20" />
+				<set order="0x08" stat="CON" val="45" />
+				<set order="0x08" stat="DEX" val="29" />
+				<set order="0x08" stat="WIT" val="10" />
+				<set order="0x08" stat="MEN" val="27" />
 			</effect>
 		</for>
 	</skill>
@@ -1666,13 +1668,15 @@
 		</for>
 	</skill>
 	<skill id="785" levels="1" name="Flame Icon">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="835" />
 		<set name="hitTime" val="1800" />
 		<set name="hpConsume" val="1253" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="150000" />
-		<set name="skillType" val="BUFF" />
 		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_PARTY" />
 		<cond msgId="113" addName="1">
 			<player active_effect_id_lvl="5562,3" />
@@ -1682,13 +1686,9 @@
 				<sub order="0x40" stat="debuffVuln" val="40" />
 				<mul order="0x30" stat="pDef" val="1.5" />
 				<mul order="0x30" stat="mDef" val="1.5" />
-				<add order="0x40" stat="accCombat" val="6">
-					<using kind="Sword,Big Sword,Blunt,Big Blunt" />
-				</add>
+				<add order="0x40" stat="accCombat" val="6" />
 				<add order="0x40" stat="runSpd" val="30" />
-				<mul order="0x30" stat="pAtkSpd" val="1.3">
-					<using kind="Sword,Big Sword,Blunt,Big Blunt" />
-				</mul>
+				<mul order="0x30" stat="pAtkSpd" val="1.3" />
 				<add order="0x40" stat="rCrit" val="100">
 					<using kind="Sword,Big Sword" />
 				</add>
