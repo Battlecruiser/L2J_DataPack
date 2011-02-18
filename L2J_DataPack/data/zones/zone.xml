@@ -758,36 +758,6 @@
 		<stat name="oustZ" val="-3352" />
 	</zone>
 
-	<!-- Emerald Square zone -->
-	<zone id="20105" type="ScriptZone" shape="Cuboid" minZ="-11900" maxZ="-11800" />
-	<zone id="20106" type="ScriptZone" shape="Cuboid" minZ="-12250" maxZ="-12150" />
-	<zone id="20107" type="ScriptZone" shape="Cuboid" minZ="-12150" maxZ="-12000" />
-
-	<!-- Pailaka (Forgotten Temple) -->
-	<zone id="20108" type="ScriptZone" shape="NPoly" minZ="-5050" maxZ="-3900" />
-	<!-- Pailaka (Devil's Isle) -->
-	<zone id="20109" type="ScriptZone" shape="NPoly" minZ="-3770" maxZ="-3700" />
-
-	<!-- Nornil's Garden -->
-	<!-- Warrior's Gate zone -->
-	<zone id="20110" type="ScriptZone" shape="Cuboid" minZ="-12650" maxZ="-12600">
-		<node X="-109864" Y="76184" />
-		<node X="-109544" Y="76392" />
-	</zone>
-	<!-- Midway gate zone -->
-	<zone id="20111" type="ScriptZone" shape="Cuboid" minZ="-12930" maxZ="-12900">
-		<node X="-107560" Y="80488" />
-		<node X="-107240" Y="80808" />
-	</zone>
-	<!-- Gate zone -->
-	<zone id="20112" type="ScriptZone" shape="Cuboid" minZ="-12990" maxZ="-12960">
-		<node X="-111016" Y="83944" />
-		<node X="-110696" Y="84264" />
-	</zone>
-
-	<!-- Pagans mark -->
-	<zone id="30100" type="ScriptZone" shape="NPoly" minZ="-10735" maxZ="-10720" />
-
 	<!-- Primeval Isle Zones (vertices, min Z & Max Z are estimated) -->
 	<!-- Primeval Isle (Town Zone) -->
 	<zone id="40001" type="TownZone" shape="Cuboid" minZ="-4300" maxZ="2700">
@@ -864,17 +834,7 @@
 	<zone id="50020" type="NoStoreZone" shape="NPoly" minZ="-4956" maxZ="-4756" /> <!-- [17_21] ssq_peace_1721_02 -->
 	<zone id="50021" type="NoStoreZone" shape="NPoly" minZ="-4944" maxZ="-4744" /> <!-- [17_21] ssq_peace_1721_03 -->
 
-	<!-- AirShips docks -->
-	<zone id="50600" type="ScriptZone" shape="Cylinder" minZ="-1000" maxZ="6200" rad="2900" /> <!-- Seed of Infinity -->
-	<zone id="50601" type="ScriptZone" shape="Cylinder" minZ="-1000" maxZ="6200" rad="4300" /> <!-- Seed of Destruction -->
-	<zone id="50602" type="ScriptZone" shape="NPoly" minZ="-1000" maxZ="6200" /> <!-- Keucereus Base North -->
-	<zone id="50603" type="ScriptZone" shape="NPoly" minZ="-1000" maxZ="6200" /> <!-- Keucereus Base South -->
-
 	<!-- Seed of Annihilation zone -->
-	<zone id="60002" type="ScriptZone" shape="Cylinder" minZ="-10600" maxZ="-10500" rad="260" />
-	<zone id="60003" type="ScriptZone" shape="Cylinder" minZ="-11050" maxZ="-10950" rad="260" />
-	<zone id="60004" type="ScriptZone" shape="Cylinder" minZ="-10800" maxZ="-10700" rad="360" />
-	<zone id="60005" type="ScriptZone" shape="Cylinder" minZ="-15250" maxZ="-15100" rad="360" />
 	<zone id="60006" type="EffectZone" shape="NPoly" minZ="-10700" maxZ="-10100">
 		<stat name="maxDynamicSkillCount" val="1" />
 		<stat name="showDangerIcon" val="false" />
@@ -892,12 +852,6 @@
 		<stat name="showDangerIcon" val="false" />
 		<stat name="initialDelay" val="1000" />
 		<stat name="reuse" val="3000" />
-	</zone>
-
-	<!-- Seed of Destruction zone -->
-	<zone id="60009" type="ScriptZone" shape="Cuboid" minZ="-14065" maxZ="-6500">
-		<node X="-237600" Y="221168" />
-		<node X="-253900" Y="204849" />
 	</zone>
 
 	<!-- Den of Evil Zones (vertices, min Z & Max Z are estimated) -->
