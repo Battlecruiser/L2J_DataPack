@@ -1,6 +1,5 @@
 ALTER TABLE `characters` CHANGE `obj_Id` `charId` INT UNSIGNED NOT NULL DEFAULT 0;
 ALTER TABLE `character_quests` CHANGE `char_id` `charId` INT UNSIGNED NOT NULL DEFAULT 0;
-ALTER TABLE `character_recommends` CHANGE `char_id` `charId` INT UNSIGNED NOT NULL DEFAULT 0;
 ALTER TABLE `character_recipebook` CHANGE `char_id` `charId` INT UNSIGNED NOT NULL DEFAULT 0;
 ALTER TABLE `character_hennas` CHANGE `char_obj_id` `charId` INT UNSIGNED NOT NULL DEFAULT 0;
 ALTER TABLE `character_macroses` CHANGE `char_obj_id` `charId` INT UNSIGNED NOT NULL DEFAULT 0;
