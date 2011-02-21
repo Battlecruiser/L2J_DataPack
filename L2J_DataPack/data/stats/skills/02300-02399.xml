@@ -61,13 +61,21 @@
 		</cond>
 	</skill>
 	<skill id="2305" levels="1" name="Primeval Potion">
-		<!-- Improves resistance to various poisons and anesthetics that originate on the Primeval Isle. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
+		<for>
+			<effect name="Buff" time="1200" val="0" stackOrder="1" stackType="potion_of_genesis">
+				<sub order="0x40" stat="stunVuln" val="15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2306" levels="3" name="Primeval Crystals">
 		<!-- Lvl 1 Name - Blue Primeval Crystal -->
