@@ -38,7 +38,6 @@ import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 import com.l2jserver.gameserver.network.serverpackets.SSQInfo;
 import com.l2jserver.gameserver.network.serverpackets.SocialAction;
-import com.l2jserver.gameserver.network.serverpackets.StopMove;
 import com.l2jserver.gameserver.network.serverpackets.SunRise;
 import com.l2jserver.gameserver.network.serverpackets.SunSet;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -217,9 +216,7 @@ public class AdminEffects implements IAdminCommandHandler
 						{
 							player.startAbnormalEffect(AbnormalEffect.HOLD_1);
 							player.setIsParalyzed(true);
-							StopMove sm = new StopMove(player);
-							player.sendPacket(sm);
-							player.broadcastPacket(sm);
+							player.startParalyze();
 						}
 					}
 				}
@@ -239,6 +236,7 @@ public class AdminEffects implements IAdminCommandHandler
 					{
 						player.stopAbnormalEffect(AbnormalEffect.HOLD_1);
 						player.setIsParalyzed(false);
+						player.stopParalyze(false);
 					}
 				}
 			}
@@ -268,9 +266,7 @@ public class AdminEffects implements IAdminCommandHandler
 					else
 						player.startAbnormalEffect(AbnormalEffect.HOLD_2);
 					player.setIsParalyzed(true);
-					StopMove sm = new StopMove(player);
-					player.sendPacket(sm);
-					player.broadcastPacket(sm);
+					player.startParalyze();
 				}
 			}
 			catch (Exception e)
@@ -299,6 +295,7 @@ public class AdminEffects implements IAdminCommandHandler
 					else
 						player.stopAbnormalEffect(AbnormalEffect.HOLD_2);
 					player.setIsParalyzed(false);
+					player.stopParalyze(false);
 				}
 			}
 			catch (Exception e)
