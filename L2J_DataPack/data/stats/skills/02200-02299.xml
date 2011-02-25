@@ -473,63 +473,86 @@
 		</cond>
 	</skill>
 	<skill id="2244" levels="1" name="Herb of Life">
-		<set name="power" val="15" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="100" />
-		<set name="staticHitTime" val="true" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="17" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="HEAL_PERCENT" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
-	</skill>
-	<skill id="2245" levels="1" name="Herb of Mana">
-		<set name="power" val="12" />
-		<set name="hitTime" val="100" />
 		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="MANAHEAL_PERCENT" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
-		<cond msgId="113" addName="1">
-			<player flyMounted="False" />
-		</cond>
-	</skill>
-	<skill id="2246" levels="1" name="Herb of Power">
-		<set name="hitTime" val="100" />
-		<set name="staticHitTime" val="true" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="300000" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="2.9" stackType="pa_up">
-				<mul order="0x30" stat="pAtk" val="1.15" />
+			<effect name="HealOverTime" val="60" />
+		</for>
+	</skill>
+	<skill id="2245" levels="1" name="Herb of Mana">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="100" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="4" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="MANAHEAL_PERCENT" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="ManaHealOverTime" val="20" />
+		</for>
+	</skill>
+	<skill id="2246" levels="1" name="Herb of Power">
+		<!-- Confirmed CT2.5 -->
+		<set name="buffDuration" val="300000" />
+		<set name="hitTime" val="100" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="pa_up_herb">
+				<mul order="0x30" stat="pAtk" val="1.25">
+					<using kind="Fist,Sword,Big Sword,Dagger,Dual Dagger,Dual Fist,Dual Sword,Blunt,Big Blunt,Ancient,Rapier,Etc" />
+				</mul>
+				<mul order="0x30" stat="pAtk" val="1.15">
+					<using kind="Bow,Pole,Crossbow" />
+				</mul>
 			</effect>
 		</for>
 	</skill>
 	<skill id="2247" levels="1" name="Herb of Magic">
+		<!-- Confirmed CT2.5 -->
+		<set name="buffDuration" val="300000" />
 		<set name="hitTime" val="100" />
-		<set name="staticHitTime" val="true" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="300000" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="2.9" stackType="ma_up">
+			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="ma_up_herb">
 				<mul order="0x30" stat="mAtk" val="1.75" />
 			</effect>
 		</for>
@@ -909,43 +932,51 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2278" levels="3" name="Herb of Life">
+		<!-- Confirmed CT2.5 -->
 		<table name="#power"> 15 25 100 </table>
-		<set name="power" val="#power" />
 		<set name="hitTime" val="100" />
-		<set name="staticHitTime" val="true" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#power" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="HEAL_PERCENT" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
 	</skill>
 	<skill id="2279" levels="3" name="Herb of Mana">
-		<!-- Lvl 2 is Greater Herb of Mana Lvl 3 is Superior Herb of Mana -->
-		<table name="#power"> 12 18 100 </table>
-		<set name="power" val="#power" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#power"> 11 18 100 </table>
 		<set name="hitTime" val="100" />
-		<set name="staticHitTime" val="true" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="#power" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="MANAHEAL_PERCENT" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
 	</skill>
 	<skill id="2280" levels="1" name="Herb of Power">
+		<!-- Confirmed CT2.5 -->
+		<set name="buffDuration" val="300000" />
 		<set name="hitTime" val="100" />
-		<set name="staticHitTime" val="true" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="300000" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -956,14 +987,17 @@
 		</for>
 	</skill>
 	<skill id="2281" levels="1" name="Herb of Magic">
+		<!-- Confirmed CT2.5 -->
+		<set name="buffDuration" val="300000" />
 		<set name="hitTime" val="100" />
-		<set name="staticHitTime" val="true" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="52" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="300000" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -974,14 +1008,17 @@
 		</for>
 	</skill>
 	<skill id="2282" levels="1" name="Herb of Atk. Spd.">
+		<!-- Confirmed CT2.5 -->
+		<set name="buffDuration" val="300000" />
 		<set name="hitTime" val="100" />
-		<set name="staticHitTime" val="true" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="52" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="300000" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -992,14 +1029,17 @@
 		</for>
 	</skill>
 	<skill id="2283" levels="1" name="Herb of Casting Spd.">
+		<!-- Confirmed CT2.5 -->
+		<set name="buffDuration" val="300000" />
 		<set name="hitTime" val="100" />
-		<set name="staticHitTime" val="true" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="52" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="300000" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -1010,14 +1050,17 @@
 		</for>
 	</skill>
 	<skill id="2284" levels="1" name="Herb of Critical Attack">
+		<!-- Confirmed CT2.5 -->
+		<set name="buffDuration" val="300000" />
 		<set name="hitTime" val="100" />
-		<set name="staticHitTime" val="true" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="52" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="300000" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -1028,14 +1071,17 @@
 		</for>
 	</skill>
 	<skill id="2285" levels="1" name="Herb of Speed">
+		<!-- Confirmed CT2.5 -->
+		<set name="buffDuration" val="300000" />
 		<set name="hitTime" val="100" />
-		<set name="staticHitTime" val="true" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="52" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="300000" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -1066,7 +1112,7 @@
 		</for>
 	</skill>
 	<skill id="2287" levels="6" name="Elixir of Life">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<table name="#power"> 250 650 1100 1500 1900 2300 </table>
 		<table name="#minLvl"> 0 20 40 52 61 76 </table>
 		<table name="#maxLvl"> 20 40 52 61 76 86 </table>
@@ -1089,7 +1135,7 @@
 		</cond>
 	</skill>
 	<skill id="2288" levels="6" name="Elixir of Mental Strength">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<table name="#power"> 60 140 220 290 360 420 </table>
 		<table name="#minLvl"> 0 20 40 52 61 76 </table>
 		<table name="#maxLvl"> 20 40 52 61 76 86 </table>
@@ -1112,7 +1158,7 @@
 		</cond>
 	</skill>
 	<skill id="2289" levels="6" name="Elixir of CP">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<table name="#power"> 150 350 600 800 1000 1200 </table>
 		<table name="#minLvl"> 0 20 40 52 61 76 </table>
 		<table name="#maxLvl"> 20 40 52 61 76 86 </table>

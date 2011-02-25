@@ -829,47 +829,50 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="249" levels="42" name="Weapon Mastery">
+		<!-- Confirmed CT2.5 -->
 		<!-- Mage -->
+		<table name="#magicLvl"> 7 14 20 23 25 28 30 33 35 38 39 40 42 43 44 46 47 48 50 51 52 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#pAtk"> 1.5 2.8 4.5 5.7 6.7 8.3 9.5 11.6 13.3 16 17 18.1 20.4 21.6 22.8 25.5 26.9 28.3 31.4 33 34.6 38 39.8 41.7 43.5 45.4 47.4 49.4 51.4 53.5 55.6 57.7 59.9 62 64.1 66.8 68.5 70.7 72.9 75.1 77.2 79.4 </table>
 		<table name="#mAtk"> 1.9 3.5 5.7 7.2 8.3 10.3 11.9 14.6 16.6 20 21.3 22.6 25.4 26.9 28.5 31.8 33.6 35.4 39.2 41.2 43.2 47.5 49.8 52.1 54.4 56.8 59.2 61.7 64.3 66.8 69.4 72.1 74.8 77.4 80.2 82.9 85.6 88.4 91.1 93.8 96.5 99.3 </table>
-		<table name="#mulpAtk"> 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 </table>
-		<table name="#mulmAtk"> 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pAtk" val="#pAtk" />
 			<add order="0x40" stat="mAtk" val="#mAtk" />
-			<mul order="0x30" stat="pAtk" val="#mulpAtk" />
-			<mul order="0x30" stat="mAtk" val="#mulmAtk" />
+			<mul order="0x30" stat="pAtk" val="1.45" />
+			<mul order="0x30" stat="mAtk" val="1.17" />
 			<mul order="0x30" stat="mAtkSpd" val="0.7">
 				<using kind="Bow,Pole" />
 			</mul>
-			<sub order="0x40" stat="accCombat" val="9">
+			<sub order="0x40" stat="accCombat" val="8">
 				<using kind="Bow,Pole" />
 			</sub>
 		</for>
 	</skill>
 	<skill id="250" levels="42" name="Weapon Mastery">
+		<!-- Confirmed CT2.5 -->
 		<!-- Shaman -->
+		<table name="#magicLvl"> 7 14 20 23 25 28 30 33 35 38 39 40 42 43 44 46 47 48 50 51 52 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#pAtk"> 1.5 2.8 4.5 5.7 6.7 8.3 9.5 11.6 13.3 16 17 18.1 20.4 21.6 22.8 25.5 26.9 28.3 31.4 33 34.6 38 39.8 41.7 43.5 45.4 47.4 49.4 51.4 53.5 55.6 57.7 59.9 62 64.1 66.8 68.5 70.7 72.9 75.1 77.2 79.4 </table>
 		<table name="#mAtk"> 1.9 3.5 5.7 7.2 8.3 10.3 11.9 14.6 16.6 20 21.3 22.6 25.4 26.9 28.5 31.8 33.6 35.4 39.2 41.2 43.2 47.5 49.8 52.1 54.4 56.8 59.2 61.7 64.3 66.8 69.4 72.1 74.8 77.4 80.2 82.9 85.6 88.4 91.1 93.8 96.5 99.3 </table>
-		<table name="#mulpAtk"> 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 </table>
-		<table name="#mulmAtk"> 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.17 </table>
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<add order="0x40" stat="pAtk" val="#pAtk" />
 			<add order="0x40" stat="mAtk" val="#mAtk" />
-			<mul order="0x30" stat="pAtk" val="#mulpAtk" />
-			<mul order="0x30" stat="mAtk" val="#mulmAtk" />
+			<mul order="0x30" stat="pAtk" val="1.45" />
+			<mul order="0x30" stat="mAtk" val="1.17" />
 			<mul order="0x30" stat="mAtkSpd" val="0.7">
 				<using kind="Bow,Pole" />
 			</mul>
-			<sub order="0x40" stat="accCombat" val="9">
+			<sub order="0x40" stat="accCombat" val="8">
 				<using kind="Bow,Pole" />
 			</sub>
+			<add order="0x40" stat="absorbDamMana" val="10" />
 		</for>
 	</skill>
 	<skill id="251" levels="45" name="Robe Mastery" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
