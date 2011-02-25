@@ -149,7 +149,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
 		<for>
-			<effect name="Debuff" time="#time" val="0" effectPower="80" effectType="WEAKNESS" stackOrder="#stackOrder" stackType="armor_fire">
+			<effect name="Debuff" time="#time" val="0" effectPower="80" effectType="DEBUFF" stackOrder="#stackOrder" stackType="armor_fire">
 				<sub order="0x40" stat="fireRes" val="#fireRes" />
 				<add order="0x40" stat="waterRes" val="#waterRes" />
 			</effect>
