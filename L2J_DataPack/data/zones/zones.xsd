@@ -19,8 +19,10 @@
 												<xs:enumeration value="EnabledByDefault" />
 												<xs:enumeration value="enterMsgId" />
 												<xs:enumeration value="fortId" />
+												<xs:enumeration value="defaultStatus" />
 												<xs:enumeration value="HpRegenBonus" />
 												<xs:enumeration value="initialDelay" />
+												<xs:enumeration value="instanceId" />
 												<xs:enumeration value="InvadeTime" />
 												<xs:enumeration value="leaveMsgId" />
 												<xs:enumeration value="maxDynamicSkillCount" />
@@ -31,6 +33,8 @@
 												<xs:enumeration value="oustX" />
 												<xs:enumeration value="oustY" />
 												<xs:enumeration value="oustZ" />
+												<xs:enumeration value="restartAllowedTime" />
+												<xs:enumeration value="restartTime" />
 												<xs:enumeration value="reuse" />
 												<xs:enumeration value="showDangerIcon" />
 												<xs:enumeration value="skillIdLvl" />
@@ -99,6 +103,7 @@
 									<xs:enumeration value="NoDropItemZone" />
 									<xs:enumeration value="NoHqZone" />
 									<xs:enumeration value="NoLandingZone" />
+									<xs:enumeration value="NoRestartZone" />
 									<xs:enumeration value="NoStoreZone" />
 									<xs:enumeration value="NoSummonFriendZone" />
 									<xs:enumeration value="OlympiadStadiumZone" />
