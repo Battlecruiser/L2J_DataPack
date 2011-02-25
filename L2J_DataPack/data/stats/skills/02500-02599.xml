@@ -157,14 +157,16 @@
 		</for>
 	</skill>
 	<skill id="2512" levels="1" name="Herb of Vampiric Rage">
-		<set name="hitTime" val="100" />
-		<set name="staticHitTime" val="true" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="reuseDelay" val="2000" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="300000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
@@ -196,14 +198,16 @@
 		</for>
 	</skill>
 	<skill id="2514" levels="1" name="Herb of Critical Attack - Power">
-		<set name="hitTime" val="100" />
-		<set name="staticHitTime" val="true" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="reuseDelay" val="2000" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isPotion" val="true" />
+		<!-- Confirmed CT2.5 -->
 		<set name="buffDuration" val="300000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="False" />
 		</cond>
