@@ -577,7 +577,7 @@
 		<set name="power" val="80" />
 		<set name="reuseDelay" val="2000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="WEAKNESS" />
+		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" time="30" val="0" stackOrder="3" stackType="armor_holy">
@@ -905,7 +905,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="WEAKNESS" />
+		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<for>

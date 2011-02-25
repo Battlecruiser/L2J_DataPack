@@ -747,7 +747,7 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Debuff" time="30" val="0" stackOrder="3" stackType="armor_unholy" effectPower="80" effectType="WEAKNESS">
+			<effect name="Debuff" time="30" val="0" effectPower="80" effectType="DEBUFF" stackOrder="3" stackType="armor_unholy">
 				<sub order="0x40" stat="darkRes" val="25" />
 			</effect>
 		</for>
