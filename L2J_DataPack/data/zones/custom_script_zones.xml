@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="zones.xsd">
 	<!-- Custom Script Zones -->
-	<!-- Emerald Square zone -->
-	<zone id="20105" type="ScriptZone" shape="Cuboid" minZ="-11900" maxZ="-11800"> <!-- first secret room -->
+	<zone name="Emerald Square 1st Secret Room" id="20105" type="ScriptZone" shape="Cuboid" minZ="-11900" maxZ="-11800">
 		<node X="144175" Y="142396" />
 		<node X="144251" Y="142588" />
 	</zone>
-	<zone id="20106" type="ScriptZone" shape="Cuboid" minZ="-12250" maxZ="-12150"> <!-- second secret room -->
+	<zone name="Emerald Square 2nd Secret Room" id="20106" type="ScriptZone" shape="Cuboid" minZ="-12250" maxZ="-12150">
 		<node X="147400" Y="143631" />
 		<node X="147484" Y="143828" />
 	</zone>
-	<zone id="20107" type="ScriptZone" shape="Cuboid" minZ="-12150" maxZ="-12000"> <!-- third secret room -->
+	<zone name="Emerald Square 3rd Secret Room" id="20107" type="ScriptZone" shape="Cuboid" minZ="-12150" maxZ="-12000">
 		<node X="149396" Y="143473" />
 		<node X="149559" Y="143584" />
 	</zone>
-
-	<!-- Pailaka (Forgotten Temple) -->
-	<zone id="20108" type="ScriptZone" shape="NPoly" minZ="-5050" maxZ="-3900">
+	<zone name="Pailaka (Forgotten Temple)" id="20108" type="ScriptZone" shape="NPoly" minZ="-5050" maxZ="-3900">
 		<node X="-62840" Y="178808" />
 		<node X="-62840" Y="184568" />
 		<node X="-60792" Y="184568" />
@@ -26,86 +23,69 @@
 		<node X="-52360" Y="190200" />
 		<node X="-52360" Y="178808" />
 	</zone>
-
-	<!-- Pailaka (Devil's Isle) -->
-	<zone id="20109" type="ScriptZone" shape="NPoly" minZ="-3770" maxZ="-3700">
+	<zone name="Pailaka (Devil's Isle)" id="20109" type="ScriptZone" shape="NPoly" minZ="-3770" maxZ="-3700">
 		<node X="76650" Y="-221310" />
 		<node X="76630" Y="-221880" />
 		<node X="75490" Y="-221480" />
 		<node X="75630" Y="-221140" />
 	</zone>
-
-	<!-- Nornil's Garden -->
-	<!-- Warrior's Gate zone -->
-	<zone id="20110" type="ScriptZone" shape="Cuboid" minZ="-12650" maxZ="-12600">
+	<zone name="Nornil's Garden Warrior's Gate" id="20110" type="ScriptZone" shape="Cuboid" minZ="-12650" maxZ="-12600">
 		<node X="-109864" Y="76184" />
 		<node X="-109544" Y="76392" />
 	</zone>
-	<!-- Midway gate zone -->
-	<zone id="20111" type="ScriptZone" shape="Cuboid" minZ="-12930" maxZ="-12900">
+	<zone name="Nornil's Garden Midway Gate" id="20111" type="ScriptZone" shape="Cuboid" minZ="-12930" maxZ="-12900">
 		<node X="-107560" Y="80488" />
 		<node X="-107240" Y="80808" />
 	</zone>
-	<!-- Gate zone -->
-	<zone id="20112" type="ScriptZone" shape="Cuboid" minZ="-12990" maxZ="-12960">
+	<zone name="Nornil's Garden Gate" id="20112" type="ScriptZone" shape="Cuboid" minZ="-12990" maxZ="-12960">
 		<node X="-111016" Y="83944" />
 		<node X="-110696" Y="84264" />
 	</zone>
-
-	<!-- Pagans mark -->
-	<zone id="30100" type="ScriptZone" shape="NPoly" minZ="-10735" maxZ="-10720">
+	<zone name="Pagans mark" id="30100" type="ScriptZone" shape="NPoly" minZ="-10735" maxZ="-10720">
 		<node X="-16100" Y="-36620" />
 		<node X="-16600" Y="-36620" />
 		<node X="-16600" Y="-36925" />
 		<node X="-16100" Y="-36925" />
 	</zone>
-
-	<!-- Hellbound No Landing -->
-	<zone id="40101" type="ScriptZone" shape="NPoly" minZ="-30000" maxZ="30000">
+	<zone name="Hellbound" id="40101" type="ScriptZone" shape="NPoly" minZ="-30000" maxZ="30000">
 		<node X="-32768" Y="229376" />
 		<node X="32768" Y="229376" />
 		<node X="32768" Y="262143" />
 		<node X="-32768" Y="262143" />
 	</zone>
-
-	<!-- AirShips docks -->
-	<zone id="50600" type="ScriptZone" shape="Cylinder" minZ="-1000" maxZ="6200" rad="2900"> <!-- Seed of Infinity -->
+	<zone name="Seed of Infinity AirShips dock" id="50600" type="ScriptZone" shape="Cylinder" minZ="-1000" maxZ="6200" rad="2900">
 		<node X="-212855" Y="209819" />
 	</zone>
-	<zone id="50601" type="ScriptZone" shape="Cylinder" minZ="-1000" maxZ="6200" rad="4300"> <!-- Seed of Destruction -->
+	<zone name="Seed of Destruction AirShips dock" id="50601" type="ScriptZone" shape="Cylinder" minZ="-1000" maxZ="6200" rad="4300">
 		<node X="-249460" Y="249282" />
 	</zone>
-	<zone id="50602" type="ScriptZone" shape="NPoly" minZ="-1000" maxZ="6200"> <!-- Keucereus Base North -->
+	<zone name="Keucereus Base North" id="50602" type="ScriptZone" shape="NPoly" minZ="-1000" maxZ="6200">
 		<node X="-193315" Y="240184" />
 		<node X="-188053" Y="235278" />
 		<node X="-179811" Y="238353" />
 		<node X="-178407" Y="242454" />
 		<node X="-178685" Y="244665" />
 	</zone>
-	<zone id="50603" type="ScriptZone" shape="NPoly" minZ="-1000" maxZ="6200"> <!-- Keucereus Base South -->
+	<zone name="Keucereus Base South" id="50603" type="ScriptZone" shape="NPoly" minZ="-1000" maxZ="6200">
 		<node X="-178685" Y="244664" />
 		<node X="-180120" Y="246779" />
 		<node X="-185598" Y="249572" />
 		<node X="-193009" Y="245647" />
 		<node X="-193315" Y="240185" />
 	</zone>
-
-	<!-- Seed of Annihilation zone -->
-	<zone id="60002" type="ScriptZone" shape="Cylinder" minZ="-10600" maxZ="-10500" rad="260">
+	<zone name="Seed of Annihilation 1" id="60002" type="ScriptZone" shape="Cylinder" minZ="-10600" maxZ="-10500" rad="260">
 		<node X="-182488" Y="186655" />
 	</zone>
-	<zone id="60003" type="ScriptZone" shape="Cylinder" minZ="-11050" maxZ="-10950" rad="260">
+	<zone name="Seed of Annihilation 2" id="60003" type="ScriptZone" shape="Cylinder" minZ="-11050" maxZ="-10950" rad="260">
 		<node X="-212755" Y="184380" />
 	</zone>
-	<zone id="60004" type="ScriptZone" shape="Cylinder" minZ="-10800" maxZ="-10700" rad="360">
+	<zone name="Seed of Annihilation 3" id="60004" type="ScriptZone" shape="Cylinder" minZ="-10800" maxZ="-10700" rad="360">
 		<node X="-178458" Y="188167" />
 	</zone>
-	<zone id="60005" type="ScriptZone" shape="Cylinder" minZ="-15250" maxZ="-15100" rad="360">
+	<zone name="Seed of Annihilation 4" id="60005" type="ScriptZone" shape="Cylinder" minZ="-15250" maxZ="-15100" rad="360">
 		<node X="-179430" Y="183844" />
 	</zone>
-
-	<!-- Seed of Destruction zone -->
-	<zone id="60009" type="ScriptZone" shape="Cuboid" minZ="-14065" maxZ="-6500">
+	<zone name="Seed of Destruction" id="60009" type="ScriptZone" shape="Cuboid" minZ="-14065" maxZ="-6500">
 		<node X="-237600" Y="221168" />
 		<node X="-253900" Y="204849" />
 	</zone>
