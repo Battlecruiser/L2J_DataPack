@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="zones.xsd">
-	<!-- Arenas -->
 	<!-- Monster Race Track -->
-	<zone id="10000" type="DerbyTrackZone" shape="NPoly" minZ="-3652" maxZ="-3452" /> <!-- [20_23] dion_monster_race1 -->
-	<zone id="10001" type="DerbyTrackZone" shape="NPoly" minZ="-3610" maxZ="-3410" /> <!-- [20_23] dion_monster_race2 -->
-	<zone id="10002" type="DerbyTrackZone" shape="NPoly" minZ="-3608" maxZ="-3408" /> <!-- [20_23] dion_monster_race3 -->
-	<zone id="10003" type="DerbyTrackZone" shape="NPoly" minZ="-3612" maxZ="-3412" /> <!-- [20_23] dion_monster_race4 -->
-	<zone id="10004" type="DerbyTrackZone" shape="NPoly" minZ="-3624" maxZ="-3424" /> <!-- [20_23] dion_monster_race5 -->
-	<zone id="10005" type="DerbyTrackZone" shape="NPoly" minZ="-3616" maxZ="-3416" /> <!-- [20_23] dion_monster_race6 -->
-	<zone id="10006" type="DerbyTrackZone" shape="NPoly" minZ="-3620" maxZ="-3420" /> <!-- [20_23] dion_monster_race7 -->
-	<zone id="10007" type="DerbyTrackZone" shape="NPoly" minZ="-3624" maxZ="-3424" /> <!-- [20_23] dion_monster_race8 -->
+	<zone name="dion_monster_race1" id="10000" type="DerbyTrackZone" shape="NPoly" minZ="-3652" maxZ="-3452" /> <!-- [20_23] -->
+	<zone name="dion_monster_race2" id="10001" type="DerbyTrackZone" shape="NPoly" minZ="-3610" maxZ="-3410" /> <!-- [20_23] -->
+	<zone name="dion_monster_race3" id="10002" type="DerbyTrackZone" shape="NPoly" minZ="-3608" maxZ="-3408" /> <!-- [20_23] -->
+	<zone name="dion_monster_race4" id="10003" type="DerbyTrackZone" shape="NPoly" minZ="-3612" maxZ="-3412" /> <!-- [20_23] -->
+	<zone name="dion_monster_race5" id="10004" type="DerbyTrackZone" shape="NPoly" minZ="-3624" maxZ="-3424" /> <!-- [20_23] -->
+	<zone name="dion_monster_race6" id="10005" type="DerbyTrackZone" shape="NPoly" minZ="-3616" maxZ="-3416" /> <!-- [20_23] -->
+	<zone name="dion_monster_race7" id="10006" type="DerbyTrackZone" shape="NPoly" minZ="-3620" maxZ="-3420" /> <!-- [20_23] -->
+	<zone name="dion_monster_race8" id="10007" type="DerbyTrackZone" shape="NPoly" minZ="-3624" maxZ="-3424" /> <!-- [20_23] -->
 
 	<!-- Town Zones -->
-	<zone id="11020" type="TownZone" shape="NPoly" minZ="-3800" maxZ="-3300"> <!-- Giran Castle Town -->
+	<zone name="Giran Castle Town" id="11020" type="TownZone" shape="NPoly" minZ="-3800" maxZ="-3300">
 		<stat name="townId" val="9" />
 		<stat name="taxById" val="3" />
 		<spawn X="82480" Y="149087" Z="-3350" />
@@ -42,7 +41,7 @@
 		<spawn X="79832" Y="154009" Z="-3500" isChaotic="true" />
 		<spawn X="75501" Y="147178" Z="-3530" isChaotic="true" />
 	</zone>
-	<zone id="11021" type="TownZone" shape="NPoly" minZ="-4700" maxZ="-3600"> <!-- DE Village -->
+	<zone name="Dark Elven Village" id="11021" type="TownZone" shape="NPoly" minZ="-4700" maxZ="-3600">
 		<stat name="townId" val="1" />
 		<stat name="taxById" val="4" />
 		<spawn X="11632" Y="16812" Z="-4500" />
@@ -78,7 +77,7 @@
 		<spawn X="-13632" Y="21872" Z="-3620" isChaotic="true" />
 		<spawn X="-11984" Y="21232" Z="-3600" isChaotic="true" />
 	</zone>
-	<zone id="11022" type="TownZone" shape="NPoly" minZ="-3800" maxZ="-3700"> <!-- Talking Island -->
+	<zone name="Talking Island" id="11022" type="TownZone" shape="NPoly" minZ="-3800" maxZ="-3700">
 		<stat name="townId" val="2" />
 		<stat name="taxById" val="1" />
 		<spawn X="-83990" Y="243336" Z="-3700" />
@@ -116,7 +115,7 @@
 		<spawn X="-83328" Y="238304" Z="-3700" isChaotic="true" />
 		<spawn X="-91296" Y="236272" Z="-3690" isChaotic="true" />
 	</zone>
-	<zone id="11023" type="TownZone" shape="NPoly" minZ="-3600" maxZ="-2750"> <!-- Elven Village -->
+	<zone name="Elven Village" id="11023" type="TownZone" shape="NPoly" minZ="-3600" maxZ="-2750">
 		<stat name="townId" val="3" />
 		<stat name="taxById" val="4" />
 		<spawn X="45487" Y="49767" Z="-2950" />
@@ -152,7 +151,7 @@
 		<spawn X="51232" Y="59216" Z="-3320" isChaotic="true" />
 		<spawn X="49808" Y="56240" Z="-3430" isChaotic="true" />
 	</zone>
-	<zone id="11024" type="TownZone" shape="NPoly" minZ="-400" maxZ="-200"> <!-- Orc Village -->
+	<zone name="Orc Village" id="11024" type="TownZone" shape="NPoly" minZ="-400" maxZ="-200">
 		<stat name="townId" val="4" />
 		<stat name="taxById" val="9" />
 		<spawn X="-44316" Y="-113136" Z="-80" />
@@ -184,7 +183,7 @@
 		<spawn X="-39136" Y="-112688" Z="-1844" isChaotic="true" />
 		<spawn X="-37888" Y="-112608" Z="-1772" isChaotic="true" />
 	</zone>
-	<zone id="11025" type="TownZone" shape="NPoly" minZ="-3300" maxZ="-3000"> <!-- Gludin Village -->
+	<zone name="Gludin Village" id="11025" type="TownZone" shape="NPoly" minZ="-3300" maxZ="-3000">
 		<stat name="townId" val="5" />
 		<stat name="taxById" val="1" />
 		<spawn X="-83520" Y="150560" Z="-3000" />
@@ -222,7 +221,7 @@
 		<spawn X="-75440" Y="162672" Z="-3350" isChaotic="true" />
 		<spawn X="-81760" Y="161248" Z="-3200" isChaotic="true" />
 	</zone>
-	<zone id="11026" type="TownZone" shape="NPoly" minZ="-1600" maxZ="-800"> <!-- Dwarven Village -->
+	<zone name="Dwarven Village" id="11026" type="TownZone" shape="NPoly" minZ="-1600" maxZ="-800">
 		<stat name="townId" val="6" />
 		<stat name="taxById" val="9" />
 		<spawn X="116176" Y="-182448" Z="-1400" />
@@ -251,7 +250,7 @@
 		<spawn X="119264" Y="-188736" Z="-3203" isChaotic="true" />
 		<spawn X="118656" Y="-187760" Z="-2828" isChaotic="true" />
 	</zone>
-	<zone id="11027" type="TownZone" shape="NPoly" minZ="-3200" maxZ="-2900"> <!-- Gludio Castle Town -->
+	<zone name="Gludio Castle Town" id="11027" type="TownZone" shape="NPoly" minZ="-3200" maxZ="-2900">
 		<stat name="townId" val="7" />
 		<stat name="taxById" val="1" />
 		<spawn X="-14288" Y="122752" Z="-3000" />
@@ -287,7 +286,7 @@
 		<spawn X="-20176" Y="124512" Z="-3350" isChaotic="true" />
 		<spawn X="-19040" Y="121632" Z="-3200" isChaotic="true" />
 	</zone>
-	<zone id="11028" type="TownZone" shape="NPoly" minZ="-3250" maxZ="-2600"> <!-- Dion Castle Town -->
+	<zone name="Dion Castle Town" id="11028" type="TownZone" shape="NPoly" minZ="-3250" maxZ="-2600">
 		<stat name="townId" val="8" />
 		<stat name="taxById" val="2" />
 		<spawn X="19025" Y="145245" Z="-3107" />
@@ -314,7 +313,7 @@
 		<spawn X="18054" Y="170263" Z="-3400" isChaotic="true" />
 		<spawn X="17931" Y="170381" Z="-3400" isChaotic="true" />
 	</zone>
-	<zone id="11029" type="TownZone" shape="NPoly" minZ="-2250" maxZ="-1400"> <!-- Town of Oren -->
+	<zone name="Town of Oren" id="11029" type="TownZone" shape="NPoly" minZ="-2250" maxZ="-1400">
 		<stat name="townId" val="10" />
 		<stat name="taxById" val="4" />
 		<spawn X="80304" Y="56241" Z="-1500" />
@@ -352,7 +351,7 @@
 		<spawn X="70139" Y="55885" Z="-3550" isChaotic="true" />
 		<spawn X="80236" Y="45675" Z="-3150" isChaotic="true" />
 	</zone>
-	<zone id="11030" type="TownZone" shape="NPoly" minZ="-2800" maxZ="-1500"> <!-- Hunter Village -->
+	<zone name="Hunter Village" id="11030" type="TownZone" shape="NPoly" minZ="-2800" maxZ="-1500">
 		<stat name="townId" val="11" />
 		<stat name="taxById" val="5" />
 		<spawn X="116127" Y="76015" Z="-2729" />
@@ -381,7 +380,7 @@
 		<spawn X="104257" Y="82194" Z="-2581" isChaotic="true" />
 		<spawn X="104474" Y="81109" Z="-2651" isChaotic="true" />
 	</zone>
-	<zone id="11031" type="TownZone" shape="NPoly" minZ="-2700" maxZ="-1900"> <!-- Town of Aden -->
+	<zone name="Town of Aden" id="11031" type="TownZone" shape="NPoly" minZ="-2700" maxZ="-1900">
 		<stat name="townId" val="12" />
 		<stat name="taxById" val="5" />
 		<spawn X="146494" Y="30584" Z="-2420" />
@@ -412,7 +411,7 @@
 		<spawn X="137708" Y="15640" Z="-3800" isChaotic="true" />
 		<spawn X="136629" Y="28127" Z="-3258" isChaotic="true" />
 	</zone>
-	<zone id="11032" type="TownZone" shape="NPoly" minZ="-3550" maxZ="-2600"> <!-- Goddard -->
+	<zone name="Town of Goddard" id="11032" type="TownZone" shape="NPoly" minZ="-3550" maxZ="-2600">
 		<stat name="townId" val="13" />
 		<stat name="taxById" val="7" />
 		<spawn X="148560" Y="-55904" Z="-2779" />
@@ -454,7 +453,7 @@
 		<spawn X="149680" Y="-59600" Z="-3440" isChaotic="true" />
 		<spawn X="149360" Y="-60576" Z="-3520" isChaotic="true" />
 	</zone>
-	<zone id="11033" type="TownZone" shape="Cuboid" minZ="-1200" maxZ="3000"> <!-- Rune Castle Town -->
+	<zone name="Rune Castle Town" id="11033" type="TownZone" shape="Cuboid" minZ="-1200" maxZ="3000">
 		<stat name="townId" val="14" />
 		<stat name="taxById" val="8" />
 		<spawn X="38096" Y="-46976" Z="899" />
@@ -486,7 +485,7 @@
 		<spawn X="42496" Y="-58192" Z="-3264" isChaotic="true" />
 		<spawn X="40784" Y="-59888" Z="-2600" isChaotic="true" />
 	</zone>
-	<zone id="11034" type="TownZone" shape="NPoly" minZ="-3800" maxZ="-3400"> <!-- Heine -->
+	<zone name="Heine" id="11034" type="TownZone" shape="NPoly" minZ="-3800" maxZ="-3400">
 		<stat name="townId" val="15" />
 		<stat name="taxById" val="6" />
 		<spawn X="107568" Y="218256" Z="-3624" />
@@ -509,7 +508,7 @@
 		<spawn X="100784" Y="218272" Z="-3420" isChaotic="true" />
 		<spawn X="100928" Y="218560" Z="-3420" isChaotic="true" />
 	</zone>
-	<zone id="11035" type="TownZone" shape="NPoly" minZ="-2350" maxZ="-1200"> <!-- Schuttgart -->
+	<zone name="Town of Schuttgart" id="11035" type="TownZone" shape="NPoly" minZ="-2350" maxZ="-1200">
 		<stat name="townId" val="17" />
 		<stat name="taxById" val="9" />
 		<spawn X="87609" Y="-140199" Z="-1536" />
@@ -541,7 +540,7 @@
 		<spawn X="42496" Y="-58192" Z="-3264" isChaotic="true" />
 		<spawn X="40784" Y="-59888" Z="-2600" isChaotic="true" />
 	</zone>
-	<zone id="11036" type="TownZone" shape="NPoly" minZ="-3600" maxZ="-3400"> <!-- Floran Village -->
+	<zone name="Floran Village" id="11036" type="TownZone" shape="NPoly" minZ="-3600" maxZ="-3400">
 		<stat name="townId" val="16" />
 		<stat name="taxById" val="2" />
 		<spawn X="19025" Y="145245" Z="-3107" />
@@ -568,7 +567,7 @@
 		<spawn X="18054" Y="170263" Z="-3451" isChaotic="true" />
 		<spawn X="17931" Y="170381" Z="-3451" isChaotic="true" />
 	</zone>
-	<zone id="11038" type="TownZone" shape="NPoly" minZ="250" maxZ="2250"> <!-- Kamael Village -->
+	<zone name="Kamael Village" id="11038" type="TownZone" shape="NPoly" minZ="250" maxZ="2250">
 		<stat name="townId" val="20" />
 		<stat name="taxById" val="5" />
 		<spawn X="-115604" Y="45773" Z="466" />
@@ -580,14 +579,14 @@
 		<spawn X="-115997" Y="41736" Z="1241" />
 		<spawn X="-121425" Y="59778" Z="-2264" isChaotic="true" /> <!-- Guess -->
 	</zone>
-	<zone id="11039" type="TownZone" shape="Cuboid" minZ="-4324" maxZ="3097"> <!-- Fantasy Isle -->
+	<zone name="Fantasy Isle" id="11039" type="TownZone" shape="Cuboid" minZ="-4324" maxZ="3097">
 		<stat name="townId" val="22" />
 		<stat name="taxById" val="14" />
 		<spawn X="-60012" Y="-57445" Z="-2032" />
 		<spawn X="-59078" Y="-56898" Z="-2032" />
 		<spawn X="-60009" Y="-56328" Z="-2032" />
 	</zone>
-	<zone id="11040" type="TownZone" shape="Cuboid" minZ="1080" maxZ="3210"> <!-- Keucereus -->
+	<zone name="Keucereus" id="11040" type="TownZone" shape="Cuboid" minZ="1080" maxZ="3210">
 		<stat name="townId" val="33" />
 		<spawn X="-184719" Y="243083" Z="1576" />
 		<spawn X="-184241" Y="243390" Z="1576" />
@@ -598,9 +597,7 @@
 		<spawn X="-184793" Y="243268" Z="1576" />
 	</zone>
 
-	<!-- Curse Zones -->
-	<!-- Zaken -->
-	<zone id="12020" type="EffectZone" shape="NPoly" minZ="-4815" maxZ="-315">
+	<zone name="Zaken Curse Zone" id="12020" type="EffectZone" shape="NPoly" minZ="-4815" maxZ="-315">
 		<stat name="skillIdLvl" val="4515-1;" />
 		<stat name="chance" val="100" />
 		<stat name="initialDelay" val="2000" />
@@ -608,142 +605,141 @@
 		<stat name="affectedLvlMin" val="70" />
 	</zone>
 
-	<!-- Primeval Isle (Town Zone) (vertices, min Z & Max Z are estimated) -->
-	<zone id="40001" type="TownZone" shape="Cuboid" minZ="-4300" maxZ="2700">
+	<!-- (vertices, min Z & Max Z are estimated) -->
+	<zone name="Primeval Isle (Town Zone)" id="40001" type="TownZone" shape="Cuboid" minZ="-4300" maxZ="2700">
 		<stat name="townId" val="19" />
 		<spawn X="10468" Y="-24569" Z="-3645" />
 	</zone>
 
-	<!-- Hellbound (Town Zone) (vertices, min Z & Max Z are estimated) -->
-	<zone id="40102" type="TownZone" shape="NPoly" minZ="-30000" maxZ="30000">
+	<!-- (vertices, min Z & Max Z are estimated) -->
+	<zone name="Hellbound (Town Zone)" id="40102" type="TownZone" shape="NPoly" minZ="-30000" maxZ="30000">
 		<stat name="townId" val="21" />
 		<spawn X="-16341" Y="209285" Z="-3665" />
 	</zone>
 
 	<!-- SSQ Main Event -->
 	<!-- Oracle of Dusk (Mp Regen Zones) -->
-	<zone id="50000" type="MotherTreeZone" shape="NPoly" minZ="-5168" maxZ="-4968"> <!-- [17_20] ssq_main_event_17_20_01 -->
+	<zone name="ssq_main_event_17_20_01" id="50000" type="MotherTreeZone" shape="NPoly" minZ="-5168" maxZ="-4968">
 		<stat name="MpRegenBonus" val="2" />
 		<stat name="enterMsgId" val="1054" />
 		<stat name="leaveMsgId" val="1055" />
 	</zone>
-	<zone id="50001" type="MotherTreeZone" shape="NPoly" minZ="-5164" maxZ="-4964"> <!-- [17_20] ssq_main_event_17_20_04 -->
+	<zone name="ssq_main_event_17_20_04" id="50001" type="MotherTreeZone" shape="NPoly" minZ="-5164" maxZ="-4964">
 		<stat name="MpRegenBonus" val="2" />
 		<stat name="enterMsgId" val="1054" />
 		<stat name="leaveMsgId" val="1055" />
 	</zone>
-	<zone id="50002" type="MotherTreeZone" shape="NPoly" minZ="-5164" maxZ="-4964"> <!-- [17_20] ssq_main_event_17_20_05 -->
+	<zone name="ssq_main_event_17_20_05" id="50002" type="MotherTreeZone" shape="NPoly" minZ="-5164" maxZ="-4964">
 		<stat name="MpRegenBonus" val="3" />
 		<stat name="enterMsgId" val="1054" />
 		<stat name="leaveMsgId" val="1055" />
 	</zone>
-	<zone id="50003" type="MotherTreeZone" shape="NPoly" minZ="-5176" maxZ="-4976"> <!-- [17_20] ssq_main_event_17_20_03 -->
+	<zone name="ssq_main_event_17_20_03" id="50003" type="MotherTreeZone" shape="NPoly" minZ="-5176" maxZ="-4976">
 		<stat name="MpRegenBonus" val="3" />
 		<stat name="enterMsgId" val="1054" />
 		<stat name="leaveMsgId" val="1055" />
 	</zone>
-	<zone id="50004" type="MotherTreeZone" shape="NPoly" minZ="-5172" maxZ="-4972"> <!-- [17_20] ssq_main_event_17_20_02 -->
+	<zone name="ssq_main_event_17_20_02" id="50004" type="MotherTreeZone" shape="NPoly" minZ="-5172" maxZ="-4972">
 		<stat name="MpRegenBonus" val="4" />
 		<stat name="enterMsgId" val="1054" />
 		<stat name="leaveMsgId" val="1055" />
 	</zone>
 	<!-- Oracle of Dawn (Mp Regen Zones) -->
-	<zone id="50005" type="MotherTreeZone" shape="NPoly" minZ="-4916" maxZ="-4716"> <!-- [17_21] ssq_main_event_17_21_01 -->
+	<zone name="ssq_main_event_17_21_01" id="50005" type="MotherTreeZone" shape="NPoly" minZ="-4916" maxZ="-4716">
 		<stat name="MpRegenBonus" val="2" />
 		<stat name="enterMsgId" val="1054" />
 		<stat name="leaveMsgId" val="1055" />
 	</zone>
-	<zone id="50006" type="MotherTreeZone" shape="NPoly" minZ="-4908" maxZ="-4708"> <!-- [17_21] ssq_main_event_17_21_02 -->
+	<zone name="ssq_main_event_17_21_02" id="50006" type="MotherTreeZone" shape="NPoly" minZ="-4908" maxZ="-4708">
 		<stat name="MpRegenBonus" val="2" />
 		<stat name="enterMsgId" val="1054" />
 		<stat name="leaveMsgId" val="1055" />
 	</zone>
-	<zone id="50007" type="MotherTreeZone" shape="NPoly" minZ="-4916" maxZ="-4716"> <!-- [17_21] ssq_main_event_17_21_05 -->
+	<zone name="ssq_main_event_17_21_05" id="50007" type="MotherTreeZone" shape="NPoly" minZ="-4916" maxZ="-4716">
 		<stat name="MpRegenBonus" val="3" />
 		<stat name="enterMsgId" val="1054" />
 		<stat name="leaveMsgId" val="1055" />
 	</zone>
-	<zone id="50008" type="MotherTreeZone" shape="NPoly" minZ="-4912" maxZ="-4712"> <!-- [17_21] ssq_main_event_17_21_03 -->
+	<zone name="ssq_main_event_17_21_03" id="50008" type="MotherTreeZone" shape="NPoly" minZ="-4912" maxZ="-4712">
 		<stat name="MpRegenBonus" val="3" />
 		<stat name="enterMsgId" val="1054" />
 		<stat name="leaveMsgId" val="1055" />
 	</zone>
-	<zone id="50009" type="MotherTreeZone" shape="NPoly" minZ="-4908" maxZ="-4708"> <!-- [17_21] ssq_main_event_17_21_04 -->
+	<zone name="ssq_main_event_17_21_04" id="50009" type="MotherTreeZone" shape="NPoly" minZ="-4908" maxZ="-4708">
 		<stat name="MpRegenBonus" val="4" />
 		<stat name="enterMsgId" val="1054" />
 		<stat name="leaveMsgId" val="1055" />
 	</zone>
 	<!-- Oracle of Dusk (No Store Zones) -->
-	<zone id="50016" type="NoStoreZone" shape="NPoly" minZ="-5208" maxZ="-5008" /> <!-- [17_20] ssq_peace_1720_01 -->
-	<zone id="50017" type="NoStoreZone" shape="NPoly" minZ="-5200" maxZ="-5000" /> <!-- [17_20] ssq_peace_1720_02 -->
-	<zone id="50018" type="NoStoreZone" shape="NPoly" minZ="-5200" maxZ="-5000" /> <!-- [17_20] ssq_peace_1720_03 -->
+	<zone name="ssq_peace_1720_01" id="50016" type="NoStoreZone" shape="NPoly" minZ="-5208" maxZ="-5008" />
+	<zone name="ssq_peace_1720_02" id="50017" type="NoStoreZone" shape="NPoly" minZ="-5200" maxZ="-5000" />
+	<zone name="ssq_peace_1720_03" id="50018" type="NoStoreZone" shape="NPoly" minZ="-5200" maxZ="-5000" />
 	<!-- Oracle of Dawn (No Store Zones) -->
-	<zone id="50019" type="NoStoreZone" shape="NPoly" minZ="-4952" maxZ="-4752" /> <!-- [17_21] ssq_peace_1721_01 -->
-	<zone id="50020" type="NoStoreZone" shape="NPoly" minZ="-4956" maxZ="-4756" /> <!-- [17_21] ssq_peace_1721_02 -->
-	<zone id="50021" type="NoStoreZone" shape="NPoly" minZ="-4944" maxZ="-4744" /> <!-- [17_21] ssq_peace_1721_03 -->
+	<zone name="ssq_peace_1721_01" id="50019" type="NoStoreZone" shape="NPoly" minZ="-4952" maxZ="-4752" />
+	<zone name="ssq_peace_1721_02" id="50020" type="NoStoreZone" shape="NPoly" minZ="-4956" maxZ="-4756" />
+	<zone name="ssq_peace_1721_03" id="50021" type="NoStoreZone" shape="NPoly" minZ="-4944" maxZ="-4744" />
 
-	<!-- Seed of Annihilation zone -->
-	<zone id="60006" type="EffectZone" shape="NPoly" minZ="-10700" maxZ="-10100">
+	<zone name="Seed of Annihilation 1" id="60006" type="EffectZone" shape="NPoly" minZ="-10700" maxZ="-10100">
 		<stat name="maxDynamicSkillCount" val="1" />
 		<stat name="showDangerIcon" val="false" />
 		<stat name="initialDelay" val="1000" />
 		<stat name="reuse" val="3000" />
 	</zone>
-	<zone id="60007" type="EffectZone" shape="NPoly" minZ="-15900" maxZ="-14950">
+	<zone name="Seed of Annihilation 2" id="60007" type="EffectZone" shape="NPoly" minZ="-15900" maxZ="-14950">
 		<stat name="maxDynamicSkillCount" val="1" />
 		<stat name="showDangerIcon" val="false" />
 		<stat name="initialDelay" val="1000" />
 		<stat name="reuse" val="3000" />
 	</zone>
-	<zone id="60008" type="EffectZone" shape="NPoly" minZ="-12850" maxZ="-10800">
+	<zone name="Seed of Annihilation 3" id="60008" type="EffectZone" shape="NPoly" minZ="-12850" maxZ="-10800">
 		<stat name="maxDynamicSkillCount" val="1" />
 		<stat name="showDangerIcon" val="false" />
 		<stat name="initialDelay" val="1000" />
 		<stat name="reuse" val="3000" />
 	</zone>
 
-	<!-- Den of Evil Zones (vertices, min Z & Max Z are estimated) -->
-	<zone id="70000" type="EffectZone" shape="Cylinder" minZ="-2300" maxZ="-2100" rad="750"> <!-- Den of Evil 1 -->
+	<!-- (vertices, min Z & Max Z are estimated) -->
+	<zone name="Den of Evil 1" id="70000" type="EffectZone" shape="Cylinder" minZ="-2300" maxZ="-2100" rad="750">
 		<stat name="reuse" val="9000" />
 		<stat name="targetClass" val="L2Character" />
 	</zone>
-	<zone id="70001" type="EffectZone" shape="Cylinder" minZ="-2400" maxZ="-2200" rad="850"> <!-- Den of Evil 2 -->
+	<zone name="Den of Evil 2" id="70001" type="EffectZone" shape="Cylinder" minZ="-2400" maxZ="-2200" rad="850">
 		<stat name="reuse" val="9000" />
 		<stat name="targetClass" val="L2Character" />
 	</zone>
-	<zone id="70002" type="EffectZone" shape="Cylinder" minZ="-1200" maxZ="-1000" rad="1200"> <!-- Den of Evil 3 -->
+	<zone name="Den of Evil 3" id="70002" type="EffectZone" shape="Cylinder" minZ="-1200" maxZ="-1000" rad="1200">
 		<stat name="reuse" val="9000" />
 		<stat name="targetClass" val="L2Character" />
 	</zone>
-	<zone id="70003" type="EffectZone" shape="Cylinder" minZ="-3100" maxZ="-2900" rad="1200"> <!-- Den of Evil 4 -->
+	<zone name="Den of Evil 4" id="70003" type="EffectZone" shape="Cylinder" minZ="-3100" maxZ="-2900" rad="1200">
 		<stat name="reuse" val="9000" />
 		<stat name="targetClass" val="L2Character" />
 	</zone>
-	<zone id="70004" type="EffectZone" shape="Cylinder" minZ="-2200" maxZ="-2000" rad="1200"> <!-- Den of Evil 5 -->
+	<zone name="Den of Evil 5" id="70004" type="EffectZone" shape="Cylinder" minZ="-2200" maxZ="-2000" rad="1200">
 		<stat name="reuse" val="9000" />
 		<stat name="targetClass" val="L2Character" />
 	</zone>
-	<zone id="70005" type="EffectZone" shape="Cylinder" minZ="-2600" maxZ="-2400" rad="1200"> <!-- Den of Evil 6 -->
+	<zone name="Den of Evil 6" id="70005" type="EffectZone" shape="Cylinder" minZ="-2600" maxZ="-2400" rad="1200">
 		<stat name="reuse" val="9000" />
 		<stat name="targetClass" val="L2Character" />
 	</zone>
-	<zone id="70006" type="EffectZone" shape="Cylinder" minZ="-3000" maxZ="-2800" rad="1200"> <!-- Den of Evil 7 -->
+	<zone name="Den of Evil 7" id="70006" type="EffectZone" shape="Cylinder" minZ="-3000" maxZ="-2800" rad="1200">
 		<stat name="reuse" val="9000" />
 		<stat name="targetClass" val="L2Character" />
 	</zone>
-	<zone id="70007" type="EffectZone" shape="Cylinder" minZ="-3100" maxZ="-2900" rad="1500"> <!-- Den of Evil 8 -->
+	<zone name="Den of Evil 8" id="70007" type="EffectZone" shape="Cylinder" minZ="-3100" maxZ="-2900" rad="1500">
 		<stat name="reuse" val="9000" />
 		<stat name="targetClass" val="L2Character" />
 	</zone>
-	<zone id="70008" type="EffectZone" shape="Cylinder" minZ="-3100" maxZ="-2850" rad="1200"> <!-- Den of Evil 9 -->
+	<zone name="Den of Evil 9" id="70008" type="EffectZone" shape="Cylinder" minZ="-3100" maxZ="-2850" rad="1200">
 		<stat name="reuse" val="9000" />
 		<stat name="targetClass" val="L2Character" />
 	</zone>
-	<zone id="70009" type="EffectZone" shape="Cylinder" minZ="-3200" maxZ="-3000" rad="1200"> <!-- Den of Evil 10 -->
+	<zone name="Den of Evil 10" id="70009" type="EffectZone" shape="Cylinder" minZ="-3200" maxZ="-3000" rad="1200">
 		<stat name="reuse" val="9000" />
 		<stat name="targetClass" val="L2Character" />
 	</zone>
-	<zone id="70010" type="EffectZone" shape="Cylinder" minZ="-3400" maxZ="-3200" rad="750"> <!-- Den of Evil 11 -->
+	<zone name="Den of Evil 11" id="70010" type="EffectZone" shape="Cylinder" minZ="-3400" maxZ="-3200" rad="750">
 		<stat name="reuse" val="9000" />
 		<stat name="targetClass" val="L2Character" />
 	</zone>
