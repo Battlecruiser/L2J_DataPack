@@ -1069,23 +1069,26 @@
 		<enchant4 name="pvpPower" val="#enchDuel" />
 	</skill>
 	<skill id="1439" levels="5" name="Curse of Divinity">
-		<table name="#mpConsume"> 62 64 65 67 69 </table>
-		<table name="#power"> 96 99 102 105 108 </table>
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 66 68 70 72 74 </table>
+		<table name="#mpConsume"> 49 51 52 53 55 </table>
+		<table name="#mpInitialConsume"> 13 13 13 14 14 </table>
+		<table name="#power"> 96 99 102 105 108 </table>
+		<set name="castRange" val="600" />
+		<set name="coolTime" val="200" />
+		<set name="dependOnTargetBuff" val="0.2" /> <!-- NOTE: Divine Inspiration/Dance/Song/Trigger slots are ignored, so using (20 Default Buff Slots / 100) -->
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="1200" />
+		<set name="isMagic" val="true" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="hitTime" val="1200" />
-		<set name="reuseDelay" val="4000" />
-		<set name="coolTime" val="200" />
 		<set name="nextActionAttack" val="true" />
-		<set name="skillType" val="MDAM" />
-		<set name="dependOnTargetBuff" val="0.3" />
-		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="castRange" val="600" />
-		<set name="effectRange" val="1100" />
+		<set name="reuseDelay" val="4000" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="1440" levels="5" name="Steal Divinity">
 		<table name="#mpConsume"> 50 55 60 64 67 </table>
