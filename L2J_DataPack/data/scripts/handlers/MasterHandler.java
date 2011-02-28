@@ -72,6 +72,7 @@ import handlers.admincommandhandlers.AdminLogin;
 import handlers.admincommandhandlers.AdminMammon;
 import handlers.admincommandhandlers.AdminManor;
 import handlers.admincommandhandlers.AdminMenu;
+import handlers.admincommandhandlers.AdminMessages;
 import handlers.admincommandhandlers.AdminMobGroup;
 import handlers.admincommandhandlers.AdminMonsterRace;
 import handlers.admincommandhandlers.AdminPForge;
@@ -340,6 +341,7 @@ public class MasterHandler
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminMammon());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminManor());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminMenu());
+		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminMessages());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminMobGroup());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminMonsterRace());
 		AdminCommandHandler.getInstance().registerAdminCommandHandler(new AdminPathNode());

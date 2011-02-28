@@ -54,7 +54,7 @@ import com.l2jserver.util.StringUtil;
 
 /**
  * @author terry
- * 
+ * con.close() change by Zoey76 24/02/2011
  */
 public class AdminEditNpc implements IAdminCommandHandler
 {
@@ -653,13 +653,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		}
 		finally
 		{
-			try
-			{
-				con.close();
-			}
-			catch (Exception e)
-			{
-			}
+			L2DatabaseFactory.close(con);
 		}
 		return true;
 	}
@@ -697,13 +691,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		}
 		finally
 		{
-			try
-			{
-				con.close();
-			}
-			catch (Exception e)
-			{
-			}
+			L2DatabaseFactory.close(con);
 		}
 	}
 	
@@ -738,13 +726,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		}
 		finally
 		{
-			try
-			{
-				con.close();
-			}
-			catch (Exception e)
-			{
-			}
+			L2DatabaseFactory.close(con);
 		}
 	}
 	
@@ -773,13 +755,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		}
 		finally
 		{
-			try
-			{
-				con.close();
-			}
-			catch (Exception e)
-			{
-			}
+			L2DatabaseFactory.close(con);
 		}
 		return order;
 	}
@@ -1228,13 +1204,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		}
 		finally
 		{
-			try
-			{
-				con.close();
-			}
-			catch (Exception e)
-			{
-			}
+			L2DatabaseFactory.close(con);
 		}
 	}
 	
@@ -1272,13 +1242,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		}
 		finally
 		{
-			try
-			{
-				con.close();
-			}
-			catch (Exception e)
-			{
-			}
+			L2DatabaseFactory.close(con);
 		}
 	}
 	
@@ -1348,13 +1312,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		}
 		finally
 		{
-			try
-			{
-				con.close();
-			}
-			catch (Exception e)
-			{
-			}
+			L2DatabaseFactory.close(con);
 		}
 	}
 	
@@ -1422,13 +1380,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		}
 		finally
 		{
-			try
-			{
-				con.close();
-			}
-			catch (Exception e)
-			{
-			}
+			L2DatabaseFactory.close(con);
 		}
 	}
 	

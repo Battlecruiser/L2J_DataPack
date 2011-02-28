@@ -52,6 +52,7 @@ import com.l2jserver.util.StringUtil;
  * - teleport_character
  *
  * @version $Revision: 1.3.2.6.2.4 $ $Date: 2005/04/11 10:06:06 $
+ * con.close() change and small typo fix by Zoey76 24/02/2011
  */
 public class AdminTeleport implements IAdminCommandHandler
 {
@@ -251,11 +252,11 @@ public class AdminTeleport implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void teleportTo(L2PcInstance activeChar, String Cords)
+	private void teleportTo(L2PcInstance activeChar, String Coords)
 	{
 		try
 		{
-			StringTokenizer st = new StringTokenizer(Cords);
+			StringTokenizer st = new StringTokenizer(Coords);
 			String x1 = st.nextToken();
 			int x = Integer.parseInt(x1);
 			String y1 = st.nextToken();
@@ -266,7 +267,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			activeChar.teleToLocation(x, y, z, false);
 			
-			activeChar.sendMessage("You have been teleported to " + Cords);
+			activeChar.sendMessage("You have been teleported to " + Coords);
 		}
 		catch (NoSuchElementException nsee)
 		{
@@ -434,13 +435,16 @@ public class AdminTeleport implements IAdminCommandHandler
 	private void changeCharacterPosition(L2PcInstance activeChar, String name)
 	{
 		Connection con = null;
+		final int x = activeChar.getX();
+		final int y = activeChar.getY();
+		final int z = activeChar.getZ();
 		try
 		{
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("UPDATE characters SET x=?, y=?, z=? WHERE char_name=?");
-			statement.setInt(1, activeChar.getX());
-			statement.setInt(2, activeChar.getY());
-			statement.setInt(3, activeChar.getZ());
+			statement.setInt(1, x);
+			statement.setInt(2, y);
+			statement.setInt(3, z);
 			statement.setString(4, name);
 			statement.execute();
 			int count = statement.getUpdateCount();
@@ -448,7 +452,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			if (count == 0)
 				activeChar.sendMessage("Character not found or position unaltered.");
 			else
-				activeChar.sendMessage("Player's ["+name+"] position is now set to (" + activeChar.getX() + "," + activeChar.getY() + "," + activeChar.getZ() + ")");
+				activeChar.sendMessage("Player's [" + name + "] position is now set to (" + x + "," + y + "," + z + ").");
 		}
 		catch (SQLException se)
 		{
@@ -456,15 +460,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 		finally
 		{
-			try
-			{
-				if (con != null)
-					con.close();
-			}
-			catch (SQLException e)
-			{
-				e.printStackTrace();
-			}
+			L2DatabaseFactory.close(con);
 		}
 	}
 	

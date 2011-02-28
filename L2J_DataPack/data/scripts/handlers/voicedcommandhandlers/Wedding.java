@@ -224,13 +224,7 @@ public class Wedding implements IVoicedCommandHandler
 		}
 		finally
 		{
-			try
-			{
-				con.close();
-			}
-			catch (Exception e)
-			{
-			}
+			L2DatabaseFactory.close(con);
 		}
 		
 		if (!FoundOnFriendList)
