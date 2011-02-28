@@ -32,6 +32,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  * - heal = restores HP/MP/CP on target, name or radius
  *
  * @version $Revision: 1.2.4.5 $ $Date: 2005/04/11 10:06:06 $
+ * Small typo fix by Zoey76 24/02/2011
  */
 public class AdminHeal implements IAdminCommandHandler
 {
@@ -45,13 +46,13 @@ public class AdminHeal implements IAdminCommandHandler
 	{
 		
 		if (command.equals("admin_heal"))
-			handleRes(activeChar);
+			handleHeal(activeChar);
 		else if (command.startsWith("admin_heal"))
 		{
 			try
 			{
 				String healTarget = command.substring(11);
-				handleRes(activeChar, healTarget);
+				handleHeal(activeChar, healTarget);
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
@@ -68,12 +69,12 @@ public class AdminHeal implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void handleRes(L2PcInstance activeChar)
+	private void handleHeal(L2PcInstance activeChar)
 	{
-		handleRes(activeChar, null);
+		handleHeal(activeChar, null);
 	}
 	
-	private void handleRes(L2PcInstance activeChar, String player)
+	private void handleHeal(L2PcInstance activeChar, String player)
 	{
 		
 		L2Object obj = activeChar.getTarget();

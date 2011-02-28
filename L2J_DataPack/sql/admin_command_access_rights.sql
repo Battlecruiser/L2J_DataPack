@@ -366,7 +366,6 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 -- ADMIN MAMMON
 ('admin_mammon_find',1,'false'),
 ('admin_mammon_respawn',1,'false'),
-('admin_msg',1,'false'),
 
 -- ADMIN MANOR
 ('admin_manor',1,'false'),
@@ -388,6 +387,9 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_kill_menu',1,'false'),
 ('admin_ban_menu',1,'false'),
 ('admin_unban_menu',1,'false'),
+
+-- ADMIN MESSAGES
+('admin_msg',1,'false'),
 
 -- ADMIN MOB GROUP
 ('admin_mobmenu',1,'false'),

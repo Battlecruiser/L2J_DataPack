@@ -43,6 +43,7 @@ import com.l2jserver.gameserver.util.GMAudit;
  * - unjail charname = Unjails player, teleport him to Floran.
  *
  * @version $Revision: 1.1.6.3 $ $Date: 2005/04/11 10:06:06 $
+ * con.close() change by Zoey76 24/02/2011
  */
 public class AdminBan implements IAdminCommandHandler {
 	private static final String[] ADMIN_COMMANDS =
@@ -335,15 +336,7 @@ public class AdminBan implements IAdminCommandHandler {
 		}
 		finally
 		{
-			try
-			{
-				con.close();
-			}
-			catch (Exception e)
-			{
-				if (Config.DEBUG)
-					e.printStackTrace();
-			}
+			L2DatabaseFactory.close(con);
 		}
 	}
 	
@@ -379,15 +372,7 @@ public class AdminBan implements IAdminCommandHandler {
 		}
 		finally
 		{
-			try
-			{
-				con.close();
-			}
-			catch (Exception e)
-			{
-				if (Config.DEBUG)
-					e.printStackTrace();
-			}
+			L2DatabaseFactory.close(con);
 		}
 	}
 	
@@ -420,15 +405,7 @@ public class AdminBan implements IAdminCommandHandler {
 		}
 		finally
 		{
-			try
-			{
-				con.close();
-			}
-			catch (Exception e)
-			{
-				if (Config.DEBUG)
-					e.printStackTrace();
-			}
+			L2DatabaseFactory.close(con);
 		}
 	}
 	

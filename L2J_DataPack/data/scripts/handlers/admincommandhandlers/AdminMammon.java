@@ -20,13 +20,12 @@ import com.l2jserver.gameserver.model.AutoSpawnHandler;
 import com.l2jserver.gameserver.model.AutoSpawnHandler.AutoSpawnInstance;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-
 
 /**
  * Admin Command Handler for Mammon NPCs
  *
  * @author Tempy
+ * Typo fix by Zoey76 24/02/2011
  */
 public class AdminMammon implements IAdminCommandHandler
 {
@@ -35,7 +34,6 @@ public class AdminMammon implements IAdminCommandHandler
 	{
 		"admin_mammon_find",
 		"admin_mammon_respawn",
-		"admin_msg"
 	};
 	
 	private boolean _isSealValidation = SevenSigns.getInstance().isSealValidationPeriod();
@@ -56,13 +54,15 @@ public class AdminMammon implements IAdminCommandHandler
 			catch (Exception NumberFormatException)
 			{
 				activeChar.sendMessage("Usage: //mammon_find [teleportIndex] (where 1 = Blacksmith, 2 = Merchant)");
+				return false;
 			}
 			
 			if (!_isSealValidation)
 			{
 				activeChar.sendMessage("The competition period is currently in effect.");
-				return true;
+				return false;
 			}
+			
 			if (blackSpawnInst != null)
 			{
 				L2Npc[] blackInst = blackSpawnInst.getNPCInstanceList();
@@ -76,6 +76,7 @@ public class AdminMammon implements IAdminCommandHandler
 			}
 			else
 				activeChar.sendMessage("Blacksmith of Mammon isn't registered for spawn.");
+			
 			if (merchSpawnInst != null)
 			{
 				L2Npc[] merchInst = merchSpawnInst.getNPCInstanceList();
@@ -90,7 +91,6 @@ public class AdminMammon implements IAdminCommandHandler
 			else
 				activeChar.sendMessage("Merchant of Mammon isn't registered for spawn.");
 		}
-		
 		else if (command.startsWith("admin_mammon_respawn"))
 		{
 			if (!_isSealValidation)
@@ -113,23 +113,6 @@ public class AdminMammon implements IAdminCommandHandler
 			else
 				activeChar.sendMessage("Blacksmith of Mammon isn't registered for spawn.");
 		}
-		// Used for testing SystemMessage IDs	- Use //msg <ID>
-		else if (command.startsWith("admin_msg"))
-		{
-			int msgId = -1;
-			
-			try
-			{
-				msgId = Integer.parseInt(command.substring(10).trim());
-			}
-			catch (Exception e)
-			{
-				activeChar.sendMessage("Command format: //msg <SYSTEM_MSG_ID>");
-				return true;
-			}
-			activeChar.sendPacket(SystemMessage.getSystemMessage(msgId));
-		}
-		
 		return true;
 	}
 	
