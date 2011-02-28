@@ -21,6 +21,7 @@ import java.util.logging.Logger;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Skill;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -46,6 +47,7 @@ import com.l2jserver.util.StringUtil;
  * - add_clan_skills
  *
  * @version $Revision: 1.2.4.7 $ $Date: 2005/04/11 10:06:02 $
+ * Small fixes by Zoey76 24/02/2011
  */
 public class AdminSkill implements IAdminCommandHandler
 {
@@ -372,6 +374,7 @@ public class AdminSkill implements IAdminCommandHandler
 			activeChar.sendMessage("You now have all your skills back.");
 			adminSkills = null;
 			activeChar.sendSkillList();
+			player.sendSkillList();
 		}
 		showMainPage(activeChar);
 	}
@@ -411,9 +414,11 @@ public class AdminSkill implements IAdminCommandHandler
 			if (skill != null)
 			{
 				String name = skill.getName();
+				// Player's info.
 				player.sendMessage("Admin gave you the skill " + name + ".");
 				player.addSkill(skill, true);
-				//Admin information
+				player.sendSkillList();
+				// Admin info.
 				activeChar.sendMessage("You gave the skill " + name + " to " + player.getName() + ".");
 				if (Config.DEBUG)
 					_log.fine("[GM]" + activeChar.getName() + " gave skill " + name + " to " + player.getName() + ".");
@@ -486,12 +491,13 @@ public class AdminSkill implements IAdminCommandHandler
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_SKILL_S1_ADDED);
 				sm.addSkillName(skill);
 				player.sendPacket(sm);
-				player.getClan().broadcastToOnlineMembers(sm);
-				player.getClan().addNewSkill(skill);
-				activeChar.sendMessage("You gave the Clan Skill: " + skillname + " to the clan " + player.getClan().getName() + ".");
+				final L2Clan clan = player.getClan();
+				clan.broadcastToOnlineMembers(sm);
+				clan.addNewSkill(skill);
+				activeChar.sendMessage("You gave the Clan Skill: " + skillname + " to the clan " + clan.getName() + ".");
 				
-				activeChar.getClan().broadcastToOnlineMembers(new PledgeSkillList(activeChar.getClan()));
-				for (L2PcInstance member : activeChar.getClan().getOnlineMembers(0))
+				clan.broadcastToOnlineMembers(new PledgeSkillList(clan));
+				for (L2PcInstance member : clan.getOnlineMembers(0))
 				{
 					member.sendSkillList();
 				}

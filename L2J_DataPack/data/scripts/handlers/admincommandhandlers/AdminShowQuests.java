@@ -37,10 +37,10 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.QuestList;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
-/*
- *@author Korvin
+/**
+ * @author Korvin
+ * con.close() change by Zoey76 24/02/2011
  */
-
 public class AdminShowQuests implements IAdminCommandHandler
 {
 	private static final String[]	ADMIN_COMMANDS	=
@@ -167,7 +167,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 				rs = req.getResultSet();
 				while(rs.next()) replyMSG.append("<tr><td><a action=\"bypass -h admin_charquestmenu " + target.getName() + " " + rs.getString(1) + "\">"+rs.getString(1)+"</a></td></tr>");
 				replyMSG.append("</table></body></html>");
-				con.close();
+				L2DatabaseFactory.close(con);
 			}
 			else if (val[0].equals("name"))
 			{
@@ -190,7 +190,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 				replyMSG.append("<td><button value=\"Quest Complete\" action=\"bypass -h admin_setcharquest "+target.getName()+" "+val[1]+" state COMLETED 0\" width=120 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
 				replyMSG.append("</table><br><br><font color=\"ff0000\">Delete Quest from DB:</font><br><button value=\"Quest Delete\" action=\"bypass -h admin_setcharquest "+target.getName()+" "+val[1]+" state DELETE\" width=120 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
 				replyMSG.append("</center></body></html>");
-				con.close();
+				L2DatabaseFactory.close(con);
 			}
 			else if (val[0].equals("var"))
 			{
@@ -201,7 +201,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 				rs = req.getResultSet();
 				while(rs.next()) replyMSG.append("<tr><td><a action=\"bypass -h admin_charquestmenu " + target.getName() + " " + rs.getString(1) + "\">" + rs.getString(1)+"</a></td></tr>");
 				replyMSG.append("</table></body></html>");
-				con.close();
+				L2DatabaseFactory.close(con);
 			}
 			else if (val[0].equals("custom"))
 			{
@@ -252,7 +252,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 						replyMSG.append("<td><button value=\"Quest Complete\" action=\"bypass -h admin_setcharquest "+target.getName()+" "+qname+" state COMLETED 0\" width=100 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
 						replyMSG.append("</table><br><br><font color=\"ff0000\">Delete Quest from DB:</font><br><button value=\"Quest Delete\" action=\"bypass -h admin_setcharquest "+target.getName()+" "+qname+" state DELETE\" width=100 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
 						replyMSG.append("</center></body></html>");
-						con.close();
+						L2DatabaseFactory.close(con);
 					}
 					else
 					{

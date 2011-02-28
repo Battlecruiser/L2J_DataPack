@@ -33,6 +33,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  *  Can be used for character ban (as opposed to regular //ban that affects accounts)
  *  or to grant mod/GM privileges ingame
  * @version $Revision: 1.1.2.2.2.3 $ $Date: 2005/04/11 10:06:00 $
+ * con.close() change by Zoey76 24/02/2011
  */
 public class AdminChangeAccessLevel implements IAdminCommandHandler
 {
@@ -110,13 +111,7 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 				}
 				finally
 				{
-					try
-					{
-						con.close();
-					}
-					catch (Exception e)
-					{
-					}
+					L2DatabaseFactory.close(con);
 				}
 			}
 		}
