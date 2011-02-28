@@ -99,7 +99,7 @@
 		<for>
 			<effect name="Buff" time="10" val="0" stackOrder="1" stackType="apella">
 				<add order="0x40" stat="rEvas" val="2" /> <!-- evasion is increased by 2 -->
-				<sub order="0x40" stat="cAtkAdd" val="86" /> <!-- critical damage is decreased by 86 -->
+				<sub order="0x40" stat="critAddvuln" val="86" /> <!-- critical damage is decreased by 86 -->
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>
 		</for>
