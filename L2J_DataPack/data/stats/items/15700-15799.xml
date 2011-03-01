@@ -13,7 +13,11 @@
 		<set name="price" val="21046000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="141" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -50,7 +54,11 @@
 		<set name="price" val="15784000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="70" />
 			<add order="0x40" stat="maxMp" val="392" />
@@ -69,7 +77,11 @@
 		<set name="price" val="8418000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="64" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -104,7 +116,11 @@
 		<set name="price" val="8418000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="64" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -122,7 +138,11 @@
 		<set name="price" val="8418000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="64" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -157,7 +177,11 @@
 		<set name="price" val="8418000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="64" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -177,7 +201,11 @@
 		<set name="price" val="8839000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
 			<add order="0x10" stat="pDef" val="16" />
@@ -202,7 +230,11 @@
 		<set name="price" val="8839000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
 			<set order="0x08" stat="rShld" val="20" />
@@ -445,7 +477,11 @@
 		<set name="price" val="25107000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="110" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -480,7 +516,11 @@
 		<set name="price" val="25107000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="110" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -499,7 +539,11 @@
 		<set name="price" val="66953000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="257" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -536,7 +580,11 @@
 		<set name="price" val="50215000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="129" />
 			<add order="0x40" stat="maxMp" val="661" />
@@ -556,7 +604,11 @@
 		<set name="price" val="41846000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="161" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -593,7 +645,11 @@
 		<set name="price" val="31384000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="80" />
 			<add order="0x40" stat="maxMp" val="439" />
@@ -612,7 +668,11 @@
 		<set name="price" val="16738000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="74" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -647,7 +707,11 @@
 		<set name="price" val="16738000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="74" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -665,7 +729,11 @@
 		<set name="price" val="16738000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="74" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -700,7 +768,11 @@
 		<set name="price" val="16738000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="74" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -719,7 +791,11 @@
 		<set name="price" val="17575000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
 			<set order="0x08" stat="rShld" val="20" />
@@ -741,7 +817,11 @@
 		<set name="price" val="17575000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
 			<add order="0x10" stat="pDef" val="21" />
@@ -765,7 +845,11 @@
 		<set name="price" val="20940000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="107" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -800,7 +884,11 @@
 		<set name="price" val="20940000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="107" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -819,7 +907,11 @@
 		<set name="price" val="55840000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="249" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -856,7 +948,11 @@
 		<set name="price" val="41880000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="124" />
 			<add order="0x40" stat="maxMp" val="649" />
@@ -876,7 +972,11 @@
 		<set name="price" val="34900000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="156" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -913,7 +1013,11 @@
 		<set name="price" val="26175000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="78" />
 			<add order="0x40" stat="maxMp" val="427" />
@@ -932,7 +1036,11 @@
 		<set name="price" val="13960000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="71" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -967,7 +1075,11 @@
 		<set name="price" val="13960000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="71" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -985,7 +1097,11 @@
 		<set name="price" val="13960000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="71" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -1020,7 +1136,11 @@
 		<set name="price" val="13960000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="71" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -1039,7 +1159,11 @@
 		<set name="price" val="14658000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
 			<set order="0x08" stat="rShld" val="20" />
@@ -1061,7 +1185,11 @@
 		<set name="price" val="14658000" />
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
 			<add order="0x10" stat="pDef" val="19" />
