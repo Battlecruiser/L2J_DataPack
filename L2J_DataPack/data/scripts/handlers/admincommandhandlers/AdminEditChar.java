@@ -77,9 +77,25 @@ import com.l2jserver.util.StringUtil;
  * - setclass
  * - fullfood
  * - save_modifications
- *
+ * - admin_rec
+ * - admin_settitle
+ * - admin_changename
+ * - admin_setsex
+ * - admin_setcolor
+ * - admin_settcolor
+ * - admin_setclass
+ * - admin_setpk
+ * - admin_setpvp
+ * - admin_fullfood
+ * - admin_remove_clan_penalty
+ * - admin_summon_info
+ * - admin_unsummon
+ * - admin_summon_setlvl
+ * - admin_show_pet_inv
+ * - admin_partyinfo
+ * 
  * @version $Revision: 1.3.2.1.2.10 $ $Date: 2005/04/11 10:06:06 $
- * Typo fix, rework for admin_tracert, gatherCharacterInfo and editCharacter by Zoey76 24/02/2011
+ * Typo fix, rework for admin_tracert, gatherCharacterInfo and editCharacter by Zoey76 28/02/2011
  */
 public class AdminEditChar implements IAdminCommandHandler
 {
@@ -134,6 +150,10 @@ public class AdminEditChar implements IAdminCommandHandler
 			else
 				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_TARGET));
 		}
+		else if (command.startsWith("admin_character_list"))
+		{
+			listCharacters(activeChar, 0);
+		}
 		else if (command.startsWith("admin_show_characters"))
 		{
 			try
@@ -147,10 +167,6 @@ public class AdminEditChar implements IAdminCommandHandler
 				//Case of empty page number
 				activeChar.sendMessage("Usage: //show_characters <page_number>");
 			}
-		}
-		else if (command.startsWith("admin_character_list"))
-		{
-			listCharacters(activeChar, 0);
 		}
 		else if (command.startsWith("admin_find_character"))
 		{
@@ -1060,7 +1076,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			if (name.toLowerCase().contains(CharacterToFind.toLowerCase())) {
 				CharactersFound = CharactersFound + 1;
 				StringUtil.append(replyMSG,
-						"<tr><td width=80><a action=\"bypass -h admin_character_list ",
+						"<tr><td width=80><a action=\"bypass -h admin_character_info ",
 						name,
 						"\">",
 						name,
@@ -1150,7 +1166,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			name = player.getName();
 			CharactersFound = CharactersFound + 1;
 			StringUtil.append(replyMSG,
-					"<tr><td width=80><a action=\"bypass -h admin_character_list ",
+					"<tr><td width=80><a action=\"bypass -h admin_character_info ",
 					name,
 					"\">",
 					name,
