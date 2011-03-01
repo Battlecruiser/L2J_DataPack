@@ -18,9 +18,15 @@
 		<set name="lvlDepend" val="1" />
 	</skill>
 	<skill id="5902" levels="1" name="NPC Trigger Target Cancel">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Ekimus Skills -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="RemoveTarget" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5903" levels="1" name="Burst of Misplace">
 		<set name="mpConsume" val="74" />
@@ -160,33 +166,97 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5919" levels="1" name="Obey">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Ekimus Skills -->
+		<set name="castRange" val="300" />
+		<set name="effectRange" val="600" />
 		<set name="hitTime" val="12610" />
+		<set name="ignoreResists" val="true" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="true" />
+		<set name="mpConsume" val="60" />
+		<set name="mpInitialConsume" val="15" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<!-- effect name="BlockResurrection" time="300" val="0" stackOrder="1" stackType="block_resurrection" / TODO: Needs Core-Side Support -->
+		</for>
 	</skill>
 	<skill id="5920" levels="1" name="Tentacle of Agony">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="hitTime" val="91740" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Ekimus Skills -->
 		<set name="coolTime" val="2000" />
+		<set name="element" val="3" /> <!-- Earth -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="91740" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="239" />
+		<set name="mpInitialConsume" val="60" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="150" />
+		<set name="skillRadius" val="300" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="5921" levels="1" name="Inhale">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="lvlDepend" val="1" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Ekimus Skills -->
+		<set name="absorbPart" val="0.8" /> <!-- absorbs 80% of damage -->
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="26950" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="179" />
+		<set name="mpInitialConsume" val="45" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="121" />
 		<set name="saveVs" val="MEN" />
+		<set name="skillRadius" val="600" />
+		<set name="skillType" val="DRAIN" />
+		<set name="target" val="TARGET_FRONT_AREA" />
+		<for>
+			<effect name="Debuff" time="10" val="0" abnormal="bleed" effectPower="80" effectType="DEBUFF" stackOrder="1" stackType="multi_debuff_f">
+				<mul order="0x30" stat="pAtk" val="0.9" />
+				<mul order="0x30" stat="pAtkSpd" val="0.95" />
+				<mul order="0x30" stat="mAtk" val="0.95" />
+				<sub order="0x40" stat="accCombat" val="3" />
+				<basemul order="0x30" stat="rCrit" val="-0.1" />
+				<mul order="0x30" stat="cAtk" val="0.9" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5922" levels="1" name="Exhale">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Ekimus Skills -->
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="22700" />
+		<set name="isMagic" val="true" />
+		<set name="isMagic" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="179" />
+		<set name="mpInitialConsume" val="45" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="121" />
 		<set name="saveVs" val="MEN" />
+		<set name="skillRadius" val="300" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_AREA" />
+		<for>
+			<effect name="Debuff" time="10" val="0" abnormal="bleed" effectPower="80" effectType="DEBUFF" stackOrder="1" stackType="multi_debuff_g">
+				<sub order="0x40" stat="rEvas" val="3" />
+				<mul order="0x30" stat="pDef" val="0.5" />
+				<mul order="0x30" stat="mDef" val="0.5" />
+				<mul order="0x30" stat="runSpd" val="0.5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5923" levels="1" name="Soul Retain">
 		<set name="target" val="TARGET_NONE" />
@@ -237,29 +307,50 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5931" levels="1" name="Ultimate Shield">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Ekimus Skills -->
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="1" />
+		<set name="operateType" val="OP_TOGGLE" />
+		<set name="skillType" val="CONT" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Invincible" time="-1" val="0" />
+		</for>
 	</skill>
 	<skill id="5932" levels="1" name="Dark Blade">
-		<set name="power" val="3000" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Ekimus Skills -->
 		<set name="castRange" val="900" />
-		<set name="effectRange" val="1400" />
-		<set name="reuseDelay" val="1000" />
+		<set name="effectRange" val="1500" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="180" />
 		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="9279" />
+		<set name="reuseDelay" val="1000" />
+		<set name="skillRadius" val="300" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
 	<skill id="5933" levels="1" name="Dark Blade">
-		<set name="power" val="3000" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Ekimus Skills -->
 		<set name="castRange" val="900" />
-		<set name="effectRange" val="1400" />
-		<set name="reuseDelay" val="1000" />
+		<set name="effectRange" val="1500" />
+		<set name="element" val="3" /> <!-- Earth -->
+		<set name="elementPower" val="180" />
 		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="9279" />
+		<set name="reuseDelay" val="1000" />
+		<set name="skillRadius" val="300" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
 	<skill id="5934" levels="1" name="Meet the soul of darkness and fight against it.">
 		<set name="target" val="TARGET_NONE" />
@@ -267,24 +358,38 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5935" levels="1" name="Dark Ring">
-		<set name="power" val="3000" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Ekimus Skills -->
 		<set name="castRange" val="900" />
-		<set name="effectRange" val="1400" />
-		<set name="reuseDelay" val="1000" />
+		<set name="effectRange" val="1500" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="180" />
 		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="9279" />
+		<set name="reuseDelay" val="1000" />
+		<set name="skillRadius" val="300" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="5936" levels="1" name="Earth Ring">
-		<set name="power" val="3000" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Ekimus Skills -->
 		<set name="castRange" val="900" />
-		<set name="effectRange" val="1400" />
-		<set name="reuseDelay" val="1000" />
+		<set name="effectRange" val="1500" />
+		<set name="element" val="3" /> <!-- Earth -->
+		<set name="elementPower" val="180" />
 		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="9279" />
+		<set name="reuseDelay" val="1000" />
+		<set name="skillRadius" val="300" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="5937" levels="1" name="Self Stun">
 		<set name="target" val="TARGET_NONE" />
@@ -740,12 +845,24 @@
 		<set name="lvlDepend" val="2" />
 	</skill>
 	<skill id="5993" levels="1" name="Command of Anger">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<!-- Ekimus Skills -->
 		<set name="hitTime" val="2000" />
-		<set name="saveVs" val="MEN" />
+		<set name="isMagic" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="60" />
+		<set name="mpInitialConsume" val="15" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="171" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillRadius" val="300" />
+		<set name="skillType" val="MDAM" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="ChanceSkillTrigger" time="10" val="0" abnormal="poison" effectPower="90" effectType="DEBUFF" activationChance="90" chanceType="ON_ATTACKED_HIT" triggeredId="5902" triggeredLevel="1" stackOrder="8" stackType="oblivion" />
+			<effect name="SilenceMagicPhysical" time="10" noicon="1" val="0" effectPower="90" effectType="MUTE" />
+		</for>
 	</skill>
 	<skill id="5994" levels="1" name="Effect of Doubt">
 		<set name="target" val="TARGET_NONE" />
