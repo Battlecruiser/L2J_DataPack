@@ -346,7 +346,11 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="leather" />
 		<set name="weight" val="1430" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
 			<set order="0x08" stat="rShld" val="20" />

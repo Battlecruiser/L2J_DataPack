@@ -9,7 +9,11 @@
 		<set name="material" val="cloth" />
 		<set name="weight" val="2120" />
 		<set name="price" val="1870" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="21" />
 			<add order="0x40" stat="maxMp" val="38" />
@@ -24,7 +28,11 @@
 		<set name="material" val="cloth" />
 		<set name="weight" val="2090" />
 		<set name="price" val="15600" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="30" />
 			<add order="0x40" stat="maxMp" val="67" />
@@ -39,7 +47,11 @@
 		<set name="material" val="cloth" />
 		<set name="weight" val="2080" />
 		<set name="price" val="28400" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="34" />
 			<add order="0x40" stat="maxMp" val="86" />
@@ -54,7 +66,11 @@
 		<set name="material" val="cloth" />
 		<set name="weight" val="1060" />
 		<set name="price" val="1170" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="13" />
 			<add order="0x40" stat="maxMp" val="23" />
@@ -69,7 +85,11 @@
 		<set name="material" val="cloth" />
 		<set name="weight" val="1040" />
 		<set name="price" val="9770" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="19" />
 			<add order="0x40" stat="maxMp" val="42" />
@@ -84,7 +104,11 @@
 		<set name="material" val="cloth" />
 		<set name="weight" val="1030" />
 		<set name="price" val="17700" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="21" />
 			<add order="0x40" stat="maxMp" val="54" />
