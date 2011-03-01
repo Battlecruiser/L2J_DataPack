@@ -710,7 +710,11 @@
 		<set name="material" val="bone" />
 		<set name="weight" val="530" />
 		<set name="price" val="12627000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="96" />
 		</for>
@@ -733,7 +737,11 @@
 		<set name="material" val="bone" />
 		<set name="weight" val="530" />
 		<set name="price" val="12627000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="96" />
 		</for>
@@ -746,7 +754,11 @@
 		<set name="material" val="bronze" />
 		<set name="weight" val="7520" />
 		<set name="price" val="33673000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="225" />
 		</for>
@@ -771,7 +783,11 @@
 		<set name="material" val="bronze" />
 		<set name="weight" val="1750" />
 		<set name="price" val="25255000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="112" />
 			<add order="0x40" stat="maxMp" val="614" />
@@ -785,7 +801,11 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="3170" />
 		<set name="price" val="21046000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="141" />
 		</for>
@@ -810,7 +830,11 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="850" />
 		<set name="price" val="15784000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="70" />
 			<add order="0x40" stat="maxMp" val="392" />
@@ -823,7 +847,11 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="510" />
 		<set name="price" val="8418000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="64" />
 		</for>
@@ -846,7 +874,11 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="510" />
 		<set name="price" val="8418000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="64" />
 		</for>
@@ -858,7 +890,11 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="1070" />
 		<set name="price" val="8418000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="64" />
 		</for>
@@ -881,7 +917,11 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="1070" />
 		<set name="price" val="8418000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="64" />
 		</for>
@@ -894,7 +934,11 @@
 		<set name="material" val="crystal" />
 		<set name="weight" val="1190" />
 		<set name="price" val="8839000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
 			<set order="0x08" stat="rShld" val="20" />
@@ -909,7 +953,11 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="920" />
 		<set name="price" val="8839000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
 		</for>
@@ -921,7 +969,11 @@
 		<set name="material" val="bone" />
 		<set name="weight" val="530" />
 		<set name="price" val="17500000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
 		</for>
@@ -944,7 +996,11 @@
 		<set name="material" val="bone" />
 		<set name="weight" val="530" />
 		<set name="price" val="17500000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
 		</for>
@@ -957,7 +1013,11 @@
 		<set name="material" val="bronze" />
 		<set name="weight" val="7520" />
 		<set name="price" val="46668000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="250" />
 		</for>
@@ -982,7 +1042,11 @@
 		<set name="material" val="bronze" />
 		<set name="weight" val="1750" />
 		<set name="price" val="35000000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="125" />
 			<add order="0x40" stat="maxMp" val="637" />
@@ -996,7 +1060,11 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="3170" />
 		<set name="price" val="29168000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="156" />
 		</for>
@@ -1021,7 +1089,11 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="850" />
 		<set name="price" val="21876000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="78" />
 			<add order="0x40" stat="maxMp" val="415" />
@@ -1034,7 +1106,11 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="510" />
 		<set name="price" val="11667000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="68" />
 		</for>
@@ -1057,7 +1133,11 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="510" />
 		<set name="price" val="11667000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="68" />
 		</for>
@@ -1069,7 +1149,11 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="1070" />
 		<set name="price" val="11667000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="68" />
 		</for>
@@ -1092,7 +1176,11 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="1070" />
 		<set name="price" val="11667000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="68" />
 		</for>
@@ -1105,7 +1193,11 @@
 		<set name="material" val="damascus" />
 		<set name="weight" val="1130" />
 		<set name="price" val="12250000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
 			<set order="0x08" stat="rShld" val="20" />
@@ -1120,7 +1212,11 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="920" />
 		<set name="price" val="12250000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
 		</for>
@@ -1133,7 +1229,11 @@
 		<set name="material" val="bone" />
 		<set name="weight" val="530" />
 		<set name="price" val="12627000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="96" />
 		</for>
@@ -1158,7 +1258,11 @@
 		<set name="material" val="bone" />
 		<set name="weight" val="530" />
 		<set name="price" val="12627000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="96" />
 		</for>
@@ -1172,7 +1276,11 @@
 		<set name="material" val="bronze" />
 		<set name="weight" val="7520" />
 		<set name="price" val="33673000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="238" />
 		</for>
@@ -1199,7 +1307,11 @@
 		<set name="material" val="bronze" />
 		<set name="weight" val="1750" />
 		<set name="price" val="25255000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="119" />
 			<add order="0x40" stat="maxMp" val="614" />
@@ -1214,7 +1326,11 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="3170" />
 		<set name="price" val="21046000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="149" />
 		</for>
@@ -1241,7 +1357,11 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="850" />
 		<set name="price" val="15784000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="74" />
 			<add order="0x40" stat="maxMp" val="392" />
@@ -1255,7 +1375,11 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="510" />
 		<set name="price" val="8418000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="64" />
 		</for>
@@ -1280,7 +1404,11 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="510" />
 		<set name="price" val="8418000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="64" />
 		</for>
@@ -1293,7 +1421,11 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="1070" />
 		<set name="price" val="8418000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="64" />
 		</for>
@@ -1318,7 +1450,11 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="1070" />
 		<set name="price" val="8418000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="64" />
 		</for>
@@ -1332,7 +1468,11 @@
 		<set name="material" val="crystal" />
 		<set name="weight" val="1190" />
 		<set name="price" val="8839000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
 			<set order="0x08" stat="rShld" val="20" />
@@ -1349,7 +1489,11 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="920" />
 		<set name="price" val="8839000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
 			<set order="0x08" stat="rShld" val="20" />
@@ -1364,7 +1508,11 @@
 		<set name="material" val="bone" />
 		<set name="weight" val="530" />
 		<set name="price" val="17500000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
 		</for>
@@ -1389,7 +1537,11 @@
 		<set name="material" val="bone" />
 		<set name="weight" val="530" />
 		<set name="price" val="17500000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="101" />
 		</for>
@@ -1403,7 +1555,11 @@
 		<set name="material" val="bronze" />
 		<set name="weight" val="7520" />
 		<set name="price" val="46668000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="250" />
 		</for>
@@ -1430,7 +1586,11 @@
 		<set name="material" val="bronze" />
 		<set name="weight" val="1750" />
 		<set name="price" val="35000000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="125" />
 			<add order="0x40" stat="maxMp" val="637" />
@@ -1445,7 +1605,11 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="3170" />
 		<set name="price" val="29168000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="156" />
 		</for>
@@ -1472,7 +1636,11 @@
 		<set name="material" val="scale_of_dragon" />
 		<set name="weight" val="850" />
 		<set name="price" val="21876000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="78" />
 			<add order="0x40" stat="maxMp" val="415" />
@@ -1486,7 +1654,11 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="510" />
 		<set name="price" val="11667000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="68" />
 		</for>
@@ -1511,7 +1683,11 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="510" />
 		<set name="price" val="11667000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="68" />
 		</for>
@@ -1524,7 +1700,11 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="1070" />
 		<set name="price" val="11667000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="68" />
 		</for>
@@ -1549,7 +1729,11 @@
 		<set name="material" val="leather" />
 		<set name="weight" val="1070" />
 		<set name="price" val="11667000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="68" />
 		</for>
@@ -1563,7 +1747,11 @@
 		<set name="material" val="damascus" />
 		<set name="weight" val="1130" />
 		<set name="price" val="12250000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
 			<set order="0x08" stat="rShld" val="20" />
@@ -1580,7 +1768,11 @@
 		<set name="material" val="steel" />
 		<set name="weight" val="920" />
 		<set name="price" val="12250000" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
 			<add order="0x10" stat="pDef" val="17" />
@@ -1599,7 +1791,11 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8418-1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="96" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -1636,7 +1832,11 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8429-1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="96" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -1656,7 +1856,11 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8419-1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="238" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -1695,7 +1899,11 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8430-1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="119" />
 			<add order="0x40" stat="maxMp" val="614" />
@@ -1716,7 +1924,11 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8420-1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="149" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -1755,7 +1967,11 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8431-1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="74" />
 			<add order="0x40" stat="maxMp" val="392" />
@@ -1775,7 +1991,11 @@
 		<set name="element_enabled" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="8421-1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="64" />
 			<enchant order="0x0C" stat="pDef" val="0" />

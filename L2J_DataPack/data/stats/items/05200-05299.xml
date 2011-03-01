@@ -478,7 +478,11 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2128-1" />
 		<set name="use_condition" val="{{uc_race;{0;1;2;3;4}};{uc_transmode_exclude;{tt_flying}}}" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 	</item>
 	<item id="5242" type="EtcItem" name="Hair Style Change Potion - A">
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
@@ -1047,7 +1051,11 @@
 		<set name="weight" val="7700" />
 		<set name="price" val="3562000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="171" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -1065,7 +1073,11 @@
 		<set name="weight" val="3320" />
 		<set name="price" val="2226000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="107" />
 			<enchant order="0x0C" stat="pDef" val="0" />
@@ -1131,7 +1143,11 @@
 		<set name="weight" val="1190" />
 		<set name="price" val="935000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<sub order="0x10" stat="rEvas" val="8" />
 			<set order="0x08" stat="rShld" val="20" />
@@ -1151,7 +1167,11 @@
 		<set name="weight" val="9780" />
 		<set name="price" val="5788000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="equip_condition" val="{{ec_race;{0;1;2;3;4}}}" />
+		<cond msgId="1518">
+			<not>
+				<player race="Kamael" />
+			</not>
+		</cond>
 		<for>
 			<add order="0x10" stat="pDef" val="278" />
 			<enchant order="0x0C" stat="pDef" val="0" />
