@@ -776,16 +776,34 @@
 		</for>
 	</skill>
 	<skill id="419" levels="4" name="Summon Treasure Key">
-		<table name="#mpConsume"> 122 159 183 204 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			6667,2,30;6668,3,50;6669,2,20
+			6668,2,30;6669,3,50;6670,2,20
+			6669,2,30;6670,3,50;6671,2,20
+			6670,2,30;6671,3,50;6672,2,20
+		</table>
 		<table name="#itemConsumeCount"> 2 3 4 6 </table>
+		<table name="#magicLvl"> 46 58 66 74 </table>
+		<table name="#mpConsume"> 122 159 183 204 </table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="extractableSkillUseMsg" val="false" />
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="true" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
 		<set name="itemConsumeId" val="1661" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="hitTime" val="3000" />
-		<set name="reuseDelay" val="600000" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="SUMMON_TREASURE_KEY" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="420" levels="3" name="Zealot" enchantGroup1="1" enchantGroup2="1">
 		<table name="#hpConsume"> 159 183 204 </table>

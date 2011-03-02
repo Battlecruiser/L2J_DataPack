@@ -15,7 +15,6 @@
 package handlers.skillhandlers;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.ExtractableSkillsData;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2ExtractableProductItem;
@@ -29,6 +28,9 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
 import com.l2jserver.util.Rnd;
 
+/**
+ * @author Zoey76, based on previous version.
+ */
 public class Extractable implements ISkillHandler
 {
 	private static final L2SkillType[] SKILL_IDS =
@@ -37,57 +39,69 @@ public class Extractable implements ISkillHandler
 		L2SkillType.EXTRACTABLE_FISH
 	};
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#useSkill(com.l2jserver.gameserver.model.actor.L2Character, com.l2jserver.gameserver.model.L2Skill, com.l2jserver.gameserver.model.L2Object[])
-	 */
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		if (!(activeChar instanceof L2PcInstance))
+		{
 			return;
+		}
 		
-		L2PcInstance player = (L2PcInstance)activeChar;
-		L2ExtractableSkill exitem = ExtractableSkillsData.getInstance().getExtractableItem(skill);
+		L2ExtractableSkill exItem = skill.getExtractableSkill();
 		
-		if (exitem == null)
+		if (exItem == null)
+		{
 			return;
+		}
 		
-		int rndNum = Rnd.get(100), chanceFrom = 0;
+		if (exItem.getProductItemsArray().length == 0)
+		{
+			_log.warning("Extractable Item Skill with no data, probably wrong/empty table with Skill Id: " + skill.getId());
+			return;
+		}
+		
+		double rndNum = 0;
+		double chance = 0;
 		int[] createItemID = new int[20];
 		int[] createAmount = new int[20];
 		
-		
 		// calculate extraction
-		for (L2ExtractableProductItem expi : exitem.getProductItemsArray())
+		for (L2ExtractableProductItem expi : exItem.getProductItemsArray())
 		{
-			int chance = expi.getChance();
-			
-			if (rndNum >= chanceFrom && rndNum <= chance + chanceFrom)
+			chance = expi.getChance();
+			rndNum = 100 * Rnd.nextDouble();
+			if (rndNum <= chance)
 			{
 				for (int i = 0; i < expi.getId().length; i++)
 				{
 					createItemID[i] = expi.getId()[i];
 					
 					if (skill.getSkillType() == L2SkillType.EXTRACTABLE_FISH)
-						createAmount[i] = (int)(expi.getAmmount()[i]* Config.RATE_EXTR_FISH);
+					{
+						createAmount[i] = (int) (expi.getAmmount()[i] * Config.RATE_EXTR_FISH);
+					}
 					else
+					{
 						createAmount[i] = expi.getAmmount()[i];
+					}
 				}
 				break;
 			}
-			
-			chanceFrom += chance;
 		}
-		if (player.isSubClassActive() && skill.getReuseDelay() > 0)
+		
+		L2PcInstance player = (L2PcInstance) activeChar;
+		
+		//FIXME: remove this once skill reuse will be global for main/subclass
+		if (player.isSubClassActive() && (skill.getReuseDelay() > 0))
 		{
-			// TODO: remove this once skill reuse will be global for main/subclass
 			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.MAIN_CLASS_SKILL_ONLY));
 			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED).addSkillName(skill));
 			return;
 		}
-		if (createItemID[0] <= 0 || createItemID.length == 0 )
+		
+		if ((createItemID[0] <= 0) || (createItemID.length == 0))
 		{
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOTHING_INSIDE_THAT));
+			if (exItem.useMessage())
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOTHING_INSIDE_THAT));
 			return;
 		}
 		else
@@ -95,44 +109,49 @@ public class Extractable implements ISkillHandler
 			for (int i = 0; i < createItemID.length; i++)
 			{
 				if (createItemID[i] <= 0)
-					return;
+				{
+					continue;
+				}
 				
 				if (ItemTable.getInstance().createDummyItem(createItemID[i]) == null)
 				{
-					_log.warning("createItemID " + createItemID[i] + " doesn't have template!");
+					_log.warning("Extractable Item Skill Id:" + skill.getId() + " createItemID " + createItemID[i] + " doesn't have a template!");
 					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOTHING_INSIDE_THAT));
 					return;
 				}
 				
 				if (ItemTable.getInstance().createDummyItem(createItemID[i]).isStackable())
+				{
 					player.addItem("Extract", createItemID[i], createAmount[i], targets[0], false);
+				}
 				else
 				{
 					for (int j = 0; j < createAmount[i]; j++)
+					{
 						player.addItem("Extract", createItemID[i], 1, targets[0], false);
+					}
 				}
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.EARNED_S2_S1_S);;
-				SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.EARNED_S1_ADENA);;
+				
 				if (createItemID[i] == 57)
 				{
-					sm2.addNumber(createAmount[i]);
-					player.sendPacket(sm2);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.EARNED_S1_ADENA);;
+					sm.addNumber(createAmount[i]);
+					player.sendPacket(sm);
 				}
 				else
 				{
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.EARNED_S2_S1_S);;
 					sm.addItemName(createItemID[i]);
 					if (createAmount[i] > 1)
+					{
 						sm.addNumber(createAmount[i]);
+					}
 					player.sendPacket(sm);
 				}
 			}
 		}
 	}
 	
-	/**
-	 * 
-	 * @see com.l2jserver.gameserver.handler.ISkillHandler#getSkillIds()
-	 */
 	public L2SkillType[] getSkillIds()
 	{
 		return SKILL_IDS;

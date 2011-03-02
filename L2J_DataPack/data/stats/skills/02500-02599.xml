@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="2500" levels="1" name="Beast Soulshot Compressed Pack">
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="create_item_id" val="6645" />
+		<!-- Confirmed CT2.5 -->
 		<set name="create_item_count" val="500" />
+		<set name="create_item_id" val="6645" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="CREATE_ITEM" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -15,12 +16,13 @@
 		</cond>
 	</skill>
 	<skill id="2501" levels="1" name="Beast Spiritshot Compressed Pack">
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="create_item_id" val="6646" />
+		<!-- Confirmed CT2.5 -->
 		<set name="create_item_count" val="500" />
+		<set name="create_item_id" val="6646" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="CREATE_ITEM" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -29,12 +31,13 @@
 		</cond>
 	</skill>
 	<skill id="2502" levels="1" name="Blessed Beast Spiritshot Compressed Pack">
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="create_item_id" val="6647" />
+		<!-- Confirmed CT2.5 -->
 		<set name="create_item_count" val="500" />
+		<set name="create_item_id" val="6647" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="CREATE_ITEM" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -43,10 +46,15 @@
 		</cond>
 	</skill>
 	<skill id="2504" levels="1" name="Old Agathion">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			6471,20,5094,40,9814,3,9816,4,9817,4,9815,2,57,6000000,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -131,12 +139,18 @@
 		<set name="despawnDelay" val="120000" />
 	</skill>
 	<skill id="2510" levels="1" name="Mysterious Cube">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			10633,1,35;10642,1,25;10634,1,20;10643,1,10;10635,1,4;10644,1,3;10636,1,1.2;10645,1,0.8;10637,1,0.6;10646,1,0.4
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="86400000" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="staticHitTime" val="true" />
 		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -361,10 +375,15 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2532" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,4,1463,50,2510,50,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -373,10 +392,15 @@
 		</cond>
 	</skill>
 	<skill id="2533" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,4,1463,100,2510,100,956,1,8623,3,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -385,10 +409,15 @@
 		</cond>
 	</skill>
 	<skill id="2534" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,4,1463,100,2510,100,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -397,10 +426,15 @@
 		</cond>
 	</skill>
 	<skill id="2535" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,2,1463,150,2510,150,956,1,8623,3,8629,2,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -409,10 +443,15 @@
 		</cond>
 	</skill>
 	<skill id="2536" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,5,1463,210,2510,210,956,1,8623,3,8629,3,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -421,10 +460,15 @@
 		</cond>
 	</skill>
 	<skill id="2537" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,7,1463,300,2510,300,956,1,955,1,8623,7,8629,7,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -433,10 +477,15 @@
 		</cond>
 	</skill>
 	<skill id="2538" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,5,1463,140,2510,140,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -445,10 +494,15 @@
 		</cond>
 	</skill>
 	<skill id="2539" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,7,1463,250,2510,250,956,1,8623,5,8629,4,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -457,10 +511,15 @@
 		</cond>
 	</skill>
 	<skill id="2540" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,6,1463,200,2510,200,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -469,10 +528,15 @@
 		</cond>
 	</skill>
 	<skill id="2541" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,11,1463,500,2510,500,956,1,955,1,8623,10,8629,10,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -481,10 +545,15 @@
 		</cond>
 	</skill>
 	<skill id="2542" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,7,1463,400,2510,400,956,1,8623,6,8629,6,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -493,10 +562,15 @@
 		</cond>
 	</skill>
 	<skill id="2543" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,9,1463,400,2510,400,956,1,8623,9,8629,8,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -505,10 +579,15 @@
 		</cond>
 	</skill>
 	<skill id="2544" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,10,1463,500,2510,500,956,2,955,1,8623,15,8629,15,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -517,10 +596,15 @@
 		</cond>
 	</skill>
 	<skill id="2545" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,7,1464,150,2511,150,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -529,10 +613,15 @@
 		</cond>
 	</skill>
 	<skill id="2546" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,5,1464,120,2511,120,952,1,8624,5,8630,4,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -541,10 +630,15 @@
 		</cond>
 	</skill>
 	<skill id="2547" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,11,1464,150,2511,150,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -553,10 +647,15 @@
 		</cond>
 	</skill>
 	<skill id="2548" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,7,1464,300,2511,300,952,1,951,1,8624,7,8630,7,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -565,10 +664,15 @@
 		</cond>
 	</skill>
 	<skill id="2549" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,6,1464,200,2511,200,8624,7,8630,6,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -577,10 +681,15 @@
 		</cond>
 	</skill>
 	<skill id="2550" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,10,1464,250,2511,250,952,1,8624,8,8630,7,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -589,10 +698,15 @@
 		</cond>
 	</skill>
 	<skill id="2551" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,10,1464,350,2511,350,952,2,951,1,8624,10,8630,10,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -601,10 +715,15 @@
 		</cond>
 	</skill>
 	<skill id="2552" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,6,1465,100,2512,100,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -613,10 +732,15 @@
 		</cond>
 	</skill>
 	<skill id="2553" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,10,1465,200,2512,200,8625,7,8631,7,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -625,10 +749,15 @@
 		</cond>
 	</skill>
 	<skill id="2554" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,8,1465,120,2512,120,8625,7,8631,7,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -637,10 +766,15 @@
 		</cond>
 	</skill>
 	<skill id="2555" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,15,1464,300,2511,300,952,2,951,1,8624,15,8630,14,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -649,10 +783,15 @@
 		</cond>
 	</skill>
 	<skill id="2556" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,4,1465,200,2512,200,948,1,8625,5,8631,5,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -661,10 +800,15 @@
 		</cond>
 	</skill>
 	<skill id="2557" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,10,1465,250,2512,250,948,1,8625,6,8631,6,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -673,10 +817,15 @@
 		</cond>
 	</skill>
 	<skill id="2558" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,15,1465,380,2512,380,948,2,8625,12,8631,12,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -685,10 +834,15 @@
 		</cond>
 	</skill>
 	<skill id="2559" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,5,1466,120,2513,120,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -697,10 +851,15 @@
 		</cond>
 	</skill>
 	<skill id="2560" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,10,1466,250,2513,250,8626,9,8632,9,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -709,10 +868,15 @@
 		</cond>
 	</skill>
 	<skill id="2561" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,5,1466,150,2513,150,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -721,10 +885,15 @@
 		</cond>
 	</skill>
 	<skill id="2562" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,4,1465,100,2512,100,947,1,8625,3,8631,3,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -733,10 +902,15 @@
 		</cond>
 	</skill>
 	<skill id="2563" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,10,1466,300,2513,300,8626,10,8632,10,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -745,10 +919,15 @@
 		</cond>
 	</skill>
 	<skill id="2564" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,3,1466,140,2513,140,730,1,8626,5,8632,5,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -757,10 +936,15 @@
 		</cond>
 	</skill>
 	<skill id="2565" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,6,1466,250,2513,250,730,2,8626,6,8632,6,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -769,10 +953,15 @@
 		</cond>
 	</skill>
 	<skill id="2566" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,9,1467,130,2514,130,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -781,10 +970,15 @@
 		</cond>
 	</skill>
 	<skill id="2567" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,10,1467,350,2514,350,8627,12,8633,11,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -793,10 +987,15 @@
 		</cond>
 	</skill>
 	<skill id="2568" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,10,1466,350,2513,350,730,2,8626,10,8632,10,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -805,10 +1004,15 @@
 		</cond>
 	</skill>
 	<skill id="2569" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,12,1467,360,2514,360,8627,12,8633,12,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -817,10 +1021,15 @@
 		</cond>
 	</skill>
 	<skill id="2570" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,6,1467,140,2514,140,960,1,8627,4,8633,3,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -829,10 +1038,15 @@
 		</cond>
 	</skill>
 	<skill id="2571" levels="1" name="Pathfinder Supplies">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,15,1467,360,2514,360,960,1,8627,11,8633,11,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -841,10 +1055,15 @@
 		</cond>
 	</skill>
 	<skill id="2572" levels="1" name="Pathfinder's Reward">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,15,1467,360,2514,360,960,1,8627,11,8633,11,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -853,10 +1072,15 @@
 		</cond>
 	</skill>
 	<skill id="2573" levels="1" name="Pathfinder's Reward">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,15,1467,360,2514,360,960,1,8627,11,8633,11,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -865,10 +1089,15 @@
 		</cond>
 	</skill>
 	<skill id="2574" levels="1" name="Pathfinder's Reward">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1539,15,1467,360,2514,360,960,1,8627,11,8633,11,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -877,10 +1106,15 @@
 		</cond>
 	</skill>
 	<skill id="2575" levels="1" name="Pathfinder's Reward">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			9546,1,19.8;9548,1,19.8;9550,1,19.8;959,1,1.98;9442,1,0.1;9443,1,0.1;9444,1,0.1;9445,1,0.1;9446,1,0.1;9447,1,0.1;9448,1,0.1;9449,1,0.1;9450,1,0.1;10252,1,0.1;10253,1,0.1;9532,1,1;9537,1,1;9542,1,1
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -889,10 +1123,15 @@
 		</cond>
 	</skill>
 	<skill id="2576" levels="1" name="Pathfinder's Reward">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			9546,1,26.4;9548,1,26.4;9550,1,26.4;959,1,3.84;10215,1,0.13;10216,1,0.13;10217,1,0.13;10218,1,0.13;10219,1,0.13;10220,1,0.13;10221,1,0.13;10222,1,0.13;10223,1,0.13
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
