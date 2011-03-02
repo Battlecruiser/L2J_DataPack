@@ -29,14 +29,15 @@
 		<set name="hitTime" val="100" />
 	</skill>
 	<skill id="22004" levels="1" name="Energy Ginseng">
-		<set name="itemConsumeCount" val="1" />
+		<!-- Confirmed CT2.5 -->
+		<set name="buffDuration" val="300000" />
 		<set name="hitTime" val="100" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="2000" />
-		<set name="isPotion" val="true" />
-		<set name="buffDuration" val="300000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="br_event_buf2" abnormal="vitality">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
@@ -44,46 +45,103 @@
 		</for>
 	</skill>
 	<skill id="22005" levels="1" name="Energy Red Ginseng">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="reuseDelay" val="2000" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="100" />
+		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="600" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="GIVE_VITALITY" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="22006" levels="1" name="Halloween Candy">
-		<!-- Needs to be verified -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="GIVE_VITALITY" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
 		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="20000" />
+		<set name="skillType" val="GIVE_VITALITY" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="22007" levels="1" name="Good Luck Lucky Bag">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			20083,1,20;20086,1,20;20089,1,20;20084,1,10;20087,1,10;20090,1,10;20085,1,3.33;20088,1,3.33;20091,1,3.33
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="22008" levels="1" name="Lucky Four-leaf Clover">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			20083,1,20;20086,1,20;20089,1,20;20084,1,10;20087,1,10;20090,1,10;20085,1,3.33;20088,1,3.33;20091,1,3.33
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="22009" levels="1" name="Holiday Miracle">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			20094,1,20;20095,1,80
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="22010" levels="1" name="Mysterious Formal Dress">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			20098,1,20;20099,1,80
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="22011" levels="1" name="Santa Claus' Gift - Joy">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			20103,1,20104,1,20105,1,20106,1,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -92,10 +150,15 @@
 		</cond>
 	</skill>
 	<skill id="22012" levels="1" name="Santa Claus' Gift - Enjoyment">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			10606,1,10;5561,1,90
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -203,10 +266,15 @@
 		</for>
 	</skill>
 	<skill id="22017" levels="1" name="Santa Claus' Gift - Luck">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			20107,1,99.99948;20108,1,0.00051
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -215,10 +283,15 @@
 		</cond>
 	</skill>
 	<skill id="22018" levels="1" name="Santa Claus' Gift - Luck">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			20107,1,99.99948;20108,1,0.00051
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -242,15 +315,32 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="22022" levels="1" name="Premium Valentine Decoration">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			20107,1,99.99948;20108,1,0.00051
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="22023" levels="1" name="Simple Valentine Cake">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			10134,1,9;10138,1,9;1539,4,41;1540,3,16;20196,1,25
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -259,10 +349,15 @@
 		</cond>
 	</skill>
 	<skill id="22024" levels="1" name="Velvety Valentine Cake">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			948,2,14;952,3,19;1538,1,11;3936,1,6;20200,1,20;20197,1,30
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -271,10 +366,15 @@
 		</cond>
 	</skill>
 	<skill id="22025" levels="1" name="Delectable Valentine Cake">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			947,2,14;951,3,39;20201,1,17;20198,1,30
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -283,10 +383,15 @@
 		</cond>
 	</skill>
 	<skill id="22026" levels="1" name="Decadent Valentine Cake">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			959,1,14;729,2,26;20202,1,35;20203,1,25
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -295,14 +400,30 @@
 		</cond>
 	</skill>
 	<skill id="22027" levels="1" name="Heavenly Valentine Cake">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			6659,1,0.00661;6660,1,0.1;20208,1,8;20206,1,11;20207,1,18;20204,1,62.893
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="22028" levels="1" name="Chocolate Cookie">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="20000" />
+		<set name="skillType" val="GIVE_VITALITY" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="22029" levels="1" name="Baguette Herb">
 		<set name="hitTime" val="100" />
@@ -350,14 +471,38 @@
 		</for>
 	</skill>
 	<skill id="22032" levels="1" name="Baguette Legacy">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			20255,1,8.34;20256,1,8.34;20257,1,8.34;20258,1,8.34;20259,1,8.34;20260,1,8.34;20261,1,8.34;20262,1,8.34;20263,1,8.34;20264,1,8.34;20265,1,8.34;20270,1,8.26
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="22033" levels="1" name="Baguette Legacy - Kamael">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			20268,1,33;20269,1,33;20267,1,34
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="22034" levels="1" name="Birthday Cake">
 		<set name="target" val="TARGET_NONE" />
@@ -835,14 +980,38 @@
 		</for>
 	</skill>
 	<skill id="22071" levels="1" name="Huge Fortuna Box">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			22009,2,27;20517,1,15;22015,1,0.78299;20519,1,0.27056;22019,1,0.00775;20521,1,0.0027;20545,8,3.75;20546,10,7.5;20547,10,4.5;8751,1,9.75;8752,1,8.125;9575,1,6.77083;8761,1,1.95;8762,1,1.625;9576,1,1.35416;22024,15,12.5
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="22072" levels="1" name="Huge Fortuna Cube">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			22013,2,26.25;20518,1,14.58333;22017,1,0.69599;20520,1,0.24049;22021,1,0.00638;20522,1,0.0022;20545,8,3.95833;20546,10,7.91666;20547,10,4.75;8751,1,9.58333;8752,1,7.98611;9575,1,6.65509;8761,1,1.91666;8762,1,1.59722;9576,1,1.33101;22024,15,13.19444
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="22073" levels="1" name="Weapon Enchant Scroll - S Grade">
 		<set name="target" val="TARGET_NONE" />
@@ -965,22 +1134,55 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="22092" levels="1" name="Scroll Master 1">
-		<!-- Thank you gift for helping the girl. For 2 minutes, increases Max HP by 60%, Max MP by 60%, Max CP by 60%, physical P. Def. by 30%, M. Def. by 30%, moving speed by 30, and physical P. Atk. by 20%. Decreases MP consumption during skill use by 10%. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			20365,1,20;20364,1,20;20366,1,20;20367,1,20;20368,1,20
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="22093" levels="1" name="Scroll Master 2">
-		<!-- Thank you gift for helping the boy. For 2 minutes, increases Max HP by 40%, Max MP by 40%, Max CP by 40%, physical P. Def. by 30%, M. Def. by 30%, moving speed by 20, and M. Atk. by 45%. Decreases MP consumption during skill use by 10%. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			20554,1,15;20392,1,15;20393,1,35;20394,1,35
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="22094" levels="1" name="Exp. Master">
-		<!-- When using a monster's corpse, comforts the monster's soul to borrow the monster's power temporarily. For 2 minutes, increases Max HP by 60%, Max MP by 60%, Max CP by 60%, physical P. Def. by 30%, M. Def. by 30%, moving speed by 30, and physical P. Atk. by 20%. Decreases MP consumption during skill use by 10%. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			20581,1,70;20548,1,30
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="22095" levels="1" name="Summon Spirit of Fire">
 		<set name="itemConsumeCount" val="1" />

@@ -306,42 +306,69 @@
 		<set name="saveVs" val="MEN" />
 	</skill>
 	<skill id="3332" levels="1" name="Orange Talisman - Hot Springs Recovery">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="itemConsumeId" val="1785" />
-		<set name="itemConsumeCount" val="16" />
-		<set name="create_item_id" val="10166" />
+		<!-- Confirmed CT2.5 -->
 		<set name="create_item_count" val="1" />
-		<set name="hitTime" val="20000" />
+		<set name="create_item_id" val="10166" />
 		<set name="equipDelay" val="30000" />
-		<set name="staticReuse" val="true" />
+		<set name="hitTime" val="20000" />
+		<set name="itemConsumeCount" val="16" />
+		<set name="itemConsumeId" val="1785" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="CREATE_ITEM" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="3333" levels="1" name="Orange Talisman - A Grade Elixir of Life">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="itemConsumeId" val="1785" />
-		<set name="itemConsumeCount" val="50" />
-		<set name="create_item_id" val="8626" />
+		<!-- Confirmed CT2.5 -->
 		<set name="create_item_count" val="1" />
-		<set name="hitTime" val="20000" />
+		<set name="create_item_id" val="8626" />
 		<set name="equipDelay" val="30000" />
+		<set name="hitTime" val="20000" />
+		<set name="itemConsumeCount" val="50" />
+		<set name="itemConsumeId" val="1785" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="CREATE_ITEM" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="3334" levels="1" name="Orange Talisman - A Grade Elixir of Mental Strength">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="itemConsumeId" val="1785" />
-		<set name="itemConsumeCount" val="57" />
-		<set name="create_item_id" val="8632" />
+		<!-- Confirmed CT2.5 -->
 		<set name="create_item_count" val="1" />
-		<set name="hitTime" val="20000" />
+		<set name="create_item_id" val="8632" />
 		<set name="equipDelay" val="30000" />
+		<set name="hitTime" val="20000" />
+		<set name="itemConsumeCount" val="57" />
+		<set name="itemConsumeId" val="1785" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="CREATE_ITEM" />
 		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="3335" levels="1" name="Transform Yeti">
 		<set name="target" val="TARGET_SELF" />

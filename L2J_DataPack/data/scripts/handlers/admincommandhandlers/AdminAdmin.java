@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.AccessLevels;
 import com.l2jserver.gameserver.datatables.AdminCommandAccessRights;
 import com.l2jserver.gameserver.datatables.DoorTable;
-import com.l2jserver.gameserver.datatables.ExtractableSkillsData;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.datatables.MultiSell;
 import com.l2jserver.gameserver.datatables.NpcTable;
@@ -293,12 +292,6 @@ public class AdminAdmin implements IAdminCommandHandler
 					DoorTable.getInstance().reloadAll();
 					activeChar.sendMessage("All Doors have been reloaded");
 				}
-				else if (type.startsWith("extractables"))
-				{
-					ExtractableSkillsData.getInstance().reload();
-					activeChar.sendMessage("Extractable Items and Skills have been reloaded");
-				}
-				
 				activeChar.sendMessage("WARNING: There are several known issues regarding this feature. Reloading server data during runtime is STRONGLY NOT RECOMMENDED for live servers, just for developing environments.");
 			}
 			catch (Exception e)

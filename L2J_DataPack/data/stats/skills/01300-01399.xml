@@ -424,16 +424,24 @@
 		</for>
 	</skill>
 	<skill id="1324" levels="1" name="Summon CP Potion">
-		<set name="mpConsume" val="412" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="hitTime" val="20000" />
-		<set name="skillType" val="CREATE_ITEM" />
-		<set name="reuseDelay" val="600000" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="itemConsumeId" val="1785" />
-		<set name="itemConsumeCount" val="50" />
-		<set name="create_item_id" val="5592" />
+		<!-- Confirmed CT2.5 -->
 		<set name="create_item_count" val="20" />
+		<set name="create_item_id" val="5592" />
+		<set name="hitTime" val="20000" />
+		<set name="isMagic" val="true" />
+		<set name="itemConsumeCount" val="50" />
+		<set name="itemConsumeId" val="1785" />
+		<set name="mpConsume" val="412" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="CREATE_ITEM" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="1325" levels="1" name="Fortune of Noblesse">
 		<set name="itemConsumeId" val="5806" />
@@ -2446,22 +2454,33 @@
 		</enchant2for>
 	</skill>
 	<skill id="1387" levels="3" name="Summon Cursed Bones">
-		<table name="#mpConsume"> 318 366 407 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			2508,25,30;2508,50,50;2508,100,20
+			2508,50,30;2508,100,50;2508,200,20
+			2508,100,30;2508,200,50;2508,400,20
+		</table>
 		<table name="#itemConsumeCount"> 40 80 160 </table>
-		<table name="#create_item_count"> 25 50 100 </table>
-		<table name="#random_count"> 75 150 300 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<table name="#magicLvl"> 58 66 74 </table>
+		<table name="#mpConsume"> 318 366 407 </table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="extractableSkillUseMsg" val="false" />
 		<set name="hitTime" val="10000" />
 		<set name="isMagic" val="true" />
-		<set name="skillType" val="CREATE_ITEM" />
-		<set name="reuseDelay" val="600000" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="itemConsumeId" val="3031" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="create_item_id" val="2508" />
-		<set name="create_item_count" val="#create_item_count" />
-		<set name="random_count" val="#random_count" />
+		<set name="itemConsumeId" val="3031" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="1388" levels="3" name="Greater Might" enchantGroup1="1" enchantGroup2="1">
 		<table name="#ench1MpConsume"> 68 67 65 64 63 62 60 59 58 57 55 54 53 52 50 49 49 48 47 45 44 43 42 40 39 38 37 35 34 33 </table>

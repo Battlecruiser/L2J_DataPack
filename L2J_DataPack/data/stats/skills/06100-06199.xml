@@ -108,22 +108,44 @@
 		</for>
 	</skill>
 	<skill id="6121" levels="1" name="Agathion's New Year's Gift 1">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="reuseDelay" val="86400000" />
-		<set name="staticReuse" val="true" />
-		<set name="hitTime" val="2700" />
+		<!-- Confirmed CT2.5 -->
 		<set name="coolTime" val="1000" />
+		<set name="create_item_count" val="1" />
+		<set name="create_item_id" val="14676" />
+		<set name="hitTime" val="2700" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="55" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="86400000" />
+		<set name="skillType" val="CREATE_ITEM" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="6122" levels="1" name="Agathion's New Year's Gift 2">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="reuseDelay" val="86400000" />
-		<set name="staticReuse" val="true" />
-		<set name="hitTime" val="2700" />
+		<!-- Confirmed CT2.5 -->
 		<set name="coolTime" val="1000" />
+		<set name="create_item_count" val="1" />
+		<set name="create_item_id" val="14677" />
+		<set name="hitTime" val="2700" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="55" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="86400000" />
+		<set name="skillType" val="CREATE_ITEM" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="6123" levels="1" name="Agathion's New Year's Wish">
 		<set name="target" val="TARGET_NONE" />

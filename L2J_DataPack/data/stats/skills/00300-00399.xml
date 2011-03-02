@@ -728,32 +728,52 @@
 		</enchant2for>
 	</skill>
 	<skill id="323" levels="1" name="Quiver of Arrow: Grade A">
-		<set name="mpConsume" val="366" />
-		<set name="target" val="TARGET_SELF" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1344,700,30;1344,1400,50;1344,2800,20
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="extractableSkillUseMsg" val="false" />
 		<set name="hitTime" val="3000" />
-		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isMagic" val="true" />
-		<set name="itemConsumeId" val="1461" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="create_item_id" val="1344" />
-		<set name="create_item_count" val="700" />
-		<set name="random_count" val="2100" />
+		<set name="itemConsumeId" val="1461" />
+		<set name="mpConsume" val="366" />
+		<set name="magicLvl" val="66" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="324" levels="1" name="Quiver of Arrow: Grade S">
-		<set name="mpConsume" val="398" />
-		<set name="target" val="TARGET_SELF" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			1344,700,30;1344,1400,50;1344,2800,20
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="extractableSkillUseMsg" val="false" />
 		<set name="hitTime" val="3000" />
-		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isMagic" val="true" />
-		<set name="itemConsumeId" val="1462" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="create_item_id" val="1345" />
-		<set name="create_item_count" val="900" />
-		<set name="random_count" val="2700" />
+		<set name="itemConsumeId" val="1462" />
+		<set name="magicLvl" val="72" />
+		<set name="mpConsume" val="398" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="325" levels="1" name="Strider Siege Assault">
 		<set name="mpConsume" val="151" />

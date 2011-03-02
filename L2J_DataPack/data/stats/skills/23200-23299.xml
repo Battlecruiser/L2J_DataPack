@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="23200" levels="1" name="Ball Trapping Penalty Kick Agathion Special Skill - Soccer Ball of Cheers">
-		<!-- Provides a soccer ball containing mysterious energy with the power of cheers. When you use the soccer ball, you can receive a random gift. Reuse Delay 10 seconds. Consumes 500 energy. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="create_item_count" val="1" />
+		<set name="create_item_id" val="20993" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="10000" />
+		<set name="skillType" val="CREATE_ITEM" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<cond msgId="2292">
+			<player agathionId="20991" />
+		</cond>
 	</skill>
 	<skill id="23201" levels="1" name="Ball Trapping Gnocian Agathion Cute Trick">
 		<set name="target" val="TARGET_SELF" />
