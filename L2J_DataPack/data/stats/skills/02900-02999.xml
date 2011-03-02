@@ -154,10 +154,15 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="2917" levels="1" name="Big Staccato Silk Cocoon">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			9575,1,2.77;10485,1,2.31;10577,1,3.2;14209,1,3.2;14208,1,3.2;14212,1,3.2;960,1,6.4;9625,1,3.2;9626,1,2.13;959,1,0.64;10373,1,1.54;10374,1,1.54;10375,1,1.54;10376,1,1.54;10377,1,1.54;10378,1,1.54;10379,1,1.54;10380,1,1.54;10381,1,1.54
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -166,10 +171,15 @@
 		</cond>
 	</skill>
 	<skill id="2918" levels="1" name="Small Staccato Silk Cocoon">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			9575,1,2.36;10485,1,1.96;10577,1,2.72;14209,1,2.72;14208,1,2.72;14212,1,2.72;960,1,5.44;9625,1,2.72;9626,1,1.81;959,1,0.54;10373,1,1.31;10374,1,1.31;10375,1,1.31;10376,1,1.31;10377,1,1.31;10378,1,1.31;10379,1,1.31;10380,1,1.31;10381,1,1.31
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -178,10 +188,15 @@
 		</cond>
 	</skill>
 	<skill id="2919" levels="1" name="Ancient Parchment">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			5942,1,40.0;5943,1,40.0;14836,1,4.0;14837,1,4.0;14838,1,4.0;14839,1,4.0;14840,1,4.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -190,10 +205,15 @@
 		</cond>
 	</skill>
 	<skill id="2920" levels="1" name="Titan's Ancient Book">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			5942,1,40.0;5943,1,40.0;14842,1,4.0;14843,1,4.0;14844,1,4.0;14845,1,4.0;14846,1,4.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -202,10 +222,15 @@
 		</cond>
 	</skill>
 	<skill id="2921" levels="1" name="Gludio Supply Box - magic pin">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13898,1,30.0;13899,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -214,10 +239,15 @@
 		</cond>
 	</skill>
 	<skill id="2922" levels="1" name="Dion supply box - magic pin">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13898,1,30.0;13899,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -226,10 +256,15 @@
 		</cond>
 	</skill>
 	<skill id="2923" levels="1" name="Giran supply box - magic pin">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13898,1,30.0;13899,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -238,10 +273,15 @@
 		</cond>
 	</skill>
 	<skill id="2924" levels="1" name="Oren supply box - magic pin">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13898,1,30.0;13899,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -250,10 +290,15 @@
 		</cond>
 	</skill>
 	<skill id="2925" levels="1" name="Aden supply box - magic pin">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13898,1,30.0;13899,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -262,10 +307,15 @@
 		</cond>
 	</skill>
 	<skill id="2926" levels="1" name="Innadril supply box - magic pin">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13898,1,30.0;13899,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -274,10 +324,15 @@
 		</cond>
 	</skill>
 	<skill id="2927" levels="1" name="Goddard supply box - magic pin">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13898,1,30.0;13899,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -286,10 +341,15 @@
 		</cond>
 	</skill>
 	<skill id="2928" levels="1" name="Rune supply box - magic pin">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13898,1,30.0;13899,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -298,10 +358,15 @@
 		</cond>
 	</skill>
 	<skill id="2929" levels="1" name="Schuttgart supply box - magic pin">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13898,1,30.0;13899,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -310,10 +375,15 @@
 		</cond>
 	</skill>
 	<skill id="2930" levels="1" name="Gludio supply box - magic pouch">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13918,1,30.0;13919,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -322,10 +392,15 @@
 		</cond>
 	</skill>
 	<skill id="2931" levels="1" name="Dion supply box - magic pouch">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13918,1,30.0;13919,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -334,10 +409,15 @@
 		</cond>
 	</skill>
 	<skill id="2932" levels="1" name="Giran supply box - magic pouch">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13918,1,30.0;13919,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -346,10 +426,15 @@
 		</cond>
 	</skill>
 	<skill id="2933" levels="1" name="Oren supply box - magic pouch">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13918,1,30.0;13919,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -358,10 +443,15 @@
 		</cond>
 	</skill>
 	<skill id="2934" levels="1" name="Aden supply box - magic pouch">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13918,1,30.0;13919,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -370,10 +460,15 @@
 		</cond>
 	</skill>
 	<skill id="2935" levels="1" name="Innadril supply box - magic pouch">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13918,1,30.0;13919,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -382,10 +477,15 @@
 		</cond>
 	</skill>
 	<skill id="2936" levels="1" name="Goddard supply box - magic pouch">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13918,1,30.0;13919,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -394,10 +494,15 @@
 		</cond>
 	</skill>
 	<skill id="2937" levels="1" name="Rune supply box - magic pouch">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13918,1,30.0;13919,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -406,10 +511,15 @@
 		</cond>
 	</skill>
 	<skill id="2938" levels="1" name="Schuttgart supply box - magic pouch">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13918,1,30.0;13919,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -418,10 +528,15 @@
 		</cond>
 	</skill>
 	<skill id="2939" levels="1" name="Gludio supply box - belt">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13894,1,30.0;13895,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -430,10 +545,15 @@
 		</cond>
 	</skill>
 	<skill id="2940" levels="1" name="Dion supply box - belt">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13894,1,30.0;13895,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -442,10 +562,15 @@
 		</cond>
 	</skill>
 	<skill id="2941" levels="1" name="Giran supply box - belt">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13894,1,30.0;13895,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -454,10 +579,15 @@
 		</cond>
 	</skill>
 	<skill id="2942" levels="1" name="Oren supply box - belt">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13894,1,30.0;13895,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -466,10 +596,15 @@
 		</cond>
 	</skill>
 	<skill id="2943" levels="1" name="Aden supply box - belt">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13894,1,30.0;13895,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -478,10 +613,15 @@
 		</cond>
 	</skill>
 	<skill id="2944" levels="1" name="Innadril supply box - belt">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13894,1,30.0;13895,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -490,10 +630,15 @@
 		</cond>
 	</skill>
 	<skill id="2945" levels="1" name="Goddard supply box - belt">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13894,1,30.0;13895,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -502,10 +647,15 @@
 		</cond>
 	</skill>
 	<skill id="2946" levels="1" name="Rune supply box - belt">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13894,1,30.0;13895,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -514,10 +664,15 @@
 		</cond>
 	</skill>
 	<skill id="2947" levels="1" name="Schuttgart supply box - belt">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13894,1,30.0;13895,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -526,10 +681,15 @@
 		</cond>
 	</skill>
 	<skill id="2948" levels="1" name="Gludio Supply Box - magic pin">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13900,1,30.0;13901,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -538,10 +698,15 @@
 		</cond>
 	</skill>
 	<skill id="2949" levels="1" name="Dion supply box - magic pin">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13900,1,30.0;13901,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -550,10 +715,15 @@
 		</cond>
 	</skill>
 	<skill id="2950" levels="1" name="Giran supply box - magic pin">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13900,1,30.0;13901,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -562,10 +732,15 @@
 		</cond>
 	</skill>
 	<skill id="2951" levels="1" name="Oren supply box - magic pin">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13900,1,30.0;13901,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -574,10 +749,15 @@
 		</cond>
 	</skill>
 	<skill id="2952" levels="1" name="Aden supply box - magic pin">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13900,1,30.0;13901,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -586,10 +766,15 @@
 		</cond>
 	</skill>
 	<skill id="2953" levels="1" name="Innadril supply box - magic pin">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13900,1,30.0;13901,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -598,10 +783,15 @@
 		</cond>
 	</skill>
 	<skill id="2954" levels="1" name="Goddard supply box - magic pin">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13900,1,30.0;13901,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -610,10 +800,15 @@
 		</cond>
 	</skill>
 	<skill id="2955" levels="1" name="Rune supply box - magic pin">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13900,1,30.0;13901,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -622,10 +817,15 @@
 		</cond>
 	</skill>
 	<skill id="2956" levels="1" name="Schuttgart supply box - magic pin">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13900,1,30.0;13901,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -634,10 +834,15 @@
 		</cond>
 	</skill>
 	<skill id="2957" levels="1" name="Gludio supply box - magic pouch">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13920,1,30.0;13921,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -646,10 +851,15 @@
 		</cond>
 	</skill>
 	<skill id="2958" levels="1" name="Dion supply box - magic pouch">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13920,1,30.0;13921,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -658,10 +868,15 @@
 		</cond>
 	</skill>
 	<skill id="2959" levels="1" name="Giran supply box - magic pouch">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13920,1,30.0;13921,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -670,10 +885,15 @@
 		</cond>
 	</skill>
 	<skill id="2960" levels="1" name="Oren supply box - magic pouch">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13920,1,30.0;13921,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -682,10 +902,15 @@
 		</cond>
 	</skill>
 	<skill id="2961" levels="1" name="Aden supply box - magic pouch">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13920,1,30.0;13921,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -694,10 +919,15 @@
 		</cond>
 	</skill>
 	<skill id="2962" levels="1" name="Innadril supply box - magic pouch">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13920,1,30.0;13921,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -706,10 +936,15 @@
 		</cond>
 	</skill>
 	<skill id="2963" levels="1" name="Goddard supply box - magic pouch">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13920,1,30.0;13921,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -718,10 +953,15 @@
 		</cond>
 	</skill>
 	<skill id="2964" levels="1" name="Rune supply box - magic pouch">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13920,1,30.0;13921,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -730,10 +970,15 @@
 		</cond>
 	</skill>
 	<skill id="2965" levels="1" name="Schuttgart supply box - magic pouch">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13920,1,30.0;13921,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -742,10 +987,15 @@
 		</cond>
 	</skill>
 	<skill id="2966" levels="1" name="Gludio supply box - belt">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13896,1,30.0;13897,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -754,10 +1004,15 @@
 		</cond>
 	</skill>
 	<skill id="2967" levels="1" name="Dion supply box - belt">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13896,1,30.0;13897,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -766,10 +1021,15 @@
 		</cond>
 	</skill>
 	<skill id="2968" levels="1" name="Giran supply box - belt">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13896,1,30.0;13897,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -778,10 +1038,15 @@
 		</cond>
 	</skill>
 	<skill id="2969" levels="1" name="Oren supply box - belt">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13896,1,30.0;13897,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -790,10 +1055,15 @@
 		</cond>
 	</skill>
 	<skill id="2970" levels="1" name="Aden supply box - belt">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13896,1,30.0;13897,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -802,10 +1072,15 @@
 		</cond>
 	</skill>
 	<skill id="2971" levels="1" name="Innadril supply box - belt">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13896,1,30.0;13897,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -814,10 +1089,15 @@
 		</cond>
 	</skill>
 	<skill id="2972" levels="1" name="Goddard supply box - belt">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13896,1,30.0;13897,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -826,10 +1106,15 @@
 		</cond>
 	</skill>
 	<skill id="2973" levels="1" name="Rune supply box - belt">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13896,1,30.0;13897,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -838,10 +1123,15 @@
 		</cond>
 	</skill>
 	<skill id="2974" levels="1" name="Schuttgart supply box - belt">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13896,1,30.0;13897,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -850,10 +1140,15 @@
 		</cond>
 	</skill>
 	<skill id="2975" levels="1" name="Gludio supply box - magic rune clip">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13896,1,30.0;13897,1,15.0
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -862,10 +1157,15 @@
 		</cond>
 	</skill>
 	<skill id="2976" levels="1" name="Dion supply box - magic rune clip">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			14902,1,21.0;14902,1,10.5
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -874,10 +1174,15 @@
 		</cond>
 	</skill>
 	<skill id="2977" levels="1" name="Giran supply box - magic rune clip">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			14902,1,21.0;14902,1,10.5
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -886,10 +1191,15 @@
 		</cond>
 	</skill>
 	<skill id="2978" levels="1" name="Oren supply box - magic rune clip">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			14902,1,21.0;14902,1,10.5
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -898,10 +1208,15 @@
 		</cond>
 	</skill>
 	<skill id="2979" levels="1" name="Aden supply box - magic rune clip">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			14902,1,21.0;14902,1,10.5
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -910,10 +1225,15 @@
 		</cond>
 	</skill>
 	<skill id="2980" levels="1" name="Innadril supply box - magic rune clip">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			14902,1,21.0;14902,1,10.5
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -922,10 +1242,15 @@
 		</cond>
 	</skill>
 	<skill id="2981" levels="1" name="Goddard supply box - magic rune clip">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			14902,1,21.0;14902,1,10.5
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -934,10 +1259,15 @@
 		</cond>
 	</skill>
 	<skill id="2982" levels="1" name="Rune supply box - magic rune clip">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			14902,1,21.0;14902,1,10.5
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -946,10 +1276,15 @@
 		</cond>
 	</skill>
 	<skill id="2983" levels="1" name="Schuttgart supply box - magic rune clip">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			14902,1,21.0;14902,1,10.5
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -958,10 +1293,15 @@
 		</cond>
 	</skill>
 	<skill id="2984" levels="1" name="Gludio supply box - magic ornament">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			14902,1,21.0;14902,1,10.5
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -970,10 +1310,15 @@
 		</cond>
 	</skill>
 	<skill id="2985" levels="1" name="Dion supply box - magic ornament">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			14902,1,21.0;14902,1,10.5
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -982,10 +1327,15 @@
 		</cond>
 	</skill>
 	<skill id="2986" levels="1" name="Giran supply box - magic ornament">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			14902,1,21.0;14902,1,10.5
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -994,10 +1344,15 @@
 		</cond>
 	</skill>
 	<skill id="2987" levels="1" name="Oren supply box - magic ornament">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			14902,1,21.0;14902,1,10.5
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -1006,10 +1361,15 @@
 		</cond>
 	</skill>
 	<skill id="2988" levels="1" name="Aden supply box - magic ornament">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			14902,1,21.0;14902,1,10.5
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -1018,10 +1378,15 @@
 		</cond>
 	</skill>
 	<skill id="2989" levels="1" name="Innadril supply box - magic ornament">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			14902,1,21.0;14902,1,10.5
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -1030,10 +1395,15 @@
 		</cond>
 	</skill>
 	<skill id="2990" levels="1" name="Goddard supply box - magic ornament">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			14902,1,21.0;14902,1,10.5
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -1042,10 +1412,15 @@
 		</cond>
 	</skill>
 	<skill id="2991" levels="1" name="Rune supply box - magic ornament">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			14902,1,21.0;14902,1,10.5
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -1054,10 +1429,15 @@
 		</cond>
 	</skill>
 	<skill id="2992" levels="1" name="Schuttgart supply box - magic ornament">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			14902,1,21.0;14902,1,10.5
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />

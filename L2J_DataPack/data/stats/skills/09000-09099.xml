@@ -154,11 +154,23 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="9027" levels="1" name="PC cafe personal instant lottery">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			15359,1,0.001;15360,1,0.1;15361,1,2.0;15362,1,20.0;15363,1,77.899
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="10000" />
+		<set name="skillType" val="EXTRACTABLE" />
 		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="9028" levels="1" name="Cool air cannon of fortune">
 		<set name="target" val="TARGET_NONE" />
@@ -209,14 +221,38 @@
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="9036" levels="1" name="Special July 7th Parcel">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			15379,5,15384,1,65;15379,5,15385,1,24.99;15379,5,15386,1,10;15379,5,15387,1,0.01
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="9037" levels="1" name="Special July 7th Parcel (Event)">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			15380,5,15389,1,65;15380,5,15390,1,24.99;15380,5,15391,1,10;15380,5,15392,1,0.01
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="9038" levels="1" name="Steamed Rice Cake">
 		<set name="target" val="TARGET_NONE" />
@@ -247,53 +283,137 @@
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="9042" levels="1" name="6th Anniversary Cube">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13143,1,0.0002;14105,1,0.0002;14108,1,0.0002;14109,1,0.0002;14110,1,0.0002;14111,1,0.0002;13144,1,0.0002;14106,1,0.0002;14112,1,0.0002;14113,1,0.0002;14114,1,0.0002;13145,1,0.0002;14107,1,0.0002;14115,1,0.0002;14116,1,0.0002;14117,1,0.0002;13887,1,0.0002;9514,1,0.00033;9515,1,0.00033;9516,1,0.00033;9517,1,0.00033;9518,1,0.00033;9529,1,0.00033;9519,1,0.00033;9520,1,0.00033;9521,1,0.00033;9522,1,0.00033;9523,1,0.00033;9524,1,0.00033;9525,1,0.00033;9526,1,0.00033;9527,1,0.00033;9528,1,0.00033;13886,1,0.00033;13457,1,0.00005;13458,1,0.00005;13459,1,0.00005;13460,1,0.00005;13461,1,0.00005;13462,1,0.00005;13463,1,0.00005;13464,1,0.00005;13465,1,0.00005;13466,1,0.00005;13467,1,0.00005;13468,1,0.00005;13469,1,0.00005;13470,1,0.00005;10215,1,0.00009;10216,1,0.00009;10217,1,0.00009;10218,1,0.00009;10219,1,0.00009;10220,1,0.00009;10221,1,0.00009;10222,1,0.00009;10223,1,0.00009;10224,1,0.00009;10225,1,0.00009;10226,1,0.00009;9380,1,0.00016;9446,1,0.00016;9384,1,0.00016;9449,1,0.00016;9450,1,0.00016;9445,1,0.00016;9443,1,0.00016;9442,1,0.00016;10252,1,0.00016;9448,1,0.00016;10253,1,0.00016;9384,1,0.00016;9444,1,0.00016;9447,1,0.00016;15428,1,0.1111;10480,1,0.0004;10481,1,0.0004;10482,1,0.0004;13071,1,0.0002;13072,1,0.0002;13073,1,0.0002;12365,1,0.1466;12366,1,0.1466;12370,1,0.1466;12371,1,0.1466;729,1,0.1466;730,1,0.1466;959,1,0.1466;960,1,0.1466;5908,1,0.0489;5911,1,0.0489;5914,1,0.0489;9570,1,0.0489;9571,1,0.0489;9572,1,0.0489;13420,1,0.1466;15427,1,9.6773;13421,1,4.8387;14683,1,3.2174;14684,1,3.2174;14685,1,3.2174;14686,1,3.2174;14687,1,3.2174;14689,1,3.2174;14690,1,3.2174;14691,1,3.2174;14692,1,3.2174;14693,1,3.2174;14695,1,3.2174;14696,1,3.2174;14697,1,3.2174;14698,1,3.2174;14699,1,3.2174;8751,1,2.0161;8752,1,2.0161;9575,1,2.0161;10485,1,2.0161;8761,1,2.0161;8762,1,2.0161;9576,1,2.0161;10486,1,2.0161;2133,1,6.4516;2134,1,12.9032
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="82800000" />
+		<set name="skillType" val="EXTRACTABLE" />
 		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="9043" levels="1" name="6th Anniversary Cube">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13143,1,0.0002;14105,1,0.0002;14108,1,0.0002;14109,1,0.0002;14110,1,0.0002;14111,1,0.0002;13144,1,0.0002;14106,1,0.0002;14112,1,0.0002;14113,1,0.0002;14114,1,0.0002;13145,1,0.0002;14107,1,0.0002;14115,1,0.0002;14116,1,0.0002;14117,1,0.0002;13887,1,0.0002;9514,1,0.00033;9515,1,0.00033;9516,1,0.00033;9517,1,0.00033;9518,1,0.00033;9529,1,0.00033;9519,1,0.00033;9520,1,0.00033;9521,1,0.00033;9522,1,0.00033;9523,1,0.00033;9524,1,0.00033;9525,1,0.00033;9526,1,0.00033;9527,1,0.00033;9528,1,0.00033;13886,1,0.00033;13457,1,0.00005;13458,1,0.00005;13459,1,0.00005;13460,1,0.00005;13461,1,0.00005;13462,1,0.00005;13463,1,0.00005;13464,1,0.00005;13465,1,0.00005;13466,1,0.00005;13467,1,0.00005;13468,1,0.00005;13469,1,0.00005;13470,1,0.00005;10215,1,0.00009;10216,1,0.00009;10217,1,0.00009;10218,1,0.00009;10219,1,0.00009;10220,1,0.00009;10221,1,0.00009;10222,1,0.00009;10223,1,0.00009;10224,1,0.00009;10225,1,0.00009;10226,1,0.00009;9380,1,0.00016;9446,1,0.00016;9384,1,0.00016;9449,1,0.00016;9450,1,0.00016;9445,1,0.00016;9443,1,0.00016;9442,1,0.00016;10252,1,0.00016;9448,1,0.00016;10253,1,0.00016;9384,1,0.00016;9444,1,0.00016;9447,1,0.00016;15428,1,0.1111;10480,1,0.0004;10481,1,0.0004;10482,1,0.0004;13071,1,0.0002;13072,1,0.0002;13073,1,0.0002;12365,1,0.1466;12366,1,0.1466;12370,1,0.1466;12371,1,0.1466;729,1,0.1466;730,1,0.1466;959,1,0.1466;960,1,0.1466;5908,1,0.0489;5911,1,0.0489;5914,1,0.0489;9570,1,0.0489;9571,1,0.0489;9572,1,0.0489;13420,1,0.1466;15427,1,9.6773;13421,1,4.8387;14683,1,3.2174;14684,1,3.2174;14685,1,3.2174;14686,1,3.2174;14687,1,3.2174;14689,1,3.2174;14690,1,3.2174;14691,1,3.2174;14692,1,3.2174;14693,1,3.2174;14695,1,3.2174;14696,1,3.2174;14697,1,3.2174;14698,1,3.2174;14699,1,3.2174;8751,1,2.0161;8752,1,2.0161;9575,1,2.0161;10485,1,2.0161;8761,1,2.0161;8762,1,2.0161;9576,1,2.0161;10486,1,2.0161;2133,1,6.4516;2134,1,12.9032
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="82800000" />
+		<set name="skillType" val="EXTRACTABLE" />
 		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="9044" levels="1" name="6th Anniversary Cube">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13143,1,0.0002;14105,1,0.0002;14108,1,0.0002;14109,1,0.0002;14110,1,0.0002;14111,1,0.0002;13144,1,0.0002;14106,1,0.0002;14112,1,0.0002;14113,1,0.0002;14114,1,0.0002;13145,1,0.0002;14107,1,0.0002;14115,1,0.0002;14116,1,0.0002;14117,1,0.0002;13887,1,0.0002;9514,1,0.00033;9515,1,0.00033;9516,1,0.00033;9517,1,0.00033;9518,1,0.00033;9529,1,0.00033;9519,1,0.00033;9520,1,0.00033;9521,1,0.00033;9522,1,0.00033;9523,1,0.00033;9524,1,0.00033;9525,1,0.00033;9526,1,0.00033;9527,1,0.00033;9528,1,0.00033;13886,1,0.00033;13457,1,0.00005;13458,1,0.00005;13459,1,0.00005;13460,1,0.00005;13461,1,0.00005;13462,1,0.00005;13463,1,0.00005;13464,1,0.00005;13465,1,0.00005;13466,1,0.00005;13467,1,0.00005;13468,1,0.00005;13469,1,0.00005;13470,1,0.00005;10215,1,0.00009;10216,1,0.00009;10217,1,0.00009;10218,1,0.00009;10219,1,0.00009;10220,1,0.00009;10221,1,0.00009;10222,1,0.00009;10223,1,0.00009;10224,1,0.00009;10225,1,0.00009;10226,1,0.00009;9380,1,0.00016;9446,1,0.00016;9384,1,0.00016;9449,1,0.00016;9450,1,0.00016;9445,1,0.00016;9443,1,0.00016;9442,1,0.00016;10252,1,0.00016;9448,1,0.00016;10253,1,0.00016;9384,1,0.00016;9444,1,0.00016;9447,1,0.00016;15428,1,0.1111;10480,1,0.0004;10481,1,0.0004;10482,1,0.0004;13071,1,0.0002;13072,1,0.0002;13073,1,0.0002;12365,1,0.1466;12366,1,0.1466;12370,1,0.1466;12371,1,0.1466;729,1,0.1466;730,1,0.1466;959,1,0.1466;960,1,0.1466;5908,1,0.0489;5911,1,0.0489;5914,1,0.0489;9570,1,0.0489;9571,1,0.0489;9572,1,0.0489;13420,1,0.1466;15427,1,9.6773;13421,1,4.8387;14683,1,3.2174;14684,1,3.2174;14685,1,3.2174;14686,1,3.2174;14687,1,3.2174;14689,1,3.2174;14690,1,3.2174;14691,1,3.2174;14692,1,3.2174;14693,1,3.2174;14695,1,3.2174;14696,1,3.2174;14697,1,3.2174;14698,1,3.2174;14699,1,3.2174;8751,1,2.0161;8752,1,2.0161;9575,1,2.0161;10485,1,2.0161;8761,1,2.0161;8762,1,2.0161;9576,1,2.0161;10486,1,2.0161;2133,1,6.4516;2134,1,12.9032
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="82800000" />
+		<set name="skillType" val="EXTRACTABLE" />
 		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="9045" levels="1" name="6th Anniversary Cube">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13143,1,0.0002;14105,1,0.0002;14108,1,0.0002;14109,1,0.0002;14110,1,0.0002;14111,1,0.0002;13144,1,0.0002;14106,1,0.0002;14112,1,0.0002;14113,1,0.0002;14114,1,0.0002;13145,1,0.0002;14107,1,0.0002;14115,1,0.0002;14116,1,0.0002;14117,1,0.0002;13887,1,0.0002;9514,1,0.00033;9515,1,0.00033;9516,1,0.00033;9517,1,0.00033;9518,1,0.00033;9529,1,0.00033;9519,1,0.00033;9520,1,0.00033;9521,1,0.00033;9522,1,0.00033;9523,1,0.00033;9524,1,0.00033;9525,1,0.00033;9526,1,0.00033;9527,1,0.00033;9528,1,0.00033;13886,1,0.00033;13457,1,0.00005;13458,1,0.00005;13459,1,0.00005;13460,1,0.00005;13461,1,0.00005;13462,1,0.00005;13463,1,0.00005;13464,1,0.00005;13465,1,0.00005;13466,1,0.00005;13467,1,0.00005;13468,1,0.00005;13469,1,0.00005;13470,1,0.00005;10215,1,0.00009;10216,1,0.00009;10217,1,0.00009;10218,1,0.00009;10219,1,0.00009;10220,1,0.00009;10221,1,0.00009;10222,1,0.00009;10223,1,0.00009;10224,1,0.00009;10225,1,0.00009;10226,1,0.00009;9380,1,0.00016;9446,1,0.00016;9384,1,0.00016;9449,1,0.00016;9450,1,0.00016;9445,1,0.00016;9443,1,0.00016;9442,1,0.00016;10252,1,0.00016;9448,1,0.00016;10253,1,0.00016;9384,1,0.00016;9444,1,0.00016;9447,1,0.00016;15428,1,0.1111;10480,1,0.0004;10481,1,0.0004;10482,1,0.0004;13071,1,0.0002;13072,1,0.0002;13073,1,0.0002;12365,1,0.1466;12366,1,0.1466;12370,1,0.1466;12371,1,0.1466;729,1,0.1466;730,1,0.1466;959,1,0.1466;960,1,0.1466;5908,1,0.0489;5911,1,0.0489;5914,1,0.0489;9570,1,0.0489;9571,1,0.0489;9572,1,0.0489;13420,1,0.1466;15427,1,9.6773;13421,1,4.8387;14683,1,3.2174;14684,1,3.2174;14685,1,3.2174;14686,1,3.2174;14687,1,3.2174;14689,1,3.2174;14690,1,3.2174;14691,1,3.2174;14692,1,3.2174;14693,1,3.2174;14695,1,3.2174;14696,1,3.2174;14697,1,3.2174;14698,1,3.2174;14699,1,3.2174;8751,1,2.0161;8752,1,2.0161;9575,1,2.0161;10485,1,2.0161;8761,1,2.0161;8762,1,2.0161;9576,1,2.0161;10486,1,2.0161;2133,1,6.4516;2134,1,12.9032
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="82800000" />
+		<set name="skillType" val="EXTRACTABLE" />
 		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="9046" levels="1" name="6th Anniversary Cube">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13143,1,0.0002;14105,1,0.0002;14108,1,0.0002;14109,1,0.0002;14110,1,0.0002;14111,1,0.0002;13144,1,0.0002;14106,1,0.0002;14112,1,0.0002;14113,1,0.0002;14114,1,0.0002;13145,1,0.0002;14107,1,0.0002;14115,1,0.0002;14116,1,0.0002;14117,1,0.0002;13887,1,0.0002;9514,1,0.00033;9515,1,0.00033;9516,1,0.00033;9517,1,0.00033;9518,1,0.00033;9529,1,0.00033;9519,1,0.00033;9520,1,0.00033;9521,1,0.00033;9522,1,0.00033;9523,1,0.00033;9524,1,0.00033;9525,1,0.00033;9526,1,0.00033;9527,1,0.00033;9528,1,0.00033;13886,1,0.00033;13457,1,0.00005;13458,1,0.00005;13459,1,0.00005;13460,1,0.00005;13461,1,0.00005;13462,1,0.00005;13463,1,0.00005;13464,1,0.00005;13465,1,0.00005;13466,1,0.00005;13467,1,0.00005;13468,1,0.00005;13469,1,0.00005;13470,1,0.00005;10215,1,0.00009;10216,1,0.00009;10217,1,0.00009;10218,1,0.00009;10219,1,0.00009;10220,1,0.00009;10221,1,0.00009;10222,1,0.00009;10223,1,0.00009;10224,1,0.00009;10225,1,0.00009;10226,1,0.00009;9380,1,0.00016;9446,1,0.00016;9384,1,0.00016;9449,1,0.00016;9450,1,0.00016;9445,1,0.00016;9443,1,0.00016;9442,1,0.00016;10252,1,0.00016;9448,1,0.00016;10253,1,0.00016;9384,1,0.00016;9444,1,0.00016;9447,1,0.00016;15428,1,0.1111;10480,1,0.0004;10481,1,0.0004;10482,1,0.0004;13071,1,0.0002;13072,1,0.0002;13073,1,0.0002;12365,1,0.1466;12366,1,0.1466;12370,1,0.1466;12371,1,0.1466;729,1,0.1466;730,1,0.1466;959,1,0.1466;960,1,0.1466;5908,1,0.0489;5911,1,0.0489;5914,1,0.0489;9570,1,0.0489;9571,1,0.0489;9572,1,0.0489;13420,1,0.1466;15427,1,9.6773;13421,1,4.8387;14683,1,3.2174;14684,1,3.2174;14685,1,3.2174;14686,1,3.2174;14687,1,3.2174;14689,1,3.2174;14690,1,3.2174;14691,1,3.2174;14692,1,3.2174;14693,1,3.2174;14695,1,3.2174;14696,1,3.2174;14697,1,3.2174;14698,1,3.2174;14699,1,3.2174;8751,1,2.0161;8752,1,2.0161;9575,1,2.0161;10485,1,2.0161;8761,1,2.0161;8762,1,2.0161;9576,1,2.0161;10486,1,2.0161;2133,1,6.4516;2134,1,12.9032
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="82800000" />
+		<set name="skillType" val="EXTRACTABLE" />
 		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="9047" levels="1" name="6th Anniversary Cube">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13143,1,0.0002;14105,1,0.0002;14108,1,0.0002;14109,1,0.0002;14110,1,0.0002;14111,1,0.0002;13144,1,0.0002;14106,1,0.0002;14112,1,0.0002;14113,1,0.0002;14114,1,0.0002;13145,1,0.0002;14107,1,0.0002;14115,1,0.0002;14116,1,0.0002;14117,1,0.0002;13887,1,0.0002;9514,1,0.00033;9515,1,0.00033;9516,1,0.00033;9517,1,0.00033;9518,1,0.00033;9529,1,0.00033;9519,1,0.00033;9520,1,0.00033;9521,1,0.00033;9522,1,0.00033;9523,1,0.00033;9524,1,0.00033;9525,1,0.00033;9526,1,0.00033;9527,1,0.00033;9528,1,0.00033;13886,1,0.00033;13457,1,0.00005;13458,1,0.00005;13459,1,0.00005;13460,1,0.00005;13461,1,0.00005;13462,1,0.00005;13463,1,0.00005;13464,1,0.00005;13465,1,0.00005;13466,1,0.00005;13467,1,0.00005;13468,1,0.00005;13469,1,0.00005;13470,1,0.00005;10215,1,0.00009;10216,1,0.00009;10217,1,0.00009;10218,1,0.00009;10219,1,0.00009;10220,1,0.00009;10221,1,0.00009;10222,1,0.00009;10223,1,0.00009;10224,1,0.00009;10225,1,0.00009;10226,1,0.00009;9380,1,0.00016;9446,1,0.00016;9384,1,0.00016;9449,1,0.00016;9450,1,0.00016;9445,1,0.00016;9443,1,0.00016;9442,1,0.00016;10252,1,0.00016;9448,1,0.00016;10253,1,0.00016;9384,1,0.00016;9444,1,0.00016;9447,1,0.00016;15428,1,0.1111;10480,1,0.0004;10481,1,0.0004;10482,1,0.0004;13071,1,0.0002;13072,1,0.0002;13073,1,0.0002;12365,1,0.1466;12366,1,0.1466;12370,1,0.1466;12371,1,0.1466;729,1,0.1466;730,1,0.1466;959,1,0.1466;960,1,0.1466;5908,1,0.0489;5911,1,0.0489;5914,1,0.0489;9570,1,0.0489;9571,1,0.0489;9572,1,0.0489;13420,1,0.1466;15427,1,9.6773;13421,1,4.8387;14683,1,3.2174;14684,1,3.2174;14685,1,3.2174;14686,1,3.2174;14687,1,3.2174;14689,1,3.2174;14690,1,3.2174;14691,1,3.2174;14692,1,3.2174;14693,1,3.2174;14695,1,3.2174;14696,1,3.2174;14697,1,3.2174;14698,1,3.2174;14699,1,3.2174;8751,1,2.0161;8752,1,2.0161;9575,1,2.0161;10485,1,2.0161;8761,1,2.0161;8762,1,2.0161;9576,1,2.0161;10486,1,2.0161;2133,1,6.4516;2134,1,12.9032
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="82800000" />
+		<set name="skillType" val="EXTRACTABLE" />
 		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="9048" levels="1" name="6th Anniversary Cube">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13143,1,0.0002;14105,1,0.0002;14108,1,0.0002;14109,1,0.0002;14110,1,0.0002;14111,1,0.0002;13144,1,0.0002;14106,1,0.0002;14112,1,0.0002;14113,1,0.0002;14114,1,0.0002;13145,1,0.0002;14107,1,0.0002;14115,1,0.0002;14116,1,0.0002;14117,1,0.0002;13887,1,0.0002;9514,1,0.00033;9515,1,0.00033;9516,1,0.00033;9517,1,0.00033;9518,1,0.00033;9529,1,0.00033;9519,1,0.00033;9520,1,0.00033;9521,1,0.00033;9522,1,0.00033;9523,1,0.00033;9524,1,0.00033;9525,1,0.00033;9526,1,0.00033;9527,1,0.00033;9528,1,0.00033;13886,1,0.00033;13457,1,0.00005;13458,1,0.00005;13459,1,0.00005;13460,1,0.00005;13461,1,0.00005;13462,1,0.00005;13463,1,0.00005;13464,1,0.00005;13465,1,0.00005;13466,1,0.00005;13467,1,0.00005;13468,1,0.00005;13469,1,0.00005;13470,1,0.00005;10215,1,0.00009;10216,1,0.00009;10217,1,0.00009;10218,1,0.00009;10219,1,0.00009;10220,1,0.00009;10221,1,0.00009;10222,1,0.00009;10223,1,0.00009;10224,1,0.00009;10225,1,0.00009;10226,1,0.00009;9380,1,0.00016;9446,1,0.00016;9384,1,0.00016;9449,1,0.00016;9450,1,0.00016;9445,1,0.00016;9443,1,0.00016;9442,1,0.00016;10252,1,0.00016;9448,1,0.00016;10253,1,0.00016;9384,1,0.00016;9444,1,0.00016;9447,1,0.00016;15428,1,0.1111;10480,1,0.0004;10481,1,0.0004;10482,1,0.0004;13071,1,0.0002;13072,1,0.0002;13073,1,0.0002;12365,1,0.1466;12366,1,0.1466;12370,1,0.1466;12371,1,0.1466;729,1,0.1466;730,1,0.1466;959,1,0.1466;960,1,0.1466;5908,1,0.0489;5911,1,0.0489;5914,1,0.0489;9570,1,0.0489;9571,1,0.0489;9572,1,0.0489;13420,1,0.1466;15427,1,9.6773;13421,1,4.8387;14683,1,3.2174;14684,1,3.2174;14685,1,3.2174;14686,1,3.2174;14687,1,3.2174;14689,1,3.2174;14690,1,3.2174;14691,1,3.2174;14692,1,3.2174;14693,1,3.2174;14695,1,3.2174;14696,1,3.2174;14697,1,3.2174;14698,1,3.2174;14699,1,3.2174;8751,1,2.0161;8752,1,2.0161;9575,1,2.0161;10485,1,2.0161;8761,1,2.0161;8762,1,2.0161;9576,1,2.0161;10486,1,2.0161;2133,1,6.4516;2134,1,12.9032
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="82800000" />
+		<set name="skillType" val="EXTRACTABLE" />
 		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="9049" levels="1" name="Golden Spice">
 		<set name="itemConsumeCount" val="1" />
@@ -386,12 +506,17 @@
 		</cond>
 	</skill>
 	<skill id="9055" levels="1" name="Golden Spice Capsule">
-		<set name="itemConsumeCount" val="1" />
-		<set name="reuseDelay" val="1000" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			15474,50,90;15474,40,15476,5,5;15474,40,15478,5,5
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="hitTime" val="500" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="1000" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -400,12 +525,17 @@
 		</cond>
 	</skill>
 	<skill id="9056" levels="1" name="Crystal Spice Capsule">
-		<set name="itemConsumeCount" val="1" />
-		<set name="reuseDelay" val="1000" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			15475,50,90;15475,40,15477,5,5;15475,40,15479,5,5
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="hitTime" val="500" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
+		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="1000" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -462,22 +592,58 @@
 		<set name="reuseDelay" val="10000" />
 	</skill>
 	<skill id="9064" levels="1" name="Halloween Toy Chest">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			15443,1,20;15444,1,20;15445,1,20;15446,1,20;15447,1,20
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="9065" levels="1" name="Shiny Halloween Toy Chest">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			15450,1,20;15451,1,20;15452,1,20;15453,1,20;15449,1,20
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="9066" levels="1" name="Scroll of Transformation Box">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			10131,1,33;10132,1,33;10133,1,34
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="9067" levels="1" name="Potion of Vitality Maintenance">
 		<!-- Energy is maintained for 10 minutes. -->
@@ -524,25 +690,61 @@
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="9070" levels="1" name="Halloween Pumpkin">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			15463,1,14055,1,50;15463,1,10649,1,50
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="EXTRACTABLE" />
 		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="9071" levels="1" name="Halloween Pumpkin - event">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			15463,1,14055,1,50;15463,1,10649,1,50
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="EXTRACTABLE" />
 		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="9072" levels="1" name="Small Halloween Pumpkin">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			14706,1,5;14711,1,5;14705,1,10;14704,1,10;14710,1,10;14709,1,10;15439,1,10;14065,1,15;13273,1,15;13016,10,15
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="EXTRACTABLE" />
 		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="9073" levels="1" name="Energy of Vampiric Rage">
 		<!-- Converts 9% of inflicted physical-damage to HP for 20 minutes. -->
@@ -570,10 +772,22 @@
 		<set name="reuseDelay" val="8000" />
 	</skill>
 	<skill id="9077" levels="1" name="Open Packaged Book">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			8619,1,40;8620,1,40;15715,1,20
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="1000" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="9078" levels="1" name="Rainbow Springs Potion">
 		<!-- Increases the regen rate of HP/MP/CP by 30%. -->
@@ -591,11 +805,23 @@
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="9080" levels="1" name="Santa's Sock">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			16408,1,14739,1,5561,1,82.9;14678,1,10;14679,1,5;14680,1,2;14681,1,0.1
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="10000" />
+		<set name="skillType" val="EXTRACTABLE" />
 		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="9081" levels="1" name="Christmas Cake">
 		<set name="target" val="TARGET_NONE" />
@@ -628,11 +854,23 @@
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="9085" levels="1" name="Santa Claus's Gift">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			13457,1,0.0000498;13458,1,0.0000498;13459,1,0.0000498;13460,1,0.0000498;13461,1,0.0000498;13462,1,0.0000498;13463,1,0.0000498;13464,1,0.0000498;13465,1,0.0000498;13466,1,0.0000498;13467,1,0.0000498;13468,1,0.0000498;13469,1,0.0000498;13470,1,0.0000498;10215,1,0.0001162;10216,1,0.0001162;10217,1,0.0001162;10218,1,0.0001162;10219,1,0.0001162;10220,1,0.0001162;10221,1,0.0001162;10222,1,0.0001162;10223,1,0.0001162;10224,1,0.0001162;10225,1,0.0001162;10226,1,0.0001162;9380,1,0.0001486;9446,1,0.0001486;9384,1,0.0001486;9449,1,0.0001486;9450,1,0.0001486;9445,1,0.0001486;9443,1,0.0001486;9442,1,0.0001486;10252,1,0.0001486;9448,1,0.0001486;10253,1,0.0001486;9384,1,0.0001486;9444,1,0.0001486;9447,1,0.0001486;13143,1,0.0000733;14105,1,0.0000733;14108,1,0.0000733;14109,1,0.0000733;14110,1,0.0000733;14111,1,0.0000733;13144,1,0.0000733;14106,1,0.0000733;14112,1,0.0000733;14113,1,0.0000733;14114,1,0.0000733;13145,1,0.0000733;14107,1,0.0000733;14115,1,0.0000733;14116,1,0.0000733;14117,1,0.0000733;13887,1,0.0000733;9514,1,0.0001458;9515,1,0.0001458;9516,1,0.0001458;9517,1,0.0001458;9518,1,0.0001458;9529,1,0.0001458;9519,1,0.0001458;9520,1,0.0001458;9521,1,0.0001458;9522,1,0.0001458;9523,1,0.0001458;9524,1,0.0001458;9525,1,0.0001458;9526,1,0.0001458;9527,1,0.0001458;9528,1,0.0001458;13886,1,0.0001458;9570,1,0.0008261;9571,1,0.0008261;9572,1,0.0008261;10480,1,0.0004649;10481,1,0.0004649;10482,1,0.0004649;13071,1,0.0002325;13072,1,0.0002325;13073,1,0.0002325;729,1,0.5263449;959,1,0.5263449;730,1,0.7655924;960,1,0.7655924;1538,1,1.4975597;14686,1,0.7681786;14687,1,0.7681786;14693,1,0.7686099;14692,1,0.7686099;14698,1,0.7681786;14699,1,0.7681786;15439,1,1.5217011;14611,1,0.12009793;5560,1,1.5389435;5562,1,0.2401959;5563,1,0.2401959;5564,1,0.2401959;5565,1,0.2401959;5566,1,0.2401959;6622,1,1.3044378;14701,1,22.5439206;17005,1,63.06608387
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="EXTRACTABLE" />
 		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="9086" levels="1" name="Santa - Potion of Will">
 		<set name="target" val="TARGET_NONE" />

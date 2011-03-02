@@ -280,12 +280,24 @@
 		<set name="lvlDepend" val="1" />
 	</skill>
 	<skill id="6239" levels="1" name="Proof of Space and Time">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="reuseDelay" val="86400000" />
+		<!-- Confirmed CT2.5 -->
 		<set name="coolTime" val="1000" />
+		<set name="create_item_count" val="1" />
+		<set name="create_item_id" val="15352" />
+		<set name="hitTime" val="2700" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="55" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="86400000" />
 		<set name="staticReuse" val="true" />
+		<set name="skillType" val="CREATE_ITEM" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="6240" levels="5" name="Heatstroke">
 		<set name="target" val="TARGET_NONE" />

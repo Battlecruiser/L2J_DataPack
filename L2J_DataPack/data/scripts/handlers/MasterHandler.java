@@ -221,7 +221,6 @@ import handlers.skillhandlers.Spoil;
 import handlers.skillhandlers.StealBuffs;
 import handlers.skillhandlers.StrSiegeAssault;
 import handlers.skillhandlers.SummonFriend;
-import handlers.skillhandlers.SummonTreasureKey;
 import handlers.skillhandlers.Sweep;
 import handlers.skillhandlers.TakeCastle;
 import handlers.skillhandlers.TakeFort;
@@ -490,7 +489,6 @@ public class MasterHandler
 		SkillHandler.getInstance().registerSkillHandler(new Sweep());
 		SkillHandler.getInstance().registerSkillHandler(new StrSiegeAssault());
 		SkillHandler.getInstance().registerSkillHandler(new SummonFriend());
-		SkillHandler.getInstance().registerSkillHandler(new SummonTreasureKey());
 		SkillHandler.getInstance().registerSkillHandler(new Disablers());
 		SkillHandler.getInstance().registerSkillHandler(new Cancel());
 		SkillHandler.getInstance().registerSkillHandler(new StealBuffs());

@@ -334,20 +334,45 @@
 		</for>
 	</skill>
 	<skill id="2420" levels="1" name="White Seed of Evil Lump">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="create_item_count" val="2" />
+		<set name="create_item_id" val="9597" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="CREATE_ITEM" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="2421" levels="1" name="Black Seed of Evil Lump">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="create_item_count" val="2" />
+		<set name="create_item_id" val="9598" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="CREATE_ITEM" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="2422" levels="1" name="1st Place Treasure Sack">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			6373,1,1.19;6374,1,1.84;6375,1,4.47;6376,1,4.47;6377,1,4.25;6378,1,3.01;6379,1,0.19;6380,1,4.47;6381,1,4.47;6382,1,3.01;6383,1,0.19;6384,1,4.47;6385,1,4.47;6386,1,3.01;9570,1,3.16;9571,1,3.16;9572,1,3.16;5908,1,15.67;5911,1,15.67;5914,1,15.67
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -355,11 +380,16 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2423" levels="2" name="2nd Place Treasure Sack">
+	<skill id="2423" levels="1" name="2nd Place Treasure Sack">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			9625,1,2.20;9626,1,1.42;9627,1,0.67;9546,1,15.30;9547,1,15.30;9548,1,15.30;9549,1,15.30;9550,1,15.30;9551,1,15.30;959,1,0.28;960,1,3.73
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -367,11 +397,16 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2424" levels="3" name="3rd Place Treasure Sack">
+	<skill id="2424" levels="1" name="3rd Place Treasure Sack">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			729,1,0.51;730,1,3.86;947,1,1.85;948,1,11.57;8736,1,32.15;8738,1,23.15;8741,1,12.86;8742,1,11.57;3936,1,2.48
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -379,11 +414,16 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2425" levels="4" name="4th Place Treasure Sack">
+	<skill id="2425" levels="1" name="4th Place Treasure Sack">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			951,1,3.01;952,1,21.30;955,1,6.41;956,1,52.72;1538,1,2.56;9909,1,7.00;10139,1,7.00
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -391,11 +431,16 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2426" levels="5" name="5th Place Treasure sack">
+	<skill id="2426" levels="1" name="5th Place Treasure sack">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			10178,5,10179,5,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -403,11 +448,16 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2427" levels="6" name="6th Place Treasure Sack">
+	<skill id="2427" levels="1" name="6th Place Treasure Sack">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			10260,3,9.00;10261,3,9.00;10262,3,9.00;10263,3,9.00;10264,3,9.00;10265,3,9.00;10266,3,9.00;10267,3,9.00;10268,3,9.00;10269,3,9.00;10270,3,10.00
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -629,10 +679,15 @@
 		</for>
 	</skill>
 	<skill id="2440" levels="1" name="Ancient Tome of the Demon">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			9600,1,40;9601,2,50;9602,1,10
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -1505,10 +1560,15 @@
 		</cond>
 	</skill>
 	<skill id="2490" levels="1" name="Magic Defense Toolkit for beginners">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			10470,2,10471,2,10472,1,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="EXTRACTABLE" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />

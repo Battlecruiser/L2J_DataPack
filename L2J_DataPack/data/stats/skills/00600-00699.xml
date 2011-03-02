@@ -282,30 +282,47 @@
 		<set name="hitTime" val="2500" />
 	</skill>
 	<skill id="620" levels="1" name="Quiver of Bolts - Grade B">
-		<set name="mpConsume" val="366" />
-		<set name="target" val="TARGET_SELF" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			9635,700,30;9635,1400,50;9635,2800,20
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="extractableSkillUseMsg" val="false" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="true" />
-		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="itemConsumeId" val="1460" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="create_item_id" val="9635" />
-		<set name="create_item_count" val="700" />
-		<set name="random_count" val="2100" />
+		<set name="itemConsumeId" val="1460" />
+		<set name="magicLvl" val="52" />
+		<set name="mpConsume" val="366" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="621" levels="1" name="Create Special Bolt">
-		<!-- Needs to be verified -->
-		<set name="mpConsume" val="38" />
-		<set name="target" val="TARGET_SELF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="create_item_count" val="1" />
+		<set name="create_item_id" val="10113" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="43" />
+		<set name="mpConsume" val="38" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="150000" />
 		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="create_item_id" val="10113" />
-		<set name="create_item_count" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="622" levels="2" name="Ultimate Escape">
 		<table name="#rEvas"> 20 35 </table>

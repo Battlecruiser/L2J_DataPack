@@ -809,11 +809,23 @@
 		</for>
 	</skill>
 	<skill id="23066" levels="1" name="Daewoonso Agathion Special Skill - New Year's Gift Ability">
-		<!-- Can receive a New Year's Gift. Reuse Delay 1 hours -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			57,2009,99;57,20090,0.99;57,200900,0.099;57,2009000,0.0099
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="extractableSkillUseMsg" val="false" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 		<cond msgId="2292">
 			<player agathionId="1526" />
 		</cond>

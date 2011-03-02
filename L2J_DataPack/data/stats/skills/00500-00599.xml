@@ -444,16 +444,24 @@
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="513" levels="1" name="Create Dark Seed">
-		<set name="mpConsume" val="58" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isMagic" val="true" />
-		<set name="reuseDelay" val="150000" />
-		<set name="hitTime" val="3000" />
-		<set name="create_item_id" val="10112" />
+		<!-- Confirmed CT2.5 -->
 		<set name="create_item_count" val="1" />
+		<set name="create_item_id" val="10112" />
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="62" />
+		<set name="mpConsume" val="58" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="150000" />
+		<set name="skillType" val="CREATE_ITEM" />
 		<set name="soulConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="514" levels="9" name="Fire Trap" enchantGroup1="2" enchantGroup2="2">
 		<!-- CT2.5 retail confirmed -->
@@ -556,32 +564,52 @@
 		<enchant2 name="reuseDelay" val="#ench2reuse" />
 	</skill>
 	<skill id="519" levels="1" name="Quiver of Bolts: A-Grade">
-		<set name="mpConsume" val="366" />
-		<set name="target" val="TARGET_SELF" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			9636,700,30;9636,1400,50;9636,2800,20
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="extractableSkillUseMsg" val="false" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="true" />
-		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="itemConsumeId" val="1461" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="create_item_id" val="9636" />
-		<set name="create_item_count" val="700" />
-		<set name="random_count" val="2100" />
+		<set name="itemConsumeId" val="1461" />
+		<set name="magicLvl" val="60" />
+		<set name="mpConsume" val="366" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="520" levels="1" name="Quiver of Bolts: S-Grade">
-		<set name="mpConsume" val="398" />
-		<set name="target" val="TARGET_SELF" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			9637,900,30;9637,1800,50;9637,3600,20
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="extractableSkillUseMsg" val="false" />
 		<set name="hitTime" val="3000" />
-		<set name="isMagic" val="true" />
-		<set name="skillType" val="CREATE_ITEM" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="itemConsumeId" val="1462" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="create_item_id" val="9637" />
-		<set name="create_item_count" val="900" />
-		<set name="random_count" val="2700" />
+		<set name="itemConsumeId" val="1462" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="74" />
+		<set name="mpConsume" val="398" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
 	</skill>
 	<skill id="521" levels="8" name="Sharpshooting" enchantGroup1="1" enchantGroup2="1">
 		<table name="#ench1Power"> 211 213 214 215 217 218 220 221 223 224 226 227 228 230 231 233 234 236 237 239 240 241 243 244 246 247 249 250 252 253 </table>

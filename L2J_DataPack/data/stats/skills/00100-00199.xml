@@ -812,17 +812,20 @@
 		</enchant1for>
 	</skill>
 	<skill id="139" levels="3" name="Guts">
-		<table name="#pDef"> 2 2.5 3 </table>
-		<table name="#mpConsume"> 16 19 24 </table>
-		<table name="#stackOrder"> 1 2 3 </table>
+		<!-- Confirmed CT2.5 -->
 		<table name="#aggro"> 341 408 495 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="600000" />
-		<set name="hitTime" val="1500" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<table name="#magicLvl"> 36 43 52 </table>
+		<table name="#mpConsume"> 16 19 24 </table>
+		<table name="#pDef"> 2 2.5 3 </table>
+		<table name="#stackOrder"> 1 2 3 </table>
 		<set name="aggroPoints" val="#aggro" />
+		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player hp="30" />
 		</cond>
