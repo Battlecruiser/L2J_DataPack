@@ -617,68 +617,6 @@
 		<spawn X="-16341" Y="209285" Z="-3665" />
 	</zone>
 
-	<!-- SSQ Main Event -->
-	<!-- Oracle of Dusk (Mp Regen Zones) -->
-	<zone name="ssq_main_event_17_20_01" id="50000" type="MotherTreeZone" shape="NPoly" minZ="-5168" maxZ="-4968">
-		<stat name="MpRegenBonus" val="2" />
-		<stat name="enterMsgId" val="1054" />
-		<stat name="leaveMsgId" val="1055" />
-	</zone>
-	<zone name="ssq_main_event_17_20_04" id="50001" type="MotherTreeZone" shape="NPoly" minZ="-5164" maxZ="-4964">
-		<stat name="MpRegenBonus" val="2" />
-		<stat name="enterMsgId" val="1054" />
-		<stat name="leaveMsgId" val="1055" />
-	</zone>
-	<zone name="ssq_main_event_17_20_05" id="50002" type="MotherTreeZone" shape="NPoly" minZ="-5164" maxZ="-4964">
-		<stat name="MpRegenBonus" val="3" />
-		<stat name="enterMsgId" val="1054" />
-		<stat name="leaveMsgId" val="1055" />
-	</zone>
-	<zone name="ssq_main_event_17_20_03" id="50003" type="MotherTreeZone" shape="NPoly" minZ="-5176" maxZ="-4976">
-		<stat name="MpRegenBonus" val="3" />
-		<stat name="enterMsgId" val="1054" />
-		<stat name="leaveMsgId" val="1055" />
-	</zone>
-	<zone name="ssq_main_event_17_20_02" id="50004" type="MotherTreeZone" shape="NPoly" minZ="-5172" maxZ="-4972">
-		<stat name="MpRegenBonus" val="4" />
-		<stat name="enterMsgId" val="1054" />
-		<stat name="leaveMsgId" val="1055" />
-	</zone>
-	<!-- Oracle of Dawn (Mp Regen Zones) -->
-	<zone name="ssq_main_event_17_21_01" id="50005" type="MotherTreeZone" shape="NPoly" minZ="-4916" maxZ="-4716">
-		<stat name="MpRegenBonus" val="2" />
-		<stat name="enterMsgId" val="1054" />
-		<stat name="leaveMsgId" val="1055" />
-	</zone>
-	<zone name="ssq_main_event_17_21_02" id="50006" type="MotherTreeZone" shape="NPoly" minZ="-4908" maxZ="-4708">
-		<stat name="MpRegenBonus" val="2" />
-		<stat name="enterMsgId" val="1054" />
-		<stat name="leaveMsgId" val="1055" />
-	</zone>
-	<zone name="ssq_main_event_17_21_05" id="50007" type="MotherTreeZone" shape="NPoly" minZ="-4916" maxZ="-4716">
-		<stat name="MpRegenBonus" val="3" />
-		<stat name="enterMsgId" val="1054" />
-		<stat name="leaveMsgId" val="1055" />
-	</zone>
-	<zone name="ssq_main_event_17_21_03" id="50008" type="MotherTreeZone" shape="NPoly" minZ="-4912" maxZ="-4712">
-		<stat name="MpRegenBonus" val="3" />
-		<stat name="enterMsgId" val="1054" />
-		<stat name="leaveMsgId" val="1055" />
-	</zone>
-	<zone name="ssq_main_event_17_21_04" id="50009" type="MotherTreeZone" shape="NPoly" minZ="-4908" maxZ="-4708">
-		<stat name="MpRegenBonus" val="4" />
-		<stat name="enterMsgId" val="1054" />
-		<stat name="leaveMsgId" val="1055" />
-	</zone>
-	<!-- Oracle of Dusk (No Store Zones) -->
-	<zone name="ssq_peace_1720_01" id="50016" type="NoStoreZone" shape="NPoly" minZ="-5208" maxZ="-5008" />
-	<zone name="ssq_peace_1720_02" id="50017" type="NoStoreZone" shape="NPoly" minZ="-5200" maxZ="-5000" />
-	<zone name="ssq_peace_1720_03" id="50018" type="NoStoreZone" shape="NPoly" minZ="-5200" maxZ="-5000" />
-	<!-- Oracle of Dawn (No Store Zones) -->
-	<zone name="ssq_peace_1721_01" id="50019" type="NoStoreZone" shape="NPoly" minZ="-4952" maxZ="-4752" />
-	<zone name="ssq_peace_1721_02" id="50020" type="NoStoreZone" shape="NPoly" minZ="-4956" maxZ="-4756" />
-	<zone name="ssq_peace_1721_03" id="50021" type="NoStoreZone" shape="NPoly" minZ="-4944" maxZ="-4744" />
-
 	<zone name="Seed of Annihilation 1" id="60006" type="EffectZone" shape="NPoly" minZ="-10700" maxZ="-10100">
 		<stat name="maxDynamicSkillCount" val="1" />
 		<stat name="showDangerIcon" val="false" />
