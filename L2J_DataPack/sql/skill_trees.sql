@@ -2532,11 +2532,11 @@ INSERT INTO `skill_trees` VALUES
 
 -- Human Mystic
 INSERT INTO `skill_trees` VALUES
-(10,163,1,'Spellcraft',0,1,'true','false'),
-(10,214,1,'Mana Recovery',0,1,'true','false'),
-(10,118,1,'Magician\'s Movement',0,1,'true','false'),
-(10,1177,1,'Wind Strike',0,1,'true','false'),
-(10,1216,1,'Self Heal',0,1,'true','false'),
+(10,163,1,'Spellcraft',0,1,'false','false'),
+(10,214,1,'Mana Recovery',0,1,'false','false'),
+(10,118,1,'Magician\'s Movement',0,1,'false','false'),
+(10,1177,1,'Wind Strike',0,1,'false','false'),
+(10,1216,1,'Self Heal',0,1,'false','false'),
 (10,1184,1,'Ice Bolt',240,7,'true','false'),
 (10,1184,2,'Ice Bolt',240,7,'true','false'),
 (10,1168,1,'Curse: Poison',470,7,'true','false'),
@@ -6332,11 +6332,11 @@ INSERT INTO `skill_trees` VALUES
 
 -- Elven Mystic
 INSERT INTO `skill_trees` VALUES
-(25,163,1,'Spellcraft',0,1,'true','false'),
-(25,214,1,'Mana Recovery',0,1,'true','false'),
-(25,118,1,'Magician\'s Movement',0,1,'true','false'),
-(25,1177,1,'Wind Strike',0,1,'true','false'),
-(25,1216,1,'Self Heal',0,1,'true','false'),
+(25,163,1,'Spellcraft',0,1,'false','false'),
+(25,214,1,'Mana Recovery',0,1,'false','false'),
+(25,118,1,'Magician\'s Movement',0,1,'false','false'),
+(25,1177,1,'Wind Strike',0,1,'false','false'),
+(25,1216,1,'Self Heal',0,1,'false','false'),
 (25,1040,1,'Shield',520,7,'true','false'),
 (25,1068,1,'Might',520,7,'true','false'),
 (25,1177,2,'Wind Strike',260,7,'true','false'),
@@ -9592,11 +9592,11 @@ INSERT INTO `skill_trees` VALUES
 
 -- Dark Mystic
 INSERT INTO `skill_trees` VALUES
-(38,163,1,'Spellcraft',0,1,'true','false'),
-(38,214,1,'Mana Recovery',0,1,'true','false'),
-(38,118,1,'Magician\'s Movement',0,1,'true','false'),
-(38,1177,1,'Wind Strike',0,1,'true','false'),
-(38,1216,1,'Self Heal',0,1,'true','false'),
+(38,163,1,'Spellcraft',0,1,'false','false'),
+(38,214,1,'Mana Recovery',0,1,'false','false'),
+(38,118,1,'Magician\'s Movement',0,1,'false','false'),
+(38,1177,1,'Wind Strike',0,1,'false','false'),
+(38,1216,1,'Self Heal',0,1,'false','false'),
 (38,1184,1,'Ice Bolt',240,7,'true','false'),
 (38,1184,2,'Ice Bolt',240,7,'true','false'),
 (38,1168,1,'Curse: Poison',470,7,'true','false'),
@@ -11024,7 +11024,7 @@ INSERT INTO `skill_trees` VALUES
 
 -- Orc Fighter
 INSERT INTO `skill_trees` VALUES
-(44,134,1,'Toughness',0,1,'true','false'),
+(44,134,1,'Toughness',0,1,'false','false'),
 (44,226,1,'Relax',190,5,'true','false'),
 (44,141,1,'Weapon Mastery',190,5,'true','false'),
 (44,142,1,'Armor Mastery',190,5,'true','false'),
@@ -11940,11 +11940,11 @@ INSERT INTO `skill_trees` VALUES
 
 -- Orc Mystic
 INSERT INTO `skill_trees` VALUES
-(49,163,1,'Spellcraft',0,1,'true','false'),
-(49,214,1,'Mana Recovery',0,1,'true','false'),
-(49,118,1,'Magician\'s Movement',0,1,'true','false'),
-(49,134,1,'Toughness',0,1,'true','false'),
-(49,1001,1,'Soul Cry',0,1,'true','false'),
+(49,163,1,'Spellcraft',0,1,'false','false'),
+(49,214,1,'Mana Recovery',0,1,'false','false'),
+(49,118,1,'Magician\'s Movement',0,1,'false','false'),
+(49,134,1,'Toughness',0,1,'false','false'),
+(49,1001,1,'Soul Cry',0,1,'false','false'),
 (49,146,1,'Anti Magic',260,7,'true','false'),
 (49,146,2,'Anti Magic',260,7,'true','false'),
 (49,251,1,'Robe Mastery',260,7,'true','false'),
@@ -14498,7 +14498,7 @@ INSERT INTO `skill_trees` VALUES
 
 -- Male Soldier
 INSERT INTO `skill_trees` VALUES
-(123,462,1,'Guilted Body',0,1,'true','false'),
+(123,462,1,'Guilted Body',0,1,'false','false'),
 (123,463,1,'Weapon Mastery',160,5,'true','false'),
 (123,464,1,'Armor Mastery',160,5,'true','false'),
 (123,468,1,'Fallen Attack',50,5,'true','false'),
@@ -14534,7 +14534,7 @@ INSERT INTO `skill_trees` VALUES
 
 -- Female Soldier
 INSERT INTO `skill_trees` VALUES
-(124,462,1,'Guilted Body',0,1,'true','false'),
+(124,462,1,'Guilted Body',0,1,'false','false'),
 (124,463,1,'Weapon Mastery',160,5,'true','false'),
 (124,464,1,'Armor Mastery',160,5,'true','false'),
 (124,468,1,'Fallen Attack',50,5,'true','false'),
