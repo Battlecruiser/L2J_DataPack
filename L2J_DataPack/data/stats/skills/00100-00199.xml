@@ -517,12 +517,16 @@
 		</enchant2for>
 	</skill>
 	<skill id="118" levels="1" name="Magician's Movement">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="0.8">
-				<using kind="Light,Heavy" />
+				<not>
+					<using kind="Magic" />
+				</not>
 			</mul>
 		</for>
 	</skill>
@@ -963,12 +967,16 @@
 		</enchant1for>
 	</skill>
 	<skill id="163" levels="1" name="Spellcraft">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<mul order="0x30" stat="mAtkSpd" val="0.5">
-				<using kind="Light,Heavy" />
+				<not>
+					<using kind="Magic" />
+				</not>
 			</mul>
 		</for>
 	</skill>
