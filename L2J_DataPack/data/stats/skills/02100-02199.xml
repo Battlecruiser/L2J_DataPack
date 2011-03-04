@@ -8,16 +8,20 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2101" levels="1" name="Feed: General Strider">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="FEED_PET" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
 		<set name="feed" val="200" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="FEED_PET" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2102" levels="1" name="Feed: Clan Hall Strider">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="FEED_PET" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
 		<set name="feed" val="450" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="FEED_PET" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2103" levels="1" name="Mystery Potion">
 		<set name="itemConsumeCount" val="1" />
@@ -886,11 +890,13 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="600" />
 	</skill>
-	<skill id="2180" levels="1" name="Feed: Castle Strider"> <!-- should be wyvern -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="FEED_PET" />
-		<set name="operateType" val="OP_ACTIVE" />
+	<skill id="2180" levels="1" name="Feed: Castle Strider">
+		<!-- Confirmed CT2.5 -->
 		<set name="feed" val="450" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="FEED_PET" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2181" levels="1" name="Item - Fishing Shot">
 		<set name="target" val="TARGET_NONE" />

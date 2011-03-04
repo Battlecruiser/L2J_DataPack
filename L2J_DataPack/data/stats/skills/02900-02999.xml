@@ -149,9 +149,12 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2916" levels="1" name="Feed for Enriched Enhanced Pets">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="feed" val="11000" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="FEED_PET" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2917" levels="1" name="Big Staccato Silk Cocoon">
 		<!-- Confirmed CT2.5 -->
