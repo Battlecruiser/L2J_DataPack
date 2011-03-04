@@ -421,10 +421,12 @@
 		<set name="operateType" val="OP_ACTIVE" />
 	</skill>
 	<skill id="2048" levels="1" name="Wolves' Food">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="FEED_PET" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
 		<set name="feed" val="100" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="FEED_PET" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2049" levels="1" name="Blessed Scroll of Resurrection">
 		<set name="power" val="100" />
@@ -619,10 +621,12 @@
 		<set name="effectRange" val="600" />
 	</skill>
 	<skill id="2063" levels="1" name="Hatchling Food">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="FEED_PET" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
 		<set name="feed" val="150" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="FEED_PET" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2064" levels="1" name="Scroll of Mana Regeneration">
 		<set name="itemConsumeCount" val="1" />

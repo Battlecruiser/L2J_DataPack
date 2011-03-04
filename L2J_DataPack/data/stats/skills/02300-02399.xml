@@ -892,10 +892,12 @@
 		</cond>
 	</skill>
 	<skill id="2361" levels="1" name="Evolving Wolf's Food">
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="FEED_PET" />
+		<!-- Confirmed CT2.5 -->
+		<set name="feed" val="1100" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="OP_ACTIVE" />
-		<set name="feed" val="1000" />
+		<set name="skillType" val="FEED_PET" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="2362" levels="1" name="Prison Gate Key">
 		<set name="target" val="TARGET_NONE" />
