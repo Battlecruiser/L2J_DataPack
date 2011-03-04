@@ -243,20 +243,20 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<set name="power" val="70" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="15000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="operateType" val="OP_ACTIVE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="power" val="#ench2Chance" />
 		<for>
-			<effect name="ChanceSkillTrigger" time="30" val="0" abnormal="poison" triggeredId="5591" triggeredLevel="#triggeredLevel" chanceType="ON_ATTACKED_HIT" activationChance="30" stackOrder="#triggeredLevel" stackType="curse_life_flow" />
+			<effect name="ChanceSkillTrigger" time="30" val="0" abnormal="poison" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5591" triggeredLevel="#triggeredLevel" stackOrder="#triggeredLevel" stackType="curse_life_flow" />
 		</for>
 		<enchant1for>
-			<effect name="ChanceSkillTrigger" time="#ench1Time" val="0" abnormal="poison" triggeredId="5591" triggeredLevel="8" chanceType="ON_ATTACKED_HIT" activationChance="30" stackOrder="8" stackType="curse_life_flow" />
+			<effect name="ChanceSkillTrigger" time="#ench1Time" val="0" abnormal="poison" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5591" triggeredLevel="8" stackOrder="8" stackType="curse_life_flow" />
 		</enchant1for>
 	</skill>
 	<skill id="1512" levels="1" name="Soul Vortex" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
@@ -733,30 +733,39 @@
 		<enchant3 name="pvpPower" val="#enchDuel" />
 	</skill>
 	<skill id="1531" levels="7" name="Bless the Blood" enchantGroup1="1" enchantGroup2="1">
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 40 48 56 60 64 68 72 </table>
 		<table name="#mpConsume"> 28 35 41 44 48 51 53 </table>
 		<table name="#mpInitialConsume"> 7 9 11 11 12 13 14 </table>
-		<table name="#lvl"> 1 2 3 4 5 6 7 </table>
-		<table name="#ench1lvl"> 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 </table>
+		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<table name="#ench1triggeredLevel"> 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 </table>
 		<table name="#ench2time"> 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="target" val="TARGET_PARTY_MEMBER" />
-		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="20000" />
-		<set name="staticReuse" val="true" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="20000" />
+		<set name="staticReuse" val="true" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_PARTY_MEMBER" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant1 name="mpConsume" val="54" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="mpConsume" val="54" />
 		<for>
-			<effect name="ChanceSkillTrigger" time="15" val="0" stackOrder="1" stackType="bless_the_blood" triggeredId="5698" triggeredLevel="#lvl" chanceType="ON_ATTACKED" activationChance="60" />
+			<effect name="ChanceSkillTrigger" time="15" val="0" activationChance="60" activationMinDamage="60" chanceType="ON_ATTACKED_HIT" triggeredId="5698" triggeredLevel="#triggeredLevel" stackOrder="1" stackType="bless_the_blood" />
 		</for>
 		<enchant1for>
-			<effect name="ChanceSkillTrigger" time="15" val="0" stackOrder="1" stackType="bless_the_blood" triggeredId="5698" triggeredLevel="#ench1lvl" chanceType="ON_ATTACKED" activationChance="60" />
+			<effect name="ChanceSkillTrigger" time="15" val="0" activationChance="60" activationMinDamage="60" chanceType="ON_ATTACKED_HIT" triggeredId="5698" triggeredLevel="#ench1triggeredLevel" stackOrder="1" stackType="bless_the_blood" />
 		</enchant1for>
 		<enchant2for>
-			<effect name="ChanceSkillTrigger" time="#ench2time" val="0" stackOrder="1" stackType="bless_the_blood" triggeredId="5698" triggeredLevel="7" chanceType="ON_ATTACKED" activationChance="60" />
+			<effect name="ChanceSkillTrigger" time="#ench2time" val="0" activationChance="60" activationMinDamage="60" chanceType="ON_ATTACKED_HIT" triggeredId="5698" triggeredLevel="7" stackOrder="1" stackType="bless_the_blood" />
 		</enchant2for>
 	</skill>
 	<skill id="1532" levels="1" name="Enlightenment">
