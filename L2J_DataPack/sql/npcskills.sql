@@ -115580,7 +115580,3 @@ INSERT INTO `npcskills` VALUES
 (36599,4415,3),
 (36599,4416,2),
 (36599,4445,1);
-
--- Temporary hack for pet skills 
--- because of stats rework
-DELETE FROM `npcskills` WHERE `skillid` >= '4408' AND `skillid` <= '4414' AND `npcid` IN (SELECT id FROM `npc` WHERE type='L2Pet');
