@@ -132,11 +132,6 @@
 			<add order="0x10" stat="pDef" val="19" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
-		</cond>
 	</item>
 	<item id="15606" type="Armor" name="Moirai Helmet">
 		<set name="icon" val="icon.armor_helmet_i00" />
@@ -500,11 +495,6 @@
 			<add order="0x10" stat="pDef" val="16" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
-		</cond>
 	</item>
 	<item id="15623" type="EtcItem" name="Exp">
 		<set name="icon" val="icon.etc_exp_point_i00" />

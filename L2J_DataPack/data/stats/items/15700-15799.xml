@@ -211,11 +211,6 @@
 			<add order="0x10" stat="pDef" val="16" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
-		</cond>
 	</item>
 	<item id="15710" type="Armor" name="Sealed Moirai Shield">
 		<set name="icon" val="icon.weapon_tysandy_shield_i00" />
@@ -827,11 +822,6 @@
 			<add order="0x10" stat="pDef" val="21" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
-		</cond>
 	</item>
 	<item id="15743" type="Armor" name="Sealed Vorpal Helmet">
 		<set name="icon" val="icon.armor_helmet_i02" />
@@ -1195,11 +1185,6 @@
 			<add order="0x10" stat="pDef" val="19" />
 			<enchant order="0x0C" stat="pDef" val="0" />
 		</for>
-		<cond msgId="1518">
-			<not>
-				<player race="Kamael" />
-			</not>
-		</cond>
 	</item>
 	<item id="15760" type="Armor" name="Sealed Elegia Ring">
 		<set name="icon" val="icon.accessary_sealed_verpes_ring_i00" />
