@@ -26,6 +26,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.templates.skills.L2SkillType;
+import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
 /**
@@ -33,7 +34,10 @@ import com.l2jserver.util.Rnd;
  */
 public class Extractable implements ISkillHandler
 {
-	private static final L2SkillType[] SKILL_IDS =
+	//FIXME: Remove this once skill reuse will be global for main/subclass.
+	private static final int[] protectedSkillIds = { 323, 324, 419, 519, 520, 620, 1324, 1387 };
+	
+	private static final L2SkillType[] SKILL_TYPES =
 	{
 		L2SkillType.EXTRACTABLE,
 		L2SkillType.EXTRACTABLE_FISH
@@ -53,23 +57,31 @@ public class Extractable implements ISkillHandler
 			return;
 		}
 		
-		if (exItem.getProductItemsArray().length == 0)
+		if (exItem.getProductItemsArray().isEmpty())
 		{
 			_log.warning("Extractable Item Skill with no data, probably wrong/empty table with Skill Id: " + skill.getId());
 			return;
 		}
 		
-		double rndNum = 0;
+		final double rndNum = 100 * Rnd.nextDouble();
 		double chance = 0;
+		double chanceFrom = 0;
 		int[] createItemID = new int[20];
 		int[] createAmount = new int[20];
 		
-		// calculate extraction
+		//Explanation for future changes:
+		//You get one chance for the current skill, then you can fall into
+		//one of the "areas" like in a roulette.
+		//Example: for an item like Id1,A1,30;Id2,A2,50;Id3,A3,20;
+		//#---#-----#--#
+		//0  30     80 100
+		//If you get chance equal 45% you fall into the second zone 30-80.
+		//Meaning you get the second production list.
+		//Calculate extraction
 		for (L2ExtractableProductItem expi : exItem.getProductItemsArray())
 		{
 			chance = expi.getChance();
-			rndNum = 100 * Rnd.nextDouble();
-			if (rndNum <= chance)
+			if ((rndNum >= chanceFrom) && (rndNum <= (chance + chanceFrom)))
 			{
 				for (int i = 0; i < expi.getId().length; i++)
 				{
@@ -86,22 +98,22 @@ public class Extractable implements ISkillHandler
 				}
 				break;
 			}
+			chanceFrom += chance;
 		}
 		
 		L2PcInstance player = (L2PcInstance) activeChar;
 		
-		//FIXME: remove this once skill reuse will be global for main/subclass
-		if (player.isSubClassActive() && (skill.getReuseDelay() > 0))
+		//FIXME: Remove this once skill reuse will be global for main/subclass.
+		if (player.isSubClassActive() && (skill.getReuseDelay() > 0) && !Util.contains(protectedSkillIds, skill.getId()))
 		{
 			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.MAIN_CLASS_SKILL_ONLY));
 			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED).addSkillName(skill));
 			return;
 		}
 		
-		if ((createItemID[0] <= 0) || (createItemID.length == 0))
+		if (createItemID[0] <= 0)
 		{
-			if (exItem.useMessage())
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOTHING_INSIDE_THAT));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOTHING_INSIDE_THAT));
 			return;
 		}
 		else
@@ -154,6 +166,6 @@ public class Extractable implements ISkillHandler
 	
 	public L2SkillType[] getSkillIds()
 	{
-		return SKILL_IDS;
+		return SKILL_TYPES;
 	}
 }
