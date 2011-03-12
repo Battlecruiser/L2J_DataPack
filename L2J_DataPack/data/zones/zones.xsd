@@ -47,6 +47,7 @@
 												<xs:enumeration value="spawnZ" />
 												<xs:enumeration value="targetClass" />
 												<xs:enumeration value="taxById" />
+												<xs:enumeration value="territoryId" />
 												<xs:enumeration value="townId" />
 											</xs:restriction>
 										</xs:simpleType>
@@ -111,6 +112,7 @@
 									<xs:enumeration value="ScriptZone" />
 									<xs:enumeration value="SiegeZone" />
 									<xs:enumeration value="SwampZone" />
+									<xs:enumeration value="TerritoryWarZone" />
 									<xs:enumeration value="TownZone" />
 									<xs:enumeration value="WaterZone" />
 								</xs:restriction>
