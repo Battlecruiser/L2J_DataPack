@@ -11,10 +11,10 @@ CREATE TABLE IF NOT EXISTS `clan_data` (
   `crest_large_id` INT,
   `ally_crest_id` INT,
   `auction_bid_at` INT NOT NULL default 0,
-  `ally_penalty_expiry_time` DECIMAL( 20,0 ) NOT NULL DEFAULT 0,
+  `ally_penalty_expiry_time` bigint(13) unsigned NOT NULL DEFAULT '0',
   `ally_penalty_type` DECIMAL( 1 ) NOT NULL DEFAULT 0,
-  `char_penalty_expiry_time` DECIMAL( 20,0 ) NOT NULL DEFAULT 0,
-  `dissolving_expiry_time` DECIMAL( 20,0 ) NOT NULL DEFAULT 0,
+  `char_penalty_expiry_time` bigint(13) unsigned NOT NULL DEFAULT '0',
+  `dissolving_expiry_time` bigint(13) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`clan_id`),
   KEY `leader_id` (`leader_id`),
   KEY `ally_id` (`ally_id`)

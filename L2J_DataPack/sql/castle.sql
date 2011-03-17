@@ -3,9 +3,9 @@ CREATE TABLE IF NOT EXISTS `castle` (
   `name` varchar(25) NOT NULL,
   `taxPercent` INT NOT NULL default 15,
   `treasury` BIGINT NOT NULL default 0,
-  `siegeDate` DECIMAL(20,0) NOT NULL default 0,
+  `siegeDate` bigint(13) unsigned NOT NULL DEFAULT '0',
   `regTimeOver` enum('true','false') DEFAULT 'true' NOT NULL,
-  `regTimeEnd` DECIMAL(20,0) NOT NULL default 0,
+  `regTimeEnd` bigint(13) unsigned NOT NULL DEFAULT '0',
   `showNpcCrest` enum('true','false') DEFAULT 'false' NOT NULL,
   PRIMARY KEY (`name`),
   KEY `id` (`id`)
