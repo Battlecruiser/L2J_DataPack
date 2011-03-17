@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS `raidboss_spawnlist` (
   `heading` INT NOT NULL default 0,
   `respawn_min_delay` INT(11) NOT NULL default '43200',
   `respawn_max_delay` INT(11) NOT NULL default '129600',
-  `respawn_time` BIGINT NOT NULL default 0,
+  `respawn_time` bigint(13) unsigned NOT NULL DEFAULT '0',
   `currentHp` decimal(8,0) default NULL,
   `currentMp` decimal(8,0) default NULL,
   PRIMARY KEY (`boss_id`)

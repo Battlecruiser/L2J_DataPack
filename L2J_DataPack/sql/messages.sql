@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS `messages` (
   `receiverId` INT NOT NULL DEFAULT 0,
   `subject` TINYTEXT,
   `content` TEXT,
-  `expiration` BIGINT NOT NULL DEFAULT 0,
+  `expiration` bigint(13) unsigned NOT NULL DEFAULT '0',
   `reqAdena` BIGINT NOT NULL DEFAULT 0,
   `hasAttachments` enum('true','false') DEFAULT 'false' NOT NULL,
   `isUnread` enum('true','false') DEFAULT 'true' NOT NULL,

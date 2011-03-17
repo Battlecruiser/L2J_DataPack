@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS `games` (
   `prize1` INT NOT NULL default 0,
   `prize2` INT NOT NULL default 0,
   `prize3` INT NOT NULL default 0,
-  `enddate` decimal(20,0) NOT NULL default 0,
+  `enddate` bigint(13) unsigned NOT NULL DEFAULT '0',
   `finished` INT NOT NULL default 0,
   PRIMARY KEY (`id`,`idnr`)
 );

@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS `auction` (
   `itemQuantity` BIGINT UNSIGNED NOT NULL default 0,
   `startingBid` BIGINT UNSIGNED NOT NULL default 0,
   `currentBid` BIGINT UNSIGNED NOT NULL default 0,
-  `endDate` decimal(20,0) NOT NULL default '0',
+  `endDate` bigint(13) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`itemType`,`itemId`,`itemObjectId`),
   KEY `id` (`id`)
 );
