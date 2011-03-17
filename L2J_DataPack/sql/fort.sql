@@ -1,8 +1,8 @@
 CREATE TABLE IF NOT EXISTS `fort` (
   `id` int(11) NOT NULL default 0,
   `name` varchar(25) NOT NULL,
-  `siegeDate` decimal(20,0) NOT NULL default 0,
-  `lastOwnedTime` decimal(20,0) NOT NULL default 0,
+  `siegeDate` bigint(13) unsigned NOT NULL DEFAULT '0',
+  `lastOwnedTime` bigint(13) unsigned NOT NULL DEFAULT '0',
   `owner` int(11) NOT NULL default 0,
   `fortType` int(1) NOT NULL default 0,
   `state` int(1) NOT NULL default 0,
