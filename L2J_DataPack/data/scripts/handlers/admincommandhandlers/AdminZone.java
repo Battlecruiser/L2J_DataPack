@@ -147,7 +147,7 @@ public class AdminZone implements IAdminCommandHandler
 			{
 				if (zone.getName() != null)
 				{
-					StringUtil.append(zones, zone.getName());
+					StringUtil.append(zones, zone.getName() + "<br1>");
 					if (zone.getId() < 300000) // not display id for dynamic zones
 						StringUtil.append(zones, "(", String.valueOf(zone.getId()), ")");
 				}
