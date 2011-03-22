@@ -6,6 +6,6 @@ CREATE TABLE IF NOT EXISTS `custom_merchant_buylists` (
   `count` tinyint(2) NOT NULL DEFAULT '-1',
   `currentCount` tinyint(2) NOT NULL DEFAULT '-1',
   `time` int(11) NOT NULL DEFAULT '0',
-  `savetimer` decimal(20,0) NOT NULL DEFAULT '0',
+  `savetimer` bigint(13) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`shop_id`,`order`)
 );
