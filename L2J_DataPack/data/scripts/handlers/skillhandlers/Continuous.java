@@ -59,8 +59,6 @@ public class Continuous implements ISkillHandler
 		L2SkillType.MPHOT,
 		L2SkillType.FEAR,
 		L2SkillType.CONT,
-		L2SkillType.WEAKNESS,
-		L2SkillType.REFLECT,
 		L2SkillType.UNDEAD_DEFENSE,
 		L2SkillType.AGGDEBUFF,
 		L2SkillType.FUSION
