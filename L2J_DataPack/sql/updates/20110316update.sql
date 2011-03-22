@@ -76,6 +76,9 @@ MODIFY `drop_time` bigint(13) unsigned NOT NULL DEFAULT '0';
 ALTER TABLE `messages`
 MODIFY `expiration` bigint(13) unsigned NOT NULL DEFAULT '0';
 
+ALTER TABLE `merchant_buylists`
+MODIFY `savetimer` bigint(13) unsigned NOT NULL DEFAULT '0';
+
 ALTER TABLE `olympiad_data`
 MODIFY `olympiad_end` bigint(13) unsigned NOT NULL DEFAULT '0',
 MODIFY `validation_end` bigint(13) unsigned NOT NULL DEFAULT '0',
@@ -99,3 +102,6 @@ MODIFY `date` bigint(13) unsigned NOT NULL DEFAULT '0';
 
 ALTER TABLE `topic`
 MODIFY `topic_date` bigint(13) unsigned NOT NULL DEFAULT '0';
+
+ALTER TABLE `custom_merchant_buylists`
+MODIFY `savetimer` bigint(13) unsigned NOT NULL DEFAULT '0';
