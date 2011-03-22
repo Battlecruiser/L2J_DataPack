@@ -456,7 +456,6 @@ public class Disablers implements ISkillHandler
 							{
 								case BUFF:
 								case HEAL_PERCENT:
-								case REFLECT:
 								case COMBATPOINTHEAL:
 									break;
 								default:
