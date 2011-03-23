@@ -779,7 +779,7 @@ if /i %cstprompt%==q goto end
 goto newbie_helper
 :cstinstall
 echo Installing custom content.
-cd ..\sql\custom\
+cd ..\sql\server\custom\
 echo @echo off> temp.bat
 if exist errors.txt del errors.txt
 for %%i in (*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< %%i 2^>^> custom_errors.txt >> temp.bat
@@ -804,7 +804,7 @@ echo.
 echo Some of these mods would require extra tables in order to work
 echo and those tables could be created now if you wanted to.
 echo.
-cd ..\sql\mods\
+cd ..\sql\server\mods\
 REM L2J mods that needed extra tables to work properly, should be 
 REM listed here. To do so copy & paste the following 4 lines and
 REM change them properly:
@@ -846,36 +846,44 @@ set nbprompt=a
 echo.
 echo What we do with the .sql files in your updates folder?
 echo.
-echo (a)ll automagic: I'll get into the two folders and 
-echo    try to dump _every_ '.sql' file I find there, into 
-echo    your database. A fresh setup wouldn't usually need 
-echo    such a thing. And, as any automagic task, this may
-echo    pose a risk on your data.
+echo (a) All LS/GS/CS Updates: I'll get into the update folders and 
+echo     try to dump _every_ '.sql' file I find there, into 
+echo     your database. A fresh setup wouldn't usually need 
+echo     such a thing.
 echo.
-echo automagi(c) CB only: I'll do the automagic process
-echo    only with the cb_sql/updates folder.
+echo (c) Only CB Updates : I'll do the automatic process
+echo     only with the cb_sql/updates folder.
 echo.
-echo automa(g)ic GS only: I'll do the automagic process
-echo    only with the sql/server/updates folder.
+echo (g) Only GS Updates: I'll do the automagic process
+echo     only with the sql/server/updates folder.
 echo.
-echo (s)kip: I'll do nothing, it's up to you to find out
-echo    which file does what, which one could be of use for
-echo    you, etc.
+echo (s) Skip: I'll do nothing, it's up to you to find out
+echo     which file does what, which one could be of use for
+echo     you, etc.
 echo.
 set /p nbprompt= Choose (default auto-all):
-if /i %nbprompt%==a goto nbinstall
+if /i %nbprompt%==a goto nblsinstall
 if /i %nbprompt%==c goto nbcbinstall
-if /i %nbprompt%==g goto nbinstall
+if /i %nbprompt%==g goto nbgsinstall
 if /i %nbprompt%==s goto end
 goto asknb
-:nbinstall
-cd ..\sql\server\updates\
+:nblsinstall
+cd ..\sql\login\updates\
 echo @echo off> temp.bat
-if exist errors.txt del errors.txt
-for %%i in (*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< %%i 2^>^> errors.txt >> temp.bat
+if exist lserrors.txt del lserrors.txt
+for %%i in (*.sql) do echo "%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% ^< %%i 2^>^> lserrors.txt >> temp.bat
 call temp.bat> nul
 del temp.bat
-move errors.txt %workdir%
+move lserrors.txt %workdir%
+cd %workdir%
+:nbgsinstall
+cd ..\sql\server\updates\
+echo @echo off> temp.bat
+if exist gserrors.txt del gserrors.txt
+for %%i in (*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< %%i 2^>^> gserrors.txt >> temp.bat
+call temp.bat> nul
+del temp.bat
+move gserrors.txt %workdir%
 cd %workdir%
 if /i %nbprompt%==g goto nbfinished
 :nbcbinstall
