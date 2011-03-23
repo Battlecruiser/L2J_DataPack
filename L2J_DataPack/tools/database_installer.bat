@@ -53,18 +53,18 @@ echo.
 echo Configuration upgrade options:
 echo.
 echo (1) Import and continue: I'll read your old settings and
-echo    continue execution, but since no new settings will be
-echo    saved, you'll see this menu again next time.
+echo     continue execution, but since no new settings will be
+echo     saved, you'll see this menu again next time.
 echo.
 echo (2) Import and configure: This tool has some new available
-echo    options, you choose the values that fit your needs
-echo    using former settings as a base.
+echo     options, you choose the values that fit your needs
+echo     using former settings as a base.
 echo.
 echo (3) Ignose stored settings: I'll let you configure me 
-echo    with a fresh set of default values as a base.
+echo     with a fresh set of default values as a base.
 echo.
 echo (4) View saved settings: See the contents of the config 
-echo    file.
+echo     file.
 echo.
 echo (5) Quit: Did you came here by mistake?
 echo.
@@ -261,13 +261,13 @@ echo.
 set lsdbprompt=y
 echo ATTEMPT TO CREATE LOGINSERVER DATABASE:
 echo.
-echo (y)es
+echo (y) Yes
 echo.
-echo (n)o
+echo (n) No
 echo.
-echo (r)econfigure
+echo (r) Reconfigure
 echo.
-echo (q)uit
+echo (q) Quit
 echo.
 set /p lsdbprompt= Choose (default yes):
 if /i %lsdbprompt%==y goto lsdbcreate
@@ -300,11 +300,11 @@ if %stage% == 9 set label=horrible_end
 if %stage% == 10 set label=horrible_end
 :omfgask1
 set omfgprompt=q
-echo (c)ontinue running the script
+echo (c) Continue running the script
 echo.
-echo (r)econfigure
+echo (r) Reconfigure
 echo.
-echo (q)uit now
+echo (q) Quit now
 echo.
 set /p omfgprompt= Choose (default quit):
 if  /i %omfgprompt%==c goto %label%
@@ -342,11 +342,11 @@ echo and try this script again later.
 echo.
 :ls_ask2
 set omfgprompt=q
-echo (c)ontinue running
+echo (c) Continue running
 echo.
-echo (r)econfigure
+echo (r) Reconfigure
 echo.
-echo (q)uit now
+echo (q) Quit now
 echo.
 set /p omfgprompt= Choose (default quit):
 if /i %omfgprompt%==c goto cb_backup
@@ -368,17 +368,17 @@ set msg=no default for fresh install
 )
 echo LOGINSERVER DATABASE install type:
 echo.
-echo (f)ull: I will destroy data in your `accounts` and
-echo    and `gameserver` tables.
+echo (f) Full: I will destroy data in your `accounts` and
+echo     and `gameserver` tables.
 echo.
-echo (s)kip: I'll take you to the communityserver database
-echo    installation and upgrade options.
+echo (s) Skip: I'll take you to the communityserver database
+echo     installation and upgrade options.
 echo.
-echo (r)econfigure: You'll be able to redefine MySQL path,
-echo    user and database information and start over with
-echo    those fresh values.
+echo (r) Reconfigure: You'll be able to redefine MySQL path,
+echo     user and database information and start over with
+echo     those fresh values.
 echo.
-echo (q)uit
+echo (q) Quit
 echo.
 set /p loginprompt= Choose (%msg%) : 
 if /i %loginprompt%==f goto logininstall
@@ -426,13 +426,13 @@ echo.
 set cbdbprompt=y
 echo ATTEMPT TO CREATE COMMUNITYSERVER DATABASE:
 echo.
-echo (y)es
+echo (y) Yes
 echo.
-echo (n)o
+echo (n) No
 echo.
-echo (r)econfigure
+echo (r) Reconfigure
 echo.
-echo (q)uit
+echo (q) Quit
 echo.
 set /p cbdbprompt= Choose (default yes):
 if /i %cbdbprompt%==y goto cbdbcreate
@@ -471,11 +471,11 @@ echo and try this script again later.
 echo.
 :cb_ask2
 set omfgprompt=q
-echo (c)ontinue running
+echo (c) Continue running
 echo.
-echo (r)econfigure
+echo (r) Reconfigure
 echo.
-echo (q)uit now
+echo (q) Quit now
 echo.
 set /p omfgprompt= Choose (default quit):
 if /i %omfgprompt%==c goto gs_backup
@@ -497,20 +497,20 @@ set msg=no default for fresh install
 )
 echo COMMUNITYSERVER DATABASE install type:
 echo.
-echo (f)ull: WARNING! I'll destroy ALL of your existing community
-echo    data (i really mean it: mail, forum, memo.. ALL)
+echo (f) Full: WARNING! I'll destroy ALL of your existing community
+echo     data (i really mean it: mail, forum, memo.. ALL)
 echo.
-echo (u)pgrade: I'll do my best to preserve all of your community
-echo    data.
+echo (u) Upgrade: I'll do my best to preserve all of your community
+echo     data.
 echo.
-echo (s)kip: I'll take you to the gameserver database
-echo    installation and upgrade options.
+echo (s) Skip: I'll take you to the gameserver database
+echo     installation and upgrade options.
 echo.
-echo (r)econfigure: You'll be able to redefine MySQL path,
-echo    user and database information and start over with
-echo    those fresh values.
+echo (r) Reconfigure: You'll be able to redefine MySQL path,
+echo     user and database information and start over with
+echo     those fresh values.
 echo.
-echo (q)uit
+echo (q) Quit
 echo.
 set /p communityprompt= Choose (%msg%) : 
 if /i %communityprompt%==f goto communityinstall
@@ -578,13 +578,13 @@ echo.
 set gsdbprompt=y
 echo ATTEMPT TO CREATE GAMESERVER DATABASE?
 echo.
-echo (y)es
+echo (y) Yes
 echo.
-echo (n)o
+echo (n) No
 echo.
-echo (r)econfigure
+echo (r) Reconfigure
 echo.
-echo (q)uit
+echo (q) Quit
 echo.
 set /p gsdbprompt= Choose (default yes):
 if /i %gsdbprompt%==y goto gsdbcreate
@@ -623,9 +623,9 @@ echo script again later. But you can try to reconfigure it now.
 echo.
 :askgsdbcreate
 set omfgprompt=q
-echo (r)estart script with fresh configuration values
+echo (r) Restart script with fresh configuration values
 echo.
-echo (q)uit now
+echo (q) Quit now
 echo.
 set /p omfgprompt=  Choose (default quit):
 if /i %omfgprompt%==r goto configure
@@ -641,16 +641,16 @@ echo.
 set installtype=u
 echo GAMESERVER DATABASE install:
 echo.
-echo (f)ull: WARNING! I'll destroy ALL of your existing character
-echo    data (i really mean it: items, pets.. ALL)
+echo (f) Full: WARNING! I'll destroy ALL of your existing character
+echo     data (i really mean it: items, pets.. ALL)
 echo.
-echo (u)pgrade: I'll do my best to preserve all of your character
-echo    data.
+echo (u) Upgrade: I'll do my best to preserve all of your character
+echo     data.
 echo.
-echo (s)kip: We'll get into the last set of questions (cummulative
-echo    updates, custom stuff...)
+echo (s) Skip: We'll get into the last set of questions (cummulative
+echo     updates, custom stuff...)
 echo.
-echo (q)uit
+echo (q) Quit
 echo.
 set /p installtype= Choose (default upgrade):
 if /i %installtype%==f goto fullinstall
@@ -719,17 +719,17 @@ echo What we should do now?
 echo.
 :askomfg2
 set ntpebcak=c
-echo (l)og it: I will create a log for this file, then continue
-echo    with the rest of the list in non-logging mode.
+echo (l) Log it: I will create a log for this file, then continue
+echo     with the rest of the list in non-logging mode.
 echo.
-echo (c)ontinue: Let's pretend that nothing happened and continue with
-echo    the rest of the list.
+echo (c) Continue: Let's pretend that nothing happened and continue with
+echo     the rest of the list.
 echo.
-echo (r)econfigure: Perhaps these errors were caused by a typo.
-echo    you can restart from scratch and redefine paths, databases
-echo    and user info again.
+echo (r) Reconfigure: Perhaps these errors were caused by a typo.
+echo     you can restart from scratch and redefine paths, databases
+echo     and user info again.
 echo.
-echo (q)uit now
+echo (q) Quit now
 echo.
 set /p ntpebcak= Choose (default continue):
 if  /i %ntpebcak%==c (call :colors 17 & goto :eof)
@@ -846,10 +846,11 @@ set nbprompt=a
 echo.
 echo What we do with the .sql files in your updates folder?
 echo.
-echo (a) All LS/GS/CS Updates: I'll get into the update folders and 
-echo     try to dump _every_ '.sql' file I find there, into 
-echo     your database. A fresh setup wouldn't usually need 
-echo     such a thing.
+echo (a) All LS/CS/GS Updates: I'll do the automatic process
+echo     with LS/CS/GS updates folders.
+echo.
+echo (l) Only LS Updates : I'll do the automatic process
+echo     only with the sql/login/updates folder.
 echo.
 echo (c) Only CB Updates : I'll do the automatic process
 echo     only with the cb_sql/updates folder.
@@ -863,6 +864,7 @@ echo     you, etc.
 echo.
 set /p nbprompt= Choose (default auto-all):
 if /i %nbprompt%==a goto nblsinstall
+if /i %nbprompt%==l goto nblsinstall
 if /i %nbprompt%==c goto nbcbinstall
 if /i %nbprompt%==g goto nbgsinstall
 if /i %nbprompt%==s goto end
@@ -876,16 +878,7 @@ call temp.bat> nul
 del temp.bat
 move lserrors.txt %workdir%
 cd %workdir%
-:nbgsinstall
-cd ..\sql\server\updates\
-echo @echo off> temp.bat
-if exist gserrors.txt del gserrors.txt
-for %%i in (*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< %%i 2^>^> gserrors.txt >> temp.bat
-call temp.bat> nul
-del temp.bat
-move gserrors.txt %workdir%
-cd %workdir%
-if /i %nbprompt%==g goto nbfinished
+if /i %nbprompt%==l goto nbfinished
 :nbcbinstall
 cd ..\cb_sql\updates\
 echo @echo off> temp.bat
@@ -894,6 +887,16 @@ for %%i in (*.sql) do echo "%mysqlPath%" -h %cbhost% -u %cbuser% --password=%cbp
 call temp.bat> nul
 del temp.bat
 move cberrors.txt %workdir%
+cd %workdir%
+if /i %nbprompt%==c goto nbfinished
+:nbgsinstall
+cd ..\sql\server\updates\
+echo @echo off> temp.bat
+if exist gserrors.txt del gserrors.txt
+for %%i in (*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< %%i 2^>^> gserrors.txt >> temp.bat
+call temp.bat> nul
+del temp.bat
+move gserrors.txt %workdir%
 cd %workdir%
 :nbfinished
 title L2JDP installer - Game Server database setup - updates processing complete
