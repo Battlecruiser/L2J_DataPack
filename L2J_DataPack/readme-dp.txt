@@ -1,4 +1,4 @@
-Copyright 2005-2010 L2J-DataPack team
+Copyright 2005-2011 L2J-DataPack team
 
 This file is part of the L2J-DataPack.
 
@@ -72,5 +72,5 @@ an update after some certain changeset, you should run the relevant SQL sequence
 
 -the L2j-DataPack team
 
-L2JDP, Copyright (C) 2005-2010 L2JDP comes with ABSOLUTELY NO WARRANTY. This is 
+L2JDP, Copyright (C) 2005-2011 L2JDP comes with ABSOLUTELY NO WARRANTY. This is 
 free software, and you are welcome to redistribute it under certain conditions.

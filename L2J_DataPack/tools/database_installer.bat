@@ -7,7 +7,7 @@ REM ##############################################
 REM Copyright (C) 2010 L2J DataPack
 REM This program is free software; you can redistribute it and/or modify 
 REM it under the terms of the GNU General Public License as published by 
-REM the Free Software Foundation; either version 2 of the License, or (at
+REM the Free Software Foundation; either version 3 of the License, or (at
 REM your option) any later version.
 REM
 REM This program is distributed in the hope that it will be useful, but 
@@ -403,7 +403,7 @@ goto cb_backup
 cls
 call :colors 17
 set cmdline=
-if %full% == 1 goto communityinstall
+rem if %full% == 1 goto communityinstall
 set stage=4
 title L2JDP installer - Community Board Server database setup
 echo.
@@ -529,6 +529,7 @@ echo Deleting communityserver tables for new content.
 set cmdline="%mysqlPath%" -h %cbhost% -u %cbuser% --password=%cbpass% -D %cbdb% ^< community_install.sql 2^> NUL
 %cmdline%
 if not %ERRORLEVEL% == 0 goto omfg
+set full=1
 goto upgradecbinstall
 
 :upgradecbinstall
@@ -543,14 +544,7 @@ echo Upgrading communityserver content.
 )
 if %logging% == 0 set output=NUL
 set dest=cb
-for %%i in (
-clan_introductions.sql
-comments.sql
-forums.sql
-registered_gameservers.sql
-posts.sql
-topics.sql
-) do call :dump %%i
+for %%i in (..\cb_sql\*.sql) do call :dump %%i
 
 echo done...
 echo.
@@ -691,138 +685,9 @@ echo Upgrading gameserver content.
 )
 if %logging% == 0 set output=NUL
 set dest=ls
-for %%i in (
-accounts.sql
-account_data.sql
-gameservers.sql
-) do call :dump %%i
+for %%i in (..\sql\login\*.sql) do call :dump %%i
 set dest=gs
-for %%i in (
-access_levels.sql
-admin_command_access_rights.sql
-airships.sql
-armorsets.sql
-auction.sql
-auction_bid.sql
-auction_watch.sql
-auto_announcements.sql
-auto_chat.sql
-auto_chat_text.sql
-castle.sql
-castle_door.sql
-castle_doorupgrade.sql
-castle_functions.sql
-castle_manor_procure.sql
-castle_manor_production.sql
-castle_siege_guards.sql
-char_creation_items.sql
-char_templates.sql
-character_friends.sql
-character_hennas.sql
-character_instance_time.sql
-character_macroses.sql
-character_premium_items.sql
-character_quest_global_data.sql
-character_offline_trade_items.sql
-character_offline_trade.sql
-character_quests.sql
-character_raid_points.sql
-character_recipebook.sql
-character_recipeshoplist.sql
-character_reco_bonus.sql
-character_shortcuts.sql
-character_skills.sql
-character_skills_save.sql
-character_subclasses.sql
-character_tpbookmark.sql
-character_ui_actions.sql
-character_ui_categories.sql
-characters.sql
-clan_data.sql
-clan_notices.sql
-clan_privs.sql
-clan_skills.sql
-clan_subpledges.sql
-clan_wars.sql
-clanhall.sql
-clanhall_functions.sql
-clanhall_siege_guards.sql
-class_list.sql
-cursed_weapons.sql
-dimensional_rift.sql
-droplist.sql
-enchant_skill_groups.sql
-fish.sql
-fishing_skill_trees.sql
-fort.sql
-fort_doorupgrade.sql
-fort_functions.sql
-fort_siege_guards.sql
-fort_spawnlist.sql
-fort_staticobjects.sql
-fortsiege_clans.sql
-forums.sql
-four_sepulchers_spawnlist.sql
-games.sql
-global_tasks.sql
-global_variables.sql
-grandboss_data.sql
-grandboss_list.sql
-helper_buff_list.sql
-henna.sql
-henna_trees.sql
-herb_droplist_groups.sql
-heroes.sql
-heroes_diary.sql
-item_attributes.sql
-item_auction_bid.sql
-item_auction.sql
-item_elementals.sql
-items.sql
-itemsonground.sql
-locations.sql
-lvlupgain.sql
-mapregion.sql
-merchant_buylists.sql
-merchant_lease.sql
-merchant_shopids.sql
-messages.sql
-minions.sql
-npc.sql
-npc_buffer.sql
-npcaidata.sql
-npc_elementals.sql
-npcskills.sql
-olympiad_data.sql
-olympiad_fights.sql
-olympiad_nobles.sql
-olympiad_nobles_eom.sql
-pets.sql
-pets_skills.sql
-pledge_skill_trees.sql
-posts.sql
-quest_global_data.sql
-raidboss_spawnlist.sql
-random_spawn.sql
-random_spawn_loc.sql
-seven_signs.sql
-seven_signs_festival.sql
-seven_signs_status.sql
-siege_clans.sql
-skill_learn.sql
-skill_residential.sql
-skill_spellbooks.sql
-skill_trees.sql
-spawnlist.sql
-special_skill_trees.sql
-teleport.sql
-topic.sql
-territories.sql
-territory_registrations.sql
-territory_spawnlist.sql
-transform_skill_trees.sql
-zone_vertices.sql
-) do call :dump %%i
+for %%i in (..\sql\server\*.sql) do call :dump %%i
 
 echo done...
 echo.
@@ -833,9 +698,9 @@ set cmdline=
 if /i %full% == 1 (set action=Installing) else (set action=Upgrading)
 echo %action% %1>>"%output%"
 echo %action% %~nx1
-if "%dest%"=="ls" set cmdline="%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% ^< ..\sql\%1 2^>^>"%output%"
-if "%dest%"=="cb" set cmdline="%mysqlPath%" -h %cbhost% -u %cbuser% --password=%cbpass% -D %cbdb% ^< ..\cb_sql\%1 2^>^>"%output%"
-if "%dest%"=="gs" set cmdline="%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< ..\sql\%1 2^>^>"%output%"
+if "%dest%"=="ls" set cmdline="%mysqlPath%" -h %lshost% -u %lsuser% --password=%lspass% -D %lsdb% ^< %1 2^>^>"%output%"
+if "%dest%"=="cb" set cmdline="%mysqlPath%" -h %cbhost% -u %cbuser% --password=%cbpass% -D %cbdb% ^< %1 2^>^>"%output%"
+if "%dest%"=="gs" set cmdline="%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< %1 2^>^>"%output%"
 %cmdline%
 if %logging%==0 if NOT %ERRORLEVEL%==0 call :omfg2 %1
 goto :eof
@@ -967,7 +832,7 @@ title L2JDP installer - Game/CB Server database setup - update SQL files
 cls
 if %full% == 1 goto end
 echo.
-echo In the sql/updates and cb_sql/updates folders,
+echo In the sql/server/updates and cb_sql/updates folders,
 echo we use to store cummulative changes needed by
 echo the database structures.
 echo.
@@ -975,36 +840,36 @@ echo Usually these SQL files are created whenever some new
 echo feature implementation requires it.
 echo.
 echo If you're too lame to know what these changes are about,
-echo i can try to apply these patches for you.
+echo I can try to apply these patches for you.
 :asknb
 set nbprompt=a
 echo.
-echo What we do with the files in sql/updates folder?
+echo What we do with the .sql files in your updates folder?
 echo.
-echo (a)utomagic processing: I'll get into the folders and 
-echo    try to dump _every_ '.sql' file i find there, into 
+echo (a)ll automagic: I'll get into the two folders and 
+echo    try to dump _every_ '.sql' file I find there, into 
 echo    your database. A fresh setup wouldn't usually need 
 echo    such a thing. And, as any automagic task, this may
 echo    pose a risk on your data.
 echo.
-echo automagi(c) processing: I'll do the automagic process
+echo automagi(c) CB only: I'll do the automagic process
 echo    only with the cb_sql/updates folder.
 echo.
-echo automa(g)ic processing: I'll do the automagic process
-echo    only with the sql/updates folder.
+echo automa(g)ic GS only: I'll do the automagic process
+echo    only with the sql/server/updates folder.
 echo.
 echo (s)kip: I'll do nothing, it's up to you to find out
 echo    which file does what, which one could be of use for
 echo    you, etc.
 echo.
-set /p nbprompt= Choose (default auto):
+set /p nbprompt= Choose (default auto-all):
 if /i %nbprompt%==a goto nbinstall
 if /i %nbprompt%==c goto nbcbinstall
 if /i %nbprompt%==g goto nbinstall
 if /i %nbprompt%==s goto end
 goto asknb
 :nbinstall
-cd ..\sql\updates\
+cd ..\sql\server\updates\
 echo @echo off> temp.bat
 if exist errors.txt del errors.txt
 for %%i in (*.sql) do echo "%mysqlPath%" -h %gshost% -u %gsuser% --password=%gspass% -D %gsdb% ^< %%i 2^>^> errors.txt >> temp.bat
@@ -1061,7 +926,7 @@ echo 2-Search for a similar problem in our forums
 echo       (http://www.l2jdp.com/forum)
 echo.
 echo You can ask for support in our forums or irc channel:
-echo irc://irc.freenode.net channel: #l2j-datapack
+echo irc://irc.freenode.net channel: #l2j
 echo.
 echo I'll try to gather some versioning information that you
 echo may find useful when asking for support :
@@ -1074,7 +939,7 @@ echo   SVN commandline tools not found!
 echo   Please download and install "Windows installer with 
 echo   the basic win32 binaries" (or something that fits our
 echo   binaries needs) from :
-echo   http://subversion.tigris.org/servlets/ProjectDocumentList?folderID=91
+echo   http://goo.gl/c0uyh
 echo.
 )
 set dpvf="..\config\l2jdp-version.properties" 
@@ -1102,8 +967,8 @@ call :colors 17
 title L2JDP installer - Script execution finished
 cls
 echo.
-echo L2JDP database_installer version 0.2.2
-echo (C) 2007-2010 L2J Datapack Team
+echo L2JDP database_installer version 0.2.3
+echo (C) 2007-2011 L2J Datapack Team
 echo database_installer comes with ABSOLUTELY NO WARRANTY;
 echo This is free software, and you are welcome to redistribute it
 echo under certain conditions; See the file gpl.txt for further
@@ -1111,7 +976,7 @@ echo details.
 echo.
 echo Thanks for using our software.
 echo visit http://www.l2jdp.com for more info about
-echo the Official L2J Datapack project.
+echo the L2J Datapack project.
 echo.
 pause
 color
