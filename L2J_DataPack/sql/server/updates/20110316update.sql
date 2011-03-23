@@ -1,6 +1,3 @@
-ALTER TABLE `accounts`
-MODIFY `lastactive` bigint(13) unsigned NOT NULL DEFAULT '0';
-
 ALTER TABLE `auction`
 MODIFY `endDate` bigint(13) unsigned NOT NULL DEFAULT '0';
 
