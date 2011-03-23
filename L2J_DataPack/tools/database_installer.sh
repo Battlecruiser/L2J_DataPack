@@ -184,6 +184,7 @@ fi
 }
 
 asklogin(){
+clear
 echo "#############################################"
 echo "# WARNING: This section of the script CAN   #"
 echo "# destroy your characters and accounts      #"
@@ -207,14 +208,16 @@ esac
 
 logininstall(){
 echo "Deleting loginserver tables for new content."
-$MYL < login_install.sql &> /dev/null
+$MYL < login_install.sql
 }
 
 loginupgrade(){
+clear
 echo "Installling new loginserver content."
-$MYL < ../sql/accounts.sql &> /dev/null
-$MYL < ../sql/account_data.sql &> /dev/null
-$MYL < ../sql/gameservers.sql &> /dev/null
+for login in $(ls ../sql/login/*.sql);do
+	echo "Installing loginserver table : $login"
+	$MYG < $login
+done
 }
 
 gsbackup(){
@@ -227,6 +230,7 @@ while :
      echo "Making a backup of the original gameserver database."
      $MYSQLDUMPPATH --add-drop-table -h $GSDBHOST -u $GSUSER --password=$GSPASS $GSDB > gameserver_backup.sql
      if [ $? -ne 0 ];then
+	 clear
      echo ""
      echo "There was a problem accesing your GS database, either it wasnt created or authentication data is incorrect."
      exit 1
@@ -241,6 +245,7 @@ while :
 cbbackup(){
 while :
   do
+   clear
    echo ""
    echo -ne "Do you want to make a backup copy of your CBDB? (y/n): "
    read LSB
@@ -248,7 +253,8 @@ while :
      echo "Making a backup of the original communityserver database."
      $MYSQLDUMPPATH --add-drop-table -h $CBDBHOST -u $CBUSER --password=$CBPASS $CBDB > communityserver_backup.sql
      if [ $? -ne 0 ];then
-     echo ""
+     clear
+	 echo ""
      echo "There was a problem accesing your CB database, either it wasnt created or authentication data is incorrect."
      exit 1
      fi
@@ -262,6 +268,7 @@ while :
 lsbackup(){
 while :
   do
+   clear
    echo ""
    echo -ne "Do you want to make a backup copy of your LSDB? (y/n): "
    read LSB
@@ -269,7 +276,8 @@ while :
      echo "Making a backup of the original loginserver database."
      $MYSQLDUMPPATH --add-drop-table -h $LSDBHOST -u $LSUSER --password=$LSPASS $LSDB > loginserver_backup.sql
      if [ $? -ne 0 ];then
-        echo ""
+        clear
+		echo ""
         echo "There was a problem accesing your LS database, either it wasnt created or authentication data is incorrect."
         exit 1
      fi
@@ -296,6 +304,7 @@ esac
 }
 
 askcbtype(){
+clear
 echo ""
 echo ""
 echo "WARNING: A full install (f) will destroy all existing community data."
@@ -312,161 +321,44 @@ esac
 
 fullcbinstall(){
 echo "Deleting all communityserver tables for new content."
-$MYC < community_install.sql &> /dev/null
+$MYC < community_install.sql
 }
 
 upgradecbinstall(){
+clear
 if [ "$1" == "I" ]; then 
 echo "Installling new communityserver content."
 else
 echo "Upgrading communityserver content"
 fi
 if [ "$1" == "I" ]; then
-$MYC < ../cb_sql/clan_introductions.sql &> /dev/null
-$MYC < ../cb_sql/comments.sql &> /dev/null
-$MYC < ../cb_sql/forums.sql &> /dev/null
-$MYC < ../cb_sql/registered_gameservers.sql &> /dev/null
-$MYC < ../cb_sql/posts.sql &> /dev/null
-$MYC < ../cb_sql/topics.sql &> /dev/null
+	for cb in $(ls ../cb_sql/*.sql);do
+		echo "Installing Community Board table : $cb"
+		$MYG < $cb
+	done
 fi
 newbie_helper_cb
 }
 
 fullinstall(){
+clear
 echo "Deleting all gameserver tables for new content."
-$MYG < full_install.sql &> /dev/null
+$MYG < full_install.sql
 }
 
 upgradeinstall(){
+clear
 if [ "$1" == "I" ]; then 
 echo "Installling new gameserver content."
 else
 echo "Upgrading gameserver content"
 fi
-$MYG < ../sql/access_levels.sql &> /dev/null
-$MYG < ../sql/admin_command_access_rights.sql &> /dev/null
-$MYG < ../sql/airships.sql &> /dev/null
-$MYG < ../sql/armorsets.sql &> /dev/null
-$MYG < ../sql/auction.sql &> /dev/null
-$MYG < ../sql/auction_bid.sql &> /dev/null
-$MYG < ../sql/auction_watch.sql &> /dev/null
-$MYG < ../sql/auto_announcements.sql &> /dev/null
-$MYG < ../sql/auto_chat.sql &> /dev/null
-$MYG < ../sql/auto_chat_text.sql &> /dev/null
-$MYG < ../sql/castle.sql &> /dev/null
-$MYG < ../sql/castle_door.sql &> /dev/null
-$MYG < ../sql/castle_doorupgrade.sql &> /dev/null
-$MYG < ../sql/castle_functions.sql &> /dev/null
-$MYG < ../sql/castle_manor_procure.sql &> /dev/null
-$MYG < ../sql/castle_manor_production.sql &> /dev/null
-$MYG < ../sql/castle_siege_guards.sql &> /dev/null
-$MYG < ../sql/char_templates.sql &> /dev/null
-$MYG < ../sql/char_creation_items.sql &> /dev/null
-$MYG < ../sql/character_friends.sql &> /dev/null
-$MYG < ../sql/character_hennas.sql &> /dev/null
-$MYG < ../sql/character_instance_time.sql &> /dev/null
-$MYG < ../sql/character_macroses.sql &> /dev/null
-$MYG < ../sql/character_premium_items.sql &> /dev/null
-$MYG < ../sql/character_quest_global_data.sql &> /dev/null 
-$MYG < ../sql/character_offline_trade_items.sql &> /dev/null
-$MYG < ../sql/character_offline_trade.sql &> /dev/null
-$MYG < ../sql/character_quests.sql &> /dev/null
-$MYG < ../sql/character_raid_points.sql &> /dev/null
-$MYG < ../sql/character_recipebook.sql &> /dev/null
-$MYG < ../sql/character_recipeshoplist.sql &> /dev/null
-$MYG < ../sql/character_reco_bonus.sql &> /dev/null
-$MYG < ../sql/character_shortcuts.sql &> /dev/null
-$MYG < ../sql/character_skills.sql &> /dev/null
-$MYG < ../sql/character_skills_save.sql &> /dev/null
-$MYG < ../sql/character_subclasses.sql &> /dev/null
-$MYG < ../sql/character_tpbookmark.sql &> /dev/null
-$MYG < ../sql/character_ui_actions.sql &> /dev/null
-$MYG < ../sql/character_ui_categories.sql &> /dev/null
-$MYG < ../sql/characters.sql &> /dev/null
-$MYG < ../sql/clan_data.sql &> /dev/null
-$MYG < ../sql/clan_notices.sql &> /dev/null
-$MYG < ../sql/clan_privs.sql &> /dev/null
-$MYG < ../sql/clan_skills.sql &> /dev/null
-$MYG < ../sql/clan_subpledges.sql &> /dev/null
-$MYG < ../sql/clan_wars.sql &> /dev/null
-$MYG < ../sql/clanhall.sql &> /dev/null
-$MYG < ../sql/clanhall_functions.sql &> /dev/null
-$MYG < ../sql/clanhall_siege_guards.sql &> /dev/null
-$MYG < ../sql/class_list.sql &> /dev/null
-$MYG < ../sql/cursed_weapons.sql &> /dev/null
-$MYG < ../sql/dimensional_rift.sql &> /dev/null
-$MYG < ../sql/droplist.sql &> /dev/null
-$MYG < ../sql/enchant_skill_groups.sql &> /dev/null
-$MYG < ../sql/fish.sql &> /dev/null
-$MYG < ../sql/fishing_skill_trees.sql &> /dev/null
-$MYG < ../sql/fort.sql &> /dev/null
-$MYG < ../sql/fort_doorupgrade.sql &> /dev/null
-$MYG < ../sql/fort_functions.sql &> /dev/null
-$MYG < ../sql/fort_siege_guards.sql &> /dev/null
-$MYG < ../sql/fort_spawnlist.sql &> /dev/null
-$MYG < ../sql/fort_staticobjects.sql &> /dev/null
-$MYG < ../sql/fortsiege_clans.sql &> /dev/null
-$MYG < ../sql/forums.sql &> /dev/null
-$MYG < ../sql/four_sepulchers_spawnlist.sql &> /dev/null
-$MYG < ../sql/games.sql &> /dev/null
-$MYG < ../sql/global_tasks.sql &> /dev/null
-$MYG < ../sql/global_variables.sql &> /dev/null
-$MYG < ../sql/grandboss_data.sql &> /dev/null
-$MYG < ../sql/grandboss_list.sql &> /dev/null
-$MYG < ../sql/helper_buff_list.sql &> /dev/null
-$MYG < ../sql/henna.sql &> /dev/null
-$MYG < ../sql/henna_trees.sql &> /dev/null
-$MYG < ../sql/herb_droplist_groups.sql &> /dev/null
-$MYG < ../sql/heroes.sql &> /dev/null
-$MYG < ../sql/heroes_diary.sql &> /dev/null
-$MYG < ../sql/item_attributes.sql &> /dev/null
-$MYG < ../sql/item_auction_bid.sql &> /dev/null
-$MYG < ../sql/item_auction.sql &> /dev/null
-$MYG < ../sql/item_elementals.sql &> /dev/null
-$MYG < ../sql/items.sql &> /dev/null
-$MYG < ../sql/itemsonground.sql &> /dev/null
-$MYG < ../sql/locations.sql &> /dev/null
-$MYG < ../sql/lvlupgain.sql &> /dev/null
-$MYG < ../sql/mapregion.sql &> /dev/null
-$MYG < ../sql/merchant_buylists.sql &> /dev/null
-$MYG < ../sql/merchant_lease.sql &> /dev/null
-$MYG < ../sql/merchant_shopids.sql &> /dev/null
-$MYG < ../sql/messages.sql &> /dev/null
-$MYG < ../sql/minions.sql &> /dev/null
-$MYG < ../sql/npc.sql &> /dev/null
-$MYG < ../sql/npc_buffer.sql &> /dev/null
-$MYG < ../sql/npcaidata.sql &> /dev/null
-$MYG < ../sql/npc_elementals.sql &> /dev/null
-$MYG < ../sql/npcskills.sql &> /dev/null
-$MYG < ../sql/olympiad_data.sql &> /dev/null
-$MYG < ../sql/olympiad_fights.sql &> /dev/null
-$MYG < ../sql/olympiad_nobles.sql&> /dev/null
-$MYG < ../sql/olympiad_nobles_eom.sql&> /dev/null
-$MYG < ../sql/pets.sql &> /dev/null
-$MYG < ../sql/pets_skills.sql &> /dev/null
-$MYG < ../sql/pledge_skill_trees.sql &> /dev/null
-$MYG < ../sql/posts.sql &> /dev/null
-$MYG < ../sql/quest_global_data.sql &> /dev/null
-$MYG < ../sql/raidboss_spawnlist.sql &> /dev/null
-$MYG < ../sql/random_spawn.sql &> /dev/null
-$MYG < ../sql/random_spawn_loc.sql &> /dev/null
-$MYG < ../sql/seven_signs.sql &> /dev/null
-$MYG < ../sql/seven_signs_festival.sql &> /dev/null
-$MYG < ../sql/seven_signs_status.sql &> /dev/null
-$MYG < ../sql/siege_clans.sql &> /dev/null
-$MYG < ../sql/skill_learn.sql &> /dev/null
-$MYG < ../sql/skill_spellbooks.sql &> /dev/null
-$MYG < ../sql/skill_trees.sql &> /dev/null
-$MYG < ../sql/skill_residential.sql &> /dev/null
-$MYG < ../sql/spawnlist.sql &> /dev/null
-$MYG < ../sql/special_skill_trees.sql &> /dev/null
-$MYG < ../sql/teleport.sql &> /dev/null
-$MYG < ../sql/topic.sql &> /dev/null
-$MYG < ../sql/territories.sql &> /dev/null
-$MYG < ../sql/territory_registrations.sql &> /dev/null
-$MYG < ../sql/territory_spawnlist.sql &> /dev/null
-$MYG < ../sql/transform_skill_trees.sql &> /dev/null
-$MYG < ../sql/zone_vertices.sql &> /dev/null
+
+for gs in $(ls ../sql/server/*.sql);do
+	echo "Installing GameServer table : $gs"
+	$MYG < $gs
+done
+
 newbie_helper
 }
 
@@ -487,6 +379,7 @@ finish
 cstinstall(){
 while :
   do
+   clear
    echo ""
    echo -ne "Do you want to make another backup of GSDB before applying custom contents? (y/N): "
    read LSB
@@ -503,26 +396,42 @@ while :
      break
    fi
   done 
+clear
 echo "Installing custom content."
-for custom in $(ls ../sql/custom/*.sql);do 
-$MYG < $custom &> /dev/null
+for custom in $(ls ../sql/server/custom/*.sql);do 
+	echo "Installing custom table: $custom"
+	$MYG < $custom
 done
 # L2J mods that needed extra tables to work properly, should be 
 # listed here. To do so copy & paste the following 6 lines and
 # change them properly:
 # MOD: Wedding.
-  echo -ne "Install "Wedding Mod" tables? (y/N): "
-  read modprompt
-  if [ "$modprompt" == "Y" -o "$LSB" == "y" ]; then
-		$MYG < ../sql/mods/mods_wedding.sql &> /dev/null
+	echo -ne "Install "Wedding Mod" tables? (y/N): "
+	read modprompt
+	if [ "$modprompt" == "y" -o "$LSB" == "y" ]; then
+		for mod in $(ls ../sql/server/mods/*.sql);do
+			echo "Installing custom mod table : $mod"
+			$MYG < $mod
+		done
 	fi
 
 finish
 }
 
 finish(){
-echo ""
+clear
 echo "Script execution finished."
+echo ""
+echo "L2JDP database_installer version 0.2.2"
+echo "(C) 2007-2011 L2J Datapack Team"
+echo "database_installer comes with ABSOLUTELY NO WARRANTY;"
+echo "This is free software, and you are welcome to redistribute it"
+echo "under certain conditions; See the file gpl.txt for further"
+echo "details."
+echo ""
+echo "Thanks for using our software."
+echo "visit http://www.l2jdp.com for more info about"
+echo "the L2J Datapack project."
 exit 0
 }
 
@@ -533,16 +442,18 @@ while :
    echo -ne "If you're not that skilled applying changes within 'updates' folder, i can try to do it for you (y). If you wish to do it on your own, choose (n). Should i parse updates files? (Y/n)"
    read NOB
    if [ "$NOB" == "Y" -o "$NOB" == "y" -o "$NOB" == "" ]; then
-     echo ""
+     clear
+	 echo ""
      echo "There we go, it may take some time..."
      echo "updates parser results. Last run: "`date` >database_installer.log
-     for file in $(ls ../sql/updates/*sql);do
+     for file in $(ls ../sql/server/updates/*.sql);do
         echo $file|cut -d/ -f4 >> database_installer.log
         $MYG < $file 2>> database_installer.log
 	if [ $? -eq 0 ];then
 	    echo "no errors">> database_installer.log
 	fi    
 	done
+	 clear
      echo ""
      echo "Log available at $(pwd)/database_installer.log"
      echo ""
@@ -560,7 +471,8 @@ while :
    echo -ne "If you're not that skilled applying changes within 'updates' folder, i can try to do it for you (y). If you wish to do it on your own, choose (n). Should i parse updates files? (Y/n)"
    read NOB
    if [ "$NOB" == "Y" -o "$NOB" == "y" -o "$NOB" == "" ]; then
-     echo ""
+     clear
+	 echo ""
      echo "There we go, it may take some time..."
      echo "updates parser results. Last run: "`date` >cb_database_installer.log
      for file in $(ls ../cb_sql/updates/*sql);do
@@ -570,6 +482,7 @@ while :
             echo "no errors">> cb_database_installer.log
         fi
      done
+	 clear
      echo ""
      echo "Log available at $(pwd)/cb_database_installer.log"
      echo ""
