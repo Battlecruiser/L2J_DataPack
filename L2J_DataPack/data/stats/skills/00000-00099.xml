@@ -765,19 +765,19 @@
 		<table name="#mpConsume"> 54 56 57 57 59 61 63 65 66 68 70 72 74 74 76 78 80 82 84 86 87 89 91 91 93 95 97 98 100 102 103 105 106 108 109 111 112 </table>
 		<table name="#ench2MpConsume"> 110 108 106 104 102 100 99 97 95 93 91 89 87 85 83 82 80 78 76 74 72 70 69 67 65 63 61 59 57 56 </table>
 		<table name="#power"> 1107 1176 1249 1325 1405 1488 1574 1664 1757 1853 1953 2057 2164 2274 2388 2505 2625 2748 2875 3004 3136 3217 3408 3548 3690 3834 3980 4127 4275 4425 4575 4726 4878 5029 5180 5330 5479 </table>
-		<table name="#lethal1"> 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 10 10 10 10 10 10 10 10 10 10 15 15 15 15 </table>
+		<table name="#baseCritLethal"> 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 10 10 10 10 10 10 10 10 10 10 15 15 15 15 </table>
 		<table name="#ench1Power"> 5493 5506 5520 5534 5547 5561 5575 5588 5602 5616 5629 5643 5657 5670 5684 5698 5711 5725 5738 5752 5766 5779 5793 5802 5820 5834 5848 5861 5875 5889 </table>
 		<table name="#magicLvl"> 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#enchElementPower"> 11 12 14 15 16 18 19 20 22 23 24 26 27 28 30 31 32 34 35 36 38 39 40 42 43 44 46 47 48 50 </table>
 		<table name="#enchDuel"> 5552 5624 5697 5769 5842 5914 5987 6059 6132 6204 6277 6350 6422 6495 6567 6640 6712 6785 6857 6930 7002 7075 7147 7220 7292 7365 7437 7510 7583 7655 </table>
-		<set name="baseCritRate" val="#value" />
+		<set name="baseCritRate" val="#baseCritLethal" />
 		<set name="castRange" val="40" />
 		<set name="condition" val="24" /> <!-- Behind/Crit -->
 		<set name="coolTime" val="720" />
 		<set name="dmgDirectlyToHp" val="true" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
-		<set name="lethal1" val="#lethal1" /> <!-- Half-Kill -->
+		<set name="lethal1" val="#baseCritLethal" /> <!-- Half-Kill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="nextActionAttack" val="true" />
