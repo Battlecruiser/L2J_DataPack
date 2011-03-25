@@ -407,7 +407,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="10113" />
 		<set name="hitTime" val="3000" />
-		<set name="lethal2" val="#lethal2" />
+		<set name="lethal2" val="#lethal2" /> <!-- Lethal Strike -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="OP_ACTIVE" />
@@ -1978,6 +1978,7 @@
 		<table name="#power"> 3749 4217 4703 5199 </table>
 		<table name="#mpConsume"> 61 63 67 70 </table>
 		<set name="condition" val="16" /> <!-- Crit -->
+		<set name="lethal1" val="10" /> <!-- Half-Kill -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="skillType" val="BLOW" />
