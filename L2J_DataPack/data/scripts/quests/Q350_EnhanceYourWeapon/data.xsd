@@ -36,11 +36,10 @@
 														<xs:restriction base="xs:token">
 															<xs:enumeration value="FULL_PARTY" />
 															<xs:enumeration value="PARTY_ONE_RANDOM" />
-															<xs:enumeration value="PARTY_RANDOM" />
 														</xs:restriction>
 													</xs:simpleType>
 												</xs:attribute>
-												<xs:attribute name="chance" use="optional">
+												<xs:attribute name="chance" use="required">
 													<xs:simpleType>
 														<xs:restriction base="xs:integer">
 															<xs:minInclusive value="1" />
