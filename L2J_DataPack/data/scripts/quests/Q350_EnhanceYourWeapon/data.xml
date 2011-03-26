@@ -340,7 +340,7 @@
 			<detail chance="9" skill="true" maxLevel="4" />
 		</item>
 		<item npcId="21629"> <!-- Pirate Zombie Captain -->
-			<detail skill="true" maxLevel="4" />
+			<detail chance="9" skill="true" maxLevel="4" />
 		</item>
 		<item npcId="21630"> <!-- Pirate Zombie Captain -->
 			<detail chance="9" skill="true" maxLevel="4" />
@@ -369,416 +369,440 @@
 		
 		<!-- RaidBosses or GrandBosses that level up crystal from Level 10 up to 18 -->
 		<item npcId="29001"> <!-- Queen Ant -->
-			<detail chance="50" absorbType="PARTY_RANDOM" levelList="10" />
+			<detail chance="5" absorbType="FULL_PARTY" levelList="10" />
 		</item>
 		<item npcId="29006"> <!-- Core -->
-			<detail chance="50" absorbType="PARTY_RANDOM" levelList="10, 11, 12" />
+			<detail chance="20" absorbType="FULL_PARTY" levelList="10, 11, 12" />
 		</item>
 		<item npcId="29014"> <!-- Orfen -->
-			<detail chance="50" absorbType="PARTY_RANDOM" levelList="10, 11, 12" />
+			<detail chance="20" absorbType="FULL_PARTY" levelList="10, 11, 12" />
+		</item>
+		<item npcId="29022"> <!-- Zaken -->
+			<detail chance="100" absorbType="FULL_PARTY" levelList="10, 11" />
+			<detail chance="10" absorbType="FULL_PARTY" levelList="12, 13" />
 		</item>
 		<item npcId="29176"> <!-- Daytime Zaken -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="10" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="29181"> <!-- Night-time Zaken -->
-			<detail chance="50" absorbType="FULL_PARTY" levelList="10, 11" />
-			<detail chance="50" absorbType="PARTY_RANDOM" levelList="12, 13" />
+			<detail chance="20" absorbType="PARTY_ONE_RANDOM" levelList="12, 13" />
+			<detail chance="10" absorbType="PARTY_ONE_RANDOM" levelList="14, 15" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="16" />
 		</item>
-		<item npcId="29016"> <!-- The 3rd Underwater Guardian -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+		<item npcId="25016"> <!-- The 3rd Underwater Guardian -->
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25106"> <!-- Ghost of the Well Lidia -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25179"> <!-- Guardian of the Statue of Giant Karum -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25234"> <!-- Ancient Weird Drake -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25256"> <!-- Taik High Prefect Arak -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25407"> <!-- Lord Ishka -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25423"> <!-- Fairy Queen Timiniel -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25226"> <!-- Roaring Lord Kastor -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25051"> <!-- Rahha -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25125"> <!-- Fierce Tiger King Angel -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25255"> <!-- Gargoyle Lord Tiphon -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25444"> <!-- Enmity Ghost Ramdal -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25478"> <!-- Shilen's Priest Hisilrome -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25322"> <!-- Demon's Agent Falston -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25263"> <!-- Kernon's Faithful Servant Kelone -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25337"> <!-- Anakazel -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25073"> <!-- Bloody Priest Rudelto -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25233"> <!-- Spirit of Andras, the Betrayer -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25035"> <!-- Shilen's Messenger Cabrio -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25092"> <!-- Korim -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25163"> <!-- Roaring Skylancer -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="20" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25198"> <!-- Fafurion's Herald Lokness -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25252"> <!-- Palibati Queen Themis -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25269"> <!-- Beast Lord Behemoth -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="20" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25281"> <!-- Anakim's Nemesis Zakaron -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25325"> <!-- Flame of Splendor Barakiel -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25453"> <!-- Meanas Anor -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="20" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25328"> <!-- Eilhalder von Hellmann -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25447"> <!-- Immortal Savior Mardil -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25199"> <!-- Water Dragon Seer Sheshark -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25235"> <!-- Vanor Chief Kandra -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25248"> <!-- Doom Blade Tanatos -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25220"> <!-- Death Lord Hallate -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25523"> <!-- Plague Golem -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25109"> <!-- Antharas Priest Cloe -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="20" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25202"> <!-- Krokian Padisha Sobekk -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="20" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25296"> <!-- Icicle Emperor Bumbalump -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="29020"> <!-- Baium -->
 			<detail chance="100" absorbType="FULL_PARTY" levelList="10, 11" />
-			<detail chance="100" absorbType="PARTY_RANDOM" levelList="12" />
+			<detail chance="5" absorbType="FULL_PARTY" levelList="12" />
 		</item>
 		<item npcId="25054"> <!-- Kernon -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
 		</item>
 		<item npcId="25229"> <!-- Storm Winged Naga -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
 		</item>
 		<item npcId="25244"> <!-- Last Lesser Giant Olkuth -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
 		</item>
 		<item npcId="25249"> <!-- Palatanos of Horrific Power -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
 		</item>
 		<item npcId="25266"> <!-- Bloody Empress Decarbia -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
 		</item>
 		<item npcId="25276"> <!-- Death Lord Ipos -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
 		</item>
 		<item npcId="25282"> <!-- Death Lord Shax -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
 		</item>
 		<item npcId="25205"> <!-- Ocean Flame Ashakiel -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
 		</item>
 		<item npcId="25524"> <!-- Flamestone Giant -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
 		</item>
 		<item npcId="25703"> <!-- Gigantic Golem -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
 		</item>
 		<item npcId="25143"> <!-- Fire of Wrath Shuriel -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
 		</item>
 		<item npcId="25245"> <!-- Last Lesser Giant Glaki -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
 		</item>
 		<item npcId="25290"> <!-- Daimon the White-Eyed -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
 		</item>
 		<item npcId="25293"> <!-- Hestia, Guardian Deity of the Hot Springs -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
 		</item>
 		<item npcId="25338"> <!-- Anakazel -->
-			<detail chance="50" absorbType="PARTY_RANDOM" levelList="12, 13" />
+			<detail chance="15" absorbType="PARTY_ONE_RANDOM" levelList="12, 13" />
 		</item>
 		<item npcId="25126"> <!-- Longhorn Golkonda -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
 		</item>
 		<item npcId="25450"> <!-- Cherub Galaxia -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
 		</item>
 		<item npcId="29062"> <!-- Andreas Van Halter -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="29065"> <!-- Sailren -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="20" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="12, 13" />
 		</item>
 		<item npcId="29095"> <!-- Gordon -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="25283"> <!-- Lilith -->
-			<detail chance="50" absorbType="FULL_PARTY" levelList="10, 11" />
-			<detail chance="50" absorbType="PARTY_RANDOM" levelList="12, 13" />
+			<detail chance="100" absorbType="FULL_PARTY" levelList="10, 11" />
+			<detail chance="10" absorbType="FULL_PARTY" levelList="12, 13" />
 		</item>
 		<item npcId="25286"> <!-- Anakim -->
-			<detail chance="50" absorbType="FULL_PARTY" levelList="10, 11" />
-			<detail chance="50" absorbType="PARTY_RANDOM" levelList="12, 13" />
+			<detail chance="100" absorbType="FULL_PARTY" levelList="10, 11" />
+			<detail chance="10" absorbType="FULL_PARTY" levelList="12, 13" />
 		</item>
 		<item npcId="25299"> <!-- Ketra's Hero Hekaton -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="25302"> <!-- Ketra's Commander Tayr -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="25305"> <!-- Ketra's Chief Brakki -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="25306"> <!-- Soul of Fire Nastron -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="25309"> <!-- Varka's Hero Shadith -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="25312"> <!-- Varka's Commander Mos -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="25315"> <!-- Varka's Chief Horus -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="25316"> <!-- Soul of Water Ashutar -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="25319"> <!-- Ember -->
-			<detail chance="50" absorbType="PARTY_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="5" absorbType="FULL_PARTY" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="25527"> <!-- Uruka -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
-		</item>
-		<item npcId="22215"> <!-- Tyrannosaurus -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="22216"> <!-- Tyrannosaurus -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
-		</item>
-		<item npcId="22217"> <!-- Tyrannosaurus -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
+			<detail chance="15" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25536"> <!-- Hannibal -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="25539"> <!-- Typhoon -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="25643"> <!-- Awakened Ancient Sentry -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="25644"> <!-- Awakened Ancient Severer -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="25645"> <!-- Awakened Ancient Soul Extractor -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="25646"> <!-- Awakened Ancient Soul Devourer -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="25647"> <!-- Awakened Ancient Fighter -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="25648"> <!-- Awakened Ancient Fighter -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="25649"> <!-- Awakened Ancient Executor -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="25650"> <!-- Awakened Ancient Executor -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="25651"> <!-- Awakened Ancient Prophet -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="25652"> <!-- Awakened Ancient Prophet -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="25665"> <!-- Yehan Klodekus -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="10" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="25666"> <!-- Yehan Klanikus -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="10" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
-		<!-- TODO: add Aenkinel lvl81 -->
+		<item npcId="25690"> <!-- Aenkinel Lv 81 -->
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+		</item>
+		<item npcId="25691"> <!-- Aenkinel Lv 81 -->
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+		</item>
+		<item npcId="25692"> <!-- Aenkinel Lv 81 -->
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+		</item>
+		<item npcId="25693"> <!-- Aenkinel Lv 81 -->
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+		</item>
+		<item npcId="25694"> <!-- Aenkinel Lv 82 -->
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13, 14" />
+		</item>
+		<item npcId="25695"> <!-- Aenkinel Lv 84 -->
+			<detail chance="20" absorbType="PARTY_ONE_RANDOM" levelList="12, 13" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="14" />
+		</item>
 		<item npcId="25667"> <!-- Cannibalistic Stakato Chief -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="25668"> <!-- Cannibalistic Stakato Chief -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="25669"> <!-- Cannibalistic Stakato Chief -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="25670"> <!-- Cannibalistic Stakato Chief -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13" />
 		</item>
 		<item npcId="25609"> <!-- Epidos -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13, 14" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13, 14" />
 		</item>
 		<item npcId="25610"> <!-- Epidos -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13, 14" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13, 14" />
 		</item>
 		<item npcId="25611"> <!-- Epidos -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13, 14" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13, 14" />
 		</item>
 		<item npcId="25612"> <!-- Epidos -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13, 14" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13, 14" />
 		</item>
 		<item npcId="25162"> <!-- Giant Marpanak -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13, 14" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="25467"> <!-- Gorgolos -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13, 14" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
 		</item>
 		<item npcId="29150"> <!-- Ekimus -->
-			<detail chance="50" absorbType="PARTY_RANDOM" levelList="12, 13, 14, 15, 16" />
+			<detail chance="10" absorbType="FULL_PARTY" levelList="12, 13, 14, 15" />
+			<detail chance="3" absorbType="FULL_PARTY" levelList="16" />
 		</item>
 		<item npcId="29163"> <!-- Tiat Attack stage -->
-			<detail chance="50" absorbType="PARTY_RANDOM" levelList="12, 13, 14, 15, 16" />
-		</item>
-		<item npcId="29175"> <!-- Tiat defend stage -->
-			<detail chance="50" absorbType="PARTY_RANDOM" levelList="12, 13, 14, 15, 16" />
+			<detail chance="10" absorbType="FULL_PARTY" levelList="12, 13, 14, 15" />
+			<detail chance="3" absorbType="FULL_PARTY" levelList="16" />
 		</item>
 		<item npcId="25540"> <!-- Demon Prince -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13, 14" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13, 14" />
 		</item>
 		<item npcId="25542"> <!-- Ranku -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13, 14" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13, 14" />
 		</item>
 		<item npcId="25544"> <!-- Tully -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13, 14" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13, 14" />
 		</item>
 		<item npcId="25674"> <!-- Gwindorr -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13, 14" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13, 14" />
 		</item>
 		<item npcId="25684"> <!-- Last Titan Utenus -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13, 14" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13, 14" />
 		</item>
-		<!-- TODO: add Aenkinel lvl83 -->
 		<item npcId="25687"> <!-- Hekaton Prime -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13, 14" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12, 13, 14" />
 		</item>
 		<item npcId="29118"> <!-- Beleth -->
-			<detail chance="50" absorbType="PARTY_RANDOM" levelList="12, 13, 14, 15, 16" />
-		</item>
-		<item npcId="29119"> <!-- Beleth -->
-			<detail chance="50" absorbType="PARTY_RANDOM" levelList="12, 13, 14, 15, 16" />
+			<detail chance="10" absorbType="FULL_PARTY" levelList="12, 13, 14, 15" />
+			<detail chance="1" absorbType="FULL_PARTY" levelList="16" />
 		</item>
 		<item npcId="25701"> <!-- Anais -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="12, 13, 14" />
+			<detail chance="10" absorbType="PARTY_ONE_RANDOM" levelList="12, 13" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="14" />
 		</item>
-		<!-- TODO: add Aenkinel lvl84 -->
-		<item npcId="25487"> <!-- Water Spirit Lian -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="12, 13, 14" />
+		<item npcId="25677"> <!-- Water Spirit Lian -->
+			<detail chance="10" absorbType="PARTY_ONE_RANDOM" levelList="12, 13" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="14" />
 		</item>
 		<item npcId="25603"> <!-- Darion -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="12, 13, 14, 15" />
+			<detail chance="10" absorbType="PARTY_ONE_RANDOM" levelList="12, 13" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="14" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="15" />
 		</item>
 		<item npcId="25671"> <!-- Queen Shyeed -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="12, 13, 14, 15" />
+			<detail chance="10" absorbType="PARTY_ONE_RANDOM" levelList="12, 13" />
+			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="14" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="15" />
 		</item>
-		<item npcId="25531"> <!-- Darnel -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="12, 13, 14, 15" />
+		<item npcId="25713"> <!-- Darnel -->
+			<detail chance="1" absorbType="PARTY_ONE_RANDOM" levelList="12, 13, 14, 15" />
 		</item>
-		<item npcId="25532"> <!-- Kechi -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="12, 13, 14, 15" />
+		<item npcId="25714"> <!-- Kechi -->
+			<detail chance="1" absorbType="PARTY_ONE_RANDOM" levelList="12, 13, 14, 15" />
 		</item>
-		<item npcId="25534"> <!-- Tears -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="12, 13, 14, 15" />
+		<item npcId="25716"> <!-- Tears -->
+			<detail chance="1" absorbType="PARTY_ONE_RANDOM" levelList="12, 13, 14, 15" />
 		</item>
-		<!-- TODO: add Ice Knight Captain Normal Mode (25699) -->
-		<!-- TODO: add Ice Knight Captain Extreme Mode (25700) -->
+		<item npcId="25699"> <!-- Ice Knight Captain Normal Mode -->
+			<detail chance="10" absorbType="FULL_PARTY" levelList="12, 13" />
+		</item>
+		<item npcId="25700"> <!-- Ice Knight Captain Extreme Mode -->
+			<detail chance="20" absorbType="FULL_PARTY" levelList="12, 13, 14" />
+		</item>
 		<item npcId="25696"> <!-- Taklacan -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="12, 13, 14, 15" />
+			<detail chance="10" absorbType="PARTY_ONE_RANDOM" levelList="12, 13, 14" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="15" />
 		</item>
 		<item npcId="25698"> <!-- Dopagen -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="12, 13, 14, 15" />
+			<detail chance="10" absorbType="PARTY_ONE_RANDOM" levelList="12, 13, 14" />
+			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="15" />
 		</item>
-		<item npcId="29099"> <!-- Baylor -->
-			<detail absorbType="PARTY_ONE_RANDOM" levelList="12, 13, 14, 15, 16" />
+		<item npcId="29186"> <!-- Baylor -->
+			<detail chance="1" absorbType="PARTY_ONE_RANDOM" levelList="12, 13, 14, 15, 16" />
 		</item>
 		<item npcId="29047"> <!-- Scarlet van Halisha -->
 			<detail chance="100" absorbType="FULL_PARTY" levelList="12, 13" />
-			<detail chance="50" absorbType="PARTY_RANDOM" levelList="14, 15" />
-			<detail chance="25" absorbType="PARTY_ONE_RANDOM" levelList="16" />
+			<detail chance="50" absorbType="FULL_PARTY" levelList="14" />
+			<detail chance="10" absorbType="FULL_PARTY" levelList="15" />
 		</item>
-		<item npcId="29178"> <!-- Freya Normal Mode -->
+		<item npcId="29179"> <!-- Freya Normal Mode -->
 			<detail chance="100" absorbType="FULL_PARTY" levelList="12, 13, 14" />
-			<detail chance="50" absorbType="PARTY_RANDOM" levelList="15" />
-			<detail chance="50" absorbType="PARTY_ONE_RANDOM" levelList="16" />
+			<detail chance="10" absorbType="FULL_PARTY" levelList="15" />
 		</item>
 		<item npcId="29180"> <!-- Freya Extreme Mode -->
 			<detail chance="100" absorbType="FULL_PARTY" levelList="12, 13, 14, 15," />
-			<detail chance="50" absorbType="PARTY_RANDOM" levelList="16, 17" />
+			<detail chance="50" absorbType="FULL_PARTY" levelList="16, 17" />
 		</item>
 		<item npcId="29019"> <!-- Antharas -->
 			<detail chance="100" absorbType="FULL_PARTY" levelList="12, 13, 14, 15, 16" />
-			<detail chance="50" absorbType="PARTY_RANDOM" levelList="17" />
+			<detail chance="50" absorbType="FULL_PARTY" levelList="17" />
 		</item>
 		<item npcId="29066"> <!-- Antharas -->
 			<detail chance="100" absorbType="FULL_PARTY" levelList="12, 13, 14, 15, 16" />
-			<detail chance="50" absorbType="PARTY_RANDOM" levelList="17" />
+			<detail chance="50" absorbType="FULL_PARTY" levelList="17" />
 		</item>
 		<item npcId="29067"> <!-- Antharas -->
 			<detail chance="100" absorbType="FULL_PARTY" levelList="12, 13, 14, 15, 16" />
-			<detail chance="50" absorbType="PARTY_RANDOM" levelList="17" />
+			<detail chance="50" absorbType="FULL_PARTY" levelList="17" />
 		</item>
 		<item npcId="29068"> <!-- Antharas -->
 			<detail chance="100" absorbType="FULL_PARTY" levelList="12, 13, 14, 15, 16" />
-			<detail chance="50" absorbType="PARTY_RANDOM" levelList="17" />
+			<detail chance="50" absorbType="FULL_PARTY" levelList="17" />
 		</item>
 		<item npcId="29028"> <!-- Valakas -->
 			<detail chance="100" absorbType="FULL_PARTY" levelList="12, 13, 14, 15, 16" />
-			<detail chance="50" absorbType="PARTY_RANDOM" levelList="17" />
+			<detail chance="50" absorbType="FULL_PARTY" levelList="17" />
 		</item>
 	</npc>
 </list>
