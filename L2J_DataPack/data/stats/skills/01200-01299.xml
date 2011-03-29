@@ -502,12 +502,13 @@
 		<table name="#mpConsume"> 31 35 42 48 56 62 69 75 82 85 88 92 95 98 101 104 106 109 </table>
 		<table name="#reuseDelay"> 5400000 5400000 5400000 5400000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 </table>
 		<table name="#npcIds"> 14159 14160 14161 14162 14163 14164 14165 14166 14167 14168 14169 14170 14171 14172 14173 14174 14175 14176 </table>
+		<table name="#summonTotalLifeTime"> 1200000 1200000 1200000 1200000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="itemConsumeId" val="3031" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeSteps" val="0" />
-		<set name="summonTotalLifeTime" val="3600000" />
+		<set name="summonTotalLifeTime" val="summonTotalLifeTime" />
 		<set name="summonTimeLostIdle" val="500" />
 		<set name="summonTimeLostActive" val="1000" />
 		<set name="target" val="TARGET_SELF" />
@@ -530,6 +531,7 @@
 		<table name="#itemConsumeCountOT"> 0 0 0 0 0 1 1 1 1 1 1 1 2 2 2 2 2 2 </table>
 		<table name="#itemConsumeSteps"> 0 0 0 0 0 14 14 14 14 14 14 14 14 14 14 14 14 14 </table>
 		<table name="#npcIds"> 14295 14296 14297 14298 14299 14300 14301 14302 14303 14304 14305 14306 14307 14308 14309 14310 14311 14312 </table>
+		<table name="#summonTotalLifeTime"> 1200000 1200000 1200000 1200000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 </table>
 		<set name="itemConsumeId" val="3031" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
 		<set name="itemConsumeIdOT" val="3031" />
@@ -537,7 +539,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="itemConsumeSteps" val="#itemConsumeSteps" />
-		<set name="summonTotalLifeTime" val="3600000" />
+		<set name="summonTotalLifeTime" val="summonTotalLifeTime" />
 		<set name="summonTimeLostIdle" val="500" />
 		<set name="summonTimeLostActive" val="1000" />
 		<set name="target" val="TARGET_SELF" />
@@ -556,12 +558,13 @@
 		<table name="#mpConsume"> 31 35 42 48 56 62 69 75 82 85 88 92 95 98 101 104 106 109 </table>
 		<table name="#reuseDelay"> 5400000 5400000 5400000 5400000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 </table>
 		<table name="#npcIds"> 14343 14344 14345 14346 14347 14348 14349 14350 14351 14352 14353 14354 14355 14356 14357 14358 14359 14360 </table>
+		<table name="#summonTotalLifeTime"> 1200000 1200000 1200000 1200000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="itemConsumeId" val="3031" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeSteps" val="0" />
-		<set name="summonTotalLifeTime" val="3600000" />
+		<set name="summonTotalLifeTime" val="summonTotalLifeTime" />
 		<set name="summonTimeLostIdle" val="500" />
 		<set name="summonTimeLostActive" val="1000" />
 		<set name="target" val="TARGET_SELF" />
@@ -581,12 +584,13 @@
 		<table name="#mpConsume"> 31 35 42 48 56 62 69 75 82 85 88 92 95 98 101 104 106 109 </table>
 		<table name="#reuseDelay"> 5400000 5400000 5400000 5400000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 </table>
 		<table name="#npcIds"> 14527 14528 14529 14530 14531 14532 14533 14534 14535 14536 14537 14538 14539 14540 14541 14542 14543 14544 </table>
+		<table name="#summonTotalLifeTime"> 1200000 1200000 1200000 1200000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="itemConsumeId" val="3031" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeSteps" val="0" />
-		<set name="summonTotalLifeTime" val="3600000" />
+		<set name="summonTotalLifeTime" val="summonTotalLifeTime" />
 		<set name="summonTimeLostIdle" val="500" />
 		<set name="summonTimeLostActive" val="1000" />
 		<set name="target" val="TARGET_SELF" />
