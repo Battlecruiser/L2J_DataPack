@@ -216,7 +216,7 @@ clear
 echo "Installling new loginserver content."
 for login in $(ls ../sql/login/*.sql);do
 	echo "Installing loginserver table : $login"
-	$MYG < $login
+	$MYL < $login
 done
 }
 
@@ -445,18 +445,14 @@ while :
      clear
 	 echo ""
      echo "There we go, it may take some time..."
-     echo "updates parser results. Last run: "`date` >database_installer.log
+	 echo "Installing Gameserver Updates"
      for file in $(ls ../sql/server/updates/*.sql);do
-        echo $file|cut -d/ -f4 >> database_installer.log
-        $MYG < $file 2>> database_installer.log
-	if [ $? -eq 0 ];then
-	    echo "no errors">> database_installer.log
-	fi    
-	done
-	 clear
-     echo ""
-     echo "Log available at $(pwd)/database_installer.log"
-     echo ""
+        $MYG < $file 
+	 done
+	 echo "Installing Loginserver Updates"
+	 for file in $(ls ../sql/login/updates/*.sql);do
+		$MYL < $file
+	 done
      break
    elif [ "$NOB" == "n" -o "$NOB" == "N" ]; then 
      break
