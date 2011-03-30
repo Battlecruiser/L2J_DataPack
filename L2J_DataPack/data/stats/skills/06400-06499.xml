@@ -130,15 +130,22 @@
 		</for>
 	</skill>
 	<skill id="6407" levels="1" name="Torumba's Constraint">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" /> <!-- Need Core Support for prevent player begin resurrected be another player -->
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="isMagic" val="true" />
-		<set name="mpInitialConsume" val="15" />
-		<set name="mpConsume" val="60" />
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="600" />
+		<set name="ignoreResists" val="true" />
 		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="true" />
+		<set name="mpConsume" val="60" />
+		<set name="mpInitialConsume" val="15" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="skillType" val="DEBUFF" />
+		<set name="stayAfterDeath" val="true" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="BlockResurrection" time="300" val="0" stackOrder="1" stackType="block_resurrection" />
+		</for>
 	</skill>
 	<skill id="6408" levels="1" name="Soul Weakness">
 		<set name="target" val="TARGET_NONE" />
