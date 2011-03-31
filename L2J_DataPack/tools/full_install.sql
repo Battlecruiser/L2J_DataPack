@@ -127,4 +127,3 @@ DROP TABLE IF EXISTS territory_registrations;
 DROP TABLE IF EXISTS territory_spawnlist;
 DROP TABLE IF EXISTS topic;
 DROP TABLE IF EXISTS transform_skill_trees;
-DROP TABLE IF EXISTS zone_vertices;
