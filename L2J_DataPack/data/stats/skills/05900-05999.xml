@@ -44,7 +44,7 @@
 		<set name="isMagic" val="true" />
 		<set name="saveVs" val="STR" />
 		<for>
-			<effect name="Disarm" time="5" val="0" stackOrder="1" stackType="disarm" />
+			<effect name="Disarm" time="5" val="0" abnormalLvl="1" abnormalType="disarm" />
 		</for>
 	</skill>
 	<skill id="5904" levels="3" name="Mist of Souleater">
@@ -182,7 +182,7 @@
 		<set name="stayAfterDeath" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="BlockResurrection" time="300" val="0" stackOrder="1" stackType="block_resurrection" />
+			<effect name="BlockResurrection" time="300" val="0" abnormalLvl="1" abnormalType="block_resurrection" />
 		</for>
 	</skill>
 	<skill id="5920" levels="1" name="Tentacle of Agony">
@@ -222,7 +222,7 @@
 		<set name="skillType" val="DRAIN" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<for>
-			<effect name="Debuff" time="10" val="0" abnormal="bleed" effectPower="80" effectType="DEBUFF" stackOrder="1" stackType="multi_debuff_f">
+			<effect name="Debuff" time="10" val="0" abnormal="bleed" effectPower="80" effectType="DEBUFF" abnormalLvl="1" abnormalType="multi_debuff_f">
 				<mul order="0x30" stat="pAtk" val="0.9" />
 				<mul order="0x30" stat="pAtkSpd" val="0.95" />
 				<mul order="0x30" stat="mAtk" val="0.95" />
@@ -250,7 +250,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AREA" />
 		<for>
-			<effect name="Debuff" time="10" val="0" abnormal="bleed" effectPower="80" effectType="DEBUFF" stackOrder="1" stackType="multi_debuff_g">
+			<effect name="Debuff" time="10" val="0" abnormal="bleed" effectPower="80" effectType="DEBUFF" abnormalLvl="1" abnormalType="multi_debuff_g">
 				<sub order="0x40" stat="rEvas" val="3" />
 				<mul order="0x30" stat="pDef" val="0.5" />
 				<mul order="0x30" stat="mDef" val="0.5" />
@@ -467,7 +467,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="1000" />
 		<for>
-			<effect name="Buff" time="43200" val="0" stackOrder="9" stackType="vp_up" abnormal="vitality">
+			<effect name="Buff" time="43200" val="0" abnormalLvl="9" abnormalType="vp_up" abnormal="vitality">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -716,7 +716,7 @@
 			<player landingZone="True" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="-1" val="0" stackOrder="1" stackType="transform"> <!-- Transformation has unlimited time -->
+			<effect name="Transformation" time="-1" val="0" abnormalLvl="1" abnormalType="transform"> <!-- Transformation has unlimited time -->
 			</effect>
 		</for>
 	</skill>
@@ -737,7 +737,7 @@
 			<player landingZone="True" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="-1" val="0" stackOrder="1" stackType="transform"> <!-- Transformation has unlimited time -->
+			<effect name="Transformation" time="-1" val="0" abnormalLvl="1" abnormalType="transform"> <!-- Transformation has unlimited time -->
 			</effect>
 		</for>
 	</skill>
@@ -771,7 +771,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_PARTY" />
 		<for>
-			<effect name="Buff" time="600" val="0" stackOrder="1" stackType="dwarf_attack_buff">
+			<effect name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
 					<using kind="Sword,Big Sword,Dagger,Dual Dagger,Pole,Rapier,Ancient,Dual Sword,Dual Fist,Blunt,Big Blunt,Bow,Crossbow" />
 				</mul>
@@ -798,7 +798,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_PARTY" />
 		<for>
-			<effect name="Buff" time="600" val="0" stackOrder="1" stackType="dwarf_defence_buff">
+			<effect name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
 				<mul order="0x30" stat="pDef" val="1.1">
 					<using kind="Heavy" />
 				</mul>
@@ -860,7 +860,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
-			<effect name="ChanceSkillTrigger" time="10" val="0" abnormal="poison" effectPower="90" effectType="DEBUFF" activationChance="90" chanceType="ON_ATTACKED_HIT" triggeredId="5902" triggeredLevel="1" stackOrder="8" stackType="oblivion" />
+			<effect name="ChanceSkillTrigger" time="10" val="0" abnormal="poison" effectPower="90" effectType="DEBUFF" activationChance="90" chanceType="ON_ATTACKED_HIT" triggeredId="5902" triggeredLevel="1" abnormalLvl="8" abnormalType="oblivion" />
 			<effect name="SilenceMagicPhysical" time="10" noicon="1" val="0" effectPower="90" effectType="MUTE" />
 		</for>
 	</skill>

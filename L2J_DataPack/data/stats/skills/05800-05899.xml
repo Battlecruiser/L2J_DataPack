@@ -280,7 +280,7 @@
 		<set name="hitTime" val="1800" />
 		<set name="skillRadius" val="150" />
 		<for>
-			<effect count="4" name="DamOverTime" time="5" val="70" effectPower="80" effectType="BLEED" stackOrder="1" stackType="bleeding" />
+			<effect count="4" name="DamOverTime" time="5" val="70" effectPower="80" effectType="BLEED" abnormalLvl="1" abnormalType="bleeding" />
 		</for>
 	</skill>
 	<skill id="5832" levels="1" name="Hate Aura">
@@ -297,7 +297,7 @@
 		<set name="skillRadius" val="600" />
 		<set name="saveVs" val="MEN" />
 		<for>
-			<effect name="TargetMe" time="3" val="0" stackOrder="1" stackType="target_lock" />
+			<effect name="TargetMe" time="3" val="0" abnormalLvl="1" abnormalType="target_lock" />
 		</for>
 	</skill>
 	<skill id="5833" levels="1" name="Shield">
@@ -313,7 +313,7 @@
 		<set name="aggroPoints" val="100" />
 		<set name="skillRadius" val="600" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="3" stackType="pd_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="3" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="1.15" />
 			</effect>
 		</for>
@@ -331,7 +331,7 @@
 		<set name="aggroPoints" val="100" />
 		<set name="skillRadius" val="600" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="3" stackType="md_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="3" abnormalType="md_up">
 				<mul order="0x30" stat="mDef" val="1.33" />
 			</effect>
 		</for>
@@ -365,7 +365,7 @@
 		<set name="skillRadius" val="600" />
 		<set name="aggroPoints" val="694" />
 		<for>
-			<effect count="15" name="HealOverTime" val="270" stackOrder="5" stackType="life_force_others" />
+			<effect count="15" name="HealOverTime" val="270" abnormalLvl="5" abnormalType="life_force_others" />
 		</for>
 	</skill>
 	<skill id="5837" levels="1" name="Double Throwing Javelin">
@@ -436,11 +436,11 @@
 		<set name="aggroPoints" val="694" />
 		<set name="skillRadius" val="1000" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="instinct" />
-			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="pd_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="1" abnormalType="instinct" />
+			<effect name="Buff" time="3600" val="0" abnormalLvl="1" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="1.15" />
 			</effect>
-			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="md_up" noicon="1">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="1" abnormalType="md_up" noicon="1">
 				<mul order="0x30" stat="mDef" val="1.33" />
 			</effect>
 		</for>
@@ -472,7 +472,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="saveVs" val="MEN" />
 		<for>
-			<effect count="5" name="Fear" time="3" val="0" stackOrder="1" stackType="turn_flee" />
+			<effect count="5" name="Fear" time="3" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>
 	</skill>
 	<skill id="5844" levels="1" name="Thunder Storm">
@@ -531,7 +531,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="saveVs" val="MEN" />
 		<for>
-			<effect name="Debuff" time="30" val="0" stackOrder="3" stackType="speed_down">
+			<effect name="Debuff" time="30" val="0" abnormalLvl="3" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.5" />
 			</effect>
 		</for>
@@ -556,7 +556,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="saveVs" val="CON" />
 		<for>
-			<effect name="Stun" time="9" val="0" stackOrder="1" stackType="stun" />
+			<effect name="Stun" time="9" val="0" abnormalLvl="1" abnormalType="stun" />
 			<effect name="RemoveTarget" noicon="1" val="0" effectPower="80" effectType="DEBUFF" />
 		</for>
 	</skill>
@@ -756,7 +756,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
 		<for>
-			<effect count="7" name="DamOverTime" time="3" val="250" stackOrder="3" stackType="casting_time_up">
+			<effect count="7" name="DamOverTime" time="3" val="250" abnormalLvl="3" abnormalType="casting_time_up">
 				<mul order="0x30" stat="mAtkSpd" val="0.8" />
 			</effect>
 		</for>
@@ -777,7 +777,7 @@
 		<set name="effectRange" val="400" />
 		<set name="saveVs" val="CON" />
 		<for>
-			<effect count="7" name="DamOverTime" time="3" val="105" stackOrder="9" stackType="bleeding" abnormal="bleed">
+			<effect count="7" name="DamOverTime" time="3" val="105" abnormalLvl="9" abnormalType="bleeding" abnormal="bleed">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
@@ -817,7 +817,7 @@
 		<set name="effectRange" val="400" />
 		<set name="saveVs" val="CON" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="30" effectType="STUN" stackOrder="1" stackType="stun" />
+			<effect name="Stun" time="9" val="0" effectPower="30" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="5883" levels="1" name="Meggling Injury">
@@ -836,7 +836,7 @@
 		<set name="effectRange" val="400" />
 		<set name="saveVs" val="CON" />
 		<for>
-			<effect count="7" name="DamOverTime" time="3" val="105" stackOrder="9" stackType="bleeding" abnormal="bleed">
+			<effect count="7" name="DamOverTime" time="3" val="105" abnormalLvl="9" abnormalType="bleeding" abnormal="bleed">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
@@ -857,7 +857,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="saveVs" val="STR" />
 		<for>
-			<effect name="Disarm" time="5" val="0" stackOrder="1" stackType="disarm" />
+			<effect name="Disarm" time="5" val="0" abnormalLvl="1" abnormalType="disarm" />
 		</for>
 	</skill>
 	<skill id="5885" levels="2" name="Weakened Sweep">
@@ -885,7 +885,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
 		<for>
-			<effect name="Debuff" time="30" val="0" stackOrder="3" stackType="speed_down">
+			<effect name="Debuff" time="30" val="0" abnormalLvl="3" abnormalType="speed_down">
 				<sub order="0x40" stat="rEvas" val="10" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
@@ -917,7 +917,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<for>
-			<effect name="RemoveTarget" noicon="1" val="9" stackOrder="1" stackType="stun" effectType="STUN" />
+			<effect name="RemoveTarget" noicon="1" val="9" abnormalLvl="1" abnormalType="stun" effectType="STUN" />
 		</for>
 	</skill>
 	<skill id="5889" levels="3" name="Tainted Shackle">
@@ -962,7 +962,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
 		<for>
-			<effect name="Bluff" val="9" effectType="STUN" stackOrder="1" stackType="stun" />
+			<effect name="Bluff" val="9" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="5893" levels="1" name="Ritual of Cannibalism">
@@ -988,7 +988,7 @@
 		<set name="isMagic" val="true" />
 		<set name="saveVs" val="MEN" />
 		<for>
-			<effect name="Debuff" time="30" val="0" stackOrder="1" stackType="multi_debuff_a">
+			<effect name="Debuff" time="30" val="0" abnormalLvl="1" abnormalType="multi_debuff_a">
 				<mul order="0x30" stat="pDef" val="0.8" />
 				<mul order="0x30" stat="mDef" val="0.8" />
 				<sub order="0x40" stat="rEvas" val="10" />
@@ -1019,7 +1019,7 @@
 		<set name="isMagic" val="true" />
 		<set name="saveVs" val="MEN" />
 		<for>
-			<effect name="Debuff" time="10" val="0" stackOrder="1" stackType="multi_debuff_b">
+			<effect name="Debuff" time="10" val="0" abnormalLvl="1" abnormalType="multi_debuff_b">
 				<mul order="0x30" stat="pDef" val="0.8" />
 				<mul order="0x30" stat="mDef" val="0.8" />
 				<sub order="0x40" stat="rEvas" val="10" />
@@ -1052,7 +1052,7 @@
 		<set name="isMagic" val="true" />
 		<set name="saveVs" val="MEN" />
 		<for>
-			<effect name="Debuff" time="10" val="0" stackOrder="1" stackType="speed_down">
+			<effect name="Debuff" time="10" val="0" abnormalLvl="1" abnormalType="speed_down">
 				<sub order="0x40" stat="rEvas" val="5" />
 				<mul order="0x30" stat="runSpd" val="0.9" />
 				<mul order="0x30" stat="pDef" val="0.9" />
@@ -1078,7 +1078,7 @@
 		<set name="isMagic" val="true" />
 		<set name="saveVs" val="MEN" />
 		<for>
-			<effect name="Debuff" time="10" val="0" stackOrder="1" stackType="speed_down">
+			<effect name="Debuff" time="10" val="0" abnormalLvl="1" abnormalType="speed_down">
 				<sub order="0x40" stat="rEvas" val="10" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 				<mul order="0x30" stat="pDef" val="0.8" />

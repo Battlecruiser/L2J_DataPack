@@ -781,7 +781,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="3600" val="0" stackOrder="1" stackType="transform">
+			<effect name="Transformation" time="3600" val="0" abnormalLvl="1" abnormalType="transform">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -803,7 +803,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="3600" val="0" stackOrder="1" stackType="transform" />
+			<effect name="Transformation" time="3600" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="8247" levels="1" name="Mount Light Purple Maned Horse">
@@ -815,7 +815,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="1800" val="0" stackOrder="1" stackType="transform">
+			<effect name="Transformation" time="1800" val="0" abnormalLvl="1" abnormalType="transform">
 				<mul order="0x30" stat="runSpd" val="1.5" /> <!-- Run Speed +40% -->
 			</effect>
 		</for>
@@ -930,7 +930,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="1800" val="0" stackOrder="1" stackType="transform">
+			<effect name="Transformation" time="1800" val="0" abnormalLvl="1" abnormalType="transform">
 				<mul order="0x30" stat="runSpd" val="1.5" /> <!-- Run Speed +40% -->
 			</effect>
 		</for>
@@ -944,7 +944,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="1800" val="0" stackOrder="1" stackType="transform">
+			<effect name="Transformation" time="1800" val="0" abnormalLvl="1" abnormalType="transform">
 				<mul order="0x30" stat="runSpd" val="1.5" /> <!-- Run Speed +40% -->
 			</effect>
 		</for>
@@ -958,7 +958,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="3600" val="0" stackOrder="1" stackType="transform" />
+			<effect name="Transformation" time="3600" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="8264" levels="1" name="Transform Scarecrow Jack">
@@ -970,7 +970,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="3600" val="0" stackOrder="1" stackType="transform" />
+			<effect name="Transformation" time="3600" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="8265" levels="1" name="Transform Tin Golem">
@@ -982,7 +982,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="3600" val="0" stackOrder="1" stackType="transform" />
+			<effect name="Transformation" time="3600" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="8266" levels="1" name="Gludio Talisman">
@@ -1060,7 +1060,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="1800" val="0" stackOrder="1" stackType="transform" />
+			<effect name="Transformation" time="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="8278" levels="1" name="Transform Guard of Dawn">
@@ -1072,7 +1072,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="1800" val="0" stackOrder="1" stackType="transform" />
+			<effect name="Transformation" time="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="8279" levels="1" name="Blessing of Fire">

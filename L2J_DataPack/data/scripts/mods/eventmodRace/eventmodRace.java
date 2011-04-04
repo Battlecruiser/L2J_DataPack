@@ -374,7 +374,7 @@ public class eventmodRace extends Event
 		
 		for (L2Effect e : player.getAllEffects())
 		{
-			if (e.getStackType().equalsIgnoreCase("speed_up"))
+			if (e.getAbnormalType().equalsIgnoreCase("speed_up"))
 				e.exit();
 			if (e.getSkill() != null && (
 					e.getSkill().getId() == 268 ||	// Song of Wind
