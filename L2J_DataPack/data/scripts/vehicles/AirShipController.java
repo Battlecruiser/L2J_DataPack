@@ -85,8 +85,6 @@ public abstract class AirShipController extends Quest
 	private static final SystemMessage SM_LICENSE_ENTERED = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_SUMMON_LICENSE_ENTERED);
 	private static final SystemMessage SM_NEED_MORE = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_NEED_MORE_S1).addItemName(STARSTONE);
 	
-	private static final String ARRIVAL_MSG = "The airship has been summoned. It will automatically depart in 5 minutes";
-	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -133,7 +131,7 @@ public abstract class AirShipController extends Quest
 					ship.executePath(_arrivalPath);
 				
 				if (_arrivalMessage == null)
-					_arrivalMessage = new NpcSay(npc.getObjectId(), Say2.SHOUT, npc.getNpcId(), ARRIVAL_MSG);
+					_arrivalMessage = new NpcSay(npc.getObjectId(), Say2.SHOUT, npc.getNpcId(), 1800219); // The airship has been summoned. It will automatically depart in 5 minutes.
 					
 				npc.broadcastPacket(_arrivalMessage);
 			}
@@ -154,7 +152,7 @@ public abstract class AirShipController extends Quest
 				player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_PETRIFIED);
 				return null;
 			}
-			else if (player.isDead())
+			else if (player.isDead() || player.isFakeDeath())
 			{
 				player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_DEAD);	
 				return null;
@@ -164,7 +162,7 @@ public abstract class AirShipController extends Quest
 				player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_FISHING);
 				return null;
 			}
-			else if (player.getPvpFlag() != 0)
+			else if (player.isInCombat())
 			{
 				player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_IN_BATTLE);
 				return null;
@@ -194,7 +192,7 @@ public abstract class AirShipController extends Quest
 				player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_HOLDING_A_FLAG);
 				return null;
 			}
-			else if (player.getPet() != null)
+			else if (player.getPet() != null || player.isMounted())
 			{
 				player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_A_PET_OR_A_SERVITOR_IS_SUMMONED);
 				return null;
