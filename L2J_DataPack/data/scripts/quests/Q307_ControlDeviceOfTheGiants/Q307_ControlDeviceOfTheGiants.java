@@ -27,43 +27,43 @@ import com.l2jserver.gameserver.network.serverpackets.RadarControl;
 
 public class Q307_ControlDeviceOfTheGiants extends Quest
 {
-    // NPC
-    private final static int DROPH = 32711;
-    // RB
-    private final static int GORGOLOS = 25681;
-    private final static int LAST_TITAN_UTENUS = 25684;
-    private final static int GIANT_MARPANAK = 25680;
-    private final static int HEKATON_PRIME = 25687;
-    // Itemy
-    private final static int SUPPORT_ITEMS = 14850;
-    private final static int CET_1_SHEET = 14851;
-    private final static int CET_2_SHEET = 14852;
-    private final static int CET_3_SHEET = 14853;
-    
-    private final static int respawnDelay = 3600000; // 1 hour
-    
-    @Override
+	// NPC
+	private final static int DROPH = 32711;
+	// RB
+	private final static int GORGOLOS = 25681;
+	private final static int LAST_TITAN_UTENUS = 25684;
+	private final static int GIANT_MARPANAK = 25680;
+	private final static int HEKATON_PRIME = 25687;
+	// Items
+	private final static int SUPPORT_ITEMS = 14850;
+	private final static int CET_1_SHEET = 14851;
+	private final static int CET_2_SHEET = 14852;
+	private final static int CET_3_SHEET = 14853;
+	
+	private final static int respawnDelay = 3600000; // 1 hour
+	
+	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-    {
+	{
 		QuestState st = player.getQuestState(getName());
 		String htmltext = event;
 		
-		if (st == null) 
+		if (st == null)
 			return null;
 		
 		if (event.equalsIgnoreCase("32711-04.htm"))
-        {
+		{
 			if (st.getPlayer().getLevel() >= 79)
-            {
+			{
 				st.setState(State.STARTED);
-				st.set("cond","1");
+				st.set("cond", "1");
 				st.playSound("ItemSound.quest_accept");
 				if (st.getQuestItemsCount(CET_1_SHEET) < 1 || st.getQuestItemsCount(CET_2_SHEET) < 1 || st.getQuestItemsCount(CET_3_SHEET) < 1)
 					htmltext = "32711-04.htm";
 				else if (st.getQuestItemsCount(CET_1_SHEET) >= 1 && st.getQuestItemsCount(CET_2_SHEET) >= 1 && st.getQuestItemsCount(CET_3_SHEET) >= 1)
 					htmltext = "32711-04a.htm";
-            }
-        }
+			}
+		}
 		else if (event.equalsIgnoreCase("32711-05a.htm"))
 		{
 			player.sendPacket(new RadarControl(0, 2, 186214, 61591, -4152));
@@ -108,11 +108,11 @@ public class Q307_ControlDeviceOfTheGiants extends Quest
 			}
 		}
 		return htmltext;
-    }
-
-    @Override
+	}
+	
+	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
-    {
+	{
 		String htmltext = getNoQuestMsg(player);
 		QuestState st = player.getQuestState(getName());
 		if (st == null)
@@ -121,41 +121,44 @@ public class Q307_ControlDeviceOfTheGiants extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getLevel() >= 79)
 					htmltext = "32711-01.htm";
 				else
 					htmltext = "32711-02.htm";
-		        break;
+				break;
+			}
 			case State.STARTED:
+			{
 				if (st.getInt("spawned") == 1)
 					htmltext = "32711-09.htm";
 				else if (st.getInt("cond") == 1)
-        		{
-        			if (st.getQuestItemsCount(CET_1_SHEET) < 1 || st.getQuestItemsCount(CET_2_SHEET) < 1 || st.getQuestItemsCount(CET_3_SHEET) < 1)
-        				htmltext = "32711-07.htm";
-        			else
-        				htmltext = "32711-08.htm";
-        		}
-        		else if (st.getInt("cond") == 2)
-        		{
-        			st.giveItems(SUPPORT_ITEMS, 1);
-        			st.exitQuest(true);
-        			st.playSound("ItemSound.quest_finish");
+				{
+					if (st.getQuestItemsCount(CET_1_SHEET) < 1 || st.getQuestItemsCount(CET_2_SHEET) < 1 || st.getQuestItemsCount(CET_3_SHEET) < 1)
+						htmltext = "32711-07.htm";
+					else
+						htmltext = "32711-08.htm";
+				}
+				else if (st.getInt("cond") == 2)
+				{
+					st.giveItems(SUPPORT_ITEMS, 1);
+					st.exitQuest(true);
+					st.playSound("ItemSound.quest_finish");
 					htmltext = "32711-10.htm";
-        		}
-        			
-		        break;
+				}
+				break;
+			}
 		}
 		return htmltext;
-    }
-
-    @Override
+	}
+	
+	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-    {
-    	L2PcInstance partyMember = getRandomPartyMember(player, "1");
-		if (partyMember == null) 
+	{
+		L2PcInstance partyMember = getRandomPartyMember(player, "1");
+		if (partyMember == null)
 			return null;
-    	final QuestState st = partyMember.getQuestState(getName());
+		final QuestState st = partyMember.getQuestState(getName());
 		
 		switch (npc.getNpcId())
 		{
@@ -173,7 +176,7 @@ public class Q307_ControlDeviceOfTheGiants extends Quest
 			}
 			case GIANT_MARPANAK:
 			{
-				st.giveItems(CET_3_SHEET,1);
+				st.giveItems(CET_3_SHEET, 1);
 				st.playSound("ItemSound.quest_itemget");
 				break;
 			}
@@ -190,35 +193,35 @@ public class Q307_ControlDeviceOfTheGiants extends Quest
 			}
 		}
 		return null;
-    }
-
+	}
+	
 	private void rewardPlayer(L2PcInstance player)
-    {
- 		QuestState st = player.getQuestState(getName());
- 		
- 		if (st.getInt("spawned") == 1)
- 		{
- 			st.playSound("ItemSound.quest_middle");
- 			st.unset("spawned");
- 			st.set("cond","2");
- 			st.saveGlobalQuestVar("Hekaton respawn",  Long.toString(System.currentTimeMillis() + respawnDelay));
- 		}
-    }
-    
-    public Q307_ControlDeviceOfTheGiants(int id, String name, String descr)
-    {
-        super(id, name, descr);
-
-        addStartNpc(DROPH);
-        addTalkId(DROPH);
-        addKillId(GORGOLOS);
-        addKillId(LAST_TITAN_UTENUS);
-        addKillId(GIANT_MARPANAK);
-        addKillId(HEKATON_PRIME);
-    }
-    
-    public static void main(String[] args)
-    {
-        new Q307_ControlDeviceOfTheGiants(307, "Q307_ControlDeviceOfTheGiants", "Control Device Of The Giants");
-    }
+	{
+		QuestState st = player.getQuestState(getName());
+		
+		if (st.getInt("spawned") == 1)
+		{
+			st.playSound("ItemSound.quest_middle");
+			st.unset("spawned");
+			st.set("cond", "2");
+			st.saveGlobalQuestVar("Hekaton respawn", Long.toString(System.currentTimeMillis() + respawnDelay));
+		}
+	}
+	
+	public Q307_ControlDeviceOfTheGiants(int id, String name, String descr)
+	{
+		super(id, name, descr);
+		
+		addStartNpc(DROPH);
+		addTalkId(DROPH);
+		addKillId(GORGOLOS);
+		addKillId(LAST_TITAN_UTENUS);
+		addKillId(GIANT_MARPANAK);
+		addKillId(HEKATON_PRIME);
+	}
+	
+	public static void main(String[] args)
+	{
+		new Q307_ControlDeviceOfTheGiants(307, "Q307_ControlDeviceOfTheGiants", "Control Device Of The Giants");
+	}
 }
