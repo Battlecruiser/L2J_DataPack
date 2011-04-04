@@ -39,11 +39,11 @@ public class Monastery extends L2AttackableAIScript
 {
 	static final int[] mobs1 = {22124, 22125, 22126, 22127, 22129};
 	static final int[] mobs2 = {22134, 22135};
-	//TODO: npcstring
-	static final String[] text = {
-		"You cannot carry a weapon without authorization!",
-		"name, why would you choose the path of darkness?!",
-		"name! How dare you defy the will of Einhasad!"
+	
+	static final int[] messages = {
+		1121006, // You cannot carry a weapon without authorization!
+		10077, // $s1, why would you choose the path of darkness?!
+		10078 // $s1! How dare you defy the will of Einhasad!
 	};
 	public Monastery(int questId, String name, String descr)
 	{
@@ -60,7 +60,7 @@ public class Monastery extends L2AttackableAIScript
 			if (player.getActiveWeaponInstance() != null)
 			{
 				npc.setTarget(player);
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), text[0]));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), messages[0]));
 				switch (npc.getNpcId())
 				{
 					case 22124:
@@ -96,7 +96,9 @@ public class Monastery extends L2AttackableAIScript
 				{
 					if (obj.equals(npc))
 					{
-						npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), text[Rnd.get(2)+1].replace("name", caster.getName())));
+						NpcSay packet = new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), messages[Rnd.get(2)+1]);
+						packet.addStringParameter(caster.getName());
+						npc.broadcastPacket(packet);
 						((L2Attackable) npc).addDamageHate(caster, 0, 999);
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, caster);
 						break;
@@ -131,7 +133,7 @@ public class Monastery extends L2AttackableAIScript
 					if (target.getActiveWeaponInstance() != null && !npc.isInCombat() && npc.getTarget() == null)
 					{
 						npc.setTarget(target);
-						npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), text[0]));
+						npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), messages[0]));
 						switch (npc.getNpcId())
 						{
 							case 22124:

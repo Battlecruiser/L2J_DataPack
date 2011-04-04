@@ -112,35 +112,34 @@ public class DarkCloudMansion extends Quest
 	private static int W6 = 24230012; //Wall 6
 	private static int W7 = 24230013; //Wall 7*/
 	
-	private static String[] _spawnChat =
+	private static int[] _spawnChat =
 	{
-		"Trust me!",
-		"Pick me!",
-		"I'm the real one!",
-		"Not that dude, I'm the real one!",
-		"Don't be fooled! Don't be fooled! I'm the real one!!"
+		1800043, // I'm the real one!
+		1800044, // Pick me!
+		1800045, // Trust me!
+		1800046, // Not that dude, I'm the real one!
+		1800047  // Don't be fooled! Don't be fooled! I'm the real one!!
 	};
 	
-	private static String[] _decayChat =
+	private static int[] _decayChat =
 	{
-		"Can't you even find out?",
-		"I'm the real one! Phew!!",
-		"Find me!"
+		1800051, // I'm the real one! Phew!!
+		1800052, // Can't you even find out?
+		1800053  // Find me!
 	};
 	
-	private static String[] _successChat =
+	private static int[] _successChat =
 	{
-		"Excellent choice! Teehee!",
-		"Huh?! How did you know it was me?",
-		"You've done well!",
-		"Oh... very sensible?"
+		1800054, // Huh?! How did you know it was me?
+		1800055, // Excellent choice! Teehee!
+		1800056, // You've done well!
+		1800057  // Oh... very sensible?
 	};
 	
-	private static String[] _faildChat =
+	private static int[] _faildChat =
 	{
-		"Sorry, but...I'm the fake one.",
-		"You've been fooled!",
-		
+		1800049, // You've been fooled!
+		1800050  // Sorry, but...I'm the fake one.		
 	};
 	
 	//Second room - random monolith order

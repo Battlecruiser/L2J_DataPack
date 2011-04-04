@@ -62,11 +62,12 @@ public class Orfen extends L2AttackableAIScript
 		}
 	};
 	
-	//TODO: npcstring
-	private static final String[] Text =
+	private static final int[] Text =
 	{
-		"PLAYERNAME, stop kidding yourthis about your own powerlessness!", "PLAYERNAME, I'll make you feel what true fear is!",
-		"You're really stupid to have challenged me. PLAYERNAME! Get ready!", "PLAYERNAME, do you think that's going to work?!"
+		1000028, // $s1. Stop kidding yourself about your own powerlessness!
+		1000029, // $s1. I'll make you feel what true fear is!
+		1000030, // You're really stupid to have challenged me. $s1! Get ready!
+		1000031  //$s1. Do you think that's going to work?!
 	};
 	
 	private static final int ORFEN = 29014;
@@ -262,7 +263,9 @@ public class Orfen extends L2AttackableAIScript
 			L2Character originalCaster = isPet ? caster.getPet() : caster;
 			if (skill.getAggroPoints() > 0 && Rnd.get(5) == 0 && npc.isInsideRadius(originalCaster, 1000, false, false))
 			{
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), Text[Rnd.get(4)].replace("PLAYERNAME", caster.getName().toString())));
+				NpcSay packet = new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), Text[Rnd.get(4)]);
+				packet.addStringParameter(caster.getName().toString());
+				npc.broadcastPacket(packet);
 				originalCaster.teleToLocation(npc.getX(), npc.getY(), npc.getZ());
 				npc.setTarget(originalCaster);
 				npc.doCast(SkillTable.getInstance().getInfo(4064, 1));
@@ -311,7 +314,9 @@ public class Orfen extends L2AttackableAIScript
 			}
 			else if (npc.isInsideRadius(attacker, 1000, false, false) && !npc.isInsideRadius(attacker, 300, false, false) && Rnd.get(10) == 0)
 			{
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npcId, Text[Rnd.get(3)].replace("PLAYERNAME", attacker.getName().toString())));
+				NpcSay packet = new NpcSay(npc.getObjectId(), 0, npcId, Text[Rnd.get(3)]);
+				packet.addStringParameter(attacker.getName().toString());
+				npc.broadcastPacket(packet);
 				attacker.teleToLocation(npc.getX(), npc.getY(), npc.getZ());
 				npc.setTarget(attacker);
 				npc.doCast(SkillTable.getInstance().getInfo(4064, 1));

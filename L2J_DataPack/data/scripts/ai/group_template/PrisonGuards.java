@@ -223,7 +223,11 @@ public class PrisonGuards extends L2AttackableAIScript
 	{
 		if (fromAttack)
 		{
-			String msg = (npc.getNpcId() == GUARD1 ? "It's not easy to obtain." : "You're out of your mind comming here...");
+			/*
+			 * 1800107 It's not easy to obtain.
+			 * 1800108 You're out of your mind coming here...
+			 */
+			int msg = (npc.getNpcId() == GUARD1 ? 1800107 : 1800108);
 			npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), msg));
 		}
 		
