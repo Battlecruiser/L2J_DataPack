@@ -184,7 +184,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="300" val="0" abnormalLvl="3.9" abnormalType="vampiric_attack">
+			<effect name="Buff" time="300" val="0" abnormalLvl="4" abnormalType="vampiric_attack">
 				<add order="0x40" stat="absorbDam" val="9" /> <!-- absorb 9% HP from damage inflicted on enemies -->
 			</effect>
 		</for>
