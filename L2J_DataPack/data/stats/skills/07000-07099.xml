@@ -59,7 +59,7 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="655" />
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="4" stackType="vampiric_attack">
+			<effect name="Buff" time="1200" val="0" abnormalLvl="4" abnormalType="vampiric_attack">
 				<add order="0x40" stat="absorbDam" val="9" /> <!-- absorb 9% HP from damage inflicted on enemies -->
 			</effect>
 		</for>
@@ -210,7 +210,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="99" stackType="attack_time_down">
+			<effect name="Buff" time="1200" val="0" abnormalLvl="99" abnormalType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 				<mul order="0x30" stat="runSpd" val="#runSpd" />
 				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
@@ -327,7 +327,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="3" stackType="critical_prob_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="3" abnormalType="critical_prob_up">
 				<basemul order="0x30" stat="rCrit" val="0.3" />
 			</effect>
 		</for>
@@ -344,7 +344,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="3" stackType="critical_dmg_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="3" abnormalType="critical_dmg_up">
 				<mul order="0x30" stat="cAtk" val="1.35" />
 			</effect>
 		</for>
@@ -361,7 +361,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="attack_time_down">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="2" abnormalType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="1.33" />
 			</effect>
 		</for>
@@ -378,7 +378,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="3" stackType="hit_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="3" abnormalType="hit_up">
 				<add order="0x40" stat="accCombat" val="4" />
 			</effect>
 		</for>
@@ -395,7 +395,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="6" stackType="max_hp_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="6" abnormalType="max_hp_up">
 				<mul order="0x30" stat="maxHp" val="1.35" />
 			</effect>
 		</for>
@@ -412,7 +412,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="6" stackType="max_mp_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="6" abnormalType="max_mp_up">
 				<mul order="0x30" stat="maxMp" val="1.35" />
 			</effect>
 		</for>
@@ -429,7 +429,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="3" stackType="avoid_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="3" abnormalType="avoid_up">
 				<add order="0x40" stat="rEvas" val="4" />
 			</effect>
 		</for>
@@ -446,7 +446,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="3" stackType="casting_time_down">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="3" abnormalType="casting_time_down">
 				<mul order="0x30" stat="mAtkSpd" val="1.3" />
 			</effect>
 		</for>
@@ -463,7 +463,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="3" stackType="decrease_weight_penalty">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="3" abnormalType="decrease_weight_penalty">
 				<add order="0x40" stat="maxLoad" val="9000" />
 			</effect>
 		</for>
@@ -480,7 +480,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="3" stackType="pa_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="3" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="1.15" />
 			</effect>
 		</for>
@@ -497,7 +497,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="3" stackType="pd_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="3" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="1.15" />
 			</effect>
 		</for>
@@ -514,7 +514,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="3" stackType="md_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="3" abnormalType="md_up">
 				<mul order="0x30" stat="mDef" val="1.3" />
 			</effect>
 		</for>
@@ -531,7 +531,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="4" stackType="vampiric_attack">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="4" abnormalType="vampiric_attack">
 				<add order="0x40" stat="absorbDam" val="9" /> <!-- absorb 9% HP from damage inflicted on enemies -->
 			</effect>
 		</for>
@@ -548,7 +548,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="3" stackType="ma_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="3" abnormalType="ma_up">
 				<mul order="0x30" stat="mAtk" val="1.75" />
 			</effect>
 		</for>
@@ -565,7 +565,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="speed_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="2" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="33" />
 			</effect>
 		</for>
@@ -582,7 +582,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="berserker">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="2" abnormalType="berserker">
 				<mul order="0x30" stat="mAtk" val="1.16" />
 				<mul order="0x30" stat="pAtk" val="1.08" />
 				<mul order="0x30" stat="mDef" val="0.84" />
@@ -605,7 +605,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="3" stackType="pa_pd_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="3" abnormalType="pa_pd_up">
 				<mul order="0x30" stat="pAtk" val="1.1" />
 			</effect>
 		</for>
@@ -621,7 +621,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="3" stackType="pa_pd_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="3" abnormalType="pa_pd_up">
 				<mul order="0x30" stat="pDef" val="1.15" />
 			</effect>
 		</for>
@@ -638,7 +638,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="magic_critical_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="2" abnormalType="magic_critical_up">
 				<basemul order="0x30" stat="mCritRate" val="2" />
 			</effect>
 		</for>
@@ -654,7 +654,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="3" stackType="cheap_magic">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="3" abnormalType="cheap_magic">
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.9" />
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.8" />
 				<mul order="0x30" stat="DanceMpConsumeRate" val="0.8" />
@@ -676,7 +676,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="1" abnormalType="multi_buff">
 				<basemul order="0x30" stat="mCritRate" val="2" />
 				<mul order="0x30" stat="regMp" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.1" />
@@ -705,7 +705,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="1" abnormalType="multi_buff">
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="regHp" val="1.2" />
 				<basemul order="0x30" stat="mCritRate" val="2" />
@@ -734,7 +734,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="multi_buff">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="1" abnormalType="multi_buff">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<basemul order="0x30" stat="rCrit" val="0.2" />
 				<basemul order="0x30" stat="mCritRate" val="0.2" />
@@ -763,7 +763,7 @@
 		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="multi_buff">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="2" abnormalType="multi_buff">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<basemul order="0x30" stat="mCritRate" val="0.2" />
 				<mul order="0x30" stat="cAtk" val="1.2" />
@@ -971,10 +971,10 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="9" stackType="pa_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="9" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="1.15" />
 			</effect>
-			<effect name="Buff" time="3600" val="0" stackOrder="9" stackType="pd_up" noicon="1">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="9" abnormalType="pd_up" noicon="1">
 				<mul order="0x30" stat="pDef" val="1.15" />
 			</effect>
 		</for>
@@ -992,10 +992,10 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="9" stackType="ma_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="9" abnormalType="ma_up">
 				<mul order="0x30" stat="mAtk" val="1.75" />
 			</effect>
-			<effect name="Buff" time="3600" val="0" stackOrder="9" stackType="md_up" noicon="1">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="9" abnormalType="md_up" noicon="1">
 				<mul order="0x30" stat="mDef" val="1.3" />
 			</effect>
 		</for>
@@ -1013,10 +1013,10 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="9" stackType="max_hp_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="9" abnormalType="max_hp_up">
 				<mul order="0x30" stat="maxHp" val="1.35" />
 			</effect>
-			<effect name="Buff" time="3600" val="0" stackOrder="9" stackType="max_mp_up" noicon="1">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="9" abnormalType="max_mp_up" noicon="1">
 				<mul order="0x30" stat="maxMp" val="1.35" />
 			</effect>
 		</for>
@@ -1034,10 +1034,10 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="9" stackType="critical_prob_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="9" abnormalType="critical_prob_up">
 				<basemul order="0x30" stat="rCrit" val="0.3" />
 			</effect>
-			<effect name="Buff" time="3600" val="0" stackOrder="9" stackType="critical_dmg_up" noicon="1">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="9" abnormalType="critical_dmg_up" noicon="1">
 				<mul order="0x30" stat="cAtk" val="1.35" />
 			</effect>
 		</for>
@@ -1055,10 +1055,10 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="9" stackType="shield_prob_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="9" abnormalType="shield_prob_up">
 				<mul order="0x30" stat="rShld" val="1.3" />
 			</effect>
-			<effect name="Buff" time="3600" val="0" stackOrder="9" stackType="shield_defence_up" noicon="1">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="9" abnormalType="shield_defence_up" noicon="1">
 				<mul order="0x30" stat="sDef" val="1.5" />
 			</effect>
 		</for>
@@ -1076,10 +1076,10 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="9" stackType="speed_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="9" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="33" />
 			</effect>
-			<effect name="Buff" time="3600" val="0" stackOrder="9" stackType="avoid_up" noicon="1">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="9" abnormalType="avoid_up" noicon="1">
 				<add order="0x40" stat="rEvas" val="4" />
 			</effect>
 		</for>
@@ -1096,7 +1096,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="dwarf_attack_buff">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
 					<using kind="Sword,Big Sword,Dual Sword,Ancient,Rapier,Dagger,Dual Dagger,Pole,Dual Fist" />
 				</mul>
@@ -1118,7 +1118,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="dwarf_attack_buff">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
 				<mul order="0x30" stat="pDef" val="1.1">
 					<using kind="Heavy" />
 				</mul>
@@ -1139,7 +1139,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="NoblesseBless" time="3600" val="0" stackOrder="1" stackType="preserve_abnormal" />
+			<effect name="NoblesseBless" time="3600" val="0" abnormalLvl="1" abnormalType="preserve_abnormal" />
 		</for>
 	</skill>
 </list>

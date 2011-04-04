@@ -41,7 +41,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="1080000" />
 		<for>
-			<effect name="Buff" time="120" val="0" stackOrder="26" stackType="speed_up">
+			<effect name="Buff" time="120" val="0" abnormalLvl="26" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="20" />
 			</effect>
 		</for>
@@ -55,7 +55,7 @@
 		<set name="staticHitTime" val="true" />
 		<set name="reuseDelay" val="86400000" />
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="avoid_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="avoid_up">
 				<add order="0x40" stat="rEvas" val="4" />
 			</effect>
 		</for>
@@ -105,7 +105,7 @@
 		<set name="reuseDelay" val="43200000" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="26" stackType="vp_up" abnormal="vitality">
+			<effect name="Buff" time="1200" val="0" abnormalLvl="26" abnormalType="vp_up" abnormal="vitality">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -119,7 +119,7 @@
 		<set name="reuseDelay" val="43200000" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="26" stackType="vp_up" abnormal="vitality">
+			<effect name="Buff" time="1200" val="0" abnormalLvl="26" abnormalType="vp_up" abnormal="vitality">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -133,7 +133,7 @@
 		<set name="reuseDelay" val="43200000" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="26" stackType="vp_up" abnormal="vitality">
+			<effect name="Buff" time="1200" val="0" abnormalLvl="26" abnormalType="vp_up" abnormal="vitality">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -502,7 +502,7 @@
 		<set name="isMagic" val="true" />
 		<set name="transformId" val="110" />
 		<for>
-			<effect name="Transformation" time="3600" val="0" stackOrder="26" stackType="transform" />
+			<effect name="Transformation" time="3600" val="0" abnormalLvl="26" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="21052" levels="1" name="Bless the Body">
@@ -625,7 +625,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3600000" />
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="vp_up" abnormal="vitality">
+			<effect name="Buff" time="300" val="0" abnormalLvl="1" abnormalType="vp_up" abnormal="vitality">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -774,7 +774,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="reuseDelay" val="3600000" />
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="26" stackType="vp_up" abnormal="vitality">
+			<effect name="Buff" time="300" val="0" abnormalLvl="26" abnormalType="vp_up" abnormal="vitality">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>

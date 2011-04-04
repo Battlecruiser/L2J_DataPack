@@ -189,9 +189,9 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<for>
-			<effect name="Stun" time="10" val="0" stackOrder="1" stackType="stun" />
-			<effect name="Invincible" time="10" val="0" noicon="1" stackOrder="1" stackType="invincibility" />
-			<effect name="ImmobileBuff" time="10" val="0" noicon="1" stackOrder="1" stackType="pd_up_special" />
+			<effect name="Stun" time="10" val="0" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Invincible" time="10" val="0" noicon="1" abnormalLvl="1" abnormalType="invincibility" />
+			<effect name="ImmobileBuff" time="10" val="0" noicon="1" abnormalLvl="1" abnormalType="pd_up_special" />
 		</for>
 	</skill>
 	<skill id="6035" levels="1" name="Red Team Transformation">
@@ -203,7 +203,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="3600" val="0" stackOrder="1" stackType="transform" />
+			<effect name="Transformation" time="3600" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="6036" levels="1" name="Blue Team Transformation">
@@ -215,7 +215,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="3600" val="0" stackOrder="1" stackType="transform" />
+			<effect name="Transformation" time="3600" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="6037" levels="1" name="Soul Unleash">
@@ -365,7 +365,7 @@
 		<table name="#magicLvl"> 50 70 75 80 </table>
 		<table name="#mpConsume"> 45 65 69 72 </table>
 		<table name="#amount"> 1.05 1.1 1.2 1.3 </table>
-		<table name="#stackOrder"> 1 2 3 4 </table>
+		<table name="#abnormalLvl"> 1 2 3 4 </table>
 		<set name="aggroPoints" val="100" />
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="1000" />
@@ -376,7 +376,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" time="600" val="0" stackOrder="#stackOrder" stackType="multi_buff">
+			<effect name="Buff" time="600" val="0" abnormalLvl="#abnormalLvl" abnormalType="multi_buff">
 				<mul order="0x30" stat="pAtk" val="#amount" />
 				<mul order="0x30" stat="pDef" val="#amount" />
 				<mul order="0x30" stat="mDef" val="#amount" />
@@ -434,7 +434,7 @@
 		<table name="#mpConsume"> 74 104 109 116 </table>
 		<table name="#mpInitialConsume"> 18 26 28 29 </table>
 		<table name="#amount"> 1.05 1.1 1.2 1.3 </table>
-		<table name="#stackOrder"> 1 2 3 4 </table>
+		<table name="#abnormalLvl"> 1 2 3 4 </table>
 		<set name="aggroPoints" val="100" />
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="1000" />
@@ -446,7 +446,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" time="600" val="0" stackOrder="#stackOrder" stackType="multi_buff">
+			<effect name="Buff" time="600" val="0" abnormalLvl="#abnormalLvl" abnormalType="multi_buff">
 				<mul order="0x30" stat="pAtk" val="#amount" />
 				<mul order="0x30" stat="pDef" val="#amount" />
 				<mul order="0x30" stat="mAtk" val="#amount" />
@@ -487,7 +487,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" time="8" val="0" stackOrder="1" stackType="counter_critical_trigger">
+			<effect name="Buff" time="8" val="0" abnormalLvl="1" abnormalType="counter_critical_trigger">
 				<mul order="0x30" stat="cAtk" val="2">
 					<not>
 						<using kind="Bow,Crossbow" />
@@ -504,7 +504,7 @@
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="15000" />
 		<for>
-			<effect name="Buff" time="8" val="0" stackOrder="1" stackType="attack_time_down_special">
+			<effect name="Buff" time="8" val="0" abnormalLvl="1" abnormalType="attack_time_down_special">
 				<mul order="0x30" stat="pAtkSpd" val="1.5" />
 			</effect>
 		</for>
@@ -666,7 +666,7 @@
 		<set name="skillType" val="PARALYZE" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Paralyze" time="10" val="0" stackOrder="1" stackType="paralyze" />
+			<effect name="Paralyze" time="10" val="0" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
 	</skill>
 	<skill id="6091" levels="1" name="Anger">
@@ -678,7 +678,7 @@
 		<set name="skillType" val="PARALYZE" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Paralyze" time="10" val="0" stackOrder="1" stackType="paralyze" />
+			<effect name="Paralyze" time="10" val="0" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
 	</skill>
 	<skill id="6092" levels="1" name="Lightning Shock">
@@ -690,7 +690,7 @@
 		<set name="skillType" val="PARALYZE" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Paralyze" time="9" val="0" stackOrder="1" stackType="paralyze" />
+			<effect name="Paralyze" time="9" val="0" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
 	</skill>
 	<skill id="6093" levels="1" name="Panther Hide">
@@ -706,7 +706,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Hide" time="30" val="0" stackOrder="1" stackType="hide">
+			<effect name="Hide" time="30" val="0" abnormalLvl="1" abnormalType="hide">
 				<mul order="0x30" stat="runSpd" val="0.9" />
 			</effect>
 		</for>
@@ -747,7 +747,7 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Debuff" time="30" val="0" effectPower="80" effectType="DEBUFF" stackOrder="3" stackType="armor_unholy">
+			<effect name="Debuff" time="30" val="0" effectPower="80" effectType="DEBUFF" abnormalLvl="3" abnormalType="armor_unholy">
 				<sub order="0x40" stat="darkRes" val="25" />
 			</effect>
 		</for>

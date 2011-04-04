@@ -31,7 +31,7 @@ def transformPlayer(npc, player, transid) :
 		player.untransform()
 		time.sleep(2)
 	for effect in player.getAllEffects() :
-		if effect.getStackType() == "speed_up":
+		if effect.getAbnormalType() == "speed_up":
 			effect.exit()
 	npc.setTarget(player)
 	npc.doCast(SkillTable.getInstance().getInfo(transid,1))

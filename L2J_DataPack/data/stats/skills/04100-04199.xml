@@ -40,7 +40,7 @@
 		<table name="#fireRes"> 15 25 30 </table>
 		<table name="#waterRes"> 7 12 15 </table>
 		<table name="#magicLvl"> 20 40 70 </table>
-		<table name="#stackOrder"> 2 3 4 </table>
+		<table name="#abnormalLvl"> 2 3 4 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
 		<set name="target" val="TARGET_ONE" />
@@ -55,7 +55,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<for>
-			<effect name="Debuff" time="30" val="0" stackOrder="#stackOrder" stackType="armor_fire">
+			<effect name="Debuff" time="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="armor_fire">
 				<sub order="0x40" stat="fireRes" val="#fireRes" />
 				<add order="0x40" stat="waterRes" val="#waterRes" />
 			</effect>
@@ -67,7 +67,7 @@
 		<!-- Freya retail confirmed -->
 		<table name="#rEvas"> 20 25 </table>
 		<table name="#magicLvl"> 40 70 </table>
-		<table name="#stackOrder"> 1 2 </table>
+		<table name="#abnormalLvl"> 1 2 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="reuseDelay" val="6000" />
@@ -76,7 +76,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="100" />
 		<for>
-			<effect name="Buff" time="30" val="0" stackOrder="#stackOrder" stackType="avoid_up_special">
+			<effect name="Buff" time="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="avoid_up_special">
 				<add order="0x40" stat="rEvas" val="#rEvas" />
 			</effect>
 		</for>
@@ -87,7 +87,7 @@
 		<!-- Freya retail confirmed -->
 		<table name="#dmg"> 18 27 39 53 67 81 91 91 100 100 108 108 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#stackOrder"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
+		<table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="1" />
 		<set name="power" val="70" /> <!-- Base Land Rate -->
@@ -104,7 +104,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="saveVs" val="MEN" />
 		<for>
-			<effect count="45" name="DamOverTime" val="#dmg" stackOrder="#stackOrder" stackType="dot_attr" />
+			<effect count="45" name="DamOverTime" val="#dmg" abnormalLvl="#abnormalLvl" abnormalType="dot_attr" />
 		</for>
 		<table name="#mpConsume"> 17 31 45 60 75 90 105 112 119 126 132 139 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -143,7 +143,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_FRONT_AURA" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="100" effectType="STUN" stackOrder="1" stackType="stun" />
+			<effect name="Stun" time="9" val="0" effectPower="100" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="4107" levels="1" name="Antharas Stun">
@@ -165,7 +165,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_BEHIND_AURA" />
 		<for>
-			<effect name="ThrowUp" noicon="1" val="0" stackOrder="1" stackType="fly_away" />
+			<effect name="ThrowUp" noicon="1" val="0" abnormalLvl="1" abnormalType="fly_away" />
 			<effect name="Stun" time="9" val="0" effectPower="100" effectType="STUN" />
 		</for>
 	</skill>
@@ -188,7 +188,7 @@
 		<set name="skillType" val="FEAR" />
 		<set name="target" val="TARGET_AREA" />
 		<for>
-			<effect count="10" name="Fear" time="3" val="0" stackOrder="1" stackType="turn_flee" />
+			<effect count="10" name="Fear" time="3" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>
 	</skill>
 	<skill id="4109" levels="1" name="Curse of Antharas">
@@ -206,7 +206,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
-			<effect name="Debuff" time="120" val="0" stackOrder="1" stackType="antaras_debuff">
+			<effect name="Debuff" time="120" val="0" abnormalLvl="1" abnormalType="antaras_debuff">
 				<mul order="0x30" stat="pAtk" val="0.85" />
 				<mul order="0x30" stat="mAtk" val="0.85" />
 				<mul order="0x30" stat="pDef" val="0.6" />
@@ -257,7 +257,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AREA" />
 		<for>
-			<effect name="Petrification" time="120" val="0" effectType="PARALYZE" effectPower="50" stackOrder="1" stackType="turn_stone">
+			<effect name="Petrification" time="120" val="0" effectType="PARALYZE" effectPower="50" abnormalLvl="1" abnormalType="turn_stone">
 				<mul order="0x30" stat="regHp" val="0" />
 			</effect>
 		</for>
@@ -352,7 +352,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Paralyze" time="30" val="0" stackOrder="1" stackType="paralyze" />
+			<effect name="Paralyze" time="30" val="0" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
 		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -375,7 +375,7 @@
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="800" />
 		<for>
-			<effect name="Paralyze" time="30" val="0" stackOrder="1" stackType="paralyze" />
+			<effect name="Paralyze" time="30" val="0" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
 		<table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -384,7 +384,7 @@
 		<!-- Freya retail confirmed -->
 		<table name="#accCombat"> 6 9 12 </table>
 		<table name="#magicLvl"> 20 40 70 </table>
-		<table name="#stackOrder"> 1 2 3 </table>
+		<table name="#abnormalLvl"> 1 2 3 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlDepend" val="2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
@@ -399,7 +399,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<for>
-			<effect name="Debuff" time="30" val="0" stackOrder="#stackOrder" stackType="hit_down">
+			<effect name="Debuff" time="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="hit_down">
 				<sub order="0x40" stat="accCombat" val="#accCombat" />
 			</effect>
 		</for>
@@ -423,7 +423,7 @@
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="stun" />
+			<effect name="Stun" time="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 		<table name="#mpConsume"> 25 40 56 76 99 121 142 151 159 165 168 170 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -493,7 +493,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" time="1800" val="0" stackOrder="11" stackType="hp_regen_down">
+			<effect name="Buff" time="1800" val="0" abnormalLvl="11" abnormalType="hp_regen_down">
 				<mul order="0x30" stat="regHp" val="0.05" />
 			</effect>
 		</for>
@@ -507,7 +507,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="10" val="0" stackOrder="1" stackType="public_slot">
+			<effect name="Buff" time="10" val="0" abnormalLvl="1" abnormalType="public_slot">
 				<mul order="0x30" stat="pReuse" val="0.01" />
 			</effect>
 		</for>
@@ -583,7 +583,7 @@
 		<set name="skillType" val="PARALYZE" />
 		<set name="target" val="TARGET_AREA" />
 		<for>
-			<effect name="Paralyze" time="30" val="0" stackOrder="2" stackType="paralyze" />
+			<effect name="Paralyze" time="30" val="0" abnormalLvl="2" abnormalType="paralyze" />
 		</for>
 	</skill>
 	<skill id="4132" levels="1" name="Spear: Pound the Ground">
@@ -702,7 +702,7 @@
 		<!-- Freya retail confirmed -->
 		<table name="#damage"> 3 3.3 3.6 3.9 4.2 4.5 4.8 4.8 5.1 5.1 5.4 5.4 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#stackOrder"> 1 2 3 4 5 6 7 7 8 8 9 9 </table>
+		<table name="#abnormalLvl"> 1 2 3 4 5 6 7 7 8 8 9 9 </table>
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="isDebuff" val="true" />
@@ -715,7 +715,7 @@
 		<set name="skillType" val="MDOT" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect count="20" name="ManaDamOverTime" time="3" val="#damage" stackOrder="#stackOrder" stackType="dot_mp" />
+			<effect count="20" name="ManaDamOverTime" time="3" val="#damage" abnormalLvl="#abnormalLvl" abnormalType="dot_mp" />
 		</for>
 	</skill>
 	<skill id="4141" levels="12" name="NPC Wind Fist">
@@ -777,7 +777,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<table name="#pAtk"> 0.83 0.8 0.77 </table>
-		<table name="#stackOrder"> 1 2 3 </table>
+		<table name="#abnormalLvl"> 1 2 3 </table>
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="1" />
@@ -787,7 +787,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Debuff" time="5" val="0" stackOrder="#stackOrder" stackType="pa_down">
+			<effect name="Debuff" time="5" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_down">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
@@ -796,7 +796,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<table name="#pDef"> 0.83 0.8 0.77 </table>
-		<table name="#stackOrder"> 1 2 3 </table>
+		<table name="#abnormalLvl"> 1 2 3 </table>
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="1" />
@@ -806,7 +806,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Debuff" time="5" val="0" stackOrder="#stackOrder" stackType="pd_down">
+			<effect name="Debuff" time="5" val="0" abnormalLvl="#abnormalLvl" abnormalType="pd_down">
 				<mul order="0x30" stat="pDef" val="#pDef" />
 			</effect>
 		</for>
@@ -838,7 +838,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<!-- 16 24 32 41 50 58 63 63 66 66 68 68HP * 1 during 5 seconds -->
-			<effect count="5" name="DamOverTime" val="#dot" abnormal="poison" stackOrder="#abnormalLvl" stackType="poison" />
+			<effect count="5" name="DamOverTime" val="#dot" abnormal="poison" abnormalLvl="#abnormalLvl" abnormalType="poison" />
 		</for>
 	</skill>
 	<skill id="4149" levels="12" name="Bleed">
@@ -858,7 +858,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<!-- 18 25 34 44 54 62 67 67 70 70 71 71HP * 1 during 5 seconds -->
-			<effect count="2" name="DamOverTime" time="3" val="#dot" abnormal="bleed" stackOrder="#abnormalLvl" stackType="bleeding" />
+			<effect count="2" name="DamOverTime" time="3" val="#dot" abnormal="bleed" abnormalLvl="#abnormalLvl" abnormalType="bleeding" />
 		</for>
 	</skill>
 	<skill id="4150" levels="12" name="Flame">
@@ -866,7 +866,7 @@
 		<!-- Zone Skill -->
 		<table name="#dot"> 14 21 30 40 51 61 68 68 72 72 74 74 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#stackOrder"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
+		<table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 		<set name="isDebuff" val="true" />
@@ -879,7 +879,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<!-- 14 21 30 40 51 61 68 68 72 72 74 74HP * 1 during 5 seconds -->
-			<effect count="5" name="DamOverTime" val="#dot" abnormal="bleed" stackOrder="#stackOrder" stackType="dot_attr" />
+			<effect count="5" name="DamOverTime" val="#dot" abnormal="bleed" abnormalLvl="#abnormalLvl" abnormalType="dot_attr" />
 		</for>
 	</skill>
 	<skill id="4151" levels="12" name="NPC Windstrike - Magic">
@@ -937,7 +937,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<for>
-			<effect name="Debuff" time="60" val="0" effectPower="60" effectType="DEBUFF" stackOrder="2" stackType="speed_down">
+			<effect name="Debuff" time="60" val="0" effectPower="60" effectType="DEBUFF" abnormalLvl="2" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
@@ -1076,7 +1076,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<table name="#pAtkSpd"> 0.83 0.80 0.77 </table>
-		<table name="#stackOrder"> 1 2 3 </table>
+		<table name="#abnormalLvl"> 1 2 3 </table>
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1086,7 +1086,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Debuff" time="5" val="0" stackOrder="#stackOrder" stackType="attack_time_up">
+			<effect name="Debuff" time="5" val="0" abnormalLvl="#abnormalLvl" abnormalType="attack_time_up">
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>
 		</for>
@@ -1101,7 +1101,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="2" stackType="dmg_shield">
+			<effect name="Buff" time="300" val="0" abnormalLvl="2" abnormalType="dmg_shield">
 				<add order="0x40" stat="reflectDam" val="20" />
 			</effect>
 		</for>
@@ -1134,7 +1134,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#dot"> 102 102 102 125 125 144 144 157 157 157 157 164 164 164 164 164 164 </table>
 		<table name="#magicLvl"> 40 44 48 52 56 62 66 70 74 76 78 80 81 82 83 84 85 </table>
-		<table name="#stackOrder"> 5 5 5 6 6 7 7 8 8 8 8 8 8 8 8 8 8 </table>
+		<table name="#abnormalLvl"> 5 5 5 6 6 7 7 8 8 8 8 8 8 8 8 8 8 </table>
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
 		<set name="isDebuff" val="true" />
@@ -1148,7 +1148,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<!-- Retail Values CT2.5: 102 102 102 125 125 144 144 157 157 157 157 164 164 164 164 164 164HP * 1 Seconds -->
-			<effect count="15" name="DamOverTime" val="#dot" stackOrder="#stackOrder" stackType="dot_attr" />
+			<effect count="15" name="DamOverTime" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="dot_attr" />
 		</for>
 	</skill>
 	<skill id="4166" levels="18" name="Stuns">
@@ -1165,7 +1165,7 @@
 		<set name="skillType" val="STUN" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Stun" time="9" val="0" stackOrder="1" stackType="stun" />
+			<effect name="Stun" time="9" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="4167" levels="1" name="Curse of Fairy Mymyu">
@@ -1180,7 +1180,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<for>
-			<effect name="Debuff" time="3600" val="0" stackOrder="99" stackType="attack_time_up">
+			<effect name="Debuff" time="3600" val="0" abnormalLvl="99" abnormalType="attack_time_up">
 				<mul order="0x30" stat="pAtkSpd" val="0.77" />
 				<mul order="0x30" stat="runSpd" val="0.70" />
 			</effect>
@@ -1218,7 +1218,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" stackOrder="1" stackType="stun" />
+			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -1270,7 +1270,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="stun" />
+			<effect name="Stun" time="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -1287,7 +1287,7 @@
 		<set name="effectRange" val="1200" />
 		<set name="aggroPoints" val="100" />
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="99" stackType="pa_up">
+			<effect name="Buff" time="300" val="0" abnormalLvl="99" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="1.5" />
 			</effect>
 		</for>
@@ -1306,7 +1306,7 @@
 		<set name="effectRange" val="1200" />
 		<set name="aggroPoints" val="100" />
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="99" stackType="pd_up">
+			<effect name="Buff" time="300" val="0" abnormalLvl="99" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="1.5" />
 			</effect>
 		</for>
@@ -1325,7 +1325,7 @@
 		<set name="effectRange" val="1200" />
 		<set name="aggroPoints" val="100" />
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="99" stackType="attack_time_down">
+			<effect name="Buff" time="300" val="0" abnormalLvl="99" abnormalType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="1.5" />
 			</effect>
 		</for>
@@ -1344,7 +1344,7 @@
 		<set name="effectRange" val="1200" />
 		<set name="aggroPoints" val="100" />
 		<for>
-			<effect name="Buff" time="300" val="0" stackOrder="99" stackType="dmg_shield">
+			<effect name="Buff" time="300" val="0" abnormalLvl="99" abnormalType="dmg_shield">
 				<add order="0x40" stat="reflectDam" val="20" />
 			</effect>
 		</for>
@@ -1415,7 +1415,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
 		<for>
-			<effect name="Stun" time="9" val="0" stackOrder="1" stackType="stun" effectPower="80" effectType="STUN" />
+			<effect name="Stun" time="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="80" effectType="STUN" />
 		</for>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -1455,7 +1455,7 @@
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect count="10" name="DamOverTime" time="3" val="#dmg" abnormal="poison" stackOrder="#abnormalLvl" stackType="poison" />
+			<effect count="10" name="DamOverTime" time="3" val="#dmg" abnormal="poison" abnormalLvl="#abnormalLvl" abnormalType="poison" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -1464,7 +1464,7 @@
 		<!-- Freya retail confirmed -->
 		<table name="#pAtk"> 0.83 0.80 0.80 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
-		<table name="#stackOrder"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
+		<table name="#abnormalLvl"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="90" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_AURA" />
@@ -1475,7 +1475,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" time="30" val="0" stackOrder="#stackOrder" stackType="pa_down">
+			<effect name="Buff" time="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_down">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
@@ -1486,7 +1486,7 @@
 		<!-- Freya retail confirmed -->
 		<table name="#pAtkSpd"> 0.83 0.80 0.80 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
-		<table name="#stackOrder"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
+		<table name="#abnormalLvl"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="90" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_AURA" />
@@ -1497,7 +1497,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Debuff" time="30" val="0" stackOrder="#stackOrder" stackType="attack_time_up">
+			<effect name="Debuff" time="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="attack_time_up">
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>
 		</for>
@@ -1517,7 +1517,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Sleep" time="30" val="0" stackOrder="1" stackType="sleep" />
+			<effect name="Sleep" time="30" val="0" abnormalLvl="1" abnormalType="sleep" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -1535,7 +1535,7 @@
 		<set name="skillType" val="ROOT" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Root" time="30" val="0" stackOrder="1" stackType="root_magically" />
+			<effect name="Root" time="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -1544,7 +1544,7 @@
 		<!-- Freya retail confirmed -->
 		<table name="#runSpd"> 0.9 0.8 0.8 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
-		<table name="#stackOrder"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
+		<table name="#abnormalLvl"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="50" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_AURA" />
@@ -1555,7 +1555,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect name="Debuff" time="60" val="0" stackOrder="#stackOrder" stackType="speed_down">
+			<effect name="Debuff" time="60" val="0" abnormalLvl="#abnormalLvl" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
@@ -1578,7 +1578,7 @@
 		<set name="skillType" val="BLEED" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect count="7" name="DamOverTime" time="3" val="#damage" abnormal="bleed" stackOrder="#abnormalLvl" stackType="bleeding" />
+			<effect count="7" name="DamOverTime" time="3" val="#damage" abnormal="bleed" abnormalLvl="#abnormalLvl" abnormalType="bleeding" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -1596,7 +1596,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect name="Paralyze" time="30" val="0" stackOrder="1" stackType="paralyze" />
+			<effect name="Paralyze" time="30" val="0" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -1605,7 +1605,7 @@
 		<!-- Freya retail confirmed -->
 		<table name="#maxMp"> 6 6 6 6 6 12 15 21 24 30 36 36 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
-		<table name="#stackOrder"> 2 2 2 2 2 3 4 5 6 7 8 8 </table>
+		<table name="#abnormalLvl"> 2 2 2 2 2 3 4 5 6 7 8 8 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="90" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_AURA" />
@@ -1616,7 +1616,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect count="10" name="ManaDamOverTime" time="3" val="#maxMp" stackOrder="#stackOrder" stackType="dot_mp" />
+			<effect count="10" name="ManaDamOverTime" time="3" val="#maxMp" abnormalLvl="#abnormalLvl" abnormalType="dot_mp" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -1722,7 +1722,7 @@
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
 		<for>
-			<effect name="Debuff" time="60" val="0" stackOrder="2" stackType="speed_down" effectPower="60" effectType="DEBUFF">
+			<effect name="Debuff" time="60" val="0" abnormalLvl="2" abnormalType="speed_down" effectPower="60" effectType="DEBUFF">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
@@ -1744,7 +1744,7 @@
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
 		<for>
-			<effect name="Root" time="30" val="0" stackOrder="1" stackType="root_magically" />
+			<effect name="Root" time="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -1766,7 +1766,7 @@
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
 		<for>
-			<effect count="10" name="DamOverTime" time="3" val="#dmg" stackOrder="#abnormalLvl" stackType="poison" abnormal="poison" />
+			<effect count="10" name="DamOverTime" time="3" val="#dmg" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -1775,7 +1775,7 @@
 		<!-- Freya retail confirmed -->
 		<table name="#pAtk"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
-		<table name="#stackOrder"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
+		<table name="#abnormalLvl"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="90" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_ONE" />
@@ -1787,7 +1787,7 @@
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
 		<for>
-			<effect name="Buff" time="30" val="0" stackOrder="#stackOrder" stackType="pa_down">
+			<effect name="Buff" time="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_down">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
