@@ -659,7 +659,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="600" val="0" stackOrder="2" stackType="vp_keep">
+			<effect name="Buff" time="600" val="0" abnormalLvl="2" abnormalType="vp_keep">
 				<mul order="0x30" stat="vitalityConsumeRate" val="0.00" />
 			</effect>
 		</for>
@@ -678,7 +678,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="1800" val="0" stackOrder="3" stackType="vp_keep">
+			<effect name="Buff" time="1800" val="0" abnormalLvl="3" abnormalType="vp_keep">
 				<mul order="0x30" stat="vitalityConsumeRate" val="0.00" />
 			</effect>
 		</for>

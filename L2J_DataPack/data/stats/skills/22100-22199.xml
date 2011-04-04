@@ -434,7 +434,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" event="vesper1" time="600" val="0" stackOrder="1" stackType="br_event_buf1">
+			<effect name="Buff" event="vesper1" time="600" val="0" abnormalLvl="1" abnormalType="br_event_buf1">
 				<mul order="0x30" stat="pAtk" val="1.15" />
 				<mul order="0x30" stat="mAtk" val="1.15" />
 				<add order="0x40" stat="runSpd" val="10" />
@@ -454,7 +454,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" event="vesper2" time="600" val="0" stackOrder="1" stackType="br_event_buf1">
+			<effect name="Buff" event="vesper2" time="600" val="0" abnormalLvl="1" abnormalType="br_event_buf1">
 				<add order="0x40" stat="rCrit" val="15" />
 				<add order="0x40" stat="mCritRate" val="2" />
 				<add order="0x40" stat="runSpd" val="10" />
@@ -475,7 +475,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" event="vesper3" time="600" val="0" stackOrder="1" stackType="br_event_buf1">
+			<effect name="Buff" event="vesper3" time="600" val="0" abnormalLvl="1" abnormalType="br_event_buf1">
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
 				<add order="0x40" stat="runSpd" val="20" />

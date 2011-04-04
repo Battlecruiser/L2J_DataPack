@@ -193,7 +193,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="2" stackType="attack_time_down">
+			<effect name="Buff" time="1200" val="0" abnormalLvl="2" abnormalType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="1.33" />
 			</effect>
 		</for>
@@ -209,7 +209,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="1200" val="0" stackOrder="2" stackType="speed_up">
+			<effect name="Buff" time="1200" val="0" abnormalLvl="2" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="33" />
 			</effect>
 		</for>
@@ -236,7 +236,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect count="5" name="HealOverTime" time="3" val="150" stackOrder="3" stackType="hp_recover" />
+			<effect count="5" name="HealOverTime" time="3" val="150" abnormalLvl="3" abnormalType="hp_recover" />
 		</for>
 	</skill>
 	<skill id="26026" levels="1" name="High-grade Healing Potion">
@@ -250,7 +250,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect count="5" name="HealOverTime" time="3" val="72" stackOrder="2" stackType="hp_recover" />
+			<effect count="5" name="HealOverTime" time="3" val="72" abnormalLvl="2" abnormalType="hp_recover" />
 		</for>
 	</skill>
 	<skill id="26027" levels="6" name="Secret medicine of Will">
@@ -324,7 +324,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="speed_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="33" />
 			</effect>
 		</for>
@@ -340,7 +340,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="attack_time_down">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="1.33" />
 			</effect>
 		</for>
@@ -356,7 +356,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="pa_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="1.15" />
 			</effect>
 		</for>
@@ -372,7 +372,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="pd_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="1.15" />
 			</effect>
 		</for>
@@ -388,7 +388,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="critical_dmg_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="critical_dmg_up">
 				<mul order="0x30" stat="cAtk" val="1.35" />
 			</effect>
 		</for>
@@ -404,7 +404,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="hit_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="hit_up">
 				<add order="0x40" stat="accCombat" val="4" />
 			</effect>
 		</for>
@@ -420,7 +420,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="ma_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="ma_up">
 				<mul order="0x30" stat="mAtk" val="1.75" />
 			</effect>
 		</for>
@@ -436,7 +436,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="casting_time_down">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="casting_time_down">
 				<mul order="0x30" stat="mAtkSpd" val="1.3" />
 			</effect>
 		</for>
@@ -452,7 +452,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="vampiric_attack">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="vampiric_attack">
 				<add order="0x40" stat="absorbDam" val="9" /> <!-- absorb 9% HP from damage inflicted on enemies -->
 			</effect>
 		</for>
@@ -468,7 +468,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="max_hp_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="max_hp_up">
 				<mul order="0x30" stat="maxHp" val="1.35" />
 			</effect>
 		</for>
@@ -484,7 +484,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="berserker">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="berserker">
 				<mul order="0x30" stat="pDef" val="0.92" />
 				<mul order="0x30" stat="mDef" val="0.84" />
 				<sub order="0x40" stat="rEvas" val="4" />
@@ -507,7 +507,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="md_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="md_up">
 				<mul order="0x30" stat="mDef" val="1.3" />
 			</effect>
 		</for>
@@ -523,7 +523,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="max_mp_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="max_mp_up">
 				<mul order="0x30" stat="maxMp" val="1.35" />
 			</effect>
 		</for>
@@ -539,7 +539,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="cheap_magic">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="cheap_magic">
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.8" />
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.9" />
 				<mul order="0x30" stat="DanceMpConsumeRate" val="0.8" />
@@ -557,7 +557,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="26" stackType="magic_critical_up">
+			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="magic_critical_up">
 				<basemul order="0x30" stat="mCritRate" val="2" />
 			</effect>
 		</for>

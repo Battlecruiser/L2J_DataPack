@@ -159,16 +159,16 @@ public class Cancel implements ISkillHandler
 				switch (skill.getSkillType())
 				{
 					case MAGE_BANE:
-						if ("casting_time_down".equalsIgnoreCase(effect.getStackType()))
+						if ("casting_time_down".equalsIgnoreCase(effect.getAbnormalType()))
 							break;
-						if ("ma_up".equalsIgnoreCase(effect.getStackType()))
+						if ("ma_up".equalsIgnoreCase(effect.getAbnormalType()))
 							break;
 						effects[i] = null;
 						continue;
 					case WARRIOR_BANE:
-						if ("attack_time_down".equalsIgnoreCase(effect.getStackType()))
+						if ("attack_time_down".equalsIgnoreCase(effect.getAbnormalType()))
 							break;
-						if ("speed_up".equalsIgnoreCase(effect.getStackType()))
+						if ("speed_up".equalsIgnoreCase(effect.getAbnormalType()))
 							break;
 						effects[i] = null;
 						continue;
