@@ -172,13 +172,13 @@ public class Core extends L2AttackableAIScript
 			if (_FirstAttacked)
 			{
 				if (Rnd.get(100) == 0)
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "Removing intruders."));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), 1000003)); // Removing intruders.
 			}
 			else
 			{
 				_FirstAttacked = true;
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "A non-permitted target has been discovered."));
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "Starting intruder removal system."));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), 1000001)); // A non-permitted target has been discovered.
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), 1000002)); // Intruder removal system initiated.
 			}
 		}
 		return super.onAttack(npc, attacker, damage, isPet);
@@ -192,9 +192,9 @@ public class Core extends L2AttackableAIScript
 		{
 			int objId = npc.getObjectId();
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, objId, npc.getX(), npc.getY(), npc.getZ()));
-			npc.broadcastPacket(new NpcSay(objId, 0, npcId, "A fatal error has occurred."));
-			npc.broadcastPacket(new NpcSay(objId, 0, npcId, "System is being shut down..."));
-			npc.broadcastPacket(new NpcSay(objId, 0, npcId, "......"));
+			npc.broadcastPacket(new NpcSay(objId, 0, npcId, 1000004)); // A fatal error has occurred.
+			npc.broadcastPacket(new NpcSay(objId, 0, npcId, 1000005)); // System is being shut down...
+			npc.broadcastPacket(new NpcSay(objId, 0, npcId, 1000006)); // ......
 			_FirstAttacked = false;
 			addSpawn(31842, 16502, 110165, -6394, 0, false, 900000);
 			addSpawn(31842, 18948, 110166, -6397, 0, false, 900000);

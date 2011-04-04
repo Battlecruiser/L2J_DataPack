@@ -113,7 +113,7 @@ public class AirShipGludioGracia extends Quest implements Runnable
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_PETRIFIED);
 			return null;
 		}
-		if (player.isDead())
+		if (player.isDead() || player.isFakeDeath())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_DEAD);	
 			return null;
@@ -123,7 +123,7 @@ public class AirShipGludioGracia extends Quest implements Runnable
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_FISHING);
 			return null;
 		}
-		if (player.getPvpFlag() != 0)
+		if (player.isInCombat())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_IN_BATTLE);
 			return null;
@@ -153,7 +153,7 @@ public class AirShipGludioGracia extends Quest implements Runnable
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_HOLDING_A_FLAG);
 			return null;
 		}
-		if (player.getPet() != null)
+		if (player.getPet() != null || player.isMounted())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_A_PET_OR_A_SERVITOR_IS_SUMMONED);
 			return null;
@@ -196,7 +196,7 @@ public class AirShipGludioGracia extends Quest implements Runnable
 			switch (_cycle)
 			{
 				case 0:
-					broadcastInGludio("The regularly scheduled airship that flies to the Gracia continent has departed.");
+					broadcastInGludio(1800223); // The regularly scheduled airship that flies to the Gracia continent has departed.
 					_ship.setInDock(0);
 					_ship.executePath(GLUDIO_TO_WARPGATE);
 					break;
@@ -209,13 +209,13 @@ public class AirShipGludioGracia extends Quest implements Runnable
 					_ship.executePath(WARPGATE_TO_GRACIA);
 					break;
 				case 3:
-					broadcastInGracia("The regularly scheduled airship has arrived. It will depart for the Aden continent in 1 minute.");
+					broadcastInGracia(1800220); // The regularly scheduled airship has arrived. It will depart for the Aden continent in 1 minute.
 					_ship.setInDock(GRACIA_DOCK_ID);
 					_ship.oustPlayers();
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 60000);
 					break;
 				case 4:
-					broadcastInGracia("The regularly scheduled airship that flies to the Aden continent has departed.");
+					broadcastInGracia(1800221); // The regularly scheduled airship that flies to the Aden continent has departed.
 					_ship.setInDock(0);
 					_ship.executePath(GRACIA_TO_WARPGATE);
 					break;
@@ -228,7 +228,7 @@ public class AirShipGludioGracia extends Quest implements Runnable
 					_ship.executePath(WARPGATE_TO_GLUDIO);
 					break;
 				case 7:
-					broadcastInGludio("The regularly scheduled airship has arrived. It will depart for the Gracia continent in 1 minute.");
+					broadcastInGludio(1800222); // The regularly scheduled airship has arrived. It will depart for the Gracia continent in 1 minute.
 					_ship.setInDock(GLUDIO_DOCK_ID);
 					_ship.oustPlayers();
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 60000);
@@ -244,7 +244,7 @@ public class AirShipGludioGracia extends Quest implements Runnable
 		}
 	}
 	
-	private final void broadcastInGludio(String msg)
+	private final void broadcastInGludio(int msg)
 	{
 		if (!_foundAtcGludio)
 		{
@@ -255,7 +255,7 @@ public class AirShipGludioGracia extends Quest implements Runnable
 			_atcGludio.broadcastPacket(new NpcSay(_atcGludio.getObjectId(), Say2.SHOUT, _atcGludio.getNpcId(), msg));
 	}
 	
-	private final void broadcastInGracia(String msg)
+	private final void broadcastInGracia(int msg)
 	{
 		if (!_foundAtcGracia)
 		{
