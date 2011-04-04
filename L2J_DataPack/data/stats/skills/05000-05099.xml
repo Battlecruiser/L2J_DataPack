@@ -1057,10 +1057,14 @@
 		</for>
 	</skill>
 	<skill id="5088" levels="1" name="Signal">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="100" />
 		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillRadius" val="300" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="5089" levels="1" name="Representation - Enter the Sailren Nest Quest">
 		<set name="target" val="TARGET_SELF" />
