@@ -146,7 +146,7 @@
 		<set name="reuseDelay" val="360000" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="120" val="0" abnormalLvl="1" abnormalType="talisman">
+			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
 				<add order="0x40" stat="maxCp" val="1200" />
 			</effect>
 			<effect name="CombatPointHealOverTime" noicon="1" val="1200" />
@@ -165,7 +165,7 @@
 		<set name="reuseDelay" val="360000" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="120" val="0" abnormalLvl="1" abnormalType="talisman">
+			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
 				<add order="0x40" stat="maxCp" val="800" />
 			</effect>
 			<effect name="CombatPointHealOverTime" noicon="1" val="800" />
@@ -347,7 +347,7 @@
 		<set name="reuseDelay" val="360000" />
 		<set name="staticReuse" val="true" />
 		<for>
-			<effect name="Buff" time="120" val="0" abnormalLvl="1" abnormalType="talisman">
+			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
 				<add order="0x40" stat="maxCp" val="1500" />
 			</effect>
 			<effect name="CombatPointHealOverTime" noicon="1" val="1500" />
@@ -373,7 +373,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" time="10" val="0" abnormalLvl="1" abnormalType="talisman">
+			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
 				<add order="0x40" stat="fireRes" val="15" />
 				<add order="0x40" stat="windRes" val="15" />
 				<add order="0x40" stat="waterRes" val="15" />

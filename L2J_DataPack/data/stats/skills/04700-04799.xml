@@ -19,7 +19,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="#power" />
 		<for>
-			<effect name="Buff" time="#time" val="0" abnormalLvl="#abnormalLvl" abnormalType="buff_queen_of_cat">
+			<effect name="Buff" abnormalTime="#time" val="0" abnormalLvl="#abnormalLvl" abnormalType="buff_queen_of_cat">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 				<add order="0x40" stat="accCombat" val="#accCombat" />
 			</effect>
@@ -62,7 +62,7 @@
 		<set name="isMagic" val="true" />
 		<set name="aggroPoints" val="#power" />
 		<for>
-			<effect name="Buff" time="#time" val="0" abnormalLvl="#abnormalLvl" abnormalType="buff_unicorn_seraphim">
+			<effect name="Buff" abnormalTime="#time" val="0" abnormalLvl="#abnormalLvl" abnormalType="buff_unicorn_seraphim">
 				<mul order="0x30" stat="regMp" val="#regMp" />
 			</effect>
 		</for>
@@ -85,7 +85,7 @@
 		<set name="isMagic" val="true" />
 		<set name="aggroPoints" val="#power" />
 		<for>
-			<effect name="Buff" time="#time" val="0" abnormalLvl="#abnormalLvl" abnormalType="buff_unicorn_seraphim">
+			<effect name="Buff" abnormalTime="#time" val="0" abnormalLvl="#abnormalLvl" abnormalType="buff_unicorn_seraphim">
 				<mul order="0x30" stat="mReuse" val="#mReuse" />
 			</effect>
 		</for>
@@ -132,7 +132,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Debuff" time="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="debuff_nightshade">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="debuff_nightshade">
 				<mul order="0x30" stat="mDef" val="#mDef" />
 				<mul order="0x30" stat="pDef" val="#pDef" />
 			</effect>
@@ -162,7 +162,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isMagic" val="true" />
 		<for>
-			<effect name="Debuff" time="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="debuff_nightshade">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="debuff_nightshade">
 				<mul order="0x30" stat="mDef" val="#mDef" />
 				<mul order="0x30" stat="pDef" val="#pDef" />
 			</effect>
@@ -204,7 +204,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
 		<for>
-			<effect name="Stun" time="9" val="0" abnormalLvl="1" effectPower="50" effectType="STUN" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" effectPower="50" effectType="STUN" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="4709" levels="10" name="Cursed Blow">
@@ -242,7 +242,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="15" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="15" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="4711" levels="12" name="Wild Defense">
@@ -259,7 +259,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="#aggro" />
 		<for>
-			<effect name="ImmobileBuff" time="30" val="0" abnormalLvl="1" abnormalType="ultimate_buff">
+			<effect name="ImmobileBuff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="ultimate_buff">
 				<mul order="0x30" stat="mDef" val="5" />
 				<mul order="0x30" stat="pDef" val="5" />
 				<mul order="0x30" stat="pAtkSpd" val="0.3" />
@@ -453,7 +453,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="4725" levels="12" name="Stun">
@@ -473,7 +473,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="4726" levels="12" name="Stun">
@@ -493,7 +493,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="4727" levels="12" name="Stun">
@@ -513,7 +513,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="4728" levels="12" name="Stun">
@@ -533,7 +533,7 @@
 		<set name="effectRange" val="200" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="4729" levels="12" name="BOSS Mortal Blow">
@@ -793,7 +793,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="effectRange" val="200" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="4745" levels="12" name="Stun">
@@ -813,7 +813,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="4746" levels="12" name="Stun">
@@ -833,7 +833,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="4747" levels="12" name="Stun">
@@ -853,7 +853,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="effectRange" val="200" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="4748" levels="12" name="Stun">
@@ -873,7 +873,7 @@
 		<set name="effectRange" val="200" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="4749" levels="12" name="BOSS Mortal Blow">
@@ -1052,7 +1052,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="effectRange" val="1400" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="4760" levels="12" name="Stun">
@@ -1071,7 +1071,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="4761" levels="12" name="Stun">
@@ -1090,7 +1090,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="effectRange" val="1400" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="4762" levels="12" name="Stun">
@@ -1109,7 +1109,7 @@
 		<set name="effectRange" val="1400" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="4763" levels="12" name="Stun">
@@ -1128,7 +1128,7 @@
 		<set name="effectRange" val="1400" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="4764" levels="12" name="BOSS Power Shot">
@@ -1222,7 +1222,7 @@
 		<set name="effectRange" val="1400" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="4770" levels="12" name="Stun">
@@ -1241,7 +1241,7 @@
 		<set name="effectRange" val="1400" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="4771" levels="12" name="Stun">
@@ -1260,7 +1260,7 @@
 		<set name="effectRange" val="1400" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="4772" levels="12" name="Stun">
@@ -1279,7 +1279,7 @@
 		<set name="effectRange" val="1400" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="4773" levels="12" name="Stun">
@@ -1298,7 +1298,7 @@
 		<set name="effectRange" val="1400" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="4774" levels="12" name="BOSS Spear Attack">

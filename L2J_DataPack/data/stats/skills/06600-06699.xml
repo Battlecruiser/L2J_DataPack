@@ -127,7 +127,7 @@
 		<set name="hitTime" val="2000" />
 		<set name="Debuff" val="true" />
 		<for>
-			<effect name="Debuff" time="10" val="0" effectPower="30" abnormalLvl="3" abnormalType="speed_down">
+			<effect name="Debuff" abnormalTime="10" val="0" effectPower="30" abnormalLvl="3" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.5" />
 			</effect>
 		</for>
@@ -151,7 +151,7 @@
 		<set name="hitTime" val="2000" />
 		<set name="Debuff" val="true" />
 		<for>
-			<effect name="Debuff" time="10" val="0" effectPower="30" abnormalLvl="4" abnormalType="speed_down">
+			<effect name="Debuff" abnormalTime="10" val="0" effectPower="30" abnormalLvl="4" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.1" />
 			</effect>
 		</for>
@@ -172,10 +172,10 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="aggroPoints" val="100" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="1" abnormalType="pa_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="pa_up">
 				<add order="0x40" stat="pAtk" val="#pAtk" />
 			</effect>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="1" abnormalType="ma_up" noicon="1">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="ma_up" noicon="1">
 				<add order="0x40" stat="mAtk" val="#mAtk" />
 			</effect>
 		</for>
@@ -196,10 +196,10 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="aggroPoints" val="100" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="1" abnormalType="pa_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="pa_up">
 				<add order="0x40" stat="pAtk" val="#pAtk" />
 			</effect>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="1" abnormalType="ma_up" noicon="1">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="ma_up" noicon="1">
 				<add order="0x40" stat="mAtk" val="#mAtk" />
 			</effect>
 		</for>
@@ -414,7 +414,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="transformId" val="126" />
 		<for>
-			<effect name="Transformation" time="1800" val="0" abnormalLvl="1" abnormalType="transform">
+			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform">
 				<set order="0x08" stat="STR" val="40" />
 				<set order="0x08" stat="DEX" val="30" />
 				<set order="0x08" stat="CON" val="43" />
@@ -505,10 +505,10 @@
 		<set name="skillType" val="DOT" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Paralyze" time="#time2" val="0" special="freezing" abnormalLvl="#abnormalLvl" abnormalType="freezing" />
+			<effect name="Paralyze" abnormalTime="#time2" val="0" special="freezing" abnormalLvl="#abnormalLvl" abnormalType="freezing" />
 			<!-- Level 1: 115HP * 1 during 7 seconds -->
 			<!-- Level 2: 115HP * 5 during 15 seconds -->
-			<effect count="#count" name="DamOverTime" time="#time" noicon="1" val="#dot" />
+			<effect count="#count" name="DamOverTime" abnormalTime="#time" noicon="1" val="#dot" />
 			<effect name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="6302" triggeredLevel="1" chanceType="ON_START" />
 		</for>
 	</skill>
@@ -539,7 +539,7 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="593" />
 		<for>
-			<effect name="Buff" time="300" val="0" abnormalLvl="3" abnormalType="pd_up">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="3" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="1.18" />
 			</effect>
 		</for>
@@ -556,7 +556,7 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="285" />
 		<for>
-			<effect name="Buff" time="300" val="0" abnormalLvl="2" abnormalType="speed_up">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="2" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="33" />
 			</effect>
 		</for>
@@ -573,7 +573,7 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="532" />
 		<for>
-			<effect name="Buff" time="300" val="0" abnormalLvl="3" abnormalType="critical_dmg_up">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="3" abnormalType="critical_dmg_up">
 				<mul order="0x30" stat="cAtk" val="1.35" />
 			</effect>
 		</for>
@@ -590,7 +590,7 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="646" />
 		<for>
-			<effect name="Buff" time="300" val="0" abnormalLvl="6" abnormalType="max_hp_up">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="6" abnormalType="max_hp_up">
 				<mul order="0x30" stat="maxHp" val="1.35" />
 			</effect>
 		</for>
@@ -607,7 +607,7 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="646" />
 		<for>
-			<effect name="Buff" time="300" val="0" abnormalLvl="4" abnormalType="vampiric_attack">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="4" abnormalType="vampiric_attack">
 				<add order="0x40" stat="absorbDam" val="9" />
 			</effect>
 		</for>
@@ -624,7 +624,7 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="495" />
 		<for>
-			<effect name="Buff" time="300" val="0" abnormalLvl="2" abnormalType="berserker">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="2" abnormalType="berserker">
 				<mul order="0x30" stat="mAtk" val="1.16" />
 				<mul order="0x30" stat="pAtk" val="1.08" />
 				<mul order="0x30" stat="mDef" val="0.84" />
@@ -648,7 +648,7 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="379" />
 		<for>
-			<effect name="Buff" time="1800" val="0" abnormalLvl="6" abnormalType="shield_prob_up">
+			<effect name="Buff" abnormalTime="1800" val="0" abnormalLvl="6" abnormalType="shield_prob_up">
 				<mul order="0x30" stat="rShld" val="1.05" />
 			</effect>
 		</for>
@@ -729,7 +729,7 @@
 		<set name="hitTime" val="1500" />
 		<set name="aggroPoints" val="100" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="1" abnormalType="speed_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="40" />
 			</effect>
 		</for>
@@ -750,7 +750,7 @@
 		<set name="aggroPoints" val="100" />
 		<set name="skillRadius" val="1000" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="2" abnormalType="speed_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="2" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="45" />
 			</effect>
 		</for>
@@ -812,7 +812,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" time="7" val="0" abnormalLvl="1" abnormalType="patience">
+			<effect name="Buff" abnormalTime="7" val="0" abnormalLvl="1" abnormalType="patience">
 				<mul order="0x30" stat="physicalSkillPower" val="1.2" />
 			</effect>
 		</for>
@@ -906,12 +906,12 @@
 		<set name="skillType" val="DOT" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
-			<effect name="Paralyze" time="15" val="0" special="freezing" abnormalLvl="3" abnormalType="freezing" />
+			<effect name="Paralyze" abnormalTime="15" val="0" special="freezing" abnormalLvl="3" abnormalType="freezing" />
 			<!-- 115HP * 5 during 15 seconds -->
-			<effect count="3" name="DamOverTime" time="5" noicon="1" val="575" />
+			<effect count="3" name="DamOverTime" abnormalTime="5" noicon="1" val="575" />
 			<!-- 5MP * 5 during 15 seconds -->
-			<effect count="3" name="ManaDamOverTime" time="5" noicon="1" val="25" />
-			<effect name="ChanceSkillTrigger" time="15" noicon="1" val="0" triggeredId="6302" triggeredLevel="1" chanceType="ON_EXIT" />
+			<effect count="3" name="ManaDamOverTime" abnormalTime="5" noicon="1" val="25" />
+			<effect name="ChanceSkillTrigger" abnormalTime="15" noicon="1" val="0" triggeredId="6302" triggeredLevel="1" chanceType="ON_EXIT" />
 		</for>
 	</skill>
 </list>

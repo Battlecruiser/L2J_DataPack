@@ -107,7 +107,7 @@ public class StealBuffs implements ISkillHandler
 				
 				// if eff time is smaller than 5 sec, will not be stolen, just to save CPU,
 				// avoid synchronization(?) problems and NPEs
-				if (effect.getPeriod() - effect.getTime() < 5)
+				if (effect.getAbnormalTime() - effect.getTime() < 5)
 				{
 					effects[i] = null;
 					continue;

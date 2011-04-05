@@ -835,7 +835,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<for>
-			<effect name="Stun" time="9" val="0" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="3572" levels="4" name="Special Ability: Critical Damage">
@@ -882,7 +882,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<for>
-			<effect name="Debuff" time="120" val="0" abnormalLvl="3" abnormalType="speed_down">
+			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="3" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
@@ -931,7 +931,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="2" />
 		<for>
-			<effect name="Root" time="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
+			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
 	</skill>
 	<skill id="3578" levels="1" name="Special Ability: Infinity Blade">
@@ -965,7 +965,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="power" val="80" />
 		<for>
-			<effect name="Debuff" time="120" val="0" abnormalLvl="3" abnormalType="pd_down">
+			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="3" abnormalType="pd_down">
 				<mul order="0x30" stat="pDef" val="0.77" />
 			</effect>
 		</for>
@@ -999,7 +999,7 @@
 		<set name="power" val="80" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect count="5" name="ConfuseMob" time="4" val="0" />
+			<effect count="5" name="ConfuseMob" abnormalTime="4" val="0" />
 		</for>
 	</skill>
 	<skill id="3582" levels="1" name="Special Ability: Infinity Cleaver">
@@ -1050,7 +1050,7 @@
 		<set name="power" val="80" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect name="Stun" time="9" val="0" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="3585" levels="1" name="Special Ability: Infinity Wing">
@@ -1085,7 +1085,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="2" />
 		<for>
-			<effect name="PhysicalMute" time="60" val="0" abnormalLvl="1" abnormalType="silence_physical" />
+			<effect name="PhysicalMute" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="silence_physical" />
 		</for>
 	</skill>
 	<skill id="3587" levels="1" name="Special Ability: Infinity Fang">
@@ -1120,7 +1120,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<for>
-			<effect name="Stun" time="9" val="0" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="3589" levels="1" name="Special Ability: Infinity Stinger">
@@ -1157,7 +1157,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<for>
-			<effect name="Mute" time="120" val="0" abnormalLvl="1" abnormalType="silence" />
+			<effect name="Mute" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="silence" />
 		</for>
 	</skill>
 	<skill id="3591" levels="1" name="Special Ability: Infinity Spear">
@@ -1219,7 +1219,7 @@
 		<set name="lvlDepend" val="1" />
 		<set name="power" val="80" />
 		<for>
-			<effect name="Debuff" time="30" val="0" abnormalLvl="3" abnormalType="speed_down">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.5" />
 			</effect>
 		</for>
