@@ -214,7 +214,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" time="120" val="0" abnormalLvl="1" abnormalType="talisman">
+			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
 				<add order="0x40" stat="rEvas" val="2" />
 				<mul order="0x30" stat="critDamEvas" val="1.05" />
 			</effect>
@@ -381,7 +381,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="300" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="3336" levels="1" name="Transform Buffalo">
@@ -395,7 +395,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="300" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="3337" levels="1" name="Transform Cutie Pig">
@@ -408,7 +408,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="1800" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="3338" levels="1" name="Shield Master">
@@ -654,7 +654,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="300" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="3360" levels="1" name="Cheap Shot">

@@ -13,7 +13,7 @@
 		<set name="transformId" val="111" />
 		<for>
 			<!-- speed_up here is for block speed buffs on target -->
-			<effect name="Transformation" time="520" val="0" abnormalLvl="99" abnormalType="speed_up">
+			<effect name="Transformation" abnormalTime="520" val="0" abnormalLvl="99" abnormalType="speed_up">
 				<set order="0x08" stat="STR" val="40" />
 				<set order="0x08" stat="DEX" val="30" />
 				<set order="0x08" stat="CON" val="43" />
@@ -30,7 +30,7 @@
 		<set name="transformId" val="112" />
 		<for>
 			<!-- speed_up here is for block speed buffs on target -->
-			<effect name="Transformation" time="460" val="0" abnormalLvl="99" abnormalType="speed_up">
+			<effect name="Transformation" abnormalTime="460" val="0" abnormalLvl="99" abnormalType="speed_up">
 				<set order="0x08" stat="STR" val="40" />
 				<set order="0x08" stat="DEX" val="30" />
 				<set order="0x08" stat="CON" val="43" />
@@ -47,7 +47,7 @@
 		<set name="transformId" val="124" />
 		<for>
 			<!-- speed_up here is for block speed buffs on target -->
-			<effect name="Transformation" time="220" val="0" abnormalLvl="99" abnormalType="speed_up">
+			<effect name="Transformation" abnormalTime="220" val="0" abnormalLvl="99" abnormalType="speed_up">
 				<set order="0x08" stat="STR" val="40" />
 				<set order="0x08" stat="DEX" val="30" />
 				<set order="0x08" stat="CON" val="43" />
@@ -86,7 +86,7 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect count="7" name="DamOverTime" time="3" val="#dot" abnormalLvl="6" abnormalType="bleeding" abnormal="bleed" effectPower="40" effectType="BLEED">
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="6" abnormalType="bleeding" abnormal="bleed" effectPower="40" effectType="BLEED">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
@@ -108,7 +108,7 @@
 		<set name="target" val="TARGET_AURA" />
 		<set name="saveVs" val="MEN" />
 		<for>
-			<effect count="5" name="Fear" time="2" val="0" abnormalLvl="1" abnormalType="turn_flee" />
+			<effect count="5" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>
 	</skill>
 	<skill id="6207" levels="1" name="Strider Dash">
@@ -121,7 +121,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" time="15" val="0" abnormalLvl="2" abnormalType="speed_up_special">
+			<effect name="Buff" abnormalTime="15" val="0" abnormalLvl="2" abnormalType="speed_up_special">
 				<add order="0x40" stat="runSpd" val="66" />
 			</effect>
 		</for>
@@ -605,7 +605,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="ChanceSkillTrigger" time="10" val="0" abnormal="bleed" triggeredId="6281" triggeredLevel="1" chanceType="ON_EXIT" abnormalLvl="1" abnormalType="death_clack" />
+			<effect name="ChanceSkillTrigger" abnormalTime="10" val="0" abnormal="bleed" triggeredId="6281" triggeredLevel="1" chanceType="ON_EXIT" abnormalLvl="1" abnormalType="death_clack" />
 		</for>
 	</skill>
 	<skill id="6281" levels="1" name="Cold Judgement">
@@ -630,7 +630,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" time="10" val="0" abnormalLvl="1" abnormalType="reflect_magic_dd">
+			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="reflect_magic_dd">
 				<add order="0x40" stat="vengeanceMdam" val="20" />
 			</effect>
 		</for>
@@ -661,7 +661,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" time="300" val="0" abnormalLvl="3" abnormalType="pa_up">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="3" abnormalType="pa_up">
 				<mul order="0x30" stat="pDef" val="1.15" />
 				<mul order="0x30" stat="pAtk" val="1.15" />
 				<mul order="0x30" stat="runSpd" val="1.15" />
@@ -678,7 +678,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" time="1800" val="0" abnormalLvl="1" abnormalType="casting_time_down">
+			<effect name="Buff" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="casting_time_down">
 				<mul order="0x30" stat="mAtkSpd" val="1.15" />
 			</effect>
 		</for>
@@ -697,7 +697,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="300" val="0" abnormalLvl="2" abnormalType="pd_up">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="2" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="1.1" />
 				<mul order="0x30" stat="regHp" val="1.15" />
 			</effect>
@@ -728,7 +728,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
-			<effect name="Buff" time="30" val="0" abnormalLvl="1" abnormalType="signal_a">
+			<effect name="Buff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="signal_a">
 				<mul order="0x30" stat="pDef" val="4" />
 				<mul order="0x30" stat="mDef" val="4" />
 			</effect>
@@ -745,7 +745,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
-			<effect name="Buff" time="30" val="0" abnormalLvl="1" abnormalType="signal_b">
+			<effect name="Buff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="signal_b">
 				<mul order="0x30" stat="pAtk" val="3" />
 				<mul order="0x30" stat="mAtk" val="3" />
 				<mul order="0x30" stat="pAtkSpd" val="1.25" />
@@ -836,7 +836,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_CLAN" />
 		<for>
-			<effect name="Buff" time="300" val="0" abnormalLvl="3" abnormalType="pa_up">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="3" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="1.15" />
 			</effect>
 		</for>

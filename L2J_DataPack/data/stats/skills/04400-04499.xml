@@ -12,7 +12,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" time="3600" val="0" abnormalLvl="#abnormalLvl" abnormalType="casting_time_down">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvl" abnormalType="casting_time_down">
 				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
 			</effect>
 		</for>
@@ -29,7 +29,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" time="3600" val="0" abnormalLvl="#abnormalLvl" abnormalType="ma_up">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvl" abnormalType="ma_up">
 				<mul order="0x30" stat="mAtk" val="#mAtk" />
 			</effect>
 		</for>
@@ -46,7 +46,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" time="3600" val="0" abnormalLvl="#abnormalLvl" abnormalType="attack_time_down">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvl" abnormalType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>
 		</for>
@@ -63,7 +63,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" abnormalLvl="#abnormalLvl" abnormalType="hit_up">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvl" abnormalType="hit_up">
 				<add order="0x40" stat="accCombat" val="#accCombat" />
 			</effect>
 		</for>
@@ -80,7 +80,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" time="3600" val="0" abnormalLvl="#abnormalLvl" abnormalType="critical_prob_up">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvl" abnormalType="critical_prob_up">
 				<basemul order="0x30" stat="rCrit" val="#rCrit" />
 			</effect>
 		</for>
@@ -97,7 +97,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" time="3600" val="0" abnormalLvl="#abnormalLvl" abnormalType="critical_dmg_up">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvl" abnormalType="critical_dmg_up">
 				<mul order="0x30" stat="cAtk" val="#cAtk" />
 			</effect>
 		</for>
@@ -114,7 +114,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="3600" val="0" abnormalLvl="#abnormalLvl" abnormalType="avoid_up">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvl" abnormalType="avoid_up">
 				<add order="0x40" stat="rEvas" val="#rEvas" />
 			</effect>
 		</for>
@@ -753,7 +753,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="saveVs" val="MEN" />
 		<for>
-			<effect name="Debuff" time="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="armor_water">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="armor_water">
 				<add order="0x40" stat="fireRes" val="#fire" />
 				<sub order="0x40" stat="waterRes" val="#water" />
 			</effect>
@@ -781,7 +781,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="saveVs" val="MEN" />
 		<for>
-			<effect name="Debuff" time="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="armor_wind">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="armor_wind">
 				<sub order="0x40" stat="windRes" val="#wind" />
 				<add order="0x40" stat="earthRes" val="#earth" />
 			</effect>
@@ -809,7 +809,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="saveVs" val="MEN" />
 		<for>
-			<effect name="Debuff" time="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="armor_earth">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="armor_earth">
 				<sub order="0x40" stat="earthRes" val="#earth" />
 				<add order="0x40" stat="windRes" val="#wind" />
 			</effect>
@@ -837,7 +837,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="saveVs" val="MEN" />
 		<for>
-			<effect name="Debuff" time="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="armor_unholy">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="armor_unholy">
 				<sub order="0x40" stat="darkRes" val="#dark" />
 				<add order="0x40" stat="holyRes" val="#holy" />
 			</effect>
@@ -865,7 +865,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="saveVs" val="MEN" />
 		<for>
-			<effect name="Debuff" time="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="armor_holy">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="armor_holy">
 				<sub order="0x40" stat="holyRes" val="#holy" />
 				<add order="0x40" stat="darkRes" val="#dark" />
 			</effect>
@@ -886,7 +886,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Buff" time="5" val="0" abnormalLvl="#abnormalLvl" abnormalType="speed_up">
+			<effect name="Buff" abnormalTime="5" val="0" abnormalLvl="#abnormalLvl" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="#speed" />
 			</effect>
 		</for>
@@ -914,10 +914,10 @@
 		<set name="hitTime" val="1800" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" time="300" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_up">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="#increase" />
 			</effect>
-			<effect name="Buff" time="300" val="0" abnormalLvl="#abnormalLvl" abnormalType="pd_up">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvl" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="#increase" />
 			</effect>
 		</for>
@@ -957,7 +957,7 @@
 		<set name="effectRange" val="1200" />
 		<set name="saveVs" val="CON" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 		<table name="#mpConsume"> 25 40 56 76 99 121 142 151 159 165 168 170 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -985,7 +985,7 @@
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
 		<for>
-			<effect name="Buff" time="300" val="0" abnormalLvl="10" abnormalType="bleeding">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="10" abnormalType="bleeding">
 				<sub order="0x40" stat="bleedVuln" val="100" />
 			</effect>
 		</for>
@@ -1003,7 +1003,7 @@
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="true" />
 		<for>
-			<effect name="SilentMove" abnormal="stealth" time="#time" val="0" abnormalLvl="1" abnormalType="stealth" />
+			<effect name="SilentMove" abnormal="stealth" abnormalTime="#time" val="0" abnormalLvl="1" abnormalType="stealth" />
 		</for>
 		<table name="#mpConsume"> 13 20 27 35 45 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -1056,7 +1056,7 @@
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
 		<for>
-			<effect name="Buff" time="1800" val="0" abnormalLvl="4" abnormalType="armor_water">
+			<effect name="Buff" abnormalTime="1800" val="0" abnormalLvl="4" abnormalType="armor_water">
 				<add order="0x40" stat="waterRes" val="50" />
 			</effect>
 		</for>
@@ -1076,7 +1076,7 @@
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
 		<for>
-			<effect name="Debuff" time="1800" val="0" abnormalLvl="4" abnormalType="md_down">
+			<effect name="Debuff" abnormalTime="1800" val="0" abnormalLvl="4" abnormalType="md_down">
 				<mul order="0x30" stat="mDef" val="0.8" />
 			</effect>
 		</for>
@@ -1096,7 +1096,7 @@
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
 		<for>
-			<effect name="Debuff" time="1800" val="0" abnormalLvl="4" abnormalType="pd_down">
+			<effect name="Debuff" abnormalTime="1800" val="0" abnormalLvl="4" abnormalType="pd_down">
 				<mul order="0x30" stat="pDef" val="0.7" />
 			</effect>
 		</for>
@@ -1114,7 +1114,7 @@
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
 		<for>
-			<effect name="SilenceMagicPhysical" time="120" val="0" abnormalLvl="99" abnormalType="silence_all" />
+			<effect name="SilenceMagicPhysical" abnormalTime="120" val="0" abnormalLvl="99" abnormalType="silence_all" />
 		</for>
 	</skill>
 	<skill id="4483" levels="12" name="Hold">
@@ -1132,7 +1132,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Root" time="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
+			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
 		<table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -1176,7 +1176,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<for>
-			<effect name="Debuff" time="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="pd_down">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="pd_down">
 				<mul order="0x30" stat="pDef" val="#pdef" />
 			</effect>
 		</for>
@@ -1203,7 +1203,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<for>
-			<effect name="Debuff" time="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="md_down">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="md_down">
 				<mul order="0x30" stat="mDef" val="#mdef" />
 			</effect>
 		</for>
@@ -1227,7 +1227,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<for>
-			<effect name="Root" time="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
+			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
 		<table name="#mpConsume"> 19 30 42 57 74 91 106 114 119 124 126 128 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -1284,7 +1284,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="saveVs" val="MEN" />
 		<for>
-			<effect name="Buff" time="120" val="0" effectPower="40" effectType="DEBUFF" abnormalLvl="1" abnormalType="holy_attack">
+			<effect name="Buff" abnormalTime="120" val="0" effectPower="40" effectType="DEBUFF" abnormalLvl="1" abnormalType="holy_attack">
 				<add order="0x40" stat="holyPower" val="20" />
 			</effect>
 		</for>
@@ -1308,7 +1308,7 @@
 		<set name="effectRange" val="200" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect name="BigHead" time="300" val="0" abnormal="bighead" abnormalLvl="1" abnormalType="big_head" effectPower="80" effectType="DEBUFF" />
+			<effect name="BigHead" abnormalTime="300" val="0" abnormal="bighead" abnormalLvl="1" abnormalType="big_head" effectPower="80" effectType="DEBUFF" />
 		</for>
 		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -1324,7 +1324,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="ChanceSkillTrigger" time="300" val="0" abnormalLvl="1" abnormalType="debuff_shield" triggeredId="5520" triggeredLevel="#lvl" chanceType="ON_ATTACKED" activationChance="20" activationMinDamage="1" />
+			<effect name="ChanceSkillTrigger" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="debuff_shield" triggeredId="5520" triggeredLevel="#lvl" chanceType="ON_ATTACKED" activationChance="20" activationMinDamage="1" />
 		</for>
 		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -1366,7 +1366,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
 		</for>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<set name="mpConsume" val="#mpConsume" />

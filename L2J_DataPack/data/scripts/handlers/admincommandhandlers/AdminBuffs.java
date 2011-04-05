@@ -220,7 +220,7 @@ public class AdminBuffs implements IAdminCommandHandler
 						"<tr><td>",
 						e.getSkill().getName(),
 						"</td><td>",
-						e.getSkill().isToggle() ? "toggle" : e.getPeriod() - e.getTime() + "s",
+						e.getSkill().isToggle() ? "toggle" : e.getAbnormalTime() - e.getTime() + "s",
 								"</td><td><button value=\"Remove\" action=\"bypass -h admin_stopbuff ",
 								Integer.toString(target.getObjectId()),
 								" ",

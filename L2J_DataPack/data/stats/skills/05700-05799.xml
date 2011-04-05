@@ -14,7 +14,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isMagic" val="true" />
 		<for>
-			<effect name="Buff" time="2700" val="0" abnormalLvl="9" abnormalType="md_down">
+			<effect name="Buff" abnormalTime="2700" val="0" abnormalLvl="9" abnormalType="md_down">
 				<mul order="0x30" stat="mDef" val="0.34" />
 			</effect>
 		</for>
@@ -33,7 +33,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isMagic" val="true" />
 		<for>
-			<effect name="Buff" time="2700" val="0" abnormalLvl="9" abnormalType="pa_down">
+			<effect name="Buff" abnormalTime="2700" val="0" abnormalLvl="9" abnormalType="pa_down">
 				<mul order="0x30" stat="pAtk" val="0.34" />
 			</effect>
 		</for>
@@ -117,7 +117,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" time="10" val="0" abnormalLvl="1" abnormalType="pa_up" />
+			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="pa_up" />
 		</for>
 	</skill>
 	<skill id="5712" levels="1" name="Energy Ditch">
@@ -160,7 +160,7 @@
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<!-- 55HP * 5 During 30 seconds -->
-			<effect count="6" name="DamOverTime" time="5" val="275" abnormal="bleed" effectPower="80" effectType="BLEED" abnormalLvl="1" abnormalType="fire_dot">
+			<effect count="6" name="DamOverTime" abnormalTime="5" val="275" abnormal="bleed" effectPower="80" effectType="BLEED" abnormalLvl="1" abnormalType="fire_dot">
 				<mul order="0x30" stat="runSpd" val="0.77" />
 			</effect>
 		</for>
@@ -425,7 +425,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect name="Stun" time="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="50" effectType="STUN" />
+			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="50" effectType="STUN" />
 		</for>
 	</skill>
 	<skill id="5748" levels="12" name="Meteor Shower">
@@ -516,7 +516,7 @@
 		<set name="isMagic" val="true" />
 		<set name="mpConsume" val="52" />
 		<for>
-			<effect name="Buff" time="30" val="0" abnormalLvl="1" abnormalType="public_slot" />
+			<effect name="Buff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="public_slot" />
 		</for>
 	</skill>
 	<skill id="5754" levels="1" name="Presentation - Adiantum Round Fighter">
@@ -645,7 +645,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="staticHitTime" val="true" />
 		<for>
-			<effect name="Buff" time="300" val="0" abnormalLvl="1" abnormalType="magical_stance" />
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="magical_stance" />
 		</for>
 	</skill>
 	<skill id="5772" levels="1" name="Surrender to Fire">

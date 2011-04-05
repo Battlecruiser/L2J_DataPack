@@ -548,8 +548,8 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="ClanGate" time="120" val="0" abnormalLvl="1" abnormalType="abnormal_item" />
-			<effect name="ImmobileBuff" time="120" val="0" noicon="1" />
+			<effect name="ClanGate" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item" />
+			<effect name="ImmobileBuff" abnormalTime="120" val="0" noicon="1" />
 		</for>
 	</skill>
 	<skill id="3633" levels="2" name="Residential Shock Immunity">
@@ -561,7 +561,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" time="7" val="0" abnormalLvl="1" abnormalType="abnormal_item">
+			<effect name="Buff" abnormalTime="7" val="0" abnormalLvl="1" abnormalType="abnormal_item">
 				<sub order="0x40" stat="stunVuln" val="#vuln" />
 			</effect>
 		</for>
@@ -1017,7 +1017,7 @@
 		<set name="equipDelay" val="30000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" time="120" val="0" abnormalLvl="1" abnormalType="talisman">
+			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
 				<add order="0x40" stat="maxCp" val="500" />
 			</effect>
 		</for>
@@ -1033,7 +1033,7 @@
 		<set name="equipDelay" val="30000" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" time="120" val="0" abnormalLvl="1" abnormalType="talisman">
+			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
 				<mul order="0x30" stat="regCp" val="1.2" />
 			</effect>
 		</for>

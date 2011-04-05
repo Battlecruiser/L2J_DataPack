@@ -15,12 +15,12 @@
 		<set name="target" val="TARGET_SELF" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
-			<effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="#mdot">
+			<effect count="0x7fffffff" name="ManaDamOverTime" abnormalTime="5" val="#mdot">
 				<add order="0x40" stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect count="0x7fffffff" name="ManaDamOverTime" time="5" val="20">
+			<effect count="0x7fffffff" name="ManaDamOverTime" abnormalTime="5" val="20">
 				<add order="0x40" stat="pAtk" val="#ench1patk" />
 			</effect>
 		</enchant1for>
@@ -50,12 +50,12 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="casting_time_down">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="casting_time_down">
 				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="3" abnormalType="casting_time_down">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="3" abnormalType="casting_time_down">
 				<mul order="0x30" stat="mAtkSpd" val="1.3" />
 			</effect>
 		</enchant1for>
@@ -85,12 +85,12 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="3" abnormalType="pa_up">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="3" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="1.15" />
 			</effect>
 		</enchant1for>
@@ -120,12 +120,12 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="casting_time_down">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="casting_time_down">
 				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="3" abnormalType="casting_time_down">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="3" abnormalType="casting_time_down">
 				<mul order="0x30" stat="mAtkSpd" val="1.3" />
 			</effect>
 		</enchant1for>
@@ -155,12 +155,12 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="pd_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="#pDef" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="3" abnormalType="pd_up">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="3" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="1.15" />
 			</effect>
 		</enchant1for>
@@ -190,12 +190,12 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="md_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="md_up">
 				<mul order="0x30" stat="mDef" val="#mDef" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="3" abnormalType="md_up">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="3" abnormalType="md_up">
 				<mul order="0x30" stat="mDef" val="1.3" />
 			</effect>
 		</enchant1for>
@@ -225,12 +225,12 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="3" abnormalType="pa_up">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="3" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="1.15" />
 			</effect>
 		</enchant1for>
@@ -260,12 +260,12 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="md_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="md_up">
 				<mul order="0x30" stat="mDef" val="#mDef" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="3" abnormalType="md_up">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="3" abnormalType="md_up">
 				<mul order="0x30" stat="mDef" val="1.3" />
 			</effect>
 		</enchant1for>
@@ -295,12 +295,12 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="pd_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="#pDef" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="3" abnormalType="pd_up">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="3" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="1.15" />
 			</effect>
 		</enchant1for>
@@ -331,12 +331,12 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="pd_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="#pDef" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="3" abnormalType="pd_up">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="3" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="1.15" />
 			</effect>
 		</enchant1for>
@@ -596,17 +596,17 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="resist_bleeding">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="resist_bleeding">
 				<sub order="0x40" stat="bleedVuln" val="#bleedVuln" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="3" abnormalType="resist_bleeding">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="3" abnormalType="resist_bleeding">
 				<sub order="0x40" stat="bleedVuln" val="50" />
 			</effect>
 		</enchant1for>
 		<enchant3for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#ench3abnormalLvl" abnormalType="resist_bleeding">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#ench3abnormalLvl" abnormalType="resist_bleeding">
 				<sub order="0x40" stat="bleedVuln" val="#ench3bleedVuln" />
 			</effect>
 		</enchant3for>
@@ -640,17 +640,17 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="resist_poison">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="resist_poison">
 				<sub order="0x40" stat="poisonVuln" val="#poisonVuln" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="3" abnormalType="resist_poison">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="3" abnormalType="resist_poison">
 				<sub order="0x40" stat="poisonVuln" val="50" />
 			</effect>
 		</enchant1for>
 		<enchant3for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#ench3abnormalLvl" abnormalType="resist_poison">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#ench3abnormalLvl" abnormalType="resist_poison">
 				<sub order="0x40" stat="poisonVuln" val="#ench3Vuln" />
 			</effect>
 		</enchant3for>
@@ -704,7 +704,7 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="resist_derangement">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="resist_derangement">
 				<sub order="0x40" stat="rootVuln" val="#vuln" />
 				<sub order="0x40" stat="sleepVuln" val="#vuln" />
 				<sub order="0x40" stat="confusionVuln" val="#vuln" />
@@ -712,7 +712,7 @@
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="4" abnormalType="resist_derangement">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="4" abnormalType="resist_derangement">
 				<sub order="0x40" stat="rootVuln" val="50" />
 				<sub order="0x40" stat="sleepVuln" val="50" />
 				<sub order="0x40" stat="confusionVuln" val="50" />
@@ -746,12 +746,12 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="md_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="md_up">
 				<mul order="0x30" stat="mDef" val="#mDef" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="3" abnormalType="md_up">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="3" abnormalType="md_up">
 				<mul order="0x30" stat="mDef" val="1.3" />
 			</effect>
 		</enchant1for>
@@ -782,12 +782,12 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="pd_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="#rate" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="3" abnormalType="pd_up">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="3" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="1.15" />
 			</effect>
 		</enchant1for>
@@ -825,10 +825,10 @@
 		<enchant3 name="elementPower" val="20" />
 		<enchant3 name="element" val="4" /> <!-- Holy -->
 		<for>
-			<effect name="Paralyze" time="30" val="0" abnormalLvl="1" abnormalType="paralyze" />
+			<effect name="Paralyze" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
 		<enchant3for>
-			<effect name="Paralyze" time="30" val="0" abnormalLvl="1" abnormalType="paralyze" effectPower="40" effectType="PARALYZE" />
+			<effect name="Paralyze" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="paralyze" effectPower="40" effectType="PARALYZE" />
 		</enchant3for>
 	</skill>
 	<skill id="1043" levels="1" name="Holy Weapon" enchantGroup1="1" enchantGroup2="1">
@@ -854,12 +854,12 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="1" abnormalType="holy_attack">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="holy_attack">
 				<add order="0x40" stat="holyPower" val="20" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="1" abnormalType="holy_attack">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="1" abnormalType="holy_attack">
 				<add order="0x40" stat="holyPower" val="20" />
 			</effect>
 		</enchant1for>
@@ -890,12 +890,12 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="hp_regen_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="hp_regen_up">
 				<mul order="0x30" stat="regHp" val="#rate" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="3" abnormalType="hp_regen_up">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="3" abnormalType="hp_regen_up">
 				<mul order="0x30" stat="regHp" val="1.2" />
 			</effect>
 		</enchant1for>
@@ -926,12 +926,12 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="max_hp_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="max_hp_up">
 				<mul order="0x30" stat="maxHp" val="#maxHp" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="6" abnormalType="max_hp_up">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="6" abnormalType="max_hp_up">
 				<mul order="0x30" stat="maxHp" val="1.35" />
 			</effect>
 		</enchant1for>
@@ -957,17 +957,17 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="#aggro" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="mp_regen_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="mp_regen_up">
 				<add order="0x40" stat="regMp" val="#regMp" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="4" abnormalType="mp_regen_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="4" abnormalType="mp_regen_up">
 				<add order="0x40" stat="regMp" val="#ench1Power" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="Buff" time="#ench2Time" val="0" abnormalLvl="4" abnormalType="mp_regen_up">
+			<effect name="Buff" abnormalTime="#ench2Time" val="0" abnormalLvl="4" abnormalType="mp_regen_up">
 				<add order="0x40" stat="regMp" val="3.09" />
 			</effect>
 		</enchant2for>
@@ -998,12 +998,12 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="max_mp_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="max_mp_up">
 				<mul order="0x30" stat="maxMp" val="#maxMp" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="6" abnormalType="max_mp_up">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="6" abnormalType="max_mp_up">
 				<mul order="0x30" stat="maxMp" val="1.35" />
 			</effect>
 		</enchant1for>
@@ -1027,7 +1027,7 @@
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Debuff" time="120" val="0" abnormalLvl="1" abnormalType="turn_passive">
+			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="turn_passive">
 				<sub order="0x40" stat="aggression" val="100000" />
 			</effect>
 		</for>
@@ -1089,12 +1089,12 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="ma_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="ma_up">
 				<mul order="0x30" stat="mAtk" val="#mAtk" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="3" abnormalType="ma_up">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="3" abnormalType="ma_up">
 				<mul order="0x30" stat="mAtk" val="1.75" />
 			</effect>
 		</enchant1for>
@@ -1132,7 +1132,7 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="berserker">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="berserker">
 				<mul order="0x30" stat="mAtk" val="#mAtk" />
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 				<mul order="0x30" stat="mDef" val="#mDef" />
@@ -1144,7 +1144,7 @@
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="2" abnormalType="berserker">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="2" abnormalType="berserker">
 				<mul order="0x30" stat="mAtk" val="1.16" />
 				<mul order="0x30" stat="pAtk" val="1.08" />
 				<mul order="0x30" stat="mDef" val="0.84" />
@@ -1186,10 +1186,10 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Mute" time="60" val="0" abnormalLvl="1" abnormalType="silence" />
+			<effect name="Mute" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="silence" />
 		</for>
 		<enchant2for>
-			<effect name="Mute" time="#ench2time" val="0" abnormalLvl="1" abnormalType="silence" />
+			<effect name="Mute" abnormalTime="#ench2time" val="0" abnormalLvl="1" abnormalType="silence" />
 		</enchant2for>
 	</skill>
 	<skill id="1068" levels="3" name="Might" enchantGroup1="1" enchantGroup2="1">
@@ -1218,12 +1218,12 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="#rate" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="3" abnormalType="pa_up">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="3" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="1.15" />
 			</effect>
 		</enchant1for>
@@ -1258,10 +1258,10 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
-			<effect name="Sleep" time="30" val="0" abnormalLvl="1" abnormalType="sleep" />
+			<effect name="Sleep" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="sleep" />
 		</for>
 		<enchant2for>
-			<effect name="Sleep" time="#ench2Time" val="0" abnormalLvl="1" abnormalType="sleep" />
+			<effect name="Sleep" abnormalTime="#ench2Time" val="0" abnormalLvl="1" abnormalType="sleep" />
 		</enchant2for>
 	</skill>
 	<skill id="1071" levels="14" name="Surrender To Water" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
@@ -1297,19 +1297,19 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
-			<effect name="Debuff" time="30" val="0" abnormalLvl="4" abnormalType="armor_water">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="4" abnormalType="armor_water">
 				<sub order="0x40" stat="waterRes" val="20" />
 				<add order="0x40" stat="fireRes" val="10" />
 			</effect>
 		</for>
 		<enchant2for>
-			<effect name="Debuff" time="#ench2time" val="0" abnormalLvl="4" abnormalType="armor_water">
+			<effect name="Debuff" abnormalTime="#ench2time" val="0" abnormalLvl="4" abnormalType="armor_water">
 				<sub order="0x40" stat="waterRes" val="20" />
 				<add order="0x40" stat="fireRes" val="10" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="Debuff" time="30" val="0" abnormalLvl="4" abnormalType="armor_water">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="4" abnormalType="armor_water">
 				<sub order="0x40" stat="waterRes" val="#ench3Vuln" />
 				<add order="0x40" stat="fireRes" val="10" />
 			</effect>
@@ -1345,7 +1345,7 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Sleep" time="30" val="0" abnormalLvl="1" abnormalType="sleep" />
+			<effect name="Sleep" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="sleep" />
 		</for>
 	</skill>
 	<skill id="1073" levels="2" name="Kiss of Eva" enchantGroup1="1" enchantGroup2="1">
@@ -1372,12 +1372,12 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="max_breath_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="max_breath_up">
 				<mul order="0x30" stat="breath" val="#breath" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="3" abnormalType="max_breath_up">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="3" abnormalType="max_breath_up">
 				<mul order="0x30" stat="breath" val="7" />
 			</effect>
 		</enchant1for>
@@ -1415,19 +1415,19 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
-			<effect name="Debuff" time="30" val="0" abnormalLvl="4" abnormalType="armor_wind">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="4" abnormalType="armor_wind">
 				<sub order="0x40" stat="windRes" val="20" />
 				<add order="0x40" stat="earthRes" val="10" />
 			</effect>
 		</for>
 		<enchant2for>
-			<effect name="Debuff" time="#ench2time" val="0" abnormalLvl="4" abnormalType="armor_wind">
+			<effect name="Debuff" abnormalTime="#ench2time" val="0" abnormalLvl="4" abnormalType="armor_wind">
 				<sub order="0x40" stat="windRes" val="20" />
 				<add order="0x40" stat="earthRes" val="10" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="Debuff" time="30" val="0" abnormalLvl="4" abnormalType="armor_wind">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="4" abnormalType="armor_wind">
 				<sub order="0x40" stat="windRes" val="#ench3Vuln" />
 				<add order="0x40" stat="earthRes" val="10" />
 			</effect>
@@ -1474,12 +1474,12 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="critical_prob_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="critical_prob_up">
 				<basemul order="0x30" stat="rCrit" val="#rCrit" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="3" abnormalType="critical_prob_up">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="3" abnormalType="critical_prob_up">
 				<basemul order="0x30" stat="rCrit" val="0.3" />
 			</effect>
 		</enchant1for>
@@ -1510,12 +1510,12 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="cancel_prob_down">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="cancel_prob_down">
 				<sub order="0x40" stat="cancel" val="#cancel" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="6" abnormalType="cancel_prob_down">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="6" abnormalType="cancel_prob_down">
 				<sub order="0x40" stat="cancel" val="53" />
 			</effect>
 		</enchant1for>
@@ -1554,19 +1554,19 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
-			<effect name="Debuff" time="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="armor_fire">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="armor_fire">
 				<sub order="0x40" stat="fireRes" val="20" />
 				<add order="0x40" stat="waterRes" val="10" />
 			</effect>
 		</for>
 		<enchant2for>
-			<effect name="Debuff" time="#ench2time" val="0" abnormalLvl="4" abnormalType="armor_fire">
+			<effect name="Debuff" abnormalTime="#ench2time" val="0" abnormalLvl="4" abnormalType="armor_fire">
 				<sub order="0x40" stat="fireRes" val="20" />
 				<add order="0x40" stat="waterRes" val="10" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="Debuff" time="30" val="0" abnormalLvl="4" abnormalType="armor_fire">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="4" abnormalType="armor_fire">
 				<sub order="0x40" stat="fireRes" val="#ench3Vuln" />
 				<add order="0x40" stat="waterRes" val="10" />
 			</effect>
@@ -1598,12 +1598,12 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="casting_time_down">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="casting_time_down">
 				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="3" abnormalType="casting_time_down">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="3" abnormalType="casting_time_down">
 				<mul order="0x30" stat="mAtkSpd" val="1.3" />
 			</effect>
 		</enchant1for>
@@ -1634,12 +1634,12 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="attack_time_down">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="2" abnormalType="attack_time_down">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="2" abnormalType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="1.33" />
 			</effect>
 		</enchant1for>
@@ -1670,12 +1670,12 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="avoid_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="avoid_up">
 				<add order="0x40" stat="rEvas" val="#rEvas" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="3" abnormalType="avoid_up">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="3" abnormalType="avoid_up">
 				<add order="0x40" stat="rEvas" val="4" />
 			</effect>
 		</enchant1for>
@@ -1728,7 +1728,7 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect count="5" name="Fear" time="2" val="0" abnormalLvl="1" abnormalType="turn_flee" />
+			<effect count="5" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>
 	</skill>
 	<skill id="1095" levels="5" name="Venom">
@@ -1755,7 +1755,7 @@
 		<set name="effectRange" val="1100" />
 		<for>
 			<!-- Retail Values CT2.3: 11 16 24 41 50HP * 3 Sec -->
-			<effect count="10" name="DamOverTime" time="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" />
 		</for>
 	</skill>
 	<skill id="1096" levels="16" name="Seal of Chaos" enchantGroup1="1" enchantGroup2="1">
@@ -1789,12 +1789,12 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Debuff" time="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="hit_down">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="hit_down">
 				<sub order="0x40" stat="accCombat" val="#Acc" />
 			</effect>
 		</for>
 		<enchant2for>
-			<effect name="Debuff" time="#ench2time" val="0" abnormalLvl="3" abnormalType="hit_down">
+			<effect name="Debuff" abnormalTime="#ench2time" val="0" abnormalLvl="3" abnormalType="hit_down">
 				<sub order="0x40" stat="accCombat" val="12" />
 			</effect>
 		</enchant2for>
@@ -1829,10 +1829,10 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Sleep" time="30" val="0" abnormalLvl="1" abnormalType="sleep" />
+			<effect name="Sleep" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="sleep" />
 		</for>
 		<enchant2for>
-			<effect name="Sleep" time="#ench2time" val="0" abnormalLvl="1" abnormalType="sleep" />
+			<effect name="Sleep" abnormalTime="#ench2time" val="0" abnormalLvl="1" abnormalType="sleep" />
 		</enchant2for>
 	</skill>
 	<skill id="1099" levels="15" name="Seal of Slow" enchantGroup1="1" enchantGroup2="1">
@@ -1867,7 +1867,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="power" val="#ench2power" />
 		<for>
-			<effect name="Debuff" time="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="speed_down">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvl" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
