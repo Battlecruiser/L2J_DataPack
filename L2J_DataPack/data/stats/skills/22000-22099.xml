@@ -39,7 +39,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="Buff" time="300" val="0" abnormalLvl="1" abnormalType="br_event_buf2" abnormal="vitality">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="br_event_buf2" abnormal="vitality">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -177,7 +177,7 @@
 			<player class_id_restriction="0,1,2,3,4,5,6,18,19,20,21,31,32,33,34,44,45,46,53,54,55,56,57,88,89,90,91,99,100,106,107,113,117,118" />
 		</cond>
 		<for>
-			<effect name="Buff" time="1800" val="0" abnormalLvl="3" abnormalType="br_event_buf1">
+			<effect name="Buff" abnormalTime="1800" val="0" abnormalLvl="3" abnormalType="br_event_buf1">
 				<mul order="0x30" stat="maxHp" val="1.6" />
 				<mul order="0x30" stat="maxMp" val="1.6" />
 				<mul order="0x30" stat="maxCp" val="1.6" />
@@ -202,7 +202,7 @@
 			<player class_id_restriction="7,8,9,22,23,24,35,36,37,47,48,92,93,101,102,108,109,114,123,124,125,126,127,128,129,130,131,132,133,134,135,136" />
 		</cond>
 		<for>
-			<effect name="Buff" time="1800" val="0" abnormalLvl="3" abnormalType="br_event_buf1">
+			<effect name="Buff" abnormalTime="1800" val="0" abnormalLvl="3" abnormalType="br_event_buf1">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
 				<mul order="0x30" stat="maxCp" val="1.4" />
@@ -227,7 +227,7 @@
 			<player class_id_restriction="15,16,17,29,30,42,43,97,98,105,112" />
 		</cond>
 		<for>
-			<effect name="Buff" time="1800" val="0" abnormalLvl="3" abnormalType="br_event_buf1">
+			<effect name="Buff" abnormalTime="1800" val="0" abnormalLvl="3" abnormalType="br_event_buf1">
 				<mul order="0x30" stat="maxHp" val="1.6" />
 				<mul order="0x30" stat="maxMp" val="1.6" />
 				<mul order="0x30" stat="maxCp" val="1.6" />
@@ -251,7 +251,7 @@
 			<player class_id_restriction="10,11,12,13,14,25,26,27,28,38,39,40,41,49,50,51,52,94,95,96,103,104,110,111,115,116" />
 		</cond>
 		<for>
-			<effect name="Buff" time="1800" val="0" abnormalLvl="3" abnormalType="br_event_buf1">
+			<effect name="Buff" abnormalTime="1800" val="0" abnormalLvl="3" abnormalType="br_event_buf1">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
 				<mul order="0x30" stat="maxCp" val="1.4" />
@@ -434,7 +434,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="buffDuration" val="600000" />
 		<for>
-			<effect name="Buff" event="afrobaguette1" time="600" val="0" abnormalLvl="1" abnormalType="br_event_buf1">
+			<effect name="Buff" event="afrobaguette1" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="br_event_buf1">
 				<mul order="0x30" stat="pAtkSpd" val="1.08" />
 			</effect>
 		</for>
@@ -451,7 +451,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" event="afrobaguette2" time="600" val="0" abnormal="vitality" abnormalLvl="1" abnormalType="br_event_buf1">
+			<effect name="Buff" event="afrobaguette2" abnormalTime="600" val="0" abnormal="vitality" abnormalLvl="1" abnormalType="br_event_buf1">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -465,7 +465,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="buffDuration" val="600000" />
 		<for>
-			<effect name="Buff" event="afrobaguette3" time="600" val="0" abnormalLvl="1" abnormalType="br_event_buf1">
+			<effect name="Buff" event="afrobaguette3" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="br_event_buf1">
 				<mul order="0x30" stat="mAtkSpd" val="1.08" />
 			</effect>
 		</for>
@@ -610,7 +610,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
+			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
 	<skill id="22046" levels="1" name="Death Blader Transformation Scroll">
@@ -624,7 +624,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
+			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
 	<skill id="22047" levels="1" name="Grail Apostle Transformation Scroll">
@@ -638,7 +638,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
+			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
 	<skill id="22048" levels="1" name="Unicorn Transformation Scroll">
@@ -652,7 +652,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
+			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
 	<skill id="22049" levels="1" name="Lilim Knight Transformation Scroll">
@@ -666,7 +666,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
+			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
 	<skill id="22050" levels="1" name="Golem Guardian Transformation Scroll">
@@ -680,7 +680,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
+			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
 	<skill id="22051" levels="1" name="Inferno Drake Transformation Scroll">
@@ -694,7 +694,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
+			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
 	<skill id="22052" levels="1" name="Dragon Bomber Transformation Scroll">
@@ -708,7 +708,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
+			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" /> <!-- Transformation lasts 30 minutes -->
 		</for>
 	</skill>
 	<skill id="22053" levels="19" name="Escape">
@@ -732,7 +732,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="vp_up" abnormal="vitality">
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="vp_up" abnormal="vitality">
 				<mul order="0x30" stat="vitalityConsumeRate" val="0.00" />
 			</effect>
 		</for>
@@ -760,7 +760,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="speed_up">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="33" />
 			</effect>
 		</for>
@@ -775,7 +775,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="attack_time_down">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="1.33" />
 			</effect>
 		</for>
@@ -790,7 +790,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="pa_up">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="1.15" />
 			</effect>
 		</for>
@@ -805,7 +805,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="pd_up">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="1.15" />
 			</effect>
 		</for>
@@ -820,7 +820,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="critical_dmg_up">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="critical_dmg_up">
 				<mul order="0x30" stat="cAtk" val="1.35" />
 			</effect>
 		</for>
@@ -835,7 +835,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="hit_up">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="hit_up">
 				<add order="0x40" stat="accCombat" val="4" />
 			</effect>
 		</for>
@@ -851,7 +851,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="ma_up">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="ma_up">
 				<mul order="0x30" stat="mAtk" val="1.75" />
 			</effect>
 		</for>
@@ -866,7 +866,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="casting_time_down">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="casting_time_down">
 				<mul order="0x30" stat="mAtkSpd" val="1.3" />
 			</effect>
 		</for>
@@ -881,7 +881,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="vampiric_attack">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="vampiric_attack">
 				<add order="0x40" stat="absorbDam" val="9" /> <!-- absorb 9% HP from damage inflicted on enemies -->
 			</effect>
 		</for>
@@ -896,7 +896,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="max_hp_up">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="max_hp_up">
 				<mul order="0x30" stat="maxHp" val="1.35" />
 			</effect>
 		</for>
@@ -911,7 +911,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="berserker">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="berserker">
 				<mul order="0x30" stat="pDef" val="0.92" />
 				<mul order="0x30" stat="mDef" val="0.84" />
 				<sub order="0x40" stat="rEvas" val="4" />
@@ -933,7 +933,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="md_up">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="md_up">
 				<mul order="0x30" stat="mDef" val="1.3" />
 			</effect>
 		</for>
@@ -948,7 +948,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="max_mp_up">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="max_mp_up">
 				<mul order="0x30" stat="maxMp" val="1.35" />
 			</effect>
 		</for>
@@ -960,7 +960,7 @@
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="3600000" />
 		<for>
-			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="cheap_magic">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="cheap_magic">
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.8" />
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.9" />
 				<mul order="0x30" stat="DanceMpConsumeRate" val="0.8" />
@@ -974,7 +974,7 @@
 		<set name="isPotion" val="true" />
 		<set name="buffDuration" val="3600000" />
 		<for>
-			<effect name="Buff" time="3600" val="0" abnormalLvl="26" abnormalType="magic_critical_up">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="magic_critical_up">
 				<basemul order="0x30" stat="mCritRate" val="2" />
 			</effect>
 		</for>

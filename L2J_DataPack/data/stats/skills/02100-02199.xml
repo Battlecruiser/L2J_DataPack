@@ -34,7 +34,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="BigHead" time="300" val="0" abnormal="bighead" abnormalLvl="0" abnormalType="big_head" />
+			<effect name="BigHead" abnormalTime="300" val="0" abnormal="bighead" abnormalLvl="0" abnormalType="big_head" />
 		</for>
 	</skill>
 	<skill id="2104" levels="1" name="Greater Compressed Package of Soulshots: No-grade">
@@ -508,7 +508,7 @@
 		<set name="isMagic" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" time="10" val="0" abnormalLvl="99" abnormalType="hp_regen_up">
+			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="99" abnormalType="hp_regen_up">
 				<mul order="0x30" stat="regHp" val="1.4" />
 				<mul order="0x30" stat="regMp" val="1.2" />
 			</effect>
@@ -713,7 +713,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="CharmOfLuck" time="3600" val="0" abnormalLvl="#abnormalLvl" abnormalType="reduce_drop_penalty" />
+			<effect name="CharmOfLuck" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvl" abnormalType="reduce_drop_penalty" />
 		</for>
 	</skill>
 	<skill id="2169" levels="2" name="Magic Haste Potion">
@@ -731,7 +731,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="casting_time_down">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="casting_time_down">
 				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
 			</effect>
 		</for>

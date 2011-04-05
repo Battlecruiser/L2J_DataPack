@@ -11,7 +11,7 @@
 			<player flyMounted="True" />
 		</cond>
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="3" abnormalType="max_hp_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="3" abnormalType="max_hp_up">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 			</effect>
 		</for>
@@ -27,7 +27,7 @@
 			<player flyMounted="True" />
 		</cond>
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="3" abnormalType="max_mp_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="3" abnormalType="max_mp_up">
 				<mul order="0x30" stat="maxMp" val="1.2" />
 			</effect>
 		</for>

@@ -13,7 +13,7 @@
 			<player flyMounted="False" />
 		</cond>
 		<for>
-			<effect count="3" name="ManaHealOverTime" time="5" val="1.5" abnormalLvl="1" abnormalType="mp_recover" />
+			<effect count="3" name="ManaHealOverTime" abnormalTime="5" val="1.5" abnormalLvl="1" abnormalType="mp_recover" />
 		</for>
 	</skill>
 	<skill id="10001" levels="1" name="Custom Mana Potion">

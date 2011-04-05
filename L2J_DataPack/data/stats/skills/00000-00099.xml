@@ -62,7 +62,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<for>
-			<effect count="5" name="Confusion" time="4" val="0" /> <!-- TEMP FIX: Needs Core Support for Randomize Aggro/Target Effect -->
+			<effect count="5" name="Confusion" abnormalTime="4" val="0" /> <!-- TEMP FIX: Needs Core Support for Randomize Aggro/Target Effect -->
 		</for>
 	</skill>
 	<skill id="3" levels="9" name="Power Strike">
@@ -98,7 +98,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="#aggro" />
 		<for>
-			<effect name="Buff" time="15" val="0" abnormalLvl="#abnormalLvl" abnormalType="speed_up_special">
+			<effect name="Buff" abnormalTime="15" val="0" abnormalLvl="#abnormalLvl" abnormalType="speed_up_special">
 				<add order="0x40" stat="runSpd" val="#spd" />
 			</effect>
 		</for>
@@ -519,15 +519,15 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
-			<effect name="TargetMe" time="3" val="0" abnormalLvl="1" abnormalType="target_lock" />
+			<effect name="TargetMe" abnormalTime="3" val="0" abnormalLvl="1" abnormalType="target_lock" />
 		</for>
 		<enchant2for>
-			<effect name="TargetMe" time="6" val="0" abnormalLvl="1" abnormalType="target_lock">
+			<effect name="TargetMe" abnormalTime="6" val="0" abnormalLvl="1" abnormalType="target_lock">
 				<mul order="0x30" stat="pDef" val="#enchpDefAtk" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="TargetMe" time="6" val="0" abnormalLvl="1" abnormalType="target_lock">
+			<effect name="TargetMe" abnormalTime="6" val="0" abnormalLvl="1" abnormalType="target_lock">
 				<mul order="0x30" stat="pAtk" val="#enchpDefAtk" />
 			</effect>
 		</enchant3for>
@@ -726,15 +726,15 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
-			<effect name="TargetMe" time="3" val="0" abnormalLvl="1" abnormalType="target_lock" />
+			<effect name="TargetMe" abnormalTime="3" val="0" abnormalLvl="1" abnormalType="target_lock" />
 		</for>
 		<enchant2for>
-			<effect name="TargetMe" time="3" val="0" abnormalLvl="1" abnormalType="target_lock">
+			<effect name="TargetMe" abnormalTime="3" val="0" abnormalLvl="1" abnormalType="target_lock">
 				<mul order="0x30" stat="pDef" val="#enchpDefAtk" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="TargetMe" time="3" val="0" abnormalLvl="1" abnormalType="target_lock">
+			<effect name="TargetMe" abnormalTime="3" val="0" abnormalLvl="1" abnormalType="target_lock">
 				<mul order="0x30" stat="pAtk" val="#enchpDefAtk" />
 			</effect>
 		</enchant3for>
@@ -1063,10 +1063,10 @@
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="Stun" time="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="50" effectType="STUN" />
+			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="50" effectType="STUN" />
 		</for>
 		<enchant1for>
-			<effect name="Stun" time="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="#ench1effPower" effectType="STUN" />
+			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="#ench1effPower" effectType="STUN" />
 		</enchant1for>
 	</skill>
 	<skill id="49" levels="26" name="Holy Strike" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
@@ -1246,7 +1246,7 @@
 		<set name="operateType" val="OP_TOGGLE" />
 		<for>
 			<!-- retail value: 10MP/sec; stat update every 3 sec -->
-			<effect count="0x7fffffff" name="FakeDeath" time="3" val="30" />
+			<effect count="0x7fffffff" name="FakeDeath" abnormalTime="3" val="30" />
 		</for>
 	</skill>
 	<skill id="61" levels="3" name="Cure Bleeding">
@@ -1288,7 +1288,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<for>
-			<effect count="5" name="Fear" time="2" val="0" abnormalLvl="1" abnormalType="turn_flee" />
+			<effect count="5" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>
 	</skill>
 	<skill id="67" levels="7" name="Summon Life Cubic" enchantGroup1="2">
@@ -1418,17 +1418,17 @@
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="md_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="md_up">
 				<mul order="0x30" stat="mDef" val="#mDef" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="3" abnormalType="md_up">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="3" abnormalType="md_up">
 				<mul order="0x30" stat="mDef" val="1.3" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="3" abnormalType="md_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="3" abnormalType="md_up">
 				<mul order="0x30" stat="mDef" val="#ench2mDef" />
 			</effect>
 		</enchant2for>
@@ -1442,7 +1442,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="303" />
 		<for>
-			<effect name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="detect_weakness">
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="detect_weakness">
 				<mul order="0x30" stat="pAtk-insects" val="1.3" />
 			</effect>
 		</for>
@@ -1458,7 +1458,7 @@
 		<set name="aggroPoints" val="268" />
 		<set name="weaponsAllowed" val="Dual Fist" /> <!-- Dual Fist -->
 		<for>
-			<effect name="Buff" time="120" val="0" abnormalLvl="1" abnormalType="possession">
+			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="possession">
 				<mul order="0x30" stat="pAtk" val="1.2">
 					<using kind="Dual Fist" />
 				</mul>
@@ -1485,7 +1485,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="#aggro" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="#rate" />
 			</effect>
 		</for>
@@ -1503,7 +1503,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="#aggro" />
 		<for>
-			<effect name="Buff" time="60" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_up_special">
+			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_up_special">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
@@ -1517,7 +1517,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="495" />
 		<for>
-			<effect name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="detect_weakness">
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="detect_weakness">
 				<mul order="0x30" stat="pAtk-monsters" val="1.3" />
 			</effect>
 		</for>
@@ -1557,7 +1557,7 @@
 		<enchant3 name="elementPower" val="#enchElementPower" />
 		<enchant3 name="element" val="0" /> <!-- Fire -->
 		<for>
-			<effect name="StunSelf" time="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="80" effectType="STUN" />
+			<effect name="StunSelf" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="80" effectType="STUN" />
 		</for>
 	</skill>
 	<skill id="82" levels="3" name="Majesty" enchantGroup1="1" enchantGroup2="1">
@@ -1576,19 +1576,19 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="#aggro" />
 		<for>
-			<effect name="Buff" time="300" val="0" abnormalLvl="#abnormalLvl" abnormalType="majesty">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvl" abnormalType="majesty">
 				<mul order="0x30" stat="pDef" val="#pDef" />
 				<sub order="0x40" stat="rEvas" val="#rEvas" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="300" val="0" abnormalLvl="3" abnormalType="majesty">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="3" abnormalType="majesty">
 				<mul order="0x30" stat="pDef" val="#ench1-pDef" />
 				<sub order="0x40" stat="rEvas" val="6" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="Buff" time="#ench2-time" val="0" abnormalLvl="3" abnormalType="majesty">
+			<effect name="Buff" abnormalTime="#ench2-time" val="0" abnormalLvl="3" abnormalType="majesty">
 				<mul order="0x30" stat="pDef" val="1.15" />
 				<sub order="0x40" stat="rEvas" val="6" />
 			</effect>
@@ -1605,7 +1605,7 @@
 		<set name="aggroPoints" val="204" />
 		<set name="weaponsAllowed" val="Dual Fist" /> <!-- Dual Fist -->
 		<for>
-			<effect name="Buff" time="120" val="0" abnormalLvl="1" abnormalType="possession">
+			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="possession">
 				<mul order="0x30" stat="runSpd" val="1.2">
 					<using kind="Dual Fist" />
 				</mul>
@@ -1645,10 +1645,10 @@
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<for>
 			<!-- Retail Values CT2.3: 38 44 48HP * 3 sec -->
-			<effect count="10" name="DamOverTime" time="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" effectPower="35" effectType="POISON" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormal="poison" effectPower="35" effectType="POISON" />
 		</for>
 		<enchant1for>
-			<effect count="10" name="DamOverTime" time="3" val="144" abnormalLvl="8" abnormalType="poison" abnormal="poison" effectPower="#ench1effectPower" effectType="POISON" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="144" abnormalLvl="8" abnormalType="poison" abnormal="poison" effectPower="#ench1effectPower" effectType="POISON" />
 		</enchant1for>
 	</skill>
 	<skill id="86" levels="3" name="Reflect Damage" enchantGroup1="1" enchantGroup2="1">
@@ -1676,17 +1676,17 @@
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="dmg_shield">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="dmg_shield">
 				<add order="0x40" stat="reflectDam" val="#reflectDam" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="3" abnormalType="dmg_shield">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="3" abnormalType="dmg_shield">
 				<add order="0x40" stat="reflectDam" val="20" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="3" abnormalType="dmg_shield">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="3" abnormalType="dmg_shield">
 				<add order="0x40" stat="reflectDam" val="#ench2reflectDam" />
 			</effect>
 		</enchant2for>
@@ -1700,7 +1700,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="379" />
 		<for>
-			<effect name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="detect_weakness">
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="detect_weakness">
 				<mul order="0x30" stat="pAtk-animals" val="1.3" />
 			</effect>
 		</for>
@@ -1714,7 +1714,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="549" />
 		<for>
-			<effect name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="detect_weakness">
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="detect_weakness">
 				<mul order="0x30" stat="pAtk-dragons" val="1.3" />
 			</effect>
 		</for>
@@ -1735,7 +1735,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="#aggro" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="pd_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="#rate" />
 			</effect>
 		</for>
@@ -1771,28 +1771,28 @@
 		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
-			<effect name="Stun" time="9" val="0" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
 		<enchant2for>
-			<effect name="Stun" time="#ench2Time" val="0" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="#ench2Time" val="0" abnormalLvl="1" abnormalType="stun" />
 		</enchant2for>
 		<enchant3for>
-			<effect name="Stun" time="9" val="0" abnormalLvl="1" abnormalType="stun">
+			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun">
 				<sub order="0x40" stat="fireRes" val="#Vuln" />
 			</effect>
 		</enchant3for>
 		<enchant4for>
-			<effect name="Stun" time="9" val="0" abnormalLvl="1" abnormalType="stun">
+			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun">
 				<sub order="0x40" stat="waterRes" val="#Vuln" />
 			</effect>
 		</enchant4for>
 		<enchant5for>
-			<effect name="Stun" time="9" val="0" abnormalLvl="1" abnormalType="stun">
+			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun">
 				<sub order="0x40" stat="windRes" val="#Vuln" />
 			</effect>
 		</enchant5for>
 		<enchant6for>
-			<effect name="Stun" time="9" val="0" abnormalLvl="1" abnormalType="stun">
+			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun">
 				<sub order="0x40" stat="earthRes" val="#Vuln" />
 			</effect>
 		</enchant6for>
@@ -1814,7 +1814,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="#aggro" />
 		<for>
-			<effect name="Buff" time="90" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_up_special">
+			<effect name="Buff" abnormalTime="90" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_up_special">
 				<mul order="0x30" stat="pAtk" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="#swordbluntpole">
 					<using kind="Sword,Big Sword,Blunt,Big Blunt,Pole" />
@@ -1830,7 +1830,7 @@
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="90" val="0" abnormalLvl="2" abnormalType="pa_up_special">
+			<effect name="Buff" abnormalTime="90" val="0" abnormalLvl="2" abnormalType="pa_up_special">
 				<mul order="0x30" stat="pAtk" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="#ench1atk">
 					<using kind="Sword,Big Sword,Blunt,Big Blunt,Pole" />
@@ -1846,7 +1846,7 @@
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="Buff" time="90" val="0" abnormalLvl="2" abnormalType="pa_up_special">
+			<effect name="Buff" abnormalTime="90" val="0" abnormalLvl="2" abnormalType="pa_up_special">
 				<mul order="0x30" stat="pAtk" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.29">
 					<using kind="Sword,Big Sword,Blunt,Big Blunt,Pole" />
@@ -1888,12 +1888,12 @@
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
-			<effect name="Debuff" time="60" val="0" abnormalLvl="#abnormalLvl" abnormalType="speed_down">
+			<effect name="Debuff" abnormalTime="60" val="0" abnormalLvl="#abnormalLvl" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
 		<enchant2for>
-			<effect name="Debuff" time="#ench2time" val="0" abnormalLvl="3" abnormalType="speed_down">
+			<effect name="Debuff" abnormalTime="#ench2time" val="0" abnormalLvl="3" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</enchant2for>
@@ -1932,12 +1932,12 @@
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<!-- Retail Values CT2.3: 25 34 44 52 62 67HP * 3 Sec -->
-			<effect count="7" name="DamOverTime" time="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed">
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormal="bleed">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
 		<enchant3for>
-			<effect count="7" name="DamOverTime" time="3" val="#ench3dot" abnormalLvl="8" abnormalType="bleeding" abnormal="bleed">
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#ench3dot" abnormalLvl="8" abnormalType="bleeding" abnormal="bleed">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</enchant3for>
@@ -1971,17 +1971,17 @@
 		<enchant3 name="power" val="#ench3Attack" />
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
-			<effect name="Debuff" time="30" val="0" abnormalLvl="3" abnormalType="pa_down">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="pa_down">
 				<mul order="0x30" stat="pAtk" val="0.77" />
 			</effect>
 		</for>
 		<enchant3for>
-			<effect name="Debuff" time="30" val="0" abnormalLvl="3" abnormalType="pa_down" effectPower="40" effectType="DEBUFF">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="pa_down" effectPower="40" effectType="DEBUFF">
 				<mul order="0x30" stat="pAtk" val="0.77" />
 			</effect>
 		</enchant3for>
 		<enchant4for>
-			<effect name="Debuff" time="30" val="0" abnormalLvl="3" abnormalType="pa_down">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="pa_down">
 				<mul order="0x30" stat="pAtk" val="0.77" />
 				<mul order="0x30" stat="critVuln" val="#ench4ModifyCritical" />
 			</effect>
@@ -2007,7 +2007,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="isDebuff" val="true" />
 		<for>
-			<effect count="5" name="Fear" time="2" val="0" abnormalLvl="1" abnormalType="turn_flee" effectPower="60" effectType="FEAR" />
+			<effect count="5" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee" effectPower="60" effectType="FEAR" />
 		</for>
 	</skill>
 	<skill id="99" levels="2" name="Rapid Shot" enchantGroup1="1" enchantGroup2="1">
@@ -2033,14 +2033,14 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="attack_speed_up_bow">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="attack_speed_up_bow">
 				<mul order="0x30" stat="pAtkSpd" val="#rate">
 					<using kind="Bow" />
 				</mul>
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" time="#ench1time" val="0" abnormalLvl="2" abnormalType="attack_speed_up_bow">
+			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="2" abnormalType="attack_speed_up_bow">
 				<mul order="0x30" stat="pAtkSpd" val="1.12">
 					<using kind="Bow" />
 				</mul>

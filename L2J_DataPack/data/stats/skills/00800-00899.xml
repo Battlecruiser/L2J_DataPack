@@ -83,7 +83,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Buff" time="300" val="0" abnormalLvl="99" abnormalType="pa_up">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="99" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="1.4" />
 			</effect>
 		</for>
@@ -105,7 +105,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<for>
-			<effect name="Stun" time="3" val="0" abnormalLvl="1" abnormalType="stun" effectPower="80" effectType="STUN" />
+			<effect name="Stun" abnormalTime="3" val="0" abnormalLvl="1" abnormalType="stun" effectPower="80" effectType="STUN" />
 		</for>
 	</skill>
 	<skill id="809" levels="1" name="Golem Tornado Swing">
@@ -133,7 +133,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="312" />
 		<for>
-			<effect name="Transformation" time="21600" val="0" abnormalLvl="1" abnormalType="transform">
+			<effect name="Transformation" abnormalTime="21600" val="0" abnormalLvl="1" abnormalType="transform">
 				<mul order="0x30" stat="sDef" val="0.5" />
 				<add order="0x40" stat="accCombat" val="1">
 					<using kind="Big Sword" />
@@ -152,7 +152,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="313" />
 		<for>
-			<effect name="Transformation" time="21600" val="0" abnormalLvl="1" abnormalType="transform">
+			<effect name="Transformation" abnormalTime="21600" val="0" abnormalLvl="1" abnormalType="transform">
 				<mul order="0x30" stat="sDef" val="0.5" />
 				<mul order="0x30" stat="pAtkSpd" val="1.08">
 					<using kind="Dual Sword" />
@@ -171,7 +171,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="314" />
 		<for>
-			<effect name="Transformation" time="21600" val="0" abnormalLvl="1" abnormalType="transform">
+			<effect name="Transformation" abnormalTime="21600" val="0" abnormalLvl="1" abnormalType="transform">
 				<mul order="0x30" stat="sDef" val="0.5" />
 				<add order="0x40" stat="accCombat" val="1">
 					<using kind="Big Sword" />
@@ -190,7 +190,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="transformId" val="315" />
 		<for>
-			<effect name="Transformation" time="21600" val="0" abnormalLvl="1" abnormalType="transform">
+			<effect name="Transformation" abnormalTime="21600" val="0" abnormalLvl="1" abnormalType="transform">
 				<mul order="0x30" stat="sDef" val="0.5" />
 				<mul order="0x30" stat="pAtkSpd" val="1.08">
 					<using kind="Dual Sword" />
@@ -361,7 +361,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="4" abnormalType="pa_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="4" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>
@@ -381,7 +381,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="40" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="4" abnormalType="max_hp_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="4" abnormalType="max_hp_up">
 				<mul order="0x30" stat="pDef" val="#pDef" />
 				<mul order="0x30" stat="maxHp" val="#maxHp" />
 			</effect>
@@ -400,7 +400,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<for>
-			<effect name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
 					<using kind="Sword,Big Sword,Dual Sword,Ancient,Rapier,Dagger,Dual Dagger,Pole,Dual Fist" />
 				</mul>
@@ -423,7 +423,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<for>
-			<effect name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
 					<using kind="Blunt,Big Blunt" />
 				</mul>
@@ -446,7 +446,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<for>
-			<effect name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
 					<using kind="Bow,Crossbow" />
 				</mul>
@@ -469,7 +469,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<for>
-			<effect name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
 				<mul order="0x30" stat="pDef" val="1.1">
 					<using kind="Heavy" />
 				</mul>
@@ -489,7 +489,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<for>
-			<effect name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
 				<mul order="0x30" stat="pDef" val="1.05">
 					<using kind="Light" />
 				</mul>
@@ -512,7 +512,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<for>
-			<effect name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
 				<mul order="0x30" stat="pDef" val="1.05">
 					<using kind="Magic" />
 				</mul>
@@ -569,7 +569,7 @@
 		<set name="reuseDelay" val="75000" />
 		<set name="skillRadius" val="1000" />
 		<for>
-			<effect name="Buff" time="120" val="0" abnormalLvl="1" abnormalType="blood_constract">
+			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="blood_constract">
 				<mul order="0x30" stat="maxHp" val="1.1" />
 				<add order="0x40" stat="regHp" val="10" />
 			</effect>
@@ -598,8 +598,8 @@
 		<set name="skillType" val="MDOT" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect count="7" name="ManaDamOverTime" time="3" val="#mdot" abnormal="poison" />
-			<effect name="ChanceSkillTrigger" time="20" noicon="1" val="0" triggeredId="5697" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
+			<effect count="7" name="ManaDamOverTime" abnormalTime="3" val="#mdot" abnormal="poison" />
+			<effect name="ChanceSkillTrigger" abnormalTime="20" noicon="1" val="0" triggeredId="5697" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
 	<skill id="836" levels="3" name="Oblivion Trap">
@@ -630,7 +630,7 @@
 		<set name="castRange" val="400" />
 		<set name="removedOnAnyActionExceptMove" val="true" />
 		<for>
-			<effect name="Invincible" time="8" val="0" special="invincible" abnormalLvl="1" abnormalType="invincibility" />
+			<effect name="Invincible" abnormalTime="8" val="0" special="invincible" abnormalLvl="1" abnormalType="invincibility" />
 		</for>
 	</skill>
 	<skill id="838" levels="1" name="Switch Stance">
@@ -662,7 +662,7 @@
 			<player landingZone="True" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="-1" val="0" abnormalLvl="1" abnormalType="transform"> <!-- Transformation has unlimited time -->
+			<effect name="Transformation" abnormalTime="-1" val="0" abnormalLvl="1" abnormalType="transform"> <!-- Transformation has unlimited time -->
 				<set order="0x08" stat="STR" val="41" />
 				<set order="0x08" stat="INT" val="29" />
 				<set order="0x08" stat="CON" val="31" />
@@ -688,7 +688,7 @@
 			<player landingZone="True" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="-1" val="0" abnormalLvl="1" abnormalType="transform"> <!-- Transformation has unlimited time -->
+			<effect name="Transformation" abnormalTime="-1" val="0" abnormalLvl="1" abnormalType="transform"> <!-- Transformation has unlimited time -->
 				<set order="0x08" stat="STR" val="41" />
 				<set order="0x08" stat="INT" val="29" />
 				<set order="0x08" stat="CON" val="31" />
@@ -714,7 +714,7 @@
 			<player landingZone="True" />
 		</cond>
 		<for>
-			<effect name="Transformation" time="-1" val="0" abnormalLvl="1" abnormalType="transform"> <!-- Transformation has unlimited time -->
+			<effect name="Transformation" abnormalTime="-1" val="0" abnormalLvl="1" abnormalType="transform"> <!-- Transformation has unlimited time -->
 				<set order="0x08" stat="STR" val="41" />
 				<set order="0x08" stat="INT" val="29" />
 				<set order="0x08" stat="CON" val="31" />
@@ -910,7 +910,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="transformId" val="10" />
 		<for>
-			<effect name="Transformation" time="1800" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="858" levels="1" name="Elf Mercenary">
@@ -922,7 +922,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="transformId" val="11" />
 		<for>
-			<effect name="Transformation" time="1800" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="859" levels="1" name="Dark Elf Mercenary">
@@ -934,7 +934,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="transformId" val="12" />
 		<for>
-			<effect name="Transformation" time="1800" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="860" levels="1" name="Orc Mercenary">
@@ -946,7 +946,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="transformId" val="13" />
 		<for>
-			<effect name="Transformation" time="1800" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="861" levels="1" name="Dwarf Mercenary">
@@ -958,7 +958,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="transformId" val="14" />
 		<for>
-			<effect name="Transformation" time="1800" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="862" levels="1" name="Kamael Mercenary">
@@ -970,7 +970,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="transformId" val="15" />
 		<for>
-			<effect name="Transformation" time="1800" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="863" levels="1" name="Royal Guard Captain">
@@ -982,7 +982,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="transformId" val="16" />
 		<for>
-			<effect name="Transformation" time="1800" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="864" levels="1" name="Archer Captain">
@@ -994,7 +994,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="transformId" val="17" />
 		<for>
-			<effect name="Transformation" time="1800" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="865" levels="1" name="Magic Leader">
@@ -1006,7 +1006,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="transformId" val="18" />
 		<for>
-			<effect name="Transformation" time="1800" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="866" levels="1" name="Kamael Guard Captain">
@@ -1018,7 +1018,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="transformId" val="19" />
 		<for>
-			<effect name="Transformation" time="1800" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="867" levels="1" name="Knight of Dawn">
@@ -1030,7 +1030,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="transformId" val="20" />
 		<for>
-			<effect name="Transformation" time="1800" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="868" levels="1" name="Fortress Captain">
@@ -1042,7 +1042,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="transformId" val="21" />
 		<for>
-			<effect name="Transformation" time="1800" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="transform" />
 		</for>
 	</skill>
 	<skill id="869" levels="9" name="Mercenary Power Strike">
@@ -1092,7 +1092,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="3" abnormalType="pa_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="3" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="1.15" />
 			</effect>
 		</for>
@@ -1125,7 +1125,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="549" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="1" abnormalType="attack_speed_up_bow">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="attack_speed_up_bow">
 				<mul order="0x30" stat="pAtkSpd" val="1.12">
 					<using kind="Bow" />
 				</mul>
@@ -1167,7 +1167,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" time="1200" val="0" abnormalLvl="3" abnormalType="ma_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="3" abnormalType="ma_up">
 				<mul order="0x30" stat="mAtk" val="1.75" />
 			</effect>
 		</for>
@@ -1212,7 +1212,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
 		<for>
-			<effect name="Disarm" time="5" val="0" abnormalLvl="1" abnormalType="disarm">
+			<effect name="Disarm" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="disarm">
 				<mul order="0x30" stat="pAtk" val="0.6" />
 			</effect>
 		</for>
@@ -1253,7 +1253,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<for>
-			<effect count="5" name="Fear" time="2" val="0" abnormalLvl="1" abnormalType="turn_flee" />
+			<effect count="5" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>
 	</skill>
 	<skill id="880" levels="1" name="Knight Captain Mercenary Ultimate Defense">
@@ -1267,7 +1267,7 @@
 		<set name="operateType" val="OP_ACTIVE" />
 		<set name="aggroPoints" val="438" />
 		<for>
-			<effect name="ImmobileBuff" time="30" val="0" abnormal="invulnerable" abnormalLvl="2" abnormalType="pd_up_special">
+			<effect name="ImmobileBuff" abnormalTime="30" val="0" abnormal="invulnerable" abnormalLvl="2" abnormalType="pd_up_special">
 				<add order="0x40" stat="pDef" val="3600" />
 				<add order="0x40" stat="mDef" val="2700" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
@@ -1332,7 +1332,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Root" time="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
+			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
 		</for>
 	</skill>
 	<skill id="884" levels="11" name="Air Assault">
@@ -1373,7 +1373,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
-			<effect name="Stun" time="2" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" special="airstun" />
+			<effect name="Stun" abnormalTime="2" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" special="airstun" />
 			<effect self="1" name="Warp" noicon="1" val="0" />
 		</for>
 	</skill>
@@ -1396,7 +1396,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1500" />
 		<for>
-			<effect name="Stun" time="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" special="airstun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" special="airstun" />
 		</for>
 	</skill>
 	<skill id="887" levels="11" name="Sky Clutch">
@@ -1419,7 +1419,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1800" />
 		<for>
-			<effect name="Root" time="9" val="0" effectPower="80" effectType="ROOT" abnormalLvl="1" abnormalType="root_magically" special="airroot" />
+			<effect name="Root" abnormalTime="9" val="0" effectPower="80" effectType="ROOT" abnormalLvl="1" abnormalType="root_magically" special="airroot" />
 		</for>
 	</skill>
 	<skill id="888" levels="11" name="Energy Storm">
@@ -1532,7 +1532,7 @@
 		<set name="hitTime" val="1500" />
 		<set name="reuseDelay" val="8000" />
 		<for>
-			<effect name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="multi_buff">
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="multi_buff">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.08" />
 				<mul order="0x30" stat="pDef" val="1.18" />
@@ -1551,7 +1551,7 @@
 		<set name="hitTime" val="1500" />
 		<set name="reuseDelay" val="8000" />
 		<for>
-			<effect name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="multi_buff">
+			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="multi_buff">
 				<mul order="0x30" stat="mAtk" val="1.2" />
 				<mul order="0x30" stat="mDef" val="1.16" />
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
@@ -1621,7 +1621,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="OP_ACTIVE" />
 		<for>
-			<effect name="Debuff" time="30" val="0" abnormalLvl="1" abnormalType="multi_debuff" effectPower="80" effectType="DEBUFF">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="multi_debuff" effectPower="80" effectType="DEBUFF">
 				<mul order="0x30" stat="pDef" val="0.60" />
 				<mul order="0x30" stat="mDef" val="0.60" />
 				<mul order="0x30" stat="runSpd" val="0.60" />
