@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="5400" levels="1" name="Presentation - Solar Spark">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="reuseDelay" val="30000" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="100" />
+		<set name="castRange" val="750" />
+		<set name="effectRange" val="1250" />
 		<set name="hitTime" val="5000" />
+		<set name="isMagic" val="true" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="30000" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="5401" levels="1" name="Stun">
 		<!-- Temporarily gets thrown into a state of shock and immobilized. -->
@@ -346,24 +352,39 @@
 		<set name="operateType" val="OP_PASSIVE" />
 	</skill>
 	<skill id="5434" levels="1" name="Gust">
-		<!-- Instantly immobilized by gust. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="hitTime" val="1080" />
+		<!-- Confirmed CT2.5 -->
 		<set name="coolTime" val="720" />
-		<set name="saveVs" val="CON" />
+		<set name="hitTime" val="1080" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="86" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="saveVs" val="CON" />
+		<set name="skillRadius" val="300" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Stun" val="0" effectPower="90" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5494" triggeredLevel="1" chanceType="ON_EXIT" />
+		</for>
 	</skill>
 	<skill id="5435" levels="1" name="Gust">
-		<!-- Instantly immobilized by gust. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
-		<set name="hitTime" val="1080" />
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="900" />
 		<set name="coolTime" val="720" />
-		<set name="saveVs" val="CON" />
+		<set name="effectRange" val="1400" />
+		<set name="hitTime" val="1080" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="86" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="PDAM" />
+		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Stun" val="0" effectPower="90" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5494" triggeredLevel="1" chanceType="ON_EXIT" />
+		</for>
 	</skill>
 	<skill id="5436" levels="1" name="Increase Recovery Rate">
 		<!-- Condition causing target to increase recovery rate of HP and MP. -->
@@ -906,9 +927,17 @@
 		<set name="hitTime" val="25000" />
 	</skill>
 	<skill id="5494" levels="1" name="Gust">
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="1" />
+		<set name="flyRadius" val="300" />
+		<set name="flyType" val="THROW_UP" />
+		<set name="magicLvl" val="86" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="ThrowUp" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5495" levels="1" name="Bleed">
 		<!-- Confirmed CT2.5 -->

@@ -89,12 +89,12 @@
 		</for>
 	</skill>
 	<skill id="5204" levels="1" name="Production-First Gigantic Pig Combination">
-		<!-- CT2.5 retail confirmed -->
-		<set name="magicLvl" val="76" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="5800" />
+		<set name="magicLvl" val="76" />
 		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="5205" levels="1" name="Boss Regeneration">
 		<!-- CT2.5 retail confirmed -->
@@ -300,14 +300,14 @@
 		</for>
 	</skill>
 	<skill id="5218" levels="1" name="Production: Event Teleport">
-		<!-- CT2.5 retail confirmed -->
-		<set name="magicLvl" val="76" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="BUFF" />
-		<set name="hitTime" val="2000" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
+		<set name="hitTime" val="2000" />
+		<set name="magicLvl" val="76" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="DUMMY" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="5219" levels="1" name="Stun of giant mutated animal">
 		<!-- CT2.5 retail confirmed -->
