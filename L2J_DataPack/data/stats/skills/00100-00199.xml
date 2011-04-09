@@ -1190,6 +1190,14 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="LUCK" />
 		<set name="operateType" val="OP_PASSIVE" />
+		<cond>
+			<not>
+				<player level="10" /> <!-- TEMP FIX until skill tree rework done -->
+			</not>
+		</cond>
+		<for>
+			<mul order="0x30" stat="vitalityConsumeRate" val="0.00" />
+		</for>
 	</skill>
 	<skill id="195" levels="2" name="Breath Boost">
 		<table name="#breath"> 180 300 </table>
